@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078525"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51673559"
 > [!NOTE]  
 >  Die ROUTINE_DEFINITION-Spalte enthält die quellanweisungen, die die Funktion erstellt oder eine gespeicherte Prozedur. Diese Quellanweisungen enthalten wahrscheinlich eingebettete Wagenrücklaufzeichen. Wenn Sie diese Spalte auf eine Anwendung, die die Ergebnisse in einem Textformat anzeigt zurückgeben, können die eingebetteten Wagenrücklaufzeichen in den Ergebnissen ROUTINE_DEFINITION Auswirkungen auf die Formatierung des gesamten Resultsets. Wenn Sie die ROUTINE_DEFINITION Spalte auswählen, müssen Sie die eingebetteten Wagenrücklaufzeichen anpassen; z. B. durch Zurückgeben von Resultsets in einem Raster oder ROUTINE_DEFINITION in ein eigenes Textfeld zurückgeben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**Nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist ROUTINE_CATALOG identisch.|  
 |SPECIFIC_SCHEMA|**Nvarchar (** 128 **)**|Spezifischer Name des Schemas.<br /><br /> **\*\* Wichtige \* \***  verwenden Sie keine INFORMATION_SCHEMA-Sichten, die um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
@@ -64,7 +63,7 @@ ms.locfileid: "51673559"
 |NUMERIC_PRECISION|**smallint**|Numerische Genauigkeit des Rückgabewerts. Für nicht-numerischen Typen wird NULL zurückgegeben.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|Numerische Basis der Genauigkeit des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
 |NUMERIC_SCALE|**smallint**|Dezimalstellen des Rückgabewerts. Für nicht-numerische Typen wird NULL zurückgegeben.|  
-|DATETIME_PRECISION|**smallint**|Genauigkeit von Bruchteilen einer Sekunde an, wenn der Rückgabewert vom Typ **"DateTime"**. Andernfalls wird NULL zurückgegeben.|  
+|DATETIME_PRECISION|**smallint**|Genauigkeit von Bruchteilen einer Sekunde an, wenn der Rückgabewert vom Typ **"DateTime"** . Andernfalls wird NULL zurückgegeben.|  
 |INTERVAL_TYPE|**Nvarchar (** 30 **)**|NULL. Zur künftigen Verwendung reserviert.|  
 |INTERVAL_PRECISION|**smallint**|NULL. Zur künftigen Verwendung reserviert.|  
 |TYPE_UDT_CATALOG|**Nvarchar (** 128 **)**|NULL. Zur künftigen Verwendung reserviert.|  

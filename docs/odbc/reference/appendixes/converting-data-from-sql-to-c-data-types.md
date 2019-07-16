@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019108"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL- zu C-Datentypen
 Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, ruft der Treiber die Daten aus der Datenquelle. Bei Bedarf die Daten aus dem Datentyp konvertiert sie in dem der Treiber, die den angegebenen Datentyp abgerufen die *TargetType* -Argument in **SQLBindCol** oder **SQLGetData.** Zum Schluss speichert die Daten in den Speicherort verweist die *TargetValuePtr* -Argument in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR-Feld, der die ARD).  
@@ -59,7 +58,7 @@ Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, 
   
 -   [SQL zu C: Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL zu C: Binary](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL zu C: Binärdatei](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
 -   [SQL zu C: Datum](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
@@ -67,7 +66,7 @@ Wenn eine Anwendung ruft **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**, 
   
 -   [SQL zu C: Zeit](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL zu C: Timestamp](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL zu C: Zeitstempel](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
 -   [SQL zu C: Jahr-Monat-Intervalle](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   

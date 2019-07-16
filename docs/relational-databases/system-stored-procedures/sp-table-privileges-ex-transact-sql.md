@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a11fb3f879336f5217abe138c91755154df868b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096172"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,15 +58,15 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_**.** _Besitzer_**.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_ **.** _Besitzer_ **.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**TABLE_SCHEM**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
-|**GRANTOR**|**sysname**|Datenbankbenutzername, Berechtigungen für erteilt hat **TABLE_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte ist immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück. Darüber hinaus kann die GRANTOR-Spalte entweder der Datenbankbesitzer sein (**TABLE_OWNER**) oder ein Benutzer, denen der Datenbankbesitzer die Berechtigung mit der WITH GRANT OPTION-Klausel in der GRANT-Anweisung erteilt.|  
+|**BERECHTIGENDE (GRANTOR)**|**sysname**|Datenbankbenutzername, Berechtigungen für erteilt hat **TABLE_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte ist immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück. Darüber hinaus kann die GRANTOR-Spalte entweder der Datenbankbesitzer sein (**TABLE_OWNER**) oder ein Benutzer, denen der Datenbankbesitzer die Berechtigung mit der WITH GRANT OPTION-Klausel in der GRANT-Anweisung erteilt.|  
 |**EMPFÄNGER**|**sysname**|Datenbank-Benutzername, dem Berechtigungen für erteilt wurden **TABLE_NAME** aufgeführte **GRANTOR**. Dieses Feld gibt immer einen Wert zurück.|  
 |**BERECHTIGUNGEN**|**Varchar (** 32 **)**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden.<br /><br /> Wählen Sie = **Empfänger** kann Daten für eine oder mehrere Spalten abrufen.<br /><br /> INSERT = **Empfänger** kann Daten für eine oder mehrere Spalten für neue Zeilen bereitstellen.<br /><br /> UPDATE = **Empfänger** kann vorhandene Daten für mindestens eine der Spalten ändern.<br /><br /> DELETE = **Empfänger** kann Zeilen aus der Tabelle entfernen.<br /><br /> REFERENCES = **Empfänger** können auf eine Spalte in einer Fremdschlüsseltabelle in einer Primärschlüssel/Fremdschlüssel-Beziehung verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen mithilfe von Tabelleneinschränkungen definiert.<br /><br /> Der Bereich der Aktion übergeben, um die **Empfänger** durch ein bestimmtes Privileg ist datenquellenabhängig. Die UPDATE-Berechtigung konnte aktivieren Sie z. B. die **Empfänger** so aktualisieren Sie alle Spalten in einer Tabelle für eine Datenquelle und nur die Spalten für die der **berechtigende (Grantor)** verfügt über die UPDATE-Berechtigung für eine andere Datenquelle.|  
-|**IS_GRANTABLE**|**varchar(** 3 **)**|Gibt an, ob die **Empfänger** ist zulässig, anderen Benutzern Berechtigungen erteilen. Dies wird häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
+|**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob die **Empfänger** ist zulässig, anderen Benutzern Berechtigungen erteilen. Dies wird häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die zurückgegebenen Ergebnisse sind sortiert nach **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, und **Berechtigungen**.  
@@ -86,7 +85,7 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [sp_column_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
+ [Sp_column_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Verteilte Abfragen, gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   

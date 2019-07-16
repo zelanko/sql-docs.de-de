@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 086294f3615c32d9d8bbbd8c26da0439288dc8d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047884"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Hinzufügen von Elementen zu einer Auflistung (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65486420"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie Blatt- und konsolidierte Elemente zu einer Auflistung hinzufügen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 20ac49b8da959732c54e912898b375c9175d546d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 709d1bfe0b1d4288c8eae4ec947a60064cec6b3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076480"
 ---
 # <a name="syssyspermissions-transact-sql"></a>sys.syspermissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47822568"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID des Objekts für Objektberechtigungen.<br /><br /> 0 = Anweisungsberechtigungen.|  
 |**Empfänger**|**smallint**|ID des Benutzers, der Gruppe oder der Rolle, auf den bzw. die sich die Berechtigung auswirkt.|  

@@ -19,32 +19,31 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026850"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Gibt den aktuellen Status von Transaktionen aus, durch die mindestens eine Zeile gelöscht und für die ein Commit ausgeführt wurde. Der Garbage Collection-Leerlaufthread wird einmal pro Minute ausgeführt oder wenn die Anzahl der DML-Transaktionen, für die ein Commit ausgeführt wurde, seit dem letzten Zyklus der Garbage Collection einen internen Schwellenwert überschreitet. Im Zyklus der Garbage Collection werden die Transaktionen, für die ein Commit ausgeführt wurde, in eine oder mehrere Warteschlangen verschoben, die unterschiedlichen Generierungen zugeordnet sind. Transaktionen, durch die veraltete Versionen generiert wurden, werden in einer Einheit von 16 Transaktionen gruppiert, die sich wie folgt über 16 Generierungen verteilen:  
   
--   Generierung 0: Speichert alle Transaktionen, für die vor der ältesten aktiven Transaktion ein Commit ausgeführt wurde. Von diesen Transaktionen generierte Zeilenversionen stehen sofort für die Garbage Collection zur Verfügung.  
+-   Generierung 0: Speichert alle Transaktionen, die vor der ältesten aktiven Transaktion ein Commit ausgeführt. Von diesen Transaktionen generierte Zeilenversionen stehen sofort für die Garbage Collection zur Verfügung.  
   
--   Generierungen 1-14: Speichern Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion liegt. Die Zeilenversionen können nicht von der Garbage Collection bereinigt werden. Jede Generierung kann bis zu 16 Transaktionen enthalten. In den Generierungen können insgesamt 224 (14 * 16) Transaktionen gespeichert werden.  
+-   Generierungen 1-14: Speichert Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion. Die Zeilenversionen können nicht von der Garbage Collection bereinigt werden. Jede Generierung kann bis zu 16 Transaktionen enthalten. In den Generierungen können insgesamt 224 (14 * 16) Transaktionen gespeichert werden.  
   
--   Generation 15 Enthält die übrigen Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion liegt. Die Anzahl der Transaktionen in Generierung 15 ist genauso wie bei Generierung 0 unbegrenzt.  
+-   Generierung 15: Die übrigen Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion, wechseln Sie zur Generierung 15. Die Anzahl der Transaktionen in Generierung 15 ist genauso wie bei Generierung 0 unbegrenzt.  
   
  Bei unzureichendem Arbeitsspeicher wird der Hinweis auf die älteste aktive Transaktion vom Garbage Collection-Thread aggressiv aktualisiert, wodurch eine Garbage Collection erzwungen wird.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Spaltenname|Typ|Description|  
+|Spaltenname|Typ|Beschreibung|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Ein eindeutiger Bezeichner für den Zyklus der Garbage Collection.|  
 |ticks_at_cycle_start|**bigint**|Takte, bei denen der Zyklus gestartet wurde.|  

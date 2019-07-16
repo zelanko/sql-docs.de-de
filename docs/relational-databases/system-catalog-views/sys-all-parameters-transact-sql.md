@@ -19,33 +19,32 @@ helpviewer_keywords:
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4365ad34102965e163d18d26b3f9a139e6025bb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63231301109f83243b431244028fddffb8cc6fe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001322"
 ---
 # <a name="sysallparameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Zeigt die Vereinigungsmenge aller Parameter an, die zu einem benutzerdefinierten Objekt oder einem Systemobjekt gehören.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID des Objekts, zu dem dieser Parameter gehört.|  
 |**name**|**sysname**|Name des Parameters. Ist eindeutig innerhalb des Objekts. Wenn es sich bei dem Objekt um eine skalare Funktion handelt, ist der Parametername eine leere Zeichenfolge in der Zeile, die den zurückgegebenen Wert darstellt.|  
 |**parameter_id**|**int**|ID des Parameters. Ist eindeutig innerhalb des Objekts. Handelt es sich bei dem Objekt um eine Skalarfunktion, stellt **parameter_id** = 0 den Rückgabewert dar.|  
 |**system_type_id**|**tinyint**|ID des Systemtyps des Parameters.|  
-|**user_type_id**|**int**|Die ID des vom Benutzer definierten Typs des Parameters.<br /><br /> Um den Namen des Typs zurückzugeben, fügen Sie der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte.|  
-|**max_length**|**smallint**|Die maximale Länge des Parameters (in Byte).<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.|  
-|**Mit einfacher Genauigkeit**|**tinyint**|Genauigkeit des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
-|**Skalieren**|**tinyint**|Skalierung des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
+|**user_type_id**|**int**|Die ID des vom Benutzer definierten Typs des Parameters.<br /><br /> Stellen Sie einen Join mit der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte her, um den Namen des Typs zurückzugeben.|  
+|**max_length**|**smallint**|Die maximale Länge des Parameters (in Byte).<br /><br /> -1 = Spaltendatentyp ist **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , oder **Xml**.|  
+|**precision**|**tinyint**|Genauigkeit des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
+|**scale**|**tinyint**|Skalierung des Parameters, wenn dieser auf Nummern basiert; andernfalls 0.|  
 |**is_output**|**bit**|1 = Parameter ist ein Ausgabeparameter (oder Rückgabeparameter), andernfalls 0|  
 |**is_cursor_ref**|**bit**|1 = Parameter ist ein Cursorverweisparameter.|  
-|**has_default_value**|**bit**|1 = Parameter hat einen Standardwert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet nur Standardwerte für CLR-Objekte in dieser Katalogsicht; aus diesem Grund wird diese Spalte immer einen Wert von 0 für besitzen [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekte. An den Standardwert eines Parameters in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekt, das Abfragen der **Definition** Spalte die [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht angezeigt werden soll, oder verwenden Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)-Systemfunktion.|  
+|**has_default_value**|**bit**|1 = Parameter hat einen Standardwert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwaltet nur Standardwerte für CLR-Objekte in dieser Katalogsicht; aus diesem Grund wird diese Spalte immer einen Wert von 0 für besitzen [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekte. Wenn Sie den Standardwert eines Parameters in einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Objekt anzeigen möchten, fragen Sie die **definition** -Spalte der [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalogsicht ab, oder verwenden Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) -Systemfunktion.|  
 |**is_xml_document**|**bit**|1 = Der Inhalt ist ein vollständiges XML-Dokument.<br /><br /> 0 = Inhalt ist ein Dokumentfragment, oder der Datentyp der Spalte ist nicht **xml**.|  
 |**default_value**|**sql_variant**|Wenn **Has_default_value** ist 1. der Wert dieser Spalte der Standardwert für den Parameter ist, andernfalls NULL.|  
 |**xml_collection_id**|**int**|Die ID der XML-Schemaauflistung, die zur Überprüfung des Parameters verwendet wird.<br /><br /> Ungleich NULL, wenn der Datentyp des Parameters ist **Xml** und XML typisiert ist.<br /><br /> 0 = Es ist keine XML-Schemaauflistung vorhanden, oder der Parameter ist nicht XML.|  

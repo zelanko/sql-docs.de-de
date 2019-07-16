@@ -3,18 +3,17 @@ title: Verwalten von SQLServer unter Linux mit PowerShell
 description: Dieser Artikel enthält einen Überblick über die mithilfe von PowerShell unter Windows mit SQL Server unter Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 21ce61a823281c5e6688bcfb8aee96d296cb671d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000127"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Verwalten von SQLServer unter Linux mithilfe von PowerShell unter Windows
 

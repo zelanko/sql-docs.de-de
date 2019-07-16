@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039031"
 ---
 # <a name="comparison-expressions-xquery"></a>Vergleichsausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "51661836"
   
  Die allgemeinen Operatoren werden in der folgenden Tabelle definiert.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |=|Gleich|  
 |!=|Ungleich|  
@@ -140,7 +139,7 @@ WHERE ContactID=1
   
  Die Wertvergleichsoperatoren werden in der folgenden Tabelle definiert.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |eq|Gleich|  
 |ne|Ungleich|  
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  Diese Vergleiche werden auf der Grundlage der Dokumentreihenfolge erstellt:  
   
--   `<<` : Wird **Operand 1** vorausgehen **Operand 2** in der Dokumentreihenfolge.  
+-   `<<` : Ist **Operand 1** vorausgehen **Operand 2** in der Dokumentreihenfolge.  
   
--   `>>` : Wird **Operand 1** folgen **Operand 2** in der Dokumentreihenfolge.  
+-   `>>` : Ist **Operand 1** folgen **Operand 2** in der Dokumentreihenfolge.  
   
  Die folgende Abfrage gibt True zurück, wenn der produktkatalogbeschreibung verfügt die \<Garantie >-Element angezeigt wird, bevor Sie die \<Wartung >-Element in der Dokumentreihenfolge für ein bestimmtes Produkt.  
   

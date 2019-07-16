@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b499fe50854e979b9407487903324b80e16ede77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038124"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX-Datendefinitionsanweisungen (MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "62629780"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[ALTER CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-alter-cube.md)|Ändert die Struktur eines angegebenen Cubes.|  
 |[CREATE ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)|Erstellt eine Aktion, die einem Cube, einer Dimension, einer Hierarchie oder einem untergeordneten Objekt zugeordnet werden kann.|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2edb8e994b43e5704d88417384e547e0cd0a183f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f428189723987adbbf867facb819a987c502ab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054480"
 ---
 # <a name="manage-changesets-master-data-services"></a>Verwalten von Changesets (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65489543"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] können Sie alle Änderungen nach Modell und Version verwalten.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

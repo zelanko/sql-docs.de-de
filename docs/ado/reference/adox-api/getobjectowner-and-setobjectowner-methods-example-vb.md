@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd0091d76ae956d7391e1a29f63f0fcabe8720f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03850fdaef19ece963bb7b196ab14edccd290fde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966386"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VB)
 Dieses Beispiel zeigt die [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) und [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) Methoden. Dieser Code setzt voraus, das Vorhandensein der Gruppe Accounting (finden Sie unter den [Gruppen und Benutzer Append, ChangePassword-Methoden-Beispiel (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) zu erfahren, wie Sie diese Gruppe mit dem System hinzufügen). Der Besitzer der Tabelle mit Produktkategorien, die in das Buchhaltungszahlenformat festgelegt ist.  

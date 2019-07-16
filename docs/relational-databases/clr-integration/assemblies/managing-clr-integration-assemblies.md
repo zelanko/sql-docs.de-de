@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054450"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Verwalten von CLR-Integrationsassemblys
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47686538"
   
  Assemblyinformationen befindet sich in der **Sys. assembly_files** Tabelle in der Datenbank, in dem die Assembly installiert wurde. Die **Sys. assembly_files** Tabelle enthält die folgenden Spalten.  
   
-|Spalte|Description|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |assembly_id|Der für die Assembly definierte Bezeichner. Diese Nummer wird allen Objekten mit Bezug auf dieselbe Assembly zugewiesen.|  
 |NAME|Der Name des Objekts.|  

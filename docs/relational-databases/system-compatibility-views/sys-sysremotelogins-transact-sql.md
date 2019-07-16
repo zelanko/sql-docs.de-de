@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 599747887f48586509c35c635f3349fce5e215f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018132"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jeden Remotebenutzer, die remote gespeicherte Prozeduren in einer Instanz von aufrufen darf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Enthält eine Zeile für jeden Remotebenutzer, der gespeicherte Prozeduren einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]remote aufrufen darf.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**remoteserverid**|**smallint**|ID des Remoteservers.|  
 |**remoteusername**|**sysname**|Anmeldename des Benutzers auf einem Remoteserver.|  
 |**status**|**smallint**|Gibt 0 zurück.|  
-|**SID**|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzers.|  
+|**sid**|**varbinary(85)**|Sicherheits-ID des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzers.|  
 |**changedate**|**datetime**|Datum und Uhrzeit, zu dem bzw. der der Remotebenutzer hinzugefügt wurde.|  
   
 ## <a name="see-also"></a>Siehe auch  

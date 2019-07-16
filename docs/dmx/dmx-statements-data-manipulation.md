@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071066"
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX-Anweisungen – Datenbearbeitung
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In der folgenden Tabelle sind die Anweisungen aufgeführt, die zur Data Mining-Datenbearbeitungssprache in Data Mining-Erweiterungen (DMX) gehören.  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[LÖSCHEN SIE &#40;DMX&#41;](../dmx/delete-dmx.md)|Löscht den trainierten Inhalt aus einem Miningmodell.|  
 |[FÜGEN SIE IN &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Trainiert ein Miningmodell.|  

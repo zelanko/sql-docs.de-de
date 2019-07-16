@@ -2,19 +2,18 @@
 title: Konfigurieren von Windows zum Empfangen von remotetabellenkopien - Parallel Data Warehouse | Microsoft-Dokumentation
 description: Beschreibt das erwerben und konfigurieren Sie eine nicht zur Appliance gehört Windows-System über das InfiniBand-Netzwerk für die Verwendung mit der remotetabellenkopie-Features in Parallel Data Warehouse verbunden sind. Das Windows-System hostet SQL Server-Datenbank, die die remotetabellenkopie aus einer SQL Server-PDW-Datenbank empfängt. Dabei handelt es sich aus der Appliance inbegriffene mit dem Gerät InfiniBand-Netzwerk verbunden.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 428dc5b4edda91f60a09a52c0326f881f257b32c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961307"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Konfigurieren eines externen Windows-Systems zum Empfangen von remotetabellenkopien mit InfiniBand - Parallel Data Warehouse
 Beschreibt das erwerben und konfigurieren ein nicht zur Appliance gehört Windows-System über das InfiniBand-Netzwerk für die Verwendung mit der remotetabellenkopie-Features in SQL Server PDW verbunden sind. Das Windows-System hostet SQL Server-Datenbank, die die remotetabellenkopie aus einer SQL Server-PDW-Datenbank empfängt. Dabei handelt es sich aus der Appliance inbegriffene mit dem Gerät InfiniBand-Netzwerk verbunden.  

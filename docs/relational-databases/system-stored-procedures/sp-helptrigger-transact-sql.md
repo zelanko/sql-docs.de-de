@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048222"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tabname = ] 'table'` Ist der Name der Tabelle in der aktuellen Datenbank für die Triggerinformationen zurückgegeben werden sollen. *Tabelle* ist **nvarchar(776)**, hat keinen Standardwert.  
+`[ @tabname = ] 'table'` Ist der Name der Tabelle in der aktuellen Datenbank für die Triggerinformationen zurückgegeben werden sollen. *Tabelle* ist **nvarchar(776)** , hat keinen Standardwert.  
   
-`[ @triggertype = ] 'type'` Ist der Typ des DML-Trigger, um die Informationen zurückgegeben werden sollen. *Typ* ist **char(6)**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @triggertype = ] 'type'` Ist der Typ des DML-Trigger, um die Informationen zurückgegeben werden sollen. *Typ* ist **char(6)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**DELETE**|Gibt DELETE-Triggerinformationen zurück.|  
 |**INSERT**|Gibt INSERT-Triggerinformationen zurück.|  
@@ -58,7 +57,7 @@ sp_helptrigger [ @tabname = ] 'table'
 ## <a name="result-sets"></a>Resultsets  
  Die folgende Tabelle zeigt die im Resultset enthaltenen Informationen an.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Name des Triggers.|  
 |**trigger_owner**|**sysname**|Name des Besitzers der Tabelle, für die der Trigger definiert ist.|  

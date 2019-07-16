@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1dc80f17fc88fa665b41a130bb69ebe0d4f1f26c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032874"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,23 +50,23 @@ Für [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] und [!INCLUDE[sspdw-md](..
    
  Der qualifizierte oder nicht qualifizierte Name der Tabelle, indizierten Sicht oder Warteschlange, für die Informationen zur Speicherverwendung angefordert werden. Anführungszeichen sind nur erforderlich, wenn ein qualifizierter Objektname angegeben wird. Bei Angabe eines vollqualifizierten Objektnamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein.  
 Wenn *Objname* nicht angegeben ist, werden die Ergebnisse für die gesamte Datenbank zurückgegeben.  
-*Objname* ist **nvarchar(776)**, hat den Standardwert NULL.  
+*Objname* ist **nvarchar(776)** , hat den Standardwert NULL.  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] und [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] unterstützen nur die Datenbank und Tabelle.
   
-`[ @updateusage = ] 'updateusage'` Gibt an, dass DBCC UPDATEUSAGE ausgeführt werden soll, um Informationen zur Speicherplatzverwendung zu aktualisieren. Wenn *Objname* ist nicht angegeben ist, die Anweisung wird für die gesamte Datenbank ausgeführt; andernfalls wird die Anweisung ausgeführt, auf *Objname*. Werte sind möglich **"true"** oder **"false"**. *UPDATEUSAGE* ist **varchar(5)**, hat den Standardwert **"false"**.  
+`[ @updateusage = ] 'updateusage'` Gibt an, dass DBCC UPDATEUSAGE ausgeführt werden soll, um Informationen zur Speicherplatzverwendung zu aktualisieren. Wenn *Objname* ist nicht angegeben ist, die Anweisung wird für die gesamte Datenbank ausgeführt; andernfalls wird die Anweisung ausgeführt, auf *Objname*. Werte sind möglich **"true"** oder **"false"** . *UPDATEUSAGE* ist **varchar(5)** , hat den Standardwert **"false"** .  
   
 `[ @mode = ] 'mode'` Gibt den Bereich der Ergebnisse an. Für eine gestreckte Tabelle oder Datenbank die *Modus* -Parameter können Sie ein- oder Ausschließen von des remote-Teils des Objekts. Weitere Informationen finden Sie unter [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  Die *Modus* Argument kann die folgenden Werte haben:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ALL|Gibt die Statistiken der Speicher des Objekts oder der Datenbank, einschließlich der remote-Teil und den lokalen Teil.|  
 |LOCAL_ONLY|Gibt die Speicher-Statistiken, nur den lokalen Teil des Objekts oder der Datenbank. Wenn das Objekt oder die Datenbank nicht für Stretch aktiviert ist, gibt diese statistischen Daten wie @mode = ALL.|  
 |REMOTE_ONLY|Gibt die Statistiken der Speicher nur für den remote Teil des Objekts oder der Datenbank. Diese Option löst einen Fehler auf, wenn eine der folgenden Bedingungen zutrifft:<br /><br /> In der Tabelle ist nicht für die Streckung aktiviert.<br /><br /> In der Tabelle für Stretch aktiviert ist, aber Sie niemals die Datenmigration aktiviert haben. In diesem Fall die Remotetabelle noch ein Schema keinen.<br /><br /> Der Benutzer wurde die Remotetabelle manuell gelöscht werden.<br /><br /> Die Bereitstellung von der remote Data Archive Status erfolgreich zurückgegeben, aber in der Tat fehlgeschlagen ist.|  
   
- *Modus* ist **varchar(11)**, hat den Standardwert **kann "**.  
+ *Modus* ist **varchar(11)** , hat den Standardwert **kann "** .  
   
 `[ @oneresultset = ] oneresultset` Gibt an, ob ein einzelnes Resultset zurückgeben. Die *Oneresultset* Argument kann die folgenden Werte haben:  
   
@@ -89,45 +88,45 @@ Wenn *Objname* nicht angegeben ist, werden die Ergebnisse für die gesamte Daten
 ## <a name="result-sets"></a>Resultsets  
  Wenn *Objname* ausgelassen wird und der Wert der *Oneresultset* 0 ist, werden die folgenden Resultsets zurückgegeben, um aktuelle Informationen zur Datenbankgröße bereitzustellen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar(18)**|Die Größe der aktuellen Datenbank in Megabyte. **Database_size** umfasst sowohl Daten-und Protokolldateien.|  
 |**nicht zugewiesener Speicherplatz**|**varchar(18)**|Speicherplatz in der Datenbank, der nicht für Datenbankobjekte zugeordnet wurde.|  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**reserved**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
+|**Reserviert**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
 |**data**|**varchar(18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar(18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
-|**unused**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|  
+|**nicht verwendete**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|  
   
  Wenn *Objname* ausgelassen wird und der Wert der *Oneresultset* 1 ist, die folgenden einzelnen Resultset wird zurückgegeben, um aktuelle Informationen zur Datenbankgröße bereitzustellen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar(18)**|Die Größe der aktuellen Datenbank in Megabyte. **Database_size** umfasst sowohl Daten-und Protokolldateien.|  
 |**nicht zugewiesener Speicherplatz**|**varchar(18)**|Speicherplatz in der Datenbank, der nicht für Datenbankobjekte zugeordnet wurde.|  
-|**reserved**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
+|**Reserviert**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
 |**data**|**varchar(18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar(18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
-|**unused**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|  
+|**nicht verwendete**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|  
   
  Wenn *Objname* angegeben ist, wird das folgende Resultset wird zurückgegeben, für das angegebene Objekt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Name des Objekts, für das Informationen zur Speicherverwendung angefordert wurden.<br /><br /> Der Schemaname des Objekts wird nicht zurückgegeben. Wenn der Schemaname erforderlich ist, verwenden Sie die [Sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) oder [Sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamische Verwaltungssichten für die entsprechende Größeninformationen abrufen.|  
 |**rows**|**char(20)**|Anzahl der Zeilen in der Tabelle. Wenn es sich bei dem angegebenen Objekt um eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Warteschlange handelt, wird in dieser Spalte die Anzahl der in der Warteschlange vorhandenen Nachrichten angegeben.|  
-|**reserved**|**varchar(18)**|Gesamtmenge des reservierten Speicherplatzes für *Objname*.|  
+|**Reserviert**|**varchar(18)**|Gesamtmenge des reservierten Speicherplatzes für *Objname*.|  
 |**data**|**varchar(18)**|Gesamtmenge des Speicherplatzes ein, die Daten in *Objname*.|  
 |**index_size**|**varchar(18)**|Gesamtmenge des Speicherplatzes durch Indizes in *Objname*.|  
-|**unused**|**varchar(18)**|Gesamtmenge des Speicherplatzes für reserviert *Objname* jedoch noch nicht verwendet.|  
+|**nicht verwendete**|**varchar(18)**|Gesamtmenge des Speicherplatzes für reserviert *Objname* jedoch noch nicht verwendet.|  
  
 Dies ist der Standardmodus, wenn keine Parameter angegeben werden. Die folgenden Resultsets werden mit Größeninformationen der Datenbank zurückgegeben. 
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar(18)**|Die Größe der aktuellen Datenbank in Megabyte. **Database_size** umfasst sowohl Daten-und Protokolldateien. Wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA-Dateigruppe aufweist, enthält dieser die Gesamtgröße auf dem Datenträger, der alle Prüfpunktdateien in der Dateigruppe.|  
@@ -135,16 +134,16 @@ Dies ist der Standardmodus, wenn keine Parameter angegeben werden. Die folgenden
 
 Von Tabellen in der Datenbank belegter Speicherplatz: (dieses Resultset wird nicht angezeigt und speicheroptimierten Tabellen, wie es keine tabellenbasierte Kontoführung der Datenträgerverwendung ist) 
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**reserved**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
+|**Reserviert**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
 |**data**|**varchar(18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar(18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
-|**unused**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|
+|**nicht verwendete**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|
 
 Das folgende Resultset wird zurückgegeben, **nur, wenn** die Datenbank verfügt über eine MEMORY_OPTIMIZED_DATA-Dateigruppe mit mindestens einen Container: 
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**xtp_precreated**|**varchar(18)**|Die Gesamtgröße von Prüfpunktdateien mit vorab erstellten Dateien in KB. Die Anzahl für den freien Speicherplatz in der Datenbank als Ganzes. [Z. B. bei 600.000 KB vorab erstellte Prüfpunktdateien wird diese Spalte enthält 600000 "KB"]|  
 |**xtp_used**|**varchar(18)**|Die Gesamtgröße von Prüfpunktdateien mit Status UNDER CONSTRUCTION, ACTIVE und MERGE TARGET in KB. Dies ist der Speicherplatz auf dem Datenträger für Daten in speicheroptimierten Tabellen aktiv verwendet.|  
@@ -152,15 +151,15 @@ Das folgende Resultset wird zurückgegeben, **nur, wenn** die Datenbank verfügt
 
 Wenn *Objname* wird weggelassen, ist der Wert des Oneresultset 1, und *Include_total_xtp_storage* 1 ist, die folgenden einzelnen Resultset wird zurückgegeben, um aktuelle Informationen zur Datenbankgröße bereitzustellen. Wenn `include_total_xtp_storage` ist 0 (Standard), die letzten drei Spalten ausgelassen werden. 
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar(18)**|Die Größe der aktuellen Datenbank in Megabyte. **Database_size** umfasst sowohl Daten-und Protokolldateien. Wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA-Dateigruppe aufweist, enthält dieser die Gesamtgröße auf dem Datenträger, der alle Prüfpunktdateien in der Dateigruppe.|
 |**nicht zugewiesener Speicherplatz**|**varchar(18)**|Speicherplatz in der Datenbank, der nicht für Datenbankobjekte zugeordnet wurde. Wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA-Dateigruppe aufweist, enthält dieser die Gesamtgröße auf dem Datenträger, der mit dem Status vorab erstellten Dateien Prüfpunktdateien in der Dateigruppe.|  
-|**reserved**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
+|**Reserviert**|**varchar(18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
 |**data**|**varchar(18)**|Gesamter für Daten verwendeter Speicherplatz.|  
 |**index_size**|**varchar(18)**|Gesamter für Indizes verwendeter Speicherplatz.|  
-|**unused**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|
+|**nicht verwendete**|**varchar(18)**|Gesamter für Objekte in der Datenbank zugeordneter, aber noch nicht verwendeter Speicherplatz.|
 |**xtp_precreated**|**varchar(18)**|Die Gesamtgröße von Prüfpunktdateien mit vorab erstellten Dateien in KB. Dieser Option für den freien Speicherplatz in der Datenbank als Ganzes gezählt. Gibt NULL zurück, wenn die Datenbank nicht mit eine Memory_optimized_data-Dateigruppe mit mindestens einen Container verfügt. *Diese Spalte ist nur enthalten, wenn @include_total_xtp_storage= 1*.| 
 |**xtp_used**|**varchar(18)**|Die Gesamtgröße von Prüfpunktdateien mit Status UNDER CONSTRUCTION, ACTIVE und MERGE TARGET in KB. Dies ist der Speicherplatz auf dem Datenträger für Daten in speicheroptimierten Tabellen aktiv verwendet. Gibt NULL zurück, wenn die Datenbank nicht mit eine Memory_optimized_data-Dateigruppe mit mindestens einen Container verfügt. *Diese Spalte ist nur enthalten, wenn @include_total_xtp_storage= 1*.| 
 |**xtp_pending_truncation**|**varchar(18)**|Die Gesamtgröße von Prüfpunktdateien, die mit dem Status WAITING_FOR_LOG_TRUNCATION, in KB. Dies ist der Speicherplatz für die Prüfpunktdateien, die Bereinigung, nachdem die protokollkürzung erfolgt warten verwendet. Gibt NULL zurück, wenn die Datenbank nicht mit eine Memory_optimized_data-Dateigruppe mit mindestens einen Container verfügt. Diese Spalte ist nur enthalten, wenn `@include_total_xtp_storage=1`.|

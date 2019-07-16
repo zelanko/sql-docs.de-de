@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035985"
 ---
 # <a name="sql-graph-architecture"></a>SQL-Graph-Architektur  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Es wird empfohlen, dass Benutzer eine unique-Einschränkung oder einen index ers
 ## <a name="edge-table"></a>Edge-Tabelle
 Eine edgetabelle stellt eine Beziehung in einem Diagramm dar. Ränder werden immer weitergeleitet, und verbinden zwei Knoten. Eine edgetabelle ermöglicht Benutzern, die zum Modellieren von m: n Beziehungen im Diagramm. Eine edgetabelle kann nicht haben oder keine benutzerdefinierten Attribute darin. Jedes Mal eine edgetabelle, zusammen mit den benutzerdefinierten Attributen erstellt wird, werden drei implizite Spalten in der Rahmentabelle erstellt:
 
-|Spaltenname    |Description  |
+|Spaltenname    |Beschreibung  |
 |---   |---  |
 |`$edge_id`   |Zur eindeutigen Identifizierung ein angegebenes Randes in der Datenbank. Es ist eine generierte Spalte und der Wert ist eine Kombination von Object_id einen intern generierten Bigint-Wert und der edgetabelle. Aber wenn die `$edge_id` Spalte ausgewählt ist, wird ein berechneter Wert in Form einer JSON-Zeichenfolge angezeigt. `$edge_id` ist eine Pseudo-Spalte, die einen internen Namen mit einer hexadezimalen Zeichenfolge in der sie zugeordnet ist. Bei der Auswahl `$edge_id` aus der Tabelle den Namen der Spalte hostnamensadresse `$edge_id_\<hex_string>`. Verwenden von Pseudo-Spaltennamen in Abfragen ist die empfohlene Methode der internen Abfrage `$edge_id` Spalten- und hex-Zeichenfolge mit interner Name sollte vermieden werden. |
 |`$from_id`   |Speichert die `$node_id` des Knotens aus der Rand, stammen.  |
@@ -68,7 +67,7 @@ Verwenden Sie diese Metadatenansichten, um die Attribute einer Knoten- oder edge
 ### <a name="systables"></a>sys.tables
 Die folgenden neuen, bit-Datentyp, werden SYS Spalten hinzugefügt. TABELLEN. Wenn `is_node` ist auf 1 festgelegt, der angibt, dass die Tabelle eine Knotentabelle handelt und wenn `is_edge` ist auf 1 festgelegt, der angibt, dass die Tabelle eine edgetabelle handelt.
  
-|Spaltenname |Datentyp |Description |
+|Spaltenname |Datentyp |Beschreibung |
 |--- |---|--- |
 |is_node |bit |1 = Dies ist eine Knotentabelle |
 |is_edge |bit |1 = Dies ist eine edgetabelle |
@@ -76,7 +75,7 @@ Die folgenden neuen, bit-Datentyp, werden SYS Spalten hinzugefügt. TABELLEN. We
 ### <a name="syscolumns"></a>sys.columns
 Die `sys.columns` -Ansicht enthält zusätzliche Spalten `graph_type` und `graph_type_desc`, anzugeben, dass den Typ der Spalte im und Rahmentabellen.
  
-|Spaltenname |Datentyp |Description |
+|Spaltenname |Datentyp |Beschreibung |
 |--- |---|--- |
 |graph_type |ssNoversion |Interne Spalte mit einem Satz von Werten. Die Werte liegen zwischen 1 bis 8 für Graph-Spalten und NULL für andere Benutzer.  |
 |graph_type_desc |nvarchar(60)  |interne Spalte mit einem Satz von Werten |
@@ -99,14 +98,14 @@ Die folgende Tabelle enthält die gültigen Werte für `graph_type` Spalte
 
 Impliziten Spalten in eine Knotentabelle
 
-|Spaltenname    |Datentyp  |is_hidden  |Anmerkung  |
+|Spaltenname    |Datentyp  |is_hidden  |Kommentar  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interne `graph_id` Spalte  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |Externe Knoten `node_id` Spalte  |
 
 Impliziten Spalten in eine edgetabelle
 
-|Spaltenname    |Datentyp  |is_hidden  |Anmerkung  |
+|Spaltenname    |Datentyp  |is_hidden  |Kommentar  |
 |---  |---|---|---  |
 |graph_id_\<hex_string> |bigint |1  |interne `graph_id` Spalte  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |externe `edge_id` Spalte  |
@@ -120,7 +119,7 @@ Impliziten Spalten in eine edgetabelle
 ### <a name="system-functions"></a>Systemfunktionen
 Die folgenden integrierten Funktionen werden hinzugefügt. Dies hilft Benutzern, die Informationen aus die generierten Spalten zu extrahieren. Beachten Sie, dass diese Methoden nicht die Eingabe des Benutzers überprüft werden. Wenn der Benutzer ein ungültiges angibt `sys.node_id` die-Methode den entsprechenden Teil zu extrahieren und zurückzugeben. Z. B. OBJECT_ID_FROM_NODE_ID dauert eine `$node_id` als Eingabe und gibt die Object_id der Tabelle dieser Knoten gehört. 
  
-|Built-in   |Beschreibung  |
+|Integrierte   |Beschreibung  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Extrahieren Sie die Object_id von einem `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |Extrahieren Sie die Graph_id aus einem `node_id`  |

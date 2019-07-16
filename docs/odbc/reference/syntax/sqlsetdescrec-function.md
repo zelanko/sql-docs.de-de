@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 3a733c2b88954c9937e8a170b949535ffa118bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039734"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  Die **SQLSetDescRec** -Funktion legt fest, mehrere deskriptorfelder, die den Datentyp auswirken und Puffer, der an eine Spalte oder Parameter Daten gebunden.  
@@ -85,7 +84,7 @@ SQLRETURN SQLSetDescRec(
  [Verzögerte Eingabe oder Ausgabe] Der Wert, auf das SQL_DESC_INDICATOR_PTR-Feld für den anwendungsparameterdeskriptor-Datensatz festgelegt. *IndicatorPtr* kann auf einen null-Zeiger festgelegt werden, um das SQL_DESC_INDICATOR_PTR-Feld auf einen null-Zeiger festgelegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetDescRec** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_DESC und *behandeln* von *DescriptorHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetDescRec** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054101"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE-Treiber)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "62665352"
   
  Die **SQLConfigDataSource** -Funktion, die verwendet wird, zum Hinzufügen, ändern oder Löschen einer Datenquelle verwendet die folgenden Schlüsselwörter.  
   
-|Schlüsselwort|Description|  
+|Schlüsselwort|Beschreibung|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz sind möglich: ASCII (Standard) und internationale.<br /><br /> Hiermit wird die gleiche Option als **Sortierreihenfolge Sequenz** im Dialogfeld "Setup".|  
 |WERT|Die Pfadangabe in das Verzeichnis.|  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48621e242fae86b0b9fca689149ed1364cb7ff1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079837"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +58,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
   
  Beispielergebnisse:  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|Modell|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -95,7 +94,7 @@ NATURAL PREDICTION JOIN
   
  Beispielergebnisse:  
   
-|Model|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|Modell|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0,29...|0,25...|  
 |Water Bottle|2866|0.19...|0,17...|  
@@ -109,7 +108,7 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- Die Ergebnisse enthalten die obersten 3 Vorhersagen sortiert nach dem Unterstützungswert. Sie können $SUPPORT durch $PROBABILITY oder $ADJUSTED_PROBABILITY ersetzen, um nach Wahrscheinlichkeit oder angepasster Wahrscheinlichkeit sortierte Vorhersagen zurückzugeben. Weitere Informationen finden Sie unter **Vorhersagen (DMX)**.  
+ Die Ergebnisse enthalten die obersten 3 Vorhersagen sortiert nach dem Unterstützungswert. Sie können $SUPPORT durch $PROBABILITY oder $ADJUSTED_PROBABILITY ersetzen, um nach Wahrscheinlichkeit oder angepasster Wahrscheinlichkeit sortierte Vorhersagen zurückzugeben. Weitere Informationen finden Sie unter **Vorhersagen (DMX)** .  
   
 ## <a name="see-also"></a>Siehe auch  
  [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   

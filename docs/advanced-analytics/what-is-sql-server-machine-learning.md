@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: ea6db43d999c2c0102cde0c0b30867f255bce569
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 2d05c48f1492509fe05272560dd3cf332b424cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961676"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning-Diensten (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +40,7 @@ Durch die Verwendung der richtigen Kombination von SQL und R für verschiedene D
 
 SQL Server-2017 unterstützt R und Python. Die folgende Tabelle beschreibt die Komponenten an.
 
-| Komponente | Description |
+| Komponente | Beschreibung |
 |-----------|-------------|
 | SQL Server Launchpad-Dienst | Ein Dienst, der Kommunikation zwischen der externen R und Python-Laufzeiten und die Instanz der Datenbank-Engine verwaltet. |
 | R-Pakete | [**RevoScaleR** ](r/ref-r-revoscaler.md) ist die primäre Bibliothek für skalierbare r-Funktionen in dieser Bibliothek auf die am häufigsten verwendeten sind. Datentransformationen und Manipulation, statistische Zusammenfassung, Visualisierung und viele Formen der Modellierung und Analysen werden in diesen Bibliotheken gefunden. Darüber hinaus verteilen Funktionen in diesen Bibliotheken automatisch Workloads auf verfügbaren Kerne für die parallele Verarbeitung, mit der Möglichkeit, die für Segmente der Daten zu arbeiten, die koordiniert und verwaltet werden, indem die berechnungs-Engine.  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md) fügt Machine Learning-Algorithmen, um benutzerdefinierte Modelle für die Textanalyse, Bildanalyse und stimmungsanalysen zu erstellen. <br/>[**SqlRUtils** ](r/ref-r-sqlrutils.md) Stellt Hilfsfunktionen für das Einfügen von R-Skripts in einer gespeicherten T-SQL-Prozedur, eine gespeicherte Prozedur mit einer Datenbank registrieren und Ausführen der gespeicherten Prozedur aus einer R-Entwicklungsumgebung.<br/>[**OlapR** ](r/ref-r-olapr.md) zum Erstellen oder eine MDX-Abfrage in R-Skript ausgeführt wird.|
@@ -84,7 +83,7 @@ Datenanalysten verwenden R oder Python in der Regel auf ihre eigenen Arbeitsstat
 
 + **Einbetten von R oder Python-Skripts in SQL Server gespeicherte Prozeduren**. Wenn Ihr Code vollständig optimiert ist, binden Sie diese in einer gespeicherten Prozedur zum vermeiden unnötige datenbewegungen und Aufgaben der Datenverarbeitung zu optimieren.
 
-### <a name="step-3-write-your-first-script"></a>Schritt 3: Das erste Skript schreiben
+### <a name="step-3-write-your-first-script"></a>Schritt 3: Das erste Skript schreiben
 
 Rufen Sie R- oder Python-Funktionen in T-SQL-Skript:
 

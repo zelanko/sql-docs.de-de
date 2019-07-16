@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096032"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  In der folgenden Tabelle werden die Optionen, Beschreibungen und die zugehörigen Werte aufgeführt.  
   
-|Optionsname|Optionswert|Description|  
+|Optionsname|Optionswert|Beschreibung|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|Gibt an, dass die *Max_file_size* erreicht ist, wird die aktuelle Ablaufverfolgungsdatei wird geschlossen, und eine neue Datei erstellt wird. Alle neuen Datensätze werden in die neue Datei geschrieben. Die neue Datei hat den gleichen Namen wie die vorige, aber eine ganze Zahl wird angefügt werden, um der Sequenz anzuzeigen. Ist z. B. der Name der ursprünglichen Ablaufverfolgungsdatei filename.trc, so wird die nächste Datei mit filename_1.trc benannt, dann folgt filename_2.trc usw.<br /><br /> Wenn weitere Ablaufverfolgungs-Rolloverdateien erstellt werden, erhöht sich der an die Dateinamen angefügte ganzzahlige Wert sequenziell.<br /><br /> SQL Server verwendet standardmäßig den Wert *Max_file_size* (5 MB), wenn diese Option angegeben wird, ohne Angabe eines Werts für *Max_file_size*.|  
 |SHUTDOWN_ON_ERROR|**4**|Gibt an, dass SQL Server heruntergefahren wird, wenn die Ablaufverfolgung nicht in die Datei geschrieben werden kann, unabhängig vom Grund. Diese Option ist beim Ausführen von Ablaufverfolgungen zur Sicherheitsüberwachung hilfreich.|  
@@ -79,7 +78,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  Wenn dieser Parameter ohne die Option TRACE_FILE_ROLLOVER angegeben wird, beendet die Ablaufverfolgung Aufzeichnung in der Datei an, wenn der verwendete Speicherplatz den Wert überschreitet *Max_file_size*.  
   
-`[ @stoptime = ] 'stop_time'` Gibt an, das Datum und die Uhrzeit, die die Ablaufverfolgung beendet wird. *Stop_time* ist **"DateTime"**, hat den Standardwert NULL. Beim Wert NULL wird die Ablaufverfolgung so lange ausgeführt, bis sie manuell beendet oder der Server heruntergefahren wird.  
+`[ @stoptime = ] 'stop_time'` Gibt an, das Datum und die Uhrzeit, die die Ablaufverfolgung beendet wird. *Stop_time* ist **"DateTime"** , hat den Standardwert NULL. Beim Wert NULL wird die Ablaufverfolgung so lange ausgeführt, bis sie manuell beendet oder der Server heruntergefahren wird.  
   
  Wenn beide *Stop_time* und *Max_file_size* angegeben sind, TRACE_FILE_ROLLOVER ist nicht angegeben, die Ablaufverfolgung beendet wird, wenn entweder die angegebene Beendigungszeit oder die maximale Dateigröße erreicht ist. Wenn *Stop_time*, *Max_file_size*, und TRACE_FILE_ROLLOVER angegeben sind, wird die Ablaufverfolgung beendet wird an die angegebene Beendigungszeit, sofern die Ablaufverfolgung gänzlich nicht auf dem Laufwerk.  
   
@@ -92,7 +91,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
   
-|Rückgabecode|Description|  
+|Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
 |1|Unbekannter Fehler.|  
@@ -128,7 +127,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 -   Der Standardwert *File_size* wie bei anderen ablaufverfolgungen 5 MB ist und geändert werden kann.  
   
--   Es kann kein Dateiname angegeben werden. Die Datei wird gespeichert als: **N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
+-   Es kann kein Dateiname angegeben werden. Die Datei wird gespeichert unter: **N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
   
 -   Nur die folgenden Ereignisse und deren Spalten sind in der Ablaufverfolgung enthalten:  
   

@@ -7,20 +7,19 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961813"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Erstellen eines R-Modells und speichern Sie mit SQL Server (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Schritt erfahren Sie, wie ein Machine Learning-Modell zu erstellen und speichern Sie das Modell im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein Modell gespeichert werden, können Sie diese direkt aufrufen [!INCLUDE[tsql](../../includes/tsql-md.md)] code mithilfe der gespeicherten Systemprozedur, [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) oder [Vorhersagefunktion (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Dieser Schritt setzt voraus, eine laufende R-Sitzung basierend auf den vorherigen Schritten in dieser exemplarischen Vorgehensweise. Er verwendet die Zeichenfolgen und Data Source Verbindungsobjekte in diesen Schritten erstellt haben. Die folgenden Tools und Pakete werden verwendet, um das Skript auszuführen.
 
@@ -154,7 +153,7 @@ In diesem Abschnitt experimentieren Sie mit beiden Methoden.
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    Dieser Aufruf gibt zurück, die Werte, die beim Berechnen der ROC-Diagramm verwendet wird. Die Bezeichnungsspalte ist _"tipped"_, IValidator.h die tatsächlichen Ergebnisse, die Sie vorhersagen möchten, während die _Bewertung_ Spalte hat die Vorhersage.
+    Dieser Aufruf gibt zurück, die Werte, die beim Berechnen der ROC-Diagramm verwendet wird. Die Bezeichnungsspalte ist _"tipped"_ , IValidator.h die tatsächlichen Ergebnisse, die Sie vorhersagen möchten, während die _Bewertung_ Spalte hat die Vorhersage.
 
 2. Um tatsächlich im Diagramm zu zeichnen, können das ROC-Objekt speichern und ziehen Sie es mit der Grafik-Funktion. Das Diagramm wird auf dem entfernten computekontext erstellt und an Ihre R-Umgebung zurückgegeben.
 
@@ -204,7 +203,7 @@ Sie können überprüfen, ob der computekontext ist mit lokalen `rxGetComputeCon
 
 Nachdem Sie ein Modell erstellt und überprüft, dass es ordnungsgemäß ausgeführt wird, sollten Sie es auf einer Website bereitstellen, in dem Benutzer oder Personen in Ihrer Organisation erstellen können, Verwenden des Modells oder vielleicht zu trainieren und kalibrieren Sie das Modell in regelmäßigen Abständen neu. Dieser Prozess wird manchmal genannt *operationalisieren* eines Modells. Operationalisierung erfolgt in SQL Server durch Einbetten von R-Code in einer gespeicherten Prozedur. Da der Code in der Prozedur befindet, kann sie von jeder Anwendung aufgerufen werden, die eine Verbindung mit SQL Server herstellen können.
 
-Bevor Sie das Modell aus einer externen Anwendung aufrufen können, müssen Sie das Modell auf die für die Produktion verwendete Datenbank speichern. Trainierte Modelle werden gespeichert, in binärer Form, in einer einzelnen Spalte des Typs **'varbinary(max)'**.
+Bevor Sie das Modell aus einer externen Anwendung aufrufen können, müssen Sie das Modell auf die für die Produktion verwendete Datenbank speichern. Trainierte Modelle werden gespeichert, in binärer Form, in einer einzelnen Spalte des Typs **'varbinary(max)'** .
 
 Ein typische Bereitstellung-Workflow besteht aus die folgenden Schritte aus:
 

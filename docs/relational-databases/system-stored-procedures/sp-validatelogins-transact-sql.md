@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b60478b4ca3bdd6f2688f5a77c18cdce7166b37d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021055"
 ---
 # <a name="spvalidatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu Windows-Benutzer und Gruppen, die zugeordnet sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prinzipale, die jedoch nicht mehr in der Windows-Umgebung vorhanden sind.  
+  Stellt Informationen zu Windows-Benutzern und Windows-Gruppen bereit, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prinzipalen zugeordnet sind, die in der Windows-Umgebung jedoch nicht mehr vorhanden sind.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,21 +43,21 @@ sp_validatelogins
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**SID**|**varbinary(85)**|Windows-Sicherheits-ID (SID) des Windows-Benutzers oder der Windows-Gruppe.|  
 |**NT-Anmeldung**|**sysname**|Der Name des Windows-Benutzers oder der Windows-Gruppe.|  
   
 ## <a name="remarks"></a>Hinweise  
- Falls der verwaiste Prinzipal auf Serverebene einen Datenbankbenutzer besitzt, muss der Datenbankbenutzer entfernt werden, bevor der verwaiste Serverprinzipal entfernt werden kann. Verwenden Sie zum Entfernen eines Datenbankbenutzers [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Falls der Prinzipal auf Serverebene sicherungsfähige Elemente in der Datenbank besitzt, muss der Besitz der sicherungsfähigen Elemente übertragen werden, oder die sicherungsfähigen Elemente müssen gelöscht werden. Um den Besitz von sicherungsfähigen Datenbankelementen zu übertragen, verwenden Sie [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ Falls der verwaiste Prinzipal auf Serverebene einen Datenbankbenutzer besitzt, muss der Datenbankbenutzer entfernt werden, bevor der verwaiste Serverprinzipal entfernt werden kann. Verwenden Sie zum Entfernen eines Datenbankbenutzers [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Falls der Prinzipal auf Serverebene sicherungsfähige Elemente in der Datenbank besitzt, muss der Besitz der sicherungsfähigen Elemente übertragen werden, oder die sicherungsfähigen Elemente müssen gelöscht werden. Verwenden Sie [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md), um den Besitz von sicherungsfähigen Datenbankelementen zu übertragen.  
   
- Um Zuordnungen zu entfernen, die Windows-Benutzer und Gruppen, die nicht mehr vorhanden sind, verwenden Sie [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  
+ Verwenden Sie [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md), um Zuordnungen zu nicht mehr vorhandenen Windows-Benutzern und Windows-Gruppen zu entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder **securityadmin** .  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel zeigt die Windows-Benutzer und Gruppen, die nicht mehr vorhanden, aber weiterhin Zugriffsrechte für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Im folgenden Beispiel werden die Windows-Benutzer und Windows-Gruppen angezeigt, die nicht mehr vorhanden sind, die jedoch weiterhin auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugreifen können.  
   
 ```  
 EXEC sp_validatelogins;  

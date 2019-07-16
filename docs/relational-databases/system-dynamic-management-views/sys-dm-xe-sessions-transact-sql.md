@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5c46d9051fb1760791c16c9274a1803c58c1e90
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090223"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen über eine aktive Sitzung mit erweiterten Ereignissen zurück. Diese Sitzung ist eine Auflistung von Ereignissen, Aktionen und Zielen.  
     
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |address|**varbinary(8)**|Die Speicheradresse der Sitzung. Adresse ist im lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
 |NAME|**nvarchar(256)**|Der Name der Sitzung. Name ist im lokalen System eindeutig. Lässt keine NULL-Werte zu.|  
 |pending_buffers|**int**|Die Anzahl der vollen Puffer, deren Verarbeitung noch aussteht. Lässt keine NULL-Werte zu.|  
-|total_regular_buffers|**int**|Die Gesamtzahl regulärer Puffer, die der Sitzung zugeordnet sind. Lässt keine NULL-Werte zu.<br /><br /> Hinweis: In den meisten Fällen werden reguläre Puffer verwendet. Die Größe dieser Puffer ist ausreichend für zahlreiche Ereignisse. Normalerweise gibt es mindestens drei Puffer pro Sitzung. Die Anzahl der regulären Puffer wird vom Server auf Grundlage der Arbeitsspeicherpartitionierung automatisch bestimmt, die durch die MEMORY_PARTITION_MODE-Option festgelegt wird. Die Größe der regulären Puffer ist gleich dem Wert der MAX_MEMORY-Option (4 MB in der Standardeinstellung) dividiert durch die Anzahl der Puffer. Weitere Informationen zur MEMORY_PARTITION_MODE-Option und zur MAX_MEMORY-Option finden Sie unter [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|Die Gesamtzahl regulärer Puffer, die der Sitzung zugeordnet sind. Lässt keine NULL-Werte zu.<br /><br /> Hinweis: In den meisten Fällen werden reguläre Puffer verwendet werden. Die Größe dieser Puffer ist ausreichend für zahlreiche Ereignisse. Normalerweise gibt es mindestens drei Puffer pro Sitzung. Die Anzahl der regulären Puffer wird vom Server auf Grundlage der Arbeitsspeicherpartitionierung automatisch bestimmt, die durch die MEMORY_PARTITION_MODE-Option festgelegt wird. Die Größe der regulären Puffer ist gleich dem Wert der MAX_MEMORY-Option (4 MB in der Standardeinstellung) dividiert durch die Anzahl der Puffer. Weitere Informationen zur MEMORY_PARTITION_MODE-Option und zur MAX_MEMORY-Option finden Sie unter [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Die Größe des regulären Puffers in Bytes. Lässt keine NULL-Werte zu.|  
-|total_large_buffers|**int**|Die Gesamtzahl großer Puffer. Lässt keine NULL-Werte zu.<br /><br /> Hinweis: Große Puffer werden verwendet, wenn die Größe eines Ereignisses die Größe eines regulären Puffers überschreitet. Sie werden explizit für diesen Zweck reserviert. Große Puffer werden reserviert, wenn die Ereignissitzung startet, und werden anhand der MAX_EVENT_SIZE-Option skaliert. Weitere Informationen zur MAX_EVENT_SIZE-Option finden Sie unter [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_large_buffers|**int**|Die Gesamtzahl großer Puffer. Lässt keine NULL-Werte zu.<br /><br /> Hinweis: Große Puffer werden verwendet, wenn ein Ereignis eines regulären Puffers überschreitet. Sie werden explizit für diesen Zweck reserviert. Große Puffer werden reserviert, wenn die Ereignissitzung startet, und werden anhand der MAX_EVENT_SIZE-Option skaliert. Weitere Informationen zur MAX_EVENT_SIZE-Option finden Sie unter [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|Die Größe des großen Puffers in Bytes. Lässt keine NULL-Werte zu.|  
 |total_buffer_size|**bigint**|Die Gesamtgröße des Arbeitsspeicherpuffers, der zum Speichern von Ereignissen für die Sitzung verwendet wird, in Bytes. Lässt keine NULL-Werte zu.|  
 |buffer_policy_flags|**int**|Eine Bitmap, die angibt, wie sich Sitzungsereignispuffer verhalten, wenn alle Puffer voll sind und ein neues Ereignis ausgelöst wird. Lässt keine NULL-Werte zu.|  

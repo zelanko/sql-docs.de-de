@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054994"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'` Das Auftragsattribut, angezeigt werden soll. *Job_aspect* ist **varchar(9)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**ALL**|Auftragsaspektinformationen|  
 |**JOB**|Auftragsinformationen|  
@@ -106,16 +105,16 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>Resultsets  
  Wenn keine Argumente angegeben werden, **Sp_help_job** gibt dieses Resultset zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Die eindeutige ID des Auftrags.|  
 |**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Name des Auftrags.|  
-|**enabled**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**aktiviert**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
 |**description**|**nvarchar(512)**|Beschreibung für den Auftrag.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
-|**owner**|**sysname**|Auftragsbesitzer|  
+|**Besitzer**|**sysname**|Auftragsbesitzer|  
 |**notify_level_eventlog**|**int**|**Bitmaske** , der angibt, unter welchen Umständen ein Benachrichtigungsereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden sollen. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Ausführung des Auftrags<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine e-Mail-Benachrichtigung gesendet werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Bitmaske** , der angibt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerknachricht gesendet werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
@@ -173,11 +172,11 @@ sp_help_job { [ @job_id = ] job_id
   
  Im Folgenden wird das Resultset für Auftragszeitpläne aufgeführt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|Bezeichner des Zeitplans (eindeutig für alle Aufträge)|  
 |**schedule_name**|**sysname**|Name des Zeitplans (eindeutig nur für diesen Auftrag)|  
-|**enabled**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
+|**aktiviert**|**int**|Gibt an, ob der Zeitplan aktiv ist (**1**) oder nicht (**0**).|  
 |**freq_type**|**int**|Zeigt an, wann der Auftrag ausgeführt werden soll:<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
 |**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -197,7 +196,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Im Folgenden wird das Resultset für Auftragszielserver aufgeführt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Bezeichner des Zielservers|  
 |**server_name**|**nvarchar(30)**|Computername des Zielservers|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068617"
 ---
 # <a name="configuring-data-sources"></a>Konfigurieren von Datenquellen
 Informationen zu den Datenquellen werden in der systemregistrierung gespeichert. Benutzer ändern die Informationen über ein Verwaltungsprogramm der Datenquelle. Dies kann der ODBC-Administrator, das ODBC-Systemsteuerung-Gerät oder einen-Verwaltungsprogramm, die von einer Anwendung oder den Treiber Entwickler geschrieben sein.  

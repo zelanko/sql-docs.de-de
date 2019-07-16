@@ -3,18 +3,17 @@ title: Erste Schritte mit SQL Server-Sicherheit unter Linux
 description: Dieser Artikel beschreibt die typischen Sicherheitsaktionen.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019497"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Sicherheitsfunktionen von SQL Server unter Linux
 
@@ -137,10 +136,10 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 SECURITY-Richtlinie SalesFilter erstellen   
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
-  ON Sales.SalesOrderHeader,   
+FILTER-Prädikat Security.fn_securitypredicate(SalesPersonID) hinzufügen    
+  AUF Sales.SalesOrderHeader,   
 BLOCK-Prädikat Security.fn_securitypredicate(SalesPersonID) hinzufügen    
-  ON Sales.SalesOrderHeader   
+  AUF Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
@@ -181,8 +180,8 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 Erstellen Sie Testbenutzer für Benutzer ohne Anmeldung   
 GRANT SELECT ON Person.EmailAddress zu TestUser;    
  
-EXECUTE AS USER = 'TestUser';   
-SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+EXECUTE AS USER = "TestUser";   
+SELECT EmailAddressID, e-Mail-Adresse von Person.EmailAddress;       
 ZURÜCKGESETZT.    
 ```
  
@@ -229,10 +228,10 @@ GO
 Erstellen des Zertifikats MyServerCert mit Betreff = 'Meine Datenbankzertifikat für Datenverschlüsselungsschlüssel';  
 GO  
 
-USE AdventureWorks2014;   GO
+Verwenden Sie die AdventureWorks2014;   Wechseln
   
 CREATE DATABASE ENCRYPTION KEY  
-WITH ALGORITHM = AES_256  
+MIT DEM ALGORITHMUS = AES_256  
 Verschlüsselung von SERVER-Zertifikat MyServerCert  
 GO
   
@@ -264,7 +263,7 @@ mit
   KOMPRIMIERUNG  
   ENCRYPTION   
    (  
-   ALGORITHM = AES_256,  
+   ALGORITHMUS = AES_256,  
    SERVERZERTIFIKAT BackupEncryptCert =  
    ),  
   STATS = 10  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053444"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62690234"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID der Tabelle, zu der der Index gehört.|  
 |**status**|**int**|Systemstatusinformationen.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -47,8 +46,8 @@ ms.locfileid: "62690234"
 |**keycnt**|**smallint**|Anzahl der Schlüssel.|  
 |**groupid**|**smallint**|ID der Dateigruppe, für die das Objekt erstellt wurde.<br /><br /> NULL = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**dpages**|**int**|Für **indid** = 0 oder **indid** = 1 ist **dpages** die Anzahl der verwendeten Datenseiten.<br /><br /> Für **Indid** > 1, **Dpages** ist die Anzahl der verwendeten Indexseiten.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
-|**reserved**|**int**|Für **indid** = 0 oder **indid** = 1 ist **reserved** die Anzahl der allen Indizes und Tabellendaten zugeordneten Seiten.<br /><br /> Für **Indid** > 1, **reservierte** ist die Anzahl der Seiten, die für den Index zugeordnet.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
-|**used**|**int**|Für **indid** = 0 oder **indid** = 1 ist **used** die Gesamtanzahl der für alle Indizes und Tabellendaten verwendeten Seiten.<br /><br /> Für **Indid** > 1, **verwendet** ist die Anzahl der Seiten, die für den Index verwendet.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
+|**Reserviert**|**int**|Für **indid** = 0 oder **indid** = 1 ist **reserved** die Anzahl der allen Indizes und Tabellendaten zugeordneten Seiten.<br /><br /> Für **Indid** > 1, **reservierte** ist die Anzahl der Seiten, die für den Index zugeordnet.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
+|**verwendet**|**int**|Für **indid** = 0 oder **indid** = 1 ist **used** die Gesamtanzahl der für alle Indizes und Tabellendaten verwendeten Seiten.<br /><br /> Für **Indid** > 1, **verwendet** ist die Anzahl der Seiten, die für den Index verwendet.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
 |**rowcnt**|**bigint**|Zeilenanzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**rowmodctr**|**int**|Zählt die Gesamtzahl der eingefügten, gelöschten oder aktualisierten Zeilen, seitdem die Statistiken für die Tabelle zuletzt aktualisiert wurden.<br /><br /> 0 = Index ist partitioniert, wenn **Indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen ist **rowmodctr** nicht vollständig mit früheren Versionen kompatibel. Weitere Informationen finden Sie in den Hinweisen.|  
 |**reserved3**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

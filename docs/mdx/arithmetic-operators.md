@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017081"
 ---
 # <a name="arithmetic-operators"></a>Arithmetische Operatoren
 
@@ -23,7 +22,7 @@ ms.locfileid: "63284521"
   
  MDX unterstützt die arithmetischen Operatoren, die in der folgenden Tabelle aufgelistet sind.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
 |[+ (Add) (+ (Addieren))](../mdx/add-mdx.md)|Addition zweier Zahlen.|  
 |[/ (Dividieren)](../mdx/divide-mdx-operator-reference.md)|Dividiert eine Zahl durch eine andere Zahl.|  

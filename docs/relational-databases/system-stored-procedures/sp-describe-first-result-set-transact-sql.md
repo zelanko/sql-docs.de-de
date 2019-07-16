@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053047"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,9 +42,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ \@tsql = ] 'Transact-SQL_batch'` Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen. *Transact-SQL_batch* möglicherweise **Nvarchar (***n***)** oder **nvarchar(max)** .  
   
-`[ \@params = ] N'parameters'` \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, die analog zu Sp_executesql ist. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)**.  
+`[ \@params = ] N'parameters'` \@Params stellt eine deklarationszeichenfolge für Parameter für die [!INCLUDE[tsql](../../includes/tsql-md.md)] Batch, die analog zu Sp_executesql ist. Parameter können ggf. werden **nvarchar (n)** oder **nvarchar(max)** .  
   
  Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in eingebettet wurden die [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder in Parameter in der Anweisung muss definiert werden, \@Params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in der Anweisung keine Parameter, \@"Params" ist nicht erforderlich. NULL, ist der Standardwert für diesen Parameter.  
   
@@ -63,7 +62,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>Resultsets  
  Diese allgemeinen Metadaten werden in den Ergebnismetadaten als Resultset mit einer Zeile für jede Spalte zurückgegeben. Jede Zeile beschreibt den Typ und die NULL-Zulässigkeit der Spalte in dem Format, das im folgenden Abschnitt beschriebenen wird. Wenn die erste Anweisung nicht für alle Steuerelementpfade vorhanden ist, wird ein Resultset mit 0 Zeilen zurückgegeben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**Bit nicht NULL**|Gibt an, dass es sich bei der Spalte um eine zusätzliche Spalte zum Suchen von Informationen handelt, die nicht im Resultset angezeigt wird.|  
 |**column_ordinal**|**Int nicht NULL**|Enthält die Ordnungsposition der Spalte im Resultset. Position der ersten Spalte wird mit 1 angegeben werden.|  
@@ -71,7 +70,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**Bit nicht NULL**|Enthält den Wert 1, wenn die Spalte NULL-Werte zulässt, 0, wenn die Spalte keinen NULL-Werte zulässt, und 1, wenn nicht ermittelt werden kann, ob die Spalte NULL-Werte zulässt.|  
 |**system_type_id**|**Int nicht NULL**|Enthält die System_type_id des Datentyps der Spalte, wie in sys.types angegeben. Bei CLR-Typen wird von dieser Spalte der Wert 240 zurückgegeben, obwohl von der system_type_name-Spalte NULL zurückgegeben wird.|  
 |**system_type_name**|**nvarchar(256) NULL**|Enthält den Namen und die Argumente (z. B. Länge, Genauigkeit oder Skala), die für den Datentyp der Spalte angegeben wurden. Wenn der Datentyp ein benutzerdefinierter Aliastyp ist, wird der zugrunde liegende Systemtyp hier angegeben. Bei einem benutzerdefinierten CLR-Typ wird NULL in dieser Spalte zurückgegeben.|  
-|**max_length**|**Smallint nicht NULL**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert werden 16- oder den Wert festlegen, indem **Sp_tableoption 'Text in Row'**.|  
+|**max_length**|**Smallint nicht NULL**|Maximale Länge (in Byte) für die Spalte.<br /><br /> -1 = Spaltendatentyp ist **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , oder **Xml**.<br /><br /> Für **Text** Spalten, die **Max_length** Wert werden 16- oder den Wert festlegen, indem **Sp_tableoption 'Text in Row'** .|  
 |**precision**|**Tinyint nicht NULL**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**scale**|**Tinyint nicht NULL**|Die Skalierung der Spalte, wenn sie auf numerischen Werten basiert. Andernfalls wird 0 zurückgegeben.|  
 |**collation_name**|**Sysname NULL**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist. Andernfalls wird NULL zurückgegeben.|  
@@ -148,7 +147,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **varbinary(a)** zu **varbinary(a')** , in denen ein "> ein.  
   
-    -   **varbinary(a)** to **varbinary(max)**  
+    -   **varbinary(a)** zu **varbinary(max)**  
   
  **Sp_describe_first_result_set** unterstützt keine Indirekte Rekursion.  
   
@@ -298,7 +297,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- Ergebnis: Fehler, die nicht übereinstimmende Typen (**varchar(10)** im Vergleich zu **nvarchar(10)**).  
+ Ergebnis: Fehler, die nicht übereinstimmende Typen (**varchar(10)** im Vergleich zu **nvarchar(10)** ).  
   
 #### <a name="result-set-can-return-an-error"></a>Resultset kann einen Fehler zurückgeben  
  Das erste Resultset ist Fehler oder Resultset.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997579"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
  [ @remoteserver **=** ] **"***Remoteserver***"**  
  Der Remoteserver, für den Informationen zu Remoteanmeldenamen zurückgegeben werden. *Remoteserver* ist **Sysname**, hat den Standardwert NULL. Wenn *Remoteserver* ist nicht angegeben ist, werden Informationen zu allen Remoteservern, auf dem lokalen Server definierten zurückgegeben.  
   
- [ @remotename **=** ] **'***remote_name***'**  
+ [ @remotename **=** ] **"***Remote_name***"**  
  Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Remote_name* nicht angegeben ist, Informationen zu allen Remotebenutzern für definierten *Remoteserver* zurückgegeben wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -88,7 +87,7 @@ EXEC sp_helpremotelogin;
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+ [Sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

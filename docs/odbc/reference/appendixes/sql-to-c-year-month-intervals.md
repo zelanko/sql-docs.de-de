@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01af57739f23db586991f8a54d14b90b47f15933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c7412226dd0674022da022b0a0a63e5bf2063cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065043"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL in C: Jahr-Monat-Intervalle
 
@@ -35,11 +34,11 @@ Die folgende Tabelle zeigt die ODBC-C-Datentypen, die in die Jahr-Monat Interval
 
 |C-Typ-ID|Test|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_INTERVAL_MONTH[a]<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH[a]|Nachfolgende Felder Teil nicht abgeschnitten<br /><br /> Nachfolgende Felder Teil abgeschnitten<br /><br /> Die führende Genauigkeit des Ziels ist nicht groß genug zum Speichern von Daten aus der Quelle|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|Intervall-Genauigkeit wurde ein einzelnes Feld aus, und die Daten ohne Abschneiden konvertiert wurde<br /><br /> Intervall-Genauigkeit wurde ein einzelnes Feld und das gesamte abgeschnittene<br /><br /> Intervall-Genauigkeit war kein einzelnes Feld|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Länge der Daten in bytes<br /><br /> Anzahl der C-Datentyp|–<br /><br /> 22003<br /><br /> 22015|  
-|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 22003|  
-|SQL_C_CHAR|Zeichen-Byte-Länge < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Anzahl der C-Datentyp<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Zeichenlänge < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Anzahl der C-Datentyp<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH[a]<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH[a]|Nachfolgende Felder Teil nicht abgeschnitten<br /><br /> Nachfolgende Felder Teil abgeschnitten<br /><br /> Die führende Genauigkeit des Ziels ist nicht groß genug zum Speichern von Daten aus der Quelle|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|n/v<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|Intervall-Genauigkeit wurde ein einzelnes Feld aus, und die Daten ohne Abschneiden konvertiert wurde<br /><br /> Intervall-Genauigkeit wurde ein einzelnes Feld und das gesamte abgeschnittene<br /><br /> Intervall-Genauigkeit war kein einzelnes Feld|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Länge der Daten in bytes<br /><br /> Anzahl der C-Datentyp|n/v<br /><br /> 22003<br /><br /> 22015|  
+|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|n/v<br /><br /> 22003|  
+|SQL_C_CHAR|Zeichen-Byte-Länge < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Anzahl der C-Datentyp<br /><br /> Nicht definiert|n/v<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Zeichenlänge < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) < *Pufferlänge*<br /><br /> Anzahl von Ziffern für ganze (im Gegensatz zu Bruch) > = *Pufferlänge*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|Anzahl der C-Datentyp<br /><br /> Anzahl der C-Datentyp<br /><br /> Nicht definiert|n/v<br /><br /> 01004<br /><br /> 22003|  
   
  [a] ein Jahr-Monat-Intervall SQL-Typ kann auf einen beliebigen Jahr-Monat-C-Intervall-Typ konvertiert werden.  
   

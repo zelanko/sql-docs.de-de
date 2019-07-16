@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f249bb13ece6382e96dfe953b1d3c1d96c7bf65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107260"
 ---
 # <a name="statement-handles"></a>Anweisungshandles
 Ein *Anweisung* ist am einfachsten vorstellen als SQL-Anweisung, wie z. B. **wählen \* aus Mitarbeiter**. Allerdings wird eine Anweisung ist mehr als nur eine SQL-Anweisung – Es besteht aus der alle Informationen, SQL-Anweisung, wie z. B. alle Resultsets, die von der Anweisung erstellt und in der Ausführung der Anweisung verwendeten Parametern zugeordnet. Eine Anweisung muss auch nicht um eine Anwendung definierte SQL-Anweisung zu erhalten. Wenn ein Katalog funktionieren wie z. B. **SQLTables** ausgeführt wird in einer Anweisung, führt es eine vordefinierte SQL-Anweisung, die eine Liste der Tabellennamen zurückgibt.  

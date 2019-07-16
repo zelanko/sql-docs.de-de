@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029399"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Bericht zur Datenmigration (SybaseToSQL)
 Die **Data Migration Report** Dialogfeld wird angezeigt, nach dem Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +35,7 @@ Die Anzahl von Zeilen mit Daten in der Quelltabelle.
 **Anzahl der erfolgreich migrierte Zeilen**  
 Die Anzahl von Zeilen mit Daten wurden erfolgreich in die Zieltabelle migriert.  
   
-**Ratio**  
+**Verhältnis**  
 Der Prozentsatz der Zeilen wurden erfolgreich migriert.  
   
 **Details**  

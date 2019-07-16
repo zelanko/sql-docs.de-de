@@ -4,18 +4,17 @@ description: In diesem Tutorial zeigt, wie Sie eine SQL Server-hochverfügbarkei
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 2ae299553c700de7f22976917fa8556f93dbe61b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032052"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
 
@@ -58,7 +57,7 @@ Im folgenden Diagramm das hosting der Knoten die `mssql-server` Container ein Fe
    >[!NOTE]
    >Zum Schutz gegen den Ausfall eines Knotens erfordert ein Kubernetes-Cluster mehr als einem Knoten.
 
-* **Azure CLI 2.0.23**
+* **Azure-Befehlszeilenschnittstelle 2.0.23**
    - Die Anweisungen in diesem Tutorial wurden für Azure-Befehlszeilenschnittstelle 2.0.23 überprüft.
 
 ## <a name="create-an-sa-password"></a>Erstellen Sie ein SA-Kennwort

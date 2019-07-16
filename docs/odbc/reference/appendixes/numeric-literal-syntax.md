@@ -14,40 +14,39 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990718"
 ---
 # <a name="numeric-literal-syntax"></a>Syntax von numerischen Literalen
 Die folgende Syntax wird für numerische Literale in ODBC verwendet:  
   
- *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
+ *numerischen Literalen* :: = *signiert-numerische-Literal &#124; unsigned-numerische-Literal*  
   
  *signiert-numerische-Literal* :: = [*anmelden*] *unsigned-numerische-Literal*  
   
- *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
+ *unsigned-numerische-Literal* :: = *exakte numerische-literalen &#124; ungefähren numerischen-Literalen*  
   
- *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
+ *exakte numerische-literalen* :: = *unsigned Integer* [*Zeitraum*[*unsigned Integer*]]  *&#124;Zeitraum des unsigned Integer*  
   
  *sign* ::= *plus-sign &#124; minus-sign*  
   
  *Ungefähre numerische-literalen* :: = *Mantisse E Exponent*  
   
- *mantissa* ::= *exact-numeric-literal*  
+ *Mantisse* :: = *exakte numerische-literalen*  
   
- *exponent* ::= *signed-integer*  
+ *Exponent* :: = *Ganzzahl mit Vorzeichen*  
   
  *signierte Ganzzahl* :: = [*anmelden*] *einer Ganzzahl ohne Vorzeichen*  
   
  *nicht signierte Ganzzahl* :: = *Ziffer...*  
   
- *plus-sign* ::= *+*  
+ *Pluszeichen (+)* :: = *+*  
   
- *minus-sign* ::= -  
+ *Minuszeichen (-)* :: = -  
   
  *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4fe3619ae24f8dbee774aef95abc37ad57ca6e19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40c6c1063ff738428072f3198cae8827e78e2390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060148"
 ---
 # <a name="project-settings-migration-db2tosql"></a>Project Settings (Migration) (DB2ToSQL)
 Der Seite für die Migration von der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA Daten aus DB2 in migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,12 +43,12 @@ Im Bereich für die Migration steht in der **Projekteinstellungen** und **Projek
 |**Data Migration-Timeout**|Gibt das Timeout verwendet wird, während der Datenmigration<br /><br />**Im Modus Standard**:  15<br /><br />**Vollständige**:  15<br /><br />**Vollständiger Modus**:  15|  
 |**Erweiterte Daten Migrationsoptionen**|Zeigt zusätzliche Daten Migrationsoptionen für jede Tabelle in separate detailregisterkarte.<br /><br />**Im Modus Standard**:  Ausblenden<br /><br />**Vollständige**:  Ausblenden<br /><br />**Vollständiger Modus**:  Ausblenden|  
 |**Trigger auslösen**|Gibt an, ob SSMA einfügen Trigger ausgelöst werden soll, wenn sie Daten in SQL Server-Tabellen hinzufügt.<br /><br />**Im Modus Standard**:  False<br /><br />**Vollständige**:  False<br /><br />**Vollständiger Modus**:  False|  
-|**Identität beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  False|  
-|**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  Wahr|  
+|**Identität beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  False|  
+|**NULL-Werte beibehalten**|Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn Daten in SQL Server – unabhängig von den Standardwerten hinzugefügt, die in SQL Server angegeben werden.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
 |**Markieren Sie Trim String-Vorgang mit Fehler**|Wenn die Größe der Zielspalte kleiner als die Länge der Zeichenfolge ist, wird der Wert abgeschnitten und als Fehler gekennzeichnet.<br /><br />**Im Modus Standard**:  Ja<br /><br />**Vollständige**:  Ja<br /><br />**Vollständiger Modus**:  Ja|  
 |**On Error**|Die Datenmigration beendet, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Beenden Sie Migration:** Daten-Migrationsvorgang beendet<br /><br />**Gehen Sie zur nächsten Tabelle:** Beendet die Datenmigration für die aktuelle Tabelle und geht zur nächsten<br /><br />**Fahren Sie mit dem nächsten Batch fort:** Migration von Daten zu den aktuellen Batch beendet und geht zur nächsten<br /><br />**Im Modus Standard**: Fahren Sie mit dem nächsten Batch fort<br /><br />**Vollständige**: Fahren Sie mit dem nächsten Batch fort<br /><br />**Vollständiger Modus**: Fahren Sie mit dem nächsten Batch fort|  
 |**Ersetzen Sie dies nicht unterstützte Datumswerte**|Gibt an, ob SSMA Datumsangaben beheben sollte, die älter als Frühestes unterstütztes sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **"DateTime"** Datum (01 Januar 1753).<br /><br />Um das aktuelle Datum zu erhalten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datumsangaben vor dem 01 Januar 1753 wird in eine Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten enthalten, die konvertieren.<br /><br />Wählen Sie zum Konvertieren von Datumsangaben vor dem 01 Januar 1753 auf NULL **durch NULL Ersetzen**.<br /><br />Um Datumsangaben vor dem 01 Januar 1753 mit einem unterstützten Datum ersetzen möchten, wählen Sie **ersetzen Sie dies durch nächste unterstützte Datum**.<br /><br />**Im Modus Standard**: Keine Aktion durchführen<br /><br />**Vollständige**: Keine Aktion durchführen<br /><br />**Vollständiger Modus**: Ersetzen Sie dies durch nächste unterstützte Datum|  
-|**Tabellensperre**|Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Ruft eine Massenaktualisierungssperre für die Dauer des Massenkopiervorgangs ab. Wenn der Wert "false" ist, wird eine Sperre auf Zeilenebene festgelegt.<br /><br />**Im Modus Standard**:  Wahr<br /><br />**Vollständige**:  Wahr<br /><br />**Vollständiger Modus**:  Wahr|  
+|**Tabellensperre**|Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Ruft eine Massenaktualisierungssperre für die Dauer des Massenkopiervorgangs ab. Wenn der Wert "false" ist, wird eine Sperre auf Zeilenebene festgelegt.<br /><br />**Im Modus Standard**:  True<br /><br />**Vollständige**:  True<br /><br />**Vollständiger Modus**:  True|  
   
 ## <a name="parallel-data-migration"></a>Parallele Datenmigration  
   

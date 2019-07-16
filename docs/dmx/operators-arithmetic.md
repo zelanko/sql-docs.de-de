@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008211"
 ---
 # <a name="operators---arithmetic"></a>Operatoren – arithmetisch
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +22,11 @@ ms.locfileid: "62502690"
   
  In der folgenden Tabelle sind die arithmetischen Operatoren aufgeführt, die DMX unterstützt.  
   
-|Operator|Description|  
+|Operator|Beschreibung|  
 |--------------|-----------------|  
-|[+ &#40;Add&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Addiert zwei Zahlen.|  
+|[+ &#40;Hinzufügen&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Addiert zwei Zahlen.|  
 |[- &#40;Subtract&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Subtrahiert eine Zahl von einer anderen Zahl.|  
-|[&#42; &#40;Multiply&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Multipliziert eine Zahl mit einer anderen Zahl.|  
+|[&#42;&#40;Multiplizieren&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Multipliziert eine Zahl mit einer anderen Zahl.|  
 |[&#40;Divide&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Dividiert eine Zahl durch eine andere Zahl.|  
   
  Die folgenden Regeln bestimmen die Rangfolge, die arithmetische Operatoren in einem DMX-Ausdruck haben.  

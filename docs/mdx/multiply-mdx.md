@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f752aec0a2e1b49fbf1145129876d2f8c5901ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 396dded86adfe8faa6b6ad58b5eb8174d4323726
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63456584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088423"
 ---
 # <a name="-multiply-mdx"></a>* (Multiplikation) (MDX)
 
@@ -29,7 +28,7 @@ Numeric_Expression * Numeric_Expression
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Numeric_Expression*  
+ *Numeric_expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  

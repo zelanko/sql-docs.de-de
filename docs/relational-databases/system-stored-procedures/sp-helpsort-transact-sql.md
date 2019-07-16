@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91a5209044b824746dcd71b7ae9069ed45568d32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997356"
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Zeigt die Sortierreihenfolge und den Zeichensatz für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
+  Zeigt die Sortierreihenfolge und den Zeichensatz für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]an.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ sp_helpsort
  Gibt die Standardsortierung des Servers zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird mit einer Sortierung angegeben, um die Kompatibilität mit einer früheren Installation von installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **"sp_helpsort"** leere Ergebnisse zurück. Wenn dieses Verhalten auftritt, können Sie die Sortierung bestimmen, indem Sie das SERVERPROPERTY-Objekt beispielsweise folgendermaßen abfragen: `SELECT SERVERPROPERTY ('Collation');`.  
+ Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einer Sortierung installiert ist, für die angegeben ist, dass sie kompatibel mit einer früheren Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein soll, dann gibt **sp_helpsort** leere Ergebnisse zurück. Wenn dieses Verhalten auftritt, können Sie die Sortierung bestimmen, indem Sie das SERVERPROPERTY-Objekt beispielsweise folgendermaßen abfragen: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  

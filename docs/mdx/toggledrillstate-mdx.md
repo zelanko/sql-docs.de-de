@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036613"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
 
@@ -36,10 +35,10 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
  *Rekursive*  
- (Optional). Ein Schlüsselwort, das einen rekursiven Vergleich von Mengen angibt. Die **ToggleDrillState** Funktion ist eine Kombination der **DrillupMember** und **DrilldownMember** Funktionen. Rekursion gilt nur, wenn das Element enthalten ist das **DrilldownMember** Zustand.  
+ (Optional) Ein Schlüsselwort, das einen rekursiven Vergleich von Mengen angibt. Die **ToggleDrillState** Funktion ist eine Kombination der **DrillupMember** und **DrilldownMember** Funktionen. Rekursion gilt nur, wenn das Element enthalten ist das **DrilldownMember** Zustand.  
   
  *Include_calc_members*  
- (Optional). Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
+ (Optional) Ein Flag, das anzeigt, ob berechnete Elemente eingeschlossen werden sollen, wenn sie vorhanden sind (auf Drilldownebene).  
   
 ## <a name="remarks"></a>Hinweise  
  Die **ToggleDrillState** -Funktion schaltet den Drillstatus für jedes Element der zweiten Menge, die in der ersten Menge vorhanden ist. Die erste Menge kann Tupel beliebiger Dimensionalität aufweisen, die zweite Menge muss jedoch ausschließlich Elemente einer einzigen Dimension enthalten. Die **ToggleDrillState** Funktion ist eine Kombination der **DrillupMember** und **DrilldownMember** Funktionen. Wenn das Element *m*der zweiten Menge in der ersten Menge vorhanden ist und dieses Element ein Drilldown (d. h. weist ein abhängiges Element unmittelbar folgt), klicken Sie dann `DrillupMember(Set_Expression1, {m})` auf das Element oder Tupel in der ersten Menge angewendet wird. Wenn das *m* Member oben angezeigt wird (d. h., es ist keine Nachfolger des *m* , die unmittelbar folgt *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` auf der ersten Menge angewendet wird.  

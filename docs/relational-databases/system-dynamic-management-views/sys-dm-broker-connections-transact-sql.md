@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95acff9d1b80560294758045c449c1c6c6790c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2df4786147a5301e4e9167cbe121b9151e72190f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099161"
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Netzwerkverbindung zurück. Die folgende Tabelle enthält weitere Informationen:  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Bezeichner der Verbindung. Lässt NULL-Werte zu.|  
 |**transport_stream_id**|**uniqueidentifier**|Bezeichner für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkschnittstelle (SNI)-Verbindung, die von dieser Verbindung verwendet wird, für die TCP/IP-Kommunikation. Lässt NULL-Werte zu.|  
@@ -47,8 +46,8 @@ ms.locfileid: "62759991"
 |**login_state**|**smallint**|Status des Anmeldeprozesses für diese Verbindung. Mögliche Werte:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ONLINE<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|Aktueller Anmeldestatus des Remotecomputers. Mögliche Werte:<br /><br /> Verbindungshandshake wird initialisiert.<br /><br /> Verbindungshandshake wartet auf Anmeldungsaushandlungs-Meldung.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung initialisiert und gesendet.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung empfangen und akzeptiert.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung initialisiert und gesendet. Ein optionaler Mechanismus ist für das Authentifizieren der Peers verfügbar.<br /><br /> Verbindungshandshake hat Sicherheitskontext zur Authentifizierung empfangen und gesendet. Ein optionaler Mechanismus ist für das Authentifizieren der Peers verfügbar.<br /><br /> Verbindungshandshake wartet auf Meldung zur Bestätigung der Sicherheitskontextinitialisierung.<br /><br /> Verbindungshandshake wartet auf Meldung zur Bestätigung der Sicherheitskontextannahme.<br /><br /> Verbindungshandshake wartet auf SSPI-Ablehnungsmeldung zur fehlgeschlagenen Authentifizierung.<br /><br /> Verbindungshandshake wartet auf Meldung für Vorstufe des geheimen Hauptschlüssels.<br /><br /> Verbindungshandshake wartet auf Überprüfungsmeldung.<br /><br /> Verbindungshandshake wartet auf Vermittlungsmeldung.<br /><br /> Verbindungshandshake wurde abgeschlossen und ist online (bereit) für Nachrichtenaustausch.<br /><br /> Verbindungsfehler.|  
 |**peer_certificate_id**|**int**|ID des lokalen Objekts für das Zertifikat, das von der Remoteinstanz zur Authentifizierung verwendet wird. Der Besitzer dieses Zertifikats muss über CONNECT-Berechtigungen für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt verfügen. Lässt NULL-Werte zu.|  
-|**encryption_algorithm**|**smallint**|Der für diese Verbindung verwendete Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Wert &#124; Beschreibung &#124; entsprechende DDL-Option**<br /><br /> 0 &#124; keine &#124; deaktiviert<br /><br /> 1 &AMP;#124; NUR ANMELDEN<br /><br /> 2 &#124; AES, RC4 &#124; erforderlich &#124; erforderlichen Algorithmus RC4}<br /><br /> 3 &#124; AES &#124;Required Algorithm AES<br /><br /> **Hinweis**: Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Textdarstellung des Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Beschreibung &#124; entsprechende DDL-Option**<br /><br /> NONE &#124; Disabled<br /><br /> RC4 &#124; {erforderlich &#124; Verschlüsselungsalgorithmus RC4 erforderlich}<br /><br /> AES &#124; AES-Algorithmus erforderlich<br /><br /> KEINER, RC4 &#124; {unterstützt &#124; Verschlüsselungsalgorithmus RC4 unterstützt}<br /><br /> KEINER, AES &#124; Verschlüsselungsalgorithmus RC4 unterstützt<br /><br /> RC4, AES &#124; erforderlichen Verschlüsselungsalgorithmus RC4 AES<br /><br /> AES, RC4 &#124; Verschlüsselungsalgorithmus AES RC4 erforderlich<br /><br /> KEINER, RC4, AES &#124; unterstützt Verschlüsselungsalgorithmus RC4 AES<br /><br /> KEINER, AES, RC4 &#124; Verschlüsselungsalgorithmus AES RC4 unterstützt|  
+|**encryption_algorithm**|**smallint**|Der für diese Verbindung verwendete Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Wert &#124; Beschreibung &#124; entsprechende DDL-Option**<br /><br /> 0 &#124; keine &#124; deaktiviert<br /><br /> 1 &#124; NUR ANMELDEN<br /><br /> 2 &#124; AES, RC4 &#124; erforderlich &#124; erforderlichen Algorithmus RC4}<br /><br /> 3 &#124; AES &#124;Required Algorithm AES<br /><br /> **Hinweis**: Der RC4-Algorithmus wird nur aus Gründen der Abwärtskompatibilität unterstützt. Neues Material kann nur mit RC4 oder RC4_128 verschlüsselt werden, wenn die Datenbank den Kompatibilitätsgrad 90 oder 100 besitzt. (Nicht empfohlen.) Verwenden Sie stattdessen einen neueren Algorithmus, z. B. einen der AES-Algorithmen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen kann mit RC4 oder RC4_128 verschlüsseltes Material in jedem Kompatibilitätsgrad entschlüsselt werden.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Textdarstellung des Verschlüsselungsalgorithmus. Lässt NULL-Werte zu. Mögliche Werte:<br /><br /> **Beschreibung &#124; entsprechende DDL-Option**<br /><br /> KEINE &#124; deaktiviert<br /><br /> RC4 &#124; {erforderlich &#124; Verschlüsselungsalgorithmus RC4 erforderlich}<br /><br /> AES &#124; AES-Algorithmus erforderlich<br /><br /> KEINER, RC4 &#124; {unterstützt &#124; Verschlüsselungsalgorithmus RC4 unterstützt}<br /><br /> KEINER, AES &#124; Verschlüsselungsalgorithmus RC4 unterstützt<br /><br /> RC4, AES &#124; erforderlichen Verschlüsselungsalgorithmus RC4 AES<br /><br /> AES, RC4 &#124; Verschlüsselungsalgorithmus AES RC4 erforderlich<br /><br /> KEINER, RC4, AES &#124; unterstützt Verschlüsselungsalgorithmus RC4 AES<br /><br /> KEINER, AES, RC4 &#124; Verschlüsselungsalgorithmus AES RC4 unterstützt|  
 |**receives_posted**|**smallint**|Die Anzahl asynchroner Netzwerkempfangsvorgänge, die für diese Verbindung noch nicht abgeschlossen wurden. Lässt NULL-Werte zu.|  
 |**is_receive_flow_controlled**|**bit**|Angabe, ob Netzwerkempfangsvorgänge aus Gründen der Datenflusskontrolle verschoben wurden, da das Netzwerk ausgelastet ist. Lässt NULL-Werte zu.<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|Die Anzahl asynchroner Netzwerksendevorgänge, die für diese Verbindung noch nicht abgeschlossen wurden. Lässt NULL-Werte zu.|  
@@ -69,7 +68,7 @@ ms.locfileid: "62759991"
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Aktion|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |**dm_broker_connections.connection_id**|**dm_exec_connections.connection_id**|1:1|  
   

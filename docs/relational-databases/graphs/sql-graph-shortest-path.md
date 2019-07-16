@@ -17,14 +17,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035880"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,7 +48,7 @@ FÜR Pfad mit alle Knoten- oder edgetabelle Tabellennamen in der FROM-Klausel ve
 ## <a name="arbitrary-length-pattern"></a>Beliebiger Länge-Muster
 Dieses Muster enthält, die Knoten und Kanten, die wiederholt durchlaufen werden müssen, bis Sie der gewünschte Knoten erreicht wird, oder bis die maximale Anzahl von Iterationen gemäß dem Muster erfüllt ist. Jedes Mal, wenn die Abfrage ausgeführt wird, wird das Ergebnis der Ausführung dieses Muster eine geordnete Auflistung von Knoten und Kanten, die entlang des Pfads vom Startknoten zum Endknoten durchlaufen werden. Dies ist die Syntax-Muster eines regulären Ausdrucks-Stil und die folgenden zwei Muster Quantifizierer werden unterstützt:
 
-* **‘+’** : Das Muster 1 oder mehrmals wiederholen. Beenden, sobald ein kürzester Pfad gefunden wird.
+* **'+'** : Das Muster 1 oder mehrmals wiederholen. Beenden, sobald ein kürzester Pfad gefunden wird.
 * **{1,n}** : Das Muster 1 bis „n“ Male wiederholen. Beenden Sie als einen kürzesten gefunden wird.
 
 ## <a name="lastnode"></a>LAST_NODE
@@ -210,7 +209,7 @@ WHERE Q.levels = 2
 ```
 
 ## <a name="see-also"></a>Siehe auch  
- [MATCH (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
+ [Übereinstimmung (SQL-Graph)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL-Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)     

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b938ee83469579e5440697205856de32ea41ea1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 106a496bd1bd7acb0895de2bc41438ef76cbea1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086427"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Bearbeiten und Löschen eines Indexes (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65487027"
 
   Sie können einen Index, den Sie mit Attributen erstellt haben, bearbeiten und löschen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

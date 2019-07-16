@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd33fc16d399cc6d628eb4b3e80af98efca4ecc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048350"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der zugeordneten Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**, dem alle Abonnementinformationen für diesen Server zurückgegeben.  
+`[ @publication = ] 'publication'` Ist der Name der zugeordneten Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** , dem alle Abonnementinformationen für diesen Server zurückgegeben.  
   
-`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert **%**, dem alle Abonnementinformationen für die ausgewählten Veröffentlichungen und Abonnenten zurückgegeben. Wenn **alle**, nur einen Eintrag für das vollständige Abonnement für eine Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert **%** , dem alle Abonnementinformationen für die ausgewählten Veröffentlichungen und Abonnenten zurückgegeben. Wenn **alle**, nur einen Eintrag für das vollständige Abonnement für eine Veröffentlichung zurückgegeben.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten, auf dem Abonnementinformationen abgerufen. *Abonnenten* ist **Sysname**, hat den Standardwert **%**, dem alle Abonnementinformationen für die ausgewählten Veröffentlichungen und Artikel zurückgegeben.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten, auf dem Abonnementinformationen abgerufen. *Abonnenten* ist **Sysname**, hat den Standardwert **%** , dem alle Abonnementinformationen für die ausgewählten Veröffentlichungen und Artikel zurückgegeben.  
   
-`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%**.  
+`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%** .  
   
 `[ @found = ] 'found'OUTPUT` Ist ein Flag zur Angabe zurückgegebener Zeilen. *finden Sie*ist **Int** und ein OUTPUT-Parameter mit dem Standardwert 23456.  
   
@@ -64,7 +63,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**subscriber**|**sysname**|Der Name des Abonnenten.|  
 |**publication**|**sysname**|Name der Veröffentlichung.|  
@@ -72,7 +71,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**Zieldatenbank**|**sysname**|Name der Zieldatenbank, in der replizierte Daten gespeichert werden.|  
 |**Abonnementstatus**|**tinyint**|Abonnementstatus:<br /><br /> **0** = inaktiv<br /><br /> **1** = abonniert<br /><br /> **2** = aktiv|  
 |**Synchronisierungstyp**|**tinyint**|Synchronisierungsart des Abonnements:<br /><br /> **1** = automatisch<br /><br /> **2** = keine|  
-|**Abonnementtyp**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = anonym|  
+|**Abonnementtyp**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pullabonnement<br /><br /> **2** = anonym|  
 |**vollständiges Abonnement**|**bit**|Gibt an, ob alle Artikel in der Veröffentlichung abonniert werden:<br /><br /> **0** = Nein<br /><br /> **1** = Ja|  
 |**Abonnementname**|**nvarchar(255)**|Name des Abonnements.|  
 |**Updatemodus**|**int**|**0** = schreibgeschützt<br /><br /> **1** = Abonnement mit sofortigem Update|  
@@ -84,9 +83,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Speicherort des DTS-Pakets, wenn dem Abonnement eines zugewiesen wurde. Wenn ein Paket, ein Wert vorhanden ist **0** gibt den Speicherort des Pakets auf die **Verteiler**. Der Wert **1** gibt an, die **Abonnenten**.|  
 |**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus auf dem Abonnenten, in denen **1** Windows-Authentifizierung und **0** bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
 |**subscriber_login**|**sysname**|Der Anmeldename auf dem Abonnenten.|  
-|**subscriber_password**||Das tatsächliche Abonnentenkennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine "**&#42;&#42;&#42;&#42;&#42;&#42;**" Zeichenfolge.|  
+|**subscriber_password**||Das tatsächliche Abonnentenkennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine " **&#42;&#42;&#42;&#42;&#42;&#42;** " Zeichenfolge.|  
 |**job_login**|**sysname**|Name des Windows-Kontos, unter dem der Verteilungs-Agent ausgeführt wird.|  
-|**job_password**||Das tatsächliche Auftragskennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine "**&#42;&#42;&#42;&#42;&#42;&#42;**" Zeichenfolge.|  
+|**job_password**||Das tatsächliche Auftragskennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine " **&#42;&#42;&#42;&#42;&#42;&#42;** " Zeichenfolge.|  
 |**distrib_agent_name**|**nvarchar(100)**|Name des Agentauftrags, der das Abonnement synchronisiert.|  
 |**subscriber_type**|**tinyint**|Typ des Abonnenten. Folgende Werte sind möglich:<br /><br /> **0** = SQL Server-Abonnenten<br /><br /> **1** = ODBC-Datenquellenserver<br /><br /> **2** = Microsoft JET-Datenbank (veraltet)<br /><br /> **3** = OLE DB-Anbieter|  
 |**subscriber_provider**|**sysname**|Eindeutiger Programmbezeichner (PROGID, Programmatic Identifier), mit dem der OLE DB-Anbieter für die Nicht-SQL Server-Datenquelle registriert wird.|  

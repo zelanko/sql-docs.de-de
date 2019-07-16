@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5020ae49c3b923c04ded1469915f2e5e5c1e412f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094825"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47844618"
   Zeigt die folgenden Informationen an: ausgeführte Bedingungsausdrücke, Ziele der Ausdrücke, Ergebnis der einzelnen Ausführungen, Details zu eventuell aufgetretenen Fehlern. In der folgenden Tabelle werden die Spalten in der syspolicy_execution_history_details-Sicht beschrieben.  
   
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Bezeichner des Datensatzes. Jeder Datensatz stellt den Versuch dar, einen Bedingungsausdruck in einer Richtlinie auszuwerten oder zu erzwingen. Jede Bedingung hat einen Detaildatensatz für die einzelnen Ziele, wenn sie auf mehrere Ziele angewendet wird.|  
 |history_id|**bigint**|Bezeichner des Verlaufsereignisses. Jedes Verlaufsereignis stellt einen Versuch dar, eine Richtlinie auszuführen. Da eine Bedingung mehrere Bedingungsausdrücke und mehrere Ziele haben kann, kann eine history_id mehrere Detaildatensätze erstellen. Verwenden Sie die History_id-Spalte in dieser Ansicht zum Verknüpfen der [Syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) anzeigen.|  

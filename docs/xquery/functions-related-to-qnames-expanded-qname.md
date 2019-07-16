@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004581"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funktionen, die sich auf QNames beziehen – expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- Dies ist das Ergebnis. Beachten Sie, dass das <`ElemQN`>-Element vom Typ QName jetzt über einen neuen Wert verfügt:  
+ Dies ist das Ergebnis. Beachten Sie, dass das Element <`ElemQN`> QName Typ hat jetzt einen neuen Wert:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -158,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- Im folgenden Versuch wird ein weiteres <`root`>-Element hinzugefügt. Dadurch wird jedoch ein Fehler erzeugt, da die erweiterte QName()-Funktion in der XML-Konstruktion nicht unterstützt wird.  
+ Der folgende Versuch Fügt eine andere <`root`>-Element jedoch ein Fehler auftritt, da die erweiterte QName()-Funktion in XML-Konstruktion nicht unterstützt wird.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -166,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Dies kann vermieden werden, indem zunächst eine Instanz mit einem Wert für das <`root`>-Element eingefügt und anschließend bearbeitet wird. In diesem Beispiel wird zunächst ein Nullwert verwendet, wenn das <`root`>-Element eingefügt wird. Die XML-Schemaauflistung in diesem Beispiel lässt einen Nullwert für das <`root`>-Element zu.  
+ Eine Lösung hierfür ist, fügen zunächst eine Instanz mit einem Wert für die <`root`>-Element und anschließend zu ändern. In diesem Beispiel wird ein Nullwert verwendet bei der <`root`> Element eingefügt wird. Die XML-schemaauflistung in diesem Beispiel lässt einen Nullwert für die <`root`> Element.  
   
 ```  
 update T SET xmlCol.modify('  

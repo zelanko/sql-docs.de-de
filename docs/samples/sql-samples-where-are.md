@@ -9,13 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: 05b611f55d30f177ecc6f44f472430203a739d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104304"
 ---
 # <a name="sql-samples"></a>SQL-Beispiele
 
@@ -41,7 +40,7 @@ Die Datenbank-downloads und Beispiele sind der [SQL Server-Beispiele](https://gi
 
 - ["Wideworldimporters" Infodatei und Beispiele](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) auf GitHub.
 
-- [Tutorial: Laden von "wideworldimportersdw" aus, in Azure SQL Datawarehouse](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+- [Tutorial: Laden Sie "wideworldimportersdw" aus, in Azure SQL Datawarehouse](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## <a name="adventureworks-sample-database"></a>AdventureWorks-Beispieldatenbank

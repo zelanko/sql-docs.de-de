@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048160"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="result-sets"></a>Resultsets  
  Die folgende Tabelle zeigt das Resultset, wenn weder ein Benutzerkonto noch ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder für die Windows-Benutzer angegeben wird *Security_account*.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Benutzer in der aktuellen Datenbank.|  
 |**RoleName**|**sysname**|Rollen, zu denen **Benutzername** gehört.|  
@@ -63,19 +62,19 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  Die folgende Tabelle zeigt, wie das Resultset aussieht, wenn kein Benutzerkonto angegeben ist und Aliase in der aktuellen Datenbank vorhanden sind.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Anmeldenamen, die mithilfe eines Alias mit Benutzern in der aktuellen Datenbank verknüpft sind.|  
 |**UserNameAliasedTo**|**sysname**|Benutzername in der aktuellen Datenbank, mit dem der Anmeldename mithilfe eines Alias verknüpft ist.|  
   
  Die folgende Tabelle zeigt das Resultset, wenn für eine Rolle angegeben wird *Security_account*.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**Role_name**|**sysname**|Name der Rolle in der aktuellen Datenbank.|  
+|**Rollenname**|**sysname**|Name der Rolle in der aktuellen Datenbank.|  
 |**Role_id**|**smallint**|Rollen-ID für die Rolle in der aktuellen Datenbank.|  
 |**Users_in_role**|**sysname**|Mitglied der Rolle in der aktuellen Datenbank.|  
-|**Userid**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
+|**Benutzer-ID**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
   
 ## <a name="remarks"></a>Hinweise  
  Um Informationen zur Mitgliedschaft von Datenbankrollen anzuzeigen, verwenden Sie [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Um Informationen zur Mitgliedschaft in Serverrollen anzuzeigen, verwenden [Sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und verwenden, um Informationen auf Serverebene anzuzeigen [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -111,8 +110,7 @@ EXEC sp_helpuser 'db_securityadmin';
 ## <a name="see-also"></a>Siehe auch  
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

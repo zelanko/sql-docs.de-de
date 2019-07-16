@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055192"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'` Der gültige Vorgang für den angegebenen Auftrag. *Vorgang* ist **varchar(64)** , hat den Standardwert NULL und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**DEFECT**|Servervorgang, der den Zielserver vollziehen des Austritts aus dem Master-anfordert **SQLServerAgent** Service.|  
+|**FEHLER**|Servervorgang, der den Zielserver vollziehen des Austritts aus dem Master-anfordert **SQLServerAgent** Service.|  
 |**DELETE**|Auftragsvorgang, mit dem ein gesamter Auftrag entfernt wird|  
 |**INSERT**|Auftragsvorgang, der einen gesamten Auftrag einfügt oder einen vorhandenen Auftrag aktualisiert. Dieser Vorgang schließt ggf. alle Auftragsschritte und Zeitpläne ein.|  
 |**ERNEUT EINZUTRAGEN.**|Servervorgang, der bewirkt, dass der Zielserver die Eintragsinformationen, einschließlich des Abrufintervalls und der Zeitzone, erneut an die Multiserverdomäne sendet. Der Zielserver auch downloadet erneut die **MSXOperator** Details.|  
 |**SET-POLL**|Servervorgang, der festlegt, in welchem Intervall (in Sekunden) die Zielserver die Multiserverdomäne abfragen. Wenn angegeben, *Wert* wird als der erforderliche Intervallwert interpretiert, und kann ein Wert von **10** zu **28.800**.|  
 |**START**|Auftragsvorgang, der den Start der Auftragsausführung anfordert|  
 |**BEENDEN**|Auftragsvorgang, der das Beenden der Auftragsausführung anfordert|  
-|**SYNC-TIME**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
+|**ZEITPUNKT DER SYNCHRONISIERUNG**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
 |**UPDATE**|Auftragsvorgang, der aktualisiert nur die **Sysjobs** Informationen für einen Auftrag, nicht die Schritte eines Auftrags oder Zeitpläne. Aufruf erfolgt automatisch durch **Sp_update_job**.|  
   
 `[ @object_type = ] 'object_type'` Der Typ des Objekts für den angegebenen Auftrag. *Object_type* ist **varchar(64)** , hat den Standardwert NULL. *Object_type* kann JOB oder SERVER sein. Weitere Informationen zu gültigen *Object_type*Werte finden Sie unter [Sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
@@ -85,7 +84,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Eindeutige, ganzzahlige ID der Anweisung|  
 |**source_server**|**nvarchar(30)**|Computername des Servers, vom dem die Anweisung stammt. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0, dies ist immer der Computername des Masterservers (MSX).|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070112"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact-Zuordnung
 **SQLTransact** wurde ersetzt durch **SQLEndTran**. Der Hauptunterschied zwischen den beiden Funktionen ist, **SQLEndTran** enthält ein Argument *HandleType*, der angibt, dass der Umfang der Aufgaben durchgeführt werden. Die *HandleType* -Argument kann angeben, die Umgebung oder dem Verbindungshandle. Der folgende Aufruf von **SQLTransact**:  

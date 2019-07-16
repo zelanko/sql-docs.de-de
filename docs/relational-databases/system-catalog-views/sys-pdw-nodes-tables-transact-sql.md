@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_tables (Transact-SQL) | Microsoft Docs
+title: Sys.pdw_nodes_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fcef927616bf90dcbf66639553d34ceaa78bb9e9
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001110"
 ---
 # <a name="syspdwnodestables-transact-sql"></a>sys.pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Enthält eine Zeile für jedes Tabellenobjekt, das ein Prinzipals entweder der Besitzer ist oder auf dem der Prinzipal eine Berechtigung erteilt wurde.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |\<geerbte Spalten >||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects](../system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).||  
 |lob_data_space_id|**int**||Immer 0.|  
@@ -41,7 +40,7 @@ ms.locfileid: "58305928"
 |text_in_row_limit|**int**|0 = Text in Zeile Option nicht festgelegt ist.|Immer 0.|  
 |large_value_types_out_of_row|**bit**|1 = Umfangreiche Werttypen werden außerhalb der Zeile gespeichert.|Immer 0.|  
 |is_tracked_by_cdc|**bit**|1 = Tabelle für Change Data Capture aktiviert ist|Immer 0; keine Unterstützung für CDC.|  
-|lock_escalation|**tinyint**|Der Wert der LOCK_ESCALATION-Option für die Tabelle: 2 = AUTO|Always 2.|  
+|lock_escalation|**tinyint**|Der Wert der LOCK_ESCALATION-Option für die Tabelle: 2 = AUTO|Immer 2.|  
 |lock_escalation_desc|**nvarchar(60)**|Eine textbeschreibung der Lock_escalation-Option.|Immer ꞌAUTOꞌ.|  
 |pdw_node_id|**int**|Der eindeutige Bezeichner des eine [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Knoten.|NOT NULL|  
   

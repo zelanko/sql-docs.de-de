@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061840"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  
   
-`[ \@replace = ] 'replace'` Wenn als Zeichenfolge angegeben *ersetzen*, wird eine vorhandene Fehlermeldung mit neuen Meldung und Schweregrad überschrieben. *Ersetzen Sie dies* ist **vom Datentyp varchar(7)** hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *Msg_id* ist bereits vorhanden. Wenn eine englischsprachige Meldung (USA) Englischsprachige Meldung, die den Schweregrad wird für alle Nachrichten in allen anderen Sprachen, die die gleichen ersetzt *Msg_id*.  
+`[ \@replace = ] 'replace'` Wenn als Zeichenfolge angegeben *ersetzen*, wird eine vorhandene Fehlermeldung mit neuen Meldung und Schweregrad überschrieben. *Ersetzen Sie dies* ist **vom Datentyp varchar(7)** hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *Msg_id* ist bereits vorhanden. Wenn Sie eine ersetzen Englischsprachige Meldung, die den Schweregrad wird für alle Nachrichten in allen anderen Sprachen, die die gleichen ersetzt *Msg_id*.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -65,13 +64,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  None  
   
 ## <a name="remarks"></a>Hinweise  
- In nicht englischsprachigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die englischsprachige Version der Meldung bereits vorhanden sein, bevor die Meldung mit einer anderen Sprache hinzugefügt werden kann. Der Schweregrad der beiden Versionen der Meldung muss übereinstimmen.  
+ Für nicht englischsprachige Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], den USA Englische Version einer Nachricht muss bereits vorhanden sein, bevor die Nachricht mit einer anderen Sprache hinzugefügt werden kann. Der Schweregrad der beiden Versionen der Meldung muss übereinstimmen.  
   
  Verwenden Sie bei der Lokalisierung von Meldungen mit Parametern Parameternummern, die den Parametern der Originalmeldung entsprechen. Fügen Sie nach jeder Parameternummer ein Ausrufezeichen (!) ein.  
   
 |Originalmeldung|Lokalisierte Meldung|  
 |----------------------|-----------------------|  
-|'Originalmeldung Parameter 1: %s,<br /><br /> Parameter 2: %d'|'Lokalisierte Meldung Parameter 1:<br /><br /> param 2: %2!'|  
+|'Originalmeldung Parameter 1: %s,<br /><br /> Parameter 2: %d'|'Lokalisierte Meldung Parameter 1:<br /><br /> Parameter 2: %2! "|  
   
  Wegen Unterschieden in der Sprachsyntax weisen die Parameternummern in der lokalisierten Meldung möglicherweise eine andere Reihenfolge als in der Originalmeldung auf.  
   
@@ -93,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-adding-a-message-in-two-languages"></a>B. Hinzufügen einer Meldung in zwei Sprachen  
- Im folgenden Beispiel wird zuerst eine englischsprachige Meldung (USA) und anschließend die gleiche Meldung in Französisch hinzugefügt`.`  
+ Im folgende Beispiel wird zuerst eine Nachricht in den USA Englisch, und fügt dann die gleiche Meldung in Französisch`.`  
   
 ```  
 USE master;  
@@ -109,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-order-of-parameters"></a>C. Ändern der Reihenfolge der Parameter  
- Im folgenden Beispiel wird zuerst eine englischsprachige Meldung (USA) hinzugefügt und anschließend wird eine lokalisierte Meldung hinzugefügt, in der die Reihenfolge der Parameter geändert wurde.  
+ Im folgende Beispiel wird zuerst eine Nachricht in den USA Englisch und fügt dann eine lokalisierte Meldung, die in der Reihenfolge der Parameter geändert wird.  
   
 ```  
 USE master;  

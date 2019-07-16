@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 33879db3-5ef9-4585-9be5-69376157e017
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 948fc36da520777812c02e6e5d52a423eb9cc288
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f769d3c5b2dcfe5d2aa8a431695cb18a52893b91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030651"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator-Funktion
 **Übereinstimmung mit Standards**  
@@ -80,7 +79,7 @@ BOOL SQLGetTranslator(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetTranslator** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Description|  
+|*\*pfErrorCode*|Fehler|Beschreibung|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Die *CbNameMax* oder *CbPathMax* Argument war kleiner als oder gleich 0.|  

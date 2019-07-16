@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4fbba559eceae58483419c0f1e3826b9db79bef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061833"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -78,9 +77,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*Frequency_interval* wird nicht verwendet.|  
 |**4** (Standard)|Jede *Frequency_interval* Tage; der Standard ist täglich.|  
-|**8**|*Frequency_interval* kann einen oder mehrere der folgenden (in Kombination mit einem [ &#124; (bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischen Operator):<br /><br /> **1** = Sonntag&#124;<br /><br /> **2** = Monday &#124;<br /><br /> **4** = Dienstag&#124;<br /><br /> **8** = Mittwoch&#124;<br /><br /> **16** = Thursday &#124;<br /><br /> **32** = Freitag&#124;<br /><br /> **64** = Samstag|  
+|**8**|*Frequency_interval* kann einen oder mehrere der folgenden (in Kombination mit einem [ &#124; (bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischen Operator):<br /><br /> **1** = Sonntag&#124;<br /><br /> **2** = Montag&#124;<br /><br /> **4** = Dienstag&#124;<br /><br /> **8** = Mittwoch&#124;<br /><br /> **16** = Donnerstag&#124;<br /><br /> **32** = Freitag&#124;<br /><br /> **64** = Samstag|  
 |**16**|Auf der *Frequency_interval* Tag des Monats.|  
-|**32**|*Frequency_interval* ist eine der folgenden:<br /><br /> **1** = Sonntag&#124;<br /><br /> **2** = Monday &#124;<br /><br /> **3** = Dienstag&#124;<br /><br /> **4** = Mittwoch&#124;<br /><br /> **5** = Thursday &#124;<br /><br /> **6** = Freitag&#124;<br /><br /> **7** = Samstag&#124;<br /><br /> **8** = Tag&#124;<br /><br /> **9** = Arbeitstag&#124;<br /><br /> **10** = Wochenendtag|  
+|**32**|*Frequency_interval* ist eine der folgenden:<br /><br /> **1** = Sonntag&#124;<br /><br /> **2** = Montag&#124;<br /><br /> **3** = Dienstag&#124;<br /><br /> **4** = Mittwoch&#124;<br /><br /> **5** = Donnerstag&#124;<br /><br /> **6** = Freitag&#124;<br /><br /> **7** = Samstag&#124;<br /><br /> **8** = Tag&#124;<br /><br /> **9** = Arbeitstag&#124;<br /><br /> **10** = Wochenendtag|  
 |**64**|*Frequency_interval* wird nicht verwendet.|  
 |**128**|*Frequency_interval* wird nicht verwendet.|  
   
@@ -118,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  Speichern Sie keine Authentifizierungsinformationen in Skriptdateien. Es wird empfohlen, Anmeldenamen und Kennwörter zur Laufzeit bereitzustellen, um die Sicherheit zu verbessern.  
   
-`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Konto, unter dem der Agent ausgeführt wird. Verwenden Sie bei Azure SQL-Datenbank verwaltete Instanzen ein SQL Server-Konto. *Job_login* ist **nvarchar(257)**, hat den Standardwert NULL. Dieses Konto wird immer für agentverbindungen mit dem Verteiler verwendet. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
+`[ @job_login = ] 'job_login'` Ist der Anmeldename für das Konto, unter dem der Agent ausgeführt wird. Verwenden Sie bei Azure SQL-Datenbank verwaltete Instanzen ein SQL Server-Konto. *Job_login* ist **nvarchar(257)** , hat den Standardwert NULL. Dieses Konto wird immer für agentverbindungen mit dem Verteiler verwendet. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
   
 > [!NOTE]
 >  Für nicht - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber, dies muss die gleiche Anmeldung, die im angegebenen [Sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
@@ -150,7 +149,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
  [Erstellen und Anwenden der Momentaufnahme](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
+ [Sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63bca42adcdfc83d1bdb96361680d0c70c9a031c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: eb60350be75a6b4fae5e0c5c7c237d125ee3d3a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039690"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
 **Übereinstimmung mit Standards**  
@@ -57,7 +56,7 @@ SQLRETURN SQLSetPos(
  *Vorgang*  
  [Eingabe] Der Vorgang ausführen:  
   
- SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
+ SQL_POSITION SQL_REFRESH SQL_UPDATE AUF SQL_DELETE  
   
 > [!NOTE]
 >  Der SQL_ADD-Wert für die *Vorgang* Argument ist veraltet für ODBC *3.x*. ODBC *3.x* Treiber müssen SQL_ADD für die Abwärtskompatibilität zu unterstützen. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD. Wenn eine ODBC *3.x* Anwendung funktioniert mit einer ODBC- *2.x* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang*von SQL_ADD auf **SQLSetPos** mit einer *Vorgang* von SQL_ADD.  
@@ -73,7 +72,7 @@ SQLRETURN SQLSetPos(
   
  **Gibt zurück**  
   
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSetPos** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetPos** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  

@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448b0f5e34a6b7421c23a1267dd9cd68bd93ca6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5d8087e7672dd331d0b078cea4930be7582a026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093003"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.81 Standards Compliance: ODBC  
+ Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
   
  **Zusammenfassung**  
  **SQLSetConnectInfo** dient zum Festlegen von der Datenquelle, Benutzer-ID und das Kennwort in das Verbindungstoken für die Informationen für einer Anwendung [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) aufrufen.  
@@ -64,7 +63,7 @@ SQLRETURN  SQLSetConnectInfo(
  [Eingabe] Länge der **Authentifizierung* in Zeichen.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Identisch mit [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) für eingabeüberprüfungsfehler, mit dem Unterschied, dass der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und **behandeln** von *hDbcInfoToken*.  

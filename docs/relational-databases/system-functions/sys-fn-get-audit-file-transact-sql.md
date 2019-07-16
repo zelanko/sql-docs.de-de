@@ -1,5 +1,5 @@
 ---
-title: sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs
+title: Sys. fn_get_audit_file (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/16/2017
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046285"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>Argumente  
  *file_pattern*  
- Gibt das Verzeichnis oder den Pfad und den Dateinamen für den zu lesenden Überwachungsdateisatz an. Der Typ ist **nvarchar(260)**. 
+ Gibt das Verzeichnis oder den Pfad und den Dateinamen für den zu lesenden Überwachungsdateisatz an. Der Typ ist **nvarchar(260)** . 
  
  - **SQL Server**:
     
@@ -70,7 +69,7 @@ fn_get_audit_file ( file_pattern,
 >  Einen Pfad ohne ein Dateinamenmuster zu übergeben generiert einen Fehler.  
   
  *initial_file_name*  
- Gibt den Pfad und den Namen einer bestimmten Datei im Überwachungsdateisatz an, von der an die Überwachungsdatensätze gelesen werden sollen. Der Typ ist **nvarchar(260)**.  
+ Gibt den Pfad und den Namen einer bestimmten Datei im Überwachungsdateisatz an, von der an die Überwachungsdatensätze gelesen werden sollen. Der Typ ist **nvarchar(260)** .  
   
 > [!NOTE]  
 >  Die *' initial_file_name '* -Argument muss gültige Einträge enthalten, oder muss entweder die standardmäßige enthalten | NULL-Wert.  
@@ -84,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
  In der folgenden Tabelle wird der Inhalt der Überwachungsdatei beschrieben, die von dieser Funktion zurückgegeben werden kann.  
   
-| Spaltenname | Typ | Description |  
+| Spaltenname | Typ | Beschreibung |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | ID der Aktion. Lässt keine NULL-Werte zu. |  
 | additional_information | **nvarchar(4000)** | Eindeutige Informationen, die nur für ein einzelnes Ereignis gelten, werden als XML zurückgegeben. Eine kleine Anzahl überwachbarer Aktionen enthält diese Art von Informationen.<br /><br /> Eine Ebene des TSQL-Stapels wird im XML-Format für Aktionen angezeigt, denen ein TSQL-Stapel zugeordnet ist. Das XML-Format sieht folgendermaßen aus:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level gibt die aktuelle Schachtelungsebene des Frames an. Der Modulname (database_name, schema_name und object_name) wird in einem aus drei Teilen bestehenden Format dargestellt.  Der Modulname wird analysiert, wie ungültige XML-Escapezeichen `'\<'`, `'>'`, `'/'`, `'_x'`. Werden sie als mit Escapezeichen versehen werden `_xHHHH\_`. HHHH steht für den vierstelligen hexadezimalen UCS 2-Code für das Zeichen<br /><br /> Lässt NULL-Werte zu. Gibt NULL zurück, wenn keine zusätzlichen vom Ereignis gemeldeten Informationen vorliegen. |
@@ -134,7 +133,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="permissions"></a>Berechtigungen
 
 - **SQL Server**: Erfordert die **CONTROL SERVER** -Berechtigung.  
-- **Azure SQL DB**: Erfordert die **CONTROL DATABASE** Berechtigung.     
+- **Azure SQL-Datenbank**: Erfordert die **CONTROL DATABASE** Berechtigung.     
   - Server-Administratoren können die Überwachungsprotokolle aller Datenbanken auf dem Server zugreifen.
   - Nicht-Server-Administratoren können die Überwachungsprotokolle nur aus der aktuellen Datenbank zugreifen.
   - BLOBs, die die oben genannten Kriterien nicht erfüllen übersprungen werden (eine Liste der übersprungenen Blobs werden in der Ausgabenachricht der Abfrage angezeigt werden), und die Funktion zurück Protokolle nur aus Blobs, die für die der Zugriff ist zulässig.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62664662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028761"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Projekteinstellungen (Konvertierung) (SybaseToSQL)
 Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für Sybase Adaptive Server Enterprise (ASE)-Syntax, um konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Syntax.  
@@ -395,7 +394,7 @@ Bei Auswahl einer Konvertierungsmodus, in der **Modus** SSMA Feld gilt die folge
   
 **Standard/vollständigen-Modus:** Nicht verwenden  
   
-**Vollmodus:** Verwenden Sie  
+**Vollmodus:** Mit  
   
 **REPLICATE-Funktion**  
 Die REPLICATE-Funktion wird eine Zeichenfolge die angegebene Anzahl von Malen wiederholt. Wenn Sie angeben, dass die Zeichenfolge null Mal wiederholt, ist das Ergebnis in App Service-Umgebung null. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ SQL Azure, das Ergebnis ist eine leere Zeichenfolge.  
@@ -440,7 +439,7 @@ Erstellt einen neuen primären Schlüssel in der [!INCLUDE[ssNoVersion](../../in
   
 -   **Vollständige**: False  
   
--   **Vollständiger Modus**: Wahr  
+-   **Vollständiger Modus**: True  
   
 > [!NOTE]  
 > Beim Verbinden mit SQL Azure, ist es standardmäßig "true".  

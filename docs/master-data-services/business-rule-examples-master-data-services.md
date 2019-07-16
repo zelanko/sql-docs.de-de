@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5f2f1aa1dd763675d50ff9ea1961d6036c3ee73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd74d5e22547cee0383ed2222c1a31d848402974
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047460"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
 
@@ -28,7 +27,7 @@ Anweisungen dazu, wie Sie die Beispielmodelle bereitstellen, finden Sie unter [M
   
   
 ## <a name="business-rule-examples"></a>Beispiele für Geschäftsregeln  
-Beispielmodell |Entität  |Geschäftsregelname| Description  
+Beispielmodell |Entität  |Geschäftsregelname| Beschreibung  
 ---------|---------|---------|-----------|  
 Customer    | Customer   | Person pmt-Begriffe| Gibt Standardzahlungsbedingungen für Kunden an.          
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
@@ -43,7 +42,7 @@ Else
   
 **--------------------------------------------------**  
   
-Beispielmodell  |Entität  |Geschäftsregelname|Description    
+Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
 ---------|---------|---------|---------------  
 Customer     | Customer    | Org pmt-Begriffe | Gibt die Standardzahlungsbedingungen für Organisationen an.         
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. Andernfalls wird keine Aktion ausgeführt.  
@@ -59,7 +58,7 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname| Description    
+Beispielmodell  |Entität  |Geschäftsregelname| Beschreibung    
 ---------|---------|---------|-----------  
 Produkt     |  Produkt       | DaysToManufacture |Gibt den Bereich der Tage bis zur Herstellung für die Herstellung vor Ort an.          
 In der folgenden Geschäftsregel wird die `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Andernfalls wird keine Aktion ausgeführt.  
@@ -134,7 +133,7 @@ Else
 **--------------------------------------------------**  
   
   
-Beispielmodell  |Entität  |Geschäftsregelname|Description    
+Beispielmodell  |Entität  |Geschäftsregelname|Beschreibung    
 ---------|---------|---------|------------  
 Produkt     | Produkt        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
 In der folgenden Geschäftsregel wird die `defaults to` [Regelaktion](../master-data-services/business-rule-actions-master-data-services.md) auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die`is equal`-Regelbedingung nicht erfüllen.  

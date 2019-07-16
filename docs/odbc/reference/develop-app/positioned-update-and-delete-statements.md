@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023294"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Positionierte Aktualisierung und DELETE-Anweisungen
 Anwendungen können aktualisieren oder löschen Sie die aktuelle Zeile in einem Resultset mit der ein positioniertes Update oder delete-Anweisung. Positioniert die Update- und Delete-Anweisungen werden durch einige Datenquellen, aber nicht alle von ihnen unterstützt. Um zu bestimmen, ob eine positioniert unterstützt Update- und-Anweisungen DELETE, die eine Anwendung ruft **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 *Informationsart* (je nach Art des Cursors). Beachten Sie, dass die ODBC-Cursorbibliothek simuliert positioniertes Update und delete-Anweisungen.  
@@ -40,7 +39,7 @@ Anwendungen können aktualisieren oder löschen Sie die aktuelle Zeile in einem 
   
  **UPDATE** *Tabellenname*  
   
- **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+ **Legen Sie** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}  
   
  [ **,** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}]...  
   

@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017996"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Change Data Capture - Sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede Protokollscansitzung in der aktuellen Datenbank zurück. Die letzte zurückgegebene Zeile stellt die aktuelle Sitzung dar. Mithilfe dieser Sicht können Sie Statusinformationen zur aktuellen Protokollscansitzung oder aggregierte Informationen zu allen Sitzungen zurückzugeben, seit die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das letzte Mal gestartet wurde.  
    
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|ID der Sitzung.<br /><br /> 0 = Die in dieser Zeile zurückgegebenen Daten sind ein Aggregat aller Sitzungen, seit die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das letzte Mal gestartet wurde.|  
 |**start_time**|**datetime**|Zeitpunkt, zu dem die Sitzung begonnen wurde.<br /><br /> Wenn **Session_id** = 0, der Zeitpunkt, der aggregierten Datensammlung begonnen wurde.|  
 |**end_time**|**datetime**|Zeitpunkt, zu dem die Sitzung beendet wurde.<br /><br /> NULL = Sitzung ist aktiv.<br /><br /> Wenn **Session_id** = 0, der Zeitpunkt der letzten Sitzung beendet wurde.|  
 |**duration**|**bigint**|Die Dauer (in Sekunden) der Sitzung.<br /><br /> 0 = Die Sitzung enthält keine Change Data Capture-Transaktionen.<br /><br /> Wenn **Session_id** = 0, die Summer der Dauer (in Sekunden) aller Sitzungen mit Change Data Capture-Transaktionen.|  
-|**scan_phase**|**nvarchar(200)**|Die aktuelle Phase der Sitzung. Im folgenden sind die möglichen Werte und deren Beschreibungen:<br /><br /> 1: Lesen der Konfiguration<br />2: ersten Scan, Erstellen der Hashtabelle<br />3: zweiten überprüfen<br />4: zweiten überprüfen<br />5: zweiten überprüfen<br />6: Schema-versionsverwaltung<br />7: der letzten Überprüfung<br />8: Fertig<br /><br /> Wenn **Session_id** = 0 (null) ist der Wert immer "Aggregate".|  
+|**scan_phase**|**nvarchar(200)**|Die aktuelle Phase der Sitzung. Im folgenden sind die möglichen Werte und deren Beschreibungen:<br /><br /> 1: Lesen der Konfiguration<br />2: Erster scan, Hash-Tabelle erstellen<br />3: Zweiter scan<br />4: Zweiter scan<br />5: Zweiter scan<br />6: Schema-versionsverwaltung<br />7: Letzte Überprüfung<br />8: Fertig<br /><br /> Wenn **Session_id** = 0 (null) ist der Wert immer "Aggregate".|  
 |**error_count**|**int**|Anzahl der aufgetretenen Fehler.<br /><br /> Wenn **Session_id** = 0, die Gesamtanzahl der Fehler in allen Sitzungen.|  
 |**start_lsn**|**nvarchar(23)**|Start-LSN für die Sitzung.<br /><br /> Wenn **Session_id** = 0, die Start-LSN für die letzte Sitzung.|  
 |**current_lsn**|**nvarchar(23)**|Aktuelle LSN, die gescannt wird.<br /><br /> Wenn **Session_id** = 0, die aktuelle LSN den Wert 0.|  

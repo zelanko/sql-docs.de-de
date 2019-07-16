@@ -9,19 +9,18 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067673"
 ---
 # <a name="installation-and-configuration"></a>Installation und Konfiguration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Wide World Importers-OLTP-Datenbank Installations- und konfigurationsanweisungen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (oder höher) oder [Azure SQL-Datenbank](https://azure.microsoft.com/services/sql-database/). Verwenden Sie für die vollständige Version des Beispiels SQL Server-Evaluierung, Developer, Enterprise Edition ein.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Für die besten Ergebnisse verwenden Sie das Release vom Juni 2016 oder höher.
@@ -38,10 +37,10 @@ Quellcode die-Beispieldatenbank neu zu erstellen ist aus folgendem Ort verfügba
 
 [Wide-Welt-Importer](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
-## <a name="install"></a>Install
+## <a name="install"></a>Installieren
 
 
-### <a name="sql-server"></a>SQL Server
+### <a name="sql-server"></a>SQL Server
 
 Um eine Sicherung einer SQL Server-Instanz wiederherzustellen, können Sie Management Studio verwenden.
 
@@ -76,7 +75,7 @@ Verwenden des Volltextindizierungs-ist die-Beispieldatenbank möglich. Allerding
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
-Gilt für: SQLServer
+Betrifft: SQL Server
 
 Aktivieren der Überwachung in SQL Server ist eine Serverkonfiguration erforderlich. Um SQL Server-Überwachung für das Beispiel "wideworldimporters" zu aktivieren, führen Sie die folgende Anweisung in der Datenbank aus:
 
@@ -86,7 +85,7 @@ In Azure SQL-Datenbank-Überwachung wird konfiguriert, über die [Azure-Portal](
 
 ### <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
-Gilt für: Azure SQL-Datenbank
+Betrifft: Azure SQL-Datenbank
 
 Sicherheit auf Zeilenebene ist standardmäßig in der bacpac-Datei-Download von "wideworldimporters" nicht aktiviert. Um die Sicherheit auf Zeilenebene in der Datenbank zu aktivieren, führen Sie die folgende gespeicherte Prozedur aus:
 

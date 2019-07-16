@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028641"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Entfernen von SSMA-Komponenten für Sybase (SybaseToSQL)
 Nach Abschluss des Migrieren von Datenbanken von Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], empfiehlt es sich um SSMA-Komponenten zu deinstallieren. Können Sie die Client-Komponenten zu einem beliebigen Zeitpunkt deinstallieren, aber Sie sollten nicht deinstallieren, das Erweiterungspaket aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wenn Sie sicher sind, verwenden Sie die migrierten Datenbanken nicht mehr Funktionen in der **Ssma_syb** Schema der **Sysdb** Datenbank.  

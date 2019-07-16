@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b36a4c07d37ba55a9cd4e4573d144f19259f2cfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00b425e5efd441868bfa763fe544827bd7279dc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067788"
 ---
 # <a name="sysdmresourcegovernorconfiguration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "47832418"
   Gibt eine Zeile mit dem aktuellen Konfigurationsstatus der Ressourcenkontrolle im Arbeitsspeicher zurück.  
   
 
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|Die ID der Klassifizierungsfunktion, die zurzeit von der Ressourcenkontrolle verwendet wird. Gibt den Wert 0 (null) zurück, wenn keine Funktion verwendet wird. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** diese Funktion dient zur Klassifizierung neuer Anforderungen und verwendet Regeln, um diese Anforderungen an die entsprechende Arbeitsauslastungsgruppe weiterzuleiten. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
-|is_reconfiguration_pending|**bit**|Gibt an, ob mit der ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung Änderungen an einer Gruppe oder einem Pool vorgenommen wurden, die jedoch noch nicht auf die Konfiguration im Arbeitsspeicher angewendet wurden. Einer der folgenden Werte wird zurückgegeben:<br /><br /> 0 - Eine Anweisung zur Neukonfiguration ist nicht erforderlich.<br /><br /> 1 - Es ist eine Anweisung zur Neukonfiguration oder ein Serverneustart erforderlich, damit ausstehende Konfigurationsänderungen übernommen werden können.<br /><br /> **Hinweis:** der zurückgegebene Wert ist immer 0, wenn die Ressourcenkontrolle deaktiviert ist.<br /><br /> Lässt keine NULL-Werte zu.|  
+|classifier_function_id|**int**|Die ID der Klassifizierungsfunktion, die zurzeit von der Ressourcenkontrolle verwendet wird. Gibt den Wert 0 (null) zurück, wenn keine Funktion verwendet wird. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis**: Diese Funktion dient zur Klassifizierung neuer Anforderungen und verwendet Regeln, um diese Anforderungen an die entsprechende Arbeitsauslastungsgruppe weiterzuleiten. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
+|is_reconfiguration_pending|**bit**|Gibt an, ob mit der ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung Änderungen an einer Gruppe oder einem Pool vorgenommen wurden, die jedoch noch nicht auf die Konfiguration im Arbeitsspeicher angewendet wurden. Einer der folgenden Werte wird zurückgegeben:<br /><br /> 0 - Eine Anweisung zur Neukonfiguration ist nicht erforderlich.<br /><br /> 1 - Es ist eine Anweisung zur Neukonfiguration oder ein Serverneustart erforderlich, damit ausstehende Konfigurationsänderungen übernommen werden können.<br /><br /> **Hinweis**: Der zurückgegebene Wert ist immer 0, wenn die Ressourcenkontrolle deaktiviert ist.<br /><br /> Lässt keine NULL-Werte zu.|  
 |max_outstanding_io_per_volume|**int**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Die maximale Anzahl der ausstehenden E/A-Vorgänge pro Volume.|  
   
 ## <a name="remarks"></a>Hinweise  

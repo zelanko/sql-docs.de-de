@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c8e8ad13ddc34148f1718b7843e00545cd758c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962099"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>SQL Server-Machine Learning-Tutorials, in R und Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,7 +65,7 @@ Erstellen Sie auf noch keine Erfahrung mit R und Python und T-SQL, indem ein gen
 
 Markieren Sie diese Beispiele und Demos, die vom SQL Server und R Server-Entwicklungsteam bereitgestellte Methoden, mit denen Sie eingebettete Analysen in realen Anwendungen verwenden können.
 
-| Link | Description | 
+| Link | Beschreibung | 
 |------|-------------|
 | [Führen Sie Kunden mit R und SQL Server-clustering](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Verwenden Sie unbeaufsichtigtes lernen zum Segmentieren von Kunden anhand der Umsatzdaten. In diesem Beispiel verwendet den skalierbaren k-Means-Algorithmus von Microsoft R, um das clustering-Modell zu erstellen. |
 | [Ausführen von Kunden mithilfe von Python und SQL Server-clustering](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Erfahren Sie, wie Sie mit der k-Means-Algorithmus zum Ausführen von nicht überwachten Gruppieren von Kunden. Dieses Beispiel verwendet die Python-Sprache in der Datenbank.| SQL Server 2017 |

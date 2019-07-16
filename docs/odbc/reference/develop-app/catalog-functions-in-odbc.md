@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8cd46fbc8f633ef31f00fa60ced885f9455f185
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062733"
 ---
 # <a name="catalog-functions-in-odbc"></a>Katalogfunktionen in ODBC
 ODBC enthält die folgenden Katalogfunktionen:  
   
-|Funktion|Description|  
+|Funktion|Beschreibung|  
 |--------------|-----------------|  
 |**SQLTables**|Gibt eine Liste der Kataloge, Schemas, Tabellen und Tabellentypen in der Datenquelle zurück.|  
 |**SQLColumns**|Gibt eine Liste der Spalten in einer oder mehreren Tabellen zurück.|  

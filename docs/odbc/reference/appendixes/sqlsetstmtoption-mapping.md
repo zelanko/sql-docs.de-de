@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5284fd0065e3d1b2c23725a05b71dbb5d2f0810b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: dc4ed430b301f2b191c0586c0a54af19a2d2d526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091670"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>SQLSetStmtOption-Zuordnung
 Wenn eine Anwendung ruft **SQLSetStmtOption** über einen ODBC *3.x* Treiber, den Aufruf von  

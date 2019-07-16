@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2c31453ae904db1033eacdd2564c05eb71531019
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48dbb35fcecde99dad30e71fdcd2c85a2ab92e3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061284"
 ---
 # <a name="systypeassemblyusages-transact-sql"></a>sys.type_assembly_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +33,9 @@ ms.locfileid: "47672998"
   
 
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**user_type_id**|**int**|Die ID des Typs.<br /><br /> Um den Namen des Typs zurückzugeben, fügen Sie der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte.|  
+|**user_type_id**|**int**|Die ID des Typs.<br /><br /> Stellen Sie einen Join mit der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte her, um den Namen des Typs zurückzugeben.|  
 |**assembly_id**|**int**|Die ID der Assembly.|  
   
 ## <a name="permissions"></a>Berechtigungen  

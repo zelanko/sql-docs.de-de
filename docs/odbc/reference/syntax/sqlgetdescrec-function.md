@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c737a9dfd6e7a33b5e160b3d952fac0b354148b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103789"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLGetDescRec** gibt den aktuellen Einstellungen oder Werten aus mehreren Feldern, die von einem anwendungsparameterdeskriptor-Datensatz zurück. Die zurückgegebenen Felder beschrieben, die Namen, Datentyp und Speicherung von Daten für Spalte oder des Parameters.  
@@ -89,7 +88,7 @@ SQLRETURN SQLGetDescRec(
  [Ausgabe] Ein Zeiger auf einen Puffer, in dem den Wert des Felds "SQL_DESC_NULLABLE" für den anwendungsparameterdeskriptor-Datensatz zurückgegeben.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA zurückgibt oder SQL_INVALID_HANDLE.  
   
  SQL_NO_DATA zurückgegeben wird, wenn *RecNumber* ist größer als die aktuelle Anzahl der deskriptordatensätze.  
   

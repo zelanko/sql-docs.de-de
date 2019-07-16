@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d05990396c10836c0a2130e5d9f4392ae56ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069859"
 ---
 # <a name="fetching-a-row-of-data"></a>Abrufen einer Datenzeile
 Um eine Datenzeile abzurufen, eine Anwendung ruft **SQLFetch**. **SQLFetch** kann mit jeder Art von Cursors aufgerufen werden, es wird nur des Rowsetcursors in eine Richtung Vorwärtscursor jedoch. **SQLFetch** setzt den Cursor in die nächste Zeile und gibt die Daten für alle Spalten, die mit Aufrufen von gebunden waren **SQLBindCol**. Wenn sich der Cursor auf das Ende des Resultsets erreicht festgelegt, **SQLFetch** SQL_NO_DATA zurückgibt. Beispiele für die aufrufende **SQLFetch**, finden Sie unter [mithilfe von SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

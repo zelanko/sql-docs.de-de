@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 396d2e1c2d0387e716123ce6f87ea5cef4ecbbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090637"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62960024"
 > [!NOTE]
 > Der Verfügbarkeitsgruppenlistener kann dem gleichen Port wie der Listener der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauschen. In diesem Fall sind die Listener getrennt aufgeführt, das Gleiche gilt für einen Service Broker-Listener.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|Interne ID des Listeners Lässt keine NULL-Werte zu.<br /><br /> Der Primärschlüssel.|  
 |**ip_address**|**nvarchar(48)**|Die Listener-IP-Adresse, die online ist und an der gelauscht wird. Entweder ist IPv4 oder IPv6 zulässig. Wenn ein Listener beide Typen von Adressen besitzt, sind sie getrennt aufgeführt. Ein IPv4-Platzhalter wird als "0.0.0.0" angezeigt. Ein IPv6-Platzhalter wird als "::".<br /><br /> Lässt keine NULL-Werte zu.|  

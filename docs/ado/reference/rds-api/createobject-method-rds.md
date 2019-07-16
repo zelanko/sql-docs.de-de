@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964547"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt das Proxy für das Zielobjekt für Unternehmen, und gibt einen Zeiger darauf zurück. Die Proxy-Pakete und marshallt Daten an den serverseitigen Stub für die Kommunikation mit das Geschäftsobjekt, das zum Senden von Anforderungen und Daten über das Internet. Für in-Process-Komponentenobjekte keine Proxys verwendet werden, nur ein Zeiger auf das Objekt bereitgestellt wird.  
@@ -32,10 +31,10 @@ Erstellt das Proxy für das Zielobjekt für Unternehmen, und gibt einen Zeiger d
   
 |Protokoll|Syntax|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
-|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
-|In-Process|Set object = DataSpace.CreateObject("ProgId", "")|  
+|HTTP|Set-Objekt DataSpace.CreateObject = ("ProgId", "Https\://awebsrvr")|  
+|HTTPS|Set-Objekt DataSpace.CreateObject = ("ProgId", "Https\://awebsrvr")|  
+|DCOM|Set-Objekt = DataSpace.CreateObject ("ProgId", "Computername")|  
+|In-Process|Set-Objekt DataSpace.CreateObject = ("ProgId", "")|  
   
 ## <a name="parameters"></a>Parameter  
  *Objekt*  

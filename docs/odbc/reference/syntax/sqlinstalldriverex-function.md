@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030602"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Übereinstimmung mit Standards**  
@@ -102,7 +101,7 @@ BOOL SQLInstallDriverEx(
   
  _Treiber-Desc_ **\\** 0Driver **=** _-Treiber-DLL-Dateiname_ **\\** 0 [Setup **=** _-Setup-DLL-Dateiname_<b>\\</b>0]  
   
- [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
+ [ _-Treiber-Attr-Schlüsselwort1_ **=** _value1_<b>\\</b>0] [ _-Treiber-Attr-Schlüsselwort2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
   
  \0 ist, in dem ein null-Byte und *-Treiber-Attr-Keywordn* wird jedem Attribut-Driver-Schlüsselwort. Die Schlüsselwörter müssen in der angegebenen Reihenfolge angezeigt werden. Beispielsweise nehmen wir an, dass ein Treiber für formatierten Text-Dateien separate Treiber und -Setup-DLLs verfügt, und mit den Erweiterungen ".txt" und CSV verwenden Sie-Dateien. Die *LpszDriver* Argument für diesen Treiber möglicherweise wie folgt:  
   

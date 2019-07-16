@@ -3,18 +3,17 @@ title: Was ist neu in SQLServer 2017 unter Linux
 description: In diesem Artikel werden die Neuigkeiten für SQL Server 2017 unter Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 3852a4b29cab1b0fe8ab44a4b65fc344f6adfb49
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3f3f51716acf69368ae2554446c47d125b500e03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032159"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Was ist neu in SQL Server unter Linux
 

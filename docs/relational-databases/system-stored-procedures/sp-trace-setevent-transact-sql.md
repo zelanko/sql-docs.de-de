@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095947"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Die folgende Tabelle führt die Ereignisse auf, die zu einer Ablaufverfolgung hinzugefügt bzw. aus ihr entfernt werden können.  
   
-|Ereignisnummer|Ereignisname|Description|  
+|Ereignisnummer|Ereignisname|Beschreibung|  
 |------------------|----------------|-----------------|  
 |0-9|Reserviert.|Reserviert.|  
 |10|RPC:Completed|Tritt auf, wenn ein Remoteprozeduraufruf (RPC, Remote Procedure Call) abgeschlossen wurde.|  
@@ -241,7 +240,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  In der folgenden Tabelle sind die Spalten aufgeführt, die für ein Ereignis hinzugefügt werden können.  
   
-|Spaltennummer|Spaltenname|Description|  
+|Spaltennummer|Spaltenname|Beschreibung|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Ein Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |2|**BinaryData**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
@@ -308,14 +307,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
 |64|**SessionLoginName**|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2**ausführen, zeigt **SessionLoginName** den Wert **Login1**an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
   
- **[ @on=]** *on*  
+ **[ @on=]** *auf*  
  Gibt an, ob das Ereignis auf ON (1) oder OFF (0) festgelegt werden soll. *auf* ist **Bit**, hat keinen Standardwert.  
   
  Wenn *auf* nastaven NA hodnotu **1**, und *Column_id* NULL ist, und klicken Sie dann das Ereignis auf ON festgelegt ist und alle Spalten werden gelöscht. Wenn *Column_id* nicht null ist, und klicken Sie dann die Spalte für dieses Ereignis auf ON festgelegt ist.  
   
  Wenn *auf* nastaven NA hodnotu **0**, und *Column_id* NULL ist, und klicken Sie dann das Ereignis aktiviert ist OFF und alle Spalten werden gelöscht. Wenn *Column_id* nicht null ist, und klicken Sie dann die Spalte aktiviert ist OFF.  
   
- Die folgende Tabelle zeigt die Interaktion zwischen **@on** und **@columnid**.  
+ Die folgende Tabelle zeigt die Interaktion zwischen **@on** und **@columnid** .  
   
 |@on|@columnid|Ergebnis|  
 |---------|---------------|------------|  
@@ -327,7 +326,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
   
-|Rückgabecode|Description|  
+|Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
 |1|Unbekannter Fehler.|  

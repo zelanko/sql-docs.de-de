@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 361b1d318a7db08007d4506531441ab19347ea62
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9538e66180fa401059135a5f8714ea39dd4e3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058814"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Ein Unternehmen zu bewerten und Konsolidieren von assessmentberichten mit DMA
 
 Die folgenden schrittweisen Anweisungen helfen Ihnen die im Data Migration Assistant verwenden, um eine erfolgreiche skalierte Bewertung für ein Upgrade auf einen lokalen SQL Server oder die Ausführung von SQL Server auf virtuellen Azure-Computern oder für die Migration zu Azure SQL-Datenbank auszuführen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Geben Sie einen Tools-Computer in Ihrem Netzwerk aus dem DMA initiiert wird. Stellen Sie sicher, dass es sich bei diesem Computer Verbindungen mit Ihrem SQL Server-Ziele vorhanden sind.
 - Herunterladen und installieren:
@@ -114,7 +113,7 @@ Nach dem Laden die PowerShell-Module in das Modulverzeichnis, und erstellen eine
 
 Die Parameter der Funktion DmaDataCollector zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Description |
+|Parameter  |Beschreibung |
 |---------|---------|
 |**getServerListFrom** | Ihr Inventar. Mögliche Werte sind **SqlServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellung eines Inventars aus SQL Server-Instanzen](#create-inventory). |
 |**csvPath** | Der Pfad in Ihrem Inventar CSV-Datei.  Verwendet nur, wenn **GetServerListFrom** nastaven NA hodnotu **CSV**. |
@@ -137,7 +136,7 @@ Nach Abschluss der Bewertung können Sie sich nun um die Daten in SQL Server fü
 
 Die Parameter der Funktion DmaProcessor zugeordnet werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Description |
+|Parameter  |Beschreibung |
 |---------|---------|
 |**processTo** | Der Speicherort, zu dem die JSON-Datei verarbeitet werden. Mögliche Werte sind **SQLServer** und **"azuresqldatabase"** . |
 |**serverName** | Die SQL Server-Instanz, auf die Daten verarbeitet werden.  Bei Angabe von **"azuresqldatabase"** für die **ProcessTo** Parameter, fügen Sie dann nur die Namen der SQL Server (nicht enthalten. database.windows.net). Sie werden für zwei Anmeldungen aufgefordert werden, bei der Azure SQL-Datenbank als Ziel; die erste ist der Anmeldeinformationen Ihres Azure-Mandanten, während die zweite die administratoranmeldung für den Azure SQL-Server ist. |
@@ -214,9 +213,9 @@ So blenden Sie das Blatt "Filter", STRG-Taste auf die Schaltfläche "zurück" au
 
 Es gibt eine Eingabeaufforderung auf der unteren linken Ecke der Berichtsseite angezeigt, ob aktuell ein Filter auf eine der folgenden Elemente angewendet wird:
 
-- FactAssessment – InstanceName
+- FactAssessment: InstanceName
 - FactAssessment – DatabaseName
-- dimDBOwner - DBOwner
+- DimDBOwner - DBOwner
 
 ![Angewendete Filter-Eingabeaufforderung](../dma/media//dma-consolidatereports/dma-filter-applied-prompt.png)
 

@@ -19,20 +19,19 @@ ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 7066592f665309cfbe476c3ff8f05ab57306deef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039280"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile pro Komponente eines XML-Schemas zurück. Das Paar (**collection_id**, **namespace_id**) ist ein zusammengesetzter Fremdschlüssel für den Namespace, in dem es enthalten ist. Für benannte Komponenten sind die Werte für **symbol_space**, **name**, **scoping_xml_component_id**, **is_qualified**, **xml_namespace_id**und **xml_collection_id** eindeutig.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|Eindeutige ID der XML-Schemakomponente in der Datenbank.|  
 |**xml_collection_id**|**int**|ID der XML-Schemaauflistung, die den Namespace dieser Komponente enthält.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adbddf6f26c28c5fba396b00892b97d828e60222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026671"
 ---
 # <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52757992"
   
 ## <a name="definition"></a>Definition  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|Identifiziert einen statusanforderungseintrag in der [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) Tabelle.|  
 |**Peer**|**sysname**|Der Peer, der die Antwort generiert hat.|  

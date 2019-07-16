@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048196"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +42,15 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**jobnumber**|**int**|Die Nummer des Oracle-Auftrags.|  
+|**Auftragsnummer**|**int**|Die Nummer des Oracle-Auftrags.|  
 |**lastdate**|**varchar(22)**|Das Datum, an dem der Auftrag zuletzt ausgeführt wurde.|  
 |**thisdate**|**varchar(22)**|Der Zeitpunkt der Änderung.|  
 |**nextdate**|**varchar(22)**|Das nächste Datum, an dem der Auftrag ausgeführt wird.|  
-|**broken**|**varchar(1)**|Flag, das angibt, ob der Auftrag unterbrochen wurde.|  
-|**interval**|**varchar(200)**|Das Intervall für den Auftrag.|  
-|**failures**|**int**|Die Anzahl Fehler für den Auftrag.|  
+|**unterbrochen**|**varchar(1)**|Flag, das angibt, ob der Auftrag unterbrochen wurde.|  
+|**Intervall**|**varchar(200)**|Das Intervall für den Auftrag.|  
+|**Fehler bei der**|**int**|Die Anzahl Fehler für den Auftrag.|  
 |**xactsetjobwhat**|**varchar(200)**|Der Name der Prozedur, die von dem Auftrag ausgeführt wird.|  
 |**xactsetjob**|**varchar(1)**|Der Status des Auftrags, der einen der folgenden Werte haben kann:<br /><br /> **1** -der Auftrag aktiviert ist.<br /><br /> **0** -der Auftrag ist deaktiviert.|  
 |**xactsetlonginterval**|**int**|Das lange Intervall für den Auftrag.|  

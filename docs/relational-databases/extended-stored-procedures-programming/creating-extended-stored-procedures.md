@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032040"
 ---
 # <a name="creating-extended-stored-procedures"></a>Erstellen erweiterter gespeicherter Prozeduren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47711805"
   
  Diese Dateien sind zum Erstellen einer DLL einer erweiterten gespeicherten Prozedur erforderlich.  
   
-|File|Description|  
+|Datei|Beschreibung|  
 |----------|-----------------|  
 |Srv.h|API-Headerdatei für erweiterte gespeicherte Prozeduren|  
 |Opends60.lib|Importbibliothek für Opends60.dll|  
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec (dllexport) ist eine Microsoft-spezifische Compilererweiterung. Wenn Ihr Compiler diese Direktive nicht unterstützt, sollten Sie diese Funktion in Ihre DEF-Datei im Abschnitt EXPORTS exportieren.  
   
- Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gestartet, mit dem Ablaufverfolgungsflag flag - T260 oder wenn ein Benutzer mit Systemadministratorprivilegien DBCC TRACEON (260) durchführt und die erweiterte gespeicherte Prozedur-DLL __GetXpVersion() nicht unterstützt, eine Warnmeldung (Fehler 8131: der erweiterten gespeicherten Prozedur Die DLL '% s' exportiert nicht \__GetXpVersion().) wird im Fehlerprotokoll ausgegeben. (Beachten Sie, dass \__GetXpVersion() mit zwei unterstrichen beginnt.)  
+ Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird gestartet, mit dem Ablaufverfolgungsflag flag - T260 oder wenn ein Benutzer mit Systemadministratorprivilegien DBCC TRACEON (260) durchführt und die erweiterte gespeicherte Prozedur-DLL __GetXpVersion() nicht unterstützt, eine Warnmeldung (Fehler 8131: Erweiterte gespeicherte Prozedur-DLL "%" nicht exportiert \__GetXpVersion().) wird im Fehlerprotokoll ausgegeben. (Beachten Sie, dass \__GetXpVersion() mit zwei unterstrichen beginnt.)  
   
  Wenn die DLL für die erweiterte gespeicherte Prozedur __GetXpVersion() exportiert, die von der Funktion zurückgegebene Version jedoch niedriger ist als die vom Server benötigte Version, wird eine Warnmeldung ausgegeben. Diese gibt die von der Funktion zurückgegebene Version und die vom Server benötigte Version im Fehlerprotokoll an. Wenn Sie diese Meldung erhalten, werden Sie einen falschen Wert von zurückgeben \__GetXpVersion(), oder Sie mit einer älteren Version von SRV.h für die Kompilierung kompiliert werden.  
   

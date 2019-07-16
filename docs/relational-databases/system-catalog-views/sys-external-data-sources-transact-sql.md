@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0b15109f261e1d793235593c54a0178b7e76f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005181"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47805938"
   
  Enthält eine Zeile für jede externe Datenquelle auf dem Server für [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|Objekt-ID für die externe Datenquelle.||  
 |NAME|**sysname**|Der Name der externen Datenquelle.||  

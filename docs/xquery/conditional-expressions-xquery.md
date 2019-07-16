@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039007"
 ---
 # <a name="conditional-expressions-xquery"></a>Bedingte Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ else
   
 -   Die **else** -Ausdruck erforderlich ist. Falls Sie ihn nicht benötigen, können Sie " ( ) " zurückgeben, wie dies in den Beispielen der Fall ist.  
   
- Die folgende Abfrage wird beispielsweise angegeben, für die **Xml** Variablen vom Typ. Die **Wenn** -Bedingung testet den Wert der SQL-Variablen (@v) innerhalb des XQuery-Ausdrucks mit der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md) -Erweiterungsfunktion. Wenn der Variablenwert "FirstName" ist, wird das <`FirstName`>-Element zurückgegeben. Andernfalls wird das <`LastName`>-Element zurückgegeben.  
+ Die folgende Abfrage wird beispielsweise angegeben, für die **Xml** Variablen vom Typ. Die **Wenn** -Bedingung testet den Wert der SQL-Variablen (@v) innerhalb des XQuery-Ausdrucks mit der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md) -Erweiterungsfunktion. Wenn der Wert der Variable "FirstName" ist, wird die <`FirstName`> Element. Andernfalls wird die <`LastName`> Element.  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- Die folgende Abfrage ruft die beiden ersten Funktionsbeschreibungen der Produktkatalogbeschreibung eines bestimmten Produktmodells ab. Wenn das Dokument weitere Funktionen enthält, wird ein <`there-is-more`>-Element ohne Inhalt hinzugefügt.  
+ Die folgende Abfrage ruft die beiden ersten Funktionsbeschreibungen der Produktkatalogbeschreibung eines bestimmten Produktmodells ab. Wenn Sie weitere Features in das Dokument vorhanden sind, fügt es eine <`there-is-more`>-Element ohne Inhalt.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- In der folgenden Abfrage wird ein <`Location`>-Element mit einem LocationID-Attribut zurückgegeben, wenn die Setupzeiten vom Arbeitsplatzstandort nicht angegeben werden.  
+ In der folgenden Abfrage wird eine <`Location`>-Element mit einem LocationID-Attribut wird zurückgegeben, wenn arbeitsplatzstandort nicht setupzeiten angibt.  
   
 ```  
 SELECT Instructions.query('  

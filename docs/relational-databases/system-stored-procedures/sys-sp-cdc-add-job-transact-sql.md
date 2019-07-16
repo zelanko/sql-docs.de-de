@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs
+title: sp_cdc_add_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106546"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_type = ] 'job\_type'` Der Typ des hinzuzufügenden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** und darf nicht NULL sein. Gültige Eingaben sind **'capture'** und **'Cleanup'**.  
+`[ @job_type = ] 'job\_type'` Der Typ des hinzuzufügenden Auftrags. *Der Standardwert ist* ist **nvarchar(20)** und darf nicht NULL sein. Gültige Eingaben sind **'capture'** und **'Cleanup'** .  
   
 `[ @start_job = ] start_job` Flag zum angeben, ob der Auftrag gestartet werden soll, unmittelbar nachdem er hinzugefügt wurde. *Start_job* ist **Bit** hat den Standardwert 1.  
   
@@ -90,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Da die Cleanup- und Aufzeichnungsaufträge standardmäßig erstellt werden, ist diese gespeicherte Prozedur nur dann erforderlich, wenn ein Auftrag explizit gelöscht wurde und erneut erstellt werden muss.  
   
- Der Name des Auftrags ist **cdc.**  _\<Datenbank\_Namen\>_**\_Bereinigung** oder **cdc.**  _\<Datenbank\_Namen\>_**\_erfassen**, wobei *< Database_name >* ist der Name der aktuellen Datenbank. Wenn ein Auftrag mit dem gleichen Namen bereits vorhanden ist, wird der Name mit einem Punkt angefügt (**.**) gefolgt durch einen eindeutigen Bezeichner, z. B.: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Der Name des Auftrags ist **cdc.**  _\<Datenbank\_Namen\>_ **\_Bereinigung** oder **cdc.**  _\<Datenbank\_Namen\>_ **\_erfassen**, wobei *< Database_name >* ist der Name der aktuellen Datenbank. Wenn ein Auftrag mit dem gleichen Namen bereits vorhanden ist, wird der Name mit einem Punkt angefügt ( **.** ) gefolgt durch einen eindeutigen Bezeichner, z. B.: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Verwenden Sie zum Anzeigen der aktuellen Konfigurations eines Cleanup- oder aufzeichnungsauftrag Auftrags [Sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Verwenden Sie zum Ändern der Konfigurations eines Auftrags [Sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

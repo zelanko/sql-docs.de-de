@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59799119920170db3dcab21619c01b52e7dda8db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e060411864c0f354ee9107216b86a47f738bf43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028066"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Hostschutzattribute und Programmierung der CLR-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47800768"
   
 -   **ExternalProcessMgmt**, der angibt, ob die API eine Möglichkeit zur Kontrolle des Hostprozesses verfügbar macht.  
   
- Anhand dieser Attribute gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Liste mit Hostschutzattributen an, die in der gehosteten Umgebung von der Codezugriffssicherheit (CAS) nicht zugelassen werden. Die CAS-Anforderungen sind von einem von drei angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Berechtigungssätze: **sicher**, **EXTERNAL_ACCESS**, oder **UNSAFE**. Eines dieser drei Sicherheitsebenen wird angegeben, wenn die Assembly, auf dem Server registriert wurde mithilfe der **CREATE ASSEMBLY** Anweisung. Codeausführung innerhalb der **sicher** oder **EXTERNAL_ACCESS** Berechtigungssätze müssen vermeiden, bestimmte Typen oder Member mit dem **System.Security.Permissions.HostProtectionAttribute** -Attribut. Weitere Informationen finden Sie unter [Erstellen einer Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) und [CLR-Integration Programmierung Einschränkungen](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Anhand dieser Attribute gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Liste mit Hostschutzattributen an, die in der gehosteten Umgebung von der Codezugriffssicherheit (CAS) nicht zugelassen werden. Die CAS-Anforderungen sind von einem von drei angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Berechtigungssätze: **Sichere**, **EXTERNAL_ACCESS**, oder **UNSAFE**. Eines dieser drei Sicherheitsebenen wird angegeben, wenn die Assembly, auf dem Server registriert wurde mithilfe der **CREATE ASSEMBLY** Anweisung. Codeausführung innerhalb der **sicher** oder **EXTERNAL_ACCESS** Berechtigungssätze müssen vermeiden, bestimmte Typen oder Member mit dem **System.Security.Permissions.HostProtectionAttribute** -Attribut. Weitere Informationen finden Sie unter [Erstellen einer Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) und [CLR-Integration Programmierung Einschränkungen](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
  Die **HostProtectionAttribute** ist keine Sicherheitsberechtigung, als eine Möglichkeit, um die Zuverlässigkeit zu verbessern, da es sich um spezifischen Code identifiziert, entweder Typen oder Methoden erstellt, dass der Host möglicherweise nicht zulässig. Die Verwendung der **HostProtectionAttribute** erzwingt ein Programmiermodell, mit dem die Stabilität des Hosts zu schützen.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a971da68a8f2a35df8fa513e68d1eba127e9c430
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 646d2724489140080a673f31e22429cc7ca39d4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022104"
 ---
 # <a name="value-list-arguments"></a>Argumente der Werteliste
 Eine Liste Wertargument besteht aus einer Liste von durch Trennzeichen getrennte Werte, die für den Abgleich verwendet werden. In der ODBC-Katalogfunktionen Listenargument nur ein Wert vorliegt: die *TableType* -Argument in **SQLTables**. Festlegen von *TableType* auf einen null-Zeiger ist identisch, als ob er auf SQL_ALL_TABLE_TYPES, festgelegt ist, der alle verfügbaren Elemente der Werteliste aufgeführt. Dieses Argument ist das SQL_ATTR_METADATA_ID-Anweisungsattribut nicht betroffen. Weitere Informationen finden Sie unter den [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) funktionsbeschreibung.

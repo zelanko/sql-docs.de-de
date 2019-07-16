@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029126"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Erste Schritte mit SSMA für SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für SAP ASE können Sie schnell, konvertieren Sie Datenbankschemas SAP Adaptive Server Enterprise (ASE), um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank-Schemas, Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank und Migrieren von Daten aus SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.  
@@ -93,7 +92,7 @@ Die Migrations-Symbolleiste enthält die folgenden Befehle aus:
 ### <a name="menus"></a>Menüs  
 SSMA enthält die folgenden Menüs:  
   
-|Menü "|Description|  
+|Menü|Beschreibung|  
 |--------|---------------|  
 |**File**|Enthält Befehle zum Arbeiten mit Projekten, eine Verbindung mit SAP ASE und Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen von und Arbeiten mit Text in der Seiten, z. B. das Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] aus dem Bereich SQL-Details. Enthält auch die **Lesezeichen verwalten** Option hier Sie eine Liste der vorhandenen Lesezeichen sehen. Sie können die Schaltflächen auf der rechten Seite des Dialogfelds verwenden, um Lesezeichen zu verwalten.|  

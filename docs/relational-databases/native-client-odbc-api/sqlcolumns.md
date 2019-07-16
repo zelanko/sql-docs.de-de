@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 717dbb55691529e22f333a639f2d835d60431b98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113548"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +32,13 @@ ms.locfileid: "63014612"
   
  **SQLColumns** kann in einem statischen Servercursor ausgeführt werden. Der Versuch, auszuführen **SQLColumns** in einem aktualisierbaren (dynamischen oder Keyset-) Cursor der Cursor SQL_SUCCESS_WITH_INFO zurück, der angibt, dass der Cursortyp geändert wurde.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die *CatalogName* Parameter: *Linked_Server_Name.Catalog_Name*.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die *CatalogName* Parameter: *Linked_server_name*.  
   
  Für ODBC 2. *x* Anwendungen, die nicht mithilfe von Platzhaltern in *TableName*, **SQLColumns** gibt Informationen über alle Tabellen, deren Namen übereinstimmen *TableName*und den aktuellen Benutzer gehören. Wenn der aktuelle Benutzer keine Tabelle besitzt, dessen Name, der *TableName* Parameter **SQLColumns** gibt Informationen über alle Tabellen, deren Besitzer andere Benutzer entspricht, in dem der Tabellenname der  *TableName* Parameter. Für ODBC 2. *x* Anwendungen mithilfe von Platzhaltern, **SQLColumns** alle Tabellen, deren Namen Übereinstimmung zurück *TableName*. Für ODBC 3. *x* Anwendungen **SQLColumns** alle Tabellen, deren Namen Übereinstimmung zurück *TableName* unabhängig vom Besitzer oder gibt an, ob Platzhalter verwendet werden.  
   
  In der folgenden Tabelle werden die vom Resultset zurückgegebenen Spalten aufgeführt:  
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |DATA_TYPE|Gibt SQL_VARCHAR, SQL_VARBINARY oder SQL_WVARCHAR für den **varchar(max)** -Datentypen.|  
 |TYPE_NAME|Gibt "Varchar", "Varbinary" oder "Nvarchar" für die **varchar(max)** , **'varbinary(max)'** , und **nvarchar(max)** -Datentypen.|  
@@ -83,8 +82,8 @@ ms.locfileid: "63014612"
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**Smallint**|Wenn die Spalte ist der **Column_set** Spalte, ist dies SQL_TRUE, andernfalls SQL_FALSE.|  
+|SS_IS_SPARSE|**smallint**|SQL_TRUE, wenn die Spalte eine Sparsespalte ist, andernfalls SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**smallint**|Wenn die Spalte ist der **Column_set** Spalte, ist dies SQL_TRUE, andernfalls SQL_FALSE.|  
   
  In Übereinstimmung mit der ODBC-Spezifikation werden SS_IS_SPARSE und SS_IS_COLUMN_SET vor alle treiberspezifischen Spalten, die hinzugefügt wurden, angezeigt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen älter als [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], und nach alle Spalten, die von ODBC selbst.  
   

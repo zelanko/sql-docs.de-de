@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006555"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren eines Access-Inventars (AccessToSQL)
 Wenn Sie mehrere Access-Datenbanken und nicht sicher, welche zum Migrieren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann überprüfen und Abfragen der Inventur-Metadaten, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migrieren. Dieser Hardwareinventur können Sie schnell finden Sie Antworten auf Fragen, wie z. B. die folgenden:  
@@ -146,7 +145,7 @@ Nachdem Sie Metadaten für den Zugriff auf Datenbanken exportiert haben, können
   
 5.  Drücken Sie F5, um die Abfrage auszuführen.  
   
-## <a name="query-examples"></a>Beispiele für Abfragen  
+## <a name="query-examples"></a>Abfragebeispiele  
 Bevor Sie einen der folgenden Abfragen ausführen, führen Sie eine Verwendung *Database_name* Abfrage, um sicherzustellen, dass die Abfragen ausgeführt werden, für die Datenbank, die die exportierte Metadaten enthält. Sie z. B., wenn Sie Metadaten in einer Datenbank mit dem Namen MyAccessMetadata exportiert haben, würden hinzufügen Folgendes am Anfang der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code:  
   
 ```  

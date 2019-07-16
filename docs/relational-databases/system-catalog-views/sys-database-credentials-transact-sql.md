@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999527"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
+# <a name="sysdatabasecredentials-transact-sql"></a>database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Gibt eine Zeile für jede Datenbank von datenbankweit gültigen Anmeldeinformationen in der Datenbank.  
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwendung [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) stattdessen.    
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|ID der datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  
 |NAME|**sysname**|Name der Datenbank von datenbankweit gültigen Anmeldeinformationen. In der Datenbank eindeutig ist.|  

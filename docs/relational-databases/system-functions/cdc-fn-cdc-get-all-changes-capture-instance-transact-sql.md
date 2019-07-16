@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043047"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>CDC. fn_cdc_get_all_changes_&lt;Capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile für jede auf die Quelltabelle innerhalb des angegebenen Bereichs der Protokollfolgenummer (Log Sequence Number, LSN) angewendete Änderung an. Wenn an einer Quellzeile während des Intervalls mehrere Änderungen vorgenommen wurden, wird jede Änderung im zurückgegebenen Resultset dargestellt. Zusätzlich zum Zurückgeben der Änderungsdaten stellen vier Metadatenspalten die Informationen bereit, die Sie zum Anwenden der Änderungen auf eine andere Datenquelle benötigen. Über Zeilenfilterungsoptionen werden der Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Wenn die Filteroption 'all' angegeben ist, verfügt jede Änderung über genau eine Zeile, um die Änderung zu identifizieren. Wenn die Option 'all update old' angegeben ist, werden die Updatevorgänge in zwei Zeilen dargestellt: Eine enthält die Werte der aufgezeichneten Spalten vor dem Update und die andere enthält die Werte der aufgezeichneten Spalten nach dem Update.  
   
- Diese Enumerationsfunktion wird zu dem Zeitpunkt erstellt, zu dem eine Quelltabelle für Change Data Capture aktiviert wird. Der Funktionsname wird abgeleitet und verwendet das Format **CDC. fn_cdc_get_all_changes_**_Capture_instance_ , in denen *Capture_instance* ist der angegebene Wert für die Erfassung -Instanz, wenn die Quelltabelle für Change Data Capture aktiviert ist.  
+ Diese Enumerationsfunktion wird zu dem Zeitpunkt erstellt, zu dem eine Quelltabelle für Change Data Capture aktiviert wird. Der Funktionsname wird abgeleitet und verwendet das Format **CDC. fn_cdc_get_all_changes_** _Capture_instance_ , in denen *Capture_instance* ist der angegebene Wert für die Erfassung -Instanz, wenn die Quelltabelle für Change Data Capture aktiviert ist.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +46,16 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *From_lsn* ist **("Binary(10)")**.  
+ Der LSN-Wert, der den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *From_lsn* ist **("Binary(10)")** .  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) mit einem Wert in die Änderungstabelle **__ $Start_lsn** größer als oder gleich *From_lsn* in das Resultset enthalten sind.  
   
  *to_lsn*  
- Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *To_lsn* ist **("Binary(10)")**.  
+ Der LSN-Wert, der den oberen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *To_lsn* ist **("Binary(10)")** .  
   
  Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) mit einem Wert in die Änderungstabelle **__ $Start_lsn** kleiner als oder gleich *From_lsn* gleich *To_lsn* enthalten sind im Resultset.  
   
- <row_filter_option> ::= { all | all update old }  
+ < Row_filter_option >:: = {alle | alle alten aktualisieren}  
  Eine Option, die den Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt.  
   
  Eine der folgenden Optionen ist möglich:  
@@ -69,7 +68,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Commit-LSN, die der Änderung zugeordnet ist, die die Commitreihenfolge der Änderung beibehält. Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden denselben Commit-LSN-Wert.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, der verwendet wird, um Änderungen an einer Zeile innerhalb einer Transaktion zu sortieren.|  
@@ -83,7 +82,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>Hinweise  
  Wenn der angegebene LSN-Bereich nicht in den Zeitraum der Änderungsnachverfolgung für die Aufzeichnungsinstanz fällt, gibt die Funktion Fehler 208 zurück ("Für die 'cdc.fn_cdc_get_all_changes'-Prozedur oder -Funktion wurden zu wenig Argumente bereitgestellt").  
   
- Spalten des Datentyps **Image**, **Text**, und **Ntext** sind immer ein NULL zugewiesen Wert fest, wenn **__ $Operation** = 1 oder **__ $ Vorgang** = 3. Spalten des Datentyps **'varbinary(max)'**, **varchar(max)**, oder **nvarchar(max)** sind immer ein NULL zugewiesen Wert fest, wenn **__ $Operation** = 3 Wenn die Spalte während des Updates geändert wurde. Wenn **__ $Operation** = 1, werden diesen Spalten ihr Wert zum Zeitpunkt der Löschung zugewiesen. Berechnete Spalten in einer Aufzeichnungsinstanz besitzen immer den Wert NULL.  
+ Spalten des Datentyps **Image**, **Text**, und **Ntext** sind immer ein NULL zugewiesen Wert fest, wenn **__ $Operation** = 1 oder **__ $ Vorgang** = 3. Spalten des Datentyps **'varbinary(max)'** , **varchar(max)** , oder **nvarchar(max)** sind immer ein NULL zugewiesen Wert fest, wenn **__ $Operation** = 3 Wenn die Spalte während des Updates geändert wurde. Wenn **__ $Operation** = 1, werden diesen Spalten ihr Wert zum Zeitpunkt der Löschung zugewiesen. Berechnete Spalten in einer Aufzeichnungsinstanz besitzen immer den Wert NULL.  
   
 ## <a name="examples"></a>Beispiele  
  Mehrere [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Vorlagen sind verfügbar, die veranschaulichen, wie die Change Data Capture-Abfragefunktionen. Diese Vorlagen finden Sie auf die **Ansicht** Menü [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Weitere Informationen finden Sie unter [Vorlagen-Explorer](../../ssms/template/template-explorer.md).  

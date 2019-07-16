@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91b040a1c625387ed25855d3c3eb26955088f5c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038330"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX-Datendefinition – CREATE SET
 
@@ -35,7 +34,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Cube_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen des Cubes bereitstellt.  
   
- *Set_Name*  
+ *Gruppenname*  
  Ein gültiger Zeichenfolgenausdruck, der einen Namen für die zu erstellende benannte Menge bereitstellt.  
   
  *Set_Expression*  

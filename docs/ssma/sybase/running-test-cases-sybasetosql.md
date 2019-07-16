@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021018"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ausführen von Testfällen (SybaseToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt, und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Sybase und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -35,7 +34,7 @@ Wenn der Test abgeschlossen ist, wird der Testfall-Bericht erstellt. Klicken Sie
   
 ## <a name="test-case-execution-steps"></a>Testfall-Ausführungsschritte  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Vorraussetzungen  
 SSMA-Tester wird überprüft, ob alle Voraussetzungen, für die testausführung vor Beginn des Tests erfüllt sind. Wenn bestimmte Bedingungen nicht erfüllt sind, wird eine Fehlermeldung angezeigt.  
   
 ### <a name="initialization"></a>Initialisierung  
@@ -45,19 +44,19 @@ Wird davon ausgegangen Sie, dass die überprüfte Tabelle USER_TABLE heißt. Fü
   
 Die folgenden Objekte werden an Sybase erstellt, in der Datenbank SSMATESTER2005db oder SSMATESTER2008db und zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Datenbank Ssmatesterdb_syb.  
   
-|Name|Typ|Description|  
+|Name|Typ|Beschreibung|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Trigger|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
-|USER_TABLE$Aud|Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
-|USER_TABLE$AudID|Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Sicht|Vereinfachte Darstellung der tabellenänderungen.|  
-|USER_TABLE$new|Sicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
-|USER_TABLE$new_id|Sicht|ID des eingefügten und geänderter Zeilen.|  
-|USER_TABLE$old|Sicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
+|USER_TABLE$ Aud|Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
+|USER_TABLE$ AudID|Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
+|USER_TABLE$new|Ansicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
+|USER_TABLE$new_id|Ansicht|ID des eingefügten und geänderter Zeilen.|  
+|USER_TABLE$old|Ansicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
   
 Das folgende Objekt ist in der Datenbank der überprüften Tabelle in Sybase erstellt und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Name|Typ|Description|  
+|Name|Typ|Beschreibung|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Trigger|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
   

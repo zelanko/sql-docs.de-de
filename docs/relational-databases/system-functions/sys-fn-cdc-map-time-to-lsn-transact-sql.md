@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c22074e686f9dff1d988d7453c0c546fa6e049b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046333"
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **"**< Relational_operator >**"** {weniger als größte | größten kleiner als oder gleich | kleinsten größer | kleinsten größer als oder gleich}  
+ **"** < Relational_operator > **"** {weniger als größte | größten kleiner als oder gleich | kleinsten größer | kleinsten größer als oder gleich}  
  Wird verwendet, um einen eindeutigen LSN-Wert in der **cdc.lsn_time_mapping** -Tabelle mit zugeordnetem **tran_end_time** -Wert zu identifizieren, der der Beziehung entspricht, wenn er mit dem Wert *tracking_time* verglichen wird.  
   
  *relational_operator* ist **nvarchar(30)**  

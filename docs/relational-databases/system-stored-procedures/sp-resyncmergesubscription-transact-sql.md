@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041031"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|Die Synchronisierung beginnt bei der letzten erfolgreichen Überprüfung. Alle neuen oder unvollständigen Generierungen, die seit der letzten erfolgreichen Überprüfung durchgeführt wurden, werden erneut auf den Abonnenten angewendet.|  
 |**2**|Die Synchronisierung beginnt, ab dem Datum im angegebenen *resync_date_str angegeben wird*. Alle neuen oder unvollständigen Generierungen, die seit diesem Datum durchgeführt wurden, werden erneut auf den Abonnenten angewendet.|  
   
-`[ @resync_date_str = ] resync_date_string` Legt das Datum an, wann die erneute Synchronisierung gestartet werden soll. *Resync_date_string* ist **nvarchar(30)**, hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn die *Resync_type* ist ein Wert von **2**. Konvertiert das angegebene Datum in den entsprechenden **"DateTime"** Wert.  
+`[ @resync_date_str = ] resync_date_string` Legt das Datum an, wann die erneute Synchronisierung gestartet werden soll. *Resync_date_string* ist **nvarchar(30)** , hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn die *Resync_type* ist ein Wert von **2**. Konvertiert das angegebene Datum in den entsprechenden **"DateTime"** Wert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: c6427f786de727f22c3dd74b0dcf91d63b36c4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004871"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,21 +55,21 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *database_id* | NULL | 0 | DEFAULT  
+ *Database_id* | NULL | 0 | STANDARDWERT  
  Ist die ID der Datenbank. *Database_id* ist **Smallint**. Gültige Eingaben sind die ID einer Datenbank, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, wenn Informationen zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben werden sollen. Bei Angabe von NULL für *Database_id*, müssen Sie auch angeben, NULL für *Object_id*, *Index_id*, und *Partition_number*.  
   
  Die integrierte Funktion [DB_ID](../../t-sql/functions/db-id-transact-sql.md) kann angegeben werden. Wenn DB_ID verwendet wird, ohne dass ein Datenbankname angegeben wird, muss der Kompatibilitätsgrad der aktuellen Datenbank 90 oder höher sein.  
   
- *object_id* | NULL | 0 | DEFAULT  
+ *Object_id* | NULL | 0 | STANDARDWERT  
  Die Objekt-ID der Tabelle oder Sicht mit dem Index. *object_id* ist **int**.  
   
  Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Als [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], gültige Eingaben auch der Name der Service Broker-Warteschlange oder den Warteschlangennamen für die interne Tabelle enthalten. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), sind die Fragmentierungsinformationen für alle Warteschlangen im Resultset enthalten.  
   
  Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Bei Angabe von NULL für *Object_id*, müssen Sie auch angeben, NULL für *Index_id* und *Partition_number*.  
   
- *index_id* | 0 | NULL | -1 | DEFAULT  
+ *Index_id* | 0 | NULL | -1 | STANDARDWERT  
  Die ID des Indexes. *Index_id* ist **Int**. Gültige Eingaben sind die ID-Nummer eines Indexes, 0, wenn *Object_id* ein Heap ist, NULL,-1 oder DEFAULT. Der Standardwert ist-1. NULL,-1 und DEFAULT sind in diesem Kontext gleichwertig.  
   
  Geben Sie NULL an, um Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Bei Angabe von NULL für *Index_id*, müssen Sie auch angeben, NULL für *Partition_number*.  
@@ -87,7 +86,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Datenbank-ID der Tabelle oder Sicht.|  
 |object_id|**int**|Objekt-ID der Tabelle oder Sicht mit dem Index.|  
@@ -95,7 +94,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|1-basierte Partitionsnummer im besitzenden Objekt; eine Tabelle, eine Sicht oder ein Index.<br /><br /> 1 = Nicht partitionierter Index oder Heap.|  
 |index_type_desc|**nvarchar(60)**|Beschreibung des Indextyps:<br /><br /> HEAP<br /><br /> CLUSTERED INDEX<br /><br /> NONCLUSTERED INDEX<br /><br /> PRIMARY XML INDEX<br /><br /> ERWEITERTER INDEX<br /><br /> XML INDEX<br /><br /> Zuordnen von SPALTENSPEICHERINDEXES (intern)<br /><br /> Columnstore-DELETEBUFFER INDEX (intern)<br /><br /> Columnstore-DELETEBITMAP INDEX (intern)|  
 |hobt_id|**bigint**|Heap- oder B-Struktur-ID des Indexes oder der Partition.<br /><br /> Neben der Rückgabe der Hobt_id benutzerdefinierte Indizes, gibt auch die Hobt_id der internen columnstore-Indizes zurück.|  
-|alloc_unit_type_desc|**nvarchar(60)**|Beschreibung des Typs der Zuordnungseinheit:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Die LOB_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Typ gespeichert ist **Text**, **Ntext**, **Image**, **varchar(max)**, **nvarchar(max)**, **'varbinary(max)'**, und **Xml**. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Die ROW_OVERFLOW_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Typ gespeichert ist **varchar (n)**, **nvarchar (n)**, **varbinary**, und **Sql_ Variante** , müssen aus der Zeile verschoben wurden.|  
+|alloc_unit_type_desc|**nvarchar(60)**|Beschreibung des Typs der Zuordnungseinheit:<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> Die LOB_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Typ gespeichert ist **Text**, **Ntext**, **Image**, **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , und **Xml**. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).<br /><br /> Die ROW_OVERFLOW_DATA-Zuordnungseinheit enthält die Daten, die in Spalten vom Typ gespeichert ist **varchar (n)** , **nvarchar (n)** , **varbinary**, und **Sql_ Variante** , müssen aus der Zeile verschoben wurden.|  
 |index_depth|**tinyint**|Anzahl von Indexebenen.<br /><br /> 1 = Heap oder LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheit.|  
 |index_level|**tinyint**|Aktuelle Ebene des Indexes.<br /><br /> 0 für Indexblattebene, Heaps und LOB_DATA- oder ROW_OVERFLOW_DATA-Zuordnungseinheiten.<br /><br /> Werte größer 0 für Nicht-Indexblattebenen. *Index_level* werden auf der Stammebene eines Indexes den höchsten Wert.<br /><br /> Die nichtblattebenen von Indizes werden nur verarbeitet, wenn *Modus* = DETAILED.|  
 |avg_fragmentation_in_percent|**float**|Die logische Fragmentierung für Indizes oder die Blockfragmentierung für Heaps in der IN_ROW_DATA-Zuordnungseinheit.<br /><br /> Der Wert wird als Prozentsatz gemessen und berücksichtigt mehrere Dateien. Definitionen für die logische Fragmentierung und die Blockfragmentierung finden Sie unter den Hinweisen.<br /><br /> 0 für LOB_DATA- und ROW_OVERFLOW_DATA-Zuordnungseinheiten.<br /><br /> NULL für heaps, wenn *Modus* = SAMPLED.|  

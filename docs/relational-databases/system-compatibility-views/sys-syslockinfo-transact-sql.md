@@ -1,5 +1,5 @@
 ---
-title: sys.syslockinfo (Transact-SQL) | Microsoft Docs
+title: Sys.syslockinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053339"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "63033014"
 > [!IMPORTANT]  
 >  Diese Funktion hat sich im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geändert. Weitere Informationen finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar(32)**|Textbeschreibung einer Sperrressource. Enthält einen Teil des Ressourcennamens.|  
+|**rsc_text**|**NCHAR(32)**|Textbeschreibung einer Sperrressource. Enthält einen Teil des Ressourcennamens.|  
 |**rsc_bin**|**binary(16)**|Binäre Sperrressource. Enthält die tatsächliche Sperrressource, die im Sperren-Manager enthalten ist. Diese Spalte wurde für Tools, die über das Format des Lock-Ressource zum Generieren von ihren eigenen wissen Sperrressource formatierten sowie zur Durchführung von Selbstjoins auf **Syslockinfo**.|  
 |**rsc_valblk**|**binary(16)**|Sperrwertblock. Einige Ressourcentypen enthalten möglicherweise zusätzliche Daten in der Sperrressource, für die vom Sperren-Manager kein Hashvorgang ausgeführt wurde, um den Besitzer einer bestimmten Sperrressource zu bestimmen. So gehören z. B. Seitensperren nicht einer bestimmten Objekt-ID an. Zur Sperrenausweitung und für andere Zwecke. Die Objekt-ID einer Seitensperre kann jedoch im Sperrenwertblock platziert werden.|  
 |**rsc_dbid**|**smallint**|Zur Ressource zugeordnete Datenbank-ID.|  

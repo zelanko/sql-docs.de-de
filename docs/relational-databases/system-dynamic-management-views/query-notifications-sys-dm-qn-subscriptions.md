@@ -18,32 +18,31 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061920"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Abfragebenachrichtigungen - dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den aktiven Abfragebenachrichtigungsabonnements auf dem Server zurück. Diese Sicht können Sie verwenden, um in der Serverdatenbank oder in einer angegebenen Datenbank eine Überprüfung auf aktive Abonnements vorzunehmen oder um auf eine Überprüfung auf einen angegebenen Serverprinzipal vorzunehmen.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID eines Abonnements.|  
 |**database_id**|**int**|ID der Datenbank, für die die Abfragebenachrichtigung ausgeführt wurde. In dieser Datenbank sind die mit diesem Abonnement verbundenen Informationen gespeichert.|  
-|**SID**|**varbinary(85)**|Sicherheits-ID des Serverprinzipals, der dieses Abonnement erstellt hat und besitzt.|  
+|**sid**|**varbinary(85)**|Sicherheits-ID des Serverprinzipals, der dieses Abonnement erstellt hat und besitzt.|  
 |**object_id**|**int**|ID der internen Tabelle, in der die Informationen zu Abonnementparametern gespeichert sind.|  
 |**created**|**datetime**|Datum und Uhrzeit des Zeitpunktes, an dem das Abonnement erstellt wurde.|  
-|**timeout**|**int**|Timeout für das Abonnement in Sekunden. Die Benachrichtigung wird ausgelöst, nachdem diese Zeit verstrichen ist.<br /><br /> Hinweis: Die tatsächliche Zeit der Auslösung kann größer als das angegebene Timeout sein. Wenn jedoch eine Änderung, die das Abonnement ungültig macht, nach dem angegebenen Timeout und vor dem Auslösen des Abonnements auftritt, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sichergestellt, dass das Auslösen zu dem Zeitpunkt erfolgt, an dem die Änderung vorgenommen wurde.|  
+|**timeout**|**int**|Timeout für das Abonnement in Sekunden. Die Benachrichtigung wird ausgelöst, nachdem diese Zeit verstrichen ist.<br /><br /> Hinweis: Die tatsächliche Zeit der Auslösung kann größer als das angegebene Timeout sein. Wenn jedoch eine Änderung, die erklärt das Abonnement tritt nach dem angegebenen Timeout, aber bevor das Abonnement ausgelöst wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird sichergestellt, dass das Auslösen zu dem Zeitpunkt erfolgt, die die Änderung vorgenommen wurde.|  
 |**status**|**int**|Gibt den Status des Abonnements. Die Liste der Codes finden Sie in der Tabelle unter den Hinweisen.|  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Aktion|On|Typ|  
+|Von|Beschreibung|On|Typ|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|n:1|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|n:1|  
@@ -56,7 +55,7 @@ ms.locfileid: "51657249"
 |Code|Untergeordneter Status|Info|  
 |----------|------------------|----------|  
 |65798|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Abonnement wurde durch eine Einfügung ausgelöst.|  
-|65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|DELETE|  
+|65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Löschen|  
 |65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Update|  
 |65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Merge|  
 |65802|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Tabelle kürzen|  

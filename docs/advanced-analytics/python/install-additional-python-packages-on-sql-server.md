@@ -7,13 +7,12 @@ ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: f30c00503a0dd183619550d3ab0e92c0be1449dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962774"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installieren Sie neuer Python-Pakete unter SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ In diesem Artikel wird beschrieben, wie zum Installieren neuer Python-Pakete auf
 
 Weitere Informationen zu Paket-Speicherort und die Installation Pfaden finden Sie unter [erhalten R- oder Python-Paketinformationen](../package-management/installed-package-information.md).
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 + [SQL Server 2017-Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md) mit der Python-Sprache-Option. 
 
@@ -80,7 +79,7 @@ Beispielsweise, wenn beispielsweise Machine Learning-Dienste mit Standardeinstel
 
   Den vollständigen Pfad der **Skripts** Ordner in einer Standardinstallation lautet wie folgt:
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Wenn Sie Visual Studio 2017 oder Visual Studio 2015 mit den Python-Erweiterungen verwenden, können Sie ausführen `pip install` aus der **Python-Umgebungen** Fenster. Klicken Sie auf **Pakete**, und geben Sie im Textfeld den Namen oder Speicherort der zu installierenden Pakets an. Sie müssen nicht geben `pip install`; es wird für Sie automatisch ausgefüllt. 
 

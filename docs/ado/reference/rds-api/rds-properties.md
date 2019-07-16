@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc366321c9c9c3a6e19bb6a6e520007247bca5a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963613"
 ---
 # <a name="rds-properties"></a>RDS-Eigenschaften
 > [!IMPORTANT]
@@ -33,7 +32,7 @@ ms.locfileid: "66694662"
 |[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|Gibt die Spalte auf dem die Filterkriterien ausgewertet werden soll.|  
 |[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|Gibt an, die Evaluation-Operator, der im Filterwert verwendet.|  
 |[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|Gibt den Wert zum Filtern von Datensätzen.|  
-|[Handler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Gibt den Namen eines Programms serverseitige Anpassung (*Handler*), erweitert die Funktionalität der **RDSServer.DataFactory**, und alle Parameter ein, die die *Handler*.|  
+|[Ereignishandler (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|Gibt den Namen eines Programms serverseitige Anpassung (*Handler*), erweitert die Funktionalität der **RDSServer.DataFactory**, und alle Parameter ein, die die *Handler*.|  
 |[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|Gibt die Anzahl der Millisekunden, die gewartet wird, bevor eine Anforderung ein auftritt Timeout.|  
 |[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|Gibt den Status einer **DataControl** Objekt, wie es Ruft die Daten in die **Recordset** Objekt.|  
 |[Recordset und Sourcerecordse (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|Gibt an, die **Recordset** Objekt aus der ein benutzerdefiniertes Geschäftsobjekt zurückgegeben.|  

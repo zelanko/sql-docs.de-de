@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 23afb52d9728fae0d7e9c0fe1615e3f96ff58114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1a542ffba5f24ec1ed3cfbad0b6a084b81b74d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003504"
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX-Sprachreferenz (MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "63187592"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[MDX-Syntaxkonventionen &#40;MDX&#41;](../mdx/mdx-syntax-conventions-mdx.md)|Beschreibt kurz die Syntaxkonventionen der MDX-Sprachreferenz.|  
 |[MDX-Anweisungsreferenz &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)|Beschreibt die in der Sprache MDX verfügbaren Skript-, Datendefinitions- und Datenbearbeitungsanweisungen.|  

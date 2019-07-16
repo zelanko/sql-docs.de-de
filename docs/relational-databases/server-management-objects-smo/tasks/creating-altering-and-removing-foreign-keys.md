@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d4632c05bbbde885589d7f1dd57ddea60aa5d98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 787c0786719b1daa7f77495b8ce144f95796df79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001353"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Erstellen, Ändern und Löschen von Fremdschlüsseln
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden Fremdschlüssel durch das <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>-Objekt dargestellt.  
   
- Um einen Fremdschlüssel in SMO zu erstellen, müssen Sie die Tabelle, die auf dem die Fremdschlüssel im Konstruktor der angeben der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> Objekt. In der Tabelle müssen Sie mindestens eine Spalte als Fremdschlüssel auswählen. Um dies zu erreichen, erstellen Sie eine <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn>-Objektvariable und geben den Namen der Spalte an, die der Fremdschlüssel sein soll. Geben Sie dann die Tabelle und die Spalte an, auf die verwiesen wird. Verwenden der <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> Methode, um die Spalte hinzufügen der **Spalten** Objekteigenschaft.  
+ Um einen Fremdschlüssel in SMO zu erstellen, müssen Sie die Tabelle angeben, auf der der Fremdschlüssel im Konstruktor des <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>-Objekts angegeben ist. In der Tabelle müssen Sie mindestens eine Spalte als Fremdschlüssel auswählen. Um dies zu erreichen, erstellen Sie eine <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn>-Objektvariable und geben den Namen der Spalte an, die der Fremdschlüssel sein soll. Geben Sie dann die Tabelle und die Spalte an, auf die verwiesen wird. Verwenden der <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> Methode, um die Spalte hinzufügen der **Spalten** Objekteigenschaft.  
   
- Die Spalten, die den Fremdschlüssel darstellen finden Sie in der **Spalten** -Objekteigenschaft des der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> Objekt. Der primäre Schlüssel, die vom Fremdschlüssel verwiesen wird, wird durch dargestellt die <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> -Eigenschaft, die in der Tabelle im angegebenen ist die <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> Eigenschaft.  
+ Die Spalten, die den Fremdschlüssel darstellen finden Sie in der **Spalten** -Objekteigenschaft des der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> Objekt. Der Primärschlüssel, auf den vom Fremdschlüssel verwiesen wird, ist durch die <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>-Eigenschaft dargestellt, die sich in der Tabelle befindet, die in der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>-Eigenschaft angegeben ist.  
   
 ## <a name="example"></a>Beispiel  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -121,8 +120,8 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Beispiel: Fremdschlüssel, Primärschlüssel, Spalten mit UNIQUE-Einschränkung  
- In diesem Beispiel wird Folgendes veranschaulicht:  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Beispiel: Fremdschlüssel, Primärschlüssel und Unique-Einschränkungsspalten  
+ Dieses Beispiel veranschaulicht Folgendes:  
   
 -   Finden eines Fremdschlüssels für ein vorhandenes Objekt  
   

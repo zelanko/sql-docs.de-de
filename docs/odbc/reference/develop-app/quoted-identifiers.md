@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079004"
 ---
 # <a name="quoted-identifiers"></a>Bezeichner in Anführungszeichen
 In einer SQL­Anweisung müssen in Bezeichnern, die Sonderzeichen oder Übereinstimmung Schlüsselwörter eingeschlossen werden *Anführungszeichen für Bezeichner*; Bezeichner eingeschlossen in solche Zeichen werden als bezeichnet *Anführungszeichen eingeschlossenen Bezeichnern*(auch bekannt als *aus voneinander getrennten Bezeichnern* in SQL-92). Beispielsweise wird der Accounts Payable Bezeichner in Anführungszeichen in der folgenden **wählen** Anweisung:  

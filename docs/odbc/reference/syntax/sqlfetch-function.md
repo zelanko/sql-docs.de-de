@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003069"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch-Funktion
 **Übereinstimmung mit Standards**  
@@ -47,14 +46,14 @@ SQLRETURN SQLFetch(
  [Eingabe] Anweisungshandle.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLFetch** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf [SQLGetDiagRec-Funktion](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) mit eine *HandleType*von SQL_HANDLE_STMT auf, und ein *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLFetch** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben. Bei einem für eine einzelne Spalte Fehler, [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) kann aufgerufen werden, wobei eine *DiagIdentifier* von SQL_DIAG_COLUMN_NUMBER, um die Spalte zu bestimmen, der Fehler aufgetreten ist, und  **SQLGetDiagField** kann aufgerufen werden, wobei eine *DiagIdentifier* von SQL_DIAG_ROW_NUMBER Bestimmen der Zeile, die diese Spalte enthält.  
   
  Für alle diese SQLSTATEs, der SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück (mit Ausnahme der 01xxx SQLSTATEs) zurückgeben kann, wird SQL_SUCCESS_WITH_INFO zurückgegeben, wenn bei ein oder mehrere, aber nicht alle Zeilen eines mehrzeiligen-Vorgangs ein Fehler auftritt, und SQL_ERROR zurückgegeben wird, wenn es sich bei Auftreten eines Fehlers auf einem einzeiliges-Vorgang.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Zeichenfolgen- oder Binärdaten, die für eine Spalte zurückgegeben, führte das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL. Falls es sich um einen Zeichenfolgenwert handelt, war es, rechts abgeschnitten.|  
@@ -76,7 +75,7 @@ SQLRETURN SQLFetch(
 |HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Es wurde der Treiber kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
 |HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die **SQLFetch** Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Die **SQLFetch** Funktion wurde erneut aufgerufen, auf die *StatementHandle*.<br /><br /> Or **SQLFetch** Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*  von einem anderen Thread in einer multithread-Anwendung.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLFetch** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) der angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand befindet. Die Funktion wurde aufgerufen, ohne den ersten Aufruf **SQLExecDirect**, **SQLExecute** oder einer Katalogfunktion.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) **SQLFetch** wurde aufgerufen, die *StatementHandle* nach **SQLExtendedFetch** aufgerufen wurde und bevor **SQLFreeStmt** mit den SQL_ Option "Schließen" wurde aufgerufen.|  
+|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLFetch** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) der angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand befindet. Die Funktion wurde aufgerufen, ohne den ersten Aufruf **SQLExecDirect**, **SQLExecute** oder einer Katalogfunktion.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) **SQLFetch** wurde aufgerufen, die *StatementHandle* nach **SQLExtendedFetch** aufgerufen wurde und bevor **SQLFreeStmt** mit den SQL_ Option "Schließen" wurde aufgerufen.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Das SQL_ATTR_USE_BOOKMARK-Anweisungsattribut auf SQL_UB_VARIABLE festgelegt wurde, und Spalte 0 in einen Puffer, dessen Länge nicht gleich die maximale Länge für das Lesezeichen für dieses Resultset war, gebunden wurde. (Diese Länge finden Sie im Feld SQL_DESC_OCTET_LENGTH IRD und erhalten Sie durch Aufrufen von **SQLDescribeCol**, **SQLColAttribute**, oder **SQLGetDescField**.)|  
 |HY107|Zeilenwert außerhalb des gültigen Bereichs|Mit dem SQL_ATTR_CURSOR_TYPE-Attribut-Anweisung angegebene Wert war SQL_CURSOR_KEYSET_DRIVEN, jedoch mit dem Attribut der SQL_ATTR_KEYSET_SIZE-Anweisung angegebene Wert größer als 0 und kleiner als der Wert, der mit der SQL_ATTR_ROW_ARRAY_ angegeben SIZE-Anweisungsattribut.|  
@@ -132,9 +131,9 @@ SQLRETURN SQLFetch(
 |52 bis 56|SQL_SUCCESS|57 um 61|5|  
 |91 bis 95|SQL_SUCCESS|96 bis 100|5|  
 |93 bis 97|SQL_SUCCESS|98 bis 100. Zeilen 4 und 5 die zeilenstatusarray werden SQL_ROW_NOROW festgelegt.|3|  
-|96 bis 100|SQL_NO_DATA|Keine.|0|  
-|99 bis 100|SQL_NO_DATA|Keine.|0|  
-|Nach Ende|SQL_NO_DATA|Keine.|0|  
+|96 bis 100|SQL_NO_DATA|Keine|0|  
+|99 bis 100|SQL_NO_DATA|Keine|0|  
+|Nach Ende|SQL_NO_DATA|Keine|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Zurückgeben von Daten in gebundenen Spalten  
  Als **SQLFetch** gibt jede Zeile, die Daten für jede gebundene Spalte im Puffer für diese Spalte gebunden wird. Wenn keine Spalten gebunden sind, **SQLFetch** keine Daten zurückgibt, jedoch Vorwärtsbewegen des Blockcursors. Die Daten können dennoch abgerufen werden, mithilfe von **SQLGetData**. Wenn der Cursor befindet sich eine Falls Cursor (d. h. SQL_ATTR_ROW_ARRAY_SIZE ist größer als 1), **SQLGetData** kann nur aufgerufen, wenn SQL_GD_BLOCK, wenn zurückgegeben wird **SQLGetInfo** aufgerufen wird und ein  *Informationsart* von SQL_GETDATA_EXTENSIONS. (Weitere Informationen finden Sie unter [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
@@ -177,7 +176,7 @@ SQLRETURN SQLFetch(
   
  Die folgenden Werte werden in der zeilenstatusarray zurückgegeben.  
   
-|Array-Statuswert Zeile|Description|  
+|Array-Statuswert Zeile|Beschreibung|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|Die Zeile wurde erfolgreich abgerufen und wurde nicht geändert, seit sie zuletzt in diesem Resultset abgerufen wurde.|  
 |SQL_ROW_SUCCESS_WITH_INFO|Die Zeile wurde erfolgreich abgerufen und wurde nicht geändert, seit sie zuletzt in diesem Resultset abgerufen wurde. Allerdings wurde eine Warnung zur Zeile zurückgegeben.|  

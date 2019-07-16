@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037720"
 ---
 # <a name="c-to-sql-character"></a>C in SQL: Zeichen
 Der Bezeichner für das ODBC-C-Datentyp-Zeichen sind:  
@@ -36,16 +35,16 @@ Der Bezeichner für das ODBC-C-Datentyp-Zeichen sind:
   
 |SQL-Typ-ID|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Die Bytelänge der Daten < = Länge der Spalte.<br /><br /> Die Bytelänge der Daten > Länge der Spalte.|–<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Länge der Daten Zeichen < = Länge der Spalte.<br /><br /> Länge der Daten Zeichen > Länge der Spalte.|–<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Daten, die konvertiert werden, ohne Abschneiden<br /><br /> Daten, die mit dem Abschneiden der Dezimalstellen [e] konvertiert<br /><br /> Konvertierung von Daten führt zu Verlust insgesamt (im Gegensatz zu Bruch) Ziffern [e]<br /><br /> Keine *numerischen Literalen*|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Daten sind innerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird<br /><br /> Daten sind außerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird<br /><br /> Keine *numerischen Literalen*|–<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BIT|Daten sind 0 oder 1<br /><br /> Daten ist größer als 0 ist, kleiner als 2, und nicht gleich-1<br /><br /> Daten ist kleiner als 0 oder größer als oder gleich 2<br /><br /> Daten sind keine *numerischen Literalen*|–<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Bytelänge der Daten) / 2 < = Spalte-Byte-Länge<br /><br /> (Bytelänge der Daten) / 2 > Spalte-Byte-Länge<br /><br /> Datenwert ist es sich nicht um einen Hexadezimalwert|–<br /><br /> 22001<br /><br /> 22018|  
-|SQL_TYPE_DATE|Datenwert ist ein gültiger *ODBC-Datum-Literal*<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Uhrzeitanteil ist 0 (null)<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Uhrzeitanteil ist ungleich Null [a]<br /><br /> Wert ist kein gültiger *ODBC-Datum-Literal* oder *ODBC-Zeitstempel-Literal*|–<br /><br /> –<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIME|Datenwert ist ein gültiger *ODBC-Uhrzeit-Literal*<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil ist 0 (null) [b]<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil ist ungleich Null [b]<br /><br /> Wert ist kein gültiger *ODBC-Uhrzeit-Literal* oder *ODBC-Zeitstempel-Literal*|–<br /><br /> –<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIMESTAMP|Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil nicht abgeschnitten<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Sekundenbruchteile abgeschnitten Sekundenteil<br /><br /> Datenwert ist ein gültiger *ODBC-Datum-Literal*[c]<br /><br /> Datenwert ist ein gültiger *ODBC-Uhrzeit-Literal*[d]<br /><br /> Wert ist kein gültiger *ODBC-Datum-Literal*, *ODBC-Uhrzeit-Literal*, oder *ODBC-Zeitstempel-Literal*|–<br /><br /> 22008<br /><br /> –<br /><br /> –<br /><br /> 22018|  
-|Alle Typen von SQL-Zeitintervall|Datenwert ist ein gültiger *Intervallwert*; kein Abschneiden erfolgt<br /><br /> Datenwert ist ein gültiger *Intervallwert*; der Wert in einem der Felder wird abgeschnitten.<br /><br /> Der Wert ist kein gültiges Intervall literal.|–<br /><br /> 22015<br /><br /> 22018|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Die Bytelänge der Daten < = Länge der Spalte.<br /><br /> Die Bytelänge der Daten > Länge der Spalte.|n/v<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Länge der Daten Zeichen < = Länge der Spalte.<br /><br /> Länge der Daten Zeichen > Länge der Spalte.|n/v<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Daten, die konvertiert werden, ohne Abschneiden<br /><br /> Daten, die mit dem Abschneiden der Dezimalstellen [e] konvertiert<br /><br /> Konvertierung von Daten führt zu Verlust insgesamt (im Gegensatz zu Bruch) Ziffern [e]<br /><br /> Keine *numerischen Literalen*|n/v<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Daten sind innerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird<br /><br /> Daten sind außerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird<br /><br /> Keine *numerischen Literalen*|n/v<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BIT|Daten sind 0 oder 1<br /><br /> Daten ist größer als 0 ist, kleiner als 2, und nicht gleich-1<br /><br /> Daten ist kleiner als 0 oder größer als oder gleich 2<br /><br /> Daten sind keine *numerischen Literalen*|n/v<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Bytelänge der Daten) / 2 < = Spalte-Byte-Länge<br /><br /> (Bytelänge der Daten) / 2 > Spalte-Byte-Länge<br /><br /> Datenwert ist es sich nicht um einen Hexadezimalwert|n/v<br /><br /> 22001<br /><br /> 22018|  
+|SQL_TYPE_DATE|Datenwert ist ein gültiger *ODBC-Datum-Literal*<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Uhrzeitanteil ist 0 (null)<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Uhrzeitanteil ist ungleich Null [a]<br /><br /> Wert ist kein gültiger *ODBC-Datum-Literal* oder *ODBC-Zeitstempel-Literal*|n/v<br /><br /> n/v<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIME|Datenwert ist ein gültiger *ODBC-Uhrzeit-Literal*<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil ist 0 (null) [b]<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil ist ungleich Null [b]<br /><br /> Wert ist kein gültiger *ODBC-Uhrzeit-Literal* oder *ODBC-Zeitstempel-Literal*|n/v<br /><br /> n/v<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIMESTAMP|Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil nicht abgeschnitten<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Sekundenbruchteile abgeschnitten Sekundenteil<br /><br /> Datenwert ist ein gültiger *ODBC-Datum-Literal*[c]<br /><br /> Datenwert ist ein gültiger *ODBC-Uhrzeit-Literal*[d]<br /><br /> Wert ist kein gültiger *ODBC-Datum-Literal*, *ODBC-Uhrzeit-Literal*, oder *ODBC-Zeitstempel-Literal*|n/v<br /><br /> 22008<br /><br /> n/v<br /><br /> n/v<br /><br /> 22018|  
+|Alle Typen von SQL-Zeitintervall|Datenwert ist ein gültiger *Intervallwert*; kein Abschneiden erfolgt<br /><br /> Datenwert ist ein gültiger *Intervallwert*; der Wert in einem der Felder wird abgeschnitten.<br /><br /> Der Wert ist kein gültiges Intervall literal.|n/v<br /><br /> 22015<br /><br /> 22018|  
   
  [a] der Uhrzeitteil des Zeitstempels wird abgeschnitten.  
   

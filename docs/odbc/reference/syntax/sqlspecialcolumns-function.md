@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 15fa1269b733c9adc938b1880735ae2a4e5db731
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039562"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns-Funktion
 **Übereinstimmung mit Standards**  
@@ -66,7 +65,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_ROWVER: Gibt die Spalte oder Spalten in der angegebenen Tabelle zurück, sofern vorhanden, die von der Datenquelle automatisch aktualisiert werden, wenn ein Wert in der Zeile durch eine Transaktion (wie SQLBase ROWID oder Sybase-TIMESTAMP) aktualisiert wird.  
   
- *CatalogName*  
+ *Katalogname*  
  [Eingabe] Name des Katalogs für die Tabelle. Wenn ein Treiber unterstützt die Kataloge für einige Tabellen jedoch nicht für andere, z. B. wenn der Treiber Daten aus verschiedenen DBMS, eine leere Zeichenfolge ruft ("") steht für die Tabellen, denen keine Kataloge. *CatalogName* darf kein Suchmuster Zeichenfolge enthalten.  
   
  Wenn das SQL_ATTR_METADATA_ID-Anweisungsattribut auf SQL_TRUE, festgelegt ist *CatalogName* wird als Bezeichner behandelt und der Fall ist nicht von Bedeutung. Ist dies SQL_FALSE, *CatalogName* ein normales Argument ist, wird es buchstäblich behandelt und der Fall ist von Bedeutung. Weitere Informationen finden Sie unter [Argumente in Katalogfunktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -107,7 +106,7 @@ SQLRETURN SQLSpecialColumns(
  SQL_NULLABLE: Spezielle Spalten zurück, auch wenn sie NULL-Werte haben können.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLSpecialColumns** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSpecialColumns** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -125,7 +124,7 @@ SQLRETURN SQLSpecialColumns(
 |HY009|Ungültige Verwendung eines null-Zeiger|Die *TableName* Argument wurde ein null-Zeiger.<br /><br /> Das Anweisungsattribut SQL_ATTR_METADATA_ID wurde festgelegt auf SQL_TRUE, die *CatalogName* Argument wurde ein null-Zeiger ist, und die SQL_CATALOG_NAME *Informationsart* gibt zurück, die Namen Katalog werden unterstützt.<br /><br /> (DM) das Anweisungsattribut SQL_ATTR_METADATA_ID wurde Wert auf SQL_TRUE festgelegt, und die *SchemaName* Argument wurde ein null-Zeiger.|  
 |HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese Funktion war immer noch ausgeführt, wenn **SQLSpecialColumns** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert der eines der Argumente für die Länge ist kleiner als 0, jedoch nicht SQL_NTS gleich.<br /><br /> Der Wert eines der Argumente Länge überschritten, den Wert für die maximale Länge für den entsprechenden Namen. Die maximale Länge des Namens abgerufen werden kann, durch den Aufruf **SQLGetInfo** mit der *Informationsart* Werte: SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, or SQL_MAX_TABLE_NAME_LEN.|  
+|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert der eines der Argumente für die Länge ist kleiner als 0, jedoch nicht SQL_NTS gleich.<br /><br /> Der Wert eines der Argumente Länge überschritten, den Wert für die maximale Länge für den entsprechenden Namen. Die maximale Länge des Namens abgerufen werden kann, durch den Aufruf **SQLGetInfo** mit der *Informationsart* Werte: SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN oder SQL_MAX_TABLE_NAME_LEN.|  
 |HY097|Spaltentyp außerhalb des gültigen Bereichs|(DM) eine ungültige *IdentifierType* -Wert wurde angegeben.|  
 |HY098|Bereichstyp außerhalb des gültigen Bereichs|(DM) eine ungültige *Bereich* -Wert wurde angegeben.|  
 |HY099|Nullable-Typs außerhalb des gültigen Bereichs|(DM) eine ungültige *Nullable* -Wert wurde angegeben.|  
@@ -171,7 +170,7 @@ SQLRETURN SQLSpecialColumns(
 |TYPE_NAME (ODBC 1.0)|4|Varchar, die nicht NULL|Daten Datenquelle abhängiger Datentypname; z. B. "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".|  
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|Die Größe der Spalte in der Datenquelle. Weitere Informationen zu Spalten finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DIE BUFFER_LENGTH (ODBC 1.0)|6|Integer|Die Länge in Bytes der Datenübertragung auf einen **SQLGetData** oder **SQLFetch** Vorgang, wenn SQL_C_DEFAULT angegeben wird. Für numerische Daten möglicherweise anders als die Größe der in der Datenquelle gespeicherten Daten diese Größe. Dieser Wert ist identisch mit der COLUMN_SIZE-Spalte für Zeichen- oder Binärdaten darstellen. Weitere Informationen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Die Dezimalstellen der Spalte in der Datenquelle. NULL wird für Datentypen zurückgegeben, in Dezimalstellen nicht anwendbar sind. Weitere Informationen zu Dezimalstellen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|DIE DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Die Dezimalstellen der Spalte in der Datenquelle. NULL wird für Datentypen zurückgegeben, in Dezimalstellen nicht anwendbar sind. Weitere Informationen zu Dezimalstellen finden Sie unter [Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Gibt an, ob die Spalte eine Pseudospalte, z. B. Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **beachten:**  Für eine optimale Interoperabilität Pseudospalten sollte nicht in Anführungszeichen eingeschlossen werden mit dem Bezeichner, die Anführungszeichen vom **SQLGetInfo**.|  
   
  Nachdem die Anwendung Werte für SQL_BEST_ROWID abgerufen hat, kann die Anwendung diese Werte verwenden, auf die Zeile innerhalb des definierten Bereichs erneut auswählen. Die **wählen** Anweisung ist garantiert keine Zeilen oder eine Zeile zurück.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057211"
 ---
 # <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
 Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reserviert. Diese Wörter schränken nicht die minimale SQL-Grammatik ein; um die Kompatibilität mit Treibern sichergestellt ist, die Core-SQL-Grammatik unterstützen, sollten Anwendungen jedoch nicht mit einem dieser Schlüsselwörter. Die Anzahl**definieren** Wert SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste dieser Schlüsselwörter.  
@@ -68,7 +67,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |CONNECTION|ÜBERLAPPT|  
 |CONSTRAINT|PAD|  
 |CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL|  
+|CONTINUE|PASCAL-SCHREIBWEISE|  
 |CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  

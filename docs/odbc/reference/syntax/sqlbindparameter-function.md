@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13f4c879f94118a2e2302a2032991e85551be0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036216"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter-Funktion
 
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.0 Standards Compliance: ODBC  
+ Eingeführt in Version: ODBC 2.0-Standards-Compliance: ODBC  
   
  **Zusammenfassung**  
  **SQLBindParameter** bindet einen Puffer an eine parametermarkierung in einer SQL­Anweisung. **SQLBindParameter** unterstützt die Bindung an eine Unicode-C-Datentyp, selbst wenn die zugrunde liegenden Treiber Unicode-Daten nicht unterstützt.  
@@ -94,7 +93,7 @@ SQLRETURN SQLBindParameter(
   
 ## <a name="returns"></a>Rückgabewert
 
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose
 
@@ -110,7 +109,7 @@ SQLRETURN SQLBindParameter(
 |HY003|Ungültiger Anwendungspuffertyp|Der Wert, der durch das Argument angegebenen *ValueType* war keine gültige C-Datentyp oder SQL_C_DEFAULT.|  
 |HY004|Ungültiger SQL-Datentyp|Der angegebene Wert für das Argument *ParameterType* war weder eine gültige ODBC-SQL-Datentypbezeichner noch eine treiberspezifische SQL Datentypbezeichner vom Treiber unterstützt werden.|  
 |HY009|Ungültiger Argumentwert|(DM) das Argument *ParameterValuePtr* wurde ein null-Zeiger ist das Argument *StrLen_or_IndPtr* wurde ein null-Zeiger ist, und das Argument *InputOutputType* war nicht SQL_PARAM_ DIE AUSGABE.<br /><br /> SQL_PARAM_OUTPUT (DM), wobei das Argument *ParameterValuePtr* wurde ein null-Zeiger der C-Typ wurde Char "oder" Binary, und die Pufferlänge (*CbValueMax*) war größer als 0.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn **SQLBindParameter** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn **SQLBindParameter** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY021|Inkonsistente deskriptorinformation|Die Informationen der Sicherheitsbeschreibung während einer konsistenzprüfung eingecheckt war nicht konsistent. (Finden Sie im Abschnitt "Konsistenzprüfungen" in **SQLSetDescField**.)<br /><br /> Der angegebene Wert für das Argument *DecimalDigits* lag außerhalb des Bereichs von Werten, die von der Datenquelle für eine Spalte mit der angegebenen SQL-Datentyp unterstützt die *ParameterType* Argument.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) den Wert in *Pufferlänge* war kleiner als 0. (Siehe dazu die Beschreibung das SQL_DESC_DATA_PTR-Feld in **SQLSetDescField**.)|  
@@ -243,7 +242,7 @@ SQLRETURN SQLBindParameter(
 > [!NOTE]  
 >  In **SQLSetParam**, die Möglichkeit, die angibt, in dem eine Anwendung die Länge des der **ParameterValuePtr* gepuffert, damit der Treiber zurückkehren kann, Zeichen- oder Binärdaten und die Möglichkeit, in denen eine Anwendung sendet, eine Array von Zeichen oder binäre Parameterwerte an den Treiber, sind treiberdefinierten.  
   
-## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr Argument
+## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr-Argument
 
  Die *StrLen_or_IndPtr* -Argument zeigt auf einen Puffer, wenn **SQLExecute** oder **SQLExecDirect** aufgerufen wird, enthält mindestens eine der folgenden. (Dieses Argument stellt die SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_INDICATOR_PTR Datensatzfelder der Anwendung Parameter Zeiger.)  
   
@@ -431,7 +430,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_PROCEED ist als 0 in der Headerdatei definiert.  
   
- Eine Anwendung kann die SQL_DESC_ARRAY_STATUS_PTR Feld im APD auf dasselbe Array als verweisen, auf das durch das SQL_DESC_ARRAY_STATUS_PTR in IRD festgelegt. Dies ist nützlich beim Binden von Parametern an die Daten der Zeile. Parameter können dann nach dem Status der Daten aus der Zeile ignoriert werden. Zusätzlich zu SQL_PARAM_IGNORE dazu führen, dass die folgenden Codes für einen Parameter in einer SQL­Anweisung ignoriert werden soll: SQL_ROW_DELETED, SQL_ROW_UPDATED und SQL_ROW_ERROR. Zusätzlich zu SQL_PARAM_PROCEED dazu führen, dass die folgenden Codes für eine SQL-Anweisung, um den Vorgang fortzusetzen: SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, and SQL_ROW_ADDED.  
+ Eine Anwendung kann die SQL_DESC_ARRAY_STATUS_PTR Feld im APD auf dasselbe Array als verweisen, auf das durch das SQL_DESC_ARRAY_STATUS_PTR in IRD festgelegt. Dies ist nützlich beim Binden von Parametern an die Daten der Zeile. Parameter können dann nach dem Status der Daten aus der Zeile ignoriert werden. Zusätzlich zu SQL_PARAM_IGNORE dazu führen, dass die folgenden Codes für einen Parameter in einer SQL­Anweisung ignoriert werden soll: SQL_ROW_DELETED, SQL_ROW_UPDATED und SQL_ROW_ERROR. Zusätzlich zu SQL_PARAM_PROCEED dazu führen, dass die folgenden Codes für eine SQL-Anweisung, um den Vorgang fortzusetzen: SQL_ROW_SUCCESS SQL_ROW_SUCCESS_WITH_INFO und SQL_ROW_ADDED.  
   
 ## <a name="rebinding-parameters"></a>Erneutes Binden von Datenquellenverweisen Parameter
 

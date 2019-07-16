@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032827"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_start_job
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` Der Zielserver, auf dem den Auftrag gestartet werden soll. *Server_name* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. *Server_name* muss einer der Zielserver, der der Auftrag derzeit gerichtet, sein.  
+`[ @server_name = ] 'server_name'` Der Zielserver, auf dem den Auftrag gestartet werden soll. *Server_name* ist **vom Datentyp nvarchar(128)** , hat den Standardwert NULL. *Server_name* muss einer der Zielserver, der der Auftrag derzeit gerichtet, sein.  
   
 `[ @step_name = ] 'step_name'` Der Name des Schritts, mit dem die Ausführung des Auftrags beginnen soll. Gilt nur für lokale Aufträge. *Step_name* ist **Sysname**, hat den Standardwert NULL  
   

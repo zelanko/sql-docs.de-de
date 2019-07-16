@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962811"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning-Dienste
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -178,7 +177,7 @@ Um das Problem zu beheben, empfehlen wir die Aktualisierung auf ein neueres Serv
 
 Wenn das Upgrade nicht möglich ist, dieses Problem zu umgehen, können Sie eine SQL-Anmeldung remote R-Aufträge ausführen, die eingebettete ODBC-Aufrufe möglicherweise.
 
-**Gilt für:** SQL Server 2016 R Services Express Edition
+**Gilt für:** Express Edition von SQL Server 2016 R Services
 
 ### <a name="11-performance-limits-when-libraries-used-by-sql-server-are-called-from-other-tools"></a>11. Leistungseinschränkungen, wenn Bibliotheken, die von SQL Server verwendet, die von anderen Tools aufgerufen werden
 
@@ -216,7 +215,7 @@ Weitere bekannte Probleme, die R-Lösungen auswirken, finden Sie unter den [Mach
 
 Wenn die Instanz von SQL Server wie z. B. an einen nicht standardmäßigen Speicherort installiert wurde außerhalb der `Program Files` Ordner, der die Warnung ACCESS_DENIED ausgelöst wird, wenn Sie versuchen, Skripts auszuführen, die ein Paket zu installieren. Zum Beispiel:
 
-> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": Zugriff wird verweigert.*
+> *In `normalizePath(path.expand(path), winslash, mustWork)` : Pfad [2] = "~ExternalLibraries/R/8/1": Zugriff wird verweigert.*
 
 Der Grund ist, dass eine R-Funktion versucht, den Pfad zu lesen, und schlägt fehl, wenn die integrierten Benutzergruppe **SQLRUserGroup**, hat keinen Lesezugriff. Die Warnung, die ausgelöst wird, blockiert die Ausführung der aktuellen R-Skripts nicht, aber die Warnung möglicherweise wiederholt wiederholt, wenn der Benutzer alle anderen R-Skript ausgeführt wird.
 

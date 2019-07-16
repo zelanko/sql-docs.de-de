@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 936006a3205d7ce043e664b68c5c8605253e4aa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f7c48db940a192f1506fb1c6c8e371e9d5a7958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047472"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Geschäftsregelbedingungen (Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65485412"
   
 ## <a name="business-rule-conditions"></a>Geschäftsregelbedingungen  
   
-|Bedingungsname|Description|  
+|Bedingungsname|Beschreibung|  
 |--------------------|-----------------|  
 |**Ist gleich**|Das ausgewählte Attribut **ist gleich** einem bestimmten Attribut oder Attributwert bzw. ist leer.<br /><br /> Diese Bedingung ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  
 |**Ist nicht gleich**|Das ausgewählte Attribut **ist nicht gleich** einem bestimmten Attribut oder Attributwert bzw. ist leer.<br /><br /> Diese Bedingung ist für Text-, Zahlen-, Datums- und Linkwerte gültig.|  

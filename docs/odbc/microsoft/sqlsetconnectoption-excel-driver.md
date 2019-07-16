@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e04623c42df58f920620299d9dce7094039a406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70bca38a81b59b7113f0873849609837bf8f48ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071735"
 ---
 # <a name="sqlsetconnectoption-excel-driver"></a>SQLSetConnectOption (Excel-Treiber)
 > [!NOTE]  
 >  Dieses Thema enthält die Excel-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|fOption|Anmerkung|  
+|fOption|Kommentar|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|Die SQL_ACCESS_MODE fOption kann entweder SQL_MODE_READ_ONLY oder SQL_MODE_READ_WRITE festgelegt werden. Der Treiber verhindert jedoch nicht Updates, wenn SQL_ACCESS_MODE SQL_MODE_READ_ONLY festgelegt ist.|  
 |SQL_AUTOCOMMIT|Der Microsoft Excel-Treiber unterstützt nur SQL_AUTOCOMMIT auf (Standardstatus) festgelegt wird, da sie keine Transaktionen unterstützen.|  

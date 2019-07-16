@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf42231158f646e34c63bd148ba66c9780b14785
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101401"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +45,25 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumente  
 `[ @source_dbms = ] 'source_dbms'` Ist der Name des DBMS aus dem die Datentypen zugeordnet werden. *Source_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Die Quelle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Die Quelle ist eine Oracle-Datenbank.|  
   
-`[ @source_version = ] 'source_version'` Ist die Produktversion des Quell-DBMS. *Source_version*ist **varchar(10)**, wenn nicht angegeben, die datentypzuordnungen für alle Versionen des Quell-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Quellversion des DBMS.  
+`[ @source_version = ] 'source_version'` Ist die Produktversion des Quell-DBMS. *Source_version*ist **varchar(10)** , wenn nicht angegeben, die datentypzuordnungen für alle Versionen des Quell-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Quellversion des DBMS.  
   
 `[ @source_type = ] 'source_type'` Im Quell-DBMS aufgelistete Datentyp. *Source_type* ist **Sysname**, und wenn nicht angegeben, werden die Zuordnungen für alle Datentypen im Quell-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach dem Datentyp im Quell-DBMS.  
   
 `[ @destination_dbms = ] 'destination_dbms'` Ist der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Das Ziel ist eine Oracle-Datenbank.|  
 |**DB2**|Das Ziel ist eine IBM DB2-Datenbank.|  
 |**SYBASE**|Das Ziel ist eine Sybase-Datenbank.|  
   
-`[ @destination_version = ] 'destination_version'` Ist die Produktversion des Ziel-DBMS. *Destination_version*ist **varchar(10)**, und wenn nicht angegeben, werden die Zuordnungen für alle Versionen des Ziel-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Zielversion des DBMS.  
+`[ @destination_version = ] 'destination_version'` Ist die Produktversion des Ziel-DBMS. *Destination_version*ist **varchar(10)** , und wenn nicht angegeben, werden die Zuordnungen für alle Versionen des Ziel-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Zielversion des DBMS.  
   
 `[ @destination_type = ] 'destination_type'` Im Ziel-DBMS aufgelistete Datentyp. *Destination_type*ist **Sysname**, und wenn nicht angegeben, werden die Zuordnungen für alle Datentypen im Ziel-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach dem Datentyp im Ziel-DBMS.  
   
@@ -72,7 +71,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Description|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**mapping_id**|Identifiziert eine Datentypzuordnung.|  
 |**source_dbms**|Der Name und die Versionsnummer des Quell-DBMS.|  

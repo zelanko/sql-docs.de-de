@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fa956275619286c059dacf25a5b9b2b83ed732e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070519"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @filtered_table = ] 'filtered_table'` Ist der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)**, hat keinen Standardwert.  
+`[ @filtered_table = ] 'filtered_table'` Ist der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)** , hat keinen Standardwert.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'` Wird die Filterklausel getestet wird. *Subset_filterclause* ist **nvarchar(1000)**, hat keinen Standardwert.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Wird die Filterklausel getestet wird. *Subset_filterclause* ist **nvarchar(1000)** , hat keinen Standardwert.  
   
 `[ @has_dynamic_filters = ] has_dynamic_filters` Ist, wenn die Filterklausel ein parametrisierter Zeilenfilter ist. *Has_dynamic_filters* ist **Bit**, hat den Standardwert NULL und ist ein Output-Parameter. Gibt einen Wert von **1** Wenn die Filterklausel ein parametrisierter Zeilenfilter ist.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung Vorausberechnete Partitionen verwenden. wo **1** bedeutet, dass Partitionen verwendet werden können vorausberechnete, und **0** bedeutet, dass nicht verwendet werden.|  
 |**has_dynamic_filters**|**bit**|Ist, wenn die bereitgestellte Filterklausel mindestens einen parametrisierten Zeilenfilter enthält. wo **1** bedeutet, dass ein parametrisierter Zeilenfilter verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  

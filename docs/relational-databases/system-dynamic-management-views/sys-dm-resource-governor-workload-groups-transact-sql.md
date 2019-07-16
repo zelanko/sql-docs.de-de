@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dceda172caab5f93295eac9cf4cf86a07495fe3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df55c4e17640710b5ada50a0aa12edb046822821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053243"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47825000"
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_resource_governor_workload_groups**.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|ID der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
 |NAME|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
@@ -49,7 +48,7 @@ ms.locfileid: "47825000"
 |queued_request_count|**int**|Die Anzahl der zurzeit in der Warteschlange befindlichen Anforderungen. Lässt keine NULL-Werte zu.|  
 |total_cpu_limit_violation_count|**bigint**|Kumulierte Anzahl von Anforderungen, die die CPU-Grenze übersteigen. Lässt keine NULL-Werte zu.|  
 |total_cpu_usage_ms|**bigint**|Kumulierte CPU-Verwendung dieser Arbeitsauslastungsgruppe in Millisekunden. Lässt keine NULL-Werte zu.|  
-|max_request_cpu_time_ms|**bigint**|Maximale CPU-Nutzung für eine einzelne Anforderung in Millisekunden. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** sieht einen gemessenen Wert, im Gegensatz zu Request_max_cpu_time_sec, dies ist eine konfigurierbare Einstellung. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|max_request_cpu_time_ms|**bigint**|Maximale CPU-Nutzung für eine einzelne Anforderung in Millisekunden. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis**: Hierbei handelt es sich um einen gemessenen Wert, im Gegensatz zu Request_max_cpu_time_sec, dies ist eine konfigurierbare Einstellung. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |blocked_task_count|**int**|Aktuelle Anzahl blockierter Tasks. Lässt keine NULL-Werte zu.|  
 |total_lock_wait_count|**bigint**|Kumulierte Anzahl von Sperrwartezeiten, die aufgetreten sind. Lässt keine NULL-Werte zu.|  
 |total_lock_wait_time_ms|**bigint**|Kumulierte Summe der verstrichenen Zeit einer Sperre in Millisekunden. Lässt keine NULL-Werte zu.|  
@@ -58,7 +57,7 @@ ms.locfileid: "47825000"
 |total_reduced_memgrant_count|**bigint**|Kumulierte Anzahl von Arbeitsspeicherzuweisungen, die die maximale Abfragegrößenbeschränkung erreicht haben. Lässt keine NULL-Werte zu.|  
 |max_request_grant_memory_kb|**bigint**|Maximale Arbeitsspeicherzuweisungsgröße einer einzelnen Anforderung, seit die Statistik zurückgesetzt wurde, in Kilobyte. Lässt keine NULL-Werte zu.|  
 |active_parallel_thread_count|**bigint**|Aktuelle Anzahl der parallelen Thread-Auslastung. Lässt keine NULL-Werte zu.|  
-|importance|**sysname**|Aktueller Konfigurationswert für die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe. Ist eine der folgenden, wobei Medium wird der Standardwert: niedrig, Mittel oder hoch.<br /><br /> Lässt keine NULL-Werte zu.|  
+|importance|**sysname**|Aktueller Konfigurationswert für die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe. Die Wichtigkeit sind folgende, wobei Medium die Standardeinstellung: Niedrig, Mittel oder hoch.<br /><br /> Lässt keine NULL-Werte zu.|  
 |request_max_memory_grant_percent|**int**|Aktuelle Einstellung der maximalen Arbeitsspeicherzuweisung in Prozent für eine einzelne Anforderung. Lässt keine NULL-Werte zu.|  
 |request_max_cpu_time_sec|**int**|Aktuelle Einstellung für den maximalen CPU-Nutzungsgrenzwert für eine einzelne Anforderung in Sekunden. Lässt keine NULL-Werte zu.|  
 |request_memory_grant_timeout_sec|**int**|Aktuelle Einstellung für das Timeout der Arbeitsspeicherzuweisung für eine einzelne Anforderung in Sekunden. Lässt keine NULL-Werte zu.|  

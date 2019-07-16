@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4049c6052a4aabcfe7207086db1db19961354eb0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2d28df68512f9c97faebf3ee00b2aa34a2b8d1a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028671"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +37,7 @@ SET NODE_CAPTION='new caption'
  Eine Zeichenfolge mit den neuen Namen für die **NODE_CAPTION** Spalte.  
   
  *Bedingungsausdruck*  
- Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel die **UPDATE** -Anweisung ändert den Standardnamen `Cluster 1`, für den Cluster `001` in den aussagekräftigeren Namen `Likely Customers`.  

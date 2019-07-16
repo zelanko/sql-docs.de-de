@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019302"
 ---
 # <a name="c-to-sql-time"></a>C in SQL: Uhrzeit
 Der Bezeichner für den Zeitpunkt ODBC C-Datentyp ist:  
@@ -31,10 +30,10 @@ Der Bezeichner für den Zeitpunkt ODBC C-Datentyp ist:
   
 |SQL-Typ-ID|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = 8<br /><br /> Spalte Byte Länge < 8<br /><br /> Wert ist nicht gültig|–<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = 8<br /><br /> Spalte Zeichen Länge < 8<br /><br /> Wert ist nicht gültig|–<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|Datenwert ist gültig<br /><br /> Wert ist nicht gültig|–<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Datenwert ist gültig [a]<br /><br /> Wert ist nicht gültig|–<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = 8<br /><br /> Spalte Byte Länge < 8<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = 8<br /><br /> Spalte Zeichen Länge < 8<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|Datenwert ist gültig<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Datenwert ist gültig [a]<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22007|  
   
  [a] das Datum, die Teil des Zeitstempels festgelegt ist, um das aktuelle Datum und die Sekundenbruchteile, die Teil der Zeitstempel auf 0 (null) festgelegt ist.  
   

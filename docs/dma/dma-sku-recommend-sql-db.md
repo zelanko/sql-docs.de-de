@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054674"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifizieren Sie das Recht Azure SQL-Datenbank/verwaltete Instanz SKU für Ihre lokale Datenbank
 
@@ -39,7 +38,7 @@ Die Funktion, die Sie sowohl den empfohlenen Azure SQL-einzeldatenbanken identif
 
 Im folgenden werden die Anweisungen, um die Ihnen helfen, bestimmen die Azure SQL-Datenbank-SKU-Empfehlungen und die entsprechenden einzelne Datenbanken oder verwaltete Instanzen in Azure unter Verwendung von DMA bereitstellen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Herunterladen und installieren Sie die neueste Version des [DMA](https://aka.ms/get-dma). Wenn Sie bereits eine frühere Version des Tools verfügen, öffnen Sie sie aus, und werden Sie aufgefordert, DMA aktualisieren.
 - Stellen Sie sicher, dass Ihr Computer verfügt über [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher, das Ausführen aller Skripts erforderlich ist. Informationen zu Findoug, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und installieren Sie Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -85,7 +84,7 @@ Für die verwaltete Instanz unterstützen die Empfehlungen für ein per Lift & S
 
 Um die DMA-CLI verwenden, um SKU-Empfehlungen, an der Eingabeaufforderung zu erhalten, führen Sie dmacmd.exe mit den folgenden Argumenten aus:
 
-- **/Action=SkuRecommendation**: Geben Sie dieses Argument zum Ausführen von SKU-Bewertungen.
+- **/ Action = SkuRecommendation**: Geben Sie dieses Argument zum Ausführen von SKU-Bewertungen.
 - **/SkuRecommendationInputDataFilePath**: Der Pfad zur Leistungsindikatordatei erfasst, im vorherigen Abschnitt.
 - **/SkuRecommendationTsvOutputResultsFilePath**: Der Pfad zu die Ausgeben von Ergebnissen im TSV-Format zu schreiben.
 - **/SkuRecommendationJsonOutputResultsFilePath**: Der Pfad zu die Ausgabeergebnisse im JSON-Format zu schreiben.
@@ -96,9 +95,9 @@ Außerdem wählen Sie eine der folgenden Argumente:
 - Zu verhindern, dass Price-Aktualisierung
   - **/SkuRecommendationPreventPriceRefresh**: Wenn auf "true" festgelegt, wird verhindert, dass die Preis-Aktualisierung auftreten und geht davon aus Standardpreise. Verwenden Sie, wenn im offline-Modus ausgeführt wird. Wenn Sie diesen Parameter nicht verwenden, müssen Sie die Parameter unten, um den aktuellen Preisen basierend auf eine bestimmte Region angeben.
 - Die aktuellen Preisen zu erhalten
-  - **/SkuRecommendationCurrencyCode**: Die Währung, in dem Preise angezeigt werden (z.B.) "USD").
-  - **/SkuRecommendationOfferName**: Das Angebot benennen (z.B.) "MS-AZR-0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite.
-    - **/SkuRecommendationRegionName**: Der Regionsname (z. B. "USA, Westen").
+  - **/SkuRecommendationCurrencyCode**: Die Währung, in dem Preise angezeigt werden (z.B.) "US").
+  - **/SkuRecommendationOfferName**: Das Angebot benennen (z.B.) "MS-AZR - 0003P"). Weitere Informationen finden Sie unter den [Microsoft Azure-Angebotsdetails](https://azure.microsoft.com/support/legal/offer-details/) Seite.
+    - **/ SkuRecommendationRegionName**: Der Regionsname (z. B. "USA, Westen").
     - **/SkuRecommendationSubscriptionId**: Die Abonnement-ID.
     - **/AzureAuthenticationTenantId**: Die Authentication-Mandant.
     - **/AzureAuthenticationClientId**: Die Client-ID der AAD-app für die Authentifizierung verwendet werden soll.

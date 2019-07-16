@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 181cf4da50b315f67b124b7872be013eed3f4ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 44987e1b610483e6ce3cbca26c1efb8a1ef4c241
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990259"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **IHpublisherconstraints** -Systemtabelle enthält eine Zeile für jede von nicht - SQL Server-Verlegern mithilfe des aktuellen Verteilers replizierte Einschränkung. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisherconstraint_id**|**int**|Identifiziert eine veröffentlichte Einschränkung.|  
 |**table_id**|**int**|Identifiziert die Tabelle aus [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) zu dem die Einschränkung gehört.|  

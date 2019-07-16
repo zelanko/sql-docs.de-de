@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3fcadc7435c3a4527367faf41ae412dd1afa67e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966400"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule-Eigenschaft – Beispiel (VB)
 Dieses Beispiel zeigt die [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) Eigenschaft eine [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) Objekt. Der Code Fügt ein neues [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und definiert dann einen neuen Primärschlüssel festlegen **DeleteRule** zu **AdRICascade**.  

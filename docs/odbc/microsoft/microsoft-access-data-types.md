@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045160"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access-Datentypen
 Die folgende Tabelle zeigt die Microsoft Access-Datentypen, Datentypen, die zum Erstellen von Tabellen verwendet, und ODBC-SQL-Datentypen.  
   
 |Microsoft Access-Datentyp|-Datentyp (CREATETABLE)|ODBC-SQL-Datentyp|  
 |--------------------------------|-------------------------------|------------------------|  
-|BIGBINARY[1]|LONGBINARY|SQL_LONGVARBINARY|  
+|BIGBINARY [1]|LONGBINARY|SQL_LONGVARBINARY|  
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
 |LEISTUNGSINDIKATOR|LEISTUNGSINDIKATOR|SQL_INTEGER|  
@@ -42,8 +41,8 @@ Die folgende Tabelle zeigt die Microsoft Access-Datentypen, Datentypen, die zum 
 |MEMO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |Anzahl (Feldgröße = SINGLE)|EINZELNE|SQL_REAL|  
 |Anzahl (Feldgröße = DOUBLE)|DOUBLE|SQL_DOUBLE|  
-|NUMBER (FieldSize= BYTE)|BYTE OHNE VORZEICHEN|SQL_TINYINT|  
-|Anzahl (Feldgröße = ganze Zahl)|SHORT|SQL_SMALLINT|  
+|Anzahl (Feldgröße = BYTE)|BYTE OHNE VORZEICHEN|SQL_TINYINT|  
+|Anzahl (Feldgröße = ganze Zahl)|KURZE|SQL_SMALLINT|  
 |Anzahl (Feldgröße = LONG Integer-Wert)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  

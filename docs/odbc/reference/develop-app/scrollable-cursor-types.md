@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061629"
 ---
 # <a name="scrollable-cursor-types"></a>Scrollbare Cursortypen
 Die vier Typen von bildlauffähigen Cursor werden statische, dynamische, keysetgesteuerte und gemischte. Statische Cursor erkennen wenige oder gar keine Änderungen jedoch relativ günstig zu implementieren sind. Dynamische Cursor erkennen alle Änderungen jedoch aufwendig zu implementieren. Keysetgesteuerte und gemischte Cursor liegen zwischen, die meisten Änderungen erkennen, aber auf weniger Kosten als dynamische Cursor.  

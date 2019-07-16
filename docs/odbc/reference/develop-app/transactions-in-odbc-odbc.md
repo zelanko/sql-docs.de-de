@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2c8cde03-4bb8-4b35-881b-1ba23da15fbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd96e467ce9f85c3ff62bb42b483f20fbae56204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1f3892929e06cbca39b9d96936860cd9f100f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086049"
 ---
 # <a name="transactions-in-odbc-odbc"></a>Transaktionen in ODBC
 Transaktionen in ODBC werden auf der Verbindungsebene abgeschlossen. d. h., wenn eine Anwendung eine Transaktion abgeschlossen ist, sie ein Commit oder Rollback alle Arbeit, die über alle Anweisungshandles dieser Verbindung.  
