@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4f5e5c052bb779ac6f6227aaf0b4b6a60a94110d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a99cc9b4eaa1ca45d1d72d3cf3fbab6e6b3571e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141038"
 ---
-# <a name="legal-notice-db2tosql"></a>Legal Notice (DB2toSQL)
+# <a name="legal-notice-db2tosql"></a>Rechtliche Hinweise (DB2toSQL)
 Diese Dokumentation, einschließlich der darin enthaltenen Beispielanwendungen, wird nur zu Informationszwecken zur Verfügung gestellt. Es werden keine Gewährleistungen übernommen, weder ausdrücklich noch konkludent. Die in dieser Dokumentation enthaltenen Angaben und Daten, einschließlich URLs und anderen Verweisen auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Das vollständige Risiko der Nutzung oder der Ergebnisse der Nutzung dieser Dokumentation liegt bei dem Benutzer.  
   
 Die in dieser Dokumentation enthaltenen Beispiele dienen in erster Linie der Veranschaulichung eines Konzepts oder der sinnvollen Verwendung einer bestimmten Anweisung oder Klausel. Die meisten Beispiele enthalten nicht den gesamten Code, der normalerweise in einem vollständigen Produktionssystem vorhanden wäre, da die Datenüberprüfung und Fehlerbehandlung teilweise entfernt wurde, um das Beispiel eines bestimmten Konzepts oder einer Anweisung hervorzuheben. Für diese Beispiele oder den enthaltenen Quellcode ist kein technischer Support verfügbar.  

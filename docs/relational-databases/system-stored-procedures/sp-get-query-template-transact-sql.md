@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124080"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumente  
  "*Query_text*"  
- Die Abfrage, für die die parametrisierte Version erzeugt werden soll. "*Query_text*" muss in einfache Anführungszeichen eingeschlossen werden und Unicode-Bezeichner N vorangestellt werden. N'*Query_text*"ist der Wert, der @querytext Parameter. Dies ist vom Typ **nvarchar(max)**.  
+ Die Abfrage, für die die parametrisierte Version erzeugt werden soll. "*Query_text*" muss in einfache Anführungszeichen eingeschlossen werden und Unicode-Bezeichner N vorangestellt werden. N'*Query_text*"ist der Wert, der @querytext Parameter. Dies ist vom Typ **nvarchar(max)** .  
   
  @templatetext  
- Ist ein Ausgabeparameter vom Typ **nvarchar(max)**, bereitgestellt wird, wie angegeben, um das parametrisierte Format zu erhalten, *Query_text* als Zeichenfolgenliteral.  
+ Ist ein Ausgabeparameter vom Typ **nvarchar(max)** , bereitgestellt wird, wie angegeben, um das parametrisierte Format zu erhalten, *Query_text* als Zeichenfolgenliteral.  
   
  @parameters  
- Ist ein Ausgabeparameter vom Typ **nvarchar(max)**, bereitgestellt wird, wie ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die parametrisiert wurden angegeben, @templatetext.  
+ Ist ein Ausgabeparameter vom Typ **nvarchar(max)** , bereitgestellt wird, wie ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die parametrisiert wurden angegeben, @templatetext.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Parameter sp_get_query_template gibt in folgenden Situationen einen Fehler zurück:  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7065aa88d60a508df9946d38d0dded220c4bb7a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106142"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Ermitteln der Ziel-DBMS und Zieltreiber
 Ist die nächste Frage zu berücksichtigen, was das Ziel-DBMS-Systeme für die Anwendung sind, und welche Treiber zur Verfügung stehen unterstützen, die die DBMS-Systeme? Da generische Anwendungen sind hochgradig interoperabel tendenziell, ist die Frage der Ziel-DBMS-Systeme am besten geeignete benutzerdefinierte und vertikale Anwendungen. Gilt jedoch die Frage der Zieltreiber für alle Anwendungen, da der Treiber in der Geschwindigkeit, Qualität, Unterstützung von Funktionen und Verfügbarkeit variieren. Auch wenn die Treiber sind mit der Anwendung verteilt werden, die Kosten und die Verfügbarkeit von lizenzierungsplänen berücksichtigt werden müssen.  

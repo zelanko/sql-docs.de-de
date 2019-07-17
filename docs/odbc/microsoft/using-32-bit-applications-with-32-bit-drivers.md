@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088158"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Verwenden von 32-Bit-Anwendungen mit 32-Bit-Treibern
 Sie können die 32-Bit-Anwendungen mit 32-Bit-Treiber ausführen. Die 32-Bit-Anwendungen und die 32-Bit-Treiber verwenden das Win32®-API an.  
   
-## <a name="architecture"></a>Aufbau  
+## <a name="architecture"></a>Architektur  
  Die folgende Abbildung zeigt, wie die 32-Bit-Anwendungen mit 32-Bit-Treiber kommunizieren. Die Anwendung ruft die 32-Bit-Treiber-Manager, das wiederum die 32-Bit-Treibern aufruft.  
   
  ![Wie 32&#45;Kommunikation Bit-Anwendungen mit 32&#45;bit-Treiber](../../odbc/microsoft/media/sdka6.gif "sdka6")  

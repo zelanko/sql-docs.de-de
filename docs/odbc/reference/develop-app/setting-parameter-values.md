@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb1115290f53c19fae1aacb0a976cfcef63e086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094236"
 ---
 # <a name="setting-parameter-values"></a>Festlegen von Parameterwerten
 Um den Wert eines Parameters festlegen, wird die Anwendung einfach der Wert der an den Parameter gebundenen Variablen. Es ist nicht wichtig, wenn dieser Wert festgelegt ist, solange sie festgelegt ist, bevor die Anweisung ausgeführt wird. Die Anwendung kann den Wert festlegen, vor oder nach der Bindung der Variablen, und kann den Wert so oft wie sollen sich ändern. Wenn die Anweisung ausgeführt wird, ruft der Treiber einfach den aktuellen Wert der Variablen ab. Dies ist besonders nützlich, wenn mehr als einmal eine vorbereitete Anweisung ausgeführt wird; die Anwendung legt neue Werte für einige oder alle Variablen jedes Mal, wenn die Anweisung ausgeführt wird. Ein Beispiel hierfür finden Sie unter [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md)weiter oben in diesem Abschnitt.  
@@ -39,9 +38,9 @@ Um den Wert eines Parameters festlegen, wird die Anwendung einfach der Wert der 
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS lauten oder 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
-|10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS lauten oder 2|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS lauten oder 14|  
+|10|SQL_INTEGER|SQL_C_CHAR|10\0 [a]|SQL_NTS lauten oder 2|  
+|UM 13 UHR|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
+|UM 13 UHR|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a], [c]|SQL_NTS lauten oder 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a] "\0" stellt einen Null-Terminierungszeichen dar. Die Null-Terminierungszeichen ist erforderlich, nur dann, wenn der Wert in den Längen-/Indikatorpuffer SQL_NTS ist.  

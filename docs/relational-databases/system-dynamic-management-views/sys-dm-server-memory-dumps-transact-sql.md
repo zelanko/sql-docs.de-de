@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c385bfc4fd977efd695020dedf9669dff6eebf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090800"
 ---
 # <a name="sysdmservermemorydumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede Speicherabbilddatei generiert wird, durch die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Verwenden Sie diese dynamische Verwaltungssicht, um potenzielle Probleme zu beheben.  
+  Gibt eine Zeile für jede Speicherabbilddatei zurück, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]erzeugt wurde. Verwenden Sie diese dynamische Verwaltungssicht, um potenzielle Probleme zu beheben.  
  
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**Dateiname**|**nvarchar(256)**|Der Pfad und der Name der Speicherabbilddatei. Lässt keine NULL-Werte zu.|  
 |**creation_time**|**datetimeoffset(7)**|Das Datum und die Uhrzeit, zu der die Datei erstellt wurde. Lässt keine NULL-Werte zu.|  
@@ -40,7 +39,7 @@ ms.locfileid: "47714348"
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Bei dem Speicherabbild (Dump) kann es sich um einen Minidump, einen Dump aller Threads oder um einen vollständigen Dump handeln. Die Dateien haben die Erweiterung ".mdmp".  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
  Dumpdateien können vertrauliche Informationen enthalten. Zum Schutz vertraulicher Informationen können Sie eine Zugriffssteuerungsliste verwenden, um den Zugriff auf die Dateien einzuschränken oder die Dateien in einen Ordner mit eingeschränktem Zugriff zu kopieren. Bevor Sie Ihre Debugdateien beispielsweise an Microsoft Support Services senden, wird empfohlen, vertrauliche Informationen zu entfernen.  
   
 ### <a name="permissions"></a>Berechtigungen  

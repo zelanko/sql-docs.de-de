@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bdab681e7946df0845193ebcd183e392e000c74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130589"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server-Agent-Tabellen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47794908"
  Enthält Informationen zur Ausführung geplanter Aufträge durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent.  
   
  [dbo.sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
- Speichert die Informationen für jeden geplanten Auftrag, der vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausgeführt werden soll.  
+ Speichert die Informationen für jeden geplanten Auftrag, der vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt werden soll.  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
  Enthält Informationen zum Zeitplan für Aufträge ausgeführt werden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
@@ -63,7 +62,7 @@ ms.locfileid: "47794908"
  Enthält eine Zeile für jede Benachrichtigung.  
   
  [dbo.sysoperators](../../relational-databases/system-tables/dbo-sysoperators-transact-sql.md)  
- Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Operator.  
+ Enthält eine Zeile für jeden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentoperator.  
   
  [dbo.sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
  Enthält Informationen zu Proxykonten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
@@ -72,7 +71,7 @@ ms.locfileid: "47794908"
  Zeichnet auf, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen den einzelnen Proxykonten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents zugeordnet sind.  
   
  [dbo.sysproxysubsystem](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)  
- Zeichnet auf, welche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Subsystem wird von einzelnen Proxykonten verwendet.  
+ Zeichnet auf, welches Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents von den einzelnen Proxykonten verwendet wird.  
   
  [dbo.sysschedules](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
  Enthält Informationen zu Auftragszeitplänen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
@@ -81,7 +80,7 @@ ms.locfileid: "47794908"
  Enthält das Startdatum des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentsitzung. Mit jedem Start des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentdiensts wird eine Sitzung erstellt.  
   
  [dbo.syssubsystems](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)  
- Enthält Informationen zu allen verfügbaren Proxysubsystemen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
+ Enthält Informationen zu allen verfügbaren Proxysubsystemen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents.  
   
  [dbo.systargetservergroupmembers](../../relational-databases/system-tables/dbo-systargetservergroupmembers-transact-sql.md)  
  Zeichnet auf, welche Zielserver derzeit in dieser Multiservergruppe eingetragen sind.  
@@ -93,6 +92,6 @@ ms.locfileid: "47794908"
  Zeichnet auf, welche Zielserver derzeit in dieser Domäne für Multiservervorgänge eingetragen sind.  
   
  [dbo.systaskids](../../relational-databases/system-tables/dbo-systaskids-transact-sql.md)  
- Enthält eine Zuordnung von in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellten Tasks zu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Aufträgen in der aktuellen Version.  
+ Enthält eine Zuordnung von in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellten Tasks zu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Aufträgen in der aktuellen Version.  
   
   

@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16b4bcfec2640c0dbd55d43be9df2391ed1f66c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82045d5dbbee356f084d587100edfbafd4947f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104632"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLEndTran** fordert eine Commit- oder Rollback für alle aktiven Vorgänge für alle Anweisungen, die mit einer Verbindung verknüpft sind. **SQLEndTran** können auch anfordern, dass ein Commit oder Rollback-Vorgang ausgeführt werden, für alle Verbindungen, die einer Umgebung zugewiesen sind.  
@@ -54,18 +53,18 @@ SQLRETURN SQLEndTran(
  *Handle*  
  [Eingabe] Das Handle, das vom angegebenen Typ *HandleType*, der angibt, der des Bereichs der Transaktion. Weitere Informationen finden Sie unter "Kommentare".  
   
- *CompletionType*  
+ *' CompletionType '*  
  [Eingabe] Eine der beiden folgenden Werte:  
   
  SQL_COMMIT-OPTION SQL_ROLLBACK  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLEndTran** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit dem entsprechenden *HandleType*und *behandeln*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLEndTran** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08003|Verbindung nicht geöffnet|(DM) die *HandleType* wurde SQL_HANDLE_DBC auf, und die *behandeln* war nicht verbunden.|  
