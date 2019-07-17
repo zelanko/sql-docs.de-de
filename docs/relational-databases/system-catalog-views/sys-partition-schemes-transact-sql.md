@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e200b3bc2cd20ef54b9cd0385a93b876fae1945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18d8a456673088f63f6733e9837e81deeec1d224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125357"
 ---
 # <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Enthält eine Zeile für jeden Datenbereich, bei dem es sich um ein Partitionierungsschema handelt. **Typ** = PS.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**\<geerbte Spalten >**||Erbt Spalten von [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md).|  
 |**function_id**|**int**|ID der Partitionsfunktion, die in dem Schema verwendet wird.|  

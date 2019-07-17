@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 1dfd6ebb-9fcc-4588-8052-7b8219602132
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 3b52dd2347e4c7b22e273abde4d6687a520d5b19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d53620afbe1fffa51ae484beaa2f2520ccb0eecb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991247"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266465"
 ---
 # <a name="troubleshooting-oracletosql"></a>Problembehandlung (OracleToSQL)
 Es ist nicht ungewöhnlich, dass in der Migration Probleme in der Mitte ausführen, die Verwaltungskonsole Skripts oder Befehle ausgeführt.  
@@ -26,7 +26,7 @@ Die behebbaren Fehler betreffen können:
   
 2.  Prozedur  
   
-3.  Sicht  
+3.  Ansicht  
   
 4.  Trigger  
   

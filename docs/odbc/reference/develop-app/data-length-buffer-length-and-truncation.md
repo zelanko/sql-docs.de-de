@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8586157237db1158587e3c39f1320b78d8251fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081470"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Datenlänge, Pufferlänge und Abschneiden
 Die *Datenlänge* ist die Bytelänge der Daten, die in der Anwendung Datenpuffer gespeichert werden sollen, nicht, wie sie in der Datenquelle gespeichert sind. Diese Unterscheidung ist wichtig, da die Daten häufig in verschiedenen im Datenpuffer als in der Datenquelle gespeichert werden. Für Daten, die an die Datenquelle gesendet werden, ist dies also die Bytelänge der Daten vor der Konvertierung in den Typ der Datenquelle. Für die Daten aus der Datenquelle abgerufen wird ist dies die Bytelänge der Daten nach der Konvertierung in den Datenpuffer-Typ, und bevor jedes Abschneiden erfolgt.  

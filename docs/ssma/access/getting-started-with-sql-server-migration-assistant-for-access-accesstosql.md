@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759926"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259924"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Erste Schritte mit SQL Server Migration Assistant für Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff ermöglicht den Zugriff auf Datenbankobjekte zu schnell Konvertierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank-Objekte, laden Sie die resultierenden Objekte in hoch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank, und Migrieren von Daten aus den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank. Wenn erforderlich, Sie auch zugreifen auf Tabellen zu verknüpfen können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den Tabellen von Azure SQL-Datenbank, damit Sie fortfahren können, verwenden Sie die vorhandenen Access-Front-End-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.  
@@ -116,7 +116,7 @@ Die Migrations-Symbolleiste enthält die folgenden Befehle aus:
 ### <a name="menus"></a>Menüs  
 SSMA enthält die folgenden Menüs:  
   
-|Menü "|Beschreibung|  
+|Menü|Beschreibung|  
 |--------|---------------|  
 |**File**|Enthält Befehle für die Migrations-Assistenten arbeiten mit Projekten, hinzufügen und Entfernen von Access-Datenbankdateien und Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen von und Arbeiten mit Text in der Seiten, z. B. das Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] aus dem Bereich SQL-Details. Zum Öffnen der **Lesezeichen verwalten** Dialogfeld auf das Menü "Bearbeiten", klicken Sie auf die Lesezeichen zu verwalten. Klicken Sie im Dialogfeld sehen Sie eine Liste der vorhandenen Lesezeichen. Sie können die Schaltflächen auf der rechten Seite des Dialogfelds verwenden, um Lesezeichen zu verwalten.|  

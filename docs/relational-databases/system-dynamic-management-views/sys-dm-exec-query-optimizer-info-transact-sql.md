@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013217"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255351"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "63013217"
 > [!NOTE]  
 >  Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Name|Datentyp|Description|  
+|Name|Datentyp|Beschreibung|  
 |----------|---------------|-----------------|  
-|**counter**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
+|**Leistungsindikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
 |**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
 |**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
@@ -46,7 +45,7 @@ ms.locfileid: "63013217"
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
     
 ## <a name="remarks"></a>Hinweise  
  **dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Leistungsindikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle abfrageoptimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt, Änderungen an **Dm_exec_query_optimizer_info**, einschließlich der beiden Benutzer und systemgenerierten Abfragen. Ausführung eines bereits zwischengespeicherten Plans ändert sich nicht auf die Werte in **Dm_exec_query_optimizer_info**nur Optimierungen sind von Bedeutung.  

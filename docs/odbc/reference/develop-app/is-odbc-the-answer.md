@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63179891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138850"
 ---
 # <a name="is-odbc-the-answer"></a>Ist ODBC die Antwort?
 Berücksichtigen Sie dabei die Frage, Interoperabilität, die folgende Frage: Sollte die Anwendung ODBC überhaupt verwenden? Dies mag eine seltsame Frage in eine Anleitung für ODBC, aber es ist tatsächlich eine rechtmäßige. ODBC OTKLoadr können keine systemeigenen Datenbank-APIs vollständig zu ersetzen, noch der Entwicklung von bieten Zugriff auf die Datenbank in allen Fällen. Es wurde entworfen, um eine allgemeine Schnittstelle für Datenbanken bereitstellen und freigeben Anwendungsprogrammierer zu lernen und Links zu mehreren Datenbanken verwalten soll.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123774"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Argumente  
  **"** *Command_string* **"**  
- Die Zeichenfolge, die einen an das Betriebssystem zu übergebenden Befehl enthält. *Command_string* ist **varchar(8000)** oder **nvarchar(4000)**, hat keinen Standardwert. *Command_string* kann nicht mehr als ein Satz doppelter Anführungszeichen enthalten. Ein einzelnes Paar von Anführungszeichen ist erforderlich, wenn keine Leerzeichen vorhanden, in den Dateipfaden sind oder Programmnamen in verwiesen wird *Command_string*. Wenn Probleme mit eingebetteten Leerzeichen auftreten, sollten Sie FAT 8.3-Dateinamen verwenden, um dieses Problem zu umgehen.  
+ Die Zeichenfolge, die einen an das Betriebssystem zu übergebenden Befehl enthält. *Command_string* ist **varchar(8000)** oder **nvarchar(4000)** , hat keinen Standardwert. *Command_string* kann nicht mehr als ein Satz doppelter Anführungszeichen enthalten. Ein einzelnes Paar von Anführungszeichen ist erforderlich, wenn keine Leerzeichen vorhanden, in den Dateipfaden sind oder Programmnamen in verwiesen wird *Command_string*. Wenn Probleme mit eingebetteten Leerzeichen auftreten, sollten Sie FAT 8.3-Dateinamen verwenden, um dieses Problem zu umgehen.  
   
  **Keine_Ausgabe**  
  Ein optionaler Parameter, der angibt, dass keine Ausgabe an den Client zurückgegeben werden soll.  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  Wenn **Xp_cmdshell** innerhalb eines Batches ausgeführt wird und ein Fehler zurückgegeben, der Batch nicht. Dies ist eine Änderung des Verhaltens. In früheren Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Batch weiterhin ausgeführt.  
   
 ## <a name="xpcmdshell-proxy-account"></a>xp_cmdshell-Proxykonto  
- Wenn sie aufgerufen wird, von einem Benutzer, die nicht Mitglied ist die **Sysadmin** festen Serverrolle **Xp_cmdshell** verbindet Sie mit Windows, mit dem Namen und das Kennwort, die in den Anmeldeinformationen, die mit dem Namen gespeichert **## Xp_cmdshell_proxy_account ##**. Falls diese Proxyanmeldeinformationen nicht vorhanden ist, **Xp_cmdshell** schlägt fehl.  
+ Wenn sie aufgerufen wird, von einem Benutzer, die nicht Mitglied ist die **Sysadmin** festen Serverrolle **Xp_cmdshell** verbindet Sie mit Windows, mit dem Namen und das Kennwort, die in den Anmeldeinformationen, die mit dem Namen gespeichert **## Xp_cmdshell_proxy_account ##** . Falls diese Proxyanmeldeinformationen nicht vorhanden ist, **Xp_cmdshell** schlägt fehl.  
   
  Die Proxykonto-Anmeldeinformationen kann erstellt werden, indem Sie Ausführung **Sp_xp_cmdshell_proxy_account**. Als Argumente besitzt diese gespeicherte Prozedur einen Windows-Benutzernamen und ein Kennwort. Mit dem folgenden Befehl werden z. B. Proxyanmeldeinformationen für den Windows-Domänenbenutzer `SHIPPING\KobeR` erstellt, der das Windows-Kennwort `sdfh%dkc93vcMt0` besitzt.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108571"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Ein erforderlicher Parameter, der festlegt, welcher Vorgang vom Cursor ausgeführt wird. *Optype* erfordert eine der folgenden **Int** Eingabewerte.  
   
-|Wert|Name|Description|  
+|Wert|Name|Beschreibung|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Wird zum Update mindestens einer Zeile im Fetchpuffer verwendet.  Die Zeilen im angegebenen *Rownum* erneut abgerufen und aktualisiert werden.|  
 |0x0002|DELETE|Wird zum Löschen mindestens einer Zeile im Fetchpuffer verwendet. Die Zeilen im angegebenen *Rownum* erneut abgerufen und gelöscht werden.|  
@@ -61,7 +60,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X20|SETPOSITION|Wird verwendet, nur wenn die Anwendung vor sich geht eine nachfolgende SQL-Server ausstellen DELETE- oder UPDATE-Anweisung positioniert.|  
 |0X40|ABSOLUTE|Kann nur in Verbindung mit UPDATE oder DELETE verwendet werden.  ABSOLUTE wird nur mit KEYSET-Cursorn verwendet (wird für DYNAMIC-Cursor ignoriert, und STATIC-Cursor können nicht aktualisiert werden).<br /><br /> Hinweis: Wenn ABSOLUTE für eine Zeile im Keyset angegeben wird, die nicht abgerufen wurde, der Vorgang kann fehlschlagen, die Überprüfung auf Parallelität, und das Rückgabeergebnis nicht garantiert werden kann.|  
   
- *rownum*  
+ *rowNum*  
  Gibt an, welche Zeilen der Cursor im Fetchpuffer verwendet, aktualisiert oder löscht.  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_external_work (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a53a32f01dcf4646ee0bc12843c188b9b0e8e4c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097753"
 ---
 # <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "63013192"
 |input_name|**nvarchar(4000)**|Name der Eingabe gelesen werden|Name der Datei bei Verwendung von Hadoop.|  
 |read_location|**bigint**|Offset oder Speicherort gelesen.|Der Offset des zu lesenden Datei.|  
 |bytes_processed|**bigint**|Gesamtzahl der Bytes von diesem Arbeitsthread verarbeitet werden.|Größer als oder gleich 0.|  
-|length|**bigint**|Länge der knotenspezifischen Teilung bzw. bei Hadoop HDFS-block|Benutzerdefinierbaren. Der Standardwert ist 64M|  
+|Länge|**bigint**|Länge der knotenspezifischen Teilung bzw. bei Hadoop HDFS-block|Benutzerdefinierbaren. Der Standardwert ist 64M|  
 |status|**nvarchar(32)**|Status des Arbeitsthreads|Ausstehende, Verarbeitung, ausgeführt, Fehler, wurde abgebrochen|  
 |start_time|**datetime**|Beginn der Arbeit||  
 |end_time|**datetime**|Ende der Arbeit||  

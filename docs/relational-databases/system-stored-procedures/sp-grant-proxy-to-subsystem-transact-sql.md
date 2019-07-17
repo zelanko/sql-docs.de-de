@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123821"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -48,9 +47,9 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id` Die ID des Subsystems, für den Zugriff zu gewähren. Die *Subsystem_id* ist **Int**, hat den Standardwert NULL. Entweder *Subsystem_id* oder *Subsystem_name* muss angegeben werden, aber beide Angaben sind nicht möglich. In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> **\*\* Wichtige \* \* ** das ActiveX-skriptsubsystem wird aufgehoben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Skript<br /><br /> **\*\* Wichtige \* \***  das ActiveX-skriptsubsystem wird aufgehoben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**3**|Betriebssystem (**CmdExec**)|  
 |**4**|Replikationsmomentaufnahme-Agent|  
 |**5**|Replikationsprotokolllese-Agent|  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626057"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266478"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Testen migrierter Datenbankobjekte (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle-Tester (SSMA Tester) überprüft automatisch die Konvertierung der Datenbank-Objekt und die Datenmigration von SSMA vorgenommen. Können Sie SSMA-Tester, nachdem alle Schritte zur Datenmigration SSMA abgeschlossen sind, stellen Sie sicher, dass die konvertierten Objekte die gleiche Weise funktioniert und alle Daten ordnungsgemäß übertragen wurde.  
@@ -45,7 +45,7 @@ SSMA-Tester ausgeführt wird, für Tests auf Oracle und ihren äquivalenten in a
 > [!NOTE]  
 > Achtung! Verwenden Sie niemals SSMA Tester auf die Produktionssysteme statt. Während der Ausführung der Tester werden dem Quellschema und die Daten geändert. In der Zwischenzeit kann das vollständige Wiederherstellen des ursprünglichen Zustands für einige Typen von getesteten Codes unmöglich sein.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
 Wenn Sie SSMA Tester verwenden möchten, installieren Sie SSMA-Oracle-Erweiterungspaket mit der **Tester-Datenbank installieren** Option auf ON festgelegt.  
   
 Um den Vergleich der resultierenden Tabellendaten zu ermöglichen, legen Sie die **generieren ROWID-Spalte** option **Ja** vor Beginn die schemakonvertierung. SSMA wird für alle Tabellen eine ROWID-Spalte hinzufügen, während der Ausführung der **Schema konvertieren** Befehl.  

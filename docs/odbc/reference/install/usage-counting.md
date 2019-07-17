@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edf9976dd3e5d890b46919808e896a8e81a0cd93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093794"
 ---
 # <a name="usage-counting"></a>Zählen der Verwendung
 > [!NOTE]  
@@ -54,7 +53,7 @@ ms.locfileid: "63273389"
 >   
 >  CurrentVersion  
 >   
->  SharedDlls  
+>  "SharedDlls"  
   
  Es legt die Daten für diese Werte auf 1 fest und kopiert die Datei in das System. Wenn die Komponente erneut installiert wird, wird der Setup-Programm oder die Installationsprogramm-DLL die Verwendungszähler erhöht. Wenn die Komponente entfernt wird, zählt der Setup-Programm oder Installer DLL verringert die Nutzung an. Fällt Verwendungsanzahl auf 0, der Setup-Programm oder die Installationsprogramm-DLL entfernt den Wert für die Datei und, wenn die Komponente einen Treiber oder Übersetzer, ist die Datei gelöscht. Treiber-Manager-Dateien sollten nicht gelöscht werden.  
   

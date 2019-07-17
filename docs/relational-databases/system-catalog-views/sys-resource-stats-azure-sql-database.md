@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6918c712e5440aa79bef045f2d64b2578eb42a69
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 06e3a3e632473c33a3f4652b2f4169ce3c7ca1e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097055"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -46,8 +45,8 @@ ms.locfileid: "67716313"
 |avg_cpu_percent|**numeric**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
 |avg_data_io_percent|**numeric**|Die durchschnittliche E/A-Nutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
 |avg_log_write_percent|**numeric**|Die durchschnittliche Nutzung von Schreibressourcen als Prozentwert der maximalen Kapazität für die Dienstebene.|  
-|max_worker_percent|**decimal(5,2)**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf 15-Sekunden-Beispiele für die Anzahl der gleichzeitigen Worker berechnet.|  
-|max_session_percent|**decimal(5,2)**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf der 15-Sekunden-Beispiele für gleichzeitige Sitzungen berechnet.|  
+|max_worker_percent|**decimal(5,2) wird**|Maximale gleichzeitige Worker (Anforderungen) als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf 15-Sekunden-Beispiele für die Anzahl der gleichzeitigen Worker berechnet.|  
+|max_session_percent|**decimal(5,2) wird**|Maximaler gleichzeitiger Sitzungen als Prozentwert der maximalen Kapazität für die Dienstebene der Datenbank.<br /><br /> Maximale wird derzeit für die fünf-Minuten-Intervall, das basierend auf der 15-Sekunden-Beispiele für gleichzeitige Sitzungen berechnet.|  
 |dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. |  
 |allocated_storage_in_megabytes|**float**|Die Menge der formatierte Dateispeicherplatz in MB, die zum Speichern von Daten zur Verfügung gestellt. Datei-Speicherplatz wird auch als Datenspeicherplatz bezeichnet.  Weitere Informationen finden Sie in den folgenden Themen: [Verwaltung von Übersetzungsdateien Speicherplatz in SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   

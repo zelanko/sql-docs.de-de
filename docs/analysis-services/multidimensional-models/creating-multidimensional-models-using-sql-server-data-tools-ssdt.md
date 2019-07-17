@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41bc227d238534a7fc1c0bee0070e3b6c973b2d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231868"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579230"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] enthält die folgenden Projekte unter dem Projekttyp Business Intelligence-Projekte.  
   
-|Projekt|Description|  
+|Projekt|Beschreibung|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt|Enthält die Objektdefinitionen für eine einzelne [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank. Weitere Informationen zum Erstellen eines Projekts von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] finden Sie unter [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).|  
 |Importieren der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2008-Datenbank|Stellt einen Assistenten bereit, mit dessen Hilfe Sie ein neues [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt erstellen können, indem Sie Objektdefinitionen aus einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank importieren.|  
@@ -40,7 +40,7 @@ ms.locfileid: "57579230"
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] umfasst einige Projekttypen, deren Schwerpunkt auf verschiedenen Abfragen oder Skripts liegt, wie in der folgenden Tabelle dargestellt.  
   
-|Projekt|Description|  
+|Projekt|Beschreibung|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Skripts|Enthält DMX-, MDX- und XMLA-Skripts für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sowie Verbindungen zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanzen, gegen die Skripts ausgeführt werden können. Weitere Informationen finden Sie unter [Analysis Services-Skriptprojekt in SQL Server Management Studio](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md).|  
 |SQL Server Compact-Skripts|Enthält SQL-Skripts für SQL Server Compact sowie Verbindungen zu SQL Server Compact-Instanzen, für die diese Skripts ausgeführt werden können.|  

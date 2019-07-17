@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f0dfadc3b2b990d999df1d66069c4b68df9e6cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104413"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @destination_dbms = ] 'destination_dbms'` Ist der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Das Ziel ist eine Oracle-Datenbank.|  

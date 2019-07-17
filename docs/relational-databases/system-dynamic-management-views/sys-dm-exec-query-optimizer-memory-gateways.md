@@ -19,21 +19,20 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e5c54d116f4d4d8a71ba3660a31b324d9952970
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097674"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Gibt den aktuellen Status der Ressource Semaphore verwendet, um gleichzeitige abfrageoptimierung zu drosseln.
 
-|Spalte|Typ|Description|  
+|Spalte|Typ|Beschreibung|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Ressourcenpool-ID unter der Ressourcenkontrolle|  
 |**name**|**sysname**|Kompilieren Sie Gate-Namen (kleines Gateway, Gateway Mittel, Groß Gateway)|

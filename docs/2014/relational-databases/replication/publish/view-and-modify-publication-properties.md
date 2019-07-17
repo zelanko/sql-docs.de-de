@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212055"
 ---
 # <a name="view-and-modify-publication-properties"></a>Anzeigen und Ändern von Veröffentlichungseigenschaften
   In diesem Thema wird beschrieben, wie die Veröffentlichungseigenschaften in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -109,7 +109,7 @@ ms.locfileid: "54135830"
 1.  Führen Sie [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus, und geben Sie dabei die zu ändernde Veröffentlichungseigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot**angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie den Wert **1** für **@force_reinit_subscription**. Weitere Informationen zu den Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
+    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie den Wert **1** für **@force_reinit_subscription** . Weitere Informationen zu den Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>So zeigen Sie die Eigenschaften einer Mergeveröffentlichung an  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54135830"
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Fügen Sie und Löschen von Artikeln aus einer Veröffentlichung hinzu](add-articles-to-and-drop-articles-from-a-publication.md)   
- [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md)  
   
   

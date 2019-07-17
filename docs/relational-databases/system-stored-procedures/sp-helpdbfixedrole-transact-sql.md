@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123828"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Name der festen Datenbankrolle.|  
 |**Beschreibung**|**nvarchar(70)**|Beschreibung der **DbFixedRole.**|  
@@ -55,7 +54,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>Hinweise  
  Feste Datenbankrollen werden, wie in der folgenden Tabelle dargestellt, auf Datenbankebene definiert und besitzen Berechtigungen, um spezifische Verwaltungsaktivitäten auf Datenbankebene auszuführen. Feste Datenbankrollen können nicht hinzugefügt oder entfernt werden. Die für eine feste Datenbankrolle erteilten Berechtigungen können nicht geändert werden.  
   
-|Feste Datenbankrolle|Description|  
+|Feste Datenbankrolle|Beschreibung|  
 |-------------------------|-----------------|  
 |**db_owner**|Datenbankbesitzer|  
 |**db_accessadmin**|Administratoren für den Datenbankzugriff|  
@@ -93,8 +92,8 @@ GO
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
- [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
+ [Sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [Sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
+title: Sp_OAGetErrorInfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107912"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ sp_OAGetErrorInfo [ objecttoken ]
  _Beschreibung_ **Ausgabe**  
  Ist die Beschreibung des Fehlers. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- _helpfile_ **OUTPUT**  
+ _HelpFile_ **Ausgabe**  
  Die Hilfedatei des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale **Char**, **Nchar**, **Varchar**, oder **Nvarchar** Variable. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- _helpid_ **OUTPUT**  
+ _HilfeID_ **Ausgabe**  
  Die Kontext-ID für die Hilfedatei. Wenn angegeben, muss es sich um eine lokale **Int** Variable.  
   
 > [!NOTE]  
@@ -70,12 +69,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>Resultsets  
  Ist kein Ausgabeparameter angegeben, werden die Fehlerinformationen dem Client als Resultset zurückgegeben.  
   
-|Spaltennamen|Datentyp|Description|  
+|Spaltennamen|Datentyp|Beschreibung|  
 |------------------|---------------|-----------------|  
 |**Fehler**|**binary(4)**|Binärdarstellung der Fehlernummer|  
-|**Quelle**|**nvarchar(nn)**|Fehlerquelle|  
-|**Beschreibung**|**nvarchar(nn)**|Beschreibung des Fehlers|  
-|**Helpfile**|**nvarchar(nn)**|Hilfedatei für die Quelle|  
+|**Quelle**|**nvarchar(NN)**|Fehlerquelle|  
+|**Beschreibung**|**nvarchar(NN)**|Beschreibung des Fehlers|  
+|**HelpFile**|**nvarchar(NN)**|Hilfedatei für die Quelle|  
 |**HelpID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
   
 ## <a name="remarks"></a>Hinweise  

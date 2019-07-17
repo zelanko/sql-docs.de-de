@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3339cf1731c712cdfee7145390d5cc955c748a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094753"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **Systranschemas** -Tabelle dient zum Nachverfolgen von schemaänderungen in Artikeln, die in Transaktions- und momentaufnahmeveröffentlichungen veröffentlicht. Diese Tabelle wird sowohl in Veröffentlichungs- als auch in Abonnementdatenbanken gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|Identifiziert den Tabellenartikel, in dem die Schemaänderung stattgefunden hat.|  
 |**startlsn**|**binary**|LSN-Wert zu Beginn der Schemaänderung|  

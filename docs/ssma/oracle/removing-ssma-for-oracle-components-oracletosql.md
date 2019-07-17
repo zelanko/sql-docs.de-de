@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: da54f9fc21b74be790ac86c9690738b71fd3e1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628545"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266564"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Entfernen von SSMA-Komponenten für Oracle (OracleToSQL)
 Nach Abschluss des Migrieren von Datenbanken aus Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], empfiehlt es sich um SSMA-Komponenten zu deinstallieren. Sie können die Clientkomponenten jederzeit deinstallieren. Allerdings sollten Sie nicht das Erweiterungspaket aus Deinstallieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, Ihre migrierten Datenbanken nicht mehr Funktionen in der **Ssma_oracle** Schema der **Sysdb** Datenbank.  

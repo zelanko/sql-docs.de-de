@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210755"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Umschalten zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement
   In diesem Thema wird beschrieben, wie zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]umgeschaltet wird. Geben Sie im Assistenten für neue Abonnements den Modus für aktualisierbare Abonnements an. Weitere Informationen zum Festlegen des Modus bei der Verwendung dieses Assistenten finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../view-and-modify-pull-subscription-properties.md).  
@@ -49,17 +49,17 @@ ms.locfileid: "52785192"
   
 3.  Klicken Sie mit der rechten Maustaste auf das Abonnement, für das Sie den Updatemodus festlegen möchten, und klicken Sie dann auf **Updatemethode festlegen**.  
   
-4.  In der **Updatemethode festlegen - \<Subscriber >: \<SubscriptionDatabase >** wählen Sie im Dialogfeld **sofortigem** oder **verzögertes Update**.  
+4.  Wählen Sie im Dialogfeld **Updatemethode festlegen – \<Abonnent>: \<Abonnementdatenbank>** die Option **Sofortiges Update** oder **Verzögertes Update über eine Warteschlange** aus.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>So legen Sie den Updatemodus für ein Pullabonnement fest  
   
-1.  In der **Abonnementeigenschaften - \<Verleger >: \<PublicationDatabase >** wählen einen Wert, der Sie im Dialogfeld **Änderungen sofort replizieren** oder **Änderungen in die Warteschlange** für die **Updatemethode für Abonnent** -Option.  
+1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – \<Verleger>: \<Veröffentlichungsdatenbank>** den Wert **Änderungen sofort replizieren** oder **Änderungen in Warteschlange einreihen** für die Option **Updatemethode für Abonnent** aus.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Weitere Informationen zum Zugreifen auf die **Abonnementeigenschaften - \<Verleger >: \<PublicationDatabase >** im Dialogfeld finden Sie unter [anzeigen und Ändern der Eigenschaften von Pullabonnements](../view-and-modify-pull-subscription-properties.md).  
+ Weitere Informationen zum Zugriff auf das Dialogfeld **Abonnementeigenschaften – \<Verleger>: \<Veröffentlichungsdatenbank>** finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52785192"
   
 1.  Stellen Sie sicher, dass die Veröffentlichung das Failover unterstützt, indem Sie bei Pullabonnements [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) und bei Pushabonnements [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) ausführen. Wenn der Wert des **Updatemodus** im Resultset **3** oder **4**ist, wird das Failover unterstützt.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql)aus. Geben Sie **@publisher**, **@publisher_db**, **@publication**und einen der folgenden Werte für **@failover_mode**an:  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql)aus. Geben Sie **@publisher** , **@publisher_db** , **@publication** und einen der folgenden Werte für **@failover_mode** an:  
   
     -   **queued** - Failover zum verzögerten Aktualisieren, wenn die Verbindung vorübergehend unterbrochen wurde.  
   

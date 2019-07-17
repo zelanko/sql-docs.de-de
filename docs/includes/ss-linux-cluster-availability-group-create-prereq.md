@@ -1,4 +1,12 @@
-## <a name="prerequisites"></a>Erforderliche Komponenten
+---
+ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215583"
+---
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Bevor Sie die Verfügbarkeitsgruppe erstellen, müssen Sie:
 

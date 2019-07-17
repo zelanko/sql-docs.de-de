@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_column (Transact-SQL) | Microsoft Docs
+title: Sp_fulltext_column (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124342"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'` Ist die Aktion ausgeführt werden. *action* ist vom Datentyp **varchar(20)** und hat keinen Standardwert. Die folgenden Werte sind möglich:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**add**|Fügt dem inaktiven Volltextindex der Tabelle den *column_name* von *qualified_table_name* hinzu. Durch diese Aktion wird die Volltextindizierung für die Spalte aktiviert.|  
 |**drop**|Entfernt *column_name* aus dem inaktiven Volltextindex von *qualified_table_name* .|  
@@ -118,7 +117,7 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
  [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
- [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
+ [Sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Volltextsuche und semantische Suche von gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   

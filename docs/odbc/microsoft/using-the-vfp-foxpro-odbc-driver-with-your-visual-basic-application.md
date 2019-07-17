@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b77fdee70ff73772710c9758eeb2bf2594f365d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 017e8e7897b2b792d7a864dc336537d76dcad8b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087979"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Verwenden des VFP FoxPro-ODBC-Treibers mit Ihrer Visual Basic-Anwendung
 Ihr Microsoft® Visual Basic®-Anwendung kann mit Visual FoxPro-Daten kommunizieren, indem Sie ein Steuerelement die Verbindung mit einer Visual FoxPro-Datenquelle erstellen.  

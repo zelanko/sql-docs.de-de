@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: bff48432749d6886f58c985adc9cb779303edb17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 5de646d21ddd9255b1b5bd72794635a1da37ef6c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626751"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266622"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Projekteinstellungen (Konvertierung) (OracleToSQL)
 Die Seite die **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für Oracle-Syntax, um konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax.  

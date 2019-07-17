@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7769c4e648cf3ed3898409cbdc3f0787dcb6d837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113120"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="result-sets"></a>Resultsets  
  **Sp_replshowcmds** ist eine Diagnoseprozedur, die Informationen zur Veröffentlichungsdatenbank zurückgibt, von dem sie ausgeführt wird.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|Sequenznummer des Befehls.|  
 |**originator_id**|**int**|ID des befehlsabsenders, immer **0**.|  
@@ -72,7 +71,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [Sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

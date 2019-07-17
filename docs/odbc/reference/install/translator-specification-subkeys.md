@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093801"
 ---
 # <a name="translator-specification-subkeys"></a>Unterschlüssel für Konvertierungsprogrammspezifikationen
 Jede Konvertierer, die in der ODBC-Konvertierungsprogramme-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel hat den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel für ODBC-Konvertierungsprogramme. Die Werte unter diesem Unterschlüssel auflisten, die vollständigen Pfade der Konvertierer, Translator-Setup-DLLs und die Verwendungsanzahl der. Die Formate der-Werte sind wie in der folgenden Tabelle gezeigt.  

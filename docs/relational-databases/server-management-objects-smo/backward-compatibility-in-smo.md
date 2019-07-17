@@ -10,19 +10,18 @@ ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 810c0d5d1856b21b20129544890e8b9c57cc0d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a002b4f5d4b678171fc5dd396152d155779f78b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126766"
 ---
 # <a name="backward-compatibility-in-smo"></a>Abwärtskompatibilität in SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geschriebene SMO-Anwendungen können mithilfe von SMO in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] neu kompiliert werden.  
+  In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geschriebene SMO-Anwendungen können mithilfe von SMO in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]neu kompiliert werden.  
   
 ## <a name="migrating-smo-applications"></a>Migrieren von SMO-Anwendungen  
  Verweise auf SMO-DLLs in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen entfernt werden, während Verweise auf die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthaltenen neuen SMO-DLLs eingeschlossen werden müssen.  
@@ -38,7 +37,7 @@ ms.locfileid: "47713318"
  Diese Dateien sind für Verbindungsklassen, SMO-Hilfsprogrammklassen und Foundation Classes erforderlich.  
   
 > [!NOTE]  
->  Die Datei SmoEnum.dll wurde entfernt. Folglich müssen Verweise darauf aus dem SMO [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Projekt entfernt werden.  
+>  Die Datei SmoEnum.dll wurde entfernt. Folglich müssen Verweise darauf aus dem SMO [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Projekt entfernt werden.  
   
  Da sich die Namespaces ebenfalls geändert haben, können Sie Folgendes verwenden:  
   
@@ -60,6 +59,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  Wenn im Code das Transfer-Objekt direkt verwendet wird, müssen Sie eine Verknüpfung mit dem Microsoft.SqlServer.Management.SmoExtended-Namespace herstellen.  
   
- Wenn Sie Code migrieren, müssen Sie ihn ggf. ändern. Dies liegt daran, dass einige [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]- und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [veraltete Datenbankmodulfeatures in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Onlinedokumentation.  
+ Wenn Sie Code migrieren, müssen Sie ihn ggf. ändern. Dies liegt daran, dass einige [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] - und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [veraltete Datenbankmodulfeatures in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Onlinedokumentation.  
   
   

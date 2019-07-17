@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 40e591615850d16994c4023b63a354aa2061da59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: cd8f0e57554f32d3b02a6e0e98d3a3645d683bac
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287496"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266162"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>Herstellen einer Verbindung mit SQL Server (OracleToSQL)
 Migrieren von Oracle-Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 müssen Sie mit diesen verbinden Ziel Instanzen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie eine Verbindung herstellen, erhält der SSMA Metadaten zu allen Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und zeigt die Metadaten der Datenbank in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer. SSMA speichert Informationen über die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie verbunden sind, jedoch werden keine Kennwörter gespeichert.  

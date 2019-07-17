@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625884"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266581"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Projekteinstellungen (Typzuordnung) (OracleToSQL)
 Die Seite Type Mapping der **Projekteinstellungen** Dialogfeld enthält Einstellungen, die anpassen, wie SSMA für Oracle-Datentypen in konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen.  
@@ -60,8 +60,8 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |Oracle-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|"float" [53]|  
+|binary_float|"float" [53]|  
 |binary_integer|ssNoversion|  
 |Blob|varbinary(max)|  
 |boolean|bit|  
@@ -72,15 +72,15 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec[38][0]|  
-|Decimal|float[53]|  
-|mit doppelter Genauigkeit|float[53]|  
-|FLOAT|float[53]|  
+|decimal|"float" [53]|  
+|mit doppelter Genauigkeit|"float" [53]|  
+|FLOAT|"float" [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
 |Long raw|varbinary(max)|  
 |Long raw [\*... 8000]<sup>*</sup>|Varbinary [*]|  
-|long raw[8001..\*]<sup>*</sup>|varbinary(max)|  
+|Long raw [8001..\*]<sup>*</sup>|varbinary(max)|  
 |National char|nvarchar(max)|  
 |National Char varying|nvarchar(max)|  
 |nationale Zeichensätze|nvarchar(max)|  
@@ -88,12 +88,12 @@ Die folgende Tabelle enthält die standardmäßige datentypzuordnung für Argume
 |nationale Zeichensätze varying<sup>*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|float[53]|  
-|NUMERIC|float[53]|  
-|nvarchar2|nvarchar(max)|  
+|number|"float" [53]|  
+|NUMERIC|"float" [53]|  
+|NVARCHAR2|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |raw|varbinary(max)|  
-|REAL|float[53]|  
+|REAL|"float" [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |Signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
@@ -116,8 +116,8 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |Oracle-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|"float" [53]|  
+|binary_float|"float" [53]|  
 |Blob|varbinary(max)|  
 |char|char|  
 |Char varying [*... \*]|Varchar [*]|  
@@ -130,13 +130,13 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |dec|dec[38][0]|  
 |DEC [*... \*]|DEC [*] [0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|Dezimal [38] [0]|  
 |Dezimal [*... \*]|Dezimal [*] [0]|  
 |Dezimal [*... \*][\*.. \*]|Dezimal [*] [\*]|  
-|mit doppelter Genauigkeit|float[53]|  
-|FLOAT|float[53]|  
+|mit doppelter Genauigkeit|"float" [53]|  
+|FLOAT|"float" [53]|  
 |"float" [*... 53]|"float" [*]|  
-|float[54..*]|float[53]|  
+|"float" [54.. *]|"float" [53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
 |long|varchar(max)|  
@@ -155,7 +155,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |NCHAR|NCHAR|  
 |NCHAR [*]|NCHAR [*]|  
 |NCLOB|nvarchar(max)|  
-|number|float[53]|  
+|number|"float" [53]|  
 |Anzahl [*... \*]|numeric[*]|  
 |Anzahl [*... \*][\*.. \*]|numeric[*][\*]|  
 |NUMERIC|NUMERIC|  
@@ -163,20 +163,20 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für Spalten.
 |numerische [*... \*][\*.. \*]|numeric[*][\*]|  
 |NVARCHAR2 [*... \*]|Nvarchar [*]|  
 |Rohdaten [*... \*]|Varbinary [*]|  
-|REAL|float[53]|  
+|REAL|"float" [53]|  
 |ROWID|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |Zeitstempel mit der lokalen Zeitzone|datetimeoffset|  
-|Zeitstempel mit der lokalen Zeitzone [*... \*]|datetimeoffset[*]|  
+|Zeitstempel mit der lokalen Zeitzone [*... \*]|DateTimeOffset [*]|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
-|Zeitstempel mit Zeitzone [*... \*]|datetimeoffset[*]|  
+|Zeitstempel mit Zeitzone [*... \*]|DateTimeOffset [*]|  
 |Timestamp [*... \*]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
 |UROWID [*... \*]|UNIQUEIDENTIFIER|  
 |Varchar [*... \*]|Varchar [*]|  
 |VARCHAR2 [*... \*]|Varchar [*]|  
-|Xmltype|xml|  
+|XmlType|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Typ der lokalen Variablen der Standardzuordnung  
 Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.  
@@ -184,8 +184,8 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |Oracle-Datentyp|Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp|  
 |--------------------|-------------------------------------------------------------------------|  
 |Bfile|varbinary(max)|  
-|binary_double|float[53]|  
-|binary_float|float[53]|  
+|binary_double|"float" [53]|  
+|binary_float|"float" [53]|  
 |binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
 |Boolean|bit|  
@@ -193,25 +193,25 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |Char varying [*... 8000]|Varchar [*]|  
 |Char varying [8001.. *]|varchar(max)|  
 |Char [*... 8000]|Char [*]|  
-|char[8001..*]|varchar(max)|  
+|Char [8001.. *]|varchar(max)|  
 |Zeichen|char|  
 |unterschiedliche Zeichen [*... 8000]|Varchar [*]|  
 |unterschiedliche Zeichen [8001.. *]|varchar(max)|  
 |Zeichen [*... 8000]|Char [*]|  
-|character[8001..*]|varchar(max)|  
+|Zeichen [8001.. *]|varchar(max)|  
 |CLOB|varchar(max)|  
 |date|datetime2 [0]|  
 |dec|dec[38][0]|  
 |DEC [*... \*]|DEC [*] [0]|  
 |dec[*..\*][\*..\*]|dec[*][\*]|  
-|Decimal|decimal[38][0]|  
+|decimal|Dezimal [38] [0]|  
 |Dezimal [*... \*]|Dezimal [*] [0]|  
 |Dezimal [*... \*][\*.. \*]|Dezimal [*] [\*]|  
-|mit doppelter Genauigkeit|float[53]|  
-|float|float[53]|  
+|mit doppelter Genauigkeit|"float" [53]|  
+|float|"float" [53]|  
 |"float" [*... 53]|"float" [*]|  
-|float[54..*]|float[53]|  
-|int|ssNoversion|  
+|"float" [54.. *]|"float" [53]|  
+|Int|ssNoversion|  
 |Integer|ssNoversion|  
 |ganze Zahl [*... \*]|numerische [*] [0]|  
 |Long|varchar(max)|  
@@ -230,40 +230,40 @@ Die folgende Tabelle enthält die Standard-Typzuordnung für lokale Variablen.
 |nationale Zeichensätze zu unterschiedlichen [4001.. *]|nvarchar(max)|  
 |Nchar|NCHAR|  
 |NCHAR [*... 4000]|NCHAR [*]|  
-|nchar[4001..*]|nvarchar(max)|  
+|NCHAR [4001.. *]|nvarchar(max)|  
 |NCHAR unterschiedliche [*... 4000]|Nvarchar [*]|  
 |NCHAR unterschiedliche [4001.. *]|nvarchar(max)|  
-|Nclob|nvarchar(max)|  
-|Number|float[53]|  
+|NCLOB|nvarchar(max)|  
+|Number|"float" [53]|  
 |Anzahl [*... \*]|numeric[*]|  
 |Anzahl [*... \*][\*.. \*]|numeric[*][\*]|  
-|Numerisch|numeric[38][0]|  
+|Numeric|numeric[38][0]|  
 |numerische [*... \*]|numeric[*]|  
 |numerische [*... \*][\*.. \*]|numeric[*][\*]|  
 |NVARCHAR2 [*... 4000]|Nvarchar [*]|  
 |NVARCHAR2 [4001.. *]|nvarchar(max)|  
 |pls_integer|ssNoversion|  
 |Rohdaten [*... 8000]|Varbinary [*]|  
-|raw[8001..*]|varbinary(max)|  
-|Real|float[53]|  
+|Rohdaten [8001.. *]|varbinary(max)|  
+|Real|"float" [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
 |Signtype|SMALLINT|  
 |Smallint|SMALLINT|  
 |Zeichenfolge [*... 8000]|Varchar [*]|  
-|string[8001..*]|varchar(max)|  
+|Zeichenfolge [8001.. *]|varchar(max)|  
 |timestamp|datetime2|  
 |Zeitstempel mit der lokalen Zeitzone|datetimeoffset|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
-|Zeitstempel mit der lokalen Zeitzone [*... \*]|datetimeoffset[*]|  
-|Zeitstempel mit Zeitzone [*... \*]|datetimeoffset[*]|  
+|Zeitstempel mit der lokalen Zeitzone [*... \*]|DateTimeOffset [*]|  
+|Zeitstempel mit Zeitzone [*... \*]|DateTimeOffset [*]|  
 |Timestamp [*... \*]|datetime2 [*]|  
 |UROWID|UNIQUEIDENTIFIER|  
 |UROWID [*... \*]|UNIQUEIDENTIFIER|  
 |Varchar [*... 8000]|Varchar [*]|  
-|varchar[8001..*]|varchar(max)|  
+|Varchar [8001.. *]|varchar(max)|  
 |VARCHAR2 [*... 8000]|Varchar [*]|  
-|varchar2[8001..*]|varcha(max)|  
-|Xmltype|xml|  
+|VARCHAR2 [8001.. *]|varcha(max)|  
+|XmlType|xml|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Referenz zur Benutzeroberfläche &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  

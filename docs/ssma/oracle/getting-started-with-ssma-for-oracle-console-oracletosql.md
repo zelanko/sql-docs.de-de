@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 09cfb2bb9d4d07f410ad901d3fcf0d2a458e00f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63308430"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264502"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Erste Schritte mit der SSMA-Konsole für Oracle (OracleToSQL)
 Dieser Abschnitt beschreibt die Vorgehensweise zum Starten, und beginnen Sie mit der Oracle-Konsolenanwendung. Auch aufgeführt ist, werden die Konventionen in diesem Dokument, in einer typischen Ausgabefenster von SSMA-Konsole verwendet.  

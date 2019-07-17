@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625914"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266533"
 ---
 # <a name="setting-project-options-oracletosql"></a>Festlegen von Projektoptionen (OracleToSQL)
 Für jedes SSMA-Projekt können Sie Optionen für Projekt festlegen. Diese Optionen geben objektkonvertierung, Objekt laden, Benutzer-Schnittstelle und migrationseinstellungen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  

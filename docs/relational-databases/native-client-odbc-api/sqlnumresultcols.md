@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75aa909f306524d60b40b27ec85bf00998e889eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee85a2373154efa7a8488961c40f5c714c8b0314
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131270"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "63014316"
  Verbesserungen in der Datenbank-Engine ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQLNumResultCols abrufen genauere Beschreibungen der erwarteten Ergebnisse zu ermöglichen. Diese genaueren Ergebnisse unterscheiden sich möglicherweise aus den Werten, die vom SQLNumResultCols in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Metadatenermittlung](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQLNumResultCols Function](https://go.microsoft.com/fwlink/?LinkId=59359)   
+ [SQLNumResultCols-Funktion](https://go.microsoft.com/fwlink/?LinkId=59359)   
  [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e5b81c48e017312048f15b600382af5f95aec821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090874"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "63003509"
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
   
-|Wartetyp|Description|  
+|Wartetyp|Beschreibung|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Tritt während des exklusiven Zugriffs auf das Laden einer Assembly auf.|  

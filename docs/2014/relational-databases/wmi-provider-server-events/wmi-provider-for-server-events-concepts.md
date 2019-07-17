@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211570"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Konzepte des WMI-Anbieters für Serverereignisse
   Mit dem WMI-Anbieter für Serverereignisse können Sie Ereignisse in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz mithilfe von WMI (Windows Management Instrumentation) überwachen.  

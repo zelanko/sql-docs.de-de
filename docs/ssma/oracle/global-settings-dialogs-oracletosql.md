@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: a85eb72b3c239b8be0141c445e5d4507efb438cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192341"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259653"
 ---
-# <a name="global-settings-dialogs--oracletosql"></a>Global Settings (Dialogs)  (OracleToSQL)
+# <a name="global-settings-dialogs--oracletosql"></a>Globale Einstellungen (Dialogfelder) (OracleToSQL)
 Mithilfe der Dialogfelder-Seite des der **globale Einstellungen** Dialogfeld zum Angeben der Standardaktion für Benutzer und die Einstellungen für die Warnung für SSMA.  
   
 Um die Einstellungen des Dialogfelds auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, klicken Sie auf **GUI** am unteren Rand der linken Seite, und wählen Sie dann **-Dialogfelder**.  

@@ -12,21 +12,20 @@ dev_langs:
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 83369736ee18c36b3967bbbd129e0fd64574a2ed
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544239"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265991"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>Sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  Gibt die Anzahl verschiedener Arten von Objekt Pool arbeitsspeichernutzung für columnstore-Index-Objekten.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |`database_id`|`int`|Die ID der Datenbank. Dies ist eindeutig innerhalb einer Instanz von SQL Server-Datenbank oder eine Azure SQL-Datenbank-Server. |  
 |`object_id`|`int`|ID des Objekts. Das Objekt ist eines der object_types auf. | 
@@ -43,7 +42,7 @@ ms.locfileid: "52544239"
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
  
 ## <a name="see-also"></a>Siehe auch  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 72b6171864c0ab801e89d3eba5a19ff61031a81e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb6d01bf9c02d0a7b96adf8e46eb354cd426db4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139192"
 ---
 # <a name="assessment-report-mysqltosql"></a>Bewertungsbericht (MySqlToSql)
 Die Fenster "Assessment Report" zeigt die Ergebnisse der Konvertierung von Datenbankobjekten zu [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax, und kann ebenfalls dazu beitragen, die Sie schätzen, die Komplexität und Kosten für Ihren Migrationsprojekten.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211677"
 ---
 # <a name="modify-data-through-a-view"></a>Ändern von Daten über eine Sicht
   Sie können die Daten einer zugrunde liegenden Basistabelle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
@@ -30,7 +30,7 @@ ms.locfileid: "48130310"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So ändern Sie Tabellendaten durch eine Sicht mit:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48130310"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48130310"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert je nach ausgeführter Aktion Berechtigungen für UPDATE, INSERT oder DELETE in der Zieltabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>So ändern Sie Tabellendaten durch eine Sicht  
   

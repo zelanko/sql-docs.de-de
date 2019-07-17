@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108447"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_cursoroption cursor, code, value
  *Code*  
  Wird verwendet, um verschiedene Faktoren der Cursorrückgabewerte festzulegen. *Code* erfordert eine der folgenden **Int** Eingabewerte:  
   
-|Wert|Name|Description|  
+|Wert|Name|Beschreibung|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Gibt für bestimmte angegebene Text- oder Bildspalten den Textzeiger, nicht aber die tatsächlichen Daten zurück.<br /><br /> TEXTPTR_ONLY ermöglicht Textzeiger als vorgesehen *Handles* für Blob-Objekte, die später selektiv abgerufen werden können oder mithilfe von Windows aktualisiert [!INCLUDE[tsql](../../includes/tsql-md.md)] oder DBLIB-Funktionen (z.B.) [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT oder DBLIB DBWRITETEXT).<br /><br /> Wenn der Wert "0" zugewiesen wird, geben alle Text- und Bildspalten in der Auswahlliste Textzeiger anstelle von Daten zurück.|  
 |0x0002|CURSOR_NAME|Weist den Namen im angegebenen *Wert* bis zum Cursor. Dies ermöglicht wiederum ODBC verwenden [!INCLUDE[tsql](../../includes/tsql-md.md)] positionierte UPDATE/DELETE-Anweisungen für Cursor, die mithilfe von Sp_cursoropen geöffnet.<br /><br /> Die Zeichenfolge kann als beliebiges Zeichen oder Unicode-Datentyp angegeben werden.<br /><br /> Da [!INCLUDE[tsql](../../includes/tsql-md.md)] positionierte UPDATE/DELETE-Anweisungen ausgeführt werden, standardmäßig auf die erste Zeile in einem fat Cursor Sp_cursor SETPOSITION zur Positionierung des Cursors, bevor die positionierte UPDATE/DELETE-Anweisung ausgegeben verwendet werden soll.|  
@@ -72,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  Die *Wert* -Parameter gibt einen der folgenden SCROLLOPT-Werte zurück.  
   
-|Rückgabewert|Description|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,7 +80,7 @@ sp_cursoroption cursor, code, value
   
  Die *Wert* -Parameter gibt einen der folgenden CCOPT-Werte zurück.  
   
-|Rückgabewert|Description|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  

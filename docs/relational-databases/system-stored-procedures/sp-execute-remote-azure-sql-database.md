@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124474"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,10 +43,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ \@data_source_name = ] *datasourcename*  
+ [ \@Data_source_name =] *Datasourcename*  
  Gibt die externe Datenquelle, in dem die Anweisung ausgeführt wird. Finden Sie unter [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). Die externe Datenquelle kann vom Typ "RDBMS" oder "SHARD_MAP_MANAGER" sein.  
   
- [ \@stmt= ] *statement*  
+ [ \@Stmt =] *Anweisung*  
  Ist eine Unicodezeichenfolge mit einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder einen Batch. \@Stmt muss es sich um eine Unicodekonstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss er mit Präfix ein **N**. Beispielsweise die Unicode-Konstante **N 'Sp_who'** gültig ist, die Zeichenkonstante **'Sp_who'** nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern, die Größe der Zeichenfolge beträgt 2 GB sind, die maximale Größe der **nvarchar(max)** .  
   
 > [!NOTE]  

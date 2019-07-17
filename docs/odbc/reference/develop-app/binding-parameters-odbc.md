@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107633"
 ---
 # <a name="binding-parameters-odbc"></a>Binden von Parametern (ODBC)
 Jeden Parameter in einer SQL-Anweisung muss zugeordnet ist, oder *gebunden,* auf eine Variable in der Anwendung, bevor die Anweisung ausgeführt wird. Wenn die Anwendung eine Variable einem Parameter bindet, beschreibt es die Variable - Adresse, C-Datentyp und So weiter – an den Treiber. Außerdem wird den Parameter selbst - SQL-Datentyp, Genauigkeit und So weiter erläutert. Der Treiber speichert diese Informationen in der Struktur, die sie für diese Anweisung verwaltet und verwendet die Informationen zum Abrufen des Werts aus der Variablen ein, wenn die Anweisung ausgeführt wird.  

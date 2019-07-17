@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d86c96686357533aa1217571f3c199ec8ddff508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15c80cec67b0a40c8ac4c436a45a4551132858f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105350"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
 
@@ -29,10 +28,10 @@ IsSibling(Member_Expression1, Member_Expression2)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Member_Expression1*  
+ *Element_Ausdruck1*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
- *Member_Expression2*  
+ *Element_Ausdruck2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  

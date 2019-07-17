@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078186"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>Argumente  
 `[ @job_id = ] job_id` ID des Auftrags, dem der Zeitplan hinzugefügt wird. *Job_id* ist **Uniqueidentifier**, hat keinen Standardwert.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, zu dem der Zeitplan hinzugefügt wird. *Job_name* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, zu dem der Zeitplan hinzugefügt wird. *Job_name* ist **vom Datentyp nvarchar(128)** , hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
-`[ @name = ] 'name'` Der Name des Zeitplans. *Namen* ist **vom Datentyp nvarchar(128)**, hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name des Zeitplans. *Namen* ist **vom Datentyp nvarchar(128)** , hat keinen Standardwert.  
   
 `[ @enabled = ] enabled_flag` Gibt den aktuellen Status des Zeitplans an. *Enabled_flag* ist **Tinyint**, hat den Standardwert **1** (aktiviert). Wenn **0**, der Zeitplan ist nicht aktiviert. Wenn der Zeitplan deaktiviert ist, wird der Auftrag nicht ausgeführt.  
   
@@ -81,7 +80,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |-----------|------------|  
 |**1** (einmal)|*Frequency_interval* wird nicht verwendet.|  
 |**4** (täglich)|Jede *Frequency_interval* Tage.|  
-|**8** (wöchentlich)|*Frequency_interval* kann einen oder mehrere der folgenden (zusammen mit logischen OR-Operator):<br /><br /> 1 = Sonntag<br /><br /> 2 = Montag<br /><br /> 4 = Dienstag<br /><br /> 8 = Mittwoch<br /><br /> 16 = Thursday<br /><br /> 32 = Freitag<br /><br /> 64 = Samstag|  
+|**8** (wöchentlich)|*Frequency_interval* kann einen oder mehrere der folgenden (zusammen mit logischen OR-Operator):<br /><br /> 1 = Sonntag<br /><br /> 2 = Montag<br /><br /> 4 = Dienstag<br /><br /> 8 = Mittwoch<br /><br /> 16 = Donnerstag<br /><br /> 32 = Freitag<br /><br /> 64 = Samstag|  
 |**16** (monatlich)|Auf der *Frequency_interval* Tag des Monats.|  
 |**32** (mit relativem Monatsintervall)|*Frequency_interval* ist eine der folgenden:<br /><br /> 1 = Sonntag<br /><br /> 2 = Montag<br /><br /> 3 = Dienstag<br /><br /> 4 = Mittwoch<br /><br /> 5 = Donnerstag<br /><br /> 6 = Freitag<br /><br /> 7 = Samstag<br /><br /> 8 = Tag<br /><br /> 9 = Arbeitstag<br /><br /> 10 = Wochenendtag|  
 |**64** (wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -agentdiensts wird)|*Frequency_interval* wird nicht verwendet.|  

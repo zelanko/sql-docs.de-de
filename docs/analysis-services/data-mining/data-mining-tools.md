@@ -1,5 +1,5 @@
 ---
-title: Datamining-Tools | Microsoft Docs
+title: Datamining-Tools | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015147"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210089"
 ---
 # <a name="data-mining-tools"></a>Data Mining-Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015147"
 ## <a name="data-mining-wizard"></a>Data Mining-Assistent  
  Verwenden Sie den Data Mining-Assistenten, um Ihre ersten Data Mining-Lösungen zu erstellen. Der Assistent ist einfach zu verwenden und führt Sie durch das Erstellen einer Data Mining-Struktur und eines verknüpften Ausgangsminingmodells und umfasst Tasks wie das Auswählen eines Algorithmustyps und einer Datenquelle sowie die Definition der Falldaten für die Analyse.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Weitere Informationen finden Sie unter** [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>Data Mining-Designer  
+## <a name="data-mining-designer"></a>Data Mining Designer  
  Nachdem Sie mit dem Data Mining-Assistenten eine Miningstruktur und ein Miningmodell erstellt haben, können Sie den Data Mining-Designer aus [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um mit bereits vorhandenen Modellen und Strukturen zu arbeiten.  
   
  Der Designer enthält Tools für die folgenden Tasks:  
@@ -57,14 +57,14 @@ ms.locfileid: "34015147"
 -   Erstellen von Vorhersagen und Inhaltsabfragen für vorhandene Miningmodelle. Erstellen von einmaligen Abfragen oder Einrichten von Abfragen, um Vorhersagen für ganze Tabellen mit externen Daten zu generieren.  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Nachdem Sie Miningmodelle erstellt und auf einem Server bereitgestellt haben, können Sie die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Datenbank, die die Data Mining-Objekte hostet, mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwalten. Sie können auch weiterhin Tasks ausführen, die das Modell verwenden, z. B. Untersuchen der Modelle, Verarbeiten von neuen Daten und Erstellen von Vorhersagen.  
+ Nachdem Sie Miningmodelle erstellt und auf einem Server bereitgestellt haben, können Sie die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Datenbank, die die Data Mining-Objekte hostet, mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwalten. Sie können auch weiterhin Tasks ausführen, die das Modell verwenden, z. B. Untersuchen der Modelle, Verarbeiten von neuen Daten und Erstellen von Vorhersagen.  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] enthält auch Abfrage-Editoren, die Sie verwenden können, um DMX-Abfragen (Data Mining Extensions) zu entwerfen und auszuführen oder mithilfe von XMLA Data Mining-Objekte zu bearbeiten.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Data Mining-Aufgaben und -Transformationen von Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt viele Komponenten bereit, die Data Mining unterstützen.  
   
- Einige Tools in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wurden entworfen, um die Automatisierung allgemeiner Data Mining-Tasks zu erleichtern. Dies umfasst Tasks für Vorhersagen, Modellerstellung und Verarbeitung. Beispiel:  
+ Einige Tools in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wurden entworfen, um die Automatisierung allgemeiner Data Mining-Tasks zu erleichtern. Dies umfasst Tasks für Vorhersagen, Modellerstellung und Verarbeitung. Zum Beispiel:  
   
 -   Erstellen eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets, das jedes Mal das Modell automatisch aktualisiert, wenn das Dataset mit neuen Kunden aktualisiert wird  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015147"
   
 -   Automatisches Generieren von Modellen aus übergebenen Parametern.  
   
- Sie können Data Mining jedoch auch in einem Paketworkflow als Eingabe für andere Prozesse verwenden. Beispiel:  
+ Sie können Data Mining jedoch auch in einem Paketworkflow als Eingabe für andere Prozesse verwenden. Zum Beispiel:  
   
 -   Verwenden von Wahrscheinlichkeitswerten, die vom Modell generiert werden, um Ergebnisse für Text Mining oder andere Klassifizierungstasks zu bewerten.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "34015147"
   
 -   Verwenden der logistischen Regression, um eine Risikoeinteilung für eingehende Kunden vorzunehmen.  
   
- **Weitere Informationen:** [Verwandte Projekte für Data Mining-Lösungen](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ **Weitere Informationen finden Sie unter** [Verwandte Projekte für Data Mining-Lösungen](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen & #40; DMX & #41; Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Miningmodelltasks und Anweisungen Mining](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Miningmodell-Viewer miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Datamining-Lösungen](../../analysis-services/data-mining/data-mining-solutions.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Miningmodelltasks und Anweisungen](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tasks und Anweisungen für Miningmodell-Viewer](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Data Mining-Projektmappen](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

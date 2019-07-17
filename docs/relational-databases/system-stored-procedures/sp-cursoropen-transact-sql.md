@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108486"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Option für den Bildlauf. *Scrollopt* ist ein optionaler Parameter, der einen der folgenden erfordert **Int** Eingabewerte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
