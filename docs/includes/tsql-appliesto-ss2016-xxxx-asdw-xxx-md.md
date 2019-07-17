@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6f608fc4fa1aea15a35e24273fdab3154672f71d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.openlocfilehash: f5c29caffadeb96b2bcf4ea380c491f2a0c12f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220516"
 ---
-<Token>**GILT für:** ![Ja](media/yes.png)SQL Server (ab 2016) ![keine](media/no.png)Azure SQL-Datenbank ![Ja](media/yes.png)Azure SQL Data Warehouse ![keine](media/no.png) Parallel Datawarehouse </Token>
+<Token>**GILT FÜR:** ![Ja](media/yes.png)SQL Server![Nein](media/no.png)Azure SQL-Datenbank![Ja](media/yes.png)Azure SQL Data Warehouse ![Nein](media/no.png)Parallel Data Warehouse</Token>
 

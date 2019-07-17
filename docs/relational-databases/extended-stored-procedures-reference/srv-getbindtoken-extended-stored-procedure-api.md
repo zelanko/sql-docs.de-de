@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 04d0993fc8e0a84d001dfd7e899dedf6ecc8dde2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2c4c413a3a84aa7db12ac4ecde7d41e3efd34525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064101"
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +73,9 @@ bindtoken
     >  Es kann immer jeweils nur eine gebundene Sitzung Zugriff auf eine gemeinsam genutzte Verbindung haben. Wenn eine Sitzung derzeit eine Anweisung auf dem Server ausführt oder auf Ergebnisse vom Server wartet, können andere Sitzungen, die dieselbe gebundene Verbindung nutzen, erst dann auf den Server zugreifen, wenn die aktuelle Sitzung die aktuelle Anweisung ausgeführt hat. Wenn durch eine andere Sitzung auf die Verbindung zugegriffen wird, solange der Server ausgelastet ist, wird an die den Konflikt verursachende Sitzung die Fehlermeldung zurückgegeben, dass die Verbindung verwendet wird und der Zugriffsversuch der Sitzung später wiederholt werden kann.  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_bindsession (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [sp_getbindtoken (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)  
   

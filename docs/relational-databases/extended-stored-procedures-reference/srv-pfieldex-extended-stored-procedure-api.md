@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c3149979852c68c5bf8a21edc15fb658b49a5c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1333cfc819b8027260c715ed3398c0099f96a854
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005555"
 ---
 # <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ len
  *field*  
  Gibt das zurückzugebende *srvproc*-Feld an  
   
-|Feld|Beschreibung|Rückgabetyp|  
+|Feld|und Beschreibung|Rückgabetyp|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|Aktuelle Sitzungsmeldung-LCID|ULONG*|  
 |SRV_INSTANCENAME|Instanzname (wenn genannt); gibt andernfalls NULL zurück|WCHAR*|  
