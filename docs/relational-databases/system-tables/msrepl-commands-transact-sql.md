@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4a55e595f925c8b542f14e34c8c88110472df89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127430"
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSrepl_commands** -Tabelle enthält Zeilen mit replizierten Befehlen. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|Die ID der Verlegerdatenbank.|  
 |**xact_seqno**|**varbinary(16)**|Die Transaktionssequenznummer.|  
@@ -38,9 +37,9 @@ ms.locfileid: "52822094"
 |**article_id**|**int**|Die ID des Artikels.|  
 |**originator_id**|**int**|Die ID des Urhebers.|  
 |**command_id**|**int**|Die Befehls-ID.|  
-|**verbleiben**|**bit**|Gibt an, ob es sich um einen Teilbefehl handelt.|  
+|**partial_command**|**bit**|Gibt an, ob es sich um einen Teilbefehl handelt.|  
 |**Befehl**|**varbinary(1024)**|Der Befehlswert.|  
-|**Hashkey**|**int**|Intern-nur zur Verwendung.|  
+|**hashkey**|**int**|Intern-nur zur Verwendung.|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die LSN des Befehls in der Ausgangsveröffentlichung. Wird in der Peer-zu-Peer-Transaktionsreplikation verwendet.|  
   
 ## <a name="see-also"></a>Siehe auch  

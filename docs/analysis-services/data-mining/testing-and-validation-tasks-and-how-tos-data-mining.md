@@ -1,5 +1,5 @@
 ---
-title: Tests und Überprüfung miningmodelltasks und Anweisungen (Datamining) | Microsoft Docs
+title: Tests und Überprüfung miningmodelltasks und Anweisungen (Datamining) | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbbfc1a1d37c069a49a090fbef1006e80d2bf998
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209589"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tasks und Anweisungen für Test und Überprüfung (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "34014507"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Erstellen Sie ein Prognosegütediagramm, Gewinndiagramm oder Klassifikationsmatrizen](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [Erstellen von Prognosegütediagrammen, Gewinndiagrammen oder Klassifikationsmatrizen](../../analysis-services/data-mining/create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
--   [Erstellen Sie einen Kreuzvalidierungsbericht](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
+-   [Erstellen eines Kreuzvalidierungsberichts](../../analysis-services/data-mining/create-a-cross-validation-report.md)  
   
 -   [Auswählen und Zuordnen von Modelltestdaten](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)  
   
 -   [Anwenden von Filtern zum Modellieren von Testdaten](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   
--   [Wählen Sie die zum Testen eines Miningmodells zu verwendenden Spalte](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
+-   [Auswählen der zum Testen eines Miningmodells zu verwendenden Spalte](../../analysis-services/data-mining/choose-the-column-to-use-for-testing-a-mining-model.md)  
   
 -   [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   

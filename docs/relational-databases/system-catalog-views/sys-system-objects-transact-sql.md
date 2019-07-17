@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 069e9045-97f2-4463-8e8f-c73855f3ea0a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e660654e1260e61b3ed2c3815860be719fa83ce6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0583e5f6447753cc783e9b3047928d77765688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108854"
 ---
 # <a name="syssystemobjects-transact-sql"></a>sys.system_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Enthält eine Zeile für alle Systemobjekte mit Schemabereich, die in enthaltenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alle Systemobjekte sind in den Schemas sys oder INFORMATION_SCHEMA enthalten.  
+  Enthält eine Zeile für alle Systemobjekte in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die Schemas als Bereiche besitzen. Alle Systemobjekte sind in den Schemas sys oder INFORMATION_SCHEMA enthalten.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |NAME|**sysname**|Objektname.|  
 |object_id|**int**|Objekt-ID. Ist innerhalb einer Datenbank eindeutig.|  
@@ -44,7 +43,7 @@ ms.locfileid: "47841968"
 |type_desc|**nvarchar(60)**|Beschreibung des Objekttyps. AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> DEFAULT_CONSTRAINT<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> INTERNAL_TABLE<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> RULE<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> SYSTEM_TABLE<br /><br /> SYNONYM<br /><br /> SERVICE_QUEUE<br /><br /> CLR_TRIGGER<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> TABLE_TYPE<br /><br /> USER_TABLE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> VIEW<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |create_date|**datetime**|Datum, an dem das Objekt erstellt wurde.|  
 |modify_date|**datetime**|Das Datum, an dem das Objekt zuletzt mithilfe einer ALTER-Anweisung geändert wurde. Ist das Objekt eine Tabelle oder Sicht, wird modify_date auch geändert, wenn ein gruppierter Index für die Tabelle oder Sicht erstellt oder geändert wird.|  
-|is_ms_shipped|**bit**|Objekt wird erstellt, indem eine interne [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponente.|  
+|is_ms_shipped|**bit**|Objekt wird von einer internen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponente erstellt|  
 |is_published|**bit**|Objekt wurde veröffentlicht.|  
 |is_schema_published|**bit**|Nur das Schema des Objekts wird veröffentlicht.|  
   

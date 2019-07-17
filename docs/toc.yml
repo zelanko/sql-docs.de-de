@@ -5693,6 +5693,8 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: Migrieren von SQL Server-Anmeldungen
           href: dma/dma-migrateserverlogins.md
+        - name: Bewerten einer SQL Server-Datensammlung für die Azure SQL-Datenbank-Bereitschaft
+          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: Bewährte Methoden
           href: dma/dma-bestpractices.md
         - name: Konsolidieren von Bewertungsberichten

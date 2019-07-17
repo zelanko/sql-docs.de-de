@@ -1,5 +1,5 @@
 ---
-title: Überprüfen einer PowerPivot für SharePoint-Installation | Microsoft Docs
+title: Überprüfen einer PowerPivot für SharePoint-Installation | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f047593657806b872aafdda802c9c85ac4526b56
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209465"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Überprüfen einer Power Pivot für SharePoint-Installation
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "34017507"
   
 7.  Wählen Sie unter Servertyp die Option **Analysis Services**aus.  
   
-8.  Geben Sie im Server  **\<Servername > \powerpivot**, wobei  **\<Servername >** der Namen des Computers ist, wird die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint die Installation.  
+8.  Geben Sie im Server-Namen,  **\<Servername > \powerpivot**, wobei  **\<Servername >** ist der Name des Computers ein, die die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint die Installation.  
   
 9. Klicken Sie auf **Verbinden**. Dies überprüft, ob der Analysis Services-Server verfügbar ist.  
   

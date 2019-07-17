@@ -1,5 +1,5 @@
 ---
-title: Unterstützte Datenquellen (SSAS – mehrdimensional) | Microsoft Docs
+title: Unterstützte Datenquellen (SSAS – mehrdimensional) | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 907e6cc6deaa9617a4af93ab2080bfe495dacd0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208461"
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>Unterstützte Datenquellen (SSAS – Mehrdimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "34025377"
   
 |||||  
 |-|-|-|-|  
-|Quelle|Versionen|Dateityp|Anbieter*|  
+|Source|Versionen|Dateityp|Anbieter*|  
 |Access-Datenbanken|Microsoft Access 2010, 2013, 2016|.accdb oder .mdb|Microsoft Jet 4.0 OLE DB-Anbieter|  
-|Relationale SQL Server-Datenbanken*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL Datawarehouse, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Hinweis: Auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Azure.com [finden Sie weitere Details zu](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Hinweis: Analytics Platform System (APS) wurde früher als SQL Server Parallel Data Warehouse (PDW) bezeichnet. Ursprünglich war für das Herstellen einer Verbindung mit PDW von Analysis Services ein spezieller Datenanbieter erforderlich. Dieser Anbieter wurde in SQL Server 2012 ersetzt. Ab SQL Server 2012 wird der SQL Server Native Client für Verbindungen mit PDW/APS verwendet. Weitere Informationen zu APS finden Sie auf der Website [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 11.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
+|Relationale SQL Server-Datenbanken*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL Datawarehouse und Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> Hinweis: Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] auf [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856).<br /><br /> Hinweis: Analytics Platform System (APS) wurde früher als SQL Server Parallel Data Warehouse (PDW) bezeichnet. Ursprünglich war für das Herstellen einer Verbindung mit PDW von Analysis Services ein spezieller Datenanbieter erforderlich. Dieser Anbieter wurde in SQL Server 2012 ersetzt. Ab SQL Server 2012 wird der SQL Server Native Client für Verbindungen mit PDW/APS verwendet. Weitere Informationen zu APS finden Sie auf der Website [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx).|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 11.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
 |Relationale Oracle-Datenbanken|Oracle 9i, 10g, 11g, 12g|(–)|OLE DB-Anbieter für Oracle<br /><br /> .NET Framework-Datenanbieter für Oracle Client<br /><br /> .NET Framework-Datenanbieter für SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Relationale Teradata-Datenbanken|Teradata V2R6, V12|(–)|OLE DB-Anbieter für TDOLEDB<br /><br /> .NET-Datenanbieter für Teradata|  
 |Relationale Informix-Datenbanken|V11.10|(–)|OLE DB-Anbieter für Informix|  
