@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a0ae475ba4dc290f57eadf94d1e45e8a203a7ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138025"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError-Funktion
 **Übereinstimmung mit Standards**  
@@ -66,7 +65,7 @@ RETCODE SQLInstallerError(
  [Ausgabe] Zeiger auf die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben *LpszErrorMsg*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *CbErrorMsgMax*, der Text der Fehlermeldung im *LpszErrorMsg* auf abgeschnitten *CbErrorMsgMax* minus der NULL-Terminierungszeichen Bytes. Die *PcbErrorMsg* Argument kann ein null-Zeiger sein.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, or SQL_ERROR.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt oder SQL_ERROR zurück.  
   
 ## <a name="diagnostics"></a>Diagnose  
  **SQLInstallerError** veröffentlichen Fehlerwerte nicht für sich selbst. **SQLInstallerError** gibt SQL_NO_DATA zurück, wenn sie keine Fehlerinformationen abrufen kann (in diesem Fall *PfErrorCode* ist nicht definiert). Wenn **SQLInstallerError** Fehlerwerte kann nicht zugegriffen werden, die aus irgendeinem Grund, die normalerweise SQL_ERROR, zurückgibt **SQLInstallerError** gibt SQL_ERROR zurück, aber alle Fehlerwerte wird nicht gesendet. Wenn Sie nicht, dass die Länge der warnungszeichenfolge wissen (*LpszErrorMsg*), Sie können festlegen, *LpszErrorMsg* auf NULL, und rufen **SQLInstallerError**. **SQLInstallerError** wird zurückzugeben: die Länge der warnungszeichenfolge im *CbErrorMsgMax*. Wenn der Puffer für die Fehlermeldung zu kurz ist **SQLInstallerError** gibt SQL_SUCCESS_WITH_INFO zurück, und die korrekte *PfErrorCode* Wert für **SQLInstallerError**.  

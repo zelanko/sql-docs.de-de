@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104454"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +46,11 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|ID-Nummer des Attributs.|  
 |**ATTRIBUTE_NAME**|**Varchar (** 60 **)**|Der Attributname.|  
-|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|Aktuelle Einstellung des Attributs.|  
+|**ATTRIBUTE_VALUE**|**Varchar (** 255 **)**|Aktuelle Einstellung des Attributs.|  
   
  Die Attribute sind in der folgenden Tabelle aufgeführt. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC-Clientbibliotheken verwenden zurzeit die Attribute **1**, **2**, **18**, **22**, und **500** beim Herstellen der Verbindung Zeit.  
   

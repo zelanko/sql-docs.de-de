@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Erstellen und Ausführen einer SQL­Anweisung | Microsoft-Dokumentation'
+title: 'Schritt 3: Erstellen und Ausführen einer SQL­Anweisung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0e369b74ef629c5fd7136b9098f579b5ad2b1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114264"
 ---
-# <a name="step-3-build-and-execute-an-sql-statement"></a>Schritt 3: Erstellen und Ausführen einer SQL­Anweisung
+# <a name="step-3-build-and-execute-an-sql-statement"></a>Schritt 3: Erstellen und Ausführen einer SQL­Anweisung
 Der dritte Schritt ist zum Erstellen und Ausführen einer SQL­Anweisung, wie in der folgenden Abbildung dargestellt. Die Methoden verwendet, um diesen Schritt ausführen, sind wahrscheinlich erheblich variieren. Die Anwendung kann der Benutzer aufgefordert, geben eine SQL-Anweisung ein, und erstellen eine SQL-Anweisung, die auf Grundlage der Benutzereingabe oder eine hartcodierten SQL-Anweisung verwenden. Weitere Informationen finden Sie unter [SQL-Anweisungen konstruieren](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
   
  ![Zeigt die Erstellung und Ausführung einer SQL-Anweisung](../../../odbc/reference/develop-app/media/pr13.gif "pr13")  
@@ -38,4 +37,4 @@ Der dritte Schritt ist zum Erstellen und Ausführen einer SQL­Anweisung, wie in
 |---------------------------|----------------|  
 |**Wählen Sie** oder Funktion|[Schritt 4a: Abrufen der Ergebnisse](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
 |**UPDATE**, **löschen**, oder **einfügen**|[Schritt 4 b: Die Anzahl der Zeilen abrufen](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|Alle anderen SQL­Anweisungen|Schritt 3: Erstellen und Ausführen einer SQL-Anweisung (dieses Thema) oder [Schritt 5: Die Transaktion ein Commit ausgeführt](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|Alle anderen SQL­Anweisungen|Schritt 3: Erstellen und Ausführen einer SQL-Anweisung (dieses Thema) oder [Schritt 5: Die Transaktion ein Commit ausgeführt](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

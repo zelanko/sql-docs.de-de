@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085123"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
 `[ @resolution = ] 'resolution'` Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
   
-`[ @xmin = ] 'xmin'` Ist die X-Minimum-Eigenschaft des Begrenzungsrahmens an. *"xmin"* ist eine **"float"**, hat keinen Standardwert.  
+`[ @xmin = ] 'xmin'` Ist die X-Minimum-Eigenschaft des Begrenzungsrahmens an. *"xmin"* ist eine **"float"** , hat keinen Standardwert.  
   
-`[ @ymin = ] 'ymin'` Ist die Y-Minimum-Eigenschaft des Begrenzungsrahmens an. *Ymin* ist eine **"float"**, hat keinen Standardwert.  
+`[ @ymin = ] 'ymin'` Ist die Y-Minimum-Eigenschaft des Begrenzungsrahmens an. *Ymin* ist eine **"float"** , hat keinen Standardwert.  
   
-`[ @xmax = ] 'xmax'` Ist die X-Maximum-Eigenschaft des Begrenzungsrahmens an. *"xmax"* ist eine **"float"**, hat keinen Standardwert.  
+`[ @xmax = ] 'xmax'` Ist die X-Maximum-Eigenschaft des Begrenzungsrahmens an. *"xmax"* ist eine **"float"** , hat keinen Standardwert.  
   
-`[ @ymax = ] 'ymax'` Ist die Y-Maximum-Eigenschaft des Begrenzungsrahmens an. *Ymax* ist eine **"float"**, hat keinen Standardwert.  
+`[ @ymax = ] 'ymax'` Ist die Y-Maximum-Eigenschaft des Begrenzungsrahmens an. *Ymax* ist eine **"float"** , hat keinen Standardwert.  
   
-`[ @sample = ] 'sample'` Ist der Prozentsatz der Tabelle, die verwendet wird. Gültige Werte liegen zwischen 0 und 100. *Beispiel* ist eine **"float"**. Standardwert ist 100.  
+`[ @sample = ] 'sample'` Ist der Prozentsatz der Tabelle, die verwendet wird. Gültige Werte liegen zwischen 0 und 100. *Beispiel* ist eine **"float"** . Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Stellt die eindeutige ID jeder Zelle dar, beginnend mit 1.|  
 |**cell**|**Geometrie**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  

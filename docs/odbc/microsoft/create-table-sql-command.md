@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096601"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (SQL-Befehl)
 Erstellt eine Tabelle mit den angegebenen Feldern.  
@@ -47,10 +46,10 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- CREATE TABLE &#124; DBF *TableName1*  
+ Erstellen der Tabelle &#124; DBF *TableName1*  
  Gibt den Namen der Tabelle zu erstellen. Die Tabelle und die DBF-Optionen sind identisch.  
   
- NAME *LongTableName*  
+ Namen *LongTableName*  
  Gibt einen langen Namen für die Tabelle an. Ein lange Tabellennamen kann angegeben werden, nur, wenn eine Datenbank geöffnet ist, da lange Tabellennamen in Datenbanken gespeichert werden.  
   
  Lange Namen können bis zu 128 Zeichen enthalten und können anstelle von kurzen Dateinamen in der Datenbank verwendet werden.  
@@ -76,7 +75,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  Überprüfen Sie *lExpression1*  
  Gibt eine Überprüfungsregel für das Feld. *lExpression1* kann eine benutzerdefinierte Funktion sein. Wenn Sie ein leerer Datensatz angefügt wird, wird die Validierungsregel überprüft. Ein Fehler wird generiert, wenn die Überprüfungsregel für ein leeres Feld-Wert in eine angefügte Datensatz nicht zugelassen wird.  
   
- ERROR *cMessageText1*  
+ Fehler *cMessageText1*  
  Gibt die Fehlermeldung, die Visual FoxPro angezeigt, wenn die Feldregel Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Durchsuchen-Fenster oder eine Editor-Fenster geändert werden.  
   
  Standard *eExpression1*  
@@ -115,7 +114,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Da eine Tabelle nur ein primären Index verfügen kann, können nicht Sie diese Klausel einschließen, wenn Sie bereits einen primären Index für ein Feld erstellt haben. Visual FoxPro generiert einen Fehler auf, wenn Sie mehr als eine PRIMARY KEY-Klausel im Artikel CREATE TABLE.  
   
- UNIQUE *eExpression3*TAG *TagName3*  
+ EINDEUTIGE *eExpression3*TAG *TagName3*  
  Erstellt einen Index Kandidat. *eExpression3* gibt jede Feld oder eine Kombination der Felder in der Tabelle. Wenn Sie einen primären Index mit einem der PRIMARY KEY-Optionen erstellt haben, können nicht Sie allerdings das Feld enthalten, das für den primären Index angegeben wurde. TAG *TagName3* gibt einen Tagnamen für die Candidate-Indexname, der erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
   
  Eine Tabelle kann mehrere Kandidaten Indizes aufweisen.  

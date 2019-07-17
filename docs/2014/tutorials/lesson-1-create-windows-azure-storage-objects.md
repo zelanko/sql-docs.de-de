@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210952"
 ---
-# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lektion 1: Erstellen von Windows Azure-Speicherobjekten
+# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lektion 1: Erstellen von Microsoft Azure Storage-Objekten
   Bevor Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherungen im Cloudspeicher erstellen, müssen Sie zunächst ein Speicherkonto und dann einen BLOB-Container erstellen. Lektion 1 führt Sie durch die Schritte zur Protokollierung im Windows Azure-Verwaltungsportal. Dabei erstellen Sie ein Speicherkonto und einen BLOB-Container.  
   
 ## <a name="create-a-storage-account"></a>Erstellen eines Speicherkontos  
@@ -25,7 +25,7 @@ ms.locfileid: "56038341"
   
 1.  Melden Sie sich unter Ihrem Konto beim Windows Azure-Verwaltungsportal an. Wenn Sie ein Windows Azure-Konto keine [finden Sie auf Windows Azure-3-Monats-Testversion](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
-     ![Windows Azure Login Screen](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Windows Azure Login Screen")  
+     ![Windows Azure-Anmeldebildschirm](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Anmeldebildschirm für Windows Azure")  
   
 2.  Verwenden Sie die Schritt-für-Schritt-Anweisungen, die detaillierte [hier](https://go.microsoft.com/fwlink/?LinkId=271926), um ein Speicherkonto zu erstellen.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "56038341"
     >  Container können mithilfe der REST-APIs auch programmgesteuert erstellt werden. Weitere Informationen finden Sie unter [-Container erstellen](https://go.microsoft.com/fwlink/?LinkId=271946).  
   
 ### <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Erstellen Sie eine SQL Server-Anmeldeinformation](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+ [Lektion 2: Erstellen Sie eine SQL Server-Anmeldeinformation](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
   

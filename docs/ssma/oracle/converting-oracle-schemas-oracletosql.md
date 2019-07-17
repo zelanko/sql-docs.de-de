@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288891"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266151"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Konvertieren von Oracle-Schemas (OracleToSQL)
 Nachdem Sie mit Oracle verbunden haben, verbunden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und das Projekt festlegen und Optionen für die Zuordnung von Daten, können Sie Oracle-Datenbank-Objekte zu konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten.  
@@ -42,7 +42,7 @@ Die folgende Tabelle zeigt, welche Oracle Objekte konvertiert werden, und der da
 |Sequenzen|SSMA erstellt Sequenzobjekte (SQL Server 2012 oder SQL Server 2014) oder Oracle-Sequenzen emuliert.|  
 |Tabellen mit abhängigen Objekten wie Indizes und Trigger|SSMA erstellt Tabellen mit abhängigen Objekten.|  
 |Abhängige Objekte, z. B. Trigger anzeigen|SSMA erstellt Ansichten mit abhängigen Objekten.|  
-|Materialisierte Sichten|**SSMA erstellt indizierte Sichten in SQLServer bis auf einige Ausnahmen. Konvertierung schlägt fehl, wenn die materialisierte Sicht eine oder mehrere der folgenden Konstrukte enthält:**<br /><br />Benutzerdefinierte Funktion<br /><br />Nicht deterministische Feld / Funktion / Ausdruck ein, wählen Sie im, in dem oder der GROUP BY-Klauseln<br /><br />Verwendung von "float"-Spalte in SELECT *, wobei oder GROUP BY-Klauseln (Sonderfall des vorherigen Problem)<br /><br />Benutzerdefinierter Datentyp (inkl. geschachtelten Tabellen)<br /><br />COUNT (distinct &lt;Feld&gt;)<br /><br />FETCH<br /><br />OUTER-Joins (LEFT, RIGHT oder FULL)<br /><br />Unterabfrage, die andere anzeigen<br /><br />ÜBER, RANK, LEAD, MELDEN SIE SICH<br /><br />MIN, MAX<br /><br />UNION, MINUS, INTERSECT<br /><br />HAVING|  
+|Materialisierte Sichten|**SSMA erstellt indizierte Sichten in SQLServer bis auf einige Ausnahmen. Konvertierung schlägt fehl, wenn die materialisierte Sicht eine oder mehrere der folgenden Konstrukte enthält:**<br /><br />Benutzerdefinierte Funktion<br /><br />Nicht deterministische Feld / Funktion / Ausdruck ein, wählen Sie im, in dem oder der GROUP BY-Klauseln<br /><br />Verwendung von "float"-Spalte in SELECT *, wobei oder GROUP BY-Klauseln (Sonderfall des vorherigen Problem)<br /><br />Benutzerdefinierter Datentyp (inkl. geschachtelten Tabellen)<br /><br />COUNT (distinct &lt;Feld&gt;)<br /><br />FETCH<br /><br />OUTER-Joins (LEFT, RIGHT oder FULL)<br /><br />Unterabfrage, die andere anzeigen<br /><br />ÜBER, RANK, LEAD, MELDEN SIE SICH<br /><br />MIN, MAX<br /><br />INTERSECT-UNION, MINUS,<br /><br />HAVING|  
 |Trigger|**SSMA erstellt Trigger basierend auf den folgenden Regeln:**<br /><br />Bevor Trigger INSTEAD OF-Trigger in konvertiert wurden.<br /><br />AFTER-Trigger werden in AFTER-Trigger konvertiert.<br /><br />INSTEAD OF-Trigger werden in INSTEAD OF-Trigger konvertiert. Mehrere für den gleichen Vorgang definierten INSTEAD OF-Trigger werden in einem Trigger kombiniert.<br /><br />Trigger auf Zeilenebene werden emuliert Verwenden von Cursorn.<br /><br />Kaskadierende Trigger werden in mehrere einzelne Trigger konvertiert.|  
 |Synonyme|**Synonyme werden für die folgenden Objekttypen erstellt:**<br /><br />Tabellen und Objekttabellen<br /><br />Ansichten und Objekt-Ansichten<br /><br />Gespeicherte Prozeduren<br /><br />Funktionen<br /><br />**Synonyme für die folgenden Objekte werden aufgelöst und durch direkte Objektverweise ersetzt:**<br /><br />Sequenzen<br /><br />Pakete<br /><br />Schemaobjekte für Java-Klasse<br /><br />Benutzerdefinierte Objekttypen<br /><br />Synonyme für ein anderes Synonym können nicht migriert werden und werden als Fehler gekennzeichnet werden.<br /><br />Synonyme sind nicht für Materialized Ansichten erstellt.|  
 |Benutzerdefinierte Typen|**SSMA bietet keine Unterstützung für die Konvertierung von benutzerdefinierten Typen. Benutzerdefinierte Typen, einschließlich der Verwendung in PL/SQL-Programmen sind mit speziellen Konvertierungsfehler, die durch MDX die folgenden Regeln gekennzeichnet:**<br /><br />In varchar(8000)-Werte konvertiert, wird die Tabellenspalte, der einen benutzerdefinierten Typ konvertiert.<br /><br />Argument vom Benutzer definierten Typ an eine gespeicherte Prozedur oder Funktion in varchar(8000)-Werte konvertiert, konvertiert wird.<br /><br />Variablen des benutzerdefinierten Typs in PL/SQL-Block wird in varchar(8000)-Werte konvertiert, konvertiert.<br /><br />Tabelle der Objekte wird in eine Standardtabelle konvertiert.<br /><br />Anzeigen des Objekts wird in einer Standardsicht konvertiert.|  

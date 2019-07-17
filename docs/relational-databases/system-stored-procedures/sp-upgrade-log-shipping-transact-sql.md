@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e5b806f897a22c53688731067acf53f7b647acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119435"
 ---
 # <a name="spupgradelogshipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +39,16 @@ sp_upgrade_log_shipping
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Keine.  
+ Keine  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Sonstiges)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine.  
+ Keine  
   
 ## <a name="remarks"></a>Hinweise  
- Diese gespeicherte Prozedur wird automatisch aufgerufen, während der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade zum Aktualisieren von Metadaten für den Protokollversand. Sie müssen diese Prozedur nicht explizit aufrufen, es sei denn, beim Upgrade tritt ein Problem mit den Metadaten auf.  
+ Diese gespeicherte Prozedur wird automatisch während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Upgrades aufgerufen, um Metadaten für den Protokollversand zu aktualisieren. Sie müssen diese Prozedur nicht explizit aufrufen, es sei denn, beim Upgrade tritt ein Problem mit den Metadaten auf.  
   
  sp_upgrade_log_shipping muss in der master-Datenbank auf dem primären, sekundären oder Überwachungsserver ausgeführt werden.  
   

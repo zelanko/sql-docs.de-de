@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210113"
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "54185096"
   
 -   Mehrere anpassbare Algorithmen: Neben Algorithmen, wie z. B. clustering, neuronale Netzwerke und Entscheidungsstrukturen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining unterstützt die Entwicklung eigener benutzerdefinierten Plug-in-Algorithmen.  
   
--   Infrastruktur zum Testen von Modellen: Testen Sie die Modelle und Datasets unter Verwendung wichtiger Statistiktools, wie Kreuzvalidierung, Klassifikationsmatrizen, Prognosegütediagramme und Punktdiagramme. Erstellen und verwalten Sie einfach Test- und Trainingssätze.  
+-   Infrastruktur zum Testen von Modell: Testen Sie die Modelle und Datasets, die unter Verwendung wichtiger Statistiktools, wie kreuzvalidierung, Klassifikationsmatrizen, prognosegütediagramme und Punktdiagramme. Erstellen und verwalten Sie einfach Test- und Trainingssätze.  
   
 -   Abfragen und Drillthrough: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datamining stellt die DMX-Sprache für die Integration von Vorhersageabfragen in Anwendungen bereit. Sie können auch detaillierte Statistiken und Muster aus den Modellen extrahieren und Drillthroughs zu Falldaten durchführen.  
   
--   Clienttools: Neben den Entwicklungs- und Entwurfsoberflächen von SQL Server können Sie mithilfe der Data Mining-Add-Ins für Excel Modelle erstellen, abfragen und durchsuchen. Alternativ können Sie benutzerdefinierte Clients, einschließlich Webdienste, erstellen.  
+-   Clienttools: Neben den Entwicklungs- und Entwurfsoberflächen von SQL Server können Sie die Data Mining-Add-ins für Excel verwenden, erstellen, Abfragen und Durchsuchen von Modellen. Alternativ können Sie benutzerdefinierte Clients, einschließlich Webdienste, erstellen.  
   
--   Unterstützung von Skriptsprachen und verwaltete API: Alle Data Mining-Objekte sind vollständig programmierbar. Skripts können mithilfe von MDX, XMLA oder der PowerShell-Erweiterungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt werden. Verwenden Sie die DMX-Sprache (Data Mining Extensions, Data Mining-Erweiterungen) für die schnelle Abfrageausführung und Skripterstellung.  
+-   Unterstützung für Skriptsprachen und verwaltete API: Alle Datamining-Objekte sind vollständig programmierbar. Skripts können mithilfe von MDX, XMLA oder der PowerShell-Erweiterungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt werden. Verwenden Sie die DMX-Sprache (Data Mining Extensions, Data Mining-Erweiterungen) für die schnelle Abfrageausführung und Skripterstellung.  
   
--   Sicherheit und Bereitstellung: Bietet rollenbasierte Sicherheit durch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich separater Berechtigungen für Drillthroughs zu Modell- und Strukturdaten. Einfache Bereitstellung von Modellen auf anderen Servern, damit Benutzer auf die Muster zugreifen oder Vorhersagen ausführen können  
+-   Sicherheit und Bereitstellung: Bietet rollenbasierte Sicherheit durch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich separater Berechtigungen für Drillthroughs zu Modell-und Strukturdaten. Einfache Bereitstellung von Modellen auf anderen Servern, damit Benutzer auf die Muster zugreifen oder Vorhersagen ausführen können  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In den Themen in diesem Abschnitt werden die Hauptfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Mining sowie verwandte Tasks eingeführt.  

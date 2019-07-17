@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231871"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrieren von Power Pivot zu SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53206819"
   
 4.  **Wiederherstellung:** Stellen Sie die Datenbanken auf dem Ziel- [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Dieser Schritt kann mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ausgeführt werden.  
   
-5.  **Legen Sie die Datenbank mit Lese-/ Schreibzugriff:** Legen Sie die **Datenbank schreibgeschützt** zu **"false"**.  
+5.  **Legen Sie die Datenbank mit Lese-/ Schreibzugriff:** Legen Sie die **Datenbank schreibgeschützt** zu **"false"** .  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>Vorbereiten von Webanwendungen und Einbinden von Inhaltsdatenbanken  
  Eine ausführlichere Erläuterung der folgenden Verfahren werden soll, finden Sie unter [Aktualisieren von Datenbanken von SharePoint 2010 auf SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
@@ -92,7 +92,7 @@ ms.locfileid: "53206819"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Beheben von Problemen beim Einbinden von Datenbanken  
  In diesem Abschnitt sind mögliche Probleme zusammengefasst, die beim Einbinden der Datenbank auftreten können.  
   
-1.  **Authentifizierungsfehler:** Wenn Authentifizierungsfehler auftreten, überprüfen Sie den Authentifizierungsmodus, der von den Quellwebanwendungen verwendet wird. Der Fehler könnte durch einen Authentifizierungskonflikt zwischen der SharePoint 2013-Webanwendung und der SharePoint 2010-Webanwendung verursacht werden. Weitere Informationen finden Sie unter [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013) .  
+1.  **Authentifizierungsfehler:** Wenn Authentifizierungsfehler angezeigt wird, überprüfen Sie den Authentifizierungsmodus der Source-Webanwendungen verwenden. Der Fehler könnte durch einen Authentifizierungskonflikt zwischen der SharePoint 2013-Webanwendung und der SharePoint 2010-Webanwendung verursacht werden. Weitere Informationen finden Sie unter [1) Vorbereiten der SharePoint 2013-Farm](#bkmk_prepare_sharepoint2013) .  
   
 2.  **Fehlende PowerPivot-Dateien:** Wenn Fehler bezüglich fehlender [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] DLLs, die **spPowerPivot.msi** wurde nicht installiert oder die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Konfigurationstool so konfigurieren Sie nicht verwendet wurde [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   

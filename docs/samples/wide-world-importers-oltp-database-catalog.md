@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091252"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Datenbankkatalog "wideworldimporters"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ Die Datenbank "wideworldimporters" enthält alle der Transaktionsinformationen d
 
 Diese Schemas enthalten die Daten. Eine Reihe von Tabellen, die von allen anderen Schemas erforderlich sind, und im Anwendungsschema befinden.
 
-|Schema|Description|
+|Schema|Beschreibung|
 |-----------------------------|---------------------|
 |Application|Anwendungsweite Benutzer, Kontakte und Parameter. Enthält außerdem Verweistabellen mit Daten, die in mehreren Schemas verwendet wird|
 |Purchasing|Aktieneintrag Käufe von Lieferanten und Details zu den Lieferanten.|  
@@ -40,7 +39,7 @@ Diese Schemas enthalten die Daten. Eine Reihe von Tabellen, die von allen andere
 
 Diese Schemas werden für externe Anwendungen verwendet, die nicht direkt auf die Tabellen zulässig sind. Sie enthalten, Sichten und gespeicherten Prozeduren, die von externen Anwendungen verwendet wird.
 
-|Schema|Description|
+|Schema|Beschreibung|
 |-----------------------------|---------------------|
 |Website|Zugriff auf die Datenbank von der unternehmensportalwebsite ist über dieses Schema.|
 |Berichte|Zugriff auf die Datenbank von Reporting Services-Berichten erfolgt über dieses Schema.|
@@ -52,7 +51,7 @@ Beachten Sie, dass die Berichte und Power BI Schemas werden nicht in der ersten 
 
 Schemas für spezielle Zwecke
 
-|Schema|Description|
+|Schema|Beschreibung|
 |-----------------------------|---------------------|
 |Integration|Objekte und Verfahren für die Datawarehouse-Integration erforderlich sind (d. h. Migrieren Ihrer Daten in der Datenbank "wideworldimportersdw").|
 |Sequenzen|Enthält die Sequenzen, die von allen Tabellen in der Anwendung verwendet.|
@@ -65,7 +64,7 @@ Alle Tabellen in der Datenbank sind in den Daten.
 
 Details der Parameter und Benutzer (Benutzer und Kontakte), zusammen mit allgemeinen Verweistabellen (häufig bei mehreren anderen Schemas).
 
-|Tabelle|Description|
+|Tabelle|Beschreibung|
 |-----------------------------|---------------------|
 |SystemParameters|Enthält eine systemweite konfigurierbaren Parameter.|
 |Personen|Enthält die Benutzernamen, Kontaktinformationen für alle Benutzer, die die Anwendung verwenden und für die Personen, die die Wide World Importers an kundenorganisationen behandelt. Dies schließt die Mitarbeiter, Kunden, Lieferanten und anderen Kontakte. Für Personen, die die Berechtigung zum Verwenden des Systems oder die Website erteilt wurde, enthält die Informationen über Anmeldeinformationen.|
@@ -80,12 +79,12 @@ Details der Parameter und Benutzer (Benutzer und Kontakte), zusammen mit allgeme
 
 Details von Lieferanten und aktieneintrag Käufe.
 
-|Tabelle|Description|
+|Tabelle|Beschreibung|
 |-----------------------------|---------------------|
 |Suppliers|Main Entitätstabelle für Lieferanten (Organisationen)|
 |SupplierCategories|Kategorien für Lieferanten (z. B. Novelties, Toys, clothing, Verpacken, usw.)|
 |SupplierTransactions|Alle finanzielle Transaktionen, die Lieferanten-bezogene (Rechnungen, Zahlungen)|
-|PurchaseOrders|Details des Lieferanten Bestellungen|
+|Aufträge|Details des Lieferanten Bestellungen|
 |PurchaseOrderLines|Bestelldetailzeilen vom Lieferanten Bestellungen|
 
  
@@ -93,7 +92,7 @@ Details von Lieferanten und aktieneintrag Käufe.
 
 Details des Kunden, Vertriebsmitarbeiter und der aktieneintrag Verkäufe.
 
-|Tabelle|Description|
+|Tabelle|Beschreibung|
 |-----------------------------|---------------------|
 |Customers|Hauptentität-Tabellen für Kunden (Unternehmen oder Einzelpersonen)|
 |CustomerCategories|Kategorien für Kunden (d. h. Neuheit speichert, Supermärkten usw.)|
@@ -109,7 +108,7 @@ Details des Kunden, Vertriebsmitarbeiter und der aktieneintrag Verkäufe.
 
 Details der vordefinierten Elemente, deren betrieben und Transaktionen.
 
-|Tabelle|Description|
+|Tabelle|Beschreibung|
 |-----------------------------|---------------------|
 |StockItems|Main Entitätstabelle für vordefinierte Elemente|
 |StockItemHoldings|Nicht-temporalen Spalten für vordefinierte Elemente. Dies sind häufig aktualisierten Spalten.|

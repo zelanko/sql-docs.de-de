@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 8f6eabe706197e8ab2bfb882510b6063bf4e884c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287690"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266108"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Erstellen der Serververbindungsdateien (OracleToSQL)
 Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
@@ -66,7 +66,7 @@ Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei 
   
 </sql-server>  
 ```  
-**Beispiel: 2**  
+**Anpassen von mit VSTU 2**  
   
 ```  
 <!--Sample of server connection file commands -->  

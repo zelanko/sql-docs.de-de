@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118835"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL in C: Timestamp
 
@@ -32,12 +31,12 @@ Die folgende Tabelle zeigt die ODBC-C-Datentypen, die in denen Timestamp-SQL-Dat
 
 |C-Typ-ID|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > Zeichen Länge in Byte<br /><br /> 20 < = *Pufferlänge* < = Zeichen-Byte-Länge<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > Zeichenlänge<br /><br /> 20 < = *Pufferlänge* < = Länge von Zeichen<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|–<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|–<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Der Uhrzeitteil des Zeitstempels ist 0 (null) [a]<br /><br /> Der Uhrzeitteil des Zeitstempels ist ungleich Null [a]|Daten<br /><br /> Abgeschnittene Daten [c]|6[f]<br /><br /> 6[f]|–<br /><br /> 01S07|  
-|SQL_C_TYPE_TIME|Bereich der Sekundenbruchteile von Timestamp ist 0 (null) [a]<br /><br /> Bereich der Sekundenbruchteile von Timestamp ist ungleich Null [a]|Daten [d]<br /><br /> Abgeschnittene Daten [d], [e]|6[f]<br /><br /> 6[f]|–<br /><br /> 01S07|  
-|SQL_C_TYPE_TIMESTAMP|Bereich der Sekundenbruchteile von Timestamp wird nicht abgeschnitten, [a]<br /><br /> Bereich der Sekundenbruchteile von Timestamp wird abgeschnitten, [a]|Daten [e]<br /><br /> Abgeschnittene Daten [e]|16[f]<br /><br /> 16[f]|–<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > Zeichen Länge in Byte<br /><br /> 20 < = *Pufferlänge* < = Zeichen-Byte-Länge<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Länge der Daten in bytes<br /><br /> Nicht definiert|n/v<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > Zeichenlänge<br /><br /> 20 < = *Pufferlänge* < = Länge von Zeichen<br /><br /> *BufferLength* < 20|Daten<br /><br /> Abgeschnittene Daten [b]<br /><br /> Nicht definiert|Länge der Daten in Zeichen<br /><br /> Länge der Daten in Zeichen<br /><br /> Nicht definiert|n/v<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Die Bytelänge der Daten < = *Pufferlänge*<br /><br /> Die Bytelänge der Daten > *Pufferlänge*|Daten<br /><br /> Nicht definiert|Länge der Daten in bytes<br /><br /> Nicht definiert|n/v<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Der Uhrzeitteil des Zeitstempels ist 0 (null) [a]<br /><br /> Der Uhrzeitteil des Zeitstempels ist ungleich Null [a]|Daten<br /><br /> Abgeschnittene Daten [c]|6 [f]<br /><br /> 6 [f]|n/v<br /><br /> 01S07|  
+|SQL_C_TYPE_TIME|Bereich der Sekundenbruchteile von Timestamp ist 0 (null) [a]<br /><br /> Bereich der Sekundenbruchteile von Timestamp ist ungleich Null [a]|Daten [d]<br /><br /> Abgeschnittene Daten [d], [e]|6 [f]<br /><br /> 6 [f]|n/v<br /><br /> 01S07|  
+|SQL_C_TYPE_TIMESTAMP|Bereich der Sekundenbruchteile von Timestamp wird nicht abgeschnitten, [a]<br /><br /> Bereich der Sekundenbruchteile von Timestamp wird abgeschnitten, [a]|Daten [e]<br /><br /> Abgeschnittene Daten [e]|16 [f]<br /><br /> 16 [f]|n/v<br /><br /> 01S07|  
 
  [a] den Wert der *Pufferlänge* für diese Konvertierung ignoriert wird. Der Treiber setzt voraus, dass die Größe des **TargetValuePtr* ist die Größe der C-Datentyp.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5c1587b65df123400188ba062ef40e57f9a0a550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085314"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **HINWEIS:** Entweder *Step_id* oder *Step_name* kann angegeben werden, aber beide Angaben sind nicht möglich.  
   
-`[ @older_than = ] 'date'` Das Datum und Uhrzeit des ältesten auftragsschrittprotokolls, die Sie beibehalten möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Datum* ist **"DateTime"**, hat den Standardwert NULL. Beide **@older_than** und **@larger_than** kann angegeben werden.  
+`[ @older_than = ] 'date'` Das Datum und Uhrzeit des ältesten auftragsschrittprotokolls, die Sie beibehalten möchten. Alle Auftragsschrittprotokolle vor diesem Datum und dieser Uhrzeit werden entfernt. *Datum* ist **"DateTime"** , hat den Standardwert NULL. Beide **@older_than** und **@larger_than** kann angegeben werden.  
   
 `[ @larger_than = ] 'size_in_bytes'` Die Größe in Bytes, der das auftragsschrittprotokoll, die Sie beibehalten möchten. Alle Auftragsschrittprotokolle, die diese Größe überschreiten, werden entfernt. Beide **@larger_than** und **@older_than** kann angegeben werden.  
   

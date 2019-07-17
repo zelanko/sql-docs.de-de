@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 853390f99f02352fd7814fcec208bba1508c03a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bbcfe52e62757ea00427eb9fd6ed979eb8d32e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097388"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 
@@ -35,7 +34,7 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Wert*  
  Ein gültiger numerischer Ausdruck, der den Wert angibt, mit dem die Tupel verglichen werden.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) handelt, der ein Measure zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  

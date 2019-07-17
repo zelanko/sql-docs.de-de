@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211732"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
   Change Data Capture zeichnet Einfüge-, Aktualisierungs- und Löschaktivitäten auf, die an einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle vorgenommen werden. Hierdurch werden die Details zu diesen Änderungen in einem leicht verwendbaren relationalen Format bereitgestellt. Für die geänderten Zeilen werden die Spaltendaten sowie die Metadaten, die zur Übernahme der Änderungen in einer Zielumgebung erforderlich sind, aufgezeichnet und in Änderungstabellen gespeichert, die die Spaltenstruktur der nachverfolgten Quelltabellen widerspiegeln. Für den systematischen Zugriff auf die Änderungsdaten durch den Consumer werden Tabellenwertfunktionen bereitgestellt.  
@@ -43,7 +43,7 @@ ms.locfileid: "52748530"
   
  Jeder auf die Quelltabelle angewendete Einfüge- oder Löschvorgang erscheint als einzelne Zeile in der Änderungstabelle. Die Datenspalten der Zeile, die sich aus einem Einfügevorgang ergibt, enthalten die Spaltenwerte nach dem Einfügevorgang. Die Datenspalten der Zeile, die sich aus einem Löschvorgang ergibt, enthalten die Spaltenwerte vor dem Löschvorgang. Ein Updatevorgang erfordert einen Zeileneintrag, der die Spaltenwerte vor dem Updatevorgang angibt, und einen Zeileneintrag, der die Spaltenwerte nach dem Updatevorgang angibt.  
   
- Darüber hinaus enthält jede Zeile in einer Änderungstabelle zusätzliche Metadaten, die eine Interpretation der Änderungsaktivitäten erlauben. Die Spalte __$start_lsn identifiziert die Commit-Protokollfolgenummer (Log Sequence Number, LSN), die der Änderung zugewiesen wurde. Die Commit-LSN identifiziert sowohl die Änderungen, die innerhalb der gleichen Transaktion ausgeführt wurden, als auch die Reihenfolge der Transaktionen. Die Spalte \_\_$seqval kann verwendet werden, um die Reihenfolge weiterer Änderungen festzulegen, die innerhalb der gleichen Transaktion ausgeführt wurden. Die Spalte \_ \_$operation zeichnet den Vorgang, der der Änderung zugeordnet ist: 1 = Löschung, 2 = Einfügung, 3 = Update (anfangsimage) und 4 = Update (endimage). Die Spalte \_\_$update_mask ist eine variable Bitmaske mit einem definierten Bit für jede aufgezeichnete Spalte. Bei Einträgen für Einfüge- und Löschvorgänge werden alle Bits in der Updatemaske gesetzt. Bei Einträgen für Updatevorgänge sind dagegen nur jene Bits gesetzt, die den geänderten Spalten entsprechen.  
+ Darüber hinaus enthält jede Zeile in einer Änderungstabelle zusätzliche Metadaten, die eine Interpretation der Änderungsaktivitäten erlauben. Die Spalte __$start_lsn identifiziert die Commit-Protokollfolgenummer (Log Sequence Number, LSN), die der Änderung zugewiesen wurde. Die Commit-LSN identifiziert sowohl die Änderungen, die innerhalb der gleichen Transaktion ausgeführt wurden, als auch die Reihenfolge der Transaktionen. Die Spalte \_\_$seqval kann verwendet werden, um die Reihenfolge weiterer Änderungen festzulegen, die innerhalb der gleichen Transaktion ausgeführt wurden. Die Spalte „\_\_$operation“ zeichnet den Vorgang auf, der der Änderung zugeordnet ist: 1 = löschen, 2 = einfügen, 3 = aktualisieren (vor dem Image) und 4 = aktualisieren (nach dem Image). Die Spalte \_\_$update_mask ist eine variable Bitmaske mit einem definierten Bit für jede aufgezeichnete Spalte. Bei Einträgen für Einfüge- und Löschvorgänge werden alle Bits in der Updatemaske gesetzt. Bei Einträgen für Updatevorgänge sind dagegen nur jene Bits gesetzt, die den geänderten Spalten entsprechen.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Change Data Capture-Gültigkeitsintervall für eine Datenbank  
  Beim Change Data Capture-Gültigkeitsintervall für eine Datenbank handelt es sich um dem Zeitraum, in dem Änderungsdaten für Aufzeichnungsinstanzen verfügbar sind. Das Gültigkeitsintervall beginnt mit der Erstellung der ersten Aufzeichnungsinstanz für eine Datenbanktabelle und dauert bis zum aktuellen Zeitpunkt.  

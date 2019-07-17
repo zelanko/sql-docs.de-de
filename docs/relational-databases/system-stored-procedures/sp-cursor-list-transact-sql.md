@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108582"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_return=] *Cursor_variable_name*Ausgabe  
  Der Name einer deklarierten Cursorvariablen. *Cursor_variable_name* ist **Cursor**, hat keinen Standardwert. Bei dem Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
- [ @cursor_scope= ] *cursor_scope*  
+ [ @cursor_scope=] *Cursor_scope*  
  Gibt die Ebene der Cursor an, die gemeldet werden sollen. *Cursor_scope* ist **Int**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |1|Alle lokalen Cursor melden.|  
 |2|Alle globalen Cursor melden.|  
@@ -68,8 +67,8 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_name|**sysname**|Der Name des Cursors aus einer DECLARE CURSOR-Anweisung. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn der Cursor erstellt wurde, indem eine Cursorvariable auf einen Cursor, **Cursor_name** gibt den Namen der Cursorvariablen zurück.  In früheren Versionen gibt diese Ausgabespalte einen systemgenerierten Namen zurück.|  
 |cursor_scope|**smallint**|1 = LOKAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Die gleichen Werte, die von der CURSOR_STATUS-Systemfunktion gemeldet werden:<br /><br /> 1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet. Ein statischer, Keyset- oder Insensitivcursor weist mindestens eine Zeile auf. Bei einem dynamischen Cursor weist das Resultset keine oder mehr Zeilen auf.<br /><br /> 0 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet, weist aber keine Zeilen auf. Dynamische Cursor geben diesen Wert nie zurück.<br /><br /> -1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geschlossen.<br /><br /> -2 = Gilt nur für Cursorvariablen. Der Variablen ist kein Cursor zugewiesen. Möglicherweise hat ein OUTPUT-Parameter der Variablen einen Cursor zugewiesen, aber die gespeicherte Prozedur hat den Cursor vor der Rückgabe geschlossen.<br /><br /> -3 = Ein Cursor oder eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder für die Cursorvariable wurde kein Cursor reserviert.|  
-|model|**smallint**|1 = Insensitiv (oder statisch)<br /><br /> 2 = Keyset<br /><br /> 3 = Dynamic<br /><br /> 4 = Schneller Vorwärtscursor|  
-|Parallelität (concurrency)|**smallint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
+|model|**smallint**|1 = Insensitiv (oder statisch)<br /><br /> 2 = Keyset<br /><br /> 3 = dynamisch<br /><br /> 4 = Schneller Vorwärtscursor|  
+|Parallelität|**smallint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
 |scrollable|**smallint**|0 = Vorwärts<br /><br /> 1 = Scrollfähig|  
 |open_status|**smallint**|0 = Geschlossen<br /><br /> 1 = Geöffnet|  
 |cursor_rows|**int**|Die Anzahl von qualifizierenden Zeilen im Resultset. Weitere Informationen finden Sie unter [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  

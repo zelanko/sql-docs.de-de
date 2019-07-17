@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094340"
 ---
 # <a name="sending-long-data"></a>Senden von Long-Daten
 Definieren eines DBMS *long-Daten* als beliebiges Zeichen oder Binärdaten über eine bestimmte Größe, z. B. 254 Zeichen. Es eventuell nicht möglich, zum Speichern des gesamten Elements von long-Daten im Arbeitsspeicher, z. B. wenn das Element ein langer Text-Dokument oder eine Bitmap darstellt. Da diese Daten in einem einzigen Puffer gespeichert werden können, die Datenquelle wird an den Treiber in Teilen mit **SQLPutData** Wenn die Anweisung ausgeführt wird. Parameter für die Daten zum Zeitpunkt der Ausführung gesendet werden, werden als bezeichnet *Data-at-Execution-Parameter*.  

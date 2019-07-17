@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108776"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Wenn Sie zum Öffnen des Datenbank-Hauptschlüssels die Anmeldeinformationen verwenden, die mit sp_control_dbmasterkey_password hinzugefügt wurden, wird der Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel neu verschlüsselt. Wenn sich die Datenbank im schreibgeschützten Modus befindet, schlägt die Neuverschlüsselung fehl, und der Datenbank-Hauptschlüssel bleibt unverschlüsselt. Für den anschließenden Zugriff auf den Datenbank-Hauptschlüssel müssen Sie die OPEN MASTER KEY-Anweisung und ein Kennwort verwenden. Sie können die Verwendung eines Kennworts vermeiden, wenn Sie die Anmeldeinformationen erstellen, bevor Sie die Datenbank in den schreibgeschützten Modus versetzen.  
   
- **Potenzielle Problem mit der Abwärtskompatibilität:** derzeit die gespeicherte Prozedur überprüft nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer zukünftigen Version, die der Hauptschlüssel vorhanden sein muss, und das Kennwort in der gespeicherten Prozedur **Sp_control_dbmasterkey_password** müssen dasselbe Kennwort wie eines der Kennwörter zum Verschlüsseln des Datenbank-Hauptschlüssels verwendet werden.  
+ **Potenzielle Abwärtskompatibilitätsproblem:** Derzeit wird die gespeicherte Prozedur überprüft nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer zukünftigen Version, die der Hauptschlüssel vorhanden sein muss, und das Kennwort in der gespeicherten Prozedur **Sp_control_dbmasterkey_password** müssen dasselbe Kennwort wie eines der Kennwörter zum Verschlüsseln des Datenbank-Hauptschlüssels verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für die Datenbank.  
@@ -105,6 +104,6 @@ GO
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Anmeldeinformationen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
+ [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   
   

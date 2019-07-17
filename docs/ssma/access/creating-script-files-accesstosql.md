@@ -10,12 +10,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138772"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259829"
 ---
 # <a name="creating-script-files-accesstosql"></a>Erstellen von Skriptdateien (AccessToSQL)
 Der erste Schritt vor dem Starten der Anwendung der SSMA-Konsole die Skriptdatei erstellt werden, und bei Bedarf den Wert der Variablen-Datei und die Server-Verbindungsdatei erstellen.  
@@ -26,7 +26,7 @@ Die Skriptdatei kann viz in drei Abschnitte unterteilt werden..,:
   
 2.  **Server:** Ermöglicht den Benutzer, die Quelle/Ziel-Serverdefinitionen festzulegen. Dies kann auch in einem separaten Server-Verbindungsdatei sein.  
   
-3.  **script-commands:** Ermöglicht dem Benutzer zum Ausführen von Befehlen der SSMA-Workflow.  
+3.  **Skript-Befehle:** Ermöglicht dem Benutzer zum Ausführen von Befehlen der SSMA-Workflow.  
   
 Jeder Abschnitt wird unten im Detail beschrieben:  
   
@@ -84,9 +84,9 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     Nur ein oder anderen angegebenen Attributs kann z. B. verwendet werden:  
   
-    - source-use-last-used="true" (default) or source-server="source_servername"  
+    - Source-Verwendung – zuletzt verwendete = "True" (Standard) oder die Quellserver = "Source_servername"  
   
-    - target-use-last-used="true" (default) or target-server="target_servername"  
+    - Ziel-Verwendung – zuletzt verwendete = "True" (Standard) oder Ziel-Server = "Target_servername"  
   
     **Beispiel:**  
   
@@ -148,7 +148,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     Die erneute Verbindung Modi sind:  
   
-    -   reconnect-to-last-used-server: Wenn die Verbindung nicht aktiv ist, wird versucht, mit dem letzten maximal 5 Mal verwendete Server verbinden.  
+    -   erneut eine Verbindung herstellen und letzten-verwendet-Server: Wenn die Verbindung nicht aktiv ist, wird versucht, mit dem letzten maximal 5 Mal verwendete Server verbinden.  
   
     -   Generieren einer-Fehler: Wenn die Verbindung nicht aktiv ist, wird ein Fehler generiert.  
   
@@ -196,7 +196,7 @@ Die vom Benutzer konfigurierbaren Optionen umfassen:
   
     -   Fehler: Die Konsole zeigt einen Fehler an und hält die Ausführung.  
   
-    -   overwrite: Überschreibt vorhandene Werte des Objekts an. Standardmäßig ist diese Aktion erfolgt.  
+    -   Überschreiben: Überschreibt vorhandene Werte des Objekts an. Standardmäßig ist diese Aktion erfolgt.  
   
     -   wie folgt überspringen: Die Konsole überspringt die Objekte, die bereits vorhanden, für die Datenbank  
   

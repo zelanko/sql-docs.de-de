@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135021"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>VBA-Funktionen in MDX und DAX
 
@@ -89,7 +88,7 @@ ms.locfileid: "67500046"
 |Eingabefeld|Nicht unterstützt||  
 |InStr|Nur MDX||  
 |InStrRev|Nicht unterstützt||  
-|int|DAX, MDX||  
+|Int|DAX, MDX||  
 |ZINSZ|Nur MDX||  
 |IRR|Nur MDX||  
 |IsArray|Nur MDX||  
@@ -103,7 +102,7 @@ ms.locfileid: "67500046"
 |Join|Nicht unterstützt||  
 |LBound|Nicht unterstützt||  
 |Kleinbst|Nur MDX||  
-|Left|DAX, MDX||  
+|Links|DAX, MDX||  
 |Len|DAX, MDX||  
 |Loc|Nicht unterstützt||  
 |LOF|Nicht unterstützt||  
@@ -129,7 +128,7 @@ ms.locfileid: "67500046"
 |ZINS|Nur MDX||  
 |Ersetzen|Nicht unterstützt||  
 |RGB|Nur MDX||  
-|Right|DAX, MDX||  
+|Rechts|DAX, MDX||  
 |ZZG|Nur MDX||  
 |Round|DAX, MDX||  
 |RGlätten|Nur MDX||  
@@ -157,7 +156,7 @@ ms.locfileid: "67500046"
 |ZeitSeriell|Nur MDX||  
 |ZeitSeriellStr|DAX, MDX||  
 |Glätten|DAX, MDX||  
-|TypName|Nur MDX||  
+|TypeName|Nur MDX||  
 |UBound|Nicht unterstützt||  
 |Großbst|Nur MDX||  
 |val|Nur MDX||  

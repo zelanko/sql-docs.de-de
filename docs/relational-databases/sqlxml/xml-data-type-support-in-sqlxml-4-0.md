@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 902fecbc9400149186789877567c7ef93d8c9dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1fd2de6167b646610e8b57898b186accbbc1593d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135289"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>XML-Datentypunterstützung für SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "56034651"
   
 ## <a name="guidelines-and-limitations"></a>Richtlinien und Einschränkungen  
   
--   **\<XSD: alle >** können nicht zugeordnet werden, um einer Spalte, eine **Xml** -Datentyp. Unterstützung in SQLXML, für dieses Szenario über erfolgt die **SQL: Overflow-Feld** Anmerkung. Eine weitere Möglichkeit ist die Zuordnung einer **Xml** datentypfeld als Element **xsd: anyType '**. Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
+-   **\<XSD: alle >** können nicht zugeordnet werden, um einer Spalte, eine **Xml** -Datentyp. Unterstützung in SQLXML, für dieses Szenario über erfolgt die **SQL: Overflow-Feld** Anmerkung. Eine weitere Möglichkeit ist die Zuordnung einer **Xml** datentypfeld als Element **xsd: anyType '** . Diese Problemumgehung wird im Beispiel "Zuordnen eines XML-Elements zu einer XML-Datentypspalte" gezeigt, auf das in der oben stehenden Tabelle verwiesen wird.  
   
 -   XPath-Abfrage in den Inhalt von **Xml** -datentypspalten wird nicht unterstützt.  
   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625792"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266547"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
 Wenn SSMA Tester einen Testfall ausgeführt wird, führt die Objekte, die zu Testzwecken ausgewählt, und erstellt einen Bericht über die Ergebnisse der Überprüfung. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richtet sich danach die schemazuordnung Einstellungen für das aktuelle SSMA-Projekt.  
@@ -33,7 +33,7 @@ Wenn der Test abgeschlossen ist, wird der Testfall-Bericht erstellt. Klicken Sie
   
 ## <a name="test-case-execution-steps"></a>Testfall-Ausführungsschritte  
   
-### <a name="prerequisites"></a>Erforderliche Komponenten  
+### <a name="prerequisites"></a>Vorraussetzungen  
 SSMA-Tester wird überprüft, ob alle Voraussetzungen, für die testausführung vor Beginn des Tests erfüllt sind. Wenn bestimmte Bedingungen nicht erfüllt sind, wird eine Fehlermeldung angezeigt.  
   
 ### <a name="initialization"></a>Initialisierung  
@@ -43,20 +43,20 @@ Wird davon ausgegangen Sie, dass die überprüfte Tabelle USER_TABLE heißt. Fü
   
 ||||  
 |-|-|-|  
-|Name|Typ|Description|  
+|Name|Typ|Beschreibung|  
 |USER_TABLE$Trg|Trigger (trigger)|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
-|USER_TABLE$AUD|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
+|USER_TABLE$ AUD|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
 |USER_TABLE$AUDID|-Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
 |USER_TABLE$NEW|Ansicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
 |USER_TABLE$NEW_ID|Ansicht|ID des eingefügten und geänderter Zeilen.|  
-|USER_TABLE$OLD|Ansicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
+|USER_TABLE$ ALTE|Ansicht|Vereinfachte Darstellung von Zeilen gelöscht und überschrieben.|  
   
 Das folgende Objekt wird erstellt, in das Schema der überprüften Tabelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
-|Name|Typ|Description|  
+|Name|Typ|Beschreibung|  
 |USER_TABLE$Trg|Trigger (trigger)|Trigger, die Überwachung der Änderungen in der Tabelle überprüft werden.|  
   
 Und die folgenden Objekte werden erstellt, auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der Datenbank Ssmatesterdb.  
@@ -64,8 +64,8 @@ Und die folgenden Objekte werden erstellt, auf [!INCLUDE[ssNoVersion](../../incl
 ||||  
 |-|-|-|  
 |Name|Typ|Beschreibung|  
-|USER_TABLE$Aud|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
-|USER_TABLE$AudID|-Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
+|USER_TABLE$ Aud|-Tabelle|Die Tabelle, in dem Zeilen gelöschte und überschriebene gespeichert werden.|  
+|USER_TABLE$ AudID|-Tabelle|Die Tabelle, in dem ein neue und geänderte Zeilen gespeichert werden.|  
 |USER_TABLE|Ansicht|Vereinfachte Darstellung der tabellenänderungen.|  
 |USER_TABLE$new|Ansicht|Vereinfachte Darstellung von Zeilen eingefügt und überschrieben.|  
 |USER_TABLE$new_id|Ansicht|ID des eingefügten und geänderter Zeilen.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9aca006623d9ddb8292147d8a28c93f912fd25d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: fb8f5848ef9fdffab8592215fdcc5406b24319c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118780"
 ---
 # <a name="bookmark-types"></a>Textmarkentypen
 Alle Lesezeichen in ODBC *3.x* variabler Länge, die Lesezeichen. Dadurch wird eine primary key- oder eines eindeutigen Indexes einer Tabelle, die als Lesezeichen verwendet werden zugeordnet. Das Lesezeichen auch kann ein 32-Bit-Wert, wie in ODBC verwendet wurde *2.x*. Um anzugeben, dass ein Lesezeichen mit einem Cursor einen ODBC verwendet wird *3.x* Anwendung verwendet wird, legt das SQL_ATTR_USE_BOOKMARK-Anweisungsattribut auf SQL_UB_VARIABLE fest. Ein Lesezeichen variabler Länge wird automatisch verwendet.  
