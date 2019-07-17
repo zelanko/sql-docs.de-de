@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078201"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
   
-`[ @server_name = ] 'server'` Der Name des Servers, an dem Ziel des Auftrags. *Server* ist **nvarchar(30)**, hat den Standardwert ist N'(Local)' ". *Server* kann es sich um **(LOCAL)** für einen lokalen Server oder den Namen eines vorhandenen Zielservers.  
+`[ @server_name = ] 'server'` Der Name des Servers, an dem Ziel des Auftrags. *Server* ist **nvarchar(30)** , hat den Standardwert ist N'(Local)' ". *Server* kann es sich um **(LOCAL)** für einen lokalen Server oder den Namen eines vorhandenen Zielservers.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

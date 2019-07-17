@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigrequest (Transact-SQL) | Microsoft Docs
+title: MSpeer_conflictdetectionconfigrequest (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5489a2135882415b27bbe5dd7c62c7759a0f71bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecd4ef541422b1241689f17ab5c4f1a53bcc0a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115041"
 ---
 # <a name="mspeerconflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Wird in der Peer-zu-Peer-Replikation verwendet, um topologieübergreifende Konfigurationsanforderungen für eine Veröffentlichung zu verfolgen. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Identifiziert eine Konfliktkonfigurationsanforderung. Die Spalte Request_id in [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md) verwendet diesen Wert.|  
 |publication|**sysname**|Name der Veröffentlichung, aus der die Konfliktkonfigurationsanforderung stammt.|  

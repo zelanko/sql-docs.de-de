@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9b8685f15ee926d4f92470980d818fc12f3b3105
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995d39887aa6357519ce0cbf4771ae796b1ece69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094503"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Datenbank-E-Mail-Profil und -Konto erstellen (Dialogfeld)
 
@@ -39,7 +38,7 @@ ms.locfileid: "65489652"
   
 ## <a name="outgoing-smtp-mail-server"></a>Postausgangsserver (SMTP)  
   
-|Steuerelementname|Description|  
+|Steuerelementname|Beschreibung|  
 |------------------|-----------------|  
 |**E-Mail-Adresse**|Geben Sie den Namen der E-Mail-Adresse für das Konto ein. Dies ist die E-Mail-Adresse, von der aus die E-Mail gesendet wird. Sie muss das folgendes Format aufweisen: *E-Mail-Name*@*Domänenname*. Ein Beispiel für eine E-Mail-Adresse ist sales@contoso.com.|  
 |**Anzeigename**|Optionale Einstellung. Geben Sie den Namen ein, der in den von diesem Konto aus versendeten E-Mails angezeigt wird. Ein Beispiel für den Anzeigenamen ist Contoso Sales Group.|  

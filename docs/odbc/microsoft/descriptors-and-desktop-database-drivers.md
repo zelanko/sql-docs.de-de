@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112051"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Deskriptoren und Desktop-Datenbanktreiber
 Ein Deskriptor ist eine Datenstruktur, die Informationen über die Spaltendaten oder dynamischen Parametern enthält. **SQLGetDescField** kann verwendet werden, um die unten aufgeführten unterstützten Deskriptoren abzurufen. Implementierung Parameter Deskriptoren (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor) werden nicht automatisch aufgefüllt, da **SQLDescribeParam** wird nicht unterstützt. Deskriptorfelder, die über Jet (z. B. SQL_DESC_BASE_TABLE_NAME) nicht verfügbar sind, werden ebenfalls nicht unterstützt.  

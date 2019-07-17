@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211665"
 ---
 # <a name="create-views"></a>Erstellen von Sichten
   Sie können in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]Sichten erstellen. Eine Sicht kann für folgende Zwecke verwendet werden:  
@@ -60,9 +60,9 @@ ms.locfileid: "54134400"
   
 1.  Erweitern Sie im **Objekt-Explorer**die Datenbank, in der Sie die neue Sicht erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten**, und klicken Sie anschließend auf **Neue Sicht…**.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sichten**, und klicken Sie anschließend auf **Neue Sicht…** .  
   
-3.  In der **Tabelle hinzufügen** Dialogfeld wählen das Element oder Elemente, die in die neue Ansicht aus einem der folgenden Registerkarten enthalten sein sollen: Tabellen, Sichten, Funktionen und Synonyme.  
+3.  Wählen Sie im Dialogfeld **Tabelle hinzufügen** auf einer der folgenden Registerkarten das Element oder die Elemente aus, die Sie in die neue Sicht einschließen möchten: Tabellen, Sichten, Funktionen und Synonyme.  
   
 4.  Klicken Sie auf **Hinzufügen**und dann auf **Schließen**.  
   

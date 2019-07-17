@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 117438f012686ee7fb40070539aa0848ecc78661
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112874"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Arbeiten mit SSMA für die Sybase-Konsole (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), Version für Sybase Adaptive Server Enterprise (ASE) ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als eine Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Migrationszyklus reduziert und skaliert Migrationsaufwand erforderlich ist.  
@@ -36,7 +35,7 @@ In diesem Abschnitt behandelten Themen umfassen:
 |[Arbeiten mit den Beispielskriptdateien der Konsole &#40;SybaseToSQL&#41;](../../ssma/sybase/working-with-the-sample-console-script-files-sybasetosql.md)|Beschreibt, wie einfach die Skripts anpassen, die in den Beispieldateien zusammen mit dem Produkt bereitgestellt wurden|  
 |[Verwalten von Kennwörtern &#40;SybaseToSQL&#41;](../../ssma/sybase/managing-passwords-sybasetosql.md)|Kennwortverschlüsselung und Entschlüsselung und beim Importieren / Exportieren von Kennwortinformationen beschreibt.|  
 |[Generieren von Berichten &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Listet die Befehle zum Generieren von Berichten.|  
-|[Troubleshooting &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
+|[Problembehandlung bei &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für Sybase Console(SybaseToSQL)](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  

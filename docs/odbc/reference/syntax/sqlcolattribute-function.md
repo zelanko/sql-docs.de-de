@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118701"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute-Funktion
 **Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standards Compliance: ISO 92  
+ Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
   
  **Zusammenfassung**  
  **SQLColAttribute** Deskriptorinformationen für eine Spalte in einem Resultset zurückgegeben. Informationen der Sicherheitsbeschreibung wird als eine Zeichenfolge, einen Deskriptor abhängige Wert oder ein ganzzahliger Wert zurückgegeben.  
@@ -77,7 +76,7 @@ SQLRETURN SQLColAttribute (
   
 -   Wenn *CharacterAttributePtr* ist ein Zeiger auf ein binärer Puffer, der Anwendung stellen das Ergebnis der SQL_LEN_BINARY_ATTR (*Länge*)-Makro in *Pufferlänge*. Dadurch wird einen negativen Wert im platziert *Pufferlänge*.  
   
--   Wenn *CharacterAttributePtr* ist ein Zeiger auf einen Datentyp mit fester Länge *Pufferlänge* muss eine der folgenden sein: SQL_IS_INTEGER, SQL_IS_UNINTEGER, SQL_SMALLINT, or SQLUSMALLINT.  
+-   Wenn *CharacterAttributePtr* ist ein Zeiger auf einen Datentyp mit fester Länge *Pufferlänge* muss eine der folgenden sein: SQL_IS_INTEGER SQL_IS_UNINTEGER, SQL_SMALLINT oder SQLUSMALLINT.  
   
  *StringLengthPtr*  
  [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierung Byte für Zeichendaten) zurück in zurück zur Verfügung **CharacterAttributePtr*.  
@@ -90,7 +89,7 @@ SQLRETURN SQLColAttribute (
  [Ausgabe] Ein Zeiger auf eine ganze Zahl Puffer für die Rückgabe des Werts in der *FieldIdentifier* Feld der *ColumnNumber* Zeile vom IRD, wenn das Feld einen numerischen Deskriptortyp, z. B. SQL_DESC_COLUMN_LENGTH ist. Andernfalls wird das Feld nicht verwendet. Bitte beachten Sie, dass einige Treiber nur die untere 32-Bit-schreiben können oder 16-Bit, der einen Puffer und eine verlassen Bits höherer Ordnung unverändert. Aus diesem Grund sollten Anwendungen den Wert auf 0 initialisiert, vor dem Aufrufen dieser Funktion.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLColAttribute** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *HandleType*von SQL_HANDLE_STMT auf, und ein *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLColAttribute** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
@@ -104,7 +103,7 @@ SQLRETURN SQLColAttribute (
 |HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagField** von Diagnosedaten Struktur beschreibt den Fehler und seine Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
 |HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* von einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese Funktion Aynchronous wurde noch ausgeführt werden, wenn SQLColAttribute aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) die Funktion wurde vor dem Aufruf aufgerufen **SQLPrepare**, **SQLExecDirect**, oder einer Katalogfunktion für die *StatementHandle*.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese Funktion Aynchronous wurde noch ausgeführt werden, wenn SQLColAttribute aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) die Funktion wurde vor dem Aufruf aufgerufen **SQLPrepare**, **SQLExecDirect**, oder einer Katalogfunktion für die *StatementHandle*.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM)  *\*CharacterAttributePtr* ist eine Zeichenfolge und *Pufferlänge* war kleiner als 0, aber nicht SQL_NTS gleich.|  
 |HY091|Ungültiger Deskriptorfeldbezeichner|Der angegebene Wert für das Argument *FieldIdentifier* war keiner der definierten Werte und war kein implementierungsdefinierte Wert.|  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  Die folgende Tabelle enthält die Sicherheitsbeschreibung-Typen, die vom **SQLColAttribute**. Der Typ für *NumericAttributePtr* Werte **SQLLEN \*** .  
   
-|*FieldIdentifier*|Information<br /><br /> in zurückgegeben|Description|  
+|*FieldIdentifier*|Information<br /><br /> in zurückgegeben|Beschreibung|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE, wenn die Spalte eine Spalte automatisch inkrementiert wird.<br /><br /> SQL_FALSE, wenn die Spalte keiner Spalte automatisch inkrementiert oder nicht numerisch ist.<br /><br /> Dieses Feld gilt für numerische Spalten vom Typ nur zur Verfügung. Eine Anwendung können Sie die Werte in eine Zeile mit sloupec Autoincrement eingefügt, aber die Werte in der Spalte in der Regel kann nicht aktualisiert werden.<br /><br /> Wenn eine Einfügung in sloupec Autoincrement erfolgt, wird ein eindeutiger Wert zum Zeitpunkt des Einfügens in die Spalte eingefügt. Die Schrittweite ist nicht definiert, aber Daten datenquellenspezifische ist. Eine Anwendung sollte nicht davon ausgehen, dass sloupec Autoincrement bestimmten Zeitpunkt oder Schritten durch keinen bestimmten Wert beginnt.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|Der Name der Basisspalte für das Ergebnis legen Spalte. Wenn ein Name der Basisspalte nicht (wie im Fall von Spalten, bei denen Ausdrücke) vorhanden ist, enthält diese Variable eine leere Zeichenfolge.<br /><br /> Diese Informationen werden vom SQL_DESC_BASE_COLUMN_NAME-Datensatzfeld vom IRD zurückgegeben, die ein Feld schreibgeschützt ist.|  
@@ -172,7 +171,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE, wenn die Spalte in einer WHERE-Klausel verwendet werden kann. (Dies ist der SQL_UNSEARCHABLE-Wert in ODBC 2. identisch. *x*.)<br /><br /> SQL_PRED_CHAR, wenn die Spalte in einer WHERE-Klausel jedoch nur mit dem LIKE-Prädikat verwendet werden kann. (Dies ist der SQL_LIKE_ONLY-Wert in ODBC 2. identisch. *x*.)<br /><br /> SQL_PRED_BASIC, wenn die Spalte in einer WHERE-Klausel mit allen Vergleichsoperatoren mit Ausnahme von ähnlichen verwendet werden kann. (Dies ist der SQL_EXCEPT_LIKE-Wert in ODBC 2. identisch. *x*.)<br /><br /> SQL_PRED_SEARCHABLE, wenn die Spalte in einer WHERE-Klausel mit jedem Vergleichsoperator verwendet werden kann.<br /><br /> Spalten vom Datentyp SQL_LONGVARCHAR und in der Regel return SQL_PRED_CHAR SQL_LONGVARBINARY.|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|Der Name der Tabelle, die die Spalte enthält. Der zurückgegebene Wert ist Implementierung definiert, wenn die Spalte ein Ausdruck ist, oder wenn die Spalte Teil einer Ansicht ist.<br /><br /> Wenn Sie den Namen der Tabelle nicht bestimmt werden kann, wird eine leere Zeichenfolge zurückgegeben.|  
 |SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|Ein numerischer Wert, der angibt, den SQL-Datentyp.<br /><br /> Wenn *ColumnNumber* ist gleich 0 ist, wird SQL_BINARY für Lesezeichen mit variabler Länge zurückgegeben und SQL_INTEGER für Lesezeichen mit fester Länge ist.<br /><br /> Für die Datentypen "DateTime" und das Intervall gibt dieses Feld den Datentyp für die ausführliche zurück: SQL_DATETIME oder SQL_INTERVAL. (Weitere Informationen finden Sie unter [-datentypbezeichnungen und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) in Anhang D: Datentypen.<br /><br /> Diese Informationen werden vom SQL_DESC_TYPE-Datensatzfeld vom IRD zurückgegeben. **Hinweis**:  Die Arbeit mit ODBC 2. *x* Treiber, verwenden Sie stattdessen SQL_DESC_CONCISE_TYPE.|  
-|SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|Daten Datenquelle abhängiger Datentypname; z. B. "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".<br /><br /> Wenn der Typ unbekannt ist, wird eine leere Zeichenfolge zurückgegeben.|  
+|SQL_DESC_TYPE_NAME VERWENDET WIRD (ODBC 1.0)|*CharacterAttributePtr*|Daten Datenquelle abhängiger Datentypname; z. B. "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" oder "CHAR () für BIT-Daten".<br /><br /> Wenn der Typ unbekannt ist, wird eine leere Zeichenfolge zurückgegeben.|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED oder SQL_UNNAMED. Wenn vom IRD SQL_DESC_NAME-Felds einen Spaltenalias oder einen Spaltennamen enthält, wird die SQL_NAMED zurückgegeben. Wenn Sie keine Spaltennamen oder Spaltenalias vorhanden ist, wird die SQL_UNNAMED zurückgegeben.<br /><br /> Diese Informationen werden vom SQL_DESC_UNNAMED-Datensatzfeld vom IRD zurückgegeben.|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE, wenn die Spalte (oder nicht numerisch) ohne Vorzeichen ist.<br /><br /> SQL_FALSE, wenn die Spalte signiert ist.|  
 |SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|Spalte wird von den Werten der definierten Konstanten beschrieben:<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE beschreibt die aktualisierbarkeit der Spalte im Resultset, nicht die Spalte in der Basistabelle. Die aktualisierbarkeit des auf dem die Resultsetspalte basiert Basisspalte kann von den Wert in dieses Feld unterscheiden. Kann auf den Datentyp, Benutzerberechtigungen und die Definition des Resultsets selbst, ob eine Spalte aktualisiert werden basieren. Wenn unklar ist, ob eine Spalte aktualisiert werden kann, sollte die SQL_ATTR_READWRITE_UNKNOWN zurückgegeben werden.|  

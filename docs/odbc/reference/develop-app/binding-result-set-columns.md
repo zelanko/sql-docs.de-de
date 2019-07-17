@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: becda51a0fac924fce31e6cb15331321990d8a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135002"
 ---
 # <a name="binding-result-set-columns"></a>Binden von Resultsetspalten
 Anwendungen können binden, wie viele oder wenige Spalten des Resultsets, wie sie auswählen, einschließlich binden überhaupt keine Spalten. Wenn eine Datenzeile abgerufen wird, gibt der Treiber die Daten für die gebundenen Spalten für die Anwendung zurück. Gibt an, ob die Anwendung aller Spalten im Resultset bindet, hängt von der Anwendung ab. Anwendungen, die in der Regel Generieren von Berichten haben z. B. kein festes Format; solche Anwendungen erstellt ein Resultset enthält alle Spalten im Bericht verwendeten und binden Sie und die Daten für alle diese Spalten abrufen. Anwendungen, die Bildschirme, die vollständigen Daten, in einigen Fällen anzeigen können der Benutzer entscheiden, welche Spalten angezeigt; solche Anwendungen erstellen, ein Resultset mit allen Spalten, die der Benutzer kann jedoch binden und die Daten nur für diese Spalten, die vom Benutzer ausgewählten abrufen.  

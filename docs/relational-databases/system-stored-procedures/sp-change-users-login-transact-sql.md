@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120228"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @Action= ] '*action*'  
+ [ @Action=] '*Aktion*"  
  Beschreibt die von der Prozedur durchzuführende Aktion. *Aktion* ist **varchar(10)** . *Aktion* kann einen der folgenden Werte aufweisen.  
   
 |Wert|Beschreibung|  
@@ -57,7 +56,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @UserNamePattern=] '*Benutzer*"  
  Der Name eines Benutzers in der aktuellen Datenbank. *Benutzer* ist **Sysname**, hat den Standardwert NULL.  
   
- [ @LoginName= ] '*login*'  
+ [ @LoginName=] '*Anmeldung*"  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
  [ @Password=] '*Kennwort*"  
@@ -70,7 +69,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|Datenbank-Benutzername.|  
 |UserSID|**varbinary(85)**|Sicherheits-ID des Benutzers.|  
@@ -124,7 +123,7 @@ GO
  [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [Sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   

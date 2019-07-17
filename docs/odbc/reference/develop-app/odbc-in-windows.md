@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98e61767-12ed-4aec-816e-639bd9c27b31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e789a4bccbc1aade9536cd91b331f3cabdd85a6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f06b10f1d69b7165e1193b6be78e5aa8d38b1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104801"
 ---
 # <a name="odbc-in-windows"></a>ODBC in Windows
 Die folgenden Elemente gelten nur für ODBC, die in den Betriebssystemen Microsoft® Windows NT/Windows 2000 und Microsoft Windows® 95/98 ausgeführt wird.  

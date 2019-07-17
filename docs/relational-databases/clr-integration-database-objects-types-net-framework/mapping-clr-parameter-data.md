@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 530db4d31d3db4773713816f1b68404990997512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081313"
 ---
 # <a name="mapping-clr-parameter-data"></a>Zuordnen von CLR-Parameterdaten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +50,8 @@ ms.locfileid: "52534126"
 |**DATETIMEOFFSET**|**Keine**|**"DateTimeOffset", auf NULL festlegbare\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal, auf NULL festlegbar\<Decimal >**|  
 |**float**|**SqlDouble**|**Doppelte, auf NULL festlegbar\<Double >**|  
-|**geography**|**"Sqlgeography"**<br /><br /> **"Sqlgeography"** ist definiert in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist und heruntergeladen werden kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**Geometrie**|**"Sqlgeometry"**<br /><br /> **"Sqlgeometry"** ist definiert in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist und heruntergeladen werden kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
+|**geography**|**SqlGeography**<br /><br /> **"Sqlgeography"** ist definiert in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist und heruntergeladen werden kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
+|**Geometrie**|**SqlGeometry**<br /><br /> **"Sqlgeometry"** ist definiert in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist und heruntergeladen werden kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** ist definiert in "Microsoft.SqlServer.Types.dll", die mit SQL Server installiert ist und heruntergeladen werden kann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [-feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
 |**image**|None|None|  
 |**int**|**SqlInt32**|**Int32, auf NULL festlegbare\<Int32 >**|  
@@ -69,13 +68,13 @@ ms.locfileid: "52534126"
 |**sql_variant**|None|**Objekt**|  
 |**table**|None|None|  
 |**text**|None|None|  
-|**Uhrzeit**|None|**TimeSpan, auf NULL festlegbare\<TimeSpan >**|  
+|**time**|None|**TimeSpan, auf NULL festlegbare\<TimeSpan >**|  
 |**timestamp**|None|None|  
 |**tinyint**|**SqlByte**|**Byte, auf NULL festlegbare\<Byte >**|  
 |**uniqueidentifier**|**SqlGuid**|**GUID, die NULL-Werte zulassen\<Guid >**|  
 |**Eine benutzerdefinierte type(UDT)**|None|Dieselbe Klasse, die in derselben Assembly oder einer abhängigen Assembly an den benutzerdefinierten Typ gebunden ist.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
-|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**Byte, Byte [], Nullable\<Byte >**|  
+|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
 |**varchar**|None|None|  
 |**xml**|**SqlXml**|None|  
   
@@ -111,9 +110,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR-Datentyp (SQL Server)**|**SQL Server-Datentyp**|  
-|**Dezimalzahl**|SMALLMONEY|  
+|**Decimal**|SMALLMONEY|  
 |**SqlMoney**|SMALLMONEY|  
-|**Dezimalzahl**|money|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   
@@ -121,7 +120,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |Aktualisierter Inhalt|  
 |---------------------|  
-|Hinzugefügt **"sqlgeography"**, **"sqlgeometry"**, und **SqlHierarchyId** Typen, um der Zuordnungstabelle.|  
+|Hinzugefügt **"sqlgeography"** , **"sqlgeometry"** , und **SqlHierarchyId** Typen, um der Zuordnungstabelle.|  
   
 ## <a name="see-also"></a>Siehe auch  
  [SQL Server-Datentypen in .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  

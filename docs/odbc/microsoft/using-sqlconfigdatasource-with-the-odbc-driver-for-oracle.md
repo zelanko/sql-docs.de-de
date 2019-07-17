@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088035"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Verwenden von SQLConfigDatasource mit dem ODBC-Treiber für Oracle
 > [!IMPORTANT]  
@@ -33,9 +32,9 @@ ms.locfileid: "63259334"
   
  In der folgenden Tabelle *eine/N* bedeutet, dass eine beliebige gültige alphanumerische Zeichenfolge bis zu die maximal zulässige Länge. *Max. Len* (maximale Länge) ist die maximale zulässige Zeichenfolgenlänge von der Einstellung, einschließlich des Zeichens der Zeichenfolge-Terminator akzeptiert.  
   
-|Einstellung|Max. Länge|Standardwert|Gültige Werte|Description|  
+|Einstellung|Max. Länge|Standardwert|Gültige Werte|Beschreibung|  
 |-------------|-------------|-------------------|------------------|-----------------|  
-|BufferSize|7|65535|1000|Minimale Fetchpuffer Größe bis 65535 Bytes.|  
+|Puffergröße|7|65535|1000|Minimale Fetchpuffer Größe bis 65535 Bytes.|  
 |CatalogCap|2|1|0 oder 1|Bei 1 werden nonquoted Bezeichner in Großbuchstaben umwandeln, in dem Katalog Funktionen.|  
 |ConnectString|128|""|A/N|Verbindungszeichenfolge. Erforderliche Methode den Namen des Servers mit dem Treiber Msorcl10.dll angeben.|  
 |Beschreibung|256|""|A/N|Beschreibung|  

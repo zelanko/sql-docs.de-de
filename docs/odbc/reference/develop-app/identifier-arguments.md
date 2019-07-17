@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138995"
 ---
 # <a name="identifier-arguments"></a>Bezeichnerargumente
 Wenn eine Zeichenfolge in einem Argument Bezeichner in Anführungszeichen steht, wird der Treiber entfernt führende und nachfolgende Leerzeichen und behandelt buchstäblich die Zeichenfolge in Anführungszeichen. Wenn die Zeichenfolge nicht in Anführungszeichen eingeschlossen ist, entfernt der Treiber nachfolgende Leerzeichen und Aufteilungen die Zeichenfolge in Großbuchstaben. Wird ein ID-Argument auf einen null-Zeiger gibt SQL_ERROR zurück, und SQLSTATE HY009 (Ungültige Verwendung von null-Zeiger), es sei denn, das Argument ein Katalogname ist und Kataloge werden nicht unterstützt.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138412"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51657459"
   
  Weitere Informationen finden Sie unter [Anwendungsdomänen](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|Adresse von der **AppDomain**. Alle verwalteten Objekte im Besitz eines Benutzers immer, in der gleichen geladen werden Datenbank **AppDomain**. Verwenden Sie diese Spalte, um alle in diesem derzeit geladenen Assemblys suchen **AppDomain** in **dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID der **AppDomain**. Jede **AppDomain** hat eine eindeutige ID.|  
@@ -59,13 +58,13 @@ ms.locfileid: "51657459"
   
 ## <a name="appdomain-initialization"></a>AppDomain-Initialisierung  
   
-|Status|Description|  
+|Status|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|Die **AppDomain** erstellt wird.|  
   
 ## <a name="appdomain-usage"></a>AppDomain-Verwendung  
   
-|Status|Description|  
+|Status|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|Die Laufzeit **AppDomain** ist für die Verwendung von mehreren Benutzern bereit.|  
 |E_APPDOMAIN_SINGLEUSER|Die **AppDomain** ist zur Verwendung in DDL-Vorgängen bereit. Diese unterscheiden sich von E_APPDOMAIN_SHARED, indem im Gegensatz zu DDL-Vorgängen freigegebene AppDomains für die CLR-Integration verwendet werden, . Solche AppDomains werden von anderen gleichzeitigen Vorgängen isoliert.|  
@@ -73,7 +72,7 @@ ms.locfileid: "51657459"
   
 ## <a name="appdomain-cleanup"></a>AppDomain-Cleanup  
   
-|Status|Description|  
+|Status|Beschreibung|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat angefordert, dass der CLR Entladen der **AppDomain**, in der Regel, da die Assembly, die verwalteten Datenbankobjekte enthält, geändert oder gelöscht wurde.|  
 |E_APPDOMAIN_UNLOADED|Die CLR wurde entladen der **AppDomain**. Dies ist normalerweise das Ergebnis einer ausweitungsprozedur aufgrund von **ThreadAbort**, **OutOfMemory**, oder eine nicht behandelte Ausnahme im Benutzercode.|  

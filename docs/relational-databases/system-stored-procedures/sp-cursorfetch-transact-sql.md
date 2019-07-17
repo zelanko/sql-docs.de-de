@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108513"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  Gibt an, welcher Cursorpuffer abgerufen werden soll. *FetchType* ist ein optionaler Parameter, der einen der folgenden ganzzahligen Eingabewerte erfordert.  
   
-|Wert|Name|Description|  
+|Wert|Name|Beschreibung|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Ruft den ersten Puffer mit *Nrows* Zeilen. Wenn *Nrows* gleich 0 ist, der Cursor vor dem Resultset positioniert ist und keine Zeilen zurückgegeben werden.|  
 |0x0002|NEXT|Ruft den nächsten Puffer mit *Nrows* Zeilen.|  
@@ -65,7 +64,7 @@ sp_cursorfetch cursor
   
  Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
   
- *rownum*  
+ *rowNum*  
  Ist ein optionaler Parameter, die verwendet wird, an die Zeilenposition für die ABSOLUTE und INFO *Fetchtype* Werte mithilfe von für die Eingabe und/oder Ausgabe nur ganzzahlige Werte. *RowNum* dient als Zeilenoffset für die *Fetchtype* -Bitwert RELATIVE. *RowNum* wird für alle anderen Werte ignoriert. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.  
   
  *nrows*  
@@ -80,7 +79,7 @@ sp_cursorfetch cursor
  In den folgenden Tabellen sind die Werte dargestellt, die bei Angabe des Bitwerts INFO zurückgegeben werden können.  
   
 > [!NOTE]  
->  decodiert werden:   Wenn keine Zeilen zurückgegeben werden, bleibt der Pufferinhalt unverändert zu lassen.  
+>  :   Wenn keine Zeilen zurückgegeben werden, bleibt der Pufferinhalt unverändert zu lassen.  
   
 |*\<rownum>*|Festlegen auf|  
 |------------------|------------|  

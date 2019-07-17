@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 067a39c807b546bc8364bab05d0423f86407a625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127469"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Enthält Informationen zu laufenden und abgeschlossenen sicherungs- und Wiederherstellungsvorgänge in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], und Informationen zu laufenden und abgeschlossenen Sicherung, Wiederherstellung und Ladevorgänge in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Die Informationen persistieren über Systemneustarts.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|Eindeutiger Bezeichner für eine bestimmte Sicherung, Wiederherstellung oder Auslastungstests.<br /><br /> Der Schlüssel für diese Sicht.||  
 |NAME|**nvarchar(255)**|NULL für den Auslastungstest. Optionaler Name für die Sicherung oder Wiederherstellung.||  
@@ -40,7 +39,7 @@ ms.locfileid: "63047216"
 |Principal_id|**int**|ID des Benutzers, der den Vorgang anfordert.||  
 |session_id|**nvarchar(32)**|Die ID der Sitzung, den Vorgang.|Finden Sie unter Sitzungs-ID in [dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |request_id|**nvarchar(32)**|Die ID der Anforderung den Vorgang. Für das Laden ist dies der aktuellen oder letzten Anforderung, die diese Last zugeordnet...|Finden Sie im Anforderungs-ID [dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
-|status|**nvarchar(16)**|Status der Ausführung.|'CANCELLED','COMPLETED','FAILED','QUEUED','RUNNING'|  
+|status|**nvarchar(16)**|Status der Ausführung.|"ABGEBROCHEN", "ABGESCHLOSSEN", "FAILED", "IN WARTESCHLANGE", "WIRD AUSGEFÜHRT"|  
 |Wird ausgeführt|**int**|Prozentsatz der Fertigstellung.|0 bis 100|  
 |Befehl|**nvarchar(4000)**|Vollständiger Text des Befehls durch den Benutzer gesendet.|Wird bei mehr als 4000 Zeichen (Zählung von Leerzeichen) abgeschnitten.|  
 |rows_processed|**bigint**|Anzahl der Zeilen, die als Teil dieses Vorgangs verarbeitet.||  

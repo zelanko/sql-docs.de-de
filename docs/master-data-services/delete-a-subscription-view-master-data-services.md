@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0409df7157705d5e2c8b5ea0fdfe18ef4fd0e4c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e37b2b4f4f6dc101f553fe4a399e428d1580b42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094366"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Löschen einer Abonnementsicht (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65478645"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Abonnementsicht löschen, die Sie nicht mehr benötigen. Wenn Sie eine Abonnementsicht in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] löschen, wird die Sicht aus der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank entfernt. Sie können eine Abonnementsicht auch bearbeiten.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die entsprechende Berechtigung für den Zugriff auf den Funktionsbereich **Integrationsmanagement** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  

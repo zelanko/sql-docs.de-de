@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137771"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben. Z. B. wenn die **MSmerge_conflict_Customers** Tabelle hat Konfliktzeilen für die **WA** und **Zertifizierungsstelle** Publications, übergeben einen Namen für die Veröffentlichung **Zertifizierungsstelle**  ruft Konflikte für die **Zertifizierungsstelle** Veröffentlichung.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** . Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben. Z. B. wenn die **MSmerge_conflict_Customers** Tabelle hat Konfliktzeilen für die **WA** und **Zertifizierungsstelle** Publications, übergeben einen Namen für die Veröffentlichung **Zertifizierungsstelle**  ruft Konflikte für die **Zertifizierungsstelle** Veröffentlichung.  
   
-`[ @conflict_table = ] 'conflict_table'` Ist der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikttabellen heißen mithilfe der Formatnamen mit **MSmerge_conflict\__Veröffentlichung\_Artikel_**, mit eine Tabelle pro veröffentlichtem Artikel.  
+`[ @conflict_table = ] 'conflict_table'` Ist der Name der Konflikttabelle. *Conflict_table* ist **Sysname**, hat keinen Standardwert. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden Konflikttabellen heißen mithilfe der Formatnamen mit **MSmerge_conflict\__Veröffentlichung\_Artikel_** , mit eine Tabelle pro veröffentlichtem Artikel.  
   
 `[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
@@ -55,7 +54,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="result-sets"></a>Resultsets  
  **Sp_helpmergeconflictrows** gibt ein Resultset aus der Basistabellenstruktur und diese zusätzlichen Spalten besteht.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|Ursprung des Konflikts.|  
 |**conflict_type**|**int**|Code zur Angabe des Konflikttyps:<br /><br /> **1** = Update-Konflikt: Der Konflikt wurde auf Zeilenebene erkannt.<br /><br /> **2** = Spalte Update-Konflikt: Der Konflikt auf Spaltenebene erkannt.<br /><br /> **3** = Update, Delete gewinnt-Konflikt: Der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = Update gewinnt Delete-Konflikt: Der gelöschte Zeilen-GUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = Fehler beim Hochladen einer Insert: Der Einfügevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = Fehler beim Herunterladen einer Insert: Der Einfügevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = Fehler beim Löschen der hochladen: Der Löschvorgang des Abonnenten konnte nicht an den Verleger hochgeladen werden.<br /><br /> **8** = Fehler beim Löschen der Download: Der Löschvorgang des Verlegers konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = Fehler beim Aktualisieren der hochladen: Der Updatevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = Fehler beim Download aktualisieren: Der Updatevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **12** = logischer Datensatz Update gewinnt löschen: Der gelöschte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **13** = logischer Datensatz Konflikt Insert aktualisieren: Fügen Sie einen logischen Datensatz verursacht einen Konflikt mit einem Update.<br /><br /> **14** = logischer Datensatz löschen, WINS-Update-Konflikt: Der aktualisierte logische Datensatz, der den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.|  

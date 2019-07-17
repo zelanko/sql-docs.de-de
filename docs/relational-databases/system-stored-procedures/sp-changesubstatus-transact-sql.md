@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113809"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,23 +64,23 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%**. Wenn *Veröffentlichung* nicht angegeben ist, werden alle Veröffentlichungen betroffen sind.  
+`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** . Wenn *Veröffentlichung* nicht angegeben ist, werden alle Veröffentlichungen betroffen sind.  
   
-`[ @article = ] 'article'` Ist der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. *Artikel* ist **Sysname**, hat den Standardwert **%**. Wenn *Artikel* nicht angegeben ist, wird allen Artikeln betroffen sind.  
+`[ @article = ] 'article'` Ist der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. *Artikel* ist **Sysname**, hat den Standardwert **%** . Wenn *Artikel* nicht angegeben ist, wird allen Artikeln betroffen sind.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten, die den Status zu ändern. *Abonnenten* ist **Sysname**, hat den Standardwert **%**. Wenn *Abonnenten* nicht angegeben ist, ändert sich der Status für alle Abonnenten des angegebenen Artikels.  
+`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten, die den Status zu ändern. *Abonnenten* ist **Sysname**, hat den Standardwert **%** . Wenn *Abonnenten* nicht angegeben ist, ändert sich der Status für alle Abonnenten des angegebenen Artikels.  
   
 `[ @status = ] 'status'` Wird der Abonnementstatus in der **Syssubscriptions** Tabelle. *Status* ist **Sysname**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**active**|Der Abonnent ist synchronisiert und empfängt Daten.|  
-|**inactive**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
-|**subscribed**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
+|**aktiv**|Der Abonnent ist synchronisiert und empfängt Daten.|  
+|**inaktiv**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
+|**abonniert**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
   
 `[ @previous_status = ] 'previous_status'` Ist der vorherige Status für das Abonnement an. *Previous_status* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter können Sie Abonnements zu ändern, die aktuell diesen Status, und er ermöglicht damit Gruppenfunktionen für eine bestimmte Gruppe von Abonnements aufweisen (Beispiel: Wenn alle aktiven Abonnements zurück, in **abonniert**).  
   
-`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%**.  
+`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%** .  
   
 `[ @frequency_type = ] frequency_type` Kann die Häufigkeit, mit denen des Verteilungstasks. *Frequency_type* ist **Int**, hat den Standardwert NULL.  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` Ist das Datum, ab der Verteilungstask nicht mehr, geplant ist JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Ist eine optionale Eingabeaufforderung. *Der Standardwert* ist **nvarchar(4000)**, hat den Standardwert NULL.  
+`[ @optional_command_line = ] 'optional_command_line'` Ist eine optionale Eingabeaufforderung. *Der Standardwert* ist **nvarchar(4000)** , hat den Standardwert NULL.  
   
-`[ @distribution_jobid = ] distribution_jobid` Die Auftrags-ID des Verteilungs-Agents auf dem Verteiler für das Abonnement ist, wenn den Abonnementstatus von inaktiv auf aktiv geändert. In anderen Fällen wird sie nicht definiert. Wenn an einem einzelnen Aufruf dieser gespeicherten Prozedur mehrere Verteilungs-Agents beteiligt sind, ist Ergebnis nicht definiert. *Distribution_jobid* ist **'binary(16)'**, hat den Standardwert NULL.  
+`[ @distribution_jobid = ] distribution_jobid` Die Auftrags-ID des Verteilungs-Agents auf dem Verteiler für das Abonnement ist, wenn den Abonnementstatus von inaktiv auf aktiv geändert. In anderen Fällen wird sie nicht definiert. Wenn an einem einzelnen Aufruf dieser gespeicherten Prozedur mehrere Verteilungs-Agents beteiligt sind, ist Ergebnis nicht definiert. *Distribution_jobid* ist **'binary(16)'** , hat den Standardwert NULL.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

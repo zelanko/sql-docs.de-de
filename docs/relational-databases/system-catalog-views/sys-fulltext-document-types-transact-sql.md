@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_document_types (Transact-SQL) | Microsoft Docs
+title: Sys. fulltext_document_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c11c21844b0709cf795375c4b8d17ee43847d06f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133854"
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "64945596"
 |**class_id**|**uniqueidentifier**|GUID der IFilter-Klasse, die die Dateierweiterung unterstützt.|  
 |**path**|**nvarchar(260)**|Der Pfad zur IFilter-DLL. Der Pfad ist nur für Mitglieder der festen Serverrolle **serveradmin** sichtbar.|  
 |**version**|**sysname**|Version der IFilter-DLL.|  
-|**manufacturer**|**sysname**|Name des IFilter-Herstellers.<br /><br /> Hinweis: Nur Dokumente mit dem Hersteller als [!INCLUDE[msCoName](../../includes/msconame-md.md)] werden auf unterstützt [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|**Hersteller**|**sysname**|Name des IFilter-Herstellers.<br /><br /> Hinweis: Nur Dokumente mit dem Hersteller als [!INCLUDE[msCoName](../../includes/msconame-md.md)] werden auf unterstützt [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

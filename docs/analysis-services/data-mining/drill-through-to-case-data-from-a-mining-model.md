@@ -1,5 +1,5 @@
 ---
-title: Drillthrough zu Falldaten aus einem Miningmodell | Microsoft Docs
+title: Drillthrough zu Falldaten aus einem Miningmodell | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210057"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Ausführen von Drillthroughs für Falldaten aus einem Miningmodell
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "34015127"
   
 |Name des Viewers|Name des Bereichs oder der Registerkarte|Knoten auswählen|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft Struktur-Viewer**|Registerkarte**Entscheidungsstruktur** |Klicken Sie auf einen Strukturknoten.<br /><br /> **Hinweis** Führen Sie nach Möglichkeit keinen Drillthrough auf dem **All** -Knoten aus, da es sehr lange dauern kann, bis Ergebnisse zurückgegeben werden.|  
+|**Microsoft Struktur-Viewer**|Registerkarte**Entscheidungsstruktur**|Klicken Sie auf einen Strukturknoten.<br /><br /> **Hinweis** Führen Sie nach Möglichkeit keinen Drillthrough auf dem **All** -Knoten aus, da es sehr lange dauern kann, bis Ergebnisse zurückgegeben werden.|  
 |**Microsoft Cluster-Viewer**|**Clusterdiagramm**|Klicken Sie auf einen Clusterknoten.|  
 |**Microsoft Cluster-Viewer**|**Clusterprofile**|Klicken Sie auf eine beliebige Stelle in der Clusterspalte.|  
-|**Microsoft Association Rules-Viewer**|Registerkarte**Regeln** |Klicken Sie auf eine Zeile, die einen Satz von Regeln enthält.|  
-|**Microsoft Association Rules-Viewer**|Registerkarte**Itemsets** |Klicken Sie auf eine Zeile, die ein Itemset enthält.|  
-|**Microsoft Sequence Cluster-Viewer**|Registerkarte**Regeln** |Klicken Sie auf eine Zeile, die einen Satz von Regeln enthält.|  
-|**Microsoft Sequence Cluster-Viewer**|Registerkarte**Itemsets** |Klicken Sie auf eine Zeile, die ein Itemset enthält.|  
+|**Microsoft Association Rules-Viewer**|Registerkarte**Regeln**|Klicken Sie auf eine Zeile, die einen Satz von Regeln enthält.|  
+|**Microsoft Association Rules-Viewer**|Registerkarte**Itemsets**|Klicken Sie auf eine Zeile, die ein Itemset enthält.|  
+|**Microsoft Sequence Cluster-Viewer**|Registerkarte**Regeln**|Klicken Sie auf eine Zeile, die einen Satz von Regeln enthält.|  
+|**Microsoft Sequence Cluster-Viewer**|Registerkarte**Itemsets**|Klicken Sie auf eine Zeile, die ein Itemset enthält.|  
   
 > [!NOTE]  
->  Einige Modelle können keinen Drillthrough verwenden. Die Möglichkeit eines Drillthrough hängt von dem für die Erstellung des Modells verwendeten Algorithmus ab. Eine Liste der Miningmodelltypen, die Drillthrough unterstützen, finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  Einige Modelle können keinen Drillthrough verwenden. Die Möglichkeit eines Drillthrough hängt von dem für die Erstellung des Modells verwendeten Algorithmus ab. Eine Liste der Miningmodelltypen, die Drillthrough unterstützen, finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)festlegen.  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>So zeigen Sie Drillthroughdaten von einem Miningmodell an  
   
@@ -55,6 +55,6 @@ ms.locfileid: "34015127"
 6.  Um die Daten in die Zwischenablage zu kopieren, klicken Sie mit der rechten Maustaste auf eine beliebige Zeile in der Tabelle, und wählen Sie **Alle kopieren**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen & #40; Datamining & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [Drillthroughabfragen &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

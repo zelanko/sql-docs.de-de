@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140581"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  Des Pfadnamens für eine Spalte des anderen Datentyps oder für eine **'varbinary(max)'** Columnthat verfügt nicht über das FILESTREAM-Speicher-Attribut wird dazu führen, dass einen Fehler während der Kompilierung.  
   
  *@option*  
- Eine ganze Zahl [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , die definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um eine der folgenden Werte sein. Die Standardeinstellung ist 0.  
+ Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. *@option* Dabei kann es sich um eine der folgenden Werte sein. Die Standardeinstellung ist 0.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |0|Gibt den Servernamen in ein BIOS-Format konvertiert zurück, z. B.: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
-|1|Gibt zurück, z. B. den Servernamen ohne Konvertierung: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
-|2|Gibt den vollständigen Serverpfad, z. B. an: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
+|1|Gibt den Servernamen ohne Konvertierung zurück, z. B.: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
+|2|Gibt den vollständigen Serverpfad zurück, z. B.: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
  Ein Bitwert, der definiert, wie den Namen des Servers in einer Always On-verfügbarkeitsgruppe zurückgegeben werden sollen.  

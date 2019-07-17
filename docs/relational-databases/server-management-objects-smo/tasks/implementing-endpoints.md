@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33688c27bef00196bce8778aef6e9855c768fdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 057e949e752abfe8dd4179fe9b1f61af8866dad4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111430"
 ---
 # <a name="implementing-endpoints"></a>Implementieren von Endpunkten
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Ein Endpunkt ist ein Dienst, der Anforderungen systemeigen überwachen kann. SMO unterstützt verschiedene Typen von Endpunkten mit dem <xref:Microsoft.SqlServer.Management.Smo.Endpoint> Objekt. Sie können einen Endpunkt erstellen, der einen bestimmten Typ von Nutzlast handhabt, der ein bestimmtes Protokoll nutzt, indem Sie eine Instanz eines <xref:Microsoft.SqlServer.Management.Smo.Endpoint>-Objekts erstellen und dessen Eigenschaften einrichten.  
+  Ein Endpunkt ist ein Dienst, der Anforderungen systemeigen überwachen kann. SMO unterstützt verschiedene Typen von Endpunkten mit dem <xref:Microsoft.SqlServer.Management.Smo.Endpoint>-Objekt. Sie können einen Endpunkt erstellen, der einen bestimmten Typ von Nutzlast handhabt, der ein bestimmtes Protokoll nutzt, indem Sie eine Instanz eines <xref:Microsoft.SqlServer.Management.Smo.Endpoint>-Objekts erstellen und dessen Eigenschaften einrichten.  
   
- Die <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A> Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Endpoint> Objekt kann verwendet werden, um die folgenden Nutzlasttypen festzulegen:  
+ Die <xref:Microsoft.SqlServer.Management.Smo.Endpoint.EndpointType%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Endpoint>-Objekts kann verwendet werden, um die folgenden Nutzlasttypen festzulegen:  
   
 -   Datenbankspiegelung  
   
--   SOAP (SOAP-Endpunkte werden in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] und früheren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen unterstützt)  
+-   SOAP (SOAP-Endpunkte werden in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] und früheren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Versionen unterstützt)  
   
 -   Service Broker  
   
@@ -42,11 +41,11 @@ ms.locfileid: "47640418"
   
 -   TCP-Protokoll  
   
- Den Typ der Ereignisnutzlast, die tatsächliche Nutzlast kann eingerichtet werden mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A> Objekteigenschaft. Die <xref:Microsoft.SqlServer.Management.Smo.Payload>-Objekteigenschaft stellt einen Verweis auf ein Nutzlastobjekt eines bestimmten Typs bereit, dessen Eigenschaften geändert werden können.  
+ Nach Festlegung des Nutzlasttyps kann die tatsächliche Nutzlast über die <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Payload%2A>-Objekteigenschaft eingerichtet werden. Die <xref:Microsoft.SqlServer.Management.Smo.Payload>-Objekteigenschaft stellt einen Verweis auf ein Nutzlastobjekt eines bestimmten Typs bereit, dessen Eigenschaften geändert werden können.  
   
- Für das <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>-Objekt müssen Sie die Spiegelungsrolle angeben und ob Verschlüsselung aktiviert wird. Die <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload> -Objekt erfordert Informationen über die nachrichtenweiterleitung, die maximale Anzahl zulässiger Verbindungen und den Authentifizierungsmodus. Das <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A>-Objekt erfordert, dass diverse Eigenschaften eingerichtet werden müssen; hierunter auch die <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A>-Objekteigenschaft, die die SOAP-Nutzlastmethoden angibt, die Clients zur Verfügung stehen (gespeicherte Prozeduren und benutzerdefinierte Funktionen).  
+ Für das <xref:Microsoft.SqlServer.Management.Smo.DatabaseMirroringPayload>-Objekt müssen Sie die Spiegelungsrolle angeben und ob Verschlüsselung aktiviert wird. Das <xref:Microsoft.SqlServer.Management.Smo.ServiceBrokerPayload>-Objekt erfordert Informationen über die Nachrichtenweiterleitung, die maximale Anzahl der zugelassenen Verbindungen und den Authentifizierungsmodus. Das <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethod.%23ctor%2A>-Objekt erfordert, dass diverse Eigenschaften eingerichtet werden müssen; hierunter auch die <xref:Microsoft.SqlServer.Management.Smo.SoapPayloadMethodCollection.Add%2A>-Objekteigenschaft, die die SOAP-Nutzlastmethoden angibt, die Clients zur Verfügung stehen (gespeicherte Prozeduren und benutzerdefinierte Funktionen).  
   
- Ähnlich kann das tatsächliche Protokoll über die <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A>-Objekteigenschaft eingerichtet werden, die auf ein Protokollobjekt verweist, das den von der <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>-Eigenschaft festgelegten Typ besitzt. Das <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol>-Objekt erfordert eine Liste der eingeschränkten IP-Adressen und Informationen über Port, Website und Authentifizierung. Die <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol> -Objekt erfordert ebenfalls eine Liste der eingeschränkten IP-Adressen und Portinformationen.  
+ Ähnlich kann das tatsächliche Protokoll über die <xref:Microsoft.SqlServer.Management.Smo.Endpoint.Protocol%2A>-Objekteigenschaft eingerichtet werden, die auf ein Protokollobjekt verweist, das den von der <xref:Microsoft.SqlServer.Management.Smo.Endpoint.ProtocolType%2A>-Eigenschaft festgelegten Typ besitzt. Das <xref:Microsoft.SqlServer.Management.Smo.HttpProtocol>-Objekt erfordert eine Liste der eingeschränkten IP-Adressen und Informationen über Port, Website und Authentifizierung. Das <xref:Microsoft.SqlServer.Management.Smo.TcpProtocol>-Objekt erfordert ebenfalls eine Liste der eingeschränkten IP-Adressen und Informationen über den Port.  
   
  Wenn der Endpunkt erstellt wurde und vollständig definiert ist, kann Datenbankbenutzern, Gruppen, Rollen und Anmeldungen der Zugriff gewährt, aufgehoben oder verweigert werden.  
   

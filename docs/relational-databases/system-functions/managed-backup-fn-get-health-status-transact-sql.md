@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 98ebc20d497165d4e2d80438bcd711490fd6bc8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b921846b0fc27e59ff0874cdbf0827095bfc7db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140658"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen der aggregierten Anzahl der Fehler zurück, die durch erweiterte Ereignisse während eines bestimmten Zeitraums gemeldet wurden.  
   
- Die Funktion wird verwendet, um den Integritätsstatus von Diensten unter Smart Admin zu melden.  Derzeit wird [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] unter Smart Admin unterstützt. Daher beziehen sich die zurückgegebenen Fehler auf [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ Die Funktion wird verwendet, um Integritätsstatus von Diensten unter Smart Admin zu melden.  Derzeit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] des wirkungsfelds Smart Admin unterstützt wird. Daher beziehen sich die zurückgegebenen Fehler auf [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -53,7 +52,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |number_of_storage_connectivity_errors|ssNoversion|Die Anzahl von Verbindungsfehlern, die auftreten, wenn das Programm eine Verbindung mit dem Windows Azure-Speicherkonto herstellt.|  
 |number_of_sql_errors|ssNoversion|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm eine Verbindung mit der SQL Server Engine herstellt.|  
@@ -66,7 +65,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 ## <a name="best-practices"></a>Bewährte Methoden  
  Anhand dieser aggregierten Anzahl kann die Systemintegrität überwacht werden. Wenn die Spalte number_ of_retention_loops nach 30 Minuten beispielsweise 0 ist, dauert die Überwachung der Beibehaltungsdauer entweder sehr lange oder funktioniert nicht ordnungsgemäß. Spalten mit Werten ungleich 0 können auf Probleme hindeuten. Sie sollten die Protokolle der erweiterten Ereignisse prüfen, um das Problem einzugrenzen. Alternativ können Sie mithilfe der gespeicherten Prozedur **managed_backup.sp_get_backup_diagnostics** zum Abrufen einer Liste der erweiterten Ereignisse, um die Details des Fehlers zu finden.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert **wählen** Berechtigungen für die Funktion.  

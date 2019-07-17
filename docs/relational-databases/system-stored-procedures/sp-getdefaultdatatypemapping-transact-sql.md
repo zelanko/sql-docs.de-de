@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123992"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumente  
 `[ @source_dbms = ] 'source_dbms'` Ist der Name des DBMS aus dem die Datentypen zugeordnet werden. *Source_dbms* ist **Sysname**, und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Die Quelle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Die Quelle ist eine Oracle-Datenbank.|  
   
  Sie müssen diesen Parameter festlegen.  
   
-`[ @source_version = ] 'source_version'` Ist die Versionsnummer des Quell-DBMS. *Source_version* ist **varchar(10)**, hat den Standardwert NULL.  
+`[ @source_version = ] 'source_version'` Ist die Versionsnummer des Quell-DBMS. *Source_version* ist **varchar(10)** , hat den Standardwert NULL.  
   
 `[ @source_type = ] 'source_type'` Ist der Datentyp im Quell-DBMS. *Source_type* ist **Sysname**, hat keinen Standardwert.  
   
@@ -75,7 +74,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'` Ist der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte:  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |**ORACLE**|Das Ziel ist eine Oracle-Datenbank.|  
@@ -84,7 +83,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Sie müssen diesen Parameter festlegen.  
   
-`[ @destination_version = ] 'destination_version'` Ist die Produktversion des Ziel-DBMS. *Destination_version* ist **varchar(10)**, hat den Standardwert NULL.  
+`[ @destination_version = ] 'destination_version'` Ist die Produktversion des Ziel-DBMS. *Destination_version* ist **varchar(10)** , hat den Standardwert NULL.  
   
 `[ @destination_type = ] 'destination_type' OUTPUT` Im Ziel-DBMS aufgelistete Datentyp. *Destination_type* ist **Sysname**, hat den Standardwert NULL.  
   

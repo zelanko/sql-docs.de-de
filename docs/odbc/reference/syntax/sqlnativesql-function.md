@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 719b34eef3eb51af1e5eeabce3a88d453f005eff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138815"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql-Funktion
 **Übereinstimmung mit Standards**  
@@ -69,12 +68,12 @@ SQLRETURN SQLNativeSql(
  [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen (Null-Terminierung) zur Verfügung, die in zurückgegeben \* *OutStatementText*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *Pufferlänge*, übersetzt der SQL-Zeichenfolge in \* *OutStatementText* auf abgeschnitten  *BufferLength* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLNativeSql** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *HandleType* SQL_HANDLE_DBC auf, und ein *behandeln* von *ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLNativeSql** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *OutStatementText* war nicht groß genug, um die gesamte SQL-Zeichenfolge zurück, damit die SQL-Zeichenfolge abgeschnitten wurde. Die Länge der ungekürzte SQL-Zeichenfolge wird zurückgegeben, **TextLength2Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -122,7 +121,7 @@ SELECT int2 (empid) FROM employee
  Weitere Informationen finden Sie unter [direkte Ausführung](../../../odbc/reference/develop-app/direct-execution-odbc.md) und [vorbereitete Ausführung](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

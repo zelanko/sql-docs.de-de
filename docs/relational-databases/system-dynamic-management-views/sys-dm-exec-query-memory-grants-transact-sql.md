@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097697"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "63013237"
 |**session_id**|**smallint**|ID (SPID) der Sitzung, in der die Abfrage ausgeführt wird.|  
 |**request_id**|**int**|ID der Anforderung. Ist im Kontext der Sitzung eindeutig.|  
 |**scheduler_id**|**int**|ID des Zeitplanungsmoduls, der diese Abfrage plant.|  
-|**dop**|**smallint**|Grad an Parallelität für diese Abfrage.|  
+|**Grad an Parallelität**|**smallint**|Grad an Parallelität für diese Abfrage.|  
 |**request_time**|**datetime**|Datum und Uhrzeit, zu der die Abfrage die Arbeitsspeicherzuweisung angefordert hat.|  
 |**grant_time**|**datetime**|Datum und Uhrzeit, zu der die Arbeitsspeicherzuweisung für die Abfrage erfolgt ist. NULL, wenn noch kein Arbeitsspeicher zugewiesen wurde.|  
 |**requested_memory_kb**|**bigint**|Insgesamt angeforderter Arbeitsspeicher in Kilobytes.|  
@@ -69,7 +68,7 @@ ms.locfileid: "63013237"
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
    
 ## <a name="remarks"></a>Hinweise  
  Ein typisches Debugszenario für ein Abfragetimeout sieht folgendermaßen aus:  

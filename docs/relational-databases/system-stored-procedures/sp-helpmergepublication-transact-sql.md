@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137653"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @publication **=** ] **'** _publication_ **'**  
+ [ @publication **=** ] **"** _Veröffentlichung_ **"**  
  Der Name der Veröffentlichung. *Veröffentlichung*ist **Sysname**, hat den Standardwert **%** , womit Informationen zu allen mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben.  
   
  [ @found **=** ] **"***gefunden***"** Ausgabe  
@@ -55,7 +54,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @reserved **=** ] **"***reservierte***"**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservierte* ist **nvarchar(20)** , hat den Standardwert NULL.  
   
- [ @publisher **=** ] **'***publisher***'**  
+ [ @publisher **=** ] **"***Verleger***"**  
  Der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
   
  [@publisher_db **=** ] **'***publisher_db***'**  
@@ -63,7 +62,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Sequenzielle Position der Veröffentlichung in der Liste im Resultset.|  
 |NAME|**sysname**|Name der Veröffentlichung.|  

@@ -10,25 +10,25 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210261"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services-Abwärtskompatibilität (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
 In diesem Artikel werden Änderungen an der Verfügbarkeit von Features und verhaltensänderungen zwischen der aktuellen Version und die vorherige Version beschrieben.
 
-## <a name="deprecated-features"></a>Als veraltet markierte Funktionen
+## <a name="deprecated-features"></a>Veraltete Features
 Ein *veraltete Funktion* werden in einer zukünftigen Version wird aus dem Produkt eingestellt, aber ist immer noch unterstützt und in der aktuellen Version aus, um Abwärtskompatibilität enthalten. Es wird empfohlen, dass Sie dieses als veraltet markierte Funktionen in neue und vorhandene Projekte auf um Kompatibilität mit zukünftigen Versionen zu gewährleisten.
   
 Die folgenden Features sind in dieser Version als veraltet markiert:
   
 |||  
 |-|-|  
-|**Im Modus/Kategorie**|**Feature**|  
+|**Im Modus/Kategorie**|**Funktion**|  
 |Multidimensional|Remotepartitionen|  
 |Multidimensional|Remoteverknüpfte Measuregruppen|  
 |Multidimensional|Dimensionales Rückschreiben|  
@@ -39,7 +39,7 @@ Die folgenden Features sind in dieser Version als veraltet markiert:
 |Tabellarisch|Kompatibilitätsgrade für die Tabellenmodelle 1100 und 1103 werden in einer zukünftigen Version nicht unterstützt. Der Austausch ist, legen Sie Modelle mit Kompatibilitätsgrad 1200 oder höher, Modelldefinitionen zu tabellarischen Metadaten konvertiert. Weitere Informationen finden Sie unter [Kompatibilitätsgrad für tabellarische Modelle in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Tools|SQL Server Profiler für die Ablaufverfolgungssammlung<br /><br /> Der Ersatz verwendet den in SQL Server Management Studio eingebetteten Profiler für erweiterte Ereignisse.  <br /> Weitere Informationen finden Sie unter [Überwachen von Analysis Services mit den erweiterten Ereignissen von SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Tools|Server Profiler für die Ablaufverfolgungswiedergabe <br />Ersatz. Es gibt keinen Ersatz.|  
-|Verwaltungsobjekte für die Ablaufverfolgung und Ablaufverfolgungs-APIs|Microsoft.AnalysisServices.Trace-Objekte (enthält die APIs für Analysis Services Ablauf-und Wiedergabeobjekte). Der Ersatz ist mehrteilig:<br /><br /> -Ablaufverfolgungskonfiguration: Microsoft.SqlServer.Management.XEvent<br />-Ablaufverfolgungslesevorgänge: Microsoft.SqlServer.XEvent.Linq<br />- Ablaufverfolgungswiedergabe: keine Angabe|  
+|Verwaltungsobjekte für die Ablaufverfolgung und Ablaufverfolgungs-APIs|Microsoft.AnalysisServices.Trace-Objekte (enthält die APIs für Analysis Services Ablauf-und Wiedergabeobjekte). Der Ersatz ist mehrteilig:<br /><br /> -Ablaufverfolgungskonfiguration: Microsoft.SqlServer.Management.XEvent<br />-Ablaufverfolgungslesevorgänge: Microsoft.SqlServer.XEvent.Linq<br />-Ablaufverfolgungswiedergabe: None|  
   
 > [!NOTE]  
 >  Zuvor als veraltet markierte Ankündigungen von Funktionen aus [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bleiben wirksam. Da der Code, der diese Funktionen unterstützt, noch nicht aus dem Produkt-entfernt wurde, sind viele dieser Funktionen in dieser Version weiterhin vorhanden. Bei der zuvor als veraltet markierte Funktionen möglicherweise zugegriffen werden kann, diese weiterhin gelten als veraltet markiert und ist möglicherweise physisch aus dem Produkt zu einem beliebigen Zeitpunkt entfernt werden.  
@@ -51,12 +51,12 @@ Die folgenden Features wurden in einer früheren Version als veraltet markiert u
 
 |||  
 |-|-|  
-|**Feature**|**Alternative oder Problemumgehung**|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Keine. Diese Funktion wurde in SQL Server 2005 als veraltet markiert.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Keine. Diese Funktion wurde in SQL Server 2005 als veraltet markiert.|  
-|Hinweis NON_EMPTY_BEHAVIOR für den Abfrageoptimierer|Keine. Diese Funktion wurde in SQL Server 2008 als veraltet markiert.|  
-|COM-Assemblys|Keine. Diese Funktion wurde in SQL Server 2008 als veraltet markiert.|  
-|Systeminterne Zelleneigenschaft CELL_EVALUATION_LIST|Keine. Diese Funktion wurde in SQL Server 2005 als veraltet markiert.|  
+|**Funktion**|**Alternative oder Problemumgehung**|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Keine Diese Funktion wurde in SQL Server 2005 als veraltet markiert.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Keine Diese Funktion wurde in SQL Server 2005 als veraltet markiert.|  
+|Hinweis NON_EMPTY_BEHAVIOR für den Abfrageoptimierer|Keine Diese Funktion wurde in SQL Server 2008 als veraltet markiert.|  
+|COM-Assemblys|Keine Diese Funktion wurde in SQL Server 2008 als veraltet markiert.|  
+|Systeminterne Zelleneigenschaft CELL_EVALUATION_LIST|Keine Diese Funktion wurde in SQL Server 2005 als veraltet markiert.|  
   
 > [!NOTE]  
 >  Zuvor als veraltet markierte Ankündigungen von Funktionen aus [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bleiben wirksam. Da der Code, der diese Funktionen unterstützt, noch nicht aus dem Produkt-entfernt wurde, sind viele dieser Funktionen in dieser Version weiterhin vorhanden. Bei der zuvor als veraltet markierte Funktionen möglicherweise zugegriffen werden kann, diese weiterhin gelten als veraltet markiert und ist möglicherweise physisch aus dem Produkt zu einem beliebigen Zeitpunkt entfernt werden.  

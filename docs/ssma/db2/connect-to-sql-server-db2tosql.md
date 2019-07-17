@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141076"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Verbinden Sie mit SQLServer (DB2ToSQL)
 Verwenden der **Herstellen einer Verbindung mit SQL Server** im Dialogfeld für die Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Sie zum migrieren möchten. Für den Zugriff auf die **Herstellen einer Verbindung mit SQL Server** Dialogfeld auf die **Datei** Menü klicken Sie auf **Herstellen einer Verbindung mit SQL Server**.  

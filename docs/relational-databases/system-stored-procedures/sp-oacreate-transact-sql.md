@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107935"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Beispielsweise ist {00026BA1-0000-0000-C000-000000000046} der CLSID des SQL-DMO **SQLServer** Objekt.  
   
- _objecttoken_ **OUTPUT**  
+ _Objecttoken_ **Ausgabe**  
  Ist das zurückgegebene Objekttoken, und muss eine lokale Variable des Datentyps **Int**. Dieses Objekttoken identifiziert das erstellte OLE-Objekt und in Aufrufen an die anderen OLE-Automatisierung gespeicherten Prozeduren verwendet wird.  
   
  *context*  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f58a16b3d4d393a94dc5e42413ddfeb2a8eb5d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124589"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_enumdsn
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**Datenquellenname**|**sysname**|Name der Datenquelle.|  
 |**Beschreibung**|**varchar(255)**|Beschreibung der Datenquelle.|  
-|**Typ**|**int**|Typ der Datenquelle:<br /><br /> **1** = ODBC DSN<br /><br /> **3** = OLE DB-Datenquelle|  
+|**Typ**|**int**|Typ der Datenquelle:<br /><br /> **1** = ODBC-DSN<br /><br /> **3** = OLE DB-Datenquelle|  
 |**Name des Anbieters**|**varchar(255)**|Name des OLE DB-Anbieters. Der Wert ist NULL für einen ODBC-DSN.|  
   
 ## <a name="remarks"></a>Hinweise  

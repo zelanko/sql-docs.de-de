@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 827f6ddca12f15ce0bce1773b9cbe26fae5069dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106231"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Binden von Spalten für die Verwendung mit Blockcursorn
 Da Blockcursor mehrere Zeilen zurückgeben, müssen Anwendungen, die sie verwenden ein Array von Variablen für die einzelnen Spalten anstelle einer einzelnen Variable binden. Diese Arrays werden zusammen als bezeichnet die *Rowset Puffer*. Es folgen die beiden Formate Bindung:  

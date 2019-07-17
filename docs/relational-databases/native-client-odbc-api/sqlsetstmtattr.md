@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cf50825b857e251b194897254276273cd09176e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131063"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "63014104"
 ### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  Das SQL_SOPT_SS_CURSOR-Attribut gibt an, ob der Treiber treiberspezifische Leistungsoptionen für Cursor verwendet. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) ist nicht zulässig, wenn diese Optionen festgelegt werden. Die Standardeinstellung ist SQL_CO_OFF. Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|Standard. Deaktiviert schnelle Vorwärtscursor, schreibgeschützte Cursor und den automatischen Abruf, aktiviert **SQLGetData** für Vorwärtscursor und schreibgeschützte Cursor. Wenn SQL_SOPT_SS_CURSOR_OPTIONS auf SQL_CO_OFF festgelegt ist, ändert sich der Cursortyp nicht. Das heißt, ein schneller Vorwärtscursor bleibt ein schneller Vorwärtscursor. Um den Cursortyp zu ändern, die Anwendung muss jetzt festgelegt mit einem anderen Cursor **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Aktiviert schnelle Vorwärtscursor, schreibgeschützte Cursor und deaktiviert **SQLGetData** für Vorwärtscursor und schreibgeschützte Cursor.|  
@@ -66,7 +65,7 @@ ms.locfileid: "63014104"
 ### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  Das SQL_SOPT_SS_DEFER_PREPARE-Attribut bestimmt, ob die Anweisung sofort vorbereitet oder, bis verzögert **SQLExecute**, [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) oder [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) ausgeführt wird. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 und früheren Versionen wird diese Eigenschaft ignoriert (die Vorbereitung nicht verzögert). Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_DP_ON|Standard. Nach dem Aufruf [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360), die anweisungsvorbereitung verzögert, bis **SQLExecute** aufgerufen wird oder der metaeigenschaftsvorgang (**SQLDescribeCol** oder **SQLDescribeParam**) ausgeführt wird.|  
 |SQL_DP_OFF|Die Anweisung wird vorbereitet, sobald **SQLPrepare** ausgeführt wird.|  
@@ -91,7 +90,7 @@ ms.locfileid: "63014104"
 ### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  Das SQL_SOPT_SS_TEXTPTR_LOGGING-Attribut Schaltet zwischen der Protokollierung von Vorgängen für Spalten mit **Text** oder **Image** Daten. Der *ValuePtr* -Wert ist vom Typ SQLLEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Deaktiviert die Protokollierung von Operationen auf **Text** und **Image** Daten.|  
 |SQL_TL_ON|Standard. Aktiviert die Protokollierung von Operationen auf **Text** und **Image** Daten.|  
@@ -133,7 +132,7 @@ ms.locfileid: "63014104"
   
  Der Typ für SQL_SOPT_SS_NAME_SCOPE lautet SQLULEN.  
   
-|*ValuePtr* Wert|Description|  
+|*ValuePtr* Wert|Beschreibung|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|Standard.<br /><br /> Gibt bei Verwendung von Tabellenwertparametern an, dass Metadaten für tatsächliche Tabellen zurückgegeben werden sollen.<br /><br /> Wenn Sie die Funktion für sparsespalten verwenden, gibt SQLColumns nur Spalten, die nicht Elemente des Sparse-sind **Column_set**.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Gibt an, dass die Anwendung Metadaten für einen Tabellentyp anstatt einer tatsächlichen Tabelle erfordert (Katalogfunktionen sollten Metadaten für Tabellentypen zurückgeben). Die Anwendung übergibt dann den TYPE_NAME des Tabellenwertparameters als die *TableName* Parameter.|  

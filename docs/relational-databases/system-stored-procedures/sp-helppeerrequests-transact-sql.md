@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137632"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'` Ist der Name der Veröffentlichung in einer Peer-zu-Peer-Topologie, die für die statusanforderungen gesendet wurden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
   
-`[ @description = ] 'description'` Wert, der zum Identifizieren einzelner statusanforderungen, wodurch Sie zurückgegebene Antworten basierend auf Benutzer Filtern Informationen bereitgestellt definiert, wenn der Aufruf verwendet werden kann [Sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Beschreibung* ist **nvarchar(4000)**, hat den Standardwert **%**. Standardmäßig werden alle Statusanforderungen für die Veröffentlichung zurückgegeben. Dieser Parameter wird verwendet, um nur statusanforderungen mit einer Beschreibung, die dem Wert im angegebenen zurückzugeben *Beschreibung*, bei dem es sich bei Zeichenfolgen abgeglichen werden, eine [wie &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)Klausel.  
+`[ @description = ] 'description'` Wert, der zum Identifizieren einzelner statusanforderungen, wodurch Sie zurückgegebene Antworten basierend auf Benutzer Filtern Informationen bereitgestellt definiert, wenn der Aufruf verwendet werden kann [Sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Beschreibung* ist **nvarchar(4000)** , hat den Standardwert **%** . Standardmäßig werden alle Statusanforderungen für die Veröffentlichung zurückgegeben. Dieser Parameter wird verwendet, um nur statusanforderungen mit einer Beschreibung, die dem Wert im angegebenen zurückzugeben *Beschreibung*, bei dem es sich bei Zeichenfolgen abgeglichen werden, eine [wie &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)Klausel.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifiziert eine Anforderung.|  
 |**publication**|**sysname**|Name der Veröffentlichung, für die die Statusanforderung gesendet wurde.|  
@@ -65,6 +64,6 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
+ [Sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   
   

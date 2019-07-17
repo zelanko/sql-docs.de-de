@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: ae2bf589-17be-4cad-b5d5-05a34173b32d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b056c302ad60fb77eb4cd44257ff70860eedd14a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dffa82d659ab2f36f94d5fecbafeb5c65ba4f05a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135278"
 ---
 # <a name="syssecurableclasses-transact-sql"></a>sys.securable_classes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Liste von sicherungsfähigen Klassen zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|Name der Klasse.|  
 |**class**|**int**|Numerische Bezeichnung der Klasse.|  
@@ -42,7 +41,7 @@ ms.locfileid: "47826388"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel werden die von dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützten sicherungsfähigen Klassen zurückgegeben.  
+ Im folgenden Beispiel werden die von dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützten sicherungsfähigen Klassen zurückgegeben.  
   
 ```sql  
 SELECT * FROM sys.securable_classes ORDER BY class;  

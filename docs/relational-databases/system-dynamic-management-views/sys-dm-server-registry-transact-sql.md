@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090722"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Konfigurations- und Installationsinformationen zurück, die für die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der Windows-Registrierung gespeichert sind. Gibt eine Zeile pro Registrierungsschlüssel zurück. Verwenden Sie diese dynamische Verwaltungssicht, um Informationen für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückzugeben, z. B. die auf dem Hostcomputer verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste oder die Werte der Netzwerkkonfiguration.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Registrierungsschlüsselname. Lässt NULL-Werte zu.|  
 |value_name|**nvarchar(256)**|Schlüsselwertname. Dies ist das Element, das in der Spalte **Name** des Registrierungs-Editors angezeigt wird. Lässt NULL-Werte zu.|  

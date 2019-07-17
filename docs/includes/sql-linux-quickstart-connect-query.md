@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215637"
+---
 ## <a name="connect-locally"></a>Lokal verbinden
 
 Die folgenden Schritte verwenden **sqlcmd**, um sich lokal mit Ihrer neuen SQL Server-Instanz zu verbinden.
@@ -44,7 +52,7 @@ Mit den folgenden Schritten wird eine neue Datenbank mit dem Namen `TestDB` erst
    ```
 
 > [!TIP]
-> Um mehr über das Schreiben von Transact-SQL-Anweisungen und -Abfragen zu erfahren, schauen Sie sich dieses [Tutorial: Writing Transact-SQL Statements (Tutorial: Schreiben von Transact-SQL-Anweisungen)](../t-sql/tutorial-writing-transact-sql-statements.md) an.
+> Weitere Informationen zum Schreiben von Transact-SQL-Anweisungen und Abfragen finden Sie unter [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Einfügen von Daten
 
@@ -109,8 +117,9 @@ Zusätzlich zu **Sqlcmd**, können Sie die folgenden plattformübergreifenden To
 |||
 |---|---|
 | [Azure Data Studio](../azure-data-studio/index.md) | Eine plattformübergreifende GUI-Datenbank-Verwaltungsdienstprogramm. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Eine plattformübergreifende Befehlszeilenschnittstelle zum Ausführen von Transact-SQL-Befehlen. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Eine plattformübergreifende GUI-Code-Editor ausführen, Transact-SQL-Anweisungen mit der Mssql-Erweiterung. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Ein plattformübergreifendes Automatisierungs- und Tool basierend auf Cmdlets. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Eine plattformübergreifende Befehlszeilenschnittstelle zum Ausführen von Transact-SQL-Befehlen. |
 
 ## <a name="connecting-from-windows"></a>Herstellen einer Verbindung von Windows
 

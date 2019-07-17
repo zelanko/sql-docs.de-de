@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15e4a750e2568598fc5db2bab175643b50310db2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138609"
 ---
 # <a name="getting-started-with-clr-integration"></a>Erste Schritte mit der CLR-Integration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ End Class
   
 ```  
   
- Dieses einfache Programm enthält eine einzelne statische Methode in einer öffentlichen Klasse. Diese Methode verwendet zwei neue Klassen **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** und  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, zum Erstellen von verwalteten Datenbankobjekten für die Ausgabe eines einfachen Texts Nachricht. Zudem weist die Methode die Zeichenfolge "Hello World!" als Wert für einen Out-Parameter. Diese Methode kann als gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deklariert und anschließend auf dieselbe Weise wie eine gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Prozedur ausgeführt werden.  
+ Dieses einfache Programm enthält eine einzelne statische Methode in einer öffentlichen Klasse. Diese Methode verwendet zwei neue Klassen **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** und  **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** , zum Erstellen von verwalteten Datenbankobjekten für die Ausgabe eines einfachen Texts Nachricht. Zudem weist die Methode die Zeichenfolge "Hello World!" als Wert für einen Out-Parameter. Diese Methode kann als gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deklariert und anschließend auf dieselbe Weise wie eine gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Prozedur ausgeführt werden.  
   
  Dieses Programm als Bibliothek kompiliert, laden Sie es in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], und führen Sie es als eine gespeicherte Prozedur.  
   
@@ -143,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Nach dem Erstellen der Prozedur kann diese wie eine normale, in [!INCLUDE[tsql](../../../includes/tsql-md.md)] geschriebene gespeicherte Prozedur ausgeführt werden. Führen Sie den folgenden Befehl ein:  
+ Nach dem Erstellen der Prozedur kann diese wie eine normale, in [!INCLUDE[tsql](../../../includes/tsql-md.md)] geschriebene gespeicherte Prozedur ausgeführt werden. Führen Sie den folgenden Befehl aus:  
   
 ```  
 DECLARE @J nchar(25)  

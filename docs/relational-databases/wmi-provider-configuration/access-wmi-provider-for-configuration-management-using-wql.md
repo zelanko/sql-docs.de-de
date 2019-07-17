@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 21a18dc77a8ab1b714676cc299d26797ba0d41bd
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139430"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "51215485"
   
 3.  Geben Sie im ersten Textfeld den Namespace für den WMI-Anbieter für die Computerverwaltung ein: root\Microsoft\SqlServer\ComputerManagement11. Klicken Sie auf **Verbinden**.  
   
-4.  Klicken Sie auf **Abfrage**. Geben Sie eine Abfrage, die die aktuelle, auf dem lokalen Computer ausgeführten Dienste zurückgibt: **wählen \* aus SqlService.** Klicken Sie auf **Anwenden**.  
+4.  Klicken Sie auf **Abfrage**. Geben Sie eine Abfrage, die die aktuelle, auf dem lokalen Computer ausgeführten Dienste zurückgibt: **Wählen Sie \* FROM SqlService.** Klicken Sie auf **Übernehmen**.  
   
-5.  Verfeinern Sie die Abfrage durch Hinzufügen von **, in denen ServiceName = "MSSQLSERVER"**.  
+5.  Verfeinern Sie die Abfrage durch Hinzufügen von **, in denen ServiceName = "MSSQLSERVER"** .  
   
   

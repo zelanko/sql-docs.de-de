@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088209"
 ---
 # <a name="operators-mdx-syntax"></a>Operatoren (MDX-Syntax)
 
@@ -31,11 +30,11 @@ ms.locfileid: "63277602"
   
  MDX unterstützt die Operatoren, die in der folgenden Tabelle aufgelistet sind:  
   
-|Art der auszuführenden Operation|Verwenden Sie|  
+|Art der auszuführenden Operation|Mit|  
 |---------------------------------------|---------|  
 |Weist einer Variablen einen Wert oder eine Resultsetspalte mit einem Alias zugeordnet.|[Assignment Operators (Zuweisungsoperatoren)](../mdx/assignment-operators.md)|  
-|Addition, Subtraktion, Multiplikation, Division.|[Arithmetic Operators (Arithmetische Operatoren)](../mdx/arithmetic-operators.md)|  
-|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitwise Operators (Bitweise Operatoren)](../mdx/bitwise-operators.md)|  
+|Addition, Subtraktion, Multiplikation, Division.|[Arithmetische Operatoren](../mdx/arithmetic-operators.md)|  
+|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitweise Operatoren](../mdx/bitwise-operators.md)|  
 |Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Comparison Operators (Vergleichsoperatoren)](../mdx/comparison-operators.md)|  
 |Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Concatenation Operators (Verkettungsoperatoren)](../mdx/concatenation-operators.md)|  
 |Dauerhaftes oder temporäres Kombinieren von zwei Mengenausdrücken zu einer Menge.|[Set Operators (Mengenoperatoren)](../mdx/set-operators.md)|  
@@ -58,7 +57,7 @@ ms.locfileid: "63277602"
   
 -   DISTINCT  
   
--   decodiert werden:  
+-   :  
   
 -   ^  
   
@@ -92,11 +91,11 @@ ms.locfileid: "63277602"
   
 |Ursprünglicher Typ|Benötigter Typ|Konvertierung|  
 |-------------------|-----------------|----------------|  
-|Ebene|Legen Sie|\<Ebene > .members|  
+|Ebene|Set|\<Ebene > .members|  
 |Hierarchy|Member|\<Hierarchie > .defaultmember|  
 |Member|Tupel|(\<Member >)|  
-|Tupel|Member|\<tuple>.item(0)|  
-|Tupel|skalare|\<tuple>.value|  
+|Tupel|Member|\<Tupel > .item(0)|  
+|Tupel|skalare|\<Tupel > .value|  
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
