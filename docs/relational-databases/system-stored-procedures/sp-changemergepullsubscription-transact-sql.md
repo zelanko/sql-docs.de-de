@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090854"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'` Ist der neue Wert für die angegebene Eigenschaft. *Wert*ist **nvarchar(255)** , und kann einen der Werte in der Tabelle.  
   
-|Eigenschaft|Wert|Description|  
+|Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Speicherort des momentaufnahmeordners ist der Speicherort nur oder darüber hinaus am Standardspeicherort.|  
 |**description**||Die Beschreibung dieses Mergepullabonnements.|  
@@ -109,7 +108,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [Sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cace39108f3f99d5c165f42b4337e837e1fb7c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121026"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,14 +34,14 @@ ms.locfileid: "56023881"
 Bei Verwendung von SQL-Datenbank V12 sollten Sie verwenden [dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (da *Sys. dm_continuous_copy_status* gilt nur für V11).
 
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|Eindeutige ID der Replikatdatenbank.|  
 |**partner_server**|**sysname**|Der Name des SQL-Datenbankverbindungsservers.|  
 |**partner_database**|**sysname**|Name der Verbindungsdatenbank auf dem SQL-Datenbankverbindungsserver.|  
 |**last_replication**|**datetimeoffset**|Der Zeitstempel der zuletzt durchgeführten replizierten Transaktion.|  
 |**replication_lag_sec**|**int**|Der Zeitunterschied in Sekunden zwischen der aktuellen Zeit und dem Zeitstempel der letzten Transaktion in der primären Datenbank, für die erfolgreich ein Commit ausgeführt wurde und die von der aktiven sekundären Datenbank nicht bestätigt wurde.|  
-|**replication_state**|**tinyint**|Der Status der fortlaufenden kopierbeziehung für diese Datenbank. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 1: Seeding. Für das Replikationsziel, das einen inkonsistenten Transaktionsstatus aufweist, wird ein Seeding durchgeführt. Solange das Seeding noch nicht abgeschlossen wurde, können Sie keine Verbindung mit der aktiven sekundären Datenbank herstellen. <br />2: Aufholend. Die aktive sekundäre Datenbank holt derzeit den Rückstand zur primären Datenbank auf und weist hinsichtlich der Transaktionen einen konsistenten Status auf.<br />3: Erneutes Seeding. Für die aktive sekundäre Datenbank wird aufgrund eines nicht behebbaren Replikationsfehlers automatisch ein erneutes Seeding durchgeführt.<br />4: Unterbrochen Dies ist keine aktive Beziehung mit kontinuierlichem Kopieren. Dieser Status gibt normalerweise an, dass die Bandbreite, die für den Interlink verfügbar ist, für die Ebene der Transaktionsaktivität in der primären Datenbank nicht ausreicht. Die Beziehung mit kontinuierlichem Kopieren ist jedoch nach wie vor intakt.|  
+|**replication_state**|**tinyint**|Der Status der fortlaufenden kopierbeziehung für diese Datenbank. Im folgenden sind die möglichen Werte und deren Beschreibungen.<br /><br /> 1: Das Seeding. Für das Replikationsziel, das einen inkonsistenten Transaktionsstatus aufweist, wird ein Seeding durchgeführt. Solange das Seeding noch nicht abgeschlossen wurde, können Sie keine Verbindung mit der aktiven sekundären Datenbank herstellen. <br />2: Aufholend. Die aktive sekundäre Datenbank holt derzeit den Rückstand zur primären Datenbank auf und weist hinsichtlich der Transaktionen einen konsistenten Status auf.<br />3: Erneutes seeding. Für die aktive sekundäre Datenbank wird aufgrund eines nicht behebbaren Replikationsfehlers automatisch ein erneutes Seeding durchgeführt.<br />4: Unterbrochen Dies ist keine aktive Beziehung mit kontinuierlichem Kopieren. Dieser Status gibt normalerweise an, dass die Bandbreite, die für den Interlink verfügbar ist, für die Ebene der Transaktionsaktivität in der primären Datenbank nicht ausreicht. Die Beziehung mit kontinuierlichem Kopieren ist jedoch nach wie vor intakt.|  
 |**replication_state_desc**|**nvarchar(256)**|Beschreibung von replication_state. Folgende Werte sind möglich:<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|Wird immer auf 0 festgelegt.|  
 |**is_target_role**|**bit**|0 = Quelle der Kopienbeziehung<br /><br /> 1 = Ziel der Kopienbeziehung|  

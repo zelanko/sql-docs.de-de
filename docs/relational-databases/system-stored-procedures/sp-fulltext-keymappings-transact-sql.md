@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be861ae0e27bccb682bd4beb89db2c0dd791b04b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124242"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,7 +55,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  Informationen zur Verwendung von einem, zwei oder drei Parametern finden Sie unter "Hinweise" später in diesem Thema.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine.  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -77,7 +76,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 |--------------------------|----------------------|  
 |*table_id*|Wenn Sie mit nur aufgerufen, die *Table_id* Parameter Sp_fulltext_keymappings gibt alle Werte der Volltextschlüssel (Key) aus der angegebenen Basistabelle sowie die DocId, die jedem Schlüssel entspricht. Dies schließt auch Schlüssel mit ein, für die ein Löschvorgang aussteht.<br /><br /> Diese Funktion ist hilfreich zur Behebung zahlreicher Probleme. Insbesondere bietet sie sich zum Anzeigen des Inhalts des Volltextindex an, wenn der ausgewählte Volltextschlüssel keinen ganzzahligen Datentyp aufweist. Dies schließt den Join der Ergebnisse von Sp_fulltext_keymappings mit den Ergebnissen der **dm_fts_index_keywords_by_document**. Weitere Informationen finden Sie unter [dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> Im Allgemeinen sollten Sie jedoch , falls möglich, sp_fulltext_keymappings mit Parametern ausführen, die einen bestimmten Volltextschlüssel oder DocId angeben. Dies ist erheblich effizienter als eine gesamte Schlüsselzuordnung zurückzugeben, insbesondere für eine sehr große Tabelle, für die die Leistungskosten der Rückgabe der gesamten Schlüsselzuordnung erheblich sein könnten.|  
 |*table_id*, *docid*|Wenn nur die *Table_id* und *Docid* angegeben sind, *Docid* nicht NULL sein müssen, und geben Sie eine gültige DocId in der angegebenen Tabelle. Diese Funktion ist hilfreich, um den benutzerdefinierten Volltextschlüssel aus der Basistabelle zu isolieren, die der DocId eines bestimmten Volltextindex entspricht.|  
-|*table_id*, NULL, *key*|Wenn drei Parameter vorhanden sind, muss der zweite Parameter NULL sein und *Schlüssel* nicht NULL sein müssen, und geben Sie einen gültigen Volltext-Schlüsselwert aus der angegebenen Tabelle. Diese Funktion ist hilfreich, um die DocID zu isolieren, die einem bestimmten Volltextschlüssel aus der Basistabelle entspricht.|  
+|*Table_id*, NULL, *Schlüssel*|Wenn drei Parameter vorhanden sind, muss der zweite Parameter NULL sein und *Schlüssel* nicht NULL sein müssen, und geben Sie einen gültigen Volltext-Schlüsselwert aus der angegebenen Tabelle. Diese Funktion ist hilfreich, um die DocID zu isolieren, die einem bestimmten Volltextschlüssel aus der Basistabelle entspricht.|  
   
  Wenn eine der folgenden Bedingungen zutrifft, wird ein Fehler zurückgegeben:  
   

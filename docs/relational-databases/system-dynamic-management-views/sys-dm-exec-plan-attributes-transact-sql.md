@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013222"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255598"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |Attribut|**varchar(128)**|Name des Attributs, das diesem Plan zugeordnet ist. Die Tabelle direkt unter diesem Thema listet die Attribute, deren Datentypen und deren Beschreibungen.|  
 |Wert|**sql_variant**|Wert des Attributs, das diesem Plan zugeordnet ist.|  
@@ -53,7 +52,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 Aus der Tabelle oben **Attribut** können die folgenden Werte aufweisen:
 
-|Attribut|Datentyp|Description|  
+|Attribut|Datentyp|Beschreibung|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Gibt die Optionswerte an, mit denen der Plan kompiliert wurde.|  
 |objectid|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Ist dies die Objekt-ID, in gespeichert [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) für Datenbankobjekte (Prozeduren, Sichten, Trigger und So weiter). Für Pläne vom Typ "Adhoc" oder "Prepared" ist dies ein interner Hash des Batchtexts.|  
@@ -82,7 +81,7 @@ Aus der Tabelle oben **Attribut** können die folgenden Werte aufweisen:
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
 
 ## <a name="remarks"></a>Hinweise  
   

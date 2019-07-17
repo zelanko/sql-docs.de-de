@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104432"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -58,12 +57,12 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt = 'none'**  
  Gibt an, dass keine Verbergung verwendet wird. Das Kennwort wird als Nur-Text an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] übergeben. Dies ist die Standardeinstellung.  
   
- **@encrypt= 'odbc'**  
+ **@encrypt= 'Odbc'**  
  Gibt an, dass ODBC das Kennwort mithilfe der ODBC verbirgt **verschlüsseln** Funktion vor dem Senden des Kennworts für die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Dies ist nur mit einem ODBC-Client oder dem OLE DB-Anbieter für SQL Server möglich.  
   
 `[ @fCreateCookie = ] true | false` Gibt an, ob ein Cookie erstellt werden. **"true"** wird implizit in 1 konvertiert. **"false"** wird implizit in 0 konvertiert.  
   
-`[ @cookie = ] @cookie OUTPUT` Gibt einen Output-Parameter, um das Cookie enthalten. Das Cookie wird nur generiert, wenn der Wert des **@fCreateCookie** ist **"true"**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Gibt einen Output-Parameter, um das Cookie enthalten. Das Cookie wird nur generiert, wenn der Wert des **@fCreateCookie** ist **"true"** . **varbinary(8000)**  
   
 > [!NOTE]  
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Anwendungen müssen weiterhin **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird.

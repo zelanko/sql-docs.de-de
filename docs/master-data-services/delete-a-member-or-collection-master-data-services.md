@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b702219ebf0c6a4a7eaec33c21fccc5fb821454c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb72f41278f356704b7abedba8e9e60cb00b8e60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094374"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Löschen eines Elements oder einer Auflistung (Master Data Services)
 
@@ -33,7 +32,7 @@ ms.locfileid: "65478585"
 > [!NOTE]  
 >  Sie können kein Element löschen, das als domänenbasierter Attributwert für ein anderes Element verwendet wird.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  

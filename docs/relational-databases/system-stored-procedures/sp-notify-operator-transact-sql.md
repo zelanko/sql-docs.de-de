@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107977"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_name = ] 'profilename'` Der Name des Datenbank-Mail-Profils, das zum Senden der Nachricht verwendet werden soll. *ProfileName* ist **vom Datentyp nvarchar(128)**. Wenn *Profilename* nicht angegeben ist, wird das Standardprofil für die Database Mail verwendet wird.  
+`[ @profile_name = ] 'profilename'` Der Name des Datenbank-Mail-Profils, das zum Senden der Nachricht verwendet werden soll. *ProfileName* ist **vom Datentyp nvarchar(128)** . Wenn *Profilename* nicht angegeben ist, wird das Standardprofil für die Database Mail verwendet wird.  
   
 `[ @id = ] id` Der Bezeichner für den Operator aus, um die Nachricht gesendet. *ID* ist **Int**, hat den Standardwert NULL. Einer der *Id* oder *Namen* muss angegeben werden.  
   
-`[ @name = ] 'name'` Der Name des Operators, der die Nachricht gesendet werden soll. *Namen* ist **vom Datentyp nvarchar(128)**, hat den Standardwert NULL. Einer der *Id* oder *Namen* muss angegeben werden.  
+`[ @name = ] 'name'` Der Name des Operators, der die Nachricht gesendet werden soll. *Namen* ist **vom Datentyp nvarchar(128)** , hat den Standardwert NULL. Einer der *Id* oder *Namen* muss angegeben werden.  
   
-> **HINWEIS:** Zum Empfangen von Nachrichten muss eine E-Mail-Adresse für den Operator definiert sein.  
+> **HINWEIS:** Eine e-Mail-Adresse muss für den Operator definiert werden, bevor sie Nachrichten empfangen können.  
   
 `[ @subject = ] 'subject'` Der Betreff der e-Mail-Nachricht. *Betreff* ist **nvarchar(256)** hat keinen Standardwert.  
   
 `[ @body = ] 'message'` Der Text der e-Mail-Nachricht. *Nachricht* ist **nvarchar(max)** hat keinen Standardwert.  
   
-`[ @file_attachments = ] 'attachment'` Der Name einer Datei an die e-Mail-Nachricht angefügt werden soll. *Anlage* ist **nvarchar(512)**, hat keinen Standardwert.  
+`[ @file_attachments = ] 'attachment'` Der Name einer Datei an die e-Mail-Nachricht angefügt werden soll. *Anlage* ist **nvarchar(512)** , hat keinen Standardwert.  
   
-`[ @mail_database = ] 'mail_host_database'` Gibt den Namen des der Mailhost-Datenbank. *Mail_host_database* ist **vom Datentyp nvarchar(128)**. Wenn kein *Mail_host_database* angegeben wird, die **Msdb** Datenbank wird standardmäßig verwendet.  
+`[ @mail_database = ] 'mail_host_database'` Gibt den Namen des der Mailhost-Datenbank. *Mail_host_database* ist **vom Datentyp nvarchar(128)** . Wenn kein *Mail_host_database* angegeben wird, die **Msdb** Datenbank wird standardmäßig verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

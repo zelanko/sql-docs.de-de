@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba79a1bea8778327a203659d22e9316147ab0d98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a52823c6a136f413826348174e5e7902c141e13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111476"
 ---
 # <a name="creating-and-updating-statistics"></a>Erstellen und Aktualisieren von Statistiken
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   In SMO können statistische Informationen über die Verarbeitung von Abfragen in der Datenbank mithilfe des  <xref:Microsoft.SqlServer.Management.Smo.Statistic>-Objekts gesammelt werden.  
   
- Es ist möglich, für das Erstellen von Statistiken für jede Spalte mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Statistic> und <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> Objekt. Die <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A>-Methode kann ausgeführt werden, um die Statistik im <xref:Microsoft.SqlServer.Management.Smo.Statistic>-Objekt zu aktualisieren. Die Ergebnisse können im Abfrageoptimierer angezeigt werden.  
+ Über das <xref:Microsoft.SqlServer.Management.Smo.Statistic>- und das <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>-Objekt ist es möglich, für jede beliebige Spalte Statistiken zu erstellen. Die <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A>-Methode kann ausgeführt werden, um die Statistik im <xref:Microsoft.SqlServer.Management.Smo.Statistic>-Objekt zu aktualisieren. Die Ergebnisse können im Abfrageoptimierer angezeigt werden.  
   
 ## <a name="example"></a>Beispiel  
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Erstellen und Aktualisieren von Statistiken in Visual Basic  
- Dieses Codebeispiel erstellt eine neue Tabelle für eine vorhandene Datenbank, für die die <xref:Microsoft.SqlServer.Management.Smo.Statistic> Objekt und die <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> -Objekt erstellt werden.  
+ In diesem Codebeispiel wird eine neue Tabelle für eine vorhandene Datenbank erstellt, für die das <xref:Microsoft.SqlServer.Management.Smo.Statistic>-Objekt und das <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>-Objekt erstellt werden.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -55,7 +54,7 @@ stat.Create()
 ``` 
   
 ## <a name="creating-and-update-statistics-in-visual-c"></a>Erstellen und Aktualisieren von Statistiken in Visual C#  
- Dieses Codebeispiel erstellt eine neue Tabelle für eine vorhandene Datenbank, für die die <xref:Microsoft.SqlServer.Management.Smo.Statistic> Objekt und die <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> -Objekt erstellt werden.  
+ In diesem Codebeispiel wird eine neue Tabelle für eine vorhandene Datenbank erstellt, für die das <xref:Microsoft.SqlServer.Management.Smo.Statistic>-Objekt und das <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>-Objekt erstellt werden.  
   
 ```csharp  
 {  
@@ -82,7 +81,7 @@ stat.Create()
 ```  
   
 ## <a name="creating-and-update-statistics-in-powershell"></a>Erstellen und Aktualisieren von Statistiken in PowerShell  
- Dieses Codebeispiel erstellt eine neue Tabelle für eine vorhandene Datenbank, für die die <xref:Microsoft.SqlServer.Management.Smo.Statistic> Objekt und die <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn> -Objekt erstellt werden.  
+ In diesem Codebeispiel wird eine neue Tabelle für eine vorhandene Datenbank erstellt, für die das <xref:Microsoft.SqlServer.Management.Smo.Statistic>-Objekt und das <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>-Objekt erstellt werden.  
   
 ```powershell  
 # Example of implementing a full text search on the default instance.  

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 028da8892406be7c29d604cc0357f0006bacc4cb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e0c47713cb0aab0c87d1f9f652e1472100becf97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133466"
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "53215436"
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt einen einfachen Fehlerhandler, der [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) für die Standard-ODBC-Informationen aufruft. Anschließend wird geprüft, ob eine gültige Verbindung vorhanden ist. Ist dies der Fall, wird **SQLGetDiagField** für die ODBC-treiberspezifischen Diagnosefelder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgerufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

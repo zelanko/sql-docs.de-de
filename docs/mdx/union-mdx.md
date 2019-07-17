@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097302"
 ---
-# <a name="union--mdx"></a>Union  (MDX)
+# <a name="union--mdx"></a>Union (MDX)
 
 
   Gibt die Vereinigungsmenge zweier Mengen zurück, wobei optional doppelte Elemente beibehalten werden.  

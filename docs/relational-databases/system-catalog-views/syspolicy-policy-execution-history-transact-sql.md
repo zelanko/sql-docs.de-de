@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 155c88f9e23a706fe7124893a8dd0c5ac5f03173
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62671791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121114"
 ---
 # <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die folgenden Informationen an: Zeit der Ausführung der Richtlinien, Ergebnis der einzelnen Ausführungen, Details zu eventuell aufgetretenen Fehlern. In der folgenden Tabelle werden die Spalten in der syspolicy_policy_execution_history-Sicht beschrieben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |history_id|**bigint**|Bezeichner des Datensatzes. Jeder Datensatz gibt eine Richtlinie und den Zeitpunkt der Initiierung an.|  
 |policy_id|**int**|Bezeichner der Richtlinie.|  

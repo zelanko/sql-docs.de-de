@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcd2221d9a0bb9cba42745901e5f00a6f8c8415e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111247"
 ---
 # <a name="dbms-based-drivers"></a>DBMS-basierte Treiber
 DBMS-basierten Treibern werden mit Datenquellen wie z. B. Oracle- oder SQL Server verwendet, die eine eigenständige Datenbank-Engine für den Treiber mit bereitstellen. Diese Treiber Zugriff auf die physischen Daten über die eigenständigen-Engine; d. h. sie SQL-Anweisungen zum Senden und Abrufen der Ergebnisse von der Engine.  

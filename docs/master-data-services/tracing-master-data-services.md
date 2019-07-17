@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485076"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263981"
 ---
 # <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
 
@@ -60,13 +60,13 @@ ms.locfileid: "65485076"
   
 -   Das Protokollformat ist CSV. In der folgenden Tabelle wird das Protokollformat beschrieben.  
   
-    |Element|Description|  
+    |Element|Beschreibung|  
     |-------------|-----------------|  
     |Uhrzeit|Zeitpunkt des Ablaufverfolgungseintrags.|  
     |CorrelationID|Eine Korrelations-ID wird für jede Anforderung zugewiesen. Alle Ablaufverfolgungen, die durch diese Anforderung ausgelöst werden, haben die gleiche Korrelations-ID.<br /><br /> Tritt ein Fehler in der Benutzeroberfläche auf, wird die Korrelations-ID in der Fehlermeldung angezeigt.|  
     |Vorgang|Vorgangsname anfordern. Wenn die Anforderung eine Web-UI-Anforderung ist, ist der Vorgangsname die URL. Wenn die Anforderung eine API-Anforderung ist, ist der Vorgangsname der Dienstname.|  
     |Ebene|Ebene dieses Ablaufverfolgungseintrags.|  
-    |MessageBox|Nachrichtentext der Ablaufverfolgung|  
+    |Meldung|Nachrichtentext der Ablaufverfolgung|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  

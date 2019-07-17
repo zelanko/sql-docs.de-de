@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26bbb1d9544c99dd600a512a96b7d5105b98cb65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c81d52fadad91bb91ccf69af4b77627ef53846a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102599"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Entsperren einer Version (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65488405"
 
   Entsperren Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Version eines Modells, um Änderungen an den Elementen des Modells und den Attributen zu ermöglichen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  

@@ -4,17 +4,16 @@ description: In diesem Artikel werden bewährte Methoden für Leistung und Richt
 author: rgward
 ms.author: bobward
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105444"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux
 
@@ -74,7 +73,7 @@ Die folgende Tabelle enthält Empfehlungen für die datenträgereinstellungen:
 | Einstellung | Wert | Weitere Informationen |
 |---|---|---|
 | Datenträger-Read-Aheads | 4096 | Finden Sie unter den **Blockdev** Befehl |
-| Sysctl-Einstellungen | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Finden Sie unter den **Sysctl** Befehl |
+| Sysctl-Einstellungen | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns 15000000 =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>VM.swappiness = 10 | Finden Sie unter den **Sysctl** Befehl |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel-Einstellung automatisch Numa Lastenausgleich für NUMA-Systemen mit mehreren Knoten
 

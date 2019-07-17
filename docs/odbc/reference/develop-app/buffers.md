@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118742"
 ---
 # <a name="buffers"></a>Puffer
 Ein Puffer wird jedem Speicherbereich Anwendung verwendet, um Daten zwischen der Anwendung und den Treiber übergeben. Zum Beispiel Anwendungspuffer zugeordnet sein können, oder *gebunden,* Resultsetspalten mit **SQLBindCol**. Wie jede Zeile abgerufen wird, werden die Daten für jede Spalte in diese Puffer zurückgegeben. *Geben Sie Puffer* werden verwendet, um Daten aus der Anwendung an den Treiber; zu übergeben. *Ausgabepuffer* werden verwendet, um Daten aus dem Treiber des an die Anwendung zurückgegeben.  

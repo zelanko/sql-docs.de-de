@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210747"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
   Der Replikationsverteilungs-Agent ist eine ausführbare Datei, die die Momentaufnahme (bei der Momentaufnahme- und Transaktionsreplikation) und die in den Tabellen der Verteilungsdatenbank gespeicherten Transaktionen (bei der Transaktionsreplikation) in die Zieltabellen auf den Abonnenten verschiebt.  
@@ -89,14 +89,14 @@ ms.locfileid: "56028061"
  **-?**  
  Druckt alle verfügbaren Parameter.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Der Name des Abonnenten. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-SubscriberDB** _subscriber_database_  
  Der Name der Abonnentendatenbank.  
@@ -134,7 +134,7 @@ ms.locfileid: "56028061"
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|Description|  
+|Wert von EncryptionLevel|Beschreibung|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -169,7 +169,7 @@ ms.locfileid: "56028061"
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Description|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
 |-------------------------------|-----------------|  
 |**0**|Statusmeldungen werden entweder an der Konsole ausgegeben oder in eine Ausgabedatei geschrieben. Verlaufsdatensätze werden nicht in der Verteilungsdatenbank protokolliert.|  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -230,7 +230,7 @@ ms.locfileid: "56028061"
  **-QuotedIdentifier** _quoted_identifier_  
  Gibt den zu verwendenden Bezeichner in Anführungszeichenzeichen an. Das erste Zeichen des Werts gibt den Wert an, den der Verteilungs-Agent verwendet. Wenn **QuotedIdentifier** ohne Wert verwendet wird, verwendet der Verteilungs-Agent ein Leerzeichen. Wenn **QuotedIdentifier** nicht verwendet wird, verwendet der Verteilungs-Agent einen vom Abonnenten unterstützten Bezeichner in Anführungszeichen.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Eine durch Doppelpunkte getrennte Liste, die die Fehlernummern angibt, die von diesem Agent übersprungen werden sollen.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -248,7 +248,7 @@ ms.locfileid: "56028061"
  **-SubscriberType** [ **0**| **1**| **3**]  
  Gibt den Typ der vom Verteilungs-Agent verwendeten Abonnentenverbindung an.  
   
-|Wert von SubscriberType|Description|  
+|Wert von SubscriberType|Beschreibung|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC-Datenquelle (ODBC data source)|  

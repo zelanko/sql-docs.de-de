@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 115aa0db8e8d6f2fdc35718ccb60f1d0ed06b5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760131"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259902"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Access-Anwendungen zu SQL Server – Azure SQL-Datenbank (AccessToSQL)
 Wenn Sie möchten, verwenden Sie die vorhandenen Access-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie können die ursprünglichen Access-Tabellen verknüpfen, um die migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabellen. Verknüpfen die Access-Datenbank ändert, sodass Ihre Abfragen, Formulare, Berichte und Data Access-Seiten verwenden Sie die Daten in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank anstelle der Daten in der Access-Datenbank.  
@@ -146,7 +146,7 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Hyperlinkfunktionalität verloren gegangen ist, nach dem Migrieren von Daten  
 **Ursache:** Nach der Migration, Hyperlinks in Spalten ihre Funktionalität verlieren, und werden einfache **nvarchar(max)** Spalten.  
   
-**Lösung:** Keine.  
+**Lösung:** Keine  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Einige SQL Server-Datentypen werden durch den Zugriff nicht unterstützt.  
 **Ursache:** Wenn Sie später aktualisieren Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Tabellen, Datentypen, die von Access, nicht unterstützt werden, enthalten Sie können nicht in der Tabelle in Access öffnen.  

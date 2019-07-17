@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085193"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +48,12 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
   
 `[ @resolution = ] 'resolution'` Ist die Auflösung des Begrenzungsrahmens. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist eine **Tinyint**, hat keinen Standardwert.  
   
-`[ @sample = ] 'sample'` Ist der Prozentsatz der Tabelle, die verwendet wird. Gültige Werte liegen zwischen 0 und 100. *TABLESAMPLE* ist eine **"float"**. Standardwert ist 100.  
+`[ @sample = ] 'sample'` Ist der Prozentsatz der Tabelle, die verwendet wird. Gültige Werte liegen zwischen 0 und 100. *TABLESAMPLE* ist eine **"float"** . Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Stellt die eindeutige ID jeder Zelle, mit der Anzahl von 1 ab.|  
 |**cell**|**geography**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  

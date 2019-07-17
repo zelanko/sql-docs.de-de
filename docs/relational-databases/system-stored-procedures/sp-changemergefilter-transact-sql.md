@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0c38af1089a1d59c9964e39aecca6b1773a8e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124893"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +55,12 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|Wert|Description|  
+|Eigenschaft|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Joinfilter.<br /><br /> Diese Option ist erforderlich, um [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten zu unterstützen.|  
 ||**2**|Logische Datensatzbeziehung.|  
 ||**3**|Ein Joinfilter ist ebenfalls eine logische Datensatzbeziehung.|  
-|**filtername**||Name des Filters.|  
+|**Filtername**||Name des Filters.|  
 |**join_articlename**||Name des Join-Artikels.|  
 |**join_filterclause**||Filterklausel|  
 |**join_unique_key**|**true**|Der Join betrifft einen eindeutigen Schlüssel.|  

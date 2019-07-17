@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125230"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210772"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
   Drei Bereiche sind beim Entwickeln einer Sicherungs- und Wiederherstellungsstrategie für die Momentaufnahme- und Transaktionsreplikation zu berücksichtigen:  
@@ -148,7 +148,7 @@ ms.locfileid: "54125230"
   
          Weitere Informationen zum Angeben, dass der Abonnement bereits über die Daten verfügt, finden Sie unter [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Veröffentlichungsdatenbank: Transaktionsreplikation mit aktualisierbaren Abonnements  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Veröffentlichungsdatenbank: Transaktionsreplikation mit Updateabonnements  
   
 1.  Stellen Sie die aktuellste Sicherung der Veröffentlichungsdatenbank wieder her. Fahren Sie mit Schritt 2 fort.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "54125230"
   
 9. Nach der Wiederherstellung wird der Identitätsbereich, den Sie den Tabellen in Datenbank **A** zugewiesen haben, auch in Datenbank **B** verwendet. Stellen Sie sicher, dass die wiederhergestellte Datenbank **B** alle Änderungen aus der fehlerhaften Datenbank **B** empfangen hat, die an die Datenbanken **A** und **C** weitergegeben wurden. Weisen Sie dann den Identitätsbereich für jede Tabelle neu zu.  
   
-    1.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id**. Fahren Sie mit Schritt b fort.  
+    1.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id** . Fahren Sie mit Schritt b fort.  
   
     2.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Weitere Informationen finden Sie unter [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md) oder [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Fahren Sie mit Schritt c fort.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125230"
   
     1.  Beenden Sie alle Aktivitäten an allen veröffentlichten Tabellen in der Peer-zu-Peer-Topologie. Fahren Sie mit Schritt b fort.  
   
-    2.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id**. Fahren Sie mit Schritt c fort.  
+    2.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id** . Fahren Sie mit Schritt c fort.  
   
     3.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Fahren Sie mit Schritt d fort.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125230"
   
 2.  Stellen Sie die aktuellste Sicherung der Abonnementdatenbank wieder her. Fahren Sie mit Schritt 3 fort.  
   
-3.  Wenn die Abonnementdatenbank nur Pushabonnements enthält, fahren Sie mit Schritt 4 fort. Wenn die Abonnementdatenbank auch Pullabonnements enthält, stellen Sie die folgenden Fragen: Ist die Abonnementinformationen aktuell? Sind in der Datenbank alle Tabellen und Optionen eingeschlossen, die beim Auftreten des Fehlers festgelegt waren? Wenn ja, fahren Sie mit Schritt 4 fort. Wenn nein, initialisieren Sie das Abonnement erneut. Die Wiederherstellung ist abgeschlossen.  
+3.  Wenn die Abonnementdatenbank nur Pushabonnements enthält, fahren Sie mit Schritt 4 fort. Wenn die Abonnementdatenbank Pullabonnements enthält, sollten Sie sich die folgenden Fragen stellen: Sind die Abonnementinformationen aktuell? Sind in der Datenbank alle Tabellen und Optionen eingeschlossen, die beim Auftreten des Fehlers festgelegt waren? Wenn ja, fahren Sie mit Schritt 4 fort. Wenn nein, initialisieren Sie das Abonnement erneut. Die Wiederherstellung ist abgeschlossen.  
   
 4.  Führen Sie den Verteilungs-Agent aus, um den Abonnenten zu synchronisieren. Die Wiederherstellung ist abgeschlossen.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085278"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_help_proxy
   
  In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
@@ -66,19 +65,19 @@ sp_help_proxy
 |Dts|SSIS-Paketausführung|  
 |PowerShell|PowerShell-Skript|  
   
-`[ @name = ] 'name'` Der Name des eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] melden Sie sich die Proxys aufgelistet werden sollen. Der Name ist **nvarchar(256)**, hat den Standardwert NULL. Wenn *Namen* angegeben wird, *Subsystem_name* muss auch angegeben werden.  
+`[ @name = ] 'name'` Der Name des eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] melden Sie sich die Proxys aufgelistet werden sollen. Der Name ist **nvarchar(256)** , hat den Standardwert NULL. Wenn *Namen* angegeben wird, *Subsystem_name* muss auch angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|ID des Proxys.|  
 |**name**|**sysname**|Der Name des Proxys.|  
 |**credential_identity**|**sysname**|Der Microsoft Windows-Domänenname und -Benutzername für die dem Proxy zugeordneten Anmeldeinformationen.|  
-|**enabled**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
+|**aktiviert**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
 |**description**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
 |**user_sid**|**varbinary(85)**|Die Windows-SID des Windows-Benutzers für diesen Proxy.|  
 |**credential_id**|**int**|Die ID für die dem Proxy zugeordneten Anmeldeinformationen.|  

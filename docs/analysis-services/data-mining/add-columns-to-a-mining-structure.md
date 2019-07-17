@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Spalten zu einer Miningstruktur | Microsoft Docs
+title: Hinzufügen von Spalten zu einer Miningstruktur | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4c09d4b263dc4e4274888f6cbd8bf1f27103dd8b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210217"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>Hinzufügen von Spalten zu einer Miningstruktur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

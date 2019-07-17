@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb73d8a4de482f24eae5794232019af9890e3624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125543"
 ---
 # <a name="consistency-check"></a>Konsistenzprüfung
 Eine konsistenzprüfung wird automatisch vom Treiber ausgeführt, wenn eine Anwendung das SQL_DESC_DATA_PTR-Feld des APD, ARD oder IPD festlegt. Wenn dieses Feld festgelegt ist, überprüft der Treiber an, dass der Wert das SQL_DESC_TYPE-Feld und die Werte für das SQL_DESC_TYPE-Feld in den gleichen Datensatz sind gültig und konsistent.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119709"
 ---
 # <a name="like-predicate-limitations"></a>Einschränkungen des LIKE-Prädikats
 Wenn Daten in einer Spalte mehr als 255 Zeichen ist, wird der Vergleich mit LIKE nur auf die ersten 255 Zeichen basieren.  

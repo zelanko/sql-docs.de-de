@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a736f60b66756a8ef8e5cce2daf46550042f5695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 996121d437ac3ad93f05b758bd44f30d3dac6151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081851"
 ---
 # <a name="standard-data-stream-protocol"></a>Standardmäßiges Datenstromprotokoll
 Ein Data Stream-Protokoll ist eine Möglichkeit, den Zugriff auf Daten in heterogenen DBMS. In der Tat enthält bereits ein Data Stream-Protokoll:

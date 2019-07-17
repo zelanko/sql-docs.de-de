@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77b6c15c-9cf7-4019-b3f0-3d27d23ef656
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d23edc53d6eb4f27fa1e836b999dd86809bba9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a7ccecb3923dc46ebf8442e3c006ee88564749b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130984"
 ---
 # <a name="sqltables"></a>SQLTables
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "63014032"
   
  Um verfügbare Kataloge, Schemas und Tabellentypen zu melden, nutzt SQLTables spezielle leere Zeichenfolgen (mit der Länge Null Byte-Zeiger). Leere Zeichenfolgen sind keine Standardwerte (NULL-Zeiger).  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die *CatalogName* Parameter: *Linked_Server_Name.Catalog_Name*.  
+ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Meldung von Informationen für Tabellen auf Verbindungsservern, indem er einen zweiteiligen Namen für die *CatalogName* Parameter: *Linked_server_name*.  
   
  SQLTables gibt Informationen über alle Tabellen, deren Namen übereinstimmen *TableName* und den aktuellen Benutzer gehören.  
   

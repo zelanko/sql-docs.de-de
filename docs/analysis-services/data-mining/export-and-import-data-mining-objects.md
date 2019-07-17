@@ -1,5 +1,5 @@
 ---
-title: Exportieren und Importieren von Datamining-Objekte | Microsoft Docs
+title: Exportieren und Importieren von Datamining-Objekten | Microsoft-Dokumentation
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb1726006db1693e94e12326617436bdff7ae73e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018937"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210016"
 ---
 # <a name="export-and-import-data-mining-objects"></a>Exportieren und Importieren von Data Mining-Objekten
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,6 +46,6 @@ ms.locfileid: "34018937"
  Sie können ein Modell oder eine Struktur nicht auf einen Server importieren, wenn bereits ein Modell oder eine Struktur mit dem gleichen Namen vorhanden ist. Sie können auch kein Data Mining-Objekt exportieren und anschließend den Namen dieses Objekts in der Exportdatei ändern. Wenn Namenskonflikte zu erwarten sind, sollten Sie daher entweder das Data Mining-Objekt auf dem Zielserver löschen oder das Data Mining-Objekt umbenennen, bevor Sie die Definition exportieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwaltung von Datamining-Lösungen und-Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Verwaltung von Data Mining-Lösungen und -Objekten](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

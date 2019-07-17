@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b0ddc008286dfffbf8ee15da0d8a111de69d6a1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108225"
 ---
 # <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Der Name der Datenbank, für die das Speicherformat geändert werden soll. *Database_name* ist **Sysname**, hat keinen Standardwert. Wenn der Datenbankname ausgelassen wird, wird der vardecimal-Speicherformatstatus aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
   
  [ @vardecimal_storage_format=] {'ON' |' AUS "}  
- Gibt an, ob das vardecimal-Speicherformat aktiviert ist. @vardecimal_storage_format kann ON oder OFF sein. Der Parameter ist **varchar(3)**, hat keinen Standardwert. Wenn ein Datenbankname angegeben ist, @vardecimal_storage_format jedoch ausgelassen wird, wird die aktuelle Einstellung der angegebenen Datenbank zurückgegeben. Dieses Argument hat keine Auswirkungen auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höhere Versionen.  
+ Gibt an, ob das vardecimal-Speicherformat aktiviert ist. @vardecimal_storage_format kann ON oder OFF sein. Der Parameter ist **varchar(3)** , hat keinen Standardwert. Wenn ein Datenbankname angegeben ist, @vardecimal_storage_format jedoch ausgelassen wird, wird die aktuelle Einstellung der angegebenen Datenbank zurückgegeben. Dieses Argument hat keine Auswirkungen auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höhere Versionen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

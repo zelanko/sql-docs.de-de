@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fd6ac6c5dccd9f33e2e8389f5847a5ac73b795d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 3f3666c6951fcacea031c5d86dc9d17381a2f963
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099432"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ RETCODE bcp_setcolfmt (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *HDBC*  
+ *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *field*  
@@ -99,7 +98,7 @@ RETCODE bcp_setcolfmt (
   
 -   Die Länge der optionalen abschließenden Bytesequenz  
   
- Jeder Aufruf von **Bcp_setcolfmt** gibt das Format für eine benutzerdateispalte an. Z. B. um die Standardeinstellungen für drei Spalten in einer Datendatei für die Benutzer mit fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, und rufen dann **Bcp_setcolfmt** fünfmal mit drei dieser Aufrufe Ihr bentuzerdefiniertes Format. Klicken Sie für die verbleibenden zwei Aufrufe BCP_FMT_TYPE auf 0 festgelegt, und legen Sie BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN und *CbValue* auf 0, SQL_VARLEN_DATA und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
+ Jeder Aufruf von **Bcp_setcolfmt** gibt das Format für eine benutzerdateispalte an. Z. B. um die Standardeinstellungen für drei Spalten in einer Datendatei für die Benutzer mit fünf Spalten zu ändern, rufen Sie zuerst [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** , und rufen dann **Bcp_setcolfmt** fünfmal mit drei dieser Aufrufe Ihr bentuzerdefiniertes Format. Klicken Sie für die verbleibenden zwei Aufrufe BCP_FMT_TYPE auf 0 festgelegt, und legen Sie BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN und *CbValue* auf 0, SQL_VARLEN_DATA und 0 bzw. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
  Die **Bcp_columns** Funktion aufgerufen werden muss, bevor **Bcp_setcolfmt**.  
   

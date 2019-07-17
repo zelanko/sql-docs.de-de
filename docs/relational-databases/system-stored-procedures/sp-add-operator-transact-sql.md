@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121020"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name eines Operators (Benachrichtigungsempfänger). Dieser Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten (**%**) Zeichen. *Namen* ist **Sysname**, hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name eines Operators (Benachrichtigungsempfänger). Dieser Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten ( **%** ) Zeichen. *Namen* ist **Sysname**, hat keinen Standardwert.  
   
 `[ @enabled = ] enabled` Gibt den aktuellen Status des Operators an. *aktiviert* ist **Tinyint**, hat den Standardwert **1** (aktiviert). Wenn **0**, der Operator ist nicht aktiviert und empfängt keine Benachrichtigungen.  
   
-`[ @email_address = ] 'email_address'` Die e-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Email_address* ist **nvarchar(100)**, hat den Standardwert NULL.  
+`[ @email_address = ] 'email_address'` Die e-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Email_address* ist **nvarchar(100)** , hat den Standardwert NULL.  
   
  Sie können angeben, entweder eine physische e-Mail-Adresse oder einen Alias für *Email_address*. Zum Beispiel:  
   
- "**Jdoe**'oder'**jdoe@xyz.com**"  
+ "**Jdoe**'oder' **jdoe@xyz.com** "  
   
 > [!NOTE]  
 >  Für Datenbank-E-Mail muss die E-Mail-Adresse verwendet werden.  
   
-`[ @pager_address = ] 'pager_address'` Die Pageradresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Pager_address* ist **narchar(100)**, hat den Standardwert NULL.  
+`[ @pager_address = ] 'pager_address'` Die Pageradresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *Pager_address* ist **narchar(100)** , hat den Standardwert NULL.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` Die Uhrzeit, nach der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent sendet Pagerbenachrichtigungen an den angegebenen Operator an Wochentagen, von Montag bis Freitag. *Weekday_pager_start_time*ist **Int**, hat den Standardwert **090000**, womit 9:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Freitag|  
 |**64**|Samstag|  
   
-`[ @netsend_address = ] 'netsend_address'` Die Netzwerkadresse des Operators, an den die Netzwerknachricht gesendet wird. *Netsend_address*ist **nvarchar(100)**, hat den Standardwert NULL.  
+`[ @netsend_address = ] 'netsend_address'` Die Netzwerkadresse des Operators, an den die Netzwerknachricht gesendet wird. *Netsend_address*ist **nvarchar(100)** , hat den Standardwert NULL.  
   
 `[ @category_name = ] 'category'` Der Name der Kategorie für diesen Operator. *Kategorie* ist **Sysname**, hat den Standardwert NULL.  
   

@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210733"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ermöglichen anhand von Warnungen das Überwachen von Ereignissen, wie Ereignissen des Replikations-Agents. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  
@@ -39,9 +39,9 @@ ms.locfileid: "52762582"
 |14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|Ja|  
 |14152|**Replikation: Wiederholung des Agents.**|Der Agent wird nach dem erfolglosen erneuten Versuch einer Operation beendet (der Agent stellt einen Fehler fest, wie z. B. einen nicht verfügbaren Server, einen Deadlock, einen Verbindungsfehler oder einen Timeoutfehler).|Ja|  
 |14157|**Replikation: Abgelaufenes Abonnement wurde gelöscht.**|Ein abgelaufenes Abonnement wurde gelöscht.|Nein|  
-|20572|**Replikation: Abonnement wurde nach einem Überprüfungsfehler neu initialisiert**|Antwortauftrag 'Abonnements bei Datenüberprüfungsfehler erneut initialisieren' initialisiert ein Abonnement erfolgreich erneut.|Nein|  
-|20574|**Replikation: Abonnenten hat Fehler bei der datenüberprüfung**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|Ja|  
-|20575|**Replikation: Abonnent hat die datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|Ja|  
+|20572|**Replikation: Das Abonnement wurde nach einem Überprüfungsfehler neu initialisiert.**|Antwortauftrag 'Abonnements bei Datenüberprüfungsfehler erneut initialisieren' initialisiert ein Abonnement erfolgreich erneut.|Nein|  
+|20574|**Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|Ja|  
+|20575|**Replikation: Der Abonnent hat die Datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|Ja|  
 |20578|**Replikation: Der Agent wurde benutzerdefiniert heruntergefahren.**|||  
 |22815|**Peer-zu-Peer-Konflikterkennungswarnung**|Der Verteilungs-Agent hat bei dem Versuch, eine Änderung an einem Peer-zu-Peer-Knoten vorzunehmen, einen Konflikt erkannt.|Ja|  
   

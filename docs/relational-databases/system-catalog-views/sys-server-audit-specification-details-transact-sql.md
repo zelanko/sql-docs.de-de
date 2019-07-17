@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98256d8c38daf33ada116e1f19578bed2c35ba3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125023"
 ---
 # <a name="sysserverauditspecificationdetails-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält Informationen über Details der Serverüberwachungsspezifikation (Aktionen) in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Eine Liste aller audit_action_ids und deren Namen Abfragen [dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Enthält Informationen über Details der Serverüberwachungsspezifikation (Aktionen) in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Eine Liste aller audit_action_ids und deren Namen Abfragen [dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|ID der Serverüberwachungsspezifikation|  
 |audit_action_id|**int**|ID der Überwachungsaktion|  

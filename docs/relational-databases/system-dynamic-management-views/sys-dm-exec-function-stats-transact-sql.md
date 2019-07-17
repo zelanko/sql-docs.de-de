@@ -18,12 +18,12 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa9e8d8105852c4b4d67acec965fd037a5c05ac4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: e67a50287e0878a3dcc0779bb4a78dbcbbdd0260
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097741"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259256"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "68097741"
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt Informationen zu den Top 10-Funktionen, die durchschnittlich verstrichenen Zeit zurück.  

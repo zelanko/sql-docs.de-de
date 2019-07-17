@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a85fedcd5eaddf5383f6f84360765bc60ad2556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102383"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Enthält eine Zeile für jede interne speicheroptimierte Tabelle, die zum Speichern von speicheroptimierten Benutzertabellen verwendet wird. Jede Benutzertabelle entspricht mindestens einer internen Tabelle. Eine einzelne Tabelle wird für die Speicherung von Kerndaten verwendet. Zusätzliche interne Tabellen werden für die Unterstützung von Funktionen wie dem temporalen Columnstore-Index und die Speicherung außerhalb von Zeilen (LOB) für speicheroptimierte Tabellen verwendet.
  
-| Spaltenname  | Datentyp  | Description |
+| Spaltenname  | Datentyp  | Beschreibung |
 | :------ |:----------| :-----|
 |object_id  |**int**|       Die ID der Benutzertabelle. Interne speicheroptimierte Tabellen, die der Unterstützung einer Benutzertabelle dienen (wie etwa Speicherung außerhalb der Zeile oder gelöschte Zeilen im Fall von Hk/Columnstore-Kombinationen), weisen die gleiche object_id wie ihr übergeordnetes Objekt auf. |
 |xtp_object_id  |**bigint**|    In-Memory-OLTP-Objekt-ID, die der internen speicheroptimierten Tabelle entspricht, die für die Unterstützung der Benutzertabelle verwendet wird. Sie ist innerhalb der Datenbank eindeutig und kann sich im Lauf der Lebensspanne des Objekts ändern. 

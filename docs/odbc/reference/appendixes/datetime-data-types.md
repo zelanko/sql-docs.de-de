@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6b9363c9-04bf-4492-a210-7aa15dea4af8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13cb433da64b78a8b5e70f28642fd576f6803ed5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1cb92afa9467717b8a589ddbcaee4ab8a5a529f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130089"
 ---
 # <a name="datetime-data-types"></a>datetime-Datentypen
 In ODBC *3.x*, die Bezeichner für date, Time und Timestamp SQL-Datentypen von SQL_DATE, SQL_TIME und SQL_TIMESTAMP geändert haben (mit Instanzen von **#define** in der Headerdatei, 9, 10 und 11), SQL_ TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP (mit Instanzen von **#define** in der Headerdatei 91, 92 und 93) an. Der entsprechenden IDs wurden geändert aus SQL_C_DATE SQL_C_TIME und SQL_C_TIMESTAMP SQL_C_TYPE_DATE SQL_C_TYPE_TIME und SQL_C_TYPE_TIMESTAMP bzw. C-Typ, und die Instanzen der **#define** wurden geändert entsprechend.  

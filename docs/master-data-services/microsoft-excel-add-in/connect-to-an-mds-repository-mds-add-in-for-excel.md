@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5dcfad83ed20960402f26d2af71b845db044597b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 711c76e4db62c274fe62d2319b3438799954d1c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139366"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Herstellen einer Verbindung mit einem MDS-Repository (MDS-Add-In für Excel)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488885"
 
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]müssen Sie eine Verbindung mit einem MDS-Repository herstellen, bevor Sie Daten laden oder veröffentlichen können.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  

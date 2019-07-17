@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299027"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259787"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Arbeiten mit SSMA für Access-Konsole (AccessToSQL)
 Microsoft SQL Server Migration Assistant (SSMA) für den Zugriff ist jetzt über eine Konsolenanwendung in Befehlszeile zugegriffen werden. Die Skriptdateien bilden die Eingabe für die Anwendung für die Befehle ausführen. SSMA als eine Konsolenanwendung Skriptebene Schnittstelle ermöglicht, den Migrationszyklus reduziert und skaliert Migrationsaufwand erforderlich ist.  
@@ -36,7 +36,7 @@ In diesem Abschnitt behandelten Themen umfassen:
 |[Arbeiten mit der Beispiel-Konsole Skript FilesExecuting der SSMA-Konsole &#40;AccessToSQL&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)|Es wird beschrieben, wie einfach die Skripts anpassen, die in den Beispieldateien zusammen mit dem Produkt bereitgestellt wurden.|  
 |[Verwalten von Kennwörtern &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)|Kennwortverschlüsselung und Entschlüsselung und beim Importieren / Exportieren von Kennwortinformationen beschreibt.|  
 |[Generieren von Berichten &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)|Listet die Befehle zum Generieren von Berichten.|  
-|[Troubleshooting &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
+|[Problembehandlung bei &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
 ## <a name="see-also"></a>Siehe auch  
 [Erste Schritte mit SSMA für Access-Konsole](getting-started-with-ssma-for-access-console-accesstosql.md)  

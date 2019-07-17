@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130021"
 ---
 # <a name="display-size"></a>Anzeigegröße
 Die Größe einer Spalte ist die maximale Anzahl von Zeichen, die zum Anzeigen von Daten in Form von Zeichen erforderlich sind. In der folgende Tabelle definiert die Größe für jede ODBC-SQL-Datentyp.  
@@ -39,8 +38,8 @@ Die Größe einer Spalte ist die maximale Anzahl von Zeichen, die zum Anzeigen v
 |SQL_FLOAT SQL_DOUBLE|24 (ein Zeichen, 15 Dezimalstellen, ein Dezimaltrennzeichen, der Buchstabe *E*, ein Zeichen und 3 Ziffern).|  
 |[A] alle binären Typen|Die definiert oder (für Variablentypen) maximale Länge der Spalte x 2. (Jedes binäre Byte wird durch eine hexadezimale Zahl mit 2 Stellen dargestellt.)|  
 |SQL_TYPE_DATE|10 (ein Datum im Format *jjjj-mm-tt*).|  
-|SQL_TYPE_TIME|8 (eine Uhrzeit im Format *hh: mm:*)<br /><br /> - oder -<br /><br /> 9 + *s* (eine Uhrzeit im Format *hh: mm:*[: ss. fff...], wobei *s* ist die Genauigkeit der Sekundenbruchteile).|  
-|SQL_TYPE_TIMESTAMP|19 (für den Zeitstempel in der *jjjj-mm-tt hh: mm:* Format)<br /><br /> - oder -<br /><br /> 20 + *s* (für den Zeitstempel in der *jjjj-mm-tt hh: mm:*[: ss. fff...]-Format, in denen *s* ist die Genauigkeit der Sekundenbruchteile).|  
+|SQL_TYPE_TIME|8 (eine Uhrzeit im Format *hh: mm:* )<br /><br /> - oder -<br /><br /> 9 + *s* (eine Uhrzeit im Format *hh: mm:* [: ss. fff...], wobei *s* ist die Genauigkeit der Sekundenbruchteile).|  
+|SQL_TYPE_TIMESTAMP|19 (für den Zeitstempel in der *jjjj-mm-tt hh: mm:* Format)<br /><br /> - oder -<br /><br /> 20 + *s* (für den Zeitstempel in der *jjjj-mm-tt hh: mm:* [: ss. fff...]-Format, in denen *s* ist die Genauigkeit der Sekundenbruchteile).|  
 |Alle Interval-Datentypen|Finden Sie unter [Länge des Datentyps Interval](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (die Anzahl der Zeichen in der *Aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* Format|  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126402"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +39,24 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [**@publisher** =] **"***Verleger***"**  
+ [ **@publisher** = ] **'***publisher***'**  
  Der Name des nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat keinen Standardwert.  
   
- [**@schema** =] **"***Schema***"**  
+ [ **@schema** =] **"***Schema***"**  
  Der Name des Schemas. *Schema* ist **Sysname**, hat den Standardwert NULL.  
   
- [**@operation** =] **"***Vorgang***"**  
- Die Aktion, die für dieses Schema ausgeführt werden soll. *Vorgang* ist **nvarchar(4)**, und kann einen der folgenden Werte.  
+ [ **@operation** =] **"***Vorgang***"**  
+ Die Aktion, die für dieses Schema ausgeführt werden soll. *Vorgang* ist **nvarchar(4)** , und kann einen der folgenden Werte.  
   
-|Wert|Description|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**add**|Fügt das angegebene Schema der Liste der Schemas hinzu, die für die Veröffentlichung nicht in Frage kommen.|  
-|**Löschen**|Löscht das angegebene Schema aus der Liste der Schemas, die für die Veröffentlichung nicht in Frage kommen.|  
+|**drop**|Löscht das angegebene Schema aus der Liste der Schemas, die für die Veröffentlichung nicht in Frage kommen.|  
 |**Hilfe**|Gibt die Liste der Schemas zurück, die für die Veröffentlichung nicht in Frage kommen.|  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**Schemaname**|**sysname**|Der Name des Schemas, das für die Veröffentlichung nicht in Frage kommt.|  
   

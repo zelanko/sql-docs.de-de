@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9ee35eb4c5d67ff50f4f08c1cfa29596e27aec2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d7caca72f684dfb6428361a4550860b3bea3f273
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126412"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
  Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_script_synctran_commands**.  
   
 ## <a name="see-also"></a>Siehe auch  
- [sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
+ [Sp_addsynctriggers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   
  [sp_addqueued_artinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addqueued-artinfo-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

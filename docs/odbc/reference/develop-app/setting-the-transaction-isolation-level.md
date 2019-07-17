@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37b575f9e208b5a1b7fa03b170b74633da149c67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e59db823f8b84edfb5c92f2d142c8238449e3323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63237876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107581"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Festlegen der Transaktionsisolationsstufe
 Zum Festlegen der Isolationsstufe für Transaktionen verwendet eine Anwendung das Verbindungsattribut SQL_ATTR_TXN_ISOLATION. Wenn die Datenquelle die angeforderte Isolationsstufe nicht unterstützt, kann die Treiber oder die Datenquelle eine höhere Ebene festlegen. Um zu bestimmen, welche Transaktionsisolationsstufen wird eine Datenquelle unterstützt, und welche die Standardisolationsstufe ist, eine Anwendung ruft **SQLGetInfo** mit den Optionen dem SQL_TXN_ISOLATION_OPTION und SQL_DEFAULT_TXN_ISOLATION bzw.  

@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080775"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren (Visual FoxPro-ODBC-Treiber)
 Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte Prozeduren unter Verwendung der Visual FoxPro-ODBC-Treiber erstellen. Allerdings kann die Anwendung mit vorhandenen Regeln, Trigger, Standardwerte und gespeicherte Prozeduren interagieren, wie eingefügt, aktualisiert oder Visual FoxPro-Daten in einer Datenbank gespeichert löscht.  
@@ -64,18 +63,18 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
 |ALIAS ()-Funktion|ALLTRIM ()-Funktion|ANFÜGEN von ARRAY-Befehl|  
 |AND -Operator|APPEND (Befehl)|Fügen Sie MEMO-Befehl|  
 |Fügen Sie vom Befehl|Fügen Sie die allgemeine-Befehl|KANN ()-Funktion|  
-|Fügen Sie PROZEDUREN-Befehl|ASC( ) Function|ASUBSCRIPT ()-Funktion|  
+|Fügen Sie PROZEDUREN-Befehl|ASC ()-Funktion|ASUBSCRIPT ()-Funktion|  
 |ASIN ()-Funktion|ASORT ()-Funktion|ATAN ()-Funktion|  
-|Bei der ()-Funktion|AT_C( ) Function|ATCLINE ()-Funktion|  
+|Bei der ()-Funktion|AT_C ()-Funktion|ATCLINE ()-Funktion|  
 |ATC ()-Funktion|ATCC ()-Funktion|AUSED ()-Funktion|  
-|ATLINE ()-Funktion|ATN2( ) Function||  
+|ATLINE ()-Funktion|ATN2 ()-Funktion||  
 |Durchschnittliche-Befehl|ACOS ()-Funktion||  
   
 ## <a name="b"></a>B  
   
 ||||  
 |-|-|-|  
-|BEGIN TRANSACTION-Befehl|BETWEEN( ) Function|BITNOT-()-Funktion|  
+|BEGIN TRANSACTION-Befehl|ZWISCHEN ()-Funktion|BITNOT-()-Funktion|  
 |BITCLEAR ()-Funktion|BITLSHIFT ()-Funktion|BITSET ()-Funktion|  
 |BITOR ()-Funktion|BITRSHIFT ()-Funktion|LEEREN Kommandozeile|  
 |BITTEST ()-Funktion|BITXOR-()-Funktion||  
@@ -86,7 +85,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
 ||||  
 |-|-|-|  
 |Berechnen der Befehl|KANDIDAT ()-Funktion|' Chr ' ()-Funktion|  
-|CDX( ) Function|CEILING ()-Funktion|CLOSE-Befehle|  
+|CDX ()-Funktion|CEILING ()-Funktion|CLOSE-Befehle|  
 |CHRTRAN ()-Funktion|CHRTRANC ()-Funktion|Kopieren Sie INDIZES-Befehl|  
 |CMONTH ()-Funktion|Befehl fortfahren|Kopieren Sie die erweiterten Befehl Struktur|  
 |Kopieren Sie PROZEDUREN-Befehl|Struktur-Kopierbefehl|Kopieren auf einen Menübefehl|  
@@ -134,7 +133,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
 |-|-|-|  
 |Befehl sammeln|GETNEXTMODIFIED ()-Funktion|Wechseln Sie/GOTO-Befehl|  
 |Und übergibt ihr ()-Funktion|GOMONTH ()-Funktion||  
-|GETCP ()-Funktion|GETENV( ) Function||  
+|GETCP ()-Funktion|GETENV ()-Funktion||  
   
 ## <a name="h"></a>H  
   
@@ -147,11 +146,11 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
 ||||  
 |-|-|-|  
 |IDXCOLLATE ()-Funktion|IF... ENDIF-Befehl|IIF ()-Funktion|  
-|INDBC( ) Function|INDEX-Befehl|InList-Prozedur ()-Funktion|  
-|INSERT-SQL-Befehl|INT ()-Funktion|ISALPHA( ) Function|  
-|ISBLANK( ) Function|ISDIGIT ()-Funktion|ISEXCLUSIVE ()-Funktion|  
-|ISLEADBYTE( ) Function|ISLOWER ()-Funktion|ISNULL ()-Funktion|  
-|ISREADONLY( ) Function|ISUPPER ()-Funktion||  
+|INDBC ()-Funktion|INDEX-Befehl|InList-Prozedur ()-Funktion|  
+|INSERT-SQL-Befehl|INT ()-Funktion|ISALPHA ()-Funktion|  
+|ISBLANK ()-Funktion|ISDIGIT ()-Funktion|ISEXCLUSIVE ()-Funktion|  
+|ISLEADBYTE ()-Funktion|ISLOWER ()-Funktion|ISNULL ()-Funktion|  
+|ISREADONLY-()-Funktion|ISUPPER ()-Funktion||  
   
 ## <a name="k"></a>K  
   
@@ -164,11 +163,11 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
 ||||  
 |-|-|-|  
 |LINKEN ()-Funktion|LEFTC ()-Funktion|LIKEC ()-Funktion|  
-|LENC( ) Function|WIE ()-Funktion|SPERRE ()-Funktion|  
+|LENC ()-Funktion|WIE ()-Funktion|SPERRE ()-Funktion|  
 |LOKALEN Befehl|Suchen Sie-Befehl|Suche ()-Funktion|  
 |LOG ()-Funktion|LOG10 ()-Funktion|LTRIM ()-Funktion|  
 |LOWER ()-Funktion|LPARAMETERS-Befehl||  
-|LUPDATE( ) Function|Funktion "LEN")||  
+|LUPDATE ()-Funktion|Funktion "LEN")||  
   
 ## <a name="m"></a>M  
   
@@ -190,7 +189,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
   
 ||||  
 |-|-|-|  
-|Tritt auf, ()-Funktion|OLDVAL( ) Function|ZUM Befehl "Fehler"|  
+|Tritt auf, ()-Funktion|OLDVAL ()-Funktion|ZUM Befehl "Fehler"|  
 |ZUM Befehl "Schlüssel"|Klicken Sie auf ()-Funktion|OPEN DATABASE-Befehl|  
 |OR -Operator|ORDER ()-Funktion|Betriebssystem ()-Funktion|  
   
@@ -208,9 +207,9 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
   
 ||||  
 |-|-|-|  
-|RAND( ) Function|RATTE ()-Funktion|RATC ()-Funktion|  
+|RAND ()-Funktion|RATTE ()-Funktion|RATC ()-Funktion|  
 |RATLINE ()-Funktion|RÜCKRUFBEFEHL|RECCOUNT ()-Funktion|  
-|RECNO( ) Function|RECSIZE ()-Funktion|REGIONALE-Befehl|  
+|RECNO ()-Funktion|RECSIZE ()-Funktion|REGIONALE-Befehl|  
 |Beziehung ()-Funktion|Entfernen Sie die TABLE-Befehl|Befehl "ersetzen"|  
 |ARRAY-Befehl ersetzen|Replizieren von ()-Funktion|Wiederholen SIE Befehl|  
 |Befehl zurück|RECHTS ()-Funktion|RIGHTC ()-Funktion|  
@@ -239,7 +238,7 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
 |SETFLDSTATE ()-Funktion|SIGN ()-Funktion|SIN ()-Funktion|  
 |Befehl "Überspringen"|SORT-Befehl|Leerzeichen ()-Funktion|  
 |SQRT ()-Funktion|STORE-Befehl|STR ()-Funktion|  
-|STRCONV( ) Function|STRTRAN ()-Funktion|STUFF ()-Funktion|  
+|STRCONV ()-Funktion|STRTRAN ()-Funktion|STUFF ()-Funktion|  
 |STUFFC ()-Funktion|SUBSTR ()-Funktion|SUBSTRC ()-Funktion|  
 |SUM-Befehl|Sys(2011)-Funktion||  
   
@@ -248,9 +247,9 @@ Sie können keine Visual FoxPro-Regeln, Trigger, Standardwerte und gespeicherte 
 ||||  
 |-|-|-|  
 |Arbeitsspeicher-Systemvariable _TALLY|Arbeitsspeicher-Systemvariable _TRIGGERLEVEL|TAGCOUNT ()-Funktion|  
-|TABLEUPDATE( ) Function|TAG ()-Funktion|Ziel ()-Funktion|  
+|TABLEUPDATE ()-Funktion|TAG ()-Funktion|Ziel ()-Funktion|  
 |TAGNO ()-Funktion|TAN ()-Funktion|TRIM ()-Funktion|  
-|Zeit ()-Funktion|Gesamt-Befehl|TXNLEVEL( ) Function|  
+|Zeit ()-Funktion|Gesamt-Befehl|TXNLEVEL ()-Funktion|  
 |TTOC ()-Funktion|TTOD ()-Funktion||  
 |Typ ()-Funktion|TABLEREVERT ()-Funktion||  
   

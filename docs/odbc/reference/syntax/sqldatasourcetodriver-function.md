@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 022387847cb1371af13465cee7a9e3e1c21e5749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba5019b15fdbb8bce06f04d5109813b88c40647d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104847"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver-Funktion
 **SQLDataSourceToDriver** Supportstranslations für ODBC-Treiber. Diese Funktion wird nicht von ODBC-fähigen Anwendungen aufgerufen werden; Anwendungen fordern Übersetzung über **SQLSetConnectAttr**. Die zugeordneten Treibers Untersuchen der *ConnectionHandle* im angegebenen **SQLSetConnectAttr** Ruft die angegebene DLL um Übersetzungen für den Treiber alle Datenflüsse aus der Datenquelle auszuführen. Eine Standard-Konvertierungs-DLL kann in der ODBC-Initialisierungsdatei angegeben werden.  
@@ -82,10 +81,10 @@ BOOL SQLDataSourceToDriver(
  [Ausgabe] Zeiger auf Speicher für eine Fehlermeldung angezeigt. Dies ist eine leere Zeichenfolge, es sei denn, die Übersetzung Fehler.  
   
  *cbErrorMsgMax*  
- [Eingabe] Länge der *von SQLDiagRec()*.  
+ [Eingabe] Länge der *von SQLDiagRec()* .  
   
  *pcbErrorMsg*  
- [Ausgabe] Zeiger auf die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierung Byte) zur Verfügung, die in zurückgegeben *von SQLDiagRec()*. Wenn dieser größer als oder gleich ist *CbErrorMsg*, die Daten in *von SQLDiagRec()* auf abgeschnitten *CbErrorMsgMax* minus der Null-Terminierungszeichen. Die *PcbErrorMsg* Argument kann ein null-Zeiger sein.  
+ [Ausgabe] Zeiger auf die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierung Byte) zur Verfügung, die in zurückgegeben *von SQLDiagRec()* . Wenn dieser größer als oder gleich ist *CbErrorMsg*, die Daten in *von SQLDiagRec()* auf abgeschnitten *CbErrorMsgMax* minus der Null-Terminierungszeichen. Die *PcbErrorMsg* Argument kann ein null-Zeiger sein.  
   
 ## <a name="returns"></a>Rückgabewert  
  TRUE, wenn die Verschiebung erfolgreich "false" war, wenn die Übersetzung fehlgeschlagen ist.  
@@ -99,7 +98,7 @@ BOOL SQLDataSourceToDriver(
   
  Obwohl *CbValueIn*, *CbValueOutMax*, und *PcbValueOut* sind vom Typ SDWORD, **SQLDataSourceToDriver** werden nicht unbedingt unterstützen Sie große Zeiger.  
   
- Wenn **SQLDataSourceToDriver** gibt FALSE zurück, Abschneiden von Daten kann während der Übersetzung aufgetreten sind. Wenn *PcbValueOut* (die Anzahl der zurückzugebenden im Ausgabepuffer verfügbaren Bytes) ist größer als *CbValueOutMax* (die Länge des Ausgabepuffers), und klicken Sie dann die Daten abgeschnitten wurden. Der Treiber muss bestimmen, ob das Abschneiden akzeptabel war. Wenn nicht abgeschnitten, die **SQLDataSourceToDriver** "false" aufgrund von Fehler ein anderer Fehler zurückgegeben. In beiden Fällen wird eine bestimmte Fehlermeldung zurückgegeben, *von SQLDiagRec()*.  
+ Wenn **SQLDataSourceToDriver** gibt FALSE zurück, Abschneiden von Daten kann während der Übersetzung aufgetreten sind. Wenn *PcbValueOut* (die Anzahl der zurückzugebenden im Ausgabepuffer verfügbaren Bytes) ist größer als *CbValueOutMax* (die Länge des Ausgabepuffers), und klicken Sie dann die Daten abgeschnitten wurden. Der Treiber muss bestimmen, ob das Abschneiden akzeptabel war. Wenn nicht abgeschnitten, die **SQLDataSourceToDriver** "false" aufgrund von Fehler ein anderer Fehler zurückgegeben. In beiden Fällen wird eine bestimmte Fehlermeldung zurückgegeben, *von SQLDiagRec()* .  
   
  Weitere Informationen zum Übersetzen von Daten, finden Sie unter [Konvertierungs-DLLs](../../../odbc/reference/develop-app/translation-dlls.md).  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 00cdd9f4968af4e0af47259341a60255d32faa8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8733b93648080e02a4d98a5be90faf1ec7ceba06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074417"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Festlegen von Eigenschaften für das Master Data Services-Add-In für Microsoft Excel
 
@@ -30,7 +29,7 @@ ms.locfileid: "65486081"
   
 ||||  
 |-|-|-|  
-|Registerkarte und Abschnitt|Einstellung|Description|  
+|Registerkarte und Abschnitt|Einstellung|Beschreibung|  
 |Einstellungen: Veröffentlichen|Dialogfeld **Veröffentlichen und mit Anmerkung versehen** beim Veröffentlichen anzeigen|Verwenden Sie diese Option, um das Dialogfeld **Veröffentlichen und mit Anmerkung versehen** anzuzeigen, nachdem Sie auf **Veröffentlichen**geklickt haben, um eine einzelne Anmerkung für alle Änderungen einzugeben oder eine Anmerkung für jede Änderung einzugeben.<br /><br /> Deaktivieren Sie die Option, um anzugeben, dass der Veröffentlichungsprozess ohne Anzeige des Dialogfelds **Veröffentlichen und mit Anmerkung versehen** initiiert wird. Sie erhalten keine Gelegenheit, eine Anmerkung einzugeben.|  
 |Einstellungen: Version|Versionsauswahl|Wählen Sie die Version der Masterdaten aus, die in das Excel-Add-In geladen werden. Mögliche Werte sind:<br /><br /> **Keine** – die Version ist standardmäßig auf keine Version festgelegt<br /><br /> **Älteste** – standardmäßig ist die älteste Version festgelegt, oder **Neueste** – standardmäßig ist die neueste Version festgelegt.|  
 |Einstellungen: Protokollierung|Ausführliche Protokollierung aktivieren|Aktivieren Sie die Protokollierung für das Laden von Masterdaten aus MDS in das Excel-Add-In, sodass das Ergebnis jedes Befehls im Dienst protokolliert wird.|  

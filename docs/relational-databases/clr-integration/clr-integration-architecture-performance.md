@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4cd3b8f186f1ade85f4ed4533b0549bcd449a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134954"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR-Integrationsarchitektur: Leistung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ ms.locfileid: "51671989"
   
  STVFs sind verwaltete Funktionen, die Zurückgeben einer **"IEnumerable"** Schnittstelle. **"IEnumerable"** verfügt über Methoden, die von STVF zurückgegebenen Resultset zu navigieren. Wenn die STVF aufgerufen wird, die zurückgegebene **"IEnumerable"** direkt mit dem Abfrageplan verbunden ist. Der Abfrageplan ruft **"IEnumerable"** Methoden ein, wenn er Zeilen abrufen muss. Dieses Iterationsmodell ermöglicht es, dass Ergebnisse sofort nach Abruf der ersten Zeile verarbeitet werden. Es muss nicht gewartet werden, bis die gesamte Tabelle aufgefüllt ist. Dadurch wird zudem der durch den Funktionsaufruf benötigte Arbeitsspeicher stark reduziert.  
   
-### <a name="arrays-vs-cursors"></a>Arrays und Cursor  
+### <a name="arrays-vs-cursors"></a>Arrays im Vergleich zu Cursor  
  Wenn [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursor Daten traversieren müssen, die als Array einfacher auszudrücken sind, kann verwalteter Code verwendet und die Leistung dadurch gesteigert werden.  
   
 ### <a name="string-data"></a>Zeichenfolgendaten  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichendaten, wie z. B. **Varchar**, können nicht vom Typ SqlString oder SqlChars in verwalteten Funktionen. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann Server XML-Daten zugegriffen werden, über eine streamingschnittstelle zurückgegebenes **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichendaten, wie z. B. **Varchar**, können nicht vom Typ SqlString oder SqlChars in verwalteten Funktionen. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann Server XML-Daten zugegriffen werden, über eine streamingschnittstelle zurückgegebenes **SqlXml.CreateReader()** .  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR und Erweiterte gespeicherte Prozeduren  
- Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Darüber hinaus die System.Data.SqlServer-APIs Datentypen wie z. B. **Xml**, **varchar(max)**, **nvarchar(max)**, und **'varbinary(max)'**, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], während ODS-APIs nicht erweitert wurde, um die neuen Datentypen unterstützen.  
+ Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Darüber hinaus die System.Data.SqlServer-APIs Datentypen wie z. B. **Xml**, **varchar(max)** , **nvarchar(max)** , und **'varbinary(max)'** , die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], während ODS-APIs nicht erweitert wurde, um die neuen Datentypen unterstützen.  
   
  Mit verwaltetem Code verwaltet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung von Ressourcen wie beispielsweise Arbeitsspeicher, Threads und Synchronisierung. Das rührt daher, dass die verwalteten APIs, die diese Ressourcen verfügbar machen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen-Manager implementiert werden. Hingegen verfügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über keine Sicht für oder Kontrolle über die Ressourcenverwendung der erweiterten gespeicherten Prozedur. Wenn eine erweiterte gespeicherte Prozedur beispielsweise zu viel CPU- oder Speicherressourcen belegt, gibt es keine Möglichkeit, dies mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erkennen oder zu kontrollieren. Mit verwaltetem Code kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen erkennen, dass ein bestimmter Thread längere Zeit nicht aktiv war, und dann die Ausführung des Tasks erzwingen, damit andere Arbeit geplant werden kann. Infolgedessen kann mit verwaltetem Code eine bessere Skalierbarkeit und Systemressourcenverwendung erreicht werden.  
   

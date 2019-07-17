@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210159"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Erstellen einer Miningmodell-Inhaltsabfrage
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "50145075"
   
      Die Vorlage **Inhaltsabfrage** wird im entsprechenden Code-Editor geöffnet. Der Metadatenbereich listet die Modelle auf, die in der aktuellen Datenbank verfügbar sind. Um die Datenbank zu ändern, wählen Sie eine andere Datenbank aus der Liste **Verfügbare Datenbanken** aus.  
   
-5.  Geben Sie den Namen eines Miningmodells in der Zeile `FROM` [*\<Miningmodell, Name, MyModel >*]`.CONTENT`. Wenn der Name des Miningmodells Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.  
+5.  Geben Sie den Namen eines Miningmodells in der Zeile `FROM` [ *\<Miningmodell, Name, MyModel >* ]`.CONTENT`. Wenn der Name des Miningmodells Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.  
   
      Wenn Sie den Namen nicht eingeben möchten, können Sie ein Miningmodell im **Objekt-Explorer** auswählen und in die Vorlage ziehen.  
   
-6.  In der Zeile `SELECT` *\<Auswahlliste, Ausdrucksliste, \* >*, geben Sie den Namen der Spalten in der Mining-Schemarowset.  
+6.  In der Zeile `SELECT` *\<Auswahlliste, Ausdrucksliste, \* >* , geben Sie den Namen der Spalten in der Mining-Schemarowset.  
   
      Eine Liste von Spalten, die Sie in Miningmodellinhaltsabfragen zurückgeben können, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)bereitgestellten DMVs eine Abfrage erstellen.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50145075"
      Im Ergebnisbereich wird der Inhalt des Modells angezeigt.  
   
     > [!NOTE]  
-    >  Um eine Liste aller Schemarowsets anzuzeigen, die Sie für die aktuelle Instanz abfragen können, verwenden Sie die folgende Abfrage: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Eine Liste der für Data Mining spezifischen Schemarowsets finden Sie unter [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
+    >  Um eine Liste aller Schemarowsets, die Sie Abfragen können auf der aktuellen Instanz anzuzeigen, verwenden Sie diese Abfrage: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Eine Liste der für Data Mining spezifischen Schemarowsets finden Sie unter [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   

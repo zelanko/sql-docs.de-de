@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2d13e7b3e2cac16bed40752f4452ba558c982c41
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860721"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255437"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "58860721"
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
 Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Die Ergebnisse sind dynamisch und entsprechen nicht den Ergebnissen für vorhandene Optionen wie z. B. `SET STATISTICS XML ON` Ausgabe dem nur erstellen, wenn die Abfrage abgeschlossen ist.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifiziert die Sitzung, in der die Abfrage ausgeführt wird. Verweist auf dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifiziert die Zielanforderung. Verweist auf dm_exec_sessions.request_id.|  
@@ -92,7 +91,7 @@ Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 die *standar
 ## <a name="permissions"></a>Berechtigungen  
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
    
 ## <a name="examples"></a>Beispiele  
  Schritt 1: Melden Sie sich eine Sitzung, in dem die Abfrage ausführen, werden Sie mit analysiert, werden sollen `sys.dm_exec_query_profiles`. So konfigurieren Sie die Abfrage für die profilerstellung verwenden `SET STATISTICS PROFILE ON`. Führen Sie Ihre Abfrage in derselben Sitzung aus.  

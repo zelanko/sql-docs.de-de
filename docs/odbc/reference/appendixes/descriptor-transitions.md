@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44e9d92c7371451d6bfdd2e1513c3f8fdac8447b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129998"
 ---
 # <a name="descriptor-transitions"></a>Deskriptorübergänge
 ODBC-Deskriptoren müssen die folgenden drei Zustände.  
   
-|Status|Description|  
+|Status|Beschreibung|  
 |-----------|-----------------|  
 |D0|Nicht zugeordnete Sicherheitsbeschreibung|  
 |D1i|Implizit zugewiesene Deskriptor|  
@@ -38,7 +37,7 @@ ODBC-Deskriptoren müssen die folgenden drei Zustände.
 |D0<br /><br /> Nicht zugeordnet|D1i<br /><br /> Implizit|D1e<br /><br /> Explizit|  
 |------------------------|----------------------|----------------------|  
 |D1i[1]|--|--|  
-|D1e[2]|--|--|  
+|D1e [2]|--|--|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* wurde von SQL_HANDLE_STMT auf.  
   
@@ -55,7 +54,7 @@ ODBC-Deskriptoren müssen die folgenden drei Zustände.
 |D0<br /><br /> Nicht zugeordnet|D1i<br /><br /> Implizit|D1e<br /><br /> Explizit|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|(IH)[2]|(HY017)|D0|  
+|(BEI) [2]|(HY017)|D0|  
   
  [1] für diese Zeile zeigt die Übergänge beim *HandleType* wurde von SQL_HANDLE_STMT auf.  
   
@@ -71,7 +70,7 @@ ODBC-Deskriptoren müssen die folgenden drei Zustände.
   
 |D0<br /><br /> Nicht zugeordnet|D1i<br /><br /> Implizit|D1e<br /><br /> Explizit|  
 |------------------------|----------------------|----------------------|  
-|(IH)[1]|--|--|  
+|(BEI) [1]|--|--|  
   
  [1] für diese Zeile zeigt die Übergänge beim *DescriptorHandle* wurde das Handle eines ARD, APD oder IPD, oder (für **SQLSetDescField**) beim *DescriptorHandle* wurde das Handle für ein IRD und *FieldIdentifier* SQL_DESC_ARRAY_STATUS_PTR oder SQL_DESC_ROWS_PROCESSED_PTR war.  
   

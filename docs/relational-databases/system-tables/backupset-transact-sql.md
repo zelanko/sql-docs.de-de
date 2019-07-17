@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119329"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "52402850"
  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
 
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Eindeutige Sicherungssatz-ID, die den Sicherungssatz identifiziert. Identität, Primärschlüssel.|  
 |**backup_set_uuid**|**uniqueidentifier**|Eindeutige Sicherungssatz-ID, die den Sicherungssatz identifiziert.|  
-|**media_set_id**|**int**|Eindeutige Mediensatz-ID, die den Mediensatz identifiziert, der den Sicherungssatz enthält. Verweise **backupmediaset(media_set_id)**.|  
+|**media_set_id**|**int**|Eindeutige Mediensatz-ID, die den Mediensatz identifiziert, der den Sicherungssatz enthält. Verweise **backupmediaset(media_set_id)** .|  
 |**first_family_number**|**tinyint**|Familiennummer des Mediums, bei dem der Sicherungssatz beginnt. Kann den Wert NULL haben.|  
 |**first_media_number**|**smallint**|Mediennummer des Mediums, bei dem der Sicherungssatz beginnt. Kann den Wert NULL haben.|  
 |**last_family_number**|**tinyint**|Familiennummer des Mediums, bei dem der Sicherungssatz endet. Kann den Wert NULL haben.|  
@@ -100,7 +99,7 @@ ms.locfileid: "52402850"
 |**compressed_backup_size**|**Numeric(20,0)**|Gesamtbytezahl der auf einem Datenträger gespeicherten Sicherung.<br /><br /> Zum Berechnen des Komprimierungsverhältnisses verwenden **Compressed_backup_size** und **Backup_size**.<br /><br /> Während ein **Msdb** ein Upgrade ausführen, wird dieser Wert auf NULL festgelegt. Dies gibt eine nicht komprimierte Sicherung an.|  
 |**key_algorithm**|**nvarchar(32)**|Der Verschlüsselungsalgorithmus, der zum Verschlüsseln der Sicherung verwendet wird. Der NO_Encryption-Wert gab an, dass die Sicherung nicht verschlüsselt wurde.|  
 |**encryptor_thumbprint**|**varbinary(20)**|Der Fingerabdruck der Verschlüsselung, der verwendet werden kann, um das Zertifikat oder den asymmetrischen Schlüssel in der Datenbank zu ermitteln. Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
-|**encryptor_type**|**nvarchar(32)**|Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel . Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
+|**encryptor_type**|**nvarchar(32)**|Verwendeter Verschlüsselungstyp: Zertifikat oder asymmetrischer Schlüssel. . Wenn die Sicherung nicht verschlüsselt wurde, ist dieser Wert NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
  RESTORE VERIFYONLY FROM *Backup_device* WITH LOADHISTORY füllt die Spalte von der **Backupmediaset** Tabelle mit den entsprechenden Werten aus dem mediensatzheader.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4f52e01375a142772f7514ea6bcf766a5a3225e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adcb9175913603a0d13fb2587e62d41b52939042
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094203"
 ---
 # <a name="default-subkey"></a>Standardunterschlüssel
 Die Registrierung möglicherweise eine Standard-Datenquelle mit den Standard-Unterschlüssel angeben. Dieser Unterschlüssel ist ein Sonderfall eines Data Source-Spezifikation Unterschlüssels und verfügt über die gleichen Werte wie alle anderen Data Source-Spezifikation Unterschlüssel. Der einzige Unterschied ist, dass es als Wert unter dem Unterschlüssel für ODBC-Datenquellen nicht aufgeführt ist.

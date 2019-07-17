@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 437b25af01544a1df6197a0d63e21ae2f7bee605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102344"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jeden Parameter einer nummerierten Prozedur. Beim Erstellen einer nummerierten gespeicherten Prozedur erhält die Basisprozedur die Nummer 1. Nachfolgende Prozeduren erhalten die Nummern 2, 3 usw. **sys.numbered_procedure_parameters** enthält die Parameterdefinitionen für alle nachfolgenden Prozeduren ab der Nummer 2 aufwärts. Diese Sicht zeigt keine Parameter für die gespeicherte Basisprozedur (Nummer 1). Die gespeicherte Basisprozedur ist mit einer nicht nummerierten gespeicherten Prozedur vergleichbar. Aus diesem Grund werden die Parameter in dargestellt [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md).  
+  Enthält eine Zeile für jeden Parameter einer nummerierten Prozedur. Beim Erstellen einer nummerierten gespeicherten Prozedur erhält die Basisprozedur die Nummer 1. Nachfolgende Prozeduren erhalten die Nummern 2, 3 usw. **sys.numbered_procedure_parameters** enthält die Parameterdefinitionen für alle nachfolgenden Prozeduren ab der Nummer 2 aufwärts. Diese Sicht zeigt keine Parameter für die gespeicherte Basisprozedur (Nummer 1). Die gespeicherte Basisprozedur ist mit einer nicht nummerierten gespeicherten Prozedur vergleichbar. Ihre Parameter werden daher in [sys.parameters (Transact-SQL)](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)dargestellt.  
   
 > [!IMPORTANT]  
 >  Nummerierte Prozeduren sind als veraltet markiert. Von der Verwendung nummerierter Prozeduren wird abgeraten. Ein DEPRECATION_ANNOUNCEMENT-Ereignis wird ausgelöst, wenn eine Abfrage kompiliert wird, die diese Katalogsicht verwendet.  
@@ -38,7 +37,7 @@ ms.locfileid: "47824238"
 > [!NOTE]  
 >  XML- und CLR-Parameter werden für nummerierte Prozeduren nicht unterstützt.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID des Objekts, zu dem dieser Parameter gehört.|  
 |**procedure_number**|**smallint**|Die Nummer dieser Prozedur innerhalb des Objekts, d. h. 2 oder größer.|  
@@ -47,8 +46,8 @@ ms.locfileid: "47824238"
 |**system_type_id**|**tinyint**|Die Systemtyp-ID des Parameters.|  
 |**user_type_id**|**int**|Die ID des Parametertyps gemäß der Definition seitens des Benutzers.|  
 |**max_length**|**smallint**|Die maximale Länge des Parameters in Byte.<br /><br /> -1 = Spaltendaten sind vom Datentyp varchar(max), nvarchar(max) oder varbinary(max).|  
-|**Mit einfacher Genauigkeit**|**tinyint**|Genauigkeit des Parameters, wenn dieser numerisch ist. Andernfalls ist der Wert 0.|  
-|**Skalieren**|**tinyint**|Dezimalstellen des Parameters, wenn dieser numerisch ist. Andernfalls ist der Wert 0.|  
+|**precision**|**tinyint**|Genauigkeit des Parameters, wenn dieser numerisch ist. Andernfalls ist der Wert 0.|  
+|**scale**|**tinyint**|Dezimalstellen des Parameters, wenn dieser numerisch ist. Andernfalls ist der Wert 0.|  
 |**is_output**|**bit**|1 = Der Parameter ist ein Ausgabe- oder Rückgabewert; andernfalls 0.|  
 |**is_cursor_ref**|**bit**|1 = Der Parameter ist ein Cursorverweis.|  
   

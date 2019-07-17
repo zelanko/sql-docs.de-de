@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 446153c734b5f014ce55a1a8607c94f37e9248a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 794c8834f429d84eea94ad331401e84253c28c93
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900171"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265829"
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "67900171"
 ## <a name="permissions"></a>Berechtigungen
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
 
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt Komponenten, z. B. einen OLE DB-Anbieter, die nicht Teil der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind, Arbeitsspeicher belegen und an nicht präemptiven Planungen teilnehmen. Diese Komponenten werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehostet, und alle von diesen Komponenten zugeordneten Ressourcen werden nachverfolgt. Als Host kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Ressourcen besser berücksichtigen, die von Komponenten außerhalb der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 067781fd998c9e7763fe3a9f2befacab59687250
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 87db0ebd006e2ca87ddc4744a4bbcd396a827712
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287162"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266125"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Erstellen von Variablenwertdateien (OracleToSQL)
 Variablendatei Wert ist eine XML-Datei mit die Werte der Parameter der Befehle wie die Quelle oder Ziel-Servername, die häufig von der Migration von einem Server auf einen anderen ändern. Wenn eine große Anzahl von datenbankmigrationen auftreten, mehrere Dateien zum Speichern von den Wert der einzelnen Quellserver werden erstellt und auf die verwiesen wird in einer master-Skript-Datei mit den **- V** -Schalter an der Befehlszeile. Dies hilft beim Verwalten von statischer Werten in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  

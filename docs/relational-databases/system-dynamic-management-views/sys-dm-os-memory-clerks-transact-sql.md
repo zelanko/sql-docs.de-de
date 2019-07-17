@@ -20,12 +20,12 @@ ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d03c1f06133257543a20ba70edce801faba0ae92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89493294fe08f82b3a61bb8eab7a99e7a941ed28
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899939"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265780"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67899939"
 ## <a name="permissions"></a>Berechtigungen 
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
   
 ## <a name="remarks"></a>Hinweise  
  Der Speicher-Manager von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer Hierarchie mit drei Ebenen. Die unterste Ebene der Hierarchie bilden Speicherknoten. Die mittlere Ebene besteht aus Arbeitsspeicherclerks, Arbeitsspeichercaches und Arbeitsspeicherpools. Die obere Ebene besteht aus Speicherobjekten. Diese Objekte werden im Allgemeinen für die Zuordnung von Arbeitsspeicher in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verwendet.  

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d2519b1cc56081f8a35308ac41e11f46a7f97211
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215604"
+---
 1. **Erstellen Sie auf allen Servern mit SQL Server eine Server-Anmeldung für Pacemaker**. Die folgende Transact-SQL erstellt eine Anmeldung:
 
    ```Transact-SQL

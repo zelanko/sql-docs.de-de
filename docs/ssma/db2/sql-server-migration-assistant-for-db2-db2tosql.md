@@ -10,12 +10,12 @@ ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 986b151c12abcc12036bc653b7e41c6833e04f26
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267900"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259881"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>SQL Server Migration Assistant für DB2 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für DB2 ist ein Tool zum Migrieren von DB2-Datenbanken zu [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 unter Windows und Linux () (Vorschau), oder Azure SQL-Datenbank. SSMA für DB2 wandelt die DB2-Datenbankobjekte, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekte auf, erstellt die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und klicken Sie dann migriert Daten aus DB2 in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank.  
@@ -24,7 +24,7 @@ In dieser Dokumentation und vorgestellt, SSMA für DB2 enthält schrittweise Anl
   
 ## <a name="contents"></a>Inhalt  
   
-|Abschnitt|Description|  
+|Abschnitt|Beschreibung|  
 |-----------|---------------|  
 |[What's New in SSMA  for DB2 (Neuerungen in SSMA für DB2)](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|Was ist neu in dieser Version von SSMA für DB2|  
 |[Installieren von SSMA für DB2-Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Enthält Themen, die Voraussetzungen und Anweisungen zum Installieren von SSMA für DB2-Client und der erforderlichen Komponenten auf dem Computer, auf denen ausgeführt wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

@@ -20,12 +20,12 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc1c8cff535d44cedeb5f42301f010278b87c96d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69e23838ed8b237c25bf7ec066e76ee685f25551
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899740"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262741"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die ausgefü
 ## <a name="permissions"></a>Berechtigungen
 
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] ist die Berechtigung `VIEW DATABASE STATE` in der Datenbank erforderlich.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
 
 ##  <a name="WaitTypes"></a> Wartetypen  
  **Ressourcenwartevorgänge** ressourcenwartevorgänge finden dann statt, wenn ein Arbeitsthread den Zugriff auf eine Ressource, die nicht verfügbar ist anfordert, da die Ressource wird von einem anderen Arbeitsthread verwendet oder ist noch nicht verfügbar. Beispiele für Ressourcenwartevorgänge sind Sperren, Latches, Netzwerk- und Datenträger-E/A-Wartevorgänge. Sperren und Latchwartevorgänge sind Vorgänge, die auf Synchronisierungsobjekte warten.  

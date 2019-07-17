@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375823"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211585"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse
   Verwaltungsanwendungen greifen über den WMI-Anbieter für Serverereignisse auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu, indem sie WQL-Anweisungen (WMI Query Language) ausgeben. WQL ist eine vereinfachte Teilmenge von Structured Query Language (SQL) mit einigen WMI-spezifischen Erweiterungen. Unter Verwendung von WQL ruft eine Anwendung einen Ereignistyp aus einer spezifischen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], einer Datenbank oder einem Datenbankobjekt ab. Das einzige zurzeit unterstützte Objekt ist queue. WMI-Anbieter für Serverereignisse übersetzt die Abfrage in eine ereignisbenachrichtigung, die in der Zieldatenbank für ereignisbenachrichtigungen im Serverbereich oder im Bereich einer Objekt oder in erstellt haben, wird die **master** Datenbank für das Ereignis mit Serverbereich Benachrichtigungen.  
@@ -91,7 +91,7 @@ WHERE where_condition
   
  Der WMI-Anbieter für Serverereignisse verwendet einen Algorithmus, der von unten nach oben arbeitet und die erstbestmögliche Lösung benutzt, um den engstmöglichen Gültigkeitsbereich für das zugrunde liegende EVENT NOTIFICATION-Argument anzuwenden. Der Algorithmus versucht, die interne Aktivität auf dem Server und bezüglich des Netzwerkverkehrs zwischen der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem WMI-Hostprozess zu reduzieren. Der Anbieter untersucht den *Event_type* in der FROM-Klausel und die Bedingungen der WHERE-Klausel angegeben, und versucht, die zugrunde liegende EVENT NOTIFICATION mit dem engsten Gültigkeitsbereich zu registrieren. Wenn der Anbieter sich nicht im engsten Gültigkeitsbereich registrieren kann, versucht er eine Registrierung in höheren Gültigkeitsbereichen, bis schließlich eine Registrierung erfolgreich ist. Wenn der höchste Bereich auf Serverebene erreicht ist und keine Registrierung zustande kam, wird dem Consumer ein Fehler zurückgegeben.  
   
- Z. B. wenn DatabaseName =**"** AdventureWorks **"** angegeben ist, in der WHERE-Klausel, versucht der Anbieter registrieren Sie eine ereignisbenachrichtigung in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank. Wenn die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank vorhanden ist und der aufrufende Client über die erforderlichen Berechtigungen zum Erstellen einer Ereignisbenachrichtigung in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]verfügt, ist die Registrierung erfolgreich. Andernfalls wird versucht, die Ereignisbenachrichtigung auf Serverebene zu registrieren. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. In diesem Szenario werden Ereignisse jedoch so lange nicht an den Client zurückgegeben, bis die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt wurde.  
+ Z. B. wenn DatabaseName = **"** AdventureWorks **"** angegeben ist, in der WHERE-Klausel, versucht der Anbieter registrieren Sie eine ereignisbenachrichtigung in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank. Wenn die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank vorhanden ist und der aufrufende Client über die erforderlichen Berechtigungen zum Erstellen einer Ereignisbenachrichtigung in [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]verfügt, ist die Registrierung erfolgreich. Andernfalls wird versucht, die Ereignisbenachrichtigung auf Serverebene zu registrieren. Die Registrierung ist erfolgreich, wenn der WMI-Client die erforderlichen Berechtigungen hat. In diesem Szenario werden Ereignisse jedoch so lange nicht an den Client zurückgegeben, bis die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt wurde.  
   
  Die *Where_condition* kann auch als Filter, um die Abfrage, um eine bestimmte Datenbank, Schema oder Objekt darüber zu beschränken. Betrachten Sie beispielsweise folgende WQL-Abfrage:  
   

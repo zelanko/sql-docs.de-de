@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f7ff1fd534876d177288dad396276e95d78d681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735708"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266062"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -35,10 +34,10 @@ ms.locfileid: "47735708"
   
  Die **dm_clr_properties** -Ansicht enthält die **Namen** und **Wert** Spalten. Jede Zeile in dieser Sicht enthält Details zu einer Eigenschaft der gehosteten CLR. Mit dieser Sicht können Sie Informationen zur gehosteten CLR zusammentragen, z. B. das CLR-Installationsverzeichnis, die CLR-Version und den aktuellen Status der gehosteten CLR. Mit dieser Sicht können Sie bestimmen, ob der CLR-Integrationscode aufgrund von Problemen mit der CLR-Installation auf dem Servercomputer nicht funktioniert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Der Name der Eigenschaft.|  
-|**Wert**|**nvarchar(128)**|Wert der Eigenschaft.|  
+|**value**|**nvarchar(128)**|Wert der Eigenschaft.|  
   
 ## <a name="properties"></a>Eigenschaften  
  Die **Directory** Eigenschaft gibt an, das Verzeichnis, das .NET Framework auf dem Server installiert wurde. Möglicherweise sind mehrere Installationen von .NET Framework auf dem Servercomputer vorhanden, und durch den Wert dieser Eigenschaft wird angegeben, welche Installation derzeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird.  
@@ -75,7 +74,7 @@ ms.locfileid: "47735708"
 ## <a name="permissions"></a>Berechtigungen  
   
 Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.   
+Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
 
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zur gehosteten CLR abgerufen:  

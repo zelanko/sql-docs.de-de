@@ -1,5 +1,5 @@
 ---
-title: Decision Trees-Modell Abfragebeispiele | Microsoft Docs
+title: Entscheidungsstrukturen Model-Beispiele für Abfragen | Microsoft-Dokumentation
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2045dfa9923fb745f0f9d3936579a4e73a50564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018037"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210061"
 ---
 # <a name="decision-trees-model-query-examples"></a>Beispiele für Entscheidungsstruktur-Modellabfragen
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +75,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|Alle|12939|5|  
+|TM_DecisionTree|000000001|All|12939|5|  
   
  Was bedeuten diese Ergebnisse? In einem Entscheidungsstrukturmodell sagt die Kardinalität eines bestimmten Knotens aus, wie viele direkt untergeordnete Elemente dieser Knoten hat. Die Kardinalität für diesen Knoten ist 5. Dies bedeutet, dass das Modell die Zielgruppe potenzieller Fahrradkäufer in 5 Untergruppen aufgeteilt hat.  
   
@@ -94,12 +94,12 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  Beispielergebnisse:  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|Alias|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|Nicht vorhanden|0|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|1|1875|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|Nicht vorhanden|0|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|Missing|0|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
@@ -188,7 +188,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  Wenn Ihr Anbieter keine hierarchischen Rowsets wie die hier dargestellten unterstützt, können unter Verwendung des FLATTENED-Schlüsselworts in der Abfrage die Ergebnisse als Tabelle zurückgeben lassen, die NULL-Werte anstelle der wiederholten Spaltenwerte enthält. Weitere Informationen finden Sie unter [Geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) oder [Grundlegendes zur SELECT-Anweisung (DMX)](../../dmx/understanding-the-dmx-select-statement.md).  
   
 ###  <a name="bkmk_Query5"></a> Beispielabfrage 5: Vorhersagen von Zuordnungen aus einem Entscheidungsstrukturmodell  
- Die folgende Beispielabfrage basiert auf der Association-Miningstruktur. Darüber hinaus können Sie in dem Beispiel dieser Miningstruktur ein neues Modell hinzufügen und Microsoft Decision Trees als Algorithmus auswählen. Weitere Informationen zum Erstellen der Association-Miningstruktur finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
+ Die folgende Beispielabfrage basiert auf der Association-Miningstruktur. Darüber hinaus können Sie in dem Beispiel dieser Miningstruktur ein neues Modell hinzufügen und Microsoft Decision Trees als Algorithmus auswählen. Weitere Informationen zum Erstellen der Association-Miningstruktur finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
   
  Die folgende Beispielabfrage ist eine SINGLETON-Abfrage, die Sie mühelos in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen können, indem Sie Felder wählen und anschließend Werte für diese Felder in einer Dropdownliste auswählen.  
   
@@ -202,7 +202,7 @@ NATURAL PREDICTION JOIN
   
  Erwartete Ergebnisse:  
   
-|Model|  
+|Modell|  
 |-----------|  
 |Mountain-200|  
 |Mountain Tire Tube|  
@@ -221,7 +221,7 @@ NATURAL PREDICTION JOIN
   
  Erwartete Ergebnisse:  
   
-|Model|  
+|Modell|  
 |-----------|  
 |Long-Sleeve Logo Jersey|  
 |Mountain-400-W|  
@@ -242,7 +242,7 @@ WHERE NODE_TYPE = 25
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Nicht vorhanden|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
@@ -254,23 +254,23 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[IsDescendant & #40; DMX & #41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
-|[IsInNode & #40; DMX & #41;](../../dmx/isinnode-dmx.md)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
-|[PredictAssociation & #40; DMX & #41;](../../dmx/predictassociation-dmx.md)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
-|["PredictHistogram" & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
-|[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|Gibt "Node_ID" für jeden Fall zurück.|  
-|[PredictProbability & #40; DMX & #41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
-|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz einer angegebenen Spalte zurück.|  
+|[IsDescendant &#40;DMX&#41;](../../dmx/isdescendant-dmx.md)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
+|[IsInNode &#40;DMX&#41;](../../dmx/isinnode-dmx.md)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](../../dmx/predictadjustedprobability-dmx.md)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
+|[PredictAssociation &#40;DMX&#41;](../../dmx/predictassociation-dmx.md)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
+|[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictNodeId &#40;DMX&#41;](../../dmx/predictnodeid-dmx.md)|Gibt "Node_ID" für jeden Fall zurück.|  
+|[PredictProbability &#40;DMX&#41;](../../dmx/predictprobability-dmx.md)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
+|[PredictStdev &#40;DMX&#41;](../../dmx/predictstdev-dmx.md)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
+|[PredictSupport &#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Abfragen](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Data Mining-Abfrage](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [Microsoft Decision Trees-Algorithmus technische Referenz](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [Miningmodellinhalt von Entscheidungsstrukturmodellen & #40; Analysis Services – Datamining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Technische Referenz für den Microsoft Decision Trees-Algorithmus](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

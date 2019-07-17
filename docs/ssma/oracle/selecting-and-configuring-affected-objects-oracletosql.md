@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626524"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266502"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (OracleToSQL)
 Auf dieser Seite können Sie Tabellen auswählen und die foreign key, Änderungen in der verglichen werden soll, wenn SSMA wird überprüft, die Ergebnisse der Ausführung für die Objekte, die im vorherigen Schritt ausgewählt ob. Darüber hinaus können Sie die Überprüfung der Parameter anpassen.  
@@ -39,7 +39,7 @@ Die Registerkarte der Tabelle enthält die Rasteransicht der ausgewählten Tabel
   
 -   Dezimalstellen  
   
--   Rule  
+-   Regel  
   
 -   Default  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aad5171b98c54aa0c4adbde1a5678e4fd953640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093961"
 ---
 # <a name="odbc-subkey"></a>ODBC-Unterschlüssel
 Die Werte unter dem Unterschlüssel für ODBC geben Sie Optionen für die Ablaufverfolgung von ODBC. Diese Optionen werden über der Registerkarte "Ablaufverfolgung" angezeigt wird, indem Sie im Dialogfeld ODBC-Datenquellen-Administrator festgelegt **SQLManageDataSources**. Der ODBC-Unterschlüssel selbst ist optional. Das Format dieser Werte ist, wie in der folgenden Tabelle gezeigt.  

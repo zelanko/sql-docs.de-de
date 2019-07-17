@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108679"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @filename = ] 'file_name'` Ist die Zeichenfolge, die den vollständigen Pfad einschließlich des Dateinamens gibt an, in dem eine Kopie der Datendatei (MDF) gespeichert wird. *Dateiname* ist **nvarchar(260)**, hat keinen Standardwert.  
+`[ @filename = ] 'file_name'` Ist die Zeichenfolge, die den vollständigen Pfad einschließlich des Dateinamens gibt an, in dem eine Kopie der Datendatei (MDF) gespeichert wird. *Dateiname* ist **nvarchar(260)** , hat keinen Standardwert.  
   
-`[ @temp_dir = ] 'temp_dir'` Ist der Name des Verzeichnisses, das die temporären Dateien enthält. *Temp_dir* ist **nvarchar(260)**, hat den Standardwert NULL. Wenn der Wert NULL ist, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standarddatenverzeichnis verwendet werden. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
+`[ @temp_dir = ] 'temp_dir'` Ist der Name des Verzeichnisses, das die temporären Dateien enthält. *Temp_dir* ist **nvarchar(260)** , hat den Standardwert NULL. Wenn der Wert NULL ist, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standarddatenverzeichnis verwendet werden. Das Verzeichnis sollte über ausreichenden Speicherplatz verfügen, um eine Datei aufzunehmen, die der Größe aller Datenbankdateien auf dem Abonnenten zusammen entspricht.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Ist ein optionales boolesches Flag, der angibt, ob eine vorhandene Datei mit dem gleichen Namen im angegebenen überschrieben **@filename**. *Overwrite_existing_file*ist **Bit**, hat den Standardwert **0**. Wenn **1**, überschreibt er die angegebene Datei **@filename**, sofern vorhanden. Wenn **0**, die gespeicherte Prozedur fehlschlägt, wenn die Datei vorhanden ist, und die Datei nicht überschrieben.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Ist ein optionales boolesches Flag, der angibt, ob eine vorhandene Datei mit dem gleichen Namen im angegebenen überschrieben **@filename** . *Overwrite_existing_file*ist **Bit**, hat den Standardwert **0**. Wenn **1**, überschreibt er die angegebene Datei **@filename** , sofern vorhanden. Wenn **0**, die gespeicherte Prozedur fehlschlägt, wenn die Datei vorhanden ist, und die Datei nicht überschrieben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

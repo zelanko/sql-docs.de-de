@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5849baa119174cacc99d4ab99a68de28c2966c53
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210801"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Dialogfeld 'Erweiterte Bearbeitung (Bedingung)'
   Verwenden Sie das Dialogfeld **Erweiterte Bearbeitung**, um komplexe Ausdrücke für Bedingungen der richtlinienbasierten Verwaltung zu erstellen.  
@@ -62,7 +62,7 @@ ms.locfileid: "53353190"
 > [!IMPORTANT]  
 >  Für die Funktionen, mit denen Sie richtlinienbasierte Verwaltungsbedingungen erstellen können, wird nicht immer die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax verwendet. Stellen Sie sicher, dass Sie die Beispielsyntax befolgen. Z. B. bei Verwendung der `DateAdd` oder `DatePart` -Funktionen, die Sie einschließen müssen die *Datepart* -Argument in einfache Anführungszeichen.  
   
-|Funktion|Description|Argumente|Rückgabewert|Beispiel|  
+|Funktion|Beschreibung|Argumente|Rückgabewert|Beispiel|  
 |--------------|-----------------|---------------|------------------|-------------|  
 |`Add()`|Numeric Add (Numeric *Ausdruck1*, Numeric *Ausdruck2*)<br /><br /> Addition zweier Zahlen.|*expression1* und *expression2* -ist jeder gültiger Ausdruck eines beliebigen Datentyps der numerischen Kategorie, mit Ausnahme der `bit` -Datentyp. Kann eine Konstante, Eigenschaft oder Funktion sein, die einen numerischen Typ zurückgibt.|**Rückgabewert:** Gibt den Datentyp des Arguments zurück, das in der Rangfolge höher eingestuft ist.|**Beispiel** `Add(Property1, 5)`|  
 |`Array()`|Array Array (VarArgs *Ausdruck*)<br /><br /> Erstellt ein Array aus einer Liste von Werten. Kann mit Aggregatfunktionen, wie z. B. Sum() und Count(), verwendet werden.|*Ausdruck* : Ein Ausdruck, der in ein Array konvertiert wird.|Das Array.|`Array(2,3,4,5,6)`|  
@@ -82,7 +82,7 @@ ms.locfileid: "53353190"
 |`False()`|Bool False()<br /><br /> Gibt den booleschen Wert FALSE zurück.||Gibt den booleschen Wert FALSE zurück.|`IsDatabaseMailEnabled = False()`|  
 |`GetDate()`|DateTime GetDate()<br /><br /> Gibt das Systemdatum zurück.||Gibt das Systemdatum als datetime-Wert zurück.|`@DateLastModified = GetDate()`|  
 |`Guid()`|Guid Guid(String *guidZeichenfolge*)<br /><br /> Gibt eine GUID aus einer Zeichenfolge zurück.|*guidZeichenfolge* : Die Zeichenfolgendarstellung der zu erstellenden GUID.|Gibt die GUID zurück, die aus der Zeichenfolge erstellt wurde.|`Guid('12340000-0000-3455-0000-000000000454')`|  
-|`IsNull()`|Variant IsNull (Variant *Prüfausdruck*, Variant *Ersatzwert*)<br /><br /> Der Wert von *Prüfausdruck* wird zurückgegeben, wenn der Wert nicht NULL ist. Andernfalls wird *Ersatzwert* zurückgegeben. Sind die Typen unterschiedlich, wird *Ersatzwert* implizit in den Typ von *Prüfausdruck*konvertiert.|*Prüfausdruck* : Der Ausdruck, der auf NULL überprüft werden soll. *"check_expression"* kann von beliebiger Richtlinie der richtlinienbasierten Verwaltung unterstützter Typ sein: Numeric, String, Bool, DateTime, Array und Guid.<br /><br /> *Ersatzwert* : Der Ausdruck, der zurückgegeben werden soll, wenn *Prüfausdruck* NULL ist. *Ersatzwert* muss einen Typ aufweisen, der implizit in den Typ von *Prüfausdruck*konvertiert wird.|Der Rückgabetyp entspricht dem Typ von *Prüfausdruck* , wenn *Prüfausdruck* nicht NULL ist, andernfalls wird der Typ von *Ersatzwert* zurückgegeben.||  
+|`IsNull()`|Variant IsNull (Variant *Prüfausdruck*, Variant *Ersatzwert*)<br /><br /> Der Wert von *Prüfausdruck* wird zurückgegeben, wenn der Wert nicht NULL ist. Andernfalls wird *Ersatzwert* zurückgegeben. Sind die Typen unterschiedlich, wird *Ersatzwert* implizit in den Typ von *Prüfausdruck*konvertiert.|*Prüfausdruck* : Der Ausdruck, der auf NULL überprüft werden soll. *Prüfausdruck* kann ein beliebiger von der richtlinienbasierten Verwaltung unterstützter Typ sein: Numeric, String, Bool, DateTime, Array und Guid.<br /><br /> *Ersatzwert* : Der Ausdruck, der zurückgegeben werden soll, wenn *Prüfausdruck* NULL ist. *Ersatzwert* muss einen Typ aufweisen, der implizit in den Typ von *Prüfausdruck*konvertiert wird.|Der Rückgabetyp entspricht dem Typ von *Prüfausdruck* , wenn *Prüfausdruck* nicht NULL ist, andernfalls wird der Typ von *Ersatzwert* zurückgegeben.||  
 |`Len()`|Numeric Len (*Zeichenfolgenausdruck*)<br /><br /> Gibt die Anzahl von Zeichen des angegebenen Zeichenfolgenausdrucks zurück, jedoch ohne nachfolgende Leerzeichen.|*Zeichenfolgenausdruck* : Der auszuwertende Zeichenfolgenausdruck.|Gibt den Wert der Datentypkategorie „Integer“ zurück.|`Len('Hello')` gibt in diesem Beispiel `5` zurück.|  
 |`Lower()`|String Lower (String *_Ausdruck*)<br /><br /> Gibt die Zeichenfolge zurück, nachdem alle Großbuchstaben in Kleinbuchstaben konvertiert wurden.|*Ausdruck* : Der Quellzeichenfolgen-Ausdruck.|Gibt eine Zeichenfolge zurück, die den Quellzeichenfolgen-Ausdruck darstellt, nachdem alle Großbuchstaben in Kleinbuchstaben konvertiert wurden.|`Len('HeLlO')` gibt in diesem Beispiel `'hello'` zurück.|  
 |`Mod()`|Numeric Mod (Numeric *Ausdruck_Dividend*, Numeric *Ausdruck_Divisor*)<br /><br /> Stellt den ganzzahligen Rest einer Division des ersten numerischen Ausdrucks durch den zweiten numerischen Ausdruck bereit.|*Ausdruck_Dividend* : Der numerische Ausdruck, der geteilt werden soll. *Ausdruck_Dividend* muss ein gültiger Ausdruck eines Datentyps aus den Datentypkategorien für ganze Zahlen oder numerische Werte sein.<br /><br /> *Ausdruck_Divisor* : Der numerische Ausdruck, durch den der Dividend geteilt werden soll. *Ausdruck_Divisor* muss ein gültiger Ausdruck eines Datentyps aus den Datentypkategorien für ganze Zahlen oder numerische Werte sein.|Gibt den Wert der Datentypkategorie „Integer“ zurück.|`Mod(Property1, 3)`|  

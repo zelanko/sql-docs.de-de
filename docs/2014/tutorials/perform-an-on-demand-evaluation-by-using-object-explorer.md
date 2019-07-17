@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210946"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Ausführen einer bedarfsgesteuerten Auswertung mit dem Objekt-Explorer
   In dieser Aufgabe verwenden Sie den Objekt-Explorer, um eine bedarfsgesteuerte Auswertung von Best Practices-Richtlinien für [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] auf einer einzelnen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz auszuführen.  
@@ -23,7 +23,7 @@ ms.locfileid: "56028281"
 > [!NOTE]  
 >  Sie können Richtlinien auch mithilfe der registrierten Server auf einer einzelnen Instanz auswerten. Weitere Informationen finden Sie unter [Ausführen einer bedarfsgesteuerten Auswertung von registrierte Server verwenden](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Diese Lektion basiert auf der von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ausgeführten Version von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
@@ -38,13 +38,13 @@ ms.locfileid: "56028281"
     > [!NOTE]  
     >  Standardmäßig wird die lokale Instanz als Quelle der Richtlinien verwendet. Wenn Sie zuvor Best Practices-Richtlinien importiert haben, werden diese zusammen mit anderen, von Ihnen erstellten Richtlinien aufgeführt. Sie können jede beliebige importierte besten Practices-Richtlinien auswählen, und klicken Sie dann auf **auswerten**. Falls Sie keine Best Practices-Richtlinien importiert haben, fahren Sie mit dieser Prozedur fort.  
   
-3.  In der **Richtlinien auswerten** Dialogfeld neben dem **Quelle** klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche.  
+3.  In der **Richtlinien auswerten** Dialogfeld neben dem **Quelle** klicken Sie auf die Auslassungspunkte ( **...** ) Schaltfläche.  
   
 4.  In der **Quelle auswählen** (Dialogfeld), Sie haben die Wahl zwischen **Dateien** oder **Server** als Quelle der auszuwertenden Richtliniendateien. Wenn Sie auf **Server**, können Sie eine bedarfsgesteuerte Auswertung von alle besten Practices-Richtlinien, die zuvor in die Richtlinie der richtlinienbasierten Verwaltung auf einem lokalen Server oder Remoteserver importiert wurden ausführen. In diesem Tutorial, klicken Sie auf **Dateien**, und wählen Sie dann auf die einzelnen Richtliniendateien aus, die Sie auswerten möchten. Führen Sie hierzu folgende Schritte aus:  
   
     1.  Klicken Sie auf **Dateien**.  
   
-    2.  Neben **Dateien**, klicken Sie auf die Auslassungspunkte (**...** ) Schaltfläche.  
+    2.  Neben **Dateien**, klicken Sie auf die Auslassungspunkte ( **...** ) Schaltfläche.  
   
     3.  In der **Richtlinie auswählen** (Dialogfeld), navigieren Sie zu den folgenden Ordner mit dem besten Practices-Richtlinien:  
   

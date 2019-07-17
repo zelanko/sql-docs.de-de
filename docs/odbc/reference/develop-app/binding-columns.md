@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4407694-c8e1-4b0b-a39d-b007e6c3b54d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 88e3593276851b6ab38fde0472a70be31b7cbf34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a553672b83931091056dd489f7559c4269b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106214"
 ---
 # <a name="binding-columns"></a>Binden von Spalten
 Aus der Datenquelle abgerufene Daten werden in der Variablen an die Anwendung zurückgegeben, der für diesen Zweck die Anwendung belegt wird. Bevor Sie dies tun kann, muss die Anwendung zuzuordnen, oder *binden*, diese Variablen auf die Spalten des Resultsets festgelegt; vom Konzept her dieser Prozess ist identisch mit der Anwendungsvariablen an Anweisungsparameter zu binden. Wenn die Anwendung eine Variable an einer Resultsetspalte bindet, beschreibt es die Variable - Adresse, Datentyp und So weiter – an den Treiber. Der Treiber speichert diese Informationen in der Struktur, die sie für diese Anweisung verwaltet und verwendet die Informationen, um den Wert aus der Spalte zurückzugeben, wenn die Zeile abgerufen wird.  
