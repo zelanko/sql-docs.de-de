@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1aed9ac46d81e57a47f1026e599a5e50818190a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064209"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Datentypen (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "62742188"
 |SRVIMAGE|**image**|**image**-Datentyp|  
 |SRVINT1|**tinyint**|**tinyint**-Datentyp mit einer Länge von einem Byte|  
 |SRVINT2|**smallint**|**smallint**-Datentyp mit einer Länge von 2 Byte|  
-|SRVINT4|**ssNoversion**|**int**-Datentyp mit einer Länge von 4 Byte|  
+|SRVINT4|**int**|**int**-Datentyp mit einer Länge von 4 Byte|  
 |SRVINTN|**tinyint** | **smallint** | **int null**|**tinyint**-, **smallint**-, oder **int**-Datentyp, NULL-Werte sind zulässig.|  
 |SRVMONEY4|**smallmoney**|**smallmoney**-Datentyp mit einer Länge von 4 Byte|  
 |SRVMONEY|**money**|**money**-Datentyp mit einer Länge von 8 Byte|  

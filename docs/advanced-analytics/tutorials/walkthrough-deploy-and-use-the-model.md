@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961699"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Bereitstellen Sie das R-Modell und verwenden Sie sie in SQL Server (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ Erstellen einer gespeicherten Prozedur, *PredictTipBatchMode*, Objekt, das mehre
 
     + Sie verwenden eine SELECT-Anweisung, um das gespeicherte Modell aus einer SQL-Tabelle aufzurufen. Das Modell wird aufgerufen, aus der Tabelle als **'varbinary(max)'** Daten, die in der SQL-Variablen gespeicherten  _\@lmodel2_, und als Parameter übergeben *mod* an das System gespeicherte Prozedur [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeichert  _\@Eingabe_. Wie Daten aus der Datenbank abgerufen werden, es befindet sich in einem Datenrahmen namens *"inputdataset"*, dies ist der voreingestellte Name für die Eingabedaten der [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur; Sie können definieren, einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters   *_\@input_data_1_name_*.
+    + Die Daten, die als Eingaben verwendet werden, für die Bewertung als SQL-Abfrage definiert und als Zeichenfolge in der SQL-Variablen gespeichert  _\@Eingabe_. Wie Daten aus der Datenbank abgerufen werden, es befindet sich in einem Datenrahmen namens *"inputdataset"* , dies ist der voreingestellte Name für die Eingabedaten der [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Prozedur; Sie können definieren, einen anderen Variablennamen an, die bei Bedarf mithilfe des Parameters * _\@input_data_1_name_* .
 
     + Um die besten Ergebnisse zu generieren, die gespeicherte Prozedur ruft die RxPredict-Funktion aus der **RevoScaleR** Bibliothek.
 
