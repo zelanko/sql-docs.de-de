@@ -1,5 +1,5 @@
 ---
-title: SQLServer Managed Backup für Windows Azure - Beibehaltungs- und Speichereinstellungen | Microsoft-Dokumentation
+title: SQL Server verwaltete Sicherung für Windows Azure-Beibehaltungs-und Speichereinstellungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1d7949fb3077204d6f05331ac29fa03b8caaa4f
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62773543"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307564"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>SQL Server Managed Backup für Windows Azure - Beibehaltungs- und Speichereinstellungen
   In diesem Thema werden die grundlegenden Schritte zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank sowie zum Konfigurieren der Standardeinstellungen für die Instanz beschrieben. Außerdem werden in diesem Thema die zum Anhalten und Fortsetzen der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] -Dienste für die Instanz erforderlichen Schritte beschrieben.  
   
- Eine vollständige Exemplarische Vorgehensweise zum Einrichten von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] finden Sie unter [Einrichten von SQL Server Managed Backup für Windows Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) und [zum Einrichten von SQL Server Managed Backup für Windows Azure-Verfügbarkeitsgruppen](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
+ Eine umfassende Exemplarische Vorgehensweise zum Einrichten [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] von finden Sie unter [Einrichten von SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) und [Einrichten von SQL Server Managed Backup für Windows Azure für Verfügbarkeits Gruppen](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md).  
   
  
   
@@ -28,7 +28,7 @@ ms.locfileid: "62773543"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Aktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nicht für Datenbanken, die derzeit Wartungspläne oder Protokollversand verwenden. Weitere Informationen zu Interoperabilität und Koexistenz mit anderen SQL Server-Funktionen finden Sie unter [SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+-   Aktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] nicht für Datenbanken, die derzeit Wartungspläne oder Protokollversand verwenden. Weitere Informationen zur Interoperabilität und Koexistenz mit anderen SQL Server Features finden [Sie unter SQL Server Managed Backup to Windows Azure: Interoperabilität und Koexistenz](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
@@ -37,25 +37,25 @@ ms.locfileid: "62773543"
     > [!WARNING]  
     >  Wenn der SQL Server-Agent einige Zeit nicht ausgeführt und danach neu gestartet wird, können abhängig von der Zeitspanne zwischen der Beendigung und dem Start des SQL-Agents verstärkt Sicherungsaktivitäten auftreten und ein Rückstand von Protokollsicherungen entstehen, die auf die Ausführung warten. Es könnte ratsam sein, den SQL Server-Agent für den automatischen Start beim Systemstart zu konfigurieren.  
   
--   Ein Windows Azure-Speicherkonto und SQL-Anmeldeinformationen, in denen die Authentifizierungsinformationen für das Speicherkonto gespeichert sind, müssen erstellt worden sein, bevor Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]konfigurieren. Weitere Informationen finden Sie unter [Introduction to Key Components and Concepts](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) Teil der **SQL Server Backup to URL** Thema und [Lektion 2: Erstellen Sie eine SQL Server-Anmeldeinformation](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+-   Ein Windows Azure-Speicherkonto und SQL-Anmeldeinformationen, in denen die Authentifizierungsinformationen für das Speicherkonto gespeichert sind, müssen erstellt worden sein, bevor Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]konfigurieren. Weitere Informationen finden Sie im Abschnitt [Einführung in wichtige Komponenten und Konzepte](../relational-databases/backup-restore/sql-server-backup-to-url.md#intorkeyconcepts) des Themas **SQL Server Backup to URL** und [Lektion 2: Erstellen Sie eine SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)Anmelde Informationen.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] erstellt die notwendigen Container zum Speichern der Sicherungen. Der Name des Containers wird mit "Computer-Instanzenname"-Format erstellt. Bei AlwaysOn-Verfügbarkeitsgruppen wird der Container unter Verwendung der GUID der Verfügbarkeitsgruppe benannt.  
+    >  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] erstellt die notwendigen Container zum Speichern der Sicherungen. Der Container Name wird im Format "Computername-Instanzname" erstellt. Bei AlwaysOn-Verfügbarkeitsgruppen wird der Container unter Verwendung der GUID der Verfügbarkeitsgruppe benannt.  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Zum Ausführen der gespeicherten Prozeduren, mit denen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], Sie muss entweder eine `System Administrator` oder Mitglied der **Db_backupoperator** Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen und `EXECUTE` Berechtigungen für die **Sp_delete_backuphistory**, und `smart_admin.sp_backup_master_switch` gespeicherte Prozeduren.  Gespeicherte Prozeduren und Funktionen zur Überprüfung der vorhandenen Einstellungen erfordern in der Regel `Execute`-Berechtigungen für die gespeicherte Prozedur bzw. `Select`-Berechtigungen für die Funktion.  
+ Zum Ausführen der gespeicherten Prozeduren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], die aktivieren, müssen Sie `System Administrator` entweder ein-oder-Mitglied in der **db_backupoperator** -Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen und `EXECUTE` Berechtigungen für die **sp_delete_ Backuphistory**und `smart_admin.sp_backup_master_switch` gespeicherte Prozeduren.  Gespeicherte Prozeduren und Funktionen zur Überprüfung der vorhandenen Einstellungen erfordern in der Regel `Execute`-Berechtigungen für die gespeicherte Prozedur bzw. `Select`-Berechtigungen für die Funktion.  
   
 
   
-###  <a name="Considerations"></a> Überlegungen zum Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Datenbanken und Instanzen  
+###  <a name="Considerations"></a>Überlegungen zum [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Aktivieren von für Datenbanken und Instanzen  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] kann separat für einzelne Datenbanken oder für die gesamte Instanz aktiviert werden. Die Optionen hängen von den Wiederherstellbarkeitsanforderungen für die Datenbanken in der Instanz, den Anforderungen für die Verwaltung von mehreren Datenbanken und Instanzen und der strategischen Verwendung des Windows Azure-Speichers ab.  
   
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-database-level"></a>Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Datenbankebene  
  Wenn für eine Datenbank bestimmte Anforderungen an den Sicherungszeitraum und die Beibehaltungsdauer (Wiederherstellbarkeits-SLA) bestehen, die sich von denjenigen für andere Datenbanken in der Instanz unterscheiden, konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für diese Datenbank auf Datenbankebene. Datenbankebeneneinstellungen überschreiben Konfigurationseinstellungen der Instanzebenen. Es können jedoch beide Optionen auf derselben Instanz zusammen verwendet werden. Im Folgenden finden Sie eine Liste der Vorteile und Überlegungen beim Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Datenbankebene.  
   
--   Eine feiner abgestimmte: Trennen Sie die Konfigurationseinstellungen für jede Datenbank. Unterstützung verschiedener Beibehaltungsdauern für einzelne Datenbanken sind möglich.  
+-   Präziser: Separate Konfigurationseinstellungen für jede Datenbank. Unterstützung verschiedener Beibehaltungsdauern für einzelne Datenbanken sind möglich.  
   
 -   Überschreibt Instanzebeneneinstellungen für die Datenbank.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62773543"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene mit Standardeinstellungen  
  Verwenden Sie diese Einstellung, wenn die meisten Datenbanken in der Instanz die gleichen Anforderungen an die Sicherungs- und Beibehaltungsrichtlinie besitzen oder wenn neue Datenbankinstanzen bei der Erstellung automatisch gesichert werden sollen. Einige Datenbanken, die eine Ausnahme von der Richtlinie darstellen, können dennoch einzeln konfiguriert werden. Im Folgenden sind Vorteile und Überlegungen aufgelistet, die sich auf die Aktivierung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene beziehen.  
   
--   Automatisierung auf Instanzebene: Allgemeine Einstellungen, die auf automatisch später hinzugefügte neue Datenbanken angewendet werden.  
+-   Automatisierung auf Instanzebene: Allgemeine Einstellungen, die später für neue Datenbanken angewendet werden.  
   
 -   Neue Datenbanken werden kurz nach ihrer Erstellung auf den Instanzen automatisch gesichert.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62773543"
   
 -   Sie können trotzdem einzelne Datenbanken konfigurieren, für die eine andere Beibehaltungsdauer erforderlich ist, selbst wenn die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] -Sicherung auf Instanzebene mit Standardeinstellungen aktiviert ist. Sie können [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Datenbanken auch deaktivieren, wenn Sie nicht beabsichtigen, Windows Azure-Speicher für die Sicherungen zu verwenden.  
   
-##  <a name="DatabaseConfigure"></a> Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank  
+##  <a name="DatabaseConfigure"></a>Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] von für eine Datenbank  
  Die gespeicherte Systemprozedur `smart_admin.sp_set_db_backup` wird verwendet, um [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine bestimmte Datenbank zu aktivieren. Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zum ersten Mal in der Datenbank aktiviert wird, müssen zusätzlich zum Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]die folgenden Informationen angegeben werden:  
   
 -   Der Name der Datenbank.  
@@ -83,7 +83,7 @@ ms.locfileid: "62773543"
   
 -   SQL-Anmeldeinformationen, die zur Authentifizierung beim Windows Azure-Speicherkonto verwendet werden.  
   
--   Geben Sie entweder nicht für die Verschlüsselung mit *@encryption_algorithm*  =  **NO_ENCRYPTION** , oder geben Sie einen unterstützten Verschlüsselungsalgorithmus. Weitere Informationen zur Verschlüsselung finden Sie unter [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
+-   Geben Sie entweder not to Encryption *@encryption_algorithm* using **NO_ENCRYPTION** an, oder geben Sie  = einen unterstützten Verschlüsselungsalgorithmus an. Weitere Informationen zur Verschlüsselung finden Sie unter [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Konfiguration auf Datenbankebene wird nur über Transact-SQL unterstützt.  
   
@@ -92,15 +92,15 @@ ms.locfileid: "62773543"
 > [!IMPORTANT]  
 >  Vor dem Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank kann es empfehlenswert sein, vorhandene Konfigurationen ggf. zu prüfen. Der Schritt zum Prüfen der Konfigurationseinstellungen für eine Datenbank wird weiter unten in diesem Abschnitt erläutert.  
   
--   **Mithilfe von Transact-SQL:**  
+-   **Verwenden von Transact-SQL:**  
   
-     Wenn Sie aktivieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zum ersten Mal die erforderlichen Parameter sind: *@database_name* , *@credential_name* , *@encryption_algorithm* , *@enable_backup* Die *@storage_url* Parameter ist optional. Wenn Sie keinen Wert für angeben der @storage_url Parameter, der Wert wird abgeleitet, die speicherkontoinformationen aus der SQL-Anmeldeinformationen verwenden. Wenn Sie die Speicher-URL bereitstellen, geben Sie nur die URL für den Stamm des Speicherkontos an; diese muss mit den Informationen in den SQL-Anmeldeinformationen übereinstimmen, die Sie angegeben haben.  
+     Wenn Sie zum ersten [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Mal aktivieren, sind die erforderlichen Parameter: *@database_name* , *@credential_name* , *@encryption_algorithm* , *@enable_backup* der *@storage_url* -Parameter ist optional. Wenn Sie keinen Wert für den @storage_url Parameter angeben, wird der Wert anhand der Speicherkonto Informationen aus den SQL-Anmelde Informationen abgeleitet. Wenn Sie die Speicher-URL bereitstellen, geben Sie nur die URL für den Stamm des Speicherkontos an; diese muss mit den Informationen in den SQL-Anmeldeinformationen übereinstimmen, die Sie angegeben haben.  
   
     1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../includes/ssde-md.md)]her.  
   
     2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-    3.  Kopieren und fügen Sie im folgenden Beispiel wird in das Abfragefenster, und klicken Sie auf `Execute`. In diesem Beispiel wird [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Datenbank "TestDB". Die Beibehaltungsdauer wird auf 30 Tage festgelegt. Im Beispiel wird die Verschlüsselungsoption verwendet, bei der der Verschlüsselungsalgorithmus und die Verschlüsselungsinformationen angegeben werden.  
+    3.  Fügen Sie das folgende Beispiel in das Abfragefenster ein, und `Execute`klicken Sie auf. In diesem Beispiel [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird für die Datenbank "TestDB" aktiviert. Die Beibehaltungsdauer wird auf 30 Tage festgelegt. Im Beispiel wird die Verschlüsselungsoption verwendet, bei der der Verschlüsselungsalgorithmus und die Verschlüsselungsinformationen angegeben werden.  
   
     ```  
     Use msdb;  
@@ -122,7 +122,7 @@ ms.locfileid: "62773543"
     >   
     >  Weitere Informationen zum Erstellen eines Zertifikats für die Verschlüsselung finden Sie im Schritt Erstellen Sie ein Sicherungszertifikat in [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
-     Weitere Informationen zu dieser gespeicherten Prozedur, finden Sie unter [smart_admin.set_db_backup &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)  
+     Weitere Informationen zu dieser gespeicherten Prozedur finden Sie unter [smart_admin. Set _db_backup &#40;Transact-SQL&#41; ](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)  
   
      Überprüfen Sie die Konfigurationseinstellungen für eine Datenbank mit der folgenden Abfrage:  
   
@@ -132,23 +132,23 @@ ms.locfileid: "62773543"
     SELECT * FROM smart_admin.fn_backup_db_config('TestDB')  
     ```  
   
-##  <a name="InstanceConfigure"></a> Deaktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Einstellungen für die Instanz  
- Können Sie aktivieren und konfigurieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Einstellungen auf Instanzebene auf zwei Arten:  Mithilfe der gespeicherten Prozedur `smart_backup.set_instance_backup` oder **SQL Server Management Studio**. Die beiden Methoden werden nachfolgend erläutert:  
+##  <a name="InstanceConfigure"></a>Aktivieren und Konfigurieren der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Standardeinstellungen für die Instanz  
+ Sie können die Standard [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Einstellungen auf Instanzebene auf zwei Arten aktivieren und konfigurieren:  Mithilfe der gespeicherten System Prozedur `smart_admin.set_instance_backup` oder **SQL Server Management Studio**. Die beiden Methoden werden nachfolgend erläutert:  
   
- **smart_backup.set_instance_backup:** . Durch Angabe des Werts **1** für *@enable_backup* -Parameter können Sie die Sicherung aktivieren und die Standardkonfigurationen festlegen. Nachdem diese auf Instanzebene angewendet wurden, werden diese Standardeinstellungen auf alle neuen Datenbanken angewendet, die dieser Instanz hinzugefügt werden.  Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zum ersten Mal aktiviert wird, müssen zusätzlich zum Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Instanz die folgenden Informationen angegeben werden:  
+ **smart_admin. Set _instance_backup:** . Wenn Sie den Wert **1** für *@enable_backup* den Parameter angeben, können Sie die Sicherung aktivieren und die Standardkonfigurationen festlegen. Nachdem diese auf Instanzebene angewendet wurden, werden diese Standardeinstellungen auf alle neuen Datenbanken angewendet, die dieser Instanz hinzugefügt werden.  Wenn [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zum ersten Mal aktiviert wird, müssen zusätzlich zum Aktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für die Instanz die folgenden Informationen angegeben werden:  
   
 -   Die Beibehaltungsdauer.  
   
 -   SQL-Anmeldeinformationen, die zur Authentifizierung beim Windows Azure-Speicherkonto verwendet werden.  
   
--   Die Verschlüsselungsoption. Geben Sie entweder nicht für die Verschlüsselung mit *@encryption_algorithm*  =  **NO_ENCRYPTION** , oder geben Sie einen unterstützten Verschlüsselungsalgorithmus. Weitere Informationen zur Verschlüsselung finden Sie unter [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
+-   Die Verschlüsselungsoption. Geben Sie entweder not to Encryption *@encryption_algorithm* using **NO_ENCRYPTION** an, oder geben Sie  = einen unterstützten Verschlüsselungsalgorithmus an. Weitere Informationen zur Verschlüsselung finden Sie unter [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).  
   
  Nach der Aktivierung werden diese Einstellungen gespeichert. Wenn Sie die Konfiguration ändern, sind nur der Datenbankname und der Einstellung, die Sie ändern möchten, erforderlich. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] behält die vorhandenen Werte bei, wenn nichts angegeben wird.  
   
 > [!IMPORTANT]  
 >  Vor dem Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Instanz kann es empfehlenswert sein, vorhandene Konfigurationen ggf. zu prüfen. Der Schritt zum Prüfen der Konfigurationseinstellungen für eine Datenbank wird weiter unten in diesem Abschnitt erläutert.  
   
- **SQL Server Management Studio:** Um diese Aufgabe in SQL Server Management Studio zu auszuführen, navigieren Sie im Objekt-Explorer, erweitern Sie die **Management** Knoten und der rechten Maustaste auf **Managed Backup**. Wählen Sie **Konfigurieren**aus. Das Dialogfeld **Managed Backup** wird geöffnet. Verwenden Sie dieses Dialogfeld, um die Beibehaltungsdauer, SQL-Anmeldeinformationen, die Speicher-URL und Verschlüsselungseinstellungen anzugeben. Spezifische Hilfe zu diesem Dialogfeld finden Sie [Managed Backup konfigurieren &#40;SQL Server Management Studio&#41;](configure-managed-backup-sql-server-management-studio.md).  
+ **SQL Server Management Studio:** Gehen Sie zum Ausführen dieser Aufgabe in SQL Server Management Studio zum Objekt-Explorer, erweitern Sie den Knoten **Verwaltung** , und klicken Sie mit der rechten Maustaste auf **Managed Backup**. Wählen Sie **Konfigurieren**aus. Das Dialogfeld **Managed Backup** wird geöffnet. Verwenden Sie dieses Dialogfeld, um die Beibehaltungsdauer, SQL-Anmeldeinformationen, die Speicher-URL und Verschlüsselungseinstellungen anzugeben. Spezifische Hilfe zu diesem Dialogfeld finden Sie unter [Konfigurieren von &#40;Managed&#41;Backup SQL Server Management Studio](configure-managed-backup-sql-server-management-studio.md).  
   
 #### <a name="using-transact-sql"></a>Verwenden von Transact-SQL  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62773543"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren und fügen Sie im folgenden Beispiel wird in das Abfragefenster, und klicken Sie auf `Execute`.  
+3.  Fügen Sie das folgende Beispiel in das Abfragefenster ein, und `Execute`klicken Sie auf.  
   
 ```  
 Use msdb;  
@@ -202,7 +202,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
 >  Wenn Sie nach dem Konfigurieren der Standardeinstellungen eine neue Datenbank erstellen, kann es bis zu 15 Minuten dauern, bis die Datenbank mit den Standardeinstellungen konfiguriert ist. Dies gilt auch für Datenbanken, die von **Simple** auf das Wiederherstellungsmodell **Full** oder **Bulk-Logged** geändert werden.  
   
 ##  <a name="DatabaseDisable"></a> Deaktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank  
- Sie können die deaktivieren [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Einstellungen mithilfe der `sp_set_db_backup` gespeicherte Systemprozedur. Die *@enableparameter* dient zum Aktivieren und Deaktivieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Konfigurationen für eine bestimmte Datenbank verwendet, wobei die Konfigurationseinstellungen mit 1 aktiviert und mit 0 deaktiviert.  
+ Sie können Einstellungen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] mithilfe der `sp_set_db_backup` gespeicherten System Prozedur deaktivieren. Wird verwendet, um Konfigurationen für eine [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] bestimmte Datenbank zu aktivieren und zu deaktivieren, wobei 1 aktiviert und 0 die Konfigurationseinstellungen deaktiviert. *@enableparameter*  
   
 #### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>So deaktivieren Sie [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine bestimmte Datenbank  
   
@@ -210,7 +210,7 @@ SELECT * FROM smart_admin.fn_backup_instance_config ();
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren und fügen Sie im folgenden Beispiel wird in das Abfragefenster, und klicken Sie auf `Execute`.  
+3.  Fügen Sie das folgende Beispiel in das Abfragefenster ein, und `Execute`klicken Sie auf.  
   
 ```  
 Use msdb;  
@@ -231,7 +231,7 @@ GO
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren und fügen Sie im folgenden Beispiel wird in das Abfragefenster, und klicken Sie auf `Execute`. Im folgenden Beispiel wird ermittelt, ob [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene konfiguriert ist und für welche Datenbanken in der Instanz [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] aktiviert ist, und die gespeicherte Systemprozedur `sp_set_db_backup` wird ausgeführt, um [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zu deaktivieren.  
+3.  Fügen Sie das folgende Beispiel in das Abfragefenster ein, und `Execute`klicken Sie auf. Im folgenden Beispiel wird ermittelt, ob [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf Instanzebene konfiguriert ist und für welche Datenbanken in der Instanz [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] aktiviert ist, und die gespeicherte Systemprozedur `sp_set_db_backup` wird ausgeführt, um [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] zu deaktivieren.  
   
 ```  
 -- Create a working table to store the database names  
@@ -299,7 +299,7 @@ GO
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren und fügen Sie im folgenden Beispiel wird in das Abfragefenster, und klicken Sie auf `Execute`.  
+3.  Fügen Sie das folgende Beispiel in das Abfragefenster ein, und `Execute`klicken Sie auf.  
   
     ```  
     Use msdb;  
@@ -330,7 +330,7 @@ GO
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie und fügen Sie im folgenden Beispiel wird in das Abfragefenster, und klicken Sie dann auf `Execute`  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf`Execute`  
   
 ```  
 Use msdb;  
@@ -357,7 +357,7 @@ Go
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren und fügen Sie im folgenden Beispiel wird in das Abfragefenster, und klicken Sie dann auf `Execute`.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster `Execute`ein, und klicken Sie auf.  
   
 ```  
 Use msdb;  
