@@ -1,41 +1,41 @@
 ---
-title: 'Gewusst wie: Erstellen eines Ressourcenpools für R und Python - SQL Server Machine Learning Services'
-description: Definieren Sie einen SQL Server-Ressourcenpool für R oder Python-Prozesse auf eine SQL Server 2016 oder SQL Server 2017-Datenbank-Engine-Instanz.
+title: Erstellen eines Ressourcenpools für R und python
+description: Definieren Sie einen SQL Server Ressourcenpool für R-oder python-Prozesse auf einer SQL Server 2016-oder SQL Server 2017-Datenbank-Engine-Instanz.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3f032a9e2a60a0428a2aac76ae8c3ee6baa62775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963151"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344069"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Gewusst wie: Erstellen Sie einen Ressourcenpool für Machine Learning in SQL Server
+# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Erstellen eines Ressourcenpools für Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie Sie erstellen und verwenden einen Ressourcenpool speziell für die Verwaltung von R und Python Machine Learning-Workloads in SQL Server. Es wird davon ausgegangen, dass Sie bereits installiert und aktiviert die Machine learning-Funktionen, und die Instanz, um eine differenziertere Verwaltung der Ressourcen von externen Prozess wie R oder Python-Unterstützung neu konfigurieren möchten.
+In diesem Artikel wird beschrieben, wie Sie einen Ressourcenpool speziell für die Verwaltung von Machine Learning-Workloads für R und python in SQL Server erstellen und verwenden können. Es wird davon ausgegangen, dass Sie die Machine Learning-Features bereits installiert und aktiviert haben und die Instanz neu konfigurieren möchten, um eine präzisere Verwaltung der Ressourcen zu unterstützen, die von einem externen Prozess wie R oder python verwendet werden.
 
 Der Prozess umfasst mehrere Schritte:
 
-1.  Überprüfen Sie Status, der alle vorhandenen Ressourcenpools. Es ist wichtig, dass Sie verstehen, welche Dienste die vorhandene Ressourcen verwendet werden.
-2.  Ändern Sie die Server-Ressourcenpools.
+1.  Überprüfen Sie den Status vorhandener Ressourcenpools. Es ist wichtig, dass Sie verstehen, welche Dienste vorhandene Ressourcen verwenden.
+2.  Ändern Sie Server Ressourcenpools.
 3.  Erstellen Sie einen neuen Ressourcenpool für externe Prozesse.
-4.  Erstellen Sie eine Klassifizierungsfunktion, die zum Identifizieren von externen skriptanforderungen.
-5.  Stellen Sie sicher, dass der neue externe Ressourcenpool R oder Python-Aufträge aus der angegebenen Clients oder Konten erfasst.
+4.  Erstellen Sie eine Klassifizierungs Funktion, um externe Skript Anforderungen zu identifizieren.
+5.  Vergewissern Sie sich, dass der neue externe Ressourcenpool R-oder python-Aufträge von den angegebenen Clients oder Konten Erfassungs basiert.
 
 ##  <a name="bkmk_ReviewStatus"></a>Überprüfen des Status der vorhandenen Ressourcenpools
   
-1.  Verwenden Sie eine Anweisung ähnlich der folgenden, um die Ressourcen, die zugeordnet wird, um den Standardpool für den Server zu überprüfen.
+1.  Verwenden Sie eine-Anweisung wie die folgende, um die Ressourcen zu überprüfen, die dem Standard Pool für den-Server zugeordnet sind.
   
     ```sql
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
     ```
 
-    **Beispielergebnisse**
+    **Beispiel Ergebnisse**
 
     |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
@@ -47,17 +47,17 @@ Der Prozess umfasst mehrere Schritte:
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
     ```
 
-    **Beispielergebnisse**
+    **Beispiel Ergebnisse**
 
     |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|default|100|20|0|2|
  
-3.  Unter dieser Serverstandardeinstellungen müssen die externe Laufzeit wahrscheinlich nicht genügend Ressourcen, die meisten Aufgaben abzuschließen. Um dies zu ändern, müssen Sie die Nutzung der Serverressourcen wie folgt ändern:
+3.  Unter diesen Server Standardeinstellungen verfügt die externe Laufzeit wahrscheinlich nicht über genügend Ressourcen, um die meisten Aufgaben abzuschließen. Um dies zu ändern, müssen Sie die Nutzung der Serverressourcen wie folgt ändern:
   
-    -   Reduzieren des maximalen Arbeitsspeichers, die von der Datenbank-Engine verwendet werden kann.
+    -   Reduzieren Sie den maximalen Computer Arbeitsspeicher, der von der Datenbank-Engine verwendet werden kann.
   
-    -   Erhöhen des maximalen Arbeitsspeichers, die von den externen Prozess verwendet werden kann.
+    -   Vergrößern Sie den maximalen Arbeitsspeicher des Computers, der vom externen Prozess verwendet werden kann.
 
 ## <a name="modify-server-resource-usage"></a>Ändern der Nutzung von Serverressourcen
 
@@ -80,13 +80,13 @@ Der Prozess umfasst mehrere Schritte:
     ```
   
     > [!NOTE]
-    >  Dies sind lediglich empfohlene Einstellungen, mit. Sie sollten Ihre Machine learning-Aufgaben Hinblick auf andere Serverprozesse auf das richtige Gleichgewicht für Ihre Umgebung und Arbeitslast bestimmen bewerten.
+    >  Dies sind nur Empfohlene Einstellungen, mit denen Sie beginnen können. Sie sollten ihre Machine Learning-Aufgaben im Hinblick auf andere Server Prozesse evaluieren, um das richtige Gleichgewicht für Ihre Umgebung und Arbeitsauslastung zu ermitteln.
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>Erstellen eines benutzerdefinierten externen Ressourcenpools
   
 1.  Jede Änderung an der Konfiguration der Ressourcenkontrolle betrifft den Server als Ganzes und wirkt sich auf Arbeitslasten aus, die die Standardpools für den Server verwenden, sowie auf Arbeitslasten, die die externen Pools verwenden.
   
-     Um eine präzisere Kontrolle bereitzustellen, bei der Arbeitslasten Vorrang haben, können Sie einen neuen benutzerdefinierten externen Ressourcenpool erstellen. Sie sollten zudem auch eine Klassifizierungsfunktion definieren und sie dem externen Ressourcenpool zuweisen. Die **externe** Schlüsselwort ist neu.
+     Um eine präzisere Kontrolle bereitzustellen, bei der Arbeitslasten Vorrang haben, können Sie einen neuen benutzerdefinierten externen Ressourcenpool erstellen. Sie sollten zudem auch eine Klassifizierungsfunktion definieren und sie dem externen Ressourcenpool zuweisen. Das Schlüsselwort " **extern** " ist neu.
   
      Erstellen Sie zunächst einen neuen *benutzerdefinierten externen Ressourcenpool*. Im folgenden Beispiel erhält der Pool den Namen **ds_ep**.
   
@@ -104,11 +104,11 @@ Der Prozess umfasst mehrere Schritte:
   
      Weitere Informationen finden Sie unter [Resource Governor Workload Group (Arbeitsauslastungsgruppe der Ressourcenkontrolle)](../../relational-databases/resource-governor/resource-governor-workload-group.md) und [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).
   
-## <a name="create-a-classification-function-for-machine-learning"></a>Erstellen einer Klassifizierungsfunktion für Machine learning
+## <a name="create-a-classification-function-for-machine-learning"></a>Erstellen einer Klassifizierungs Funktion für Machine Learning
   
 Eine Klassifizierungsfunktion untersucht eingehenden Aufgaben und bestimmt, ob sie mithilfe des aktuellen Ressourcenpools ausgeführt werden können. Aufgaben, die die Kriterien der Klassifizierungsfunktion nicht erfüllen, werden wieder an den Standardressourcenpool des Servers zurückgewiesen.
   
-1. Zunächst gibt an, dass eine Klassifizierungsfunktion der Ressourcenkontrolle verwendet werden soll um Ressourcenpools zu bestimmen. Sie können Zuweisen einer **null** als Platzhalter für die Klassifizierungsfunktion.
+1. Beginnen Sie, indem Sie angeben, dass eine Klassifizierungs Funktion von Resource Governor verwendet werden soll, um Ressourcenpools zu ermitteln. Sie können **null** als Platzhalter für die Klassifizierungs Funktion zuweisen.
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);
@@ -117,7 +117,7 @@ Eine Klassifizierungsfunktion untersucht eingehenden Aufgaben und bestimmt, ob s
   
      Weitere Informationen finden Sie unter [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md).
   
-2.  Definieren Sie in der Klassifizierungsfunktion zu jedem Ressourcenpool den Typ der Anweisung oder eingehende Anforderungen, die dem Ressourcenpool zugewiesen werden soll.
+2.  Definieren Sie in der Klassifizierungs Funktion für jeden Ressourcenpool den Typ der Anweisungen oder eingehenden Anforderungen, die dem Ressourcenpool zugewiesen werden sollen.
   
      Beispielsweise gibt die folgende Funktion den Namen des Schemas zurück, der dem benutzerdefinierten externen Ressourcenpool zugewiesen wurde, wenn es sich bei der Anwendung, die die Anforderung gesendet wird, um Microsoft R Host oder RStudio handelt. Andernfalls wird der Standardressourcenpool zurückgegeben.
   
@@ -145,19 +145,19 @@ Eine Klassifizierungsfunktion untersucht eingehenden Aufgaben und bestimmt, ob s
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>Überprüfen des neuen Ressourcenpools und der Affinität
 
-Um sicherzustellen, dass die Änderungen vorgenommen wurden, sollten Sie die Konfiguration der Serverarbeitsspeicher und CPU für den Workload-Gruppen, die diese Instanz-Ressourcenpools zugeordnet überprüfen:
+Um zu überprüfen, ob die Änderungen vorgenommen wurden, sollten Sie die Konfiguration des Server Arbeitsspeichers und der CPU für alle Arbeits Auslastungs Gruppen überprüfen, die diesen instanzressourcenpools zugeordnet sind:
 
-+ der Standardpool für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server
-+ der standardressourcenpool für externe Prozesse
-+ die benutzerdefinierten Pool für externe Prozesse
++ der Standard Pool für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server.
++ der Standard Ressourcenpool für externe Prozesse
++ der benutzerdefinierte Pool für externe Prozesse.
 
-1. Führen Sie die folgende Anweisung aus, um alle Arbeitsauslastungsgruppen anzuzeigen:
+1. Führen Sie folgende Anweisung aus, um alle Arbeits Auslastungs Gruppen anzuzeigen:
 
     ```sql
     SELECT * FROM sys.resource_governor_workload_groups;
     ```
 
-    **Beispielergebnisse**
+    **Beispiel Ergebnisse**
 
     |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
@@ -165,13 +165,13 @@ Um sicherzustellen, dass die Änderungen vorgenommen wurden, sollten Sie die Kon
     |2|default|Mittel|25|0|0|0|0|2|2|
     |256|ds_wg|Mittel|25|0|0|0|0|2|256|
   
-2.  Verwenden Sie die neue Katalogsicht [Sys. resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), um alle externen Ressourcenpools anzuzeigen.
+2.  Verwenden Sie die neue Katalog Sicht [sys. resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), um alle externen Ressourcenpools anzuzeigen.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
     ```
 
-    **Beispielergebnisse**
+    **Beispiel Ergebnisse**
     
     |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
@@ -180,7 +180,7 @@ Um sicherzustellen, dass die Änderungen vorgenommen wurden, sollten Sie die Kon
   
      Weitere Informationen finden Sie unter [Resource Governor Catalog Views &#40;Transact-SQL&#41; (Resource Governor-Katalogsichten (Transact-SQL))](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md).
   
-3.  Führen Sie die folgende Anweisung zum Zurückgeben von Informationen zu den Ressourcen des Computers, die in den externen Ressourcenpool zugeordnet sind, falls zutreffend:
+3.  Führen Sie die folgende Anweisung aus, um Informationen über die Computerressourcen zurückzugeben, die dem externen Ressourcenpool zugeordnet sind, sofern zutreffend:
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
@@ -190,11 +190,11 @@ Um sicherzustellen, dass die Änderungen vorgenommen wurden, sollten Sie die Kon
 
 ## <a name="see-also"></a>Siehe auch
 
-Weitere Informationen zum Verwalten von Serverressourcen finden Sie unter:
+Weitere Informationen zum Verwalten von Server Ressourcen finden Sie unter:
 
 +  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Dynamische Verwaltungssichten in Verbindung mit der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Resource Governor zugehörige dynamische Verwaltungs &#40;Sichten Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
-Einen Überblick über die Ressourcenkontrolle für Machine learning finden Sie unter:
+Eine Übersicht über die Ressourcenkontrolle für Machine Learning finden Sie unter:
 
-+  [Ressourcenkontrolle für Machine Learning-Dienste](../../advanced-analytics/r/resource-governance-for-r-services.md)
++  [Ressourcenkontrolle für Machine Learning Services](../../advanced-analytics/r/resource-governance-for-r-services.md)

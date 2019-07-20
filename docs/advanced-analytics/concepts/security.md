@@ -1,155 +1,155 @@
 ---
-title: Übersicht über die Sicherheit für R und Python-Erweiterungen – SQL Server-Machine Learning
-description: Übersicht über die Sicherheit für das Extensibility Framework in SQL Server-Machine Learning-Dienste. Sicherheit für die Anmeldung und Benutzerkonten, SQL Server Launchpad-Dienst, workerkonten, die mehrere Skripts und Dateiberechtigungen ausgeführt.
+title: Übersicht über die Sicherheit für R-und Python-Erweiterungen
+description: Sicherheitsübersicht für das Erweiterbarkeits Framework in SQL Server Machine Learning Services. Sicherheit für Anmelde-und Benutzerkonten, SQL Server-Launchpad-Dienst, workerkonten, Ausführen mehrerer Skripts und Dateiberechtigungen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f9f5552a106d0549aaf3b5e9ae291ebe3b534543
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51587878d4a16145ff53eaa397da69130c04d7d5
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963041"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343370"
 ---
-# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Übersicht über die Sicherheit für das Extensibility Framework in SQL Server Machine Learning Services
+# <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Sicherheitsübersicht für das Erweiterbarkeit Framework in SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt die Sicherheitsarchitektur, die verwendet wird, um die SQL Server-Datenbank-Engine und die zugehörigen Komponenten mit dem Extensibility Framework zu integrieren. Er untersucht die sicherungsfähigen Elemente, Dienste, Prozess-ID und Berechtigungen. Weitere Informationen zu den wichtigsten Konzepten und Komponenten der Erweiterbarkeit in SQL Server finden Sie unter [erweiterbarkeitsarchitektur in SQL Server Machine Learning Services](extensibility-framework.md)].
+In diesem Artikel wird die allgemeine Sicherheitsarchitektur beschrieben, die verwendet wird, um die SQL Server Datenbank-Engine und zugehörige Komponenten in das Erweiterbarkeit Framework zu integrieren. Sie untersucht die Sicherungs fähigen Elemente, Dienste, Prozess Identität und Berechtigungen. Weitere Informationen zu den wichtigsten Konzepten und Komponenten der Erweiterbarkeit in SQL Server finden Sie unter [Erweiterbarkeits Architektur in SQL Server Machine Learning Services](extensibility-framework.md)].
 
-## <a name="securables-for-external-script"></a>Sicherungsfähige Elemente für externe Skripts
+## <a name="securables-for-external-script"></a>Sicherungs fähige Elemente für externes Skript
 
-Ein externes Skript, das in R oder Python geschriebenen gesendet wird, als ein Eingabeparameter für ein [gespeicherte Systemprozedur](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) für diesen Zweck erstellt oder in einer gespeicherten Prozedur, die Sie definieren umschlossen wird. Sie möglicherweise auch Modelle, die vorab und gespeichert, die in einem binären Format in einer Datenbanktabelle, in einer T-SQL aufgerufen [PREDICT](../../t-sql/queries/predict-transact-sql.md) Funktion.
+Ein in R oder Python geschriebenes externes Skript wird als Eingabeparameter an eine [gespeicherte System Prozedur](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) übermittelt, die zu diesem Zweck erstellt wurde oder von einer gespeicherten Prozedur umschließt, die Sie definieren. Sie können auch Modelle haben, die in einem Binärformat in einer Datenbanktabelle vortrainiert und gespeichert werden und in einer T-SQL- [Vorhersage](../../t-sql/queries/predict-transact-sql.md) Funktion aufgerufen werden können.
 
-Das Skript über die vorhandene Datenbank-Schemaobjekten, gespeicherte Prozeduren und Tabellen bereitgestellt wird, es sind keine neuen [sicherungsfähige Elemente](../../relational-databases/security/securables.md) für SQL Server-Machine Learning-Dienste.
+Da das Skript über vorhandene Datenbankschema Objekte, gespeicherte Prozeduren und Tabellen bereitgestellt wird, sind für SQL Server Machine Learning Services keine neuen Sicherungs fähigen Elemente [verfügbar](../../relational-databases/security/securables.md) .
 
-Unabhängig davon, wie Sie Skripts verwenden oder, was sie bestehen Datenbankobjekte werden erstellt und wahrscheinlich gespeichert, aber keine neuen Objekttyp wird zum Speichern von Skripts eingeführt. Daher die Möglichkeit zu nutzen, erstellen und Speichern der Datenbank Objekte bei der hängt größtenteils von Datenbankberechtigungen, die für Ihre Benutzer bereits definiert.
+Unabhängig davon, wie Sie Skripts oder verwenden, werden Datenbankobjekte erstellt und wahrscheinlich gespeichert, aber es wird kein neuer Objekttyp für das Speichern von Skripts eingeführt. Folglich hängt die Fähigkeit zum Nutzen, erstellen und Speichern von Datenbankobjekten größtenteils von Daten Bank Berechtigungen ab, die bereits für Ihre Benutzer definiert wurden.
 
 <a name="permissions"></a>
 
 ## <a name="permissions"></a>Berechtigungen
 
-SQL Server Daten-Sicherheitsmodell von Datenbank-Anmeldenamen und Rollen an R und Python-Skript erweitern. Ein SQL Server-Anmeldung oder der Windows-Benutzerkonto muss zum Ausführen von externen Skripts, die SQL Server-Daten verwenden, oder, die mit SQL Server als Compute Context ausgeführt. Datenbankbenutzer, die über Berechtigungen zum Ausführen einer ad-hoc-Abfrage können die gleichen Daten aus R oder Python-Skript zugreifen.
+Das Daten Sicherheitsmodell von SQL Server Daten Bank Anmeldungen und-Rollen wird auf das R-und Python-Skript erweitert. Zum Ausführen externer Skripts, die SQL Server Daten verwenden oder die mit SQL Server als computekontext ausgeführt werden, ist ein SQL Server-oder Windows-Benutzerkonto erforderlich. Datenbankbenutzer, die über Berechtigungen zum Ausführen einer Ad-hoc-Abfrage verfügen, können auf dieselben Daten aus R-oder Python-Skript zugreifen
 
-Gibt das Konto Anmeldenamen oder Benutzer an die *Sicherheitsprinzipal*, die möglicherweise mehrere Ebenen des Zugriffs, je nach den Anforderungen von externen Skript:
+Der Anmelde Name oder das Benutzerkonto identifiziert den *Sicherheits Prinzipal*, der abhängig von den externen Skript Anforderungen möglicherweise mehrere Zugriffsebenen benötigt:
 
-+ Berechtigung zum Zugriff auf die Datenbank, in dem externe Skripts aktiviert sind.
-+ Berechtigungen zum Lesen von Daten aus gesicherten Objekten wie Tabellen.
-+ Die Fähigkeit zum Schreiben von neuer Daten in eine Tabelle, z. B. ein Modell oder Bewertungsergebnisse.
-+ Die Möglichkeit zum Erstellen neuer Objekte, z. B. Tabellen, gespeicherte Prozeduren, die das externe Skript verwenden oder benutzerdefinierte Funktionen, verwenden von R oder Python-Auftrags.
-+ Das Recht, neue Pakete auf dem SQL Server-Computer installieren, oder verwenden für eine Gruppe von Benutzern bereitgestellte Pakete.
++ Berechtigung für den Zugriff auf die Datenbank, in der externe Skripts aktiviert sind.
++ Berechtigungen zum Lesen von Daten aus gesicherten Objekten, wie z. b. Tabellen.
++ Die Möglichkeit, neue Daten in eine Tabelle zu schreiben, z. b. ein Modell oder Bewertungsergebnisse.
++ Die Fähigkeit zum Erstellen von neuen Objekten, z. b. Tabellen, gespeicherte Prozeduren, die das externe Skript verwenden, oder benutzerdefinierte Funktionen, die R-oder python-Aufträge verwenden.
++ Das Recht, neue Pakete auf dem SQL Server Computer zu installieren oder Pakete zu verwenden, die für eine Gruppe von Benutzern bereitgestellt werden.
 
-Jede Person, die ein externes Skript mithilfe von SQL Server als Ausführungskontext ausgeführt wird, muss zu einem Benutzer in der Datenbank zugeordnet werden. Statt einzeln Satz Berechtigungen des Datenbankbenutzers können Sie Rollen, um die Sätze von Berechtigungen, verwalten und diesen Rollen Benutzer zuweisen, statt Berechtigungen einzeln festzulegen, erstellen.
+Jede Person, die ein externes Skript mit SQL Server als Ausführungs Kontext ausführt, muss einem Benutzer in der Datenbank zugeordnet werden. Anstatt die Datenbankbenutzer Berechtigungen einzeln festzulegen, können Sie Rollen erstellen, um Berechtigungs Sätze zu verwalten und diesen Rollen Benutzer zuzuweisen, anstatt Benutzerberechtigungen einzeln festzulegen.
 
-Weitere Informationen finden Sie unter [Vergabe von Benutzerberechtigungen für SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
+Weitere Informationen finden Sie unter [Erteilen von Benutzerberechtigungen für SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md).
 
-## <a name="permissions-when-using-an-external-client-tool"></a>Berechtigungen, wenn ein externer Client-Tool verwenden.
+## <a name="permissions-when-using-an-external-client-tool"></a>Berechtigungen bei Verwendung eines externen Client Tools
 
-Benutzer, die r oder Python in einem externen Client-Tool verwenden, müssen ihre Anmeldung oder das Konto zu einem Benutzer in der Datenbank zugeordnet werden, wenn sie ein externes Skript in der Datenbank, oder den Zugriff auf Datenbankobjekte und Daten ausführen müssen. Die gleichen Berechtigungen erforderlich sind, ob die externen Skripts aus einem Data Science-Remoteclient gesendet wird, oder führen Sie mithilfe einer gespeicherten T-SQL-Prozedur.
+Benutzer, die R oder python in einem externen Client Tool verwenden, müssen Ihren Anmelde Namen oder Ihr Konto einem Benutzer in der-Datenbank zuordnen, wenn Sie ein externes Skript in-Database ausführen oder auf Datenbankobjekte und-Daten zugreifen müssen. Die gleichen Berechtigungen sind erforderlich, unabhängig davon, ob das externe Skript von einem Remote Data Science Client gesendet oder mithilfe einer gespeicherten T-SQL-Prozedur ausgeführt wird.
 
-Nehmen wir beispielsweise an, dass Sie über ein externes Skript erstellt, das auf dem lokalen Computer ausgeführt wird, und das Skript in SQL Server ausgeführt werden soll. Sie müssen sicherstellen, dass die folgenden Bedingungen erfüllt sind:
+Nehmen Sie beispielsweise an, dass Sie ein externes Skript erstellt haben, das auf dem lokalen Computer ausgeführt wird, und Sie dieses Skript auf SQL Server ausführen möchten. Sie müssen sicherstellen, dass die folgenden Bedingungen erfüllt sind:
 
 + Die Datenbank lässt Remoteverbindungen zu.
-+ Die SQL-Anmeldung oder das Windows-Konto, die Sie für den Datenbankzugriff verwendet wurde mit der SQL Server auf Instanzebene hinzugefügt.
-+ Die SQL-Anmeldung oder der Windows-Benutzer benötigen die Berechtigung zum Ausführen externer Skripts. Diese Berechtigung kann in der Regel nur von einem Datenbankadministrator hinzugefügt werden.
-+ Die SQL-Anmeldung oder der Windows-Benutzer muss als Benutzer mit entsprechenden Berechtigungen in jeder Datenbank hinzugefügt werden, bei denen des externen Skripts für diese Vorgänge ausführt:
-  + Abrufen von Daten aus.
++ Die SQL-Anmeldung oder das Windows-Konto, das Sie für den Datenbankzugriff verwendet haben, wurde dem SQL Server auf Instanzebene hinzugefügt.
++ Die SQL-Anmeldung oder der Windows-Benutzer muss über die Berechtigung zum Ausführen externer Skripts verfügen. Diese Berechtigung kann in der Regel nur von einem Datenbankadministrator hinzugefügt werden.
++ Die SQL-Anmeldung oder der Windows-Benutzer muss in jeder Datenbank, in der das externe Skript einen der folgenden Vorgänge ausführt, als Benutzer mit den entsprechenden Berechtigungen hinzugefügt werden:
+  + Abrufen von Daten.
   + Schreiben oder Aktualisieren von Daten.
-  + Erstellen von neuen Objekten, z. B. Tabellen oder gespeicherte Prozeduren.
+  + Erstellen neuer Objekte, z. b. Tabellen oder gespeicherte Prozeduren.
 
-Nach der Anmeldung oder der Windows-Benutzerkonto bereitgestellt und die erforderlichen Berechtigungen zugewiesen wurde, können Sie ein externes Skript in SQL Server ausführen, indem Sie verwenden ein Datenquellenobjekt in R oder **Revoscalepy** -Bibliothek in Python oder durch Aufrufen einer gespeicherten die Prozedur mit dem externen Skript an.
+Nachdem die Anmeldung oder das Windows-Benutzerkonto bereitgestellt wurde und die erforderlichen Berechtigungen erteilt wurden, können Sie ein externes Skript auf SQL Server ausführen, indem Sie ein Datenquellen Objekt in R oder die **revoscalepy** -Bibliothek in Python verwenden oder eine gespeicherte Prozedur aufrufen, die enthält das externe Skript.
 
-Wenn ein externes Skript von SQL Server gestartet wird, ruft die Sicherheit der Datenbank-Engine den Sicherheitskontext des Benutzers, der der Auftrag gestartet, und verwaltet die Zuordnungen des Benutzers oder der Anmeldung zu sicherungsfähigen Objekten ab.
+Wenn ein externes Skript von SQL Server gestartet wird, ruft die Datenbank-Engine-Sicherheit den Sicherheitskontext des Benutzers ab, der den Auftrag gestartet hat, und verwaltet die Zuordnungen des Benutzers oder der Anmeldung bei Sicherungs fähigen Objekten.
 
-Aus diesem Grund müssen alle externen Skripts, die von einem Remoteclient aus initiiert werden die Anmeldenamen oder Benutzer Informationen als Teil der Verbindungszeichenfolge angeben.
+Daher müssen alle externen Skripts, die von einem Remote Client initiiert werden, die Anmelde-oder Benutzerinformationen als Teil der Verbindungs Zeichenfolge angeben.
 
 <a name="launchpad"></a>
 
-## <a name="services-used-in-external-processing-launchpad"></a>Dienste, die in externen Verarbeitung (Launchpad) verwendet werden.
+## <a name="services-used-in-external-processing-launchpad"></a>In externer Verarbeitung verwendete Dienste (Launchpad)
 
-Das Extensibility Framework Fügt eine neuen NT-Dienst, um die [Liste mit den Diensten](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server-Installation: [**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+Das Erweiterbarkeit Framework fügt der [Liste der Dienste](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) in einer SQL Server Installation einen neuen NT-Dienst hinzu: [**SQL Server-Launchpad (MSSSQLServer)** ](extensibility-framework.md#launchpad).
 
-Die Datenbank-Engine verwendet den SQL Server Launchpad-Dienst eine R- oder Python-Sitzung als separater Prozess instanziiert. Der Prozess unter einem Konto mit geringen Rechten ausgeführt wird; unterscheiden Sie SQL Server, Launchpad selbst und die Identität des Benutzers, unter der die gespeicherte Prozedur oder Host-Abfrage ausgeführt wurde. Ausführen von Skripts in einem separaten Prozess, unter dem Konto mit niedrigen Berechtigungen, bildet die Grundlage des Modells, Sicherheit und Isolation für R und Python in SQL Server.
+Die Datenbank-Engine verwendet den SQL Server-Launchpad-Dienst, um eine R-oder python-Sitzung als separaten Prozess zu instanziieren. Der Prozess wird unter einem Konto mit geringen Berechtigungen ausgeführt. unterscheidet sich von SQL Server, Launchpad selbst und der Benutzeridentität, unter der die gespeicherte Prozedur oder die Host Abfrage ausgeführt wurde. Das Ausführen von Skripts in einem separaten Prozess, unter dem Konto mit geringen Rechten, ist die Grundlage für das Sicherheits-und Isolations Modell für R und python in SQL Server.
 
-Zusätzlich zum Starten von externer Prozessen, ist die Launchpad auch zuständig für die Überwachung der Identität des aufrufenden Benutzers und das mit geringen rechten workerkonto zum Starten des Prozesses verwendet diese Identität zuordnen. In einigen Szenarien, in denen Skripts oder Codeabschnitts zurück zu SQL Server für die Daten und Vorgänge aufruft, kann Launchpad in der Regel um Identität Übertragung nahtlos zu verwalten. Skripts, die SELECT-Anweisungen enthält oder Aufrufen von Funktionen und andere Programmiersprachen Objekte in der Regel erfolgreich, wenn der aufrufende Benutzer über ausreichende Berechtigungen verfügt.
+Zusätzlich zum Starten externer Prozesse ist das Launchpad auch für das Nachverfolgen der Identität des aufrufenden Benutzers und das Mapping der Identität zum Workerkonto mit geringen Berechtigungen, das zum Starten des Prozesses verwendet wird, verantwortlich. In einigen Szenarien, in denen Skript-oder Code Aufrufe an SQL Server für Daten und Vorgänge zurückgibt, ist launchpad in der Regel in der Lage, die Identitäts Übertragung nahtlos zu verwalten. Skripts mit SELECT-Anweisungen oder aufrufenden Funktionen und anderen Programmier Objekten sind in der Regel erfolgreich, wenn der aufrufenden Benutzer über ausreichende Berechtigungen verfügt.
 
 > [!NOTE]
-> In der Standardeinstellung [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] unter Ausführung konfiguriert ist **NT Service\MSSQLLaunchpad**, die mit allen erforderlichen Berechtigungen zum Ausführen externer Skripts bereitgestellt wird. Weitere Informationen zu konfigurierbaren Optionen, finden Sie unter [Konfiguration von SQL Server Launchpad-Diensts](../security/sql-server-launchpad-service-account.md).
+> Standardmäßig [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] ist so konfiguriert, dass Sie unter **NT service\mssqllaunchpad**ausgeführt wird, das mit allen erforderlichen Berechtigungen zum Ausführen externer Skripts bereitgestellt wird. Weitere Informationen zu konfigurierbaren Optionen finden Sie unter [SQL Server-Launchpad-Dienst Konfiguration](../security/sql-server-launchpad-service-account.md).
 
 <a name="sqlrusergroup"></a>
 
-## <a name="identities-used-in-processing-sqlrusergroup"></a>Identitäten, die zum Verarbeiten (SQLRUserGroup)
+## <a name="identities-used-in-processing-sqlrusergroup"></a>Bei der Verarbeitung verwendete Identitäten (sqlrusergroup)
 
-**SQLRUserGroup** (SQL-Benutzer mit eingeschränkten Rechten-Gruppe) wird von SQL Server-Setup erstellt und enthält einen Pool von lokalen Windows-Benutzerkonten mit geringen Rechten. Wenn ein externer Prozess benötigt wird, Launchpad verwendet ein verfügbares workerkonto und verwendet es zum ein Prozess ausgeführt werden. Launchpad genauer gesagt: aktiviert ein verfügbares workerkonto, ordnet er die Identität des aufrufenden Benutzers und führt das Skript unter dem workerkonto.
+**Sqlrusergroup** (Eingeschränkte SQL-Benutzergruppe) wird durch SQL Server-Setup erstellt und enthält einen Pool mit lokalen Windows-Benutzerkonten mit geringen Rechten. Wenn ein externer Prozess erforderlich ist, nimmt Launchpad ein verfügbares Workerkonto an und verwendet es, um einen Prozess auszuführen. Genauer gesagt aktiviert Launchpad ein verfügbares Workerkonto, ordnet es der Identität des aufrufenden Benutzers zu und führt das Skript unter dem Worker-Konto aus.
 
-+ **SQLRUserGroup** mit einer bestimmten Instanz verknüpft ist. Ein separater Pool von workerkonten ist für jede Instanz erforderlich, auf dem Machine Learning aktiviert wurde. Konten können nicht zwischen Instanzen freigegeben werden.
++ **Sqlrusergroup** ist mit einer bestimmten-Instanz verknüpft. Für jede Instanz, auf der Machine Learning aktiviert wurde, wird ein separater Pool von workerkonten benötigt. Konten können nicht zwischen Instanzen freigegeben werden.
 
-+ Die Größe des benutzerkontenpools ist statisch, und der Standardwert ist 20, 20 gleichzeitige Verbindungen unterstützt. Die Anzahl der externen-laufzeitsitzungen, die gleichzeitig gestartet werden kann, wird durch die Größe dieses benutzerkontenpools beschränkt. 
++ Die Größe des Benutzerkonten Pools ist statisch, und der Standardwert ist 20, wodurch 20 gleichzeitige Sitzungen unterstützt werden. Die Anzahl der externen Lauf Zeit Sitzungen, die gleichzeitig gestartet werden können, ist durch die Größe dieses Benutzerkonten Pools beschränkt. 
 
-+ Worker-Kontonamen, im Pool weisen das Format SQLInstanceName*Nn*. Z. B. auf einer Standardinstanz **SQLRUserGroup** enthält Konten, die mit dem Namen MSSQLSERVER01, MSSQLSERVER02 usw. auf bis zu MSSQLSERVER20.
++ Die Namen der workerkonten im Pool weisen das Format "SqlInstanceName*NN*" auf. Beispielsweise enthält **sqlrusergroup** auf einer Standard Instanz die Konten MSSQLSERVER01, MSSQLSERVER02 usw. für bis MSSQLSERVER20.
 
-Parallelisierte Vorgänge beanspruchen zusätzliche Konten nicht. Wenn ein Benutzer eine Bewertung Aufgabe ausgeführt, die parallelen Verarbeitung verwendet wird, wird z. B. das gleiche workerkonto für alle Threads wiederverwendet. Wenn Sie beabsichtigen, die intensiven Gebrauch von Machine Learning machen, können Sie die Anzahl der Konten, die zum Ausführen externer Skripts erhöhen. Weitere Informationen finden Sie unter [Ändern des benutzerkontenpools für Machine Learning](../../advanced-analytics/administration/modify-user-account-pool.md).
+Parallelisierte Tasks verbrauchen keine weiteren Konten. Wenn ein Benutzer beispielsweise eine Bewertungsaufgabe ausführt, die die parallele Verarbeitung verwendet, wird für alle Threads dasselbe Workerkonto verwendet. Wenn Sie Machine Learning intensiv nutzen möchten, können Sie die Anzahl der Konten erhöhen, die zum Ausführen externer Skripts verwendet werden. Weitere Informationen finden Sie unter [Ändern des Benutzerkonten Pools für Machine Learning](../../advanced-analytics/administration/modify-user-account-pool.md).
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-### <a name="appcontainer-isolation-in-sql-server-2019"></a>AppContainer-Isolation in SQL Server-2019
+### <a name="appcontainer-isolation-in-sql-server-2019"></a>Appcontainer-Isolation in SQL Server 2019
 
-In SQL Server-2019, erstellt Setup nicht mehr workerkonten für **SQLRUserGroup**. Isolation erfolgt stattdessen über [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). Zur Laufzeit, wenn ein externes Skript in einer gespeicherten Prozedur oder Abfrage erkannt wird, ruft der SQL Server Launchpad mit einer Anforderung für ein Startprogramm spezifisch. Launchpad Ruft die entsprechenden Common Language Runtime-Umgebung in einem Prozess unter seiner Identität und instanziiert einen AppContainer enthält. Diese Änderung ist nützlich, da lokale Konto und Kennwort-Verwaltung nicht mehr benötigt wird. Für Installationen, in denen lokale Benutzerkonten gelten, verboten sind, bedeutet auch, Entfernung der Abhängigkeit Konto Lokaler Benutzer, dass Sie jetzt dieses Feature verwenden können.
+In SQL Server 2019 werden workerkonten für **sqlrusergroup**nicht mehr von Setup erstellt. Stattdessen wird die Isolation durch [appcontainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)erreicht. Wenn ein externes Skript in einer gespeicherten Prozedur oder Abfrage erkannt wird, ruft SQL Server zur Laufzeit Launchpad mit einer Anforderung für ein Erweiterungs spezifisches Start Programm auf. Launchpad Ruft die entsprechende Laufzeitumgebung in einem Prozess unter seiner Identität auf und instanziiert einen appcontainer, um ihn zu enthalten. Diese Änderung ist von Vorteil, da die Verwaltung lokaler Konten und Kenn Wörter nicht mehr erforderlich ist. Außerdem können Sie bei Installationen, bei denen lokale Benutzerkonten nicht zulässig sind, diese Funktion jetzt verwenden.
 
-Gemäß der Implementierung von SQL Server sind AppContainers einen internen Mechanismus. Während Sie physische Beweise des AppContainers im Monitor "Prozess" nicht angezeigt werden, finden Sie sie in Firewallregeln für ausgehenden Datenverkehr von Setup um zu verhindern, dass Prozesse Aufrufe Netzwerk erstellt wurde. Weitere Informationen finden Sie unter [Firewallkonfiguration für SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
+Gemäß der Implementierung durch SQL Server sind appcontainers ein interner Mechanismus. Obwohl im Prozess Monitor keine physischen Beweise von appcontainers angezeigt werden, können Sie diese in ausgehenden Firewallregeln finden, die vom-Setup erstellt wurden, um zu verhindern, dass Prozesse Netzwerk Aufrufe durchführen. Weitere Informationen finden Sie unter [Firewallkonfiguration für SQL Server Machine Learning Services](../../advanced-analytics/security/firewall-configuration.md).
 
 > [!Note]
-> In SQL Server-2019 **SQLRUserGroup** hat nur ein Element handelt es sich nun die einzelnen SQL Server Launchpad-Dienstkonto anstelle mehrerer Konten.
+> In SQL Server 2019 verfügt **sqlrusergroup** nur über einen Member, bei dem es sich um das einzige SQL Server-Launchpad Dienst Konto anstelle mehrerer workerkonten handelt.
 ::: moniker-end
 
-### <a name="permissions-granted-to-sqlrusergroup"></a>SQLRUserGroup erteilten Berechtigungen
+### <a name="permissions-granted-to-sqlrusergroup"></a>Sqlrusergroup erteilte Berechtigungen
 
-Standardmäßig können Mitglieder der **SQLRUserGroup** über Lese- und Ausführungsberechtigungen für die Dateien in der SQL Server **Binn**, **R_SERVICES**, und **PYTHON_SERVICES** Verzeichnisse mit Zugriff auf ausführbare Dateien, Bibliotheken und integrierten Datasets in R und Python-Distributionen, die mit SQL Server installiert. 
+Standardmäßig verfügen Mitglieder von **sqlrusergroup** über Lese-und Ausführungs Berechtigungen für Dateien in den SQL Server **Binn**-, **R_SERVICES**-und **PYTHON_SERVICES** -Verzeichnissen mit Zugriff auf ausführbare Dateien, Bibliotheken und integrierte Datasets in R. und mit SQL Server installierte python-Distributionen. 
 
-Um vertrauliche Ressourcen auf SQL Server zu schützen, können Sie optional eine Zugriffssteuerungsliste (ACL), die Zugriff auf verweigert definieren **SQLRUserGroup**. Im Gegensatz dazu können Sie auch Berechtigungen für lokale Ressourcen gewähren, die auf dem Hostcomputer, abgesehen von SQL Server selbst vorhanden. 
+Um sensible Ressourcen auf SQL Server zu schützen, können Sie optional eine Zugriffs Steuerungs Liste (ACL) definieren, die den Zugriff auf **sqlrusergroup**verweigert. Umgekehrt können Sie auch lokalen Datenressourcen, die auf dem Host Computer vorhanden sind, Berechtigungen erteilen, abgesehen von SQL Server selbst. 
 
-Programmbedingt **SQLRUserGroup** verfügt nicht über eine Datenbank-Anmeldung oder Berechtigungen für alle Daten. Unter bestimmten Umständen empfiehlt es sich um eine Anmeldung, Loop Back Verbindungen zulassen, insbesondere dann, wenn eine vertrauenswürdige Windows-Identität des aufrufenden Benutzers ist zu erstellen. Diese Funktion wird aufgerufen, [ *implizite Authentifizierung*](#implied-authentication). Weitere Informationen finden Sie unter [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+Der-Entwurf von **sqlrusergroup** besitzt keine Daten Bank Anmeldung oder Berechtigungen für Daten. Unter bestimmten Umständen möchten Sie möglicherweise einen Anmelde Namen erstellen, um Schleifen Rückrufe zuzulassen, insbesondere dann, wenn eine vertrauenswürdige Windows-Identität der aufrufende Benutzer ist. Diese Funktion wird als [*implizite Authentifizierung*](#implied-authentication)bezeichnet. Weitere Informationen finden Sie unter [Hinzufügen von sqlrusergroup als Datenbankbenutzer](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
-## <a name="identity-mapping"></a>Identitätszuordnung
+## <a name="identity-mapping"></a>Identitäts Zuordnung
 
-Wenn eine Sitzung gestartet wird, ordnet Launchpad die Identität des aufrufenden Benutzers zu einem workerkonto. Die Zuordnung eines externen Windows-Benutzer oder eine gültige SQL-Anmeldung zu einem workerkonto gilt nur für die Lebensdauer des SQL Prozedur gespeicherten, externe Skript ausführt. Parallele Abfragen von derselben Anmeldung werden demselben Benutzerworkerkonto zugeordnet.
+Wenn eine Sitzung gestartet wird, ordnet Launchpad die Identität des aufrufenden Benutzers einem Workerkonto zu. Die Zuordnung eines externen Windows-Benutzers oder einer gültigen SQL-Anmeldung zu einem Workerkonto ist nur für die Lebensdauer der gespeicherten SQL-Prozedur gültig, die das externe Skript ausführt. Parallele Abfragen von derselben Anmeldung werden demselben Benutzerworkerkonto zugeordnet.
 
-Während der Ausführung erstellt Launchpad temporären Ordner zum Speichern von Daten, löschen, wenn die Sitzung endet. Die Verzeichnisse sind zugreifen. Für R führt "rlauncher" für diese Aufgabe. Für Python führt PythonLauncher diese Aufgabe. Jedes einzelnen workerkonto ist beschränkt, in einem eigenen Ordner und Dateien in Ordnern über eine eigene kann nicht zugegriffen werden kann. Allerdings kann das workerkonto lesen, schreiben oder löschen die untergeordneten Elemente in der Sitzung Arbeitsordner an, der erstellt wurde. Wenn Sie Administrator auf dem Computer sind, können Sie die Verzeichnisse anzeigen, die für jeden Prozess erstellt wurden. Jedes Verzeichnis wird durch die Sitzungs-GUID identifiziert.
+Während der Ausführung erstellt Launchpad temporäre Ordner zum Speichern von Sitzungsdaten und löscht diese, wenn die Sitzung beendet wird. Die Verzeichnisse sind Zugriffs eingeschränkt. Für R führt rlauncher diese Aufgabe aus. Für python führt pythonlauncher diese Aufgabe aus. Jedes einzelne Workerkonto ist auf seinen eigenen Ordner beschränkt, und auf Dateien in Ordnern über der eigenen Ebene kann nicht zugegriffen werden. Das Workerkonto kann jedoch untergeordnete Elemente unter dem erstellten Sitzungs Arbeitsordner lesen, schreiben oder löschen. Wenn Sie Administrator auf dem Computer sind, können Sie die Verzeichnisse anzeigen, die für jeden Prozess erstellt wurden. Jedes Verzeichnis wird durch die Sitzungs-GUID identifiziert.
 
 <a name="implied-authentication"></a>
 
-## <a name="implied-authentication-loop-back-requests"></a>Implizite Authentifizierung (Loop Back Anforderungen)
+## <a name="implied-authentication-loop-back-requests"></a>Implizite Authentifizierung (Schleifen-Back-Anforderungen)
 
-*Implizite Authentifizierung* Verbindungsverhalten-Anforderung unter der Schleife externe Prozessen ausgeführt werden, wie Konten mit geringen Rechten in SQL Server auf als eine vertrauenswürdige Benutzeridentität dargestellt werden Back Anforderungen für Daten oder Vorgänge beschreibt. Als Konzept ist die implizite Authentifizierung nur für Windows-Authentifizierung in SQL Server-Verbindungszeichenfolgen, die eine vertrauenswürdige Verbindung mit auf Anforderungen von externen Prozessen, z. B. R oder Python-Skript angeben. Dies wird manchmal auch als bezeichnet ein *Schleife wieder*.
+Die *implizite Authentifizierung* beschreibt das Verhalten der Verbindungsanforderung, unter dem externe Prozesse, die als workerkonten mit geringen Rechten ausgeführt werden, als vertrauenswürdige Benutzeridentität für die SQL Server on-Schleifen Anforderungen für Daten oder Vorgänge dargestellt werden. Als Konzept gilt die implizite Authentifizierung für die Windows-Authentifizierung, in SQL Server Verbindungs Zeichenfolgen, die eine vertrauenswürdige Verbindung angeben, bei Anforderungen aus externen Prozessen, wie z. b. R-oder python-Skripts. Sie wird manchmal auch als *Schleifen Back*bezeichnet.
 
-Vertrauenswürdige Verbindungen werden aus R und Python-Skript, jedoch nur durch eine zusätzliche Konfiguration funktionieren. In die erweiterbarkeitsarchitektur, R und Python-Prozesse ausgeführt, unter workerkonten Berechtigungen vom übergeordneten Element erben **SQLRUserGroup**. Wenn eine Verbindungszeichenfolge gibt `Trusted_Connection=True`, die Identität des Kontos Worker wird angezeigt, auf die verbindungsanforderung wird standardmäßig auf SQL Server unbekannt ist.
+Vertrauenswürdige Verbindungen sind über R-und python-Skripts, jedoch nur mit zusätzlicher Konfiguration machbar. In der Erweiterbarkeits Architektur werden R-und python-Prozesse unter workerkonten ausgeführt und Erben Berechtigungen von der übergeordneten **sqlrusergroup**. Wenn eine Verbindungs Zeichenfolge angibt `Trusted_Connection=True`, wird die Identität des workerkontos in der Verbindungsanforderung angezeigt, die standardmäßig als SQL Server unbekannt ist.
 
-Um vertrauenswürdige Verbindungen erfolgreich zu machen, müssen Sie erstellen eine datenbankanmeldung für das **SQLRUserGroup**. Nach dem auf diese Weise, die eine vertrauenswürdige Verbindung von einem beliebigen Mitglied der **SQLRUserGroup** Anmelderechte für SQL Server hat. Schrittweise Anweisungen finden Sie unter [SQLRUserGroup hinzufügen, um eine andere datenbankanmeldung](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+Damit vertrauenswürdige Verbindungen erfolgreich hergestellt werden können, müssen Sie eine Daten Bank Anmeldung für **sqlrusergroup**erstellen. Danach verfügt jede vertrauenswürdige Verbindung von einem beliebigen Mitglied von **sqlrusergroup** über Anmelde Rechte für SQL Server. Schritt-für-Schritt-Anweisungen finden [Sie unter Hinzufügen von sqlrusergroup zu einer Daten Bank Anmeldung](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
-Vertrauenswürdige Verbindungen sind nicht die am häufigsten verwendeten Formulierung des eine verbindungsanforderung. Wenn R oder Python-Skript eine Verbindung angegeben ist, kann es sein eher üblich, dass eine SQL-Anmeldung, oder vollständig angegebenen Benutzernamen und bestimmtes Kennwort verwenden, wenn die Verbindung mit einer ODBC-Datenquelle ist.
+Vertrauenswürdige Verbindungen sind nicht die am häufigsten verwendete Formulierung einer Verbindungsanforderung. Wenn das R-oder Python-Skript eine Verbindung angibt, kann es häufiger vorkommen, dass ein SQL-Anmelde Name oder ein vollständig angegebener Benutzername und dasselbe Kennwort verwendet werden, wenn die Verbindung mit einer ODBC-Datenquelle hergestellt wird.
 
-### <a name="how-implied-authentication-works-for-r-and-python-sessions"></a>Wie die implizite Authentifizierung funktioniert für Sitzungen, die R- und Python
+### <a name="how-implied-authentication-works-for-r-and-python-sessions"></a>Funktionsweise der impliziten Authentifizierung für R-und python-Sitzungen
 
-Das folgende Diagramm zeigt die Interaktion des SQL Server-Komponenten mit der R-Laufzeit und wie der zwar impliziten Authentifizierung für R.
+Das folgende Diagramm zeigt die Interaktion von SQL Server-Komponenten mit der r-Laufzeit und die Art der impliziten Authentifizierung für R.
 
 ![Implizite Authentifizierung für R](../security/media/implied-auth-rsql.png)
 
-Im nächste Diagramm zeigt die Interaktion des SQL Server-Komponenten mit der Python-Laufzeit und wie der zwar impliziten Authentifizierung für Python.
+Das nächste Diagramm zeigt die Interaktion von SQL Server Komponenten mit der python-Laufzeit und die Art der impliziten Authentifizierung für python.
 
-![Implizite Authentifizierung für Python](../security/media/implied-auth-python2.png)
+![Implizite Authentifizierung für python](../security/media/implied-auth-python2.png)
 
-## <a name="no-support-for-transparent-data-encryption-at-rest"></a>Keine Unterstützung für die transparente datenverschlüsselung ruhender Daten
+## <a name="no-support-for-transparent-data-encryption-at-rest"></a>Keine Unterstützung für ruhende transparent Data Encryption
 
-[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) wird für die Daten gesendet oder empfangen wurden aus der externen Skript-Laufzeit nicht unterstützt. Der Grund ist, dass der externe Prozess (R oder Python) außerhalb von SQL Server-Prozess ausgeführt wird. Aus diesem Grund ist Daten, die von der externen Laufzeit verwendet, durch die Verschlüsselungsfunktionen von Datenbank-Engine nicht geschützt. Dieses Verhalten unterscheidet sich nicht als jeder andere Client auf dem SQL Server-Computer, der liest Daten aus der Datenbank und erstellt eine Kopie, ausgeführt wird.
+[Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) wird für Daten, die an die externe Skript Laufzeit gesendet oder von dieser empfangen werden, nicht unterstützt. Der Grund hierfür ist, dass der externe Prozess (R oder python) außerhalb des SQL Server Prozesses ausgeführt wird. Aus diesem Grund werden Daten, die von der externen Laufzeit verwendet werden, nicht durch die Verschlüsselungsfunktionen der Datenbank-Engine geschützt. Dieses Verhalten unterscheidet sich nicht von anderen Clients, die auf dem SQL Server Computer ausgeführt werden, der Daten aus der Datenbank liest und eine Kopie erstellt.
 
-Daher sind TDE **nicht** angewendet werden, um alle Daten, die Sie in R oder Python-Skripts verwenden und auf alle Daten, die auf dem Datenträger oder auf jegliche permanente Zwischenergebnisse gespeichert. Wie z. B. Windows BitLocker-Verschlüsselung oder Drittanbieter-Verschlüsselung auf dem Datei- oder Ordnerebene angewendet gelten jedoch andere Arten von Verschlüsselung, immer noch.
+Folglich wird TDE **nicht** auf Daten angewendet, die Sie in R-oder python-Skripts verwenden, oder auf Daten, die auf einem Datenträger gespeichert sind, oder auf beibehaltene Zwischenergebnisse. Andere Verschlüsselungstypen, z. b. die Windows BitLocker-Verschlüsselung oder die Verschlüsselung von Drittanbietern, die auf Datei-oder Ordnerebene angewendet werden, gelten jedoch weiterhin.
 
-Im Fall von [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md), externe Laufzeiten, die keinen Zugriff auf die Verschlüsselungsschlüssel. Aus diesem Grund können keine Daten an Skripts gesendet werden.
+Im Fall von [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)haben externe Laufzeiten keinen Zugriff auf die Verschlüsselungsschlüssel. Daher können keine Daten an die Skripts gesendet werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Artikel haben Sie gelernt, die Komponenten und das Interaktionsmodell der Security-Architektur integriert die [Erweiterungsframework](../../advanced-analytics/concepts/extensibility-framework.md). Wichtige Punkte, die in diesem Artikel behandelten enthalten den Zweck des Launchpad "," SQLRUserGroup "und" Worker Konten Prozessisolation von R und Python, und wie Benutzeridentitäten workerkonten zugeordnet werden. 
+In diesem Artikel haben Sie das Komponenten-und Interaktionsmodell der Sicherheitsarchitektur kennengelernt, die in das [Erweiterbarkeit Framework](../../advanced-analytics/concepts/extensibility-framework.md)integriert ist. Zu den in diesem Artikel behandelten wichtigen Punkten zählen der Zweck der Launchpad-, sqlrusergroup-und workerkonten, die Prozess Isolation von R und Python und die Zuordnung von Benutzer Identitäten zu workerkonten. 
 
-Als Nächstes überprüfen Sie die Anweisungen für [Erteilen von Berechtigungen](../../advanced-analytics/security/user-permission.md). Bei Servern, die Windows-Authentifizierung verwenden, überprüfen Sie außerdem [SQLRUserGroup hinzufügen, um eine andere datenbankanmeldung](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) , erfahren, wenn die weitere Konfiguration erforderlich ist.
+Überprüfen Sie im nächsten Schritt die Anweisungen zum [Erteilen von Berechtigungen](../../advanced-analytics/security/user-permission.md). Für Server, die die Windows-Authentifizierung verwenden, sollten Sie auch das [Hinzufügen von sqlrusergroup zu einer Daten Bank Anmeldung](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) lesen, um zu erfahren, wann eine zusätzliche Konfiguration erforderlich ist

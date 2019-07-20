@@ -1,97 +1,97 @@
 ---
-title: Installieren Sie neuer Python-Sprachpakete – SQL Server-Machine Learning
-description: Neue Python-Paketen zu SQL Server 2017-Machine Learning Services (Datenbankintern) und Machine Learning Server (eigenständig) hinzufügen.
+title: Installieren neuer python-Sprachpakete
+description: Fügen Sie SQL Server 2017 Machine Learning Services (in-Database) und Machine Learning Server (eigenständig) neue Python-Pakete hinzu.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f30c00503a0dd183619550d3ab0e92c0be1449dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e305f778ee132c06e9a2b08c8cec64f0535846a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962774"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345515"
 ---
-# <a name="install-new-python-packages-on-sql-server"></a>Installieren Sie neuer Python-Pakete unter SQL Server
+# <a name="install-new-python-packages-on-sql-server"></a>Installieren neuer Python-Pakete auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie zum Installieren neuer Python-Pakete auf einer Instanz von SQL Server 2017-Machine Learning Services wird. Im Allgemeinen ähnelt der Prozess zum Installieren neuer Pakete, die in einer Python-standardumgebung. Allerdings sind einige zusätzliche Schritte erforderlich, wenn der Server nicht über eine Internetverbindung verfügt.
+In diesem Artikel wird beschrieben, wie Sie neue Python-Pakete auf einer Instanz von SQL Server 2017 Machine Learning Services installieren. Im Allgemeinen ähnelt der Prozess zum Installieren neuer Pakete dem in einer python-Standardumgebung. Es sind jedoch einige zusätzliche Schritte erforderlich, wenn der Server nicht über eine Internetverbindung verfügt.
 
-Weitere Informationen zu Paket-Speicherort und die Installation Pfaden finden Sie unter [erhalten R- oder Python-Paketinformationen](../package-management/installed-package-information.md).
+Weitere Informationen zum Speicherort und zu den Installations Pfaden finden [Sie unter Informationen zu R-oder python-Paketen](../package-management/installed-package-information.md).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-+ [SQL Server 2017-Machine Learning Services (Datenbankintern)](../install/sql-machine-learning-services-windows-install.md) mit der Python-Sprache-Option. 
++ [SQL Server 2017 Machine Learning Services (in-Database)](../install/sql-machine-learning-services-windows-install.md) mit der python-Sprachoption. 
 
-+ Pakete müssen Python 3.5-kompatibel, und führen auf Windows sein. 
++ Pakete müssen Python 3,5-kompatibel sein und unter Windows ausgeführt werden. 
 
-+ Administratorzugriff auf dem Server ist erforderlich, um Pakete zu installieren.
++ Der Administrator Zugriff auf den-Server ist erforderlich, um-Pakete zu installieren.
 
 ## <a name="considerations"></a>Weitere Überlegungen
 
-Hinzufügen von Paketen, berücksichtigen Sie, ob das Paket für SQL Server-Umgebung geeignet ist. Ein Datenbankserver ist in der Regel eine freigegebene Ressource, sodass mehrere arbeitsauslastungen. Wenn Sie Pakete hinzufügen, die zu viel rechenleistung Druck auf dem Server gestellt wird, wird die Leistung beeinträchtigt werden. 
+Berücksichtigen Sie vor dem Hinzufügen von Paketen, ob das Paket für die SQL Server Umgebung geeignet ist. Ein Datenbankserver ist in der Regel ein frei gegebenes Asset, das mehrere Workloads unter Wenn Sie Pakete hinzufügen, die zu viel Rechen Auslastung auf dem Server mit sich bringen, wird die Leistung beeinträchtigt. 
 
-Darüber hinaus ausführen einige beliebte Python-Pakete (z. B. Flask) Aufgaben, z. B. Webentwicklung, die besser für eine eigenständige Umgebung geeignet sind. Es wird empfohlen, dass Sie in der Datenbank Python für Aufgaben, die eine enge Integration profitieren, mit der Datenbank-Engine, wie Machine Learning anstelle von Aufgaben, die die Datenbank einfach Abfragen verwenden.
+Darüber hinaus führen einige beliebte Python-Pakete (wie Flask) Aufgaben wie die Webentwicklung aus, die für eine eigenständige Umgebung besser geeignet sind. Es wird empfohlen, python in-Database für Aufgaben zu verwenden, die von einer engen Integration in die Datenbank-Engine profitieren, z. b. Machine Learning, anstatt von Tasks, die die Datenbank einfach Abfragen.
 
-Datenbankserver sind häufig gesperrt. In vielen Fällen wird der Zugriff auf das Internet vollständig blockiert. Für Pakete mit einer langen Liste von Abhängigkeiten müssen Sie diese Abhängigkeiten im Voraus zu identifizieren und werden jeweils manuell zu installieren.
+Datenbankserver sind häufig gesperrt. In vielen Fällen wird der Internet Zugriff vollständig blockiert. Bei Paketen mit einer langen Liste von Abhängigkeiten müssen Sie diese Abhängigkeiten im Voraus identifizieren und bereit sein, Sie manuell zu installieren.
 
-## <a name="add-a-new-python-package"></a>Hinzufügen eines neuen Python-Pakets
+## <a name="add-a-new-python-package"></a>Hinzufügen eines neuen python-Pakets
 
-In diesem Beispiel wird davon ausgegangen, dass Sie ein neues Paket direkt auf dem SQL Server-Computer installieren möchten.
+Bei diesem Beispiel wird davon ausgegangen, dass Sie ein neues Paket direkt auf dem SQL Server Computer installieren möchten.
 
-Paketinstallation wird pro Instanz. Wenn Sie mehrere Instanzen von Machine Learning-Dienste verfügen, müssen Sie das Paket jeder hinzufügen.
+Die Paketinstallation erfolgt pro Instanz. Wenn Sie über mehrere Instanzen von Machine Learning Services verfügen, müssen Sie das Paket jedem hinzufügen.
 
-Das Paket installiert, die in diesem Beispiel wird [CNTK](https://docs.microsoft.com/cognitive-toolkit/), ein Framework für deep Learning von Microsoft, die Anpassung unterstützt Trainings- und Freigabe von verschiedenen Typen von neuronalen Netzwerken.
+Das in diesem Beispiel installierte Paket ist [cntk](https://docs.microsoft.com/cognitive-toolkit/), ein Framework für Deep Learning von Microsoft, das die Anpassung, das Training und die Freigabe verschiedener Typen von neuronalen Netzwerken unterstützt.
 
-### <a name="step-1-download-the-windows-version-of-the-python-package"></a>Schritt 1: Laden Sie die Windows-Version des Python-Pakets
+### <a name="step-1-download-the-windows-version-of-the-python-package"></a>Schritt 1: Herunterladen der Windows-Version des python-Pakets
 
-+ Wenn Sie Python-Pakete auf einem Server ohne Internetzugang installieren, müssen Sie die WHL-Datei auf einen anderen Computer herunterladen und klicken Sie dann auf den Server kopieren.
++ Wenn Sie Python-Pakete auf einem Server ohne Internet Zugriff installieren, müssen Sie die WHL-Datei auf einen anderen Computer herunterladen und dann auf den-Server kopieren.
 
-    Z. B. auf einem separaten Computer, Sie können die WHL-Datei von diesem Standort [ https://cntk.ai/PythonWheel/CPU-Only ](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl), und klicken Sie dann kopieren Sie die Datei `cntk-2.1-cp35-cp35m-win_amd64.whl` in einen lokalen Ordner auf dem SQL Server-Computer.
+    Beispielsweise können Sie auf einem separaten Computer die WHL-Datei von diesem Standort [https://cntk.ai/PythonWheel/CPU-Only](https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl)herunterladen und die Datei `cntk-2.1-cp35-cp35m-win_amd64.whl` dann in einen lokalen Ordner auf dem SQL Server-Computer kopieren.
 
-+ SQL Server 2017 wird Python 3.5 verwendet. 
++ SQL Server 2017 verwendet python 3,5. 
 
 > [!IMPORTANT]
-> Stellen Sie sicher, dass Sie die Windows-Version des Pakets zu erhalten. Wenn die Datei im GZ endet, ist es wahrscheinlich nicht die richtige Version.
+> Stellen Sie sicher, dass Sie die Windows-Version des Pakets erhalten. Wenn die Datei in. gz endet, ist Sie wahrscheinlich nicht die richtige Version.
 
-Diese Seite enthält Downloads für mehrere Plattformen und für mehrere Python-Versionen: [Einrichten von CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
+Diese Seite enthält Downloads für mehrere Plattformen und für mehrere Python-Versionen: [Einrichten von cntk](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
-### <a name="step-2-open-a-python-command-prompt"></a>Schritt 2: Öffnen Sie eine Python-Eingabeaufforderung
+### <a name="step-2-open-a-python-command-prompt"></a>Schritt 2: Öffnen Sie eine python-Eingabeaufforderung.
 
-Suchen Sie die Python-Bibliothek am Standardspeicherort von SQL Server verwendet. Wenn Sie mehrere Instanzen installiert haben, suchen Sie den PYTHON_SERVICE-Ordner, für die Instanz, in dem Sie das Paket hinzufügen möchten.
+Suchen Sie den von SQL Server verwendeten Standard Speicherort der Python-Bibliothek. Wenn Sie mehrere Instanzen installiert haben, suchen Sie den Ordner PYTHON_SERVICE für die Instanz, in der Sie das Paket hinzufügen möchten.
 
-Beispielsweise, wenn beispielsweise Machine Learning-Dienste mit Standardeinstellungen installiert wurde, und Machine Learning für die Standardinstanz aktiviert ist, der Pfad wie folgt lauten:
+Wenn Machine Learning Services beispielsweise mit Standardeinstellungen installiert wurde und Machine Learning auf der Standard Instanz aktiviert ist, lautet der Pfad wie folgt:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
-Öffnen Sie die Python-Eingabeaufforderung, die mit der Instanz verknüpft ist.
+Öffnen Sie die python-Eingabeaufforderung, die der-Instanz zugeordnet ist.
 
 > [!TIP]
-> Für zukünftige Debuggen und testen, empfiehlt es sich zum Einrichten einer Python-Umgebung für die Instanz-Bibliothek.
+> Für das zukünftige Debuggen und testen empfiehlt es sich, eine python-Umgebung einzurichten, die für die instanzbibliothek spezifisch ist.
 
-### <a name="step-3-install-the-package-using-pip"></a>Schritt 3: Installieren Sie das Paket mithilfe von pip
+### <a name="step-3-install-the-package-using-pip"></a>Schritt 3: Installieren des Pakets mit PIP
 
-+ Wenn Sie zur Verwendung von Python-Befehlszeile vertraut sind, verwenden Sie PIP.exe, um neue Pakete zu installieren. Sie finden die **Pip** Installers in der `Scripts` Unterordner. 
++ Wenn Sie daran gewöhnt sind, die python-Befehlszeile zu verwenden, verwenden Sie PIP. exe, um neue Pakete zu installieren. Sie finden das **PIP** -Installationsprogramm im `Scripts` Unterordner. 
 
-  SQL Server-Setup wird keine Skripts zum Systempfad hinzufügen. Wenn Sie eine Fehlermeldung, die erhalten `pip` wird nicht erkannt als interner oder externer Befehl, können Sie den Ordner "Scripts" der PATH-Variablen in Windows hinzufügen.
+  SQL Server-Setup fügt dem Systempfad keine Skripts hinzu. Wenn Sie einen Fehler `pip` erhalten, der nicht als interner oder externer Befehl erkannt wird, können Sie den Ordner "Scripts" der PATH-Variablen in Windows hinzufügen.
 
-  Den vollständigen Pfad der **Skripts** Ordner in einer Standardinstallation lautet wie folgt:
+  Der vollständige Pfad des Ordners " **Scripts** " in einer Standardinstallation lautet wie folgt:
 
-    C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\PYTHON_SERVICES\Scripts
 
-+ Wenn Sie Visual Studio 2017 oder Visual Studio 2015 mit den Python-Erweiterungen verwenden, können Sie ausführen `pip install` aus der **Python-Umgebungen** Fenster. Klicken Sie auf **Pakete**, und geben Sie im Textfeld den Namen oder Speicherort der zu installierenden Pakets an. Sie müssen nicht geben `pip install`; es wird für Sie automatisch ausgefüllt. 
++ Wenn Sie Visual Studio 2017 oder Visual Studio 2015 mit den Python-Erweiterungen verwenden, können Sie im Fenster `pip install` python- **Umgebungen** ausführen. Klicken Sie auf **Pakete**, und geben Sie im Textfeld den Namen oder Speicherort des zu installierenden Pakets an. Sie müssen nicht eingeben `pip install`. es wird automatisch ausgefüllt. 
 
-    - Wenn der Computer über Internetzugriff verfügt, geben Sie den Namen des Pakets oder die URL der ein bestimmtes Paket und eine Version aus. 
+    - Wenn der Computer über Internet Zugriff verfügt, geben Sie den Namen des Pakets oder die URL eines bestimmten Pakets und einer bestimmten Version an. 
     
-    Um die Version von CNTK zu installieren, die für Windows und Python 3.5 unterstützt wird, geben Sie z. B. die Download-URL: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    Geben Sie z. b. die Download-URL an, um die Version von cntk zu installieren, die für Windows und Python 3,5 unterstützt wird:`https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - Wenn der Computer nicht über Internetzugriff verfügt, müssen Sie die WHL-Datei herunterladen, vor der Installation. Geben Sie dann den lokalen Pfad und den Namen ein. Fügen Sie beispielsweise den folgenden Pfad und die Datei zum Installieren der WHL-Datei, die von der Website heruntergeladen werden: `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+    - Wenn der Computer nicht über Internet Zugriff verfügt, müssen Sie die WHL-Datei herunterladen, bevor Sie mit der Installation beginnen. Geben Sie dann den Pfad und den Namen der lokalen Datei an. Fügen Sie z. b. den folgenden Pfad und die Datei ein, um die von der Website heruntergeladene WHL-Datei zu installieren:`"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
-Möglicherweise werden Sie aufgefordert, Berechtigungen zum Abschließen der Installation zu erhöhen.
+Möglicherweise werden Sie aufgefordert, Berechtigungen zum Abschluss der Installation zu erhöhen.
 
-Im Lauf der Installation können Sie statusmeldungen im Eingabeaufforderungsfenster Befehl sehen:
+Im Verlauf der Installation können Sie Statusmeldungen im Eingabe Aufforderungs Fenster sehen:
 
 ```python
 pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl
@@ -104,13 +104,13 @@ Successfully installed cntk-2.1
 ```
 
 
-### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>Schritt 4. Laden Sie das Paket oder die Funktionen als Teil des Skripts
+### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>Schritt 4. Laden des Pakets oder seiner Funktionen als Teil Ihres Skripts
 
-Wenn die Installation abgeschlossen ist, können Sie sofort beginnen, mithilfe des Pakets, wie im nächsten Schritt beschrieben.
+Wenn die Installation beendet ist, können Sie sofort mit der Verwendung des Pakets beginnen, wie im nächsten Schritt beschrieben.
 
-Beispiele für deep Learning mit CNTK finden Sie in diesen Tutorials: [Python-API für CNTK](https://cntk.ai/pythondocs/tutorials.html)
+Beispiele für Deep Learning mit cntk finden Sie in den folgenden Tutorials: [Python-API für cntk](https://cntk.ai/pythondocs/tutorials.html)
 
-Um Funktionen aus dem Paket in Ihrem Skript verwenden, fügen Sie den Standard `import <package_name>` -Anweisung in der ersten Zeilen des Skripts:
+Wenn Sie Funktionen aus dem Paket in Ihrem Skript verwenden möchten, fügen `import <package_name>` Sie die Standard Anweisung in die ersten Zeilen des Skripts ein:
 
 ```python
 import numpy as np
@@ -118,19 +118,19 @@ import cntk as cntk
 cntk._version_
 ```
 
-## <a name="list-installed-packages-using-conda"></a>Liste der installierten Pakete mithilfe von conda
+## <a name="list-installed-packages-using-conda"></a>Auflisten installierter Pakete mithilfe von "Configuration Manager"
 
-Es gibt verschiedene Möglichkeiten, die Sie eine Liste der installierten Pakete abrufen können. Beispielsweise sehen Sie die installierten Pakete in der **Python-Umgebungen** Windows von Visual Studio.
+Es gibt verschiedene Möglichkeiten, eine Liste der installierten Pakete zu erhalten. Beispielsweise können Sie die installierten Pakete im Fenster " **python-Umgebungen** " von Visual Studio anzeigen.
 
-Wenn Sie die Python-Befehlszeile verwenden, können Sie entweder **Pip** oder **Conda** -Paket-Manager enthalten, mit der Anaconda-Python-Umgebung, die von SQL Server-Setup hinzugefügt.
+Wenn Sie die python-Befehlszeile verwenden, können Sie entweder **PIP** oder **den Paket-** Manager von Configuration Manager verwenden, der in der Anaconda python-Umgebung enthalten ist, die durch SQL Server-Setup hinzugefügt wurde.
 
-1. Wechseln Sie zu C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
+1. Wechseln Sie zu "c:\Programme\Microsoft SQL server\mssql14.". MSSQLSERVER\PYTHON_SERVICES\Scripts
 
-1. Mit der rechten Maustaste **conda.exe** > **als Administrator ausführen**, und geben Sie `conda list` um eine Liste der in der aktuellen Umgebung installierte Pakete zurückzugeben.
+1. Klicken Sie mit der rechten Maustaste auf die **Datei** > ""**als Administrator ausführen**, und geben `conda list` Sie ein, um eine Liste der in der aktuellen Umgebung installierten Pakete zurückzugeben.
 
-1. Auf ähnliche Weise mit der rechten Maustaste **pip.exe** > **als Administrator ausführen**, und geben Sie `pip list` die gleiche Informationen zurückgegeben werden sollen. 
+1. Klicken Sie mit der rechten Maustaste auf **PIP. exe** > **als Administrator ausführen**, `pip list` und geben Sie ein, um die gleichen Informationen zurückzugeben. 
 
-Weitere Informationen zu **Conda** und ihrer Verwendung können sie zum Erstellen und Verwalten mehrerer Python-Umgebungen finden Sie unter [Verwaltung von Umgebungen mit Conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).
+Weitere Informationen zu "Configuration Manager **" und deren** Verwendung zum Erstellen und Verwalten mehrerer python-Umgebungen finden Sie unter [Verwalten von Umgebungen mit](https://conda.io/docs/user-guide/tasks/manage-environments.html)einem anderen Konfigurations-Manager.
 
 > [!Note]
-> SQL Server-Setup wird nicht hinzugefügt werden, dass Pip oder Conda zum Systempfad und auf einer Produktionsinstanz von SQL Server, halten die vermeidbare ausführbaren Dateien aus dem Pfad eine bewährte Methode ist. Allerdings können für Entwicklungs- und testumgebungen, Sie Ordner "Scripts" der PATH-Systemumgebungsvariablen Pip und Conda auf Befehl von einem beliebigen Standort ausführen hinzufügen.
+> Wenn SQL Server-Setup dem Systempfad und einer Produktions SQL Server Instanz PIP oder das nicht hinzugefügt wird, empfiehlt es sich, nicht erforderliche ausführbare Dateien aus dem Pfad zu behalten. Für Entwicklungs-und Testumgebungen können Sie jedoch den Ordner "Scripts" der systempath-Umgebungsvariable hinzufügen, um den Befehl "Pip" und "Configuration on" an einem beliebigen Speicherort auszuführen.

@@ -1,36 +1,36 @@
 ---
-title: Auswertung neuer Daten mit RevoScaleR und RxPredict – SQL Server-Machine Learning
-description: Exemplarische Vorgehensweise im Lernprogramm zum Bewerten von Daten mithilfe von der Sprache R in SQL Server.
+title: Bewerten neuer Daten mithilfe von revoscaler und rxvorhersage
+description: 'Tutorial: Exemplarische Vorgehensweise zum Bewerten von Daten mit der Sprache R auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 386daeb62262182d40ea0b15cca3eb9714c23d64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e14b01df14c6a7f08b1b25f3db6d55fb7beb130b
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962195"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345252"
 ---
-# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Auswertung neuer Daten (SQL Server und die RevoScaleR-Lernprogramm)
+# <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>Bewerten neuer Daten (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie erstellt, in der vorherigen Lektion haben, um ein anderes DataSet zu bewerten, das das dieselbe unabhängigen Variablen als Eingaben verwendet.
+In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie in der vorherigen Lektion erstellt haben, um ein anderes Dataset zu bewerten, das dieselben unabhängigen Variablen als Eingaben verwendet.
 
 > [!div class="checklist"]
 > * Bewerten neuer Daten
-> * Erstellen eines Histogramms der Bewertungen
+> * Erstellen eines Histogramms der Ergebnisse
 
 > [!NOTE]
-> Sie benötigen DDL-Administratorberechtigungen für einige der folgenden Schritte aus.
+> Für einige dieser Schritte benötigen Sie DDL-Administratorrechte.
 
-## <a name="generate-and-save-scores"></a>Generieren und Speichern der Ergebnisse
+## <a name="generate-and-save-scores"></a>Generieren und Speichern von Bewertungen
   
-1. Aktualisieren der Datenquelle SqlScoreDS (erstellt [Lektion zwei](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)), verwenden Sie die Spalteninformationen, die in der vorherigen Lektion erstellt haben.
+1. Aktualisieren Sie die sqlscoreds-Datenquelle (erstellt in [Lektion 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)), um die in der vorherigen Lektion erstellten Spalten Informationen zu verwenden.
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -40,7 +40,7 @@ In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie erste
         rowsPerRead = sqlRowsPerRead)
     ```
   
-2. Um sicherzustellen, dass Sie die Ergebnisse nicht verloren gehen, erstellen Sie ein neues Datenquellenobjekt. Klicken Sie dann verwenden Sie das neue Datenquellenobjekt, um eine neue Tabelle in der Datenbank RevoDeepDive aufzufüllen.
+2. Um sicherzustellen, dass die Ergebnisse nicht verloren gehen, erstellen Sie ein neues Datenquellen Objekt. Verwenden Sie anschließend das neue Datenquellen Objekt, um eine neue Tabelle in der Datenbank revodeepdive aufzufüllen.
   
     ```R
     sqlServerOutDS <- RxSqlServerData(table = "ccScoreOutput",
@@ -49,13 +49,13 @@ In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie erste
     ```
     Zu diesem Zeitpunkt ist die Tabelle noch nicht erstellt worden. Diese Anweisung definiert lediglich einen Datencontainer.
      
-3. Überprüfen Sie die aktuelle Compute Context mit **rxGetComputeContext()** , und legen Sie den computekontext auf den Server, bei Bedarf.
+3. Überprüfen Sie den aktuellen computekontext mithilfe von **rxgetcomputecontext ()** , und legen Sie bei Bedarf den computekontext auf den Server fest.
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Überprüfen Sie als Vorsichtsmaßnahme das Vorhandensein der Ausgabetabelle. Wenn bereits eine mit dem gleichen Namen vorhanden ist, erhalten Sie einen Fehler beim Versuch, die neue Tabelle zu schreiben.
+4. Überprüfen Sie als Vorsichtsmaßnahme, ob die Ausgabe Tabelle vorhanden ist. Wenn bereits eine mit demselben Namen vorhanden ist, erhalten Sie eine Fehlermeldung, wenn Sie versuchen, die neue Tabelle zu schreiben.
   
     Rufen Sie dazu die Funktionen [rxSqlServerTableExists](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) und [rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable)auf, und übergeben Sie den Tabellennamen als Eingabe.
   
@@ -63,10 +63,10 @@ In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie erste
     if (rxSqlServerTableExists("ccScoreOutput"))     rxSqlServerDropTable("ccScoreOutput")
     ```
   
-    + **RxSqlServerTableExists** fragt den ODBC-Treiber ab und gibt TRUE zurück, wenn die Tabelle "false" vorhanden, andernfalls ist.
-    + **RxSqlServerDropTable** führt die DDL-Anweisungen aus, und gibt true zurück, wenn die Tabelle erfolgreich gelöscht, "false" andernfalls.
+    + **rxsqlservertableist** fragt den ODBC-Treiber ab und gibt true zurück, wenn die Tabelle vorhanden ist, andernfalls false.
+    + **rxsqlserverdroptable** führt die DDL aus und gibt true zurück, wenn die Tabelle erfolgreich gelöscht wurde, andernfalls false.
 
-5. Führen Sie [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) die Bewertungen erstellen und speichern Sie sie in der neuen Tabelle, die in Data Source SqlScoreDS definiert.
+5. Führen Sie [rxprognostizieren](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) aus, um die Ergebnisse zu erstellen, und speichern Sie Sie in der neuen Tabelle, die in der Datenquelle sqlscoreds definiert ist.
   
     ```R
     rxPredict(modelObject = logitObj,
@@ -78,13 +78,13 @@ In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie erste
         overwrite = TRUE)
     ```
   
-    Die Funktion **rxPredict** ist eine weitere Funktion, die die Ausführung in Remotecomputekontexten unterstützt. Sie können die **RxPredict** Funktion zum Erstellen von Bewertungen aus Modellen basierend auf [RxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [RxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit), oder ["rxglm"](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm).
+    Die Funktion **rxPredict** ist eine weitere Funktion, die die Ausführung in Remotecomputekontexten unterstützt. Sie können die **rxvorhersage** -Funktion verwenden, um Ergebnisse aus Modellen zu erstellen, die auf [rxlinmod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod), [rxlogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)oder [rxglm](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxglm)basieren.
   
     - Der Parameter *writeModelVars* wurde in diesem Beispiel auf **TRUE** festgelegt. Dies bedeutet, dass die Variablen, die für die Schätzung verwendet wurden, in die neue Tabelle aufgenommen werden.
   
-    - Der Parameter *predVarNames* gibt die Variable an, in der Ergebnisse gespeichert werden. Eine neue Variable übergeben `ccFraudLogitScore`.
+    - Der Parameter *predVarNames* gibt die Variable an, in der Ergebnisse gespeichert werden. Hier übergeben Sie die neue Variable `ccFraudLogitScore`.
   
-    - Der *type* -Parameter für **rxPredict** definiert, wie die Vorhersagen berechnet werden sollen. Geben Sie das Schlüsselwort **Antwort** zum Generieren von Bewertungen basierend auf der Skala der Response-Variable. Oder verwenden Sie das Schlüsselwort **Link** zum Generieren von Bewertungen basierend auf der zugrunde liegenden Link-Funktion in diesem Fall werden Vorhersagen erstellt, mit einer logistischen Skala.
+    - Der *type* -Parameter für **rxPredict** definiert, wie die Vorhersagen berechnet werden sollen. Geben Sie die Schlüsselwort **Antwort** zum Generieren von Bewertungen basierend auf der Skala der Antwortvariablen an. Oder verwenden Sie den Schlüsselwort **Link** , um Bewertungen basierend auf der zugrunde liegenden Link Funktion zu generieren. in diesem Fall werden Vorhersagen mit einer logistischen Skalierung erstellt.
 
 6. Nach einer Weile können Sie die Tabellenliste in Management Studio aktualisieren, um die neue Tabelle und deren Daten anzuzeigen.
 
@@ -101,11 +101,11 @@ In diesem Schritt verwenden Sie das logistische Regressionsmodell, das Sie erste
             overwrite = TRUE)
     ```
 
-## <a name="display-scores-in-a-histogram"></a>Anzeigen der Ergebnisse in einem Histogramm
+## <a name="display-scores-in-a-histogram"></a>Anzeigen von Bewertungen in einem Histogramm
 
-Nachdem die neue Tabelle erstellt wurde, berechnen und ein Histogramm von 10.000 vorhergesagten auswertungen anzuzeigen. Berechnung ist schneller, wenn Sie die hohen und niedrigen Werte angeben, also diese aus der Datenbank abrufen und Ihren Arbeitsdaten hinzufügen.
+Nachdem die neue Tabelle erstellt wurde, berechnen Sie ein Histogramm der vorhergesagten Ergebnisse von 10.000, und zeigen Sie es an. Die Berechnung erfolgt schneller, wenn Sie die niedrigen und hohen Werte angeben. Daher sollten Sie diese aus der Datenbank erhalten und ihren Arbeitsdaten hinzufügen.
 
-1. Erstellen Sie eine neue Datenquelle, SqlMinMax, das Abfragen die Datenbank, um die hohen und niedrigen Werte zu erhalten.
+1. Erstellen Sie eine neue Datenquelle (sqlminmax), mit der die Datenbank abgefragt wird, um die niedrigen und hohen Werte zu erhalten.
   
     ```R
     sqlMinMax <- RxSqlServerData(
@@ -116,7 +116,7 @@ Nachdem die neue Tabelle erstellt wurde, berechnen und ein Histogramm von 10.000
 
      In diesem Beispiel wird veranschaulicht, wie einfach die Verwendung von **RxSqlServerData** -Datenquellobjekten ist, um beliebige Datasets auf Grundlage von SQL-Abfragen, Funktionen oder gespeicherten Prozeduren zu definieren und diese anschließend in Ihrem R-Code zu verwenden. Die Variable speichert nicht die eigentlichen Werte, sondern lediglich die Datenquellendefinition. Die Abfrage wird ausgeführt, um die Werte nur dann zu generieren, wenn sie in einer Funktion wie **rxImport**verwendet wird.
       
-2. Rufen Sie die [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) Funktion, legen Sie die Werte in einem Datenrahmen, die freigegeben werden können, verschiedene computekontexte.
+2. Ruft die [rximport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) -Funktion auf, um die Werte in einem Datenrahmen zu platzieren, der über computekontexte gemeinsam genutzt werden kann.
   
     ```R
     minMaxVals <- rxImport(sqlMinMax)
@@ -131,7 +131,7 @@ Nachdem die neue Tabelle erstellt wurde, berechnen und ein Histogramm von 10.000
     [1] -23.970256   9.786345
     ```
 
-3. Nun, dass die maximale und minimale Werte verfügbar sind, verwenden Sie die Werte, um eine andere Datenquelle für die generierten Werte zu erstellen.
+3. Nachdem die maximalen und minimalen Werte verfügbar sind, verwenden Sie die Werte, um eine andere Datenquelle für die generierten Ergebnisse zu erstellen.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData(sqlQuery = "SELECT ccFraudLogitScore FROM ccScoreOutput",
@@ -142,7 +142,7 @@ Nachdem die neue Tabelle erstellt wurde, berechnen und ein Histogramm von 10.000
                         high = ceiling(minMaxVals[2]) ) ) )
     ```
 
-4. Verwenden Sie die SqlOutScoreDS Data Source-Objekt, erhalten die Bewertung zu berechnen und ein Histogramm angezeigt. Fügen Sie bei Bedarf den Code hinzu, um den Computekontext festzulegen.
+4. Verwenden Sie das Datenquellen Objekt sqloutscoreds, um die Ergebnisse zu erhalten, und berechnen Sie ein Histogramm, und zeigen Sie es an. Fügen Sie bei Bedarf den Code hinzu, um den Computekontext festzulegen.
   
     ```R
     # rxSetComputeContext(sqlCompute)

@@ -1,41 +1,41 @@
 ---
-title: Erstellen von SQL Server-Datenobjekten mithilfe von RevoScaleR RxSqlServerData – SQL Server-Machine Learning
-description: Exemplarische Vorgehensweise im Lernprogramm zum Erstellen von Datenobjekten, die Verwendung der Sprache R auf SQL Server.
+title: Erstellen von SQL Server Datenobjekten mithilfe von revoscaler rxsqlserverdata
+description: 'Tutorial: Exemplarische Vorgehensweise zum Erstellen von Datenobjekten mithilfe der Sprache R auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b29f8136e3394c5424233ac3f966d2b6c0ad7bc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f78087e226f41c53555cf3356705f8b84a185392
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962253"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344704"
 ---
-# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Erstellen von SQL Server-Datenobjekten mithilfe von RxSqlServerData (SQL Server und die RevoScaleR-Lernprogramm)
+# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Erstellen von SQL Server Datenobjekten mithilfe von rxsqlserverdata (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Lektion 2 ist eine Fortsetzung der Datenbankerstellung: Hinzufügen von Tabellen und Laden von Daten. Wenn ein Datenbankadministrator die Datenbank und die Anmeldung erstellt [Lektion eine](deepdive-work-with-sql-server-data-using-r.md), können Sie Tabellen mit einer R-IDE wie RStudio oder Hinzufügen eines integrierten Tools wie **Rgui**.
+Lektion 2 ist eine Fortsetzung der Erstellung von Datenbanken: Hinzufügen von Tabellen und Laden von Daten. Wenn ein Datenbankadministrator die Datenbank erstellt und sich in [Lektion 1](deepdive-work-with-sql-server-data-using-r.md)Anmeldungs, können Sie Tabellen mit einer R-IDE wie rstudio oder einem integrierten Tool wie **rgui**hinzufügen.
 
-Von R mit SQL Server verbinden, und verwenden **RevoScaleR** Funktionen, um die folgenden Aufgaben ausführen:
+Stellen Sie von R aus eine Verbindung mit SQL Server her, und verwenden Sie die **revoscaler** -Funktionen, um die folgenden Aufgaben auszuführen:
 
 > [!div class="checklist"]
-> * Erstellen von Tabellen für Training und Vorhersage
-> * Laden von Tabellen mit Daten aus einer lokalen CSV-Datei
+> * Erstellen von Tabellen für Trainingsdaten und Vorhersagen
+> * Tabellen mit Daten aus einer lokalen CSV-Datei laden
 
-Beispieldaten sind simulierte Daten über Kreditkartenbetrug (CcFraud-Dataset) in trainieren und Bewerten von Datasets aufgeteilt. Die Datei befindet sich im **RevoScaleR**.
+Beispiel Daten sind simulierte Kreditkartenbetrugs Daten (das DataSet "ccbetrug"), die in Trainings-und Bewertungs Datasets partitioniert sind. Die Datendatei ist in **revoscaler**enthalten.
 
-Verwenden Sie eine R-IDE oder **Rgui** diese doppelt ausführen. Achten Sie darauf, dass die ausführbaren R-Dateien finden Sie unter diesem Speicherort verwendet: C:\Programme\Microsoft Files\Microsoft\R Client\R_SERVER\bin\x64 (entweder Rgui.exe bei Verwendung dieses Tools oder einer R-IDE auf c:\Programme\Microsoft Files\Microsoft\R Client\R_SERVER verweist). Mit einer [R-Clientarbeitsstation](../r/set-up-a-data-science-client.md) ausführbare Dateien gilt diese Voraussetzung für dieses Tutorial.
+Verwenden Sie eine R-IDE oder **rgui** , um diese tachs abzuschließen. Stellen Sie sicher, dass Sie die ausführbaren R-Dateien an dieser Stelle verwenden: C:\programme\microsoft\r Client\R_SERVER\bin\x64 (entweder "rgui. exe", wenn Sie dieses Tool verwenden, oder eine R-IDE, die auf "c:\programme\microsoft\r Client\R_SERVER" zeigt). Eine [R-Client](../r/set-up-a-data-science-client.md) Arbeitsstation mit diesen ausführbaren Dateien wird als Voraussetzung für dieses Tutorial angesehen.
 
-## <a name="create-the-training-data-table"></a>Schulung-Datentabelle erstellen
+## <a name="create-the-training-data-table"></a>Erstellen der Trainingsdaten Tabelle
 
-1. Store die Datenbankverbindungszeichenfolge in einer R-Variablen an. Nachfolgend finden Sie zwei Beispiele gültiger ODBC-Verbindungszeichenfolgen für SQL Server: eine, die mit einer SQL-Anmeldung und eine für die integrierte Windows-Authentifizierung. 
+1. Speichert die Daten bankverbindungs Zeichenfolge in einer R-Variablen. Im folgenden finden Sie zwei Beispiele für gültige ODBC-Verbindungs Zeichenfolgen für SQL Server: eine mit einer SQL-Anmeldung und eine für die integrierte Windows-Authentifizierung. 
 
-   Achten Sie darauf, dass der Servername, Benutzername und das Kennwort nach Bedarf ändern.
+   Achten Sie darauf, den Servernamen, Benutzernamen und das Kennwort nach Bedarf zu ändern.
 
     **SQL-Anmeldename**
     ```R
@@ -53,21 +53,21 @@ Verwenden Sie eine R-IDE oder **Rgui** diese doppelt ausführen. Achten Sie dara
     sqlFraudTable <- "ccFraudSmall"
     ```
   
-    Da der Server-Instanz und Datenbankname bereits als Teil der Verbindungszeichenfolge beim Kombinieren der zwei Variablen angegeben werden, die *vollqualifizierte* wird der Name der neuen Tabelle  *instance.database.schema.ccFraudSmall*.
+    Da die Serverinstanz und der Datenbankname bereits als Teil der Verbindungs Zeichenfolge angegeben sind, wird beim Kombinieren der beiden Variablen der *voll qualifizierte* Name der neuen Tabelle *instance. Database. Schema. ccbetrüsmall*.
   
-3.  Geben Sie optional *RowsPerRead* steuern, wie viele Datenzeilen in jeden Batch eingelesen werden.
+3.  Geben Sie optional *rowsperread* an, um zu steuern, wie viele Daten Zeilen in jedem Batch gelesen werden.
   
     ```R
     sqlRowsPerRead = 5000
     ```
   
-    Obwohl dieser Parameter optional ist, kann die Festlegung zu effizienter Berechnungen führen. Die meisten analytischen Funktionen in **RevoScaleR** und **MicrosoftML** verarbeiten Daten in Segmenten. Die *RowsPerRead* Parameter bestimmt die Anzahl der Zeilen in jedem Segment.
+    Obwohl dieser Parameter optional ist, kann er durch Festlegen des Parameters effizientere Berechnungen verursachen. Die meisten der erweiterten analytischen Funktionen in **revoscaler** und **microsoftml** verarbeiten Daten in Blöcken. Der *rowsperread* -Parameter bestimmt die Anzahl der Zeilen in jedem Segment.
   
-    Sie müssen möglicherweise das Experimentieren mit diese Einstellung, um das richtige Gleichgewicht finden. Wenn der Wert zu groß ist, ist Datenzugriff möglicherweise langsam, wenn nicht genügend Arbeitsspeicher zum Verarbeiten von Daten in Blöcken von dieser Größe vorhanden ist. Im Gegensatz dazu auf einigen Systemen Wenn der Wert des *RowsPerRead* ist zu klein, Leistung kann auch verlangsamen.
+    Möglicherweise müssen Sie mit dieser Einstellung experimentieren, um das richtige Gleichgewicht zu finden. Wenn der Wert zu groß ist, kann der Datenzugriff langsam sein, wenn nicht genügend Arbeitsspeicher zum Verarbeiten von Daten in Blöcken dieser Größe verfügbar ist. Umgekehrt kann es bei manchen Systemen, wenn der Wert von *rowsperread* zu klein ist, auch zu einer Verlangsamung der Leistung kommen.
   
-    Verwenden Sie die Standard-batchprozessgröße, definiert, die von der Datenbank-Engine-Instanz als Anfangswert zum Steuern der Anzahl der Zeilen in jedem Segment (5.000 Zeilen). Speichern Sie diesen Wert in der Variablen *SqlRowsPerRead*.
+    Verwenden Sie als Anfangswert die standardmäßige Batch Prozess Größe, die von der Datenbank-Engine-Instanz definiert wird, um die Anzahl der Zeilen in jedem Segment (5.000 Zeilen) zu steuern. Speichern Sie diesen Wert in der Variablen *sqlrowsperread*.
   
-4.  Definieren Sie eine Variable für das neue Datenquellenobjekt, und übergeben Sie die zuvor definierten Argumente an die **RxSqlServerData** Konstruktor. Beachten Sie, dass dadurch nur das neue Datenquellenobjekt erstellt wird, es jedoch nicht aufgefüllt wird. Laden von Daten ist ein separater Schritt.
+4.  Definieren Sie eine Variable für das neue Datenquellen Objekt, und übergeben Sie die zuvor definierten Argumente an den **rxsqlserverdata** -Konstruktor. Beachten Sie, dass dadurch nur das neue Datenquellenobjekt erstellt wird, es jedoch nicht aufgefüllt wird. Das Laden von Daten ist ein separater Schritt.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -75,9 +75,9 @@ Verwenden Sie eine R-IDE oder **Rgui** diese doppelt ausführen. Achten Sie dara
        rowsPerRead = sqlRowsPerRead)
     ```
 
-## <a name="create-the-scoring-data-table"></a>Bewertungs-Datentabelle erstellen
+## <a name="create-the-scoring-data-table"></a>Erstellen der Bewertungsdaten Tabelle
 
-Verwenden die gleichen Schritte aus, erstellen Sie in der Tabelle, die die Bewerten von Daten mithilfe des gleichen Prozesses enthält.
+Erstellen Sie mithilfe der gleichen Schritte die Tabelle, in der die Bewertungsdaten mit demselben Prozess enthalten sind.
 
 1. Erstellen Sie eine neue R-Variable, *sqlScoreTable*, um den Namen der Tabelle für die Bewertung zu speichern.
   
@@ -92,31 +92,31 @@ Verwenden die gleichen Schritte aus, erstellen Sie in der Tabelle, die die Bewer
        table = sqlScoreTable, rowsPerRead = sqlRowsPerRead)
     ```
 
-Da Sie bereits die Verbindungszeichenfolge und andere Parameter als Variablen im R-Arbeitsbereich definiert haben, können Sie es für neue Datenquellen darstellt, unterschiedliche Tabellen, Sichten oder Abfragen wiederverwenden.
+Da Sie bereits die Verbindungs Zeichenfolge und andere Parameter als Variablen im R-Arbeitsbereich definiert haben, können Sie Sie für neue Datenquellen wieder verwenden, die unterschiedliche Tabellen, Sichten oder Abfragen darstellen.
 
 > [!NOTE]
-> Die Funktion verwendet unterschiedliche Argumente für das Definieren einer Datenquelle basierend auf einer ganzen Tabelle als für eine Datenquelle basierend auf einer Abfrage. Dies ist, da die SQL Server-Datenbank-Engine Abfragen anders vorbereiten muss. Weiter unten in diesem Tutorial erfahren Sie, wie Sie ein Datenquellenobjekt basierend auf einer SQL-Abfrage zu erstellen.
+> Die-Funktion verwendet unterschiedliche Argumente zum Definieren einer Datenquelle basierend auf einer ganzen Tabelle als für eine Datenquelle, die auf einer Abfrage basiert. Dies liegt daran, dass die SQL Server Datenbank-Engine die Abfragen anders vorbereiten muss. Später in diesem Tutorial erfahren Sie, wie Sie ein Datenquellen Objekt auf der Grundlage einer SQL-Abfrage erstellen.
 
 ## <a name="load-data-into-sql-tables-using-r"></a>Laden von Daten in SQL-Tabellen mithilfe von R
 
 Sie haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen nun erstellt und können Daten in die Tabellen laden mithilfe der entsprechenden **Rx** -Funktion.
 
-Die **RevoScaleR** -Paket enthält Funktionen, die spezifisch für die Typen von Datenquellen. Verwenden Sie für Textdaten, [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) das Datenquellenobjekt zu generieren. Es gibt weitere Funktionen zum Erstellen von Datenquellenobjekten von Hadoop-Daten, ODBC-Daten, usw.
+Das **revoscaler** -Paket enthält Funktionen, die für Datenquellen Typen spezifisch sind. Verwenden Sie für Textdaten [rxtextdata](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) , um das Datenquellen Objekt zu generieren. Es gibt weitere Funktionen zum Erstellen von Datenquellenobjekten von Hadoop-Daten, ODBC-Daten, usw.
 
 > [!NOTE]
-> In diesem Abschnitt müssen Sie **' DDL ausführen '** Berechtigungen für die Datenbank.
+> Für diesen Abschnitt müssen Sie über die Berechtigung **DDL ausführen** für die Datenbank verfügen.
 
-### <a name="load-data-into-the-training-table"></a>Daten in die schulungstabelle laden
+### <a name="load-data-into-the-training-table"></a>Laden von Daten in die Trainings Tabelle
 
-1. Erstellen Sie eine R-Variable, *CcFraudCsv*, und weisen Sie der Variablen den Dateipfad für die CSV-Datei, die die Beispieldaten enthält. Dieses Dataset finden Sie im **RevoScaleR**. Die "SampleDataDir" ist ein Schlüsselwort für die **RxGetOption** Funktion.
+1. Erstellen Sie eine R-Variable, *ccbetrücsv*, und weisen Sie der Variablen den Dateipfad für die CSV-Datei mit den Beispiel Daten zu. Dieses DataSet wird in **revoscaler**bereitgestellt. "Sampledatadir" ist ein Schlüsselwort für die Funktion **rxgetoption** .
   
     ```R
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    Beachten Sie, dass den Aufruf von **RxGetOption**, die die GET-Methode zugeordnet ist [RxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) in **RevoScaleR**. Mit diesem Dienstprogramm können festgelegt und sind Optionen aufgeführt, im Zusammenhang mit der lokalen und remote computekontexte, z. B. das freigegebene Standardverzeichnis, oder die Anzahl der Prozessoren (Kerne) in Berechnungen verwenden.
+    Beachten Sie den Aufrufen von **rxgetoption**. Dies ist die Get-Methode, die [rxoptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) in **revoscaler**zugeordnet ist. Mit diesem Hilfsprogramm können Sie Optionen für lokale und remotecomputekontexte festlegen und auflisten, z. b. das standardmäßige freigegebene Verzeichnis oder die Anzahl der Prozessoren (Kerne), die in Berechnungen verwendet werden sollen.
     
-    Dieser bestimmte Aufruf ruft die Beispiele aus der richtigen Bibliothek, unabhängig davon, wo Sie Ihr Code ausgeführt werden. Versuchen Sie z.B. die Funktion auf SQL Server und auf Ihrem Entwicklungscomputer auszuführen, und beachten Sie, wie sich die Pfade unterscheiden.
+    Dieser spezielle-Befehl ruft die Beispiele aus der richtigen Bibliothek ab, unabhängig davon, wo Sie den Code ausführen. Versuchen Sie z.B. die Funktion auf SQL Server und auf Ihrem Entwicklungscomputer auszuführen, und beachten Sie, wie sich die Pfade unterscheiden.
   
 2. Definieren Sie eine Variable, um die neuen Daten zu speichern, und verwenden Sie die Funktion **RxTextData** zur Angabe der Text-Datenquelle.
   
@@ -131,11 +131,11 @@ Die **RevoScaleR** -Paket enthält Funktionen, die spezifisch für die Typen von
   
     Das Argument *colClasses* ist wichtig. Sie verwenden es zur Angabe des Datentyps jeder Spalte von Daten, die aus der Textdatei geladen wird. In diesem Beispiel werden alle Spalten als Text behandelt, mit Ausnahme der benannten Spalten, die als ganze Zahlen verarbeitet werden.
   
-3. An diesem Punkt sollten Sie zum Anhalten einen Moment Zeit, und die Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Aktualisieren Sie die Liste der Tabellen in der Datenbank.
+3. An diesem Punkt können Sie einen Moment anhalten und Ihre Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen. Aktualisieren Sie die Liste der Tabellen in der Datenbank.
   
-    Sie sehen, dass, obwohl die R-Datenobjekte im lokalen Arbeitsbereich erstellt wurden, die Tabellen nicht in erstellt wurden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank. Darüber hinaus wurde keine Daten in der R-Variable aus der Textdatei geladen.
+    Sie sehen, dass zwar die R-Datenobjekte im lokalen Arbeitsbereich erstellt wurden, die Tabellen jedoch nicht in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank erstellt wurden. Außerdem wurden keine Daten aus der Textdatei in die R-Variable geladen.
   
-4. Fügen Sie die Daten durch Aufrufen der Funktion [RxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) Funktion.
+4. Fügen Sie die Daten ein, indem Sie die [rxdatastep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) -Funktion der Funktion aufrufen.
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -143,13 +143,13 @@ Die **RevoScaleR** -Paket enthält Funktionen, die spezifisch für die Typen von
     
     Wenn nach einer kurzen Pause keine Probleme mit der Verbindungszeichenfolge auftreten, sollten Sie Ergebnisse wie diese sehen:
   
-    *Geschriebene Zeilen gesamt: 10000, Gesamtzeit: 0.466* *Gelesene Zeilen: 10000, Ergebniszeilen verarbeitet: 10000, total Chunk Time: 0.577 Sekunden*
+    *Geschriebene Zeilen gesamt: 10000, Gesamtzeit:*  0,466*gelesene Zeilen: 10000, verarbeitete Zeilen gesamt: 10000, gesamte Segment Zeit: 0,577 Sekunden*
   
-5. Aktualisieren Sie die Liste der Tabellen ein. Um sicherzustellen, dass jede Variable über die korrekten Datentypen verfügt und erfolgreich importiert wurde, Sie können auch mit der rechten Maustaste in der Tabelle im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und wählen Sie **oberste 1000 Zeilen auswählen**.
+5. Aktualisieren Sie die Liste der Tabellen. Um sicherzustellen, dass jede Variable über die korrekten Datentypen verfügt und erfolgreich importiert wurde, können Sie auch mit der rechten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Maustaste auf die Tabelle in klicken und die Option erste **1000 Zeilen auswählen**auswählen.
 
-### <a name="load-data-into-the-scoring-table"></a>Daten in die Bewertungstabelle laden
+### <a name="load-data-into-the-scoring-table"></a>Laden von Daten in die Bewertungstabelle
 
-1. Wiederholen Sie die Schritte zum Laden des Datasets für die Bewertung in der Datenbank aus.
+1. Wiederholen Sie die Schritte zum Laden des Datasets, das für die Bewertung in der Datenbank verwendet wurde.
   
     Starten Sie über den Pfad zur Quelldatei.
   
@@ -177,18 +177,18 @@ Die **RevoScaleR** -Paket enthält Funktionen, die spezifisch für die Typen von
   
     - Das *outFile* -Argument gibt die Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, in der Sie die Daten speichern möchten.
   
-    - Wenn die Tabelle bereits vorhanden ist und Sie nicht die *überschreiben* auswählen, werden Ergebnisse ungekürzt eingefügt.
+    - Wenn die Tabelle bereits vorhanden ist und Sie nicht die Option zum über *Schreiben* verwenden, werden die Ergebnisse ohne Abschneiden eingefügt.
   
 Wenn die Verbindung erfolgreich hergestellt wurde, sollte eine Nachricht angezeigt werden, die den Abschluss und die Zeit anzeigt, die zum Schreiben von Dateien in die Tabelle benötigt wurde:
 
-*Geschriebene Zeilen gesamt: 10000, Gesamtzeit: 0.384*
-*Gelesene Zeilen: 10000, Ergebniszeilen verarbeitet: 10000, total Chunk Time: 0.456 Sekunden*
+*Geschriebene Zeilen gesamt: 10000, Gesamtzeit: 0,384*gelesene*Zeilen:
+ 10000, verarbeitete Zeilen gesamt: 10000, gesamte Segment Zeit: 0,456 Sekunden*
 
 ## <a name="more-about-rxdatastep"></a>Weitere Informationen zu rxDataStep
 
-[RxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) ist eine leistungsstarke Funktion, die mehrere Transformationen auf einen R-Datenrahmen durchführen kann. Sie können auch RxDataStep verwenden, um Daten in die erforderliche Ziel-Darstellung zu konvertieren: in diesem Fall [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+[rxdatastep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) ist eine leistungsstarke Funktion, die mehrere Transformationen für einen R-Datenrahmen durchführen kann. Sie können auch rxdatastep verwenden, um Daten in die für das Ziel erforderliche Darstellung zu konvertieren: in diesem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fall.
 
-Sie können optional Transformationen auf die Daten angeben, unter Verwendung von R-Funktionen in den Argumenten von **RxDataStep**. Beispiele für diese Vorgänge werden weiter unten in diesem Tutorial bereitgestellt.
+Optional können Sie Transformationen für die Daten angeben, indem Sie R-Funktionen in den Argumenten für **rxdatastep**verwenden. Beispiele für diese Vorgänge werden später in diesem Tutorial bereitgestellt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

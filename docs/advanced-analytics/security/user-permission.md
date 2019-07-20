@@ -1,33 +1,33 @@
 ---
-title: Erteilen von Datenbankberechtigungen für die skriptausführung R- und Python - SQL Server Machine Learning Services
-description: Informationen zum Datenbank-Benutzerberechtigungen für die Ausführung von R und Python-Skript in SQL Server-Machine Learning-Dienste zu gewähren.
+title: Erteilen von Daten Bank Berechtigungen für die Skriptausführung von R und python
+description: Erteilen von Datenbankbenutzer Berechtigungen für die Ausführung von R-und python-Skripts auf SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e24095b7ec5aafd3439a3d344123c0a7f9dae86d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6b2fb46cb2ee361d858fa460119e6960d78fda7
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962327"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345104"
 ---
-# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Vergabe von Benutzerberechtigungen für SQL Server Machine Learning Services
+# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Erteilen Sie Benutzern die Berechtigung zum SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie Sie Benutzern gestatten können über die Berechtigung zum Ausführen externer Skripts, die in SQL Server-Machine Learning-Dienste, und geben Sie Lese-, Schreib- oder Data Definition Language (DDL) Berechtigungen für Datenbanken.
+In diesem Artikel wird beschrieben, wie Sie Benutzern die Berechtigung zum Ausführen externer Skripts in SQL Server Machine Learning Services erteilen und Datenbanken Lese-, Schreib-oder DDL-Berechtigungen (Data Definition Language, Datendefinitionssprache) erteilen.
 
-Weitere Informationen finden Sie im Abschnitt "Berechtigungen" im [Sicherheit: Übersicht für das Extensibility Framework](../../advanced-analytics/concepts/security.md#permissions).
+Weitere Informationen finden Sie im Abschnitt "Berechtigungen" unter [Sicherheitsübersicht für das Erweiterbarkeit Framework](../../advanced-analytics/concepts/security.md#permissions).
 
 <a name="permissions-external-script"></a>
 
 ## <a name="permission-to-run-scripts"></a>Berechtigung zum Ausführen von Skripts
 
-Wenn Sie installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selbst, und Sie in Ihrer eigenen Instanz R- oder Python-Skripts ausgeführt werden, die Sie Skripts in der Regel als Administrator ausführen. So können Sie implizite Berechtigung für verschiedene Vorgänge und alle Daten in der Datenbank.
+Wenn Sie sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selbst installiert haben und R-oder python-Skripts in ihrer eigenen Instanz ausführen, führen Sie in der Regel Skripts als Administrator aus. Daher verfügen Sie über die implizite Berechtigung für verschiedene Vorgänge und alle Daten in der Datenbank.
 
-Die meisten Benutzer haben jedoch nicht diese erhöhten Berechtigungen. Beispielsweise sind Benutzer in einer Organisation, die SQL-Benutzernamen verwenden, um Zugriff auf die Datenbank in der Regel nicht mit erhöhten Rechten berechtigt. Aus diesem Grund müssen für jeden Benutzer, die R- oder Python verwendet wird, Sie Benutzern von Machine Learning Services gewähren die Berechtigung zum Ausführen externer Skripts, die in jeder Datenbank, in denen die Sprache verwendet wird. Gehen Sie dabei folgendermaßen vor:
+Die meisten Benutzer verfügen jedoch nicht über solche erhöhten Berechtigungen. Beispielsweise haben Benutzer in einer Organisation, die SQL-Anmeldungen für den Zugriff auf die Datenbank verwenden, in der Regel keine erhöhten Berechtigungen. Daher müssen Sie für jeden Benutzer, der R oder python verwendet, Benutzern von Machine Learning Services die Berechtigung zum Ausführen externer Skripts in jeder Datenbank erteilen, in der die Sprache verwendet wird. Gehen Sie dabei folgendermaßen vor:
 
 ```sql
 USE <database_name>
@@ -36,17 +36,17 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> Berechtigungen sind nicht spezifisch für die unterstützten Skriptsprache. Das heißt, sind es nicht separate Berechtigungsstufen für R-Skript im Vergleich zu Python-Skript. Wenn Sie separate Berechtigungen für diese Sprachen beibehalten möchten, installieren Sie R und Python auf separaten Instanzen.
+> Berechtigungen sind nicht spezifisch für die unterstützte Skriptsprache. Anders ausgedrückt: Es gibt keine separaten Berechtigungsebenen für R-Skripts im Vergleich zu python-Skripts. Wenn Sie separate Berechtigungen für diese Sprachen benötigen, installieren Sie R und python auf separaten Instanzen.
 
 <a name="permissions-db"></a> 
 
-## <a name="grant-databases-permissions"></a>GRANT-Berechtigungen Datenbanken
+## <a name="grant-databases-permissions"></a>Erteilen von Daten Bank Berechtigungen
 
-Während ein Benutzer die Skripts ausgeführt wird, muss der Benutzer kann Daten aus anderen Datenbanken lesen. Der Benutzer müssen möglicherweise auch neue Tabellen zum Speichern der Ergebnisse und Schreiben von Daten in Tabellen erstellen.
+Während ein Benutzer Skripts durchführt, muss der Benutzer möglicherweise Daten aus anderen Datenbanken lesen. Der Benutzer muss möglicherweise auch neue Tabellen zum Speichern von Ergebnissen erstellen und Daten in Tabellen schreiben.
 
-Für jedes Windows-Benutzerkonto oder die SQL-Anmeldung, die R- oder Python-Skripts ausgeführt wird, stellen Sie sicher, dass sie die entsprechenden Berechtigungen für die betreffende Datenbank verfügt: `db_datareader` zum Lesen von Daten, `db_datawriter` zum Speichern von Objekten in der Datenbank oder `db_ddladmin` zum Erstellen von Objekten z. B. gespeicherte Prozeduren oder Tabellen mit trainiert und serialisierte Daten.
+Stellen Sie für jedes Windows-Benutzerkonto oder jede SQL-Anmeldung, die R-oder python-Skripts ausführen, sicher, dass Sie `db_datareader` über die entsprechenden Berechtigungen `db_datawriter` für die jeweilige Datenbank verfügt: zum Lesen `db_ddladmin` von Daten, zum Speichern von Objekten in der Datenbank oder zum Erstellen von Objekten. z. b. gespeicherte Prozeduren oder Tabellen mit trainierten und serialisierten Daten.
 
-Beispielsweise die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung bietet die SQL-Anmeldung *MySQLLogin* die Rechte zum Ausführen von T-SQL-Abfragen in der *ML_Samples* Datenbank. Um diese Anweisung auszuführen, muss die SQL-Anmeldung bereits im Sicherheitskontext des Servers vorhanden sein.
+Beispielsweise gibt die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung der SQL-Anmeldung *mysqllogin* die Rechte zum Ausführen von T-SQL-Abfragen in der *ML_Samples* -Datenbank. Um diese Anweisung auszuführen, muss die SQL-Anmeldung bereits im Sicherheitskontext des Servers vorhanden sein.
 
 ```sql
 USE ML_Samples
@@ -56,4 +56,4 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den Berechtigungen in den einzelnen Rollen finden Sie unter [Datenbankrollen](../../relational-databases/security/authentication-access/database-level-roles.md).
+Weitere Informationen zu den Berechtigungen, die in den einzelnen Rollen enthalten sind, finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md).

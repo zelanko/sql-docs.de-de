@@ -1,93 +1,93 @@
 ---
-title: 'Installieren Sie neuer R-Sprache-Pakete: SQL Server Machine Learning Services'
-description: Fügen Sie neue R-Pakete auf SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern)
+title: Installieren neuer R-Sprachpakete
+description: Hinzufügen neuer R-Pakete zu SQL Server 2016 R Services oder SQL Server 2017 Machine Learning Services (in-Database)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962625"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345546"
 ---
-# <a name="install-new-r-packages-on-sql-server"></a>Installieren Sie neuer R-Pakete unter SQL Server
+# <a name="install-new-r-packages-on-sql-server"></a>Installieren neuer R-Pakete auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt, wie Sie neue R-Pakete mit einer Instanz von SQL Server installieren, Machine Learning aktiviert ist. Es gibt mehrere Methoden zum Installieren neuer R-Pakete, je nachdem, welche Version von SQL Server haben und gibt an, ob der Server über eine Internetverbindung verfügt. Die folgenden Methoden zum neuen Paketinstallation sind möglich.
+In diesem Artikel wird beschrieben, wie Sie neue R-Pakete in einer Instanz von SQL Server installieren, auf der Machine Learning aktiviert ist. Es gibt mehrere Methoden zum Installieren neuer R-Pakete, je nachdem, welche Version von SQL Server Sie haben und ob der Server über eine Internetverbindung verfügt. Die folgenden Vorgehensweisen für die Installation eines neuen Pakets sind möglich.
 
-| Ansatz                           | Berechtigungen               | Remote/lokale |
+| Ansatz                           | Berechtigungen               | Remote/lokal |
 |------------------------------------|---------------------------|--------------|
-| [Verwenden von herkömmlichen R-Paket-Manager](use-r-package-managers-on-sql-server.md)  | Admin | Lokal |
-| [Verwenden von RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Danach Datenbankrollen Admin-aktiviert | both|
-| [Verwenden von T-SQL (CREATE EXTERNAL LIBRARY)](install-r-packages-tsql.md) | Danach Datenbankrollen Admin-aktiviert | both 
+| [Verwenden von herkömmlichen R-Paket-Managern](use-r-package-managers-on-sql-server.md)  | Admin | Lokal |
+| [Verwenden von RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Für den Administrator aktivierte Daten bankrollen anschließend | both|
+| [Verwenden von T-SQL (externe Bibliothek erstellen)](install-r-packages-tsql.md) | Für den Administrator aktivierte Daten bankrollen anschließend | both 
 
-## <a name="who-installs-permissions"></a>Wer (Berechtigungen) installiert
+## <a name="who-installs-permissions"></a>Wer installiert (Berechtigungen)
 
-Die R-Paket-Bibliothek befindet sich physisch im Ordner "Programme" Ihrer SQL Server-Instanz, in einem sicheren Ordner mit eingeschränktem Zugriff. Das Schreiben in diesen Speicherort sind Administratorberechtigungen erforderlich.
+Die R-paketbibliothek befindet sich physisch im Ordner "Programme" Ihrer SQL Server Instanz, in einem sicheren Ordner mit eingeschränktem Zugriff. Zum Schreiben an diesen Speicherort sind Administrator Berechtigungen erforderlich.
 
-Nicht-Administratoren können Pakete installieren. dazu sind jedoch zusätzliche Konfiguration und die Funktion in der ersten Installationen nicht verfügbar. Es gibt zwei Ansätze für die Paket-Installationen ohne Administratorrechte: RevoScaleR, die mit Version 9.0.1 und höher, oder mit CREATE EXTERNAL LIBRARY (nur SQL Server 2017). In SQL Server 2017 **Dbo_owner** oder einem anderen Benutzer mit der CREATE EXTERNAL LIBRARY-Berechtigung kann R-Pakete installieren, auf die aktuelle Datenbank.
+Nicht-Administratoren können Pakete installieren. hierfür sind jedoch zusätzliche Konfigurationsschritte erforderlich, die in erst Installationen nicht verfügbar sind. Es gibt zwei Ansätze für Installationen von nicht-Administrator Paketen: Revoscaler mit Version 9.0.1 und höher oder mit CREATE externe Library (nur SQL Server 2017). In SQL Server 2017 können R-Pakete von **dbo_owner** oder einem anderen Benutzer mit der Berechtigung CREATE extern Library in der aktuellen Datenbank installiert werden.
 
-R-Entwickler sind daran gewöhnt, zum Erstellen von benutzerbibliotheken für die Pakete, die sie benötigen, wenn-einstellungspakete Bibliotheken Hardwarefeatures sind. Diese Vorgehensweise ist problematisch für R-Code in einer Instanz von SQL Server-Datenbank-Engine ausgeführt. SQL Server können keine externen Bibliotheken Laden von Paketen aus, selbst wenn diese Bibliothek, auf dem gleichen Computer ist. Nur Pakete aus der Instanz-Bibliothek können in R-Code, die unter SQL Server verwendet werden.
+R-Entwickler sind daran gewöhnt, Benutzer Bibliotheken für die Pakete zu erstellen, die Sie benötigen, wenn sich zentral lokalisierte Bibliotheken außerhalb der Grenzen befinden. Diese Vorgehensweise ist problematisch für R-Code, der in einer SQL Server Datenbank-Engine-Instanz ausgeführt wird. SQL Server können Pakete nicht aus externen Bibliotheken laden, auch wenn sich diese Bibliothek auf demselben Computer befindet. Nur Pakete aus der instanzbibliothek können in R-Code verwendet werden, der in SQL Server ausgeführt wird.
 
-Dateisystemzugriff ist in der Regel beschränkt, auf dem Server und auch wenn Sie über Administratorrechte und Zugriff in einem Dokument Benutzerordner auf dem Server verfügen, nicht die externen Skript-Runtime, die in SQL Server ausgeführt wird alle Pakete, die außerhalb der Standardinstanz installiert verfügbar -Bibliothek. 
+Der Dateisystem Zugriff wird in der Regel auf dem Server eingeschränkt, und auch wenn Sie über Administratorrechte und Zugriff auf einen Benutzer Dokument Ordner auf dem Server verfügen, kann die externe Skript Laufzeit, die in SQL Server ausgeführt wird, nicht auf Pakete zugreifen, die außerhalb der Standard Instanz installiert sind. fern. 
 
 ## <a name="considerations-for-package-installation"></a>Überlegungen zur Paketinstallation
 
-Installieren neuer Pakete, berücksichtigen Sie, ob die neuen Funktionen von einem bestimmten Paket in einer SQL Server-Umgebung geeignet sind. In einer SQL Server-Umgebung mit verstärkter Sicherheit empfiehlt es sich um Folgendes zu vermeiden:
+Berücksichtigen Sie vor der Installation neuer Pakete, ob die von einem bestimmten Paket aktivierten Funktionen in einer SQL Server Umgebung geeignet sind. In einer SQL Server Umgebung mit verstärkter Sicherheit sollten Sie Folgendes vermeiden:
 
-+ Pakete, die Zugriff auf das Netzwerk erfordern.
-+ Pakete, die mit erhöhten Rechten Dateisystemzugriff erfordern
-+ Paket wird für die Webentwicklung oder andere Aufgaben, die durch die Ausführung in SQL Server profitieren nicht verwendet.
++ Pakete, für die Netzwerk Zugriff erforderlich ist
++ Pakete, für die ein erhöhter Dateisystem Zugriff erforderlich ist
++ Das Paket wird für die Webentwicklung oder andere Aufgaben verwendet, die von der Ausführung innerhalb SQL Server nicht profitieren.
 
-## <a name="offline-installation-no-internet-access"></a>Offline-Installation (ohne Internetzugriff)
+## <a name="offline-installation-no-internet-access"></a>Offline Installation (kein Internet Zugriff)
 
-Im Allgemeinen blockieren Servern, die für die Produktion hosten internetverbindungen. Installieren neuer R oder Python-Pakete in solchen Umgebungen erfordert, dass Sie Pakete und Abhängigkeiten im Voraus vorbereiten und kopieren Sie die Dateien in einen Ordner auf dem Server für die Offlineinstallation.
+Im allgemeinen blockieren Server, die Produktionsdatenbanken hosten, Internetverbindungen. Die Installation neuer R-oder python-Pakete in solchen Umgebungen erfordert, dass Sie Pakete und Abhängigkeiten vorab vorbereiten und die Dateien für die Offline Installation in einen Ordner auf dem Server kopieren.
 
-Identifizieren alle Abhängigkeiten kompliziert. Für R, empfehlen wir die Verwendung von [MiniCRAN zum Erstellen eines lokalen Repositorys](create-a-local-package-repository-using-minicran.md) übertragen und dann das vollständig definierte Repository an eine isolierte Instanz von SQL Server.
+Das Identifizieren aller Abhängigkeiten wird kompliziert. Für R empfiehlt es sich, dass Sie [minicran verwenden, um ein lokales Repository zu erstellen](create-a-local-package-repository-using-minicran.md) , und dann das vollständig definierte Repository auf eine isolierte SQL Server Instanz übertragen.
 
-Alternativ können Sie diese Schritte manuell ausführen:
+Alternativ können Sie diese Schritte auch manuell ausführen:
 
-1. Identifizieren Sie alle paketabhängigkeiten an. 
-2. Überprüfen Sie, ob alle erforderlichen Pakete bereits auf dem Server installiert sind. Wenn das Paket installiert ist, stellen Sie sicher, dass die Version korrekt ist.
-3. Laden Sie das Paket und alle Abhängigkeiten in einem separaten Computer herunter.
-4. Verschieben Sie die Dateien in einen Ordner zugegriffen werden kann, durch den Server.
-5. Führen Sie einen unterstützten Installation-Befehl oder DDL-Anweisung, um das Paket in die Instanz-Bibliothek zu installieren.
+1. Identifizieren aller Paketabhängigkeiten. 
+2. Überprüfen Sie, ob alle erforderlichen Pakete bereits auf dem Server installiert sind. Wenn das Paket installiert ist, überprüfen Sie, ob die Version korrekt ist.
+3. Laden Sie das Paket und alle Abhängigkeiten auf einen separaten Computer herunter.
+4. Verschieben Sie die Dateien in einen Ordner, auf den der Server zugreifen kann.
+5. Führen Sie einen unterstützten Installations Befehl oder eine DDL-Anweisung aus, um das Paket in der instanzbibliothek zu installieren
 
-### <a name="download-the-package-as-a-zipped-file"></a>Das Paket als ZIP-Datei herunterladen
+### <a name="download-the-package-as-a-zipped-file"></a>Paket als ZIP-Datei herunterladen
 
-Für die Installation auf einem Server ohne Internetzugriff müssen Sie eine Kopie des Pakets im Format einer ZIP-Datei für offline-Installation herunterladen. **Entzippen Sie das Paket nicht.**
+Für die Installation auf einem Server ohne Internet Zugriff müssen Sie eine Kopie des Pakets im Format einer ZIP-Datei für die Offline Installation herunterladen. **Entpacken Sie das Paket nicht.**
 
-Z. B. das folgende Verfahren beschreibt jetzt, um die richtige Version von der [FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) Paket von Bioconductor, sofern der Computer über Internetzugriff verfügt.
+Im folgenden Verfahren wird z. b. beschrieben, wie Sie die richtige Version des [fishalyser](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) -Pakets von BioConductor abrufen können, vorausgesetzt, der Computer hat Zugriff auf das Internet.
 
 1.  Suchen Sie in der Liste der **Paketarchive** die **Windows-Binärdateiversion** .
 
-2.  Mit der rechten Maustaste in des Links, um die. ZIP-Datei, und wählen **Ziel speichern unter**.
+2.  Klicken Sie mit der rechten Maustaste auf den Link zum. ZIP-Datei, und wählen Sie **Ziel speichern**unter aus.
 
-3.  Navigieren Sie zu den lokalen Ordner, in dem komprimierten Pakete gespeichert werden, und klicken Sie auf **speichern**.
+3.  Navigieren Sie zum lokalen Ordner, in dem die komprimierten Pakete gespeichert sind, und klicken Sie auf **Speichern**.
 
     Dieser Vorgang erstellt eine lokale Kopie des Pakets. 
 
-4. Wenn Sie einen Downloadfehler erhalten, versuchen Sie eine andere gespiegelte Site aus.
+4. Wenn Sie einen Download Fehler erhalten, versuchen Sie es mit einer anderen Spiegelungs Site.
 
-5. Nach dem das Archiv Paket heruntergeladen wurde, können Sie das Paket installieren oder kopieren das ZIP-Paket auf einen Server, der keinen Zugriff auf das Internet.
+5. Nach dem Herunterladen des Paket Archivs können Sie das Paket installieren oder das ZIP-Paket auf einen Server kopieren, der nicht über Internet Zugriff verfügt.
 
 > [!TIP]
-> Wenn Sie versehentlich das Paket nicht die Binärdateien heruntergeladen installieren, wird eine Kopie der heruntergeladenen ZIP-Datei auch auf Ihrem Computer gespeichert. Sehen Sie die statusmeldungen an, wie das Paket installiert wird, um den Dateispeicherort zu ermitteln. Sie können diese ZIP-Datei an den Server kopieren, die keinen Zugriff auf das Internet.
+> Wenn Sie versehentlich das Paket installieren, anstatt die Binärdateien herunterzuladen, wird auch eine Kopie der heruntergeladenen ZIP-Datei auf dem Computer gespeichert. Sehen Sie sich die Statusmeldungen während der Paketinstallation an, um den Datei Speicherort zu ermitteln. Sie können diese ZIP-Datei auf den Server kopieren, der nicht über Internet Zugriff verfügt.
 > 
-> Wenn Sie Pakete, die mit dieser Methode zu erhalten, sind die Abhängigkeiten nicht enthalten. 
+> Wenn Sie jedoch Pakete mithilfe dieser Methode abrufen, werden die Abhängigkeiten nicht eingeschlossen. 
 
 
-## <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>Seite-an-Seite-Installation mit Standalone R oder Python-Server
+## <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>Parallele Installation mit eigenständigen R-oder python-Servern
 
-R und Python-Funktionen sind in verschiedenen Microsoft-Produkten, enthalten, die alle auf dem gleichen Computer gleichzeitig vorhanden.
+R-und Python-Funktionen sind in mehreren Microsoft-Produkten enthalten, die alle auf dem gleichen Computer vorhanden sein können.
 
-Wenn Sie SQL Server 2017 Microsoft Machine Learning Server (eigenständig) oder SQL Server 2016 R Server (eigenständig) zusätzlich zum in-Database-Analyse (SQL Server 2017-Machine Learning Services und SQL Server 2016 R Services) installiert haben, sind für Ihren Computer separate Installationen von R für jeden, ohne Duplikate, der alle R-Tools und Bibliotheken.
+Wenn Sie SQL Server 2017 Microsoft Machine Learning Server (eigenständig) oder SQL Server 2016 R Server (eigenständig) zusätzlich zur Datenbankanalyse (SQL Server 2017 Machine Learning Services und SQL Server 2016 R Services) installiert haben, hat der Computer separate Installationen von r für jede, mit Duplikaten aller r-Tools und-Bibliotheken.
 
-In der Bibliothek R_SERVER installierte Pakete werden nur von einem eigenständigen Server verwendet und können nicht von einer Instanz von SQL Server (Datenbankintern) zugegriffen werden. Verwenden Sie immer die `R_SERVICES` Bibliothek beim Installieren von Paketen, die Sie in der Datenbank auf SQL Server verwenden möchten. Weitere Informationen zu Pfaden finden Sie unter [Bibliothek Paketspeicherort](../package-management/default-packages.md).
+Pakete, die in der R_SERVER-Bibliothek installiert werden, werden nur von einem eigenständigen Server verwendet, und es kann nicht von einer SQL Server-Instanz (in der Datenbank) darauf zugegriffen werden. Verwenden Sie die `R_SERVICES` Bibliothek immer beim Installieren von Paketen, die Sie in-Database auf SQL Server verwenden möchten. Weitere Informationen zu Pfaden finden Sie unter [Speicherort der paketbibliothek](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Siehe auch
 

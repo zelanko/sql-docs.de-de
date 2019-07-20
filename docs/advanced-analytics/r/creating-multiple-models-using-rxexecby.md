@@ -1,55 +1,55 @@
 ---
-title: Erstellen von mehreren Modellen mit RxExecBy – SQL Server Machine Learning Services
-description: Verwenden Sie die RxExecBy-Funktion von RevoScaleR-Bibliothek, um mehrere kleine Modelle in den Computerdaten in SQL Server zu erstellen.
+title: Erstellen von mehreren Modellen mit rxExecBy
+description: Verwenden Sie die rxexecby-Funktion aus der revoscaler-Bibliothek, um mehrere Mini Modelle auf den in SQL Server gespeicherten Computer Daten zu erstellen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b0316cf40acff1a64aa40a14911f323eb913efc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c51691ad55ac8aa340eb71257489bd14c0099a5
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962683"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345537"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Erstellen von mehreren Modellen mit rxExecBy
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Die **RxExecBy** -Funktion in RevoScaleR unterstützt die parallele Verarbeitung von mehrere zugehörige Modelle. Anstatt Train eines großen Modells auf der Grundlage von Daten aus mehreren ähnlich wie Entitäten, ein Data Scientist kann schnell erstellen viele Verwandte Modelle, von denen jeder Daten, die spezifisch für eine einzelne Entität. 
+Die **rxexecby** -Funktion in revoscaler unterstützt die parallele Verarbeitung von mehreren verbundenen Modellen. Anstatt ein großes Modell auf der Grundlage von Daten aus mehreren ähnlichen Entitäten zu trainieren, kann ein Daten Analyst schnell viele verwandte Modelle erstellen, die jeweils spezifische Daten für eine einzelne Entität verwenden. 
 
-Nehmen wir beispielsweise an, dass Sie Gerätefehler, Erfassen von Daten für viele verschiedene Arten von Geräten überwachen. Mit RxExecBy, können Sie ein einzelnes großes Dataset als Eingabe bereitstellen, geben Sie eine Spalte, auf dem das Dataset, z. B. Gerätetyp stratify und erstellen Sie dann auf mehrere Modelle für die einzelnen Geräte.
+Nehmen Sie beispielsweise an, dass Sie Geräteausfälle überwachen und Daten für viele verschiedene Arten von Geräten erfassen. Mithilfe von rxexecby können Sie ein einzelnes großes Dataset als Eingabe bereitstellen, eine Spalte angeben, für die das DataSet gestrachtet werden soll, z. b. den Gerätetyp, und dann mehrere Modelle für einzelne Geräte erstellen.
 
-In diesem Fall hat bezeichnet wurden ["pleasingly parallel"](https://en.wikipedia.org/wiki/Embarrassingly_parallel) da in Komponenten für die gleichzeitige Verarbeitung ein großes, komplizierten Problem beschädigt.
+Dieser Anwendungsfall wurde als ["angenehm parallel"](https://en.wikipedia.org/wiki/Embarrassingly_parallel) bezeichnet, da er große komplizierte Probleme in Komponenten Teile für die gleichzeitige Verarbeitung unterbricht.
 
-Typische Anwendungen dieses Ansatzes gehören Planung für einzelne household smart Meter, oder erstellen, basierenden Projektionen für separate Produktlinien Modelle für die Loan-Genehmigungen, die auf einzelne Bankfilialen zugeschnitten sind.
+Typische Anwendungen dieses Ansatzes sind die Vorhersagen für einzelne Haushalts-smartmeter, das Erstellen von Umsatzprognosen für separate Produktlinien oder das Erstellen von Modellen für Kredit Genehmigungen, die auf einzelne Bank branches zugeschnitten sind.
 
-## <a name="how-rxexec-works"></a>Funktionsweise von rxExec
+## <a name="how-rxexec-works"></a>Funktionsweise von rxexec
 
-Die RxExecBy-Funktion in RevoScaleR dient für umfangreiche parallele Verarbeitung über eine große Anzahl von kleinen Datasets.
+Die rxexecby-Funktion in revoscaler ist für die parallele Verarbeitung mit hohem Volumen über eine große Anzahl kleiner Datasets konzipiert.
 
-1. Sie rufen Sie die RxExecBy-Funktion als Teil des R-Code, und übergeben ein Dataset mit nicht sortierte Daten.
-2. Geben Sie die Partition mit der die Daten gruppiert und sortiert werden soll.
-3. Definieren Sie eine Transformation oder Modellierung von Funktion, die auf jede Datenpartition angewendet werden soll
-4. Wenn die Funktion ausgeführt wird, werden die Datenabfragen parallel ausgeführt, wenn Ihre Umgebung unterstützt. Darüber hinaus sind die Modellierung oder Transformation Aufgaben auf einzelnen Kerne verteilt und parallel ausgeführt. Unterstützte computekontext für drei Vorgänge umfassen RxSpark und RxInSQLServer.
+1. Die Funktion rxexecby wird als Teil des R-Codes aufgerufen, und ein DataSet mit unsortierter Daten wird übergeben.
+2. Geben Sie die Partition an, nach der die Daten gruppiert und sortiert werden sollen.
+3. Hiermit wird eine Transformation oder Modellierungs Funktion definiert, die auf jede Daten Partition angewendet werden soll.
+4. Wenn die Funktion ausgeführt wird, werden die Daten Abfragen parallel verarbeitet, wenn Sie von Ihrer Umgebung unterstützt werden. Außerdem werden die Modellierungs-oder Transformations Aufgaben zwischen einzelnen Kernen verteilt und parallel ausgeführt. Unterstützte computekontext für Vorgänge sind rxspark und rxinsqlserver.
 5. Es werden mehrere Ergebnisse zurückgegeben.
 
-## <a name="rxexecby-syntax-and-examples"></a>RxExecBy Syntax und Beispiele
+## <a name="rxexecby-syntax-and-examples"></a>rxexecby-Syntax und Beispiele
 
-**RxExecBy** akzeptiert vier Eingaben, eine der Eingaben wird ein Dataset oder einem Quell-Objekt, das partitioniert werden kann für ein bestimmtes **Schlüssel** Spalte. Die Funktion gibt eine Ausgabe für jede Partition an. Die Form der Ausgabe hängt von der Funktion, die als Argument übergeben wird. Wenn Sie eine Modellierung-Funktion, z. B. RxLinMod übergeben haben, könnten Sie z. B. ein separates trainiertes Modell für jede Partition des Datasets zurückgeben.
+**rxexecby** nimmt vier Eingaben an, eine der Eingaben ist ein DataSet oder ein Datenquellen Objekt, das für eine angegebene **Schlüssel** Spalte partitioniert werden kann. Die-Funktion gibt eine Ausgabe für jede Partition zurück. Die Form der Ausgabe hängt von der Funktion ab, die als Argument weitergegeben wird. Wenn Sie z. b. eine Modellierungs Funktion wie rxlinmod übergeben, können Sie ein separates trainiertes Modell für jede Partition des Datasets zurückgeben.
 
 ### <a name="supported-functions"></a>Unterstützte Funktionen
 
-Modeling: `rxLinMod`, `rxLogit`, `rxGlm`, `rxDtree`
+Modellierung: `rxLinMod`, `rxLogit`, `rxGlm`,`rxDtree`
 
 Bewertung: `rxPredict`,
 
-Transformation "oder" Analyse ": `rxCovCor`
+Transformation oder Analyse:`rxCovCor`
 
 ## <a name="example"></a>Beispiel
 
-Das folgende Beispiel veranschaulicht das Erstellen mehrerer Modelle, die über das Fluglinien-Dataset, das für die Spalte [-DayOfWeek] partitioniert ist. Die benutzerdefinierte Funktion `delayFunc`, auf die Partitionen aufrufende RxExecBy angewendet wird. Die Funktion erstellt separate Modelle für jeden zweiten Montag, Dienstag, und so weiter.
+Im folgenden Beispiel wird veranschaulicht, wie mehrere Modelle mithilfe des Datasets für die Fluggesellschaft erstellt werden, das in der Spalte [DayOfWeek] partitioniert ist. Die benutzerdefinierte Funktion `delayFunc`wird auf jede Partition angewendet, indem rxexecby aufgerufen wird. Die-Funktion erstellt separate Modelle für Montag, Dienstag usw.
 
 ```sql
 EXEC sp_execute_external_script
@@ -66,11 +66,11 @@ OutputDataSet <- rxExecBy(airlineData, c("DayOfWeek"), delayFunc)
 
 ```
 
-Wenn Sie die Fehlermeldung `varsToPartition is invalid`, überprüfen Sie, ob der Name der Spalte oder Spalten richtig eingegeben wurde. Die Sprache R ist die Groß-/Kleinschreibung beachtet.
+Wenn Sie den Fehler erhalten, `varsToPartition is invalid`überprüfen Sie, ob der Name der Schlüssel Spalte oder der Spalten ordnungsgemäß eingegeben wurde. Bei der Sprache R wird die Groß-/Kleinschreibung beachtet
 
-Dieses Beispiel ist für SQL Server nicht optimiert, und Sie können in vielen Fällen eine bessere Leistung, zum Gruppieren der Daten mithilfe von SQL. Allerdings können mit RxExecBy können Sie parallele Aufträge von r erstellen
+Dieses spezielle Beispiel ist nicht für SQL Server optimiert, und Sie können in vielen Fällen eine bessere Leistung erzielen, indem Sie die Daten mithilfe von SQL gruppieren. Mithilfe von rxexecby können Sie jedoch parallele Aufträge aus R erstellen.
 
-Das folgende Beispiel veranschaulicht den Prozess in R, SQL Server als Compute Context verwenden:
+Das folgende Beispiel veranschaulicht den Prozess in R, wobei SQL Server als computekontext verwendet wird:
 
 ```R
 sqlServerConnString <- "SERVER=hostname;DATABASE=TestDB;UID=DBUser;PWD=Password;"

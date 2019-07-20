@@ -1,68 +1,68 @@
 ---
-title: Erstellen eines Anmeldenamens für SQLRUserGroup – SQL Server Machine Learning Services
-description: Erstellen Sie für die Loopback-Verbindungen, die über die implizite Authentifizierung eine Anmeldung in SQL Server für SQLRUserGroup, sodass ein workerkonto an den Server für die identitätskonvertierung zurück an den aufrufenden Benutzer anmelden kann.
+title: Erstellen von Anmeldeinformationen für SQLRUserGroup
+description: Erstellen Sie für Loopback Verbindungen mit implizierter Authentifizierung einen Anmelde Namen in SQL Server für sqlrusergroup, damit sich ein Workerkonto beim Server anmelden kann, um die Identitäts Konvertierung zurück in den aufrufenden Benutzer durchführen zu können.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7dafb4c9edfe830a354da61b72d330d800349781
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74330d37a037b0951c4964cafbd6e0c26b4fdea1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962355"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345637"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Erstellen von Anmeldeinformationen für SQLRUserGroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Erstellen einer [Anmeldung in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) für [SQLRUserGroup](../concepts/security.md#sqlrusergroup) beim eine [Back Verbindung eine Schleife](../../advanced-analytics/concepts/security.md#implied-authentication) in Ihrem Skript gibt eine *vertrauenswürdige Verbindung*, und Ihr Code enthält, die Identität verwendet, um ein Objekt auszuführen ist ein Windows-Benutzerkonto.
+Erstellen Sie eine [Anmeldung in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) für [sqlrusergroup](../concepts/security.md#sqlrusergroup) , wenn eine [Loopback Verbindung](../../advanced-analytics/concepts/security.md#implied-authentication) in Ihrem Skript eine *Vertrauenswürdige Verbindung*angibt und die Identität, die zum Ausführen eines Objekts verwendet wird, das Windows-Benutzerkonto ist.
 
-Vertrauenswürdige Verbindungen sind diejenigen mit `Trusted_Connection=True` in der Verbindungszeichenfolge. Wenn SQL Server eine Anforderung, die das Angeben einer vertrauenswürdigen Verbindung empfängt, wird überprüft, ob die Identität des die aktuelle Windows-Benutzer eine Anmeldung vorhanden ist. Für externe Prozesse, die als ein workerkonto ausführen (z. B. MSSQLSERVER01 aus **SQLRUserGroup**), die Anforderung schlägt fehl, da diese Konten nicht über eine Anmeldung in der Standardeinstellung verfügen.
+Vertrauenswürdige Verbindungen sind `Trusted_Connection=True` die in der Verbindungs Zeichenfolge. Wenn SQL Server eine Anforderung empfängt, die eine vertrauenswürdige Verbindung angibt, wird überprüft, ob die Identität des aktuellen Windows-Benutzers über einen Anmelde Namen verfügt. Bei externen Prozessen, die als Workerkonto (z. b. MSSQLSERVER01 von **sqlrusergroup**) ausgeführt werden, schlägt die Anforderung fehl, da diese Konten nicht standardmäßig über einen Anmelde Namen verfügen.
 
-Sie können einen Verbindungsfehler umgehen, erstellen Sie eine Anmeldung für **SQLServerRUserGroup**. Weitere Informationen über Identitäten und externer Prozesse finden Sie unter [Sicherheit: Übersicht für das Extensibility Framework](../concepts/security.md).
+Sie können den Verbindungsfehler umgehen, indem Sie einen Anmelde Namen für **sqlserverrusergroup**erstellen. Weitere Informationen zu Identitäten und externen Prozessen finden Sie unter [Übersicht über die Sicherheit für das Erweiterbarkeit Framework](../concepts/security.md).
 
 > [!Note]
-> Stellen Sie sicher, dass **SQLRUserGroup** "Lokal anmelden zulassen" berechtigt. Standardmäßig dieses Recht allen neuen lokalen Benutzern erteilt, aber einige strengeren Gruppenrichtlinien von Organisationen diese Berechtigung können deaktiviert werden.
+> Stellen Sie sicher, dass **sqlrusergroup** über die Berechtigung "Lokal anmelden zulassen" verfügt. Standardmäßig wird dieses Recht allen neuen lokalen Benutzern gewährt, aber einige Organisationen strengere Gruppenrichtlinien können dieses Recht deaktivieren.
 
 ## <a name="create-a-login"></a>Erstellen eines Anmeldenamens
 
 1. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung**.
 
-2. In der **Anmeldung – neu** wählen Sie im Dialogfeld **Suche**. (Geben Sie nichts in das Feld noch.)
+2. Klicken Sie im Dialogfeld **Anmeldung-neu** auf **Suchen**. (Geben Sie noch nichts in das Feld ein.)
     
-     ![Klicken Sie auf Suchen, die zum Hinzufügen von neuen Anmeldenamen für Machine Learning](media/implied-auth-login1.png "klicken Sie auf Suchen, Hinzufügen von neuen Anmeldenamen für Machine Learning")
+     ![Klicken Sie zum Hinzufügen einer neuen Anmeldung für Machine Learning auf Suchen] . (media/implied-auth-login1.png "Klicken Sie zum Hinzufügen einer neuen Anmeldung für Machine Learning auf Suchen") .
 
-3. In der **Benutzer oder Gruppe auswählen** klicken Sie auf die **Objekttypen** Schaltfläche.
+3. Klicken Sie im Feld **Benutzer oder Gruppe auswählen** auf die Schaltfläche **Objekttypen** .
 
-     ![Suchen Sie die Objekttypen, Hinzufügen von neuen Anmeldenamen für Machine Learning](media/implied-auth-login2.png "Suchen von Objekttypen, die neue Anmeldung für Machine Learning hinzufügen")
+     ![Objekttypen durchsuchen, um einen neuen Anmelde Namen für Machine Learning hinzuzufügen](media/implied-auth-login2.png "Objekttypen durchsuchen, um einen neuen Anmelde Namen für Machine Learning hinzuzufügen")
 
-4. In der **Objekttypen** wählen Sie im Dialogfeld **Gruppen**. Deaktivieren Sie alle anderen Kontrollkästchen.
+4. Wählen Sie im Dialogfeld **Objekttypen** die Option **Gruppen**aus. Deaktivieren Sie alle anderen Kontrollkästchen.
 
-     ![Wählen Sie im Dialogfeld "Objekttypen" Gruppen](media/implied-auth-login3.png "Gruppen auswählen, im Dialogfeld \"Objekttypen\"")
+     ![Dialogfeld "Gruppen in Objekttypen auswählen] " (media/implied-auth-login3.png "Dialogfeld \"Gruppen in Objekttypen auswählen") "
 
-4. Klicken Sie auf **erweitert**, stellen Sie sicher, dass zu suchenden Position der aktuellen Computer, und klicken Sie dann auf **Jetzt suchen**.
+4. Klicken Sie auf **erweitert**, vergewissern Sie sich, dass der aktuelle Computer gesucht wird, und klicken Sie dann auf **jetzt**suchen.
 
-     ![Klicken Sie auf Jetzt suchen, um die Liste der Gruppen abzurufen](media/implied-auth-login4.png "klicken Sie auf Jetzt suchen zum Abrufen der Liste der Gruppen")
+     ![Klicken Sie auf Jetzt suchen, um die Liste der Gruppen](media/implied-auth-login4.png "Klicken Sie auf Jetzt suchen, um die Liste der Gruppen")
 
-5. Scrollen Sie durch die Liste der Gruppenkonten auf dem Server, bis Sie beginnt mit gefunden `SQLRUserGroup`.
+5. Führen Sie einen Bildlauf durch die Liste der Gruppenkonten auf dem Server durch, `SQLRUserGroup`bis Sie einen ab finden.
     
-    + Der Name der Gruppe, die für den Launchpad-Dienst zugeordnet ist die _Standardinstanz_ ist immer **SQLRUserGroup**, unabhängig davon, ob Sie R, Python oder beides installiert. Wählen Sie dieses Konto für die Standardinstanz.
-    + Bei Verwendung einer _benannte Instanz_, den Namen der Instanz wird auf den Namen des den Worker-Gruppe Standardnamen angefügt `SQLRUserGroup`. Z. B. wenn die Instanz "MLTEST" heißt, der Standardnamen für die Gruppe von Benutzer für diese Instanz wäre **SQLRUserGroupMLTest**.
+    + Der Name der Gruppe, die dem Launchpad-Dienst für die _Standard Instanz_ zugeordnet ist, lautet immer **sqlrusergroup**, unabhängig davon, ob Sie R oder python oder beides installiert haben. Wählen Sie dieses Konto nur für die Standard Instanz aus.
+    + Wenn Sie eine _benannte Instanz_verwenden, wird der Instanzname an den Namen des standardmäßigen workergruppennamens `SQLRUserGroup`angehängt. Wenn Ihre Instanz z. b. den Namen "mltest" hat, lautet der Standardbenutzer Gruppenname für diese Instanz " **sqlrusergroupmltest**".
  
-    ![Beispiel für die Gruppen auf Server](media/implied-auth-login5.png "Beispiel für die Gruppen auf Server")
+    ![Beispiel für Gruppen auf dem Server](media/implied-auth-login5.png "Beispiel für Gruppen auf dem Server")
    
-5. Klicken Sie auf **OK** um das Dialogfeld "Erweiterte Suche" zu schließen.
+5. Klicken Sie auf **OK** , um das Dialogfeld Erweiterte Suche zu schließen.
 
     > [!IMPORTANT]
-    > Achten Sie darauf, dass Sie das richtige Konto für die Instanz ausgewählt haben. Jede Instanz kann nur einen eigenen Launchpad-Dienst und die Gruppe erstellt, die für diesen Dienst verwenden. Instanzen können kein Launchpad-Konten oder eine workerrolle verwenden.
+    > Stellen Sie sicher, dass Sie das richtige Konto für die Instanz ausgewählt haben. Jede Instanz kann nur ihren eigenen Launchpad-Dienst und die für diesen Dienst erstellte Gruppe verwenden. Instanzen können keinen Launchpad-Dienst oder keine workerkonten freigeben.
 
-6. Klicken Sie auf **OK** um schließen die **Benutzer oder Gruppe auswählen** Dialogfeld.
+6. Klicken Sie noch einmal auf **OK** , um das Dialogfeld **Benutzer oder Gruppe auswählen** zu schließen.
 
-7. In der **Anmeldung – neu** Dialogfeld klicken Sie auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zur Datenbank-Engine herzustellen.
+7. Klicken Sie im Dialogfeld **Anmeldung-neu** auf **OK**. In der Standardeinstellung ist die Anmeldung der **öffentlichen** Rolle zugewiesen und verfügt über die Berechtigung, eine Verbindung zur Datenbank-Engine herzustellen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 + [Sicherheitsübersicht](../concepts/security.md)
-+ [Erweiterungsframework](../concepts/extensibility-framework.md)
++ [Erweiterbarkeits Framework](../concepts/extensibility-framework.md)

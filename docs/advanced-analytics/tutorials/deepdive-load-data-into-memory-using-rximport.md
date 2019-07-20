@@ -1,31 +1,31 @@
 ---
-title: Laden von Daten in den Arbeitsspeicher mit RxImport von RevoScaleR - SQL Server-Machine Learning
-description: Exemplarische Vorgehensweise im Lernprogramm zum Laden von Daten, die Verwendung der Sprache R auf SQL Server.
+title: Laden von Daten in den Arbeitsspeicher mithilfe von revoscaler rximport
+description: 'Tutorial: Exemplarische Vorgehensweise zum Laden von Daten mit der Sprache R auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 53d13c0771fd06ae8e91f4ad69fe4646a01fc770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb98887d9cfd3f1997ce82620eeff5df98ba6b1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962225"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344671"
 ---
-# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Laden von Daten in den Arbeitsspeicher mit RxImport (SQL Server und die RevoScaleR-Lernprogramm)
+# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Laden von Daten in den Arbeitsspeicher mit rximport (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Die [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) Funktion kann verwendet werden, um Daten aus einer Datenquelle in einen Datenrahmen im Arbeitsspeicher der Sitzung oder in eine XDF-Datei auf dem Datenträger zu verschieben. Wenn Sie keine Datei als Ziel angeben, werden die Daten als Datenrahmen in den Arbeitsspeicher abgelegt.
+Die [rximport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) -Funktion kann verwendet werden, um Daten aus einer Datenquelle in einen Datenrahmen im Sitzungs Speicher oder in eine Xdf-Datei auf einem Datenträger zu verschieben. Wenn Sie keine Datei als Ziel angeben, werden die Daten als Datenrahmen in den Arbeitsspeicher abgelegt.
 
-In diesem Schritt erfahren Sie, wie zum Abrufen von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und verwenden Sie dann die **RxImport** Funktion, um die relevanten Daten in einer lokalen Datei abzulegen. Auf diese Weise können Sie sie wiederholt im lokalen Computekontext analysieren, ohne die Datenbank erneut abfragen zu müssen.
+In diesem Schritt erfahren Sie, wie Sie Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erhalten und dann die **rximport** -Funktion verwenden, um die zu überwachenden Daten in einer lokalen Datei zu platzieren. Auf diese Weise können Sie sie wiederholt im lokalen Computekontext analysieren, ohne die Datenbank erneut abfragen zu müssen.
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extrahieren einer Teilmenge von Daten aus SQL Server in den lokalen Arbeitsspeicher
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extrahieren einer Teilmenge der Daten aus SQL Server in den lokalen Arbeitsspeicher
 
-Sie haben sich entschieden, dass Sie nur die hochrisiko-Personen genauer untersuchen möchten. Die Quelltabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist groß, daher sollten Sie die Informationen über die nur die hochrisiko-Kunden erhalten. Klicken Sie dann laden Sie die Daten in einen Datenrahmen im Arbeitsspeicher der lokalen Arbeitsstation.
+Sie haben sich entschieden, nur die Hochrisiko-Einzelpersonen genauer zu untersuchen. Die Quell Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist groß, sodass Sie nur die Informationen zu den Kunden mit hohem Risiko erhalten möchten. Anschließend laden Sie diese Daten in einen Datenrahmen im Arbeitsspeicher der lokalen Arbeitsstation.
 
 1. Setzen Sie den Computekontext zurück auf die lokale Arbeitsstation.
 
@@ -42,15 +42,15 @@ Sie haben sich entschieden, dass Sie nur die hochrisiko-Personen genauer untersu
         connectionString = sqlConnString)
     ```
 
-3. Rufen Sie die Funktion [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) zum Lesen der Daten in einen Datenrahmen in der lokalen R-Sitzung.
+3. Ruft die Funktion [rximport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) auf, um die Daten in einem Datenrahmen in der lokalen R-Sitzung zu lesen.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    Wenn der Vorgang erfolgreich war, sehen Sie eine Statusmeldung wie die folgende: "Gelesene Zeilen: 35, total Zeilen verarbeitet: 35, total Chunk Time: 0.036 Seconds"
+    Wenn der Vorgang erfolgreich war, sollte eine Statusmeldung wie die folgende angezeigt werden: "Gelesene Zeilen: 35, verarbeitete Zeilen gesamt: 35, gesamte Segment Zeit: 0,036 Sekunden "
 
-4. Nun, dass die hochrisiko-Beobachtungen in einen Datenrahmen im Arbeitsspeicher sind, können Sie verschiedene R-Funktionen, um den Datenrahmen zu bearbeiten. Sie können z. B. Kunden nach ihrer risikobewertung sortieren und gibt eine Liste der Kunden, die das größte Risiko darstellen.
+4. Nachdem sich die Beobachtungen mit hohem Risiko in einem Datenrahmen im Arbeitsspeicher befinden, können Sie verschiedene R-Funktionen verwenden, um den Datenrahmen zu bearbeiten. Beispielsweise können Sie Kunden nach ihrer Risikobewertung sortieren und eine Liste der Kunden drucken, die das größte Risiko darstellen.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -74,7 +74,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 Sie können **rxImport** nicht nur zum Verschieben von Daten verwenden, sondern auch, um Daten während des Auslesens zu transformieren. Beispielsweise können Sie die Anzahl von Zeichen für Spalten mit fester Breite angeben, eine Beschreibung der Variablen bereitstellen, Ebenen für Faktorspalten festlegen und sogar neue Ebenen für die Verwendung nach dem Import erstellen.
 
-Die **RxImport** Funktion weist Variablennamen auf die Spalten während des Importvorgangs, aber Sie können neue Variablennamen angeben, mit der *ColInfo* Parameter oder Datentypen ändern, die mit der *ColClasses* Parameter.
+Die **rximport** -Funktion weist den Spalten während des Import Vorgangs Variablennamen zu, Sie können jedoch neue Variablennamen angeben, indem Sie den *COLINFO* -Parameter verwenden, oder die Datentypen mithilfe des *colClasses* -Parameters ändern.
 
 Durch die Angabe zusätzlicher Vorgänge im Parameter *transforms* können Sie jeden Datenblock, der gelesen wird, elementar verarbeiten.
 

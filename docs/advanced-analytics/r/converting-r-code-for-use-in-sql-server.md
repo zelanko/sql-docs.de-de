@@ -1,169 +1,169 @@
 ---
-title: Konvertieren von R-Code für gespeicherte Prozeduren – SQL Server Machine Learning Services
-description: Migrieren Sie R-Code an eine gespeicherte SQL Server-Prozedur für die Lösung und den Zugriff auf relationale Daten in SQL Server.
+title: Konvertieren von R-Code für gespeicherte Prozeduren
+description: Migrieren Sie R-Code zu einer SQL Server gespeicherten Prozedur für die Lösungs Bereitstellung und den Datenzugriff auf relationale Daten auf SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ac4c00830c9f678c467a75c1531b97fd3723c0b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a3bd47d8a16a784115136935f669c420cb65e8f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962712"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345116"
 ---
-# <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Konvertieren von R-Code für die Ausführung in Instanzen von SQL Server (Datenbankintern)
+# <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Konvertieren von R-Code für die Ausführung in SQL Server Instanzen (in der Datenbank)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel enthält die Anleitung auf hoher Ebene zum Ändern von R-Code in SQL Server funktionieren. 
+Dieser Artikel enthält allgemeine Anleitungen zum Ändern von R-Code für die Arbeit in SQL Server. 
 
-Wenn Sie R-Code von R Studio oder einer anderen Umgebung mit SQL Server verschieben, meistens funktioniert der Code ohne weitere Änderung: z. B. wenn der Code einfach ist, z. B. eine Funktion, die einige akzeptiert Eingaben und gibt einen Wert zurück. Es ist auch einfacher, Port-Lösungen, in denen die **RevoScaleR** oder **MicrosoftML** -Pakete, die Ausführung in unterschiedliche Ausführungskontexte mit minimalen Änderungen zu unterstützen.
+Wenn Sie r-Code aus r Studio oder einer anderen Umgebung in SQL Server verschieben, funktioniert der Code meistens ohne weitere Änderung: z. b. wenn der Code einfach ist, z. b. eine Funktion, die einige Eingaben annimmt und einen Wert zurückgibt. Es ist auch einfacher, Lösungen zu portieren, die die **revoscaler** -oder **microsoftml** -Pakete verwenden, die die Ausführung in verschiedenen Ausführungs Kontexten mit minimalen Änderungen unterstützen.
 
-Erfordert jedoch möglicherweise der Code wesentliche Änderungen, wenn eine der folgenden Bedingungen zutrifft:
+Der Code erfordert jedoch möglicherweise wesentliche Änderungen, wenn eine der folgenden Bedingungen zutrifft:
 
-+ Sie verwenden die R-Bibliotheken, die auf das Netzwerk zugreifen, oder, kann nicht auf SQL Server installiert werden.
-+ Der Code führt separate Aufrufe von Datenquellen außerhalb von SQL Server, wie z. B. Excel-Arbeitsblättern, Dateien auf Dateifreigaben und anderen Datenbanken. 
-+ Sie möchten, um den Code auszuführen, der *@script* Parameter der [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) und auch die gespeicherte Prozedur zu parametrisieren.
-+ Die ursprüngliche Projektmappe umfasst mehrere Schritte, die möglicherweise eine effizientere in einer produktionsumgebung, wenn z. B. die Vorbereitung der Daten oder Feature-Entwicklung im Vergleich zu Modell trainieren, bewerten und berichterstellung unabhängig voneinander ausgeführt.
-+ Sie verbessern möchten Optimieren der Leistung von Bibliotheken zu ändern, verwenden die parallele Ausführung oder eine Verarbeitung mit SQL Server-Abladung. 
++ Sie verwenden R-Bibliotheken, die auf das Netzwerk zugreifen oder auf SQL Server nicht installiert werden können.
++ Der Code führt getrennte Aufrufe von Datenquellen außerhalb SQL Server aus, z. b. Excel-Arbeitsblätter, Dateien auf Freigaben und andere Datenbanken. 
++ Sie möchten den Code im *@script* -Parameter von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ausführen und die gespeicherte Prozedur ebenfalls parametrisieren.
++ Die ursprüngliche Lösung umfasst mehrere Schritte, die in einer Produktionsumgebung effizienter sein können, wenn Sie unabhängig ausgeführt werden, wie z. b. Daten Vorbereitung oder Featureentwicklung im Vergleich zu Modell Schulungen,-Bewertungen oder-Berichten.
++ Sie möchten die Leistungsoptimierung verbessern, indem Sie Bibliotheken ändern, eine parallele Ausführung verwenden oder einige Verarbeitungsvorgänge auf SQL Server verlagern. 
 
-## <a name="step-1-plan-requirements-and-resources"></a>Schritt 1: Planen der Anforderungen und Ressourcen
+## <a name="step-1-plan-requirements-and-resources"></a>Schritt 1: Planen von Anforderungen und Ressourcen
 
 **Pakete**
 
-+ Ermitteln, welche Pakete benötigt werden, und stellen Sie sicher, dass sie auf SQL Server funktionieren.
++ Bestimmen Sie, welche Pakete benötigt werden, und stellen Sie sicher, dass Sie auf SQL Server funktionieren.
  
-+ Installieren von Paketen im Voraus auf den Standard-paketbibliothek, die von Machine Learning-Dienste verwendet. Benutzerbibliotheken werden nicht unterstützt.
++ Installieren Sie Pakete vorab in der von Machine Learning Services verwendeten Standardpaket Bibliothek. Benutzer Bibliotheken werden nicht unterstützt.
 
 **Datenquellen** 
 
-+ Wenn Sie beabsichtigen, betten Sie Ihre R-Code in [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), identifizieren Sie primäre und sekundäre Datenquellen. 
++ Wenn Sie Ihren R-Code in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)einbetten möchten, identifizieren Sie primäre und sekundäre Datenquellen. 
 
-    + **Primäre** Datenquellen sind große Datasets, z. B. modelltrainingsdaten oder Eingabedaten für Vorhersagen. Ihr größte Dataset an den Eingabeparameter der zuzuordnen möchten [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + **Primäre** Datenquellen sind große Datasets, wie z. b. Modell Trainingsdaten oder Eingabedaten für Vorhersagen. Planen Sie, das größte DataSet dem Eingabeparameter von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)zuzuordnen.
 
-    + **Sekundäre** Datenquellen sind in der Regel kleiner Datenmengen verwendet werden, z. B. Listen mit Faktoren oder weitere gruppierungsvariablen. 
+    + **Sekundäre** Datenquellen sind in der Regel kleinere Datasets, wie z. b. Listen von Faktoren oder zusätzliche Gruppierungs Variablen. 
     
-    Sp_execute_external_script unterstützt derzeit nur ein einzelnes Dataset als Eingabe für die gespeicherte Prozedur an. Allerdings können Sie auch mehrere skalare oder binäre Eingaben hinzufügen.
+    Derzeit unterstützt sp_execute_external_script nur ein einzelnes Dataset als Eingabe für die gespeicherte Prozedur. Sie können jedoch mehrere skalare oder binäre Eingaben hinzufügen.
 
-    Vor dem Ausführen von gespeicherten Prozeduraufrufen können nicht verwendet werden, als Eingabe für [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Sie können Abfragen, Sichten oder eine andere gültige SELECT-Anweisung verwenden.
+    Aufrufe gespeicherter Prozeduren, denen Execute vorangestellt ist, können nicht als Eingabe für [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)verwendet werden. Sie können Abfragen, Sichten oder eine beliebige andere gültige SELECT-Anweisung verwenden.
 
-+ Bestimmen Sie die Ausgaben, die Sie benötigen. Wenn Sie R-Code mithilfe von Sp_execute_external_script ausführen, kann die gespeicherte Prozedur daher nur einen Datenrahmen ausgeben. Allerdings können Sie auch mehrere skalare Ausgaben, darunter Elemente ausgeben und Modelle im Binärformat als auch andere Skalare Werte, der von R-Code oder SQL Parameter abgeleitet.
++ Bestimmen Sie die benötigten Ausgaben. Wenn Sie R-Code mithilfe von sp_execute_external_script ausführen, kann die gespeicherte Prozedur als Ergebnis nur einen Datenrahmen ausgeben. Sie können jedoch auch mehrere skalare Ausgaben ausgeben, einschließlich Plots und Modelle im Binärformat, sowie andere skalare Werte, die von R-Code oder SQL-Parametern abgeleitet werden.
 
 **Datentypen**
 
 + Stellen Sie eine Prüfliste der möglichen Probleme bei Datentypen zusammen.
 
-    Alle R-Datentypen werden von SQL Server Machine Learning-Dienste unterstützt. Allerdings [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eine größere Vielfalt von Datentypen als R. Aus diesem Grund werden einige implizite datentypkonvertierungen ausgeführt, beim Senden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten an R und umgekehrt. Sie sollten explizit umwandeln oder konvertieren einige Daten. 
+    Alle R-Datentypen werden von SQL Server Machine Learning-Diensten unterstützt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützt jedoch eine größere Vielfalt von Datentypen als R. Daher werden einige implizite Datentyp Konvertierungen beim Senden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Daten an R durchgeführt und umgekehrt. Möglicherweise müssen Sie einige Daten explizit umwandeln oder konvertieren. 
 
-    NULL-Werte werden unterstützt. R verwendet jedoch die `na` repositorytypbibliothek zur Darstellung von eines fehlenden Wert, dem ein NULL-Wert ähnelt.
+    NULL-Werte werden unterstützt. Allerdings verwendet R das `na` Daten Konstrukt, um einen fehlenden Wert darzustellen, der einem NULL-Wert ähnelt.
 
-+ Entfernen Sie die Abhängigkeit von Daten, die von r, z. B. Rowid verwendet werden können und GUID-Datentypen von SQL Server können nicht von R verwendet werden und die Fehler generieren.
++ Entfernen Sie die Abhängigkeit von Daten, die von r nicht verwendet werden können. beispielsweise können ROWID-und GUID-Datentypen aus SQL Server nicht von r genutzt werden und Fehler generieren.
 
     Weitere Informationen finden Sie unter [R-Bibliotheken und-Datentypen](../r/r-libraries-and-data-types.md).
 
-## <a name="step-2-convert-or-repackage-code"></a>Schritt 2: Konvertieren oder neu Verpacken von code
+## <a name="step-2-convert-or-repackage-code"></a>Schritt 2: Code konvertieren oder neu verpacken
 
-Wie viel Sie den Code ändern, hängt davon ab, ob Sie zum Übermitteln von R-Code von einem Remoteclient in den SQL Server-computekontext ausgeführt werden soll, oder möchten den Code als Teil einer gespeicherten Prozedur bereit, die eine bessere Leistung und Sicherheit der Daten bereitstellen können. Umschließen den Code in einer gespeicherten Prozedur stellt einige zusätzlichen Anforderungen. 
+Wie viel Sie Ihren Code ändern, hängt davon ab, ob Sie den R-Code von einem Remote Client zur Ausführung im SQL Server computekontext übermitteln möchten, oder ob der Code als Teil einer gespeicherten Prozedur bereitgestellt werden soll, wodurch eine bessere Leistung und Datensicherheit erzielt werden kann. Wenn Sie Ihren Code in eine gespeicherte Prozedur Umpacken, werden einige zusätzliche Anforderungen auferlegt. 
 
-+ Definieren Sie Ihre primären Eingabedaten als SQL-Abfrage, wo immer dies möglich ist, um datenverschiebungen zu vermeiden.
++ Definieren Sie möglichst die primären Eingabedaten als SQL-Abfrage, um Daten Verschiebungen zu vermeiden.
 
-+ Bei der Ausführung von R in einer gespeicherten Prozedur können Sie über mehrere übergeben **skalare** Eingaben. Für alle Parameter, die Sie in der Ausgabe verwenden möchten, fügen die **Ausgabe** Schlüsselwort. 
++ Wenn Sie R in einer gespeicherten Prozedur ausführen, können Sie mehrere **skalare** Eingaben durchlaufen. Fügen Sie für alle Parameter, die Sie in der Ausgabe verwenden möchten, das **Output** -Schlüsselwort hinzu. 
 
-    Z. B. die folgenden skalaren Eingabe `@model_name` enthält der Name des Modells, der auch die Ausgabe in einer eigenen Spalte in den Ergebnissen ist:
+    Beispielsweise enthält die folgende skalare Eingabe `@model_name` den Modellnamen, der auch in der eigenen Spalte in den Ergebnissen ausgegeben wird:
 
     ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
     ``` 
 
-+ Alle Variablen, die Sie als Parameter der gespeicherten Prozedur übergeben [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) müssen Variablen im R-Code zugeordnet werden. Standardmäßig werden die Variablen nach Namen zugeordnet.
++ Alle Variablen, die Sie als Parameter der gespeicherten Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) übergeben, müssen Variablen im R-Code zugeordnet werden. Standardmäßig werden die Variablen nach Namen zugeordnet.
 
-    Alle Spalten im Eingabedataset müssen auch auf Variablen im R-Skript zugeordnet werden.  Nehmen wir beispielsweise an, dass Ihr R-Skript enthält, eine Formel wie diese:
+    Alle Spalten im Eingabe DataSet müssen auch Variablen im R-Skript zugeordnet werden.  Nehmen Sie beispielsweise an, das R-Skript enthält eine Formel wie die folgende:
 
     ```R
     formula <- ArrDelay ~ CRSDepTime + DayOfWeek + CRSDepHour:DayOfWeek
     ```
     
-    Ein Fehler wird ausgelöst, wenn das Eingabe-Dataset keine Spalten mit den entsprechenden Namen ArrDelay, CRSDepTime, DayOfWeek, CRSDepHour und DayOfWeek enthält.
+    Wenn das Eingabe DataSet keine Spalten mit den übereinstimmenden Namen arrdelay, crsdeptime, DayOfWeek, crsdephour und DayOfWeek enthält, wird ein Fehler ausgelöst.
 
-+ In einigen Fällen muss ein Ausgabeschema im Voraus für die Ergebnisse definiert werden.
++ In einigen Fällen muss ein Ausgabe Schema für die Ergebnisse im Voraus definiert werden.
 
-    Z. B. um die Daten in eine Tabelle einzufügen, müssen Sie verwenden die **WITH RESULT SET** -Klausel, um das Schema anzugeben.
+    Wenn Sie z. b. die Daten in eine Tabelle einfügen möchten, müssen Sie die **with Result Set** -Klausel verwenden, um das Schema anzugeben.
 
-    Das Ausgabeschema ist auch erforderlich, wenn das R-Skript, das Argument verwendet `@parallel=1`. Grund hierfür ist, dass mehrere Prozesse von SQL Server zum Ausführen der Abfrage möglicherweise parallel erstellt und die Ergebnisse am Ende gesammelten werden. Aus diesem Grund muss das Ausgabeschema vorbereitet werden, bevor die parallelen Prozesse erstellt werden können.
+    Das Ausgabe Schema ist auch erforderlich, wenn das R-Skript das `@parallel=1`-Argument verwendet. Grund hierfür ist, dass mehrere Prozesse von SQL Server zum Ausführen der Abfrage möglicherweise parallel erstellt und die Ergebnisse am Ende gesammelten werden. Daher muss das Ausgabe Schema vorbereitet werden, bevor die parallelen Prozesse erstellt werden können.
     
-    In anderen Fällen können Sie das ergebnisschema weglassen, mit der Option **RESULT SETS UNDEFINED**. Diese Anweisung gibt das Dataset aus dem R-Skript ohne benennen die Spalten oder Angeben der SQL-Datentypen zurück.
+    In anderen Fällen können Sie das Ergebnis Schema unterdrücken, indem Sie die-Option **mit nicht definierten Resultsets**verwenden. Diese Anweisung gibt das DataSet aus dem R-Skript zurück, ohne die Spalten zu benennen oder die SQL-Datentypen anzugeben.
 
-+ Erwägen Sie die Generierung der zeitlichen Steuerung oder Tracking-Daten, die mithilfe von T-SQL anstelle von r
++ Ziehen Sie in Erwägung, Zeit-oder Überwachungsdaten mit T-SQL anstelle von R zu erzeugen.
 
-    Beispielsweise könnten Sie übergeben die Systemzeit oder andere Informationen, die für die Überwachung und -Speicher verwendet wird, durch Hinzufügen eines T-SQL-Aufrufs, das auf die Ergebnisse durchlaufen, anstatt die ähnliche Daten im R-Skript generieren. 
+    Beispielsweise können Sie die Systemzeit oder andere Informationen, die für die Überwachung und Speicherung verwendet werden, übergeben, indem Sie einen T-SQL-Aufruf hinzufügen, der an die Ergebnisse weitergeleitet wird, anstatt ähnliche Daten im R-Skript zu erstellen. 
 
 **Verbessern der Leistung und Sicherheit**
 
-+ Vermeiden Sie vorhersagen oder Zwischenergebnisse in eine Datei schreiben. Schreiben Sie vorhersagen stattdessen in eine Tabelle, um datenverschiebungen zu vermeiden.
++ Schreiben Sie keine Vorhersagen oder Zwischenergebnisse in die Datei. Schreiben Sie stattdessen Vorhersagen in eine Tabelle, um Daten Verschiebungen zu vermeiden.
 
-+ Führen Sie alle Abfragen im voraus, und überprüfen Sie die SQL Server-Abfragepläne, um Aufgaben zu identifizieren, die parallel ausgeführt werden können.
++ Führen Sie alle Abfragen im Voraus aus, und überprüfen Sie die SQL Server Abfrage Pläne, um Aufgaben zu identifizieren, die parallel ausgeführt werden können.
 
-    Wenn die Eingabeabfrage parallelisiert werden kann, legen Sie `@parallel=1` als Teil Ihrer Argumente auf [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). 
+    Wenn die Eingabe Abfrage parallelisiert werden kann, legen `@parallel=1` Sie als Teil ihrer Argumente auf [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)fest. 
 
     Eine Parallelverarbeitung mit diesem Flag ist in der Regel jedes Mal möglich, wenn SQL Server mit partitionierten Tabellen arbeiten oder eine Abfrage zwischen mehreren Prozessen verteilen kann und die Ergebnisse am Ende aggregiert. Eine Parallelverarbeitung mit diesem Flag ist nicht möglich, wenn Sie Modelle mithilfe von Algorithmen trainieren, die ein Lesen aller Daten voraussetzen, oder wenn Sie Aggregate erstellen müssen.
 
-+ Überprüfen Sie Ihren R-Code, um Schritte zu identifizieren, die unabhängig oder effizienter ausgeführt werden können, und verwenden Sie dazu einen separat gespeicherten Prozeduraufruf. Beispielsweise erhalten Sie möglicherweise eine bessere Leistung durch Featureentwicklung oder featureextraktion getrennt, und speichern die Werte in einer Tabelle.
++ Überprüfen Sie Ihren R-Code, um Schritte zu identifizieren, die unabhängig oder effizienter ausgeführt werden können, und verwenden Sie dazu einen separat gespeicherten Prozeduraufruf. Beispielsweise können Sie eine bessere Leistung erzielen, indem Sie die Featureentwicklung oder die featureextraktion separat durchgeführt und die Werte in einer Tabelle speichern.
 
-+ Suchen Sie nach Möglichkeiten zur Verwendung von T-SQL anstelle von R-Code für satzbasierte Berechnungen.
++ Suchen Sie nach Möglichkeiten, T-SQL anstelle von R-Code für Satz basierte Berechnungen zu verwenden.
 
-    Beispielsweise diese R-Lösung zeigt, wie eine benutzerdefinierte T-SQL-Funktionen und R kann die gleichen Feature-Entwicklungsaufgabe ausführen: [Exemplarische Data Science End-to-End-Vorgehensweise](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md).
+    Diese R-Lösung zeigt z. b., wie benutzerdefinierte T-SQL-Funktionen und R dieselbe Funktions Entwicklungsaufgabe ausführen können: Exemplarische [Data Science-Ende-zu-Ende-](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)Vorgehensweise.
 
-+ Ersetzen Sie nach Möglichkeit konventionelle R-Funktionen mit **ScaleR** Funktionen, die verteilte Ausführung unterstützen. Weitere Informationen finden Sie unter [Vergleich von Basis-R und Scale R-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
++ Ersetzen Sie nach Möglichkeit herkömmliche R-Funktionen durch **Scaler** -Funktionen, die die verteilte Ausführung unterstützen. Weitere Informationen finden Sie unter [Vergleich der r-Funktionen der Basis-r und Skalierung](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r).
 
-+ Wenden Sie sich an einem Datenbankentwickler, um zu bestimmen, Möglichkeiten zum Verbessern der Leistung mithilfe von SQL Server-Funktionen wie z. B. [Speicheroptimierte Tabellen](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), oder, wenn Sie Enterprise Edition verfügen [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
++ Wenden Sie sich an einen Datenbankentwickler, um Möglichkeiten zum Verbessern der Leistung zu ermitteln, indem Sie SQL Server Features wie [Speicher optimierte Tabellen](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)verwenden, oder wenn Sie Enterprise Edition [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
 
-    Weitere Informationen finden Sie unter [Tipps zur Optimierung von SQL Server und Tricks für die Analytics-Dienste](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+    Weitere Informationen finden Sie unter [SQL Server Optimierungs Tipps und Tricks für Analysedienste](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services) .
 
 ### <a name="step-3-prepare-for-deployment"></a>Schritt 3: Vorbereiten der Bereitstellung
 
 + Benachrichtigen Sie den Administrator, damit Pakete installiert und im Voraus getestet werden, bevor Sie Ihren Code bereitstellen. 
 
-    In einer Entwicklungsumgebung befindet kann es zum Installieren von Paketen als Teil des Codes kein Problem sein, aber dies ist kein empfehlenswertes Verfahren in einer produktionsumgebung. 
+    In einer Entwicklungsumgebung kann es sinnvoll sein, Pakete als Teil Ihres Codes zu installieren, aber dies ist eine bewährte Vorgehensweise in einer Produktionsumgebung. 
 
-    Benutzerbibliotheken werden nicht unterstützt, unabhängig davon, ob Sie mithilfe einer gespeicherten Prozedur oder R-Code in den SQL Server-computekontext ausgeführt werden.
+    Benutzer Bibliotheken werden nicht unterstützt, unabhängig davon, ob Sie eine gespeicherte Prozedur verwenden oder R-Code im SQL Server computekontext ausführen.
 
-**Packen Sie Ihren R-Code in einer gespeicherten Prozedur**
+**Verpacken des R-Codes in einer gespeicherten Prozedur**
 
-+ Wenn Ihr Code relativ einfach ist, können Sie es in einer T-SQL eine benutzerdefinierte Funktion ohne Änderung einbetten, wie in diesen Beispielen beschrieben:
++ Wenn Ihr Code relativ einfach ist, können Sie ihn ohne Änderung in eine benutzerdefinierte T-SQL-Funktion einbetten, wie in diesen Beispielen beschrieben:
 
-    + [Erstellen Sie eine R-Funktion, die in RxExec ausgeführt wird.](../tutorials/deepdive-create-a-simple-simulation.md)
-    + [Entwickeln Sie Features mithilfe von T-SQL und R](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [Erstellen einer R-Funktion, die in rxexec ausgeführt wird](../tutorials/deepdive-create-a-simple-simulation.md)
+    + [Funktionsentwicklung mit T-SQL und R](../tutorials/sqldev-create-data-features-using-t-sql.md)
 
-+ Wenn der Code komplexer ist, verwenden Sie das R-Paket **Sqlrutils** konvertieren Ihren Code. Dieses Paket dient erfahrene R-Benutzer, die gute gespeicherte Prozedur-Code schreiben zu können. 
++ Wenn der Code komplexer ist, verwenden Sie das R-Paket **sqlrutils** , um den Code zu konvertieren. Dieses Paket ist so konzipiert, dass erfahrene R-Benutzer guten Code für gespeicherte Prozeduren schreiben können. 
 
-    Der erste Schritt besteht, Schreiben Sie Ihren R-Code als eine einzelne Funktion mit klar definierten Eingaben und Ausgaben.
+    Der erste Schritt besteht darin, ihren R-Code als einzelne Funktion mit klar definierten Eingaben und Ausgaben umzuschreiben.
 
-    Verwenden Sie dann die **Sqlrutils** Paket, um das richtige Format der Eingaben und Ausgaben zu generieren. Die **Sqlrutils** Paket Code der Abschluss der gespeicherten Prozedur für Sie generiert und können auch die gespeicherte Prozedur in der Datenbank registrieren. 
+    Verwenden Sie dann das **sqlrutils** -Paket, um die Eingabe und die Ausgaben im richtigen Format zu generieren. Das **sqlrutils** -Paket generiert den gesamten Code für die gespeicherte Prozedur und kann auch die gespeicherte Prozedur in der-Datenbank registrieren. 
 
-    Weitere Informationen und Beispiele finden Sie unter [Sqlrutils (SQL)](ref-r-sqlrutils.md).
+    Weitere Informationen und Beispiele finden Sie unter [sqlrutils (SQL)](ref-r-sqlrutils.md).
 
-**Integrieren in andere workflows**
+**Integrieren in andere Workflows**
 
-+ Nutzen Sie T-SQL-Tools und ETL-Prozesse. Führen Sie die Feature-Engineering, featureextraktion und DatenBereinigung als Teil von Datenworkflows mit im voraus.
++ Nutzen Sie T-SQL-Tools und ETL-Prozesse. Führen Sie die Featureentwicklung, die featureextraktion und die Datenbereinigung im Voraus als Teil von Daten Workflows aus.
 
-    Bei der Arbeit in eine dedizierte R-Entwicklungsumgebung wie z. B. [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] oder RStudio, Sie können Abrufen von Daten auf Ihrem Computer, iterativ, zu analysieren und und zu schreiben oder die Ergebnisse werden angezeigt. 
+    Wenn Sie in einer dedizierten R-Entwicklungsumgebung wie [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] oder rstudio arbeiten, können Sie Daten auf Ihren Computer überführen, iterativ analysieren und dann die Ergebnisse schreiben oder anzeigen. 
     
-    Allerdings beim eigenständigen R-Code zu SQL Server migriert wird, kann Großteil dieses Prozesses werden vereinfacht oder an andere SQL Server-Tools delegiert. 
+    Wenn jedoch eigenständiger R-Code zu SQL Server migriert wird, kann ein Großteil dieses Prozesses vereinfacht oder an andere SQL Server Tools delegiert werden. 
 
-+ Verwenden Sie sichere, asynchrone Visualisierung Strategien.
++ Verwenden Sie sichere, asynchrone Visualisierungs Strategien.
 
-    Benutzer von SQL Server häufig können nicht auf Dateien auf dem Server zugreifen, und SQL-Clienttools in der Regel nicht unterstützt das R-Grafikgerät. Wenn Sie Diagramme oder andere Grafik als Teil der Lösung generiert haben, sollten Sie Sie exportieren die Diagramme als binäre Daten und das Speichern in einer Tabelle oder schreiben.
+    Benutzer von SQL Server können häufig nicht auf Dateien auf dem Server zugreifen, und die SQL-Client Tools unterstützen das R-Grafikgerät in der Regel nicht. Wenn Sie Diagramme oder andere Grafiken als Teil der Projekt Mappe generieren, sollten Sie die Plots als Binärdaten exportieren und in einer Tabelle speichern oder schreiben.
 
-+ Umschließen Sie Vorhersage und Bewertung Funktionen in gespeicherten Prozeduren für den direkten Zugriff von Anwendungen.
++ Umschließen von Vorhersage-und Bewertungs Funktionen in gespeicherten Prozeduren für direkten Zugriff durch Anwendungen.
 
 ### <a name="other-resources"></a>Weitere Ressourcen
 
-Beispiele wie eine R-Lösung in SQL Server bereitgestellt werden kann, finden Sie in diesen Beispielen:
+Beispiele für die Bereitstellung einer R-Lösung in SQL Server finden Sie in den folgenden Beispielen:
 
-+ [Erstellen eines prädiktiven Modells für skiverleih mithilfe von R und SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
++ [Erstellen eines Vorhersagemodells für Ski Rental Business mithilfe von R und SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [Datenbankinterne Analysen für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md) wird verdeutlicht, wie Sie Ihren R-Code etwas modularer durch Einbinden in gespeicherten Prozeduren
++ [Daten bankübergreifende Analysen für SQL-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md) Veranschaulicht, wie Sie Ihren R-Code modularer machen können, indem Sie ihn in gespeicherten Prozeduren packen.
 
-+ [End-to-End Data Science-Lösung](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) enthält einen Vergleich der Featureentwicklung in R und T-SQL
++ [End-to-End-Data Science-Lösung](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) Enthält einen Vergleich der Featureentwicklung in R und T-SQL.

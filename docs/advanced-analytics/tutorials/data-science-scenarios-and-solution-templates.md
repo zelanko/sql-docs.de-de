@@ -1,104 +1,104 @@
 ---
-title: Szenarios für Data Science und Lösungsvorlagen – SQL Server-Machine Learning
+title: Data Science-Szenarien und Lösungs Vorlagen
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e50344bc94f25e6efd8303f93506401448f94fd1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962291"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344729"
 ---
-# <a name="data-science-scenarios-and-solution-templates"></a>Szenarios für Data Science und Lösungsvorlagen
+# <a name="data-science-scenarios-and-solution-templates"></a>Data Science-Szenarien und Lösungs Vorlagen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Vorlagen sind Beispiellösungen, die bewährte Methoden veranschaulichen und Bausteine für die schnelle Implementierung einer Lösung bereitstellen. Jede Vorlage wurde entwickelt, um ein bestimmtes Problem, für einen bestimmten vertikal oder Branche zu lösen. Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. Mithilfe dieser Vorlagen erfahren, wie [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] funktioniert. Klicken Sie dann gerne die Vorlage, passen Ihr eigenes Szenario an, und erstellen Sie eine benutzerdefinierte Lösung anpassen. 
+Vorlagen sind Beispiellösungen, die bewährte Methoden veranschaulichen und Bausteine für die schnelle Implementierung einer Lösung bereitstellen. Jede Vorlage ist so konzipiert, dass ein bestimmtes Problem für eine bestimmte vertikale oder Branche gelöst wird. Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. Verwenden Sie diese Vorlagen, um [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] zu erfahren, wie funktioniert. Dann können Sie die Vorlage so anpassen, dass Sie Ihrem eigenen Szenario entspricht, und eine benutzerdefinierte Lösung erstellen. 
 
-Jede Lösung enthält Beispieldaten, R-Code oder Python-Code und SQL gespeicherten Prozeduren aus, falls zutreffend. Der Code kann in Ihrer bevorzugten Entwicklungsumgebung R oder Python zusammen mit Berechnungen in SQL Server ausgeführt werden. In einigen Fällen können Sie Code direkt mithilfe von T-SQL und SQL-Clienttool, wie z. B. SQL Server Management Studio ausführen.
+Jede Lösung umfasst Beispiel Daten, R-Code oder python-Code und ggf. gespeicherte SQL-Prozeduren. Der Code kann in Ihrer bevorzugten R-oder python-Entwicklungsumgebung ausgeführt werden, wobei Berechnungen in SQL Server durchgeführt werden. In einigen Fällen können Sie Code direkt mit T-SQL und einem beliebigen SQL-Client Tool, wie z. b. SQL Server Management Studio, ausführen.
 
 > [!TIP]
 > 
-> Die meisten der Vorlagen gibt es mehrere Versionen unterstützen sowohl für lokale und cloud-Plattformen für Machine Learning. Beispielsweise können Sie die Projektmappe, die mit nur SQL Server erstellen, oder Sie können die Lösung in Microsoft R Server oder in Azure Machine Learning erstellen.
+> Die meisten Vorlagen sind in mehreren Versionen enthalten, die sowohl lokale als auch cloudbasierte Plattformen für Machine Learning unterstützen. Beispielsweise können Sie die Projekt Mappe nur mit SQL Server erstellen, oder Sie können die Projekt Mappe in Microsoft R Server oder Azure Machine Learning erstellen.
 
-+ Für den Download und installationsanweisungen finden Sie unter [Gewusst wie: Verwenden Sie die Vorlagen](#bkmk_HowTo).
++ Anweisungen zum herunterladen und einrichten finden Sie unter [How to use the Templates](#bkmk_HowTo).
 
 ## <a name="fraud-detection"></a>Betrugserkennung
 
-[Online Fraud Detection Template-Vorlage (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
+[Vorlage für die Online Betrugserkennung (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
-**Was:** Die Möglichkeit, betrügerische Transaktionen zu erkennen ist wichtig für Onlineunternehmen. Um verbrauchsbasierte kostenzuteilung Verluste zu verringern, müssen Unternehmen Transaktionen, die vorgenommen wurden, entweder über gestohlene Zahlungsmittel oder Anmeldeinformationen schnell zu identifizieren. Wenn die betrügerische Transaktionen erkannt werden, ergreifen Unternehmen in der Regel Maßnahmen, um bestimmte Konten so früh wie möglich zu blockieren, um weitere Verluste zu vermeiden. In diesem Szenario erfahren Sie, wie Sie Daten von online-kaufvorgängen verwenden, um die möglichen Betrug zu erkennen.
+**Worüber** Die Fähigkeit zum Erkennen betrügerischer Transaktionen ist wichtig für Online Unternehmen. Um die Kosten Verluste zu verringern, müssen Unternehmen Transaktionen schnell ermitteln, die mithilfe von gestohlenen Zahlungsinstrumenten oder Anmelde Informationen erstellt wurden. Wenn die betrügerische Transaktionen erkannt werden, ergreifen Unternehmen in der Regel Maßnahmen, um bestimmte Konten so früh wie möglich zu blockieren, um weitere Verluste zu vermeiden. In diesem Szenario erfahren Sie, wie Sie Daten aus Online Kauf Transaktionen verwenden, um wahrscheinliche Betrugsfälle zu ermitteln.
 
-**So geht's:**  Die Betrugserkennung wird als binäres Klassifizierungsproblem gelöst. Die Methodik, die in dieser Vorlage verwendet wird, kann problemlos auf die Betrugserkennung in anderen Domänen angewendet werden.
+**Dass**  Die Betrugserkennung wird als binäres Klassifizierungsproblem gelöst. Die Methodik, die in dieser Vorlage verwendet wird, kann problemlos auf die Betrugserkennung in anderen Domänen angewendet werden.
 
 
-## <a name="campaign-optimization"></a>Kampagnenoptimierung
+## <a name="campaign-optimization"></a>Kampagnen Optimierung
 
-[Vorhersagen, wie und wann Leads kontaktieren](https://microsoft.github.io/r-server-campaign-optimization/)
+[Vorhersagen, wie und wann Sie Leads kontaktieren sollten](https://microsoft.github.io/r-server-campaign-optimization/)
 
-**Was:** Diese Lösung verwendet die Versicherungsbranche Daten zur Vorhersage von Leads basierend auf demografischen Daten, die historische Antwortdaten und produktspezifische Details.  Empfehlungen werden auch generiert, um anzugeben, den besten Kanal und Zeitpunkt Ansatz Benutzer Kaufverhalten zu beeinflussen.
+**Worüber** Diese Lösung verwendet Versicherungs Industrie-Daten, um Leads basierend auf demografischen Daten, Verlaufs Daten und produktspezifischen Details vorherzusagen.  Außerdem werden Empfehlungen generiert, um den besten Kanal und die beste Zeit für die Benutzer zu beeinflussen, um das Kaufverhalten zu beeinflussen.
 
-**So geht's:** Die Lösung erstellt und mehrere Modelle verglichen. Die Lösung zeigt auch, automatisierte datenintegrations- und Verwenden von gespeicherten Prozeduren datenvorbereitung. Beispiele für parallele werden für SQL Server in der Datenbank, in Azure und HDInsight Spark bereitgestellt. 
+**Dass** Mit der Lösung werden mehrere Modelle erstellt und verglichen. Die Lösung veranschaulicht auch die automatisierte Datenintegration und die Daten Vorbereitung mithilfe gespeicherter Prozeduren. Parallele Beispiele werden für SQL Server in-Database, in Azure und hdinsight Spark bereitgestellt. 
 
-## <a name="health-care-predict-length-of-stay-in-hospital"></a>Gesundheitswesen: prognostizieren der Länge des Aufenthalts im Krankenhaus 
+## <a name="health-care-predict-length-of-stay-in-hospital"></a>Gesundheitswesen: Vorhersage der Länge des Aufenthalts im Krankenhaus 
 
-[Prognostizieren der Aufenthaltsdauer in Kliniken](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
+[Vorhersagen der Länge des Aufenthalts in Krankenhäusern](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
 
-**Was:** Genau Vorhersagen der Patienten langfristige ein Krankenhausaufenthalt notwendig ist, möglicherweise ist ein wichtiger Teil sowohl Sorgfalt und Planung. Administratoren müssen in der Lage, um zu bestimmen, welche Einrichtungen mehr Ressourcen benötigen, und Pflegekräfte entsprechende sicherstellen möchten, dass sie die Anforderungen von Patienten erfüllen können.
+**Worüber** Die genaue Vorhersage, welche Patienten die langfristige Hospitalisierung benötigen, ist ein wichtiger Bestandteil der Pflege und Planung. Administratoren müssen in der Lage sein, zu bestimmen, welche Einrichtungen mehr Ressourcen benötigen, und die Betreuer möchten sicherstellen, dass Sie die Anforderungen von Patienten erfüllen können.
 
-**So geht's:** Diese Lösung verwendet die Data Science-VM, und eine Instanz von SQL Server mit Machine Learning aktiviert. Darüber hinaus eine Reihe von Power BI-Berichten, die Sie für die Interaktion mit einem bereitgestellten Modell verwenden können.
+**Dass** Diese Lösung verwendet die Data Science Virtual Machine und enthält eine Instanz von SQL Server mit aktiviertem Machine Learning. Sie enthält auch eine Reihe von Power BI-Berichten, die Sie für die Interaktion mit einem bereitgestellten Modell verwenden können.
 
-## <a name="customer-churn"></a>Kundenabwanderung
+## <a name="customer-churn"></a>Kunden Abwanderung
 
-[Kundenabwanderung Vorhersagen Debitorenvorlage (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
+[Vorhersage Vorlage für Kunden Abwanderung (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
-**Was:** Analysieren und Vorhersagen von kundenabwanderung ist wichtig für jede Branche, in denen der Verlust von Kunden an Wettbewerber verwaltet und verhindert werden muss: Banking, Telekommunikation und im Einzelhandel, um nur einige zu nennen. Das Ziel der Abwanderungsanalyse ist es, zu identifizieren, welche Kunden möglicherweise abwandern und anschließend angemessene Maßnahmen einzuleiten, um diese Kunden zu behalten und weiterhin Geschäfte mit ihnen zu machen.
+**Worüber** Das analysieren und Vorhersagen der Kunden Abwanderung ist in jeder Branche wichtig, in der der Verlust der Kunden an Mitbewerber verwaltet und verhindert werden muss: Banking, Telekommunikation und Einzelhandel, um nur einige zu nennen. Das Ziel der Abwanderungsanalyse ist es, zu identifizieren, welche Kunden möglicherweise abwandern und anschließend angemessene Maßnahmen einzuleiten, um diese Kunden zu behalten und weiterhin Geschäfte mit ihnen zu machen.
 
-**So geht's:** Diese Vorlage formuliert, das Problem der kundenabwanderung als eine **binärklassifizierung** Problem. Es werden Beispieldaten aus zwei Quellen verwendet, Kundendemografie und Kundentransaktionen, um zu klassifizieren, ob Kunden wahrscheinlich oder eher unwahrscheinlich abwandern.
+**Dass** Diese Vorlage formuliert das Änderungs Problem als **binäres Klassifizierungs** Problem. Es werden Beispieldaten aus zwei Quellen verwendet, Kundendemografie und Kundentransaktionen, um zu klassifizieren, ob Kunden wahrscheinlich oder eher unwahrscheinlich abwandern.
   
 ## <a name="predictive-maintenance"></a>Vorbeugende Wartung
 
-[Vorlage zur vorbeugenden Wartung (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
+[Vorlage für vorbeugende Wartung (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
-**Was:** Vorbeugende Wartung zielt darauf ab, erhöhen Sie die Effizienz von Wartungstasks, indem der Vergangenheit aufgetretene Fehler gesammelt, und verwenden diese Informationen, um vorherzusagen, wann oder wo bei einem Gerät möglicherweise Fehler auftreten. Die Möglichkeit Veraltung von Geräten vorherzusagen, ist besonders nützlich für Anwendungen, die auf verteilten Daten oder Sensoren basieren. Diese Methode kann auch zum Überwachen oder Vorhersagen Fehler in IoT (Internet of Things)-Geräte angewendet werden.
+**Worüber** Bei der vorbeugenden Wartung soll die Effizienz von Wartungs Tasks gesteigert werden, indem frühere Ausfälle aufgezeichnet werden und diese Informationen verwendet werden, um vorherzusagen, wann oder wo ein Gerät ausfällt. Die Möglichkeit zur Vorhersage der Geräte Alterung ist besonders nützlich für Anwendungen, die auf verteilten Daten oder Sensoren basieren. Diese Methode kann auch zum Überwachen oder Vorhersagen von Fehlern in IOT-Geräten (Internet der Dinge) angewendet werden.
 
-**So geht's:** Diese Lösung konzentriert sich auf die Beantwortung der Frage "Wann wird ein in Betrieb genommener Computer einen Fehler?" Die Eingabedaten stellen simulierte Sensormessungen für Flugzeugtriebwerke dar. Daten aus der Überwachung der Engine aktuellen betriebsbedingungen, z. B. die aktuelle Arbeitszyklus, Einstellungen und sensormessungen, werden zum Erstellen von drei Typen von Vorhersagemodellen verwendet:
+**Dass** Diese Lösung konzentriert sich auf die Beantwortung der Frage "Wann wird ein Dienst interner Computer nicht ausgeführt?". Die Eingabedaten stellen simulierte Sensormessungen für Flugzeugtriebwerke dar. Die Daten, die aus der Überwachung der aktuellen Vorgangs Bedingungen der Engine abgerufen werden, z. b. der aktuelle Arbeitszyklen, die Einstellungen und die Sensormessungen, werden verwendet, um drei Typen von Vorhersagemodellen zu erstellen:
 
--   **Regressionsmodelle**, um vorherzusagen, wie viel länger ein Triebwerk arbeitet, bis es ausfällt. Das Beispielmodell prognostiziert die Metrik "Restlebensdauer" (RUL), auch als "Zeit zum Fehler" (TTF) bezeichnet.
+-   **Regressionsmodelle**, um vorherzusagen, wie viel länger ein Triebwerk arbeitet, bis es ausfällt. Das Beispielmodell sagt die Metrik "verbleibende nutzbare Lebensdauer" (rul), die auch als "Time to Failure" (ttf) bezeichnet wird.
   
 -   **Klassifizierungsmodelle**, um vorherzusagen, ob ein Triebwerk womöglich ausfällt.
   
-    Die **binäres klassifizierungsmodell** prognostiziert, ob ein Triebwerk innerhalb eines bestimmten Zeitraums ausfällt.
+    Das **binäre Klassifizierungs Modell** prognostiziert, ob ein Modul innerhalb eines bestimmten Zeitrahmens ausfällt.
 
-    Die **mehrklassige klassifikationsmodell** vorhersagt, ob ein bestimmtes Triebwerk möglicherweise fehl, und ein wahrscheinliches Zeitfenster des Fehlers bietet. Für einen bestimmten Tag können Sie z.B. vorhersagen, ob ein Gerät an diesem bestimmten Tag womöglich ausfallen wird oder innerhalb einer Zeitspanne ab diesem bestimmten Tag.
+    Das **Multi-Class-Klassifizierungs Modell** prognostiziert, ob ein bestimmtes Modul möglicherweise fehlschlägt, und stellt ein wahrscheinliches Zeitfenster des Fehlers bereit. Für einen bestimmten Tag können Sie z.B. vorhersagen, ob ein Gerät an diesem bestimmten Tag womöglich ausfallen wird oder innerhalb einer Zeitspanne ab diesem bestimmten Tag.
 
 ## <a name="energy-demand-forecasting"></a>Vorhersagen des Energiebedarfs
 
-[Vorhersage des Energiebedarfs-Vorlage mit der SQL Server R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
+[Vorhersage Vorlage für Energienachfrage mit SQL Server R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**Was:** : Für die nachfragevorhersage ist ein wichtiges Problem in verschiedenen Domänen, einschließlich der Energie, Verkaufs- und -Dienste. Genaue Vorhersage hilft Unternehmen, die eine bessere Planung, ressourcenzuweisung, Produktion durchführen und andere wichtige geschäftsentscheidungen zu treffen. Im Energiesektor ist die nachfragevorhersage für Energie Speicherkosten zu verringern und Ausgleichen von Angebot und Nachfrage entscheidend.
+**Was:** : Die Bedarfs Vorhersage ist ein wichtiges Problem in verschiedenen Domänen, einschließlich Energie, Einzelhandel und Diensten. Die genaue Nachfrage nach Bedarf hilft Unternehmen, eine bessere Produktionsplanung und Ressourcen Zuordnung durchzuführen und andere wichtige geschäftliche Entscheidungen zu treffen. Im Energiesektor ist die Bedarfs Vorhersage wichtig, um die Energiespeicher Kosten zu senken und die Versorgung und Nachfrage auszugleichen.
 
-**So geht's:** Diese Vorlage verwendet SQL Server R Services, um den Bedarf an Strom vorherzusagen. Das Modell für die Vorhersage verwendet wird, eine random Forest-Regression-Modell basierend auf **RxDForest**, eine hohe Leistung Machine learning-Algorithmus, die in Microsoft R Server enthalten. Die Lösung umfasst einen Bedarfs-Simulator sowie alle erforderlichen R- und T-SQL-Codes, um ein Modell zu trainieren sowie gespeicherte Prozeduren, die Sie zum Generieren und Melden von Vorhersagen verwenden können. 
+**Dass** Diese Vorlage verwendet SQL Server R Services, um die Nachfrage nach Strom vorherzusagen. Das für Vorhersagen verwendete Modell ist ein zufälliges Gesamtstruktur-Regressionsmodell, das auf **rxdforest**basiert, einem hochleistungsfähigen Machine Learning-Algorithmus, der in Microsoft R Server enthalten ist. Die Lösung umfasst einen Bedarfs-Simulator sowie alle erforderlichen R- und T-SQL-Codes, um ein Modell zu trainieren sowie gespeicherte Prozeduren, die Sie zum Generieren und Melden von Vorhersagen verwenden können. 
 
 
-## <a name="bkmk_HowTo"></a>Gewusst wie: Verwenden Sie die Vorlagen
+## <a name="bkmk_HowTo"></a>Verwenden der Vorlagen
 
 Zum Herunterladen der Dateien in den einzelnen Vorlagen können Sie GitHub-Befehle verwenden, oder Sie öffnen den Link und klicken auf **Download Zip** (Herunterladen der ZIP-Dateien), um alle Dateien auf Ihrem Computer zu speichern.  Wenn die Projektmappe heruntergeladen wurde, enthält sie in der Regel folgende Ordner:
   
--   **Daten**: Enthält die Beispieldaten für jede Anwendung.
+-   **Daten**: Enthält die Beispiel Daten für jede Anwendung.
   
--   **R**: Enthält alle Entwicklungscodes von, die Sie für die Lösung benötigen. Die Projektmappe benötigt die Bibliotheken, die von Microsoft R Server bereitgestellt werden, doch sie kann in jeder beliebigen R-IDE geöffnet und bearbeitet werden. Der R-Code wurde optimiert, sodass Berechnungen „datenbankintern“ durch Festlegen des Computekontexts auf eine SQL Server-Instanz ausgeführt werden.
+-   **R**: Enthält den gesamten R-Entwicklungscode, den Sie für die Lösung benötigen. Die Projektmappe benötigt die Bibliotheken, die von Microsoft R Server bereitgestellt werden, doch sie kann in jeder beliebigen R-IDE geöffnet und bearbeitet werden. Der R-Code wurde optimiert, sodass Berechnungen „datenbankintern“ durch Festlegen des Computekontexts auf eine SQL Server-Instanz ausgeführt werden.
   
--   **SQLR**: Enthält mehrere SQL-Dateien, die Sie z. B. in einer SQL-Umgebung ausführen können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] um die gespeicherten Prozeduren zu erstellen, die Aufgaben im Zusammenhang mit wie Datenverarbeitung, Featureentwicklung und modellbereitstellung.
+-   **SQLR**: Enthält mehrere SQL-Dateien, die Sie in einer SQL-Umgebung ausführen können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , z. b., um die gespeicherten Prozeduren zu erstellen, die verwandte Tasks wie Datenverarbeitung, Featureentwicklung und Modell Bereitstellung ausführen.
   
     Der Ordner enthält außerdem ein PowerShell-Skript, das Sie ausführen können, um alle Skripts aufzurufen und die Ende-zu-Ende-Umgebung zu erstellen. Denken Sie daran, das Skript an Ihre Umgebung anzupassen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ [SQL Server Machine Learning-Tutorial](machine-learning-services-tutorials.md)
++ [Lernprogramme zum SQL Server Machine Learning](machine-learning-services-tutorials.md)
 
 
 

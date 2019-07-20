@@ -1,51 +1,51 @@
 ---
-title: 'Verwenden Sie T-SQL (CREATE EXTERNAL LIBRARY), um R-Pakete: SQL Server Machine Learning Services installieren'
-description: Fügen Sie neue R-Pakete auf SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern) hinzu.
+title: Verwenden von T-SQL (externe Bibliothek erstellen) zum Installieren von R-Paketen
+description: Fügen Sie SQL Server 2016 r Services oder SQL Server 2017 Machine Learning Services (in-Database) neue R-Pakete hinzu.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7d858cbc34ef614c5b84ed7543ceaa837d136a4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f681634b9f57a5fd459e3f6452c04aba024bd297
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962616"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345311"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Verwenden Sie T-SQL (CREATE EXTERNAL LIBRARY), um die Installation von R-Pakete auf SQL Server
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Verwenden von T-SQL (externe Bibliothek erstellen) zum Installieren von R-Paketen auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird erläutert, wie Sie neue R-Pakete auf einer Instanz von SQL Server installieren, Machine Learning aktiviert ist. Es gibt mehrere Ansätze zur Auswahl. Mit T-SQL ist am besten geeignet für Server-Administratoren, die nicht mit r vertraut sind.
+In diesem Artikel wird erläutert, wie Sie neue R-Pakete auf einer Instanz von SQL Server installieren, auf der Machine Learning aktiviert ist. Es gibt mehrere Ansätze, aus denen Sie auswählen können. Die Verwendung von T-SQL funktioniert am besten für Server Administratoren, die mit R nicht vertraut sind.
 
-**Gilt für:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**Gilt für:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]  [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-Die [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) -Anweisung ist es möglich, ein Paket oder eine Gruppe von Paketen zu einer Instanz oder eine bestimmte Datenbank hinzuzufügen, ohne das Ausführen von R oder Python-code direkt. Allerdings erfordert diese Methode Paket zur Vorbereitung und zusätzliche Datenbankberechtigungen.
+Die Anweisung [Create externe Library](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) ermöglicht das Hinzufügen eines Pakets oder einer Gruppe von Paketen zu einer Instanz oder einer bestimmten Datenbank, ohne dass R-oder python-Code direkt ausgeführt werden muss. Diese Methode erfordert jedoch Paket Vorbereitung und zusätzliche Daten Bank Berechtigungen.
 
-+ Alle Pakete müssen als eine lokale ZIP-Datei verfügbar, anstatt nach Bedarf aus dem Internet heruntergeladene sein.
++ Alle Pakete müssen als lokale ZIP-Datei verfügbar sein und nicht Bedarfs gesteuert aus dem Internet heruntergeladen werden.
 
-+ Alle Abhängigkeiten müssen nach Name und Version gekennzeichnet sein und in der Zipdatei enthalten. Die Anweisung schlägt fehl, falls erforderlich, dass die Pakete nicht verfügbar, einschließlich downstream-paketabhängigkeiten sind. 
++ Alle Abhängigkeiten müssen anhand des Namens und der Version identifiziert und in der ZIP-Datei enthalten sein. Die-Anweisung schlägt fehl, wenn erforderliche Pakete nicht verfügbar sind, einschließlich von downstreampaketabhängigkeiten. 
 
-+ Sie müssen sein **Db_owner** oder über die CREATE EXTERNAL LIBRARY-Berechtigung in einer Datenbankrolle. Weitere Informationen finden Sie unter [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
++ Sie müssen über **db_owner** verfügen oder über die Berechtigung externe Bibliothek erstellen in einer Daten Bank Rolle verfügen. Weitere Informationen finden Sie unter [Erstellen einer externen Bibliothek](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
-## <a name="download-packages-in-archive-format"></a>Herunterladen von Paketen im Archivformat
+## <a name="download-packages-in-archive-format"></a>Pakete im Archivformat herunterladen
 
-Wenn Sie ein einzelnes Paket installieren, wird herunterladen Sie das Paket in komprimierten Format.
+Wenn Sie ein einzelnes Paket installieren, laden Sie das Paket im ZIP-Format herunter.
 
-Es ist üblich, mehrere Pakete konnte aufgrund von paketabhängigkeiten zu installieren. Wenn ein Paket andere Pakete erfordert, müssen Sie sicherstellen, dass alle während der Installation erreichbar sind. Es wird empfohlen [Erstellen eines lokalen Repositorys](create-a-local-package-repository-using-minicran.md) mit [MiniCRAN](https://andrie.github.io/miniCRAN/) zusammenstellen eine vollständige Auflistung von Paketen, als auch [Igraph](https://igraph.org/r/) für das Analysieren der Abhängigkeiten von Paketen. Installieren die falsche Version eines Pakets oder eine paketabhängigkeit weglassen kann dazu führen, dass eine CREATE EXTERNAL LIBRARY-Anweisung fehlschlägt. 
+Es ist häufiger üblich, aufgrund von Paketabhängigkeiten mehrere Pakete zu installieren. Wenn für ein Paket Andere Pakete erforderlich sind, müssen Sie überprüfen, ob während der Installation alle verfügbar sind. Wir empfehlen die [Erstellung eines lokalen Repository](create-a-local-package-repository-using-minicran.md) mithilfe von [minicran](https://andrie.github.io/miniCRAN/) , um eine vollständige Sammlung von Paketen zusammenzustellen, sowie [igraph](https://igraph.org/r/) zum Analysieren von Paketabhängigkeiten. Wenn Sie die falsche Version eines Pakets installieren oder eine Paketabhängigkeit weglassen, kann dies dazu führen, dass eine CREATE externe Library-Anweisung fehlschlägt. 
 
-## <a name="copy-the-file-to-a-local-folder"></a>Kopieren Sie die Datei in einen lokalen Ordner
+## <a name="copy-the-file-to-a-local-folder"></a>Kopieren Sie die Datei in einen lokalen Ordner.
 
-Kopieren Sie die ZIP-Datei, die alle Pakete in einen lokalen Ordner auf dem Server enthält. Wenn Sie keinen Zugriff auf das Dateisystem auf dem Server haben, können Sie auch ein vollständiges Paket als Variable übergeben mit einem binären Format. Weitere Informationen finden Sie unter [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
+Kopieren Sie die ZIP-Datei mit allen Paketen in einen lokalen Ordner auf dem Server. Wenn Sie keinen Zugriff auf das Dateisystem auf dem Server haben, können Sie auch ein umfassendes Paket als Variable übergeben, indem Sie ein Binärformat verwenden. Weitere Informationen finden Sie unter [Erstellen einer externen Bibliothek](../../t-sql/statements/create-external-library-transact-sql.md).
 
-## <a name="run-the-statement-to-upload-packages"></a>Führen Sie die Anweisung zum Hochladen von Paketen
+## <a name="run-the-statement-to-upload-packages"></a>Ausführen der Anweisung zum Hochladen von Paketen
 
-Öffnen einer **Abfrage** Fenster mit einem Konto mit Administratorrechten ausführen.
+Öffnen Sie ein **Abfrage** Fenster, und verwenden Sie ein Konto mit Administratorrechten.
 
-Führen Sie die T-SQL-Anweisung `CREATE EXTERNAL LIBRARY` zum Hochladen der ZIP-Paket-Auflistung in der Datenbank.
+Führen Sie die T-SQL `CREATE EXTERNAL LIBRARY` -Anweisung aus, um die komprimierte Paket Sammlung in die-Datenbank hochzuladen.
 
-Die folgende Anweisung benennt beispielsweise als Paketquelle eine MiniCRAN-Repository mit den **RandomForest** -Paket sowie seine Abhängigkeiten. 
+Beispielsweise ist die folgende Anweisung als Paketquelle ein minicran-Repository, das das Paket **randomforest** enthält, sowie die zugehörigen Abhängigkeiten. 
 
 ```sql
 CREATE EXTERNAL LIBRARY randomForest
@@ -53,11 +53,11 @@ FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```
 
-Sie können keinen beliebigen Namen verwenden. den Namen der externen Bibliothek muss den gleichen Namen haben, den beim Laden oder das Paket Aufrufen verwendet werden sollen.
+Sie können keinen beliebigen Namen verwenden. der Name der externen Bibliothek muss den gleichen Namen aufweisen, den Sie beim Laden oder Aufrufen des Pakets verwenden.
 
 ## <a name="verify-package-installation"></a>Überprüfen der Paketinstallation
 
-Wenn die Bibliothek erfolgreich erstellt wurde, können Sie das Paket in SQL Server ausführen, indem sie innerhalb einer gespeicherten Prozedur aufgerufen wird.
+Wenn die Bibliothek erfolgreich erstellt wurde, können Sie das Paket in SQL Server ausführen, indem Sie es in einer gespeicherten Prozedur aufrufen.
     
 ```sql
 EXEC sp_execute_external_script
@@ -68,4 +68,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>Siehe auch
 
 + [Paketinformationen abrufen](../package-management/installed-package-information.md)
-+ [R-tutorials](../tutorials/sql-server-r-tutorials.md)
++ [R-Tutorials](../tutorials/sql-server-r-tutorials.md)

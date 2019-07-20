@@ -1,33 +1,33 @@
 ---
-title: Schnellstart für das Arbeiten mit Eingaben und Ausgaben in R – SQL Server-Machine Learning
-description: Erfahren Sie in dieser schnellstartanleitung für R-Skript in SQL Server, wie Sie ein- und Ausgaben für die gespeicherte Systemprozedur Sp_execute_external_script strukturieren.
+title: Schnellstart zum Arbeiten mit Eingaben und Ausgaben in R
+description: In dieser Schnellstartanleitung für R-Skript in SQL Server erfahren Sie, wie Sie Eingaben und Ausgaben in der gespeicherten System Prozedur sp_execute_external_script strukturieren.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ccdf5206f2564ead2ca66f40143aee1b4ab1fad
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962002"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344623"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Schnellstart: Verarbeiten von Eingaben und Ausgaben, die mithilfe von R in SQL Server
+# <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Schnellstart: Behandeln von Eingaben und Ausgaben mithilfe von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Schnellstart wird gezeigt, wie Eingaben verarbeiten und gibt bei Verwendung von R in SQL Server Machine Learning Services oder R Services aus.
+In dieser Schnellstartanleitung erfahren Sie, wie Sie Eingaben und Ausgaben bei Verwendung von r in SQL Server Machine Learning Services oder r Services verarbeiten.
 
-Wenn Sie R-Code in SQL Server ausführen möchten, müssen Sie R-Skript in einer gespeicherten Prozedur umschließen. Sie können eine schreiben oder R-Skript übergeben [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Dieses System gespeicherte Prozedur wird verwendet, um die R-Laufzeit im Kontext von SQL Server zu starten, der Daten an R übergeben wird, verwaltet Sitzungen von Benutzern, sicher, und gibt die Ergebnisse an den Client zurück.
+Wenn Sie r-Code in SQL Server ausführen möchten, müssen Sie das r-Skript in einer gespeicherten Prozedur einschließen. Sie können ein Skript schreiben oder das R-Skript an [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)übergeben. Diese gespeicherte System Prozedur wird verwendet, um die r-Laufzeit im Kontext von SQL Server zu starten, der Daten an R übergibt, r-Benutzersitzungen sicher verwaltet und alle Ergebnisse an den Client zurückgibt.
 
-In der Standardeinstellung [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) akzeptiert ein einzelnes Eingabe-Dataset, das Sie in der Regel in Form von einer gültigen SQL-Abfrage zu geben. Andere Arten von Eingaben können als SQL-Variablen übergeben werden.
+Standardmäßig akzeptiert [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) ein einzelnes Eingabe DataSet, das in der Regel in Form einer gültigen SQL-Abfrage angegeben wird. Andere Eingabetypen können als SQL-Variablen übermittelt werden.
 
-Die gespeicherte Prozedur gibt einen einzelnen R-Datenrahmen als Ausgabe zurück, aber Sie können auch skalare und Modelle als Variablen ausgeben. Sie können z. B. die Ausgabe eines trainierten Modells als binäre Variable und übergeben, um eine T-SQL INSERT-Anweisung, um das Modell in einer Tabelle zu schreiben. Sie können auch Diagramme (im binären Format) oder skalare generieren (einzelne Werte, z. B. Datum und Uhrzeit, die verstrichene Zeit zum Trainieren des Modells und so weiter).
+Die gespeicherte Prozedur gibt einen einzelnen R-Datenrahmen als Ausgabe zurück, aber Sie können auch skalare und Modelle als Variablen ausgeben. Beispielsweise können Sie ein trainiertes Modell als binäre Variable ausgeben und an eine T-SQL-INSERT-Anweisung übergeben, um das Modell in eine Tabelle zu schreiben. Sie können auch Diagramme (im Binärformat) oder skalare generieren (einzelne Werte, z. b. das Datum und die Uhrzeit, die verstrichene Zeit zum Trainieren des Modells usw.).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Einen vorherigen schnellstartanleitung [R stellen Sie sicher, die in SQL Server vorhanden ist](quickstart-r-verify.md), enthält Informationen und links für das Einrichten der R-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
+Eine vorherige Schnellstartanleitung, [überprüfen, ob R in SQL Server vorhanden](quickstart-r-verify.md)ist, enthält Informationen und Links zum Einrichten der r-Umgebung, die für diesen Schnellstart erforderlich ist.
 
 ## <a name="create-the-source-data"></a>Erstellen der Quelldaten
 
@@ -49,15 +49,15 @@ SELECT * FROM RTestData
 
 **Ergebnisse**
 
-![Inhalt der RTestData-Tabelle](./media/select-rtestdata.png)
+![Inhalt der rtestdata-Tabelle](./media/select-rtestdata.png)
 
 ## <a name="inputs-and-outputs"></a>Eingaben und Ausgaben
 
-Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_external_script: `InputDataSet` und `OutputDataSet`.
+Betrachten wir nun die standardmäßigen Eingabe-und Ausgabevariablen von sp_execute_external_script `InputDataSet` : `OutputDataSet`und.
 
-1. Sie können die Daten aus der Tabelle als Eingabe für das R-Skript abrufen. Führen Sie folgende Anweisung ein. Ruft die Daten aus der Tabelle ab, gibt die Werte mit den Namen der Spalte zurück und macht einen Roundtrip über die R-Laufzeit *NewColName*.
+1. Sie können die Daten aus der Tabelle als Eingabe für das R-Skript erhalten. Führen Sie die folgende Anweisung aus. Er ruft die Daten aus der Tabelle ab, führt einen Roundtrip durch die R-Laufzeit durch und gibt die Werte mit dem Spaltennamen *newcolname*zurück.
 
-    Die von der Abfrage zurückgegebenen Daten werden an die R-Laufzeit übergeben, die die Daten in SQL-Datenbank als dataframe zurückgibt. Die WITH RESULT SETS-Klausel definiert das Schema der zurückgegeben Datentabelle für SQL-Datenbank.
+    Die von der Abfrage zurückgegebenen Daten werden an die R-Laufzeit übermittelt, die die Daten als Datenrahmen an SQL-Datenbank zurückgibt. Die with Result Sets-Klausel definiert das Schema der zurückgegebenen Datentabelle für die SQL-Datenbank.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -69,11 +69,11 @@ Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_extern
 
     **Ergebnisse**
 
-    ![Ausgabe von R-Skript, das Daten aus einer Tabelle zurückgegeben.](./media/r-output-rtestdata.png)
+    ![Ausgabe des R-Skripts, das Daten aus einer Tabelle zurückgibt](./media/r-output-rtestdata.png)
 
-2. Ändern wir den Namen der Eingabe- oder Variablen. Das obige Skript verwendet die Standardeingabe und eingabevariablennamen _"inputdataset"_ und _"outputdataset"_ . Definieren Sie die Eingabedaten _InputDatSet_, Sie verwenden die *@input_data_1* Variable.
+2. Ändern Sie den Namen der Eingabe-oder Ausgabevariablen. Das obige Skript verwendet die Standardnamen für die Eingabe-und Ausgabevariablen, input _DataSet_ und _outputdataset_. Zum Definieren der Eingabedaten, die _inputdatset_zugeordnet sind, verwenden *@input_data_1* Sie die-Variable.
 
-    In diesem Skript wurde die Namen der Ausgabe- und der Eingabevariablen für die gespeicherte Prozedur zu geändert *SQL_out* und *SQL_in*:
+    In diesem Skript wurden die Namen der Ausgabe-und Eingabevariablen für die gespeicherte Prozedur in *SQL_out* und *SQL_in*geändert:
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -85,13 +85,13 @@ Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_extern
       WITH RESULT SETS (([NewColName] INT NOT NULL));
     ```
 
-    Beachten Sie, dass R Groß-/Kleinschreibung beachtet, sodass die Groß-/Kleinschreibung der Eingabe- und Variablen in `@input_data_1_name` und `@output_data_1_name` müssen übereinstimmen, das im R-Code in `@script`. 
+    Beachten Sie, dass bei R die Groß-/Kleinschreibung beachtet wird, sodass der Fall `@input_data_1_name` der `@output_data_1_name` Eingabe-und Ausgabevariablen in und mit denen im `@script`r-Code in identisch sein muss. 
 
     Nur eine Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Allerdings können Sie andere Datasets innerhalb Ihres R-Codes aufrufen und Ausgaben und andere Typen zusätzlich zum Dataset zurückgeben. Sie können auch das Schlüsselwort OUTPUT zu einem beliebigen Parameter hinzufügen, damit es mit den Ergebnissen zurückgegeben wird. 
 
-    Die `WITH RESULT SETS` -Anweisung definiert das Schema für die Daten, die verwendet wird, in SQL Server. Sie müssen SQL-kompatible Datentypen für jede Spalte angeben, die von r zurückgegeben Sie können die Schemadefinition verwenden, um neue Spaltennamen bereitzustellen zu verwenden, da Sie nicht die Spaltennamen aus dem R-Datenrahmen verwenden müssen.
+    Die `WITH RESULT SETS` -Anweisung definiert das Schema für die Daten, die in SQL Server verwendet werden. Sie müssen SQL-kompatible Datentypen für jede Spalte bereitstellen, die Sie von R zurückgeben. Sie können die Schema Definition auch zum Bereitstellen neuer Spaltennamen verwenden, da Sie die Spaltennamen aus dem R-Datenrahmen nicht verwenden müssen.
 
-3. Sie können auch Werte, die mit dem R-Skript generieren, und lassen Sie die Zeichenfolge der Eingabeabfrage in _@input_data_1_ leer.
+3. Sie können auch Werte mit dem R-Skript generieren und die Zeichenfolge _@input_data_1_ der Eingabe Abfrage leer lassen.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -104,11 +104,11 @@ Sehen wir uns die standardmäßigen Eingabe- und Variablen von Sp_execute_extern
 
     **Ergebnisse**
 
-    ![Ergebnisse der Abfrage mit @script als Eingabe](./media/r-data-generated-output.png)
+    ![Abfragen von Ergebnissen @script mithilfe von als Eingabe](./media/r-data-generated-output.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Überprüfen Sie einige der Probleme, die auftreten können, wenn das Übergeben von Daten zwischen R und SQL Server, z. B. implizite Konvertierungen und Unterschiede bei tabellarischen Daten zwischen R und SQL.
+Untersuchen Sie einige der Probleme, die auftreten können, wenn Sie Daten zwischen r und SQL Server übergeben, z. b. implizite Konvertierungen und Unterschiede in Tabellendaten zwischen r und SQL.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Behandeln von Datentypen und Objekte](quickstart-r-data-types-and-objects.md)
+> [Schnellstart: Verarbeiten von Datentypen und Objekten](quickstart-r-data-types-and-objects.md)

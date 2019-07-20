@@ -1,38 +1,38 @@
 ---
-title: Schnellstart für eine "Hello World" grundlegende R-codeausführung in T-SQL – SQL Server-Machine Learning
-description: Schnellstart für R-Skript in SQL Server. Enthält die Grundlagen des Aufrufens von R-Skripts mithilfe der gespeicherten Systemprozedur Sp_execute_external_script in einer Hallo-Welt-Übung.
+title: Schnellstart für eine "Hallo Welt" grundlegende R-Codeausführung in T-SQL
+description: Schnellstart für R-Skript in SQL Server. Erlernen Sie die Grundlagen zum Aufrufen von R-Skripts mithilfe der gespeicherten System Prozedur sp_execute_external_script in einer Hello-World-Übung.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61b1959b9b3b0769e080a2a4a44b1d4d10ef2b61
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961985"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345976"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Schnellstart: "Hello World"-R-Skript in SQL Server 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>Schnellstart: "Hello World" R-Skript in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In dieser schnellstartanleitung erfahren Sie, wichtige Konzepte, die durch Ausführen einer "Hello World" R-Skript InT-SQL, um eine Einführung in die **Sp_execute_external_script** gespeicherten Systemprozedur. 
+In diesem Schnellstart lernen Sie die wichtigsten Konzepte kennen, indem Sie ein "Hallo Welt" R-Skript int-SQL mit einer Einführung in die gespeicherte System Prozedur **sp_execute_external_script** ausführen. 
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Einen vorherigen schnellstartanleitung [R stellen Sie sicher, die in SQL Server vorhanden ist](quickstart-r-verify.md), enthält Informationen und links für das Einrichten der R-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
+Eine vorherige Schnellstartanleitung, [überprüfen, ob R in SQL Server vorhanden](quickstart-r-verify.md)ist, enthält Informationen und Links zum Einrichten der r-Umgebung, die für diesen Schnellstart erforderlich ist.
 
 ## <a name="basic-r-interaction"></a>Grundlegende R-Interaktion
 
-Es gibt zwei Möglichkeiten, die Sie R-Code in SQL-Datenbank ausführen können:
+Es gibt zwei Möglichkeiten zum Ausführen von R-Code in SQL-Datenbank:
 
-+ Hinzufügen von R-Skript als Argument der gespeicherten Systemprozedur, [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
-+ Aus einem [remote-R-Client](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client), eine Verbindung mit Ihrer SQL-Datenbank herstellen und Code mithilfe der SQL-Datenbank als Compute Context ausführen.
++ Fügen Sie ein R-Skript als Argument der gespeicherten System Prozedur hinzu, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
++ Stellen Sie von einem [Remote-R-Client](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client)aus eine Verbindung mit Ihrer SQL-Datenbank her, und führen Sie Code mithilfe der SQL-Datenbank als computekontext aus.
 
-In der folgenden Übung konzentriert sich auf das erste Interaktionsmodell: das R-Code an eine gespeicherte Prozedur übergeben.
+Die folgende Übung konzentriert sich auf das erste Interaktionsmodell: übergeben von R-Code an eine gespeicherte Prozedur.
 
-1. Führen Sie ein einfaches Skript, um festzustellen, wie ein R-Skript in SQL-Datenbank ausgeführt wird.
+1. Ausführen eines einfachen Skripts, um zu sehen, wie ein R-Skript in der SQL-Datenbank ausgeführt wird.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -46,7 +46,7 @@ In der folgenden Übung konzentriert sich auf das erste Interaktionsmodell: das 
     '
     ```
 
-2. Vorausgesetzt, dass alles ordnungsgemäß zum richtigen Ergebnis eingerichtet haben, wird berechnet, und die R `print` Funktionsergebnis ist das Ergebnis der **Nachrichten** Fenster.
+2. Vorausgesetzt, dass alles ordnungsgemäß eingerichtet ist, wird das richtige Ergebnis berechnet, und `print` die R-Funktion gibt das Ergebnis an das Fenster **Meldungen** zurück.
 
     **Ergebnisse**
 
@@ -55,13 +55,13 @@ In der folgenden Übung konzentriert sich auf das erste Interaktionsmodell: das 
     0.5 2
     ```
 
-    Beim Abrufen der **"stdout"** Nachrichten ist nützlich, beim Testen Ihres Codes, häufig müssen Sie die Ergebnisse in tabellarischer Form vorliegen, zurückgeben, damit Sie in einer Anwendung verwenden können, oder in einer Tabelle zu schreiben. Finden Sie unter [Schnellstart: Handle Eingaben und Ausgaben mithilfe von R in SQL Server](rtsql-working-with-inputs-and-outputs.md) für Weitere Informationen.
+    Während das erhalten **von stdout** -Nachrichten beim Testen Ihres Codes nützlich ist, müssen Sie die Ergebnisse häufiger im tabellarischen Format zurückgeben, damit Sie es in einer Anwendung verwenden oder in eine Tabelle schreiben können. Siehe [Schnellstart: Behandeln von Eingaben und Ausgaben mithilfe von R](rtsql-working-with-inputs-and-outputs.md) in SQL Server, um weitere Informationen zu finden.
 
-Beachten Sie, dass alles innerhalb der `@script` Argument muss ein gültiger R-Code sein.
+Beachten Sie, dass alles `@script` innerhalb des Arguments gültiger R-Code sein muss.
 
-## <a name="run-a-hello-world-script"></a>Ausführen eines Hello World-Skripts
+## <a name="run-a-hello-world-script"></a>Ausführen eines Hallo Welt Skripts
 
-In der folgenden Übung wird eine andere einfache R-Skripts ausgeführt.
+In der folgenden Übung werden weitere einfache R-Skripts ausgeführt.
 
 ```sql
 EXEC sp_execute_external_script
@@ -72,12 +72,12 @@ EXEC sp_execute_external_script
 GO
 ```
 
-Eingaben für diese gespeicherte Prozedur gehören:
+Zu den Eingaben für diese gespeicherte Prozedur gehören:
 
-+ *@language* Parameter definiert, die in diesem Fall r aufrufen, durch die spracherweiterung
-+ *@script* der Parameter definiert die Befehle, die an die R-Laufzeit übergeben. Ihr gesamtes R-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen.
-+ *@input_data_1* werden Daten, die von der R-Laufzeit, die die Daten mit SQL Server als dataframe zurückgibt, die an der Abfrage zurückgegeben wird.
-+ WITH RESULT SETS-Klausel definiert das Schema der zurückgegeben Datentabelle für SQL Server, Hinzufügen von "Hello World" als den Namen der Spalte, **Int** für den Datentyp.
++ *@language* der Parameter definiert die aufzurufende Spracherweiterung, in diesem Fall R.
++ *@script* Parameter definiert die Befehle, die an die R-Laufzeit übergeben werden. Ihr gesamtes R-Skript muss von diesem Argument als Unicode-Text umschlossen sein. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und die Variable anschließend aufrufen.
++ *@input_data_1* die von der Abfrage zurückgegebenen Daten, die an die R-Laufzeit zurückgegeben werden, die die Daten zurückgibt, die als Datenrahmen SQL Server werden.
++ WITH Result Sets-Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL Server, wobei "Hallo Welt" als Spaltenname " **int** " für den Datentyp hinzugefügt wird.
 
 **Ergebnisse**
 
@@ -87,7 +87,7 @@ Eingaben für diese gespeicherte Prozedur gehören:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, dass Sie ein paar einfache R-Skripts ausgeführt haben, nehmen Sie einen genaueren Blick auf die Strukturierung von Eingaben und Ausgaben.
+Nachdem Sie nun einige einfache R-Skripts ausgeführt haben, sehen Sie sich die Strukturierung von Eingaben und Ausgaben genauer an.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Verarbeiten von Eingaben und Ausgaben](quickstart-r-inputs-and-outputs.md)
+> [Schnellstart: Behandeln von Eingaben und Ausgaben](quickstart-r-inputs-and-outputs.md)

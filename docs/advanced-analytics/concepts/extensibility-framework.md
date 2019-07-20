@@ -1,76 +1,76 @@
 ---
-title: Architektur für die Sprache R und Python-Skript – SQL Server-Machine Learning-Erweiterbarkeit
-description: Unterstützung für externen Code für die SQL Server-Datenbank-Engine, mit der Architektur mit zwei für die Ausführung von R und Python-Skript auf relationalen Daten.
+title: Erweiterbarkeits Architektur für R-Sprache und Python-Skript
+description: Unterstützung externer Code für die SQL Server-Datenbank-Engine mit doppelter Architektur zum Ausführen von R-und python-Skripts für relationale Daten.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3d4d8108fda500d48425abfb52fd9f72c6faa147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ee27fd68563be336f5bc98bb5b51b200f1dff71
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963059"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345132"
 ---
-# <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architektur der Erweiterbarkeit in SQL Server Machine Learning Services 
+# <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Erweiterbarkeits Architektur in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server bietet ein Erweiterungsframework für die Ausführung externer Skripts, z. B. R oder Python auf dem Server. Skript wird in einer Laufzeitumgebung Language als Erweiterung der Kerndatenbank-Engine ausgeführt. 
+SQL Server verfügt über ein Erweiterbarkeits Framework zum Ausführen externer Skripts, z. b. R oder python, auf dem Server. Skripts werden in einer Language Runtime-Umgebung als Erweiterung der Kerndatenbank-Engine ausgeführt. 
 
 ## <a name="background"></a>Hintergrund
 
-Das Extensibility Framework wurde in SQL Server 2016 zur Unterstützung der R-Laufzeit eingeführt. SQL Server 2017 bietet Unterstützung für Python
+Das Erweiterbarkeit Framework wurde in SQL Server 2016 eingeführt, um die R-Laufzeit zu unterstützen. SQL Server 2017 bietet Unterstützung für python
 
-Die dem Extensibility Framework dient zum bieten eine Schnittstelle zwischen SQL Server und Data Science-Sprachen wie R und Python reibungslosere benutzereinladung, wenn Gleitender Data Science-Lösungen in der Produktion und den Schutz von Daten während der Entwicklung verfügbar gemacht. der Prozess. Durch Ausführen von einer vertrauenswürdigen Skriptsprache in eine sichere Basis von SQL Server verwaltet werden, können Datenbankadministratoren Sicherheit zu gewährleisten und gleichzeitig Datenanalysten den Zugriff auf Unternehmensdaten.
+Der Zweck des Erweiterbarkeits-Frameworks besteht darin, eine Schnittstelle zwischen SQL Server und Data Science Sprachen wie R und python bereitzustellen, die beim verlagern Data Science Lösungen in die Produktion und beim Schützen von Daten, die während der Entwicklung verfügbar gemacht werden, zu reduzieren. ESS. Durch Ausführen einer vertrauenswürdigen Skriptsprache innerhalb eines von SQL Server verwalteten sicheren Frameworks können Datenbankadministratoren die Sicherheit aufrechterhalten, während Datenanalysten Zugriff auf Unternehmensdaten erhalten.
 
-Das folgende Diagramm beschreibt visuellen Möglichkeiten und Vorteile der erweiterbaren Architektur.
+Im folgenden Diagramm werden die Möglichkeiten und Vorteile der erweiterbaren Architektur visuell beschrieben.
 
   ![Ziele der Integration in SQL Server](../media/ml-service-value-add.png "Machine Learning Services Wert hinzufügen")
 
-Alle R oder Python-Skript kann durch Aufrufen einer gespeicherten Prozedur ausgeführt werden, und die Ergebnisse werden als tabellarische Ergebnisse direkt in SQL Server, zu generieren, oder nutzen jede Anwendung, die eine SQL-Abfrage senden und Verarbeiten der Ergebnisse kann Machine Learning vereinfachen zurückgegeben.
+Alle R-oder python-Skripts können durch Aufrufen einer gespeicherten Prozedur ausgeführt werden, und die Ergebnisse werden als tabellarische Ergebnisse direkt an SQL Server zurückgegeben. dadurch ist es einfach, Machine Learning aus jeder Anwendung zu generieren oder zu nutzen, die eine SQL-Abfrage senden und die Ergebnisse verarbeiten kann.
 
-+ Ausführung des externen Skripts unterliegt den SQL Server Data-Sicherheit, in denen ein Benutzer ausführen externen Skripts können nur den Zugriff auf Daten, die in einer SQL-Abfrage gleichermaßen verfügbar ist. Wenn eine Abfrage aufgrund von unzureichenden Berechtigungen ein Fehler auftritt, würde Skript, das vom gleichen Benutzer auch aus demselben Grund fehlschlagen. SQL Server-Sicherheit wird auf die Tabelle, Datenbank und Instanzebene erzwungen. Datenbankadministratoren können Benutzer den Zugriff von externen Skripts verwendeten Ressourcen und externer Codebibliotheken, die dem Server hinzugefügt verwalten.  
++ Die Ausführung externer Skripts unterliegt SQL Server Datensicherheit, in der ein Benutzer, der externe Skripts ausführen, nur auf Daten zugreifen kann, die gleichzeitig in einer SQL-Abfrage verfügbar sind. Wenn eine Abfrage aufgrund unzureichender Berechtigungen fehlschlägt, kann das Skript, das vom gleichen Benutzer ausgeführt wird, aus demselben Grund auch fehlschlagen. SQL Server Sicherheit wird auf der Ebene der Tabelle, Datenbank und Instanz erzwungen. Datenbankadministratoren können den Benutzer Zugriff, die von externen Skripts verwendeten Ressourcen und externe Codebibliotheken verwalten, die dem Server hinzugefügt werden.  
 
-+ Skalierung und Optimierung Möglichkeiten haben eine duale-Basis: Gewinne über die Datenbankplattform (columnstore-Indizes, [Ressourcenkontrolle](../../advanced-analytics/r/resource-governance-for-r-services.md)), und Gewinne spezifisch, wenn Microsoft-Bibliotheken für R und Python für Daten verwendet werden Science-Modelle. Während R Singlethread ist, sind die RevoScaleR-Funktionen mit mehreren Threads, der eine arbeitsauslastung über mehrere Kerne verteilen kann.
++ Skalierungs-und Optimierungsmöglichkeiten haben einen doppelten Grund: Vorteile der Daten Bank Plattform (columnstore-Indizes, [Ressourcen](../../advanced-analytics/r/resource-governance-for-r-services.md)Kontrolle) und Erweiterungs spezifischen Vorteilen, wenn Microsoft-Bibliotheken für R und python für Data Science Modelle verwendet werden. Bei R handelt es sich um einen Single Thread, revoscaler-Funktionen sind Multithreadfunktionen, die eine Arbeitsauslastung über mehrere Kerne verteilen können.
 
-+ Bereitstellung verwendet SQL Server-Methoden: gespeicherte Prozeduren umschließen externen Skripts, eingebettete SQL oder T-SQL-Abfragen aufrufende Funktionen wie PREDICT zurückzugebenden Ergebnisse forecasting-Modellen, die auf dem Server persistent gespeichert.
++ Bereitstellung verwendet SQL Server Methodologien: gespeicherte Prozeduren, die externe Skripts, eingebettete SQL-oder T-SQL-Abfragen zum Aufrufen von Funktionen wie Vorhersagen umschreiben, um Ergebnisse von Vorhersagemodellen zurückzugeben
 
-+ R und Python-Entwickler mit eingerichtet Fähigkeiten in speziellen Tools und IDEs schreiben Sie Code in diese Tools und klicken Sie dann Code in SQL Server-port können.
++ R-und Python-Entwickler mit bewährten Kenntnissen in bestimmten Tools und IDES können Code in diese Tools schreiben und dann Code zum SQL Server portieren.
 
-## <a name="architecture-diagram"></a>Architekturdiagramm
+## <a name="architecture-diagram"></a>Architektur Diagramm
 
-Die Architektur ist so entworfen, dass externe Skripts in einem separaten Prozess ausführen, von SQL Server, jedoch mit Komponenten, die intern die Kette der Anforderungen für Daten und Vorgängen auf SQL Server zu verwalten. Abhängig von der Version von SQL Server enthalten die unterstützten spracherweiterungen R- und Python. 
+Die Architektur ist so konzipiert, dass externe Skripts in einem separaten Prozess von SQL Server ausgeführt werden, jedoch mit Komponenten, die intern die Kette von Anforderungen für Daten und Vorgänge auf SQL Server verwalten. Abhängig von der SQL Server Version enthalten unterstützte Spracherweiterungen R und python. 
 
   ![Komponentenarchitektur](../media/generic-architecture.png "Komponentenarchitektur")
 
-Komponenten einer **Launchpad** Service verwendet, um sprachspezifische Startprogramme (R oder Python),-Sprache und Bibliothek-spezifische Logik für das Laden von Interpretern und-Bibliotheken aufzurufen. Das Startprogramm lädt zeilenweise Sprache ausführen, sowie alle proprietäre Module. Wenn Ihr Code die RevoScaleR-Funktionen enthält, z. B. lädt ein RevoScaleR-Interpreter. **BxlServer** und **SQL-Satellit** Übertragung von Daten und Kommunikation mit SQL Server verwaltet.
+Zu den Komponenten gehören ein **Launchpad** -Dienst, mit dem sprachspezifische Launcher (R oder python), sprach-und Bibliotheks spezifische Logik zum Laden von Interpretern und Bibliotheken aufgerufen werden. Das Start Programm lädt eine Sprachlaufzeit sowie alle proprietären Module. Wenn Ihr Code z. b. revoscaler-Funktionen enthält, würde ein revoscaler-Interpreter geladen werden. **Bxlserver** und **SQL-Satellit** verwalten Kommunikation und Datenübertragung mit SQL Server.
 
 <a name="launchpad"></a>
 
 ## <a name="launchpad"></a>Launchpad
 
-Die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] ist ein Dienst, der verwaltet und externer Skripts, ähnlich wie die, dass der Volltextsuchdienst indizierungs- und einen separaten Host startet, für die Verarbeitung von Volltextabfragen ausführt. Der Launchpad-Dienst starten nur vertrauenswürdige Startprogramme, die von Microsoft veröffentlicht werden, oder, die von Microsoft als Anforderungen für Leistung und ressourcenverwaltung erfüllen zertifiziert wurden.
+Bei [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] handelt es sich um einen Dienst, der externe Skripts verwaltet und ausführt, ähnlich der Art, in der die Volltextindizierung und der Abfragedienst einen separaten Host zum Verarbeiten von voll Text Abfragen starten. Der Launchpad-Dienst kann nur vertrauenswürdige Launcher starten, die von Microsoft veröffentlicht wurden oder die von Microsoft als Erfüllung der Anforderungen an die Leistung und Ressourcenverwaltung zertifiziert wurden.
 
-| Vertrauenswürdige Startprogramme | Erweiterung | SQL Server-Versionen |
+| Vertrauenswürdige Launcher | Erweiterung | SQL Server Versionen |
 |-------------------|-----------|---------------------|
-| Datei "rlauncher.dll" für die Sprache R | [R-Erweiterung](extension-r.md) | SQLServer 2016, SqlServer 2017 |
-| PythonLauncher.dll für Python 3.5 | [Python-Erweiterung](extension-python.md) | SQL Server 2017 |
+| "Rlauncher. dll" für die Sprache "R" | [R-Erweiterung](extension-r.md) | SQL Server 2016, SQL Server 2017 |
+| Pythonlauncher. dll für python 3,5 | [Python-Erweiterung](extension-python.md) | SQL Server 2017 |
 
-Der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst wird unter dem eigenen Benutzerkonto ausgeführt. Wenn Sie das Konto, das Launchpad ausgeführt wird ändern, achten Sie darauf, dass Sie zu diesem Zweck verwenden SQL Server-Konfigurations-Manager, um sicherzustellen, dass Änderungen in geschrieben werden Dateien im Zusammenhang.
+Der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst wird unter dem eigenen Benutzerkonto ausgeführt. Wenn Sie das Konto ändern, mit dem Launchpad ausgeführt wird, stellen Sie sicher, dass dies mit SQL Server-Konfigurations-Manager erfolgt, um sicherzustellen, dass Änderungen in verwandte Dateien geschrieben werden.
 
-Eine Separate [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Dienst erstellt und für jede Instanz der Datenbank-Engine zu dem Sie SQL Server-Machine Learning-Dienste hinzugefügt haben. Es wird eine Launchpad für jede Datenbank-Engine-Instanz, also wenn Sie mehrere Instanzen mit der Unterstützung externer Skripts verfügen, Sie einen Launchpad-Dienst für jeden einzelnen Dienst. Eine Instanz der Datenbank-Engine wird an den Launchpad-Dienst erstellt gebunden. Alle Aufrufe von externen Skripts in einer gespeicherten Prozedur oder ein Ergebnis von T-SQL in SQL Server-Dienst den Launchpad-Dienst erstellt für dieselbe Instanz aufgerufen.
+Für jede [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Instanz der Datenbank-Engine, der Sie SQL Server Machine Learning Services hinzugefügt haben, wird ein separater Dienst erstellt. Es gibt einen Launchpad-Dienst für jede Instanz der Datenbank-Engine. Wenn Sie also über mehrere Instanzen mit externer Skriptunterstützung verfügen, verfügen Sie jeweils über einen Launchpad-Dienst. Eine Datenbank-Engine-Instanz ist an den für Sie erstellten Launchpad-Dienst gebunden. Alle Aufrufe externer Skripts in einer gespeicherten Prozedur oder in T-SQL führen dazu, dass der SQL Server Dienst den für die gleiche Instanz erstellten Launchpad-Dienst aufruft.
 
-Zum Ausführen von Aufgaben in einer bestimmten unterstützten Sprache, das Launchpad Ruft eine gesicherte workerkonto aus dem Pool, und startet einen satellitenprozess zum Verwalten der externen Runtime. Jeder satellitenprozess erbt das Benutzerkonto des LaunchPads und verwendet dieses workerkonto für die Dauer der Ausführung des Skripts. Wenn Skripts parallele Prozessen verwendet wird, werden sie unter dem workerkonto dieselbe, einzelne erstellt.
+Zum Ausführen von Aufgaben in einer bestimmten unterstützten Sprache erhält das Launchpad ein gesichertes Workerkonto aus dem Pool und startet einen Satelliten Prozess zum Verwalten der externen Laufzeit. Jeder Satelliten Prozess erbt das Benutzerkonto des Launchpad und verwendet dieses Workerkonto für die Dauer der Skriptausführung. Wenn Skripts parallele Prozesse verwenden, werden Sie unter demselben einzelworkerkonto erstellt.
 
-## <a name="bxlserver-and-sql-satellite"></a>BxlServer und SQL-Satellit
+## <a name="bxlserver-and-sql-satellite"></a>Bxlserver und SQL-Satellit
 
-**BxlServer** ist eine ausführbare Datei, die von Microsoft, die Kommunikation zwischen SQL Server und Python oder r verwaltet bereitgestellt werden Er erstellt die Windows-Auftragsobjekte, die werden verwendet, um externen Skript-Sitzungen, stellt sichere Arbeitsordner für jeden Auftrag externes Skript enthalten, und SQL-Satellit zum Verwalten der Datenübertragung zwischen der externen Common Language Runtime und SQL Server verwendet. Wenn das Ausführen [Process Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) während ein Auftrag ausgeführt wird, können Sie sehen, dass eine oder mehrere Instanzen von BxlServer.
+**Bxlserver** ist eine ausführbare Datei, die von Microsoft bereitgestellt wird, die die Kommunikation zwischen SQL Server und Python oder R verwaltet. Er erstellt die Windows-Auftrags Objekte, die verwendet werden, um externe Skript Sitzungen zu enthalten, stellt sichere Arbeitsordner für jeden externen Skript Auftrag bereit und verwendet SQL-Satelliten, um die Datenübertragung zwischen der externen Laufzeit und der SQL Server zu verwalten. Wenn Sie den [Prozess-Explorer](https://technet.microsoft.com/sysinternals/processexplorer.aspx) ausführen, während ein Auftrag ausgeführt wird, wird möglicherweise eine oder mehrere Instanzen von bxlserver angezeigt.
 
-BxlServer ist eine begleitende in eine Sprache, das Time-Umgebung, das zusammen mit SQL Server zum Übertragen von Daten und Verwalten von Aufgaben ausführen. BXL steht für Binary Exchange Language und bezieht sich auf das Datenformat, das zum Verschieben von Daten effizient zwischen SQL Server und externen Prozessen verwendet. BxlServer ist auch ein wichtiger Bestandteil der verwandte Produkte wie Microsoft R Client und Microsoft R Server.
+Bxlserver ist in der Tat ein Begleit Verfahren für eine Sprachlaufzeit-Umgebung, die mit SQL Server zum Übertragen von Daten und Verwalten von Aufgaben arbeitet. BXL steht für binäre Austausch Sprache und bezieht sich auf das Datenformat, das zum effizienten Verschieben von Daten zwischen SQL Server und externen Prozessen verwendet wird. Bxlserver ist auch ein wichtiger Bestandteil verwandter Produkte wie Microsoft R Client und Microsoft R Server.
 
-**SQL-Satellit** ist eine Erweiterbarkeits-API, die in der Datenbank-Engine, beginnend mit SQL Server 2016, die von externem Code unterstützt enthalten oder externe Laufzeiten, die mithilfe von C oder C++ implementiert.
+Der **SQL-Satellit** ist eine Erweiterbarkeits-API, die in der Datenbank-Engine ab SQL Server 2016 enthalten ist, die externen Code oder externe Laufzeiten unter C++stützt, die mit C oder implementiert werden.
 
 BxlServer verwendet den SQL-Satelliten für die folgenden Aufgaben:.
 
@@ -81,37 +81,37 @@ BxlServer verwendet den SQL-Satelliten für die folgenden Aufgaben:.
 + Fehlerbehandlung
 + STDOUT und STDERR zurück auf den Client schreiben
 
-SQL-Satellit verwendet ein benutzerdefiniertes Datenformat, das optimiert ist, für die schnelle Datenübertragung zwischen SQL Server und externen Skriptsprachen. Er führt Typumwandlungen und die Schemas der Eingabe- und ausgabedatasets während der Kommunikation zwischen SQL Server und externen Skript-Runtime definiert.
+Der SQL-Satellit verwendet ein benutzerdefiniertes Datenformat, das für die schnelle Datenübertragung zwischen SQL Server und externen Skriptsprachen optimiert ist. Sie führt Typkonvertierungen aus und definiert die Schemas der Eingabe-und Ausgabe Datasets während der Kommunikation zwischen SQL Server und der externen Skript Laufzeit.
 
-Der SQL-Satellit kann mithilfe von Windows, die erweiterte Ereignisse (xEvents) überwacht werden. Weitere Informationen finden Sie unter [erweiterte Ereignisse bei R](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md) und [Extended Events für Python](../../advanced-analytics/python/extended-events-for-python.md).
+Der SQL-Satellit kann mithilfe von erweiterten Windows-Ereignissen (xevents) überwacht werden. Weitere Informationen finden Sie unter [Erweiterte Ereignisse für R](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md) und [Erweiterte Ereignisse für python](../../advanced-analytics/python/extended-events-for-python.md).
 
 ## <a name="communication-channels-between-components"></a>Kommunikationskanäle zwischen Komponenten
 
-In diesem Abschnitt werden die Kommunikationsprotokolle zwischen Komponenten und der datenplattformen beschrieben.
+Die Kommunikationsprotokolle zwischen Komponenten und Daten Plattformen werden in diesem Abschnitt beschrieben.
 
 + **TCP/IP**
 
-  Interne Kommunikation zwischen SQL Server und der SQL-Satellit verwenden standardmäßig TCP/IP.
+  Standardmäßig verwenden die interne Kommunikation zwischen SQL Server und dem SQL-Satelliten TCP/IP.
 
 + **Named Pipes**
 
-  Interne Datentransport zwischen BxlServer und SQL Server über SQL-Satellit verwendet ein proprietäres, komprimiertes Datenformat, um die Leistung zu verbessern. Daten werden im BXL-Format, die mithilfe von Named Pipes zwischen den Zeiten von Sprache, die ausgeführt und BxlServer ausgetauscht.
+  Der interne Datentransport zwischen dem bxlserver und dem SQL Server über den SQL-Satelliten verwendet ein proprietäres, komprimiertes Datenformat zur Leistungssteigerung. Daten werden zwischen den sprach Laufzeiten und bxlserver im BXL-Format mithilfe von Named Pipes ausgetauscht.
 
 + **ODBC**
 
-  Kommunikation zwischen externen Data Science-Clients und einer SQL Server-Remoteinstanz Verwenden von ODBC. Das Konto, das die Skripts für Aufträge an SQL Server sendet, müssen beide Berechtigungen für die Verbindung mit der Instanz sowie zum Ausführen externer Skripts.
+  Bei der Kommunikation zwischen externen Data Science Clients und einer Remote SQL Server Instanz wird ODBC verwendet. Das Konto, das die Skript Aufträge an SQL Server sendet, muss über beide Berechtigungen zum Herstellen einer Verbindung mit der Instanz und zum Ausführen externer Skripts verfügen.
 
-  Abhängig von der Aufgabe ist benötigen das Konto darüber hinaus Mitgliedsrechte:
+  Außerdem benötigt das Konto abhängig von der Aufgabe möglicherweise die folgenden Berechtigungen:
 
-  + Lesen von Daten, die vom Auftrag verwendeten
-  + Schreiben von Daten in Tabellen: führt z. B. beim Speichern in einer Tabelle
-  + Erstellen von Datenbankobjekten: Angenommen, externes Skript als Teil einer neuen gespeicherten Prozedur zu speichern.
+  + Lesen von Daten, die vom Auftrag verwendet werden
+  + Schreiben von Daten in Tabellen: z. b. beim Speichern von Ergebnissen in einer Tabelle
+  + Erstellen von Datenbankobjekten, z. b. Wenn Sie ein externes Skript als Teil einer neuen gespeicherten Prozedur speichern.
 
-  Wenn SQL Server als Compute Context verwendet wird, für die skriptausführung über ein Remoteclient und die ausführbare Datei müssen Daten aus einer externen Quelle abrufen, wird ODBC für das Rückschreiben verwendet. SQL Server ordnet die Identität des Benutzers den Remotebefehl auf die Identität des Benutzers in der aktuellen Instanz ausgibt, und führt den ODBC-Befehl mit Anmeldeinformationen des Benutzers. Die Verbindungszeichenfolge, die zum Durchführen dieses ODBC-Aufruf erforderlich ist, wird vom Clientcode abgerufen.
+  Wenn SQL Server als computekontext für Skripts verwendet wird, die von einem Remote Client ausgeführt werden, und die ausführbare Datei Daten aus einer externen Quelle abrufen muss, wird ODBC für das Rück schreiben verwendet. SQL Server ordnet die Identität des Benutzers, der den Remote Befehl ausgibt, der Identität des Benutzers auf der aktuellen Instanz zu und führt den ODBC-Befehl mit den Anmelde Informationen des Benutzers aus. Die Verbindungszeichenfolge, die zum Durchführen dieses ODBC-Aufruf erforderlich ist, wird vom Clientcode abgerufen.
 
-+ **RODBC (nur R)** 
++ **Rodbc (nur R)** 
 
-  Zusätzliche ODBC-Aufrufe können innerhalb des Skripts mithilfe von **RODBC** erfolgen. RODBC ist eine beliebte R-Paket, das Zugriff auf Daten in relationalen Datenbanken verwendet. Es ist jedoch die Leistung in der Regel langsamer als die vergleichbaren Anbietern, die von SQL Server verwendet. Viele R-Skripts verwenden eingebettete Aufrufe auf RODBC als eine Möglichkeit, „sekundäre“ Datasets für den Gebrauch in Analysen abzurufen. Beispielsweise kann die gespeicherte Prozedur, die ein Modell trainiert, möglicherweise eine SQL-Abfrage definieren, um die Daten für das Trainieren eines Modells abzurufen, aber einen eingebetteten RODBC-Aufruf zum Abrufen zusätzlicher Faktoren verwenden, um Lookups auszuführen oder um neue Daten aus externen Quellen zu erhalten, z.B. Textdateien oder Excel.
+  Zusätzliche ODBC-Aufrufe können innerhalb des Skripts mithilfe von **RODBC** erfolgen. Rodbc ist ein beliebtes R-Paket, mit dem auf Daten in relationalen Datenbanken zugegriffen werden kann. die Leistung ist jedoch im Allgemeinen langsamer als vergleichbare Anbieter, die von SQL Server verwendet werden. Viele R-Skripts verwenden eingebettete Aufrufe auf RODBC als eine Möglichkeit, „sekundäre“ Datasets für den Gebrauch in Analysen abzurufen. Beispielsweise kann die gespeicherte Prozedur, die ein Modell trainiert, möglicherweise eine SQL-Abfrage definieren, um die Daten für das Trainieren eines Modells abzurufen, aber einen eingebetteten RODBC-Aufruf zum Abrufen zusätzlicher Faktoren verwenden, um Lookups auszuführen oder um neue Daten aus externen Quellen zu erhalten, z.B. Textdateien oder Excel.
 
   Der folgende Code zeigt einen RODBC-Aufruf, der in einem R-Skript eingebettet ist:
 
@@ -124,7 +124,7 @@ In diesem Abschnitt werden die Kommunikationsprotokolle zwischen Komponenten und
 
 + **Andere Protokolle**
 
-  Prozesse, die in "Blöcken" Geschäfts-, Schul- oder Daten an einen Remoteclient übertragen müssen möglicherweise können Sie auch die [XDF-Datei-Format](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Tatsächliche Datenübertragung geschieht über codierte Blobs.
+  Prozesse, die möglicherweise in "Blöcken" arbeiten oder Daten zurück an einen Remote Client übertragen müssen, können auch das [Xdf-Dateiformat](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)verwenden. Die tatsächliche Datenübertragung erfolgt über codierte blobdaten.
 
 ## <a name="see-also"></a>Siehe auch
 

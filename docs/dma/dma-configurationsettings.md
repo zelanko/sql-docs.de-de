@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von Einstellungen für den Data Migration Assistant (SQL Server) | Microsoft-Dokumentation
-description: Erfahren Sie, wie Einstellungen für den Data Migration Assistant zu konfigurieren, aktualisieren Sie die Werte in der Konfigurationsdatei
+title: Konfigurieren von Einstellungen für Datenmigrations-Assistent (SQL Server) | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie die Einstellungen für die Datenmigrations-Assistent konfigurieren, indem Sie Werte in der Konfigurationsdatei aktualisieren.
 ms.custom: ''
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058875"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345236"
 ---
-# <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für den Data Migration Assistant
+# <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für Datenmigrations-Assistent
 
-Sie können bestimmte Verhalten von Data Migration Assistant durch Festlegen von Konfigurationswerten in der Datei dma.exe.config optimieren. Dieser Artikel beschreibt wichtige Konfigurationswerte.
+Sie können ein bestimmtes Verhalten von Datenmigrations-Assistent optimieren, indem Sie Konfigurationswerte in der Datei "DMA. exe. config" festlegen. In diesem Artikel werden die wichtigsten Konfigurationswerte beschrieben.
 
-Sie finden die dma.exe.config-Datei für den Data Migration Assistant-desktop-Anwendung und des Befehlszeilen-Hilfsprogramms in den folgenden Ordnern auf Ihrem Computer.
+Sie finden die Datei "DMA. exe. config" für die Datenmigrations-Assistent Desktop Anwendung und das Befehlszeilen-Hilfsprogramm in den folgenden Ordnern auf dem Computer.
 
-- Desktop-Anwendung
+- Desktop Anwendung
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dma.exe.config
+  % Program Files%\\Microsoft-Datenmigrations-Assistent\\DMA. exe. config
 
 - Befehlszeilen-Hilfsprogramm
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd.exe.config 
+  % Program Files%\\Microsoft-Datenmigrations-Assistent\\dmacmd. exe. config 
 
-Achten Sie darauf, dass Sie eine Kopie der ursprünglichen Konfigurationsdatei zu speichern, bevor die Änderungen. Starten Sie nach Änderungen vorgenommen wurden, neu Data Migration Assistant für die neuen Konfigurationswerte wirksam wird.
+Stellen Sie sicher, dass Sie eine Kopie der ursprünglichen Konfigurationsdatei speichern, bevor Sie Änderungen vornehmen. Nachdem Sie die Änderungen vorgenommen haben, starten Sie Datenmigrations-Assistent neu, damit die neuen Konfigurationswerte wirksam werden.
 
-## <a name="number-of-databases-to-assess-in-parallel"></a>Anzahl der Datenbanken parallel bewerten
+## <a name="number-of-databases-to-assess-in-parallel"></a>Anzahl von Datenbanken, die parallel bewertet werden sollen
 
-Data Migration Assistant bewertet wird, mehrere Datenbanken gleichzeitig. Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung (DACPAC-Datei), das Datenbankschema zu verstehen. Dieser Vorgang kann, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
+Datenmigrations-Assistent mehrere Datenbanken parallel bewertet. Während der Bewertung Datenmigrations-Assistent extrahiert eine Datenebenenanwendung (dacpac), um das Datenbankschema zu verstehen. Bei diesem Vorgang kann ein Timeout entstehen, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
 
-Data Migration Assistant v2. 0 ab, können Sie dies steuern durch Festlegen der ParallelDatabases Konfigurationswert. Standardwert ist 8.
+Ab Datenmigrations-Assistent v 2.0 können Sie dies steuern, indem Sie den Konfigurations Wert paralleldatenbanken festlegen. Der Standardwert ist 8.
 
 ```
 <advisorGroup>
@@ -58,11 +58,11 @@ Data Migration Assistant v2. 0 ab, können Sie dies steuern durch Festlegen der 
 
 
 
-## <a name="number-of-databases-to-migrate-in-parallel"></a>Anzahl der Datenbanken parallel migrieren
+## <a name="number-of-databases-to-migrate-in-parallel"></a>Anzahl von Datenbanken, die parallel migriert werden sollen
 
-Data Migration Assistant migriert mehrere Datenbanken gleichzeitig vor dem Migrieren von Anmeldungen. Während der Migration wird Data Migration Assistant erstellen Sie eine Sicherung der Quelldatenbank, optional kopieren Sie die Sicherung, und klicken Sie dann auf dem Zielserver wiederherstellen. Timeout-Fehler können auftreten, wenn mehrere Datenbanken für die Migration ausgewählt werden. 
+Datenmigrations-Assistent migriert mehrere Datenbanken parallel, bevor-Anmeldungen migriert werden. Während der Migration wird Datenmigrations-Assistent eine Sicherung der Quelldatenbank durchführen, die Sicherung optional kopieren und auf dem Zielserver wiederherstellen. Möglicherweise treten Timeout Fehler auf, wenn mehrere Datenbanken für die Migration ausgewählt werden. 
 
-Data Migration Assistant v2. 0 ab, wenn Sie dieses Problem auftreten, können Sie den Konfigurationswert ParallelDatabases reduzieren. Sie können den Wert für den gesamten Migration zur Reduzierung der erhöhen.
+Ab Datenmigrations-Assistent v 2.0 können Sie den paralleldatenbanken-Konfigurations Wert verringern, wenn Sie dieses Problem auftreten. Sie können den Wert erhöhen, um die gesamte Migrationszeit zu verringern.
 
 ```
 <advisorGroup>
@@ -77,24 +77,24 @@ Data Migration Assistant v2. 0 ab, wenn Sie dieses Problem auftreten, können Si
 ```
 
 
-## <a name="dacfx-settings"></a>DacFX-Einstellungen
+## <a name="dacfx-settings"></a>Dacfx-Einstellungen
 
-Während der Bewertung extrahiert Data Migration Assistant datenebenenanwendung (DACPAC-Datei), das Datenbankschema zu verstehen. Dieser Vorgang kann fehlschlagen, mit Timeouts für extrem große Datenbanken, oder wenn der Server ausgelastet ist. Beginnen mit der Datenmigration v1. 0, können Sie die folgenden Konfigurationswerte zur Vermeidung von Fehlern ändern. 
+Während der Bewertung extrahiert Datenmigrations-Assistent eine Datenebenenanwendung (dacpac), um das Datenbankschema zu verstehen. Dieser Vorgang kann mit Timeouts für extrem große Datenbanken fehlschlagen, oder wenn der Server ausgelastet ist. Ab der Daten Migration v 1.0 können Sie die folgenden Konfigurationswerte ändern, um Fehler zu vermeiden. 
 
 > [!NOTE]
-> Die gesamte &lt;Dacfx&gt; Eintrag ist standardmäßig auskommentiert. Entfernen Sie die Kommentare, und klicken Sie dann ändern Sie den Wert, je nach Bedarf.
+> Der gesamte &lt;dacfx&gt; -Eintrag ist standardmäßig kommentiert. Entfernen Sie die Kommentare, und ändern Sie den Wert nach Bedarf.
 
-- "CommandTimeout"
+- CommandTimeout
 
-   Dieser Parameter wird die Eigenschaft IDbCommand.CommandTimeout *Sekunden*. (Standard = 60)
+   Dieser Parameter legt die IDbCommand. CommandTimeout-Eigenschaft in *Sekunden*fest. (Standardwert = 60)
 
 - databaseLockTimeout
 
-   Dieser Parameter entspricht dem [SPERRE festgelegt\_TIMEOUT Timeout\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standard = 5000)
+   Dieser Parameter entspricht dem [\_Timeout Zeitraum für\_Sperr Timeout](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standardwert = 5.000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Dieser Parameter legt fest, die Anzahl der SQL-Verbindung-Pool-Verbindungen, die verwendet wird. (Standard = 8)
+  Mit diesem Parameter wird die Anzahl der zu verwendenden SQL-Verbindungspool Verbindungen festgelegt. (Standardwert = 8)
 
 ```
 <advisorGroup>
@@ -109,11 +109,11 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database an: Schwellenwert für die Empfehlung
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Empfehlungs Schwellenwert
 
-Mit [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), Sie können dynamisches stretching von warmen und kalten Transaktionsdaten von Microsoft SQL Server 2016 nach Azure. Stretch Database ist für Transaktionsdatenbanken mit großen Mengen an inaktiven Daten gedacht. Die Stretch Database-Empfehlung, unter der Empfehlung des Speicher-Feature, identifiziert zunächst die Tabellen, dass sie annimmt, dass von dieser Funktion profitieren, und ermittelt es Änderungen, die vorgenommen werden, um die Tabelle für dieses Feature aktivieren möchten.
+Mit [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database)können Sie sowohl warm-als auch kalte Transaktionsdaten dynamisch von Microsoft SQL Server 2016 auf Azure ausdehnen. Stretch Database als Ziel für Transaktions Datenbanken mit großen Mengen an kaltdaten. Die Stretch Database Empfehlung unter Empfehlung zu Speicher Features identifiziert zunächst die Tabellen, die von diesem Feature genutzt werden, und identifiziert dann Änderungen, die vorgenommen werden müssen, um die Tabelle für dieses Feature zu aktivieren.
 
-Data Migration Assistant v2. 0 ab, können Sie diesen Schwellenwert für eine Tabelle für die Stretch Database-Funktion, die mit den Konfigurationswert RecommendedNumberOfRows qualifizieren steuern. Standardwert ist 100.000 Zeilen. Wenn Sie die Stretch-Funktionen für die noch kleineren Tabellen analysieren möchten, setzen Sie den Wert entsprechend.
+Ab Datenmigrations-Assistent v 2.0 können Sie diesen Schwellenwert für eine Tabelle steuern, damit Sie sich für die Stretch Database-Funktion mit dem Konfigurations Wert "Empfehlungs Konfigurations Wert" qualifizieren. Der Standardwert ist 100.000 Zeilen. Wenn Sie die Stretch-Funktionen für noch kleinere Tabellen analysieren möchten, verringern Sie den Wert entsprechend.
 
 ```
 <advisorGroup>
@@ -128,9 +128,9 @@ Data Migration Assistant v2. 0 ab, können Sie diesen Schwellenwert für eine Ta
 ```
 
 
-## <a name="sql-connection-timeout"></a>SQL-Verbindungstimeout
+## <a name="sql-connection-timeout"></a>SQL-Verbindungs Timeout
 
-Sie können steuern, die [SQL-Verbindungstimeout](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) für Instanzen von Quell- und Zielserver während der Ausführung eine Bewertung oder die Migration durch Festlegen der Timeoutwert der Verbindung mit einer angegebenen Anzahl von Sekunden. Der Standardwert beträgt 15 Sekunden.
+Sie können das Timeout der [SQL-Verbindung](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) für Quell-und Ziel Instanzen während der Ausführung einer Bewertung oder Migration steuern, indem Sie den Wert für das Verbindungs Timeout auf eine angegebene Anzahl von Sekunden festlegen. Der Standardwert beträgt 15 Sekunden.
 
 ```
 <appSettings>
@@ -140,7 +140,18 @@ Sie können steuern, die [SQL-Verbindungstimeout](https://msdn.microsoft.com/lib
 </appSettings>
 ```
 
+## <a name="ignore-error-codes"></a>Fehlercodes ignorieren
+
+Jede Regel weist einen Fehlercode im Titel auf. Wenn Sie keine Regeln benötigen und diese ignorieren möchten, verwenden Sie die ignoreerrorcodes-Eigenschaft. Sie können angeben, um einen einzelnen Fehler oder mehrere Fehler zu ignorieren. Um mehrere Fehler zu ignorieren, verwenden Sie ein Semikolon, z. b. ignoreerrorcodes = "46010; 71501". Der Standardwert ist 71501, der nicht aufgelösten verweisen zugeordnet ist, wenn ein Objekt auf Systemobjekte, z. b. Prozeduren, Sichten usw., verweist.
+
+```
+<workflowSettings>
+
+<assessment parallelDatabases="8" ignoreErrorCodes="71501" />
+
+</workflowSettings>
+```
 
 ## <a name="see-also"></a>Siehe auch
 
-[Data Migration Assistant herunterladen](https://www.microsoft.com/download/details.aspx?id=53595)
+[Datenmigrations-Assistent Download](https://www.microsoft.com/download/details.aspx?id=53595)

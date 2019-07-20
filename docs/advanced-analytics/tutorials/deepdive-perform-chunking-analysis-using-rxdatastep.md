@@ -1,34 +1,34 @@
 ---
-title: Blockweises mithilfe von RxDataStep von RevoScaleR - SQL Server-Machine Learning
-description: Exemplarische Vorgehensweise im Lernprogramm zum Aufteilen von Daten für die verteilte Analyse, die Verwendung der Sprache R auf SQL Server.
+title: Durchführen der Segmentierungs Analyse mithilfe von revoscaler rxdatastep
+description: 'Tutorial: Exemplarische Vorgehensweise zum Segmentieren von Daten für die verteilte Analyse mithilfe der Programmiersprache R auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6ccc64c98f0519b33b6ba9da180c01e4478492f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3026fa03ff654079e355364587d694c9c3fe127f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962207"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344717"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Blockweises mithilfe von RxDataStep (SQL Server und die RevoScaleR-Lernprogramm)
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Durchführen einer Block enden Analyse mithilfe von rxdatastep (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In dieser Lektion verwenden Sie die **RxDataStep** zum Verarbeiten von Daten in Blöcken von Funktion, statt Sie zu erfordern, dass das gesamte Dataset in den Arbeitsspeicher geladen und gleichzeitig ausführen möchten, wie in r traditionell der Fall verarbeitet werden Die **RxDataStep** Funktionen liest die Daten im Segment, gilt R-Funktionen für jeden Datenblock wiederum und speichert dann die Ergebnisse der Zusammenfassung für jeden Block in eine allgemeine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn alle Daten gelesen wurden, werden die Ergebnisse kombiniert.
+In dieser Lektion verwenden Sie die **rxdatastep** -Funktion, um Daten in Blöcken zu verarbeiten, anstatt zu verlangen, dass das gesamte Dataset in den Arbeitsspeicher geladen und gleichzeitig verarbeitet wird, wie bei herkömmlichem R. Die **rxdatastep** -Funktionen liest die Daten in Block, wendet R-Funktionen auf jeden Datenblock an und speichert dann die Zusammenfassungs Ergebnisse für jeden Block in einer allgemeinen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle. Wenn alle Daten gelesen wurden, werden die Ergebnisse kombiniert.
 
 > [!TIP]
-> In dieser Lektion berechnen Sie eine kontingenztafel mithilfe der **Tabelle** -Funktion in R. In diesem Beispiel dient nur zu Lehrzwecken. 
+> In dieser Lektion berechnen Sie mithilfe der **Table** -Funktion in R eine notfalltabelle. Dieses Beispiel ist nur für Unterrichtszwecke gedacht. 
 > 
-> Wenn Sie reale Datensätze tabellarisch ordnen müssen, sollten Sie verwenden die **RxCrossTabs** oder **RxCube** -Funktionen in **RevoScaleR**, optimiert sind für diese Art von der Vorgang.
+> Wenn Sie in der Lage sein müssen, reale Datasets zu verwenden, empfiehlt es sich, die Funktionen **rxcrostabs** oder **rxcube** in **revoscaler**zu verwenden, die für diese Art von Vorgang optimiert sind.
 
 ## <a name="partition-data-by-values"></a>Partitionieren von Daten nach Werten
 
-1. Erstellen Sie eine benutzerdefinierte R-Funktion, die R aufruft **Tabelle** -Funktion für jeden Datenblock, und nennen Sie die neue Funktion **ProcessChunk**.
+1. Erstellen Sie eine benutzerdefinierte r-Funktion, die die r- **Tabellen** Funktion für jeden Datenblock aufruft, und benennen Sie die neue Funktion **processchunk**.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -53,7 +53,7 @@ In dieser Lektion verwenden Sie die **RxDataStep** zum Verarbeiten von Daten in 
     rxSetComputeContext(sqlCompute)
     ```
   
-3. Definieren Sie eine SQL Server-Datenquelle zum Speichern der Daten, die Sie verarbeiten können. Beginnen Sie, indem Sie einer Variablen eine SQL-Abfrage zuweisen. Verwenden Sie dann die Variable in der *SqlQuery* Argument einer neuen SQL Server-Datenquelle.
+3. Definieren Sie eine SQL Server Datenquelle zum Speichern der Daten, die Sie verarbeiten. Beginnen Sie, indem Sie einer Variablen eine SQL-Abfrage zuweisen. Verwenden Sie diese Variable dann im *sqlQuery* -Argument einer neuen SQL Server Datenquelle.
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -64,9 +64,9 @@ In dieser Lektion verwenden Sie die **RxDataStep** zum Verarbeiten von Daten in 
             levels = as.character(1:7))))
     ```
 
-4. Sie können optional ausführen **RxGetVarInfo** für diese Datenquelle. An diesem Punkt enthält es eine einzelne Spalte: *Var 1: DayOfWeek, Type: Factor, keine Faktorebenen verfügbar*
+4. Optional können Sie **rxgetvarinfo** für diese Datenquelle ausführen. An dieser Stelle enthält Sie eine einzelne Spalte: *Var 1: Dayoatweek, Typ: Faktor, keine Faktor Ebenen verfügbar*
      
-5. Erstellen Sie vor dem Anwenden dieser Faktorvariablen auf die Quelldaten eine separate Tabelle für die Zwischenergebnisse. In diesem Fall verwenden Sie einfach die **RxSqlServerData** Funktion zum Definieren der Daten, sodass Sie sicher, dass alle vorhandenen Tabellen mit demselben Namen zu löschen.
+5. Erstellen Sie vor dem Anwenden dieser Faktorvariablen auf die Quelldaten eine separate Tabelle für die Zwischenergebnisse. Auch hier verwenden Sie die Funktion **rxsqlserverdata** , um die Daten zu definieren, um sicherzustellen, dass alle vorhandenen Tabellen mit demselben Namen gelöscht werden.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -74,13 +74,13 @@ In dieser Lektion verwenden Sie die **RxDataStep** zum Verarbeiten von Daten in 
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  Rufen Sie die benutzerdefinierte Funktion **ProcessChunk** zum Transformieren der Daten, wie sie durch die Verwendung als gelesen wird, die *TransformFunc* Argument für die **RxDataStep** Funktion.
+7.  Aufrufen der benutzerdefinierten Funktion **processchunk** , um die zu lesenden Daten zu transformieren, indem Sie als *transformfunc* -Argument für die **rxdatastep** -Funktion verwendet werden.
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  Um Zwischenergebnisse von anzuzeigen **ProcessChunk**, weisen Sie die Ergebnisse der **RxImport** auf eine Variable, und klicken Sie dann die Ergebnisse an die Konsole ausgegeben.
+8.  Um die Zwischenergebnisse von **processchunk**anzuzeigen, weisen Sie die Ergebnisse von **rximport** einer Variablen zu, und geben Sie dann die Ergebnisse an die Konsole aus.
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -107,7 +107,7 @@ In dieser Lektion verwenden Sie die **RxDataStep** zum Verarbeiten von Daten in 
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
     97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. Um die Tabelle mit Zwischenergebnissen zu entfernen, stellen Sie einen Aufruf von **RxSqlServerDropTable**.
+10. Um die Tabelle mit den Zwischenergebnissen zu entfernen, führen Sie einen Aufrufe von **rxsqlserverdroptable**aus.
   
     ```R
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)

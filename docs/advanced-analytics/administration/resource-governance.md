@@ -1,67 +1,67 @@
 ---
-title: Ressourcenkontrolle für die skriptausführung R- und Python - SQL Server-Machine Learning
-description: Ordnen Sie Arbeitsspeicher, CPU und e/a-RAM für R und Python-Workloads in SQL Server-Datenbank-Engine-Instanz an.
+title: Ressourcenkontrolle für die Skriptausführung von R und python
+description: Zuweisen von RAM-Arbeitsspeicher, CPU und e/a für R-und python-Workloads auf SQL Server Datenbank-Engine-Instanz.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e6063f8367e5b91e7e935d6f92515a6dd452dc56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1a665fd92f630b46351ef96cc203c9bbf71f54a2
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963138"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345138"
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Ressourcenkontrolle für Machine Learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Data Science und Machine learning-Algorithmen sind rechenintensiv. Je nach den Prioritäten bei der arbeitsauslastung müssen Sie möglicherweise die für Data Science verfügbaren Ressourcen zu erhöhen oder verringern, die Ressourcen, wenn Sie R und Python Execution Script verwendungsdatensammlungssystem, die Leistung anderer Dienste, die gleichzeitig ausgeführt werden. 
+Data Science-und Machine Learning-Algorithmen sind Rechen intensiv. Abhängig von den Prioritäten der Arbeitsauslastung müssen Sie möglicherweise die für Data Science verfügbaren Ressourcen erhöhen oder die ausgewähltem Ressourcen verringern, wenn die Ausführung von R-und python-Skripts die Leistung anderer gleichzeitig ausgeführten Dienste untergräbt. 
 
-Wenn Sie die Verteilung von Ressourcen für mehrere Workloads ausgleichen möchten, können Sie [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) Zuweisen von CPU, physische e/a und Speicherressourcen, die von externen Laufzeiten für R und Python genutzt. Wenn Sie Ressourcen verschieben, denken Sie daran, dass Sie möglicherweise auch die reservierten Umfang an Arbeitsspeicher für andere arbeitsauslastungen und Dienste zu reduzieren. 
+Wenn Sie die Verteilung der Systemressourcen auf mehrere Arbeits Auslastungen zurücksetzen müssen, können Sie mit [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) CPU, physische e/a und Arbeitsspeicher Ressourcen zuordnen, die von den externen Laufzeiten für R und python beansprucht werden. Wenn Sie Ressourcen Zuordnungen verschieben, denken Sie daran, dass Sie möglicherweise auch die Menge an Arbeitsspeicher reduzieren müssen, die für andere Workloads und Dienste reserviert ist. 
 
 > [!NOTE] 
 > Resource Governor ist eine Funktion der Enterprise Edition.
 
-## <a name="default-allocations"></a>Standardzuordnungen
+## <a name="default-allocations"></a>Standard Zuordnungen
 
-Standardmäßig sind die externen Skript-Laufzeiten für Machine Learning auf nicht mehr als 20 % des gesamten Arbeitsspeichers beschränkt. Es hängt von Ihrem System, aber im Allgemeinen möglicherweise dieses Limit nicht schwerwiegenden Machine Learning-Aufgaben wie das Trainieren eines Modells oder das Vorhersagen von vielen Zeilen mit Daten. 
+Standardmäßig sind die externen Skript Laufzeiten für Machine Learning auf nicht mehr als 20% des gesamten Computer Arbeitsspeichers beschränkt. Das hängt von Ihrem System ab, aber im Allgemeinen ist diese Beschränkung für schwerwiegende Machine Learning-Aufgaben unzureichend, wie z. b. das Trainieren eines Modells oder das Vorhersagen von vielen Daten Zeilen. 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>Verwenden der Ressourcenkontrolle zum Steuern der enthaltenen
+## <a name="use-resource-governor-to-control-resourcing"></a>Verwenden von Resource Governor zum Steuern der ausgewähltem Ressourcen
  
-Externe Prozesse verwenden standardmäßig bis zu 20 % des gesamten Speicher auf dem lokalen Server. Sie können ändern, dass den standardressourcenpool, um serverweite Änderungen mit R und Python-Prozesse, die beliebige Kapazität nutzen Sie die externe Prozesse zur Verfügung stellen.
+Standardmäßig verwenden externe Prozesse bis zu 20% des gesamten Host Arbeitsspeichers auf dem lokalen Server. Sie können den Standard Ressourcenpool so ändern, dass Server weite Änderungen vorgenommen werden, wobei R-und python-Prozesse die für externe Prozesse verfügbare Kapazität nutzen.
 
-Sie können auch benutzerdefinierte erstellen *externe Ressourcenpools*mit zugehörigen Arbeitsauslastungsgruppen und Klassifizierer, ressourcenzuweisung für Zugriffsanfragen von bestimmten Programme, Hosts oder anderen Kriterien zu ermitteln, Sie bieten. Ein externer Ressourcenpool ist ein Typ des Ressourcenpools, die in eingeführt [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] zur Verwaltung von R und Python Prozesse, die außerhalb der Datenbank-Engine.
+Alternativ können Sie benutzerdefinierte *externe Ressourcenpools*mit zugeordneten Arbeits Auslastungs Gruppen und Klassifizierungen erstellen, um die Ressourcenzuweisung für Anforderungen zu bestimmen, die von bestimmten Programmen, Hosts oder anderen von Ihnen bereitgestellten Kriterien stammen. Ein externer Ressourcenpool ist ein Typ von Ressourcenpool, der [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] in eingeführt wurde, um die Verwaltung von R-und python-Prozessen außerhalb der Datenbank-Engine zu unterstützen.
 
-1. [Aktivieren der Ressourcenkontrolle](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (es ist standardmäßig deaktiviert).
+1. [Aktivieren der Ressourcen](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) Kontrolle (standardmäßig deaktiviert).
 
-2. Führen Sie [CREATE EXTERNAL RESOURCE POOL](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) zum Erstellen und konfigurieren den Ressourcenpool, gefolgt von [ALTER RESOURCE GOVERNOR](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) für die Implementierung.
+2. Führen Sie [externen Ressourcenpool erstellen](https://docs.microsoft.com/sql/t-sql/statements/create-external-resource-pool-transact-sql) aus, um den Ressourcenpool zu erstellen und zu konfigurieren, gefolgt von [Alter Resource Governor](https://docs.microsoft.com/sql/t-sql/statements/alter-resource-governor-transact-sql) , um ihn zu implementieren.
 
-3. Erstellen Sie eine Arbeitsauslastungsgruppe für eine präzise Zuordnungen, z. B. zwischen Trainings- und Bewertung.
+3. Erstellen Sie eine Arbeits Auslastungs Gruppe für präzise Zuordnungen, z. b. zwischen Training und Bewertung.
 
-4. Erstellen Sie eine Klassifizierung zum Abfangen von Aufrufe zur externen Verarbeitung.
+4. Erstellen Sie einen Klassifizierer, um Aufrufe für die externe Verarbeitung abzufangen.
 
-5. Ausführen von Abfragen und Prozeduren, die mithilfe der Objekte, die Sie erstellt haben.
+5. Führen Sie Abfragen und Prozeduren mit den von Ihnen erstellten Objekten aus.
 
-Eine exemplarische Vorgehensweise finden Sie unter [Gewusst wie: Erstellen eines Ressourcenpools für externe R und Python-Skripts](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md) schrittweise Anweisungen.
+Eine exemplarische Vorgehensweise finden [Sie unter Erstellen eines Ressourcenpools für externe R-und python-Skripts](../../advanced-analytics/r/how-to-create-a-resource-pool-for-r.md) .
 
-Eine Einführung in die Terminologie und allgemeinen Konzepte, finden Sie unter [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
+Eine Einführung in die Terminologie und allgemeine Konzepte finden Sie unter [Resource Governor Ressourcenpools](../../relational-databases/resource-governor/resource-governor-resource-pool.md).
 
-## <a name="processes-under-resource-governance"></a>Prozesse unter Ressourcenkontrolle
+## <a name="processes-under-resource-governance"></a>Prozesse unter ressourcengovernance
   
- Sie können eine *externen Ressourcenpool* zum Verwalten der Ressourcen, die von der folgenden Programme auf einer Datenbank-Engine-Instanz verwendet:
+ Sie können einen *externen Ressourcenpool* verwenden, um die Ressourcen zu verwalten, die von den folgenden ausführbaren Dateien auf einer Datenbank-Engine-Instanz verwendet werden:
 
-+ Rterm.exe beim aufgerufenen lokal von SQL Server oder Remote mit SQL Server als dem entfernten computekontext aufgerufene
-+ Python.exe beim aufgerufenen lokal von SQL Server oder Remote mit SQL Server als dem entfernten computekontext aufgerufene
++ RTERM. exe, wenn Sie lokal von SQL Server aufgerufen oder Remote mit SQL Server als remotecomputekontext aufgerufen wird.
++ "Python. exe", wenn Sie lokal von SQL Server aufgerufen oder Remote mit SQL Server als remotecomputekontext aufgerufen wird
 + BxlServer.exe und Satellitenprozesse
-+ Satellitenprozesse, die von Launchpad, z. B. PythonLauncher.dll gestartet werden
++ Vom Launchpad gestartete Satelliten Prozesse, z. b. "pythonlauncher. dll"
   
 > [!NOTE]
-> Direkte Verwaltung des Launchpad-Diensts mithilfe von Resource Governor wird nicht unterstützt. Launchpad handelt es sich um ein vertrauenswürdiger Dienst, der nur Host-startfeldern von Microsoft bereitgestellt werden können. Vertrauenswürdige Startprogramme sind explizit konfiguriert, um zu vermeiden, übermäßigen Ressourcenverbrauch.
+> Die direkte Verwaltung des Launchpad-Dienstanbieter mithilfe von Resource Governor wird nicht unterstützt. Launchpad ist ein vertrauenswürdiger Dienst, der nur von Microsoft bereitgestellte Launcher hosten kann. Vertrauenswürdige Launcher werden explizit konfiguriert, um zu vermeiden, dass übermäßig viele Ressourcen beansprucht werden
   
 ## <a name="see-also"></a>Siehe auch
 
-+ [Verwalten von Machine Learning-integration](../r/managing-and-monitoring-r-solutions.md)
++ [Verwalten der Machine Learning-Integration](../r/managing-and-monitoring-r-solutions.md)
 + [Erstellen eines Ressourcenpools für Machine Learning](../r/how-to-create-a-resource-pool-for-r.md)
-+ [Ressourcenpools der Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
++ [Resource Governor von Ressourcenpools](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

@@ -1,56 +1,56 @@
 ---
-title: 'OlapR R - Funktionsbibliothek: SQL Server Machine Learning Services'
-description: Einführung in die OlapR-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit R.
+title: olapr R-Funktionsbibliothek
+description: Einführung in die olapr-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 431fddf870b5755691cad92e576c95d0d3a83890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2363b9ba69f914f828d7445a88d6ee1c784bb096
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962499"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344879"
 ---
-# <a name="olapr-r-library-in-sql-server"></a>OlapR (R-Bibliothek in SQL Server)
+# <a name="olapr-r-library-in-sql-server"></a>olapr (R-Bibliothek in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**OlapR** ist eine Microsoft-Bibliothek von R-Funktionen, die für die MDX-Abfragen für einen SQL Server Analysis Services-OLAP-Cube verwendet. Vorgänge für alle MDX-Funktionen nicht unterstützt, aber Sie können Abfragen, die dem Slice, aufteilen, Drilldown, Rollup und Pivotieren von Dimensionen erstellen. 
+**olapr** ist eine Microsoft-Bibliothek von R-Funktionen, die für MDX-Abfragen eines SQL Server Analysis Services OLAP-Cubes verwendet werden. Funktionen unterstützen nicht alle MDX-Vorgänge, Sie können jedoch Abfragen erstellen, die in Dimensionen Slice, Würfel, Drilldown, Rollup und Pivot sind. 
 
-Dieses Paket ist nicht in einer R-Sitzung geladen. Führen Sie den folgenden Befehl zum Laden der Bibliothek.
+Dieses Paket ist nicht vorab in eine R-Sitzung geladen. Führen Sie den folgenden Befehl aus, um die Bibliothek zu laden.
 
 ```R
 library(olapR)
 ```
 
-Sie können diese Bibliothek für Verbindungen mit einem Analysis Services-OLAP-Cube auf allen unterstützten Versionen von SQL Server verwenden. Verbindungen mit einem tabellarischen Modell werden zu diesem Zeitpunkt nicht unterstützt.
+Sie können diese Bibliothek für Verbindungen mit einem Analysis Services OLAP-Cube unter allen unterstützten Versionen von SQL Server verwenden. Verbindungen mit einem tabellarischen Modell werden zurzeit nicht unterstützt.
 
 ## <a name="package-version"></a>Paketversion
 
-Aktuelle Version ist 1.0.0 in allen nur-Windows-Produkten und lädt Sie herunter, die Bibliothek bereitstellt.
+Die aktuelle Version ist 1.0.0 in allen reinen Windows-Produkten und-Downloads, die die Bibliothek bereitstellen.
 
-## <a name="full-reference-documentation"></a>Vollständige Referenz-Dokumentation
+## <a name="full-reference-documentation"></a>Vollständige Referenz Dokumentation
 
-Die **Olapr** Bibliothek wird in mehreren Microsoft-Produkte verteilt, aber wird, ob Sie die Bibliothek in SQL Server oder einem anderen Produkt erhalten. Da die Funktionen identisch sind, [Dokumentation für einzelne Sqlrutils-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) in nur einem Ort unter veröffentlicht wird die [R Verweis](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server. Sollten Sie jede Produkt-spezifische Verhalten vorhanden ist, wird Diskrepanzen auf der Hilfeseite für die Funktion angegeben.
+Die **olapr** -Bibliothek ist in mehreren Microsoft-Produkten verteilt, aber die Verwendung ist identisch, unabhängig davon, ob Sie die Bibliothek in SQL Server oder einem anderen Produkt erhalten. Da die-Funktionen identisch sind, wird die [Dokumentation für einzelne sqlrutils-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) nur an einem Speicherort unter der [R-Referenz](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) für Microsoft Machine Learning Server veröffentlicht. Wenn produktspezifische Verhalten vorhanden sind, werden auf der Hilfeseite der Funktion Abweichungen festgestellt.
 
-## <a name="availability-and-location"></a>Verfügbarkeit und den Speicherort
+## <a name="availability-and-location"></a>Verfügbarkeit und Speicherort
 
-Dieses Paket wird in der folgenden Produkte sowie auf mehrere VM-Images in Azure bereitgestellt. Speicherort des Pakets variiert entsprechend.
+Dieses Paket wird in den folgenden Produkten sowie auf mehreren Images virtueller Computer in Azure bereitgestellt. Der Speicherort des Pakets variiert entsprechend.
 
 Produkt | Speicherort |
 --------|----------|
-SQL Server 2017 Machine Learning Services (mit R-Integration) | C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library | 
-SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library
-Microsoft Machine Learning Server (R Server) | C:\Programme\Microsoft Files\Microsoft\R_SERVER\library |
-Microsoft R Client | C:\Programme\Microsoft Files\Microsoft\R Client\R_SERVER\library |
-Data Science-VM (in Azure) | C:\Programme\Microsoft Files\Microsoft\R Client\R_SERVER\library |
-SQL Server-Computers (in Azure) <sup>1</sup> | C:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
+SQL Server 2017 Machine Learning Services (mit R-Integration) | C:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\R_SERVICES\library | 
+SQL Server 2016 R-Dienste | C:\Programme\Microsoft SQL server\mssql13. MSSQLSERVER\R_SERVICES\library
+Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
+Microsoft R Client | C:\programme\microsoft\r Client\R_SERVER\library |
+Data Science Virtual Machine (in Azure) | C:\programme\microsoft\r Client\R_SERVER\library |
+SQL Server virtueller Computer (in Azure) <sup>1</sup> | C:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\R_SERVICES\library |
 
-<sup>1</sup> R-Integration ist in SQL Server optional. Wenn Sie die Machine Learning oder R-Funktion während der Konfiguration des virtuellen Computers hinzufügen, wird die OlapR-Bibliothek installiert werden.
+<sup>1</sup> R-Integration ist in SQL Server optional. Die olapr-Bibliothek wird bei der VM-Konfiguration installiert, wenn Sie die Machine Learning-oder R-Funktion hinzufügen.
 
 
 ## <a name="see-also"></a>Siehe auch
 
-[Vorgehensweise: Erstellen von MDX-Abfragen mit olapR](how-to-create-mdx-queries-using-olapr.md)
+[Erstellen von MDX-Abfragen mit olapr](how-to-create-mdx-queries-using-olapr.md)

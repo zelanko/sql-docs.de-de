@@ -1,27 +1,27 @@
 ---
-title: 'Schnellstart: erstellen ein Vorhersagemodells mit R – SQL Server-Machine Learning'
-description: Erfahren Sie in dieser schnellstartanleitung, wie zum Erstellen eines Modells in R mit SQL Server-Daten, um vorhersagen zu zeichnen.
+title: Schnellstart zum Erstellen eines Vorhersagemodells mithilfe von R
+description: In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Modell in R erstellen, indem Sie SQL Server Daten zum Zeichnen von Vorhersagen verwenden.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962037"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345477"
 ---
-# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Schnellstart: Erstellen eines Vorhersagemodells mit R in SQL Server
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Schnellstart: Erstellen eines Vorhersagemodells mithilfe von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In dieser schnellstartanleitung haben Sie erfahren, wie Sie das Trainieren eines Modells mit R, und klicken Sie dann das Modell in einer Tabelle in SQL Server speichern. Das Modell ist ein einfaches Verallgemeinertes Lineares Modell ("glm"), das Wahrscheinlichkeit vorhergesagt, dass ein Fahrzeug mit einer manuellen Übertragung angepasst wurde. Verwenden Sie die `mtcars` Dataset enthalten, die mit R.
+In dieser Schnellstartanleitung erfahren Sie, wie Sie ein Modell mit R trainieren und das Modell dann in einer Tabelle in SQL Server speichern. Das Modell ist ein einfaches generalisiertes lineares Modell (GLM), das die Wahrscheinlichkeit vorhersagt, dass ein Fahrzeug mit einer manuellen Übertragung ausgestattet wurde. Sie verwenden das `mtcars` in R enthaltene DataSet.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Einen vorherigen schnellstartanleitung [R stellen Sie sicher, die in SQL Server vorhanden ist](quickstart-r-verify.md), enthält Informationen und links für das Einrichten der R-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
+Eine vorherige Schnellstartanleitung, [überprüfen, ob R in SQL Server vorhanden](quickstart-r-verify.md)ist, enthält Informationen und Links zum Einrichten der r-Umgebung, die für diesen Schnellstart erforderlich ist.
 
 ## <a name="create-the-source-data"></a>Erstellen der Quelldaten
 
@@ -43,7 +43,7 @@ CREATE TABLE dbo.MTCars(
 );
 ```
 
-Als Nächstes fügen Sie die Daten aus dem Build im Dataset `mtcars`.
+Fügen Sie dann die Daten aus dem Build in das DataSet `mtcars`ein.
 
 ```SQL
 INSERT INTO dbo.MTCars
@@ -54,15 +54,15 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'MTCars';
 ```
 
-+ Einige Benutzer möchten gern temporäre Tabellen verwenden, aber beachten Sie, dass einige R Clients Sitzungen zwischen Batches trennen.
++ Einige Benutzer möchten temporäre Tabellen verwenden, aber beachten Sie, dass einige R-Clients Sitzungen zwischen Batches trennen.
 
 + Viele kleine und große Datasets sind in der R-Laufzeit enthalten. Geben Sie aus einer R-Eingabeaufforderung heraus `library(help="datasets")` ein, um eine Liste der mit R installierten Datasets anzuzeigen.
 
 ## <a name="create-a-model"></a>Erstellen eines Modells
 
-Daten der autogeschwindigkeit enthält zwei Spalten: beide numerisch, pferdestärke (`hp`) und Gewichtung (`wt`). Aus diesen Daten erstellen Sie ein Verallgemeinertes Lineares Modell ("glm"), das die Wahrscheinlichkeit schätzt, dass ein Fahrzeug mit einer manuellen Übertragung angepasst wurde.
+Die Auto Geschwindigkeitsdaten enthalten zwei Spalten: numerisch, Pferdestärke`hp`() und Gewichtung`wt`(). Aus diesen Daten erstellen Sie ein generalisiertes lineares Modell (GLM), das die Wahrscheinlichkeit schätzt, dass ein Fahrzeug mit einer manuellen Übertragung ausgestattet wurde.
 
-Um das Modell zu erstellen, Sie definieren die Formel in Ihrem R-Code und die Daten als Eingabeparameter übergeben.
+Um das Modell zu erstellen, definieren Sie die Formel in Ihrem R-Code und übergeben die Daten als Eingabeparameter.
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -82,12 +82,12 @@ END;
 GO
 ```
 
-+ Das erste Argument für `glm` ist die *Formel* -Parameter, der definiert, `am` als abhängig `hp + wt`.
++ Das erste Argument für `glm` ist der *Formel* Parameter, der als `am` abhängig von `hp + wt`definiert wird.
 + Die Eingabedaten werden in der Variable `MTCarsData` gespeichert, die durch die SQL-Abfrage aufgefüllt wird. Wenn Sie Ihren Eingabedaten keinen spezifischen Namen zuweisen, ist der Standardvariablenname _InputDataSet_.
 
-## <a name="create-a-table-for-the-model"></a>Erstellen Sie eine Tabelle für das Modell
+## <a name="create-a-table-for-the-model"></a>Erstellen einer Tabelle für das Modell
 
-Speichern Sie als Nächstes das Modell auf, damit Sie erneut zu trainieren oder für Vorhersagen verwenden können. Die Ausgabe eines R-Pakets, das ein Modell erstellt, ist normalerweise ein **binäres Objekt**. Aus diesem Grund muss in der Tabelle, in dem Sie das Modell speichern, eine Spalte angeben **'varbinary(max)'** Typ.
+Als nächstes speichern Sie das Modell, damit Sie es erneut trainieren oder für Vorhersagen verwenden können. Die Ausgabe eines R-Pakets, das ein Modell erstellt, ist normalerweise ein **binäres Objekt**. Daher muss in der Tabelle, in der das Modell gespeichert wird, eine Spalte vom Typ **varbinary (max)** bereitgestellt werden.
 
 ```sql
 CREATE TABLE GLM_models (
@@ -105,7 +105,7 @@ INSERT INTO GLM_models(model)
 EXEC generate_GLM;
 ```
 
-Beachten Sie, wenn Sie diesen Code ein zweites Mal ausführen, erhalten Sie diesen Fehler:
+Beachten Sie, dass Sie diesen Fehler erhalten, wenn Sie diesen Code ein zweites Mal ausführen:
 
 ```sql
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -121,7 +121,7 @@ WHERE model_name = 'default model'
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, da Sie ein Modell, in die letzte Schnellstart verfügen, erfahren Sie wie Sie darauf basierende Vorhersagen trifft und die Ergebnisse darstellt.
+Nachdem Sie nun über ein Modell verfügen, erfahren Sie im letzten Schnellstart, wie Sie Vorhersagen daraus generieren und die Ergebnisse zeichnen.
 
 > [!div class="nextstepaction"]
-> [Schnellstart: Vorhersagen und zeichnen ausgehend vom Modell](quickstart-r-predict-from-model.md)
+> [Schnellstart: Vorhersagen und zeichnen aus dem Modell](quickstart-r-predict-from-model.md)

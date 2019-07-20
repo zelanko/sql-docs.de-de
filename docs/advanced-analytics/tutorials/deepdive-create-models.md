@@ -1,25 +1,25 @@
 ---
-title: 'Erstellen von R-Modelle RevoScaleR-Tutorial: SQL Server-Machine Learning'
-description: Exemplarische Vorgehensweise im Lernprogramm zum Erstellen ein Modells mit der Sprache R auf SQL Server bereit.
+title: Tutorial zum Erstellen von R-Modellen revoscaler
+description: 'Tutorial: Exemplarische Vorgehensweise zum Erstellen eines Modells mit der Sprache R auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4d7fc66f844b1a0aac48b520257ed8f18e0696de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7df044c641da5d8605e5bb25fafed9ea02af77f4
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962273"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344688"
 ---
-# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Erstellen von R-Modellen (SQL Server und die RevoScaleR-Lernprogramm)
+# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>Erstellen von R-Modellen (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-Nun, da Sie die Trainingsdaten erweitert haben, ist es Zeit für die regressionsmodellierung mit Daten zu analysieren. Lineare Modelle sind ein wichtiges Tool in der Welt von Vorhersageanalysen und **RevoScaleR** Paket enthält die regressionsalgorithmen, die die arbeitsauslastung zu unterteilen und parallel ausführen können.
+Nachdem Sie die Trainingsdaten erweitert haben, ist es Zeit, die Daten mithilfe der Regressions Modellierung zu analysieren. Lineare Modelle sind ein wichtiges Tool in der Welt der Predictive Analytics, und das **revoscaler** -Paket enthält Regressions Algorithmen, mit denen die Arbeitsauslastung unterteilt und parallel ausgeführt werden kann.
 
 > [!div class="checklist"]
 > * Erstellen eines linearen Regressionsmodells
@@ -27,17 +27,17 @@ Nun, da Sie die Trainingsdaten erweitert haben, ist es Zeit für die regressions
 
 ## <a name="create-a-linear-regression-model"></a>Erstellen eines linearen Regressionsmodells
 
-In diesem Schritt erstellen Sie ein einfaches Lineares Modell, das die Kunden, die mithilfe der unabhängigen Variablen die Werte in die Kreditkartenschulden schätzt die *Geschlecht* und *CreditLine* Spalten.
+In diesem Schritt erstellen Sie ein einfaches lineares Modell, das den Kreditkarten Saldo der Kunden schätzt, die die Werte in den Spalten *Geschlecht* und *creditline* als unabhängige Variablen verwenden.
   
-Verwenden Sie hierzu die [RxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) -Funktion, die remotecomputekontexte unterstützt.
+Verwenden Sie hierzu die Funktion [rxlinmod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) , die remotecomputekontexte unterstützt.
   
-1. Erstellen Sie eine R-Variable zum Speichern von das abgeschlossene Modell, und rufen **RxLinMod**, eine geeignete Formel zu übergeben.
+1. Erstellen Sie eine R-Variable, um das fertige Modell zu speichern, und rufen Sie **rxlinmod**auf, und übergeben Sie eine entsprechende Formel.
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. Um eine Zusammenfassung der Ergebnisse anzuzeigen, rufen Sie die R-Standardfunktion **Zusammenfassung** für das Modellobjekt.
+2. Um eine Zusammenfassung der Ergebnisse anzuzeigen, müssen Sie die Standard-R- **Zusammenfassungs** Funktion für das Model-Objekt aufzurufen.
   
      ```R
      summary(linModObj)
@@ -73,9 +73,9 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>Erstellen eines logistischen Regressionsmodells
 
-Als Nächstes erstellen Sie ein Logistisches Regressionsmodell, das angibt, ob ein bestimmter Kunde ein Betrugs-Risiko ist. Verwenden Sie die **RevoScaleR** [RxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) -Funktion, die Anpassung der logistischen regressionsmodelle in remotecomputekontexten unterstützt.
+Erstellen Sie als nächstes ein logistisches Regressionsmodell, das angibt, ob ein bestimmter Kunde ein Betrugsrisiko darstellt. Sie verwenden die **revoscaler** [rxlogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) -Funktion, die die Anpassung von logistischen Regressionsmodellen in remotecomputekontexten unterstützt.
 
-Lassen Sie den Computekontext wie er ist. Sie werden auch weiterhin auch die gleiche Datenquelle verwenden.
+Lassen Sie den Computekontext wie er ist. Außerdem wird weiterhin dieselbe Datenquelle verwendet.
 
 1. Rufen Sie die Funktion **rxLogit** auf, und übergeben Sie die Formel, die zum Definieren des Modells erforderlich ist.
 

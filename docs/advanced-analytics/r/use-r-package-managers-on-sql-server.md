@@ -1,74 +1,74 @@
 ---
-title: Verwenden von R-Paket-Manager - SQL Server Machine Learning Services
-description: Verwenden Sie R-Standardbefehle wie install.packages, um neue R-Pakete auf SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern) hinzuzufügen.
+title: Verwenden des R-Paket-Managers
+description: Verwenden Sie Standard-r-Befehle wie install. Packages zum Hinzufügen neuer r-Pakete zu SQL Server 2016 R Services oder SQL Server 2017 Machine Learning Services (in-Database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d53725e708a5aaf6fb8476ce2d7408ffcfa7f102
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da14d2f00a6eb0c0ed52a50d27b6f1d06b062cf5
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962409"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344872"
 ---
-# <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Verwenden von R-Paket-Manager zum Installieren von R-Pakete auf SQL Server
+# <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Verwenden Sie r-Paket-Manager zum Installieren von r-Paketen auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Können Sie R-Standardtools zum Installieren neuer Pakete in einer Instanz von SQL Server 2016 oder SQL Server 2017 Bereitstellen des Computers verfügt über einen geöffneten Port 80, und Sie über Administratorrechte verfügen.
+Sie können Standard-R-Tools verwenden, um neue Pakete auf einer Instanz von SQL Server 2016 oder SQL Server 2017 zu installieren, wobei der Computer über einen geöffneten Port 80 verfügt und Sie über Administratorrechte verfügen.
 
 > [!IMPORTANT] 
-> Achten Sie darauf, zum Installieren von Paketen in der Standardbibliothek, der mit der aktuellen Instanz zugeordnet ist. Installieren Sie Pakete nicht auf ein Benutzerverzeichnis.
+> Stellen Sie sicher, dass Sie Pakete in der Standardbibliothek installieren, die der aktuellen Instanz zugeordnet ist. Installieren Sie Pakete niemals in einem Benutzerverzeichnis.
 
-Diese Prozedur verwendet RGui, jedoch können RTerm oder ein anderes R Befehlszeilen Tool, die mit erhöhten Rechten Datenzugriff unterstützt.
+In diesem Verfahren wird rgui verwendet, aber Sie können RTERM oder ein beliebiges anderes R-Befehlszeilen Tool verwenden, das erhöhten Zugriff unterstützt.
 
-## <a name="install-a-package-using-rgui"></a>Installieren eines Pakets mit RGui
+## <a name="install-a-package-using-rgui"></a>Installieren eines Pakets mithilfe von rgui
 
-1. [Bestimmen Sie den Speicherort der Instanz-Bibliothek](../package-management/default-packages.md). Navigieren Sie zu dem Ordner, in dem die R-Tools installiert sind. Beispielsweise lautet der standardmäßige Pfad für eine Standardinstanz von SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Bestimmen Sie den Speicherort der instanzbibliothek](../package-management/default-packages.md). Navigieren Sie zu dem Ordner, in dem die R-Tools installiert sind. Der Standardpfad für eine Standard Instanz von SQL Server 2017 lautet z. b. wie folgt:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-1. Mit der rechten Maustaste RGui.exe, und wählen **als Administrator ausführen**. Wenn Sie nicht über die erforderlichen Berechtigungen verfügen, wenden Sie sich an den Datenbankadministrator, und geben Sie eine Liste der Pakete, die Sie benötigen.
+1. Klicken Sie mit der rechten Maustaste auf rgui. exe, und wählen Sie **als Administrator ausführen**aus. Wenn Sie nicht über die erforderlichen Berechtigungen verfügen, wenden Sie sich an den Datenbankadministrator, und geben Sie eine Liste der Pakete an, die Sie benötigen.
 
-1. Über die Befehlszeile Wenn Sie wissen, dass der Paketname, können Sie eingeben: `install.packages("the_package-name")` Doppelte Anführungszeichen sind erforderlich, für den Paketnamen ein.
+1. Wenn Sie den Paketnamen kennen, können Sie in der Befehlszeile Folgendes eingeben: `install.packages("the_package-name")`Für den Paketnamen sind doppelte Anführungszeichen erforderlich.
 
-1. Wenn nach einer gespiegelten Site gefragt werden, wählen Sie einen Standort, der für Ihren Standort zweckmäßig ist.
+1. Wenn Sie nach einer Spiegel Website gefragt werden, wählen Sie eine beliebige Site aus, die für Ihren Standort geeignet ist.
 
-Wenn das Zielpaket von weiteren Paketen abhängig ist, werden von R-Installationsprogramm automatisch die Abhängigkeiten heruntergeladen und installiert sie für Sie.
+Wenn das Zielpaket von weiteren Paketen abhängig ist, lädt das R-Installationsprogramm die Abhängigkeiten automatisch herunter und installiert Sie für Sie.
 
-Wenn Sie mehrere Instanzen von SQL Server, z. B. Seite-an-Seite-Instanzen von SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services verwenden führen Sie die Installation separat für jede Instanz, wenn Sie das Paket in beiden Kontexten verwenden möchten. Pakete können nicht zwischen Instanzen freigegeben werden.
+Wenn Sie über mehrere Instanzen von SQL Server verfügen, z. b. parallele Instanzen von SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services, führen Sie die Installation für jede Instanz separat aus, wenn Sie das Paket in beiden Kontexten verwenden möchten. Pakete können nicht über mehrere Instanzen hinweg freigegeben werden.
 
-## <a name = "bkmk_offlineInstall"></a> Offline-Installation mit R-tools
+## <a name = "bkmk_offlineInstall"></a>Offline Installation mithilfe von R-Tools
 
-Wenn der Server nicht über Internetzugriff verfügt, sind zusätzliche Schritte erforderlich, um die Pakete vorzubereiten. Um R-Pakete auf einem Server installieren, die nicht über Internetzugriff verfügt, müssen Sie folgende Aktionen ausführen:
+Wenn der Server nicht über Internet Zugriff verfügt, sind zusätzliche Schritte erforderlich, um die Pakete vorzubereiten. Zum Installieren von R-Paketen auf einem Server, der nicht über Internet Zugriff verfügt, müssen Sie folgende Schritte ausführen:
 
-+ Analysieren von Abhängigkeiten im voraus.
-+ Laden Sie das Zielpaket auf einem Computer mit Internetzugriff herunter.
-+ Herunterladen Sie alle erforderlichen Pakete auf dem gleichen Computer, und platzieren Sie alle Pakete in einem einzelnen Paket-Archiv.
-+ ZIP-Archiv ist dies nicht bereits im komprimierten Format.
-+ Kopieren Sie das Archiv Paket an einem Speicherort auf dem Server.
-+ Installieren Sie das Zielpaket die Archivdatei als Quelle angeben.
++ Analysieren Sie Abhängigkeiten im voraus.
++ Laden Sie das Zielpaket auf einen Computer mit Internet Zugriff herunter.
++ Laden Sie alle erforderlichen Pakete auf denselben Computer herunter, und platzieren Sie alle Pakete in einem einzelnen Paketarchiv.
++ Zippen Sie das Archiv, wenn es nicht bereits in einem komprimierten Format vorliegt.
++ Kopieren Sie das Paketarchiv an einen Speicherort auf dem Server.
++ Installieren Sie das Zielpaket, das die Archivdatei als Quelle angibt.
 
 > [!IMPORTANT] 
->  Achten Sie darauf, dass Sie alle Abhängigkeiten analysieren und Herunterladen von **alle** erforderlichen Pakete **vor** mit der Installation beginnen. Es wird empfohlen [MiniCRAN](https://mran.microsoft.com/package/miniCRAN) für diesen Prozess. Dieses R-Paket kann es sich um eine Liste von Paketen, die Sie installieren möchten, Abhängigkeiten analysiert und ruft alle ZIP-Dateien für Sie. MiniCRAN erstellt dann ein einzelnes Repository, das Sie zum Server-Computer kopieren können. Weitere Informationen finden Sie unter [erstellen ein lokalen paketrepositorys mit MiniCRAN](create-a-local-package-repository-using-minicran.md)
+>  Stellen Sie sicher, dass Sie alle Abhängigkeiten analysieren und **alle** erforderlichen Pakete herunterladen, **bevor** Sie mit der Installation beginnen. Wir empfehlen [minicran](https://mran.microsoft.com/package/miniCRAN) für diesen Prozess. Dieses R-Paket übernimmt eine Liste der Pakete, die Sie installieren möchten, analysiert Abhängigkeiten und ruft alle ZIP-Dateien für Sie ab. der minicran erstellt dann ein einzelnes Repository, das Sie auf den Server Computer kopieren können. Weitere Informationen finden [Sie unter Erstellen eines lokalen paketrepositorys mit minicran](create-a-local-package-repository-using-minicran.md) .
 
-Dieses Verfahren setzt voraus, dass Sie alle Pakete vorbereitet haben, dass Sie, im ZIP-Format benötigen und sie auf dem Server zu kopieren können.
+Bei diesem Verfahren wird davon ausgegangen, dass Sie alle Pakete, die Sie benötigen, in komprimierten Formaten vorbereitet haben und bereit sind, Sie auf den Server zu kopieren.
 
-1. Kopieren des Pakets ZIP-Datei, oder für mehrere Pakete des vollständigen Repositorys mit der alle Pakete in komprimierten ZIP-Format, an einem Speicherort an, dem auf der Server zugreifen kann.
+1. Kopieren Sie die ZIP-Datei des Pakets oder für mehrere Pakete das vollständige Repository, das alle Pakete im ZIP-Format enthält, an einen Speicherort, auf den der Server zugreifen kann.
 
-2. Öffnen Sie den Ordner auf dem Server, auf dem die R-Tools für die Instanz installiert sind. Z. B. Wenn Sie die Windows-Eingabeaufforderung auf einem System mit SQL Server 2016 R Services verwenden, wechseln Sie zum `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
+2. Öffnen Sie den Ordner auf dem Server, auf dem die R-Tools für die-Instanz installiert sind. Wenn Sie z. b. die Windows-Eingabeaufforderung auf einem System mit SQL Server 2016 R-Diensten verwenden, `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`wechseln Sie zu.
 
-3. Mit der rechten Maustaste auf RGui oder RTerm, und wählen **als Administrator ausführen**.
+3. Klicken Sie mit der rechten Maustaste auf rgui oder RTERM, und wählen Sie **als Administrator ausführen**aus.
 
-4. Führen Sie den R-Befehl `install.packages` , und geben Sie das Paket oder Name des Repositorys und den Speicherort der ZIP-Dateien.
+4. Führen Sie den R `install.packages` -Befehl aus, und geben Sie den Paket-oder Repository-Namen und den Speicherort der ZIP-Dateien an.
 
     ```R
     install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
     ```
 
-    Dieser Befehl extrahiert das R-Paket `mynewpackage` aus der lokalen ZIP-Datei, sofern Sie die Kopie im Verzeichnis gespeichert `C:\Temp\Downloaded packages`, und das Paket auf dem lokalen Computer installiert. Wenn das Paket, Abhängigkeiten aufweist, prüft das Installationsprogramm für vorhandene Pakete in der Bibliothek. Wenn Sie ein Repository, die die Abhängigkeiten enthält erstellt haben, installiert das Installationsprogramm die erforderlichen Pakete auch an.
+    Dieser Befehl extrahiert das R- `mynewpackage` Paket aus der lokalen ZIP-Datei, wobei angenommen wird, dass Sie die `C:\Temp\Downloaded packages`Kopie im Verzeichnis gespeichert haben, und installiert das Paket auf dem lokalen Computer. Wenn das Paketabhängigkeiten aufweist, prüft das Installationsprogramm, ob vorhandene Pakete in der Bibliothek vorhanden sind. Wenn Sie ein Repository erstellt haben, das die Abhängigkeiten enthält, installiert das Installationsprogramm auch die erforderlichen Pakete.
 
-    Wenn alle erforderlichen Pakete in der Bibliothek für die Instanz nicht vorhanden sind und können nicht in die ZIP-Dateien gefunden werden, schlägt die Installation des Zielpakets fehl.
+    Wenn erforderliche Pakete nicht in der instanzbibliothek vorhanden sind und in den ZIP-Dateien nicht gefunden werden können, tritt bei der Installation des Ziel Pakets ein Fehler auf.
 
 ## <a name="see-also"></a>Siehe auch
 

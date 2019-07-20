@@ -1,35 +1,35 @@
 ---
-title: Lektion 4 Predict möglichen Ergebnissen mithilfe von R-Modelle – SQL Server-Machine Learning
-description: Veranschaulicht, wie zum operationalisieren von eingebettetem R-Skript in SQL Server gespeicherte Prozeduren mit T-SQL-Funktionen
+title: Lektion 4 Vorhersagen potenzieller Ergebnisse mithilfe von R-Modellen
+description: Tutorial zum operationalisieren eines eingebetteten R-Skripts in SQL Server gespeicherten Prozeduren mit T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ca5d09b052d80083589189f53a8dc9c059e5cf99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 159fb29bf560e755fdc605330d7d20369f55ba08
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961864"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345896"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Führen Sie Vorhersagen mithilfe von R in einer gespeicherten Prozedur eingebettet
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Ausführen von Vorhersagen mithilfe von R Embedded in einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 
-In diesem Schritt erfahren Sie, um das Modell für neue Beobachtungen zu verwenden, um mögliche Ergebnisse vorherzusagen. Das Modell wird in einer gespeicherten Prozedur eingeschlossen, die direkt von anderen Anwendungen aufgerufen werden kann. Die exemplarische Vorgehensweise veranschaulicht verschiedene Möglichkeiten zum Durchführen von Bewertungen:
+In diesem Schritt erfahren Sie, wie Sie das Modell für neue Beobachtungen verwenden, um potenzielle Ergebnisse vorherzusagen. Das Modell wird in einer gespeicherten Prozedur umschließt, die direkt von anderen Anwendungen aufgerufen werden kann. In der exemplarischen Vorgehensweise werden verschiedene Möglichkeiten zum Ausführen der Bewertung veranschaulicht:
 
-- **Batchbewertungsmodus**: Verwenden Sie eine SELECT-Abfrage als Eingabe für die gespeicherte Prozedur. Die gespeicherte Prozedur gibt eine Tabelle mit Beobachtungen zurück, die mit den Eingabefällen übereinstimmen.
+- **Batch Bewertungsmodus**: Verwenden Sie eine SELECT-Abfrage als Eingabe für die gespeicherte Prozedur. Die gespeicherte Prozedur gibt eine Tabelle mit Beobachtungen zurück, die mit den Eingabefällen übereinstimmen.
 
-- **Einzelbewertungsmodus**: Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe an.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
+- **Einzelner Bewertungsmodus**: Übergeben Sie einen Satz einzelner Parameterwerte als Eingabe.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
 
 Sehen wir uns zuerst einmal an, wie die Bewertung im Allgemeinen abläuft.
 
 ## <a name="basic-scoring"></a>Grundlegende Bewertung
 
-Die gespeicherte Prozedur **RxPredict** veranschaulicht die grundlegende Syntax für einen Aufruf der RevoScaleR-RxPredict in einer gespeicherten Prozedur umschließen.
+Die gespeicherte Prozedur **rxvorhersage** veranschaulicht die grundlegende Syntax zum Umwickeln eines revoscaler rxvorhersage-Aufrufes in einer gespeicherten Prozedur.
 
 ```sql
 CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
@@ -53,21 +53,21 @@ END
 GO
 ```
 
-+ Die SELECT-Anweisung ruft das serialisierte Modell aus der Datenbank ab und speichert das Modell in der R-Variable `mod` zur weiteren Verarbeitung mit R.
++ Die SELECT-Anweisung ruft das serialisierte Modell aus der Datenbank ab und speichert das Modell in der r `mod` -Variablen zur weiteren Verarbeitung mithilfe von r.
 
-+ Die neue Fälle für die Bewertung erhalten Sie vom der [!INCLUDE[tsql](../../includes/tsql-md.md)] in angegebene Abfrage `@inquery`, der erste Parameter der gespeicherten Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird zum Übergeben der [RxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) -Funktion in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), durch die die Bewertungen generiert.
++ Die neuen Fälle für die Bewertung werden aus der [!INCLUDE[tsql](../../includes/tsql-md.md)] in `@inquery`angegebenen Abfrage abgerufen, dem ersten Parameter für die gespeicherte Prozedur. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert. Dieser Datenrahmen wird an die [rxvorhersage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) -Funktion in [revoscaler](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)übergeben, die die Ergebnisse generiert.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     Da ein data.frame eine einzelne Zeile enthalten kann, können Sie den gleichen Code für die Batchbewertung und die Einzelbewertung verwenden.
   
-+ Der Rückgabewert von der `rxPredict` -Funktion ist eine **"float"** , die die Wahrscheinlichkeit, dass der Treiber Ruft ab, Tipps und Tricks in beliebigem Umfang darstellt.
++ Der von der `rxPredict` -Funktion zurückgegebene Wert ist ein **float** -Wert, der die Wahrscheinlichkeit darstellt, dass der Treiber einen beliebigen Betrag erhält.
 
-## <a name="batch-scoring-a-list-of-predictions"></a>(Eine Liste der Vorhersagen) für die batchbewertung
+## <a name="batch-scoring-a-list-of-predictions"></a>Batch Bewertung (eine Liste von Vorhersagen)
 
-Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtungen im Batchmodus ausgeführt. In diesem Schritt sehen wie die batchbewertung funktioniert.
+Ein häufiges Szenario ist das Generieren von Vorhersagen für mehrere Beobachtungen im Batch Modus. In diesem Schritt sehen wir uns an, wie die Batch Bewertung funktioniert.
 
-1.  Zunächst eine kleinere Gruppe von Eingabedaten gearbeitet. Diese Abfrage erstellt eine „Top 10“-Liste der Fahrten mit Reisenden sowie anderen Funktionen, die benötigt werden, um eine Vorhersage zu erstellen.
+1.  Beginnen Sie, indem Sie einen kleineren Satz von Eingabedaten erhalten, mit denen Sie arbeiten können. Diese Abfrage erstellt eine „Top 10“-Liste der Fahrten mit Reisenden sowie anderen Funktionen, die benötigt werden, um eine Vorhersage zu erstellen.
   
     ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -83,7 +83,7 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
     WHERE b.medallion IS NULL
     ```
 
-    **Beispielergebnisse**
+    **Beispiel Ergebnisse**
     
     ```sql
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
@@ -92,7 +92,7 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-2. Erstellen Sie eine gespeicherte Prozedur namens **RxPredictBatchOutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Erstellen Sie eine gespeicherte Prozedur mit dem Namen **rxvorhertbatchoutput** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
@@ -115,7 +115,7 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
     END
     ```
 
-3.  Geben Sie den Abfragetext in einer Variablen, und übergeben Sie es als Parameter an die gespeicherte Prozedur:
+3.  Geben Sie den Abfragetext in einer Variablen an, und übergeben Sie ihn als Parameter an die gespeicherte Prozedur:
 
     ```sql
     -- Define the input data
@@ -126,22 +126,22 @@ Ein gängiges Szenario ist zum Generieren von Vorhersagen für mehrere Beobachtu
     EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
-Die gespeicherte Prozedur gibt eine Reihe von Werten, die die Vorhersage für jede der Top 10 Fahrten darstellt. Die Top Fahrten sind jedoch auch nur einem Reisenden Fahrten mit einer relativ kurzen fahrtweg, für die der Treiber es unwahrscheinlich, dass ein Trinkgeld erhalten wird.
+Die gespeicherte Prozedur gibt eine Reihe von Werten zurück, die die Vorhersage für die ersten 10 Fahrten darstellen. Die häufigsten Fahrten sind aber auch Einzelpersonen Fahrten mit einer relativ kurzen Fahrtstrecke, bei der der Treiber wahrscheinlich keinen Tipp erhält.
   
 
 > [!TIP]
 > 
-> Und gibt nur die "Ja – Trinkgeld" und "kein Trinkgeld"-Ergebnissen, nicht können Sie auch den Wahrscheinlichkeitswert für die Vorhersage zurückgeben, und wenden Sie dann eine WHERE-Klausel der _Bewertung_ Spaltenwerte zum Kategorisieren der Bewertung als "wahrscheinlich Trinkgeld" oder " kein Trinkgeld", verwenden einen Schwellenwert wie z.B. 0,5 oder 0,7. Dieser Schritt ist nicht in der gespeicherten Prozedur enthalten, aber es wäre leicht, ihn zu implementieren.
+> Anstatt nur die Ergebnisse "Yes-Tip" und "No-Tip" zurückzugeben, können Sie auch das Wahrscheinlichkeits Ergebnis für die Vorhersage zurückgeben und dann eine WHERE-Klausel auf die Werte der _Bewertungs Spalte anwenden_ , um das Ergebnis als "wahrscheinlich Tip" oder "unwahrscheinlich an Tip" zu kategorisieren, indem Sie einen Schwellenwert, z. b. 0,5 oder 0,7. Dieser Schritt ist nicht in der gespeicherten Prozedur enthalten, aber es wäre leicht, ihn zu implementieren.
 
-## <a name="single-row-scoring-of-multiple-inputs"></a>Einzelne Zeile zu bewerten, von mehreren Eingaben
+## <a name="single-row-scoring-of-multiple-inputs"></a>Einzeilige Bewertung mehrerer Eingaben
 
-Manchmal möchten Sie mehrere Eingabewerte übergeben und eine einzelne Vorhersage basierend auf diesen Werten zu erhalten. Beispielsweise konnte Sie richten eine Excel-Arbeitsblatt, Webanwendung oder Reporting Services-Bericht zum Aufrufen der gespeicherten Prozedur und Angaben eingegeben oder ausgewählt wurden durch Benutzer aus dieser Anwendungen.
+Manchmal möchten Sie mehrere Eingabewerte übergeben und eine einzelne Vorhersage auf der Grundlage dieser Werte erhalten. Beispielsweise können Sie ein Excel-Arbeitsblatt, eine Webanwendung oder einen Reporting Services Bericht einrichten, um die gespeicherte Prozedur aufzurufen und Eingaben bereitzustellen, die von Benutzern von diesen Anwendungen eingegeben oder ausgewählt wurden.
 
-In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer gespeicherten Prozedur, die akzeptiert mehrere Eingaben, wie z. B. die Anzahl der Fahrgäste, Fahrstrecke usw. erstellen. Die gespeicherte Prozedur erstellt eine Bewertung, die basierend auf den zuvor gespeicherten R-Modells.
+In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen mithilfe einer gespeicherten Prozedur erstellen, die mehrere Eingaben annimmt, wie z. b. die Anzahl der Fahrgäste, die Fahrtstrecke usw. Die gespeicherte Prozedur erstellt eine Bewertung auf der Grundlage des zuvor gespeicherten R-Modells.
   
-Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen, stellen Sie sicher, dass die Daten die Anforderungen des R-Modells übereinstimmen. Sie müssen möglicherweise sicherstellen, dass die Eingabedaten in einen R-Datentyp umgewandelt oder konvertiert werden können oder den Datentyp und die Datenlänge überprüfen. 
+Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung abrufen, stellen Sie sicher, dass die Daten den Anforderungen des R-Modells entsprechen. Sie müssen möglicherweise sicherstellen, dass die Eingabedaten in einen R-Datentyp umgewandelt oder konvertiert werden können oder den Datentyp und die Datenlänge überprüfen. 
 
-1. Erstellen einer gespeicherten Prozedur **RxPredictSingleRow**.
+1. Erstellen Sie eine gespeicherte Prozedur **rxvorhertsinglerow**.
   
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -166,7 +166,7 @@ Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen, stelle
 
 2. Probieren Sie es einfach aus, indem Sie die Werte manuell bereitstellen.
   
-    Öffnen Sie ein neues **Abfrage** Fenster, und rufen Sie die gespeicherte Prozedur, und geben Sie Werte für jeden Parameter. Die Parameter darstellen von featurespalten, die vom Modell verwendet werden und sind erforderlich.
+    Öffnen Sie ein neues **Abfrage** Fenster, und geben Sie die gespeicherte Prozedur an, und geben Sie für jeden Parameterwerte an. Die Parameter stellen featurespalten dar, die vom Modell verwendet werden, und sind erforderlich.
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
@@ -179,17 +179,17 @@ Wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen, stelle
     @dropoff_longitude = -73.977303
     ```
 
-    Verwenden Sie dieses kürzere Form unterstützt [Parameter einer gespeicherten Prozedur](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+    Oder verwenden Sie dieses kürzere Formular, das für [Parameter einer gespeicherten Prozedur](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters)unterstützt wird:
   
     ```sql
     EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. Die Ergebnisse zeigen, dass die Wahrscheinlichkeit von einem Tipp niedrig ist (null) auf diese Top 10 Fahrten, da alle mit nur einem Reisenden über eine relativ kurze Entfernung sind.
+3. Die Ergebnisse geben an, dass die Wahrscheinlichkeit, dass ein Trinkgeld erhält, bei den ersten 10 Fahrten niedrig (null) ist, da es sich bei allen um Einzelpersonen übergreifende Fahrten über eine relativ kurze Entfernung handelt.
 
 ## <a name="conclusions"></a>Schlussfolgerungen
 
-Dies ist der Abschluss für das Lernprogramm. Nun, da Sie zum Einbetten von R-Code in gespeicherten Prozeduren gelernt haben, können Sie diese Methoden zum Erstellen von Modellen eigene erweitern. Die Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] macht es viel einfacher, R-Modelle für Vorhersagen bereitzustellen und das erneute Trainieren von Modellen im Rahmen eines Unternehmensdatenworkflows zu integrieren.
+Dies ist der Abschluss für das Lernprogramm. Nachdem Sie erfahren haben, wie Sie R-Code in gespeicherte Prozeduren einbetten, können Sie diese Vorgehensweisen erweitern, um eigene Modelle zu erstellen. Die Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] macht es viel einfacher, R-Modelle für Vorhersagen bereitzustellen und das erneute Trainieren von Modellen im Rahmen eines Unternehmensdatenworkflows zu integrieren.
 
 ## <a name="previous-lesson"></a>Vorherige Lektion
 

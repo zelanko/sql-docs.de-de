@@ -1,37 +1,37 @@
 ---
-title: Fragen Sie ab und ändern Sie die SQL Server-Daten mithilfe von RevoScaleR - SQL Server-Machine Learning
-description: Exemplarische Vorgehensweise im Lernprogramm zum Abfragen und Ändern von Daten mit der Sprache R auf SQL Server.
+title: Abfragen und Ändern der SQL Server Daten mithilfe von revoscaler
+description: 'Tutorial: Exemplarische Vorgehensweise zum Abfragen und Ändern von Daten mit der Sprache R auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 35583815be7c89707efcf9bb31488cd80e3836e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0784f10bfc4405ce17e365b6afcb596fa534202d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962186"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344656"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Fragen Sie ab und ändern Sie die SQL Server-Daten (SQL Server und die RevoScaleR-Lernprogramm)
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Abfragen und Ändern der SQL Server Daten (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In der vorherigen Lektion haben Sie die Daten geladen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In diesem Schritt können Sie untersuchen und Bearbeiten von Daten mit **RevoScaleR**:
+In der vorherigen Lektion haben Sie die Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen. In diesem Schritt können Sie Daten mithilfe von **revoscaler**durchsuchen und ändern:
 
 > [!div class="checklist"]
-> * Grundlegende Informationen zu den Variablen zurück
-> * Erstellen Sie aus Rohdaten kategorische Daten
+> * Grundlegende Informationen zu den Variablen zurückgeben
+> * Erstellen von kategorischen Daten aus Rohdaten
 
-Kategorische Daten oder *faktorvariablen*, eignen sich für explorative datenvisualisierungen. Sie können sie als Eingaben für Histogramme erhalten einen Überblick darüber, welche Variablendaten aussieht.
+Kategorische Daten oder *Faktor Variablen*sind für explorative Datenvisualisierungen nützlich. Sie können Sie als Eingaben für Histogramme verwenden, um eine Vorstellung davon zu erhalten, wie die Variablen Daten aussehen.
 
 ## <a name="query-for-columns-and-types"></a>Abfragen von Spalten und Typen
 
-Verwenden Sie eine R-IDE oder RGui.exe, um R-Skript ausführen. 
+Verwenden Sie zum Ausführen von r-Skripts eine r-IDE oder rgui. exe. 
 
-Rufen Sie zunächst eine Liste der Spalten und ihrer Datentypen ab. Sie können mithilfe der Funktion [RxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) , und geben Sie die Datenquelle, die Sie analysieren möchten. Abhängig von Ihrer Version von **RevoScaleR**, außerdem können Sie [RxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+Rufen Sie zunächst eine Liste der Spalten und ihrer Datentypen ab. Sie können die [rxgetvarinfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) -Funktion verwenden und die Datenquelle angeben, die Sie analysieren möchten. Abhängig von Ihrer Version von **revoscaler**können Sie auch [rxgetvarnames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)verwenden. 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)
@@ -51,15 +51,15 @@ Var 8: creditLine, Type: integer
 Var 9: fraudRisk, Type: integer
 ```
 
-## <a name="create-categorical-data"></a>Erstellen Sie kategorische Daten
+## <a name="create-categorical-data"></a>Erstellen von kategorischen Daten
 
-Alle Variablen werden als Integer gespeichert, aber einige Variablen darstellen, aus kategorische Daten sollten namens *faktorvariablen* in r Z. B. die Spalte *Zustand* Zahlen, die als Bezeichner verwendet werden, für die 50 US-Bundesstaaten sowie das District Of Columbia enthält. Um das Verständnis der Daten zu erleichtern, ersetzen Sie die Zahlen durch eine Liste der Abkürzungen der US-Bundesstaaten.
+Alle Variablen werden als ganze Zahlen gespeichert, einige Variablen stellen jedoch kategorische Daten dar, die als *Faktor Variablen* in R bezeichnet werden. Der Spalten *Status* enthält z. b. Zahlen, die als Bezeichner für die 50-Zustände zuzüglich des Bezirks von Columbia verwendet werden. Um das Verständnis der Daten zu erleichtern, ersetzen Sie die Zahlen durch eine Liste der Abkürzungen der US-Bundesstaaten.
 
-In diesem Schritt erstellen einen Zeichenfolgenvektor, die die Abkürzungen enthält, und ordnen Sie dann diese kategorischen Werte den ursprünglichen integerbezeichnern. Verwenden Sie die neue Variable in der *ColInfo* Argument auf, um anzugeben, dass diese Spalte als Faktor behandelt werden. Wenn Sie die Daten analysieren, oder verschieben Sie es, die Abkürzungen verwendet werden, und die Spalte wird als Faktor behandelt.
+In diesem Schritt erstellen Sie einen Zeichen folgen Vektor, der die Abkürzungen enthält, und ordnen dann diese kategorischen Werte den ursprünglichen ganzzahligen bezeichchern zu. Anschließend verwenden Sie die neue Variable im *COLINFO* -Argument, um anzugeben, dass diese Spalte als Faktor behandelt werden soll. Wenn Sie die Daten analysieren oder verschieben, werden die Abkürzungen verwendet, und die Spalte wird als Faktor behandelt.
 
-Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, verbessert dies auch die Leistung. Weitere Informationen finden Sie unter [R und Data-Optimierung](../r/r-and-data-optimization-r-services.md).
+Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, verbessert dies auch die Leistung. Weitere Informationen finden Sie unter [R und Daten Optimierung](../r/r-and-data-optimization-r-services.md).
 
-1. Erstellen eine R-Variable, zunächst *StateAbb*, und den Zeichenfolgenvektor Definieren von Zeichenfolgen, die wie folgt hinzufügen.
+1. Beginnen Sie, indem Sie eine R-Variable, *stateabb*, erstellen und den Zeichen folgen Vektor definieren, der der Zeichenfolge hinzugefügt werden soll.
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -94,7 +94,7 @@ Wenn die Spalte vor der Verwendung als Faktor zu Abkürzungen zugeordnet wird, v
     )
     ```
   
-3. Zum Erstellen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle, die aktualisierten Daten Aufruf verwendet, die **RxSqlServerData** wie zuvor funktionieren, aber fügen die *ColInfo* Argument.
+3. Um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle zu erstellen, die die aktualisierten Daten verwendet, rufen Sie die **rxsqlserverdata** -Funktion wie zuvor auf, fügen jedoch das *COLINFO* -Argument hinzu.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

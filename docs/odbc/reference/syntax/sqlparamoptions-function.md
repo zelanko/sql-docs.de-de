@@ -1,7 +1,7 @@
 ---
 title: SQLParamOptions-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLParamOptions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLParamOptions
@@ -19,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 40b3f876993d8c7c334594f11b87cc5d2ed8ff0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947947"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343526"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: Als veraltet markiert  
+**Konformitäts**  
+ Eingeführte Version: Konformität der ODBC 1,0-Standards: Als veraltet markiert  
   
  **Zusammenfassung**  
- Der ODBC 2.0-Funktion **SQLParamOptions** wurde in ODBC 3. ersetzt. *X* durch Aufrufe von [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Die ODBC 2,0-Funktion **SQLParamOptions** wurde in ODBC 3 ersetzt. *x* durch Aufrufe von [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+>  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber Richtlinien für die Abwärtskompatibilität.  
   
 ## <a name="remarks"></a>Hinweise  
- Finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung auf einem 64-Bit-Betriebssystem ausgeführt wird.  
+ Weitere Informationen finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung unter einem 64-Bit-Betriebssystem ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

@@ -1,57 +1,57 @@
 ---
-title: Schnellstart für Python-Modelle für das Trainieren und Vorhersagen mithilfe von gespeicherten Prozeduren – SQL Server-Machine Learning
-description: Einbetten von Python-Code in SQL Server gespeicherte Prozeduren zu erstellen, Trainieren und verwenden ein Python-Modell mit dem klassischen Iris-DataSet. Speichern Sie ein trainiertes Modell in SQL Server, und dann verwenden Sie, um die vorhergesagten Ergebnisse zu generieren.
+title: Schnellstart für python-Modelle für Schulungen und Vorhersagen mithilfe gespeicherter Prozeduren
+description: Integrieren Sie Python-Code in SQL Server gespeicherte Prozeduren, um ein python-Modell mit dem klassischen IRIS-DataSet zu erstellen, zu trainieren und zu verwenden. Speichern Sie ein trainiertes Modell in SQL Server, und verwenden Sie es dann, um vorhergesagte Ergebnisse zu generieren.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9bbdaa2d23b5e605eb9e36490536a25ab344c8a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962050"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345767"
 ---
-# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Schnellstart: Erstellen Sie, Trainieren Sie und verwenden Sie ein Python-Modell mit gespeicherten Prozeduren in SQL Server
+# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Schnellstart: Erstellen, trainieren und Verwenden eines python-Modells mit gespeicherten Prozeduren in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In dieser schnellstartanleitung mithilfe von Python Sie erstellen und Ausführen von zwei gespeicherten Prozeduren. Der erste verwendet das klassische Iris Flower DataSet und generiert eine Naïve Bayes-Modell, um ein Iris-Arten basierend auf Blume Merkmalen vorherzusagen. Das zweite Verfahren ist für die Bewertung. Er ruft das Modell im ersten Verfahren zur Ausgabe einer Reihe von Vorhersagen generiert. Platzieren Sie Code in einer gespeicherten Prozedur, sind Vorgänge von anderen gespeicherten Prozeduren und die Client-Anwendungen enthaltene, wiederverwendbare und aufgerufen. 
+In dieser Schnellstartanleitung verwenden Sie Python, um zwei gespeicherte Prozeduren zu erstellen und auszuführen. Der erste verwendet das klassische IRIS-Blumen DataSet und generiert ein Naive Bayes-Modell, um auf der Grundlage der Blumen Merkmale eine IRIS-Art vorherzusagen. Das zweite Verfahren dient der Bewertung. Das Modell wird aufgerufen, das in der ersten Prozedur generiert wurde, um einen Satz von Vorhersagen auszugeben. Wenn Sie Code in einer gespeicherten Prozedur platzieren, sind Vorgänge enthalten, können wiederverwendbar und von anderen gespeicherten Prozeduren und Client Anwendungen aufgerufen werden. 
 
-Nach Abschluss dieser schnellstartanleitung, lernen Sie Folgendes:
+Durch die Durchführung dieses Schnellstarts lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Gewusst wie: Einbetten von Python-Code in einer gespeicherten Prozedur
-> * Wie Sie Eingaben in Ihrem Code über Eingaben für die gespeicherte Prozedur übergeben.
-> * Wie gespeicherte Prozeduren, zum operationalisieren von Modellen verwendet werden
+> * Einbetten von Python-Code in eine gespeicherte Prozedur
+> * Übergeben von Eingaben an Ihren Code mithilfe von Eingaben für die gespeicherte Prozedur
+> * Verwenden gespeicherter Prozeduren zum operationalisieren von Modellen
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Einen vorherigen schnellstartanleitung [Python überprüfen, die in SQL Server vorhanden ist](quickstart-python-verify.md), enthält Informationen und links für das Einrichten der Python-Umgebung, die im Rahmen dieser schnellstartanleitung benötigt.
+Eine vorherige Schnellstartanleitung: [überprüfen, ob python in SQL Server vorhanden](quickstart-python-verify.md)ist, enthält Informationen und Links zum Einrichten der für diese Schnellstartanleitung erforderlichen python-Umgebung.
 
-Die Beispieldaten, die in dieser Übung verwendet die [ **Irissql** ](demo-data-iris-in-sql.md) Datenbank.
+Die in dieser Übung verwendeten Beispiel Daten sind die [**irissql**](demo-data-iris-in-sql.md) -Datenbank.
 
-## <a name="create-a-stored-procedure-that-generates-models"></a>Erstellen einer gespeicherten Prozedur, die Modelle generiert.
+## <a name="create-a-stored-procedure-that-generates-models"></a>Erstellen einer gespeicherten Prozedur, die Modelle generiert
 
-Ein häufiges Muster in der SQL Server-Entwicklung ist um programmierbare Vorgänge in verschiedene gespeicherte Prozeduren zu organisieren. In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell für Vorhersagen von Ergebnissen generiert. 
+Ein gängiges Muster in SQL Server Entwicklung besteht darin, programmierbare Vorgänge in unterschiedlichen gespeicherten Prozeduren zu organisieren. In diesem Schritt erstellen Sie eine gespeicherte Prozedur, die ein Modell zur Vorhersage von Ergebnissen generiert. 
 
-1. Öffnen Sie ein neues Abfragefenster in Management Studio verbunden die **Irissql** Datenbank. 
+1. Öffnen Sie ein neues Abfragefenster in Management Studio, das mit der **irissql** -Datenbank verbunden ist. 
 
     ```sql
     USE irissql
     GO
     ```
 
-2. Kopieren Sie in den folgenden Code, um eine neue gespeicherte Prozedur zu erstellen. 
+2. Kopieren Sie den folgenden Code, um eine neue gespeicherte Prozedur zu erstellen. 
 
-   Bei der Ausführung dieser Prozedur aufgerufen [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) eine Python-Sitzung starten. 
+   Bei der Ausführung ruft diese Prozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) auf, um eine python-Sitzung zu starten. 
    
-   Eingaben, die von Ihren Python-Code benötigt werden, werden für diese gespeicherte Prozedur als Eingabeparameter übergeben. Ausgabe werden ein trainiertes Modell, basierend auf den Python **Scikit-erfahren Sie,** -Bibliothek für Machine Learning-Algorithmus. 
+   Eingaben, die von Ihrem Python-Code benötigt werden, werden als Eingabeparameter für diese gespeicherte Prozedur weitergeleitet. Die Ausgabe ist ein trainiertes Modell, das auf der Python **scikit-Learn-** Bibliothek für den Machine Learning-Algorithmus basiert. 
 
-   Dieser Code verwendet [ **Pickle** ](https://docs.python.org/2/library/pickle.html) zum Serialisieren des Modells. Das Modell trainiert, mit Daten aus Spalten von 0 bis 4 aus der **Iris_data** Tabelle. 
+   In diesem Code wird [**Pickle**](https://docs.python.org/2/library/pickle.html) verwendet, um das Modell zu serialisieren. Das Modell wird mithilfe von Daten aus den Spalten 0 bis 4 aus der **iris_data** -Tabelle trainiert. 
    
-   Formulieren Sie die Parameter, die Sie im zweiten Teil der Prozedur finden Sie unter Dateneingaben und modellausgaben vorhanden. So weit wie möglich, Sie möchten den Python-Code ausgeführt wird, in einer gespeicherten Prozedur eindeutig Eingaben definiert haben und gibt, die gespeicherte Prozedur Eingaben und Ausgaben, die zur Laufzeit übergeben zugeordnet. 
+   Die Parameter, die im zweiten Teil der Prozedur angezeigt werden, formulieren Dateneingaben und Modell Ausgaben. So weit wie möglich soll der Python-Code, der in einer gespeicherten Prozedur ausgeführt wird, klar definierte Eingaben und Ausgaben aufweisen, die gespeicherten Prozedur Eingaben und Ausgaben zugeordnet sind, die zur Laufzeit übergebenen werden. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -72,17 +72,17 @@ Ein häufiges Muster in der SQL Server-Entwicklung ist um programmierbare Vorgä
     GO
     ```
 
-3. Stellen Sie sicher, dass die gespeicherte Prozedur vorhanden ist. 
+3. Prüfen Sie, ob die gespeicherte Prozedur vorhanden ist. 
 
-   Wenn das T-SQL-Skript aus dem vorherigen Schritt ohne Fehler ausgeführt haben, eine neue gespeicherte Prozedur aufgerufen wird **Generate_iris_model** wird erstellt und hinzugefügt werden, um die **Irissql** Datenbank. Gespeicherte Prozeduren finden Sie in Management Studio **Objekt-Explorer**unter **Programmierbarkeit**.
+   Wenn das T-SQL-Skript aus dem vorherigen Schritt ohne Fehler ausgeführt wurde, wird eine neue gespeicherte Prozedur mit dem Namen **generate_iris_model** erstellt und der **irissql** -Datenbank hinzugefügt. Sie können gespeicherte Prozeduren in Management Studio **Objekt-Explorer**unter **Programmierbarkeit**suchen.
 
-## <a name="execute-the-procedure-to-create-and-train-models"></a>Führen Sie die Prozedur zum Erstellen und Trainieren von Modellen
+## <a name="execute-the-procedure-to-create-and-train-models"></a>Ausführen der Prozedur zum Erstellen und trainieren von Modellen
 
-Führen Sie in diesem Schritt das Verfahren zum Ausführen des eingebetteten Codes, erstellen ein Modell entsprechend trainiert wurde und serialisiert als Ausgabe. Modelle, die für die Wiederverwendung in SQL Server gespeichert sind, werden als Byte-Stream serialisiert und in einer varbinary(max)-Spalte in einer Datenbanktabelle gespeichert. Sobald das Modell wird erstellt, trainiert, serialisiert und in einer Datenbank gespeichert, aufgerufen werden kann durch andere Prozeduren oder durch die [VORHERSAGEN für T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) -Funktion in arbeitsauslastungen zu bewerten.
+Führen Sie in diesem Schritt die Prozedur aus, um den eingebetteten Code auszuführen, und erstellen Sie ein trainiertes und serialisiertes Modell als Ausgabe. Modelle, die für die Wiederverwendung in SQL Server gespeichert werden, werden als Bytestream serialisiert und in einer varbinary (max)-Spalte in einer Datenbanktabelle gespeichert. Nachdem das Modell erstellt, trainiert, serialisiert und in einer Datenbank gespeichert wurde, kann es von anderen Prozeduren oder der [Vorhersage-T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) -Funktion bei der Bewertung von Arbeits Auslastungen aufgerufen werden.
 
-1. Kopieren Sie den folgenden Code zum Ausführen der Prozedur. Die spezifische Anweisung für die Ausführung einer gespeicherten Prozedur ist `EXEC` in der fünften Zeile.
+1. Kopieren Sie den folgenden Code, um die Prozedur auszuführen. Die jeweilige Anweisung zum Ausführen einer gespeicherten Prozedur befindet `EXEC` sich in der fünften Zeile.
 
-   Dieses Skript löscht ein vorhandenes Modell mit dem gleichen Namen ("Naive Bayes") um Platz für neue Dateien erstellt, indem Sie das gleiche Verfahren ausführen zu machen. Ohne Modell löschen tritt der Fehler darauf hinweist, dass das Objekt bereits vorhanden ist. Das Modell gespeichert ist, in eine Tabelle namens **Iris_models**, bereitgestellt werden, bei der Erstellung der **Irissql** Datenbank.
+   Mit diesem Skript wird ein vorhandenes Modell mit dem gleichen Namen ("Naive Bayes") gelöscht, um Platz für neue Modelle zu schaffen, die durch erneutes Ausführen desselben Verfahrens erstellt werden. Ohne das Löschen von Modellen tritt ein Fehler auf, wenn das Objekt bereits vorhanden ist. Das Modell wird in einer Tabelle namens **iris_models**gespeichert, die beim Erstellen der **irissql** -Datenbank bereitgestellt wurde.
 
     ```sql
     DECLARE @model varbinary(max);
@@ -94,7 +94,7 @@ Führen Sie in diesem Schritt das Verfahren zum Ausführen des eingebetteten Cod
     GO
     ```
 
-2. Stellen Sie sicher, dass das Modell eingefügte ist eine weitere Möglichkeit zum Zurückgeben einer Liste von Modellen
+2. Überprüfen Sie, ob das Modell eine andere Möglichkeit zum Zurückgeben einer Liste von Modellen ist.
 
     ```sql
     SELECT * FROM dbo.iris_models
@@ -102,15 +102,15 @@ Führen Sie in diesem Schritt das Verfahren zum Ausführen des eingebetteten Cod
 
     **Ergebnisse**
 
-    | Modellname  | model |
+    | model_name  | model |
     |---|-----------------|
-    | Naive Bayes | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
+    | Naive Bayes | 0x800363736b6c6561726e2e6e616976655l62617965730a... | 
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>Erstellen und Ausführen einer gespeicherten Prozedur zum Generieren von Vorhersagen
 
-Nun, dass Sie erstellt, trainiert, und ein Modell gespeichert, mit dem nächsten Schritt fortfahren: Erstellen einer gespeicherten Prozedur, die generiert Vorhersagen. Sie müssen hierzu durch Aufrufen von Sp_execute_external_script, starten Sie Python aus, und klicken Sie dann im Python-Skript, das ein serialisiertes Modell lädt Sie in der letzten Übung erstellt und weist diesem dann Dateneingaben zu bewertende übergeben.
+Nachdem Sie ein Modell erstellt, trainiert und gespeichert haben, fahren Sie mit dem nächsten Schritt fort: Erstellen einer gespeicherten Prozedur, die Vorhersagen generiert. Dies erreichen Sie, indem Sie sp_execute_external_script aufrufen, um Python zu starten, und dann das Python-Skript übergeben, das ein serialisiertes Modell lädt, das Sie in der letzten Übung erstellt haben, und dann Dateneingaben an die Bewertung übergibt.
 
-1. Führen Sie den folgenden Code zum Erstellen der gespeicherten Prozedur, die Bewertung ausführt. Dieses Verfahren wird zur Laufzeit ein binäres Modell zu laden, Spalten `[1,2,3,4]` als Eingabe, und geben Sie Spalten `[0,5,6]` als Ausgabe.
+1. Führen Sie den folgenden Code aus, um die gespeicherte Prozedur zu erstellen, die die Bewertung ausführt. Zur Laufzeit lädt dieses Verfahren ein binäres Modell, verwendet Spalten `[1,2,3,4]` als Eingaben und gibt Spalten `[0,5,6]` als Ausgabe an.
 
     ```sql
     CREATE PROCEDURE predict_species (@model varchar(100))
@@ -135,37 +135,37 @@ Nun, dass Sie erstellt, trainiert, und ein Modell gespeichert, mit dem nächsten
     GO
     ```
 
-2. Führen Sie die gespeicherte Prozedur, sodass den Modellnamen "Naive Bayes", damit die Prozedur weiß, welches Modell zu verwenden. 
+2. Führen Sie die gespeicherte Prozedur aus, und geben Sie den Modellnamen "Naive Bayes" an, damit die Prozedur weiß, welches Modell verwendet werden soll. 
 
     ```sql
     EXEC predict_species 'Naive Bayes';
     GO
     ```
 
-    Wenn Sie die gespeicherte Prozedur ausführen, wird ein Python-Datenrahmen (Data.Frame) zurückgegeben. Diese Zeile von T-SQL gibt das Schema für die zurückgegebenen Ergebnisse: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`. Sie können die Ergebnisse in eine neue Tabelle einfügen, oder gibt sie an einer Anwendung zurück.
+    Wenn Sie die gespeicherte Prozedur ausführen, wird ein python Data. Frame zurückgegeben. Diese T-SQL-Zeile gibt das Schema für die zurückgegebenen Ergebnisse `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`an:. Sie können die Ergebnisse in eine neue Tabelle einfügen oder Sie an eine Anwendung zurückgeben.
 
-    ![Resultset von der Ausführung der gespeicherten Prozedur](media/train-score-using-python-NB-model-results.png)
+    ![Resultset aus Ausführung gespeicherter Prozeduren](media/train-score-using-python-NB-model-results.png)
 
-    Die Ergebnisse sind 150 Vorhersagen darüber gibt, die mithilfe von Blumen Merkmale als Eingaben. Für die meisten der Beobachtungen entspricht die vorhergesagten gibt die tatsächliche Art.
+    Bei den Ergebnissen handelt es sich um 150 Vorhersagen über die Art und Verwendung von floralen Merkmalen Bei den meisten Beobachtungen stimmen die vorhergesagten Werte mit den tatsächlichen Werten überein.
 
-    In diesem Beispiel einfache wurde unter Verwendung des Python-Iris-Datasets für Training und Bewertung. Ein üblicher Ansatz würde beinhalten das Ausführen einer SQL-Abfrage, um die neuen Daten zu erhalten, und übergeben Sie ihn an Python als `InputDataSet`. 
+    Dieses Beispiel wurde mithilfe des python IRIS-Datasets für Training und Bewertung vereinfacht. Ein typischer Ansatz wäre das Ausführen einer SQL-Abfrage, um die neuen Daten zu erhalten, und die Übergabe an `InputDataSet`python als. 
 
 ## <a name="conclusion"></a>Schlussbemerkung
 
-In dieser Übung haben Sie gelernt, wie zum Erstellen gespeicherter Prozeduren, die speziell für verschiedene Aufgaben, die jede gespeicherte Prozedur, in dem die gespeicherte Systemprozedur verwendet [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) einen Python-Prozess zu starten. Eingaben für die Python-Prozess werden Sp_execute_external Skript als Parameter übergeben. Sowohl die Datenvariablen in einer SQL Server-Datenbank die Python-Skript selbst werden als Eingaben übergeben.
+In dieser Übung haben Sie erfahren, wie Sie gespeicherte Prozeduren erstellen, die für verschiedene Aufgaben vorgesehen sind, wobei jede gespeicherte Prozedur die gespeicherte System Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) verwendet, um einen python-Prozess zu starten. Eingaben in den python-Prozess werden als Parameter an das sp_execute_external-Skript übermittelt. Das Python-Skript selbst und Daten Variablen in einer SQL Server Datenbank werden als Eingaben übermittelt.
 
-Im Allgemeinen sollten Sie nur planen, zur Verwendung von SSMS mit ansprechenden Python-Code oder einfache Python-Code, der zeilenbasierter Ausgabe zurückgibt. Ein Tool das, SSMS unterstützt Abfragesprachen wie T-SQL und vereinfachten Rowsets zurückgibt. Wenn Ihr Code visuelle Ausgabe wie bei einem Punktdiagramm oder ein Histogramm generiert wird, benötigen Sie eine Tool oder Endbenutzer-Anwendung, die das Bild gerendert werden kann.
+Im Allgemeinen sollten Sie nur die Verwendung von SSMS mit poliertem Python-Code oder einfachen Python-Code planen, der die zeilenbasierte Ausgabe zurückgibt. Als Tool unterstützt SSMS Abfrage Sprachen wie T-SQL und gibt vereinfachte Rowsets zurück. Wenn Ihr Code eine visuelle Ausgabe wie ein Punkt Diagramm oder ein Histogramm generiert, benötigen Sie ein Tool oder eine Endbenutzer Anwendung, die das Bild renderingweise rendieren kann.
 
-Für einige Python-Entwickler, die zum Schreiben von umfassenden Skript behandeln eine Reihe von Vorgängen vertraut sind, kann das Organisieren von Aufgaben in separate Verfahren unnötig scheinen mag. Jedoch Modelltraining und die Bewertung über verschiedene Anwendungsfälle. Indem Sie sie trennen, können Sie jede Aufgabe auf anderen Zeitplan und Bereichsberechtigungen Vorgang einfügen.
+Für einige Python-Entwickler, die zum Schreiben von vollständig inklusiven Skripts verwendet werden, die eine Reihe von Vorgängen verarbeiten, scheint das Organisieren von Aufgaben in separaten Prozeduren unnötig Training und Bewertung haben jedoch unterschiedliche Anwendungsfälle. Indem Sie Sie trennen, können Sie jede Aufgabe unterschiedlichen Zeit Plan-und Bereichs Berechtigungen für den Betrieb platzieren.
 
-Ebenso, Sie können auch Ressourcen Funktionen von SQL Server, z. B. die parallelverarbeitung, Ressourcenkontrolle, oder durch das Schreiben Ihrer Skripts zum Verwenden von Algorithmen in [Revoscalepy](../python/ref-py-revoscalepy.md) oder [Microsoftml](../python/ref-py-microsoftml.md) , streaming-Unterstützung, und klicken Sie mit der parallelen Ausführung. Durch das Trainieren und Bewerten von getrennt, können Sie die Optimierungen für bestimmte arbeitsauslastungen abzielen.
+Ebenso können Sie auch die ausgewähltem Ressourcen-Features von SQL Server nutzen, z. b. parallele Verarbeitung, Ressourcenkontrolle oder das Skript schreiben, um Algorithmen in [revoscalepy](../python/ref-py-revoscalepy.md) oder [microsoftml](../python/ref-py-microsoftml.md) zu verwenden, die Streaming und parallele Ausführung unterstützen. Durch die Trennung von Training und Bewertung können Sie Optimierungen für bestimmte Workloads ausrichten.
 
-Ein letzte Vorteil ist, dass es sich bei Prozessen mithilfe der Parameter geändert werden können. In dieser Übung wurde die Python-Code, der Erstellung des Modells (mit dem Namen "Naive Bayes" in diesem Beispiel) als Eingabe für eine zweite gespeicherte Prozedur aufrufen des Modells in einem Bewertung Prozess übergeben. In dieser Übung verwendet nur ein Modell, aber Sie können sich vorstellen, wie das Modell in einer Bewertung Aufgabe parametrisieren dieses Skript nützlicher werden würde.
+Der endgültige Vorteil besteht darin, dass Prozesse mit Parametern geändert werden können. In dieser Übung wurde Python-Code, der das Modell (in diesem Beispiel mit dem Namen "Naive Bayes") erstellt hat, als Eingabe an eine zweite gespeicherte Prozedur, die das Modell in einem Bewertungsprozess aufgerufen hat, übermittelt. In dieser Übung wird nur ein Modell verwendet, aber Sie können sich vorstellen, wie das parametrisierungsmodell in einer Bewertungsaufgabe das Skript nützlicher machen würde.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie noch nicht mit Python SQL-Entwickler sind, überprüfen Sie die Schritte und Tools für die Arbeit mit Python-Code lokal mit der Möglichkeit, um die Ausführung von lokalen Sitzungen zu einer Remoteinstanz von SQL Server verschoben.
+Wenn Sie SQL-Entwickler neu in python sind, überprüfen Sie die Schritte und Tools für die lokale Verwendung von Python-Code mit der Möglichkeit, die Ausführung von lokalen Sitzungen auf eine Remote SQL Server-Instanz zu verlagern.
 
 > [!div class="nextstepaction"]
-> [Richten Sie eine Python-Clientarbeitsstation](../python/setup-python-client-tools-sql.md).
+> [Richten Sie eine Python-Client](../python/setup-python-client-tools-sql.md)Arbeitsstation ein.
 

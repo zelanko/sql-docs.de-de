@@ -1,172 +1,172 @@
 ---
-title: Häufige Probleme mit dem Launchpad-Dienst und der externen skriptausführung – SQL Server Machine Learning Services
+title: Häufige Probleme mit dem Launchpad-Dienst und externer Skriptausführung
 ms.prod: sql
 ms.technology: ''
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2d7f82230dbc6b87bcc8f752c99b7c92ef759253
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3786ab3ee17bbbc0b54e439e3466236af098ffd3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963122"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345169"
 ---
-# <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Häufige Probleme mit dem Launchpad-Dienst und der externen skriptausführung in SQL Server
+# <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Häufige Probleme mit dem Launchpad-Dienst und der externen Skriptausführung in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- Trusted Launchpad für SQL Server-Dienst unterstützt die Ausführung des externen Skripts für R und Python. Auf SQL Server 2016 R Services bietet SP1 den Dienst. SQL Server 2017 beinhaltet den Launchpad-Dienst im Rahmen der Erstinstallation.
+ SQL Server vertrauenswürdigen Launchpad-Dienst unterstützt die Ausführung externer Skripts für R und python. Auf SQL Server 2016 R Services stellt SP1 den-Dienst bereit. SQL Server 2017 enthält den Launchpad-Dienst als Teil der Erstinstallation.
 
-Mehrere Probleme können verhindern, dass Launchpad aus starten, einschließlich von Konfigurationsproblemen oder Änderungen oder fehlen von Netzwerkprotokollen. Dieser Artikel enthält Anleitungen zur Fehlerbehebung für viele Probleme. Für alle, die wir nicht angetroffen haben, können Sie Fragen zu den [Machine Learning Server-Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
+Mehrere Probleme können verhindern, dass Launchpad gestartet wird, einschließlich Konfigurationsprobleme, Änderungen oder fehlende Netzwerkprotokolle. Dieser Artikel enthält Anleitungen zur Problembehandlung für viele Probleme. Für jeden, den wir verpasst haben, können Sie im [Machine Learning Server Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)Fragen stellen.
 
-## <a name="determine-whether-launchpad-is-running"></a>Bestimmen Sie, ob Launchpad ausgeführt wird
+## <a name="determine-whether-launchpad-is-running"></a>Bestimmen, ob Launchpad ausgeführt wird
 
-1. Öffnen der **Services** Bereich ("Services.msc"). Oder geben Sie über die Befehlszeile **SQLServerManager13.msc** oder **SQLServerManager14.msc** öffnen [SQL Server-Konfigurations-Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
+1. Öffnen Sie den Bereich **Dienste** (Services. msc). Oder geben Sie in der Befehlszeile **SQLServerManager13. msc** oder **SQLServerManager14. msc** ein, um [SQL Server-Konfigurations-Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager)zu öffnen.
 
-2. Notieren Sie sich das Dienstkonto, unter dem Launchpad ausgeführt wird. Jede Instanz,, R oder Python aktiviert ist, sollte es sich um eine eigene Instanz des Launchpad-Diensts verfügen. Z. B. der Dienst für eine benannte Instanz könnte werden etwa _MSSQLLaunchpad$ InstanceName_.
+2. Notieren Sie sich das Dienst Konto, unter dem das Launchpad ausgeführt wird. Jede Instanz, bei der R oder python aktiviert ist, sollte über eine eigene Instanz des Launchpad-Dienstanbieter verfügen. Beispielsweise könnte der Dienst für eine benannte Instanz etwa wie folgt lauten: _mssqllaunchpad $ instanceName_.
 
-3. Wenn der Dienst beendet wird, starten Sie ihn neu. Auf neu zu starten, wenn es Probleme bei der Konfiguration gibt, eine Meldung im Ereignisprotokoll veröffentlicht wird und der Dienst wird wieder beendet. Überprüfen Sie das Systemereignisprotokoll für Details, warum der Dienst beendet wurde.
+3. Wenn der Dienst beendet wurde, starten Sie ihn neu. Wenn bei einem Neustart Probleme mit der Konfiguration vorliegen, wird eine Meldung im System Ereignisprotokoll veröffentlicht, und der Dienst wird wieder beendet. Überprüfen Sie das System Ereignisprotokoll, um zu erfahren, warum der Dienst angehalten wurde.
 
-4. Überprüfen Sie den Inhalt der RSetup.log, und stellen Sie sicher, dass keine Fehler, in der Einrichtung vorliegen. Zum Beispiel die Nachricht *mit Code 0 beendet wird,* gibt Fehler des Diensts zu starten.
+4. Überprüfen Sie den Inhalt von rsetup. log, und stellen Sie sicher, dass das Setup keine Fehler enthält. Beispielsweise zeigt die Meldung, die *mit Code 0* beendet wird, an, dass der Dienst nicht gestartet werden konnte.
 
-5. Um nach anderen Fehlern suchen, überprüfen Sie den Inhalt der rlauncher.log.
+5. Überprüfen Sie den Inhalt von rlauncher. log, um nach anderen Fehlern zu suchen.
 
-## <a name="check-the-launchpad-service-account"></a>Überprüfen Sie das Konto des Launchpad-Dienst
+## <a name="check-the-launchpad-service-account"></a>Überprüfen Sie das Launchpad-Dienst Konto.
 
-Ist möglicherweise das Standarddienstkonto das Konto "NT-Dienst\$SQL2016" oder "NT-Dienst\$SQL 2017". Das letzte Teil variieren abhängig von der SQL-Instanzname.
+Das Standard Dienst Konto ist möglicherweise "NT\$Service SQL2016" oder "NT\$Service SQL2017". Der endgültige Teil kann je nach Name der SQL-Instanz variieren.
 
-Der Launchpad-Dienst (Launchpad.exe), die mithilfe eines Dienstkontos mit geringen Rechten-wird ausgeführt. Zum Starten von R und Python, und mit der Datenbankinstanz kommunizieren, erfordert das Launchpad-Dienstkonto jedoch die folgenden Berechtigungen:
+Der Launchpad-Dienst (launchpad. exe) wird mithilfe eines Dienst Kontos mit geringen Berechtigungen ausgeführt. Um R und python zu starten und mit der Daten Bank Instanz zu kommunizieren, benötigt das Launchpad-Dienst Konto jedoch die folgenden Benutzerrechte:
 
 - Anmelden als Dienst (SeServiceLogonRight)
 - Ersetzen von Token auf Prozessebene (SeAssignPrimaryTokenPrivilege)
 - Umgehen von durchsuchenden Prüfungen (SeChangeNotifyPrivilege)
-- Anpassen des arbeitsspeicherkontingents für einen Prozess (SeIncreaseQuotaSizePrivilege)
+- Anpassen von Speicher Kontingenten für einen Prozess (seinkreasequotasizeprivilege)
 
-Informationen zu dieser Benutzerrechte, finden Sie im Abschnitt "Windows-Berechtigungen und Rechte" in [konfigurieren Windows-Dienstkonten und-Berechtigungen service](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+Weitere Informationen zu diesen Benutzerrechten finden Sie im Abschnitt "Windows-Berechtigungen und-Rechte" unter [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 > [!TIP]
-> Wenn Sie mit der Verwendung des Support Diagnostics Platform (SDP) Tool für SQL Server-Diagnose vertraut sind, können Sie die SDP verwenden, um die Ausgabedatei mit dem Namen MachineName_UserRights.txt zu überprüfen.
+> Wenn Sie mit der Verwendung des SDP-Tools (Support Diagnostics Platform) für SQL Server Diagnose vertraut sind, können Sie SDP verwenden, um die Ausgabedatei mit dem Namen "MachineName_UserRights. txt" zu überprüfen.
 
-## <a name="user-group-for-launchpad-cannot-log-on-locally"></a>Benutzergruppe für Launchpad kann nicht lokal anmelden
+## <a name="user-group-for-launchpad-cannot-log-on-locally"></a>Die Benutzergruppe für Launchpad kann sich nicht lokal anmelden.
 
-Während des Setups von Machine Learning-Dienste, SQL Server erstellt die Windows-Benutzergruppe **SQLRUserGroup** und wird dann mit der alle erforderlichen Rechte zur Launchpad für die Verbindung mit SQL Server und externen Skripts bereitgestellt. Wenn Benutzer der Gruppe aktiviert ist, wird er auch zum Ausführen von Python-Skripts verwendet.
+Beim Setup von Machine Learning Services erstellt SQL Server die Windows-Benutzergruppe **sqlrusergroup** und stellt diese dann mit allen Rechten bereit, die für das Launchpad erforderlich sind, um eine Verbindung mit SQL Server herzustellen und externe Skript Aufträge auszuführen. Wenn diese Benutzergruppe aktiviert ist, wird Sie auch verwendet, um python-Skripts auszuführen.
 
-In Organisationen, in denen striktere Sicherheitsrichtlinien gelten, die Rechte, die von dieser Gruppe erforderlich sind möglicherweise manuell entfernt wurde oder sie können automatisch per Richtlinie widerrufen werden. Wenn die Rechte entfernt wurden, Launchpad kann nicht mehr eine Verbindung mit SQL Server und SQL Server kann nicht die externe Laufzeit aufgerufen.
+In Organisationen, in denen restriktivere Sicherheitsrichtlinien erzwungen werden, wurden die für diese Gruppe erforderlichen Rechte jedoch möglicherweise manuell entfernt, oder Sie werden möglicherweise automatisch durch die Richtlinie widerrufen. Wenn die Rechte entfernt wurden, kann das Launchpad keine Verbindung mehr mit SQL Server herstellen, und SQL Server kann die externe Laufzeit nicht mehr aufgerufen werden.
 
 Stellen Sie sicher, dass die Gruppe **SQLRUserGroup** über die Systemberechtigung **Allow Log in locally**  (Lokale Anmeldung erlauben) verfügt, um dieses Problem zu beheben.
 
 Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
-## <a name="permissions-to-run-external-scripts"></a>Berechtigungen zum Ausführen externer Skripts.
+## <a name="permissions-to-run-external-scripts"></a>Berechtigungen zum Ausführen externer Skripts
 
-Auch wenn Launchpad ordnungsgemäß konfiguriert ist, wird ein Fehler zurückgegeben, wenn der Benutzer keine Berechtigung zum Ausführen von R- oder Python-Skripts.
+Auch wenn Launchpad ordnungsgemäß konfiguriert ist, wird ein Fehler zurückgegeben, wenn der Benutzer nicht über die Berechtigung zum Ausführen von R-oder python-Skripts verfügt.
 
-Wenn Sie SQL Server als Datenbankadministrator installiert, oder Sie der Besitzer sind, werden Sie automatisch durch diese Berechtigung gewährt. Andere Benutzer haben jedoch in der Regel mehr Berechtigungen beschränkt. Wenn sie versuchen, ein R-Skript auszuführen, erhalten sie einen Launchpad-Fehler.
+Wenn Sie SQL Server als Datenbankadministrator oder als Datenbankbesitzer installiert haben, wird Ihnen diese Berechtigung automatisch erteilt. Andere Benutzer haben jedoch in der Regel eingeschränkte Berechtigungen. Wenn Sie versuchen, ein R-Skript auszuführen, erhalten Sie einen Launchpad-Fehler.
 
-Zum Beheben des Problems, in SQL Server Management Studio kann ein Sicherheitsadministrator die SQL-Anmeldung oder der Windows-Benutzerkonto ändern, indem das folgende Skript ausführen:
+Um das Problem zu beheben, kann ein Sicherheitsadministrator in SQL Server Management Studio den SQL-Anmelde Namen oder das Windows-Benutzerkonto ändern, indem er das folgende Skript ausführen:
 
 ```sql
 GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
 
-Weitere Informationen finden Sie unter [GRANT (Transact-SQL](../t-sql/statements/grant-transact-sql.md).
+Weitere Informationen finden Sie unter [Grant (Transact-SQL](../t-sql/statements/grant-transact-sql.md)).
 
-## <a name="common-launchpad-errors"></a>Launchpad-Problemen
+## <a name="common-launchpad-errors"></a>Häufige Launchpad-Fehler
 
-Dieser Abschnitt enthält die häufigsten Fehlermeldungen, die Launchpad zurückgibt.
+In diesem Abschnitt werden die häufigsten Fehlermeldungen aufgelistet, die von Launchpad zurückgegeben werden.
 
-## <a name="unable-to-launch-runtime-for-r-script"></a>"Kann nicht zum Starten der Laufzeit für R-Skript"
+## <a name="unable-to-launch-runtime-for-r-script"></a>"Die Laufzeit für R-Skript kann nicht gestartet werden."
 
-Wenn die Windows-Gruppe für Benutzer von R (auch für Python verwendet) auf die Instanz nicht anmelden können, die R Services ausgeführt wird, können Sie die folgenden Fehler angezeigt:
+Wenn sich die Windows-Gruppe für R-Benutzer (auch für python verwendet) nicht bei der Instanz anmelden können, auf der R Services ausgeführt wird, werden möglicherweise die folgenden Fehler angezeigt:
 
-- Der Fehler generiert, wenn Sie versuchen, R-Skripts auszuführen:
+- Fehler, die beim Versuch generiert werden, R-Skripts auszuführen:
 
     * *Laufzeit für 'R'-Skript kann nicht gestartet werden. Überprüfen Sie die Konfiguration der 'R'-Laufzeit.*
 
     * *Ein externer Skriptfehler ist aufgetreten. Laufzeit kann nicht gestartet werden.*
 
-- Fehler von generiert die [!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md)] Dienst:
+- Fehler, die [!INCLUDE[rsql_launchpad](../includes/rsql-launchpad-md.md)] vom Dienst generiert wurden:
 
     * *Fehler beim Initialisieren des Startprogramms RLauncher.dll*
 
     * *Keine Startprogramm-DLLs registriert!*
 
-    * *Sicherheitsprotokolle weisen darauf hin, dass das Konto NT-Dienst konnte sich nicht anmelden konnte.*
+    * *Sicherheitsprotokolle weisen darauf hin, dass sich der NT-Dienst des Kontos nicht anmelden konnte.*
 
-Informationen dazu, wie Sie Benutzer der Gruppe die erforderlichen Berechtigungen erteilen, finden Sie unter [Installieren von SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
+Informationen dazu, wie Sie dieser Benutzergruppe die erforderlichen Berechtigungen erteilen, finden Sie unter [Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Diese Einschränkung gilt nicht, wenn Sie SQL-Benutzernamen verwenden, um von einer Remotearbeitsstation R-Skripts auszuführen.
 
-## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"Fehler bei der Anmeldung: der Benutzer hat nicht den angeforderten Anmeldungstyp gewährt"
+## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"Fehler bei der Anmeldung: dem Benutzer wurde nicht der angeforderte Anmeldetyp erteilt."
 
-In der Standardeinstellung [!INCLUDE[rsql_launchpad_md](../includes/rsql-launchpad-md.md)] verwendet das folgende Konto beim Start: `NT Service\MSSQLLaunchpad`. Das Konto wird konfiguriert, indem [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] Setup alle erforderlichen Berechtigungen verfügen.
+Standardmäßig [!INCLUDE[rsql_launchpad_md](../includes/rsql-launchpad-md.md)] verwendet das folgende Konto beim Start: `NT Service\MSSQLLaunchpad`. Das Konto wird vom [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] -Setup so konfiguriert, dass es über alle erforderlichen Berechtigungen verfügt.
 
-Wenn Launchpad ein anderes Konto zuweisen, oder die Berechtigung durch eine Richtlinie auf dem SQL Server-Computer entfernt wird, das Konto möglicherweise nicht die erforderlichen Berechtigungen, und Sie erhalten möglicherweise folgenden Fehler:
+Wenn Sie Launchpad ein anderes Konto zuweisen oder wenn das Rechte durch eine Richtlinie auf dem SQL Server Computer entfernt wird, verfügt das Konto möglicherweise nicht über die erforderlichen Berechtigungen, und möglicherweise wird der folgende Fehler angezeigt:
 
 >*ERROR_LOGON_TYPE_NOT_GRANTED 1385 (0x569) 	Anmeldung fehlgeschlagen: Der Benutzer besitzt nicht den benötigten Anmeldetyp auf diesem Computer.*
 
-Um die erforderlichen Berechtigungen auf dem neuen Dienstkonto zu gewähren, verwenden Sie die lokale Sicherheitsrichtlinie-Anwendung, und aktualisieren Sie die Berechtigungen für das Konto folgenden Berechtigungen einschließen:
+Um dem neuen Dienst Konto die erforderlichen Berechtigungen zu erteilen, verwenden Sie die Anwendung lokale Sicherheitsrichtlinie, und aktualisieren Sie die Berechtigungen für das Konto so, dass es die folgenden Berechtigungen umfasst:
 
 + Anpassen des Arbeitsspeicherkontingents für einen Prozess (SeIncreaseQuotaPrivilege)
 + Umgehen von durchsuchenden Prüfungen (SeChangeNotifyPrivilege)
 + Anmelden als Dienst (SeServiceLogonRight)
 + Ersetzen von Token auf Prozessebene (SeAssignPrimaryTokenPrivilege)
 
-## <a name="unable-to-communicate-with-the-launchpad-service"></a>"Kann nicht für die Kommunikation mit dem Launchpad-Dienst"
+## <a name="unable-to-communicate-with-the-launchpad-service"></a>"Die Kommunikation mit dem Launchpad-Dienst ist nicht möglich."
 
-Wenn Sie installiert und Machine Learning aktiviert haben, aber Sie diesen Fehler, erhalten Wenn Sie versuchen, ein R- oder Python-Skript auszuführen, der Launchpad-Dienst für die Instanz möglicherweise nicht mehr haben ausgeführt.
+Wenn Sie Machine Learning installiert und dann aktiviert haben, dieser Fehler jedoch beim Versuch, ein R-oder Python-Skript auszuführen, angezeigt wird, wird der Launchpad-Dienst für die Instanz möglicherweise nicht mehr ausgeführt.
 
 1. Öffnen Sie SQL Server Configuration Manager von Eingabeaufforderung aus. Weitere Informationen finden Sie unter [SQL Server Configuration Manager](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager).
 
-2. Mit der rechten Maustaste SQL Server Launchpad für die Instanz, und wählen Sie dann **Eigenschaften**.
+2. Klicken Sie mit der rechten Maustaste auf SQL Server-Launchpad für die Instanz, und wählen Sie dann **Eigenschaften**aus.
 
-3. Wählen Sie die **Service** Registerkarte, und stellen Sie sicher, dass der Dienst ausgeführt wird. Wenn er nicht ausgeführt wird, ändern Sie die **Startmodus** zu **automatische**, und wählen Sie dann **übernehmen**.
+3. Wählen Sie die Registerkarte **Dienst** aus, und überprüfen Sie dann, ob der Dienst ausgeführt wird. Wenn er nicht ausgeführt wird, ändern Sie den **Start Modus** in **automatisch**, **und wählen Sie**dann übernehmen aus.
 
-4. Neustarten des Diensts in der Regel wird das Problem behoben, damit Machine Learning-Skripts ausführen können. Wenn der Neustart das Problem nicht behoben wird, beachten Sie den Pfad und den Argumenten in der **Binärpfad** -Eigenschaft, und führen Sie folgende Schritte:
+4. Durch einen Neustart des Dienstes wird das Problem in der Regel behoben, sodass Machine Learning-Skripts ausgeführt werden können. Wenn das Problem durch den Neustart nicht behoben werden kann, notieren Sie den Pfad und die Argumente in der Eigenschaft **Binärpfad** , und führen Sie die folgenden Schritte aus:
 
-    a. Überprüfen Sie das Startprogramm für den config-Datei aus, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
+    a. Überprüfen Sie die config-Datei des Start Programms, und stellen Sie sicher, dass das Arbeitsverzeichnis gültig ist.
 
-    b. Stellen Sie sicher, dass die Windows-Gruppe, die von Launchpad verwendete SQL Server-Instanz herstellen kann.
+    b. Stellen Sie sicher, dass die von Launchpad verwendete Windows-Gruppe eine Verbindung mit der SQL Server Instanz herstellen kann.
 
-    c. Wenn Sie die Eigenschaften des Diensts ändern, starten Sie den Launchpad-Dienst neu.
+    c. Wenn Sie eine der Dienst Eigenschaften ändern, starten Sie den Launchpad-Dienst neu.
 
-## <a name="fatal-error-creation-of-tmpfile-failed"></a>"Erstellung TmpFile Schwerwiegender Fehler failed"
+## <a name="fatal-error-creation-of-tmpfile-failed"></a>"Fehler bei der schwerwiegenden Fehler Erstellung von tmpfile".
 
-In diesem Szenario haben Sie Machine Learning-Features erfolgreich installiert und Launchpad ausgeführt wird. Sie versuchen, einige einfache R oder Python-Code auszuführen, aber Launchpad tritt ein Fehler wie folgt: 
+In diesem Szenario haben Sie Machine Learning-Features erfolgreich installiert, und Launchpad wird ausgeführt. Sie versuchen, einen einfachen R-oder python-Code auszuführen, aber Launchpad schlägt mit einem Fehler wie dem folgenden fehl: 
 
->*Für die Kommunikation mit der Laufzeit für R-Skript nicht möglich. Überprüfen Sie die Anforderungen des R-Laufzeit.*
+>*Die Kommunikation mit der Laufzeit für das R-Skript ist nicht möglich. Überprüfen Sie die Anforderungen der R-Laufzeit.*
 
-Zur gleichen Zeit schreibt die Laufzeit des externen Skripts die folgende Meldung als Teil der Nachricht "stderr" an: 
+Gleichzeitig schreibt die externe Skript Laufzeit die folgende Nachricht als Teil der stderr-Meldung: 
 
->*Schwerwiegender Fehler: Erstellung von Tmpfile-Fehler.*
+>*Schwerwiegender Fehler: Fehler beim Erstellen von "tmpfile".*
 
-Dieser Fehler weist darauf hin, dass das Konto, das Launchpad versucht, verwenden Sie keine Berechtigung zum Anmelden bei der Datenbank. Diese Situation kann eintreten, wenn der strengen Sicherheitsrichtlinien implementiert sind. Bestimmt, ob dies der Fall ist, überprüfen Sie die SQL Server-Protokolle, und prüfen um festzustellen, ob das Konto MSSQLSERVER01, bei der Anmeldung verweigert wurde. Die gleiche Informationen werden bereitgestellt, in den Protokollen, die für R spezifisch sind\_Dienste oder PYTHON\_Dienste. Suchen Sie nach ExtLaunchError.log.
+Dieser Fehler weist darauf hin, dass das von Launchpad zu verwendende Konto nicht über die Berechtigung zum Anmelden bei der Datenbank verfügt. Diese Situation kann auftreten, wenn strikte Sicherheitsrichtlinien implementiert werden. Um zu ermitteln, ob dies der Fall ist, überprüfen Sie die SQL Server Protokolle, und überprüfen Sie, ob das MSSQLSERVER01-Konto bei der Anmeldung verweigert wurde. Die gleichen Informationen werden in den Protokollen bereitgestellt, die für R\_Services oder python\_-Dienste spezifisch sind. Suchen Sie nach extlauncherror. log.
 
-Standardmäßig werden 20 Konten eingerichtet und dem Launchpad.exe-Prozess, mit dem Namen MSSQLSERVER01 über MSSQLSERVER20 zugeordnet. Wenn Sie die intensiven Gebrauch von R- oder Python vornehmen, können Sie die Anzahl der Konten erhöhen.
+Standardmäßig werden 20 Konten eingerichtet und dem launchpad. exe-Prozess mit den Namen MSSQLSERVER01 bis MSSQLSERVER20 zugeordnet. Wenn Sie R oder python stark nutzen, können Sie die Anzahl der Konten erhöhen.
 
-Um das Problem zu beheben, stellen Sie sicher, dass die Gruppe hat *lokal anmelden zulassen* Berechtigungen mit der lokalen Instanz, in denen Machine Learning-Features installiert und aktiviert wurde. In einigen Umgebungen kann diese Berechtigungsebene eine GPO-Ausnahme von der Netzwerkadministrator erfordern.
+Um das Problem zu beheben, stellen Sie sicher, dass für die Gruppe die Berechtigung " *Lokal anmelden zulassen* " für die lokale Instanz erteilt wurde, auf der Machine Learning-Funktionen installiert und aktiviert wurden. In einigen Umgebungen ist für diese Berechtigungsstufe möglicherweise eine GPO-Ausnahme vom Netzwerkadministrator erforderlich.
 
-## <a name="not-enough-quota-to-process-this-command"></a>"Nicht genügend Kontingent zum Verarbeiten des Befehls"
+## <a name="not-enough-quota-to-process-this-command"></a>"Nicht genügend Kontingent zum Verarbeiten dieses Befehls"
 
-Dieser Fehler kann es sich um eine von mehreren Aktionen bedeuten:
+Dieser Fehler kann eine der folgenden Ursachen haben:
 
-- Launchpad möglicherweise nicht genügend externe Benutzer, die externe Abfrage auszuführen. Wenn Sie mehr als 20 externe Abfragen gleichzeitig ausgeführt werden und nur 20 Standardbenutzer vorhanden sind, können z. B. eine oder mehrere Abfragen fehlschlagen.
+- Das Launchpad weist möglicherweise nicht genügend externe Benutzer auf, um die externe Abfrage auszuführen. Wenn Sie z. b. mehr als 20 externe Abfragen gleichzeitig ausführen und nur 20 Standardbenutzer vorhanden sind, kann es vorkommen, dass mindestens eine Abfrage fehlschlägt.
 
-- Nicht genügend Arbeitsspeicher ist verfügbar, um die R-Vorgang zu verarbeiten. Dieser Fehler tritt am häufigsten in einer standardumgebung, in dem SQL Server bis zu 70 Prozent der Computerressourcen möglicherweise verwenden. Informationen dazu, wie Sie die Serverkonfiguration zur Unterstützung von stärkerer Einsatz der Ressourcen von R zu ändern, finden Sie unter [Operationalisieren Ihres R-Codes](r/operationalizing-your-r-code.md).
+- Zum Verarbeiten der R-Aufgabe ist nicht genügend Arbeitsspeicher verfügbar. Dieser Fehler tritt am häufigsten in einer Standardumgebung auf, bei der SQL Server möglicherweise bis zu 70 Prozent der Ressourcen des Computers verwendet. Informationen zum Ändern der Serverkonfiguration zur Unterstützung einer größeren Verwendung von Ressourcen durch R finden Sie unter [operationalisieren von r-Code](r/operationalizing-your-r-code.md).
 
-## <a name="cant-find-package"></a>"Paket wurde nicht gefunden"
+## <a name="cant-find-package"></a>"Paket kann nicht gefunden werden"
 
-Wenn Sie R-Code in SQL Server ausführen und diese Meldung angezeigt, aber die Nachricht nicht abgerufen werden, wenn Sie den gleichen Code außerhalb von SQL Server ausgeführt haben, bedeutet dies, dass das Paket nicht am Standardspeicherort-Bibliothek verwendet, die von SQL Server installiert wurde.
+Wenn Sie R-Code in SQL Server ausführen und diese Nachricht erhalten, aber die Nachricht nicht erhalten haben, als Sie denselben Code außerhalb SQL Server ausgeführt haben, bedeutet dies, dass das Paket nicht an dem von SQL Server verwendeten Standard Bibliotheks Speicherort installiert wurde.
 
 Dieser Fehler kann in vielerlei Hinsicht auftreten:
 
-- Sie haben ein neues Paket auf dem Server installiert, aber der Zugriff wurde verweigert, damit R das Paket in einer Benutzerbibliothek installiert.
+- Sie haben ein neues Paket auf dem Server installiert, aber der Zugriff wurde verweigert, sodass das Paket von R in eine Benutzer Bibliothek installiert wurde.
 
-- Sie R Services installiert haben und dann eine andere R-Tool installiert oder Satz von Bibliotheken, einschließlich Microsoft R Server (eigenständig), Microsoft R Client RStudio, usw.
+- Sie haben r Services installiert und dann ein weiteres R-Tool oder eine Reihe von Bibliotheken installiert, einschließlich Microsoft R Server (eigenständig), Microsoft R Client, rstudio usw.
 
-Um den Speicherort der R-paketbibliothek zu bestimmen, die von der Instanz verwendet wird, öffnen Sie SQL Server Management Studio (oder jedes andere Datenbank-Abfrage-Tool), eine Verbindung mit der Instanz, und führen Sie dann die folgende gespeicherte Prozedur:
+Um den Speicherort der R-paketbibliothek zu ermitteln, die von der Instanz verwendet wird, öffnen Sie SQL Server Management Studio (oder ein anderes Datenbankabfrage Tool), stellen Sie eine Verbindung mit der Instanz her, und führen Sie dann die folgende gespeicherte Prozedur aus:
 
 ```sql
 EXEC sp_execute_external_script @language = N'R',  
@@ -179,58 +179,58 @@ EXEC sp_execute_external_script @language = N'R',
 
 *[1] "C:\\Programmdateien\\Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES "*
 
-*[1] "c: / Program Programme/Microsoft SQL Server/MSSQL13. SQL2016/R_SERVICES/Library"*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13. SQL2016/R_SERVICES/Library "*
 
-Um das Problem zu beheben, müssen Sie das Paket in der Bibliothek zu SQL Server-Instanz neu installieren.
+Um das Problem zu beheben, müssen Sie das Paket in der SQL Server-instanzbibliothek neu installieren.
 
 >[!NOTE]
->Wenn Sie eine Instanz von SQL Server 2016 verwenden Sie die neueste Version von Microsoft R aktualisiert haben, unterscheidet sich der Standardspeicherort für die Bibliothek. Weitere Informationen finden Sie unter [Verwenden von SqlBindR zum Aktualisieren einer Instanz von R Services](install/upgrade-r-and-python.md).
+>Wenn Sie eine Instanz von SQL Server 2016 aktualisiert haben, um die neueste Version von Microsoft R zu verwenden, unterscheidet sich der Standard Speicherort der Bibliothek. Weitere Informationen finden Sie unter [Verwenden von sqlbindr zum Aktualisieren einer Instanz von R Services](install/upgrade-r-and-python.md).
 
-## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Launchpad heruntergefahren aufgrund nicht übereinstimmender DLLs
+## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Launchpad wird aufgrund von nicht übereinstimmenden DLLs heruntergefahren.
 
-Wenn Sie die Datenbank-Engine mit anderen Funktionen, Patch, dem Server installieren, und klicken Sie dann später die Machine Learning-Funktion mit den ursprünglichen Medien hinzufügen, kann die falsche Version der Machine Learning-Komponenten installiert werden. Wenn Launchpad einen Versionskonflikt erkannt wird, heruntergefahren und erstellt eine Dumpdatei.
+Wenn Sie die Datenbank-Engine mit anderen Features installieren, den Server patchen und später das Machine Learning Feature mithilfe der ursprünglichen Medien hinzufügen, ist möglicherweise die falsche Version der Machine Learning Komponenten installiert. Wenn das Launchpad einen Versions Konflikt erkennt, wird es heruntergefahren, und eine Dumpdatei wird erstellt.
 
-Um dieses Problem zu vermeiden, werden Sie darauf, dass keine neuen Features auf die gleiche Patchebene als Server-Instanz installiert.
+Um dieses Problem zu vermeiden, stellen Sie sicher, dass Sie alle neuen Features auf derselben Patchebene wie die Serverinstanz installieren.
 
-**Die falsche Methode zum Aktualisieren:**
+**Die falsche Upgrademethode:**
 
-1. Installieren von SQLServer 2016 ohne R Services.
-2. Aktualisieren Sie SQL Server 2016-Kumulatives Update 2.
-3. Installieren von R-Services (Datenbankintern) mithilfe der RTM-Medien.
+1. Installieren Sie SQL Server 2016 ohne R Services.
+2. Upgrade SQL Server 2016 Kumulatives Update 2.
+3. Installieren Sie R Services (in-Database) mithilfe des RTM-Mediums.
 
-**Die richtige Methode zum Aktualisieren:**
+**Die korrekte Upgrademethode:**
 
-1. Installieren von SQLServer 2016 ohne R Services.
-2. Aktualisieren Sie SQL Server 2016, auf die gewünschte Patchebene. Installieren Sie z. B. Service Pack 1, und klicken Sie dann kumulativen Update 2.
-3. Um die Funktion auf der richtigen Patch-Ebene hinzuzufügen, führen Sie SP1 und CU2-Setup erneut aus, und wählen Sie dann auf R Services (Datenbankintern). 
+1. Installieren Sie SQL Server 2016 ohne R Services.
+2. Aktualisieren Sie SQL Server 2016 auf die gewünschte Patchebene. Installieren Sie z. b. Service Pack 1 und dann das kumulative Update 2.
+3. Wenn Sie die Funktion auf der richtigen Patchebene hinzufügen möchten, führen Sie SP1 und Cu2 Setup erneut aus, und wählen Sie dann R Services (in-Database) aus. 
 
-## <a name="launchpad-fails-to-start-if-8dot3-notation-is-required"></a>Launchpad kann nicht gestartet werden, wenn 8.3-Notation erforderlich ist.
+## <a name="launchpad-fails-to-start-if-8dot3-notation-is-required"></a>Launchpad kann nicht gestartet werden, wenn eine 8.3-Notation erforderlich ist.
 
 > [!NOTE] 
-> Bei älteren Systemen kann Launchpad nicht gestartet, wenn eine Anforderung der 8.3-Notation. Diese Anforderung wurde in späteren Versionen entfernt. SQL Server 2016 R Services-Kunden sollten die folgenden installieren:
-> * SQL Server 2016 SP1 und CU1: [Kumulatives Update 1 für SQLServer](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
-> * SQL Server 2016 RTM, das kumulative Update 3 und dadurch [Hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), die bei Bedarf verfügbar ist.
+> Auf älteren Systemen kann Launchpad nicht gestartet werden, wenn eine 8 DOT3-Notation erforderlich ist. Diese Anforderung wurde in späteren Versionen entfernt. SQL Server 2016 R Services-Kunden sollten einen der folgenden Schritte ausführen:
+> * SQL Server 2016 SP1 und CU1: [Kumulatives Update 1 für SQL Server](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1).
+> * SQL Server 2016 RTM, Kumulatives Update 3 und dieses [Hotfix](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), das bei Bedarf verfügbar ist.
 
-Kompatibilität mit R, SQL Server 2016 R Services (Datenbankintern) erforderlich, das Laufwerk, in dem die Funktion installiert wurde, um die Erstellung von kurzen Dateinamen mithilfe unterstützen *8.3-Notation*. Ein 8.3-Dateiname wird auch als bezeichnet ein *kurzer Dateiname*, und es wird verwendet, für die Kompatibilität mit früheren Versionen von Microsoft Windows oder als Alternative zu langen Dateinamen.
+Aus Gründen der Kompatibilität mit R erforderte SQL Server 2016 R Services (in-Database) das Laufwerk, auf dem das Feature installiert ist, um die Erstellung von kurzen Dateinamen mithilfe der *8.3-Notation*zu unterstützen. Ein 8,3-Dateiname wird auch als *kurzer*Dateiname bezeichnet und wird aus Gründen der Kompatibilität mit früheren Versionen von Microsoft Windows oder als Alternative zu langen Dateinamen verwendet.
 
-Wenn das Volume, auf dem Sie R installieren keine kurzen Dateinamen unterstützt, die Prozesse, starten R aus SQL Server, können möglicherweise nicht die richtige ausführbare Datei gefunden und Launchpad nicht gestartet.
+Wenn das Volume, auf dem Sie r installieren, keine kurzen Dateinamen unterstützt, können die Prozesse, die r aus SQL Server starten, möglicherweise nicht die richtige ausführbare Datei finden, und Launchpad wird nicht gestartet.
 
-Dieses Problem zu umgehen können Sie der 8.3-Notation auf dem Volume aktivieren, dem SQL Server installiert ist und dem R Services installiert ist. Sie müssen dann den kurzen Namen für das Arbeitsverzeichnis in der R Services-Konfigurationsdatei angeben.
+Um dieses Problem zu umgehen, können Sie die 8 DOT3-Notation auf dem Volume aktivieren, auf dem SQL Server installiert ist und auf dem R Services installiert ist. Sie müssen dann den kurzen Namen für das Arbeitsverzeichnis in der R Services-Konfigurationsdatei angeben.
 
-1. Um 8.3-Notation aktivieren möchten, führen Sie das Hilfsprogramm Fsutil mit dem *8dot3name* -Argument wie hier beschrieben: [Fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
+1. Um die 8.3-Notation zu aktivieren, führen Sie das Hilfsprogramm fsutil mit dem Argument *8dot3name* aus, wie hier beschrieben: [fsutil 8dot3name](https://technet.microsoft.com/library/ff621566(v=ws.11).aspx).
 
-2. Nach die 8.3-Notation aktiviert ist, öffnen Sie die Datei "RLauncher.config", und beachten Sie die Eigenschaft der `WORKING_DIRECTORY`. Informationen dazu, wie Sie diese Datei zu suchen, finden Sie unter [Datensammlung zur Problembehandlung von Machine Learning](data-collection-ml-troubleshooting-process.md).
+2. Nachdem die Schreibweise 8.3 aktiviert ist, öffnen Sie die Datei rlauncher. config, und notieren `WORKING_DIRECTORY`Sie sich die-Eigenschaft von. Informationen dazu, wie Sie diese Datei finden, finden Sie unter [Datensammlung für die Machine Learning Problem](data-collection-ml-troubleshooting-process.md)Behandlung.
 
-3. Verwenden Sie das Hilfsprogramm Fsutil mit dem *Datei* Argument, um einen kurzen Dateipfad für den Ordner anzugeben, die unter WORKING_DIRECTORY angegeben wird.
+3. Verwenden Sie das Hilfsprogramm fsutil mit dem *File* -Argument, um einen kurzen Dateipfad für den Ordner anzugeben, der in WORKING_DIRECTORY angegeben ist.
 
-4. Bearbeiten Sie die Konfigurationsdatei zum gleichen Arbeitsverzeichnis angeben, das Sie in der Eigenschaft für WORKING_DIRECTORY eingegeben haben. Alternativ können Sie ein anderes Arbeitsverzeichnis angeben, und wählen Sie einen vorhandenen Pfad, der bereits mit der 8.3-Notation kompatibel ist.
+4. Bearbeiten Sie die Konfigurationsdatei, um das gleiche Arbeitsverzeichnis anzugeben, das Sie in der WORKING_DIRECTORY-Eigenschaft eingegeben haben. Alternativ können Sie ein anderes Arbeitsverzeichnis angeben und einen vorhandenen Pfad auswählen, der bereits mit der 8.3-Notation kompatibel ist.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Machine Learning-Dienste zur Problembehandlung und bekannte Probleme](machine-learning-troubleshooting-faq.md)
+[Machine Learning Services Problembehandlung und bekannte Probleme](machine-learning-troubleshooting-faq.md)
 
-[Die Datensammlung für die Problembehandlung von Machine learning](data-collection-ml-troubleshooting-process.md)
+[Datensammlung für die Problembehandlung von Machine Learning](data-collection-ml-troubleshooting-process.md)
 
 [Häufig gestellte Fragen zu Upgrade und Installation](r/upgrade-and-installation-faq-sql-server-r-services.md)
 

@@ -1,66 +1,66 @@
 ---
-title: Aktivieren oder Deaktivieren von remote R-paketverwaltung – SQL Server Machine Learning Services
-description: Aktivieren von remote R-paketverwaltung für SQL Server 2016 R Services oder SQL Server 2017-Machine Learning Services (Datenbankintern)
+title: Aktivieren oder Deaktivieren der Remote-R-Paketverwaltung
+description: Aktivieren der Remote-r-Paketverwaltung auf SQL Server 2016 R Services oder SQL Server 2017 Machine Learning Services (in-Database)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ea567d8fbe3f6bbd9b51133ec015768cd4c6e893
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 245358dcdc6bb166e49f963f67754f864e1a96b6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962526"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344916"
 ---
-# <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Aktivieren Sie oder deaktivieren Sie der remote-paketverwaltung für SQL Server
+# <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Aktivieren oder Deaktivieren der Remote Paketverwaltung für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel beschreibt, wie Sie die Remoteverwaltung der R-Pakete von einer Clientarbeitsstation oder einem anderen Machine Learning-Server zu aktivieren. Nachdem die paketverwaltungsfunktion auf SQL Server aktiviert wurde, können Sie RevoScaleR-Befehle auf einem Client verwenden, um Pakete auf SQL Server zu installieren.
+In diesem Artikel wird beschrieben, wie Sie die Remote Verwaltung von R-Paketen über eine Client Arbeitsstation oder eine andere Machine Learning Server aktivieren. Nachdem die Paket Verwaltungsfunktion auf SQL Server aktiviert wurde, können Sie mithilfe von revoscaler-Befehlen auf einem Client Pakete auf SQL Server installieren.
 
 > [!NOTE]
-> Derzeit wird die Verwaltung von R-Bibliotheken unterstützt. die Unterstützung für Python in der Roadmap enthalten ist.
+> Derzeit wird die Verwaltung von R-Bibliotheken unterstützt. Unterstützung für python finden Sie in der Roadmap.
 
-Standardmäßig ist die externe paketverwaltungsfunktion für SQL Server deaktiviert. Sie müssen ein separates Skript zum Aktivieren des Features, wie im nächsten Abschnitt beschrieben ausführen.
+Standardmäßig ist das Feature für die externe Paketverwaltung für SQL Server deaktiviert. Sie müssen ein separates Skript ausführen, um das Feature zu aktivieren, wie im nächsten Abschnitt beschrieben.
 
-## <a name="overview-of-process-and-tools"></a>Übersicht über die Verfahren und tools
+## <a name="overview-of-process-and-tools"></a>Übersicht über den Prozess und die Tools
 
-Zum Aktivieren oder Deaktivieren der paketverwaltung für SQL Server, verwenden Sie das Befehlszeile-Hilfsprogramm **RegisterRExt.exe**, das ist im Lieferumfang der **RevoScaleR** Paket.
+Verwenden Sie zum Aktivieren oder Deaktivieren der Paketverwaltung auf SQL Server das Befehlszeilen Dienstprogramm **registerrext. exe**, das im **revoscaler** -Paket enthalten ist.
 
-[Aktivieren der](#bkmk_enable) dieses Feature ist ein zweistufiger Prozess, erfordert einen Datenbankadministrator: Sie Aktivieren der paketverwaltung für SQL Server-Instanz (je einmal pro SQL Server-Instanz), und klicken Sie dann Aktivieren der paketverwaltung für SQL-Datenbank (je einmal pro SQL Server -Datenbank).
+[Das Aktivieren](#bkmk_enable) dieses Features ist ein zweistufiger Prozess, bei dem ein Datenbankadministrator erforderlich ist: Sie können die Paketverwaltung auf der SQL Server Instanz (einmal pro SQL Server Instanz) aktivieren und dann die Paketverwaltung für die SQL-Datenbank aktivieren (einmal pro SQL Server Datenbank). ).
 
-[Deaktivieren von](#bkmk_disable) die paketverwaltungsfunktion ist auch die Multipel Schritte erforderlich: Sie entfernen auf Datenbankebene Pakete und Berechtigungen (einmal pro Datenbank), und entfernen Sie die Rollen vom Server (je einmal pro Instanz).
+Das [Deaktivieren](#bkmk_disable) des Paket Verwaltungs Features erfordert auch multipel-Schritte: Sie entfernen Pakete und Berechtigungen auf Datenbankebene (einmal pro Datenbank) und entfernen dann die Rollen vom Server (einmal pro Instanz).
 
-## <a name="bkmk_enable"></a> Aktivieren der paketverwaltung
+## <a name="bkmk_enable"></a>Paketverwaltung aktivieren
 
-1. Öffnen Sie auf SQL Server eine Eingabeaufforderung mit erhöhten Rechten, und navigieren Sie zu dem Ordner mit dem Hilfsprogramm RegisterRExt.exe. Der Standardspeicherort ist `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+1. Öffnen Sie auf SQL Server eine Eingabeaufforderung mit erhöhten Rechten, und navigieren Sie zu dem Ordner, der das Hilfsprogramm registerrext. exe enthält. Der Standard Speicherort `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`ist.
 
-2. Führen Sie den folgenden Befehl, der entsprechenden Argumente für Ihre Umgebung bereitstellen:
+2. Führen Sie den folgenden Befehl aus, um die entsprechenden Argumente für Ihre Umgebung bereitzustellen:
 
     `RegisterRExt.exe /install pkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    Dieser Befehl erstellt die-Objekte auf Instanzebene auf dem SQL Server-Computer, die für die paketverwaltung erforderlich sind. Diese neu gestartet, wird des LaunchPads für die Instanz.
+    Mit diesem Befehl werden Objekte auf Instanzebene auf dem SQL Server Computer erstellt, die für die Paketverwaltung erforderlich sind. Außerdem wird das Launchpad für die-Instanz neu gestartet.
 
-    Wenn Sie eine Instanz nicht angeben, wird die Standardinstanz verwendet. Wenn Sie einen Benutzer nicht angeben, wird der aktuelle Sicherheitskontext verwendet. So ermöglicht z. B. der folgende Befehl paketverwaltung für die Instanz im Pfad RegisterRExt.exe, mit den Anmeldeinformationen des Benutzers, der die Eingabeaufforderung geöffnet:
+    Wenn Sie keine Instanz angeben, wird die Standard Instanz verwendet. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet. Der folgende Befehl aktiviert z. b. die Paketverwaltung auf der-Instanz im Pfad von registerrext. exe unter Verwendung der Anmelde Informationen des Benutzers, der die Eingabeaufforderung geöffnet hat:
 
     `REgisterRExt.exe /install pkgmgmt`
 
-3. Um paketverwaltung auf eine bestimmte Datenbank hinzuzufügen, führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus:
+3. Führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus, um eine Paketverwaltung zu einer bestimmten Datenbank hinzuzufügen:
 
     `RegisterRExt.exe /install pkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
-    Dieser Befehl erstellt einige datenbankartefakte, einschließlich der folgenden Datenbankrollen, die verwendet werden, zum Steuern von Benutzerberechtigungen: `rpkgs-users`, `rpkgs-private`, und `rpkgs-shared`.
+    Mit diesem Befehl werden einige Daten Bank Artefakte erstellt, einschließlich der folgenden Daten bankrollen, die zum Steuern `rpkgs-users`von `rpkgs-private`Benutzerberechtigungen `rpkgs-shared`verwendet werden:, und.
 
-    Zum Beispiel ermöglicht der folgende Befehl paketverwaltung in der Datenbank, für die Instanz, die dem RegisterRExt ausgeführt wird. Wenn Sie einen Benutzer nicht angeben, wird der aktuelle Sicherheitskontext verwendet.
+    Der folgende Befehl aktiviert z. b. die Paketverwaltung in der-Datenbank auf der-Instanz, in der registerrext ausgeführt wird. Wenn Sie keinen Benutzer angeben, wird der aktuelle Sicherheitskontext verwendet.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 
-4. Wiederholen Sie den Befehl für jede Datenbank, in dem Pakete installiert werden müssen.
+4. Wiederholen Sie den Befehl für jede Datenbank, in der Pakete installiert werden müssen.
 
-5. Um sicherzustellen, dass der neuen Rollen erstellt wurden, klicken Sie in SQL Server Management Studio, auf die Datenbank, erweitern Sie **Sicherheit**, und erweitern Sie **Datenbankrollen**.
+5. Um zu überprüfen, ob die neuen Rollen erfolgreich erstellt wurden, klicken Sie in SQL Server Management Studio auf die Datenbank, erweitern Sie **Sicherheit**, und erweitern Sie **Daten bankrollen**.
 
-    Sie können auch eine Abfrage auf Sys. database_principals, z. B. Folgendes ausführen:
+    Sie können auch eine Abfrage für sys. database_principals ausführen, wie z. b. Folgendes:
 
     ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -75,26 +75,26 @@ Zum Aktivieren oder Deaktivieren der paketverwaltung für SQL Server, verwenden 
         ON o.schema_id = s.schema_id;
     ```
 
-Nachdem Sie dieses Feature aktiviert haben, können Sie die RevoScaleR-Funktion verwenden, installieren oder Deinstallieren von Paketen von einem Remoteclient von R.
+Nachdem Sie diese Funktion aktiviert haben, können Sie die Funktion "revoscaler" verwenden, um Pakete von einem Remote-R-Client zu installieren oder zu deinstallieren.
 
-## <a name="bkmk_disable"></a> Deaktivieren der paketverwaltung
+## <a name="bkmk_disable"></a>Paketverwaltung deaktivieren
 
-1. Eine Eingabeaufforderung mit erhöhten Rechten führen Sie das Hilfsprogramm RegisterRExt erneut aus, und deaktivieren Sie der paketverwaltung auf Datenbankebene:
+1. Führen Sie an einer Eingabeaufforderung mit erhöhten Rechten das Hilfsprogramm registerrext erneut aus, und deaktivieren Sie die Paketverwaltung auf Datenbankebene:
 
     `RegisterRExt.exe /uninstall pkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
-    Dieser Befehl entfernt die Datenbankobjekte, die im Zusammenhang mit der Verwaltung von Paketen aus der angegebenen Datenbank. Es entfernt auch alle Pakete, die von der geschützten Speicherort im Dateisystem auf dem SQL Server-Computer installiert wurden.
+    Dieser Befehl entfernt Datenbankobjekte, die sich auf die Paketverwaltung beziehen, aus der angegebenen Datenbank. Außerdem werden alle Pakete entfernt, die aus dem gesicherten Dateisystem Speicherort auf dem SQL Server Computer installiert wurden.
 
-2. Wiederholen Sie diesen Befehl für jede Datenbank, für die paketverwaltung verwendet wurde.
+2. Wiederholen Sie diesen Befehl für jede Datenbank, in der die Paketverwaltung verwendet wurde.
 
-3.  (Optional) Nachdem alle Datenbanken der Pakete, die mit dem vorherigen Schritt gelöscht worden sind, führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus:
+3.  Optionale Nachdem alle Datenbanken mithilfe des vorherigen Schritts aus Paketen gelöscht wurden, führen Sie den folgenden Befehl an einer Eingabeaufforderung mit erhöhten Rechten aus:
 
     `RegisterRExt.exe /uninstall pkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    Dieser Befehl entfernt die paketverwaltungsfunktion aus der Instanz an. Sie müssen möglicherweise den Launchpad-Dienst, um Änderungen zu sehen, manuell neu zu starten.
+    Mit diesem Befehl wird das Paket Verwaltungs Feature aus der-Instanz entfernt. Möglicherweise müssen Sie den Launchpad-Dienst erneut manuell neu starten, um die Änderungen anzuzeigen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ [Verwenden von RevoScaleR zum Installieren neuer R-Pakete](use-revoscaler-to-manage-r-packages.md)
-+ [Tipps für die Installation von R-Pakete](packages-installed-in-user-libraries.md)
++ [Verwenden von revoscaler zum Installieren neuer R-Pakete](use-revoscaler-to-manage-r-packages.md)
++ [Tipps zum Installieren von R-Paketen](packages-installed-in-user-libraries.md)
 + [Standardpakete](../package-management/default-packages.md)

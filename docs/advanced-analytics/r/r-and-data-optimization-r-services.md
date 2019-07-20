@@ -1,187 +1,187 @@
 ---
-title: Leistungsoptimierung für die datenoptimierung – SQL Server Machine Learning Services
+title: Leistungsoptimierung für die Daten Optimierung
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c5e8d3daf32ff4df3326b854df72b782ef367f1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 265b64b32a5b27af4754cf5c7d36c74c161ed6ff
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962542"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345258"
 ---
-# <a name="performance-for-r-services---data-optimization"></a>Leistung von R Services - Data-Optimierung
+# <a name="performance-for-r-services---data-optimization"></a>Leistung für R Services-Daten Optimierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist der dritte einer Artikelreihe, die leistungsoptimierung für R-Dienste, die basierend auf zwei Fallstudien beschreibt. In diesem Artikel wird erläutert, eine leistungsoptimierung für R oder Python-Skripts, die in SQL Server ausgeführt. Darüber hinaus werden die Methoden, die Sie verwenden können, aktualisieren Sie Ihren R-Code sowohl zur Verbesserung der Leistung und zu bekannten Problemen vorbeugen beschrieben.
+Dieser Artikel ist der dritte in einer Reihe, in der die Leistungsoptimierung für R Services basierend auf zwei Fallstudien beschrieben wird. In diesem Artikel werden Leistungsoptimierungen für R-oder python-Skripts erläutert, die in SQL Server ausgeführt werden. Außerdem werden Methoden beschrieben, mit denen Sie Ihren R-Code aktualisieren können, um die Leistung zu steigern und bekannte Probleme zu vermeiden.
 
 ## <a name="choosing-a-compute-context"></a>Auswählen eines computekontexts
 
-In SQL Server 2016 und 2017 verwenden Sie entweder die **lokalen** oder **SQL** compute Context verwenden, wenn R oder Python-Skript ausführen.
+In SQL Server 2016 und 2017 können Sie beim Ausführen von R-oder python-Skripts entweder den **lokalen** oder den **SQL** -computekontext verwenden.
 
-Bei Verwendung der **lokalen** Compute Context wird die Analyse wird ausgeführt, auf dem Computer und nicht auf dem Server. Wenn Sie Daten aus SQL Server für die Verwendung in Ihrem Code angezeigt werden, müssen daher die Daten über das Netzwerk abgerufen werden. Die Leistungseinbußen für diesen Netzwerkübertragung hängen von der Größe der übertragenen Daten, dem Geschwindigkeit des Netzwerks und anderen Netzwerkübertragungen ab, die zur gleichen Zeit auftreten.
+Wenn Sie den **lokalen** computekontext verwenden, wird die Analyse auf dem Computer und nicht auf dem Server ausgeführt. Wenn Sie also Daten aus SQL Server abrufen, die Sie in Ihrem Code verwenden, müssen die Daten über das Netzwerk abgerufen werden. Die Leistungseinbußen für diesen Netzwerkübertragung hängen von der Größe der übertragenen Daten, dem Geschwindigkeit des Netzwerks und anderen Netzwerkübertragungen ab, die zur gleichen Zeit auftreten.
 
-Bei Verwendung der **SQL Server-computekontext**, der Code auf dem Server ausgeführt wird. Wenn Sie Daten aus SQL Server erhalten, die Daten lokal auf dem Server, der die Analyse ausgeführt werden sollen, und daher wird kein Netzwerkaufwand eingeführt. Wenn Sie Daten aus anderen Quellen importieren möchten, sollten Sie im Voraus Anordnen von ETL.
+Wenn Sie den **SQL Server computekontext**verwenden, wird der Code auf dem Server ausgeführt. Wenn Sie Daten aus SQL Server erhalten, sollten die Daten für den Server, auf dem die Analyse ausgeführt wird, lokal sein, und es wird kein Netzwerk Aufwand eingeführt. Wenn Sie Daten aus anderen Quellen importieren müssen, sollten Sie ggf. ETL anordnen.
 
 Bei der Arbeit mit großen Datenmengen sollten Sie immer den SQL Compute Context verwenden.
 
 ## <a name="factors"></a>Faktoren
 
-Die R-Sprache wurde das Konzept der *Faktoren*, die spezielle Variable für kategorische Daten sind. Datenanalysten häufig faktorvariablen in der Formel verwenden, da kategorische Variablen als Faktoren Behandlung die Daten wird sichergestellt, dass ordnungsgemäß vom Machine Learning-Funktionen verarbeitet wird. Weitere Informationen finden Sie unter [R für Anfänger: Faktorvariablen](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+Die Sprache R weist das Konzept der *Faktoren*auf, bei denen es sich um spezielle Variablen für kategorische Daten handelt. Datenanalysten verwenden in Ihrer Formel häufig Faktor Variablen, da durch die Handhabung von kategorischen Variablen als Faktoren sichergestellt wird, dass die Daten von Machine Learning-Funktionen ordnungsgemäß verarbeitet werden. Weitere Informationen finden [Sie unter R für Dummies: Faktor Variablen](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
-Standardmäßig können faktorvariablen in ganze Zahlen "und" zurück, für das Speichern oder Verarbeiten von Zeichenfolgen konvertiert werden. Die R `data.frame` Funktion als faktorvariablen, alle Zeichenfolgen behandelt, es sei denn, das Argument *StringsAsFactors* nastaven NA hodnotu **"false"** . Das bedeutet, dass Zeichenfolgen, automatisch sind in eine ganze Zahl für die Verarbeitung konvertiert, und dann wieder die ursprüngliche Zeichenfolge zugeordnet.
+In der Entwurfszeit können Faktor Variablen für die Speicherung oder Verarbeitung von Zeichen folgen in ganze Zahlen und wieder zurück konvertiert werden. Die R `data.frame` -Funktion verarbeitet alle Zeichen folgen als Faktor Variablen, es sei denn, das *stringsasfactors* -Argument ist auf **false**festgelegt. Dies bedeutet, dass Zeichen folgen für die Verarbeitung automatisch in eine ganze Zahl konvertiert und dann der ursprünglichen Zeichenfolge wieder zugeordnet werden.
 
-Wenn die Quelldaten für Faktoren vor, als ganze Zahl gespeichert ist, kann Leistung beeinträchtigt, da es sich bei R die Faktor ganzen Zahlen in Zeichenfolgen konvertiert, zur Laufzeit, und führt dann eine eigene interne Konvertierung der Zeichenfolge zur ganzen Zahl.
+Wenn die Quelldaten für Faktoren als ganze Zahl gespeichert werden, kann die Leistung beeinträchtigt werden, da R die Faktor Integerzahlen zur Laufzeit in Zeichen folgen konvertiert und dann eine eigene interne Konvertierung von Zeichen folgen zu ganzzahligen Zeichen folgen ausführt.
 
-Um solche Konvertierungen zur Laufzeit zu vermeiden, können Sie die Werte als ganze Zahlen in der SQL Server-Tabelle zu speichern und mithilfe der _ColInfo_ Argument zum Angeben der Ebenen für die Spalte als Faktor verwendet. Die meisten von Datenquellenobjekten in RevoScaleR übernehmen Sie den Parameter _ColInfo_. Sie können diesen Parameter verwenden, zum Benennen von Variablen, die von der Datenquelle verwendet, geben Sie ihre und definieren die Variablen Ebenen oder Transformationen auf die Werte der Spalte.
+Um derartige Lauf Zeit Konvertierungen zu vermeiden, sollten Sie die Werte als ganze Zahlen in der SQL Server Tabelle speichern und das _COLINFO_ -Argument verwenden, um die Ebenen für die Spalte anzugeben, die als Faktor verwendet wird. Die meisten Datenquellen Objekte in revoscaler nehmen den Parameter _COLINFO_an. Verwenden Sie diesen Parameter, um die von der Datenquelle verwendeten Variablen zu benennen, ihren Typ anzugeben und die Variablen Ebenen oder Transformationen für die Spaltenwerte zu definieren.
 
-Z. B. der folgende Aufruf der R-Funktion ruft die ganzen Zahlen 1, 2 und 3 aus einer Tabelle, jedoch ordnet die Werte in einen Faktor mit "Apple", "Orange" und "Banane".
+Beispielsweise ruft der folgende R-Funktionsaufrufe die ganzen Zahlen 1, 2 und 3 aus einer Tabelle ab, ordnet die Werte jedoch einem Faktor mit den Ebenen "Apple", "Orange" und "Banane" zu.
 
 ```R
 c("fruit" = c(type = "factor", levels=as.character(c(1:3)), newLevels=c("apple", "orange", "banana")))
 ```
 
-Wenn die Quellspalte Zeichenfolgen enthält, es ist immer mehr effizienten zum Angeben der Ebenen vor der Nutzung der _ColInfo_ Parameter. Die folgende R-Code behandelt z. B. die Zeichenfolgen als Faktoren, wie sie gelesen werden.
+Wenn die Quell Spalte Zeichen folgen enthält, ist es immer effizienter, die Ebenen vorab mithilfe des _COLINFO_ -Parameters anzugeben. Der folgende R-Code behandelt z. b. die Zeichen folgen als Faktoren, während Sie gelesen werden.
 
 ```R
 c("fruit" = c(type = "factor", levels= c("apple", "orange", "banana")))
 ```
 
-Ist kein semantischer Unterschied bei der modellgenerierung, kann der zweite Ansatz zu verbesserter Leistung führen.
+Wenn die Modell Generierung keinen semantischen Unterschied hat, kann der letztere Ansatz zu einer besseren Leistung führen.
 
-## <a name="data-transformations"></a>Datentransformationen
+## <a name="data-transformations"></a>Daten Transformationen
 
-Datenanalysten verwenden häufig Transformationsfunktionen, die als Teil der Analyse in R geschrieben werden. Die Transformationsfunktion gilt für jede Zeile aus der Tabelle abgerufen. In SQL Server werden diese Transformationen angewendet, auf alle Zeilen abgerufen, die in einem Batch, der Kommunikation zwischen R-Interpreter und die Engine für Datenanalyse erforderlich ist. Zum Ausführen der Umwandlungen werden die Daten von SQL an die Datenanalyse-Engine und dann an den Prozess der R-Interpreter verschoben und zurück.
+Datenanalysten verwenden häufig Transformationsfunktionen, die als Teil der Analyse in R geschrieben werden. Die Transformations Funktion wird auf jede Zeile angewendet, die aus der Tabelle abgerufen wird. In SQL Server werden solche Transformationen auf alle in einem Batch abgerufenen Zeilen angewendet, für die eine Kommunikation zwischen dem R-Interpreter und der Analyse-Engine erforderlich ist. Zum Ausführen der Umwandlungen werden die Daten von SQL an die Datenanalyse-Engine und dann an den Prozess der R-Interpreter verschoben und zurück.
 
-Aus diesem Grund kann mithilfe von Transformationen als Teil des R-Codes eine erhebliche negative Auswirkung auf die Leistung des Algorithmus, abhängig von der Menge der betroffenen Daten haben.
+Aus diesem Grund kann die Verwendung von Transformationen als Teil des R-Codes eine erhebliche negative Auswirkung auf die Leistung des Algorithmus haben, abhängig von der Menge der beteiligten Daten.
 
-Es ist effizienter, alle erforderliche Spalten in der Tabelle oder Sicht, bevor die Analyse durchgeführt haben, und vermeiden Transformationen während der Berechnung. Wenn es nicht möglich ist, zusätzliche Spalten zu vorhandenen Tabellen hinzuzufügen, können Sie eine andere Tabelle oder Ansicht mit den transformierten Spalten erstellen und eine entsprechende Abfrage zum Abrufen der Daten verwenden.
+Es ist effizienter, alle notwendigen Spalten in der Tabelle oder Sicht vor dem Ausführen von Analysen zu haben und Transformationen während der Berechnung zu vermeiden. Wenn es nicht möglich ist, zusätzliche Spalten zu vorhandenen Tabellen hinzuzufügen, können Sie eine andere Tabelle oder Ansicht mit den transformierten Spalten erstellen und eine entsprechende Abfrage zum Abrufen der Daten verwenden.
 
-## <a name="batch-row-reads"></a>Batch-Zeile liest.
+## <a name="batch-row-reads"></a>Zeilen Lesevorgänge in Batch
 
-Bei Verwendung eine SQL Server-Datenquelle (`RxSqlServerData`) in Ihrem Code empfiehlt es sich, dass Sie versuchen, mithilfe des Parameters _RowsPerRead_ Batchgröße angeben. Dieser Parameter definiert die Anzahl der Zeilen, die abgefragt werden, und klicken Sie dann zur Verarbeitung an den externen Skript gesendet. Zur Laufzeit wird der Algorithmus nur die angegebene Anzahl von Zeilen in jedem Batch an.
+Wenn Sie im Code eine SQL Server Datenquelle`RxSqlServerData`() verwenden, wird empfohlen, dass Sie versuchen, die Batch Größe mit dem Parameter _rowsperread_ anzugeben. Dieser Parameter definiert die Anzahl der Zeilen, die abgefragt und dann zur Verarbeitung an das externe Skript gesendet werden. Zur Laufzeit sieht der Algorithmus nur die angegebene Anzahl von Zeilen in jedem Batch.
 
-Die Möglichkeit, die Menge der Daten zu steuern, die gleichzeitig verarbeitet werden können Sie zu lösen oder Probleme zu vermeiden. Wenn Ihre Eingabe-Dataset sehr breit ist z. B. (hat viele Spalten), oder wenn der Dataset wenigen große Spalten (z. B. Freitext) verfügt, können Sie reduzieren die Batchgröße, um Paging von Daten aus dem Arbeitsspeicher zu vermeiden.
+Die Möglichkeit, die Menge der Daten zu steuern, die gleichzeitig verarbeitet werden, kann Ihnen helfen, Probleme zu lösen oder zu vermeiden. Wenn das Eingabe DataSet z. b. sehr breit ist (viele Spalten aufweist) oder wenn das DataSet über einige große Spalten (z. b. den freien Text) verfügt, können Sie die Batch Größe verringern, um zu vermeiden, dass Auslagerungs Daten aus dem Arbeitsspeicher entfernt werden.
 
-Standardmäßig ist der Wert dieses Parameters auf 50000 festgelegt, um sicherzustellen, dass zufriedenstellende Leistung auch auf Computern mit wenig Arbeitsspeicher. Wenn der Server über genügend Speicherplatz verfügt, kann eine bessere Leistung, insbesondere bei großen Tabellen durch Erhöhen dieses Wertes auf 500.000 oder selbst auf eine Million erzielt werden.
+Standardmäßig ist der Wert dieses Parameters auf 50000 festgelegt, um eine angemessene Leistung zu gewährleisten, auch auf Computern mit wenig Arbeitsspeicher. Wenn der Server über genügend Arbeitsspeicher verfügt, kann die Erhöhung dieses Werts auf 500.000 oder sogar auf eine Million zu einer besseren Leistung führen, insbesondere bei großen Tabellen.
 
-Die Vorteile der höhere Batchgröße werden offensichtlich auf einem großen Dataset und in eine Aufgabe, die auf mehrere Prozesse ausgeführt werden kann. Allerdings ist durch Erhöhen dieses Wertes nicht immer die besten Ergebnisse erzielen. Es wird empfohlen, dass Sie sich mit Ihren Daten und den Algorithmus, um den optimalen Wert zu experimentieren.
+Die Vorteile der Vergrößerung der Batch Größe werden bei einem großen Dataset und in einer Aufgabe, die in mehreren Prozessen ausgeführt werden kann, deutlich. Wenn Sie diesen Wert erhöhen, erzielen Sie jedoch nicht immer die besten Ergebnisse. Es wird empfohlen, dass Sie mit Ihren Daten und dem Algorithmus experimentieren, um den optimalen Wert zu ermitteln.
 
-## <a name="parallel-processing"></a>parallele Verarbeitung
+## <a name="parallel-processing"></a>Parallele Verarbeitung
 
-Zur Verbesserung der Leistung von **Rx** Analysefunktionen, Sie können die Fähigkeit von SQL Server zum Ausführen von Tasks gleichzeitig mit der verfügbaren Kerne auf dem Servercomputer nutzen.
+Um die Leistung von **RX** -analytischen Funktionen zu verbessern, können Sie die Möglichkeit SQL Server, Aufgaben parallel mithilfe der verfügbaren Kerne auf dem Server Computer auszuführen.
 
-Es gibt zwei Möglichkeiten zum Erreichen der Parallelisierung mit R in SQL Server:
+Es gibt zwei Möglichkeiten, die Parallelisierung mit R in SQL Server zu erreichen:
 
--   **Verwendung \@parallel.** Bei Verwendung der `sp_execute_external_script` gespeicherten Prozedur zur Ausführung eines R-Skripts legen Sie den `@parallel`-Parameter auf `1` fest. Dies ist die beste Methode, wenn Ihr R-Skript ist **nicht** verwenden der RevoScaleR-Funktionen, die andere Mechanismen für die Verarbeitung aufweisen. Wenn Ihr Skript RevoScaleR-Funktionen, die (in der Regel mit dem Präfix "Rx") verwendet, paralleler Verarbeitung wird automatisch ausgeführt, und Sie nicht explizit festgelegt müssen `@parallel` zu `1`.
+-   **Verwenden \@Sie parallel.** Bei Verwendung der `sp_execute_external_script` gespeicherten Prozedur zur Ausführung eines R-Skripts legen Sie den `@parallel`-Parameter auf `1` fest. Dies ist die beste Methode, wenn Ihr R-Skript **keine** revoscaler-Funktionen verwendet, die andere Mechanismen für die Verarbeitung aufweisen. Wenn Ihr Skript revoscaler-Funktionen verwendet (in der Regel als "RX" mit dem Präfix "RX"), wird die parallele Verarbeitung automatisch `@parallel` ausgeführt `1`, und Sie müssen nicht explizit auf festlegen.
 
-    Wenn das R-Skript parallelisiert werden kann, und die SQL-Abfrage parallelisiert werden kann, wird die Datenbank-Engine mehrere parallele Prozesse erstellt. Die maximale Anzahl von Prozessen, die erstellt werden können, ist gleich der **Max. Grad an Parallelität** (MAXDOP) die Einstellung für die Instanz. Alle Prozesse klicken Sie dann das gleiche Skript ausführen, erhalten aber nur einen Teil der Daten.
+    Wenn das R-Skript parallelisiert werden kann, und wenn die SQL-Abfrage parallelisiert werden kann, erstellt die Datenbank-Engine mehrere parallele Prozesse. Die maximale Anzahl von Prozessen, die erstellt werden können, entspricht der Einstellung **Max. Grad an Parallelität** (MAXDOP) für die-Instanz. Alle Prozesse führen dann dasselbe Skript aus, empfangen aber nur einen Teil der Daten.
     
-    Diese Methode ist daher nicht nützlich für Skripts, die alle Daten, z. B. wenn sehen, müssen das Trainieren eines Modells. Es ist jedoch nützlich, wenn Tasks wie die Batchvorhersage parallel ausgeführt werden. Weitere Informationen zur Verwendung von Parallelität mit `sp_execute_external_script`, finden Sie unter der **Tipps für Fortgeschrittene: parallele Verarbeitung** Teil [mithilfe von R-Code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
+    Daher ist diese Methode für Skripts, die alle Daten anzeigen müssen, z. b. beim Trainieren eines Modells, nicht nützlich. Es ist jedoch nützlich, wenn Tasks wie die Batchvorhersage parallel ausgeführt werden. Weitere Informationen zur Verwendung von Parallelität mit `sp_execute_external_script`finden Sie im Abschnitt **Erweiterte Tipps: parallele Verarbeitung** der [Verwendung von R-Code in Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
 
--   **Verwenden Sie NumTasks = 1.** Bei Verwendung **Rx** Funktionen in einem SQL Server-rechenkontext, legen Sie den Wert, der die _NumTasks_ Parameter, um die Anzahl der Prozesse, die Sie erstellen möchten. Die Anzahl der erstellten Prozesse kann nie mehr als **MAXDOP**jedoch die tatsächliche Anzahl der erstellten Prozesse richtet sich nach der Datenbank-Engine und kleiner als Sie angefordert werden.
+-   **Verwenden Sie "numtasks = 1".** Wenn Sie **RX** -Funktionen in einem SQL Server computekontext verwenden, legen Sie den Wert des _numtasks_ -Parameters auf die Anzahl der Prozesse fest, die Sie erstellen möchten. Die Anzahl der erstellten Prozesse darf nicht größer sein als **MAXDOP**. die tatsächliche Anzahl der erstellten Prozesse wird jedoch von der Datenbank-Engine bestimmt und ist möglicherweise kleiner als Sie angefordert haben.
 
-    Wenn das R-Skript parallelisiert werden kann, und die SQL-Abfrage parallelisiert werden kann, erstellt SQL Server mehrere parallele Prozesse, wenn die Rx-Funktionen ausgeführt. Die tatsächliche Anzahl der Prozesse, die erstellt werden, hängt von einer Vielzahl von Faktoren wie z.B. Ressourcenkontrolle, aktuelle Verwendung von Ressourcen, andere Sitzungen und der Abfrageausführungsplan für die Abfrage, die mit R-Skript verwendet ab.
+    Wenn das R-Skript parallelisiert werden kann, und wenn die SQL-Abfrage parallelisiert werden kann, erstellt SQL Server beim Ausführen der RX-Funktionen mehrere parallele Prozesse. Die tatsächliche Anzahl von Prozessen, die erstellt werden, hängt von einer Vielzahl von Faktoren ab, z. b. der Ressourcenkontrolle, der aktuellen Verwendung von Ressourcen, anderen Sitzungen und dem Abfrage Ausführungsplan für die Abfrage, die mit dem R-Skript verwendet wird.
 
-## <a name="query-parallelization"></a>Parallelisierung von Abfragen
+## <a name="query-parallelization"></a>Abfrage Parallelisierung
 
-In Microsoft R können Sie mit SQL Server-Datenquellen arbeiten, indem Sie Ihre Daten als ein RxSqlServerData-Datenquellenobjekt definieren.
+In Microsoft R können Sie mit SQL Server Datenquellen arbeiten, indem Sie die Daten als rxsqlserverdata-Datenquellen Objekt definieren.
 
-Erstellt eine Datenquelle basierend auf eine gesamte Tabelle oder Sicht:
+Erstellt eine Datenquelle auf der Grundlage einer gesamten Tabelle oder Sicht:
 
 ```R
 RxSqlServerData(table= "airline", connectionString = sqlConnString)
 ```
 
-Erstellt eine Datenquelle basierend auf einer SQL-Abfrage:
+Erstellt eine Datenquelle auf der Grundlage einer SQL-Abfrage:
 
 ```R
 RxSqlServerData(sqlQuery= "SELECT [ArrDelay],[CRSDepTime],[DayOfWeek] FROM  airlineWithIndex WHERE rowNum <= 100000", connectionString = sqlConnString)
 ```
 
 > [!NOTE]
-> Wenn eine Tabelle in der Datenquelle anstatt einer Abfrage angegeben ist, verwendet R Services interner Heuristik, um die bestimmt, welche Spalten aus der Tabelle abrufen; Dieser Ansatz ist jedoch wahrscheinlich nicht in einer parallelen Ausführung führen.
+> Wenn eine Tabelle in der Datenquelle anstelle einer Abfrage angegeben wird, verwendet R Services interne Heuristik, um die erforderlichen Spalten zum Abrufen aus der Tabelle zu ermitteln. Dieser Ansatz führt jedoch wahrscheinlich nicht zu einer parallelen Ausführung.
 
-Um sicherzustellen, dass die Daten parallel analysiert werden können, sollte die Abfrage zum Abrufen der Daten so eingeschlossen werden, dass die Datenbank-Engine einen parallelen Abfrageplan erstellen kann. Wenn der Code oder Algorithmus große Mengen von Daten verwendet wird, stellen sicher, dass die Abfrage übergeben, um `RxSqlServerData` ist für die parallele Ausführung optimiert. Eine Abfrage, die nicht zu einem parallelen Ausführungsplan führt, kann zu einem einzelnen Prozess für die Berechnung führen.
+Um sicherzustellen, dass die Daten parallel analysiert werden können, sollte die Abfrage, die zum Abrufen der Daten verwendet wird, so eingeschlossen werden, dass die Datenbank-Engine einen parallelen Abfrageplan erstellen kann. Wenn der Code oder Algorithmus große Datenmengen verwendet, stellen Sie sicher, dass die Abfrage, `RxSqlServerData` die an übergeben wird, für die parallele Ausführung optimiert ist. Eine Abfrage, die nicht zu einem parallelen Ausführungsplan führt, kann zu einem einzelnen Prozess für die Berechnung führen.
 
-Wenn Sie mit großen Datasets arbeiten müssen, verwenden Sie Management Studio oder eine andere SQL Query Analyzer vor dem Ausführen von R-Code, um den Ausführungsplan zu analysieren. Anschließend werden Sie alle empfohlenen Schritte zur Verbesserung der Leistung der Abfrage. Ein fehlender Index für eine Tabelle kann z.B. die Zeit zum Ausführen einer Abfrage beeinträchtigen. Weitere Informationen finden Sie unter [überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md).
+Wenn Sie mit großen Datasets arbeiten müssen, verwenden Sie Management Studio oder einen anderen SQL Query Analyzer, bevor Sie den R-Code ausführen, um den Ausführungsplan zu analysieren. Führen Sie dann die empfohlenen Schritte aus, um die Leistung der Abfrage zu verbessern. Ein fehlender Index für eine Tabelle kann z.B. die Zeit zum Ausführen einer Abfrage beeinträchtigen. Weitere Informationen finden Sie unter [überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
-Ein häufiger Fehler, der die Leistung auswirken kann, ist, dass eine Abfrage mehr Spalten als erforderlich sind, abruft. Z. B. wenn eine Formel darauf, dass nur die drei Spalten basiert, aber Ihre Quelltabelle über 30 Spalten verfügt, verschieben Sie Daten unnötigerweise.
+Ein weiterer häufiger Fehler, der sich auf die Leistung auswirken kann, besteht darin, dass eine Abfrage mehr Spalten als erforderlich abruft. Wenn eine Formel z. b. auf nur drei Spalten basiert, die Quell Tabelle jedoch 30 Spalten enthält, verschieben Sie die Daten unnötig.
 
- + Verwenden Sie `SELECT *`!
- + Dauern Sie überprüfen die Spalten im Dataset, und identifizieren Sie nur die für die Analyse benötigt einige Zeit
- + Entfernen Sie aus Ihrer Abfragen alle Spalten mit Datentypen, die mit R-Code, z. B. GUIDS und Rowguids nicht kompatibel sind
- + Überprüfung auf nicht unterstützten Datums- und Zeitformate
- + Anstatt eine Tabelle zu laden, erstellen Sie eine Ansicht, die bestimmte Werte aktiviert bzw. deaktiviert das wandelt Spalten, um Fehler bei der Konvertierung zu vermeiden.
+ + Vermeiden Sie `SELECT *`die Verwendung!
+ + Nehmen Sie sich etwas Zeit, um die Spalten im DataSet zu überprüfen und nur die für die Analyse benötigten Elemente zu identifizieren.
+ + Entfernen Sie aus den Abfragen alle Spalten, die Datentypen enthalten, die mit R-Code nicht kompatibel sind, z. b. GUIDs und ROWGUIDS.
+ + Auf nicht unterstützte Datums-und Uhrzeit Formate überprüfen
+ + Anstatt eine Tabelle zu laden, erstellen Sie eine Sicht, mit der bestimmte Werte ausgewählt oder Spalten umgewandelt werden, um Konvertierungs Fehler zu vermeiden.
 
-## <a name="optimizing-the-machine-learning-algorithm"></a>Optimieren von Machine Learning-Algorithmus
+## <a name="optimizing-the-machine-learning-algorithm"></a>Optimieren des Machine Learning-Algorithmus
 
-Dieser Abschnitt enthält verschiedene Tipps und Ressourcen, die für RevoScaleR und anderen Optionen in Microsoft R. spezifisch sind
+Dieser Abschnitt enthält verschiedene Tipps und Ressourcen, die für revoscaler und andere Optionen in Microsoft R spezifisch sind.
 
 > [!TIP]
-> Eine allgemeine Erörterung der R-Optimierung ist nicht Gegenstand dieses Artikels. Jedoch wenn Sie Ihren Code schneller zu treffen müssen, sollten beliebten Artikel [The R Inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf). Er umfasst Konstrukte der Programmierung in R und häufigen Problemen in anschaulichen Sprache und die Details und bietet viele spezifische Beispiele von R Programmierverfahren.
+> Eine allgemeine Erläuterung der R-Optimierung ist der Rahmen dieses Artikels. Wenn Sie Ihren Code jedoch schneller machen müssen, empfiehlt es sich, den gängigen Artikel, [R-Inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf), zu erhalten. Es behandelt Programmierkonstrukte in R und häufige Fehler in anschaulicher Sprache und Detail und bietet viele spezifische Beispiele für r-Programmiertechniken.
 
-### <a name="optimizations-for-revoscaler"></a>Optimierungen für RevoScaleR
+### <a name="optimizations-for-revoscaler"></a>Optimierungen für revoscaler
 
-Relativ viele Algorithmen für RevoScaleR unterstützt Parameter, um zu steuern, wie das trainierte Modell generiert wird. Während die Genauigkeit und Richtigkeit des Modells wichtig ist, kann die Leistung des Algorithmus gleichermaßen wichtig sein. Um das richtige Gleichgewicht zwischen der Genauigkeit und Zeit für das Training zu erhalten, können Sie Parameter zum Erhöhen der Geschwindigkeit, der Berechnung und in vielen Fällen Verbessern der Leistung ohne Reduzierung der Genauigkeit oder die Richtigkeit ändern.
+Viele revoscaler-Algorithmen unterstützen Parameter, um zu steuern, wie das trainierte Modell generiert wird. Obwohl die Genauigkeit und Richtigkeit des Modells wichtig ist, ist die Leistung des Algorithmus möglicherweise ebenso wichtig. Um das richtige Gleichgewicht zwischen der Genauigkeit und der Trainingszeit zu erzielen, können Sie Parameter ändern, um die Geschwindigkeit der Berechnung zu erhöhen, und in vielen Fällen die Leistung verbessern, ohne die Genauigkeit oder Richtigkeit zu verringern.
 
 + [rxDTree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
 
-    `rxDTree` unterstützt die `maxDepth` -Parameter, der die Tiefe der Entscheidungsstruktur steuert. Als `maxDepth` wird erhöht, die Leistung kann beeinträchtigt, daher es wichtig ist, um die Vorteile der Strukturtiefe im Vergleich zu beeinträchtigt die Leistung zu analysieren.
+    `rxDTree`unterstützt `maxDepth` den-Parameter, der die Tiefe der Entscheidungsstruktur steuert. Da `maxDepth` sich die Leistung erhöht, kann die Leistung beeinträchtigt werden. Daher ist es wichtig, die Vorteile der Erhöhung der Tiefe und der Leistungs Verletzung zu analysieren.
 
-    Sie können auch steuern das Gleichgewicht zwischen der Zeit Zeitkomplexität und vorhersagegenauigkeit durch Anpassen von Parametern wie z. B. `maxNumBins`, `maxDepth`, `maxComplete`, und `maxSurrogate`. Das Erhöhen der Tiefe auf mehr als 10 oder 15 kann die Berechnung sehr teuer machen.
+    Sie können auch das Gleichgewicht Zwischenzeit Komplexität und `maxNumBins`Vorhersagegenauigkeit steuern, indem Sie Parameter wie, `maxDepth`, `maxSurrogate` `maxComplete`und anpassen. Das Erhöhen der Tiefe auf mehr als 10 oder 15 kann die Berechnung sehr teuer machen.
 
 + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
 
-    Versuchen Sie es mit der `cube` Argument, wenn die erste abhängige Variable in der Formel eine faktorvariable ist.
+    Verwenden Sie das `cube` -Argument, wenn die erste abhängige Variable in der Formel eine Faktor Variable ist.
     
-    Wenn `cube` nastaven NA hodnotu `TRUE`, die Regression erfolgt mithilfe einer partitionierten Inverse, in denen möglicherweise schneller ausgeführt und belegen weniger Speicherplatz als standardregression. Wenn die Formel über eine große Anzahl von Variablen verfügt, kann die Leistungssteigerung erheblich sein.
+    Wenn `cube` auf`TRUE`festgelegt ist, wird die Regression mithilfe einer partitionierten Umkehrung durchgeführt, die möglicherweise schneller ist und weniger Arbeitsspeicher beansprucht, als die Berechnung der Standard Regression. Wenn die Formel über eine große Anzahl von Variablen verfügt, kann die Leistungssteigerung erheblich sein.
 
 + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
 
-    Verwenden der `cube` Argument, wenn die erste abhängige Variable über eine faktorvariable ist.
+    Verwenden Sie `cube` das-Argument, wenn die erste abhängige Variable eine Faktor Variable ist.
     
-    Wenn `cube` nastaven NA hodnotu `TRUE`, verwendet der Algorithmus eine partitionierte Inverse, in denen möglicherweise schneller ausgeführt und belegen weniger Speicher. Wenn die Formel über eine große Anzahl von Variablen verfügt, kann die Leistungssteigerung erheblich sein.
+    Wenn `cube` auf`TRUE`festgelegt ist, verwendet der Algorithmus eine partitionierte Umkehrung, die möglicherweise schneller ist und weniger Arbeitsspeicher beansprucht. Wenn die Formel über eine große Anzahl von Variablen verfügt, kann die Leistungssteigerung erheblich sein.
 
-Weitere Anleitungen zur Optimierung von RevoScaleR finden Sie in diesen Artikeln:
+Weitere Anleitungen zur Optimierung von revoscaler finden Sie in den folgenden Artikeln:
 
-+ Support-Artikel: [Feineinstellungsoptionen für RxDForest- rxdtree](https://support.microsoft.com/kb/3104235)
++ Support Artikel: [Optionen für die Leistungsoptimierung für rxdforest und rxdtree](https://support.microsoft.com/kb/3104235)
 
-+ Methoden zum Steuern des Modells in einem boosted Tree-Modell passen: [Schätzen die Modelle mit Stochastic Gradient Boosting](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
++ Methoden zum Steuern der Modellanpassung in ein verstärktem Strukturmodell: [Schätzen von Modellen mit Stochastic Gradient-Verstärkung](https://docs.microsoft.com/r-server/r/how-to-revoscaler-boosting)
 
-+ Übersicht über das RevoScaleR verschiebt und verarbeitet Daten: [Schreiben Sie benutzerdefinierte Algorithmen, die Aufteilung in ScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
++ Übersicht über die Verschiebung und Verarbeitung von Daten durch revoscaler: [Schreiben von benutzerdefinierten Segmentierungsalgorithmen in Scaler](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
 
-+ Programmiermodell für RevoScaleR: [Verwalten von Threads in RevoScaleR](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
++ Programmiermodell für revoscaler: [Verwalten von Threads in revoscaler](https://docs.microsoft.com/r-server/r/how-to-developer-manage-threads)
 
-+ Funktionsreferenz für [RxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
++ Funktionsreferenz für [rxdforest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-+ Funktionsreferenz für [RxBTrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
++ Funktionsreferenz für [rxbtrees](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxbtrees)
 
-### <a name="use-microsoftml"></a>Verwenden des MicrosoftML
+### <a name="use-microsoftml"></a>Verwenden von microsoftml
 
-Zudem wird empfohlen, dass Sie in das neue Aussehen **MicrosoftML** -Paket, das skalierbare Machine Learning-Algorithmen bereitstellt, mit dem die computekontexte und Transformationen von RevoScaleR bereitgestellt verwenden können.
+Außerdem wird empfohlen, dass Sie sich das neue **microsoftml** -Paket ansehen, das skalierbare Machine Learning-Algorithmen bereitstellt, die die computekontexte und Transformationen verwenden können, die von revoscaler bereitgestellt werden.
 
-+ [Erste Schritte mit MicrosoftML](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
++ [Einstieg in microsoftml](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
-+ [Gewusst wie: auswählen ein Algorithmus MicrosoftML](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
++ [Auswählen eines microsoftml-Algorithmus](https://docs.microsoft.com/r-server/r/how-to-choose-microsoftml-algorithms-cheatsheet)
 
-### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Operationalisieren einer Lösung mit Microsoft R Server
+### <a name="operationalize-a-solution-using-microsoft-r-server"></a>Operationalisieren einer Lösung mithilfe von Microsoft R Server
 
-Wenn Ihr Szenario umfasst schnelle Vorhersagen mithilfe eines gespeicherten Modells oder Machine Learning in einer Anwendung integrieren, Sie können die [operationalisierung](https://docs.microsoft.com/r-server/what-is-operationalization) Funktionen in Microsoft R Server (ehemals DeployR).
+Wenn Ihr Szenario eine schnelle Vorhersage mithilfe eines gespeicherten Modells oder das Integrieren von Machine Learning in eine Anwendung umfasst, können Sie die [operationalisierungsfunktionen](https://docs.microsoft.com/r-server/what-is-operationalization) in Microsoft R Server (ehemals deployr) verwenden.
 
-+ Als eine **Data scientists**, verwenden Sie die [Mrsdeploy-Paket](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) zum Freigeben von R-Code mit anderen Computern aus, und integrieren R-Analysen in Anwendungen für Web-, Desktop-, Mobile und Dashboards: [Veröffentlichen und Verwalten von R-Webdiensten in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
++ Verwenden Sie als **Daten**Analysten das mrsbereitstellungs- [Paket](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package) , um r-Code für andere Computer freizugeben, und integrieren Sie r Analytics in Web-, Desktop-, Mobile und dashboardanwendungen: [Veröffentlichen und Verwalten von R-Webdiensten in R Server](https://docs.microsoft.com/r-server/operationalize/how-to-deploy-web-service-publish-manage-in-r)
 
-+ Als ein **Administrator**, erfahren Sie, wie Sie Pakete verwalten, überwachen Sie Web-Knoten und compute-Knoten und Steuern der Sicherheit für R-Aufträge: [Wie interagieren, und Nutzen von Webdiensten in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
++ Als **Administrator**erfahren Sie, wie Sie Pakete verwalten, webknoten und Computeknoten überwachen und die Sicherheit für R-Aufträge Steuern: [Interagieren mit und Verwenden von Webdiensten in R](https://docs.microsoft.com/r-server/operationalize/how-to-consume-web-service-interact-in-r)
 
-## <a name="articles-in-this-series"></a>Artikel in dieser Serie
+## <a name="articles-in-this-series"></a>Artikel in dieser Reihe
 
-[Leistung optimieren, die für R – Einführung](sql-server-r-services-performance-tuning.md)
+[Leistungsoptimierung für R-Einführung](sql-server-r-services-performance-tuning.md)
 
-[Leistungsoptimierung für R – SQL Server-Konfiguration](sql-server-configuration-r-services.md)
+[Leistungsoptimierung für R-SQL Server-Konfiguration](sql-server-configuration-r-services.md)
 
-[Leistungsoptimierung für R – R-Code und Daten-Optimierung](r-and-data-optimization-r-services.md)
+[Leistungsoptimierung für r-r-Code und Daten Optimierung](r-and-data-optimization-r-services.md)
 
-[Leistungsoptimierung - Fallstudie Ergebnisse](performance-case-study-r-services.md)
+[Leistungsoptimierung: Ergebnisse der Fallstudie](performance-case-study-r-services.md)
