@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984754"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -59,7 +58,7 @@ SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktiona
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integrieren die für die statistische Analyse verwendete Programmiersprache R in SQL Server. 
 - Der neue **Datenbankkonsistenzprüfung (Database Consistency Checker, DBCC)** wird intern ausgeführt, um potenzielle Probleme durch Datenbeschädigung zu erkennen.
 - Die **direkte Abfrage**, die externe Daten live abfragt, anstatt sie vorher zu importieren, unterstützt jetzt weitere Datenquellen einschließlich Azure SQL, Oracle und Teradata. 
-- Es gibt eine Vielzahl neuer **DAX-Funktionen (Data Access Expressions)**.
+- Es gibt eine Vielzahl neuer **DAX-Funktionen (Data Access Expressions)** .
 - Der neue Namespace **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
 

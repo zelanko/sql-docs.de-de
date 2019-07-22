@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02860ad96192b9f67820381d34f9dc05c6fb54db
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d33471982d291ba1f57d7d3d64a918cec1cc5e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067495"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -217,7 +216,7 @@ RETURNS return_data_type
   
  Eine Funktion kann maximal 2.100 Parameter haben. Der Benutzer muss beim Ausführen einer Funktion den Wert jedes deklarierten Parameters angeben (sofern kein Standardwert für den betreffenden Parameter definiert ist).  
   
- Geben Sie einen Parameternamen an, der mit dem Zeichen (**@**) beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Funktion. Dieselben Parameternamen können in anderen Funktionen verwendet werden. Parameter können nur den Platz von Konstanten einnehmen. Sie können nicht anstelle von Tabellennamen, Spaltennamen oder Namen anderer Datenbankobjekte verwendet werden.  
+ Geben Sie einen Parameternamen an, der mit dem Zeichen ( **@** ) beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Funktion. Dieselben Parameternamen können in anderen Funktionen verwendet werden. Parameter können nur den Platz von Konstanten einnehmen. Sie können nicht anstelle von Tabellennamen, Spaltennamen oder Namen anderer Datenbankobjekte verwendet werden.  
   
 > [!NOTE]  
 >  ANSI_WARNINGS wird beim Übergeben von Parametern in einer gespeicherten Prozedur oder einer benutzerdefinierten Funktion oder beim Deklarieren und Festlegen von Variablen in einer Batchanweisung nicht berücksichtigt. Wird beispielsweise eine Variable als **char(3)** definiert und dann auf einen Wert festgelegt, der länger als drei Zeichen ist, werden die Daten auf die definierte Größe abgeschnitten, und die Anweisung INSERT oder UPDATE wird erfolgreich ausgeführt.  
@@ -233,7 +232,7 @@ RETURNS return_data_type
   
 -   Das **dbo** -Schema in der aktuellen Datenbank  
   
- [ **=**_default_ ]  
+ [ **=** _default_ ]  
  Ein Standardwert für den Parameter. Wenn ein *default*-Wert definiert ist, kann die Funktion ausgeführt werden, ohne dass ein Wert für diesen Parameter angegeben werden muss.  
   
 > [!NOTE]  
@@ -255,11 +254,11 @@ RETURNS return_data_type
  Gibt an, dass die Skalarfunktion einen skalaren Wert zurückgibt.  
   
  TABLE  
- Gibt an, dass der Rückgabewert der Tabellenwertfunktion eine Tabelle ist. Nur Konstanten und **@**_local\_variables_ können an Tabellenwertfunktionen übergeben werden.  
+ Gibt an, dass der Rückgabewert der Tabellenwertfunktion eine Tabelle ist. Nur Konstanten und **@** _local\_variables_ können an Tabellenwertfunktionen übergeben werden.  
   
  In Inline-Tabellenwertfunktionen wird der TABLE-Rückgabewert durch eine einzige SELECT-Anweisung definiert. Inlinefunktionen haben keine zugeordneten Rückgabevariablen.  
   
- In Tabellenwertfunktionen mit mehreren Anweisungen ist **@**_return\_variable_ eine TABLE-Variable, die zum Speichern und Sammeln der Zeilen verwendet wird, die als Wert der Funktion zurückgegeben werden sollen. **@**_return\_variable_ kann nur für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen, nicht für CLR-Funktionen angegeben werden.  
+ In Tabellenwertfunktionen mit mehreren Anweisungen ist **@** _return\_variable_ eine TABLE-Variable, die zum Speichern und Sammeln der Zeilen verwendet wird, die als Wert der Funktion zurückgegeben werden sollen. **@** _return\_variable_ kann nur für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen, nicht für CLR-Funktionen angegeben werden.  
   
  *select-stmt*  
  Einzelne SELECT-Anweisung, die den Rückgabewert einer Inline-Tabellenwertfunktion definiert.  
@@ -267,7 +266,7 @@ RETURNS return_data_type
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt die Methode an, mit der eine Assembly eine Bindung mit der Funktion herstellt. *assembly_name* muss einer vorhandenen Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der aktuellen Datenbank mit aktivierter Sichtbarkeit entsprechen. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse einen mit einem Namespace qualifizierten Namen hat, in dem ein Punkt (**.**) zur Trennung der Bestandteile des Namespace verwendet wird, muss der Klassenname mithilfe von Klammern (**[]**) oder mit Anführungszeichen (**""**) getrennt werden. *method_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als statische Methode in der angegebenen Klasse vorhanden sein.  
+ Gibt die Methode an, mit der eine Assembly eine Bindung mit der Funktion herstellt. *assembly_name* muss einer vorhandenen Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der aktuellen Datenbank mit aktivierter Sichtbarkeit entsprechen. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse einen mit einem Namespace qualifizierten Namen hat, in dem ein Punkt ( **.** ) zur Trennung der Bestandteile des Namespace verwendet wird, muss der Klassenname mithilfe von Klammern ( **[]** ) oder mit Anführungszeichen ( **""** ) getrennt werden. *method_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als statische Methode in der angegebenen Klasse vorhanden sein.  
   
 > [!NOTE]  
 >  Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können Datenbankobjekte, die auf CLR-Module (Common Language Runtime) verweisen, erstellen, ändern und löschen. Bevor Sie diese Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen können, müssen Sie jedoch die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktivieren. Verwenden Sie dazu [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -275,10 +274,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
- _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Definiert den Tabellendatentyp für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion. Die Tabellendeklaration schließt Spaltendefinitionen und Spalten- oder Tabelleneinschränkungen ein.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Vorschauversion in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Definiert die Tabellendatentypen für eine CLR-Funktion. Die Tabellendeklaration schließt nur Spaltennamen und Datentypen ein.  
   
@@ -355,7 +354,7 @@ Eine Liste der Bedingungen, die erfüllt sein müssen, damit eine Funktion an ei
  Die ROWGUIDCOL-Eigenschaft erzwingt keine Eindeutigkeit der in der Spalte gespeicherten Werte. Sie erzeugt auch nicht automatisch Werte für neue Zeilen, die in die Tabelle eingefügt werden. Um eindeutige Werte für jede Spalte zu erzeugen, verwenden Sie die NEWID-Funktion in INSERT-Anweisungen. Ein Standardwert kann angegeben werden, NEWID wird jedoch nicht als Standardwert unterstützt.  
   
  IDENTITY  
- Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden normalerweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)**. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder *seed* und den *increment* oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
+ Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden normalerweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder *seed* und den *increment* oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
  IDENTITY kann nicht für CLR-Tabellenwertfunktionen angegeben werden.  
   

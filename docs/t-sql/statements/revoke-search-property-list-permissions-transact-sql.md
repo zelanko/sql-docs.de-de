@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1270cc8f84113433954a5178f791f3795ed419fc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f9b69ec02d8f436ccaacf8f9fc75fbb01b429316
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914265"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE-Sucheigenschaftenlisten-Berechtigungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
- ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  Gibt die Sucheigenschaftenliste an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
@@ -126,8 +125,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT (Berechtigungen für Sucheigenschaftenlisten) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   

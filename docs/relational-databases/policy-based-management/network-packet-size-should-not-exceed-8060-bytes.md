@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b74d7122f6247d4aebfb4046cfe80cbce11897d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1b153ab4f5fa1e3443d29c195d6b60004dcab8e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087052"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>Netzwerkpaketgröße darf 8060 Bytes nicht überschreiten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51668689"
 ## <a name="for-more-information"></a>Weitere Informationen  
  [Microsoft Knowledge Base-Artikel 903002](https://go.microsoft.com/fwlink/?linkid=117749)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

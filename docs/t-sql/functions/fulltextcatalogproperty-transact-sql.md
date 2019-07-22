@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940224"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ Ein Ausdruck, der den Namen der Volltext-Katalogeigenschaft enthält. In der fol
 |**ImportStatus**|Gibt an, ob der Volltextkatalog importiert wird.<br /><br /> 0 = Der Volltextkatalog wird nicht importiert.<br /><br /> 1 = Der Volltextkatalog wird importiert.|  
   
 ## <a name="return-types"></a>Rückgabetypen  
-**ssNoversion**  
+**int**  
   
 ## <a name="exceptions"></a>Ausnahmen  
 Gibt NULL zurück, wenn ein Fehler auftritt oder ein Aufrufer nicht über die Berechtigungen zum Anzeigen des Objekts verfügt.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f4dc9a023b74c104e232546ec6c4f8c2bd93919
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afc0e433a7d39dffa2e4d31d03292d2aee07a4a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899173"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Gewusst wie: Hinzufügen von Testbedingungen zu SQL Server-Komponententests
 Sie können den **SQL Server-Komponententest-Designer** verwenden, um einem SQL Server-Komponententest Testbedingungen hinzuzufügen. Wenn Sie die Testklasse speichern, werden die Testbedingungen automatisch in Ihrem Testprojekt als Visual C\#- oder Visual Basic-Code in der Quellcodedatei gespeichert, in der die Testklasse enthalten ist. Nachdem Sie eine Testbedingung gespeichert haben, können Sie diese im **SQL Server-Komponententest-Designer** oder in der zugehörigen Quellcodedatei bearbeiten.  

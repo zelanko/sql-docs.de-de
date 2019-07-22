@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ba0a8ac8f1e008c4adc2e8206b900e53689ea9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940827"
 ---
 # <a name="backup-device-general-page"></a>Sicherungsmedium (Seite Allgemein)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47618928"
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Mediumname**  
  Hier können Sie den Namen eines vorhandenen logischen Sicherungsmediums anzeigen oder den Namen eines neuen logischen Sicherungsmediums angeben.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "47618928"
   
 -   [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

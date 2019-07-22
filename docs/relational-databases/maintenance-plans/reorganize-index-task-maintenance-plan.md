@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52412e1e6cc12c45399168062d397eb070887843
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 748a7f24d8e15974138f4fbaa5e9df6bd56cca75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115567"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Task 'Index neu organisieren' (Wartungsplan)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Verschieben Sie mithilfe des Dialogfelds **Task 'Index neu organisieren'** Indexseiten, sodass eine effizientere Suchreihenfolge entsteht. Dieser Task verwendet die `ALTER INDEX REORGANIZE` -Anweisung mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "51217964"
  **Kennwort**  
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [DBCC INDEXDEFRAG &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md)  
   

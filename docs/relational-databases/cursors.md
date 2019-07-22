@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52195cc99c61fb8dbf074f2362e0d7e13eb0b68d
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140813"
 ---
 # <a name="cursors"></a>Cursor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ Wenn weder ein [!INCLUDE[tsql](../includes/tsql-md.md)] -Cursor noch ein API-Cur
 [Cursorverhalten](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)    
 [Implementieren von Cursorn](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
 [Cursors &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
 [Cursorfunktionen &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

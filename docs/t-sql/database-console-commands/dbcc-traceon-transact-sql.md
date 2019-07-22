@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 1bc364890a2bb678b8ad9ef5dad5238656443acf
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040603"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ Alle Informationsmeldungen werden unterdrückt.
 ## <a name="remarks"></a>Remarks  
 Auf einem Produktionsserver wird zur Vermeidung unvorhergesehenen Verhaltens empfohlen, dass Sie Ablaufverfolgungsflags nur mithilfe einer der folgenden Methoden serverweit aktivieren:
 -   Verwenden Sie die Befehlszeilenstartoption **-T** von Sqlservr.exe. Dies wird als bewährte Methode empfohlen, da hiermit sichergestellt wird, dass alle Anweisungen bei aktiviertem Ablaufverfolgungsflag ausgeführt werden. Hierzu gehören auch Befehle in Startskripts. Weitere Informationen finden Sie unter [sqlservr Application](../../tools/sqlservr-application.md).  
--   Verwenden Sie DBCC TRACEON **(**_trace#_ [**,** ...*.n*]**,-1)** nur, solange keine Benutzer oder Anwendungen mehrere Anweisungen gleichzeitig auf dem System ausführen.  
+-   Verwenden Sie DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** nur, solange keine Benutzer oder Anwendungen mehrere Anweisungen gleichzeitig auf dem System ausführen.  
 
 Mithilfe von Ablaufverfolgungsflags können Sie die Funktionsweise von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beeinflussen und bestimmte Merkmale anpassen. Nach dem Aktivieren bleiben Ablaufverfolgungsflags auf dem Server aktiviert, bis sie durch die Ausführung der DBCC TRACEOFF-Anweisung deaktiviert werden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es zwei Typen von Ablaufverfolgungsflags: Sitzung und global. Ablaufverfolgungsflags des Typs Session werden für eine Verbindung aktiviert und sind nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar. Mithilfe von DBCC TRACESTATUS können Sie den Status der Ablaufverfolgungsflags bestimmen. Verwenden Sie DBCC TRACEOFF, um Ablaufverfolgungsflags zu deaktivieren.
   

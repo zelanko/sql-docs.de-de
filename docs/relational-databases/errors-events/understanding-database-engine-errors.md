@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aaf30ad3a99c8ffbe469413a315db26ad2e3b79e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903750"
 ---
 # <a name="understanding-database-engine-errors"></a>Grundlegendes zu Datenbank-Engine-Fehlern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ausgelöste Fehler weisen die in der folgenden Tabelle beschriebenen Attribute auf.  
   
-|attribute|Beschreibung|  
+|attribute|und Beschreibung|  
 |---------------|-----------------|  
 |Fehlernummer|Jede Fehlermeldung besitzt eine eindeutige Fehlernummer.|  
 |Fehlermeldungs-Zeichenfolge|Die Fehlermeldung enthält Diagnoseinformationen über die Ursache des Fehlers. Zahlreiche Fehlermeldungen haben Ersetzungsvariablen, in die Informationen, wie z. B. der Name des Objekts, das den Fehler generiert, eingefügt werden.|  
@@ -59,7 +58,7 @@ SELECT
   
  Weitere Informationen finden Sie unter [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   

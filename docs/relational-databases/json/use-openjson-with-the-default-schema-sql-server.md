@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 078f198d81c0fc9de1ce5c0a6221b54c253bfa56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cbf15d6ce6e0993d570f882bde8fb303a66ccaec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074223"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Verwenden von OPENJSON mit dem Standardschema (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **Ergebnisse**  
   
-|Key|Wert|  
+|Key|value|  
 |---------|-----------|  
 |NAME|John|  
 |surname|Doe|  
@@ -53,7 +52,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **Ergebnisse**  
   
-|Key|Wert|  
+|Key|value|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -86,7 +85,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Ergebnisse**  
   
-|Key|Wert|Typ|  
+|Key|value|Typ|  
 |---------|-----------|----------|  
 |Typ|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  

@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac0ce5511f8bad17d9732abbc17fbea36c92b347
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043204"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -167,7 +166,7 @@ Secure Enclaves erweitern die Funktionalität von Always Encrypted. Die folgende
 - Direkte kryptografische Vorgänge.
 - Musterabgleich (LIKE) und Vergleichsoperatoren für Spalten, die mithilfe der zufälligen Verschlüsselung verschlüsselt wurden.
     > [!NOTE]
-    > Die obigen Vorgänge werden für Zeichenfolgenspalten unterstützt, die Sortierungen mit einer binary2-Sortierreihenfolge (BIN2-Sortierungen) verwenden. Zeichenfolgenspalten mit Nicht-BIN2-Sortierung können mit zufälliger Verschlüsselung und Enclave-fähigen Spaltenverschlüsselungsschlüsseln verschlüsselt werden. Die einzige neue Funktionalität, die für solche Spalten aktiviert ist, ist jedoch die direkte Verschlüsselung.
+    > Die obigen Vorgänge werden für Zeichenfolgenspalten unterstützt, die Sortierungen mit einer binary2-Sortierreihenfolge (BIN2-Sortierungen) verwenden. Zeichenfolgenspalten mit Nicht-BIN2-Sortierung können mit zufälliger Verschlüsselung und Enclave-fähigen Spaltenverschlüsselungsschlüsseln verschlüsselt werden. Die einzige neue Funktionalität, die für solche Spalten aktiviert ist, ist jedoch die dirkte Verschlüsselung.
 - Erstellen von nicht gruppierten Indizes für Spalten mit zufälliger Verschlüsselung.
 - Berechnete Spalten unter Verwendung von Ausdrücken, die das LIKE-Prädikat enthalten, und Vergleichsoperatoren auf Spalten mit zufälliger Verschlüsselung.
 

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38b1d66f66b69f2ea46dfa9c7e74eb2e973d77f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940923"
 ---
 # <a name="back-up-database-general-page"></a>Datenbank sichern (Seite Allgemein)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47705908"
   
 -   Für eine Teilsicherung müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Anweisung mit der Option PARTIAL verwenden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
   
 ### <a name="source"></a>Quelle  
  Mithilfe der Optionen des Bereichs **Quelle** werden die Datenbank identifiziert und der Sicherungstyp und die Sicherungskomponente für den Sicherungsvorgang angegeben.  
@@ -90,7 +89,7 @@ ms.locfileid: "47705908"
 |||  
 |-|-|  
 |**Datenträger**|Sicherung auf einem Datenträger. Hierbei kann es sich um eine Systemdatei oder ein datenträgerbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Datenträger werden in der Liste **Sichern auf** angezeigt. Sie können bis zu 64 Datenträger für den Sicherungsvorgang auswählen.|  
-|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Hinweis: Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
 |**URL**|Sicherung im Microsoft Azure-BLOB-Speicher|  
   
  Welche Optionen als Nächstes angezeigt werden, ist abhängig vom Typ des ausgewählten Ziels. Wenn Sie einen Datenträger oder ein Band auswählen, werden die folgenden Optionen angezeigt:  
@@ -131,7 +130,7 @@ Wenn Sie eine **URL** als Sicherungsziel ausgewählt haben, werden die folgenden
   **Neuer Container:**  
 Wird verwendet, um einen vorhandenen Container zu registrieren, für den Sie keine SAS besitzen.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung zu einem Microsoft Azure-Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

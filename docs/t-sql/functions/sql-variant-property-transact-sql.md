@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a9f7c245f08ffcd3211277a4d201ed884d66caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caadacbe6ad9eb1841a2646f39cdedea17ac58aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907036"
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,12 +48,12 @@ SQL_VARIANT_PROPERTY ( expression , property )
   
 |value|und Beschreibung|Zurückgegebener Basistyp von sql_variant|  
 |-----------|-----------------|----------------------------------------|  
-|**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, beispielsweise:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **Datum**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **ssNoversion**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**Genauigkeit**|Anzahl der Stellen des numerischen Basisdatentyps:<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) und **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Alle sonstigen Typen = 0|**ssNoversion**<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**Dezimalstellen**|Anzahl der Stellen hinter dem Dezimalkomma des numerischen Basisdatentyps:<br /><br /> **decimal** (p,s) und **numeric** (p,s) = s<br /><br /> **money** und **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> Alle sonstigen Typen = 0|**ssNoversion**<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**TotalBytes**|Anzahl der Byte, die zum Speichern der Metadaten und der Daten des Werts erforderlich sind. Diese Informationen sind nützlich zum Überprüfen der maximalen Größe einer Datenseite in einer **sql_variant**-Spalte. Wenn der Wert größer als 900 ist, schlägt die Indexerstellung fehl.|**ssNoversion**<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**BaseType**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, beispielsweise:<br /><br /> **bigint**<br /><br /> **binary**<br /><br /> **char**<br /><br /> **Datum**<br /><br /> **datetime**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **int**<br /><br /> **money**<br /><br /> **nchar**<br /><br /> **numeric**<br /><br /> **nvarchar**<br /><br /> **real**<br /><br /> **smalldatetime**<br /><br /> **smallint**<br /><br /> **smallmoney**<br /><br /> **time**<br /><br /> **tinyint**<br /><br /> **uniqueidentifier**<br /><br /> **varbinary**<br /><br /> **varchar**|**sysname**<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**Genauigkeit**|Anzahl der Stellen des numerischen Basisdatentyps:<br /><br /> **datetime** = 23<br /><br /> **smalldatetime** = 16<br /><br /> **float** = 53<br /><br /> **real** = 24<br /><br /> **decimal** (p,s) und **numeric** (p,s) = p<br /><br /> **money** = 19<br /><br /> **smallmoney** = 10<br /><br /> **bigint** = 19<br /><br /> **int** = 10<br /><br /> **smallint** = 5<br /><br /> **tinyint** = 3<br /><br /> **bit** = 1<br /><br /> Alle sonstigen Typen = 0|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**Dezimalstellen**|Anzahl der Stellen hinter dem Dezimalkomma des numerischen Basisdatentyps:<br /><br /> **decimal** (p,s) und **numeric** (p,s) = s<br /><br /> **money** und **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> Alle sonstigen Typen = 0|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**TotalBytes**|Anzahl der Byte, die zum Speichern der Metadaten und der Daten des Werts erforderlich sind. Diese Informationen sind nützlich zum Überprüfen der maximalen Größe einer Datenseite in einer **sql_variant**-Spalte. Wenn der Wert größer als 900 ist, schlägt die Indexerstellung fehl.|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
 |**Sortierung**|Stellt die Sortierung des entsprechenden **sql_variant**-Werts dar.|**sysname**<br /><br /> NULL = Eingabe ist nicht gültig.|  
-|**MaxLength**|Maximale Länge des Datentyps in Byte. Beispielsweise entspricht **MaxLength** von **nvarchar(** 50 **)** dem Wert 100, während **MaxLength** von **int** dem Wert 4 entspricht.|**ssNoversion**<br /><br /> NULL = Eingabe ist nicht gültig.|  
+|**MaxLength**|Maximale Länge des Datentyps in Byte. Beispielsweise entspricht **MaxLength** von **nvarchar(** 50 **)** dem Wert 100, während **MaxLength** von **int** dem Wert 4 entspricht.|**int**<br /><br /> NULL = Eingabe ist nicht gültig.|  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **sql_variant**  

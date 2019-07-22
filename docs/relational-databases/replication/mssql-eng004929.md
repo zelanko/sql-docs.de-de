@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d9b1d88-1fbf-4089-b392-687d3b0220ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47d7a65d50d067179af06e17470d8f9d5e8fecfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89efab8bdda62e4dd57870986f628cfdc6da1a12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067240"
 ---
 # <a name="mssqleng004929"></a>MSSQL_ENG004929
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47696328"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|4929|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -40,7 +39,7 @@ ms.locfileid: "47696328"
 ## <a name="user-action"></a>Benutzeraktion  
  Um die Einschränkung zu löschen, löschen Sie zunächst den der Tabelle zugeordneten Artikel. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md). Falls dieser Fehler in einer Datenbank auftritt, die nicht repliziert wird, führen Sie [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) aus, um sicherzustellen, dass die Objekte in der Datenbank nicht als repliziert hervorgehoben sind.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

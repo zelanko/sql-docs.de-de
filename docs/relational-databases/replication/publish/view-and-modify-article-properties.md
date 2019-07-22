@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9ccee2c8fd7fe02ff038105bd4bc934201ed861c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8f04d1377c41628491a60aa605b5f5e30b4bfba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113892"
 ---
 # <a name="view-and-modify-article-properties"></a>Anzeigen und Ändern von Artikeleigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47710408"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -104,7 +103,7 @@ ms.locfileid: "47710408"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Momentaufnahme- oder einer Transaktionsveröffentlichung gehört  
   
-1.  Führen Sie [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter und den Namen des Artikels für den **@article** -Parameter an. Wenn Sie **@article**nicht angeben, werden Informationen zu allen Artikeln in der Veröffentlichung zurückgegeben.  
+1.  Führen Sie [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter und den Namen des Artikels für den **@article** -Parameter an. Wenn Sie **@article** nicht angeben, werden Informationen zu allen Artikeln in der Veröffentlichung zurückgegeben.  
   
 2.  Führen Sie [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) aus, damit die Tabellenartikel alle in der Basistabelle verfügbaren Spalten auflisten.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "47710408"
 1.  Führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)aus, und geben Sie dabei die zu ändernde Artikeleigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot**angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **@force_reinit_subscription**. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **@force_reinit_subscription** . Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Mergeveröffentlichung gehört  
   
@@ -126,7 +125,7 @@ ms.locfileid: "47710408"
 1.  Führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus, und geben Sie dabei die zu ändernde Artikeleigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot**angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **@force_reinit_subscription**. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **@force_reinit_subscription** . Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel für eine Transaktionsreplikation werden die Eigenschaften des veröffentlichten Artikels zurückgegeben.  
@@ -187,7 +186,7 @@ ms.locfileid: "47710408"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

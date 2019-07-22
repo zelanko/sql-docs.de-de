@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: df34bbcfee578a36fc10e18a47ad4861aae4d8ff
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: f9f7f51b2d0ede3bb49bb152ab08cbb2a7eb2732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114031"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP-Phantomprozessor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "53380271"
   
  In dieser Tabelle werden die Leistungsindikatoren für **SQL Server-XTP-Phantomprozessor** beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|und Beschreibung|  
 |-------------|-----------------|  
 |**Dusty-Corner-Scanwiederholungen/s (durch Phantom ausgegeben)**|Die durchschnittliche Anzahl von Scanwiederholungen aufgrund von Schreibkonflikten während Dusty-Corner-Sweep-Vorgängen, die pro Sekunde durch den Phantomprozessor ausgegeben werden. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|  
 |**Entfernte abgelaufene Phantomzeilen/s**|Die durchschnittliche Anzahl abgelaufener Zeilen, die pro Sekunde von Phantomscans entfernt werden.|  

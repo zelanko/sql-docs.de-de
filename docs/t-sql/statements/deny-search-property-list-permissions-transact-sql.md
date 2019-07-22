@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61961ff888b5de3ffa55ffb47c4986a60583b79e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114814"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>DENY-Sucheigenschaftenlisten-Berechtigung (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +46,7 @@ DENY permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
-ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  Gibt die Sucheigenschaftenliste an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer :: ist erforderlich.  
   
 *database_principal*  
@@ -103,8 +102,7 @@ CASCADE
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT (Berechtigungen für Sucheigenschaftenlisten) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE (Berechtigungen für das Durchsuchen von Eigenschaftenlisten) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   

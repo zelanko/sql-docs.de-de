@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 36471a1e20a150e39dedc866130d3373448573bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edaa3069bece2d6acf7f28ab32da5f5639f49be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024270"
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 |**IsDescending**|Die Reihenfolge, in der die Indexspalte gespeichert wird.<br /><br /> 1 = Absteigend 0 = Aufsteigend|  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  

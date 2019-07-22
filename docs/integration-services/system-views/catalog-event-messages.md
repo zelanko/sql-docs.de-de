@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4367b4e4ae9c315bd8462b72cbac020294fecdcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03245a13f270990ff8a1307a10bad797fc155289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017481"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages 
 
@@ -43,8 +42,8 @@ ms.locfileid: "65715200"
 |Subcomponent_name|nvarchar(4000)|Die Datenflusskomponente, die als Quelle der Meldung dient.<br /><br /> Wenn Meldungen von der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Engine zurückgegeben werden, wird SSIS.Pipeline in dieser Spalte angezeigt.|  
 |Package_path|nvarchar(max)|Der eindeutige Pfad der Komponente innerhalb des Pakets.|  
 |Execution_path|nvarchar(max)|Der vollständige Pfad vom übergeordneten Paket zu dem Punkt, an dem die Komponente ausgeführt wird.<br /><br /> Dieser Pfad zeichnet auch Iterationen einer Komponente auf.|  
-|threadID|ssNoversion|ID für den Thread, der ausgeführt wird, wenn die Meldung protokolliert wird.|  
-|Message_code|ssNoversion|Der der Meldung zugeordnete Code.|  
+|threadID|INT|ID für den Thread, der ausgeführt wird, wenn die Meldung protokolliert wird.|  
+|Message_code|INT|Der der Meldung zugeordnete Code.|  
   
 ## <a name="remarks"></a>Remarks  
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  

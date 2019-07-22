@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 82e9cfe7afa18692376f113d31c07771a36e045d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a9fc6db57277044267a89cc89e6c196c782ea920
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115353"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung (SQL Server-Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "51674319"
   
 -   Das Datensammlungsintervall beträgt 15 Minuten. Dieser Wert ist nicht konfigurierbar.  
   
--   Der untere Standardschwellenwert für die Richtlinie zur Prozessorauslastung beträgt 0 %. Es können Werte zwischen 0 % und 100 % ausgewählt werden.  
+-   Der untere Standardschwellenwert für die Richtlinie zur Prozessorauslastung beträgt 0 %. Es können Werte zwischen 0 % und 100 % ausgewählt werden.  
   
 -   Der Standardauswertungszeitraum für die Unterauslastung des Prozessors beträgt eine Woche. Es können Werte zwischen einem Tag und einem Monat ausgewählt werden.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "51674319"
   
  Gemäß den Standardwerten werden pro Woche 672 Datenpunkte gesammelt, der Richtlinienschwellenwert liegt jedoch bei 0 %. Diese Richtlinie generiert standardmäßig also keine Verstöße in Bezug auf die Unterauslastung des Prozessors. Weitere Informationen zum Ändern der globalen Richtlinien zur CPU-Auslastung für verwaltete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen oder Datenebenenanwendungen finden Sie unter [Hilfsprogrammverwaltung &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Weitere Informationen zum Ändern von Richtlinien zur CPU-Auslastung für einzelne Instanzen von SQL Server finden Sie unter [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Weitere Informationen zum Ändern von Richtlinien zur CPU-Auslastung für einzelne Datenebenenanwendungen finden Sie unter [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Hilfsprogrammverwaltung &#40;SQL Server-Hilfsprogramm&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Ändern der Definition von Ressourcenintegritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   

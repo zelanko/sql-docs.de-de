@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927213"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "52514722"
   
 -   Festlegen der maximalen E/A-Vorgänge pro Datenträgervolume.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -88,7 +87,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  ALTER RESOURCE GOVERNOR RECONFIGURE muss ausgegeben werden, damit Konfigurationsänderungen wirksam werden.  
   
- CLASSIFIER_FUNCTION = { _Schemaname_**.**_Funktionsname_ | NULL }  
+ CLASSIFIER_FUNCTION = { _Schemaname_ **.** _Funktionsname_ | NULL }  
  Registriert die Klassifizierungsfunktion, die durch *schema_name.function_name* angegeben wird. Diese Funktion klassifiziert jede neue Sitzung und weist die Sitzungsanforderungen und Abfragen einer Arbeitsauslastungsgruppe zu. Bei Verwendung von NULL werden neue Sitzungen automatisch der Standardarbeitsauslastungsgruppe zugewiesen.  
   
  RESET STATISTICS  
@@ -187,7 +186,7 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

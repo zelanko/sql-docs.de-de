@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 69daa9fd9420298bb69439ae629fb6391d0f0c10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073483"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Angeben eines Mergeartikelkonfliktlösers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "54136000"
   
     -   Dem Server mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internetinformationsdienste (IIS) für ein Pullabonnement, das die Websynchronisierung verwendet.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Nach dem Registrieren des Konfliktlösers geben Sie dessen Verwendung durch einen Artikel im Dialogfeld **Artikeleigenschaften - \<Artikel>** auf der Registerkarte **Konfliktlöser** an. Dieses Dialogfeld ist im Assistenten für neue Veröffentlichung über das Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>So geben Sie einen Konfliktlöser an  
@@ -76,10 +75,10 @@ ms.locfileid: "54136000"
   
 2.  Um zu bestimmen, ob der gewünschte Konfliktlöser bereits registriert ist, führen Sie auf dem Verleger für eine beliebige Datenbank [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus. Daraufhin werden eine Beschreibung des benutzerdefinierten Konfliktlösers sowie der Klassenbezeichner (CLSID) für jeden auf dem Verteiler registrierten COM-basierten Konfliktlöser bzw. Informationen zur verwalteten Assembly für jeden auf dem Verteiler registrierten Geschäftslogikhandler angezeigt.  
   
-3.  Wenn der gewünschte benutzerdefinierte Konfliktlöser noch nicht registriert ist, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) aus. Geben Sie den Namen des Konfliktlösers für **@article_resolver**an. Bei Geschäftslogikhandlern ist dies der Anzeigenamen der Assembly. Geben Sie für COM-basierte Konfliktlöser den Klassenbezeichner (CLSID) der DLL für **@resolver_clsid**an, und für einen Geschäftslogikhandler den Wert **true** für **@is_dotnet_assembly**, den Namen der Assembly für **@dotnet_assembly_name**und den vollqualifizierten Namen der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> für **@dotnet_class_name**angegeben wird.  
+3.  Wenn der gewünschte benutzerdefinierte Konfliktlöser noch nicht registriert ist, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) aus. Geben Sie den Namen des Konfliktlösers für **@article_resolver** an. Bei Geschäftslogikhandlern ist dies der Anzeigenamen der Assembly. Geben Sie für COM-basierte Konfliktlöser den Klassenbezeichner (CLSID) der DLL für **@resolver_clsid** an, und für einen Geschäftslogikhandler den Wert **true** für **@is_dotnet_assembly** , den Namen der Assembly für **@dotnet_assembly_name** und den vollqualifizierten Namen der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> für **@dotnet_class_name** angegeben wird.  
   
     > [!NOTE]  
-    >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name**angegeben wird.  
+    >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name** angegeben wird.  
   
 4.  Wenn der Konfliktlöser ein COM-basierter Konfliktlöser ist, gehen Sie wie folgt vor:  
   
@@ -113,15 +112,15 @@ ms.locfileid: "54136000"
   
 2.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, und notieren Sie den Namen des gewünschten benutzerdefinierten Konfliktlösers im **value**-Feld des Resultsets.  
   
-3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie den Wert **article_resolver**, einschließlich der vollständigen Pfadangabe für Geschäftslogikhandler, für **@property**und den Namen des gewünschten benutzerdefinierten Konfliktslösers aus Schritt 2 für **@value**angegeben wird.  
+3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie den Wert **article_resolver**, einschließlich der vollständigen Pfadangabe für Geschäftslogikhandler, für **@property** und den Namen des gewünschten benutzerdefinierten Konfliktslösers aus Schritt 2 für **@value** angegeben wird.  
   
-4.  Führen Sie nochmals [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, um irgendwelche erforderlichen Eingaben für den benutzerdefinierten Konfliktlöser zu ändern. Geben Sie den Wert **resolver_info** für **@property** und alle erforderlichen Eingaben für den benutzerdefinierten Konfliktlöser für **@value**angegeben wird. Bei benutzerdefinierten Konfliktlösern, die auf einer gespeicherten Prozedur basieren, entspricht **@resolver_info** dem Namen der gespeicherten Prozedur. Weitere Informationen zu den erforderlichen Eingaben finden Sie unter [Microsoft COM-Based Resolvers (Microsoft COM-basierte Konfliktlöser)](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+4.  Führen Sie nochmals [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, um irgendwelche erforderlichen Eingaben für den benutzerdefinierten Konfliktlöser zu ändern. Geben Sie den Wert **resolver_info** für **@property** und alle erforderlichen Eingaben für den benutzerdefinierten Konfliktlöser für **@value** angegeben wird. Bei benutzerdefinierten Konfliktlösern, die auf einer gespeicherten Prozedur basieren, entspricht **@resolver_info** dem Namen der gespeicherten Prozedur. Weitere Informationen zu den erforderlichen Eingaben finden Sie unter [Microsoft COM-Based Resolvers (Microsoft COM-basierte Konfliktlöser)](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
 ## <a name="unregister-a-custom-conflict-resolver"></a>Aufheben der Registrierung eines benutzerdefinierten Konfliktlösers  
   
 1.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, und notieren Sie den Namen des zu entfernenden benutzerdefinierten Konfliktlösers im **value**-Feld des Resultsets.  
   
-2.  Führen Sie [Sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) auf dem Verteiler aus. Geben Sie den vollständigen Namen des benutzerdefinierten Konfliktlösers aus Schritt 1 für **@article_resolver**angegeben wird.  
+2.  Führen Sie [Sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) auf dem Verteiler aus. Geben Sie den vollständigen Namen des benutzerdefinierten Konfliktlösers aus Schritt 1 für **@article_resolver** angegeben wird.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  In diesem Beispiel wird ein neuer Artikel erstellt und angegeben, dass der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfliktlöser "Mittelwerterstellung" zur Berechnung des Mittelwerts der Spalte **UnitPrice** verwendet werden soll, wenn Konflikte auftreten.  

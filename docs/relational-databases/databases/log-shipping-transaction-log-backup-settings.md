@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98fde530e6d6d15d4abfdd97d53d6beff354a394
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: cf224dd8c5d6973c6aaf5b0af869ace7d43c891c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032057"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Sicherungseinstellungen für den Transaktionsprotokollversand
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "51558677"
   
  Eine Erläuterung zu den Konzepten des Protokollversands finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Netzwerkpfad zu diesem Sicherungsordner**  
  Geben Sie in dieses Feld die Netzwerkfreigabe für den Sicherungsordner ein. Der lokale Ordner, in dem die Transaktionsprotokollsicherungen gespeichert sind, muss freigegeben werden, damit diese Dateien mithilfe der Protokollversand-Kopieraufträge kopiert werden können. Außerdem müssen Sie für das Proxykonto dieser Netzwerkfreigabe, unter dem die Kopieraufträge auf den sekundären Serverinstanzen ausgeführt werden, Lese- und Schreibberechtigungen erteilen. Standardmäßig ist dies das SQLServerAgent-Dienstkonto der sekundären Serverinstanz. Ein Administrator kann jedoch für den Auftrag ein anderes Proxykonto auswählen.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "51558677"
 |**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> **\*\* Wichtig \*\*** Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die durch die Komprimierung zusätzlich genutzten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es möglicherweise sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch den [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen.|  
 |**Sicherung nicht komprimieren**|Klicken Sie hier, um unabhängig von der Standardeinstellung auf Serverebene eine nicht komprimierte Sicherung zu erstellen.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d2aba0c1526473d48fe1171bbd41f4e006ca1690
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732414"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316962"
 ---
 # <a name="modify-an-index"></a>Ändern eines Indexes
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,11 +62,11 @@ ms.locfileid: "67732414"
   
 Im folgenden Beispiel wird ein vorhandener Index für die `ProductID`-Spalte der `Production.WorkOrder`-Tabelle in der AdventureWorks-Datenbank mithilfe der Option `DROP_EXISTING` gelöscht und neu erstellt. Die Optionen `FILLFACTOR` und `PAD_INDEX` sind ebenfalls festgelegt.  
   
-     [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
+[!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   
-     The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
+Im folgenden Beispiel werden mithilfe von ALTER INDEX mehrere Optionen für den `AK_SalesOrderHeader_SalesOrderNumber`-Index festgelegt.  
   
-     [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
+[!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   
 #### <a name="to-modify-index-columns"></a>So ändern Sie Indexspalten  
   

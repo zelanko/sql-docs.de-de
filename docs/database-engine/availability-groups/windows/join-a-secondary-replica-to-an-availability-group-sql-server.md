@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 560b808bc22145993ea7ae713ce45d650a0933d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003721"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Verknüpfen eines sekundären Replikats mit einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

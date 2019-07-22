@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8aeb87f-9cce-40e2-a47c-2dc1460548af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8b2d48548e2d716d3b7a6c7a907bea434226f2b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e420937a61f55905d4d373a7a4f52f585b5c0e2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943241"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>FOR XML-Unterstützung für verschiedene SQL Server-Datentypen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "58513147"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[FOR XML-Unterstützung für den xml-Datentyp](../../relational-databases/xml/for-xml-support-for-the-xml-data-type.md)|Beschreibt, wie FOR XML in Verbindung mit dem **XML** -Datentyp funktioniert.|  
 |[FOR XML-Unterstützung für Zeichenfolgen-Datentypen](../../relational-databases/xml/for-xml-support-for-string-data-types.md)|Beschreibt, wie FOR XML in Verbindung mit String-Datentypen wie beispielsweise **varchar** und **nvarchar**funktioniert.|  

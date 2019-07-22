@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4ff04042-8367-46f3-8a16-c94682d6eedb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eaab01a64bef0fde04562ab8a7ee18d2b61ccdec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 634a54eab92eccf6c03f76419bdb2f3004d57978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123128"
 ---
 # <a name="mssqlserver41396"></a>MSSQLSERVER_41396
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +40,6 @@ Die Größe jeder Zeile bzw. jedes Eintrags im Sortierungspuffer hängt von der 
 ## <a name="user-action"></a>Benutzeraktion  
 Wählen Sie weniger Zeilen aus, oder verringern Sie die Komplexität der Abfrage, indem Sie Joins oder Aggregatfunktionen entfernen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102108"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "59429366"
 -   Die Ausführung von [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) für jede Tabelle und Sicht in der Datenbank.    
 -   Die Ausführung von [DBCC CHECKCATALOG](../../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md) für die Datenbank.    
 -   Die Überprüfung des Inhalts jeder indizierten Sicht in der Datenbank.    
--   Die Überprüfung der Konsistenz auf Linkebene zwischen den Metadaten der Tabellen und den Dateisystemverzeichnissen und -dateien beim Speichern von **varbinary(max)**-Daten im Dateisystem mithilfe von FILESTREAM.    
+-   Die Überprüfung der Konsistenz auf Linkebene zwischen den Metadaten der Tabellen und den Dateisystemverzeichnissen und -dateien beim Speichern von **varbinary(max)** -Daten im Dateisystem mithilfe von FILESTREAM.    
 -   Die Überprüfung der [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Daten in der Datenbank.    
     
 Das bedeutet, dass die Befehle DBCC CHECKALLOC, DBCC CHECKTABLE oder DBCC CHECKCATALOG nicht separat von DBCC CHECKDB ausgeführt werden müssen. Ausführlichere Informationen zu den von diesen Befehlen ausgeführten Überprüfungen finden Sie in den Beschreibungen dieser Befehle.    
@@ -199,8 +198,8 @@ Das Ausführen von DBCC CHECKDB für tempdb bewirkt keine Zuordnungs- oder Katal
 Bei Microsoft SQL Server 2012 oder einer früheren Version von SQL Server erhalten Sie möglicherweise Fehlermeldungen, wenn Sie den DBCC CHECKDB-Befehl für eine Datenbank ausführen, deren Dateien sich auf einem mit ReFS formatierten Volume befinden. Weitere Informationen finden Sie im Knowledge Base-Artikel 2974455: [Verhalten von DBCC CHECKDB, wenn sich die SQL Server-Datenbank auf einem ReFS-Volume befindet](https://support.microsoft.com/kb/2974455).    
     
 ## <a name="checking-and-repairing-filestream-data"></a>Überprüfen und Reparieren von FILESTREAM-Daten    
-Wenn FILESTREAM für eine Datenbank und eine Tabelle aktiviert ist, können Sie **varbinary(max)**-BLOBs (Binary Large Objects) optional im Dateisystem speichern. Wenn Sie DBCC CHECKDB für eine Datenbank verwenden, die BLOBs im Dateisystem speichert, überprüft DBCC die Konsistenz auf Linkebene zwischen dem Dateisystem und der Datenbank.
-Wenn eine Tabelle beispielsweise eine **varbinary(max)**-Spalte mit dem FILESTREAM-Attribut enthält, überprüft DBCC CHECKDB, ob zwischen den Dateisystemverzeichnissen und -dateien und den Tabellenzeilen, Spalten und Spaltenwerten eine 1:1-Zuordnung besteht. DBCC CHECKDB kann Beschädigungen reparieren, wenn Sie die REPAIR_ALLOW_DATA_LOSS-Option angeben. Um FILESTREAM-Beschädigung zu reparieren, löscht DBCC alle Tabellenzeilen, in denen Dateisystemdaten fehlen.
+Wenn FILESTREAM für eine Datenbank und eine Tabelle aktiviert ist, können Sie **varbinary(max)** -BLOBs (Binary Large Objects) optional im Dateisystem speichern. Wenn Sie DBCC CHECKDB für eine Datenbank verwenden, die BLOBs im Dateisystem speichert, überprüft DBCC die Konsistenz auf Linkebene zwischen dem Dateisystem und der Datenbank.
+Wenn eine Tabelle beispielsweise eine **varbinary(max)** -Spalte mit dem FILESTREAM-Attribut enthält, überprüft DBCC CHECKDB, ob zwischen den Dateisystemverzeichnissen und -dateien und den Tabellenzeilen, Spalten und Spaltenwerten eine 1:1-Zuordnung besteht. DBCC CHECKDB kann Beschädigungen reparieren, wenn Sie die REPAIR_ALLOW_DATA_LOSS-Option angeben. Um FILESTREAM-Beschädigung zu reparieren, löscht DBCC alle Tabellenzeilen, in denen Dateisystemdaten fehlen.
     
 ## <a name="best-practices"></a>Bewährte Methoden    
 Es empfiehlt sich, die Option `PHYSICAL_ONLY` für den häufigen Einsatz in Produktionssystemen zu verwenden. Das Verwenden von PHYSICAL_ONLY kann die Ausführungszeit von DBCC CHECKDB für große Datenbanken erheblich verkürzen. Darüber hinaus sollte in regelmäßigen Abständen DBCC CHECKDB ohne Optionen ausgeführt werden. Die Häufigkeit der Ausführung hängt von den jeweiligen Unternehmen und Produktionsumgebungen ab.
@@ -214,7 +213,7 @@ Standardmäßig führt DBCC CHECKDB eine parallele Überprüfung von Objekten au
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen    
 Nach der Fertigstellung des Befehls DBCC CHECKDB wird eine Meldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben. Falls der DBCC-Befehl erfolgreich ausgeführt wird, gibt die Meldung den Erfolg und die Dauer der Ausführung an. Falls der DBCC-Befehl vor Abschluss der Überprüfung aufgrund eines Fehlers beendet wird, gibt die Meldung die Beendigung des Befehls, einen Statuswert sowie die Dauer der Ausführung an. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
     
-|Status|Beschreibung|    
+|Status|und Beschreibung|    
 |-----------|-----------------|    
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf eine Beschädigung der Metadaten hin, die zur Beendigung des DBCC-Befehls geführt hat.|    
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|    
