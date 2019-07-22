@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 390407a35d52067c41d1e2a56c1ab62806ffb4cc
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: bbc583ce5a5bc16d2a7dc30b827a4c5a0f9600e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136189"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Aktivieren von Stretch Database für eine Tabelle
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "56240864"
 ##  <a name="EnableTSQLTable"></a> Verwenden von Transact-SQL zum Aktivieren von Stretch Database für eine Tabelle  
  Sie können Stretch Database mithilfe von Transact-SQL für eine vorhandene Tabelle aktivieren oder damit eine neue, für Stretch Database aktivierte Tabelle erstellen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  Verwenden Sie die folgenden Optionen, wenn Sie CREATE TABLE oder ALTER TABLE ausführen, um Stretch Database für eine Tabelle zu aktivieren.  
   
 -   Verwenden Sie optional die `FILTER_PREDICATE = <function>` -Klausel, um eine Funktion zum Auswählen der zu migrierenden Zeilen anzugeben, wenn die Tabelle sowohl heiße als auch kalte Daten enthält. Das Prädikat muss eine Inline-Tabellenwertfunktion aufrufen. Weitere Informationen hierzu finden Sie unter [Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Wenn Sie keine Filterfunktion angeben, wird die gesamte Tabelle migriert.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cc7a5b230120f7f392d33793a18994932ce8f05c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f226fb77fa0b690427da8121992ce15a44c6ce2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011184"
 ---
 # <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)
 
@@ -101,10 +100,10 @@ ms.locfileid: "65727404"
   
 ### <a name="options"></a>enthalten  
  **SourceConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Quellserver herzustellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Quellserver herzustellen.  
   
  **DestinationConnection**  
- Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>**, um eine neue Verbindung mit dem Zielserver herzustellen.  
+ Wählen Sie in der Liste einen SMO-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung...>** , um eine neue Verbindung mit dem Zielserver herzustellen.  
   
  **IfObjectExists**  
  Wählen Sie aus, ob der Task vorhandene benutzerdefinierte Fehlermeldungen überschreiben, vorhandene Meldungen auslassen oder einen Fehler erzeugen soll, wenn auf dem Zielserver bereits Meldungen desselben Namens vorhanden sind.  
@@ -120,13 +119,13 @@ ms.locfileid: "65727404"
 |**False**|Nur die angegebenen benutzerdefinierten Meldungen kopieren.|  
   
  **ErrorMessagesList**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um die zu kopierenden Fehlermeldungen auszuwählen.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um die zu kopierenden Fehlermeldungen auszuwählen.  
   
 > [!NOTE]  
 >  Sie müssen **SourceConnection** angeben, bevor Sie eine zu kopierende Fehlermeldung auswählen können.  
   
  **ErrorMessageLanguagesList**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um die Sprachen auszuwählen, für die benutzerdefinierte Fehlermeldungen auf den Zielserver kopiert werden. Auf dem Zielserver muss eine Version der Meldung in us_english (Codepage 1033) vorhanden sein, bevor Sie andere Sprachversionen auf den Server übertragen können.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um die Sprachen auszuwählen, für die benutzerdefinierte Fehlermeldungen auf den Zielserver kopiert werden. Auf dem Zielserver muss eine Version der Meldung in us_english (Codepage 1033) vorhanden sein, bevor Sie andere Sprachversionen auf den Server übertragen können.  
   
 > [!NOTE]  
 >  Sie müssen **SourceConnection** angeben, bevor Sie eine zu kopierende Fehlermeldung auswählen können.  

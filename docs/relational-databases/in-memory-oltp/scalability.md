@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f672c1b3d7ff8d4480e6fb1647058c50715b657
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 2762e024f3a94ed20c900833e56840b67af1685d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111783"
 ---
 # <a name="scalability"></a>Skalierbarkeit
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ Die In-Memory-OLTP-Engine verwendet weiterhin eine speicheroptimierte Dateigrupp
 > [!NOTE]
 > [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) wird nicht unterstützt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter   
+## <a name="see-also"></a>Weitere Informationen   
 [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)     
 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
 [ALTER DATABASE-Optionen Datei und Dateigruppe (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)    

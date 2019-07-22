@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b5bb549859bf6177571b080033b09419c5eed90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1908228b12db7256351945b474016a707db56b3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66221161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084443"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ ms.locfileid: "66221161"
   
  Weitere Informationen zum Zurücksetzen auf den vorherigen Kontext finden Sie unter [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO **@**_varbinary_variable_  
- Gibt an, dass der Ausführungskontext nur auf den vorherigen Kontext zurückgesetzt werden kann, wenn die aufrufende REVERT WITH COOKIE-Anweisung den richtigen **@**_varbinary_variable_-Wert enthält. [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergibt das Cookie an **@**_varbinary_variable_. Die **COOKIE INTO**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
+ COOKIE INTO **@** _varbinary_variable_  
+ Gibt an, dass der Ausführungskontext nur auf den vorherigen Kontext zurückgesetzt werden kann, wenn die aufrufende REVERT WITH COOKIE-Anweisung den richtigen **@** _varbinary_variable_-Wert enthält. [!INCLUDE[ssDE](../../includes/ssde-md.md)] übergibt das Cookie an **@** _varbinary_variable_. Die **COOKIE INTO**-Option kann nur auf der Ad-hoc-Ebene verwendet werden.  
   
- **@** _varbinary_variable_ entspricht **varbinary(8000)**.  
+ **@** _varbinary_variable_ entspricht **varbinary(8000)** .  
   
 > [!NOTE]  
 >  Der **OUTPUT**-Cookieparameter ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(100)** zurück. Anwendungen müssen **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einem zukünftigen Release erhöht wird.  
@@ -130,7 +129,7 @@ Wenn der Benutzer verwaist ist (der zugeordnete Anmeldename ist nicht mehr vorha
  
 > Die Verbindung wurde gelöscht, weil der Prinzipal, von dem sie geöffnet wurde, die Identität für einen neuen Sicherheitskontext angenommen und versucht hat, die Verbindung mit diesem Sicherheitskontext zurückzusetzen. Dieses Szenario wird nicht unterstützt. Weitere Informationen finden Sie in der On unter "Identitätswechsel (Übersicht)".
   
- Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wurde, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable*-Wert enthält.  
+ Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wurde, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable* -Wert enthält.  
   
  Diese Option ist in einer Umgebung nützlich, in der Verbindungspools verwendet werden. Mithilfe von Verbindungspools wird eine Gruppe von Datenbankverbindungen verwaltet, die von Anwendungen auf einem Anwendungsserver wiederverwendet werden können. Da nur der Aufrufer der EXECUTE AS-Anweisung den an *@varbinary_variable* übergebenen Wert kennt, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext von keinem anderen Benutzer geändert werden kann.  
   

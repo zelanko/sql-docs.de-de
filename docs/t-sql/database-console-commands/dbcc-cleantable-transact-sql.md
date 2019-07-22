@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 177ef5d128bc14ee112e2b0a19e05a10f174bbc9
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101974"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DBCC CLEANTABLE
  Alle Informationsmeldungen werden unterdrückt.  
   
 ## <a name="remarks"></a>Remarks  
-DBCC CLEANTABLE gibt Speicherplatz wieder frei, nachdem eine Spalte mit variabler Länge gelöscht wurde. Eine Spalte mit variabler Länge kann einem der folgenden Datentypen entsprechen: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** und **xml**. Nach dem Löschen einer Spalte mit fester Länge wird jedoch kein Speicherplatz geschaffen.
+DBCC CLEANTABLE gibt Speicherplatz wieder frei, nachdem eine Spalte mit variabler Länge gelöscht wurde. Eine Spalte mit variabler Länge kann einem der folgenden Datentypen entsprechen: **varchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **varbinary**, **varbinary(max)** , **text**, **ntext**, **image**, **sql_variant** und **xml**. Nach dem Löschen einer Spalte mit fester Länge wird jedoch kein Speicherplatz geschaffen.
 Falls die gelöschten Spalten innerhalb von Zeilen gespeichert waren, gibt DBCC CLEANTABLE Speicherplatz aus der IN_ROW_DATA-Zuordnungseinheit der Tabelle frei. Waren die Spalten außerhalb von Zeilen gespeichert, wird Speicherplatz je nach dem Datentyp der gelöschten Spalte aus einer der Zuordnungseinheiten ROW_OVERFLOW_DATA oder LOB_DATA freigegeben. Falls durch das Freigeben von Speicherplatz aus einer ROW_OVERFLOW_DATA- oder LOB_DATA-Seite eine leere Seite entsteht, wird diese durch DBCC CLEANTABLE entfernt.
 DBCC CLEANTABLE wird als eine oder mehrere Transaktionen ausgeführt. Wird keine Batchgröße angegeben, verarbeitet der Befehl die gesamte Tabelle in einer Transaktion, und die Tabelle wird während des Vorgangs exklusiv gesperrt. Für einige große Tabellen sind eine einzige Transaktion und der erforderliche Protokollspeicherplatz möglicherweise zu groß. Wenn eine Batchgröße angegeben wurde, wird der Befehl in einer Reihe von Transaktionen ausgeführt, wobei jede die angegebene Zeilenanzahl einschließt. DBCC CLEANTABLE kann nicht als eine Transaktion innerhalb einer anderen Transaktion ausgeführt werden.
 Diese Operation wird vollständig protokolliert.

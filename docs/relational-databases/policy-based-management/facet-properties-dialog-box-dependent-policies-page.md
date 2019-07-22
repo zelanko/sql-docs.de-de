@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c2ab881c752c100d2fb9176eea377486382f8e07
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 538752d8752eb9cdba0adda94d03af498ccfbe05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087305"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Abhängige Richtlinien'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie eine Liste von Richtlinien anzeigen, die derzeit auf dieses Facet der richtlinienbasierten Verwaltung verweisen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Name**  
  Listet den Namen jeder Richtlinie auf, die auf das aktuelle Facet verweist.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "51512191"
  **Erstellt**  
  Das Datum, an dem die Richtlinie erstellt wurde.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

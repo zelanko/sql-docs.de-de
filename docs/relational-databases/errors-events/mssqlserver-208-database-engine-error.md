@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a56971347adc1523ad2d65758c611a42c27c45ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1b39638bf7ac09cac4a37d948ba13753ffb6d04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056803"
 ---
 # <a name="mssqlserver208"></a>MSSQLSERVER_208
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47654308"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|208|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -70,7 +69,7 @@ Dieser Fehler kann durch eines der folgenden Probleme verursacht werden:
   
 -   Der Benutzer besitzt die Berechtigung zum Zugreifen auf das Objekt. Mit der Systemfunktion **Has_Perms_By_Name** können Sie die Berechtigungen des Benutzers für das Objekt überprüfen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md)  
 [Konfigurieren der Sichtbarkeit von Metadaten](~/relational-databases/security/metadata-visibility-configuration.md)  
 [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/has-perms-by-name-transact-sql.md)  

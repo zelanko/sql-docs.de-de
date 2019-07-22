@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: dcbf57bfed8a22c957487f82f4f4d0b2086cce89
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 31cf75a57bff14e463864611bc8088e16a0ec998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035520"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Leistungscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "57579504"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Joins](../../relational-databases/performance/joins.md)**|[Join Fundamentals (Grundlagen zu Joins)](../../relational-databases/performance/joins.md#fundamentals)<br />[Nested Loops Join (Join geschachtelter Schleifen)](../../relational-databases/performance/joins.md#nested_loops)<br />[Merge Join (Zusammenführungsjoin)](../../relational-databases/performance/joins.md#merge)<br />[Hash Join (Hashjoin)](../../relational-databases/performance/joins.md#hash)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Unterabfragen](../../relational-databases/performance/subqueries.md)**|[Subquery Fundamentals (Grundlegende Informationen zu Unterabfragen)](../../relational-databases/performance/subqueries.md#fundamentals)<br />[Correlated subqueries (Korrelierte Unterabfragen)](../../relational-databases/performance/subqueries.md#correlated)<br />[Subquery types (Arten von Unterabfragen)](../../relational-databases/performance/subqueries.md#types)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Gespeicherte Prozeduren](../stored-procedures/stored-procedures-database-engine.md)**|[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md#best-practices)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Benutzerdefinierte Funktionen](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)<br />[Erstellen benutzerdefinierter Funktionen &a#40;Datenbank-Engine &#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Benutzerdefinierte Funktionen](../user-defined-functions/user-defined-functions.md)**|[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md#best-practices)<br />[Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimierung von Parallelismus**|[Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Optimierung des Abfrageoptimierers**|[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Abfragehinweis „USE HINT“](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Statistik](../../relational-databases/statistics/statistics.md)**|[Zeitpunkt des Statistikupdates](../statistics/statistics.md)<br />[Statistikaktualisierung](../../relational-databases/statistics/update-statistics.md)|  

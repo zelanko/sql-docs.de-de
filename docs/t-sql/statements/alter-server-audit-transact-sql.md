@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070316"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,13 +81,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > In einer verwalteten Azure SQL-Datenbank-Instanz funktioniert die SQL-Überwachung auf der Serverebene und speichert `.xel`-Datendateien in Azure-Blobspeicher.
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  Der Pfad der Überwachungsliste. Der Dateiname wird auf der Grundlage des Überwachungsnamens und des Überwachungs-GUID generiert.  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  Gibt die maximale Größe an, die die Überwachungsdatei annehmen kann. Der *max_size*-Wert muss ein Integer gefolgt von **MB**, **GB**, **TB** oder **UNLIMITED** sein. Die minimale Größe, die Sie für *max_size* angeben können, beträgt 2 **MB**, und die maximale Größe beträgt 2.147.483.647 **TB**. Wird **UNLIMITED** angegeben, kann die Größe der Datei so lange zunehmen, bis auf dem Datenträger kein Speicherplatz mehr verfügbar ist. Die Angabe eines Werts kleiner als 2 MB löst den Fehler MSG_MAXSIZE_TOO_SMALL aus. Der Standardwert ist **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  Gibt die maximale Anzahl der Dateien an, die im Dateisystem beibehalten werden. Bei der Einstellung MAX_ROLLOVER_FILES=0 gibt es keine Begrenzung für die Anzahl der Rolloverdateien, die erstellt werden. Der Standardwert ist 0. Der Maximalwert für die Anzahl der Dateien beträgt 2.147.483.647.  
   
  MAX_FILES =*integer*  
@@ -98,7 +97,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Diese Option ordnet der Datei auf dem Datenträger den MAXSIZE-Wert zu. Dieser Wert wird nur dann übernommen, wenn MAXSIZE nicht gleich UNLIMITED ist. Der Standardwert ist OFF.  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  Gibt den Zeitraum in Millisekunden an, der verstreichen kann, bevor die Verarbeitung von Überwachungsaktionen erzwungen wird. Der Wert 0 steht für eine synchrone Übermittlung. Der minimale festlegbare Abfrageverzögerungswert ist 1000 (1 Sekunde), was auch der Standardwert ist. Der maximale Wert beträgt 2.147.483.647 (2.147.483,647 Sekunden oder 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden). Die Angabe eines ungültigen Werts löst den Fehler MSG_INVALID_QUEUE_DELAY aus.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  

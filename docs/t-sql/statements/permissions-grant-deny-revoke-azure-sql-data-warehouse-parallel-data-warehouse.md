@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dda1ea78f8a3c795562faa52478d736f9525a252
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129366"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Berechtigungen: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \<permission>[ **,**...*n*]  
+ \<permission>[ **,** ...*n*]  
  Mindestens eine Berechtigung, die zu erteilen, verweigern oder widerrufen ist.  
   
  ON [ \<class_type> :: ] *securable* Die **ON**-Klausel beschreibt den sicherungsfähigen Parameter, für den Berechtigungen erteilt, verweigert oder widerrufen werden sollen.  
@@ -88,10 +87,10 @@ REVOKE
  *securable*  
  Der Name für die Anmeldung, die Datenbank, die Tabelle, die Sicht, das Schema, die Prozedur, die Rolle oder den Benutzer, dem Berechtigungen erteilt, verweigert oder widerrufen werden sollen. Der Objektname kann mit den dreiteiligen Benennungsregeln angegeben werden, die unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md) beschrieben sind.  
   
- TO *principal* [ **,**...*n*]  
+ TO *principal* [ **,** ...*n*]  
  Mindestens ein Prinzipal, dem Berechtigungen erteilt, verweigert oder widerrufen werden sollen. Ein Prinzipal ist der Anmeldename, der Datenbankbenutzer oder die Datenbankrolle.  
   
- FROM *principal* [ **,**...*n*]  
+ FROM *principal* [ **,** ...*n*]  
  Mindestens ein Prinzipal, für den Berechtigungen widerrufen werden sollen.  Ein Prinzipal ist der Anmeldename, der Datenbankbenutzer oder die Datenbankrolle. **FROM** kann nur mit der Anweisung **REVOKE** verwendet werden. **TO** kann mit **GRANT**, **DENY** oder **REVOKE** verwendet werden.  
   
  WITH GRANT OPTION  

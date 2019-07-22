@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 48bb97bdf073026ffdc7cde48eac1b295a06bd75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1dc7454ecd042f06654f8a269332f8ae7f305ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040252"
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
 Der Name eines asymmetrischen Schlüssels in der Datenbank.
   
 ## <a name="return-types"></a>Rückgabetypen
- **ssNoversion**  
+ **int**  
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert mindestens eine passende Berechtigung für den asymmetrischen Schlüssel, und dem Aufrufer darf die VIEW-Berechtigung für den asymmetrischen Schlüssel nicht verweigert worden sein. Weitere Informationen zu Berechtigungen für asymmetrische Schlüssel finden Sie unter [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md).

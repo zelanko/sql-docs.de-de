@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897136"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Gewusst wie: Erstellen eines leeren SQL Server-Komponententests
 Schließen Sie Komponententests in das Datenbankprojekt ein, um sicherzustellen, dass vorhandene Funktionen nicht durch Änderungen an Datenbankobjekten beeinträchtigt werden. Bei den folgenden Vorgehensweisen wird das Erstellen von SQL Server-Komponententests für beliebige Datenbankobjekte erläutert. SQL Server Data Tools bietet ein gewisses Maß an ergänzender Unterstützung für Datenbankfunktionen, Trigger und gespeicherte Prozeduren. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  

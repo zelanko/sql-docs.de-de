@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3001446fbb71e0aab0d765d58fb938d8e3af5e62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002470"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Verwaltung und Wartung von Failoverclusterinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47738808"
 > [!IMPORTANT]  
 >  Verwenden Sie nicht dasselbe Konto für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto und das WSFC-Dienstkonto. Wenn das Kennwort für das WSFC-Dienstkonto geändert wird, verursacht die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installation einen Fehler.  
   
- Unter [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]werden Dienst-SIDs für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten verwendet. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Unter [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]werden Dienst-SIDs für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten verwendet. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Verwalten einer Failoverclusterinstanz  
   
@@ -63,7 +62,7 @@ ms.locfileid: "47738808"
 |Beschreibt das Verfahren zum Wiederherstellen nach einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster-Fehler.|[Wiederherstellen nach einem Fehler der Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
 |Beschreibt das Verfahren zum Ändern der IP-Adressressource für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz.|[Ändern der IP-Adresse einer Failoverclusterinstanz](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
  [Konfigurieren von FailureConditionLevel-Eigenschafteneinstellungen](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
  [Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  
