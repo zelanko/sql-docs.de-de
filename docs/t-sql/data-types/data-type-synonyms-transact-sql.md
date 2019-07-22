@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 74fe3be365919d61a7b32587f910f083cc5e846d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 30a66dbcf9126031caa84cdf0ff7623d2dd16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927770"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Datentypsynonyme (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,21 +34,21 @@ Synonyme für Datentypen werden für die ISO-Kompatibilität in [!INCLUDE[ssNoVe
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(**_n_**)**|**char(n)**|  
-|**character varying(**_n_**)**|**varchar(n)**|  
+|**character(** _n_ **)**|**char(n)**|  
+|**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[**(**_n_**)**] for _n_ = 1-7|**real**|  
-|**float**[**(**_n_**)**] for _n_ = 8-15|**float**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(**_n_**)**|**nchar(n)**|  
-|**national char(**_n_**)**|**nchar(n)**|  
-|**national character varying(**_n_**)**|**nvarchar(n)**|  
-|**national char varying(**_n_**)**|**nvarchar(n)**|  
+|**national character(** _n_ **)**|**nchar(n)**|  
+|**national char(** _n_ **)**|**nchar(n)**|  
+|**national character varying(** _n_ **)**|**nvarchar(n)**|  
+|**national char varying(** _n_ **)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Synonyme für Datentypen können in DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) statt der entsprechenden Basisdatentypnamen verwendet werden. Zu diesen Anweisungen zählen CREATE TABLE, CREATE PROCEDURE und DECLARE *@variable*. Die Synonyme sind allerdings nicht sichtbar, nachdem die Objekte erstellt wurden. Wenn ein Objekt erstellt wird, wird ihm der Basisdatentyp zugewiesen, der dem Synonym zugeordnet ist. Es gibt keinen Protokolleintrag, dem entnommen werden kann, dass das Synonym in der Anweisung angegeben wurde, mit der das Objekt erstellt wurde.
+Synonyme für Datentypen können in DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) statt der entsprechenden Basisdatentypnamen verwendet werden. Zu diesen Anweisungen zählen CREATE TABLE, CREATE PROCEDURE und DECLARE *@variable* . Die Synonyme sind allerdings nicht sichtbar, nachdem die Objekte erstellt wurden. Wenn ein Objekt erstellt wird, wird ihm der Basisdatentyp zugewiesen, der dem Synonym zugeordnet ist. Es gibt keinen Protokolleintrag, dem entnommen werden kann, dass das Synonym in der Anweisung angegeben wurde, mit der das Objekt erstellt wurde.
   
 Objekten, die von einem Originalobjekt abgeleitet wurden, wie z. B. Spalten eines Resultsets oder Ausdrücke, ist der Basisdatentyp zugewiesen. Alle Metadatenfunktionen, die das Originalobjekt oder jegliches abgeleitete Objekt verwenden, melden den Basisdatentyp, nicht das Synonym, einschließlich:
 
@@ -63,7 +62,7 @@ Sie können z. B. eine Tabelle durch Angabe von `national character varying` ers
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol` wird ein **nvarchar(10)**-Datentyp zugewiesen, und alle folgenden Metadatenfunktionen melden die Spalte als **nvarchar(10)**-Spalte. Die Metadatenfunktionen melden sie nie als **national character varying(10)**-Spalte.
+`VarCharCol` wird ein **nvarchar(10)** -Datentyp zugewiesen, und alle folgenden Metadatenfunktionen melden die Spalte als **nvarchar(10)** -Spalte. Die Metadatenfunktionen melden sie nie als **national character varying(10)** -Spalte.
   
 ## <a name="see-also"></a>Siehe auch
 [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

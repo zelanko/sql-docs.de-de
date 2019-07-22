@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048149"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,14 +64,14 @@ AS PARTITION partition_function_name
  ALL  
  Legt fest, dass alle Partitionen der in *file_group_name* angegebenen Dateigruppe oder der primären Dateigruppe zugeordnet werden, falls **[** PRIMARY **]** angegeben ist. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden.  
   
- *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
+ *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  Gibt die Namen der Dateigruppen an, in denen die durch *partition_function_name* angegebenen Partitionen gespeichert werden. *file_group_name* muss bereits in der Datenbank vorhanden sein.  
   
- Wenn **[** PRIMARY **]** angegeben ist, wird die Partition in der primären Dateigruppe gespeichert. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden. Partitionen werden, beginnend mit der Partition 1, Dateigruppen in der Reihenfolge zugewiesen, in der die Dateigruppen in [**,**_...n_] aufgelistet sind. Derselbe *file_group_name*-Wert kann mehrmals in [**,**_...n_] angegeben werden. Falls *n* zum Speichern der in *partition_function_name* angegebenen Anzahl von Partitionen nicht ausreichend ist, wird für CREATE PARTITION SCHEME ein Fehler gemeldet.  
+ Wenn **[** PRIMARY **]** angegeben ist, wird die Partition in der primären Dateigruppe gespeichert. Wenn ALL angegeben ist, kann nur ein einzelner *file_group_name*-Wert angegeben werden. Partitionen werden, beginnend mit der Partition 1, Dateigruppen in der Reihenfolge zugewiesen, in der die Dateigruppen in [ **,** _...n_] aufgelistet sind. Derselbe *file_group_name*-Wert kann mehrmals in [ **,** _...n_] angegeben werden. Falls *n* zum Speichern der in *partition_function_name* angegebenen Anzahl von Partitionen nicht ausreichend ist, wird für CREATE PARTITION SCHEME ein Fehler gemeldet.  
   
  Falls *partition_function_name* weniger Partitionen als Dateigruppen generiert, wird die erste nicht zugewiesene Dateigruppe als NEXT USED markiert, und eine Informationsmeldung mit der NEXT USED-Dateigruppe wird angezeigt. Falls ALL angegeben ist, behält der einzige *file_group_name*-Wert seine NEXT USED-Eigenschaft für diesen *partition_function_name*-Wert bei. Die NEXT USED-Dateigruppe erhält eine zusätzliche Partition, falls eine solche in einer ALTER PARTITION FUNCTION-Anweisung erstellt wird. Verwenden Sie ALTER PARTITION SCHEME, um zusätzliche nicht zugewiesene Dateigruppen zum Speichern neuer Partitionen zu erstellen.  
   
- Wenn Sie die primäre Dateigruppe in *file_group_name* [ 1 **,**_...n_] angeben, muss PRIMARY durch Trennzeichen begrenzt sein, wie z.B. in **[** PRIMARY **]**, da es sich um ein Schlüsselwort handelt.  
+ Wenn Sie die primäre Dateigruppe in *file_group_name* [ 1 **,** _...n_] angeben, muss PRIMARY durch Trennzeichen begrenzt sein, wie z.B. in **[** PRIMARY **]** , da es sich um ein Schlüsselwort handelt.  
   
  Nur PRIMARY wird für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] unterstützt. Weitere Informationen finden Sie unten im Beispiel E. 
   
