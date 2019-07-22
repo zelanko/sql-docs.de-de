@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2ad973cf845817a0dbd251bbee23ac6f13d7c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110578"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Upgrade eines älteren Testprojekts, das Datenbankkomponententests enthält
 Sie können ein Upgrade für ein älteres Testprojekt, das in Visual Studio 2010 erstellt wurde und Datenbankkomponententests enthält, für die Verwendung der neuen Laufzeit und Tools für SQL Server Data Tools-Datenbankkomponententests durchführen. Nachdem Sie ein Upgrade für ein älteres Projekt durchgeführt haben, können Sie dem Projekt SQL Server-Komponententests hinzufügen (weitere Informationen finden Sie unter [Erstellen und Definieren von SQL Server-Komponententests](../ssdt/creating-and-defining-sql-server-unit-tests.md)).  

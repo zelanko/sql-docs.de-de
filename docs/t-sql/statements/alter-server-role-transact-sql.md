@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070273"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +64,7 @@ Fügt der Serverrolle den angegebenen Serverprinzipal hinzu. *server_principal* 
 DROP MEMBER *server_principal*  
 Entfernt den angegebenen Serverprinzipal aus der Serverrolle. *server_principal* kann eine Anmeldung oder eine benutzerdefinierte Serverrolle sein. *server_principal* darf keine feste Serverrolle, Datenbankrolle oder sa sein.  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 Gibt den neuen Namen der benutzerdefinierten Serverrolle an. Dieser Name darf nicht bereits auf dem Server vorhanden sein.  
   
 ## <a name="remarks"></a>Remarks  
@@ -181,8 +180,7 @@ ALTER SERVER ROLE LargeRC DROP MEMBER Anna;
 [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
 [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
 [Sicherheitsfunktionen &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
-
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+[Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
 [sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
 [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

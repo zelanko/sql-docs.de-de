@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cbedc27-4d77-44ad-bed2-c23b628475a7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 270e4ca486f89a2ceefb59da80b3113a4779b09b
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 54f469f8ab9f0daaf6f37c8f6bad1878bc716dbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086928"
 ---
 # <a name="place-data-and-log-files-on-separate-drives"></a>Platzieren von Daten- und Protokolldateien auf separaten Laufwerken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "51512171"
   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

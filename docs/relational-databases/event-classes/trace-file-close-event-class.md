@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 128b7bac-cb64-43e7-ae9b-87b7d2ebb4ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e1590dad23ff9b2453aafddce736392ee3702688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb3fd4e2bc815e143ba1ff6d690d2c55a40c6f31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087608"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,20 +25,20 @@ ms.locfileid: "47610618"
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**EventClass**|**int**|Ereignistyp = 150.|27|nein|  
-|**EventSequence**|**int**|Eindeutiger Timestamp des Ereignisses, das während der Ablaufverfolgung ausgelöst wurde. Diese Zahl erhöht sich bei jedem ausgelösten Ereignis gleichmäßig.|51|nein|  
-|**FileName**|**nvarchar**|Logischer Name der geschlossenen Ablaufverfolgungsdatei.|36|Benutzerkontensteuerung|  
-|**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, NULL = Benutzer. Bei dieser Ereignisklasse beläuft sich der Wert immer auf 1.|60|Benutzerkontensteuerung|  
-|**LoginName**|**nvarchar**|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username). Bei dieser Ereignisklasse lautet der Wert immer "sa".|11|Benutzerkontensteuerung|  
-|**ObjectID**|**int**|Vom System zugewiesene ID der Ablaufverfolgung.|22|Benutzerkontensteuerung|  
-|**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|nein|  
-|**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Benutzerkontensteuerung|  
-|**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Benutzerkontensteuerung|  
-|**StartTime**|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Benutzerkontensteuerung|  
+|**EventClass**|**int**|Ereignistyp = 150.|27|Nein|  
+|**EventSequence**|**int**|Eindeutiger Timestamp des Ereignisses, das während der Ablaufverfolgung ausgelöst wurde. Diese Zahl erhöht sich bei jedem ausgelösten Ereignis gleichmäßig.|51|Nein|  
+|**FileName**|**nvarchar**|Logischer Name der geschlossenen Ablaufverfolgungsdatei.|36|Ja|  
+|**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, NULL = Benutzer. Bei dieser Ereignisklasse beläuft sich der Wert immer auf 1.|60|Ja|  
+|**LoginName**|**nvarchar**|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username). Bei dieser Ereignisklasse lautet der Wert immer "sa".|11|Ja|  
+|**ObjectID**|**int**|Vom System zugewiesene ID der Ablaufverfolgung.|22|Ja|  
+|**ServerName**|**nvarchar**|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
+|**SessionLoginName**|**nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
+|**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
+|**StartTime**|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 085b4848aaa91cc89e2b70b757a050c66db6de25
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 364fd8e037e2c09afa16294e75096993f861ca20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987153"
 ---
 # <a name="sql-server-broker-activation-object"></a>SQL Server, Broker-Aktivierung-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das Leistungsobjekt **SQLServer:Broker-Aktivierung** enthält Leistungsindikatoren, die Informationen über gespeicherte Aktivierungsprozeduren übermitteln. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
-|SQL Server, Broker-Aktivierungsindikatoren|Beschreibung|  
+|SQL Server, Broker-Aktivierungsindikatoren|und Beschreibung|  
 |-------------------------------------------|-----------------|  
 |**Aufruf von gespeicherten Prozeduren/Sekunde**|Dieser Indikator übermittelt die Gesamtzahl der gespeicherten Aktivierungsprozeduren, die pro Sekunde von allen Warteschlangenüberwachungen der Instanz aufgerufen wurden.|  
 |**Taskgrenze erreicht**|Dieser Indikator übermittelt, wie oft eine Warteschlangenüberwachung insgesamt einen neuen Task gestartet hätte, wenn nicht bereits die maximal für die Warteschlange zulässige Anzahl Tasks ausgeführt würde.|  

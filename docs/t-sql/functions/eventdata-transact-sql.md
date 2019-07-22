@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aed9a65000724b1b3ac7750fde45dddebbe3682d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094576"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -112,7 +111,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Zum Zurückgeben von Ereignisdaten verwenden Sie die XQuery-Methode **value()** anstelle der Methode **query()**. Bei der **query()**-Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen in der Ausgabe zurückgegeben, während bei der **value()**-Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
+>  Zum Zurückgeben von Ereignisdaten verwenden Sie die XQuery-Methode **value()** anstelle der Methode **query()** . Bei der **query()** -Methode werden XML-Daten und durch das kaufmännische Und-Zeichen geschützte CR/LF-Instanzen in der Ausgabe zurückgegeben, während bei der **value()** -Methode CR/LF-Instanzen zurückgegeben werden, die in der Ausgabe nicht sichtbar sind.  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Erstellen einer Protokolltabelle mit Ereignisdaten in einem DDL-Trigger  
 In diesem Beispiel wird eine Tabelle zum Speichern von Informationen zu Ereignissen auf allen Datenbankebenen erstellt und die Tabelle mit einem DDL-Trigger aufgefüllt. Durch die Verwendung von XQuery für die von `EVENTDATA` generierten XML-Daten wird der Ereignistyp und die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erfasst.  

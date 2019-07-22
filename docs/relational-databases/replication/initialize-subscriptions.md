@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ea99b2118c915e03270475e607678ca6f9e92678
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7bf65224506e820ad6c486f3bb0e78d002cc793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127907"
 ---
 # <a name="initialize-subscriptions"></a>Abonnements initialisieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Bevor Abonnenten replizierte Daten empfangen können, müssen sie initialisiert werden. Zwar ist kein Anfangsdataset erforderlich, jedoch müssen für den Abonnenten mindestens das Schema für jedes replizierte Objekt sowie alle für die Replikation benötigten Metadatentabellen und -prozeduren vorhanden sein.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Abonnementeigenschaften**  
  Aktivieren Sie dieses Kontrollkästchen in der **Initialisieren** -Spalte für jeden Abonnenten, für den ein Anfangsdataset erforderlich ist. Wenn das Kontrollkästchen deaktiviert ist, werden nur die Metadaten und Prozeduren für die Replikation initialisiert. Weitere Informationen über das Initialisieren eines Abonnements ohne Momentaufnahmen finden Sie unter [Initialisieren eines Transaktionsabonnements ohne Momentaufnahme](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
@@ -33,7 +32,7 @@ ms.locfileid: "47744944"
 > [!NOTE]  
 >  Der Assistent fordert möglicherweise zur Eingabe einer Verbindung mit dem Verteiler auf, um den entsprechenden Auftrag für den Verteilungs- oder Merge-Agent zu starten.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Initialisieren eines Abonnements](../../relational-databases/replication/initialize-a-subscription.md)   

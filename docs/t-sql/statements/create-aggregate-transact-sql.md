@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141131"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Der Name eines CLR-benutzerdefinierten Typs, der bereits in der aktuellen Datenbank erstellt wurde. Falls *udt_schema_name* nicht angegeben wird, wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon ausgegangen, dass der Typ zum Schema des aktuellen Benutzers gehört.  
   
- *Assemblyname* [ **.**_Klassenname_ ]  
+ *Assemblyname* [ **.** _Klassenname_ ]  
  Die Assembly, die an die benutzerdefinierte Aggregatfunktion gebunden werden soll, und optional der Name des Schemas, zu dem die Assembly gehört, sowie der Name der Klasse innerhalb der Assembly, die das benutzerdefinierte Aggregat implementiert. Die Assembly muss bereits mit einer CREATE ASSEMBLY-Anweisung in der Datenbank erstellt worden sein. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein und mit dem Namen einer Klasse übereinstimmen, die in der Assembly vorhanden ist. *class_name* kann ein mit dem Namespace qualifizierter Name sein, falls die zum Erstellen der Klasse verwendete Programmiersprache Namespaces verwendet, z.B. C#. Wenn *class_name* nicht angegeben ist, geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon aus, dass der Wert mit *aggregate_name* identisch ist.  
   
 ## <a name="remarks"></a>Remarks  

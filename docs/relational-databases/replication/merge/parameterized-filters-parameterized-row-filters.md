@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140142"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Parametrisierte Filter – Parametrisierte Zeilenfilter
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "54127710"
   
      Durch Eingabe eines anderen Wertes als den Namen des Abonnenten oder Verteilers kann diese Funktion überschrieben werden. In der Regel überschreiben Anwendungen diese Funktion mit sinnvolleren Werten, z. B. einem Vertriebsmitarbeiternamen oder einer Vertriebsmitarbeiter-ID. Weitere Informationen finden Sie im Abschnitt zu "Überschreiben des HOST_NAME()-Werts" weiter unten in diesem Thema.  
   
- Der Wert, der von der Systemfunktion zurückgegeben wird, wird mit der von Ihnen angegebenen Spalte in der gefilterten Tabelle verglichen. Danach werden die entsprechenden Daten auf den Abonnenten heruntergeladen. Dieser Vergleich erfolgt sowohl bei der Initialisierung des Abonnements (damit in der Anfangsmomentaufnahme nur die relevanten Daten enthalten sind) als auch bei jeder Abonnementsynchronisierung. Wenn eine Änderung auf dem Abonnenten dazu führt, dass eine Zeile aus einer Partition herausgenommen wird, wird diese Zeile standardmäßig auf dem Abonnenten gelöscht. (Dieses Verhalten kann mit dem **@allow_partition_realignment**-Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) gesteuert werden.)  
+ Der Wert, der von der Systemfunktion zurückgegeben wird, wird mit der von Ihnen angegebenen Spalte in der gefilterten Tabelle verglichen. Danach werden die entsprechenden Daten auf den Abonnenten heruntergeladen. Dieser Vergleich erfolgt sowohl bei der Initialisierung des Abonnements (damit in der Anfangsmomentaufnahme nur die relevanten Daten enthalten sind) als auch bei jeder Abonnementsynchronisierung. Wenn eine Änderung auf dem Abonnenten dazu führt, dass eine Zeile aus einer Partition herausgenommen wird, wird diese Zeile standardmäßig auf dem Abonnenten gelöscht. (Dieses Verhalten kann mit dem **@allow_partition_realignment** -Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) gesteuert werden.)  
   
 > [!NOTE]  
 >  Bei Vergleichen für parametrisierte Filter wird in jedem Fall die Datenbanksortierung verwendet. Wenn die Datenbanksortierung z. B. ohne Unterscheidung von Groß- und Kleinschreibung erfolgt, die Tabellen- oder Spaltensortierung dagegen mit, wird beim Vergleich nicht zwischen Groß-/Kleinschreibung unterschieden.  
@@ -104,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: Geben Sie auf der Seite **HOST\_NAME\(\)-Werte** des Assistenten für neue Abonnements einen Wert an. Weitere Informationen zum Erstellen von Abonnements finden Sie unter [Abonnieren von Veröffentlichungen](../../../relational-databases/replication/subscribe-to-publications.md).  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: Geben Sie für den **@hostname**-Parameter von [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (bei Pushabonnements) oder von [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (bei Pullabonnements) einen Wert an.  
+-   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: Geben Sie für den **@hostname** -Parameter von [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (bei Pushabonnements) oder von [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (bei Pullabonnements) einen Wert an.  
   
 -   Merge-Agent: Geben Sie in der Befehlszeile oder per Agent-Profil einen Wert für den Parameter **-Hostname** an. Weitere Informationen zum Merge-Agent finden Sie unter [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Weitere Informationen zu Agentprofilen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -126,7 +125,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 ### <a name="setting-partition-options"></a>Festlegen von 'partition options'  
  Der Wert für die **partition options** -Eigenschaft wird angegeben, wenn Sie einen Artikel erstellen. Ausschlaggebend für den Wert ist dabei die Art und Weise, wie die Daten in der gefilterten Tabelle für mehrere Abonnenten freigegeben werden. Die Eigenschaft kann mithilfe von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)und dem Dialogfeld **Artikeleigenschaften** auf einen von vier Werten festgelegt werden. Wird das Dialogfeld **Filter hinzufügen** oder **Filter bearbeiten** verwendet, kann aus zwei Werten ausgewählt werden. Diese beiden Dialogfelder stehen über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften** zur Verfügung. Die folgende Tabelle gibt einen Überblick über die verfügbaren Werte für diese Eigenschaft:  
   
-|Beschreibung|Wert in Filter hinzufügen und Filter bearbeiten|Wert in Artikeleigenschaften|Wert in gespeicherten Prozeduren|  
+|und Beschreibung|Wert in Filter hinzufügen und Filter bearbeiten|Wert in Artikeleigenschaften|Wert in gespeicherten Prozeduren|  
 |-----------------|-----------------------------------------|---------------------------------|--------------------------------|  
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die im parametrisierten Filter verwiesen wird, aktualisieren.|**Eine Zeile aus dieser Tabelle wird an mehrere Abonnements gesendet**|**Überlappend**|**0**|  
 |Daten in den Partitionen überlappen sich. Der Abonnent kann die Spalten, auf die in parametrisierten Filtern verwiesen wird, nicht aktualisieren.|Nicht zutreffend*|**Überlappend, Datenänderungen außerhalb der Partition nicht zulassen**|**1**|  

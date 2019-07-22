@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a3bbb45c7ef3d9d30cee90de66b7db4b47b11873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d667b80d2ad7d5b58351ff25d3b1d5b60176b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121272"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>Transaktionsartikel – Regenerieren zur Wiedergabe von Schemaänderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47842238"
   
     1.  Stellen Sie beim Ausführen von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sicher, dass für **@schema_option** 0x02-Bit **TRUE** festgelegt ist.  
   
-    2.  Führen Sie [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) aus, und geben Sie für den **@type**-Parameter 'insert', 'update' oder 'delete' und für den **@value**-Parameter den Namen der benutzerdefinierten Skriptprozedur an.  
+    2.  Führen Sie [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) aus, und geben Sie für den **@type** -Parameter 'insert', 'update' oder 'delete' und für den **@value** -Parameter den Namen der benutzerdefinierten Skriptprozedur an.  
   
      Wenn das nächste Mal eine Schemaänderung vorgenommen wird, ruft die Replikation diese gespeicherte Prozedur auf, um die Definition für die neue benutzerdefinierte gespeicherte Prozedur auszugeben. Anschließend wird die Prozedur an die einzelnen Abonnenten weitergegeben.  
   
@@ -40,11 +39,11 @@ ms.locfileid: "47842238"
   
     1.  Legen Sie bei der Ausführung von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) für **@schema_option** 0x02-Bit den Wert **FALSE** fest, damit die Replikation nicht automatisch benutzerdefinierte Prozeduren auf dem Abonnenten generiert.  
   
-    2.  Erstellen Sie vor jeder Schemaänderung eine neue Skriptdatei, und registrieren Sie das Skript bei der Replikation, indem Sie [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) ausführen. Geben Sie für den **@type** -Parameter den Wert 'custom_script' und für den **@value**festgelegt ist.  
+    2.  Erstellen Sie vor jeder Schemaänderung eine neue Skriptdatei, und registrieren Sie das Skript bei der Replikation, indem Sie [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) ausführen. Geben Sie für den **@type** -Parameter den Wert 'custom_script' und für den **@value** festgelegt ist.  
   
      Bei der nächsten relevanten Schemaänderung wird dieses Skript innerhalb derselben Transaktion wie der DDL-Befehl auf allen Abonnenten ausgeführt. Nach Abschluss der Schemaänderung wird die Registrierung des Skripts aufgehoben. Damit das Skript bei einer weiteren Schemaänderung wieder ausgeführt wird, müssen Sie es erneut registrieren.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
   

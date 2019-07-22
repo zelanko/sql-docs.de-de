@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: f88dac4b-efe0-47ed-9808-972a4381377e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2ec636ee6d5aa92fa6dca7454f100d2fd7ef0134
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 512cbeba4e3199b8e94e990a0f1611c5ad549568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065874"
 ---
 # <a name="alter-database-encryption-key-transact-sql"></a>ALTER DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Ändert einen Verschlüsselungsschlüssel und ein Zertifikat, die für die transparente Datenbankverschlüsselung verwendet werden. Weitere Informationen zur transparenten Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -94,10 +93,10 @@ REGENERATE WITH ALGORITHM = AES_256;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md)   
- [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   

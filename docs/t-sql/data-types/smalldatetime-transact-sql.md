@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000552"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert wird. Die Uhrzeit basiert 
 |-|-|  
 |Syntax|**smalldatetime**|  
 |Verwendung|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
-|Standardmäßige Formate der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|Nicht verfügbar|  
+|Standardmäßige Formate der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|Nicht verfügbar|  
 |Datumsbereich|1900-01-01 bis 2079-06-06<br /><br /> Zwischen dem 1. Januar 1900 und dem 6. Juni 2079|  
 |Uhrzeitbereich|00:00:00 bis 23:59:59<br /><br /> 2007-05-09 23:59:59 wird aufgerundet auf<br /><br /> 2007-05-10 00:00:00|  
 |Elementbereiche|Bei YYYY handelt es sich um vier Ziffern im Berich von 1900 bis 2079, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen. Werte, die kleiner oder gleich 29.998 Sekunden sind, werden auf die nächste Minute abgerundet. Werte, die gleich oder größer 29.999 Sekunden sind, werden auf die nächste Minute aufgerundet.|  
@@ -114,7 +113,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-Beim Konvertieren in **datetimeoffset(n)** wird der **smalldatetime**-Wert in den **datetimeoffset(n)**-Wert kopiert. Die Sekundenbruchteile werden auf 0 und der Zeitzonenoffset auf +00:0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `smalldatetime`-Werts in einen `datetimeoffset(4)`-Wert.
+Beim Konvertieren in **datetimeoffset(n)** wird der **smalldatetime**-Wert in den **datetimeoffset(n)** -Wert kopiert. Die Sekundenbruchteile werden auf 0 und der Zeitzonenoffset auf +00:0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `smalldatetime`-Werts in einen `datetimeoffset(4)`-Wert.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -130,7 +129,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-Beim Konvertieren in **datetime2(n)** wird der **smalldatetime**-Wert in den **datetime2(n)**-Wert kopiert. Die Sekundenbruchteile werden auf 0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `smalldatetime`-Werts in einen `datetime2(4)`-Wert.
+Beim Konvertieren in **datetime2(n)** wird der **smalldatetime**-Wert in den **datetime2(n)** -Wert kopiert. Die Sekundenbruchteile werden auf 0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `smalldatetime`-Werts in einen `datetime2(4)`-Wert.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -182,7 +181,7 @@ SELECT
   
 |Datentyp|Ausgabe|  
 |---|---|
-|**Uhrzeit**|12:35:29. 1234567|  
+|**time**|12:35:29. 1234567|  
 |**Datum**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  

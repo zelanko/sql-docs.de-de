@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47173c820efcced4563bed5f7b2d0f4ed1e4aeb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6a0c3acfaafd2e079901f52d1dd925a604a4c23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130302"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +56,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
   
  Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* unterteilt das von der FROM-Klausel erzeugte Resultset in Partitionen, auf die die Funktion angewendet wird. Wird dies nicht angegeben, verarbeitet die Funktion alle Zeilen des Abfrageresultsets als einzelne Gruppe. *order_by_clause* bestimmt die logische Reihenfolge, in der der Vorgang ausgeführt wird. *order_by_clause* ist erforderlich. Weitere Informationen finden Sie unter [OVER-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  

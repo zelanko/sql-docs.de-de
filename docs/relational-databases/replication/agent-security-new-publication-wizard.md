@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c14af686e33a84ef82c9d568448e44e0242234
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02ae52aa310f760b06c51f003bd417f26486a5f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027841"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Agentsicherheit (Assistent für neue Veröffentlichung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "54130420"
   
  Weitere Informationen zu den für Agents erforderlichen Berechtigungen und zu bewährten Methoden der Replikationssicherheit finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) und [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Momentaufnahme-Agent**  
  Wird für alle Veröffentlichungen angezeigt. Klicken Sie auf **Sicherheitseinstellungen** , um die Sicherheitseinstellungen im Dialogfeld **Sicherheit für den Momentaufnahme-Agent** anzugeben.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "54130420"
 >  Es gibt einen Protokolllese-Agent für jede Datenbank, die mithilfe der Transaktionsreplikation veröffentlicht wird. Wenn bereits eine Transaktionsveröffentlichung in der Datenbank vorhanden ist, sind die Sicherheitseinstellungen schreibgeschützt. Sie können die Einstellungen im Dialogfeld **Veröffentlichungseigenschaften** ändern, diese Änderungen wirken sich jedoch auf alle Transaktionsveröffentlichungen in der Datenbank aus.  
   
  **Warteschlangenlese-Agent**  
- Wird für Momentaufnahme- oder Transaktionsveröffentlichungen angezeigt, die aktualisierbare Abonnements zulassen. Klicken Sie auf **Sicherheitseinstellungen** , um die Sicherheitseinstellungen im Dialogfeld **Sicherheit für den Warteschlangenlese-Agent** anzugeben. Bei Abschluss dieses Assistenten wird ein Auftrag des Warteschlangenlese-Agents erstellt, unabhängig davon, ob Sie Abonnements mit verzögertem Update über eine Warteschlange erstellen. Wenn Sie keine Abonnements mit verzögertem Update über eine Warteschlange erstellen möchten, können Sie den Auftrag deaktivieren. Mit der rechten Maustaste klicken Sie auf den Auftrag (mit dem Namen in der Form: *[\<Publisher >].\< ganze Zahl >*.) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **Aufträge** Ordner, und klicken Sie dann auf **Deaktivieren**  
+ Wird für Momentaufnahme- oder Transaktionsveröffentlichungen angezeigt, die aktualisierbare Abonnements zulassen. Klicken Sie auf **Sicherheitseinstellungen** , um die Sicherheitseinstellungen im Dialogfeld **Sicherheit für den Warteschlangenlese-Agent** anzugeben. Bei Abschluss dieses Assistenten wird ein Auftrag des Warteschlangenlese-Agents erstellt, unabhängig davon, ob Sie Abonnements mit verzögertem Update über eine Warteschlange erstellen. Wenn Sie keine Abonnements mit verzögertem Update über eine Warteschlange erstellen möchten, können Sie den Auftrag deaktivieren. Mit der rechten Maustaste klicken Sie auf den Auftrag (mit dem Namen in der Form: *[\<Publisher >].\< ganze Zahl >* .) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **Aufträge** Ordner, und klicken Sie dann auf **Deaktivieren**  
   
  Klicken Sie im Dialogfeld **Sicherheit für den Warteschlangenlese-Agent** auf **Hilfe** , um weitere Informationen zu den Berechtigungen zu erhalten, die für die vom Warteschlangenlese-Agent verwendeten Konten erforderlich sind.  
   

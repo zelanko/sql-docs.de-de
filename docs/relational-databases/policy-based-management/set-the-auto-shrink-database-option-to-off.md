@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 16403850-d745-4754-b84f-5f01aaecd24e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c48e0671052d612a52703aa7d367e03257cf1e14
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2b202f2856e066047c5458ef8ed1f40b2422b391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021690"
 ---
 # <a name="set-the-autoshrink-database-option-to-off"></a>Festlegen der AUTO_SHRINK-Datenbankoption auf OFF
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51667339"
 ## <a name="for-more-information"></a>Weitere Informationen  
  Microsoft Knowledge Base-Artikel [315512](https://go.microsoft.com/fwlink/?linkid=117750)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

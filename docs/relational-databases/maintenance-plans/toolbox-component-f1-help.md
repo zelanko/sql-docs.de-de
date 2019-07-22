@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40e4dac5c3efaf4df04b8afec3d028d39978e397
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115531"
 ---
 # <a name="toolbox-component-f1-help"></a>Toolboxkomponente (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "53328800"
  Elemente der**Toolbox** können per Drag und Drop verschoben sowie kopiert und in Code-Editoren und in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]auf Flächen der Entwurfssicht eingefügt werden.  
   
 ## <a name="how-the-toolbox-works"></a>Funktionsweise der Toolbox  
- Die Toolbox ist eine verschiebbare Strukturansicht, die in ihrem Verhalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer ähnelt, aber nicht über ein Raster oder Verbindungslinien verfügt. Mehrere Segmente der **Toolbox** (als „Registerkarten“ bezeichnet) können gleichzeitig erweitert werden, und die gesamte Struktur kann innerhalb des Fensters **Toolbox** per Bildlauf verschoben werden. Um eine der Registerkarten der **Toolbox**zu erweitern, klicken Sie auf das Pluszeichen (**+**) neben ihrem Namen. Um eine erweiterte Registerkarte zu reduzieren, klicken Sie auf das Minuszeichen (**-**) neben ihrem Namen.  
+ Die Toolbox ist eine verschiebbare Strukturansicht, die in ihrem Verhalten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Explorer ähnelt, aber nicht über ein Raster oder Verbindungslinien verfügt. Mehrere Segmente der **Toolbox** (als „Registerkarten“ bezeichnet) können gleichzeitig erweitert werden, und die gesamte Struktur kann innerhalb des Fensters **Toolbox** per Bildlauf verschoben werden. Um eine der Registerkarten der **Toolbox**zu erweitern, klicken Sie auf das Pluszeichen ( **+** ) neben ihrem Namen. Um eine erweiterte Registerkarte zu reduzieren, klicken Sie auf das Minuszeichen ( **-** ) neben ihrem Namen.  
   
  Jedes Mal, wenn Sie in einen Editor oder Designer zurückkehren, führt die **Toolbox** automatisch einen Bildlauf zur zuletzt verwendeten Registerkarte und zum zuletzt ausgewählten Element durch. Wenn Sie den Fokus auf einen anderen Editor oder Designer verlagern, wandert die aktuelle Auswahl in der **Toolbox** mit Ihnen mit.  
   

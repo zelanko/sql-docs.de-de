@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017618"
 ---
 # <a name="how-to-clone-an-existing-database"></a>Gewusst wie: Klonen von vorhandenen Datenbanken
 In dieser Aufgabe werden einige der in den vorherigen Prozeduren eingeführten Schritte verwendet, um eine neue Datenbank zu erstellen und vorhandene Daten in diese zu portieren. Darüber hinaus werden die Schritte durchgeführt, die unter [Vorgehensweise: Vergleichen verschiedener Datenbankdefinitionen mithilfe des Schemavergleichs](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) beschrieben werden, um das Schema einer Quell- und einer Projektdatenbank zu synchronisieren.  

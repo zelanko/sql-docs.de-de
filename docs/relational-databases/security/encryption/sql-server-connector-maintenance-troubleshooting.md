@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140701"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +167,7 @@ Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solang
 
 **Auf welche Endpunkte benötigt der SQL Server-Connector Zugriff?** Der Connector kommuniziert mit zwei Endpunkten, die der Positivliste hinzugefügt werden müssen. Der einzige Port, der für die ausgehende Kommunikation mit diesen anderen Diensten erforderlich ist, lautet 443 für Https:
 -  Login.microsoftonline.com/*:443
--  *.Vault.Azure.NET/*:443
+-  *.Vault.Azure.NET/* :443
   
 **Was sind die minimal erforderlichen Berechtigungsstufen, die für die einzelnen Konfigurationsschritte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erforderlich sind?**  
  Zwar können Sie alle Konfigurationsschritte als Mitglied der festen Serverrolle „sysadmin“ ausführen, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] legt Ihnen jedoch dringlich nahe, die verwendeten Berechtigungen zu minimieren. Die folgende Liste definiert die minimale Berechtigungsstufe für jede Aktion.  
@@ -202,7 +201,7 @@ Weitere Informationen zu Active Directory finden Sie unter [Beziehung zwischen A
 ##  <a name="AppendixC"></a> C. Erläuterungen zu Fehlercodes für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector  
  **Anbieterfehlercodes:**  
   
-Fehlercode  |Symbol  |Beschreibung    
+Fehlercode  |Symbol  |und Beschreibung    
 ---------|---------|---------  
 0 | scp_err_Success | Der Vorgang war erfolgreich.    
 1 | scp_err_Failure | Beim Vorgang ist ein Fehler aufgetreten.    

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d332096aee2c38f2cd16c4fa90296ef80b2b15e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e4fc71168a424fa31675e616846f24f6f4af616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111031"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>Anzeigen replizierter Befehle und Informationen in der Verteilungsdatenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +34,11 @@ ms.locfileid: "47701148"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>So zeigen Sie replizierte Befehle in der Verteilungsdatenbank für einen bestimmten Artikel oder für eine bestimmte Datenbank an, der bzw. die mithilfe der Transaktionsreplikation veröffentlicht wurde  
   
-1.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)aus. Geben Sie **@publication** und **@article**. Beachten Sie den Wert von **article id** im Resultset.  
+1.  (Optional) Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)aus. Geben Sie **@publication** und **@article** . Beachten Sie den Wert von **article id** im Resultset.  
   
-2.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)aus. (Optional) Geben Sie die Artikel-ID aus Schritt 2 für **@article_id**. (Optional) Geben Sie die ID der Veröffentlichungsdatenbank für **@publisher_database_id**an, die aus der **database_id** -Spalte in der [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht abgerufen werden kann.  
+2.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)aus. (Optional) Geben Sie die Artikel-ID aus Schritt 2 für **@article_id** . (Optional) Geben Sie die ID der Veröffentlichungsdatenbank für **@publisher_database_id** an, die aus der **database_id** -Spalte in der [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht abgerufen werden kann.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Programmgesteuertes Überwachen der Replikation](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

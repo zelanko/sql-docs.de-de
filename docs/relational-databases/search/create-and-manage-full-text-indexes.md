@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082934"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
 ##  <a name="view"></a> Anzeigen der Eigenschaften eines Volltextindexes
 ### <a name="view-the-properties-of-a-full-text-index-with-transact-sql"></a>Anzeigen der Eigenschaften eines Volltextindexes mit Transact-SQL
 
-|Katalogsicht oder dynamische Verwaltungssicht|Beschreibung|  
+|Katalogsicht oder dynamische Verwaltungssicht|und Beschreibung|  
 |----------------------------------------|-----------------|  
 |[sys.fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)|Gibt eine Zeile für jeden Verweis zwischen Volltextkatalog und Volltextindex zurück.|  
 |[sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|Enthält eine Zeile für jede Spalte, die Teil eines Volltextindexes ist.|  
@@ -73,7 +72,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
 5.  Im Bereich **Seite auswählen** können Sie eine der folgenden Seiten auswählen:  
   
-    |Seite|Beschreibung|  
+    |Seite|und Beschreibung|  
     |----------|-----------------|  
     |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**|  
     |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](populate-full-text-indexes.md).|
@@ -86,7 +85,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
   
  Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen.  
   
-|Eigenschaft|Beschreibung|Funktion|  
+|Eigenschaft|und Beschreibung|Funktion|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN in der Tabelle, die die Dokumenttypinformationen der Spalte enthält.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Gibt an, ob eine Spalte für die Volltextindizierung aktiviert wurde.|COLUMNPROPERTY|  
@@ -166,7 +165,7 @@ GO
  Dieses Beispiel gibt eine Resultsetspalte mit dem Namen `Unique Key Column`zurück, die eine einzelne Zeile mit dem Namen der eindeutigen Schlüsselspalte (DocumentID) der Document-Tabelle enthält. Beachten Sie, dass diese Abfrage NULL zurückgibt, wenn ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indizieren von varbinary(max)- und xml-Spalten  
- Wenn ein Volltextindex einer **varbinary(max)**-, **varbinary**- oder **xml** -Spalte erstellt wird, kann die Spalte mit den Volltextprädikaten (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE) wie jede andere volltextindizierte Spalte durchsucht werden.
+ Wenn ein Volltextindex einer **varbinary(max)** -, **varbinary**- oder **xml** -Spalte erstellt wird, kann die Spalte mit den Volltextprädikaten (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE) wie jede andere volltextindizierte Spalte durchsucht werden.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Indizieren von varbinary(max)- oder varbinary-Daten  
  In einer einzelnen **varbinary(max)** - oder **varbinary** -Spalte können viele Dokumenttypen gespeichert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt jeden Dokumenttyp, für den ein Filter im Betriebssystem installiert und verfügbar ist. Der Dokumenttyp jedes Dokuments wird durch die Dateierweiterung des Dokuments identifiziert. Zum Beispiel verwendet die Volltextsuche für die Dateierweiterung .doc den Filter für Microsoft Word-Dokumente. Eine Liste der verfügbaren Dokumenttypen erhalten Sie, indem Sie die [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) -Katalogsicht abfragen.  
@@ -177,7 +176,7 @@ Beachten Sie, dass die Volltext-Engine vorhandene Filter nutzen kann, die im Bet
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   
-Zum Erstellen eines Volltextindexes für eine **varbinary(max)**-Spalte benötigt die Volltext-Engine Zugriff auf die Dateierweiterungen der Dokumente in der **varbinary(max)**-Spalte. Diese Informationen müssen in einer Tabellenspalte, der so genannten Typspalte, gespeichert werden. Die Spalte muss der **varbinary(max)** -Spalte im Volltextindex zugeordnet sein. Beim Indizieren eines Dokuments verwendet die Volltext-Engine die Dateierweiterung in der Typspalte, um den richtigen Filter zu ermitteln.  
+Zum Erstellen eines Volltextindexes für eine **varbinary(max)** -Spalte benötigt die Volltext-Engine Zugriff auf die Dateierweiterungen der Dokumente in der **varbinary(max)** -Spalte. Diese Informationen müssen in einer Tabellenspalte, der so genannten Typspalte, gespeichert werden. Die Spalte muss der **varbinary(max)** -Spalte im Volltextindex zugeordnet sein. Beim Indizieren eines Dokuments verwendet die Volltext-Engine die Dateierweiterung in der Typspalte, um den richtigen Filter zu ermitteln.  
    
 ### <a name="index-xml-data"></a>Indizieren von XML-Daten  
  In einer **xml** -Datentypspalte werden ausschließlich XML-Dokumente und -Fragmente gespeichert. Für die Dokumente wird immer der XML-Filter verwendet. Ein Typspalte ist daher nicht erforderlich. Bei **xml** -Spalten indiziert der Volltextindex den Inhalt der XML-Elemente und ignoriert die XML-Markups. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt.  

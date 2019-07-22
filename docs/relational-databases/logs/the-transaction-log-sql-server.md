@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083941"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ Um zu vermeiden, dass nur noch wenig Speicherplatz vorhanden ist, erfolgt die K�
   
  Die Protokollkürzung kann tatsächlich aus verschiedenen Gründen verzögert werden. Sie können ermitteln, wodurch die Protokollkürzung verhindert wird, indem Sie die Spalten **log_reuse_wait** und **log_reuse_wait_desc** der Katalogsicht [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) abfragen. In der folgenden Tabelle werden die Werte dieser Spalten beschrieben.  
   
-|log_reuse_wait value|log_reuse_wait_desc value|Beschreibung|  
+|log_reuse_wait value|log_reuse_wait_desc value|und Beschreibung|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|Derzeit ist mindestens eine wiederverwendbare [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) vorhanden.|  
 |1|CHECKPOINT|Seit der letzten Protokollkürzung ist kein Prüfpunkt aufgetreten, oder der Kopf des Protokolls wurde noch nicht über eine [virtuelle Protokolldatei (Virtual Log File, VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) hinaus verschoben. (Alle Wiederherstellungsmodelle)<br /><br /> Dies ist ein häufiger Grund für das verzögerte Kürzen von Protokollen. Weitere Informationen finden Sie unter [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).|  

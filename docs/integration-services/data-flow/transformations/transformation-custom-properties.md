@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d075bdbd593d450cbeef18162da5e8329d4ea850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4efdff475f51eab9ffd55a491ace3dd2084cd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943911"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -146,7 +145,7 @@ ms.locfileid: "65725797"
 |Eigenschaft|Datentyp|und Beschreibung|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Integer|Ein Wert, der die **LineageID** der Eingabespalte angibt, die die Quelle der Ausgabespalte ist.|  
-|MapFlags|Ganze Zahl (Enumeration)|Ein Wert, der die Zeichenfolgenvorgänge angibt, die die Transformation zum Zuordnen der Zeichen für die Spalte ausführt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Byteumkehrung** (2)<br /><br /> **Normale Breite** (6)<br /><br /> **Halbe Breite** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Linguistische Schreibweise** (7)<br /><br /> **Kleinbuchstaben** (0)<br /><br /> **Chinesisch (vereinfacht)** (8)<br /><br /> **Chinesisch (traditionell)**(9)<br /><br /> **Großbuchstaben** (1)|  
+|MapFlags|Ganze Zahl (Enumeration)|Ein Wert, der die Zeichenfolgenvorgänge angibt, die die Transformation zum Zuordnen der Zeichen für die Spalte ausführt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **Byteumkehrung** (2)<br /><br /> **Normale Breite** (6)<br /><br /> **Halbe Breite** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Linguistische Schreibweise** (7)<br /><br /> **Kleinbuchstaben** (0)<br /><br /> **Chinesisch (vereinfacht)** (8)<br /><br /> **Chinesisch (traditionell)** (9)<br /><br /> **Großbuchstaben** (1)|  
   
  Die Eingabe, die Eingabespalten und die Ausgabe der Transformation zum Zuordnen der Zeichen verfügen nicht über benutzerdefinierte Eigenschaften.  
   

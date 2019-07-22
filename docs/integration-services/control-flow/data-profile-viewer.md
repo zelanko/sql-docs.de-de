@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: feacddee000b296e5a0687e63deb1cb75fe1b04c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70eb07072e77e9626e8617e03cc74928d53b8c4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934624"
 ---
 # <a name="data-profile-viewer"></a>Datenprofil-Viewer
 
@@ -38,24 +37,24 @@ ms.locfileid: "65727809"
   
 -   Klicken Sie mit der rechten Maustaste im **-Designer auf den Task** Datenprofilerstellung [!INCLUDE[ssIS](../../includes/ssis-md.md)] , und klicken Sie dann auf **Bearbeiten**. Klicken Sie auf der Seite **Allgemein** des **Editors für den Datenprofilerstellungs-Task** auf **Profil-Viewer öffnen**.  
   
--   Führen Sie im Ordner „*\<Laufwerk>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn“ die Datei „DataProfileViewer.exe“ aus.  
+-   Führen Sie im Ordner „ *\<Laufwerk>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn“ die Datei „DataProfileViewer.exe“ aus.  
   
  Der Viewer verwendet mehrere Bereiche, um die von Ihnen angeforderten Profile und berechneten Ergebnisse mit optionaler Detail- und Drilldownfunktion anzuzeigen.  
   
- Bereich**Profile**   
+ Bereich**Profile**  
  Der Bereich **Profile** zeigt die Profile an, die im Datenprofil-Task angefordert wurden. Wenn Sie die für das Profil berechneten Ergebnisse anzeigen möchten, wählen Sie im Bereich **Profile** das Profil aus. Die Ergebnisse werden dann in den anderen Bereichen des Viewers angezeigt.  
   
- Bereich**Ergebnisse**   
+ Bereich**Ergebnisse**  
  Der Bereich **Ergebnisse** verwendet eine einzelne Zeile, um die berechneten Ergebnisse des Profils zusammenzufassen. Wenn Sie beispielsweise ein **Verteilungsprofil für Spaltenlänge**anfordern, enthält diese Zeile die minimale und maximale Länge und die Zeilenanzahl. Für die meisten Profile können Sie diese Zeile im Bereich **Ergebnisse** auswählen, um zusätzliche Details im optionalen Bereich **Details** anzuzeigen.  
   
- Bereich**Details**   
+ Bereich**Details**  
  Für die meisten Profiltypen zeigt der Bereich **Details** zusätzliche Informationen zu den Profilergebnissen an, die im Bereich **Ergebnisse** ausgewählt wurden. Wenn Sie beispielsweise ein **Verteilungsprofil für Spaltenlänge**anfordern, zeigt der Bereich **Details** jede gefundene Spaltenlänge an. Der Bereich zeigt auch die Anzahl und den Prozentwert der Zeilen an, in denen der Spaltenwert diese Spaltenlänge hat.  
   
  Für die drei Profiltypen, die für mehrere Spalten berechnet werden (Kandidatenschlüssel, funktionale Abhängigkeit und Wertinklusion), zeigt der Bereich **Details** Verletzungen der erwarteten Beziehung an. Wenn Sie beispielsweise ein Kandidatenschlüsselprofil anfordern, zeigt der Detailbereich doppelte Werte an, die die Eindeutigkeit des Kandidatenschlüssels verletzen.  
   
  Wenn die Datenquelle verfügbar ist, mit der das Profil berechnet wird, können Sie im Bereich **Details** auf eine Zeile doppelklicken, um die übereinstimmenden Datenzeilen im Bereich **Drilldown** anzuzeigen.  
   
- Bereich**Drilldown**   
+ Bereich**Drilldown**  
  Sie können im Bereich **Details** auf eine Zeile doppelklicken, um die übereinstimmenden Datenzeilen im Bereich **Drilldown** anzuzeigen, wenn die folgenden Bedingungen erfüllt sind:  
   
 -   Die Datenquelle, mit der das Profil berechnet wird, ist verfügbar.  
@@ -80,13 +79,13 @@ ms.locfileid: "65727809"
  **Datei**  
  Klicken Sie, um nach der gespeicherten Datei zu suchen, die die Ausgabe des Datenprofilerstellungs-Tasks enthält.  
   
- Bereich**Profile**   
+ Bereich**Profile**  
  Erweitern Sie die Struktur im Bereich **Profile** , um die Profile anzuzeigen, die in der Ausgabe enthalten sind. Wählen Sie ein Profil aus, um die Ergebnisse für dieses Profil anzuzeigen.  
   
- Bereich**Meldung**   
+ Bereich**Meldung**  
  Zeigt Statusmeldungen an.  
   
- Bereich**Drilldown**   
+ Bereich**Drilldown**  
  Zeigt die Datensätze an, die mit einem Wert in der Ausgabe übereinstimmen, wenn die vom Datenprofilerstellungs-Task verwendete Datenquelle verfügbar ist.  
   
  Beispiel: Wenn Sie die Ausgabe eines Verteilungsprofils für Spaltenwert für eine Spalte US-Bundesstaat anzeigen, enthält der Bereich **Detaillierte Wertverteilung** möglicherweise eine Zeile für "WA". Doppelklicken Sie auf die Zeile im Bereich **Detaillierte Wertverteilung** , um die Datenreihen anzuzeigen, bei denen der Wert der Bundesstaatspalte im Drilldownbereich „WA“ lautet.  

@@ -10,13 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 309ef92b105ae022cfc543ce0e73107af6870331
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054243"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Wählen einer Upgrademethode für die Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +26,9 @@ Es gibt verschiedene zu prüfende Ansätze beim Planen des Upgrades von [!INCLUD
   
  **Download**  
   
--   Navigieren Sie zum Herunterladen von [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)**.  
+-   Navigieren Sie zum Herunterladen von [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)]zum  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)**, um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition bereits installiert ist.  
+-   Sie haben ein Azure-Konto?  Wechseln Sie anschließend **[hierhin](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** , um einen virtuellen Computer zu starten, auf dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition bereits installiert ist.  
   
 > [!NOTE]  
 >  Sie können auch ein Upgrade auf Azure SQL-Datenbank erwägen oder Ihre SQL Server-Umgebung als Teil Ihres Upgradeplans virtualisieren. Diese Themen liegen außerhalb des Rahmens dieses Artikels, hier finden Sie jedoch einige Links:

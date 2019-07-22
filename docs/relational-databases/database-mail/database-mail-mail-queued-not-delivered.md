@@ -13,13 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59b8c8dd755a73220de058b6c10220f4cf00d6d6
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.openlocfilehash: 6c776fd176379e8a65bdc70f6bf4c56fd370bef0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134379"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Datenbank-E-Mail: E-Mail in Warteschlange, nicht versandt 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

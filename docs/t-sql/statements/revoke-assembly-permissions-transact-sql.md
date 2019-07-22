@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10a5ac6202e635d69756fa57430109c7459e353
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082385"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE-Assemblyberechtigungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Gibt eine Berechtigung an, die für eine Assembly aufgehoben werden kann. Unten aufgeführt.  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  Gibt die Assembly an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
@@ -114,9 +113,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   

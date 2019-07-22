@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ff9e02b15c70d08151384bb46332e8b4ea550a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035164"
 ---
 # <a name="how-to-navigate-between-scripts"></a>Gewusst wie: Navigation zwischen Skripts
 Der Transact\-SQL-Editor für die Offlineentwicklung bietet zwei nützliche Navigationstools, die Benutzern von Visual Studio bereits vertraut sind: „Gehe zu Definition“ und „Alle Verweise suchen“. Sie können z. B. mit der rechten Maustaste auf einen Tabellennamen klicken und mit der Option "Alle Verweise suchen" alle Verweise auf die Tabelle im Projekt auflisten. Sie können auf ein Suchergebnis doppelklicken, um zur jeweiligen Codedatei zu wechseln. In dieser Datei können Sie wiederum mit der rechten Maustaste auf den Tabellennamen klicken und "Gehe zu Definition" auswählen, um zurück zur Tabellendefinition zu wechseln.  

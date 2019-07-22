@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 39f32d8934ebff8cd53bb8defdc30d0510913eb9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 09062541d167be92c40877033e46eec6ebd1c98f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012167"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Benutzerverbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

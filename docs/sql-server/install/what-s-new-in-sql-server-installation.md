@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b136b27-4779-4284-904f-b5a1c12bdcc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ee09dea7e794344b6563d540c8bce154784b12a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c42d536f427bba1e0b1642bcc5068bf3cd2d04f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045652"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Neuigkeiten in der SQL Server-Installation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47738948"
  Upgrades von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] werden unterstützt, die \-parallele\- Ausführung jedoch nicht. Weitere Informationen zur Unterstützung von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Neues in SQL Server 2017](../../sql-server/what-s-new-in-sql-server-2017.md)
 
 [Spezifikationen der maximalen Kapazität für SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)   

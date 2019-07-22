@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a920a45381b20e4ea246619810856624a29025
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095638"
 ---
 # <a name="secure-the-publisher"></a>Sichern des Verlegers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "54132950"
  Die PAL ist der primäre Mechanismus für die Sicherung von Veröffentlichungen beim Verleger. Die PAL funktioniert ähnlich wie eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Zugriffssteuerungsliste. Wenn Sie eine Veröffentlichung erstellen, wird von der Replikation eine PAL für diese Veröffentlichung erstellt. Die PAL kann so konfiguriert werden, dass Sie eine Liste mit Anmeldungen und Gruppen enthält, denen Zugriff auf die Veröffentlichung gewährt wird. Wenn ein Agent eine Verbindung mit dem Verleger oder Verteiler herstellt und den Zugriff auf eine Veröffentlichung anfordert, werden die Authentifizierungsinformationen in der PAL mit der vom Agent bereitgestellten Verlegeranmeldung verglichen. Dieser Vorgang bietet zusätzliche Sicherheit für den Verleger, da die Anmeldung bei Verleger und Verteiler vor einer Verwendung durch ein Clienttool geschützt ist, das direkt beim Verleger Änderungen ausführen könnte.  
   
 > [!NOTE]  
->  Die Replikation erstellt auf dem Verleger eine Rolle für jede Veröffentlichung, um die PAL-Mitgliedschaft durchzusetzen. Für die Mergereplikation weist die Rolle einen Namen im Format **Msmerge_**_\<PublicationID>_ auf, für die Transaktionsreplikation und die Momentaufnahmenreplikation im Format **MSReplPAL_**_\<PublicationDatabaseID>_**_**_\<PublicationID>_.  
+>  Die Replikation erstellt auf dem Verleger eine Rolle für jede Veröffentlichung, um die PAL-Mitgliedschaft durchzusetzen. Für die Mergereplikation weist die Rolle einen Namen im Format **Msmerge_** _\<PublicationID>_ auf, für die Transaktionsreplikation und die Momentaufnahmenreplikation im Format **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ .  
   
  Folgende Anmeldungen sind in der PAL standardmäßig enthalten: die Mitglieder der festen **sysadmin** -Serverrolle zum Zeitpunkt der Veröffentlichungserstellung sowie die Anmeldung, die zur Veröffentlichungserstellung verwendet wurde. Standardmäßig können sämtliche Anmeldungen, die Mitglied der festen **sysadmin** -Serverrolle oder der festen **db_owner** -Datenbankrolle in der Veröffentlichungsdatenbank sind, eine Veröffentlichung abonnieren, ohne der PAL explizit hinzugefügt worden zu sein.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "54132950"
  Für sämtliche Verleger und Veröffentlichungen (die Abonnements mit verzögerten Updates über eine Warteschlange zulassen), die einem bestimmten Verleger zugeordnet sind, gibt es einen Warteschlangenlese-Agent. Weitere Informationen finden Sie unter [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;amp;#40;SQL Server-Konfigurations-Manager&amp;amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   
