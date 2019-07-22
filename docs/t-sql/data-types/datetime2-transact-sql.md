@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0b6a519ba8c1fe48538af0f5d29c4c2f015a8aa
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086776"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,12 +36,12 @@ Definiert ein Datum, das mit einer Uhrzeit kombiniert ist und auf dem 24-Stunden
   
 ## <a name="datetime2-description"></a>datetime2-Beschreibung
   
-|Eigenschaft|Wert|  
+|Eigenschaft|value|  
 |--------------|-----------|  
 |Syntax|**datetime2** [ (*Genauigkeit in Sekundenbruchteilen*) ]|  
 |Verwendung|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
-|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|YYYY-MM-DD hh:mm:ss [.Sekundenbruchteile]<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
-|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1. Januar 1 n. Chr. bis 31. Dezember 9999 n. Chr.|  
+|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|YYYY-MM-DD hh:mm:ss [.Sekundenbruchteile]<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
+|Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1\. Januar 1 n. Chr. bis 31. Dezember 9999 n. Chr.|  
 |Uhrzeitbereich|00:00:00 bis 23:59:590,9999999|  
 |Zeitzonenoffsetbereich|None|  
 |Elementbereiche|Bei YYYY handelt es sich um eine vierstellige Zahl im Bereich von 0001 bis 9999, die ein Jahr darstellt.<br /><br /> Bei MM handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellt.<br /><br /> Bei DD handelt es sich um eine zweistellige Zahl im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellt.<br /><br /> Bei hh handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 23, die die Stunde darstellt.<br /><br /> Bei mm handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Minute darstellt.<br /><br /> Bei ss handelt es sich um eine zweistellige Zahl im Bereich von 00 bis 59, die die Sekunde darstellt.<br /><br /> Bei n* handelt es sich um eine null- bis siebenstellige Zahl von 0 bis 9999999, die die Sekundenbruchteile darstellt. In Informatica werden die Sekundenbruchteile abgeschnitten, wenn n > 3.|  
@@ -67,7 +66,7 @@ In den folgenden Tabellen werden die unterstützten ISO 8601- und ODBC-Formate f
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|Dieses Format wird nicht von den SET LANGUAGE- und SET DATEFORMAT-Gebietsschemaeinstellungen für Sitzungen beeinflusst. Das **T**, die Doppelpunkte (:) und der Punkt (.) werden in das Zeichenfolgenliteral eingeschlossen, z.B. '2007-05-02T19:58:47.1234567'.|  
   
-|ODBC|Beschreibung|  
+|ODBC|und Beschreibung|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.Sekundenbruchteile]' }|ODBC-API-spezifisch:<br /><br /> Für die Anzahl der Stellen rechts vom Dezimaltrennzeichen, die den Sekundenbruchteil darstellen, kann 0 bis 7 (100 Nanosekunden) angegeben werden.|  
   
@@ -79,8 +78,8 @@ Einige Downlevelclients unterstützen nicht die Datentypen **time**, **date**, *
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 | --- | --- | --- | --- | --- | --- |
-|**Uhrzeit**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
-|**Datum**|YYYY-MM-DD|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**Datum**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
   
@@ -199,7 +198,7 @@ SELECT
   
 |Datentyp|Ausgabe|  
 |---|---|
-|**Uhrzeit**|12:35:29. 1234567|  
+|**time**|12:35:29. 1234567|  
 |**Datum**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  

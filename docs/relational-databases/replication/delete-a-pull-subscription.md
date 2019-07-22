@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55b31126c7c0a64ab394f39328d0e821886b84af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813a0da699fe098f6086208a93e87aeab940a486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063040"
 ---
 # <a name="delete-a-pull-subscription"></a>Löschen eines Pullabonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,15 +66,15 @@ ms.locfileid: "47794508"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So löschen Sie ein Pullabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) aus. Geben Sie **@publication**, **@publisher**und **@publisher_db**.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) aus. Geben Sie **@publication** , **@publisher** und **@publisher_db** verfügbar ist.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) aus. Geben Sie **@publication** und **@subscriber**verfügbar ist. Geben Sie für **@article** den Wert **@article**. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) aus. Geben Sie **@publication** und **@subscriber** eine Momentaufnahme über FTP bereitgestellt wird. Geben Sie für **@article** den Wert **@article** . (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>So löschen Sie ein Pullabonnement für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) aus. Geben Sie **@publication**, **@publisher**und **@publisher_db**.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) aus. Geben Sie **@publication** , **@publisher** und **@publisher_db** .  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)aus. Geben Sie **@publication**, **@subscriber**und **@subscriber_db**verfügbar ist. Geben Sie für **pull** den Wert **@subscription_type**. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)aus. Geben Sie **@publication** , **@subscriber** und **@subscriber_db** verfügbar ist. Geben Sie für **pull** den Wert **@subscription_type** . (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Im folgenden Beispiel wird ein Pullabonnement für eine Transaktionsveröffentlichung gelöscht. Der erste Batch wird auf dem Abonnenten ausgeführt und der zweite wird auf dem Verleger ausgeführt.  
@@ -138,8 +137,8 @@ ms.locfileid: "47794508"
   
  [!code-vb[HowTo#rmo_vb_DropMergePullSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropmergepullsub)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

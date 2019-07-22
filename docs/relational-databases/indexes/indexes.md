@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0211b346906daaa6d32e9dd3824d0f40dd2f008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 899bd7aada6364449fa71e9f87839447de73dedd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909667"
 ---
 # <a name="indexes"></a>Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47770358"
 ## <a name="available-index-types"></a>Verfügbare Indextypen
 In der nachfolgenden Tabelle sind die Typen von Indizes aufgelistet, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar sind. Außerdem werden hier Links auf zusätzliche Informationen bereitgestellt.  
   
-|Indextyp|Beschreibung|Zusätzliche Informationen|  
+|Indextyp|und Beschreibung|Zusätzliche Informationen|  
 |----------------|-----------------|----------------------------|  
 |Hash|Mit einem Hashindex erfolgt der Datenzugriff über eine Hashtabelle im Arbeitsspeicher. Hashindizes belegen einen festen Speicherplatz, dessen Größe eine Funktion der Bucketanzahl ist.|[Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Hash Index Design Guidelines (Richtlinien zum Entwerfen von Hashindizes)](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |Speicheroptimiert, nicht gruppiert|Bei speicheroptimierten, nicht gruppierten Indizes basiert die Arbeitsspeichernutzung auf der Zeilenanzahl und Größe der Indexschlüsselspalten.|[Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [Memory-Optimized Nonclustered Index Design Guideline (Richtlinien zum Entwerfen von speicheroptimierten, nicht gruppierten Indizes)](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  

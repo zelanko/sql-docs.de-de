@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 56b8c34562c85e1154d01b772a6ba2db1b28ab70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b3e67e84738532baee8f0413dd3896c2a19f26d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139115"
 ---
 # <a name="suserid-transact-sql"></a>SUSER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ SUSER_ID ( [ 'login' ] )
  Der Anmeldename des Benutzers. *login* ist vom Typ **nchar**. Wenn *login* als **char** angegeben ist, wird *login* implizit in **nchar** konvertiert. *login* kann jeder beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung oder Windows-Gruppen oder jedem Windows-Benutzer entsprechen, die bzw. der die Berechtigung zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat. Falls *login* nicht angegeben wird, wird die Anmelde-ID für den aktuellen Benutzer zurückgegeben. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  SUSER_ID gibt nur für die Anmeldungen eine ID zurück, die explizit in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellt wurden. Diese ID wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Nachverfolgung des Besitzes und der Berechtigungen verwendet. Diese ID ist nicht gleichbedeutend mit der Sicherheits-ID (SID) der Anmeldung, die von SUSER_SID zurückgegeben wird. Wenn *login* eine SQL Server-Anmeldung ist, ist die SID einem GUID zugeordnet. Wenn *login* eine Windows-Anmeldung oder eine Windows-Gruppe ist, ist die SID einer Windows-Sicherheits-ID zugeordnet.  

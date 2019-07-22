@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78b83b521da0c7a045fee803b51f143c94b08bf8
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050648"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -123,7 +122,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
 ## <a name="remarks"></a>Remarks  
  Die vollständige Syntax der GRANT-Anweisung ist sehr komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax für das Erteilen von Berechtigungen für spezifische sicherungsfähige Elemente wird in den unten aufgeführten Artikeln beschrieben.  
   
- Die REVOKE-Anweisung kann zum Entfernen erteilter Berechtigungen verwendet werden. Ferner kann mit der DENY-Anweisung verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  
+ Die REVOKE-Anweisung kann zum Entfernen von erteilten Berechtigungen verwendet werden, und mit der DENY-Anweisung kann verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  
   
  Durch das Erteilen einer Berechtigung wird DENY oder REVOKE für diese Berechtigung aus dem angegebenen sicherungsfähigen Element entfernt. Falls dieselbe Berechtigung aus einem höheren Bereich als dem des sicherungsfähigen Elements verweigert wird, hat DENY Vorrang. Das Aufheben der erteilten Berechtigung in einem höheren Bereich hat jedoch keinen Vorrang.  
   
@@ -149,7 +148,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Berechtigungen im PDF-Format abzurufen.  
+ Navigieren Sie zu [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im PDF-Format abzurufen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Berechtigende (oder der mit der AS-Option angegebene Prinzipal) benötigt entweder die Berechtigung selbst mit GRANT OPTION oder eine höhere Berechtigung, die die erteilte Berechtigung impliziert. Falls die AS-Option verwendet wird, gelten zusätzliche Anforderungen. Weitere Informationen hierzu finden Sie im Artikel zu sicherungsfähigen Elementen.  

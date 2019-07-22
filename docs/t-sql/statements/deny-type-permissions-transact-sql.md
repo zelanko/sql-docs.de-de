@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 280d5d37ca364e32e2bd8638cdd03563a2b86f49
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984347"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY (Typberechtigungen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,8 +54,8 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Gibt eine Berechtigung an, die für einen Typ verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- Gibt den Typ an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer (**::**) ist erforderlich. Wenn *schema_name* nicht angegeben ist, wird das Standardschema verwendet. Wenn *schema_name* angegeben ist, ist der Schemabereichsqualifizierer (**.**) erforderlich.  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ Gibt den Typ an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer ( **::** ) ist erforderlich. Wenn *schema_name* nicht angegeben ist, wird das Standardschema verwendet. Wenn *schema_name* angegeben ist, ist der Schemabereichsqualifizierer ( **.** ) erforderlich.  
   
  TO \<database_principal>  
  Gibt den Prinzipal an, für den die Berechtigung verweigert wird.  
@@ -128,9 +127,8 @@ GO
  [GRANT (Typberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
  [REVOKE (Typberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Sicherungsfähige Elemente](../../relational-databases/security/securables.md)  
   
   

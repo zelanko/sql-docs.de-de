@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d5d185a55423bd0dbdeae792c180ba78f9c89cf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109701"
 ---
 # <a name="databases"></a>Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "51558547"
   
  Wenn Personen Zugriff auf eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erhalten, werden sie über einen Anmeldenamen identifiziert. Wenn Personen Zugriff auf eine Datenbank erhalten, werden sie als Datenbankbenutzer identifiziert. Ein Datenbankbenutzer kann auf einer Anmeldung basieren. Wenn eigenständige Datenbanken aktiviert werden, kann ein Datenbankbenutzer erstellt werden, der nicht auf einer Anmeldung basiert. Weitere Informationen über Benutzer finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md).  
   
- Einem Benutzer mit Zugriff auf eine Datenbank kann die Berechtigung zum Zugreifen auf die Objekte in der Datenbank erteilt werden. Obwohl Berechtigungen einzelnen Benutzern erteilt werden können, sollten Datenbankrollen erstellt, den Rollen Datenbankbenutzer hinzugefügt und dann Zugriffsberechtigungen für die Rollen erteilt werden. Indem Berechtigungen für Rollen und nicht für Benutzer erteilt werden, können die Berechtigungen leichter konsistent und verständlich gehalten werden, während die Anzahl der Benutzer wächst und sich laufend ändert. Weitere Informationen zu Rollenberechtigungen finden Sie unter [CREATE ROLE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-role-transact-sql.md) und [Prinzipale &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
+ Einem Benutzer mit Zugriff auf eine Datenbank kann die Berechtigung zum Zugreifen auf die Objekte in der Datenbank erteilt werden. Obwohl Berechtigungen einzelnen Benutzern erteilt werden können, sollten Datenbankrollen erstellt, den Rollen Datenbankbenutzer hinzugefügt und dann Zugriffsberechtigungen für die Rollen erteilt werden. Indem Berechtigungen für Rollen und nicht für Benutzer erteilt werden, können die Berechtigungen leichter konsistent und verständlich gehalten werden, während die Anzahl der Benutzer wächst und sich laufend ändert. Weitere Informationen zu Rollenberechtigungen finden Sie unter [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md) und [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
 ## <a name="working-with-databases"></a>Arbeiten mit Datenbanken  
  Die meisten Personen, die mit Datenbanken arbeiten, verwenden das Tool [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Das [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Tool besitzt eine grafische Benutzeroberfläche zum Erstellen von Datenbanken und den Objekten in den Datenbanken. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] enthält außerdem einen Abfrage-Editor für die Interaktion mit Datenbanken durch das Schreiben von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] kann vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationsdatenträger installiert oder von MSDN heruntergeladen werden. Weitere Informationen zum [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Tool finden Sie unter [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md).
@@ -62,6 +61,6 @@ ms.locfileid: "51558547"
   
  [Sichten](../../relational-databases/views/views.md)  
   
- [Gespeicherte Prozeduren &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
+ [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
   
   

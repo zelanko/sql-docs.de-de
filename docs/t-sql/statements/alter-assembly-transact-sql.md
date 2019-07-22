@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066112"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ALTER ASSEMBLY assembly_name
   
  Weitere Informationen finden Sie unter [Implementieren von Assemblys](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *Dateiname*[ **,**_...n_] | ALL } ]  
+ [ DROP FILE { *Dateiname*[ **,** _...n_] | ALL } ]  
  Entfernt den dieser Assembly zugeordneten Dateinamen oder alle dieser Assembly zugeordneten Dateien aus der Datenbank. Falls gefolgt von ADD FILE, wird zuerst DROP FILE ausgeführt. Dadurch können Sie eine Datei mit demselben Dateinamen ersetzen.  
   
 > [!NOTE]  

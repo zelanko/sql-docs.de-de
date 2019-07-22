@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4eeee8a769931fdd28dfa608a49162df545732bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070181"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ DROP SEARCH PROPERTY LIST JobCandidateProperties;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   

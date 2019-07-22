@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113711"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,12 +36,12 @@ Definiert ein Datum in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 ## <a name="date-description"></a>Beschreibung von „date“
   
-|Eigenschaft|Wert|  
+|Eigenschaft|value|  
 |--------------|-----------|  
 |Syntax|**Datum**|  
 |Verwendung|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
-|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird für Downlevelclients verwendet)|YYYY-MM-DD<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
-|Bereich|0001-01-01 bis 9999-12-31 (1582-10-15 bis 9999-12-31 für Informatica)<br /><br /> 1. Januar, 1 CE (Common Era) bis 31. Dezember, 9999 CE (15. Oktober, 1582 CE bis 31. Dezember, 9999 CE für Informatica)|  
+|Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|JJJJ-MM-TT<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
+|Bereich|0001-01-01 bis 9999-12-31 (1582-10-15 bis 9999-12-31 für Informatica)<br /><br /> 1\. Januar, 1 CE (Common Era) bis 31. Dezember, 9999 CE (15. Oktober, 1582 CE bis 31. Dezember, 9999 CE für Informatica)|  
 |Elementbereiche|Bei YYYY handelt es sich um vier Ziffern von 0001 bis 9999, die ein Jahr darstellen. Für Informatica ist JJJJ auf den Bereich 1582 bis 9999 beschränkt.<br /><br /> Bei MM handelt es sich um zwei Ziffern von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern von 01 bis 31, die im angegebenen Monat einen Tag darstellen.|  
 |Zeichenlänge|10 Stellen|  
 |Genauigkeit, Dezimalstellen|10, 0|  
@@ -58,27 +57,27 @@ Definiert ein Datum in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 ## <a name="supported-string-literal-formats-for-date"></a>Unterstützte Formate der Zeichenfolgenliterale für date
 In den folgenden Tabellen werden die gültigen Formate der Zeichenfolgenliterale für den **date**-Datentyp aufgeführt.
   
-|Numerisch|Beschreibung|  
+|Numerisch|und Beschreibung|  
 |-------------|-----------------|  
 |dmy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m, dd und [yy]yy stellen den Monat, den Tag und das Jahr in einer Zeichenfolge mit Schrägstrichen (/), Bindestrichen (-) oder Punkten (.) als Trennzeichen dar.<br /><br /> Es werden nur vier- oder zweistellige Jahreszahlen unterstützt. Verwenden Sie nach Möglichkeit immer vierstellige Jahreszahlen. Verwenden Sie die Option [Konfigurieren des Umstellungsjahres für Angaben mit zwei Ziffern](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md), um eine ganze Zahl zwischen 0001 und 9999 anzugeben, die das Umstellungsjahr für das Interpretieren zweistelliger Jahre als vierstellige Jahre darstellt.<br /><br /> **Hinweis!** Für Informatica ist JJJJ auf den Bereich 1582 bis 9999 beschränkt.<br /><br /> Ein zweistelliges Jahr, das kleiner als oder gleich den letzten zwei Ziffern des Umstellungsjahres ist, liegt im selben Jahrhundert wie das Umstellungsjahr. Ein zweistelliges Jahr, das größer als die letzten zwei Ziffern des Umstellungsjahres ist, liegt im Jahrhundert vor dem Umstellungsjahr. Wenn z. B. two-digit year cutoff den Standardwert 2049 annimmt, wird das zweistellige Jahr 49 als 2049 und das zweistellige Jahr 50 als 1950 interpretiert.<br /><br /> Das Standarddatumsformat wird von der aktuellen Spracheinstellung bestimmt. Sie können das Datumsformat ändern, indem Sie die Anweisungen [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) verwenden.<br /><br /> Das **ydm**-Format wird nicht für **date** unterstützt.|  
   
-|Alphabetisch|Beschreibung|  
+|Alphabetisch|und Beschreibung|  
 |------------------|-----------------|  
 |mon [dd][,] yyyy<br /><br /> mon dd[,] [yy<br /><br /> mon yyyy [dd]<br /><br /> [dd] mon[,] yyyy<br /><br /> dd mon[,][yy]yy<br /><br /> dd [yy]yy mon<br /><br /> [dd] yyyy mon<br /><br /> yyyy mon [dd]<br /><br /> yyyy [dd] mon|**mon** stellt den vollständigen Monatsnamen oder die in der aktuellen Sprache angegebene Monatsabkürzung dar. Kommas sind optional, und die Großschreibung wird ignoriert.<br /><br /> Um Mehrdeutigkeiten zu vermeiden, sollten Sie vierstellige Jahreszahlen verwenden.<br /><br /> Wenn der Tag fehlt, wird der erste Tag des Monats angegeben.|  
   
-|ISO 8601|Beschreibung|  
+|ISO 8601|und Beschreibung|  
 |--------------|----------------|  
-|YYYY-MM-DD<br /><br /> YYYYMMDD|Identisch mit dem SQL-Standard. Dieses ist das einzige Format, das als internationaler Standard definiert ist.|  
+|JJJJ-MM-TT<br /><br /> YYYYMMDD|Identisch mit dem SQL-Standard. Dieses ist das einzige Format, das als internationaler Standard definiert ist.|  
   
-|Unstrukturiert|Beschreibung|  
+|Unstrukturiert|und Beschreibung|  
 |-----------------|-----------------|  
 |[yy]yymmdd<br /><br /> yyyy[mm][dd]|Die **date**-Daten können mit vier, sechs oder acht Ziffern angegeben werden. Eine Zeichenfolge mit sechs oder acht Ziffern wird immer als **ymd** interpretiert. Monat und Tag müssen immer zweistellig sein. Eine vierstellige Zeichenfolge wird als Jahr interpretiert.|  
   
-|ODBC|Beschreibung|  
+|ODBC|und Beschreibung|  
 |----------|-----------------|  
 |{ d 'yyyy-mm-dd' }|ODBC-API-spezifisch|  
   
-|W3C XML-Format|Beschreibung|  
+|W3C XML-Format|und Beschreibung|  
 |--------------------|-----------------|  
 |yyyy-mm-ddTZD|Wird für die XML/SOAP-Verwendung unterstützt.<br /><br /> TZD ist der Zeitzonenkennzeichner (Z oder +hh:mm oder -hh:mm):<br /><br /> – Der Zeitzonenoffset wird durch hh:mm angegeben. Bei hh handelt es sich um zwei Ziffern im Bereich von 0 bis 14, die die Anzahl der Stunden im Zeitzonenoffset darstellen.<br />– Bei MM handelt es sich um zwei Ziffern im Bereich von 0 bis 59, die die Anzahl der zusätzlichen Minuten im Zeitzonenoffset darstellen.<br />– + (plus) oder - (minus) ist das erforderliche Zeichen des Zeitzonenoffsets. Dieses gibt an, ob der Zeitzonenoffset zu der koordinierten Weltzeit (Coordinated Universal Time, UTC) addiert oder von dieser subtrahiert wird, um die lokale Zeit zu erhalten. Der gültige Zeitzonenoffset liegt im Bereich von -14: 00 bis +14: 00.|  
   
@@ -95,8 +94,8 @@ Einige Downlevelclients unterstützen nicht die Datentypen **time**, **date**, *
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 | --- | --- | --- | --- | --- | --- |
-|**Uhrzeit**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
-|**Datum**|YYYY-MM-DD|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**Datum**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
   
@@ -141,7 +140,7 @@ SELECT @date AS '@date', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Beim Konvertieren in **datetimeoffset(n)** wird das Datum kopiert, und die Uhrzeit wird auf „00:00.0000000 +00:00“ festgelegt.  Der folgende Code zeigt die Ergebnisse der Konvertierung eines `date`-Werts in einen `datetimeoffset(3)`-Wert.
+Beim Konvertieren in **datetimeoffset(n)** wird das Datum kopiert, und die Uhrzeit wird auf „00:00.0000000 +00:00“ festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `date`-Werts in einen `datetimeoffset(3)`-Wert.
   
 ```sql
 DECLARE @date date = '1912-10-25';  
@@ -209,7 +208,7 @@ SELECT
   
 |Datentyp|Ausgabe|  
 |---------------|------------|  
-|**Uhrzeit**|12:35:29. 1234567|  
+|**time**|12:35:29. 1234567|  
 |**Datum**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  

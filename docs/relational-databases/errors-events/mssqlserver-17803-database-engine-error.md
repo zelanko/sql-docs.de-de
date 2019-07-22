@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 28591a19-258d-4891-b78a-4686789bb2d7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f4c8e064a92581c69a6cf2bd13fcf239749032b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f9e63330cf94a3ba945a57e19d124fba8e6e458
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131634"
 ---
 # <a name="mssqlserver17803"></a>MSSQLSERVER_17803
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47825556"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|17803|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  

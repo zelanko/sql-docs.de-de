@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cdf69cebcb9bae567ebaf4df898a7d6940e881b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085344"
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +114,7 @@ ms.locfileid: "54129010"
 ## <a name="publishing-views"></a>Veröffentlichen von Sichten  
  Das Replizieren von Sichten ist bei allen Replikationstypen möglich. Dabei kann die Sicht (und der zugehörige Index, sofern es sich um eine indizierte Sicht handelt) auf den Abonnenten kopiert werden, in jedem Fall muss aber auch die Basistabelle repliziert werden.  
   
- Bei indizierten Sichten ist es bei der Transaktionsreplikation auch möglich, die indizierte Sicht als Tabelle und nicht als Sicht zu replizieren. Dadurch entfällt die Notwendigkeit, die Basistabelle mit zu replizieren. Geben Sie dazu eine der "indexed view logbased"-Optionen für den *@type*-Parameter von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) an. Weitere Informationen zum Verwenden von **sp_addarticle** finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+ Bei indizierten Sichten ist es bei der Transaktionsreplikation auch möglich, die indizierte Sicht als Tabelle und nicht als Sicht zu replizieren. Dadurch entfällt die Notwendigkeit, die Basistabelle mit zu replizieren. Geben Sie dazu eine der "indexed view logbased"-Optionen für den *@type* -Parameter von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) an. Weitere Informationen zum Verwenden von **sp_addarticle** finden Sie unter [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="publishing-user-defined-functions"></a>Veröffentlichen benutzerdefinierter Funktionen  
  Die CREATE FUNCTION-Anweisungen für CLR-Funktionen und [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Funktionen werden auf alle Abonnenten kopiert. Bei CLR-Funktionen wird auch die zugehörige Assembly kopiert. Änderungen an den Funktionen werden auf die Abonnenten repliziert, während Änderungen an den zugehörigen Assemblys nicht repliziert werden.  
@@ -153,7 +152,7 @@ ms.locfileid: "54129010"
 -   Wenn Sie ein Datenbankobjekt veröffentlichen, das von mindestens einem weiteren Datenbankobjekt abhängt, müssen Sie alle Objekte veröffentlichen, auf die verwiesen wird. Wenn Sie beispielsweise eine Sicht veröffentlichen, die von einer Tabelle abhängt, muss auch die Tabelle veröffentlicht werden.  
   
     > [!NOTE]  
-    >  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **@processing_order** -Parameter von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **@processing_order** -Parameter von **sp_addmergearticle**an, und geben Sie einen Wert von **2** für den **@processing_order** -Parameter von **sp_changemergearticle**an. Geben Sie dann den Tabellennamen für den **@article**. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für jeden Artikel verwenden, solange die Nummer für die Funktion niedriger ist als die Nummer für die Tabelle.  
+    >  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **@processing_order** -Parameter von [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **@processing_order** -Parameter von **sp_addmergearticle**an, und geben Sie einen Wert von **2** für den **@processing_order** -Parameter von **sp_changemergearticle**an. Geben Sie dann den Tabellennamen für den **@article** . Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für jeden Artikel verwenden, solange die Nummer für die Funktion niedriger ist als die Nummer für die Tabelle.  
   
 -   Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten: % * [ ] | : " ? \ / < >.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "54129010"
   
 -   Für Artikel in Veröffentlichungen, die Zeichenmodus-Momentaufnahmen verwenden (werden für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] -Abonnenten verwendet): Standardmäßig wird der Besitzer leer gelassen. Als Besitzer wird standardmäßig der Besitzer verwendet, der mit dem vom Verteilungs- oder Merge-Agent zum Herstellen einer Verbindung mit dem Abonnenten verwendeten Konto verknüpft ist.  
   
- Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften - \<**_Article_**>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Der Objektbesitzer kann im Dialogfeld **Artikeleigenschaften - \<** _Article_ **>** und über folgende gespeicherte Prozeduren festgelegt werden: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, und **sp_changemergearticle**. Weitere Informationen finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md) und [Anzeigen und Ändern von Artikeleigenschaften](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Veröffentlichen von Daten auf Abonnenten, auf denen eine frühere Version von SQL Server ausgeführt wird  
   

@@ -15,12 +15,12 @@ ms.assetid: 4fd003e7-808e-4b0e-b28a-47d9f2616f06
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2ea871bce7c35f9b6f5341a281d066087c33519b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ff7b069ebde75185b0e500bc7052edc6e99fc927
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203389"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265351"
 ---
 # <a name="data-synchronization-state-of-availability-database-is-not-healthy-for-an-always-on-availability-group"></a>Datensynchronisierungsstatus der Verfügbarkeitsdatenbank einer Always On-Verfügbarkeitsgruppe ist nicht fehlerfrei
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53203389"
 |**Kategorie**|**Warnung**|  
 |**Facet**|Verfügbarkeitsdatenbank|  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>und Beschreibung  
  Diese Richtlinie führt ein Rollup des Datensynchronisierungsstatus aller Verfügbarkeitsdatenbanken (auch bekannt als "Datenbankreplikate") im Verfügbarkeitsreplikat aus. Die Richtlinie befindet sich in einem fehlerhaften Zustand, wenn ein beliebiges Datenbankreplikat nicht den erwarteten Datensynchronisierungsstatus aufweist. Die Richtlinie befindet sich andernfalls in einem ordnungsgemäßen Zustand.  
   
 > [!NOTE]  

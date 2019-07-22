@@ -14,13 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 422ec80702fdec902bcf9b78832e59b0917ade97
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: bdfa96839b92150fde8b6954ffd96f8f34eb7508
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991098"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -32,8 +31,8 @@ Dieser Artikel stellt Ihnen schrittweise die Installation einer neuen Instanz vo
 
 Weitere Möglichkeiten zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter:  
 
-* [Installieren von SQL Server über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [Installieren von SQL Server mithilfe einer Konfigurationsdatei](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [Install SQL Server from the command prompt (Installieren von SQL Server über die Eingabeaufforderung)](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
+* [Install SQL Server by using a configuration file (Installieren von SQL Server mithilfe einer Konfigurationsdatei)](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
 * [Installieren von SQL Server mit SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [Erstellen eines neuen SQL Server-Failoverclusters (Setup)](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -245,4 +244,4 @@ Zum Reduzieren der Angriffsfläche eines Systems werden zentrale Dienste und Fun
 * [Reparieren von Fehlern bei einer SQL Server-Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [Upgrade von SQL Server mithilfe des Installations-Assistenten (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Installieren von SQL Server über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [Install SQL Server from the command prompt (Installieren von SQL Server über die Eingabeaufforderung)](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 

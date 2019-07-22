@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 71db8ef6-341b-4465-99db-5c63e48d4c7d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f06eee678ed7088c20edde7d9f5d44ca0ba7cf02
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: ef493b3af967adf83b59a1d272f69b0b677149c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087220"
 ---
 # <a name="increase-or-disable-blocked-process-threshold"></a>Erhöhen oder Deaktivieren des Schwellenwerts für blockierte Prozesse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ GO
 ## <a name="for-more-information"></a>Weitere Informationen  
  [Schwellenwert für blockierte Prozesse (Serverkonfigurationsoption)](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

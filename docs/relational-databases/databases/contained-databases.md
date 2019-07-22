@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afec1cde13ea1734fe0f7829f878715064f55641
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137328"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +149,7 @@ ms.locfileid: "51559017"
 ### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage-Ereignis  
  Dieses XEvent wird ausgelöst, wenn nicht enthaltene Entität zur Laufzeit bestimmt wird. Dies schließt in Clientcode ausgelöste Entitäten ein. Dieses Xevent wird nur für tatsächliche nicht enthaltene Entitäten ausgelöst. Das Ereignis wird jedoch nur zur Laufzeit ausgelöst. Daher werden alle nicht enthaltenen Benutzerentitäten, die nicht ausgeführt wurden, von diesem XEvent nicht identifiziert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Geänderte Funktionen &#40;Enthaltene Datenbank&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

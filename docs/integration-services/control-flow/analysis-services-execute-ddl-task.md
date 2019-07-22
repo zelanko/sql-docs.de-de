@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cce0b8606b398d1c72b70c161bb8ccdf0d779167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 760a15ce22421ac1e98c6b14ea661de28bf299a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904175"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)
 
@@ -254,7 +253,7 @@ ms.locfileid: "65728064"
   
 ### <a name="static-options"></a>Statische Optionen  
  **Verbindung**  
- Wählen Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt oder einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, und erstellen Sie im Dialogfeld **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
+ Wählen Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt oder einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, und erstellen Sie im Dialogfeld **Analysis Services-Verbindungs-Manager hinzufügen** eine neue Verbindung.  
   
  **Verwandte Themen:** [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -271,17 +270,17 @@ ms.locfileid: "65728064"
   
 #### <a name="sourcetype--direct-input"></a>SourceType = Direkteingabe  
  **Quelle**  
- Geben Sie die DDL-Anweisungen ein, oder klicken Sie auf die Schaltfläche mit den **Auslassungspunkten (...)**, und geben Sie dann die Anweisungen im Dialogfeld **DDL-Anweisungen** ein.  
+ Geben Sie die DDL-Anweisungen ein, oder klicken Sie auf die Schaltfläche mit den **Auslassungspunkten (...)** , und geben Sie dann die Anweisungen im Dialogfeld **DDL-Anweisungen** ein.  
   
 #### <a name="sourcetype--file-connection"></a>SourceType = File Connection  
  **Quelle**  
- Wählen Sie eine Dateiverbindung aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, und erstellen Sie im Dialogfeld **Dateiverbindungs-Manager** eine neue Verbindung.  
+ Wählen Sie eine Dateiverbindung aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, und erstellen Sie im Dialogfeld **Dateiverbindungs-Manager** eine neue Verbindung.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Variable  
  **Quelle**  
- Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf \<**Neue Variable...**>, und erstellen Sie im Dialogfeld **Variable hinzufügen** eine neue Variable.  
+ Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf \<**Neue Variable...** >, und erstellen Sie im Dialogfeld **Variable hinzufügen** eine neue Variable.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7ffaa3267a512fc85b223290c76e239013612d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0009ec924ebe935b60194f950da5d30593adfd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68232248"
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die Eigenschaften einer berechneten Spalte an, die einer Tabelle mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) hinzugefügt wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,7 +55,7 @@ column_name AS computed_column_expression
  Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name*kann 1 bis 128 Zeichen umfassen. Bei neuen Spalten, die mit einem **timestamp**-Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Wenn *column_name* nicht für eine Spalte vom Datentyp **timestamp** angegeben ist, wird der Name **timestamp** verwendet.  
   
 *computed_column_expression*  
- Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, sondern anhand anderer Spalten in derselben Tabelle aus einem Ausdruck berechnet wird. Eine berechnete Spalte könnte z.B. die folgende Definition besitzen: cost AS price * qty. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine Funktion, eine Variable oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann weder eine Unterabfrage sein noch einen Aliasdatentyp einschließen.  
+ Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, sondern anhand anderer Spalten in derselben Tabelle aus einem Ausdruck berechnet wird. Eine berechnete Spalte könnte z.B. die folgende Definition besitzen: cost AS price * qty. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine Funktion, eine Variablen oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann weder eine Unterabfrage sein noch einen Aliasdatentyp einschließen.  
   
  Berechnete Spalten können in Auswahllisten, WHERE-Klauseln, ORDER BY-Klauseln oder an anderen Stellen verwendet werden, an denen reguläre Ausdrücke verwendet werden. Dabei gelten folgende Ausnahmen:  
   
@@ -149,5 +148,5 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
 ## <a name="remarks"></a>Remarks  
  Jede PRIMARY KEY- und UNIQUE-Einschränkung generiert einen Index. Die Anzahl der UNIQUE- und PRIMARY KEY-Einschränkungen darf nicht dazu führen, dass die Anzahl der Indizes der Tabelle 999 nicht gruppierte Indizes und 1 gruppierten Index übersteigt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

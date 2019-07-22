@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0fad5ed2e912eea19ec8eb2cdac38ee949b7bad
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 1ea63b8d8b417f829bda722297d0c69a0b5c5fef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009328"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
@@ -40,7 +39,7 @@ ms.locfileid: "58478205"
   
  In Bezug auf die vorangehende Abbildung müssen Sie beachten, dass sich der Sitzungsstatus ändert, wenn die verschiedenen DDL-Befehle für eine Ereignissitzung ausgegeben werden. Eine Beschreibung dieser Statusänderungen finden Sie in der folgenden Tabelle.  
   
-|Bezeichnung in der Abbildung|DDL-Anweisung|Beschreibung|  
+|Bezeichnung in der Abbildung|DDL-Anweisung|und Beschreibung|  
 |------------------------|-------------------|-----------------|  
 |Erstellen|CREATE EVENT SESSION|Der Hostprozess erstellt ein Sitzungsobjekt, das die durch CREATE EVENT SESSION bereitgestellten Metadaten enthält. Der Hostprozess überprüft die Sitzungsdefinition und die Benutzerberechtigungsebene und speichert die Metadaten in der master-Datenbank. Zu diesem Zeitpunkt ist die Sitzung nicht aktiv.|  
 |Alter|ALTER EVENT SESSION, STATE=START|Der Hostprozess startet die Sitzung. Der Hostprozess liest die gespeicherten Metadaten, überprüft die Sitzungsdefinition und die Benutzerberechtigungsebene und erstellt die Sitzung. Sitzungsobjekte wie Ereignisse und Ziele werden geladen, und die Ereignisbehandlung ist aktiv.|  

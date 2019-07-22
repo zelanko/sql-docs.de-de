@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16d971d8a8512d10ee20d02d29f3c27b981693eb
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126988"
 ---
 # <a name="sequence-properties-general-page"></a>Sequenzeigenschaften (Seite "Allgemein")
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51571499"
   
  Auf diese Seite kann auf zwei Arten zugegriffen werden: Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Sequenzen** und anschließend auf **Neue Sequenz**, oder klicken Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften**. Wenn Sie mit der rechten Maustaste auf eine vorhandene Sequenz und anschließend auf **Eigenschaften** klicken, können Sie die Optionen nicht bearbeiten. Zum Ändern der Sequenzoptionen verwenden Sie die [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)-Anweisung, oder erstellen Sie das Sequenzobjekt durch Ziehen erneut.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Sequenzname**  
  Geben Sie hier den Sequenznamen ein.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "51571499"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigung **CREATE SEQUENCE**, **ALTER**oder **CONTROL** für das SCHEMA.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.sequences &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   
