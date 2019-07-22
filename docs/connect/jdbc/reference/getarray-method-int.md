@@ -1,5 +1,5 @@
 ---
-title: GetArray-Methode (Int) | Microsoft-Dokumentation
+title: GetArray-Methode (int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5b839d3f-5a4e-43da-b93c-dc9e0f6d4b3b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d060f7ca8be70a27e4eca0a3a4cf2ec07b36671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27e9502c707f35ae0406b3cf99843a3e22ea1008
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954379"
 ---
 # <a name="getarray-method-int"></a>getArray-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Array getArray(int i)
  Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Array von Objekten.  
+ Ein Arrayobjekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

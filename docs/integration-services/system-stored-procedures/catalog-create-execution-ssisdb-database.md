@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51be58cd1c486a139486839e39a9ac820d7818b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1454c1112f12800e010974159d4ea7ad3526e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023440"
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
 
@@ -44,13 +43,13 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>Argumente  
  [@folder_name =] *folder_name*  
- Der Name des Ordners mit dem Paket, das ausgeführt werden soll. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners mit dem Paket, das ausgeführt werden soll. Der *folder_name* ist **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Der Name des Projekts mit dem Paket, das ausgeführt werden soll. Der *project_name* ist **nvarchar(128)**.  
+ Der Name des Projekts mit dem Paket, das ausgeführt werden soll. Der *project_name* ist **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- Der Name des Pakets, das ausgeführt werden soll. Der *package_name* ist **nvarchar(260)**.  
+ Der Name des Pakets, das ausgeführt werden soll. Der *package_name* ist **nvarchar(260)** .  
   
  [@reference_id =] *reference_id*  
  Ein eindeutiger Bezeichner für einen Umgebungsverweis. Dieser Parameter ist optional. Der *reference_id* ist **bigint**.  

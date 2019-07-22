@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9636e4c00e56545445c33f8108fac5ac0e8876c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9fc2c8718fd643e5838172831858c51aea6fd47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130226"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ MONTH ( date )
  Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **time**, **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**. Bei dem *date*-Argument kann es sich um einen Ausdruck, einen Spaltenausdruck, eine benutzerdefinierte Variable oder ein Zeichenfolgenliteral handeln.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
  MONTH gibt den gleichen Wert wie [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**month**, *date*) zurück.  

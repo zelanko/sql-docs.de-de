@@ -1,5 +1,5 @@
 ---
-title: Verbindungs-URL-Beispiel | Microsoft-Dokumentation
+title: Beispiel für eine Verbindungs-URL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f13f175dc6f50818b5eef6b142f4d211103a4b3c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 24d4621a66af8d4d7247dff099b084bd331236f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956767"
 ---
 # <a name="connection-url-sample"></a>Verbindungs-URL - Beispiel
 

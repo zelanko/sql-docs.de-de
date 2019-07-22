@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137321"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Kopieren von Datenbanken durch Sichern und Wiederherstellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ Einige zusätzliche Aspekte, die diesen Vorgang beeinflussen können:
  Der beim Wiederherstellen einer Datenbank explizit bereitgestellte Name wird automatisch als neuer Datenbankname verwendet. Da der Datenbankname noch nicht vorhanden ist, wird ein neuer Name mithilfe der Dateien in der Sicherung erstellt.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Beim Aktualisieren einer Datenbank mithilfe einer Wiederherstellung  
- Beim Wiederherstellen von Sicherungen einer früheren Version ist es hilfreich, vorher zu wissen, ob der Pfad (Laufwerk und Verzeichnis) jedes Volltextkatalogs in einer Sicherung auf dem Zielcomputer vorhanden ist. Zum Auflisten der logischen und physischen Namen (Pfad und Dateiname) jeder Datei in einer Sicherung, einschließlich der Katalogdateien, verwenden Sie eine RESTORE FILELISTONLY FROM *<Sicherungsmedium>*-Anweisung. Weitere Informationen finden Sie unter [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Beim Wiederherstellen von Sicherungen einer früheren Version ist es hilfreich, vorher zu wissen, ob der Pfad (Laufwerk und Verzeichnis) jedes Volltextkatalogs in einer Sicherung auf dem Zielcomputer vorhanden ist. Zum Auflisten der logischen und physischen Namen (Pfad und Dateiname) jeder Datei in einer Sicherung, einschließlich der Katalogdateien, verwenden Sie eine RESTORE FILELISTONLY FROM *<Sicherungsmedium>* -Anweisung. Weitere Informationen finden Sie unter [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  Falls auf dem Zielcomputer nicht der gleiche Pfad vorhanden ist, haben Sie zwei Möglichkeiten:  
   

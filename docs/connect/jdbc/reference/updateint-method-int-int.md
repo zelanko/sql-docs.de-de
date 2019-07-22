@@ -1,5 +1,5 @@
 ---
-title: UpdateInt-Methode (Int, Int) | Microsoft-Dokumentation
+title: updateInt-Methode (int, int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f4f651b0-a822-4bd4-b391-cc2355154a2a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f5e69e13762bdfb9b6adde9f635588bc35b742c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd4863cf2121eece7d431cb9a4e9a120cf3c9a7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998864"
 ---
 # <a name="updateint-method-int-int"></a>updateInt-Methode (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateInt(int index,
   
  *x*  
   
- Ein **Int** Wert.  
+ Ein **int** -Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

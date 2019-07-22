@@ -1,6 +1,6 @@
 ---
-title: MSSQL-Cli | Microsoft-Dokumentation
-description: MSSQL-Cli ist eine interaktive Befehlszeile-Abfragetool für SQL Server, die auf Windows, MacOS oder Linux ausgeführt wird.
+title: MSSQL-CLI | Microsoft-Dokumentation
+description: MSSQL-CLI ist ein interaktives Befehlszeilen Abfrage-Tool für SQL Server, das unter Windows, macOS oder Linux ausgeführt wird.
 ms.custom: tools|mssql-cli
 ms.date: 02/22/2018
 ms.prod: sql
@@ -9,35 +9,34 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 366881379de71f6bab62d1c26025de2174550708
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 35cacae78e93991a340a6d102221547144e1a9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105765"
 ---
-# <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>MSSQL-Cli-Befehlszeilenabfragetool für SQL Server
+# <a name="mssql-cli-command-line-query-tool-for-sql-server"></a>MSSQL-CLI-Befehlszeilen Abfrage-Tool für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-MSSQL-Cli ist eine interaktive Befehlszeilen-Tool für die Abfragen von SQL Server, auf Windows, MacOS oder Linux installieren.
+MSSQL-CLI ist ein interaktives Befehlszeilen Tool für die Abfrage von SQL Server, die Installation unter Windows, macOS oder Linux.
 
-## <a name="install-mssql-cli"></a>Installieren Sie die Mssql-cli
+## <a name="install-mssql-cli"></a>Installieren von MSSQL-CLI
 
-Ausführliche installationsanweisungen finden Sie unter den [Installationshandbuch](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md), oder wenn Sie wissen, dass Pip, zu installieren, indem Sie den folgenden Befehl ausführen:
+Ausführliche Installationsanweisungen finden Sie im [Installationshandbuch](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md). Wenn Sie PIP kennen, installieren Sie, indem Sie den folgenden Befehl ausführen:
 
 ```$ pip install mssql-cli```
 
-## <a name="mssql-cli-documentation"></a>MSSQL-Cli-Dokumentation
+## <a name="mssql-cli-documentation"></a>MSSQL-CLI-Dokumentation
 
-Mssql-Cli-Dokumentation befindet sich in der [Mssql-Cli-GitHub-Repository](https://github.com/dbcli/mssql-cli).
+Die Dokumentation für MSSQL-CLI befindet sich im [GitHub-Repository MSSQL-CLI](https://github.com/dbcli/mssql-cli).
 
-- [Main Seite-Infodatei](https://github.com/dbcli/mssql-cli)
+- [Hauptseite/-Info](https://github.com/dbcli/mssql-cli)
 - [Installationsleitfaden](https://github.com/dbcli/mssql-cli/blob/master/doc/installation_guide.md)
-- [Benutzerhandbuch](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
+- [Verwendungs Handbuch](https://github.com/dbcli/mssql-cli/blob/master/doc/usage_guide.md)
 
-Zusätzlicher Dokumentation befindet sich in der [Doc-Ordner](https://github.com/dbcli/mssql-cli/tree/master/doc).
+Weitere Dokumentationen finden Sie im [doc-Ordner](https://github.com/dbcli/mssql-cli/tree/master/doc).
 
 
 

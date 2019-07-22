@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7a3b3027489b819cd5058f9080ca9633a2cf3ed
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099593"
 ---
 # <a name="database-properties-mirroring-page"></a>Datenbankeigenschaften (Seite Wird gespiegelt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "54132530"
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Sicherheit konfigurieren**  
  Klicken Sie auf diese Schaltfläche, um den **Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung**zu starten.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "54132530"
   
  Für die Server-Netzwerkadresse gilt folgende grundlegende Syntax:  
   
- TCP **://**_fully_qualified_domain_name_**:**_port_  
+ TCP **://** _fully_qualified_domain_name_ **:** _port_  
   
  Dabei gilt:  
   

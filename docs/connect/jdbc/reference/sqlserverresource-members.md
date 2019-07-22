@@ -1,5 +1,5 @@
 ---
-title: SQLServerResource-Elemente | Microsoft-Dokumentation
+title: Sqlserverresource-Member | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 427bee6c3a70238dcfc1abede9d6afb0b86aa088
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970632"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66801537"
   
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Initialisiert eine neue Instanz der [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)-Klasse. Dieser Konstruktor ist nur zur internen Verwendung.|  
+|[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Initialisiert eine neue Instanz der [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)-Klasse. Dieser Konstruktor ist nur für die interne Verwendung vorgesehen.|  
   
 ## <a name="fields"></a>Felder  
  Keine.  

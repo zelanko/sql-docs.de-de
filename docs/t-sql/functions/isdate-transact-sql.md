@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109452"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ ISDATE ( expression )
  Entspricht einer Zeichenfolge oder einem [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der in eine Zeichenfolge konvertiert werden kann. Der Ausdruck muss weniger als 4000 Zeichen umfassen. Datums- und Uhrzeitdatentypen, mit Ausnahme von datetime und smalldatetime, sind nicht als Argument für ISDATE zugelassen.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  ISDATE ist nur deterministisch bei Verwendung mit der [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktion, wenn der style-Parameter von CONVERT angegeben wird und „style“ nicht den Wert 0, 100, 9 oder 109 aufweist.  

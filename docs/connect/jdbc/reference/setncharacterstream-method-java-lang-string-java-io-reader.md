@@ -1,5 +1,5 @@
 ---
-title: SetNCharacterStream Methode, um die Reader-Objekt – Zeichenfolge | Microsoft-Dokumentation
+title: setnmerkmal Stream-Methode zum Reader-Objekt-Zeichenfolge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 361193c9f85034da5a40c6dac6d1865a77c34612
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 34eb40d6c36f5c1586ac690de5e9fc354c8fd1f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973870"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>setNCharacterStream-Methode (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  *value*  
   
- Ein Readerobjekt.  
+ Ein Reader-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetNCharacterStream-Methode wird von der SetNCharacterStream-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+ Diese setncharakteristream-Methode wird von der setncharakteristream-Methode in der Java. SQL. CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode sollte verwendet werden, für die **NCHAR**, **NVARCHAR**, **NTEXT**, und **XML** -Datentypen.  
+ Diese Methode sollte für die Datentypen **NCHAR**, **nvarchar**, **ntext**und **XML** verwendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [setNCharacterStream-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   

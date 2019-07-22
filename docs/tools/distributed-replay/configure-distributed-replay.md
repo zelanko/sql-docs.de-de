@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023770"
 ---
 # <a name="configure-distributed-replay"></a>Konfigurieren von Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "67732104"
   
  Die Wiedergabekonfigurationseinstellungen werden in XML-Elementen angegeben, die untergeordnete Elemente des `<ReplayOptions>` -Elements und des `<OutputOptions>` -Elements der Wiedergabekonfigurationsdatei sind.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions >-Element  
+### <a name="replayoptions-element"></a>\<Replayoptions-> Element  
  Im `<ReplayOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
 |Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
@@ -133,7 +132,7 @@ ms.locfileid: "67732104"
 |Timeout der Abfrage|`<QueryTimeout>`|Gibt den Wert für das Timeout der Abfrage in Sekunden an. Dieser Wert ist nur wirksam, bis die erste Zeile zurückgegeben wurde.|Ganze Zahl >= 1<br /><br /> (zum Deaktivieren`-1` )|Nein. Der Standardwert ist `3600`.|  
 |Threads pro Client|`<ThreadsPerClient>`|Gibt die Anzahl der Wiedergabethreads an, die für jeden Wiedergabeclient verwendet werden sollen.|Eine ganze Zahl zwischen `1` und `512`.|Nein. Wenn kein Wert angegeben ist, wird von Distributed Replay der Wert `255`verwendet.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions >-Element  
+### <a name="outputoptions-element"></a>\<Outputoptions-> Element  
  Im `<OutputOptions>` -Element der Wiedergabekonfigurationsdatei werden die folgenden Einstellungen angegeben:  
   
 |Einstellung|XML-Element|und Beschreibung|Zulässige Werte|Required|  
@@ -165,20 +164,20 @@ ms.locfileid: "67732104"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Mögliches Problem bei der Ausführung mit Synchronisierung, die Sequenz-Modus
- Sie können ein Symptom auftreten, in dem die Replay-Funktionen zu "Stall" bzw. Replays Ereignisse nur sehr langsam angezeigt wird. Dieses Phänomen kann auftreten, wenn die Ablaufverfolgung wiedergegeben werden, abhängig von Daten und/oder Ereignisse, die nicht in der wiederhergestellten Datenbank vorhanden sind. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Mögliches Problem bei Ausführung mit dem Synchronisierungs Modus der Synchronisierung
+ Möglicherweise tritt ein Symptom auf, bei dem die Wiedergabe Funktionalität als "Stall" angezeigt wird oder Ereignisse sehr langsam wieder gibt. Dieses Phänomen kann auftreten, wenn die wiedergegebene Ablauf Verfolgung von Daten und/oder Ereignissen abhängig ist, die in der wiederhergestellten Zieldatenbank nicht vorhanden sind. 
  
- Ein Beispiel ist eine aufgezeichnete arbeitsauslastung, die WAITFOR, z. B. in Service Broker empfangen der WAITFOR-Anweisung verwendet werden. Wenn Sie den sequenzierungsmodus Synchronisierung verwenden zu können, werden seriell Batches wiedergegeben. Wenn eine Einfügung tritt auf, für die Quelldatenbank nach der datenbanksicherung, aber vor dem Wiedergabe der Ablaufverfolgung wird gestartet, die WAITFOR erhalten, die während der Wiedergabe ausgegeben möglicherweise die gesamte Dauer des WAITFOR warten. Festlegen, die wiedergegeben werden, nachdem der WAITFOR-EMPFANGS angehalten wird. Dadurch kann den Leistungsindikator für Batchanforderungen/Sekunde, für das Replay Datenbank Ziel löschen 0 (null) bis zum Abschluss der WAITFOR. 
+ Ein Beispiel hierfür ist eine erfasste Arbeitsauslastung, die WAITFOR verwendet, z. b. in der WAITFOR RECEIVE-Anweisung Service Broker. Wenn Sie den Sequenzierungs Modus für die Synchronisierung verwenden, werden Batches serialisiert wiedergegeben. Wenn eine INSERT-Anweisung für die Quelldatenbank nach der Datenbanksicherung stattfindet, aber bevor die Ablauf Verfolgung für die Wiedergabe Erfassung gestartet wird, muss der während der Wiedergabe ausgegebene WAITFOR-Empfang möglicherweise die gesamte Dauer von WAITFOR warten. Ereignisse, die wiedergegeben werden sollen, nachdem der WAITFOR-Empfangsvorgang angehalten wurde. Dies kann dazu führen, dass der Leistungs Monitor Leistungsindikatoren für Batch Anforderungen/Sek. für das Wiedergabe Daten Bank Ziel auf 0 (null) fällt, bis die WAITFOR abgeschlossen 
  
- Wenn Sie Synchronisierungsmodus und möchten verwenden, um dieses Verhalten zu vermeiden möchten, müssen Sie Folgendes ausführen:
+ Wenn Sie den Synchronisierungs Modus verwenden müssen und dieses Verhalten vermeiden möchten, müssen Sie folgende Schritte ausführen:
  
-1.  Versetzen der Datenbanken, die Sie als die Ziele für die Wiedergabe verwendet werden.
+1.  Versetzen Sie die Datenbanken in den Ruhezustand, die Sie als Wiedergabe Ziele verwenden werden.
 
-2.  Können Sie alle ausstehenden Aktivität abgeschlossen.
+2.  Alle ausstehenden Aktivitäten können abgeschlossen werden.
 
-3.  Sichern Sie die Datenbanken und können Sie Sicherungen ausführen.
+3.  Sichern Sie die Datenbanken, und lassen Sie Sicherungen zu.
 
-4.  Starten Sie das distributed Replay-Ablaufverfolgung erfassen, und fortsetzen Sie die normale arbeitsauslastung. 
+4.  Starten Sie die Ablauf Verfolgung für die verteilte Wiedergabe und setzen Sie die normale Arbeitsauslastung fort 
  
  
 ## <a name="see-also"></a>Weitere Informationen  

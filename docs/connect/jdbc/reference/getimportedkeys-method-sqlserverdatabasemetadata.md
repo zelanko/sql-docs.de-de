@@ -1,5 +1,5 @@
 ---
-title: GetImportedKeys-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getImportedKeys-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982824"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetImportedKeys-Methode wird von der GetImportedKeys-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getImportedKeys-Methode wird von der getImportedKeys-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getImportedKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  
   

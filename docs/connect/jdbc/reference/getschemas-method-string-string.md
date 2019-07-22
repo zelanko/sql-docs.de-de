@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b4129ebee2be0ca043be349dc57ca8612ab7d0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5f380123f0fc3f2b23a82b72871622e98c0f185
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980093"
 ---
 # <a name="getschemas-method-string-string"></a>getSchemas-Methode (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public ResultSet getSchemas(java.lang.String catalog,
 ## <a name="remarks"></a>Remarks  
  Diese getSchemas-Methode wird von der getSchemas-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetSchemas-Methode zurückgegebene Resultset enthält die folgenden Informationen an:  
+ Das Resultset, das von der GetSchemas-Methode zurückgegeben wird, enthält die folgenden Informationen:  
   
 |Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  

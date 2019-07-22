@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897174"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
 Der neue Knoten **SQL Server** im **SQL Server-Objekt-Explorer** ähnelt dem in SSMS nicht nur visuell. Sie können neue Objekte auch mit Kontextmenüs erstellen, die wie ihre Äquivalente in SSMS funktionieren.  
@@ -63,18 +62,18 @@ Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen.
   
     |Name|Datentyp|**NULL-Werte zulassen**|  
     |--------|-------------|-------------------|  
-    |ID|ssNoversion|Nicht aktiviert|  
+    |ID|INT|Nicht aktiviert|  
     |Name|nvarchar (128)|Nicht aktiviert|  
   
 7.  Erstellen Sie eine weitere Tabelle mit dem Namen **Products**. Fügen Sie der Tabelle "Products" mithilfe des Spaltenrasters die folgenden Spalten hinzu. Achten Sie darauf, dass Sie das Skript so ändern, dass der Name der Tabelle `[dbo].[Products]` lautet.  
   
     |Name|Datentyp|**NULL-Werte zulassen**|  
     |--------|-------------|-------------------|  
-    |ID|ssNoversion|Nicht aktiviert|  
+    |ID|INT|Nicht aktiviert|  
     |Name|nvarchar (128)|Nicht aktiviert|  
-    |ShelfLife|ssNoversion|Überprüft|  
-    |SupplierId|ssNoversion|Überprüft|  
-    |CustomerId|ssNoversion|Überprüft|  
+    |ShelfLife|INT|Überprüft|  
+    |SupplierId|INT|Überprüft|  
+    |CustomerId|INT|Überprüft|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>So erstellen Sie mithilfe des Tabellen-Designers eine neue CHECK-Einschränkung  
   

@@ -1,6 +1,6 @@
 ---
 title: Verwenden von großen Werttypen | Microsoft-Dokumentation
-description: Verwenden von Typen mit umfangreichen Werten mit OLE DB-Treiber für SQL Server
+description: Verwenden von Typen mit umfangreichen Werten mit OLE DB Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a8dafb5c74322c1232f71a7fe2f00b38005a536c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2847838b37a9f5c233f649b6a712d4c0b2d150f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988855"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66802877"
 > [!NOTE]  
 >  Datentypen mit umfangreichen Werten können eine maximale Größe zwischen 1 KB und 8 KB haben oder ohne Größenbeschränkung festgelegt werden.  
   
- Zuvor konnten nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen wie **text**, **ntext** und **image** derartige Längen erreichen. Durch den **max**-Bezeichner für **varchar**, **nvarchar** und **varbinary** wurden diese Datentypen überflüssig. Da Datentypen mit umfangreichen Werten nach wie vor verfügbar sind, bleiben die meisten Schnittstellen zu den OLE DB-Datenzugriffskomponenten unverändert. Für die Abwärtskompatibilität mit früheren Versionen wird das DBCOLUMNFLAGS_ISLONG-Flag in der OLE DB-Treiber für SQL Server verwendet. Für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher entwickelte Anbieter und Treiber verwenden diese Bedingungen für die neuen Typen weiter, wenn keine Größenbeschränkung angegeben wird.  
+ Zuvor konnten nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen wie **text**, **ntext** und **image** derartige Längen erreichen. Durch den **max**-Bezeichner für **varchar**, **nvarchar** und **varbinary** wurden diese Datentypen überflüssig. Da Datentypen mit umfangreichen Werten nach wie vor verfügbar sind, bleiben die meisten Schnittstellen zu den OLE DB-Datenzugriffskomponenten unverändert. Aus Gründen der Abwärtskompatibilität mit früheren Versionen wird das DBCOLUMNFLAGS_ISLONG-Flag im OLE DB Treiber für SQL Server weiterhin verwendet. Für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höher entwickelte Anbieter und Treiber verwenden diese Bedingungen für die neuen Typen weiter, wenn keine Größenbeschränkung angegeben wird.  
   
 > [!NOTE]  
 >  Sie können die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** auch als Eingabe- und Ausgabeparametertypen für gespeicherte Prozeduren, Funktionsrückgabetypen oder in [CAST und CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktionen angeben.  
@@ -63,7 +62,7 @@ ms.locfileid: "66802877"
   
 -   Als DBTYPE_IUNKNOWN binden und Streaming verwenden  
   
- Wenn Sie die maximale Größe einer Spalte zu melden, meldet der OLE DB-Treiber für SQL Server:  
+ Beim Melden der maximalen Größe einer Spalte meldet der OLE DB Treiber für SQL Server Folgendes:  
   
 -   Die definierte maximale Größe, die für eine **varchar(** 2000 **)** -Spalte beispielsweise 2000 beträgt. Oder:  
   
@@ -691,7 +690,7 @@ _ExitProcessResultSet:
 }  
 ```  
   
- Weitere Informationen dazu, wie der OLE DB-Treiber für SQL Server mit umfangreichen Datentypen verfügbar macht, finden Sie unter [BLOBs und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Weitere Informationen darüber, wie der OLE DB-Treiber für SQL Server Datentypen mit umfangreichen Werten verfügbar macht, finden Sie unter [BLOB-und OLE-Objekte](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
 
   
 ## <a name="see-also"></a>Weitere Informationen  

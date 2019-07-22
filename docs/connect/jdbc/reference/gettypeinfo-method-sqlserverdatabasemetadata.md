@@ -1,5 +1,5 @@
 ---
-title: GetTypeInfo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: gettypeingefo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978515"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +49,7 @@ public java.sql.ResultSet getTypeInfo()
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
-|PRECISION|**ssNoversion**|Die Gesamtanzahl von signifikanten Stellen.|  
+|PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
 |LITERAL_PREFIX|**String**|Die Zeichen, die einer Konstante vorangestellt werden.|  
 |LITERAL_SUFFIX|**String**|Die Zeichen, die eine Konstante beenden.|  
 |CREATE_PARAMS|**String**|Die Beschreibung der Erstellungsparameter für den Datentyp.|  
@@ -63,9 +62,9 @@ public java.sql.ResultSet getTypeInfo()
 |LOCAL_TYPE_NAME|**String**|Der lokalisierte Name des Datentyps.|  
 |MINIMUM_SCALE|**short**|Die maximale Anzahl von Stellen rechts des Dezimalzeichens.|  
 |MAXIMUM_SCALE|**short**|Die Mindestanzahl von Stellen rechts des Dezimalzeichens.|  
-|SQL_DATA_TYPE|**ssNoversion**|Wird vom JDBC-Treiber nicht unterstützt.|  
-|SQL_DATETIME_SUB|**ssNoversion**|Wird vom JDBC-Treiber nicht unterstützt.|  
-|NUM_PREC_RADIX|**ssNoversion**|Die Anzahl von Bits oder Stellen zum Berechnen der höchsten Zahl, die eine Spalte enthalten kann.|  
+|SQL_DATA_TYPE|**int**|Wird vom JDBC-Treiber nicht unterstützt.|  
+|SQL_DATETIME_SUB|**int**|Wird vom JDBC-Treiber nicht unterstützt.|  
+|NUM_PREC_RADIX|**int**|Die Anzahl von Bits oder Stellen zum Berechnen der höchsten Zahl, die eine Spalte enthalten kann.|  
 |INTERVAL_PRECISION|**smallint**|Die Genauigkeit für anführenden Intervallwert.|  
 |USERTYPE|**smallint**|Der **usertype**-Wert aus der Tabelle **systypes**. Weitere Informationen finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation.|  
   

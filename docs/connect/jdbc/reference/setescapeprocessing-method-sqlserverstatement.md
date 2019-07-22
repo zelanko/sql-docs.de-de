@@ -1,5 +1,5 @@
 ---
-title: SetEscapeProcessing-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: setescapeprocessing-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ddd79fe975905baa5fb8cab945d6069be611adc3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 17df08b401c7e1ae4e1f5d3b386808f11e3bb180
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974296"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>setEscapeProcessing-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public final void setEscapeProcessing(boolean enable)
 #### <a name="parameters"></a>Parameter  
  *enable*  
   
- **"true"** Escapeverarbeitung zu aktivieren. Andernfalls lautet der Wert **false**.  
+ **true** , um die Escapeverarbeitung zu aktivieren. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetEscapeProcessing-Methode wird von der SetEscapeProcessing-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+ Diese setescapeprocessing-Methode wird von der setescapeprocessing-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

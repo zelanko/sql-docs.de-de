@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102133"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ DBCC CHECKALLOC
 ## <a name="arguments"></a>Argumente  
  *database_name* | *database_id* | 0   
  Name oder ID der Datenbank, für die die Zuordnung und Seitenverwendung überprüft werden soll.
-Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet.
+Wird kein Wert oder der Wert 0 angegeben, wird die aktuelle Datenbank verwendet.
 Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.
 
  NOINDEX  
@@ -114,7 +113,7 @@ DBCC CHECKALLOC verwendet eine internen Datenbankmomentaufnahme, um die für die
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen  
 Nach Abschluss des Befehls DBCC CHECKALLOC wird eine Meldung im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll verzeichnet. Wurde der DBCC-Befehl erfolgreich ausgeführt, zeigt die Meldung den erfolgreichen Abschluss und die Ausführungsdauer des Befehls an. Wurde der DBCC-Befehl aufgrund eines Fehlers vor Abschluss der Überprüfung beendet, zeigt die Meldung an, dass der Befehl beendet wurde. Außerdem wird ein Statuswert und die Ausführungsdauer des Befehls angegeben. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
   
-|Status|Beschreibung|  
+|Status|und Beschreibung|  
 |---|---|  
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf beschädigte Metadaten hin, die die Beendigung des DBCC-Befehls verursacht haben.|  
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|  
@@ -134,7 +133,7 @@ Eine Reparatur kann in einer Benutzertransaktion ausgeführt werden. Dies ermög
 ## <a name="result-sets"></a>Resultsets  
 In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Informationen beschrieben.
   
-|Element|Beschreibung|  
+|Element|und Beschreibung|  
 |---|---|  
 |FirstIAM|Nur interne Verwendung.|  
 |Root|Nur interne Verwendung.|  
@@ -144,14 +143,14 @@ In den folgenden Tabellen werden die von DBCC CHECKALLOC zurückgegebenen Inform
   
 DBCC CHECKALLOC meldet außerdem eine Zuordnungszusammenfassung für jeden Index und jede Partition in jeder Datei. In dieser Zusammenfassung wird die Verteilung der Daten beschrieben.
   
-|Element|Beschreibung|  
+|Element|und Beschreibung|  
 |---|---|  
 |Zugeordnete Seiten|Seiten, die für den Index zugeordnet wurden, und nicht verwendete Seiten in zugeordneten Blöcken.|  
 |Verwendete Seiten|Zugeordnete Seiten, die vom Index verwendet werden.|  
 |Partitions-ID|Nur interne Verwendung.|  
 |Zuordnungseinheits-ID|Nur interne Verwendung.|  
 |Daten in Zeilen|Seiten enthalten Index- oder Heapdaten.|  
-|LOB-Daten|Seiten enthalten **varchar(max)**-, **nvarchar(max)**-, **varbinary(max)**-, **text**-, **ntext**-, **xml**- und **image**-Daten.|  
+|LOB-Daten|Seiten enthalten **varchar(max)** -, **nvarchar(max)** -, **varbinary(max)** -, **text**-, **ntext**-, **xml**- und **image**-Daten.|  
 |Zeilenüberlaufdaten|Seiten enthalten Daten einer Spalte mit variabler Länge, die durch Ausführen eines Pushs außerhalb von Zeilen verschoben wurden.|  
   
 DBCC CHECKALLOC gibt das folgende Resultset zurück (die tatsächlichen Werte können davon abweichen), außer wenn ESTIMATEONLY oder NO_INFOMSGS angegeben wird.

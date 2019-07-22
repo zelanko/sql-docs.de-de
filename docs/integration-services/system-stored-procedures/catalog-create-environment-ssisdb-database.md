@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3cf3917aec1bfed9a02a684b5a86b48ffe7dc5e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7871b8225e6574067befb3ab8a90af1875410def
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110383"
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (SSISDB-Datenbank)
 
@@ -37,13 +36,13 @@ catalog.create_environment [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argumente  
  [@folder_name =] *folder_name*  
- Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)** .  
+ Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
   
  [@environment_name =] *environment_name*  
- Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
+ Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
   
  [@environment_description=] *environment_description*  
- Eine optionale Beschreibung der Umgebung. Der *environment_description* ist **nvarchar(1024)** .  
+ Eine optionale Beschreibung der Umgebung. Der *environment_description* ist **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

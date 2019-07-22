@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Verwenden des Dta Command Prompt Utility | Microsoft-Dokumentation'
+title: 'Lektion 3: Verwenden des Befehlszeilen-Hilfsprogramms DTA | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5a207ebd14880519a20ea504a45e541e6d360175
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 04179ee339f41dde1b9e90d7abc30a00e492f3cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034723"
 ---
 # <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lektion 3: Verwenden des Befehlszeilenprogramms dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ Auf die Verwendung der XML-Eingabefunktionen des Datenbankoptimierungsratgebers 
   
 In dieser Aufgabe erfahren Sie, wie Sie das Hilfsprogramm **dta** starten, die dazugehörige Hilfe anzeigen und es anschließend zur Optimierung einer Arbeitsauslastung von der Eingabeaufforderung aus verwenden. Dabei wird die Arbeitsauslastung MyScript.sql verwendet, die Sie in der Übung zur grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers [Optimieren einer Arbeitsauslastung](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)angelegt haben.  
   
-Das Tutorial verwendet die AdventureWorks2017-Beispieldatenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken nicht standardmäßig installiert. Informationen zur Installation der Beispieldatenbanken finden Sie unter [Installieren der SQL Server-Beispiele und -Beispieldatenbanken](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
+Im Tutorial wird die AdventureWorks2017-Beispieldatenbank verwendet. Aus Sicherheitsgründen werden die Beispieldatenbanken nicht standardmäßig installiert. Informationen zur Installation der Beispieldatenbanken finden Sie unter [Installieren der SQL Server-Beispiele und -Beispieldatenbanken](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 Im Folgenden werden folgende Schritte erläutert: Öffnen einer Eingabeaufforderung, Starten des Befehlszeilen-Hilfsprogramms **dta** , Anzeigen der Syntaxhilfe und Optimieren der einfachen Arbeitsauslastung MyScript.sql, die Sie in [Optimieren einer Arbeitsauslastung](../../tools/dta/lesson-1-1-tuning-a-workload.md)angelegt haben.  
 
@@ -51,9 +50,9 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
-  > Dieses Tutorial dient für einen Benutzer mit der Verwendung von SQL Server Management Studio und einfache administrative Aufgaben vertraut. 
+  > Dieses Tutorial richtet sich an einen Benutzer, der mit der Verwendung SQL Server Management Studio und grundlegender Datenbankverwaltungsaufgaben vertraut ist. 
 
-## <a name="access-dta-command-prompt-utility-help-menu"></a>Zugriff DTA-Eingabeaufforderung Hilfsprogramm Menü "Hilfe"
+## <a name="access-dta-command-prompt-utility-help-menu"></a>Hilfe Menü für Access-DTA-Eingabeaufforderung
   
   
 1.  Zeigen Sie im **Startmenü** auf **Alle Programme**, zeigen Sie auf **Zubehör**, und klicken Sie anschließend auf **Eingabeaufforderung**.  
@@ -66,9 +65,9 @@ Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiede
   
     Der folgende Teil des Befehls ist optional: `| more` . Sie können mit seiner Hilfe jedoch die Syntaxhilfe des Hilfsprogramms besser durchblättern. Drücken Sie die EINGABETASTE, um im Hilfetext jeweils eine weitere Zeile anzuzeigen, oder drücken Sie die LEERTASTE, um auf die nächste Seite zu wechseln.  
 
-  ![Verwenden Hilfe mit Cmd-Hilfsprogramms DTA](media/dta-tutorials/dta-cmd-help.png)
+  ![Verwenden der Hilfe zum Hilfsprogramm dta cmd](media/dta-tutorials/dta-cmd-help.png)
 
-## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Optimieren der einfachen arbeitsauslastung mit dem Befehlszeilen-Hilfsprogramms DTA  
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Optimieren der einfachen Arbeitsauslastung mithilfe des Befehlszeilen-Hilfsprogramms DTA  
 
 
   
@@ -82,7 +81,7 @@ Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiede
   
     Dabei gibt `-S` den Namen Ihres Servers und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, in der die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank installiert ist. Die Einstellung `-E` gibt an, dass Sie eine vertrauenswürdige Verbindungsart mit der Instanz verwenden möchten. Dies ist der geeignete Verbindungstyp, wenn Sie eine Verbindung mit einem Windows-Domänenkonto herstellen. Die Einstellung `-D` gibt die Datenbank an, die Sie optimieren möchten, `-if` gibt die Arbeitsauslastungsdatei an, `-s` gibt den Sitzungsnamen an, `-of` gibt die Datei an, in die das Tool das Skript mit den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Empfehlungen schreiben soll, und `-ox` gibt die Datei an, in die das Tool die Empfehlungen im XML-Format schreiben soll. Die letzten drei Schalter legen folgende Optimierungsoptionen fest: `-fa IDX_IV` gibt an, dass der Datenbankoptimierungsratgeber nur das Hinzufügen von Indizes (gruppiert und nicht gruppiert) und von indizierten Sichten berücksichtigen soll; `-fp NONE` gibt an, dass bei der Analyse keine Partitionsstrategie berücksichtigt werden soll; und `-fk NONE` gibt an, dass in der Datenbank vorhandene physische Entwurfsstrukturen nicht beibehalten werden müssen, wenn der Datenbankoptimierungsratgeber seine Empfehlungen abgibt.  
 
-  ![Verwenden cmd ein, mit der DTA](media/dta-tutorials/dta-cmd.png)
+  ![Verwenden von cmd mit DTA](media/dta-tutorials/dta-cmd.png)
   
 3.  Wenn der Datenbankoptimierungsratgeber mit dem Optimieren der Arbeitsauslastung fertig ist, zeigt er eine Meldung an, die besagt, dass die Optimierungssitzung erfolgreich abgeschlossen wurde. Sie können die Optimierungsergebnisse anzeigen. Verwenden Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Öffnen der Dateien MySession2OutputScript.sql und MySession2Output.xml. Alternativ dazu können Sie auch die Optimierungssitzung MySession2 in der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers öffnen und die Empfehlungen und Berichte so anzeigen, wie in den Abschnitten [Anzeigen von Empfehlungen für die Optimierung](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) und [Anzeigen von Optimierungsberichten](../../tools/dta/lesson-1-3-viewing-tuning-reports.md)erläutert.  
   

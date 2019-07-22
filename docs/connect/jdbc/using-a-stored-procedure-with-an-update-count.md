@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b65d882365b7424cd88fa0942674cfe0a7660795
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d66c19e9e033e838eac07f7140ce7864fc049e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004081"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Verwenden von gespeicherten Prozeduren mit einer Updatezählung
 
@@ -27,7 +26,7 @@ Zum Ändern von Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 Nachdem der Aufruf der gespeicherten Prozedur mit der Klasse „SQLServerCallableStatement“ eingerichtet wurde, können Sie die gespeicherte Prozedur mit der Methode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) oder der Methode [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) aufrufen. Anders als die Methode „execute“ gibt die Methode „executeUpdate“ einen **int**-Wert zurück, der die von der gespeicherten Prozedur betroffene Anzahl von Zeilen enthält. Wenn Sie die Methode „execute“ verwenden und die Anzahl der betroffenen Zeilen ermitteln möchten, können Sie nach dem Ausführen der gespeicherten Prozedur die Methode [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) aufrufen.
 
 > [!NOTE]  
-> Wenn der JDBC-Treiber alle Updatezählungen zurückgeben soll, einschließlich der Updatezählungen, die von eventuell ausgelösten Triggern zurückgegeben werden, müssen Sie die lastUpdateCount-Verbindungseigenschaft auf "false" setzen. Weitere Informationen zur LastUpdateCount-Eigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).
+> Wenn der JDBC-Treiber alle Updatezählungen zurückgeben soll, einschließlich der Updatezählungen, die von eventuell ausgelösten Triggern zurückgegeben werden, müssen Sie die lastUpdateCount-Verbindungseigenschaft auf "false" setzen. Weitere Informationen zur lastUpdateCount-Eigenschaft finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../connect/jdbc/setting-the-connection-properties.md).
 
 Erstellen Sie als Beispiel die folgende Tabelle und gespeicherte Prozedur, und fügen Sie Beispieldaten in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank ein:
 

@@ -1,5 +1,5 @@
 ---
-title: GetDiscardedServerPreparedStatementCount-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getverwerdedserverpreparedstatuementcount-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2910453562cf78c4b88140de15885d4ddca5fe3a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983625"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Gibt die Anzahl der derzeit ausstehenden vorbereitete Anweisung unprepare Aktionen.
+ Gibt die Anzahl der aktuell ausstehenden vorbereiteten Anweisungs Aktionen für die Vorbereitung zurück.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +35,13 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>Rückgabewert
- Ein **Int** , enthält die Anzahl der derzeit ausstehenden vorbereitete unprepare Aktionen.
+ Ein **int** -Wert, der die Anzahl der aktuell ausstehenden vorbereiteten Anweisungen für die Vorbereitung von Aktionen enthält.
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

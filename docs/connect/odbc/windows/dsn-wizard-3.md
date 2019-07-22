@@ -1,5 +1,5 @@
 ---
-title: Datenquellen (Assistentenbildschirm 3) (ODBC-Treiber für SQLServer) | Microsoft-Dokumentation
+title: Datenquellen-Assistent (Bildschirm 3) (ODBC-Treiber für SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936546"
 ---
 # <a name="data-source-wizard-screen-3"></a>Datenquellen-Assistent (Bildschirm 3)
 
@@ -68,27 +67,27 @@ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbind
 
 ### <a name="multi-subnet-failover"></a>Multisubnetz-Failover.
 
-Wenn Ihre Anwendung an eine hohe Verfügbarkeit und Disaster Recovery (AlwaysOn-Verfügbarkeitsgruppen) verfügbarkeitsgruppe (AG) in unterschiedlichen Subnetzen verbunden ist, sodass **-multisubnetz-Failovercluster.** konfiguriert den ODBC Driver for SQL Server, um eine schnellere Erkennung sowie die Verbindung zu dem (gerade) aktiven Server zu gewährleisten.
+Wenn Ihre Anwendung eine Verbindung mit einer Verfügbarkeits Gruppe mit hoher Verfügbarkeit und Notfall Wiederherstellung (AlwaysOn-Verfügbarkeitsgruppen) in unterschiedlichen Subnetzen herstellt, aktivieren Sie das **multisubnetzfailover.** konfiguriert den ODBC Driver for SQL Server, um eine schnellere Erkennung sowie die Verbindung zu dem (gerade) aktiven Server zu gewährleisten.
 
 ### <a name="transparent-network-ip-resolution"></a>Transparente Netzwerk-IP-Adressauflösung
 
-Ändert das Sitzungsverhalten, sodass **-multisubnetz-Failovercluster** um schnellere wiederverbindung während des Failovers zu ermöglichen. Weitere Informationen finden Sie unter [Using Transparent Network IP Resolution (Verwenden der transparenten Netzwerk-IP-Adressauflösung)](../../../connect/odbc/using-transparent-network-ip-resolution.md).
+Ändert das Verhalten des **multisubnetzfailovers** , um während des Failovers eine schnellere Verbindungs Verbindung zuzulassen. Weitere Informationen finden Sie unter [Using Transparent Network IP Resolution (Verwenden der transparenten Netzwerk-IP-Adressauflösung)](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Spaltenverschlüsselung
 
-Ermöglicht die automatische Entschlüsselung und Verschlüsselung von Datenübertragungen in und aus mit verschlüsselten Spalten der [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) Feature in SQL Server 2016 und höher verfügbar.
+Aktiviert die automatische Entschlüsselung und Verschlüsselung von Datenübertragungen in und aus Spalten, die mit der in SQL Server 2016 und höher verfügbaren [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) Funktion verschlüsselt wurden.
 
-### <a name="use-fmtonly-metadata-discovery"></a>Verwenden Sie FMTONLY metadatenermittlung:
+### <a name="use-fmtonly-metadata-discovery"></a>Verwenden Sie die Ermittlung von "atmtonly Metadata":
 
-Verwenden Sie die ältere SET FMTONLY-Metadaten-Ermittlungsmethode, beim Herstellen einer Verbindung mit SQL Server 2012 oder höher. Aktivieren Sie diese Option nur bei Verwendung von nicht unterstützten Abfragen [Sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), z. B. die, die temporären Tabellen enthält. 
+Verwenden Sie die Legacy-Ermittlungsmethode SET FMTONLY, wenn Sie eine Verbindung mit SQL Server 2012 oder höher herstellen. Aktivieren Sie diese Option nur, wenn Sie Abfragen verwenden, die von [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)nicht unterstützt werden 
 
 ### <a name="next"></a>Weiter
 
-Setzt den Vorgang mit dem nächsten Bildschirm des Assistenten fort.
+Wechselt zum nächsten Bildschirm des Assistenten.
 
 ### <a name="back"></a>Zurück
 
-Gibt Sie zurück zum vorherigen Bildschirm des Assistenten.
+Kehrt zum vorherigen Bildschirm des Assistenten zurück.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

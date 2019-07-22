@@ -1,5 +1,5 @@
 ---
-title: Ausführen von gespeicherten Prozeduren (OLE DB) | Microsoft-Dokumentation
+title: Ausführen gespeicherter Prozeduren (OLE DB) | Microsoft-Dokumentation
 description: Ausführen von gespeicherten Prozeduren (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993803"
 ---
 # <a name="stored-procedures---running"></a>Gespeicherte Prozeduren: Ausführen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,11 +34,11 @@ ms.locfileid: "66795898"
   
 -   Bessere Konsistenz  
   
--   Eine höhere Genauigkeit.  
+-   Bessere Genauigkeit.  
   
 -   Zusätzliche Funktionalität  
   
- Der OLE DB-Treiber für SQL Server unterstützt drei der Mechanismen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gespeicherte Prozeduren verwenden, um Daten zurückzugeben:  
+ Der OLE DB-Treiber für SQL Server unterstützt drei der Mechanismen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die gespeicherte Prozeduren zum Zurückgeben von Daten verwenden:  
   
 -   Jede SELECT-Anweisung in der Prozedur generiert ein Resultset.  
   

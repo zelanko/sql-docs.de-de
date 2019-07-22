@@ -1,107 +1,107 @@
 ---
-title: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle – SQL Server Machine Learning Services
-description: Verwenden Sie RxPredict oder Sp_rxPredict für echtzeitbewertung oder VORHERSAGEN für T-SQL für native Bewertung für Vorhersagen und Vorhersagen in R und Pythin in SQL Server-Machine Learning.
+title: Generieren von Vorhersagen und Vorhersagen mit Machine Learning-Modellen
+description: Verwenden Sie rxvorhersage oder sp_rxPredict für die Echtzeitbewertung, oder prognostizieren Sie T-SQL für die native Bewertung für Vorhersagen und Vorhersagen in R und pythin in SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4af5fff7581ae2ae8f74e09603b75bca620ca775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aee673eb548531798f98a5a49266a2cd7211b63
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962636"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345560"
 ---
-# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Gewusst wie: Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modelle in SQL Server
+# <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modellen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Mithilfe eines vorhandenen Modells vorhersagen oder das Vorhersagen von Ergebnissen für die neue Dateneingaben ist eine wesentliche Aufgabe in Machine Learning. Dieser Artikel listet die Methoden zum Generieren von Vorhersagen in SQL Server. Zwischen den Ansätzen werden die interne Verarbeitung von Methoden für schnelle Vorhersagen in dem die Geschwindigkeit auf inkrementelle Reduzierung der basiert zeitliche Abhängigkeiten ausgeführt. Das bedeutet weniger Abhängigkeiten schnellerer Prognosen.
+Die Verwendung eines vorhandenen Modells zum Vorhersagen oder Vorhersagen der Ergebnisse für neue Dateneingaben ist eine zentrale Aufgabe beim maschinellen lernen. In diesem Artikel werden die Ansätze zum Generieren von Vorhersagen in SQL Server aufgelistet. Zu den Ansätzen zählen interne Verarbeitungsmethoden für hoch Geschwindigkeits Vorhersagen, bei denen die Geschwindigkeit auf inkrementellen Reduzierungen von Laufzeitabhängigkeiten basiert. Weniger Abhängigkeiten bedeuten schnellere Vorhersagen.
 
-Mithilfe der internen Verarbeitung-Infrastruktur (Echtzeit- oder nativen Bewertungen) im Lieferumfang von bibliotheksanforderungen. Funktionen müssen aus den Bibliotheken von Microsoft sein. R oder Python-Code Aufrufen von Open Source- oder Drittanbieter-Funktionen wird nicht in CLR oder C++-Erweiterungen unterstützt.
+Die Verwendung der internen Verarbeitungs Infrastruktur (Echt Zeit-oder Native Bewertung) ist mit den Bibliotheks Anforderungen ausgestattet. Funktionen müssen aus den Microsoft-Bibliotheken bestehen. R-oder python-Code, der Open Source-Funktionen oder Funktionen von Drittanbietern aufrufen, wird C++ in CLR oder Erweiterungen nicht unterstützt.
 
-Die folgende Tabelle enthält die bewertungs-Frameworks für Vorhersagen und Vorhersagen. 
+In der folgenden Tabelle werden die Bewertungs Frameworks für Vorhersagen und Vorhersagen zusammengefasst. 
 
-| Methodik           | Interface         | Anforderungen an | Mindestgeschwindigkeiten für die Verarbeitung |
+| Methodik           | Interface         | Bibliotheks Anforderungen | Verarbeitungsgeschwindigkeiten |
 |-----------------------|-------------------|----------------------|----------------------|
-| Erweiterbarkeitsframework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[Rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Keine Modelle können auf eine beliebige R oder Python-Funktion basieren | Hunderte von Millisekunden. <br/>Laden eine Laufzeitumgebung hat eine feste Kosten, dreihundert auf sechs Millisekunden, Durchschnitt, bevor neuen Daten bewertet werden. |
-| [Real-Time scoring CLR-Erweiterung](../real-time-scoring.md) | [Sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR, MicrosoftML <br/>Python: Revoscalepy, microsoftml | Um Dutzende Millisekunden verlängert, durchschnittlich. |
-| [Native Bewertung C++-Erweiterung](../sql-native-scoring.md) | [VORHERSAGEN für T-SQL-Funktion](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) für ein serialisiertes Modell | R: RevoScaleR <br/>Python: Revoscalepy | Weniger als 20 Millisekunden im Durchschnitt. | 
+| Erweiterbarkeitsframework | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | Keine Modelle können auf jeder R-oder python-Funktion basieren. | Hunderte Millisekunden. <br/>Das Laden einer Laufzeitumgebung hat einen Fixwert von drei bis 600 Millisekunden, bevor neue Daten bewertet werden. |
+| [Echtzeitbewertung der CLR-Erweiterung](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) bei einem serialisierten Modell | R RevoScaleR, MicrosoftML <br/>Python: revoscalepy, microsoftml | Durchschnittlich zehn Millisekunden. |
+| [Native Bewertungs C++ Erweiterung](../sql-native-scoring.md) | [Vorhersagen der T-SQL-Funktion](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) für ein serialisiertes Modell | R RevoScaleR <br/>Python: revoscalepy | Im Durchschnitt weniger als 20 Millisekunden. | 
 
-Hohe Geschwindigkeit und nicht die Substanz der Ausgabe ist die unterscheidenden-Funktion. Wenn die gleichen Funktionen und die Eingaben, sollte der erzielten Ausgabe nicht basierend auf den Ansatz abhängt.
+Die Verarbeitungsgeschwindigkeit und nicht der Inhalt der Ausgabe ist das differenzierende Feature. Wenn die gleichen Funktionen und Eingaben angenommen werden, sollte die bewertete Ausgabe nicht je nach verwendeter Herangehensweise variieren.
 
-Das Modell muss mit der eine unterstützte Funktion erstellt und dann serialisiert, raw Byte-Stream auf dem Datenträger gespeichert oder in einem Binärformat in einer Datenbank gespeichert. Verwenden eine gespeicherte Prozedur oder T-SQL, können Sie laden und verwenden ein binäres Modell ohne den Aufwand für eine Zeit des R- oder Python-Sprache, die ausgeführt, wodurch kürzere Zeit bis zum Abschluss beim Generieren von vorhersagebewertungen für neue Eingaben.
+Das Modell muss mit einer unterstützten Funktion erstellt und dann in einen unformatierten Bytestream serialisiert werden, der auf einem Datenträger gespeichert oder im Binärformat in einer Datenbank gespeichert wird. Mithilfe einer gespeicherten Prozedur oder T-SQL können Sie ein binäres Modell ohne den Aufwand einer R-oder python-Sprachlaufzeit laden und verwenden, was zu einer schnelleren Zeit bis zum Abschluss der Erstellung von Vorhersage Bewertungen für neue Eingaben führt.
 
-Die Bedeutung der CLR und C++-Erweiterungen ist die Nähe zu den Datenbank-Engine. Die systemeigene Sprache von der Datenbank-Engine ist C++, das bedeutet, Erweiterungen geschrieben in C++ mit weniger Abhängigkeiten führen dass. Im Gegensatz dazu Sie .NET Core CLR-Erweiterungen abhängig. 
+Die Bedeutung von CLR und C++ Erweiterungen liegt in der Nähe der Datenbank-Engine selbst. Die systemeigene Sprache der Datenbank-Engine C++ist. Dies bedeutet, dass C++ in erstellte Erweiterungen mit weniger Abhängigkeiten ausgeführt werden. Im Gegensatz dazu sind CLR-Erweiterungen von .net Core abhängig. 
 
-Wie zu erwarten, wird die Unterstützung für durch diese Umgebungen zur Laufzeit beeinträchtigt. Führen Sie systemeigenen Datenbank-Engine-Erweiterungen an jeder Stelle, die relationale Datenbank unterstützt wird: Windows, Linux-Azure. CLR-Erweiterungen mit der .NET Core-Anforderung ist derzeit nur Windows.
+Wie Sie vielleicht erwarten, ist die Platt Form Unterstützung von diesen Laufzeitumgebungen betroffen. Native Datenbankmodul Erweiterungen werden überall dort ausgeführt, wo die relationale Datenbank unterstützt wird Windows, Linux, Azure. CLR-Erweiterungen mit der .net Core-Anforderung sind derzeit nur Windows.
 
-## <a name="scoring-overview"></a>Übersicht über die Bewertung
+## <a name="scoring-overview"></a>Bewertungs Übersicht
 
-_Bewertung_ ist ein zweistufiger Prozess. Zuerst legen Sie eine bereits trainierten Modells aus einer Tabelle zu laden. Zweitens übergeben, die neuen Eingabedaten an die Funktion zum Generieren von Werten der Vorhersage (oder _Bewertungen_). Die Eingabe ist häufig eine T-SQL-Abfrage, die tabellarische oder einzelne Zeilen zurückgegeben werden. Sie können auch Ausgabe einen einzelne Spalte-Wert, die Wahrscheinlichkeit darstellt, oder Sie möglicherweise mehrere Werte, z. B. eines Konfidenzintervalls, Fehler oder andere nützliche Ergänzung der Vorhersage ausgegeben.
+Die _Bewertung_ ist ein zweistufiger Prozess. Zunächst geben Sie ein bereits trainiertes Modell an, das aus einer Tabelle geladen werden soll. Übergeben Sie Zweitens neue Eingabedaten an die Funktion, um Vorhersagewerte (oder _Bewertungen_) zu generieren. Die Eingabe ist häufig eine T-SQL-Abfrage, die entweder tabellarische oder einzelne Zeilen zurückgibt. Sie können auswählen, ob ein einzelner Spaltenwert, der eine Wahrscheinlichkeit darstellt, ausgegeben werden soll, oder Sie können mehrere Werte ausgeben, z. b. ein Vertrauensintervall, einen Fehler oder eine andere hilfreiche Ergänzung der Vorhersage.
 
-Einen Schritt zu sichern, den gesamten Vorgang der Vorbereitung des Modells, und klicken Sie dann Generieren von Bewertungen kann auf diese Weise zusammengefasst werden:
+Wenn Sie einen Schritt zurücknehmen, kann der Gesamtprozess der Vorbereitung des Modells und das anschließende Erstellen von Bewertungen auf diese Weise zusammengefasst werden:
 
-1. Erstellen Sie ein Modell mit einem unterstützten Algorithmus an. Unterstützung variiert je nach der Bewertung Methodik, die Sie auswählen.
-2. Das Modell zu trainieren.
-3. Das Modell mit einem speziellen Binärformat zu serialisieren.
-3. Speichern Sie das Modell in SQL Server. In der Regel bedeutet dies das serialisierte Modell in einer SQL Server-Tabelle gespeichert werden sollen.
-4. Rufen Sie die Funktion oder gespeicherte Prozedur, die Eingaben Modell und die Daten als Parameter angeben.
+1. Erstellen Sie ein Modell mit einem unterstützten Algorithmus. Die Unterstützung variiert je nach der gewählten Bewertungsmethodik.
+2. Trainieren Sie das Modell.
+3. Serialisieren Sie das Modell mithilfe eines speziellen Binär Formats.
+3. Speichern Sie das Modell in SQL Server. Dies bedeutet in der Regel, dass das serialisierte Modell in einer SQL Server Tabelle gespeichert wird.
+4. Nennen Sie die Funktion oder die gespeicherte Prozedur, und geben Sie das Modell und die Dateneingaben als Parameter an.
 
-Wenn die Eingabe viele Zeilen mit Daten enthält, ist es in der Regel schneller, die Vorhersagewerte im Rahmen der Bewertung in eine Tabelle einzufügen. Generieren ein einzelnes Ergebnis ist ein üblicher in einem Szenario, in dem Sie Eingabewerte aus einem Formular oder einer benutzeranforderung, und das Ergebnis an eine Clientanwendung zurück. Zur Verbesserung der Leistung beim aufeinander folgenden Bewertungen zu generieren, kann SQL Server das Modell zwischenspeichern, damit sie in den Arbeitsspeicher neu geladen werden kann.
+Wenn die Eingabe viele Daten Zeilen enthält, ist es in der Regel schneller, die Vorhersagewerte als Teil des Bewertungsprozesses in eine Tabelle einzufügen. Das Erstellen einer einzelnen Bewertung ist typischer in einem Szenario, in dem Sie Eingabewerte aus einer Formular-oder Benutzer Anforderung erhalten und das Ergebnis an eine Client Anwendung zurückgeben. Um die Leistung beim erzeugen aufeinander folgender Ergebnisse zu verbessern, können SQL Server das Modell Zwischenspeichern, sodass es in den Arbeitsspeicher geladen werden kann.
 
-## <a name="compare-methods"></a>Vergleichen von Methoden
+## <a name="compare-methods"></a>Methoden vergleichen
 
-Um die Integrität der Datenbank-Engine die Kernprozesse beizubehalten, ist die Unterstützung für R und Python in einer Architektur mit doppeltem aktiviert, die Verarbeitung der Sprache von RDBMS-Verarbeitung isoliert. Ab SQL Server 2016 hat Microsoft ein Extensibility Framework für die R-Skripts, die von T-SQL ausgeführt werden kann. hinzugefügt. In SQL Server 2017 wurde die Integration von Python hinzugefügt. 
+Um die Integrität der zentralen Datenbank-Engine-Prozesse beizubehalten, wird die Unterstützung für R und python in einer dualen Architektur aktiviert, die die Sprachverarbeitung von der RDBMS-Verarbeitung isoliert. Ab SQL Server 2016 wurde von Microsoft ein Erweiterbarkeits Framework hinzugefügt, das das Ausführen von R-Skripts aus T-SQL ermöglicht. In SQL Server 2017 wurde die python-Integration hinzugefügt. 
 
-Das Extensibility Framework unterstützt bei Vorgängen, die Sie in R oder Python, von einfachen Funktionen bis hin zu Schulungen komplexen Machine learning-Modelle ausführen können. Die Dual-Process-Architektur erfordert jedoch einen externen R oder Python-Prozess für jeden Aufruf, unabhängig von der Komplexität des Vorgangs aufgerufen. Wenn die Workload umfasst, laden ein vorab trainiertes Modell aus einer Tabelle und die Bewertung für diese Daten bereits in SQL Server, fügt der Aufwand für das Aufrufen von externen Prozessen Latenz, die unter bestimmten Umständen nicht akzeptabel sein können. Beispielsweise erfordert die betrugserkennung, schnelle Bewertung, um relevant sein.
+Das Erweiterbarkeit Framework unterstützt jeden Vorgang, den Sie in R oder python ausführen können, und reicht von einfachen Funktionen bis hin zum trainieren komplexer Machine Learning-Modelle. Allerdings erfordert die Dual-Process-Architektur, dass unabhängig von der Komplexität des Vorgangs ein externer R-oder python-Prozess für jeden Aufruf aufgerufen wird. Wenn die Arbeitsauslastung das Laden eines vorab trainierten Modells aus einer Tabelle und die Bewertung auf der Grundlage der bereits in SQL Server vorhandenen Daten umfasst, fügt der Aufwand des Aufrufs externer Prozesse Latenzzeit ein, die unter bestimmten Umständen nicht akzeptabel sein kann. Beispielsweise erfordert die Betrugserkennung, dass eine schnelle Bewertung relevant ist.
 
-Um mindestgeschwindigkeiten für die Bewertung für Szenarien wie z.B. betrugserkennung zu erhöhen, hinzugefügt SQL Server integrierten bewertungsbibliotheken als C++- und CLR-Erweiterungen, die den Aufwand für R und Python-Start-Prozesse zu vermeiden.
+Um Bewertungs Geschwindigkeiten für Szenarien wie die Betrugserkennung zu erhöhen, SQL Server integrierte Bewertungs Bibliotheken als C++ und CLR-Erweiterungen hinzugefügt, die den mehr Aufwand von R-und python-Start Prozessen vermeiden.
 
-[**Echtzeitbewertung** ](../real-time-scoring.md) war die erste Lösung für hohe Leistung zu bewerten. In frühen Versionen von SQL Server 2017 und späteren Updates eingeführt, um SQL Server 2016, CLR-Bibliotheken, die für R und Python-Verarbeitung über Funktionen im RevoScaleR, MicrosoftML (R), Revoscalepy, Kontrolle von Microsoft stehen abhängig echtzeitbewertung und Microsoftml (Python). CLR-Bibliotheken werden aufgerufen, mit der **Sp_rxPredict** gespeicherte Prozedur generiert Ergebnisse aus jedem unterstützten Modelltyp an, ohne die R- oder Python-Laufzeit aufrufen.
+Die [**Echtzeitbewertung**](../real-time-scoring.md) war die erste Lösung für die Bewertung mit hoher Leistung. In frühen Versionen von SQL Server 2017 und neueren Updates SQL Server 2016 basiert die Echtzeitbewertung auf CLR-Bibliotheken, die für die R-und python-Verarbeitung über von Microsoft gesteuerte Funktionen in revoscaler, microsoftml (R), revoscalepy und microsoftml (python). CLR-Bibliotheken werden mithilfe der gespeicherten Prozedur **sp_rxPredict** aufgerufen, um Ergebnisse aus einem beliebigen unterstützten Modelltyp zu generieren, ohne die R-oder python-Laufzeit aufzurufen.
 
-[**Native Bewertung** ](../sql-native-scoring.md) ist eine SQL Server 2017-Funktion, die implementiert werden, wie eine systemeigene C++-Bibliothek, jedoch nur für Revoscaler- und Revoscalepy-Modelle. Ist der schnellste und sicherer Ansatz, sondern eine kleinere Gruppe von Funktionen, die relativ zu anderen Methoden unterstützt.
+Die [**native Bewertung**](../sql-native-scoring.md) ist eine SQL Server 2017-Funktion, die als C++ native Bibliothek implementiert ist, jedoch nur für revoscaler-und revoscalepy-Modelle. Dies ist der schnellste und sicherere Ansatz, unterstützt jedoch einen kleineren Satz von Funktionen relativ zu anderen Methoden.
 
-## <a name="choose-a-scoring-method"></a>Wählen Sie eine Bewertungsmethode
+## <a name="choose-a-scoring-method"></a>Auswählen einer Bewertungsmethode
 
-Plattformanforderungen geben häufig die bewertungs-Methodik zur verwenden.
+Platt Form Anforderungen legen oft fest, welche Bewertungsmethodik verwendet werden soll.
 
 | Produktversion und Plattform | Methodik |
 |------------------------------|-------------|
-| SQLServer 2017 unter Windows, Linux für SQL Server 2017 und Azure SQL-Datenbank | **Native Bewertung** mit T-SQL-VORHERSAGEN |
-| SQL Server 2017 (nur Windows), SQL Server 2016 R Services SP1 oder höher | **Echtzeitbewertung** mit sp\_RxPredict gespeicherten Prozedur |
+| SQL Server 2017 unter Windows, SQL Server 2017 Linux und Azure SQL-Datenbank | **Native Bewertung** mit T-SQL-Vorhersage |
+| SQL Server 2017 (nur Windows), SQL Server 2016 R Services bei SP1 oder höher | **Echtzeitbewertung** mit der in\_SP rxvorhersage gespeicherten Prozedur |
 
-Es wird empfohlen, nativen Bewertung, mit der PREDICT-Funktion. Mithilfe von sp\_RxPredict erfordert, dass Sie SQLCLR-Integration aktivieren. Beachten Sie die Sicherheitsrisiken, bevor Sie diese Option aktivieren.
+Wir empfehlen die native Bewertung mit der Vorhersagefunktion. Die Verwendung\_von SP rxprognostizieren erfordert, dass Sie die SQLCLR-Integration aktivieren. Berücksichtigen Sie die Sicherheitsrisiken, bevor Sie diese Option aktivieren.
 
 ## <a name="serialization-and-storage"></a>Serialisierung und Speicherung
 
-Um ein Modell mit der schnellen Bewertung Optionen zu verwenden, speichern Sie das Modell mithilfe von einem speziellen serialisierte Format für Größe optimiert wurde und die Bewertung der Effizienz.
+Wenn Sie ein Modell mit einer der Optionen für die schnelle Bewertung verwenden möchten, speichern Sie das Modell unter Verwendung eines speziellen serialisierten Formats, das für die Größen-und Bewertungs Effizienz optimiert wurde.
 
-+ Rufen Sie [RxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) ein unterstütztes Modell zum Schreiben der **unformatierten** Format.
-+ Rufen Sie [RxUnserializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)' wiederherstellen, kann das Modell für die Verwendung in anderen R-Code oder das Modell anzuzeigen.
++ Aufrufen von [rxserializemodel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) zum Schreiben eines unterstützten Modells in das **RAW** -Format.
++ Aufrufen von [rxunserializemodel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)' zum erneuten darstellen des Modells für die Verwendung in anderem R-Code oder zum Anzeigen des Modells.
 
-**Mithilfe von SQL**
+**Verwenden von SQL**
 
-Von SQL-Code können Sie trainieren das Modell, indem [Sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), und fügen Sie direkt die trainierten Modelle in einer Tabelle in einer Spalte vom Typ **'varbinary(max)'** . Ein einfaches Beispiel finden Sie unter [preditive Modell in R erstellen](../tutorials/rtsql-create-a-predictive-model-r.md)
+Aus SQL-Code können Sie das Modell mithilfe von [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)trainieren und die trainierten Modelle direkt in eine Tabelle einfügen, in einer Spalte vom Typ **varbinary (max)** . Ein einfaches Beispiel finden Sie unter [Erstellen eines prätiven Modells in R](../tutorials/rtsql-create-a-predictive-model-r.md) .
 
-**Mithilfe von R**
+**Verwenden von R**
 
-Aufrufen von R-Code, der [RxWriteObject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) Funktion von RevoScaleR-Paket, das Modell direkt an die Datenbank zu schreiben. Die **rxWriteObject()** Funktion R-Objekte aus einer ODBC-Datenquelle wie SQL Server, oder Schreiben von Objekten in SQL Server. Die API wird nach einem einfachen Schlüssel-Wert-Speicher modelliert.
+Rufen Sie aus R-Code die Funktion [rxschreiteobject](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxwriteobject) aus dem revoscaler-Paket auf, um das Modell direkt in die Datenbank zu schreiben. Die Funktion **rxschreiteobject ()** kann R-Objekte aus einer ODBC-Datenquelle wie SQL Server abrufen oder Objekte in SQL Server schreiben. Die API wird nach einem einfachen Schlüssel-Wert-Speicher modelliert.
   
-Wenn Sie diese Funktion verwenden, werden Sie sicher, dass das Modell, indem Serialisieren [RxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) erste. Legen Sie dann die *Serialisieren* -Argument in **RxWriteObject** auf "false", um zu vermeiden, wiederholen den Schritt für die Serialisierung.
+Wenn Sie diese Funktion verwenden, stellen Sie sicher, dass Sie das Modell zuerst mithilfe von [rxserializemodel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) serialisieren. Legen Sie dann das *serialisieren* -Argument in **rxschreiteobject** auf false fest, um zu vermeiden, dass der serialisierungsschritt wiederholt wird.
 
-Serialisieren ein Modell auf ein binäres Format ist nützlich, aber nicht erforderlich, wenn sind Sie Bewertungen, Vorhersagen mithilfe von R und Python Laufzeitumgebung, in dem Extensibility Framework ausführen. Sie können Speichern eines Modells im raw Byte-Format in eine Datei, und klicken Sie dann in SQL Server aus der Datei gelesen. Diese Option kann nützlich sein, wenn Sie verschieben oder kopieren die Modelle zwischen Umgebungen.
+Die Serialisierung eines Modells in ein Binärformat ist hilfreich, aber nicht erforderlich, wenn Sie Vorhersagen mithilfe der R-und python-Laufzeitumgebung im Erweiterbarkeits Framework bewerten. Sie können ein Modell im Raw Byte-Format in einer Datei speichern und dann aus der Datei in SQL Server lesen. Diese Option kann nützlich sein, wenn Sie Modelle zwischen Umgebungen verschieben oder kopieren.
 
-## <a name="scoring-in-related-products"></a>Bewertung in verwandte Produkte
+## <a name="scoring-in-related-products"></a>Bewertung in verwandten Produkten
 
-Bei Verwendung der [eigenständiger Server](r-server-standalone.md) oder [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), Sie haben andere Optionen als gespeicherte Prozeduren und T-SQL-Funktionen zum schnellen Generieren von Vorhersagen. Dem eigenständigen Server und dem Machine Learning Server unterstützen das Konzept einer *Webdienst* für die codebereitstellung. Können Sie eine R bündeln oder Python von vortrainierten Modell als Webdienst, zur Laufzeit zum Auswerten von neuen Dateneingaben aufgerufen wird. Weitere Informationen dazu finden Sie in diesen Artikeln:
+Wenn Sie den [eigenständigen Server](r-server-standalone.md) oder einen [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)verwenden, haben Sie neben gespeicherten Prozeduren auch weitere Optionen und T-SQL-Funktionen zum schnellen Generieren von Vorhersagen. Sowohl der eigenständige Server als auch der Machine Learning Server unterstützen das Konzept eines *Webdiensts* für die Code Bereitstellung. Sie können ein vorab trainiertes R-oder python-Modell als Webdienst bündeln, der zur Laufzeit aufgerufen wird, um neue Dateneingaben auszuwerten. Weitere Informationen dazu finden Sie in diesen Artikeln:
 
-+ [Was sind Webdienste im Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
-+ [Was ist die operationalisierung?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
-+ [Bereitstellen eines Python-Modells als Webdienst mit Azure ml-Modell-Management-sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
-+ [Veröffentlichen Sie ein R-Code-Block oder ein Modell in Echtzeit als neuen Webdienst](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
-+ [Mrsdeploy-Paket für R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
++ [Was sind Webdienste in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
++ [Was ist operationalization?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)
++ [Bereitstellen eines python-Modells als Webdienst mit azureml-Model-Management-SDK](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
++ [Veröffentlichen eines R-Code Blocks oder eines echt zeitmodells als neuen Webdienst](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
++ [mrsbereitstellungs-Paket für R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
 
 
 ## <a name="see-also"></a>Siehe auch

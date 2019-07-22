@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caad7bed9eab964193f0c5ec6734a1dc097b26ef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 12645120f543094015f2da03eca224c40e16ab6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998469"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject-Methode (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void updateObject(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateObject-Methode wird von der UpdateObject-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese UpdateObject-Methode wird von der UpdateObject-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateObject-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

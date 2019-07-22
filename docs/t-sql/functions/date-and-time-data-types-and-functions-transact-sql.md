@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a823ffd693e770f97811124d77f39763680fb658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999267"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)
 
@@ -88,10 +87,10 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|Gibt eine Zeichenfolge zurück, die den angegebenen *datepart*-Wert des angegebenen „date“-Werts darstellt.|**nvarchar**|Nicht deterministisch|   
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Gibt eine ganze Zahl zurück, die den angegebenen *datepart*-Wert des angegebenen *date*-Werts darstellt.|**ssNoversion**|Nicht deterministisch|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Gibt eine ganze Zahl zurück, die den Tagesteil des angegebenen *date*-Werts darstellt.|**ssNoversion**|Deterministisch|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Gibt eine ganze Zahl zurück, die den Monatsteil des angegebenen *date*-Werts zurückgibt.|**ssNoversion**|Deterministisch|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Gibt eine ganze Zahl zurück, die den Jahresteil des angegebenen *date*-Werts darstellt.|**ssNoversion**|Deterministisch|  
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|Gibt eine ganze Zahl zurück, die den angegebenen *datepart*-Wert des angegebenen *date*-Werts darstellt.|**int**|Nicht deterministisch|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|Gibt eine ganze Zahl zurück, die den Tagesteil des angegebenen *date*-Werts darstellt.|**int**|Deterministisch|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|Gibt eine ganze Zahl zurück, die den Monatsteil des angegebenen *date*-Werts zurückgibt.|**int**|Deterministisch|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|Gibt eine ganze Zahl zurück, die den Jahresteil des angegebenen *date*-Werts darstellt.|**int**|Deterministisch|  
   
 ###  <a name="fromParts"></a> Funktionen, die Systemdatums- und Systemzeitwerte aus ihren Teilen zurückgeben
   
@@ -108,7 +107,7 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
   
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
-|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Gibt die Anzahl der Datums- oder Zeitbegrenzungen von *datepart* zurück, die zwischen zwei angegebenen Daten überschritten wurden.|**ssNoversion**|Deterministisch|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Gibt die Anzahl der Datums- oder Zeitbegrenzungen von *datepart* zurück, die zwischen zwei angegebenen Daten überschritten wurden.|**int**|Deterministisch|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Gibt die Anzahl der Datums- oder Zeitbegrenzungen von *datepart* zurück, die zwischen zwei angegebenen Daten überschritten wurden.|**bigint**|Deterministisch|  
   
 ###  <a name="ModifyDateandTimeValues"></a> Funktionen, die Datums- und Uhrzeitwerte ändern
@@ -135,7 +134,7 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
   
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
-|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Bestimmt, ob ein **datetime**- oder **smalldatetime**-Eingabeausdruck ein gültiger Datums- oder Uhrzeitwert ist.|**ssNoversion**|ISDATE ist nur deterministisch bei Verwendung mit der CONVERT-Funktion, wenn der style-Parameter von CONVERT angegeben wird und „style“ nicht den Wert 0, 100, 9 oder 109 aufweist.|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|Bestimmt, ob ein **datetime**- oder **smalldatetime**-Eingabeausdruck ein gültiger Datums- oder Uhrzeitwert ist.|**int**|ISDATE ist nur deterministisch bei Verwendung mit der CONVERT-Funktion, wenn der style-Parameter von CONVERT angegeben wird und „style“ nicht den Wert 0, 100, 9 oder 109 aufweist.|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> Datums- und uhrzeitbezogene Themen 
   

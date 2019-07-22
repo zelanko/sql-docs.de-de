@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956323"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC-Treiber für SQL Server
 
@@ -49,13 +48,13 @@ Der Microsoft JDBC-Treiber für SQL Server wurde auf Kompatibilität mit wichtig
   
 ## <a name="download"></a>Herunterladen
 
-[Herunterladen von Microsoft JDBC-Treiber für SQL Server](download-microsoft-jdbc-driver-for-sql-server.md) -enthält zusätzliche Informationen zu Maven-Projekte und vieles mehr.
+[Laden Sie den Microsoft JDBC-Treiber für SQL Server herunter](download-microsoft-jdbc-driver-for-sql-server.md) : enthält zusätzliche Informationen über Maven-Projekte und vieles mehr.
   
 ## <a name="samples"></a>Beispiele  
 
 * [Beispiele für JDBC-Treiberanwendungen](sample-jdbc-driver-applications.md)  
-* [Erste Schritte mit Java unter Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Erste Schritte mit Java unter macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Erste Schritte mit Java unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Erste Schritte mit Java unter Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Erste Schritte mit Java unter SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Einstieg in Java unter Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Einstieg in Java unter macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Ersten Schritte mit Java unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Getting Started with Java on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Ersten Schritte mit Java auf SuSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

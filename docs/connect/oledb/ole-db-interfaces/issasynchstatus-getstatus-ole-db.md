@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994374"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Argumente  
  *hChapter*[in]  
- Das Kapitelhandle. Wenn das abgerufene Objekt wird nicht in einem Rowset-Objekt, oder der Vorgang nicht für ein Kapitel gilt, sollte er auf DB_NULL_HCHAPTER festgelegt werden die vom Anbieter ignoriert wird.  
+ Das Kapitelhandle. Wenn das abgerufen-Objekt kein Rowsetobjekt ist oder der Vorgang nicht für ein Kapitel gilt, sollte es auf DB_NULL_HCHAPTER festgelegt werden, was vom Anbieter ignoriert wird.  
   
  *eOperation*[in]  
  Der Vorgang, für den der asynchrone Status angefordert wird. Der folgende Wert sollte verwendet werden:  

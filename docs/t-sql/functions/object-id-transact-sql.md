@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02ad3631a37600b3b3a18af38b90a805fe00af5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914867"
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  Der Objekttyp mit Schemabereich. *object_type* entspricht entweder dem Typ **varchar** oder **nvarchar**. Wenn *object_type* dem Typ **varchar** entspricht, wird eine implizite Konvertierung in **nvarchar** vorgenommen. Eine Liste von Objekttypen finden Sie in der Spalte **Typ** unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Für einen räumlichen Index gibt OBJECT_ID den Wert NULL zurück.  

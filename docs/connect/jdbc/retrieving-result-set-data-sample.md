@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Resultsetdaten Datenbeispiel festlegen | Microsoft-Dokumentation
+title: Beispiel zum Abrufen von Resultsetdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e404752b21b4ea573cdc14469a6e41e5ab9db911
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 31be5c4755415da348f19d1104f930e366ced6eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945818"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Abrufen von Resultsetdaten - Beispiel
 

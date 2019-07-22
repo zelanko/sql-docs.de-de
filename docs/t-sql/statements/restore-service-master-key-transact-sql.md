@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ccc802650dd4ba57074d760d2e9b7af176121e8e
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: a4bbbb9b08c63e6ab6f8b68d304b611847707558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141249"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- FILE **='**_Pfad\_zu\_Datei_**'**  
+ FILE **='** _Pfad\_zu\_Datei_ **'**  
  Gibt den vollständigen Pfad, einschließlich des Dateinamens, zum gespeicherten Diensthauptschlüssel an. *path_to_file* kann ein lokaler Pfad oder ein UNC-Pfad zu einem Netzwerkspeicherort sein.  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  Gibt das Kennwort an, das zum Entschlüsseln des aus einer Datei importierten Diensthauptschlüssels erforderlich ist.  
   
  FORCE  

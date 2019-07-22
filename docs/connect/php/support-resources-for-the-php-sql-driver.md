@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014863"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Unterstützungsressourcen für Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +46,12 @@ Weitere Informationen zur Peer-to-Peer-Unterstützung finden Sie in den [IIS-For
 ## <a name="php-support-resources"></a>PHP-Supportressourcen  
 [Dokumentation zu PHP für Windows](https://windows.php.net/)  
   
-Aktuelle Informationen zu PHP finden Sie unter [ http://www.php.net/ ](http://www.php.net).  
+Die neuesten Informationen zu PHP finden Sie [http://www.php.net/](http://www.php.net)unter.  
   
-PHP-Dokumentation finden Sie unter [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
+Die PHP-Dokumentation finden [http://www.php.net/docs.php](http://www.php.net/docs.php)Sie unter.  
   
 ## <a name="microsoft-customer-support"></a>Microsoft Kundendienst  
-Für Supportfragen zu den [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], erreichen Sie [Microsoft-Support](https://support.microsoft.com/contactus/), oder stellen Sie auf die [Projektseite auf Github](https://github.com/Microsoft/msphpsql/issues).  
+Informationen zur Unterstützung im zusammen [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]Hang mit [Microsoft-Support](https://support.microsoft.com/contactus/)finden Sie in der [GitHub-Projektseite](https://github.com/Microsoft/msphpsql/issues).  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Overview of the Microsoft Drivers for PHP for SQL Server (Übersicht über die Microsoft-Treiber für PHP für SQL Server)](../../connect/php/overview-of-the-php-sql-driver.md)

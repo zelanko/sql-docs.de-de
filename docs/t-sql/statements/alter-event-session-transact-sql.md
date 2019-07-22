@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ae1d8f24be52ed89e762f7a1a8963ba766b1cb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 795ef4c95981636eec2e95bc6f85c24d7da27eb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065664"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,9 +122,9 @@ ON SERVER
 |*event_session_name*|Ist der Name einer vorhandenen Ereignissitzung.|  
 |STATE = START &#124; STOP|Startet oder beendet die Ereignissitzung. Dieses Argument ist nur gültig, wenn ALTER EVENT SESSION auf ein Ereignissitzungsobjekt angewendet wird.|  
 |ADD EVENT \<event_specifier>|Ordnet das mit \<event_specifier> bestimmte Ereignis der Ereignissitzung zu.|
-|[*event_module_guid*] *.event_package_name.event_name*|Ist der Name eines Ereignisses in einem Ereignispaket, wobei Folgendes gilt:<br /><br /> -   *event_module_guid* ist die GUID für das Modul, das das Ereignis enthält.<br />-   *event_package_name* ist das Paket, das das Aktionsobjekt enthält.<br />-   *event_name* ist das Ereignisobjekt.<br /><br /> Ereignisse werden in der sys.dm_xe_objects-Sicht als object_type 'event' angezeigt.|  
+|[*event_module_guid*]*.event_package_name.event_name*|Ist der Name eines Ereignisses in einem Ereignispaket, wobei Folgendes gilt:<br /><br /> -   *event_module_guid* ist die GUID für das Modul, das das Ereignis enthält.<br />-   *event_package_name* ist das Paket, das das Aktionsobjekt enthält.<br />-   *event_name* ist das Ereignisobjekt.<br /><br /> Ereignisse werden in der sys.dm_xe_objects-Sicht als object_type 'event' angezeigt.|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|Gibt anpassbare Attribute für das Ereignis an. Anpassbare Attribute werden in der sys.dm_xe_object_columns-Sicht mit column_type 'customizable' und object_name = *event_name* angezeigt.|  
-|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|Die Aktion, die mit der Ereignissitzung verknüpft werden soll. Dabei gilt:<br /><br /> -   *event_module_guid* ist die GUID für das Modul, das das Ereignis enthält.<br />-   *event_package_name* ist das Paket, das das Aktionsobjekt enthält.<br />-   *action_name* ist das Aktionsobjekt.<br /><br /> Aktionen werden in der sys.dm_xe_objects-Sicht als object_type 'action' angezeigt.|  
+|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|Die Aktion, die mit der Ereignissitzung verknüpft werden soll. Dabei gilt:<br /><br /> -   *event_module_guid* ist die GUID für das Modul, das das Ereignis enthält.<br />-   *event_package_name* ist das Paket, das das Aktionsobjekt enthält.<br />-   *action_name* ist das Aktionsobjekt.<br /><br /> Aktionen werden in der sys.dm_xe_objects-Sicht als object_type 'action' angezeigt.|  
 |WHERE \<predicate_expression>|Gibt den Prädikatausdruck an, mit dessen Hilfe bestimmt wird, ob ein Ereignis verarbeitet werden muss. Wenn \<predicate_expression> den Wert TRUE hat, wird das Ereignis von den Aktionen und Zielen für die Sitzung weiter verarbeitet. Wenn \<predicate_expression> den Wert FALSE hat, wird das Ereignis von der Sitzung gelöscht, bevor es von den Aktionen und Zielen für die Sitzung verarbeitet wird. Die Länge von Prädikatausdrücken ist auf 3000 Zeichen beschränkt, wodurch die Länge von Zeichenfolgenargumenten eingeschränkt wird.|
 |*event_field_name*|Ist der Name des Ereignisfelds, das die Prädikatquelle identifiziert.|  
 |[event_module_guid].event_package_name.predicate_source_name|Ist der Name der globalen Prädikatquelle, wobei Folgendes gilt:<br /><br /> -   *event_module_guid* ist die GUID für das Modul, das das Ereignis enthält.<br />-   *event_package_name* ist das Paket, das das Prädikatobjekt enthält.<br />-   *predicate_source_name* ist in der sys.dm_xe_objects-Sicht als object_type 'pred_source' definiert.|  

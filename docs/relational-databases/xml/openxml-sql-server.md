@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2197039cd6517e27fef9711e56607418add0003e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62935861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995354"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +142,7 @@ EXEC sp_xml_removedocument @docHandle;
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
-|**node type**|**ssNoversion**|Identifiziert den Knotentyp. Eine ganze Zahl, die der Nummer des Knotentyps des XML-Objektmodells (DOM) entspricht.<br /><br /> In dieser Spalte können folgende Werte den Knotentyp angeben:<br /><br /> **1** = Elementknoten<br /><br /> **2** = Attributknoten<br /><br /> **3** = Textknoten<br /><br /> **4** = CDATA-Abschnittsknoten<br /><br /> **5** = Entitätsverweisknoten<br /><br /> **6** = Entitätsknoten<br /><br /> **7** = Verarbeitungsanweisungsknoten<br /><br /> **8** = Kommentarknoten<br /><br /> **9** = Dokumentknoten<br /><br /> **10** = Dokumenttypknoten<br /><br /> **11** = Dokumentfragmentknoten<br /><br /> **12** = Notationsknoten<br /><br /> Weitere Informationen finden Sie im Microsoft XML (MSXML) SDK im Abschnitt über die nodeType-Eigenschaft.|  
+|**node type**|**int**|Identifiziert den Knotentyp. Eine ganze Zahl, die der Nummer des Knotentyps des XML-Objektmodells (DOM) entspricht.<br /><br /> In dieser Spalte können folgende Werte den Knotentyp angeben:<br /><br /> **1** = Elementknoten<br /><br /> **2** = Attributknoten<br /><br /> **3** = Textknoten<br /><br /> **4** = CDATA-Abschnittsknoten<br /><br /> **5** = Entitätsverweisknoten<br /><br /> **6** = Entitätsknoten<br /><br /> **7** = Verarbeitungsanweisungsknoten<br /><br /> **8** = Kommentarknoten<br /><br /> **9** = Dokumentknoten<br /><br /> **10** = Dokumenttypknoten<br /><br /> **11** = Dokumentfragmentknoten<br /><br /> **12** = Notationsknoten<br /><br /> Weitere Informationen finden Sie im Microsoft XML (MSXML) SDK im Abschnitt über die nodeType-Eigenschaft.|  
 |**localname**|**nvarchar(max)**|Gibt den lokalen Namen des Elements oder Attributs an. Ist NULL, wenn das DOM-Objekt keinen Namen hat.|  
 |**Präfix**|**nvarchar(max)**|Das Namespacepräfix des Knotennamens.|  
 |**namespaceuri**|**nvarchar(max)**|Der Namespace-URI (Universal Resource Identifier) des Knotens. Ist der Wert NULL, ist kein Namespace vorhanden.|  

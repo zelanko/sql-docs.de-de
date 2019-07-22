@@ -1,5 +1,5 @@
 ---
-title: OwnInsertsAreVisible-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: owninserzarevisible-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 851074a7b9eb930dcb2f94d3e45a1aa055e8c606
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976529"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>ownInsertsAreVisible-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean ownInsertsAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn einfügungen sichtbar sind. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Einfügungen sichtbar sind. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese OwnInsertsAreVisible-Methode wird von der OwnInsertsAreVisible-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese owninserzarevisible-Methode wird von der owninserzarevisible-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

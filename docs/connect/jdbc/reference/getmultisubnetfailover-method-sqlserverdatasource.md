@@ -1,5 +1,5 @@
 ---
-title: GetMultiSubnetFailover-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getmultisubnetfailover-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 1e8cb175-5f4c-4208-b4f5-3646990a30e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7b9c92ec5c89d59e680fcbd2cfc1068a536d87b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 33d0ffe12cce457e744395fd946c5bfd009621e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981698"
 ---
 # <a name="getmultisubnetfailover-method-sqlserverdatasource"></a>getMultiSubnetFailover-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Wert des der **MultiSubnetFailover** Connection-Eigenschaft.  
+  Gibt den Wert der **multisubnetfailover** -Verbindungs Eigenschaft zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,7 +32,7 @@ public boolean getMultiSubnetFailover();
  Gibt in Abhängigkeit von der aktuellen Einstellung der Verbindungseigenschaft true oder false zurück.  
   
 ## <a name="remarks"></a>Remarks  
- Weitere Informationen zu den **MultiSubnetFailover** Verbindungseigenschaft finden Sie unter [Festlegen der Verbindungseigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Weitere Informationen zur **multisubnetfailover** -Verbindungs Eigenschaft finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource.setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)   

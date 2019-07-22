@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 715effa0eb16a298f5064f08d2751df07bfa8677
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948041"
 ---
 # <a name="xml-data-type-methods"></a>xml-Datentypmethoden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "56020212"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[query&#40; &#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/query-method-xml-data-type.md)|Beschreibt das Verwenden der query()-Methode zum Ausführen einer Abfrage über eine XML-Instanz.|  
 |[value&#40; &#41;-Methode &#40;xml-Datentyp&#41;](../../t-sql/xml/value-method-xml-data-type.md)|Beschreibt das Verwenden der value()-Methode zum Abrufen eines Werts eines SQL-Typs aus einer XML-Instanz.|  
@@ -39,7 +38,7 @@ ms.locfileid: "56020212"
 |[Binding Relational Data Inside XML Data (Einbinden relationaler Daten in XML-Daten)](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|Beschreibt, wie Sie Nicht-XML-Daten in XML binden können.|  
 |[Guidelines for Using xml Data Type Methods (Richtlinien zum Verwenden von Methoden des xml-Datentyps)](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|Enthält Richtlinien zum Verwenden der **xml**-Datentypmethoden.|  
   
- Der Aufruf dieser Methoden erfolgt mit der benutzerdefinierten Typmethodenaufrufsyntax. Zum Beispiel:  
+ Der Aufruf dieser Methoden erfolgt mit der benutzerdefinierten Typmethodenaufrufsyntax. Beispiel:  
   
 ```  
 SELECT XmlCol.query(' ... ')  
@@ -47,7 +46,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  Die **xml**-Datentypmethoden **query()**, **value()** und **exist()** geben NULL zurück, wenn sie für eine NULL XML-Instanz ausgeführt werden. Außerdem gibt **modify()** nichts zurück, aber **nodes()** gibt Rowsets und ein leeres Rowset mit einer NULL-Eingabe zurück.  
+>  Die **xml**-Datentypmethoden **query()** , **value()** und **exist()** geben NULL zurück, wenn sie für eine NULL XML-Instanz ausgeführt werden. Außerdem gibt **modify()** nichts zurück, aber **nodes()** gibt Rowsets und ein leeres Rowset mit einer NULL-Eingabe zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

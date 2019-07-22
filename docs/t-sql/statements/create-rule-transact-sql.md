@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006488"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ AS condition_expression
  *condition_expression*  
  Die Bedingung oder die Bedingungen, die die Regel definieren. Eine Regel kann jeder Ausdruck sein, der in einer WHERE-Klausel zulässig ist, und kann Elemente, wie z. B. arithmetische Operatoren, relationale Operatoren und Prädikate (z. B. IN, LIKE, BETWEEN) einschließen. Eine Regel kann nicht auf Spalten oder andere Datenbankobjekte verweisen. Integrierte Funktionen, die nicht auf Datenbankobjekte verweisen, dürfen in einer Regel eingeschlossen sein. Benutzerdefinierte Funktionen können nicht verwendet werden.  
   
- *condition_expression* enthält eine Variable. Jede lokale Variable erhält als Präfix das at-Zeichen (**@**). Der Ausdruck bezieht sich auf den Wert, der mit der UPDATE- oder INSERT-Anweisung eingegeben wird. Wenn Sie die Regel erstellen, können Sie den Wert durch einen beliebigen Namen bzw. ein Symbol darstellen. Das erste Zeichen muss jedoch ein at-Zeichen (**@**) sein.  
+ *condition_expression* enthält eine Variable. Jede lokale Variable erhält als Präfix das at-Zeichen ( **@** ). Der Ausdruck bezieht sich auf den Wert, der mit der UPDATE- oder INSERT-Anweisung eingegeben wird. Wenn Sie die Regel erstellen, können Sie den Wert durch einen beliebigen Namen bzw. ein Symbol darstellen. Das erste Zeichen muss jedoch ein at-Zeichen ( **@** ) sein.  
   
 > [!NOTE]  
 >  Vermeiden Sie die Erstellung von Regeln für Ausdrücke, die Aliasdatentypen verwenden. Obwohl die Erstellung von Regeln für Ausdrücke, die Aliasdatentypen verwenden, möglich ist, können die Ausdrücke nach dem Binden der Regeln an Spalten oder Aliasdatentypen nicht kompiliert werden, wenn auf diese verwiesen wird.  
@@ -76,7 +75,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  CREATE RULE-Anweisungen können nicht mit anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem einzelnen Batch kombiniert werden. Wenn Sie Regeln erstellen, gelten diese nicht für die Daten, die zu diesem Zeitpunkt bereits in der Datenbank vorhanden sind; darüber hinaus können Regeln nicht an Systemdatentypen gebunden werden.  
   
- Eine Regel kann nur in der aktuellen Datenbank erstellt werden. Führen Sie nach dem Erstellen einer Regel **sp_bindrule** aus, um die Regel an eine Spalte oder an einen Aliasdatentyp zu binden. Eine Regel muss mit dem Datentyp der Spalte kompatibel sein. Es ist beispielsweise nicht möglich, "\@value LIKE A%" als Regel für eine numerische Spalte zu verwenden. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
+ Eine Regel kann nur in der aktuellen Datenbank erstellt werden. Führen Sie nach dem Erstellen einer Regel **sp_bindrule** aus, um die Regel an eine Spalte oder an einen Aliasdatentyp zu binden. Eine Regel muss mit dem Datentyp der Spalte kompatibel sein. Es ist beispielsweise nicht möglich, "\@value LIKE A%" als Regel für eine numerische Spalte zu verwenden. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  
   
  Stellen Sie sicher, dass Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen (') setzen und vor binären Konstanten 0x einfügen. Falls die Regel nicht mit der Spalte kompatibel ist, an die sie gebunden ist, gibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Fehlermeldung zurück, wenn ein Wert eingefügt wird, nicht jedoch, wenn die Regel gebunden wird.  
   

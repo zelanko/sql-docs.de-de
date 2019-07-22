@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003853"
 ---
 # <a name="working-with-data-types-jdbc"></a>Arbeiten mit Datentypen (JDBC)
 
@@ -37,7 +36,7 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie in Java-Anwendungen unter Ve
 |-----------|-----------------|  
 |[Standarddatentypen – Beispiel](../../connect/jdbc/basic-data-types-sample.md)|Beschreibt, wie Werte von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standarddatentypen mithilfe von Abrufmethoden für Resultsets abgerufen und wie diese Werte mithilfe von Updatemethoden für Resultsets aktualisiert werden.|  
 |[Beispiel für den SQLXML-Datentyp](../../connect/jdbc/sqlxml-data-type-sample.md)|Beschreibt das Speichern von XML-Daten in einer relationalen Datenbank, das Abrufen von XML-Daten aus einer Datenbank sowie das Analysieren von XML-Daten mit dem Java-Datentyp **SQLXML**.|  
-|[Beispiel für räumliche Datentypen](../../connect/jdbc/spatial-data-types-sample.md)|Beschreibt, wie zum Speichern und Abrufen von Daten mit räumlichen Datentypen 'Geometry' und 'Geography' der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank mit **Geometrie** und **Geography** Java-Typen, die vom Microsoft JDBC-Treiber definiert.|
+|[Beispiel für räumliche Datentypen](../../connect/jdbc/spatial-data-types-sample.md)|Beschreibt das Speichern und Abrufen von Daten mit räumlichen Datentypen "Geometry" und "geography" der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank mit **Geometrie** -und **geography** -Java-Typen, die vom Microsoft JDBC-Treiber definiert werden.|
 
 ## <a name="see-also"></a>Weitere Informationen
 
