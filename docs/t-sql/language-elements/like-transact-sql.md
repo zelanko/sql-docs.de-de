@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0987f9efdf3e19f3a79d9d39c0ce2661a97fdbe
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122181"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -197,7 +196,7 @@ GO
   
  Wenn im LIKE-Muster auf ein Escapezeichen kein Zeichen folgt, ist das Muster nicht gültig, und das LIKE-Muster gibt FALSE zurück. Wenn es sich beim Zeichen nach einem Escapezeichen nicht um ein Platzhalterzeichen handelt, wird das Escapezeichen verworfen und das folgende Zeichen als reguläres Zeichen im Muster behandelt. Zu diesen Platzhalterzeichen gehören das Prozentzeichen (%), der Unterstrich (_) und die linke eckige Klammer ([), wenn sie in doppelte eckige Klammern ([ ]) eingeschlossen sind. Innerhalb doppelter eckiger Klammern ([ ]) können Escapezeichen verwendet werden; dem Caretzeichen (^), dem Bindestrich (-) sowie der rechten eckigen Klammer (]) kann ein Escapezeichen vorangestellt werden.  
   
- 0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
+ 0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und darf in LIKE nicht enthalten sein.  
   
 ## <a name="examples"></a>Beispiele  
   
