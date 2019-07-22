@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 946bcde93c9f024d921322b0d84b0ad162aec66d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980669"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo-Methode (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +45,13 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  Eine Liste mit Eigenschaftswertpaaren (bei der ersten Verwendung NULL).  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Array von DriverPropertyInfo-Objekten.  
+ Ein Array von driverpropertyinfo-Objekten.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetPropertyInfo-Methode wird von der GetPropertyInfo-Methode in der java.sql.Driver-Schnittstelle angegeben.  
+ Diese GetPropertyInfo-Methode wird von der GetPropertyInfo-Methode in der Java. SQL. Driver-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDriver-Methoden](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

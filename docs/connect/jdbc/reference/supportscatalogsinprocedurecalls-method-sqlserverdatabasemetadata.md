@@ -1,5 +1,5 @@
 ---
-title: SupportsCatalogsInProcedureCalls-Methode | Microsoft-Dokumentation
+title: supportscatalogsinprocedu-Rückruf Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d9eac9547ebc146d33ea5bc498949d8fbae60eeb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e9f6532ca8f23a9e8d729bccc204865860e71ac9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969684"
 ---
 # <a name="supportscatalogsinprocedurecalls-method-sqlserverdatabasemetadata"></a>supportsCatalogsInProcedureCalls-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsCatalogsInProcedureCalls()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsCatalogsInProcedureCalls-Methode wird von der SupportsCatalogsInProcedureCalls-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportscatalogsinprocedu}-Methode wird von der supportscatalogsinprocedu}-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

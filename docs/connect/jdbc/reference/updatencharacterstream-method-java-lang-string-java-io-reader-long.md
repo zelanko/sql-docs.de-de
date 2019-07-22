@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7285f091a933ebbcfa4796da338e34c6795105fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998689"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream-Methode (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
   
  *reader*  
   
- Ein Readerobjekt.  
+ Ein Reader-Objekt.  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNCharacterStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateNCharacterStream-Methode wird von der UpdateNCharacterStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese updatencharakteristream-Methode wird von der updatencharakteristream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
- Diese Methode gibt eine Unicode-Zeichen aus einem Readerobjekt ausgewählt **Nchar**, **nvarchar(max)** , **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
+ Diese Methode übergibt Unicode-Zeichen aus einem Reader-Objekt an ausgewählte **NCHAR**-, **nvarchar (max)** -, **ntext**-und **XML** -Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
   
  Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  
   

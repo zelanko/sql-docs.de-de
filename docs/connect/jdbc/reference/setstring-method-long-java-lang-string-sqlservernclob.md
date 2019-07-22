@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f9ca7497c14da33d9e25b1c6a5ed934b7d96181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c549d3e1b7b9b63663333a59b263a2aa6ad4113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972676"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString-Methode (long, java.lang.String) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Schreibt das angegebene **Zeichenfolge** auf die **NCLOB** an der angegebenen Position ab.  
+  Schreibt die angegebene **Zeichenfolge** beginnend an der angegebenen Position in das **NCLOB** .  
   
 ## <a name="syntax"></a>Syntax  
   

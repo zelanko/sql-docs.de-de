@@ -1,5 +1,5 @@
 ---
-title: Rowsets und SQL Server-Cursor | Microsoft-Dokumentation
+title: Rowsets und SQL Server Cursor | Microsoft-Dokumentation
 description: Rowsets und SQL Server-Cursor
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994180"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Rowsets und SQL Server-Cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "66803789"
   
  Consumer können andere Cursorverhaltensweisen in einem Rowset anfordern, indem sie bestimmte Rowseteigenschaften festlegen. Wenn der Consumer keine Rowseteigenschaft festlegt oder alle Rowseteigenschaften auf den Standardwert setzt, implementiert der OLE DB-Treiber für SQL Server das Rowset mithilfe eines Standardresultsets. Wird eine dieser Eigenschaften nicht auf den Standardwert festgelegt, implementiert der OLE DB-Treiber für SQL Server das Rowset mithilfe eines Servercursors.  
   
- Die folgenden Rowseteigenschaften Weiterleiten der OLE DB-Treiber für SQL Server verwenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cursor. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
+ Die folgenden Rowseteigenschaften leiten den OLE DB-Treiber an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Server, Cursor zu verwenden. Einige Eigenschaften können mit anderen problemlos kombiniert werden. Ein Rowset mit den Eigenschaften DBPROP_IRowsetScroll und DBPROP_IRowsetChange entspricht beispielsweise einem Lesezeichenrowset mit sofortigem Updateverhalten. Andere Eigenschaften schließen sich hingegen gegenseitig aus. Zum Beispiel kann ein Rowset, das DBPROP_OTHERINSERT aufweist, keine Lesezeichen enthalten.  
   
 |Eigenschafts-ID|value|Rowsetverhalten|  
 |-----------------|-----------|---------------------|  

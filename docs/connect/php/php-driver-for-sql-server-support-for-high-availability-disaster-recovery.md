@@ -1,5 +1,5 @@
 ---
-title: Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung für die Microsoft-Treiber für PHP für SQLServer | Microsoft-Dokumentation
+title: Unterstützung für hohe Verfügbarkeit, Notfall Wiederherstellung für die Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0ad826c8846330c7207b14ac2344687563bbfa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fab65d777025f59fab6566d118233febbb51aaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992970"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,16 +62,16 @@ Es kann keine Verbindung hergestellt werden, wenn ein primäres Replikat so konf
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>Transparente Netzwerk-IP-Auflösung (TNIR)
 
-Transparente Netzwerk-IP-Auflösung (TNIR) ist es sich um eine Überarbeitung der vorhandenen MultiSubnetFailover-Funktion. Es wirkt sich auf der Verbindungssequenz des Treibers aus, die erste beseitigt, IP-Adresse den Hostnamen nicht reagiert, und es gibt mehrere IP-Adressen, die den Hostnamen zugeordnet. Zusammen mit MultiSubnetFailover bieten die folgenden vier Verbindung Sequenzen: 
+Transparente Netzwerk-IP-Auflösung (tnir) ist eine Revision des vorhandenen multisubnetfailover-Features. Dies wirkt sich auf die Verbindungs Sequenz des Treibers aus, wenn die erste aufgelöste IP-Adresse des Host Namens nicht antwortet und mehrere IPS dem Hostnamen zugeordnet sind. Zusammen mit multisubnetfailover stellen Sie die folgenden vier Verbindungs Sequenzen bereit: 
 
-- TNIR aktiviert und deaktiviert MultiSubnetFailover: eine IP-Adresse versucht wird, gefolgt von allen IP-Adressen parallel
-- TNIR aktiviert & MultiSubnetFailover aktiviert: alle IP-Adressen parallel versucht werden
-- Deaktivierte TNIR & MultiSubnetFailover deaktiviert: alle IP-Adressen versucht werden nacheinander
-- TNIR deaktiviert und aktiviert MultiSubnetFailover: alle IP-Adressen parallel versucht werden
+- Tnir aktiviert & multisubnetfailover deaktiviert: eine IP-Adresse wird versucht, gefolgt von allen IPS parallel
+- Tnir aktiviert, & multisubnetfailover aktiviert ist: alle IPS werden parallel versucht
+- Tnir deaktiviert & multisubnetfailover deaktiviert: alle IPS werden nacheinander versucht
+- Tnir deaktiviert, & multisubnetfailover aktiviert ist: alle IPS werden parallel versucht.
 
-TNIR ist standardmäßig aktiviert, und MultiSubnetFailover ist standardmäßig deaktiviert.
+Tnir ist standardmäßig aktiviert, und multisubnetfailover ist standardmäßig deaktiviert.
 
-Dies ist ein Beispiel, aktivieren Sie die TNIR und MultiSubnetFailover mit dem PDO_SQLSRV-Treiber:
+Dies ist ein Beispiel für das Aktivieren von tnir und multisubnetfailover mithilfe des PDO_SQLSRV-Treibers:
 
 ```
 <?php

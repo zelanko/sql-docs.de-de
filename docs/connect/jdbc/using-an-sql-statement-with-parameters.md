@@ -1,5 +1,5 @@
 ---
-title: Verwenden eine SQL-Anweisung mit Parametern | Microsoft-Dokumentation
+title: Verwenden einer SQL-Anweisung mit Parametern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c2647b4737268a1550bd9e45deb9557ecc0f81d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6716f670c42172f1721968124d7113e8f1936ddc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916375"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Verwenden von SQL-Anweisungen mit Parametern
 
@@ -24,9 +23,9 @@ ms.locfileid: "66790125"
 
 Wenn Sie Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit einer SQL-Anweisung verarbeiten möchten, die IN-Parameter enthält, können Sie mit der [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)-Methode der [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Klasse ein [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Element zurückgeben, das die angeforderten Daten enthält. Sie müssen dazu zuerst mit der [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse ein SQLServerPreparedStatement-Objekt erstellen.
 
-Beim Erstellen der SQL-Anweisung werden die IN-Parameter mit dem ? (Fragezeichen) angegeben, das als Platzhalter für die Parameterwerte fungiert, die später an die SQL-Anweisung übergeben werden. Um einen Wert für einen Parameter angeben, können Sie eine der Setter-Methoden der SQLServerPreparedStatement-Klasse. Die verwendete Festlegungsmethode hängt vom Datentyp des Werts ab, der an die SQL-Anweisung übergeben werden soll.
+Beim Erstellen der SQL-Anweisung werden die IN-Parameter mit dem ? (Fragezeichen) angegeben, das als Platzhalter für die Parameterwerte fungiert, die später an die SQL-Anweisung übergeben werden. Um einen Wert für einen Parameter anzugeben, können Sie eine der Setter-Methoden der SQLServerPreparedStatement-Klasse verwenden. Die verwendete Festlegungsmethode hängt vom Datentyp des Werts ab, der an die SQL-Anweisung übergeben werden soll.
 
-Wenn Sie einen Wert an die Festlegungsmethode übergeben, müssen Sie nicht nur den Wert angeben, der in der SQL-Anweisung verwendet werden soll, sondern auch die ordinale Position des Parameters in der SQL-Anweisung. Wenn die SQL-Anweisung einen einzelnen Parameter enthält, wird z. B. ihres Ordinalwerts 1 sein. Wenn die Anweisung zwei Parameter enthält, ist der erste Ordinalwert „1“ und der zweite Ordinalwert „2“.
+Wenn Sie einen Wert an die Festlegungsmethode übergeben, müssen Sie nicht nur den Wert angeben, der in der SQL-Anweisung verwendet werden soll, sondern auch die ordinale Position des Parameters in der SQL-Anweisung. Wenn Ihre SQL-Anweisung z. b. einen einzelnen Parameter enthält, ist der Ordinalwert 1. Wenn die Anweisung zwei Parameter enthält, ist der erste Ordinalwert „1“ und der zweite Ordinalwert „2“.
 
 Im folgenden Beispiel wird eine offene Verbindung zur [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank an die Funktion übergeben, eine vorbereitete SQL-Anweisung wird erstellt und mit einem einzelnen Zeichenfolgenparameterwert ausgeführt, und die Ergebnisse werden aus dem Resultset gelesen.
 

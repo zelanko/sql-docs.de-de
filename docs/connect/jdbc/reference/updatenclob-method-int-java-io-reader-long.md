@@ -1,5 +1,5 @@
 ---
-title: UpdateNClob-Methode (Int, java.io.Reader, long) | Microsoft-Dokumentation
+title: updatenclob-Methode (int, Java. IO. Reader, Long) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2bdbb539-0cb9-4047-98e3-7d6906af68f8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 829a4c4eeab254931a6ef7094dfc5fd8ab4d8ec4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93b6fca31afd24a8992e442096117d9479b52b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998646"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>updateNClob-Methode (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNClob(int columnIndex,
   
  *reader*  
   
- Ein Readerobjekt.  
+ Ein Reader-Objekt.  
   
  *length*  
   
@@ -51,7 +50,7 @@ public void updateNClob(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  Diese updateNClob-Methode wird von der updateNClob-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode wird nur unter unterstützt **nvarchar(max)** , **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
+ Diese Methode wird nur für Spalten vom Typ " **nvarchar (max)** ", " **ntext**" und " **XML** " unterstützt. Bei Verwendung dieser Methode für andere Datentypen wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateNClob-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

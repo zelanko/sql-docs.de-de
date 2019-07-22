@@ -1,5 +1,5 @@
 ---
-title: StoresUpperCaseIdentifiers-Methode | Microsoft-Dokumentation
+title: storesuppercaseidentifier-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c77c8af4e71a41ce20565ebbb5081b796a7bdb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969886"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean storesUpperCaseIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn Bezeichner in Großbuchstaben gespeichert werden. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Bezeichner in Großbuchstaben gespeichert werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese StoresUpperCaseIdentifiers-Methode wird von der StoresUpperCaseIdentifiers-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese storesuppercaseidentifier-Methode wird von der storesuppercaseidentifier-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

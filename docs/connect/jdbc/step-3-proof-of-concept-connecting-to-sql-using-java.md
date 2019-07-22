@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004286"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java
   
-In diesem Beispiel sollte einen Proof of Concept nur angesehen werden. Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  
+Dieses Beispiel sollte nur als Proof of Concept angesehen werden. Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht unbedingt die bewährten Methoden, die von Microsoft empfohlen werden.  
   
-## <a name="step-1--connect"></a>Schritt 1: Verbinden  
+## <a name="step-1--connect"></a>Schritt 1: verbinden  
   
-Verwenden Sie die Verbindungsklasse, für die Verbindung mit SQL-Datenbank.   
+Verwenden Sie die Verbindungs Klasse, um eine Verbindung mit SQL-Datenbank herzustellen.   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
-In diesem Beispiel wird eine Verbindung mit Azure SQL-Datenbank herstellen, führen eine SELECT-Anweisung, und geben ausgewählte Zeilen zurück.   
+In diesem Beispiel stellen Sie eine Verbindung mit Azure SQL-Datenbank her, führen eine SELECT-Anweisung aus und geben ausgewählte Zeilen zurück.   
   
 ```java  
 import java.sql.Connection;
@@ -101,7 +100,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-3-insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
-Führen Sie in diesem Beispiel eine INSERT-Anweisung aus, übergeben Sie Parameter, und rufen Sie den automatisch generierten Primary Key-Wert.   
+Führen Sie in diesem Beispiel eine INSERT-Anweisung aus, übergeben Sie Parameter, und rufen Sie den automatisch generierten Primärschlüssel Wert ab.   
   
 ```java  
 import java.sql.Connection;
@@ -149,5 +148,5 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="additional-samples"></a>Zusätzliche Beispiele  
+## <a name="additional-samples"></a>Weitere Beispiele  
 [Beispiele für JDBC-Treiberanwendungen](../../connect/jdbc/sample-jdbc-driver-applications.md)

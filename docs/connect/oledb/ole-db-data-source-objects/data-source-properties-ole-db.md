@@ -1,5 +1,5 @@
 ---
-title: Datenquelleneigenschaften (OLE DB) | Microsoft-Dokumentation
+title: Datenquellen Eigenschaften (OLE DB) | Microsoft-Dokumentation
 description: Datenquelleneigenschaften (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c97c85eaeafd7d811b3f513f7f9cccc30c873b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13dd6afde96d42ac1fcc82b6fb24c721997b951d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015932"
 ---
 # <a name="data-source-properties-ole-db"></a>Datenquelleneigenschaften (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server implementiert Datenquelleneigenschaften wie folgt aus.  
+  Der OLE DB-Treiber für SQL Server implementiert Datenquellen Eigenschaften wie folgt.  
   
 |Eigenschafts-ID|und Beschreibung|  
 |-----------------|-----------------|  
@@ -43,6 +42,6 @@ ms.locfileid: "66768645"
 |SSPROP_ENABLEBULKCOPY|R/W: Lesen/Schreiben; Standardwert: VARIANT_FALSE<br /><br /> Beschreibung: Um Massenkopiervorgänge aus Dateien zu aktivieren, sollte die SSPROP_ENABLEBULKCOPY-Eigenschaft auf VARIANT_TRUE festgelegt werden. Wenn diese Eigenschaft für die Datenquelle festgelegt wurde, ist der Consumerzugriff auf die IBCPSession-Schnittstelle auf derselben Ebene verfügbar wie Sessions.<br /><br /> Auch SSPROP_IRowsetFastLoad muss auf VARIANT_TRUE festgelegt werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellenobjekte &#40;OLE-DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [OLE DB für Daten &#40;Quellen Objekte&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

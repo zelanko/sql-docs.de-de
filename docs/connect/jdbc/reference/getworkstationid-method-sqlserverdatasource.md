@@ -1,5 +1,5 @@
 ---
-title: GetWorkstationID-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getworkstationid-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6a701de-a8fa-4668-9310-99a8c6e32c88
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 117c0ad7ff08cec0c3c0b39758dce1dc55ecb249
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98cde4953d60f13d1768b06dbfab9ada6ea8af55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978057"
 ---
 # <a name="getworkstationid-method-sqlserverdatasource"></a>getWorkstationID-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public java.lang.String getWorkstationID()
  Eine **Zeichenfolge** mit dem Computernamen des Clients.  
   
 ## <a name="remarks"></a>Remarks  
- Die workstationID ist der Name des Clientcomputers oder der Workstation. Wenn die WorkstationID-Eigenschaft nicht festgelegt ist, wird der Standardwert erstellt InetAddress.getLocalHost().getHostName()-Methode aufrufen. Wenn GetHostName einen leeren Wert zurückgibt, wird die getHostAddress().toString()-Methode aufgerufen.  
+ Die workstationID ist der Name des Clientcomputers oder der Workstation. Wenn die workstationid-Eigenschaft nicht festgelegt ist, wird der Standardwert erstellt, indem die InetAddress. getLocalHost (). GetHostName ()-Methode aufgerufen wird. Wenn GetHostName einen leeren Wert zurückgibt, wird die gethostaddress (). destring ()-Methode aufgerufen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

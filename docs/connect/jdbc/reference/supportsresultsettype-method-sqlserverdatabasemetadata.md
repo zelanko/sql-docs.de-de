@@ -1,5 +1,5 @@
 ---
-title: SupportsResultSetType-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsresultsettype-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3438f7a17e919e905ea12e064a4d145ba16e728
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5966367c786cc8e591103166bbe8dadb47c664f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968936"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>supportsResultSetType-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean supportsResultSetType(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsResultSetType-Methode wird von der SupportsResultSetType-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsresultsettype-Methode wird von der supportsresultsettype-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

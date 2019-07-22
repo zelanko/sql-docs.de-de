@@ -1,5 +1,5 @@
 ---
-title: GetAsciiStream-Methode (java.lang.String) | Microsoft-Dokumentation
+title: getAsciiStream-Methode (Java. lang. String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01cf9fcfcf888054edc7faf350eb27957bcc971a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: feadeaffb5fd74ebc6b2d273dca263cac16c14ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954194"
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetAsciiStream-Methode wird von der GetAsciiStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getAsciiStream-Methode wird von der getAsciiStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getAsciiStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

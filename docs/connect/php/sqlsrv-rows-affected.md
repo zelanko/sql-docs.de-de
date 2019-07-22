@@ -1,5 +1,5 @@
 ---
-title: zu Sqlsrv_rows_affected | Microsoft-Dokumentation
+title: sqlsrv_rows_affected | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f43fbfc-fc92-449b-82d0-33fa780e8f09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 03e79fb278433df33c3b1a9f6ce5d6753f4c2810
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 93c7ec396d3388a2de6c0d6518fc516de7156f35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014951"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

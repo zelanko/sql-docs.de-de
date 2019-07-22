@@ -1,5 +1,5 @@
 ---
-title: Zwischenspeichern von Resultsetdaten Datenbeispiel festlegen | Microsoft-Dokumentation
+title: Beispiel zum Zwischenspeichern von Resultsetdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cce04a407d1407c61c780a0959a16c853adbd452
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a9a0affa46cb8ca12b8c1f777709bdea84bc617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957267"
 ---
 # <a name="caching-result-set-data-sample"></a>Zwischenspeichern von Resultsetdaten - Beispiel
 

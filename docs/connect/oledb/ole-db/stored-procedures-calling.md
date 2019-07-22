@@ -18,27 +18,26 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26e97354d54cb65578bcbb35d2c96fb6914270d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015197"
 ---
 # <a name="stored-procedures---calling"></a>Aufrufen von gespeicherte Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Eine gespeicherte Prozedur kann 0 oder mehr Parameter haben. Sie kann auch einen Wert zurückgeben: Wenn der OLE DB-Treiber für SQL Server verwenden, können Parameter an eine gespeicherte Prozedur übergeben werden, indem:  
+  Eine gespeicherte Prozedur kann 0 oder mehr Parameter haben. Sie kann auch einen Wert zurückgeben: Bei Verwendung des OLE DB Treibers für SQL Server können Parameter für eine gespeicherte Prozedur wie folgt übermittelt werden:  
   
 -   Durch Hartcodierung des Datenwerts  
   
 -   Durch Verwendung einer Parametermarkierung (?) zum Angeben von Parametern, Binden einer Programmvariablen an die Parametermarkierung und Einfügen des Datenwerts in die Programmvariable  
   
 > [!NOTE]  
->  Wenn gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren mit benannten Parametern mit OLE DB aufgerufen werden, müssen die Parameternamen mit dem Zeichen „\@“ beginnen. Dies ist eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der OLE DB-Treiber für SQL Server, erzwingt diese Einschränkung strenger als MDAC.  
+>  Wenn gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozeduren mit benannten Parametern mit OLE DB aufgerufen werden, müssen die Parameternamen mit dem Zeichen „\@“ beginnen. Dies ist eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Einschränkung. Der OLE DB Treiber für SQL Server erzwingt diese Einschränkung strenger als MDAC.  
   
  Damit Parameter unterstützt werden, wird die **ICommandWithParameters**-Schnittstelle auf dem Befehlsobjekt verfügbar gemacht. Wenn die Parameter verwendet werden sollen, beschreibt der Consumer die Parameter zunächst dem Anbieter, indem er die **ICommandWithParameters::SetParameterInfo**-Methode aufruft (oder optional eine Aufrufanweisung vorbereitet, die die **GetParameterInfo**-Methode aufruft). Der Consumer erstellt dann einen Accessor, der die Struktur eines Puffers angibt und Parameterwerte in diesen Puffer einfügt. Schließlich übergibt er das Handle des Accessors und einen Zeiger auf den Puffer an **Execute**. Bei späteren Aufrufen von **Execute** fügt der Consumer neue Parameterwerte in den Puffer ein und ruft **Execute** mit dem Accessorhandle und Pufferzeiger auf.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66795930"
 5.  Führen Sie den Befehl mit **ICommand::Execute** aus.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Methoden zum Aufrufen einer gespeicherten Prozedur  
- Beim Ausführen einer gespeicherten Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], der OLE DB-Treiber für SQL Server unterstützt die:  
+ Beim Ausführen einer gespeicherten Prozedur in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt der OLE DB Treiber für SQL Server Folgendes:  
   
 -   ODBC CALL-Escapesequenz  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66795930"
   
  Wenn die RPC-Escapesequenz zur Ausführung einer gespeicherten Prozedur verwendet wird, ruft der Anbieter keine Hilfsfunktion auf, um die Parameterinformationen zu ermitteln (wie dies bei der ODBC CALL-Syntax der Fall ist). Die RPC-Syntax ist einfacher als die ODBC CALL-Syntax, weshalb der Befehl schneller verarbeitet und die Leistung gesteigert wird. In diesem Fall müssen Sie die Parameterinformationen durch Ausführen von **ICommandWithParameters::SetParameterInfo** bereitstellen.  
   
- Bei der RPC-Escapesequenz ist es erforderlich, einen Rückgabewert zu erhalten. Wenn die gespeicherte Prozedur keinen Wert zurückgibt, gibt der Server standardmäßig 0 (null) zurück. Außerdem können Sie keinen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor für die gespeicherte Prozedur öffnen. Die gespeicherte Prozedur wird implizit vorbereitet, und beim Aufruf von **ICommandPrepare::Prepare** tritt ein Fehler auf. Aufgrund von nicht um ein RPC-Aufruf vorzubereiten können Sie keine Spaltenmetadaten Abfragen; IColumnsInfo:: GetColumnInfo und IColumnsRowset:: GetColumnsRowset geben db_e_notprepared zurück zurück.  
+ Bei der RPC-Escapesequenz ist es erforderlich, einen Rückgabewert zu erhalten. Wenn die gespeicherte Prozedur keinen Wert zurückgibt, gibt der Server standardmäßig 0 (null) zurück. Außerdem können Sie keinen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Cursor für die gespeicherte Prozedur öffnen. Die gespeicherte Prozedur wird implizit vorbereitet, und beim Aufruf von **ICommandPrepare::Prepare** tritt ein Fehler auf. Aufgrund der Unfähigkeit, einen RPC-Aufruf vorzubereiten, können Sie keine Spalten Metadaten Abfragen. IColumnsInfo:: GetColumnInfo und IColumnsRowset:: GetColumnsRowset geben DB_E_NOTPREPARED zurück.  
   
  Wenn Sie alle Parametermetadaten kennen, ist die RPC-Escapesequenz die empfohlene Methode für die Ausführung gespeicherter Prozeduren.  
   
@@ -119,10 +118,10 @@ ms.locfileid: "66795930"
 {rpc SalesByCategory}  
 ```  
   
- Eine beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden Sie unter [Ausführen einer gespeicherten Prozedur &#40;mithilfe der RPC-Syntax&#41; und Prozess-Rückgabecodes und Ausgabeparametern &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Eine Beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden [Sie &#40;unter Ausführen einer&#41; gespeicherten Prozedur mithilfe von RPC-Syntax &#40;und&#41;verarbeiten von Rückgabe Codes und Ausgabeparametern OLE DB](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>'EXECUTE'-Anweisung (Transact-SQL)  
- Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz stellen im Vergleich zur [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)-Anweisung die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur dar. Der OLE DB-Treiber für SQL Server verwendet den RPC-Mechanismus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] befehlsverarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
+ Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz stellen im Vergleich zur [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md)-Anweisung die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur dar. Der OLE DB-Treiber für SQL Server verwendet den RPC- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Mechanismus von, um die Befehls Verarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
   
  Das folgende Beispiel zeigt die **EXECUTE**-Anweisung ([!INCLUDE[tsql](../../../includes/tsql-md.md)]):  
   

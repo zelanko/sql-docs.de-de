@@ -1,5 +1,5 @@
 ---
-title: GetTime-Methode (Int) | Microsoft-Dokumentation
+title: getTime-Methode (int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 454848e471548fbd47e5a0f7985b97546ef87457
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6e0426a89de1e3cf78f1f41e45fc35ba81816362
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979094"
 ---
 # <a name="gettime-method-int"></a>getTime-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Time getTime(int index)
  Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Uhrzeit-Objekt.  
+ Ein Zeit Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

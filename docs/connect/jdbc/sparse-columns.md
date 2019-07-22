@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 131910bfaa6e119588f708305bb1008c7b36d6e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 86d230cee4c38b996ee41240a61e6ede53478bac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004413"
 ---
 # <a name="sparse-columns"></a>Spalten mit geringer Dichte
 
@@ -40,7 +39,7 @@ Spaltensätze sind berechnete Spalten, die alle Sparsespalten im nicht typisiert
 
 Dieses Beispiel zeigt, wie Spaltensätze erkannt werden. Des Weiteren zeigt es, wie die XML-Ausgabe eines Spaltensatzes analysiert wird, um die Daten aus den Sparsespalten zu erhalten.
 
-Die Codeauflistung ist der Java-Quellcode. Bevor Sie die Anwendung kompilieren, ändern Sie die Verbindungszeichenfolge an.
+Die Codeauflistung ist der Java-Quellcode. Bevor Sie die Anwendung kompilieren, ändern Sie die Verbindungs Zeichenfolge.
 
 ### <a name="code"></a>Code
 

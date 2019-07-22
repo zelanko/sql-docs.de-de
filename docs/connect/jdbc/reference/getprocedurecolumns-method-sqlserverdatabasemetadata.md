@@ -1,5 +1,5 @@
 ---
-title: GetProcedureColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getprocedurecolumschlag NS-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980755"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetProcedureColumns-Methode wird von der GetProcedureColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getprocedurecolrens-Methode wird von der getprocedurecolumschlag NS-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getProcedureColumns-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
@@ -75,17 +74,17 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |COLUMN_TYPE|**short**|Der Typ der Spalte. Mögliche Werte:<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|PRECISION|**ssNoversion**|Die Gesamtanzahl von signifikanten Stellen.|  
-|LENGTH|**ssNoversion**|Die Länge der Daten in Bytes.|  
+|PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
+|LENGTH|**int**|Die Länge der Daten in Bytes.|  
 |SCALE|**short**|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen.|  
 |RADIX|**short**|Die Basis für numerische Typen.|  
 |NULLABLE|**short**|Gibt an, ob die Spalte einen NULL-Wert enthalten kann. Mögliche Werte:<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
 |REMARKS|**String**|Die Beschreibung der Prozedurspalte.<br /><br /> <br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen.|  
-|SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, diese Spalte ist NULL.|  
-|CHAR_OCTET_LENGTH|**ssNoversion**|Die maximale Anzahl von Bytes in der Spalte.|  
-|ORDINAL_POSITION|**ssNoversion**|Der Index der Spalte innerhalb der Tabelle.|  
+|SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Für andere Datentypen als **DateTime** -und ISO- **Intervalle**ist diese Spalte NULL.|  
+|CHAR_OCTET_LENGTH|**int**|Die maximale Anzahl von Bytes in der Spalte.|  
+|ORDINAL_POSITION|**int**|Der Index der Spalte innerhalb der Tabelle.|  
 |IS_NULLABLE|**String**|Gibt an, ob in der Spalte NULL-Werte zulässig sind.|  
 |SS_TYPE_CATALOG_NAME|**String**|Der Name des Katalogs, der den benutzerdefinierten Typ (UDT) enthält.|  
 |SS_TYPE_SCHEMA_NAME|**String**|Der Name des Schemas, der den benutzerdefinierten Typ (UDT) enthält.|  

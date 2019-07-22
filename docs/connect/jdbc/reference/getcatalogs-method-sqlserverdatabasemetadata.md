@@ -1,5 +1,5 @@
 ---
-title: GetCatalogs-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getkatalogen-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c63d7ea85cd36f6cbc6f536e7fc7f9f20def2ad2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953454"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>getCatalogs-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public java.sql.ResultSet getCatalogs()
  Diese getCatalogs-Methode wird von der getCatalogs-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
->  Auf SQL Azure, Sie müssen eine Verbindung mit der master-Datenbank aufrufen **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure unterstützt nicht die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank. **SQLServerDatabaseMetaData.getCatalogs** Ansicht "sys.databases" verwendet, um die Kataloge abzurufen. Finden Sie in der Diskussion zu Berechtigungen in [Sys. database_usage (Azure SQL-Datenbank)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) zu **SQLServerDatabaseMetaData.getCatalogs** Verhalten auf SQL Azure.  
+>  Auf SQL Azure sollten Sie eine Verbindung mit der Master-Datenbank herstellen, um **SQLServerDatabaseMetaData. getkatalogen**aufzurufen. SQL Azure unterstützt nicht die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank. **SQLServerDatabaseMetaData. getkatalogen** verwendet die sys. Database-Sicht, um die Kataloge zu erhalten. Informationen zum Verhalten von **SQLServerDatabaseMetaData. getkataloge** auf SQL Azure finden Sie in der Erörterung der Berechtigungen in [sys. database_usage (Azure SQL-Datenbank)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) .  
   
  Das von der getCatalogs-Methode zurückgegebene Resultset enthält die folgenden Informationen:  
   

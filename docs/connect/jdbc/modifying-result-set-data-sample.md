@@ -1,5 +1,5 @@
 ---
-title: Ändern von Resultsetdaten Datenbeispiel festlegen | Microsoft-Dokumentation
+title: Beispiel zum Ändern von Resultsetdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7981267d8e569a5ef3d1ccabf4743c70965bb62
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b253118c8f61a35774a024be3e17704de946d5d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956295"
 ---
 # <a name="modifying-result-set-data-sample"></a>Ändern von Resultsetdaten - Beispiel
 

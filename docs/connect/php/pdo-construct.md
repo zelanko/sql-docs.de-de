@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936262"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: Optional. Eine Zeichenfolge, die das Kennwort des Benutzers enthält. Um eine Verbindung mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung herzustellen, geben Sie das Kennwort an. Um eine Verbindung mithilfe der Windows-Authentifizierung herzustellen, geben Sie `""`an.  
   
-*$Driver_options*: Optional. Sie können Attribute des PDO-Treiber-Managers und bestimmte Attribute des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Treibers angeben, z.B. PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Ein ungültiges Attribut generiert keine Ausnahme. Ungültige Attribute generieren Ausnahmen, wenn sie mit [PDO::setAttribute](../../connect/php/pdo-setattribute.md)spezifiziert werden.  
+*$Driver _options*: optional. Sie können Attribute des PDO-Treiber-Managers und bestimmte Attribute des [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Treibers angeben, z.B. PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Ein ungültiges Attribut generiert keine Ausnahme. Ungültige Attribute generieren Ausnahmen, wenn sie mit [PDO::setAttribute](../../connect/php/pdo-setattribute.md)spezifiziert werden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 Gibt ein PDO-Objekt zurück. Wenn der Fehler auftritt, wird ein PDOException-Objekt zurückgegeben.  
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 Sie können ein Verbindungsobjekt schließen, indem Sie die Instanz auf NULL setzen.  
   
-Nach der eine Verbindung wird PDO:: ErrorCode 01000 anstelle von 00000 angezeigt.  
+Nach einer Verbindung zeigt PDO:: errorCode 01000 anstelle von 00000 an.  
   
 Wenn PDO::__construct aus irgendeinem Grund fehlschlägt, wird eine Ausnahme ausgelöst, selbst wenn PDO::ATTR_ERRMODE auf PDO::ERRMODE_SILENT festgelegt ist.  
   

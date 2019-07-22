@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826906"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255171"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
 Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver zusammen installiert wird.  
@@ -30,15 +29,15 @@ Der Zugriff auf den Berichts-Generator ist von den folgenden Faktoren abhängig:
 
 Der Berichts-Generator ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Unterstützte Funktionen von SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-Die Clientcomputer müssen die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 oder 4.6.1, installiert jeweils für SSRS 2016 und 2017. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
+Auf dem Client Computer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,6 oder 4.6.1 für SSRS 2016 bzw. 2017 installiert sein. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
 
-Verwenden Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] InternetExplorer 11 oder höher oder einem anderen modernen Browser.  
+Sie müssen Internet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Explorer 11 oder höher oder einen anderen modernen Browser verwenden.  
 
 Der Berichts-Generator wird immer im Modus für volle Vertrauenswürdigkeit ausgeführt; Sie können ihn nicht so konfigurieren, dass er im Modus für teilweise Vertrauenswürdigkeit ausgeführt wird. In früheren Versionen war es möglich, den Berichts-Generator im Modus für partielle Vertrauenswürdigkeit auszuführen, aber diese Option wird in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen nicht unterstützt.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Aktivieren und Deaktivieren des Berichts-Generators  
 
-Der Berichts-Generator ist in der Standardeinstellung aktiviert. Berichtsserveradministratoren können den Berichts-Generator deaktivieren, indem sie die Berichtsserver-Systemeigenschaft **ShowDownloadMenu** auf **FALSE** festlegen. Durch Festlegen dieser Eigenschaft wird der Berichts-Generator, Publisher für Mobile Berichte deaktiviert, und Power BI Mobile-downloads für diesen Berichtsserver.  
+Der Berichts-Generator ist in der Standardeinstellung aktiviert. Berichtsserveradministratoren können den Berichts-Generator deaktivieren, indem sie die Berichtsserver-Systemeigenschaft **ShowDownloadMenu** auf **FALSE** festlegen. Wenn Sie diese Eigenschaft festlegen, werden die Downloads für Berichts-Generator, Publisher für Mobile Berichte und Power BI Mobile für diesen Berichts Server deaktiviert.  
 
  Zum Festlegen der Berichtsserver-Systemeigenschaften können Sie Management Studio oder ein Skript verwenden:   
 
@@ -110,8 +109,8 @@ Nachdem Sie die Rollenzuweisungen erstellt haben, sind die Benutzer zu Folgendem
 
 1. Starten Sie das Webportal.  
 
-2. Klicken Sie auf das Zahnradsymbol oben rechts der Startseite der Web-Portals, und wählen **Standorteinstellungen** aus der Dropdown-Menü.  
-![die Web-Portal Zahnrad-Symbol und das Menü](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Klicken Sie oben rechts auf der Startseite des Webportals auf das Zahnrad Symbol, und wählen Sie im Dropdown Menü die Option **Website Einstellungen** aus.  
+![das Zahnrad Symbol und-Menü des Webportals](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Klicken Sie auf **Sicherheit**.  
 

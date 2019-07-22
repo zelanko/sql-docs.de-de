@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e585927c-0dee-43fd-b71e-c9f1701790bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ce8d13b841d99808180c0027e7c7169ce7cdba1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a929b5869e58f4f1207b14474302fdb247251850
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983855"
 ---
 # <a name="getdatetimeoffsetjavalangstring-sqlserverresultset"></a>getDateTimeOffset(java.lang.string) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String columnName)
  Name der Spalte.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt.  
+ Ein [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Sie können aktualisieren eine [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert mit einer [SQLServerResultSet.updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md).  
+ Sie können einen [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert mit [SQLServerResultSet. updatedatetimeoffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)aktualisieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

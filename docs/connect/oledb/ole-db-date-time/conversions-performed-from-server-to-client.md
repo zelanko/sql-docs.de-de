@@ -1,5 +1,5 @@
 ---
-title: Vom Server zum Client ausgeführte Konvertierungen | Microsoft-Dokumentation
+title: Von Server zu Client ausgeführte Konvertierungen | Microsoft-Dokumentation
 description: Server/Client-Konvertierungen
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015808"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Server/Client-Konvertierungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66769367"
   In diesem Artikel werden date/time-Konvertierungen beschrieben, die zwischen [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit dem OLE DB-Treiber für SQL Server geschrieben wurde.  
   
 ## <a name="conversions"></a>Konvertierungen  
- Die folgende Tabelle beschreibt die Konvertierungen der Typen, die an den Client zurückgegeben werden, und die in der Bindung verwendeten Typen. Für Output-Parameter, wenn ICommandWithParameters:: SetParameterInfo aufgerufen wurde und des Typs in *PwszDataSourceType* entspricht nicht der tatsächliche Typ auf dem Server eine implizite Konvertierung durch den Server erfolgt , und der an den Client zurückgegebene Typ entspricht den Typ, der über ICommandWithParameters:: SetParameterInfo angegeben. Dies kann zu unerwarteten Konvertierungsergebnissen führen, wenn sich die Konvertierungsregeln des Servers von den in diesem Artikel genannten Regeln unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 1900-1-1, nicht 1899-12-30.  
+ Die folgende Tabelle beschreibt die Konvertierungen der Typen, die an den Client zurückgegeben werden, und die in der Bindung verwendeten Typen. Wenn für Ausgabeparameter ICommandWithParameters:: SetParameterInfo aufgerufen wurde und der in *pwszDataSourceType* angegebene Typ nicht mit dem tatsächlichen Typ auf dem Server identisch ist, wird vom Server eine implizite Konvertierung durchgeführt, und der Typ wird zurückgegeben. für den Client wird der durch ICommandWithParameters:: SetParameterInfo angegebene Typ abgeglichen. Dies kann zu unerwarteten Konvertierungsergebnissen führen, wenn sich die Konvertierungsregeln des Servers von den in diesem Artikel genannten Regeln unterscheiden. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 1900-1-1, nicht 1899-12-30.  
   
 |Bis --><br /><br /> Von|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -51,7 +50,7 @@ ms.locfileid: "66769367"
 |Symbol|Bedeutung|  
 |------------|-------------|  
 |OK|Keine Konvertierung notwendig.|  
-|-|Es wird keine Konvertierung unterstützt. Wenn die Bindung überprüft wird, wenn IAccessor:: CreateAccessor aufgerufen wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in zurückgegeben *RgStatus*. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
+|-|Es wird keine Konvertierung unterstützt. Wenn die Bindung überprüft wird, wenn IAccessor:: deateaccessor aufgerufen wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*zurückgegeben. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
 |1|Für die Uhrzeitfelder wird 0 festgelegt.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE wird festgelegt.|  
 |3|Für die Zeitzone wird 0 festgelegt.|  

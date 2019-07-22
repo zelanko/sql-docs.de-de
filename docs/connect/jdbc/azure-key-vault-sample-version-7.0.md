@@ -1,5 +1,5 @@
 ---
-title: Azure Key Vault-Beispiel | Microsoft-Dokumentation
+title: Azure Key Vault Beispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3dc2ea73b7def7bb1e91f56b094bc34af594700b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 734d69388f644af93d794287174c19c036d278fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957434"
 ---
-# <a name="azure-key-vault-sample"></a>Azure Key Vault-Beispiel
+# <a name="azure-key-vault-sample"></a>Azure Key Vault Beispiel
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Beispielanwendung, die mit Azure Key Vault-Funktion
+## <a name="sample-application-using-azure-key-vault-feature"></a>Beispielanwendung mit Azure Key Vault-Funktion
 
-Diese Anwendung ist ausführbar mit JDBC Driver 7.0 und höher und Azure Key Vault (Version 1.0.0) Adal4j (Version 1.6.0), und ihre Abhängigkeiten.  Die zugrunde liegenden Abhängigkeiten aufgelöst werden können, indem Sie diese Bibliotheken in die Pom-Datei des Projekts hinzufügen, wie beschrieben [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+Diese Anwendung kann mit dem JDBC-Treiber 7,0 und höher und Azure-keyvault (Version 1.0.0), Adal4j (Version 1.6.0) und ihren Abhängigkeiten durchlaufen werden.  Die zugrunde liegenden Abhängigkeiten können aufgelöst werden, indem Sie diese Bibliotheken der POM-Datei des Projekts hinzufügen, wie [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)beschrieben:
 
 ```java
 import java.net.URISyntaxException;

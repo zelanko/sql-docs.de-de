@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 175f3e33f77d5f4d082ae8b98780b9f7bcafaa43
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998760"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>updateNCharacterStream-Methode (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNCharacterStream(int columnIndex,
   
  *x*  
   
- Ein Readerobjekt.  
+ Ein Reader-Objekt.  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateNCharacterStream-Methode wird von der UpdateNCharacterStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese updatencharakteristream-Methode wird von der updatencharakteristream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
- Diese Methode gibt eine Unicode-Zeichen aus einem Readerobjekt ausgewählt **Nchar**, **nvarchar(max)** , **Ntext**, und **Xml** Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
+ Diese Methode übergibt Unicode-Zeichen aus einem Reader-Objekt an ausgewählte **NCHAR**-, **nvarchar (max)** -, **ntext**-und **XML** -Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  
   
  Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  
   

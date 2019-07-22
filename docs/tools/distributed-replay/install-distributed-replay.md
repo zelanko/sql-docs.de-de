@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 10762f3d10aa8e90d8bf2d86663a19a9222db42c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950034"
 ---
 # <a name="install-distributed-replay"></a>Installieren von Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "52516009"
   
     1.  Auf 32-Bit-Computern ist der Standardinstallationspfad **C:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Programme (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**.  
+    2.  Auf 64-Bit-Computern ist der Standardinstallationspfad **C:\Programme (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\** .  
   
 9. Wenn Sie fertig sind, klicken Sie auf **Weiter**.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "52516009"
   
  Entwickeln Sie mit den in der folgenden Tabelle aufgeführten Parametern Befehlszeilenskripts für die Installation.  
   
-|Parameter|Beschreibung|Unterstützte Werte|  
+|Parameter|und Beschreibung|Unterstützte Werte|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Optional**|Dienstkonto für den Distributed Replay Controller-Dienst.|Überprüft Konto und Kennwort.|  
 |/CTLRSVCPASSWORD<br /><br /> **Optional**|Kennwort für das Distributed Replay Controller-Dienstkonto.|Überprüft Konto und Kennwort.|  

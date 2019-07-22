@@ -1,5 +1,5 @@
 ---
-title: GetWarnings-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getwarning-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f816cab36fbed46dbf25c83df3063a024e4abbbb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e92087315c468f435cf9eb22b56b587cb1743a3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978110"
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>getWarnings-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein SQLWarning-Objekt.  
+ Ein SQLWARNING-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetWarnings-Methode wird von der GetWarnings-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese getwarning-Methode wird von der getwarning-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
- Darauffolgende Warnungen werden mit dem ersten SQLWarning verkettet und mit der GetNextWarning-Methode aufgerufen. Beim Aufruf für eine geschlossene Verbindung wird eine Ausnahme ausgelöst.  
+ Nachfolgende Warnungen werden mit der ersten SQLWARNING verkettet und mit der getnextwarning-Methode aufgerufen. Beim Aufruf für eine geschlossene Verbindung wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

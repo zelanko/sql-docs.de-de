@@ -1,5 +1,5 @@
 ---
-title: Datentypzuordnung zu Rowsets und Parametern | Microsoft-Dokumentation
+title: Datentyp Zuordnung in Rowsets und Parametern | Microsoft-Dokumentation
 description: Datentypzuordnung in Rowsets und Parametern
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: de02099f7d54682b96713d861843b2cf5bd87ffb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995207"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66769661"
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
 |**image**|DBTYPE_BYTES|  
-|**ssNoversion**|DBTYPE_I4|  
+|**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
 |**ntext**|DBTYPE_WSTR|  
@@ -68,7 +67,7 @@ ms.locfileid: "66769661"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- Der OLE DB-Treiber für SQL Server unterstützt die Consumer angeforderte datenkonvertierungen, wie in der Abbildung dargestellt.  
+ Der OLE DB-Treiber für SQL Server unterstützt vom Consumer angeforderte Datenkonvertierungen, wie in der Abbildung dargestellt.  
   
  Die **sql_variant**-Objekte können Daten jedes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyps enthalten, mit Ausnahme von „text“, „ntext“, „image“, „varchar(max)“, „nvarchar(max)“, „varbinary(max)“, „xml“, „timestamp“ sowie benutzerdefinierten CLR-Typen (Common Language Runtime) von Microsoft .NET Framework. Eine Instanz der sql_variant-Daten darf außerdem nicht sql_variant als zugrunde liegenden Basisdatentyp aufweisen. Die Spalte kann beispielsweise in einigen Zeilen **smallint**-Werte enthalten, in anderen Zeilen **float**-Werte und in den übrigen **char**/**nchar**-Werte.  
   
@@ -97,6 +96,6 @@ ms.locfileid: "66769661"
 |SSPROP_ALLOWNATIVEVARIANT|Typ: VT_BOOL<br /><br /> R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Beschreibung: Bestimmt, ob die Daten als DBTYPE_VARIANT oder DBTYPE_SQLVARIANT abgerufen werden.<br /><br /> VARIANT_TRUE: Der Spaltentyp wird als DBTYPE_SQLVARIANT zurückgegeben. In diesem Fall enthält der Puffer die SSVARIANT-Struktur.<br /><br /> VARIANT_FALSE: Der Spaltentyp wird als DBTYPE_VARIANT zurückgegeben und der Puffer enthält die VARIANT-Struktur.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datentypen &#40;OLE-DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Datentypen &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

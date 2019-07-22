@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993502"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Vorgehensweise: Ausführen von parametrisierten Abfragen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +31,7 @@ Die Schritte zur Durchführung einer parametrisierten Abfrage können in vier Sc
   
 2.  Initialisieren oder aktualisieren Sie PHP-Variablen, die den Platzhaltern in der Transact-SQL-Abfrage entsprechen.  
   
-3.  Verwenden Sie die PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren, das den Parameterplatzhaltern in der Transact-SQL-Zeichenfolge entspricht. Die Parameterwerte in das Array muss sich in derselben Reihenfolge wie die Platzhalter dargestellt werden sollen.
+3.  Verwenden Sie die PHP-Variablen aus Schritt 2, um ein Array von Parameterwerten zu erstellen oder zu aktualisieren, das den Parameterplatzhaltern in der Transact-SQL-Zeichenfolge entspricht. Die Parameterwerte im Array müssen in derselben Reihenfolge vorliegen wie die Platzhalter, die Sie darstellen sollen.
   
 4.  Führen Sie die Abfrage aus:  
   
@@ -191,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>Weitere Informationen  
 [Konvertieren von Datentypen](../../connect/php/converting-data-types.md)
 
-[Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
 

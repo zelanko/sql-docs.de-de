@@ -1,5 +1,5 @@
 ---
-title: Datenquelleneigenschaften Informationen | Microsoft-Dokumentation
+title: Eigenschaften von Datenquellen Informationen | Microsoft-Dokumentation
 description: Eigenschaften von Datenquelleninformationen
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 18518e92896223201c24982c6b6f0955ea81aa6f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ba9fa21f0c22c342922946a43124216a25ba09ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016034"
 ---
 # <a name="data-source-information-properties"></a>Eigenschaften für Datenquelleninformationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +43,6 @@ ms.locfileid: "66768614"
 |SSPROP_STREAM_XMLROOT|Typ: VT_BSTR R/W: Lesen/Schreiben<br /><br /> Beschreibung: Das Ergebnis einer FOR XML-Abfrage ist möglicherweise kein wohlgeformtes Dokument. Wenn diese Eigenschaft angegeben ist, wird das Ergebnis einer „select … for XML“-Abfrage von einem Stammtag umschlossen, das von dieser Eigenschaft bereitgestellt wird, um ein wohlgeformtes XML-Dokument zurückzugeben. Wenn die Abfrage in einem Browser ausgeführt wird, führt das möglicherweise dazu, dass der Browser beim Laden des Ergebnisses Parserfehler anzeigt. Um den Fehler zu vermeiden, unterstützt SQL ISAPI das Schlüsselwort ROOT. Dieses Schlüsselwort wird der SSPROP_STREAM_XMLROOT-Eigenschaft zugeordnet.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellenobjekte &#40;OLE-DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [OLE DB für Daten &#40;Quellen Objekte&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

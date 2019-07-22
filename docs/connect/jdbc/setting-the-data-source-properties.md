@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Daten von Quelleigenschaften | Microsoft-Dokumentation
+title: Festlegen der Datenquellen Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6804e8bb0f68ed88934e5bc86d61556b9bbbd499
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 97e285f5f2680e028a9d8fd00901e3e977ffdd80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004431"
 ---
 # <a name="setting-the-data-source-properties"></a>Festlegen der Datenquelleneigenschaften
 
@@ -26,7 +25,7 @@ Datenquellen bilden den bevorzugten Mechanismus, mit dem in einer Umgebung der J
 
 Java EE-Produkte wie Anwendungsserver und Servlet-/JSP-Engines lassen normalerweise die Konfiguration von Datenquellen für den Datenbankzugriff zu. Alle im Artikel [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md) aufgeführten Eigenschaften können überall angegeben werden, wo die Konfiguration die Eingabe einer Eigenschaft als Eigenschaft-Wert-Paar zulässt.
 
-Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquellen finden Sie unter der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse. Ein Beispiel dafür, wie mit der SQLServerDataSource-Klasse, zum Herstellen einer Verbindung mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [-Datenquellenbeispiel](../../connect/jdbc/data-source-sample.md).
+Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquellen finden Sie unter der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse. Ein Beispiel für die Verwendung der SQLServerDataSource-Klasse, um eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, finden Sie unter [Datenquellen Beispiel](../../connect/jdbc/data-source-sample.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

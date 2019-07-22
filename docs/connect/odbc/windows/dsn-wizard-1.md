@@ -1,5 +1,5 @@
 ---
-title: Datenquellen-Assistentenbildschirm 1 (ODBC-Treiber für SQLServer) | Microsoft-Dokumentation
+title: Datenquellen-Assistent (Bildschirm 1) (ODBC-Treiber für SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936604"
 ---
 # <a name="data-source-wizard-screen-1"></a>Datenquellen-Assistent (Bildschirm 1)
 
@@ -38,7 +37,7 @@ Der Name einer Instanz von SQL Server in Ihrem Netzwerk. Sie müssen im nächste
 
 In den meisten Fällen kann der ODBC-Treiber eine Verbindung mit der Standardprotokollreihenfolge und dem in diesem Feld bereitgestellten Servernamen herstellen. Mit dem SQL Server-Konfigurations-Manager können Sie einen Alias für den Server erstellen oder Clientnetzwerkbibliotheken konfigurieren.
 
-Sie können „(local)“ in das Serverfeld eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Der Benutzer kann anschließend eine Verbindung mit der lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird. Es können mehrere Instanzen von SQL Server auf demselben Computer ausführen. Um eine benannte Instanz von SQL Server anzugeben, wird der Servername im Format _Servername_\\_Instanzname_ angegeben.
+Sie können „(local)“ in das Serverfeld eingeben, wenn Sie den gleichen Computer wie SQL Server verwenden. Der Benutzer kann anschließend eine Verbindung mit der lokalen Instanz von SQL Server herstellen, selbst wenn eine nicht vernetzte Version von SQL Server ausgeführt wird. Mehrere Instanzen von SQL Server können auf demselben Computer ausgeführt werden. Um eine benannte Instanz von SQL Server anzugeben, wird der Servername im Format _Servername_\\_Instanzname_ angegeben.
 
 Weitere Informationen über Servernamen für andere Typen von Netzwerken finden Sie in der SQL Server-Installationsdokumentation in der SQL Server-Onlinedokumentation.
 
@@ -48,7 +47,7 @@ Wenn über die auf diesem Bildschirm angegebenen Informationen hinaus keine weit
 
 ### <a name="next"></a>Weiter
 
-Um zum nächsten Bildschirm des Assistenten fortzufahren, klicken Sie auf **Weiter**.
+Um zum nächsten Bildschirm des Assistenten zu gelangen, klicken Sie auf **weiter**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

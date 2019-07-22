@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f27f2eadeb1c9743a83ef3ae78b011da5edf13c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b08a6574f16159e5eebb9a95af7483b2ce7b0c84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996762"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>updateCharacterStream-Methode (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +37,17 @@ public void updateCharacterStream(int columnIndex,
   
  *x*  
   
- Ein Readerobjekt.  
+ Ein Reader-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateCharacterStream-Methode wird von der UpdateCharacterStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese updatecharakteristream-Methode wird von der updatecharakteristream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Von dieser Methode werden Unicode-Zeichen aus einem Reader-Objekt an ausgewählte Text- und Binärspalten übergeben. Hierzu zählen alle Textspalten sowie Spalten vom Typ **binary**, **varbinary**, **varbinary(max)** , **image** und **xml**, jedoch keine **udt**-Spalten.  
   
- Mit dieser Methode für die **Image**, **Text**, und **Ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datentypen können die Leistung beeinträchtigt.  
+ Die Verwendung dieser Methode für die Datentypen **Image**, **Text**und **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann sich auf die Leistung auswirken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateCharacterStream-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

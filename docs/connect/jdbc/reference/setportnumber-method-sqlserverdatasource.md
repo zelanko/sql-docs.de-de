@@ -1,5 +1,5 @@
 ---
-title: SetPortNumber-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: setportnumber-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 304d63f7822990c4d8e4a9c0787c9e688c222580
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0c171e8fb78553275d6a1f5d4bcce485a470f94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973189"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setPortNumber(int portNumber)
  Die Portnummer ist die TCP/IP-Portnummer, die beim Öffnen einer Socketverbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird. Wenn die portNumber-Eigenschaft nicht festgelegt ist, gibt die [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)-Methode den Standardwert „1433“ zurück.  
   
 > [!NOTE]  
->  SetPortNumber-Methode keine bereichsprüfung auf dem Portwert übergeben. Sie können eine Portnummer übergeben, die nicht gültig ist, z. B. 99999, ohne dass einen Fehler ist.  
+>  Die setportnumber-Methode führt keine Bereichs Überprüfung für den übergebenen Portwert durch. Sie können eine ungültige Portnummer wie 99999 übergeben, ohne dass ein Fehler ausgelöst wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

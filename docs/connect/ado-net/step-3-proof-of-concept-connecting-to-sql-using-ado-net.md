@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957615"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von ADO.NET
 
@@ -24,11 +23,11 @@ ms.locfileid: "66770568"
 - Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 4: Herstellen stabiler SQL-Verbindungen mit ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-Dieses C#-Codebeispiel sollten einen Proof of Concept nur berücksichtigt werden. Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  
+Dieses C# Codebeispiel sollte nur als Proof of Concept angesehen werden. Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht notwendigerweise die bewährten Methoden, die von Microsoft empfohlen werden.  
   
-## <a name="step-1-connect"></a>Schritt 1: Verbinden
+## <a name="step-1-connect"></a>Schritt 1: verbinden
   
-Die Methode **SqlConnection.Open** wird verwendet, um eine Verbindung zur SQL-Datenbank herstellen.  
+Die **SqlConnection. Open** -Methode wird verwendet, um eine Verbindung mit Ihrer SQL-Datenbank herzustellen.  
 
 
 ```csharp
@@ -67,10 +66,10 @@ Die Methode **SqlConnection.Open** wird verwendet, um eine Verbindung zur SQL-Da
 
 ## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
   
-Die SqlCommand.ExecuteReader-Methode:  
+Die SqlCommand. ExecuteReader-Methode:  
   
-- Gibt die SQL-SELECT-Anweisung mit dem SQL-System.  
-- Gibt eine Instanz von SqlDataReader Zugriff auf die Zeilen im Ergebnis zurück.  
+- Gibt die SQL-SELECT-Anweisung für das SQL-System aus.  
+- Gibt eine Instanz von SqlDataReader zurück, um den Zugriff auf die Ergebniszeilen bereitzustellen.  
   
   
   
@@ -154,11 +153,11 @@ Die SqlCommand.ExecuteReader-Methode:
 ## <a name="step-3-insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
   
-In diesem Beispiel wird veranschaulicht, wie Sie:  
+In diesem Beispiel wird Folgendes veranschaulicht:  
   
-- Führen Sie eine SQL INSERT-Anweisung sicher aus, indem Sie Parameter übergeben.  
-  - Verwendung von Parametern schützt vor SQL Injection-Angriffe.  
-- Rufen Sie den automatisch generierten Wert.  
+- Führen Sie eine SQL INSERT-Anweisung sicher durch Übergeben von Parametern aus.  
+  - Die Verwendung von Parametern schützt vor einschleusungs Angriffen durch SQL  
+- Ruft den automatisch generierten Wert ab.  
   
   
   

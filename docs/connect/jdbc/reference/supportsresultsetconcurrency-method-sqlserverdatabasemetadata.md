@@ -1,5 +1,5 @@
 ---
-title: SupportsResultSetConcurrency-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsresultsetparallelcurrency-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 098b696ea160a768b424c17275253baf60207b6b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 43c3fb3800b18af27d811fd7679e4b957f1e2113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968957"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -82,7 +81,7 @@ public boolean supportsResultSetConcurrency(int type,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsResultSetConcurrency-Methode wird von der SupportsResultSetConcurrency-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsresultsetparallelcurrency-Methode wird von der supportsresultsetparallelcurrency-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

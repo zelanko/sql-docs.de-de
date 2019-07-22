@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c7f00b7f908a7b13f388df6dfd745a29000e4ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f49cdf12c4aaca9633670f7688783407acb05342
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957049"
 ---
 # <a name="working-with-data-types-jdbc"></a>Arbeiten mit Datentypen (JDBC)
 
@@ -37,7 +36,7 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie in Java-Anwendungen unter Ve
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Standarddatentypen – Beispiel](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | Beschreibt, wie Werte von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standarddatentypen mithilfe von Abrufmethoden für Resultsets abgerufen und wie diese Werte mithilfe von Updatemethoden für Resultsets aktualisiert werden.                                             |
 | [Beispiel für den SQLXML-Datentyp](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | Beschreibt das Speichern von XML-Daten in einer relationalen Datenbank, das Abrufen von XML-Daten aus einer Datenbank sowie das Analysieren von XML-Daten mit dem Java-Datentyp **SQLXML**.                                                                                   |
-| [Beispiel für räumliche Datentypen](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | Beschreibt, wie zum Speichern von räumlichen Datentypen in SQL Server und diese Typen von SQL Server abzurufen. Außerdem erläutert, wie neu definierte Klassen **Geometrie** und **Geography** aus dem Treiber für die Verwaltung von Java-Referenz mit diesen Datentypen. |
+| [Beispiel für räumliche Datentypen](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | Beschreibt, wie räumliche Datentypen in SQL Server gespeichert werden und wie diese Typen von SQL Server zurück abgerufen werden. Erläutert außerdem, wie neu definierte Klassen **Geometry** und **geography** aus dem Treiber verwendet werden, um die Java-Referenz dieser Datentypen zu verwalten. |
   
 ## <a name="see-also"></a>Weitere Informationen
 

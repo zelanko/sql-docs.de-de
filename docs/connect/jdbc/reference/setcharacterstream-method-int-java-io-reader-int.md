@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18e05d4707977499cff3864cef34e39f1bd45feb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974774"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream-Methode (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setCharacterStream(int n,
   
  *reader*  
   
- Ein Readerobjekt.  
+ Ein Reader-Objekt.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public final void setCharacterStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetCharacterStream-Methode wird von der SetCharacterStream-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+ Diese setcharakteristream-Methode wird von der setcharakteristream-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
  Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956173"
 ---
 # <a name="programming-with-sqlxml"></a>Programmieren mit SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "66794046"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Lesen und Schreiben von XML-Daten mit SQLXML-Objekten  
  In der folgenden Liste ist aufgeführt, wie Sie die API-Methoden von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] zum Lesen und Schreiben von XML-Daten mit SQLXML-Objekten verwenden:  
   
--   Zum Erstellen eines SQLXML-Objekts verwenden Sie die [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse. Beachten Sie, dass mit dieser Methode ein SQLXML-Objekt ohne Daten erstellt wird. Hinzuzufügende **Xml** Daten in SQLXML-Objekt, rufen Sie eine der folgenden Methoden, die in der SQLXML-Schnittstelle angegeben werden: z. B. SetResult, SetCharacterStream, SetBinaryStream, oder SetString.  
+-   Zum Erstellen eines SQLXML-Objekts verwenden Sie die [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse. Beachten Sie, dass mit dieser Methode ein SQLXML-Objekt ohne Daten erstellt wird. Um dem SQLXML-Objekt **XML** -Daten hinzuzufügen, müssen Sie eine der folgenden Methoden aufrufen, die in der SQLXML-Schnittstelle angegeben sind: setResult, setcharakteristream, setBinaryStream oder SetString.  
   
 -   Zum Abrufen des eigentlichen SQLXML-Objekts verwenden Sie die getSQLXML-Methoden der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse oder der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse.  
   
--   Zum Abrufen der **Xml** Daten aus einem SQLXML-Objekt, verwenden Sie eine der folgenden Methoden, die in der SQLXML-Schnittstelle angegeben werden: GetSource, GetCharacterStream, GetBinaryStream, oder GetString.  
+-   Um die **XML** -Daten aus einem SQLXML-Objekt abzurufen, verwenden Sie eine der folgenden Methoden, die in der SQLXML-Schnittstelle angegeben sind: GetSource, getcharakteristream, getBinaryStream oder GetString.  
   
 -   Zum Aktualisieren der **xml**-Daten in einem SQLXML-Objekt verwenden Sie die [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66794046"
  XML-Parser können leere Werte nicht behandeln. SQL Server erlaubt Anwendungen jedoch das Abrufen und Speichern leerer Werte aus bzw. in Datenbankspalten mit dem XML-Datentyp. Dies bedeutet, dass beim Analysieren der XML-Daten vom Parser eine Ausnahme ausgelöst wird, wenn der zugrunde liegende Wert leer ist. Bei DOM-Ausgaben fängt der JDBC-Treiber die Ausnahme ab und löst einen Fehler aus. Bei SAX- und StAX-Ausgaben stammt der Fehler direkt vom Parser.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Adaptive Pufferung und SQLXML-Unterstützung  
- Die vom SQLXML-Objekt zurückgegebenen Binär- und Zeichendatenströme richten sich nach den Modi für die adaptive oder vollständige Pufferung. Wenn die XML-Parser hingegen keine Datenströme sind, berücksichtigen sie die Einstellungen für adaptive oder vollständige Pufferung nicht. Weitere Informationen zur adaptiven Pufferung finden Sie unter [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).  
+ Die vom SQLXML-Objekt zurückgegebenen Binär- und Zeichendatenströme richten sich nach den Modi für die adaptive oder vollständige Pufferung. Wenn die XML-Parser hingegen keine Datenströme sind, berücksichtigen sie die Einstellungen für adaptive oder vollständige Pufferung nicht. Weitere Informationen zur adaptiven Pufferung finden [Sie unter Verwenden der adaptiven Pufferung](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)  

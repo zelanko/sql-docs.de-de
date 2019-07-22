@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Klassifizierung von Daten mit Microsoft ODBC-Treiber für SQLServer | Microsoft-Dokumentation
+title: Verwenden der Datenklassifizierung mit Microsoft ODBC Driver for SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -13,25 +13,25 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637444"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264003"
 ---
 # <a name="data-classification"></a>Datenklassifizierung
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Übersicht
-Zum Verwalten von sensiblen Daten, SQL Server und Azure SQL-Server wurde die Möglichkeit eingeführt, die Datenbankspalten mit Vertraulichkeit Metadaten zu bereitzustellen, können die Client-Anwendung auf verschiedene Arten von sensiblen Daten (z. B. im Gesundheitswesen, finanzielle, usw. zu behandeln ) in Übereinstimmung mit den Datenschutzrichtlinien.
+Um sensible Daten zu verwalten, haben SQL Server und Azure SQL Server die Möglichkeit eingeführt, Daten Bank Spalten mit vertraulichen Metadaten bereitzustellen, die es der Client Anwendung ermöglichen, verschiedene Arten von sensiblen Daten (z. b. Integrität, Finanzwesen usw.) zu verarbeiten. ) in Übereinstimmung mit den Datenschutzrichtlinien.
 
-Weitere Informationen dazu, wie Spalten Klassifizierung zuweisen, finden Sie unter [SQL-Datenermittlung und-Klassifizierung](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Weitere Informationen zum Zuweisen von Klassifizierungen zu Spalten finden Sie unter [SQL-Daten Ermittlung und-Klassifizierung](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
-Microsoft ODBC-Treiber 17.2 ermöglicht den Abruf dieser Metadaten über SQLGetDescField unter Verwendung des Bezeichners der SQL_CA_SS_DATA_CLASSIFICATION-Feld.
+Microsoft ODBC Driver 17,2 ermöglicht das Abrufen dieser Metadaten über SQLGetDescField mithilfe des SQL_CA_SS_DATA_CLASSIFICATION-Feld Bezeichners.
 
 ## <a name="format"></a>Format
-SQLGetDescField weist die folgende Syntax:
+SQLGetDescField weist die folgende Syntax auf:
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -43,53 +43,53 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- [Eingabe] IRD (Implementierungszeilendeskriptor) behandeln. Kann durch einen Aufruf von SQLGetStmtAttr mit SQL_ATTR_IMP_ROW_DESC-Anweisungsattribut abgerufen werden
+ Der IRD (Implementierungs Zeilen Deskriptor) handle. Kann durch einen Aufrufen von SQLGetStmtAttr mit dem SQL_ATTR_IMP_ROW_DESC-Anweisungs Attribut abgerufen werden.
   
  *RecNumber*  
  [Eingabe] 0
   
  *FieldIdentifier*  
- [Eingabe] SQL_CA_SS_DATA_CLASSIFICATION
+ Der SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- [Ausgabe] Ausgabepuffer
+ Ausgeben Ausgabepuffer
   
  *BufferLength*  
- [Eingabe] Die Länge des Ausgabepuffers in bytes
+ Der Länge des Ausgabepuffers in Bytes
 
- *StringLengthPtr* [Ausgabe] Zeiger auf den Puffer, in dem die Gesamtzahl der verfügbaren zurückzugebenden in Bytes zurückgegeben *ValuePtr*.
+ *Stringlengthptr* Ausgeben Ein Zeiger auf den Puffer, in dem die Gesamtzahl der für die Rückgabe in *ValuePtr*verfügbaren Bytes zurückgegeben werden soll.
  
 > [!NOTE]
-> Wenn die Größe des Puffers unbekannt ist, sie kann bestimmt werden durch Aufrufen von SQLGetDescField mit *ValuePtr* wie NULL und untersuchen den Wert der *StringLengthPtr*.
+> Wenn die Größe des Puffers unbekannt ist, kann er durch Aufrufen von SQLGetDescField mit *ValuePtr* als NULL und untersuchen des Werts von *stringlengthptr*ermittelt werden.
  
-Wenn Datenklassifizierung Informationen nicht verfügbar ist, ist ein *ungültige Deskriptorfeld* Fehler zurückgegeben.
+Wenn keine Daten Klassifizierungs Informationen verfügbar sind, wird ein *Ungültiger deskriptorfeldfehler* zurückgegeben.
 
-Bei einem erfolgreichen Aufruf SQLGetDescField, der Puffer verweist *ValuePtr* enthält die folgenden Daten:
+Bei einem erfolgreichen Aufrufen von SQLGetDescField enthält der Puffer, auf den *ValuePtr* zeigt, die folgenden Daten:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt`, und `cc cc` multibyte ganzen Zahlen besteht, die mit dem niedrigstwertigen Byte an der niedrigsten Adresse gespeichert werden.
+> `nn nn`, `tt tt`, und `cc cc` sind Multibytezeichen-Ganzzahlen, die mit dem geringsten signifikanten Byte an der niedrigsten Adresse gespeichert werden.
 
-*`sensitivitylabel`* und *`informationtype`* sind beide im Format
+*`sensitivitylabel`* und *`informationtype`* sind beide in der Form.
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* das Format
+*`columnsensitivity`* hat die Form
 
  `nn nn [n sensitivityprops]`
 
-Für jede Spalte *(c)* , *n* 4-Byte- *`sensitivityprops`* vorhanden sind:
+Für jede Spalte *(c)* sind *n* 4 Byte *`sensitivityprops`* vorhanden:
 
  `ss ss tt tt`
 
-s - Index in die *`sensitivitylabels`* Array `FF FF` , wenn keine Bezeichnung
+s-Index in das *`sensitivitylabels`* Array, `FF FF` wenn keine Bezeichnung
 
-t - Index in die *`informationtypes`* Array `FF FF` , wenn keine Bezeichnung
+t-Index in das *`informationtypes`* Array, `FF FF` wenn keine Bezeichnung
 
 
 <br><br>
-Das Format der Daten kann die folgenden Pseudo-Strukturen ausgedrückt werden:
+Das Format der Daten kann als die folgenden Pseudo Strukturen ausgedrückt werden:
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Codebeispiel
-Testen Sie die Anwendung zeigt, wie zum Lesen von Metadaten für die Datenklassifizierung. Für Windows können sie das mit kompiliert werden `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` , und führen Sie mit einer Verbindungszeichenfolge und einer SQL-Abfrage (die gibt Spalten klassifiziert) als Parameter:
+Test Anwendung, die das Lesen von Daten Klassifizierungs Metadaten veranschaulicht. Unter Windows kann es mit einer Verbindungs `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` Zeichenfolge kompiliert und mit einer SQL-Abfrage ausgeführt werden (die klassifizierte Spalten zurückgibt) als Parameter:
 
 ```
 #ifdef _WIN32

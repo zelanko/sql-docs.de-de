@@ -1,5 +1,5 @@
 ---
-title: GetClientInfo-Methode () | Microsoft-Dokumentation
+title: getClientInfo-Methode () | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bccb7e0cee039ad6591acf3805f2ba70c9c7655a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6b68caa4abff00f113176791d06c6361c5da1e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953119"
 ---
 # <a name="getclientinfo-method-"></a>getClientInfo-Methode ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +36,9 @@ public java.util.Properties getClientInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetClientInfo-Methode wird von der GetClientInfo-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese getClientInfo-Methode wird von der getClientInfo-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
- Von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] werden keine Eigenschaften für Clientinformationen unterstützt. Daher gibt diese Methode ein leeres Eigenschaftenobjekt zurück.  
+ Von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] werden keine Eigenschaften für Clientinformationen unterstützt. Folglich gibt diese Methode ein leeres Properties-Objekt zurück.  
   
  Entsprechend kann die [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)-Methode der [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)-Klasse von Anwendungen zum Abrufen einer Liste mit vom Treiber unterstützten Eigenschaften für Clientinformationen verwendet werden. Die [getClientInfoProperties](../../../connect/jdbc/reference/getclientinfoproperties-method-sqlserverdatabasemetadata.md)-Methode gibt ein leeres Resultset zurück.  
   

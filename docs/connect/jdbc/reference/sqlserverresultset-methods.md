@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 9a1f4d07-ada9-43c7-9281-1f059554c4d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6be68dee5a7a09ee51a5ce4b85e7bce8121548ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c0c0ee81adc6b278cbd20bfa51658c702008203e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970544"
 ---
 # <a name="sqlserverresultset-methods"></a>SQLServerResultSet-Methoden
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Weitere Informationen über die Elemente von SQLServerResultSet finden Sie unter [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
+  Informationen zu den Elementen von SQLServerResultSet finden Sie unter [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)-Member.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

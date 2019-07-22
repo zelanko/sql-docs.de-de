@@ -1,5 +1,5 @@
 ---
-title: MoveToInsertRow-Methode (SQLServerResultSet) | Microsoft-Dokumentation
+title: "\"muvedeinsertrow\"-Methode (SQLServerResultSet) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c841052f4fad09905f0aab447af9441919a23f1c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3bc8420b9f79ce61874dbb03e73924e7be6eca96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976786"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void moveToInsertRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese MoveToInsertRow-Methode wird von der MoveToInsertRow-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese Methode "muvedeinsertrow" wird von der "muvedeinsertrow"-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Die aktuelle Cursorposition wird gespeichert und der Cursor in die Einfügezeile versetzt. Die Einfügezeile ist eine spezielle Zeile, die einem aktualisierbaren Resultset zugewiesen ist. Sie ist eigentlich ein Puffer, in dem eine neue Zeile durch Aufrufen der Aktualisierungsmethoden vor dem Hinzufügen der Zeile zum Resultset erstellt wird.  
   

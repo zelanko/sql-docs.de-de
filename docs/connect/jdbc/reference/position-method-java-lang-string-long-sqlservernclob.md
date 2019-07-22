@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: faf6af6e1d52102b6f6358f2adc8a125ac1ef18a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dd9e30039b0d5ef429b8e729ce36f7b085e5cfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976467"
 ---
 # <a name="position-method-javalangstring-long-sqlservernclob"></a>position-Methode (java.lang.String, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft die Zeichenposition, an dem der angegebenen Teilzeichenfolge *Searchstr* wird in der **NCLOB** Wert, der von diesem dargestellt **NClob** Objekt.  
+  Ruft die Zeichenposition ab, an der die angegebene Teil Zeichenfolge *SearchStr* in dem **NCLOB** -Wert angezeigt wird, der durch dieses **NCLOB** -Objekt dargestellt wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +33,7 @@ public long position(java.lang.String searchstr,
 #### <a name="parameters"></a>Parameter  
  *searchstr*  
   
- Die Teilzeichenfolge, nach dem gesucht werden soll.  
+ Die Teil Zeichenfolge, nach der gesucht werden soll.  
   
  *start*  
   
@@ -47,10 +46,10 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese Position-Methode wird von der Position-Methode in der java.sql.NClob-Schnittstelle angegeben.  
+ Diese Positions Methode wird von der Positions Methode in der Java. SQL. NCLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Position-Methode &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
+ [Positions Methode &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [SQLServerNClob-Methoden](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob-Elemente](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob-Klasse](../../../connect/jdbc/reference/sqlservernclob-class.md)  

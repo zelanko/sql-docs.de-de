@@ -1,5 +1,5 @@
 ---
-title: SupportsSubqueriesInComparisons-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportssubqueriesinvergleiche-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 467d32e6-b47e-4095-9f8b-73e07fb814e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbe03e6e976908d359e7f5f34879f67105c3d9a7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6766181d669498dedd09a475d75315cb2770f414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968753"
 ---
 # <a name="supportssubqueriesincomparisons-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInComparisons-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsSubqueriesInComparisons()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsSubqueriesInComparisons-Methode wird von der SupportsSubqueriesInComparisons-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportssubqueriesinvergleiche-Methode wird von der supportssubqueriesinvergleiche-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

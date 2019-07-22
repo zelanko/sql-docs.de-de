@@ -1,5 +1,5 @@
 ---
-title: ValueOf-Methode (java.sql.Timestamp, Int) | Microsoft-Dokumentation
+title: valueOf-Methode (Java. SQL. Timestamp, int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3d2eb2934474b51aacddebc72230330c86bfeb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c13438851fdc543a3567abdc001af5b5b9e726fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001557"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf-Methode (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
  Das Offset in Minuten.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt ein DateTimeOffset-Objekt, das den Zeitpunkt gegebenen Zeitpunkt vom java.sql.Timestamp-Objekt mit dem angegebenen Offset in Minuten von GMT darstellt.  
+ Gibt ein DateTimeOffset-Objekt zurück, das den Zeitpunkt darstellt, der vom Java. SQL. Timestamp-Objekt am angegebenen Offset (in Minuten) von GMT angegeben wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   

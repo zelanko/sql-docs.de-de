@@ -1,5 +1,5 @@
 ---
-title: OthersDeletesAreVisible-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: othersdelta etesarevisible-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 421de1ae536c6bc0ff25f573f131f048df978c3d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 710d06a43aa1eb23ae9750c1cee1b5c4d1460085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976619"
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>othersDeletesAreVisible-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean othersDeletesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn die Löschvorgänge sichtbar sind. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Löschvorgänge sichtbar sind. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese OthersDeletesAreVisible-Methode wird von der OthersDeletesAreVisible-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese othersdelta etesarevisible-Methode wird von der othersdelta etesarevisible-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

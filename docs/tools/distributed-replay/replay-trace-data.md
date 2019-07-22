@@ -1,5 +1,5 @@
 ---
-title: Wiedergeben von Ablaufverfolgungsdaten | Microsoft-Dokumentation
+title: Wiedergeben von Ablauf Verfolgungs Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8717043764d67ab16217da7beecdc7bfee6515c3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949957"
 ---
 # <a name="replay-trace-data"></a>Wiedergeben von Ablaufverfolgungsdaten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "67729344"
   
  Mit der Option **Wiedergabe** des Verwaltungstools können Sie die Ereigniswiedergabephase der verteilten Wiedergabe initiieren. Diese Phase besteht aus zwei Teilen: der Verteilung der Ablaufverfolgungsdaten und dem Start und der Synchronisierung der verteilten Wiedergabe.  
   
- ![Verteilt die Wiedergabe von Ereignissen](../../tools/distributed-replay/media/eventreplay.gif "verteilt die Wiedergabe von Ereignissen")  
+ Wieder ![Gabe verteilter Ereignisse] Wieder (../../tools/distributed-replay/media/eventreplay.gif "Gabe verteilter Ereignisse")  
   
  Sie können Ablaufverfolgungsdaten in einem von zwei Sequenzierungsmodi wiedergeben: dem Belastungsmodus und dem Synchronisierungsmodus. Im Standardverhalten werden die Ablaufverfolgungsdaten im Belastungsmodus wiedergegeben. Weitere Informationen zur Ereigniswiedergabephase und den Sequenzierungsmodi finden Sie unter [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

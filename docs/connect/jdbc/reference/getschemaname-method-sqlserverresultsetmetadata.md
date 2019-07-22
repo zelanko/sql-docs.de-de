@@ -1,5 +1,5 @@
 ---
-title: GetSchemaName-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
+title: getschemaname-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4eacabb1cfd618d789ff7e21de497a40e4ea292f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 69e5183ceea19693205dc7f30a97e29bfb2bb70d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980145"
 ---
 # <a name="getschemaname-method-sqlserverresultsetmetadata"></a>getSchemaName-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getSchemaName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetSchemaName-Methode wird von der GetSchemaName-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
+ Diese getschemaname-Methode wird von der getschemaname-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSetMetaData-Methoden](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916464"
 ---
 # <a name="using-adaptive-buffering"></a>Verwenden der adaptiven Pufferung
 
@@ -28,9 +27,9 @@ Wenn [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Abfrage 
 
 Damit Anwendungen sehr große Ergebnisse behandeln können, stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die adaptive Pufferung bereit. Mithilfe der adaptiven Pufferung ruft der Treiber Ergebnisse der Anweisungsausführung erst dann von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, wenn sie in der Anwendung benötigt werden, statt alle Ergebnisse auf einmal abzurufen. Der Treiber verwirft außerdem die Ergebnisse, sobald die Anwendung nicht mehr auf sie zugreifen kann. Im Folgenden werden einige Szenarien beschrieben, in denen die Verwendung der adaptiven Pufferung sinnvoll sein kann:
 
-- **Die Abfrage erzeugt ein sehr umfangreiches Resultset:** die Anwendung kann eine SELECT-Anweisung, die mehr Zeilen als die Anwendung im Arbeitsspeicher speichern kann erzeugt ausführen. In vorherigen Releases musste die Anwendung einen Servercursor verwenden, um einen OutOfMemoryError zu vermeiden. Die adaptive Pufferung stellt die Möglichkeit bereit, ein beliebig großes Resultset mit Vorwärtscursor und schreibgeschützt zu übergeben, ohne dass ein Servercursor erforderlich ist.
+- **Die Abfrage erzeugt ein sehr großes Resultset:** Die Anwendung kann eine SELECT-Anweisung ausführen, die mehr Zeilen erzeugt, als die Anwendung im Arbeitsspeicher speichern kann. In vorherigen Releases musste die Anwendung einen Servercursor verwenden, um einen OutOfMemoryError zu vermeiden. Die adaptive Pufferung stellt die Möglichkeit bereit, ein beliebig großes Resultset mit Vorwärtscursor und schreibgeschützt zu übergeben, ohne dass ein Servercursor erforderlich ist.
 
-- **Die Abfrage erzeugt sehr umfangreiche** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **Spalten oder** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT-Parameterwerte:** Die Anwendung kann einen einzelnen Wert abrufen (Spalte oder OUT-Parameter) ist zu groß, um vollständig im Anwendungsspeicher gespeichert. Adaptive Pufferung kann die Clientanwendung solche Werte als Datenstrom abrufen, indem Sie mit der GetAsciiStream, die GetBinaryStream- oder die GetCharacterStream-Methoden. Die Anwendung ruft den Wert beim Lesen des Datenstroms von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab.
+- **Die Abfrage erzeugt sehr groß** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **Spalten oder** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) Ausgabe **Parameterwerte:** Die Anwendung kann einen einzelnen Wert (Spalten-oder out-Parameter) abrufen, der zu groß ist, um vollständig in den Anwendungs Speicher zu passen. Mithilfe der adaptiven Pufferung kann die Client Anwendung einen solchen Wert als Datenstrom abrufen, indem Sie die Methoden getAsciiStream, getBinaryStream oder getcharakteristream verwendet. Die Anwendung ruft den Wert beim Lesen des Datenstroms von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab.
 
 > [!NOTE]  
 > Mit adaptiver Pufferung puffert der JDBC-Treiber nur die benötigte Datenmenge. Der Treiber stellt keine öffentliche Methode zum Steuern oder Beschränken der Puffergröße bereit.
@@ -41,15 +40,15 @@ Ab Version 2.0 des JDBC-Treibers ist das Standardverhalten des Treibers **adapti
 
 Es gibt drei Möglichkeiten, mit denen eine Anwendung die Verwendung der adaptiven Pufferung für die Anweisungsausführung anfordern kann:
 
-- Die Anwendung kann die Verbindungseigenschaft festlegen **ResponseBuffering** auf "adaptive". Weitere Informationen zum Festlegen der Verbindungseigenschaften finden Sie unter [Festlegen der Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).
+- Die Anwendung kann die Verbindungs Eigenschaft **responsebufferalling** auf "Adaptive" festlegen. Weitere Informationen zum Festlegen der Verbindungs Eigenschaften finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../connect/jdbc/setting-the-connection-properties.md).
 
 - Die Anwendung kann die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)-Methode des [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Objekts zum Festlegen des Antwortpufferungsmodus für alle Verbindungen verwenden, die mit diesem [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Objekt erstellt wurden.
 
 - Die Anwendung kann die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode der [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse verwenden, um den Antwortpuffermodus für ein bestimmtes Anweisungsobjekt festzulegen.
 
-Bei Verwendung von JDBC Driver, Version 1.2, mussten Anwendungen das Anweisungsobjekt in [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) umwandeln, um die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode zu verwenden. Die Codebeispiele in der [lesen großer Data Sample](../../connect/jdbc/reading-large-data-sample.md) und [lesen großer Datenmengen mit gespeicherten Prozeduren Beispiel](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) veranschaulichen diese frühere Verwendungsweise.
+Bei Verwendung von JDBC Driver, Version 1.2, mussten Anwendungen das Anweisungsobjekt in [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) umwandeln, um die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode zu verwenden. Die Codebeispiele im Beispiel zum [Lesen von großen Daten](../../connect/jdbc/reading-large-data-sample.md) und zum [Lesen von großen Daten mit gespeicherten Prozeduren](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) veranschaulichen diese alte Verwendung.
 
-Mit Version 2.0 des JDBC-Treibers können Anwendungen jedoch die [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)-Methode und die [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)-Methode verwenden, um auf die herstellerspezifischen Funktionen zuzugreifen, ohne Vermutungen über die Klassenhierarchie der Implementierung anstellen zu müssen. Beispielcode, finden Sie unter den [Aktualisieren großer Datenbeispiel](../../connect/jdbc/updating-large-data-sample.md) Thema.
+Mit Version 2.0 des JDBC-Treibers können Anwendungen jedoch die [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)-Methode und die [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)-Methode verwenden, um auf die herstellerspezifischen Funktionen zuzugreifen, ohne Vermutungen über die Klassenhierarchie der Implementierung anstellen zu müssen. Beispielcode finden Sie im Thema [Aktualisieren von großen Daten](../../connect/jdbc/updating-large-data-sample.md) Mengen.
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Abrufen umfangreicher Daten mit adaptiver Pufferung
 
@@ -62,7 +61,7 @@ Wenn große Werte einmal mithilfe der get\<Typ>Stream-Methoden gelesen werden un
 Wenn die Anwendung adaptive Pufferung verwendet, können die von den get\<Type>Stream-Methoden abgerufenen Werte nur einmal abgerufen werden. Wenn Sie versuchen, eine get\<Type>-Methode für die gleiche Spalte oder den gleichen Parameter aufzurufen, nachdem die get\<Type>Stream-Methode des gleichen Objekts aufgerufen wurde, wird eine Ausnahme mit der folgenden Meldung ausgelöst: „Auf die Daten wurde zugegriffen; sie sind für diese Spalte oder diesen Parameter nicht verfügbar.“
 
 > [!NOTE]
-> Ein Aufruf von ResultSet.close() während der Verarbeitung ein ResultSet benötigt den Microsoft JDBC-Treiber für SQL Server zu lesen und alle übrigen Pakete verworfen. Dies kann einige Zeit dauern, wenn die Abfrage ein großes Dataset zurückgegeben, und insbesondere dann, wenn die Netzwerkverbindung langsam ist.
+> Beim Abrufen von Resultset. Close () in der Mitte der Verarbeitung eines Resultsets muss der Microsoft JDBC-Treiber für SQL Server, um alle verbleibenden Pakete zu lesen und zu verwerfen. Dies kann erhebliche Zeit in Anspruch nehmen, wenn die Abfrage ein großes Dataset zurückgegeben hat, insbesondere dann, wenn die Netzwerkverbindung langsam ist.
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>Richtlinien für die Verwendung der adaptiven Pufferung
 
@@ -70,7 +69,7 @@ Entwickler sollten sich an diese wichtigen Richtlinien halten, um die Speicherau
 
 - Vermeiden Sie die Verwendung der Verbindungszeichenfolgeneigenschaft **selectMethod=cursor**, damit die Anwendung ein sehr großes Resultset verarbeiten kann. Die adaptive Pufferung ermöglicht Anwendungen, sehr große, schreibgeschützte Vorwärtsresultsets ohne die Verwendung eines Servercursors zu verarbeiten. Beachten Sie, dass das Festlegen von **selectMethod=cursor** sich auf alle schreibgeschützten Resultsets mit Vorwärtscursor auswirkt, die über diese Verbindung generiert werden. Das heißt, wenn die Anwendung wiederholt kleine Resultsets mit wenigen Zeilen verarbeitet, werden zum Erstellen, Lesen und Schließen eines Servercursors für jedes Resultset sowohl auf Clientseite als auch auf Serverseite mehr Ressourcen verwendet als bei der **selectMethod**, die auf einen anderen Wert als **cursor** festgelegt ist.
 
-- Lesen Sie große Text- oder Binärwerte als Datenströme mithilfe von die GetAsciiStream, die GetBinaryStream oder die GetCharacterStream-Methoden anstelle der GetBlob oder die GetClob Methoden. Ab Release 1.2 stellt die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse neue get\<Type>Stream-Methoden hierfür bereit.
+- Lesen Sie große Text-oder Binär Werte als Datenströme, indem Sie die Methoden getAsciiStream, getBinaryStream oder getcharakteristream anstelle der getBlob-Methode oder der getClob-Methode verwenden. Ab Release 1.2 stellt die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse neue get\<Type>Stream-Methoden hierfür bereit.
 
 - Stellen Sie sicher, dass Spalten mit potenziell großen Werten in der Liste der Spalten in einer SELECT-Anweisung am Ende platziert werden und dass die get\<Type>Stream-Methoden von [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) verwendet werden, um in der Reihenfolge auf die Spalten zuzugreifen, in der sie ausgewählt werden.
 
@@ -78,9 +77,9 @@ Entwickler sollten sich an diese wichtigen Richtlinien halten, um die Speicherau
 
 - Vermeiden Sie, gleichzeitig mehrere Anweisungen über die gleiche Verbindung auszuführen. Das Ausführen einer weiteren Anweisung vor dem Verarbeiten der Ergebnisse der vorhergehenden Anweisung kann dazu führen, dass nicht verarbeitete Ergebnisse im Anwendungsspeicher gepuffert werden.
 
-- Es gibt einige Fälle, das bei Verwendung **SelectMethod = Cursor** anstelle von **ResponseBuffering = adaptive** Vorteile, z. B.:
+- Es gibt einige Fälle, in denen die Verwendung von **SelectMethod = Cursor** anstelle von **responseBuffering= adaptive** zu einer vorteillicheren wäre, wie z. b.:
 
-  - Wenn Ihre Anwendung eine vorwärts gerichtete verarbeitet, nur-Lese Resultset langsam, z. B. beim Lesen jeder Zeile nach einer Benutzereingabe, mithilfe von **SelectMethod = Cursor** anstelle von **ResponseBuffering = adaptive** möglicherweise Verringern der Nutzung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+  - Wenn die Anwendung ein Schreib geschütztes Resultset mit Vorwärts Cursor langsam verarbeitet, z. b. das Lesen jeder Zeile nach einer Benutzereingabe, kann die Verwendung von **SelectMethod = Cursor** anstelle von **responseBuffering= adaptive** zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verringerung der Ressourcennutzung durch .
 
   - Wenn die Anwendung zwei oder mehr schreibgeschützte Resultsets mit Vorwärtscursor gleichzeitig für die gleiche Verbindung verarbeitet, lässt sich der vom Treiber bei der Verarbeitung dieser Resultsets benötigte Speicher durch **selectMethod=cursor** anstelle von **responseBuffering=adaptive** möglicherweise verringern.
 

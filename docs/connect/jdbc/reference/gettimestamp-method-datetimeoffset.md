@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b9c407712659d9b57795677b4b5edc3ed6886057
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f4610ac2be4976fdab75c91b4827e4f9adaf6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978881"
 ---
 # <a name="gettimestamp-method-datetimeoffset"></a>getTimestamp-Methode (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Punkt zurück, in der Zeitangabe, die von diesem **DateTimeOffset** -Objekt als ein java.sql.Timestamp.  
+  Gibt den von diesem **DateTimeOffset** -Objekt dargestellten Zeitpunkt als Java. SQL. timestamp zurück.  
   
 ## <a name="syntax"></a>Syntax  
   

@@ -15,22 +15,21 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015437"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>'ISQLServerErrorInfo::GetErrorInfo' (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Gibt einen Zeiger auf eine OLE DB-Treiber für SQL Server-SSERRORINFO, die Struktur enthält die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Fehlerdetails.  
+  Gibt einen Zeiger auf einen OLE DB Treiber für SQL Server SSERRORINFO-Struktur zurück [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die die Fehlerdetails enthält.  
   
- Der OLE DB-Treiber für SQL Server definiert die **ISQLServerErrorInfo** fehlerschnittstelle. Diese Schnittstelle gibt Details zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehler zurück, einschließlich seines Schweregrads und Status.  
+ Der OLE DB-Treiber für SQL Server definiert die **ISQLServerErrorInfo** -Fehler Schnittstelle. Diese Schnittstelle gibt Details zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Fehler zurück, einschließlich seines Schweregrads und Status.  
 
   
 ## <a name="syntax"></a>Syntax  
@@ -57,7 +56,7 @@ HRESULT GetErrorInfo(
  Entweder das *ppSSErrorInfo* -Argument oder das *ppErrorStrings* -Argument war NULL.  
   
  E_OUTOFMEMORY  
- Der OLE DB-Treiber für SQL Server konnte nicht genügend Arbeitsspeicher zum Ausführen der Anforderung zuordnen.  
+ Der OLE DB Treiber für SQL Server konnte nicht genügend Arbeitsspeicher zuordnen, um die Anforderung abzuschließen.  
   
 ## <a name="remarks"></a>Remarks  
  Der OLE DB Driver for SQL Server teilt Arbeitsspeicher für die SSERRORINFO- und die OLECHAR-Zeichenfolgen zu, die durch die Zeiger zurückgegeben werden, die vom Consumer übergeben werden. Der Consumer muss diesen Arbeitsspeicher mithilfe der **IMalloc::Free** -Methode freigeben, wenn er keinen Zugriff auf die Fehlerdaten mehr benötigt.  

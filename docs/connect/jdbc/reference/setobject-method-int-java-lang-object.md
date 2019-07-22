@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aaf2b256329c66b6169593f71f4e85439aff21ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4ab210a30080472a777d151695a04ec49ff1041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973382"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject-Methode (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public final void setObject(int index,
   
 -   Die setNull-Methoden der SQLServerPreparedStatement-Klasse oder der SQLServerCallableStatement-Klasse  
   
--   Die [RegisterOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) Methode der SQLServerCallableStatement-Klasse  
+-   Die [registerout Parameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) -Methode der SQLServerCallableStatement-Klasse  
   
  In diesem Fall wird der Parametertyp automatisch festgelegt. Wird die setObject-Methode von der Anwendung mit NULL für den Objektwert aufgerufen, wird vom Treiber angenommen, dass der Parametertyp von der zuvor aufgerufenen Methode festgelegt wird.  
   

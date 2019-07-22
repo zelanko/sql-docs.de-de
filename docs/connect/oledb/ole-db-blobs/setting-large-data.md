@@ -1,6 +1,6 @@
 ---
 title: Festlegen großer Datenmengen | Microsoft-Dokumentation
-description: Festlegen großer Datenmengen, die mithilfe von OLE DB-Treiber für SQL Server
+description: Festlegen großer Datenmengen mithilfe OLE DB Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5d050a978efcfc1067f8adc5a346382f5b598ff7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936526"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Mit den OLE DB-Treiber für SQL Server können Sie die BLOB-Daten durch die Übergabe eines Zeigers auf ein consumerspeicherobjekt festlegen.  
+  Mit dem OLE DB-Treiber für SQL Server können Sie BLOB-Daten festlegen, indem Sie einen Zeiger auf ein Consumer-Speicher Objekt übergeben.  
   
  Der Consumer erstellt ein Speicherobjekt, das die Daten enthält, und übergibt einen Zeiger auf dieses Speicherobjekt an den Anbieter. Anschließend liest der Anbieter Daten vom Consumerspeicherobjekt und schreibt diese in die BLOB-Spalte.  
   

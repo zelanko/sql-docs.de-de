@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916586"
 ---
 # <a name="understanding-transactions"></a>Grundlegendes zu Transaktionen
 
@@ -24,7 +23,7 @@ ms.locfileid: "66788386"
 
 Bei Transaktionen handelt es sich um Gruppen von Operationen, die in logische Arbeitseinheiten zusammengefasst sind. Damit wird die Konsistenz und Integrität der einzelnen Aktionen in einer Transaktion gesteuert und gewährleistet, falls im System Fehler auftreten sollten.
 
-Mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ist eine lokale oder verteilte Transaktionsverarbeitung möglich. Transaktionen können auch Isolationsstufen verwenden. Weitere Informationen zu den vom JDBC-Treiber unterstützten Isolationsstufen finden Sie unter [Grundlegendes zu Isolationsstufen](../../connect/jdbc/understanding-isolation-levels.md).
+Mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ist eine lokale oder verteilte Transaktionsverarbeitung möglich. Transaktionen können auch Isolationsstufen verwenden. Weitere Informationen zu den vom JDBC-Treiber unterstützten Isolations Stufen finden Sie Untergrund Legendes zu [Isolations Stufen](../../connect/jdbc/understanding-isolation-levels.md).
 
 Anwendungen sollten Transaktionen nur entweder mit Transact-SQL-Anweisungen oder den vom JDBC-Treiber bereitgestellten Methoden steuern. Wenn für die gleiche Transaktion sowohl Transact-SQL-Anweisungen als auch JDBC-API-Methoden verwendet werden, führt dies möglicherweise zu Problemen, z. B. kann der Commit einer Transaktion nicht wie erwartet durchgeführt werden, ein unerwarteter Commit oder Rollback der Transaktion wird durchgeführt und eine neue Transaktion gestartet, oder es treten Ausnahmen wie "Fehler beim Wiederaufnehmen der Transaktion" auf.
 
@@ -42,7 +41,7 @@ Eine verteilte Transaktion aktualisiert Daten in mindestens zwei vernetzten Date
 
 Der JDBC-Treiber ist nahtlos in [!INCLUDE[msCoName](../../includes/msconame_md.md)] Distributed Transaction Coordinator (MS DTC) integriert, um eine echte Unterstützung von verteilten Transaktionen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu ermöglichen. Bei MS DTC handelt es sich um eine Funktion für verteilte Transaktionen, die von [!INCLUDE[msCoName](../../includes/msconame_md.md)] für [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows-Systeme bereitgestellt wird. MS DTC verwendet bewährte Transaktionsverarbeitungstechnologien von [!INCLUDE[msCoName](../../includes/msconame_md.md)], um XA-Funktionen wie das vollständige verteilte Protokoll für Zweiphasencommit und die Wiederherstellung von verteilten Transaktionen zu unterstützen.
 
-Weitere Informationen zur Verwendung von verteilten Transaktionen finden Sie unter [Grundlegendes zu XA-Transaktionen](../../connect/jdbc/understanding-xa-transactions.md).
+Weitere Informationen zur Verwendung verteilter Transaktionen finden Sie Untergrund Legendes zu [XA-Transaktionen](../../connect/jdbc/understanding-xa-transactions.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

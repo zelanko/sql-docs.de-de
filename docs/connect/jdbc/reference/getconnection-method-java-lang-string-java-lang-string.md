@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 86c6637a3f502212b2b2f35a47207d7276ce8df5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952744"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection-Methode (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,9 +51,9 @@ public java.sql.Connection getConnection(java.lang.String username,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetConnection-Methode wird durch die GetConnection-Methode in der javax.sql.DataSource-Schnittstelle angegeben.  
+ Diese getConnection-Methode wird von der getConnection-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  
   
- Aufrufen der GetConnection ersetzt-Methode mit einer nicht-Null-Benutzername oder Kennwort die Benutzereigenschaften für Namen und das Kennwort, die auf der SQLServerDataSource-Klasse festgelegt werden, wenn das SQLServerConnection-Objekt zu initialisieren. Beispiel: Hat der Aufrufer [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) und [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) für die Datenquelle aufgerufen und ruft anschließend getConnection auf und gibt einen Benutzernamen und ein Kennwort ungleich NULL an, werden der Benutzername und das Kennwort, der bzw. das durch setUser und setPassword festgelegt sind, durch das an getConnection weitergegebene Kennwort ersetzt.  
+ Wenn die getConnection-Methode mit einem Benutzernamen oder Kennwort ungleich NULL aufgerufen wird, werden die Benutzernamen-und Kenn Wort Eigenschaften ersetzt, die für die SQLServerDataSource-Klasse festgelegt werden, wenn das SQLServerConnection-Objekt initialisiert wird. Beispiel: Hat der Aufrufer [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) und [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) für die Datenquelle aufgerufen und ruft anschließend getConnection auf und gibt einen Benutzernamen und ein Kennwort ungleich NULL an, werden der Benutzername und das Kennwort, der bzw. das durch setUser und setPassword festgelegt sind, durch das an getConnection weitergegebene Kennwort ersetzt.  
   
 > [!NOTE]  
 >  Benutzernamen und Kennwörter, die in der URL durch einen Aufruf der [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md)-Methode festgelegt sind, werden in diesem Fall nicht geändert.  

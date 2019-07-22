@@ -10,34 +10,34 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 76b6d27acedcfe2ec462a764559237a1a2218f78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669602"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265143"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Formatieren von Dezimalzeichenfolgen und Geldwerten (SQLSRV-Treiber)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Beibehalten der Genauigkeit der [Datentypen decimal und numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) immer als Zeichenfolgen mit genauen genauigkeiten und Skalierungen abgerufen werden. Wenn Sie einen beliebigen Wert kleiner als 1 ist, ist die führende 0 (null) nicht vorhanden. Es ist identisch mit Money- und Smallmoney-Feldern wie Dezimalfelder mit festen gleich 4 Dezimalstellen.
+Um die Genauigkeit beizubehalten, werden [dezimale oder numerische Typen](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) immer als Zeichen folgen mit exakten Spezifikationen und Skalen abgerufen. Wenn ein Wert kleiner als 1 ist, fehlt die führende Null. Das gleiche gilt für die Felder "Money" und "smallmoney", da es sich um Dezimal Felder mit einer festgelegten Skala von 4 handelt.
 
-## <a name="add-leading-zeroes-if-missing"></a>Hinzufügen von führenden Nullen bei fehlen
-Ab Version 5.6.0, die Option `FormatDecimals` hinzugefügt Sqlsrv Verbindungs- und Ebenen, die dem Benutzer ermöglicht, Dezimalzeichenfolgen zu formatieren. Diese Option erwartet, dass einen booleschen Wert (true oder false), und wirkt sich nur auf die Formatierung von decimal oder numeric-Werten in der abgerufenen Ergebnissen. Das heißt, die `FormatDecimals` Option hat keine Auswirkungen auf andere Vorgänge wie das Einfügen oder aktualisieren.
+## <a name="add-leading-zeroes-if-missing"></a>Vorangehende Nullen hinzufügen, wenn Sie fehlen
+Ab Version 5.6.0 wird die-Option `FormatDecimals` zu den sqlsrv-Verbindungs-und-Anweisungs Ebenen hinzugefügt, die es dem Benutzer ermöglichen, dezimale Zeichen folgen zu formatieren. Diese Option erwartet einen booleschen Wert (true oder false) und wirkt sich nur auf die Formatierung von Dezimal-oder numerischen Werten in den abgerufenen Ergebnissen aus. Mit anderen Worten: die `FormatDecimals` Option hat keine Auswirkung auf andere Vorgänge wie einfügen oder aktualisieren.
 
-Standardmäßig ist `FormatDecimals` **false**. Wenn auf True festgelegt, die führenden Nullen in decimal Zeichenfolgen für jeden decimal-Wert kleiner als 1 hinzugefügt werden.
+Standardmäßig ist `FormatDecimals` **false**. Wenn diese Einstellung auf "true" festgelegt ist, werden die führenden Nullen zu dezimalen Zeichen folgen für einen beliebigen Dezimalwert kleiner als 1 hinzugefügt.
 
-## <a name="configure-number-of-decimal-places"></a>Konfigurieren Sie die Anzahl der Dezimalstellen
-Mit `FormatDecimals` aktiviert ist, eine weitere Möglichkeit ist `DecimalPlaces`, ermöglicht es Benutzern, die Anzahl der Dezimalstellen zu konfigurieren, Anzeigen von Money und Smallmoney-Daten. Er akzeptiert ganzzahlige Werte im Bereich [0, 4], und runden auftreten, wenn angezeigt. Die zugrunde liegenden Money-Daten bleiben jedoch gleich.
+## <a name="configure-number-of-decimal-places"></a>Anzahl von Dezimalstellen konfigurieren
+Wenn `FormatDecimals` aktiviert ist, können Benutzer die `DecimalPlaces`Anzahl von Dezimalstellen beim Anzeigen von Money-und smallmoney-Daten mit einer anderen Option () konfigurieren. Sie akzeptiert ganzzahlige Werte im Bereich von [0, 4], und die Rundung kann auftreten, wenn Sie angezeigt wird. Die zugrunde liegenden Money-Daten bleiben jedoch unverändert.
 
-Beide Optionen können auf Verbindung oder Anweisungsebene festgelegt werden, und überschreibt die Anweisung, die Einstellung immer die entsprechende verbindungseinstellung. Beachten Sie, dass die `DecimalPlaces` Option **nur** wirkt sich auf Money-Daten und `FormatDecimals` muss festgelegt werden, um für "true" `DecimalPlaces` wirksam werden. Andernfalls formatieren ist deaktiviert unabhängig von `DecimalPlaces` festlegen.
+Beide Optionen können auf Verbindungs-oder Anweisungs Ebene festgelegt werden, und die-Anweisungs Einstellung überschreibt immer die entsprechende Verbindungs Einstellung. Beachten Sie, `DecimalPlaces` dass die-Option **nur** die Money `FormatDecimals` -Daten betrifft und auf true `DecimalPlaces` festgelegt werden muss, damit wirksam wird. Andernfalls wird die Formatierung unabhängig von der `DecimalPlaces` -Einstellung deaktiviert.
 
 > [!NOTE]
-> Da Felder Money "oder" Smallmoney Skalierung 4 enthalten, festlegen `DecimalPlaces` Wert auf eine negative Zahl oder einen beliebigen Wert größer als 4 werden ignoriert. Es wird nicht empfohlen, alle formatierte Money-Daten als Eingabe für eine beliebige Berechnung verwenden.
+> Da die Felder Money oder smallmoney den Wert 4 haben `DecimalPlaces` , wird das Festlegen des Werts auf eine negative Zahl oder auf einen Wert größer als 4 ignoriert. Es wird nicht empfohlen, als Eingaben in eine beliebige Berechnung formatierte Money-Daten zu verwenden.
 
-## <a name="example---a-simple-fetch"></a>Beispiel: einen einfachen Abruf
-Das folgende Beispiel zeigt, wie die neuen Optionen in einen einfachen Abruf verwendet wird.
+## <a name="example---a-simple-fetch"></a>Beispiel: einfaches Abrufen
+Im folgenden Beispiel wird gezeigt, wie die neuen Optionen in einem einfachen Abruf Vorgang verwendet werden.
 
 ```php
 <?php
@@ -65,10 +65,10 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example---format-the-output-parameter"></a>Beispiel: Format der Output-parameter
-Wenn ein decimal oder numerische-Feld, als zurückgegeben wird die [Ausgabeparameter](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md), der zurückgegebene Wert wird als reguläre Varchar Zeichenfolge betrachtet werden. Wenn entweder SQLSRV_SQLTYPE_DECIMAL oder SQLSRV_SQLTYPE_NUMERIC angegeben ist, Sie können jedoch festlegen `FormatDecimals` auf true festlegen, um sicherzustellen, dass es keine führende 0 (null), für den numerischen Zeichenfolgenwert fehlt. Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
+## <a name="example---format-the-output-parameter"></a>Beispiel: Formatieren des Output-Parameters
+Wenn ein dezimales oder numerisches Feld als [Output-Parameter](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)zurückgegeben wird, wird der zurückgegebene Wert als reguläre varchar-Zeichenfolge betrachtet. Wenn jedoch entweder SQLSRV_SQLTYPE_DECIMAL oder SQLSRV_SQLTYPE_NUMERIC angegeben wird, können Sie auf true `FormatDecimals` festlegen, um sicherzustellen, dass für den numerischen Zeichen folgen Wert keine fehlende führende Null vorhanden ist. Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../..//connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).
 
-Das folgende Beispiel zeigt, wie den Output-Parameter einer gespeicherten Prozedur formatiert werden, die einen decimal(8,4) Wert zurückgibt.
+Im folgenden Beispiel wird gezeigt, wie der Output-Parameter einer gespeicherten Prozedur formatiert wird, die einen Dezimalwert (8, 4) zurückgibt.
 
 ```php
 $outString = '';

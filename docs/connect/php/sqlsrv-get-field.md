@@ -1,5 +1,5 @@
 ---
-title: Sqlsrv_get_field | Microsoft-Dokumentation
+title: sqlsrv_get_field | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/26/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7854d52116b9092a069043f8e3c1ca9a23fbbce5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 64ddca64f049ba95426dec542d68dc8a84e7d9dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015010"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

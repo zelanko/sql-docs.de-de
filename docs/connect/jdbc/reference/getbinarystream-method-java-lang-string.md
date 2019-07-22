@@ -1,5 +1,5 @@
 ---
-title: GetBinaryStream-Methode (java.lang.String) | Microsoft-Dokumentation
+title: getBinaryStream-Methode (Java. lang. String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 149609b5-a6de-4e23-a440-7061775d0899
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90527a6bfe0b943441f723fd22862832f136c6ca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0ee14b90dd8aaffb178c81ea46e5ec914752e28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953694"
 ---
 # <a name="getbinarystream-method-javalangstring"></a>getBinaryStream-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.InputStream getBinaryStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetBinaryStream-Methode wird von der GetBinaryStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese getBinaryStream-Methode wird von der getBinaryStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Diese Methode kann nur mit folgenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen verwendet werden: binary, varbinary, varbinary(max) und image. Bei Verwendung dieser Methode mit anderen Datentypen wird eine Ausnahme ausgelöst.  
   

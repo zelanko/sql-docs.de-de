@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindparam | Microsoft-Dokumentation'
+title: 'PDOStatement:: bindParam | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936157"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ $*data_type:* Eine optionale (ganzzahlige) PDO::PARAM_*-Konstante. Der Standardw
   
 $*length:* Eine optionale (ganzzahlige) Länge des Datentyps. Sie können PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE festlegen, um die Standardgröße anzugeben, wenn Sie PDO::PARAM_INT oder PDO::PARAM_BOOL in $*data_type* verwenden.  
   
-$*Driver_options*: die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
+$*driver_options*: die optionalen (gemischten) treiberspezifischen Optionen. Beispielsweise können Sie PDO::SQLSRV_ENCODING_UTF8 angeben, um die Spalte an eine Variable als UTF-8-codierte Zeichenfolge zu binden.  
   
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> Wenn Output-Parameter auf einen Bigint-Typ, zu binden, wenn der Wert außerhalb des Bereichs von anwachsen ein [ganze Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE PDO:: param_int mit einer Ausnahme "der Wert außerhalb des gültigen Bereichs" führen kann. Aus diesem Grund verwenden Sie stattdessen die PDO:: param_str-Standardeinstellung, und geben Sie die Größe der resultierenden Zeichenfolge ist, handelt es sich maximal 21. Es ist die maximale Anzahl von Ziffern, einschließlich die negativen Vorzeichen, der einen beliebigen Bigint-Wert. 
+> Wenn beim Binden eines Ausgabe Parameters an einen bigint-Typ der Wert möglicherweise außerhalb des Bereichs einer [ganzen](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)Zahl liegt, kann die Verwendung von PDO::P aram_int mit PDO:: SQLSRV_PARAM_OUT_DEFAULT_SIZE zu einem "Wert außerhalb des gültigen Bereichs" führen. Verwenden Sie daher die standardmäßige PDO::P aram_str, und geben Sie die Größe der resultierenden Zeichenfolge an (höchstens 21). Dabei handelt es sich um die maximale Anzahl von Ziffern (einschließlich des negativen Zeichens) eines beliebigen bigint-Werts. 
 
 ## <a name="example"></a>Beispiel  
 In diesem Codebeispiel wird veranschaulicht, wie ein Input/Output-Parameter verwendet wird.  

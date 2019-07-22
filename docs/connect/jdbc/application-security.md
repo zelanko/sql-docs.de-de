@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 832cb6991ad095ba13226f80408fbd919db00623
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957464"
 ---
 # <a name="application-security"></a>Anwendungssicherheit
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 ## <a name="protecting-server-communication"></a>Schützen der Serverkommunikation  
  Wenn Sie den JDBC-Treiber für die Kommunikation mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank verwenden, können Sie den Kommunikationskanal mit IPSec (Internet Protocol Security) und/oder SSL (Secure Sockets Layer) sichern.  
   
- Die SSL-Unterstützung kann verwendet werden, um zusätzlich zu IPSEC eine weitere Schutzebene bereitzustellen. Weitere Informationen zur Verwendung von SSL finden Sie unter [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).  
+ Die SSL-Unterstützung kann verwendet werden, um zusätzlich zu IPSEC eine weitere Schutzebene bereitzustellen. Weitere Informationen zur Verwendung von SSL finden Sie unter [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  

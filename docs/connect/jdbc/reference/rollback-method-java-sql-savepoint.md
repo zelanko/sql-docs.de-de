@@ -1,5 +1,5 @@
 ---
-title: Rollback-Methode (java.sql.Savepoint) | Microsoft-Dokumentation
+title: Rollback-Methode (Java. SQL. SAVEPOINT) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f5d3aff96e90dd5de4e283697084ab0614d12f05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f4aad09c11a3003a286e27ecd144cefc22e4bb9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975734"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>rollback-Methode (java.sql.Savepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,18 +37,18 @@ public void rollback(java.sql.Savepoint s)
 #### <a name="parameters"></a>Parameter  
  *s*  
   
- Der Sicherungspunkt Objekt wiederhergestellt werden.  
+ Das SAVEPOINT-Objekt, auf das zurückgesetzt werden soll.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese RollBack-Methode wird von der RollBack-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese Rollback-Methode wird von der Rollback-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Die Methode sollte nur bei deaktiviertem Modus für automatische Commits verwendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Rollback-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
+ [Rollback- &#40;Methode SQLServerConnection&#41;](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)   
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0cfbcf94a1211738b0cf0abb8e2657257edd09eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976160"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>prepareStatement-Methode (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,13 +50,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
  Ein Wert vom Typ **int** zur Angabe des Parallelitätstyps des Resultsets.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein "PreparedStatement"-Objekt.  
+ Ein PreparedStatement-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese PrepareStatement-Methode wird von der PrepareStatement-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese prepareStatement-Methode wird von der prepareStatement-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Methoden](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   

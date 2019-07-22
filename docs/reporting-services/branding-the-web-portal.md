@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: In diesem Artikel erfahren Sie, wie Sie die Darstellung des Webportals ändern, indem Sie es mithilfe eines Markenpakets an das eigene Unternehmen anpassen. Das Markenpaket wurde entwickelt, damit Sie keine umfassenden Kenntnisse über das Cascading Stylesheet (CSS) benötigen, um es zu erstellen.
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221728"
 ---
 # <a name="branding-the-web-portal"></a>Branding des Webportals
 
@@ -91,7 +91,7 @@ Die Datei colors.json für Reporting Services ist in zwei Hauptkategorien untert
   
 Der Schnittstellen-Abschnitt ist in folgenden Gruppierungen unterteilt.  
   
-|Abschnitt|Beschreibung|  
+|Abschnitt|und Beschreibung|  
 |---|---|  
 |primary|Schaltflächen- und Hoverfarben.|  
 |Secondary|Titelleiste, Suchleiste, linkes Menü (sofern angezeigt) und die Textfarbe für diese Elemente|  
@@ -243,4 +243,4 @@ Sie können das Paket auch **Herunterladen** oder **Entfernen** . Das Entfernen 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum.](https://go.microsoft.com/fwlink/?LinkId=620231)
+Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

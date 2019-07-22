@@ -1,5 +1,5 @@
 ---
-title: SetTrustServerCertificate-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: settrustservercertificate-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93feffdb0135e4530b43a6f092c581d145b5c0c6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bd4059c3562d679e4f5f8bfdd133ca69a62c1fd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972209"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
 #### <a name="parameters"></a>Parameter  
  *trustServerCertificate*  
   
- **"true"** Wenn das Serverzertifikat für die Secure Sockets Layer (SSL) automatisch als vertrauenswürdig eingestuft werden soll, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Andernfalls lautet der Wert **false**.  
+ **true** , wenn das Server Secure Sockets Layer (SSL)-Zertifikat automatisch als vertrauenswürdig eingestuft werden soll, wenn die Kommunikationsschicht mithilfe von SSL verschlüsselt wird. Andernfalls lautet der Wert **false**.  
   
 ## <a name="remarks"></a>Remarks  
  Wenn die trustServerCertificate-Eigenschaft auf **true** festgelegt ist, wird dem SSL-Zertifikat von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatisch vertraut, wenn die Kommunikationsschicht mit SSL verschlüsselt ist. Anders gesagt: Das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-SSL-Zertifikat wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] nicht überprüft. Der Standardwert ist **false**.  

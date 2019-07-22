@@ -1,5 +1,5 @@
 ---
-title: GetRowIdLifetime-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getRowIdLifetime-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 317c0b44-fe3f-4142-9cab-e40e4c4fe070
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7aa2b4f740795169824cb4962f17c2dfecdc7974
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9a792f33d598eafa706241329873338998c61865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980260"
 ---
 # <a name="getrowidlifetime-method-sqlserverdatabasemetadata"></a>getRowIdLifetime-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,16 +30,16 @@ public java.sql.RowIdLifetime getRowIdLifetime()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein RowIdLifetime-Objekt.  
+ Ein rowidlifetime-Objekt.  
   
 > [!NOTE]  
->  In der JDBC-Treiber-Version 2.0 gibt diese Methode java.sql.RowIdLifetime.ROWID_UNSUPPORTED-Wert.  
+>  In der Version 2,0 des JDBC-Treibers gibt diese Methode den Java. SQL. rowidlifetime. ROWID_UNSUPPORTED-Wert zurück.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetRowIdLifetime-Methode wird von der GetRowIdLifetime-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getRowIdLifetime-Methode wird von der getRowIdLifetime-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

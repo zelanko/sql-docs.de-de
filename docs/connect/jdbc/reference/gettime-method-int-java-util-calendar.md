@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4444e4988df4a922d42742c58f4bc9e439eb603f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979106"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime-Methode (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +42,10 @@ public java.sql.Time getTime(int index,
   
  *cal*  
   
- Ein Kalenderobjekt.  
+ Ein Kalender Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Uhrzeit-Objekt.  
+ Ein Zeit Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,22 +10,21 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48ae75c5eee03cba273e65297b3652c1a2da99ec
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 27b56a20a0456bef04553c614432bde270d8e98d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935774"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-In diesem Beispiel sollte einen Proof of Concept nur angesehen werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  
+Dieses Beispiel sollte nur als Proof of Concept angesehen werden.  Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht notwendigerweise die bewährten Methoden, die von Microsoft empfohlen werden.  
   
-## <a name="step-1--connect"></a>Schritt 1: Verbinden  
+## <a name="step-1--connect"></a>Schritt 1: verbinden  
   
-Die [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) Funktion wird für die Verbindung mit SQL-Datenbank verwendet.  
+Die [pymssql. Connect](https://pymssql.org/en/latest/ref/pymssql.html) -Funktion wird zum Herstellen einer Verbindung mit SQL-Datenbank verwendet.  
   
 ```python
     import pymssql  
@@ -35,7 +34,7 @@ Die [pymssql.connect](https://pymssql.org/en/latest/ref/pymssql.html) Funktion w
   
 ## <a name="step-2--execute-query"></a>Schritt 2: Ausführen der Abfrage  
   
-Die [cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion im Wesentlichen akzeptiert jede Abfrage und gibt ein Resultset mit der Verwendung von durchlaufen werden kann [cursor.fetchone()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+Die [Cursor. Execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) -Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für die SQL-Datenbank abzurufen. Diese Funktion akzeptiert im Wesentlichen eine beliebige Abfrage und gibt ein Resultset zurück, das mit der Verwendung von [Cursor. fetchone ()](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone)durchlaufen werden kann.  
   
   
 ```python
@@ -51,7 +50,7 @@ Die [cursor.execute](https://pymssql.org/en/latest/ref/pymssql.html#pymssql.Curs
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher sind, übergibt Parameter zum Schutz Ihrer Anwendung vor [SQL-Einschleusung](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
+In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem SQL- [einschleusungs](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
   
   
 ```python
@@ -69,11 +68,11 @@ In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../../t
   
 ## <a name="step-4--rollback-a-transaction"></a>Schritt 4: Rollback einer Transaktion  
   
-Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen in der Sie:  
+Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen, in denen Sie folgende Vorgänge ausführen:  
   
-* Starten von Transaktionen  
-* Einfügen von Zeilen mit Daten  
-* Rollback der Transaktion zum Rückgängigmachen von einfügungen  
+* Beginnen einer Transaktion  
+* Einfügen einer Zeile mit Daten  
+* Zurücksetzen der Transaktion zum Rückgängigmachen der Einfügung  
   
 ```python
     import pymssql  
@@ -87,4 +86,4 @@ Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen in der Sie:
     
   ## <a name="next-steps"></a>Nächste Schritte  
   
-Weitere Informationen finden Sie unter den [Python Developer Center](https://azure.microsoft.com/develop/python/).
+Weitere Informationen finden Sie im [python Developer Center](https://azure.microsoft.com/develop/python/).

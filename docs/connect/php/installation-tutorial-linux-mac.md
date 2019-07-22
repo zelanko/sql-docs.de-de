@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 90d2b5850010d49e881ea0169566fe8e7d046f0d
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343913"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256705"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server
 Die folgenden Anweisungen gehen von einer sauberen Umgebung aus und zeigen, wie PHP 7.x, der Microsoft ODBC-Treiber, Apache und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 18.10, Red Hat 7, Debian 8 und 9, Suse 12 und 15 sowie macOS 10.12, 10.13 und 10.14 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können die vorab erstellten Binärdateien auch von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Laden der Microsoft-Treiber für PHP für SQL Server) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -55,7 +55,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-Wenn es nur eine PHP-Version im System ist, und klicken Sie dann im letzte Schritt vereinfacht werden kann, sodass Sie `phpenmod sqlsrv pdo_sqlsrv`.
+Wenn im System nur eine PHP-Version vorhanden ist, kann der letzte Schritt in `phpenmod sqlsrv pdo_sqlsrv`vereinfacht werden.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Schritt 4. Installieren von Apache und Konfigurieren des Treiberladevorgangs
 ```
@@ -156,7 +156,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-Wenn es nur eine PHP-Version im System ist, und klicken Sie dann im letzte Schritt vereinfacht werden kann, sodass Sie `phpenmod sqlsrv pdo_sqlsrv`.
+Wenn im System nur eine PHP-Version vorhanden ist, kann der letzte Schritt in `phpenmod sqlsrv pdo_sqlsrv`vereinfacht werden.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Schritt 4. Installieren von Apache und Konfigurieren des Treiberladevorgangs
 ```

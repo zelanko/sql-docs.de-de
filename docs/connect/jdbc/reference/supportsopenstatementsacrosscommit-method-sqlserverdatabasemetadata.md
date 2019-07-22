@@ -1,5 +1,5 @@
 ---
-title: SupportsOpenStatementsAcrossCommit-Methode | Microsoft-Dokumentation
+title: supportsopeinstatuementsacrosscommit-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e733586c-9222-43cb-92ea-ba474f442a43
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 003829ffe09782693f7d69f2c8b055c66252dbc4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dbc4dfe12daf675f16a632ed5caa8b7b3830ced0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969083"
 ---
 # <a name="supportsopenstatementsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossCommit-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsOpenStatementsAcrossCommit()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsOpenStatementsAcrossCommit-Methode wird von der SupportsOpenStatementsAcrossCommit-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsopeinstatuementsacrosscommit-Methode wird von der supportsopeinstatuementsacrosscommit-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

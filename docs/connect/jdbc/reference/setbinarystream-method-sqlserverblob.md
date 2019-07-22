@@ -1,5 +1,5 @@
 ---
-title: SetBinaryStream-Methode (SQLServerBlob) | Microsoft-Dokumentation
+title: setBinaryStream-Methode (SQLServerBlob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ca2b8afe197c2509f0a2633266ea21c619bdeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975093"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream-Methode (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.OutputStream setBinaryStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetBinaryStream-Methode wird von der SetBinaryStream-Methode in der java.sql.Blob-Schnittstelle angegeben.  
+ Diese setBinaryStream-Methode wird von der setBinaryStream-Methode in der Java. SQL. BLOB-Schnittstelle angegeben.  
   
  Daten im BLOB werden beginnend mit der angegebenen Position vom Ausgabedatenstrom überschrieben, und sie können die ursprüngliche Länge des BLOB übersteigen. Durch Angeben eines Werts vom Typ Position+1 werden Bytes an die Zeichenfolge angefügt. Durch Weitergeben eines Werts vom Typ Position+2 oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  
   

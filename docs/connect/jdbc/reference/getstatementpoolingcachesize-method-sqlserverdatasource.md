@@ -1,5 +1,5 @@
 ---
-title: GetStatementPoolingCacheSize-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getstatuementpoolingcachesize-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a65be16b8558603dfa90611ad0057f0a0689a10
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a90d00957310c64f908816198a47e4c3ba7293b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979512"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverdatasource"></a>getStatementPoolingCacheSize-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Wert der **statementpoolingcachesize-Wert** Connection-Eigenschaft. Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. "0" bedeutet, dass das Zwischenspeichern nicht aktiviert.
+  Gibt den Wert der **Status Pool** -Verbindungs Eigenschaft "Status" zurück. Gibt die Größe des vorbereiteten Anweisungs Caches für diese Verbindung zurück. "0" bedeutet, dass das Caching nicht aktiviert ist.
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,13 +29,13 @@ public boolean getStatementPoolingCacheSize();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die **Int** Wert, der die **statementpoolingcachesize-Wert** Connection-Eigenschaft.  
+ Der **int** -Wert der Status-Verbindungs Eigenschaft von " **Status-poolingcachesize** ".  
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

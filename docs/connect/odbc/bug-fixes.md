@@ -13,61 +13,61 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 9dba11c0130dc3b969a9fcec46b631abd7d62fe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198771"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264009"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 
-Diese Seite enthält eine Auflistung der behobenen Probleme in jeder Version, beginnend mit [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+Diese Seite enthält eine Liste von Fehlern, die in jedem Release behoben wurden [!INCLUDE[msCoName](../../includes/msconame_md.md)] , beginnend mit ODBC Driver 17 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.3 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17,3 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Feste TCP Send Notification-Ereignis Handle Speicherverlust
-- Feste Neudefinition-Ausgabe des Enum-_SQL_FILESTREAM_DESIRED_ACCESS in "msodbcsql.h"-Header-Datei
-- Feste fehlende ACCESS_TOKEN und die Authentifizierung bezogene-Definition in der Headerdatei "msodbcsql.h" für Linux
+- Korrigieren des Speicherlecks für das TCP-Sende Benachrichtigungs Ereignis
+- Behobene neudefinitions Problem der Enumeration-_SQL_FILESTREAM_DESIRED_ACCESS in der msodbcsql. h-Header Datei
+- Korrigiert: fehlende ACCESS_TOKEN und Authentifizierungs bezogene Definition in der msodbcsql. h-Header Datei für Linux
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.2 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17,2 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Korrigiert eine Fehlermeldung über Azure Active Directory-Authentifizierung
-- Feste Codierung erkennen, die Gebietsschema-Umgebungsvariablen sind anders festgelegt
-- Feste ein Absturzes beim Trennen, mit der Wiederherstellung der Verbindung wird ausgeführt
-- Korrektur der Erkennung von Verbindung Verfügbarkeitseigenschaften
-- Korrektur der falschen Erkennung von geschlossenen sockets
-- Korrigiert eine unendliche Wartezeit an, beim Freigeben eines Anweisungshandles während der fehlerhaften Wiederherstellung
-- Korrigiert falsche Deinstallation Verhalten, wenn sowohl Version 13 und 17 für Windows installiert sind
-- Feste Entschlüsselung-Verhalten in älteren Windows-Plattform (Windows 7, 8 und Server 2012)
-- Ein Cache-Problem wurde behoben, bei Verwendung von ADAL-Authentifizierung für Windows
-- Das Sperren wurde das Problem wurde behoben, und überschreiben die Ablaufverfolgung auf Windows-Protokolle
+- Es wurde eine Fehlermeldung zur Azure Active Directory Authentifizierung korrigiert.
+- Korrigieren der Codierungs Erkennung, wenn Gebiets Schema Umgebungsvariablen anders festgelegt werden
+- Es wurde ein Absturz beim Trennen der Verbindung mit der Verbindungs Wiederherstellung korrigiert.
+- Erkennung der Verbindungs Zulässigkeit korrigiert
+- Fehlerhafte Erkennung geschlossener Sockets korrigiert
+- Beim Versuch, ein Anweisungs Handle bei einer fehlgeschlagenen Wiederherstellung freizugeben
+- Es wurde ein falsches uninstallationsverhalten korrigiert, wenn sowohl Version 13 als auch 17 unter Windows installiert sind.
+- Festes Entschlüsselungs Verhalten auf älterer Windows-Plattform (Windows 7, 8 und Server 2012)
+- Korrigiert eines Cache Problems bei Verwendung der Adal-Authentifizierung unter Windows
+- Es wurde ein Problem behoben, bei dem Ablauf Verfolgungs Protokolle unter Windows gesperrt und überschrieben wurden.
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17.1 für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC-Treiber 17,1 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- 1-Sekunden Verzögerung behoben, Aufrufen von SQLFreeHandle bei aktivierter MARS- und -Verbindungsattribut "Encrypt = Yes"
-- Korrektur einer Fehler 22003 Absturzes in SQLGetData, wenn die Größe des übergebenen Puffers kleiner ist und die Daten abgerufen werden (Windows)
-- Abgeschnittene ADAL Fehlermeldungen korrigiert
-- Auf 32-Bit-Windows behoben seltenen Fehler, bei der Konvertierung eine Gleitkommazahl Zahl in eine ganze Zahl
-- Ein Problem wurde behoben, in dem Einfügen in Feld "decimal" mit Always Encrypted auf doppelte datenabschneidefehler zurück
-- "Fixed" eine Warnung auf MacOS-installer
-- Feste senden falschen Status auf SQL Server während der Sitzung Wiederherstellungsversuch ein, wenn die Resilienz von Verbindungen und Verbindungspooling beide aktiviert sind und verursacht die Sitzung vom Server gelöscht werden soll,
+- Eine Verzögerung von 1 Sekunde wurde beim Aufrufen von SQLFreeHandle mit aktiviertem Mars und dem Verbindungs Attribut "verschlüsseln = ja" korrigiert.
+- Es wurde ein Absturz von Fehler 22003 in SQLGetData korrigiert, wenn die Puffergröße kleiner ist als die abgerufenen Daten (Windows).
+- Abgeschnittene Adal-Fehlermeldungen korrigiert
+- Es wurde ein seltener Fehler auf 32-Bit-Fenstern behoben, wenn eine Gleit Komma Zahl in eine ganze Zahl umgerechnet wurde.
+- Es wurde ein Problem behoben, bei dem das Einfügen von Double in das Decimal-Feld mit der Always Encrypted on-Datei zu einem
+- Eine Warnung für den MacOS-Installer wurde korrigiert.
+- Das Senden eines falschen Zustands an den SQL Server während des Wiederherstellungs Versuchs der Sitzung wurde korrigiert, wenn die verbindungsresilienz und das Verbindungs Pooling aktiviert sind, sodass die Sitzung vom Server gelöscht wird.
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerkorrekturen in der [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Fehlerbehebungen im [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 für[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Korrektur eines Fehlers, bei Verwendung der Kerberos-Authentifizierung masseneinfügung mit "Zugriff verweigert"-Fehler ausfallen
-- Entfernte behelfslösung für einen UnixODBC-Fehler, die in die ältere Version 2.3.1 vorhanden (verdoppelt, die Größe der bestimmten Puffer übergeben, um den UnixODBC Treiber)
-- Verbindungsresilienz behoben (Verbinden) hängt von der Verwendung ColumnEncryption = aktiviert
-- DSN-Erstellung-Fehler, behoben, wenn "Interaktive Active Directory-Authentifizierung" mit option Azure Authentication kann Fenster nicht mehr reagiert (Windows) werden
-- Seltenen Absturz behoben während des Herunterfahrens auf ODBC, wenn die asynchrone Ausführung (aufgetreten ist, wenn Verbindungshandle deaktivieren) aktiviert ist
-- Ein Problem wurde behoben, in dem SQL-Treiber hohe CPU-Auslastung beim Ausführen gespeicherter Prozeduren verursacht
-- Feste kann zum Abrufen von Daten in einer verschlüsselten varbinary(max)-Spalte ohne Konvertierung
-- Ein Problem behoben, in dem nach einem null-varchar(max) verschlüsselten Spalten abgerufen SQLGetData() in einem statischen Cursor verwenden, wird die folgende Spalte ebenfalls NULL gesetzt, auch wenn sie Daten enthält
-- Behebung eines Problems mit 'varbinary(max)'-Feld mit Always Encrypted auf Abrufen
-- Behebt ein Problem der setlocale() funktioniert nicht mit Always Encrypted
-- Behebung eines Problems mit SQLDescribeParam() Fehler bei Aufruf in XML-Datentyp gespeicherten Prozedurparameter mit Always Encrypted in zurückgegeben
-- Feste mit Escapezeichen Unterstriche im SQLTables nicht funktioniert.
-- Korrektur eines Fehlers, in dem hebräische Daten (Varchar) abgeschnitten als Breitzeichen unter Linux zurückgegeben
-- Korrigiert: beim Abfragen der Shift-JIS codiert Char/Varchar aus UTF-8-Anwendung
-- Der Fehler behoben, der Speicherort für die Rückgabe SQLGetInfo mit SQL_DRIVER_NAME Parameter aufrufen Dateiname des Linux-Stil unter MacOS
-- Ein Problem wurde behoben, in denen Dateien laden Sie Windows-1252-Zeichendaten, die mit der Eingabe von mehr als 32 KB, die Bytes in den VARCHAR-Spalten, die mit dem BCP-Hilfsprogramm zu Fehlern führen würde
+- Ein Fehler wurde behoben, bei dem bei Verwendung der Kerberos-Authentifizierung Massen Einfügung mit dem Fehler "Zugriff verweigert" fehlgeschlagen ist.
+- Problem Umgehung für einen unixodbc-Fehler in Version unten 2.3.1 entfernt (der Treiber hat die Größe bestimmter an unixodbc übergebenen Puffer verdoppelt)
+- Verbindungs Resilienz (Verbindung wiederherstellen) mit aktiviertem columnencryption = wurde korrigiert
+- Behobene DSN-Erstellungs Fehler: bei Verwendung der Option "Active Directory interaktive Authentifizierung" konnte das Azure-Authentifizierungs Fenster nicht mehr reagiert (Windows).
+- Es wurde ein seltener Absturz beim Herunterfahren von ODBC korrigiert, wenn die asynchrone Ausführung aktiviert ist (beim Löschen des Verbindungs Handles).
+- Ein Problem wurde behoben, bei dem der SQL-Treiber beim Ausführen langer gespeicherter Prozeduren eine hohe CPU
+- Fehler beim Abrufen von Daten in einer verschlüsselten varbinary (max)-Spalte ohne Konvertierung.
+- Es wurde ein Problem behoben, bei dem nach dem Abrufen der verschlüsselten Spalte "varchar (max)" mit SQLGetData () in einem statischen Cursor die folgende Spalte ebenfalls NULL ist, auch wenn Sie über Daten verfügt.
+- Es wurde ein Problem behoben, beim Abrufen des varbinary (max)-Felds mit Always Encrypted on
+- Es wurde ein Problem behoben, das setlocale () nicht mit Always Encrypted arbeitet.
+- Es wurde ein Problem behoben, bei dem SQLDescribeParam () einen Fehler zurückgibt, wenn der Parameter für gespeicherte Prozeduren von XML-Typen mit Always Encrypted
+- Korrigiert mit Escapezeichen, die nicht in SQLTables funktionieren
+- Es wurde ein Fehler behoben, bei dem hebräische Daten (varchar) abgeschnitten werden, wenn Sie als Wide Zeichen unter Linux zurückgegeben werden.
+- Es wurde ein Problem behoben, das das Abfragen von Shift-JIS-codiertem char/varchar aus der UTF-8-Anwendung
+- Es wurde ein Fehler behoben, bei dem der Aufruf von SQLGetInfo mit dem Parameter "SQL_DRIVER_NAME" im Linux-Format unter MacOS
+- Es wurde ein Problem behoben, bei dem das Laden von Windows-1252-Zeichendaten mithilfe von Eingabedateien mit mehr als 32 KB in varchar-Spalten mit dem Hilfsprogramm bcp zu Fehlern führen würde.

@@ -1,5 +1,5 @@
 ---
-title: SupportsOpenCursorsAcrossCommit-Methode | Microsoft-Dokumentation
+title: supportsopumcurrsorsacrosscommit-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bf1e1b24295a491fdd17df45c126f5c3151403e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 264f61c744be0ffc614ca3f45e5268715c680ed8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969107"
 ---
 # <a name="supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossCommit-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsOpenCursorsAcrossCommit()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsOpenCursorsAcrossCommit-Methode wird von der SupportsOpenCursorsAcrossCommit-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsopumcurrsorsacrosscommit-Methode wird von der supportsopeincurrsorsacrosscommit-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: BLOBs und OLE-Objekte | Microsoft-Dokumentation
+title: BLOB-und OLE-Objekte | Microsoft-Dokumentation
 description: BLOBs und OLE-Objekte
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988667"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66800699"
 
   Der OLE DB-Treiber für SQL Server macht die **ISequentialStream**-Schnittstelle verfügbar, um den Consumerzugriff auf die Datentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und XML als Binary Large Objects (BLOBs) zu unterstützen. Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
   
- Ein Beispiel für diese Funktion ist, finden Sie unter [festlegen großer Datenmengen &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Ein Beispiel für diese Funktion finden Sie unter [Festlegen von großen &#40;Daten&#41;OLE DB](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Der OLE DB-Treiber für SQL Server kann eine vom Consumer implementierte **IStorage**-Schnittstelle verwenden, wenn der Consumer den Schnittstellenzeiger in einem für Datenänderungen gebundenen Accessor bereitstellt.  
   
@@ -47,11 +46,11 @@ ms.locfileid: "66800699"
   
 -   Als DBTYPE_IUNKNOWN binden und Streaming verwenden  
   
- Wenn die Bindung an DBTYPE_IUNKNOWN erfolgt, wird die Streamingfunktion ISequentialStream verwendet. Der OLE DB-Treiber für SQL Server unterstützt Binden von Ausgabeparametern als DBTYPE_IUNKNOWN für Datentypen für hohe Werte. Dies ist zur Unterstützung von Szenarien, in dem eine gespeicherte Prozedur diese Datentypen als Rückgabewerte gibt zurück, die an dem Client als DBTYPE_IUNKNOWN zurückgegeben werden.  
+ Wenn die Bindung an DBTYPE_IUNKNOWN erfolgt, wird die Streamingfunktion ISequentialStream verwendet. Der OLE DB-Treiber für SQL Server unterstützt das Binden von Ausgabeparametern als DBTYPE_IUNKNOWN für Datentypen mit umfangreichen Werten. Dies dient zur Unterstützung von Szenarien, in denen eine gespeicherte Prozedur diese Datentypen als Rückgabewerte zurückgibt, die als DBTYPE_IUNKNOWN an den Client zurückgegeben werden.  
   
 ## <a name="storage-object-limitations"></a>Speicherobjekteinschränkungen  
   
--   Der OLE DB-Treiber für SQL Server kann nur ein einzelnes geöffnetes Speicherobjekt unterstützen. Wenn versucht wird, mehrere Speicherobjekte zu öffnen (um einen Verweis auf mehrere **ISequentialStream**-Schnittstellenzeiger abzurufen), wird DBSTATUS_E_CANTCREATE zurückgegeben.  
+-   Der OLE DB-Treiber für SQL Server kann nur ein einzelnes geöffnetes Speicher Objekt unterstützen. Wenn versucht wird, mehrere Speicherobjekte zu öffnen (um einen Verweis auf mehrere **ISequentialStream**-Schnittstellenzeiger abzurufen), wird DBSTATUS_E_CANTCREATE zurückgegeben.  
   
 -   Im OLE DB-Treiber für SQL Server lautet der Standardwert der schreibgeschützten DBPROP_BLOCKINGSTORAGEOBJECTS-Eigenschaft VARIANT_TRUE. Deshalb schlagen einige Methoden (solche, die sich nicht in den Speicherobjekten befinden) mit E_UNEXPECTED fehl, wenn ein Speicherobjekt aktiv ist.  
   

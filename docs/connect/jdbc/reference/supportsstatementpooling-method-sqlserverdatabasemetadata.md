@@ -1,5 +1,5 @@
 ---
-title: SupportsStatementPooling-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsstatuementpooling-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 83777807-5838-4f81-94ab-3ba4fc5aaa47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 333cec44f0b406f80067af2fcb497ab0a8cbcd75
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9a0c1be55ed478127488b4abee3364e5818a514
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968781"
 ---
 # <a name="supportsstatementpooling-method-sqlserverdatabasemetadata"></a>supportsStatementPooling-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsStatementPooling()
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsStatementPooling-Methode wird von der SupportsStatementPooling-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsstatus Pooling-Methode wird von der supportsstatus Pooling-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

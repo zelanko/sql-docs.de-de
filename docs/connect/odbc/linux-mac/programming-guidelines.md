@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798750"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264153"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -130,6 +129,8 @@ Im ODBC-Treiber 13 und 13.1 werden Daten beschädigt, wenn UTF-8-Mehrbytezeichen
     > DAC-Verbindungen müssen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
     
 2.  Der UnixODBC-Treiber-Manager gibt „ Attribut-/Optionsbezeichner ungültig“ für alle Anweisungsattribute zurück, wenn sie über SQLSetConnectAttr übergeben werden. Wenn SQLSetConnectAttr unter Windows einen Anweisungsattributwert erhält, verursacht dieser, dass der Treiber diesen Wert für alle aktiven Anweisungen festlegt, die dem Verbindungshandle untergeordnet sind.  
+
+3.  Wenn Sie den Treiber mit stark Multithreadanwendungen verwenden, kann die Überprüfung von unixodbc-Handles zu einem Leistungsengpass werden. In solchen Szenarien kann eine deutlich höhere Leistung erzielt werden, indem unixodbc mit der `--enable-fastvalidate` -Option kompiliert wird. Beachten Sie jedoch, dass dies dazu führen kann, dass Anwendungen, die ungültige Handles an ODBC- `SQL_INVALID_HANDLE` APIs übergeben, abstürzen, anstatt Fehler zurückzugeben.
 
 ## <a name="see-also"></a>Weitere Informationen  
 [Häufig gestellte Fragen](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c666fda3df96e32736c4bfd8c32a92e759142c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6388ea031c6cbd5c492b5af03bd37a091592868
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972560"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>setTime-Methode (int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +43,11 @@ public final void setTime(int n,
   
  *x*  
   
- Ein Uhrzeit-Objekt.  
+ Ein Zeit Objekt.  
   
  *cal*  
   
- Ein Kalenderobjekt.  
+ Ein Kalender Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

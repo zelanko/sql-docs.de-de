@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSet-Elemente | Microsoft-Dokumentation
+title: SQLServerResultSet-Member | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57e1859d4729860e7d8a5d11be4a4c3299bccced
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970563"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "66801499"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|Ruft den Parallelitätsmodus dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts ab.|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|Ruft den Namen des von diesem [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt verwendeten SQL-Cursors ab.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als java.sql.Date-Objekt in der Programmiersprache Java ab.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte als eine[DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte als[DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Objekt ab.|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Ruft den Wert der angegebenen Spalte in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts als Wert vom Typ **double** in der Programmiersprache Java ab.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|Ruft die Abrufrichtung für dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt ab.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|Ruft die Abrufgröße für dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt ab.|  
@@ -126,7 +125,7 @@ ms.locfileid: "66801499"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|Aktualisiert die angegebene Spalte mit einem Zeichendatenstromwert.|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|Aktualisiert die angegebene Spalte mit einem java.sql.Clob-Wert.|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|Aktualisiert die angegebene Spalte mit einem Datumswert.|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Updates einer [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md) Spalte.|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Aktualisiert eine [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Spalte.|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|Aktualisiert die angegebene Spalte mit einem **double**-Wert.|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|Aktualisiert die angegebene Spalte mit einem **Gleitkommawert**.|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|Aktualisiert die angegebene Spalte mit einem **int**-Wert.|  

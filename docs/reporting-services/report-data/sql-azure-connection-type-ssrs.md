@@ -3,19 +3,18 @@ title: SQL Azure-Verbindungstyp (SSRS) | Microsoft-Dokumentation
 description: Die Datenerweiterung „SQL Azure-Verbindung“ unterstützt mehrwertige Parameter, Serveraggregate und getrennt von der Verbindungszeichenfolge verwaltete Anmeldeinformationen.
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 02c3f95e00243a78fe2db70c587625e5a14d570d
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: ca8aed91a76e29fec7075b04210b798d41caaf44
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500176"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264364"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure-Verbindungstyp (SSRS)
 
@@ -58,7 +57,7 @@ Auf einem Berichterstellungsclient sind die folgenden Optionen zum Angeben von A
   
 - Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
-Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen &#40;Berichts-Generator und SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](specify-credential-and-connection-information-for-report-data-sources.md).  
+Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen &#40;Berichts-Generator und SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) oder [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="Query"></a> Abfragen
 

@@ -1,5 +1,5 @@
 ---
-title: SetMaxRows-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: setMaxRows-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 693214651211a74ccefa49429b7aa81dd65e48cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973980"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setMaxRows(int max)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetMaxRows-Methode wird durch die SetMaxRows-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+ Diese setMaxRows-Methode wird von der setMaxRows-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
  Diese setMaxRows-Methode hat keine Auswirkungen auf dynamische scrollbare Cursor. Von der Anwendung sollte die Anzahl von Zeilen, die von potenziell umfangreichen Resultsets zurückgegeben wird, mithilfe der SQL-Syntax "SELECT TOP N" eingeschränkt werden.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd81d272041b492f4bcb6cbace3d92e518cfacc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cd126601c0861786ba568d9f1bc4814235b61e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982454"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>getLong-Methode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long getLong(java.lang.String columnName)
  Eine **Zeichenfolge**, die den Spaltennamen enthält.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **lange** Wert.  
+ Ein **Long** -Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

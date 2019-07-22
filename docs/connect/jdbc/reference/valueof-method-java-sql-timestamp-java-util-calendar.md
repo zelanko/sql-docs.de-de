@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e2d977647153ab74299a6b6f002ec33d3003558
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 11d8f8e346fdb0f07770feec815e5aa5fe88355f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001586"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf-Methode (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  *calendar*  
   
- Der Offsetwert.  Die Komponenten für Datum und Uhrzeit der *Kalender* werden entsprechend festgelegt werden die *Zeitstempel* Wert.  
+ Der Offsetwert.  Die Datums-und Uhrzeit Komponenten des *Kalenders* werden entsprechend dem *Zeitstempel* -Wert festgelegt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt ein DateTimeOffset-Objekt, den Zeitpunkt in erhalten vom java.sql.Timestamp-Objekt des Objekts angegebenen java.util.Calendar Zeitzone darstellt.  
+ Gibt ein DateTimeOffset-Objekt zurück, das den Zeitpunkt darstellt, der vom Java. SQL. Timestamp-Objekt bei der Zeitzone des angegebenen Java. util. Calendar-Objekts angegeben wird.  
   
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird auch das java.util.Calendar-Objekt zu dem Punkt vom java.sql.Timestamp-Objekt gegebenen Zeitpunkt.  
+ Diese Methode legt auch das Objekt "java. util. Calendar" auf den Zeitpunkt fest, der vom Objekt "java. SQL. timestamp" angegeben wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   

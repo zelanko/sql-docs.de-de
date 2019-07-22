@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 034fb09dec2504a2cb722e227fa5db437f6053f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995195"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

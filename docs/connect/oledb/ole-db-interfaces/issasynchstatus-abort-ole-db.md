@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft-Dokumentation'
+title: 'ISSAsynchStatus:: Abort (OLE DB) | Microsoft-Dokumentation'
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 36a8f97580176b4999d8429fb18c9b20da9285d1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015430"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

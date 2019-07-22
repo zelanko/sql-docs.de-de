@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zur Parallelitätssteuerung | Microsoft-Dokumentation
+title: Grundlegendes zur Parallelitäts Steuerung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004196"
 ---
 # <a name="understanding-concurrency-control"></a>Grundlegendes zur Parallelitätssteuerung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "66798268"
 ## <a name="result-sets-that-are-not-updateable"></a>Nicht aktualisierbare Resultsets  
  Ein aktualisierbares Resultset ist ein Resultset, in dem Zeilen eingefügt, aktualisiert und gelöscht werden können. In den folgenden Fällen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen aktualisierbaren Cursor erstellen. Die generierte Ausnahme lautet "Das Resultset kann nicht aktualisiert werden".  
   
-|Ursache|und Beschreibung|Remedy|  
+|Ursache|und Beschreibung|Lösung|  
 |-----------|-----------------|------------|  
 |Anweisung wurde nicht mit JDBC 2.0-Syntax (oder neuer) erstellt|In JDBC 2.0 wurden neue Methoden eingeführt, um Anweisungen zu erstellen. Bei der Verwendung von JDBC 1.0-Syntax ist das Resultset standardmäßig schreibgeschützt.|Geben Sie den Resultsettyp und die Parallelität beim Erstellen der Anweisung an.|  
 |Anweisung wurde mit TYPE_SCROLL_INSENSITIVE erstellt|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt einen statischen Momentaufnahmencursor. Dieser ist von den zugrunde liegenden Tabellenzeilen getrennt, um den Cursor vor Zeilenudpates durch andere Benutzer zu schützen.|Verwenden Sie TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC oder TYPE_FORWARD_ONLY mit CONCUR_UPDATABLE, um das Erstellen eines statischen Cursors zu vermeiden.|  

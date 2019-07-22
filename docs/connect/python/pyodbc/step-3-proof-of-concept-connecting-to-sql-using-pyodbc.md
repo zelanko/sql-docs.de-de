@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992508"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von pyodbc
 
-In diesem Beispiel sollte einen Proof of Concept nur angesehen werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  
+Dieses Beispiel sollte nur als Proof of Concept angesehen werden.  Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht notwendigerweise die bewährten Methoden, die von Microsoft empfohlen werden.  
 
-**Führen Sie folgenden Beispielskript** erstellen Sie eine Datei namens test.py, und fügen Sie jeden Codeausschnitt hinzu, alles. 
+**Beispielskript unten ausführen**  Erstellen Sie eine Datei mit dem Namen Test.py, und fügen Sie jeden Code Ausschnitt hinzu. 
 
 ```
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>Schritt 1: Verbinden  
+## <a name="step-1--connect"></a>Schritt 1: verbinden  
   
 ```python
 
@@ -48,7 +47,7 @@ cursor = cnxn.cursor()
   
 ## <a name="step-2--execute-query"></a>Schritt 2: Ausführen der Abfrage  
   
-Die cursor.executefunction kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion im Wesentlichen akzeptiert jede Abfrage und gibt ein Resultset mit der Verwendung von cursor.fetchone() durchlaufen werden können
+Die Cursor. ExecuteFunction kann verwendet werden, um ein Resultset aus einer Abfrage für die SQL-Datenbank abzurufen. Diese Funktion akzeptiert im Grunde jede beliebige Abfrage und gibt ein Resultset zurück, das mit der Verwendung von Cursor. fetchone () durchlaufen werden kann.
   
   
 ```python
@@ -63,7 +62,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher sind, übergibt Parameter zum Schutz Ihrer Anwendung vor [SQL-Einschleusung](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
+In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem SQL- [einschleusungs](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
   
   
 ```python
@@ -79,4 +78,4 @@ while row:
   `      
   ## <a name="next-steps"></a>Nächste Schritte  
   
-Weitere Informationen finden Sie unter den [Python Developer Center](https://azure.microsoft.com/develop/python/).
+Weitere Informationen finden Sie im [python Developer Center](https://azure.microsoft.com/develop/python/).

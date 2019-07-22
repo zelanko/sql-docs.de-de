@@ -1,5 +1,5 @@
 ---
-title: Sichern von JDBC-Treiberanwendungen | Microsoft-Dokumentation
+title: Sichern von JDBC-Treiber Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3a7a8079f60336bbdfe7b837afa2313f5fda2691
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945746"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Sichern von JDBC-Treiberanwendungen
 
@@ -34,7 +33,7 @@ In den Themen in diesem Abschnitt werden einige häufige Sicherheitsrisiken besc
 | [Überprüfen der Benutzereingabe](../../connect/jdbc/validating-user-input.md)             | Beschreibt Verfahren zum Überprüfen von Benutzereingaben.                                                                                                                          |
 | [Anwendungssicherheit](../../connect/jdbc/application-security.md)               | Beschreibt die Verwendung von Java-Richtlinienberechtigungen zum Sichern einer JDBC-Treiberanwendung.                                                                                |
 | [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)               | Beschreibt das Herstellen eines sicheren Kommunikationskanals mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe von Secure Sockets Layer (SSL). |
-| [FIPS-Modus](../../connect/jdbc/fips-mode.md)                                     | Beschreibt, wie Sie JDBC-Treiber in FIPS-kompatiblen Modus zu verwenden.                                                                                                              |
+| [FIPS-Modus](../../connect/jdbc/fips-mode.md)                                     | Beschreibt die Verwendung des JDBC-Treibers im fps-kompatiblen Modus.                                                                                                              |
   
 ## <a name="see-also"></a>Weitere Informationen  
 

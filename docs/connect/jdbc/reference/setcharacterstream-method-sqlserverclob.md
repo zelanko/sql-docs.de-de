@@ -1,5 +1,5 @@
 ---
-title: SetCharacterStream-Methode (SQLServerClob) | Microsoft-Dokumentation
+title: setcharakteristream-Methode (SQLServerClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c02778f2-6681-4a84-a58b-2bcfac4233e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8650ffe29710670bae8d3a934cd4caceaf74f723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da842fbc6240b072c7fe907aaa344d8d2ff1c6e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974652"
 ---
 # <a name="setcharacterstream-method-sqlserverclob"></a>setCharacterStream-Methode (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.Writer setCharacterStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetCharacterStream-Methode wird von der SetCharacterStream-Methode in der java.sql.Clob-Schnittstelle angegeben.  
+ Diese setcharakteristream-Methode wird von der setcharakteristream-Methode in der Java. SQL. CLOB-Schnittstelle angegeben.  
   
  Zeichendaten im CLOB werden beginnend mit der angegebenen Position vom Schreiber überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ Position+1 werden Zeichen angefügt. Durch Angeben eines Werts vom Typ Position+2 oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  
   

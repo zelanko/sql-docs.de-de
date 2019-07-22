@@ -1,5 +1,5 @@
 ---
-title: Isolationsstufen (OLE DB) | Microsoft-Dokumentation
+title: Isolations Stufen (OLE DB) | Microsoft-Dokumentation
 description: Isolationsstufen (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,24 +15,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, transactions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0a7e06fe0888767d653f40148efb324f89456460
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c9f3a7cd06f801555ab373e7e54fbf1b620d894
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993973"
 ---
 # <a name="isolation-levels-ole-db"></a>Isolationsstufen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clients können Transaktionsisolationsstufen für eine Verbindung steuern. Wird verwendet um Transaktionsisolationsstufen zu steuern, die OLE DB-Treiber für SQL Server-Consumer aus:  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clients können Transaktionsisolationsstufen für eine Verbindung steuern. Zum Steuern der Transaktions Isolationsstufe verwendet der OLE DB Treiber für SQL Server Consumer Folgendes:  
   
 -   DBPROPSET_SESSION-Eigenschaft DBPROP_SESS_AUTOCOMMITISOLEVELS für den standardmäßigen Autocommitmodus des OLE DB Driver for SQL Server.  
   
-     Der OLE DB-Treiber für SQL Server-Standard für die Stufe ist DBPROPVAL_TI_READCOMMITTED.  
+     Der OLE DB Treiber für SQL Server Standardwert für die Ebene ist DBPROPVAL_TI_READCOMMITTED.  
   
 -   Der *isoLevel*-Parameter der **ITransactionLocal::StartTransaction**-Methode für lokale Manualcommit-Transaktionen.  
   

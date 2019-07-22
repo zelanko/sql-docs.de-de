@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c8e55377-aaea-4415-8159-938fab1b2a93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 78e1f1f7dc025f062dc8327f050cef72fcd3d46a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 57cf34cb0ff1071579bdeb97e7b3ce6c095459f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985696"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream-int"></a>updateBinaryStream-Methode (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void updateBinaryStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateBinaryStream-Methode wird von der UpdateBinaryStream-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese updateBinaryStream-Methode wird von der updateBinaryStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Von dieser Methode werden Bytes aus einem InputStream-Objekt an ausgewählte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Binärspalten wie „binary“, „varbinary“, „varbinary(max)“, „image“, „xml“ oder „udt“ übergeben. Das Aktualisieren von Zeichenspalten wird für diese Methode nicht unterstützt. Verwenden Sie die [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)-Methode, um Zeichenspalten mit InputStream zu aktualisieren.  
   

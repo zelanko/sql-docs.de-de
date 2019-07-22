@@ -1,5 +1,5 @@
 ---
-title: SetTime-Methode, das Time-Werten | Microsoft-Dokumentation
+title: setTime-Methode zu Zeitwert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 49301bec-6cf2-43fb-9d4e-e3986164a208
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80c0b7027f9d2ffe3d5afea7d70a3e8929ee3fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dcab0a0abfcf18b1b70ca499966aa245c1d69f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972467"
 ---
 # <a name="settime-method-javalangstring-javasqltime"></a>setTime-Methode (java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setTime(java.lang.String sCol,
   
  *t*  
   
- Ein Uhrzeit-Objekt.  
+ Ein Zeit Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

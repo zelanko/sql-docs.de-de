@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe24a26956a295ccfd00f8d782611057cf019308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982955"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -66,9 +65,9 @@ public ResultSet getFunctions(java.lang.String catalog,
 |FUNCTION_CAT|**String**|Der Name der Datenbank, in der die Funktion gespeichert ist.|  
 |FUNCTION_SCHEM|**String**|Der Name des Schemas, in dem die Funktion gespeichert ist.|  
 |FUNCTION_NAME|**String**|Der Name der Funktion.|  
-|NUM_INPUT_PARAMS|**ssNoversion**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
-|NUM_OUTPUT_PARAMS|**ssNoversion**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
-|NUM_RESULT_SETS|**ssNoversion**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
+|NUM_INPUT_PARAMS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
+|NUM_OUTPUT_PARAMS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
+|NUM_RESULT_SETS|**int**|Reserviert für zukünftige Verwendung. Gibt derzeit den Wert "-1" zurück.|  
 |REMARKS|**String**|Kommentare zur Funktion.|  
 |FUNCTION_TYPE|**short**|Der Typ der Funktion. Mögliche Werte:<br /><br /> SQL_PT_UNKNOWN (0)<br /><br /> SQL_PT_PROCEDURE (1)<br /><br /> SQL_PT_FUNCTION (2)|  
   

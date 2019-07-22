@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3efeec0dee1f1bd66e64b3a1449bbaf1bf08722e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003826"
 ---
 # <a name="working-with-result-sets"></a>Arbeiten mit Resultsets
 
@@ -27,7 +26,7 @@ Bei der Verarbeitung von Daten in einer [!INCLUDE[ssNoVersion](../../includes/ss
 Das SQLServerResultSet-Objekt enthält darüber hinaus Methoden, um in den Datenzeilen zu navigieren, die enthaltenen Daten abzurufen oder festzulegen und die Sensitivität gegenüber Änderungen in der zugrunde liegenden Datenbank einzurichten.  
   
 > [!NOTE]  
-> Weitere Informationen zum Verwalten von Resultsets, einschließlich deren Sensitivität gegenüber Änderungen, finden Sie unter [Verwalten von Resultsets mit dem JDBC-Treiber](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+> Weitere Informationen zum Verwalten von Resultsets, einschließlich ihrer Vertraulichkeit von Änderungen, finden Sie unter [Verwalten von Resultsets mit dem JDBC-Treiber](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
 Die Themen in diesem Abschnitt beschreiben verschiedene Möglichkeiten, wie Sie die in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank enthaltenen Daten mithilfe von Resultsets bearbeiten können.  
   

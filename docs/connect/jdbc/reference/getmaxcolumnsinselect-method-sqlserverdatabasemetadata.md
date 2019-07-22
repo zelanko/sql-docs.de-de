@@ -1,5 +1,5 @@
 ---
-title: GetMaxColumnsInSelect-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getMaxColumnsInSelect-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 43c428df-ef91-4f55-81c3-49a4db3379cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 115458efa339633c3e69e7d4bc91166337a4e192
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1ce02a3d3944480d5c00fa4a3b0369aed38c6d59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982201"
 ---
 # <a name="getmaxcolumnsinselect-method-sqlserverdatabasemetadata"></a>getMaxColumnsInSelect-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInSelect()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetMaxColumnsInSelect-Methode wird von der GetMaxColumnsInSelect-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getMaxColumnsInSelect-Methode wird von der getMaxColumnsInSelect-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

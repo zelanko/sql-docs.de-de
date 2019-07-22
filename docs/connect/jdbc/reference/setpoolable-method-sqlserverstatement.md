@@ -1,5 +1,5 @@
 ---
-title: SetPoolable-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: setpoolable-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c63c526aed7bfae6027f3a9aa028bc2a2e20fbef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973198"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,9 +42,9 @@ public void setPoolable(boolean poolable) throws SQLException
   
  Der Poolwert einer Anwendung gilt für vom Treiber implementierte interne Anweisungscaches und externe von Anwendungsservern oder anderen Anwendungen implementierte Anweisungscaches.  
   
- Standardmäßig ist ein SQLServerStatement-Objekt nicht dem Pool hinzugefügt werden, wenn erstellt. Sqlserverpreparedstatement- und SQLServerCallableStatement-Objekte werden dem Pool hinzugefügt werden, wenn erstellt.  
+ Standardmäßig kann ein SQLServerStatement-Objekt bei der Erstellung nicht gebündelt werden. SQLServerPreparedStatement-und SQLServerCallableStatement-Objekte können bei der Erstellung gebündelt werden.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn diese Methode in einer geschlossenen-Anweisung aufgerufen wird.  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn diese Methode für eine geschlossene Anweisung aufgerufen wird.  
   
  Von [isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md) wird ein Wert zurückgegeben, der anzeigt, ob das Objekt dem Pool hinzugefügt werden kann.  
   

@@ -1,5 +1,5 @@
 ---
-title: SetNCharacterStream-Methode, java.io.Reader-Objekt - lange | Microsoft-Dokumentation
+title: setnmerkmal Stream-Methode auf Java. IO. Reader-Objekt-Long | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 928a3528150fa4901f1f8666fe711c5c5633b6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76c59a5e367e3d3e8524a64f5ae7ac6dab85b529
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973949"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>setNCharacterStream-Methode (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,9 +48,9 @@ public final void setNCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetNCharacterStream-Methode wird von der SetNCharacterStream-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+ Diese setncharakteristream-Methode wird von der setncharakteristream-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
- Diese Methode sollte verwendet werden, für die **NCHAR**, **NVARCHAR**, **NTEXT**, und **XML** -Datentypen.  
+ Diese Methode sollte für die Datentypen **NCHAR**, **nvarchar**, **ntext**und **XML** verwendet werden.  
   
  Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  
   

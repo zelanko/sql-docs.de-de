@@ -1,5 +1,5 @@
 ---
-title: Datenquellenobjekte (OLE DB) | Microsoft-Dokumentation
+title: Datenquellen Objekte (OLE DB) | Microsoft-Dokumentation
 description: Datenquellenobjekte (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,28 +18,27 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015921"
 ---
 # <a name="data-source-objects-ole-db"></a>Datenquellenobjekte (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server verwendet den Begriff „Datenquelle“ für die Gruppe der OLE DB-Schnittstellen, die zum Herstellen einer Verknüpfung mit dem Datenspeicher verwendet werden, z.B. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Erstellen einer Instanz das Datenquellenobjekt des Anbieters ist die erste Aufgabe von einer OLE DB-Treiber für SQL Server-Consumer.  
+  Der OLE DB-Treiber für SQL Server verwendet den Begriff „Datenquelle“ für die Gruppe der OLE DB-Schnittstellen, die zum Herstellen einer Verknüpfung mit dem Datenspeicher verwendet werden, z.B. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Das Erstellen einer Instanz des Datenquellen Objekts des Anbieters ist die erste Aufgabe eines OLE DB Treibers für SQL Server Consumer.  
   
- Jeder OLE DB-Anbieter deklariert einen Klassenbezeichner (CLSID) für sich. Die CLSID für den OLE DB-Treiber für SQL Server ist der C /C++ GUID CLSID_MSOLEDBSQL (das Symbol MSOLEDBSQL_CLSID, auf den richtigen aufgelöst wird progid in der msoledbsql.h-Datei, die Sie referenzieren). Mit der CLSID verwendet der Consumer die OLE-Funktion **CoCreateInstance** zum Erstellen einer Instanz des Datenquellenobjekts.  
+ Jeder OLE DB-Anbieter deklariert einen Klassenbezeichner (CLSID) für sich. Die CLSID für den OLE DB-Treiber für SQL Server ist die CC++ /GUID CLSID_MSOLEDBSQL (das Symbol MSOLEDBSQL_CLSID wird in die korrekte ProgID in der Datei "msoledbsql. h" aufgelöst, auf die Sie verweisen). Mit der CLSID verwendet der Consumer die OLE-Funktion **CoCreateInstance** zum Erstellen einer Instanz des Datenquellenobjekts.  
   
- OLE DB-Treiber für SQL Server ist ein in-Process-Server. Instanzen von OLE DB-Treiber für SQL Server-Objekten werden mithilfe des Makros CLSCTX_INPROC_SERVER erstellt, um den ausführbaren Kontext anzugeben.  
+ OLE DB Treiber für SQL Server ist ein in-Process-Server. Instanzen von OLE DB-Treiber für SQL Server-Objekten werden mithilfe des Makros CLSCTX_INPROC_SERVER erstellt, um den ausführbaren Kontext anzugeben.  
   
  Das Datenquellenobjekt des OLE DB-Treibers für SQL Server stellt die OLE DB-Initialisierungsschnittstellen bereit, die Consumern ermöglichen, Verbindungen zu vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken herzustellen.  
   
- Jede Verbindung, die über den OLE DB-Treiber für SQL Server werden diese Optionen automatisch festgelegt:  
+ Jede Verbindung, die über den OLE DB Treiber für SQL Server hergestellt wird, legt diese Optionen automatisch fest:  
   
 -   SET ANSI_WARNINGS ON  
   

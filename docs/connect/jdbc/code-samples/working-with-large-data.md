@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1d279371d425af60687e2c046d1c75316eeae67
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f4c8cf36ca44e4de7bf3b49ac59285fedded6dd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956988"
 ---
 # <a name="working-with-large-data"></a>Arbeiten mit umfangreichen Daten
 
@@ -26,7 +25,7 @@ Der JDBC-Treiber bietet Unterstützung für die adaptive Pufferung, mit der Sie 
   
 In der JDBC-Treiberversion 1.2 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] war der Puffermodus standardmäßig auf **full** festgelegt. Wenn die responseBuffering-Verbindungseigenschaft in der Anwendung nicht auf **adaptive** festgelegt war – entweder in den Verbindungseigenschaften oder mit der [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode des [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts –, unterstützte der Treiber das Lesen des gesamten Resultsets vom Server in einem einzigen Vorgang. Um ein adaptives Pufferungsverhalten zu erzielen, musste die responseBuffering-Verbindungseigenschaft in der Anwendung explizit auf **adaptive** festgelegt werden.  
   
-Der **adaptive**-Wert ist der Standardpuffermodus, und der JDBC-Treiber puffert nach Bedarf so wenig Daten wie möglich. Weitere Informationen zum Verwenden der adaptiven Pufferung finden Sie unter [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
+Der **adaptive**-Wert ist der Standardpuffermodus, und der JDBC-Treiber puffert nach Bedarf so wenig Daten wie möglich. Weitere Informationen zur Verwendung der adaptiven Pufferung finden Sie unter [Verwenden der adaptiven Pufferung](../../../connect/jdbc/using-adaptive-buffering.md).  
   
 Die Themen in diesem Abschnitt beschreiben verschiedene Möglichkeiten, wie Sie Daten mit einer großen Menge an Werten aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank abrufen können.  
   

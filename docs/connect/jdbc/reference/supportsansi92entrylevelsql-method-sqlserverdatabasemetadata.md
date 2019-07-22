@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0f95d11bf053e3bf41fe66c8e19acff6a5dd65b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 85e7f1781fe6b42cdd8057978ed22456fe60382b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969844"
 ---
 # <a name="supportsansi92entrylevelsql-method-sqlserverdatabasemetadata"></a>supportsANSI92EntryLevelSQL-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsANSI92EntryLevelSQL()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese supportsANSI92EntryLevelSQL-Methode wird von der supportsANSI92EntryLevelSQL-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsANSI92EntryLevelSQL-Methode wird von der supportsANSI92EntryLevelSQL-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

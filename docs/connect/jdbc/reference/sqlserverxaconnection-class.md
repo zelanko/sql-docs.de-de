@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAConnection-Klasse | Microsoft-Dokumentation
+title: Sqlserverxaconnetction-Klasse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 177b10c9657c4cb8d6b37f7dec9d3b860308dcb7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970311"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public class SQLServerXAConnection
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Ein SQLServerXAConnection-Objekt kann in einer verteilten Transaktion mittels eines [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)-Objekts aufgelistet werden. Ein Transaktions-Manager, in der Regel Teil des Servers auf mittlerer Ebene, verwaltet ein SQLServerXAConnection-Objekt, über das SQLServerXAResource-Objekt.  
+ Ein SQLServerXAConnection-Objekt kann in einer verteilten Transaktion mittels eines [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)-Objekts aufgelistet werden. Ein Transaktions-Manager, der normalerweise Teil eines Servers auf mittlerer Ebene ist, verwaltet ein sqlserverxaconnetction-Objekt über das sqlserverxaresource-Objekt.  
   
 > [!NOTE]  
 >  Anwendungsprogrammierer verwenden diese Schnittstelle normalerweise nicht direkt. Sie wird in erster Linie von einem Transaktions-Manager verwendet, der auf dem Server auf mittlerer Ebene arbeitet.  

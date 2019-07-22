@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009974"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server.
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "66797797"
   
 -   Unabhängig von den Verbindungseigenschaften wechseln Verbindungen, die `SQLDriverConnect` verwenden, in einen separaten Pool von Verbindungen, die `SQLConnect` verwenden.
 - Bei Verwendung der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung und des treiberfähigen Verbindungspoolings verwendet der Treiber nicht den Sicherheitskontext des Windows-Benutzers für den aktuellen Thread, um Verbindungen im Pool zu trennen. Das bedeutet, wenn Verbindungen in ihren Parametern für Identitätswechsel-Szenarien unter Windows mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung äquivalent sind und die gleichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen zur Verbindung mit dem Back-End verwenden, können andere Windows-Benutzer möglicherweise den gleichen Pool aus Verbindungen verwenden. Bei Verwendung der Windows-Authentifizierung und des treiberfähigen Verbindungspoolings verwendet der Treiber den aktuellen Sicherheitkontext des Windows-Benutzers für den aktuellen Thread, um Verbindungen im Pool zu trennen. D. h. für Windows-Identitätswechsel-Szenarios teilen sich verschiedene Windows-Benutzer keine Verbindungen, auch wenn die Verbindungen dieselben Parameter verwenden.
-- Bei Verwendung von Azure Active Directory und treiberfähiges Verbindungspooling verwendet der Treiber auch den Wert um die Mitgliedschaft in einem Verbindungspool zu bestimmen.
+- Wenn Sie Azure Active Directory und Treiber fähiges Verbindungspooling verwenden, verwendet der Treiber auch den Authentifizierungs Wert, um die Mitgliedschaft im Verbindungspool zu bestimmen.
   
 -   Treiberfähiges Verbindungspooling verhindert, dass eine fehlerhafte Verbindung aus dem Pool zurückgegeben wird.  
   
--   Treiberfähiges Verbindungspooling erkennt treiberspezifische Verbindungsattribute. Wenn Sie eine Verbindung verwendet `SQL_COPT_SS_APPLICATION_INTENT` auf schreibgeschützt festgelegt ist, ruft diese Verbindung ihren eigenen Verbindungspool.
--   Festlegen der `SQL_COPT_SS_ACCESS_TOKEN` Attribut bewirkt, dass eine Verbindung getrennt gepoolt werden sollen 
+-   Treiberfähiges Verbindungspooling erkennt treiberspezifische Verbindungsattribute. Wenn also die Verbindung `SQL_COPT_SS_APPLICATION_INTENT` auf schreibgeschützt festgelegt ist, erhält diese Verbindung Ihren eigenen Verbindungspool.
+-   Das Festlegen `SQL_COPT_SS_ACCESS_TOKEN` des Attributs bewirkt, dass eine Verbindung separat zusammengefasst wird. 
   
 Wenn eine der folgenden Verbindungsattribut-IDs oder eines der Schlüsselwörter für Verbindungszeichenfolgen zwischen Ihrer Verbindungszeichenfolge und der in einem Pool zusammengefassten Verbindungszeichenfolge abweicht, verwendet der Treiber eine gepoolte Verbindung. Allerdings ist die Leistung besser, wenn alle Verbindungsattribut-IDs oder Schlüsselwörter für Verbindungszeichenfolgen übereinstimmen. (Um eine Übereinstimmung einer Verbindung im Pool herzustellen, setzt der Treiber das Attribut zurück. Die Leistung wird beeinträchtigt, da ein zusätzlicher Netzwerkaufruf notwendig ist, um die folgenden Parameter zurückzusetzen.  
   

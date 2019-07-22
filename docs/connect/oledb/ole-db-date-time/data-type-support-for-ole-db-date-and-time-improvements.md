@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995122"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieser Artikel enthält Informationen zu OLE DB (OLE DB-Treiber für SQL Server) Datentypen, die unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Datum/Uhrzeit-Datentypen.  
+  Dieser Artikel enthält Informationen über OLE DB (OLE DB Treiber für SQL Server)-Typen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Datums-/Uhrzeit-Datentypen unterstützen.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern  
  OLE DB stellt zwei neue Datentypen bereit, um die neuen Servertypen zu unterstützen: DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET. Die folgende Tabelle zeigt die vollständige Servertypzuordnung:  
@@ -114,7 +113,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- Wenn `timezone_hour` ist negativ, `timezone_minute` darf negativ sein oder 0 (null). Wenn `timezone_hour` positiv ist, werden `timezone minute` muss positiv sein oder 0 (null). Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
+ Wenn `timezone_hour` negativ ist, `timezone_minute` muss negativ oder 0 (null) sein. Wenn `timezone_hour` positiv ist, `timezone minute` muss positiv oder NULL sein. Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  Dieses struct enthält jetzt die neuen Strukturen DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET und fügt Sekundenbruchteile für entsprechende Typen hinzu.  
@@ -161,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Anwendungen, die auf OLE DB-Treiber für SQL Server migrieren, verwenden **Sql_variant** und basieren auf der eingeschränkten Genauigkeit von **"DateTime"** müssen aktualisiert werden, wenn das zugrunde liegende Schema aktualisiert wird, um verwenden**datetime2** statt **"DateTime"**.  
+ Anwendungen, die zu OLE DB Treiber für SQL Server migriert werden, die **sql_variant** verwenden und auf der eingeschränkten Genauigkeit von **DateTime** basieren, müssen aktualisiert werden, wenn das zugrunde liegende Schema für die Verwendung von **datetime2** anstelle von **DateTime**aktualisiert wird.  
   
  Die Zugriffsmakros für SSVARIANT wurden durch Hinzufügen von Folgendem ebenfalls erweitert:  
   
@@ -173,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Datentypzuordnung zu ITableDefinition::CreateTable  
- Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen, die von itabledefinition:: CreateTable verwendet verwendet:  
+ Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen verwendet, die von ITableDefinition:: aufgabeneable verwendet werden:  
   
 |OLE DB-Datentyp (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|Hinweise|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
-|DBTYPE_DBTIME2|**time**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* Member, um die Genauigkeit der Bruchteile von Sekunden zu ermitteln.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
+|DBTYPE_DBTIME2|**time**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Der OLE DB-Treiber für SQL Server überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
   
- Wenn eine Anwendung DBTYPE_DBTIMESTAMP in legt *wType*, kann die Zuordnung zu überschreiben **datetime2** durch Angabe ein Typname im *PwszTypeName*. Wenn **"DateTime"** angegeben wird, *bScale* muss 3 sein. Wenn **Smalldatetime** angegeben wird, *bScale* muss 0 sein. Wenn *bScale* ist nicht konsistent mit *wType* und *PwszTypeName*, wird DB_E_BADSCALE zurückgegeben.  
+ Wenn eine Anwendung DBTYPE_DBTIMESTAMP in *wType*angibt, kann Sie die Zuordnung zu **datetime2** überschreiben, indem Sie einen Typnamen in *pwsztytzame*bereitstellt. Wenn **DateTime** angegeben ist, muss *bScale* 3 sein. Wenn **smalldatetime** angegeben ist, muss ' *bScale* ' den Wert ' 0 ' aufweisen. Wenn *bScale* nicht mit *wType* und *pwsztykame*konsistent ist, wird DB_E_BADSCALE zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

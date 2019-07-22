@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines Rowsets mit IOpenRowset | Microsoft-Dokumentation
-description: Erstellen eines Rowsets mit ' IOpenRowset '-Schnittstelle von OLE DB-Treiber für SQL Server
+description: Erstellen eines Rowsets mit IOpenRowset-Schnittstelle OLE DB Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 78b08a3da3da89e0db0d801945416dcdb1ff9c03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994312"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Erstellen eines Rowsets mit 'IopenRowset'
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server unterstützt die **IOpenRowset:: OPENROWSET** Methode mit den folgenden Einschränkungen:  
+  Der OLE DB-Treiber für SQL Server unterstützt die **IOpenRowset:: OPENROWSET** -Methode mit den folgenden Einschränkungen:  
   
 -   Eine Basistabelle oder -sicht muss in einer Datenbank-ID-Struktur angegeben sein, auf die der *pTableID*-Parameter zeigt.  
   

@@ -10,23 +10,22 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cec78daf72a65bfc0d3b496a42d1e726f84a1778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 701b2d9e7a6d51b7fa13f797c6c5c9de75bed5d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993859"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Unterstützung für Spalten mit geringer Dichte (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieses Thema enthält Informationen zu OLE DB-Treiber für SQL Server-Unterstützung für Spalten mit geringer Dichte. Weitere Informationen zu Sparsespalten finden Sie unter [Sparse Columns Support in OLE DB Driver for SQL Server (Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server)](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). Ein Beispiel finden Sie unter [Anzeigen von Spalten- und Katalogmetadaten für Sparsespalten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
+  Dieses Thema enthält Informationen über OLE DB Treiber für die SQL Server Unterstützung für sparsespalten. Weitere Informationen zu Sparsespalten finden Sie unter [Sparse Columns Support in OLE DB Driver for SQL Server (Unterstützung von Sparsespalten im OLE DB-Treiber für SQL Server)](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md). Ein Beispiel finden Sie unter [Anzeigen von Spalten- und Katalogmetadaten für Sparsespalten &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
   
 ## <a name="ole-db-statement-metadata"></a>OLE DB-Anweisungsmetadaten  
- Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]ist ein neuer DBCOLUMNFLAGS-Flagwert, DBCOLUMNFLAGS_SS_ISCOLUMNSET, verfügbar. Dieser Wert sollte für Spalten festgelegt werden, die **column_set** -Werte sind. Das DBCOLUMNFLAGS-Flag abgerufen werden können, über die *DwFlags* -Parameters von IColumnsInfo:: GetColumnsInfo und die DBCOLUMN_FLAGS-Spalte des Rowsets von IColumnsRowset:: GetColumnsRowset zurückgegeben.  
+ Ab [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]ist ein neuer DBCOLUMNFLAGS-Flagwert, DBCOLUMNFLAGS_SS_ISCOLUMNSET, verfügbar. Dieser Wert sollte für Spalten festgelegt werden, die **column_set** -Werte sind. Das DBCOLUMNFLAGS-Flag kann über den *dwFlags* -Parameter von IColumnsInfo:: GetColumnsInfo und die DBCOLUMN_FLAGS-Spalte des Rowsets abgerufen werden, das von IColumnsRowset:: GetColumnsRowset zurückgegeben wurde.  
   
 ## <a name="ole-db-catalog-metadata"></a>OLE DB-Katalogmetadaten  
  Zwei zusätzliche [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Spalten wurden zu DBSCHEMA_COLUMNS hinzugefügt.  
@@ -50,7 +49,7 @@ ms.locfileid: "66795923"
 -   DBCOMPUTEMODE_NOTCOMPUTED wird für **column_set** -Spalten festgelegt.  
   
 ## <a name="ole-db-support-for-sparse-columns"></a>OLE DB-Unterstützung für Spalten mit geringer Dichte  
- Die folgenden OLE DB-Schnittstellen, die in der OLE DB-Treiber für SQL Server zur Unterstützung von Spalten mit geringer Dichte geändert wurden:  
+ Die folgenden OLE DB Schnittstellen wurden in OLE DB Treiber für SQL Server geändert, um sparsespalten zu unterstützen:  
   
 |Typ oder Elementfunktion|und Beschreibung|  
 |-----------------------------|-----------------|  
@@ -59,7 +58,7 @@ ms.locfileid: "66795923"
 |IDBSchemaRowset::GetSchemaRowset|DBSCHEMA_COLUMNS gibt zwei neue Spalten zurück: SS_IS_COLUMN_SET und SS_IS_SPARSE.<br /><br /> DBSCHEMA_COLUMNS gibt nur Spalten zurück, die keine Elemente eines **column_set**sind.<br /><br /> Zwei neue Schemarowsets wurden hinzugefügt: DBSCHEMA_COLUMNS_EXTENDED gibt alle Spalten zurück, unabhängig davon, ob sie eine geringe Dichte aufweisen oder Elemente von **column_set** sind. DBSCHEMA_SPARSE_COLUMN_SET gibt nur Spalten zurück, die Elemente eines **column_set**sind. Diese neuen Rowsets verfügen über die gleichen Spalten und die Einschränkungen wie DBSCHEMA_COLUMNS.|  
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas schließt die GUIDs für die neuen Rowsets DBSCHEMA_COLUMNS_EXTENDED und DBSCHEMA_SPARSE_COLUMN_SET in die Liste verfügbarer Schemarowsets ein.|  
 |ICommand::Execute|Wenn **SELECT \* FROM** *Tabelle* verwendet wird, werden alle Spalten zurückgegeben, die keine Elemente der **column_set**-Sparsespalte sind, zuzüglich einer XML-Spalte, die Werte von allen Nicht-NULL-Spalten enthält, die Elemente der **column_set**-Sparsespalte sind (falls vorhanden).|  
-|IOpenRowset::OpenRowset|IOpenRowset:: OPENROWSET gibt ein Rowset mit den gleichen Spalten wie ICommand:: Execute, mit einem **wählen \***  Abfrage in der gleichen Tabelle.|  
+|IOpenRowset::OpenRowset|IOpenRowset:: OPENROWSET gibt ein Rowset mit denselben Spalten wie ICommand:: Execute zurück, wobei eine **Select \***  -Abfrage für dieselbe Tabelle ausgeführt wird.|  
 |ITableDefinition|Es gibt keine Änderungen an dieser Schnittstelle für Sparsespalten oder für **column_set** -Spalten. Anwendungen, die Schemaänderungen vornehmen müssen, müssen das entsprechende [!INCLUDE[tsql](../../../includes/tsql-md.md)] direkt ausführen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -1,5 +1,5 @@
 ---
-title: IsDefinitelyWritable-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
+title: isdefinitelyschreitable-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab19ad0c8b02d8a2c1d931b2986f16afcfce45ff
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977645"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean isDefinitelyWritable(int column)
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn der Schreibvorgang Spalte definitiv erfolgreich sein wird. Andernfalls lautet der Wert **false**.  
+ **true** , wenn der Spalten Schreibvorgang definitiv erfolgreich ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese IsDefinitelyWritable-Methode wird von der IsDefinitelyWritable-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
+ Diese isdefinitelyschreitable-Methode wird von der isdefinitelyschreitable-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
 >  Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, wird von dieser Methode immer FALSE zurückgegeben.  

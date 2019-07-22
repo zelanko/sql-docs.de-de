@@ -1,5 +1,5 @@
 ---
-title: GetFunctionColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getFunctionColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982959"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,18 +71,18 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |COLUMN_TYPE|**short**|**Der Spaltentyp. Weist einen der folgenden Werte auf:**<br /><br /> functionColumnUnknown (0): Unbekannter Typ<br /><br /> functionColumnIn (1): Eingabeparameter<br /><br /> functionColumnInOut (2): Eingabe-/Ausgabeparameter<br /><br /> functionColumnOut (3): Ausgabeparameter<br /><br /> functionReturn (4): Funktionsrückgabewert<br /><br /> functionColumnResult (5): Ein Parameter oder eine Spalte ist eine Spalte im Resultset.|  
 |DATA_TYPE|**smallint**|Der SQL-Datentypwert aus „Java.sql.Types“.|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|PRECISION|**ssNoversion**|Die Gesamtanzahl von signifikanten Stellen.|  
-|LENGTH|**ssNoversion**|Die Länge der Daten in Bytes.|  
+|PRECISION|**int**|Die Gesamtanzahl von signifikanten Stellen.|  
+|LENGTH|**int**|Die Länge der Daten in Bytes.|  
 |SCALE|**short**|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen.|  
 |RADIX|**short**|Die Basis für numerische Typen.|  
 |NULLABLE|**short**|Gibt an, ob der Parameter- oder Rückgabewert einen **NULL**-Wert enthalten kann.<br /><br /> **Weist einen der folgenden Werte auf:**<br /><br /> functionNoNulls (0): NULL-Wert ist nicht zulässig.<br /><br /> functionNullable (1): NULL-Wert ist zulässig.<br /><br /> functionNullableUnknown (2): Unbekannt|  
 |REMARKS|**String**|Die Kommentare zu einer Spalte oder einem Parameter.|  
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
 |SQL_DATA_TYPE|**smallint**|Diese Spalte entspricht der **DATA_TYPE**-Spalte mit Ausnahme der **datetime**- und ISO-**interval**-Datentypen.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
-|SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Bei allen Datentypen außer **"DateTime"** und ISO **Intervall**, diese Spalte ist NULL.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
-|CHAR_OCTET_LENGTH|**ssNoversion**|Die maximale Länge von binären oder zeichenbasierten Parametern oder Spalten. Für andere Datentypen ist der Wert NULL.|  
-|ORDINAL_POSITION|**ssNoversion**|Stellt für Eingabe- und Ausgabeparameter die Position (beginnend mit "1") dar.<br /><br /> Für Resultsetspalten handelt es sich hierbei um die Position der Spalte im Resultset. Beginn ist der Wert "1".<br /><br /> Für den Rückgabewert ist der Wert "0".|  
-|IS_NULLABLE|**String**|Bestimmt die NULL-Zulässigkeit eines Parameters oder einer Spalte.<br /><br /> Mögliche Werte:<br /><br /> **Ja**: der Parameter oder eine Spalte kann NULL-Werte enthalten.<br /><br /> **KEINE**: der Parameter oder eine Spalte kann nicht NULL-Werte enthalten.<br /><br /> Leere Zeichenfolge (""): Unbekannt|  
+|SQL_DATETIME_SUB|**smallint**|Wenn **SQL_DATA_TYPE** den Wert **SQL_DATETIME** oder **SQL_INTERVAL** aufweist, enthält diese Spalte den Subcode für **datetime** ISO **interval**. Für andere Datentypen als **DateTime** -und ISO- **Intervalle**ist diese Spalte NULL.<br /><br /> **Hinweis:** Diese Angabe ist in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar und gilt nur für den JDBC-Treiber.|  
+|CHAR_OCTET_LENGTH|**int**|Die maximale Länge von binären oder zeichenbasierten Parametern oder Spalten. Für andere Datentypen ist der Wert NULL.|  
+|ORDINAL_POSITION|**int**|Stellt für Eingabe- und Ausgabeparameter die Position (beginnend mit "1") dar.<br /><br /> Für Resultsetspalten handelt es sich hierbei um die Position der Spalte im Resultset. Beginn ist der Wert "1".<br /><br /> Für den Rückgabewert ist der Wert "0".|  
+|IS_NULLABLE|**String**|Bestimmt die NULL-Zulässigkeit eines Parameters oder einer Spalte.<br /><br /> Mögliche Werte:<br /><br /> **Ja**: der Parameter oder die Spalte kann NULL-Werte enthalten.<br /><br /> **Nein**: der Parameter oder die Spalte darf keine NULL-Werte enthalten.<br /><br /> Leere Zeichenfolge (""): Unbekannt|  
 |SS_TYPE_CATALOG_NAME|**String**|Der Name des Katalogs, der den benutzerdefinierten Typ (UDT) enthält.|  
 |SS_TYPE_SCHEMA_NAME|**String**|Der Name des Schemas, der den benutzerdefinierten Typ (UDT) enthält.|  
 |SS_UDT_CATALOG_NAME|**String**|Der benutzerdefinierte Typ (UDT) für den vollqualifizierten Namen.|  

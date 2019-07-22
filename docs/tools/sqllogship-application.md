@@ -1,5 +1,5 @@
 ---
-title: Anwendung Sqllogship | Microsoft-Dokumentation
+title: sqllogship-Anwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065454"
 ---
 # <a name="sqllogship-application"></a>Anwendung sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Von der Anwendung **sqllogship** werden ein Sicherungs-, Kopier- oder Wiederherstellungsvorgang und zugeordnete Cleanuptasks für eine Protokollversandkonfiguration ausgeführt. Der Vorgang wird in einer bestimmten Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für eine bestimmte Datenbank ausgeführt.  
   
- ![Symbol zum Themenlink](../database-engine/configure-windows/media/topic-link.gif "Symbol zum Themenlink") den Syntaxkonventionen finden Sie unter [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Link Symbol "Thema] " (../database-engine/configure-windows/media/topic-link.gif "Link Symbol \"Thema") " Informationen zu den Syntax Konventionen finden Sie unter [Befehlszeilen &#40;-&#41;Hilfsprogramm-Referenz Datenbank-Engine](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Syntax  
   

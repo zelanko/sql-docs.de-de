@@ -1,5 +1,5 @@
 ---
-title: SupportsMixedCaseQuotedIdentifiers-Methode | Microsoft-Dokumentation
+title: supportsmixedcasequotedidentifier-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 76c68fc2-5af6-4b8d-baee-245716fdc5cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b6cb9ce098a57d3378ca0ae2d6a4718185221852
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 48f3861991aa56ed79f753acedd4dbd9f27b5744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969280"
 ---
 # <a name="supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>supportsMixedCaseQuotedIdentifiers-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsMixedCaseQuotedIdentifiers()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn Bezeichner in gemischter Schreibung gespeichert sind. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Bezeichner in gemischter Schreibung gespeichert werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsMixedCaseQuotedIdentifiers-Methode wird von der SupportsMixedCaseQuotedIdentifiers-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsmixedcasequotedidentifier-Methode wird von der supportsmixedcasequotedidentifier-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

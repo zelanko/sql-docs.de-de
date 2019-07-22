@@ -15,20 +15,19 @@ helpviewer_keywords:
 - InsertRow method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8acbcf78a7f8e3e108b93076d5596c0f09edd226
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b01c63e74ee26cea327a01e3bf9a3595bc5012d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015452"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Fügt dem Rowset für das Massenkopieren eine Zeile hinzu. Beispiele finden Sie [Bulk Daten mithilfe von IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) und [Senden von BLOB-Daten zu SQL SERVER mithilfe von IROWSETFASTLOAD und ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Fügt dem Rowset für das Massenkopieren eine Zeile hinzu. Beispiele finden Sie unter [Massen Daten kopieren mit IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) und [Senden von BLOB-Daten an SQL Server mit IRowsetFastLoad und ISequentialStream &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,9 +70,9 @@ HRESULT InsertRow(
 ## <a name="remarks"></a>Remarks  
  Ein Fehler bei der Konvertierung der Consumerdaten in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp einer Spalte ruft eine E_FAIL-Rückgabe durch den OLE DB-Treiber für SQL Server hervor. Die Daten können entweder über eine beliebige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]InsertRow **-Methode oder nur über die** Commit **-Methode an**  übertragen werden. lDie Consumer-Anwendung kann die **InsertRow** -Methode mehrere Male mit fehlerhaften Daten aufrufen, bevor eine Meldung eintrifft, dass die Daten nicht korrekt sind. Die **Commit** -Methode gewährleistet, dass alle Daten ordnungsgemäß vom Consumer angegeben werden. Der Consumer kann die **Commit** -Methode gegebenenfalls verwenden, um die Daten zu überprüfen.  
   
- Der OLE DB-Treiber für SQL Server Massenkopieren-Rowsets weisen nur Schreibzugriff an. Der OLE DB-Treiber für SQL Server macht keine Methoden, die Abfragen von Consumern hinsichtlich des Rowsets verfügbar. Um die Verarbeitung zu beenden, kann der Consumer seine Verweise auf die [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)-Schnittstelle ohne die **Commit**-Methode senden. Es gibt keine Möglichkeit, auf von Consumern eingefügte Zeilen im Rowset zuzugreifen und deren Werte zu ändern oder diese einzeln aus dem Rowset zu entfernen.  
+ Der OLE DB Treiber für SQL Server Rowsets zum Massen kopieren ist schreibgeschützt. Der OLE DB-Treiber für SQL Server macht keine Methoden verfügbar, die Consumer-Abfragen des Rowsets zulassen. Um die Verarbeitung zu beenden, kann der Consumer seine Verweise auf die [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)-Schnittstelle ohne die **Commit**-Methode senden. Es gibt keine Möglichkeit, auf von Consumern eingefügte Zeilen im Rowset zuzugreifen und deren Werte zu ändern oder diese einzeln aus dem Rowset zu entfernen.  
   
- Massenkopierte Zeilen werden auf dem Server für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] formatiert. Das Zeilenformat entspricht den Optionen, die eventuell für die Verbindung oder die Sitzung festgelegt wurden, wie z. B. ANSI_PADDING. Diese Option ist standardmäßig für jede Verbindung über den OLE DB-Treiber für SQL Server auf festgelegt.  
+ Massenkopierte Zeilen werden auf dem Server für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] formatiert. Das Zeilenformat entspricht den Optionen, die eventuell für die Verbindung oder die Sitzung festgelegt wurden, wie z. B. ANSI_PADDING. Diese Option wird standardmäßig für alle Verbindungen festgelegt, die über den OLE DB-Treiber für SQL Server hergestellt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  

@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen einer Spalte zu einer SQL Server-Tabelle | Microsoft-Dokumentation
-description: Hinzufügen einer Spalte in einer SQL Server-Tabelle, die mithilfe von OLE DB-Treiber für SQL Server
+title: Hinzufügen einer Spalte zu einer SQL Server Tabelle | Microsoft-Dokumentation
+description: Hinzufügen einer Spalte zu einer SQL Server Tabelle mithilfe OLE DB Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 282166444597245ad70be565ce6db9f01533a227
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994105"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Hinzufügen einer Spalte zu einer SQL Server-Tabelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server macht die **addColumn** Funktion. Mit dieser Funktion können Consumer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle eine Spalte hinzufügen.  
+  Der OLE DB-Treiber für SQL Server macht die **ITableDefinition:: AddColumn** -Funktion verfügbar. Mit dieser Funktion können Consumer einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle eine Spalte hinzufügen.  
   
- Beim Hinzufügen einer Spalteninhalts in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle, die OLE DB-Treiber für SQL Server-Consumer wie folgt beschränkt ist:  
+ Wenn Sie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle eine Spalte hinzufügen, wird der OLE DB-Treiber für SQL Server Consumer wie folgt eingeschränkt:  
   
 -   Wenn DBPROP_COL_AUTOINCREMENT VARIANT_TRUE ist, muss DBPROP_COL_NULLABLE VARIANT_FALSE sein.  
   

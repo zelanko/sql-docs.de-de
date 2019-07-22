@@ -1,5 +1,5 @@
 ---
-title: SupportsGroupByBeyondSelect-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsgroupbybeyondselect-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 610100e8a9634fd25232b515533d993bb459b2bb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c38f17451149e9206cf12329e5ffef314eac7480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969383"
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>supportsGroupByBeyondSelect-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsGroupByBeyondSelect()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsGroupByBeyondSelect-Methode wird von der SupportsGroupByBeyondSelect-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsgroupbybeyondselect-Methode wird von der supportsgroupbybeyondselect-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

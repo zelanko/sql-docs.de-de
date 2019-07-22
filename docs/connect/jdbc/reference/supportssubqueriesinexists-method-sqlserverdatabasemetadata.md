@@ -1,5 +1,5 @@
 ---
-title: SupportsSubqueriesInExists-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportssubqueriesinist-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 14c08c7f-5c1e-4e21-8373-ae32c22e47d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7bf0bec6386c0c452c219a223cae47532649ba7b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 22da8ae3f7f86501bdd15669c439a8d177ebd5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968741"
 ---
 # <a name="supportssubqueriesinexists-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInExists-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsSubqueriesInExists()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsSubqueriesInExists-Methode wird von der SupportsSubqueriesInExists-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportssubqueriesinist-Methode wird von der supportssubqueriesinist-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4b5232a71eaaf44fb9896d73b6ef63c7bf48c5f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005960"
 ---
 # <a name="using-multiple-result-sets"></a>Verwenden von mehreren Resultsets
 
@@ -24,12 +23,12 @@ ms.locfileid: "66798616"
 
 Bei der Arbeit mit Inline-SQL-Prozeduren oder gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozeduren, die mehrere Resultsets zurückgeben, stellt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] die Methode [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) in der Klasse [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) bereit, um die einzelnen zurückgegebenen Datensätze abzurufen. Beim Ausführen einer Anweisung, die mehrere Resultsets zurückgibt, können Sie darüber hinaus die Methode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) der SQLServerStatement-Klasse verwenden, da ein **boolescher** Wert zurückgegeben wird, der angibt, ob es sich bei dem zurückgegebenen Wert um ein Resultset oder eine Updatezählung handelt.
 
-Wenn die Methode „execute“ **TRUE** zurückgibt, wurde von der ausgeführten Anweisung mindestens ein Resultset zurückgegeben. Sie können die Methode „getResultSet“ aufrufen, um auf das erste Resultset zuzugreifen. Um zu ermitteln, ob weitere Resultsets verfügbar sind, können Sie die Methode [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) aufrufen, die den **booleschen** Wert **TRUE** zurückgibt, falls weitere Resultsets verfügbar sind. Wenn mehr Resultsets verfügbar sind, können Sie erneut die Methode „getResultSet“ aufrufen, um darauf zuzugreifen, und den Prozess fortsetzen, bis alle Resultsets verarbeitet wurden. Wenn Sie die GetMoreResults-Methode gibt **"false"** , es sind keine weiteren Resultsets zu verarbeiten.
+Wenn die Methode „execute“ **TRUE** zurückgibt, wurde von der ausgeführten Anweisung mindestens ein Resultset zurückgegeben. Sie können die Methode „getResultSet“ aufrufen, um auf das erste Resultset zuzugreifen. Um zu ermitteln, ob weitere Resultsets verfügbar sind, können Sie die Methode [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md) aufrufen, die den **booleschen** Wert **TRUE** zurückgibt, falls weitere Resultsets verfügbar sind. Wenn mehr Resultsets verfügbar sind, können Sie erneut die Methode „getResultSet“ aufrufen, um darauf zuzugreifen, und den Prozess fortsetzen, bis alle Resultsets verarbeitet wurden. Wenn die getMoreResults-Methode **false**zurückgibt, sind keine weiteren Resultsets für die Verarbeitung vorhanden.
 
 Wenn die Methode „execute“ **FALSE** zurückgibt, wurde von der ausgeführten Anweisung ein Updatezählwert zurückgegeben, der durch Aufruf der Methode [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) abgerufen werden kann.
 
 > [!NOTE]  
-> Weitere Informationen zu updatezählungen finden Sie unter [mithilfe einer gespeicherten Prozedur mit einer Anzahl aktualisieren](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
+> Weitere Informationen zu Update Zählungen finden [Sie unter Verwenden einer gespeicherten Prozedur mit einer Update Anzahl](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md).
 
 Im folgenden Beispiel werden eine offene Verbindung mit der Beispieldatenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] an die Funktion übergeben und eine SQL-Anweisung erstellt, die bei der Ausführung zwei Resultsets zurückgibt:
 
@@ -38,7 +37,7 @@ Im folgenden Beispiel werden eine offene Verbindung mit der Beispieldatenbank [!
 In diesem Fall ist bekannt, dass zwei Resultsets zurückgegeben werden. Der Code ist jedoch so geschrieben, dass alle Resultsets verarbeitet werden, wenn die Anzahl der zurückgegebenen Resultsets unbekannt ist, wie z. B. beim Aufrufen einer gespeicherten Prozedur. Ein Beispiel für den Aufruf einer gespeicherten Prozedur, die mehrere Resultsets sowie Updatewerte zurückgibt, finden Sie unter [Verarbeiten komplexer Anweisungen](../../connect/jdbc/handling-complex-statements.md).
 
 > [!NOTE]  
-> Wenn Sie die GetMoreResults-Methode der SQLServerStatement-Klasse aufrufen, wird das zuvor zurückgegebene Resultset implizit geschlossen.
+> Wenn Sie die getMoreResults-Methode der SQLServerStatement-Klasse aufrufen, wird das zuvor zurückgegebene Resultset implizit geschlossen.
 
 ## <a name="see-also"></a>Weitere Informationen
 

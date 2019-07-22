@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: db83d9d7-137b-4a28-a2ca-d4782e0a256e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33eba5d0795d81893aba1cb8687de1fd8649175e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 00e170e0366d5ed785a4b27053f3805c13f2c54c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998158"
 ---
 # <a name="updatetimestamp-method-int-javasqltimestamp"></a>updateTimestamp-Methode (int, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateTimestamp(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateTimestamp-Methode wird von der UpdateTimestamp-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese UpdateTimestamp-Methode wird von der UpdateTimestamp-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateTimestamp-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   

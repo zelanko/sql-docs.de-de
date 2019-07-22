@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ceb80e7929ab3e36e6818d724c7ffe48a613a827
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986044"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap-Methode (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

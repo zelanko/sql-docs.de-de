@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4828be81914eddbbb5c26b5a6f65cd8b81d85df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014798"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>Schritt 1: Verbinden  
+## <a name="step-1--connect"></a>Schritt 1: verbinden  
   
   
-Dies **OpenConnection** Funktion wird aufgerufen, im oberen Bereich in der alle Funktionen, die folgen.  
+Diese **OpenConnection** -Funktion wird in allen folgenden Funktionen in der Nähe des oberen Aufrufs aufgerufen.  
   
   
 ```php 
@@ -48,7 +47,7 @@ Dies **OpenConnection** Funktion wird aufgerufen, im oberen Bereich in der alle 
   
 ## <a name="step-2--execute-query"></a>Schritt 2: Ausführen der Abfrage  
   
-Die [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion im Wesentlichen akzeptiert jede Abfrage und die Connection-Objekt und gibt ein Resultset mit der Verwendung von durchlaufen werden kann [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+Die [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) -Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für die SQL-Datenbank abzurufen. Diese Funktion akzeptiert im Wesentlichen alle Abfragen und das Verbindungs Objekt und gibt ein Resultset zurück, das mit der Verwendung von [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)durchlaufen werden kann.  
   
 ```php  
     function ReadData()  
@@ -80,7 +79,7 @@ Die [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) Funkti
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher sind, übergibt Parameter zum Schutz Ihrer Anwendung vor [SQL-Einschleusung](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
+In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem SQL- [einschleusungs](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
   
   
 ```php 
@@ -113,13 +112,13 @@ In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../t-sq
 ## <a name="step-4--rollback-a-transaction"></a>Schritt 4: Rollback einer Transaktion  
   
   
-Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen in der Sie:  
+Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen, in denen Sie folgende Vorgänge ausführen:  
   
--Starten von Transaktionen  
+-Begin a Transaction  
   
--Fügen Sie eine Zeile mit Daten, aktualisieren Sie eine andere Zeile mit Daten  
+-Einfügen einer Zeile mit Daten, Aktualisieren einer anderen Daten Zeile  
   
--Durchführen eines Commits Ihrer Transaktion, wenn die INSERT- und Update erfolgreich ausgeführt wurden und ein Rollback der Transaktion, wenn eines davon nicht der Fall war  
+-Committen Sie die Transaktion, wenn die INSERT-und Update-Vorgänge erfolgreich ausgeführt wurden, und führen Sie ein Rollback der Transaktion aus, wenn  
   
   
 ```php 

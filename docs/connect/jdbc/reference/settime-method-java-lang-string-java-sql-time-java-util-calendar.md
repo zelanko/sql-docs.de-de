@@ -1,5 +1,5 @@
 ---
-title: SetTime-Methode, die Zeit-und Kalenderwerte | Microsoft-Dokumentation
+title: setTime-Methode zu Zeit-und Kalender Werten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c05d1558faaf8edce91a8383159abd04b6bf05d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e0a493492c581150809fee6e3707cf770960462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972536"
 ---
 # <a name="settime-method-javalangstring-javasqltime-javautilcalendar"></a>setTime-Methode (java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +43,11 @@ public void setTime(java.lang.String sCol,
   
  *x*  
   
- Ein Uhrzeit-Objekt.  
+ Ein Zeit Objekt.  
   
  *c*  
   
- Ein Kalenderobjekt.  
+ Ein Kalender Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

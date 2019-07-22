@@ -1,5 +1,5 @@
 ---
-title: Position-Methode (java.sql.Blob, long) | Microsoft-Dokumentation
+title: Position-Methode (Java. SQL. BLOB, Long) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e967c02c84943f1fa84eb541cdb28201196a7ce3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cedfe53b8b30152ed4ca2dd3d1c68d6ff885b6bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976428"
 ---
 # <a name="position-method-javasqlblob-long"></a>position-Methode (java.sql.Blob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,10 +51,10 @@ public long position(java.sql.Blob pattern,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese Position-Methode wird von der Position-Methode in der java.sql.Blob-Schnittstelle angegeben.  
+ Diese Positions Methode wird von der Positions Methode in der Java. SQL. BLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Position-Methode &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
+ [Positions Methode &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob-Elemente](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob-Klasse](../../../connect/jdbc/reference/sqlserverblob-class.md)  

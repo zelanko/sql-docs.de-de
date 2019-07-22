@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c87e9d3-904a-4b86-90cc-3684034c86ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cb094f135bb5e1bb25c3f7afb94517169035266
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26b0386f0f206427580ee8ff85eb704512914106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970851"
 ---
 # <a name="sqlserverpooledconnection-class"></a>SQLServerPooledConnection-Klasse
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public final class SQLServerPoolingDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Die SQLServerPooledConnection-Klasse stellt Methoden für den Verbindungspool-Manager zum Verwalten des Verbindungspools bereit. Die Verbindungen werden in der Regel nicht direkt von Anwendungen instanziiert.  
+ Die SQLServerPooledConnection-Klasse stellt Methoden für den Verbindungspool-Manager bereit, um den Verbindungspool zu verwalten. Die Verbindungen werden in der Regel nicht direkt von Anwendungen instanziiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPooledConnection-Elemente](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
