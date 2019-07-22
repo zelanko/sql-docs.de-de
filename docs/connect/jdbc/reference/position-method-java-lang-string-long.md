@@ -1,5 +1,5 @@
 ---
-title: Position-Methode (java.lang.String, long) | Microsoft-Dokumentation
+title: Position-Methode (Java. lang. String, Long) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40c7dadf83861d889acd7932dbe1dad17fda4b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed0a62940fc29e2d909678dabec784a906c02515
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976441"
 ---
 # <a name="position-method-javalangstring-long"></a>position-Methode (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public long position(java.lang.String searchstr,
 #### <a name="parameters"></a>Parameter  
  *searchstr*  
   
- Die Teilzeichenfolge, nach dem gesucht werden soll.  
+ Die Teil Zeichenfolge, nach der gesucht werden soll.  
   
  *start*  
   
@@ -52,10 +51,10 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese Position-Methode wird von der Position-Methode in der java.sql.Clob-Schnittstelle angegeben.  
+ Diese Positions Methode wird von der Positions Methode in der Java. SQL. CLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Position-Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
+ [Positions Methode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [SQLServerClob-Methoden](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob-Elemente](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob-Klasse](../../../connect/jdbc/reference/sqlserverclob-class.md)  

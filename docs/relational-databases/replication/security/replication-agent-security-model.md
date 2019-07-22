@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f8d0b6013631cf4b6d888f8e96c24dd9cb83146f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046585"
 ---
 # <a name="replication-agent-security-model"></a>Sicherheitsmodell des Replikations-Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "54130970"
 |Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|  
 |Warteschlangenlese-Agent|**[\<Verteiler>].\<Ganzzahl>**|  
   
- \*Bei Pushabonnements für Oracle-Veröffentlichungen lautet der Auftragsname**\<Verleger>-\<Verleger**> statt **\<Verleger>\<Veröffentlichungsdatenbank>**.  
+ \*Bei Pushabonnements für Oracle-Veröffentlichungen lautet der Auftragsname **\<Verleger>-\<Verleger**> statt **\<Verleger>\<Veröffentlichungsdatenbank>** .  
   
  \*\*Bei Pullabonnements für Oracle-Veröffentlichungen lautet der Auftragsname **\<Verleger>\<DistributionDatabase**> statt **\<Verleger>-\<Veröffentlichungsdatenbank**.  
   

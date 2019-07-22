@@ -10,14 +10,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b80b96436b8cc7346a69a8b2448ade60dd009b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116495"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,14 +43,14 @@ Erfordert die **VIEW SERVER STATE**-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 In diesem Set sind die Ergebnisse des DBCC-Befehls PDW_SHOWPARTITIONSTATS dargestellt.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|und Beschreibung|  
 |-----------------|---------------|-----------------|  
-|partition_number|ssNoversion|Partitionsnummer.|  
+|partition_number|INT|Partitionsnummer.|  
 |used_page_count|BIGINT|Gesamtanzahl der für die Daten verwendeten Seiten.|  
 |reserved_page_count|BIGINT|Anzahl der für die Partition reservierten Seiten.|  
 |row_count|BIGINT|Anzahl der Zeilen in der Partition.|  
-|pdw_node_id|ssNoversion|Computeknoten für die Daten.|  
-|distribution_id|ssNoversion|Verteilungs-ID für die Daten.|  
+|pdw_node_id|INT|Computeknoten für die Daten.|  
+|distribution_id|INT|Verteilungs-ID für die Daten.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Beispiele: grundlegende DBCC-PDW_SHOWEXECUTIONPLAN-Syntax  

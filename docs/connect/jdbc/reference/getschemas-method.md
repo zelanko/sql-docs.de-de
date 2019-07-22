@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0209c50b19e46e90db3738fc94f5927f8aa619ef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0a5f453e6300258cacffa6606259f85cdd25977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980081"
 ---
 # <a name="getschemas-method-"></a>getSchemas-Methode ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.sql.ResultSet getSchemas()
 ## <a name="remarks"></a>Remarks  
  Diese getSchemas-Methode wird von der getSchemas-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
- Durch die GetSchemas-Methode zurückgegebene Resultset enthält die folgenden Informationen an:  
+ Das Resultset, das von der GetSchemas-Methode zurückgegeben wird, enthält die folgenden Informationen:  
   
 |Name|Typ|und Beschreibung|  
 |----------|----------|-----------------|  

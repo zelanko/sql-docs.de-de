@@ -1,6 +1,6 @@
 ---
-title: SQL Server-Machine Learning-Dienste - Neuigkeiten | Microsoft-Dokumentation
-description: Ankündigungen neuer Merkmale für jede Version von SQL Server 2016 R Services, R Server, SQL Server 2017-Machine Learning Services.
+title: Neuerungen | Microsoft-Dokumentation
+description: Neue Funktions Ankündigungen für jede Version von SQL Server 2016 R Services, R Server SQL Server 2017 Machine Learning Services.
 ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,116 +9,116 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b3b5b5a8a1386086f03681db49b72aca5a294d3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e3859cfb1ada6453a353509b68abe34e71d2840
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961669"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345778"
 ---
-# <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server Machine Learning Services
+# <a name="whats-new-in-sql-server-machine-learning-services"></a>Neues in SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Machine Learning-Funktionen werden mit SQL Server in jedem Release hinzugefügt, während weiter erweitern, erweitern und vertiefen, die Integration zwischen der Datenplattform, erweiterte Analyse und Data Science. 
+Machine Learning-Funktionen werden SQL Server in jeder Version hinzugefügt, da wir die Integration zwischen der Datenplattform, der erweiterten Analyse und Data Science fortsetzen, erweitern und vertiefen. 
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## <a name="new-in-sql-server-2019-preview"></a>Neues in SQL Server-2019 preview
+## <a name="new-in-sql-server-2019-preview"></a>Neu in SQL Server 2019 Preview
 
-Diese Version bietet die am häufigsten gewünschten Features für R- und Python-Machine-Learning-Vorgänge in SQL Server. Weitere Informationen über alle Funktionen in dieser Version finden Sie unter [Neuigkeiten in SQL Server-2019](../sql-server/what-s-new-in-sql-server-ver15.md) und [Versionshinweise für SQL Server-2019](../sql-server/sql-server-ver15-release-notes.md).
+In dieser Version werden die oben angeforderten Features für R-und python Machine Learning-Vorgänge in SQL Server hinzugefügt. Weitere Informationen zu allen Features in dieser Version finden Sie unter [What es New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) und [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 > [!NOTE]
-> Was neue Dokumentation zu Java in SQL Server-2019 ist, finden Sie unter den [Was ist neu in SQL Server-Spracherweiterungen?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
+> Die Dokumentation zu den Neuerungen in Java in SQL Server 2019 finden Sie unter [What New in SQL Server Language Extensions?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
-| Release | Featureupdate |
+| Release | Funktions Update |
 |---------|----------------|
 | CTP 3.0 | Keine Änderungen. |
 | CTP 2.5 | Keine Änderungen. |
-| CTP 2.4 | Linux-Unterstützung für [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) für R und Python. |
-| CTP 2.3 | Python-Code kann auf Windows nur in eine externe Bibliothek mit zugegriffen werden die [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) Anweisung. |
+| CTP 2.4 | Linux-Unterstützung für [Create externe Library (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) für R und python. |
+| CTP 2.3 | Nur unter Windows kann auf Python-Code in einer externen Bibliothek mithilfe der [Create externe Library-Anweisung (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) zugegriffen werden. |
 | CTP 2.2 | Keine Änderungen. |
 | CTP 2.1 | Keine Änderungen. |
-| CTP 2.0 | Linux-Unterstützung für R und Python-Machine-Learning-Plattform. Erste Schritte mit [Installieren von SQL Server Machine Learning Services unter Linux](../linux/sql-server-linux-setup-machine-learning.md). |
-|  | Die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) führt zwei neue Parameter, mit denen Sie problemlos mehrere Modelle von partitionierten Daten generieren können. Weitere Informationen in diesem Tutorial [Partition basierenden Modellen in R erstellen](tutorials/r-tutorial-create-models-per-partition.md). |
-|   | Failover-Clusterunterstützung wird jetzt unterstützt, unter Windows und Linux, vorausgesetzt, dass SQL Server Launchpad-Dienst auf allen Knoten gestartet wurde. Weitere Informationen finden Sie unter [SQL Server-Failoverclusterinstallation](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+| CTP 2.0 | Linux-Platt Form Unterstützung für R und python Machine Learning. Beginnen Sie mit [der Installation SQL Server Machine Learning Services unter Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+|  | [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) führt zwei neue Parameter ein, mit denen Sie problemlos mehrere Modelle aus partitionierten Daten generieren können. Weitere Informationen finden Sie in diesem Tutorial unter [Erstellen von Partitions basierten Modellen in R](tutorials/r-tutorial-create-models-per-partition.md). |
+|   | Die Unterstützung von Failoverclustern wird jetzt unter Windows und Linux unterstützt, vorausgesetzt, SQL Server-Launchpad-Dienst auf allen Knoten gestartet wird. Weitere Informationen finden Sie unter [SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)-Failoverclusterinstallation. |
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-## <a name="new-in-sql-server-2017"></a>Neues in SQLServer 2017
+## <a name="new-in-sql-server-2017"></a>Neu in SQL Server 2017
 
-Diese Version bietet [Python-Unterstützung und branchenweit führende Machine learning-Algorithmen](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Den neuen Bereich entsprechend umbenannt, SQL Server 2017 markiert die Einführung von [SQL Server Machine Learning Services (Datenbankintern)](what-is-sql-server-machine-learning.md), mit sprachunterstützung für Python und R. 
+Diese Version bietet [python-Unterstützung und branchenführende Machine Learning-Algorithmen](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). In SQL Server 2017 wird die Einführung von [SQL Server Machine Learning Services (in-Database)](what-is-sql-server-machine-learning.md)mit Sprachunterstützung für python und R umbenannt, um den neuen Bereich widerzuspiegeln. 
 
-Feature Ankündigungen allumfassende, finden Sie unter [Neuigkeiten in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
+Weitere Informationen zu featureankündigungen finden Sie unter [What es New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
 ### <a name="r-enhancements"></a>R-Erweiterungen
 
-Die R-Komponente des SQL Server 2017-Machine Learning Services ist die nächste Generation von SQL Server 2016 R Services durch aktualisierte Versionen der Basis-R RevoScaler und andere Pakete.
+Die R-Komponente von SQL Server 2017 Machine Learning Services ist die nächste Generation von SQL Server 2016 R Services mit aktualisierten Versionen von Base R, revoscaler und anderen Paketen.
 
-Die neuen Funktionen für R umfassen [ **paketverwaltung**](r/install-additional-r-packages-on-sql-server.md), mit folgenden Vorteilen: 
+Zu den neuen Funktionen von R zählen die [**Paketverwaltung**](r/install-additional-r-packages-on-sql-server.md)mit den folgenden Highlights: 
 
-+ Datenbankrollen können Datenbankadministratoren-Pakete verwalten und Zuweisen von Berechtigungen für die Paketinstallation an.
-+ [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) können DBAs Verwalten von Paketen in der vertrauten T-SQL-Sprache.
-+ [RevoScaleR](r/use-revoscaler-to-manage-r-packages.md) Funktionen können entfernen und Listen Sie die Pakete im Besitz von Benutzern zu installieren. Weitere Informationen finden Sie unter [Gewusst wie: Verwenden der RevoScaleR-Funktionen zum Suchen oder installieren R-Pakete auf SQL Server](r/use-revoscaler-to-manage-r-packages.md).
++ Daten bankrollen helfen DBAs bei der Verwaltung von Paketen und Zuweisen von Berechtigungen für die Paketinstallation.
++ [Create externe Library](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) unterstützt DBAs bei der Verwaltung von Paketen in der vertrauten T-SQL-Sprache.
++ Mithilfe von [revoscaler](r/use-revoscaler-to-manage-r-packages.md) -Funktionen können Sie Pakete installieren, entfernen oder auflisten, die Benutzer besitzen. Weitere Informationen [finden Sie unter Verwenden von revoscaler-Funktionen zum Suchen oder Installieren von R-Paketen auf SQL Server](r/use-revoscaler-to-manage-r-packages.md).
 
 ### <a name="r-libraries"></a>R-Bibliotheken
 
 | Package | Beschreibung |
 |---------|-------------|
-| [**MicrosoftML**](r/ref-r-microsoftml.md) | In dieser Version ist MicrosoftML in einer Standardinstallation von R enthalten beseitigen den Schritt zum Upgrade in der vorherigen SQL Server 2016 R Services erforderlich. MicrosoftML bietet die neuesten Machine learning-Algorithmen und Transformieren von Daten, die skaliert werden können oder die in remotecomputekontexten ausgeführt werden kann. Algorithmen sind anpassbare tiefgreifende neuronale Netzwerke, schnelle Entscheidungsstrukturen und entscheidungswälder, lineare Regression und logistische Regression.  |
+| [**MicrosoftML**](r/ref-r-microsoftml.md) | In dieser Version ist microsoftml in eine Standard-r-Installation integriert, sodass der upgradeschritt entfällt, der in den vorherigen SQL Server 2016 R-Diensten erforderlich ist. Microsoftml bietet moderne Machine Learning-Algorithmen und Daten Transformationen, die in remotecomputekontexten skaliert oder ausgeführt werden können. Algorithmen umfassen anpassbare Deep Neural Networks, schnelle Entscheidungsstrukturen und Entscheidungs Gesamtstrukturen, lineare Regression und logistische Regression.  |
 
-### <a name="python-integration-for-in-database-analytics"></a>Integration von Python für in-Database-Analyse
+### <a name="python-integration-for-in-database-analytics"></a>Python-Integration für Daten bankübergreifende Analysen
 
-Python ist eine Sprache, die mehr Flexibilität und Leistungsfähigkeit für eine Vielzahl von Machine learning-Aufgaben bietet. Open Source-Bibliotheken für Python enthalten mehrere Plattformen für anpassbare neuronale Netzwerke sowie in beliebte Bibliotheken für die Verarbeitung natürlicher Sprache. Jetzt wird diese häufig verwendete Sprache in SQL Server 2017-Machine Learning unterstützt.
+Python ist eine Sprache, die für eine Vielzahl von Machine Learning-Aufgaben eine hohe Flexibilität und Leistungsfähigkeit bietet. Open-Source-Bibliotheken für python umfassen verschiedene Plattformen für anpassbare neuronale Netzwerke sowie beliebte Bibliotheken für die Verarbeitung natürlicher Sprache. Diese häufig verwendete Sprache wird in SQL Server 2017 Machine Learning unterstützt.
 
-Python in der Datenbank-Engine integriert ist, können Sie Analysen in der Nähe der Daten und beseitigen, die Kosten und Sicherheitsrisiken bei der datenverschiebung. Sie können Machine Learning-Lösungen, die basierend auf Python mithilfe von Tools wie Visual Studio bereitstellen. Ihre Produktionsanwendungen können Abrufen von Vorhersagen, Modelle, oder visuelle Elemente aus der Python 3.5-Laufzeit, die mithilfe von SQL Server-Daten auf die Methoden zugreifen.
+Da python in die Datenbank-Engine integriert ist, können Sie Analysen in der Nähe der Daten aufbewahren und die Kosten und Sicherheitsrisiken, die mit der Daten Verschiebung verbunden sind, vermeiden. Sie können Machine Learning-Lösungen basierend auf python mithilfe von Tools wie Visual Studio bereitstellen. Ihre Produktionsanwendungen können mit SQL Server Datenzugriffs Methoden Vorhersagen, Modelle oder visuelle Elemente aus der Python 3,5-Laufzeit abrufen.
 
-Integration von T-SQL und Python wird unterstützt, über die [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) gespeicherten Systemprozedur. Sie können eine beliebige Python-Code, der mit dieser gespeicherten Prozedur aufrufen. Code in einer sicheren, dual-Architektur, die es ermöglicht Unternehmen-Bereitstellung von Python-Modelle und Skripts, die von einer Anwendung mit einer einfachen gespeicherten Prozedur ausgeführt wird. Zusätzliche Leistungsgewinne werden durch Streamen von Daten aus SQL in Python-Prozesse und MPI-ringparallelisierung erreicht.
+Die T-SQL-und python-Integration wird durch die gespeicherte System Prozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) unterstützt. Mit dieser gespeicherten Prozedur können Sie beliebigen Python-Code abrufen. Der Code wird in einer sicheren, dualen Architektur ausgeführt, die die Bereitstellung von python-Modellen und-Skripts auf Unternehmens Niveau ermöglicht und von einer Anwendung mithilfe einer einfachen gespeicherten Prozedur aufgerufen werden kann. Zusätzliche Leistungssteigerungen werden erzielt, indem Daten von SQL an python-Prozesse und MPI-Ring Parallelisierung gestreamt werden.
 
-Können Sie das T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) Funktion ausführen [nativen Bewertung](sql-native-scoring.md) auf ein vortrainiertes Modell, das zuvor in das erforderliche Binärformat gespeichert wurde.
+Sie können die T-SQL- [Vorhersage](../t-sql/queries/predict-transact-sql.md) Funktion verwenden, um eine [native Bewertung](sql-native-scoring.md) für ein vorab trainiertes Modell auszuführen, das zuvor im erforderlichen Binärformat gespeichert wurde.
 
 ### <a name="python-libraries"></a>Python-Bibliotheken
 
 | Package | Beschreibung |
 |---------|-------------|
-|[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-Entsprechung zu RevoScaleR. Sie können Python-Modelle für lineare und logistische Regressionen, Entscheidungsstrukturen, verstärkte Strukturen und zufällige Gesamtstrukturen, die alle parallelisiert werden kann und mit in remotecomputekontexten ausgeführt wird, erstellen. Dieses Paket unterstützt die Verwendung von mehreren Datenquellen und remote Compute-Kontexte. Der Data Scientist oder Entwickler kann Python-Code auf einem remote-SQL-Server, zum Durchsuchen von Daten oder erstellen Sie Modelle ohne Verschieben von Daten ausführen. |
-|[**microsoftml**](python/ref-py-microsoftml.md) |Python-Darstellung des MicrosoftML-R-Pakets. |
+|[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-Äquivalent von revoscaler. Sie können python-Modelle für lineare und logistische Regressionen, Entscheidungsstrukturen, verstärkte Strukturen und zufällige Gesamtstrukturen erstellen, die alle parallelisierbar sind und in remotecomputekontexten ausgeführt werden können. Dieses Paket unterstützt die Verwendung mehrerer Datenquellen und remotecomputekontexte. Der Daten Analyst oder Entwickler kann Python-Code auf einem Remote SQL Server ausführen, um Daten zu durchsuchen oder Modelle zu erstellen, ohne Daten zu verschieben. |
+|[**microsoftml**](python/ref-py-microsoftml.md) |Python-Entsprechung des microsoftml-R-Pakets. |
 
 ### <a name="pre-trained-models"></a>Vortrainierte Modelle
 
-[**Vortrainierte Modelle** ](install/sql-pretrained-models-install.md) stehen für Python und R. diese Modelle für die bilderkennung und positiv Negative stimmungsanalyse, mit der Vorhersagen mit Ihren eigenen Daten generiert. 
+[**Vorab trainierte Modelle**](install/sql-pretrained-models-install.md) sind sowohl für python als auch für R verfügbar. verwenden Sie diese Modelle für die Bild Erkennung und positive negative Stimmungs Analyse, um Vorhersagen für Ihre eigenen Daten zu generieren. 
 
-### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>Eigenständiger Server als freigegebene Funktion in SQL Server-Setup
+### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>Eigenständiger Server als frei gegebenes Feature in SQL Server-Setup
 
-Diese Version auch bietet [SQL Server Machine Learning Server (eigenständig)](r/r-server-standalone.md), eine vollständig unabhängige Data Science-Servers, statistische und predictive Analytics in R und Python unterstützt. Wie mit R Services ist dieser Server der nächsten Version von SQL Server 2016 R Server (eigenständig). Mit dem eigenständigen Server können Sie die Verteilung und skalieren R- oder Python-Lösungen ohne Abhängigkeiten auf SQL Server.
+Diese Version bietet auch [SQL Server Machine Learning Server (eigenständig)](r/r-server-standalone.md), einen vollständig unabhängigen Data Science Server, der statistische und Predictive Analytics in R und python unterstützt. Wie bei R Services ist dieser Server die nächste Version von SQL Server 2016 R Server (eigenständig). Mit dem eigenständigen Server können Sie R-oder python-Lösungen ohne Abhängigkeiten von SQL Server verteilen und skalieren.
 ::: moniker-end
 
-## <a name="new-in-sql-server-2016"></a>Neues in SQLServer 2016
+## <a name="new-in-sql-server-2016"></a>Neu in SQL Server 2016
 
-Diese Version eingeführt Machine learning-Funktionen in SQL Server über **SQL Server 2016 R Services**, eine in-Database-Analyse-Engine für die von R-Verarbeitungsskript auf Residente Daten innerhalb einer Datenbank-Engine-Instanz.
+In dieser Version wurden Machine Learning-Funktionen in SQL Server über **SQL Server 2016 R Services**eingeführt, eine Datenbankanalyse-Engine für die Verarbeitung von R-Skripts in Residenten Daten innerhalb einer Datenbank-Engine-Instanz.
 
-Darüber hinaus **SQL Server 2016 R Server (eigenständig)** als eine Möglichkeit zum Installieren von R Server auf einem Windows-Server veröffentlicht wurde. SQL Server-Setup wird zunächst die einzige Möglichkeit zum Installieren von R Server für Windows bereitgestellt. In späteren Versionen können Entwickler und Data Scientists, die R Server unter Windows sollte einen anderen eigenständigen Installer Sie das gleiche Ziel erreichen. Der eigenständige Server in SQL Server ist funktionell gleichwertig mit der eigenständige Server-Produkts [Microsoft R Server für Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
+Außerdem wurde **SQL Server 2016 R Server (eigenständig)** als Möglichkeit zur Installation von R Server auf einem Windows-Server freigegeben. Anfänglich hat SQL Server-Setup die einzige Möglichkeit bereitgestellt, R Server für Windows zu installieren. In späteren Versionen konnten Entwickler und Datenanalysten, die R Server unter Windows wollten, ein anderes eigenständiges Installationsprogramm verwenden, um das gleiche Ziel zu erreichen. Der eigenständige Server in SQL Server ist funktional äquivalent zum eigenständigen Server Produkt, [Microsoft R Server für Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-Feature Ankündigungen allumfassende, finden Sie unter [Neuigkeiten in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
+Weitere Informationen zu featureankündigungen finden Sie unter [What es New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
-| Release |Featureupdate |
+| Release |Funktions Update |
 |---------|----------------|
-| CU-Erweiterungen | [**Echtzeitbewertung** ](real-time-scoring.md) basiert auf systemeigene C++-Bibliotheken zum Lesen eines Modells in einem optimierten Binärformat gespeichert und anschließend Vorhersagen generieren, ohne die R-Laufzeit aufrufen zu müssen. Dadurch wird die Bewertung Vorgänge wesentlich schneller. Sie können mit echtzeitbewertung, führen eine gespeicherte Prozedur oder ausführen echtzeitbewertung aus R-Code. Echtzeitbewertung ist auch für SQL Server 2016 verfügbar, wenn die Instanz, auf die neueste Version von aktualisiert wird [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
-| Erste Veröffentlichung | [**R-Integration für in-Database-Analyse**](r/sql-server-r-services.md). <br/><br/> R-Pakete für die aufrufende R-Funktionen in T-SQL (und umgekehrt). RevoScaleR-Funktionen geben R-Analysen nach Maß durch Segmentieren der Daten in Komponenten, Koordination und Verwaltung verteilte Verarbeitung und Aggregieren der Ergebnisse. In SQL Server 2016 R Services (Datenbankintern) wird die RevoScaleR-Engine mit einer Datenbank-Engine-Instanz, sind die Daten und Analysen, die zusammen in demselben Verarbeitungskontext integriert. <br/><br/>T-SQL und R-Integration durch [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Sie können eine beliebige R-Code, der mit dieser gespeicherten Prozedur aufrufen. Diese sichere Infrastruktur ermöglicht die Bereitstellung der Unternehmensklasse Rn-Modelle und Skripts, die aus einer Anwendung mit einer einfachen gespeicherten Prozedur aufgerufen werden können. Zusätzliche Leistungsgewinne werden durch Streamen von Daten aus SQL in R-Prozessen und MPI-ringparallelisierung erreicht. <br/><br/>Können Sie das T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) Funktion ausführen [nativen Bewertung](sql-native-scoring.md) auf ein vortrainiertes Modell, das zuvor in das erforderliche Binärformat gespeichert wurde.|
+| Cu-Ergänzungen | Die [**Echtzeitbewertung**](real-time-scoring.md) basiert auf nativen C++ Bibliotheken, um ein in einem optimierten Binärformat gespeichertes Modell zu lesen und dann Vorhersagen zu generieren, ohne die R-Laufzeit aufrufen zu müssen. Dadurch werden Bewertungs Vorgänge erheblich beschleunigt. Mit der Echtzeitbewertung können Sie eine gespeicherte Prozedur ausführen oder die Echtzeitbewertung aus R-Code durchführen. Die Echtzeitbewertung ist auch für SQL Server 2016 verfügbar, wenn für die Instanz ein Upgrade auf die neueste Version [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]von durchgeführt wurde. |
+| Erste Veröffentlichung | [**R-Integration für in-Database-Analysen**](r/sql-server-r-services.md). <br/><br/> R-Pakete zum Aufrufen von r-Funktionen in T-SQL und umgekehrt. Mithilfe von revoscaler-Funktionen können R-Analysen skaliert werden, indem Daten in Komponenten Teile aufgeteilt werden, verteilte Verarbeitung koordiniert und verwaltet wird und Ergebnisse aggregierte werden. In SQL Server 2016 R Services (in-Database) ist die revoscaler-Engine in eine Instanz der Datenbank-Engine integriert, sodass Daten und Analysen im gleichen Verarbeitungs Kontext zusammengefasst werden. <br/><br/>T-SQL-und R-Integration über [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Mit dieser gespeicherten Prozedur können Sie jeden beliebigen R-Code abrufen. Diese sichere Infrastruktur ermöglicht die Bereitstellung von RN-Modellen und-Skripts auf Unternehmens Niveau, die mithilfe einer einfachen gespeicherten Prozedur von einer Anwendung aufgerufen werden können. Zusätzliche Leistungssteigerungen werden erzielt, indem Daten von SQL zu R-Prozessen und MPI-Ring Parallelisierung gestreamt werden. <br/><br/>Sie können die T-SQL- [Vorhersage](../t-sql/queries/predict-transact-sql.md) Funktion verwenden, um eine [native Bewertung](sql-native-scoring.md) für ein vorab trainiertes Modell auszuführen, das zuvor im erforderlichen Binärformat gespeichert wurde.|
 
-## <a name="linux-support-roadmap"></a>Roadmap für die Linux-Unterstützung
+## <a name="linux-support-roadmap"></a>Roadmap für Linux-Support
 
-Bei der Installation der Machine learning-Pakete mit einer Datenbank-Engine-Instanz, fügt 2019 CTP 2.3 von SQL Server Linux-Unterstützung für R und Python hinzu. Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Learning Services unter Linux](../linux/sql-server-linux-setup-machine-learning.md).
+SQL Server 2019 CTP 2,3 fügt die Linux-Unterstützung für R und python hinzu, wenn Sie die Machine Learning-Pakete mit einer Datenbank-Engine-Instanz installieren. Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Learning Services unter Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-Unter Linux, SQL Server 2017 verfügt nicht über R oder Python-Integration, aber Sie können [nativen Bewertung](sql-native-scoring.md) unter Linux, da diese Funktion über T-SQL verfügbar ist [PREDICT](../t-sql/queries/predict-transact-sql.md), die unter Linux ausgeführt wird. Nativen Bewertung können leistungsstarke Bewertungen aus einem vorab trainierten Modell ohne aufrufen oder sogar müssen eine R-Laufzeit.
+Unter Linux verfügt SQL Server 2017 nicht über R-oder python-Integration, Sie können jedoch die [native Bewertung](sql-native-scoring.md) unter Linux verwenden, da diese Funktionalität über die T-SQL- [Vorhersage](../t-sql/queries/predict-transact-sql.md)verfügbar ist, die unter Linux ausgeführt wird. Die native Bewertung ermöglicht eine Bewertung mit hoher Leistung aus einem vorab trainierten Modell, ohne dass aufgerufen wird oder eine R-Laufzeit benötigt wird.
 
 <a name="azure-sql-database-roadmap"></a>
 
-## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning-Dienste in Azure SQL-Datenbank
+## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning Services in Azure SQL-Datenbank
 
-Machine Learning-Dienste (mit R) in Azure SQL-Datenbank ist in der öffentlichen Vorschau. Weitere Informationen finden Sie unter [Azure SQL-Datenbank, Machine Learning Services mit R (Vorschau)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
+Machine Learning Services (mit R) in Azure SQL-Datenbank befindet sich in der öffentlichen Vorschau Phase. Weitere Informationen finden Sie unter [Azure SQL-Datenbank Machine Learning Services mit R (Vorschau)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ [Installieren von SQL Server 2017-Machine Learning-Dienste (Datenbankintern)](install/sql-machine-learning-services-windows-install.md)
-+ [Machine Learning-Tutorials und Beispiele](tutorials/machine-learning-services-tutorials.md)
++ [Installieren von SQL Server 2017 Machine Learning Services (Daten bankeigen)](install/sql-machine-learning-services-windows-install.md)
++ [Tutorials und Beispiele für Machine Learning](tutorials/machine-learning-services-tutorials.md)

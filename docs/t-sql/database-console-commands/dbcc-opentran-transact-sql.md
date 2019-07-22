@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 2199535e258dfce91d0fbf4f7c8b62b30da78528
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039084"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>Argumente  
  *database_name* | *database_id*| 0  
- Der Name oder die ID der Datenbank, für die Informationen zur ältesten Transaktion angezeigt werden sollen. Erfolgt keine Eingabe, oder wird 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
+ Der Name oder die ID der Datenbank, für die Informationen zur ältesten Transaktion angezeigt werden sollen. Wird kein Wert oder der Wert 0 angegeben, wird die aktuelle Datenbank verwendet. Datenbanknamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  TABLERESULTS  
  Gibt die Ergebnisse, die in eine Tabelle geladen werden können, im Tabellenformat an. Verwenden Sie diese Option, um eine Tabelle mit Ergebniswerten zu erhalten, die zum Durchführen von Vergleichen in eine Tabelle eingefügt werden können. Wenn diese Option nicht angegeben ist, werden die Ergebnisse zwecks besserer Lesbarkeit formatiert.  

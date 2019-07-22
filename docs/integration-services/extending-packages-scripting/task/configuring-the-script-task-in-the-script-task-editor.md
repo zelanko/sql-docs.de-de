@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8253108732aab7379e319156abf4af8f4114fc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78daa1ab0b231d0c28e29354ed9faaa2342b7f8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102918"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Konfigurieren des Skripttasks im Skripttask-Editor
 
@@ -56,7 +55,7 @@ ms.locfileid: "65724111"
 > [!NOTE]  
 >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
- Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (**…**) neben dem Eigenschaftenfeld, um Variablen auszuwählen. Weitere Informationen finden Sie unter [Select Variables Page](../../../integration-services/control-flow/select-variables-page.md) (Seite „Variablen auswählen“).  
+ Klicken Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) neben dem Eigenschaftenfeld, um Variablen auszuwählen. Weitere Informationen finden Sie unter [Select Variables Page](../../../integration-services/control-flow/select-variables-page.md) (Seite „Variablen auswählen“).  
   
 ### <a name="edit-script-button"></a>Schaltfläche 'Skript bearbeiten'  
  Über die Schaltfläche **Skript bearbeiten** wird die VSTA-Entwicklungsumgebung gestartet, in der Sie das benutzerdefinierte Skript schreiben. Weitere Informationen siehe [Coding and Debugging the Script Task](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md) (Codieren und Debuggen des Skripttasks).  

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00861c25c03e73f3c5ac2b1f2fe2b94bc0d552d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111764"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ END
   
  Wenn Sie eine nativ kompilierte benutzerdefinierte Skalarfunktion in einer nativ kompilierten gespeicherten Prozedur verwenden, werden die Berechtigungen für die Ausführung der benutzerdefinierten Funktion beim Erstellen der äußeren Prozedur überprüft. Falls der Benutzer, dessen Identität von der äußeren Prozedur angenommen wurde, über keine EXEC-Berechtigungen für die benutzerdefinierte Funktion verfügt, schlägt die Erstellung der gespeicherten Prozedur fehl. Falls der Benutzer nach Ändern der Berechtigungen nicht mehr über EXEC-Berechtigungen verfügt, schlägt die Ausführung der äußeren Prozedur fehl.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Integrierte Funktionen &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Speichern eines Ausführungsplans im XML-Format](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
