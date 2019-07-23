@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a3099541a4eb83e321c0a73422c98b303c375e6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 5456a9c8febe97f7dbfc09ebba52be469b30c3e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136059"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Auswählen zu migrierender Zeilen mithilfe einer Filterfunktion (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +151,7 @@ RETURN  SELECT 1 AS is_eligible
  Sie können keine Unterabfragen oder nicht deterministische Funktionen wie RAND() oder GETDATE() verwenden.  
   
 ## <a name="add-a-filter-function-to-a-table"></a>Hinzufügen einer Filterfunktion zu einer Tabelle  
- Fügen Sie einer Tabelle eine Filterfunktion hinzu, indem Sie die **ALTER TABLE** -Anweisung ausführen und eine vorhandene Inline-Tabellenwertfunktion als Wert des Parameters **FILTER_PREDICATE** angeben. Zum Beispiel:  
+ Fügen Sie einer Tabelle eine Filterfunktion hinzu, indem Sie die **ALTER TABLE** -Anweisung ausführen und eine vorhandene Inline-Tabellenwertfunktion als Wert des Parameters **FILTER_PREDICATE** angeben. Beispiel:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +483,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>So wendet Stretch-Datenbank die Filterfunktion an  
- Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an und bestimmt geeignete Zeilen. Zum Beispiel:  
+ Stretch-Datenbank wendet die Filterfunktion mithilfe des CROSS APPLY-Operators auf die Tabelle an und bestimmt geeignete Zeilen. Beispiel:  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Wenn die Funktion ein nicht leeres Ergebnis für die Zeile zurückgibt, ist die Zeile für die Migration geeignet.  
   
 ## <a name="replacePredicate"></a>Ersetzen einer vorhandenen Filterfunktion  
- Sie können eine zuvor angegebene Filterfunktion ersetzen, indem Sie die **ALTER TABLE** -Anweisung erneut ausführen und einen neuen Wert für den Parameter **FILTER_PREDICATE** angeben. Zum Beispiel:  
+ Sie können eine zuvor angegebene Filterfunktion ersetzen, indem Sie die **ALTER TABLE** -Anweisung erneut ausführen und einen neuen Wert für den Parameter **FILTER_PREDICATE** angeben. Beispiel:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -588,7 +587,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>Entfernen einer Filterfunktion von einer Tabelle  
- Entfernen Sie die vorhandene Funktion, indem Sie **FILTER_PREDICATE**  auf NULL festlegen, um anstelle ausgewählter Zeilen die gesamte Tabelle zu migrieren. Zum Beispiel:  
+ Entfernen Sie die vorhandene Funktion, indem Sie **FILTER_PREDICATE**  auf NULL festlegen, um anstelle ausgewählter Zeilen die gesamte Tabelle zu migrieren. Beispiel:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8fe6c479332a417a52c3d46084f0f221e345375c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000698"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Angeben von Metaeigenschaften in OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "58511137"
 > [!NOTE]  
 >  Sie können in XPath-Navigationen nicht auf diese Metaeigenschaften verweisen.  
   
-|Metaeigenschaftsattribut|Beschreibung|  
+|Metaeigenschaftsattribut|und Beschreibung|  
 |----------------------------|-----------------|  
 |**\@mp:id**|Stellt einen systemgenerierten, dokumentweiten Bezeichner des DOM-Knotens bereit. Dieser Bezeichner verweist auf denselben XML-Knoten, solange das Dokument nicht erneut analysiert wird.<br /><br /> Eine XML-ID von **0** zeigt an, dass es sich bei dem Element um ein Stammelement handelt. Die übergeordnete XML-ID ist NULL.|  
 |**\@mp:localname**|Speichert den lokalen Teil des Knotennamens. Die Metaeigenschaft wird mit einem Präfix und einem Namespace-URI (Uniform Resource Identifier) zur Benennung von Element- oder Attributknoten verwendet.|  
@@ -50,7 +49,7 @@ ms.locfileid: "58511137"
   
  In dieser Tabelle werden die zusätzlichen Eigenschaften übergeordneter Metaeigenschaftsattribute dargestellt, die Ihnen das Abrufen von Hierarchieinformationen ermöglichen.  
   
-|Übergeordnetes Metaeigenschaftsattribut|Beschreibung|  
+|Übergeordnetes Metaeigenschaftsattribut|und Beschreibung|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|Entspricht **../\@mp:id**|  
 |**\@mp:parentlocalname**|Entspricht **../\@mp:localname**|  

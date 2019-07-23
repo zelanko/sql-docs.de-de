@@ -16,13 +16,12 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e8a317472b2d68b82ca51496553b1b6861739f33
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1ed49ebaffb46b8542247e67ff7c639cec1cca1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016113"
 ---
 # <a name="command-parameters"></a>Befehlsparameter
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "66795764"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- Um die Leistung durch eine Reduzierung des Netzwerkverkehrs zu verbessern, leitet der OLE DB-Treiber für SQL Server nicht automatisch Parameterinformationen ab, sondern nur dann, wenn vor der Befehlsausführung **ICommandWithParameters::GetParameterInfo** oder **ICommandPrepare::Prepare** aufgerufen wird. Dies bedeutet, dass der OLE DB-Treiber für SQL Server nicht automatisch ausgeführt:  
+ Um die Leistung durch eine Reduzierung des Netzwerkverkehrs zu verbessern, leitet der OLE DB-Treiber für SQL Server nicht automatisch Parameterinformationen ab, sondern nur dann, wenn vor der Befehlsausführung **ICommandWithParameters::GetParameterInfo** oder **ICommandPrepare::Prepare** aufgerufen wird. Dies bedeutet, dass der OLE DB Treiber für SQL Server nicht automatisch:  
   
 -   Überprüfen der Korrektheit des mit **ICommandWithParameters::SetParameterInfo** angegebenen Datentyps.  
   
@@ -54,11 +53,11 @@ ms.locfileid: "66795764"
 > [!NOTE]  
 >  Der Anbieter unterstützt den Aufruf von **ICommandWithParameters::GetParameterInfo** nicht in Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE- oder DELETE-Anweisungen, die eine FROM-Klausel enthalten; SQL-Anweisungen, die von einer Unterabfrage mit Parametern abhängen; SQL-Anweisungen, die Parametermarkierungen in beiden Ausdrücken eines Vergleichs oder quantifizierten Prädikats enthalten; oder Abfragen, in denen ein Parameter ein Funktionsparameter ist. Bei der Verarbeitung von Batches von SQL-Anweisungen unterstützt der Anbieter überdies keine Aufrufe von **ICommandWithParameters::GetParameterInfo** für Parametermarkierungen in Anweisungen, die der ersten Anweisung im Batch folgen. Kommentare (/* \*/) sind im Befehl [!INCLUDE[tsql](../../../includes/tsql-md.md)] nicht zulässig.  
   
- Der OLE DB-Treiber für SQL Server unterstützt Eingabeparameter in SQL-Anweisungsbefehlen. In prozeduraufrufbefehlen unterstützt der OLE DB-Treiber für SQL Server Eingabe-, Ausgabe- und Eingabe-/Ausgabeparameter. Ausgabeparameterwerte werden entweder nach der Ausführung (nur wenn keine Rowsets zurückgegeben werden) oder nach Abschluss der Rowsetverarbeitung durch die Anwendung an die Anwendung zurückgegeben. Um sicherzustellen, dass zurückgegebene Werte gültig sind, verwenden Sie **IMultipleResults**, um den Einsatz von Rowsets zu erzwingen.  
+ Der OLE DB-Treiber für SQL Server unterstützt Eingabeparameter in SQL-Anweisungs Befehlen. Bei Prozedur aufrufbefehlen unterstützt der OLE DB Treiber für SQL Server Eingabe-, Ausgabe-und Eingabe-/Ausgabeparameter. Ausgabeparameterwerte werden entweder nach der Ausführung (nur wenn keine Rowsets zurückgegeben werden) oder nach Abschluss der Rowsetverarbeitung durch die Anwendung an die Anwendung zurückgegeben. Um sicherzustellen, dass zurückgegebene Werte gültig sind, verwenden Sie **IMultipleResults**, um den Einsatz von Rowsets zu erzwingen.  
   
  Die Namen der Parameter von gespeicherten Prozeduren müssen nicht in einer DBPARAMBINDINFO-Struktur angegeben werden. Geben Sie durch die Angabe von NULL als Wert für das Element *pwszName* an, dass der OLE DB-Treiber für SQL Server den Parameternamen ignorieren und nur die Ordinalzahl verwenden soll, die im Element *rgParamOrdinals* von **ICommandWithParameters::SetParameterInfo** angegeben wurde. Wenn der Befehlstext sowohl benannte als auch unbenannte Parameter enthält, dann müssen alle unbenannten Parameter vor den benannten Parametern angegeben werden.  
   
- Wenn der Name eines Parameters einer gespeicherten Prozedur angegeben wird, dann überprüft der OLE DB-Treiber für SQL Server den Namen, um seine Gültigkeit sicherzustellen. Der OLE DB-Treiber für SQL Server zurück einen Fehler, wenn er vom Consumer einen fehlerhaften Parameternamen erhält.  
+ Wenn der Name eines Parameters einer gespeicherten Prozedur angegeben wird, dann überprüft der OLE DB-Treiber für SQL Server den Namen, um seine Gültigkeit sicherzustellen. Der OLE DB Treiber für SQL Server gibt einen Fehler zurück, wenn er vom Consumer einen fehlerhaften Parameternamen empfängt.  
   
 > [!NOTE]  
 >  Um Unterstützung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML-Typen und benutzerdefinierte Typen (UDT) verfügbar zu machen, implementiert der OLE DB-Treiber für SQL Server eine neue [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)-Schnittstelle.  

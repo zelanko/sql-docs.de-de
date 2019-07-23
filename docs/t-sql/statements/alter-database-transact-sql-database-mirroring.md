@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cdded8444f4778ec7ad46c8b677e6ebb496847b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065819"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE- (Transact-SQL)-Datenbankspiegelung
 
@@ -88,11 +87,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 **'** _partner_server_ **'** Gibt die Netzwerkadresse des Servers einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Failoverpartner in einer neuen Datenbank-Spiegelungssitzung fungiert. Jede Sitzung erfordert zwei Partner, von denen einer als Prinzipalserver, der andere als Spiegelserver beginnt. Die beiden Partner sollten sich auf unterschiedlichen Computern befinden.
 
-Diese Option wird einmal pro Sitzung für jeden Partner angegeben. Für das Starten einer Datenbank-Spiegelungssitzung sind zwei ALTER DATABASE *Datenbank* SET PARTNER **='**_partner_server_**'**-Anweisungen erforderlich. Ihre Reihenfolge ist wichtig. Stellen Sie zuerst eine Verbindung mit dem Spiegelserver her, und geben Sie die Prinzipalserverinstanz als *partner_server* (SET PARTNER **='**_principal_server_**'**) an. Stellen Sie anschließend eine Verbindung mit dem Prinzipalserver her, und geben Sie die Spiegelserverinstanz als *partner_server* (SET PARTNER **='**_mirror_server_**'**) an; auf diese Weise wird eine Datenbank-Spiegelungssitzung zwischen diesen beiden Partnern gestartet. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Einrichten der Datenbankspiegelung](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
+Diese Option wird einmal pro Sitzung für jeden Partner angegeben. Für das Starten einer Datenbank-Spiegelungssitzung sind zwei ALTER DATABASE *Datenbank* SET PARTNER **='** _partner_server_ **'** -Anweisungen erforderlich. Ihre Reihenfolge ist wichtig. Stellen Sie zuerst eine Verbindung mit dem Spiegelserver her, und geben Sie die Prinzipalserverinstanz als *partner_server* (SET PARTNER **='** _principal_server_ **'** ) an. Stellen Sie anschließend eine Verbindung mit dem Prinzipalserver her, und geben Sie die Spiegelserverinstanz als *partner_server* (SET PARTNER **='** _mirror_server_ **'** ) an; auf diese Weise wird eine Datenbank-Spiegelungssitzung zwischen diesen beiden Partnern gestartet. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Einrichten der Datenbankspiegelung](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
 Der Wert von *partner_server* ist eine Server-Netzwerkadresse. Diese hat folgende Syntax:
 
-TCP **://**_\<Systemadresse>_**:**_\<Port>_
+TCP **://** _\<Systemadresse>_ **:** _\<Port>_
 
 Dabei gilt:
 
@@ -101,7 +100,7 @@ Dabei gilt:
 
 Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse – Datenbankspiegelung](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 
-Das folgende Beispiel veranschaulicht die SET PARTNER **='**_partner_server_**'**-Klausel:
+Das folgende Beispiel veranschaulicht die SET PARTNER **='** _partner_server_ **'** -Klausel:
 
 ```
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'
@@ -182,7 +181,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
  **'** _witness_server_ **'** Gibt eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, die als Zeugenserver für die Datenbank-Spiegelungssitzung agiert. Sie können SET WITNESS-Anweisungen nur auf dem Prinzipalserver angeben.
 
-In einer SET WITNESS **='**_witness_server_**'**-Anweisung ist die Syntax von *witness_server* mit der Syntax von *partner_server* identisch.
+In einer SET WITNESS **='** _witness_server_ **'** -Anweisung ist die Syntax von *witness_server* mit der Syntax von *partner_server* identisch.
 
 OFF Entfernt den Zeugen aus einer Datenbank-Spiegelungssitzung. Durch das Festlegen des Zeugen auf OFF wird das automatische Failover deaktiviert. Ist die Datenbank auf FULL SAFETY festgelegt und der Zeuge auf OFF, führt ein Fehler auf dem Spiegelserver dazu, dass der Prinzipalserver die Datenbank nicht verfügbar macht.
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 2692fc27400a5da76e05ce3931502b8b492eca8c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012608"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Speicher für Indexerstellung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

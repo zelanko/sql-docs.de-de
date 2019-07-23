@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4046df811a872bd07e7c49d0f5947aeee37847de
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116460"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ Mit dem Prozedurcache werden kompilierte und ausführbare Pläne zwischengespeic
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten des Resultsets beschrieben.
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |-----------------|-----------------|  
 |**num proc buffs**|Gesamtanzahl von Seiten, die von allen Einträgen im Prozedurcache verwendet werden.|  
 |**num proc buffs used**|Gesamtanzahl von Seiten, die von allen zurzeit verwendeten Einträgen verwendet werden.|  

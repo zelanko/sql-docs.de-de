@@ -1,5 +1,5 @@
 ---
-title: SetTime-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setTime-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7b5ee4f45f339dc1bffc2fcbf02794e4aa004f0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d4b11b2d25abec8717604948101ca81d651fe822
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972452"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>setTime-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

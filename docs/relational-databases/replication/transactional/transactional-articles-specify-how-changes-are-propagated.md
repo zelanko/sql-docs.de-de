@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121255"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Transaktionsartikel – Angeben der Weitergabemethode für Änderungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47683048"
   
 -   **sp_MSdel_\<** *Tabellenname* **>** behandelt Löschvorgänge.  
   
- Der in der Prozedur verwendete **\<**_Tabellenname_**>** hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnementdatenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
+ Der in der Prozedur verwendete **\<** _Tabellenname_ **>** hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnementdatenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
   
  Jede dieser Prozeduren kann durch eine benutzerdefinierte Prozedur ersetzt werden, die Sie beim Hinzufügen eines Artikels zur Veröffentlichung angeben. In einer Anwendung verwendete benutzerdefinierte Prozeduren erfordern eine benutzerdefinierte Logik: z. B. das Einfügen von Daten in eine Überwachungstabelle, wenn eine Zeile auf einem Abonnenten aktualisiert wird. Weitere Informationen zum Angeben von benutzerdefinierten gespeicherten Prozeduren finden Sie in den oben aufgeführten Themen.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "47683048"
   
 -   Wenn Sie Schemaänderungen an einer veröffentlichten Tabelle vornehmen, müssen die benutzerdefinierten Prozeduren neu generiert werden. Weitere Informationen finden Sie unter [Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Zum Beispiel:  
+-   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Beispiel:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -118,7 +117,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>SCALL-Syntax  
  Gespeicherte Prozeduren zu UPDATE  
- Gespeicherte Prozeduren, die UPDATE-Anweisungen verarbeiten, übergeben die aktualisierten Werte nur für die geänderten Spalten, gefolgt von den ursprünglichen Werten der Primärschlüsselspalten, auf die wiederum ein Bitmaskenparameter (**binary(n)**) folgt, der die geänderten Spalten anzeigt. Im folgenden Beispiel wurde die Spalte 2 (c2) nicht geändert:  
+ Gespeicherte Prozeduren, die UPDATE-Anweisungen verarbeiten, übergeben die aktualisierten Werte nur für die geänderten Spalten, gefolgt von den ursprünglichen Werten der Primärschlüsselspalten, auf die wiederum ein Bitmaskenparameter (**binary(n)** ) folgt, der die geänderten Spalten anzeigt. Im folgenden Beispiel wurde die Spalte 2 (c2) nicht geändert:  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +125,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>MCALL-Syntax  
  Gespeicherte Prozeduren zu UPDATE  
- Gespeicherte Prozeduren, die UPDATE-Anweisungen verarbeiten, übergeben die aktualisierten Werte für alle in dem Artikel definierten Spaltenwerte, gefolgt von den ursprünglichen Werten der Primärschlüsselspalten, auf die wiederum ein Bitmaskenparameter (**binary(n)**) folgt, der die geänderten Spalten anzeigt:  
+ Gespeicherte Prozeduren, die UPDATE-Anweisungen verarbeiten, übergeben die aktualisierten Werte für alle in dem Artikel definierten Spaltenwerte, gefolgt von den ursprünglichen Werten der Primärschlüsselspalten, auf die wiederum ein Bitmaskenparameter (**binary(n)** ) folgt, der die geänderten Spalten anzeigt:  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -215,7 +214,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

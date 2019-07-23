@@ -1,5 +1,5 @@
 ---
-title: SetEnablePrepareOnFirstPreparedStatementCall-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: "\"ltenableprepareonfirstpreparedstatus\"-Methode (SQLServerDataSource) | Microsoft-Dokumentation"
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18cd626fb3eee4690d87dd40edd50e64a4dcd98e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26ac2cac075d08b8029ac0e85dacffd1674fb0da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974312"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>setEnablePrepareOnFirstPreparedStatementCall-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt das Verhalten für eine bestimmte Verbindung-Instanz. Wenn diese Konfiguration "false" ist, die erste Ausführung einer vorbereiteten Anweisung Sp_executesql aufgerufen wird, und eine Anweisung nicht vorbereitet werden, nachdem die zweite Ausführung erfolgt, wird Sp_prepexec aufzurufen und tatsächlich einrichten einem vorbereiteten Anweisungshandle. Nach der Ausführung ruft Sp_execute. Dies erspart die Notwendigkeit Sp_unprepare für vorbereitete Anweisung schließen, wenn die Anweisung nur einmal ausgeführt wird.  
+  Gibt das Verhalten für eine bestimmte Verbindungs Instanz an. Wenn diese Konfiguration false ist, ruft die erste Ausführung einer vorbereiteten Anweisung sp_executesql auf, und es wird keine Anweisung vorbereitet, sobald die zweite Ausführung stattfindet, ruft Sie sp_prepexec auf und richtet tatsächlich ein vorbereitetes Anweisungs Handle ein. Bei den folgenden Ausführungen wird sp_execute aufgerufen. Dadurch ist es nicht mehr erforderlich, sp_unprepare on Prepared Statement CLOSE zu schließen, wenn die Anweisung nur einmal ausgeführt wird.  
 ## <a name="syntax"></a>Syntax  
   
 ```
@@ -31,13 +30,13 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 #### <a name="parameters"></a>Parameter  
  *enablePrepareOnFirstPreparedStatementCall*  
   
- Der neue Wert des der **EnablePrepareOnFirstPreparedStatementCall** Connection-Eigenschaft.  
+ Der neue Wert der **enableprepareonfirstpreparedstatus** -Verbindungs Eigenschaft.  
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

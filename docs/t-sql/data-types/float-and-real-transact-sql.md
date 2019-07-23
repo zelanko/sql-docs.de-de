@@ -22,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf461a516371b78a74989ac26f6b79ebbe4853b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086753"
 ---
 # <a name="float-and-real-transact-sql"></a>float und real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Ungefähre Zahlendatentypen für numerische Gleitkommadaten. Gleitkommadaten sind Näherungswerte, deshalb können nicht alle Werte im Bereich des Datentyps exakt dargestellt werden. Das ISO-Synonym für **real** ist **float(24)**.
+Ungefähre Zahlendatentypen für numerische Gleitkommadaten. Gleitkommadaten sind Näherungswerte, deshalb können nicht alle Werte im Bereich des Datentyps exakt dargestellt werden. Das ISO-Synonym für **real** ist **float(24)** .
   
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
-**float** [ **(**_n_**)** ]. Hierbei entspricht *n* der Anzahl von Bits, die zum Speichern der Mantisse der **Gleitkommazahl** in der wissenschaftlichen Schreibweise verwendet werden. Dadurch werden die Genauigkeit und die Speichergröße festlegt. Wenn *n* angegeben wird, muss es sich um einen Wert zwischen **1** und **53** handeln. Der Standardwert von *n* lautet **53**.
+**float** [ **(** _n_ **)** ]. Hierbei entspricht *n* der Anzahl von Bits, die zum Speichern der Mantisse der **Gleitkommazahl** in der wissenschaftlichen Schreibweise verwendet werden. Dadurch werden die Genauigkeit und die Speichergröße festlegt. Wenn *n* angegeben wird, muss es sich um einen Wert zwischen **1** und **53** handeln. Der Standardwert von *n* lautet **53**.
   
 |Wert *n*|Genauigkeit|Speichergröße|  
 |---|---|---|
@@ -49,7 +48,7 @@ Ungefähre Zahlendatentypen für numerische Gleitkommadaten. Gleitkommadaten sin
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verarbeitet *n* als einen von zwei möglichen Werten. Wenn **1**<=n<=**24** gegeben ist, wird *n* als **24** behandelt. Wenn **25**<=n<=**53** gegeben ist, wird *n* als **53** behandelt.  
   
-Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**]-Datentyp entspricht dem ISO-Standard für alle Werte von *n* zwischen **1** und **53**. Das Synonym für **double precision** lautet **float(53)**.
+Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ]-Datentyp entspricht dem ISO-Standard für alle Werte von *n* zwischen **1** und **53**. Das Synonym für **double precision** lautet **float(53)** .
   
 ## <a name="remarks"></a>Remarks  
   

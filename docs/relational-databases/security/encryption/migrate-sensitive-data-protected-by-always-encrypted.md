@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45a3b887688186aaedfc66423b4982629914f159
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: ff72a94df79c6f8fe7b8bb37caeb57587e44b034
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111674"
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migrieren von durch Always Encrypted geschützten sensiblen Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ Die folgende Tabelle zeigt die empfohlenen Einstellungen für mehrere Migrations
 ## <a name="bulk-loading-of-encrypted-data"></a>Massenladen von verschlüsselten Daten  
 Verwenden Sie das folgende Verfahren, um verschlüsselte Daten zu laden.  
 
-1.  Legen Sie die Option für den Benutzer in der Datenbank auf ON fest, der das Ziel für den Massenkopiervorgang darstellt. Zum Beispiel:  
+1.  Legen Sie die Option für den Benutzer in der Datenbank auf ON fest, der das Ziel für den Massenkopiervorgang darstellt. Beispiel:  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
@@ -45,7 +44,7 @@ Verwenden Sie das folgende Verfahren, um verschlüsselte Daten zu laden.
 
 2.  Führen Sie Ihre Massenkopieranwendung oder Ihr Massenkopiertool aus, indem Sie als dieser Benutzer eine Verbindung herstellen. (Wenn Ihre Anwendung einen durch Always Encrypted aktivierten Clienttreiber verwendet, achten Sie darauf, dass die Verbindungszeichenfolge für die Datenquelle nicht **column encryption setting=enabled** enthält. Dadurch stellen Sie sicher, dass die von verschlüsselten Spalten abgerufenen Daten verschlüsselt bleiben. Weitere Informationen finden Sie unter [Always Encrypted &#40;Cliententwicklung&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md).)  
   
-3.  Legen Sie die Option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS wieder auf OFF fest. Zum Beispiel:  
+3.  Legen Sie die Option ALLOW_ENCRYPTED_VALUE_MODIFICATIONS wieder auf OFF fest. Beispiel:  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
@@ -75,6 +74,6 @@ Verwenden Sie diese Option nicht zum Entwickeln neuer Anwendungen. Verwenden Sie
 ## <a name="see-also"></a>Weitere Informationen  
 [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
 [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
-[Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted-Assistent](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 [Always Encrypted &#40;Cliententwicklung&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  

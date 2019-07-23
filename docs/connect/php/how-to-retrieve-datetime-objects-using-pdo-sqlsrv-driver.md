@@ -10,28 +10,28 @@ helpviewer_keywords:
 - date and time types, retrieving as datetime objects
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 54e5b5c9c1ba59ed64db740fbbb1a643e7cb1b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63210438"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264567"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Hinzugefügt in Version 5.6.0, dieses Feature ist nur gültig, bei den PDO_SQLSRV-Treiber für die Verwendung der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].
+Diese Funktion, die in Version 5.6.0 hinzugefügt wurde, ist nur gültig, wenn der PDO_SQLSRV [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Treiber für die verwendet wird.
 
-### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Zum Abrufen von Datums- und Uhrzeittypen als DateTime-Objekte
+### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>So rufen Sie Datums-und Uhrzeit Typen als DateTime-Objekte ab
 
-Bei Verwendung des PDO_SQLSRV, Datums- und Uhrzeittypen (**Smalldatetime**, **"DateTime"** , **Datum**, **Zeit**, **datetime2**, und **Datetimeoffset**) werden standardmäßig als Zeichenfolgen zurückgegeben. Weder das PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE-Attribut als auch die PDO::ATTR_STRINGIFY_FETCHES hat keinerlei Auswirkungen. Zum Abrufen von Datums- und Uhrzeittypen als [PHP-DateTime](http://php.net/manual/en/class.datetime.php) Objekte, legen Sie das Attribut Verbindung oder Anweisung `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` zu **"true"** (es ist **"false"** standardmäßig).
+Bei Verwendung von PDO_SQLSRV werden Datums-und Uhrzeit Typen (**smalldatetime**, **DateTime**, **Date**, **time**, **datetime2**und **DateTimeOffset**) standardmäßig als Zeichen folgen zurückgegeben. Weder das PDO:: ATTR_STRINGIFY_FETCHES-Attribut noch das PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE-Attribut hat keinerlei Auswirkung. Um Datums-und Uhrzeit Typen als PHP- [DateTime](http://php.net/manual/en/class.datetime.php) -Objekte abzurufen, legen Sie das Verbindungs- `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` oder Anweisungs Attribut auf " **true** " fest (Standardmäßig ist dies " **false** ").
 
 > [!NOTE]
-> Dieses Programm oder -Anweisungsattribut gilt nur, um reguläre Abrufen von Datums- und Uhrzeittypen, da DateTime-Objekte können nicht als Output-Parameter angegeben werden.
+> Dieses Verbindungs-oder Anweisungs Attribut gilt nur für das reguläre Abrufen von Datums-und Uhrzeit Typen, da DateTime-Objekte nicht als Ausgabeparameter angegeben werden können.
 
-## <a name="example---use-the-connection-attribute"></a>Beispiel: Verwenden Sie das Verbindungsattribut
-In den folgenden Beispielen lassen Fehler beim Überprüfen der aus Gründen der Übersichtlichkeit. Veranschaulicht, wie das Verbindungsattribut festgelegt:
+## <a name="example---use-the-connection-attribute"></a>Beispiel: Verwenden des Connection-Attributs
+In den folgenden Beispielen wird die Fehlerüberprüfung für die Übersichtlichkeit ausgelassen. Dieses Beispiel zeigt, wie das Verbindungs Attribut festgelegt wird:
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>Beispiel: Verwenden Sie das Anweisungsattribut
-Dieses Beispiel zeigt, wie das Anweisungsattribut festgelegt wird:
+## <a name="example---use-the-statement-attribute"></a>Beispiel: Verwenden des Anweisungs Attributs
+Dieses Beispiel zeigt, wie das Anweisungs Attribut festgelegt wird:
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>Beispiel: verwenden die Option-Anweisung
-Alternativ kann das Anweisungsattribut als eine Option festgelegt werden:
+## <a name="example---use-the-statement-option"></a>Beispiel: Verwenden der Anweisungs Option
+Alternativ kann das Anweisungs Attribut als Option festgelegt werden:
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>Beispiel: Datetime-Datentypen als Zeichenfolgen abrufen
-Das folgende Beispiel zeigt, wie Sie das Gegenteil zu erreichen (die nicht wirklich notwendig ist, da sie standardmäßig "false" ist):
+## <a name="example---retrieve-datetime-types-as-strings"></a>Beispiel: Abrufen von DateTime-Typen als Zeichen folgen
+Im folgenden Beispiel wird gezeigt, wie das Gegenteil erreicht wird (was nicht wirklich notwendig ist, weil es standardmäßig false ist):
 
 ```php
 <?php

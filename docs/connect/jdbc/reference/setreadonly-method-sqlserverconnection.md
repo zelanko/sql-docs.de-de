@@ -1,5 +1,5 @@
 ---
-title: SetReadOnly-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: ltreadonly-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3f73a9fc5a6876bd0490fef73624664f84a0885
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bda879ceba5c6f1193ecdfa09995e851c2bcd6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973155"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>setReadOnly-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public void setReadOnly(boolean readOnly)
 #### <a name="parameters"></a>Parameter  
  *readOnly*  
   
- **"true"** ist die Verbindung schreibgeschützt ist. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Verbindung schreibgeschützt sein soll. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetReadOnly-Methode wird von der SetReadOnly-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese Methode "ltreadonly" wird von der Methode "-Methode" in der Java. SQL. Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

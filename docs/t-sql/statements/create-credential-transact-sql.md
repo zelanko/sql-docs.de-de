@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061030"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,13 +55,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Gibt den Namen für die zu erstellenden Anmeldeinformationen an. *credential_name* darf nicht mit dem Nummernzeichen (#) beginnen. Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).  Wenn eine Shared Access Signature (SAS) verwendet wird, muss dieser Name dem Containerpfad zugeordnet werden können, mit „https“ beginnen und einen Schrägstrich enthalten. Siehe Beispiel D.  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  Gibt den Namen des Kontos an, das beim Herstellen einer Verbindung außerhalb des Servers verwendet wird. Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, ist **IDENTITY** der Name des Schlüsseltresors. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, lautet **IDENTITY** *SHARED ACCESS SIGNATURE*. Siehe Beispiel D.  
  
 > [!IMPORTANT]
 > Azure SQL-Datenbank unterstützt nur Azure Key Vault- und Shared Access Signature-Identitäten. Windows-Benutzeridentitäten werden nicht unterstützt.
  
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  Gibt den geheimen Bereich an, der für die ausgehende Authentifizierung erforderlich ist.  
   
  Wenn die Anmeldeinformationen zum Zugreifen auf Azure Key Vault verwendet werden, müssen an das **SECRET**-Argument von **CREATE CREDENTIAL** die *\<Client-ID>* (ohne Bindestriche) und der *\<geheime Schlüssel>* eines **Dienstprinzipals** in Azure Active Directory zusammen, ohne Leerzeichen dazwischen, übergeben werden. Weitere Informationen finden Sie unten im Beispiel C. Wenn die Anmeldeinformationen eine Shared Access Signature (SAS) verwenden, ist **SECRET** das freigegebene SAS-Token. Siehe Beispiel D.  Informationen über das Erstellen einer gespeicherten Zugriffsrichtlinie und einer Shared Access Signature (SAS) in einem Azure-Container finden Sie unter [Lektion 1: Erstellen einer gespeicherten Zugriffsrichtlinie und von Speicher mit freigegebenem Zugriff](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
@@ -169,7 +168,7 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [Lektion 2: Erstellen von SQL Server-Anmeldeinformationen mit einer Shared Access Signature (SAS)](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Shared Access Signatures](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

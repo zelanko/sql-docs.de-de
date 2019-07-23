@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18c3cb997d08182908b1817ffa1301121159daa8
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+ms.openlocfilehash: c1a7e35c2c2a9428eb700b8429270874176d570a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089853"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Deaktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -162,7 +161,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)  
   
   

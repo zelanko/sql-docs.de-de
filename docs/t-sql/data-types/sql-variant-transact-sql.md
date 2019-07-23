@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a417d8240bb3360a13367230f0017762b51d659
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000502"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ Der **sql_variant**-Datentyp steht im oberen Bereich in der Hierarchieliste der 
 |**money**|Genauer numerischer Wert|  
 |**smallmoney**|Genauer numerischer Wert|  
 |**bigint**|Genauer numerischer Wert|  
-|**ssNoversion**|Genauer numerischer Wert|  
+|**int**|Genauer numerischer Wert|  
 |**smallint**|Genauer numerischer Wert|  
 |**tinyint**|Genauer numerischer Wert|  
 |**bit**|Genauer numerischer Wert|  

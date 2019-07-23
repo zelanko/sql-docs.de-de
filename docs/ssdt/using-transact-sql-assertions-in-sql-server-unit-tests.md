@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140961"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Verwenden von Transact-SQL-Assertionen in SQL Server-Komponententests
 In einem SQL Server-Komponententest wird ein Transact\-SQL-Testskript ausgeführt, von dem ein Ergebnis zurückgegeben wird. In einigen Fällen werden die Ergebnisse als Resultset zurückgegeben. Sie können die Ergebnisse mithilfe von Testbedingungen überprüfen. Beispielsweise können Sie eine Testbedingung verwenden, um zu überprüfen, wie viele Zeilen in einem bestimmten Resultset zurückgegeben wurden, bzw. um zu ermitteln, wie lange ein bestimmter Test gedauert hat. Weitere Informationen zu Testbedingungen finden Sie unter [Verwenden von Testbedingungen in SQL Server-Komponententests](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  

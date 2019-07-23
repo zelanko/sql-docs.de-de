@@ -1,6 +1,6 @@
 ---
 title: Metadatenermittlung | Microsoft-Dokumentation
-description: Metadatenermittlung in OLE DB-Treiber für SQL Server
+description: Metadatenermittlung in OLE DB Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989062"
 ---
 # <a name="metadata-discovery"></a>Metadatenermittlung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "66765982"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (finden Sie unter [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) Informationen)  
+-   ICommandWithParameters:: GetParameterInfo (Weitere Informationen finden Sie unter [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) )  
   
  Das Angeben des Metadatenformats mit IBCPSession::BCPSetBulkMode führt ebenfalls zu einer Leistungsverbesserung.  
   
- Die verbesserte metadatenermittlung in OLE DB-Treiber für SQL Server kann aufgrund des Hinzufügens von zwei gespeicherten Prozeduren in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ Die verbesserte metadatenermittlung in OLE DB Treiber für SQL Server ist aufgrund der Addition von zwei gespeicherten Prozeduren [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]in möglich:  
   
 -   sp_describe_first_result_set  
   

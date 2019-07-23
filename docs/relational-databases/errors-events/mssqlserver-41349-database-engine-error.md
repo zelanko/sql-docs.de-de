@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd365112-a36a-4ba1-888a-b3bc149775e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8620680bde3d5384edce840c342ff2d3ae753f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c48b94273658fc6b8b003937f6162fe6785ab96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123261"
 ---
 # <a name="mssqlserver41349"></a>MSSQLSERVER_41349
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +30,8 @@ ms.locfileid: "47827638"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|HK_ENCRYPTION_ON|  
-|Meldungstext|Warnung: Für eine Datenbank, die mindestens eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit enthält, wurde die Verschlüsselung aktiviert. Die Daten in diesen speicheroptimierten Tabellen werden nicht verschlüsselt.|  
+|Meldungstext|Warnung: Die Verschlüsselung wurde für eine Datenbank aktiviert, die mindestens eine speicheroptimierte Tabelle mit SCHEMA_AND_DATA-Dauerhaftigkeit enthält. Die Daten in diesen speicheroptimierten Tabellen werden nicht verschlüsselt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

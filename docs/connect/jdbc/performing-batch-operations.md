@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Batchvorgängen | Microsoft-Dokumentation
+title: Ausführen von Batch Vorgängen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956227"
 ---
 # <a name="performing-batch-operations"></a>Ausführen von Batchvorgängen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801818"
   
  Zum Übermitteln von Batchupdates können die Klassen [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) verwendet werden. Mit der [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)-Methode können Sie einen Befehl hinzufügen. Mit der [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)-Methode können Sie die Liste der Befehle löschen. Mit der [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)-Methode können Sie alle zu verarbeitenden Befehle übermitteln. In einem Batch können nur DDL- (Data Definition Language) und DML-Anweisungen (Data Manipulation Language) ausgeführt werden, die eine einfache Updatezählung zurückgeben.  
   
- Die executeBatch-Methode gibt ein Array mit **ganzzahligen** Werten zurück, die der Updatezählung der einzelnen Befehle entsprechen. Wenn Sie einen der Befehle fehlschlägt, eine BatchUpdateException ausgelöst, und verwenden Sie die GetUpdateCounts-Methode der-Klasse BatchUpdateException das Update Array mit updatezählungen abrufen. Wenn ein Befehl fehlschlägt, wird die Verarbeitung der restlichen Befehle vom Treiber fortgesetzt. Wenn ein Befehl einen Syntaxfehler enthält, schlagen die Anweisungen im Batch allerdings fehl.  
+ Die executeBatch-Methode gibt ein Array mit **ganzzahligen** Werten zurück, die der Updatezählung der einzelnen Befehle entsprechen. Wenn einer der Befehle fehlschlägt, wird eine BatchUpdateException ausgelöst, und Sie sollten die getupdatecounts-Methode der BatchUpdateException-Klasse verwenden, um das Array für die Update Anzahl abzurufen. Wenn ein Befehl fehlschlägt, wird die Verarbeitung der restlichen Befehle vom Treiber fortgesetzt. Wenn ein Befehl einen Syntaxfehler enthält, schlagen die Anweisungen im Batch allerdings fehl.  
   
 > [!NOTE]  
 >  Wenn keine Updatezählungen verwendet werden müssen, können Sie zuerst eine SET NOCOUNT ON-Anweisung an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeben. Dadurch wird das Verkehrsaufkommen im Netzwerk verringert und zusätzlich die Leistung der Anwendung verbessert.  

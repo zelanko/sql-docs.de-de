@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993527"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Gewusst wie: Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Bei Verwendung des SQLSRV-Treibers für die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], Sie können Datums- und Uhrzeittypen abrufen (**Smalldatetime**, **"DateTime"** , **Datum**, **Zeit**, **datetime2**, und **Datetimeoffset**) als Zeichenfolgen, indem Sie die folgende Option in der Verbindungszeichenfolge oder auf der Anweisungsebene angeben:
+Wenn Sie den sqlsrv-Treiber für [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]verwenden, können Sie Datums-und Uhrzeit Typen (**smalldatetime**, **DateTime**, **Date**, **time**, **datetime2**und **DateTimeOffset**) als Zeichen folgen abrufen, indem Sie Folgendes angeben: -Option in der Verbindungs Zeichenfolge oder auf der Anweisungs Ebene:
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-Der Standardwert ist **false**, was bedeutet, dass die Typen **smalldatetime**, **datetime**, **date**, **time**, **datetime2** und **datetimeoffset** als [PHP DateTime](http://php.net/manual/en/class.datetime.php)-Objekte zurückgegeben werden. Wenn diese Option auf der Anweisungsebene festgelegt ist, überschreibt es die Einstellung der Verbindung.
+Der Standardwert ist **false**, was bedeutet, dass die Typen **smalldatetime**, **datetime**, **date**, **time**, **datetime2** und **datetimeoffset** als [PHP DateTime](http://php.net/manual/en/class.datetime.php)-Objekte zurückgegeben werden. Wenn diese Option auf Anweisungs Ebene festgelegt wird, wird die Einstellung der Verbindungs Ebene überschrieben.
 
-Der PDO_SQLSRV-Treiber gibt standardmäßig eine Datums- und Uhrzeittypen als Zeichenfolgen zurück. Um diese als PHP-DateTime-Objekte abzurufen, finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP "DateTime"-Objekte mit dem PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+Der PDO_SQLSRV-Treiber gibt Datums-und Uhrzeit Typen standardmäßig als Zeichen folgen zurück. Informationen dazu, wie Sie diese als PHP DateTime-Objekte abrufen, finden Sie unter Gewusst [wie: Abrufen von Datums-und Uhrzeit Typen als PHP DateTime-Objekte mithilfe von PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
 ## <a name="example"></a>Beispiel
 Das folgende Beispiel zeigt die Syntax, welche festlegt, dass die Datums- und Uhrzeittypen als Zeichenfolgen abgerufen werden.
@@ -162,7 +161,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>Beispiel
-Die Option "ReturnDatesAsStrings" auf der Anweisungsebene überschreibt die entsprechende Option für die Verbindung.
+Die Option ReturnDatesAsStrings auf der Anweisungs Ebene überschreibt die entsprechende Verbindungs Option.
 
 ```php
 <?php

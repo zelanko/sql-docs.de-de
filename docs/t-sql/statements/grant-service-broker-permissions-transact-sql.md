@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 272702dcf1d6fa05af9c8df3fa1562a1752890ec
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050759"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Berechtigungen von Service Broker) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Gibt eine Berechtigung an, die für ein sicherungsfähiges Service Broker-Element erteilt werden kann.  Unten aufgeführt.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Gibt den Vertrag an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Gibt den Nachrichtentyp an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Gibt die Remotedienstbindung an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Gibt die Route an, für die die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
- SERVICE **::**_dienstname_  
+ SERVICE **::** _dienstname_  
  Gibt den Dienst an, für den die Berechtigung erteilt wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
@@ -190,7 +189,7 @@ GRANT permission  [ ,...n ] ON
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Prinzipale &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ec595bfcbaa0472c1f8b51c9ca8fd07119041024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9182cb55fa1d5e2fd8ffb5f635d801d14f7624ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914416"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Kategorie|Typ|.NET Framework-Typ|Verwendete Formate|  
 |--------------|----------|-------------------------|-----------------|  
 |Numerisch|BIGINT|Int64|NumberStyles.Number|  
-|Numerisch|ssNoversion|Int32|NumberStyles.Number|  
+|Numerisch|INT|Int32|NumberStyles.Number|  
 |Numerisch|SMALLINT|Int16|NumberStyles.Number|  
 |Numerisch|TINYINT|Byte|NumberStyles.Number|  
 |Numerisch|Decimal|Decimal|NumberStyles.Number|  

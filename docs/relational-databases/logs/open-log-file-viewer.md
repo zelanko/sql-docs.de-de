@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6fa028e20cfb0355fc14cc28a4b2ee08fbf9dcb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083985"
 ---
 # <a name="open-log-file-viewer"></a>Öffnen des Protokolldatei-Viewers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47659488"
   
 -   Auftragsverlauf  
   
--   SQL Server  
+-   SQL Server  
   
 -   SQL Server-Agent  
   
@@ -100,9 +99,9 @@ ms.locfileid: "47659488"
   
      Die Protokolle sind **Überwachungsauflistung** und **Windows NT**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Protokolldatei-Viewer](../../relational-databases/logs/log-file-viewer.md)   
- [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Anzeigen von Offlineprotokolldateien](../../relational-databases/logs/view-offline-log-files.md)  
   
   

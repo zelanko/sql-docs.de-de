@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077901"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint und tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +59,7 @@ Die Funktionen geben **bigint** nur dann zurück, wenn der Parameterausdruck vom
 >   
 >  Aus diesem Grund können ähnliche Ausdrücke in Abfragen unterschiedliche Ergebnisse erzeugen. Wenn eine Abfrage nicht automatisch parametrisiert wird, wird der konstante Wert vor dem Konvertieren in den angegebenen Datentyp zunächst in den **numeric**-Datentyp konvertiert, dessen Genauigkeit für den Wert der Konstanten genau ausreicht. Der konstante Wert 1 wird beispielsweise in **numeric (1, 0)** und der konstante Wert 250 in **numeric (3, 0)** konvertiert.  
 >   
->  Wenn eine Abfrage automatisch parametrisiert wird, wird der konstante Wert vor dem Konvertieren in den endgültigen Datentyp immer in **numeric (10, 0)** konvertiert. Wenn der Operator / verwendet wird, kann bei ähnlichen Abfragen nicht nur die Genauigkeit des Ergebnistyps variieren, sondern auch der Ergebniswert. Der Ergebniswert einer automatisch parametrisierten Abfrage, die den Ausdruck `SELECT CAST (1.0 / 7 AS float)` einschließt, weicht beispielsweise vom Ergebniswert derselben Abfrage ab (die nicht automatisch parametrisiert wurde), da die Ergebnisse der automatisch parametrisierten Abfrage abgeschnitten werden, d.h., sie werden an die Länge des **numeric (10, 0)**-Datentyps angepasst.  
+>  Wenn eine Abfrage automatisch parametrisiert wird, wird der konstante Wert vor dem Konvertieren in den endgültigen Datentyp immer in **numeric (10, 0)** konvertiert. Wenn der Operator / verwendet wird, kann bei ähnlichen Abfragen nicht nur die Genauigkeit des Ergebnistyps variieren, sondern auch der Ergebniswert. Der Ergebniswert einer automatisch parametrisierten Abfrage, die den Ausdruck `SELECT CAST (1.0 / 7 AS float)` einschließt, weicht beispielsweise vom Ergebniswert derselben Abfrage ab (die nicht automatisch parametrisiert wurde), da die Ergebnisse der automatisch parametrisierten Abfrage abgeschnitten werden, d.h., sie werden an die Länge des **numeric (10, 0)** -Datentyps angepasst.  
   
 ## <a name="converting-integer-data"></a>Konvertieren von Integerdaten
 Wenn ganze Zahlen implizit in einen Zeichendatentyp konvertiert werden und die ganze Zahl für das Zeichenfeld zu groß ist, fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das ASCII-Zeichen 42 (Sternchen (*)) ein.

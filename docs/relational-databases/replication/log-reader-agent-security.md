@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1dcfcdbc86259d59d4bf6ddb925d48e3f7e34d62
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d3a7ec4984d7426886ddeb39817a75a865314d37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943721"
 ---
 # <a name="log-reader-agent-security"></a>Sicherheit für den Protokolllese-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "54129030"
   
  Alle Konten müssen gültig sein, und für jedes Konto muss das richtige Kennwort angegeben sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Prozesskonto**  
  Geben Sie das Windows-Konto an, unter dem der Protokolllese-Agent auf dem Verteiler ausgeführt wird. Das angegebene Windows-Konto muss mindestens ein Mitglied der festen Datenbankrolle **db_owner** in der Verteilungsdatenbank sein.  
   
