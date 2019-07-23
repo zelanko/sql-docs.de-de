@@ -1,5 +1,5 @@
 ---
-title: SupportsMultipleResultSets-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsmultipleresultsets-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c6abf07e5ff18fba6fd68e8c109388f82bc5eae4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 688d17b7f703dc34658e66e3915b8ffaeda24e7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969224"
 ---
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>supportsMultipleResultSets-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsMultipleResultSets()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsMultipleResultSets-Methode wird von der SupportsMultipleResultSets-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsmultipleresultsets-Methode wird von der supportsmultipleresultsets-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

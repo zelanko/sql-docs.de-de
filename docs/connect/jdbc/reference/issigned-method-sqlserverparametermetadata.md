@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1a4af386-e379-4a60-a107-a99e63a490ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ccfd2816bf81035b893ea8a7ddf30adebd325840
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 46b93b2b5c45491ad91be8b1e40fc909f0c4510d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977236"
 ---
 # <a name="issigned-method-sqlserverparametermetadata"></a>isSigned-Methode (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean isSigned(int param)
  Ein Wert vom Typ **int** zum Angeben des Parameterindexes.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** angemeldet Zahlen der angegebene Parameter enthalten kann. Andernfalls lautet der Wert **false**.  
+ **true** , wenn der angegebene Parameter signierte Zahlen enthalten darf. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese IsSigned-Methode wird von der IsSigned-Methode in der java.sql.ParameterMetaData-Schnittstelle angegeben.  
+ Diese IsSigned-Methode wird von der IsSigned-Methode in der Java. SQL. parametermetadata-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerParameterMetaData-Methoden](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

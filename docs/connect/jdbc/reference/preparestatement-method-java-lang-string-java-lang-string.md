@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e0db2871-3a5f-4fcc-af61-92333042dcd1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 26c783fdf58b9614623fb8a73d3298b222f45563
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fb1020b2e3ebfdc17520110fedf87eb0e6f816e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976121"
 ---
 # <a name="preparestatement-method-javalangstring-javalangstring"></a>prepareStatement-Methode (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,16 +42,16 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
   
  *columnNames*  
   
- Ein **Zeichenfolge** Array von Spaltennamen.  
+ Ein **Zeichen** folgen Array mit Spaltennamen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein "PreparedStatement"-Objekt.  
+ Ein PreparedStatement-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese PrepareStatement-Methode wird von der PrepareStatement-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese prepareStatement-Methode wird von der prepareStatement-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [prepareStatement-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

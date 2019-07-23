@@ -1,5 +1,5 @@
 ---
-title: GetBinaryStream-Methode (long, Long) | Microsoft-Dokumentation
+title: getBinaryStream-Methode (Long, Long) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e78a745e908399efa25e6f72faff9daec2cbd8ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cc12f9e7ed7a83363766355fa5d340a459a332b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953651"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream-Methode (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetBinaryStream-Methode wird von der GetBinaryStream-Methode in der java.sql.Blob-Schnittstelle angegeben.  
+ Diese getBinaryStream-Methode wird von der getBinaryStream-Methode in der Java. SQL. BLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerBlob-Methoden](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

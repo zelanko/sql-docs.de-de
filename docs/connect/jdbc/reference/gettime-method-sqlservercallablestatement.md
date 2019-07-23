@@ -1,5 +1,5 @@
 ---
-title: GetTime-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
+title: getTime-Methode (SQLServerCallableStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 84753fa742825c71b0161bc310e191ad34e3ed37
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5f808bdc5deecb861b4b54eb2d84463e61ec0e39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978982"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>getTime-Methode (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

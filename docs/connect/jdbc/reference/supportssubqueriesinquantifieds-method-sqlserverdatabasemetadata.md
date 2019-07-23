@@ -1,5 +1,5 @@
 ---
-title: SupportsSubqueriesInQuantifieds-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsSubqueriesInQuantifieds-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6749e14c-0f8a-4f1f-8583-dd5cc79b24fe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 471d8bec6d1491ed8e2ddabbf819abdfa68db16d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c57ff4c4f293112cb84706b559f8c1ec2a18cf69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968734"
 ---
 # <a name="supportssubqueriesinquantifieds-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInQuantifieds-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsSubqueriesInQuantifieds()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsSubqueriesInQuantifieds-Methode wird von der SupportsSubqueriesInQuantifieds-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsSubqueriesInQuantifieds-Methode wird von der supportsSubqueriesInQuantifieds-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

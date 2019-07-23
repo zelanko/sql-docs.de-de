@@ -1,5 +1,5 @@
 ---
-title: GetSearchStringEscape-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getsearchstringescape-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 715787197357f6d10f0d116359155c86edb07187
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980048"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>getSearchStringEscape-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSearchStringEscape()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetSearchStringEscape-Methode wird von der GetSearchStringEscape-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getsearchstringescape-Methode wird von der getsearchstringescape-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Diese Methode wird nur für Suchen nach Metadatenmustern verwendet. Sie gibt „\\“ zurück. Mit einem **Zeichenfolgen**-Suchmuster können Platzhalter („%“ und „_“) mit Escapezeichen versehen und durch Voranstellen eines umgekehrten Schrägstrichs als Literale bereitgestellt werden. Hierdurch wird „\\%“ in „[%]“ und „\\\_“ in „[\_]“ konvertiert.  
   

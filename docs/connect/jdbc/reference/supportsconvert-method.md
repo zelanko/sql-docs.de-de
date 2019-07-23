@@ -1,5 +1,5 @@
 ---
-title: SupportsConvert-Methode () | Microsoft-Dokumentation
+title: supportsConvert-Methode () | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 45c83c4f-649a-4cd6-9d44-d38524758bb8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 575a442e9107c45a5b8e49015c3d45fe789d3d96
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cc000039be5ca8a9699100f9bbe4672af26b0530
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969584"
 ---
 # <a name="supportsconvert-method-"></a>supportsConvert-Methode ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsConvert()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsConvert-Methode wird von der SupportsConvert-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsConvert-Methode wird von der supportsConvert-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [supportsConvert-Methode &#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

@@ -6,16 +6,15 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: 2c290d1b8d9265ad5358a6b0f5a2bfd69c604e18
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399904"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264595"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
@@ -52,7 +51,7 @@ Weitere Informationen finden Sie unter [Hinzufügen von Kommentaren zu einem Ber
 
 ### <a name="dax-queries-in-reporting-tools"></a>DAX-Abfragen in Berichtstools
 
-In den neuesten Versionen von Berichts-Generator und SQL Server Data Tools können Sie native DAX-Abfragen für Tabellendatenmodelle von SQL Server Analysis Services erstellen. Sie können Felder ziehen und Ablegen in der Abfrage-Designern. Weitere Informationen finden Sie unter [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+In den neuesten Versionen von Berichts-Generator und SQL Server Data Tools können Sie native DAX-Abfragen für Tabellendatenmodelle von SQL Server Analysis Services erstellen. Sie können Felder in den Abfrage-Designern ziehen und ablegen. Weitere Informationen finden Sie unter [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 ### <a name="rest-api-support"></a>REST-API-Unterstützung
 
@@ -60,7 +59,7 @@ SQL Server Reporting Services unterstützt eine vollständig OpenAPI-kompatible 
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Unterstützung des Abfrage-Designers für DAX jetzt im Berichts-Generator und der SQL Server Data Tools
 
-Mit dem Berichts-Generator und SQL Server Data Tools können Sie jetzt native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen. Sie können den Abfrage-Designer in beiden Tools verwenden, um die gewünschten Felder ziehen und ablegen. Die DAX-Abfrage wird für Sie generiert.
+Mit dem Berichts-Generator und SQL Server Data Tools können Sie jetzt native DAX-Abfragen für unterstützte Tabellendatenmodelle von SQL Server Analysis Services erstellen. Mit dem Abfrage-Designer in beiden Tools können Sie die gewünschten Felder ziehen und ablegen. Die DAX-Abfrage wird dann für Sie generiert.
 
 Mehr dazu erfahren Sie im [Reporting Services-Blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
@@ -74,12 +73,12 @@ Mehr dazu erfahren Sie im [Reporting Services-Blog](https://blogs.msdn.microsoft
 
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-Ein neues [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] ist verfügbar. Das aktualisierte Web-Portal enthält
+Ein neues [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] ist verfügbar. Das aktualisierte Webportal enthält
 - KPIs (Key Performance Indicators)
 - Mobile Berichte
 - Paginierte Berichte
 - Excel-Dateien
-- Power BI Desktop-Dateien
+- Power BI Desktop Dateien
 
 Das [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] ersetzt den Berichts-Manager aus früheren Versionen.
 
@@ -97,7 +96,7 @@ Weitere Informationen zum benutzerdefinierten Branding finden Sie unter [Brandin
 
 #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Key Performance Indicators (KPI) im [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
-Sie erstellen KPIs direkt in die [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , im Kontext mit dem aktuellen Ordner enthalten sind. Wenn Sie KPIs erstellen, können Sie Datasetfelder wählen und deren Werte zusammenfassen. Sie können auch verwandte Inhalte auswählen, um per Drillthrough zu weiteren Details zu gelangen.
+Sie erstellen KPIs direkt in der [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , die sich auf den aktuellen Ordner bezogen haben. Wenn Sie KPIs erstellen, können Sie Datasetfelder wählen und deren Werte zusammenfassen. Sie können auch verwandte Inhalte auswählen, um per Drillthrough zu weiteren Details zu gelangen.
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
@@ -105,12 +104,12 @@ Weitere Informationen finden Sie unter [Arbeiten mit KPIs im Webportal](https://
 
 ### <a name="mobile-reports"></a>Mobile Berichte
 
-Mobile Reporting Services-Berichte sind dedizierte Berichte, die für eine Vielzahl von Formfaktoren optimiert sind und eine optimale Erfahrung für Benutzer bieten, die auf mobilen Geräten auf Berichte zugreifen. Mobile Berichte stellen eine Reihe von Visualisierungen zur Verfügung – von Zeit-, Kategorie- und Vergleichsdiagrammen über Strukturkarten bis zu benutzerdefinierten Karten. Verbinden Sie Ihre mobilen Berichte mit einer Reihe von Datenquellen, einschließlich lokalen mehrdimensionalen und tabellarischen SQL Server Analysis Services-Daten. Sie können Felder für mobile Berichte auf einer Entwurfsoberfläche mit anpassbaren Rasterzeilen platzieren. Die flexiblen Elementen zentral automatisch jede Bildschirmgröße anpassen. Sie können speichern Sie die mobilen Berichte auf einem Reporting Services-Server, und anzeigen und interagieren mit ihnen in einem Browser oder mobile Power BI-app. Unterstützte Geräte enthalten:
+Mobile Reporting Services-Berichte sind dedizierte Berichte, die für eine Vielzahl von Formfaktoren optimiert sind und eine optimale Erfahrung für Benutzer bieten, die auf mobilen Geräten auf Berichte zugreifen. Mobile Berichte stellen eine Reihe von Visualisierungen zur Verfügung – von Zeit-, Kategorie- und Vergleichsdiagrammen über Strukturkarten bis zu benutzerdefinierten Karten. Verbinden Sie Ihre mobilen Berichte mit einer Reihe von Datenquellen, einschließlich lokalen mehrdimensionalen und tabellarischen SQL Server Analysis Services-Daten. Sie können Felder für Mobile Berichte auf einer Entwurfs Oberfläche mit anpassbarer Raster Zeilen und Spalten platzieren. Die flexiblen mobilen Berichts Elemente werden automatisch an jede Bildschirmgröße angepasst. Sie speichern die mobilen Berichte auf einem Reporting Services-Server und können Sie in einem Browser oder in der Power BI Mobile App anzeigen und damit interagieren. Zu den unterstützten Geräten gehören:
 
 - iPad
 - iPhones
-- Android-Smartphones
-- oder von einem Windows 10-Gerät
+- Android-Telefone
+- oder ein beliebiges Windows 10-Gerät
 
 #### <a name="mobile-report-publisher"></a>Publisher für mobile Berichte  
 
@@ -142,7 +141,7 @@ Weitere Informationen finden Sie in den folgenden Themen:
 
 ### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4-Unterstützung  
 
-[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] unterstützt die aktuellen Versionen von Microsoft .NET Framework 4, einschließlich Version 4.0 und 4.5.1. Wenn keine Version von .NET Framework 4.x bereits installiert ist, wird .NET 4.0 vom Setup von [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] während der Installation von Features installiert.  
+[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)]unterstützt die aktuellen Versionen von Microsoft .NET Framework 4, einschließlich Version 4,0 und 4.5.1. Wenn keine Version von .NET Framework 4.x bereits installiert ist, wird .NET 4.0 vom Setup von [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] während der Installation von Features installiert.  
 
 ### <a name="report-improvements"></a>Verbesserungen an Berichten
 
@@ -158,9 +157,9 @@ Weitere Informationen zur Browserunterstützung von finden Sie unter [Browserunt
 
 **Anheften von Berichtselementen an ein Power BI-Dashboard** : Bei der Anzeige eines Berichts im [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]können Sie Berichtselemente auswählen und sie an ein [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] -Dashboard heften.   Die Elemente, die angeheftet werden können, sind Diagramme, Messgerätbereiche, Karten und Bilder. Folgende Aktionen sind möglich:
 
-1. Wählen Sie die Gruppe, die das Dashboard enthält, die, dem Sie anheften möchten.
-2. Wählen Sie das Dashboard, dem Sie das Element anheften möchten.
-3. Wählen Sie, wie oft die Kachel im Dashboard aktualisiert werden soll.
+1. Wählen Sie die Gruppe aus, die das Dashboard enthält, an das Sie anheften möchten.
+2. Wählen Sie das Dashboard aus, an das Sie das Element anheften möchten.
+3. Wählen Sie aus, wie oft die Kachel im Dashboard aktualisiert werden soll.
 
 ![Hinweis](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Die Aktualisierung wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angehängt wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.
 
@@ -180,7 +179,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Weitere Informationen finden Sie unter [Exportieren von Berichten über URL-Zugriff](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF ersetzt ActiveX für Remotedruckvorgänge:** nun gibt der Berichts-Viewer-Symbolleiste über PDF, anstelle von ActiveX-Steuerelemente. Der neue Bericht-Viewer wird von den meisten modernen Browsern, einschließlich Microsoft Edge unterstützt. Es müssen keine ActiveX-Steuerelemente heruntergeladen werden! Abhängig von des Browsers Sie verwenden und die Anwendungen und Dienste, die Sie installiert haben, die Anzeige von PDF [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ein Druckdialogfeld wird geöffnet, um den Bericht zu drucken, oder Sie werden aufgefordert, das Herunterladen einer. PDF-Datei. Als Administrator können Sie weiterhin das clientseitige Drucken über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]deaktivieren.
+**PDF ersetzt ActiveX für Remote Druck:** Die Berichts-Viewer-Symbolleiste druckt nun per PDF anstelle von ActiveX-Steuerelementen. Der neue Berichts-Viewer wird von den meisten modernen Browsern unterstützt, einschließlich Microsoft Edge. Es müssen keine ActiveX-Steuerelemente heruntergeladen werden! Abhängig vom verwendeten Browser und der von Ihnen installierten [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] PDF-Anzeige Anwendungen und-Dienste wird entweder das Dialogfeld Drucken geöffnet, um den Bericht zu drucken, oder Sie werden aufgefordert, einen herunterzuladen. PDF-Datei. Als Administrator können Sie weiterhin das clientseitige Drucken über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]deaktivieren.
 
 Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren des clientseitigen Drucks für Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -193,7 +192,7 @@ Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren des clientse
 |**Aktivieren und Deaktivieren von Abonnements**. Neue Optionen der Benutzeroberfläche ermöglichen ein schnelles Deaktivieren und Aktivieren von Abonnements. Die deaktivierten Abonnements behalten ihre anderen Konfigurationseigenschaften, z. B. den Zeitplan, bei und können leicht aktiviert werden.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Weitere Informationen finden Sie unter [Deaktivieren oder Anhalten der Berichts- und Abonnementverarbeitung](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|Einheitlicher Modus|  
 |**Abonnementbeschreibung**. Wenn Sie ein neues Abonnement erstellen, können Sie jetzt eine Beschreibung des Berichts als Teil der Abonnementeigenschaften einbeziehen. Die Beschreibung ist auf der Seite zur Abonnementzusammenfassung enthalten.|SharePoint- und einheitlicher Modus|  
 |**Ändern des Abonnementbesitzers**. Verbesserte Benutzeroberfläche zum schnellen Ändern des Besitzers eines Abonnements. Bei früheren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] konnten Administratoren die Abonnementbesitzer mithilfe eines Skripts ändern. Ab Version [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] können Sie Abonnementbesitzer über die Benutzeroberfläche oder ein Skript ändern. Das Ändern des Abonnementbesitzers ist eine häufige Verwaltungsaufgabe, wenn Benutzer Ihr Unternehmen verlassen oder eine andere Funktion übernehmen.|SharePoint- und einheitlicher Modus|  
-|**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator nun ein einzelnes Dateifreigabekonto konfigurieren, das für mehrere Abonnements verwendet wird. Das dateifreigabekonto wird konfiguriert, der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Konfigurations-Manager im einheitlichen Modus **ein dateifreigabekonto angeben**. Klicken Sie auf der abonnementkonfigurationsseite wählen Benutzer dann **dateifreigabekonto verwenden**.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|
+|**Freigegebene Anmeldeinformationen für Dateifreigabeabonnements**. Es gibt jetzt zwei Workflows mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dateifreigabeabonnements:<br /><br /> In diesem Release kann Ihr [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Administrator nun ein einzelnes Dateifreigabekonto konfigurieren, das für mehrere Abonnements verwendet wird. Das Dateifreigabe Konto wird im einheitlichen Modus [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] des Configuration Managers konfiguriert. **Geben Sie ein Dateifreigabe Konto**an. Auf der Seite Abonnement Konfiguration wählen Benutzer **Dateifreigabe Konto verwenden**aus.<br /><br /> Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.<br /><br /> Sie können beide Ansätze auch kombinieren, sodass einige Dateifreigabeabonnements das zentrale Dateifreigabekonto verwenden, während andere Abonnements bestimmte Anmeldeinformationen nutzen.|Einheitlicher Modus|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 

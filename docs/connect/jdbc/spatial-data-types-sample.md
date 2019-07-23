@@ -1,5 +1,5 @@
 ---
-title: Räumliche Datentypen Beispiel für MSSQL-JDBC-Treiber | Microsoft-Dokumentation
+title: Beispiel für räumliche Datentypen für MSSQL JDBC Driver | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/30/2018
 ms.prod: sql
@@ -9,19 +9,18 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b05182b5dbed154aafd86feec9f73e433f569791
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a92320dc854a31384df87806bf4eca4615c819fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004397"
 ---
 # <a name="spatial-data-types-sample"></a>Beispiel für räumliche Datentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Dies [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] veranschaulicht, wie erstellen, einfügen und Abrufen von räumlichen Datentypen (Geometry und Geography).
+Diese [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Beispielanwendung veranschaulicht, wie räumliche Datentypen (Geometry und geography) erstellt, eingefügt und abgerufen werden.
   
 Die Codedatei für dieses Beispiel heißt „SpatialDataTypes.java“ und befindet sich im folgenden Pfad:  
 
@@ -38,11 +37,11 @@ Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „m
   
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel erstellt der Beispielcode für eine Tabelle namens SpatialDataTypesTable_JDBC_Sample, die Spalten 'Geometry' und 'Geography' enthält.
+Im folgenden Beispiel erstellt der Beispielcode eine Tabelle mit dem Namen SpatialDataTypesTable_JDBC_Sample, die die Spalten "Geometry" und "geography" enthält.
 
-Das Beispiel erstellt zuerst 'Geometry' und 'Geography'-Objekte aus einer gut-Known Text (WKT), die einen Punkt darstellt. Er verwendet ein sqlserverpreparedstatement-Klasse mit einer parametrisierten Abfrage an, um die Daten entsprechend den einzelnen Spalten zuzuordnen.
+Im Beispiel werden zunächst die Objekte "Geometry" und "geography" aus einem WKT (Well-Known Text) erstellt, der einen Punkt darstellt. Er verwendet eine SQLServerPreparedStatement-Anweisung mit einer parametrisierten Abfrage, um die Daten den einzelnen Spalten entsprechend zuzuordnen.
 
-Schließlich wird im Beispiel fügt die Daten in der Tabelle und ruft es ab. Die Daten werden in Form von WKT angezeigt.
+Schließlich fügt das Beispiel die Daten in die-Tabelle ein und ruft Sie ab. Die Daten werden in Form von WKT angezeigt.
 
 ```java
 import java.sql.Connection;
@@ -98,5 +97,5 @@ public class SpatialDataTypes {
 
 ## <a name="see-also"></a>Weitere Informationen  
 
-[Arbeiten mit dem JDBC-Datentypen](../../connect/jdbc/working-with-data-types-jdbc.md)  
+[Arbeiten mit JDBC-Datentypen](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

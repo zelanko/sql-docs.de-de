@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96fbaf14a04203e08c620b5173bcc2df6d03cb7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10cd57cff29c73a2b99d1489eb122eed37859768
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953273"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream-Methode (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.Reader getCharacterStream(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetCharacterStream-Methode wird von der GetCharacterStream-Methode in der java.sql.NClob-Schnittstelle angegeben.  
+ Diese getcharakteristream-Methode wird von der getcharakteristream-Methode in der Java. SQL. NCLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getCharacterStream-Methode &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

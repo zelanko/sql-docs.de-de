@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003788"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Arbeiten mit Anweisungen und Resultsets
 
@@ -28,9 +27,9 @@ Wenn Sie die Statement- und ResultSet-Objekte von [!INCLUDE[jdbcNoVersion](../..
 
 Wenn Sie eines der Statement-Objekte des JDBC-Treibers verwenden, z.B. ein [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-, ein [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)- oder ein [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Objekt, müssen Sie das für den Auftrag geeignete Objekt verwenden.
 
-- Wenn Sie keine OUT-Parameter verfügen, müssen Sie nicht die SQLServerCallableStatement-Objekt verwendet wird. Verwenden Sie stattdessen die SQLServerStatement oder SQLServerPreparedStatement-Objekt.
+- Wenn Sie nicht über out-Parameter verfügen, müssen Sie nicht das SQLServerCallableStatement-Objekt verwenden. Verwenden Sie stattdessen das SQLServerStatement-oder das SQLServerPreparedStatement-Objekt.
 
-- Wenn Sie nicht die Anweisung nicht mehrmals ausführen möchten oder keine in- oder OUT-Parameter ist, müssen Sie keine SQLServerCallableStatement oder SQLServerPreparedStatement-Objekt verwenden. Verwenden Sie stattdessen die SQLServerStatement-Objekts.
+- Wenn Sie die Anweisung nicht mehrmals ausführen möchten oder keine in-oder out-Parameter haben, müssen Sie nicht das SQLServerCallableStatement-oder das SQLServerPreparedStatement-Objekt verwenden. Verwenden Sie stattdessen das SQLServerStatement-Objekt.
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Verwenden der geeigneten Parallelität für ResultSet-Objekte
 
@@ -38,7 +37,7 @@ Verwenden Sie beim Erstellen von Anweisungen, die Resultsets erzeugen, keine akt
 
 ## <a name="limit-the-size-of-your-result-sets"></a>Einschränken der Größe von Resultsets
 
-Sie sollten die [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)-Methode (bzw. die SQL-Syntax SET ROWCOUNT oder SELECT TOP N) verwenden, um die Anzahl der von möglicherweise umfangreichen Resultsets zurückgegebenen Zeilen zu beschränken. Bei der Verarbeitung von umfangreichen Resultsets sollten Sie eine adaptive Antwortpufferung verwenden, indem Sie die Verbindungszeichenfolgeneigenschaft "responseBuffering" auf "adaptive" (den Standardmodus) festlegen. So kann die Anwendung große Resultsets verarbeiten, ohne serverseitige Cursor verwenden zu müssen, und die Anwendungsspeicherauslastung minimieren. Weitere Informationen finden Sie unter [Using Adaptive Buffering](../../connect/jdbc/using-adaptive-buffering.md).
+Sie sollten die [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)-Methode (bzw. die SQL-Syntax SET ROWCOUNT oder SELECT TOP N) verwenden, um die Anzahl der von möglicherweise umfangreichen Resultsets zurückgegebenen Zeilen zu beschränken. Bei der Verarbeitung von umfangreichen Resultsets sollten Sie eine adaptive Antwortpufferung verwenden, indem Sie die Verbindungszeichenfolgeneigenschaft "responseBuffering" auf "adaptive" (den Standardmodus) festlegen. So kann die Anwendung große Resultsets verarbeiten, ohne serverseitige Cursor verwenden zu müssen, und die Anwendungsspeicherauslastung minimieren. Weitere Informationen finden Sie unter [Verwenden der adaptiven Pufferung](../../connect/jdbc/using-adaptive-buffering.md).
 
 ## <a name="use-the-appropriate-fetch-size"></a>Verwenden der geeigneten Fetchgröße
 

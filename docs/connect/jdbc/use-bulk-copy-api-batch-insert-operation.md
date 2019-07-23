@@ -1,5 +1,5 @@
 ---
-title: Die API für Massenkopieren für Batch-Insert-Vorgang für MSSQL-JDBC-Treiber mit | Microsoft-Dokumentation
+title: Verwenden der Massen Kopier-API für den Batch INSERT-Vorgang für den MSSQL JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,68 +10,67 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 347ce28dc28016f95de2795bd2f5e491dd29e2d8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004138"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC-Treiber 7.0 für die API für Massenkopieren für Batch-Insert-Vorgänge für Azure Data Warehouse mithilfe von SQL Server unterstützt. Dieses Feature ermöglicht das Aktivieren der Treiber, Massenkopieren-Vorgang unter beim Ausführen von Batch insert-Vorgänge durchzuführen. Vorgang zum Einfügen der Treiber zur Verbesserung der Leistung beim Einfügen von die gleichen Daten, da der Treiber mit regulären Batch hätte erreichen möchte. Der Treiber analysiert SQL-Abfrage des Benutzers, Nutzung der API für Massenkopieren anstelle der üblichen Batch Insert-Vorgang. Im folgenden finden, dass die verschiedenen Möglichkeiten zum Aktivieren der API für das Massenkopieren für Batch-Funktion als auch die Liste der Einschränkungen einfügen. Diese Seite enthält auch einen kleinen Codebeispiel für das eine nutzungs- und auch die Leistung zu verbessern.
+Der Microsoft JDBC-Treiber 7,0 für SQL Server unterstützt die Verwendung einer Massen Kopier-API für Batch Einfügungs Vorgänge für Azure Data Warehouse. Diese Funktion ermöglicht es Benutzern, beim Ausführen von Batch Einfügevorgängen einen Massen Kopiervorgang für den-Treiber auszuführen. Der Treiber zielt darauf ab, die Leistung zu verbessern, während die gleichen Daten wie der Treiber mit einem regulären Batch Einfügungs Vorgang eingefügt werden. Der Treiber analysiert die SQL-Abfrage des Benutzers und nutzt dabei die Massen Kopier-API anstelle des üblichen batcheinfügevorgangs. Im folgenden finden Sie verschiedene Möglichkeiten, die Massen Kopier-API für das Batch Einfügungs Feature zu aktivieren, sowie die Liste der Einschränkungen. Diese Seite enthält auch einen kleinen Beispielcode, der die Nutzung und die Leistungssteigerung veranschaulicht.
 
-Dieses Feature gilt nur für "PreparedStatement" und die CallableStatement `executeBatch()`  &  `executeLargeBatch()` APIs.
+Diese Funktion gilt nur für die `executeBatch()`  &  `executeLargeBatch()` APIs PreparedStatement und CallableStatement.
 
 ## <a name="pre-requisites"></a>Voraussetzungen
 
-Es gibt zwei Voraussetzungen für die API für Massenkopieren für batcheinfügung zu aktivieren.
+Zum Aktivieren der Massen Kopier-API für Batch INSERT müssen zwei Voraussetzungen erfüllt sein.
 
-* Der Server muss das Azure Data Warehouse sein.
-* Die Abfrage muss eine Insert-Abfrage (die Abfrage kann die Kommentare enthalten, aber die Abfrage muss mit dem Schlüsselwort "Einfügen" für dieses Feature wirksam werden zu starten).
+* Der Server muss ein Azure-Data Warehouse sein.
+* Bei der Abfrage muss es sich um eine INSERT-Abfrage handeln (die Abfrage enthält möglicherweise Kommentare, aber die Abfrage muss mit dem INSERT-Schlüsselwort beginnen, damit dieses Feature in Kraft tritt).
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Aktivieren die API für Massenkopieren für batcheinfügung
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Aktivieren der Massen Kopier-API für Batch INSERT
 
-Es gibt drei Möglichkeiten, um die API für Massenkopieren für batcheinfügung zu aktivieren.
+Es gibt drei Möglichkeiten, die Massen Kopier-API für Batch INSERT zu aktivieren.
 
 ### <a name="1-enabling-with-connection-property"></a>1. Aktivieren mit der Connection-Eigenschaft
 
-Hinzufügen von **UseBulkCopyForBatchInsert = True;** Zeichenfolge für die Verbindung kann mithilfe dieser Funktion.
+Durch das Hinzufügen von **usebulkcopyforbatchinsert = true;** zur Verbindungs Zeichenfolge wird diese Funktion aktiviert.
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Aktivierung mit setUseBulkCopyForBatchInsert()-Methode der SQLServerConnection-Objekt
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Aktivieren mit der setusebulkcopyforbatchinsert ()-Methode aus dem SQLServerConnection-Objekt
 
-Aufrufen von **SQLServerConnection.setUseBulkCopyForBatchInsert(true)** können mithilfe dieser Funktion.
+Durch den Aufruf von **SQLServerConnection. setusebulkcopyforbatchinsert (true)** wird diese Funktion aktiviert.
 
-**SQLServerConnection.getUseBulkCopyForBatchInsert()** Ruft den aktuellen Wert für **UseBulkCopyForBatchInsert** Connection-Eigenschaft.
+**SQLServerConnection. getusebulkcopyforbatchinsert ()** Ruft den aktuellen Wert der **usebulkcopyforbatchinsert** -Verbindungs Eigenschaft ab.
 
-Der Wert für **UseBulkCopyForBatchInsert** für jede "PreparedStatement" zum Zeitpunkt der Initialisierung konstant bleibt. Alle nachfolgenden Aufrufe **SQLServerConnection.setUseBulkCopyForBatchInsert()** wirkt sich nicht im Hinblick auf den Wert, der bereits erstellten "PreparedStatement".
+Der Wert für **usebulkcopyforbatchinsert** bleibt für jede PreparedStatement-Konstante zum Zeitpunkt seiner Initialisierung konstant. Alle nachfolgenden Aufrufe von **SQLServerConnection. setusebulkcopyforbatchinsert ()** wirken sich nicht auf die bereits erstellte PreparedStatement-Anweisung hinsichtlich ihres Werts aus.
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Aktivierung mit setUseBulkCopyForBatchInsert()-Methode von der SQLServerDataSource-Objekt
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Aktivieren mit der setusebulkcopyforbatchinsert ()-Methode aus dem SQLServerDataSource-Objekt
 
-Ähnlich wie oben, jedoch SQLServerDataSource verwenden, um ein SQLServerConnection-Objekt zu erstellen. Mit beiden Methoden werden die gleichen Ergebnisse erzielt.
+Ähnlich wie oben, aber die Verwendung von SQLServerDataSource zum Erstellen eines SQLServerConnection-Objekts. Mit beiden Methoden werden die gleichen Ergebnisse erzielt.
 
 ## <a name="known-limitations"></a>Bekannte Einschränkungen
 
-Es gibt derzeit diese Einschränkungen, die für dieses Feature gelten.
+Zurzeit gelten diese Einschränkungen für dieses Feature.
 
-* INSERT-Abfragen, die nicht parametrisierten Werten enthalten (z. B. `INSERT INTO TABLE VALUES (?, 2`)), werden nicht unterstützt. Platzhalter (?) sind die einzigen unterstützten Parameter für diese Funktion.
-* INSERT-Abfragen, die INSERT-SELECT-Ausdrücke enthalten (z. B. `INSERT INTO TABLE SELECT * FROM TABLE2`), werden nicht unterstützt.
-* INSERT-Abfragen, die mehrere Ausdrücke enthalten (z. B. `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), werden nicht unterstützt.
-* Abfragen zum Einfügen, die gefolgt von der OPTION-Klausel, mit mehreren Tabellen verknüpft oder gefolgt von einer anderen Abfrage werden nicht unterstützt.
-* Aufgrund von Beschränkungen der API für Massenkopieren `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, und `GEOGRAPHY` -Datentypen werden derzeit nicht unterstützt für diesen -Funktion.
+* INSERT-Abfragen, die nicht parametrisierte Werte (z `INSERT INTO TABLE VALUES (?, 2`. b.) enthalten, werden nicht unterstützt. Platzhalter (?) sind die einzigen unterstützten Parameter für diese Funktion.
+* INSERT-Abfragen, die INSERT-SELECT-Ausdrücke (z `INSERT INTO TABLE SELECT * FROM TABLE2`. b.) enthalten, werden nicht unterstützt.
+* INSERT-Abfragen, die mehrere Wert Ausdrücke (z `INSERT INTO TABLE VALUES (1, 2) (3, 4)`. b.) enthalten, werden nicht unterstützt.
+* INSERT-Abfragen, auf die die Option-Klausel folgt, die mit mehreren Tabellen verknüpft ist, oder auf die eine andere Abfrage folgt, werden nicht unterstützt.
+* Aufgrund `MONEY`der Einschränkungen der Massen Kopier-API werden die Datentypen `DATETIME` `GEOMETRY` `TIME` `DATE`, `DATETIMEOFFSET` `SMALLMONEY` `SMALLDATETIME`,,,,, `GEOGRAPHY` , und derzeit nicht unterstützt. befinden.
 
-Wenn die Abfrage schlägt, da nicht fehl "SQLServer" von Netzwerkfehlern, der Treiber protokolliert der Fehlermeldung und der Fallback mit der ursprünglichen Logik für das Batch-einfügen.
+Wenn die Abfrage aufgrund von nicht "SQL Server"-bezogenen Fehlern fehlschlägt, protokolliert der Treiber die Fehlermeldung und führt einen Fall Back auf die ursprüngliche Logik für die Batch Einfügung aus.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden finden Sie Beispielcode, der den Anwendungsfall für einen Batch Insert-Vorgang für Azure Data Warehouse tausend Zeilen, für beide Szenarien (reguläre Vs-API für Massenkopieren) veranschaulicht.
+Im folgenden finden Sie einen Beispielcode, der den Anwendungsfall für einen Batch Einfügungs Vorgang für Azure DW mit tausend Zeilen für beide Szenarios (reguläre vs-Massen Kopier-API) veranschaulicht.
 
 ```java
     public static void main(String[] args) throws Exception

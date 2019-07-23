@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aff8fbc234efdb76af1a66fd14367865f918f1ea
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b6f9962be0fa138786af425ab24bf9608bf3264f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957233"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Dies [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] beispielanwendung veranschaulicht, wie Ergebnis Abrufmethoden abzurufenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] "SQL-Datenermittlung und-Klassifizierung Information" aus den Tabellen, die solche Informationen enthält.
+Diese [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] Beispielanwendung veranschaulicht, wie Sie mithilfe von gett-Methoden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für das Abrufen von Informationen zur SQL-Daten Ermittlung und-Klassifizierung aus den Tabellen abrufen können, die diese Informationen verwenden.
   
-Die Codedatei für dieses Beispiel heißt DataDiscoveryAndClassification.java, und sie befinden sich am folgenden Speicherort:  
+Die Codedatei für dieses Beispiel heißt "datadiscoveryandclassification. Java" und befindet sich an folgendem Speicherort:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  

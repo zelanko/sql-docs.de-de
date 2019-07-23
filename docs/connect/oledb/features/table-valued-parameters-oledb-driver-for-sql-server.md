@@ -13,13 +13,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB Driver for SQL Server)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d520d07940acaefeb67d38c1e4da9547c8fea344
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af89c2e803be83143351db85b48173b15fad04d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988883"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>Tabellenwertparameter (OLE DB-Treiber für SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66802904"
   Tabellenwertparameter wurden in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] eingeführt und bieten eine effiziente Möglichkeit, mehrere Datenzeilen an den Server zu übergeben. Tabellenwertparameter stellen eine Funktionalität bereit, die der von Parameterarrays gleicht, bieten jedoch eine größere Flexibilität und eine engere Integration mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Oft verbessern sie auch die Leistung. Tabellenwertparameter können auch in setbasierten Vorgängen verwendet werden, während dies mit Parameterarrays nicht möglich ist.  
   
   
- Weitere Informationen zu Tabellenwertparametern und OLE DB, finden Sie unter [Table-Valued Parameters &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
+ Informationen zu Tabellenwert Parametern und OLE DB finden Sie unter [Tabellenwert Parameter &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md) 

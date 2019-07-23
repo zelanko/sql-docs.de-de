@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren von Daten in Rowsets | Microsoft-Dokumentation
-description: Aktualisieren von Daten in Rowsets, die mithilfe von OLE DB-Treiber für SQL Server
+description: Aktualisieren von Daten in Rowsets mithilfe OLE DB Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3e6a03d5bc379b620db06e0f1308058d647397e1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015337"
 ---
 # <a name="updating-data-in-rowsets"></a>Aktualisieren von Daten in Rowsets
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "66803781"
 
   Der OLE DB-Treiber für SQL Server aktualisiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Daten, wenn ein Consumer ein modifizierbares Rowset aktualisiert, das diese Daten enthält. Ein modifizierbares Rowset wird erstellt, wenn der Consumer entweder für die **IRowsetChange**-Schnittstelle oder die **IRowsetUpdate**-Schnittstelle Unterstützung anfordert.  
   
- Alle OLE DB-Treiber für SQL Server modifizierbare Rowsets verwenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Cursor zur Unterstützung des Rowsets. Die Rowseteigenschaft DBPROP_LOCKMODE ändert das Parallelitätskontrollverhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bei Cursorn und bestimmt das Verhalten für den Zeilenabruf bei Rowsets sowie die Fehlergenerierung in Bezug auf die Datenintegrität in aktualisierbaren Rowsets.  
+ Alle OLE DB Treiber für SQL Server änderbare Rowsets verwenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cursor zur Unterstützung des Rowsets. Die Rowseteigenschaft DBPROP_LOCKMODE ändert das Parallelitätskontrollverhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bei Cursorn und bestimmt das Verhalten für den Zeilenabruf bei Rowsets sowie die Fehlergenerierung in Bezug auf die Datenintegrität in aktualisierbaren Rowsets.  
   
- Der OLE DB-Treiber für SQL Server unterstützt die zeilensynchronisierung vor oder nach einem Update.  
+ Der OLE DB Treiber für SQL Server unterstützt die Zeilen Synchronisierung vor oder nach einem Update.  
   
 > [!NOTE]  
 >  IRowChange::SetColumns ist verfügbar, um die Werte mindestens einer benannten Spalte eines Zeilenobjekts festzulegen.  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9a0c802-7851-4826-b173-87b0c0acb3a0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5191714532304bd97b2dc30d8d0e1f18a60b938e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d680bc3ee42be70ec8f8445967599550ebbec2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973350"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int"></a>setObject-Methode (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

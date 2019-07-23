@@ -1,5 +1,5 @@
 ---
-title: IsCatalogAtStart-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: isCatalogAtStart-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 92a4e73c388eac1f79eee915e9dd26a79ce9a732
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9dabb3084bf42ed60a408e6158f70f2b9ae20e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977757"
 ---
 # <a name="iscatalogatstart-method-sqlserverdatabasemetadata"></a>isCatalogAtStart-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isCatalogAtStart()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn der erste der Name des Katalogs ist. Andernfalls lautet der Wert **false**.  
+ **true** , wenn der Katalog Name der erste Wert ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese IsCatalogAtStart-Methode wird von der IsCatalogAtStart-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese isCatalogAtStart-Methode wird von der isCatalogAtStart-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

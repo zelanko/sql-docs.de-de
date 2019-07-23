@@ -1,5 +1,5 @@
 ---
-title: JDBC 4.3 Kompatibilität für den JDBC-Treiber | Microsoft-Dokumentation
+title: JDBC 4,3-Kompatibilität für den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/24/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 02aef28bb40c4d4f48b28630d1752c9e5f88c3e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 20cefb029a126b0a262d86a2dc0a0791959085bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956367"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC 4.3-Kompatibilität für den JDBC-Treiber
 
@@ -25,11 +24,11 @@ ms.locfileid: "66781546"
 > [!NOTE]  
 > Versionen des Microsoft JDBC-Treibers für SQL Server vor Version 6.4 sind nur mit den Spezifikationen der JDBC-API 4.2 (Java Database Connectivity) konform. Dieser Abschnitt trifft auf Versionen bis einschließlich Version 6.4 nicht zu.
 
-Ab Version 6.4, Microsoft JDBC-Treiber für SQL Server, JAVA 9 kompatibel ist, und löst `SQLFeatureNotSupportedException` für neue JDBC 4.3-APIs, die Methoden nicht implementiert haben.
+Ab Version 6,4 ist der Microsoft JDBC-Treiber für SQL Server Java 9-kompatibel und `SQLFeatureNotSupportedException` löst neue JDBC 4,3-APIs mit nicht implementierten Methoden aus.
 
-Mit Microsoft JDBC-Treiber 7.0 für SQL Server-Version des Treibers ist nun JAVA 10 kompatibel und unterstützt, die unten genannten APIs. Löst der Treiber `SQLFeatureNotSupportedException` für andere nicht implementierten Methoden von JDBC 4.3-Spezifikationen.
+Mit dem Microsoft JDBC Driver 7,0 for SQL Server Release ist der Treiber jetzt Java 10-kompatibel und unterstützt die unten erwähnten APIs. Der Treiber `SQLFeatureNotSupportedException` löst für andere nicht implementierte Methoden aus JDBC 4,3-Spezifikationen aus.
 
 |Neue API|und Beschreibung|Bemerkenswerte Implementierungsdetails|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|Hinweise an, die der Treiber, den eine Anforderung, unabhängige Einheit arbeiten, für diese Verbindung beginnt. Weitere Informationen finden Sie unter [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Speichert die Werte der Verbindungsfelder, die geändert werden, über die öffentliche API-Methoden sind: `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
-|void java.sql.connection.endRequest()|Hinweise an, die der Treiber, den eine Anforderung, eine unabhängige Arbeitseinheit abgeschlossen wurde. Weitere Informationen finden Sie unter [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Schließen die Anweisungen, die während der die Arbeitseinheit erstellt werden, und alle geöffneten Transaktionen ein Rollback aus. Die Methode wird auch die Änderungen an die Verbindungsfelder, die oben aufgeführt sind.|
+|void java.sql.connection.beginRequest()|Hinweise für den Treiber, dass eine Anforderung, eine unabhängige Arbeitseinheit, mit dieser Verbindung beginnt. Weitere Informationen finden Sie unter [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Speichert die Werte der Verbindungs Felder, die durch öffentliche API-Methoden geändert werden können `databaseAutoCommitMode`: `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`,, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
+|void java.sql.connection.endRequest()|Gibt dem Treiber Hinweise, dass eine Anforderung (eine unabhängige Arbeitseinheit) abgeschlossen wurde. Weitere Informationen finden Sie unter [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Schließt die-Anweisungen, die während der Arbeitseinheit erstellt werden, und führt ein Rollback für alle geöffneten Transaktionen aus. Die-Methode stellt auch die Änderungen an den oben aufgeführten Verbindungs Feldern wieder her.|

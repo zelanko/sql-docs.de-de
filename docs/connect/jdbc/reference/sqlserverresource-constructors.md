@@ -1,5 +1,5 @@
 ---
-title: SQLServerResource-Konstruktoren | Microsoft-Dokumentation
+title: Sqlserverresource-Konstruktoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3d13d934-542c-4aaa-8fe2-1bcb36c8cc4c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bff005bcbdefbc45faa4173cf82c45db4c843133
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2edd88ab5bb371818e1b60888c4c59679f525524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970671"
 ---
 # <a name="sqlserverresource-constructors"></a>SQLServerResource-Konstruktoren
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Informationen zu den Elementen von [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md), finden Sie unter [SQLServerResource-Elemente](../../../connect/jdbc/reference/sqlserverresource-members.md).  
+  Informationen zu den Elementen von [sqlserverresource](../../../connect/jdbc/reference/sqlserverresource-class.md)finden Sie unter [sqlserverresource Members](../../../connect/jdbc/reference/sqlserverresource-members.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: GetSQLStateType-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: gezqlstatuetype-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979733"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Typ **int** zum Angeben des SQLSTATE-Typs. Mögliche Werte:  
   
--   Java Runtime Environment, Version 5.0: Wenn die **xopenstates-Eigenschaft** Connection-Eigenschaft wird festgelegt, um **"true"** , gibt diese Methode DatabaseMetaData.sqlStateXOpen zurück. Andernfalls DatabaseMetaData.sqlStateSQL99.  
+-   Für Java Runtime Environment Version 5,0: Wenn die **xopenstates** -Verbindungs Eigenschaft auf **true**festgelegt ist, gibt diese Methode DatabaseMetaData. sqlstatexopen zurück. Andernfalls DatabaseMetaData.sqlStateSQL99.  
   
--   Java Runtime Environment, Version 6.0: Wenn die **xopenstates-Eigenschaft** Connection-Eigenschaft auf festgelegt ist **"true"** , gibt diese Methode DatabaseMetaData.sqlStateXOpen zurück. Andernfalls DatabaseMetaData.sqlStateSQL.  
+-   Für Java Runtime Environment Version 6,0: Wenn die **xopenstates** -Verbindungs Eigenschaft auf **true**festgelegt ist, gibt diese Methode DatabaseMetaData. sqlstatexopen zurück. Andernfalls DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetSQLStateType-Methode wird von der GetSQLStateType-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese gezqlstatuetype-Methode wird von der gezqlstatuetype-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

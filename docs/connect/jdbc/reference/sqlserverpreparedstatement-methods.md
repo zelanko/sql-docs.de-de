@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: f0e1be74-b7a3-4b81-8835-0a8bc3aaa3f5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 84236db13ef69d9bc308d5fa5700b56723eb75db
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f745ba5bcdaf17baee8eb180b4f97f6949a43267
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970742"
 ---
 # <a name="sqlserverpreparedstatement-methods"></a>SQLServerPreparedStatement-Methoden
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Weitere Informationen über die Elemente von SQLServerPreparedStatement finden Sie unter [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md).  
+  Weitere Informationen zu den Elementen von SQLServerPreparedStatement finden Sie unter [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)-Member.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

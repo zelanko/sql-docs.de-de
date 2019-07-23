@@ -1,5 +1,5 @@
 ---
-title: LocatorsUpdateCopy-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: loaseorsupdatecopy-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01cf5c8d9d4d4b40e4f76040725a81e6424bb254
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5e9e800c326f18b5247d1257431bb2243ad00c57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976845"
 ---
 # <a name="locatorsupdatecopy-method-sqlserverdatabasemetadata"></a>locatorsUpdateCopy-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean locatorsUpdateCopy()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn Updates auf eine Kopie vorgenommen werden. **"false"** Wenn direkte Updates vorgenommen werden.  
+ **true** , wenn Aktualisierungen an einer Kopie vorgenommen werden. **false** , wenn Updates direkt erstellt werden.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Diese LocatorsUpdateCopy-Methode wird von der LocatorsUpdateCopy-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese loaseorsupdatecopy-Methode wird von der loaseorsupdatecopy-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Ablaufverfolgung für Treibervorgänge | Microsoft-Dokumentation
+title: Ablauf Verfolgungs Treiber-Vorgang | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916687"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66798258"
 > [!NOTE]  
 >  Für die im JDBC-Treiber enthaltene systemeigene Komponente ("sqljdbc_xa.dll") wird die Ablaufverfolgung durch das BID-Framework (Built-In Diagnostics) ermöglicht. Informationen zu BID finden Sie unter [Verfolgung des Datenzugriffs in SQL Server](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
- Wenn Sie Ihre Anwendung entwickeln, können Sie Aufrufe an Logger-Objekte absetzen, die wiederum LogRecord-Objekte erstellen. Diese werden anschließend zur Verarbeitung an Handler-Objekte übergeben. Protokollierung und -Handler Objekte beide verwenden Protokolliergrade und optional Protokollierungsfilter, um zu steuern, welche LogRecords verarbeitet werden. Nach Abschluss der Protokolliervorgänge können die Handler-Objekte die Protokollinformationen ggf. mit Formatter-Objekten veröffentlichen.  
+ Wenn Sie Ihre Anwendung entwickeln, können Sie Aufrufe an Logger-Objekte absetzen, die wiederum LogRecord-Objekte erstellen. Diese werden anschließend zur Verarbeitung an Handler-Objekte übergeben. Protokollierungs-und Handlerobjekte verwenden sowohl Protokollierungs Ebenen als auch optional Protokollierungs Filter, um zu bestimmen, welche Protokolldaten Sätze verarbeitet werden. Nach Abschluss der Protokolliervorgänge können die Handler-Objekte die Protokollinformationen ggf. mit Formatter-Objekten veröffentlichen.  
   
  Standardmäßig erfolgt die Ausgabe des java.util.logging-Frameworks in eine Datei. Diese Ausgabeprotokolldatei muss Schreibberechtigungen für den Kontext aufweisen, unter dem der JDBC-Treiber ausgeführt wird.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66798258"
   
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|AuthenticationJNI|Protokolliert Meldungen in Bezug auf die Windows-integriert Authentifizierungsprobleme (wenn die **AuthenticationScheme** -Verbindungseigenschaft implizit oder explizit festgelegt ist **NativeAuthentication**).<br /><br /> Die Anwendungen können den Protokolliergrad auf FINER und FINE festlegen.|  
+|AuthenticationJNI|Protokolliert Meldungen zu Problemen mit der integrierten Windows-Authentifizierung (wenn die Verbindungs Eigenschaft " **authenticationScheme** " implizit oder explizit auf " **nativeauthentication**" festgelegt ist).<br /><br /> Die Anwendungen können den Protokolliergrad auf FINER und FINE festlegen.|  
 |SQLServerConnection|Protokolliert Meldungen in der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Die Anwendungen können den Protokolliergrad auf FINE und FINER festlegen.|  
 |SQLServerDataSource|Protokolliert Meldungen in den Klassen [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) und [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md).<br /><br /> Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
 |InputStream|Protokolliert Meldungen zu den folgenden Datentypen: java.io.InputStream, java.io.Reader und Datentypen mit einem max-Spezifizierer wie die Datentypen varchar, nvarchar und varbinary.<br /><br /> Die Anwendungen können den Protokolliergrad auf FINER festlegen.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66798258"
 |SQLServerResultSet|Protokolliert Meldungen in der Klasse [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Die Anwendungen können den Protokolliergrad auf FINE, FINER und FINEST festlegen.|  
 |SQLServerStatement|Protokolliert Meldungen in der Klasse [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Die Anwendungen können den Protokolliergrad auf FINE, FINER und FINEST festlegen.|  
 |XA|Protokolliert Meldungen für alle XA-Transaktionen in der Klasse [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Die Anwendungen können den Protokolliergrad auf FINE und FINER festlegen.|  
-|KerbAuthentication|Protokolliert Meldungen zur Kerberos-Authentifizierung Typ 4 (wenn die **AuthenticationScheme** Connection-Eigenschaft wird festgelegt, um **Java Kerberos**). Für die Anwendung kann der Protokolliergrad auf FINE oder FINER festgelegt werden.|  
+|KerbAuthentication|Protokolliert Meldungen bezüglich der Kerberos-Authentifizierung vom Typ 4 (wenn die **authenticationScheme** -Verbindungs Eigenschaft auf **javakerberos**festgelegt ist). Für die Anwendung kann der Protokolliergrad auf FINE oder FINER festgelegt werden.|  
 |TDS.DATA|Protokolliert Meldungen, die Konversationen auf TDS-Protokollebene zwischen Treiber und SQL Server enthalten. Die ausführlichen Inhalte jedes gesendeten und empfangenen TDS-Pakets werden in ASCII und hexadezimal protokolliert. Die Anmeldeinformationen (Benutzernamen und Kennwörter) werden nicht protokolliert. Alle sonstigen Daten werden protokolliert.<br /><br /> Diese Kategorie erstellt sehr ausführliche Meldungen. Sie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  
 |TDS.Channel|Diese Kategorie verfolgt Aktionen der TCP-Kommunikationskanäle mit SQL Server. Die protokollierten Meldungen umfassen das Öffnen und Schließen von Sockets sowie Lese- und Schreibvorgänge. Außerdem werden Meldungen zum Herstellen einer SSL (Secure Sockets Layer)-Verbindung mit SQL Server verfolgt.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINE, FINER oder FINEST festgelegt wird.|  
 |TDS.Writer|Diese Kategorie verfolgt Schreibvorgänge für den TDS-Kanal. Beachten Sie, dass nur die Länge der Schreibvorgänge verfolgt wird, nicht deren Inhalt. Diese Kategorie verfolgt außerdem Probleme, wenn zum Abbrechen der Ausführung einer Anweisung ein Achtungssignal gesendet wird.<br /><br /> Diese Kategorie kann nur aktiviert werden, indem der Protokolliergrad auf FINEST festgelegt wird.|  

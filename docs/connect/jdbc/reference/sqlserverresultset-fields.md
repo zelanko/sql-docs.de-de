@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 30b8fbee-8818-4217-95be-ab1aa9230062
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f40c415aa0e70605285c49e7442f69b99f87a4b2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 84c3869410f6a09b7e05d6b2960be4d14b3d4a9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970579"
 ---
 # <a name="sqlserverresultset-fields"></a>SQLServerResultSet-Felder
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Weitere Informationen über die Elemente von SQLServerResultSet finden Sie unter [SQLServerResultSet-Elemente](../../../connect/jdbc/reference/sqlserverresultset-members.md).  
+  Informationen zu den Elementen von SQLServerResultSet finden Sie unter [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)-Member.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

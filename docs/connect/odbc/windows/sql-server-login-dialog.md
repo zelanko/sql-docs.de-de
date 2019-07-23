@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Anmeldedialogfeld (ODBC) | Microsoft-Dokumentation
+title: Dialog Feld "SQL Server-Anmeldung" (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989423"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Dialogfeld „SQL Server-Anmeldung“ (ODBC)
 
@@ -34,14 +33,14 @@ Weitere Informationen über Servernamen für andere Typen von Netzwerken finden 
 
 ### <a name="authentication-mode"></a>Authentifizierungsmodus
 
-Wählt den Authentifizierungsmodus aus einem der folgenden:
+Wählt den Authentifizierungsmodus aus einer der folgenden Aktionen aus:
 - **SQL Server** mit Anmelde-ID und Kennwort
-- **Windows-integrierte** Authentifizierung mithilfe des aktuell angemeldeten Benutzers-Kontos
-- **Active Directory-Kennwortauthentifizierung** mit Anmelde-ID und Kennwort
-- **Active Directory integrierte** Authentifizierung mithilfe des aktuell angemeldeten Benutzers-Kontos
+- **Integrierte Windows** -Authentifizierung mit dem Konto des aktuell angemeldeten Benutzers
+- **Kennwort** mit Anmelde-ID und Kennwort Active Directory
+- **Active Directory integrierte** Authentifizierung mit dem Konto des aktuell angemeldeten Benutzers
 - **Interaktive Active Directory-Authentifizierung** mit Anmelde-ID
 
-Finden Sie unter [Data Source-Assistent Bildschirm 2](../../../connect/odbc/windows/dsn-wizard-2.md) für Weitere Informationen zu den Authentifizierungsmodi.
+Weitere Informationen zu den Authentifizierungs Modi finden Sie unter [Datenquellen-Assistent (Bildschirm 2](../../../connect/odbc/windows/dsn-wizard-2.md) ).
 
 ### <a name="server-spn"></a>Server-SPN
 
@@ -49,11 +48,11 @@ Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstp
 
 ### <a name="login-id"></a>Login ID
 
-Gibt an, die SQL Server oder Azure Active Directory-Anmelde-ID für die Verbindung verwendet werden sollen, wenn **Authentifizierungsmodus** nastaven NA hodnotu **SQL Server** oder **Active Directory-Kennwortauthentifizierung** oder **Interaktive active Directory**. Andernfalls die **Anmelde-ID** Feld ist deaktiviert.
+Gibt die SQL Server oder Azure Active Directory Anmelde-ID an, die für die Verbindung verwendet werden soll, wenn der **Authentifizierungsmodus** auf **SQL Server** oder **Active Directory Kennwort** oder **Active Directory interaktiv**festgelegt ist. Andernfalls ist das Feld **Anmelde-ID** deaktiviert.
 
 ### <a name="password"></a>Kennwort
 
-Gibt das Kennwort für die SQL Server oder Azure Active Directory Anmelde-ID, die für die Verbindung verwendet wird, wenn **Authentifizierungsmodus** nastaven NA hodnotu **SQL Server** oder **Active Directory-Kennwortauthentifizierung**. Andernfalls die **Kennwort** Feld ist deaktiviert.
+Gibt das Kennwort für den SQL Server oder Azure Active Directory Anmelde-ID für die Verbindung an, wenn der **Authentifizierungsmodus** auf **SQL Server** oder **Active Directory Kennwort**festgelegt ist. Andernfalls ist das Feld **Kennwort** deaktiviert.
 
 ### <a name="options"></a>enthalten
 
@@ -97,11 +96,11 @@ Gibt die Landessprache an, die für SQL Server-Systemmeldungen verwendet werden 
 
 ### <a name="use-strong-encryption-for-data"></a>Starke Verschlüsselung für Daten verwenden
 
-Bei Auswahl dieser Option werden Daten, die über die Verbindung übergeben wird verschlüsselt. Anmeldungen werden standardmäßig verschlüsselt, auch wenn das Kontrollkästchen deaktiviert wird.
+Wenn diese Option ausgewählt ist, werden die Daten, die über die Verbindung übermittelt werden, verschlüsselt. Anmeldungen werden standardmäßig verschlüsselt, auch wenn das Kontrollkästchen deaktiviert wird.
 
 ### <a name="trust-server-certificate"></a>Serverzertifikat vertrauen
 
-Diese Option ist nur anwendbar, wenn **starke Verschlüsselung für Daten verwenden** aktiviert ist. Bei Auswahl dieser Option wird das Zertifikat des Servers nicht überprüft werden, müssen den richtigen Hostnamen des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden.
+Diese Option ist nur anwendbar, wenn die Option **starke Verschlüsselung für Daten verwenden** aktiviert ist. Wenn diese Option ausgewählt ist, wird das Zertifikat des Servers nicht so überprüft, dass es den richtigen Hostnamen des Servers hat und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wird.
 
 ## <a name="see-also"></a>Weitere Informationen
 
