@@ -9,23 +9,22 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cf2946517be732094d01ff9889faf080a36e85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006502"
 ---
 # <a name="custom-keystore-providers"></a>Benutzerdefinierte Keystore-Anbieter
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Übersicht
 
-Die Spalte Verschlüsselungsfunktion von SQL Server 2016 erfordert, dass der verschlüsselte Spaltenverschlüsselungsschlüssel (ECEKs) auf dem Server gespeichert werden vom Client abgerufen und anschließend entschlüsselt, Verschlüsselung von Spaltenverschlüsselungsschlüsseln (CEKs), um die in verschlüsselten Spalten gespeicherten Daten zuzugreifen. ECEKs werden von Spaltenhauptschlüsseln (CMKs) verschlüsselt, und die Sicherheit der CMK ist wichtig, die Sicherheit der spaltenverschlüsselung. Daher sollten die CMK an einem sicheren Ort gespeichert werden. eine Spalte Verschlüsselung Keystore-Anbieter dient zur Verfügung zu stellen eine Schnittstelle für den ODBC-Treiber sicher auf diese zugreifen können CMKs gespeichert. Für Benutzer mit dem ihre eigenen sicheren Speicher bietet die benutzerdefinierte Keystore-Anbieter-Schnittstelle ein Framework für die Implementierung der Zugriff auf Speicher, der den CMK für den ODBC-Treiber zu schützen, das auszuführenden CEK Ver- und Entschlüsselung verwendet werden kann.
+Die Spalten Verschlüsselungsfunktion von SQL Server 2016 erfordert, dass die auf dem Server gespeicherten verschlüsselten Spalten Verschlüsselungsschlüssel (eceks) vom Client abgerufen und anschließend in Spalten Verschlüsselungsschlüsseln (ceks) entschlüsselt werden, um auf die in verschlüsselten Spalten gespeicherten Daten zuzugreifen. Eceks werden mithilfe von Spalten Hauptschlüsseln (cmks) verschlüsselt, und die Sicherheit des CMK ist für die Sicherheit der Spalten Verschlüsselung wichtig. Daher sollte der CMK an einem sicheren Speicherort gespeichert werden. der Zweck eines columnencryption-Keystore-Anbieters besteht darin, eine Schnittstelle bereitzustellen, die es dem ODBC-Treiber ermöglicht, auf diese sicher gespeicherten cmchs zuzugreifen. Für Benutzer mit einem eigenen sicheren Speicher bietet die benutzerdefinierte Keystore-Anbieter Schnittstelle ein Framework für die Implementierung des Zugriffs auf den sicheren Speicher des CMK für den ODBC-Treiber, der dann zum Durchführen der Verschlüsselung und Entschlüsselung von Cek verwendet werden kann.
 
-Jeder Keystore-Anbieter enthält, und verwaltet eine oder mehrere CMKs, der durch Schlüsselpfade - Zeichenfolgen in einem Format identifiziert werden, die vom Anbieter definiert. Dies kann zusammen mit der Verschlüsselungsalgorithmus, der auch eine Zeichenfolge, die vom Anbieter definiert, führen Sie die Verschlüsselung von ein CEK und die Entschlüsselung von einem ECEK verwendet werden. Der Algorithmus, zusammen mit ECEK und den Namen des Anbieters, werden in Metadaten der Datenbank gespeichert; finden Sie unter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) für Weitere Informationen. Daher sind die zwei grundlegende Vorgänge der schlüsselverwaltung eingehen:
+Jeder Keystore-Anbieter enthält und verwaltet ein oder mehrere CMAS, die durch Schlüssel Pfade identifiziert werden, die Zeichen Folgen eines Formats aufweisen, das vom Anbieter definiert wird. In diesem Zusammenhang mit dem Verschlüsselungsalgorithmus, dem auch eine vom Anbieter definierte Zeichenfolge, kann verwendet werden, um die Verschlüsselung eines Cek und die Entschlüsselung eines ecek auszuführen. Der Algorithmus wird zusammen mit dem ecek und dem Namen des Anbieters in den Verschlüsselungs Metadaten der Datenbank gespeichert. Weitere Informationen finden Sie unter [Create Column Master Key](../../t-sql/statements/create-column-master-key-transact-sql.md) und [Create Column Encryption Key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) . Folglich sind die beiden grundlegenden Vorgänge der Schlüsselverwaltung:
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -35,25 +34,25 @@ CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algori
 ECEK = EncryptViaCEKeystoreProvider(CEKeyStoreProvider_name, Key_path, Key_algorithm, CEK)
 ```
 
-in denen die `CEKeystoreProvider_name` wird verwendet, um den bestimmten Spalte Verschlüsselung Keystore-Anbieter (CEKeystoreProvider), und die anderen Argumente werden von der CEKeystoreProvider zum Verschlüsseln/Entschlüsseln des CEK (E) verwendet. Den Namen und einen Schlüsselpfad werden durch die CMK-Metadaten bereitgestellt, während dem Algorithmus und ECEK-Wert von den CEK-Metadaten bereitgestellt werden. Mehrere Keystore-Anbieter können zusammen mit der integrierten Standard-Anbieter vorhanden sein. Beim Ausführen eines Vorgangs den CEK erfordert, der Treiber verwendet den CMK-Metadaten, um anhand des Namens des entsprechenden Keystore-Anbieters zu ermitteln, und führt die entschlüsselt werden, als ausgedrückt werden kann:
+Dabei wird `CEKeystoreProvider_name` der verwendet, um den spezifischen Schlüsselspeicher Anbieter für die Spalten Verschlüsselung (cekeystoreprovider) zu identifizieren, und die anderen Argumente werden vom cekeystoreprovider verwendet, um den (E) Cek zu verschlüsseln/entschlüsseln. Der Name und der KEYPATH werden von den CMK-Metadaten bereitgestellt, während der Algorithmus und der ecek-Wert von den Cek-Metadaten bereitgestellt werden. Mehrere Keystore-Anbieter können neben den integrierten Standard Anbietern vorhanden sein. Wenn Sie einen Vorgang ausführen, der den Cek erfordert, verwendet der Treiber die CMK-Metadaten, um den passenden Keystore-Anbieter anhand des Namens zu suchen, und führt den Entschlüsselungsvorgang aus, der wie folgt ausgedrückt werden kann:
 
 ```
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
-Obwohl der Treiber nicht erforderlich, verschlüsseln CEKs aufweist, müssen möglicherweise ein Verwaltungstool, um Vorgänge wie z. B. CMK erstellen und Rotieren implementieren; Dies erfordert, der umgekehrten Vorgang ausgeführt:
+Obwohl der Treiber keine Verschlüsselung von cechs benötigt, muss möglicherweise ein Schlüssel Verwaltungs Tool dies tun, um Vorgänge wie die CMK-Erstellung und-Rotation zu implementieren. Hierfür muss der umgekehrte Vorgang durchgeführt werden:
 
 ```
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 ```
 
-### <a name="cekeystoreprovider-interface"></a>CEKeyStoreProvider-Schnittstelle
+### <a name="cekeystoreprovider-interface"></a>Cekeystoreprovider-Schnittstelle
 
-Dieses Dokument beschreibt ausführlich die CEKeyStoreProvider-Schnittstelle. Ein Keystore-Anbieter, der diese Schnittstelle implementiert wird, kann der Microsoft ODBC-Treiber für SQL Server verwendet werden. Dieses Handbuch können CEKeyStoreProvider Implementierer weiterentwickeln, indem Sie den Treiber benutzerdefinierte Keystore-Anbieter verwendet werden.
+In diesem Dokument wird die cekeystoreprovider-Schnittstelle ausführlich beschrieben. Ein Keystore-Anbieter, der diese Schnittstelle implementiert, kann vom Microsoft ODBC Driver for SQL Server verwendet werden. Cekeystoreprovider-Implementierungen können dieses Handbuch verwenden, um benutzerdefinierte Keystore-Anbieter zu entwickeln, die vom Treiber verwendet werden können.
 
-Eine Keystore-Anbieterbibliothek ("die Anbieterbibliothek") ist eine Dynamic Link Library die vom ODBC-Treiber geladen werden kann, und enthält eine oder mehrere Keystore-Anbieter. Das Symbol `CEKeystoreProvider` muss von einer Anbieterbibliothek exportiert werden, und die Adresse der eine mit Null endendes Array von Zeigern auf `CEKeystoreProvider` Strukturen, eine für jeden Keystore-Anbieter in der Bibliothek.
+Eine Keystore-Anbieter Bibliothek ("Anbieter Bibliothek") ist eine Dynamic Link Library, die vom ODBC-Treiber geladen werden kann und mindestens einen Keystore-Anbieter enthält. Das Symbol `CEKeystoreProvider` muss von einer Anbieter Bibliothek exportiert werden und die Adresse eines mit NULL endenden Arrays von Zeigern auf `CEKeystoreProvider` Strukturen sein, eine für jeden Keystore-Anbieter innerhalb der Bibliothek.
 
-Ein `CEKeystoreProvider` Struktur definiert die Einstiegspunkte eines einzelnen Keystore-Anbieters:
+Eine `CEKeystoreProvider` Struktur definiert die Einstiegspunkte eines einzelnen Keystore-Anbieters:
 
 ```
 typedef struct CEKeystoreProvider {
@@ -83,114 +82,114 @@ typedef struct CEKeystoreProvider {
 
 |Feldname|und Beschreibung|
 |:--|:--|
-|`Name`|Der Name des Keystore-Anbieters. Sie müssen nicht identisch mit anderen Keystore-Anbieter, zuvor geladen wird, vom Treiber oder in dieser Bibliothek vorhanden sein. Auf NULL endende Zeichenfolge für breite* Zeichen.|
-|`Init`|Die Initialisierungsfunktion. Wenn Sie keine Initialisierungsfunktion nicht erforderlich ist, kann dieses Feld null sein.|
-|`Read`|Anbieter read-Funktion. Möglicherweise null, wenn nicht erforderlich.|
-|`Write`|Anbieter "Write"-Funktion. Erforderlich, wenn das Lesen nicht null ist. Möglicherweise null, wenn nicht erforderlich.|
-|`DecryptCEK`|ECEK Entschlüsselung-Funktion. Diese Funktion ist der Grund für das Vorhandensein einer Keystore-Anbieter und darf nicht null sein.|
-|`EncryptCEK`|CEK-Verschlüsselungsfunktion. Der Treiber ruft diese Funktion nicht, aber sie wird von schlüsselverwaltungstools ermöglichen den programmgesteuerten Zugriff auf die Erstellung von ECEK bereitgestellt. Möglicherweise null, wenn nicht erforderlich.|
-|`Free`|Beendigungsfunktion. Möglicherweise null, wenn nicht erforderlich.|
+|`Name`|Der Name des Keystore-Anbieters. Er darf nicht mit einem anderen Keystore-Anbieter identisch sein, der zuvor vom Treiber geladen oder in dieser Bibliothek vorhanden war. Auf NULL endende Zeichenfolge für breite* Zeichen.|
+|`Init`|Initialisierungsfunktion. Wenn keine Initialisierungsfunktion erforderlich ist, ist dieses Feld möglicherweise NULL.|
+|`Read`|Lesefunktion des Anbieters. Kann NULL sein, wenn dies nicht erforderlich ist.|
+|`Write`|Schreibfunktion des Anbieters. Erforderlich, wenn Read nicht NULL ist. Kann NULL sein, wenn dies nicht erforderlich ist.|
+|`DecryptCEK`|Ecek-Entschlüsselungs Funktion. Diese Funktion ist der Grund für das vorhanden sein eines Keystore-Anbieters und darf nicht NULL sein.|
+|`EncryptCEK`|Cek-Verschlüsselungsfunktion. Der Treiber ruft diese Funktion nicht auf, wird jedoch bereitgestellt, um den programmgesteuerten Zugriff auf die ecek-Erstellung durch Schlüssel Verwaltungs Tools zuzulassen. Kann NULL sein, wenn dies nicht erforderlich ist.|
+|`Free`|Beendigungs Funktion. Kann NULL sein, wenn dies nicht erforderlich ist.|
 
-Mit Ausnahme von Free, haben die Funktionen in dieser Schnittstelle, die alle ein Paar von Parametern, **Ctx** und **OnError**. Die erste gibt den Kontext, in dem die Funktion aufgerufen wird, während die zweite, zum Melden von Fehlern verwendet wird. Finden Sie unter [Kontexten](#context-association) und [Fehlerbehandlung](#error-handling) unten Weitere Informationen.
+Mit der Ausnahme "Free" verfügen die Funktionen in dieser Schnittstelle über ein paar von Parametern, **ctx** und **OnError**. Der erste identifiziert den Kontext, in dem die Funktion aufgerufen wird, während Letzteres zum Melden von Fehlern verwendet wird. Weitere Informationen finden Sie weiter unten in den [Kontexten](#context-association) und der [Fehlerbehandlung](#error-handling) .
 
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-Platzhaltername für eine Anbieter definierte Initialisierungsfunktion. Der Treiber ruft diese Funktion einmal ein, nachdem ein Anbieter geladen wurde, aber vor dem ersten Zeit, die sie zum Ausführen von ECEK-Entschlüsselung oder Read()/Write() benötigt anfordert. Verwenden Sie diese Funktion Initialisierungen, die es benötigt. 
+Der Platzhalter Name für eine Anbieter definierte Initialisierungsfunktion. Der Treiber ruft diese Funktion einmal auf, nachdem ein Anbieter geladen wurde, aber bevor er das erste Mal benötigt, um ecek-Entschlüsselungs-oder Read ()/Write ()-Anforderungen auszuführen. Verwenden Sie diese Funktion, um jede erforderliche Initialisierung auszuführen. 
 
 |Argument|und Beschreibung|
 |:--|:--|
-|`ctx`|[Eingabe] Der Vorgangskontext.|
-|`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
-|`Return Value`|Erfolg oder NULL, um das Fehlschlagen anzugeben ungleich NULL zurückgeben.|
+|`ctx`|Der Vorgangs Kontext.|
+|`onError`|Der Fehler Berichterstattungs Funktion.|
+|`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um einen Erfolg anzugeben|
 
 ```
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
-Platzhaltername für eine Kommunikation Anbieter definierte Funktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung, die zum Lesen von Daten von einem (zuvor geschriebenen-in) Anbieter mit dem Attribut SQL_COPT_SS_CEKEYSTOREDATA Verbindung, die Anwendung zum Lesen beliebiger Daten vom Anbieter anfordert. Finden Sie unter [Kommunikation mit einer Keystore-Anbieter](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) für Weitere Informationen.
+Der Platzhalter Name für eine Anbieter definierte Kommunikationsfunktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung das Lesen von Daten von einem (zuvor geschriebenen) Anbieter mit dem SQL_COPT_SS_CEKEYSTOREDATA-Verbindungs Attribut anfordert, sodass die Anwendung beliebige Daten vom Anbieter lesen kann. Weitere Informationen finden Sie [unter kommunizieren mit Keystore-Anbietern](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) .
 
 |Argument|und Beschreibung|
 |:--|:--|
-|`ctx`|[Eingabe] Der Vorgangskontext.|
-|`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
-|`data`|[Ausgabe] Zeiger auf einen Puffer, in dem der Anbieter von der Anwendung zu lesenden Daten schreibt. Dies entspricht dem Datenfeld der CEKEYSTOREDATA-Struktur.|
-|`len`|[InOut] Zeiger auf einen Längenwert; Bei Eingabe, ist dies die maximale Länge des Datenpuffers und der Anbieter muss nicht geschrieben werden mehr als * Len Bytes darauf. Bei der Rückgabe sollte der Anbieter aktualisieren * Len mit der Anzahl der tatsächlich geschriebenen Bytes.|
-|`Return Value`|Erfolg oder NULL, um das Fehlschlagen anzugeben ungleich NULL zurückgeben.|
+|`ctx`|Der Vorgangs Kontext.|
+|`onError`|Der Fehler Berichterstattungs Funktion.|
+|`data`|Ausgeben Zeiger auf einen Puffer, in dem der Anbieter Daten schreibt, die von der Anwendung gelesen werden sollen. Dies entspricht dem Datenfeld der cekeystoredata-Struktur.|
+|`len`|INOUT Zeiger auf einen Längen Wert; bei der Eingabe ist dies die maximale Länge des Daten Puffers, und der Anbieter darf nicht mehr als * len Bytes schreiben. Bei der Rückgabe sollte der Anbieter * len mit der Anzahl der tatsächlich geschriebenen Bytes aktualisieren.|
+|`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um einen Erfolg anzugeben|
 
 ```
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
-Platzhaltername für eine Kommunikation Anbieter definierte Funktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung, zum Schreiben von Daten an einen Anbieter mit dem Attribut SQL_COPT_SS_CEKEYSTOREDATA Verbindung anfordert, die Anwendung, der beliebige Daten an den Anbieter zu schreiben. Finden Sie unter [Kommunikation mit einer Keystore-Anbieter](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) für Weitere Informationen.
+Der Platzhalter Name für eine Anbieter definierte Kommunikationsfunktion. Der Treiber ruft diese Funktion auf, wenn die Anwendung das Schreiben von Daten in einen Anbieter mit dem SQL_COPT_SS_CEKEYSTOREDATA-Verbindungs Attribut anfordert, sodass die Anwendung beliebige Daten in den Anbieter schreiben kann. Weitere Informationen finden Sie [unter kommunizieren mit Keystore-Anbietern](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) .
 
 |Argument|und Beschreibung|
 |:--|:--|
-|`ctx`|[Eingabe] Der Vorgangskontext.|
-|`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
-|`data`|[Eingabe] Zeiger auf einen Puffer mit den Daten für den Anbieter zu lesen. Dies entspricht dem Datenfeld der CEKEYSTOREDATA-Struktur. Der Anbieter muss nicht mehr als Len Bytes aus diesen Puffer gelesen.|
-|`len`|[Eingabe] Die Anzahl der Bytes, die in Daten zur Verfügung. Dies entspricht dem Feld "DataSize" der CEKEYSTOREDATA-Struktur.|
-|`Return Value`|Erfolg oder NULL, um das Fehlschlagen anzugeben ungleich NULL zurückgeben.|
+|`ctx`|Der Vorgangs Kontext.|
+|`onError`|Der Fehler Berichterstattungs Funktion.|
+|`data`|Der Zeiger auf einen Puffer, der die Daten für den zu lesenden Anbieter enthält. Dies entspricht dem Datenfeld der cekeystoredata-Struktur. Der Anbieter darf nicht mehr als len Bytes aus diesem Puffer lesen.|
+|`len`|Der Die Anzahl von Bytes, die in Daten verfügbar sind. Dies entspricht dem DataSize-Feld der cekeystoredata-Struktur.|
+|`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um einen Erfolg anzugeben|
 
 ```
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
-Platzhaltername für eine Funktion der Anbieter definierte ECEK-Entschlüsselung. Der Treiber ruft diese Funktion zum Entschlüsseln einer ECEK durch einen CMK, die diesem Anbieter zugeordnet sind, in einen CEK verschlüsselt.
+Der Platzhalter Name für eine Anbieter definierte ecek-Entschlüsselungs Funktion. Der Treiber ruft diese Funktion auf, um eine ecek zu entschlüsseln, die durch einen CMK verschlüsselt ist, der mit diesem Anbieter in einem Cek verknüpft ist.
 
 |Argument|und Beschreibung|
 |:--|:--|
-|`ctx`|[Eingabe] Der Vorgangskontext.|
-|`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
-|`keyPath`|[Eingabe] Der Wert des der [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadatenattribut für den CMK auf die angegebenen ECEK verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zum Identifizieren eines CMK von diesem Anbieter verarbeitet.|
-|`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
-|`ecek`|[Eingabe] Zeiger auf die ECEK entschlüsselt werden.|
-|`ecekLen`|[Eingabe] Die Länge von ECEK.|
-|`cekOut`|[Ausgabe] Der Anbieter sollte entschlüsselter ECEK Arbeitsspeicher zuweisen und die Adresse in der Zeiger verweist CekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * CekOut auf einen null-Zeiger.|
-|`cekLen`|[Ausgabe] Der Anbieter sollte an die Adresse, die auf CekLen zeigt die Länge des entschlüsselter ECEK, die in der es geschrieben hat schreiben ** CekOut.|
-|`Return Value`|Erfolg oder NULL, um das Fehlschlagen anzugeben ungleich NULL zurückgeben.|
+|`ctx`|Der Vorgangs Kontext.|
+|`onError`|Der Fehler Berichterstattungs Funktion.|
+|`keyPath`|Der Der Wert des [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadata-Attributs für das CMK, auf das der angegebene ecek verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung eines von diesem Anbieter behandelten CMK.|
+|`alg`|Der Der Wert des [algorithmusmetadatenattributs](../../t-sql/statements/create-column-encryption-key-transact-sql.md) für den angegebenen ecek. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des gegebenen ecek verwendet wird.|
+|`ecek`|Der Zeiger auf den zu entschlüsselnden ecek.|
+|`ecekLen`|Der Die Länge der ecek.|
+|`cekOut`|Ausgeben Der Anbieter muss Speicher für die entschlüsselte ecek zuweisen und seine Adresse in den Zeiger schreiben, auf den cekout zeigt. Es muss möglich sein, diesen Speicherblock mithilfe der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows)-oder Free-Funktion (Linux/Mac) freizugeben. Wenn aufgrund eines Fehlers kein Arbeitsspeicher zugeordnet wurde, muss der Anbieter * cekout auf einen NULL-Zeiger festlegen.|
+|`cekLen`|Ausgeben Der Anbieter muss in die Adresse schreiben, auf die von ceklen die Länge des entschlüsselten ecek verwiesen wird, der in * * cekout geschrieben wurde.|
+|`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um einen Erfolg anzugeben|
 
 ```
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
-Platzhaltername für eine Funktion der Anbieter definierte CEK-Verschlüsselung. Der Treiber nicht mit dieser Funktion wird noch seine Funktionalität über die ODBC-Schnittstelle verfügbar zu machen, aber sie wird von schlüsselverwaltungstools ermöglichen den programmgesteuerten Zugriff auf die Erstellung von ECEK bereitgestellt.
+Der Platzhalter Name für eine Anbieter definierte Cek-Verschlüsselungsfunktion. Der Treiber ruft diese Funktion nicht auf und macht die Funktionalität nicht über die ODBC-Schnittstelle verfügbar. Sie wird jedoch bereitgestellt, um den programmgesteuerten Zugriff auf die ecek-Erstellung durch Schlüssel Verwaltungs Tools zu ermöglichen.
 
 |Argument|und Beschreibung|
 |:--|:--|
-|`ctx`|[Eingabe] Der Vorgangskontext.|
-|`onError`|[Eingabe] Fehlerberichterstattungs-Funktion.|
-|`keyPath`|[Eingabe] Der Wert des der [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadatenattribut für den CMK auf die angegebenen ECEK verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zum Identifizieren eines CMK von diesem Anbieter verarbeitet.|
-|`alg`|[Eingabe] Der Wert des der [Algorithmus](../../t-sql/statements/create-column-encryption-key-transact-sql.md) Metadatenattribut für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des angegebenen ECEK.|
-|`cek`|[Eingabe] Zeiger auf den CEK verschlüsselt werden.|
-|`cekLen`|[Eingabe] Die Länge des CEK.|
-|`ecekOut`|[Ausgabe] Der Anbieter muss von Arbeitsspeicher für den verschlüsselten CEK und seine Adresse in der Zeiger verweist EcekOut schreiben. Es muss möglich sein, diesen Block der using-Arbeitsspeicher freigeben der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder (Linux/Mac)-Funktion freigeben. Der Anbieter sollte festlegen, war nicht genügend Arbeitsspeicher zugeordneten aufgrund eines Fehlers oder auf andere, * EcekOut auf einen null-Zeiger.|
-|`ecekLen`|[Ausgabe] Der Anbieter sollte an die Adresse, die auf EcekLen zeigt die Länge des verschlüsselten CEK, die in der es geschrieben hat schreiben ** EcekOut.|
-|`Return Value`|Erfolg oder NULL, um das Fehlschlagen anzugeben ungleich NULL zurückgeben.|
+|`ctx`|Der Vorgangs Kontext.|
+|`onError`|Der Fehler Berichterstattungs Funktion.|
+|`keyPath`|Der Der Wert des [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) Metadata-Attributs für das CMK, auf das der angegebene ecek verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung eines von diesem Anbieter behandelten CMK.|
+|`alg`|Der Der Wert des [algorithmusmetadatenattributs](../../t-sql/statements/create-column-encryption-key-transact-sql.md) für den angegebenen ecek. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des gegebenen ecek verwendet wird.|
+|`cek`|Der Zeiger auf den zu verschlüsselnden Cek.|
+|`cekLen`|Der Länge des Cek.|
+|`ecekOut`|Ausgeben Der Anbieter muss Speicher für den verschlüsselten Cek zuweisen und seine Adresse in den Zeiger schreiben, auf den ecekout zeigt. Es muss möglich sein, diesen Speicherblock mithilfe der [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows)-oder Free-Funktion (Linux/Mac) freizugeben. Wenn aufgrund eines Fehlers kein Arbeitsspeicher zugeordnet wurde, muss der Anbieter * ecekout auf einen NULL-Zeiger festlegen.|
+|`ecekLen`|Ausgeben Der Anbieter muss in die Adresse schreiben, auf die von eceklen die Länge des verschlüsselten Cek verwiesen wird, den er in * * ecekout geschrieben hat.|
+|`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um einen Erfolg anzugeben|
 
 ```
 void (*Free)();
 ```
-Platzhaltername für einen Anbieter definierte Beendigungsfunktion. Der Treiber kann diese Funktion bei normaler Beendigung des Prozesses aufgerufen werden.
+Der Platzhalter Name für eine Anbieter definierte Beendigungs Funktion. Der Treiber kann diese Funktion bei normaler Beendigung des Prozesses aufruft.
 
 > [!NOTE]
-> *Breitzeichen-Zeichenfolgen sind 2-Byte-Zeichen (UTF-16) aufgrund, wie Sie SQL Server speichert.*
+> *Zeichen folgen mit breit Zeichen sind 2-Byte-Zeichen (UTF-16), da Sie von SQL Server gespeichert werden.*
 
 
 ### <a name="error-handling"></a>Fehlerbehandlung
 
-Als Fehler während der Verarbeitung von eines Anbieters auftreten können, ist ein Mechanismus bereitgestellt, um es zum Melden von Fehlern zurück an den Treiber in spezifischere Details als eine boolesche Erfolg/Fehler zu ermöglichen. Viele der Funktionen haben ein Paar von Parametern, **Ctx** und **OnError**, die für diesen Zweck zusätzlich zu den Rückgabewert von Erfolg/Fehler zusammen verwendet werden.
+Da während der Verarbeitung eines Anbieters Fehler auftreten können, wird ein Mechanismus bereitgestellt, der es ermöglicht, Fehler an den Treiber genauer zu melden als bei einem booleschen Wert bzw. Fehler. Viele der Funktionen verfügen über ein paar von Parametern, **ctx** und **OnError**, die zusätzlich zum Erfolg/Fehler-Rückgabewert für diesen Zweck verwendet werden.
 
-Die **Ctx** Parameter identifiziert den Kontext, in dem ein Anbietervorgang auftritt.
+Der **ctx** -Parameter identifiziert den Kontext, in dem ein Anbieter Vorgang auftritt.
 
-Die **OnError** Parameter verweist auf eine fehlerberichterstattungs-Funktion, mit dem folgenden Prototyp:
+Der **OnError** -Parameter verweist auf eine Fehler Berichterstattungs Funktion mit dem folgenden Prototyp:
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
 |Argument|und Beschreibung|
 |:--|:--|
-|`ctx`|[Eingabe] Der Kontext, der auf den Fehler zu melden.|
-|`msg`|[Eingabe] Der zu meldende Fehlermeldung. Auf NULL endende Zeichenfolge für breite Zeichen. Damit parametrisierte Informationen vorhanden sein kann, darf diese Zeichenfolge einfügen Formatieren von Sequenzen des Formulars von akzeptiert die [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Funktion. Erweiterte Funktionalität kann durch diesen Parameter angegeben werden, wie unten beschrieben.|
-|...|[Eingabe] Zusätzliche Variadic-Parameter, die Formatbezeichner in der Meldung, nach Bedarf anpassen.|
+|`ctx`|Der Der Kontext, für den der Fehler gemeldet werden soll.|
+|`msg`|Der Die Fehlermeldung, die gemeldet werden soll. Auf NULL endende Zeichenfolge für breite Zeichen. Um zu ermöglichen, dass parametrisierte Informationen vorhanden sind, enthält diese Zeichenfolge möglicherweise INSERT-Formatierung-Sequenzen der Form, die von der [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) -Funktion akzeptiert wird. Erweiterte Funktionen können mithilfe dieses Parameters angegeben werden, wie unten beschrieben.|
+|...|Der Zusätzliche Variadic-Parameter entsprechend der Format Bearbeiter in der Meldung.|
 
-Um zu melden, wenn ein Fehler aufgetreten ist, wird vom Treiber und eine Fehlermeldung mit optionalen zusätzlichen Parametern, die es formatiert werden der Anbieter ruft OnError, Angeben des Context-Parameters an die anbieterfunktion übergeben. Der Anbieter kann diese Funktion mehrmals aufrufen, mehrere Fehler innerhalb einer Anbieter-Funktionsaufruf fortlaufend zu übermitteln. Beispiel:
+Um zu melden, dass ein Fehler aufgetreten ist, ruft der Anbieter OnError auf und gibt dabei den Kontext Parameter an, der vom Treiber an die Anbieter Funktion übergeben wurde, und eine Fehlermeldung mit optionalen zusätzlichen Parametern, die darin formatiert werden sollen. Der Anbieter kann diese Funktion mehrmals aufrufen, um mehrere Fehlermeldungen in einem Aufruf der einzelnen Anbieter Funktion nacheinander zu senden. Beispiel:
 
 ```
     if (!doSomething(...))
@@ -202,18 +201,18 @@ Um zu melden, wenn ein Fehler aufgetreten ist, wird vom Treiber und eine Fehlerm
 ```
 
 
-Die `msg` -Parameter ist normalerweise eine Zeichenfolge mit Breitzeichen, aber zusätzliche Erweiterungen sind verfügbar:
+Der `msg` -Parameter ist normalerweise eine Zeichenfolge mit breit Zeichen, es sind jedoch zusätzliche Erweiterungen verfügbar:
 
-Mithilfe einer der speziellen vordefinierte Werte mit dem Makro IDS_MSG generische Fehlermeldungen, die bereits vorhandenen und in Form von lokalisierten im Treiber kann genutzt werden. Beispielsweise wenn ein Anbieter ein Fehler auftritt, bei der speicherbelegung die `IDS_S1_001` "Speicherbelegungsfehlers" Nachricht kann verwendet werden:
+Wenn Sie einen der speziellen vordefinierten Werte mit dem IDS_MSG-Makro verwenden, können generische Fehlermeldungen, die bereits vorhanden sind, und in einem lokalisierten Formular im Treiber verwendet werden. Wenn ein Anbieter z. b. keinen Arbeitsspeicher belegen kann `IDS_S1_001` , kann die Meldung "Fehler bei der Speicher Belegung" verwendet werden:
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-Für den Fehler, die vom Treiber anerkannt werden muss der Dienstanbieter-Funktion Fehler zurückgeben. Wenn dies im Rahmen einer ODBC-Vorgang ausgeführt wird, werden die bereitgestellte Fehler zugegriffen werden kann, auf den Ziehpunkt-Verbindung oder die Anweisung über den ODBC-Diagnose Standardmechanismus, (`SQLError`, `SQLGetDiagRec`, und `SQLGetDiagField`).
+Damit der Fehler vom Treiber erkannt wird, muss die Anbieter Funktion einen Fehler zurückgeben. Wenn dies im Kontext eines ODBC-Vorgangs durchgeführt wird, wird der Zugriff auf die veröffentlichten Fehler über die Verbindung oder das Anweisungs Handle über den standardmäßigen ODBC `SQLGetDiagRec`-Diagnose `SQLGetDiagField`Mechanismus (`SQLError`, und) zugänglich gemacht.
 
 
-### <a name="context-association"></a>Kontext-Zuordnung
+### <a name="context-association"></a>Kontext Zuordnung
 
-Die `CEKEYSTORECONTEXT` Struktur, die zusätzlich zur Bereitstellung von Kontext für den Fehlerrückruf kann auch verwendet werden, um den ODBC-Kontext zu ermitteln, in dem ein Anbietervorgang ausgeführt wird. Dies ermöglicht einen Anbieter für die Daten aller diesen Kontexten und ordnen Sie z. B. zum Implementieren von pro-Verbindungskonfiguration. Zu diesem Zweck enthält die Struktur 3 nicht transparente Zeiger, Kontext-Umgebung, Verbindung und -Anweisung entsprechen:
+Die `CEKEYSTORECONTEXT` -Struktur kann zusätzlich zur Bereitstellung von Kontext für den Fehler Rückruf auch verwendet werden, um den ODBC-Kontext zu ermitteln, in dem ein Anbieter Vorgang ausgeführt wird. Dies ermöglicht es einem Anbieter, den einzelnen Kontexten Daten zuzuordnen, z. b. um die Konfiguration pro Verbindung zu implementieren. Zu diesem Zweck enthält die Struktur drei nicht transparente Zeiger, die der Umgebung, der Verbindung und dem Anweisungs Kontext entsprechen:
 
 ```
 typedef struct CEKeystoreContext
@@ -226,18 +225,18 @@ void *stmtCtx;
 
 |Feld|und Beschreibung|
 |:--|:--|
-|`envCtx`|Umgebungskontext.|
-|`dbcCtx`|Der Verbindungskontext.|
-|`stmtCtx`|Anweisungskontext.|
+|`envCtx`|Umgebungs Kontext.|
+|`dbcCtx`|Der Verbindungs Kontext.|
+|`stmtCtx`|Der Anweisungs Kontext.|
 
-Jede der folgenden Kontexten ist ein nicht transparenter Wert, der beim nicht identisch mit den entsprechenden ODBC-Handle als eindeutiger Bezeichner für das Handle verwendet werden kann: Wenn behandeln *X* bezieht sich auf Kontextwert *Y*, klicken Sie dann keine andere Umgebung, Verbindung oder Anweisung Handles, die zur gleichen Zeit wie gleichzeitig vorhanden sind *X* müssen als Kontextwert *Y*, und keine anderen Kontextwerte zugeordnet werden behandeln *X*. Kontextwert in der Struktur ist null, wenn der Anbietervorgang durchgeführt wird verfügt nicht über einem bestimmtes Handle-Kontext (z. B. SQLSetConnectAttr Aufrufe zum Laden und Konfigurieren von Anbietern, in denen kein Anweisungshandle vorhanden ist) den entsprechenden.
+Jeder dieser Kontexte ist ein nicht transparenter Wert, der nicht mit dem entsprechenden ODBC-Handle identisch ist, sondern als eindeutiger Bezeichner für das Handle verwendet werden kann: wenn handle *X* dem Kontextwert *Y*zugeordnet ist, dann keine andere Umgebung, Verbindung oder Anweisungs Handles, die gleichzeitig mit *X* gleichzeitig vorhanden sind, haben einen Kontextwert von *Y*, und dem Handle *x*werden keine anderen Kontext Werte zugeordnet. Wenn der durchgeführte Anbieter Vorgang einen bestimmten handle-Kontext fehlt, (z. b. SQLSetConnectAttr-Aufrufe zum Laden und Konfigurieren von Anbietern, in denen kein Anweisungs Handle vorhanden ist), ist der entsprechende Kontextwert in der Struktur NULL.
 
 
 ## <a name="example"></a>Beispiel
 
-### <a name="keystore-provider"></a>Keystore-Anbieter.
+### <a name="keystore-provider"></a>Keystore-Anbieter
 
-Der folgende Code ist ein Beispiel für die Implementierung eines minimalen Keystore-Anbieters.
+Der folgende Code ist ein Beispiel für eine minimale Implementierung des Keystore-Anbieters.
 
 ```
 /* Custom Keystore Provider Example
@@ -362,7 +361,7 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 
 ### <a name="odbc-application"></a>ODBC-Anwendung
 
-Der folgende Code ist eine demoanwendung, die der oben genannten Keystore-Anbieter verwendet. Wenn es ausgeführt wird, stellen Sie sicher, dass die Anbieterbibliothek in demselben Verzeichnis wie die Binärdateien der Anwendung befindet und die Verbindungszeichenfolge gibt (oder einen DSN enthält) die `ColumnEncryption=Enabled` festlegen.
+Der folgende Code ist eine Demoanwendung, die den oben genannten Keystore-Anbieter verwendet. Stellen Sie bei der Ausführung sicher, dass sich die Anbieter Bibliothek im selben Verzeichnis wie die Anwendungs Binärdatei befindet, und dass die Verbindungs Zeichenfolge die `ColumnEncryption=Enabled` Einstellung angibt (oder einen DSN angibt).
 
 ```
 /*

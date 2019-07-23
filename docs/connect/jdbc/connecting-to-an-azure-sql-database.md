@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956852"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 
@@ -32,8 +31,8 @@ In diesem Artikel werden Probleme behandelt, die auftreten können, wenn über d
   
 ## <a name="details"></a>Details
 
-Beim Herstellen einer Verbindung mit einem [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], Sie müssen den eine Verbindung mit der master-Datenbank aufrufen **SQLServerDatabaseMetaData.getCatalogs**.  
-Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** Ansicht "sys.databases" verwenden, um die Kataloge abzurufen. Finden Sie in der Diskussion zu Berechtigungen in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) zu **SQLServerDatabaseMetaData.getCatalogs** Verhalten auf ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+Beim Herstellen einer Verbindung [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]mit einem sollten Sie eine Verbindung mit der Master-Datenbank herstellen, um **SQLServerDatabaseMetaData. getkatalogen**aufzurufen.  
+Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData. getkatalogen** verwendet die sys. Database-Sicht, um die Kataloge zu erhalten. Informationen zum Verhalten von **SQLServerDatabaseMetaData. getkatalogen** in einem [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]finden Sie in der Erläuterung der Berechtigungen in [sys. Database (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 ## <a name="connections-dropped"></a>Getrennte Verbindungen
 
@@ -47,8 +46,8 @@ Um zu vermeiden, dass Verbindungen im Leerlauf durch eineNetzwerkkomponente getr
   
 |Registrierungseinstellung|Empfohlener Wert|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Dienste \ Tcpip \ Parameter \ "KeepAliveTime"|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Dienste \ Tcpip \ Parameter \ "KeepAliveInterval"|1000|  
+|HKEY_LOCAL_MACHINE \ System \ CurrentControlSet \ Services \ tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ System \ CurrentControlSet \ Services \ tcpip \ Parameters \ keepAliveInterval|1000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Starten Sie den Computer neu, damit die Registrierungseinstellungen wirksam werden.  
@@ -81,7 +80,7 @@ Vor Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Einstellung "hostNameInCertificate" zur Verwendung der Verschlüsselung erforderlich
 
-Vor, Version 7.2 den [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]beim Herstellen einer Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], geben Sie **HostNameInCertificate** bei Angabe von **verschlüsseln = True** (wenn der Servername in der Verbindung Zeichenfolge *ShortName*. *DomainName*legen die **HostNameInCertificate** Eigenschaft \*. *DomainName*.). Diese Eigenschaft ist optional ab Version 7.2 des Treibers.
+Vor der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2-Version von sollten Sie beim Herstellen einer Verbindung mit ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] **hostNameInCertificate** angeben, wenn Sie " **verschlüsseln = True** " angeben (wenn der Servername in der Verbindung Zeichenfolge *ist "* ShortName". *Domain Name*: Legen Sie die **hostNameInCertificate** -Eigenschaft \*auf *fest. Domain Name*.). Diese Eigenschaft ist ab Version 7,2 des Treibers optional.
 
 Beispiel:
 
