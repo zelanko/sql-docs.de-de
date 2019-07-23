@@ -1,5 +1,5 @@
 ---
-title: SupportsBatchUpdates-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsBatchUpdates-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f7ffdc84d40f68b1f1697357a892fb2d136be2e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bd3027348673bfb85d9ab512a3f89f2e278edde9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969780"
 ---
 # <a name="supportsbatchupdates-method-sqlserverdatabasemetadata"></a>supportsBatchUpdates-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsBatchUpdates()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsBatchUpdates-Methode wird von der SupportsBatchUpdates-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsBatchUpdates-Methode wird von der supportsBatchUpdates-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

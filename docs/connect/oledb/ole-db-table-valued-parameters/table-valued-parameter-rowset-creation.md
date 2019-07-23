@@ -1,6 +1,6 @@
 ---
-title: Tabellenwertparameter-Rowseterstellung | Microsoft-Dokumentation
-description: Statische und dynamische Tabellenwertparameter-rowseterstellung
+title: Erstellung eines Tabellenwert Parameter-Rowsets | Microsoft-Dokumentation
+description: Erstellung statischer und dynamischer Tabellenwert Parameter-Rowsets
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,29 +12,28 @@ helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4f894ae19a421b759870ceb597291b33fc1d2dec
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994109"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Tabellenwertparameter-Rowseterstellung
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Consumer können zwar ein beliebiges Rowsetobjekt für Tabellenwertparameter bereitstellen, typische Rowsetobjekte werden jedoch mit Back-End-Datenspeichern implementiert und bieten somit nur eine eingeschränkte Leistung. Der OLE DB-Treiber für SQL Server ermöglicht es somit Consumern, ein spezielles Rowset-Objekt auf speicherinternen Daten zu erstellen. Diese spezielle, in-Memory-Rowset-Objekt ist ein neues COM-Objekt, das Namen eines Tabellenwertparameter-Rowsets. Es bietet ähnliche Funktionen wie Parametersätze.  
+  Consumer können zwar ein beliebiges Rowsetobjekt für Tabellenwertparameter bereitstellen, typische Rowsetobjekte werden jedoch mit Back-End-Datenspeichern implementiert und bieten somit nur eine eingeschränkte Leistung. Der OLE DB-Treiber für SQL Server ermöglicht es somit Consumern, ein spezielles Rowset-Objekt auf speicherinternen Daten zu erstellen. Dieses spezielle, in-Memory-Rowsetobjekt ist ein neues COM-Objekt, das als Tabellenwert Parameter-Rowset bezeichnet wird. Es bietet ähnliche Funktionen wie Parametersätze.  
   
  Tabellenwertparameter-Rowsetobjekte werden explizit vom Consumer für Eingabeparameter durch mehrere Schnittstellen auf Sitzungsebene erstellt. Es steht eine Instanz des Tabellenwertparameter-Rowsetobjekts pro Tabellenwertparameter zur Verfügung. Der Consumer kann die Tabellenwertparameter-Rowsetobjekte entweder durch Bereitstellen der Metadateninformationen, die bereits bekannt sind (statisches Szenario), oder durch Ermitteln über Anbieterschnittstellen (dynamisches Szenario) erstellen. In den folgenden Abschnitten werden diese beiden Szenarien beschrieben.  
   
 ## <a name="static-scenario"></a>Statisches Szenario  
- Wenn die Typinformationen bekannt ist, verwendet der Consumer ITableDefinitionWithConstraints::CreateTableWithConstraints einem Tabellenwertparameter-Rowset-Objekt zu instanziieren, das einem Tabellenwertparameter entspricht.  
+ Wenn die Typinformationen bekannt sind, verwendet der Consumer ITableDefinitionWithConstraints:: kreatetablewitheinschränkungen, um ein Tabellenwert Parameter-Rowsetobjekt zu instanziieren, das einem Tabellenwert Parameter entspricht.  
   
- Die *Guid* Feld (*pTableID* Parameter) enthält die besondere GUID (CLSID_ROWSET_TVP). Das Element *pwszName* enthält den Namen des Tabellenwertparameter-Typs, den der Consumer instanziieren möchte. Das Feld *eKin* wird auf DBKIND_GUID_NAME festgelegt. Der Name ist erforderlich, wenn es sich um eine Ad-hoc-SQL-Anweisung handelt; bei einem Prozeduraufruf ist die Angabe des Namens optional.  
+ Das *GUID* -Feld (*pTableID* -Parameter) enthält die besondere GUID (CLSID_ROWSET_TVP). Das Element *pwszName* enthält den Namen des Tabellenwertparameter-Typs, den der Consumer instanziieren möchte. Das Feld *eKin* wird auf DBKIND_GUID_NAME festgelegt. Der Name ist erforderlich, wenn es sich um eine Ad-hoc-SQL-Anweisung handelt; bei einem Prozeduraufruf ist die Angabe des Namens optional.  
   
- Bei der Aggregation übergibt der Consumer die *pUnkOuter* Parameter steuernden IUnknown.  
+ Bei der Aggregation übergibt der Consumer den Parameter " *pUnkOuter* " mit dem steuernden "IUnknown".  
   
  Die Eigenschaften des Tabellenwertparameter-Rowsetobjekts sind schreibgeschützt, sodass der Consumer keine Eigenschaften in *rgPropertySets* festlegen muss.  
   
@@ -42,16 +41,16 @@ ms.locfileid: "66801102"
   
  Um entsprechende Informationen aus einem Tabellenwertparameter-Rowsetobjekt abzurufen, verwendet der Consumer IRowsetInfo::GetProperties.  
   
- Zum Abrufen von Informationen zu den Null, eindeutig ist, berechnet, und Aktualisieren des Status der einzelnen Spalten, kann der Consumer IColumnsRowset:: GetColumnsRowset oder IColumnsInfo:: GetColumnInfo verwenden. Diese Methoden stellen ausführliche Informationen über jede Tabellenwertparameter-Rowsetspalte bereit.  
+ Der Consumer kann IColumnsRowset:: GetColumnsRowset oder IColumnsInfo:: GetColumnInfo verwenden, um Informationen über den NULL-, eindeutigen, berechneten und Update Status der einzelnen Spalten abzurufen. Diese Methoden stellen ausführliche Informationen über jede Tabellenwertparameter-Rowsetspalte bereit.  
   
- Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer erhält ein Tabellenwertparameter-Rowsetobjekt aus der OLE DB-Treiber für SQL Server über die *PpRowset* output-Parameter.  
+ Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer ruft ein Tabellenwert Parameter-Rowsetobjekt aus dem OLE DB Treiber für die SQL Server über den *ppRowset* -Ausgabeparameter ab.  
   
 ## <a name="dynamic-scenario"></a>Dynamisches Szenario  
- Wenn der Consumer keine Typinformationen besitzt, sollte IOpenRowset:: OPENROWSET zum Instanziieren von Tabellenwertparameter-Rowsetobjekte verwendet werden. Der Consumer muss dem Anbieter somit nur den Typnamen zur Verfügung stellen.  
+ Wenn der Consumer keine Typinformationen hat, sollte er IOpenRowset:: OPENROWSET verwenden, um Tabellenwert Parameter-Rowsetobjekte zu instanziieren. Der Consumer muss dem Anbieter somit nur den Typnamen zur Verfügung stellen.  
   
  In diesem Szenario erhält der Anbieter im Namen des Consumers Typinformationen zu einem Tabellenwertparameter-Rowsetobjekt vom Server.  
   
- Die *pTableID* und *pUnkOuter* Parameter wie beim statischen Szenario festgelegt werden. Der OLE DB-Treiber für SQL Server erhält dann die Typinformationen (Spalteninformationen und Einschränkungen) vom Server und gibt über den Parameter *ppRowset* ein Tabellenwertparameter-Rowsetobjekt zurück. Für diesen Vorgang ist eine Kommunikation mit dem Server notwendig, sodass die Leistung nicht so gut ist wie beim statischen Szenario. Das dynamische Szenario funktioniert nur mit parametrisierten Prozeduraufrufen.  
+ Die Parameter *pTableID* und *pUnkOuter* sollten wie im statischen Szenario festgelegt werden. Der OLE DB-Treiber für SQL Server erhält dann die Typinformationen (Spalteninformationen und Einschränkungen) vom Server und gibt über den Parameter *ppRowset* ein Tabellenwertparameter-Rowsetobjekt zurück. Für diesen Vorgang ist eine Kommunikation mit dem Server notwendig, sodass die Leistung nicht so gut ist wie beim statischen Szenario. Das dynamische Szenario funktioniert nur mit parametrisierten Prozeduraufrufen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenwertparameter &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

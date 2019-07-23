@@ -1,5 +1,5 @@
 ---
-title: Führen Sie SQL Server Profiler | Microsoft-Dokumentation
+title: SQL Server Profiler ausführen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b3ccffd3ad298d6c9a6bacca3e060d4fc7a5ed24
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 697905061bb60e91884d8844a103ba1302c5c4ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059620"
 ---
 # <a name="run-sql-server-profiler"></a>Ausführen von SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +30,13 @@ ms.locfileid: "67729674"
   
 Wenn Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum ersten Mal starten und im Menü **Datei** die Option **Neue Ablaufverfolgung** auswählen, zeigt die Anwendung das Dialogfeld **Verbindung mit Server** herstellen an, in dem Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben können, mit der eine Verbindung hergestellt wird.  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>So starten Sie SQL Server Profiler über das Startmenü von Windows 10  
--  Klicken Sie auf der Windows **starten** Symbol oder drücken Sie die Windows-Taste, und damit beginnen, geben Sie "SQL Server Profiler 17". Wenn die **17 von SQL Server Profiler** Kachel angezeigt wird, klicken Sie darauf.   
+-  Klicken Sie auf das Windows- **Start** Symbol, oder drücken Sie die Windows-Taste, und geben Sie "SQL Server Profiler 17" ein. Wenn die Kachel **SQL Server Profiler 17** angezeigt wird, klicken Sie darauf.   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>So starten Sie SQL Server Profiler im Datenbankoptimierungsratgeber  
 -  Klicken Sie im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber im Menü **Extras** auf **SQL Server Profiler**.  
 
 ## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>So starten Sie SQL Server Profiler in SQL Server Management Studio  
- Sie können beginnen, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] über verschiedene Positionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gestartet wird, lädt er den Verbindungskontext, die Ablaufverfolgungsvorlage und den Filterkontext seines Startpunkts. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] startet jede SQL Server Profiler-Sitzung in einer eigenen Instanz und Profiler wird weiterhin ausgeführt, wenn das Herunterfahren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ Sie können von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] mehreren Speicherorten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus starten. Wenn [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] gestartet wird, lädt er den Verbindungskontext, die Ablaufverfolgungsvorlage und den Filterkontext seines Startpunkts. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]startet jede SQL Server Profiler Sitzung in einer eigenen Instanz, und der Profiler wird weiterhin ausgeführt, wenn Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Herunterfahren.  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>So starten Sie SQL Server Profiler über das Menü "Extras"  
 -  Klicken Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Extras** auf **SQL Server Profiler**.  
 
@@ -58,5 +57,5 @@ Wenn Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zum erste
 - Zum Ausführen der Ablaufverfolgung mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]müssen die Benutzer außerdem die ALTER TRACE-Berechtigung haben.  
 
 ## <a name="next-steps"></a>Nächste Schritte  
- [Übersicht über die SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [Übersicht über SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Verwenden von SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  

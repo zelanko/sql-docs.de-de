@@ -1,5 +1,5 @@
 ---
-title: GetMoreResults-Methode () | Microsoft-Dokumentation
+title: getMoreResults-Methode () | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 989cb8fee55de2ec522e4517521815b467d7d946
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981733"
 ---
 # <a name="getmoreresults-method-"></a>getMoreResults-Methode ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public final boolean getMoreResults()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** ist das zurückgegebene Ergebnis ein Resultset. Andernfalls lautet der Wert **false**.  
+ **true** , wenn das zurückgegebene Ergebnis ein Resultset ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetMoreResults-Methode wird durch die GetMoreResults-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+ Diese getMoreResults-Methode wird von der getMoreResults-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
  Durch den Aufruf der getMoreResults-Methode werden alle momentan geöffneten Resultsetobjekte geschlossen, die mit der [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)-Methode abgerufen werden.  
   

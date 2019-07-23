@@ -1,5 +1,5 @@
 ---
-title: RegisterOutParameter-Methode zum Typ und der Skalierung | Microsoft-Dokumentation
+title: registerout Parameter-Methode zum eingeben und Skalieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 36f8300ade9c8b514f4c1efdee9848fafb8b5683
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 134fcc223486971bb8249f1313c84ce969308626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975931"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>registerOutParameter-Methode (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void registerOutParameter(java.lang.String s,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese RegisterOutParameter-Methode wird von der RegisterOutParameter-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
+ Diese registerout Parameter-Methode wird von der registerout Parameter-Methode in der Java. SQL. CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [registerOutParameter-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

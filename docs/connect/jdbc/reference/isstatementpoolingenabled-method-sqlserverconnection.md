@@ -1,5 +1,5 @@
 ---
-title: IsStatementPoolingEnabled-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: isstatuementpoolingenabled-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6265aaf5121e50684e205b5d80199222b510f5d6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d2f5178c8a2ce5b527ce70e6a3d8fc139ccc9c72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977200"
 ---
 # <a name="isstatementpoolingenabled-method-sqlserverconnection"></a>isStatementPoolingEnabled-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Gibt an, ob anweisungspools aktiviert ist oder nicht für diese Verbindung zurück.
+ Gibt zurück, ob das Anweisungs Pooling für diese Verbindung aktiviert ist oder nicht.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +35,13 @@ public boolean isStatementPoolingEnabled()
 ```  
 
 ## <a name="return-value"></a>Rückgabewert
- Ein **booleschen** , enthält das Flag gibt an, ob anweisungspools oder nicht aktiviert ist.
+ Ein **boolescher** Wert, der das Flag enthält, das angibt, ob das Anweisungs Pooling aktiviert ist.
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

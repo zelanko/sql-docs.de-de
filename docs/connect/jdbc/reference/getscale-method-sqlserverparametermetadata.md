@@ -1,5 +1,5 @@
 ---
-title: GetScale-Methode (SQLServerParameterMetaData) | Microsoft-Dokumentation
+title: getScale-Methode (SQLServerParameterMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2526d43416382f5cf46cb9b0be1d745487a67848
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980207"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale-Methode (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getScale(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetScale-Methode wird von der GetScale-Methode in der java.sql.ParameterMetaData-Schnittstelle angegeben.  
+ Diese getScale-Methode wird von der getScale-Methode in der Java. SQL. parametermetadata-Schnittstelle angegeben.  
   
  Von dieser Methode werden Spaltendezimalstellen abgerufen. Bei Typen ohne Dezimalzeichen wird "0" zurückgegeben.  
   

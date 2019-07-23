@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c01717f734a4bbf2d9df35b8f2c3ce2e40baa19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976182"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement-Methode (java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,13 +55,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  Ein Wert vom Typ **int** zum Angeben der Resultsethaltbarkeit.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein "PreparedStatement"-Objekt.  
+ Ein PreparedStatement-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese PrepareStatement-Methode wird von der PrepareStatement-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese prepareStatement-Methode wird von der prepareStatement-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [prepareStatement-Methode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

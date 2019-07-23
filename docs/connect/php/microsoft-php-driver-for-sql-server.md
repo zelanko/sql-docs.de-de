@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936346"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft-Treiber für PHP für SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Microsoft Drivers for PHP for SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten über PHP-Skripts zu ermöglichen. Die Treiber stellen Schnittstellen bereit, für den Zugriff auf Daten in Azure SQL-Datenbanken und in allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen). Die Treiber stellen PHP-Funktionen verwenden, einschließlich PHP-Datenströmen zum Lesen und Schreiben großer Objekte.  
+Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server Daten innerhalb von PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbanken und in allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Funktionen, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.  
   
 ## <a name="getting-started"></a>Erste Schritte  
 * [Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung](step-1-configure-development-environment-for-php-development.md)  
@@ -40,12 +39,12 @@ Microsoft Drivers for PHP for SQL Server ermöglichen die Integration in SQL Ser
 * [Unterstützungsressourcen für Microsoft-Treiber für PHP für SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Herunterladen  
-* ![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[zum Herunterladen der Treiber für PHP für SQL](download-drivers-php-sql-server.md)
+* ![Herunterladen-nach-unten-Taste](../../ssdt/media/download.png)[zum Herunterladen von Treibern für PHP für SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Beispiele  
 * [Codebeispiele für die Microsoft-Treiber für PHP für SQL Server](code-samples-for-php-sql-driver.md)
-* [Erste Schritte mit PHP unter Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [Erste Schritte mit PHP unter macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [Erste Schritte mit PHP unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [Erste Schritte mit PHP unter Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [Erste Schritte mit PHP unter SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [Einstieg in PHP unter Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [Einstieg in PHP unter macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [Ersten Schritten mit PHP unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Getting Started with php on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
+* [Getting Started with php on SuSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

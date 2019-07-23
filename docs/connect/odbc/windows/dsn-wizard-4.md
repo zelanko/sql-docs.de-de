@@ -1,5 +1,5 @@
 ---
-title: Datenquellen (Assistentenbildschirm 4) (ODBC-Treiber für SQLServer) | Microsoft-Dokumentation
+title: Datenquellen-Assistent (Bildschirm 4) (ODBC-Treiber für SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989466"
 ---
 # <a name="data-source-wizard-screen-4"></a>Datenquellen-Assistent (Bildschirm 4)
 
@@ -34,7 +33,7 @@ Wenn diese Option ausgewählt ist, werden Daten, die durch Verbindungen weiterge
 
 ### <a name="trust-server-certificate"></a>Serverzertifikat vertrauen
 
-Diese Option ist nur anwendbar, wenn **starke Verschlüsselung für Daten verwenden** aktiviert ist. Bei Auswahl dieser Option wird das Zertifikat des Servers nicht überprüft werden, müssen den richtigen Hostnamen des Servers und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt werden. 
+Diese Option ist nur anwendbar, wenn die Option **starke Verschlüsselung für Daten verwenden** aktiviert ist. Wenn diese Option ausgewählt ist, wird das Zertifikat des Servers nicht so überprüft, dass es den richtigen Hostnamen des Servers hat und von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wird. 
 
 ### <a name="perform-translation-for-character-data"></a>Übersetzung für Zeichendaten ausführen
 
@@ -62,11 +61,11 @@ Das Statistikprotokoll ist eine durch Tabstopps getrennte Datei, die in Microsof
 
 ### <a name="connect-retry-count"></a>Verbindungswiederholungsanzahl
 
-Gibt die Anzahl der Wiederholungsversuche eines misslungenen Verbindungsversuchs.
+Gibt an, wie oft versucht wird, einen erfolglosen Verbindungsversuch zu wiederholen.
 
 ### <a name="connect-retry-interval-seconds"></a>Verbindungswiederholungsintervall (Sekunden)
 
-Gibt die Anzahl der Sekunden zwischen jedem Verbindungsversuch. Weitere Informationen zu den Vorgang dieses und die **verbindungswiederholungsanzahl** Optionen finden Sie [Verbindungsresilienz im Windows ODBC-Treiber](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Gibt die Anzahl der Sekunden zwischen den einzelnen Verbindungs Wiederholungs versuchen an. Weitere Informationen zu diesem Vorgang und den Optionen für die Verbindungs **Wiederholungs Anzahl finden Sie** unter [verbindungsresilienz im Windows ODBC-Treiber](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Zurück
 
@@ -74,7 +73,7 @@ Klicken Sie auf diese Schaltfläche, um zur vorherigen Seite des Assistenten zur
 
 ### <a name="finish"></a>Fertig stellen
 
-Wenn die Informationen, die auf diesem Bildschirm angegebenen abgeschlossen ist, können Sie klicken **Fertig stellen**. Der DSN wird erstellt, mit allen Attributen, die zu diesem und anderen Bildschirmen des Assistenten angegeben, und erhalten Sie eine Möglichkeit zum Testen des neu erstellten DSNS.
+Wenn die auf diesem Bildschirm angegebenen Informationen vollständig sind, können Sie auf **Fertig**stellen klicken. Der DSN wird mit allen auf diesem und anderen Bildschirmen des Assistenten angegebenen Attributen erstellt, und Sie haben die Möglichkeit, den neu erstellten DSN zu testen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
