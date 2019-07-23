@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c1e21c1e936b9da10fd1adfcc5afab901b0027bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 201314f5869b9b1aab52b2f101f2396656448f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994786"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Abrufen von Daten aus einer FILESTREAM-Spalte mithilfe von ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66791475"
 
   Dieses Beispiel veranschaulicht die Verwendung einer ISequentialStream-Schnittstelle in einer ICommandText-Schnittstelle, um einen einzigen Datensatz aus einer FILESTREAM-Spalte abzurufen.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung](../../../oledb/features/filestream-support.md).  
+ Weitere Informationen zur FILESTREAM-Funktion finden Sie [unter FILESTREAM-Unterstützung](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Beispiel  
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  

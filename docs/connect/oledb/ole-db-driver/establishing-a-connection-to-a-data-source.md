@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit einer Datenquelle | Microsoft-Dokumentation
-description: Herstellen einer Verbindung mit einer Datenquelle mit OLE DB-Treiber für SQL Server
+description: Herstellen einer Verbindung mit einer Datenquelle mithilfe OLE DB Treibers für SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994994"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Herstellen einer Verbindung zu einer Datenquelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der Consumer muss zum Zugreifen auf den OLE DB-Treiber für SQL Server zunächst eine Instanz eines Datenquellenobjekts erstellen, indem er die **CoCreateInstance**-Methode aufruft. Ein eindeutiger Klassenbezeichner (CLSID) identifiziert jeden OLE DB-Anbieter. Für den OLE DB-Treiber für SQL Server ist der Klassenbezeichner CLSID_MSOLEDBSQL. Sie können auch das Symbol MSOLEDBSQL_CLSID verwenden, die in der OLE DB-Treiber für SQL Server aufgelöst wird, die in der msoledbsql.h verwendet wird, die Sie verweisen.  
+  Der Consumer muss zum Zugreifen auf den OLE DB-Treiber für SQL Server zunächst eine Instanz eines Datenquellenobjekts erstellen, indem er die **CoCreateInstance**-Methode aufruft. Ein eindeutiger Klassenbezeichner (CLSID) identifiziert jeden OLE DB-Anbieter. Für den OLE DB-Treiber für SQL Server lautet der Klassen Bezeichner CLSID_MSOLEDBSQL. Sie können auch das Symbol MSOLEDBSQL_CLSID verwenden, das in den OLE DB-Treiber für SQL Server aufgelöst wird, der in der msoledbsql. h-Datei verwendet wird, auf die Sie verweisen.  
   
  Das Datenquellenobjekt macht die **IDBProperties**-Schnittstelle verfügbar, die der Consumer verwendet, um grundlegende Authentifizierungsinformationen wie Servername, Datenbankname, Benutzer-ID und Kennwort bereitzustellen. Die **IDBProperties::SetProperties**-Methode wird aufgerufen, um diese Eigenschaften festzulegen.  
   
@@ -47,7 +46,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
  Durch diesen Aufruf von **CoCreateInstance** wird ein einzelnes Objekt der Klasse erstellt, die CLSID_MSOLEDBSQL zugeordnet ist (CSLID ist den Daten und dem Code zugeordnet, die zur Objekterstellung verwendet werden). IID_IDBInitialize ist ein Verweis auf den Bezeichner der Schnittstelle (**IDBInitialize**), die zur Kommunikation mit dem Objekt verwendet werden soll.  
   
- Das folgende Beispiel zeigt das Initialisieren und eine Verbindung mit der Datenquelle herzustellen.
+ Im folgenden Beispiel wird gezeigt, wie eine Verbindung mit der Datenquelle initialisiert und eingerichtet wird.
   
 ```cpp
 #include "msoledbsql.h"

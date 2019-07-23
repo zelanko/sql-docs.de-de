@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8aed6c45ec44e6373db0d018a1190f7295e9775f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128081"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,18 +100,18 @@ ms.locfileid: "47658078"
   
 1.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, um zu prüfen, ob die Assembly noch nicht als Geschäftslogikhandler registriert wurde.  
   
-2.  Führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) aus, und geben Sie dabei einen Anzeigenamen für den Geschäftslogikhandler für **@article_resolver**, den Wert **TRUE** für **@is_dotnet_assembly**, den Namen der Assembly für **@dotnet_assembly_name** und den vollqualifizierten Namen der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> überschreibt, für **@dotnet_class_name** an.  
+2.  Führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) aus, und geben Sie dabei einen Anzeigenamen für den Geschäftslogikhandler für **@article_resolver** , den Wert **TRUE** für **@is_dotnet_assembly** , den Namen der Assembly für **@dotnet_assembly_name** und den vollqualifizierten Namen der Klasse, die <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> überschreibt, für **@dotnet_class_name** an.  
   
     > [!NOTE]  
-    >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name**. Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
+    >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name** . Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
   
-1.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um einen Artikel zu definieren. Geben Sie dabei den Anzeigenamen des Geschäftslogikhandlers für **@article_resolver** an. Weitere Informationen finden Sie unter [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+1.  Führen Sie [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um einen Artikel zu definieren. Geben Sie dabei den Anzeigenamen des Geschäftslogikhandlers für **@article_resolver** an. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
-1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie dabei **@publication**, **@article**, den Wert **article_resolver** für **@property** und den Anzeigenamen des Geschäftslogikhandlers für **@value** an.  
+1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie dabei **@publication** , **@article** , den Wert **article_resolver** für **@property** und den Anzeigenamen des Geschäftslogikhandlers für **@value** an.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Replikationsprogrammierung)  
  In diesem Beispiel wird ein Geschäftslogikhandler gezeigt, der ein Überwachungsprotokoll erstellt.  
@@ -204,7 +203,7 @@ ms.locfileid: "47658078"
   
     -   Den Anzeigenamen des Geschäftslogikhandlers (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) für <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A> -Methode auf. Weitere Informationen finden Sie unter [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Article.Create%2A> -Methode auf. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
@@ -239,7 +238,7 @@ ms.locfileid: "47658078"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
