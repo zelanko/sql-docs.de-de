@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c2489e492674a37a63e84b409e60dd40247800e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 404071adb9795f8df1e239180803e9444f13999c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111912"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
 
@@ -53,7 +52,7 @@ ms.locfileid: "65726373"
   
     2.  Wählen Sie für **Activation Type**(Aktivierungstyp) die Option **Registered Server Program**(Registriertes Serverprogramm) aus.  
   
-    3.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)**(Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
+    3.  Wählen Sie für **Communication Type with Target System**(Kommunikationstyp mit Zielsystem) die Option **Non-Unicode (Inactive MDMP Settings)** (Nicht-Unicode (inaktive MDMP-Einstellungen)) aus.  
   
     4.  Weisen Sie eine entsprechende Programm-ID zu.  
   

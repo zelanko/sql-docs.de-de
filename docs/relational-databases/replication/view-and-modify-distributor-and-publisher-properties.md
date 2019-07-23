@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43830b86ef02a0d9d3edf2db3ee8ebde129963c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115230"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "54133390"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So können Sie Verteiler- und Verlegereigenschaften anzeigen und ändern mit:**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "54133390"
 ###  <a name="Security"></a> Sicherheit  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>So zeigen Sie die Verteilereigenschaften an oder ändern diese  
   
@@ -62,7 +61,7 @@ ms.locfileid: "54133390"
   
 3.  Sie können die Eigenschaften im Dialogfeld **Verteilereigenschaften – \<Verteiler>** anzeigen und ändern.  
   
-    -   Um die Eigenschaften einer Verteilungsdatenbank anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche Eigenschaften (**...**) für die Datenbank auf der Seite **Allgemein** des Dialogfelds.  
+    -   Um die Eigenschaften einer Verteilungsdatenbank anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche Eigenschaften ( **...** ) für die Datenbank auf der Seite **Allgemein** des Dialogfelds.  
   
     -   Um die mit dem Verteiler verbundenen Verlegereigenschaften anzuzeigen und zu ändern, klicken Sie auf der Seite**Verleger**des Dialogfelds auf die Schaltfläche Eigenschaften ( **...** ) des Verlegers.  
   

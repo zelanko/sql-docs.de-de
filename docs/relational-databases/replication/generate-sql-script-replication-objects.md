@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35531770618cd0430e456b8a1c5c7880edb6c253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecfda7e29dc749733f950e111f6b650ee61ac38f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128069"
 ---
 # <a name="generate-sql-script-replication-objects"></a>SQL-Skript generieren (Replikationsobjekte)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47718458"
   
 -   **SQL-Skript generieren**: Dieses Dialogfeld kann über das Kontextmenü des Ordners **Replikation** sowie aller untergeordneten Ordner in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aufgerufen werden. Mithilfe dieses Dialogfelds können Sie Skripts für alle Replikationsobjekte einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellen.  
   
--   **SQL-Skript generieren \<ObjectName>**: Auf dieses Dialogfeld können Sie über das Kontextmenü für Veröffentlichungen und Abonnements zugreifen. Mithilfe dieses Dialogfelds können Sie Skripts für einzelne Objekte erstellen.  
+-   **SQL-Skript generieren \<ObjectName>** : Auf dieses Dialogfeld können Sie über das Kontextmenü für Veröffentlichungen und Abonnements zugreifen. Mithilfe dieses Dialogfelds können Sie Skripts für einzelne Objekte erstellen.  
   
  In diesen Dialogfeldern werden Skripts für Objekte einer einzelnen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt; es werden keine Verbindungen mit anderen Instanzen hergestellt, um Skripts für verknüpfte Objekte zu erstellen.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "47718458"
  **Replikationsaufträge**  
  Auf diese Option kann im Dialogfeld **SQL-Skript generieren** zugegriffen werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Skripts für die Replikation](../../relational-databases/replication/scripting-replication.md)  
   
   
