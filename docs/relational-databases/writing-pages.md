@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c24fd65d4292cdee4c0ba2c0ce5d944b0e4e24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095486"
 ---
 # <a name="writing-pages"></a>Schreiben von Seiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,6 +55,6 @@ Für das Schreiben einer modifizierten („dirty“) Seite auf den Datenträger 
 
 Die oben beschriebenen Prozesse, Verzögertes Schreiben, Eager-Writing und Prüfpunkt, warten nicht, bis die E/A-Operation abgeschlossen ist. Sie verwenden immer asynchrone (oder überlappte) E/As, setzen ihre Tätigkeit fort und überprüfen die ordnungsgemäße Ausführung der E/A-Operationen zu einem späteren Zeitpunkt. Dies ermöglicht SQL Server, sowohl die Ressourcen der CPU als auch der E/As für die entsprechenden Tasks zu maximieren.
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
 [Handbuch zur Architektur von Seiten und Blöcken](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Lesen von Seiten](../relational-databases/reading-pages.md)

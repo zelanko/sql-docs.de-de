@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583657"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307583"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Konfigurieren von Always Encrypted mit Secure Enclaves
 
@@ -151,7 +150,7 @@ Um einen Enclave-fähigen Spaltenverschlüsselungsschlüssel bereitzustellen, m�
 
 Derzeit gelten die folgenden Einschränkungen für die Bereitstellung Enclave-fähiger Schlüssel:
 
-- Enclave-fähige Spaltenhauptschlüssel müssen im [Windows-Zertifikatspeicher](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) oder im [Azure Key Vault](/azure/key-vault/key-vault-whatis/) gespeichert sein. Das Speichern von Enclave-fähigen Spaltenhauptschlüsseln in anderen Arten von Schlüsselspeichern (z.B. Hardwaresicherheitsmodule oder kundenspezifische Schlüsselspeicher) wird derzeit nicht unterstützt.
+- Enclave-fähige Spaltenhauptschlüssel müssen im [Windows-Zertifikatspeicher](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) oder im [Azure Key Vault](/azure/key-vault/key-vault-whatis/) gespeichert sein. Das Speichern von Enclave-fähigen Spaltenhauptschlüsseln in anderen Arten von Schlüsselspeichern (z.B. Hardwaresicherheitsmodule oder kundenspezifische Schlüsselspeicher) wird derzeit nicht unterstützt.
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Bereitstellen von Enclave-fähigen-Schlüsseln mithilfe von SQL Server Management Studio (SSMS)
 

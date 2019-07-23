@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d44fd5f6e0d2196af84f890fcbc591e10c036f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d674bf516dbdf25f940e9b14792d71c01d44806
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940665"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed (Ereignisklasse)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,19 +27,19 @@ ms.locfileid: "62693810"
   
 |Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**ssNoversion**|216|27|Nein|  
-|SPID|**ssNoversion**|Die ID des Serverprozesses, von dem das Ereignis ausgelöst wird.|12|Ja|  
-|EventSubClass|**ssNoversion**|1 für die benutzerdefinierte Klassifizierungsfunktion.|21|Ja|  
+|EventClass|**int**|216|27|Nein|  
+|SPID|**int**|Die ID des Serverprozesses, von dem das Ereignis ausgelöst wird.|12|Ja|  
+|EventSubClass|**int**|1 für die benutzerdefinierte Klassifizierungsfunktion.|21|Ja|  
 |StartTime|**datetime**|Der Zeitpunkt, an dem die benutzerdefinierte Klassifizierungsfunktion beginnt.|14|Ja|  
 |EndTime|**datetime**|Der Zeitpunkt, an dem die benutzerdefinierte Klassifizierungsfunktion beginnt.|15|Ja|  
 |Duration|**bigint**|Die von der Klassifizierungsfunktion benötigte Zeit (in Mikrosekunden)|13|Ja|  
-|ObjectID|**ssNoversion**|Die ID des benutzerdefinierten Klassifizierungsobjekts.|22|Ja|  
-|CPU|**ssNoversion**|CPU-Verwendung in Millisekunden|18|Ja|  
-|Reads|**ssNoversion**|Die Anzahl der logischen Lesevorgänge|16|Ja|  
-|Writes|**ssNoversion**|Die Anzahl der logischen Schreibvorgänge|17|Ja|  
-|GroupID|**ssNoversion**|Die ID der klassifizierten Arbeitsauslastungsgruppe|66|Ja|  
-|Fehler|**ssNoversion**|Die letzte Fehlernummer, falls die benutzerdefinierte Klassifizierungsfunktion nicht ausgeführt wird|31|Ja|  
-|Status|**ssNoversion**|Der Status des letzten Fehlers|30|Ja|  
+|ObjectID|**int**|Die ID des benutzerdefinierten Klassifizierungsobjekts.|22|Ja|  
+|CPU|**int**|CPU-Verwendung in Millisekunden|18|Ja|  
+|Reads|**int**|Die Anzahl der logischen Lesevorgänge|16|Ja|  
+|Writes|**int**|Die Anzahl der logischen Schreibvorgänge|17|Ja|  
+|GroupID|**int**|Die ID der klassifizierten Arbeitsauslastungsgruppe|66|Ja|  
+|Fehler|**int**|Die letzte Fehlernummer, falls die benutzerdefinierte Klassifizierungsfunktion nicht ausgeführt wird|31|Ja|  
+|Status|**int**|Der Status des letzten Fehlers|30|Ja|  
 |TargetUserName|**sysname**|Der Rückgabewert (Name der Arbeitsauslastungsgruppe) für die benutzerdefinierte Klassifizierungsfunktion, falls das System keine entsprechende aktive Gruppe finden kann. Andernfalls wird diese Spalte auf NULL gesetzt.|39|Ja|  
 |ObjectName|**nvarchar(256)**|Der zweiteilige Name der benutzerdefinierten Klassifizierungsfunktion. Beispiel: dbo.classifier.|34|Ja|  
   
