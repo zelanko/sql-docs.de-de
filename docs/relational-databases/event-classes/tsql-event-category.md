@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e79d7b85f847ef0410d44b9247bd5bd0b00ba3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af5cd09c9c00c0b250f1b51c72ce642be01dc9a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996080"
 ---
 # <a name="tsql-event-category"></a>TSQL-Ereigniskategorie
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47745908"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Exec Prepared SQL (Ereignisklasse)](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine vorbereitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausgeführt wurde.|  
 |[Prepare SQL-Ereignisklasse](../../relational-databases/event-classes/prepare-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung zum Verwenden vorbereitet wurde.|  
@@ -40,7 +39,7 @@ ms.locfileid: "47745908"
 |[Unprepare SQL-Ereignisklasse](../../relational-databases/event-classes/unprepare-sql-event-class.md)|Zeigt an, dass von SqlClient, ODBC, OLE DB oder DB-Library mindestens eine vorbereitete [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung gelöscht wurde.|  
 |[XQuery Static Type (Ereignisklasse)](../../relational-databases/event-classes/xquery-static-type-event-class.md)|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen XQuery-Ausdruck ausführt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Transact-SQL-Referenz &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../t-sql/transact-sql-reference-database-engine.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

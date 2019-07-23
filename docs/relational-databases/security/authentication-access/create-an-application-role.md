@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ed869ccfbeb745229ce1bbf2780ce6beb7e12e2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 4ca72f042d8a41501cef58e321654fa8c8374a88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094929"
 ---
 # <a name="create-an-application-role"></a>Erstellen einer Anwendungsrolle
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,11 +58,11 @@ ms.locfileid: "67579884"
   
 3.  Erweitern Sie den Ordner **Rollen** .  
   
-4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anwendungsrollen**, und klicken Sie dann auf **Neue Anwendungsrolle...**.  
+4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anwendungsrollen**, und klicken Sie dann auf **Neue Anwendungsrolle...** .  
   
 5.  Geben Sie in das Dialogfeld **Anwendungsrolle – Neu** auf der Seite **Allgemein** den Namen der neuen Anwendungsrolle in das Feld **Rollenname** ein.  
   
-6.  Geben Sie im Feld **Standardschema** das Schema an, das Objekte besitzen soll, die von dieser Rolle durch Eingabe der Objektnamen erstellt wurden. Klicken Sie alternativ auf die Auslassungspunkte **(...)**, um das Dialogfeld **Schema suchen** zu öffnen.  
+6.  Geben Sie im Feld **Standardschema** das Schema an, das Objekte besitzen soll, die von dieser Rolle durch Eingabe der Objektnamen erstellt wurden. Klicken Sie alternativ auf die Auslassungspunkte **(...)** , um das Dialogfeld **Schema suchen** zu öffnen.  
   
 7.  Geben Sie im Feld **Kennwort** ein Kennwort für die neue Rolle ein. Geben Sie im Feld **Kennwort bestätigen** das Kennwort erneut ein.  
   

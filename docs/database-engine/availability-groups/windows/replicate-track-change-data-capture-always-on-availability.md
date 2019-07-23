@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014337"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replikation, Änderungsnachverfolgung und Change Data Capture (Always On-Verfügbarkeitsgruppen)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ ms.locfileid: "66787987"
     ```  
   
     > [!NOTE]  
-    >  Sie sollten die Aufträge im Vorfeld für alle möglichen Failoverziele erstellen und sie als deaktiviert kennzeichnen, bis das Verfügbarkeitsreplikat auf einem Host zum neuen primären Replikat wird. Die CDC-Aufträge, die auf der alten primären Datenbank ausgeführt werden, sollten auch deaktiviert werden, wenn die lokale Datenbank zur sekundären Datenbank wird. Verwenden Sie zum Deaktivieren und Aktivieren von Aufträgen die *@enabled*-Option von [sp_update_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Weitere Informationen zum Erstellen von CDC-Aufträgen finden Sie unter [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)unterstützt.  
+    >  Sie sollten die Aufträge im Vorfeld für alle möglichen Failoverziele erstellen und sie als deaktiviert kennzeichnen, bis das Verfügbarkeitsreplikat auf einem Host zum neuen primären Replikat wird. Die CDC-Aufträge, die auf der alten primären Datenbank ausgeführt werden, sollten auch deaktiviert werden, wenn die lokale Datenbank zur sekundären Datenbank wird. Verwenden Sie zum Deaktivieren und Aktivieren von Aufträgen die *@enabled* -Option von [sp_update_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Weitere Informationen zum Erstellen von CDC-Aufträgen finden Sie unter [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)unterstützt.  
   
 -   **Hinzufügen von CDC-Rollen zu einem primären Always On-Datenbankreplikat**  
   

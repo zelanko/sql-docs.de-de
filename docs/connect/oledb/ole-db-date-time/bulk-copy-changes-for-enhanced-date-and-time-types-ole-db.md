@@ -12,20 +12,19 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 417bf44993ffc850da03d090e36c29cae472c104
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015833"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Massenkopieränderungen für verbesserte Datums- und Uhrzeittypen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dieser Artikel beschreibt die Datums-/uhrzeitverbesserungen zur Unterstützung von Massenkopierfunktionen in OLE DB-Treiber für SQL Server.  
+  In diesem Artikel werden die Datums-/Uhrzeitverbesserungen zur Unterstützung von Massen Kopierfunktionen in OLE DB Treiber für SQL Server beschrieben.  
   
 ## <a name="format-files"></a>Formatdateien  
  Beim interaktiven Erstellen von Formatdateien beschreibt die folgende Tabelle die Eingaben, die zum Angeben von Datum-/Uhrzeittypen verwendet werden, sowie die entsprechenden Datentypnamen der Hostdatei.  
@@ -65,7 +64,7 @@ ms.locfileid: "66769546"
 ```  
   
 ## <a name="character-data-files"></a>Zeichendatendateien  
- In zeichendatendateien werden Datums-und Uhrzeitwerte dargestellt, wie beschrieben im Abschnitt "Datenformate: Zeichenfolgen und Literale" [Datentypunterstützung für OLE DB-Datum und Uhrzeit-Verbesserungen](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) für OLE DB.  
+ In Zeichen Datendateien werden Datums-und Uhrzeitwerte entsprechend der Beschreibung im Abschnitt "Datenformate: Zeichen folgen und Literale" der [Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) für OLE DB dargestellt.  
   
  In nativen Datendateien werden Datums- und Uhrzeitwerte für die vier neuen Typen als TDS-Entsprechungen mit sieben Dezimalstellen dargestellt, da es sich dabei um das von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützte Maximum handelt und bcp-Datendateien die Dezimalstellen dieser Spalten nicht speichern. Es erfolgt keine Änderung an der Speicherung der vorhandenen **datetime**- und **smalldatetime**-Typen oder ihrer Tabular Data Stream-Entsprechungen (TDS).  
   
@@ -81,10 +80,10 @@ ms.locfileid: "66769546"
 |datetimeoffset|11|  
  
   
-## <a name="bcp-types-in-msoledbsqlh"></a>BCP-Typen in msoledbsql.h  
- Die folgenden Typen werden in msoledbsql.h definiert. Diese Typen werden übergeben, mit der *eUserDataType* Parameter der ibcpsession:: BCPColFmt, in der OLE DB.  
+## <a name="bcp-types-in-msoledbsqlh"></a>BCP-Typen in msoledbsql. h  
+ Die folgenden Typen sind in msoledbsql. h definiert. Diese Typen werden mit dem *eUserDataType* -Parameter von IBCPSession:: bcpcolf MT in OLE DB übergeben.  
   
-|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie in msoledbsql.h für die Verwendung mit ibcpsession:: BCPColFmt|value|  
+|Dateispeichertyp|Datentyp in der Hostdatei|Geben Sie msoledbsql. h für die Verwendung mit IBCPSession:: bcpcolbmt ein.|value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
@@ -96,7 +95,7 @@ ms.locfileid: "66769546"
 ## <a name="bcp-data-type-conversions"></a>BCP-Datentypkonvertierungen  
  Die folgenden Tabellen enthalten Konvertierungsinformationen.  
   
- **OLE DB-Hinweis** Die folgenden Konvertierungen werden von IBCPSession ausgeführt. IRowsetFastLoad verwendet OLE DB-Konvertierungen gemäß [ausgeführte Konvertierungen vom Client zum Server](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Beachten Sie, dass datetime-Werte auf 1/300stel einer Sekunde gerundet werden und dass für smalldatetime-Werte die Sekunden vom Server auf null festgelegt werden, nachdem die unten beschriebenen Clientkonvertierungen durchgeführt wurden. Datetime-Rundung wird durch Stunden und Minuten, aber nicht durch das Datum weitergegeben.  
+ **OLE DB-Hinweis** Die folgenden Konvertierungen werden von IBCPSession ausgeführt. IRowsetFastLoad verwendet OLE DB Konvertierungen gemäß der Definition in [Konvertierungen, die vom Client zum Server ausgeführt werden](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Beachten Sie, dass datetime-Werte auf 1/300stel einer Sekunde gerundet werden und dass für smalldatetime-Werte die Sekunden vom Server auf null festgelegt werden, nachdem die unten beschriebenen Clientkonvertierungen durchgeführt wurden. Datetime-Rundung wird durch Stunden und Minuten, aber nicht durch das Datum weitergegeben.  
   
 |Bis --><br /><br /> Von|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
@@ -116,7 +115,7 @@ ms.locfileid: "66769546"
 |Symbol|Bedeutung|  
 |------------|-------------|  
 |-|Es wird keine Konvertierung unterstützt.<br />|  
-|1|Wenn die bereitgestellten Daten nicht gültig ist, wird ein Fehler generiert. Für datetimeoffset-Werte muss der Uhrzeitteil nach der Konvertierung in das UTC-Format innerhalb des gültigen Bereichs liegen, und zwar selbst dann, wenn keine Konvertierung in UTC angefordert wird. Das liegt daran, dass TDS und der Server immer die Uhrzeit in datetimeoffset-Werten für UTC normalisieren. Darum muss der Client überprüfen, dass sich die Zeitkomponenten innerhalb des nach Konvertierung zu UTC unterstützten Bereichs befinden.|  
+|1|Wenn die bereitgestellten Daten ungültig sind, wird ein Fehler ausgegeben. Für datetimeoffset-Werte muss der Uhrzeitteil nach der Konvertierung in das UTC-Format innerhalb des gültigen Bereichs liegen, und zwar selbst dann, wenn keine Konvertierung in UTC angefordert wird. Das liegt daran, dass TDS und der Server immer die Uhrzeit in datetimeoffset-Werten für UTC normalisieren. Darum muss der Client überprüfen, dass sich die Zeitkomponenten innerhalb des nach Konvertierung zu UTC unterstützten Bereichs befinden.|  
 |2|Die Uhrzeitkomponente wird ignoriert.|  
 |3|Wenn eine Kürzung mit Datenverlust auftritt, wird ein Fehler generiert. Für „datetime2“ wird die Anzahl der Dezimalstellen für Sekundenbruchteile anhand der Größe der Zielspalte gemäß der folgenden Tabelle bestimmt: Für Spaltengrößen, die den Bereich in der Tabelle übersteigen, werden 9 Dezimalstellen impliziert. Diese Konvertierung sollte bis zu neun Dezimalstellen für Sekundenbruchteile ermöglichen, das von OLE&nbsp;DB zugelassene Maximum.<br /><br /> **Typ:** DBTIME2<br /><br /> **Implizierte Dezimalstellen 0** 8<br /><br /> **Implizierte Dezimalstellen 1..9**1..9<br /><br /> <br /><br /> **Typ:** DBTIMESTAMP<br /><br /> **Implizierte Dezimalstellen 0:** 19<br /><br /> **Implizierte Dezimalstellen 1..9:** 21..29<br /><br /> <br /><br /> **Typ:** DBTIMESTAMPOFFSET<br /><br /> **Implizierte Dezimalstellen 0:** 26<br /><br /> **Implizierte Dezimalstellen 1..9:** 28..36|  
 |4|Die Datumskomponente wird ignoriert.|  
@@ -124,9 +123,9 @@ ms.locfileid: "66769546"
 |6|Die Uhrzeit wird auf 0 (Null) festgelegt.|  
 |7|Das Datum wird auf den 01.01.1900 festgelegt.|  
 |8|Der Zeitzonenoffset wird ignoriert.|  
-|9|Die Zeichenfolge wird analysiert und je nach dem ersten Satzzeichen und dem Vorhandensein weiterer Komponenten in einen date-, datetime-, datetimeoffset- oder time-Wert konvertiert. Die Zeichenfolge wird dann in den Zieltyp konvertiert. Dabei wird nach den Regeln am Ende dieses Artikels für den Quelltyp vorgegangen, der von diesem Prozess ermittelt wird. Wenn die bereitgestellten Daten nicht ohne Fehler analysiert werden kann, oder wenn ein Komponententeil außerhalb des zulässigen Bereichs ist oder wenn keine Konvertierung vom Literaltyp zum Zieltyp, wird ein Fehler angezeigt. Wenn das Jahr außerhalb des Bereichs, die diese Typen zu unterstützen liegt, wird für Datetime und Smalldatetime-Parameter ein Fehler generiert.<br /><br /> Der Wert für datetimeoffset muss nach der Konvertierung in das UTC-Format innerhalb des gültigen Bereichs liegen und zwar selbst dann, wenn keine Konvertierung in UTC angefordert wird. Der Grund dafür ist, dass der TDS und der Server das Datum stets in datetimeoffset-Werte für UTC normalisieren, weshalb der Client prüfen muss, ob die Zeitkomponenten innerhalb des nach Konvertierung in UTC unterstützten Bereichs liegen. Wenn der Wert nicht innerhalb des unterstützten UTC-Bereichs ist, wird ein Fehler generiert.|  
-|10|Wenn eine Kürzung mit Datenverlust auftritt, wird für den Client zu Server-Konvertierungen ein Fehler generiert. Dieser Fehler tritt auch dann auf, wenn der Wert außerhalb des Bereichs liegt, der vom UTC-Bereich, den der Server verwendet, dargestellt werden kann. Wenn während einer Konvertierung vom Server zum Client eine Kürzung der Sekunden oder Sekundenbruchteile auftritt, wird lediglich eine Warnung angezeigt.|  
-|11|Wenn eine Kürzung mit Datenverlust auftritt, wird für den Client zu Server-Konvertierungen ein Fehler generiert.|
+|9|Die Zeichenfolge wird analysiert und je nach dem ersten Satzzeichen und dem Vorhandensein weiterer Komponenten in einen date-, datetime-, datetimeoffset- oder time-Wert konvertiert. Die Zeichenfolge wird dann in den Zieltyp konvertiert. Dabei wird nach den Regeln am Ende dieses Artikels für den Quelltyp vorgegangen, der von diesem Prozess ermittelt wird. Wenn die bereitgestellten Daten nicht fehlerfrei analysiert werden können, oder wenn ein Teil der Komponente außerhalb des zulässigen Bereichs liegt, oder wenn keine Konvertierung vom Literaltyp in den Zieltyp erfolgt, wird ein Fehler ausgegeben. Bei den Parametern "DateTime" und "smalldatetime" wird ein Fehler ausgegeben, wenn das Jahr außerhalb des Bereichs liegt, den diese Typen unterstützen.<br /><br /> Der Wert für datetimeoffset muss nach der Konvertierung in das UTC-Format innerhalb des gültigen Bereichs liegen und zwar selbst dann, wenn keine Konvertierung in UTC angefordert wird. Der Grund dafür ist, dass der TDS und der Server das Datum stets in datetimeoffset-Werte für UTC normalisieren, weshalb der Client prüfen muss, ob die Zeitkomponenten innerhalb des nach Konvertierung in UTC unterstützten Bereichs liegen. Wenn der Wert nicht innerhalb des unterstützten UTC-Bereichs liegt, wird ein Fehler ausgegeben.|  
+|10|Bei Client-zu-Server-Konvertierungen wird ein Fehler ausgegeben, wenn eine Kürzung mit Datenverlust auftritt. Dieser Fehler tritt auch dann auf, wenn der Wert außerhalb des Bereichs liegt, der vom UTC-Bereich, den der Server verwendet, dargestellt werden kann. Wenn während einer Konvertierung vom Server zum Client eine Kürzung der Sekunden oder Sekundenbruchteile auftritt, wird lediglich eine Warnung angezeigt.|  
+|11|Bei Client-zu-Server-Konvertierungen wird ein Fehler ausgegeben, wenn eine Kürzung mit Datenverlust auftritt.|
 |12|Die Sekunden werden auf null festgelegt, und die Sekundenbruchteile werden verworfen. Kein Kürzungsfehler ist möglich.|  
 |–|Das Verhalten von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und früheren Versionen ist beibehalten worden.|  
   

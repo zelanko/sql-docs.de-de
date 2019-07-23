@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1137138911519b2e6497525acb39b7de87a4fd63
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085911"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.locfileid: "54254895"
 |Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |Warteschlangenlese-Agent|**[\<Verteiler>].\<Ganzzahl>**|[Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Bei Pushabonnements für Oracle-Veröffentlichungen lautet der Name **\<Verleger>-\<Verleger**> und nicht **\<Verleger>-\<Veröffentlichungsdatenbank>**.  
+ \*Bei Pushabonnements für Oracle-Veröffentlichungen lautet der Name **\<Verleger>-\<Verleger**> und nicht **\<Verleger>-\<Veröffentlichungsdatenbank>** .  
   
- \*\*Bei Pullabonnements für Oracle-Veröffentlichungen lautet der Name **\<Verleger>-\<Verteilungsdatenbank**> und nicht **\<Verleger>-\<Veröffentlichungsdatenbank>**.  
+ \*\*Bei Pullabonnements für Oracle-Veröffentlichungen lautet der Name **\<Verleger>-\<Verteilungsdatenbank**> und nicht **\<Verleger>-\<Veröffentlichungsdatenbank>** .  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>So zeigen Sie Befehlszeilenparameter des Replikations-Agents in SQL Server Management Studio an und ändern Sie die Parameter  
   

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4d1f3ca61710f1e55d95b8942adc86fea736910
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113743"
 ---
 # <a name="data-types-transact-sql"></a>Datentypen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +77,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind einige Datenty
 |-|-|  
 |[Datum](../../t-sql/data-types/date-transact-sql.md)|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|  
-|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|[Uhrzeit](../../t-sql/data-types/time-transact-sql.md)|  
+|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|[time](../../t-sql/data-types/time-transact-sql.md)|  
   
 ### <a name="character-strings"></a>Zeichenfolgen
   

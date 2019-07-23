@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9279a433d848108b204cadc6990803695f9e82d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140982"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Verwenden von MSDeploy mit dem dbSqlPackage-Anbieter
 **dbSqlPackage** ist ein **MSDeploy**-Anbieter, der Ihnen die Interaktion mit SQL Server- oder SQL Azure-Datenbanken ermöglicht. **dbSqlPackage** unterstützt die folgenden Aktionen:  

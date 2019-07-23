@@ -1,5 +1,5 @@
 ---
-title: SupportsSavepoints-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportssavepoints-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cd2418c9-e95d-4820-82bd-944287387b60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a23a3487b759392329ba22284fba532d797ca53a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a4359c68d2376d933e919a03dcd230a9df9ea307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968922"
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>supportsSavepoints-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsSavepoints()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsSavepoints-Methode wird von der SupportsSavepoints-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportssavepoints-Methode wird von der supportssavepoints-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

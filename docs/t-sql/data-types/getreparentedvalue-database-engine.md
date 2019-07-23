@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077964"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ Wird verwendet, um die Struktur durch Verschieben von Knoten von _oldRoot_ nach 
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Vergleichen von zwei Knotenpositionen  
-Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Des Weiteren wird der **hierarchyid**-Wert gezeigt, den der Knoten aufweist, wenn Sie ihn an die Position des Nachfolgers des **@NewParent**-Knotens verschieben. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
+Im folgenden Beispiel wird der aktuelle hierarchyid-Wert eines Knotens gezeigt. Des Weiteren wird der **hierarchyid**-Wert gezeigt, den der Knoten aufweist, wenn Sie ihn an die Position des Nachfolgers des **@NewParent** -Knotens verschieben. Zur Darstellung der hierarchischen Beziehungen wird die `ToString()`-Methode verwendet.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

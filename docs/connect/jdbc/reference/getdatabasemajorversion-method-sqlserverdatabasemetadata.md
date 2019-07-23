@@ -1,5 +1,5 @@
 ---
-title: GetDatabaseMajorVersion-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getdatabasemajorversion-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 30860c07-e84b-428a-922a-ba63c070cd9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 26bef53cbfa004ce0284aae5f0f4e1fb495fc3b1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 783247bda92e4a7dd3d89c6276be6457487f0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984203"
 ---
 # <a name="getdatabasemajorversion-method-sqlserverdatabasemetadata"></a>getDatabaseMajorVersion-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDatabaseMajorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetDatabaseMajorVersion-Methode wird von der GetDatabaseMajorVersion-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getdatabasemajorversion-Methode wird von der getdatabasemajorversion-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

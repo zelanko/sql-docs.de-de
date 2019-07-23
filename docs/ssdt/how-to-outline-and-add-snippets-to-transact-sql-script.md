@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035118"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Gewusst wie: Gliedern und Hinzufügen von Ausschnitten zu Transact-SQL-Skripts
 SQL Server Data Tools enthält eine Codebibliothek mit Codeausschnitten, die in die Anwendung eingefügt werden können. Jeder Ausschnitt führt einen kompletten Skripttask aus, z. B. das Erstellen einer Funktion, einer Tabelle, eines Triggers, eines Index, einer Ansicht, eines benutzerdefinierten Datentyps usw. Sie können mit wenigen Mausklicks einen Codeausschnitt in Ihren Quellcode einfügen. Diese Ausschnitte erhöhen die Produktivität, da Sie weniger Zeit für die Eingabe benötigen.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3df2d5cd644fdff3371c2814705a18dbd2dfdfb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65461818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111174"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,9 +90,9 @@ ms.locfileid: "65461818"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Datenwiederherstellung|Vollständige Wiederherstellung (falls das Protokoll verfügbar ist).|Gefahr des Datenverlusts.|Alle Daten seit der letzten vollständigen Sicherung oder differenziellen Sicherung gehen verloren.|  
 |Wiederherstellung bis zu einem bestimmten Zeitpunkt|Jeder von den Protokollsicherungen abgedeckte Zeitpunkt.|Nicht zulässig, wenn die Protokollsicherung massenprotokollierte Änderungen enthält.|Wird nicht unterstützt.|  
-|File restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
-|Page restore **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Keine.|  
-|Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal.**\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|File restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
+|Page restore **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Keine.|  
+|Schrittweise Wiederherstellung (Dateigruppenebene) **\***|Vollständige Unterstützung.|Manchmal. **\*\***|Verfügbar nur für schreibgeschützte sekundäre Dateien.|  
   
  **\*** Verfügbar nur in der Enterprise Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

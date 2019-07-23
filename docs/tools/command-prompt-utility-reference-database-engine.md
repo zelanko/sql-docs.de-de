@@ -1,5 +1,5 @@
 ---
-title: SQL-Eingabeaufforderungs-Hilfsprogramme (Datenbank-Engine) | Microsoft-Dokumentation
+title: SQL-Eingabe Aufforderungs-Hilfsprogramme (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8fdcb3b307f525ff9eda14006e6fd4f6378f418c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010420"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL-Eingabeaufforderungs-Hilfsprogramme (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Eingabeaufforderungs-Hilfsprogramme versetzen Sie in die Lage, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Vorgänge einem Skript hinzuzufügen. Die folgende Tabelle enthält eine Liste vieler Eingabeaufforderung-Hilfsprogramme, die im Lieferumfang von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] enthalten sind.  
 
-Informationen zu den *main* SQL-gui und Befehlszeilentools, finden Sie unter [Übersicht über die SQL-Tools](overview-sql-tools.md).
+Informationen zur *Haupt* -SQL-GUI und Befehlszeilen Tools finden Sie unter [Übersicht über SQL-Tools](overview-sql-tools.md).
 
   
 |**Hilfsprogramm**|**Beschreibung**|**Installiert in**|  

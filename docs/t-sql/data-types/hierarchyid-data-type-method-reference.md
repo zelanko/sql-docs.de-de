@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4c3f4ed7312afcd19e7244b98ba781753ee22b9f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077915"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Methodenverweis für den Datentyp „hierarchyid“
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ Der **hierarchyid**-Typ codiert Informationen logisch über einen einzelnen Knot
   
 -   /0.1/0.2/  
   
-Knoten können an jedem Speicherort eingefügt werden. Knoten, die nach **/1/2/**, aber vor **/1/3/** eingefügt werden, können als **/1/2.5/** dargestellt werden. Knoten, die vor 0 eingefügt wurden, werden in der logischen Darstellung als eine negative Zahl dargestellt. Beispielsweise kann ein Knoten vor **/1/1/** als **/1/–1/** dargestellt werden. Knoten können nicht über führende Nullen verfügen. Beispiel: **/1/1.1/** ist gültig, **/1/1.01/** hingegen nicht. Fügen Sie Knoten mit der [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md)-Methode ein, um Fehler zu vermeiden.
+Knoten können an jedem Speicherort eingefügt werden. Knoten, die nach **/1/2/** , aber vor **/1/3/** eingefügt werden, können als **/1/2.5/** dargestellt werden. Knoten, die vor 0 eingefügt wurden, werden in der logischen Darstellung als eine negative Zahl dargestellt. Beispielsweise kann ein Knoten vor **/1/1/** als **/1/–1/** dargestellt werden. Knoten können nicht über führende Nullen verfügen. Beispiel: **/1/1.1/** ist gültig, **/1/1.01/** hingegen nicht. Fügen Sie Knoten mit der [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md)-Methode ein, um Fehler zu vermeiden.
   
 ## <a name="data-type-conversion"></a>Datentypkonvertierung
 Der **hierarchyid**-Datentyp kann folgendermaßen in andere Datentypen konvertiert werden:
--   Verwenden Sie die [ToString()](../../t-sql/data-types/tostring-database-engine.md)-Methode, um den **hierarchyid**-Wert als einen **nvarchar(4000)**-Datentyp in die logische Darstellung zu konvertieren.  
+-   Verwenden Sie die [ToString()](../../t-sql/data-types/tostring-database-engine.md)-Methode, um den **hierarchyid**-Wert als einen **nvarchar(4000)** -Datentyp in die logische Darstellung zu konvertieren.  
 -   Verwenden Sie [Read()](../../t-sql/data-types/read-database-engine.md) und [Write()](../../t-sql/data-types/write-database-engine.md), um **hierarchyid** in **varbinary** zu konvertieren.  
 -   Um **hierarchyid**-Parameter über SOAP zu übertragen, wandeln Sie sie zunächst in Zeichenfolgen um.  
   

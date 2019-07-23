@@ -1,5 +1,5 @@
 ---
-title: SupportsGroupByUnrelated-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsgroupbyunverwandt-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e8cf15dc9151de38d37ce22e4794b9fb8e14300
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0c9ae064a25dc8386b38b11f79ab9ffb5b78a9ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969333"
 ---
 # <a name="supportsgroupbyunrelated-method-sqlserverdatabasemetadata"></a>supportsGroupByUnrelated-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsGroupByUnrelated()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsGroupByUnrelated-Methode wird von der SupportsGroupByUnrelated-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsgroupbyunverwandt-Methode wird von der supportsgroupbyunverwandt-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

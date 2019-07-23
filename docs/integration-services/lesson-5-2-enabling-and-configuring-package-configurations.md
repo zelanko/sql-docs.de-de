@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66388abaf9e1434abd78d595da25fc08ebeea1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911512"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lektion 5.2: Aktivieren und Konfigurieren von Paketkonfigurationen
 
@@ -45,11 +44,11 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 7.  Kehren Sie zur Registerkarte **Ablaufsteuerung** zurück, und doppelklicken Sie auf den **Foreach File in Folder** -Container.  
   
-8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
+8.  Klicken Sie auf der Seite **Sammlung** des **Foreach-Schleifen-Editors** auf **Ausdrücke** und anschließend auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
   
 9. Wählen Sie im **Eigenschaftsausdrucks-Editor** in die Liste **Eigenschaft** die Option **Verzeichnis** aus.  
   
-10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
+10. Klicken Sie im Feld **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)** .  
   
 11. Erweitern Sie im **Ausdrucks-Generator** den Ordner **Variablen und Parameter**, und ziehen Sie die Variable **User::varFolderName** in das Feld **Ausdruck**.  
   
@@ -109,7 +108,7 @@ In dieser Aufgabe konvertieren Sie das Projekt in das Paketbereitstellungsmodell
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Erstellen und Füllen eines neuen Beispieldatenordners  
   
-1.  Erstellen Sie im Windows-Explorer im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\**) einen Ordner mit dem Namen **Neue Beispieldaten**.  
+1.  Erstellen Sie im Windows-Explorer im Stammverzeichnis Ihres Laufwerks (beispielsweise **C:\\** ) einen Ordner mit dem Namen **Neue Beispieldaten**.  
   
 2.  Suchen Sie die Beispieldateien auf dem Computer, und kopieren Sie drei der Dateien aus dem Ordner.  
   
