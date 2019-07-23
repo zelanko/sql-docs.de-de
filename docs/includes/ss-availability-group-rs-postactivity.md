@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bf755ccfe5a1a6816129173dcb6ad5050ea5e114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213327"
+---
 
 ## <a name="add-a-database-to-the-availability-group"></a>Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe
 
@@ -7,7 +15,7 @@ Stellen Sie sicher, dass sich die Datenbank, die Sie der Verfügbarkeitsgruppe h
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1]
-   TO DISK = N'/var/opt/mssql/data/db1.bak';
+   TO DISK = N'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\db1.bak';
 ```
 
 Führen Sie zum Hinzufügen einer Datenbank namens `db1` für eine Verfügbarkeitsgruppe namens `ag1` das folgende Transact-SQL-Skript auf dem primären SQL Server-Replikat aus:

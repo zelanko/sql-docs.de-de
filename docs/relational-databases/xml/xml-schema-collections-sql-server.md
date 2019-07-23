@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62703963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096821"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML-Schemaauflistungen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +169,7 @@ ms.locfileid: "62703963"
   
 -   Schreiben Sie Transact-SQL-Abfragen zur jeweiligen Katalogsicht für XML-Schemaauflistungen.  
   
--   Verwenden Sie die integrierte Funktion **XML_SCHEMA_NAMESPACE()**. Auf das Ergebnis dieser Funktion können Sie die **xml** -Datentypmethoden anwenden. Allerdings können Sie dabei die zugrunde liegenden XML-Schemas nicht ändern.  
+-   Verwenden Sie die integrierte Funktion **XML_SCHEMA_NAMESPACE()** . Auf das Ergebnis dieser Funktion können Sie die **xml** -Datentypmethoden anwenden. Allerdings können Sie dabei die zugrunde liegenden XML-Schemas nicht ändern.  
   
  Diese Möglichkeiten werden in den folgenden Beispielen veranschaulicht.  
   

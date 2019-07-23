@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da9a53fa2811589b58ec3001ae5b92d46b4c1aec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911844"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Gewusst wie: Konfigurieren der Ausführung von SQL Server-Komponententests
 Indem Sie das Testprojekt konfigurieren, können Sie mehrere Einstellungen zur Steuerung der Ausführung von SQL Server-Komponententests angeben. Diese Konfigurationseinstellungen werden in der Datei app.config des Testprojekts gespeichert. Wenn Sie diese Datei direkt bearbeiten, werden die neuen Werte im Dialogfeld Testkonfiguration angezeigt.  

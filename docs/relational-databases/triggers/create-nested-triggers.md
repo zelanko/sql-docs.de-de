@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a0055e87ea9cdd93f232b9e93468db66a4f96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe633bc88750173f974ccf41a75f4bcad7e5c03b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075514"
 ---
 # <a name="create-nested-triggers"></a>Erstellen von geschachtelten Triggern
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47694008"
   
  Wenn geschachtelte Trigger zulässig sind und ein Trigger in der Kette eine Endlosschleife einleitet, wird die Anzahl der maximal zulässigen Schachtelungsebenen überschritten und der Trigger demzufolge beendet.  
   
- Sie können geschachtelte Trigger verwenden, um nützliche Verwaltungsfunktionen durchzuführen, wie z. B. das Speichern einer Sicherungskopie von Zeilen, die von einem vorherigen Trigger betroffen sind. Es ist beispielsweise möglich, einen Trigger für `PurchaseOrderDetail` zu erstellen, der eine Sicherungskopie der `PurchaseOrderDetail` -Zeilen speichert, die vom `delcascadetrig` -Trigger gelöscht wurden. Wenn der `delcascadetrig` -Trigger wirksam ist, führt das Löschen von `PurchaseOrderID` 1965 aus `PurchaseOrderHeader` dazu, dass die entsprechende(n) Zeile(n) aus `PurchaseOrderDetail`gelöscht werden. Zum Speichern der Daten erstellen Sie einen DELETE-Trigger für `PurchaseOrderDetail` , der die gelöschten Daten in einer getrennt erstellten Tabelle, `del_save`, speichert. Zum Beispiel:  
+ Sie können geschachtelte Trigger verwenden, um nützliche Verwaltungsfunktionen durchzuführen, wie z. B. das Speichern einer Sicherungskopie von Zeilen, die von einem vorherigen Trigger betroffen sind. Es ist beispielsweise möglich, einen Trigger für `PurchaseOrderDetail` zu erstellen, der eine Sicherungskopie der `PurchaseOrderDetail` -Zeilen speichert, die vom `delcascadetrig` -Trigger gelöscht wurden. Wenn der `delcascadetrig` -Trigger wirksam ist, führt das Löschen von `PurchaseOrderID` 1965 aus `PurchaseOrderHeader` dazu, dass die entsprechende(n) Zeile(n) aus `PurchaseOrderDetail`gelöscht werden. Zum Speichern der Daten erstellen Sie einen DELETE-Trigger für `PurchaseOrderDetail` , der die gelöschten Daten in einer getrennt erstellten Tabelle, `del_save`, speichert. Beispiel:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -186,7 +185,7 @@ Paul                           Alice                          0
   
 -   [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Konfigurieren der Serverkonfigurationsoption Geschachtelte Trigger](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

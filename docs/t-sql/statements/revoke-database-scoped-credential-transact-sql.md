@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0a4ea1f4977440ee53835f3c96ab5e60b3083ba
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082275"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Gibt eine Berechtigung an, die für die datenbankweit gültige Anmeldeinformationen aufgehoben werden kann. Unten aufgeführt.  
   
- ON CERTIFICATE **::**_credential_name_  
+ ON CERTIFICATE **::** _credential_name_  
  Gibt die datenbankweit gültigen Anmeldeinformationen an, für die die Berechtigung aufgehoben wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
@@ -120,9 +119,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
  [GRANT (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [DENY (Datenbankweit gültige Anmeldeinformationen) (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

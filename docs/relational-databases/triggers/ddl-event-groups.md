@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3caccfd08987dcd88b8cc3e3067aaa23bc34dece
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074162"
 ---
 # <a name="ddl-event-groups"></a>DDL-Ereignisgruppen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -316,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)   
  [DDL-Ereignisse](../../relational-databases/triggers/ddl-events.md)  
