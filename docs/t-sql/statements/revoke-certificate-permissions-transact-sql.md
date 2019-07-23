@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4cd2c67c8dd24a7e6a39a98285235090017adb1e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140906"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE (Zertifikatberechtigungen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Gibt eine Berechtigung an, die für ein Zertifikat aufgehoben werden kann. Unten aufgeführt.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  Gibt das Zertifikat an, für das die Berechtigung aufgehoben wird. Der Bereichsqualifizierer "::" ist erforderlich.  
   
  *database_principal*  
@@ -115,9 +114,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 ## <a name="see-also"></a>Weitere Informationen  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   

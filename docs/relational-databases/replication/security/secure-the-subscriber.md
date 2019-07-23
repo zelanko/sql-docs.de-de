@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a9914246135350540b0155e61905d1e548a033fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051870"
 ---
 # <a name="secure-the-subscriber"></a>Sichern des Abonnenten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "54131650"
      Weitere Informationen finden Sie unter „Vorgehensweise: Erstellen eines Aktualisierungsabonnements für eine Transaktionsveröffentlichung (SQL Server Management Studio)“ und [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &amp;amp;#40;SQL Server-Konfigurations-Manager&amp;amp;#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
+ [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Sicherheit und Schutz &#40;Replikation&#41;](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e1b6f54763bd4c454dfebb61bf8e8ef3d0c7b63
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 436945f79d862f50443455de1b74dcd927852e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127036"
 ---
 # <a name="database-engine-error-severities"></a>Schweregrade von Datenbank-Engine-Fehlern
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "52511911"
 ## <a name="levels-of-severity"></a>Schweregrade  
  In der folgenden Tabelle sind die Schweregrade der Fehler aufgeführt und beschrieben, die von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ausgelöst werden.  
   
-|Schweregrad|Beschreibung|  
+|Schweregrad|und Beschreibung|  
 |--------------------|-----------------|  
 |0-9|Informationsmeldungen, die Statusinformationen zurückgeben oder Fehler melden, die nicht schwerwiegend sind. [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst keine Systemfehler mit Schweregraden zwischen 0 und 9 aus.|  
 |10|Informationsmeldungen, die Statusinformationen zurückgeben oder Fehler melden, die nicht schwerwiegend sind. Aus Kompatibilitätsgründen konvertiert [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Schweregrad 10 in Schweregrad 0, bevor die Fehlerinformationen an die aufrufende Anwendung zurückgegeben werden.|  
@@ -69,7 +68,7 @@ ms.locfileid: "52511911"
 ## <a name="retrieving-error-severity"></a>Abrufen des Schweregrads eines Fehlers  
  Mithilfe der Systemfunktion ERROR_SEVERITY kann der Schweregrad des Fehlers abgerufen werden, der bewirkt hat, dass der CATCH-Block eines TRY…CATCH-Konstrukts ausgeführt wurde. ERROR_SEVERITY gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird. Weitere Informationen finden Sie unter [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zu Datenbank-Engine-Fehlern](../../relational-databases/errors-events/understanding-database-engine-errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

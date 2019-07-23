@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd01697d833b2db08f24b1f35d3d71ba649887c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d9b391d58d8a55b7486cda447d13246df16093b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130147"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "65944207"
 ```  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  Jedes Mal, wenn eine gespeicherte Prozedur eine andere gespeicherte Prozedur aufruft oder durch Verweis auf eine Common Language Routine (CLR), einen Typ oder ein Aggregat verwalteten Code ausführt, wird die Schachtelungsebene erhöht. Wird der Höchstwert von 32 überschritten, so wird die Transaktion beendet.  

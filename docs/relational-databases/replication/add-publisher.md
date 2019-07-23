@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 271dd589a4bab4d6d7117eeb62d36dfcc32bf6a2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 9587741432c827f3a83cf8c64158c70c068d5300
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939487"
 ---
 # <a name="add-publisher"></a>Verleger hinzufügen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe des Dialogfelds **Verleger hinzufügen** können Sie dem linken Bereich des Replikationsmonitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Hinzufügen**  
  Klicken Sie auf diese Option, um den Typ des hinzuzufügenden Verlegers auszuwählen. Dadurch wird das Dialogfeld **Verbindung mit Server herstellen** gestartet. Folgende Optionen sind verfügbar:  
   

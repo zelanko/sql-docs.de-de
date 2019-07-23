@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024904"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Erstellen partitionierter Tabellen und Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "53414185"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Erstellen einer partitionierten Tabelle oder eines partitionierten Indexes mit:**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "53414185"
   
 -   CONTROL SERVER- oder ALTER ANY DATABASE-Berechtigung für den Server der Datenbank, in der die Partitionsfunktion und das Partitionsschema erstellt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Führen Sie die Schritte in dieser Prozedur aus, um mindestens eine Dateigruppe, entsprechende Dateien und eine Tabelle zu erstellen. Sie versehen diese Objekte in der nächsten Prozedur mit Verweisen, wenn Sie die partitionierte Tabelle erstellen.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>So erstellen Sie neue Dateigruppen für eine partitionierte Tabelle  
@@ -112,13 +111,13 @@ ms.locfileid: "53414185"
   
 #### <a name="to-create-a-partitioned-table"></a>So erstellen Sie eine partitionierte Tabelle  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Tabelle, die Sie partitionieren möchten, zeigen Sie auf **Speicher**, und klicken Sie dann auf **Partition erstellen...** .  
   
 2.  Klicken Sie im **Assistent zum Erstellen von Partitionen**auf der Seite **Willkommen beim Assistenten zum Erstellen von Partitionen** auf **Weiter**.  
   
 3.  Wählen Sie auf der Seite **Partitionierungsspalte auswählen** im Raster **Verfügbare Partitionierungsspalten** die Spalte aus, an der Sie die Tabelle partitionieren möchten. Im Raster **Verfügbare Partitionierungsspalten** werden nur Spalten mit Datentypen angezeigt, die zum Partitionieren von Daten verwendet werden können. Wenn Sie eine berechnete Spalte als Partitionierungsspalte auswählen, muss die Spalte als persistente berechnete Spalte gekennzeichnet sein.  
   
-     Die Auswahlmöglichkeiten, die Ihnen für die Partitionierungsspalte und den Wertebereich zur Verfügung stehen, werden in erster Linie durch das Ausmaß bestimmt, in dem Ihre Daten auf logische Weise gruppiert werden können. So können Sie z. B. die Daten nach Monaten oder Quartalen in logische Gruppierungen aufteilen. Ob die logische Gruppierung für die Verwaltung der Tabellenpartitionen geeignet ist, hängt von den Abfragen ab, die Sie für die Daten ausführen möchten. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
+     Die Auswahlmöglichkeiten, die Ihnen für die Partitionierungsspalte und den Wertebereich zur Verfügung stehen, werden in erster Linie durch das Ausmaß bestimmt, in dem Ihre Daten auf logische Weise gruppiert werden können. So können Sie z. B. die Daten nach Monaten oder Quartalen in logische Gruppierungen aufteilen. Ob die logische Gruppierung für die Verwaltung der Tabellenpartitionen geeignet ist, hängt von den Abfragen ab, die Sie für die Daten ausführen möchten. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
   
      Die folgenden zusätzlichen Optionen sind auf dieser Seite verfügbar:  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: f56c3a7a7d5a03ed4253c8a63df37eb5e7b26d8d
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: c00e408454b4bf5b4b907e517fa430212739734e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006986"
 ---
 # <a name="sql-server-xtp-transactions"></a>SQL Server-XTP-Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "53380811"
   
  In dieser Tabelle werden die Leistungsindikatoren für **SQL Server-XTP-Transaktionen** beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|und Beschreibung|  
 |-------------|-----------------|  
 |**Abbruchweitergaben/s**|Die durchschnittliche Anzahl der Transaktionen, für die pro Sekunde aufgrund eines Commitabhängigkeits-Rollbacks ein Rollback durchgeführt wurde.|  
 |**Übernommene Commitabhängigkeiten/s**|Die durchschnittliche Anzahl der Commitabhängigkeiten, die pro Sekunde von Transaktionen übernommen werden.|  

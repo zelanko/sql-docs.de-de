@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a056ecc18ed933b1f1fe18e3da0c62d239ea0a4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134792"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extrahieren einer DAC aus einer Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "53589874"
 ###  <a name="SelectData"></a> Select data page  
 Wählen Sie die Verweisdaten aus, die Sie in die Paketdatei der Datenebenenanwendung (DAC) einschließen möchten. Das Einschließen von Daten in das DAC-Paket ist optional. Das DAC-Paket enthält bereits das Schema aller unterstützten Datenbankobjekte und Instanzobjekte für die Datenbank.  
   
- In die DAC-Paketdatei können Sie bis zu 10 MB Verweisdaten einschließen. Bei Tabellen, die in der DAC eingeschlossen werden sollen, dürfen in den Paketen keine Blobdatentypen (Binary Large Object) enthalten sein, z.B. **image** oder **varchar(max)**. Wenn Sie zum Übertragen in eine andere Datenbank größere Datenmengen extrahieren möchten, verwenden Sie SQL Server Integration Services, das Hilfsprogramm zum Massenkopieren oder eines der zahlreichen weiteren Datenmigrationsverfahren.  
+ In die DAC-Paketdatei können Sie bis zu 10 MB Verweisdaten einschließen. Bei Tabellen, die in der DAC eingeschlossen werden sollen, dürfen in den Paketen keine Blobdatentypen (Binary Large Object) enthalten sein, z.B. **image** oder **varchar(max)** . Wenn Sie zum Übertragen in eine andere Datenbank größere Datenmengen extrahieren möchten, verwenden Sie SQL Server Integration Services, das Hilfsprogramm zum Massenkopieren oder eines der zahlreichen weiteren Datenmigrationsverfahren.  
   
  **Datenbanktabelle:** Aktivieren Sie das Kontrollkästchen neben den Datenbanktabellen mit den Daten, die Sie in das DAC-Paket einschließen möchten. Sie können bis zu zehn Tabellen mit jeweils maximal 10.000 Zeilen auswählen.  
   
@@ -98,7 +97,7 @@ Wählen Sie die Verweisdaten aus, die Sie in die Paketdatei der Datenebenenanwen
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  Auf dieser Seite überprüft der Assistent, ob alle Datenbankobjekte von einer Datenebenenanwendung (DAC) unterstützt werden. Er überprüft auch Abhängigkeiten über Datenbankobjekte hinweg, um den Satz von Objekten zu bestimmen, die in DAC enthalten sein können. Anschließend zeigt er den Überprüfungsbericht an und fasst die Optionen zusammen, die Sie in diesem Assistenten aktiviert haben. Um eine Option zu ändern, klicken Sie auf **Zurück**. Um mit dem Extrahieren einer DAC zu beginnen, klicken Sie auf **Weiter**.  
   
-> **HINWEIS!**: Wenn ein oder mehrere Objekte nicht von einer DAC unterstützt werden, wird die Schaltfläche **Weiter** deaktiviert, und der Extrahierungsprozess wird möglicherweise nicht fortgesetzt. In solchen Fällen wird empfohlen, die nicht unterstützten Objekte zu entfernen und diesen Assistenten anschließend erneut auszuführen.  
+> **HINWEIS!** : Wenn ein oder mehrere Objekte nicht von einer DAC unterstützt werden, wird die Schaltfläche **Weiter** deaktiviert, und der Extrahierungsprozess wird möglicherweise nicht fortgesetzt. In solchen Fällen wird empfohlen, die nicht unterstützten Objekte zu entfernen und diesen Assistenten anschließend erneut auszuführen.  
   
  **Zusammenfassung:** Unter **DAC-Eigenschaften**wird eine Übersicht zu den von Ihnen ausgewählten Optionen aufgeführt. Die Ergebnisse der Überprüfung sind unter **DAC-Objekte**aufgeführt. Es gibt drei Typen von Überprüfungsergebnissen:  
   

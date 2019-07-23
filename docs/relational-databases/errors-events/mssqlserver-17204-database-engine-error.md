@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40db66f9-dd5e-478c-891e-a06d363a2552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8bfda451cda9b27670abc180ded16ceca7d7cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 555a7c6f0573836ee4afb95b91ce6e8b84ac6ee5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131692"
 ---
 # <a name="mssqlserver17204"></a>MSSQLSERVER_17204
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +25,12 @@ ms.locfileid: "47680008"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|17204|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBLKIO_DEVOPENFAILED|  
-|Meldungstext|% ls: Die Datei %ls für die Dateinummer %d konnte nicht geöffnet werden.  Betriebssystemfehler: %ls.|  
+|Meldungstext|%ls: Die Datei %ls für die Dateinummer %d konnte nicht geöffnet werden.  Betriebssystemfehler: %ls.|  
   
 ## <a name="explanation"></a>Erklärung  
 SQL Server konnte die angegebene Datei aufgrund des angegebenen Fehlers nicht öffnen.  

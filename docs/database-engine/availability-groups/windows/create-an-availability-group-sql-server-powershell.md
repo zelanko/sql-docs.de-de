@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 6bc6fcad5f667b0c1224c4d1e897ae9fc30642d0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 01f8266eae247292373d53552daae840efc6ea89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991172"
 ---
 # <a name="create-an-always-on-availability-group-using-powershell"></a>Erstellen einer Always On-Verfügbarkeitsgruppe mit PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "66793525"
 ###  <a name="SummaryPSStatements"></a> Zusammenfassung von Tasks und entsprechenden PowerShell-Cmdlets  
  In der folgenden Tabelle sind die grundlegenden Tasks für die Konfiguration einer Verfügbarkeitsgruppe aufgeführt, und es sind die Tasks angegeben, die von PowerShell-Cmdlets unterstützt werden. Die [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Tasks müssen in der Reihenfolge ausgeführt werden, in der sie in der Tabelle dargestellt sind.  
   
-|Task|PowerShell-Cmdlets (falls verfügbar) oder Transact-SQL-Anweisung|Wo soll der Task ausgeführt werden?**&#42;**|  
+|Task|PowerShell-Cmdlets (falls verfügbar) oder Transact-SQL-Anweisung|Wo soll der Task ausgeführt werden? **&#42;**|  
 |----------|--------------------------------------------------------------------|---------------------------------|  
 |Erstellen eines Datenbankspiegelungs-Endpunkts (einmal pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz)|**New-SqlHadrEndPoint**|Führen Sie diesen Task auf jeder Serverinstanz aus, auf der der Datenbankspiegelungs-Endpunkt fehlt.<br /><br /> Hinweis: Verwenden Sie **Set-SqlHadrEndpoint**, um einen vorhandenen Datenbankspiegelungs-Endpunkt zu ändern.|  
 |Erstellen der Verfügbarkeitsgruppe|Verwenden Sie zuerst das Cmdlet **New-SqlAvailabilityReplica** mit dem **-AsTemplate** -Parameter, um ein In-Memory-Verfügbarkeitsreplikatobjekt für jedes der beiden Verfügbarkeitsreplikate zu erstellen, die Sie in die Verfügbarkeitsgruppe einschließen möchten.<br /><br /> Erstellen Sie dann die Verfügbarkeitsgruppe, indem Sie das Cmdlet **New-SqlAvailabilityGroup** ausführen und auf Ihre Verfügbarkeitsreplikatobjekte verweisen.|Führen Sie diesen Task auf der Serverinstanz aus, auf der das anfängliche primäre Replikat gehostet werden soll.|  

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be8f60de9e25476f81c42019ba25cdf803ee4ad0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0f6edc9ffcc723f2900b06ca658cb1633bfa9fbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927250"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +94,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  **@** *parameter*  
  Ein Parameter in der Prozedur. Es können bis zu 2.100 Parameter angegeben werden.  
   
- [ _type\_schema\_name_**.** ] _data\_type_  
+ [ _type\_schema\_name_ **.** ] _data\_type_  
  Der Datentyp des Parameters und des Schemas, zu dem dieser gehört.  
   
  Informationen zu Datentypeinschränkungen finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -143,10 +142,10 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die den Textkörper der Prozedur umfassen. Sie können die optionalen BEGIN- und END-Schlüsselwörter zum Einschließen der Anweisungen verwenden. Weitere Informationen hierzu erhalten Sie in den folgenden Abschnitten zu bewährten Methoden, allgemeinen Hinweisen und Einschränkungen in [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
- EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+ EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Gibt für eine gespeicherte CLR-Prozedur, auf die verwiesen werden soll, die Methode einer [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly an. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse über einen mit einem Namespace qualifizierten Namen verfügt und die einzelnen Bestandteile des Namespace durch einen Punkt (**.**) voneinander getrennt werden, muss der Klassenname durch Klammern (**[]**) oder Anführungszeichen (**""**) getrennt werden. Bei der angegebenen Methode muss es sich um eine statische Methode der Klasse handeln.  
+ Gibt für eine gespeicherte CLR-Prozedur, auf die verwiesen werden soll, die Methode einer [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly an. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse über einen mit einem Namespace qualifizierten Namen verfügt und die einzelnen Bestandteile des Namespace durch einen Punkt ( **.** ) voneinander getrennt werden, muss der Klassenname durch Klammern ( **[]** ) oder Anführungszeichen ( **""** ) getrennt werden. Bei der angegebenen Methode muss es sich um eine statische Methode der Klasse handeln.  
   
  Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können Datenbankobjekte, die auf CLR-Module (Common Language Runtime) verweisen, erstellen, ändern und löschen. Bevor Sie diese Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen können, müssen Sie jedoch die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktivieren. Verwenden Sie dazu [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -241,7 +240,7 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Gespeicherte Prozeduren &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [sys.procedures &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)  
   
   

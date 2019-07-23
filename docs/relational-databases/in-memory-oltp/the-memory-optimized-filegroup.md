@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7558ff9f09d003088dc1f7c4d00d3a032d8c478a
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024966"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Die speicheroptimierte Dateigruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51858555"
     ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA  
     ```  
   
--   Sie müssen mindestens einen Container der Dateigruppe `MEMORY_OPTIMIZED_DATA` hinzufügen. Zum Beispiel:  
+-   Sie müssen mindestens einen Container der Dateigruppe `MEMORY_OPTIMIZED_DATA` hinzufügen. Beispiel:  
   
     ```sql  
     ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod  
@@ -61,7 +60,7 @@ Wenn Sie den Speicher konfigurieren, müssen Sie freien Speicherplatz bereitstel
 > Wenn ein `MAXSIZE`-Wert für die speicheroptimierte Dateigruppe festgelegt wird und Prüfpunktdateien die maximale Größe des Containers überschreiten, ändert sich der Zustand der Datenbank in SUSPECT.   
 > Versuchen Sie in diesem Fall nicht, die Datenbank OFFLINE und ONLINE zu schalten, damit die Datenbank im Zustand RECOVERY_PENDING bleibt.
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
 [ALTER DATABASE-Optionen Datei und Dateigruppe (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 

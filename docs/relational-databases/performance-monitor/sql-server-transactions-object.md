@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 07b4c7d08816d84f3e1273f3fcdcf5324602cfc0
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995644"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "53380551"
   
  In dieser Tabelle werden die **SQLServer:Transaktionen** -Leistungsindikatoren beschrieben.  
   
-|Transaktionsleistungsindikatoren von SQL Server|Beschreibung|  
+|Transaktionsleistungsindikatoren von SQL Server|und Beschreibung|  
 |--------------------------------------|-----------------|  
 |**Freier Speicherplatz in tempdb (KB)**|Der verfügbare Speicherplatz (in Kilobytes) in **tempdb**. Es muss ausreichend Speicherplatz zur Aufnahme des Momentaufnahmeisolationsstufen-Versionsspeichers und aller neuer temporärer Objekte vorhanden sein, die in der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]erstellt worden sind.|  
 |**Längste Transaktionsausführungszeit**|Die verstrichene Zeit (in Sekunden) seit dem Start der Transaktion, die länger aktiv war als alle anderen aktuellen Transaktionen. Dieser Leistungsindikator zeigt nur Aktivität an, wenn die Datenbank unter der READ_COMMITTED_SNAPSHOT-Isolationsstufe ausgeführt wird. Es werden keine Aktivitäten protokolliert, wenn die Datenbank eine andere Isolationsstufe aufweist.|  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139601"
 ---
 # <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "52517081"
      **Hinzufügen**  
      Erstellt eine neue Beziehung. Die **Tabellen- und Spaltenspezifikation** muss festgelegt werden, bevor die Beziehung gültig wird.  
   
-     **Löschen**  
+     **Delete**  
      Löscht die in der Liste **ausgewählte Beziehung** ausgewählte Beziehung. Verwenden Sie diese Schaltfläche zum Entfernen der Beziehung, um das Hinzufügen einer Beziehung abzubrechen.  
   
      **Kategorie Allgemein**  
@@ -86,7 +85,7 @@ ms.locfileid: "52517081"
      Überprüft alle Daten, die vor der Erstellung oder Reaktivierung der Einschränkung in der Tabelle vorhandenen sind, auf die Einschränkung hin.  
   
      **Kategorie Tabellen- und Spaltenspezifikation**  
-     Wenn die Kategorie erweitert ist, wird angezeigt, welche Spalten aus welchen Tabellen als Fremdschlüssel, Primärschlüssel oder eindeutiger Schlüssel in der Beziehung fungieren. Klicken Sie rechts neben dem Eigenschaftenfeld auf die Schaltfläche mit den Auslassungspunkten (**...**), um diese Werte zu bearbeiten oder zu definieren.  
+     Wenn die Kategorie erweitert ist, wird angezeigt, welche Spalten aus welchen Tabellen als Fremdschlüssel, Primärschlüssel oder eindeutiger Schlüssel in der Beziehung fungieren. Klicken Sie rechts neben dem Eigenschaftenfeld auf die Schaltfläche mit den Auslassungspunkten ( **...** ), um diese Werte zu bearbeiten oder zu definieren.  
   
      **Fremdschlüssel-Basistabelle**  
      Zeigt an, welche Tabelle die Spalte enthält, die in der ausgewählten Beziehung als Fremdschlüssel fungiert.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23b50f306dd9096082170d5d3606e0ff46310895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27f94d21a4fcc773c30d2a43d2502eb1f4c5225b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021229"
 ---
 # <a name="reinitialize-a-subscription"></a>Erneutes Initialisieren eines Abonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,19 +108,19 @@ ms.locfileid: "47655318"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>So initialisieren Sie ein Pullabonnement für eine Transaktionsveröffentlichung erneut  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md) aus. Geben Sie **@publisher**, **@publisher_db**und **@publication**verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md) aus. Geben Sie **@publisher** , **@publisher_db** und **@publication** verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
   
 2.  (Optional) Starten Sie den Verteilungs-Agent auf dem Abonnenten, um das Abonnement zu synchronisieren. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>So initialisieren Sie ein Pushabonnement für eine Transaktionsveröffentlichung erneut  
   
-1.  Führen Sie auf dem Verleger [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) aus. Geben Sie **@publication**, **@subscriber**und **@destination_db**verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
+1.  Führen Sie auf dem Verleger [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) aus. Geben Sie **@publication** , **@subscriber** und **@destination_db** verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
   
 2.  (Optional) Starten Sie den Verteilungs-Agent auf dem Verteiler, um das Abonnement zu synchronisieren. Weitere Informationen finden Sie unter [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>So initialisieren Sie ein Pullabonnement mit einer Mergeveröffentlichung erneut  
   
-1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md) aus. Geben Sie **@publisher**, **@publisher_db**und **@publication**verfügbar ist. Um Änderungen vom Abonnenten hochzuladen, bevor die Neuinitialisierung durchgeführt wird, geben Sie den Wert **true** für **@upload_first**verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Merge-Agents markiert.  
+1.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md) aus. Geben Sie **@publisher** , **@publisher_db** und **@publication** verfügbar ist. Um Änderungen vom Abonnenten hochzuladen, bevor die Neuinitialisierung durchgeführt wird, geben Sie den Wert **true** für **@upload_first** verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Merge-Agents markiert.  
   
     > [!IMPORTANT]  
     >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
@@ -130,7 +129,7 @@ ms.locfileid: "47655318"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>So initialisieren Sie ein Pushabonnement mit einer Mergeveröffentlichung erneut  
   
-1.  Führen Sie auf dem Verleger [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) aus. Geben Sie **@publication**, **@subscriber**und **@subscriber_db**verfügbar ist. Um Änderungen vom Abonnenten hochzuladen, bevor die Neuinitialisierung durchgeführt wird, geben Sie den Wert **true** für **@upload_first**verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
+1.  Führen Sie auf dem Verleger [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) aus. Geben Sie **@publication** , **@subscriber** und **@subscriber_db** verfügbar ist. Um Änderungen vom Abonnenten hochzuladen, bevor die Neuinitialisierung durchgeführt wird, geben Sie den Wert **true** für **@upload_first** verfügbar ist. Damit wird das Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents markiert.  
   
     > [!IMPORTANT]  
     >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
@@ -139,7 +138,7 @@ ms.locfileid: "47655318"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>So legen Sie die Neuinitialisierungsrichtlinie während der Erstellung einer neuen Mergeveröffentlichung fest  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)unter Angabe eines der folgenden Werte für **@automatic_reinitialization_policy**aus:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)unter Angabe eines der folgenden Werte für **@automatic_reinitialization_policy** aus:  
   
     -   **1** &ndash; Änderungen werden vom Abonnenten hochgeladen, bevor eine automatische Neuinitialisierung des Abonnements durchgeführt wird, die durch eine Änderung an der Veröffentlichung erforderlich wurde.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "47655318"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>So ändern Sie die Neuinitialisierungsrichtlinie für eine vorhandene Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)unter Angabe von **automatic_reinitialization_policy** für **@property** und einem der folgenden Werte für **@value**aus:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)unter Angabe von **automatic_reinitialization_policy** für **@property** und einem der folgenden Werte für **@value** aus:  
   
     -   **1** &ndash; Änderungen werden vom Abonnenten hochgeladen, bevor eine automatische Neuinitialisierung des Abonnements durchgeführt wird, die durch eine Änderung an der Veröffentlichung erforderlich wurde.  
   
@@ -245,7 +244,7 @@ ms.locfileid: "47655318"
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136651"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,10 +64,10 @@ GO
  Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die Prozedur **my_proc** drei Parameter mit den Namen **\@first**, **\@second** und **\@third** erwartet, können die Werte, die an die Prozedur übergeben werden, den Parameternamen wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Wenn ein Parameterwert im Format **\@parameter =**_value_ angegeben wird, müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **\@parameter =**_value_ übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
+>  Wenn ein Parameterwert im Format **\@parameter =** _value_ angegeben wird, müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **\@parameter =** _value_ übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
   
 > [!WARNING]  
->  Jeder Parameter, der im Format **\@parameter =**_value_ übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
+>  Jeder Parameter, der im Format **\@parameter =** _value_ übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
   
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen  
  Parameter müssen mit einem Datentyp definiert werden, wann sie in einer CREATE PROCEDURE-Anweisung deklariert werden. Durch den Datentyp eines Parameters werden der Typ und der Wertebereich festgelegt, die beim Aufruf der Prozedur für den Parameter akzeptiert werden. Wenn Sie z. B. einen Parameter mit dem **tinyint** -Datentyp definieren, werden nur numerische Werte im Bereich von 0 bis 255 als Werte für diesen Parameter akzeptiert. Wenn eine Prozedur mit einem Wert ausgeführt wird, der nicht mit dem Datentyp kompatibel ist, wird ein Fehler zurückgegeben.  
@@ -128,7 +127,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht übersprungen werden, solange der fünfte Parameter eingeschlossen ist, außer wenn die Parameter im Format **\@parameter =**_value_ angegeben werden.  
+ Sie können Parameter auslassen, für die Standardwerte angegeben wurden; dies ist jedoch nur durch Abschneiden der Parameterliste möglich. Wenn eine Prozedur z. B. über fünf Parameter verfügt, können sowohl der vierte als auch der fünfte Parameter weggelassen werden. Der vierte Parameter kann jedoch nicht übersprungen werden, solange der fünfte Parameter eingeschlossen ist, außer wenn die Parameter im Format **\@parameter =** _value_ angegeben werden.  
   
 ## <a name="specifying-parameter-direction"></a>Angeben der Parameterrichtung  
  Die Parameterrichtung ist entweder Eingabe, d. h. ein Wert wird in den Textkörper der Prozedur übergeben, oder Ausgabe, d. h. die Prozedur gibt einen Wert an das aufrufende Programm zurück. Standardmäßig wird ein Eingabeparameter verwendet.  

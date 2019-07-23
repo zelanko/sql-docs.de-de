@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 489f5637aea2bc97dfcbb009d45747606b1ad9ae
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138743"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Dateiwiederherstellungen (einfaches Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +68,13 @@ ms.locfileid: "54241961"
   
  Die Wiederherstellungssequenz enthält nur zwei [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen. Mit der ersten Anweisung wird unter Verwendung von WITH NORECOVERY eine sekundäre Datei (Datei `A`) wiederhergestellt. Im zweiten Vorgang werden unter Verwendung von WITH RECOVERY zwei weitere Dateien ( `B` und `C` ) von einem anderen Sicherungsmedium wiederhergestellt:  
   
-1.  RESTORE DATABASE *Datenbank* FILE **=**_Name_von_Datei_A_  
+1.  RESTORE DATABASE *Datenbank* FILE **=** _Name_von_Datei_A_  
   
      FROM *Dateisicherung_von_Datei_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *Datenbank* FILE **=**_Name_von_Datei_B_**,**_Name_von_Datei_C_  
+2.  RESTORE DATABASE *Datenbank* FILE **=** _Name_von_Datei_B_ **,** _Name_von_Datei_C_  
   
      FROM *Dateisicherung_der_Dateien_B_und_C*  
   

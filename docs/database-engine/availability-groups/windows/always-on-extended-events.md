@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: jroth
-ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991562"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Konfigurieren erweiterter Ereignisse für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Informationen zu einigen der von alwayson_health abgedeckten Ereignisse finden S
   
 5.  Wählen Sie in der Spalte **Kanal** die Option **Debuggen** aus. Alle Ereignisse im Zusammenhang mit der Verfügbarkeitsgruppe, die noch nicht ausgewählt sind, werden nun in der Ereignisbibliothek angezeigt.  
   
-6.  Markieren Sie ein Ereignis in der Ereignisbibliothek, und klicken Sie auf die Schaltfläche **>**, um es für die Sitzung auszuwählen.  
+6.  Markieren Sie ein Ereignis in der Ereignisbibliothek, und klicken Sie auf die Schaltfläche **>** , um es für die Sitzung auszuwählen.  
   
 7.  Wenn Sie mit der Sitzung fertig sind, klicken Sie auf **OK**, um sie zu schließen. Stellen Sie sicher, dass die Sitzung gestartet wurde, damit sie die von Ihnen ausgewählten Ereignisse erfasst.  
   

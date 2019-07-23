@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b296737ecc7d9988365a9ad7abed8b2ee7abf61c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914385"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "65943554"
  Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), dessen Datentyp mit der zugehörigen Partitionierungsspalte entweder übereinstimmen oder implizit in diesen konvertierbar sein muss. *expression* kann auch der Name einer Partitionierungsspalte sein, die gerade an *partition_function_name* teilnimmt.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  $PARTITION gibt einen **int**-Wert zwischen 1 und der Anzahl von der Partitionierungsfunktion betroffenen Partitionen zurück.  

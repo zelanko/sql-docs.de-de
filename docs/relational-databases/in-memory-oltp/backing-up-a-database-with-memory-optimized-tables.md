@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0cf5f24bc4c330c40323ee18189cc10b0aed080e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951209"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52398733"
 ## <a name="full-database-backup"></a>Vollständige Datenbanksicherung  
  Diese Erläuterung bezieht sich auf Datenbanksicherungen für Datenbanken, die ausschließlich über dauerhafte speicheroptimierte Tabellen verfügen, da die Sicherung für datenträgerbasierte Tabellen identisch ist. Die Prüfpunktdateipaare in der speicheroptimierten Dateigruppe können unterschiedliche Statusphasen aufweisen. In der folgenden Tabelle wird beschrieben, welcher Teil der Dateien gesichert wird.  
   
-|Status des Prüfpunktdateipaars|Sichern|  
+|Status des Prüfpunktdateipaars|Sicherung|  
 |--------------------------------|------------|  
 |PRECREATED|Nur Dateimetadaten|  
 |UNDER CONSTRUCTION|Nur Dateimetadaten|  
@@ -69,7 +68,7 @@ ms.locfileid: "52398733"
   
  Wenn speicheroptimierte Tabellen einen großen Teil der Datenbank ausmachen, kann die Größe der Datenbanksicherung durch die differenzielle Sicherung erheblich reduziert werden. Bei typischen OLTP-Arbeitsauslastungen fallen differenzielle Sicherungen wesentlich kleiner als vollständige Datenbanksicherungen aus.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen speicheroptimierter Tabellen](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

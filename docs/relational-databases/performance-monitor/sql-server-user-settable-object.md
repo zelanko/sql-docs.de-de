@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a065225cdabe601d0e56323e06bf12fa3abc8847
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947923"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, Benutzerdefinierbar-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +31,13 @@ ms.locfileid: "53380471"
   
  In dieser Tabelle wird das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Benutzerdefinierbar** beschrieben.  
   
-|Benutzerdefinierbar-Leistungsindikatoren von SQL Server|Beschreibung|  
+|Benutzerdefinierbar-Leistungsindikatoren von SQL Server|und Beschreibung|  
 |---------------------------------------|-----------------|  
 |**Dataseteigenschaften**|Das **Benutzerdefinierbar** -Objekt enthält den Abfrageleistungsindikator. Die Benutzer konfigurieren die **User counter** innerhalb des Abfrageobjekts.|  
   
  In dieser Tabelle werden die **Instanzen** des **Abfrage** -Leistungsindikators beschrieben.  
   
-|Instanzen des Abfrageleistungsindikators|Beschreibung|  
+|Instanzen des Abfrageleistungsindikators|und Beschreibung|  
 |-----------------------------|-----------------|  
 |**Benutzerindikator 1**|Definiert mithilfe von **sp_user_counter1**.|  
 |**User counter 2**|Definiert mithilfe von **sp_user_counter2**.|  

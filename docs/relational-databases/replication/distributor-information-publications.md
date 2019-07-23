@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0275065ac80f9b34e32da885ba838da63ea6711
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 90459364211bef6714ba3af63cdc4669e0190049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128301"
 ---
 # <a name="distributor-information-publications"></a>Verteilerinformationen, Veröffentlichungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungs
   
  Weitere Informationen zu Momentaufnahme-, Protokollleser- und Warteschlangenlese-Agents sowie Wartungsaufträgen finden Sie unter [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md). Beachten Sie, dass beim Anzeigen von Agent-Informationen für einen Verteiler auf der Registerkarte **Agents** Verlegerinformationen für den Momentaufnahme- und den Protokollleser-Agent vorhanden sind. Auf der Registerkarte **Agents** für einen Verteiler in der Verteileransicht können Sie auch jedoch **Verteiler-Agent** und **Merge-Agent**auswählen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>enthalten  
  In den folgenden Abschnitten werden die Daten beschrieben, die auf dieser Registerkarte für den Verteiler-Agent und den Merge-Agent angezeigt werden.  
   
 ### <a name="distributor-agent"></a>Verteiler-Agent  

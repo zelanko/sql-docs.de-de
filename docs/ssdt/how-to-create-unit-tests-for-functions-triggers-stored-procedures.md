@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bda57c10-a1ab-4a1a-8a71-42085a3cb793
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5d985e2b2638d8b0047f5b4d010d87c8f631af65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1320cf0f6a0b27c1571d63c0432040294e8c68b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897182"
 ---
 # <a name="how-to-create-sql-server-unit-tests-for-functions-triggers-and-stored-procedures"></a>Gewusst wie: Erstellen von SQL Server-Komponententests für Funktionen, Trigger und gespeicherte Prozeduren
 Sie können Komponententests schreiben, durch die Änderungen an beliebigen Datenbankobjekten ausgewertet werden. SQL Server Data Tools bietet jedoch zusätzliche Unterstützung für das Erstellen von Tests für Datenbankfunktionen, Triggern und gespeicherten Prozeduren von einem Datenbankprojektnoten im SQL Server-Objekt-Explorer aus. Transact\-SQL-Codestubs können automatisch generiert werden, damit Sie diese anpassen können.  

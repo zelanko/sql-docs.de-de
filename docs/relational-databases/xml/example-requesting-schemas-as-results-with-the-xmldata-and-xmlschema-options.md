@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9532f3fc6cb3d21a5cff19b542f1f877827e6553
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 231458e7c49fbffebb5568a9dcb1c3663b8f0c3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006796"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Beispiel: Anfordern von Schemas als Ergebnisse mithilfe der Optionen XMLDATA und XMLSCHEMA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Das <`Schema`> ist als Namespace deklariert. Damit Namespacekonflikte vermieden werden, wenn mehrere XML-Datenschemas in verschiedenen FOR XML-Abfragen angefordert werden, wird der Namespacebezeichner – in diesem Beispiel `Schema1` – bei jeder Abfrageausführung geändert. Der Namespacebezeichner setzt sich aus **Schema**_**n**_ zusammen, wobei _**n**_ eine ganze Zahl ist.  
+>  Das <`Schema`> ist als Namespace deklariert. Damit Namespacekonflikte vermieden werden, wenn mehrere XML-Datenschemas in verschiedenen FOR XML-Abfragen angefordert werden, wird der Namespacebezeichner – in diesem Beispiel `Schema1` – bei jeder Abfrageausführung geändert. Der Namespacebezeichner setzt sich aus **Schema** _**n**_ zusammen, wobei _**n**_ eine ganze Zahl ist.  
   
  Durch Angeben der Option `XMLSCHEMA` können Sie das XSD-Schema für das Ergebnis anfordern.  
   

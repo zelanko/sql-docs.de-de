@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67aad831c3e5a98817af9ecd34b17501089a1609
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127119"
 ---
 # <a name="use-the-copy-database-wizard"></a>Verwenden des Assistenten zum Kopieren von Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -302,7 +301,7 @@ Unabhängig davon, ob Sie sich für **Verschieben** oder **Kopieren**, **Trennen
 
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.
 
-2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Datenbank kopieren...**.
+2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die gewünschte Datenbank, zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Datenbank kopieren...** .
 
 3.  Wenn die Seite **Willkommen des Assistenten zum Kopieren von Datenbanken** angezeigt wird, klicken Sie auf **Weiter**.
 

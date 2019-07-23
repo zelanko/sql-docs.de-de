@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 176a5d39efc5e0501d425100e458235a971d87da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914800"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -159,7 +158,7 @@ OBJECTPROPERTY ( id , property )
 |TableTemporalType|Tabelle|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Gibt den Typ der Tabelle an.<br /><br /> 0 = Nicht temporale Tabelle<br /><br /> 1 = Verlaufstabelle für die Tabelle mit Systemversionsverwaltung<br /><br /> 2 = Temporale Tabelle mit Systemversionsverwaltung|  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.  

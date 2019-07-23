@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13306a16233195f4af686a5d9f8b68b6d1ccb2f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997876"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -263,7 +262,7 @@ ms.locfileid: "66795479"
     ```  
   
     > [!NOTE]  
-    >  Wenn die Ausführung im Modus für hohe Sicherheit mit automatischem Failover geplant ist, sollte die Transaktionssicherheit auf FULL (Standardeinstellung) festgelegt bleiben und der Zeuge so schnell wie möglich nach Ausführung der zweiten SET PARTNER **'***Partnerserver***'**-Anweisung hinzugefügt werden. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
+    >  Wenn die Ausführung im Modus für hohe Sicherheit mit automatischem Failover geplant ist, sollte die Transaktionssicherheit auf FULL (Standardeinstellung) festgelegt bleiben und der Zeuge so schnell wie möglich nach Ausführung der zweiten SET PARTNER **'***Partnerserver***'** -Anweisung hinzugefügt werden. Beachten Sie, dass der Zeuge zuerst für aus- und eingehende Verbindungen konfiguriert werden muss.  
   
  [&#91;Anfang des Beispiels&#93;](#ExampleH2)  
   

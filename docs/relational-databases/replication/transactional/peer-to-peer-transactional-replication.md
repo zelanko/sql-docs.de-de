@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121329"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>Peer-zu-Peer - Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ ms.locfileid: "54129310"
   
 -   Der Verteilungs-Agent-Parameter **-SubscriptionStreams** und der Protokolllese-Agent-Parameter **-MaxCmdsInTran**.  
   
--   Die Artikeleigenschaften **@destination_owner** und **@destination_table**bezeichnet werden.
+-   Die Artikeleigenschaften **@destination_owner** und **@destination_table** bezeichnet werden.
 
 -   Die Peer-zu-Peer-Transaktionsreplikation unterstützt keine Erstellung von unidirektionalen Transaktionsabonnements an eine Peer-zu-Peer-Veröffentlichung.   
   
@@ -150,7 +149,7 @@ ms.locfileid: "54129310"
   
 -   Für die Artikeleigenschaft **@replicate_ddl** ist der Wert **true**erforderlich; für **@identityrangemanagementoption** ist der Wert **manual**erforderlich; und für **@status** muss der Wert auf **24** festgelegt werden.  
   
--   Der Wert für die Artikeleigenschaften **@ins_cmd**, **@del_cmd**und **@upd_cmd** darf nicht auf **SQL**bezeichnet werden.  
+-   Der Wert für die Artikeleigenschaften **@ins_cmd** , **@del_cmd** und **@upd_cmd** darf nicht auf **SQL**bezeichnet werden.  
   
 -   Für die Abonnementeigenschaft **@sync_type** ist der Wert **none** oder **automatic**bezeichnet werden.  
   

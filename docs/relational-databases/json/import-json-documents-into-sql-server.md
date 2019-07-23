@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8174179f116f7b84f31cfdd563b6cef16ab05131
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2b04e7ffb9a1f1a00035b04994869c55d8173ad2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909297"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importieren von JSON-Dokumenten in SQL Server
 
@@ -28,7 +27,7 @@ Dieses Thema beschreibt das Importieren von JSON-Dateien in SQL Server. Zurzeit 
 
 **OPENROWSET(BULK)** ist eine Tabellenwertfunktion, die Daten aus einer beliebigen Datei auf dem lokalen Laufwerk oder im Netzwerk lesen kann, wenn SQL Server über Lesezugriff für diesen Speicherort verfügt. Sie gibt eine Tabelle mit einer einzelnen Spalte zurück, die den Inhalt der Datei enthält. Es gibt verschiedene Optionen, die Sie mit der OPENROWSET(Bulk)-Funktion verwenden können, z.B. Trennzeichen. Im einfachsten Fall können Sie einfach den gesamten Inhalt einer Datei als Textwert laden. (Dieser einzelne große Wert wird als ein „Single Character Large Object“ oder SINGLE_CLOB bezeichnet.) 
 
-Hier finden Sie ein Beispiel für die **OPENROWSET(BULK)**-Funktion, die den Inhalt einer JSON-Datei liest und als einzelnen Wert an den Benutzer zurückgibt:
+Hier finden Sie ein Beispiel für die **OPENROWSET(BULK)** -Funktion, die den Inhalt einer JSON-Datei liest und als einzelnen Wert an den Benutzer zurückgibt:
 
 ```sql
 SELECT BulkColumn

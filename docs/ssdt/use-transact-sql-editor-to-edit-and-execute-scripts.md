@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c2b84cb9f75987995e9e0cdbf92165fa28f61a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006031"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Verwenden des Transact-SQL-Editors zum Bearbeiten und Ausführen von Skripts
 Der Transact\-SQL-Editor stellt vielfältige Funktionen zum Bearbeiten und Debuggen von Skripts bereit. Er wird aufgerufen, wenn Sie eine Datenbankentität in einer verbundenen Datenbank oder einem Projekt über das Kontextmenü **Code anzeigen** öffnen. Er wird auch automatisch geöffnet, wenn Sie das Kontextmenü **Neue Abfrage** im SQL Server-Objekt-Explorer aufrufen und wenn Sie einem Datenbankprojekt ein neues Skriptobjekt hinzufügen.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5de604fe71e9d2840db271fe801fa19f4587c156
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb42ae68df92466ab30cbb45f6ea526658143795
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908485"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47852638"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|33028|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -36,7 +35,7 @@ ms.locfileid: "47852638"
 ## <a name="explanation"></a>Erklärung  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte den in der Fehlermeldung aufgelisteten Kryptografieanbieter nicht öffnen. Der Kryptografieanbieter hat den aufgelisteten Fehlercode angegeben. Sie müssen möglicherweise den Kryptografieanbieter für weitere Informationen über den Fehler verständigen.  
   
-|Fehlercode|Beschreibung|  
+|Fehlercode|und Beschreibung|  
 |--------------|---------------|  
 |0|Erfolg. Kein Fehler.|  
 |1|Fehler. Ein unbekannter oder unerwarteter Fehler ist aufgetreten. Es sind keine zusätzlichen Informationen verfügbar.|  

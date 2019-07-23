@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897189"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>Gewusst wie: Erstellen von neuen Datenbankobjekten mithilfe von Abfragen
 Falls Sie es vorziehen, Sichten, gespeicherte Prozeduren, Funktionen, Trigger oder benutzerdefinierte Typen mithilfe von Skripts zu erstellen oder zu bearbeiten, können Sie den Transact\-SQL-Editor verwenden. Der Transact\-SQL-Editor bietet Unterstützung für IntelliSense und andere Sprachen. Weitere Informationen finden Sie unter [Verwenden des Transact-SQL-Editors zum Bearbeiten und Ausführen von Skripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  

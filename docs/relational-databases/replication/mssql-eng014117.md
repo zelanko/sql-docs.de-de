@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ffd611942b874e36a8c4a208941e4bf080d3447
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cb4c55cd131256410b799dd33fc370497964877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990519"
 ---
 # <a name="mssqleng014117"></a>MSSQL_ENG014117
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47831434"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|14117|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -73,7 +72,7 @@ ms.locfileid: "47831434"
   
 2.  Deaktivieren Sie die Verteilung, und aktivieren Sie sie dann erneut. Weitere Informationen finden Sie unter [Configure Distribution](../../relational-databases/replication/configure-distribution.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

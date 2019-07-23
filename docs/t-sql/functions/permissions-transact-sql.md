@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d0fbe116eb10d89d52e1ec5ebdf7ada16ef53dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914354"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  Dies ist der optionale Name einer Spalte, für die Berechtigungsinformationen zurückgegeben werden. Bei der Spalte muss es sich um einen gültigen Spaltennamen in der durch *objectid* angegebenen Tabelle handeln.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  Mithilfe von PERMISSIONS kann festgestellt werden, ob der aktuelle Benutzer über die Berechtigungen verfügt, die zum Ausführen einer Anweisung oder zum Erteilen einer Berechtigung für einen anderen Benutzer mithilfe von GRANT erforderlich sind.  

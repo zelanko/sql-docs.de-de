@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd81b601-2ec3-4358-ad58-c2655496e6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 599e16b53495406d0b773f12fba655419f196bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afe3a1ed94ff02bb85ff2abd95b52da4544f5e36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010925"
 ---
 # <a name="mssqleng014164"></a>MSSQL_ENG014164
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47709841"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|14164|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -46,7 +45,7 @@ ms.locfileid: "47709841"
   
 -   [Überwachen der Leistung mit dem Replikationsmonitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) (insbesondere der Abschnitt „Anzeigen von Details zur Synchronisierungsleistung bei der Mergereplikation“)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

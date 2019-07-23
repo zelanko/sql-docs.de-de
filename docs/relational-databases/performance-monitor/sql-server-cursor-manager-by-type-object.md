@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 9c1a0cc508cc9e0ef3bca52a82f8b681c25e6c49
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986694"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, Cursor-Manager nach Typ-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "53380221"
   
  Diese Tabelle beschreibt die Leistungsindikatoren des **SQLServer:Cursor-Manager nach Typ** -Objekts von SQL Server.  
   
-|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|Beschreibung|  
+|Leistungsindikatoren des SQLServer:Cursor-Manager nach Typ-Objekts|und Beschreibung|  
 |-------------------------------------|-----------------|  
 |**Aktive Cursor**|Anzahl der aktiven Cursor.|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
@@ -41,7 +40,7 @@ ms.locfileid: "53380221"
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
-|Cursor-Manager-Instanz|Beschreibung|  
+|Cursor-Manager-Instanz|und Beschreibung|  
 |-----------------------------|-----------------|  
 |**_Total**|Informationen für alle Cursor.|  
 |**API Cursor**|Nur die API-Cursor-Informationen.|  

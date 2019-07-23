@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d158cff3a2761ae27357088488075e50381145b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063816"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -122,7 +121,7 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
   
  Die veraltete Prozedur [Sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) funktioniert auch bei verwaisten Benutzern. `sp_change_users_login` kann nicht mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]verwendet werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   

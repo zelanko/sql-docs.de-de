@@ -18,13 +18,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
-ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
+ms.openlocfilehash: d00e1dfcbab82984c83c4f4a0c24ee17ad60ee39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951869"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Bereitstellen von SQL Server Integration Services-Projekten und Paketen (SSIS)
 
@@ -315,14 +314,14 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
  Diese Seite erlaubt Ihnen die Überprüfung der von Ihnen vorgenommenen Einstellungen. Sie können Ihre Auswahl ändern, indem Sie auf **Zurück**klicken oder indem Sie auf einen der Schritte im linken Bereich klicken. Klicken Sie auf **Bereitstellen** , um den Bereitstellungsprozess zu starten.  
   
 #### <a name="results"></a>Ergebnisse  
- Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...**, um die Ergebnisse in einer XML-Datei zu speichern, oder klicken Sie auf **Schließen**, um den Assistenten zu beenden.
+ Nachdem der Bereitstellungsvorgang abgeschlossen ist, sollten Sie die Seite **Ergebnisse** sehen. Diese Seite zeigt an, ob die einzelnen Aktionen erfolgreich ausgeführt wurden oder ob Fehler aufgetreten sind. Ist die Aktion fehlerhaft, klicken Sie auf **Fehler** in der Spalte **Ergebnis** , um eine Erklärung über den Fehler anzuzeigen. Klicken Sie auf **Bericht speichern...** , um die Ergebnisse in einer XML-Datei zu speichern, oder klicken Sie auf **Schließen**, um den Assistenten zu beenden.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>Quellen auswählen  
  Die Seite **Quelle auswählen** im **Bereitstellungs-Assistenten für Integration Services** zeigt die Einstellungen speziell für das Paketbereitstellungsmodell an, wenn Sie die Option **Paketbereitstellung** als **Bereitstellungsmodell**gewählt haben.  
   
- Zum Auswählen der Quellpakete klicken Sie auf die Schaltfläche **Durchsuchen…**, um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie am unteren Seitenrand auf die Schaltfläche **Aktualisieren**. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
+ Zum Auswählen der Quellpakete klicken Sie auf die Schaltfläche **Durchsuchen…** , um den **Ordner** auszuwählen, der die Pakete enthält, oder geben Sie den Ordnerpfad in das Textfeld **Paketordnerpfad** ein, und klicken Sie am unteren Seitenrand auf die Schaltfläche **Aktualisieren**. Jetzt sollten Sie alle Pakete im angegebenen Ordner im Listenfeld sehen. Standardmäßig sind alle Pakete ausgewählt. Klicken Sie das **Kontrollkästchen** in der ersten Spalte, um auszuwählen, welche Pakete an den Server bereitgestellt werden sollen.  
   
  Beziehen Sie sich auf die Spalten **Status** und **Meldung** , um den Status des Pakets zu überprüfen. Falls der Status auf **Bereit** oder **Warnung**steht, würde der Bereitstellungs-Assistent den Bereitstellungsvorgang nicht blockieren. Falls hingegen der Status auf **Fehler**steht, setzt der Assistent die Bereitstellung der ausgewählten Pakete nicht fort. Klicken Sie auf den Link in der Spalte **Meldung** , um sich die detaillierteren Warn-/Fehlermeldungen anzeigen zu lassen.  
   
@@ -331,7 +330,7 @@ Starten Sie den Assistenten auf eine der folgenden Arten:
  Falls der Status aller ausgewählten Pakete nicht auf **Fehler**steht, ist die Schaltfläche **Weiter** aktiviert. Sie können also mit dem Paketbereitstellungsvorgang fortfahren.  
   
 #### <a name="select-destination"></a>Ziel auswählen  
- Klicken Sie, nachdem Sie die Paketquellen ausgewählt haben, auf die Schaltfläche **Weiter** , um auf die Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie daher vor der Bereitstellung von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog existiert. Erstellen Sie andernfalls ein leeres Projekt. Auf der Seite **Ziel auswählen** geben Sie den Namen des Servers in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...**, um eine Serverinstanz auszuwählen. Klicken Sie dann neben dem Textfeld **Pfad** auf die Schaltfläche **Durchsuchen...**, um das Zielprojekt anzugeben. Klicken Sie auf **Neues Projekt…**, um ein leeres Projekt als Zielprojekt zu erstellen, falls das Projekt noch nicht existiert. Das Projekt **MUSS** unter einem Ordner erstellt werden.  
+ Klicken Sie, nachdem Sie die Paketquellen ausgewählt haben, auf die Schaltfläche **Weiter** , um auf die Seite **Ziel auswählen** zu wechseln. Pakete müssen an ein Projekt im SSIS-Katalog (SSISDB) bereitgestellt werden. Stellen Sie daher vor der Bereitstellung von Paketen sicher, dass das Zielprojekt bereits im SSIS-Katalog existiert. Erstellen Sie andernfalls ein leeres Projekt. Auf der Seite **Ziel auswählen** geben Sie den Namen des Servers in das Textfeld **Servername** ein, oder klicken Sie auf die Schaltfläche **Durchsuchen...** , um eine Serverinstanz auszuwählen. Klicken Sie dann neben dem Textfeld **Pfad** auf die Schaltfläche **Durchsuchen...** , um das Zielprojekt anzugeben. Klicken Sie auf **Neues Projekt…** , um ein leeres Projekt als Zielprojekt zu erstellen, falls das Projekt noch nicht existiert. Das Projekt **MUSS** unter einem Ordner erstellt werden.  
   
 #### <a name="review-and-deploy"></a>Überprüfen und bereitstellen  
  Klicken Sie auf der Seite **Ziel auswählen** auf **Weiter** , um auf die Seite **Überprüfung** im **Bereitstellungs-Assistenten für Integration Services**zu wechseln. Auf der Seite zur Überprüfung können Sie sich den Bericht zur Bereitstellungsaktion ansehen. Klicken Sie nach der Überprüfung auf die Schaltfläche **Bereitstellen** , um die Bereitstellungsaktion auszuführen.  

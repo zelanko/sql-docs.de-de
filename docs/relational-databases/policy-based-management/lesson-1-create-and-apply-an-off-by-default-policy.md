@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087114"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lektion 1: Erstellen und Anwenden der Richtlinie „Standardmäßig deaktiviert“
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
   
 2.  Geben Sie im Dialogfeld **Neue Bedingung erstellen** im Feld **Name** den Namen **Mail aus**ein.   
     1. Bestätigen Sie im Feld **Facet** , dass das Facet **Oberflächenkonfiguration** ausgewählt ist.
-    1. Geben Sie im Dialogfeld **Ausdruck** im Feld **Feld** den Ausdruck **@DatabaseMailEnabled**aus, wählen Sie im Feld **Operator** die Option **=** aus, und wählen Sie im Feld **Wert** die Option **False**.  
+    1. Geben Sie im Dialogfeld **Ausdruck** im Feld **Feld** den Ausdruck **@DatabaseMailEnabled** aus, wählen Sie im Feld **Operator** die Option **=** aus, und wählen Sie im Feld **Wert** die Option **False**.  
     1. Geben Sie auf der Seite **Beschreibung** eine Beschreibung der Bedingung ein, und klicken Sie dann auf **OK** , um die Bedingung zu erstellen.  
 
     ![Bedingung „Mail aus“](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 
@@ -91,7 +90,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio u
 
    
 ## <a name="next-lesson"></a>Nächste Lektion  
-[Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   
   
