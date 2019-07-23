@@ -1,5 +1,5 @@
 ---
-title: GetMinutesOffset-Methode (DateTimeOffset) | Microsoft-Dokumentation
+title: getminutesoffset-Methode (DateTimeOffset) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 18ba844a-ea36-42de-87da-bbc222082efe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d17b5451340c07ea8c9bd0ce61bf858b419b121
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6af552920698d4eb149f5edd5ee50128db0e1b61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981801"
 ---
 # <a name="getminutesoffset-method-datetimeoffset"></a>getMinutesOffset-Methode (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Offset in Minuten von GMT dieses DateTimeOffset-Objekts zurück.  
+  Gibt den Offset dieses DateTimeOffset-Objekts (in Minuten) zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +33,7 @@ public int getMinutesOffset()
  Das Offset in Minuten.  
   
 ## <a name="remarks"></a>Remarks  
- Für einen DateTimeOffset-Objekts darstellt 8. März 2010 11:35:48-0800, GetMinutesOffset gibt den Wert 480 zurück.  
+ Für ein DateTimeOffset-Objekt, das den 8. März 2010, 11:35:48 -0800 darstellt, gibt getminutesoffset den Wert 480 zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DateTimeOffset-Klasse](../../../connect/jdbc/reference/datetimeoffset-class.md)   

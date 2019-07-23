@@ -1,5 +1,5 @@
 ---
-title: GetColumnDisplaySize-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
+title: getcolumndisplaysize-Methode (SQLServerResultSetMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caf5b0a71fe179aa58da59a4434c485693939b9b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952967"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize-Methode (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getColumnDisplaySize(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetColumnDisplaySize-Methode wird von der GetColumnDisplaySize-Methode in der java.sql.ResultSetMetaData-Schnittstelle angegeben.  
+ Diese getcolumndisplaysize-Methode wird von der getcolumndisplaysize-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
   
  In JDBC-Treiber 3.0 für [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde das Verhalten in der COLUMN_SIZE-Spalte geändert. Weitere Informationen finden Sie unter [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   

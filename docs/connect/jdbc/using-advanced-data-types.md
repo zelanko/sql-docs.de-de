@@ -1,5 +1,5 @@
 ---
-title: Mithilfe von erweiterten Datentypen | Microsoft-Dokumentation
+title: Verwenden von erweiterten Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004067"
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 
@@ -48,7 +47,7 @@ Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibe
 Der JDBC-Treiber implementiert alle Methoden der java.sql.Blob-, java.sql.Clob- und java.sql.NClob-Schnittstellen.  
   
 > [!NOTE]  
-> CLOB-Werte können mit Datentypen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (oder höher) mit umfangreichen Werten verwendet werden. Insbesondere können CLOB-Typen verwendet werden, mit der **varchar(max)** und **nvarchar(max)** -Datentypen BLOB-Typen können verwendet werden mit **'varbinary(max)'** und **Image**  Datentypen sowie NCLOB-Typen mit verwendet werden können **Ntext** und **nvarchar(max)** .  
+> CLOB-Werte können mit Datentypen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (oder höher) mit umfangreichen Werten verwendet werden. Insbesondere können CLOB-Typen mit den Datentypen **varchar (max)** und **nvarchar (max)** verwendet werden, BLOB-Typen können mit den Datentypen **varbinary (max)** und **Image** verwendet werden, und NCLOB-Typen können mit **ntext** und **nvarchar (max. )** .  
 
 ## <a name="large-value-data-types"></a>Datentypen mit umfangreichen Werten
 
@@ -67,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> Diese Vorgehensweise kann auch verwendet werden, für die **Text**, **Ntext**, und **nvarchar(max)** -Datentypen.  
+> Derselbe Ansatz kann auch für die Datentypen " **Text**", " **ntext**" und " **nvarchar (max)** " verwendet werden.  
 
 Beim Abrufen eines binären Datentyps mit umfangreichen Werten aus einer Datenbank, z.B. dem Datentyp **varbinary (max)** , stehen Ihnen mehrere Vorgehensweisen zur Verfügung. Die effizienteste Vorgehensweise besteht darin, die Daten als Binärdatenstrom zu lesen, wie z. B.:  
 
@@ -102,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> Dieser Ansatz kann auch verwendet werden, für Werte, die im rowsetcache **Text**, **Ntext**, und **nvarchar(max)** Spalten.  
+> Diese Vorgehensweise kann auch für Werte verwendet werden, die in **Text**-, **ntext**-und **nvarchar (max)** -Spalten gespeichert sind.  
 
 Wenn auf dem Server eine Bildbibliothek vorhanden ist und alle binären Bilddateien in eine **varchar(max)** -Spalte geladen werden müssen, besteht die effizienteste Methode des JDBC-Treibers darin, Datenströme wie folgt direkt zu verwenden:  
 
@@ -149,7 +148,7 @@ Weitere Informationen zu Typen mit umfangreichen Werten finden Sie in der SQL Se
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfasst einen **XML**-Datentyp, mit dem Sie XML-Dokumente und -Fragmente in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank speichern können. Der **XML**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt in einigen Punkten anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **XML**-Datentyp beim Erstellen einer Tabelle als Spaltentyp, als Variablentyp, als Parametertyp oder als Funktionsrückgabetyp bzw. in den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST und CONVERT verwenden.  
   
-Im JDBC-Treiber kann der **XML**-Datentyp als Zeichenfolgen-, Bytearray-, Stream-, CLOB-, BLOB- oder SQLXML-Objekt zugeordnet werden. Der Standard lautet Zeichenfolge. Ab JDBC Driver, Version 2.0, unterstützt der JDBC-Treiber die JDBC 4.0-API, in der die SQLXML-Schnittstelle eingeführt wurde. Die SQLXML-Schnittstelle definiert Methoden für die Interaktion mit und die Bearbeitung von XML-Daten. Die **SQLXML** -Datentyp zugeordnet, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Xml** -Datentyp. Weitere Informationen über das Lesen und Schreiben von XML-Daten in bzw. aus einer relationalen Datenbank mit dem **SQLXML**-Java-Datentyp finden Sie unter [Supporting XML Data (Unterstützung von XML-Daten)](../../connect/jdbc/supporting-xml-data.md).  
+Im JDBC-Treiber kann der **XML**-Datentyp als Zeichenfolgen-, Bytearray-, Stream-, CLOB-, BLOB- oder SQLXML-Objekt zugeordnet werden. Der Standard lautet Zeichenfolge. Ab JDBC Driver, Version 2.0, unterstützt der JDBC-Treiber die JDBC 4.0-API, in der die SQLXML-Schnittstelle eingeführt wurde. Die SQLXML-Schnittstelle definiert Methoden für die Interaktion mit und die Bearbeitung von XML-Daten. Der **SQLXML** -Datentyp wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XML** -Datentyp zugeordnet. Weitere Informationen über das Lesen und Schreiben von XML-Daten in bzw. aus einer relationalen Datenbank mit dem **SQLXML**-Java-Datentyp finden Sie unter [Supporting XML Data (Unterstützung von XML-Daten)](../../connect/jdbc/supporting-xml-data.md).  
   
 Die Implementierung des **XML**-Datentyps im JDBC-Treiber ermöglicht Folgendes:  
   
@@ -173,11 +172,11 @@ Weitere Informationen zu benutzerdefinierten Datentypen finden Sie in der [!INCL
   
 ## <a name="sqlvariant-data-type"></a>Datentyp „Sql_variant“
 
-Weitere Informationen zu den Sql_variant-Datentyp, finden Sie unter [mithilfe von Sql_variant-Datentyp](../../connect/jdbc/using-sql-variant-datatype.md).  
+Weitere Informationen zum sql_variant-Datentyp finden [Sie unter Verwenden des sql_variant](../../connect/jdbc/using-sql-variant-datatype.md)-Datentyps.  
 
 ## <a name="spatial-data-types"></a>Räumliche Datentypen
 
-Weitere Informationen zu räumlichen Datentypen, finden Sie unter [räumliche Datentypen mithilfe von](../../connect/jdbc/use-spatial-datatypes.md).  
+Informationen zu räumlichen Datentypen finden Sie unter [using Spatial Datatypes](../../connect/jdbc/use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>Weitere Informationen
 

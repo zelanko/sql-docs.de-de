@@ -10,30 +10,29 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916494"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Verwenden von gespeicherten Prozeduren mit Ausgabeparametern
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Eine aufrufbare gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozedur gibt mindestens einen OUT-Parameter zurück, mit dem die gespeicherte Prozedur Daten an die aufrufende Anwendung zurückgibt. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufrufen und Verarbeiten der Daten, die zurückgegeben.
+Eine aufrufbare gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozedur gibt mindestens einen OUT-Parameter zurück, mit dem die gespeicherte Prozedur Daten an die aufrufende Anwendung zurückgibt. Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] stellt die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) -Klasse bereit, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufzurufen und die zurückgegebenen Daten zu verarbeiten.
 
 Wenn Sie diese Art von gespeicherter Prozedur mit dem JDBC-Treiber aufrufen, müssen Sie die SQL-Escapesequenz `call` zusammen mit der [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwenden. Die Syntax für die Escapesequenz `call` mit OUT-Parameter lautet wie folgt:
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Weitere Informationen zu SQL-Escapesequenzen, finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).
+> Weitere Informationen zu den SQL-Escapesequenzen finden [Sie unter Verwenden von SQL](../../connect/jdbc/using-sql-escape-sequences.md)-Escapesequenzen.
 
 Geben Sie die OUT-Parameter beim Erstellen der Escapesequenz `call` mit dem Fragezeichen (?) an. das als Platzhalter für die Parameterwerte fungiert, die von der gespeicherten Prozedur zurückgegeben werden. Sie müssen den Datentyp für jeden Parameter angeben, um einen Wert für einen OUT-Parameter festzulegen, indem Sie die Methode [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) der Klasse „SQLServerCallableStatement“ verwenden, bevor Sie die gespeicherte Prozedur ausführen.
 
-Bei dem Wert, den Sie für den OUT-Parameter in der Methode „registerOutParameter“ angeben, muss es sich um einen der in java.sql.Types enthaltenen JDBC-Datentypen handeln, der wiederum einem der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen zugeordnet wird. Weitere Informationen zu JDBC und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen finden Sie unter [Grundlegendes zu den Datentypen des JDBC-Treiber](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+Bei dem Wert, den Sie für den OUT-Parameter in der Methode „registerOutParameter“ angeben, muss es sich um einen der in java.sql.Types enthaltenen JDBC-Datentypen handeln, der wiederum einem der nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen zugeordnet wird. Weitere Informationen zu JDBC-und- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen finden Sie Untergrund Legendes zu [den JDBC-Treiber Datentypen](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Wenn Sie einen Wert an die Methode „registerOutParameter“ für einen OUT-Parameter übergeben, müssen Sie nicht nur den für den Parameter zu verwendenden Datentyp angeben, sondern auch die ordinale Position des Parameters oder den Namen des Parameters der gespeicherten Prozedur. Wenn die gespeicherte Prozedur beispielsweise einen einzigen OUT-Parameter enthält, ist der Ordinalwert 1. Wenn die gespeicherte Prozedur zwei Parameter enthält, ist der erste Ordinalwert 1 und der zweite Ordinalwert 2.
 
@@ -83,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> Diese Beispiele verwenden die Execute-Methode der SQLServerCallableStatement-Klasse, um die gespeicherte Prozedur auszuführen. da von der gespeicherten Prozedur nicht auch ein Resultset zurückgegeben wurde. Andernfalls müsste die [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode verwendet werden.
+> In diesen Beispielen wird die Execute-Methode der SQLServerCallableStatement-Klasse verwendet, um die gespeicherte Prozedur auszuführen. da von der gespeicherten Prozedur nicht auch ein Resultset zurückgegeben wurde. Andernfalls müsste die [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode verwendet werden.
 
-Gespeicherte Prozeduren können Updatezählungen und mehrere Resultsets zurückgeben. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] folgt der JDBC 3.0-Spezifikation, die angibt, dass mehrere Resultsets und updatezählungen abgerufen werden soll, bevor die OUT-Parameter abgerufen werden. Die Anwendung sollte, also Abrufen aller Objekte ResultSet und updatezählungen, bevor die OUT-Parameter mit den Methoden CallableStatement.getter abrufen. Andernfalls gehen die noch nicht abgerufenen ResultSet-Objekte und Updatezählungen verloren, wenn die OUT-Parameter abgerufen werden. Weitere Informationen zu updatezählungen und mehrere Resultsets finden Sie [mithilfe einer gespeicherten Prozedur mit einer Anzahl aktualisieren](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) und [mehrere Resultsets mithilfe von](../../connect/jdbc/using-multiple-result-sets.md).
+Gespeicherte Prozeduren können Updatezählungen und mehrere Resultsets zurückgeben. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] folgt der JDBC 3,0-Spezifikation, die angibt, dass mehrere Resultsets und Update Zählungen abgerufen werden sollen, bevor die Out-Parameter abgerufen werden. Das heißt, dass die Anwendung alle ResultSet-Objekte und Update Zählungen abrufen muss, bevor die Out-Parameter mit den CallableStatement. Getter-Methoden abgerufen werden. Andernfalls gehen die noch nicht abgerufenen ResultSet-Objekte und Updatezählungen verloren, wenn die OUT-Parameter abgerufen werden. Weitere Informationen zu Update Zählungen und mehreren Resultsets finden [Sie unter Verwenden einer gespeicherten Prozedur mit einer Update Anzahl](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) und [Verwenden mehrerer Resultsets](../../connect/jdbc/using-multiple-result-sets.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

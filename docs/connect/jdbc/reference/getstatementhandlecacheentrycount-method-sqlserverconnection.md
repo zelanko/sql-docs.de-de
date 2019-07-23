@@ -1,5 +1,5 @@
 ---
-title: GetStatementHandleCacheEntryCount-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getstatementhandlecacheentrycount-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3c8cf05f56d4102ec020a99337e3107c4b767a52
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6a5d87ab4f78a5f006e87c34fa774fd9f430aaae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979537"
 ---
 # <a name="getstatementhandlecacheentrycount-method-sqlserverconnection"></a>getStatementHandleCacheEntryCount-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Gibt die aktuelle Anzahl der in einem Pool zusammengefasste vorbereiteter Anweisungshandles zurück.
+ Gibt die aktuelle Anzahl von gepoolten vorbereiteten Anweisungs Handles zurück.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +35,13 @@ public int getStatementHandleCacheEntryCount()
 ```  
 
 ## <a name="return-value"></a>Rückgabewert
- Ein **Int** , enthält die aktuelle Anzahl der in einem Pool zusammengefasste vorbereiteter Anweisungshandles.
+ Ein **int** -Wert, der die aktuelle Anzahl der gepoolten vorbereiteten Anweisungs Handles enthält.
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

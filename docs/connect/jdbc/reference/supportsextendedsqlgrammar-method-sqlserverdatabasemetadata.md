@@ -1,5 +1,5 @@
 ---
-title: SupportsExtendedSQLGrammar-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsExtendedSQLGrammar-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8deb1987-c4e3-4599-8e37-0a04ec20b480
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f29d603f8275cd2bcc5585e38ab63277d8ece433
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0f006c4343c1a89fcb6387bc437a3415607ca094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969416"
 ---
 # <a name="supportsextendedsqlgrammar-method-sqlserverdatabasemetadata"></a>supportsExtendedSQLGrammar-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsExtendedSQLGrammar()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsExtendedSQLGrammer-Methode wird von der SupportsExtendedSQLGrammer-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsextendedsqlgrammer-Methode wird von der supportsextendedsqlgrammer-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

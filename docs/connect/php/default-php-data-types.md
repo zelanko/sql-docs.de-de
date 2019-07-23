@@ -1,5 +1,5 @@
 ---
-title: Default PHP Data Types | Microsoft-Dokumentation
+title: PHP-Standard Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993670"
 ---
 # <a name="default-php-data-types"></a>PHP-Standarddatentypen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,8 +45,8 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 |FLOAT|float|8-Bit-Zeichen<sup>1</sup>|  
 |geography|Datenstrom|Binär<sup>3</sup>|  
 |Geometrie|Datenstrom|Binär<sup>3</sup>|  
-|Image<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
-|ssNoversion|Integer|8-Bit-Zeichen<sup>1</sup>|  
+|Abbildung<sup>5</sup>|Datenstrom<sup>2</sup>|Binär<sup>3</sup>|  
+|INT|Integer|8-Bit-Zeichen<sup>1</sup>|  
 |money|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |NCHAR|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
 |NUMERIC|Zeichenfolge|8-Bit-Zeichen<sup>1</sup>|  
@@ -84,7 +83,7 @@ Die folgende Tabelle enthält den SQL Server-Datentyp (der Datentyp, der vom Ser
 
 6. Dies ist ein veralteter Typ, der dem nvarchar(max)-Typ zugeordnet ist.
 
-7.  Sql_variant wird in bidirektionalen oder Output-Parameter nicht unterstützt.
+7.  sql_variant wird in bidirektionalen oder Ausgabeparametern nicht unterstützt.
 
 8.  Dies ist ein veralteter Typ, der dem varchar(max)-Typ zugeordnet ist.  
   

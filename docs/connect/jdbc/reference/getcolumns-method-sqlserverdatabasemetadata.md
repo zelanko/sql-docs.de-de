@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952835"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -74,7 +73,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_NAME|**String**|Der Spaltenname.|  
 |DATA_TYPE|**smallint**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|COLUMN_SIZE|**ssNoversion**|Die Genauigkeit der Spalte.|  
+|COLUMN_SIZE|**int**|Die Genauigkeit der Spalte.|  
 |BUFFER_LENGTH|**smallint**|Die Übertragungsgröße der Daten.|  
 |DECIMAL_DIGITS|**smallint**|Die Dezimalstellen der Spalte.|  
 |NUM_PREC_RADIX|**smallint**|Die Basis der Spalte.|  
@@ -83,8 +82,8 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_DEF|**String**|Der Standardwert der Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte entspricht der DATA_TYPE-Spalte mit Ausnahme des datetime-Datentyps und des SQL-92-Datentyps interval. Diese Spalte gibt immer einen Wert zurück.|  
 |SQL_DATETIME_SUB|**smallint**|Untertypcode für den datetime-Datentyp und den SQL-92-Datentyp interval. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
-|CHAR_OCTET_LENGTH|**ssNoversion**|Die maximale Anzahl von Bytes in der Spalte.|  
-|ORDINAL_POSITION|**ssNoversion**|Der Index der Spalte innerhalb der Tabelle.|  
+|CHAR_OCTET_LENGTH|**int**|Die maximale Anzahl von Bytes in der Spalte.|  
+|ORDINAL_POSITION|**int**|Der Index der Spalte innerhalb der Tabelle.|  
 |IS_NULLABLE|**String**|Gibt an, ob in der Spalte NULL-Werte zulässig sind.|  
 |SS_IS_SPARSE|**smallint**|Besitzt den Wert 1, wenn die Spalte eine Sparsespalte ist, andernfalls 0.<sup>1</sup>|  
 |SS_IS_COLUMN_SET|**smallint**|Besitzt den Wert 1, wenn die Spalte die column_set-Sparsespalte ist, andernfalls 0. <sup>1</sup>|  
@@ -103,7 +102,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 > [!NOTE]  
 >  Weitere Informationen zu den Daten, die von der getColumns-Methode zurückgegeben werden, finden Sie in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „sp_columns (Transact-SQL)“.  
   
- In der [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 wird Ihnen das folgende Verhalten ändert sich von früheren Versionen des JDBC-Treibers:  
+ [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Im JDBC-Treiber 3,0 werden die folgenden Verhaltensänderungen von früheren Versionen des JDBC-Treibers angezeigt: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
  Die DATA_TYPE-Spalte wurde folgendermaßen geändert:  
   
@@ -156,7 +155,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
   
  Die SQL_DATA_TYPE-Spalte wurde folgendermaßen geändert:  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 Datenwert in JDBC Driver 2.0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 Datenwert in JDBC Driver 3.0|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2008 Datenwert in JDBC Driver 2,0|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]2008 Datenwert in JDBC Driver 3,0|  
 |-------------------------------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|  
 |varchar(max)|-10|–9|  
 |nvarchar(max)|-1|–9|  

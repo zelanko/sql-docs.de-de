@@ -1,5 +1,5 @@
 ---
-title: GetVersionColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getVersionColumns-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978164"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -67,8 +66,8 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 |COLUMN_NAME|**String**|Der Spaltenname.|  
 |DATA_TYPE|**short**|Der SQL-Datentyp aus "java.sql.Types".|  
 |TYPE_NAME|**String**|Der Name des Datentyps.|  
-|COLUMN_SIZE|**ssNoversion**|Die Genauigkeit der Spalte.|  
-|BUFFER_LENGTH|**ssNoversion**|Die Länge der Spalten in Bytes.|  
+|COLUMN_SIZE|**int**|Die Genauigkeit der Spalte.|  
+|BUFFER_LENGTH|**int**|Die Länge der Spalten in Bytes.|  
 |DECIMAL_DIGITS|**short**|Die Dezimalstellen der Spalte.|  
 |PSEUDO_COLUMN|**short**|Gibt an, ob die Spalte eine Pseudospalte ist. Mögliche Werte:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   

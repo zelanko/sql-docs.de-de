@@ -1,5 +1,5 @@
 ---
-title: IsSameRM-Methode (SQLServerXAResource) | Microsoft-Dokumentation
+title: isSameRM-Methode (sqlserverxaresource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6cdfd42d0670d8d536e0a9bf40f2a6981ef5b937
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: acd1beaa07ab9d1867fe99e519d3969f4efec3ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977298"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM-Methode (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
  Ein XAResource-Objekt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn die Instanzen gleich sind. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Instanzen identisch sind. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  

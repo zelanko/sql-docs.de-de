@@ -1,5 +1,5 @@
 ---
-title: SetStatementPoolingCacheSize-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: setstatuementpoolingcachesize-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd113dec0a7ed8ba8bdcf66bca5cfbd454d5a500
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d8f4ad3463cce03e9c83c936d028e480aef52dd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972777"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverconnection"></a>setStatementPoolingCacheSize-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Legt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung fest. Funktioniert, wenn DisableStatementPooling auf "false" und Wert > 0 festgelegt ist.
+ Legt die Größe des vorbereiteten Anweisungs Caches für diese Verbindung fest. Funktioniert, wenn disablestatus-Pooling auf false festgelegt ist und der Wert > 0 ist.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -38,13 +37,13 @@ public void setStatementPoolingCacheSize(int statementPoolingCacheSize)
 #### <a name="parameters"></a>Parameter  
  *statementPoolingCacheSize*  
   
- Der neue Wert des der **statementpoolingcachesize-Wert** Connection-Eigenschaft.  
+ Der neue Wert der **Status Pool** -Verbindungs Eigenschaft.  
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

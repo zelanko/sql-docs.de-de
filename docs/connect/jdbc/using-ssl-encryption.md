@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003966"
 ---
 # <a name="using-ssl-encryption"></a>Verwenden der SSL-Verschlüsselung
 
@@ -33,7 +32,7 @@ Das Aktivieren der SSL-Verschlüsselung erhöht die Sicherheit von Daten, die ne
 In den Themen in diesem Abschnitt werden die Unterstützung der SSL-Verschlüsselung in der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Version und neue Verbindungseigenschaften sowie das Konfigurieren des Vertrauensspeichers auf Clientseite beschrieben.  
   
 > [!NOTE]  
-> Die **HostNameInCertificate** Connection-Eigenschaft wird empfohlen, um ein SSL-Zertifikat zu überprüfen.  
+> Zum Validieren eines SSL-Zertifikats wird die **hostNameInCertificate** -Verbindungs Eigenschaft empfohlen.  
 
 ## <a name="in-this-section"></a>In diesem Abschnitt  
 

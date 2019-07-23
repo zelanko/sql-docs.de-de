@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Standarddatentypen | Microsoft-Dokumentation
+title: Verwenden von grundlegenden Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916361"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die JDBC-Standarddatentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann, und umgekehrt. Der JDBC-Treiber bietet Unterstützung für die JDBC 4.0-API, einschließlich der **SQLXML** -Datentyp und nationale (Unicode-) Datentypen, z. B. **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, und **NCLOB**.  
+Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die JDBC-Standarddatentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann, und umgekehrt. Der JDBC-Treiber bietet Unterstützung für die JDBC 4,0-API, die den **SQLXML** -Datentyp und nationale (Unicode-) Datentypen wie **NCHAR**, **nvarchar**, **LONGNVARCHAR**und **NCLOB**enthält.  
   
 ## <a name="data-type-mappings"></a>Datentypzuordnungen
 
@@ -41,7 +40,7 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
 | Decimal            | DEZIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
-| ssNoversion                | INTEGER                                            | ssNoversion                          |
+| INT                | INTEGER                                            | INT                          |
 | money              | DEZIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | Zeichenfolge                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | Zeichenfolge                       |
@@ -69,7 +68,7 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
   
 (1) Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
   
-(2) Sie können die Werte programmgesteuert zugreifen **Datetimeoffset** mit [DateTimeOffset-Klasse](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) Sie können Programm gesteuert auf die Werte von **DateTimeOffset** mit der [DateTimeOffset-Klasse](../../connect/jdbc/reference/datetimeoffset-class.md)zugreifen.  
   
 Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibers und der Standarddatentypen. Ein ausführlicheres Beispiel für die Verwendung der Standarddatentypen in einer Java-Anwendung finden Sie unter [Standarddatentypen – Beispiel](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -86,11 +85,11 @@ Wenn Sie Daten aus einer Datenquelle abrufen müssen und den Typ der abgerufenen
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> Die GetUnicodeStream GetBigDecimal mit Scale-Methoden sind veraltet und werden vom JDBC-Treiber nicht unterstützt.
+> Die Methoden getUnicodeStream und getBigDecimal mit Skalierung sind veraltet und werden vom JDBC-Treiber nicht unterstützt.
 
 ## <a name="updating-data-by-data-type"></a>Aktualisieren von Daten nach Datentyp
 
-Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, gehen Sie das Update\<Typ >-Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
+Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwenden Sie einen der\<Updatetyp > Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ Wenn Sie Daten in einer Datenquelle durch eine parametrisierte Abfrage aktualisi
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-Weitere Informationen zu parametrisierten Abfragen finden Sie unter [mit SQL-Anweisungen mit Parametern](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Weitere Informationen zu parametrisierten Abfragen finden Sie unter [Verwenden einer SQL-Anweisung mit Parametern](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Übergeben von Parametern an gespeicherte Prozeduren
 
@@ -114,7 +113,7 @@ Wenn Sie typisierte Parameter an eine gespeicherte Prozedur übergeben müssen, 
 > [!NOTE]  
 > In diesem Beispiel wird ein Resultset zurückgegeben, das die Ergebnisse der gespeicherten Prozedur enthält.
 
-Weitere Informationen zur Verwendung des JDBC-Treibers mit gespeicherten Prozeduren und Eingabeparametern finden Sie unter [mithilfe einer gespeicherten Prozedur mit Eingabeparametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Eingabe Parametern finden Sie unter [Verwenden einer gespeicherten Prozedur mit Eingabe Parametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Abrufen von Parametern von gespeicherten Prozeduren
 
@@ -125,7 +124,7 @@ Wenn Sie Parameter wieder aus einer gespeicherten Prozedur abrufen müssen, müs
 > [!NOTE]  
 > Zusätzlich zum zurückgegebenen out-Parameter kann auch ein Resultset zurückgegeben werden, das die Ergebnisse der gespeicherten Prozedur enthält.  
   
-Weitere Informationen zur Verwendung des JDBC-Treibers mit gespeicherten Prozeduren und Ausgabeparametern finden Sie unter [mithilfe einer gespeicherten Prozedur mit Output-Parameter](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Ausgabeparametern finden [Sie unter Verwenden einer gespeicherten Prozedur mit Ausgabeparametern](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
 ## <a name="see-also"></a>Weitere Informationen
 

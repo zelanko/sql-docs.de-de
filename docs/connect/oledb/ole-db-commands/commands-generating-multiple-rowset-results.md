@@ -1,5 +1,5 @@
 ---
-title: Mehrere Rowsetergebnisse generierende Befehle | Microsoft-Dokumentation
+title: Befehle, die Ergebnisse von mehreren Rowsets erzeugen | Microsoft-Dokumentation
 description: Mehrere Rowsetergebnisse generierende Befehle
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016066"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Mehrere Rowsetergebnisse generierende Befehle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Der OLE DB-Treiber für SQL Server kann mehrere Rowsets von zurückgeben [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Anweisungen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anweisungen geben unter folgenden Bedingungen mehrere Rowsetergebnisse zurück:  
+  Der OLE DB-Treiber für SQL Server kann mehrere Rowsets von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anweisungen zurückgeben. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anweisungen geben unter folgenden Bedingungen mehrere Rowsetergebnisse zurück:  
   
 -   SQL-Anweisungen im Batchmodus werden als einzelner Befehl gesendet.  
   
 -   Gespeicherte Prozeduren implementieren einen Batch SQL-Anweisungen.  
   
 ## <a name="batches"></a>Batches  
- Der OLE DB-Treiber für SQL Server erkennt das Semikolon als Batchtrennzeichen für SQL-Anweisungen:  
+ Der OLE DB-Treiber für SQL Server erkennt das Semikolon als Batch Trennzeichen für SQL-Anweisungen:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

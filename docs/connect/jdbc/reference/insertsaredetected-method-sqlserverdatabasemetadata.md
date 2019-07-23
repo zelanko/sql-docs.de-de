@@ -1,5 +1,5 @@
 ---
-title: InsertsAreDetected-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: inserzareerkannten-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7d27da8ff8baf048e7890efab212b7835f4037e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977874"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean insertsAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn die eingefügte Zeile erkannt werden kann. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Zeilen Einfügung erkannt werden kann. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese InsertsAreDetected-Methode wird von der InsertsAreDetected-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese inserzareerkannte-Methode wird von der inserzareerkannte-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  
 >  Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden für Cursortypen keine eingefügten Zeilen ermittelt.  

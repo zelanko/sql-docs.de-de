@@ -1,5 +1,5 @@
 ---
-title: UpdateBoolean-Methode (Int, Boolean) | Microsoft-Dokumentation
+title: updateboolean-Methode (int, Boolean) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7937f4bb-8537-4012-af81-837f9ac123a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a1eecc932fa9230667ea71e2cae843e753f32b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 658d23f4a2a2a465a6c7344858f67efb005f81bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997010"
 ---
 # <a name="updateboolean-method-int-boolean"></a>updateBoolean-Methode (int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateBoolean(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateBoolean-Methode wird von der UpdateBoolean-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese updateboolean-Methode wird von der updateboolean-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateBoolean-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   

@@ -10,33 +10,32 @@ ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3aebe9cd16901581d5fdba8cd3d8302c5af30ae
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 945d36208fc4c8858b789f7037d256902aeb92f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957636"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung
 
 - Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-a-sql-database-for-ado-net-development.md)  
 
-## <a name="download-a-net-sql-driver"></a>Einen .NET SQL-Treiber herunterladen
+## <a name="download-a-net-sql-driver"></a>Herunterladen eines .NET SQL-Treibers
 
-Unsere aktuellen Codebeispiel verwendet ADO.NET von .NET Framework für Windows. Die .NET Core ist für Linux und MacOS (zusätzlich zu Windows) verfügbar.
+In unserem aktuellen Codebeispiel wird ADO.net des .NET Framework für Windows verwendet. .Net Core ist für Linux und MacOS (zusätzlich zu Windows) verfügbar.
 
-### <a name="adonet-for-windows"></a>ADO.NET für Windows
+### <a name="adonet-for-windows"></a>ADO.net, für Windows
 
-1. ![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[herunterladen und installieren .NET Framework einschließlich ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+1. ![Herunterladen-nach-unten-Taste](../../ssdt/media/download.png)[, um .NET Framework herunterzuladen und zu installieren, einschließlich ADO.net](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. Installieren Sie Visual Studio Community, oder ein ähnliches integrierte Entwicklungsumgebung (IDE), zum Schreiben und Kompilieren von C#-Quellcode. Microsoft bietet jetzt Visual Studio Community für *kostenlose*.  
+2. Installieren Sie Visual Studio Community oder eine ähnliche integrierte Entwicklungsumgebung (Integrated Development Environment, IDE) C# , um Quellcode zu schreiben und zu kompilieren. Microsoft stellt Visual Studio Community nun *kostenlos*zur Verfügung.  
     - [Laden Sie Visual Studio Community herunter](https://www.visualstudio.com/products/visual-studio-community-vs)  
-    - [Weitere Optionen für kostenlose Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
+    - [Weitere Optionen für die kostenlose Visual Studio-Version](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core für Ubuntu-Linux und MacOS
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>.Net Core, für Linux-Ubuntu und MacOS
 
-Links zum Herunterladen von .NET Core für eine Vielzahl von Betriebssystemen finden Sie unter:
+Links zum Herunterladen von .net Core für eine Vielzahl von Betriebssystemen finden Sie unter:
 
-- ![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[herunterladen und installieren Sie .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Herunterladen-nach-unten-Taste](../../ssdt/media/download.png)[zum herunterladen und Installieren von .net Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

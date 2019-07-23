@@ -1,5 +1,5 @@
 ---
-title: SetBigDecimal-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: setBigDecimal-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d232b5c103c43d9a8856982fd084e460bb521c6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8af0ef075e40444daec1b6e141294d85a74fe3ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975243"
 ---
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public final void setBigDecimal(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetBigDecimal-Methode wird von der SetBigDecimal-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+ Diese setBigDecimal-Methode wird von der setBigDecimal-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

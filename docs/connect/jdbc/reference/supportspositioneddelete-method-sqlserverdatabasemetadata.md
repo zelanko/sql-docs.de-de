@@ -1,5 +1,5 @@
 ---
-title: SupportsPositionedDelete-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportspositioneddelete-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8011659a-d74b-489b-a88b-08bd9e8b48b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 98d44d3def4831bd23d2cda91fd5222fca5aba4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1dbe35f0d0068cabd92f3f8ff538e15fc0b81668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969025"
 ---
 # <a name="supportspositioneddelete-method-sqlserverdatabasemetadata"></a>supportsPositionedDelete-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsPositionedDelete()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsPositionedDelete-Methode wird von der SupportsPositionedDelete-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportspositioneddelete-Methode wird von der supportspositioneddelete-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

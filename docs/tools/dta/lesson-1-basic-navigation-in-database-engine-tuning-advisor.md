@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034773"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lektion 1: Grundlagen zur Navigation im Datenbankoptimierungsratgeber
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
-  > Dieses Tutorial dient für einen Benutzer mit der Verwendung von SQL Server Management Studio und einfache administrative Aufgaben vertraut. 
+  > Dieses Tutorial richtet sich an einen Benutzer, der mit der Verwendung SQL Server Management Studio und grundlegender Datenbankverwaltungsaufgaben vertraut ist. 
   
 
 ## <a name="launch-database-tuning-advisor"></a>Starten des Datenbankoptimierungsratgebers 
 Zunächst öffnen Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers (Database Engine Tuning Advisor, DTA). Bei der ersten Verwendung muss ein Mitglied der festen Serverrolle **sysadmin** den Datenbankoptimierungsratgeber starten, um die Anwendung zu initialisieren. Nach der Initialisierung können Mitglieder der festen Datenbankrolle **db_owner** mit dem Datenbankoptimierungsratgeber eigene Datenbanken optimieren. Weitere Informationen zum Initialisieren des Datenbankoptimierungsratgebers finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Starten Sie SQL Server Management Studio (SSMS). Klicken Sie auf der Windows **Menü "Start"** , zeigen Sie auf **Programme** und suchen Sie nach **SQL Server Management Studio**. 
-2. Nach dem SSMS öffnen, wählen Sie die **Tools** Menü **Database Tuning Advisor**. 
+1. Starten Sie SQL Server Management Studio (SSMS). Zeigen Sie im Windows- **Startmenü**auf **Alle Programme** , und suchen Sie nach **SQL Server Management Studio**. 
+2. Wenn SSMS geöffnet ist, wählen Sie **das Menü** Extras aus, und wählen Sie **Daten Bank Optimierungs Ratgeber**aus. 
 
-  ![DTA aus SSMS starten](media/dta-tutorials/launch-dta.png)
+  ![Starten von DTA aus SSMS](media/dta-tutorials/launch-dta.png)
 
-3. Database Tuning Advisor startet und öffnet die **Herstellen einer Verbindung mit Server** Dialogfeld. Überprüfen Sie die Standardeinstellungen, und wählen Sie dann **Connect** für die Verbindung mit SQL Server.  
+3. Der Daten Bank Optimierungs Ratgeber wird gestartet, und das Dialogfeld **Verbindung mit Server herstellen** wird geöffnet. Überprüfen Sie die Standardeinstellungen, und klicken Sie dann auf **verbinden** , um eine Verbindung mit Ihrem SQL Server herzustellen.  
   
 Standardmäßig wird der Datenbankoptimierungsratgeber mit der in der folgenden Abbildung gezeigten Konfiguration geöffnet:  
   
 ![Datenbankoptimierungsratgeber (Standardfenster)](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> Die **Sitzungsmonitor** Registerkarte zeigt den Namen der Sitzung, die den Namen des verbundenen Benutzers und der aktuellen Daten darstellt. 
+> Auf der Registerkarte **Sitzungs Monitor** wird der Sitzungsname angezeigt. Hierbei handelt es sich um den Namen des verbundenen Benutzers und der aktuellen Daten. 
   
 Beim ersten Öffnen der grafischen Benutzeroberfläche des Datenbankoptimierungsratgebers werden zwei Hauptbereiche angezeigt.  
   
@@ -65,7 +64,7 @@ Beim ersten Öffnen der grafischen Benutzeroberfläche des Datenbankoptimierungs
 > [!NOTE]
 > Der Datenbankoptimierungsratgeber kann auch eine XML-Datei als Eingabe annehmen, wenn ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript aus dem Abfrage-Editor von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] importiert wird. Weitere Informationen finden Sie im Abschnitt zum Datenbankoptimierungsratgeber im Abfrage-Editor von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [Starten und Verwenden des Datenbankoptimierungsratgebers](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-## <a name="configure-tool-options-and-layout"></a>Konfigurieren von Optionen und layout 
+## <a name="configure-tool-options-and-layout"></a>Tool Optionen und Layout konfigurieren 
 
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
 

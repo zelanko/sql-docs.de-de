@@ -1,5 +1,5 @@
 ---
-title: GetMaxConnections-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getmaxconnections-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bdc15eecb456ab5b2da5177bf2190b6b8a648ae2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 02aa3fcb7feed842a2da7b13c5609ea516ef40b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982170"
 ---
 # <a name="getmaxconnections-method-sqlserverdatabasemetadata"></a>getMaxConnections-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxConnections()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetMaxConnections-Methode wird von der GetMaxConnections-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getmaxconnections-Methode wird von der getmaxconnections-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

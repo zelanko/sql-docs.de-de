@@ -1,5 +1,5 @@
 ---
-title: GetStatementPoolingCacheSize-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: getstatuementpoolingcachesize-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 773b5bc08affdc513e7ee5897fbd4b0f3c24993e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ea65ca1cbf69db3628c7664fb3b481b6ffaa91ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979522"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>getStatementPoolingCacheSize-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Gibt die Größe des Caches für vorbereitete Anweisungen für diese Verbindung zurück. "0" bedeutet, dass das Zwischenspeichern nicht aktiviert.
+ Gibt die Größe des vorbereiteten Anweisungs Caches für diese Verbindung zurück. "0" bedeutet, dass das Caching nicht aktiviert ist.
 
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +35,13 @@ public int getStatementPoolingCacheSize()
 ```  
 
 ## <a name="return-value"></a>Rückgabewert
- Ein **Int** mit dem Wert des **statementpoolingcachesize-Wert** Connection-Eigenschaft.
+ Ein **int** -Wert, der den Wert der **Status Pool** -Verbindungs Eigenschaft "Status" enthält.
 
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

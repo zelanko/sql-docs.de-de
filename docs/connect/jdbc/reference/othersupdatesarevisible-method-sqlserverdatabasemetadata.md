@@ -1,5 +1,5 @@
 ---
-title: OthersUpdatesAreVisible-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: othersUpdatesAreVisible-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a6465b3af971cababf5e20adc17d7e74a56e6e5e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 56380d1b81f5b5e4968217ce0bf4bbe5207eca01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976573"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>othersUpdatesAreVisible-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean othersUpdatesAreVisible(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn die Updates angezeigt werden. Andernfalls lautet der Wert **false**.  
+ **true** , wenn die Updates sichtbar sind. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese OthersUpdatesAreVisible-Methode wird von der OthersUpdatesAreVisible-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese othersUpdatesAreVisible-Methode wird von der othersUpdatesAreVisible-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

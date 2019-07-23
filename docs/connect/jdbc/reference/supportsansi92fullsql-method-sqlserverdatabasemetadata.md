@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8877dc8c-26cd-4374-8ae8-ff7d20621130
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bdc41599faef3446c95162e833222aa1961082b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcad4dae62be2e2185848acc2ea5aa3562e60ce1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969837"
 ---
 # <a name="supportsansi92fullsql-method-sqlserverdatabasemetadata"></a>supportsANSI92FullSQL-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsANSI92FullSQL()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese supportsANSI92FullSQL-Methode wird von der supportsANSI92FullSQL-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsANSI92FullSQL-Methode wird von der supportsANSI92FullSQL-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

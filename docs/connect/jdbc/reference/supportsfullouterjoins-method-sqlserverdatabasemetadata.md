@@ -1,5 +1,5 @@
 ---
-title: SupportsFullOuterJoins-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsfullouterjoins-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1cbc45a185fd2fb36e838657dfcb28905023e96d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4a59e2c8bc82a54080b7413e13928b0e85a49270
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969442"
 ---
 # <a name="supportsfullouterjoins-method-sqlserverdatabasemetadata"></a>supportsFullOuterJoins-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsFullOuterJoins()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsFullOuterJoins-Methode wird von der SupportsFullOuterJoins-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsfullouterjoins-Methode wird von der supportsfullouterjoins-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

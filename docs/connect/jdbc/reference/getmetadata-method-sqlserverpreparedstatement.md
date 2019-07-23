@@ -1,5 +1,5 @@
 ---
-title: GetMetaData-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
+title: GetMetadata-Methode (SQLServerPreparedStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad4c6fc3ed97eec086f7b3919ef1332ce662396b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981860"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData-Methode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public final java.sql.ResultSetMetaData getMetaData()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein ResultSetMetaData-Objekt.  
+ Ein ResultSetMetadata-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetMetaData-Methode wird von der GetMetaData-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
+ Diese GetMetadata-Methode wird von der GetMetadata-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerPreparedStatement-Elemente](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: Behandlung von Verbindungsproblemen | Microsoft-Dokumentation
+title: Problembehandlung bei Konnektivität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004233"
 ---
 # <a name="troubleshooting-connectivity"></a>Behandlung von Verbindungsproblemen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798246"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist installiert, aber TCP/IP wurde nicht mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Netzwerkkonfiguration für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bzw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Configuration Manager für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher als Netzwerkprotokoll für [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] installiert.  
   
-    -   TCP/IP ist als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokoll installiert, lauscht aber nicht an dem in der JDBC-Verbindungs-URL angegebenen Port. Der Standardport ist 1433. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann aber bei der Produktinstallation für das Lauschen an einem beliebigen Port konfiguriert werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zur JDBC-Verbindungs-URL finden Sie unter [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).  
+    -   TCP/IP ist als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokoll installiert, lauscht aber nicht an dem in der JDBC-Verbindungs-URL angegebenen Port. Der Standardport ist 1433. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann aber bei der Produktinstallation für das Lauschen an einem beliebigen Port konfiguriert werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an Port 1433 lauscht. Sollte der Port geändert worden sein, vergewissern Sie sich, dass der in der JDBC-Verbindungs-URL angegebene Port dem geänderten Port entspricht. Weitere Informationen zu JDBC-Verbindungs-URLs finden Sie unter " [aufbauen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md)".  
   
     -   Die Adresse des in der JDBC-Verbindungs-URL angegebenen Computers verweist nicht auf einen Server, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert und gestartet wurde.  
   
