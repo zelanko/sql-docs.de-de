@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989241"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Verwenden von ADO mit dem OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +29,12 @@ ms.locfileid: "66778046"
 
   Um die neuen Funktionen von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], beispielsweise mehrere aktive Resultsets (MARS), Abfragebenachrichtigungen, benutzerdefinierte Typen (User-Defined Types, UDTs) oder den neuen Datentyp **XML** verwenden zu können, sollten bestehende Anwendungen, die ADO (ActiveX Data Objects) verwenden, den OLE DB-Anbieter von OLE DB-Treiber für SQL Server als Datenzugriffsanbieter nutzen.  
   
- Damit ADO die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden kann, wurde der OLE DB-Treiber für SQL Server, der die Kernfunktionen von OLE DB erweitert, um einige Erweiterungen ergänzt. Diese Erweiterungen erlauben es ADO-Anwendungen, neuere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Features zu verwenden und zwei Datentypen zu verarbeiten, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt wurden: **XML** und **UDT**. Diese Erweiterungen machen sich auch Erweiterungen der Datentypen **varchar**, **nvarchar** und **varbinary** zunutze. Der OLE DB-Treiber für SQL Server fügt für ADO-Anwendungen die Initialisierungseigenschaft SSPROP_INIT_DATATYPECOMPATIBILITY dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzu, damit die neuen Datentypen in einer mit ADO kompatiblen Weise verfügbar gemacht werden. Der OLE DB-Treiber für SQL Server definiert darüber hinaus auch ein neues Schlüsselwort für Verbindungszeichenfolgen mit dem Namen **DataTypeCompatibility** , die in der Verbindungszeichenfolge festgelegt ist.  
+ Damit ADO die neuen Funktionen der letzten Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwenden kann, wurde der OLE DB-Treiber für SQL Server, der die Kernfunktionen von OLE DB erweitert, um einige Erweiterungen ergänzt. Diese Erweiterungen erlauben es ADO-Anwendungen, neuere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Features zu verwenden und zwei Datentypen zu verarbeiten, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt wurden: **XML** und **UDT**. Diese Erweiterungen machen sich auch Erweiterungen der Datentypen **varchar**, **nvarchar** und **varbinary** zunutze. Der OLE DB-Treiber für SQL Server fügt für ADO-Anwendungen die Initialisierungseigenschaft SSPROP_INIT_DATATYPECOMPATIBILITY dem DBPROPSET_SQLSERVERDBINIT-Eigenschaftensatz hinzu, damit die neuen Datentypen in einer mit ADO kompatiblen Weise verfügbar gemacht werden. Außerdem definiert der OLE DB Treiber für SQL Server auch ein neues Verbindungs Zeichenfolgen-Schlüsselwort mit dem Namen **datatypcompatibility** , das in der Verbindungs Zeichenfolge festgelegt wird.  
 
 > [!NOTE]  
->  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neuen größeren Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** werden als die ADO-Typen **adLongVarChar**, **adLongVarWChar** bzw. **adLongVarBinary** zurückgegeben. XML-Spalten werden als **adLongVarChar** zurückgegeben, und UDT-Spalten werden als **adVarBinary** zurückgegeben. Aber wenn Sie den OLE DB-Treiber für SQL Server (MSOLEDBSQL) statt des SQLOLEDB verwenden, müssen Sie Sie sicher, dass die **DataTypeCompatibility** Schlüsselwort auf "80", damit die neuen Datentypen richtig den entsprechenden ADO-Datentypen zugeordnet werden.  
+>  Vorhandene ADO-Anwendungen können über den SQLOLEDB-Anbieter auf XML, UDT, umfangreiche Textwerte und Werte von Binärfeldern zugreifen und diese aktualisieren. Die neuen größeren Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** werden als die ADO-Typen **adLongVarChar**, **adLongVarWChar** bzw. **adLongVarBinary** zurückgegeben. XML-Spalten werden als **adLongVarChar** zurückgegeben, und UDT-Spalten werden als **adVarBinary** zurückgegeben. Wenn Sie jedoch den OLE DB Treiber für SQL Server (msoledbsql) anstelle von SQLOLEDB verwenden, müssen Sie sicherstellen, dass das **DataTypeCompatibility** -Schlüsselwort auf "80" festgelegt ist, damit die neuen Datentypen den ADO-Datentypen ordnungsgemäß zugeordnet werden.  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Aktivieren der OLE DB-Treiber für SQLServer über ADO  
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Aktivieren des OLE DB Treibers für die SQL Server von ADO  
  Um die Verwendung von OLE DB-Treiber für SQL Server zu ermöglichen, müssen ADO-Anwendungen die folgenden Schlüsselwörter in ihrer Verbindungszeichenfolge angeben:  
 
 -   `Provider=MSOLEDBSQL`  
@@ -59,7 +58,7 @@ con.Open
 ```  
 
 ## <a name="examples"></a>Beispiele  
- Die folgenden Abschnitte enthalten Beispiele, wie Sie ADO mit dem OLE DB-Treiber für SQL Server verwenden können.  
+ In den folgenden Abschnitten finden Sie Beispiele für die Verwendung von ADO mit dem OLE DB-Treiber für SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Abrufen von XML-Spaltendaten  
  In diesem Beispiel wird ein Recordset verwendet, um die Daten aus einer XML-Spalte der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Beispieldatenbank **AdventureWorks** abzurufen und anzuzeigen.  

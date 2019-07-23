@@ -13,19 +13,18 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f78b3e8cb60b326f6ec7be8d23ad9c24026c1f97
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d362670facc0638b435cfa604777a6631ac87e30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021741"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Ergebnisse, Detailansicht (Dialogfeld)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Dialogfeld werden die Ergebnisse der Richtlinienauswertung angezeigt, wenn Sie eine Richtlinie mit dem Dialogfeld **Richtlinien auswerten** ausgeführt und auf **Auswerten**geklickt haben. Dieses Dialogfeld ist schreibgeschützt und hilft Ihnen dabei zu ermitteln, welcher Teil eines Eigenschaftsausdrucks fehlschlagen könnte.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **And/Or**  
  Wenn mehr als ein Eigenschaftsausdruck vorhanden ist, wird hiermit angegeben, ob die Eigenschaftsausdrücke kumuliert oder alternativ sind.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "51512565"
  **Zusätzliche Hilfe**  
  Klicken Sie auf den Link, um eine Webseite zu öffnen, die mit dieser Richtlinie zusammenhängt. Der zusätzliche Hilfelink wird beim Erstellen der Richtlinie konfiguriert und ist unter Umständen leer oder nicht verfügbar.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Richtlinienverwaltungsknoten &#40;Objekt-Explorer&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

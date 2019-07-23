@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081733"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,9 +92,9 @@ ms.locfileid: "47605368"
   
 -   Wenn Sie einer Tabelle eine neue Spalte hinzufügen und diese Spalte nicht in eine vorhandene Veröffentlichung einschließen möchten, führen Sie ALTER TABLE \<Table> ADD \<Column> aus.  
   
--   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>**, um eine vorhandene Spalte in eine vorhandene Veröffentlichung einzuschließen.  
+-   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** , um eine vorhandene Spalte in eine vorhandene Veröffentlichung einzuschließen.  
   
-     Weitere Informationen finden Sie unter [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Dies erfordert, dass Sie Abonnements erneut initialisieren.  
+     Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Dies erfordert, dass Sie Abonnements erneut initialisieren.  
   
 -   Das Hinzufügen einer Identitätsspalte zu einer veröffentlichten Tabelle wird nicht unterstützt, da ein solcher Vorgang zu Nichtkonvergenz führen kann, wenn die Spalte auf den Abonnenten repliziert wird. Die Werte in der Identitätsspalte auf dem Verleger richten sich nach der Ordnung, in der die Zeilen für die betreffende Tabelle physisch gespeichert sind. Es ist möglich, dass die Zeilen auf dem Abonnenten anders gespeichert sind, sodass der Wert für die Identitätsspalte für dieselben Zeilen unterschiedlich sein kann.  
   
@@ -103,13 +102,13 @@ ms.locfileid: "47605368"
   
 -   Wenn Sie eine Spalte aus einer vorhandenen Veröffentlichung löschen und die Spalte aus der Tabelle auf dem Verleger löschen möchten, führen Sie ALTER TABLE \<Table> DROP \<Column> aus. Standardmäßig wird die Spalte dann aus der Tabelle auf allen Abonnenten gelöscht.  
   
--   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>**, um eine Spalte aus einer vorhandenen Veröffentlichung zu löschen, die Spalte jedoch in der Tabelle auf dem Verleger beizubehalten.  
+-   Verwenden Sie [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) oder das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** , um eine Spalte aus einer vorhandenen Veröffentlichung zu löschen, die Spalte jedoch in der Tabelle auf dem Verleger beizubehalten.  
   
-     Weitere Informationen finden Sie unter [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Dies erfordert, dass Sie eine neue Momentaufnahme generieren.  
+     Weitere Informationen finden Sie unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Dies erfordert, dass Sie eine neue Momentaufnahme generieren.  
   
 -   Die zu löschende Spalte darf nicht in den Filterklauseln eines Artikels einer Veröffentlichung in der Datenbank verwendet werden.  
   
--   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Zum Beispiel:  
+-   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Beispiel:  
   
     -   Sie können keine in einem Primärschlüssel verwendeten Spalten aus Artikeln in Transaktionsveröffentlichungen löschen, da die Spalten von der Replikation verwendet werden.  
   
@@ -160,7 +159,7 @@ ms.locfileid: "47605368"
   
 -   Die Mergereplikation stellt gespeicherte Prozeduren bereit, mit denen Schemaänderungen bei der Problembehandlung ausgelassen werden können. Weitere Informationen finden Sie unter [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) und [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

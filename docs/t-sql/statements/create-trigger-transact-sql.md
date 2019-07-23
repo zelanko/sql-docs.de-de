@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130131"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -220,7 +219,7 @@ Sie können maximal nur einen INSTEAD OF-Trigger pro INSERT-, UPDATE- oder DELET
   
 Sie können nicht INSTEAD OF-Trigger für aktualisierbare Sichten definieren, die WITH CHECK OPTION verwenden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dies löst einen Fehler aus, falls ein INSTEAD OF-Trigger einer aktualisierbaren Sicht hinzugefügt wird, in der WITH CHECK OPTION angegeben ist. Sie entfernen diese Option mithilfe von ALTER VIEW, bevor Sie den INSTEAD OF-Trigger definieren.  
   
-{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
+{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Gibt die Anweisungen zur Datenänderung an, die den DML-Trigger aktivieren, wenn Sie ihn für diese Tabelle oder Sicht auszuführen versuchen. Geben Sie mindestens eine Option an. Verwenden Sie diese Optionen in der Triggerdefinition in beliebiger Kombination und Reihenfolge.  
   
 Für INSTEAD OF-Trigger können Sie die Option DELETE nicht für Tabellen mit einer referenziellen Beziehung untereinander verwenden, wenn für ON DELETE die Option CASCADE angegeben ist. Ebenso ist die Option UPDATE nicht für Tabellen mit einer referenziellen Beziehung untereinander zulässig, wenn für ON UPDATE die Aktion CASCADE angegeben ist.  
@@ -263,7 +262,7 @@ DDL- und LOGON-Trigger zeichnen Informationen zu dem auslösenden Ereignis auf, 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht das Aktualisieren der Spalten **text**, **ntext** oder **image** mithilfe des INSTEAD OF-Triggers für Tabellen oder Sichten.  
   
 > [!IMPORTANT]
->  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Die Trigger AFTER und INSTEAD OF unterstützen die Daten **varchar(max)**, **nvarchar(max)** und **varbinary(max)** in den Tabellen „inserted“ und „deleted“.  
+>  Die Datentypen **ntext**, **text** und **image** werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden Sie stattdessen [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)und [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Die Trigger AFTER und INSTEAD OF unterstützen die Daten **varchar(max)** , **nvarchar(max)** und **varbinary(max)** in den Tabellen „inserted“ und „deleted“.  
   
 Bei Triggern in speicheroptimierten Tabellen ist auf der obersten Ebene nur ein ATOMIC-Block als *sql_statement* erlaubt. Das im ATOMIC-Block erlaubte T-SQL ist durch das in nativen Prozeduren zulässige T-SQL beschränkt.  
   
@@ -380,7 +379,7 @@ Logon-Trigger lassen nie zu, dass Resultsets zurückgegeben werden. Dieses Verha
 ### <a name="recursive-triggers"></a>Rekursive Trigger  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt außerdem den rekursiven Aufruf von Triggern, wenn die RECURSIVE_TRIGGERS-Einstellung mithilfe von ALTER DATABASE aktiviert wurde.  
   
-Rekursive Trigger ermöglichen die folgenden Arten von Rekursion:    
+Rekursive Trigger ermöglichen die folgenden Arten von Rekursion:  
   
 -   Indirekte Rekursion  
   

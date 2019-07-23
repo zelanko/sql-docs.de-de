@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: dc21bd2fa9d3c35d436679cf256bec81654f5747
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 334a8388b7abc217123071fdc37c9e1091f6a3fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987133"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server, Columnstore-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "53380511"
   
  Die folgende Tabelle beschreibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Columnstore** counters.  
   
-|Columnstore-Leistungsindikatoren|Beschreibung|  
+|Columnstore-Leistungsindikatoren|und Beschreibung|  
 |--------------------------|-----------------|  
 |**Geschlossene Delta-Zeilengruppen**|Die Anzahl von geschlossenen Delta-Zeilengruppen.|  
 |**Komprimierte Delta-Zeilengruppen**|Die Anzahl von komprimierten Delta-Zeilengruppen.|  

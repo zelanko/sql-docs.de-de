@@ -1,5 +1,5 @@
 ---
-title: SupportsTableCorrelationNames-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportstablecorrelationnames-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85d4eb84-6d0a-4671-b6e5-a7085e086fcf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 586206f73ef0116d9087eacb3beb13ec05c929e6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4afcc9c8f4554375f2c87ccc0c70302c84aaa2f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968683"
 ---
 # <a name="supportstablecorrelationnames-method-sqlserverdatabasemetadata"></a>supportsTableCorrelationNames-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsTableCorrelationNames()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsTableCorrelationNames-Methode wird von der SupportsTableCorrelationNames-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportstablecorrelationnames-Methode wird von der supportstablecorrelationnames-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

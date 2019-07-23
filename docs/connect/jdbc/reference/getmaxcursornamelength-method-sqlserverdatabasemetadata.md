@@ -1,5 +1,5 @@
 ---
-title: GetMaxCursorNameLength-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getmaxcurrsornamelength-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2cd2bed9-adf4-4bcd-ae5a-d0e3428bc709
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 91333becf557bd31faf8d69636c6b0cc51250dc0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 53c47f912711a486ea60cf0181411e7ed68029ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982139"
 ---
 # <a name="getmaxcursornamelength-method-sqlserverdatabasemetadata"></a>getMaxCursorNameLength-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxCursorNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetMaxCursorNameLength-Methode wird von der GetMaxCursorNameLength-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getmaxcurrsornamelength-Methode wird von der getmaxcurrsornamelength-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

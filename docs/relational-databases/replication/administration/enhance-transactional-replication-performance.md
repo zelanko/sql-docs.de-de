@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e526bbe9191aa83cedd45c2115b3cb4b54a937d2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebedefdd7e11f7ff3edcd884674092aeaf3b4f9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939156"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Verbessern der Leistung der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "54136080"
   
 -   Verteilen Sie Artikel auf mehrere Veröffentlichungen.  
   
-     Wenn die Verwendung des [**-SubscriptionStreams**-Parameters](#subscriptionstreams) nicht möglich ist, ziehen Sie die Erstellung mehrerer Veröffentlichungen in Betracht. Durch das Verteilen von Artikeln auf diese Veröffentlichungen können bei der Replikation Änderungen parallel auf Abonnenten angewendet werden.  
+     Wenn die Verwendung des [ **-SubscriptionStreams**-Parameters](#subscriptionstreams) nicht möglich ist, ziehen Sie die Erstellung mehrerer Veröffentlichungen in Betracht. Durch das Verteilen von Artikeln auf diese Veröffentlichungen können bei der Replikation Änderungen parallel auf Abonnenten angewendet werden.  
   
 ## <a name="subscription-considerations"></a>Überlegungen zu Abonnements  
   

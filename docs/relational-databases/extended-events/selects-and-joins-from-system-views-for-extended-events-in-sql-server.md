@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903462"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server
 
@@ -48,8 +47,8 @@ Es gibt zwei Sammlungen von Systemsichten für erweiterte Ereignisse:
 
 
 - Das Namenspräfix ist:
-    - Das Namenspräfix auf SQL Server ist *sys.server\_event\_session\**.
-    - Das Namenspräfix in der SQL-Datenbank ist *sys.database\_event\_session\**.
+    - Das Namenspräfix auf SQL Server ist *sys.server\_event\_session\** .
+    - Das Namenspräfix in der SQL-Datenbank ist *sys.database\_event\_session\** .
 
 
 #### <a name="dynamic-management-views-dmvs"></a>Dynamische Verwaltungssichten (Dynamic management views; DMVs):
@@ -60,8 +59,8 @@ Es gibt zwei Sammlungen von Systemsichten für erweiterte Ereignisse:
 
 
 - Namenspräfix für erweiterte Ereignisse DMVs ist:
-    - Das Namenspräfix auf SQL Server ist *sys.dm\_xe\_\**.
-    - Das Namenspräfix in der SQL-Datenbank ist in der Regel *sys.dm\_xe\_database\_\**.
+    - Das Namenspräfix auf SQL Server ist *sys.dm\_xe\_\** .
+    - Das Namenspräfix in der SQL-Datenbank ist in der Regel *sys.dm\_xe\_database\_\** .
 
 
 #### <a name="permissions"></a>Berechtigungen:
@@ -574,7 +573,7 @@ type           package0       xml                           Well formed XML frag
 
 Die folgende SELECT-Anweisung gibt alle Datenfelder zurück, die speziell für Ihren Ereignistyp gelten.
 
-- Beachten Sie das Klauselelement WHERE: *column_type = 'data'*.
+- Beachten Sie das Klauselelement WHERE: *column_type = 'data'* .
 - Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =* bearbeiten.
 
 
@@ -727,7 +726,7 @@ you could put:
 
 Die folgende SELECT-Anweisung gibt jeden Parameter für Ihr Ziel zurück. Jeder Parameter ist markiert, um anzuzeigen, ob er verbindlich ist, oder nicht. Die Werte, die Sie Parametern zuweisen, beeinflussen das Verhalten des Ziels.
 
-- Beachten Sie das Klauselelement WHERE: *object_type = 'customizable'*.
+- Beachten Sie das Klauselelement WHERE: *object_type = 'customizable'* .
 - Darüber hinaus müssen Sie den Wert der Klausel WHERE für *o.name =* bearbeiten.
 
 

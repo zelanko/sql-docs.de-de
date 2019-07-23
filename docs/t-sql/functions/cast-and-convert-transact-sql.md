@@ -34,14 +34,13 @@ helpviewer_keywords:
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caba5466432356cf6997b26a0a3b8c732b3179ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040171"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +64,7 @@ SELECT 9.5 AS Original,
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|Original   |ssNoversion    |Decimal |  
+|Original   |INT    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -285,14 +284,14 @@ Beim Konvertieren von Datentypen mit unterschiedlichen Dezimalstellen gibt SQL S
 |Von|Aktion|Verhalten|  
 |---|---|---|
 |**numeric**|**numeric**|Round|  
-|**numeric**|**ssNoversion**|Abschneiden|  
+|**numeric**|**int**|Abschneiden|  
 |**numeric**|**money**|Round|  
-|**money**|**ssNoversion**|Round|  
+|**money**|**int**|Round|  
 |**money**|**numeric**|Round|  
-|**float**|**ssNoversion**|Abschneiden|  
+|**float**|**int**|Abschneiden|  
 |**float**|**numeric**|Round<br /><br /> Die Konvertierung der **float**-Werte, die eine wissenschaftliche Schreibweise für **decimal** oder **numeric** verwenden, ist auf Werte mit einer Genauigkeit von 17 Stellen beschränkt. Alle Werte mit einer Genauigkeit von mehr als 17 Stellen werden auf Null gerundet.|  
 |**float**|**datetime**|Round|  
-|**datetime**|**ssNoversion**|Round|  
+|**datetime**|**int**|Round|  
   
 Die Werte 10.6496 und -10.6496 können z.B. während der Konvertierung in **int**- oder **numeric**-Types abgeschnitten oder gerundet werden:
   

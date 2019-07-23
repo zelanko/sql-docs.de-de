@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f3e311b0f7d27b6a0ca2d12ae510960859ae80d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f1bbdb044afd8fb4a5ff55d1a9d5fea2b3f14da1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008830"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -29,18 +28,18 @@ In diesem Artikel wird beschrieben, wie Sie eine Verbindung mit einer [!INCLUDE[
   
 ## <a name="connection-properties"></a>Verbindungseigenschaften  
 
-Finden Sie unter [DSN und Schlüsselwörter für Verbindungszeichenfolgen und Attribute](../../../connect/odbc/dsn-connection-string-attribute.md) für alle Schlüsselwörter für Verbindungszeichenfolgen und Attribute, die unter Linux und Mac unterstützt
+Informationen zu den Schlüsselwörtern und Attributen der Verbindungs Zeichenfolge, die unter Linux und Mac unterstützt werden, finden Sie unter [DSN](../../../connect/odbc/dsn-connection-string-attribute.md)
 
 > [!IMPORTANT]  
 > Geben Sie beim Herstellen einer Verbindung mit einer Datenbank, welche Datenbankspiegelung verwendet (oder einen Failoverpartner hat), nicht den Namen der Datenbank in der Verbindungszeichenfolge an. Schicken Sie stattdessen den Befehl **use** _database_name_, um sich mit der Datenbank zu verbinden, bevor Sie Ihre Abfragen ausführen.  
   
-Der an übergebene Wert den **Treiber** Schlüsselwort kann einen der folgenden sein:  
+Der Wert, der an das **Driver** -Schlüsselwort übermittelt wird, kann einer der folgenden sein:  
   
 -   Der Name, den Sie verwendet haben, als Sie den Treiber installiert haben.
 
 -   Der Pfad zur Treiberbibliothek, welcher in der Vorlagen-INI-Datei angegeben war, die wiederum verwendet wurde, um den Treiber zu installieren.  
 
-Um ein DSN zu erstellen, erstellen Sie (falls erforderlich), und bearbeiten Sie die Datei **~/.odbc.ini** (`.odbc.ini` in Ihrem Basisverzeichnis) für einen Benutzer-DSN, der Zugriff nur für den aktuellen Benutzer oder `/etc/odbc.ini` für einen System-DSN (Administratorrechte erforderlich.) Hier folgt eine Beispieldatei, welche die erforderlichen Einträge für eine DSN zeigt:  
+Um einen DSN zu erstellen, erstellen Sie (falls erforderlich), und bearbeiten Sie die`.odbc.ini` Datei **~ ODBC.in** (in Ihrem Basisverzeichnis) für einen Benutzer-DSN, der nur `/etc/odbc.ini` für den aktuellen Benutzer verfügbar ist, oder für einen System-DSN (Administratorrechte erforderlich). Hier folgt eine Beispieldatei, welche die erforderlichen Einträge für eine DSN zeigt:  
 
 ```  
 [MSSQLTest]  
@@ -53,14 +52,14 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Z. B. **Server = Tcp:** _Servername_ **, 12345**. Beachten Sie, dass das einzige Protokoll unterstützt, indem Sie die Treiber für Linux und MacOS `tcp`.
+Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Beispiel: **Server = TCP: Server**_Name_ **, 12345**. Beachten Sie, dass das einzige Protokoll, das von Linux-und `tcp`macOS-Treibern unterstützt wird.
 
 Um eine Verbindung mit einer benannten Instanz auf einem statischen Port herzustellen, verwenden Sie <b>Server=</b>*servername*,**port_number**. Das Verbinden mit einem dynamischen Port wird nicht unterstützt.  
 
 Alternativ können Sie die DSN-Informationen auch einer Vorlagendatei hinzufügen und den folgenden Befehl ausführen, um sie `~/.odbc.ini` hinzuzufügen:
  - **odbcinst -i -s -f** _template_file_  
  
-Sie können überprüfen, ob Ihr Treiber funktioniert mit `isql` zum Testen der Verbindung, oder Sie können diesen Befehl verwenden:
+Sie können überprüfen, ob der Treiber funktioniert, `isql` indem Sie verwenden, um die Verbindung zu testen, oder Sie können den folgenden Befehl verwenden:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Secure Sockets Layer (SSL) verwenden  
@@ -68,7 +67,7 @@ Sie können Secure Sockets Layer (SSL) verwenden, um Verbindungen mit [!INCLUDE[
 
 Das Aktivieren der Verschlüsselung erhöht die Sicherheit auf Kosten der Leistung.
 
-Weitere Informationen finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) und [mithilfe von Verschlüsselung ohne Überprüfung](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Weitere Informationen finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) und [Verwenden von Verschlüsselung ohne Überprüfung](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Unabhängig von den Einstellungen für **Encrypt** und **TrustServerCertificate**werden die Serveranmeldeinformationen (Benutzername und Kennwort) immer verschlüsselt. Die folgende Tabelle zeigt den Effekt der Einstellungen für **Encrypt** und **TrustServerCertificate** .  
 
@@ -77,7 +76,7 @@ Unabhängig von den Einstellungen für **Encrypt** und **TrustServerCertificate*
 |**Encrypt=no**|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind nicht verschlüsselt.|  
 |**Encrypt=yes**|Serverzertifikat wird überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.<br /><br />Der Name (oder die IP-Adresse) in einem allgemeinen Namen (Common Name (CN)) oder alternativen Antragsstellernamen (Subject Alternative Name (SAN)) in einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -SSL-Zertifikat sollte genau mit dem Servernamen (oder der IP-Adresse), der in der Verbindungszeichenfolge angegeben wurde, übereinstimmen.|Das Serverzertifikat wird nicht überprüft.<br /><br />Zwischen dem Client und dem Server verschickte Daten sind verschlüsselt.|  
 
-Standardmäßig überprüfen verschlüsselte Verbindungen immer das Zertifikat des Servers. Jedoch auch hinzufügen, wenn Sie eine Verbindung mit einem Server, die über ein selbst signiertes Zertifikat verfügt herstellen, die `TrustServerCertificate` Option aus, um die Überprüfung des Zertifikats mit der Liste der vertrauenswürdigen Zertifizierungsstelle herausgegebenes Zertifikat:  
+Standardmäßig überprüfen verschlüsselte Verbindungen immer das Zertifikat des Servers. Wenn Sie jedoch eine Verbindung mit einem Server herstellen, der über ein selbst signiertes Zertifikat verfügt, `TrustServerCertificate` können Sie auch die Option zum Umgehen der Überprüfung des Zertifikats mit der Liste der vertrauenswürdigen Zertifizierungsstellen hinzufügen:  
 
 ```  
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
@@ -100,7 +99,7 @@ SSL verwendet die OpenSSL-Bibliothek. Die folgende Tabelle zeigt die minimalen u
 |Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
 |Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
-Sie können die Verschlüsselung auch angeben, in die Verbindungszeichenfolge mithilfe der `Encrypt` option bei Verwendung **SQLDriverConnect** eine Verbindung herstellen.
+Sie können auch die Verschlüsselung in der Verbindungs Zeichenfolge `Encrypt` mithilfe der Option angeben, wenn Sie **SQLDriverConnect** verwenden, um eine Verbindung herzustellen.
 
 ## <a name="see-also"></a>Weitere Informationen  
 [Installieren des Microsoft ODBC Driver for SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  

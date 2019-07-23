@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1e6878b4b6e1e0f77bba31b3bce57c79e531b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea010277a05a3c4442089d89a87c2983a99b2ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010879"
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +104,7 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>Vorteile und Einschränkungen der Konfiguration der Metadatensichtbarkeit  
  Die Konfiguration der Metadatensichtbarkeit kann eine wichtige Rolle in Ihrem allgemeinen Sicherheitsplan spielen. Es gibt jedoch Fälle, in denen ein technisch versierter Benutzer das Anzeigen einiger Metadaten erzwingen kann, wenn er das will. Wir empfehlen deshalb, dass Sie neben anderen Schutzmaßnahmen Metadatenberechtigungen bereitstellen.  
   
- Es ist theoretisch möglich, die Ausgabe von Metadaten in Fehlermeldungen zu erzwingen, indem die Reihenfolge der Prädikatauswertung in Abfragen verändert wird. Die Möglichkeit solcher *Trial and Error-Angriffe* ist nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifisch. Dies wird durch die in relationaler Algebra zulässigen, assoziativen und kommutativen Transformationen impliziert. Sie können dieses Risiko verringern, indem Sie die in Fehlermeldungen zurückgegebenen Informationen einschränken. Um die Sichtbarkeit von Metadaten auf diese Weise noch stärker einzuschränken, können Sie den Server mit dem Ablaufverfolgungsflag 3625 starten. Mit diesem Ablaufverfolgungsflag wird die in Fehlermeldungen angezeigte Menge an Informationen eingeschränkt. Auf diese Weise können Sie die erzwungene Anzeige von Daten verhindern. Der Nachteil hierbei ist jedoch, dass die Fehlermeldungen nicht ausführlich sind und sie u. U. nicht zu Debugzwecken verwendet werden können. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md) und [Ablaufverfolgungsflags &amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ Es ist theoretisch möglich, die Ausgabe von Metadaten in Fehlermeldungen zu erzwingen, indem die Reihenfolge der Prädikatauswertung in Abfragen verändert wird. Die Möglichkeit solcher *Trial and Error-Angriffe* ist nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifisch. Dies wird durch die in relationaler Algebra zulässigen, assoziativen und kommutativen Transformationen impliziert. Sie können dieses Risiko verringern, indem Sie die in Fehlermeldungen zurückgegebenen Informationen einschränken. Um die Sichtbarkeit von Metadaten auf diese Weise noch stärker einzuschränken, können Sie den Server mit dem Ablaufverfolgungsflag 3625 starten. Mit diesem Ablaufverfolgungsflag wird die in Fehlermeldungen angezeigte Menge an Informationen eingeschränkt. Auf diese Weise können Sie die erzwungene Anzeige von Daten verhindern. Der Nachteil hierbei ist jedoch, dass die Fehlermeldungen nicht ausführlich sind und sie u. U. nicht zu Debugzwecken verwendet werden können. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md) und [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  Für die folgenden Metadaten ist die erzwungene Anzeige nicht möglich:  
   
@@ -160,7 +159,7 @@ GO
  Auf welche Metadaten feste Rollen zugreifen können, richtet sich nach den impliziten Berechtigungen der jeweiligen Rolle.  
   
 ### <a name="scope-of-permissions"></a>Geltungsbereich von Berechtigungen  
- Berechtigungen in einem Geltungsbereich implizieren die Sichtbarkeit von Metadaten in diesem Geltungsbereich sowie in allen eingeschlossenen Geltungsbereichen. So impliziert z. B. die SELECT-Berechtigung für ein Schema, dass der Empfänger dieser Berechtigung die SELECT-Berechtigung auch für alle in diesem Schema enthaltenen sicherungsfähigen Elemente hat. Das Erteilen der SELECT-Berechtigung für ein Schema ermöglicht deshalb einem Benutzer, die Metadaten des Schemas sowie aller Tabellen, Sichten, Funktionen, Prozeduren, Warteschlangen, Synonyme, Typen und XML-Schemaauflistungen, die im Schema enthalten sind, anzuzeigen. Weitere Informationen zu Bereichen finden Sie unter [Berechtigungshierarchie &amp;#40;Datenbank-Engine&amp;#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
+ Berechtigungen in einem Geltungsbereich implizieren die Sichtbarkeit von Metadaten in diesem Geltungsbereich sowie in allen eingeschlossenen Geltungsbereichen. So impliziert z. B. die SELECT-Berechtigung für ein Schema, dass der Empfänger dieser Berechtigung die SELECT-Berechtigung auch für alle in diesem Schema enthaltenen sicherungsfähigen Elemente hat. Das Erteilen der SELECT-Berechtigung für ein Schema ermöglicht deshalb einem Benutzer, die Metadaten des Schemas sowie aller Tabellen, Sichten, Funktionen, Prozeduren, Warteschlangen, Synonyme, Typen und XML-Schemaauflistungen, die im Schema enthalten sind, anzuzeigen. Weitere Informationen zu Bereichen finden Sie unter [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
 ### <a name="precedence-of-deny"></a>Vorrang von DENY  
  DENY hat üblicherweise Vorrang vor anderen Berechtigungen. Wenn einem Datenbankbenutzer z. B. die EXECUTE-Berechtigung für ein Schema erteilt wurde, ihm aber die EXECUTE-Berechtigung für eine gespeicherte Prozedur in diesem Schema verweigert wurde, kann der Benutzer die Metadaten für diese gespeicherte Prozedur nicht anzeigen.  
@@ -190,7 +189,7 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

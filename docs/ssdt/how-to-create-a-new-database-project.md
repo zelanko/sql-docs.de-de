@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897164"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Gewusst wie: Erstellen eines neuen Datenbankprojekts
 Sie können ein neues Datenbankprojekt erstellen und das Datenbankschema aus einer vorhandenen Datenbank, einer SQL-Skriptdatei oder einer Datenebenenanwendung (".dacpac") importieren. Anschließend können Sie die gleichen Visual Designer-Tools (Transact\-SQL-Editor, Tabellen-Designer) aufrufen, die für die Entwicklung verbundener Datenbanken verfügbar sind, um Änderungen am Offlinedatenbankprojekt vorzunehmen, und die Änderungen dann wieder in der Produktionsdatenbank veröffentlichen. Die Änderungen können auch als Skript gespeichert werden, um sie später zu veröffentlichen. Mithilfe des Bereichs **Projekteigenschaften** können Sie die Zielplattform in andere Versionen von SQL Server (einschließlich SQL Azure) ändern.  

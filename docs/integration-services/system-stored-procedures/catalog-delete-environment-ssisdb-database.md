@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: d44b765f-9523-4e6a-bb17-37846d5e5334
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba16c8726963fcb355f1e6e424c15ec66601c126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a64177a3e7a57d41b644e576877c7f9d8d7fda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112245"
 ---
 # <a name="catalogdeleteenvironment-ssisdb-database"></a>catalog.delete_environment (SSISDB-Datenbank)
 
@@ -35,10 +34,10 @@ delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] envi
   
 ## <a name="arguments"></a>Argumente  
  [ @folder_name = ] *folder_name*  
- Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Der Name der Umgebung, die gelöscht werden soll. Der *environment_name* ist **nvarchar(128)**.  
+ Der Name der Umgebung, die gelöscht werden soll. Der *environment_name* ist **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  

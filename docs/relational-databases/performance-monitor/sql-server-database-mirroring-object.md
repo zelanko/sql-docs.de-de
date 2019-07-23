@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 13817a83bc82e8b2d3ec44f326c22829e6e167e9
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986679"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, Datenbankspiegelung (Objekt)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Das **SQLServer:Datenbankspiegelung** -Leistungsobjekt enthält Leistungsindikatoren, die Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankspiegelung melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |**Empfangene Bytes/Sekunde**|Anzahl von empfangenen Byte pro Sekunde.|  
 |**Gesendete Byte/Sekunde**|Anzahl von gesendeten Byte pro Sekunde.|  

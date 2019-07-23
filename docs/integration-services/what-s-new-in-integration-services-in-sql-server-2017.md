@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9a5e7f4a1f290673ca1a914e883ab359dcc8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945347"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Neuigkeiten in Integration Services in SQL Server 2017
 
@@ -64,7 +63,7 @@ Sie können nun SSIS-Projekte und -Pakete für SQL Server 2012 bis 2017 in Visua
 -   Die Failoverbehandlung der Ausführungsprotokolle aus Scale-Out-Workern wurde verbessert. Die Ausführungsprotokolle werden auf dem lokalen Datenträger beibehalten, falls der Scale Out-Worker unerwartet beendet wird. Bei einem Neustart des Workers werden die beibehaltenen Protokolle erneut geladen und in SSISDB gespeichert.
 -   Der Parameter *runincluster* der gespeicherten Prozedur **[catalog].[create_execution]** wird hinsichtlich Konsistenz und Lesbarkeit in *runinscaleout* umbenannt. Die Änderung des Parameternamens hat folgende Auswirkungen:
     -   Wenn Skripts zum Ausführen von Paketen in Scale Out vorhanden sind, müssen Sie den Parameternamen von *runincluster* in *runinscaleout* ändern, damit die Skripts in RC1 funktionieren.
-    -   SQL Server Management Studio (SSMS) 17.1 und frühere Versionen können die Ausführung des Pakets in Scale Out in RC1 nicht auslösen. Die Fehlermeldung lautet: "*@runincluster* is not a parameter for procedure **create_execution** (ist kein Parameter für die Prozedur create_execution)." Dieses Problem wurde in der nächsten Version von SSMS, (Version 17.2) behoben. Version 17.2 und spätere SSMS-Versionen unterstützen den neuen Parameternamen und die Paketausführung in Scale Out. Bis SSMS Version 17.2 verfügbar ist, können Sie als Problemumgehung Ihre vorhandene Version von SSMS verwenden, um das Paketausführungsskript zu generieren. Ändern Sie anschließend im Skript den Namen des Parameters *runincluster* in *runinscaleout*, und führen Sie das Skript aus.
+    -   SQL Server Management Studio (SSMS) 17.1 und frühere Versionen können die Ausführung des Pakets in Scale Out in RC1 nicht auslösen. Die Fehlermeldung lautet: " *@runincluster* is not a parameter for procedure **create_execution** (ist kein Parameter für die Prozedur create_execution)." Dieses Problem wurde in der nächsten Version von SSMS, (Version 17.2) behoben. Version 17.2 und spätere SSMS-Versionen unterstützen den neuen Parameternamen und die Paketausführung in Scale Out. Bis SSMS Version 17.2 verfügbar ist, können Sie als Problemumgehung Ihre vorhandene Version von SSMS verwenden, um das Paketausführungsskript zu generieren. Ändern Sie anschließend im Skript den Namen des Parameters *runincluster* in *runinscaleout*, und führen Sie das Skript aus.
 -   Der SSIS-Katalog verfügt über eine neue globale Eigenschaft, um den Standardmodus für das Ausführen von SSIS-Paketen anzugeben. Diese neue Eigenschaft wird angewendet, wenn Sie die gespeicherte Prozedur **[catalog].[create_execution]** mit dem auf NULL festgelegten Parameter *runinscaleout* aufrufen. Dieser Modus wird auch auf SSIS SQL-Agent-Aufträge angewendet. Sie können die neue globale Eigenschaft für den SSISDB-Knoten in SSMS im Dialogfeld „Eigenschaften“ oder mit folgendem Befehl festlegen:
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1

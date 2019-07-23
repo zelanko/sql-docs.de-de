@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901094"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ ms.locfileid: "54125855"
   
 -   Transaktionsveröffentlichungen unterstützen standardmäßig Tabellen mit bis zu 1000 Spalten. Oracle-Transaktionsveröffentlichungen unterstützen 995 Spalten (bei der Replikation werden jeder veröffentlichten Tabelle fünf Spalten hinzugefügt).  
   
--   Sortierklauseln werden den CREATE TABLE-Anweisungen hinzugefügt, damit Groß- und Kleinbuchstaben bei Vergleichen berücksichtigt werden, was bei Primärschlüsseln und UNIQUE-Einschränkungen eine wichtige Rolle spielt. Dieses Verhalten wird durch die Schemaoption 0x1000 gesteuert, die mit dem **@schema_option**-Parameter von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) angegeben wird.  
+-   Sortierklauseln werden den CREATE TABLE-Anweisungen hinzugefügt, damit Groß- und Kleinbuchstaben bei Vergleichen berücksichtigt werden, was bei Primärschlüsseln und UNIQUE-Einschränkungen eine wichtige Rolle spielt. Dieses Verhalten wird durch die Schemaoption 0x1000 gesteuert, die mit dem **@schema_option** -Parameter von [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) angegeben wird.  
   
 -   Wenn Sie zur Konfiguration oder Verwaltung eines Oracle-Verlegers gespeicherte Prozeduren verwenden, nehmen Sie die Prozeduren nicht innerhalb einer expliziten Transaktion auf. Dies wird über den Verbindungsserver nicht unterstützt, mit dem die Verbindung mit dem Oracle-Verleger hergestellt wird.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "54125855"
   
 -   Das Konto, unter dem der Momentaufnahme-Agent und der Protokolllese-Agent Verbindungen vom Verteiler zum Verleger herstellen, wird mit einer der folgenden Methoden angegeben:  
   
-    -   Die **@security_mode**-Parameter von [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (Sie geben auch Werte für **@login** und **@password** bei Oracle-Authentifizierung an)  
+    -   Die **@security_mode** -Parameter von [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (Sie geben auch Werte für **@login** und **@password** bei Oracle-Authentifizierung an)  
   
     -   Im Dialogfeld **Verbindung mit Server herstellen** in SQL Server Management Studio (Sie verwenden das Dialogfeld zum Konfigurieren des Oracle-Verlegers auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler).  
   
@@ -159,11 +158,11 @@ ms.locfileid: "54125855"
   
 -   Das Konto, unter dem der Momentaufnahmeagent und der Protokollleseagent Verbindungen herstellen, kann nicht mithilfe von [sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) oder einem Eigenschaftenblatt geändert werden. Das Kennwort können Sie jedoch ändern.  
   
--   Wenn Sie den Wert 1 (integrierte Windows-Authentifizierung) für den **@security_mode**-Parameter von [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) angeben:  
+-   Wenn Sie den Wert 1 (integrierte Windows-Authentifizierung) für den **@security_mode** -Parameter von [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) angeben:  
   
-    -   Das Prozesskonto und das Kennwort für den Momentaufnahmeagent und den Protokollleseagenten (die **@job_login**- und **@job_password**-Parameter von [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) und [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) müssen identisch mit dem Konto und dem Kennwort für die Verbindung mit dem Oracle-Verleger sein.  
+    -   Das Prozesskonto und das Kennwort für den Momentaufnahmeagent und den Protokollleseagenten (die **@job_login** - und **@job_password** -Parameter von [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) und [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) müssen identisch mit dem Konto und dem Kennwort für die Verbindung mit dem Oracle-Verleger sein.  
   
-    -   Sie können den **@job_login**-Parameter nicht über [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) oder [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) angeben, das Kennwort kann jedoch geändert werden.  
+    -   Sie können den **@job_login** -Parameter nicht über [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) oder [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) angeben, das Kennwort kann jedoch geändert werden.  
   
  Weitere Informationen zur Replikationssicherheit finden Sie unter [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

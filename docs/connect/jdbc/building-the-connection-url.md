@@ -1,5 +1,5 @@
 ---
-title: Die Verbindungs-URL erstellen | Microsoft-Dokumentation
+title: Aufbauen der Verbindungs-URL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957376"
 ---
 # <a name="building-the-connection-url"></a>Erstellen der Verbindungs-URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66770268"
 -   **property** (optional) ist mindestens eine optionale Verbindungseigenschaft. Weitere Informationen zum Festlegen der Verbindungseigenschaften finden Sie unter [Setting the Connection Properties (Festlegen von Verbindungseigenschaften)](../../connect/jdbc/setting-the-connection-properties.md). Sie können eine beliebige Eigenschaft aus der Liste angeben. Mehrere Eigenschaften müssen durch ein Semikolon („;“) getrennt werden und dürfen nicht doppelt vorkommen.  
   
 > [!CAUTION]  
->  Aus Sicherheitsgründen sollten Sie es vermeiden, die Verbindungs-URLs basierend auf Benutzereingaben zu erstellen. Sie sollten in der URL lediglich Servername und Treiber angeben. Verwenden Sie für Werte von Benutzernamen und Kennwörtern die properties-Auflistungen für Verbindungen. Weitere Informationen zur Sicherheit in JDBC-Anwendungen finden Sie unter [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md).  
+>  Aus Sicherheitsgründen sollten Sie es vermeiden, die Verbindungs-URLs basierend auf Benutzereingaben zu erstellen. Sie sollten in der URL lediglich Servername und Treiber angeben. Verwenden Sie für Werte von Benutzernamen und Kennwörtern die properties-Auflistungen für Verbindungen. Weitere Informationen zur Sicherheit in ihren JDBC-Anwendungen finden Sie unter [Sichern von JDBC-Treiber Anwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
 ## <a name="connection-examples"></a>Verbindungsbeispiele  
  Herstellen einer Verbindung zur Standarddatenbank auf dem lokalen Computer mit Benutzername und Kennwort:  
@@ -97,9 +96,9 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Die &lt;legacyBold&gt;sqljdbc_auth.dll&lt;/legacyBold&gt;-Dateien werden im folgenden Pfad installiert:  
   
- \<*Installationsverzeichnis*> \sqljdbc_\<*Version*>\\<*Sprache*> \auth\  
+ \<*Installationsverzeichnis*> \sqljdbc_\<*Versions*>\\<*Sprache*> \auth\  
   
- Für jedes Betriebssystem, die von unterstützt die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], finden Sie unter [mithilfe von integrierten Kerberos-Authentifizierung zum Herstellen einer Verbindung mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) eine Beschreibung einer eingeführten Funktion [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] , ermöglicht eine Anwendung für die Verbindung ein Mithilfe der integrierten Authentifizierung Typ 4-Kerberos-Datenbank.  
+ Informationen zu den von unterstützten Betriebs [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]Systemen finden [Sie unter Verwenden der integrierten Kerberos-Authentifizierung zum Herstellen einer Verbindung mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) , um [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] eine Beschreibung einer in hinzugefügten Funktion zu erhalten, mit der eine Anwendung eine Verbindung mit einer Datenbank über integrierte Authentifizierung mit dem Typ 4 Kerberos.  
   
 > [!NOTE]  
 >  Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei sqljdbc_auth.dll im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei „sqljdbc_auth.dll“ im Ordner „x64“.  

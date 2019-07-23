@@ -1,5 +1,5 @@
 ---
-title: GetNClob-Methode (Int) | Microsoft-Dokumentation
+title: getnclob-Methode (int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff8d01b6f8d4350a2782e9660baab3d043d83582
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63dbc19502ef0d22362008c67a17448bfa48d7f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981522"
 ---
 # <a name="getnclob-method-int"></a>getNClob-Methode (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.sql.NClob getNClob(int parameterIndex)
 ## <a name="remarks"></a>Remarks  
  Diese getNClob-Methode wird von der getNClob-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
- Diese Methode unterstützt nur das Abrufen von **NCHAR**, **NVARCHAR**, **NTEXT**, und **XML** Parameter. Werden diese Methoden für andere Datentypparameter aufgerufen, wird eine Ausnahme ausgelöst.  
+ Diese Methode unterstützt nur das Abrufen von **NCHAR**-, **nvarchar**-, **ntext**-und **XML** -Parametern. Werden diese Methoden für andere Datentypparameter aufgerufen, wird eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getNClob-Methode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

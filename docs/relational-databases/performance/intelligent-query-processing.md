@@ -11,14 +11,13 @@ ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860708"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354624"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
@@ -140,14 +139,22 @@ Adaptive Joins können im Datenbank- oder Anweisungsbereich deaktiviert werden, 
 Um adaptive Joins für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
 Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
 Um adaptive Joins für alle Abfrageausführungen wieder zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
 Sie können adaptive Joins auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:

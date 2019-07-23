@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e110e8136388bc32c275a3e1230eb595390827e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b92660ac902061aabe0c8f19eb1a17891529d93b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904160"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Hinzufügen oder Löschen eines Tasks oder Containers in einer Ablaufsteuerung
 
@@ -84,7 +83,7 @@ Sie können die meisten Eigenschaften von Tasks und Containern im Fenster **Eige
 5.  Aktualisieren Sie im Fenster **Eigenschaften** den Eigenschaftswert.  
   
     > [!NOTE]  
-    >  Die meisten Eigenschaften können durch direktes Eingeben der gewünschten Werte in die jeweiligen Textfelder bzw. Auswählen der Werte aus einer Liste festgelegt werden. Einige Eigenschaften sind jedoch komplexer und verfügen über einen Editor für benutzerdefinierte Eigenschaften. Klicken Sie zum Festlegen der Eigenschaft in das Textfeld und anschließend auf die Schaltfläche zum Erstellen **(...)**. Der benutzerdefinierte Editor wird geöffnet.  
+    >  Die meisten Eigenschaften können durch direktes Eingeben der gewünschten Werte in die jeweiligen Textfelder bzw. Auswählen der Werte aus einer Liste festgelegt werden. Einige Eigenschaften sind jedoch komplexer und verfügen über einen Editor für benutzerdefinierte Eigenschaften. Klicken Sie zum Festlegen der Eigenschaft in das Textfeld und anschließend auf die Schaltfläche zum Erstellen **(...)** . Der benutzerdefinierte Editor wird geöffnet.  
   
 6.  Erstellen Sie optional Eigenschaftsausdrücke, um die Eigenschaften des Tasks oder Containers dynamisch zu aktualisieren. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   

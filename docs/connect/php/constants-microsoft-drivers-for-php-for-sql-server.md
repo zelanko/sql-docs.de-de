@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993704"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Konstanten (Microsoft-Treiber für PHP für SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,14 +64,14 @@ Sie können das PDO::SQLSRV_ATTR_QUERY_TIMEOUT-Attribut mit [PDOStatement::setAt
 ### <a name="direct-or-prepared-execution"></a>Direkte oder vorbereitete Ausführung  
 Sie können die Ausführung von direkten Abfragen oder die vorbereitete Ausführung mit dem Attribut PDO::SQLSRV_ATTR_DIRECT_QUERY auswählen. PDO::SQLSRV_ATTR_DIRECT_QUERY kann mit [PDO::prepare](../../connect/php/pdo-prepare.md) oder [PDO::setAttribute](../../connect/php/pdo-setattribute.md) festgelegt werden. Weitere Informationen zu PDO::SQLSRV_ATTR_DIRECT_QUERY finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
 
-### <a name="handling-numeric-fetches"></a>Behandeln von numerischen abruft
-Das PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE-Attribut kann verwendet werden, numerischen Abrufe aus Spalten mit numerischen SQL-Typen (Bit, Integer, Smallint, Tinyint, Float und Real) behandelt. Wenn PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE festgelegt ist, auf "true", die Ergebnisse aus einer Spalte mit ganzen Zahlen dargestellt als int-Typen, während SQL gleitet und versendeten als Gleitkommawerte dargestellt werden. Dieses Attribut kann festgelegt werden, mit [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). 
+### <a name="handling-numeric-fetches"></a>Behandeln von numerischen Abruf Vorgängen
+Das PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE-Attribut kann verwendet werden, um numerische Abruf Vorgänge aus Spalten mit numerischen SQL-Typen (Bit, Integer, smallint, tinyint, float und Real) zu verarbeiten. Wenn PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE auf true festgelegt ist, werden die Ergebnisse aus einer ganzzahligen Spalte als int dargestellt, während SQL-Gleit Komma Zahlen und-Wiederholungen als Gleit Komma Zahlen dargestellt werden. Dieses Attribut kann mit [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)festgelegt werden. 
 
-Sie können die Dezimalstellen formatieren Standardverhalten mit den Attributen PDO::SQLSRV_ATTR_FORMAT_DECIMALS und PDO::SQLSRV_ATTR_DECIMAL_PLACES ändern. Das Verhalten dieser Attribute ist identisch mit den entsprechenden Optionen auf der Seite SQLSRV (**FormatDecimals** und **DecimalPlaces**), außer dass die Ausgabe-Parameter für das Formatieren nicht unterstützt werden. Diese Attribute festgelegt werden können, auf die Verbindung oder -Anweisung mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), jedoch wird Anweisungsattribut überschreiben Sie die entsprechenden -Verbindungsattribut. Weitere Details finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+Sie können das standardmäßige Dezimal Formatierungs Verhalten mit den Attributen PDO:: SQLSRV_ATTR_FORMAT_DECIMALS und PDO:: SQLSRV_ATTR_DECIMAL_PLACES ändern. Das Verhalten dieser Attribute ist mit den entsprechenden Optionen auf der sqlsrv-Seite (**formatdecimals** und **DecimalPlaces**) identisch, mit der Ausnahme, dass Ausgabeparameter für die Formatierung nicht unterstützt werden. Diese Attribute können entweder auf der Verbindungs-oder der Anweisungs Ebene mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)festgelegt werden, aber jedes Anweisungs Attribut überschreibt das entsprechende Verbindungs Attribut. Weitere Details finden Sie unter [Formatieren von Dezimalzeichenfolgen und Geldwerten (PDO_SQLSRV-Treiber)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
 
 ### <a name="handling-date-and-time-fetches"></a>Handhabung von Fetches für Datum und Uhrzeit
 
-Die PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE gibt an, ob zum Abrufen von Datums- und Uhrzeittypen als [PHP-DateTime](http://php.net/manual/en/class.datetime.php) Objekte. Bei FALSE werden standardmäßig Zeichenfolgen zurückgegeben. Dieses Attribut kann festgelegt werden, auf die Verbindung oder -Anweisung mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), jedoch wird das Anweisungsattribut überschreiben Sie die entsprechenden -Verbindungsattribut. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE gibt an, ob Datums-und Uhrzeit Typen als [php-DateTime](http://php.net/manual/en/class.datetime.php) -Objekte abgerufen werden sollen. Bei FALSE werden standardmäßig Zeichenfolgen zurückgegeben. Dieses Attribut kann entweder auf der Verbindungs-oder der Anweisungs Ebene mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) oder [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)festgelegt werden, aber das Anweisungs Attribut überschreibt das entsprechende Verbindungs Attribut. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV-Treiberkonstanten  
 Die folgenden Abschnitte listen die Konstanten auf, die der SQLSRV-Treiber verwendet.  
@@ -161,7 +160,7 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die PHP-D
 Weiter Informationen zu diesen Konstanten finden Sie unter [Gewusst wie: Angeben von PHP-Datentypen](../../connect/php/how-to-specify-php-data-types.md), [Gewusst wie: Abrufen von Zeichendaten als Stream mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### <a name="sqltype-constants"></a>SQLTYPE-Konstanten  
-Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die SQL Server-Datentypen zu beschreiben. Einige Konstanten sind funktionsähnliche und Parameter, die entsprechen, Genauigkeit, Dezimalstellen und/oder der Länge dauert.  Beim Binden von Parametern, sollte die funktionsähnliches Konstanten verwendet werden. Für Vergleiche des Datentyps sind die Konstanten für standard (nicht-Funktion-ähnliche) erforderlich. Informationen zu allen unterstützten SQL Server-Datentypen finden Sie unter [Datentypen (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Informationen zu Genauigkeit, Dezimalstellen und Länge finden Sie unter [Genauigkeit, Dezimalstellen und Länge (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die SQL Server-Datentypen zu beschreiben. Einige Konstanten sind Funktions ähnlich und können Parameter annehmen, die der Genauigkeit, der Skala und/oder der Länge entsprechen.  Beim Binden von Parametern sollten die Funktions ähnlichen Konstanten verwendet werden. Bei typvergleichen sind die Standard Konstanten (nicht Funktions ähnlich) erforderlich. Informationen zu allen unterstützten SQL Server-Datentypen finden Sie unter [Datentypen (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Informationen zu Genauigkeit, Dezimalstellen und Länge finden Sie unter [Genauigkeit, Dezimalstellen und Länge (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 |SQLSRV-Konstante|SQL Server-Datentyp|  
 |-------------------|------------------------|  
@@ -174,15 +173,15 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die SQL S
 |SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DECIMAL|Decimal<sup>5</sup>|
+|SQLSRV_SQLTYPE_DECIMAL|Dezimaltrennzeichen<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|ssNoversion|  
+|SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|NCHAR<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|numerische<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC|numerisch<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR,|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
@@ -201,7 +200,7 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die SQL S
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  
 |SQLSRV_SQLTYPE_VARBINARY('max')|varbinary(MAX)|  
-|SQLSRV_SQLTYPE_VARCHAR,|Varchar<sup>5</sup>|  
+|SQLSRV_SQLTYPE_VARCHAR,|varchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARCHAR($charCount)|varchar|  
 |SQLSRV_SQLTYPE_VARBINARY('max')|varchar(MAX)|  
 |SQLSRV_SQLTYPE_XML|xml|  
@@ -214,7 +213,7 @@ Die folgende Tabelle enthält die Konstanten, die verwendet werden, um die SQL S
   
 4.  Unterstützung für diesen Typ wurde in Version 1.1 der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
 
-5.  Diese Konstanten im Typ Vergleichsvorgänge verwendet werden soll und nicht die Konstanten funktionsähnliches mit ähnlicher Syntax ersetzen. Für das Binden von Parametern, sollten Sie die funktionsähnliches Konstanten verwenden.
+5.  Diese Konstanten sollten in typvergleichs Vorgängen verwendet werden und ersetzen die Funktions ähnlichen Konstanten nicht durch eine ähnliche Syntax. Bei Bindungs Parametern sollten Sie die Funktions ähnlichen Konstanten verwenden.
 
   
 Die folgende Tabelle enthält die SQLTYPE-Konstanten, die Parameter und den Bereich der zulässigen Werte für den Parameter akzeptieren.  

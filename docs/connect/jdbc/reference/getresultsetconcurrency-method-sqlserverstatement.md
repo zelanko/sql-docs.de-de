@@ -1,5 +1,5 @@
 ---
-title: GetResultSetConcurrency-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: getresultsetparallelcurrency-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7e776aaff34a88554a34f00f360e8c871e701cbf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4dee62a135b45b0181094aeec8b5edc063f6ffea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980378"
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getResultSetConcurrency()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetResultSetConcurrency-Methode wird von der GetResultSetConcurrency-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+ Diese getresultsetparallelcurrency-Methode wird von der getresultsetparallelcurrency-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

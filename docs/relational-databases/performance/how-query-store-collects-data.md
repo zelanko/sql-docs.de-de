@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 83fbc6c183216cedcbb664a0c3a2e3a9337e1513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946770"
 ---
 # <a name="how-query-store-collects-data"></a>So werden Daten im Abfragespeicher gesammelt
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "59542200"
  ![Prozess im Abfragespeicher](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Sichtbeschreibungen**  
   
-|Sicht|Beschreibung|  
+|Sicht|und Beschreibung|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Stellt eindeutige Abfragetexte dar, die in der Datenbank ausgeführt wurden. Kommentare und Leerzeichen vor und nach dem Abfragetext werden ignoriert. Kommentare und Leerzeichen im Text werden nicht ignoriert. Jede Anweisung im Batch generiert einen separaten Abfragetexteintrag.|  
 |**sys.query_context_settings**|Stellt eindeutige Kombinationen von Einstellungen zur Planauswirkung dar, unter denen Abfragen ausgeführt werden. Derselbe Abfragetext, der mit unterschiedlichen Einstellungen zur Planauswirkung ausgeführt wurde, erzeugt separate Abfrageeinträge im Abfragespeicher, da `context_settings_id` Teil des Abfrageschlüssels ist.|  

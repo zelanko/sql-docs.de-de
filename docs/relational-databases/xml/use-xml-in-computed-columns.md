@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 287b462885c05602775a8a1253c37f80940c8569
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a90f68a55b10234e0397aba480b8d78a9cea1d9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039117"
 ---
 # <a name="use-xml-in-computed-columns"></a>Verwenden von XML in berechneten Spalten
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ FROM T
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|Beschreibt, wie die Eigenschaftenhöherstufung mit berechneten Spalten und Eigenschaftentabellen verwendet wird.|  
   

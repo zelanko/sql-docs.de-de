@@ -10,26 +10,25 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4077f11e28bc382976eb3da441cfd42a24a567f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916514"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Verwenden von gespeicherten Prozeduren mit einem Rückgabestatus
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Bei einer aufrufbaren gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozedur handelt es sich um eine Prozedur, die einen Status- oder Ergebnisparameter zurückgibt. Damit wird normalerweise ermittelt, ob die gespeicherte Prozedur erfolgreich ausgeführt wurde oder fehlgeschlagen ist. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufzurufen und zum Verarbeiten der Daten, die zurückgegeben.
+Bei einer aufrufbaren gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozedur handelt es sich um eine Prozedur, die einen Status- oder Ergebnisparameter zurückgibt. Damit wird normalerweise ermittelt, ob die gespeicherte Prozedur erfolgreich ausgeführt wurde oder fehlgeschlagen ist. Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] stellt die [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) -Klasse bereit, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufzurufen und die zurückgegebenen Daten zu verarbeiten.
 
 Wenn Sie diese Art von gespeicherter Prozedur mit dem JDBC-Treiber aufrufen, müssen Sie die `call`-SQL-Escapesequenz zusammen mit der Methode [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) der Klasse [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) verwenden. Die Syntax für die `call`-Escapesequenz mit einem Rückgabestatusparameter lautet wie folgt:
 
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Weitere Informationen zu SQL-Escapesequenzen, finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).
+> Weitere Informationen zu den SQL-Escapesequenzen finden [Sie unter Verwenden von SQL](../../connect/jdbc/using-sql-escape-sequences.md)-Escapesequenzen.
 
 Geben Sie die Rückgabestatusparameter beim Erstellen der `call`-Escapesequenz mit dem Fragezeichen (?) an. das als Platzhalter für den Parameterwert fungiert, der von der gespeicherten Prozedur zurückgegeben wird. Um einen Wert für einen Rückgabestatusparameter anzugeben, müssen Sie vor dem Ausführen der gespeicherten Prozedur den Datentyp des Parameters mit der Methode [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) der Klasse „SQLServerCallableStatement“ angeben.
 

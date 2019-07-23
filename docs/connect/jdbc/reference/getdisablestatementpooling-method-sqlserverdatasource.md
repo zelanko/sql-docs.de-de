@@ -1,5 +1,5 @@
 ---
-title: GetDisableStatementPooling-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getdisablestatuementpooling-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 607d729726c421030f4f77247b4e0090c900744c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 108bc70b3ff4a3fb03d332def79f9ceebeffd94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983647"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverdatasource"></a>getDisableStatementPooling-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Gibt den Wert der **DisableStatementPooling** Connection-Eigenschaft. Diese Einstellung steuert, ob die Anweisung Verbindungspooling aktiviert ist oder nicht für diese Verbindung.
+  Gibt den Wert der **disablestatuementpooling** -Verbindungs Eigenschaft zurück. Mit dieser Einstellung wird gesteuert, ob das Anweisungs Pooling für diese Verbindung aktiviert ist.
 
   
 ## <a name="syntax"></a>Syntax  
@@ -31,13 +30,13 @@ public boolean getDisableStatementPooling();
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **booleschen** mit dem Wert des **DisableStatementPooling** Connection-Eigenschaft.
+ Ein **boolescher** Wert, der den Wert der **disablestatuementpooling** -Verbindungs Eigenschaft enthält.
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Diese Methode wird von JDBC Driver, Version 6.4 verfügbar und auf dem Weg.
+ Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDataSource-Elemente](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

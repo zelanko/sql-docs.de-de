@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6211f2b47aebc2c4087cc2ed4fe5b068a8686292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064676"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ Das *property*-Argument gibt für das *id*-Argument den Informationstyp an, den 
 |**UsesAnsiTrim**|ANSI_PADDING wurde zum Zeitpunkt der Erstellung der Tabelle auf ON festgelegt. Diese Eigenschaft gilt nur für Spalten oder Parameter vom Typ **char** oder **varchar**.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = Ungültige Eingabe|  
   
 ## <a name="return-types"></a>Rückgabetypen
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>Ausnahmen  
 Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigungen zum Anzeigen des Objekts verfügt.

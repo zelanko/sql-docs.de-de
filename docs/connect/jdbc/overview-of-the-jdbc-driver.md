@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956237"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Übersicht über den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66801797"
 |[Weitervertreiben des Microsoft JDBC-Treibers](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Beschreibt den Registrierungsprozess für den Weitervertrieb des Microsoft JDBC-Treibers|  
 |[Suchen von zusätzlichen Informationen zum JDBC-Treiber](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Enthält Informationen zu weiteren Ressourcen zum Microsoft JDBC-Treiber, wie z. B. Links zu externen Ressourcen.|  
 |[Supportmatrix für den Microsoft JDBC-Treiber für SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Unterstützungsmatrix und Support Lifecycle-Richtlinie für den Microsoft JDBC-Treiber für SQL Server|  
-|[Häufig gestellte Fragen &#40;– häufig gestellte Fragen&#41; für JDBC-Treiber](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Häufig gestellte Fragen zu Microsofts JDBC-Treiber|  
+|[FAQ&#41; zu häufig &#40;gestellten Fragen für JDBC Driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Häufig gestellte Fragen zu Microsofts JDBC-Treiber|  
 |[Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server|
 
 ## <a name="see-also"></a>Weitere Informationen  

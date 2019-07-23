@@ -1,5 +1,5 @@
 ---
-title: SupportsSchemasInDataManipulation-Methode | Microsoft-Dokumentation
+title: supportsschemasindatamanipulations-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 812dc551-c718-494e-80d9-75732464c8ba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57f27741fa0584645921b4b21df0b95558f9340b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 109d2963b8dcf928eb9b40f093aa2ceb10278654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968912"
 ---
 # <a name="supportsschemasindatamanipulation-method-sqlserverdatabasemetadata"></a>supportsSchemasInDataManipulation-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsSchemasInDataManipulation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsSchemasInDataManipulation-Methode wird von der SupportsSchemasInDataManipulation-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsschemasindatamanipulations-Methode wird von der supportsschemasindatamanipulations-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

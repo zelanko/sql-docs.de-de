@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035174"
 ---
 # <a name="how-to-fix-errors"></a>Gewusst wie: Beheben von Fehlern
 Im Bereich "Fehlerliste" werden alle Bereitstellungs- und Buildfehler angezeigt. Wenn Sie Datenbankentitäten und ihre Definitionen bearbeiten, werden durch die Bearbeitung im Transact\-SQL-Editor oder Tabellen-Designer verursachte Syntax- und Semantikfehler ebenfalls in der Liste angezeigt. Die Fehlerliste wird dynamisch aktualisiert, wenn Sie Skripts auf unterschiedlichen Registerkarten bearbeiten. Sie können dann die identifizierten Fehler für die weitere Problembehandlung nachverfolgen.  

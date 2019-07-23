@@ -1,5 +1,5 @@
 ---
-title: recover-Methode (SQLServerXAResource) | Microsoft-Dokumentation
+title: Recover-Methode (sqlserverxaresource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ca9d0fede758b99f442a9553e4266e79fa81134
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976019"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover-Methode (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>Parameter  
  *flags*  
   
- Ein **Int** -Wert, der einen der folgenden Werte annehmen kann: XAResource.TMSTARTRSCAN oder XAResource.TMENDRSCAN oder XAResource.TMNOFLAGS oder XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN.  
+ Ein **int** -Wert, der einen der folgenden Werte annehmen kann: "XAResource. tmstartrscan" oder "XAResource. tmendrscan" oder "XAResource. tmnoflags" oder "XAResource. tmstarttrscan" | XAResource. tmendrscan.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Xid-Objekt.  
+ Ein xid-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  
@@ -49,7 +48,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ## <a name="remarks"></a>Remarks  
  Diese recover-Methode wird von der recover-Methode in der javax.transaction.xa.XAResource-Schnittstelle angegeben.  
   
- Wenn der Parameter **Flag** ist kein XAResource.TMSTARTRSCAN oder XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, muss eine Überprüfung für die Wiederherstellung ausgeführt werden.  
+ Wenn das parameter **flag** nicht "XAResource. tmstartrscan" oder "XAResource. tmstartrscan" ist | XAResource. tmendrscan: Es muss eine Wiederherstellungs Überprüfung ausgeführt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXAResource-Methoden](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

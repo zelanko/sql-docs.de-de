@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa2bce398b6ac03422044c9ffad23f91ab81818c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140965"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Verwenden von Testbedingungen in SQL Server-Komponententests
 In einem SQL Server-Komponententest wird mindestens ein Transact\-SQL-Testskript ausgeführt. Die Ergebnisse können innerhalb des Transact\-SQL-Skripts ausgewertet werden, wobei durch THROW oder RAISERROR zurückgegeben wird, dass ein Fehler aufgetreten bzw. der Test nicht erfolgreich war. Alternativ können Testbedingungen im Test definiert werden, um die Ergebnisse auszuwerten. Der Test gibt eine Instanz der Klasse [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx) zurück. Die Instanz dieser Klasse enthält mindestens ein DataSet, die Ausführungszeit sowie die vom Skript betroffenen Zeilen. Alle diese Informationen werden während der Skriptausführung gesammelt. Diese Ergebnisse können mithilfe von Testbedingungen ausgewertet werden. SQL Server Data Tools stellt eine Reihe von vordefinierten Testbedingungen bereit. Sie können auch benutzerdefinierte Bedingungen erstellen und verwenden. Lesen Sie hierzu [Benutzerdefinierte Testbedingungen für SQL Server-Komponententests](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
