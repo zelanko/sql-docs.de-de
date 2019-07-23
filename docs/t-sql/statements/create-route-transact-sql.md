@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006506"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -67,10 +66,10 @@ WITH
  mit  
  Führt die Klauseln ein, über die die zurzeit erstellte Route definiert wird.  
   
- SERVICE_NAME = **'**_service\_name_**'**  
+ SERVICE_NAME = **'** _service\_name_ **'**  
  Gibt den Namen des Remotediensts an, auf den diese Route zeigt. Der *service_name* muss genau mit dem Namen übereinstimmen, der vom Remotedienst verwendet wird. [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *service_name*-Zeichenfolge aus. Anders ausgedrückt: Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Wenn SERVICE_NAME weggelassen wird, stimmt die Route mit jedem Dienstnamen überein, weist jedoch eine niedrigere Übereinstimmungspriorität als eine Route auf, die SERVICE_NAME angibt. Eine Route mit dem Dienstnamen **'SQL/ServiceBroker/BrokerConfiguration'** ist eine Route zu einem Broker-Konfigurationsdienst. Eine Route zu diesem Dienst kann keine Broker-Instanz angeben.  
   
- BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
+ BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  Gibt die Datenbank an, auf der sich der Zieldienst befindet. Bei dem *broker_instance_identifier*-Parameter muss es sich um den Broker-Instanzbezeichner für die Remotedatenbank handeln, der durch das Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden kann:  
   
 ```  
@@ -81,15 +80,15 @@ WHERE database_id = DB_ID()
   
  Wenn die BROKER_INSTANCE-Klausel weggelassen wird, stimmt diese Route mit jeder Broker-Instanz überein. Eine Route, die mit jeder Broker-Instanz übereinstimmt, weist eine höhere Übereinstimmungspriorität auf als Routen mit einer expliziten Broker-Instanz, wenn die Konversation keine Broker-Instanz angibt. Bei Konversationen, in denen eine Broker-Instanz angegeben wird, weist eine Route mit einer Broker-Instanz eine höhere Priorität auf als eine Route, die mit jeder Broker-Instanz übereinstimmt.  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  Gibt die Zeitspanne in Sekunden an, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Route in der Routingtabelle aufbewahrt. Am Ende ihrer Lebensdauer läuft die Route ab, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Route nicht bei der Auswahl einer Route für eine neue Konversation. Wird diese Klausel ausgelassen, wird für *route_lifetime* der Wert NULL festgelegt, und die Route läuft nie ab.  
   
- ADDRESS **='**_next\_hop\_address_**'**  
+ ADDRESS **='** _next\_hop\_address_ **'**  
 Für die verwaltete SQL-Datenbank-Instanz muss `ADDRESS` lokal sein. 
 
 Gibt die Netzwerkadresse für diese Route an. *next_hop_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
  Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
@@ -107,10 +106,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Gibt eine Route **'TRANSPORT'** für *next_hop_address* an, wird die Netzwerkadresse auf der Basis der Netzwerkadresse im Dienstnamen ermittelt. Eine Route, die **'TRANSPORT'** angibt, kann keinen Dienstnamen und keine Broker-Instanz angeben.  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  Gibt die Netzwerkadresse für eine gespiegelte Datenbank an, wobei *next_hop_address* als Host für die gespiegelte Datenbank dient. *next_hop_mirror_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a4d9aee8f248dfdf9ce259442ae34a5107750610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86748be50f2a6315570c7b917882e765565d9380
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082509"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE-Anweisungen: LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -81,16 +80,16 @@ FROM <backup_device>
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Name des Mediums.|  
 |**MediaSetId**|**uniqueidentifier**|Eindeutige ID des Mediensatzes.|  
-|**FamilyCount**|**ssNoversion**|Anzahl der Medienfamilien im Mediensatz.|  
-|**FamilySequenceNumber**|**ssNoversion**|Sequenznummer dieser Familie.|  
+|**FamilyCount**|**int**|Anzahl der Medienfamilien im Mediensatz.|  
+|**FamilySequenceNumber**|**int**|Sequenznummer dieser Familie.|  
 |**MediaFamilyId**|**uniqueidentifier**|Eindeutige ID für die Medienfamilie.|  
-|**MediaSequenceNumber**|**ssNoversion**|Sequenznummer dieses Mediums in der Medienfamilie.|  
+|**MediaSequenceNumber**|**int**|Sequenznummer dieses Mediums in der Medienfamilie.|  
 |**MediaLabelPresent**|**tinyint**|Gibt an, ob die Medienbeschreibung Folgendes enthält:<br /><br /> **1** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Medienbezeichnung von Tape Format<br /><br /> **0** = Medienbeschreibung|  
 |**MediaDescription**|**nvarchar(255)**|Medienbeschreibung als Text oder die Medienbezeichnung von Tape Format.|  
 |**SoftwareName**|**nvarchar(128)**|Name der Sicherungssoftware, die die Bezeichnung geschrieben hat.|  
-|**SoftwareVendorId**|**ssNoversion**|Eindeutige ID des Softwareanbieters, der die Sicherung geschrieben hat.|  
+|**SoftwareVendorId**|**int**|Eindeutige ID des Softwareanbieters, der die Sicherung geschrieben hat.|  
 |**MediaDate**|**datetime**|Datum und Uhrzeit des Zeitpunkts, an dem die Bezeichnung geschrieben wurde.|  
-|**Mirror_Count**|**ssNoversion**|Die Anzahl von Spiegeln in einem Spiegelsatz (1-4).<br /><br /> Hinweis: Für verschiedene Spiegel in einem Satz werden identische Bezeichnungen geschrieben.|  
+|**Mirror_Count**|**int**|Die Anzahl von Spiegeln in einem Spiegelsatz (1-4).<br /><br /> Hinweis: Für verschiedene Spiegel in einem Satz werden identische Bezeichnungen geschrieben.|  
 |**IsCompressed**|**bit**|Gibt an, ob die Sicherung komprimiert ist:<br /><br /> 0 = Nicht komprimiert<br /><br /> 1 = komprimiert|  
   
 > [!NOTE]  

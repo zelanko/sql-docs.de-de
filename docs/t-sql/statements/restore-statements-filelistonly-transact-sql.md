@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b9480fc29339d0cd33d063c24f19c083804d1ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e256287f178999d1bb5f23a4739c17d0abc8ff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141236"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE-Anweisungen - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,8 +98,8 @@ FROM <backup_device>
 |ReadOnlyLSN|**numeric(25,0) NULL**|Protokollfolgenummer, bei der die Dateigruppe mit der Datei von Lesen/Schreiben zu Schreibgeschützt geändert wurde (letzte Änderung).|  
 |ReadWriteLSN|**numeric(25,0)** NULL|Protokollfolgenummer, bei der die Dateigruppe mit der Datei von Nur Lesen zu Schreibgeschützt geändert wurde (letzte Änderung).|  
 |BackupSizeInBytes|**bigint**|Größe der Sicherung dieser Datei in Bytes.|  
-|SourceBlockSize|**ssNoversion**|Blockgröße des physischen Geräts mit der Datei in Bytes (nicht des Sicherungsmediums).|  
-|FileGroupID|**ssNoversion**|ID der Dateigruppe.|  
+|SourceBlockSize|**int**|Blockgröße des physischen Geräts mit der Datei in Bytes (nicht des Sicherungsmediums).|  
+|FileGroupID|**int**|ID der Dateigruppe.|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|Bei differenziellen Sicherungen sind Änderungen mit Protokollfolgenummern größer als oder gleich **DifferentialBaseLSN** in der differenziellen Sicherung eingeschlossen.<br /><br /> Bei anderen Sicherungstypen ist der Wert NULL.|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|Bei differenziellen Sicherungen der eindeutige Bezeichner der differenziellen Basis.<br /><br /> Bei anderen Sicherungstypen ist der Wert NULL.|  

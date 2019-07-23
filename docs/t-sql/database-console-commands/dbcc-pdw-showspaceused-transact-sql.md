@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: fc06dca68c6b6a4cedc730433401076ca07b126b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116492"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -49,25 +48,25 @@ Erfordert die VIEW SERVER STATE-Berechtigung.
 ## <a name="result-sets"></a>Resultsets  
 Im Folgenden wird das Resultset für alle Tabellen aufgeführt.
   
-|Spalte|Datentyp|Beschreibung|  
+|Spalte|Datentyp|und Beschreibung|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|Insgesamt durch die Datenbank belegter Speicherplatz in KB.|  
 |data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
 |index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.|  
 |unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.|  
-|pdw_node_id|ssNoversion|Computeknoten, der für die Daten verwendet wird.|  
+|pdw_node_id|INT|Computeknoten, der für die Daten verwendet wird.|  
   
 Im Folgenden wird das Resultset für eine Tabelle aufgeführt.
   
-|Spalte|Datentyp|Beschreibung|Bereich|  
+|Spalte|Datentyp|und Beschreibung|Bereich|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|Anzahl von Zeilen.||  
 |reserved_space|BIGINT|Gesamtspeicherplatz in KB, der für das Objekt reserviert ist.||  
 |data_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
 |index_space|BIGINT|Durch die Daten belegter Speicherplatz in KB.||  
 |unused_space|BIGINT|Speicherplatz in KB, der zum reservierten Speicherplatz gehört und nicht verwendet wird.||  
-|pdw_node_id|ssNoversion|Computeknoten, der zum Erstellen von Berichten zum Speicherplatz verwendet wird.||  
-|distribution_id|ssNoversion|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Der Wert für replizierte Tabellen ist –1.|  
+|pdw_node_id|INT|Computeknoten, der zum Erstellen von Berichten zum Speicherplatz verwendet wird.||  
+|distribution_id|INT|Verteilung, die zum Erstellen von Berichten zum Speicherplatz verwendet wird.|Der Wert für replizierte Tabellen ist –1.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 ### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWSPACEUSED-Syntax  

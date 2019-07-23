@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da5528a606fdfc72aec7f1b0bba4348d389f3c98
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909693"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ Jede berechnete Spalte, die einen CLR-Ausdruck (Common Language Runtime) enthäl
 
 Wenn Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auf Zeichenfolgenliterale des Date-Datentyps in indizierten berechneten Spalten verweisen, ist es ratsam, das Literal explizit in den gewünschten Datentyp zu konvertieren, indem Sie ein deterministisches Datenformat verwenden. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
-Weitere Informationen finden Sie unter [deterministische Konvertierung von Datumsliteralen in DATE-Werte](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
+Weitere Informationen finden Sie unter [Nicht deterministische Konvertierung von Datumsliteralzeichenfolgen in DATE-Werte](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
 #### <a name="compatibility-level"></a>Kompatibilitätsgrad
 
@@ -96,7 +95,7 @@ Die **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion teilt mit, ob der Aus
 ## <a name="data-type-requirements"></a>Anforderungen hinsichtlich des Datentyps
   
 -   Der *computed_column_expression* , der für die berechnete Spalte definiert ist, kann nicht zu einem der Datentypen **text**, **ntext**oder **image** ausgewertet werden.  
--   Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** und **xml** abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
+-   Berechnete Spalten, die aus den Datentypen **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** und **xml** abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
 -   Berechnete Spalten, die aus den Datentypen **image**, **ntext**und **text** abgeleitet wurden, können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, so lange der Datentyp der berechneten Spalte für Nichtschlüssel-Indexspalten zulässig ist.  
 
 

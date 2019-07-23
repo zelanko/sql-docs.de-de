@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506517"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252119"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services mit Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,25 +28,7 @@ ms.locfileid: "59506517"
  Ein entscheidender Vorteil bei der Verwendung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mit [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Datenquellen liegt darin, dass lesbare sekundäre Replikate als Berichtsdatenquelle genutzt werden, während gleichzeitig die sekundären Replikate ein Failover für eine primäre Datenbank bereitstellen.  
   
  Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [Always On FAQ for SQL Server 2012 (Häufig gestellte Fragen zu Always On für SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768))).  
-  
- **In diesem Thema:**  
-  
--   [Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen](#bkmk_requirements)  
-  
--   [Berichtsdatenquellen und Verfügbarkeitsgruppen](#bkmk_reportdatasources)  
-  
--   [Berichtsentwurf und Verfügbarkeitsgruppen](#bkmk_reportdesign)  
-  
--   [Berichtsserver-Datenbanken und Verfügbarkeitsgruppen](#bkmk_reportserverdatabases)  
-  
--   -   [Unterschiede zwischen dem einheitlichen Modus und dem SharePoint-Modus](#bkmk_differences_in_server_mode)  
-  
-    -   [Vorbereiten von Berichtsserver-Datenbanken für Verfügbarkeitsgruppen](#bkmk_prepare_databases)  
-  
-    -   [Schritte zum Abschluss der Notfallwiederherstellung von Berichtsserver-Datenbanken](#bkmk_steps_to_complete_failover)  
-  
-    -   [Berichtsserververhalten, wenn ein Failover auftritt](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> Anforderungen für die Verwendung von Reporting Services und Always On-Verfügbarkeitsgruppen  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und Power BI-Berichtsserver verwenden .Net Framework 4.0 und unterstützen die Verbindungszeichenfolgen-Eigenschaften von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] zur Verwendung mit Datenquellen.  
   
@@ -162,7 +144,7 @@ ms.locfileid: "59506517"
   
 -   **Berichtsserveranmeldeinformationen:** Sie müssen die entsprechenden Berichtsserveranmeldeinformationen auf den sekundären Replikaten erstellen, die Sie auf dem primären Replikat erstellt haben. Die genauen Schritte hängen davon ab, welchen Authentifizierungstyp Sie in der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Umgebung verwenden; Windows-[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Dienstkonto, Windows-Benutzerkonto oder SQL Server-Authentifizierung. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
--   Aktualisieren Sie die Datenbankverbindung, um den DNS-Namen des Listeners zu verwenden. Ändern Sie für Berichtsserver im einheitlichen Modus den **Berichtsserver-Datenbanknamen** in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Ändern Sie den **Datenbankservernamen** für den SharePoint-Modus für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendung(en).  
+-   Aktualisieren Sie die Datenbankverbindung, um den DNS-Namen des Listeners zu verwenden. Ändern Sie den **Berichtsserver-Datenbanknamen** für Berichtsserver im einheitlichen Modus im [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager. Ändern Sie den **Datenbankservernamen** für den SharePoint-Modus für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Dienstanwendung(en).  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> Schritte zum Abschluss der Notfallwiederherstellung von Berichtsserver-Datenbanken  
  Die folgenden Schritte müssen nach einem [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Failover zu einem sekundären Replikat ausgeführt werden:  
