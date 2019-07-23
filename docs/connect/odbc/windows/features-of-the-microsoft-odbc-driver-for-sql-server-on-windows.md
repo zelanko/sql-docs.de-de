@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cab19268fe8cdc3bac7acf5ad76d64dc41a75d29
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8088334f4bc9cfd03c23af654fbef9eb478aa9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989450"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server on Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -24,11 +23,11 @@ ms.locfileid: "66797760"
     
 ## <a name="microsoft-odbc-driver-131-for-sql-server-on-windows"></a>Microsoft ODBC Driver 13.1 for SQL Server unter Windows
 
-Der ODBC-Treiber 13.1 für SQL Server enthält die gesamte Funktionalität der vorherigen Version (11) und bietet Unterstützung für Always Encrypted und Azure Active Directory-Authentifizierung bei der Verwendung in Verbindung mit Microsoft SQL Server 2016.  
+Der ODBC-Treiber 13,1 für SQL Server enthält die gesamte Funktionalität der früheren Version (11) und fügt Unterstützung für Always Encrypted und Azure Active Directory Authentifizierung hinzu, wenn diese in Verbindung mit Microsoft SQL Server 2016 verwendet werden.  
   
 „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Ein auf dem Clientcomputer installierter Treiber, bei dem „Immer verschlüsselt“ aktiviert ist, erreicht dies durch die automatische Ver- und Entschlüsselung von sensiblen Daten in der SQL Server-Clientanwendung. Der Treiber verschlüsselt die Daten in vertraulichen Spalten, bevor er sie an SQL Server weitergibt, und schreibt Abfragen automatisch neu, sodass die Semantik der Anwendung beibehalten wird. Auf ähnliche Weise entschlüsselt der Treiber transparent Daten in verschlüsselten Datenbankspalten, die in Abfrageergebnissen enthalten sind. Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver (Verwenden von Always Encrypted mit dem ODBC-Treiber)](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory ermöglicht Benutzern, das von DBAS und Anwendungsprogrammierer mit Azure Active Directory-Authentifizierung als ein Mechanismus zum Herstellen einer Verbindung zu Microsoft Azure SQL-Datenbank und Microsoft SQL Server 2016, wozu Identitäten in Azure Active Directory (Azure AD ). Weitere Informationen finden Sie unter [mithilfe von Azure Active Directory mit dem ODBC-Treiber](../../../connect/odbc/using-azure-active-directory.md), und [beim Verbinden mit SQL-Datenbank oder SQL Data Warehouse durch Verwenden von Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
+Azure Active Directory ermöglicht es Benutzern, Datenbankadministratoren und Anwendungs Programmierern, Azure Active Directory Authentifizierung als Mechanismus für das Herstellen einer Verbindung mit Microsoft Azure SQL-Datenbank und Microsoft SQL Server 2016 mithilfe von Identitäten in Azure Active Directory zu verwenden (Azure AD ). Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory mit dem ODBC-Treiber](../../../connect/odbc/using-azure-active-directory.md)und [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse mithilfe der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft ODBC Driver 11 für SQL Server unter Windows  
 
@@ -36,9 +35,9 @@ Der ODBC-Treiber für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md
   
 Diese Version des ODBC-Treibers für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält die folgenden neuen Features:  
   
-### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>bcp.exe-Option "-l" für die Angabe ein Anmeldungstimeout
+### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>bcp. exe-l-Option zum Angeben eines Anmeldungs Timeouts
  
-Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine `bcp.exe`-Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das Standardtimeout für die Anmeldung ist 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp.exe` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an. Ein Anmeldungstimeout von weniger als 10 Sekunden ist nicht zuverlässig.  
+Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine `bcp.exe`-Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Timeout eintritt. Das standardmäßige Anmeldungs Timeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert `bcp.exe` eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an. Ein Anmeldungstimeout von weniger als 10 Sekunden ist nicht zuverlässig.  
   
 ### <a name="driver-aware-connection-pooling"></a>Treiberfähiges Verbindungspooling  
 Der ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt [treiberfähiges Verbindungspooling](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). Weitere Informationen finden Sie unter [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
@@ -51,11 +50,11 @@ Um sicherzustellen, dass die Anwendungen mit einer Microsoft Azure SQL-Datenbank
   
 ## <a name="behavior-changes"></a>Verhaltensänderungen
 
-In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, der `-y0` option `sqlcmd.exe` bewirkt, dass bei 1 MB abgeschnitten wird, wenn die Anzeigebreite 0 wurde.
+In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client hat die `-y0` -Option `sqlcmd.exe` für bewirkt, dass die Ausgabe bei 1 MB abgeschnitten wird, wenn die Anzeigebreite 0 (null) war.
   
 Beginnend mit dem ODBC-Treiber 11 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt es keine Beschränkung für die Menge der Daten, die in einer einzelnen Spalte abgerufen werden, wenn `-y0` angegeben ist. `sqlcmd.exe` streamt jetzt Spalten bis zu 2 GB (Maximum für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen).  
   
-Ein weiterer Unterschied ist, dass die Angabe sowohl `-h` und `-y0` erzeugt nun einen Fehler meldet, dass die Optionen inkompatibel sind. `-h`, wodurch die Anzahl der Zeilen angegeben wird, die zwischen den Spaltenüberschriften gedruckt werden sollen, war noch nie mit `-y0` kompatibel und wurde ignoriert, obwohl keine Überschriften gedruckt wurden.
+Ein weiterer Unterschied besteht darin `-h` , `-y0` dass durch Angeben von und jetzt eine Fehlermeldung erzeugt wird, dass die Optionen inkompatibel sind `-h`, wodurch die Anzahl der Zeilen angegeben wird, die zwischen den Spaltenüberschriften gedruckt werden sollen, war noch nie mit `-y0` kompatibel und wurde ignoriert, obwohl keine Überschriften gedruckt wurden.
   
 Beachten Sie, dass `-y0` je nach Größe der zurückgegebene Daten zu Leistungsproblemen auf dem Server und im Netzwerk führen kann.
 

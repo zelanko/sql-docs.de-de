@@ -1,5 +1,5 @@
 ---
-title: SQLServerNClob-Elemente | Microsoft-Dokumentation
+title: SQLServerNClob-Member | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8386d896391405777648ee3ec27b188b313c737c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970948"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob-Elemente
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "66788959"
 |Name|und Beschreibung|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|Mit dieser Methode werden das **NCLOB**-Objekt sowie die von diesem verwendeten Ressourcen freigegeben.|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Ruft die **NCLOB** Wert festgelegt, durch die **java.sql.NClob** Objekts als ASCII-Datenstrom.|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Ruft die **NCLOB** Wert festgelegt, durch die **java.sql.NClob** Objekt.|  
-|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Ruft eine Kopie der angegebenen Teilzeichenfolge im ab der **NCLOB** Wert festgelegt, durch die **java.sql.NClob** Objekt.|  
-|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Ruft die Anzahl der Zeichen in der **NCLOB** Wert festgelegt, durch die **java.sql.NClob** Objekt.|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Ruft den vom **java. SQL. NCLOB** -Objekt bezeichneten **NCLOB** -Wert als ASCII-Datenstrom ab.|  
+|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Ruft den **NCLOB** -Wert ab, der vom **java. SQL. NCLOB** -Objekt festgelegt wird.|  
+|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Ruft eine Kopie der angegebenen Teil Zeichenfolge im **NCLOB** -Wert ab, der vom **java. SQL. NCLOB** -Objekt festgelegt wird.|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Ruft die Anzahl der Zeichen im **NCLOB** -Wert ab, der vom **java. SQL. NCLOB** -Objekt festgelegt wird.|  
 |[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Ruft die Zeichenposition des angegebenen **java.sql.NClob**-Objekts oder der Teilzeichenfolge in **java.sql.NClob** auf der Grundlage der angegebenen Startposition ab.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|Ruft einen Datenstrom ab, der verwendet wird, um ab der angegebenen Position ASCII-Zeichen in den **NCLOB**-Wert zu schreiben, der von diesem **java.sql.NClob**-Objekt dargestellt wird.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|Ruft einen Datenstrom ab, der verwendet wird, um ab der angegebenen Position einen Datenstrom von Unicode-Zeichen in den **NCLOB**-Wert zu schreiben, der von diesem **java.sql.NClob**-Objekt dargestellt wird.|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Schreibt das angegebene **Zeichenfolge** auf die **NCLOB** an der angegebenen Position ab.|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Schreibt die angegebene **Zeichenfolge** beginnend an der angegebenen Position in das **NCLOB** .|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|Kürzt den **NCLOB**-Wert auf die angegebene Länge.|  
   
 ## <a name="inherited-methods"></a>Geerbte Methoden  

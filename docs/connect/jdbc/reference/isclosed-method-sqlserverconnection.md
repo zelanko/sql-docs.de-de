@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 509de1454b2f86aa52028fdd6921fb02fedf5f27
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 45e56a0a5ddb7cf8aece6813d421b7ebb1685408
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977717"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** ist die Verbindung schließen, **"false"** ist dies nicht.  
+ **true** , wenn die Verbindung geschlossen ist, **false** , wenn dies nicht der Fall ist.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese IsClosed-Methode wird von der IsClosed-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese IsClosed-Methode wird von der IsClosed-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Überprüft den Zustand des aufgerufenen SQLServerConnection-Objekts. Eine Verbindung wird geschlossen, wenn für sie die [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)-Methode aufgerufen wurde oder bestimmte schwerwiegende Fehler aufgetreten sind. Diese Methode gibt nur dann **true** zurück, wenn sie nach dem Aufrufen der close-Methode aufgerufen wurde.  
   

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b97c44ae954886058f771ad0ae6571ebe611927d
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984431"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (Berechtigungen von Service Broker) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Gibt eine Berechtigung an, die für ein sicherbares Element von [!INCLUDE[ssSB](../../includes/sssb-md.md)] verweigert werden kann. Eine Liste der Berechtigungen finden Sie im Abschnitt zu den Hinweisen weiter unten in diesem Thema.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Gibt den Vertrag an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Gibt den Nachrichtentyp an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Gibt die Remotedienstbindung an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Gibt die Route an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Gibt den Dienst an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
@@ -159,8 +158,7 @@ CASCADE
  Erfordert die CONTROL-Berechtigung für den Vertrag, Nachrichtentyp, die Remotedienstbindung, Route oder den Dienst von [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Falls die AS-Klausel verwendet wird, muss der angegebene Prinzipal der Besitzer des sicherbaren Elements sein, für das Berechtigungen verweigert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [REVOKE (Berechtigungen von Service Broker) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)  

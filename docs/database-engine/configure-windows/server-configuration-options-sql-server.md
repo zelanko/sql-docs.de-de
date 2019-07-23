@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 4fa7c613c98b01ecda5e535928c7e381beef8aa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025623"
 ---
 # <a name="server-configuration-options-sql-server"></a>Serverkonfigurationsoptionen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion
     |[Max. Bereich für Volltextdurchforstung](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[Max. Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[Max. Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 ist der empfohlene Höchstwert für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Hinweis:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.|0<br /><br /> 0 (null) konfiguriert automatisch die maximale Anzahl der Arbeitsthreads, abhängig von der Anzahl der Prozessoren nach der Formel (256+(*\<Prozessoren>*–4) × 8) für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und (512+(*\<Prozessoren>*–4)× 8)für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Hinweis:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.|  
+    |[Max. Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 1024 ist der empfohlene Höchstwert für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 2048 für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Hinweis:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.|0<br /><br /> 0 (null) konfiguriert automatisch die maximale Anzahl der Arbeitsthreads, abhängig von der Anzahl der Prozessoren nach der Formel (256+( *\<Prozessoren>* –4) × 8) für die 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und (512+( *\<Prozessoren>* –4)× 8)für die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **Hinweis:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ist die letzte verfügbare Version für 32-Bit-Betriebssysteme.|  
     |[Medienbeibehaltung](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A, RR)|0|365|0|  
     |[Min. Arbeitsspeicher pro Abfrage](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[Min. Serverarbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A, SC)|0|2147483647|0|  

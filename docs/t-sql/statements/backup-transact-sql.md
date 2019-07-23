@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141218"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +69,7 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -435,7 +434,7 @@ Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount/maxtra
 > [!NOTE]
 > Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
 > [!NOTE]
 > Wenn beim Erstellen von Sicherungen mithilfe des SQL Writer-Diensts für die Datenbank [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) konfiguriert ist oder [speicheroptimierte Dateigruppen](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) enthält, dann sollte `MAXTRANSFERSIZE` zum Zeitpunkt der Wiederherstellung größer als oder gleich der `MAXTRANSFERSIZE` sein, die beim Erstellen der Sicherung verwendet wurde.
@@ -931,7 +930,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL-Datenbank<br />verwaltete Instanz \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -1045,7 +1044,7 @@ Der gesamte von den Puffern belegte Speicherplatz wird durch *buffercount/maxtra
 > [!NOTE]
 > Wichtige Informationen zur Verwendung der `BUFFERCOUNT`-Option finden Sie im Blogeintrag [Falsche BufferCount-Datenübertragungsoption kann OOM-Bedingung auslösen](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Gibt die größte zu verwendende Einheit für Übertragungen zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem Sicherungsmedium in Bytes an. Die möglichen Werte sind Vielfache von 65.536 Bytes (64 KB) bis hin zu 4.194.304 Bytes (4 MB).
 
 > [!NOTE]
 > Für [Transparente Datenverschlüsselung (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)-fähige Datenbanken mit einer einzelnen Datendatei ist der standardmäßige `MAXTRANSFERSIZE`-Wert 65536 (64 KB). Für nicht mit TDE verschlüsselte Datenbanken ist der `MAXTRANSFERSIZE`-Standardwert 1048576 (1 MB) bei Verwendung der Sicherung auf DISK und 65536 (64 KB) bei Verwendung von VDI oder TAPE.
@@ -1116,7 +1115,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL-Datenbank<br />verwaltete Instanz](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 

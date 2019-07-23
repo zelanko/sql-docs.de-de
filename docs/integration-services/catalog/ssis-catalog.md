@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09348b39919c13caa35879609abbd6470660f803
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070533"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
 
@@ -126,7 +125,7 @@ ms.locfileid: "65729173"
   
  Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt durch das Bereitstellen unter dem gleichen Namen im gleichen Ordner im Katalog aktualisieren oder erneut bereitstellen. Jedes Mal, wenn Sie ein Projekt erneut bereitstellen, behält der **SSISDB** -Katalog standardmäßig die frühere Version des Projekts bei. Um die Größe der Vorgangsdaten zu verwalten, wird der **SSIS-Server-Wartungsauftrag** verwendet, um alte Versionen von Projekten zu entfernen.  
  
-Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-Anmeldung **##MS_SSISServerCleanupJobLogin##**. Diese Anmeldung gilt nur für den internen Gebrauch durch SSIS.
+Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-Anmeldung **##MS_SSISServerCleanupJobLogin##** . Diese Anmeldung gilt nur für den internen Gebrauch durch SSIS.
   
  Die folgenden **SSISDB** -Katalogeigenschaften definieren, wie sich dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag verhält. Sie können die Eigenschaften anzeigen oder ändern, indem Sie das Dialogfeld **Katalogeigenschaften** verwenden, oder [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) und [catalog.configure_catalog &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
@@ -422,7 +421,7 @@ Zum Ausführen des **SSIS-Serverwartungsauftrags**erstellt SSIS die SQL Server-A
   
     1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Objekt-Explorer die Knoten **Sicherheit** und **Anmeldungen** .  
   
-    2.  Klicken Sie mit der rechten Maustaste auf **##MS_SSISServerCleanupJobLogin##**, und klicken Sie dann auf **Skript für Anmeldenamen als** > **CREATE in** > **Neues Abfrage-Editor-Fenster**.  
+    2.  Klicken Sie mit der rechten Maustaste auf **##MS_SSISServerCleanupJobLogin##** , und klicken Sie dann auf **Skript für Anmeldenamen als** > **CREATE in** > **Neues Abfrage-Editor-Fenster**.  
   
 5.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, generieren Sie das CREATE PROCEDURE-Skript für „sp_ssis_startup“ wie folgt. Weitere Informationen finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
@@ -631,7 +630,7 @@ Geben Sie das Kennwort an, das Sie beim Erstellen des SSIS-Katalogs auf der Seit
 > [!WARNING]  
 >  Das automatische Failover für die SSISDB-Datenbank wird nur unterstützt, wenn Sie die SSIS-Unterstützung für Always On aktiviert haben.  
   
- Die neu hinzugefügten sekundären Replikate aus der Always On-Verfügbarkeitsgruppe werden in der Tabelle angezeigt. Klicken Sie für jedes Replikat in der Liste auf die Schaltfläche **Verbinden...**, und geben Sie Anmeldeinformationen für die Authentifizierung ein, um eine Verbindung mit dem Replikat herzustellen. Das Benutzerkonto muss auf jedem Replikat Mitglied der Gruppe „sysadmin“ sein, um die SSIS-Unterstützung für Always On zu aktivieren. Klicken Sie nach der erfolgreichen Herstellung einer Verbindung mit jedem Replikat auf **OK** , um die SSIS-Unterstützung für Always On zu aktivieren.  
+ Die neu hinzugefügten sekundären Replikate aus der Always On-Verfügbarkeitsgruppe werden in der Tabelle angezeigt. Klicken Sie für jedes Replikat in der Liste auf die Schaltfläche **Verbinden...** , und geben Sie Anmeldeinformationen für die Authentifizierung ein, um eine Verbindung mit dem Replikat herzustellen. Das Benutzerkonto muss auf jedem Replikat Mitglied der Gruppe „sysadmin“ sein, um die SSIS-Unterstützung für Always On zu aktivieren. Klicken Sie nach der erfolgreichen Herstellung einer Verbindung mit jedem Replikat auf **OK** , um die SSIS-Unterstützung für Always On zu aktivieren.  
  
 Wenn im Kontextmenü angezeigt wird, dass die Option **Always On-Unterstützung aktivieren** deaktiviert ist, nachdem Sie die erforderlichen Schritte abgeschlossen haben, versuchen Sie Folgendes:
 1.  Aktualisieren Sie das Kontextmenü, indem Sie auf die Option **Aktualisieren** klicken.

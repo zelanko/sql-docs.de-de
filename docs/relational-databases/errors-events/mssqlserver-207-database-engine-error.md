@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e3f7fb7bdaebf9cf839b4b4b2927fc65ac324c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fa8c6371ba5889cde5afe2c66b036a1ec8c031d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056809"
 ---
 # <a name="mssqlserver207"></a>MSSQLSERVER_207
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47721528"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|207|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -76,7 +75,7 @@ Dieser Abfragefehler kann durch eines der folgenden Probleme verursacht werden.
   
     Da vor dem Verarbeiten der SELECT-Klausel kein Spaltenalias definiert wird, ist der Aliasname beim Verarbeiten der GROUP BY-Klausel unbekannt.  
   
--   Die MERGE-Anweisung löst diesen Fehler aus, wenn die *<merge_matched>*-Klausel auf Spalten in der Quelltabelle verweist, jedoch von der Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel keine Zeilen zurückgegeben werden. Dieser Fehler tritt auf, da auf die Spalten in der Quelltabelle nicht zugegriffen werden kann, wenn in der Abfrage keine Zeilen zurückgegeben werden. Die Klausel `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` kann beispielsweise dazu führen, dass die Anweisung fehlschlägt, wenn der Zugriff auf `Col1` in der Quelltabelle nicht möglich ist.  
+-   Die MERGE-Anweisung löst diesen Fehler aus, wenn die *<merge_matched>* -Klausel auf Spalten in der Quelltabelle verweist, jedoch von der Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel keine Zeilen zurückgegeben werden. Dieser Fehler tritt auf, da auf die Spalten in der Quelltabelle nicht zugegriffen werden kann, wenn in der Abfrage keine Zeilen zurückgegeben werden. Die Klausel `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` kann beispielsweise dazu führen, dass die Anweisung fehlschlägt, wenn der Zugriff auf `Col1` in der Quelltabelle nicht möglich ist.  
   
 ## <a name="user-action"></a>Benutzeraktion  
 Überprüfen Sie die folgenden Informationen, und korrigieren Sie die Anweisung entsprechend.  
@@ -118,7 +117,7 @@ Dieser Abfragefehler kann durch eines der folgenden Probleme verursacht werden.
   
 -   Die WHEN NOT MATCHED BY SOURCE-Klausel in der MERGE-Anweisung verweist auf einen Wert, auf den zugegriffen werden kann. Ändern Sie die MERGE-Anweisung so, dass die Quelltabelle in der WHEN NOT MATCHED BY SOURCE-Klausel mindestens eine Zeile zurückgibt. Möglicherweise müssen Sie z. B. die für die Klausel angegebene Suchbedingung hinzufügen oder überarbeiten. Wahlweise können Sie die Klausel so ändern, dass diese einen Wert angibt, der nicht auf die Quelltabelle verweist. Beispiel: `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>`.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  
 [FROM &#40;Transact-SQL&#41;](~/t-sql/queries/from-transact-sql.md)  
 [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)  

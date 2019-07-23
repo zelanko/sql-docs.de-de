@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 64ea4a6f152ebeaa5898de35e386fbde8d09aab6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902881"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt einen neuen Vertrag. Ein Vertrag definiert die in einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversation verwendeten Nachrichtentypen und legt fest, welche Seite der Konversation Nachrichten eines bestimmten Typs senden kann. Jede Konversation folgt einem Vertrag. Der initiierende Dienst gibt beim Start der Konversation den Vertrag für die Konversation an. Der Zieldienst gibt die Verträge an, für die der Zieldienst Konversationen annimmt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -123,7 +122,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

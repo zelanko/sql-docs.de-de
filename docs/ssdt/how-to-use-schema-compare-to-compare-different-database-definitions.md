@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097516"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Gewusst wie: Vergleichen von verschiedenen Datenbankdefinitionen mithilfe des Schemavergleichs
 SQL Server Data Tools (SSDT) enthält ein Hilfsprogramm für den Schemavergleich, mit dem Sie zwei Datenbankdefinitionen vergleichen können.  Bei der Quelle und dem Ziel des Vergleichs kann es sich um eine beliebige Kombination von verbundener Datenbank, SQL Server-Datenbankprojekt bzw. -Momentaufnahme oder DACPAC-Datei handeln.  Die Ergebnisse des Vergleichs werden als Satz von Aktionen angezeigt, die für das Ziel ausgeführt werden müssen, damit es mit der Quelle identisch ist.  Nach Abschluss des Vergleichs können Sie das Ziel direkt aktualisieren (wenn das Ziel ein Projekt oder eine Datenbank ist) oder ein Updateskript generieren, das den gleichen Zweck erfüllt.  

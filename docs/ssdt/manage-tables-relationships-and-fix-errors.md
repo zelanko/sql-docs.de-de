@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2ca364ce0b1c1d90c153538d9a622b8a56b275ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0ba15dc6224811630bcdfaa5f754b9823cf5dcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000636"
 ---
 # <a name="manage-tables-relationships-and-fix-errors"></a>Verwalten von Tabellen, Beziehungen und Beheben von Fehlern
 In den Themen dieses Abschnitts wird beschrieben, wie der Tabellen-Designer zum Entwerfen von Tabellen und Verwalten von Tabellenbeziehungen verwendet wird. In weiteren Themen wird das Beheben allgemeiner Syntaxfehler oder semantischer Fehler behandelt.  

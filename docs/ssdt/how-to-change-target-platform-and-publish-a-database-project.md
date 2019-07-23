@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2dd22b47da751294b60f57aaad246234004e946
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897367"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
 Sie können die SQL Server-Zielversion für Ihr SSDT-Datenbankprojekt (SQL Server Data Tools) in jede unterstützte SQL Server-Instanz (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 oder SQL Azure) ändern. Hierdurch können Sie die Datenbankentwicklung in einem einzelnen Projekt bündeln, das Projekt jedoch bei Bedarf in mehreren SQL Server-Instanzen veröffentlichen.  

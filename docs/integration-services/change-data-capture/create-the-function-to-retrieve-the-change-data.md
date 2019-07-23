@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7890ea871365188918a2b45105848b748f5aa670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4da506162bc50e4089c0077b4b2e94854282c3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060836"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
 
@@ -215,7 +214,7 @@ go
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn beispielsweise bei einem Updatevorgang in der Quelltabelle zwei unterschiedliche Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen (zwei mit den alten Werten und zwei mit den neuen Werten), die jeweils denselben **__$start_lsn** -Wert aufweisen.|  
 |**__$seqval**|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
-|**__$operation**|**ssNoversion**|Der Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (Werte vor dem Updatevorgang)<br /><br /> 4 = Update (Werte nach dem Updatevorgang)|  
+|**__$operation**|**int**|Der Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (Werte vor dem Updatevorgang)<br /><br /> 4 = Update (Werte nach dem Updatevorgang)|  
 |**__$update_mask**|**varbinary(128)**|Eine Bitmaske, die auf den Spaltenordnungszahlen der Änderungstabelle basiert, die geänderte Spalten identifiziert. Sie könnten diesen Wert überprüfen, wenn Sie bestimmen müssten, welche Spalten sich geändert haben.|  
 |**\<erfasste Quelltabellenspalten>**|variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten ursprünglich keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
   

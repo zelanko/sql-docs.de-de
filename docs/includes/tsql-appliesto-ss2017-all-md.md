@@ -1,1 +1,9 @@
-<Token>**GILT FÜR:** ![Ja](media/yes.png)SQL Server (ab 2017) ![Ja](media/yes.png)Azure SQL-Datenbank![Ja](media/yes.png)Azure SQL Data Warehouse ![Ja](media/yes.png)Parallel Data Warehouse</Token>
+---
+ms.openlocfilehash: 6474670bc0ffab9e0eae33117f8cf9d19bb90452
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68221273"
+---
+<Token>**GILT FÜR:** ![ja](media/yes.png)SQL Server ![ja](media/yes.png)Azure SQL-Datenbank![ja](media/yes.png)Azure SQL Data Warehouse ![ja](media/yes.png)Parallel Data Warehouse</Token>

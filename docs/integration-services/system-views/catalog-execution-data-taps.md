@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe54f3560c0c4584dcf7c9f84864a3552ed23172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7db0723ed403340b0e24136ac6bac7217943d401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065244"
 ---
 # <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
 
@@ -34,7 +33,7 @@ ms.locfileid: "65714784"
 |package_path|**nvarchar(max)**|Der Paketpfad für den Datenflusstask, in dem Daten abgerufen werden.|  
 |dataflow_path_id_string|**nvarchar(4000)**|Die Identifikationszeichenfolge des Datenflusspfads.|  
 |dataflow_task_guid|**uniqueidentifier**|Eindeutiger Bezeichner (ID) des Datenflusstasks.|  
-|max_rows|**ssNoversion**|Die Anzahl an zu erfassenden Zeilen. Wenn dieser Wert nicht angegeben ist, werden alle Zeilen erfasst.|  
+|max_rows|**int**|Die Anzahl an zu erfassenden Zeilen. Wenn dieser Wert nicht angegeben ist, werden alle Zeilen erfasst.|  
 |filename|**nvarchar(4000)**|Der Name der Datendumpdatei. Weitere Informationen finden Sie unter [Generieren von Dumpdateien für die Paketausführung](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).|  
   
 ## <a name="permissions"></a>Berechtigungen  

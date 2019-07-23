@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 4: Herstellen robuster Verbindungen mit SQL mit PHP | Microsoft-Dokumentation'
+title: 'Schritt 4: Herstellen einer resilientes Verbindung mit SQL mit PHP | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -10,23 +10,22 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1f24e9bdbfed037aa1fe1b3a0baabedb1673cef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b32bbb0df1c5977e814eecca7a1e6d1ddee5eca4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992628"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Schritt 4: Herstellen belastbarer SQL-Verbindungen mit PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-Das Demoprogramm wurde entwickelt, damit ein vorübergehender Fehler (d. h. auf jeden Fehlercode mit dem Präfix '08' wie in diesem [Anhang](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) beim Versuch, Leads zu einer Wiederholung eine Verbindung herstellen. Aber ein vorübergehender Fehler während des Abfragebefehls bewirkt, dass das Programm die Verbindung verwirft und erstellen eine neue Verbindung, bevor der Abfragebefehl wiederholt wird. Microsoft weder empfohlen noch Microsoft diese entwurfsentscheidung. Das Demoprogramm zeigt die Flexibilität von Entwurf, die Ihnen zur Verfügung steht.  
+Das Demo Programm ist so konzipiert, dass ein vorübergehender Fehler (bei dem es sich um einen beliebigen Fehlercode mit dem Präfix "08" handelt, wie in diesem [Anhang](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)aufgeführt) während eines Verbindungsversuchs zu einer Wiederholung führt. Ein vorübergehender Fehler während des Abfrage Befehls bewirkt jedoch, dass das Programm die Verbindung verwirft und eine neue Verbindung erstellt, bevor der Abfragebefehl erneut versucht wird. Diese Entwurfs Auswahl wird weder empfohlen noch empfohlen. Das Demo Programm veranschaulicht einen Teil der Entwurfs Flexibilität, die Ihnen zur Verfügung steht.  
   
-Die Länge dieses Codebeispiel ist größtenteils aufgrund der Catch-Exception-Logik.   
+Die Länge dieses Code Beispiels ist hauptsächlich auf die Logik zum Abfangen von Ausnahmen zurückzuführen.   
   
-Die [sqlsrv_query()](../../connect/php/sqlsrv-query.md) Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion ist im Wesentlichen akzeptiert jede Abfrage und Verbindung-Objekt und gibt ein Resultset, das mit der Verwendung von durchlaufen werden kann [sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md). 
+Die [sqlsrv_query ()](../../connect/php/sqlsrv-query.md) -Funktion kann verwendet werden, um ein Resultset aus einer Abfrage für die SQL-Datenbank abzurufen. Diese Funktion akzeptiert im Wesentlichen alle Abfrage-und Verbindungs Objekte und gibt ein Resultset zurück, das mit der Verwendung von [sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md)durchlaufen werden kann. 
   
 ```php
 

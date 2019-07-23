@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132768"
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  Gibt an, dass gefilterte Indizes für neue Empfehlungen berücksichtigt werden. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Gibt an, dass Columnstore-Indizes für neue Empfehlungen berücksichtigt werden sollen. DTA berücksichtigt sowohl gruppierte und nicht gruppierten columnstore-Indizes. Weitere Informationen finden Sie unter    
+ Gibt an, dass Columnstore-Indizes für neue Empfehlungen berücksichtigt werden sollen. Dta berücksichtigt sowohl gruppierte als auch nicht gruppierte columnstore--Indizes. Weitere Informationen finden Sie unter    
 [Empfehlungen für den Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  Gibt an, dass der Plancache als Arbeitsauslastung verwendet wird. Die ersten 1.000 Plancacheereignisse für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  
  
 **-iq**  
- Gibt an, dass das Query Store als arbeitsauslastung verwendet werden. Die ersten 1.000 Ereignisse aus dem Store-Abfrage für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  Weitere Informationen finden Sie unter [Abfragespeicher](../../relational-databases/performance/how-query-store-collects-data.md) und [Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Gibt an, dass die Abfragespeicher als Arbeitsauslastung verwendet werden soll. Die wichtigsten 1.000-Ereignisse aus der Abfragespeicher für explizit ausgewählte Datenbanken werden analysiert. Dieser Wert kann mit der Option **–n** geändert werden.  Weitere Informationen finden Sie unter [Abfragespeicher](../../relational-databases/performance/how-query-store-collects-data.md) und [Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  In diesem Fall ist es wichtig, eine unbegrenzte Optimierungszeit anzugeben (`-A 0`). Andernfalls geht der Datenbankoptimierungsratgeber standardmäßig von einer achtstündigen Optimierungsdauer aus.
  
  **-I** _time_window_in_hours_   
-   Gibt das Zeitfenster (in Stunden) bei eine Abfrage ausgeführt worden sein muss für sie von DTA berücksichtigt werden, für die Optimierung der Verwendung von **-iq** Option (Arbeitsauslastung aus dem Query Store). 
+   Gibt das Zeitfenster (in Stunden) an, in dem eine Abfrage ausgeführt werden muss, damit Sie von DTA für die Optimierung berücksichtigt wird, wenn die Option **-IQ** (Arbeitsauslastung aus Abfragespeicher) verwendet wird. 
 ```  
 dta -iq -I 48  
 ```  
-In diesem Fall wird die DTA Query Store als Quelle der Workload verwenden und nur erwägen, Abfragen, die mit den letzten 48 Stunden ausgeführt wurden.  
+In diesem Fall verwendet dta Abfragespeicher als Quelle der Arbeitsauslastung und berücksichtigt nur Abfragen, die in den letzten 48 Stunden ausgeführt wurden.  
   ||  
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

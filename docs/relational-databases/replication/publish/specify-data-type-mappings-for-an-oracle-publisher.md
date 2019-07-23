@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3e83f1a2e61a26e54713a5dae9dd2ef7cc092479
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a5b5a6215127b59d90e1de1188223281024304f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113914"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Angeben von Datentypzuordnungen für einen Oracle-Verleger
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "53212359"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Die Datentypzuordnungen werden auf der Registerkarte **Datenzuordnung**des Dialogfelds **Artikeleigenschaften – \<Artikel>** angegeben. Diese Registerkarte ist über die Seite **Artikel** des Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** verfügbar. Weitere Informationen zum Verwenden des Assistenten sowie zum Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>So geben Sie eine Datentypzuordnung an  
@@ -58,25 +57,25 @@ ms.locfileid: "53212359"
   
 1.  Erstellen Sie eine Oracle-Veröffentlichung, sofern noch nicht vorhanden.  
   
-2.  Führen Sie auf dem Verteiler [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Wert **0** für **@use_default_datatypes**angegeben werden. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+2.  Führen Sie auf dem Verteiler [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Wert **0** für **@use_default_datatypes** angegeben werden. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 3.  Führen Sie auf dem Verteiler [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) aus, um die vorhandene Zuordnung für eine Spalte in einem veröffentlichten Artikel anzuzeigen.  
   
-4.  Führen Sie auf dem Verteiler [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)aus. Geben Sie den Namen des Oracle-Verlegers für **@publisher**sowie **@publication**, **@article**und **@column** an, um die veröffentlichte Spalte zu definieren. Geben Sie den Namen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyps, der zugeordnet werden soll, für **@type**sowie **@length**, **@precision**und **@scale**an.  
+4.  Führen Sie auf dem Verteiler [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md)aus. Geben Sie den Namen des Oracle-Verlegers für **@publisher** sowie **@publication** , **@article** und **@column** an, um die veröffentlichte Spalte zu definieren. Geben Sie den Namen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datentyps, der zugeordnet werden soll, für **@type** sowie **@length** , **@precision** und **@scale** an.  
   
 5.  Führen Sie auf dem Verteiler [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus. Dies erstellt die Sicht, mit der die Momentaufnahme der Oracle-Veröffentlichung generiert wird.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>So geben Sie eine Zuordnung als Standardzuordnung für einen Datentyp an  
   
-1.  (Optional) Führen Sie auf dem Verteiler für eine beliebige Datenbank [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)aus. Geben Sie **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_version**und andere Parameter an, die zum Identifizieren des Quell-DBMS erforderlich sind. Informationen über den gerade zugeordneten Datentyp im Ziel-DBMS werden mit den Ausgabeparametern zurückgegeben.  
+1.  (Optional) Führen Sie auf dem Verteiler für eine beliebige Datenbank [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)aus. Geben Sie **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_version** und andere Parameter an, die zum Identifizieren des Quell-DBMS erforderlich sind. Informationen über den gerade zugeordneten Datentyp im Ziel-DBMS werden mit den Ausgabeparametern zurückgegeben.  
   
 2.  (Optional) Führen Sie auf dem Verteiler für eine beliebige Datenbank [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)aus. Geben Sie **@source_dbms** und alle anderen Parameter an, die zum Filtern des Resultsets benötigt werden. Notieren Sie den Wert von **mapping_id** für die gewünschte Zuordnung im Resultset.  
   
 3.  Führen Sie auf dem Verteiler für eine beliebige Datenbank [sp_setdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)aus.  
   
-    -   Wenn Sie den gewünschten Wert von **mapping_id** kennen, der in Schritt 2 ermittelt wurde, geben Sie diesen Wert für **@mapping_id**angegeben werden.  
+    -   Wenn Sie den gewünschten Wert von **mapping_id** kennen, der in Schritt 2 ermittelt wurde, geben Sie diesen Wert für **@mapping_id** angegeben werden.  
   
-    -   Wenn Sie den Wert für **mapping_id**nicht kennen, geben Sie die Parameter **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_type**sowie alle anderen Parameter an, die zum Identifizieren einer vorhandenen Zuordnung erforderlich sind.  
+    -   Wenn Sie den Wert für **mapping_id**nicht kennen, geben Sie die Parameter **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_type** sowie alle anderen Parameter an, die zum Identifizieren einer vorhandenen Zuordnung erforderlich sind.  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>So suchen Sie gültige Datentypen für einen bestimmten Oracle-Datentyp  
   

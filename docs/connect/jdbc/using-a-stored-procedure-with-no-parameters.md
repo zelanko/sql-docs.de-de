@@ -10,26 +10,25 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d766423b4ee2c1db4b7515c87edfa96b4b84b416
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916498"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Verwenden von gespeicherten Prozeduren ohne Parameter
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Die einfachste Art einer gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozedur, die aufgerufen werden kann, enthält keine Parameter und gibt ein einziges Resultset zurück. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bietet die [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) -Klasse, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufrufen und Verarbeiten der Daten, die zurückgegeben.
+Die einfachste Art einer gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozedur, die aufgerufen werden kann, enthält keine Parameter und gibt ein einziges Resultset zurück. Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] stellt die [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) -Klasse bereit, die Sie verwenden können, um diese Art von gespeicherter Prozedur aufzurufen und die zurückgegebenen Daten zu verarbeiten.
 
 Wenn Sie mit dem JDBC-Treiber eine gespeicherte Prozedur ohne Parameter aufrufen möchten, müssen Sie die `call`-SQL-Escapesequenz verwenden. Die Syntax für die `call`-Escapesequenz ohne Parameter lautet folgendermaßen:
 
 `{call procedure-name}`
 
 > [!NOTE]  
-> Weitere Informationen zu SQL-Escapesequenzen, finden Sie unter [mithilfe von SQL-Escapesequenzen](../../connect/jdbc/using-sql-escape-sequences.md).
+> Weitere Informationen zu den SQL-Escapesequenzen finden [Sie unter Verwenden von SQL](../../connect/jdbc/using-sql-escape-sequences.md)-Escapesequenzen.
 
 Erstellen Sie als Beispiel die folgende Prozedur in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]-Beispieldatenbank:
 

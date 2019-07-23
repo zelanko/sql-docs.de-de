@@ -1,5 +1,5 @@
 ---
-title: GetXAResource-Methode (SQLServerXAConnection) | Microsoft-Dokumentation
+title: getXAResource-Methode (sqlserverxaconnetction) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbad0cdd9fe26c780e3acc5691f9af56e63ce1fe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977984"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource-Methode (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public javax.transaction.xa.XAResource getXAResource()
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetXAResource-Methode wird von der GetXAResource-Methode in der javax.sql.XAConnection-Schnittstelle angegeben.  
+ Diese getXAResource-Methode wird von der getXAResource-Methode in der javax. SQL. xaconnetction-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerXAConnection-Methoden](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

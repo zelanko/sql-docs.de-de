@@ -1,5 +1,5 @@
 ---
-title: GetApplicationName-Methode (SQLServerDataSource) | Microsoft-Dokumentation
+title: getapplicationname-Methode (SQLServerDataSource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f71e501c-ccd7-4a1e-b6ea-4d47a81c18c6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7396b679dce0e655ae6124b1198afc306151ac97
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a3b7e55cbaa630a4c191eead93d3e016aa07ea5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954399"
 ---
 # <a name="getapplicationname-method-sqlserverdatasource"></a>getApplicationName-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

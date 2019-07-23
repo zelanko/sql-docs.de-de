@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 948749635ebec1106d6b950a65c9f6429d01888a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4aff7505035864028f1e50b4e11b8e40490f334d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898993"
 ---
 # <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Gewusst wie: Durchsuchen von Objekten in einem SQL Server-Datenbankprojekt
 Der SQL Server-Objekt-Explorer in Visual Studio enthält jetzt einen dedizierten Projektknoten, unter dem sämtliche in der Projektmappe enthaltenen SQL Server-Datenbankprojekte in einer Hierarchie gruppiert sind, die SQL Server Management Studio ähnelt.  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140357"
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -183,7 +182,7 @@ ms.locfileid: "52520970"
 -   Die SPARSE-Eigenschaft einer Spalte wird beim Kopieren der Tabelle nicht beibehalten.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel enthält eine Dokumenttabelle einen allgemeinen Satz mit der `DocID` -Spalte und der `Title`-Spalte. Die Produktionsgruppe möchte eine `ProductionSpecification`-Spalte und eine `ProductionLocation`-Spalte für alle Produktionsdokumente. Die Marketinggruppe möchte eine `MarketingSurveyGroup` -Spalte für Marketingdokumente. Mit dem Code in diesem Beispiel wird eine Tabelle ausgegeben, in der Sparsespalten verwendet werden. Es werden Zeilen in die Tabelle eingefügt und Daten aus der Tabelle ausgewählt.  
+ In diesem Beispiel enthält eine Dokumenttabelle einen allgemeinen Satz mit der `DocID` -Spalte und der `Title`-Spalte. Die Produktionsgruppe möchte eine `ProductionSpecification` -Spalte und eine `ProductionLocation` -Spalte für alle Produktionsdokumente. Die Marketinggruppe möchte eine `MarketingSurveyGroup` -Spalte für Marketingdokumente. Mit dem Code in diesem Beispiel wird eine Tabelle ausgegeben, in der Sparsespalten verwendet werden. Es werden Zeilen in die Tabelle eingefügt und Daten aus der Tabelle ausgewählt.  
   
 > [!NOTE]  
 >  Diese Tabelle hat nur fünf Spalten, um die Anzeige und das Lesen zu erleichtern. Sie können optional die Sparsespalten so deklarieren, dass NULL-Werte zulässig sind, wenn die ANSI_NULL_DFLT_ON-Option festgelegt wurde.  
@@ -237,7 +236,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

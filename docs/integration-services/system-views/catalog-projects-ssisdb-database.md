@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b18b2bdd034cf5d6864ddb4e652eda0266758a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0757a9c140a78642f9b6c1d58a4333e24d3d8733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997842"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB-Datenbank)
 
@@ -33,7 +32,7 @@ ms.locfileid: "65714429"
 |folder_id|**bigint**|Die eindeutige ID des Ordners, in dem sich das Projekt befindet.|  
 |NAME|**sysname**|Der Name des Projekts.|  
 |description|**nvarchar(1024)**|Die optionale Beschreibung des Projekts.|  
-|project_format_version|**ssNoversion**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Projekt entwickelt wurde.|  
+|project_format_version|**int**|Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit der das Projekt entwickelt wurde.|  
 |deployed_by_sid|**varbinary(85)**|Die Sicherheits-ID (SID) des Benutzers, der das Projekt installiert hat.|  
 |deployed_by_sid|**nvarchar(128)**|Der Name des Benutzers, der das Projekt installiert hat.|  
 |last_deployed_time|**datetimeoffset(7)**|Datum und Uhrzeit der Bereitstellung oder erneuten Bereitstellung des Projekts.|  

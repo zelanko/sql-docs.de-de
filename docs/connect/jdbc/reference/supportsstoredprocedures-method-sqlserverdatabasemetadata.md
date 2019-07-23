@@ -1,5 +1,5 @@
 ---
-title: SupportsStoredProcedures-Methode | Microsoft-Dokumentation
+title: supportsstoredprocedures-Methode | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1fec9c817e8671dd5d48f8c9d9fe13d611f864b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dd3c71aa058534342ddd70fdf1ae5256fb75e708
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968763"
 ---
 # <a name="supportsstoredprocedures-method-sqlserverdatabasemetadata"></a>supportsStoredProcedures-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsStoredProcedures()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsStoredProcedures-Methode wird von der SupportsStoredProcedures-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsstoredprocedures-Methode wird von der supportsstoredprocedures-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

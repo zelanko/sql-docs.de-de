@@ -1,6 +1,6 @@
 ---
 title: Abrufen von Zeilen | Microsoft-Dokumentation
-description: Abrufen von Zeilen, die über die IRowset-Schnittstelle
+description: Abrufen von Zeilen mithilfe der IRowset-Schnittstelle
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c4955b36c5a0d95c4fa4e8bfe0fceb77fc65efd9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d47e94795f3bb81dd7a2d870190f081436c47e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015365"
 ---
 # <a name="fetching-rows"></a>Abrufen von Zeilen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

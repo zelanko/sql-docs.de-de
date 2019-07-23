@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Tabellenwertparametern (OLE DB) | Microsoft-Dokumentation
+title: Verwenden von Tabellenwert Parametern (OLE DB) | Microsoft-Dokumentation
 description: Verwenden von Tabellenwertparametern (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 96a17c186c5eb39765d94d88310b1c77d73633b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994602"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Verwenden von Tabellenwertparametern (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "66791052"
   
 -   Verwendet benutzerdefinierte Parametereigenschaften mithilfe von ISSCommandWithParameters.  
   
--   Zeigt die Fehlerbehandlung für MSOLEDBSQL-Fehler.  
+-   Zeigt die Fehlerbehandlung für msoledbsql-Fehler an.  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;OLE DB-Treiber für SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;OLE DB Treiber für SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) erstellt die im Beispiel verwendete Datenbank.  

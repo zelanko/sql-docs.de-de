@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912667"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -464,7 +463,7 @@ Gibt an, ob für diese benutzerdefinierte Skalarfunktion ein Inlining durchgefü
  Die ROWGUIDCOL-Eigenschaft erzwingt keine Eindeutigkeit der in der Spalte gespeicherten Werte. Sie erzeugt auch nicht automatisch Werte für neue Zeilen, die in die Tabelle eingefügt werden. Um eindeutige Werte für jede Spalte zu erzeugen, verwenden Sie die NEWID-Funktion in INSERT-Anweisungen. Ein Standardwert kann angegeben werden, NEWID wird jedoch nicht als Standardwert unterstützt.  
   
  IDENTITY  
- Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden normalerweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)**. Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder *seed* und den *increment* oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
+ Gibt an, dass es sich bei der neuen Spalte um eine Identitätsspalte handelt. Wenn der Tabelle eine neue Zeile hinzugefügt wird, stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen eindeutigen, inkrementellen Wert für die Spalte bereit. Identitätsspalten werden normalerweise zusammen mit PRIMARY KEY-Einschränkungen verwendet, um als eindeutiger Zeilenbezeichner für die Tabelle zu dienen. Die IDENTITY-Eigenschaft kann folgenden Spalten zugewiesen werden: **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** oder **numeric(p,0)** . Es kann nur eine Identitätsspalte pro Tabelle erstellt werden. Gebundene Standardwerte und DEFAULT-Einschränkungen können nicht mit einer Identitätsspalte verwendet werden. Sie müssen entweder *seed* und den *increment* oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
  IDENTITY kann nicht für CLR-Tabellenwertfunktionen angegeben werden.  
   
@@ -558,7 +557,7 @@ Wenn eine benutzerdefinierte Funktion nicht mit der `SCHEMABINDING`-Klausel erst
  Weitere Informationen zum Programmieren von CLR-Funktionen finden Sie unter [CLR-benutzerdefinierte Funktionen](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Skalarfunktionen können dort aufgerufen werden, wo Skalarausdrücke verwendet werden. Hierzu gehören berechnete Spalten und CHECK-Einschränkungsdefinitionen. Skalarfunktionen können auch mithilfe der [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)-Anweisung ausgeführt werden. Skalarfunktionen müssen mindestens mit dem zweiteiligen Namen der Funktion (*<schema>.<function>*) aufgerufen werden. Weitere Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Tabellenwertfunktionen können dort aufgerufen werden, wo Tabellenausdrücke in der `FROM`-Klausel der Anweisungen `SELECT`, `INSERT`, `UPDATE` oder `DELETE` zulässig sind. Weitere Informationen zu benutzerdefinierten Funktionen finden Sie unter [Ausführen von benutzerdefinierten Funktionen](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Skalarfunktionen können dort aufgerufen werden, wo Skalarausdrücke verwendet werden. Hierzu gehören berechnete Spalten und CHECK-Einschränkungsdefinitionen. Skalarfunktionen können auch mithilfe der [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)-Anweisung ausgeführt werden. Skalarfunktionen müssen mindestens mit dem zweiteiligen Namen der Funktion ( *<schema>.<function>* ) aufgerufen werden. Weitere Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Tabellenwertfunktionen können dort aufgerufen werden, wo Tabellenausdrücke in der `FROM`-Klausel der Anweisungen `SELECT`, `INSERT`, `UPDATE` oder `DELETE` zulässig sind. Weitere Informationen zu benutzerdefinierten Funktionen finden Sie unter [Ausführen von benutzerdefinierten Funktionen](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## <a name="interoperability"></a>Interoperabilität  
  Die folgenden Anweisungen sind in einer Funktion zulässig:  
@@ -582,7 +581,7 @@ Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Funkti
 ### <a name="computed-column-interoperability"></a>Interoperabilität bei berechneten Spalten  
  Funktionen verfügen über die folgenden Eigenschaften. Die Werte dieser Eigenschaften bestimmen, ob Funktionen in permanent berechneten oder indizierten berechneten Spalten verwendet werden können.  
   
-|Eigenschaft|Beschreibung|Hinweise|  
+|Eigenschaft|und Beschreibung|Hinweise|  
 |--------------|-----------------|-----------|  
 |**IsDeterministic**|Die Funktion ist deterministisch oder nicht deterministisch.|Lokaler Datenzugriff ist in deterministischen Funktionen zulässig. Funktionen, die immer dasselbe Ergebnis zurückgeben, wenn sie mit bestimmten Eingabewerten und mit demselben Datenbankstatus aufgerufen werden, werden beispielsweise als deterministisch bezeichnet.|  
 |**IsPrecise**|Die Funktion ist präzise oder unpräzise.|Unpräzise Funktionen enthalten Vorgänge wie Gleitkommatransaktionen.|  
@@ -656,7 +655,7 @@ Durch die `ORDER`-Klausel wird keine bestimmte Ergebnisreihenfolge bei der Ausf�
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle werden die Systemkatalogsichten aufgelistet, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
   
-|Systemsicht|Beschreibung|  
+|Systemsicht|und Beschreibung|  
 |-----------------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Weitere Informationen finden Sie im Beispiel E weiter unten im Abschnitt „Beispiele“.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Zeigt Informationen zu benutzerdefinierten CLR-Funktionen an.|  
@@ -824,7 +823,7 @@ GO
  Die Definition von Funktionen, die mithilfe der `ENCRYPTION`-Option erstellt wurden, können nicht mit sys.sql_modules angezeigt werden. Im Gegensatz dazu werden andere Informationen zu den verschlüsselten Funktionen jedoch angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen benutzerdefinierter Funktionen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
+ [Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)    
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-function-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

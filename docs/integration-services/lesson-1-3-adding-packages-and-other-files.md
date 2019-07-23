@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76c9fe5325f976d849f18314c54be3e9ffeaf626
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 418b113429e31fdd0c6ad75bbc1707ef3a417b1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902656"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lektion 1-3: Hinzufügen von Paketen und weiteren Dateien
 
@@ -56,7 +55,7 @@ In der folgenden Aufgabe fügen Sie den DataTransfer- und LoadXMLData-Paketen Ko
   
 4.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
   
-5.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, navigieren Sie zu C:\Programme\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, wählen Sie **DataTransfer.dtsx** aus, und klicken Sie anschließend auf **Öffnen**.  
+5.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , navigieren Sie zu C:\Programme\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, wählen Sie **DataTransfer.dtsx** aus, und klicken Sie anschließend auf **Öffnen**.  
   
 6.  Klicken Sie auf **OK**.  
   

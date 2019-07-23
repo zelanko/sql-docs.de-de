@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-Dialogfelder | Microsoft-Dokumentation
+title: Dialogfelder SQL Server Profiler | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059703"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler-Dialogfelder
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse von einem Server aufzeichnet. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann. Im folgenden werden die verfügbaren Befehle und Einstellungen in den Dialogfeldern der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignisse von einem Server aufzeichnet. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann. Im folgenden finden Sie die Befehle und Einstellungen, die in den Dialog [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Feldern von verfügbar sind.  
 ## <a name="trace-properties"></a>Ablaufverfolgungseigenschaften
 ### <a name="general-tab"></a>Registerkarte "Allgemein"
 Mithilfe der Registerkarte **Allgemein** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Eigenschaften einer Ablaufverfolgung anzeigen und festlegen.  
@@ -87,7 +86,7 @@ Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungs
 |**Spalten organisieren**|Ändert die Reihenfolge der Spalten in der Ablaufverfolgung und gruppiert die Ergebnisse in einer oder mehreren Spalten.  
 
 ## <a name="trace-template-properties"></a>Eigenschaften der Ablaufverfolgungsvorlage 
-### <a name="new-general-tab"></a>Neue, Allgemein (Registerkarte)
+### <a name="new-general-tab"></a>Neu (Registerkarte Allgemein)
 Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie neue Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen erstellen. Zeigen Sie im Menü **Datei** von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auf **Vorlagen**, und klicken Sie dann auf **Neue Vorlage**, um dieses Dialogfeld zu öffnen.
 
 |Element|und Beschreibung
@@ -97,7 +96,7 @@ Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Abl
 |**Neue Vorlage auf vorhandener basieren**|Verwenden Sie eine Vorlage aus der Liste als Basis für diese Vorlage. Alle ausgewählten Ereignisse, Datenspalten und Filter stimmen anfangs mit denen in der vorhandenen Vorlage überein und können dann nach Bedarf geändert werden.  
 |**Als Standardvorlage für den ausgewählten Servertyp verwenden**|Verwenden Sie diese Vorlage standardmäßig für alle Ablaufverfolgungen, die für diesen Servertyp erstellt werden.  
 
-### <a name="edit-general-tab"></a>Bearbeiten (Registerkarte "Allgemein")
+### <a name="edit-general-tab"></a>Bearbeiten (Registerkarte Allgemein)
  Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Um auf dieses Dialogfeld zuzugreifen, zeigen Sie in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Datei** auf **Vorlagen**, und klicken Sie dann auf **Vorlage bearbeiten**.  
 
 |Element|und Beschreibung
@@ -171,7 +170,7 @@ Das Dialogfeld zum **Beschränken der Leistungsindikatoren** wird mit den Leistu
 2.  Aktivieren Sie die Indikatoren, die mit der [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgungsdatei korreliert werden sollen.  
 
 Wenn Sie alle Indikatoren für ein Leistungsobjekt auswählen möchten, setzen Sie in das Feld neben dem Leistungsobjekt ein Häkchen. Wenn Sie den obersten Knoten aktivieren, der für den Computer steht, werden alle Leistungsobjekte und -indikatoren ausgewählt, die in der Leistungsprotokolldatei enthalten sind. 
-## <a name="toolsoptions-general-options-page"></a>Extras/Optionen (Seite Allgemein)
+## <a name="toolsoptions-general-options-page"></a>Extras/Optionen (Seite Allgemeine Optionen)
 Verwenden Sie das Dialogfeld **Allgemeine Optionen** , um die folgenden Optionen anzuzeigen oder anzugeben.  
 ### <a name="display-options"></a>Anzeigeoptionen  
 

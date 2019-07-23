@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20b63a0ffbe12f43ff943b9588e8392a90cff7e0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9724fb48f6ae896d9026bfec63056070e2180a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992491"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Ruby
 
-In diesem Beispiel sollte einen Proof of Concept nur angesehen werden.  Der Beispielcode ist aus Gründen der Übersichtlichkeit vereinfacht und ist nicht notwendigerweise von Microsoft empfohlene bewährte Methoden.  
+Dieses Beispiel sollte nur als Proof of Concept angesehen werden.  Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht notwendigerweise die bewährten Methoden, die von Microsoft empfohlen werden.  
   
-## <a name="step-1--connect"></a>Schritt 1: Verbinden  
+## <a name="step-1--connect"></a>Schritt 1: verbinden  
   
-Die [tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds) Funktion wird für die Verbindung mit SQL-Datenbank verwendet.  
+Die [tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds) -Funktion wird zum Herstellen einer Verbindung mit SQL-Datenbank verwendet.  
   
 ``` ruby
     require 'tiny_tds'  
@@ -35,11 +34,11 @@ Die [tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds) Funktion wir
   
 ## <a name="step-2--execute-a-query"></a>Schritt 2: Ausführen einer Abfrage  
   
-Kopieren Sie den folgenden Code in eine leere Datei. Rufen sie "Test.RB". Führen Sie es dann mithilfe des folgenden Befehls über die Befehlszeile aus:  
+Kopieren Sie den folgenden Code, und fügen Sie ihn in eine leere Datei ein. Nennen Sie Sie "Test. rb". Führen Sie den folgenden Befehl an der Eingabeaufforderung aus:  
   
     ruby test.rb  
   
-Im Codebeispiel das [tinytds:: result](https://github.com/rails-sqlserver/tiny_tds) Funktion wird verwendet, um ein Resultset aus einer Abfrage für SQL-Datenbank abzurufen. Diese Funktion akzeptiert eine Abfrage und gibt ein Resultset zurück. Das Resultset iteriert wird mithilfe der Tabulatortaste [result.each do | Zeile |](https://github.com/rails-sqlserver/tiny_tds).  
+Im Codebeispiel wird die Funktion [tinytds:: result](https://github.com/rails-sqlserver/tiny_tds) verwendet, um ein Resultset aus einer Abfrage für die SQL-Datenbank abzurufen. Diese Funktion akzeptiert eine Abfrage und gibt ein Resultset zurück. Das Resultset wird mithilfe von " [result. each do | Row |](https://github.com/rails-sqlserver/tiny_tds)" durchlaufen.  
   
 ``` ruby 
     require 'tiny_tds'    
@@ -55,11 +54,11 @@ Im Codebeispiel das [tinytds:: result](https://github.com/rails-sqlserver/tiny_t
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3: Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie zum Ausführen einer [einfügen](../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher sind, übergibt Parameter zum Schutz Ihrer Anwendung vor [SQL-Einschleusung](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert.    
+In diesem Beispiel erfahren Sie, wie Sie eine [Insert](../../t-sql/statements/insert-transact-sql.md) -Anweisung sicher ausführen, Parameter übergeben, die Ihre Anwendung vor dem SQL- [einschleusungs](../../relational-databases/tables/primary-and-foreign-key-constraints.md) Wert schützen.    
   
-Um TinyTDS mit Azure verwenden zu können, wird empfohlen, dass Sie mehrere ausführen `SET` Anweisungen zu ändern, wie die aktuelle Sitzung bestimmte Informationen behandelt. Empfohlene `SET` Anweisungen werden im Codebeispiel bereitgestellt. Z. B. `SET ANSI_NULL_DFLT_ON` können neue Spalten erstellt, um null-Werte zulassen, auch wenn die NULL-zulässigkeitsstatus der Spalte nicht explizit angegeben ist.  
+Um tinytds mit Azure zu verwenden, empfiehlt es sich, mehrere `SET` Anweisungen auszuführen, um zu ändern, wie die aktuelle Sitzung bestimmte Informationen verarbeitet. Empfohlene `SET` Anweisungen werden im Codebeispiel bereitgestellt. Beispielsweise können `SET ANSI_NULL_DFLT_ON` neue Spalten, die erstellt werden, auch dann NULL-Werte zulassen, wenn der Zulässigkeit-Status der Spalte nicht explizit angegeben wird.  
   
-Um mit dem Microsoft SQL Server auszurichten ["DateTime"](../../t-sql/data-types/datetime-transact-sql.md) formatieren, verwenden Sie die [Strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) Funktion, die in das entsprechende Datetime-Format umgewandelt.  
+Um das Microsoft SQL Server [DateTime](../../t-sql/data-types/datetime-transact-sql.md) -Format auszurichten, verwenden Sie die Funktion " [strauftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) ", um Sie in das entsprechende DateTime-Format umzuwandeln.  
   
 ``` ruby
     require 'tiny_tds'  

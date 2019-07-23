@@ -1,5 +1,5 @@
 ---
-title: SupportsMultipleOpenResults-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportsmultipleopenresults-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9480d280-5e3d-46ae-80e6-1bba3ac5a641
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89d7321d4137f6d4d8ddc4cd3ce880358204ee9b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73eab48ff558a5a93eb64b3a9a908914003b579e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969267"
 ---
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsMultipleOpenResults()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsMultipleOpenResults-Methode wird von der SupportsMultipleOpenResults-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportsmultipleopenresults-Methode wird von der supportsmultipleopenresults-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

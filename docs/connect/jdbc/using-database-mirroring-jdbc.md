@@ -1,5 +1,5 @@
 ---
-title: Verwenden der Datenbankspiegelung (JDBC) | Microsoft-Dokumentation
+title: Verwenden der Daten Bank Spiegelung (JDBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916255"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Verwenden der Datenbankspiegelung (JDBC)
 

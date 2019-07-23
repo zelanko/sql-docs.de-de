@@ -1,5 +1,5 @@
 ---
-title: SetCatalog-Methode (SQLServerConnection) | Microsoft-Dokumentation
+title: setCatalog-Methode (SQLServerConnection) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e103a29dacea48c42f7d6602f8e8fcb924774ddf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974833"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog-Methode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +43,9 @@ public void setCatalog(java.lang.String catalog)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetCatalog-Methode wird durch die SetCatalog-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese setCatalog-Methode wird von der setCatalog-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
- Die *Katalog* Argument wird mit Escapezeichen versehen, indem die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatisch. Bei Verwendung dieser Methode wird die catalog-Eigenschaft für das Connection-Objekt festgelegt. Diese wird auf keine andere Weise implizit festgelegt.  
+ Das *catalog* -Argument wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatisch mit Escapezeichen versehen. Bei Verwendung dieser Methode wird die catalog-Eigenschaft für das Connection-Objekt festgelegt. Diese wird auf keine andere Weise implizit festgelegt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerConnection-Elemente](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c96654d1e16a3b730aa3f2a09f14da4c91971b9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064756"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -57,7 +56,7 @@ Ein weiterer nicht vergleichbarer Datentypen ist **sql_variant** mit einem der v
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines beliebigen Typs mit Ausnahme eines nicht vergleichbaren Datentyps.
   
 ## <a name="return-types"></a>Rückgabetypen
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
 `CHECKSUM` berechnet aus der Liste der Argumente einen Hashwert, der Prüfsumme genannt wird. Verwenden Sie diesen Hashwert zum Erstellen von Hashindizes. Wenn die `CHECKSUM`-Funktion Spaltenargumente aufweist, ist das Ergebnis ein Hashindex, und ein Index für den berechneten `CHECKSUM`-Wert wird erstellt. Dieser kann für Gleichheitssuchen in den Spalten verwendet werden.

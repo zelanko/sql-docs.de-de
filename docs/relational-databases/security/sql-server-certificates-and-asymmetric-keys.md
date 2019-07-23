@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 898125f2143f3470b340a565c3d72e021c19a721
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126829"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server-Zertifikate und asymmetrische Schlüssel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "58657226"
 ### <a name="using-a-certificate-in-sql-server"></a>Verwenden eines Zertifikats in SQL Server  
  Zertifikate können verwendet werden, um Verbindungen und Datenbankspiegelungen zu sichern, um Pakete und andere Objekte zu signieren oder um Daten und Verbindungen zu verschlüsseln. In der folgenden Tabelle werden zusätzliche Ressourcen für Zertifikate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgeführt.  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|Erklärt den Befehl zum Erstellen von Zertifikaten.|  
 |[Identifizieren der Quelle von Paketen mit digitalen Signaturen](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Zeigt Informationen über das Verwenden von Zertifikaten zur Signierung von Softwarepaketen an.|  
@@ -60,7 +59,7 @@ ms.locfileid: "58657226"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Verwenden eines asymmetrischen Schlüssels in SQL Server  
  Asymmetrische Schlüssel können verwendet werden, um Daten zu sichern oder Nur-Text zu signieren. In der folgenden Tabelle werden zusätzliche Ressourcen für asymmetrischen Schlüssel in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgeführt.  
   
-|Thema|Beschreibung|  
+|Thema|und Beschreibung|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|Erklärt den Befehl zum Erstellen von asymmetrischen Schlüsseln.|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|Erläutert die Optionen zum Signieren von Objekten.|  

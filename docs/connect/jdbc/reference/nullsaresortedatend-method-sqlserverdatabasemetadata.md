@@ -1,5 +1,5 @@
 ---
-title: NullsAreSortedAtEnd-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: nullsaresortedatend-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 248d28b199dfbdd92f84cca200735b8b3a66e8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0b81926e3e0e6b57f752391b3f6bac68b5ad7aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976683"
 ---
 # <a name="nullsaresortedatend-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtEnd-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean nullsAreSortedAtEnd()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn am Ende sortiert. Andernfalls lautet der Wert **false**.  
+ **true** , wenn Sie am Ende sortiert ist. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese NullsAreSortedAtEnd-Methode wird von der NullsAreSortedAtEnd-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese nullsaresortedatend-Methode wird von der nullsaresortedatend-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

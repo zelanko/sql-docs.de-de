@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014197"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 
@@ -35,7 +34,7 @@ In der Verbindungszeichenfolge kann beispielsweise ein sekundäres Replikat als 
 
 ## <a name="use-cases"></a>Einsatzgebiete
 
-Vor [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] leiten der Verfügbarkeitgruppenlistener und die entsprechende Clusterressource den Benutzerdatenverkehr an das primäre Replikat weiter, um die Verbindungswiederherstellung nach einem Failover sicherzustellen. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] unterstützt die Funktion des Verfügbarkeitgruppenlisteners weiterhin und fügt die Umleitung von Replikatverbindungen für Szenarien hinzu, in denen keine Listener verwendet werden kann. Zum Beispiel:
+Vor [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] leiten der Verfügbarkeitgruppenlistener und die entsprechende Clusterressource den Benutzerdatenverkehr an das primäre Replikat weiter, um die Verbindungswiederherstellung nach einem Failover sicherzustellen. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] unterstützt die Funktion des Verfügbarkeitgruppenlisteners weiterhin und fügt die Umleitung von Replikatverbindungen für Szenarien hinzu, in denen keine Listener verwendet werden kann. Beispiel:
 
 * Die Clustertechnologie, in die SQL Server-Verfügbarkeitsgruppen integriert sind, bietet keine Funktion, die einem Listener ähnelt. 
 * Eine Konfiguration mit mehreren Subnetzen wie z.B. die Cloud oder Floating IP mit Pacemaker mit mehreren Subnetzen – solche Konfigurationen können aufgrund der Menge an beteiligten Komponenten sehr komplex, fehleranfällig und schwer zu korrigieren sein.

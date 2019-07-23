@@ -1,5 +1,5 @@
 ---
-title: GetGeneratedKeys-Methode (SQLServerStatement) | Microsoft-Dokumentation
+title: getGeneratedKeys-Methode (SQLServerStatement) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a3325950-0e81-4ae8-aa0c-e1f6d371adcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e81fe589ed70f4d3f230713290f1d7f9b338ea67
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d47ff96fe493053e7a953cfbae53e52be95a0d62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982940"
 ---
 # <a name="getgeneratedkeys-method-sqlserverstatement"></a>getGeneratedKeys-Methode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public final java.sql.ResultSet getGeneratedKeys()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein ResultSet-Objekt.  
+ Ein Resultset-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetGeneratedKeys-Methode wird von der GetGeneratedKeys-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+ Diese getGeneratedKeys-Methode wird von der getGeneratedKeys-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
- Weitere Informationen zur Verwendung dieser Methode finden Sie unter [mithilfe von automatisch generierten Schlüssel](../../../connect/jdbc/using-auto-generated-keys.md).  
+ Weitere Informationen zur Verwendung dieser Methode finden Sie unter Verwenden von [automatisch generierten Schlüsseln](../../../connect/jdbc/using-auto-generated-keys.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerStatement-Elemente](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

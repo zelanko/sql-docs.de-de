@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c1b95ee7-7e82-418f-8f30-948589086f63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6521405173f72ffe7a72974d0f8ea0ec261bc9e9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8dba5603a0dcd3cb264b8c49883b1aa43101509
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973744"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader-long"></a>setNClob-Methode (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setNClob(java.lang.String parameterName,
   
  *reader*  
   
- Ein Readerobjekt.  
+ Ein Reader-Objekt.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public final void setNClob(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese Methode sollte verwendet werden, für die **NCHAR**, **NVARCHAR**, **NTEXT**, und **XML** Parameterdatentypen.  
+ Diese Methode sollte für **NCHAR**-, **nvarchar**-, **ntext**-und **XML** -Parameter Datentypen verwendet werden.  
   
  Diese setNClob-Methode wird von der setNClob-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   

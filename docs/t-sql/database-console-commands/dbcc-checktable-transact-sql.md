@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c3c8e4e2617e3bf1cd7f5f3627aab0c9a4cf0be4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102014"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -144,7 +143,7 @@ DBCC CHECKTABLE überprüft für die angegebene Tabelle Folgendes:
 -   Überprüft, ob die Seitenoffsets sinnvoll sind.    
 -   Überprüft, ob es für jede Zeile in der Basistabelle eine entsprechende Zeile in jedem nicht gruppierten Index gibt und umgekehrt.    
 -   Überprüft, ob sich jede Zeile in einer partitionierten Tabelle oder einem partitionierten Index in der richtigen Partition befindet.    
--   Überprüft die Konsistenz auf Linkebene zwischen dem Dateisystem und der Tabelle, wenn die **varbinary(max)**-Daten mit FILESTREAM im Dateisystem gespeichert werden.    
+-   Überprüft die Konsistenz auf Linkebene zwischen dem Dateisystem und der Tabelle, wenn die **varbinary(max)** -Daten mit FILESTREAM im Dateisystem gespeichert werden.    
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>Ausführen logischer Konsistenzprüfungen an Indizes    
 Die logische Konsistenzprüfung an Indizes variiert wie folgt je nach dem Kompatibilitätsgrad der Datenbank:
@@ -168,8 +167,8 @@ Wenn eine Momentaufnahme nicht erstellt werden kann oder TABLOCK angegeben ist, 
 > Wird DBCC CHECKTABLE für tempdb ausgeführt, muss eine freigegebene Tabellensperre erworben werden. Dies liegt daran, dass aus Leistungsgründen keine Datenbankmomentaufnahmen auf tempdb verfügbar sind. Dies bedeutet, dass die erforderliche Transaktionskonsistenz nicht erhalten werden kann.    
     
 ## <a name="checking-and-repairing-filestream-data"></a>Überprüfen und Reparieren von FILESTREAM-Daten    
-Wenn FILESTREAM für eine Datenbank und eine Tabelle aktiviert ist, können Sie **varbinary(max)**-BLOBs (Binary Large Objects) optional im Dateisystem speichern. Wenn Sie DBCC CHECKTABLE für eine Tabelle verwenden, die BLOBs im Dateisystem speichert, überprüft DBCC die Konsistenz auf Linkebene zwischen dem Dateisystem und der Datenbank.
-Wenn eine Tabelle beispielsweise eine **varbinary(max)**-Spalte mit dem FILESTREAM-Attribut enthält, überprüft DBCC CHECKTABLE, ob zwischen den Dateisystemverzeichnissen und -dateien und den Tabellenzeilen, Spalten und Spaltenwerten eine 1:1-Zuordnung besteht. DBCC CHECKTABLE kann Beschädigungen reparieren, wenn Sie die REPAIR_ALLOW_DATA_LOSS-Option angeben. Zum Reparieren einer FILESTREAM-Beschädigung löscht DBCC alle Tabellenzeilen, für die Dateisystemdaten fehlen, sowie alle Verzeichnisse und Dateien, die keiner Tabellenzeile, keiner Spalte oder keinem Spaltenwert zugeordnet sind.
+Wenn FILESTREAM für eine Datenbank und eine Tabelle aktiviert ist, können Sie **varbinary(max)** -BLOBs (Binary Large Objects) optional im Dateisystem speichern. Wenn Sie DBCC CHECKTABLE für eine Tabelle verwenden, die BLOBs im Dateisystem speichert, überprüft DBCC die Konsistenz auf Linkebene zwischen dem Dateisystem und der Datenbank.
+Wenn eine Tabelle beispielsweise eine **varbinary(max)** -Spalte mit dem FILESTREAM-Attribut enthält, überprüft DBCC CHECKTABLE, ob zwischen den Dateisystemverzeichnissen und -dateien und den Tabellenzeilen, Spalten und Spaltenwerten eine 1:1-Zuordnung besteht. DBCC CHECKTABLE kann Beschädigungen reparieren, wenn Sie die REPAIR_ALLOW_DATA_LOSS-Option angeben. Zum Reparieren einer FILESTREAM-Beschädigung löscht DBCC alle Tabellenzeilen, für die Dateisystemdaten fehlen, sowie alle Verzeichnisse und Dateien, die keiner Tabellenzeile, keiner Spalte oder keinem Spaltenwert zugeordnet sind.
     
 ## <a name="checking-objects-in-parallel"></a>Paralleles Überprüfen von Objekten    
 Standardmäßig führt DBCC CHECKTABLE eine parallele Überprüfung von Objekten durch. Der Grad der Parallelität wird automatisch durch den Abfrageprozessor bestimmt. Der maximale Grad der Parallelität wird auf dieselbe Weise konfiguriert wie der maximale Grad bei parallelen Abfragen. Verwenden Sie [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), um die maximale Anzahl von Prozessoren zu beschränken, die für DBCC-Überprüfungen verfügbar sind. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
@@ -181,7 +180,7 @@ Die parallele Überprüfung kann mithilfe des Ablaufverfolgungsflags 2528 deakti
 ## <a name="understanding-dbcc-error-messages"></a>Grundlegendes zu DBCC-Fehlermeldungen    
 Nach Beendigung des Befehls DBCC CHECKTABLE wird eine Meldung in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben. Wurde der DBCC-Befehl erfolgreich ausgeführt, zeigt die Meldung den erfolgreichen Abschluss und die Ausführungsdauer des Befehls an. Wurde der DBCC-Befehl aufgrund eines Fehlers vor Abschluss der Überprüfung beendet, zeigt die Meldung an, dass der Befehl beendet wurde. Außerdem wird ein Statuswert und die Ausführungsdauer des Befehls angegeben. In der folgenden Tabelle sind die Statuswerte aufgeführt und beschrieben, die in der Meldung enthalten sein können.
     
-|Status|Beschreibung|    
+|Status|und Beschreibung|    
 |-----------|-----------------|    
 |0|Fehlernummer 8930 wurde ausgelöst. Dies weist auf beschädigte Metadaten hin, die die Beendigung des DBCC-Befehls verursacht haben.|    
 |1|Fehlernummer 8967 wurde ausgelöst. Ein interner DBCC-Fehler ist aufgetreten.|    

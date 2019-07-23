@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1e66a6a38350e131f24ea8ba1777b89b97cacec2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c5451cddba8a1719e9672c0d10ffe4a62c960d38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114823"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY-Berechtigungen für Volltext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ DENY permission [ ,...n ] ON
  *permission*  
  Der Name einer Berechtigung. Die gültigen Zuordnungen von Berechtigungen zu sicherungsfähigen Elementen werden im Abschnitt mit den Hinweisen weiter unten in diesem Thema beschrieben.  
   
- ON FULLTEXT CATALOG **::**_Volltext-Katalogname_  
+ ON FULLTEXT CATALOG **::** _Volltext-Katalogname_  
  Gibt den Volltextkatalog an, für den die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
- ON FULLTEXT STOPLIST **::**_Volltext-Stopplistenname_  
+ ON FULLTEXT STOPLIST **::** _Volltext-Stopplistenname_  
  Gibt die Volltext-Stoppliste an, für die die Berechtigung verweigert wird. Der Bereichsqualifizierer **::** ist erforderlich.  
   
  *database_principal*  
@@ -136,9 +135,8 @@ DENY permission [ ,...n ] ON
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [GRANT (Berechtigungen für Volltext) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)  

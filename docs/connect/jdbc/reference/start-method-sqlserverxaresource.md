@@ -1,5 +1,5 @@
 ---
-title: Start-Methode (SQLServerXAResource) | Microsoft-Dokumentation
+title: Start-Methode (sqlserverxaresource) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 33c90213-92f7-416b-b2fa-67a1afe64e97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 64f19e58bcc22160008e007a418c8e40021deb90
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cef1af2c416231892ea74a7def90237f84b036d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970036"
 ---
 # <a name="start-method-sqlserverxaresource"></a>start-Methode (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +38,11 @@ public void start(javax.transaction.xa.Xid xid,
 #### <a name="parameters"></a>Parameter  
  *xid*  
   
- Ein Xid-Objekt.  
+ Ein xid-Objekt.  
   
  *flags*  
   
- Ein **Int** Wert.  
+ Ein **int** -Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  

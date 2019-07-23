@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914595"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement hat den ID-Wert 0. Die negativen ID-Werte sind reserviert.|  
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Das durch diese ID identifizierte übergeordnete Element ist nicht notwendigerweise das übergeordnete Element; dies hängt vielmehr vom Knotentyp (NodeType) des Knotens ab, dessen übergeordnetes Element nicht von dieser ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
-|**nodetype**|**ssNoversion**|Identifiziert den Knotentyp. Eine ganze Zahl, die der XML DOM-Knotentypnummer (Document Object Model) entspricht.<br /><br /> Die Knotentypen sind Folgende:<br /><br /> 1 = Elementknoten<br /><br /> 2 = Attributknoten<br /><br /> 3 = Textknoten|  
+|**nodetype**|**int**|Identifiziert den Knotentyp. Eine ganze Zahl, die der XML DOM-Knotentypnummer (Document Object Model) entspricht.<br /><br /> Die Knotentypen sind Folgende:<br /><br /> 1 = Elementknoten<br /><br /> 2 = Attributknoten<br /><br /> 3 = Textknoten|  
 |**localname**|**nvarchar**|Gibt den lokalen Namen des Elements oder Attributs an. Ist NULL, wenn das DOM-Objekt keinen Namen hat.|  
 |**Präfix**|**nvarchar**|Das Namespacepräfix des Knotennamens.|  
 |**namespaceuri**|**nvarchar**|Der Namespace-URI (Universal Resource Identifier) des Knotens. Ist der Wert NULL, ist kein Namespace vorhanden.|  

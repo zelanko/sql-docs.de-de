@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13f8769a5f97bab03b9466974c649dd2c5e7129
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5c8971810d7122bad77142d61d36820092e39a6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128350"
 ---
 # <a name="distribution-agent-security"></a>Sicherheit für den Verteilungs-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "54135010"
   
  Alle Konten müssen gültig sein, und für jedes Konto muss das richtige Kennwort angegeben sein. Konten und Kennwörter werden erst bei der Ausführung eines Agents überprüft.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Process Account**  
  Geben Sie ein Windows-Konto ein, unter dem der Verteilungs-Agent ausgeführt wird:  
   

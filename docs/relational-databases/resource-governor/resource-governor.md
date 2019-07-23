@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5d08658126071ce715e217b64a14b563a1d228f2
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912056"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,6 +90,6 @@ ms.locfileid: "53379952"
 |Beschreibt, wie Eigenschaften der Ressourcenkontrolle angezeigt werden.|[Anzeigen der Eigenschaften der Ressourcenkontrolle](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenbank-Engine-Instanzen &amp;amp;#40;SQL Server&amp;amp;#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
+ [Datenbank-Engine-Instanzen &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

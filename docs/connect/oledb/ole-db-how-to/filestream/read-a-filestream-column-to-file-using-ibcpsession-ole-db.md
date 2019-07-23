@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 83fed2e13ad83bdaaf6bb389ae3763210b0e4bd5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015597"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Lesen einer FILESTREAM-Spalte in eine Datei mithilfe von IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66791536"
 
   Dieses Beispiel liest mithilfe der IBCPSession-Schnittstelle eine FILESTREAM-Spalte in eine Datei und schreibt eine Formatdatei.  
   
- Weitere Informationen zur Filestream-Funktion finden Sie unter [FILESTREAM-Unterstützung](../../../oledb/features/filestream-support.md).  
+ Weitere Informationen zur FILESTREAM-Funktion finden Sie [unter FILESTREAM-Unterstützung](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Beispiel  
  Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das „msoledbsql.h“ enthält.  

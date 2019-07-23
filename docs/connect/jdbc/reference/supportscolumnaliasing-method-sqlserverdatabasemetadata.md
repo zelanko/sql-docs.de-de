@@ -1,5 +1,5 @@
 ---
-title: SupportsColumnAliasing-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: supportscolennaliasing-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85699f09-6456-4ee7-b46b-d6103e6ce0ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0d5a60f450978f94cb9d58f381da75be6ca0c3c9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b652b5c333e51f8c8b961a44cfe2be658535f57a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969652"
 ---
 # <a name="supportscolumnaliasing-method-sqlserverdatabasemetadata"></a>supportsColumnAliasing-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsColumnAliasing()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SupportsColumnAliasing-Methode wird von der SupportsColumnAliasing-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese supportscolennaliasing-Methode wird von der supportscolennaliasing-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

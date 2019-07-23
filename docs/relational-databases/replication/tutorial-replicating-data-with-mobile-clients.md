@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895371"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Lernprogramm: Konfigurieren der Replikation zwischen einem Server und mobilen Clients (Mergereplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Die Mergereplikation stellt eine geeignete Lösung für das Problem des Verschiebens von Daten zwischen einem zentralen Server und mobilen Clients dar, die nur gelegentlich miteinander verbunden sind. Mithilfe der Replikations-Assistenten können Sie eine Mergereplikationstopologie auf einfache Weise konfigurieren und verwalten. 
 
@@ -108,7 +107,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
 
     
   
-10. Klicken Sie erst auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)**, dann auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
+10. Klicken Sie erst auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)** , dann auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
     A. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** den Eintrag **Sales.SalesOrderDetail** aus. Klicken Sie auf **Write the join statement manually** (Joinanweisung manuell schreiben), und schließen Sie den Vorgang wie folgt ab:  
   
@@ -139,7 +138,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
 
     ![Optionsauswahl zum sofortigen Erstellen einer Momentaufnahme](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. Wählen Sie auf der Seite **Agentsicherheit** die Option **Sicherheitseinstellungen** aus. Geben Sie zuerst <*Name_des_Verlegercomputers*>**\repl_snapshot** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie anschließend auf **OK**. Wählen Sie **Weiter**aus.  
+22. Wählen Sie auf der Seite **Agentsicherheit** die Option **Sicherheitseinstellungen** aus. Geben Sie zuerst <*Name_des_Verlegercomputers*> **\repl_snapshot** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Klicken Sie anschließend auf **OK**. Wählen Sie **Weiter**aus.  
 
     ![Optionsauswahl zum Festlegen der Sicherheit für den Momentaufnahme-Agent](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -167,7 +166,7 @@ In diesem Abschnitt erfahren Sie, wie Sie mithilfe von [!INCLUDE[ssManStudioFull
   
    A. Wählen Sie die Seite **Veröffentlichungszugriffsliste** und anschließend **Hinzufügen** aus. 
   
-   B. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** auf <*Name_des_Verlegercomputers*>**\repl_merge** und anschließend auf **OK**. Wählen Sie erneut **OK** aus. 
+   B. Klicken Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** auf <*Name_des_Verlegercomputers*> **\repl_merge** und anschließend auf **OK**. Wählen Sie erneut **OK** aus. 
 
    ![Optionsauswahl zum Hinzufügen der Anmeldung des Merge-Agents](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -205,7 +204,7 @@ In diesem Abschnitt erfahren Sie, wie Sie der zuvor erstellten Mergeveröffentli
 
    ![Optionsauswahl zum Hinzufügen einer Datenbank zum Abonnenten](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Klicken Sie auf der Seite **Sicherheit für den Merge-Agent** auf die Schaltfläche mit den Auslassungspunkten (**…**). Geben Sie zuerst <*Name_des_Abonnentencomputers*>**\repl_merge** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Wählen Sie nacheinander **OK**, **Weiter** und anschließend noch einmal **Weiter** aus.  
+8. Klicken Sie auf der Seite **Sicherheit für den Merge-Agent** auf die Schaltfläche mit den Auslassungspunkten ( **…** ). Geben Sie zuerst <*Name_des_Abonnentencomputers*> **\repl_merge** in das Feld **Prozesskonto** und anschließend das Kennwort für dieses Konto ein. Wählen Sie nacheinander **OK**, **Weiter** und anschließend noch einmal **Weiter** aus.  
 
    ![Optionsauswahl für die Sicherheit für den Merge-Agent](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -227,7 +226,7 @@ In diesem Abschnitt erfahren Sie, wie Sie der zuvor erstellten Mergeveröffentli
   
 1. Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Abonnenten her. Erweitern Sie den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und klicken Sie anschließend auf **Neue Anmeldung**.  
   
-   Klicken Sie auf der Seite **Allgemein** auf **Suchen**, und geben Sie dann im Feld **Geben Sie den Objektnamen ein** die Zeichenfolge <*Name_des_Abonnentencomputers*>**\repl_merge** ein. Klicken Sie auf **Namen überprüfen** und dann auf **OK**. 
+   Klicken Sie auf der Seite **Allgemein** auf **Suchen**, und geben Sie dann im Feld **Geben Sie den Objektnamen ein** die Zeichenfolge <*Name_des_Abonnentencomputers*> **\repl_merge** ein. Klicken Sie auf **Namen überprüfen** und dann auf **OK**. 
     
    ![Optionsauswahl zum Festlegen der Anmeldung](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993457"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Gewusst wie: Abrufen von Eingabe- und Ausgabeparametern mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -123,10 +122,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Wenn ein Eingabe-/Ausgabeparameter in einen Bigint-Typ, zu binden, wenn der Wert außerhalb des Bereichs von anwachsen ein [ganze Zahl](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), Sie müssen die SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben. Andernfalls kann dies zu einer Ausnahme "der Wert außerhalb des gültigen Bereichs" führen.
+> Wenn ein Eingabe-/Ausgabeparameter an einen bigint-Typ gebunden wird, müssen Sie den SQL-Feldtyp als SQLSRV_SQLTYPE_BIGINT angeben, wenn der Wert möglicherweise außerhalb des Bereichs einer [ganzen](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)Zahl liegt. Andernfalls kann dies zu einer Ausnahme vom Typ "Wert außerhalb des gültigen Bereichs" führen.
 
 ## <a name="example-2"></a>Beispiel 2
-In diesem Codebeispiel wird veranschaulicht, wie einen große Bigint-Wert als Eingabe/Ausgabe-Parameter gebunden wird.  
+Dieses Codebeispiel zeigt, wie ein großer bigint-Wert als Eingabe-/Ausgabeparameter gebunden wird.  
 
 ```
 <?php

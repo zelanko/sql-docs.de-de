@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d22165af735fe807149dffb6f5e60a35fc33184
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbd58058799a6f6b62574d1926161d828b95d937
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110394"
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB-Datenbank)
 
@@ -35,10 +34,10 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
 ## <a name="arguments"></a>Argumente  
  [ @property_name = ] *property_name*  
- Der Name der Katalogeigenschaft. Das Argument *property_name* ist vom Typ **nvarchar(255)**. Weitere Informationen zu verfügbaren Eigenschaften siehe [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) (catalog.catalog_properties &#40;SSISDB-Datenbank&#41;).  
+ Der Name der Katalogeigenschaft. Das Argument *property_name* ist vom Typ **nvarchar(255)** . Weitere Informationen zu verfügbaren Eigenschaften siehe [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) (catalog.catalog_properties &#40;SSISDB-Datenbank&#41;).  
   
  [ @property_value = ] *property_value*  
- Der Wert der Katalogeigenschaft. Das Argument *property_value* ist vom Typ **nvarchar(255)**. Weitere Informationen zu Eigenschaftswerten siehe [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) (catalog.catalog_properties &#40;SSISDB-Datenbank&#41;).  
+ Der Wert der Katalogeigenschaft. Das Argument *property_value* ist vom Typ **nvarchar(255)** . Weitere Informationen zu Eigenschaftswerten siehe [catalog.catalog_properties &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) (catalog.catalog_properties &#40;SSISDB-Datenbank&#41;).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
