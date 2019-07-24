@@ -1,5 +1,5 @@
 ---
-title: Sp_query_store_force_plan (Transact-SQL) | Microsoft-Dokumentation
+title: sp_query_store_force_plan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9a23f839fcb828d9c90198d8aadffb6a8cfe0ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07d2e8032bb596faaac577194273760c59006645
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896445"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418861"
 ---
-# <a name="spquerystoreforceplan-transact-sql"></a>Sp_query_store_force_plan (Transact-SQL)
+# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Ermöglicht das Erzwingen eines bestimmten Plans für eine bestimmte Abfrage.  
   
- Wenn ein Plan erzwungen wird für eine bestimmte Abfrage jedes Mal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] findet die Abfrage, wird versucht, den Plan in der Abfrageoptimierer zu erzwingen. Wenn das Erzwingen eines Plans ein Fehler auftritt, ein XEvent wird ausgelöst, und der Optimierer angewiesen, auf die übliche Weise zu optimieren.  
+ Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, wird jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mal, wenn die Abfrage gefunden wird, versucht, den Plan im Optimierer zu erzwingen. Wenn die Plan Erzwingung fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, auf normale Weise zu optimieren.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @query_id = ] query_id` Ist die Id der Abfrage. *Query_id* ist eine **Bigint**, hat keinen Standardwert.  
+`[ @query_id = ] query_id`Die ID der Abfrage. *query_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
   
-`[ @plan_id = ] plan_id` Ist die Id des Abfrageplans erzwungen werden. *Plan_id* ist eine **Bigint**, hat keinen Standardwert.  
+`[ @plan_id = ] plan_id`Die ID des Abfrage Plans, der erzwungen werden soll. *plan_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -55,10 +55,10 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **einfügen**, **UPDATE**, und **löschen** -Berechtigung für den Abfrage-Store-Katalog Ansichten.  
+ Erfordert die **Alter** -Berechtigung für die Datenbank.
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt Informationen zu den Abfragen im Abfragespeicher zurück.  
+ Im folgenden Beispiel werden Informationen zu den Abfragen im Abfrage Speicher zurückgegeben.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -69,7 +69,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Nachdem Sie identifiziert die Query_id und ' plan_id ', die Sie erzwingen möchten, verwenden Sie das folgende Beispiel, um der Abfrage verwendet einen Plan zu erzwingen.  
+ Nachdem Sie die query_id und plan_id identifiziert haben, die Sie erzwingen möchten, verwenden Sie das folgende Beispiel, um zu erzwingen, dass die Abfrage einen Plan verwendet.  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  
@@ -81,7 +81,7 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [sp_query_store_reset_exec_stats &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
   
   

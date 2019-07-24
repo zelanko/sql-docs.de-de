@@ -1,75 +1,79 @@
 ---
-title: Konfigurieren Sie die HDFS-tiering
+title: Konfigurieren von HDFS-Tiering
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird erläutert, wie HDFS, die Informationen zum Einbinden von eines externen Systems von Azure Data Lake Store-Datei in HDFS auf eine SQL Server-2019 big Data-Cluster (Vorschau) tiering konfiguriert.
+description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurieren, um ein externes Azure Data Lake Storage Dateisystem in HDFS in einem SQL Server 2019 Big Data-Cluster (Vorschau) einbinden zu können.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958319"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419377"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Konfigurieren von HDFS cloudtiering auf SQL Server-big Data-Cluster
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Konfigurieren von HDFS-Tiering auf SQL Server Big Data Clustern
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS-Tiering bietet die Möglichkeit zum Bereitstellen von externen, HDFS-kompatiblen Dateisystem in HDFS. In diesem Artikel wird erläutert, wie HDFS, die Staffelung für SQL Server-2019 big Data-Clustern (Vorschau) zu konfigurieren. Zu diesem Zeitpunkt wird die Verbindung mit Azure Data Lake-Speicher Gen2 und Amazon S3 unterstützt. 
+HDFS-Tiering bietet die Möglichkeit, ein externes, HDFS-kompatibles Dateisystem in HDFS bereitzustellen. In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering für SQL Server 2019 Big Data Cluster (Vorschauversion) konfigurieren. Zurzeit unterstützen wir das Herstellen einer Verbindung mit Azure Data Lake Storage Gen2 und Amazon S3. 
 
-## <a name="hdfs-tiering-overview"></a>HDFS-tiering-Übersicht
+## <a name="hdfs-tiering-overview"></a>Übersicht über das HDFS-Tiering
 
-Mit tiering, können Anwendungen problemlos Daten in einer Vielzahl von externen zugreifen, als ob die Daten in das lokale HDFS gespeichert. Einbindung ist ein Metadatenvorgang, in die Metadaten, die den Namespace auf dem System externe Datei wird beschrieben, über in Ihrer lokalen HDFS kopiert. Zu diesen Metadaten gehören Informationen zu den externen Verzeichnisse und Dateien sowie deren Berechtigungen und ACLs. Die entsprechenden Daten ist nur kopiert bei Bedarf aus, wenn die Daten selbst über z. B. eine Abfrage zugegriffen werden. Die externe Dateisystem-Daten können jetzt von der SQL Server-big Data-Cluster zugegriffen werden. Sie können Spark-Aufträge und SQL-Abfragen für diese Daten auf die gleiche Weise ausführen, die Sie für alle lokalen Daten in HDFS im Cluster ausgeführt werden würde.
+Beim Tiering können Anwendungen nahtlos auf Daten in einer Vielzahl externer Speicher zugreifen, als ob sich die Daten im lokalen HDFS befinden. Die Einbindung ist ein Metadatenvorgang, bei dem die Metadaten, die den Namespace im externen Dateisystem beschreiben, in Ihr lokales HDFS kopiert werden. Diese Metadaten enthalten Informationen zu den externen Verzeichnissen und Dateien zusammen mit ihren Berechtigungen und ACLs. Die entsprechenden Daten werden nur bei Bedarf kopiert, wenn auf die Daten selbst über eine Abfrage zugegriffen wird. Der Zugriff auf die externen Dateisystem Daten ist jetzt über den SQL Server Big Data-Cluster möglich. Sie können Spark-Aufträge und SQL-Abfragen für diese Daten auf die gleiche Weise ausführen, wie Sie Sie auf allen lokalen Daten ausführen, die in HDFS im Cluster gespeichert sind.
 
 ### <a name="caching"></a>Caching
-Heute wird standardmäßig 1 % der Gesamtspeicher HDFS reserviert für die Zwischenspeicherung von bereitgestellten Daten. Das Zwischenspeichern ist eine globale Einstellung über Bereitstellungen hinweg.
+Heutzutage wird standardmäßig 1% des gesamten HDFS-Speichers für das Zwischenspeichern der bereitgestellten Daten reserviert. Caching ist eine globale Einstellung für alle bereit Stellungen.
 
 > [!NOTE]
-> HDFS zu Cloudtiering ist ein Feature von Microsoft entwickelt wurde, und eine frühere Version als Teil der Apache Hadoop 3.1 Verteilungspunkte freigegeben wurde. Weitere Informationen finden Sie unter [ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806) Details.
+> HDFS-Tiering ist ein Feature, das von Microsoft entwickelt wurde, und eine frühere Version von Microsoft wurde als Teil der Apache Hadoop 3,1-Verteilung veröffentlicht. Weitere Informationen finden [https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) Sie unter.
 
-Die folgenden Abschnitte enthalten ein Beispiel für HDFS, die horizontale Skalierung mit einer Azure Data Lake-Speicher Gen2-Datenquelle konfigurieren.
+In den folgenden Abschnitten wird ein Beispiel für die Konfiguration von HDFS-Tiering mit einer Azure Data Lake Storage Gen2-Datenquelle bereitgestellt.
+
+## <a name="refresh"></a>Aktualisieren
+
+Das HDFS-Tiering unterstützt die Aktualisierung. Aktualisieren Sie eine vorhandene Anwendung für die aktuelle Momentaufnahme der Remote Daten.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-- [Bereitgestellte big Data-cluster](deployment-guidance.md)
-- [Big Data-tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Bereitgestellter Big Data Cluster](deployment-guidance.md)
+- [Big Data-Tools](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
 
-## <a name="mounting-instructions"></a>Bereitstellen von Anweisungen
+## <a name="mounting-instructions"></a>Anweisungen zur Bereitstellung
 
-Wir unterstützen das Herstellen einer Verbindung mit Azure Data Lake-Speicher Gen2 und Amazon S3. Anweisungen zum Bereitstellen von gegen diese Art von Speicher finden Sie in den folgenden Artikeln:
+Wir unterstützen das Herstellen einer Verbindung mit Azure Data Lake Storage Gen2 und Amazon S3. Anweisungen zum Einbinden dieser Speichertypen finden Sie in den folgenden Artikeln:
 
-- [Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster](hdfs-tiering-mount-adlsgen2.md)
-- [Wie Sie Mount S3 für HDFS-Staffelung in einem big Data-cluster](hdfs-tiering-mount-s3.md)
+- [Einbinden von ADLS Gen2 für HDFS-Tiering in einem Big Data Cluster](hdfs-tiering-mount-adlsgen2.md)
+- [Einbinden von S3 für HDFS-Tiering in einem Big Data Cluster](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Bekannte Probleme und Einschränkungen
+## <a id="issues"></a>Bekannte Probleme und Einschränkungen
 
-Die folgende Liste enthält bekannte Probleme und aktuelle Einschränkungen der Verwendung von HDFS-Staffelung in SQL Server-big Data-Cluster:
+Die folgende Liste enthält bekannte Probleme und die aktuellen Einschränkungen bei der Verwendung von HDFS-Tiering in SQL Server Big Data Clustern:
 
-- Wenn die Bereitstellung im hängengeblieben ist eine `CREATING` Status seit langem, er hat in den meisten Fällen nicht. Brechen Sie in diesem Fall den Befehl ab, und löschen Sie die Bereitstellung aus, falls erforderlich. Stellen Sie sicher, dass die Parameter und Anmeldeinformationen vor der Wiederholung richtig sind.
+- Wenn die Festlegung für einen längeren `CREATING` Zeitraum in einem Zustand bleibt, ist wahrscheinlich ein Fehler aufgetreten. Brechen Sie in diesem Fall den Befehl ab, und löschen Sie die Eingabe, falls erforderlich. Vergewissern Sie sich, dass die Parameter und Anmelde Informationen richtig sind
 
-- Bereitstellungen können nicht auf vorhandene Verzeichnisse erstellt werden.
+- Für vorhandene Verzeichnisse können keine bereit Stellungen erstellt werden.
 
-- Bereitstellungen können nicht innerhalb von vorhandenen Bereitstellungen erstellt werden.
+- Bereit Stellungen können nicht innerhalb vorhandener bereit Stellungen erstellt werden.
 
-- Wenn alle Vorgänger des Bereitstellungspunkts-nicht vorhanden sind, werden sie mit den Berechtigungen erstellt werden standardmäßig auf R-Xr-Xr-X (555).
+- Wenn keiner der Vorgänger des einstellungspunkts vorhanden ist, wird er mit den Berechtigungen erstellt, die standardmäßig auf r-XR-XR-x (555).
 
-- Erstellen der Bereitstellung kann eine Weile dauern je nach Anzahl und Größe der Dateien, die bereitgestellt wird. Während dieses Vorgangs nicht die Dateien in die Bereitstellung für Benutzer sichtbar sind. Während die Bereitstellung erstellt wird, werden alle Dateien hinzugefügt werden, in einen temporären Pfad, deren Standard `/_temporary/_mounts/<mount-location>`.
+- Die Erstellung der Bereitstellung kann je nach Anzahl und Größe der bereitgestellten Dateien einige Zeit in Anspruch nehmen. Während dieses Vorgangs sind die Dateien unter der einreilegung für die Benutzer nicht sichtbar. Während der Erstellung werden alle Dateien einem temporären Pfad hinzugefügt, dessen Standard `/_temporary/_mounts/<mount-location>`ist.
 
-- Der Ladebefehl für die Erstellung erfolgt asynchron. Nachdem der Befehl ausgeführt wurde, kann der Bereitstellungsstatus überprüft werden, um den Status der Bereitstellung zu verstehen.
+- Der Befehl "Mount Creation" ist asynchron. Nachdem der Befehl ausgeführt wurde, kann der Einstellungsstatus geprüft werden, um den Status der einreistellung zu verstehen.
 
-- Wenn Sie die Bereitstellung zu erstellen, wird das Argument für verwendet **--Bereitstellungspfad** ist im Wesentlichen ein eindeutiger Bezeichner der Bereitstellung. Die gleiche Zeichenfolge (einschließlich der "/" am Ende, falls vorhanden) muss in allen nachfolgenden Befehlen verwendet werden.
+- Beim Erstellen der Einrichtung ist das für " **--Mount-Path** " verwendete Argument im Grunde ein eindeutiger Bezeichner für die einreilegung. Die gleiche Zeichenfolge (einschließlich "/" am Ende, falls vorhanden) muss in nachfolgenden Befehlen verwendet werden.
 
-- Die Bereitstellungen sind schreibgeschützt. Sie können keine Verzeichnisse oder Dateien in einen Bereitstellungspunkt erstellen.
+- Die bereit Stellungen sind schreibgeschützt. Es ist nicht möglich, Verzeichnisse oder Dateien unter einer einreilegung zu erstellen.
 
-- Wir empfehlen nicht, Einbinden von Verzeichnissen und Dateien, die geändert werden können. Nachdem die Bereitstellung erstellt wurde, werden Änderungen oder Updates am Remotestandort, nicht in die Bereitstellung in HDFS übernommen. Wenn Änderungen am Remotestandort auftreten, können Sie auswählen, löschen und neu erstellen der Bereitstellung entsprechend den aktualisierten Zustand.
+- Es wird nicht empfohlen, Verzeichnisse und Dateien zu ändern, die sich ändern können. Nachdem die Erstellung erstellt wurde, werden Änderungen oder Aktualisierungen am Remote Speicherort nicht mehr in der einreitung in HDFS berücksichtigt. Wenn am Remote Speicherort Änderungen vorgenommen werden, können Sie die Festlegung löschen und neu erstellen, um den aktualisierten Zustand widerzuspiegeln.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server-2019 big Data-Cluster, finden Sie unter [was SQL Server-2019 big Data-Cluster sind?](big-data-cluster-overview.md).
+Weitere Informationen zu SQL Server 2019 Big Data-Clustern finden Sie unter [Was sind SQL Server 2019 Big Data Cluster?](big-data-cluster-overview.md).

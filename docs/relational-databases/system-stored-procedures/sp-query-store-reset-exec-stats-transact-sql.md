@@ -1,5 +1,5 @@
 ---
-title: Sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b865a0252b4a5f817d879dc2fd3318cfc11ecdd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f20c4740868e0256ceb88c604b5a3eb021d367e5
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990412"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418929"
 ---
-# <a name="spquerystoreresetexecstats-transact-sql"></a>Sp_query_store_reset_exec_stats (Transact-SQL)
+# <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Löscht die Laufzeitstatistiken für einen bestimmten Abfrageplan aus dem Abfragespeicher an.  
+  Löscht die Lauf Zeit Statistiken für einen bestimmten Abfrageplan aus dem Abfrage Speicher.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @plan_id = ] plan_id` Ist die Id des Abfrageplans wird gelöscht. *Plan_id* ist eine **Bigint**, hat keinen Standardwert.  
+`[ @plan_id = ] plan_id`Die ID des Abfrage Plans, der gelöscht werden soll. *plan_id* ist vom Datentyp **bigint**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -51,10 +51,10 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Hinweise  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **EXECUTE** -Berechtigung für die Datenbank und **löschen** -Berechtigung für der Katalogsichten des Abfragespeichers.  
+ Erfordert die **Alter** -Berechtigung für die Datenbank. 
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt Informationen zu den Abfragen im Abfragespeicher zurück.  
+ Im folgenden Beispiel werden Informationen zu den Abfragen im Abfrage Speicher zurückgegeben.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Nachdem Sie die Plan_id, die Sie die Statistik löschen möchten identifiziert, verwenden Sie das folgende Beispiel, um die Ausführung Statistiken für einen bestimmten Abfrageplan zu löschen. Dieses Beispiel löscht die Ausführung Statistiken für die Plannummer 3.  
+ Nachdem Sie die plan_id identifiziert haben, für die Sie die Statistik löschen möchten, verwenden Sie das folgende Beispiel, um die Ausführungs Statistik für einen bestimmten Abfrageplan zu löschen. In diesem Beispiel werden die Ausführungs Statistiken für die Plan Nummer 3 gelöscht.  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f95f3fcc7f904ef7ff51139c71ee77fbfad213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084073"
 ---
 # <a name="log-file-viewer"></a>Protokolldatei-Viewer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47671678"
   
 -   Remotewartungspläne  
   
--   SQL Server  
+-   SQL Server  
   
 -   SQL Server-Agent  
   
@@ -53,8 +52,8 @@ ms.locfileid: "47671678"
 |Beschreibt, wie Offlineprotokolldateien über registrierte Server angezeigt werden und wie WMI-Berechtigungen überprüft werden.|[Anzeigen von Offlineprotokolldateien](../../relational-databases/logs/view-offline-log-files.md)|  
 |Öffnet die F1-Hilfe für den Protokolldatei-Viewer.|[Protokolldatei-Viewer (F1-Hilfe)](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [SQL Server Audit &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server-Agent-Fehlerprotokoll](../../ssms/agent/sql-server-agent-error-log.md)  
   
   

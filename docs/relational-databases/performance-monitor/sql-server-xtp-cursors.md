@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: f995d9bf225c0452495239e32addd3dc4c55a62b
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 2920b0f21cca13272b8d8678106d0d231ad56e41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947826"
 ---
 # <a name="sql-server-xtp-cursors"></a>SQL Server-XTP-Cursor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "53379511"
   
  In dieser Tabelle werden die Leistungsindikatoren für **SQL Server-XTP-Cursor** beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|und Beschreibung|  
 |-------------|-----------------|  
 |**Cursorlöschvorgänge/s**|Die durchschnittliche Anzahl der pro Sekunde erfolgten Cursorlöschvorgänge.|  
 |**Cursoreinfügevorgänge/s**|Die durchschnittliche Anzahl der pro Sekunde erfolgten Cursoreinfügevorgänge.|  

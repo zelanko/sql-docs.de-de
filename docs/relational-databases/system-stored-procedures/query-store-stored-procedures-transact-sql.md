@@ -1,5 +1,5 @@
 ---
-title: Query Store gespeicherte Prozeduren (Transact-SQL) | Microsoft-Dokumentation
+title: Abfragespeicher gespeicherter Prozeduren (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da56a46b684762fa9f82d40fba8603285877e525
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aa7758a6e292aaa69f848c9e2c844e855d507bd
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941905"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418900"
 ---
-# <a name="query-store-stored-procedures-transact-sql"></a>Query Store gespeicherte Prozeduren (Transact-SQL)
+# <a name="query-store-stored-procedures-transact-sql"></a>Abfragespeicher gespeicherter Prozeduren (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Dieser Abschnitt enthält die folgenden gespeicherten Prozeduren verwendet, um den Abfragespeicher zu konfigurieren.  
+  Dieser Abschnitt enthält die folgenden gespeicherten Prozeduren, die zum Konfigurieren des Abfrage Speicher verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67941905"
   
 -   [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)  
   
--   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
+-   [sp_query_store_remove_plan &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)  
   
 -   [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)  
   

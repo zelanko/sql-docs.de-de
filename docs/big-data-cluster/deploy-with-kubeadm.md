@@ -1,63 +1,63 @@
 ---
 title: Konfigurieren von Kubernetes mit kubeadm
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie Kubernetes in mehrere Ubuntu 16.04 oder 18.04 Computer (physisch oder virtuell) für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen konfigurieren.
+description: Erfahren Sie, wie Sie Kubernetes auf mehreren Ubuntu 16,04-oder 18,04-Computern (physisch oder virtuell) für SQL Server 2019 Big Data Cluster (Vorschau)-bereit Stellungen konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d3d98a4ab5b8c79071bc79714bb8b43c3b220a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea79503869e7d403e4d3f4f960de9c95760eda0f
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958459"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419445"
 ---
-# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehrere Computer für SQL Server-big Data-Cluster-Bereitstellungen
+# <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server Big Data Cluster Bereitstellungen
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel enthält ein Beispiel zur Verwendung **Kubeadm** Kubernetes auf mehrere Computer für SQL Server-2019 big Data-Cluster (Vorschau)-Bereitstellungen zu konfigurieren. In diesem Beispiel werden mehrere Ubuntu 16.04 oder 18.04 LTS-Computer (physisch oder virtuell) das Ziel. Wenn Sie auf eine andere Linux-Plattform bereitstellen, müssen Sie einige der Befehle entsprechend Ihrem System ändern.  
+Dieser Artikel enthält ein Beispiel für die Verwendung von **kubeadm** zum Konfigurieren von Kubernetes auf mehreren Computern für bereit Stellungen von SQL Server 2019 Big Data Clustern (Vorschau). In diesem Beispiel sind mehrere Ubuntu 16,04-oder 18,04 LTS-Computer (physisch oder virtuell) das Ziel. Wenn Sie auf einer anderen Linux-Plattform bereitstellen, müssen Sie einige der Befehle so ändern, dass Sie Ihrem System entsprechen.  
 
 > [!TIP] 
-> Beispielskripts, die Kubernetes konfigurieren, finden Sie unter [erstellen Sie einen Kubernetes-Cluster mithilfe von Kubeadm unter Ubuntu 16.04 LTS oder 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
+> Beispiel Skripts zum Konfigurieren von Kubernetes finden [Sie unter Create a Kubernetes Cluster using kubeadm on Ubuntu 16,04 LTS or 18,04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-- Mindestens 3 Linux-Computer – physische oder virtuelle Computer
+- Mindestens 3 physische Linux-Computer oder virtuelle Computer
 - Empfohlene Konfiguration pro Computer:
    - 8 CPUs
-   - 32 GB Arbeitsspeicher
+   - 64 GB Arbeitsspeicher
    - 100 GB Speicher
 
 ## <a name="prepare-the-machines"></a>Vorbereiten der Computer
 
-Es gibt einige Voraussetzungen, auf jedem Computer. Führen Sie in einer Bash-Terminal die folgenden Befehle auf jedem Computer aus:
+Auf jedem Computer gibt es mehrere erforderliche Voraussetzungen. Führen Sie in einem bash-Terminal auf jedem Computer die folgenden Befehle aus:
 
-1. Fügen Sie den aktuellen Computer aus, um die `/etc/hosts` Datei:
+1. Fügen Sie den aktuellen Computer der `/etc/hosts` Datei hinzu:
 
    ```bash
    echo $(hostname -i) $(hostname) | sudo tee -a /etc/hosts
    ```
 
-1. Deaktivieren Sie die Auslagerung auf allen Geräten.
+1. Deaktivieren Sie das austauschen auf allen Geräten.
 
    ```bash
    sudo sed -i "/ swap / s/^/#/" /etc/fstab
    sudo swapoff -a
    ```
 
-1. Importieren Sie die Schlüssel, und registrieren Sie sich das Repository für Kubernetes.
+1. Importieren Sie die Schlüssel, und registrieren Sie das Repository für Kubernetes.
 
    ```bash
    sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
    echo 'deb http://apt.kubernetes.io/ kubernetes-xenial main' | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
    ```
 
-1. Konfigurieren Sie Docker und Kubernetes Voraussetzungen auf dem Computer an.
+1. Konfigurieren Sie die Docker-und Kubernetes-Voraussetzungen auf dem Computer.
 
    ```bash
    KUBE_DPKG_VERSION=1.11.3-00
@@ -69,7 +69,7 @@ Es gibt einige Voraussetzungen, auf jedem Computer. Führen Sie in einer Bash-Te
    curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | bash
    ```
  
-1. Legen Sie `net.bridge.bridge-nf-call-iptables=1` fest. Für Ubuntu 18.04, die folgenden Befehle zuerst aktivieren `br_netfilter`.
+1. Legen Sie `net.bridge.bridge-nf-call-iptables=1` fest. Unter Ubuntu 18,04 aktivieren `br_netfilter`die folgenden Befehle zuerst.
 
    ```bash
    . /etc/os-release
@@ -79,9 +79,9 @@ Es gibt einige Voraussetzungen, auf jedem Computer. Führen Sie in einer Bash-Te
 
 ## <a name="configure-the-kubernetes-master"></a>Konfigurieren des Kubernetes-Masters
 
-Wählen Sie nach dem Ausführen der zuvor eingegebenen Befehle auf jedem Computer, einem der Computer Ihrem Kubernetes-Master zu sein. Führen Sie die folgenden Befehle auf dem Computer.
+Nachdem Sie die vorherigen Befehle auf den einzelnen Computern ausgeführt haben, wählen Sie einen der Computer aus, der als Kubernetes Master ausgewählt werden soll. Führen Sie dann die folgenden Befehle auf diesem Computer aus.
 
-1. Erstellen Sie zunächst eine rbac.yaml-Datei in Ihrem aktuellen Verzeichnis mit dem folgenden Befehl ein. 
+1. Erstellen Sie zunächst mit dem folgenden Befehl eine RBAC. YAML-Datei in Ihrem aktuellen Verzeichnis. 
 
    ```bash
    cat <<EOF > rbac.yaml
@@ -100,18 +100,18 @@ Wählen Sie nach dem Ausführen der zuvor eingegebenen Befehle auf jedem Compute
    EOF
    ```
 
-1. Den Kubernetes-Master auf diesem Computer zu initialisieren. Ausgabe wird angezeigt, dass der Kubernetes-Master wurde erfolgreich initialisiert wurde.
+1. Initialisieren Sie den Kubernetes-Master auf diesem Computer. Die Ausgabe sollte angezeigt werden, dass der Kubernetes Master erfolgreich initialisiert wurde.
 
    ```bash
    KUBE_VERSION=1.11.3
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
 
-1. Beachten Sie die `kubeadm join` Befehl, mit dem Sie auf die anderen Server verwenden, um den Kubernetes-Cluster verknüpfen möchten. Kopieren Sie diese für die spätere Verwendung.
+1. Beachten Sie `kubeadm join` den Befehl, den Sie auf den anderen Servern zum beitreten zum Kubernetes-Cluster verwenden müssen. Kopieren Sie diese zur späteren Verwendung.
 
-   ![Kubeadm join](./media/deploy-with-kubeadm/kubeadm-join.png)
+   ![kubeadm beitreten](./media/deploy-with-kubeadm/kubeadm-join.png)
 
-1. Richten Sie einen Kubernetes-Konfigurationsdatei Basisverzeichnis ein.
+1. Richten Sie eine Kubernetes-Konfigurationsdatei als Basisverzeichnis ein.
 
    ```bash
    mkdir -p $HOME/.kube
@@ -129,17 +129,17 @@ Wählen Sie nach dem Ausführen der zuvor eingegebenen Befehle auf jedem Compute
    kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
    ```
 
-## <a name="configure-the-kubernetes-agents"></a>Konfigurieren Sie die Kubernetes-agents
+## <a name="configure-the-kubernetes-agents"></a>Konfigurieren der Kubernetes-Agents
 
-Die anderen Computer fungiert als Kubernetes-Agents im Cluster. 
+Die anderen Computer fungieren als Kubernetes-Agents im Cluster. 
 
-Führen Sie auf allen Computern auf, die `kubeadm join` -Befehl, der Sie im vorherigen Abschnitt kopiert haben.
+Führen Sie auf allen anderen Computern den Befehl aus `kubeadm join` , den Sie im vorherigen Abschnitt kopiert haben.
 
-![Kubeadm Join-agents](./media/deploy-with-kubeadm/kubeadm-join-agents.png)
+![kubeadm-Join-Agents](./media/deploy-with-kubeadm/kubeadm-join-agents.png)
 
-## <a name="view-the-cluster-status"></a>Zeigen Sie den Status des Clusters
+## <a name="view-the-cluster-status"></a>Anzeigen des Cluster Status
 
-Verwenden Sie zum Überprüfen der Verbindung mit Ihrem Cluster den [Kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) Befehl, um eine Liste der Clusterknoten.
+Um die Verbindung mit Ihrem Cluster zu überprüfen, verwenden Sie den Befehl [kubectl Get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) , um eine Liste der Cluster Knoten zurückzugeben.
 
 ```bash
 kubectl get nodes
@@ -147,6 +147,6 @@ kubectl get nodes
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Die Schritte in diesem Artikel werden einen Kubernetes-Cluster auf mehrere Ubuntu-Computer konfiguriert. Der nächste Schritt ist SQL Server-2019 big Data-Cluster bereitstellen. Anweisungen hierzu finden Sie unter den folgenden Artikel:
+Mit den Schritten in diesem Artikel wurde ein Kubernetes-Cluster auf mehreren Ubuntu-Computern konfiguriert. Der nächste Schritt besteht darin, SQL Server 2019 Big Data Cluster bereitzustellen. Anweisungen finden Sie im folgenden Artikel:
 
-[Bereitstellen von SQLServer in Kubernetes](deployment-guidance.md#deploy)
+[Bereitstellen von SQL Server auf Kubernetes](deployment-guidance.md#deploy)

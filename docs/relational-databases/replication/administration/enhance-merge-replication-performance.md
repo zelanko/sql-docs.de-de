@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939204"
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "54136070"
   
 -   Überlegen Sie, ob Sie Tabellen, die LOB-Datentypen (Large Object) enthalten, übernormalisieren sollten.  
   
-     Bei der Synchronisierung muss der Merge-Agent möglicherweise die gesamte Datenzeile von einem Verleger oder Abonnenten lesen und übertragen. Falls die Zeile Spalten enthält, die LOBs verwenden, kann dieser Vorgang eine zusätzliche Speicherbelegung erfordern und die Leistung beeinträchtigen, auch wenn diese Spalten gar nicht aktualisiert wurden. Um die Wahrscheinlichkeit einer solchen Leistungsbeeinträchtigung zu verringern, sollten Sie LOB-Spalten in einer separaten Tabelle mit einer 1:1-Beziehung zu den restlichen Zeilendaten speichern. Die Datentypen **text**, **ntext**und **image** sind als veraltet markiert. Wenn Sie LOBs verwenden, sollten Sie auf die Datentypen **varchar(max)**, **nvarchar(max)** und **varbinary(max)** zurückgreifen.  
+     Bei der Synchronisierung muss der Merge-Agent möglicherweise die gesamte Datenzeile von einem Verleger oder Abonnenten lesen und übertragen. Falls die Zeile Spalten enthält, die LOBs verwenden, kann dieser Vorgang eine zusätzliche Speicherbelegung erfordern und die Leistung beeinträchtigen, auch wenn diese Spalten gar nicht aktualisiert wurden. Um die Wahrscheinlichkeit einer solchen Leistungsbeeinträchtigung zu verringern, sollten Sie LOB-Spalten in einer separaten Tabelle mit einer 1:1-Beziehung zu den restlichen Zeilendaten speichern. Die Datentypen **text**, **ntext**und **image** sind als veraltet markiert. Wenn Sie LOBs verwenden, sollten Sie auf die Datentypen **varchar(max)** , **nvarchar(max)** und **varbinary(max)** zurückgreifen.  
   
 ## <a name="publication-design"></a>Veröffentlichungsentwurf  
   

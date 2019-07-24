@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca126d0d8708e28af73c0faf6ddb9bc3d2ee280d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033686"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planen und Ausführen von Wiederherstellungssequenzen (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "47726218"
 ## <a name="restarting-a-restore-sequence"></a>Neustarten einer Wiederherstellungssequenz  
  Wenn im Rahmen einer Wiederherstellungssequenz ein Problem auftritt, können Sie die Wiederherstellungssequenz beenden und von Anfang an neu starten. Wenn Sie beispielsweise versehentlich zu viele Protokollsicherungen wiederhergestellt und den gewünschten Wiederherstellungspunkt überschritten haben, müssen Sie die Wiederherstellungssequenz neu starten und bis zu der Protokollsicherung wiederherstellen, die den Zielwiederherstellungspunkt enthält.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Vollständige Datenbankwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

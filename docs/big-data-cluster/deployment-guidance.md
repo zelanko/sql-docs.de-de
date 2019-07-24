@@ -1,164 +1,166 @@
 ---
 title: Hinweise zur Bereitstellung
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie SQL Server-2019 big Data-Clustern (Vorschau) in Kubernetes bereitstellen.
+description: Erfahren Sie, wie Sie SQL Server 2019 Big Data Cluster (Vorschauversion) auf Kubernetes bereitstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f2993d15cecd87879cabc50918d784a16750b30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6f2eefd37c45753e3051722448b80d88712df26
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958415"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419419"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Wie Sie SQL Server-big Data-Cluster in Kubernetes bereitstellen
+# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Bereitstellen von SQL Server Big Data Clustern auf Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server-big Data-Cluster wird als Docker-Container in einem Kubernetes-Cluster bereitgestellt. Dies ist eine Übersicht über die Schritte für Einrichtung und Konfiguration:
+SQL Server Big Data Cluster als docker-Container in einem Kubernetes-Cluster bereitgestellt wird. Dies ist eine Übersicht über die Setup-und Konfigurationsschritte:
 
-- Richten Sie einen Kubernetes-Cluster auf einem einzelnen virtuellen Computer, die Cluster von virtuellen Computern oder in Azure Kubernetes Service (AKS).
-- Installieren Sie das Cluster-Konfigurationstool **Mssqlctl** auf Ihrem Clientcomputer.
-- Stellen Sie eine SQL Server-big Data-Cluster in einem Kubernetes-Cluster bereit.
+- Richten Sie einen Kubernetes-Cluster auf einer einzelnen VM, einem Cluster mit virtuellen Computern oder in Azure Kubernetes Service (AKS) ein.
+- Installieren Sie das Cluster Konfigurationstool **azdata** auf dem Client Computer.
+- Stellen Sie eine SQL Server Big Data-Cluster in einem Kubernetes-Cluster bereit.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
-## <a name="install-sql-server-2019-big-data-tools"></a>Installieren von SQL Server-2019 big datatools
+## <a name="install-sql-server-2019-big-data-tools"></a>Installieren von SQL Server 2019 Big Data Tools
 
-Vor der Bereitstellung von einer SQL Server-2019 big Data-Cluster zuerst [die big Data-Tools installieren](deploy-big-data-tools.md):
+Installieren Sie vor dem Bereitstellen eines SQL Server 2019 Big Data Cluster zunächst [die Big Data Tools](deploy-big-data-tools.md):
 
-- **mssqlctl**
+- **azdata**
 - **kubectl**
 - **Azure Data Studio**
-- **SQL Server-2019-Erweiterung**
+- **SQL Server 2019-Erweiterung**
 
-## <a id="prereqs"></a> Kubernetes-Voraussetzungen
+## <a id="prereqs"></a>Kubernetes Voraussetzungen
 
-SQL Server-big Data-Cluster erfordern eine Kubernetes-Mindestversion von mindestens v1.10 für Server und Client (Kubectl).
+SQL Server Big Data-Cluster benötigen mindestens Version 1.10 von mindestens v 1.10 für Server und Client (kubectl).
 
 > [!NOTE]
-> Beachten Sie, dass der Client und Server-Kubernetes-Versionen in + 1 oder-1 Nebenversion werden soll. Weitere Informationen finden Sie unter [Kubernetes unterstützte Versionen und Komponenten, die datenschiefe](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
+> Beachten Sie, dass die Client-und Server Kubernetes Versionen innerhalb von + 1 oder-1 neben Version liegen sollten. Weitere Informationen finden Sie unter [Kubernetes Release Notes and Version rabw SKU Policy)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
 
-### <a id="kubernetes"></a> Kubernetes-Cluster-setup
+### <a id="kubernetes"></a>Einrichten des Kubernetes-Clusters
 
-Wenn Sie bereits einen Kubernetes-Cluster, die die oben aufgeführten Voraussetzungen erfüllt haben, können Sie direkt zu überspringen der [Bereitstellungsschritt](#deploy). In diesem Abschnitt wird ein grundlegendes Verständnis der Kubernetes-Konzepte vorausgesetzt.  Ausführliche Informationen zu Kubernetes finden Sie unter den [Kubernetes-Dokumentation](https://kubernetes.io/docs/home).
+Wenn Sie bereits über einen Kubernetes-Cluster verfügen, der die oben genannten Voraussetzungen erfüllt, können Sie direkt mit dem [Bereitstellungs Schritt fort](#deploy)fahren. In diesem Abschnitt wird ein grundlegendes Verständnis der Kubernetes-Konzepte vorausgesetzt.  Ausführliche Informationen zu Kubernetes finden Sie in der [Kubernetes-Dokumentation](https://kubernetes.io/docs/home).
 
-Sie können zum Bereitstellen von Kubernetes stehen drei Möglichkeiten zur Verfügung:
+Sie können Kubernetes auf drei Arten bereitstellen:
 
-| Bereitstellen von Kubernetes auf: | Beschreibung | Link |
+| Kubernetes bereitstellen auf: | Beschreibung | Link |
 |---|---|---|
-| **Azure Kubernetes-Dienste (AKS)** | Managed Kubernetes-Container-Dienst in Azure. | [Anweisungen](deploy-on-aks.md) |
-| **Mehrere Computer (Kubeadm)** | Ein Kubernetes-Cluster bereitgestellt, die auf physischen oder virtuellen Computern mit **Kubeadm** | [Anweisungen](deploy-with-kubeadm.md) |
-| **Minikube** | Einen Einzelknoten-Kubernetes-Cluster auf einem virtuellen Computer. | [Anweisungen](deploy-on-minikube.md) |
+| **Azure Kubernetes Services (AKS)** | Einen verwalteten Kubernetes-Containerdienst in Azure. | [Anweisungen](deploy-on-aks.md) |
+| **Mehrere Computer (kubeadm)** | Ein Kubernetes-Cluster, der auf physischen oder virtuellen Computern mithilfe von **kubeadm** bereitgestellt wird | [Anweisungen](deploy-with-kubeadm.md) |
+| **Minikube** | Ein Kubernetes-Cluster mit einem einzelnen Knoten in einem virtuellen Computer. | [Anweisungen](deploy-on-minikube.md) |
 
 > [!TIP]
-> Ein Beispiel-Python-Skript, das bereitgestellt wird, sowohl AKS und eine SQL-Server, die big Data-in einem Schritt Cluster, finden Sie unter [Schnellstart: Bereitstellen von SQL Server, die big Data-in Azure Kubernetes Service (AKS Cluster)](quickstart-big-data-cluster-deploy.md).
+> Ein python-Beispielskript, das sowohl AKS als auch einen SQL Server Big Data Cluster in einem Schritt bereitstellt [, finden Sie unter Schnellstart: Stellen Sie SQL Server Big Data-Cluster in Azure Kubernetes Service (](quickstart-big-data-cluster-deploy.md)AKS) bereit.
 
-### <a name="verify-kubernetes-configuration"></a>Überprüfen der Kubernetes-Konfiguration
+### <a name="verify-kubernetes-configuration"></a>Kubernetes-Konfiguration überprüfen
 
-Führen Sie die **"kubectl"** Befehl aus, um die Clusterkonfiguration anzuzeigen. Stellen Sie sicher, dass diese "kubectl" auf den richtigen Clusterkontext gezeigt wird.
+Führen Sie den Befehl **kubectl** aus, um die Cluster Konfiguration anzuzeigen. Stellen Sie sicher, dass kubectl auf den richtigen Cluster Kontext verweist.
 
 ```bash
 kubectl config view
 ```
 
-Nachdem Sie Ihren Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung einer neuen SQL Server-big Data-Cluster fortfahren. Wenn Sie von einer früheren Version aktualisieren, finden Sie unter [das upgrade von SQL Server-big Data-Cluster](deployment-upgrade.md).
+Nachdem Sie den Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung eines neuen SQL Server Big Data Cluster fortfahren. Wenn Sie ein Upgrade von einer früheren Version durchführen, finden Sie weitere Informationen unter [Upgrade SQL Server Big Data Clusters](deployment-upgrade.md).
 
-## <a id="deploy"></a> Übersicht über die Bereitstellung
+## <a id="deploy"></a>Bereitstellungs Übersicht
 
-Ab CTP-Version 2.5, werden die meisten big Data-Cluster-Einstellungen in einer JSON-Bereitstellungskonfigurationsdatei definiert. Sie können ein Standardprofil für die Bereitstellung für AKS Kubeadm, oder Minikube oder eigene Bereitstellungskonfigurationsdatei Setup zu verwendende anpassen. Aus Gründen der Sicherheit werden die Authentifizierungseinstellungen für die über Umgebungsvariablen übergeben.
+Die meisten Big Data Cluster Einstellungen werden in einer JSON-Bereitstellungs Konfigurationsdatei definiert. Sie können ein Standard Bereitstellungs Profil für AKS, `kubeadm`oder `minikube` verwenden, oder Sie können Ihre eigene Bereitstellungs Konfigurationsdatei für die Verwendung während des Setups anpassen. Aus Sicherheitsgründen werden Authentifizierungs Einstellungen über Umgebungsvariablen übermittelt.
 
-Die folgenden Abschnitte enthalten, Weitere Informationen zum Konfigurieren Sie Ihre big Data-Bereitstellungen sowie Beispiele für häufige Anpassungen zu Clustern. Darüber hinaus können Sie immer mit einem Editor wie VSCode z. B. die benutzerdefinierte Bereitstellung-Konfigurationsdatei bearbeiten.
+In den folgenden Abschnitten finden Sie weitere Informationen zum Konfigurieren Ihrer Big Data Cluster Bereitstellungen sowie Beispiele für allgemeine Anpassungen. Außerdem können Sie die benutzerdefinierte Bereitstellungs Konfigurationsdatei jederzeit mithilfe eines Editors wie vs Code bearbeiten.
 
-## <a id="configfile"></a> Standardkonfigurationen
+## <a id="configfile"></a>Standardkonfigurationen
 
-Big Data-Clusterbereitstellung, die Optionen in der JSON-Konfigurationsdateien definiert sind. Es gibt drei standard-bereitstellungsprofile mit Standardeinstellungen für Dev/Test-Umgebungen:
+Big Data-Cluster Bereitstellungs Optionen sind in JSON-Konfigurationsdateien definiert. Es gibt drei Standard Bereitstellungs Profile mit Standardeinstellungen für dev/Test-Umgebungen:
 
-| Bereitstellungsprofil | Kubernetes-Umgebung |
+| Bereitstellungs Profil | Kubernetes-Umgebung |
 |---|---|
-| **AKS-Dev-test** | Azure Kubernetes Service (AKS) |
-| **Kubeadm-Dev-test** | Mehrere Computer (Kubeadm) |
+| **AKS-dev-Test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-Test** | Mehrere Computer (kubeadm) |
 | **minikube-dev-test** | Minikube |
 
-Sie können einen big Data-Cluster bereitstellen, mit **Mssqlctl Bdc erstellen**. Dies fordert Sie auf eine der Standardkonfigurationen und führt Sie durch die Bereitstellung.
+Sie können einen Big Data Cluster bereitstellen, indem Sie **azdata BDC Create**ausführen. Dadurch werden Sie aufgefordert, eine der Standardkonfigurationen auszuwählen und Sie durch die Bereitstellung zu leiten.
+
+Wenn Sie zum ersten Mal `azdata` ausführen, müssen `--accept-eula` Sie einschließen, um den Endbenutzer-Lizenzvertrag (EULA) zu akzeptieren.
 
 ```bash
-mssqlctl bdc create
+azdata bdc create --accept-eula
 ```
 
-In diesem Szenario werden Sie alle Einstellungen aufgefordert, die nicht Teil der Standardkonfiguration, wie z. B. Kennwörter sind. Beachten Sie, die die Docker-Informationen von Microsoft als Teil der SQL Server-2019 bereitgestellt ist [Early Adoption Program](https://aka.ms/eapsignup).
+In diesem Szenario werden Sie zur Eingabe von Einstellungen aufgefordert, die nicht Teil der Standardkonfiguration sind, z. b. Kenn Wörter. 
+
+> [!NOTE]
+> Ab SQL Server 2019 CTP 3,2 haben Sie nicht mehr Mitglied in das SQL Server 2019-Programm für die [frühzeitige Einführung](https://aka.ms/eapsignup) , um die Vorschau Versionen von Big Data Cluster kennenzulernen.
 
 > [!IMPORTANT]
-> Der Standardname der big Data-Cluster ist **Mssql-Cluster**. Dies ist wichtig zu wissen, um einen Ausführen der **"kubectl"** Befehle, die angeben, die Kubernetes-Namespace mit dem `-n` Parameter.
+> Der Standardname des Big Data Clusters ist **MSSQL-Cluster**. Dies ist wichtig zu wissen, um einen der **kubectl** -Befehle auszuführen, die den Kubernetes-Namespace mit dem `-n` -Parameter angeben.
 
-## <a id="customconfig"></a> Benutzerdefinierte Konfigurationen
+## <a id="customconfig"></a>Benutzerdefinierte Konfigurationen
 
-Es ist auch möglich, Ihre eigenen bereitstellungsprofils anzupassen. Sie hierzu die folgenden Schritte aus:
+Es ist auch möglich, Ihr eigenes Profil für die Bereitstellungs Konfiguration anzupassen. Führen Sie hierzu die folgenden Schritte aus:
 
-1. Beginnen Sie mit einem der standardbereitstellung Profile, die die Kubernetes-Umgebung zu entsprechen. Können Sie die **Mssqlctl BDC-Config-Liste** Befehl, um diese aufzulisten:
-
-   ```bash
-   mssqlctl bdc config list
-   ```
-
-1. Wenn Ihre Bereitstellung anpassen möchten, erstellen Sie eine Kopie des bereitstellungsprofils mit der **Mssqlctl BDC-Config Init** Befehl. Beispielsweise der folgende Befehl erstellt eine Kopie der **Aks-Dev-Test** Bereitstellungskonfigurationsdatei in ein Zielverzeichnis an, mit dem Namen `custom`:
+1. Beginnen Sie mit einem der Standard Bereitstellungs Profile, die ihrer Kubernetes-Umgebung entsprechen. Sie können den Befehl **azdata BDC config List** verwenden, um Sie aufzulisten:
 
    ```bash
-   mssqlctl bdc config init --source aks-dev-test --target custom
+   azdata bdc config list
    ```
 
-   > [!TIP]
-   > Die `--target` gibt ein Verzeichnis, das die Konfigurationsdatei enthält basierend auf den `--source` Parameter.
-
-1. Zum Anpassen der Einstellungen in Ihrem Bereitstellungsprofil für die Konfiguration können Sie die Konfigurationsdatei der Bereitstellung in einem Tool bearbeiten, die gut für die Bearbeitung der JSON-Dateien, z. B. Visual Studio Code ist. Für Skript-Automatisierung, Sie können auch bearbeiten das Profil mit benutzerdefiniertem **Mssqlctl BDC-Config Abschnitt Satz** Befehl. Der folgende Befehl ändert z. B. eine benutzerdefinierte Bereitstellung-Profil, um den Namen des bereitgestellten Clusters von der Standardeinstellung zu ändern (**Mssql-Cluster**) zu **Test-Cluster**:  
+1. Erstellen Sie eine Kopie des Bereitstellungs Profils mit dem Befehl **azdata BDC config init** , um die Bereitstellung anzupassen. Der folgende Befehl erstellt z. b. eine Kopie der **AKS-dev-Test-** Bereitstellungs Konfigurationsdateien in einem `custom`Zielverzeichnis namens:
 
    ```bash
-   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   azdata bdc config init --source aks-dev-test --target custom
    ```
 
-   > [!TIP]
-   > Die `--config-profile` gibt einen Verzeichnisnamen für Ihr Profil für die benutzerdefinierte Bereitstellung, aber die tatsächlichen Änderungen erfolgen für die Bereitstellung JSON-Konfigurationsdatei in das Verzeichnis an. Ist ein nützliches Tool für die Suche nach JSON-Pfaden der [JSONPath-Online-Ausdrucksauswertung](https://jsonpath.com/).
+   azdata
+   > Der `--target` gibt ein Verzeichnis an, das die Konfigurationsdateien " **Cluster. JSON** " und " **Control. JSON**" `--source` auf Grundlage des-Parameters enthält.
 
-   Zusätzlich zum Übergeben von Schlüssel-Wert-Paare können auch Inline bereitstellen, JSON-Werte oder übergeben die JSON-Patch-Dateien. Weitere Informationen finden Sie unter [Konfigurieren von bereitstellungseinstellungen für big Data-Cluster](deployment-custom-configuration.md).
-
-1. Klicken Sie dann die benutzerdefinierte Konfigurationsdatei zu übergeben **Mssqlctl Bdc erstellen**. Beachten Sie, dass Sie die erforderlichen festlegen müssen [Umgebungsvariablen](#env), andernfalls werden Sie für die Werte aufgefordert werden:
+1. Zum Anpassen der Einstellungen in Ihrem Bereitstellungs Konfigurations Profil können Sie die Bereitstellungs Konfigurationsdatei in einem Tool bearbeiten, das für die Bearbeitung von JSON-Dateien geeignet ist, z. b. vs Code. Bei der Skript gesteuerten Automatisierung können Sie auch das benutzerdefinierte Bereitstellungs Profil mithilfe des Befehls " **azdata BDC config** " bearbeiten. Der folgende Befehl ändert z. b. ein benutzerdefiniertes Bereitstellungs Profil, um den Namen des bereitgestellten Clusters von der Standardeinstellung (**MSSQL-Cluster**) in **Test-Cluster**zu ändern:  
 
    ```bash
-   mssqlctl bdc create --config-profile custom --accept-eula yes
+   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
    ```
 
-> [!TIP]
-> Weitere Informationen zur Struktur der Konfigurationsdatei für eine Bereitstellung finden Sie unter den [Bereitstellung-konfigurationsdateireferenz](reference-deployment-config.md). Weitere Konfigurationsbeispiele zur finden Sie [Konfigurieren von bereitstellungseinstellungen für big Data-Cluster](deployment-custom-configuration.md).
+   > Ein nützliches Tool für die Suche nach JSON-Pfaden ist der [jsonpath Online Evaluator](https://jsonpath.com/).
 
-## <a id="env"></a> Umgebungsvariablen
+   Zusätzlich zum Übergeben von Schlüssel-Wert-Paaren können Sie auch Inline-JSON-Werte bereitstellen oder JSON-Patchdateien übergeben. Weitere Informationen finden Sie unter [Konfigurieren von Bereitstellungs Einstellungen für Big Data Cluster](deployment-custom-configuration.md).
 
-Die folgenden Umgebungsvariablen werden für die Sicherheitseinstellungen verwendet, die nicht in einer Konfigurationsdatei für die Bereitstellung gespeichert werden. Beachten Sie, dass Docker-Einstellungen, mit Ausnahme von Anmeldeinformationen in der Konfigurationsdatei festgelegt werden können.
+1. Übergeben Sie dann die benutzerdefinierte Konfigurationsdatei an **azdata BDC Create**. Beachten Sie, dass Sie die erforderlichen [Umgebungsvariablen](#env)festlegen müssen. andernfalls werden Sie zur Eingabe der Werte aufgefordert:
 
-| Umgebungsvariable | Beschreibung |
-|---|---|---|---|
-| **DOCKER_USERNAME** | Der Benutzername für die containerimages zugreifen, falls sie in einem privaten Repository gespeichert sind. |
-| **DOCKER_PASSWORD** | Das Kennwort für den Zugriff auf das obige privaten Repository. |
-| **CONTROLLER_USERNAME** | Der Benutzername für die Clusterverwaltung. |
-| **CONTROLLER_PASSWORD** | Das Kennwort für die Clusterverwaltung. |
-| **KNOX_PASSWORD** | Das Kennwort für Knox-Benutzer. |
-| **MSSQL_SA_PASSWORD** | Das Kennwort des SA-Benutzers für die master-SQL-Instanz. |
+   ```bash
+   azdata bdc create --config-profile custom --accept-eula yes
+   ```
 
-Diese Umgebungsvariablen festgelegt werden müssen, vor dem Aufruf **Mssqlctl Bdc erstellen**. Wenn eine beliebige Variable nicht festgelegt ist, werden Sie dafür aufgefordert.
+> Weitere Informationen zur Struktur einer Bereitstellungs Konfigurationsdatei finden Sie in der [Referenz zur Bereitstellungs Konfigurationsdatei](reference-deployment-config.md). Weitere Konfigurationsbeispiele finden Sie unter [Konfigurieren von Bereitstellungs Einstellungen für Big Data Cluster](deployment-custom-configuration.md).
 
-Das folgende Beispiel zeigt, wie Sie die Umgebungsvariablen für Linux (Bash) und Windows (PowerShell) festgelegt wird:
+## <a id="env"></a>Umgebungsvariablen
+
+Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet, die nicht in einer Bereitstellungs Konfigurationsdatei gespeichert werden. Beachten Sie, dass die Docker-Einstellungen außer den Anmelde Informationen in der Konfigurationsdatei festgelegt werden können.
+
+| Umgebungsvariable | Anforderung |Beschreibung |
+|---|---|---|
+| **CONTROLLER_USERNAME** | Erforderlich |Der Benutzername für den Cluster Administrator. |
+| **CONTROLLER_PASSWORD** | Erforderlich |Das Kennwort für den Cluster Administrator. |
+| **MSSQL_SA_PASSWORD** | Erforderlich |Das Kennwort des SA-Benutzers für die SQL-Master Instanz. |
+| **KNOX_PASSWORD** | Erforderlich |Das Kennwort für Knox-Benutzer. |
+| **ACCEPT_EULA**| Erforderlich für die erste Verwendung von`azdata`| Erfordert keinen Wert. Wenn er als Umgebungsvariable festgelegt ist, wendet er EULA auf SQL Server `azdata`und an. Wenn Sie nicht als Umgebungsvariable festgelegt ist, `--accept-eula` können Sie in den ersten `azdata` Befehl verwenden.|
+| **DOCKER_USERNAME** | Optional | Der Benutzername für den Zugriff auf die Container Images, wenn Sie in einem privaten Repository gespeichert sind. Weitere Informationen zur Verwendung eines privaten docker-Repository für Big Data Cluster Bereitstellung finden Sie im Thema [Offline Bereitstellungen](deploy-offline.md) .|
+| **DOCKER_PASSWORD** | Optional |Das Kennwort für den Zugriff auf das oben genannte private Repository. |
+
+Diese Umgebungsvariablen müssen vor dem Aufrufen von **azdata BDC Create**festgelegt werden. Wenn eine Variable nicht festgelegt ist, werden Sie dazu aufgefordert.
+
+Im folgenden Beispiel wird gezeigt, wie die Umgebungsvariablen für Linux (bash) und Windows (PowerShell) festgelegt werden:
 
 ```bash
 export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
-export DOCKER_USERNAME=<docker-username>
-export DOCKER_PASSWORD=<docker-password>
 ```
 
 ```PowerShell
@@ -166,35 +168,32 @@ SET CONTROLLER_USERNAME=admin
 SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
-SET DOCKER_USERNAME=<docker-username>
-SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Nach dem Festlegen der Umgebungsvariablen, müssen Sie ausführen `mssqlctl bdc create` um die Bereitstellung auszulösen. Dieses Beispiel verwendet das Cluster-Konfigurationsprofil oben erstellt haben:
+Nachdem Sie die Umgebungsvariablen festgelegt haben, `azdata bdc create` müssen Sie ausführen, um die Bereitstellung zu initiieren. In diesem Beispiel wird das oben erstellte Cluster Konfigurations Profil verwendet:
 
-```
-mssqlctl bdc create --config-profile custom --accept-eula yes
+```bash
+azdata bdc create --config-profile custom --accept-eula yes
 ```
 
 Beachten Sie die folgenden Richtlinien:
 
-- Zu diesem Zeitpunkt Anmeldeinformationen für die private Docker-Registrierung werden bereitgestellt werden, um Sie beim selektieren Ihre [Early Adoption Program Registrierung](https://aka.ms/eapsignup). Early Adoption Program-Registrierung ist erforderlich, um SQL Server-big Data-Cluster zu testen.
-- Stellen Sie sicher, dass Sie die Kennwörter in doppelte Anführungszeichen umschließen, wenn sie keine Sonderzeichen enthält. Sie können festlegen, die **MSSQL_SA_PASSWORD** , was auch immer Sie zufrieden sind, aber stellen Sie sicher, dass das Kennwort ist komplex und verwenden Sie nicht die `!`, `&` oder `'` Zeichen. Beachten Sie, die doppelte Anführungszeichen Trennzeichen funktionieren nur in der bash-Befehle.
-- Die **SA** Anmeldename ist ein Systemadministrator für die master SQL Server-Instanz, die während des Setups erstellt wird. Nach dem Erstellen Ihrer SQL Server-Containers, der **MSSQL_SA_PASSWORD** Umgebungsvariable, die Sie angegeben ist mit sichtbaren $MSSQL_SA_PASSWORD im Container ausgeben. Ändern Sie aus Sicherheitsgründen Ihr SA-Kennwort gemäß der dokumentierten bewährten Methoden [hier](../linux/quickstart-install-connect-docker.md#sapassword).
+- Stellen Sie sicher, dass Sie das Kennwort in doppelte Anführungszeichen einschließen, wenn es Sonderzeichen enthält. Sie können den **MSSQL_SA_PASSWORD** auf einen beliebigen Wert festlegen, aber stellen Sie sicher, dass das Kennwort ausreichend komplex ist `!`und `&` nicht `'` die Zeichen, oder verwenden. Beachten Sie, dass Trennzeichen für doppelte Anführungszeichen nur in bash-Befehlen funktionieren.
+- Der **sa** -Anmelde Name ist ein Systemadministrator auf der SQL Server Master Instanz, die während des Setups erstellt wird. Nachdem Sie den SQL Server Container erstellt haben, kann die **MSSQL_SA_PASSWORD** -Umgebungsvariable, die Sie `echo $MSSQL_SA_PASSWORD` angegeben haben, durch Ausführen im Container erkannt werden. Ändern Sie aus Sicherheitsgründen das SA-Kennwort gemäß den [hier](../linux/quickstart-install-connect-docker.md#sapassword)dokumentierten bewährten Methoden.
 
-## <a id="unattended"></a> Unbeaufsichtigte Installation
+## <a id="unattended"></a>Unbeaufsichtigte Installation
 
-Für eine unbeaufsichtigte Bereitstellung, müssen Sie festlegen, alle erforderlichen Umgebungsvariablen, die Verwendung einer Konfigurationsdatei und Aufruf `mssqlctl bdc create` -Befehl mit der `--accept-eula yes` Parameter. Die Beispiele im vorherigen Abschnitt veranschaulicht die Syntax für die unbeaufsichtigte Installation.
+Bei einer unbeaufsichtigten Bereitstellung müssen Sie alle erforderlichen Umgebungsvariablen festlegen, eine Konfigurationsdatei verwenden und den `azdata bdc create` Befehl mit dem `--accept-eula yes` -Parameter aufrufen. Die Beispiele im vorherigen Abschnitt veranschaulichen die Syntax für eine unbeaufsichtigte Installation.
 
-## <a id="monitor"></a> Überwachen der Bereitstellung
+## <a id="monitor"></a>Überwachen der Bereitstellung
 
-Während der Cluster-Bootstrap gibt der Client-Befehlsfenster den Bereitstellungsstatus. Während der Bereitstellung sehen Sie eine Reihe von Nachrichten, in dem sie den Pod Controller wartet:
+Beim Cluster-Bootstrap wird der Bereitstellungs Status im Client Befehlsfenster ausgegeben. Während des Bereitstellungs Prozesses sollte eine Reihe von Nachrichten angezeigt werden, die auf den Controller Pod warten:
 
 ```output
 Waiting for cluster controller to start.
 ```
 
-In weniger als 15 bis 30 Minuten sollten Sie eine Benachrichtigung über der Pod Controller ausgeführt wird:
+In 15 bis 30 Minuten sollten Sie benachrichtigt werden, dass der Controller Pod ausgeführt wird:
 
 ```output
 Cluster controller endpoint is available at 11.111.111.11:30080.
@@ -202,45 +201,45 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> Die gesamte Bereitstellung dauert sehr lange aufgrund der Zeitaufwand für die Container-Images für die Komponenten der big Data-Cluster herunterladen. Er sollte jedoch nicht mehrere Stunden dauern. Wenn Sie Probleme bei der Bereitstellung auftreten, finden Sie unter [Überwachung und Problembehandlung für SQL Server-big Data-Cluster](cluster-troubleshooting-commands.md).
+> Die gesamte Bereitstellung kann aufgrund der Zeit, die zum Herunterladen der Container Images für die Komponenten des Big Data Clusters erforderlich ist, viel Zeit in Anspruch nehmen. Es sollte jedoch nicht mehrere Stunden dauern. Wenn Sie Probleme mit der Bereitstellung haben, finden Sie weitere Informationen unter [Überwachung und Problembehandlung SQL Server Big Data Cluster](cluster-troubleshooting-commands.md).
 
-Wenn die Bereitstellung abgeschlossen ist, benachrichtigt die Ausgabe Sie Erfolg:
+Wenn die Bereitstellung abgeschlossen ist, werden Sie von der Ausgabe über Erfolg benachrichtigt:
 
 ```output
 Cluster deployed successfully.
 ```
 
 > [!TIP]
-> Der Standardname für den Cluster bereitgestellte big Data ist `mssql-cluster` , wenn durch eine benutzerdefinierte Konfiguration geändert.
+> Der Standardname für den bereitgestellten Big Data Cluster `mssql-cluster` ist, sofern er nicht durch eine benutzerdefinierte Konfiguration geändert wird.
 
-## <a id="endpoints"></a> Abrufen von Endpunkten
+## <a id="endpoints"></a>Abrufen von Endpunkten
 
-Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, können Sie die IP-Adressen der externen Endpunkte für die big Data-Cluster mit den folgenden Schritten erhalten.
+Nachdem das Bereitstellungs Skript erfolgreich abgeschlossen wurde, können Sie die IP-Adressen der externen Endpunkte für den Big Data Cluster mithilfe der folgenden Schritte abrufen.
 
-1. Nach der Bereitstellung finden Sie die IP-Adresse des Endpunkts Controller anhand der EXTERNEN IP-Ausgabe des folgenden **"kubectl"** Befehl:
+1. Suchen Sie nach der Bereitstellung die IP-Adresse des Controller Endpunkts entweder aus der Standardausgabe der Bereitstellung oder anhand der externen IP-Ausgabe des folgenden **kubectl** -Befehls:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Wenn Sie nicht den Standardnamen bei der Bereitstellung geändert haben, verwenden Sie `-n mssql-cluster` im vorherigen Befehl. **MSSQL-Cluster** ist der Standardname für die big Data-Cluster.
+   > Wenn Sie den Standardnamen während der Bereitstellung nicht geändert haben `-n mssql-cluster` , verwenden Sie im vorherigen Befehl. **MSSQL-Cluster** ist der Standardname für den Big Data Cluster.
 
-1. Melden Sie sich bei der big Data-Cluster mit [Mssqlctl Anmeldung](reference-mssqlctl.md). Legen Sie die **--controllerendpunkt** Parameter, um die externe IP-Adresse des Endpunkts Controller.
-
-   ```bash
-   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
-   ```
-
-   Geben Sie Benutzername und Kennwort, die Sie für den Controller (CONTROLLER_USERNAME und CONTROLLER_PASSWORD) konfiguriert, während der Bereitstellung.
-
-1. Führen Sie [Mssqlctl Bdc-Endpunktliste](reference-mssqlctl-bdc-endpoint.md) um eine Liste mit einer Beschreibung der einzelnen Endpunkten und ihre entsprechenden Werte für IP-Adresse und den Port abzurufen. 
+1. Melden Sie sich mit der [azdata-Anmeldung](reference-azdata.md)beim Big Data-Cluster an. Legen Sie den Parameter **--Controller-Endpoint** auf die externe IP-Adresse des Controller Endpunkts fest.
 
    ```bash
-   mssqlctl bdc endpoint list -o table
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Die folgende Liste enthält Beispiel für die Ausgabe dieses Befehls:
+   Geben Sie den Benutzernamen und das Kennwort für den Controller (CONTROLLER_USERNAME und CONTROLLER_PASSWORD) während der Bereitstellung an.
+
+1. Führen Sie die [azdata BDC Endpoint List](reference-azdata-bdc-endpoint.md) aus, um eine Liste mit einer Beschreibung der einzelnen Endpunkte und ihrer entsprechenden IP-Adresse und Port Werte zu erhalten. 
+
+   ```bash
+   azdata bdc endpoint list -o table
+   ```
+
+   Die folgende Liste zeigt die Beispielausgabe dieses Befehls:
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -258,7 +257,7 @@ Nachdem das Bereitstellungsskript erfolgreich abgeschlossen wurde, können Sie d
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-Sie können auch alle Dienstendpunkte, die für den Cluster bereitgestellt werden, durch Ausführen des folgenden Befehls abrufen **"kubectl"** Befehl:
+Sie können auch alle Dienst Endpunkte, die für den Cluster bereitgestellt wurden, durch Ausführen des folgenden **kubectl** -Befehls erhalten:
 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
@@ -266,24 +265,24 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ### <a name="minikube"></a>Minikube
 
-Wenn Sie Minikube verwenden, müssen Sie führen den folgenden Befehl zum Abrufen der IP-Adresse, die Sie benötigen für die Verbindung. Geben Sie zusätzlich zu die IP-Adresse den Port für den Endpunkt zum Herstellen einer Verbindung mit erforderlichen aus.
+Wenn Sie minikube verwenden, müssen Sie den folgenden Befehl ausführen, um die IP-Adresse zu erhalten, mit der Sie eine Verbindung herstellen müssen. Geben Sie zusätzlich zur IP-Adresse den Port für den Endpunkt an, mit dem Sie eine Verbindung herstellen müssen.
 
 ```bash
 minikube ip
 ```
 
-## <a id="status"></a> Überprüfen Sie den Clusterstatus
+## <a id="status"></a>Überprüfen des Cluster Status
 
-Nach der Bereitstellung können Sie den Status des Clusters mit dem Überprüfen der [Mssqlctl BDC-Status anzeigen](reference-mssqlctl-bdc-status.md) Befehl.
+Nach der Bereitstellung können Sie den Status des Clusters mit dem Befehl [azdata BDC Status Show](reference-azdata-bdc-status.md) überprüfen.
 
 ```bash
-mssqlctl bdc status show -o table
+azdata bdc status show -o table
 ```
 
 > [!TIP]
-> Um die Status-Befehle auszuführen, muss zunächst der Anmeldung mit der **Mssqlctl Anmeldung** -Befehl, der im vorherigen Abschnitt "Endpoints" gezeigt wurde.
+> Zum Ausführen der Status Befehle müssen Sie sich zunächst mit dem **azdata-Anmelde** Befehl anmelden, der im Abschnitt vorherige Endpunkte angezeigt wurde.
 
-Das folgende Beispiel zeigt eine Beispielausgabe für diesen Befehl aus:
+Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
 
 ```output
 Kind     Name           State
@@ -296,23 +295,23 @@ Data     default        Ready
 Storage  default        Ready
 ```
 
-Zusätzlich zu diesen Statusübersicht können Sie auch ausführlichere Statusinformationen mit den folgenden Befehlen abrufen:
+In diesem Zusammenfassungs Status können Sie auch mit den folgenden Befehlen einen ausführlicheren Status erhalten:
 
-- [Status der BDC-mssqlctl](reference-mssqlctl-bdc-control-status.md)
-- [Status des Speicherpools von Mssqlctl bdc](reference-mssqlctl-bdc-pool-status.md)
+- [Status des azdata-BDC-Steuer Elements](reference-azdata-bdc-control-status.md)
+- [Status des azdata-BDC-Pools](reference-azdata-bdc-pool-status.md)
 
-Die Ausgabe dieser Befehle enthalten URLs zu Kibana und Grafana-Dashboards für eine ausführlichere Analyse an. 
+Die Ausgabe dieser Befehle enthält URLs zu kibana-und grafana-Dashboards für eine ausführlichere Analyse.
 
-Zusätzlich zur Verwendung von **Mssqlctl**, Sie können auch Studio für Azure Data verwenden, um sowohl Endpunkte und Statusinformationen zu suchen. Weitere Informationen zum Anzeigen des Clusterstatus mit **Mssqlctl** und Azure Data Studio, finden Sie unter [Gewusst wie: Anzeigen des Status einer big Data-Cluster](view-cluster-status.md).
+Zusätzlich zur Verwendung von **azdata**können Sie auch Azure Data Studio verwenden, um sowohl Endpunkte als auch Statusinformationen zu ermitteln. Weitere Informationen zum Anzeigen des Cluster Status mit **azdata** und Azure Data Studio finden [Sie unter How to View the Status of a Big Data Cluster](view-cluster-status.md).
 
-## <a id="connect"></a> Verbinden mit dem cluster
+## <a id="connect"></a>Herstellen einer Verbindung mit dem Cluster
 
-Weitere Informationen zum Herstellen einer Verbindung mit der big Data-Cluster, finden Sie unter [Herstellen einer Verbindung mit einer SQL Server big Data-cluster mit Azure Data Studio](connect-to-big-data-cluster.md).
+Weitere Informationen zum Herstellen einer Verbindung mit dem Big Data-Cluster finden Sie unter [Herstellen einer Verbindung mit einem SQL Server Big Data Cluster mit Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zur Bereitstellung von big Data-Clusters finden Sie unter den folgenden Ressourcen:
+Weitere Informationen zur Bereitstellung von Big Data Clustern finden Sie in den folgenden Ressourcen:
 
-- [Konfigurieren von bereitstellungseinstellungen für big Data-Cluster](deployment-custom-configuration.md)
-- [Führen Sie eine offline-Bereitstellung von einer SQL Server-big Data-cluster](deploy-offline.md)
-- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Konfigurieren von Bereitstellungs Einstellungen für Big Data Cluster](deployment-custom-configuration.md)
+- [Ausführen einer Offline Bereitstellung eines SQL Server Big Data Clusters](deploy-offline.md)
+- [Werkstatt Architektur von Microsoft SQL Server Big Data Clustern](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

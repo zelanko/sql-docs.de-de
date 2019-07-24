@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912614"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Der Name der Partitionsfunktion. Partitionsfunktionsnamen müssen innerhalb der Datenbank eindeutig sein und den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  *input_parameter_type*  
- Der Datentyp der zum Partitionieren verwendeten Spalte. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
+ Der Datentyp der zum Partitionieren verwendeten Spalte. Als Partitionierungsspalte sind alle Datentypen außer **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , Aliasdatentypen oder CLR-benutzerdefinierten Datentypen, zulässig.  
   
  Die eigentliche Spalte, Partitionierungsspalte genannt, wird in der CREATE TABLE- oder CREATE INDEX-Anweisung angegeben.  
   
@@ -74,7 +73,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Gibt die Anzahl der von *boundary_value* bereitgestellten Werte an, wobei 14.999 nicht überschritten werden darf. Die Anzahl der erstellten Partitionen entspricht *n* + 1. Die Werte müssen nicht der Reihenfolge nach angegeben werden. Wenn die Werte nicht der Reihenfolge nach aufgeführt sind, werden sie von [!INCLUDE[ssDE](../../includes/ssde-md.md)] sortiert, die Funktion wird erstellt und eine Warnung zurückgegeben, die besagt, dass die Werte nicht der Reihenfolge nach bereitgestellt werden. Die Datenbank-Engine gibt einen Fehler zurück, wenn *n* doppelte Werte enthält.  
   
  **LEFT** | RIGHT  
- Gibt an, zu welcher Seite, links oder rechts, die einzelnen Grenzwertintervalle *boundary_value* [ **,**_...n_ ] gehören, wenn Intervallwerte von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in aufsteigender Reihenfolge von links nach rechts sortiert werden. Fehlt die Angabe, ist LEFT der Standardwert.  
+ Gibt an, zu welcher Seite, links oder rechts, die einzelnen Grenzwertintervalle *boundary_value* [ **,** _...n_ ] gehören, wenn Intervallwerte von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in aufsteigender Reihenfolge von links nach rechts sortiert werden. Fehlt die Angabe, ist LEFT der Standardwert.  
   
 ## <a name="remarks"></a>Remarks  
  Der Bereich einer Partitionsfunktion beschränkt sich auf die Datenbank, in der sie erstellt wird. Innerhalb der Datenbank befinden sich Partitionsfunktionen in einem von anderen Funktionen abgetrennten Namespace.  
@@ -107,7 +106,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**Werte**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Erstellen einer RANGE RIGHT-Partitionsfunktion für eine int-Spalte  
- In der folgenden Partitionsfunktion werden dieselben Werte für *boundary_value* [ **,**_...n_ ] wie in der Partitionsfunktion im vorherigen Beispiel verwendet, mit dem Unterschied, dass RANGE RIGHT angegeben wird.  
+ In der folgenden Partitionsfunktion werden dieselben Werte für *boundary_value* [ **,** _...n_ ] wie in der Partitionsfunktion im vorherigen Beispiel verwendet, mit dem Unterschied, dass RANGE RIGHT angegeben wird.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

@@ -1,39 +1,39 @@
 ---
 title: Einbinden von S3 für HDFS-Tiering
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird erläutert, wie HDFS, die Informationen zum Einbinden von eines externen Systems des S3-Datei in HDFS auf big Data-Cluster (Vorschau) eine SQL Server-2019 tiering konfiguriert.
+description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurieren, um ein externes S3-Dateisystem in HDFS in einem SQL Server 2019 Big Data-Cluster (Vorschauversion) einbinden zu können.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba4d488c411d51b3aa55ec8aba424f4763f0fd98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28c80d6076f07c8a4f1605149f4b5c730c8349a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958305"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419338"
 ---
-# <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount S3 für HDFS-Staffelung in einem big Data-cluster
+# <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von S3 für HDFS-Tiering in einem Big Data Cluster
 
-Die folgenden Abschnitte enthalten ein Beispiel für horizontale Skalierung mit einer Datenquelle für die S3-Speicher HDFS zu konfigurieren.
+In den folgenden Abschnitten wird ein Beispiel für die Konfiguration von HDFS-Tiering mit einer S3-Speicherdaten Quelle bereitgestellt.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-- [Bereitgestellte big Data-cluster](deployment-guidance.md)
-- [Big Data-tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Bereitgestellter Big Data Cluster](deployment-guidance.md)
+- [Big Data-Tools](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
-- Erstellen und Hochladen von Daten in einem S3-bucket 
-  - Hochladen von CSV oder Parquet-Dateien in Ihrem S3-Bucket. Dies ist die externe HDFS-Daten, die in HDFS in die big Data-Cluster bereitgestellt werden.
+- Erstellen und Hochladen von Daten in einen S3-Bucket 
+  - Laden Sie CSV-oder Parkett Dateien in Ihren S3-Bucket hoch. Dies sind die externen HDFS-Daten, die in HDFS im Big Data Cluster eingebunden werden.
 
 ## <a name="access-keys"></a>Zugriffsschlüssel
 
-### <a name="set-environment-variable-for-access-key-credentials"></a>Legen Sie die Umgebungsvariable für den Zugriff von schlüsselanmeldeinformationen
+### <a name="set-environment-variable-for-access-key-credentials"></a>Umgebungsvariable für Zugriffsschlüssel-Anmelde Informationen festlegen
 
-Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können. Legen Sie eine Umgebungsvariable, die im folgenden Format an. Beachten Sie, dass die Anmeldeinformationen für die sich in einer durch Trennzeichen getrennte Liste. Der Befehl "set" wird unter Windows verwendet. Wenn Sie Linux verwenden, klicken Sie dann stattdessen Sie "Export".
+Öffnen Sie eine Eingabeaufforderung auf einem Client Computer, der auf den Big Data Cluster zugreifen kann. Legen Sie eine Umgebungsvariable im folgenden Format fest. Beachten Sie, dass sich die Anmelde Informationen in einer durch Trennzeichen getrennten Liste befinden müssen. Der Befehl "Set" wird unter Windows verwendet. Wenn Sie Linux verwenden, verwenden Sie stattdessen "Export".
 
    ```text
     set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
@@ -41,59 +41,67 @@ Die folgenden Abschnitte enthalten ein Beispiel für horizontale Skalierung mit 
    ```
 
    > [!TIP]
-   > Weitere Informationen zum Erstellen von Zugriffstasten für S3 finden Sie unter [S3-Zugriffsschlüssel](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > Weitere Informationen zum Erstellen von S3-Zugriffs Schlüsseln finden Sie unter [S3 Access Keys (S3-Zugriffsschlüssel](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)).
 
-## <a id="mount"></a> Bereitstellen der HDFS-Remotespeicher
+## <a id="mount"></a>Einbinden des HDFS-Remote Speichers
 
-Nun, da Sie eine Datei mit Zugriffstasten vorbereitet haben, können Sie die Einbindung beginnen. Die folgenden Schritte aus bereit den HDFS Remotespeicher s3 im lokalen HDFS-Speicher, der Ihre big Data-cluster
+Nachdem Sie nun eine Anmelde Informationsdatei mit Zugriffs Schlüsseln vorbereitet haben, können Sie mit der Bereitstellung beginnen. In den folgenden Schritten wird der Remote-HDFS-Speicher in S3 in den lokalen HDFS-Speicher Ihres Big Data Clusters einbinden.
 
-1. Verwendung **"kubectl"** finden Sie die IP-Adresse für den Endpunkt **Controller-svc-External** -Dienst in Ihre big Data-Cluster. Suchen Sie nach der **externe IP-** .
+1. Verwenden Sie **kubectl** , um die IP-Adresse für den Endpunkt **Controller-SVC-externen** Dienst im Big Data Cluster zu ermitteln. Suchen Sie nach der **externen IP-Adresse**.
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. Melden Sie sich mit **Mssqlctl** verwenden die externe IP-Adresse des Endpunkts Controller mit Ihrem Benutzernamen und Kennwort:
+1. Melden Sie sich mit **azdata** über die externe IP-Adresse des Controller Endpunkts mit Ihrem Cluster Benutzernamen und-Kennwort an:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080/
    ```
    
-1. Legen Sie die Umgebungsvariable MOUNT_CREDENTIALS, die die obigen Anweisungen befolgen
+1. Umgebungsvariable festlegen MOUNT_CREDENTIALS befolgen Sie die obigen Anweisungen.
 
-1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl BDC-Speicherpool Bereitstellung erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
+1. Einbinden des HDFS-Remote Speichers in Azure mithilfe von **azdata BDC Storage-Pool Mount Create**. Ersetzen Sie die Platzhalter Werte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
-   > Create-Befehl für die Bereitstellung erfolgt asynchron. Zu diesem Zeitpunkt keine Nachricht vorliegt, der angibt, ob die Bereitstellung erfolgreich war. Finden Sie unter den [Status](#status) Abschnitt aus, um den Status Ihrer Bereitstellungen zu überprüfen.
+   > Der Befehl "Mount Create" ist asynchron. Zurzeit gibt es keine Meldung, die angibt, ob die einreilegung erfolgreich war. Weitere Informationen zum Status Ihrer bereit Stellungen finden Sie im Abschnitt " [Status](#status) ".
 
-Wenn erfolgreich bereitgestellt wurde, sollten Sie möglicherweise die HDFS-Daten Abfragen und führt Spark-Aufträge für diese. Er wird in das HDFS für Ihre big Data-Cluster in der vom angegebenen Position angezeigt `--mount-path`.
+Wenn die Bereitstellung erfolgreich war, sollten Sie in der Lage sein, die HDFS-Daten abzufragen und Spark-Aufträge dafür auszuführen. Er wird im HDFS für Ihren Big Data Cluster an dem Speicherort angezeigt, der `--mount-path`durch angegeben wird.
 
-## <a id="status"></a> Abrufen des Status von Bereitstellungen
+## <a id="status"></a>Status von bereit Stellungen erhalten
 
-Um den Status aller Bereitstellungen in Ihrer big Data-Cluster aufzulisten, verwenden Sie den folgenden Befehl aus:
+Verwenden Sie den folgenden Befehl, um den Status aller bereit Stellungen in Ihrem Big Data Cluster aufzulisten:
 
 ```bash
-mssqlctl bdc storage-pool mount status
+azdata bdc storage-pool mount status
 ```
 
-Um den Status einer Bereitstellung in einem bestimmten Pfad in HDFS aufzulisten, verwenden Sie den folgenden Befehl aus:
+Verwenden Sie den folgenden Befehl, um den Status einer Einstellung in einem bestimmten Pfad in HDFS aufzulisten:
 
 ```bash
-mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Löschen Sie die Bereitstellung
+## <a name="refresh-a-mount"></a>Ein einbinden aktualisieren
 
-Verwenden Sie zum Löschen der Bereitstellung der **Mssqlctl BDC-Speicherpool Bereitstellung löschen** Befehl aus, und geben Sie den Bereitstellungspfad in HDFS:
+Im folgenden Beispiel wird das Einbinden aktualisiert.
 
 ```bash
-mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
+```
+
+## <a id="delete"></a>Das Einbinden löschen
+
+Zum Löschen der Anwendung verwenden Sie den Befehl **azdata BDC Storage-Pool Mount DELETE** , und geben Sie den einstellungspfad in HDFS an:
+
+```bash
+azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server-2019 big Data-Cluster, finden Sie unter [was SQL Server-2019 big Data-Cluster sind?](big-data-cluster-overview.md).
+Weitere Informationen zu SQL Server 2019 Big Data-Clustern finden Sie unter [Was sind SQL Server 2019 Big Data Cluster?](big-data-cluster-overview.md).

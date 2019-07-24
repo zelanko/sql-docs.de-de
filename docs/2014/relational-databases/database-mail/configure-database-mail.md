@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872216"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418881"
 ---
 # <a name="configure-database-mail"></a>Konfigurieren des Datenbank-E-Mail-Features
   Dieses Thema beschreibt die Aktivierung und Konfiguration von Datenbank-E-Mails mithilfe des Assistenten zum Konfigurieren von Datenbank-E-Mails sowie die Erstellung eines Datenbank-E-Mail-Konfigurationsskripts anhand von Vorlagen.  
@@ -67,7 +67,7 @@ ms.locfileid: "62872216"
   
 2.  Erweitern Sie den Knoten **Verwaltung** .  
   
-3.  Enge Klick **Database Mail**, und klicken Sie dann auf **Konfigurieren von Datenbank-e-Mails**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Datenbank-E-Mail**, und klicken Sie dann auf **Datenbank-E-Mail konfigurieren**.  
   
 4.  Abschließen der Dialogfelder des Assistenten  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62872216"
  Geben Sie die E-Mail-Adresse ein, die für Antworten auf E-Mail-Nachrichten aus diesem Konto verwendet wird. Der Eintrag für die Antwort-E-Mail ist optional. Antworten auf ein Konto von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent könnten beispielsweise an den Datenbankadministrator gehen, danw@Adventure-Works.com.  
   
  **Servername**  
- Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. Dies ist normalerweise in einem Format ähnlich `smtp.` *< ihr_unternehmen >* `.com`. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
+ Geben Sie den Namen oder die IP-Adresse des SMTP-Servers ein, der von diesem Konto zum Senden von E-Mails verwendet wird. In der Regel hat dies ein ähnliches Format `smtp.`wie *< YOUR_COMPANY >* `.com`. Informationen hierzu erhalten Sie von Ihrem E-Mail-Administrator.  
   
  **Portnummer**  
  Geben Sie die Portnummer des SMTP-Servers für dieses Konto ein. Die meisten SMTP-Server verwenden Port 25.  

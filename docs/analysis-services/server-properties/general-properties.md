@@ -1,6 +1,6 @@
 ---
-title: Allgemeine Eigenschaften von Analysis Services | Microsoft-Dokumentation
-ms.date: 04/04/2019
+title: Allgemeine Eigenschaften Analysis Services | Microsoft-Dokumentation
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d2a1fd8a83c4b181dfc182f5fb5630e29c9efb
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714687"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419517"
 ---
 # <a name="general-properties"></a>Allgemeine Eigenschaften
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten Servereigenschaften. In diesem Thema werden die Servereigenschaften in der Datei msmdsrv.ini dokumentiert, die nicht in einem bestimmten Abschnitt wie Sicherheit, Netzwerk oder ThreadPool behandelt werden. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Servereigenschaften in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Gilt für:** Mehrdimensionaler und tabellarischer Servermodus, sofern nicht anders angegeben  
+ Diese Eigenschaften gelten für den mehrdimensionalen und tabellarischen Server Modus, sofern nichts anderes angegeben ist.  
   
 ## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  **AdminTimeout**  
@@ -33,11 +33,11 @@ ms.locfileid: "62714687"
  Eine Zeichenfolgeneigenschaft, die in einer getrennten Liste die Ordner angibt, die durchsucht werden können, wenn Dateien in Analysis Services-Dialogfeldern gespeichert, geöffnet und gesucht werden. Das Analysis Services-Dienstkonto muss Lese- und Schreibberechtigungen für alle Ordner haben, die Sie der Liste hinzufügen.  
   
  **BackupDir**  
- Eine Zeichenfolgeneigenschaft, die identifiziert den Namen des Verzeichnisses, in dem Sicherungsdateien standardmäßig gespeichert sind, im Ereignisprotokoll als Teil der Backup-Befehl kein Pfad angegeben ist.  
+ Eine Zeichen folgen Eigenschaft, die den Namen des Verzeichnisses identifiziert, in dem Sicherungsdateien standardmäßig gespeichert werden, im Fall, dass kein Pfad als Teil des Backup-Befehls angegeben wird.  
  
-**ClientCacheRefreshPolicy** von Azure Analysis Services nur angewendet wird. Überschreibt die **geplante cacheaktualisierung** für alle Power BI-Datasets festlegen. Alle Berichte mit Live Connect berücksichtigt die Einstellung auf Serverebene, unabhängig von der Dataset-Ebene festlegen, oder welcher Arbeitsbereich sie sich befinden.
+**Clientcacherefreshpolicy** Bei tabellarischen Modellen in SSAS und Azure Analysis Services überschreibt diese Eigenschaft die Einstellung für die **geplante Cache Aktualisierung** für alle Power BI Datasets. Alle Live Connect-Berichte beobachten die Einstellung auf Serverebene unabhängig von der Einstellung auf Datasetebene oder dem Arbeitsbereich, in dem Sie sich befinden.
 
-Der Standardwert für diese Eigenschaft ist 1. Dadurch wird ermöglicht, dass alle Hintergrund-Cache gemäß der Einstellung für das Dataset geplante cacheaktualisierung aktualisiert. Um alle Hintergrund-Cache davon abhalten, aktualisiert, geben Sie 0 (null).
+Der Standardwert für diese Eigenschaft ist-1. Dadurch werden alle Aktualisierungen des Hintergrund Caches gemäß der Einstellung für die geplante Cache Aktualisierung für das DataSet ermöglicht. Geben Sie 0 (null) an, um alle Aktualisierungen des Hintergrund Caches abzuraten.
 
   
  **CollationName**  
@@ -52,7 +52,7 @@ Der Standardwert für diese Eigenschaft ist 1. Dadurch wird ermöglicht, dass al
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von Threads zum Erstellen von Partitionsindizes definiert. Durch Erhöhen dieses Werts kann die Partitionsindizierung auf Kosten der Speicherauslastung beschleunigt werden. Weitere Informationen zu dieser Eigenschaft finden Sie im [SQL Server 2008 R2 Analysis Services-Vorgangshandbuch](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
  **CoordinatorCancelCount**  
- Eine ganze 32-Bit-Zahl mit Vorzeichen, die definiert, wie häufig der Server überprüfen soll, ob ein Cancel-Ereignis aufgetreten ist (basierend auf der Anzahl interner Iterationen). Verringern Sie diese Zahl, um häufiger, jedoch zu Lasten der allgemeinen Leistung, eine Überprüfung auf Cancel-Ereignisse durchzuführen. Diese Eigenschaft wird im tabellarischen Servermodus ignoriert.  
+ Eine ganze 32-Bit-Zahl mit Vorzeichen, die definiert, wie häufig der Server überprüfen soll, ob ein Cancel-Ereignis aufgetreten ist (basierend auf der Anzahl interner Iterationen). Verringern Sie diese Zahl, um häufiger, jedoch zu Lasten der allgemeinen Leistung, eine Überprüfung auf Cancel-Ereignisse durchzuführen. Diese Eigenschaft wird im tabellarischen Server Modus ignoriert.  
   
  **CoordinatorExecutionMode**  
  Eine ganze 32-Bit-Zahl mit Vorzeichen, die die maximale Anzahl von parallelen Servervorgängen definiert, einschließlich von Verarbeitungs- und Abfragevorgängen. Null (0) bedeutet, dass der Server basierend auf einem internen Algorithmus selbst entscheidet. Eine positive Zahl zeigt die maximale Anzahl von Vorgängen insgesamt an. Eine negative Zahl (mit umgekehrtem Vorzeichen) zeigt die maximale Anzahl von Vorgängen pro Prozessor an.  
@@ -69,7 +69,7 @@ Der Standardwert für diese Eigenschaft ist 1. Dadurch wird ermöglicht, dass al
  Eine Zeichenfolge, die den Namen des Verzeichnisses zum Speichern von Daten identifiziert.  
   
  **DeploymentMode**  
- Bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird als "Servermodus" in den Dialogfeldern, Meldungen und Dokumentation bezeichnet. Diese Eigenschaft wird basierend auf dem Servermodus, den Sie beim Installieren von Analysis Services ausgewählt haben, von SQL Server-Setup konfiguriert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
+ Bestimmt den operativen Kontext einer Analysis Services-Serverinstanz. Diese Eigenschaft wird in Dialogfeldern, Meldungen und Dokumentation als "Server Modus" bezeichnet. Diese Eigenschaft wird basierend auf dem Servermodus, den Sie beim Installieren von Analysis Services ausgewählt haben, von SQL Server-Setup konfiguriert. Diese Eigenschaft sollte nur intern berücksichtigt und immer der vom Setup angegebene Wert verwendet werden.  
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
