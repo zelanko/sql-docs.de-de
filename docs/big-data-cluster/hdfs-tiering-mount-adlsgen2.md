@@ -1,71 +1,71 @@
 ---
 title: Einbinden von ADLS Gen2 für HDFS-Tiering
 titleSuffix: How to mount ADLS Gen2
-description: In diesem Artikel wird erläutert, wie HDFS, die Informationen zum Einbinden von eines externen Systems von Azure Data Lake Store-Datei in HDFS auf eine SQL Server-2019 big Data-Cluster (Vorschau) tiering konfiguriert.
+description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurieren, um ein externes Azure Data Lake Storage Dateisystem in HDFS in einem SQL Server 2019 Big Data-Cluster (Vorschau) einbinden zu können.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ce7836b66408fda5f60e5566625dc1aa460fa672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7d8a6dd53452700853dca9774ed0196ed7546fe
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958375"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419347"
 ---
-# <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Wie Sie Mount ADLS Gen2 für HDFS-Staffelung in einem big Data-cluster
+# <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einem Big Data Cluster
 
-Die folgenden Abschnitte enthalten ein Beispiel für HDFS, die horizontale Skalierung mit einer Azure Data Lake-Speicher Gen2-Datenquelle konfigurieren.
+In den folgenden Abschnitten wird ein Beispiel für die Konfiguration von HDFS-Tiering mit einer Azure Data Lake Storage Gen2-Datenquelle bereitgestellt.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-- [Bereitgestellte big Data-cluster](deployment-guidance.md)
-- [Big Data-tools](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Bereitgestellter Big Data Cluster](deployment-guidance.md)
+- [Big Data-Tools](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
 
-## <a id="load"></a> Laden von Daten in Azure Data Lake-Speicher
+## <a id="load"></a>Laden von Daten in Azure Data Lake Storage
 
-Der folgende Abschnitt beschreibt, wie Azure Data Lake-Speicher Gen2 zum Testen der HDFS-tiering eingerichtet wird. Wenn Sie bereits in Azure Data Lake-Speicher gespeicherte Daten haben, können Sie diesen Abschnitt, um Ihre eigenen Daten verwenden überspringen.
+Im folgenden Abschnitt wird beschrieben, wie Sie Azure Data Lake Storage Gen2 zum Testen des HDFS-Tiering einrichten. Wenn Sie bereits Daten in Azure Data Lake Storage gespeichert haben, können Sie diesen Abschnitt überspringen, um Ihre eigenen Daten zu verwenden.
 
-1. [Erstellen eines Speicherkontos mit Data Lake-Speicher Gen2 Funktionen](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+1. [Erstellen Sie ein Speicherkonto mit Data Lake Storage Gen2-Funktionen](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Erstellen eines blobcontainers](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) in diesem Speicherkonto für Ihre externen Daten.
+1. Erstellen Sie in diesem Speicherkonto [einen BlobContainer](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) für Ihre externen Daten.
 
-1. Hochgeladen Sie CSV- oder Parquet-Datei in den Container. Dies ist die externe HDFS-Daten, die in HDFS in die big Data-Cluster bereitgestellt werden.
+1. Laden Sie eine CSV-oder Parkett Datei in den Container hoch. Dies sind die externen HDFS-Daten, die in HDFS im Big Data Cluster eingebunden werden.
 
-## <a name="credentials-for-mounting"></a>Anmeldeinformationen für die Einbindung
+## <a name="credentials-for-mounting"></a>Anmelde Informationen für die Einbindung
 
-## <a name="use-oauth-credentials-to-mount"></a>Verwenden von OAuth-Anmeldeinformationen bereitstellen
+## <a name="use-oauth-credentials-to-mount"></a>Verwenden von OAuth-Anmelde Informationen zum Einbinden
 
-Um OAuth-Anmeldeinformationen verwenden, um die bereitstellen, müssen Sie führen die folgenden Schritte aus:
+Um OAuth-Anmelde Informationen zum einbinden zu verwenden, müssen Sie die folgenden Schritte ausführen:
 
-1. Wechseln Sie zu der [Azure-Portal](https://portal.azure.com)
-1. Wechseln Sie zu "Dienste" im linken Navigationsbereich, und Systemzeit auf "Azure Active Directory"
-1. Verwenden im Menü "App-Registrierungen", erstellen Sie eine "Web-Anwendung und führen Sie den Assistenten. **Notieren Sie sich den Namen, die Sie hier erstellen**. Sie müssen diesen Namen zu Ihrem ADLS-Konto als autorisierte Benutzer hinzufügen.
-1. Nachdem die Webanwendung erstellt wurde, wechseln Sie zu "Schlüssel" unter "Einstellungen" für die app.
-1. Wählen Sie, die eine Dauer für den Schlüssel und klicken Sie auf Speichern. **Speichern Sie den generierten Schlüssel ein.**
-1.  Wechseln Sie zurück zu der Seite "App-Registrierungen", und klicken Sie oben auf "Endpunkte". **Notieren Sie sich die URL "Token-Endpunkt"**
-1. Sie verfügen nun über die folgenden Schritte für OAuth notiert:
+1. Wechseln Sie zum [Azure-Portal](https://portal.azure.com)
+1. Wechseln Sie im linken Navigationsbereich zu "Dienste", und klicken Sie auf "Azure Active Directory".
+1. Erstellen Sie mithilfe von "App-Registrierungen" im Menü eine "Webanwendung, und folgen Sie dem Assistenten. **Merken Sie sich den Namen, den Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierten Benutzer hinzufügen.
+1. Nachdem die Webanwendung erstellt wurde, wechseln Sie unter "Einstellungen" für die APP zu "Schlüssel".
+1. Wählen Sie eine Schlüssel Dauer aus, und klicken Sie auf speichern. **Speichern Sie den generierten Schlüssel.**
+1.  Wechseln Sie zurück zur Seite App-Registrierungen, und klicken Sie oben auf die Schaltfläche "Endpunkte". **Notieren Sie sich die URL für den tokenendpunkt.**
+1. Für OAuth sollten Sie nun folgende Punkte beachten:
 
-    - Die "Anwendungs-ID" der Web-App Sie weiter oben in Schritt 3 erstellte
-    - Der Schlüssel, den Sie gerade erstellt haben, in Schritt 5
-    - Die token-Endpunkt aus Schritt 6
+    - Die "Anwendungs-ID" der Web-App, die Sie in Schritt 3 erstellt haben.
+    - Der Schlüssel, den Sie soeben in Schritt 5 erstellt haben.
+    - Der tokenendpunkt aus Schritt 6
 
-### <a name="adding-the-service-principal-to-your-adls-account"></a>Der Dienstprinzipal hinzufügen mit Ihrem ADLS-Konto
+### <a name="adding-the-service-principal-to-your-adls-account"></a>Hinzufügen des Dienst Prinzipals zu Ihrem ADLS-Konto
 
-1. In diesem Fall zum Portal wechseln Sie und öffnen Sie ein ADLS-Konto, und wählen Sie die Zugriffssteuerung (IAM) im linken Menü.
-1. Wählen Sie "Eine rollenzuweisung hinzufügen", und suchen Sie nach den Namen, die, den Sie in Schritt 3 oben (Beachten Sie, die nicht in der Liste angezeigt, sondern wird bei der Suche gefunden werden, für den vollständigen Namen) erstellt haben.
-1. Fügen Sie jetzt "Storage-BLOB-Daten Rolle"Mitwirkender "(Vorschau)" hinzu.
+1. Wechseln Sie erneut zum Portal, öffnen Sie das ADLS-Konto, und wählen Sie im linken Menü die Option Zugriffs Steuerung (IAM) aus.
+1. Wählen Sie "Rollenzuweisung hinzufügen" aus, und suchen Sie nach dem Namen, den Sie oben in Schritt 3 erstellt haben (Beachten Sie, dass er nicht in der Liste angezeigt wird, aber gefunden wird, wenn Sie nach dem vollständigen Namen suchen).
+1. Fügen Sie jetzt die Rolle "Speicher-blobdatenmitwirkender (Vorschau)" hinzu.
 
-Warten Sie 5 bis 10 Minuten, bevor Sie mit den Anmeldeinformationen für Bereitstellung
+Warten Sie 5-10 Minuten, bevor Sie die Anmelde Informationen für die Einbindung verwenden.
 
-### <a name="set-environment-variable-for-oauth-credentials"></a>Legen Sie die Umgebungsvariable für die OAuth-Anmeldeinformationen
+### <a name="set-environment-variable-for-oauth-credentials"></a>Umgebungsvariable für OAuth-Anmelde Informationen festlegen
 
-Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können. Legen Sie eine Umgebungsvariable, die im folgenden Format ein: Beachten Sie, dass die Anmeldeinformationen für die sich in einer durch Trennzeichen getrennte Liste. Der Befehl "set" wird unter Windows verwendet. Wenn Sie Linux verwenden, klicken Sie dann stattdessen Sie "Export".
+Öffnen Sie eine Eingabeaufforderung auf einem Client Computer, der auf den Big Data Cluster zugreifen kann. Legen Sie eine Umgebungsvariable im folgenden Format fest: Beachten Sie, dass sich die Anmelde Informationen in einer durch Trennzeichen getrennten Liste befinden müssen. Der Befehl "Set" wird unter Windows verwendet. Wenn Sie Linux verwenden, verwenden Sie stattdessen "Export".
 
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
@@ -75,74 +75,82 @@ Warten Sie 5 bis 10 Minuten, bevor Sie mit den Anmeldeinformationen für Bereits
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
-## <a name="use-access-keys-to-mount"></a>Verwenden Sie Zugriffsschlüssel bereitstellen
+## <a name="use-access-keys-to-mount"></a>Verwenden von Zugriffs Schlüsseln zum Einbinden
 
-Sie können auch bereitstellen, mithilfe von Zugriffsschlüsseln, die Sie für Ihre ADLS-Konto im Azure-Portal abrufen können.
+Sie können auch mithilfe von Zugriffs Schlüsseln einbinden, die Sie für Ihr ADLS-Konto auf dem Azure-Portal abrufen können.
 
  > [!TIP]
-   > Weitere Informationen dazu, wie den Zugriffsschlüssel finden (`<storage-account-access-key>`) finden Sie in Ihrem Storage-Konto [kontoschlüssel und Verbindungszeichenfolge anzeigen](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > Weitere Informationen zum Suchen des Zugriffsschlüssels (`<storage-account-access-key>`) für Ihr Speicherkonto finden Sie unter Anzeigen von [Konto Schlüsseln und Verbindungs Zeichenfolgen](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
 
-### <a name="set-environment-variable-for-access-key-credentials"></a>Legen Sie die Umgebungsvariable für den Zugriff von schlüsselanmeldeinformationen
+### <a name="set-environment-variable-for-access-key-credentials"></a>Umgebungsvariable für Zugriffsschlüssel-Anmelde Informationen festlegen
 
-1. Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können.
+1. Öffnen Sie eine Eingabeaufforderung auf einem Client Computer, der auf den Big Data Cluster zugreifen kann.
 
-1. Öffnen Sie eine Eingabeaufforderung auf einem Clientcomputer, der Ihre big Data-Cluster zugreifen können. Legen Sie eine Umgebungsvariable, die im folgenden Format an. Beachten Sie, dass die Anmeldeinformationen für die sich in einer durch Trennzeichen getrennte Liste. Der Befehl "set" wird unter Windows verwendet. Wenn Sie Linux verwenden, klicken Sie dann stattdessen Sie "Export".
+1. Öffnen Sie eine Eingabeaufforderung auf einem Client Computer, der auf den Big Data Cluster zugreifen kann. Legen Sie eine Umgebungsvariable im folgenden Format fest. Beachten Sie, dass sich die Anmelde Informationen in einer durch Trennzeichen getrennten Liste befinden müssen. Der Befehl "Set" wird unter Windows verwendet. Wenn Sie Linux verwenden, verwenden Sie stattdessen "Export".
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> Bereitstellen der HDFS-Remotespeicher
+## <a id="mount"></a>Einbinden des HDFS-Remote Speichers
 
-Nun, da Sie die MOUNT_CREDENTIALS-Umgebungsvariable für Zugriffsschlüssel oder mithilfe von OAuth festgelegt haben, können Sie die Einbindung beginnen. Die folgenden Schritte stellen remote HDFS-Speicher in Azure Data Lake im lokalen HDFS-Speicher, der Ihre big Data-Cluster bereit.
+Nachdem Sie die MOUNT_CREDENTIALS-Umgebungsvariable für Zugriffsschlüssel oder mithilfe von OAuth festgelegt haben, können Sie mit der Bereitstellung beginnen. In den folgenden Schritten wird der Remote-HDFS-Speicher in Azure Data Lake in den lokalen HDFS-Speicher Ihres Big Data Clusters einbinden.
 
-1. Verwendung **"kubectl"** finden Sie die IP-Adresse für den Endpunkt **Controller-svc-External** -Dienst in Ihre big Data-Cluster. Suchen Sie nach der **externe IP-** .
+1. Verwenden Sie **kubectl** , um die IP-Adresse für den Endpunkt **Controller-SVC-externen** Dienst im Big Data Cluster zu ermitteln. Suchen Sie nach der **externen IP-Adresse**.
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. Melden Sie sich mit **Mssqlctl** verwenden die externe IP-Adresse des Endpunkts Controller mit Ihrem Benutzernamen und Kennwort:
+1. Melden Sie sich mit **azdata** über die externe IP-Adresse des Controller Endpunkts mit Ihrem Cluster Benutzernamen und-Kennwort an:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080/
    ```
-1. Umgebungsvariable MOUNT_CREDENTIALS (über Bildlauf für Anweisungen)
+1. Umgebungsvariable festlegen MOUNT_CREDENTIALS (Scrollen Sie nach oben, um Anweisungen zu finden)
 
-1. Bereitstellen der remote-HDFS-Speicher in Azure mithilfe **Mssqlctl BDC-Speicherpool Bereitstellung erstellen**. Ersetzen Sie die Platzhalter-Werte, bevor Sie den folgenden Befehl ausführen:
+1. Einbinden des HDFS-Remote Speichers in Azure mithilfe von **azdata BDC Storage-Pool Mount Create**. Ersetzen Sie die Platzhalter Werte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
-   > Create-Befehl für die Bereitstellung erfolgt asynchron. Zu diesem Zeitpunkt keine Nachricht vorliegt, der angibt, ob die Bereitstellung erfolgreich war. Finden Sie unter den [Status](#status) Abschnitt aus, um den Status Ihrer Bereitstellungen zu überprüfen.
+   > Der Befehl "Mount Create" ist asynchron. Zurzeit gibt es keine Meldung, die angibt, ob die einreilegung erfolgreich war. Weitere Informationen zum Status Ihrer bereit Stellungen finden Sie im Abschnitt " [Status](#status) ".
 
-Wenn erfolgreich bereitgestellt wurde, sollten Sie möglicherweise die HDFS-Daten Abfragen und führt Spark-Aufträge für diese. Er wird in das HDFS für Ihre big Data-Cluster in der vom angegebenen Position angezeigt `--mount-path`.
+Wenn die Bereitstellung erfolgreich war, sollten Sie in der Lage sein, die HDFS-Daten abzufragen und Spark-Aufträge dafür auszuführen. Er wird im HDFS für Ihren Big Data Cluster an dem Speicherort angezeigt, der `--mount-path`durch angegeben wird.
 
-## <a id="status"></a> Abrufen des Status von Bereitstellungen
+## <a id="status"></a>Status von bereit Stellungen erhalten
 
-Um den Status aller Bereitstellungen in Ihrer big Data-Cluster aufzulisten, verwenden Sie den folgenden Befehl aus:
+Verwenden Sie den folgenden Befehl, um den Status aller bereit Stellungen in Ihrem Big Data Cluster aufzulisten:
 
 ```bash
-mssqlctl bdc storage-pool mount status
+azdata bdc storage-pool mount status
 ```
 
-Um den Status einer Bereitstellung in einem bestimmten Pfad in HDFS aufzulisten, verwenden Sie den folgenden Befehl aus:
+Verwenden Sie den folgenden Befehl, um den Status einer Einstellung in einem bestimmten Pfad in HDFS aufzulisten:
 
 ```bash
-mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Löschen Sie die Bereitstellung
+## <a name="refresh-a-mount"></a>Ein einbinden aktualisieren
 
-Verwenden Sie zum Löschen der Bereitstellung der **Mssqlctl BDC-Speicherpool Bereitstellung löschen** Befehl aus, und geben Sie den Bereitstellungspfad in HDFS:
+Im folgenden Beispiel wird das Einbinden aktualisiert.
 
 ```bash
-mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
+```
+
+## <a id="delete"></a>Das Einbinden löschen
+
+Zum Löschen der Anwendung verwenden Sie den Befehl **azdata BDC Storage-Pool Mount DELETE** , und geben Sie den einstellungspfad in HDFS an:
+
+```bash
+azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server-2019 big Data-Cluster, finden Sie unter [was SQL Server-2019 big Data-Cluster sind?](big-data-cluster-overview.md).
+Weitere Informationen zu SQL Server 2019 Big Data-Clustern finden Sie unter [Was sind SQL Server 2019 Big Data Cluster?](big-data-cluster-overview.md).
