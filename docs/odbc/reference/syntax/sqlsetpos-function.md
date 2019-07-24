@@ -1,7 +1,7 @@
 ---
 title: SQLSetPos-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetPos
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetPos
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eb60350be75a6b4fae5e0c5c7c237d125ee3d3a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f14b99d2c7dac91116186fdcf53ff77ee6c2c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039690"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343073"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
+**Konformitäts**  
+ Eingeführte Version: Konformität der ODBC 1,0-Standards: ODBC  
   
  **Zusammenfassung**  
- **SQLSetPos** legt die Cursorposition in einem Rowset fest und ermöglicht es einer Anwendung, um Daten im Rowset zu aktualisieren oder zu aktualisieren oder Löschen von Daten im Resultset.  
+ **SQLSetPos** legt die Cursorposition in einem Rowset fest und ermöglicht es einer Anwendung, Daten im Rowset zu aktualisieren oder Daten im Resultset zu aktualisieren oder zu löschen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,273 +47,273 @@ SQLRETURN SQLSetPos(
   
 ## <a name="arguments"></a>Argumente  
  *StatementHandle*  
- [Eingabe] Anweisungshandle.  
+ Der Anweisungs Handle.  
   
  *RowNumber*  
- [Eingabe] Die Position der Zeile im Rowset für das Ausführen des Vorgangs angegeben, mit der *Vorgang* Argument. Wenn *RowNumber* gleich 0 ist, der Vorgang gilt für jede Zeile im Rowset.  
+ Der Die Position der Zeile im Rowset, für die der mit dem *Vorgangs* Argument angegebene Vorgang durchgeführt werden soll. Wenn *RowNumber* 0 ist, gilt der Vorgang für jede Zeile im Rowset.  
   
- Weitere Informationen finden Sie unter "Kommentare".  
+ Weitere Informationen finden Sie unter "comments".  
   
  *Vorgang*  
- [Eingabe] Der Vorgang ausführen:  
+ Der Auszuführenden Vorgang:  
   
- SQL_POSITION SQL_REFRESH SQL_UPDATE AUF SQL_DELETE  
+ SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  Der SQL_ADD-Wert für die *Vorgang* Argument ist veraltet für ODBC *3.x*. ODBC *3.x* Treiber müssen SQL_ADD für die Abwärtskompatibilität zu unterstützen. Diese Funktionalität wurde ersetzt durch einen Aufruf von **SQLBulkOperations** mit einer *Vorgang* von SQL_ADD. Wenn eine ODBC *3.x* Anwendung funktioniert mit einer ODBC- *2.x* Treiber, der Treiber-Manager ordnet einen Aufruf von **SQLBulkOperations** mit einer *Vorgang*von SQL_ADD auf **SQLSetPos** mit einer *Vorgang* von SQL_ADD.  
+>  Der SQL_ADD-Wert für das *Vorgangs* Argument wurde für ODBC *3. x*als veraltet markiert. ODBC *3. x* -Treiber müssen SQL_ADD aus Gründen der Abwärtskompatibilität unterstützen. Diese Funktion wurde durch einen **SQLBulkOperations** -Vorgang mit einem *Vorgang* von SQL_ADD ersetzt. Wenn eine ODBC *3. x* -Anwendung mit einem ODBC *2. x* -Treiber verwendet wird, ordnet der Treiber-Manager einen **SQLBulkOperations** -Vorgang mit einem *Vorgang* von SQL_ADD zu **SQLSetPos** mit einem *Vorgang* von SQL_ADD zu.  
   
- Weitere Informationen finden Sie unter "Kommentare".  
+ Weitere Informationen finden Sie unter "comments".  
   
  *LockType*  
- [Eingabe] Gibt an, wie die Zeile zu sperren, nach dem Ausführen des Vorgangs angegeben, der *Vorgang* Argument.  
+ Der Gibt an, wie die Zeile gesperrt wird, nachdem der im *Vorgangs* Argument angegebene Vorgang durchgeführt wurde.  
   
  SQL_LOCK_NO_CHANGE SQL_LOCK_EXCLUSIVE SQL_LOCK_UNLOCK  
   
- Weitere Informationen finden Sie unter "Kommentare".  
+ Weitere Informationen finden Sie unter "comments".  
   
- **Gibt zurück**  
+ **Renditen**  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLSetPos** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLSetPos** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLSetPos** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem Handlertyp SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLSetPos** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, lautet SQL_ERROR, sofern nichts anderes angegeben ist.  
   
- Für alle diese SQLSTATEs, der SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück (mit Ausnahme der 01xxx SQLSTATEs) zurückgeben kann, wird SQL_SUCCESS_WITH_INFO zurückgegeben, wenn bei ein oder mehrere, aber nicht alle Zeilen eines mehrzeiligen-Vorgangs ein Fehler auftritt, und SQL_ERROR zurückgegeben wird, wenn es sich bei Auftreten eines Fehlers auf einem einzeiliges-Vorgang.  
+ Für alle Sqlstates, die SQL_SUCCESS_WITH_INFO oder SQL_ERROR (außer 01xxx Sqlstates) zurückgeben können, wird SQL_SUCCESS_WITH_INFO zurückgegeben, wenn ein Fehler in einer oder mehreren, aber nicht in allen Zeilen eines mehr Zeilen Vorgangs auftritt, und SQL_ERROR zurückgegeben wird, wenn ein Fehler in einem Einzel Zeilen Vorgang.  
   
 |SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01001|Konflikt beim Cursorvorgang|Die *Vorgang* Argument war SQL_DELETE oder SQL_UPDATE auf, und keine Zeilen oder mehr als eine Zeile gelöscht oder aktualisiert wurden. (Weitere Informationen zu Updates für mehr als eine Zeile, finden Sie unter der Beschreibung der SQL_ATTR_SIMULATE_CURSOR *Attribut* in **SQLSetStmtAttr**.) (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Die *Vorgang* Argument war SQL_DELETE oder SQL_UPDATE und der Vorgang ist fehlgeschlagen, da vollständige Parallelität. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichenfolgedaten rechts abgeschnitten|Die *Vorgang* Argument war SQL_REFRESH und Zeichenfolgen- oder Binärdaten, die für eine Spalte oder Spalten mit dem Datentyp des Typs SQL_C_CHAR oder sql_c_binary angegeben zurückgegeben, die in das Abschneiden von nicht leeren Zeichen oder binäre Daten ungleich NULL geführt haben.|  
-|01S01|Fehler in Zeile|Die *RowNumber* Argument wurde 0 und Fehler in einer oder mehreren Zeilen beim Ausführen des Vorgangs angegeben, mit der *Vorgang* Argument.<br /><br /> (SQL_SUCCESS_WITH_INFO wird zurückgegeben, wenn bei ein oder mehrere, aber nicht alle Zeilen eines mehrzeiligen-Vorgangs ein Fehler auftritt, und wenn für einen Vorgang für die einzelnen Zeile ein Fehler auftritt, wird SQL_ERROR zurückgegeben.)<br /><br /> (Diese SQLSTATE wird nur zurückgegeben, wenn **SQLSetPos** wird aufgerufen, nachdem **SQLExtendedFetch**, wenn der Treiber ODBC *2.x* Treiber und die Cursorbibliothek wird nicht verwendet.)|  
-|01S07|Teilbereiche wurden abgeschnitten|Die *Vorgang* Argument war SQL_REFRESH, der Datentyp des Puffers Anwendung war nicht SQL_C_CHAR oder sql_c_binary angegeben und die Daten an Application-Puffer für eine oder mehrere Spalten zurückgegeben wurden abgeschnitten. Für numerische Datentypen wurde die Nachkommastellen der Zahl abgeschnitten. Für die Zeit, Zeitstempel und Interval-Datentypen, die eine Komponente enthält wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|07006|Attributverletzung eingeschränkter Daten|Der Datenwert einer Spalte im Resultset konnte nicht konvertiert werden, um den angegebenen Datentyp *TargetType* im Aufruf von **SQLBindCol**.|  
-|07009|Ungültiger Deskriptorindex|Das Argument *Vorgang* SQL_REFRESH oder SQL_UPDATE war und eine Spaltennummer, die größer als die Anzahl der Spalten im Resultset eine Spalte gebunden war.|  
-|21S02|Spaltenzahl der abgeleiteten Tabelle stimmt nicht mit der Spaltenliste überein|Das Argument *Vorgang* SQL_UPDATE war und keine Spalten aktualisiert wurden, da alle Spalten entweder nicht gebundenen, schreibgeschützt wurden oder der Wert in die gebundenen Längen-/Indikatorpuffer SQL_COLUMN_IGNORE war.|  
-|22001|Zeichenfolgendaten, rechts abgeschnitten.|Die *Vorgang* Argument war SQL_UPDATE auf, und die Zuweisung von einem Zeichen- oder binären Wert einer Spalte führt das Abschneiden von NichtLeer (für Zeichen) oder ungleich Null (für binär)-Zeichen oder Bytes.|  
-|22003|Numerischer Wert außerhalb des gültigen Bereichs|Das Argument *Vorgang* SQL_UPDATE wurde und die Zuweisung eines numerischen Werts einer Spalte im Resultset verursacht des gesamten (im Gegensatz zu Bruch) Teils der Zahl abgeschnitten wird.<br /><br /> Das Argument *Vorgang* SQL_REFRESH war und den numerischen Wert für eine oder mehrere gebundene Spalten hätte ein Verlust signifikanter Ziffern.|  
-|22007|Ungültiges Datetime-format|Das Argument *Vorgang* SQL_UPDATE wurde und die Zuweisung von einen Date- oder Timestamp-Wert an eine Spalte im Resultset, das verursacht hat, der Jahr, Monat oder Tagesfeld für die sich außerhalb des gültigen Bereichs.<br /><br /> Das Argument *Vorgang* SQL_REFRESH war und den Date- oder Timestamp-Wert für eine oder mehrere gebundene Spalten zurückgegeben hätte das Jahr, Monat oder Tagesfeld für die sich außerhalb des gültigen Bereichs.|  
-|22008|Überlauf im Datum/Uhrzeit-Feld|Die *Vorgang* Argument war SQL_UPDATE auf, und die Leistung von "DateTime"-Arithmetik auf Daten an eine Spalte im Resultset gesendet werden, die in einem Datetime-Feld (das Jahr, Monat, Tag, Stunde, Minute oder zweites Feld) des Ergebnisses geführt haben basieren außerhalb des zulässigen Bereichs von Werten für das Feld oder ungültiger natürliche Regeln für den gregorianischen Kalender für DateTime-Werte.<br /><br /> Die *Vorgang* Argument war SQL_REFRESH und die Leistung von "DateTime"-Arithmetik auf Daten aus dem Resultset abgerufen werden, die in einem Datetime-Feld (das Jahr, Monat, Tag, Stunde, Minute oder zweites Feld) des Ergebnisses geführt haben basieren außerhalb des zulässigen Bereichs von Werten für das Feld oder ungültiger natürliche Regeln für den gregorianischen Kalender für DateTime-Werte.|  
-|22015|Überlauf bei Intervallfeld|Die *Vorgang* Argument war SQL_UPDATE auf und die Zuweisung von einem genauen numerischen oder C Intervalltyp auf ein Intervall von SQL-Datentyp verursacht einen Verlust signifikanter Ziffern.<br /><br /> Die *Vorgang* Argument war SQL_UPDATE auf, wenn ein Intervall von SQL-Typ zuweisen, gab es keine Darstellung des Werts von der C-Typ in der SQL-Typ-Intervall.<br /><br /> Die *Vorgang* Argument war SQL_REFRESH und in das Feld "führende" C Intervalltyp aus einer genauen numerischen oder Intervall SQL-Typ zuweisen ein Verlust signifikanter Ziffern verursacht hat.<br /><br /> Die *Vorgang* Argument SQL_ aktualisieren, wenn ein von C-Intervalltyp zuweisen, gab es keine Darstellung des Werts von der SQL-Typ in den Intervalltyp C.|  
-|22018|Ungültiger Zeichenwert für Konvertierungsangabe|Die *Vorgang* Argument war SQL_REFRESH; der C-Typ wurde eine genaue oder ungefähre numerische, einen datetime-Wert oder ein Intervall-Datentyp; der SQL-Typ der Spalte einen Zeichendatentyp; und der Wert in der Spalte nicht wurde ein gültiger Literal mit dem C-Typ gebunden.<br /><br /> Das Argument *Vorgang* SQL_UPDATE wurde; der SQL-Typ wurde eine genaue oder ungefähre numerische, einen datetime-Wert oder ein Intervall-Datentyp, der C-Typ SQL_C_CHAR; und der Wert in der Spalte nicht wurde ein gültiger Literal des gebundenen Typen aus SQL.|  
-|23000|Verletzung der integritätseinschränkung|Das Argument *Vorgang* SQL_DELETE oder SQL_UPDATE war und eine integritätseinschränkung verletzt wurde.|  
-|24000|Ungültiger Cursorstatus|Die *StatementHandle* wurde in einem ausgeführten Zustand befindet, aber kein Resultset zugeordnet wurde die *StatementHandle*.<br /><br /> (DM) ein Cursor geöffnet, auf war die *StatementHandle*, aber **SQLFetch** oder **SQLFetchScroll** nicht aufgerufen wurde.<br /><br /> Ein Cursor geöffnet, auf war die *StatementHandle*, und **SQLFetch** oder **SQLFetchScroll** war aufgerufen wurde, aber der Cursor positioniert wurde, vor dem Start des Resultsets oder nach das Ende des Resultsets.<br /><br /> Das Argument *Vorgang* war SQL_DELETE, SQL_REFRESH oder SQL_UPDATE auf, und der Cursor vor dem Start des Resultsets oder nach dem Ende des Resultsets positioniert wurde.|  
-|40001|Serialisierungsfehler|Die Transaktion wurde aufgrund eines Deadlocks Ressource mit einer anderen Transaktion ein Rollback ausgeführt.|  
-|40003|Unbekannter Anweisungsabschluss|Fehler bei der zugeordnete Verbindung während der Ausführung dieser Funktion und der Status der Transaktion kann nicht bestimmt werden.|  
-|42000|Syntaxfehler oder zugriffsverletzung|Der Treiber konnte die Zeile zu sperren, je nach Bedarf zum Ausführen des Vorgangs angefordert, die im Argument *Vorgang*.<br /><br /> Der Treiber konnte die Zeile zu sperren, wie im Argument angefordert *LockType*.|  
-|44000|WITH CHECK OPTION-Verstoß|Die *Vorgang* Argument war SQL_UPDATE auf, und das Update auf eine Tabelle ausgeführt wurde oder eine Tabelle abgeleitet wird, aus der angezeigten Tabelle durch Angabe erstellt wurde **WITH CHECK OPTION**, sodass eine oder mehrere Zeilen betroffen das Update wird nicht mehr in der angezeigten Tabelle vorhanden sein.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *StatementHandle*. Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle*, und klicken Sie dann die Funktion aufgerufen wurde erneut auf die *StatementHandle*.<br /><br /> Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancel** oder **SQLCancelHandle** aufgerufen wurde, auf die *StatementHandle* von einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Diese asynchronen Funktion wurde noch ausgeführt werden, wenn die SQLSetPos-Funktion aufgerufen wurde.<br /><br /> (DM) der angegebenen *StatementHandle* war nicht in einem ausgeführten Zustand befindet. Die Funktion wurde aufgerufen, ohne den ersten Aufruf **SQLExecDirect**, **SQLExecute**, oder eine Katalogfunktion auf.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) der Treiber ist ODBC *2.x* -Treiber und **SQLSetPos** wurde aufgerufen, eine *StatementHandle* nach **SQLFetch** aufgerufen wurde.|  
-|HY011|Attribut kann jetzt nicht festgelegt werden|(DM) der Treiber ist ODBC *2.x* -Treiber; die SQL_ATTR_ROW_STATUS_PTR Anweisung-Attribut festgelegt wurde, klicken Sie dann **SQLSetPos** war aufgerufen, bevor **SQLFetch**,  **SQLFetchScroll**, oder **SQLExtendedFetch** aufgerufen wurde.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|Die *Vorgang* Argument SQL_UPDATE auf, ein Datenwert wurde ein null-Zeiger, und der Spaltenwert für die Länge nicht wurde SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, 0 oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Die *Vorgang* Argument SQL_UPDATE; ein Datenwert war es sich nicht um einen null-Zeiger; wurde von der C-Datentyp SQL_C_BINARY oder SQL_C_CHAR; und der Spaltenwert für die Länge war kleiner als 0, aber nicht gleich auf SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS lauten oder SQL_NULL_DATA oder kleiner als oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Der Wert in ein Längen-/Indikatorpuffer war SQL_DATA_AT_EXEC. der SQL-Typ wurde einem SQL_LONGVARCHAR SQL_LONGVARBINARY oder einen long-Daten datenquellenspezifische Datentyp; und welche Informationen SQL_NEED_LONG_DATA_LEN in **SQLGetInfo** wurde von "Y".|  
-|HY092|Ungültiges Attribut-ID|(DM) der angegebene Wert für die *Vorgang* Argument war ungültig.<br /><br /> (DM) der angegebene Wert für die *LockType* Argument war ungültig.<br /><br /> Die *Vorgang* Argument war SQL_UPDATE oder SQL_DELETE und das SQL_ATTR_CONCURRENCY-Anweisungsattribut SQL_ATTR_CONCUR_READ_ONLY.|  
-|HY107|Zeilenwert außerhalb des gültigen Bereichs|Der angegebene Wert für das Argument *RowNumber* war größer als die Anzahl der Zeilen im Rowset.|  
-|HY109|Ungültige Cursorposition|Die zugeordneten Cursor der *StatementHandle* wurde als Vorwärtscursor, definiert, damit der Cursor nicht im Rowset positioniert werden kann. Siehe die Beschreibung für das SQL_ATTR_CURSOR_TYPE-Attribut im **SQLSetStmtAttr**.<br /><br /> Die *Vorgang* Argument war SQL_UPDATE auf SQL_DELETE oder SQL_REFRESH und die Zeile durch identifiziert die *RowNumber* Argument wurde gelöscht haben oder hatten, wurden nicht abgerufen.<br /><br /> (DM) die *RowNumber* Argument wurde 0 (null) und die *Vorgang* Argument war SQL_POSITION.<br /><br /> **SQLSetPos** wurde aufgerufen, nachdem **SQLBulkOperations** aufgerufen wurde und bevor **SQLFetchScroll** oder **SQLFetch** aufgerufen wurde.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Optionales Feature nicht implementiert.|Die Treiber oder die Datenquelle unterstützt nicht den in der angeforderte Vorgang die *Vorgang* Argument oder die *LockType* Argument.|  
-|HYT00|Timeout abgelaufen|Zeitraum für das Timeout ist abgelaufen, bevor die Datenquelle über das Resultset zurückgegeben. Das Timeout festgelegt ist, über **SQLSetStmtAttr** mit einer *Attribut* von SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
-|IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
-|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01001|Konflikt beim Cursor Vorgang|Das *Vorgangs* Argument lautete "SQL_DELETE" oder "SQL_UPDATE", und es wurden keine Zeilen oder mehr als eine Zeile gelöscht oder aktualisiert. (Weitere Informationen zu Updates für mehr als eine Zeile finden Sie in der Beschreibung des SQL_ATTR_SIMULATE_CURSOR- *Attributs* in **SQLSetStmtAttr**.) (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> Das *Vorgangs* Argument war "SQL_DELETE" oder "SQL_UPDATE", und der Vorgang ist aufgrund der vollständigen Parallelität fehlgeschlagen. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Abkürzen von Zeichen folgen Daten|Das *Vorgangs* Argument war "SQL_REFRESH", und Zeichen folgen-oder Binärdaten, die für eine Spalte oder Spalten mit dem Datentyp "SQL_C_CHAR" oder "SQL_C_BINARY" zurückgegeben wurden, führten zum Abschneiden von nicht leeren Zeichen oder Binärdaten, die nicht NULL sind.|  
+|01S01|Fehler in Zeile|Das *RowNumber* -Argument war 0, und in einer oder mehreren Zeilen ist ein Fehler aufgetreten, während der mit dem *Vorgangs* Argument angegebene Vorgang durchgeführt wurde.<br /><br /> (SQL_SUCCESS_WITH_INFO wird zurückgegeben, wenn ein Fehler in einer oder mehreren, aber nicht in allen Zeilen eines mehrzeiligen Vorgangs auftritt und SQL_ERROR zurückgegeben wird, wenn ein Fehler bei einem einzeiligen Vorgang auftritt.)<br /><br /> (Dieser SQLSTATE wird nur zurückgegeben, wenn **SQLSetPos** nach **SQLExtendedFetch**aufgerufen wird, wenn es sich bei dem Treiber um einen ODBC *2. x* -Treiber handelt und die Cursor Bibliothek nicht verwendet wird.)|  
+|01S07|Abschneiden von Sekundenbruchteilen|Das *Vorgangs* Argument lautete SQL_REFRESH, der Datentyp des Anwendungs Puffers war nicht SQL_C_CHAR oder SQL_C_BINARY, und die Daten, die an Anwendungs Puffer für eine oder mehrere Spalten zurückgegeben wurden, wurden abgeschnitten. Bei numerischen Datentypen wurde der Bruchteile der Zahl abgeschnitten. Bei Zeit-, Zeitstempel-und Intervall Datentypen, die eine Zeitkomponente enthalten, wurde der Bruchteil der Zeit abgeschnitten.<br /><br /> (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|07006|Verletzung des Attributs für eingeschränkte Datentypen|Der Datenwert einer Spalte im Resultset konnte nicht in den Datentyp konvertiert werden, der von *TargetType* beim Aufrufen von **SQLBindCol**angegeben wurde.|  
+|07009|Ungültiger deskriptorindex.|Der Argument *Vorgang* war "SQL_REFRESH" oder "SQL_UPDATE", und eine Spalte wurde mit einer Spaltennummer gebunden, die größer als die Anzahl der Spalten im Resultset ist.|  
+|21S02|Der Grad der abgeleiteten Tabelle stimmt nicht mit der Spaltenliste überein.|Der Argument *Vorgang* war SQL_UPDATE, und es wurden keine Spalten aktualisiert, da alle Spalten entweder ungebunden, schreibgeschützt oder der Wert im gebundenen Längen-/Indikatorpuffer SQL_COLUMN_IGNORE war.|  
+|22001|Zeichen folgen Daten, rechter Abschneiden|Das *Vorgangs* Argument war SQL_UPDATE, und die Zuweisung eines Zeichens oder Binärwerts zu einer Spalte führte zum Abschneiden von nicht leeren (für Zeichen) oder nicht-NULL-Zeichen (für Binär Zeichen) oder Bytes.|  
+|22003|Numerischer Wert außerhalb des zulässigen Bereichs|Der Argument *Vorgang* war "SQL_UPDATE", und die Zuweisung eines numerischen Werts zu einer Spalte im Resultset hat bewirkt, dass der gesamte (im Gegensatz zum Bruchteil) Teil der Zahl abgeschnitten wird.<br /><br /> Der Argument *Vorgang* war "SQL_REFRESH", und das Zurückgeben des numerischen Werts für eine oder mehrere gebundene Spalten hätte zu einem Verlust signifikanter Ziffern geführt.|  
+|22007|Ungültiges datetime-Format.|Der Argument *Vorgang* war "SQL_UPDATE", und die Zuweisung eines Datums-oder Zeitstempel-Werts zu einer Spalte im Resultset hat bewirkt, dass das Feld "Year", "Month" oder "Day" außerhalb des gültigen Bereichs liegt.<br /><br /> Der Argument *Vorgang* war "SQL_REFRESH", und das Zurückgeben des Datums-oder Zeitstempel Werts für eine oder mehrere gebundene Spalten hätte dazu geführt, dass das Feld "Year", "Month" oder "Day" außerhalb des gültigen Bereichs liegt.|  
+|22008|Überlauf bei Datum/Uhrzeit-Feld|Das *Vorgangs* Argument war SQL_UPDATE, und die Leistung der DateTime-Arithmetik für Daten, die an eine Spalte im Resultset gesendet werden, führte zu einem DateTime-Feld (Jahr, Monat, Tag, Stunde, Minute oder zweites Feld), das sich außerhalb des zulässigen Ergebnisses befand. Wertebereich für das Feld oder ungültig basierend auf den natürlichen Regeln des gregorianischen Kalenders für datetimes.<br /><br /> Das *Vorgangs* Argument war SQL_REFRESH, und die Leistung der DateTime-Arithmetik für Daten, die aus dem Resultset abgerufen werden, führte zu einem DateTime-Feld (Jahr, Monat, Tag, Stunde, Minute oder zweites Feld), das sich außerhalb des zulässigen Ergebnisses befand. Wertebereich für das Feld oder ungültig basierend auf den natürlichen Regeln des gregorianischen Kalenders für datetimes.|  
+|22015|Überlauf des Intervall Felds|Das *Vorgangs* Argument war SQL_UPDATE, und die Zuweisung eines exakten numerischen oder Interval C-Typs zu einem Interval-SQL-Datentyp verursachte einen Verlust signifikanter Ziffern.<br /><br /> Das *Vorgangs* Argument war SQL_UPDATE; bei der Zuweisung zu einem Interval-SQL-Typ gab es keine Darstellung des Werts des C-Typs im Intervall-SQL-Typ.<br /><br /> Das *Vorgangs* Argument war SQL_REFRESH, und die Zuweisung von einem exakten numerischen oder Interval-SQL-Typ zu einem Interval-C-Typ verursachte einen Verlust signifikanter Ziffern im führenden Feld.<br /><br /> Das *Vorgangs* Argument lautete SQL_ Refresh. bei der Zuweisung zu einem Interval-c-Typ gab es keine Darstellung des Werts des SQL-Typs im Interval-c-Typ.|  
+|22018|Ungültiger Zeichen Wert für Umwandlungs Spezifikation.|Das *Vorgangs* Argument war SQL_REFRESH; der C-Typ war ein genauer oder Ungefährer numerischer, DateTime-oder Interval-Datentyp. der SQL-Typ der Spalte war ein Zeichen Datentyp. und der Wert in der Spalte war kein gültiges Literale des gebundenen C-Typs.<br /><br /> Der Argument *Vorgang* war "SQL_UPDATE;". der SQL-Typ war ein genauer oder Ungefährer numerischer, DateTime-oder Interval-Datentyp. der C-Typ war "SQL_C_CHAR;". und der Wert in der Spalte war kein gültiges Literale des gebundenen SQL-Typs.|  
+|23000|Verletzung der Integritäts Einschränkung|Der Argument *Vorgang* war "SQL_DELETE" oder "SQL_UPDATE", und eine Integritäts Einschränkung wurde verletzt.|  
+|24000|Ungültiger Cursorstatus|Das *StatementHandle* befand sich in einem ausgeführten Zustand, aber dem *StatementHandle*wurde kein Resultset zugeordnet.<br /><br /> (DM) ein Cursor war auf dem *StatementHandle*geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.<br /><br /> Ein Cursor war auf dem *StatementHandle*geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen, aber der Cursor befand sich vor dem Anfang des Resultsets oder nach dem Ende des Resultsets.<br /><br /> Der Argument *Vorgang* war SQL_DELETE, SQL_REFRESH oder SQL_UPDATE, und der Cursor befand sich vor dem Anfang des Resultsets oder nach dem Ende des Resultsets.|  
+|40001|Serialisierungsfehler|Für die Transaktion wurde aufgrund eines Ressourcen Deadlocks mit einer anderen Transaktion ein Rollback ausgeführt.|  
+|40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
+|42000|Syntax Fehler oder Zugriffsverletzung|Der Treiber konnte die Zeile nicht nach Bedarf sperren, um den im Argument *Vorgang*angeforderten Vorgang auszuführen.<br /><br /> Der Treiber konnte die Zeile nicht wie im Argument *LockType*angefordert sperren.|  
+|44000|WITH CHECK OPTION-Verstoß|Das *Vorgangs* Argument lautete SQL_UPDATE, und das Update wurde für eine angezeigte Tabelle oder eine Tabelle ausgeführt, die von der angezeigten Tabelle abgeleitet wurde, die durch Angabe von **with Check Option**erstellt wurde, sodass mindestens eine von der Aktualisierung betroffene Zeile nicht mehr in der angezeigten Tabelle vorhanden.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im  *\*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen, und anschließend wurde die Funktion für " *StatementHandle*" erneut aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die SQLSetPos-Funktion aufgerufen wurde.<br /><br /> (DM) das angegebene *StatementHandle* war nicht in einem ausgeführten Zustand. Die Funktion wurde aufgerufen, ohne zuerst **SQLExecDirect**, **SQLExecute**oder eine Katalog Funktion aufzurufen.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) der Treiber war ein ODBC *2. x* -Treiber, und **SQLSetPos** wurde für ein *StatementHandle* aufgerufen, nachdem **SQLFetch** aufgerufen wurde.|  
+|HY011|Das Attribut kann jetzt nicht festgelegt werden|(DM) der Treiber war ein ODBC *2. x* -Treiber. Das SQL_ATTR_ROW_STATUS_PTR-Anweisungs Attribut wurde festgelegt. Anschließend wurde **SQLSetPos** aufgerufen, bevor **SQLFetch**, **SQLFetchScroll**oder **sqlextendebug** aufgerufen wurde.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|Das *Vorgangs* Argument lautete SQL_UPDATE, ein Datenwert war ein NULL-Zeiger, und der Spalten Längen Wert war nicht 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA oder kleiner oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Das *Vorgangs* Argument war SQL_UPDATE; ein Datenwert war kein NULL-Zeiger. der C-Datentyp war "SQL_C_BINARY" oder "SQL_C_CHAR". und der Spalten Längen Wert war kleiner als 0 (null), aber nicht gleich SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS oder SQL_NULL_DATA oder kleiner oder gleich SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Der Wert in einem Längen-/Indikatorpuffer war SQL_DATA_AT_EXEC; der SQL-Typ war entweder SQL_LONGVARCHAR, SQL_LONGVARBINARY oder ein langer Datenquellen spezifischer Datentyp. und der SQL_NEED_LONG_DATA_LEN-Informationstyp in **SQLGetInfo** lautete "Y".|  
+|HY092|Ungültiger Attribut Bezeichner|(DM) der für das *Vorgangs* Argument angegebene Wert ist ungültig.<br /><br /> (DM) der Wert, der für das *LockType* -Argument angegeben wurde, war ungültig.<br /><br /> Das *Vorgangs* Argument lautete SQL_UPDATE oder SQL_DELETE, und das SQL_ATTR_CONCURRENCY-Anweisungs Attribut war SQL_ATTR_CONCUR_READ_ONLY.|  
+|HY107|Zeilen Wert außerhalb des zulässigen Bereichs|Der für die Argument- *RowNumber* angegebene Wert ist größer als die Anzahl der Zeilen im Rowset.|  
+|HY109|Ungültige Cursorposition|Der dem *StatementHandle* zugeordnete Cursor wurde als Vorwärts Cursor definiert, sodass der Cursor nicht innerhalb des Rowsets positioniert werden konnte. Weitere Informationen finden Sie in der Beschreibung des SQL_ATTR_CURSOR_TYPE-Attributs in **SQLSetStmtAttr**.<br /><br /> Das *Vorgangs* Argument lautete SQL_UPDATE, SQL_DELETE oder SQL_REFRESH, und die durch das *RowNumber* -Argument identifizierte Zeile wurde gelöscht oder nicht abgerufen.<br /><br /> (DM) das *RowNumber* -Argument war 0 und das *Vorgangs* Argument SQL_POSITION.<br /><br /> **SQLSetPos** wurde aufgerufen, nachdem **SQLBulkOperations** aufgerufen und vor dem Aufruf von **SQLFetchScroll** oder **SQLFetch** aufgerufen wurde.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Optionales Feature nicht implementiert|Der Treiber oder die Datenquelle unterstützt nicht den Vorgang, der im *Vorgangs* Argument oder im *LockType* -Argument angefordert wurde.|  
+|HYT00|Timeout abgelaufen|Das Abfrage Timeout ist abgelaufen, bevor die Datenquelle das Resultset zurückgegeben hat. Der Timeout Zeitraum wird über **SQLSetStmtAttr** mit dem *Attribut* SQL_ATTR_QUERY_TIMEOUT festgelegt.|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *StatementHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
+|IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
+|IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
   
 ## <a name="comments"></a>Kommentare  
   
 > [!CAUTION]
->  Für Informationen über die Anweisung gibt an, die **SQLSetPos** in aufgerufen werden kann und was sie muss für die Kompatibilität mit dem ODBC- *2.x* -Anwendungen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
+>  Informationen zur-Anweisung, in der **SQLSetPos** aufgerufen werden kann, und zu deren Kompatibilität mit ODBC *2. x* -Anwendungen erforderlich ist, finden Sie unter [Block Cursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
 ## <a name="rownumber-argument"></a>RowNumber-Argument  
- Die *RowNumber* Argument gibt die Anzahl der Zeile im Rowset für das Ausführen des Vorgangs gemäß den *Vorgang* Argument. Wenn *RowNumber* gleich 0 ist, der Vorgang gilt für jede Zeile im Rowset. *RowNumber* muss ein Wert zwischen 0 und die Anzahl der Zeilen im Rowset.  
+ Das *RowNumber* -Argument gibt die Nummer der Zeile im Rowset an, für die der vom *Vorgangs* Argument angegebene Vorgang durchgeführt werden soll. Wenn *RowNumber* 0 ist, gilt der Vorgang für jede Zeile im Rowset. *RowNumber* muss ein Wert zwischen 0 und der Anzahl der Zeilen im Rowset sein.  
   
 > [!NOTE]  
->  In der Programmiersprache C-Arrays sind 0-basiert und die *RowNumber* Argument ist 1-basiert. Z. B. um die fünfte Zeile des Rowsets zu aktualisieren, eine Anwendung ändert die Rowset-Puffer Arrayindex 4 gibt jedoch eine *RowNumber* 5.  
+>  In der Programmiersprache C sind Arrays 0-basiert, und das *RowNumber* -Argument ist 1-basiert. Zum Aktualisieren der fünften Zeile des Rowsets ändert eine Anwendung z. b. die rowsetpuffer am Array Index 4, gibt jedoch eine *RowNumber* von 5 an.  
   
- Alle Vorgänge positionieren Sie den Cursor in der Zeile, die anhand des *RowNumber*. Die folgenden Vorgänge erfordern die Cursorposition:  
+ Alle Vorgänge positionieren den Cursor in der Zeile, die durch *RowNumber*angegeben wird. Die folgenden Vorgänge erfordern eine Cursorposition:  
   
--   Positioniert Update und delete-Anweisungen.  
+-   Positionierte UPDATE-und DELETE-Anweisungen.  
   
 -   Aufrufe von **SQLGetData**.  
   
--   Aufrufe von **SQLSetPos** mit den Optionen SQL_DELETE SQL_REFRESH und SQL_UPDATE auf.  
+-   Aufrufe von **SQLSetPos** mit den Optionen SQL_DELETE, SQL_REFRESH und SQL_UPDATE.  
   
- Z. B. wenn *RowNumber* ist 2 für einen Aufruf von **SQLSetPos** mit einer *Vorgang* von SQL_DELETE, befindet sich des Cursors in der zweiten Zeile des Rowsets und die Zeile gelöscht wird. Der Eintrag in der Implementierung zeilenstatusarray (verweist das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR) für die zweite Zeile wird in SQL_ROW_DELETED geändert.  
+ Wenn z. b. *RowNumber* für einen **SQLSetPos** -Vorgang mit einem SQL_DELETE- *Vorgang* gleich 2 ist, wird der Cursor in der zweiten Zeile des Rowsets positioniert und diese Zeile gelöscht. Der Eintrag im Array der Implementierungs Zeilen Status (auf das durch das SQL_ATTR_ROW_STATUS_PTR-Anweisungs Attribut verwiesen wird) für die zweite Zeile wird in SQL_ROW_DELETED geändert.  
   
- Einer Anwendung angegeben beim Aufrufen eine Cursorposition **SQLSetPos**. In der Regel ruft **SQLSetPos** mit dem Vorgang SQL_POSITION oder SQL_REFRESH zur Positionierung des Cursors vor dem Ausführen einer positionierten aktualisieren oder delete-Anweisung oder Aufrufen **SQLGetData**.  
+ Eine Anwendung kann eine Cursorposition angeben, wenn Sie **SQLSetPos**aufruft. Im Allgemeinen wird **SQLSetPos** mit dem SQL_POSITION-oder SQL_REFRESH-Vorgang aufgerufen, um den Cursor vor dem Ausführen einer positionierten Update-oder DELETE-Anweisung oder des Aufrufs von **SQLGetData**zu positionieren.  
   
-## <a name="operation-argument"></a>Vorgangsargument  
- Die *Vorgang* Argument unterstützt die folgenden Vorgänge. Um zu bestimmen, welche Optionen, die von einer Datenquelle unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit der SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 oder SQL_STATIC_ CURSOR_ATTRIBUTES1 Informationstyp (je nach Art des Cursors).  
+## <a name="operation-argument"></a>Vorgangs Argument  
+ Das *Vorgangs* Argument unterstützt die folgenden Vorgänge. Um zu ermitteln, welche Optionen von einer Datenquelle unterstützt werden, ruft eine Anwendung **SQLGetInfo** mit SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 auf. Informationstyp (abhängig vom Typ des Cursors).  
   
 |*Vorgang*<br /><br /> argument|Vorgang|  
 |------------------------------|---------------|  
-|SQL_POSITION|Der Treiber setzt den Cursor in der Zeile, angegeben *RowNumber*.<br /><br /> Der Inhalt der zeilenstatusarray verweist das Anweisungsattribut SQL_ATTR_ROW_OPERATION_PTR für die SQL_POSITION ignoriert *Vorgang*.|  
-|SQL_REFRESH|Der Treiber setzt den Cursor in der Zeile, angegeben *RowNumber* und aktualisiert Daten in die Rowset-Puffer für Zeile. Weitere Informationen dazu, wie der Treiber die Daten in den Puffern Rowset zurückgibt, finden Sie unter den Beschreibungen der, spaltenweise und zeilenweise Bindung in **SQLBindCol**.<br /><br /> **SQLSetPos** mit einer *Vorgang* von SQL_REFRESH aktualisiert den Status und die Inhalte der Zeilen innerhalb des aktuellen abgerufenen Rowsets. Dies schließt die Lesezeichen aktualisieren. Da die Daten in den Puffern werden aktualisiert, aber nicht erneut abgerufen, ist die Mitgliedschaft des Rowsets fest. Dies unterscheidet sich von der Aktualisierung durchgeführt, die durch einen Aufruf von **SQLFetchScroll** mit einer *FetchOrientation* von SQL_FETCH_RELATIVE und *' RowNumber '* gleich 0 (null) und refetches Das Rowset aus dem Resultset, damit sie zusätzliche Daten anzeigen und entfernen kann gelöschte Daten auf, wenn diese Vorgänge von der Treiber und der Cursor unterstützt werden.<br /><br /> Eine erfolgreiche Aktualisierung mit **SQLSetPos** ändert sich nicht auf die Zeilenstatus SQL_ROW_DELETED. Gelöschte Zeilen im Rowset werden fortgesetzt, bis zum nächsten Abrufvorgang gelöscht zu markieren. Die Zeilen werden an den nächsten Abrufvorgang ausgeblendet, wenn der Cursor Packen von Metriken unterstützt (in der eine nachfolgende **SQLFetch** oder **SQLFetchScroll** gelöschte Zeilen wird nicht zurückgegeben).<br /><br /> Hinzugefügt von Zeilen werden nicht angezeigt, wenn eine Aktualisierung mit **SQLSetPos** erfolgt. Dieses Verhalten unterscheidet sich von **SQLFetchScroll** mit einem *FetchType* von SQL_FETCH_RELATIVE und *' RowNumber '* gleich 0 (null) und das aktuelle Rowset jedoch auch aktualisiert Zeigen Sie hinzugefügte Datensätze an, oder Packen Sie gelöschte Datensätze aus, wenn diese Vorgänge vom Cursor unterstützt werden.<br /><br /> Eine erfolgreiche Aktualisierung mit **SQLSetPos** wird nun einen Zeilenstatus SQL_ROW_ADDED SQL_ROW_SUCCESS (sofern die zeilenstatusarray vorhanden ist).<br /><br /> Eine erfolgreiche Aktualisierung mit **SQLSetPos** wird nun Zeilenstatus SQL_ROW_UPDATED neuen Status der Zeile (sofern die zeilenstatusarray vorhanden ist).<br /><br /> Im Falle ein Fehlers eine **SQLSetPos** Vorgang für eine Zeile den Zeilenstatus nastaven NA hodnotu SQL_ROW_ERROR (sofern die zeilenstatusarray vorhanden ist).<br /><br /> Für einen Cursor geöffnet, mit einem SQL_ATTR_CONCURRENCY-Anweisungsattribut SQL_CONCUR_ROWVER oder SQL_CONCUR_VALUES, eine Aktualisierung mit **SQLSetPos** möglicherweise aktualisieren Sie die vollständige Parallelität-Werte, die von der Datenquelle verwendet wird, um zu ermitteln, die Zeile wurde geändert. In diesem Fall werden die Zeilenversionen oder Werte, die verwendet werden, um sicherzustellen, dass Cursorparallelität aktualisiert, sobald die Rowset-Puffer vom Server aktualisiert werden. Dies tritt auf, für jede Zeile, die aktualisiert werden.<br /><br /> Der Inhalt der zeilenstatusarray verweist das Anweisungsattribut SQL_ATTR_ROW_OPERATION_PTR für die SQL_REFRESH ignoriert *Vorgang*.|  
-|SQL_UPDATE|Der Treiber setzt den Cursor in der Zeile, angegeben *' RowNumber '* und aktualisiert die zugrunde liegenden Zeile der Daten mit den Werten in den Rowset Puffern (die *TargetValuePtr* -Argument in  **SQLBindCol**). Ruft die Länge der Daten aus den Längenindikator/Puffern ab (der *StrLen_or_IndPtr* -Argument in **SQLBindCol**). Wenn die Länge einer beliebigen Spalte SQL_COLUMN_IGNORE ist, wird die Spalte nicht aktualisiert werden. Nach dem Aktualisieren der zeilenupdates, ändert der Treiber das entsprechende Element von der zeilenstatusarray SQL_ROW_UPDATED oder SQL_ROW_SUCCESS_WITH_INFO an (sofern die zeilenstatusarray vorhanden ist).<br /><br /> Es wird von der Treiber definiert das Verhalten Wenn **SQLSetPos** mit einer *Vorgang* SQL_UPDATE Argument für einen Cursor, enthält doppelte Spalten, aufgerufen wird. Der Treiber kann ein SQLSTATE treiberdefinierten zurückgeben, können aktualisieren Sie die erste Spalte, die im Resultset angezeigt wird oder andere Treiber definierten Verhalten führen.<br /><br /> Die Zeile Operation-Array verweist das Anweisungsattribut SQL_ATTR_ROW_OPERATION_PTR kann verwendet werden, um anzugeben, dass eine Zeile im aktuellen Rowset während eines Massenupdates ignoriert werden sollen. Weitere Informationen finden Sie unter "Status und Vorgang Arrays" weiter unten in dieser Funktionsverweis.|  
-|SQL_DELETE|Der Treiber setzt den Cursor in der Zeile, angegeben *RowNumber* und löscht die zugrunde liegenden Zeile der Daten. Das entsprechende Element des Arrays Zeile Status SQL_ROW_DELETED geändert. Nachdem die Zeile gelöscht wurde, sind die folgenden nicht gültig für die Zeile: positioniert Update und delete-Anweisungen, Aufrufe von **SQLGetData**, und Aufrufe von **SQLSetPos** mit *Vorgang* außer SQL_POSITION festgelegt. Für die Treiber, die Komprimierung zu unterstützen, wird die Zeile aus dem Cursor gelöscht, wenn neue Daten aus der Datenquelle abgerufen werden.<br /><br /> Gibt an, ob die Zeile sichtbar bleibt, hängt von der Cursortyp. Beispielsweise sind die gelöschte Zeilen für statische und keysetgesteuerte Cursor sichtbar, sind jedoch für dynamische Cursor nicht sichtbar.<br /><br /> Die Zeile Operation-Array verweist das Anweisungsattribut SQL_ATTR_ROW_OPERATION_PTR kann verwendet werden, um anzugeben, dass eine Zeile im aktuellen Rowset bei einer massenlöschung ignoriert werden sollen. Weitere Informationen finden Sie unter "Status und Vorgang Arrays" weiter unten in dieser Funktionsverweis.|  
+|SQL_POSITION|Der Treiber positioniert den Cursor in der Zeile, die durch *RowNumber*angegeben wird.<br /><br /> Der Inhalt des Zeilen Status Arrays, auf das durch das SQL_ATTR_ROW_OPERATION_PTR-Anweisungs Attribut verwiesen wird, wird für den SQL_POSITION- *Vorgang*ignoriert.|  
+|SQL_REFRESH|Der Treiber positioniert den Cursor in der Zeile, die durch *RowNumber* angegeben wird, und aktualisiert die Daten in den rowsetpuffern für diese Zeile. Weitere Informationen dazu, wie der Treiber Daten in den rowsetpuffern zurückgibt, finden Sie in den Beschreibungen der Zeilen weisen und der Spalten bezogenen Bindung in **SQLBindCol**.<br /><br /> **SQLSetPos** mit einem SQL_REFRESH- *Vorgang* aktualisiert den Status und den Inhalt der Zeilen innerhalb des aktuellen abgerufenen Rowsets. Dies schließt das Aktualisieren der Lesezeichen ein. Da die Daten in den Puffern aktualisiert, aber nicht erneut abgerufen werden, wird die Mitgliedschaft im Rowset korrigiert. Dies unterscheidet sich von der Aktualisierung, die durch einen **SQLFetchScroll** -Befehl mit der *FetchOrientation* -SQL_FETCH_RELATIVE und einer *RowNumber* gleich 0 durchgeführt wird. Dadurch wird das Rowset aus dem Resultset wiederholt, sodass es hinzugefügte Daten anzeigen und entfernen kann. gelöschte Daten, wenn diese Vorgänge vom Treiber und dem Cursor unterstützt werden.<br /><br /> Bei einer erfolgreichen Aktualisierung mit **SQLSetPos** wird der Zeilen Status SQL_ROW_DELETED nicht geändert. Gelöschte Zeilen im Rowset werden bis zum nächsten Abruf Vorgang weiterhin als gelöscht markiert. Die Zeilen werden beim nächsten Abruf Vorgang nicht mehr angezeigt, wenn der Cursor das Verpacken unterstützt (in dem eine nachfolgende **SQLFetch** -oder **SQLFetchScroll** -Abfrage keine gelöschten Zeilen zurückgibt).<br /><br /> Hinzugefügte Zeilen werden nicht angezeigt, wenn eine Aktualisierung mit **SQLSetPos** ausgeführt wird. Dieses Verhalten unterscheidet sich von **SQLFetchScroll** mit dem *FetchType* SQL_FETCH_RELATIVE und einer *RowNumber* gleich 0, wodurch auch das aktuelle Rowset aktualisiert wird, aber es werden hinzugefügte Datensätze angezeigt, oder es werden Datensätze gelöscht, wenn diese Vorgänge wird vom Cursor unterstützt.<br /><br /> Bei einer erfolgreichen Aktualisierung mit **SQLSetPos** wird der Zeilen Status SQL_ROW_ADDED in SQL_ROW_SUCCESS geändert (wenn das Zeilen Status Array vorhanden ist).<br /><br /> Bei einer erfolgreichen Aktualisierung mit **SQLSetPos** wird der Zeilen Status SQL_ROW_UPDATED in den neuen Status der Zeile geändert (wenn das Zeilen Status Array vorhanden ist).<br /><br /> Wenn bei einem **SQLSetPos** -Vorgang in einer Zeile ein Fehler auftritt, wird der Zeilen Status auf SQL_ROW_ERROR festgelegt (wenn das Zeilen Status Array vorhanden ist).<br /><br /> Bei einem Cursor, der mit dem SQL_ATTR_CONCURRENCY-Anweisungs Attribut SQL_CONCUR_ROWVER oder SQL_CONCUR_VALUES geöffnet wird, kann eine Aktualisierung mit **SQLSetPos** die von der Datenquelle verwendeten Werte der vollständigen Parallelität aktualisieren, um zu erkennen, dass die Zeile geändert wurde. Wenn dies der Fall ist, werden die Zeilen Versionen oder Werte, die zum Sicherstellen der Cursor Parallelität verwendet werden, immer dann aktualisiert, wenn die rowsetpuffer vom Server aktualisiert werden. Dies geschieht für jede Zeile, die aktualisiert wird.<br /><br /> Der Inhalt des Zeilen Status Arrays, auf das durch das SQL_ATTR_ROW_OPERATION_PTR-Anweisungs Attribut verwiesen wird, wird für den SQL_REFRESH- *Vorgang*ignoriert.|  
+|SQL_UPDATE|Der Treiber positioniert den Cursor in der Zeile, die durch *RowNumber* angegeben wird, und aktualisiert die zugrunde liegende Daten Zeile mit den Werten in den rowsetpuffern (das *targetvalueptr* -Argument in **SQLBindCol**). Er ruft die Längen der Daten aus den Längen-/indikatorenpuffern (das *StrLen_or_IndPtr* -Argument in **SQLBindCol**) ab. Wenn die Länge einer Spalte SQL_COLUMN_IGNORE lautet, wird die Spalte nicht aktualisiert. Nach dem Aktualisieren der Zeile ändert der Treiber das entsprechende Element des Zeilen Status Arrays in SQL_ROW_UPDATED oder SQL_ROW_SUCCESS_WITH_INFO (wenn das Zeilen Status Array vorhanden ist).<br /><br /> Der Treiber definiert das Verhalten, wenn **SQLSetPos** mit dem *Operations* -Argument SQL_UPDATE für einen Cursor aufgerufen wird, der doppelte Spalten enthält. Der Treiber kann einen Treiber definierten SQLSTATE zurückgeben, kann die erste Spalte aktualisieren, die im Resultset angezeigt wird, oder ein anderes Treiber definiertes Verhalten ausführen.<br /><br /> Das Zeilen Vorgangs Array, auf das durch das SQL_ATTR_ROW_OPERATION_PTR-Anweisungs Attribut verwiesen wird, kann verwendet werden, um anzugeben, dass eine Zeile im aktuellen Rowset während einer Massen Aktualisierung ignoriert werden soll. Weitere Informationen finden Sie unter "Status-und Vorgangs Arrays" weiter unten in dieser Funktionsreferenz.|  
+|SQL_DELETE|Der Treiber positioniert den Cursor in der durch *RowNumber* angegebenen Zeile und löscht die zugrunde liegende Daten Zeile. Das entsprechende Element des Rows-Status Arrays wird in SQL_ROW_DELETED geändert. Nachdem die Zeile gelöscht wurde, sind die folgenden Zeilen für die Zeile ungültig: positionierte UPDATE-und DELETE-Anweisungen, Aufrufe von **SQLGetData**und Aufrufe von **SQLSetPos** , bei denen der *Vorgang* auf alles außer SQL_POSITION festgelegt ist. Für Treiber, die das Verpacken unterstützen, wird die Zeile aus dem Cursor gelöscht, wenn neue Daten aus der Datenquelle abgerufen werden.<br /><br /> Ob die Zeile sichtbar bleibt, hängt vom Cursortyp ab. Beispielsweise sind gelöschte Zeilen für statische und keysetgesteuerte Cursor sichtbar, sind jedoch für dynamische Cursor unsichtbar.<br /><br /> Das Zeilen Vorgangs Array, auf das durch das SQL_ATTR_ROW_OPERATION_PTR-Anweisungs Attribut verwiesen wird, kann verwendet werden, um anzugeben, dass eine Zeile im aktuellen Rowset während einer Massen Löschung ignoriert werden soll. Weitere Informationen finden Sie unter "Status-und Vorgangs Arrays" weiter unten in dieser Funktionsreferenz.|  
   
 ## <a name="locktype-argument"></a>LockType-Argument  
- Die *LockType* Argument bietet eine Möglichkeit für Anwendungen, um Parallelität zu steuern. In den meisten Fällen unterstützt Datenquellen, die Parallelitätsebenen und Transaktionen unterstützen nur den SQL_LOCK_NO_CHANGE-Wert, der die *LockType* Argument. Die *LockType* Argument wird in der Regel nur für die Unterstützung dateibasierter verwendet.  
+ Das *LockType* -Argument bietet Anwendungen die Möglichkeit, Parallelität zu steuern. In den meisten Fällen unterstützen Datenquellen, von denen Parallelitäts Stufen und Transaktionen unterstützt werden, nur den SQL_LOCK_NO_CHANGE-Wert des *LockType* -Arguments. Das *LockType* -Argument wird im Allgemeinen nur für dateibasierte Unterstützung verwendet.  
   
- Die *LockType* Argument gibt an, der Zustand der Zeile nach der Sperre **SQLSetPos** ausgeführt wurde. Wenn der Treiber konnte nicht gesperrt werden die Zeile, die zum Ausführen des angeforderten Vorgangs oder zum Erfüllen der *LockType* Argument gibt SQL_ERROR zurück, und SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung).  
+ Das *LockType* -Argument gibt den Sperr Status der Zeile nach dem Ausführen von **SQLSetPos** an. Wenn der Treiber die Zeile nicht sperren kann, um den angeforderten Vorgang auszuführen oder das *LockType* -Argument zu erfüllen, gibt er SQL_ERROR und SQLSTATE 42000 (Syntax Fehler oder Zugriffsverletzung) zurück.  
   
- Obwohl die *LockType* Argument für eine einzelne Anweisung angegeben ist, wird die Sperre berechtigt, die gleichen Berechtigungen für alle Anweisungen für die Verbindung. Insbesondere kann eine Sperre, die von einer Anweisung für eine Verbindung abgerufen wurde mit einer anderen Anweisung für dieselbe Verbindung aufgehoben werden.  
+ Obwohl das *LockType* -Argument für eine einzelne Anweisung angegeben wird, weist die Sperre allen Anweisungen für die Verbindung dieselben Berechtigungen zu. Vor allem kann eine Sperre, die von einer Anweisung für eine Verbindung abgerufen wird, durch eine andere Anweisung für dieselbe Verbindung entsperrt werden.  
   
- Eine Zeile gesperrt durch **SQLSetPos** bleibt gesperrt, bis die Anwendung ruft **SQLSetPos** für die Zeile mit *LockType* SQL_LOCK_UNLOCK, oder bis die Anwendung festgelegt Aufrufe **SQLFreeHandle** für die Anweisung oder **SQLFreeStmt** mit der Option SQL_CLOSE. Für einen Treiber, die Transaktionen unterstützt, eine Zeile gesperrt, bis **SQLSetPos** entsperrt wird, wenn die Anwendung ruft **SQLEndTran** , einen commit oder Rollback einer Transaktions für die Verbindung (falls ein Cursor geschlossen wird Wenn eine Transaktion wird ein Commit oder Rollback, wie durch die Informationstypen SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR zurückgegebenes **SQLGetInfo**).  
+ Eine Zeile, die über **SQLSetPos** gesperrt ist, bleibt gesperrt, bis die Anwendung **SQLSetPos** für die Zeile aufruft, bei der der *LockType* auf SQL_LOCK_UNLOCK festgelegt ist, oder bis die Anwendung **SQLFreeHandle** für die Anweisung oder **SQLFreeStmt aufruft.** mit der SQL_CLOSE-Option. Bei einem Treiber, der Transaktionen unterstützt, wird eine Zeile, die über **SQLSetPos** gesperrt ist, entsperrt, wenn die Anwendung **SQLEndTran** aufruft, um für eine Transaktion einen Commit oder Rollback für eine Transaktion auszuführen (wenn ein Cursor beim Commit oder Rollback einer Transaktion geschlossen wird). Dies wird durch die von **SQLGetInfo**zurückgegebenen SQL_CURSOR_COMMIT_BEHAVIOR-und SQL_CURSOR_ROLLBACK_BEHAVIOR-Informationstypen angegeben.  
   
- Die *LockType* Argument unterstützt die folgenden Typen von Sperren. Um zu bestimmen, welche Sperren, die von einer Datenquelle unterstützt werden, eine Anwendung ruft **SQLGetInfo** mit der SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 oder SQL_STATIC_ CURSOR_ATTRIBUTES1 Informationstyp (je nach Art des Cursors).  
+ Das *LockType* -Argument unterstützt die folgenden Arten von Sperren. Um zu ermitteln, welche Sperren von einer Datenquelle unterstützt werden, ruft eine Anwendung **SQLGetInfo** mit SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 oder SQL_STATIC_CURSOR_ATTRIBUTES1 auf. Informationstyp (abhängig vom Typ des Cursors).  
   
-|*LockType* Argument|Sperrentyp|  
+|*LockType* -Argument|Sperrentyp|  
 |-------------------------|---------------|  
-|SQL_LOCK_NO_CHANGE|Die Treiber oder die Datenquelle wird sichergestellt, dass die Zeile in der gleichen gesperrt oder entsperrt Zustand wie vor **SQLSetPos** aufgerufen wurde. Dieser Wert *LockType* können Datenquellen, die kein explizites Sperren auf Zeilenebene alle Sperren erforderlich ist, durch Verwendung der aktuellen parallelitätseinstellung Isolationsstufen unterstützen.|  
-|SQL_LOCK_EXCLUSIVE|Die Treiber oder die Datenquelle wird ausschließlich die Zeile gesperrt. Eine Anweisung auf eine andere Verbindung oder in einer anderen Anwendung kann nicht zum Abrufen der Sperren in der Zeile verwendet werden.|  
-|SQL_LOCK_UNLOCK|Die Treiber oder die Datenquelle wird die Zeile entsperrt.|  
+|SQL_LOCK_NO_CHANGE|Der Treiber oder die Datenquelle stellt sicher, dass sich die Zeile in demselben gesperrten oder ungesperrten Zustand befindet wie vor dem Aufruf von **SQLSetPos** . Dieser Wert von *LockType* ermöglicht es Datenquellen, die explizite Sperren auf Zeilenebene nicht unterstützen, die für die aktuelle Parallelität und Transaktions Isolations Stufen erforderliche Sperre zu verwenden.|  
+|SQL_LOCK_EXCLUSIVE|Der Treiber oder die Datenquelle sperrt die Zeile exklusiv. Eine-Anweisung in einer anderen Verbindung oder in einer anderen Anwendung kann nicht zum Abrufen von Sperren in der Zeile verwendet werden.|  
+|SQL_LOCK_UNLOCK|Der Treiber oder die Datenquelle entsperrt die Zeile.|  
   
- Wenn ein Treiber SQL_LOCK_EXCLUSIVE unterstützt allerdings keine SQL_LOCK_UNLOCK, bleibt eine Zeile, die gesperrt wird gesperrt, bis zum Auftreten eines der Funktionsaufrufe im vorherigen Absatz beschrieben.  
+ Wenn ein Treiber SQL_LOCK_EXCLUSIVE unterstützt, aber SQL_LOCK_UNLOCK nicht unterstützt, bleibt eine gesperrte Zeile gesperrt, bis einer der im vorherigen Absatz beschriebenen Funktionsaufrufe auftritt.  
   
- Wenn ein Treiber SQL_LOCK_EXCLUSIVE unterstützt allerdings keine SQL_LOCK_UNLOCK, eine Zeile, die gesperrt wird bleibt gesperrt bis die Anwendung ruft **SQLFreeHandle** für die Anweisung oder **SQLFreeStmt** mit die SQL_CLOSE-Option. Wenn der Treiber Transaktionen unterstützt, und schließt den Cursor beim Commit oder Rollback der Transaktion, die Anwendung ruft **SQLEndTran**.  
+ Wenn ein Treiber SQL_LOCK_EXCLUSIVE unterstützt, aber SQL_LOCK_UNLOCK nicht unterstützt, bleibt eine gesperrte Zeile gesperrt, bis die Anwendung **SQLFreeHandle** für die-Anweisung oder **SQLFreeStmt** mit der SQL_CLOSE-Option aufruft. Wenn der Treiber Transaktionen unterstützt und den Cursor nach dem Commit oder Rollback der Transaktion schließt, ruft die Anwendung **SQLEndTran**auf.  
   
- Für die Update- und Delete-Vorgänge im **SQLSetPos**, die Anwendung verwendet die *LockType* Argument wie folgt:  
+ Für die Aktualisierungs-und Löschvorgänge in **SQLSetPos**verwendet die Anwendung das *LockType* -Argument wie folgt:  
   
--   Um zu gewährleisten, dass eine Zeile nicht ändert, nachdem sie abgerufen wurden, eine Anwendung ruft **SQLSetPos** mit *Vorgang* SQL_REFRESH festgelegt und *LockType* SQL_LOCK_ festgelegt EXKLUSIVE.  
+-   Um sicherzustellen, dass eine Zeile nach dem Abrufen nicht geändert wird, ruft eine Anwendung **SQLSetPos** auf, wobei *Operation* auf SQL_REFRESH und *LockType* auf SQL_LOCK_EXCLUSIVE festgelegt ist.  
   
--   Wenn die Anwendung setzt *LockType* zu SQL_LOCK_NO_CHANGE, der Treiber wird sichergestellt, dass ein Update oder Delete-Vorgang erfolgreich ist, nur, wenn die Anwendung SQL_CONCUR_LOCK für das SQL_ATTR_CONCURRENCY-Anweisungsattribut angegeben.  
+-   Wenn die Anwendung *LockType* auf SQL_LOCK_NO_CHANGE festlegt, gewährleistet der Treiber, dass ein Update-oder DELETE-Vorgang nur erfolgreich ausgeführt werden kann, wenn die Anwendung SQL_CONCUR_LOCK für das SQL_ATTR_CONCURRENCY-Anweisungs Attribut angegeben hat.  
   
--   Wenn die Anwendung für das SQL_ATTR_CONCURRENCY-Anweisungsattribut SQL_CONCUR_ROWVER oder SQL_CONCUR_VALUES angegeben ist, wird der Treiber vergleicht Zeilenversionen oder Werte und den Vorgang wird abgelehnt, wenn die Zeile geändert hat, da die Anwendung die Zeile abgerufen.  
+-   Wenn die Anwendung SQL_CONCUR_ROWVER oder SQL_CONCUR_VALUES für das SQL_ATTR_CONCURRENCY-Anweisungs Attribut angibt, vergleicht der Treiber die Zeilen Versionen oder-Werte und lehnt den Vorgang ab, wenn die Zeile geändert wurde, seit die Anwendung die Zeile abgerufen hat.  
   
--   Wenn die Anwendung für das SQL_ATTR_CONCURRENCY-Anweisungsattribut SQL_CONCUR_READ_ONLY angegeben ist, wird der Treiber ein Update abgelehnt oder Löschvorgang.  
+-   Wenn die Anwendung SQL_CONCUR_READ_ONLY für das SQL_ATTR_CONCURRENCY-Anweisungs Attribut angibt, lehnt der Treiber jeden Update-oder DELETE-Vorgang ab.  
   
- Weitere Informationen zu den SQL_ATTR_CONCURRENCY-Anweisungsattribut, finden Sie unter [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Weitere Informationen zum SQL_ATTR_CONCURRENCY-Anweisungs Attribut finden Sie unter [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
-## <a name="status-and-operation-arrays"></a>Status und die Vorgang-Arrays  
- Die folgenden Arrays von Status und der Vorgang wird beim Aufrufen von **SQLSetPos**:  
+## <a name="status-and-operation-arrays"></a>Status-und Vorgangs Arrays  
+ Die folgenden Status-und Vorgangs Arrays werden beim Aufrufen von **SQLSetPos**verwendet:  
   
--   Die zeilenstatusarray (wie mit dem SQL_DESC_ARRAY_STATUS_PTR-Feld in IRD und das Anweisungsattribut SQL_ATTR_ROW_STATUS_ARRAY gezeigt) enthält die Status-Werte für jede Zeile der Daten im Rowset. Der Treiber setzt die Status-Werte in diesem Array nach einem Aufruf von **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, oder **SQLSetPos** . Dieses Array wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen.  
+-   Das Zeilen Status Array (wie durch das SQL_DESC_ARRAY_STATUS_PTR-Feld im IRD-und SQL_ATTR_ROW_STATUS_ARRAY-Anweisungs Attribut gezeigt) enthält Statuswerte für jede Daten Zeile im Rowset. Der Treiber legt die Statuswerte in diesem Array nach einem Aufrufen von **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**oder **SQLSetPos**fest. Auf dieses Array wird durch das SQL_ATTR_ROW_STATUS_PTR-Anweisungs Attribut verwiesen.  
   
--   Die Zeile Operation-Array (wie mit dem SQL_DESC_ARRAY_STATUS_PTR-Feld in der ARD und das Anweisungsattribut SQL_ATTR_ROW_OPERATION_ARRAY gezeigt) enthält einen Wert für jede Zeile im Rowset, der angibt, ob ein Aufruf zum **SQLSetPos**für ein Massenvorgang ignoriert oder ausgeführt wird. Jedes Element im Array ist auf SQL_ROW_PROCEED (Standard) oder SQL_ROW_IGNORE festgelegt. Dieses Array wird durch das Anweisungsattribut SQL_ATTR_ROW_OPERATION_PTR verwiesen.  
+-   Das Zeilen Vorgangs Array (wie durch das SQL_DESC_ARRAY_STATUS_PTR-Feld in der ARD und das SQL_ATTR_ROW_OPERATION_ARRAY-Anweisungs Attribut gezeigt) enthält einen Wert für jede Zeile im Rowset, die angibt, ob ein **SQLSetPos** -Befehl für einen Massen Vorgang aufgerufen wird. wird ignoriert oder durchgeführt. Jedes Element im Array wird entweder auf SQL_ROW_PROCEED (Standard) oder SQL_ROW_IGNORE festgelegt. Auf dieses Array wird durch das SQL_ATTR_ROW_OPERATION_PTR-Anweisungs Attribut verwiesen.  
   
- Die Anzahl der Elemente in den Status und den Betrieb Arrays muss es sich um die Anzahl der Zeilen im Rowset (gemäß dem SQL_ATTR_ROW_ARRAY_SIZE-Attribut-Anweisung) gleich.  
+ Die Anzahl der Elemente in den Status-und Vorgangs Arrays muss der Anzahl der Zeilen im Rowset entsprechen (wie durch das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungs Attribut definiert).  
   
- Weitere Informationen zu den zeilenstatusarray, finden Sie unter [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md). Informationen zu der Zeile Operation-Array finden Sie unter "Wird ignoriert, eine Zeile in einer Massenvorgänge" weiter unten in diesem Abschnitt.  
+ Weitere Informationen zum Zeilen Status Array finden Sie unter [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md). Weitere Informationen zum Zeilen Vorgangs Array finden Sie unter "ignorieren einer Zeile in einem Massen Vorgang" weiter unten in diesem Abschnitt.  
   
 ## <a name="using-sqlsetpos"></a>Verwenden von SQLSetPos  
- Bevor eine Anwendung ruft **SQLSetPos**, müssen sie die folgende Schrittfolge ausführen:  
+ Bevor eine Anwendung **SQLSetPos**aufruft, muss Sie die folgenden Schritte ausführen:  
   
-1.  Wenn die Anwendung aufruft **SQLSetPos** mit *Vorgang* SQL_UPDATE, Aufruf festgelegt **SQLBindCol** (oder **SQLSetDescRec**) für die einzelnen die Spalte geben seinen Datentyp und die Puffer für die Daten und die Länge der Spaltenwerts zu binden.  
+1.  Wenn die Anwendung **SQLSetPos** aufruft, wobei *Operation* auf SQL_UPDATE festgelegt ist, wird **SQLBindCol** (oder **SQLSetDescRec**) für jede Spalte aufgerufen, um den Datentyp anzugeben und Puffer für die Daten und die Länge der Spalte zu binden.  
   
-2.  Wenn die Anwendung aufruft **SQLSetPos** mit *Vorgang* auf SQL_DELETE oder SQL_UPDATE, Aufruf festgelegt **SQLColAttribute** sicherstellen, dass die Spalten aus, die gelöscht oder aktualisiert werden können aktualisiert werden.  
+2.  Wenn die Anwendung **SQLSetPos** aufruft, wobei *Operation* auf SQL_DELETE oder SQL_UPDATE festgelegt ist, müssen Sie **SQLColAttribute** aufrufen, um sicherzustellen, dass die zu löschenden oder zu aktualisierenden Spalten aktualisierbar sind.  
   
-3.  Rufen Sie **SQLExecDirect**, **SQLExecute**, oder einer Katalogfunktion, um ein Resultset zu erstellen.  
+3.  Rufen Sie **SQLExecDirect**, **SQLExecute**oder eine Katalog Funktion auf, um ein Resultset zu erstellen.  
   
-4.  Rufen Sie **SQLFetch** oder **SQLFetchScroll** zum Abrufen der Daten.  
+4.  Rufen Sie **SQLFetch** oder **SQLFetchScroll** auf, um die Daten abzurufen.  
   
- Weitere Informationen zur Verwendung von **SQLSetPos**, finden Sie unter [Aktualisieren von Daten mit SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
+ Weitere Informationen zum Verwenden von **SQLSetPos**finden Sie unter [Aktualisieren von Daten mit SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
-## <a name="deleting-data-using-sqlsetpos"></a>Löschen von Daten mit SQLSetPos  
- Zum Löschen von Daten mit **SQLSetPos**, eine Anwendung ruft **SQLSetPos** mit *RowNumber* auf die Anzahl der Zeilen festgelegt, um das Löschen und *Vorgang*auf SQL_DELETE festgelegt.  
+## <a name="deleting-data-using-sqlsetpos"></a>Löschen von Daten mithilfe von SQLSetPos  
+ Zum Löschen von Daten mit **SQLSetPos**Ruft eine Anwendung **SQLSetPos** auf, wobei *RowNumber* auf die Nummer der zu löschenden Zeile und der *Vorgang* auf SQL_DELETE festgelegt ist.  
   
- Nachdem die Daten gelöscht wurden, ändert der Treiber den Wert in der Implementierung zeilenstatusarray für die entsprechende Zeile in SQL_ROW_DELETED (oder SQL_ROW_ERROR) an.  
+ Nachdem die Daten gelöscht wurden, ändert der Treiber den Wert im Array der Implementierungs Zeilen Status für die entsprechende Zeile in SQL_ROW_DELETED (oder SQL_ROW_ERROR).  
   
-## <a name="updating-data-using-sqlsetpos"></a>Aktualisieren von Daten mit SQLSetPos  
- Eine Anwendung kann übergeben Sie den Wert für eine Spalte im Puffer an Sie gebundenen Daten oder durch eine oder mehrere Aufrufe **SQLPutData**. Spalten, deren Daten mit übergeben werden **SQLPutData** genannt werden *Data-at-Execution-* *Spalten*. Diese werden häufig zum Senden von Daten für Spalten SQL_LONGVARBINARY und SQL_LONGVARCHAR verwendet und können mit anderen Spalten kombiniert werden.  
+## <a name="updating-data-using-sqlsetpos"></a>Aktualisieren von Daten mithilfe von SQLSetPos  
+ Eine Anwendung kann den Wert für eine Spalte entweder im gebundenen Datenpuffer oder mit einem oder mehreren Aufrufen von **SQLPutData**übergeben. Spalten, deren Daten mit **SQLPutData** übermittelt werden, werden als *Data-at-Execution-* *Spalten*bezeichnet. Diese werden häufig zum Senden von Daten für SQL_LONGVARBINARY-und SQL_LONGVARCHAR-Spalten verwendet und können mit anderen Spalten gemischt werden.  
   
-#### <a name="to-update-data-with-sqlsetpos-an-application"></a>Um Daten mit SQLSetPos, eine Anwendung zu aktualisieren:  
+#### <a name="to-update-data-with-sqlsetpos-an-application"></a>Zum Aktualisieren von Daten mit SQLSetPos wird eine Anwendung:  
   
-1.  Stellen Werte in den Daten und Längenindikator/Puffern mit gebundenen **SQLBindCol**:  
+1.  Platziert Werte in den Daten-und Längen-/indikatorpuffern, die mit **SQLBindCol**gebunden sind:  
   
-    -   Für das normale Verhalten von Spalten, die Anwendung platziert den Wert der neuen Spalte in der  *\*TargetValuePtr* Puffer und die Länge des Werts in der  *\*StrLen_or_IndPtr* Puffer. Wenn die Zeile nicht aktualisiert werden soll, wird die Anwendung SQL_ROW_IGNORE in dieser Zeile-Element des Arrays Vorgang Zeile.  
+    -   Für normale Spalten platziert die Anwendung den neuen Spaltenwert im  *\*targetvalueptr* -Puffer und die Länge  *\** dieses Werts im StrLen_or_IndPtr-Puffer. Wenn die Zeile nicht aktualisiert werden soll, fügt die Anwendung SQL_ROW_IGNORE in das-Element der Zeile des Zeilen Vorgangs Arrays ein.  
   
-    -   Für Data-at-Execution-Spalten wird die Anwendung einen anwendungsdefinierten Wert, z. B. die Nummer der Spalte, in der  *\*TargetValuePtr* Puffer. Der Wert kann später verwendet werden, um die Spalte identifizieren.  
+    -   Bei Data-at-Execution-Spalten platziert die Anwendung einen Anwendungs definierten Wert, z. b. die Spaltennummer, im  *\*targetvalueptr* -Puffer. Der Wert kann später verwendet werden, um die Spalte zu identifizieren.  
   
-         Die Anwendung platziert, das Ergebnis der SQL_LEN_DATA_AT_EXEC (*Länge*)-Makro in der **StrLen_or_IndPtr* Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder einem long-Datentyp datenquellenspezifische Daten und "Y" für den Typ der SQL_NEED_LONG_DATA_LEN Informationen in der Treiber gibt **SQLGetInfo**, *Länge*  ist die Anzahl der Datenbytes, die für den Parameter; gesendet werden andernfalls muss ein Wert nicht negativ sein und wird ignoriert.  
+         Die Anwendung platziert das Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros im **StrLen_or_IndPtr* -Puffer. Wenn der SQL-Datentyp der Spalte SQL_LONGVARBINARY, SQL_LONGVARCHAR oder ein langer Datenquellen spezifischer Datentyp ist und der Treiber "Y" für den SQL_NEED_LONG_DATA_LEN-Informationstyp in **SQLGetInfo**zurückgibt, ist *length* die Anzahl der Daten bytes, die für den Parameter gesendet werden. Andernfalls muss Sie ein nicht negativer Wert sein und wird ignoriert.  
   
-2.  Aufrufe **SQLSetPos** mit der *Vorgang* Argument, die auf SQL_UPDATE auf festgelegt ist, um die Zeile der Daten zu aktualisieren.  
+2.  Ruft **SQLSetPos** auf, wobei das *Operations* -Argument auf SQL_UPDATE festgelegt ist, um die Daten Zeile zu aktualisieren.  
   
-    -   Wenn keine Data-at-Execution-Spalten vorhanden sind, ist der Prozess abgeschlossen.  
+    -   Wenn keine Data-at-Execution-Spalten vorhanden sind, ist der Prozess vollständig.  
   
-    -   Wenn alle Data-at-Execution-Spalten vorhanden sind, wird die Funktion wird SQL_NEED_DATA zurückgegeben, und fährt Sie fort mit Schritt 3 fort.  
+    -   Wenn Data-at-Execution-Spalten vorhanden sind, gibt die Funktion SQL_NEED_DATA zurück und geht mit Schritt 3 fort.  
   
-3.  Aufrufe **SQLParamData** zum Abrufen der Adresse der  *\*TargetValuePtr* Puffer für die erste Data-at-Execution-Spalte, die verarbeitet werden. **SQLParamData** wird SQL_NEED_DATA zurückgegeben. Die Anwendung ruft den Anwendung definierte Wert aus der  *\*TargetValuePtr* Puffer.  
-  
-    > [!NOTE]  
-    >  Obwohl Data-at-Execution-Parametern mit Data-at-Execution-Spalten vergleichbar sind, wird der Wert von zurückgegeben **SQLParamData** ist unterschiedlich.  
+3.  Ruft **SQLParamData** auf, um die Adresse des  *\*targetvalueptr* -Puffers für die erste zu verarbeitende Data-at-Execution-Spalte abzurufen. **SQLParamData** gibt SQL_NEED_DATA zurück. Die Anwendung ruft den von der Anwendung definierten Wert aus dem  *\*targetvalueptr* -Puffer ab.  
   
     > [!NOTE]  
-    >  Data-at-Execution-Parameter sind die Parameter in einer SQL-Anweisung, die für die Daten gesendet werden mit **SQLPutData** Wenn die Anweisung ausgeführt wird, mit **SQLExecDirect** oder **SQLExecute**. Sie sind mit gebunden **SQLBindParameter** oder durch Festlegen von sicherheitsbeschreibungen mit **SQLSetDescRec**. Der Rückgabewert von **SQLParamData** ist eine 32-Bit-Wert, der an übergebene **SQLBindParameter** in die *ParameterValuePtr* Argument.  
+    >  Obwohl Data-at-Execution-Parameter mit Data-at-Execution-Spalten vergleichbar sind, ist der von **SQLParamData** zurückgegebene Wert für jeden Wert anders.  
   
     > [!NOTE]  
-    >  Data-at-Execution-Spalten in einem Rowset, für die Daten mit gesendet werden, sind **SQLPutData** beim Aktualisieren einer Zeile mit **SQLSetPos**. Sie sind mit gebunden **SQLBindCol**. Der Rückgabewert von **SQLParamData** ist die Adresse der Zeile in der **TargetValuePtr* Puffer, der verarbeitet wird.  
+    >  Data-at-Execution-Parameter sind Parameter in einer SQL-Anweisung, für die Daten mit **SQLPutData** gesendet werden, wenn die Anweisung mit **SQLExecDirect** oder **SQLExecute**ausgeführt wird. Sie werden mit **SQLBindParameter** oder durch Festlegen von Deskriptoren mit **sqlsetdebug**gebunden. Der von **SQLParamData** zurückgegebene Wert ist ein 32-Bit-Wert, der im *ParameterValuePtr* -Argument an **SQLBindParameter** übergeben wird.  
   
-4.  Aufrufe **SQLPutData** einmal oder mehrmals, um Daten für die Spalte zu senden. Mehrere ist erforderlich, wenn alle Datenwerte in zurückgegeben werden, können die  *\*TargetValuePtr* im angegebenen Puffer **SQLPutData**; mehrere Aufrufe **SQLPutData** für dieselbe Spalte dürfen nur beim Senden von Zeichendaten C an eine Spalte mit einem Zeichen oder den binären datenquellenspezifische Datentyp oder beim Senden von Binärdaten C an eine Spalte mit einem Zeichen, binär, oder geben Sie die spezifischen Daten.  
+    > [!NOTE]  
+    >  Data-at-Execution-Spalten sind Spalten in einem Rowset, für die Daten mit **SQLPutData** gesendet werden, wenn eine Zeile mit **SQLSetPos**aktualisiert wird. Sie sind mit **SQLBindCol**gebunden. Der von **SQLParamData** zurückgegebene Wert ist die Adresse der Zeile im **targetvalueptr* -Puffer, der verarbeitet wird.  
   
-5.  Aufrufe **SQLParamData** erneut aus, um zu signalisieren, dass alle Daten für die Spalte gesendet wurde.  
+4.  Ruft **SQLPutData** ein oder mehrere Male auf, um Daten für die Spalte zu senden. Wenn alle Datenwerte nicht im   *\** in SQLPutData angegebenen targetvalueptr-Puffer zurückgegeben werden können, ist mehr als ein Aufruf erforderlich. mehrere Aufrufe von **SQLPutData** für dieselbe Spalte sind nur zulässig, wenn Zeichen-C-Daten gesendet werden. in eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp oder beim Senden binärer C-Daten an eine Spalte mit einem Zeichen-, Binär-oder Datenquellen spezifischen Datentyp.  
   
-    -   Wenn es weitere Data-at-Execution-Spalten, **SQLParamData** gibt SQL_NEED_DATA sowie die Adresse des der *TargetValuePtr* Puffer für die nächste Data-at-Execution-Spalte, die verarbeitet werden. Die Anwendung wiederholt die Schritte 4 und 5.  
+5.  Ruft **SQLParamData** erneut auf, um zu signalisieren, dass alle Daten für die Spalte gesendet wurden.  
   
-    -   Wenn keine weiteren Data-at-Execution-Spalten vorhanden sind, ist der Prozess abgeschlossen. Wenn die Anweisung erfolgreich ausgeführt wurde **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO; Fehler bei der Ausführung gibt, wird SQL_ERROR zurückgegeben. An diesem Punkt **SQLParamData** können alle SQLSTATE, der zurückgegeben werden kann zurückgeben **SQLSetPos**.  
+    -   Wenn mehr Data-at-Execution-Spalten vorhanden sind, gibt **SQLParamData** SQL_NEED_DATA und die Adresse des *targetvalueptr* -Puffers für die nächste Data-at-Execution-Spalte zurück, die verarbeitet werden soll. Die Anwendung wiederholt die Schritte 4 und 5.  
   
- Wenn Daten aktualisiert wurde, ändert der Treiber den Wert in der Implementierung zeilenstatusarray für die entsprechende Zeile in SQL_ROW_UPDATED an.  
+    -   Wenn keine weiteren Data-at-Execution-Spalten vorhanden sind, ist der Prozess vollständig. Wenn die Anweisung erfolgreich ausgeführt wurde, gibt **SQLParamData** "SQL_SUCCESS" oder "SQL_SUCCESS_WITH_INFO;" zurück. Wenn bei der Ausführung ein Fehler aufgetreten ist, wird SQL_ERROR zurückgegeben. An diesem Punkt können **SQLParamData** beliebige SQLSTATE-Objekte zurückgeben, die von **SQLSetPos**zurückgegeben werden können.  
   
- Wenn der Vorgang abgebrochen wird oder ein Fehler, in auftritt **SQLParamData** oder **SQLPutData**nach **SQLSetPos** wird SQL_NEED_DATA zurückgegeben und vor dem Senden von Daten für alle Data-at-Execution-Spalten, die Anwendung kann aufrufen nur **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions** , **SQLParamData**, oder **SQLPutData** für die Anweisung oder die Verbindung mit der Anweisung verknüpft ist. Wenn sie für die Anweisung oder die Verbindung mit der Anweisung verknüpfte jede andere Funktion aufruft, gibt die Funktion SQL_ERROR zurück, und SQLSTATE HY010 (Sequenzfehler funktionieren).  
+ Wenn die Daten aktualisiert wurden, ändert der Treiber den Wert im Array der Implementierungs Zeilen Status für die entsprechende Zeile in SQL_ROW_UPDATED.  
   
- Wenn die Anwendung ruft **SQLCancel** während der Treiber noch Daten für die Data-at-Execution-Spalten benötigt, bricht der Treiber den Vorgang ab. Die Anwendung kann dann aufrufen **SQLSetPos** erneut Abbrechen wirkt sich nicht den Cursorstatus oder der aktuellen Cursorposition.  
+ Wenn der Vorgang abgebrochen wird oder ein Fehler in **SQLParamData** oder **SQLPutData**auftritt, kann die Anwendung nur **SQLCancel**aufrufen,  **Wenn SQLSetPos SQL_NEED_DATA zurückgibt und bevor Daten für alle Data-at-Execution-Spalten gesendet werden. SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**oder **SQLPutData** für die-Anweisung oder die Verbindung, die der Anweisung zugeordnet ist. Wenn eine andere Funktion für die-Anweisung oder die mit der-Anweisung verknüpfte Verbindung aufgerufen wird, gibt die Funktion SQL_ERROR und SQLSTATE HY010 (Funktions Sequenz Fehler) zurück.  
   
- Wenn die SELECT-Liste der Query-Spezifikation, die dem Cursor zugeordnet mehr als einen Verweis auf die gleiche Spalte enthält, ob ein Fehler generiert wird, oder der Treiber ignoriert die doppelt vorhandenen Verweise und führt die angeforderten Vorgänge wird-Treiber definiert werden.  
+ Wenn die Anwendung **SQLCancel** aufruft, während der Treiber weiterhin Daten für Data-at-Execution-Spalten benötigt, bricht der Treiber den Vorgang ab. Die Anwendung kann dann **SQLSetPos** erneut aufrufen. Das Abbrechen wirkt sich nicht auf den Cursor Zustand oder die aktuelle Cursorposition aus.  
   
-## <a name="performing-bulk-operations"></a>Massenvorgänge  
- Wenn die *RowNumber* -Argument 0 ist, die der Treiber führt den Vorgang angegeben wird, der *Vorgang* Argument für jede Zeile im Rowset, das in dem Feld in der Zeile Vorgang einen Wert von SQL_ROW_PROCEED enthält Array auf SQL_ATTR_ROW_OPERATION_PTR-Anweisungsattribut zeigt. Dies ist ein gültiger Wert von der *RowNumber* Argument für eine *Vorgang* Argument SQL_DELETE, SQL_REFRESH, oder SQL_UPDATE, jedoch nicht SQL_POSITION. **SQLSetPos** mit einer *Vorgang* von SQL_POSITION und *RowNumber* SQLSTATE HY109 gleich 0 zurück (ungültige Cursorposition).  
+ Wenn die SELECT-Liste der Abfrage Spezifikation, die dem Cursor zugeordnet ist, mehr als einen Verweis auf dieselbe Spalte enthält, wird unabhängig davon, ob ein Fehler generiert wurde oder der Treiber die duplizierten Verweise ignoriert und die angeforderten Vorgänge durchgeführt, Treiber definiert.  
   
- Wenn ein Fehler auftritt, bezieht sich auf das gesamte Rowset, z. B. SQLSTATE HYT00 (Timeout ist abgelaufen), gibt der Treiber SQL_ERROR zurück, und dem entsprechenden SQLSTATE. Der Inhalt der Rowset-Puffer ist nicht definiert, und die Cursorposition bleibt unverändert.  
+## <a name="performing-bulk-operations"></a>Ausführen von Massen Vorgängen  
+ Wenn das *RowNumber* -Argument 0 ist, führt der Treiber den im *Vorgangs* Argument angegebenen Vorgang für jede Zeile im Rowset aus, die den Wert SQL_ROW_PROCEED im zugehörigen Feld im Zeilen Vorgangs Array aufweist, auf das von SQL_ATTR_ROW_OPERATION_PTR verwiesen wird. Anweisungs Attribut. Dies ist ein gültiger Wert des *RowNumber* -Arguments für ein *Vorgangs* Argument von SQL_DELETE, SQL_REFRESH oder SQL_UPDATE, jedoch nicht SQL_POSITION. **SQLSetPos** mit einem SQL_POSITION- *Vorgang* und eine *RowNumber* gleich 0 geben SQLSTATE HY109 (ungültige Cursor Position) zurück.  
   
- Wenn ein Fehler auftritt, bezieht sich auf eine einzelne Zeile den Treiber ein:  
+ Wenn ein Fehler auftritt, der sich auf das gesamte Rowset bezieht, z. b. SQLSTATE HYT00 (Timeout abgelaufen), gibt der Treiber SQL_ERROR und den entsprechenden SQLSTATE zurück. Der Inhalt der rowsetpuffer ist nicht definiert, und die Cursorposition bleibt unverändert.  
   
--   Legt das Element für die Zeile in der zeilenstatusarray verweist das SQL_ATTR_ROW_STATUS_PTR-Anweisungsattribut, SQL_ROW_ERROR fest.  
+ Wenn ein Fehler auftritt, der sich auf eine einzelne Zeile bezieht, wird der Treiber:  
   
--   Stellt eine oder mehrere zusätzliche SQLSTATEs für den Fehler in der Fehlerwarteschlange und legt das SQL_DIAG_ROW_NUMBER-Feld in der Struktur der Diagnosedaten.  
+-   Legt das-Element für die Zeile im Zeilen Status Array fest, auf das durch das SQL_ATTR_ROW_STATUS_PTR-Anweisungs Attribut auf SQL_ROW_ERROR verwiesen wird.  
   
- Nachdem sie den Fehler oder die Warnung verarbeitet, wenn der Treiber den Vorgang für die verbleibenden Zeilen im Rowset abgeschlossen wird, wird SQL_SUCCESS_WITH_INFO zurückgegeben. Daher wird für jede Zeile, die einen Fehler zurückgegeben, die Fehlerwarteschlange NULL oder mehr zusätzliche SQLSTATEs enthält. Wenn der Treiber den Vorgang beendet, nachdem sie den Fehler oder Warnung verarbeitet wurde, wird SQL_ERROR zurückgegeben.  
+-   Sendet mindestens einen zusätzlichen Sqlstates-Wert für den Fehler in der Fehler Warteschlange und legt das Feld "SQL_DIAG_ROW_NUMBER" in der Diagnosedaten Struktur fest.  
   
- Wenn der Treiber alle Warnungen, z. B. SQLSTATE 01004 (Daten wurden abgeschnitten) zurückgibt, wird der Warnungen, die auf das gesamte Rowset oder unbekannte Zeilen im Rowset anwenden, bevor sie die Fehlerinformationen zurückgibt, die für bestimmte Zeilen gilt. Es gibt Warnungen für bestimmte Zeilen sowie andere Fehlerinformationen über die Zeilen zurück.  
+ Wenn der Treiber den Vorgang für die verbleibenden Zeilen im Rowset abgeschlossen hat, wird er nach der Verarbeitung des Fehlers oder der Warnung SQL_SUCCESS_WITH_INFO zurückgegeben. Daher enthält die Fehler Warteschlange für jede Zeile, die einen Fehler zurückgegeben hat, 0 (null) oder mehr zusätzliche Sqlstates. Wenn der Treiber den Vorgang beendet, nachdem er den Fehler oder die Warnung verarbeitet hat, wird SQL_ERROR zurückgegeben.  
   
- Wenn *RowNumber* ist gleich 0 und *Vorgang* ist SQL_UPDATE, SQL_REFRESH oder SQL_DELETE, die Anzahl von Zeilen, die **SQLSetPos** arbeitet auf verweist das SQL_ATTR_ROWS _FETCHED_PTR-Anweisungsattribut.  
+ Wenn der Treiber Warnungen zurückgibt, wie z. b. SQLSTATE 01004 (abgeschnittene Daten), gibt er Warnungen zurück, die auf das gesamte Rowset oder auf unbekannte Zeilen im Rowset zutreffen, bevor es die Fehlerinformationen zurückgibt, die für bestimmte Zeilen gelten. Sie gibt Warnungen für bestimmte Zeilen zusammen mit allen anderen Fehlerinformationen zu diesen Zeilen zurück.  
   
- Wenn *RowNumber* ist gleich 0 und *Vorgang* ist SQL_DELETE, SQL_REFRESH oder SQL_UPDATE auf, die aktuelle Zeile aus, nachdem der Vorgang der aktuellen Zeile vor dem Vorgang identisch ist.  
+ Wenn *RowNumber* gleich 0 und *Operation* den Wert SQL_UPDATE, SQL_REFRESH oder SQL_DELETE hat, zeigt die Anzahl der Zeilen, auf die **SQLSetPos** angewendet wird, vom SQL_ATTR_ROWS_FETCHED_PTR-Anweisungs Attribut.  
   
-## <a name="ignoring-a-row-in-a-bulk-operation"></a>Eine Zeile in einem Massenvorgang wird ignoriert.  
- Die Zeile Operation-Array kann verwendet werden, um anzugeben, dass eine Zeile im aktuellen Rowset sollen, während ein Vorgang mithilfe ignoriert werden **SQLSetPos**. Damit den Treiber, um eine oder mehrere Zeilen zu ignorieren, während eines Massenvorgangs durchführt, sollte eine Anwendung die folgenden Schritte ausführen:  
+ Wenn *RowNumber* gleich 0 und *Operation* den Wert SQL_DELETE, SQL_REFRESH oder SQL_UPDATE hat, ist die aktuelle Zeile nach dem Vorgang mit der aktuellen Zeile vor dem Vorgang identisch.  
   
-1.  Rufen Sie **SQLSetStmtAttr** beim Festlegen des Attributs SQL_ATTR_ROW_OPERATION_PTR-Anweisung, um auf ein Array von SQLUSMALLINTs zu verweisen. Dieses Feld kann auch festgelegt werden, durch den Aufruf **SQLSetDescField** das Headerfeld SQL_DESC_ARRAY_STATUS_PTR der ARD festlegen, die erfordert, dass eine Anwendung die Deskriptorhandles erhält.  
+## <a name="ignoring-a-row-in-a-bulk-operation"></a>Ignorieren einer Zeile in einem Massen Vorgang  
+ Das Row Operation-Array kann verwendet werden, um anzugeben, dass eine Zeile im aktuellen Rowset bei einem Massen Vorgang mithilfe von **SQLSetPos**ignoriert werden soll. Um den Treiber anzuweisen, eine oder mehrere Zeilen während eines Massen Vorgangs zu ignorieren, sollte eine Anwendung die folgenden Schritte ausführen:  
   
-2.  Legen Sie jedes Element des Arrays Vorgang Zeile auf einen von zwei Werten:  
+1.  Aufrufen von **SQLSetStmtAttr** , um das SQL_ATTR_ROW_OPERATION_PTR-Anweisungs Attribut so festzulegen, dass es auf ein Array von sqlusmallints verweist. Dieses Feld kann auch durch Aufrufen von **SQLSetDescField** festgelegt werden, um das SQL_DESC_ARRAY_STATUS_PTR-Header Feld der ARD festzulegen, das erfordert, dass eine Anwendung das Deskriptorhandle erhält.  
   
-    -   SQL_ROW_IGNORE, um anzugeben, dass die Zeile für Massenvorgänge ausgeschlossen ist.  
+2.  Legen Sie jedes Element des Zeilen Vorgangs Arrays auf einen von zwei Werten fest:  
   
-    -   SQL_ROW_PROCEED, um anzugeben, dass die Zeile in den Massenvorgang enthalten ist. (Dies ist der Standardwert.)  
+    -   SQL_ROW_IGNORE, um anzugeben, dass die Zeile für den Massen Vorgang ausgeschlossen wird.  
   
-3.  Rufen Sie **SQLSetPos** Massenvorgangs ausführen.  
+    -   SQL_ROW_PROCEED, um anzugeben, dass die Zeile im Massen Vorgang enthalten ist. (Dies ist der Standardwert.)  
   
- Die folgenden Regeln gelten für die Zeile Operation-Array:  
+3.  Aufrufen von **SQLSetPos** zum Ausführen des Massen Vorgangs.  
   
--   SQL_ROW_IGNORE und SQL_ROW_PROCEED beeinflussen nur mithilfe von Massenvorgängen **SQLSetPos** mit einer *Vorgang* SQL_DELETE oder SQL_UPDATE auf. Sie haben keine Auswirkungen, Aufrufe von **SQLSetPos** mit einer *Vorgang* SQL_REFRESH oder SQL_POSITION.  
+ Die folgenden Regeln gelten für das Array Row Operation:  
   
--   Der Zeiger wird festgelegt. standardmäßig auf null.  
+-   SQL_ROW_IGNORE und SQL_ROW_PROCEED wirken sich nur auf Massen Vorgänge aus, die **SQLSetPos** mit einem *Vorgang* von SQL_DELETE oder SQL_UPDATE verwenden. Sie haben keine Auswirkung auf Aufrufe von **SQLSetPos** mit einem *Vorgang* von SQL_REFRESH oder SQL_POSITION.  
   
--   Wenn der Zeiger null ist, werden alle Zeilen aktualisiert, als ob alle Elemente auf SQL_ROW_PROCEED festgelegt wurden.  
+-   Der Zeiger ist standardmäßig auf NULL festgelegt.  
   
--   Festlegen eines Elements auf SQL_ROW_PROCEED garantiert nicht, dass der Vorgang in einer bestimmten Zeile stattfindet. Z. B. wenn eine bestimmte Zeile im Rowset den Status SQL_ROW_ERROR verfügt, der Treiber möglicherweise nicht zum Aktualisieren dieser Zeile unabhängig davon, ob die Anwendung SQL_ROW_PROCEED angegeben. Eine Anwendung muss überprüfen Sie immer die zeilenstatusarray, um festzustellen, ob der Vorgang erfolgreich war.  
+-   Wenn der Zeiger NULL ist, werden alle Zeilen so aktualisiert, als wären alle Elemente auf SQL_ROW_PROCEED festgelegt.  
   
--   SQL_ROW_PROCEED ist als 0 in der Headerdatei definiert. Eine Anwendung kann die Zeile Operation-Array auf 0 initialisieren, um alle Zeilen zu verarbeiten.  
+-   Wenn Sie ein Element auf SQL_ROW_PROCEED festlegen, wird nicht sichergestellt, dass der Vorgang für die jeweilige Zeile ausgeführt wird. Wenn eine bestimmte Zeile im Rowset beispielsweise den Status SQL_ROW_ERROR aufweist, kann der Treiber diese Zeile möglicherweise nicht aktualisieren, unabhängig davon, ob die Anwendung SQL_ROW_PROCEED angegeben hat. Eine Anwendung muss immer das Array Zeilen Status überprüfen, um festzustellen, ob der Vorgang erfolgreich war.  
   
--   Wenn Element Anzahl "n" in der Zeile Operation-Array SQL_ROW_IGNORE festgelegt ist und **SQLSetPos** wird aufgerufen, um das Ausführen eines Massenupdates oder Löschvorgang, der n-te Zeile in das Rowset bleibt unverändert, nach dem Aufruf von **SQLSetPos**.  
+-   SQL_ROW_PROCEED ist in der Header Datei als 0 definiert. Eine Anwendung kann das Zeilen Vorgangs Array mit 0 initialisieren, um alle Zeilen zu verarbeiten.  
   
--   Eine Anwendung sollte automatisch eine schreibgeschützte Spalte auf SQL_ROW_IGNORE festgelegt.  
+-   Wenn die Element Nummer "n" im Zeilen Vorgangs Array auf SQL_ROW_IGNORE festgelegt ist und **SQLSetPos** aufgerufen wird, um einen Massen Aktualisierungs-oder Löschvorgang auszuführen, bleibt die n-te Zeile im Rowset nach dem Aufruf von **SQLSetPos**unverändert.  
   
-## <a name="ignoring-a-column-in-a-bulk-operation"></a>Eine Spalte in einem Massenvorgang wird ignoriert.  
- Um unnötige Verarbeitungsvorgänge Diagnose von versuchten Updates für eine oder mehrere schreibgeschützte Spalten generiert zu vermeiden, kann eine Anwendung den Wert in die gebundenen Längen-/Indikatorpuffers auf SQL_COLUMN_IGNORE festlegen. Weitere Informationen finden Sie unter [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+-   Eine Anwendung sollte automatisch eine schreibgeschützte Spalte auf SQL_ROW_IGNORE festlegen.  
+  
+## <a name="ignoring-a-column-in-a-bulk-operation"></a>Ignorieren einer Spalte in einem Massen Vorgang  
+ Um unnötige Verarbeitungs Diagnosen zu vermeiden, die durch die Aktualisierung einer oder mehrerer Schreib geschützter Spalten generiert wurden, kann eine Anwendung den Wert im gebundenen Längen-/Indikatorpuffer auf SQL_COLUMN_IGNORE festlegen. Weitere Informationen finden Sie unter [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
 ## <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel kann eine Anwendung einen Benutzer, die ORDERS-Tabelle durchsuchen und Aktualisieren des Auftragsstatus. Der Cursor wird mit einer Rowsetgröße von 20 keysetgesteuerte und Steuerung für optimistische Parallelität Vergleichen von Zeilenversionen verwendet. Nachdem jedes Rowset abgerufen wird, wird die Anwendung gibt es, und ermöglicht dem Benutzer, wählen Sie aus, und aktualisieren Sie den Status einer Bestellung. Die Anwendung verwendet **SQLSetPos** zur Positionierung des Cursors auf die ausgewählte Zeile und führt ein positioniertes Update der Zeile. (Die Fehlerbehandlung wird aus Gründen der Übersichtlichkeit weggelassen.)  
+ Im folgenden Beispiel kann ein Benutzer mit einer Anwendung die Orders-Tabelle durchsuchen und den Auftragsstatus aktualisieren. Der Cursor ist mit einer Rowsetgröße von 20 keysetgesteuert und verwendet die Steuerung der vollständigen Parallelität, um Zeilen Versionen zu vergleichen. Nachdem jedes Rowset abgerufen wurde, gibt die Anwendung es aus und ermöglicht es dem Benutzer, den Status eines Auftrags auszuwählen und zu aktualisieren. Die Anwendung verwendet **SQLSetPos** , um den Cursor in der ausgewählten Zeile zu positionieren, und führt ein positioniertes Update der Zeile aus. (Die Fehlerbehandlung wird aus Gründen der Übersichtlichkeit ausgelassen.)  
   
 ```cpp  
 #define ROWS 20  
@@ -362,21 +363,21 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 }  
 ```  
   
- Weitere Beispiele finden Sie unter [positioniert Update- und Delete-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md) und [Aktualisieren von Zeilen im Rowset mit SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
+ Weitere Beispiele finden Sie unter [positionierte UPDATE-und DELETE-Anweisungen](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md) und [Aktualisieren von Zeilen im Rowset mit SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
-|Binden einen Puffer an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Ausführen von Massenvorgängen, die nicht auf die Position des Blocks beziehen|[SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|Anweisungsverarbeitung Abbrechen|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Abrufen eines Zeilenblocks von Daten oder ein Ergebnis durchblättern festlegen|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Abrufen eines einzelnen Felds einen Deskriptor|[SQLGetDescField-Funktion](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|Abrufen von mehreren Feldern einen Deskriptor|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Festlegen eines einzelnen Felds einen Deskriptor|[SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Festlegen von mehreren Feldern einen Deskriptor|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
-|Wenn eine Anweisungsattribut|[SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
+|Binden eines Puffers an eine Spalte in einem Resultset|[SQLBindCol-Funktion](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Ausführen von Massen Vorgängen, die sich nicht auf die Position des Block Cursors beziehen|[SQLBulkOperations-Funktion](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
+|Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Abrufen eines Datenblocks oder Scrollen durch ein Resultset|[SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Ein einzelnes Feld eines Deskriptors wird abgerufen.|[SQLGetDescField-Funktion](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|Mehrere Felder eines Deskriptors werden abgerufen.|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Festlegen eines einzelnen Felds eines Deskriptors|[SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Festlegen mehrerer Felder eines Deskriptors|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|Festlegen eines Anweisungs Attributs|[SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

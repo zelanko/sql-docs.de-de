@@ -1,70 +1,70 @@
 ---
-title: Verwalten und Integrieren von Machine Learning-Workloads – SQL Server Machine Learning Services
-description: Überprüfen Sie als eine SQL Server-Datenbankadministrator die administrativen Aufgaben für die Bereitstellung eines Machine learning-R und Python-Subsystem in einer Datenbank-Engine-Instanz aus.
+title: Verwalten und integrieren von Machine Learning-Workloads
+description: Überprüfen Sie als SQL Server DBA die administrativen Aufgaben für die Bereitstellung eines Machine Learning R-und python-Subsystems in einer Datenbank-Engine-Instanz.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 02b74aa3fcb8a6526a59821c615ec421220e8608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fab91e142fad3bcb1ce23816d6705f7a7d208851
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962602"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345318"
 ---
-# <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Verwalten und Integrieren von Machine Learning-Workloads auf SQL Server
+# <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Verwalten und integrieren von Machine Learning-Workloads auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist für SQL Server-Datenbankadministratoren, die für die Bereitstellung einer effizienten Data Science-Infrastruktur auf eine Server-Ressource, die Unterstützung von mehreren Workloads zuständig sind. Sie frames des Verwaltungsproblem Speicherplatzes, die relevant für die Verwaltung von R und Python-code die Ausführung auf SQL Server. 
+Dieser Artikel richtet sich an SQL Server Datenbankadministratoren, die für die Bereitstellung einer effizienten Data Science-Infrastruktur auf einem Server Asset zuständig sind, das mehrere Workloads unterstützt. Der Bereich für administrative Probleme, der für die Verwaltung von R-und python-Codeausführung relevant ist, wird in SQL Server Frames. 
 
-## <a name="what-is-feature-integration"></a>Was ist die Funktion zur Integration
+## <a name="what-is-feature-integration"></a>Was ist die Funktionsintegration?
 
-R und Python-Machine-Learning erfolgt über [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) als Erweiterung für eine Datenbank-Engine-Instanz. Die Integration ist in erster Linie durch die Sicherheitsstufe und der Data Definition Language, die wie folgt zusammengefasst werden:
+R und python Machine Learning werden von [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) als Erweiterung einer Instanz der Datenbank-Engine bereitgestellt. Die Integration erfolgt in erster Linie über die Sicherheitsschicht und die Datendefinitionssprache, die wie folgt zusammengefasst werden:
 
-+ Gespeicherte Prozeduren verfügen über die Fähigkeit, akzeptieren R und Python-code als Eingabeparameter. Entwickler und Data Scientists können eine [gespeicherte Systemprozedur](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) , oder erstellen Sie eine benutzerdefinierte Prozedur, die ihren Code umschließt.
-+ T-SQL-Funktionen (d. h., [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)) einer zuvor trainierten Datenmodell nutzen können. Diese Funktion ist über T-SQL verfügbar. Daher ist es möglich, kann er aufgerufen auf einem System, die nicht speziell die Machine learning-Erweiterungen installiert.
-+ Vorhandene Datenbank-Anmeldenamen und rollenbasierte Berechtigungen behandelt die Benutzer aufgerufenen Skripts, die dieselben Daten nutzen. Als allgemeine Regel Wenn Benutzer über eine Abfrage auf Daten zugreifen können nicht können nicht sie per Skript entweder darauf zugreifen.
++ Gespeicherte Prozeduren sind mit der Möglichkeit ausgestattet, R-und Python-Code als Eingabeparameter zu akzeptieren. Entwickler und Datenanalysten können eine [gespeicherte System Prozedur](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017) verwenden oder eine benutzerdefinierte Prozedur erstellen, die Ihren Code umschließt.
++ T-SQL-Funktionen ( [Vorhersagen](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)), die ein zuvor trainiertes Datenmodell nutzen können. Diese Funktion ist über T-SQL verfügbar. Daher kann Sie auf einem System aufgerufen werden, auf dem nicht ausdrücklich die Machine Learning-Erweiterungen installiert sind.
++ Vorhandene Daten Bank Anmeldungen und rollenbasierte Berechtigungen umfassen die vom Benutzer aufgerufenen Skripts, die dieselben Daten verwenden. Als allgemeine Regel gilt: Wenn Benutzer nicht über eine Abfrage auf Daten zugreifen können, können Sie auch nicht über Skripts darauf zugreifen.
 
-## <a name="feature-availability"></a>Verfügbarkeit von Features
+## <a name="feature-availability"></a>Funktions Verfügbarkeit
 
-R und Python-Integration wird durch eine Folge von Schritten verfügbar. Das erste Setup ist, wenn Sie [ein- oder Hinzufügen der **Machine Learning Services** ](../install/sql-machine-learning-services-windows-install.md) Feature eine Instanz der Datenbank-Engine. Im nachfolgenden Schritt müssen Sie die externe Skripts in der Datenbank-Engine-Instanz (es ist standardmäßig deaktiviert) aktivieren.
+Die Integration von R und python wird durch eine Reihe von Schritten verfügbar. Der erste ist Setup, wenn Sie das Machine Learning Services Feature in eine Instanz der Datenbank-Engine [einschließen oder hinzufügen  ](../install/sql-machine-learning-services-windows-install.md) . Als nachfolgenden Schritt müssen Sie die externe Skripterstellung für die Datenbank-Engine-Instanz aktivieren (standardmäßig deaktiviert).
 
-An diesem Punkt nur Administratoren verfügen über umfassende Berechtigung zum Erstellen und Ausführen von externen Skripts, hinzufügen oder Löschen von Paketen und gespeicherten Prozeduren und anderen Objekten zu erstellen.
+An diesem Punkt haben nur Datenbankadministratoren die volle Berechtigung zum Erstellen und Ausführen externer Skripts, zum Hinzufügen oder Löschen von Paketen und zum Erstellen von gespeicherten Prozeduren und anderen Objekten.
 
-Alle anderen Benutzer müssen EXECUTE ANY EXTERNAL SCRIPT-Berechtigung erteilt werden. Zusätzliche [standard Datenbankberechtigungen](../security/user-permission.md) zu bestimmen, ob Benutzer Objekte erstellen, Ausführen von Skripts, serialisiert und trainierte Modelle nutzen und so weiter. 
+Allen anderen Benutzern muss die Berechtigung zum Ausführen beliebiger externer Skripts erteilt werden. Zusätzliche [Standarddaten Bank Berechtigungen](../security/user-permission.md) bestimmen, ob Benutzer Objekte erstellen, Skripts ausführen, serialisierte und trainierte Modelle nutzen können usw. 
 
-## <a name="resource-allocation"></a>Ressourcenzuordnung
+## <a name="resource-allocation"></a>Ressourcen Zuordnung
 
-Gespeicherte Prozeduren und T-SQL-Abfragen, die extern ausgeführt aufrufen verwenden die verfügbaren Ressourcen, um den standardressourcenpool. Im Rahmen der Standardkonfiguration sind der externe Prozesse wie R und Python-Sitzungen bis zu 20 % des Gesamtspeichers auf dem Hostsystem zulässig. 
+Gespeicherte Prozeduren und T-SQL-Abfragen, die externe Verarbeitung aufrufen, verwenden die Ressourcen, die für den Standard Ressourcenpool verfügbar sind. Im Rahmen der Standardkonfiguration sind externe Prozesse wie R-und python-Sitzungen bis zu 20% des gesamten Arbeitsspeichers auf dem Host System zulässig. 
 
-Wenn die enthaltenen angepasst werden sollen, können Sie die Standard-Pool mit entsprechenden Auswirkungen auf die Machine Learning-Workloads, die auf diesem System ausgeführten ändern.
+Wenn Sie die Resourcing-Bereitstellung durchführen möchten, können Sie den Standard Pool mit entsprechender Auswirkung auf Machine Learning-Workloads ändern, die auf diesem System ausgeführt werden.
 
-Eine weitere Möglichkeit ist die Erstellung ein benutzerdefinierten externen Ressourcenpools, um Sitzungen von bestimmten Programme, Hosts oder -Aktivität, die während einer bestimmten Zeitintervallen zu erfassen. Weitere Informationen finden Sie unter [Ressourcenkontrolle zum Ändern von Ressourcenebenen für die Ausführung von R und Python](../administration/resource-governance.md) und [Gewusst wie: Erstellen eines Ressourcenpools](../administration/how-to-create-a-resource-pool.md) schrittweise Anweisungen.
+Eine andere Möglichkeit besteht darin, einen benutzerdefinierten externen Ressourcenpool zu erstellen, um Sitzungen zu erfassen, die von bestimmten Programmen, Hosts oder Aktivitäten stammen, die in bestimmten Zeitintervallen auftreten. Weitere Informationen finden Sie unter [Ressourcenkontrolle zum Ändern von Ressourcen Ebenen für die R-und python-Ausführung](../administration/resource-governance.md) und [Erstellen eines Ressourcenpools](../administration/how-to-create-a-resource-pool.md) für Schritt-für-Schritt-Anleitungen.
 
 ## <a name="isolation-and-containment"></a>Isolation und Kapselung
 
-Die Verarbeitungsarchitektur wurde konzipiert, um externe Skripts von der Kern-Engine-Verarbeitung zu isolieren. Führen Sie R- und Python-Skripts als separate Prozesse unter lokalen Konten. Im Task-Manager können Sie R und Python-Prozesse überwachen, unter einem Konto mit niedrigen Berechtigungen lokaler Benutzer, die sich von den SQL Server-Dienstkonto ausgeführt wird. 
+Die Verarbeitungs Architektur ist so konzipiert, dass externe Skripts von der Verarbeitung von Kernmodulen isoliert werden. R-und python-Skripts werden unter Lokale workerkonten als separate Prozesse ausgeführt. Im Task-Manager können Sie R-und python-Prozesse überwachen, die unter einem lokalen Benutzerkonto mit geringen Berechtigungen ausgeführt werden, das sich vom SQL Server-Dienst Konto unterscheidet. 
 
-Ausführen von R und Python-Prozesse in einzelkonten mit geringen Rechten hat die folgenden Vorteile:
+Das Ausführen von R-und python-Prozessen in einzelnen Konten mit geringen Rechten bietet die folgenden Vorteile:
 
-+ Isoliert die Kern-Engine-Prozesse von R und Python-Sitzungen, die einen R- oder Python-Prozess beendet werden kann, ohne Auswirkungen auf die Core-Datenbankvorgänge. 
++ Isoliert die Kern-Engine-Prozesse von r-und python-Sitzungen. Sie können einen R-oder python-Prozess beenden, ohne die Hauptdaten Bank Vorgänge zu beeinträchtigen 
 
-+ Reduziert die Berechtigungen von dem externen Skript-Laufzeitprozessen, auf dem Hostcomputer.
++ Verringert die Berechtigungen der externen Skript-Lauf Zeit Prozesse auf dem Host Computer.
 
-Konten mit minimalprivilegien während des Setups erstellt und platziert Sie in einer Windows *benutzerkontenpool* namens **SQLRUserGroup**. Standardmäßig ist dieser Gruppe die Berechtigung zur Verwendung von ausführbaren Dateien, Bibliotheken und integrierten Datasets im Programmordner für R und Python unter SQL Server. 
+Konten mit geringsten Rechten werden während des Setups erstellt und in einem Windows- *Benutzerkonto Pool* namens **sqlrusergroup**abgelegt. Standardmäßig ist dieser Gruppe die Berechtigung erteilt, ausführbare Dateien, Bibliotheken und integrierte Datasets im Programmordner für R und Python unter SQL Server zu verwenden. 
 
-Greifen als ein DBA der, Sie datensicherheit für SQL Server verwenden können, um anzugeben, die über die Berechtigung zum Ausführen von Skripts verfügt, und in Aufträgen verwendete Daten unter den gleichen Sicherheitsrollen verwaltet werden, die steuern, über T-SQL-Abfragen. Als Systemadministrator können Sie explizit verweigern **SQLRUserGroup** Zugriff auf sensible Daten auf dem lokalen Server durch Erstellen von ACLs.
+Als Datenbankadministrator können Sie mit SQL Server Datensicherheit angeben, wer über die Berechtigung zum Ausführen von Skripts verfügt, und dass die in Aufträgen verwendeten Daten unter den gleichen Sicherheitsrollen verwaltet werden, die den Zugriff über T-SQL-Abfragen steuern. Als Systemadministrator können Sie den **sqlrusergroup** -Zugriff auf vertrauliche Daten auf dem lokalen Server explizit verweigern, indem Sie ACLs erstellen.
 
 >[!NOTE]
-> In der Standardeinstellung die **SQLRUserGroup** verfügt nicht über einen Anmeldenamen oder Berechtigungen in SQL Server selbst. Workerkonten eine Anmeldung für den Datenzugriff benötigen, müssen Sie ihn selbst erstellen. Supportanfragen über ein Skript bei der Ausführung für Daten oder Vorgänge in der Datenbank-Engine-Instanz, wenn die Identität des Benutzers ein Windows-Benutzer ist und die Verbindungszeichenfolge einen vertrauenswürdigen Benutzer gibt ist ein Szenario, das speziell für die Erstellung einer Anmeldung aufgerufen werden. Weitere Informationen finden Sie unter [Hinzufügen der SQLRUserGroup als Datenbankbenutzer](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
+> Standardmäßig verfügt die **sqlrusergroup** nicht über einen Anmelde Namen oder Berechtigungen in SQL Server selbst. Sollten workerkonten einen Anmelde Namen für den Datenzugriff benötigen, müssen Sie ihn selbst erstellen. Ein Szenario, das speziell für die Erstellung eines Anmelde namens aufruft, ist die Unterstützung von Anforderungen von einem Skript zur Ausführung, für Daten oder Vorgänge auf der Datenbank-Engine-Instanz, wenn die Benutzeridentität ein Windows-Benutzer ist und die Verbindungs Zeichenfolge einen vertrauenswürdigen Benutzer angibt. Weitere Informationen finden Sie unter [Hinzufügen von sqlrusergroup als Datenbankbenutzer](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
-## <a name="disable-script-execution"></a>Deaktivieren Sie die Ausführung des Skripts
+## <a name="disable-script-execution"></a>Skriptausführung deaktivieren
 
-Bei einem Limit für Skripts können Sie alle skriptausführung, deaktivieren, die Schritte, die zuvor sich verpflichtet, aktivieren Sie die Ausführung des externen Skripts im vornherein umkehren.
+Im Fall von endlos Skripts können Sie die gesamte Skriptausführung deaktivieren und die zuvor durchgeführten Schritte umkehren, um die Ausführung externer Skripts zu ermöglichen.
 
-1. Führen Sie diesen Befehl aus, um festzulegen, in SQL Server Management Studio oder einem anderen Abfragetool, `external scripts enabled` auf 0 oder "false".
+1. Führen Sie in SQL Server Management Studio oder einem anderen Abfrage Tool diesen Befehl aus `external scripts enabled` , um auf 0 oder false festzulegen.
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 0
@@ -72,37 +72,37 @@ Bei einem Limit für Skripts können Sie alle skriptausführung, deaktivieren, d
     ```
 2. Starten Sie den Datenbank-Engine-Dienst neu.
 
-Nachdem Sie das Problem zu beheben, denken Sie daran, um die Ausführung des Skripts für die Instanz erneut zu aktivieren, wenn Sie zum Fortsetzen von R und Python-Skripts, in der Datenbank-Engine-Instanz unterstützen. Weitere Informationen finden Sie unter [skriptausführung aktivieren](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)
+Wenn Sie das Problem behoben haben, denken Sie daran, die Skriptausführung für die Instanz erneut zu aktivieren, wenn Sie die Unterstützung für R und python-Skripts für die Datenbank-Engine-Instanz fortsetzen möchten Weitere Informationen finden Sie unter [Aktivieren der Skriptausführung](../install/sql-machine-learning-services-windows-install.md#enable-script-execution) .
 
 ## <a name="extend-functionality"></a>Erweitern der Funktionalität
 
-Data Science führt häufig zu neuen Anforderungen für die Bereitstellung und Verwaltung. Für Datenanalysten ist es üblich, Open Source- und Drittanbieter-Pakete in benutzerdefinierte Lösungen zu nutzen. Einige dieser Pakete hat Abhängigkeiten von anderen Paketen, in diesem Fall möglicherweise müssen Sie bewerten und installieren mehrere Pakete aus, um Ihr Ziel zu erreichen.
+Data Science führt häufig zu neuen Anforderungen für die Paket Bereitstellung und-Verwaltung. Für einen Datenanalysten ist es gängige Praxis, Open Source-und Drittanbieter Pakete in benutzerdefinierten Lösungen zu nutzen. Einige dieser Pakete weisen Abhängigkeiten von anderen Paketen auf. in diesem Fall müssen Sie möglicherweise mehrere Pakete auswerten und installieren, um Ihr Ziel zu erreichen.
 
-Als ein DBA, der für eine Server-Ressource zuständig ist stellt eine unbekannte Herausforderung dar, wenn Sie beliebige R und Python-Paketen auf einem Produktionsserver bereitstellen. Vor dem Hinzufügen von Paketen, sollten Sie bewerten, ob die Funktionalität von das externe Paket wirklich erforderlich ist, wobei keine Entsprechung in der integrierten [Sprache "R"](r-libraries-and-data-types.md) und [Python-Bibliotheken](../python/python-libraries-and-data-types.md) installiert von SQL Server-Setup. 
+Als Datenbankadministrator, der für ein Server Objekt zuständig ist, stellt die Bereitstellung beliebiger R-und Python-Pakete auf einem Produktionsserver eine unbekannte Herausforderung dar Vor dem Hinzufügen von Paketen sollten Sie bewerten, ob die vom externen Paket bereitgestellte Funktionalität wirklich erforderlich ist, ohne dass es in der integrierten [R-Sprache](r-libraries-and-data-types.md) und den von SQL Server-Setup installierten Python- [Bibliotheken](../python/python-libraries-and-data-types.md) keine Entsprechung gibt. 
 
-Als Alternative zur Installation des Server-Paket, ein Data Scientist möglicherweise [erstellen und Ausführen von Lösungen auf einer externen Arbeitsstation](../r/set-up-a-data-science-client.md), Abrufen von Daten aus SQL Server, jedoch mit allen Analysis lokal ausgeführt auf der Arbeitsstation anstelle von auf dem Server selbst. 
+Als Alternative zur Installation des Server Pakets kann ein Daten Analyst möglicherweise [Lösungen auf einer externen Arbeitsstation erstellen und ausführen und](../r/set-up-a-data-science-client.md)Daten aus SQL Server abrufen, wobei alle Analysen lokal auf der Arbeitsstation statt auf dem Server ausgeführt werden. etabliert. 
 
-Wenn Sie später feststellen, dass externe Bibliothek-Funktionen erforderlich sind, und stellen ein Risiko für Servervorgänge oder Daten als Ganzes nicht dar, können Sie über mehrere Methoden Pakete hinzufügen. In den meisten Fällen sind Administratorrechte erforderlich, Pakete mit SQL Server hinzufügen. Weitere Informationen finden Sie unter [Installieren von Python-Paketen in SQL Server](../python/install-additional-python-packages-on-sql-server.md) und [Installieren von R-Paketen in SQL Server](install-additional-r-packages-on-sql-server.md).
+Wenn Sie anschließend feststellen, dass externe Bibliotheksfunktionen erforderlich sind und kein Risiko für Server Vorgänge oder Daten als Ganzes darstellen, können Sie aus mehreren Methoden auswählen, um Pakete hinzuzufügen. In den meisten Fällen sind Administratorrechte erforderlich, um SQL Server Pakete hinzuzufügen. Weitere Informationen finden Sie unter [Installieren von Python-Paketen in SQL Server](../python/install-additional-python-packages-on-sql-server.md) und [Installieren von R-Paketen in SQL Server](install-additional-r-packages-on-sql-server.md).
 
 > [!NOTE]
-> Für R-Pakete sind die serverweiten Administratorrechten nicht speziell für die Paketinstallation erforderlich, wenn Sie alternative Methoden zum verwenden. Finden Sie unter [Installieren von R-Paketen in SQL Server](install-additional-r-packages-on-sql-server.md) Details.
+> Für R-Pakete sind Server Administratorrechte für die Paketinstallation nicht besonders erforderlich, wenn Sie alternative Methoden verwenden. Weitere Informationen finden Sie [unter Installieren von R-Paketen in SQL Server](install-additional-r-packages-on-sql-server.md) .
 
-## <a name="monitoring-script-execution"></a>Überwachen der Ausführung des Skripts
+## <a name="monitoring-script-execution"></a>Überwachen der Skriptausführung
 
-R und Python-Skripts, die parallel [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] gestartet werden, indem die [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] Schnittstelle. Das Launchpad ist jedoch nicht die Ressourcen gesteuert oder separat überwacht, da es ist eine sichere Dienste von Microsoft, die Ressourcen entsprechend verwalten.
+Skripts, die in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ausgeführt werden, werden von der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] -Schnittstelle gestartet. Das Launchpad wird jedoch nicht separat verwaltet oder überwacht, da es sich um einen von Microsoft bereitgestellten sicheren Dienst handelt, der Ressourcen entsprechend verwaltet.
 
-Externer Skripts, die unter dem Launchpad-Dienst ausgeführt werden mithilfe von verwaltet die [Windows-Auftragsobjekt](/windows/desktop/ProcThread/job-objects). Ein Auftragsobjekt ermöglicht es, Gruppen von Prozessen als Einheit zu verwalten. Jedes Objekt ist hierarchisch aufgebaut und steuert die Attribute aller zugeordneten Prozesse. Vorgänge für ein Auftragsobjekt wirken sich auf alle Prozesse aus, die dem Auftragsobjekt zugeordnet sind.
+Externe Skripts, die unter dem Launchpad-Dienst ausgeführt werden, werden mithilfe des [Windows-Auftrags Objekts](/windows/desktop/ProcThread/job-objects)verwaltet. Ein Auftragsobjekt ermöglicht es, Gruppen von Prozessen als Einheit zu verwalten. Jedes Objekt ist hierarchisch aufgebaut und steuert die Attribute aller zugeordneten Prozesse. Vorgänge für ein Auftragsobjekt wirken sich auf alle Prozesse aus, die dem Auftragsobjekt zugeordnet sind.
 
 Daher sollten Sie daran denken, auch alle zugehörigen Prozesse beendet werden, wenn Sie einen Auftrag im Zusammenhang mit einem Objekt beenden müssen. Wenn Sie ein R-Skript ausführen, das einem Windows-Auftragsobjekt zugewiesen ist, und das Skript einen entsprechenden ODBC-Auftrag ausführt, der beendet werden muss, wird der übergeordnete Prozess des R-Skripts ebenfalls beendet.
 
-Wenn Sie ein externes Skript, das parallelen Verarbeitung verwendet starten, verwaltet ein einzelnes Windows-Auftragsobjekt alle untergeordneten Prozesse.
+Wenn Sie ein externes Skript starten, das die parallele Verarbeitung verwendet, verwaltet ein einzelnes Windows-Auftrags Objekt alle parallelen untergeordneten Prozesse.
 
 Verwenden Sie die Funktion `IsProcessInJob`, um festzustellen, ob ein Prozess in einem Auftrag ausgeführt wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ Überprüfen Sie die Konzepte und Komponenten von der [erweiterbarkeitsarchitektur](../concepts/extensibility-framework.md) und [Sicherheit](../concepts/security.md) Weitere Hintergrundinformationen.
++ Weitere Hintergrundinformationen finden Sie in den Konzepten und Komponenten der [Erweiterbarkeits Architektur](../concepts/extensibility-framework.md) und der [Sicherheit](../concepts/security.md) .
 
-+ Im Rahmen der Installation von Features, Sie möglicherweise bereits vertraut sein, mit der Endbenutzer Daten Steuerung des Zugriffs, aber wenn dies nicht der Fall, finden Sie unter [Gewähren von Benutzerberechtigungen für SQL Server Machine Learning](../security/user-permission.md) Details. 
++ Im Rahmen der Funktions Installation sind Sie möglicherweise bereits mit der Datenzugriffs Steuerung für Endbenutzer vertraut, aber falls nicht, finden Sie weitere Informationen unter [Erteilen von Benutzerberechtigungen für SQL Server Machine Learning](../security/user-permission.md) . 
 
-+ Erfahren Sie, wie die Systemressourcen für rechenintensive Machine learning-Workloads angepasst. Weitere Informationen finden Sie unter [Gewusst wie: Erstellen eines Ressourcenpools](../administration/how-to-create-a-resource-pool.md).
++ Erfahren Sie, wie Sie die Systemressourcen für berechnungsintensive Machine Learning-Workloads anpassen. Weitere Informationen finden Sie unter [How to Create a Resource Pool (Erstellen eines Ressourcenpools](../administration/how-to-create-a-resource-pool.md)).

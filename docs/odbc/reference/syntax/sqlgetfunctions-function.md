@@ -1,7 +1,7 @@
 ---
 title: SQLGetFunctions-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLGetFunctions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLGetFunctions
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edb58ebff212e494b84aed12397def2876d3728d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897716"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345611"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: Konformität der ODBC 1,0-Standards: ISO 92  
   
  **Zusammenfassung**  
- **SQLGetFunctions** gibt Informationen dazu, ob ein Treiber eine bestimmte ODBC-Funktion unterstützt wird. Diese Funktion wird im Treiber-Manager implementiert werden. Sie können auch in den Treibern implementiert werden. Wenn ein Treiber implementiert **SQLGetFunctions**, der Treiber-Manager ruft die Funktion im Treiber. Andernfalls führt er die Funktion selbst.  
+ **SQLGetFunctions** gibt Informationen darüber zurück, ob ein Treiber eine bestimmte ODBC-Funktion unterstützt. Diese Funktion wird im Treiber-Manager implementiert. Sie kann auch in Treibern implementiert werden. Wenn ein Treiber **SQLGetFunctions**implementiert, ruft der Treiber-Manager die Funktion im Treiber auf. Andernfalls wird die Funktion selbst ausgeführt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,43 +49,43 @@ SQLRETURN SQLGetFunctions(
  [Eingabe] Verbindungshandle.  
   
  *FunctionId*  
- [Eingabe] Ein **#define** Wert ab, die ODBC-Funktion von Interesse sind, identifiziert. **SQL_API_ODBC3_ALL_FUNCTIONS OrSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** wird verwendet, um eine ODBC-3 *.x* Anwendung Unterstützung für ODBC 3. bestimmen *.x* und früheren Funktionen. **SQL_API_ALL_FUNCTIONS** wird von einer ODBC 2. verwendet *.x* Anwendung Unterstützung für ODBC 2 bestimmen *.x* und früheren Funktionen.  
+ Der Ein **#define** Wert, der die ODBC-Funktion angibt, die von Interesse ist. **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** wird von einer ODBC 3 *. x* -Anwendung verwendet, um die Unterstützung von ODBC 3 *. x* -Funktionen und früheren Funktionen zu ermitteln. **SQL_API_ALL_FUNCTIONS** wird von einer ODBC 2 *. x* -Anwendung verwendet, um die Unterstützung von ODBC 2 *. x* -Funktionen und früheren Funktionen zu ermitteln.  
   
- Eine Liste der **#define** Werte, die ODBC-Funktionen zu identifizieren, finden Sie unter den Tabellen in "Kommentare".  
+ Eine Liste der **#define** Werte, die ODBC-Funktionen identifizieren, finden Sie in den Tabellen in "comments".  
   
- *SupportedPtr*  
- [Ausgabe]  Wenn *FunctionId* identifiziert eine ODBC-Funktion, *SupportedPtr* verweist auf ein einzelnes SQLUSMALLINT Wert, der SQL_TRUE, wenn die angegebene Funktion anhand der Treiber und SQL_FALSE unterstützt wird, ist dies nicht unterstützt.  
+ *Supportedptr*  
+ Ausgeben  Wenn *FunctionID* eine einzelne ODBC-Funktion identifiziert, verweist *supportedptr* auf einen einzelnen sqlusmallint-Wert, der SQL_TRUE ist, wenn die angegebene Funktion vom Treiber unterstützt wird, und SQL_FALSE, wenn dies nicht unterstützt wird.  
   
- Wenn *FunctionId* ist SQL_API_ODBC3_ALL_FUNCTIONS, *SupportedPtr* verweist auf ein SQLSMALLINT-Array mit einer Anzahl von Elementen SQL_API_ODBC3_ALL_FUNCTIONS_SIZE gleich. Dieses Array wird vom Treiber-Manager behandelt, als 4.000-Bit-Bitmap, die verwendet werden kann, um festzustellen, ob eine ODBC 3. *.x* oder earlier-Funktion unterstützt wird. Das Makro SQL_FUNC_EXISTS wird aufgerufen, um die funktionsunterstützung zu bestimmen. (Siehe "Kommentare".) Eine ODBC 3. *.x* Anwendung aufrufen kann **SQLGetFunctions** mit SQL_API_ODBC3_ALL_FUNCTIONS für entweder eine ODBC 3. *.x* oder ODBC 2. *.x* Treiber.  
+ Wenn *FunctionID* SQL_API_ODBC3_ALL_FUNCTIONS ist, verweist *supportedptr* auf ein SQLSMALLINT-Array mit einer Reihe von Elementen, die gleich SQL_API_ODBC3_ALL_FUNCTIONS_SIZE sind. Dieses Array wird vom Treiber-Manager als 4.000-Bit-Bitmap behandelt und kann verwendet werden, um zu bestimmen, ob eine ODBC 3 *. x* -Funktion oder eine frühere Funktion unterstützt wird. Das SQL_FUNC_EXISTS-Makro wird aufgerufen, um die Funktions Unterstützung zu bestimmen. (Siehe "Kommentare") Eine ODBC 3 *. x* -Anwendung kann **SQLGetFunctions** mit SQL_API_ODBC3_ALL_FUNCTIONS für einen ODBC 3 *. x* -oder ODBC 2 *. x* -Treiber aufrufen.  
   
- Wenn *FunctionId* ist SQL_API_ALL_FUNCTIONS, *SupportedPtr* verweist auf ein SQLUSMALLINT-Array aus 100 Elementen. Das Array mit indiziert **#define** Werte *FunctionId* identifizieren jede ODBC-Funktion; einige Elemente des Arrays werden nicht verwendet wird und für zukünftige Verwendung reserviert. Ein Element ist SQL_TRUE, wenn sie einer ODBC 2. identifiziert *.x* oder earlier-Funktion vom Treiber unterstützt werden. Es ist SQL_FALSE, wenn es eine ODBC-Funktion, die vom Treiber nicht unterstützt identifiziert, oder eine ODBC-Funktion gibt nicht an.  
+ Wenn *FunctionID* SQL_API_ALL_FUNCTIONS ist, verweist *supportedptr* auf ein sqlusmallint-Array mit 100 Elementen. Das Array wird durch **#define** Werte indiziert, die von *FunctionID* zum Identifizieren der einzelnen ODBC-Funktionen verwendet werden. Einige Elemente des Arrays werden nicht verwendet und für die zukünftige Verwendung reserviert. Ein Element ist SQL_TRUE, wenn es eine vom Treiber unterstützte ODBC 2 *. x* -oder frühere Funktion identifiziert. Dies ist SQL_FALSE, wenn eine ODBC-Funktion identifiziert wird, die nicht vom Treiber unterstützt wird, oder eine ODBC-Funktion nicht identifiziert.  
   
- Die Arrays, die **SupportedPtr* nullbasierte Indizierung verwenden.  
+ Die in **supportedptr* zurückgegebenen Arrays verwenden eine Null basierte Indizierung.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLGetFunctions** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_DBC auf, und eine *behandeln* von *ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetFunctions** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLGetFunctions** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem Handlertyp SQL_HANDLE_DBC und einem *handle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLGetFunctions** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, lautet SQL_ERROR, sofern nichts anderes angegeben ist.  
   
 |SQLSTATE|Fehler|Beschreibung|  
 |--------|-----|-----------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) **SQLGetFunctions** war aufgerufen, bevor **SQLConnect**, **SQLBrowseConnect**, oder **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** wurde aufgerufen, die *ConnectionHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion aufgerufen wurde, bevor **SQLBrowseConnect** SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *ConnectionHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY095|Typ der Funktion außerhalb des gültigen Bereichs|(DM) eine ungültige *FunctionId* -Wert wurde angegeben.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im  *\*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY010|Funktions Sequenz Fehler|(DM) **SQLGetFunctions** wurde vor **SQLCONNECT**, **sqlbrowseconnetct**oder **SQLDriverConnect**aufgerufen.<br /><br /> (DM) **sqlbrowseconnetct** wurde für *connectionHandle* aufgerufen und hat SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor **sqlbrowseconnct** "SQL_SUCCESS_WITH_INFO" oder "SQL_SUCCESS" zurückgegeben hat.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für *connectionHandle* aufgerufen und hat SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY095|Funktionstyp außerhalb des gültigen Bereichs|(DM) Es wurde ein ungültiger *FunctionID* -Wert angegeben.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLGetFunctions** zurückgibt, die immer **SQLGetFunctions**, **SQLDataSources**, und **SQLDrivers** werden unterstützt. Es liegt daran, dass diese Funktionen im Treiber-Manager implementiert werden. Der Treiber-Manager ordnet eine ANSI-Funktion mit der entsprechenden Unicode-Funktion, wenn Unicode-Funktion vorhanden ist und eine Unicode-Funktion die entsprechende ANSI-Funktion zugeordnet werden, wird Wenn die ANSI-Funktion vorhanden ist. Informationen zur Verwendung von Anwendungen **SQLGetFunctions**, finden Sie unter [Schnittstelle Übereinstimmungsebenen](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
+ **SQLGetFunctions** gibt immer zurück, dass " **SQLGetFunctions**", " **SQLDataSources**" und " **SQLDrivers** " unterstützt werden. Dies geschieht, da diese Funktionen im Treiber-Manager implementiert werden. Der Treiber-Manager ordnet eine ANSI-Funktion der entsprechenden Unicode-Funktion zu, wenn die Unicode-Funktion vorhanden ist, und ordnet eine Unicode-Funktion der entsprechenden ANSI-Funktion zu, wenn die ANSI-Funktion vorhanden ist. Informationen dazu, wie Anwendungen **SQLGetFunctions**verwenden, finden Sie unter Schnittstellen Übereinstimmungs [Ebenen](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die die ISO-92-Standards-Compliance-Ebene entsprechen:  
+ Im folgenden finden Sie eine Liste gültiger Werte für *FunctionID* für Funktionen, die der ISO 92-Standards-Kompatibilitäts Ebene entsprechen:  
   
-|FunctionId Wert|FunctionId Wert|  
+|FunctionId-Wert|FunctionId-Wert|  
 |----------|----------|  
 |SQL_API_SQLALLOCHANDLE|SQL_API_SQLGETDESCFIELD|  
 |SQL_API_SQLBINDCOL|SQL_API_SQLGETDESCREC|  
@@ -108,16 +109,16 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLGETCURSORNAME|SQL_API_SQLSETSTMTATTR|  
 |SQL_API_SQLGETDATA| |  
   
- Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die auf die Ebene der öffnen Sie die Einhaltung von Standards entsprechen:  
+ Im folgenden finden Sie eine Liste gültiger Werte für *FunctionID* für Funktionen, die der Standard Kompatibilitäts Stufe "Open Group" entsprechen:  
   
-|FunctionId Wert|FunctionId Wert|  
+|FunctionId-Wert|FunctionId-Wert|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
- Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, die auf die Ebene der ODBC-Einhaltung von Standards entsprechen.  
+ Im folgenden finden Sie eine Liste gültiger Werte für *FunctionID* für Funktionen, die der ODBC-Standards-Kompatibilitäts Ebene entsprechen.  
   
-|FunctionId Wert|FunctionId Wert|  
+|FunctionId-Wert|FunctionId-Wert|  
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
@@ -128,24 +129,24 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1] bei der Arbeit mit einer ODBC 2. *.x* Treiber **SQLBulkOperations** wird zurückgegeben, als nur unterstützt, wenn beide der folgenden Bedingungen erfüllt sind: die ODBC 2. *.x* -Treiber unterstützt  **SQLSetPos**, und der Informationstyp SQL_POS_OPERATIONS gibt zurück, das SQL_POS_ADD Bit festgelegt.  
+ [1] bei der Verwendung eines ODBC 2 *. x* -Treibers wird **SQLBulkOperations** nur als unterstützt zurückgegeben, wenn beide der folgenden Punkte zutreffen: der ODBC 2 *. x* -Treiber unterstützt **SQLSetPos**, und der Informationstyp SQL_POS_OPERATIONS gibt zurück. Das SQL_POS_ADD-Bit, das festgelegt ist.  
   
- Im folgenden finden eine Liste der gültigen Werte für *FunctionId* für Funktionen, eingeführt in ODBC 3.8 oder höher:  
+ Im folgenden finden Sie eine Liste gültiger Werte für *FunctionID* für Funktionen, die in ODBC 3,8 oder höher eingeführt wurden:  
   
-|FunctionId Wert|  
+|FunctionId-Wert|  
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** wird zurückgegeben, da nur unterstützt, wenn der Treiber unterstützt **SQLCancel** und **SQLCancelHandle**. Wenn **SQLCancel** wird unterstützt, aber **SQLCancelHandle** nicht der Fall ist, die Anwendung kann weiterhin aufrufen **SQLCancelHandle** für ein Anweisungshandle zugeordnetseinwird **SQLCancel**.  
+ [2] **sqlcancelhandle** wird nur dann als unterstützt zurückgegeben, wenn der Treiber sowohl **SQLCancel** als auch **sqlcancelhandle**unterstützt. Wenn **SQLCancel** unterstützt wird, aber **sqlcancelhandle** nicht ist, kann die Anwendung immer noch **sqlcancelhandle** für ein Anweisungs Handle aufzurufen, da Sie **SQLCancel**zugeordnet wird.  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS-Makro  
- Die SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) Makro wird verwendet, um zu bestimmen, Unterstützung für ODBC 3. *.x* oder früheren Funktionen nach **SQLGetFunctions**  aufgerufen wurde mit einem *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS Argument. Ruft die Anwendung SQL_FUNC_EXISTS mit der *SupportedPtr* Argument festgelegt wird, um die *SupportedPtr* übergebenen *SQLGetFunctions*, und mit der  *FunctionID* Argument festgelegt wird, um die **#define** für die Funktion. SQL_FUNC_EXISTS gibt andernfalls den SQL_TRUE, wenn die Funktion unterstützt wird und SQL_FALSE.  
+ Das SQL_FUNC_EXISTS-Makro (*supportedptr*, *FunctionID*) wird verwendet, um die Unterstützung von ODBC 3 *. x* -Funktionen oder früheren Funktionen zu ermitteln, nachdem **SQLGetFunctions** mit dem *FunctionID* -Argument SQL_API_ODBC3_ALL_ aufgerufen wurde. Funktionen. Die Anwendung ruft SQL_FUNC_EXISTS mit dem *supportedptr* -Argument auf, das auf den in *SQLGetFunctions*weiter gegebenen *supportedptr* festgelegt ist, und mit dem *FunctionID* -Argument, das auf die **#define** für die Funktion festgelegt ist. SQL_FUNC_EXISTS gibt SQL_TRUE zurück, wenn die Funktion unterstützt wird, und andernfalls SQL_FALSE.  
   
 > [!NOTE]
->  Bei der Arbeit mit einer ODBC 2. *.x* -Treiber verwenden, die ODBC 3. *.x* -Treiber-Manager gibt SQL_TRUE für **SQLAllocHandle** und **SQLFreeHandle**da **SQLAllocHandle** zugeordnet **SQLAllocEnv**, **SQLAllocConnect**, oder **SQLAllocStmt**, und Da **SQLFreeHandle** zugeordnet **SQLFreeEnv**, **SQLFreeConnect**, oder **SQLFreeStmt**. **SQLAllocHandle** oder **SQLFreeHandle** mit einem *HandleType* SQL_HANDLE_DESC Argument wird nicht unterstützt, allerdings, obwohl SQL_TRUE für die Funktionen, die zurückgegeben werden, da gibt es keine ODBC 2. *.x* Funktion, die in diesem Fall zuzuordnen.  
+>  Beim Arbeiten mit einem ODBC 2 *. x* -Treiber gibt der ODBC 3 *. x* -Treiber-Manager SQL_TRUE für **sqlzuzuordchandle** und **SQLFreeHandle** zurück, da sqlzuordchandle **sqlzuzuordcenv**,  **sqlzuordcconnect, zugeordnet ist.** , oder **sqlzuordcstmt**und, da **SQLFreeHandle** **sqlfreeeinv**, **sqlfreeconnetct**oder **SQLFreeStmt**zugeordnet ist. **Sqlzuordchandle** oder **SQLFreeHandle** mit dem " *Lenker* Argument"-Argument SQL_HANDLE_DESC wird jedoch nicht unterstützt, obwohl SQL_TRUE für die Funktionen zurückgegeben wird, da es in diesem Fall keine ODBC 2 *. x* -Funktion gibt, die zugeordnet werden kann.  
   
 ## <a name="code-example"></a>Codebeispiel  
- Die folgenden drei Beispiele zeigen, wie eine Anwendung verwendet **SQLGetFunctions** zu bestimmen, ob ein Treiber unterstützt **SQLTables**, **SQLColumns**, und  **SQLStatistics**. Wenn der Treiber diese Funktionen nicht unterstützt, wird der Treiber die Anwendung trennt. Im ersten Beispiel wird **SQLGetFunctions** einmal für jede Funktion.  
+ In den folgenden drei Beispielen wird gezeigt, wie eine Anwendung **SQLGetFunctions** verwendet, um zu bestimmen, ob ein Treiber **SQLTables**, **SQLColumns**und **SQLStatistics**unterstützt. Wenn der Treiber diese Funktionen nicht unterstützt, trennt die Anwendung die Verbindung mit dem Treiber. Im ersten Beispiel wird **SQLGetFunctions** einmal für jede Funktion aufgerufen.  
   
 ```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
@@ -168,7 +169,7 @@ retcodeStatistics == SQL_SUCCESS && StatisticsExists == SQL_TRUE)
 SQLDisconnect(hdbc);  
 ```  
   
- Im zweiten Beispiel eine ODBC-3.x-Anwendung ruft **SQLGetFunctions** und übergibt ein Array in der **SQLGetFunctions** gibt Informationen zu allen ODBC 3.x und früher Funktionen.  
+ Im zweiten Beispiel ruft eine ODBC 3. x-Anwendung **SQLGetFunctions** auf und übergibt ihr ein Array, in dem **SQLGetFunctions** Informationen zu allen ODBC 3. x-Funktionen und früheren Funktionen zurückgibt.  
   
 ```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
@@ -190,7 +191,7 @@ SQL_FUNC_EXISTS(fExists, SQL_API_SQLTABLES) == SQL_TRUE &&
 SQLDisconnect(hdbc);  
 ```  
   
- Im dritte Beispiel wird eine ODBC 2.x-Anwendung ruft **SQLGetFunctions** und übergibt sie ein Array aus 100 Elementen in der **SQLGetFunctions** gibt Informationen zu allen ODBC 2.x und früher Funktionen.  
+ Das dritte Beispiel ist eine ODBC 2. x-Anwendung, die **SQLGetFunctions** aufruft und ihr ein Array von 100 Elementen übergibt, in der **SQLGetFunctions** Informationen zu allen ODBC 2. x-Funktionen und früheren Funktionen zurückgibt.  
   
 ```cpp  
 #define FUNCTIONS 100  
@@ -218,9 +219,9 @@ SQLDisconnect(hdbc);
   
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
-|Die Einstellung ein Verbindungsattribut zurückgeben|[SQLGetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|Zurückgeben von Informationen zu einer Datenquelle oder Treiber|[SQLGetInfo-Funktion](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
-|Die Einstellung für ein Anweisungsattribut zurückgeben|[SQLGetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
+|Zurückgeben der Einstellung eines Verbindungs Attributs|[SQLGetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Zurückgeben von Informationen zu einem Treiber oder einer Datenquelle|[SQLGetInfo-Funktion](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
+|Zurückgeben der Einstellung eines Anweisungs Attributs|[SQLGetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

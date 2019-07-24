@@ -1,51 +1,51 @@
 ---
-title: Vorhersagen von möglichen Ergebnissen, die mithilfe von Python-Modelle – SQL Server-Machine Learning
-description: Veranschaulicht, wie zum operationalisieren von eingebetteten PYthon-Skript in SQL Server gespeicherte Prozeduren mit T-SQL-Funktionen
+title: Vorhersagen potenzieller Ergebnisse mithilfe von python-Modellen
+description: Tutorial zum operationalisieren eines eingebetteten PYthon-Skripts in SQL Server gespeicherten Prozeduren mit T-SQL-Funktionen
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e5f88beb2c429091fcea8ce66e4defa291e718d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 275981cbd4543263507415b5e7ba783f1ecbd8e5
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961848"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345843"
 ---
-# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Führen Sie Vorhersagen mithilfe von Python in einer gespeicherten Prozedur eingebettet
+# <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ausführen von Vorhersagen mithilfe von python Embedded in einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dieser Artikel ist Teil eines Tutorials, [In-Database Python Analytics für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
+Dieser Artikel ist Teil eines Tutorials, [in-Database-python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 
-In diesem Schritt erfahren Sie, wie *operationalisieren* die Modelle, die Sie trainiert und im vorherigen Schritt gespeichert haben.
+In diesem Schritt erfahren Sie, wie Sie die Modelle, die Sie im vorherigen Schritt trainiert und gespeichert haben, *operationalisieren* .
 
-In diesem Szenario bedeutet die operationalisierung des Modells in einer produktionsumgebung, für die Bewertung bereitstellen. Die Integration in SQL Server dadurch recht einfach, da Sie Python-Code in einer gespeicherten Prozedur einbetten können. Um Vorhersagen aus dem Modell basierend auf neue Eingaben zu erhalten, rufen Sie die gespeicherte Prozedur von einer Anwendung, und übergeben Sie die neuen Daten.
+In diesem Szenario bedeutet Operationalisierung, dass das Modell für die Bewertung in der Produktionsumgebung bereitgestellt wird. Durch die Integration in SQL Server ist dies recht einfach, da Sie Python-Code in eine gespeicherte Prozedur einbetten können. Zum Abrufen von Vorhersagen aus dem Modell basierend auf neuen Eingaben müssen Sie die gespeicherte Prozedur einfach aus einer Anwendung abrufen und die neuen Daten übergeben.
 
-In dieser Lektion wird veranschaulicht, zwei Methoden zum Erstellen von Vorhersagen auf Grundlage eines Python-Modells: batch-Bewertung und bewerten die Zeile für Zeile.
+Diese Lektion veranschaulicht zwei Methoden zum Erstellen von Vorhersagen auf der Grundlage eines python-Modells: Batch Bewertung und Bewertung der zeilenweise.
 
-- **Batchbewertung:** Um mehrere Zeilen von Eingabedaten zu gewährleisten, übergeben Sie eine SELECT-Abfrage als Argument an die gespeicherte Prozedur ein. Das Ergebnis ist eine Tabelle mit Beobachtungen mit den Eingabefällen entspricht.
-- **Einzelne Bewertung:** Übergeben Sie einen Satz von einzelnen Parameterwerten als Eingabe an.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
+- **Batch Bewertung:** Wenn Sie mehrere Zeilen mit Eingabedaten bereitstellen möchten, übergeben Sie eine SELECT-Abfrage als Argument an die gespeicherte Prozedur. Das Ergebnis ist eine Tabelle mit Beobachtungen, die den Eingabe Fällen entsprechen.
+- **Individuelle Bewertung:** Übergeben Sie einen Satz einzelner Parameterwerte als Eingabe.  Die gespeicherte Prozedur gibt eine einzelne Zeile oder einen Wert zurück.
 
-Alle Python-Code, die erforderlich sind, für die Bewertung wird als Teil der gespeicherten Prozeduren bereitgestellt.
+Der gesamte für die Bewertung benötigte Python-Code wird als Teil der gespeicherten Prozeduren bereitgestellt.
 
-## <a name="batch-scoring"></a>Batchbewertung
+## <a name="batch-scoring"></a>Batch Bewertung
 
-Die ersten beiden gespeicherten Prozeduren veranschaulicht die grundlegende Syntax für das Umschließen eines vorhersageaufrufs Python in einer gespeicherten Prozedur. Beide gespeicherten Prozeduren erfordern eine Tabelle mit Daten als Eingabe an.
+Die ersten beiden gespeicherten Prozeduren veranschaulichen die grundlegende Syntax zum Umwickeln eines python-Vorhersage Aufrufes in einer gespeicherten Prozedur. Beide gespeicherten Prozeduren erfordern eine Datentabelle als Eingaben.
 
-- Die genauen Modellnamen verwenden, wird als Eingabeparameter an die gespeicherte Prozedur bereitgestellt. Die gespeicherte Prozedur lädt das serialisierte Modell aus der Datenbanktabelle `nyc_taxi_models`.table, verwenden die SELECT-Anweisung in der gespeicherten Prozedur.
-- Das serialisierte Modell wird in der Python-Variable gespeicherte `mod` zur weiteren Verarbeitung mithilfe von Python.
-- Die neue Fälle, die bewertet werden müssen, erhalten Sie vom der [!INCLUDE[tsql](../../includes/tsql-md.md)] in angegebene Abfrage `@input_data_1`. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert.
-- Sowohl gespeicherte Prozedur verwenden Funktionen von `sklearn` um eine genauigkeitsmetrik, AUC (Bereich unter der Kurve) zu berechnen. Genauigkeitsmetriken wie z. B. AUC können nur generiert, wenn Sie auch die Zielmarke angeben (die _"tipped"_ Spalte). Vorhersagen ist nicht erforderlich, die zielbezeichnung (Variable `y`), jedoch die Berechnung der Genauigkeit-Metrik.
+- Der Name des exakten Modells, das verwendet werden soll, wird als Eingabeparameter für die gespeicherte Prozedur bereitgestellt. Die gespeicherte Prozedur lädt das serialisierte Modell mithilfe der SELECT- `nyc_taxi_models`Anweisung in der gespeicherten Prozedur aus der Datenbanktabelle. Table.
+- Das serialisierte Modell wird zur weiteren Verarbeitung mithilfe von `mod` python in der python-Variablen gespeichert.
+- Die neuen Fälle, die bewertet werden müssen, werden aus der [!INCLUDE[tsql](../../includes/tsql-md.md)] in `@input_data_1`angegebenen Abfrage abgerufen. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert.
+- Beide gespeicherten Prozeduren verwenden `sklearn` Funktionen von, um eine Genauigkeits Metrik zu berechnen, AUC (Bereich unter Kurve). Genauigkeits Metriken wie z. b. AUC können nur generiert werden, wenn Sie  auch die Ziel Bezeichnung (die gekippte Spalte) angeben. Für Vorhersagen ist die Ziel Bezeichnung (Variable `y`) nicht erforderlich, aber die Berechnung der Genauigkeits Metrik.
 
-    Aus diesem Grund, wenn Sie nicht, dass die Ziel-Bezeichnungen für Daten haben, die bewertet werden, Sie können ändern, die gespeicherte Prozedur, um die AUC-Berechnungen zu entfernen und nur die Tip-Wahrscheinlichkeiten zurückgeben, von den Funktionen (Variablen `X` in der gespeicherten Prozedur).
+    Wenn Sie also keine Ziel Bezeichnungen für die zu bewertenden Daten haben, können Sie die gespeicherte Prozedur so ändern, dass die AUC-Berechnungen entfernt werden, und nur die Tipp Wahrscheinlichkeiten aus den Funktionen `X` zurückgeben (Variable in der gespeicherten Prozedur).
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-Exportspezifikation aus den folgenden T-SQL-Anweisungen, um die gespeicherten Prozeduren zu erstellen. Diese gespeicherte Prozedur erfordert ein Modell basierend auf der Scikit-Paket, erfahren Sie, da es sich um Funktionen, die spezifisch für das Paket verwendet:
+Führen Sie die folgenden T-SQL-Anweisungen aus, um die gespeicherten Prozeduren zu erstellen. Diese gespeicherte Prozedur erfordert ein Modell, das auf dem Paket "scikit-Learn" basiert, da es für dieses Paket spezifische Funktionen verwendet:
 
-+ Der Datenrahmen, der mit Eingaben übergeben wird, um die `predict_proba` Funktion das logistische Regressionsmodell `mod`. Die `predict_proba` Funktion (`probArray = mod.predict_proba(X)`) gibt eine **"float"** , die die Wahrscheinlichkeit, die gewährt wird, ein Trinkgeld (beliebige Höhe) darstellt.
++ Der Datenrahmen, der Eingaben enthält, `predict_proba` `mod`wird an die Funktion des logistischen Regressionsmodells () übermittelt. Die `predict_proba` -Funktion`probArray = mod.predict_proba(X)`() gibt einen **float** -Wert zurück, der die Wahrscheinlichkeit angibt, dass ein Trinkgeld (beliebiger Betrag) angegeben wird.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSciKitPy;
@@ -87,9 +87,9 @@ END
 GO
 ```
 
-### <a name="predicttiprxpy"></a>PredictTipRxPy
+### <a name="predicttiprxpy"></a>Präprxpy
 
-Diese gespeicherte Prozedur verwendet die gleichen Eingaben und die gleiche Art von Bewertungen als die vorherige gespeicherte Prozedur erstellt, aber es werden Funktionen aus der **Revoscalepy** Paket mit SQL Server-Machine Learning bereitgestellt.
+Diese gespeicherte Prozedur verwendet die gleichen Eingaben und erstellt denselben Typ von Bewertungen wie die vorherige gespeicherte Prozedur, verwendet jedoch Funktionen aus dem **revoscalepy** -Paket, das mit SQL Server Machine Learning bereitgestellt wird.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipRxPy;
@@ -130,16 +130,16 @@ END
 GO
 ```
 
-## <a name="run-batch-scoring-using-a-select-query"></a>Führen Sie die batchbewertung mithilfe einer SELECT-Abfrage
+## <a name="run-batch-scoring-using-a-select-query"></a>Ausführen der Batch Bewertung mithilfe einer SELECT-Abfrage
 
-Die gespeicherten Prozeduren **PredictTipSciKitPy** und **PredictTipRxPy** erfordert zwei Eingabeparameter: 
+Die gespeicherten Prozeduren **präpscikitpy** und **prättiprxpy** erfordern zwei Eingabeparameter: 
 
-- Die Abfrage, die die Daten für die Bewertung abruft
-- Der Name eines trainierten Modells
+- Die Abfrage, die die Daten für die Bewertung abruft.
+- Der Name eines trainierten Modells.
 
-Durch die Übergabe dieser Argumente an die gespeicherte Prozedur, können Sie wählen Sie ein bestimmtes Modell oder ändern die Daten, die für die Bewertung verwendet.
+Wenn Sie diese Argumente an die gespeicherte Prozedur übergeben, können Sie ein bestimmtes Modell auswählen oder die für die Bewertung verwendeten Daten ändern.
 
-1. Verwenden der **Scikit-erfahren Sie,** für die Bewertung zu modellieren, rufen Sie die gespeicherte Prozedur **PredictTipSciKitPy**, übergeben Sie den Modellnamen und Abfragezeichenfolge als Eingaben.
+1. Um das **scikit-Learn-** Modell für die Bewertung zu verwenden, müssen Sie die **prättipscikitpy**der gespeicherten Prozedur abrufen und dabei den Modellnamen und die Abfrage Zeichenfolge als Eingaben übergeben.
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -150,11 +150,11 @@ Durch die Übergabe dieser Argumente an die gespeicherte Prozedur, können Sie w
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    Die gespeicherte Prozedur gibt die vorhergesagte Wahrscheinlichkeiten für jede Fahrt, die als Teil der Eingabeabfrage übergeben wurde. 
+    Die gespeicherte Prozedur gibt die vorhergesagten Wahrscheinlichkeiten für jede Fahrt zurück, die als Teil der Eingabe Abfrage übermittelt wurde. 
     
-    Wenn Sie SSMS (SQL Server Management Studio) zum Ausführen von Abfragen verwenden, erscheint die Wahrscheinlichkeiten als Tabelle in der **Ergebnisse** Bereich. Die **Nachrichten** Bereich gibt die genauigkeitsmetrik (AUC oder Fläche unter der Kurve) mit einem Wert von ca. 0.56.
+    Wenn Sie SSMS (SQL Server Management Studio) zum Ausführen von Abfragen verwenden, werden die Wahrscheinlichkeiten als Tabelle im **Ergebnis** Bereich angezeigt. Der Bereich **Meldungen** gibt die Genauigkeits Metrik (AUC oder Bereich unter Kurve) mit einem Wert von ungefähr 0,56 aus.
 
-2. Verwenden der **Revoscalepy** für die Bewertung zu modellieren, rufen Sie die gespeicherte Prozedur **PredictTipRxPy**, übergeben Sie den Modellnamen und Abfragezeichenfolge als Eingaben.
+2. Um das **revoscalepy** -Modell für die Bewertung zu verwenden, rufen Sie die **präprxpy**der gespeicherten Prozedur auf, und übergeben Sie den Modellnamen und die Abfrage Zeichenfolge als Eingaben.
 
     ```sql
     DECLARE @query_string nvarchar(max) -- Specify input query
@@ -165,27 +165,27 @@ Durch die Übergabe dieser Argumente an die gespeicherte Prozedur, können Sie w
     EXEC [dbo].[PredictTipRxPy] 'revoscalepy_model', @query_string;
     ```
 
-## <a name="single-row-scoring"></a>Bewertung der einzelnen Zeile
+## <a name="single-row-scoring"></a>Einzeilige Bewertung
 
-In einigen Fällen-Batch-Bewertungen, empfiehlt für die Übergabe in einem einzigen Gehäuse, Abrufen von Werten aus einer Anwendung, und ein einzelnes Resultset basierend auf diesen Werten. Beispielsweise könnten Sie Einrichten einer Excel-Arbeitsblatt, Webanwendung oder Bericht zum Aufrufen der gespeicherten Prozedur, und übergeben Sie es Eingaben eingegebenen oder ausgewählten Benutzer.
+Manchmal empfiehlt es sich, anstelle der Batch Bewertung einen einzelnen Fall zu übergeben, Werte von einer Anwendung zu erhalten und ein einzelnes Ergebnis auf der Grundlage dieser Werte zurückzugeben. Beispielsweise können Sie ein Excel-Arbeitsblatt, eine Webanwendung oder einen Bericht einrichten, um die gespeicherte Prozedur aufzurufen und Eingaben an IT-Eingaben zu übergeben, die von Benutzern eingegeben oder ausgewählt wurden.
 
-In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen zu erstellen, indem zwei gespeicherten Prozeduren aufrufen:
+In diesem Abschnitt erfahren Sie, wie Sie einzelne Vorhersagen erstellen, indem Sie zwei gespeicherte Prozeduren aufrufen:
 
-+ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) dient für die einzelnen Zeile Bewertung Verwendung der Scikit-Modell zu erfahren.
-+ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) für die einzelnen Zeile Bewertung mit dem Revoscalepy-Modell dient.
-+ Wenn Sie noch nicht getan haben ein Modell trainiert, wiederherstellen, [Schritt 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
++ " [Prättipsinglemodescikitpy](#predicttipsinglemodescikitpy) " ist für die Einzel Zeilen Bewertung mit dem scikit-Learn-Modell konzipiert.
++ " [Prättipsinglemoderxpy](#predicttipsinglemoderxpy) " ist für die Einzel Zeilen Bewertung mithilfe des revoscalepy-Modells konzipiert.
++ Wenn Sie noch kein Modell trainiert haben, kehren Sie zu [Schritt 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)zurück!
 
-Beide Modelle Take als Eingabe eine Reihe von einzelnen Werten, z. B. die Anzahl der Fahrgäste, Fahrtstrecke und So weiter. Eine Funktion mit Tabellenrückgabe `fnEngineerFeatures`, wird verwendet, um Werte für Breiten- und Längengrad zu konvertieren, aus den Eingaben ein neues Feature, die direkte Entfernung. [Lektion 4](sqldev-py4-create-data-features-using-t-sql.md) enthält eine Beschreibung dieser Funktion mit Tabellenrückgabe.
+Beide Modelle verwenden als Eingabe eine Reihe von einzelnen Werten, wie z. b. die Anzahl der Fahrgäste, die Fahrtstrecke usw. Eine Tabellenwert Funktion `fnEngineerFeatures`,, wird verwendet, um Werte für breiten-und Längengrade von den Eingaben in eine neue Funktion, direkte Entfernung, zu konvertieren. [Lektion 4](sqldev-py4-create-data-features-using-t-sql.md) enthält eine Beschreibung dieser Tabellenwert Funktion.
 
-Beide gespeicherten Prozeduren erstellen Sie eine Bewertung, die basierend auf dem Python-Modell.
+Beide gespeicherten Prozeduren erstellen eine Bewertung auf der Grundlage des python-Modells.
 
 > [!NOTE]
 > 
-> Es ist wichtig, dass Sie angeben, dass alle die eingegebenen Merkmale, die von der Python-Modell erforderlich ist, wenn Sie die gespeicherte Prozedur aus einer externen Anwendung aufrufen. Um Fehler zu vermeiden, müssen Sie die umwandeln oder konvertieren die Eingabedaten in einem Python-Datentyp, zusätzlich zum Überprüfen von Datentypen und die Datenlänge.
+> Es ist wichtig, dass Sie alle Eingabe Features bereitstellen, die für das python-Modell erforderlich sind, wenn Sie die gespeicherte Prozedur aus einer externen Anwendung abrufen. Um Fehler zu vermeiden, müssen Sie die Eingabedaten zusätzlich zum Validieren von Datentyp und Daten Länge in einen Python-Datentyp umwandeln oder konvertieren.
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
-Kurz den Code der gespeicherten Prozedur zu überprüfen, der ausführt, Bewertung mithilfe der **Scikit-erfahren Sie,** Modell.
+Nehmen Sie sich eine Minute Zeit, um den Code der gespeicherten Prozedur zu überprüfen, die die Bewertung mit dem **scikit-Learn-** Modell ausführt.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeSciKitPy;
@@ -252,7 +252,7 @@ GO
 
 ### <a name="predicttipsinglemoderxpy"></a>PredictTipSingleModeRxPy
 
-Die folgende gespeicherte Prozedur führt Bewertungen mithilfe der **Revoscalepy** Modell.
+Die folgende gespeicherte Prozedur führt die Bewertung mithilfe des **revoscalepy** -Modells aus.
 
 ```sql
 DROP PROCEDURE IF EXISTS PredictTipSingleModeRxPy;
@@ -323,7 +323,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>Generieren von Bewertungen aus Modellen
 
-Nachdem Sie die gespeicherten Prozeduren erstellt wurden, ist es einfach, eine Bewertung anhand von beider Modelle zu generieren. Öffnen Sie einfach ein neues **Abfrage** Fenster, und geben oder fügen Sie Parameter für jeden der merkmalspalten. Die sieben erforderlich, dass die Werte für diese Funktionsspalten, in der Reihenfolge:
+Nachdem die gespeicherten Prozeduren erstellt wurden, ist es einfach, eine Bewertung auf der Grundlage beider Modelle zu generieren. Öffnen Sie einfach ein neues **Abfrage** Fenster, und geben Sie Parameter für die einzelnen featurespalten ein, oder fügen Sie Sie ein. Die sieben erforderlichen Werte sind für diese featurespalten in der angegebenen Reihenfolge:
     
 + *passenger_count*
 + *trip_distance* v*trip_time_in_secs*
@@ -332,27 +332,27 @@ Nachdem Sie die gespeicherten Prozeduren erstellt wurden, ist es einfach, eine B
 + *dropoff_latitude*
 + *dropoff_longitude*
 
-1. Generieren Sie eine Vorhersage mithilfe der **Revoscalepy** Modell, und führen Sie diese Anweisung:
+1. Führen Sie diese Anweisung aus, um eine Vorhersage mit dem **revoscalepy** -Modell zu generieren:
   
     ```sql
     EXEC [dbo].[PredictTipSingleModeRxPy] 'revoscalepy_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-2. Generieren Sie eine Bewertung mithilfe der **Scikit-erfahren Sie,** Modell, und führen Sie diese Anweisung:
+2. Führen Sie diese Anweisung aus, um mit dem **scikit-Learn-** Modell ein Ergebnis zu generieren:
 
     ```sql
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'SciKit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-Die Ausgabe von beiden Verfahren ist die Wahrscheinlichkeit des eine trinkgeldbereichs für die taxifahrten mit den angegebenen Parametern oder Funktionen.
+Die Ausgabe beider Prozeduren ist eine Wahrscheinlichkeit, dass ein Trinkgeld für die Taxifahrt mit den angegebenen Parametern oder Features bezahlt wird.
 
 ## <a name="conclusions"></a>Schlussfolgerungen
 
-In diesem Tutorial haben Sie gelernt, wie zum Arbeiten mit Python-Code in gespeicherten Prozeduren eingebettet wird. Die Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] macht es viel einfacher, Python-Modelle für Vorhersagen bereitzustellen und erneutes Trainieren von Modellen im Rahmen dieses Workflows ein Enterprise-Daten zu integrieren.
+In diesem Tutorial haben Sie gelernt, wie Sie mit Python-Code arbeiten, der in gespeicherten Prozeduren eingebettet ist. Durch die Integration [!INCLUDE[tsql](../../includes/tsql-md.md)] in wird das Bereitstellen von python-Modellen für Vorhersagen und das erneute Trainieren von Modellen im Rahmen eines Unternehmensdaten Workflows deutlich vereinfacht.
 
-## <a name="previous-step"></a>Vorherigen Schritt
+## <a name="previous-step"></a>Vorheriger Schritt
 
-[Trainieren Sie und speichern Sie ein Python-Modell](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Trainieren und Speichern eines python-Modells](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="see-also"></a>Siehe auch
 

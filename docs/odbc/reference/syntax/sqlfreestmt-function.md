@@ -1,7 +1,7 @@
 ---
 title: SQLFreeStmt-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLFreeStmt
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLFreeStmt
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83e62430e55a82c904e6cae996538225ac8282b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6141f3efe357bfb3f14c04aa2f6760e9470649a6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006221"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345150"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: Konformität der ODBC 1,0-Standards: ISO 92  
   
  **Zusammenfassung**  
- **SQLFreeStmt** beendet die Verarbeitung einer bestimmten Anweisung zugeordneten, schließt alle geöffneten Cursor verknüpft ist, mit der Anweisung, verwirft ausstehende Ergebnisse zu erzielen, oder gibt optional das Anweisungshandle zugeordnete Ressourcen frei.  
+ **SQLFreeStmt** beendet die Verarbeitung, die einer bestimmten Anweisung zugeordnet ist, schließt alle geöffneten Cursor, die der Anweisung zugeordnet sind, verwirft ausstehende Ergebnisse oder gibt optional alle dem Anweisungs Handle zugeordneten Ressourcen frei.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,43 +45,43 @@ SQLRETURN SQLFreeStmt(
   
 ## <a name="arguments"></a>Argumente  
  *StatementHandle*  
- [Eingabe] Anweisungshandle  
+ Der Anweisungs Handle  
   
  *Option*  
- [Eingabe] Eine der folgenden Optionen:  
+ Der Eine der folgenden Optionen:  
   
- SQL_ SCHLIESSEN: Schließt den Cursor zugeordnet *StatementHandle* (falls definiert), und alle ausstehende Ergebnisse verworfen. Die Anwendung kann erneut öffnen dieses Cursors später durch Ausführen einer **wählen** Anweisung erneut mit demselben oder einem anderen Parameterwerte. Wenn keine Cursor geöffnet ist, hat diese Option keine Auswirkungen auf die Anwendung an. **SQLCloseCursor** auch aufgerufen werden, um einen Cursor zu schließen. Weitere Informationen finden Sie unter [Schließen des Cursors](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ SQL_ SCHLIESSEN: Schließt den dem *StatementHandle* zugeordneten Cursor (sofern definiert) und verwirft alle ausstehenden Ergebnisse. Die Anwendung kann diesen Cursor später erneut öffnen, indem eine **Select** -Anweisung mit denselben oder anderen Parameterwerten erneut ausgeführt wird. Wenn kein Cursor geöffnet ist, hat diese Option keine Auswirkung auf die Anwendung. **SQLCloseCursor** kann auch aufgerufen werden, um einen Cursor zu schließen. Weitere Informationen finden Sie unter [Schließen des Cursors](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- SQL_DROP: Diese Option ist veraltet. Einen Aufruf von **SQLFreeStmt** mit einer *Option* von SQL_DROP zugeordnet wird, im Treiber-Manager auf [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ SQL_DROP: Diese Option ist veraltet. Ein **SQLFreeStmt** -Befehl mit der *Option* SQL_DROP wird im Treiber-Manager [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)zugeordnet.  
   
- SQL_UNBIND: Legt das SQL_DESC_COUNT-Feld, der die ARD 0 ist, Freigeben von Puffern für alle Spalten gebunden **SQLBindCol** für den angegebenen *StatementHandle*. Dies ist kein Aufheben der Bindung der Lesezeichenspalte; zu diesem Zweck wird von der ARD für die Lesezeichenspalte das SQL_DESC_DATA_PTR-Feld auf NULL festgelegt. Beachten Sie, dass wenn Sie diesen Vorgang für einen explizit zugewiesenen Deskriptor ausgeführt wird, die von mehr als eine Anweisung verwendet wird, der Vorgang die Bindungen aller Anweisungen auswirkt, die den Deskriptor gemeinsam nutzen. Weitere Informationen finden Sie unter [Übersicht von Ergebnissen ' abrufen ' (Standard)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ SQL_UNBIND: Legt das SQL_DESC_COUNT-Feld der ARD auf 0 fest und gibt alle von **SQLBindCol** gebundenen Spalten Puffer für das angegebene *StatementHandle*frei. Dadurch wird die Bindung der Lesezeichen Spalte nicht aufgehoben. zu diesem Zweck wird das SQL_DESC_DATA_PTR-Feld der ARD für die Lesezeichen Spalte auf NULL festgelegt. Beachten Sie Folgendes: Wenn dieser Vorgang für einen explizit zugewiesenen Deskriptor ausgeführt wird, der von mehr als einer Anweisung gemeinsam genutzt wird, wirkt sich der Vorgang auf die Bindungen aller Anweisungen aus, die den Deskriptor gemeinsam verwenden. Weitere Informationen finden Sie unter [Übersicht über das Abrufen von Ergebnissen (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
- SQL_RESET_PARAMS: Legt das SQL_DESC_COUNT-Feld der APD auf 0 (null) festlegen, indem alle Parameter-Puffer freigeben **SQLBindParameter** für den angegebenen *StatementHandle*. Wenn dieser Vorgang für einen explizit zugewiesenen Deskriptor ausgeführt wird, die von mehr als eine Anweisung verwendet wird, wirkt sich dieser Vorgang die Bindungen der alle Anweisungen, die den Deskriptor gemeinsam nutzen. Weitere Informationen finden Sie unter [Bindungsparameter](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
+ SQL_RESET_PARAMS: Legt das SQL_DESC_COUNT-Feld der APD auf 0 fest und gibt alle durch **SQLBindParameter** festgelegten Parameter Puffer für das angegebene *StatementHandle*frei. Wenn dieser Vorgang für einen explizit zugewiesenen Deskriptor ausgeführt wird, der von mehr als einer Anweisung gemeinsam genutzt wird, wirkt sich dieser Vorgang auf die Bindungen aller Anweisungen aus, die den Deskriptor gemeinsam verwenden. Weitere Informationen finden Sie unter [Bindungs Parameter](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLFreeStmt** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_STMT und *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLFreeStmt** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLFreeStmt** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem Handlertyp SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLFreeStmt** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, lautet SQL_ERROR, sofern nichts anderes angegeben ist.  
   
 |SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn **SQLFreeStmt** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion wurde mit dem Namen *Option* auf SQL_RESET_PARAMS festgelegt werden, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY092|Optionstyp außerhalb des gültigen Bereichs|(DM) der Wert für das Argument angegebene *Option* war nicht:<br /><br /> SQL_CLOSE SQL_DROP SQL_UNBIND SQL_RESET_PARAMS|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *StatementHandle* die Funktion nicht unterstützt.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im  *\*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als **SQLFreeStmt** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und hat SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde mit der *Option* "SQL_RESET_PARAMS" aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das *StatementHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY092|Optionstyp außerhalb des gültigen Bereichs|(DM) der für die Argument *Option* angegebene Wert ist nicht:<br /><br /> SQL_CLOSE SQL_DROP SQL_UNBIND SQL_RESET_PARAMS|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *StatementHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
   
 ## <a name="comments"></a>Kommentare  
- Aufrufen von **SQLFreeStmt** Option entspricht dem Aufruf mit der SQL_CLOSE **SQLCloseCursor**, außer dass **SQLFreeStmt** mit SQL_CLOSE hat keine Auswirkungen auf die Anwendung Wenn keine Cursor geöffnet, in der Anweisung ist. Wenn keine Cursor zu öffnen, einen Aufruf von **SQLCloseCursor** SQLSTATE 24000 (Ungültiger Cursorstatus) zurückgibt.  
+ Das Aufrufen von **SQLFreeStmt** mit der SQL_CLOSE-Option entspricht dem Aufrufen von **SQLCloseCursor**, mit dem Unterschied, dass **SQLFreeStmt** with SQL_CLOSE keine Auswirkung auf die Anwendung hat, wenn kein Cursor in der Anweisung geöffnet ist. Wenn kein Cursor geöffnet ist, gibt ein **SQLCloseCursor** -Befehl SQLSTATE 24000 (Ungültiger Cursor Zustand) zurück.  
   
- Ein Anweisungshandle sollten von einer Anwendung nicht verwendet werden, nachdem dieser freigegeben wurde. der Treiber-Manager überprüft nicht die Gültigkeit eines Handles in einem Funktionsaufruf.  
+ Eine Anwendung sollte kein Anweisungs Handle verwenden, nachdem Sie freigegeben wurde. der Treiber-Manager überprüft nicht die Gültigkeit eines Handles in einem Funktions Aufruf.  
   
 ## <a name="example"></a>Beispiel  
- Es ist ein gutes Programmierverfahren, Handles freizugeben. Jedoch aus Gründen der Einfachheit umfasst im folgende Beispiel keinen Code, der freigibt Handles zugeordnet. Ein Beispiel für das Freigeben des Handles, finden Sie unter [SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ Es ist eine gute Programmier Übung, Handles freizugeben. Der Einfachheit halber enthält das folgende Beispiel jedoch keinen Code, der zugeordnete Handles freigibt. Ein Beispiel für das Freigeben von Handles finden Sie unter [SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 ```cpp  
 // SQLFreeStmt.cpp  
@@ -115,11 +116,11 @@ int main() {
   
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
-|Ein Handle zuordnen|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Anweisungsverarbeitung Abbrechen|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Zuordnen eines Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Abbrechen der Anweisungs Verarbeitung|[SQLCancel-Funktion](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Schließen eines Cursors|[SQLCloseCursor-Funktion](../../../odbc/reference/syntax/sqlclosecursor-function.md)|  
-|Ein Handle freigeben|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|Ein Cursorname festlegen|[SQLSetCursorName-Funktion](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
+|Freigeben eines Handles|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Festlegen eines Cursor namens|[SQLSetCursorName-Funktion](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

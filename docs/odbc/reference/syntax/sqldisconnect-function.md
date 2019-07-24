@@ -1,7 +1,7 @@
 ---
 title: SQLDisconnect-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLDisconnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLDisconnect
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7c99b63800d8b007ed11c21a042edc4f51ff7c92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 788ca2eb7cf37314eb7d5386a23f17123f9ccaff
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003219"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343006"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: Konformität der ODBC 1,0-Standards: ISO 92  
   
  **Zusammenfassung**  
- **SQLDisconnect** schließt die Verbindung eines bestimmten Verbindungshandles zugeordnet.  
+ **SQLDisconnect** schließt die Verbindung, die einem bestimmten Verbindungs Handle zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,49 +50,49 @@ SQLRETURN SQLDisconnect(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLDisconnect** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_DBC und *behandeln* von *ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLDisconnect** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLDisconnect** "SQL_ERROR" oder "SQL_SUCCESS_WITH_INFO" zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem Handlertyp SQL_HANDLE_DBC und einem *handle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLDisconnect** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, lautet SQL_ERROR, sofern nichts anderes angegeben ist.  
   
 |SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01002|Fehler beim Trennen|Fehler bei der die Trennung der Verbindung. Allerdings wurde erfolgreich die Trennung der Verbindung ein. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08003|Verbindung nicht geöffnet|(DM) die Verbindung im Argument angegebene *ConnectionHandle* konnte nicht geöffnet werden.|  
-|25000|Ungültiger Transaktionsstatus|Es wurde eine Transaktion im Prozess für die Verbindung, die durch das Argument angegebenen *ConnectionHandle*. Die Transaktion bleibt aktiv.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *ConnectionHandle*. Die Funktion wurde aufgerufen, und vor dem Ausführen von hat [SQLCancelHandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) aufgerufen wurde, auf die *ConnectionHandle*. Und dann die Funktion erneut aufgerufen wurde, auf die *ConnectionHandle*.<br /><br /> Die Funktion aufgerufen wurde und bevor sie die Ausführung beendet **SQLCancelHandle** aufgerufen wurde, auf die *ConnectionHandle* von einem anderen Thread in einer multithread-Anwendung.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, eine *StatementHandle* zugeordneten der *ConnectionHandle* und wurde noch ausgeführt, wenn **SQLDisconnect** wurde wird aufgerufen.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *ConnectionHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, eine *StatementHandle*  zugeordneten der *ConnectionHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat, und die Verbindung noch aktiv ist. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *ConnectionHandle* die Funktion nicht unterstützt.|  
-|IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
-|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01002|Fehler beim Trennen|Fehler beim trennen. Die Verbindung wurde jedoch erfolgreich getrennt. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08003|Verbindung nicht geöffnet|(DM) die im Argument *connectionHandle* angegebene Verbindung war nicht geöffnet.|  
+|25000|Ungültiger Transaktionsstatus|Die vom Argument " *connectionHandle*" angegebene Verbindung enthält eine Transaktion. Die Transaktion bleibt aktiv.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im  *\*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle*aktiviert. Die Funktion wurde aufgerufen, und bevor die Ausführung der [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) abgeschlossen wurde, wurde Sie für *connectionHandle*aufgerufen. Anschließend wurde die Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Die-Funktion wurde aufgerufen, und vor der Ausführung von **sqlcancelhandle** wurde für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für ein *StatementHandle* aufgerufen, das dem *connectionHandle* zugeordnet ist, und wird noch ausgeführt, als " **SQLDisconnect** " aufgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für ein *StatementHandle* aufgerufen, das dem *connectionHandle* zugeordnet ist, und hat SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Verbindungs Timeout abgelaufen|Das Verbindungs Timeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat und die Verbindung noch aktiv ist. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *connectionHandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
+|IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
+|IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
   
 ## <a name="comments"></a>Kommentare  
- Wenn eine Anwendung ruft **SQLDisconnect** nach **SQLBrowseConnect** wird SQL_NEED_DATA zurückgegeben. und bevor sie einen anderen Rückgabecode zurückgibt, wird der Treiber bricht die Verbindung mit dem Durchsuchen der Prozess ab und gibt zurück die Verbindung mit einem nicht verbundenen Zustand.  
+ Wenn eine Anwendung **SQLDisconnect** aufruft, nachdem **sqlbrowseconnetct** SQL_NEED_DATA zurückgegeben hat und bevor ein anderer Rückgabecode zurückgegeben wird, bricht der Treiber den Vorgang zum Durchsuchen der Verbindung ab und gibt die Verbindung wieder in den Status "nicht verbunden" zurück.  
   
- Wenn eine Anwendung ruft **SQLDisconnect** zwar gibt es eine unvollständige Transaktion, die mit dem Verbindungshandle verknüpft ist, gibt der Treiber SQLSTATE 25000 (Ungültiger Transaktionsstatus), gibt an, dass die Transaktion nicht geändert wird. und die Verbindung geöffnet ist. Eine unvollständige Transaktion ist eine, die kein Commit oder Rollback mit **SQLEndTran**.  
+ Wenn eine Anwendung **SQLDisconnect** aufruft, während eine unvollständige Transaktion mit dem Verbindungs Handle verknüpft ist, gibt der Treiber SQLSTATE 25000 (Ungültiger Transaktionsstatus) zurück. Dies deutet darauf hin, dass die Transaktion unverändert ist und die Verbindung eren. Bei einer unvollständigen Transaktion handelt es sich um eine Transaktion, für die kein Commit oder Rollback mit **SQLEndTran**ausgeführt wurde.  
   
- Wenn eine Anwendung ruft **SQLDisconnect** bevor er alle Anweisungen der Verbindung zugeordnete freigegeben hat, der Treiber, nachdem sie erfolgreich aus der Datenquelle, trennt die Verbindung freigegeben dieser Anweisungen und alle Deskriptoren, die wurden für die Verbindung explizit zugewiesen. Allerdings, wenn eine oder mehrere der die Anweisungen der Verbindung zugeordnet sind immer noch asynchron ausgeführt, **SQLDisconnect** gibt SQL_ERROR zurück, mit dem Wert SQLSTATE HY010 (Sequenzfehler funktionieren). Darüber hinaus **SQLDisconnect** gibt alle zugeordneten Anweisungen und alle Deskriptoren, die explizit für die Verbindung zugewiesen wurden, wenn die Verbindung in einem angehaltenen Zustand befindet oder wenn frei **SQLDisconnect** wurde wurde erfolgreich abgebrochen von **SQLCancelHandle**.  
+ Wenn eine Anwendung **SQLDisconnect** aufruft, bevor Sie alle der Verbindung zugeordneten Anweisungen freigegeben hat, gibt der Treiber nach der erfolgreichen Trennung der Verbindung mit der Datenquelle diese Anweisungen und alle Deskriptoren frei, die explizit zugeordnet wurden. auf der Verbindung. Wenn jedoch mindestens eine der mit der Verbindung verknüpften Anweisungen weiterhin asynchron ausgeführt wird, gibt **SQLDisconnect** SQL_ERROR mit dem SQLSTATE-Wert HY010 (Funktions Sequenz Fehler) zurück. Außerdem gibt **SQLDisconnect** alle zugeordneten-Anweisungen und alle Deskriptoren frei, die explizit für die Verbindung reserviert wurden, wenn sich die Verbindung im angehaltenen Zustand befindet oder wenn **SQLDisconnect** erfolgreich durch **abgebrochen wurde. Sqlcancelhandle**.  
   
- Informationen darüber, wie eine Anwendung verwendet **SQLDisconnect**, finden Sie unter [Trennen von einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
+ Informationen dazu, wie eine Anwendung **SQLDisconnect**verwendet, finden Sie unter [Trennen der Verbindung mit einer Datenquelle oder einem Treiber](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
-## <a name="disconnecting-from-a-pooled-connection"></a>Eine zusammengeführte Verbindung trennen  
- Wenn Verbindungspooling, für die einer freigegebenen Umgebung aktiviert ist aus, und eine Anwendung ruft **SQLDisconnect** für eine Verbindung in der Umgebung, die Verbindung an den Verbindungspool zurückgegeben werden soll, und ist weiterhin verfügbar, mit anderen Komponenten, die mithilfe von die gleichen freigegebenen Umgebung.  
+## <a name="disconnecting-from-a-pooled-connection"></a>Trennen einer Verbindung mit einer gepoolten Verbindung  
+ Wenn das Verbindungspooling für eine freigegebene Umgebung aktiviert ist und eine Anwendung **SQLDisconnect** für eine Verbindung in dieser Umgebung aufruft, wird die Verbindung an den Verbindungspool zurückgegeben und ist weiterhin für andere Komponenten verfügbar, die denselben freigegebenen verwenden. Umgebung.  
   
 ## <a name="code-example"></a>Codebeispiel  
- Finden Sie unter [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md), [SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md), und [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
+ Weitere Informationen finden Sie unter [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md), [sqlbrowseconnetct-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)und [SQLCONNECT-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
-|Ein Handle zuordnen|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Zuordnen eines Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Herstellen einer Verbindung mit einer Datenquelle|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Herstellen einer Verbindung mit einer Datenquelle mit einer Zeichenfolge oder eines Dialogfelds Verbindungsdialogfeld|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Ausführen eines Commit- oder Rollback-Vorgangs|[SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md)|  
-|Freigeben eines Verbindungshandles|[SQLFreeConnect-Funktion](../../../odbc/reference/syntax/sqlfreeconnect-function.md)|  
+|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Ausführen eines Commit-oder Rollback-Vorgangs|[SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md)|  
+|Freigeben eines Verbindungs Handles|[SQLFreeConnect-Funktion](../../../odbc/reference/syntax/sqlfreeconnect-function.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

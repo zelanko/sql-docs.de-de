@@ -1,48 +1,48 @@
 ---
-title: Erstellen Sie neue SQL Server-Tabelle, die mithilfe von RxDataStep von RevoScaleR - SQL Server-Machine Learning
-description: Exemplarische Vorgehensweise im Lernprogramm zum Erstellen einer SQL Server-Tabelle, die Verwendung der Sprache R auf SQL Server.
+title: Erstellen einer neuen SQL Server Tabelle mithilfe von revoscaler rxdatastep
+description: 'Tutorial: Exemplarische Vorgehensweise zum Erstellen einer SQL Server Tabelle mit der Sprache R auf SQL Server.'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 484f238e53db21030b04cdf46b86271236509989
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f5d65bf3b57f40ca881aa9e6f0285fab0432a1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962269"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344792"
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Erstellen Sie neue SQL Server-Tabelle, die mithilfe von RxDataStep (SQL Server und die RevoScaleR-Lernprogramm)
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Erstellen einer neuen SQL Server Tabelle mithilfe von rxdatastep (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Diese Lektion ist Teil der [RevoScaleR Tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [RevoScaleR-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
+Diese Lektion ist Teil des [revoscaler-Tutorials](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) zur Verwendung von [revoscaler-Funktionen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) mit SQL Server.
 
-In dieser Lektion erfahren Sie, wie zum Verschieben von Daten zwischen in-Memory-Datenrahmen, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kontext und lokale Dateien.
+In dieser Lektion erfahren Sie, wie Sie Daten zwischen Datenrahmen im Arbeitsspeicher, dem Kontext [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und den lokalen Dateien verschieben.
 
 > [!NOTE]
-> In dieser Lektion wird ein anderes DataSet verwendet. Verzögerungen bei der Fluggesellschaft Dataset ist ein öffentliches Dataset, das häufig für Machine learning-Experimente verwendet wird. In diesem Beispiel verwendeten Datendateien sind im selben Verzeichnis wie die anderen Produktbeispiele verfügbar.
+> In dieser Lektion wird ein anderes Dataset verwendet. Das Dataset für die Verspätungen von Fluggesellschaften ist ein öffentliches DataSet, das für Machine Learning-Experimente häufig verwendet wird. Die in diesem Beispiel verwendeten Datendateien sind in demselben Verzeichnis wie andere Produktbeispiele verfügbar.
 
-## <a name="load-data-from-a-local-xdf-file"></a>Laden von Daten aus einer lokalen XDF-Datei
+## <a name="load-data-from-a-local-xdf-file"></a>Laden von Daten aus einer lokalen Xdf-Datei
 
-In der ersten Hälfte in diesem Tutorial verwendet Sie die **RxTextData** Funktion, um das Importieren von Daten aus einer Textdatei in R und anschließend verwendet der **RxDataStep** Funktion zum Verschieben der Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+In der ersten Hälfte dieses Tutorials haben Sie die Funktion **rxtextdata** verwendet, um Daten aus einer Textdatei in R zu importieren. Anschließend haben Sie die Funktion **rxdatastep** verwendet, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Daten in zu verschieben.
 
-In dieser Lektion verwendet einen anderen Ansatz, und verwendet Daten aus einer Datei gespeichert wird, der [XDF-Format](https://en.wikipedia.org/wiki/Extensible_Data_Format). Nach einigen einfachen Transformationen auf die Daten mithilfe der XDF-Datei, speichern Sie die transformierten Daten in eine neue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle.
+In dieser Lektion wird ein anderer Ansatz verwendet, und es werden Daten aus einer Datei verwendet, die im [Xdf-Format](https://en.wikipedia.org/wiki/Extensible_Data_Format)gespeichert ist. Nachdem Sie einige Lightweight-Transformationen für die Daten mithilfe der Xdf-Datei durchgeführt haben, speichern Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transformierten Daten in einer neuen Tabelle.
 
-**Was ist XDF?**
+**Was ist Xdf?**
 
-Das XDF-Format ist eine XML-Standard für hochdimensionaler Daten entwickelt und wird von das systemeigene Dateiformat verwendet [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Dies ist ein binäres Dateiformat mit einer R-Schnittstelle, die die Verarbeitung und Analyse von Zeilen und Spalten optimiert.  Sie können es für das Verschieben von Daten verwenden, um Teilmengen von Daten zu speichern, die für Analysen hilfreich sind.
+Das Xdf-Format ist ein XML-Standard, der für hochdimensionale Daten entwickelt wurde, und ist das systemeigene Dateiformat, das von [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)verwendet wird. Dies ist ein binäres Dateiformat mit einer R-Schnittstelle, die die Verarbeitung und Analyse von Zeilen und Spalten optimiert.  Sie können es für das Verschieben von Daten verwenden, um Teilmengen von Daten zu speichern, die für Analysen hilfreich sind.
 
-1. Legen Sie den Computekontext auf die lokale Arbeitsstation fest. **DDL-Berechtigungen sind für diesen Schritt erforderlich.**
+1. Legen Sie den Computekontext auf die lokale Arbeitsstation fest. **Für diesen Schritt sind DDL-Berechtigungen erforderlich.**
 
     ```R
     rxSetComputeContext("local")
     ```
   
-2. Definieren Sie ein neues Datenquellenobjekt mithilfe der **RxXdfData** -Funktion. Um eine XDF-Datenquelle definieren möchten, geben Sie den Pfad zu der Datendatei.  
+2. Definieren Sie ein neues Datenquellenobjekt mithilfe der **RxXdfData** -Funktion. Zum Definieren einer Xdf-Datenquelle geben Sie den Pfad zur Datendatei an.  
 
-    Sie können den Pfad zu der Datei mit einer Textvariablen angeben. Allerdings in diesem Fall besteht eine praktische Kurzform, das ist die Verwendung der **RxGetOption** Funktion, und rufen Sie die Datei (AirlineDemoSmall.xdf) im Daten-Beispielverzeichnis aus.
+    Sie können den Pfad zur Datei mit einer Text Variablen angeben. In diesem Fall gibt es jedoch eine praktische Verknüpfung, d. h. die **rxgetoption** -Funktion zu verwenden und die Datei (airlinedemosmall. Xdf) aus dem Beispiel Datenverzeichnis zu erhalten.
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
@@ -64,25 +64,25 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
 
 > [!NOTE]
 > 
-> Haben Sie bemerkt, dass Sie keine anderen Funktionen aufrufen mussten, um die Daten in die XDF-Datei zu laden, und die Funktion **rxGetVarInfo** sofort auf die Daten anwenden konnten? Dies liegt daran XDF die Standardmethode für die Zwischenspeicherung für ist **RevoScaleR**. Zusätzlich zu XDF-Dateien die **RxGetVarInfo** -Funktion unterstützt jetzt mehrere Typen.
+> Haben Sie bemerkt, dass Sie keine anderen Funktionen aufrufen mussten, um die Daten in die XDF-Datei zu laden, und die Funktion **rxGetVarInfo** sofort auf die Daten anwenden konnten? Dies liegt daran, dass Xdf die standardmäßige Zwischenspeicher Methode für **revoscaler**ist. Zusätzlich zu Xdf-Dateien unterstützt die **rxgetvarinfo** -Funktion nun mehrere Quell Typen.
 
-## <a name="move-contents-to-sql-server"></a>Verschieben von Inhalt in SQL Server
+## <a name="move-contents-to-sql-server"></a>Inhalt in SQL Server verschieben
 
-Sie können mit der XDF-Datenquelle in der lokalen R-Sitzung erstellt wurden, nun diese Daten verschieben, in einer Datenbanktabelle speichern *DayOfWeek* als ganze Zahl mit Werten von 1 bis 7.
+Mit der Xdf-Datenquelle, die in der lokalen R-Sitzung erstellt wurde, können Sie diese Daten in eine Datenbanktabelle verschieben und *DayOfWeek* als ganze Zahl mit Werten von 1 bis 7 speichern.
 
-1. Definieren Sie ein SQL Server-Objekt, eine Tabelle, um die Daten sowie die Verbindung mit dem Remoteserver enthalten angeben.
+1. Definieren Sie ein SQL Server Datenquellen Objekt, und geben Sie eine Tabelle an, die die Daten enthält, sowie eine Verbindung mit dem Remote Server.
   
     ```R
     sqlServerAirDemo <- RxSqlServerData(table = "AirDemoSmallTest", connectionString = sqlConnString)
     ```
   
-2. Als Vorsichtsmaßnahme enthalten Sie einen Schritt, der überprüft, ob eine Tabelle mit dem gleichen Namen bereits vorhanden ist, und löschen Sie in der Tabelle, sofern vorhanden. Eine vorhandene Tabelle mit den gleichen Namen wird verhindert, dass eine neue erstellt werden.
+2. Berücksichtigen Sie als Vorsichtsmaßnahme einen Schritt, der überprüft, ob eine Tabelle mit demselben Namen bereits vorhanden ist, und löschen Sie die Tabelle, falls vorhanden. Eine vorhandene Tabelle mit denselben Namen verhindert, dass eine neue Tabelle erstellt wird.
   
     ```R
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-3. Laden der Daten in der Tabelle mit **RxDataStep**. Diese Funktion verschiebt Daten zwischen zwei bereits definierten Datenquellen und können optional die Daten dem Weg zu transformieren.
+3. Laden Sie die Daten mithilfe von **rxdatastep**in die Tabelle. Diese Funktion verschiebt Daten zwischen zwei bereits definierten Datenquellen und kann optional die Daten auf der Route transformieren.
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -91,13 +91,13 @@ Sie können mit der XDF-Datenquelle in der lokalen R-Sitzung erstellt wurden, nu
         overwrite = TRUE )
     ```
   
-    Dies ist eine ziemlich große Tabelle, also warten Sie, bis eine letzte Statusmeldung wie diesen: *Gelesene Zeilen: 200000, insgesamt Zeilen verarbeitet: 600000*.
+    Dies ist eine ziemlich große Tabelle. warten Sie daher, bis eine abschließende Statusmeldung wie die folgende angezeigt wird: *Gelesene Zeilen: 200000, verarbeitete Zeilen gesamt: 600000*.
      
 ## <a name="load-data-from-a-sql-table"></a>Laden von Daten aus einer SQL-Tabelle
 
-Sobald Daten in der Tabelle vorhanden ist, können Sie es mit einer einfachen SQL-Abfrage laden. 
+Sobald Daten in der Tabelle vorhanden sind, können Sie Sie mithilfe einer einfachen SQL-Abfrage laden. 
 
-1. Erstellen Sie eine neue SQL Server-Datenquelle. Die Eingabe ist eine Abfrage für die neue Tabelle, die Sie gerade erstellt und mit Daten geladen werden. Diese Definition fügt Faktorebenen für die *DayOfWeek* Spalte mit der *ColInfo* Argument **RxSqlServerData**.
+1. Erstellen Sie eine neue SQL Server Datenquelle. Die Eingabe ist eine Abfrage für die neue Tabelle, die Sie soeben erstellt und mit Daten geladen haben. Diese Definition fügt die Faktor Ebenen für die *DayOfWeek* -Spalte hinzu, wobei das *COLINFO* -Argument für **rxsqlserverdata**verwendet wird.
   
     ```R
     sqlServerAirDemo2 <- RxSqlServerData(
@@ -107,7 +107,7 @@ Sobald Daten in der Tabelle vorhanden ist, können Sie es mit einer einfachen SQ
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-2. Rufen Sie **RxSummary** noch einmal, um eine Zusammenfassung der Daten in der Abfrage zu überprüfen.
+2. Wieder  aufzurufen, um eine Zusammenfassung der Daten in der Abfrage zu überprüfen.
   
     ```R
     rxSummary(~., data = sqlServerAirDemo2)

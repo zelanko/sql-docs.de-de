@@ -1,7 +1,7 @@
 ---
-title: SQLCopyDesc-Funktion | Microsoft-Dokumentation
+title: Sqlcopydebug-Funktion | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLCopyDesc
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLCopyDesc
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bacf438180dd6fe2823660e8275e48a2316e9efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8aec6dc776f5fdd84932be089e9503f0083a49c2
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121439"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345488"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: Konformität der ODBC 3,0-Standards: ISO 92  
   
  **Zusammenfassung**  
- **SQLCopyDesc** kopiert Informationen der Sicherheitsbeschreibung aus einen Deskriptorhandle an einen anderen.  
+ **SQLCopyDesc** kopiert Deskriptorinformationen von einem Deskriptorhandle in ein anderes.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,67 +44,67 @@ SQLRETURN SQLCopyDesc(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *SourceDescHandle*  
- [Eingabe] Das Quellhandle-Deskriptor.  
+ *Sourcedebug*  
+ Der Das Quell Deskriptorhandle.  
   
- *TargetDescHandle*  
- [Eingabe] Ziel-Deskriptorhandle. Die *TargetDescHandle* -Argument kann es sich um ein Handle für einen Anwendungsdienst-Deskriptor oder einem IPD. *TargetDescHandle* kann nicht auf ein Handle für ein IRD festgelegt werden oder **SQLCopyDesc** SQLSTATE HY016 (ein Implementierungszeilendeskriptor kann nicht geändert werden) zurück.  
+ *Targetbeschandle*  
+ Der Ziel Deskriptorhandle. Das *targettoschandle* -Argument kann ein Handle für einen Anwendungs Deskriptor oder eine IPD sein. *Targetdeschandle* kann nicht auf ein Handle für einen IRD festgelegt werden, oder **SQLCopyDesc** gibt SQLSTATE HY016 (ein Implementierungs Zeilen Deskriptor kann nicht geändert werden) zurück.  
   
 ## <a name="returns"></a>Rückgabewert  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLCopyDesc** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_ HANDLE_DESC und *behandeln* von *TargetDescHandle*. Wenn ein ungültiger *SourceDescHandle* übergeben wurde in den Aufruf SQL_INVALID_HANDLE zurückgegeben werden, aber keine SQLSTATE zurückgegeben werden. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLCopyDesc** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLCopyDesc** "SQL_ERROR" oder "SQL_SUCCESS_WITH_INFO" zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem Handlertyp SQL_HANDLE_DESC und einem *handle* von *targetdeschandle*abgerufen werden. Wenn ein ungültiges *sourcedebug* -Attribut im-Befehl weitergegeben wurde, wird SQL_INVALID_HANDLE zurückgegeben, aber es wird kein SQLSTATE zurückgegeben. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLCopyDesc** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, lautet SQL_ERROR, sofern nichts anderes angegeben ist.  
   
- Wenn ein Fehler zurückgegeben wird, wird den Aufruf von **SQLCopyDesc** sofort abgebrochen wird, und die Inhalte der Felder in der *TargetDescHandle* Deskriptor sind nicht definiert.  
+ Wenn ein Fehler zurückgegeben wird, wird der **sqlcopyde** -Befehl sofort abgebrochen, und der Inhalt der Felder im *targetbeschandle* -Deskriptor ist nicht definiert.  
   
- Da **SQLCopyDesc** kann implementiert werden, durch den Aufruf **SQLGetDescField** und **SQLSetDescField**, **SQLCopyDesc** möglicherweise zurück Zurückgegebenes SQLSTATEs **SQLGetDescField** oder **SQLSetDescField**.  
+ Da **SQLCopyDesc** durch Aufrufen von **SQLGetDescField** und **SQLSetDescField**implementiert werden kann, gibt **SQLCopyDesc** möglicherweise Sqlstates zurück, die von **SQLGetDescField** oder **SQLSetDescField**zurückgegeben werden.  
   
 |SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zum Belegen des Speichers zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY007|Zugeordnete Anweisung ist nicht vorbereitet.|*SourceDescHandle* wurde ein IRD zugeordnet, und das Handle für die zugeordnete Anweisung wurde nicht im Status vorbereitet oder ausgeführt.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) auf der Deskriptor behandeln *SourceDescHandle* oder *TargetDescHandle* zugeordnet wurde eine *StatementHandle* für die eine asynchrone (nicht-Funktion eine) wurde aufgerufen und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) auf der Deskriptor behandeln *SourceDescHandle* oder *TargetDescHandle* zugeordnet wurde eine *StatementHandle* für die **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** war aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *SourceDescHandle* oder *TargetDescHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLCopyDesc** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** für eines der zugeordneten Anweisungshandles aufgerufen wurde die *SourceDescHandle* oder *TargetDescHandle* und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY016|Ein Implementierungszeilendeskriptor kann nicht geändert werden.|*TargetDescHandle* wurde ein IRD zugeordnet.|  
-|HY021|Inkonsistente deskriptorinformation|Die Informationen der Sicherheitsbeschreibung während einer konsistenzprüfung eingecheckt war nicht konsistent. Weitere Informationen finden Sie unter "Von Konsistenzprüfungen" in **SQLSetDescField**.|  
-|HY092|Ungültiger Attribut-/Optionsbezeichner|Der Aufruf von **SQLCopyDesc** aufgefordert, einen Aufruf von **SQLSetDescField**, aber  *\*ValuePtr* war nicht gültig für die *FieldIdentifier* Arguments auf *TargetDescHandle*.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *SourceDescHandle* oder *TargetDescHandle* die Funktion nicht unterstützt.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im  *\*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte den erforderlichen Arbeitsspeicher nicht zuordnen, um die Ausführung oder den Abschluss der Funktion zu unterstützen.|  
+|HY007|Die zugehörige Anweisung ist nicht vorbereitet.|*Sourcetoschandle* wurde einem IRD zugeordnet, und das zugehörige Anweisungs Handle befand sich nicht im vorbereiteten oder ausgeführten Zustand.|  
+|HY010|Funktions Sequenz Fehler|(DM) das Deskriptorhandle in *sourcetoschandle* oder *targettoschandle* wurde mit einem *StatementHandle* verknüpft, für das eine asynchron ausgeführte Funktion (nicht diese) aufgerufen wurde und noch ausgeführt wurde, als diese Funktion auf.<br /><br /> (DM) das Deskriptorhandle in *sourcedeschandle* oder *targetdeschandle* wurde mit einem *StatementHandle* verknüpft, für das **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** war. aufgerufen und hat SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit *sourcedeschandle* oder *targetdeschandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **sqlcopyde SC** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die mit *sourcedebug* oder *targetbeschandle* verknüpft sind, und hat SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY016|Ein Implementierungs Zeilen Deskriptor kann nicht geändert werden.|*Targetbeschandle* wurde einem IRD zugeordnet.|  
+|HY021|Inkonsistente Deskriptorinformationen|Die während einer Konsistenzprüfung überprüften Deskriptorinformationen waren nicht konsistent. Weitere Informationen finden Sie unter "Konsistenzprüfungen" in **SQLSetDescField**.|  
+|HY092|Ungültiger Attribut/Options Bezeichner|Der **SQLCopyDesc** -Befehl hat einen Aufrufen von **SQLSetDescField**angefordert, "  *\*ValuePtr* " war jedoch für das *fieldidentifier* -Argument in " *targetdeschandle*" nicht gültig.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der mit *sourcedeschandle* oder *targetdeschandle* verknüpfte Treiber unterstützt die-Funktion nicht.|  
   
 ## <a name="comments"></a>Kommentare  
- Ein Aufruf von **SQLCopyDesc** Kopien, die die Felder des Deskriptors Quelle zu, auf das Handle der Ziel-Deskriptor behandeln. Felder können nur für einen Anwendungsdienst-Deskriptor oder einem IPD, aber nicht für eine IRD kopiert werden. Felder können aus einer Anwendung oder einen Deskriptor Implementierung kopiert werden.  
+ Bei einem **SQLCopyDesc** -Befehl werden die Felder des Quell Deskriptorhandles in das Ziel Deskriptorhandle kopiert. Felder können nur in einen Anwendungs Deskriptor oder eine IPD, aber nicht in einen IRD kopiert werden. Felder können entweder aus einer Anwendung oder aus einem Implementierungs Deskriptor kopiert werden.  
   
- Felder können aus einer IRD kopiert werden, nur dann, wenn das Anweisungshandle im Status vorbereitet oder ausgeführt wird; andernfalls gibt die Funktion SQLSTATE HY007 (zugeordnete Anweisung ist nicht vorbereitet).  
+ Felder können nur von einem IRD kopiert werden, wenn sich das Anweisungs Handle im vorbereiteten oder ausgeführten Zustand befindet. Andernfalls gibt die Funktion SQLSTATE HY007 zurück (die zugehörige Anweisung ist nicht vorbereitet).  
   
- Felder können aus einem IPD kopiert werden, und zwar unabhängig davon, ob eine Anweisung vorbereitet wurde. Wenn eine SQL-Anweisung mit dynamischen Parametern vorbereitet wurde und die automatischer Auffüllung des IPD unterstützt und aktiviert ist, wird vom Treiber IPD aufgefüllt. Wenn **SQLCopyDesc** aufgerufen wird und die IPD als die *SourceDescHandle*, die aufgefüllten Felder beim Übertragungsvorgang kopiert werden. Wenn IPD vom Treiber nicht aufgefüllt ist, wird der Inhalt der Felder in IPD ursprünglich kopiert.  
+ Felder können aus einem IPD kopiert werden, unabhängig davon, ob eine-Anweisung vorbereitet wurde. Wenn eine SQL-Anweisung mit dynamischen Parametern vorbereitet wurde und die automatische Auffüllung der IPD unterstützt und aktiviert ist, wird die IPD vom Treiber aufgefüllt. Wenn **sqlcopydebug** mit der IPD-Datei als sourcedebug aufgerufen wird, werden die ausgefüllten Felder kopiert. Wenn die IPD nicht vom Treiber aufgefüllt wird, werden die Inhalte der in der IPD ursprünglichen Felder kopiert.  
   
- Alle Felder des Deskriptors, mit Ausnahme von SQL_DESC_ALLOC_TYPE (die angibt, ob die Deskriptorhandles, automatisch oder explizit zugeordnet wurde), werden kopiert, und zwar unabhängig davon, ob das Feld für den Deskriptor Ziel definiert ist. Kopierte Felder überschreiben die vorhandenen Felder.  
+ Alle Felder des Deskriptors, mit Ausnahme von SQL_DESC_ALLOC_TYPE (gibt an, ob das Deskriptorhandle automatisch oder explizit zugewiesen wurde), werden kopiert, unabhängig davon, ob das Feld für den Ziel Deskriptor definiert ist. Kopierte Felder überschreiben die vorhandenen Felder.  
   
- Der Treiber alle deskriptorfelder kopiert, wenn die *SourceDescHandle* und *TargetDescHandle* Argumente gleichen Treibers zugeordnet sind, auch wenn die Treiber auf zwei verschiedenen Verbindungen werden oder Umgebungen. Wenn die *SourceDescHandle* und *TargetDescHandle* Argumente sind unterschiedliche Treiber zugeordnet, die der Treiber-Manager kopiert die ODBC-definierten Felder, kopiert jedoch keine treiberdefinierten Felder oder Felder werden nicht von ODBC für den Typ der Sicherheitsbeschreibung definiert.  
+ Der Treiber kopiert alle Deskriptorfelder, wenn  die Argumente sourcedebug und *targetbeschandle* dem gleichen Treiber zugeordnet sind, auch wenn sich die Treiber in zwei unterschiedlichen Verbindungen oder Umgebungen befinden. Wenn die Argumente *sourcedeschandle* und *targetdeschandle* verschiedenen Treibern zugeordnet sind, kopiert der Treiber-Manager ODBC-definierte Felder, kopiert jedoch keine Treiber definierten Felder oder Felder, die nicht von ODBC für den Typ von definiert sind. Deskriptor.  
   
- Der Aufruf von **SQLCopyDesc** sofort abgebrochen wird, wenn ein Fehler auftritt.  
+ Der **sqlcopydebug** -aufrufsvorgang wird sofort abgebrochen, wenn ein Fehler auftritt.  
   
- Wenn das SQL_DESC_DATA_PTR-Feld kopiert wird, erfolgt eine konsistenzprüfung auf dem Ziel-Deskriptor. Wenn die konsistenzprüfung fehlschlägt, SQLSTATE HY021 (inkonsistente Deskriptorinformationen) wird zurückgegeben, und der Aufruf von **SQLCopyDesc** sofort abgebrochen wird. Weitere Informationen zu konsistenzprüfungen, finden Sie unter "Von Konsistenzprüfungen" in [SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ Wenn das SQL_DESC_DATA_PTR-Feld kopiert wird, wird eine Konsistenzprüfung für den Ziel Deskriptor ausgeführt. Wenn bei der Konsistenzprüfung ein Fehler auftritt, wird SQLSTATE HY021 (inkonsistente Deskriptorinformationen) zurückgegeben, und der **SQLCopyDesc** -Befehl wird sofort abgebrochen. Weitere Informationen zu Konsistenzprüfungen finden Sie unter "Konsistenzprüfungen" in der [SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
   
- Deskriptorhandles können über Verbindungen kopiert werden, auch wenn die Verbindungen in anderen Umgebungen sind. Wenn der Treiber-Manager erkennt, dass die Quelle und Ziel Deskriptor Handles nicht zu derselben Verbindung und die beiden Verbindungen gehören gehören, um Treiber zu trennen, implementiert **SQLCopyDesc** anhand von einem Feld-nach-Feld Kopieren mithilfe von **SQLGetDescField** und **SQLSetDescField**.  
+ Deskriptorhandles können über Verbindungen kopiert werden, auch wenn sich die Verbindungen in unterschiedlichen Umgebungen befinden. Wenn der Treiber-Manager feststellt, dass die Quell-und Ziel Deskriptorhandles nicht zur gleichen Verbindung gehören und die beiden Verbindungen zu separaten Treibern gehören, wird **SQLCopyDesc** implementiert, indem eine Feld Weise Kopie mithilfe **von SQLGetDescField** und **SQLSetDescField**.  
   
- Wenn **SQLCopyDesc** aufgerufen wird und eine *SourceDescHandle* auf einen Treiber und ein *TargetDescHandle* auf einem anderen Treiber, die Fehlerwarteschlange von der  *SourceDescHandle* deaktiviert ist. Dies geschieht, weil **SQLCopyDesc** wird in diesem Fall durch Aufrufe von implementiert **SQLGetDescField** und **SQLSetDescField**.  
+ Wenn **SQLCopyDesc** mit einem *sourcedeschandle* auf einem Treiber und einem *targetdeschandle* auf einem anderen Treiber aufgerufen wird, wird die Fehler Warteschlange von *sourcedeschandle* gelöscht. Dies tritt auf, da **SQLCopyDesc** in diesem Fall durch Aufrufe von **SQLGetDescField** und **SQLSetDescField**implementiert wird.  
   
 > [!NOTE]  
->  Eine Anwendung möglicherweise eine explizit zugeordneten Deskriptorhandles mit Zuordnen einer *StatementHandle*, anstatt Aufrufen **SQLCopyDesc** Felder aus einen Deskriptor auf einen anderen zu kopieren. Ein explizit zugewiesenen Deskriptor kann mit einem anderen verbunden werden *StatementHandle* auf dem gleichen *ConnectionHandle* durch Festlegen der SQL_ATTR_APP_ROW_DESC oder SQL_ATTR_APP_PARAM_DESC-Anweisung Attribut für das Handle des explizit zugewiesene Deskriptors. Wenn dies abgeschlossen ist, **SQLCopyDesc** muss nicht aufgerufen werden, um deskriptorfeldwerte aus einen Deskriptor auf einen anderen zu kopieren. Ein Deskriptorhandle kann nicht zugeordnet werden eine *StatementHandle* auf einem anderen *ConnectionHandle*, jedoch mit den Feldwerten des Deskriptors auf *StatementHandles*auf anderen *ConnectionHandles*, **SQLCopyDesc** aufgerufen werden muss.  
+>  Eine Anwendung kann ein explizit zugeordneter Deskriptorhandle einem *StatementHandle*zuordnen, anstatt **SQLCopyDesc** zum Kopieren von Feldern von einem Deskriptor in einen anderen zu aufrufen. Ein explizit zugeordneter Deskriptor kann einem anderen *StatementHandle* desselben *connectionHandle* zugeordnet werden, indem das SQL_ATTR_APP_ROW_DESC-oder SQL_ATTR_APP_PARAM_DESC-Anweisungs Attribut auf das-Handle des explizit festgelegt wird. zugeordneter Deskriptor. Wenn dies geschehen ist, muss **SQLCopyDesc** nicht aufgerufen werden, um Deskriptorfeldwerte von einem Deskriptor in einen anderen zu kopieren. Ein Deskriptorhandle kann jedoch nicht mit einem *StatementHandle* auf einem anderen *connectionHandle*verknüpft werden. um dieselben Deskriptorfeldwerte für *statementhandles* auf verschiedenen *connectionhandles*zu verwenden, muss **SQLCopyDesc** aufgerufen werden.  
   
- Eine Beschreibung der Felder in ein Deskriptor Header oder einen Datensatz, finden Sie unter [SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Weitere Informationen zu den sicherheitsbeschreibungen, finden Sie unter [Deskriptoren](../../../odbc/reference/develop-app/descriptors.md).  
+ Eine Beschreibung der Felder in einem deskriptorheader oder Datensatz finden Sie unter [SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Weitere Informationen zu Deskriptoren finden Sie unter [Deskriptors](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="copying-rows-between-tables"></a>Kopieren von Zeilen zwischen Tabellen  
- Eine Anwendung kann Daten aus einer Tabelle in eine andere kopieren, ohne Kopieren der Daten auf Anwendungsebene. Zu diesem Zweck bindet die Anwendung den gleichen Datenpuffer und die Informationen der Sicherheitsbeschreibung eine Anweisung, die die Daten abruft und die Anweisung, die die Daten in eine Kopie eingefügt. Dies kann erreicht werden, entweder indem Sie einen Anwendungsdienst-Deskriptor (Bindung einen explizit zugewiesenen Deskriptor als die ARD für eine Anweisung und in einer anderen APD) freigeben oder mit **SQLCopyDesc** , kopieren Sie die Bindungen zwischen der ARD und APD der beiden Anweisungen. Wenn Sie die Anweisungen für unterschiedliche Verbindungen sind **SQLCopyDesc** muss verwendet werden. Darüber hinaus **SQLCopyDesc** muss aufgerufen werden, um die Bindungen zwischen IRD und IPD der beiden Anweisungen zu kopieren. Beim Kopieren in Anweisungen für die gleiche Verbindung den Informationstyp SQL_ACTIVE_STATEMENTS vom Treiber bei einem Aufruf zurückgegebene **SQLGetInfo** muss größer sein als 1 für diesen Vorgang erfolgreich ausgeführt werden kann. (Dies ist nicht der Fall beim Kopieren von über Verbindungen.)  
+ Eine Anwendung kann Daten aus einer Tabelle in eine andere kopieren, ohne die Daten auf Anwendungsebene zu kopieren. Zu diesem Zweck bindet die Anwendung dieselben Datenpuffer und Deskriptorinformationen an eine-Anweisung, die die Daten abruft, und die-Anweisung, die die Daten in eine Kopie einfügt. Dies kann erreicht werden, indem Sie einen Anwendungs Deskriptor freigeben (einen explizit zugeordneten Deskriptor als ARD an eine Anweisung und die APD in einem anderen binden) oder indem Sie **SQLCopyDesc** zum Kopieren der Bindungen zwischen dem ARD und der APD der beiden verwenden. Äußerungen. Wenn sich die-Anweisungen in unterschiedlichen Verbindungen befinden, muss **sqlcopydebug** verwendet werden. Außerdem muss **sqlcopydebug** aufgerufen werden, um die Bindungen zwischen dem IRD und der IPD der beiden Anweisungen zu kopieren. Beim Kopieren von Anweisungen über die gleiche Verbindung muss der vom Treiber für einen **SQLGetInfo-Befehl** zurückgegebene SQL_ACTIVE_STATEMENTS-Informationstyp größer als 1 sein, damit dieser Vorgang erfolgreich ausgeführt werden kann. (Dies ist nicht der Fall, wenn Verbindungen über mehrere Verbindungen hinweg kopiert werden.)  
   
 ### <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel werden Deskriptor Vorgänge verwendet, die Felder der Tabelle PartsSource in die Tabelle PartsCopy zu kopieren. Den Inhalt der Tabelle PartsSource werden abgerufen, in der Rowset-Puffer im *hstmt0*. Diese Werte werden als Parameter eine INSERT-Anweisung verwendet, auf *hstmt1* zum Auffüllen der Spalten der Tabelle PartsCopy. Die Felder des IRD von dazu *hstmt0* in die Felder des IPD der kopiert werden *hstmt1*, und die Felder der ARD von *hstmt0* werden in die Felder der APD von kopiert*hstmt1*. Verwendung **SQLSetDescField** , legen Sie IPDs-SQL_DESC_PARAMETER_TYPE-Attribut auf SQL_PARAM_INPUT, wenn Sie IRD-Feldern von einer Anweisung mit der Output-Parameter in IPD-Feldern kopieren, die Eingabeparameter werden müssen.  
+ Im folgenden Beispiel werden deskriptorvorgänge verwendet, um die Felder der partssource-Tabelle in die partscopy-Tabelle zu kopieren. Der Inhalt der partssource-Tabelle wird in rowsetpuffer in *hstmt0*abgerufen. Diese Werte werden als Parameter einer INSERT-Anweisung auf *hstmt1* verwendet, um die Spalten der partscopy-Tabelle aufzufüllen. Zu diesem Zweck werden die Felder des IRD von *hstmt0* in die Felder der IPD von *hstmt1*kopiert, und die Felder der *hstmt0 von* werden in die Felder der APD von *hstmt1*kopiert. Verwenden Sie **SQLSetDescField** , um das SQL_DESC_PARAMETER_TYPE-Attribut von IPD auf SQL_PARAM_INPUT festzulegen, wenn Sie IRD-Felder aus einer-Anweisung mit Ausgabeparametern in IPD-Felder kopieren, die Eingabeparameter sein müssen.  
   
 ```cpp  
 #define ROWS 100  
@@ -190,9 +191,9 @@ while (SQL_SUCCEEDED(rc)) {
   
 |Informationen zu|Finden Sie unter|  
 |---------------------------|---------|  
-|Abrufen von deskriptorfelder für mehrere|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Festlegen einer einzelnen Deskriptorfeld|[SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Festlegen von mehreren deskriptorfeldern|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|Mehrere Deskriptorfelder werden abgerufen.|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Festlegen eines einzelnen deskriptorfelds|[SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Festlegen mehrerer Deskriptorfelder|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   

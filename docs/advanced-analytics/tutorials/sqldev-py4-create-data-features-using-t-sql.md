@@ -1,25 +1,25 @@
 ---
-title: Erstellen von Datenfunktionen mit T-SQL-Funktionen und Python - SQL Server-Machine Learning
-description: Dieses Tutorial zeigt, wie gespeicherte Prozeduren für die Verwendung in Python-Machine Learning-Modellen Berechnungen hinzu.
+title: Erstellen von Datenfunktionen mit T-SQL-Funktionen und python
+description: Tutorial zum Hinzufügen von Berechnungen zu gespeicherten Prozeduren für die Verwendung in python Machine Learning-Modellen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7c17af9ab7302e2856130be58759b56430e1341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961874"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345918"
 ---
 # <a name="create-data-features-using-t-sql"></a>Erstellen von Datenfunktionen mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Nach der Untersuchung von Daten, Sie wurden einige Einblicke aus den Daten erfasst und sind bereit, um sich beim wechseln *Featureentwicklung*. Dieser Prozess zum Erstellen von Merkmalen aus Rohdaten, kann ein wichtiger Schritt in die Modellierung der erweiterten Analyse sein.
+Nachdem Sie die Daten durchsucht haben, haben Sie einige Einblicke in die Daten gesammelt und sind nun bereit , mit der Featureentwicklung fortzufahren. Dieser Prozess der Erstellung von Features aus den Rohdaten kann ein wichtiger Schritt bei der Erstellung erweiterter Analysen sein.
 
-Dieser Artikel ist Teil eines Tutorials, [In-Database Python Analytics für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
+Dieser Artikel ist Teil eines Tutorials, [in-Database-python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 
 In diesem Schritt erfahren Sie, wie Sie Funktionen aus Rohdaten mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Funktion erstellen. Sie rufen anschließend die Funktion aus einer gespeicherten Prozedur auf, um eine Tabelle zu erstellen, die die Funktionswerte enthält.
 
@@ -29,9 +29,9 @@ Die in den ursprünglichen Daten angezeigten Entfernungswerte basieren auf der v
 
 Verwenden Sie eine benutzerdefinierte T-SQL-Funktion, _fnCalculateDistance_, um die Entfernung mithilfe der Haversine-Formel zu berechnen, und verwenden Sie eine zweite benutzerdefinierte T-SQL-Funktion, _fnEngineerFeatures_, um eine Tabelle mit allen Funktionen zu erstellen.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Berechnen Sie die Fahrstrecke mithilfe von fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Berechnen der Fahrt Distanz mithilfe von fncalculatedistance
 
-1.  Die Funktion _fnCalculateDistance_ sollte heruntergeladen und bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Teil der Vorbereitung für diese exemplarische Vorgehensweise registriert worden sein. Kurz den Code zu überprüfen.
+1.  Die Funktion _fnCalculateDistance_ sollte heruntergeladen und bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Teil der Vorbereitung für diese exemplarische Vorgehensweise registriert worden sein. Nehmen Sie sich einen Moment Zeit, um den Code anzuzeigen.
   
     Erweitern Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Programmierbarkeit**, erweitern Sie **Funktionen** und anschließend **Skalarwertfunktionen**.
     Klicken Sie mit der rechten Maustaste auf _fnCalculateDistance_, und wählen Sie **Ändern** aus, um das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript in einem neuen Abfragefenster zu öffnen.
@@ -66,7 +66,7 @@ Verwenden Sie eine benutzerdefinierte T-SQL-Funktion, _fnCalculateDistance_, um 
 
 Verwenden Sie eine andere Funktion, _fnEngineerFeatures_, um die berechneten Werte einer Tabelle hinzuzufügen, die zum Trainieren des Modells verwendet werden kann.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Speichern Sie die Funktionen, die mithilfe von _FnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>Speichern der Features mithilfe von _fnengineerfeatures_
 
 1.  Nehmen Sie sich ein paar Minuten Zeit, um den Code für die benutzerdefinierte T-SQL-Funktion _fnEngineerFeatures_zu überprüfen, die für Sie als Teil der Vorbereitung für diese exemplarische Vorgehensweise erstellt wurde.
   
@@ -106,16 +106,16 @@ Verwenden Sie eine andere Funktion, _fnEngineerFeatures_, um die berechneten Wer
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Wie Sie sehen können, entspricht die vom Taxameter angezeigte Entfernung nicht immer der geografischen Distanz. Daher ist die Featureentwicklung wichtig ist.
+    Wie Sie sehen können, entspricht die vom Taxameter angezeigte Entfernung nicht immer der geografischen Distanz. Aus diesem Grund ist die Funktionsentwicklung wichtig.
 
-Im nächsten Schritt erfahren Sie, wie Sie diese Datenfunktionen zum Erstellen und Trainieren von Machine Learning-Modellen mithilfe von Python verwenden.
+Im nächsten Schritt erfahren Sie, wie Sie diese Daten Features zum Erstellen und Trainieren eines Machine Learning-Modells mithilfe von Python verwenden.
 
 ## <a name="next-step"></a>Nächster Schritt
 
-[Trainieren und Speichern eines Python-Modells mit T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Trainieren und Speichern eines python-Modells mit T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="previous-step"></a>Vorherigen Schritt
+## <a name="previous-step"></a>Vorheriger Schritt
 
-[Untersuchen und Visualisieren von Daten](sqldev-py3-explore-and-visualize-the-data.md)
+[Untersuchen und Visualisieren der Daten](sqldev-py3-explore-and-visualize-the-data.md)
 
 
