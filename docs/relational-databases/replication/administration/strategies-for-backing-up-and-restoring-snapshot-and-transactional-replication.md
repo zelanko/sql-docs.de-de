@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948686"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "54125270"
   
  **So legen Sie die Option sync with backup fest**  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Replikationsprogrammierung ([!INCLUDE[tsql](../../../includes/tsql-md.md)]): [Aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Wiederherstellen der an der Replikation beteiligten Datenbanken  
  Wenn aktuelle Sicherungen verfügbar sind und die entsprechenden Schritte befolgt werden, können Sie alle Datenbanken einer Replikationstopologie wiederherstellen. Die Wiederherstellungsschritte für die Veröffentlichungsdatenbank hängen vom Typ der verwendeten Replikation und den verwendeten Optionen ab. Die Wiederherstellungsschritte für alle anderen Datenbanken sind jedoch vom Typ und den Optionen unabhängig.  
@@ -215,7 +214,7 @@ ms.locfileid: "54125270"
   
 9. Nach der Wiederherstellung wird der Identitätsbereich, den Sie den Tabellen in Datenbank **A** zugewiesen haben, auch in Datenbank **B** verwendet. Stellen Sie sicher, dass die wiederhergestellte Datenbank **B** alle Änderungen aus der fehlerhaften Datenbank **B** empfangen hat, die an die Datenbanken **A** und **C** weitergegeben wurden. Weisen Sie dann den Identitätsbereich für jede Tabelle neu zu.  
   
-    1.  Führen Sie [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id**. Fahren Sie mit Schritt b fort.  
+    1.  Führen Sie [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id** . Fahren Sie mit Schritt b fort.  
   
     2.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Weitere Informationen finden Sie unter [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) oder [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Fahren Sie mit Schritt c fort.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125270"
   
     1.  Beenden Sie alle Aktivitäten an allen veröffentlichten Tabellen in der Peer-zu-Peer-Topologie. Fahren Sie mit Schritt b fort.  
   
-    2.  Führen Sie [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id**. Fahren Sie mit Schritt c fort.  
+    2.  Führen Sie [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id** . Fahren Sie mit Schritt c fort.  
   
     3.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Fahren Sie mit Schritt d fort.  
   

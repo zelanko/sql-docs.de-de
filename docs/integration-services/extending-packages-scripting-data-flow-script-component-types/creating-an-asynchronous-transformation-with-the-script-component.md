@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71370adeca366b2002244c7f0aabfbca639579c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52600384a59ba02adee6dd897ff027f5611adf90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112510"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
 
@@ -100,7 +99,7 @@ ms.locfileid: "65805204"
   
  Bei einer asynchronen Transformation können Sie mit der AddRow-Methode der Ausgabe bei Bedarf Zeilen aus der Methode „ProcessInputRow“ oder „ProcessInput“ heraus hinzufügen. Sie müssen nicht die CreateNewOutputRows-Methode verwenden. Wenn Sie eine einzelne Ergebniszeile, z.B. Aggregationsergebnisse, in eine bestimmte Ausgabe schreiben, können Sie die Ausgabezeile vorher mithilfe der CreateNewOutputRows-Methode erstellen und ihre Werte später nach Verarbeitung aller Eingabezeilen auffüllen. Es ist jedoch nicht sinnvoll, in der CreateNewOutputRows-Methode mehrere Zeilen zu erstellen, weil mit der Skriptkomponente nur die aktuelle Zeile in einer Eingabe oder Ausgabe verwendet werden kann. Die CreateNewOutputRows-Methode ist bei einer Quellkomponente wichtiger, bei der keine Eingabezeilen zu verarbeiten sind.  
   
- Sie können auch die ProcessInput-Methode überschreiben, damit Sie zusätzliche vorbereitende oder abschließende Verarbeitungsvorgänge ausführen können, bevor oder nachdem Sie den Eingabepuffer durchlaufen und ProcessInputRow für jede Zeile aufrufen. Eines der Codebeispiele in diesem Artikel überschreibt beispielsweise ProcessInput, um die Anzahl von Adressen in einer bestimmten Stadt zu zählen, während ProcessInputRow die Zeilen durchläuft. Im Beispiel wird der Zusammenfassungswert in die zweite Ausgabe geschrieben, nachdem alle Zeilen verarbeitet wurden. In diesem Beispiel wird die Ausgabe in ProcessInput abgeschlossen, weil die Ausgabepuffer nicht mehr verfügbar sind, wenn PostExecute aufgerufen wird.  
+ Sie können auch die ProcessInput-Methode überschreiben, damit Sie zusätzliche vorbereitende oder abschließende Verarbeitungsvorgänge ausführen können, bevor oder nachdem Sie den Eingabepuffer durchlaufen und ProcessInputRow für jede Zeile aufrufen. Eines der Codebeispiele in diesem Artikel überschreibt beispielsweise ProcessInput, um die Anzahl von Adressen in einer bestimmten Stadt zu zählen, während ProcessInputRow die Zeilen durchläuft **.** Im Beispiel wird der Zusammenfassungswert in die zweite Ausgabe geschrieben, nachdem alle Zeilen verarbeitet wurden. In diesem Beispiel wird die Ausgabe in ProcessInput abgeschlossen, weil die Ausgabepuffer nicht mehr verfügbar sind, wenn PostExecute aufgerufen wird.  
   
  Je nach Anforderung können Sie auch Skript in den Methoden „PreExecute“ und „PostExecute“ schreiben, die in der ScriptMain-Klasse verfügbar sind, um vorbereitende oder abschließende Verarbeitungsvorgänge auszuführen.  
   

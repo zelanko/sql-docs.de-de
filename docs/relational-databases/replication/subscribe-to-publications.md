@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 139bcebb2f4e92d3cc9e25a3460a6283a93fc4f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a15256be44ace579c6dcc9aa74bf55fdc319e7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129933"
 ---
 # <a name="subscribe-to-publications"></a>Abonnieren von Veröffentlichungen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "47635548"
   
  **So erstellen Sie ein Pullabonnement**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **So können Sie Eigenschaften von Pullabonnements anzeigen und ändern**  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47635548"
   
  [Löschen eines Pullabonnements](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern des Abonnenten](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Abonnementablauf und -deaktivierung](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
