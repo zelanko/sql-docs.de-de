@@ -1,5 +1,5 @@
 ---
-title: sys.function_order_columns (Transact-SQL) | Microsoft Docs
+title: Sys. function_order_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122745"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "63004731"
   Gibt eine Zeile pro Spalte zurück, die Teil eines **ORDER** -Ausdrucks einer CLR-Tabellenwertfunktion (Common Language Runtime) ist.  
 
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts (CLR-Tabellenwertfunktion), das die Reihenfolge definiert.|  
 |**order_column_id**|**int**|Die ID der Sortierspalte. **order_column_id** ist nur innerhalb von **object_id**eindeutig.<br /><br /> **order_column_id** stellt die Position dieser Spalte in der Sortierung dar.|  

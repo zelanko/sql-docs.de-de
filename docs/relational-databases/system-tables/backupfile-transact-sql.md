@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091865"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Daten- oder Protokolldatei einer Datenbank. In den Spalten wird die Dateikonfiguration zu dem Zeitpunkt beschrieben, an dem die Sicherung erstellt wurde. Unabhängig davon, ob die Datei enthalten ist, in der Sicherung richtet sich nach der **Is_present** Spalte. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Eindeutige ID der Datei, die den Sicherungssatz enthält. Verweise **backupset(backup_set_id)** .|  
 |**first_family_number**|**tinyint**|Familiennummer des ersten Mediums, das diese Sicherungsdatei enthält. Kann den Wert NULL haben.|  
@@ -47,7 +46,7 @@ ms.locfileid: "62645507"
 |**physical_drive**|**nvarchar(260)**|Name des physischen Laufwerks oder der physischen Partition. Kann den Wert NULL haben.|  
 |**physical_name**|**nvarchar(260)**|Rest des physischen (Betriebssystem-) Dateinamens. Kann den Wert NULL haben.|  
 |**state**|**tinyint**|Status der Datei. Folgende Werte sind möglich:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = GELÖSCHT<br /><br /> Hinweis: Der Wert 5 wird übersprungen, sodass diese Werte den Werten für den Datenbankstatus entsprechen.|  
-|**state_desc**|**nvarchar(64)**|Beschreibung des Dateistatus. Folgende Werte sind möglich:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state_desc**|**Nvarchar(64)**|Beschreibung des Dateistatus. Folgende Werte sind möglich:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei erstellt wurde.|  
 |**drop_lsn**|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei gelöscht wurde. Kann den Wert NULL haben.<br /><br /> Wurde die Datei nicht gelöscht, ist dieser Wert NULL.|  
 |**file_guid**|**uniqueidentifier**|Der eindeutige Bezeichner der Datei.|  

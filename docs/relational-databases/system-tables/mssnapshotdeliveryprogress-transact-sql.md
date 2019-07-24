@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67b6a2c048f8e873d6daa447270e00c1eda86c3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139814"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Die **MSsnapshotdeliveryprogress** Tabelle wird verwendet, um Dateien nachzuverfolgen, die erfolgreich an den Abonnenten übermittelt wurden, wenn eine Momentaufnahme angewendet wird. Die Daten werden zum Fortsetzen der Dateiübermittlung verwendet, falls es dem Merge-Agent nicht gelingt, alle Dateien während einer Sitzung zu übermitteln. Dadurch wird erreicht, dass beim nächsten Ausführen des Merge-Agents nicht dieselben Dateien noch einmal übermittelt werden. Diese Tabelle wird auf dem Abonnenten in der Abonnementdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**session_token**|**nvarchar(260)**|Identifiziert den Pfad zum Momentaufnahmeordner, von dem aus die Datei erfolgreich übermittelt wurde. Für Veröffentlichungen mit parametrisierten Filtern wird die Zeichenfolge **Dynsnap** auf den Wert angefügt.|  
 |**progress_token_hash**|**int**|Ein Hashwert generiert basierend auf den Wert der *Progress_token* wird, verbessern Sie die Effizienz der Suche für eine angegebenen *Progress_token* Wert.|  

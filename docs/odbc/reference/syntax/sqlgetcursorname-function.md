@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 33e2d1f4630228d4c59487c2a5f9de891e87ece5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4017ed07681a74da4832db2db3aeabddf22edb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020332"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName-Funktion
 **Übereinstimmung mit Standards**  
@@ -49,7 +48,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [Eingabe] Anweisungshandle.  
   
- *CursorName*  
+ *cursorName*  
  [Ausgabe] Zeiger auf einen Puffer, in dem der Name des Cursors zurückgegeben.  
   
  Wenn *CursorName* NULL ist, *NameLengthPtr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer, der auf zurückgegeben *CursorName*.  
@@ -61,18 +60,18 @@ SQLRETURN SQLGetCursorName(
  [Ausgabe] Zeiger auf den Speicher für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *CursorName*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *Pufferlänge*, der Name des Cursors in \* *CursorName* auf abgeschnitten *Pufferlänge*abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
   
 ## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLGetCursorName** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *HandleType*von SQL_HANDLE_STMT auf, und ein *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetCursorName** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
   
-|SQLSTATE|Fehler|Description|  
+|SQLSTATE|Fehler|Beschreibung|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *CursorName* war nicht groß genug, um den gesamten Cursornamen, zurückgeben, damit der Name des Cursors abgeschnitten wurde. Die Länge des Cursornamens den ungekürzten wird zurückgegeben, **NameLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
 |HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLGetCursorName** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die  *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
+|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *StatementHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLGetCursorName** Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, die *StatementHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, oder **SQLSetPos** wurde aufgerufen, die *StatementHandle* und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.|  
 |HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
 |HY015|Es ist kein Cursorname verfügbar|(DM) der Treiber wurde von einer ODBC 2. *.x* Treiber, gab es keinen geöffneten Cursor in der Anweisung, und es ist kein Cursorname hatte festgelegt wurde, mit **SQLSetCursorName**.|  
 |HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) der Wert im Argument angegebene *Pufferlänge* war kleiner als 0.|  

@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac637a677d7e7b6b8604ef9262fd1c17bc0c94ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030232"
 ---
 # <a name="programming-specific-tasks"></a>Programming Specific Tasks
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Das Programmieren spezifischer Tasks mithilfe von SMO-Objekten umfasst komplexe Themen, die nur für Programme mit spezifischen Funktionen (wie Sichern, Überwachen von Statistiken, Replikation, Verwalten von Instanzobjekten und Festlegen von Konfigurationsoptionen) erforderlich sind.  
   
-|Thema|Description|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Verwenden von Verbindungsservern in SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Beschreibt, wie SMO das <xref:Microsoft.SqlServer.Management.Smo.LinkedServer>-Objekt verwendet, um OLE-DB-Server zu verknüpfen.|  
 |[Konfigurieren von SQL Server in SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Beschreibt, wie Konfigurationseinstellungen für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SMO angezeigt und bearbeitet werden.|  

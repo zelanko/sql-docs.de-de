@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7afced10f0be71310edc4b42ea0158ca996f3aa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029388"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Erstellen von Variablenwertdateien (SybaseToSQL)
 Variablendatei Wert ist eine XML-Datei mit die Werte der Parameter der Befehle wie die Quelle oder Ziel-Servername, die häufig von der Migration von einem Server auf einen anderen ändern. Wenn eine große Anzahl von datenbankmigrationen auftreten, mehrere Dateien zum Speichern von den Wert der einzelnen Quellserver werden erstellt und auf die verwiesen wird in einer master-Skript-Datei mit den **- V** -Schalter an der Befehlszeile. Dies hilft beim Verwalten von statischer Werten in ein paar Skriptdateien mit den Variablen Werten in mehreren Dateien.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1d216db1a0d8d83279babb2e772413dfb94889c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946435"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Pfadausdrücke – Angeben eines Knotentests
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -202,7 +201,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. Angeben eines Knotennamens im Knotentest  
  Das folgende Beispiel gibt einen Knotennamen als Knotentest in allen Pfadausdrücken an. Als Ergebnis geben alle Ausdrücke Knoten der Hauptknotenart der Achse zurück, für die der Knotenname im Knotentest angegeben wurde.  
   
- Der folgende Abfrageausdruck gibt das <`Warranty`>-Element aus dem Produktkatalog-XML-Dokument zurück, das in der `Production.ProductModel`-Tabelle gespeichert ist:  
+ Die folgende Abfrage gibt die <`Warranty`>-Element aus dem Produktkatalog XML-Dokument gespeichert, der `Production.ProductModel` Tabelle:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -222,7 +221,7 @@ WHERE ProductModelID=19
   
 -   Der optionale Schrittqualifiziereranteil des Achsenschritts wird in keinem der Schritte im Ausdruck angegeben.  
   
- Die Abfrage gibt die untergeordneten <`Warranty`>-Elemente des untergeordneten <`Features`>-Elements des <`ProductDescription`>-Elements zurück.  
+ Die Abfrage gibt die <`Warranty`> untergeordnete Elemente des der <`Features`> des untergeordneten Elements die <`ProductDescription`> Element.  
   
  Dies ist das Ergebnis:  
   
@@ -245,9 +244,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Das Platzhalterzeichen wird für den Knotennamen angegeben. Daher gibt die Abfrage alle untergeordneten Elementknoten des untergeordneten <`Features`>-Elementknotens des <`ProductDescription`>-Elementknotens zurück.  
+ Das Platzhalterzeichen wird für den Knotennamen angegeben. Daher die Abfrage gibt alle untergeordneten Elemente des der <`Features`>-Element als untergeordnetes Element eines der <`ProductDescription`> Elementknoten.  
   
- Die folgende Abfrage ähnelt der vorherigen Abfrage; es wird nur ein Namespace zusammen mit dem Platzhalterzeichen angegeben. Als Ergebnis werden alle untergeordneten Elementknoten im betreffenden Namespace zurückgegeben. Beachten Sie, dass das <`Features`>-Element Elemente aus verschiedenen Namespaces enthalten kann.  
+ Die folgende Abfrage ähnelt der vorherigen Abfrage; es wird nur ein Namespace zusammen mit dem Platzhalterzeichen angegeben. Als Ergebnis werden alle untergeordneten Elementknoten im betreffenden Namespace zurückgegeben. Beachten Sie, dass die <`Features`>-Element kann Elemente aus verschiedenen Namespaces enthalten.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -271,7 +270,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Die Abfrage gibt die untergeordneten <`Maintenance`>-Elementknoten in allen Namespaces aus dem Produktkatalog XML-Dokument zurück.  
+ Diese Abfrage gibt die <`Maintenance`> untergeordneten Elementknoten in allen Namespaces aus dem Produktkatalog XML-Dokument.  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. Angeben der Knotenart im Knotentest  
  Das folgende Beispiel gibt die Knotenart als Knotentest in allen path-Ausdrücken an. Als Ergebnis geben alle Ausdrücke Knoten der Art zurück, die im Knotentest angegeben wurde.  
@@ -296,7 +295,7 @@ WHERE ProductModelID=19
   
 -   Die ersten beiden Schritte geben einen Knotennamen als Knotentest an, und der dritte Schritt gibt eine Knotenart als Knotentest an.  
   
--   Der Ausdruck gibt die untergeordneten Textknoten des untergeordneten <`Features`>-Elements des <`ProductDescription`>-Elementknotens zurück.  
+-   Der Ausdruck gibt Text zurück Knoten untergeordneten Elemente der <`Features`> des untergeordneten Elements die <`ProductDescription`> Elementknoten.  
   
  Es wird nur ein Textknoten zurückgegeben. Dies ist das Ergebnis:  
   
@@ -304,7 +303,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- Die folgende Abfrage gibt die untergeordneten Kommentarknoten des <`ProductDescription`>-Elements zurück.  
+ Die folgende Abfrage gibt den Kommentar Knoten untergeordneten Elemente der <`ProductDescription`> Element:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -320,7 +319,7 @@ WHERE ProductModelID=19
   
 -   Der zweite Schritt gibt eine Knotenart als Knotentest an.  
   
--   Als Ergebnis gibt der Ausdruck die untergeordneten Kommentarknoten des <`ProductDescription`>-Elements zurück.  
+-   Daher der Ausdruck gibt den Kommentar untergeordneten Elemente des der <`ProductDescription`> Element-Knoten.  
   
  Dies ist das Ergebnis:  
   

@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c271c7585d0ebe1a7af5c387414187b0072b3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 362ccc5c85523b3d37cb792a42e8be4cd87d7510
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109004"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
-  Gibt eine Zeile für jeden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zurück.  
+  Gibt eine Zeile für jeden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen zurück.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**\<geerbte Spalten >**|--|Erbt von **Sys. server_principals**.|  
 |**is_policy_checked**|**bit**|Kennwortrichtlinie wird überprüft.|  
@@ -48,7 +47,7 @@ ms.locfileid: "47662678"
  Wenn eigenständige Datenbankbenutzer aktiviert sind, die Verbindungen hergestellt werden können, ohne Anmeldenamen. Um die Konten identifizieren zu können, finden Sie unter [Sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierungsanmeldung werden der eigene Anmeldename und die sa-Anmeldung angezeigt. Zum Anzeigen anderer Anmeldenamen ist ALTER ANY LOGIN oder eine Berechtigung für den Anmeldenamen erforderlich.  
+ Jeder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierungsanmeldung werden der eigene Anmeldename und die sa-Anmeldung angezeigt. Zum Anzeigen anderer Anmeldenamen ist ALTER ANY LOGIN oder eine Berechtigung für den Anmeldenamen erforderlich.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

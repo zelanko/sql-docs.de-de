@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211115"
 ---
 # <a name="eventstring-element-dta"></a>EventString-Element (DTA)
   Gibt eine auf einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript basierende Arbeitsauslastung direkt in der XML-Eingabedatei an.  
@@ -37,24 +37,24 @@ ms.locfileid: "52769512"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Attribut|Description|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`Weight`|Dies ist optional. Gibt den Gewichtungsfaktor der Abfrage (ein Faktor für die Wichtigkeit) für das angegebene Ereignis an. Sie können die Gewichtung mit einem `float`-Datentyp angeben. Beispiel: `Weight`="100,01". Der Mindestwert für `Weight` ist "0".|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, Länge ist unbegrenzt.|  
-|**Standardwert**|Keine.|  
+|**Standardwert**|Keine|  
 |**Vorkommen**|Einmalig erforderlich, wenn kein anderer Arbeitsauslastungstyp angegeben ist. Sie müssen ein untergeordnetes `EventString`-, `File`- oder `Database`-Element für das übergeordnete `Workload`-Element angeben. Es kann jedoch nur ein Typ verwendet werden. Wenn Sie beispielsweise eine Arbeitsauslastung mit dem `EventString`-Element angeben, können Sie in dieser XML-Eingabedatei keine Arbeitsauslastung mit dem `File`-Element angeben.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
-|Beziehung|Elemente|  
+|Beziehung|Elements|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[Workload-Element &#40;DTA&#41;](workload-element-dta.md)|  
-|**Untergeordnete Elemente**|Keine.|  
+|**Untergeordnete Elemente**|Keine|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit Inlinearbeitsauslastung &#40;DTA&#41;](xml-input-file-sample-with-inline-workload-dta.md).  

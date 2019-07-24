@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a910fcac656bc70e974da5c3601288b1659bb57
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
-ms.translationtype: HT
+ms.openlocfilehash: 9979de414bb044e23aa01d5ce1be1be6daa83c62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030515"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Datentypunterstützung für ODBC-Verbesserungen bei Datum und Uhrzeit
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

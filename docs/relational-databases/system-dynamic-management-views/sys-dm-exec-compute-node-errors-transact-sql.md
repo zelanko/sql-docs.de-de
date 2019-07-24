@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097883"
 ---
-# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>Sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Gibt Fehler für PolyBase-Computeknoten.  
   
-|Spaltenname|Datentyp|Description|Bereich|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Eindeutige numerische Id des Fehlers.|Eindeutig für alle Abfragefehler im system|  
 |Quelle|**nvarchar(255)**|Source-Prozess oder Thread-Beschreibung||  

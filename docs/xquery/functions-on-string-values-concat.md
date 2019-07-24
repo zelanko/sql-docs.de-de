@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099831"
 ---
 # <a name="functions-on-string-values---concat"></a>Funktionen für Zeichenfolgenwerte – concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ fn:concat ($string as xs:string?
  In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Beispieldatenbank.  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Verwenden der concat()-Funktion von XQuery zum Verketten von Zeichenfolgen  
- Diese Abfrage gibt für ein bestimmtes Produktmodell eine Zeichenfolge zurück, die durch Verketten des Garantiezeitraumes und der Garantiebeschreibung erstellt wird. Im Katalogbeschreibungsdokument besteht das <`Warranty`>-Element aus untergeordneten Elementen von <`WarrantyPeriod`> und <`Description`>.  
+ Diese Abfrage gibt für ein bestimmtes Produktmodell eine Zeichenfolge zurück, die durch Verketten des Garantiezeitraumes und der Garantiebeschreibung erstellt wird. Im katalogbeschreibungsdokument besteht das <`Warranty`>-Element besteht aus <`WarrantyPeriod`> und <`Description`> untergeordnete Elemente.  
   
 ```  
 WITH XMLNAMESPACES (  
