@@ -1,5 +1,5 @@
 ---
-title: GetTime-Methode (Int) (SQLServerResultSet) | Microsoft-Dokumentation
+title: getTime-Methode (int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1c48d78534119eb49d552899658c57b10a09fb4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b862aed00a154cac23df4008da649347f94f000a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979108"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Time getTime(int columnIndex)
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Uhrzeit-Objekt.  
+ Ein Zeit Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

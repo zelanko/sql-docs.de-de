@@ -1,5 +1,5 @@
 ---
-title: GetAsciiStream-Methode (SQLServerNClob) | Microsoft-Dokumentation
+title: getAsciiStream-Methode (SQLServerNClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ff1d47e4-572a-4169-a631-ac261f7642b3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e863854d68c9c8292e6d8f6d1858979233e10552
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 22177442dcec9fb873d4a824b73845ce6fc9bfdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954120"
 ---
 # <a name="getasciistream-method-sqlservernclob"></a>getAsciiStream-Methode (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft die **NCLOB** Wert festgelegt, die von diesem **NClob** Objekts als ASCII-Datenstrom.  
+  Ruft den von diesem **NCLOB** -Objekt bezeichneten **NCLOB** -Wert als ASCII-Datenstrom ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,7 +36,7 @@ public java.sql.InputStream getAsciiStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetAsciiStream-Methode wird von der GetAsciiStream-Methode in der java.sql.SQLServerNClob-Schnittstelle angegeben.  
+ Diese getAsciiStream-Methode wird von der getAsciiStream-Methode in der Java. SQL. SQLServerNClob-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerNClob-Methoden](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

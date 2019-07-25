@@ -1,5 +1,5 @@
 ---
-title: Execute-Methode (java.lang.String) | Microsoft-Dokumentation
+title: execute-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3ffb7c175c21d56467899bba9de7c110e324d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954956"
 ---
 # <a name="execute-method-javalangstring"></a>execute-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final boolean execute(java.lang.String sql)
  Eine **Zeichenfolge** mit einer SQL-Anweisung.  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn die Anweisung ein Resultset zurückgibt. **"false"** Wenn updatezählung oder kein Ergebnis zurückgegeben wird.  
+ **true** , wenn die Anweisung ein Resultset zurückgibt. **false** , wenn eine Update Anzahl oder kein Ergebnis zurückgegeben wird.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

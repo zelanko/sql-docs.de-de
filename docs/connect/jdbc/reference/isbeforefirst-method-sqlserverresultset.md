@@ -1,5 +1,5 @@
 ---
-title: IsBeforeFirst-Methode (SQLServerResultSet) | Microsoft-Dokumentation
+title: isBeforeFirst-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 699eb3385baba2d9db8f37237f3cc0af90b4912d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977791"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>isBeforeFirst-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isBeforeFirst()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn der Cursor vor der ersten Zeile befindet. **"false"** Wenn der Cursor an einer beliebigen anderen Position ist oder wenn das Resultset keine Zeilen enthält.  
+ **true** , wenn der Cursor vor der ersten Zeile steht. **false** , wenn sich der Cursor an einer beliebigen anderen Position befindet oder wenn das Resultset keine Zeilen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese IsBeforeFirst-Methode wird von der IsBeforeFirst-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese isBeforeFirst-Methode wird von der isBeforeFirst-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Wird diese Methode mit dynamischen Cursors verwendet, einschließlich schreibgeschützten Vorwärtscursors und die selectMethod-Verbindungseigenschaft auf "cursor" festgelegt, wird eine Ausnahme ausgelöst.  
   

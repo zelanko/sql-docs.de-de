@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680080"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231857"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ Beachten Sie, dass das Aktivieren von Always Encrypted für eine erfolgreiche Ve
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 
-Nachdem Sie Always Encrypted für eine Verbindung aktiviert haben, können Sie die standard-ODBC-APIs verwenden. Die ODBC-APIs können abrufen oder Ändern von Daten in verschlüsselten Datenbankspalten. Die folgenden Elemente für die Dokumentation können dabei helfen:
+Nachdem Sie Always Encrypted für eine Verbindung aktiviert haben, können Sie ODBC-Standard-APIs verwenden. Die ODBC-APIs können Daten in verschlüsselten Daten Bank Spalten abrufen oder ändern. Die folgenden Dokumentations Elemente können dabei helfen:
 
 - [ODBC-Beispielcode](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC-Programmierreferenz](../../odbc/reference/odbc-programmer-s-reference.md)
 
-Ihre Anwendung muss über die erforderlichen Datenbankberechtigungen verfügen, und muss auf den spaltenhauptschlüssel zugreifen können. Der Treiber verschlüsselt dann alle Abfrageparameter, die auf verschlüsselte Spalten ausgerichtet. Der Treiber wird auch von verschlüsselten Spalten abgerufene Daten entschlüsselt. Der Treiber führt alle diese verschlüsseln und Entschlüsseln von ohne jegliche Unterstützung aus dem Quellcode. Um das Programm ist es, als ob die Spalten nicht verschlüsselt sind.
+Die Anwendung muss über die erforderlichen Daten Bank Berechtigungen verfügen, und Sie muss in der Lage sein, auf den Spalten Hauptschlüssel zuzugreifen. Anschließend verschlüsselt der Treiber alle Abfrage Parameter, die auf verschlüsselte Spalten ausgerichtet sind. Der Treiber entschlüsselt auch Daten, die aus verschlüsselten Spalten abgerufen wurden. Der Treiber führt diese Verschlüsselung und Entschlüsselung ohne Unterstützung durch den Quellcode aus. Das Programm ist so, als ob die Spalten nicht verschlüsselt sind.
 
 Wenn Always Encrypted nicht aktiviert ist, tritt bei Abfragen mit Parametern, die auf verschlüsselte Spalten ausgerichtet sind, ein Fehler auf. Daten können weiterhin aus verschlüsselten Spalten abgerufen werden, solange die Abfrage keine Parameter für verschlüsselte Spalten enthält. Der Treiber versucht jedoch nicht, die Daten zu entschlüsseln. Daher erhält die Anwendung die verschlüsselten Binärdaten (als Bytearrays).
 
@@ -363,9 +362,10 @@ ODBC Driver for SQL Server verfügt über die folgenden integrierten Schlüssels
 
 ### <a name="using-the-azure-key-vault-provider"></a>Verwenden des Azure Key Vault-Anbieters
 
-Azure Key Vault ist eine praktische Möglichkeit zum Speichern von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Unter Linux, macOS und Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speicheranbieter für den Azure Key Vault. Weitere Informationen zum Konfigurieren von Azure Key Vault für Always Encrypted finden Sie unter [Azure Key Vault – Step by Step (Ausführliche Anleitung zu Azure Key Vault)](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Getting Started with Key Vault (Erste Schritte mit dem Azure Key Vault)](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) und [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
+Azure Key Vault (AKV) ist eine praktische Möglichkeit zum Speichern und Verwalten von Spaltenhauptschlüsseln für Always Encrypted (insbesondere, wenn Ihre Anwendungen in Azure gehostet werden). Unter Linux, macOS und Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speicheranbieter für den Azure Key Vault. Weitere Informationen zum Konfigurieren von Azure Key Vault für Always Encrypted finden Sie unter [Azure Key Vault – Step by Step (Ausführliche Anleitung zu Azure Key Vault)](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Getting Started with Key Vault (Erste Schritte mit dem Azure Key Vault)](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) und [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
 
 > [!NOTE]
+> Der ODBC-Treiber unterstützt keine Active Directory-Verbunddienste (AD FS) für die AKV-Authentifizierung. Wenn Sie Azure Active Directory Authentifizierung bei AKV verwenden und die Active Directory Konfiguration Verbund Dienste umfasst, kann die Authentifizierung fehlschlagen.
 > Unter Linux und macOS ist ab ODBC Driver 17.2 for SQL Server für die Verwendung dieses Anbieters `libcurl` erforderlich. Dabei handelt es sich jedoch nicht um eine explizite Abhängigkeit, da es für andere Vorgänge mit dem Treiber nicht erforderlich ist. Wenn im Bezug zu `libcurl` ein Fehler auftritt, überprüfen Sie ob es installiert ist.
 
 Der Treiber unterstützt die Authentifizierung beim Azure Key Vault mithilfe der folgenden Typen von Anmeldeinformationen:

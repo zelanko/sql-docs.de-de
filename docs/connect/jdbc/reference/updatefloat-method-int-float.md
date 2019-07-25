@@ -1,5 +1,5 @@
 ---
-title: UpdateFloat-Methode (Int, Float) | Microsoft-Dokumentation
+title: updateFloat-Methode (int, float) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7867e05c90e7aa369e3d32be122feb3785ac095
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c1257ced0c69a461913d9c3a9ae147fffcf72cea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998957"
 ---
 # <a name="updatefloat-method-int-float"></a>updateFloat-Methode (int, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateFloat(int index,
   
  *x*  
   
- Ein **"float"** Wert.  
+ Ein **float** -Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese UpdateFloat-Methode wird von der UpdateFloat-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese updateFloat-Methode wird von der updateFloat-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [updateFloat-Methode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   

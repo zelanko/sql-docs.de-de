@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verbinden über einen angegebenen Port | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Herstellen einer Verbindung an einem angegebenen Port | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 340cedae8ee5c205e3bc6ea8942151dd4beca168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015052"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Vorgehensweise: Verbinden über einen angegebenen Port
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ In diesem Thema wird beschrieben, wie über einen angegebenen Port mit der [!INC
 ## <a name="see-also"></a>Weitere Informationen  
 [Verbinden mit dem Server](../../connect/php/connecting-to-the-server.md)
 
-[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Getting Started with the Microsoft Drivers for PHP for SQL Server (Erste Schritte mit dem Microsoft-Treiber für PHP für SQL Server)](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

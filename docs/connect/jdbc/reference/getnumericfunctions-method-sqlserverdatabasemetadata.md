@@ -1,5 +1,5 @@
 ---
-title: GetNumericFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getnumericfunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e2431a61089f2128fa73feea8893a3a1c82bffa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e6b38d58ddf81f0b8439912b865b1d94a7b15ecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981275"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>getNumericFunctions-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getNumericFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetNumericFunctions-Methode wird von der GetNumericFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getNumericFunctions-Methode wird von der getNumericFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

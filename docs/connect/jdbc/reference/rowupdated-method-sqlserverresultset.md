@@ -1,5 +1,5 @@
 ---
-title: RowUpdated-Methode (SQLServerResultSet) | Microsoft-Dokumentation
+title: rowUpdated-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b827ebb9740c9d88017c5d47626b9a1cef493143
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975660"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean rowUpdated()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn sowohl die Zeile sichtbar vom Besitzer oder von einem anderen Benutzer aktualisiert wurde, und Updates erkannt werden. Andernfalls lautet der Wert **false**.  
+ **true** , wenn beide Zeilen vom Besitzer oder einem anderen Benutzer sichtbar aktualisiert wurden und Updates erkannt werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese RowUpdated-Methode wird von der Rowudated-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese rowaktualisierte-Methode wird von der rowaktualisierte-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Der zurückgegebene Wert ist davon abhängig, ob vom Resultset Updates ermittelt werden.  
   

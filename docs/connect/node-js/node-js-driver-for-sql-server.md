@@ -1,5 +1,5 @@
 ---
-title: Node.js-Treiber für SQLServer | Microsoft-Dokumentation
+title: Node.js-Treiber für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a11104fa44b4a40d849193bd229b7186ef5b9dc5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916056"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js-Treiber für SQL Server
 
-![Download-nach-unten-Eingekreiste](../../ssdt/media/download.png)[Node.js SQL-Treiber herunterladen](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Herunterladen-nach-unten-Taste](../../ssdt/media/download.png)[zum Herunterladen von Node. js-SQL-Treiber](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Das Tedious-Modul ist eine Java-Implementierung des TDS-Protokolls, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein Open-Source-Projekt auf Github verfügbar.  
+Das Tedious-Modul ist eine Java-Implementierung des TDS-Protokolls, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein Open-Source-Projekt, das auf GitHub verfügbar ist.  
   
-Sie können mit einer SQL-Datenbank mithilfe von Node.js unter Windows, Linux oder Mac verbinden.  
+Sie können eine Verbindung mit einer SQL-Datenbank mithilfe von Node. js unter Windows, Linux oder Mac herstellen.  
   
 ## <a name="getting-started"></a>Erste Schritte  
 * [Schritt 1: Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung](step-1-configure-development-environment-for-node-js-development.md)  
@@ -33,15 +32,15 @@ Sie können mit einer SQL-Datenbank mithilfe von Node.js unter Windows, Linux od
   
 ## <a name="documentation"></a>Dokumentation  
   
-[Mühsam Modul Dokumentation auf Github](https://tediousjs.github.io/tedious/)  
+[Mühsame Moduldokumentation auf GitHub](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Community  
-* [Azure Node.js Developer Center](https://azure.microsoft.com/develop/nodejs/)  
-* [Leisten Sie Ihren am nodejs.org](https://nodejs.org/en/get-involved/)
+* [Azure Node. js-Entwickler Center](https://azure.microsoft.com/develop/nodejs/)  
+* [Beteiligen Sie sich an nodejs.org](https://nodejs.org/en/get-involved/)
 
 ## <a name="code-examples"></a>Codebeispiele
-* [Erste Schritte mit Node.js in Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
-* [Erste Schritte mit Node.js unter macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
-* [Erste Schritte mit Node.js unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
-* [Erste Schritte mit Node.js unter Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
-* [Erste Schritte mit Node.js unter SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)
+* [Einstieg in Node. js unter Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
+* [Einstieg in Node. js unter macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
+* [Einstieg in Node. js unter Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
+* [Getting Started with Node. js on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
+* [Ersten Einstieg in Node. js auf SuSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)

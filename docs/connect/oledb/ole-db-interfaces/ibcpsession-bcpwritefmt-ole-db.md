@@ -1,6 +1,6 @@
 ---
-title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Microsoft-Dokumentation'
-description: 'Mithilfe von ibcpsession:: Bcpwritefmt, speichern Sie die Formatdateien in XML- oder Text-Format (OLE DB)'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft-Dokumentation
+description: 'Verwenden von IBCPSession:: bcpschreitefmt zum Speichern der Format Dateien entweder im XML-Format oder im Textformat (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5d93d2114ff462eddd45fb5520a976d148cc96ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42a8b450fcc5536920ead44d4f401fb2e81d2b08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994538"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

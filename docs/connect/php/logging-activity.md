@@ -1,5 +1,5 @@
 ---
-title: Protokollieren von Aktivitäten | Microsoft-Dokumentation
+title: Protokollierungs Aktivität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993331"
 ---
 # <a name="logging-activity"></a>Protokollieren von Aktivitäten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +42,7 @@ Für**log_severity** sind die folgenden Werte möglich.
 |-1|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
 |1|Gibt an, dass Fehler protokolliert werden.|  
 |2|Gibt an, dass Warnungen protokolliert werden.|  
-|4|Gibt an, dass Hinweise protokolliert werden.|  
+|4|Gibt an, dass Benachrichtigungen protokolliert werden.|  
   
 Protokollierungsinformationen werden der „phperrors.log“-Datei hinzugefügt.  
   
@@ -98,7 +97,7 @@ Die folgende Tabelle beschreibt die Konstanten, die als Wert für die **LogSever
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Gibt an, dass Fehler, Warnungen und Hinweise protokolliert werden.|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|Gibt an, dass Fehler protokolliert werden. Dies ist die Standardeinstellung.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Gibt an, dass Warnungen protokolliert werden.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Gibt an, dass Hinweise protokolliert werden.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Gibt an, dass Benachrichtigungen protokolliert werden.|  
   
 Sie können mehr als einen Wert gleichzeitig für die **LogSeverity**-Einstellung mithilfe des logischen OR-Operators (|) festlegen. Die folgende Codezeile gibt z. B. an, dass Fehler und Warnungen protokolliert werden sollten:  
   
@@ -116,7 +115,7 @@ Durch die Addition von ganzzahligen Werten können Sie mehrere Optionen gleichze
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Konstanten &#40;Microsoft-Treiber für PHP für SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

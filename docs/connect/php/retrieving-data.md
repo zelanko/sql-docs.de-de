@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2dd99b2195cb4f44725ff813bc79c70ec5ffc44b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935893"
 ---
 # <a name="retrieving-data"></a>Abrufen von Daten
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,17 +73,17 @@ Sie können sehen, wie viele Zeilen ein Resultset aufweist, indem Sie einen bild
 |---------|---------------|  
 |[Abrufen von Daten als Stream](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Bietet einen Überblick über das Streamen von Daten vom Server und stellt Links für spezifische Anwendungsszenarien bereit.|  
 |[Verwenden direktionaler Parameter](../../connect/php/using-directional-parameters.md)|Beschreibt die Verwendung direktionaler Parameter beim Aufrufen einer gespeicherten Prozedur.|  
-|[Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Veranschaulicht, wie ein Resultset mit Zeilen, die Sie in beliebiger Reihenfolge zugreifen können.|  
+|[Festlegen eines Cursortyps und Zeilenauswahl](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Veranschaulicht, wie Sie ein Resultset mit Zeilen erstellen, auf die Sie in beliebiger Reihenfolge zugreifen können.|  
 |[Gewusst wie: Datums- und Uhrzeittypen mittels des SQLSRV-Treibers als Zeichenfolgen abrufen](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Beschreibt das Abrufen von Datums- und Uhrzeittypen als Zeichenfolgen mithilfe des SQLSRV-Treibers.|  
 |[Abrufen von Datums- und Uhrzeittypen als PHP-DateTime-Objekte mit dem PDO_SQLSRV-Treiber](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Informationen zum Abrufen von Datums- und Uhrzeittypen als Objekte mit dem PDO_SQLSRV-Treiber.|  
-|[Formatieren von decimal Zeichenfolgen mit SQLSRV-Treiber](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Veranschaulicht, wie zum Formatieren von Dezimal- oder Money-Werte, die mit dem SQLSRV-Treiber.|  
-|[Formatieren von decimal Zeichenfolgen mit dem PDO_SQLSRV-Treiber](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Veranschaulicht, wie zum Formatieren von Dezimal- oder Money-Werte, die mit dem PDO_SQLSRV-Treiber.|  
+|[Formatieren von Dezimalzeichen folgen mit dem sqlsrv-Treiber](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Veranschaulicht das Formatieren von Dezimal-oder Money-Werten mit dem sqlsrv-Treiber.|  
+|[Formatieren von Dezimalzeichen folgen mit PDO_SQLSRV-Treiber](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Veranschaulicht das Formatieren von Dezimal-oder Money-Werten mithilfe des PDO_SQLSRV-Treibers.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Vorgehensweise: PHP-Datentypen festlegen](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Abrufen von Daten](../../connect/php/retrieving-data.md)  
   

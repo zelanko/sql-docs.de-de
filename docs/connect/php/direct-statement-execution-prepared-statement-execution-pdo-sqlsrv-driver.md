@@ -1,5 +1,5 @@
 ---
-title: Direkte - Anweisung Ausführung PDO_SQLSRV-Treiber für vorbereitete Anweisungen | Microsoft-Dokumentation
+title: 'Direkte Anweisung: vorbereitete Anweisungs Ausführung PDO_SQLSRV Treiber | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,34 +10,33 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96a03a678152c523cdb16b77834863ff920586c8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa9e544fb7b79009d86a5742946a722d5adc18f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993618"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber.
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-In diesem Artikel wird erläutert, wie das PDO::SQLSRV_ATTR_DIRECT_QUERY-Attribut verwendet wird, um die direkte Anweisungsausführung anstelle des Standardwerts, der die Ausführung der vorbereiteten Anweisung darstellt, anzugeben. Mit einer vorbereiteten Anweisung kann in eine bessere Leistung führen, wenn die Anweisung ausgeführt wird, mehr als einmal mit der parameterbindung.  
+In diesem Artikel wird erläutert, wie das PDO::SQLSRV_ATTR_DIRECT_QUERY-Attribut verwendet wird, um die direkte Anweisungsausführung anstelle des Standardwerts, der die Ausführung der vorbereiteten Anweisung darstellt, anzugeben. Die Verwendung einer vorbereiteten Anweisung kann zu einer besseren Leistung führen, wenn die Anweisung mehrmals mithilfe der Parameter Bindung ausgeführt wird.  
   
 ## <a name="remarks"></a>Remarks  
-Wenn Sie senden möchten eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung direkt an den Server ohne anweisungsvorbereitung vom Treiber, Sie können das PDO:: sqlsrv_attr_direct_query-Attribut mit festlegen [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) (oder eine Treiberoption übergebenen [PDO:: __construct](../../connect/php/pdo-construct.md)) oder beim Aufruf [PDO:: Prepare](../../connect/php/pdo-prepare.md). Der Wert des PDO:: sqlsrv_attr_direct_query wird standardmäßig "false" (verwenden Sie vorbereitete anweisungsausführung).  
+Wenn Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ohne Anweisungs Vorbereitung durch den Treiber direkt an den Server senden möchten, können Sie das PDO:: SQLSRV_ATTR_DIRECT_QUERY-Attribut mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) festlegen (oder als Treiber Option an [PDO:: __construct ](../../connect/php/pdo-construct.md)) oder wenn Sie [PDO::p repare aufgerufen haben](../../connect/php/pdo-prepare.md). Standardmäßig ist der Wert von PDO:: SQLSRV_ATTR_DIRECT_QUERY false (verwenden Sie die vorbereitete Anweisungs Ausführung).  
   
-Bei Verwendung von [PDO:: Query](../../connect/php/pdo-query.md), sollten Sie die direkte Ausführung. Vor dem Aufruf [PDO:: Query](../../connect/php/pdo-query.md), rufen Sie [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) und PDO:: sqlsrv_attr_direct_query auf "true" festgelegt.  Jeder Aufruf von [PDO:: Query](../../connect/php/pdo-query.md) mit einer anderen Einstellung für PDO:: sqlsrv_attr_direct_query ausgeführt werden kann.  
+Wenn Sie [PDO:: Query](../../connect/php/pdo-query.md)verwenden, möchten Sie möglicherweise direkt ausführen. Bevor Sie [PDO:: Query](../../connect/php/pdo-query.md)aufrufen, rufen Sie [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) auf, und legen Sie PDO:: SQLSRV_ATTR_DIRECT_QUERY auf true fest.  Jeder Aufrufe von [PDO:: Query](../../connect/php/pdo-query.md) kann mit einer anderen Einstellung für PDO:: SQLSRV_ATTR_DIRECT_QUERY ausgeführt werden.  
   
-Bei Verwendung von [PDO:: Prepare](../../connect/php/pdo-prepare.md) und [pdostatement:: Execute](../../connect/php/pdostatement-execute.md) zum Ausführen einer Abfrage mehrere Male mit gebundenen Parametern, vorbereitete anweisungsausführung optimiert die Ausführung der Abfrage wiederholt.  In diesem Fall rufen [PDO:: Prepare](../../connect/php/pdo-prepare.md) mit PDO:: sqlsrv_attr_direct_query im Array Treiber Options-Parameter auf False festgelegt. Bei Bedarf können Sie die vorbereitete Anweisungen mit PDO:: sqlsrv_attr_direct_query auf "false" ausführen.  
+Wenn Sie [PDO::p repare](../../connect/php/pdo-prepare.md) und [PDOStatement:: Execute](../../connect/php/pdostatement-execute.md) verwenden, um eine Abfrage mehrmals mit gebundenen Parametern auszuführen, wird die Ausführung der wiederholten Abfrage durch die vorbereitete Anweisungs Ausführung optimiert.  Nennen Sie in diesem Fall [PDO::p repare](../../connect/php/pdo-prepare.md) mit PDO:: SQLSRV_ATTR_DIRECT_QUERY im Parameter "Driver Options Array" auf "false" festgelegt ist. Bei Bedarf können Sie vorbereitete Anweisungen ausführen, bei denen PDO:: SQLSRV_ATTR_DIRECT_QUERY auf "false" festgelegt ist.  
   
-Nach dem Aufruf von [PDO:: Prepare](../../connect/php/pdo-prepare.md), der Wert des PDO:: sqlsrv_attr_direct_query kann nicht geändert werden, wenn die vorbereitete Abfrage ausgeführt.  
+Nachdem Sie [PDO::p repare](../../connect/php/pdo-prepare.md)aufgerufen haben, kann der Wert von PDO:: SQLSRV_ATTR_DIRECT_QUERY beim Ausführen der vorbereiteten Abfrage nicht geändert werden.  
   
-Wenn eine Abfrage den Kontext, der in einer vorherigen Abfrage festgelegt wurde erfordert, führen Sie dann Ihre Abfragen mit PDO:: sqlsrv_attr_direct_query auf "true" festgelegt ist. Wenn Sie temporäre Tabellen in Ihren Abfragen verwenden, muss z. B. PDO:: sqlsrv_attr_direct_query auf "true" festgelegt werden.  
+Wenn eine Abfrage den Kontext erfordert, der in einer vorherigen Abfrage festgelegt wurde, führen Sie die Abfragen mit PDO:: SQLSRV_ATTR_DIRECT_QUERY Set auf true aus. Wenn Sie z. b. temporäre Tabellen in Ihren Abfragen verwenden, muss PDO:: SQLSRV_ATTR_DIRECT_QUERY auf true festgelegt werden.  
   
-Das folgende Beispiel zeigt, dass wenn eine vorherige Anweisung Kontext erforderlich ist, Sie PDO:: sqlsrv_attr_direct_query auf "true" festlegen müssen. Dieses Beispiel verwendet die temporäre Tabellen, die nur sind für nachfolgende Anweisungen in Ihrem Programm verfügbar, wenn Abfragen direkt ausgeführt werden.  
+Das folgende Beispiel zeigt, dass Sie PDO:: SQLSRV_ATTR_DIRECT_QUERY auf true festlegen müssen, wenn der Kontext aus einer vorherigen-Anweisung erforderlich ist. In diesem Beispiel werden temporäre Tabellen verwendet, die nur für nachfolgende Anweisungen in Ihrem Programm verfügbar sind, wenn Abfragen direkt ausgeführt werden.  
   
 > [!NOTE]
-> Wenn die Abfrage zum Aufrufen einer gespeicherten Prozedur ist und temporäre Tabellen werden in dieser gespeicherten Prozedur verwenden verwendet [PDO:: EXEC](../../connect/php/pdo-exec.md) stattdessen.
+> Wenn die Abfrage eine gespeicherte Prozedur aufrufen soll und temporäre Tabellen in dieser gespeicherten Prozedur verwendet werden, verwenden Sie stattdessen [PDO:: exec](../../connect/php/pdo-exec.md) .
 
 ```  
 <?php  
@@ -70,5 +69,5 @@ Das folgende Beispiel zeigt, dass wenn eine vorherige Anweisung Kontext erforder
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

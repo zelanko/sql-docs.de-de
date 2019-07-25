@@ -1,5 +1,5 @@
 ---
-title: SetSavepoint-Methode (java.lang.String) | Microsoft-Dokumentation
+title: setSavepoint-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1cf15ec4-d9d9-4ab3-bfee-2ea43ff609a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 41d9cf40028efb2fac732ec7f6da4a3be39095af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cae36f62cba9f7c8b97ae13c06d1f01960f616e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973088"
 ---
 # <a name="setsavepoint-method-javalangstring"></a>setSavepoint-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
  Ein Wert vom Typ **Zeichenfolge** mit dem Namen des Sicherungspunkts.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein Objekt des Sicherungspunkts.  
+ Ein SAVEPOINT-Objekt.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese SetSavePoint-Methode wird von der SetSavePoint-Methode in der java.sql.Connection-Schnittstelle angegeben.  
+ Diese setSavepoint-Methode wird von der setSavepoint-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Das *sName*-Argument wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatisch mit Escapezeichen versehen.  
   

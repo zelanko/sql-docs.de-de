@@ -1,5 +1,5 @@
 ---
-title: IsAfterLast-Methode (SQLServerResultSet) | Microsoft-Dokumentation
+title: isAfterLast-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19f9d124-3184-4985-8b97-503a8ab8b4f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 505b96129c6d37bbadc464cf45a9ebec8d48f1f2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 233599694c4fb4f7764bbb48d5c77e0fcd273340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977846"
 ---
 # <a name="isafterlast-method-sqlserverresultset"></a>isAfterLast-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isAfterLast()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn der Cursor nach der letzten Zeile befindet. **"false"** Wenn der Cursor an einer beliebigen anderen Position ist oder wenn das Resultset keine Zeilen enthält.  
+ **true** , wenn der Cursor nach der letzten Zeile liegt. **false** , wenn sich der Cursor an einer beliebigen anderen Position befindet oder wenn das Resultset keine Zeilen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese IsAfterLast-Methode wird von der IsAfterLast-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese isafterlast-Methode wird von der isafterlast-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Wird diese Methode mit dynamischen Cursors verwendet, einschließlich schreibgeschützten Vorwärtscursors und die selectMethod-Verbindungseigenschaft auf "cursor" festgelegt, wird eine Ausnahme ausgelöst.  
   

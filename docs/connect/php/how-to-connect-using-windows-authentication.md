@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Herstellen einer Verbindung mit der Windows-Authentifizierung | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18294f43eceabb531d61c919303b5e874ba63a99
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 84707c67491d4f02be41e6506fb233ee7afef9fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936509"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Vorgehensweise: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -108,7 +107,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ## <a name="see-also"></a>Weitere Informationen  
 [Gewusst wie: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
 

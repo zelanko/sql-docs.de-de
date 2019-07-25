@@ -1,5 +1,5 @@
 ---
-title: letzte-Methode (SQLServerResultSet) | Microsoft-Dokumentation
+title: last-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f97a3d27deeb4a51663cb108ab3adc77b75e29e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976888"
 ---
 # <a name="last-method-sqlserverresultset"></a>last-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean last()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn der aktuelle Zeile gültig ist. **"false"** , wenn es keine weiteren Zeilen zu verarbeiten sind.  
+ **true** , wenn die neue aktuelle Zeile gültig ist. **false** , wenn keine weiteren zu verarbeitenden Zeilen vorhanden sind.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

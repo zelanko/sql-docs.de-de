@@ -1,5 +1,5 @@
 ---
-title: ExecuteUpdate-Methode (java.lang.String, Int) | Microsoft-Dokumentation
+title: executeUpdate-Methode (java.lang.String, int) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 86906a5c0c31f29b77fc899a3553e01adc822e46
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954759"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate-Methode (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +55,7 @@ public final int executeUpdate(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese ExecuteUpdate-Methode wird von der ExecuteUpdate-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+ Diese executeUpdate-Methode wird von der executeUpdate-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
  Wenn das Ausführen einer gespeicherten Prozedur zu einer Updatezählung größer als 1 führt oder mehrere Resultsets generiert werden, führen Sie die gespeicherte Prozedur mit der [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)-Methode aus.  
   

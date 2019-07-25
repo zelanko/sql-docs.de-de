@@ -1,5 +1,5 @@
 ---
-title: IsLast-Methode (SQLServerResultSet) | Microsoft-Dokumentation
+title: isLast-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dab78e0f48f2bb7debcf5d993dfb128388a42506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977613"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** , wenn der Cursor in der letzten Zeile befindet. **"false"** Wenn der Cursor an einer beliebigen anderen Position ist oder wenn das Resultset keine Zeilen enthält.  
+ **true** , wenn sich der Cursor in der letzten Zeile befindet. **false** , wenn sich der Cursor an einer beliebigen anderen Position befindet oder wenn das Resultset keine Zeilen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: GetIndexInfo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getIndexInfo-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982793"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **"true"** Wenn nur Indizes für eindeutige Werte zurückgegeben werden. **"false"** Wenn alle Indizes zurückgegeben werden.  
+ **true** , wenn nur Indizes für eindeutige Werte zurückgegeben werden. **false** , wenn alle Indizes zurückgegeben werden.  
   
  *approximate*  
   
- **"true"** , wenn die Ergebnisse ungefähre oder veraltetes Werte. **"false"** , wenn die Ergebnisse genau sind.  
+ **true** , wenn die Ergebnisse ungefähre oder veraltete Werte widerspiegeln. **false** , wenn die Ergebnisse korrekt sind.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt.  
@@ -67,7 +66,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetIndexInfo-Methode wird von der GetIndexInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getIndexInfo-Methode wird von der getIndexInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getIndexInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  
   
@@ -83,8 +82,8 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |ORDINAL_POSITION|**short**|Die Ordinalposition der Spalte innerhalb des Indexes. Die erste Spalte im Index hat den Wert 1.|  
 |COLUMN_NAME|**String**|Name der Spalte.|  
 |ASC_OR_DESC|**String**|Der in der Indexsortierung verwendete Befehl. Mögliche Werte:<br /><br /> A (aufsteigend)<br /><br /> D (absteigend)<br /><br /> NULL (nicht anwendbar)<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt immer A zurück.|  
-|CARDINALITY|**ssNoversion**|Die Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
-|PAGES|**ssNoversion**|Die Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle verwendet werden.|  
+|CARDINALITY|**int**|Die Anzahl der Zeilen in der Tabelle oder der eindeutigen Werte im Index|  
+|PAGES|**int**|Die Anzahl der Seiten, die zum Speichern des Indexes oder der Tabelle verwendet werden.|  
 |FILTER_CONDITION|**String**|Die Filter-Bedingung.<br /><br /> **Hinweis:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt immer NULL zurück.|  
   
 > [!NOTE]  

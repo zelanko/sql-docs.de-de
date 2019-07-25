@@ -1,5 +1,5 @@
 ---
-title: GetStringFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getStringFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20dfb1ecadbd417a79e74171e4f247e6b09ed40f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979369"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichenfolge** , enthält die **Zeichenfolge** Funktionen.  
+ Eine **Zeichen** Folge, die die **Zeichen** folgen Funktionen enthält.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetStringFunctions-Methode wird von der GetStringFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getStringFunctions-Methode wird von der getStringFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

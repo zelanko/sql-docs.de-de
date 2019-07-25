@@ -1,5 +1,5 @@
 ---
-title: ExecuteQuery-Methode (java.lang.String) | Microsoft-Dokumentation
+title: executeQuery-Methode (java.lang.String) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f881493288c385cb490f9d04b22acce03e19f29
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954813"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery-Methode (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,13 +46,13 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese ExecuteQuery-Methode wird von der ExecuteQuery-Methode in der java.sql.Statement-Schnittstelle angegeben.  
+ Diese executeQuery-Methode wird von der executeQuery-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
  Die Methode überschreibt die [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode, die sich in der [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse befindet.  
   
  Durch den Aufruf dieser Methode wird eine Ausnahme ausgelöst, da die SQL-Anweisung für das SQLServerPreparedStatement-Objekt bei der Erstellung des Objekts angegeben wird.  
   
- [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn die angegebene SQL-Anweisung, etwas anderes als eine einzelne erzeugt [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) Objekt.  
+ [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn die angegebene SQL-Anweisung nichts anderes als ein einzelnes [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt erzeugt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [executeQuery-Methode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   

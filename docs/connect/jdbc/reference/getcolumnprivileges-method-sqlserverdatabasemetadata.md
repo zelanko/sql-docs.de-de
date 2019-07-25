@@ -1,5 +1,5 @@
 ---
-title: GetColumnPrivileges-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getcolumnprivileges-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952876"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetColumnPrivileges-Methode wird von der GetColumnPrivileges-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getColumnPrivileges-Methode wird von der getColumnPrivileges-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getColumnPrivileges-Methode zurückgegebene Resultset enthält folgende Informationen:  
   

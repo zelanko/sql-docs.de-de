@@ -1,5 +1,5 @@
 ---
-title: Vergleichen von Ausführungsfunktionen | Microsoft-Dokumentation
+title: Vergleichen von Ausführungs Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82a5b96d25ed608ad9e44dec6a937527055c65e3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993742"
 ---
 # <a name="comparing-execution-functions"></a>Vergleichen von Ausführungsfunktionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] bietet mehrere Optionen zum Ausführen von Funktionen.  
 
-## <a name="sqlsrv-execution-functions"></a>SQLSRV-Ausführungsfunktionen  
+## <a name="sqlsrv-execution-functions"></a>SQLSRV-Ausführungs Funktionen  
 Wenn Sie den SQLSRV-Treiber verwenden, verwenden Sie [sqlsrv_query](../../connect/php/sqlsrv-query.md) zum Ausführen einer einzelnen Abfrage und [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) mit [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) zur mehrfachen Ausführung einer vorbereiteten Anweisung mit verschiedenen Parameterwerten für jede Ausführung.  
 
-## <a name="pdosqlsrv-execution-functions"></a>PDO_SQLSRV Ausführungsfunktionen 
+## <a name="pdosqlsrv-execution-functions"></a>PDO_SQLSRV-Ausführungs Funktionen 
 Wenn Sie den PDO_SQLSRV-Treiber verwenden, können Sie eine Abfrage mit einer der folgenden Methoden ausführen:  
   
 -   [PDO::exec](../../connect/php/pdo-exec.md)  
@@ -42,5 +41,5 @@ Wenn Sie den PDO_SQLSRV-Treiber verwenden, können Sie eine Abfrage mit einer de
 
 [Referenz zum Treiber PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

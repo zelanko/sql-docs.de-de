@@ -1,5 +1,5 @@
 ---
-title: GetCharacterStream-Methode (SQLServerClob) | Microsoft-Dokumentation
+title: getCharacterStream-Methode (SQLServerClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2baeb3fcebeac4f95a1c3d63ca8752275b2ac0e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7c521ac453cc0f82577c1d87a78e68d8ddf9cb78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66775682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953226"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>getCharacterStream-Methode (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Ruft die **Clob** Wert durch die java.sql.Clob-Objekts als java.io.Reader-Objekt festgelegt.  
+  Ruft den **CLOB** -Wert ab, der vom Java. SQL. Clob-Objekt als Java. IO. Reader-Objekt festgelegt wurde.  
   
 ## <a name="overload-list"></a>Überladungsliste  
   

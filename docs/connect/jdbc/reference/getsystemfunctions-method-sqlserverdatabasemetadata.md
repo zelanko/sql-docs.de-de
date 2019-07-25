@@ -1,5 +1,5 @@
 ---
-title: GetSystemFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getSystemFunctions-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0176be5707f0e0af9fa2444445881eed3039d532
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08df5c1c52712e8180d18dbe930cea271ca03e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979268"
 ---
 # <a name="getsystemfunctions-method-sqlserverdatabasemetadata"></a>getSystemFunctions-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSystemFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetSystemFunctions-Methode wird von der GetSystemFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getSystemFunctions-Methode wird von der getSystemFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

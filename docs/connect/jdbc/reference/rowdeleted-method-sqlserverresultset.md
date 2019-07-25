@@ -1,5 +1,5 @@
 ---
-title: RowDeleted-Methode (SQLServerResultSet) | Microsoft-Dokumentation
+title: rowDeleted-Methode (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 656672ad8ae1c852da2e1242f85cc6c0d5f90df3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 37221f0f9c7cf87576f0014b855ed28740e4818e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975713"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>rowDeleted-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean rowDeleted()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- **"true"** Wenn eine Zeile gelöscht wurde, und Löschvorgänge werden erkannt. Andernfalls lautet der Wert **false**.  
+ **true** , wenn eine Zeile gelöscht wurde und Löschungen erkannt werden. Andernfalls lautet der Wert **false**.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese RowDeleted-Methode wird von der RowDeleted-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
+ Diese RowDeleted-Methode wird von der RowDeleted-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Eine gelöschte Zeile hinterlässt in einem Resultset ggf. eine sichtbare Lücke. Diese Methode kann verwendet werden, um Löcher in einem Resultset zu ermitteln. Der zurückgegebene Wert ist davon abhängig, ob vom [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt Löschungen ermittelt werden können.  
   

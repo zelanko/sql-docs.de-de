@@ -1,5 +1,5 @@
 ---
-title: GetLong-Methode (Int) (SQLServerResultSet) | Microsoft-Dokumentation
+title: getLong-Methode (int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2d1beec5-fc50-4563-81da-835e4b392874
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 74b31873d0986ca229805b6d1129701290c0afe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f775473fcab7f7019f4ba640fccc8af34188ab12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982529"
 ---
 # <a name="getlong-method-int-sqlserverresultset"></a>getLong-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long getLong(int columnIndex)
  Ein **ganzzahliger** Wert, der den Spaltenindex angibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **lange** Wert.  
+ Ein **Long** -Wert.  
   
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: GetSubString-Methode (SQLServerNClob) | Microsoft-Dokumentation
+title: getSubString-Methode (SQLServerNClob) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6329fbae355b6d6a232aed87c5d786475e08ee19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979326"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString-Methode (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getSubString(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetSubString-Methode wird von der GetSubString-Methode in der java.sql.NClob-Schnittstelle angegeben.  
+ Diese getSubString-Methode wird von der getSubString-Methode in der java.sql.NClob-Schnittstelle angegeben.  
   
  Beim Versuch, null Zeichen aus einem leeren NCLOB oder aus einem NCLOB mit der Länge Null abzurufen, wird eine leere Zeichenfolge zurückgegeben. Beim Versuch, aus einem NCLOB mit der Länge Null eine beliebige Zeichenlänge an einer beliebigen Position (und nicht von Position 1) abzurufen, wird eine Positionsausnahme ausgelöst.  
   

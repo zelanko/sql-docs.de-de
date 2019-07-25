@@ -1,5 +1,5 @@
 ---
-title: Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer | Microsoft-Dokumentation
+title: Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992889"
 ---
-# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQLServer
+# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Sicherheitsüberlegungen für die Microsoft-Treiber für PHP für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Dieses Thema beschreibt Sicherheitsüberlegungen speziell für die Entwicklung, die Bereitstellung und den Betrieb von Anwendungen, die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]verwenden. Ausführlichere Informationen zu SQL Server-Sicherheit finden Sie unter [Overview of SQL Server Security](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
+Dieses Thema beschreibt Sicherheitsüberlegungen speziell für die Entwicklung, die Bereitstellung und den Betrieb von Anwendungen, die [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]verwenden. Ausführlichere Informationen zur SQL Server Sicherheit finden Sie unter [Übersicht über die SQL Server Sicherheit](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
   
 ## <a name="connect-using-windows-authentication"></a>Herstellen einer Verbindung mithilfe der Windows-Authentifizierung  
 Aus folgenden Gründen sollte, wann immer möglich, die Windows-Authentifizierung für die Verbindung zu SQL Server verwendet werden:  
@@ -54,5 +53,5 @@ Legen Sie während der Anwendungsentwicklung für den Schalter „ **WarningsAsE
 Stellen Sie sicher, dass die Protokolle bereitgestellter Anwendungen an einem sicheren Ort gespeichert werden, oder dass die Protokollierung deaktiviert ist. Dies schützt gegen mögliche Zugriffe von Endbenutzern auf Informationen, die in die Protokolldateien geschrieben wurden. Weitere Informationen finden Sie unter [Logging Activity](../../connect/php/logging-activity.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Programmierhandbuch für den Microsoft-Treiber für PHP für SQLServer](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

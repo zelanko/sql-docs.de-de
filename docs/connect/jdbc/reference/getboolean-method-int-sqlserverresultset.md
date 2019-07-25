@@ -1,5 +1,5 @@
 ---
-title: GetBoolean-Methode (Int) (SQLServerResultSet) | Microsoft-Dokumentation
+title: getBoolean-Methode (int) (SQLServerResultSet) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3380b26cb0401e35c59b50b349c279566612c50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cd1d57581a92df0423de09dfe672f29c2cabf81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953573"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean-Methode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public boolean getBoolean(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Diese getBoolean-Methode wird von der getBoolean-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
- Diese Methode wird nur für Zahlen- und Zeichendatentypen unterstützt. Konvertiert Werte "1", 1, und " **" true "** " zum **"true"** , und die Werte "0", 0 (null) und " **" false "** " um **"false"** . Für alle anderen Werte bleibt das Verhalten nicht definiert.  
+ Diese Methode wird nur für Zahlen- und Zeichendatentypen unterstützt. Dabei werden die Werte "1", "1" und "**true**" in " **true**" und die Werte "0", "0" und "**false**" in " **false**" konvertiert. Für alle anderen Werte bleibt das Verhalten nicht definiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [getBoolean Method &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

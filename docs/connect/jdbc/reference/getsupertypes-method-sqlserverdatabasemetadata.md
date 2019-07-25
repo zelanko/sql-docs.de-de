@@ -1,5 +1,5 @@
 ---
-title: GetSuperTypes-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
+title: getsupertypes-Methode (SQLServerDatabaseMetaData) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1b81a18d953bcf3df8ff142535204e648edbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a5893bb1585fba014a5bf652265d69953c6a11d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979289"
 ---
 # <a name="getsupertypes-method-sqlserverdatabasemetadata"></a>getSuperTypes-Methode (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +59,7 @@ public java.sql.ResultSet getSuperTypes(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Diese GetSuperTypes-Methode wird von der GetSuperTypes-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
+ Diese getSuperTypes-Methode wird von der getSuperTypes-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQLServerDatabaseMetaData-Methoden](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

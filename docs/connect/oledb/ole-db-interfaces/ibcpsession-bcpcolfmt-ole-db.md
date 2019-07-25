@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPColFmt (OLE DB) | Microsoft-Dokumentation'
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft-Dokumentation
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994577"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,7 @@ HRESULT BCPColFmt(
  Der Feldindex in der Datendatei des Benutzers  
   
  *eUserDataType*[in]  
- Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen werden in der OLE DB-Treiber für SQL Server-Headerdatei (msoledbsql.h) bcp_type_xxx auf Format z. B. BCP_TYPE_SQLINT4 aufgeführt. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Für Massenkopiervorgänge aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in eine Datei, wenn das **eUserDataType** -Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt:  
+ Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen sind im OLE DB Treiber für SQL Server Header Datei (msoledbsql. h) mit dem Format BCP_TYPE_XXX aufgeführt, z. b. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Für Massenkopiervorgänge aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in eine Datei, wenn das **eUserDataType** -Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC lautet, gilt:  
   
 -   Wenn die Quellspalte nicht dezimal oder numerisch ist, werden die Standardgenauigkeit und die Standardanzahl von Dezimalstellen verwendet.  
   
