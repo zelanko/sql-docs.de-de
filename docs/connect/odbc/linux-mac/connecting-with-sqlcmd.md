@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit Sqlcmd | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit sqlcmd | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005912"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Das [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481)-Hilfsprogramm ist in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar.
   
-Die folgenden Befehle demonstrieren, wie Sie mit der Windows-Authentifizierung (Kerberos) und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentifizierung bzw.:
+Die folgenden Befehle zeigen die Verwendung der Windows- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentifizierung (Kerberos) bzw. der Authentifizierung:
   
 ```  
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
@@ -36,23 +35,23 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 Im aktuellen Release sind die folgenden Optionen verfügbar:  
   
-- -? Anzeige `sqlcmd` Nutzung.  
+- -? Anzeigen `sqlcmd` der Verwendung.  
   
 - -a Fordert eine Paketgröße an.  
   
 - -b Beendet den Batchauftrag, wenn ein Fehler auftritt.  
   
-- -C *Batch_terminator* Geben Sie das Batchabschlusszeichen.  
+- -c *batch_terminator* geben Sie das Batch Abschluss Zeichen an.  
   
 - -C Vertrauenswürdiges Serverzertifikat.  
 
-- -d *Database_name* Problem eine `USE` *Database_name* -Anweisung, wenn Sie starten `sqlcmd`.  
+- -d *database_name* geben Sie `USE` beim Starten `sqlcmd`eine *database_name* -Anweisung aus.  
 
 - -D Bewirkt, dass der Wert, der an die Option -S von `sqlcmd` übergeben wird, als Datenquellenname (Data Source Name, DSN) interpretiert wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in `sqlcmd` und `bcp`“ am Ende dieses Themas.  
   
 - -e Schreibt Eingabeskripts in das Standardausgabegerät (stdout).
 
-- Verwenden Sie eine vertrauenswürdige Verbindung, integrierte Authentifizierung. Weitere Informationen zum vornehmen von vertrauenswürdiger Verbindungen, die die integrierte Authentifizierung von einem Client für Linux oder MacOS verwenden, finden Sie unter [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+- Verwenden Sie eine vertrauenswürdige Verbindung, integrierte Authentifizierung. Weitere Informationen zum Erstellen von vertrauenswürdigen Verbindungen, die eine integrierte Authentifizierung von einem Linux-oder macOS-Client verwenden, finden [Sie unter Verwenden der integrierten Authentifizierung](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
 
 - -h *number_of_rows* Gibt Sie die Anzahl der Zeilen an, die zwischen den Spaltenüberschriften ausgegeben werden sollen.  
   
@@ -60,7 +59,7 @@ Im aktuellen Release sind die folgenden Optionen verfügbar:
   
 - -i *input_file*[,*input_file*[,…]] Identifiziert die Datei, die einen Batch mit SQL-Anweisungen oder gespeicherten Prozeduren enthält.  
   
-- -Ich Satz der `SET QUOTED_IDENTIFIER` -Verbindungsoption auf ON.  
+- -Ich habe die `SET QUOTED_IDENTIFIER` Verbindungs Option auf ON festgelegt.  
   
 - -k Entfernt oder ersetzt Steuerzeichen.  
   
@@ -75,7 +74,7 @@ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbind
 - -m *error_level* Steuert, welche Fehlernachrichten an stdout gesendet werden.  
   
 - **-M**_multisubnetz\_failover_  
-Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], finden Sie unter [ODBC-Treiber unter Linux und MacOS – hohe Verfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] unter [ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** wird in der CTP-Version für SUSE Linux nicht unterstützt. Sie können jedoch das Schlüsselwort **MultiSubnetFailover=Yes** in einer DSN-Datei angeben, die an `sqlcmd` übergeben wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in `sqlcmd` und `bcp`“ am Ende dieses Themas.  
@@ -88,28 +87,28 @@ Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgrupp
   
 - -P Gibt ein Benutzerkennwort an.  
   
-- -Q *Commandline_query* Ausführen einer Abfrage bei `sqlcmd` wird gestartet, aber nicht beendet, wenn die Abfrage ausgeführt wurde.  
+- -q *commandline_query* führen Sie eine Abfrage `sqlcmd` aus, wenn gestartet wird, jedoch nicht beendet wird, wenn die Ausführung der Abfrage abgeschlossen ist.  
 
-- -Q *Commandline_query* Ausführen einer Abfrage bei `sqlcmd` beginnt. `sqlcmd` wird beendet, wenn die Abfrage abgeschlossen ist.  
+- -Q *commandline_query* führen Sie eine Abfrage `sqlcmd` aus, wenn gestartet wird. `sqlcmd` wird beendet, wenn die Abfrage abgeschlossen ist.  
 
 - -r Leitet die Fehlermeldungen an stderr um.
 
 - -R Bewirkt, dass der Treiber die regionalen Einstellungen des Clients verwendet, um Währungs-, Datums- und Uhrzeitdaten in Zeichendaten zu konvertieren. Derzeit werden nur en_US-Formatierungen (US-Englisch) verwendet.
   
-- -s *Column_separator_char* der Spaltentrennzeichen angeben.  
+- -s *column_separator_char* geben Sie das Spalten Trennzeichen an.  
 
 - -S [*Protokoll*:] *Server*[ **,** _Port_]  
-Geben Sie die Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellen oder wenn – D verwendet wird, einen DSN. Der ODBC-Treiber unter Linux und MacOS erfordert -S. Beachten Sie, dass **Tcp** ist das einzige gültige Protokoll.  
+Geben Sie die Instanz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von an, mit der eine Verbindung hergestellt werden soll, oder, wenn-D verwendet wird, einen DSN. Der ODBC-Treiber unter Linux und macOS erfordert-S. Beachten Sie, dass **TCP** das einzige gültige Protokoll ist.  
   
 - -t *query_timeout* Gibt an, wie viele Sekunden verstreichen, bevor für einen Befehl (oder eine SQL-Anweisung) ein Timeout eintritt.  
   
 - -u Gibt an, dass output_file unabhängig vom Format von input_file im Unicode-Format gespeichert wird.  
   
-- -U *Login_id* Geben Sie eine Benutzeranmelde-ID.  
+- -U *login_id* geben Sie eine Benutzer Anmelde-ID an.  
   
 - -V *error_severity_level* Steuert den Schweregrad, der zur Festlegung der Variable ERRORLEVEL verwendet wird.  
   
-- -w *Column_width* Geben Sie die Bildschirmbreite für die Ausgabe.  
+- -w *column_width* geben Sie die Bildschirmbreite für die Ausgabe an.  
   
 - -W Entfernt nachfolgende Leerzeichen aus einer Spalte.  
   
@@ -117,9 +116,9 @@ Geben Sie die Instanz des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-m
   
 - -X Deaktiviert Befehle, Startskripts und Umgebungsvariablen.  
   
-- / y *Variable_length_type_display_width* legen Sie die `sqlcmd` Skriptvariable `SQLCMDMAXFIXEDTYPEWIDTH`.
+- -y *variable_length_type_display_width* legen Sie `sqlcmd` die Skript `SQLCMDMAXFIXEDTYPEWIDTH`Variable fest.
   
-- / Y *Fixed_length_type_display_width* legen Sie die `sqlcmd` Skriptvariable `SQLCMDMAXVARTYPEWIDTH`.
+- -Y *fixed_length_type_display_width* legen Sie `sqlcmd` die Skript `SQLCMDMAXVARTYPEWIDTH`Variable fest.
 
 
 ## <a name="available-commands"></a>Verfügbare Befehle
@@ -167,7 +166,7 @@ Im aktuellen Release sind die folgenden Optionen nicht verfügbar:
   
 - -v Erstellt eine `sqlcmd`-Skriptvariable, die in einem `sqlcmd`-Skript verwendet werden kann.  
   
-Sie können die folgende alternative Methode verwenden: Schreiben Sie die Parameter in eine Datei, die Sie dann in eine andere Datei anfügen können. Dies hilft Ihnen dabei, eine Parameterdatei zu verwenden, um die Werte zu ersetzen. Erstellen Sie beispielsweise eine Datei namens `a.sql` (die Parameterdatei) mit dem folgenden Inhalt:
+Sie können die folgende Alternative Methode verwenden: Platzieren Sie die Parameter in einer Datei, die Sie dann an eine andere Datei anfügen können. Dies hilft Ihnen dabei, eine Parameterdatei zu verwenden, um die Werte zu ersetzen. Erstellen Sie beispielsweise eine Datei namens `a.sql` (die Parameterdatei) mit dem folgenden Inhalt:
   
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
@@ -176,19 +175,19 @@ Erstellen Sie anschließend eine Datei namens `b.sql` mit den Parametern für de
   
     select $(ColumnName) from $(TableName)  
 
-Kombinieren Sie in der Befehlszeile `a.sql` und `b.sql` in `c.sql` mit den folgenden Befehlen:  
+Kombinieren `a.sql` `c.sql` Sie in der Befehlszeile `b.sql` , und verwenden Sie die folgenden Befehle:  
   
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
   
-Führen Sie `sqlcmd` und `c.sql` als Eingabedatei angegeben:  
+Ausführen `sqlcmd` und als `c.sql` Eingabedatei verwenden:  
   
     slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
-- -Z *Kennwort* Kennwort ändern.  
+- -z ** Kennwort Kennwort ändern.  
   
-- -Z *Kennwort* Kennwort ändern und beenden.  
+- -Z *Kennwort* -Kennwort ändern und beenden.  
 
 ## <a name="unavailable-commands"></a>Nicht verfügbare Befehle
 
@@ -202,17 +201,17 @@ Im aktuellen Release sind die folgenden Befehle nicht verfügbar:
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>DSN-Unterstützung in sqlcmd und bcp
 
-Sie können bei der Option **sqlcmd** oder **bcp** `-S` (oder **sqlcmd**: Befehl verbinden) statt eines Servernamens einen Datenquellennamen (Data Source Name, DSN) angeben, wenn Sie -D angeben. -D bewirkt, dass **Sqlcmd** oder **Bcp** für die Verbindung mit dem Server, der im DSN angegeben ist, indem Sie die Option-s.  
+Sie können bei der Option **sqlcmd** oder **bcp** `-S` (oder **sqlcmd**: Befehl verbinden) statt eines Servernamens einen Datenquellennamen (Data Source Name, DSN) angeben, wenn Sie -D angeben. -D bewirkt, dass **sqlcmd** oder **bcp** mit der Option-S eine Verbindung mit dem Server herstellt, der im DSN angegeben ist.  
   
-System-DSNs werden gespeichert, der `odbc.ini` -Datei in die ODBC-SysConfigDir-Verzeichnis (`/etc/odbc.ini` auf standard-Installationen). Benutzer-DSNs werden in gespeichert `.odbc.ini` im Basisverzeichnis des Benutzers (`~/.odbc.ini`).
+System-DSNs werden in der `odbc.ini` Datei im ODBC-sysconfigdir-Verzeichnis`/etc/odbc.ini` (bei Standard Installationen) gespeichert. Benutzer-DSNs werden in `.odbc.ini` im Basisverzeichnis eines Benutzers gespeichert (`~/.odbc.ini`).
   
 Die folgenden Einträge werden in einem DSN unter Linux oder macOS unterstützt:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Datenbank =** _Datenbank\_Name_  
+-   **Datenbank =** _Daten\_Bankname_  
   
--   **Treiber = ODBC-Treiber 11 für SQLServer** oder **Treiber = ODBC-Treiber 13 für SQLServer**
+-   **Driver = ODBC Driver 11 for SQL Server** or **Driver = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
