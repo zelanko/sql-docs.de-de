@@ -1,5 +1,5 @@
-- name: SQL Server-Machine Learning-Dienste
-  href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: SQL Server Machine Learning Services-Dokumentation
+  href: ../advanced-analytics/index.yml
 - name: Willkommen bei SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Übersicht
