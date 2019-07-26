@@ -7,15 +7,15 @@ ms.date: 03/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 09547f5f77eae8cff0924dfdf227c31563c10abd
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 79a5eeb48816f858d3e009f8564487fd68769979
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345584"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470208"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Erstellen von SSIS-und SSRS-Workflows mit R auf SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Artikel wird erläutert, wie Sie eingebettete R-und python-Skripts mithilfe der Sprach-und Data Science Funktionen SQL Server Machine Learning Services mit zwei wichtigen SQL Server Features verwenden: SQL Server Integration Services (SSIS) und SQL Server Reporting Services SSRS. R-und python-Bibliotheken in SQL Server stellen statistische und Vorhersagefunktionen bereit. SSIS und SSRS bieten koordinierte ETL-Transformation und-Visualisierungen. In diesem Artikel wird erläutert, wie alle diese Features in diesem Workflow Muster eingefügt werden:
 

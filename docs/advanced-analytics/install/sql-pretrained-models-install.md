@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2045d6611d5f418a9ed102a1d776080973c08659
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f89e638b6b9486b17974a04af6076e6c7154fa88
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344968"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470346"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installieren von vorab trainierten Machine Learning-Modellen auf SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Artikel wird erläutert, wie Sie mithilfe von PowerShell kostenlose vorab trainierte Machine Learning-Modelle für die *Stimmungs Analyse* und *Bild featurearisierung* in einer SQL Server Instanz mit R-oder python-Integration hinzufügen. Die vorab trainierten Modelle werden von Microsoft erstellt und können einer Instanz als nach der Installation hinzugefügt werden. Weitere Informationen zu diesen Modellen finden Sie im Abschnitt " [Ressourcen](#bkmk_resources) " in diesem Artikel.
 

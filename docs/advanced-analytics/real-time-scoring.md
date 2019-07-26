@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345677"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469970"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Echtzeitbewertung mit sp_rxPredict in SQL Server Machine Learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Bei der Echtzeitbewertung werden die gespeicherten System Prozeduren [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) und die CLR-Erweiterungsfunktionen in SQL Server für leistungsstarke Vorhersagen oder Ergebnisse bei der Vorhersage von Arbeits Auslastungen verwendet. Die Echtzeitbewertung ist sprach agnostisch und wird ohne Abhängigkeiten von R-oder python-Laufzeiten ausgeführt. Wenn Sie ein Modell verwenden, das mit Microsoft Functions erstellt und trainiert wurde, und anschließend in SQL Server in ein binäres Format serialisiert wurden, können Sie die Echtzeitbewertung verwenden, um vorhergesagte Ergebnisse für neue Dateneingaben auf SQL Server Instanzen zu generieren, die das R-oder python-Add-on nicht haben. lierter.
 

@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345409"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469338"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Schnellstart: Vorhersagen aus dem Modell mithilfe von R in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In dieser Schnellstartanleitung verwenden Sie das Modell, das Sie im vorherigen Schnellstart erstellt haben, um Vorhersagen für neue Daten zu bewerten. Um die _Bewertung_ mithilfe neuer Daten auszuführen, sollten Sie eines der trainierten Modelle aus der Tabelle abrufen und dann einen neuen Satz von Daten abrufen, auf denen Vorhersagen basieren sollen. Die Bewertung ist ein Begriff, der manchmal in Data Science verwendet wird, um Vorhersagen, Wahrscheinlichkeiten oder andere Werte basierend auf neuen Daten zu generieren, die in ein trainiertes Modell eingespeist werden.
 

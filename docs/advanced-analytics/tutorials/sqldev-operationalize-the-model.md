@@ -7,15 +7,15 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 159fb29bf560e755fdc605330d7d20369f55ba08
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: a3bd6671ee1f48c67f58e9b1ee17772b18184bc0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345896"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469049"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Ausführen von Vorhersagen mithilfe von R Embedded in einer gespeicherten Prozedur
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 

@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e50344bc94f25e6efd8303f93506401448f94fd1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cb144eb5c766b417884f6f1adb67dc0ac48504a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344729"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469779"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Data Science-Szenarien und Lösungs Vorlagen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Vorlagen sind Beispiellösungen, die bewährte Methoden veranschaulichen und Bausteine für die schnelle Implementierung einer Lösung bereitstellen. Jede Vorlage ist so konzipiert, dass ein bestimmtes Problem für eine bestimmte vertikale oder Branche gelöst wird. Die Tasks in jeder Vorlage reichen von der Datenvorbereitung und Featureentwicklung bis hin zum Modelltraining und zur Bewertung. Verwenden Sie diese Vorlagen, um [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] zu erfahren, wie funktioniert. Dann können Sie die Vorlage so anpassen, dass Sie Ihrem eigenen Szenario entspricht, und eine benutzerdefinierte Lösung erstellen. 
 

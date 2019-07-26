@@ -6,15 +6,15 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 83029a9727a26c647d78c49501fde08f72d7694d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343404"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470292"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>R-Skript Fehler in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Artikel werden mehrere scriptin-gerroren dokumentiert, wenn R-Code in SQL Server ausgeführt wird. Die Liste ist nicht vollständig. Es gibt viele Pakete, und Fehler können zwischen den Versionen desselben Pakets variieren. Es wird empfohlen, Skript Fehler im [Machine Learning Server Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)zu veröffentlichen, das die Machine Learning-Komponenten unterstützt, die in R Services (in-Database), Microsoft R Client und Microsoft R Server verwendet werden.
 

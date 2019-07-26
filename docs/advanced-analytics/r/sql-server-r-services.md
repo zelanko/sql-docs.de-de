@@ -8,15 +8,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e849140125ba39c7c1d8601c5ef32880a9d633ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344836"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469908"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services in SQL Server 2016
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R Services ist ein Add-on für eine SQL Server 2016-Datenbank-Engine-Instanz, die zum Ausführen von R-Code und Funktionen auf SQL Server verwendet wird. Der Code wird in einem Erweiterbarkeits Framework ausgeführt, das von Kern Modul Prozessen isoliert ist, aber vollständig für relationale Daten als gespeicherte Prozeduren, als T-SQL-Skript mit r-Anweisungen oder als R-Code mit t-SQL verfügbar ist. 
 

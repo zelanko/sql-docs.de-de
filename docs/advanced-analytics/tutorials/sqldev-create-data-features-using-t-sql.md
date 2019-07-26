@@ -7,15 +7,15 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7570c6769a780c5a6d98bdfc762092524bf5000c
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 8ba0c560f49dad1a075130a564858ffa94afa7f0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345929"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469168"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lektion 2: Erstellen von Datenfunktionen mithilfe von R und T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dieser Artikel ist Teil eines Tutorials für SQL-Entwickler zur Verwendung von R in SQL Server.
 

@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4ee27fd68563be336f5bc98bb5b51b200f1dff71
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345132"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470456"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Erweiterbarkeits Architektur in SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server verfügt über ein Erweiterbarkeits Framework zum Ausführen externer Skripts, z. b. R oder python, auf dem Server. Skripts werden in einer Language Runtime-Umgebung als Erweiterung der Kerndatenbank-Engine ausgeführt. 
 

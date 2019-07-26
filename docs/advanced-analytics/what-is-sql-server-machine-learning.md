@@ -7,15 +7,16 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f2bea677d6b87d7baa78fed28be82252c52a74c9
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345818"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495397"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, python)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services ist eine Funktion von SQL Server, die zum Ausführen von R-und python-Skripts in der Datenbank verwendet wird. Das Feature umfasst [Microsoft R-und Python-Pakete](#components) für Hochleistungs Predictive Analytics und Maschinelles Lernen. Die relationalen Daten können in r-und python-Skripts durch gespeicherte Prozeduren, T-SQL-Skripts mit r-und python-Anweisungen oder r-und Python-Code mit T-SQL verwendet werden.
 

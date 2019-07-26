@@ -1,37 +1,37 @@
 ---
-title: Erstellen von Graphen und Diagrammen mit SQL und R-Funktionen – SQL Server-Machine Learning
-description: 'Tutorial: Erstellen von Graphen und Diagrammen mit R-Sprache-Funktionen in SQL Server.'
+title: Erstellen von Diagrammen und Diagrammen mithilfe von SQL und R Functions-SQL Server Machine Learning
+description: Tutorial, das zeigt, wie Diagramme und Diagramme mithilfe von R-Sprachfunktionen auf SQL Server erstellt werden.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 542e36e01565ab454cce8beae9a4fa65279d8fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f14005b8ba9d6f05d2b69deba29d83af5695f657
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961786"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470504"
 ---
-# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Erstellen von Graphen und Diagrammen mit SQL und R (Exemplarische Vorgehensweise)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Erstellen von Diagrammen und Plots mithilfe von SQL und R (Exemplarische Vorgehensweise)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Teil der exemplarischen Vorgehensweise erfahren Sie, Verfahren zum Erstellen von Diagrammen und Karten, die mithilfe von R mit SQL Server-Daten. Sie erstellen ein einfaches Histogramm, und klicken Sie dann eine komplexere kartenzeichnung zu entwickeln.
+In diesem Teil der exemplarischen Vorgehensweise lernen Sie Techniken zum Erstellen von Diagrammen und Karten mithilfe von R mit SQL Server-Daten kennen. Sie erstellen ein einfaches Histogramm und entwickeln dann ein komplexeres Karten Diagramm.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Dieser Schritt setzt voraus, eine laufende R-Sitzung basierend auf den vorherigen Schritten in dieser exemplarischen Vorgehensweise. Er verwendet die Zeichenfolgen und Data Source Verbindungsobjekte in diesen Schritten erstellt haben. Die folgenden Tools und Pakete werden verwendet, um das Skript auszuführen.
+Dieser Schritt setzt eine laufende R-Sitzung voraus, die auf vorherigen Schritten in dieser exemplarischen Vorgehensweise basiert. Dabei werden die Verbindungs Zeichenfolgen und Datenquellen Objekte verwendet, die in diesen Schritten erstellt werden. Die folgenden Tools und Pakete werden zum Ausführen des Skripts verwendet.
 
-+ Rgui.exe zum Ausführen von R-Befehlen
++ "Rgui. exe" zum Ausführen von R-Befehlen
 + Management Studio zum Ausführen von T-SQL
 + googMap
-+ Ggmap-Paket
-+ Mapproj-Paket
++ ggmap-Paket
++ mapproj-Paket
 
 ## <a name="create-a-histogram"></a>Erstellen eines Histogramms
 
-1. Erstellen Sie die erste Zeichnung mithilfe der [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) -Funktion.  Die RxHistogram-Funktion in Open-Source-R-Pakete, die ähnliche Funktionen bietet, aber Sie können in einem remoten Ausführungskontext ausgeführt.
+1. Erstellen Sie die erste Zeichnung mithilfe der [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) -Funktion.  Die rxhistogram-Funktion bietet ähnliche Funktionen wie in Open-Source-R-Paketen, kann aber in einem Remote Ausführungs Kontext ausgeführt werden.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -46,16 +46,16 @@ Dieser Schritt setzt voraus, eine laufende R-Sitzung basierend auf den vorherige
     ![Verwenden von rxHistogramm zum Darstellen von Fahrpreisen](media/rsql-e2e-rxhistogramresult.png "using rxHistogram to plot fare amounts")
 
     > [!NOTE]
-    > Aussehen Ihr Diagramm anders?
+    > Sieht das Diagramm anders aus?
     >  
-    > Der Grund dafür ist _InDataSource_ verwendet nur die ersten 1000 Zeilen. Die Reihenfolge der Zeilen mit TOP ist nicht deterministisch in Abwesenheit einer ORDER BY-Klausel so, dass die Daten und das resultierende Diagramm variieren erwartet wird.
+    > Dies liegt daran, dass in _indatasource_ nur die obersten 1000 Zeilen verwendet werden. Die Reihenfolge von Zeilen, die Top verwenden, ist nicht deterministisch, wenn keine ORDER BY-Klausel vorhanden ist. Daher wird erwartet, dass die Daten und das resultierende Diagramm variieren können.
     > Dieses bestimmte Bild wurde mithilfe von ca. 10.000 Datenzeilen generiert. Wir empfehlen daher, mit einer unterschiedlichen Anzahl von Zeilen zu experimentieren, um verschiedene Diagramme zu erhalten. Beachten Sie, wie lange es dauert, bis die Ergebnisse in Ihrer Umgebung zurückgegeben werden.
 
-## <a name="create-a-map-plot"></a>Erstellen einer kartenzeichnung
+## <a name="create-a-map-plot"></a>Erstellen eines Karten Diagramms
 
-In der Regel blockieren Datenbankserver den Zugriff auf das Internet. Dies kann umständlich sein, bei Verwendung von R-Pakete, die zum Herunterladen von Zuordnungen oder anderen Bildern um Plots generieren müssen. Es ist jedoch eine problemumgehung, die hilfreich sein könnten bei der Entwicklung Ihrer eigenen Anwendungen. Im Grunde Sie die kartendarstellung auf dem Client zu generieren, und klicken Sie dann auf der Karte überlagert die Punkte, die als Attribute in der SQL Server-Tabelle gespeichert werden.
+Datenbankserver blockieren in der Regel den Internet Zugriff. Dies kann unpraktisch sein, wenn R-Pakete verwendet werden, die Zuordnungen oder andere Bilder zum Generieren von Plots herunterladen müssen. Es gibt jedoch eine Problem Umgehung, die Sie beim Entwickeln Ihrer eigenen Anwendungen möglicherweise nützlich finden. Im Grunde generieren Sie die Kartendarstellung auf dem Client und überlagern dann die Punkte, die als Attribute in der SQL Server Tabelle gespeichert werden.
 
-1. Definieren Sie die Funktion, die das R-Diagrammobjekt erstellt. Die benutzerdefinierte Funktion *MapPlot* erstellt ein Punktdiagramm, das die abholorte des Taxis verwendet, und zeichnet die Anzahl der Fahrten an, die von jedem Standort gestartet. Er verwendet den **"ggplot2"** und **Ggmap** -Pakete, die bereits liegen [installiert und geladen](walkthrough-data-science-end-to-end-walkthrough.md#add-packages).
+1. Definieren Sie die Funktion, mit der das R-Zeichnungsobjekt erstellt wird. Die benutzerdefinierte Funktion *mapplot* erstellt ein Punkt Diagramm, das die Taxi Abhol Orte verwendet, und gibt die Anzahl der Fahrten an, die von jedem Standort aus gestartet wurden. Dabei werden die Pakete **ggplot2** und **ggmap** verwendet, die bereits [installiert und geladen](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)sein sollten.
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -69,11 +69,11 @@ In der Regel blockieren Datenbankserver den Zugriff auf das Internet. Dies kann 
     }
     ```
 
-    + Die *MapPlot* Funktion akzeptiert zwei Argumente: ein vorhandenes Datenobjekt, das Sie zuvor mithilfe von RxSqlServerData definiert, und die kartendarstellung, die vom Client übergeben wurde.
-    + In der Zeile, beginnend mit der *ds* Variable RxImport wird verwendet, um in Memory-Daten aus der zuvor erstellten Datenquelle laden *InDataSource*. (Diese Datenquelle nur 1000 Zeilen enthält, wenn Sie eine Karte mit der Anzahl von Datenpunkten erstellen möchten, können Sie eine andere Datenquelle ersetzen.)
-    + Wenn Sie Open-Source-R-Funktionen verwenden, müssen Daten in Datenrahmen im lokalen Arbeitsspeicher geladen werden. Allerdings durch Aufrufen der [RxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) -Funktion, die Sie ausführen können, im Arbeitsspeicher des dem entfernten computekontext.
+    + Die *mapplot* -Funktion erfordert zwei Argumente: ein vorhandenes Datenobjekt, das Sie zuvor mithilfe von rxsqlserverdata definiert haben, sowie die Kartendarstellung, die vom Client weitergegeben wurde.
+    + In der Zeile, die mit der *DS* -Variablen beginnt, wird rximport verwendet, um Daten aus der zuvor erstellten Datenquelle *indatasource*in den Arbeitsspeicher zu laden. (Diese Datenquelle enthält nur 1000 Zeilen. Wenn Sie eine Zuordnung mit weiteren Datenpunkten erstellen möchten, können Sie eine andere Datenquelle ersetzen.)
+    + Wenn Sie Open Source-R-Funktionen verwenden, müssen Daten in Datenrahmen im lokalen Arbeitsspeicher geladen werden. Durch Aufrufen der [rximport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) -Funktion können Sie jedoch im Arbeitsspeicher des remotecomputekontexts ausführen.
 
-2. Ändern Sie den computekontext lokalen aus, und Laden Sie die Bibliotheken, die zum Erstellen von Zuordnungen erforderlich sind.
+2. Ändern Sie den computekontext in local, und laden Sie die Bibliotheken, die zum Erstellen der Zuordnungen erforderlich sind.
 
     ```R
     rxSetComputeContext("local")
@@ -87,7 +87,7 @@ In der Regel blockieren Datenbankserver den Zugriff auf das Internet. Dies kann 
 
     + Die Zeile, die mit `googmap` beginnt, generiert eine Karte mit den angegebenen Koordinaten in der Mitte.
 
-3. Wechseln Sie zu den SQL Server-computekontext, und Rendern Sie die Ergebnisse, indem Sie die Zeichnungsfunktion in [RxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) wie hier gezeigt. Die RxExec-Funktion ist Teil der **RevoScaleR** -Paket und unterstützt die Ausführung beliebiger R-Funktionen in einem remotecomputekontext.
+3. Wechseln Sie zum SQL Server computekontext, und Rendering Sie die Ergebnisse, indem Sie die plotfunktion in [rxexec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec) umschließt, wie hier gezeigt. Die rxexec-Funktion ist Teil des **revoscaler** -Pakets und unterstützt die Ausführung beliebiger R-Funktionen in einem remotecomputekontext.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -95,18 +95,18 @@ In der Regel blockieren Datenbankserver den Zugriff auf das Internet. Dies kann 
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + Die Kartendaten in `googMap` als Argument übergeben wird, die an die Remote ausgeführte Funktion *MapPlot*. Da die Zuordnungen in Ihrer lokalen Umgebung generiert wurden, müssen sie an die Funktion übergeben werden, um das Diagramm im Kontext von SQL Server zu erstellen.
+    + Die Kartendaten in `googMap` werden als Argument an die Remote ausgeführte *mapplot*-Funktion übermittelt. Da die Zuordnungen in der lokalen Umgebung generiert wurden, müssen Sie an die-Funktion übermittelt werden, um das Diagramm im Kontext von SQL Server zu erstellen.
 
-    + Wenn die Zeile ab `plot` ausgeführt wird, der gerenderten Daten zurück an die lokale R-Umgebung serialisiert wird, sodass Sie sie in Ihrem R-Client sehen können.
+    + Wenn die Zeile, die `plot` mit beginnt, ausgeführt wird, werden die gerenderten Daten zurück in die lokale R-Umgebung serialisiert, sodass Sie Sie in Ihrem R-Client anzeigen können.
 
     > [!NOTE]
-    > Wenn Sie SQL Server in virtuellen Azure-Computer verwenden, Sie erhalten möglicherweise einen Fehler an diesem Punkt. Ein Fehler tritt auf, wenn die Firewall-Standardregel in Azure Netzwerkzugriff durch R-Code blockiert wird. Weitere Informationen darüber, wie Sie diesen Fehler zu beheben, finden Sie unter [Installieren von Machine Learning (R)-Dienste auf einer Azure-VM](../install/sql-machine-learning-azure-virtual-machine.md).
+    > Wenn Sie SQL Server auf einem virtuellen Azure-Computer verwenden, erhalten Sie möglicherweise eine Fehlermeldung. Ein Fehler tritt auf, wenn die standardmäßige Firewallregel in Azure den Netzwerk Zugriff durch R-Code blockiert. Ausführliche Informationen zum Beheben dieses Fehlers finden Sie unter [Installieren von Machine Learning (R)-Diensten auf einem virtuellen Azure](../install/sql-machine-learning-azure-virtual-machine.md)-Computer.
 
-4. In der folgenden Abbildung ist das ausgegebene Diagramm dargestellt. Die Taxi-Abholorte wurden zur Karte als rote Punkte hinzugefügt. Ihr Image sieht möglicherweise anders, je nach Anzahl der Standorte in der Datenquelle, die Sie verwendet zu werden.
+4. In der folgenden Abbildung ist das ausgegebene Diagramm dargestellt. Die Taxi-Abholorte wurden zur Karte als rote Punkte hinzugefügt. Das Image sieht unter Umständen anders aus, je nachdem, wie viele Standorte in der von Ihnen verwendeten Datenquelle gespeichert sind.
 
     ![Zeichnen von Taxifahrten mithilfe einer benutzerdefinierten R-Funktion](media/rsql-e2e-mapplot.png "plotting taxi rides using a custom R function")
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Erstellen von Datenfunktionen mit R und SQL.](walkthrough-create-data-features.md)
+> [Erstellen von Datenfunktionen mithilfe von R und SQL](walkthrough-create-data-features.md)

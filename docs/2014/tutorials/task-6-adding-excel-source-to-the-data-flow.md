@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 6: Hinzufügen von Excel-Quelle zum Datenfluss | Microsoft-Dokumentation'
+title: 'Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,41 +10,44 @@ ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e31b673d7bb80a74cccd664f1e29b72dcd49f4a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92a4c3e650ce375a1e80079bbad83c5ab2b9bcd9
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489319"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495292"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss
-  In dieser Aufgabe fügen Sie dem Datenfluss eine Excel-Quelle hinzu, um Lieferantendaten aus der Excel-Quelldatei zu lesen. Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in Microsoft Excel-Arbeitsmappen. Finden Sie unter [Excel-Quelle](../integration-services/data-flow/excel-source.md) Weitere Informationen.  
+  In dieser Aufgabe fügen Sie dem Datenfluss eine Excel-Quelle hinzu, um Lieferantendaten aus der Excel-Quelldatei zu lesen. Die Excel-Quelle extrahiert Daten aus Arbeitsblättern oder Bereichen in Microsoft Excel-Arbeitsmappen. Weitere Informationen finden Sie im Thema [Excel-Quelle](../integration-services/data-flow/excel-source.md) .  
   
-1.  Drag & Drop **Excel-Quelle** aus **anderen Quellen** in **SSIS-Toolbox** auf die **Datenfluss** Registerkarte.  
+1.  Ziehen Sie **Excel-Quelle** aus **anderen Quellen** in der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** .  
   
-2.  Mit der rechten Maustaste auf **Excel-Quelle** in die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**.  
+2.  Klicken Sie in der Registerkarte **Datenfluss** mit der rechten Maustaste auf **Excel-Quelle** , und klicken Sie auf **Umbenennen**  
   
-3.  Typ **Read Supplier Data from Excel File** , und drücken Sie **EINGABETASTE**.  
+3.  Geben **Sie Lieferantendaten aus Excel-Datei lesen** ein, und drücken **Sie Eingabe**.  
   
-4.  Doppelklicken Sie auf **Read Supplier Data from Excel File** zum Starten der **Quellen-Editor für Excel** Dialogfeld.  
+4.  Doppelklicken Sie auf **Lieferantendaten aus Excel-Datei lesen** , um das Dialogfeld **Quellen-Editor für Excel** zu öffnen.  
   
-5.  In der **Quellen-Editor für Excel** Dialogfeld klicken Sie auf **neu** um eine Excel-Verbindung zu erstellen.  
+5.  Klicken Sie im Dialogfeld **Quellen-Editor für Excel** auf **neu** , um eine Excel-Verbindung zu erstellen.  
   
-6.  In der **Excel-Verbindungs-Manager** Dialogfeld klicken Sie auf **Durchsuchen**, und wählen Sie dann die **Suppliers.xls** Datei die **EIM Tutorial** Ordner . Überprüfen Sie, ob **Microsoft Excel 97-2003** ausgewählt ist, der **Excel-Version** ein, und klicken Sie dann auf **OK**.  
+6.  Klicken Sie im Dialogfeld **Excel-Verbindungs-Manager** auf **Durchsuchen**, und wählen Sie dann im Ordner **EIM Tutorial** die Datei **Suppliers. xls** aus. Vergewissern Sie sich, dass im Feld Excel- **Version** **Microsoft Excel 97-2003** ausgewählt ist, und klicken Sie dann auf **OK**.  
   
-     ![Excel-Verbindungs-Manager-Dialogfeld](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Excel-Verbindungs-Manager (Dialogfeld)")  
+     ![Dialog Feld "Verbindungs-Manager für Excel](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-01.jpg "Dialog Feld \"Verbindungs-Manager für Excel")  
   
-7.  In der **Quellen-Editor für Excel** wählen Sie im Dialogfeld **IncomingSuppliers$** in die **Name der Excel-Tabelle** Listenfeld.  
+7.  Wählen Sie im Dialogfeld **Quellen-Editor für Excel** im Listenfeld Name der Excel- **Tabelle** den Wert **incomingsuppliers $** aus.  
   
-     ![Name der Excel-Tabelle – eingehende Lieferanten$](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Name der Excel-Tabelle – eingehende Lieferanten$")  
+     ![Name der Excel-Tabelle-eingehende Lieferanten $](../../2014/tutorials/media/et-addingexcelsourcetothedataflow-02.jpg "Name der Excel-Tabelle-eingehende Lieferanten $")  
   
-8.  Klicken Sie auf **Vorschau** um die Daten in Excel-Datei.  
+8.  Klicken Sie auf **Vorschau** , um die Daten in der Excel-Datei anzuzeigen.  
   
-9. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
+9. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
-10. Drag & Drop **DQS-Bereinigung** Transformation **Weitere Transformationen** auf die **SSIS-Toolbox** auf die **Datenfluss** Registerkarte  **Lesen von Lieferantendaten aus Excel-Datei**. Die DQS-Bereinigungstransformation verwendet Data Quality Services (DQS), um die Daten zu korrigieren, indem sie genehmigte Regeln in der Wissensdatenbank anwendet. Diese Transformation erstellt zur Laufzeit ein DQS-Bereinigungsprojekt auf dem DQS-Server. Finden Sie unter [DQS-Bereinigungstransformation](https://msdn.microsoft.com/library/ee677619.aspx) Weitere Informationen.  
+10. Ziehen Sie die Transformation für die **DQS** -Bereinigung in **andere Transformationen** der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** unter **Lieferantendaten aus Excel-Datei lesen**. Die DQS-Bereinigungstransformation verwendet Data Quality Services (DQS), um die Daten zu korrigieren, indem sie genehmigte Regeln in der Wissensdatenbank anwendet. Diese Transformation erstellt zur Laufzeit ein DQS-Bereinigungsprojekt auf dem DQS-Server. Weitere Informationen finden Sie im Thema zur [Transformation der DQS](https://msdn.microsoft.com/library/ee677619.aspx) -Bereinigung.  
   
-## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 7: Hinzufügen von DQS-Bereinigung transformieren zum Datenfluss](../integration-services/data-flow/data-flow.md)  
-  
-  
+## <a name="next-step"></a>Nächster Schritt
+
+[Aufgabe 7: Hinzufügen der Transformation für die DQS-Bereinigung zum Datenfluss](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)  
+
+### <a name="see-also"></a>Siehe auch
+
+[Datenfluss](../integration-services/data-flow/data-flow.md)  

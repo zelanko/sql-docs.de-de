@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63036217"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475958"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
   In diesem Thema wird beschrieben, wie Sie einen fragmentierten Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]neu organisieren oder neu erstellen. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwaltet Indizes automatisch, wenn Einfüge-, Update- oder Löschvorgänge an den zugrunde liegenden Daten vorgenommen werden. Im Lauf der Zeit können diese Änderungen dazu führen, dass die Informationen im Index in der Datenbank verstreut (fragmentiert) werden. Fragmentierung liegt vor, wenn Indizes über Seiten verfügen, in denen die logische Reihenfolge (basierend auf dem Schlüsselwert) nicht der physischen Reihenfolge in der Datendatei entspricht. Hochgradig fragmentierte Indizes können die Abfrageleistung beeinträchtigen und dazu führen, dass Ihre Anwendung nur langsam reagiert.  
@@ -71,7 +71,7 @@ ms.locfileid: "63036217"
   
  Das durch die Funktion **sys.dm_db_index_physical_stats** zurückgegebene Resultset enthält die folgenden Spalten.  
   
-|Spalte|Description|  
+|Spalte|Beschreibung|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Der Prozentsatz der logischen Fragmentierung (falsche Reihenfolge der Seiten in einem Index).|  
 |**fragment_count**|Die Anzahl der Fragmente (physisch aufeinanderfolgende Blattseiten) im Index.|  
@@ -81,26 +81,48 @@ ms.locfileid: "63036217"
   
 |**avg_fragmentation_in_percent** -Wert|Korrigierende Anweisung|  
 |-----------------------------------------------|--------------------------|  
-|> 5 % und \< = 30 %|ALTER INDEX REORGANIZE|  
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
+|> 5% und \< = 30%|ALTER INDEX REORGANIZE|  
+|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+
+<sup>1</sup> Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden.  
   
- \* Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden.  
-  
- Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen ALTER INDEX REORGANIZE und ALTER INDEX REBUILD wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Bei sehr niedrigen Fragmentierungsniveaus (unter 5 Prozent) sollten diese Befehle nicht eingesetzt werden, da die Vorteile des Entfernens einer so geringen Fragmentierung die Kosten für das Neuorganisieren und Neuerstellen des Indexes nicht aufwiegen.  
-  
-> [!NOTE]  
->  Im Allgemeinen ist die Fragmentierung bei kleinen Indizes oft nicht steuerbar. Die Seiten kleiner Indizes werden in gemischten Blöcken gespeichert. Gemischte Blöcke sind für bis zu acht Objekte freigegeben, sodass die Fragmentierung in einem kleinen Index durch die Reorganisation oder das erneute Erstellen des Indexes möglicherweise nicht verringert wird.  
+> [!TIP]
+> Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Wenn beispielsweise ein bestimmter Index hauptsächlich für Scanvorgänge verwendet wird, kann das Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Der Leistungsvorteil ist für Indizes, die in erster Linie für Suchvorgänge verwendet werden, weniger bemerkbar. Ebenso ist das Entfernen von Fragmentierung in einem Heap (eine Tabelle ohne gruppierten Index) besonders nützlich für nicht gruppierte Index Scanvorgänge, wirkt sich aber kaum auf Suchvorgänge aus.
+
+Bei sehr niedrigen Fragmentierungsniveaus (unter 5 Prozent) sollten diese Befehle normalerweise nicht eingesetzt werden, da die Vorteile des Entfernens einer so geringen Fragmentierung die Kosten für das Neuorganisieren und Neuerstellen des Indexes nicht aufwiegen. 
+
+> [!NOTE]
+> Durch das erneute Erstellen oder Organisieren kleiner Indizes lässt sich die Fragmentierung häufig nicht verringern. Die Seiten kleiner Indizes werden manchmal in gemischten Blöcken gespeichert. Da gemischte Blöcke von bis zu acht Objekten gemeinsam genutzt werden, lässt sich die Fragmentierung in einem kleinen Index durch die erneute Erstellung oder Organisation des Indexes möglicherweise nicht verringern.
+
+### <a name="index-defragmentation-considerations"></a>Überlegungen zur Index Defragmentierung
+Unter bestimmten Umständen werden bei der Neuerstellung eines gruppierten Indexes automatisch alle nicht gruppierten Indizes neu erstellt, die auf den Clustering-Schlüssel verweisen, wenn sich die in den nicht gruppierten Indexdaten Sätzen enthaltenen physischen oder logischen IDs ändern müssen.
+
+Szenarien, die erzwingen, dass alle nicht gruppierten Indizes automatisch für eine Tabelle neu erstellt werden:
+
+-  Erstellen eines gruppierten Indexes für eine Tabelle
+-  Entfernen eines gruppierten Indexes, wodurch die Tabelle als Heap gespeichert wird
+-  Ändern des Clustering-Schlüssels zum einschließen oder Ausschließen von Spalten
+
+Szenarien, in denen nicht alle nicht gruppierten Indizes für eine Tabelle automatisch neu erstellt werden müssen:
+
+-  Neuerstellen eines eindeutigen gruppierten Indexes
+-  Neuerstellen eines nicht eindeutigen gruppierten Indexes
+-  Ändern des Index Schemas, z. b. Anwenden eines Partitionierungs Schemas auf einen gruppierten Index oder Verschieben des gruppierten Indexes in eine andere Datei Gruppe
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   Indizes mit mehr als 128 Blöcken werden in zwei getrennten Phasen neu erstellt: der logischen und der physischen Phase. In der logischen Phase werden die vorhandenen Zuordnungseinheiten, die vom Index verwendet werden, für die Aufhebung der Zuordnung markiert, die Datenzeilen werden kopiert und sortiert und dann in neue Zuordnungseinheiten verschoben, die erstellt werden, um den neu erstellten Index zu speichern. In der physischen Phase werden die zuvor für die Aufhebung der Zuordnung markierten Zuordnungseinheiten in kurzen Transaktionen physisch gelöscht, die im Hintergrund ausgeführt werden und nicht viele Sperren benötigen.  
-  
--   Indexoptionen können beim Neuorganisieren eines Indexes nicht angegeben werden.  
+Indizes mit mehr als 128 Blöcken werden in zwei getrennten Phasen neu erstellt: der logischen und der physischen Phase. In der logischen Phase werden die vorhandenen Zuordnungseinheiten, die vom Index verwendet werden, für die Aufhebung der Zuordnung markiert, die Datenzeilen werden kopiert und sortiert und dann in neue Zuordnungseinheiten verschoben, die erstellt werden, um den neu erstellten Index zu speichern. In der physischen Phase werden die zuvor für die Aufhebung der Zuordnung markierten Zuordnungseinheiten in kurzen Transaktionen physisch gelöscht, die im Hintergrund ausgeführt werden und nicht viele Sperren benötigen. Weitere Informationen zu Blöcken finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide).
+
+Die `ALTER INDEX REORGANIZE` -Anweisung erfordert, dass die Datendatei mit dem Index über Platz verfügt, da der Vorgang temporäre Arbeitsseiten nur in der gleichen Datei zuordnen kann, nicht in einer anderen Datei der Dateigruppe. Selbst wenn in einer Dateigruppe leere Seiten verfügbar sind, kann für den Benutzer daher trotzdem Fehler 1105 auftreten: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
+
+Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabelle mit mehr als 1.000 Partitionen ist möglich, wird aber nicht empfohlen. Dies hätte Leistungseinbußen oder eine zu hohe Speicherauslastung während der Vorgänge zur Folge.
+
+Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigruppe, in der er enthalten ist, eine Offline- oder schreibgeschützte Dateigruppe ist. Wenn das Schlüsselwort `ALL` angegeben ist und mindestens ein Index in einer Offline- oder schreibgeschützten Dateigruppe enthalten ist, erzeugt die Anweisung einen Fehler.
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
+ Erfordert die `ALTER`-Berechtigung für die Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
 ##  <a name="SSMSProcedureFrag"></a> Verwendung von SQL Server Management Studio  
   

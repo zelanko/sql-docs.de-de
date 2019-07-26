@@ -7,15 +7,15 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7aee673eb548531798f98a5a49266a2cd7211b63
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345560"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470113"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Generieren von Vorhersagen und Vorhersagen mithilfe von Machine Learning-Modellen in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die Verwendung eines vorhandenen Modells zum Vorhersagen oder Vorhersagen der Ergebnisse für neue Dateneingaben ist eine zentrale Aufgabe beim maschinellen lernen. In diesem Artikel werden die Ansätze zum Generieren von Vorhersagen in SQL Server aufgelistet. Zu den Ansätzen zählen interne Verarbeitungsmethoden für hoch Geschwindigkeits Vorhersagen, bei denen die Geschwindigkeit auf inkrementellen Reduzierungen von Laufzeitabhängigkeiten basiert. Weniger Abhängigkeiten bedeuten schnellere Vorhersagen.
 

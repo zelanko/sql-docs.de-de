@@ -7,14 +7,16 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0fd6b624b024c51965420dd438b8eb9ec04fbafc
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344948"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470317"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-Downloads für kumulative Updates von SQL Server in-Database-Analyse Instanzen
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server Instanzen, die für Daten bankübergreifende Analysen konfiguriert sind, umfassen R-und Python-Funktionen. Diese Features werden in CAB-Dateien ausgeliefert, installiert und über SQL Server-Setup gewartet. Bei Geräten, die mit dem Internet verbunden sind, werden CAB-Updates normalerweise über Windows Update angewendet. Auf getrennten Servern müssen CAB-Dateien heruntergeladen und manuell angewendet werden. 
 

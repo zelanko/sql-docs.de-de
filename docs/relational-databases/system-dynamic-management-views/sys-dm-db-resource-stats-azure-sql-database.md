@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys. DM _db_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/21/2019
 ms.service: sql-database
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d78e3aa24f6e73d624eec1f33fbebb62108bcc65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71efbc5abad150c599a674ea66409207fc2bf628
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096295"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471083"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,35 +34,35 @@ ms.locfileid: "68096295"
 |Spalte|Datentyp|Beschreibung|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des aktuellen Berichtsintervalls angibt.|  
-|avg_cpu_percent|**Decimal (5,2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
-|avg_data_io_percent|**Decimal (5,2)**|Durchschnittliche Daten-e/a-Auslastung in Prozent des Grenzwerts der Dienstebene.|  
-|avg_log_write_percent|**Decimal (5,2)**|Durchschnittliche Transaktionsprotokoll-Schreibvorgänge als Prozentsatz des Dienst-ebenenhöchstwerts (in Mbit/s).|  
-|avg_memory_usage_percent|**Decimal (5,2)**|Die durchschnittliche Arbeitsspeichernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.<br /><br /> Dies schließt für pufferpoolseiten und Speicherung von In-Memory-OLTP-Objekten verwendete Arbeitsspeicher.|  
-|xtp_storage_percent|**Decimal (5,2)**|Speicherauslastung für In-Memory OLTP in Prozent des Grenzwerts der Dienstebene (am Ende des Berichtsintervalls). Dies umfasst auch Arbeitsspeicher, die für die Speicherung der folgenden In-Memory OLTP-Objekte verwendet: Speicheroptimierte Tabellen, Indizes und Tabellenvariablen. Darüber hinaus Arbeitsspeicher für die Verarbeitung von ALTER TABLE-Vorgänge verwendet.<br /><br /> Gibt 0 zurück, wenn In-Memory OLTP nicht in der Datenbank verwendet wird.|  
-|max_worker_percent|**Decimal (5,2)**|Maximale gleichzeitige Worker (Anforderungen) in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
-|max_session_percent|**Decimal (5,2)**|Maximaler gleichzeitiger Sitzungen in Prozent des Grenzwerts der Dienstebene der Datenbank.|  
-|dtu_limit|**int**|Aktuelle maximale DTU datenbankeinstellung für diese Datenbank während dieses Intervalls. Bei Datenbanken mit dem virtuellen Kernen basierende Modell ist diese Spalte NULL.|
-|cpu_limit|**Decimal (5,2)**|Anzahl von virtuellen Kernen für diese Datenbank während dieses Intervalls. Für Datenbanken, die mit dem DTU-basierte Modell ist diese Spalte NULL.|
-|avg_instance_cpu_percent|**Decimal (5,2)**|Durchschnittliche Datenbank CPU-Auslastung in Prozent.|
-|avg_instance_memory_percent|**Decimal (5,2)**|Die durchschnittliche arbeitsspeichernutzung als Prozentwert der Datenbank.|
-|avg_login_rate_percent|**Decimal (5,2)**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
-|replica_role|**int**|Stellt das aktuelle Replikat Funktion bei 0 als primäres, 1 als sekundäre Datenbank aus, und 2 als Weiterleitung (Geo-Sekundärdatenbank primär). Es wird "1" bei einer Verbindung mit beabsichtigter Schreibschutz auf alle lesbare sekundäre Datenbanken angezeigt. Wenn eine geosekundäre Datenbank-Verbindung ohne Angabe von Beabsichtigter Schreibschutz sollte "2" (Herstellen einer Verbindung mit der Weiterleitung) angezeigt werden.|
+|avg_cpu_percent|**Dezimalzahl (5, 2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
+|avg_data_io_percent|**Dezimalzahl (5, 2)**|Durchschnittliche Daten-e/a-Auslastung als Prozentsatz des Limits der Dienst Ebene.|  
+|avg_log_write_percent|**Dezimalzahl (5, 2)**|Durchschnittliche Transaktionsprotokoll Schreibvorgänge (in Mbit/s) als Prozentsatz der Dienst Ebene.|  
+|avg_memory_usage_percent|**Dezimalzahl (5, 2)**|Die durchschnittliche Arbeitsspeichernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.<br /><br /> Dies schließt den für Pufferpool Seiten und die Speicherung von in-Memory-OLTP-Objekten verwendeten Arbeitsspeicher ein.|  
+|xtp_storage_percent|**Dezimalzahl (5, 2)**|Die Speicherauslastung für in-Memory-OLTP als Prozentsatz des Limits der Dienst Ebene (am Ende des Berichts Intervalls). Dazu gehört auch der Arbeitsspeicher, der für die Speicherung der folgenden in-Memory-OLTP-Objekte verwendet wird: Speicher optimierte Tabellen, Indizes und Tabellen Variablen. Sie enthält auch Speicher, der zum Verarbeiten von ALTER TABLE-Vorgängen verwendet wird<br /><br /> Gibt 0 zurück, wenn in-Memory-OLTP nicht in der Datenbank verwendet wird.|  
+|max_worker_percent|**Dezimalzahl (5, 2)**|Maximale Anzahl gleichzeitiger Worker (Anforderungen) als Prozentsatz des Limits der Dienst Ebene der Datenbank.|  
+|max_session_percent|**Dezimalzahl (5, 2)**|Maximale Anzahl gleichzeitiger Sitzungen als Prozentsatz des Limits der Dienst Ebene der Datenbank.|  
+|dtu_limit|**int**|Aktuelle DTU-Einstellung für die Datenbank für diese Datenbank während dieses Intervalls. Bei Datenbanken, die das v-Kern-basierte Modell verwenden, ist diese Spalte NULL.|
+|cpu_limit|**Dezimalzahl (5, 2)**|Anzahl der vkerne für diese Datenbank während dieses Intervalls. Für Datenbanken, die das DTU-basierte Modell verwenden, ist diese Spalte NULL.|
+|avg_instance_cpu_percent|**Dezimalzahl (5, 2)**|Durchschnittliche CPU-Auslastung der Datenbank als Prozentsatz des SQL-DB-Prozesses.|
+|avg_instance_memory_percent|**Dezimalzahl (5, 2)**|Durchschnittliche Daten Bank Speicherauslastung als Prozentsatz des SQL-DB-Prozesses.|
+|avg_login_rate_percent|**Dezimalzahl (5, 2)**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
+|replica_role|**int**|Stellt die Rolle des aktuellen Replikats mit 0 als primär, 1 als Sekundär und 2 als Weiterleitung (primärer sekundäres Replikat) dar. Wenn eine Verbindung mit der schreibgeschützten Absicht für alle lesbaren sekundären Replikate besteht, wird "1" angezeigt. Wenn Sie eine Verbindung mit einem georeplikat herstellen, ohne die schreibgeschützte Absicht anzugeben, sollte "2" (Verbindung mit der Weiterleitung) angezeigt werden.|
 |||
   
 > [!TIP]  
->  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und [Service Tier-Funktionen und Einschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+>  Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) und dienstebenenfunktionen [und-Einschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
 ## <a name="remarks"></a>Hinweise  
- Vom zurückgegebenen Daten **Sys. dm_db_resource_stats** wird ausgedrückt als Prozentsatz der zulässigen Grenzwerte für die Dienstebene/Leistungsstufe, die Sie ausgeführt werden.
+ Die von **sys. DM _db_resource_stats** zurückgegebenen Daten werden als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt, die Sie ausführen.
  
  Wenn innerhalb der letzten 60 Minuten ein Failover auf einem anderen Server für die Datenbank durchgeführt wurde, gibt die Ansicht nur die Daten für die Zeit zurück, die diese die primäre Datenbank seit dem Failover darstellt.  
   
- Verwenden Sie für eine weniger präzise Ansicht dieser Daten, **Sys. resource_stats** -Katalogsicht in der **master** Datenbank. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Verwenden Sie die **sys. resource_stats** -Katalog Sicht in der **Master** -Datenbank, um eine weniger präzise Ansicht dieser Daten zu erhalten. Diese Sicht erfasst die Daten jede 5 Minuten und behält die Verlaufsdaten 14 Tage bei.  Weitere Informationen finden Sie unter [sys. resource_stats &#40;Azure SQL-&#41;Datenbank](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Wenn eine Datenbank ein Mitglied der Pools für elastische Datenbanken ist, werden Ressourcenstatistiken als Prozentwerte, dargestellt als den Prozentsatz des Höchstwerts für die Datenbanken als in der Konfiguration der Pools für elastische Datenbanken ausgedrückt.  
+ Wenn eine Datenbank Mitglied eines Pools für elastische Datenbanken ist, werden Ressourcen Statistiken, die als Prozentwerte dargestellt werden, als Prozentsatz der maximalen Beschränkung für die Datenbanken ausgedrückt, die in der Konfiguration des elastischen Pools festgelegt sind.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -101,8 +101,8 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Dienstebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Service Tier-Funktionen und Einschränkungen](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [sys. resource_stats &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [Dienst Ebenen](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
+ [Funktionen und Grenzwerte für die Dienst Ebene](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

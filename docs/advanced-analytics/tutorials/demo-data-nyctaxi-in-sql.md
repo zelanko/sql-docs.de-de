@@ -7,15 +7,15 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1b0eea71105cb22cce81ac482c8ad6df50e63fa0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d5d74090713666a2da6058d9eccee1e33e4d7cb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343430"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469745"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>NYC Taxi-Demo Daten für SQL Server python-und R-Tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Artikel wird erläutert, wie Sie eine Beispieldatenbank einrichten, die aus öffentlichen Daten aus der [New York City Taxi-und der Limousine-Kommission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)besteht. Diese Daten werden in mehreren R-und Python-Tutorials für datenbankübergreifende Analysen auf SQL Server verwendet. Damit der Beispielcode schneller ausgeführt wird, haben wir eine repräsentative 1%-Stichprobe der Daten erstellt. Auf dem System ist die Daten Bank Sicherungsdatei etwas mehr als 90 MB groß und bietet 1,7 Millionen Zeilen in der primären Datentabelle.
 

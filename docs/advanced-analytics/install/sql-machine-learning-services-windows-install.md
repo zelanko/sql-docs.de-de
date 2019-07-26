@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6e4d1eace0be8d00d536d1ab3782685da9512ab5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344172"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470449"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installieren von SQL Server Machine Learning Services unter Windows
 
@@ -196,21 +196,13 @@ Gehen Sie folgendermaßen vor, um zu überprüfen, ob alle zum Starten eines ext
     GO
     ```
 
- **Ergebnisse**
+    **Ergebnisse**
 
     Die Ausführung des Skripts kann einige Zeit in Anspruch nehmen, wenn die externe Skript Laufzeit zum ersten Mal geladen wird. Die Ergebnisse sollten in etwa wie folgt aussehen:
 
     | Hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > Spalten oder Überschriften, die im Python-Skript verwendet werden, werden nicht Entwurfs bedingt zurückgegeben. Um Spaltennamen für Ihre Ausgabe hinzuzufügen, müssen Sie das Schema für das Rückgabe DataSet angeben. Verwenden Sie hierzu den with results-Parameter der gespeicherten Prozedur, benennen Sie die Spalten, und geben Sie den SQL-Datentyp an.

@@ -7,15 +7,15 @@ ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 82afddf861ecda2d25260f69e532c63a1203030b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 38e61bcbf3a5ff5ed44f85d5ad28406550e5a726
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344627"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469672"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Demo Daten zu Flug Eingangs Flügen für SQL Server python-und R-Tutorials
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Erstellen Sie in dieser Übung eine SQL Server Datenbank zum Speichern importierter Daten aus R-oder python-Datensätzen, die in den Demo Datensätzen integriert sind. R-und python-Distributionen stellen äquivalente Daten bereit, die Sie mit Management Studio in eine SQL Server Datenbank importieren können.
 

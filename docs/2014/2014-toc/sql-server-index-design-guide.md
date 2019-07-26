@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513043"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475982"
 ---
 # <a name="sql-server-index-design-guide"></a>Handbuch zum SQL Server Indexentwurf
 
@@ -25,11 +25,11 @@ ms.locfileid: "62513043"
   
  In diesem Handbuch wird davon ausgegangen, dass der Leser grundsätzlich mit den in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbaren Indextypen vertraut ist. Eine allgemeine Beschreibung zu Indextypen finden Sie unter [Indextypen](../relational-databases/indexes/indexes.md).  
   
-##  <a name="Top"></a> In diesem Handbuch  
+##  <a name="Top"></a>In dieser Anleitung  
 
- [Indexentwurfs](#Basics)  
+ [Grundlagen des Index Entwurfs](#Basics)  
   
- [Allgemeine zum Indexentwurf](#General_Design)  
+ [Allgemeine Richtlinien zum Index Entwurf](#General_Design)  
   
  [Clustered Index Design Guidelines (Richtlinien zum Entwerfen von gruppierten Indizes)](#Clustered)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62513043"
   
  [Filtered Index Design Guidelines (Richtlinien zum Entwerfen von gefilterten Indizes)](#Filtered)  
   
- [Zusätzliches Lesematerial](#Additional_Reading)  
+ [Zusätzliches lesen](#Additional_Reading)  
   
 ##  <a name="Basics"></a> Grundlagen des Indexentwurfs  
 
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Der folgende Ausführungsplan für diese Abfrage zeigt, dass der Abfrageoptimierer einen SORT-Operator verwendet hat, um das Resultset in der durch die ORDER BY-Klausel angegebenen Reihenfolge zurückzugeben.  
   
- ![Ausführungsplan zeigt einer SORTIERUNG, dass der Operator verwendet wird. ](media/indexsort1.gif "Ausführungsplan zeigt einer SORTIERUNG Operator wird verwendet.")  
+ ![Ausführungsplan zeigt an, dass ein Sort-Operator verwendet wird.](media/indexsort1.gif "Ausführungsplan zeigt an, dass ein Sort-Operator verwendet wird.")  
   
  Falls ein Index mit Schlüsselspalten erstellt wird, die mit jenen in der ORDER BY-Klausel in der Abfrage übereinstimmen, kann der SORT-Operator im Abfrageplan gelöscht werden, wodurch der Abfrageplan effizienter wird.  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Nachdem die Abfrage erneut ausgeführt wurde, zeigt folgender Ausführungsplan, dass der SORT-Operator gelöscht wurde und der neu erstellte nicht gruppierte Index verwendet wird.  
   
- ![Ausführungsplan zeigt einer SORTIERUNG Operator wird nicht verwendet.](media/insertsort2.gif "Ausführungsplan zeigt einer SORTIERUNG Operator wird nicht verwendet.")  
+ ![Ausführungsplan zeigt, dass kein Sortier Operator verwendet wird](media/insertsort2.gif "Ausführungsplan zeigt, dass kein Sortier Operator verwendet wird")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] bewegt sich in beide Richtungen gleichermaßen effizient. Ein als `(RejectedQty DESC, ProductID ASC)` definierter Index kann nach wie vor für eine Abfrage verwendet werden, in der die Sortierreihenfolge der Spalten in der ORDER BY-Klausel reserviert sind. Eine Abfrage mit der ORDER BY-Klausel `ORDER BY RejectedQty ASC, ProductID DESC` kann den Index beispielsweise verwenden.  
   
  Die Sortierreihenfolge kann nur für Schlüsselspalten angegeben werden. Die Katalogsicht [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) und die INDEXKEY_PROPERTY-Funktion melden, ob eine Indexspalte in aufsteigender oder absteigender Reihenfolge gespeichert wird.  
   
- ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
   
 ##  <a name="Clustered"></a> Richtlinien für den Entwurf gruppierter Indizes  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Sie kann in Bereichsabfragen verwendet werden.  
   
- Wenn der gruppierte Index nicht mit der UNIQUE-Eigenschaft erstellt wird, fügt das [!INCLUDE[ssDE](../includes/ssde-md.md)] der Tabelle automatisch eine 4 Byte große uniqueifier-Spalte hinzu. Falls erforderlich, fügt das [!INCLUDE[ssDE](../includes/ssde-md.md)] einer Zeile automatisch einen uniqueifier-Wert hinzu, um jeden Schlüssel eindeutig zu machen. Diese Spalte und ihre Werte werden intern verwendet und können durch Benutzer nicht angezeigt werden. Der Zugriff durch Benutzer auf diese ist ebenfalls nicht möglich.  
+ Wenn der gruppierte Index nicht mit der Unique-Eigenschaft erstellt wird, [!INCLUDE[ssDE](../includes/ssde-md.md)] fügt der Tabelle automatisch eine 4-Byte-Spalte vom Typ uniquifier hinzu. Wenn dies erforderlich ist, fügt [!INCLUDE[ssDE](../includes/ssde-md.md)] der eine Zeile automatisch einen uniquifier-Wert hinzu, um jeden Schlüssel eindeutig zu machen. Diese Spalte und ihre Werte werden intern verwendet und können durch Benutzer nicht angezeigt werden. Der Zugriff durch Benutzer auf diese ist ebenfalls nicht möglich.  
   
 ### <a name="clustered-index-architecture"></a>Architektur gruppierter Indizes  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Ausführliche Schlüssel sind aus mehreren Spalten oder mehreren großen Spalten zusammengesetzt. Die Schlüsselwerte aus dem gruppierten Index werden von allen nicht gruppierten Indizes als Suchschlüssel verwendet. Alle nicht gruppierten Indizes, die für dieselbe Tabelle definiert werden, sind erheblich größer, da die Einträge des nicht gruppierten Indexes den Gruppierungsschlüssel sowie die Schlüsselspalten enthalten, die für diesen nicht gruppierten Index definiert wurden.  
   
- ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
   
 ##  <a name="Nonclustered"></a> Entwurfsrichtlinien für einen nicht gruppierten Index  
 
@@ -301,7 +301,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Die folgende Abbildung veranschaulicht die Struktur eines gruppierten Indexes einer einzigen Partition.  
   
- ![Ebenen eines nicht gruppierten Index](media/bokind1.gif "Ebenen eines nicht gruppierten Index")  
+ ![Ebenen eines nicht gruppierten Indexes](media/bokind1.gif "Ebenen eines nicht gruppierten Indexes")  
   
 ### <a name="database-considerations"></a>Überlegungen zu Datenbanken  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Sie müssen überprüfen, ob die Steigerungen der Abfrageleistung die negativen Auswirkungen auf die Leistung während der Datenänderung sowie hinsichtlich zusätzlicher Speicherplatzanforderungen aufwiegen.  
   
- ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
   
 ##  <a name="Unique"></a> Richtlinien zum Entwerfen eindeutiger Indizes  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Ein eindeutiger, nicht gruppierter Index kann eingeschlossene Nichtschlüsselspalten enthalten. Weitere Informationen finden Sie unter [Index mit eingeschlossenen Spalten](#Included_Columns).  
   
- ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
   
 ##  <a name="Filtered"></a> Richtlinien für den Entwurf gefilterter Indizes  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Durch das Verschieben der Datenkonvertierung von der linken Seite auf die rechte Seite eines Vergleichsoperators wird möglicherweise die Bedeutung der Konvertierung geändert. Im obigen Beispiel wurde aus einem Integer-Vergleich ein `varbinary`-Vergleich, als der CONVERT-Operator der rechten Seite hinzugefügt wurde.  
   
- ![Pfeilsymbol mit Rückverweis auf den obersten](media/uparrow16x16.gif "Pfeilsymbol mit Rückverweis auf den obersten") [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
   
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
 

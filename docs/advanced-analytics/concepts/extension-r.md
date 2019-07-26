@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3bf8e77cec92cde0e5a8adf4d3e1e36f1689b917
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343409"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470499"
 ---
 # <a name="r-language-extension-in-sql-server"></a>R-Spracherweiterung in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die R-Erweiterung ist Teil des SQL Server Machine Learning Services-Add-on der relationalen Datenbank-Engine. Dabei wird eine r-Ausführungsumgebung, eine Basis-r-Verteilung mit Standardbibliotheken und-Tools und die Microsoft R-Bibliotheken hinzugefügt: [Revoscaler](../r/ref-r-revoscaler.md) für Analysen in der Skala, [microsoftml](../r/ref-r-microsoftml.md) für Machine Learning-Algorithmen und andere Bibliotheken für den Zugriff auf Daten oder R-Code in SQL Server.
 

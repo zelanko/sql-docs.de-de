@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e6d204b7f0e2ab0207b22a5e61e1e266a813f195
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 34b7fee6b5eef1503f56dd72c6d8ff10911bbdc1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345162"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470212"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Erstellen eines lokalen R-paketrepositorys mit minicran
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Das [minicran](https://cran.r-project.org/web/packages/miniCRAN/index.html) -Paket, das von [Andre de Vries](https://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html)erstellt wurde, identifiziert Pakete und Abhängigkeiten in einem einzelnen Ordner, den Sie für die Offline Installation von R-Paketen auf andere Computer kopieren können.
 

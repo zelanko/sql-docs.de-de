@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_external_script_requests | Microsoft-Dokumentation
+title: sys. DM _external_script_requests | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7cc6b6b42f7e9fa743724a414aa5b53435d7b0ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086832"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476275"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
   
 > [!NOTE] 
 >  
-> Diese dynamische verwaltungssicht (DMV) ist verfügbar, nur dann, wenn Sie installiert und aktiviert die Funktion, die Ausführung des externen Skripts unterstützt haben. Weitere Informationen finden Sie unter [R Services in SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) und [Machine Learning-Diensten (R, Python) in SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
+> Diese dynamische Verwaltungs Sicht (Dynamic Management View, DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [r Services in SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) und [Machine Learning Services (r, python) in SQL Server 2017 und](../../advanced-analytics/what-is-sql-server-machine-learning.md)höher.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Eindeutiger Bezeichner**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht der Prozess-ID wie empfangen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**eindeutiger Bezeichner**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht der Prozess-ID, die von[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |  
 |degree_of_parallelism|**int**|Zahl, die die Anzahl von parallelen Prozessen angibt, die erstellt wurden. Dieser Wert kann sich von der Anzahl von parallelen Prozessen unterscheiden, die angefordert wurden.|  
 |external_user_name|**nvarchar**|Das Windows-Workerkonto, unter dem das Skript ausgeführt wurde.|  
@@ -52,7 +52,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 
-Die Sicht gibt auch das Workerkonto zurück, unter dem das Skript ausgeführt wird. Informationen zu workerkonten, die von den externen Skripts verwendet, finden Sie unter den Identitäten, die zum Verarbeiten (SQLRUserGroup) im Abschnitt [Sicherheit: Übersicht für das Extensibility Framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
+Die Sicht gibt auch das Workerkonto zurück, unter dem das Skript ausgeführt wird. Informationen zu workerkonten, die von externen Skripts verwendet werden, finden Sie im Abschnitt "Identitäten in Verarbeitung (sqlrusergroup)" in der [Sicherheitsübersicht für das Erweiterbarkeit Framework in SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
 Die GUID, die im **external_script_request_id** -Feld zurückgegeben wird, entspricht auch dem Dateinamen des geschützten Verzeichnisses, in dem temporäre Dateien gespeichert werden. Jedes Workerkonto, z. B. MSSQLSERVER01, entspricht einer einzelnen SQL-Anmeldung oder einem einzelnen Windows-Benutzer und kann dazu verwendet werden, mehrere Skriptanforderungen auszuführen. Standardmäßig werden diese temporären Dateien nach Abschluss des angeforderten Skripts gelöscht.
  

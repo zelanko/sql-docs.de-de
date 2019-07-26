@@ -1,44 +1,44 @@
 ---
-title: Schnellstart für die Überprüfung von Python ist in SQL Server vorhanden.
-description: Schnellstart für das sicherstellen, dass Python und Machine Learning Services in SQL Server vorhanden sind.
+title: Schnellstart zum Überprüfen, ob python in SQL Server vorhanden ist
+description: Schnellstart zum Überprüfen, ob python und Machine Learning Services in SQL Server vorhanden sind.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0a2c525c89a70f4a36749d7b9c6fb769362d517b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962043"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469698"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Schnellstart: Überprüfen der Verfügbarkeit von Python in SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server umfasst die Python-sprachunterstützung für Data Science-Analyse in residenten SQL Server-Daten. Ausführung des Skripts wird mithilfe von gespeicherten Prozeduren, die mit einem der folgenden Methoden:
+SQL Server bietet Unterstützung für die Python-Sprache für Data Science Analytics in Residenten SQL Server Daten. Die Skriptausführung erfolgt mithilfe gespeicherter Prozeduren, wobei eine der folgenden Ansätze verwendet wird:
 
-+ Integrierte [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) gespeicherte Prozedur, die Python-Skript in als Eingabeparameter übergeben.
-+ Umschließen von Python-Skript in einem [benutzerdefinierte gespeicherte Prozedur](sqldev-in-database-r-for-sql-developers.md) , die Sie erstellen.
++ Integrierte gespeicherte Prozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) , die das Python-Skript in als Eingabeparameter übergibt.
++ Wrappen Sie das Python-Skript in einer von Ihnen erstellten [benutzerdefinierten gespeicherten Prozedur](sqldev-in-database-r-for-sql-developers.md) .
 
-In diesem Schnellstart werden Sie sicherstellen, dass [SQL Server 2017-Machine Learning Services](../what-is-sql-server-machine-learning.md) installiert und konfiguriert ist.
+In dieser Schnellstartanleitung überprüfen Sie, ob [SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md) installiert und konfiguriert ist.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Diese Übung ist erforderlich, den Zugriff auf eine Instanz von SQL Server mit [SQL Server 2017-Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installiert.
+Diese Übung erfordert Zugriff auf eine Instanz von SQL Server, bei der [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) installiert ist.
 
-Ihre SQL Server-Instanz kann in einer Azure-VM oder lokal sein. Machen Sie sich bewusst, dass das Feature "external Skripterstellung" standardmäßig deaktiviert ist. Sie müssen möglicherweise [aktivieren externer Skripts](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) und überprüfen Sie, ob **SQL Server Launchpad-Dienst** ausgeführt wird, bevor Sie beginnen.
+Ihre SQL Server Instanz kann sich auf einem virtuellen Azure-Computer oder lokal befinden. Beachten Sie, dass das Feature für die externe Skripterstellung standardmäßig deaktiviert ist. Daher müssen Sie möglicherweise [externe Skripterstellung aktivieren](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) und überprüfen, ob **SQL Server-Launchpad-Dienst** ausgeführt wird, bevor Sie beginnen.
 
-Sie benötigen außerdem ein Tool für die Ausführung von SQL-Abfragen. Sie können führen Sie die Python-Skripts, die alle datenbankverwaltung mit oder Tool Abfragen, solange es eine Verbindung mit SQL Server-Instanz herstellen kann, und führen Sie eine T-SQL-Abfrage oder gespeicherte Prozedur. Dieser Schnellstart verwendet [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+Außerdem benötigen Sie ein Tool zum Ausführen von SQL-Abfragen. Sie können die python-Skripts mit einem beliebigen Daten Bank Verwaltungs-oder Abfrage Tool ausführen, solange eine Verbindung mit einer SQL Server Instanz hergestellt und eine T-SQL-Abfrage oder eine gespeicherte Prozedur ausgeführt werden kann. In diesem Schnellstart wird [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)verwendet.
 
-## <a name="verify-python-exists"></a>Stellen Sie sicher, dass Python vorhanden ist.
+## <a name="verify-python-exists"></a>Überprüfen von python vorhanden
 
-Sie können bestätigen, Machine Learning-Dienste (ist aktiviert für Ihre SQL Server-Instanz und welche Version von Python installiert ist. Führen Sie die folgenden Schritte aus.
+Sie können überprüfen, ob Machine Learning Services (für Ihre SQL Server Instanz aktiviert ist und welche Version von Python installiert ist. Führen Sie die folgenden Schritte aus.
 
-1. Öffnen Sie SQL Server Management Studio, und Verbinden mit Ihrer SQL Server-Instanz.
+1. Öffnen Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit Ihrer SQL Server Instanz her
 
-2. Führen Sie den folgenden Code ein. 
+2. Führen Sie den folgenden Code aus. 
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -48,7 +48,7 @@ Sie können bestätigen, Machine Learning-Dienste (ist aktiviert für Ihre SQL S
     GO
     ```
 
-3. Die Python `print` Funktionsergebnis ist die Version, die **Nachrichten** Fenster. In der folgenden Beispielausgabe sehen Sie, dass SQL Server in diesem Fall Python Version 3.5.2 installiert haben.
+3. Die python `print` -Funktion gibt die Version an das Fenster **Meldungen** zurück. In der Beispielausgabe unten sehen Sie, dass in diesem Fall die Python-Version 3.5.2 in SQL Server installiert ist.
 
     **Ergebnisse**
 
@@ -57,19 +57,19 @@ Sie können bestätigen, Machine Learning-Dienste (ist aktiviert für Ihre SQL S
     3.5.2 |Continuum Analytics, Inc.| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
     ```
 
-Wenn Sie eine Fehlermeldung erhalten, gibt es verschiedene Dinge, die Sie tun können, um sicherzustellen, dass die Instanz und Python kommunizieren kann.
+Wenn Sie Fehler erhalten, können Sie sicherstellen, dass die Instanz und die python kommunizieren können.
 
-Probleme bei der Installation zunächst auszuschließen. Konfiguration nach der Installation ist erforderlich, um die Verwendung externer Codebibliotheken zu aktivieren. Finden Sie unter [Installieren von SQL Server 2017-Machine Learning-Dienste](../install/sql-machine-learning-services-windows-install.md). Ebenso, stellen Sie sicher, dass der Launchpad-Dienst ausgeführt wird.
+Schließen Sie zunächst alle Installationsprobleme aus. Die Konfiguration nach der Installation ist erforderlich, um die Verwendung externer Codebibliotheken zu aktivieren. Weitere Informationen finden Sie unter [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). Stellen Sie auch sicher, dass der Launchpad-Dienst ausgeführt wird.
 
-Außerdem müssen Sie die Windows-Benutzergruppe hinzufügen `SQLRUserGroup` als Anmeldung auf der Instanz, um sicherzustellen, dass Launchpad Kommunikation zwischen Python und SQL Server bereitstellen kann. (Die gleiche Gruppe wird verwendet, für beide R und Python-code die Ausführung). Weitere Informationen finden Sie unter [Erstellen eines Anmeldenamens für SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
+Sie müssen auch die Windows-Benutzergruppe `SQLRUserGroup` als Anmelde Namen für die-Instanz hinzufügen, um sicherzustellen, dass Launchpad die Kommunikation zwischen Python und SQL Server bereitstellen kann. (Dieselbe Gruppe wird für die Ausführung von R-und Python-Code verwendet.) Weitere Informationen finden Sie unter [Create a Login for sqlrusergroup](../security/create-a-login-for-sqlrusergroup.md).
 
-Darüber hinaus müssen Sie zum Aktivieren von Netzwerkprotokollen, die deaktiviert wurden oder öffnen Sie die Firewall, damit SQL Server mit externen Clients kommunizieren können. Weitere Informationen finden Sie unter [Problembehandlungseinrichtung](../common-issues-external-script-execution.md).
+Außerdem müssen Sie möglicherweise Netzwerkprotokolle aktivieren, die deaktiviert wurden, oder die Firewall öffnen, damit SQL Server mit externen Clients kommunizieren kann. Weitere Informationen finden Sie unter [Problem](../common-issues-external-script-execution.md)Behandlung beim Setup.
 
-## <a name="call-revoscalepy-functions"></a>Die Revoscalepy-Funktionen aufrufen
+## <a name="call-revoscalepy-functions"></a>Revoscalepy-Funktionen aufzurufen
 
-Zum Überprüfen, ob **Revoscalepy** verfügbar ist, führen Sie ein Beispielskript, das enthält [Rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) , die eine statistischen Zusammenfassungen Daten erzeugt. Das folgende Skript veranschaulicht, wie eine Datei mit Beispieldaten xdf aus integrierten Beispiele im Revoscalepy abgerufen wird. Die RxOptions-Funktion bietet die **SampleDataDir** Parameter, der den Speicherort der Beispieldateien zurückgibt.
+Um zu überprüfen, ob **revoscalepy** verfügbar ist, führen Sie ein Beispielskript aus, das [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) enthält, das statistische Zusammenfassungs Daten erzeugt. Das folgende Skript veranschaulicht, wie eine Sample. Xdf-Datendatei aus integrierten Beispielen in revoscalepy abgerufen wird. Die rxoptions-Funktion stellt den **sampledatadir** -Parameter bereit, der den Speicherort der Beispieldateien zurückgibt.
 
-Da Rx_summary ein Objekt des Typs zurückgibt `class revoscalepy.functions.RxSummary.RxSummaryResults`, die mehrere Elemente enthält, können Sie nur den Datenrahmen in einem tabellarischen Format extrahieren Pandas.
+Da rx_summary ein Objekt vom Typ `class revoscalepy.functions.RxSummary.RxSummaryResults`zurückgibt, das mehrere Elemente enthält, können Sie Pandas verwenden, um nur den Datenrahmen in einem Tabellenformat zu extrahieren.
 
 ```sql
 EXEC sp_execute_external_script @language = N'Python', 
@@ -92,11 +92,11 @@ OutputDataSet = dfsummary
 WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
 ```
 
-## <a name="list-python-packages"></a>Auflisten von Python-Pakete
+## <a name="list-python-packages"></a>Auflisten von Python-Paketen
 
-Microsoft bietet eine Anzahl von Python-Pakete vorinstalliert mit Machine Learning-Dienste in Ihrer SQL Server-Instanz. Führen Sie zum Anzeigen einer Liste von der, die Python Pakete installiert sind, einschließlich Version, die folgenden Schritte aus.
+Microsoft stellt eine Reihe von Python-Paketen bereit, die mit Machine Learning Services in Ihrer SQL Server Instanz vorinstalliert sind. Führen Sie die folgenden Schritte aus, um eine Liste der installierten Python-Pakete anzuzeigen, einschließlich der Version.
 
-1. Führen Sie das folgende Skript für Ihre SQL Server-Instanz.
+1. Führen Sie das folgende Skript auf Ihrer SQL Server Instanz aus.
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -107,7 +107,7 @@ Microsoft bietet eine Anzahl von Python-Pakete vorinstalliert mit Machine Learni
     GO
     ```
 
-2. Die Ausgabe stammt aus `pip.get_installed_distributions()` in Python und als zurückgegeben `STDOUT` Nachrichten.
+2. Die Ausgabe erfolgt `pip.get_installed_distributions()` in Python und wird als `STDOUT` Nachrichten zurückgegeben.
 
     **Ergebnisse**
 
@@ -142,7 +142,7 @@ Microsoft bietet eine Anzahl von Python-Pakete vorinstalliert mit Machine Learni
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, da Sie bestätigt haben, dass die Instanz mit Python verwendet werden kann, nehmen Sie einen genaueren Blick auf eine grundlegende Python-Interaktion.
+Nachdem Sie nun bestätigt haben, dass Ihre Instanz für die Arbeit mit Python bereit ist, sollten Sie sich einen genaueren Einblick in die grundlegende python-Interaktion ansehen.
 
 > [!div class="nextstepaction"]
 > [Schnellstart: "Hello World"-Python-Skript in SQL Server](quickstart-python-run-using-t-sql.md)

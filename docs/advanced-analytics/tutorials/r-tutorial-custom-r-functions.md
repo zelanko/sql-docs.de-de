@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345982"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470600"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Ausführen benutzerdefinierter R-Funktionen auf SQL Server mithilfe von rxexec
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Sie können benutzerdefinierte R-Funktionen im Kontext von SQL Server ausführen, indem Sie Ihre Funktion über [rxexec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)übergeben. dabei wird davon ausgegangen, dass alle Bibliotheken, die Ihr Skript erfordert, auch auf dem Server installiert sind und diese Bibliotheken mit der basisverteilung von R kompatibel sind. 
 

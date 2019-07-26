@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345767"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469504"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Schnellstart: Erstellen, trainieren und Verwenden eines python-Modells mit gespeicherten Prozeduren in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In dieser Schnellstartanleitung verwenden Sie Python, um zwei gespeicherte Prozeduren zu erstellen und auszuführen. Der erste verwendet das klassische IRIS-Blumen DataSet und generiert ein Naive Bayes-Modell, um auf der Grundlage der Blumen Merkmale eine IRIS-Art vorherzusagen. Das zweite Verfahren dient der Bewertung. Das Modell wird aufgerufen, das in der ersten Prozedur generiert wurde, um einen Satz von Vorhersagen auszugeben. Wenn Sie Code in einer gespeicherten Prozedur platzieren, sind Vorgänge enthalten, können wiederverwendbar und von anderen gespeicherten Prozeduren und Client Anwendungen aufgerufen werden. 
 

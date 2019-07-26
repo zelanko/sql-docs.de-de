@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c51691ad55ac8aa340eb71257489bd14c0099a5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d3e03e718aea725267a2251768ef040905b020e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345537"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470185"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Erstellen von mehreren Modellen mit rxExecBy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die **rxexecby** -Funktion in revoscaler unterstützt die parallele Verarbeitung von mehreren verbundenen Modellen. Anstatt ein großes Modell auf der Grundlage von Daten aus mehreren ähnlichen Entitäten zu trainieren, kann ein Daten Analyst schnell viele verwandte Modelle erstellen, die jeweils spezifische Daten für eine einzelne Entität verwenden. 
 
