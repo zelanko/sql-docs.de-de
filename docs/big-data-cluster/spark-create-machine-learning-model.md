@@ -1,7 +1,7 @@
 ---
-title: Erstellen und Exportieren von Spark-Machine learning-Modellen mit MLeap
+title: Erstellen und Exportieren von Spark-Machine Learning-Modellen mit msprung
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie PySpark wird zum Trainieren und erstellen Sie mit Spark Machine Learning-Modelle in SQL Server-big Data-Clustern (Vorschau). Exportieren mit MLeap, und klicken Sie dann das Modell mit Java in SQL Server zu bewerten.
+description: Verwenden Sie pyspark, um Machine Learning-Modelle mit Spark auf SQL Server Big Data Clustern (Vorschauversion) zu trainieren und zu erstellen. Exportieren Sie mit msprung, und bewerten Sie dann das Modell mit Java in SQL Server.
 author: lgongmsft
 ms.author: lgong
 ms.reviewer: mikeray
@@ -10,62 +10,62 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67727374"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Erstellen, exportieren und Bewerten von Machine Learning-Modelle in SQL Server-big Data-Clustern für Spark
+# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Erstellen, exportieren und bewerten von Spark-Machine Learning-Modellen auf SQL Server Big Data Clustern
 
-Das folgende Beispiel zeigt, wie zum Erstellen eines Modells mit [Spark ML](https://spark.apache.org/docs/latest/ml-guide.html), exportieren Sie das Modell, das [MLeap](http://mleap-docs.combust.ml/), und Bewerten des Modells in SQL Server mit der [Java-Spracherweiterung](../language-extensions/language-extensions-overview.md). Dies erfolgt im Rahmen einer big Data-Cluster mit SQL Server-2019.
+Im folgenden Beispiel wird gezeigt, wie Sie ein Modell mit [Spark ml](https://spark.apache.org/docs/latest/ml-guide.html)erstellen, das Modell in [msprung](http://mleap-docs.combust.ml/)exportieren und das Modell in SQL Server mit seiner [Java-Spracherweiterung](../language-extensions/language-extensions-overview.md)bewerten. Dies erfolgt im Kontext eines SQL Server 2019 Big Data Clusters.
 
-Das folgende Diagramm veranschaulicht die Aufgaben in diesem Beispiel:
+Das folgende Diagramm veranschaulicht die in diesem Beispiel ausgeführte Arbeit:
 
-![Bewertung Exportieren mit Spark trainieren](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
+![Trainieren des Ergebnis Exports mit Spark](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Alle Dateien für dieses Beispiel befinden sich unter [ https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml ](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
+Alle Dateien für dieses Beispiel befinden sich unter [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
 
-Um das Beispiel auszuführen, müssen Sie auch die folgenden Voraussetzungen:
+Zum Ausführen des Beispiels müssen die folgenden Voraussetzungen erfüllt sein:
 
-- Ein [SQL Server-big Data-Cluster](deploy-get-started.md)
+- Ein [SQL Server Big Data-Cluster](deploy-get-started.md)
 
-- [Big Data-tools](deploy-big-data-tools.md)
+- [Big Data-Tools](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
    - **Azure Data Studio**
 
-## <a name="model-training-with-spark-ml"></a>Das Trainieren des Modells mit Spark ML
+## <a name="model-training-with-spark-ml"></a>Modell Training mit Spark ml
 
-In diesem Beispiel Volkszählungsdaten (**AdultCensusIncome.csv**) wird verwendet, um ein Modell der Spark ML-Pipeline zu erstellen.
+In diesem Beispiel wird die Verwendung von Volkszählungsdaten ("**adultcensusincome. CSV**") zum Erstellen eines Spark ml-Pipeline Modells verwendet.
 
-1. Verwenden der [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) Datei, die das Dataset aus dem Internet herunterladen und in HDFS in Ihrer SQL Server-big Data-Cluster. Dies ermöglicht es durch Spark zugegriffen werden kann.
+1. Verwenden Sie die Datei [mleap_sql_test/Setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) , um das DataSet aus dem Internet herunterzuladen, und platzieren Sie es in HDFS in Ihrem SQL Server Big Data-Cluster. Dadurch kann von Spark auf ihn zugegriffen werden.
 
-1. Klicken Sie dann Herunterladen der Beispiel-Notebook [train_score_export_ml_models_with_spark.ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb). Führen Sie über eine PowerShell- oder Bash-Befehlszeile den folgenden Befehl zum Herunterladen des Notebooks aus:
+1. Laden Sie dann das Beispiel Notebook [train_score_export_ml_models_with_spark. ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb)herunter. Führen Sie in einer PowerShell-oder bash-Befehlszeile den folgenden Befehl aus, um das Notebook herunterzuladen:
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb"
    ```
 
-   Dieses Notebook werden die Zellen mit den erforderlichen Befehlen für diesen Abschnitt des Beispiels enthält.
+   Dieses Notebook enthält Zellen mit den erforderlichen Befehlen für diesen Abschnitt des Beispiels.
 
-1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md).
+1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock aus. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks in SQL Server 2019 Preview](notebooks-guidance.md).
 
-Die Daten zunächst in Spark gelesen und in Trainings- und Testsätze aufteilen. Klicken Sie dann trainiert der Code eine Pipeline mit den Trainingsdaten. Schließlich wird das Modell auf eine MLeap Paket exportiert.
+Die Daten werden zuerst in Spark gelesen und in Trainings-und Test Datasets aufgeteilt. Anschließend trainiert der Code ein Pipeline Modell mit den Trainingsdaten. Schließlich wird das Modell in ein msprung-Bündel exportiert.
 
 > [!TIP]
-> Sie können auch überprüfen, oder führen Sie den Zusammenhang mit diesen Schritten außerhalb des Notebooks in Python-Code der [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) Datei.
+> Sie können den Python-Code, der mit diesen Schritten verknüpft ist, auch außerhalb des Notebooks in der [mleap_sql_test/mleap_pyspark. py-](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) Datei überprüfen oder ausführen.
 
-## <a name="model-scoring-with-sql-server"></a>Modell mit SQL Server bewerten
+## <a name="model-scoring-with-sql-server"></a>Modell Bewertung mit SQL Server
 
-Nun, da das Modell der Spark ML-Pipeline in einer allgemeinen Serialisierung ist [MLeap Bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) -Format, Sie können die Bewertung des Modells in Java, ohne das Vorhandensein von Spark. 
+Da sich das Spark ml-Pipeline Modell nun in einem allgemeinen Serialisierungs- [msprung-Bundle](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) -Format befindet, können Sie das Modell in Java bewerten, ohne dass Spark vorhanden ist. 
 
-Dieses Beispiel verwendet die [Java-Spracherweiterung](../language-extensions/language-extensions-overview.md) in SQL Server. Um das Modell in SQL Server zu bewerten, müssen Sie zuerst eine Java-Anwendung zu erstellen, die laden das Modell in Java und seine Bewertung können. Sie finden den Beispielcode für diese Java-Anwendung in der [Mssql-Mleap-app-Ordner](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
+In diesem Beispiel wird die [Java-Spracherweiterung](../language-extensions/language-extensions-overview.md) in SQL Server verwendet. Um das Modell in SQL Server bewerten zu können, müssen Sie zunächst eine Java-Anwendung erstellen, die das Modell in Java laden und bewerten kann. Den Beispielcode für diese Java-Anwendung finden Sie im [Ordner "MSSQL-mleap-App](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app)".
 
-Nach dem Erstellen des Beispiels können Sie Transact-SQL zum Aufrufen von der Java-Anwendung, und Bewerten des Modells mit einer Datenbanktabelle. Dies ist in drei [mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) Quelldatei.
+Nach dem Aufbau des Beispiels können Sie Transact-SQL verwenden, um die Java-Anwendung aufzurufen und das Modell mit einer Datenbanktabelle zu bewerten. Dies kann in der Quelldatei [mleap_sql_test/mleap_sql_tests. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) angezeigt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen über big Data-Cluster finden Sie unter [große SQL Server-Daten bereitstellen in Kubernetes-Clustern](deployment-guidance.md)
+Weitere Informationen zu Big Data Clustern finden Sie unter Bereitstellen [SQL Server Big Data Clustern auf Kubernetes](deployment-guidance.md)
