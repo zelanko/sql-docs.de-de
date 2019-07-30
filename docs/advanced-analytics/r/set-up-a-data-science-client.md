@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 225fe78a84da986120ce23f2a1f16fae244e26e4
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
-ms.translationtype: HT
+ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345055"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469960"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Einrichten eines Data Science-Clients für die R-Entwicklung auf SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Die Integration von r ist in SQL Server 2016 oder höher verfügbar, wenn Sie die Option r Language in eine [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) -oder [SQL Server 2017 Machine Learning Services (in-Database)-](../install/sql-machine-learning-services-windows-install.md) Installation einschließen. 
 
@@ -226,7 +226,7 @@ In diesem Beispiel wird Visual Studio 2017 Community Edition verwendet, wobei di
 
 1. Wählen Sie im Menü **Datei** die Option **neu** aus, und wählen Sie dann **Projekt**aus.
 
-2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **r**, und wählen Sie **r Project**aus. Geben`dbtest` Sie im Feld Name ein, und klicken Sie auf **OK**. 
+2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **r**, und wählen Sie **r Project**aus. Geben`dbtest` Sie im Feld **Name** ein, und klicken Sie auf **OK**. 
 
   Visual Studio erstellt einen neuen Projektordner und eine Standardskript Datei, `Script.R`. 
 
