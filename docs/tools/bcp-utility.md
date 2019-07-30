@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 612132eec023e3497344c01bd34947bb49195385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 504e0978e37e5c550985e40b7f68e0323a9dc187
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010427"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476321"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 
@@ -88,6 +88,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
     [<a href="#K">-K application_intent</a>]
+    [<a href="#l">-l login_timeout</a>]
     [<a href="#L">-L last_row</a>]
     [<a href="#m">-m max_errors</a>]
     [<a href="#n">-n</a>]
@@ -313,6 +314,9 @@ Gibt an, dass während des Vorgangs keine Standardwerte in leere Spalten eingef�
   
 **-K** _**application\_intent**_ <a name="K"></a>   
 Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzig mögliche Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt das bcp-Hilfsprogramm keine Konnektivität zu einem sekundären Replikat in einer Always On-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)wichtig sind.  
+  
+**-l** _**login\_timeout**_ <a name="l"></a>  
+Gibt einen Anmeldungstimeout an. Die Option „-I“ gibt an, wie viele Sekunden beim Herstellen einer Verbindung mit einem Server verstreichen dürfen, bevor für eine SQL Server-Anmeldung ein Timeout eintritt. Das standardmäßige Anmeldungs Timeout beträgt 15 Sekunden. Der Timeoutwert für den Anmeldungszeitraum muss eine Zahl zwischen 0 und 65534 sein. Wenn der angegebene Wert kein numerischer Wert ist oder außerhalb dieses Bereichs liegt, generiert bcp eine Fehlermeldung. Der Wert 0 gibt ein unendliches Timeout an.
   
 **-L** _**last\_row**_ <a name="L"></a>  
 Gibt die Nummer der letzten Zeile an, die aus einer Tabelle exportiert oder von einer Datendatei importiert werden soll. Für diesen Parameter muss ein Wert größer als (>) 0, jedoch kleiner (<) oder gleich (=) der Nummer der letzten Zeile angegeben werden. Fehlt dieser Parameter, wird standardmäßig die letzte Zeile der Datei angenommen.  

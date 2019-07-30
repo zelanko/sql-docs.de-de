@@ -1,6 +1,6 @@
 ---
 title: Arbeiten mit Abfrage Benachrichtigungen | Microsoft-Dokumentation
-description: Arbeiten mit Abfrage Benachrichtigungen in OLE DB Treiber für SQL Server
+description: Arbeiten mit Abfrage Benachrichtigungen im OLE DB Treiber für SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29aaab523b3a754c65b1b7a0312ceb5ea122f2d3
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988729"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419317"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
 
@@ -34,9 +34,9 @@ ms.locfileid: "67988729"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Abfrage Benachrichtigungen wurden in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und OLE DB Treiber für SQL Server eingeführt. Mit Abfragebenachrichtigungen, die auf der in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Service Broker-Infrastruktur aufsetzen, können Anwendungen benachrichtigt werden, wenn sich Daten geändert haben. Diese Funktion ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank zur Verfügung stellen, z. B. eine Webanwendung, und die benachrichtigt werden müssen, wenn die Quelldaten geändert wurden.
+Abfrage Benachrichtigungen wurden in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und OLE DB Treiber für SQL Server eingeführt. Mit Abfragebenachrichtigungen, die auf der in SQL Server 2005 (9.x) eingeführten Service Broker-Infrastruktur basieren, können Anwendungen benachrichtigt werden, wenn sich Daten ändern. Dieses Feature ist besonders nützlich für Anwendungen, die einen Informationscache aus einer Datenbank (z. B. eine Webanwendung) zur Verfügung stellen und die benachrichtigt werden müssen, wenn die Quelldaten geändert werden.
 
-Mit Abfragebenachrichtigungen können Sie eine Benachrichtigung innerhalb eines festgelegten Timeoutzeitraums anfordern, wenn sich die einer Abfrage zugrunde liegenden Daten ändern. Die Anforderung für die Benachrichtigung gibt die Benachrichtigungsoptionen an. Dazu gehören der Dienstname, der Meldungstext und der Timeoutwert für den Server. Benachrichtigungen werden durch eine Service Broker-Warteschlange übermittelt, von der Anwendungen verfügbare Benachrichtigungen abrufen können.
+Mithilfe von Abfrage Benachrichtigungen können Sie Benachrichtigungen innerhalb eines angegebenen Timeout Zeitraums anfordern, wenn sich die zugrunde liegenden Daten einer Abfrage ändern. In der Anforderung werden die Benachrichtigungsoptionen angegeben. Dazu gehören der Dienstname, der Meldungstext und der Timeoutwert für den Server. Benachrichtigungen werden über eine Service Broker-Warteschlange übermittelt, aus der Anwendungen verfügbare Benachrichtigungen abrufen können.
 
 Die Syntax der Zeichenfolge für die Abfragebenachrichtigungsoptionen lautet:
 
@@ -46,18 +46,18 @@ Die Syntax der Zeichenfolge für die Abfragebenachrichtigungsoptionen lautet:
 
 `service=mySSBService;local database=mydb`
 
-Benachrichtigungsabonnements überdauern den Prozess, mit dem sie initiiert wurden, da eine Anwendung ein Benachrichtigungsabonnement erstellen und anschließend beendet werden kann. Das Abonnement bleibt gültig, und die Benachrichtigung wird gesendet, wenn die Daten innerhalb des während der Erstellung des Abonnements angegebenen Timeoutzeitraums geändert werden. Eine Benachrichtigung wird durch die ausgeführte Abfrage, die Benachrichtigungsoptionen und den Meldungstext identifiziert und wird möglicherweise abgebrochen, wenn der Timeoutwert auf NULL festgelegt wird.
+Benachrichtigungs Abonnements übersteigen den Prozess, mit dem Sie initiiert werden. Dies liegt daran, dass eine Anwendung ein Benachrichtigungs Abonnement erstellen und dann beenden kann. Das Abonnement bleibt gültig, und die Benachrichtigung wird gesendet, wenn die Daten innerhalb des Timeoutzeitraums geändert werden, der bei der Erstellung des Abonnements angegeben wurde. Eine Benachrichtigung wird von der ausgeführten Abfrage, den Benachrichtigungs Optionen und dem Nachrichtentext identifiziert. Sie können Sie Abbrechen, indem Sie den Timeout Wert auf NULL festlegen.
 
-Benachrichtigungen werden nur einmal gesendet. Für die kontinuierliche Benachrichtigung bei Datenänderungen müssen Sie ein neues Abonnement erstellen, indem Sie die Abfrage nach der Verarbeitung jeder Benachrichtigung erneut ausführen.
+Benachrichtigungen werden nur einmal gesendet. Um ständig über Datenänderungen benachrichtigt zu werden, müssen Sie ein neues Abonnement erstellen, indem Sie die Abfrage erneut ausführen, nachdem die einzelnen Benachrichtigungen verarbeitet wurden.
 
-Anwendungen von OLE DB-Treibern für SQL Server erhalten normalerweise Benachrichtigungen mit dem [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Befehl [RECEIVE](../../../t-sql/statements/receive-transact-sql.md), um Benachrichtigungen aus der Warteschlange zu lesen, die mit dem in den Benachrichtigungsoptionen angegebenen Dienst verknüpft ist.
+OLE DB Treiber für SQL Server Anwendungen empfängt normalerweise Benachrichtigungen mithilfe des [!INCLUDE[tsql](../../../includes/tsql-md.md)] [Receive](../../../t-sql/statements/receive-transact-sql.md) -Befehls. Er verwendet diesen Befehl, um Benachrichtigungen aus der Warteschlange zu lesen, die dem in den Benachrichtigungs Optionen angegebenen Dienst zugeordnet ist.
 
 > [!NOTE]
-> Tabellennamen müssen in Abfragen qualifiziert werden, für die Benachrichtigungen erforderlich sind, z. B. `dbo.myTable`. Tabellennamen müssen mit zwei Teilnamen qualifiziert werden. Das Abonnement ist ungültig, wenn drei oder vier Teilnamen verwendet werden.
+> Tabellennamen müssen in Abfragen angegeben werden, für die Benachrichtigungen erforderlich sind. Beispiel: `dbo.myTable`. Die Tabellennamen müssen aus zwei Teilen bestehen. Das Abonnement ist ungültig, wenn drei oder vier Teilnamen verwendet werden.
 
 Die Benachrichtigungsinfrastruktur setzt auf einer in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführten Queuing-Funktion auf. Im Allgemeinen werden auf dem Server generierte Benachrichtigungen durch diese Warteschlangen gesendet, um später verarbeitet zu werden.
 
-Für die Verwendung von Abfragebenachrichtigungen ist eine Warteschlange und ein Dienst auf dem Server erforderlich. Diese können mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] erstellt werden, wie in folgendem Beispiel veranschaulicht:
+Für die Verwendung von Abfragebenachrichtigungen ist eine Warteschlange und ein Dienst auf dem Server erforderlich. Diese können mithilfe des [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Befehls erstellt werden, ähnlich wie im folgenden Beispiel:
 
 ```sql
 CREATE QUEUE myQueue
@@ -66,26 +66,28 @@ CREATE SERVICE myService ON QUEUE myQueue
 ```
 
 > [!NOTE]
-> Der Dienst muss den vordefinierten Vertrag wie zuvor dargestellt verwenden.
+> Der Dienst muss, wie oben dargestellt, den vordefinierten Vertrag verwenden.
 
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB-Treiber für SQL Server
 
-Der OLE DB-Treiber für SQL Server unterstützt Consumer-Benachrichtigungen bei der Änderung von Rowsets. Der Consumer erhält in jeder Phase der Rowsetänderung und bei jeder versuchten Änderung eine Benachrichtigung.
+Der OLE DB-Treiber für SQL Server unterstützt Consumer-Benachrichtigungen bei der Rowsetänderung. Der Consumer erhält in jeder Phase der Rowsetänderung und bei jeder versuchten Änderung eine Benachrichtigung.
 
 > [!NOTE]
 > Die einzige zulässige Möglichkeit, Abfragebenachrichtigungen beim OLE DB-Treiber für SQL Server zu abonnieren, besteht in der Übergabe einer Benachrichtigungsabfrage an den Server mit **ICommand::Execute**.
 
-### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Die DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe
+### <a name="dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz
 
-Um Abfragebenachrichtigungen mit OLE DB zu unterstützen, fügt der OLE DB-Treiber für SQL Server dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die folgenden neuen Eigenschaften hinzu.
+Der OLE DB-Treiber für SQL Server fügt dem `DBPROPSET_SQLSERVERROWSET`-Eigenschaftensatz die folgenden neuen Eigenschaften hinzu, um Abfragebenachrichtigungen mit OLE DB zu unterstützen.
 
 |Name|Typ|und Beschreibung|
 |----------|----------|-----------------|
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Die Anzahl der Sekunden, die die Abfragebenachrichtigung aktiv bleiben soll.<br /><br /> Der Standardwert ist 432.000 Sekunden (5 Tage). Der Mindestwert ist 1 Sekunde und der Höchstwert 2^31-1 Sekunden.|
-|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Sie können eine Meldung mit 1-2000 Zeichen angeben.|
+|SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Geben Sie eine Nachricht mithilfe von 1 bis 2000 Zeichen an.|
 |SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit der Syntax *name*=*value* angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|
 
-Für das Benachrichtigungsabonnement wird immer ein Commit durchgeführt, unabhängig davon, ob die Anweisung in einer Benutzertransaktion oder im Autocommitmodus ausgeführt wurde oder ob für die Transaktion, in der die Anweisung ausgeführt wurde, ein Commit oder Rollback durchgeführt wurde. Die Serverbenachrichtigung wird bei einer der folgenden unzulässigen Benachrichtigungsbedingungen ausgelöst: bei einer Änderung der zugrunde liegenden Daten oder des zugrunde liegenden Schemas oder bei Erreichung des Timeoutzeitraums, je nachdem, welches Ereignis früher eintritt. Benachrichtigungsregistrierungen werden gelöscht, sobald sie ausgelöst wurden. Nach dem Empfang von Benachrichtigungen muss die Anwendung das Abonnement erneuern für den Fall, dass weitere Updates abgerufen werden sollen.
+Für das Benachrichtigungs Abonnement wird immer ein Commit ausgeführt. Dies geschieht unabhängig davon, ob die Anweisung in einer Benutzertransaktion oder Autocommit ausgeführt wurde oder ob für die Transaktion, in der die Anweisung ausgeführt wurde, ein Commit oder Rollback ausgeführt wurde. Die Serverbenachrichtigung wird bei einer der folgenden unzulässigen Benachrichtigungsbedingungen ausgelöst: bei einer Änderung der zugrunde liegenden Daten oder des zugrunde liegenden Schemas oder bei Erreichung des Timeoutzeitraums, je nachdem, welches Ereignis früher eintritt. 
+
+Benachrichtigungsregistrierungen werden gelöscht, nachdem sie ausgelöst wurden. Wenn Sie weitere Updates abrufen möchten, muss die Anwendung nach dem Empfang von Benachrichtigungen das Abonnement erneuern.
 
 Eine andere Verbindung oder ein Thread kann die Zielwarteschlange auf Benachrichtigungen überprüfen. Beispiel:
 
@@ -94,23 +96,23 @@ WAITFOR (RECEIVE * FROM MyQueue); -- Where MyQueue is the queue name.
 ```
 
 > [!NOTE]
-> Mit SELECT * wird der Eintrag in der Warteschlange nicht gelöscht, mit RECEIVE \* FROM jedoch schon. Dadurch wird ein Serverthread blockiert, wenn die Warteschlange leer ist. Wenn zum Zeitpunkt des Aufrufs Warteschlangeneinträge vorhanden sind, werden sie unmittelbar zurückgegeben. Andernfalls wartet der Aufruf, bis ein Warteschlangeneintrag vorgenommen wird.
+> `SELECT *`Löscht den Eintrag nicht aus der Warteschlange. `RECEIVE * FROM` Führt jedoch zu. Dadurch wird ein Serverthread blockiert, wenn die Warteschlange leer ist. Wenn zum Zeitpunkt des Aufrufes Warteschlangen Einträge gibt, werden diese sofort zurückgegeben. Andernfalls wartet der-Befehl, bis ein Warteschlangen Eintrag erstellt wird.
 
 ```sql
 RECEIVE * FROM MyQueue
 ```
 
-Diese Anweisung gibt unverzüglich ein leeres Resultset zurück, wenn die Warteschlange leer ist. Andernfalls gibt sie alle Warteschlangenbenachrichtigungen zurück.
+Diese Anweisung gibt sofort ein leeres Resultset zurück, wenn die Warteschlange leer ist. Andernfalls werden alle Warteschlangen Benachrichtigungen zurückgegeben.
 
-Wenn SSPROP_QP_NOTIFICATION_MSGTEXT und SSPROP_QP_NOTIFICATION_OPTIONS nicht NULL und nicht leer sind, wird der TDS-Abfragebenachrichtigungsheader mit den drei oben definierten Eigenschaften bei jeder Ausführung des Befehls an den Server gesendet. Wenn einer der Werte NULL (oder leer) ist, wird der Header nicht gesendet und DB_E_ERRORSOCCURRED ausgelöst (oder DB_S_ERRORSOCCURRED, wenn die Eigenschaften beide als optional gekennzeichnet sind). Der Statuswert wird auf DBPROPSTATUS_BADVALUE festgelegt. Die Überprüfung wird bei Ausführen/Vorbereiten vorgenommen. Entsprechend wird DB_S_ERRORSOCCURED ausgelöst, wenn die Abfragebenachrichtigungseigenschaften für Verbindungen mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt wurden. In diesem Fall ist der Statuswert DBPROPSTATUS_NOTSUPPORTED.
+Wenn `SSPROP_QP_NOTIFICATION_MSGTEXT` und `SSPROP_QP_NOTIFICATION_OPTIONS` ungleich NULL und nicht leer sind, wird der TDS-Abfrage Benachrichtigungs Header, der die drei oben definierten Eigenschaften enthält, an den Server gesendet. Dies erfolgt bei jeder Ausführung des Befehls. Wenn einer der beiden Werte NULL (oder leer) ist, wird der Header nicht `DB_E_ERRORSOCCURRED` gesendet und ausgelöst ( `DB_S_ERRORSOCCURRED` oder wird ausgelöst, wenn die Eigenschaften beide als optional gekennzeichnet sind). Der Statuswert wird dann auf `DBPROPSTATUS_BADVALUE`festgelegt. Die Überprüfung erfolgt bei EXECUTE und Prepare. Entsprechend wird `DB_S_ERRORSOCCURED` ausgelöst, wenn die Eigenschaften der Abfragebenachrichtigung für Verbindungen mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] festgelegt wurden. Der Statuswert ist `DBPROPSTATUS_NOTSUPPORTED`in diesem Fall.
 
-Ein Abonnement zu initiieren gewährleistet nicht, dass nachfolgende Meldungen erfolgreich übermittelt werden. Außerdem wird keine Prüfung im Hinblick auf die Gültigkeit des angegebenen Dienstnamens durchgeführt.
+Die Initialisierung eines Abonnements gewährleistet nicht, dass nachfolgende Meldungen erfolgreich übermittelt werden. Außerdem wird nicht überprüft, ob der angegebene Dienstname gültig ist.
 
 > [!NOTE]
-> Durch Vorbereiten der Anweisungen wird nie eine Initiierung des Abonnements ausgelöst. Dies wird nur durch die Ausführung der Anweisung erreicht. Abfragebenachrichtigungen werden von der Verwendung von OLE DB-Basisdiensten nicht beeinflusst.
+> Beim Vorbereiten von Anweisungen wird das Abonnement niemals initiiert. Nur die Anweisungs Ausführung führt zu einer Initiierung. Abfrage Benachrichtigungen wirken sich nicht auf die Verwendung von OLE DB-Kerndiensten aus.
 
-Weitere Informationen zum DBPROPSET_SQLSERVERROWSET-Eigenschaften Satz finden Sie unter [Rowset-Eigenschaften und-Verhalten](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
+Weitere Informationen zum Eigenschaften Satz `DBPROPSET_SQLSERVERROWSET` finden Sie unter [Eigenschaften und Verhalten von Rowsets](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [OLE DB-Treiber für SQL Server-Features](../../oledb/features/oledb-driver-for-sql-server-features.md)
