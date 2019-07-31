@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413004"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661281"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
 
-Ausdrücke werden in Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke sind in geschrieben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], und können integrierte Funktionen, benutzerdefinierten Code, Bericht und Gruppenvariablen und benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](add-an-expression-report-builder-and-ssrs.md).  
+Ausdrücke werden in Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen von benutzerdefiniertem Code, Berichts-und Gruppen Variablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](add-an-expression-report-builder-and-ssrs.md).  
 
 > [!IMPORTANT]  
 >  Bei aktiviertem RDL-Sandkasten können nur bestimmte Typen und Elemente zum Veröffentlichungszeitpunkt des Berichts im Ausdruckstext verwendet werden. Weitere Informationen finden Sie unter [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md).  
@@ -51,7 +51,7 @@ Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungs
 
 Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Einführung in Ausdrücke](../tutorial-introducing-expressions.md).  
 
-Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie unter den [Expression Dialog Box](../expression-dialog-box.md) oder [Expression Dialog Box &#40;Berichts-Generator&#41;](../expression-dialog-box-report-builder.md).  
+Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie unter Dialogfeld ' [Ausdruck](../expression-dialog-box.md) ' oder ' [Ausdruck &#40;'&#41;Berichts-Generator](../expression-dialog-box-report-builder.md).  
 
 ## <a name="functions"></a>Funktionen  
 
@@ -176,9 +176,9 @@ Im folgenden Beispiel wird das Anfangsdatum des aktuellen Jahres angezeigt.
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-Wenn das Textfeld nur ein Datum oder eine Zahl enthält, sollten Sie die Format-Eigenschaft des Textfelds verwenden, um anstelle von Formatierungen Anwenden der `Format` Funktion in das Textfeld ein.  
+Wenn das Textfeld nur ein Datum oder eine Zahl enthält, sollten Sie die Format-Eigenschaft des Textfelds verwenden, um anstelle `Format` der Funktion innerhalb des Textfelds eine Formatierung anzuwenden.  
 
--   Die `Right`, `Len`, und `InStr` Funktionen sind hilfreich für die Rückgabe einer Teilzeichenfolge, z. B. kürzen *Domäne*\\*Benutzername* auf den Benutzernamen. Der folgende Ausdruck gibt den Teil der Zeichenfolge rechts neben einem umgekehrten Schrägstrich (\\) des *User*-Parameters zurück:  
+-   Die `Right`Funktionen `Len`, und `InStr` sind nützlich, um eine Teil Zeichenfolge zurückzugeben, z. b. den *Domänen*\\*Benutzernamen* auf den Benutzernamen zu verkürzen. Der folgende Ausdruck gibt den Teil der Zeichenfolge rechts neben einem umgekehrten Schrägstrich (\\) des *User*-Parameters zurück:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ Der folgende Ausdruck liefert dasselbe Ergebnis, wobei Elemente der [!INCLUDE[dn
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   Die ausgewählten Werte aus einem mehrwertigen Parameter können angezeigt werden. Im folgenden Beispiel wird die `Join` -Funktion zum Verketten der ausgewählten Werte des Parameters *MySelection* in einer einzelnen Zeichenfolge, die als Ausdruck für den Wert eines Textfelds in einem Berichtselement festgelegt werden kann:  
+-   Die ausgewählten Werte aus einem mehrwertigen Parameter können angezeigt werden. Im folgenden Beispiel wird die `Join` -Funktion verwendet, um die ausgewählten Werte des-Parameters *MySelection* zu einer einzelnen Zeichenfolge zu verketten, die als Ausdruck für den Wert eines Textfelds in einem Berichts Element festgelegt werden kann:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ Das folgende Beispiel hat die gleiche Funktion wie das Beispiel oben und zeigt d
 
 ```  
 
--   Die `Regex` Funktionen aus der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> eignen sich zum Ändern des Formats vorhandener Zeichenfolgen, z. B. Formatieren einer Telefonnummer. Im folgenden Ausdruck wird der `Replace` Funktion zum Ändern des Formats einer zehnstelligen Telefonnummer in ein Feld von "*Nnn*-*Nnn*-*Nnnn* "," (*Nnn*) *Nnn*-*Nnnn*":  
+-   Die `Regex` Funktionen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] vonsindnützlich,umdasFormatvorhandenerZeichenfolgenzuändern,z.b.dasFormatieren<xref:System.Text.RegularExpressions> einer Telefonnummer. Der folgende Ausdruck verwendet die `Replace` -Funktion, um das Format einer zehnstelligen Telefonnummer in ein Feld von "*nnn*-*nnn*-*nnnn*" in "(*nnn*) *nnn* - " zu ändern. *nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ Das folgende Beispiel hat die gleiche Funktion wie das Beispiel oben und zeigt d
 -   Durch Angabe eines Schlüsselfelds können Sie mit der `Lookup`-Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, zum Beispiel ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset („Product“) an, wenn der Produktbezeichner als Grundlage für die Übereinstimmung angegeben ist:  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ Berichtselemente können mithilfe der Sichtbarkeitseigenschaften ein- und ausgeb
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   Der folgende Ausdruck, wenn festgelegt, der `Hidden` Eigenschaft einer Spalte wird die Spalte nur, wenn das Feld im Berichtsdataset vorhanden ist, nachdem die Daten aus der Datenquelle abgerufen werden:  
+-   Wenn der folgende Ausdruck in der `Hidden` -Eigenschaft einer Spalte festgelegt wird, wird die Spalte nur angezeigt, wenn das Feld im Berichts DataSet vorhanden ist, nachdem die Daten aus der Datenquelle abgerufen wurden:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  

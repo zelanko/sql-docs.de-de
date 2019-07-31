@@ -1,5 +1,5 @@
 ---
-title: Geben Sie Eigenschaften für Merge-Replikation | Microsoft-Dokumentation
+title: Eigenschaften der Mergereplikation angeben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199299"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661306"
 ---
-# <a name="specify-merge-replication-properties"></a>Geben Sie Merge Replication-Eigenschaften
+# <a name="specify-merge-replication-properties"></a>Eigenschaften für Mergereplikation angeben
 In diesem Artikel wird beschrieben, wie Sie verschiedene Eigenschaften für Ihre Mergereplikationen angeben. 
 
 
 ## <a name="download-only"></a>Nur herunterladbar
-  In diesem Abschnitt wird beschrieben, wie ein, um anzugeben, dass ein mergetabellenartikel nur herunterladbar in ist [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Nur herunterladbare Artikel sind für Anwendungen vorgesehen, deren Daten nicht auf den Abonnenten aktualisiert werden. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+  In diesem Abschnitt wird beschrieben, wie angegeben wird, dass ein Mergetabellenartikel [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] in mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]nur heruntergeladen werden kann. Nur herunterladbare Artikel sind für Anwendungen vorgesehen, deren Daten nicht auf den Abonnenten aktualisiert werden. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
  
   
 ###  <a name="limitations-and-restrictions"></a>Einschränkungen  
@@ -52,19 +52,19 @@ In diesem Artikel wird beschrieben, wie Sie verschiedene Eigenschaften für Ihre
 ###  <a name="using-transact-sql"></a>Verwenden von Transact-SQL  
   
 #### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>So geben Sie an, dass ein neuer Mergetabellenartikel nur herunterladbar ist    
-1.  Führen Sie [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)unter Angabe des Werts **1** oder **2** für den Parameter **@subscriber_upload_options** nur heruntergeladen werden kann. Die Werte entsprechen dem folgenden Verhalten:  
+1.  Führen Sie [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus, und geben Sie den Wert **1** oder **2** für den Parameter  **\@subscriber_upload_options**an. Die Werte entsprechen dem folgenden Verhalten:  
   
     -   **0** &ndash; Keine Einschränkungen (Standard). Auf dem Abonnenten vorgenommene Änderungen werden auf den Verleger hochgeladen.    
     -   **1** &ndash; Änderungen sind auf dem Abonnenten zulässig, werden aber nicht auf den Verleger hochgeladen.    
     -   **2** &ndash; Änderungen sind auf dem Abonnenten nicht zulässig.  
   
         > [!NOTE]  
-        >  Wenn die Quelltabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss für **@subscriber_upload_options** für beide Artikel der gleiche Wert angegeben werden.  
+        >  Wenn die Quell Tabelle für einen Artikel bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von  **\@subscriber_upload_options** für beide Artikel identisch sein.  
   
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>So ändern Sie einen vorhandenen Mergetabellenartikel dahingehend, dass er nur herunterladbar ist  
   
 1.  Um zu ermitteln, ob ein Artikel nur herunterladbar ist, führen Sie [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)aus. Beachten Sie im Resultset den Wert von **upload_options** für den Artikel.    
-2.  Wenn in Schritt 1 der Wert **0**zurückgegeben wird, führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)unter Angabe des Werts **subscriber_upload_options** für **@property** , des Werts **1** für **@force_invalidate_snapshot** und **@force_reinit_subscription** sowie des Werts **1** oder **2** für **@value** aus, was folgendem Verhalten entspricht:  
+2.  Wenn der in Schritt 1 zurückgegebene Wert **0**ist, führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus, und geben Sie dabei den Wert **subscriber_upload_options** für  **\@die Eigenschaft**, den Wert **1** für  **\@force_invalidate_ Snapshot**  **und\@force_reinit_subscription**sowie der Wert **1** oder **2** für  **\@Value**, der dem folgenden Verhalten entspricht:  
   
     -   **1** &ndash; Änderungen sind auf dem Abonnenten zulässig, werden aber nicht auf den Verleger hochgeladen.    
     -   **2** &ndash; Änderungen sind auf dem Abonnenten nicht zulässig.  
@@ -72,7 +72,7 @@ In diesem Artikel wird beschrieben, wie Sie verschiedene Eigenschaften für Ihre
         > [!NOTE]  
         >  Wenn die Quelltabelle eines Artikels bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss das Verhalten nur herunterladbarer Artikel gleich sein.  
  
-## <a name="interactive-conflict-resolution">Interaktive konfliktlösung</a>
+## <a name="interactive-conflict-resolution">Interaktive Konfliktlösung</a>
 In der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation steht ein interaktiver Konfliktlöser zur Verfügung, mit dem Sie Konflikte bei einer bedarfsgesteuerten Synchronisierung in der Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows manuell lösen können. Wenn Sie die interaktive Konfliktlösung aktiviert haben, können Sie Konflikte mithilfe des interaktiven Konfliktlösers interaktiv lösen. Der interaktive Konfliktlöser ist über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows verfügbar. Weitere Informationen finden Sie unter [Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows &#40;Synchronisierungsverwaltung von Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
@@ -101,23 +101,23 @@ In der[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersi
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Erstellen eines Mergepullabonnements, das den interaktiven Konfliktlöser verwendet  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)unter Angabe von **@publication** angegeben wird. Betrachten Sie den Wert von **allow_interactive_resolver** für jeden Artikel im Resultset, für das der interaktive Konfliktlöser verwendet wird.    
+1.  Führen Sie [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)auf dem Verleger für die Veröffentlichungs Datenbank aus,  **\@** und geben Sie die Veröffentlichung an. Betrachten Sie den Wert von **allow_interactive_resolver** für jeden Artikel im Resultset, für das der interaktive Konfliktlöser verwendet wird.    
     -   Wenn dieser Wert **1**lautet, wird der Interaktive Konfliktlöser verwendet.    
-    -   Wenn dieser Wert **0**lautet, müssen Sie zuerst den interaktiven Konfliktlöser für jeden Artikel aktivieren. Hierzu führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)unter Angabe von **@publication** , **@article** , dem Wert **allow_interactive_resolver** für **@property** und dem Wert **true** für **@value** angegeben wird.    
+    -   Wenn dieser Wert **0**lautet, müssen Sie zuerst den interaktiven Konfliktlöser für jeden Artikel aktivieren. Führen Sie hierzu [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus,  **\@** und geben Sie die  **\@** Veröffentlichung, den Artikel, den Wert  **\@** **allow_interactive_resolver** für die Eigenschaft und den Wert true an.  **für\@Value**.    
 2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)aus. Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).    
 3.  Führen Sie auf dem Abonnenten für die Abonnentendatenbank [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)aus, und geben Sie die folgenden Parameter an:  
   
-    -   **@publisher** , **@publisher_db** (die veröffentlichte Datenbank) und **@publication** angegeben wird.    
-    -   Den Wert **true** für **@enabled_for_syncmgr** angegeben wird.    
-    -   Den Wert **true** für **@use_interactive_resolver** angegeben wird.    
+    -   **\@Herausgeber**,  **publisher_db(dieveröffentlichteDatenbank)undVeröffentlichung.\@**  **\@**    
+    -   Der Wert **true** für  **\@enabled_for_syncmgr**.    
+    -   Der Wert **true** für  **\@use_interactive_resolver**.    
     -   Die für den Merge-Agent erforderlichen Sicherheitskontoinformationen. Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).    
 4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)aus.  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definieren eines Artikels, der den interaktiven Konfliktlöser unterstützt  
   
-Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für **@publication** , den Namen des Artikels für **@article** , das Datenbankobjekt, das veröffentlicht wird, für **@source_object** und dem Wert **true** für **@allow_interactive_resolver** angegeben wird. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
+Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört  **\@** , für die Veröffentlichung, den Namen des  **\@** Artikels für den Artikel, das Datenbankobjekt, das für  **\@source_object**veröffentlicht wird, und einen Wert an. von **true** für  **\@allow_interactive_resolver**. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
 
-## <a name="specify-the-conflict-tracking-and-resolution-level"></a>Angeben der Konfliktnachverfolgungs- und-lösungsebene 
+## <a name="specify-the-conflict-tracking-and-resolution-level"></a>Angeben der Konfliktnachverfolgungs-und Auflösungsebene 
 Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft die Replikation auf Konflikte, die sich ergeben, wenn der Verleger und der Abonnent die gleichen Daten ändern. Sie können angeben, ob Konflikte auf Zeilenebene erkannt werden, wobei jede Änderung in der Zeile als Konflikt eingestuft wird, oder auf Spaltenebene, wobei nur die Änderungen in derselben Spalte und derselben Zeile als Konflikte eingestuft werden. Die Konfliktlösung für Artikel wird auf Zeilenebene ausgeführt. Weitere Informationen zur Konflikterkennung und -lösung bei logischen Datensätzen finden Sie unter [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 
@@ -139,9 +139,9 @@ Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft
   
 ###  <a name="using-transact-sql"></a>Verwenden von Transact-SQL  
   
-#### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>Geben Sie konfliktverfolgungsoptionen für einen neuen Mergeartikel  
+#### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>Angeben von Konflikt Verfolgungs Optionen für einen neuen Mergeartikel  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus, und geben Sie einen der folgenden Werte für **@column_tracking** an:  
+1.  Führen Sie [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) auf dem Verleger für die Veröffentlichungs Datenbank aus, und geben Sie einen der folgenden Werte für  **\@column_tracking**an:  
   
     -   **true** &ndash; Nachverfolgung auf Spaltenebene für den Artikel verwenden.    
     -   **false** &ndash; Nachverfolgung auf Zeilenebene verwenden (Standard).  
@@ -149,13 +149,13 @@ Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Ändern der Konfliktverfolgungsoptionen für einen Mergeartikel  
   
 1.  Um die Konfliktverfolgungsoptionen für einen Mergeartikel zu bestimmen, führen Sie [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)aus. Achten Sie auf den Wert der **column_tracking** -Option im Resultset für den Artikel. Der Wert **1** bedeutet, dass die Nachverfolgung auf Spaltenebene verwendet wird, und der Wert **0** bedeutet, dass die Nachverfolgung auf Zeilenebene verwendet wird.    
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **column_tracking** für **@property** und einen der folgenden Werte für **@value** an:
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie den Wert **column_tracking** für  **\@Property** und einen der folgenden Werte für  **\@Value**an:
     -   **true** &ndash; Nachverfolgung auf Spaltenebene für den Artikel verwenden.
     -   **false** &ndash; Nachverfolgung auf Zeilenebene verwenden (Standard).  
   
-     Geben Sie den Wert **1** sowohl für **@force_invalidate_snapshot** und **@force_reinit_subscription** angegeben werden.  
+     Geben Sie für  **\@force_invalidate_snapshot** und  **\@force_reinit_subscription**den Wert **1** an.  
 
-## <a name="tracking-deletes"></a>Nachverfolgung von Löschvorgängen
+## <a name="tracking-deletes"></a>Nach Verfolgungs Löschungen
 
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -167,7 +167,7 @@ Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Angeben, dass Löschvorgänge für neue Mergeartikel ignoriert werden sollen  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben Sie den Wert `false` für **@delete_tracking** . Weitere Informationen finden Sie unter [Definieren eines Artikels](../publish/define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben Sie den Wert `false` für  **\@delete_tracking**an. Weitere Informationen finden Sie unter [Definieren eines Artikels](../publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Wenn die Quelltabelle eines Artikels bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von **delete_tracking** für beide Artikel gleich sein.  
@@ -175,7 +175,7 @@ Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Angeben, dass Löschvorgänge für einen vorhandenen Mergeartikel ignoriert werden sollen  
   
 1.  Führen Sie [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) aus, um zu ermitteln, ob die Fehlerkompensierung für einen Artikel aktiviert ist, und achten Sie im Resultset auf den Wert von **delete_tracking**. Ist dieser Wert **0**, werden Löschvorgänge bereits ignoriert.    
-2.  Ist der in Schritt 1 ermittelte Wert **1** ist, führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **Delete_tracking** für **@property** , und den Wert `false` für **@value** .  
+2.  Ist der in Schritt 1 ermittelte Wert **1** ist, führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **delete_tracking** für  **\@die Eigenschaft**und den Wert `false` für  **\@Value**an.  
   
     > [!NOTE]  
     >  Wenn die Quelltabelle eines Artikels bereits in einer anderen Veröffentlichung veröffentlicht wurde, muss der Wert von **delete_tracking** für beide Artikel gleich sein.  
@@ -194,18 +194,18 @@ Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft
   
  Wenn die referenzielle Integrität durch Trigger oder auf Anwendungsebene gewahrt wird, müssen Sie die Reihenfolge angeben, in der die Artikel verarbeitet werden sollen. Im Beispiel mit den Triggern würden Sie dann angeben, dass die **SalesOrderHeader** -Tabelle vor der **SalesOrderDetail**-Tabelle zu verarbeiten ist, weil die Artikelreihenfolge auf der Einfügereihenfolge basiert. Bei der Mergereplikation wird die Reihenfolge der Löschungen automatisch umgekehrt. Das Nichtfestlegen einer Artikelverarbeitungsreihenfolge führt nicht zu einem Scheitern der Mergereplikation, weil der Merge-Agent mit der Verarbeitung der Artikel fortfährt, wenn es zu einer Einschränkungsverletzung kommt. Wenn die anderen Artikel verarbeitet sind, versucht der Agent, alle Operationen, die fehlgeschlagen sind, erneut auszuführen. Durch das Angeben einer Artikelverarbeitungsreihenfolge werden lediglich solche Neuversuche und die damit verbundene zusätzliche Verarbeitung verhindert. Wenn Sie eine falsche Reihenfolge angeben (z. B. eine, bei der die Detaildatensätze vor den Headerdatensätzen verarbeitet werden), versucht die Mergereplikation die Verarbeitung so lange, bis sie gelingt.  
 
-### <a name="new-article"></a>Neue Artikel
+### <a name="new-article"></a>Neuer Artikel
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben Sie einen ganzzahligen Wert, der die Verarbeitungsreihenfolge für den Artikel darstellt, für **@processing_order** . Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) aus. Geben Sie einen ganzzahligen Wert an, der die Verarbeitungsreihenfolge für den Artikel für  **\@processing_order**darstellt. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
     > [!NOTE]  
-    >  Wenn Sie sortierte Artikel erstellen, sollten Sie Lücken zwischen den Werten für die Artikelreihenfolge lassen. Dadurch wird das Festlegen neuer Wert zu einem späteren Zeitpunkt erleichtert. Wenn Sie beispielsweise drei Artikel haben, für die Sie eine bestimmte Verarbeitungsreihenfolge angeben müssen, legen Sie den Wert von **@processing_order** auf 10, 20 und 30 anstatt 1, 2 und 3 fest.  
+    >  Wenn Sie sortierte Artikel erstellen, sollten Sie Lücken zwischen den Werten für die Artikelreihenfolge lassen. Dadurch wird das Festlegen neuer Wert zu einem späteren Zeitpunkt erleichtert. Wenn Sie beispielsweise drei Artikel haben, für die Sie eine behobene Verarbeitungsreihenfolge angeben müssen, legen Sie den Wert von  **\@processing_order** auf 10, 20 und 30 anstelle von 1, 2 bzw. 3 fest.  
   
 ### <a name="existing-article"></a>Bereits vorhandener Artikel
   
 1.  Um die Verarbeitungsreihenfolge eines Artikels zu ermitteln, führen Sie [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) aus, und betrachten den Wert von **processing_order** im Resultset.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus. Geben Sie den Wert **processing_order** für **@property** und einen ganzzahligen Wert, der die Verarbeitungsreihenfolge darstellt, für **@value** .  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus. Geben Sie den Wert **processing_order** für  **\@die Eigenschaft** und einen ganzzahligen Wert an, der die Verarbeitungsreihenfolge für  **\@Value**darstellt.  
 
 
 
@@ -213,7 +213,7 @@ Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft
  [Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
  [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Define a Logical Record Relationship Between Merge Table Articles](define-a-logical-record-relationship-between-merge-table-articles.md)   
- [Erkennen und Auflösen von Konflikten bei der Mergereplikation](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Erkennen und Auflösen von mergereplikationskonflikten](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
  [Define an Article](define-an-article.md)   
  [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md)  
