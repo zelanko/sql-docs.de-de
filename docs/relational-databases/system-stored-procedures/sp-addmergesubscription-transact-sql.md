@@ -1,5 +1,5 @@
 ---
-title: Sp_addmergesubscription (Transact-SQL) | Microsoft-Dokumentation
+title: sp_addmergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1215ee5b90729237117599edc747dc68b04f0575
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117923"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661488"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt ein Mergepushabonnement oder ein Mergepullabonnement. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Erstellt ein Mergepushabonnement oder ein Mergepullabonnement. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,34 +61,34 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Die Veröffentlichung muss bereits vorhanden sein.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Die Veröffentlichung muss bereits vorhanden sein.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db*ist **Sysname**, hat den Standardwert NULL.  
+`[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscriber_db*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @subscription_type = ] 'subscription_type'` Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)** , hat den Standardwert PUSH. Wenn **Push**, wird ein Pushabonnement hinzugefügt, und der Merge-Agent auf dem Verteiler hinzugefügt. Wenn **Pull**, ein Pullabonnement wird hinzugefügt, ohne dass ein Merge-Agent auf dem Verteiler hinzugefügt.  
+`[ @subscription_type = ] 'subscription_type'`Der Abonnementtyp. *subscription_type*ist vom Datentyp **nvarchar (15)** und hat den Standardwert Push. Bei **Push**wird ein Pushabonnement hinzugefügt, und das Merge-Agent wird auf dem Verteiler hinzugefügt. Wenn **Pull**, wird ein Pullabonnement hinzugefügt, ohne auf dem Verteiler eine Merge-Agent hinzuzufügen.  
   
 > [!NOTE]  
 >  Für anonyme Abonnements ist diese gespeicherte Prozedur nicht erforderlich.  
   
-`[ @subscriber_type = ] 'subscriber_type'` Ist der Typ des Abonnenten. *subscriber_type kann*ist **nvarchar(15)** , und kann einen der folgenden Werte.  
+`[ @subscriber_type = ] 'subscriber_type'`Der Typ des Abonnenten. *subscriber_type*ist vom Datentyp **nvarchar (15)** . die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**lokale** (Standard)|Der Abonnent ist nur dem Verleger bekannt.|  
+|**lokal** vorgegebene|Der Abonnent ist nur dem Verleger bekannt.|  
 |**global**|Der Abonnent ist allen Servern bekannt.|  
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden lokale Abonnements als "Clientabonnements" und globale Abonnements als "Serverabonnements" bezeichnet.  
   
-`[ @subscription_priority = ] subscription_priority` Ist eine Zahl, die die Priorität für das Abonnement angibt. *Subscription_priority*ist **echte**, hat den Standardwert NULL. Für lokale und anonyme Abonnements ist die Priorität 0,0. Für globale Abonnements muss die Priorität niedriger als 100,0 sein.  
+`[ @subscription_priority = ] subscription_priority`Eine Zahl, die die Priorität für das Abonnement angibt. *subscription_priority*ist vom Typ **Real**und hat den Standardwert NULL. Für lokale und anonyme Abonnements ist die Priorität 0,0. Für globale Abonnements muss die Priorität niedriger als 100,0 sein.  
   
-`[ @sync_type = ] 'sync_type'` Ist der Synchronisierungsart des Abonnements an. *Sync_type*ist **nvarchar(15)** , hat den Standardwert **automatische**. Kann **automatische** oder **keine**. Wenn **automatische**, das Schema und die Ausgangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen werden. Wenn **keine**, es wird davon ausgegangen, dass der Abonnent hat bereits das Schema und die Ausgangsdaten für veröffentlichte Tabellen. Systemtabellen und Daten werden immer übertragen.  
+`[ @sync_type = ] 'sync_type'`Der Synchronisierungstyp des Abonnements. *sync_type*ist vom Datentyp **nvarchar (15)** . der Standardwert ist **automatisch**. Kann " **Automatic** " oder " **None**" sein. Wenn **automatisch**, werden das Schema und die Anfangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen. Wenn **keiner**vorhanden ist, wird davon ausgegangen, dass der Abonnent bereits über das Schema und die Anfangsdaten für veröffentlichte Tabellen verfügt. Systemtabellen und Daten werden immer übertragen.  
   
 > [!NOTE]  
->  Es wird empfohlen, keine Angabe des Werts **keine**.  
+>  Es wird empfohlen, nicht den Wert " **None**" anzugeben.  
   
-`[ @frequency_type = ] frequency_type` Ist ein Wert, der angibt, wann der Merge-Agent ausgeführt wird. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_type = ] frequency_type`Ein Wert, der angibt, wann die Merge-Agent ausgeführt wird. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -100,7 +100,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**40**|Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents|  
 |NULL (Standard)||  
   
-`[ @frequency_interval = ] frequency_interval` Der Tag oder die Tage, die der Merge-Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_interval = ] frequency_interval`Der Tag oder die Tage, an denen die Merge-Agent ausgeführt wird. *frequency_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -112,11 +112,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**6**|Freitag|  
 |**7**|Samstag|  
 |**8**|Day|  
-|**9**|Wochentage|  
+|**9**|Tage|  
 |**10**|Wochenendtage|  
 |NULL (Standard)||  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Ist die geplante Ausführung von Mergevorgängen mit dem Häufigkeitsintervall in jedem Monat. *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Das geplante Merge-Vorkommen des Häufigkeits Intervalls in jedem Monat. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -127,9 +127,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**16**|Letzter|  
 |NULL (Standard)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor*ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @frequency_subday = ] frequency_subday` Die Einheit für *Frequency_subday_interval*. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_subday = ] frequency_subday`Ist die Einheit für *frequency_subday_interval*. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -139,51 +139,51 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**8**|Hour|  
 |NULL (Standard)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Die Häufigkeit von *Frequency_subday* zwischen jedem Mergevorgang ausgeführt. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Die Häufigkeit, mit der *frequency_subday* zwischen den einzelnen zusammenführen auftritt. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit aus, wenn der Merge-Agent zuerst ist, wird geplant HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Die Tageszeit, zu der die Merge-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Merge-Agent nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Die Tageszeit, zu der die Merge-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an den Merge-Agent zuerst ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date`Das Datum, an dem die Merge-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Merge-Agent nicht mehr, geplant JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date`Das Datum, an dem der Merge-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Ist die optional auszuführende Befehlszeile an. *Der Standardwert*ist **nvarchar(4000)** , hat den Standardwert NULL. Dieser Parameter wird verwendet, um einen Befehl hinzuzufügen, der die Ausgabe aufzeichnet und in einer Datei speichert, oder um eine Konfigurationsdatei oder ein Konfigurationsattribut anzugeben.  
+`[ @optional_command_line = ] 'optional_command_line'`Die optionale Eingabeaufforderung, die ausgeführt werden soll. *optional_command_line*ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. Dieser Parameter wird verwendet, um einen Befehl hinzuzufügen, der die Ausgabe aufzeichnet und in einer Datei speichert, oder um eine Konfigurationsdatei oder ein Konfigurationsattribut anzugeben.  
   
-`[ @description = ] 'description'` Ist eine kurze Beschreibung dieses Mergeabonnements. *Beschreibung*ist **nvarchar(255)** , hat den Standardwert NULL. Dieser Wert wird angezeigt, vom Replikationsmonitor in der **Anzeigenamen** Spalte, die zum Sortieren von Abonnements für eine überwachte Veröffentlichung verwendet werden kann.  
+`[ @description = ] 'description'`Eine kurze Beschreibung dieses Mergeabonnements. die *Beschreibung*ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Dieser Wert wird vom Replikations Monitor in der Spalte Anzeige **Name** angezeigt, der zum Sortieren der Abonnements für eine überwachte Veröffentlichung verwendet werden kann.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Gibt an, ob das Abonnement kann, über synchronisiert werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungsverwaltung von Windows. *Enabled_for_syncmgr* ist **nvarchar(5)** , hat den Standardwert "false". Wenn **"false"** , das Abonnement ist nicht mit der Synchronisierungsverwaltung registriert. Wenn **"true"** , das Abonnement mit der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Gibt an, ob das Abonnement über [!INCLUDE[msCoName](../../includes/msconame-md.md)] die Synchronisierungs Verwaltung von Windows synchronisiert werden kann. *enabled_for_syncmgr* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false. Wenn der Wert **false**ist, wird das Abonnement nicht bei der Synchronisierungs Verwaltung registriert. Wenn der Wert **true**ist, wird das Abonnement bei der Synchronisierungs Verwaltung registriert und [!INCLUDE[msCoName](../../includes/msconame-md.md)] kann synchronisiert werden, ohne zu starten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-`[ @offloadagent = ] remote_agent_activation` Gibt an, dass der Agent Remote aktiviert werden kann. *Remote_agent_activation* ist **Bit** hat den Standardwert **0**.  
+`[ @offloadagent = ] remote_agent_activation`Gibt an, dass der Agent Remote aktiviert werden kann. *remote_agent_activation* ist vom Typ **Bit** und hat den Standardwert **0**.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird nur noch bereitgestellt, um Abwärtskompatibilität von Skripts sicherzustellen.  
   
-`[ @offloadserver = ] 'remote_agent_server_name'` Gibt den Netzwerknamen des Servers für Remoteaktivierung der Momentaufnahme verwendet werden soll. *Remote_agent_server_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @offloadserver = ] 'remote_agent_server_name'`Gibt den Netzwerknamen des Servers an, der für die Remote-Agentaktivierung verwendet werden soll. *remote_agent_server_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Können Konflikte interaktiv für alle Artikel aufgelöst werden, die interaktive Lösung zulassen. *Use_interactive_resolver* ist **nvarchar(5)** , hat den Standardwert "false".  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'`Ermöglicht das interaktive Auflösen von Konflikten für alle Artikel, die eine interaktive Auflösung ermöglichen. *use_interactive_resolver* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
-`[ @merge_job_name = ] 'merge_job_name'` Die *@merge_job_name* -Parameter ist veraltet und kann nicht festgelegt werden. *Merge_job_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @merge_job_name = ] 'merge_job_name'`Der merge_job_name-Parameter ist veraltet und kann nicht festgelegt werden.  *\@* *merge_job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @hostname = ] 'hostname'` Überschreibt den Rückgabewert von [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Wenn diese Funktion in der WHERE-Klausel eines parametrisierten Filters verwendet wird. *Hostname* ist **Sysname**, hat den Standardwert NULL.  
+`[ @hostname = ] 'hostname'`Überschreibt den von [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) zurückgegebenen Wert, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Filters verwendet wird. Der *Hostname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
->  Aus Leistungsgründen wird empfohlen, keine Funktionen auf Spaltennamen in parametrisierten Zeilenfilterklauseln (beispielsweise `LEFT([MyColumn]) = SUSER_SNAME()`) anzuwenden. Bei Verwendung von [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in einer Filterklausel verwenden und den Wert HOST_NAME überschreiben, ist es möglicherweise erforderlich, um Konvertieren von Datentypen mithilfe von [konvertieren](../../t-sql/functions/cast-and-convert-transact-sql.md). Weitere Informationen zu bewährten Methoden für diesen Fall finden Sie im Abschnitt über das Überschreiben des HOST_NAME()-Werts im Thema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+>  Aus Leistungsgründen wird empfohlen, keine Funktionen auf Spaltennamen in parametrisierten Zeilenfilterklauseln (beispielsweise `LEFT([MyColumn]) = SUSER_SNAME()`) anzuwenden. Wenn Sie [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) in einer Filter Klausel verwenden und den HOST_NAME-Wert überschreiben, ist es möglicherweise erforderlich, Datentypen mithilfe von [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md)zu konvertieren. Weitere Informationen zu bewährten Methoden für diesen Fall finden Sie im Abschnitt über das Überschreiben des HOST_NAME()-Werts im Thema [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_addmergesubscription** wird bei der Mergereplikation verwendet.  
+ **sp_addmergesubscription** wird bei der Mergereplikation verwendet.  
   
- Wenn **Sp_addmergesubscription** ausgeführt wird, von einem Mitglied der **Sysadmin** feste Serverrolle, um ein Pushabonnement zu erstellen, der Merge-Agent-Auftrag implizit erstellt und ausgeführt wird, klicken Sie unter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Dienstkonto. Es wird empfohlen, die Sie ausführen [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) und geben Sie die Anmeldeinformationen eines anderen, Agent-spezifischen Windows-Kontos für **@job_login** und **@job_password** . Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Wenn **sp_addmergesubscription** von einem Mitglied der festen Server Rolle **sysadmin** ausgeführt wird, um ein Pushabonnement zu erstellen, wird der Merge-Agent Auftrag implizit erstellt und unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst Konto ausgeführt. Es wird empfohlen, dass Sie [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) ausführen und die Anmelde Informationen eines anderen, agentspezifischen Windows-Kontos für  **\@job_login** und  **\@job_password**angeben. Weitere Informationen finden Sie unter [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addmergesubscription**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergesubscription**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
