@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506497"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307625"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore-Indizes: Leitfaden zum Datenladevorgang
 
@@ -44,11 +43,15 @@ Gemäß dem Diagramm gilt Folgendes für das Massenladen:
 > Für eine Rowstore-Tabelle mit nicht gruppierten Columnstore-Indexdaten fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten immer in die Basistabelle ein. Die Daten werden nie direkt in den Columnstore-Index eingefügt.  
 
 Das Massenladen verfügt über diese integrierten Leistungsoptimierungen:
--   **Parallele Ladevorgänge:** Sie können mehrere Massenladevorgänge (bcp oder Masseneinfügung) ausführen, die jeweils eine separate Datendatei laden. Im Gegensatz zu Rowstore-Massenladevorgängen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie `TABLOCK` nicht angeben, da jeder Massenimportthread Daten ausschließlich in separate Zeilengruppen lädt (komprimierte oder Deltazeilengruppen), die eine exklusive Sperre aufweisen. Die Verwendung von `TABLOCK` erzwingt eine exklusive Sperre für die Tabelle, und Sie sind dann nicht in der Lage, Daten parallel zu importieren.  
--   **Minimale Protokollierung:** Eine Massenladungsvorgang verwendet die minimale Protokollierung für Daten, die direkt zu komprimierten Zeilengruppen verschoben werden. Alle Daten, die in eine Delta-Zeilengruppe gehen, werden vollständig protokolliert. Dies schließt alle Batchgrößen ein, die weniger als 102.400 Zeilen sind. Allerdings ist für das Massenladen das Ziel für die meisten Daten, Delta-Zeilengruppen zu umgehen.  
--   **Sperrenoptimierung:** Beim Laden in komprimierte Zeilengruppen wird die X-Sperre für Zeilengruppen abgerufen. Beim Massenladen in Deltazeilengruppen wird eine X-Sperre für die Zeilengruppe abgerufen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt PAGE/EXTENT weiterhin, da die X-Zeilengruppensperre nicht Teil der Sperrhierarchie ist.  
+-   **Parallele Ladevorgänge:** Sie können mehrere Massenladevorgänge (bcp oder Masseneinfügung) ausführen, die jeweils eine separate Datendatei laden. Im Gegensatz zu Rowstore-Massenladevorgängen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie `TABLOCK` nicht angeben, da jeder Massenimportthread Daten ausschließlich in separate Zeilengruppen lädt (komprimierte oder Deltazeilengruppen), die eine exklusive Sperre aufweisen. 
+
+-   **Reduzierte Protokollierung:** Daten, die direkt in komprimierte Zeilengruppen geladen werden, reduzieren die Protokollgröße erheblich. Wenn Daten beispielsweise 10-fach komprimiert werden, fällt das entsprechende Transaktionsprotokoll etwa 10 mal kleiner aus, ohne dass TABLOCK oder das massenprotokollierte Wiederherstellungsmodell benötigt werden. Alle Daten, die in eine Delta-Zeilengruppe gehen, werden vollständig protokolliert. Dies schließt alle Batchgrößen ein, die weniger als 102.400 Zeilen sind.  Die bewährte Vorgehensweise ist die Verwendung einer Batchgröße >= 102400. Da kein TABLOCK erforderlich ist, können Sie die Daten parallel laden. 
+
+-   **Minimale Protokollierung:** Sie können die Protokollierung weiter reduzieren, indem Sie die Voraussetzungen für die [minimale Protokollierung](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) erfüllen. Jedoch führt TABLOCK, anders als beim Laden von Daten in einen Rowstore, statt zu einer Massenupdatesperre zu einer X-Sperre für die Tabelle, weshalb Daten nicht parallel geladen werden können. Weitere Informationen zum Sperren finden Sie im [Handbuch zu Transaktionssperren und Zeilenversionsverwaltung[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+
+-   **Sperrenoptimierung:** Die X-Sperre in einer Zeilengruppe wird automatisch abgerufen, wenn Daten in eine komprimierte Zeilengruppe geladen werden. Beim Massenladen in eine Deltazeilengruppe wird eine X-Sperre für die Zeilengruppe abgerufen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt PAGE/EXTENT weiterhin, da die X-Zeilengruppensperre nicht Teil der Sperrhierarchie ist.  
   
-Wenn Sie über einen nicht gruppierten B-Strukturindex auf einem Columnstore-Index verfügen, erfolgt keine Sperren- oder Protokollierungsoptimierung für den Index selbst, sondern die zuvor beschriebenen Optimierungen für den gruppierten Columnstore-Index sind weiterhin vorhanden.  
+Wenn Sie über einen nicht gruppierten B-Strukturindex auf einem Columnstore-Index verfügen, erfolgt keine Sperren- oder Protokollierungsoptimierung für den Index selbst, sondern es können die zuvor beschriebenen Optimierungen für den gruppierten Columnstore-Index angewendet werden.  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planen von Massenladungsgrößen zum Minimieren von Delta-Zeilengruppen
 Columnstore-Indizes sind am leistungsfähigsten, wenn die meisten Zeilen in den Columnstore komprimiert werden und sich nicht in Delta-Zeilengruppen befinden. Es wird empfohlen, die Größe Ihrer Ladungen so anzupassen, dass Zeilen direkt in den Columnstore verschoben werden und den Deltastore so weit wie möglich umgehen.
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Dieser Befehl lädt die Daten auf ähnliche Weise wie BCP oder der Masseneinfügungsvorgang in den Columnstore-Index, jedoch in einem einzelnen Batch. Wenn die Anzahl der Zeilen in der Stagingtabelle kleiner als 102.400 ist, werden die Zeilen in eine Delta-Zeilengruppe geladen. Andernfalls werden die Zeilen direkt in eine komprimierte Zeilengruppe geladen. Eine entscheidende Einschränkung bestand darin, dass dieser `INSERT`-Vorgang nur einen einzelnen Thread umfasste. Zum parallelen Laden der Daten könnten Sie mehrere Stagingtabellen erstellen, oder `INSERT`/`SELECT` mit nicht überlappenden Zeilenbereichen aus der Stagingtabelle ausgeben. Diese Einschränkung gilt ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nicht mehr. Der nachfolgende Befehl lädt die Daten parallel aus einer Stagingtabelle, Sie müssen jedoch `TABLOCK` angeben.  
+ Dieser Befehl lädt die Daten auf ähnliche Weise wie BCP oder der Masseneinfügungsvorgang in den Columnstore-Index, jedoch in einem einzelnen Batch. Wenn die Anzahl der Zeilen in der Stagingtabelle kleiner als 102.400 ist, werden die Zeilen in eine Delta-Zeilengruppe geladen. Andernfalls werden die Zeilen direkt in eine komprimierte Zeilengruppe geladen. Eine entscheidende Einschränkung bestand darin, dass dieser `INSERT`-Vorgang nur einen einzelnen Thread umfasste. Zum parallelen Laden der Daten könnten Sie mehrere Stagingtabellen erstellen, oder `INSERT`/`SELECT` mit nicht überlappenden Zeilenbereichen aus der Stagingtabelle ausgeben. Diese Einschränkung gilt ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nicht mehr. Der nachfolgende Befehl lädt die Daten parallel aus einer Stagingtabelle, Sie müssen jedoch `TABLOCK` angeben. Dies erscheint Ihnen möglicherweise im Widerspruch zu den zuvor genannten Informationen zum Massenladen, der Hauptunterschied liegt jedoch darin, dass der parallele Datenladevorgang aus der Stagingtabelle in derselben Transaktion ausgeführt wird.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,7 +94,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  Beim Laden in gruppierte Columnstore-Indizes aus Stagingtabellen sind folgende Optimierungen verfügbar:
--   **Protokolloptimierung:** Minimale Protokollierung beim Laden der Daten in eine komprimierte Zeilengruppe. Es erfolgt keine minimale Protokollierung beim Laden von Daten in Delta-Zeilengruppen.  
+-   **Protokolloptimierung:** Reduzierte Protokollierung beim Laden der Daten in eine komprimierte Zeilengruppe.   
 -   **Sperrenoptimierung:** Beim Laden in komprimierte Zeilengruppen wird die X-Sperre für Zeilengruppen abgerufen. Bei der Deltazeilengruppe wird eine X-Sperre für die Zeilengruppe abgerufen, aber [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sperrt PAGE/EXTENT weiterhin, da die X-Zeilengruppensperre nicht Teil der Sperrhierarchie ist.  
   
  Wenn Sie über einen oder mehrere nicht gruppierte Indizes verfügen, erfolgt keine Sperren- oder Protokollierungsoptimierung für den Indext selbst, sondern die Optimierungen für den gruppierten Columnstore-Index, die oben beschrieben wurden, sind weiterhin vorhanden.  

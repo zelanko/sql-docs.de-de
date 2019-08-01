@@ -8,13 +8,12 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: b1814c42d2177d3f030e172dea1d9d64a9ca8ecd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc04c25496b10e76eed70f11a37499d4d2395bf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049752"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +32,13 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer S
 |[![idera][1]][idera_website] |**IDERA**<br>SQL-Diagnose-Manager ist eine leistungsstarke Lösung zur Leistungsüberwachung und Diagnose, die Administratoren proaktiv warnt, wenn Probleme bei der Integrität, Leistung oder Verfügbarkeit in SQL Server-Umgebungen auftreten – und das alles in einer zentralen Konsole.<br><br>[Systemanforderungen][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Website][idera_website]<br>[Twitter][idera_twitter]<br>[Video][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>Spotlight auf SQL Server Enterprise: Garantierte Höchstleistung rund um die Uhr mit nicht übereinstimmender Überwachung, Diagnose und der Optimierung der SQL Server-Umgebungen. Spotlight bietet Ihnen Zugriff auf die benötigten Details für die optimale Eignung Ihrer SQL Server-Datenbanken. Erhalten Sie intuitive Übersichten über Integrität und Leistung, automatische Warnungen und Aktionen sowie Unterstützung für mobile Geräte.|[Marketplace][quest_marketplace]<br>[Website][quest_website]<br>[Video][quest_video] | |
 |[![redgate][4]][redgate_website]| **Redgate**<br>Bei SQL Monitor von Redgate handelt es sich um ein SQL Server-Überwachungstool, das Teams, die mit SQL Server arbeiten, dabei unterstützt, proaktiver zu sein. SQL Monitor warnt Sie nicht nur bei aktuellen Problemen, sondern stellt Ihnen auch die Informationen bereit, die Sie benötigen, um diese in Zukunft zu vermeiden. SQL Monitor ist ideal für große SQL Server-Umgebungen geeignet und gewährleistet, dass Sie stets die passenden Antworten auf Fragen zur Leistung erhalten. |[Website][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[Video][redgate_video]| |
-|[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne-Lösungen ermöglichen es Microsoft-Datenexperten, Höchstleistungen in physischen Umgebungen, virtuellen Umgebungen und Cloudumgebungen zu erzielen. Mit SentryOne können Datenexperten ihre Toolsets konsolidieren, Infrastrukturkosten reduzieren und die Geschwindigkeit und Effizienz der Datenbank für eine optimale Leistung ihrer Microsoft-Datenplattformumgebungen unabhängig von deren Größe oder Komplexität erhöhen.|<!--[Marketplace][idera_marketplace]<br>-->[Website][sentryone_website]<br>[Datenblatt][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
-|[![SolarWinds][5]][solarwinds_website] |**SolarWinds**<br>Database Performance Analyzer bietet Einblick in Anwendungsanforderungen, SQL-Anweisungen, Datenbankressourcen, Host/Betriebssystem, Netzwerk, Virtualisierung und Speicherleistung. DPA beinhaltet eine Analyse der Wartezeiten, sodass nicht nur die Integrität bewertet wird, sondern auch die Geschwindigkeit, in der die Datenbank auf Anwendungsanforderungen reagiert. DPA stellt eine vollständige Abdeckung Ihrer Datenbanken zur Verfügung, unabhängig von der Art der Bereitstellung. Physisch, virtuell, Cloud oder DBaaS, alles passt in einen einzelnen, zentralen Fensterbereich.|[Marketplace][solarwinds_marketplace]<br>[Website][solarwinds_website]<br>[Datenblatt][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[Video][solarwinds_video]| |
+|[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne-Lösungen ermöglichen es Microsoft-Datenexperten, Höchstleistungen in physischen Umgebungen, virtuellen Umgebungen und Cloudumgebungen zu erzielen. Mit SentryOne können Datenexperten ihre Toolsets konsolidieren, Infrastrukturkosten reduzieren und die Geschwindigkeit und Effizienz der Datenbank für eine optimale Leistung ihrer Microsoft-Datenplattformumgebungen unabhängig von deren Größe oder Komplexität erhöhen.|<!--[Marketplace][idera_marketplace]<br>-->[Website][sentryone_website]<br>[Datasheet][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
+|[![solarwinds][5]][solarwinds_website] |**SolarWinds**<br>Database Performance Analyzer bietet Einblick in Anwendungsanforderungen, SQL-Anweisungen, Datenbankressourcen, Host/Betriebssystem, Netzwerk, Virtualisierung und Speicherleistung. DPA beinhaltet eine Analyse der Wartezeiten, sodass nicht nur die Integrität bewertet wird, sondern auch die Geschwindigkeit, in der die Datenbank auf Anwendungsanforderungen reagiert. DPA stellt eine vollständige Abdeckung Ihrer Datenbanken zur Verfügung, unabhängig von der Art der Bereitstellung. Physisch, virtuell, Cloud oder DBaaS, alles passt in einen einzelnen, zentralen Fensterbereich.|[Marketplace][solarwinds_marketplace]<br>[Website][solarwinds_website]<br>[Datasheet][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[Video][solarwinds_video]| |
 
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Nähere Informationen über einige unserer anderen Partner finden Sie unter [Partner für Hochverfügbarkeit und Notfallwiederherstellung][hadr_partners], [Verwaltungspartner][management_partners] und [Entwicklungspartner][dev_partners].
+Nähere Informationen über einige unserer anderen Partner finden Sie unter [Partner für Hochverfügbarkeit und Notfallwiederherstellung][hadr_partners], [management partners][management_partners] und [Entwicklungspartner][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
