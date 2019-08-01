@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ffde66939be441877add9b5a3ee4c843b031bc3
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051955"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ Mithilfe von Joins können Sie Daten aus zwei oder mehr Tabellen basierend auf l
 
 Eine Joinbedingung definiert die Beziehung zweier Tabellen in einer Abfrage auf folgende Art:    
 -   Sie gibt die Spalte aus jeder Tabelle an, die für den Join verwendet werden soll. Eine typische Joinbedingung gibt einen Fremdschlüssel aus einer Tabelle und den zugehörigen Schlüssel in der anderen Tabelle an.    
--   Sie gibt einen logischen Operator (z. B. = oder <>) an, der zum Vergleichen von Werten aus den Spalten verwendet wird.    
+-   Sie gibt einen logischen Operator (z. B. = oder <>) an, der zum Vergleichen von Werten aus den Spalten verwendet wird.    
 
 Innere Joins können in `FROM`- oder in `WHERE`-Klauseln angegeben werden. Äußere Joins können nur in der `FROM`-Klausel angegeben werden. Die Joinbedingungen in Verbindung mit `WHERE`- und `HAVING`-Suchbedingungen steuern, welche Zeilen aus den Basistabellen ausgewählt werden, auf die in der `FROM`-Klausel verwiesen wird.    
 

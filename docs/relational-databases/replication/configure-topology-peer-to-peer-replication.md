@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903120"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Topologie konfigurieren (Peer-zu-Peer-Replikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,10 +26,10 @@ ms.locfileid: "47793258"
 > [!NOTE]  
 >  Der Assistent zum Konfigurieren der Peer-zu-Peer-Topologie fordert Topologieinformationen an, wenn der Assistent geschlossen wird. Wenn der Assistent geschlossen und erneut geöffnet wird, bevor alle Knoten auf die Anforderung von Informationen reagiert haben, zeigt der Assistent möglicherweise ein Teilnetzwerk an.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  Die Seite **Topologie konfigurieren** enthält Oberflächenelemente und Optionen, die verfügbar sind, wenn Sie mit der rechten Maustaste auf ein Element klicken. In der folgenden Tabelle werden die einzelnen Oberflächenelemente beschrieben.  
   
-|Oberflächenelement|Beschreibung|  
+|Oberflächenelement|und Beschreibung|  
 |-----------------------|-----------------|  
 |Entwurfsoberfläche|Zeigt andere Oberflächenelemente an. Zum Hinzufügen von Elementen klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche.|  
 |![Der erste Knoten in einer Topologie](../../relational-databases/replication/media/p2pwizard-firstnode.gif "The first node in a topology")|Der ursprüngliche Knoten in der Topologie. Neue Knoten werden mit einer Kopie der Veröffentlichungsdatenbank vom ursprünglichen Knoten initialisiert.|  
@@ -64,7 +63,7 @@ ms.locfileid: "47793258"
   
 ### <a name="options-for-each-node"></a>Optionen für einzelne Knoten  
  **Neue Peerverbindung hinzufügen**  
- Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B hinzufügen, werden bei der Replikation zwei Abonnements hinzugefügt. Durch das erste Abonnement wird Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, während durch das zweite Abonnement Knoten B in die Lage versetzt wird, Änderungen der Veröffentlichung auf Knoten A zu empfangen.  
+ Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B hinzufügen, fügt die Replikation zwei Abonnements hinzu: Der erste ermöglicht Knoten A, Änderungen von der Veröffentlichung auf Knoten B zu empfangen, und das zweite ermöglicht Knoten B, Änderungen von der Veröffentlichung auf Knoten A zu empfangen.  
   
  **Peerknoten löschen**  
  Entfernt einen Knoten aus der Topologie. Wenn Sie z. B. Knoten C entfernen, wird die Veröffentlichung auf diesem Knoten entfernt. Abonnements zwischen Knoten A und Knoten C sowie zwischen Knoten B und Knoten C werden ebenfalls entfernt. Die Datenbank auf Knoten C wird nicht gelöscht, und Veröffentlichung und Verteilung werden nicht deaktiviert.  
@@ -82,7 +81,7 @@ ms.locfileid: "47793258"
  **Peerverbindung entfernen**  
  Entfernt eine Verbindung zwischen zwei Knoten. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B entfernen, werden bei der Replikation zwei Abonnements gelöscht, und zwar das Abonnement, das Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, und das Abonnement, das Knoten B in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten A zu empfangen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

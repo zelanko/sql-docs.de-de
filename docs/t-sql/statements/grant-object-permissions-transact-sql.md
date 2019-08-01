@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050817"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT (Objektberechtigungen) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,11 +62,11 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  Mit ALL werden nicht alle möglichen Berechtigungen erteilt. Das Erteilen von Berechtigungen mit ALL entspricht dem Erteilen aller [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92-Berechtigungen, die für das angegebene Objekt gelten. Die Bedeutung von ALL variiert wie folgt:  
   
-- Berechtigungen für Skalarfunktionen: EXECUTE, REFERENCES.  
-- Berechtigungen für Tabellenwertfunktionen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Berechtigungen für Skalarwertfunktion: EXECUTE, REFERENCES.  
+- Berechtigungen für Tabellenwertfunktion: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Berechtigungen für gespeicherte Prozeduren: EXECUTE.  
 - Tabellenberechtigungen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
-- Sichtberechtigungen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Berechtigungen anzeigen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
 PRIVILEGES  
  Dient zur Kompatibilität mit [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Ändert das Verhalten von ALL nicht.  
@@ -116,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Zum Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte für eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.  
+>  Durch eine Kombination von ALTER- und REFERENCE-Berechtigungen würde in manchen Fällen zugelassen, dass der Empfänger Daten anzeigt oder Funktionen ausführt, für die er nicht autorisiert ist. Beispiel: Ein Benutzer mit ALTER-Berechtigung für eine Tabelle und REFERENCE-Berechtigung für eine Funktion kann eine berechnete Spalte für eine Funktion erstellen und ausführen lassen. In diesem Fall benötigt der Benutzer auch die SELECT-Berechtigung für die berechnete Spalte.  
   
  Informationen zu Objekten werden in unterschiedlichen Katalogsichten angezeigt. Weitere Informationen finden Sie unter [Object Catalog Views &#40;Transact-SQL&#41; (Katalogsichten für Objekte &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
@@ -211,9 +210,8 @@ GO
  [DENY (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
  [REVOKE (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   

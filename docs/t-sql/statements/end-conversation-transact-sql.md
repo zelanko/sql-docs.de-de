@@ -24,20 +24,19 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5bd9dd2e967c1ce6551dbc3b952a8bf8baa09585
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084496"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Beendet eine bestehende Konversation auf einer Seite.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,10 +54,10 @@ END CONVERSATION conversation_handle
  Bezeichnet das Konversationshandle für die zu beendende Konversation.  
   
  WITH ERROR =*failure_code*  
- Bezeichnet den Fehlercode. *failure_code* ist vom Typ **int**. Beim Fehlercode handelt es sich um einen benutzerdefinierten Code, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird. Der Fehlercode muss größer als 0 sein.  
+ Bezeichnet den Fehlercode. *failure_code* ist vom Typ **int**. Bei dem Fehlercode handelt es sich um einen benutzerdefinierten Code, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird. Der Fehlercode muss größer als 0 sein.  
   
  DESCRIPTION =*failure_text*  
- Bezeichnet die Fehlermeldung. *failure_text* ist vom Typ **nvarchar(3000)**. Beim Fehlertext handelt es sich um benutzerdefinierten Text, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird.  
+ Bezeichnet die Fehlermeldung. *failure_text* ist vom Typ **nvarchar(3000)** . Beim Fehlertext handelt es sich um benutzerdefinierten Text, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird.  
   
  WITH CLEANUP  
  Entfernt alle Nachrichten und Katalogsichteinträge für eine Seite einer Konversation, die nicht regulär abgeschlossen werden kann. Die andere Seite der Konversation wird nicht über die Bereinigung informiert. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht den Konversationsendpunkt, alle Nachrichten für die Konversation in der Übertragungswarteschlange sowie alle Nachrichten für die Konversation in der Dienstwarteschlange. Mithilfe dieser Option können Administratoren Konversationen entfernen, die nicht regulär abgeschlossen werden können. Wenn beispielsweise der Remotedienst dauerhaft entfernt wurde, kann ein Administrator mithilfe von WITH CLEANUP Konversationen mit diesem Dienst entfernen. Verwenden Sie WITH CLEANUP nicht im Code einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Anwendung. Wenn END CONVERSATION WITH CLEANUP ausgeführt wird, bevor der empfangende Endpunkt den Eingang der Nachricht bestätigt, wird die Nachricht vom sendenden Endpunkt erneut gesendet. Möglicherweise wird dadurch der Dialog erneut ausgeführt.  
@@ -130,7 +129,7 @@ COMMIT TRANSACTION ;
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  

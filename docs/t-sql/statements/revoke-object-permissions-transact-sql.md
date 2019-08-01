@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140903"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE-Objektberechtigungen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  Mit ALL werden nicht alle möglichen Berechtigungen aufgehoben. Das Aufheben von Berechtigungen mit ALL entspricht dem Aufheben aller [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92-Berechtigungen, die für das angegebene Objekt gelten. Die Bedeutung von ALL variiert wie folgt:  
   
- Berechtigungen für Skalarfunktionen: EXECUTE, REFERENCES.  
+ Berechtigungen für Skalarwertfunktion: EXECUTE, REFERENCES.  
   
- Berechtigungen für Tabellenwertfunktionen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Berechtigungen für Tabellenwertfunktion: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Berechtigungen für gespeicherte Prozeduren: EXECUTE.  
+ Berechtigungen für gespeicherte Prozedur: EXECUTE.  
   
  Tabellenberechtigungen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
- Sichtberechtigungen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ Berechtigungen anzeigen: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
   
  PRIVILEGES  
  Dient zur Kompatibilität mit [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92. Ändert das Verhalten von ALL nicht.  
@@ -182,9 +181,8 @@ GO
  [GRANT (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [DENY (Objektberechtigungen) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)   
  [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Berechtigungen &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/security/permissions-database-engine.md)   
- 
-  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4756b7746e0d139384766aaa492af9064fd8ad1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 87ca7ef24d34a6f39255a92fcabaa2dab53cfa26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006205"
 ---
 # <a name="delete-a-database"></a>Löschen einer Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,10 +99,10 @@ DROP DATABASE Sales, NewSales ;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Löschen einer Datenbank  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Löschen einer Datenbank  
  Sichern Sie die **master** -Datenbank. Wenn die **master** -Datenbank wiederhergestellt werden muss, können Fehlermeldungen auftreten, falls in den Systemkatalogsichten weiterhin Verweise auf Datenbanken bestehen, die seit der letzten Sicherung der **master** -Datenbank gelöscht wurden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

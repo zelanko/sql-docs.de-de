@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e12e2b8d1578d85420d7a5f3ddd61a85fdd6de7d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 51e1ce454a2b6d0309a33d155cc0e069b5a17a29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041461"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Wiederherstellen von in Microsoft Azure gespeicherten Sicherungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "51663059"
   
  Um die Wiederherstellungszeit zu reduzieren, sollten Sie komprimierte Sicherungen verwenden.  Falls die Sicherungsdatei größer als 25 GB ist, verwenden Sie das Dienstprogramm [AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) zum Herunterladen auf den lokalen Datenträger, und führen Sie dann die Wiederherstellung durch. Weitere bewährte Methoden und Empfehlungen zu Sicherungen finden Sie unter [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- Sie können beim Ausführen der Wiederherstellung auch das Ablaufverfolgungsflag 3051 aktivieren, um ein ausführlicheres Protokoll zu generieren. Diese Protokolldatei wird im Protokollverzeichnis gespeichert und im folgenden Format benannt: BackupToUrl-\<Instanzname>-\<Datenbankname-Aktion-\<PID>.log. Die Protokolldatei enthält Informationen über jeden Roundtrip zum Windows Azure-Speicher, einschließlich Zeitangaben, die hilfreich bei der Problemdiagnose sein können.  
+ Sie können beim Ausführen der Wiederherstellung auch das Ablaufverfolgungsflag 3051 aktivieren, um ein ausführlicheres Protokoll zu generieren. Die Protokolldatei wird im Protokollverzeichnis gespeichert und im folgenden Format benannt: BackupToUrl-\<Instanzname>-\<Datenbankname>-Aktion-\<PID>.log. Die Protokolldatei enthält Informationen über jeden Roundtrip zum Windows Azure-Speicher, einschließlich Zeitangaben, die hilfreich bei der Problemdiagnose sein können.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Themen über die Durchführung von Wiederherstellungsvorgängen  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951141"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ GO
 ###  <a name="bkmk_DeterminePercent"></a> Bestimmen des Mindestwerts für MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT  
  Sobald Sie die Arbeitsspeicheranforderungen für die speicheroptimierten Tabellen bestimmt haben, müssen Sie den erforderlichen Prozentsatz des verfügbaren Arbeitsspeichers bestimmen und die Arbeitsspeicherprozentsätze auf diesen oder einen höheren Wert festlegen.  
   
- **Beispiel:**   
+ **Beispiel:**    
 In diesem Beispiel wird davon ausgegangen, dass Sie Ihre Berechnungen ergeben haben, dass die speicheroptimierten Tabellen und Indizes 16 GB Arbeitsspeicher benötigen. Weiter wird davon ausgegangen, dass Sie über 32 GB Arbeitsspeicher verfügen, der für Ihre Verwendung reserviert ist.  
   
  Auf den ersten Blick müssen Sie MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT scheinbar auf 50 festlegen (50 % von 32 ist 16).  Allerdings würde das Ihren speicheroptimierten Tabellen nicht genügend Arbeitsspeicher zur Verfügung stellen. In der folgenden Tabelle ([Prozentsatz des für speicheroptimierte Tabellen und Indizes verfügbaren Arbeitsspeichers](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)) sehen Sie, dass 32GB Arbeitsspeicher zugesichert sind, wovon jedoch nur 80% für speicheroptimierte Tabellen und Indizes zur Verfügung stehen.  Daher werden die Mindest- und Höchstprozentsätze auf Grundlage des verfügbaren Arbeitsspeichers und nicht des reservierten Arbeitsspeichers berechnet.  
@@ -87,7 +86,7 @@ In diesem Beispiel wird davon ausgegangen, dass Sie Ihre Berechnungen ergeben ha
 ###  <a name="bkmk_CreateResourcePool"></a> Erstellen eines Ressourcenpools und Konfigurieren des Arbeitsspeichers  
  Beim Konfigurieren des Arbeitsspeichers für speicheroptimierte Tabellen sollte die Kapazitätsplanung auf MIN_MEMORY_PERCENT und nicht auf MAX_MEMORY_PERCENT beruhen.  Weitere Informationen über MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT finden Sie unter [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md). Auf diese Weise ist die Speicherverfügbarkeit für speicheroptimierte Tabellen besser vorhersagbar, da MIN_MEMORY_PERCENT Arbeitsspeichermangel für andere Ressourcenpools verursacht, um die Verfügbarkeit zu gewährleisten. Um sicherzustellen, dass Arbeitsspeicher verfügbar ist, und um OOM-Bedingungen (Out of Memory, nicht genügend Arbeitsspeicher) zu vermeiden, sollten die Werte für MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT identisch sein. Unter [Prozentsatz des für speicheroptimierte Tabellen und Indizes verfügbaren Arbeitsspeichers](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) unten finden Sie den Prozentsatz des verfügbaren Arbeitsspeichers für speicheroptimierte Tabellen basierend auf der Menge an zugesichertem Arbeitsspeicher.  
   
- Weitere Informationen zum Arbeiten in einer VM-Umgebung finden Sie unter [Bewährte Methoden: Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
+ Unter [Bewährte Methoden: Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) finden Sie weitere Informationen, wenn Sie in einer VM-Umgebung arbeiten.  
   
  Durch folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code wird ein Ressourcenpool mit dem Namen "Pool_IMOLTP" erstellt. Die Hälfte des verfügbaren Arbeitsspeichers wird dem Pool zur Verfügung gestellt.  Nachdem der Pool erstellt wurde, wird die Ressourcenkontrolle neu konfiguriert, um "Pool_IMOLTP" einzuschließen.  
   
@@ -143,7 +142,7 @@ GO
  Jetzt ist die Datenbank an den Ressourcenpool gebunden.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> Ändern von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT für einen vorhandenen Pool  
- Wenn Sie dem Server zusätzlichen Arbeitsspeicher hinzufügen oder sich die für die speicheroptimierten Tabellen erforderliche Menge an Arbeitsspeicher ändert, müssen Sie möglicherweise den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT ändern. Die folgenden Schritte veranschaulichen, wie Sie den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT für einen Ressourcenpool ändern. Richtlinien für die für MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT zu verwendenden Werte finden Sie im entsprechenden Abschnitt weiter unten.  Weitere Informationen finden Sie im Thema [Bewährte Methoden: Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) .  
+ Wenn Sie dem Server zusätzlichen Arbeitsspeicher hinzufügen oder sich die für die speicheroptimierten Tabellen erforderliche Menge an Arbeitsspeicher ändert, müssen Sie möglicherweise den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT ändern. Die folgenden Schritte veranschaulichen, wie Sie den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT für einen Ressourcenpool ändern. Richtlinien für die für MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT zu verwendenden Werte finden Sie im entsprechenden Abschnitt weiter unten.  Weitere Informationen finden Sie im Thema [Bewährte Methoden: Verwenden von In-Memory-OLTP in einer VM-Umgebung](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9).  
   
 1.  Ändern Sie den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT mithilfe von `ALTER RESOURCE POOL` .  
   
@@ -208,7 +207,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Wenn Sie die Datenbank nicht an einen benannten Ressourcenpool binden, wird sie an den Pool „default“ gebunden. Da der Standardressourcenpool von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die meisten anderen Zuordnungen verwendet wird, können Sie nicht die DMV "sys.dm_resource_governor_resource_pools" verwenden, um den von speicheroptimierten Tabellen beanspruchten Arbeitsspeicher für die gewünschte Datenbank exakt zu überwachen.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)   

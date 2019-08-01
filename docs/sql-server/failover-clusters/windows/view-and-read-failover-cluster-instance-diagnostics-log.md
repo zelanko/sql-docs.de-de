@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8979e3457250cbce7fe3dbe5992c84e786d3f7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904994"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Alle kritischen Fehler und Warnungsereignisse für die Ressourcen-DLL von SQL Server werden in das Windows-Ereignisprotokoll geschrieben. Ein Ausführungsprotokoll mit für SQL Server spezifischen Diagnoseinformationen wird von der gespeicherten Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) erfasst und in die Protokolldateien der SQL Server-Failoverclusterdiagnose (auch als *SQLDIAG*-Protokolle bezeichnet) geschrieben.  
   
--   **Before you begin:**  [Recommendations](#Recommendations), [Security](#Security)  
+-   **Vorbereitungen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
   
 -   **Anzeigen des Diagnoseprotokolls mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **Konfigurieren der Diagnoseprotokolleinstellungen mit:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
  Die SQLDIAG-Protokolle werden standardmäßig in einem lokalen LOG-Ordner des Verzeichnisses der SQL Server-Instanz gespeichert, z.B. in „C\Programme\Microsoft SQL Server\MSSQL13.\<Instanzname>\MSSQL\LOG“ für den besitzenden Knoten der Always On-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
@@ -131,7 +130,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

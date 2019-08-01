@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c213f8923fcdc4751b2944b2e62d4e565a509285
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078012"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Einschränkung für eindeutige Partikelzuordnung
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,11 +81,11 @@ ms.locfileid: "58510167"
 ## <a name="finding-more-information"></a>Weitere Informationsquellen  
  Das folgende Dokument wird vom W3C (World Wide Web Consortium) veröffentlicht; es enthält die technische Beschreibung der UPA-Einschränkung:  
   
- "XML Schema Part 1: Strukturen 2. Ausgabe, vom W3C empfohlene Ausgabe":  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation" (XML Schema Part 1: Strukturen 2. Ausgabe, vom W3C empfohlene Ausgabe):  
   
--   Section 3.8.6: Einschränkungen für Komponenten des Modellgruppenschemas  
+-   Abschnitt 3.8.6: Constraints on Model Group Schema Components (Einschränkungen für Komponenten des Modellgruppenschemas)  
   
--   Appendix H: Analyse der Einschränkung für die eindeutige Partikelzuordnung (nicht-normativ)  
+-   Anhang H: Analysis of the Unique Particle Attribution Constraint (non-normative) (Analyse der Einschränkung für die eindeutige Partikelzuordnung (nicht-normativ))  
   
  Besuchen Sie [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881), um das Dokument anzuzeigen.  
   

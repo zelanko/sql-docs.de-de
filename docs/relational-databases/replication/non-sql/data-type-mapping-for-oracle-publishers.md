@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901119"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,36 +29,36 @@ ms.locfileid: "47739188"
   
 |Oracle-Datentyp|SQL Server-Datentyp|Alternativen|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|Benutzerkontensteuerung|  
-|BLOB|VARBINARY(MAX)|Benutzerkontensteuerung|  
-|CHAR([1-2000])|CHAR([1-2000])|Benutzerkontensteuerung|  
-|CLOB|VARCHAR(MAX)|Benutzerkontensteuerung|  
-|DATE|DATETIME|Benutzerkontensteuerung|  
-|GLEITKOMMAZAHL|GLEITKOMMAZAHL|nein|  
-|FLOAT([1-53])|FLOAT([1-53])|nein|  
-|FLOAT([54-126])|GLEITKOMMAZAHL|nein|  
-|INT|NUMERIC(38)|Benutzerkontensteuerung|  
-|INTERVAL|DATETIME|Benutzerkontensteuerung|  
-|LONG|VARCHAR(MAX)|Benutzerkontensteuerung|  
-|LONG RAW|IMAGE|Benutzerkontensteuerung|  
-|NCHAR([1-1000])|NCHAR([1-1000])|nein|  
-|NCLOB|NVARCHAR(MAX)|Benutzerkontensteuerung|  
-|NUMBER|GLEITKOMMAZAHL|Benutzerkontensteuerung|  
-|NUMBER([1-38])|NUMERIC([1-38])|nein|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Benutzerkontensteuerung|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|nein|  
-|RAW([1-2000])|VARBINARY([1-2000])|nein|  
-|real|GLEITKOMMAZAHL|nein|  
-|ROWID|CHAR(18)|nein|  
-|TIMESTAMP|DATETIME|Benutzerkontensteuerung|  
-|TIMESTAMP(0-7)|DATETIME|Benutzerkontensteuerung|  
-|TIMESTAMP(8-9)|DATETIME|Benutzerkontensteuerung|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|nein|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Benutzerkontensteuerung|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|nein|  
-|UROWID|CHAR(18)|nein|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|Benutzerkontensteuerung|  
+|BFILE|VARBINARY(MAX)|Ja|  
+|BLOB|VARBINARY(MAX)|Ja|  
+|CHAR([1-2000])|CHAR([1-2000])|Ja|  
+|CLOB|VARCHAR(MAX)|Ja|  
+|DATE|DATETIME|Ja|  
+|GLEITKOMMAZAHL|GLEITKOMMAZAHL|Nein|  
+|FLOAT([1-53])|FLOAT([1-53])|Nein|  
+|FLOAT([54-126])|GLEITKOMMAZAHL|Nein|  
+|INT|NUMERIC(38)|Ja|  
+|INTERVAL|DATETIME|Ja|  
+|LONG|VARCHAR(MAX)|Ja|  
+|LONG RAW|IMAGE|Ja|  
+|NCHAR([1-1000])|NCHAR([1-1000])|Nein|  
+|NCLOB|NVARCHAR(MAX)|Ja|  
+|NUMBER|GLEITKOMMAZAHL|Ja|  
+|NUMBER([1-38])|NUMERIC([1-38])|Nein|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Ja|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Nein|  
+|RAW([1-2000])|VARBINARY([1-2000])|Nein|  
+|real|GLEITKOMMAZAHL|Nein|  
+|ROWID|CHAR(18)|Nein|  
+|timestamp|DATETIME|Ja|  
+|TIMESTAMP(0-7)|DATETIME|Ja|  
+|TIMESTAMP(8-9)|DATETIME|Ja|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Ja|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Nein|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Ja|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Nein|  
+|UROWID|CHAR(18)|Nein|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|Ja|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Überlegungen zur Datentypzuordnung  
  Beachten Sie beim Replizieren von Daten aus Oracle-Datenbanken in Bezug auf Datentypen Folgendes:  
@@ -83,7 +82,7 @@ ms.locfileid: "47739188"
 ### <a name="float-and-number-types"></a>FLOAT- und NUMBER-Typen  
  Die Anzahl der Dezimalstellen und die Genauigkeit (Parameter 'scale' und 'precision'), die während der Zuordnung der Datentypen FLOAT und NUMBER angegeben werden, sind von den Parametern abhängig, die in der Spalte der Oracle-Datenbank angegeben wurde, die diese Datentypen verwendet. Genauigkeit gibt die Anzahl der Ziffern einer Zahl an. Dezimalstellen gibt die Anzahl der Nachkommastellen an. Die Zahl 123,45 hat z. B. eine Genauigkeit von 5 und 2 Dezimalstellen.  
   
- Bei Oracle können Zahlen mit Werten für 'scale' größer als 'precision' definiert werden, z. B. NUMBER(4,5), in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss jedoch 'precision' größer oder gleich 'scale' sein. Um sicherzustellen, dass keine Daten abgeschnitten werden, wenn auf dem Oracle-Verleger 'scale' größer ist als 'precision', wird 'precision' bei der Zuordnung auf denselben Wert festgelegt wie 'scale': NUMBER(4,5) wird also beispielsweise NUMERIC(5,5) zugeordnet.  
+ Bei Oracle können Zahlen mit Werten für 'scale' größer als 'precision' definiert werden, z. B. NUMBER(4,5), in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss jedoch 'precision' größer oder gleich 'scale' sein. „precision“ wird bei der Zuordnung auf denselben Wert wie „scale“ festgelegt, um sicherzustellen, dass keine Daten abgeschnitten werden, wenn auf dem Oracle-Herausgeber „scale“ größer als „precision“ ist. NUMBER(4,5) wird also beispielsweise NUMERIC(5,5) zugeordnet.  
   
 > [!NOTE]  
 >  Wenn Sie für NUMBER weder 'scale' noch 'precision' angeben, verwendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] standardmäßig die maximalen Werte für 'scale' (8) und 'precision' (38). Es wird empfohlen, in Oracle eine bestimmte Anzahl von Dezimalstellen ('scale') und eine bestimmte Genauigkeit ('precision') festzulegen, um die Speicherplatzanforderungen zu reduzieren und die Leistung zu erhöhen, wenn die Daten repliziert werden.  
@@ -106,7 +105,7 @@ ms.locfileid: "47739188"
   
  Informationen zum Angeben alternativer Datentypzuordnungen finden Sie unter [Angeben von Datentypzuordnungen für einen Oracle-Verleger](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  

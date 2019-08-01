@@ -12,48 +12,47 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095123"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installiert haben.  
+  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen, die in einem *Überwachungsziel*aufgezeichnet werden. Beim Überwachungsziel kann es sich um eine Binärdatei, das Windows-Sicherheitsereignisprotokoll oder das Windows-Anwendungsereignisprotokoll handeln. Die an das Ziel gesendeten Datensätze können die in der folgenden Tabelle beschriebenen Elemente enthalten:  
   
-|Spaltenname|Beschreibung|Typ|Immer verfügbar|  
+|Spaltenname|und Beschreibung|Typ|Immer verfügbar|  
 |-----------------|-----------------|----------|----------------------|  
-|**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|Benutzerkontensteuerung|  
-|**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|Benutzerkontensteuerung|  
-|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Benutzerkontensteuerung|  
-|**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> - 1 = Success (Erfolg), <br />0 = Fehler|Benutzerkontensteuerung|  
-|**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|**bigint**|nein|  
-|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />- 1 = True, <br />0 = False|nein|  
-|**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|**int**|Benutzerkontensteuerung|  
-|**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|**int**|Benutzerkontensteuerung|  
-|**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|**int**|nein|  
-|**object_id**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Folgende IDs sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|**int**|nein|  
-|**target_server_principal_id**|Serverprinzipal, für den die überwachbare Aktion gilt.|**int**|Benutzerkontensteuerung|  
-|**target_database_principal_id**|Datenbankprinzipal, für den die überwachbare Aktion gilt.|**int**|nein|  
-|**class_type**|Typ der überwachbaren Entität, bei der die Überwachung auftritt.|**varchar(2)**|Benutzerkontensteuerung|  
-|**session_server_principal_name**|Serverprinzipal für die Sitzung.|**sysname**|Benutzerkontensteuerung|  
-|**server_principal_name**|Aktuelle Anmeldung.|**sysname**|Benutzerkontensteuerung|  
-|**server_principal_sid**|Aktuelle Anmeldungs-SID.|**varbinary**|Benutzerkontensteuerung|  
-|**database_principal_name**|Aktueller Benutzer.|**sysname**|nein|  
-|**target_server_principal_name**|Zielanmeldung der Aktion.|**sysname**|nein|  
-|**target_server_principal_sid**|SID der Zielanmeldung.|**varbinary**|nein|  
-|**target_database_principal_name**|Zielbenutzer der Aktion.|**sysname**|nein|  
-|**server_instance_name**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Verwendet das standardmäßige machine\instance-Format.|**nvarchar(120)**|Benutzerkontensteuerung|  
-|**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|**sysname**|nein|  
-|**schema_name**|Der Schemakontext, in dem die Aktion aufgetreten ist.|**sysname**|nein|  
-|**object_name**|Der Name der Entität, bei der die Überwachung aufgetreten ist. Folgende Namen sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|**sysname**|nein|  
-|**statement**|TSQL-Anweisung (falls vorhanden)|**nvarchar(4000)**|nein|  
-|**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|**nvarchar(4000)**|nein|  
+|**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|**datetime2**|Ja|  
+|**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|**int**|Ja|  
+|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Ja|  
+|**succeeded**|Gibt an, ob die Berechtigungsprüfung für die Aktion, die das Überwachungsereignis ausgelöst hat, erfolgreich war oder fehlgeschlagen ist. |**bit**<br /> - 1 = Success (Erfolg), <br />0 = Fehler|Ja|  
+|**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|**bigint**|Nein|  
+|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|**bit** <br />- 1 = True, <br />0 = False|Nein|  
+|**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|**int**|Ja|  
+|**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|**int**|Ja|  
+|**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|**int**|Nein|  
+|**object_id**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Folgende IDs sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|**int**|Nein|  
+|**target_server_principal_id**|Serverprinzipal, für den die überwachbare Aktion gilt.|**int**|Ja|  
+|**target_database_principal_id**|Datenbankprinzipal, für den die überwachbare Aktion gilt.|**int**|Nein|  
+|**class_type**|Typ der überwachbaren Entität, bei der die Überwachung auftritt.|**varchar(2)**|Ja|  
+|**session_server_principal_name**|Serverprinzipal für die Sitzung.|**sysname**|Ja|  
+|**server_principal_name**|Aktuelle Anmeldung.|**sysname**|Ja|  
+|**server_principal_sid**|Aktuelle Anmeldungs-SID.|**varbinary**|Ja|  
+|**database_principal_name**|Aktueller Benutzer.|**sysname**|Nein|  
+|**target_server_principal_name**|Zielanmeldung der Aktion.|**sysname**|Nein|  
+|**target_server_principal_sid**|SID der Zielanmeldung.|**varbinary**|Nein|  
+|**target_database_principal_name**|Zielbenutzer der Aktion.|**sysname**|Nein|  
+|**server_instance_name**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Verwendet das standardmäßige machine\instance-Format.|**nvarchar(120)**|Ja|  
+|**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|**sysname**|Nein|  
+|**schema_name**|Der Schemakontext, in dem die Aktion aufgetreten ist.|**sysname**|Nein|  
+|**object_name**|Der Name der Entität, bei der die Überwachung aufgetreten ist. Folgende Namen sind möglich:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|**sysname**|Nein|  
+|**statement**|TSQL-Anweisung (falls vorhanden)|**nvarchar(4000)**|Nein|  
+|**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|**nvarchar(4000)**|Nein|  
   
 ## <a name="remarks"></a>Remarks  
  Einige Aktionen geben nicht den Wert einer Spalte ein, da er auf die Aktion nicht anwendbar sein könnte.  

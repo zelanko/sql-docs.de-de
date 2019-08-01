@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8be03ad23efa30d5c521535d6d2db610d998fdda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e12715c3722fe3278bf535b50bc749539d57ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937508"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47787011"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
@@ -89,7 +88,7 @@ ms.locfileid: "47787011"
   
     -   **Sicherungsmedium**  
   
-         Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
@@ -140,7 +139,7 @@ ms.locfileid: "47787011"
   
 #### <a name="to-restore-a-differential-database-backup"></a>So stellen Sie eine differenzielle Datenbanksicherung wieder her  
   
-1.  Führen Sie die RESTORE DATABASE-Anweisung mit der NORECOVERY-Klausel aus, um die vollständige Datenbanksicherung wiederherzustellen, die der differenziellen Datenbanksicherung vorausging. Weitere Informationen finden Sie unter [Vorgehensweise: Wiederherstellen einer vollständigen Sicherung](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+1.  Führen Sie die RESTORE DATABASE-Anweisung mit der NORECOVERY-Klausel aus, um die vollständige Datenbanksicherung wiederherzustellen, die der differenziellen Datenbanksicherung vorausging. Weitere Informationen finden Sie unter [Vorgehensweise: Wiederherstellen einer vollständigen Sicherung](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Führen Sie die RESTORE DATABASE-Anweisung aus, um die differenzielle Datenbanksicherung wiederherzustellen, und geben Sie dabei Folgendes an:  
   
@@ -210,7 +209,7 @@ GO
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   

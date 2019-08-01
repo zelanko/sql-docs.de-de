@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118488"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -271,10 +270,14 @@ Die folgende Tabelle zeigt die Codierungsspeicherplatz in Bytes für jeden Zeich
 
 <sup>2</sup> Codepunktbereich für [ergänzende Zeichen](#Supplementary_Characters).
 
-Wie bereits erwähnt, kann die Wahl der geeigneten Unicode-Codierung und des Datentyps je nach verwendetem Zeichensatz zu erheblichen Einsparungen beim Speicherplatz führen. Die Änderung eines vorhandenen Spaltendatentyps mit ASCII-Zeichen von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die Darstellung der gleichen Unicode-Zeichenfolge erfordert.
+> [!TIP]   
+> Üblicherweise denkt man in [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) oder in [NCHAR(*n*) und NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), wobei *n* für die Anzahl von Zeichen steht. Dies liegt daran, dass in einem Beispiel einer CHAR(10)-Spalte mithilfe einer Sortierung wie „Latin1_General_100_CI_AI“ 10 ASCII-Zeichen im Bereich 0-127 gespeichert werden können, da jedes Zeichen in diesem Bereich nur 1 Byte verwendet.    
+> In [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) steht *n* jedoch für die Zeichenfolgenlänge in **Byte** (0-8.000), wobei das *n* in [NCHAR(*n*) und NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) für die Zeichenfolgenlänge in **Bytepaaren** (0-4.000) steht. *n* definiert niemals die Anzahl von Zeichen, die gespeichert werden können.
+
+Wie bereits erwähnt, kann die Wahl der geeigneten Unicode-Codierung und des geeigneten Datentyps je nach verwendetem Zeichensatz zu erheblichen Einsparungen beim Speicherplatz führen oder den aktuellen Speicherbedarf erhöhen. Wenn Sie beispielsweise eine lateinische Sortierung verwenden, bei der UTF-8 aktiviert ist, z. B. „Latin1_General_100_CI_AI_SC_UTF8“, speichert eine `CHAR(10)`-Spalte 10 Byte und kann 10 ASCII-Zeichen im Bereich 0-127 enthalten, jedoch nur 5 Zeichen im Bereich 128-2047 und nur 3 Zeichen im Bereich 2048-65535. Im Vergleich dazu kann eine `NCHAR(10)`-Spalte 10 Zeichen im Bereich 0-65535 enthalten, da sie 10 Bytepaare (20 Byte) speichert.  
 
 Bevor Sie entscheiden, ob Sie die UTF-8- oder UTF-16-Codierung für eine Datenbank oder Spalte verwenden möchten, sollten Sie die Verteilung der gespeicherten Zeichenfolgendaten berücksichtigen:
--  Wenn es sich hauptsächlich im ASCII-Bereich befindet (z.B. Englisch), dann benötigt jedes Zeichen 1 Byte mit UTF-8 und 2 Byte mit UTF-16. Die Verwendung von UTF-8 hat Speichervorteile. 
+-  Wenn diese sich hauptsächlich im ASCII-Bereich 0-127 befinden (z. B. Englisch), dann benötigt jedes Zeichen 1 Byte mit UTF-8 und 2 Byte mit UTF-16. Die Verwendung von UTF-8 hat Speichervorteile. Die Änderung eines vorhandenen Spaltendatentyps mit ASCII-Zeichen im Bereich 0-127 von `NCHAR(10)` in `CHAR(10)` mit einer UTF-8-fähigen Sortierung führt beispielsweise zu einer Verringerung der Speicheranforderungen um 50 %. Diese Verringerung ist darauf zurückzuführen, dass `NCHAR(10)` 20 Byte für den Speicher erfordert, wohingegen `CHAR(10)` 10 Byte für die Darstellung der gleichen Unicode-Zeichenfolge erfordert.    
 -  Oberhalb des ASCII-Bereichs benötigen fast alle lateinischen Schriftzeichen sowie Griechisch, Kyrillisch, Koptisch, Armenisch, Hebräisch, Arabisch, Syrisch, Tāna und N'Ko jeweils 2 Byte pro Zeichen in UTF-8 und UTF-16. In diesen Fällen gibt es für vergleichbare Datentypen keine signifikanten Speicherunterschiede (z.B. zwischen der Verwendung von **char** oder **nchar**).
 -  Wenn es sich hauptsächlich um ostasiatische Schriftzeichen handelt (z.B. Koreanisch, Chinesisch und Japanisch), dann benötigt jedes Zeichen 3 Byte mit UTF-8 und 2 Byte mit UTF-16. Die Verwendung von UTF-16 hat Speichervorteile. 
 -  Zeichen im Bereich von 010000 bis 10FFFFFF benötigen jeweils 4 Byte in UTF-8 und UTF-16. In diesen Fällen gibt es keine Speicherunterschiede für vergleichbare Datentypen (z.B. zwischen der Verwendung von **char** oder **nchar**).

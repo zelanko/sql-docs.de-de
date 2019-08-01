@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9bc785f03f6e7630cca5c2e66e0334e9f1688cc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063817"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie einer AlwaysOn-Failoverclusterinstanz-Ressource mithilfe des Failovercluster-Manager-Snap-Ins Abhängigkeiten hinzugefügt werden. Das Failovercluster-Manager-Snap-In ist die Clusterverwaltungsanwendung für den WSFC (Windows Server Failover Clustering)-Dienst.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Voraussetzungen](#Prerequisites)  
+-   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Erforderliche Komponenten](#Prerequisites)  
   
--   **Hinzufügen einer Abhängigkeit zu einer SQL Server-Ressource mit:** [Windows-Failovercluster-Manager](#WinClusManager)  
+-   **Hinzufügen einer Abhängigkeit zu einer SQL Server-Ressource mit folgendem Tool:** [Failovercluster-Manager von Windows](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Beachten Sie, dass, wenn Sie der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe weitere Ressourcen hinzufügen, diese Ressourcen immer über eigene eindeutige SQL-Netzwerknamen und SQL-IP-Adressen verfügen müssen.  
@@ -45,11 +44,11 @@ ms.locfileid: "47746408"
   
  Beachten Sie diese zusätzlichen Probleme:  
   
--   FTP mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation: Bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen, die FTP mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation verwenden, muss der FTP-Dienst einen der physischen Datenträger verwenden, die auch die für den FTP-Dienst eingerichtete [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installation verwendet.  
+-   FTP mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation: Bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen, die FTP mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation verwenden, muss der FTP-Dienst einen der physischen Datenträger verwenden, die auch die für den FTP-Dienst eingerichtete [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installation verwendet.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource: Wenn Sie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe eine Ressource hinzufügen und auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource eine Abhängigkeit besteht, die die Verfügbarkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sicherstellt, empfiehlt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] das Hinzufügen einer Abhängigkeit auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Ressource. Fügen Sie keine Abhängigkeit auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource hinzu. Konfigurieren Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Ressource so, dass bei einem Ausfall der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentressource die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe nicht beeinträchtigt. Auf diese Weise stellen Sie sicher, dass der Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, hochverfügbar ist.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Ressourcenabhängigkeiten: Wenn Sie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Gruppe eine Ressource hinzufügen und auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Ressource eine Abhängigkeit besteht, die die Verfügbarkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sicherstellt, empfiehlt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] das Hinzufügen einer Abhängigkeit auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Ressource. Fügen Sie keine Abhängigkeit auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource hinzu. Konfigurieren Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Ressource so, dass bei einem Ausfall der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agentressource die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Gruppe nicht beeinträchtigt. Auf diese Weise stellen Sie sicher, dass der Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird, hochverfügbar ist.  
   
--   Dateifreigabe- und Druckerressourcen: Dateifreigabe- und Druckerclusterressourcen sollten nicht dieselben physischen Datenträgerressourcen verwenden wie der Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt wird. Bei Verwendung derselben physischen Datenträgerressourcen kann es auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt wird, zu Leistungsabfällen und Dienstausfällen kommen.  
+-   Dateifreigaben und Druckerressourcen: Dateifreigabe- und Druckerclusterressourcen sollten nicht dieselben physischen Datenträgerressourcen verwenden wie der Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. Bei Verwendung derselben physischen Datenträgerressourcen kann es auf dem Computer, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt wird, zu Leistungsabfällen und Dienstausfällen kommen.  
   
 -   Überlegungen zu MS DTC: Nachdem Sie das Betriebssystem installiert und die FCI konfiguriert haben, müssen Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) mithilfe des Failovercluster-Manager-Snap-Ins für die Arbeit in einem Cluster konfigurieren. Wenn MS DTC nicht für die Ausführung in einem Cluster konfiguriert wird, führt dies nicht zu einer Blockierung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setups, aber die Funktionalität der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anwendung kann beeinträchtigt sein, falls MS DTC nicht ordnungsgemäß konfiguriert wurde.  
   

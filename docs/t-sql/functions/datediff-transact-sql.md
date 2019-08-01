@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/13/2018
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793638"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329282"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,16 +49,21 @@ Unter [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-t
   
 ## <a name="syntax"></a>Syntax  
   
-```sql
+```
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>Argumente  
 *datepart*  
-Der Teil von *startdate* und *enddate*, der den Typ der überschrittenen Begrenzung angibt. `DATEDIFF` akzeptiert keine benutzerdefinierten Variablenentsprechungen. In der folgenden Tabelle werden alle gültigen *datepart*-Argumente aufgeführt.
-  
-|*datepart*|Abkürzungen|  
-|---|---|
+Der Teil von *startdate* und *enddate*, der den Typ der überschrittenen Begrenzung angibt.
+
+> [!NOTE]
+> `DATEDIFF` akzeptiert keine *datepart*-Werte von benutzerdefinierten Variablen oder als Zeichenfolgen in Anführungszeichen. 
+
+In der folgenden Tabelle sind alle gültigen Namen und Abkürzungen für *datepart*-Argumente aufgeführt.
+
+|*datepart*-Name|*datepart*-Abkürzung|  
+|-----------|------------|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
@@ -72,7 +76,10 @@ Der Teil von *startdate* und *enddate*, der den Typ der überschrittenen Begrenz
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> Alle spezifischen *datepart*-Namen und Abkürzungen für diesen *datepart*-Namen geben den gleichen Wert zurück.
+
 *startdate*  
 Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann:
 
@@ -92,8 +99,7 @@ Weitere Informationen finden Sie unter *startdate*.
  **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
-  
-Alle spezifischen *datepart*-Werte und die Abkürzungen für diese *datepart*-Werte geben den gleichen Wert zurück.  
+Der **int**-Unterschied zwischen *startdate* und *enddate*, der in dem von *datepart* festgelegten Grenzwert ausgedrückt wird.
   
 Bei einem Rückgabewert, der sich außerhalb des gültigen Bereichs für **int** (-2,147,483,648 bis + 2,147,483,647) befindet, gibt `DATEDIFF` einen Fehler zurück.  Der maximale Unterschied zwischen *startdate* und *enddate* beträgt für **millisecond** 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden. Für **second** beträgt der maximale Unterschied 68 Jahre, 19 Tage, 3 Stunden, 14 Minuten und 7 Sekunden.
   
@@ -108,7 +114,7 @@ Wenn der Variablen eines Datumsdatentyps nur ein Uhrzeitwert zugewiesen ist, leg
 Wenn *startdate* und *enddate* unterschiedliche Datumsdatentypen aufweisen und ein Datentyp mehr Uhrzeitteile oder eine höhere Genauigkeit bezüglich der Bruchteile von Sekunden aufweist als der andere Teil, legt `DATEDIFF` für die fehlenden Teile des anderen Datentyps 0 (null) fest.
   
 ## <a name="datepart-boundaries"></a>datepart-Begrenzungen  
-Die folgenden Anweisungen weisen bei *startdate* und *enddate* den gleichen Wert auf. Die Datumsangaben folgen aufeinander und unterscheiden sich in der Uhrzeit um hundert Nanosekunden (0,0000001 Sekunde). Der Unterschied zwischen *startdate* und *enddate* in jeder Anweisung überschreitet eine Kalender- oder Uhrzeitbegrenzung des zugehörigen *datepart*. Jede Anweisung gibt 1 zurück. Wenn *startdate* und *enddate* unterschiedliche Jahreswerte aufweisen, die Kalenderwochenwerte jedoch identisch sind, gibt `DATEDIFF` für den *datepart*-Wert **week** 0 (null) zurück.
+Die folgenden Anweisungen weisen bei *startdate* und *enddate* den gleichen Wert auf. Die Datumsangaben folgen aufeinander und unterscheiden sich in der Uhrzeit um hundert Nanosekunden (0,0000001 Sekunde). Der Unterschied zwischen *startdate* und *enddate* in jeder Anweisung überschreitet eine Kalender- oder Uhrzeitbegrenzung des zugehörigen *datepart*. Jede Anweisung gibt 1 zurück. 
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -123,7 +129,9 @@ SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
+
+Wenn *startdate* und *enddate* unterschiedliche Jahreswerte aufweisen, die Kalenderwochenwerte jedoch identisch sind, gibt `DATEDIFF` für den *datepart*-Wert **week** 0 (null) zurück.
+
 ## <a name="remarks"></a>Remarks  
 Verwenden Sie `DATEDIFF` in den Klauseln `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` und `ORDER BY`.
   
@@ -241,6 +249,7 @@ GO
 ### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>I. Ermitteln des Unterschieds zwischen „startdate“ und „enddate“ als Zeichenfolgen für Datumsteile
 
 ```sql
+-- DOES NOT ACCOUNT FOR LEAP YEARS
 DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
 DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
 

@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066002"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert die Eigenschaften einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationspriorität.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -89,7 +88,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
- *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
+ *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
   
  '*RemoteServiceName*'  
  Gibt an, dass die Konversationspriorität Folgendem zugewiesen werden kann:  
@@ -139,7 +138,7 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  

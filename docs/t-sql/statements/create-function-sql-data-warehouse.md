@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 90437ce089bba33e5282ca01e907dfac7afe77ab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 23949aec32acce44cd139ab8505cd1ffc743e64d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912705"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "51699708"
   
 -   Zum Ersetzen einer gespeicherten Prozedur  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -154,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadaten  
  In diesem Abschnitt werden die Systemkatalogsichten aufgelistet, die Sie verwenden können, um Metadaten zu benutzerdefinierten Funktionen zurückzugeben.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Zeigt die Definition von [!INCLUDE[tsql](../../includes/tsql-md.md)] benutzerdefinierten Funktionen an. Zum Beispiel:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Zeigt die Definition von benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen an. Beispiel:  
   
 ```  
 SELECT definition, type   
@@ -168,7 +167,7 @@ GO
   
  [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Zeigt Informationen zu den Parametern an, die in benutzerdefinierten Funktionen definiert sind.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Zeigt die zugrunde liegenden Objekte an, auf die eine Funktion verweist.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Zeigt die zugrunde liegenden Objekte an, auf die von einer Funktion verwiesen wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Funktion erstellt wird.  
@@ -176,7 +175,7 @@ GO
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Verwenden einer benutzerdefinierten Skalarwertfunktion zum Ändern eines Datentyps  
- Diese einfache Funktion verwendet einen **int**-Datentyp als Eingabe und gibt einen **decimal(10,2)**-Datentyp als Ausgabe zurück.  
+ Diese einfache Funktion verwendet einen **int**-Datentyp als Eingabe und gibt einen **decimal(10,2)** -Datentyp als Ausgabe zurück.  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -192,7 +191,7 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   

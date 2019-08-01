@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent) | Microsoft-Dokumentation'
+title: 'Lernprogramm: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39eac1be5a9e6479a7607364bb194b5aa5b8716f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895433"
 ---
-# <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent)
+# <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Lernprogramm: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Es ist wichtig, einen Sicherheitsplan zu erstellen, bevor Sie die Replikationstopologie konfigurieren. In diesem Tutorial erfahren Sie, wie Sie eine Replikationstopologie besser absichern. Außerdem lernen Sie, wie Sie die Verteilung konfigurieren, die der erste Schritt beim Replizieren von Daten ist. Es ist erforderlich, dieses Lernprogramm vor allen anderen Lernprogrammen abzuschließen.  
   
@@ -57,7 +56,7 @@ Für dieses Tutorial benötigen Sie SQL Server, SQL Server Management Studio (SS
 > - Sie müssen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger und dem Abonnenten herstellen. Dazu verwenden Sie einen Anmeldenamen eines Mitglieds der festen Serverrolle **sysadmin** ist. Weitere Informationen zu dieser Rolle finden Sie unter [Rollen auf Serverebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 
-**Geschätzte Dauer zum Abschließen des Tutorials: 30 Minuten**
+**Ungefähre Dauer dieses Tutorials: 30 Minuten**
   
 ## <a name="create-windows-accounts-for-replication"></a>Erstellen von Windows-Konten für die Replikation
 In diesem Abschnitt erstellen Sie Windows-Konten zum Ausführen von Replikations-Agents. Sie erstellen für die folgenden Agents ein separates Windows-Konto auf dem lokalen Server:  
@@ -123,11 +122,11 @@ In diesem Abschnitt konfigurieren Sie den Momentaufnahmeordner, in dem die Verö
 
    ![Optionsauswahl zur Freigabe des Ordners „repldata“](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. Klicken Sie im Dialogfeld **Berechtigungen für repldata** auf **Hinzufügen**. Geben Sie im Dialogfeld **Select Users, Computers, Service Accounts, or Groups** (Benutzer, Computer, Dienstkonten oder Gruppen auswählen) den Namen des zuvor erstellten Momentaufnahmen-Agent-Kontos ein: <*Name_des_Verlegercomputers*>**\repl_snapshot**. Klicken Sie zuerst auf **Namen überprüfen** und anschließend auf **OK**.  
+6. Klicken Sie im Dialogfeld **Berechtigungen für repldata** auf **Hinzufügen**. Geben Sie im Dialogfeld **Select Users, Computers, Service Accounts, or Groups** (Benutzer, Computer, Dienstkonten oder Gruppen auswählen) den Namen des zuvor erstellten Momentaufnahmen-Agent-Kontos ein: <*Name_des_Verlegercomputers*> **\repl_snapshot**. Klicken Sie zuerst auf **Namen überprüfen** und anschließend auf **OK**.  
 
    ![Optionsauswahl zum Hinzufügen von Freigabeberechtigungen](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. Wiederholen Sie Schritt 6, um die anderen beiden Konten hinzuzufügen, die Sie zuvor erstellt haben: <*Name_des_Verlegercomputers*>**\repl_merge** und <*Name_des_Verlegercomputers*>**\repl_distribution**.
+7. Wiederholen Sie Schritt 6, um die anderen beiden Konten hinzuzufügen, die Sie zuvor erstellt haben: <*Name_des_Verlegercomputers*> **\repl_merge** und <*Name_des_Verlegercomputers*> **\repl_distribution**.
 
 8. Weisen Sie nach dem Hinzufügen der drei Konten die folgenden Berechtigungen zu:      
    - repl_distribution: **Lesen**  
@@ -142,12 +141,12 @@ In diesem Abschnitt konfigurieren Sie den Momentaufnahmeordner, in dem die Verö
 
     ![Schaltfläche „Bearbeiten“ auf der Registerkarte „Sicherheit“](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. Klicken Sie im Dialogfeld **Berechtigungen für repldata** auf **Hinzufügen**. Geben Sie im Dialogfeld **Select Users, Computers, Service Accounts, or Groups** (Benutzer, Computer, Dienstkonten oder Gruppen auswählen) den Namen des zuvor erstellten Momentaufnahmen-Agent-Kontos ein: <*Name_des_Verlegercomputers*>**\repl_snapshot**. Klicken Sie zuerst auf **Namen überprüfen** und anschließend auf **OK**.  
+11. Klicken Sie im Dialogfeld **Berechtigungen für repldata** auf **Hinzufügen**. Geben Sie im Dialogfeld **Select Users, Computers, Service Accounts, or Groups** (Benutzer, Computer, Dienstkonten oder Gruppen auswählen) den Namen des zuvor erstellten Momentaufnahmen-Agent-Kontos ein: <*Name_des_Verlegercomputers*> **\repl_snapshot**. Klicken Sie zuerst auf **Namen überprüfen** und anschließend auf **OK**.  
 
     ![Optionsauswahl zum Hinzufügen von Sicherheitsberechtigungen](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12. Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent <*Name_des_Verlegercomputers*>**\repl_distribution** und für den Merge-Agent <*Name_des_Verlegercomputers*>**\repl_merge** hinzuzufügen.  
+12. Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent <*Name_des_Verlegercomputers*> **\repl_distribution** und für den Merge-Agent <*Name_des_Verlegercomputers*> **\repl_merge** hinzuzufügen.  
     
   
 13. Überprüfen Sie, ob die folgenden Berechtigungen gewährt wurden:  
@@ -185,14 +184,14 @@ Das Konfigurieren eines Verlegers mit einem Remoteverteiler wird in diesem Tutor
   
    Der Verteilungskonfigurations-Assistent wird gestartet.  
   
-3. Aktivieren Sie auf der Seite **Verteiler** das Optionsfeld neben <*'Servername'*>  **als seinen eigenen Verteiler verwenden. SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**. Wählen Sie **Weiter**aus.  
+3. Aktivieren Sie auf der Seite **Verteiler** das Optionsfeld neben < *'Servername'* >  **als seinen eigenen Verteiler verwenden. SQL Server erstellt eine Verteilungsdatenbank und ein Protokoll**. Wählen Sie **Weiter**aus.  
 
    ![Option, mit der festgelegt wird, dass der Server selbst als Verteiler agiert](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
 4. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht ausgeführt wird, klicken Sie auf der Seite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-**Agent-Start** auf **Ja, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum automatischen Starten konfigurieren**. Wählen Sie **Weiter**aus.  
 
      
-5. Geben Sie den Pfad \\\\<*Name_des_Verlegercomputers*>**\repldata** im Textfeld **Momentaufnahmeordner** ein, und klicken Sie anschließend auf **Weiter**. Dieser Pfad sollte mit dem übereinstimmen, der zuvor im Eigenschaftenordner von „repldata“ unter **Netzwerkpfad** nach dem Konfigurieren der Freigabeeigenschaften angezeigt wurde. 
+5. Geben Sie den Pfad \\\\<*Name_des_Verlegercomputers*> **\repldata** im Textfeld **Momentaufnahmeordner** ein, und klicken Sie anschließend auf **Weiter**. Dieser Pfad sollte mit dem übereinstimmen, der zuvor im Eigenschaftenordner von „repldata“ unter **Netzwerkpfad** nach dem Konfigurieren der Freigabeeigenschaften angezeigt wurde. 
 
    ![Vergleich der Netzwerkpfade im Dialogfeld „Eigenschaften von ‚repldata‘“ und im Verteilungskonfigurations-Assistenten](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -219,7 +218,7 @@ Wenn Ihre SSMS-Instanz mit Administratorrechten ausgeführt wird, können Sie de
 
    ![Menüelement „Neue Anmeldung“ im Kontextmenü](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2. Klicken Sie auf der Seite **Allgemein** auf **Suchen**. Geben Sie in das Feld **Namen des auszuwählenden Objekts eingeben** die Zeichenfolge <*Name_des_Verlegercomputers*>**\repl_snapshot** ein, und klicken Sie zuerst auf **Namen überprüfen** und anschließend auf **OK**.  
+2. Klicken Sie auf der Seite **Allgemein** auf **Suchen**. Geben Sie in das Feld **Namen des auszuwählenden Objekts eingeben** die Zeichenfolge <*Name_des_Verlegercomputers*> **\repl_snapshot** ein, und klicken Sie zuerst auf **Namen überprüfen** und anschließend auf **OK**.  
 
    ![Optionsauswahl zur Eingabe des Objektnamens](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   
@@ -244,7 +243,7 @@ Weitere Informationen finden Sie in den folgenden Themen:
 Sie haben Ihren Server jetzt erfolgreich für die Replikation vorbereitet. Im nächsten Artikel erfahren Sie, wie Sie die Transaktionsreplikation konfigurieren: 
 
 > [!div class="nextstepaction"]
-> [Tutorial: Configure replication between two fully connected servers (transactional) (Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation))](tutorial-replicating-data-between-continuously-connected-servers.md)
+> [Tutorial: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

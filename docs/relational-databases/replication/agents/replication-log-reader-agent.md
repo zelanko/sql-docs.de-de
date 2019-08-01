@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773d7d8b513d0f93d00782d130c796d2b04cea83
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7e07e59c7ebf85ff3af03f7c30dfa56670148a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085962"
 ---
 # <a name="replication-log-reader-agent"></a>Replikationsprotokolllese-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +69,8 @@ logread [-?]
  **-?**  
  Zeigt Informationen zur Verwendung an.  
   
- **-Verleger** _server_name_[**\\**_instance_name_]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Verleger** _server_name_[ **\\** _instance_name_]  
+ Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
@@ -82,8 +81,8 @@ logread [-?]
  **-DefinitionFile** _def_path_and_file_name_  
  Der Pfad der Agentdefinitionsdatei. Eine Agentdefinitionsdatei enthält Befehlszeilenargumente für den Agent. Der Inhalt der Datei wird als ausführbare Datei analysiert. Verwenden Sie doppelte Anführungszeichen ("), um Argumentwerte anzugeben, die beliebige Zeichen enthalten.  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- Der Name des Verteilers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ Der Name des Verteilers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-DistributorLogin** _distributor_login_  
  Der Anmeldename des Verteilers.  
@@ -97,7 +96,7 @@ logread [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Protokolllese-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|Beschreibung|  
+|Wert von EncryptionLevel|und Beschreibung|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -114,7 +113,7 @@ logread [-?]
  **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
  Gibt den Umfang des Verlaufs an, der während eines Vorgangs des Protokolllese-Agents protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|und Beschreibung|  
 |-------------------------------|-----------------|  
 |**0**||  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -146,7 +145,7 @@ logread [-?]
  **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Gibt an, ob die Ausgabe ausführlich sein soll.  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |**0**|Nur Fehlermeldungen werden gedruckt.|  
 |**1**|Alle Agent-Statusberichtsmeldungen werden gedruckt.|  
@@ -165,7 +164,7 @@ logread [-?]
  **-ProfileName** _profile_name_  
  Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Gibt die Failoverpartnerinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die an einer Datenbank-Spiegelungssitzung mit der Veröffentlichungsdatenbank teilnimmt. Weitere Informationen finden Sie unter [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -181,7 +180,7 @@ logread [-?]
  Die Anzahl von Sekunden, nach denen ein Timeout bei der Abfrage eintritt. Die Standardeinstellung ist 1800 Sekunden.  
   
  **-ReadBatchSize** _number_of_transactions_  
- Die maximale Anzahl von Transaktionen, die pro Verarbeitungszyklus aus dem Transaktionsprotokoll der Veröffentlichungsdatenbank ausgelesen werden. Der Standardwert lautet 500. Der Agent setzt das Lesen von Transaktionen in Batches fort, bis alle Transaktionen aus dem Protokoll gelesen wurden. Der Parameter wird von Oracle-Verlegern nicht unterstützt.  
+ Die maximale Anzahl von Transaktionen, die pro Verarbeitungszyklus aus dem Transaktionsprotokoll der Veröffentlichungsdatenbank ausgelesen werden. Der Standardwert lautet 500, der Maximalwert 10.000. Der Agent setzt das Lesen von Transaktionen in Batches fort, bis alle Transaktionen aus dem Protokoll gelesen wurden. Der Parameter wird von Oracle-Verlegern nicht unterstützt.  
   
  **-ReadBatchThreshold** _number_of_commands_  
  Die Anzahl von Replikationsbefehlen, die aus dem Transaktionsprotokoll gelesen werden sollen, bevor sie vom Verteilungs-Agent an den Abonnenten ausgegeben werden. Die Standardeinstellung ist 0. Wenn dieser Parameter nicht angegeben wird, liest der Protokolllese-Agent bis zum Ende des Protokolls oder bis zu der Nummer, die in **-ReadBatchSize** (Anzahl von Transaktionen) angegeben wurde.  

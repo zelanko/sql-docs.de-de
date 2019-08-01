@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: ef3cd72348cc93eee37716007c7975731b2da333
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400084"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290366"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
@@ -44,6 +43,37 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT für VS 2017
+
+_Veröffentlicht_: &nbsp; 17. Juli 2019  
+_Buildnummer:_ &nbsp; 14.0.16194.0  
+_SSDT für Visual Studio 2017._
+
+### <a name="whats-new"></a>Neues
+
+#### <a name="ssis"></a>SSIS
+
+| Neues Element | Details |
+| :------- | :------ |
+| Die Funktion AzureEnabled wurde hinzugefügt. Diese Funktion ermöglicht, dass Pakete des Projekts auf der SSIS-Platform-as-a-Service (PaaS) in Azure Data Factory ausgeführt werden. | &nbsp; |
+| Es wurde das Problem behoben, dass die Eigenschaften des Oracle-Connectors nicht über einen variablen Ausdruck festgelegt werden können. | &nbsp; |
+| Es wurde das Problem behoben, dass der Oracle-Connector beim Debuggen von Paketen für ältere SQL Server-Versionen als Version 2019 den Fehler VS_NEEDSNEWMETATDATA zurückgibt. | &nbsp; |
+| Es wurde das Problem behoben, dass der Oracle-Connector ein Paket/Projekt nicht upgraden/downgraden kann, wenn das Paket/Projekt Ausdrücke für die Eigenschaften des Verbindungs-Managers verwendet. | &nbsp; |
+| Es wurde das Problem behoben, dass die Schaltfläche „WSDL herunterladen“ des Editors für den Task „Webdienst“ das Protokoll TLS 1.1 & 1.1 (für SQL Server 2019) nicht unterstützt. | &nbsp; |
+| Es wurde das Problem behoben, dass Pakete mit DQS-Verbindungs-Manager nach dem Speichern nicht erneut geladen werden können. | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+| Bekanntes Problem | Details |
+| :---------- | :------ |
+| Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. | Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt. |
+| SSDT für Visual Studio 2017 (ab Version 15.8) unterstützt das Erstellen von Paketen nicht, die Teradata als Quelle oder Ziel verwenden. | Verwenden Sie SSDT für Visual Studio 2017 (15.8). |
+| Datenquellen in Paketbereitstellungsmodell können nicht erstellt oder bearbeitet werden. | Datenquellen-Assistenten wird nicht geöffnet. |
+| Die Power Query-Quelle unterstützt möglicherweise kein OData v4, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
+| Die Power Query-Quelle unterstützt möglicherweise kein ODBC für die Verbindung mit Oracle, wenn SSIS und SSAS auf derselben Visual Studio-Instanz installiert sind. | &nbsp; |
+| Die Power Query-Quelle ist nicht lokalisiert. | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp; SSDT für VS 2017
 
 _Veröffentlicht_: &nbsp; 27. April 2019  

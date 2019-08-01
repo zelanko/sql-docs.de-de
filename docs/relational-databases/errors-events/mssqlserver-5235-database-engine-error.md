@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b8d03674431eaadc1c0d753c334e65315d6ed91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 676d7845afebb9385419b7d2eed2fcdca69ed85e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122926"
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47840518"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|5235|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -60,6 +59,6 @@ In der folgenden Tabelle wird die Benutzeraktion angegeben, die für den angegeb
 |Status 4|Wenden Sie sich an den Kundenservice und -support.|  
 |Status 6|Führen Sie den Befehl erneut aus. Wenden Sie sich an den Kundenservice und -support, wenn das Problem weiterhin auftritt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [DBCC &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  
   

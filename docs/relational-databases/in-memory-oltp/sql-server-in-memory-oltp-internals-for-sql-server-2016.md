@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
-ms.openlocfilehash: 3feb7a2f177369a4b11ddbcd55c94c48e9808bd8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ca36f8c9716b9160b4d6eaeee26201bf03b42927
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111743"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>Merkmale von SQL Server In-Memory-OLTP für SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,9 +23,9 @@ ms.locfileid: "52402505"
 **Zusammenfassung:** In-Memory-OLTP, Codename „Hekaton“, wurde in SQL Server 2014 eingeführt.
 Durch diese leistungsfähige Technologie können Sie den Vorteil großer Mengen an Arbeitsspeicher und vieler Dutzender Kerne nutzen, um die Leistung für OLTP-Vorgänge um bis zu 30 bis 40 Mal zu steigern! SQL Server 2016 investiert weiterhin in In-Memory-OLTP, indem viele Einschränkungen, die in SQL Server 2014 entdeckt wurden, entfernt und interne Verarbeitungsalgorithmen verbessert werden, damit In-Memory-OLTP noch größere Verbesserungen bieten kann. Dieses Whitepaper beschreibt die Implementierung der In-Memory OLTP-Technologie von SQL Server 2016 ab SQL Server 2016 RTM. Bei der Verwendung von In-Memory-OLTP können Tabellen als „speicheroptimiert“ deklariert werden, um die Funktionen von In-Memory-OLTP zu aktivieren. Speicheroptimierte Tabellen sind vollständig transaktional, und es kann mithilfe von Transact-SQL auf sie zugegriffen werden. Gespeicherte Prozeduren in Transact-SQL, Trigger und skalare UDFS (user defined functions, benutzerdefinierte Funktionen) können zur weiteren Leistungsverbesserung in speicheroptimierten Tabellen in Computercode kompiliert werden. Die Engine ist für hohe Parallelität ohne Blockieren vorgesehen.    
   
-**Autor:** Kalen Delaney  
+**Verfasser:** Kalen Delaney  
   
-**Technische Reviewer:** Sunil Agarwal and Jos de Bruijn  
+**Technische Reviewer:** Sunil Agarwal und Jos de Bruijn  
   
 **Veröffentlicht:** Juni 2016  
   

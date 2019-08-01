@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044734"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie der Start eines Windows Server-Failoverclustering-Clusterknotens ohne Quorum erzwungen wird.  Dies ist möglicherweise für die Notfallwiederherstellung sowie in Multisubnetzszenarien erforderlich, um Daten wiederherzustellen die hohe Verfügbarkeit für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen wieder vollständig einrichten zu können.  
   
--   **Vorbereitungen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
+-   **Vorbereitung:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
   
--   **So erzwingen Sie den Start eines Clusters ohne Quorum:**  [Verwenden des Failovercluster-Managers](#FailoverClusterManagerProcedure), [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von Net.exe](#CommandPromptProcedure)  
+-   **So erzwingen Sie den Start eines Clusters ohne Quorum:**  [Verwenden des Failovercluster-Manager](#FailoverClusterManagerProcedure), [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von „net.exe“](#CommandPromptProcedure)  
   
--   **Nachverfolgung:**  [Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
+-   **Nachverfolgung:**  [Nächster Schritt: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -48,7 +47,7 @@ ms.locfileid: "52520220"
   
 3.  Klicken Sie im linken Bereich in der Struktur **Failovercluster-Manager** auf den Clusternamen.  
   
-4.  Stellen Sie im Zusammenfassungsbereich sicher, dass für **Quorumkonfiguration** als aktueller Wert  **Warnung: Der Cluster wird im Status "ForceQuorum" ausgeführt**festgelegt ist.  
+4.  Bestätigen Sie im Zusammenfassungsbereich, dass der aktuelle Wert für die **Quorumkonfiguration** folgendermaßen lautet:  **Warnung: Cluster wird im Status „ForceQuorum“ ausgeführt.**  
   
 ##  <a name="PowerShellProcedure"></a> Verwenden von PowerShell  
   
@@ -103,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
   
 -   NodeWeight-Werte sind neu zu bewerten und zu konfigurieren, um vor der erneuten Onlineschaltung anderer Knoten ein neues Quorum korrekt erstellen zu können. Andernfalls wird für den Cluster u. U. wieder der Offlinemodus aktiviert.  
   
@@ -127,7 +126,7 @@ net.exe start clussvc /forcequorum
   
 -   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43e1eac679271e3f12d60d310724a8ff025933cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b64b067889582949b42a7d5ffeeca1b1e119b6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123028"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,12 +25,12 @@ ms.locfileid: "47657138"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|5228|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Meldungstext|Tabellenfehler: Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ), Seite PG_ID, Zeile R_ID. DBCC hat einen unvollständigen Cleanup bei einem Vorgang zur Onlineindexerstellung erkannt. (Der Spaltenwert für die Cleanupmarkierung lautet VALUE.)|  
+|Meldungstext|Tabellenfehler: Objekt-ID „O_ID“, Index-ID „I_ID“, Partitions-ID „PN_ID“, Zuordnungseinheits-ID „A_ID“ (TYPE-Typ), Seite „P_ID“, Zeile „R_ID“. DBCC hat einen unvollständigen Cleanup bei einem Vorgang zur Onlineindexerstellung erkannt. (Der Spaltenwert für die Cleanupmarkierung lautet VALUE.)|  
   
 ## <a name="explanation"></a>Erklärung  
 Für Objekt *O_ID*, Index *I_ID* und Partition *PN_ID* wurde eine nicht abgeschlossene Onlineindexerstellung erkannt. Dies äußert sich durch das Vorhandensein einer Spalte für die Cleanupmarkierung für die Zeile *R_ID*. Eine Spalte für die Cleanupmarkierung wird verwendet, wenn Datensätze aus mehreren Quellen während einer Onlineindexerstellung abgeglichen werden. In der Fehlermeldung wird zudem der Wert der Spalte für die Cleanupmarkierung angegeben.  
@@ -59,6 +58,6 @@ Wenn DBCC CHECKDB mit einer der REPAIR-Klauseln ausgeführt wird und das Problem
 ### <a name="results-of-running-repair-options"></a>Ergebnis der Ausführung von REPAIR-Optionen  
 Durch Ausführen von REPAIR werden der angegebene Index sowie alle abhängigen Indizes neu erstellt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

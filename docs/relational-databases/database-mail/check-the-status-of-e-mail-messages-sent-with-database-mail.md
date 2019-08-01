@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4569b23fa2335fb3f057ed9242304df498b0f200
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be85bc9434e5a64c1aa4e5e28f6b0a4a772d9690
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134588"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Überprüfen des Status von mit Datenbank-E-Mail gesendeten E-Mail-Nachrichten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51558597"
   
 -   **Vorbereitungen:**  
   
--   **So zeigen Sie den Status der mittels Datenbank-E-Mail gesendeten E-Mail mit folgender Komponente an:**  [Transact-SQL](#TsqlProcedure)  
+-   **So zeigen Sie den Status der E-Mail an, die mittels Datenbank-E-Mail gesendet wurde:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Datenbank-E-Mail speichert Kopien ausgehender E-Mail-Nachrichten in den Sichten **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**und **sysmail_faileditems** der **msdb** -Datenbank. Das externe Programm Datenbank-E-Mail protokolliert die Aktivität und zeigt das Protokoll über das Windows-Anwendungsereignisprotokoll und die **sysmail_event_log** -Sicht der **msdb** -Datenbank an. Führen Sie zum Prüfen des Status einer E-Mail-Nachricht eine Abfrage für diese Sicht aus. Für E-Mail-Nachrichten gibt es vier Statusmöglichkeiten: **sent**, **unsent**, **retrying**und **failed**.  
@@ -70,7 +69,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail-Protokoll und -Überwachung](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   

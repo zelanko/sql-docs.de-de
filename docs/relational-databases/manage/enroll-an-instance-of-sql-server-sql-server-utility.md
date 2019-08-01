@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115419"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,9 +146,9 @@ ms.locfileid: "52509792"
   
  Einstellungen verwalteter Instanzen:  
   
--   Name der SQL Server-Instanz: ComputerName\InstanceName  
+-   SQL Server-Instanzname: ComputerName\InstanceName (Computername\Instanzname)  
   
--   Konto des Hilfsprogramm-Sammlungssatzes: DomainName\UserName  
+-   Konto des Hilfsprogramm-Sammlungssatzes: DomainName\UserName (Domänenname\Benutzername)  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "52509792"
 >   
 >  Beim Ausführen einer Transact-SQL-Anweisung oder eines Batches ist eine Ausnahme aufgetreten. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Weitere Informationen: Konnte keine Informationen zu Windows NT Gruppe/Benutzer abrufen '\<DomainName\AccountName>', Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
+>  Zusätzliche Informationen:  Die Informationen über Windows NT-Gruppe oder -Benutzer „\<<DomainName\AccountName>“ (Domänenname\Kontoname) konnten nicht abgerufen werden. Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
 >   
 >  Weitere Informationen zur Fehlerbehebung finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
@@ -196,7 +195,7 @@ ms.locfileid: "52509792"
 > $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  

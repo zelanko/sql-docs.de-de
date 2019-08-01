@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdb182e2861675cd42d295bd9004cd62198f7687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002474"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Konfigurieren der HealthCheckTimeout-Eigenschafteneinstellungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mit der HealthCheckTimeout-Einstellung wird die Zeitdauer in Millisekunden angegeben, die die Ressourcen-DLL für SQL Server auf Informationen warten soll, die von der gespeicherten Prozedur [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) zurückgegeben werden, bevor gemeldet wird, dass die Always On-Failoverclusterinstanz (FCI) nicht reagiert. Änderungen am Timeoutwert werden unmittelbar wirksam; ein Neustart der SQL Server-Ressource ist nicht erforderlich.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Limits), [Sicherheit](#Security)  
+-   **Vorbereitungen:**  [Beschränkungen](#Limits), [Sicherheit](#Security)  
   
--   **So konfigurieren Sie die HeathCheckTimeout-Einstellung mit**  [PowerShell](#PowerShellProcedure), [Failovercluster-Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **So konfigurieren Sie die HeathCheckTimeout-Einstellung:**  [PowerShell](#PowerShellProcedure), [Failovercluster-Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -89,7 +88,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Failoverrichtlinie für Failoverclusterinstanzen](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

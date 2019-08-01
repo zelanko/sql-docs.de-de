@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b7f9083bc5021415691d04da25d6e5e6297031a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903214"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47620130"
  Eine Übersicht über den gesamten Konfigurationsprozess finden Sie unter [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können Fehler verursachen wie: "Das Format einer Meldung war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
+>  Stellen Sie sicher, dass in Ihrer Anwendung nur [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] oder höhere Versionen verwendet werden und dass keine früheren Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] auf dem IIS-Server installiert sind. Frühere Versionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können zu Fehlern führen, zum Beispiel: "Das Format einer Nachricht war während der Websynchronisierung ungültig. Stellen Sie sicher, dass die Replikationskomponenten auf dem Webserver ordnungsgemäß konfiguriert sind."  
   
  Zur Verwendung der Websynchronisierung müssen Sie IIS mithilfe der folgenden Schritte konfigurieren. Jeder Schritt wird in diesem Thema im Detail beschrieben.  
   
@@ -162,7 +161,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 2.  Klicken Sie im Bereich **Aktionen** auf \*:443(https) **durchsuchen**.  
   
-3.  Internet Explorer wird geöffnet und zeigt folgende Meldung an: "Es besteht ein Problem mit dem Sicherheitszertifikat der Website". Diese Warnung besagt, dass das zugeordnete Zertifikat nicht von einer bekannten Zertifizierungsstelle ausgestellt wurde und möglicherweise nicht vertrauenswürdig ist. Dies ist eine erwartete Warnung, klicken Sie deshalb auf **Laden dieser Website fortsetzen (nicht empfohlen)**.  
+3.  Internet Explorer wird geöffnet und zeigt folgende Meldung an: "Es besteht ein Problem mit dem Sicherheitszertifikat der Website". Diese Warnung besagt, dass das zugeordnete Zertifikat nicht von einer bekannten Zertifizierungsstelle ausgestellt wurde und möglicherweise nicht vertrauenswürdig ist. Dies ist eine erwartete Warnung, klicken Sie deshalb auf **Laden dieser Website fortsetzen (nicht empfohlen)** .  
   
 4.  Wenn die Aufforderung **Mit Localhost verbinden**angezeigt wird, geben Sie einen Benutzernamen und ein Kennwort ein, um fortzufahren. Die Standardseite für die Website sollte angezeigt werden.  
   
@@ -320,7 +319,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     2.  Stellen Sie eine Verbindung mit dem Server im Diagnosemodus her. Wenn das Zertifikat ordnungsgemäß installiert ist, wird das Dialogfeld **Sicherheitshinweis** nicht angezeigt. Wenn das Dialogfeld angezeigt wird, ist der Merge-Agent nicht in der Lage, eine Verbindung mit dem Computer mit IIS herzustellen. Sie müssen daher sicherstellen, dass das Zertifikat für den Server, auf den Sie zugreifen, dem Zertifikatsspeicher auf dem Abonnenten als vertrauenswürdiges Zertifikat hinzugefügt wurde. Weitere Informationen zum Exportieren von Zertifikaten finden Sie in der IIS-Dokumentation.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Websynchronisierung für die Mergereplikation](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)  
   

@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136494"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>Verbesserte Leistung und Skalierbarkeit in SP2
 
-|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
+|Funktion|und Beschreibung|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Automatische Soft-NUMA-Partitionierung|Sie können Soft-NUMA automatisch auf Systemen konfigurieren, die über mindestens 8 CPUs pro NUMA-Knoten verfügen.|[Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |Pufferpoolerweiterung|Ermöglicht eine Skalierung des SQL Server-Pufferpools über 8 TB hinaus.|[Pufferpoolerweiterung](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -39,7 +38,7 @@ SQL Server 2014 SP2 enthält Rollups von veröffentlichten Hotfixes für SQL Ser
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>Verbesserte Unterstützung und Diagnose in SP2
 
-|Funktion|Beschreibung|Weitere Informationen finden Sie unter|
+|Funktion|und Beschreibung|Weitere Informationen finden Sie unter|
 |---|---|---|
 |Protokollierung des Always On-Zeitlimits|Für Leasezeitlimit-Nachrichten wurde eine neue Protokollierungsfunktion hinzugefügt, mit der die aktuelle Zeit und die Zeiten für die erwartete Erneuerung protokolliert werden. |[Improved Always On Availability Group Lease Timeout Diagnostics (Verbesserte Leasezeitlimit-Diagnose bei Always On-Verfügbarkeitsgruppe)](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |Always On-XEvents und -Leistungsindikatoren|Neue Always On-XEvents und -Leistungsindikatoren zur Verbesserung der Diagnose von Problemen mit Always On in Bezug auf die Wartezeit bei der Problembehandlung. |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) und [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)
@@ -158,7 +157,7 @@ SQL Server 2014 Standard weist die folgenden Änderungen auf:
 -   Der maximale Arbeitsspeicher wurde von 64 GB auf 128 GB erweitert.  
  
 #### <a name="memory-optimization-advisor-flags-default-constraints-as-incompatible"></a>Der Ratgeber für die Speicheroptimierung kennzeichnet Standardeinschränkungen als inkompatibel  
-**Problem:** Der Ratgeber für die Speicheroptimierung in SQL Server Management Studio kennzeichnet alle Standardeinschränkungen als inkompatibel. In einer speicheroptimierten Tabelle werden nicht alle Standardeinschränkungen unterstützt. Der Ratgeber unterscheidet nicht zwischen unterstützten und nicht unterstützten Typen von Standardeinschränkungen. Zu den unterstützten Standardeinschränkungen gehören alle Konstanten, Ausdrücke und integrierten Funktionen, die innerhalb nativer kompilierter gespeicherter Prozeduren unterstützt werden. Die Liste der in systemintern kompilierten gespeicherten Prozeduren unterstützten Funktionen finden Sie unter [Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
+**Problem:** Der Advisor für die Speicheroptimierung in SQL Server Management Studio kennzeichnet alle Standardeinschränkungen als inkompatibel. In einer speicheroptimierten Tabelle werden nicht alle Standardeinschränkungen unterstützt. Der Ratgeber unterscheidet nicht zwischen unterstützten und nicht unterstützten Typen von Standardeinschränkungen. Zu den unterstützten Standardeinschränkungen gehören alle Konstanten, Ausdrücke und integrierten Funktionen, die innerhalb nativer kompilierter gespeicherter Prozeduren unterstützt werden. Die Liste der in systemintern kompilierten gespeicherten Prozeduren unterstützten Funktionen finden Sie unter [Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](https://msdn.microsoft.com/library/dn452279(v=sql.120).aspx).  
   
 **Problemumgehung:** Wenn Sie den Ratgeber zum Identifizieren von Blockierungen verwenden möchten, sollten Sie die kompatiblen Standardeinschränkungen ignorieren. Um den Ratgeber für die Speicheroptimierung zum Migrieren von Tabellen zu verwenden, die über kompatible Standardeinschränkungen, aber keine anderen Blockierungen verfügen, führen Sie folgende Schritte aus:  
   
@@ -180,19 +179,19 @@ Diese Meldung dient tatsächlich nur zu Informationszwecken und erfordert keine 
 **Problemumgehung:** Keine. Diese Meldung dient zu Informationszwecken.  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>In den Details zu fehlenden Indizes sind fälschlicherweise eingeschlossene Spalten für eine speicheroptimierte Tabelle angegeben.  
-**Problem:** Wenn in SQL Server 2014 ein fehlender Index für eine Abfrage einer speicheroptimierten Tabelle erkannt wird, wird in SHOWPLAN_XML sowie in den DMVs zu fehlenden Indizes, z. B. sys.dm_db_missing_index_details, ein fehlender Index gemeldet. In einigen Fällen enthalten die Details zu fehlenden Indizes eingeschlossene Spalten. Da alle Spalten mit allen Indizes für speicheroptimierte Tabellen implizit eingeschlossen werden, ist es nicht zulässig, eingeschlossene Spalten mit speicheroptimierten Indizes explizit anzugeben.  
+**Problem:** Wenn in SQL Server 2014 ein fehlender Index für eine Abfrage einer speicheroptimierten Tabelle erkannt wird, wird in „SHOWPLAN_XML“ sowie in den DMVs zu fehlenden Indizes, z. B. „sys.dm_db_missing_index_details“, ein fehlender Index gemeldet. In einigen Fällen enthalten die Details zu fehlenden Indizes eingeschlossene Spalten. Da alle Spalten mit allen Indizes für speicheroptimierte Tabellen implizit eingeschlossen werden, ist es nicht zulässig, eingeschlossene Spalten mit speicheroptimierten Indizes explizit anzugeben.  
   
-**Problemumgehung:** Geben Sie bei Indizes für speicheroptimierte Tabellen keine INCLUDE-Klausel an.  
+**Problemumgehung:** Geben Sie bei Indizes für speicheroptimierte Tabellen keine „INCLUDE“-Klausel an.  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>In den Details zu fehlenden Indizes werden fehlende Indizes ausgelassen, wenn ein Hashindex vorhanden ist, der für die Abfrage aber nicht geeignet ist.  
-**Problem:** Wenn für Spalten einer speicheroptimierten Tabelle ein HASH-Index vorhanden ist, auf den in einer Abfrage verwiesen wird, der für die Abfrage jedoch nicht verwendet werden kann, wird von SQL Server 2014 in SHOWPLAN_XML und in der sys.dm_db_missing_index_details-DMV nicht immer ein fehlender Index gemeldet.  
+**Problem:** Wenn für Spalten einer speicheroptimierten Tabelle ein HASH-Index vorhanden ist, auf den in einer Abfrage verwiesen wird, der für die Abfrage jedoch nicht verwendet werden kann, wird von SQL Server 2014 in „SHOWPLAN_XML“ und in der „sys.dm_db_missing_index_details“-DMV nicht immer ein fehlender Index gemeldet.  
   
 Insbesondere, wenn eine Abfrage Gleichheitsprädikate enthält, die eine Teilmenge der Indexschlüsselspalten umfassen, oder wenn die Abfrage Ungleichheitsprädikate enthält, die die Indexschlüsselspalten umfassen, kann der HASH-Index in seiner ursprünglichen Form nicht verwendet werden. Um die Abfrage effizient auszuführen, wäre ein anderer Index erforderlich.  
   
 **Problemumgehung:** Sofern Sie Hashindizes verwenden, sollten Sie die Abfragen und Abfragepläne daraufhin überprüfen, ob die Abfragen von Index Seek-Vorgängen für eine Teilmenge des Indexschlüssels oder für Ungleichheitsprädikate profitieren könnten. Wenn Sie eine Suche für eine Teilmenge des Indexschlüssels ausführen müssen, verwenden Sie einen NONCLUSTERED-Index. Alternativ verwenden Sie einen HASH-Index für exakt die Spalten, in denen gesucht werden soll. Wenn eine Suche für ein Ungleichheitsprädikat ausgeführt werden muss, verwenden Sie einen NONCLUSTERED-Index anstelle eines HASH-Indexes.  
   
 #### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Bei Verwendung einer speicheroptimierten Tabelle und einer speicheroptimierten Tabellenvariablen in derselben Abfrage tritt ein Fehler auf, wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt ist.  
-**Problem:** Wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt ist und Sie sowohl auf eine speicheroptimierte Tabelle als auch auf eine speicheroptimierte Tabellenvariable in derselben Anweisung außerhalb des Kontexts einer Benutzertransaktion zugreifen, kann folgende Fehlermeldung ausgegeben werden:  
+**Problem:** Wenn die Datenbankoption „READ_COMMITTED_SNAPSHOT“ auf „ON“ festgelegt ist und Sie sowohl auf eine speicheroptimierte Tabelle als auch auf eine speicheroptimierte Tabellenvariable in derselben Anweisung außerhalb des Kontexts einer Benutzertransaktion zugreifen, kann folgende Fehlermeldung ausgegeben werden:  
   
 ```  
 Msg 41359  
@@ -202,7 +201,7 @@ READ_COMMITTED_SNAPSHOT is set to ON. Provide a supported isolation level
 for the memory optimized table using a table hint, such as WITH (SNAPSHOT).  
 ```  
   
-**Problemumgehung:** Verwenden Sie entweder den WITH (SNAPSHOT)-Tabellenhinweis mit der Tabellenvariablen, oder legen Sie die Datenbankoption MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT auf ON fest. Verwenden Sie dazu folgende Anweisung:  
+**Problemumgehung:** Verwenden Sie entweder den „WITH (SNAPSHOT)“-Tabellenhinweis mit der Tabellenvariablen, oder legen Sie die Datenbankoption „MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT“ auf „ON“ fest. Verwenden Sie dazu folgende Anweisung:  
   
 ```  
 ALTER DATABASE CURRENT   
@@ -210,12 +209,12 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 ```  
   
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>In den Prozedur- und Abfrageausführungsstatistiken für nativ kompilierte gespeicherte Prozeduren wird die Workerzeit in Vielfachen von 1.000 aufgezeichnet.  
-**Problem:** Nachdem Sie die Sammlung von Prozedur- oder Abfrageausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren unter Verwendung von sp_xtp_control_proc_exec_stats oder sp_xtp_control_query_exec_stats aktiviert haben, stellen Sie fest, dass *_worker_time in den DMVs sys.dm_exec_procedure_stats und sys.dm_exec_query_stats in Vielfachen von 1.000 angegeben wird. Für Abfrageausführungen, die unter 500 Mikrosekunden liegen, wird unter worker_time der Wert 0 angegeben.  
+**Problem:** Nachdem Sie die Sammlung von Prozedur- oder Abfrageausführungsstatistiken für systemintern kompilierte gespeicherte Prozeduren unter Verwendung von „sp_xtp_control_proc_exec_stats“ oder „sp_xtp_control_query_exec_stats“ aktiviert haben, stellen Sie fest, dass „*_worker_time“ in den DMVs „sys.dm_exec_procedure_stats“ und „sys.dm_exec_query_stats“ in Vielfachen von 1.000 angegeben wird. Für Abfrageausführungen, die unter 500 Mikrosekunden liegen, wird unter worker_time der Wert 0 angegeben.  
   
 **Problemumgehung:** Keine. Bei Abfragen in systemintern kompilierten gespeicherten Prozeduren, die über eine kurze Ausführungsdauer verfügen, sollten Sie sich nicht auf den in den DMVs zu Ausführungsstatistiken angegebenen worker_time-Wert verlassen.  
   
 #### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>SHOWPLAN_XML-Fehler bei nativ kompilierten gespeicherten Prozeduren mit langen Ausdrücken  
-**Problem:** Wenn eine systemintern kompilierte gespeicherte Prozedur einen langen Ausdruck enthält und Sie die SHOWPLAN_XML für die Prozedur entweder mit der T-SQL-Option SET SHOWPLAN_XML ON oder mit der Option „Geschätzten Ausführungsplan anzeigen“ in Management Studio abrufen, kann folgender Fehler auftreten:  
+**Problem:** Wenn eine systemintern kompilierte gespeicherte Prozedur einen langen Ausdruck enthält und Sie „SHOWPLAN_XML“ für die Prozedur entweder mit der T-SQL-Option „SET SHOWPLAN_XML ON“ oder mit der Option „Geschätzten Ausführungsplan anzeigen“ in Management Studio abrufen, kann folgender Fehler auftreten:  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -255,7 +254,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>Die Verwendung eines Zeichenfolgenparameters oder einer Variablen mit DATEPART und zugehörigen Funktionen in einer nativ kompilierten gespeicherten Prozedur führt zu einem Fehler.  
 **Problem:** Wenn Sie eine nativ kompilierte gespeicherte Prozedur verwenden, die einen Zeichenfolgenparameter oder eine -variable mit den integrierten Funktionen DATEPART, DAY, MONTH und YEAR verwendet, wird eine Fehlermeldung mit dem Hinweis angezeigt, dass der Datentyp „datetimeoffset“ bei nativ kompilierten gespeicherten Prozeduren nicht unterstützt wird.  
   
-**Problemumgehung:** Weisen Sie den Zeichenfolgenparameter oder die Variable einer neuen Variablen des datetime2-Typs zu, und verwenden Sie diese Variable in der Funktion DATEPART, DAY, MONTH oder YEAR. Beispiel:  
+**Problemumgehung:** Weisen Sie den Zeichenfolgenparameter oder die Variable einer neuen Variablen des „datetime2“-Typs zu, und verwenden Sie diese Variable in der Funktion „DATEPART“, „DAY“, „MONTH“ oder „YEAR“. Beispiel:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -263,7 +262,7 @@ DATEPART(weekday, @d)
 ```  
   
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>DELETE FROM-Klauseln werden vom Ratgeber für native Kompilierung falsch gekennzeichnet.  
-**Problem:** DELETE FROM-Klauseln innerhalb einer gespeicherten Prozedur werden vom Ratgeber für systeminterne Kompilierung fälschlicherweise als inkompatibel gekennzeichnet.  
+**Problem:** „DELETE FROM“-Klauseln innerhalb einer gespeicherten Prozedur werden vom Advisor für native Kompilierung fälschlicherweise als inkompatibel gekennzeichnet.  
   
 **Problemumgehung:** Keine.  
   
@@ -338,7 +337,7 @@ Weitere Informationen finden Sie unter [Tipps, Tricks und Problembehandlung für
 ### <a name="AzureVM"></a>SQL Server 2014 RTM auf Microsoft Azure Virtual Machines  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>Der Assistent zum Hinzufügen von Azure-Replikaten gibt beim Konfigurieren eines Verfügbarkeitsgruppenlisteners in Windows Azure einen Fehler zurück.  
-**Problem:** Wenn eine Verfügbarkeitsgruppe über einen Listener verfügt, gibt der Assistent zum Hinzufügen von Azure-Replikaten beim Versuch, den Listener in Windows Azure zu konfigurieren, einen Fehler zurück.  
+**Problem:** Wenn eine Verfügbarkeitsgruppe über einen Listener verfügt, gibt der Assistent zum Hinzufügen von Azure-Replikaten beim Versuch, den Listener in Microsoft Azure zu konfigurieren, einen Fehler zurück.  
   
 Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Subnetz, das Verfügbarkeitsgruppenreplikate hostet, eine IP-Adresse zugewiesen werden muss. Dies gilt auch für das Azure-Subnetz.  
   

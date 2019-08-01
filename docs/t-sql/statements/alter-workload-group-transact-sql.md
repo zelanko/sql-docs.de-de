@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091753"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -158,7 +157,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Sie sollten bei der Ausführung von DDL-Anweisungen mit dem Status der Ressourcenkontrolle vertraut sein. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann bei der Indexerstellung mehr Arbeitsbereichsspeicher verwendet werden, als ursprünglich zugewiesen, um eine bessere Leistung zu erzielen. Die Ressourcenkontrolle in höheren Versionen unterstützt diese besondere Behandlung, die ursprüngliche und alle weiteren Speicherzuweisungen werden jedoch durch den Ressourcenpool und die Einstellungen für Arbeitsauslastungsgruppe begrenzt.  
+ REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann die Indexerstellung verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Die Ressourcenkontrolle in höheren Versionen unterstützt diese besondere Behandlung, die ursprüngliche und alle weiteren Speicherzuweisungen werden jedoch durch den Ressourcenpool und die Einstellungen für Arbeitsauslastungsgruppe begrenzt.  
   
  **Indexerstellung für eine partitionierte Tabelle**  
   
@@ -188,7 +187,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   

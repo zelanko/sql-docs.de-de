@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a6db30cca46d752e8f6f350d780863cfaa7452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0919bdf40eb1736a31aea0b0107dd57dda671a8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111552"
 ---
 # <a name="sql-server-encryption"></a>SQL Server-Verschlüsselung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ Sie können in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verb
  [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  Allgemeine Informationen über das transparente Verschlüsseln von Daten.  
   
- [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
  Die Verschlüsselungsschlüssel in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bestehen aus einer Kombination von öffentlichen, privaten und symmetrischen Schlüsseln, die zum Schutz sensibler Daten verwendet werden. Dieser Abschnitt erklärt, wie Verschlüsselungsschlüssel implementiert und verwaltet werden.  
   
- [Always Encrypted &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
+ [Always Encrypted &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
  Sicherstellen, dass lokale Datenbankadministratoren, Betreiber von Clouddatenbanken oder andere nicht autorisierte Benutzer mit hohen Berechtigungen nicht auf die verschlüsselten Daten zugreifen können.  
   
  [Dynamische Datenmaskierung](../../../relational-databases/security/dynamic-data-masking.md)  
@@ -80,12 +79,12 @@ Sie können in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verb
  Informationen dazu, wie ein Zertifikat zur Verschlüsselung von Daten verwendet wird.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 – Sicherheit und Schutz](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012, Sicherheit und Schutz](https://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  Aktuelle Informationen über die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
- [Verschlüsselungsschlüssel für SQL Server und Datenbank &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Verschlüsselungsschlüssel für SSRS - sichern und Wiederherstellen von Verschlüsselungsschlüsseln](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

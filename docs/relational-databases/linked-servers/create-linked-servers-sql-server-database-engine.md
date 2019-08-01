@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073671"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -223,7 +222,7 @@ ms.locfileid: "52391244"
   
     ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
+##  <a name="FollowUp"></a>Nächster Schritt: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
   
 #### <a name="to-test-the-linked-server"></a>So testen Sie den Verbindungsserver  
   
@@ -249,8 +248,8 @@ ms.locfileid: "52391244"
   
      Wenn für den Anmeldenamen vom Verbindungsserver NULL zurückgegeben wird, zeigt dies an, dass der Anmeldename auf dem Verbindungsserver nicht vorhanden ist. Von diesen Anmeldenamen kann der Verbindungsserver erst verwendet werden, wenn der Verbindungsserver so konfiguriert wird, dass ein anderer Sicherheitskontext weitergegeben wird oder der Verbindungsserver anonyme Verbindungen akzeptiert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Verbindungsserver &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verbindungsserver &#40;Datenbank-Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  
   

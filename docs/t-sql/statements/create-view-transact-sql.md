@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938881"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ OR ALTER
  Verschlüsselt die Einträge in [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md), die den Text der CREATE VIEW-Anweisung enthalten. Mit WITH ENCRYPTION kann verhindert werden, dass die Sicht als Teil der SQL Server-Replikation veröffentlicht wird.  
   
  SCHEMABINDING  
- Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wenn SCHEMABINDING angegeben ist, können an der/den Basistabelle(n) keine Änderungen vorgenommen werden, die die Sichtdefinition betreffen können. Zunächst muss die Sichtdefinition selbst geändert oder gelöscht werden, um Abhängigkeiten in der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (_schema_**.**_object_) der Tabellen, Sicht oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
+ Bindet die Sicht an das Schema der zugrunde liegenden Basistabellen. Wenn SCHEMABINDING angegeben ist, können an der/den Basistabelle(n) keine Änderungen vorgenommen werden, die die Sichtdefinition betreffen können. Zunächst muss die Sichtdefinition selbst geändert oder gelöscht werden, um Abhängigkeiten in der zu ändernden Tabelle zu entfernen. Wenn Sie SCHEMABINDING verwenden, muss *select_statement* die zweiteiligen Namen (_schema_ **.** _object_) der Tabellen, Sicht oder benutzerdefinierten Funktionen einschließen, auf die verwiesen wird. Alle Objekte, auf die verwiesen wird, müssen in derselben Datenbank vorhanden sein.  
   
  Sichten oder Tabellen, die Bestandteil einer mit der SCHEMABINDING-Klausel erstellten Sicht sind, können erst dann gelöscht werden, wenn diese Sicht gelöscht oder geändert wurde, sodass keine Schemabindung mehr vorhanden ist. Andernfalls löst [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus. Darüber hinaus schlagen ALTER TABLE-Anweisungen für Tabellen fehl, die Bestandteil von Sichten mit Schemabindung sind, wenn diese Anweisungen die Sichtdefinition betreffen.  
   

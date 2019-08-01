@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57c9f725ec8f7c2a26a110a6d317bd5ec1de118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054511"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Laden von Daten in SQL Server oder Azure SQL-Datenbank mit SQL Server Integration Services (SSIS)
 
@@ -57,14 +56,14 @@ Um das Verfahren abzukürzen, können Sie den SQL Server-Import/Export-Assistent
 Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 
 1. **SQL Server Integration Services (SSIS)** . SSIS ist eine Komponente von SQL Server und erfordert eine lizenzierte Version oder die Entwickler- oder Evaluierungsversion von SQL Server. Informationen darüber, wie Sie eine Evaluierungsversion von SQL Server erhalten, finden Sie im [Evaluation Center für SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
-2. **Visual Studio** (optional). Die kostenlose Visual Studio Community Edition können Sie unter [Visual Studio Community][Visual Studio Community] abrufen. Wenn Sie Visual Studio nicht installieren möchten, können Sie auch nur SQL Server Data Tools (SSDT) installieren. Mit SSDT wird auch eine Version von Visual Studio mit eingeschränkter Funktionalität installiert.
-3. **SQL Server Data Tools for Visual Studio (SSDT)** . Informationen zum Installieren von SQL Server Data Tools for Visual Studio finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
+2. **Visual Studio** (optional). Visual Studio Community Edition können Sie kostenlos unter [Visual Studio Community][Visual Studio Community] abrufen. Wenn Sie Visual Studio nicht installieren möchten, können Sie auch nur SQL Server Data Tools (SSDT) installieren. Mit SSDT wird auch eine Version von Visual Studio mit eingeschränkter Funktionalität installiert.
+3. **SQL Server Data Tools for Visual Studio (SSDT)** . Informationen zum Installieren von SQL Server Data Tools für Visual Studio finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. In diesem Tutorial stellen Sie eine Verbindung mit einer Instanz von SQL Server oder Azure SQL-Datenbank her und laden Daten in diese. Sie benötigen Berechtigungen zum Herstellen einer Verbindung, zum Erstellen einer Tabelle und zum Laden von Daten in eines der folgenden Ziele:
    - **Eine Azure SQL-Datenbank-Instanz**. Weitere Informationen finden Sie unter [Azure SQL-Datenbank](/azure/sql-database/).  
       oder
    - **Eine SQL Server-Instanz**. SQL Server wird auf einem lokalen Computer oder auf einem virtuellen Azure-Computer ausgeführt. Informationen zum Herunterladen einer kostenlosen Evaluierungs- oder Entwicklerversion von SQL Server finden Sie unter [SQL Server-Downloads](https://www.microsoft.com/sql-server/sql-server-downloads).
 
-5. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Server Beispieldaten, die in der AdventureWorks-Beispieldatenbank gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie in den [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
+5. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Server Beispieldaten, die in der AdventureWorks-Beispieldatenbank gespeichert sind. Die AdventureWorks-Beispieldatenbank können Sie unter [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases] abrufen.
 6. **Eine Firewallregel**, wenn Sie Daten in die Azure SQL-Datenbank-Instanz laden. Sie müssen eine Firewallregel für SQL-Datenbank mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL-Datenbank hochladen können.
 
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts

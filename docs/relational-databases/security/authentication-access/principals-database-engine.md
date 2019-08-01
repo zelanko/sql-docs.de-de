@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632696"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344596"
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals richtet sich nach dem Definitionsbereich des Prinzipals (Windows, Server, Datenbank) und danach, ob der Prinzipal unteilbar ist oder es sich um eine Auflistung handelt. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf. Dieses Thema gilt für alle Versionen von SQL Server, jedoch gibt es bei Prinzipalen auf Serverebene in der SQL-Datenbank oder SQL Data Warehouse eine Reihe von Einschränkungen. 
+  *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals hängt vom Gültigkeitsbereich der Definition des Prinzipals ab: Windows, Server, Datenbank und ob der Prinzipal unteilbar oder eine Auflistung ist. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf. Dieses Thema gilt für alle Versionen von SQL Server, jedoch gibt es bei Prinzipalen auf Serverebene in der SQL-Datenbank oder SQL Data Warehouse eine Reihe von Einschränkungen. 
   
 ## <a name="sql-server-level-principals"></a>Prinzipale auf SQL Server-Ebene  
   
@@ -53,12 +52,12 @@ ms.locfileid: "47632696"
   
 ## <a name="database-level-principals"></a>Prinzipale auf Datenbankebene
   
-- Datenbankbenutzer (Es gibt 11 Benutzertypen. Weitere Informationen finden Sie unter [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
+- Datenbankbenutzer (Es gibt 12 Benutzertypen. Weitere Informationen finden Sie unter [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
 - Datenbankrolle
 - Anwendungsrolle
   
 ## <a name="sa-login"></a>Anmeldename „sa“  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa`-Anmeldename ist ein Prinzipal auf Serverebene. Er wird standardmäßig bei der Installation einer Instanz erstellt. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist die Standarddatenbank von sa „Master“. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der `sa`-Anmeldename ist ein Mitglied der festen Datenbankrolle `sysadmin`. Der `sa`-Anmeldename besitzt alle Berechtigungen auf dem Server und kann nicht beschränkt werden. Der `sa`-Anmeldename kann nicht gelöscht werden. Jedoch kann er deaktiviert werden, sodass er nicht verwendet werden kann.
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa`-Anmeldename ist ein Prinzipal auf Serverebene. Er wird standardmäßig bei der Installation einer Instanz erstellt. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist die Standarddatenbank von sa „Master“. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der Anmeldename `sa` ist ein Mitglied der festen Rolle auf Serverebene `sysadmin`. Der `sa`-Anmeldename besitzt alle Berechtigungen auf dem Server und kann nicht beschränkt werden. Der `sa`-Anmeldename kann nicht gelöscht werden. Jedoch kann er deaktiviert werden, sodass er nicht verwendet werden kann.
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo-Benutzer und dbo-Schema
 
@@ -101,7 +100,7 @@ Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenban
   
 -   [Anwendungsrollen](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern von SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

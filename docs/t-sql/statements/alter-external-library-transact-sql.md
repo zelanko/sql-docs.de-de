@@ -1,10 +1,10 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
@@ -16,22 +16,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: d2e7f22081322c62a6f3c8f8cd91f6f588f88610
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583173"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329314"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Ändert den Inhalt einer vorhandenen externen Paketbibliothek.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und Java werden für die Windows- und die Linux-Plattform in SQL Server 2019 CTP 2.4 unterstützt. 
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und externe Sprachen werden für die Windows- und die Linux-Plattform in SQL Server 2019 CTP 2.4 und höher unterstützt.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> In Azure SQL-Datenbank können Sie eine Bibliothek ändern, indem Sie diese entfernen und dann mithilfe von **sqlmlutils** die geänderte Version installieren. Weitere Informationen zu **sqlmlutils** finden Sie unter [Hinzufügen eines Pakets mit sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Syntax für SQL Server 2019
@@ -72,7 +79,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 ```
 ::: moniker-end
@@ -107,6 +114,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Syntax für Azure SQL-Datenbank
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>Argumente
 
 **library_name**
@@ -119,6 +149,7 @@ Der Bibliotheksname kann nicht nach dem Zufallsprinzip zugewiesen werden. D.h., 
 
 Gibt den Namen eines Benutzers oder einer Rolle an, der oder die die externe Bibliothek besitzt.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 Gibt den Inhalt des Pakets für eine bestimmte Plattform an. Nur ein Dateiartefakt pro Plattform wird unterstützt.
@@ -127,9 +158,11 @@ Die Datei kann in Form eines lokalen Pfads oder eines Netzwerkpfads angegeben we
 
 Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur ein Darteiartefakt oder Inhalt erlaubt.
 
+::: moniker-end
+
 **library_bits**
 
-Gibt ähnlich wie bei Assemblys den Inhalt des Pakets als Hexadezimalliteral an. 
+Gibt ähnlich wie bei Assemblys den Inhalt des Pakets als Hexadezimalliteral an.
 
 Diese Option ist nützlich, wenn Sie die erforderliche Berechtigung zum Ändern einer Bibliothek haben. Jedoch ist der Zugriff auf Daten auf dem Server beschränkt, und Sie können die Inhalte nicht in einem Pfad speichern, auf den der Server zugreifen kann.
 
@@ -138,17 +171,33 @@ Stattdessen können Sie den Paketinhalt als Variable im Binärformat übergeben.
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. Für SQL Server 2017 ist Windows die einzige unterstützte Plattform.
-
+Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen.
+Für SQL Server 2017 ist Windows die einzige unterstützte Plattform.
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
-Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. Für SQL Server 2019 werden die Plattformen Windows und Linux unterstützt.
+Gibt die Plattform für den Inhalt der Bibliothek an. Dieser Wert ist erforderlich, wenn eine vorhandene Bibliothek geändert wird, um eine andere Plattform hinzuzufügen. 
+Für SQL Server 2019 werden die Plattformen Windows und Linux unterstützt.
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+gibt die Sprache des Pakets an. R wird in SQL Server 2017 unterstützt.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+gibt die Sprache des Pakets an. R wird in Azure SQL-Datenbank unterstützt.
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-gibt die Sprache des Pakets an. Mögliche Werte sind: **R**, **Python** oder **Java**.
+gibt die Sprache des Pakets an. Der Wert kann **R**, **Python** oder der Name einer externen Programmiersprache (siehe [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)) sein.
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
@@ -173,7 +222,8 @@ Standardmäßig verfügen der **dbo**-Benutzer sowie alle Mitglieder der Rolle *
 
 Die folgenden Beispiele ändern eine externe Bibliothek namens `customPackage`.
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Ersetzen des Inhalts einer Bibliothek mithilfe einer Datei
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="replace-the-contents-of-a-library-using-a-file"></a>Ersetzen des Inhalts einer Bibliothek mithilfe einer Datei
 
 Im folgenden Beispiel wird eine externe Bibliothek mit dem Namen `customPackage` mithilfe einer ZIP-Datei geändert, die die aktualisierten Bits enthält.
 
@@ -192,17 +242,19 @@ EXEC sp_execute_external_script
 @script=N'library(customPackage)'
 ;
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie `'R'` durch `'Python'` ersetzen.
 ::: moniker-end
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Ändern einer vorhandenen Bibliothek mithilfe eines Bytedatenstroms
+
+### <a name="alter-an-existing-library-using-a-byte-stream"></a>Ändern einer vorhandenen Bibliothek mithilfe eines Bytedatenstroms
 
 Im folgenden Beispiel wird die vorhandene Bibliothek geändert, indem die neuen Bits als ein Hexadezimalliteral übergeben werden.
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary 
-SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -214,7 +266,7 @@ Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie `'R'` du
 
 ## <a name="see-also"></a>Siehe auch
 
-[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY (Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

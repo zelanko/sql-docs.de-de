@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d861c45f8f91a9026285552f30434250bb89d515
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115826"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Optionen des Task 'Datenbank sichern' für Wartungsplan
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51216528"
   
 -   [Erstellen eines Wartungsplans](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Verbindung**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "51216528"
  Erstellen Sie eine neue Serververbindung, die bei der Ausführung dieses Tasks verwendet werden soll. Das Dialogfeld **Neue Verbindung** wird im Folgenden beschrieben.  
   
  **Datenbanken**  
- Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Bei Auswahl dieser Option werden in der Dropdownliste die folgenden Optionen angezeigt: **Alle Datenbanken**, **Alle Systemdatenbanken**, **Alle Benutzerdatenbanken**, **Diese Datenbanken**.  
+ Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Wenn diese Option ausgewählt ist, enthält die Dropdownliste die folgenden Optionen: **Alle Datenbanken**, **Alle Systemdatenbanken**, **Alle Benutzerdatenbanken**, **Diese Datenbanken**.  
   
  **Alle Datenbanken**  
  Generiert einen Wartungsplan, der Wartungstasks für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken ausführt.  
@@ -135,7 +134,7 @@ ms.locfileid: "51216528"
  **Kennwort**  
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   

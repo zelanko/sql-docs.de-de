@@ -1,5 +1,5 @@
 ---
-title: 'Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung) | Microsoft-Dokumentation'
+title: 'Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035271"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Automatische Seitenreparatur (Verfügbarkeitsgruppen: Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "49383565"
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  Bei der automatischen Seitenreparatur bei einer Datenbankspiegelung werden nur Seiten in einer Datendatei repariert, bei denen bei einem Vorgang einer der in der folgenden Tabelle aufgeführten Fehler aufgetreten ist.  
   
-|Fehlernummer|Beschreibung|Instanzen, die zu einer automatischen Seitenreparatur führen|  
+|Fehlernummer|und Beschreibung|Instanzen, die zu einer automatischen Seitenreparatur führen|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|Maßnahme wird nur ergriffen, wenn das Betriebssystem eine zyklische Redundanzprüfung (CRC, Redundancy Check) ausgeführt hat, bei der in den Daten ein Fehler gefunden wurde.|ERROR_CRC. Der Wert des Betriebssystems für diesen Fehler ist 23.|  
 |824|Logische Fehler.|Logische Datenfehler, z. B. unterbrochener Schreibvorgang oder fehlerhafte Prüfsumme auf einer Seite.|  
@@ -96,7 +95,7 @@ ms.locfileid: "49383565"
  Eine automatische Seitenreparatur ist ein asynchroner Prozess, der im Hintergrund ausgeführt wird. Daher tritt bei einem Datenbankvorgang, bei dem eine nicht lesbare Seite angefordert wird, ein Fehler auf, und der Fehlercode für den Zustand wird zurückgegeben, der den Fehler ausgelöst hat. Beim Entwickeln einer Anwendung für eine gespiegelte Datenbank oder eine Verfügbarkeitsdatenbank sollten Sie Ausnahmen für fehlerhafte Vorgänge abfangen. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlercode 823, 824 oder 829 lautet, sollten Sie den Vorgang später wiederholen.  
   
 
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> Vorgehensweise: View Automatic Page-Repair Attempts (Vorgehensweise: Anzeigen von automatischen Seitenreparaturversuchen)  
  Die folgenden dynamischen Verwaltungssichten geben Zeilen für die letzten automatischen Seitenreparatur-Versuche auf einer angegebenen Verfügbarkeitsdatenbank oder gespiegelten Datenbank mit einem Maximum von 100 Zeilen pro Datenbank zurück.  
   
 -   **Always On-Verfügbarkeitsgruppen:**  
@@ -112,7 +111,7 @@ ms.locfileid: "49383565"
      Gibt eine Zeile für jede automatische Seitenreparatur für jede gespiegelte Datenbank der Serverinstanz zurück.  
   
  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten der suspect_pages-Tabelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

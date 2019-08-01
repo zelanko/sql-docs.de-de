@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938932"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Eigenschaft)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ IDENTITY [ (seed , increment) ]
 ## <a name="remarks"></a>Remarks  
  Identitätsspalten können zum Generieren von Schlüsselwerten verwendet werden. Die Identitätseigenschaft für eine Spalte garantiert Folgendes:  
   
--   Jeder neue Wert wird auf Grundlage des aktuellen Ausgangswerts und Inkrements generiert.  
+-   Jeder neue Wert wird auf Grundlage des aktuellen Seeds und Inkrements generiert.  
   
 -   Jeder neue Wert für eine bestimmte Transaktion unterscheidet sich von anderen gleichzeitigen Transaktionen für die Tabelle.  
   
@@ -78,7 +77,7 @@ IDENTITY [ (seed , increment) ]
   
  Es kann nur eine Identitätsspalte pro Tabelle erstellt werden.  
   
- In speicheroptimierten Tabellen müssen sowohl der Ausgangswert als auch das Inkrement auf 1,1 festgelegt werden. Wenn Sie den Ausgangswert oder das Inkrement auf einen anderen Wert als 1 festlegen, kommt es zu folgendem Fehler: Die Verwendung von anderen Ausgangswerten und Inkrementwerten als 1 wird für speicheroptimierte Tabellen nicht unterstützt.  
+ In speicheroptimierten Tabellen müssen sowohl der Ausgangswert als auch das Inkrement auf 1,1 festgelegt werden. Wenn Sie den Seed oder das Inkrement auf einen anderen Wert als 1 festlegen, kommt es zu folgendem Fehler: Die Verwendung von anderen Seeds und Inkrementwerten als 1 wird für speicheroptimierte Tabellen nicht unterstützt.  
   
 ## <a name="examples"></a>Beispiele  
   

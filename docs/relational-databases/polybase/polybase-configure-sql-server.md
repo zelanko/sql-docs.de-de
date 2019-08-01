@@ -7,14 +7,13 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c42ff3c215d3f252a61371ea560c2ecac7c3cf62
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5b75a57e233882540208a428e94f6aca139cd946
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730341"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307617"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in SQL Server
 
@@ -24,7 +23,7 @@ In diesem Artikel wird erläutert, wie Sie PolyBase in einer SQL Server-Instanz 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Wenn Sie PolyBase nicht installiert haben, finden Sie weitere Informationen unter [PolyBase installation (Installieren von PolyBase)](polybase-installation.md). Die Voraussetzungen für die Installation werden im entsprechenden Artikel erläutert.
+Wenn Sie PolyBase nicht installiert haben, finden Sie weitere Informationen unter [PolyBase installation (Installieren von PolyBase)](polybase-installation.md). Die Voraussetzungen für die Installation werden im entsprechenden Artikel erläutert. Stellen Sie nach der Installation auch sicher, dass Sie [PolyBase aktivieren](polybase-installation.md#enable).
 
 Bevor datenbankweit gültige Anmeldeinformationen erstellt werden können, muss ein [Hauptschlüssel](../../t-sql/statements/create-master-key-transact-sql.md) erstellt werden. 
 

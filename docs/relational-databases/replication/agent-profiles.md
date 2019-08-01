@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3738ada96f1b3a01bb7a95219f3a69b5c7da0d5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519cf5845956aa52094f9fff7ba1640d09b0aed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027855"
 ---
 # <a name="agent-profiles"></a>Agentprofile
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe des Dialogfelds **Agentprofile** können Sie Agentprofile verwalten. Agentprofile stellen eine einfache Möglichkeit dar, die Laufzeitparameter jedes Agents zu verwalten. Jeder Agent verfügt über ein Standardprofil, und einige Agents verfügen über zusätzliche vordefinierte Profile. Der Merge-Agent verfügt z. B. über ein Profil für langsame Verbindungen, das für Verbindungen mit geringer Bandbreite angelegt wurde. Die vordefinierten Profile reichen für die meisten Anwendungen aus, aber Sie können auch benutzerdefinierte Profile erstellen, mit denen Sie das Verhalten der Agents je nach Bedarf anpassen können.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Seite auswählen**  
  Wählen Sie im linken Bereich einen Agent aus. Im rechten Bereich werden daraufhin die Profile für diesen Agent angezeigt.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "47724078"
  Der Name des Profils.  
   
  **Typ**  
- Der Typ des Profils: **Benutzer** (benutzerdefiniert) oder **System** (vordefiniert).  
+ Der Profiltyp: **Benutzer** (benutzerdefiniert) oder **System** (vordefiniert).  
   
  **Eigenschaften (...)**  
  Klicken Sie auf diese Option, um die Werte anzuzeigen, die für jeden Parameter im Agentprofil verwendet werden.  
@@ -51,7 +50,7 @@ ms.locfileid: "47724078"
  **Vorhandene Agents ändern**  
  Wählen Sie ein Profil aus, und klicken Sie dann auf **Vorhandene Agents ändern** , um anzugeben, dass alle vorhandenen Aufträge für einen Agent des angegebenen Typs das ausgewählte Profil verwenden sollen. Wenn Sie z. B. mehrere Abonnements für eine Mergeveröffentlichung erstellt haben und das Profil so ändern möchten, dass die Merge-Agentaufträge für alle diese Abonnements das **Agentprofil für langsame Links**verwenden, wählen Sie dieses Profil aus, und klicken Sie auf **Vorhandene Agents ändern**.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Replikations-Agents (Übersicht)](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [Replikations-Agent-Profile](../../relational-databases/replication/agents/replication-agent-profiles.md)  

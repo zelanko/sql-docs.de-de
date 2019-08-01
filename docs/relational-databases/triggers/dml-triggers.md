@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979866917514cb10689f60bf5114d02dbe889fd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056134"
 ---
 # <a name="dml-triggers"></a>DML-Trigger
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,9 +60,9 @@ ms.locfileid: "47826708"
 |Anwendbarkeit|Tabellen|Tabellen und Sichten|  
 |Anzahl pro Tabelle oder Sicht|Mehrere Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|Ein Trigger pro auslösende Aktion (INSERT, UPDATE oder DELETE)|  
 |Kaskadierende Verweise|Keine Einschränkungen|INSTEAD OF UPDATE- und DELETE-Trigger sind nicht für Tabellen zulässig, die Ziel von kaskadierenden Einschränkungen für die referenzielle Integrität sind.|  
-|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br /><br /> Deklarativen referenziellen Aktionen<br /><br /> Erstellung der**inserted** - und **deleted** -Tabellen<br /><br /> Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle: Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
+|Ausführung|Nachher:<br /><br /> Einschränkungsverarbeitung<br /><br /> Deklarativen referenziellen Aktionen<br /><br /> Erstellung der**inserted** - und **deleted** -Tabellen<br /><br /> Der auslösenden Aktion|Vorher: Einschränkungsverarbeitung<br /><br /> Anstelle:  Der auslösenden Aktion<br /><br /> Nach: Erstellung der  **inserted** - und **deleted** -Tabellen|  
 |Ausführungsreihenfolge|Der zuerst und zuletzt auszuführende Trigger kann angegeben werden.|Nicht verfügbar|  
-|**varchar(max)**-, **nvarchar(max)**-, und **varbinary(max)** -Spaltenverweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
+|**varchar(max)** -, **nvarchar(max)** -, und **varbinary(max)** -Spaltenverweise in **eingefügten** und **gelöschten** Tabellen|Zulässig|Zulässig|  
 |Verweise auf**text**, **ntext**- und **image** -Spalten in **inserted** - und **deleted** -Tabellen|Nicht zulässig|Zulässig|  
   
  CLR-Trigger  
@@ -84,7 +83,7 @@ ms.locfileid: "47826708"
 |Beschreibt, wie DML-Trigger gelöscht oder deaktiviert werden.|[Löschen oder Deaktivieren von DML-Triggern](../../relational-databases/triggers/delete-or-disable-dml-triggers.md)|  
 |Beschreibt, wie Triggersicherheit verwaltet wird.|[Verwalten der Triggersicherheit](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

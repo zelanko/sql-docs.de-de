@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100462"
 ---
 # <a name="move-system-databases"></a>Verschieben von Systemdatenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,9 +146,9 @@ ms.locfileid: "54136120"
   
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, auf **Microsoft SQL Server 2005**, auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)**), und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie im Knoten **SQL Server-Dienste** mit der rechten Maustaste auf die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (z. B. **SQL Server (MSSQLSERVER)** ), und wählen Sie **Eigenschaften**aus.  
   
-3.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server (**_Instanzname_**)** auf die Registerkarte **Startparameter** .  
+3.  Klicken Sie im Dialogfeld **Eigenschaften von SQL Server (** _Instanzname_ **)** auf die Registerkarte **Startparameter** .  
   
 4.  Wählen Sie im Feld **Vorhandene Parameter** den Parameter „-d“aus, um die Masterdatendatei zu verschieben. Klicken Sie auf **Aktualisieren** , um die Änderung zu speichern.  
   

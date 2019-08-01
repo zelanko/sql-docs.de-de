@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908635"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Laden von Daten in Azure SQL Data Warehouse mit SQL Server Integration Services
 
@@ -54,7 +53,7 @@ Zum Abschließen dieses Tutorials benötigen Sie Folgendes:
 
 1. **SQL Server Integration Services (SSIS)** . SSIS ist eine Komponente von SQL Server und erfordert eine lizenzierte Version oder die Entwickler- oder Evaluierungsversion von SQL Server. Informationen darüber, wie Sie eine Evaluierungsversion von SQL Server erhalten, finden Sie im [Evaluation Center für SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (optional). Die kostenlose Visual Studio Community Edition können Sie unter [Visual Studio Community][Visual Studio Community] abrufen. Wenn Sie Visual Studio nicht installieren möchten, können Sie auch nur SQL Server Data Tools (SSDT) installieren. Mit SSDT wird auch eine Version von Visual Studio mit eingeschränkter Funktionalität installiert.
-3. **SQL Server Data Tools for Visual Studio (SSDT)** . Informationen zum Installieren von SQL Server Data Tools for Visual Studio finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
+3. **SQL Server Data Tools for Visual Studio (SSDT)** . Informationen zum Installieren von SQL Server Data Tools für Visual Studio finden Sie unter [Herunterladen von SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. **Eine Azure SQL Data Warehouse-Datenbank und Berechtigungen**. In diesem Tutorial stellen Sie eine Verbindung mit einer SQL Data Warehouse-Instanz her und laden Daten in diese. Sie benötigen Berechtigungen für eine Verbindung, zum Erstellen einer Tabelle und zum Laden von Daten.
 
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts
@@ -97,7 +96,7 @@ Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 
 Sie können für eine präzisere Steuerung ein Paket, das die vom SQL DW Upload-Task durchgeführte Arbeit emuliert, manuell erstellen. 
 
-1. Verwenden Sie den Task „Azure-Blob hochladen“ zum Bereitstellen von Eingabedaten in den Azure Blob Storage. Um den Task „Azure Blob Upload“ zu erhalten, laden Sie das [Microsoft SQL Server Integration Services Feature Pack für Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] herunter.
+1. Verwenden Sie den Task „Azure-Blob hochladen“ zum Bereitstellen von Eingabedaten in den Azure Blob Storage. Laden Sie das [Microsoft SQL Server Integration Services Feature Pack für Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure] herunter, um den Task „Azure Blob Upload“ nutzen zu können.
 
 2. Starten Sie dann mithilfe des SSIS-Tasks „SQL ausführen“ ein PolyBase-Skript, das die Daten in SQL Data Warehouse lädt. Ein Beispiel, mit dem Daten von Azure Blob Storage in SQL Data Warehouse geladen werden (jedoch ohne SSIS), finden Sie unter [Tutorial: Laden von Daten in Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
@@ -115,7 +114,7 @@ Um das Verfahren abzukürzen, können Sie den SQL Server-Import/Export-Assistent
 
 Um mit dem Tutorial mit dieser Option fortzufahren, benötigen Sie Folgendes:
 
-1. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie in den [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
+1. **Beispieldaten**. Dieses Tutorial verwendet als Quelldaten zum Laden in SQL Data Warehouse Beispieldaten, die in der AdventureWorks-Beispieldatenbank in SQL Server gespeichert sind. Weitere Informationen zum Abrufen der AdventureWorks-Beispieldatenbank finden Sie unter [AdventureWorks-Beispieldatenbanken][AdventureWorks 2014 Sample Databases].
 
 2. **Eine Firewallregel**. Sie müssen eine Firewallregel für SQL Data Warehouse mit der IP-Adresse Ihres lokalen Computers erstellen, bevor Sie Daten in SQL Data Warehouse hochladen können.
 

@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bf37beac7838f3dcb1e111e3632952864b8d7bd
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116482"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
  Wenn mindestens eine dieser Optionen angegeben wird, schränkt dies die Resultsets ein, die von der Anweisung an die angegebene Option oder die angegebenen Optionen zurückgegeben werden. Wenn keine Optionen angegeben sind, werden alle Statistikinformationen zurückgegeben.  
   
  STATS_STREAM entspricht [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
@@ -95,7 +94,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle werden die Spalten beschrieben, die im Resultset zurückgegeben werden, wenn STAT_HEADER angegeben wird.
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |-----------------|-----------------|  
 |Name|Name des Statistikobjekts.|  
 |Updated|Datum und Uhrzeit des letzten Updates der Statistik. Die Funktion [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) ist eine alternative Möglichkeit zum Abrufen dieser Informationen. Weitere Informationen finden Sie im Abschnitt [Hinweise](#Remarks) dieses Artikels.|  
@@ -104,22 +103,22 @@ In der folgenden Tabelle werden die Spalten beschrieben, die im Resultset zurüc
 |Schritte|Anzahl der Schritte im Histogramm. Jeder Schritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Die Histogrammschritte werden in der Statistik in der ersten Schlüsselspalte definiert. Die maximale Anzahl von Schritten ist 200.|  
 |Density|Berechnet als 1 / *verschiedene Werte* für alle Werte in der ersten Schlüsselspalte des Statistikobjekts mit Ausnahme der Begrenzungswerte des Histogramms. Dieser Dichtewert wird vom Abfrageoptimierer nicht verwendet und für die Abwärtskompatibilität mit Versionen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] angezeigt.|  
 |Average Key Length|Durchschnittliche Anzahl von Bytes pro Wert für alle Schlüsselspalten im Statistikobjekt.|  
-|String Index|"Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Statistiken über Zusammenfassungen von Zeichenfolgen werden getrennt vom Histogramm gespeichert und in der ersten Schlüsselspalte des Statistikobjekts erstellt, wenn dieses vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** oder **ntext** ist.|  
+|String Index|"Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Statistiken über Zusammenfassungen von Zeichenfolgen werden getrennt vom Histogramm gespeichert und in der ersten Schlüsselspalte des Statistikobjekts erstellt, wenn dieses vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** oder **ntext** ist.|  
 |Filterausdruck|Prädikat für die Teilmenge von Tabellenzeilen, die im Statistikobjekt enthalten sind. NULL = Nicht gefilterte Statistik. Weitere Informationen zu gefilterten Prädikaten finden Sie unter [Erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md). Weitere Informationen zu gefilterten Statistiken finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).|  
 |Unfiltered Rows|Gesamtzahl von Zeilen in der Tabelle vor dem Anwenden des Filterausdrucks. Wenn Filter Expression NULL ist, ist Unfiltered Rows gleich Rows.|  
 |Persistierter Beispielprozentwert|Der persistierte Prozentwert für die Stichprobe wird für Aktualisierungen von Statistiken verwendet, die keinen expliziten Prozentwert für die Stichprobenentnahme angibt. Wenn der Wert 0 (null) ist, wird kein persistierter Prozentwert für diese Statistik festgelegt.<br /><br /> **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 In der folgenden Tabelle werden die Spalten beschrieben, die beim Angeben von DENSITY_VECTOR im Resultset zurückgegeben werden.
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |-----------------|-----------------|  
-|All Density|Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A,B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix (A, B) weisen dieselben Spaltenwerte diese Listen unterschiedlicher Werte auf: (3, 5), (4, 4) und (4, 5)|  
+|All Density|Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A,B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix (A, B) weisen dieselben Spaltenwerte diese unterschiedlichen Wertelisten auf: (3, 5), (4, 4) und (4, 5)|  
 |Average Length|Durchschnittliche Länge in Bytes zum Speichern einer Liste der Spaltenwerte für das Spaltenpräfix. Wenn die Werte in der Liste (3, 5, 6) beispielsweise jeweils 4 Bytes erfordern, beträgt die Länge 12 Bytes.|  
 |Spalte|Namen der Spalten im Präfix, für die All Density und Average Length angezeigt werden.|  
   
 Die folgende Tabelle beschreibt die Spalten, die im Resultset zurückgegeben werden, wenn die HISTOGRAM-Option angegeben wird.
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|und Beschreibung|  
 |---|---|
 |RANGE_HI_KEY|Oberer Spaltengrenzwert für einen Histogrammschritt. Der Spaltenwert wird auch als Schlüsselwert bezeichnet.|  
 |RANGE_ROWS|Geschätzte Anzahl von Zeilen, deren Spaltenwerte innerhalb eines Histogrammschritts liegen, ohne den oberen Grenzwert.|  

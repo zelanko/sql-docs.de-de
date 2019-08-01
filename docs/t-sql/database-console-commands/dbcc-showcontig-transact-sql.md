@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039059"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Resultsets  
 In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resultsets:
   
-|Statistik|Beschreibung|  
+|Statistik|und Beschreibung|  
 |---|---|
 |**Gescannte Seiten**|Anzahl der Seiten in der Tabelle oder im Index.|  
 |**Gescannte Blöcke**|Anzahl der Blöcke in der Tabelle oder im Index.|  
@@ -111,7 +110,7 @@ Wenn *table_id* und FAST angegeben sind, gibt DBCC SHOWCONTIG ein Resultset mit 
   
 Wenn TABLERESULTS angegeben ist, gibt DBCC SHOWCONTIG die neun in der ersten Tabelle beschriebenen Spalten sowie die folgenden Spalten zurück.
   
-|Statistik|Beschreibung|  
+|Statistik|und Beschreibung|  
 |---|---|
 |**Objektnamen**|Der Name der verarbeiteten Tabelle oder Sicht.|  
 |**ObjectID**|ID des Objektnamens.|  
@@ -149,9 +148,9 @@ Die DBCC SHOWCONTIG-Anweisung durchläuft die Seitenkette des angegebenen Indexe
 ## <a name="restrictions"></a>Restrictions  
 DBCC SHOWCONTIG zeigt Daten mit den Datentypen **ntext**, **text** und **image** nicht an. Dies liegt daran, dass Textindizes, die Text- und Imagedaten speichern, nicht mehr verwendet werden.
   
-Zudem bietet DBCC SHOWCONTIG keine Unterstützung für einige neue Funktionen. Zum Beispiel:
+Zudem bietet DBCC SHOWCONTIG keine Unterstützung für einige neue Funktionen. Beispiel:
 -   Falls die angegebene Tabelle oder der angegebene Index partitioniert ist, zeigt DBCC SHOWCONTIG nur die erste Partition der angegebenen Tabelle oder des angegebenen Indexes an.  
--   DBCC SHOWCONTIG zeigt keine Zeilenüberlauf-Speicherinformationen und andere neue Datentypen außerhalb von Zeilen an, z.B. **nvarchar(max)**, **varchar(max)**, **varbinary(max)** und **xml**.  
+-   DBCC SHOWCONTIG zeigt keine Zeilenüberlauf-Speicherinformationen und andere neue Datentypen außerhalb von Zeilen an, z.B. **nvarchar(max)** , **varchar(max)** , **varbinary(max)** und **xml**.  
 -   Räumliche Indizes werden von DBCC SHOWCONTIG nicht unterstützt.  
   
 Alle neuen Features werden von der dynamischen Verwaltungssicht [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) vollständig unterstützt.

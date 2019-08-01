@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403047"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316655"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
 
@@ -162,14 +161,14 @@ In diesem Verfahren wird das Konfigurieren eines Foreach-Schleifencontainers bes
   
     -   Wenn Sie den Foreach-SMO-Enumerator verwenden möchten, wählen Sie eine vorhandene ADO.NET-Verbindung aus, oder klicken Sie in der Liste **Verbindung** auf **Neue Verbindung** , und geben Sie die zu verwendende Zeichenfolge ein, oder klicken Sie auf **Durchsuchen**. **Dadurch** haben Sie im Dialogfeld **SMO-Enumeration auswählen** die Möglichkeit, den aufzuzählenden Objekttyp und den Enumerationstyp auszuwählen. Klicken Sie dann auf **OK**.  
   
-6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit der Ellipse **(…)**, um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+6.  Klicken Sie optional im Textfeld **Ausdrücke** auf der Seite **Sammlung** auf die Schaltfläche mit der Ellipse **(…)** , um Ausdrücke zu erstellen, mit denen Eigenschaftswerte aktualisiert werden. Weitere Informationen finden Sie unter [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
     > [!NOTE]  
     >  Die in der Liste **Eigenschaft** aufgeführten Eigenschaften hängen vom Enumerator ab.  
   
 7.  Klicken Sie optional auf **Variablenzuordnungen**, um Objekteigenschaften dem Auflistungswert zuzuordnen, und führen Sie dann folgende Aktionen aus:  
   
-    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie auf **\<Neue Variable>**, um eine neue Variable zu erstellen.  
+    1.  Wählen Sie in der Liste **Variablen** eine Variable aus, oder klicken Sie auf **\<Neue Variable>** , um eine neue Variable zu erstellen.  
   
     2.  Wenn Sie eine neue Variable hinzufügen, legen Sie die Variableneigenschaften im Dialogfeld **Variable hinzufügen** fest, und klicken Sie auf **OK**.  
   
@@ -221,7 +220,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 |**Foreach-Data Lake Storage Gen2-Datei-Enumerator**|Zählt Dateien im angegebenen Data Lake Storage Gen2-Verzeichnis auf. Wenn Sie diesen Wert auswählen, werden im Abschnitt **Foreach-Data Lake Storage Gen2-Datei-Enumerator** die dynamischen Optionen angezeigt.|
   
  **Ausdrücke**  
- Klicken Sie auf die Option **Ausdrücke**, oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit der Ellipse **(…)**, um einen Eigenschaftsausdruck für eine Enumeratoreigenschaft hinzuzufügen oder einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
+ Klicken Sie auf die Option **Ausdrücke**, oder erweitern Sie diese, um die Liste der vorhandenen Eigenschaftsausdrücke anzuzeigen. Klicken Sie auf die Schaltfläche mit der Ellipse **(…)** , um einen Eigenschaftsausdruck für eine Enumeratoreigenschaft hinzuzufügen oder einen vorhandenen Eigenschaftsausdruck zu bearbeiten und auszuwerten.  
   
  **Verwandte Themen:**  [Integration Services-Ausdrücke &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Eigenschaftsausdrucks-Editor](../../integration-services/expressions/property-expressions-editor.md), [Ausdrucks-Generator](../../integration-services/expressions/expression-builder.md)  
   
@@ -295,7 +294,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Mithilfe des Foreach-ADO-Enumerators werden Zeilen oder Tabellen in einem in einer Variablen gespeicherten ADO- oder ADO.NET-Objekt aufgezählt. Wenn die Foreach-Schleife z. B. einen Skripttask enthält, mit dem ein Dataset in eine Variable geschrieben wird, können Sie mithilfe des Foreach-ADO-Enumerators die Zeilen im Dataset aufzählen. Enthält die Variable ein ADO.NET-Dataset, dann kann der Enumerator zum Aufzählen von Zeilen in mehreren Tabellen oder zum Aufzählen von Tabellen konfiguriert werden.  
   
  **ADO-Objektquellvariable**  
- Wählen Sie eine benutzerdefinierte Variable aus der Liste aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wählen Sie eine benutzerdefinierte Variable aus der Liste aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
   
 > [!NOTE]  
 >  Der Datentyp der Variablen muss „Object“ sein, andernfalls tritt ein Fehler auf.  
@@ -315,7 +314,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Mithilfe des Enumerators für Foreach ADO.NET-Schemarowset kann ein Schema für eine angegebene Datenquelle aufgezählt werden. Wenn die Foreach-Schleife z. B. einen Task „SQL ausführen“ enthält, können Sie mit dem Enumerator für Foreach ADO.NET-Schemarowset Schemas aufzählen (beispielsweise die Spalten in der **AdventureWorks**-Datenbank) und mit dem Task „SQL ausführen“ Schemaberechtigungen abrufen.  
   
  **Verbindung**  
- Wählen Sie einen ADO.NET-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen ADO.NET-Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen ADO.NET-Verbindungs-Manager aus der Liste aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen ADO.NET-Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der ADO.NET-Verbindungs-Manager muss einen .NET-Anbieter für OLE DB verwenden. Wenn Sie eine Verbindung mit SQL Server herstellen, ist der empfohlene Anbieter der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, der im Dialogfeld **Verbindungs-Manager** im Abschnitt **.NET-Anbieter für OleDb** aufgeführt ist.  
@@ -334,7 +333,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Mithilfe des Foreach-Enumerators für Daten aus Variable werden aufzählbare Objekte in einer angegebenen Variable aufgezählt. Wenn die Foreach-Schleife z. B. einen Task „SQL ausführen“ enthält, der eine Abfrage ausführt und das Ergebnis in einer Variablen speichert, können Sie den Foreach-Enumerator für Daten aus Variablen zum Aufzählen der Abfrageergebnisse verwenden.  
   
  **Variable**  
- Wählen Sie in der Liste eine Variable aus, oder klicken Sie auf \<**Neue Variable…**>, um eine neue Variable zu erstellen.  
+ Wählen Sie in der Liste eine Variable aus, oder klicken Sie auf \<**Neue Variable…** >, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -357,11 +356,11 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **DocumentSource**  
  Wenn für **DocumentSourceType** die Option **Direkteingabe** festgelegt ist, geben Sie den XML-Code an, oder klicken Sie auf die Schaltfläche mit der Ellipse („…“), um im Dialogfeld **Dokumentquellen-Editor** den XML-Code anzugeben.  
   
- Wenn **DocumentSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wenn **DocumentSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Wenn **DocumentSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wenn **DocumentSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -387,11 +386,11 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **OuterXPathString**  
  Wenn **OuterXPathStringSourceType** auf **Direkteingabe** festgelegt ist, geben Sie die XPath-Zeichenfolge an.  
   
- Wenn **OuterXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wenn **OuterXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Wenn **OuterXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wenn **OuterXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -410,11 +409,11 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  **InnerXPathString**  
  Wenn **InnerXPathStringSourceType** auf **Direkteingabe** festgelegt ist, geben Sie die XPath-Zeichenfolge an.  
   
- Wenn **InnerXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wenn **InnerXPathStringSourceType** auf **Dateiverbindung** festgelegt ist, wählen Sie einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](../../integration-services/connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Wenn **InnerXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...**>, um eine neue Variable zu erstellen.  
+ Wenn **InnerXPathStringSourceType** auf **Variable** festgelegt ist, wählen Sie eine vorhandene Variable aus, oder klicken Sie auf \<**Neue Variable...** >, um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -422,7 +421,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
  Mithilfe des Foreach-SMO-Enumerators werden SMO-Objekte (SQL Server Management Object) aufgezählt. Wenn die Foreach-Schleife z. B. einen Task „SQL ausführen“ enthält, können Sie den Foreach-SMO-Enumerator zum Aufzählen der Tabellen in der **AdventureWorks**-Datenbank und zum Ausführen von Abfragen verwenden, mit denen die Anzahl von Zeilen pro Tabelle ermittelt wird.  
   
  **Verbindung**  
- Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen ADO.NET-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung…** >, um einen neuen Verbindungs-Manager zu erstellen.  
   
  Verwandte Themen: [ADONET-Verbindungs-Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Konfigurieren von ADO.NET-Verbindungs-Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -508,7 +507,19 @@ Gibt einen vorhandenen Azure Storage-Verbindungs-Manager an oder erstellt einen 
 Gibt den Pfad des Ordners an, in dem Dateien aufgezählt werden sollen.
 
 **SearchRecursively**  
-Gibt an, ob im angegebenen Ordner rekursiv gesucht werden soll.  
+Gibt an, ob im angegebenen Ordner rekursiv gesucht werden soll.
+
+***Hinweise zur Konfiguration der Dienstprinzipalberechtigung***
+
+Die Berechtigung Data Lake Storage Gen2 wird durch die [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) und durch [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) bestimmt.
+Beachten Sie, dass ACLs wie [hier](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal) beschrieben mithilfe der Objekt-ID (OID) des Dienstprinzipals für die App-Registrierung konfiguriert werden.
+Dies unterscheidet sich von der Anwendungs-ID (Client-ID), die mit der RBAC-Konfiguration verwendet wird.
+Wenn ein Sicherheitsprinzipal durch eine integrierte Rolle oder eine benutzerdefinierte Rolle RBAC-Datenberechtigungen erhält, werden diese Berechtigungen vor der Autorisierung einer Anforderung zunächst ausgewertet.
+Wenn der Anforderungsvorgang von den RBAC-Zuweisungen des Sicherheitsprinzipals autorisiert wurde, wird die Autorisierung sofort aufgelöst, und es werden keine weiteren ACL-Prüfungen durchgeführt.
+Wenn der Sicherheitsprinzipal über keine RBAC-Zuweisung verfügt oder der Vorgang der Anforderung nicht mit der zugewiesenen Berechtigung übereinstimmt, werden alternativ ACL-Prüfungen durchgeführt, um zu bestimmen, ob der Sicherheitsprinzipal für die Durchführung des angeforderten Vorgangs autorisiert ist.
+Damit der Enumerator funktioniert, müssen Sie mindestens die Berechtigung **Execute** (Ausführen) ab dem Stammdateisystem sowie die Berechtigung **Read** (Lesen) für den Zielordner gewähren.
+Gewähren Sie alternativ mindestens die Rolle **Storage-Blobdatenleser** mit der RBAC.
+Weitere Informationen finden Sie in [diesem](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) Artikel.
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Seite „Variablenzuordnungen“ im Foreach-Schleifen-Editor
  Auf der Seite **Variablenzuordnungen** des Dialogfelds **Foreach-Schleifen-Editor** können Sie dem Sammlungswert Variablen zuordnen. Der Wert der Variablen wird bei jeder Iteration der Schleife mit den Sammlungswerten aktualisiert.  
@@ -519,7 +530,7 @@ Gibt an, ob im angegebenen Ordner rekursiv gesucht werden soll.
   
 ### <a name="options"></a>enthalten  
  **Variable**  
- Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf **Neue Variable...**, um eine neue Variable zu erstellen.  
+ Wählen Sie eine vorhandene Variable aus, oder klicken Sie auf **Neue Variable...** , um eine neue Variable zu erstellen.  
   
 > [!NOTE]  
 >  Nachdem Sie eine Variable zugeordnet haben, wird der Liste **Variable** automatisch eine neue Zeile hinzugefügt.  
@@ -543,7 +554,7 @@ Im Dialogfeld **Schemaeinschränkungen** legen Sie die Schemaeinschränkungen fe
  Wählen Sie die Einschränkungen aus, die für das Schema gelten.  
   
  **Variable**  
- Verwendet eine Variable, um die Einschränkungen zu definieren. Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf **Neue Variable…**, um eine neue Variable zu erstellen.  
+ Verwendet eine Variable, um die Einschränkungen zu definieren. Wählen Sie eine Variable aus der Liste aus, oder klicken Sie auf **Neue Variable…** , um eine neue Variable zu erstellen.  
   
  **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Hinzufügen von Variablen](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

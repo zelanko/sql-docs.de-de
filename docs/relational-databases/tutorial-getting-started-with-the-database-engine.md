@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Erste Schritte mit der Datenbank-Engine | Microsoft-Dokumentation'
+title: 'Lernprogramm: Erste Schritte mit der Datenbank-Engine | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/21/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed7e9e5831d4a3e17d29395279b9c680afaea8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535854f49dc1271d24af5718edb4258bc76566ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075496"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Lernprogramm: Erste Schritte mit der Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Willkommen bei den ersten Schritten im Lernprogramm zu [!INCLUDE[ssDE](../includes/ssde-md.md)] . Dieses Lernprogramm richtet sich an Benutzer, die noch nicht mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vertraut sind und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] oder [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]installiert haben. Dieses kurze Lernprogramm hilft Ihnen bei den ersten Schritten mit [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -38,7 +37,7 @@ Dieses Lernprogramm ist in zwei Lektionen aufgeteilt:
 [Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine](../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
 In dieser Lektion erfahren Sie, wie Sie eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herstellen und anderen Personen das Herstellen einer Verbindung ermöglichen.  
   
-[Lektion 2: Herstellen einer Verbindung von einem anderen Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)  
+[Lektion 2: Herstellen einer Verbindung von einem anderen Computer](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 In dieser Lektion erfahren Sie, wie Sie von einem zweiten Computer eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herstellen, einschließlich Aktivieren von Protokollen sowie Konfigurieren von Ports und Firewalleinstellungen.  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -48,7 +47,7 @@ Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]installiert haben. Informationen zur Installation von [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] finden Sie unter [Herunterladen von SQL Server Management Studio 17.1](../ssms/download-sql-server-management-studio-ssms.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
   
   

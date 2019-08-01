@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34f30a8eb8a2d894b1de0a62f5151956c80f5653
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030485"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>DAC-Unterstützung für SQL Server-Objekte und -Versionen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "53588724"
 |||  
 |-|-|  
 |DATABASE ROLE|FUNCTION: Inline-Tabellenwertfunktion|  
-|FUNCTION: Tabellenwertfunktion mit mehreren Anweisungen|FUNCTION: Skalarwert|  
+|FUNCTION: Tabellenwertfunktion mit mehreren Anweisungen|FUNCTION: Skalar|  
 |INDEX: Gruppiert|INDEX: nicht gruppiert|  
 |INDEX: Räumlich|INDEX: Eindeutig|  
 |Anmeldung|Berechtigungen|  

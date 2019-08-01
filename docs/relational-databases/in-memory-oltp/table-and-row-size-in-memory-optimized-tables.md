@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94ac3917539515020ea9ecad1ab196cdcd017acc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063142"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,15 +85,15 @@ In dieser Abbildung werden die Namen John und Jane zum ersten Hashbucket hinzuge
   
 Somit ergeben sie folgende Ketten für den Hashindex für Namen:  
   
--   Erster Bucket: (John, Beijing (Peking)); (John, Paris); (Jane, Prag)  
+-   Erster Bucket: (John, Beijing), (John, Paris), (Jane, Prague)  
   
 -   Zweiter Bucket: (Susan, Bogota)  
   
 Die Ketten für den Index für die Stadt lauten wie folgt:  
   
--   Erster Bucket: (John, Beijing (Peking)), (Susan, Bogota)  
+-   Erster Bucket: (John, Beijing), (Susan, Bogota)  
   
--   Zweiter Bucket: (John, Paris), (Jane, Prag)  
+-   Zweiter Bucket: (John, Paris), (Jane, Prague)  
   
 Ein ∞-Endzeitstempel (unendlich) bedeutet, dass es sich um die derzeit gültige Version der Zeile handelt. Die Zeile wurde nicht aktualisiert oder gelöscht, seitdem diese Zeilenversion geschrieben wurde.  
   
@@ -127,12 +126,12 @@ In der folgenden Tabelle wird die Berechnung der Zeilentextgröße beschrieben, 
   
 |Abschnitt|Größe|Kommentare|  
 |-------------|----------|--------------|  
-|Spalten flacher Typen|SUM([Größe flacher Typen]) Die Größe (in Bytes) der einzelnen Typen lautet wie folgt:<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (Genauigkeit <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric** (Genauigkeit >18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|Spalten flacher Typen|SUM([Größe flacher Typen]) Die Größe (in Bytes) der einzelnen Typen lautet wie folgt:<br /><br /> **Bit**: 1<br /><br /> **tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (Genauigkeit <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(Genauigkeit>18): 16<br /><br /> **Uniqueidentifier**: 16||  
 |Auffüllung flacher Spalten|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |Offsetarray für Spalten tiefer Typen|Folgende Werte sind möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |NULL-Array|[number of nullable columns] / 8, aufgerundet auf vollständige Bytes.|Das Array verfügt über ein Bit pro Spalte, die NULL zulässt. Dies wird auf vollständige Bytes aufgerundet.|  
 |NULL-Arrayauffüllung|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Auffüllung|Wenn keine Spalten tiefer Typen vorhanden sind: 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Auffüllung|Wenn keine Spalten tiefer Typen vorhanden sind: 0 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |Spalten tiefer Typen mit fester Länge|SUM(*size of fixed length deep type columns*)<br /><br /> Die Größe jeder Spalte lautet wie folgt:<br /><br /> i für char(i) und binary(i).<br /><br /> 2 * i für nchar(i)|Spalten tiefer Typen mit fester Länge sind Spalten des Typs char(i), nchar(i) oder binary(i).|  
 |Spalten tiefer Typen mit variabler Länge *computed size*|SUM(*computed size of variable length deep type columns*)<br /><br /> Die berechnete Größe jeder Spalte lautet wie folgt:<br /><br /> i für varchar(i) und varbinary(i)<br /><br /> 2 * i für nvarchar(i)|Diese Zeile wird nur auf *computed row body size* angewendet.<br /><br /> Spalten tiefer Typen mit variabler Länge sind Spalten des Typs varchar(i), nvarchar(i) oder varbinary(i). Die berechnete Größe wird durch die maximale Länge (i) der Spalte bestimmt.|  
 |Spalten tiefer Typen mit variabler Länge *actual size*|SUM(*actual size of variable length deep type columns*)<br /><br /> Die tatsächliche Größe jeder Spalte lautet wie folgt:<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für varchar(i).<br /><br /> 2 * n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für nvarchar(i).<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Bytes ist; für varbinary(i).|Diese Zeile wird nur auf *actual row body size* angewendet.<br /><br /> Die tatsächliche Größe wird durch die Daten bestimmt, die in den Spalten der Zeile gespeichert werden.|   
@@ -156,7 +155,7 @@ GO
   
 Beachten Sie, dass diese Tabelle einen Hashindex und einen nicht gruppierten Index (den Primärschlüssel) aufweist. Darüber hinaus weist sie drei Spalten fester Länge und eine Spalte variabler Länge auf, wobei eine der Spalten NULL-Werte zulässt (`OrderDescription`). Angenommen, die Tabelle `Orders` hat 8.379 Zeilen, und die durchschnittliche Länge der Werte in der Spalte `OrderDescription` ist 78 Zeichen.  
   
-Um die Tabellengröße zu ermitteln, ermitteln Sie zuerst die Größe der Indizes. Der bucket_count-Wert für beide Indizes wird mit 10000 angegeben. Dieser wird auf die nächste Zweierpotenz aufgerundet: 16384. Daher ergibt sich die Gesamtgröße der Indizes für die Orders-Tabelle wie folgt:  
+Um die Tabellengröße zu ermitteln, ermitteln Sie zuerst die Größe der Indizes. Der bucket_count-Wert für beide Indizes wird mit 10000 angegeben. Dieser wird auf die nächste Zweierpotenz aufgerundet: 16384 Daher ergibt sich die Gesamtgröße der Indizes für die Orders-Tabelle wie folgt:  
   
 ```  
 8 * 16384 = 131072 bytes  
@@ -240,7 +239,7 @@ where object_id = object_id('dbo.Orders')
 
 Weitere Informationen zu einigen dieser Eigenheiten finden Sie im Blogbeitrag [Für In-Memory-OLTP in SQL Server 2016 seit CTP3 Neuigkeiten](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3).   
  
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Speicheroptimierte Tabellen](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

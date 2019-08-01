@@ -23,20 +23,19 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902811"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt ein Objekt, das Informationen über eine Datenbank oder ein Serverereignis an einen Service Broker-Dienst sendet. Ereignisbenachrichtigungen werden nur mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen erstellt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>Argumente  
  *event_notification_name*  
- Der Name der Ereignisbenachrichtigung. Der Name der Ereignisbenachrichtigung muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und innerhalb seines Bereichs (SERVER, DATABASE oder *object_name*) eindeutig sein.  
+ Der Name der Ereignisbenachrichtigung. Der Name der Ereignisbenachrichtigung muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen und innerhalb des Bereichs, in dem sie erstellt wurden, eindeutig sein: SERVER, DATABASE oder *object_name*.  
   
  SERVER  
  Wendet den Bereich der Ereignisbenachrichtigung auf die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an. Ist dieser Bereich angegeben, wird die Benachrichtigung jedes Mal ausgelöst, wenn das angegebene Ereignis in der FOR-Klausel irgendwo in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auftritt.  
@@ -95,8 +94,8 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Die Konversationen bleiben geöffnet, bis die Ereignisbenachrichtigung gelöscht wird. Bestimmte Fehler können dazu führen, dass Konversationen früher geschlossen werden. Das explizite Beenden einiger oder aller Konversationen kann verhindern, dass der Zieldienst weitere Nachrichten empfängt.  
   
- { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
- Gibt die Service Broker-Instanz an, für die *broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen der **service_broker_guid**-Spalte der **sys.databases**-Katalogsicht ermittelt werden. Verwenden Sie **'current database'**, um die Service Broker-Instanz in der aktuellen Datenbank anzugeben. **'current database'** ist ein Zeichenfolgenliteral, das nicht nach Groß-/Kleinschreibung unterscheidet.  
+ { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
+ Gibt die Service Broker-Instanz an, für die *broker_service* aufgelöst wird. Der Wert für einen bestimmten Service Broker kann durch Abfragen der **service_broker_guid**-Spalte der **sys.databases**-Katalogsicht ermittelt werden. Verwenden Sie **'current database'** , um die Service Broker-Instanz in der aktuellen Datenbank anzugeben. **'current database'** ist ein Zeichenfolgenliteral, das nicht nach Groß-/Kleinschreibung unterscheidet.  
   
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
@@ -131,7 +130,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  In den nachfolgenden Beispielen A und B entspricht der GUID in der `TO SERVICE 'NotifyService'`-Klausel ('8140a771-3c4b-4479-8ac0-81008ab17984') dem Computer, auf dem das Beispiel eingerichtet wurde. Für diese Instanz handelt es sich dabei um den GUID für die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank.  
 >   
->  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt zu den Argumenten erläutert, kann **'**_broker\_instance\_specifier_**'** durch Abfragen der Spalte „service_broker_guid“ der Katalogsicht „sys.databases“ ermittelt werden.  
+>  Zum Kopieren und Ausführen dieser Beispiele müssen Sie diesen GUID durch einen GUID von Ihrem Computer und Ihrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz ersetzen. Wie im obigen Abschnitt zu den Argumenten erläutert, kann **'** _broker\_instance\_specifier_ **'** durch Abfragen der Spalte „service_broker_guid“ der Katalogsicht „sys.databases“ ermittelt werden.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Erstellen einer Ereignisbenachrichtigung mit dem Server als Bereich  
  Im folgenden Beispiel werden die zum Einrichten eines Zieldiensts mit [!INCLUDE[ssSB](../../includes/sssb-md.md)] erforderlichen Objekte erstellt. Der Zieldienst verweist auf den Nachrichtentyp und den Vertrag des initiierenden Diensts speziell für Ereignisbenachrichtigungen. Dann wird auf dem Zieldienst eine Ereignisbenachrichtigung erstellt, die eine Benachrichtigung sendet, sobald ein `Object_Created`-Ablaufverfolgungsereignis auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorliegt.  
@@ -187,7 +186,7 @@ SELECT * FROM sys.event_notifications
 WHERE name = 'Notify_ALTER_T1';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Ereignisbenachrichtigungen](../../relational-databases/service-broker/event-notifications.md)   
  [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

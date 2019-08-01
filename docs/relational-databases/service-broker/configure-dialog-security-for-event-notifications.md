@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca2bbf04ef2132f0bf1250cd6bd5c097a5a7760b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048906"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Konfigurieren der Dialogsicherheit für Ereignisbenachrichtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ ms.locfileid: "51669369"
 |Wechseln Sie zu der Quelldatenbank, auf der die Ereignisbenachrichtigung erstellt werden soll. Wenn Sie als Quelldatenbankbenutzer noch keine Verbindung mit der Datenbank hergestellt haben, stellen Sie nun die Verbindung her.|Wechseln Sie zur Zieldatenbank, um Ereignisbenachrichtigungen zu empfangen.|  
 |[Erstellen Sie die Ereignisbenachrichtigung](../../t-sql/statements/create-event-notification-transact-sql.md), und geben Sie den Broker-Dienst und den Bezeichner der Zieldatenbank an.||  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

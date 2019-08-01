@@ -22,11 +22,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 49baad50d950578b9d2bbb96b4168c730056b307
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223620"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ Erfordert die `CONTROL SERVER`-Berechtigung.
 
 ## <a name="examples"></a>Beispiele
 
-Durch die folgende Anweisung wird ein externer Pool definiert, der die CPU-Auslastung auf 75 Prozent beschränkt.  Die Anweisung definiert außerdem den maximalen Arbeitsspeicher als 30 Prozent des verfügbaren Arbeitsspeichers des Computers.
+Mit der folgenden Anweisung wird ein externer Pool definiert, der die CPU-Auslastung auf 75 Prozent einschränkt. Die Anweisung definiert außerdem den maximalen Arbeitsspeicher auf 30 Prozent des verfügbaren Arbeitsspeichers auf dem Computer.
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1

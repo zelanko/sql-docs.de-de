@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 59fb1848e03a45badf19eccb94510ffbbfff9e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940838"
 ---
 # <a name="backup-compression-sql-server"></a>Sicherungskomprimierung (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird die Komprimierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen beschrieben, einschließlich Einschränkungen und Leistungseinbußen bei der Sicherungskomprimierung, Konfiguration der Sicherungskomprimierung sowie Komprimierungsverhältnis.  Die Sicherungskomprimierung wird auf folgenden Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt: Enterprise, Standard und Developer.  Jede Edition von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höhere Versionen können eine komprimierte Sicherung wiederherstellen. 
+  In diesem Thema wird die Komprimierung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen beschrieben, einschließlich Einschränkungen und Leistungseinbußen bei der Sicherungskomprimierung, Konfiguration der Sicherungskomprimierung sowie Komprimierungsverhältnis.  Die Sicherungskomprimierung wird auf folgenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Editionen unterstützt: Enterprise, Standard und Developer.  Jede Edition von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höhere Versionen können eine komprimierte Sicherung wiederherstellen. 
  
   
 ##  <a name="Benefits"></a> Vorteile  
@@ -108,7 +107,7 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   

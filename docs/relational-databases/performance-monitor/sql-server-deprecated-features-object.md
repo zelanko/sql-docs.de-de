@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093595"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,16 +36,16 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet markierte Funktionen** beschrieben.
 
-|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|Beschreibung|  
+|**SQL Server-Leistungsindikator „Als veraltet markierte Funktionen“**|und Beschreibung|  
 |-------------|-----------------|  
 |**Verwendung**|Funktionsverwendung seit letztem SQL Server-Start.|
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|und Beschreibung|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
-|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>*`()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)` durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
+|Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie die Syntax durch `SELECT column_list FROM` *<Funktionsname>* `()`. Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)` durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
 |\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@v@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die veraltete Funktionen sp_addumpdevice '**tape**' wurde gefunden. Verwenden Sie stattdessen sp_addumpdevice '**disk**'. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
@@ -129,7 +128,7 @@ In der folgenden Tabelle wird das SQL Server-Leistungsobjekt **Als veraltet mark
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Verweise auf die veraltete Funktionsys.numbered_procedure_parameters wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |numbered_procedures|Verweise auf die veraltete Funktionsys.numbered_procedures wurden gefunden. Darf nicht verwendet werden. Tritt einmal pro Kompilierung auf.|  
-|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR Integer String) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
+|Veraltete RAISEERROR-Syntax|Die veraltete RAISERROR-Syntax (Format: RAISERROR integer string) wurde gefunden. Schreiben Sie Anweisung unter Verwendung der aktuellen RAISERROR-Syntax um. Tritt einmal pro Kompilierung auf.|  
 |OLEDB für Ad-hoc-Verbindungen|SQLOLEDB wird nicht als Anbieter unterstützt. Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für Ad-hoc-Verbindungen.|  
 |PERMISSIONS|Verweise auf die systeminterne PERMISSIONS-Funktion wurden gefunden. Fragen Sie stattdessen sys.fn_my_permissions ab. Tritt einmal pro Abfrage auf.|  
 |ProcNums|Die veraltete ProcNums-Syntax wurde gefunden. Schreiben Sie die Anweisungen um, um die Verweise zu entfernen. Tritt einmal pro Kompilierung auf.|  

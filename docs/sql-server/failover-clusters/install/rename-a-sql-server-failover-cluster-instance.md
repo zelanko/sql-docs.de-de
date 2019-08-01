@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 690015c15b49023eba770c917dd02c984b2654f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063881"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "52543947"
 ## <a name="verify-the-renaming-operation"></a>Überprüfen des Umbenennungsvorgangs  
  Nachdem ein virtueller Server umbenannt wurde, müssen alle Verbindungen, die den alten Namen verwendet haben, nun Verbindungen mithilfe des neuen Namens herstellen.  
   
- Um zu überprüfen, ob der Umbenennungsvorgang abgeschlossen wurde, wählen Sie Informationen aus **@@servername**oder **sys.servers** aus. Die **@@servername**-Funktion gibt den neuen Namen des virtuellen Servers zurück, und die **sys.servers**-Tabelle zeigt den neuen Namen des virtuellen Servers an. Um zu überprüfen, ob der Failoverprozess ordnungsgemäß mit dem neuen Namen arbeitet, sollte der Benutzer außerdem versuchen, ein Failover der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource auf die anderen Knoten auszuführen.  
+ Um zu überprüfen, ob der Umbenennungsvorgang abgeschlossen wurde, wählen Sie Informationen aus **@@servername** oder **sys.servers** aus. Die **@@servername** -Funktion gibt den neuen Namen des virtuellen Servers zurück, und die **sys.servers**-Tabelle zeigt den neuen Namen des virtuellen Servers an. Um zu überprüfen, ob der Failoverprozess ordnungsgemäß mit dem neuen Namen arbeitet, sollte der Benutzer außerdem versuchen, ein Failover der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressource auf die anderen Knoten auszuführen.  
   
  Für Verbindungen von einem beliebigen Knoten im Cluster kann der neue Name fast sofort verwendet werden. Für Verbindungen, die den neuen Namen von einem Clientcomputer aus verwenden, kann der neue Name jedoch erst zum Herstellen einer Verbindung zum Server verwendet werden, nachdem der neue Name für den betreffenden Clientcomputer sichtbar ist. Die Zeitspanne, die zum Weitergeben des neuen Namens über ein Netzwerk benötigt wird, kann abhängig von der Netzwerkkonfiguration zwischen einigen Sekunden bis hin zu 3 bis 5 Minuten betragen; zusätzliche Zeit ist möglicherweise erforderlich, bis der alte Name des virtuellen Servers nicht mehr im Netzwerk sichtbar ist.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "52543947"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Weitere Überlegungen nach dem Umbenennungsvorgang  
  Nachdem der Netzwerkname des Failoverclusters geändert wurde, müssen die folgenden Anweisungen überprüft und ausgeführt werden, damit alle Szenarien in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funktionieren.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Service:** Überprüfen Sie die unten genannten zusätzlichen Aktionen für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Service, und führen Sie sie aus:  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst:** Überprüfen Sie die unten genannten zusätzlichen Aktionen für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst, und führen Sie diese aus:  
   
 -   Korrigieren Sie die Registrierungseinstellungen, wenn SQL Agent für die Ereignisweiterleitung konfiguriert ist. Weitere Informationen finden Sie unter [Bestimmen eines Ereignisweiterleitungsservers &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "52543947"
   
 -   Aktualisieren Sie die Auftragsschritte, die vom Servernamen abhängen. Weitere Informationen finden Sie unter [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

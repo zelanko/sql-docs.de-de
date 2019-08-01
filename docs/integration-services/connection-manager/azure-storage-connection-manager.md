@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a115dafb386323bc1f4738720e7576657d22543
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403071"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316690"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage-Verbindungs-Manager
 
@@ -38,6 +37,6 @@ Die folgenden Eigenschaften sind verfügbar.
 - **Authentifizierung:** Gibt die zu verwendende Authentifizierungsmethode an. **AccessKey**- und **ServicePrincipal**-Authentifizierung werden unterstützt.
     - **AccessKey:** Geben Sie für diese Authentifizierungsmethode den **Kontoschlüssel** an.
     - **ServicePrincipal:** Geben Sie für diese Authentifizierungsmethode die **Anwendungs-ID**, den **Anwendungsschlüssel** und die **Mandanten-ID** des Dienstprinzipals an.
-      Dem Dienstprinzipal sollte die Rolle **Mitwirkender an Speicherblobdaten** zugewiesen werden.
+      Damit die **Testverbindung** funktioniert, müssen Sie dem Dienstprinzipal für das Speicherkonto mindestens die Rolle **Storage Blob Data Reader** (Storage-Blobdatenleser) zuweisen.
       Details dazu finden Sie auf [dieser](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) Seite.
 - **Umgebung:** Gibt die Cloudumgebung an, die das Speicherkonto hostet.

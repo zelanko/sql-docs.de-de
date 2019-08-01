@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068493"
 ---
 # <a name="device-contents-sql-server"></a>Medieninhalt (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47686528"
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>enthalten  
  **Medien**  
  Ein Datenträger oder ein Satz von Bändern, auf dem Sicherungsinformationen gespeichert sind.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "47686528"
 |Header|Werte|  
 |------------|------------|  
 |**Name**|Name des Sicherungssatzes.|  
-|**Typ**|Der Typ der ausgeführten Sicherung: Vollständig, Differenziell oder Transaktionsprotokoll.|  
+|**Typ**|Der Typ des ausgeführten Sicherungsvorgangs: Vollständig, Differenziell oder Transaktionsprotokoll.|  
 |**Komponente**|Die gesicherte Komponente: Datenbank, Datei oder *\<leer>* (bei Transaktionsprotokollen).|  
 |**Server**|Name der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , durch die der Sicherungsvorgang ausgeführt wurde.|  
 |**Datenbank**|Name der Datenbank, die gesichert wurde.|  
@@ -68,7 +67,7 @@ ms.locfileid: "47686528"
 |**Benutzername**|Name des Benutzers, der den Sicherungsvorgang ausgeführt hat.|  
 |**Ablauf**|Datum und Uhrzeit des Zeitpunkts, an dem der Sicherungssatz verfällt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

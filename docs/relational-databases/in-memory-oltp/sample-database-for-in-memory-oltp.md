@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111803"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Beispieldatenbank für In-Memory OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -496,7 +495,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Sie erkennen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
+ Sie sehen, dass die Tabellen relativ klein sind: SalesOrderHeader_inmem umfasst ca. 7 MB und SalesOrderDetail_inmem ca. 15 MB.  
   
  Hier fällt auf, dass die den Indizes zugeordnete Arbeitsspeicherkapazität deutlich über der Kapazität der Tabellendaten liegt. Dies liegt daran, dass die Datengröße für die Hashindizes im Beispiel vorab auf einen höheren Wert festgelegt wurde. Da Hashindizes über eine feste Größe verfügen, wachsen sie nicht mit der Größe der Daten in der Tabelle mit.  
   
@@ -566,7 +565,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  Erwartetes Verhalten: Der Arbeitsspeicher wird beim Ausführen der Transaktionsarbeitsauslastung freigegeben.  
   
- Wenn Sie die exemplarische Arbeitsauslastung ein zweites Mal ausführen, werden Sie anfänglich einen Rückgang der Arbeitsspeichernutzung feststellen, da die zuvor gelöschten Zeilen bereinigt werden. Gleichzeitig nimmt die Arbeitsspeichergröße wieder zu, bis die Arbeitsauslastung abgeschlossen wurde. Nachdem die exemplarische Arbeitsauslastung zurückgesetzt und 10 Millionen Zeilen eingefügt wurden, entspricht die Arbeitsspeichernutzung weitestgehend der Nutzung nach der ersten Ausführung. Zum Beispiel:  
+ Wenn Sie die exemplarische Arbeitsauslastung ein zweites Mal ausführen, werden Sie anfänglich einen Rückgang der Arbeitsspeichernutzung feststellen, da die zuvor gelöschten Zeilen bereinigt werden. Gleichzeitig nimmt die Arbeitsspeichergröße wieder zu, bis die Arbeitsauslastung abgeschlossen wurde. Nachdem die exemplarische Arbeitsauslastung zurückgesetzt und 10 Millionen Zeilen eingefügt wurden, entspricht die Arbeitsspeichernutzung weitestgehend der Nutzung nach der ersten Ausführung. Beispiel:  
   
 ```  
 SELECT type  
@@ -740,7 +739,7 @@ ORDER BY state, file_type
   
  Nachdem die exemplarische Arbeitsauslastung ein zweites Mal ausgeführt, zurückgesetzt und 10 Millionen Verkaufsaufträge eingefügt wurden, werden Sie feststellen, dass die während der ersten Ausführung der Arbeitsauslastung erstellten Dateien bereinigt wurden. Wenn Sie die vorangehende Abfrage bei aktiver Arbeitsauslastung mehrere Male ausführen, können Sie beobachten, wie die Prüfpunktdateien die verschiedenen Phasen durchlaufen.  
   
- Nachdem die Arbeitsauslastung zum zweiten Mal ausgeführt und 10 Millionen Verkaufsaufträge eingefügt wurden, ist die Datenträgernutzung ähnlich (wenn auch nicht identisch) mit der Nutzung nach der ersten Ausführung. Dies liegt an der Dynamik des Systems. Zum Beispiel:  
+ Nachdem die Arbeitsauslastung zum zweiten Mal ausgeführt und 10 Millionen Verkaufsaufträge eingefügt wurden, ist die Datenträgernutzung ähnlich (wenn auch nicht identisch) mit der Nutzung nach der ersten Ausführung. Dies liegt an der Dynamik des Systems. Beispiel:  
   
 ```  
 SELECT state_desc  

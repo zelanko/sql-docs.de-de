@@ -12,24 +12,23 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a4972e42798e1cfeb46b77fb414fa77cd4b6b86a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901138"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Richtlinienauswahl'
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieses Dialogfelds können Sie richtlinienbasierte Verwaltungsrichtlinien auswerten. Durch Auswahl der Seite **Auswertungsergebnisse** können Sie Richtlinien auf die Elemente in einem Zielsatz anwenden, die mit den Richtlinien nicht übereinstimmen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>enthalten  
  **Quelle**  
- Gibt die Quelle der Richtlinien an. Um die Quelle zu ändern, klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Quelle auswählen** zu öffnen.  
+ Gibt die Quelle der Richtlinien an. Um die Quelle zu ändern, klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Quelle auswählen** zu öffnen.  
   
  **Dateien**  
- Geben Sie den Pfad zu einer Datei ein, die eine richtlinienbasierte Verwaltungsrichtlinie enthält, oder klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um die Datei auszuwählen.  
+ Geben Sie den Pfad zu einer Datei ein, die eine richtlinienbasierte Verwaltungsrichtlinie enthält, oder klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um die Datei auszuwählen.  
   
  **Server**  
  Wählen Sie diese Option aus, um eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] herzustellen, die die gewünschte Richtlinie enthält.  
@@ -62,7 +61,7 @@ ms.locfileid: "51512405"
   
     -   Der Typ des Zielservers unterscheidet sich dem des Servers, auf dem die Richtlinie ausgewertet wird. Wenn Sie in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beispielsweise versuchen, eine Richtlinie auszuwerten, die für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wurde, erhalten Sie einen leeren Zielsatz.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024480"
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ ms.locfileid: "52413167"
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
- Um auf Filteroptionen für die Listenansicht des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste auf den Knoten **Bereitgestellte Datenebenenanwendungen** im Navigationsbereich des Hilfsprogramm-Explorers, und wählen Sie **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Bereitgestellte Datenebenenanwendungen** im Hilfsprogramm-Explorer die Beschriftung **Bereitgestellte Datenebenenanwendungen (gefiltert)**. Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Um auf Filteroptionen für die Listenansicht des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste auf den Knoten **Bereitgestellte Datenebenenanwendungen** im Navigationsbereich des Hilfsprogramm-Explorers, und wählen Sie **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Bereitgestellte Datenebenenanwendungen** im Hilfsprogramm-Explorer die Beschriftung **Bereitgestellte Datenebenenanwendungen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  In den folgenden Spalten werden standardmäßig Zustandsinformationen zu den einzelnen Datenebenenanwendungen angezeigt.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "52413167"
   
     -   Grüner Pfeil nach unten – Der Zustand für mindestens eine Dateigruppe oder Protokolldateigruppe ist unterausgelastet, und keine Dateigruppe oder Protokolldateigruppe ist überausgelastet.  
   
-    -   Roter Pfeil nach oben – Der Integritätsstatus für mindestens eine Dateigruppe oder die Protokolldateigruppe ist überausgelastet. Wenn eine Datenbank den Status „Notfall“ aufweist, wird ein überausgelasteter Protokolldateispeicherplatz für den Integritätsstatus angezeigt.  
+    -   Roter Pfeil nach oben – Der Integritätsstatus für mindestens eine Dateigruppe oder die Protokolldateigruppe ist überausgelastet. Wenn eine Datenbank den Status „emergency“ (Notfall) aufweist, wird für den Integritätsstatus der überausgelastete Protokolldateispeicherplatz angezeigt.  
   
      Um die Richtliniengrenzwerte für den Dateispeicherplatz anzuzeigen oder zu ändern, klicken Sie auf die Registerkarte **Speicherauslastung** .  
   
@@ -168,17 +167,17 @@ ms.locfileid: "52413167"
   
 -   Bereitstellungsdatum  
   
--   Vertrauenswürdig: (True oder False)  
+-   Trustworthy (Vertrauenswürdig): (True oder False)  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Verschlüsselung aktiviert: (True oder False)  
+-   Encryption Enabled (Verschlüsselung aktiviert): (True oder False)  
   
--   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
+-   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die Datenebenenanwendung und die CPU-Auslastung des Computers.  
@@ -216,7 +215,7 @@ ms.locfileid: "52413167"
   
 -   Grüner Pfeil nach unten – Die Auslastung des Dateispeicherplatzes für mindestens eine Datendatei in der Dateigruppe ist unterausgelastet, und keine Dateien in der Dateigruppe sind überausgelastet.  
   
--   Roter Pfeil nach oben – Die Auslastung des Dateispeicherplatzes für alle Datendateien in der Dateigruppe ist überausgelastet. Wenn eine Datenbank den Status „Notfall“ aufweist, wird ein überausgelasteter Protokolldateispeicherplatz für den Integritätsstatus angezeigt.  
+-   Roter Pfeil nach oben – Die Auslastung des Dateispeicherplatzes für alle Datendateien in der Dateigruppe ist überausgelastet. Wenn eine Datenbank den Status „emergency“ (Notfall) aufweist, wird für den Integritätsstatus der überausgelastete Protokolldateispeicherplatz angezeigt.  
   
  Um die Dateien nach Volume anzuzeigen, aktivieren Sie im Auswahlbereich **Dateien gruppieren nach** das Optionsfeld **Volume** . Im Diagramm mit Verlaufsdaten zur Speicherplatzauslastung wird der Dateispeicherplatz dargestellt, der von allen Datendateien und Protokolldateien auf dem Speichervolume belegt wird. Erweitern Sie die Struktur, um Details zu einzelnen Datenbankdatendateien und Protokolldateien anzuzeigen.  
   
@@ -245,17 +244,17 @@ ms.locfileid: "52413167"
   
 -   Bereitstellungsdatum  
   
--   Vertrauenswürdig: (True oder False)  
+-   Trustworthy (Vertrauenswürdig): (True oder False)  
   
 -   Sortierung  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
--   Verschlüsselung aktiviert: (True oder False)  
+-   Encryption Enabled (Verschlüsselung aktiviert): (True oder False)  
   
--   Wiederherstellungsmodell: (SIMPLE, FULL oder BULK_LOGGED)  
+-   Recovery Model (Wiederherstellungsmodus): (Simple (Einfach), Full (Vollständig) oder Bulk-Logged (Massenprotokolliert))  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Details zu verwalteten Instanzen (SQL Server-Hilfsprogramm)
  Die Informationen in der Listenansicht Verwaltete Instanzen des Hilfsprogramm-Explorers enthalten Auslastungsdaten für einzelne Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Verlaufsdaten zur CPU-Auslastung sowie Details zur Speicherplatzauslastung auf Dateiebene. Zudem können Sie hier Richtlinienschwellenwerte anzeigen und aktualisieren. Richtlinienschwellenwerte können auf der Ebene von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen, per Computer, für Datenbank- und Protokolldateien sowie auf der Ebene von Speichervolumes gesteuert werden. Darüber hinaus können Sie Eigenschaftendetails für einzelne verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anzeigen.  
@@ -274,7 +273,7 @@ ms.locfileid: "52413167"
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
- Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)**. Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Um auf Filteroptionen für die Listenansicht des Hilfsprogramms zuzugreifen, klicken Sie mit der rechten Maustaste im Navigationsbereich des Hilfsprogramm-Explorers auf den Knoten **Verwaltete Instanzen** und wählen **Filtern**aus. Nachdem die Filtereinstellungen implementiert wurden, hat der Knoten **Verwaltete Instanzen** im Hilfsprogramm-Explorer die Beschriftung **Verwaltete Instanzen (gefiltert)** . Weitere Informationen finden Sie unter [Filtereinstellungen &#40;Objekt-Explorer und Hilfsprogramm-Explorer&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  Die folgenden Spalten enthalten standardmäßig Zustandsinformationen zu den einzelnen verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -308,17 +307,17 @@ ms.locfileid: "52413167"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: (True oder False)  
+-   Clustered (Gruppiert): (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
+-   Case Sensitive (Beachtet Groß-/Kleinbuchstaben): (True oder False)  
   
 -   Sprache:  
   
--   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Last Reported Time (Letzte gemeldete Zeit): Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Registerkarte CPU-Auslastung  
  Die Registerkarte CPU-Auslastung enthält Vergleichsdiagramme mit Verlaufsdaten für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und die CPU-Auslastung des Computers.  
@@ -405,13 +404,13 @@ ms.locfileid: "52413167"
   
 -   SQL Server-Edition:  
   
--   Gruppiert: (True oder False)  
+-   Clustered (Gruppiert): (True oder False)  
   
 -   Sicherungsverzeichnis:  
   
 -   Sortierung:  
   
--   Unterscheidung nach Groß-/Kleinschreibung (True oder False)  
+-   Case Sensitive (Beachtet Groß-/Kleinschreibung): (True oder False)  
   
 -   Sprache:  
 
@@ -487,9 +486,9 @@ Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von R
  Konfigurationsinformationen für das Hilfsprogramm-Data Warehouse  
  Die folgenden Konfigurationseinstellungen sind in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht konfigurierbar:  
   
--   UMDW-Name: Sysutility_mdw_\<GUID>_DATA.  
+-   UMDW name (UMDW-Name): Sysutility_mdw_\<GUID>_DATA.  
   
--   Uploadfrequenz für den Sammlungssatz: Alle 15 Minuten  
+-   Collection set upload frequency (Uploadhäufigkeit des Sammlungssatzes): Every 15 minutes (Alle 15 Minuten).  
   
  Das UMDW-Verzeichnis ist konfigurierbar: \<Systemlaufwerk>:\Programme\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, wobei \<Systemlaufwerk> normalerweise Laufwerk C:\ entspricht. Die Protokolldatei UMDW_\<GUID>_LOG befindet sich im selben Verzeichnis.  
   
@@ -510,7 +509,7 @@ Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von R
   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

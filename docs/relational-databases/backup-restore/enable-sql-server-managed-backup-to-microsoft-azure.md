@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870d1b5d1a7bedb0d758be7eef4cb3f7b2e0106c
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089808"
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Aktivieren der verwalteten SQL Server-Sicherung in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ Speichern Sie die Container-URL und die SAS, um sie beim Erstellen von SQL-Anmel
   
 2.  **Sicherstellen, dass der SQL Server-Agent-Dienst ausgeführt wird:** Starten Sie den SQL Server-Agent, wenn er nicht ausgeführt wird.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] benötigt einen laufenden SQL Server-Agent auf der Instanz, um Sicherungsvorgänge durchführen zu können.  Sie können den Starttyp des SQL Server-Agents auf "Automatisch" festlegen, um zu gewährleisten, dass regelmäßige Sicherungsvorgänge durchgeführt werden können.  
   
-3.  **Bestimmen des Aufbewahrungszeitraums:** Die Beibehaltungsdauer für die Sicherungsdateien in Tagen. Die Beibehaltungsdauer wird in Tagen angegeben und kann zwischen 1 und 30 Tagen liegen.  
+3.  **Bestimmen des Aufbewahrungszeitraums:** Bestimmen Sie die Beibehaltungsdauer für die Sicherungsdateien. Die Beibehaltungsdauer wird in Tagen angegeben und kann zwischen 1 und 30 Tagen liegen.  
   
 4.  **Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der SQL Server-Zielinstanz her. Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, Container-URL und Beibehaltungsdauer Ihren Anforderungen entsprechend angepasst haben:  
   
@@ -110,7 +109,7 @@ Speichern Sie die Container-URL und die SAS, um sie beim Erstellen von SQL-Anmel
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ist damit für die angegebene Datenbank aktiviert. Es kann bis zu 15 Minuten dauern, bis die Sicherungsvorgänge für die Datenbank gestartet werden.  
   
-5.  **Überprüfen der Standardkonfiguration für erweiterte Ereignisse:** Überprüfen Sie die Einstellungen für erweiterte Ereignisse, indem Sie die folgende transact-SQL-Anweisung ausführen.  
+5.  **Überprüfen der Standardkonfiguration für erweiterte Ereignisse:** Überprüfen Sie die Einstellungen für erweiterte Ereignisse, indem Sie die folgende Transact-SQL-Anweisung ausführen.  
   
     ```  
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
@@ -133,7 +132,7 @@ Speichern Sie die Container-URL und die SAS, um sie beim Erstellen von SQL-Anmel
   
         ```  
   
-7.  **Anzeigen von Sicherungsdateien im Microsoft Azure Storage-Konto:** Stellen Sie eine Verbindung zum Speicherkonto von SQL Server Management Studio oder Azure-Verwaltungsportal her. Alle Sicherungsdateien im angegebenen Container werden angezeigt. Beachten Sie, dass innerhalb der ersten 5 Minuten nach dem Aktivieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank möglicherweise eine Datenbank und eine Protokollsicherung angezeigt werden.  
+7.  **Anzeigen von Sicherungsdateien im Microsoft Azure Storage-Konto:** Stellen Sie eine Verbindung mit dem Speicherkonto von SQL Server Management Studio oder dem Azure-Verwaltungsportal her. Alle Sicherungsdateien im angegebenen Container werden angezeigt. Beachten Sie, dass innerhalb der ersten 5 Minuten nach dem Aktivieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank möglicherweise eine Datenbank und eine Protokollsicherung angezeigt werden.  
   
 8.  **Überwachen des Integritätsstatus:**  Sie können die zuvor konfigurierten E-Mail-Benachrichtigungen verwenden oder die protokollierten Ereignisse manuell überwachen. Die folgenden Beispiele zeigen einige Transact-SQL-Anweisungen, mit denen die Ereignisse angezeigt werden können:  
   

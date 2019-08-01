@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044750"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failoverrichtlinie für Failoverclusterinstanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "52398650"
   
 4.  io_subsystem  
   
-5.  Ereignisse  
+5.  -Ereignisse  
   
  Das System, die Ressource und der Abfrageprozess werden für die Fehlererkennung verwendet. Die io_subsytem und die Ereignisse werden nur zu Diagnosezwecken verwendet.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "52398650"
   
  Informieren Sie sich unter [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md), da diese gespeicherte Systemprozedur eine wichtige Funktion im Hinblick auf Fehlerbedingungsebenen erfüllt.  
   
-|Ebene|Bedingung|Beschreibung|  
+|Ebene|Bedingung|und Beschreibung|  
 |-----------|---------------|-----------------|  
 |0|Kein automatischer Failover oder Neustart|Gibt an, dass bei einer Fehlerbedingung nicht automatisch ein Failover oder Neustart ausgelöst wird. Diese Ebene ist nur für die Systemwartung vorgesehen.|  
 |1|Failover oder Neustart bei Serverausfall|Gibt an, dass ein Neustart oder ein Failover des Server ausgelöst wird, wenn die folgende Bedingung zutrifft:<br /><br /> SQL Server-Dienst ist ausgefallen.|  
@@ -105,11 +104,11 @@ ms.locfileid: "52398650"
  *Standardwert  
   
 ####  <a name="respond"></a> Reagieren auf Fehler  
- Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine Hochverfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen zu diesen Einstellungen finden Sie unter [\<Eigenschaften von <Ressource>: Richtlinien (Registerkarte)](https://technet.microsoft.com/library/cc725685.aspx).  
+ Wie der WSFC-Dienst auf die erkannten Fehlerbedingungen reagiert, hängt vom WSFC-Quorumstatus sowie von den Neustart- und Failovereinstellungen der FCI-Ressourcengruppe ab. Wenn die FCI das WSFC-Quorum verloren hat, wird die gesamte FCI offline geschaltet und weist keine Hochverfügbarkeit mehr auf. Wenn die FCI noch über das WSFC-Quorum verfügt, reagiert der WSFC-Dienst u. U. wie folgt: Zunächst wird versucht, den fehlerhaften Knoten neu zu starten, und dann ein Failover ausgeführt, falls die Neustarts nicht erfolgreich sind. Die Neustart- und Failovereinstellungen werden im Failovercluster-Manager-Snap-In konfiguriert. Weitere Informationen zu diesen Einstellungen finden Sie unter [\<Ressource> Eigenschaften: Richtlinien-Registerkarte](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Informationen zum Verwalten der Quorumintegrität finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

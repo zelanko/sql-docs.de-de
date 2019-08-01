@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86dadfebb4c43ed474a033ad5100be1da86ec74c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47678d81d2868af5a921d26f3e121837a1ddc938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131733"
 ---
 # <a name="mssqlserver17194"></a>MSSQLSERVER_17194
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,12 +27,12 @@ ms.locfileid: "47844168"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|17194|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name||  
-|Meldungstext|Der Server konnte die für das Anmelden erforderliche SSL-Anbieterbibliothek nicht laden. Die Verbindung wurde geschlossen. SSL wird zum Verschlüsseln der Anmeldesequenz oder der gesamten Kommunikation verwendet, je nach der vom Administrator festgelegten Serverkonfiguration. Suchen Sie in der Onlinedokumentation nach Informationen zur folgenden Fehlermeldung: 0xXXXX. [CLIENT: 11.11.11.11]|  
+|Meldungstext|Der Server konnte die für das Anmelden erforderliche SSL-Anbieterbibliothek nicht laden. Die Verbindung wurde geschlossen. SSL wird zum Verschlüsseln der Anmeldesequenz oder der gesamten Kommunikation verwendet, je nach der vom Administrator festgelegten Serverkonfiguration. Weitere Informationen zu dieser Fehlermeldung finden Sie in der Onlinedokumentation:  0xXXXX. [CLIENT: 11.11.11.11]|  
   
 ## <a name="explanation"></a>Erklärung  
 Mit diesem Fehler wird angegeben, dass die Verbindung vom Client geschlossen wurde. Dieser Fehler ist möglicherweise darauf zurückzuführen, dass das Verbindungstimeout abgelaufen ist. In der Fehlermeldung wird ein Wert des Betriebssystems angezeigt, mit dem das zugrunde liegende Problem beschrieben wird.  

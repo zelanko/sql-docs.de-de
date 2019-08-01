@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901962"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,13 +121,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-WITH **(** \<<table_hint>**)** [ [**,** ]...*n* ]  
+WITH **(** \<<table_hint> **)** [ [ **,** ]...*n* ]  
 Bis auf einige Ausnahmen werden Tabellenhinweise nur dann in der FROM-Klausel unterstützt, wenn die Hinweise mit dem WITH-Schlüsselwort angegeben werden. Tabellenhinweise müssen zudem mit Klammern angegeben werden.  
   
 > [!IMPORTANT]  
 > Das WITH-Schlüsselwort wegzulassen ist eine veraltete Funktion: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Die folgenden Tabellentipps sind mit und ohne WITH-Schlüsselwort zulässig: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT und NOEXPAND. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Zum Beispiel:  
+Die folgenden Tabellenhinweise sind mit und ohne WITH-Schlüsselwort zulässig: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT und NOEXPAND. Wenn diese Tabellenhinweise ohne das WITH-Schlüsselwort angegeben werden, sollten die Hinweise allein angegeben werden. Beispiel:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -148,7 +147,7 @@ Es wird empfohlen, Tabellenhinweise durch Kommas voneinander zu trennen.
 NOEXPAND  
 Gibt an, dass indizierte Sichten nicht für den Zugriff auf zugrunde liegende Tabellen erweitert werden, wenn der Abfrageoptimierer die Abfrage verarbeitet. Der Abfrageoptimierer behandelt die Sicht wie eine Tabelle mit einem gruppierten Index. NOEXPAND gilt nur für indizierte Sichten. Weitere Informationen finden Sie unter [Verwenden von NOEXPAND](#using-noexpand).  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 Mit der INDEX()-Syntax werden die Namen oder IDs der Indizes angegeben, die der Abfrageoptimierer beim Verarbeiten der Anweisung verwenden soll. Die alternative INDEX = Syntax gibt einen einzigen Indexwert an. Pro Tabelle ist nur ein Indexhinweis zulässig.  
   
 Falls ein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Scan des gruppierten Index, und INDEX(1) erzwingt einen Scan des gruppierten Index oder eine Suche im gruppierten Index. Falls kein gruppierter Index vorhanden ist, erzwingt INDEX(0) einen Tabellenscan, und INDEX(1) wird als Fehler interpretiert.  
@@ -179,7 +178,7 @@ Gibt an, dass statt NULL der Standardwert einer Tabellenspalte (falls vorhanden)
   
 Ein Beispiel für die Verwendung dieses Hinweises in einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung finden Sie unter [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad auf die in der Tabelle oder Sicht angegebenen Daten verwenden darf. 
 
 > [!NOTE]
@@ -193,7 +192,7 @@ Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad 
   
 Der FORCESEEK-Hinweis kann folgendermaßen angegeben werden:  
   
-|Syntax|Beispiel|Beschreibung|  
+|Syntax|Beispiel|und Beschreibung|  
 |------------|-------------|-----------------|  
 |Ohne Index oder INDEX-Hinweis|`FROM dbo.MyTable WITH (FORCESEEK)`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über einen beliebigen relevanten Index.|  
 |Mit einem INDEX-Hinweis kombiniert|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über den angegebenen Index.|  

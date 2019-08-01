@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd5438c72028e46578b699584a5affcd1bfba7c7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127057"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Anzeigen oder Ändern der Eigenschaften einer Datenbank
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "51560027"
 3.  Wählen Sie im Dialogfeld **Datenbankeigenschaften** eine anzuzeigende Seite aus, um die entsprechenden Informationen anzuzeigen. Wählen Sie z. B. die Seite **Dateien** aus, um Daten- und Protokolldateiinformationen anzuzeigen.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Transact-SQL bietet eine Reihe von verschiedenen Methoden zum Anzeigen der Eigenschaften einer Datenbank und zum Ändern der Eigenschaften einer Datenbank. Zum Anzeigen der Eigenschaften einer Datenbank können Sie die Funktion [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) und die Katalogsicht [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) verwenden. Zum Ändern der Eigenschaften einer Datenbank können Sie die Version der ALTER DATABASE-Anweisung für Ihre Umgebung verwenden:[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) oder [ALTER DATABASE (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md). Zum Anzeigen der datenbankweiten Eigenschaften verwenden Sie die Katalogsicht [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) , und zum Ändern der datenbankweiten Eigenschaften verwenden Sie die Anweisung [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
+ Transact-SQL bietet eine Reihe von verschiedenen Methoden zum Anzeigen der Eigenschaften einer Datenbank und zum Ändern der Eigenschaften einer Datenbank. Zum Anzeigen der Eigenschaften einer Datenbank können Sie die Funktion [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) und die Katalogsicht [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) verwenden. Zum Ändern der Eigenschaften einer Datenbank können Sie die Version der ALTER DATABASE-Anweisung für Ihre Umgebung verwenden:  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) oder [ALTER DATABASE (Azure SQL-Datenbank)](../../t-sql/statements/alter-database-azure-sql-database.md). Zum Anzeigen der datenbankweiten Eigenschaften verwenden Sie die Katalogsicht [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) , und zum Ändern der datenbankweiten Eigenschaften verwenden Sie die Anweisung [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) .  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>So zeigen Sie eine Eigenschaft einer Datenbank mit der Funktion DATABASEPROPERTYEX an  
   
@@ -135,7 +134,7 @@ ms.locfileid: "51560027"
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY   
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

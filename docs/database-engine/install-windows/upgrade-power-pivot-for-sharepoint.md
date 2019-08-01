@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8afd4b49a5dddd4ea9806dddd9c1cf30cd04e603
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209209"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265660"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Upgraden von PowerPivot für SharePoint
 
@@ -84,7 +84,7 @@ ms.locfileid: "53209209"
   
     1.  Klicken Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup-Assistenten auf **Installation**.  
   
-    2.  Klicken Sie auf **Aktualisieren von SQL Server...**.  
+    2.  Klicken Sie auf **Aktualisieren von SQL Server...** .  
   
     3.  Wählen Sie auf der Seite **Instanz auswählen** den Instanznamen **POWERPIVOT** aus, und klicken Sie auf **Weiter**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "53209209"
   
          oder  
   
-         Zeigen Sie im **Startmenü** auf **Alle Programme**, und klicken Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und auf das **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“**. Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
+         Zeigen Sie im **Startmenü** auf **Alle Programme**, und klicken Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und auf das **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“** . Beachten Sie, dass dieses Tool nur aufgeführt ist, wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf dem lokalen Server installiert ist.  
   
     2.  Beim Starten überprüft das Konfigurationstool den Upgradestatus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Farmlösung und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Webanwendungslösungen. Wenn frühere Versionen dieser Lösungen erkannt werden, wird folgende Meldung angezeigt: „**Neuere Versionen der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Lösungsdateien wurden erkannt. Wählen Sie die Upgradeoption, um ein Upgrade für die Farm durchzuführen**.“ Klicken Sie auf **OK** , um die Systemüberprüfungsmeldung zu schließen.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "53209209"
         > [!IMPORTANT]  
         >  Die erste Aktion, **Farmlösung aktualisieren**, muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
   
-    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?“ (Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?)**.  
+    7.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „**All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Möchten Sie den Vorgang fortsetzen?** “.  
   
     8.  Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53209209"
   
     3.  Klicken Sie auf **Funktionen, Dienste, Anwendungen und Lösungen aktualisieren**, und klicken Sie dann auf **OK** , um fortzufahren.  
   
-    4.  Die folgende Warnung wird angezeigt: „Workbooks in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard are about to be upgraded to the latest version. Any customizations you made to the existing workbooks will be lost. Do you want to continue?“ (Arbeitsmappen im Power Pivot-Management-Dashboard werden in Kürze auf die neueste Version aktualisiert. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?)  
+    4.  Die folgende Warnung wird angezeigt: „Workbooks in the [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Management Dashboard are about to be upgraded to the latest version. Alle an vorhandenen Arbeitsmappen vorgenommenen Anpassungen gehen verloren. Möchten Sie den Vorgang fortsetzen?“  
   
          Diese Warnung bezieht sich auf Arbeitsmappen im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Management-Dashboard, die Berichte zu Datenaktualisierungsaktivitäten enthalten. Wenn Sie diese Arbeitsmappen angepasst haben, gehen alle an diesen Arbeitsmappen vorgenommenen Änderungen verloren, wenn vorhandene Dateien durch neuere Versionen ersetzt werden.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "53209209"
         > [!IMPORTANT]  
         >  Die erste Aktion, **Farmlösung aktualisieren**, muss immer zuerst verarbeitet werden. Sie registriert die PowerShell-Cmdlets, die zur Serverkonfiguration verwendet werden. Wenn Sie für diese Aktion einen Fehler erhalten, fahren Sie nicht fort. Verwenden Sie stattdessen die vom Fehler zurückgegebenen Informationen, um das Problem vor dem Verarbeiten weiterer Aktionen in der Taskliste zu diagnostizieren und zu lösen.  
   
-    8.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Do you want to continue?“ (Alle im Tool als gültig gekennzeichneten Konfigurationseinstellungen werden auf die SharePoint-Farm angewendet. Möchten Sie den Vorgang fortsetzen?)  
+    8.  Klicken Sie auf **Ausführen** , um alle Aktionen auszuführen, die für diesen Task gültig sind. **Ausführen** ist nur verfügbar, nachdem die Überprüfung erfolgreich war. Wenn Sie auf **Ausführen** klicken, wird die folgende Warnung angezeigt und erinnert Sie, dass Aktionen im Batchmodus verarbeitet werden: „All of the configuration settings that are flagged as valid in the tool will be applied to the SharePoint farm. Möchten Sie den Vorgang fortsetzen?“  
   
     9. Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   

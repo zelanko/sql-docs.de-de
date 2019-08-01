@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067534"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ändert die Eigenschaften eines Volltextindex in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -121,14 +120,14 @@ ALTER FULLTEXT INDEX ON table_name
   
  Ressourcen, wie die Wörtertrennung und die Wortstammerkennung, müssen für die mit *language_term* angegebene Sprache aktiviert sein. Falls die angegebene Sprache von den Ressourcen nicht unterstützt wird, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück.  
   
- Verwenden Sie die neutrale (0x0) Sprachenressource für Nicht-BLOB- und Nicht-XML-Spalten mit Textdaten in mehreren Sprachen oder für Fälle, in denen die Sprache des in der Spalte gespeicherten Texts unbekannt ist. Für Dokumente, die in Spalten vom Typ XML oder BLOB gespeichert werden, wird die Sprachcodierung innerhalb des Dokuments bei der Indizierung verwendet. In XML-Spalten wird die Sprache z. B. mit dem xml:lang-Attribut in XML-Dokumenten identifiziert. Zur Abfragezeit wird der Wert, der vorher in *language_term* angegeben wurde, die Standardsprache, die für Volltextabfragen verwendet wird, es sei denn *language_term* wird als Teil einer Volltextabfrage angegeben.  
+ Verwenden Sie die neutrale (0x0) Sprachenressource für Nicht-BLOB- und Nicht-XML-Spalten mit Textdaten in mehreren Sprachen oder für Fälle, in denen die Sprache des in der Spalte gespeicherten Texts unbekannt ist. Für Dokumente, die in XML- oder BLOB-Spalten gespeichert werden, wird die Sprachcodierung im Dokument bei der Indizierung verwendet. In XML-Spalten wird die Sprache z. B. mit dem xml:lang-Attribut in XML-Dokumenten identifiziert. Zur Abfragezeit wird der Wert, der vorher in *language_term* angegeben wurde, die Standardsprache, die für Volltextabfragen verwendet wird, es sei denn *language_term* wird als Teil einer Volltextabfrage angegeben.  
   
  STATISTICAL_SEMANTICS  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Erstellt den zusätzlichen Schlüsselausdruck und die Dokumentähnlichkeitsindizes, die Teil der statistischen semantischen Indizierung sind. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,**_...n_]  
+ [ **,** _...n_]  
  Gibt an, dass mehrere Spalten für die ADD-, ALTER- oder DROP-Klauseln angegeben werden können. Bei Angabe mehrerer Spalten müssen die Spalten mit Kommas getrennt werden.  
   
  WITH NO POPULATION  
@@ -169,7 +168,7 @@ ALTER FULLTEXT INDEX ON table_name
  Ändert die Volltextstoppliste, die dem Index zugeordnet ist, wenn überhaupt.  
   
  OFF  
- Gibt an, dass dem Volltextindex keine Stoppliste zugeordnet wird.  
+ Gibt an, dass dem Volltextindex keine Stoppliste zugeordnet werden soll.  
   
  SYSTEM  
  Gibt an, dass die Standardvolltext-Systemstoppliste STOPLIST für diesen Volltextindex verwendet werden soll.  
@@ -274,7 +273,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  Der Volltextindex wird erneut der gleichen oder einer anderen Sucheigenschaftenliste zugeordnet.  
   
-     Mit der folgenden Anweisung wird der Volltextindex beispielsweise wieder ursprünglichen Sucheigenschaftenliste `spl_1` zugeordnet:  
+     Mit der folgenden Anweisung wird der Volltextindex beispielsweise wieder der ursprünglichen Sucheigenschaftenliste `spl_1` zugeordnet:  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -348,7 +347,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   

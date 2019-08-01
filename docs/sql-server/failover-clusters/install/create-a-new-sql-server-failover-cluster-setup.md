@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c93844267fd91f248c073b00b12c4a07d16d7da5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063972"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +261,7 @@ ms.locfileid: "52525294"
      Sie können ein benutzerdefiniertes Verzeichnis für freigegebene Komponenten angeben. Verwenden Sie dazu das Feld unten auf dieser Seite. Um den Installationspfad für freigegebene Komponenten zu ändern, aktualisieren Sie den Pfad im Feld unten im Dialogfeld, oder klicken Sie auf die Schaltfläche mit den drei Punkten, um zu einem Installationsverzeichnis zu navigieren. Der Standardinstallationspfad lautet „C:\Programme\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\“.  
   
     > [!NOTE]  
-    >  Wenn Sie die Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Dienste auswählen, werden Replikation und Volltextsuche automatisch ausgewählt. Durch Aufheben der Auswahl eines dieser Subfunktionen wird auch die Auswahl der Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Dienste aufgehoben.  
+    >  Wenn Sie die Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Dienste auswählen, werden Replikation und Volltextsuche automatisch ausgewählt. Durch Aufheben der Auswahl eines dieser Subfunktionen wird auch die Auswahl der Funktion [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Dienste aufgehoben.  
   
 11. Geben Sie auf der Seite Instanzkonfiguration an, ob Sie eine Standardinstanz oder eine benannte Instanz installieren möchten.
   
@@ -322,7 +321,7 @@ ms.locfileid: "52525294"
   
 ## <a name="complete"></a>Abgeschlossen  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Schritt 2 für die erweiterte bzw. Enterprise-Failoverclusterinstallation: Abschließen  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Schritt 2 für die erweiterte bzw. Enterprise-Failoverclusterinstallation: Abgeschlossen  
   
 1.  Nachdem Sie alle Knoten wie im Schritt [Vorbereiten](#prepare)beschrieben vorbereitet haben, führen Sie Setup für einen der vorbereiteten Knoten aus, und zwar nach Möglichkeit für den Knoten, der Besitzer des freigegebenen Datenträgers ist. Klicken Sie im -Installationscenter auf der Registerkarte **Erweitert** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf **Erweiterter Clusterabschluss**.  
   
@@ -343,7 +342,7 @@ ms.locfileid: "52525294"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup wird eine weitere Reihe von Regeln ausgeführt, die auf den für die Überprüfung der Konfiguration ausgewählten Funktionen basieren.  
   
-8.  Auf der Seite Clusterressourcengruppe[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie den Namen der Clusterressourcengruppe angeben, in der sich die Ressourcen des virtuellen Servers für  befinden. Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusterressourcengruppe an. Hierfür stehen zwei Möglichkeiten zur Verfügung:  
+8.  Auf der Seite Clusterressourcengruppe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie den Namen der Clusterressourcengruppe angeben, in der sich die Ressourcen des virtuellen Servers für  befinden. Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusterressourcengruppe an. Hierfür stehen zwei Möglichkeiten zur Verfügung:  
   
     -   Geben Sie die vorhandene Gruppe, die Sie verwenden möchten, mithilfe der Liste an.  
   
@@ -397,11 +396,11 @@ ms.locfileid: "52525294"
 19. Nach der Installation bietet die Seite **Abgeschlossen** einen Link zur zusammenfassenden Protokolldatei für die Installation und andere wichtige Hinweise. Klicken Sie auf **Schließen** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , um die Installation von abzuschließen. Nach diesem Schritt sind alle für denselben Failovercluster vorbereiteten Knoten Teil des abgeschlossenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters.  
   
 ## <a name="next-steps"></a>Next Steps  
- **Konfigurieren Sie die neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installation:** Um die Angriffsfläche eines Systems zu verringern, werden zentrale Dienste und Features von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selektiv installiert und aktiviert. Weitere Informationen finden Sie unter [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Konfigurieren Sie Ihre neue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Installation**: Zur Verringerung der Angriffsfläche eines Systems werden zentrale Dienste und Funktionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] selektiv installiert und aktiviert. Weitere Informationen finden Sie unter [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Weitere Informationen zu Speicherorten von Protokolldateien finden Sie unter [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

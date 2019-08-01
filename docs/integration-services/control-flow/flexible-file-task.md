@@ -12,13 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d01304a36f7676f53ffef3f6c6e3c600cb87cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc95201ec856d5e7daa998c7de52b91981af5552
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66411097"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316638"
 ---
 # <a name="flexible-file-task"></a>Flexibler Dateitask
 
@@ -49,3 +48,22 @@ Die folgenden Eigenschaften sind für den **Kopiervorgang** verfügbar.
 - **DestinationConnection:** Gibt den Zielverbindungs-Manager an.
 - **DestinationFolderPath:** Gibt den Pfad des Zielordners an.
 - **DestinationFileName:** Gibt den Namen der Zieldatei an.
+
+***Hinweise zur Konfiguration der Dienstprinzipalberechtigung***
+
+Damit die **Testverbindung** funktioniert (Blob Storage oder Data Lake Storage Gen2), müssen Sie dem Dienstprinzipal mindestens die Rolle **Storage-Blobdatenleser** zuweisen.
+Dies erfolgt mit der [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+
+Blob-Speicher-, Lese- und Schreibberechtigungen werden durch das Zuweisen der jeweiligen **Storage Blob Data Reader**- (Storage-Blobdatenleser) und **Storage Blob Data Contributor**-Rollen (Mitwirkender an Storage-Blobdaten) gewährt.
+
+Für Data Lake Storage Gen2 wird die Berechtigung durch die RBAC und [ACLs](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer) bestimmt.
+Beachten Sie, dass ACLs wie [hier](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal) beschrieben mithilfe der Objekt-ID (OID) des Dienstprinzipals für die App-Registrierung konfiguriert werden.
+Dies unterscheidet sich von der Anwendungs-ID (Client-ID), die mit der RBAC-Konfiguration verwendet wird.
+Wenn ein Sicherheitsprinzipal durch eine integrierte Rolle oder eine benutzerdefinierte Rolle RBAC-Datenberechtigungen erhält, werden diese Berechtigungen vor der Autorisierung einer Anforderung zunächst ausgewertet.
+Wenn der Anforderungsvorgang von den RBAC-Zuweisungen des Sicherheitsprinzipals autorisiert wurde, wird die Autorisierung sofort aufgelöst, und es werden keine weiteren ACL-Prüfungen durchgeführt.
+Wenn der Sicherheitsprinzipal über keine RBAC-Zuweisung verfügt oder der Vorgang der Anforderung nicht mit der zugewiesenen Berechtigung übereinstimmt, werden alternativ ACL-Prüfungen durchgeführt, um zu bestimmen, ob der Sicherheitsprinzipal für die Durchführung des angeforderten Vorgangs autorisiert ist.
+
+- Für die Leseberechtigung müssen Sie mindestens die Berechtigung **Execute** (Ausführen) ab dem Quelldateisystem sowie die Berechtigung **Read** (Lesen) für die zu kopierenden Dateien gewähren. Gewähren Sie alternativ mindestens die Rolle **Storage-Blobdatenleser** mit der RBAC.
+- Für die Schreibberechtigung müssen Sie mindestens die Berechtigung **Execute** (Ausführen) ab dem Senkedateisystem sowie die Berechtigung **Write** (Schreiben) für den Senkeordner gewähren. Gewähren Sie alternativ mindestens die Rolle **Storage Blob Data Contributor** (Mitwirkender an Storage-Blobdaten) mit der RBAC.
+
+Weitere Informationen finden Sie in [diesem](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) Artikel.

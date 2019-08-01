@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 034a46affb198c89baab3c4741ae84569c96951b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063800"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn-Failoverclusterinstanzen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Als Teil des Always On-Angebots von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nutzen Always On-Failoverclusterinstanzen die Funktionalität des Windows Server-Failoverclustering (WSFC), um durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* (FCI)) lokale Hochverfügbarkeit zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.  
+  Als Teil des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Always On-Angebots nutzen Always On-Failoverclusterinstanzen die Funktionalität des Windows Server-Failoverclustering (WSFC), um durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* [FCI]) lokale Hochverfügbarkeit zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.  
   
  Eine FCI kann [Availability Groups (Verfügbarkeitsgruppen)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) nutzen, um die Remotewiederherstellung im Notfall auf Datenbankebene bereitzustellen. Weitere Informationen finden Sie unter [Failover Clustering and Always On Availability Groups &#40;SQL Server&#41; (Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server))](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
  

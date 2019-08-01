@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061064"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ Die folgende Tabelle enthält die Namen von Systemanbietern:
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Windows-Zertifikatspeicher| 
     |'MSSQL_CSP_PROVIDER'|Ein Speicher, z.B. ein Hardwaresicherheitsmodul (HSM), der Microsoft CryptoAPI unterstützt.|
-    |'MSSQL_CNG_STORE'|Ein Speicher, z.B. ein Hardwaresicherheitsmodul (HSM), der Cryptography API: Next Generation unterstützt.|  
+    |'MSSQL_CNG_STORE'|Ein Speicher, z. B. ein Hardwaresicherheitsmodul (HSM), der Folgendes unterstützt: Cryptography API: Next Generation.|  
     |'Azure_Key_Vault'|Weitere Informationen finden Sie unter [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
   
 
@@ -169,7 +168,7 @@ Gibt an, dass der Spaltenhauptschlüssel Enclave-fähig ist. Sie können alle mi
 Ein binäres Literal, das das Ergebnis des digitalen Signierens von *Schlüsselpfad* und der Einstellung „ENCLAVE_COMPUTATIONS“ mit dem Spaltenhauptschlüssel ist. Die Signatur zeigt an, ob „ENCLAVE_COMPUTATIONS“ angegeben wurde. Die Signatur schützt die signierten Werte vor Änderungen durch nicht autorisierte Benutzer. Ein Always Encrypted-fähiger Clienttreiber überprüft die Signatur und gibt einen Fehler an die Anwendung zurück, wenn die Signatur ungültig ist. Die Signatur muss mit clientseitigen Tools generiert werden. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Remarks  
 
 Erstellen Sie einen Metadateneintrag für einen Spaltenhauptschlüssel, bevor Sie einen Metadateneintrag für einen Spaltenverschlüsselungsschlüssel in der Datenbank erstellen und bevor Spalten in der Datenbank mithilfe von Always Encrypted verschlüsselt werden können. Ein Metadateneintrag für einen Spaltenhauptschlüssel enthält nicht den tatsächlichen Spaltenhauptschlüssel. Der Spaltenhauptschlüssel muss in einem externen Spaltenschlüsselspeicher (außerhalb von SQL Server) gespeichert werden. Der Name des Schlüsselspeicheranbieters und der Pfad des Spaltenhauptschlüssels in den Metadaten müssen für eine Clientanwendung gültig sein. Die Clientanwendung muss den Spaltenhauptschlüssel verwenden, um einen Spaltenverschlüsselungsschlüssel zu entschlüsseln. Der Spaltenverschlüsselungsschlüssel ist mit dem Spaltenhauptschlüssel verschlüsselt. Die Clientanwendung muss auch verschlüsselte Spalten abfragen.
 

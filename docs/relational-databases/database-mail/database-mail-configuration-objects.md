@@ -32,17 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f91b618e98fa9036b27a398731ecfaca51925611
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134434"
 ---
 # <a name="database-mail-configuration-objects"></a>Konfigurationsobjekte für Datenbank-E-Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Datenbank-E-Mail verfügt über zwei Konfigurationsobjekte: Mit den Datenbankkonfigurationsobjekten können Sie die Einstellungen konfigurieren, die von Datenbank-E-Mail beim Senden einer E-Mail von der Datenbankanwendung oder vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet werden sollen.  
+  Die Datenbank-E-Mail weist zwei Konfigurationsobjekte auf: Mit den Datenbankkonfigurationsobjekten können Sie die Einstellungen konfigurieren, die von der Datenbank-E-Mail beim Senden einer E-Mail von der Datenbankanwendung oder vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet werden sollen.  
   
 -   Datenbank-E-Mail-Konten  
   
@@ -60,11 +59,11 @@ ms.locfileid: "51558957"
   
  Datenbank-E-Mail unterstützt drei Methoden der Authentifizierung für die Kommunikation mit einem SMTP-Server:  
   
--   Windows-Authentifizierung: Datenbank-E-Mail verwendet dieselben Anmeldeinformationen wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows-Dienstkonto zur Authentifizierung auf dem SMTP-Server.  
+-   Windows-Authentifizierung: Die Datenbank-E-Mail verwendet dieselben Anmeldeinformationen wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows-Dienstkonto zur Authentifizierung beim SMTP-Server.  
   
--   Standardauthentifizierung: Datenbank-E-Mail verwendet den angegebenen Benutzernamen und das angegebene Kennwort zur Authentifizierung auf dem SMTP-Server.  
+-   Standardauthentifizierung:  Die Datenbank-E-Mail verwendet den angegebenen Benutzernamen und das angegebene Kennwort zur Authentifizierung beim SMTP-Server.  
   
--   Anonyme Authentifizierung: Der SMTP-Server erfordert keinerlei Authentifizierung.  Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.  
+-   Anonyme Authentifizierung:  Der SMTP-Server erfordert keine Authentifizierung.  Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.  
   
  Die Kontoinformationen werden in der **msdb** -Datenbank gespeichert. Jedes Konto besteht aus den folgenden Informationen:  
   
@@ -129,14 +128,14 @@ ms.locfileid: "51558957"
   
 ### <a name="database-mail-settings"></a>Datenbank-E-Mail-Einstellungen  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Ändert Konfigurationseinstellungen für Datenbank-E-Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.|  
   
 ### <a name="accounts-and-profiles"></a>Konten und Profile  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Fügt einem Datenbank-E-Mail-Profil ein E-Mail-Konto hinzu.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Löscht ein Datenbank-E-Mail-Konto.|  
@@ -151,7 +150,7 @@ ms.locfileid: "51558957"
   
 ### <a name="security"></a>Security  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Erteilt einem Datenbankprinzipal die Berechtigung, ein Datenbank-E-Mail-Profil zu verwenden.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Entfernt die Berechtigung eines Datenbankbenutzers, ein öffentliches oder privates Datenbank-E-Mail-Profil zu verwenden.|  
@@ -160,7 +159,7 @@ ms.locfileid: "51558957"
   
 ### <a name="system-state"></a>Systemstatus  
   
-|Name|Beschreibung|  
+|Name|und Beschreibung|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Startet das externe Datenbank-E-Mail-Programm und die zugehörige SQL Service Broker-Warteschlange.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Beendet das externe Datenbank-E-Mail-Programm und die zugehörige SQL Service Broker-Warteschlange.|  

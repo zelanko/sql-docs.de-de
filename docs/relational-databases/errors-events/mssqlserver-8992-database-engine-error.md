@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118469"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "51674009"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|8992|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
@@ -75,6 +74,6 @@ Dieser Fehler kann nicht repariert werden.  Wenn Sie die Datenbank nicht mithilf
 ### <a name="do-not-manually-update-system-tables"></a>Systemtabellen dürfen nicht manuell aktualisiert werden  
 Nehmen Sie keine manuellen Updates an den Systemtabellen vor. SQL Server unterstützt keine manuellen Änderungen an den Systemdatenbanken. Wenn Sie eine Systemtabelle in einer SQL Server-Datenbank aktualisieren, werden zwei Ereignisse (Ereignis-ID 17659 und Ereignis-ID 3859) protokolliert. Weitere Informationen finden Sie im KB-Artikel 2688307 "Beim Aktualisieren von Systemtabellen in einer SQL Server-Datenbank werden Ereignis-ID 17659 und Ereignis-ID 3859 protokolliert".  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Beim Aktualisieren von Systemtabellen in einer SQL Server-Datenbank werden Ereignis-ID 17659 und Ereignis-ID 3859 protokolliert](https://support.microsoft.com/kb/2688307/EN-US)  
   

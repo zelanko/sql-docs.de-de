@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a3323e550ba3534fdc491e42c70c43ba686dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031646"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lektion 2: Erstellen und Verwalten von Daten in einer hierarchischen Tabelle
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ Zur Durchführung dieses Tutorials benötigen Sie SQL Server Management Studio, 
 - Installieren Sie die [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Laden Sie die [AdventureWorks 2017-Beispieldatenbank](https://docs.microsoft.com/sql/samples/adventureworks-install-configure) herunter.
 
-Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Restore a Database (Wiederherstellen einer Datenbank)](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Anweisungen zum Wiederherstellen von Datenbanken in SSMS finden Sie hier: [Wiederherstellen einer Datenbank](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="create-a-table-using-the-hierarchyid-data-type"></a>Erstellen einer Tabelle mit dem Datentyp „hierarchyid“
 Im folgenden Beispiel wird eine Tabelle namens EmployeeOrg erstellt, die Mitarbeiterdaten zusammen mit ihrer Berichtshierarchie aufnimmt. Das Beispiel erstellt die neue Tabelle in der Datenbank AdventureWorks2017, was jedoch optional ist. Um das Beispiel einfach zu halten, enthält die Tabelle nur fünf Spalten:  
@@ -293,7 +292,7 @@ Nachdem die Tabelle HumanResources.EmployeeOrg nun vollständig gefüllt ist, ze
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Eine Hierarchie neu zu ordnen, ist eine allgemeine Wartungsaufgabe. In dieser Aufgabe werden wir eine UPDATE-Anweisung mit der [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) -Methode verwenden, um zunächst eine einzelne Zeile an eine neue Position in der Hierarchie zu verschieben. Dann verschieben wir eine ganze Teilstruktur an eine neue Position.  
   
-Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument beschreibt den Teil der Hierarchie, der geändert werden soll. Möchten Sie zum Beispiel in der Hierarchie **/1/4/2/3/** den Abschnitt **/1/4/** so ändern, dass die Hierarchie zu **/2/1/2/3/** wird, wobei die beiden letzten Knoten (**2/3/**) unverändert bleiben, müssen Sie die zu ändernden Knoten (**/1/4/**) als erstes Argument angeben. Das zweite Argument gibt die neue Hierarchieebene an, in unserem Beispiel **/2/1/**. Die zwei Argumente dürfen nicht die gleichen Ebenennummern enthalten.  
+Die `GetReparentedValue` -Methode benötigt zwei Argumente. Das erste Argument beschreibt den Teil der Hierarchie, der geändert werden soll. Möchten Sie zum Beispiel in der Hierarchie **/1/4/2/3/** den Abschnitt **/1/4/** so ändern, dass die Hierarchie zu **/2/1/2/3/** wird, wobei die beiden letzten Knoten (**2/3/** ) unverändert bleiben, müssen Sie die zu ändernden Knoten ( **/1/4/** ) als erstes Argument angeben. Das zweite Argument gibt die neue Hierarchieebene an, in unserem Beispiel **/2/1/** . Die zwei Argumente dürfen nicht die gleichen Ebenennummern enthalten.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Verschieben einer einzelnen Zeile an eine neue Position in der Hierarchie  
   

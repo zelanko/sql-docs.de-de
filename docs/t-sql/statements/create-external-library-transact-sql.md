@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) – SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -18,22 +18,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 852b98c1ee0eecba21b426c74397985208fd2178
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6939836ca547027f605049f7a26e8d0901f23d51
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140797"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329301"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Lädt R-, Python- oder Java-Paketdateien vom angegebenen Bytedatenstrom oder Dateipfad in eine Datenbank hoch. Diese Anweisung dient als generischer Mechanismus, mithilfe dessen der Datenbankadministrator Artefakte hochladen kann, die von Runtimes neuer externer Sprachen und Betriebssystemplattformen benötigt werden, die von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] unterstützt werden. 
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und externe Sprachen werden für die Windows- und die Linux-Plattform in SQL Server 2019 CTP 3.0 unterstützt.
+> In SQL Server 2017 werden die R-Sprache und die Windows-Plattform unterstützt. R, Python und externe Sprachen werden für die Windows- und die Linux-Plattform in SQL Server 2019 CTP 2.4 und höher unterstützt.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+> [!NOTE]
+> In Azure SQL-Datenbank können Sie **sqlmlutils** verwenden, um eine Bibliothek zu installieren. Weitere Informationen finden Sie im Artikel zum [Hinzufügen eines Pakets mit sqlmlutils](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils).
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Syntax für SQL Server 2019
@@ -106,6 +113,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Syntax für Azure SQL-Datenbank
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>Argumente
 
 **library_name**
@@ -122,6 +152,7 @@ Bibliotheken, die Datenbankbesitzern gehören, gelten als global für die Datenb
 
 Wenn der Benutzer **RUser1** ein externes Skript ausführt, kann der Wert von `libPath` mehrere Pfade enthalten. Der erste Pfad ist immer der Pfad zur gemeinsamen Bibliothek, die vom Datenbankbesitzer erstellt wurde. Der zweite Teil von `libPath` gibt den Pfad an, der Pakete enthält, die von **RUser1** individuell hochgeladen wurden.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 Gibt den Inhalt des Pakets für eine bestimmte Plattform an. Nur ein Dateiartefakt pro Plattform wird unterstützt.
@@ -131,6 +162,7 @@ Die Datei kann in Form eines lokalen Pfads oder eines Netzwerkpfads angegeben we
 Beim Versuch, auf die in **<client_library_specifier>** angegebene Datei zuzugreifen, nimmt SQL Server den Sicherheitskontext des aktuellen Windows-Anmeldenamens an. Falls **<client_library_specifier>** einen Netzwerkspeicherort (UNC-Pfad) angibt, wird der Identitätswechsel des aktuellen Anmeldenamens aufgrund von Delegierungsbeschränkungen nicht auf den neuen Netzwerkspeicherort übertragen. In diesem Fall erfolgt der Zugriff mithilfe des Sicherheitskontexts des SQL Server-Dienstkontos. Weitere Informationen finden Sie unter [Anmeldeinformationen (Datenbank-Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
 Optional kann eine Betriebssystemplattform für die Datei angegeben werden. Für jede Betriebssystemplattform für eine bestimmte Sprache oder Runtime ist nur ein Darteiartefakt oder Inhalt erlaubt.
+::: moniker-end
 
 **library_bits**
 
@@ -141,26 +173,42 @@ Diese Option ist hilfreich, wenn Sie eine Bibliothek erstellen oder eine bestehe
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-Gibt die Plattform für den Inhalt der Bibliothek an. Der Standardwert ist die Hostplattform, auf der SQL Server ausgeführt wird. Aus diesem Grund muss der Benutzer den Wert nicht angeben. Dies ist in Fällen erforderlich, in denen mehrere Plattformen unterstützt werden oder in denen der Benutzer eine andere Plattform angeben muss. 
-
+Gibt die Plattform für den Inhalt der Bibliothek an. Der Standardwert ist die Hostplattform, auf der SQL Server ausgeführt wird. Aus diesem Grund muss der Benutzer den Wert nicht angeben. Dies ist in Fällen erforderlich, in denen mehrere Plattformen unterstützt werden oder in denen der Benutzer eine andere Plattform angeben muss.
 Für SQL Server 2017 ist Windows die einzige unterstützte Plattform.
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **PLATFORM**
 
 Gibt die Plattform für den Inhalt der Bibliothek an. Der Standardwert ist die Hostplattform, auf der SQL Server ausgeführt wird. Aus diesem Grund muss der Benutzer den Wert nicht angeben. Dies ist in Fällen erforderlich, in denen mehrere Plattformen unterstützt werden oder in denen der Benutzer eine andere Plattform angeben muss.
-
 Für SQL Server 2019 werden die Plattformen Windows und Linux unterstützt.
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+gibt die Sprache des Pakets an.
+R wird in SQL Server 2017 unterstützt.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = 'R'**
+
+gibt die Sprache des Pakets an.
+R wird in Azure SQL-Datenbank unterstützt.
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-gibt die Sprache des Pakets an. Der Wert kann `R`, `Python` oder der Name einer [erstellten externen Sprache](create-external-language-transact-sql.md) sein.
+gibt die Sprache des Pakets an. Der Wert kann `R`, `Python` oder der Name einer externen Programmiersprache sein (siehe [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
-Bei der R-Sprache müssen bei Verwendung einer Datei Pakete in Form von gezippten Archivdateien mit der Dateiendung .ZIP für Windows vorbereitet werden. Für SQL Server 2017 wird nur die Windows-Plattform unterstützt.
+Bei der R-Sprache müssen bei Verwendung einer Datei Pakete in Form von gezippten Archivdateien mit der Dateiendung .ZIP für Windows vorbereitet werden. 
+Für SQL Server 2017 wird nur die Windows-Plattform unterstützt.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -193,7 +241,8 @@ Zum Erstellen einer externen Bibliothek mithilfe eines Dateipfads muss der Benut
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="a-add-an-external-library-to-a-database"></a>A. Hinzufügen einer externen Bibliothek zu einer Datenbank  
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="add-an-external-library-to-a-database"></a>Hinzufügen einer externen Bibliothek zu einer Datenbank  
 
 Im folgenden Beispiel wird eine externe Bibliothek namens `customPackage` zu einer Datenbank hinzugefügt.
 
@@ -209,12 +258,13 @@ EXEC sp_execute_external_script
 @language =N'R', 
 @script=N'library(customPackage)'
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie `'R'` durch `'Python'` ersetzen.
 ::: moniker-end
 
-### <a name="b-installing-packages-with-dependencies"></a>B. Installieren von Paketen mit Abhängigkeiten
+### <a name="installing-packages-with-dependencies"></a>Installieren von Paketen mit Abhängigkeiten
 
 Wenn das Paket, das Sie installieren möchten, Abhängigkeiten aufweist, ist es sehr wichtig, dass Sie sowohl Abhängigkeiten der ersten als auch der zweiten Ebene analysieren und sicherstellen, dass alle erforderlichen Pakete verfügbar sind, _bevor_ Sie versuchen, das Zielpaket zu installieren.
 
@@ -228,6 +278,8 @@ Damit die Installation von `packageA` erfolgreich ist, müssen Sie Bibliotheken 
 In der Praxis sind Paketabhängigkeiten für häufig verwendete Pakete in der Regel viel komplizierter als in diesem einfachen Beispiel. Beispielsweise könnte **ggplot2** mehr als 30 Pakete erfordern, und diese Pakete könnten wiederum zusätzliche Pakete erfordern, die auf dem Server nicht verfügbar sind. Jedes fehlende Paket und jede falsche Paketversion kann zu einem Fehler bei der Installation führen.
 
 Da es schwierig sein kann, alle Abhängigkeiten nur durch Betrachten des Paketmanifests zu bestimmen, empfiehlt es sich, ein Paket wie [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) zu verwenden, um alle Pakete zu identifizieren, die für eine erfolgreiche Installation erforderlich sein könnten.
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 
 + Laden Sie das Zielpaket und dessen Abhängigkeiten hoch. Alle Dateien müssen sich in einem Ordner befinden, auf den der Server Zugriff hat.
 
@@ -262,17 +314,18 @@ Da es schwierig sein kann, alle Abhängigkeiten nur durch Betrachten des Paketma
     library(packageA)
     '
     ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie `'R'` durch `'Python'` ersetzen.
 ::: moniker-end
 
-### <a name="c-create-a-library-from-a-byte-stream"></a>C. Erstellen einer Bibliothek aus einem Bytedatenstrom
+### <a name="create-a-library-from-a-byte-stream"></a>Erstellen einer Bibliothek aus einem Bytedatenstrom
 
 Wenn Sie nicht die Möglichkeit haben, die Paketdateien in einem Speicherort auf dem Server zu speichern, können Sie die Paketinhalte in einer Variable übergeben. Im folgenden Beispiel wird eine Bibliothek erstellt, indem die Bits als Hexadezimalliteral übergeben werden.
 
 ```SQL
-CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -282,14 +335,14 @@ Das Beispiel funktioniert auch für Python in SQL Server 2019, wenn Sie **'R'** 
 > [!NOTE]
 > Dieses Codebeispiel zeigt nur die Syntax; der Binärwert in `CONTENT =` wurde zur besseren Lesbarkeit gekürzt und erstellt keine funktionierende Bibliothek. Der tatsächliche Inhalt der binären Variable wäre wesentlich länger.
 
-### <a name="d-change-an-existing-package-library"></a>D. Löschen einer vorhandenen Paketbibliothek
+### <a name="change-an-existing-package-library"></a>Löschen einer vorhandenen Paketbibliothek
 
 Die `ALTER EXTERNAL LIBRARY`-DDL-Anweisung kann verwendet werden, um neuen Bibliotheksinhalt hinzuzufügen oder bestehenden Bibliotheksinhalt zu ändern. Zum Bearbeiten einer bestehenden Bibliothek ist die Berechtigung `ALTER ANY EXTERNAL LIBRARY` erforderlich.
 
 Weitere Informationen finden Sie unter [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-### <a name="e-add-a-java-jar-file-to-a-database"></a>E. Hinzufügen einer JAR-Datei zu einer Datenbank  
+### <a name="add-a-java-jar-file-to-a-database"></a>Hinzufügen einer JAR-Datei zu einer Datenbank  
 
 Im folgenden Beispiel wird eine externe JAR-Datei namens `customJar` zu einer Datenbank hinzugefügt.
 
@@ -309,7 +362,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((column1 int))
 ```
 
-### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>F. Hinzufügen eines externen Pakets für Windows und Linux
+### <a name="add-an-external-package-for-both-windows-and-linux"></a>Hinzufügen eines externen Pakets für Windows und Linux
 
 Sie können `<file_spec>` maximal zweimal angeben, einmal für Windows und einmal für Linux.
 

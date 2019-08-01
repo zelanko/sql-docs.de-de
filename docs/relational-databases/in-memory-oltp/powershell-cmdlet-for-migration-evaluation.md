@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea10ab18048ed4c9482874db26b4f981e66e2cc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 769948242c747abdfb1fd6e32606df6a5800a9bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054442"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>PowerShell-Cmdlet für die Migrationsauswertung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
 #### <a name="parameters"></a>Parameter  
  Die Parameter werden in der folgenden Tabelle erläutert.  
   
-|Parameter|Beschreibung|  
+|Parameter|und Beschreibung|  
 |----------------|-----------------|  
 |MigrationType|Der Typ des Migrationsszenarios, den das Cmdlet überprüft. Derzeit ist der einzige Wert die Standard-OLTP. Optional.|  
 |Server|Der Name der SQL Server-Zielinstanz. In der Windows PowerShell-Umgebung obligatorisch, wenn der Parameter -InputObject fehlt. Optional in SQLPS.|  
@@ -42,6 +41,6 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
 |FolderPath|Der Ordner, in dem das Cmdlet die generierten Berichte ablegen soll. Erforderlich.|  
   
 ## <a name="results"></a>Ergebnisse  
- Unter dem durch -FolderPath angegebenen Ordner werden zwei Ordner erstellt: "Tables" und "Stored Procedures". Wenn das Zielobjekt eine Tabelle ist, wird der Bericht zu diesem Objekt im Ordner "Tables" abgelegt. Andernfalls wird es im Ordner "Stored Procedures" abgelegt.  
+ Unter dem im -FolderPath-Parameter angegebenen Ordner werden zwei Ordner erstellt: „Tables“ (Tabellen) und „Stored Procedures“ (gespeicherte Prozeduren). Wenn das Zielobjekt eine Tabelle ist, wird der Bericht zu diesem Objekt im Ordner "Tables" abgelegt. Andernfalls wird es im Ordner "Stored Procedures" abgelegt.  
   
   

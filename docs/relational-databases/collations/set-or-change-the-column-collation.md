@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf856f9ae013dd2f19cb72b04c0c2296d0185511
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d49dbce19b0d2c7ce1fa1337eb6cbdc58da08f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140859"
 ---
 # <a name="set-or-change-the-column-collation"></a>Festlegen oder Ändern der Spaltensortierung
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Sie können die Datenbanksortierung für **char**-, **varchar**-, **text**-, **nchar**-, **nvarchar**- und **ntext** -Daten überschreiben, indem Sie eine andere Sortierung für eine bestimmte Spalte einer Tabelle angeben und dann eine der folgenden Optionen verwenden:  
   
--   Die COLLATE-Klausel von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Zum Beispiel:  
+-   Die COLLATE-Klausel von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) und [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Beispiel:  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -70,7 +69,7 @@ USE TestDB;
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   
- In diesem System verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung mit Codepage 1252, und `TestDB` und `TestPermTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung mit Codepage 1257. Zum Beispiel:  
+ In diesem System verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung mit Codepage 1252, und `TestDB` und `TestPermTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung mit Codepage 1257. Beispiel:  
   
 ```  
 USE TestDB;  
@@ -83,13 +82,13 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- Im vorherigen Beispiel verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung, und `TestDB` und `TestTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung. Zum Beispiel:  
+ Im vorherigen Beispiel verwendet die **tempdb** -Datenbank die Latin1_General_CS_AS-Sortierung, und `TestDB` und `TestTab.Col1` verwenden die `Estonian_CS_AS` -Sortierung. Beispiel:  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Da **tempdb** die Standardserversortierung und `TestPermTab.Col1` eine andere Sortierung verwendet, wird in SQL Server der folgende Fehler zurückgegeben: „Ein Sortierungskonflikt zwischen ‚Latin1_General_CI_AS_KS_WS‘ und ‚Estonian_CS_AS‘ im Gleich-Vorgang kann nicht aufgelöst werden.“  
+ Da **tempdb** die Standardserversortierung verwendet und `TestPermTab.Col1` eine andere Sortierung verwendet, gibt SQL Server den folgenden Fehler zurück: „Ein Sortierungskonflikt zwischen 'Latin1_General_CI_AS_KS_WS' und 'Estonian_CS_AS' im equal to-Vorgang kann nicht aufgelöst werden.“  
   
  Sie können den Fehler vermeiden, indem Sie stattdessen eine der folgenden Alternativen verwenden:  
   
@@ -111,7 +110,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen oder Ändern der Serversortierung](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [Festlegen oder Ändern der Datenbanksortierung](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  

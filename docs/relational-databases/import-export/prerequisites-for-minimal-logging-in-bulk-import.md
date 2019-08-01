@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946572"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307637"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Voraussetzungen für die minimale Protokollierung beim Massenimport
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946572"
   
 -   Die Tabelle wird nicht repliziert.  
   
--   Eine Tabellensperre ist angegeben (mit TABLOCK). Für die Tabelle mit gruppiertem Columnstore-Index ist TABLOCK für eine minimale Protokollierung nicht erforderlich.  Darüber hinaus wird nur die Datenlast in komprimierte Zeilengruppen minimal protokolliert, was eine Batchgröße von 102400 oder höher erfordert.  
+-   Eine Tabellensperre ist angegeben (mit TABLOCK). Für die Tabelle mit gruppiertem Columnstore-Index ist TABLOCK für eine minimale Protokollierung nicht erforderlich.  Darüber hinaus werden nur die in komprimierte Zeilengruppen geladenen Daten minimal protokolliert, was eine Batchgröße von 102400 oder höher erfordert.  
   
     > [!NOTE]  
     >  Obwohl Dateneinfügungen bei einem minimal protokollierten Massenimportvorgang nicht im Transaktionsprotokoll protokolliert werden, protokolliert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] dennoch Blockzuordnungen, wenn der Tabelle ein neuer Block zugeordnet wird.  
@@ -50,17 +49,15 @@ ms.locfileid: "64946572"
   
 -   Falls die Tabelle keinen gruppierten Index, aber mindestens einen nicht gruppierten Index aufweist, werden die Datenseiten immer minimal protokolliert. Wie Indexseiten protokolliert werden, hängt jedoch davon ab, ob die Tabelle leer ist:  
   
-    -   Falls die Tabelle leer ist, werden Indexseiten minimal protokolliert.  
+    -   Falls die Tabelle leer ist, werden Indexseiten minimal protokolliert.  Wenn Sie mit einer leeren Tabelle beginnen und die Daten in mehreren Batches massenimportieren, werden für den ersten Batch sowohl Index- als auch Datenseiten minimal protokolliert. Ab dem zweiten Batch jedoch werden nur Datenseiten minimal protokolliert. 
   
-    -   Falls die Tabelle nicht leer ist, werden Indexseiten vollständig protokolliert.  
+    -   Falls die Tabelle nicht leer ist, werden Indexseiten vollständig protokolliert.    
+
+-   Falls die Tabelle einen gruppierten Index aufweist und leer ist, werden Daten- und Indexseiten minimal protokolliert. Wenn dagegen eine Tabelle einen B-Baum-basierten gruppierten Index aufweist und nicht leer ist, werden Daten- und Indexseiten unabhängig vom Wiederherstellungsmodell vollständig protokolliert. Wenn Sie mit einer leeren Rowstore-Tabelle beginnen und die Daten in Batches massenimportieren, werden für den ersten Batch sowohl Index- als auch Datenseiten minimal protokolliert. Ab dem zweiten Batch werden jedoch nur Datenseiten massenprotokolliert.
+
+- Informationen zur Protokollierung für einen gruppierten Columnstore-Index finden Sie im [Leitfaden zum Laden von Daten in einen Columnstore-Index](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   
-        > [!NOTE]  
-        >  Wenn Sie mit einer leeren Tabelle beginnen und die Daten in mehreren Batches massenimportieren, werden für den ersten Batch sowohl Index- als auch Datenseiten minimal protokolliert. Ab dem zweiten Batch jedoch werden nur Datenseiten minimal protokolliert.  
-  
--   Falls die Tabelle einen gruppierten Index aufweist und leer ist, werden Daten- und Indexseiten minimal protokolliert. Wenn dagegen eine Tabelle einen auf BTree basierenden gruppierten Index aufweist und nicht leer ist, werden Daten- und Indexseiten unabhängig vom Wiederherstellungsmodell vollständig protokolliert. Bei Tabellen mit gruppiertem Columnstore-Index wird die Datenlast in die komprimierte Zeilengruppe bei Batchgröße > = 102400 immer minimal protokolliert – unabhängig davon, ob die Tabelle leer ist.  
-  
-    > [!NOTE]  
-    >  Wenn Sie mit einer leeren Rowstore-Tabelle beginnen und die Daten in Batches massenimportieren, werden für den ersten Batch sowohl Index- als auch Datenseiten minimal protokolliert. Ab dem zweiten Batch werden jedoch nur Datenseiten massenprotokolliert.  
+
   
 > [!NOTE]  
 >  Wenn die Transaktionsreplikation aktiviert ist, werden BULK INSERT-Vorgänge auch unter dem massenprotokollierten Wiederherstellungsmodell vollständig protokolliert.  

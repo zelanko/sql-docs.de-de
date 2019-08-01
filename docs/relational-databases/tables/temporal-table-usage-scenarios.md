@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999364"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Verwendungsszenarien für temporale Tabellen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ FROM Employee
 > Wenn Sie AT TIME ZONE auf Zeitraumspalten anwenden, führt SQL Server einen Tabellen-/Indexscanvorgang durch, der sehr teuer sein kann. Vermeiden Sie folgenden Bedingungstyp in Ihren Abfragen:  
 > \<Zeitraumspalte>  AT ZEIT ZONE „\<Ihre Zeitzone>“  >  {< | > | =, …} date_condition.  
   
- Weitere Informationen finden Sie unter [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
+ Siehe auch: [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
 ## <a name="point-in-time-analysis-time-travel"></a>Zeitpunktanalyse (Zeitreise)  
  Im Gegensatz zur Datenüberwachung, bei der der Schwerpunkt in der Regel auf Änderungen liegt, die an einem einzelnen Datensatz vorgenommen wurden, möchten Benutzer in Zeitreiseszenarien sehen, wie sich der gesamte Dataset im Verlauf der Zeit geändert hat. Zeitreisen umfassen gelegentlich mehrere verknüpfte temporale Tabellen, die sich alle in unterschiedlichem Tempo ändern, die Sie analysieren möchten:  
@@ -427,11 +426,11 @@ FROM CTE
   
  Es gibt verschiedene Kategorien von langsam veränderlichen Dimensionen basierend darauf, wie der Änderungsverlauf beibehalten wird:  
   
--   Typ 0: Verlauf wird nicht beibehalten. Dimensionsattribute spiegeln die ursprünglichen Werte wider.  
+-   Typ 0:  Verlauf wird nicht beibehalten. Dimensionsattribute spiegeln die ursprünglichen Werte wider.  
   
--   Typ 1: Dimensionsattribute reflektieren die aktuellen Werte (die vorherigen Werte werden überschrieben).  
+-   Typ 1:  Dimensionsattribute reflektieren die aktuellen Werte (die vorherigen Werte werden überschrieben).  
   
--   Typ 2: Jede Version des Dimensionselements wird mit einer separaten Zeile in der Tabelle dargestellt, in der Regel mit Spalten, die die Gültigkeitsdauer angeben.  
+-   Typ 2:  Jede Version des Dimensionselements wird mit einer separaten Zeile in der Tabelle dargestellt, in der Regel mit Spalten, die die Gültigkeitsdauer angeben.  
   
 -   Typ 3: Der Verlauf wird für ausgewählte Attribute mit zusätzlichen Spalten in der gleichen Zeile eingeschränkt aufbewahrt.  
   
@@ -580,7 +579,7 @@ Wenn ein neu aktualisierter Wert nicht korrekt ist, ist die Wiederherstellung de
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Temporale Tabellen](../../relational-databases/tables/temporal-tables.md)   
  [Erste Schritte mit temporalen Tabellen mit Systemversionsverwaltung](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Systemkonsistenzprüfungen von temporalen Tabellen](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd3e274f1a8616c0d0aa9d54bcdd84a35d6936ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d24cc29fd35694ab69ad006498d3456d3ade68e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111010"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47777869"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|2601|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
@@ -43,7 +42,7 @@ ms.locfileid: "47777869"
   
 -   Es wird eine Tabelle mit einer Identitätsspalte verwendet, die Spalte wird jedoch nicht ordnungsgemäß verwaltet.  
   
--   Bei der Mergereplikation kann dieser Fehler auch während eines INSERTs in die **MSmerge_contents**-Systemtabelle ausgelöst werden; die Fehlermeldung lautet dann ungefähr folgendermaßen: Eine Zeile mit doppeltem Schlüssel kann in das 'MSmerge_contents'-Objekt mit dem eindeutigen 'ucl1SycContents'-Index nicht eingefügt werden.  
+-   Bei der Mergereplikation kann dieser Fehler auch während eines Einfügens in die Systemtabelle **MSmerge_contents** auftreten. Der Fehler sieht in etwa wie folgt aus: Die doppelte Schlüsselzeile kann nicht in das MSmerge_contents-Objekt mit dem eindeutigen Index „ucl1SycContents“ eingefügt werden.  
   
 ## <a name="user-action"></a>Benutzeraktion  
  Die erforderliche Aktion hängt davon ab, weshalb der Fehler ausgelöst wurde:  
@@ -64,7 +63,7 @@ ms.locfileid: "47777869"
   
      Dieser Fehler kann auftreten, wenn für die Joinsfiltereigenschaft **join_unique_key**ein falscher Wert festgelegt wurde. Diese Eigenschaft sollte nur auf TRUE festgelegt werden, wenn die verknüpfte Spalte in der übergeordneten Tabelle eindeutig ist. Wenn die Eigenschaft auf TRUE festgelegt ist, die Spalte jedoch nicht eindeutig ist, wird dieser Fehler ausgelöst. Weitere Informationen zum Festlegen dieser Eigenschaft finden Sie unter [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

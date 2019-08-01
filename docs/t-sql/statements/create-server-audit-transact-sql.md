@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117142"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ CREATE SERVER AUDIT audit_name
  MAXSIZE = { *max_size }*  
  Gibt die maximale Größe an, die die Überwachungsdatei annehmen kann. Der Wert von *max_size* muss eine ganze Zahl gefolgt von MB, GB, TB oder UNLIMITED sein. Die minimale Größe, die Sie für *max_size* angeben können, beträgt 2 MB, und die maximale Größe beträgt 2.147.483.647 TB. Wird UNLIMITED angegeben, kann die Größe der Datei so lange zunehmen, bis auf dem Datenträger kein Speicherplatz mehr verfügbar ist. (0 steht ebenfalls für UNLIMITED.) Die Angabe eines Werts kleiner als 2 MB löst den Fehler MSG_MAXSIZE_TOO_SMALL aus. Der Standardwert ist UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  Gibt die maximale Anzahl der Dateien an, die im Dateisystem zusätzlich zur aktuellen Datei beibehalten werden. Der Wert *MAX_ROLLOVER_FILES* muss eine Ganzzahl oder UNLIMITED sein. Der Standardwert ist UNLIMITED. Dieser Parameter wird ausgewertet, sobald die Überwachung neu gestartet wird (z.B. wenn die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] neu gestartet oder die Überwachung deaktiviert und wieder aktiviert wird) oder wenn eine neue Datei benötigt wird, da MAXSIZE erreicht wurde. Wenn die Anzahl der Dateien bei der Auswertung des Werts von *MAX_ROLLOVER_FILES* die Einstellung für *MAX_ROLLOVER_FILES* überschreitet, wird die älteste Datei gelöscht. Wenn die Einstellung für *MAX_ROLLOVER_FILES* 0 lautet, wird folglich bei jeder Auswertung der Einstellung für *MAX_ROLLOVER_FILES* eine neue Datei erstellt. Bei der Auswertung der Einstellung für *MAX_ROLLOVER_FILES* wird nur eine Datei automatisch gelöscht. Wenn der Wert von *MAX_ROLLOVER_FILES* also sinkt, verringert sich die Anzahl der Dateien nur dann, wenn alte Dateien manuell gelöscht werden. Der Maximalwert für die Anzahl der Dateien beträgt 2.147.483.647.  
   
  MAX_FILES =*integer*  

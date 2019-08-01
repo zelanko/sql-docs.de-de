@@ -50,13 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: deac964cb20d64d7a1dc2d1cc1e76f5004d80033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c91c4e9a432992475daef8a987dea2dc9adf913
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803289"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290375"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Konfigurieren von Windows-Dienstkonten und -Berechtigungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ ms.locfileid: "66803289"
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Client** – Mindestens ein Distributed Replay-Clientcomputer, der mit einem Distributed Replay-Controller zusammenarbeitet, um gleichzeitige Arbeitsauslastungen für eine [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz zu simulieren.  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  – Ein vertrauenswürdiger Dienst, der von Microsoft bereitgestellte externe ausführbare Dateien hostet, beispielsweise die R-Laufzeitumgebung, die im Rahmen von [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]installiert wird. Satellitenprozesse können durch den Launchpad-Prozess gestartet werden, deren Ressourcen werden jedoch gemäß Konfiguration der einzelnen Instanzen verwaltet. Der Launchpad-Dienst wird unter seinem eigenen Benutzerkonto ausgeführt, und jeder Satellitenprozess einer bestimmten registrierten Laufzeit übernimmt das Benutzerkonto von Launchpad. Satellitenprozesse werden zur Ausführungszeit nach Bedarf erstellt und zerstört.
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  : Ein vertrauenswürdiger Dienst, der externe ausführbare Dateien hostet, die von Microsoft bereitgestellt werden, z. B. R-oder Python-Runtimes, die als Teil von R Services oder Machine Learning Services installiert werden. Satellitenprozesse können durch den Launchpad-Prozess gestartet werden, deren Ressourcen werden jedoch gemäß Konfiguration der einzelnen Instanzen verwaltet. Der Launchpad-Dienst wird unter seinem eigenen Benutzerkonto ausgeführt, und jeder Satellitenprozess einer bestimmten registrierten Laufzeit übernimmt das Benutzerkonto von Launchpad. Satellitenprozesse werden zur Ausführungszeit nach Bedarf erstellt und zerstört.
 
     Launchpad kann nicht die Konten erstellen, die Launchpad verwendet, wenn Sie SQL Server auf einem Computer installieren, der auch als Domänencontroller verwendet wird. Daher tritt bei der Installation von R Services (datenbankintern) oder Machine Learning-Services (datenbankintern) auf einem Domänencontroller ein Fehler auf.
 
@@ -232,7 +231,7 @@ In der folgenden Tabelle sind die [!INCLUDE[ssNoVersion](../../includes/ssnovers
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT, CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
+|R Services oder Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |PolyBase-Engine| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT, PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  \*Weitere Informationen und eine Beispielsyntax zu unbeaufsichtigten Installationen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
@@ -301,8 +300,8 @@ In diesem Abschnitt werden die Berechtigungen beschrieben, die beim [!INCLUDE[ss
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**Als Dienst anmelden** (SeServiceLogonRight)|  
 |**PolyBase-Engine und DMS**| **Als Dienst anmelden** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Als Dienst anmelden** (SeServiceLogonRight) <br /><br /> **Token auf Prozessebene ersetzen** (SeAssignPrimaryTokenPrivilege)<br /><br />**Traversierungsüberprüfung umgehen** (SeChangeNotifyPrivilege)<br /><br />**Speicherkontingente für einen Prozess anpassen** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup** (SQL 2016 und 2017)  |**Lokales Anmelden zulassen** |   
-|**Machine Learning** '**Alle Anwendungspakete' [AppContainer]** (SQL 2019)  |**Lese- und Ausführungsberechtigungen** für SQL Server 'Binn' R_Services- und PYTHON_Services-Verzeichnisse |   
+|**R Services/Machine Learning Services:** **SQLRUserGroup** (SQL 2016 und 2017)  |Verfügt standardmäßig nicht über die Berechtigung **Lokale Anmeldung zulassen** |   
+|**Machine Learning Services** „**Alle Anwendungspakete“ [App-Container]** (SQL 2019)  |**Lese- und Ausführungsberechtigungen** für SQL Server 'Binn' R_Services- und PYTHON_Services-Verzeichnisse |   
 
  \*Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst ist auf [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Instanzen deaktiviert.  
   

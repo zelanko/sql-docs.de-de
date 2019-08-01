@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793734"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354603"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Konfigurieren verteilter Always On-Verfügbarkeitsgruppen  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->Im vorherigen Beispiel wird direktes Seeding verwendet, wobei **SEEDING_MODE** sowohl für die Replikate als auch für die verteilte Verfügbarkeitsgruppe auf **AUTOMATIC** festgelegt ist. Diese Konfiguration legt fest, dass die sekundären Replikate und sekundären Verfügbarkeitsgruppen automatisch aufgefüllt werden, ohne eine manuelle Sicherung und Wiederherstellung der primären Datenbank erforderlich zu machen.  
+>Im vorherigen Beispiel wird automatisches Seeding verwendet, wobei **SEEDING_MODE** sowohl für die Replikate als auch für die verteilte Verfügbarkeitsgruppe auf **AUTOMATIC** festgelegt ist. Diese Konfiguration legt fest, dass die sekundären Replikate und sekundären Verfügbarkeitsgruppen automatisch aufgefüllt werden, ohne eine manuelle Sicherung und Wiederherstellung der primären Datenbank erforderlich zu machen.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>Verknüpfen der sekundären Replikate mit der primären Verfügbarkeitsgruppe  
-Alle sekundären Replikate müssen mithilfe von **ALTER AVAILABILITY GROUP** mit der Option **JOIN** mit der Verfügbarkeitsgruppe verknüpft werden. Da in diesem Beispiel direktes Seeding verwendet wird, müssen Sie außerdem  **ALTER AVAILABILITY GROUP** mit der Option **GRANT CREATE ANY DATABASE** aufrufen. Diese Einstellung ermöglicht der Verfügbarkeitsgruppe, die Datenbank zu erstellen und mit dem automatischen Seeding aus dem ersten Replikat zu beginnen.  
+Alle sekundären Replikate müssen mithilfe von **ALTER AVAILABILITY GROUP** mit der Option **JOIN** mit der Verfügbarkeitsgruppe verknüpft werden. Da in diesem Beispiel automatisches Seeding verwendet wird, müssen Sie außerdem **ALTER AVAILABILITY GROUP** mit der Option **GRANT CREATE ANY DATABASE** aufrufen. Diese Einstellung ermöglicht der Verfügbarkeitsgruppe, die Datenbank zu erstellen und mit dem automatischen Seeding aus dem ersten Replikat zu beginnen.  
   
 In diesem Beispiel werden die folgenden Befehle auf dem sekundären Replikat `server2`ausgeführt, um die Verknüpfung mit der Verfügbarkeitsgruppe `ag1` herzustellen. Der Verfügbarkeitsgruppe ist es damit gestattet, Datenbanken auf dem sekundären Replikat zu erstellen.  
   
@@ -136,7 +135,7 @@ GO
 > Die sekundäre Verfügbarkeitsgruppe muss denselben Endpunkt für die Datenbankspiegelung verwenden (in diesem Beispiel Port 5022). Andernfalls wird die Replikation nach einem lokalen Failover beendet.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>Verknüpfen der sekundären Replikate mit der sekundären Verfügbarkeitsgruppe  
- In diesem Beispiel werden die folgenden Befehle auf dem sekundären Replikat `server4`ausgeführt, um die Verknüpfung mit der Verfügbarkeitsgruppe `ag2` herzustellen. Der Verfügbarkeitsgruppe wird dann gestattet, Datenbanken auf dem sekundären Replikat zu erstellen, um das direkte Seeding zu unterstützen.  
+ In diesem Beispiel werden die folgenden Befehle auf dem sekundären Replikat `server4`ausgeführt, um die Verknüpfung mit der Verfügbarkeitsgruppe `ag2` herzustellen. Der Verfügbarkeitsgruppe wird dann erlaubt, Datenbanken auf dem sekundären Replikat zu erstellen, um das automatische Seeding zu unterstützen.  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   

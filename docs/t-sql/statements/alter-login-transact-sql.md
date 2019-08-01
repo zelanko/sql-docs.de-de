@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1273f4fc87728aa30cec9bc51cb119fc2c51551
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 3fb9ce4696ffea2c345eeaeca769dda6548a9ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071309"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -46,12 +45,12 @@ Klicken Sie in der folgenden Zeile auf den Namen des Produkts, das Sie am meiste
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**\* _SQL Server \*_** &nbsp;|[SQL-Datenbank<br />Singleton/Pool für elastische Datenbanken](alter-login-transact-sql.md?view=azuresqldb-current)|[SQL-Datenbank<br />verwaltete Instanz](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
 
-## <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Syntax
 
@@ -97,22 +96,22 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Aktiviert oder deaktiviert diese Anmeldung. Das Deaktivieren einer Anmeldung wirkt sich nicht auf das Verhalten der bereits verbundenen Anmeldungen aus. (Verwenden Sie die `KILL`-Anweisung, um eine vorhandene Verbindung zu beenden.) Deaktivierte Anmeldungen behalten ihre Berechtigungen bei und sind weiterhin für den Identitätswechsel verfügbar.
 
-PASSWORD **='**_password_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+PASSWORD **='** _password_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
-PASSWORD **=**_hashed\_password_ Gilt nur für das HASHED-Schlüsselwort. Gibt den Hashwert des Kennworts für den Anmeldenamen an, der erstellt wird.
+PASSWORD **=** _hashed\_password_ Gilt nur für das HASHED-Schlüsselwort. Gibt den Hashwert des Kennworts für den Anmeldenamen an, der erstellt wird.
 
 > [!IMPORTANT]
 > Wenn für eine Anmeldung (oder den Benutzer einer eigenständigen Datenbank) eine Verbindung hergestellt und diese authentifiziert wird, werden von der Verbindung Identitätsinformationen zur Anmeldung zwischengespeichert. Bei einer Anmeldung unter Verwendung der Windows-Authentifizierung umfassen die Informationen Angaben zur Mitgliedschaft in Windows-Gruppen. Die Identität der Anmeldung bleibt für die Dauer der Verbindung authentifiziert. Um Identitätsänderungen zu erzwingen, z. B. das Zurücksetzen eines Kennworts oder eine Änderung der Windows-Gruppenmitgliedschaft, muss die Anmeldung von der Authentifizierungsstelle (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) abgemeldet und erneut angemeldet werden. Ein Mitglied der festen Serverrolle **sysadmin** oder eine beliebige Anmeldung mit der **ALTER ANY CONNECTION** -Berechtigung kann den **KILL** -Befehl verwenden, um eine Verbindung zu beenden und zu erzwingen, dass für eine Anmeldung eine erneute Verbindung hergestellt wird. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist in der Lage, Verbindungsinformationen wiederzuverwenden, wenn mehrere Verbindungen mit dem Fenster Objekt-Explorer und Abfrage-Editor hergestellt werden. Schließen Sie alle Verbindungen, um eine erneute Verbindung zu erzwingen.
 
 HASHED Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Gibt an, dass das nach dem PASSWORD-Argument eingegebene Kennwort bereits einen Hashwert darstellt. Wenn diese Option nicht ausgewählt wird, wird aus dem Kennwort vor dem Speichern in der Datenbank ein Hashwert erstellt. Diese Option sollte nur für die Anmeldungssynchronisierung zwischen zwei Servern verwendet werden. Verwenden Sie die HASHED-Option nicht, um Kennwörter routinemäßig zu ändern.
 
-OLD_PASSWORD **='**_oldpassword_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+OLD_PASSWORD **='** _oldpassword_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 MUST_CHANGE Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Falls diese Option angegeben wird, fordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Eingabe eines aktualisierten Kennworts auf, wenn die geänderte Anmeldung zum ersten Mal verwendet wird.
 
-DEFAULT_DATABASE **=**_database_ Gibt eine Standarddatenbank an, die der Anmeldung zugewiesen werden soll.
+DEFAULT_DATABASE **=** _database_ Gibt eine Standarddatenbank an, die der Anmeldung zugewiesen werden soll.
 
-DEFAULT_LANGUAGE **=**_language_ Gibt eine Standardsprache an, die der Anmeldung zugewiesen werden soll. Die Standardsprache für alle SQL-Datenbank-Anmeldungen ist Englisch und kann nicht geändert werden. Die Standardsprache der `sa`-Anmeldung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux ist Englisch. Diese kann jedoch geändert werden.
+DEFAULT_LANGUAGE **=** _language_ Gibt eine Standardsprache an, die der Anmeldung zugewiesen werden soll. Die Standardsprache für alle SQL-Datenbank-Anmeldungen ist Englisch und kann nicht geändert werden. Die Standardsprache der `sa`-Anmeldung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux ist Englisch. Diese kann jedoch geändert werden.
 
 NAME = *login_name* Der neue Name der Anmeldung, die umbenannt wird. Falls es sich dabei um eine Windows-Anmeldung handelt, muss die SID des entsprechenden Windows-Prinzipals für den neuen Namen mit der SID übereinstimmen, die der Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist. Der neue Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung darf keinen umgekehrten Schrägstrich (\\) enthalten.
 
@@ -273,7 +272,7 @@ GO
 
 ## <a name="azure-sql-database-single-databaseelastic-pool"></a>Azure SQL-Datenbank Singleton/Pool für elastische Datenbanken
 
-## <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
 
 ## <a name="syntax"></a>Syntax
 
@@ -304,14 +303,14 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Aktiviert oder deaktiviert diese Anmeldung. Das Deaktivieren einer Anmeldung wirkt sich nicht auf das Verhalten der bereits verbundenen Anmeldungen aus. (Verwenden Sie die `KILL`-Anweisung, um eine vorhandene Verbindung zu beenden.) Deaktivierte Anmeldungen behalten ihre Berechtigungen bei und sind weiterhin für den Identitätswechsel verfügbar.
 
-PASSWORD **='**_password_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+PASSWORD **='** _password_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 Ständig aktive Verbindungen mit SQL-Datenbank erfordern alle 10 Stunden eine erneute Authentifizierung, die von der Datenbank-Engine durchgeführt. Die Datenbank-Engine versucht, eine erneute Authentifizierung mit dem ursprünglich übermittelten Kennwort durchzuführen. Dabei ist keine Eingabe des Benutzers erforderlich. Aus Leistungsgründen wird die Verbindung nicht erneut authentifiziert, wenn ein Kennwort in SQL-Datenbank zurückgesetzt wird. Dies ist auch nicht der Fall, wenn die Verbindung aufgrund von Verbindungspooling zurückgesetzt wird. Dies unterscheidet sich von dem Verhalten von SQL Server (lokal). Wenn das Kennwort nach der ersten Authentifizierung der Verbindung geändert wurde, muss diese Verbindung beendet und eine neue unter Verwendung des neuen Kennworts hergestellt werden. Ein Benutzer mit der KILL DATABASE CONNECTION-Berechtigung kann eine Verbindung mit SQL-Datenbank mit dem Befehl KILL explizit beenden. Weitere Informationen finden Sie unter [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Wenn für eine Anmeldung (oder den Benutzer einer eigenständigen Datenbank) eine Verbindung hergestellt und diese authentifiziert wird, werden von der Verbindung Identitätsinformationen zur Anmeldung zwischengespeichert. Bei einer Anmeldung unter Verwendung der Windows-Authentifizierung umfassen die Informationen Angaben zur Mitgliedschaft in Windows-Gruppen. Die Identität der Anmeldung bleibt für die Dauer der Verbindung authentifiziert. Um Identitätsänderungen zu erzwingen, z. B. das Zurücksetzen eines Kennworts oder eine Änderung der Windows-Gruppenmitgliedschaft, muss die Anmeldung von der Authentifizierungsstelle (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) abgemeldet und erneut angemeldet werden. Ein Mitglied der festen Serverrolle **sysadmin** oder eine beliebige Anmeldung mit der **ALTER ANY CONNECTION** -Berechtigung kann den **KILL** -Befehl verwenden, um eine Verbindung zu beenden und zu erzwingen, dass für eine Anmeldung eine erneute Verbindung hergestellt wird. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist in der Lage, Verbindungsinformationen wiederzuverwenden, wenn mehrere Verbindungen mit dem Fenster Objekt-Explorer und Abfrage-Editor hergestellt werden. Schließen Sie alle Verbindungen, um eine erneute Verbindung zu erzwingen.
 
-OLD_PASSWORD **='**_oldpassword_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+OLD_PASSWORD **='** _oldpassword_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 NAME = *login_name* Der neue Name der Anmeldung, die umbenannt wird. Falls es sich dabei um eine Windows-Anmeldung handelt, muss die SID des entsprechenden Windows-Prinzipals für den neuen Namen mit der SID übereinstimmen, die der Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist. Der neue Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung darf keinen umgekehrten Schrägstrich (\\) enthalten.
 
@@ -498,21 +497,21 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Aktiviert oder deaktiviert diese Anmeldung. Das Deaktivieren einer Anmeldung wirkt sich nicht auf das Verhalten der bereits verbundenen Anmeldungen aus. (Verwenden Sie die `KILL`-Anweisung, um eine vorhandene Verbindung zu beenden.) Deaktivierte Anmeldungen behalten ihre Berechtigungen bei und sind weiterhin für den Identitätswechsel verfügbar.
 
-DEFAULT_DATABASE **=**_database_ Gibt eine Standarddatenbank an, die der Anmeldung zugewiesen werden soll.
+DEFAULT_DATABASE **=** _database_ Gibt eine Standarddatenbank an, die der Anmeldung zugewiesen werden soll.
 
-DEFAULT_LANGUAGE **=**_language_ Gibt eine Standardsprache an, die der Anmeldung zugewiesen werden soll. Die Standardsprache für alle SQL-Datenbank-Anmeldungen ist Englisch und kann nicht geändert werden. Die Standardsprache der `sa`-Anmeldung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux ist Englisch. Diese kann jedoch geändert werden.
+DEFAULT_LANGUAGE **=** _language_ Gibt eine Standardsprache an, die der Anmeldung zugewiesen werden soll. Die Standardsprache für alle SQL-Datenbank-Anmeldungen ist Englisch und kann nicht geändert werden. Die Standardsprache der `sa`-Anmeldung bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Linux ist Englisch. Diese kann jedoch geändert werden.
 
 ### <a name="arguments-applicable-only-to-sql-logins"></a>Argumente für SQL-Anmeldeinformationen
 
-PASSWORD **='**_password_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter gelten außerdem nicht, wenn sie mit externen Anmeldeinformationen wie Azure AD-Anmeldeinformationen verwendet werden.
+PASSWORD **='** _password_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter gelten außerdem nicht, wenn sie mit externen Anmeldeinformationen wie Azure AD-Anmeldeinformationen verwendet werden.
 
 Ständig aktive Verbindungen mit SQL-Datenbank erfordern alle 10 Stunden eine erneute Authentifizierung, die von der Datenbank-Engine durchgeführt. Die Datenbank-Engine versucht, eine erneute Authentifizierung mit dem ursprünglich übermittelten Kennwort durchzuführen. Dabei ist keine Eingabe des Benutzers erforderlich. Aus Leistungsgründen wird die Verbindung nicht erneut authentifiziert, wenn ein Kennwort in SQL-Datenbank zurückgesetzt wird. Dies ist auch nicht der Fall, wenn die Verbindung aufgrund von Verbindungspooling zurückgesetzt wird. Dies unterscheidet sich von dem Verhalten von SQL Server (lokal). Wenn das Kennwort nach der ersten Authentifizierung der Verbindung geändert wurde, muss diese Verbindung beendet und eine neue unter Verwendung des neuen Kennworts hergestellt werden. Ein Benutzer mit der KILL DATABASE CONNECTION-Berechtigung kann eine Verbindung mit SQL-Datenbank mit dem Befehl KILL explizit beenden. Weitere Informationen finden Sie unter [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
-PASSWORD **=**_hashed\_password_ Gilt nur für das HASHED-Schlüsselwort. Gibt den Hashwert des Kennworts für den Anmeldenamen an, der erstellt wird.
+PASSWORD **=** _hashed\_password_ Gilt nur für das HASHED-Schlüsselwort. Gibt den Hashwert des Kennworts für den Anmeldenamen an, der erstellt wird.
 
 HASHED Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen. Gibt an, dass das nach dem PASSWORD-Argument eingegebene Kennwort bereits einen Hashwert darstellt. Wenn diese Option nicht ausgewählt wird, wird aus dem Kennwort vor dem Speichern in der Datenbank ein Hashwert erstellt. Diese Option sollte nur für die Anmeldungssynchronisierung zwischen zwei Servern verwendet werden. Verwenden Sie die HASHED-Option nicht, um Kennwörter routinemäßig zu ändern.
 
-OLD_PASSWORD **='**_oldpassword_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+OLD_PASSWORD **='** _oldpassword_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 MUST_CHANGE<br>
 Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Falls diese Option angegeben wird, fordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Eingabe eines aktualisierten Kennworts auf, wenn die geänderte Anmeldung zum ersten Mal verwendet wird.
@@ -711,14 +710,14 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Aktiviert oder deaktiviert diese Anmeldung. Das Deaktivieren einer Anmeldung wirkt sich nicht auf das Verhalten der bereits verbundenen Anmeldungen aus. (Verwenden Sie die `KILL`-Anweisung, um eine vorhandene Verbindung zu beenden.) Deaktivierte Anmeldungen behalten ihre Berechtigungen bei und sind weiterhin für den Identitätswechsel verfügbar.
 
-PASSWORD **='**_password_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+PASSWORD **='** _password_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 Ständig aktive Verbindungen mit SQL-Datenbank erfordern alle 10 Stunden eine erneute Authentifizierung, die von der Datenbank-Engine durchgeführt. Die Datenbank-Engine versucht, eine erneute Authentifizierung mit dem ursprünglich übermittelten Kennwort durchzuführen. Dabei ist keine Eingabe des Benutzers erforderlich. Aus Leistungsgründen wird die Verbindung nicht erneut authentifiziert, wenn ein Kennwort in SQL-Datenbank zurückgesetzt wird. Dies ist auch nicht der Fall, wenn die Verbindung aufgrund von Verbindungspooling zurückgesetzt wird. Dies unterscheidet sich von dem Verhalten von SQL Server (lokal). Wenn das Kennwort nach der ersten Authentifizierung der Verbindung geändert wurde, muss diese Verbindung beendet und eine neue unter Verwendung des neuen Kennworts hergestellt werden. Ein Benutzer mit der KILL DATABASE CONNECTION-Berechtigung kann eine Verbindung mit SQL-Datenbank mit dem Befehl KILL explizit beenden. Weitere Informationen finden Sie unter [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Wenn für eine Anmeldung (oder den Benutzer einer eigenständigen Datenbank) eine Verbindung hergestellt und diese authentifiziert wird, werden von der Verbindung Identitätsinformationen zur Anmeldung zwischengespeichert. Bei einer Anmeldung unter Verwendung der Windows-Authentifizierung umfassen die Informationen Angaben zur Mitgliedschaft in Windows-Gruppen. Die Identität der Anmeldung bleibt für die Dauer der Verbindung authentifiziert. Um Identitätsänderungen zu erzwingen, z. B. das Zurücksetzen eines Kennworts oder eine Änderung der Windows-Gruppenmitgliedschaft, muss die Anmeldung von der Authentifizierungsstelle (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) abgemeldet und erneut angemeldet werden. Ein Mitglied der festen Serverrolle **sysadmin** oder eine beliebige Anmeldung mit der **ALTER ANY CONNECTION** -Berechtigung kann den **KILL** -Befehl verwenden, um eine Verbindung zu beenden und zu erzwingen, dass für eine Anmeldung eine erneute Verbindung hergestellt wird. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist in der Lage, Verbindungsinformationen wiederzuverwenden, wenn mehrere Verbindungen mit dem Fenster Objekt-Explorer und Abfrage-Editor hergestellt werden. Schließen Sie alle Verbindungen, um eine erneute Verbindung zu erzwingen.
 
-OLD_PASSWORD **='**_oldpassword_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+OLD_PASSWORD **='** _oldpassword_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 NAME = *login_name* Der neue Name der Anmeldung, die umbenannt wird. Falls es sich dabei um eine Windows-Anmeldung handelt, muss die SID des entsprechenden Windows-Prinzipals für den neuen Namen mit der SID übereinstimmen, die der Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist. Der neue Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung darf keinen umgekehrten Schrägstrich (\\) enthalten.
 
@@ -835,7 +834,7 @@ GO
 
 &nbsp;
 
-## <a name="analytics-platform-system"></a>Analytics Platform System
+## <a name="analytics-platform-system"></a>Analyseplattformsystem
 
 ## <a name="syntax"></a>Syntax
 
@@ -870,12 +869,12 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Aktiviert oder deaktiviert diese Anmeldung. Das Deaktivieren einer Anmeldung wirkt sich nicht auf das Verhalten der bereits verbundenen Anmeldungen aus. (Verwenden Sie die `KILL`-Anweisung, um eine vorhandene Verbindung zu beenden.) Deaktivierte Anmeldungen behalten ihre Berechtigungen bei und sind weiterhin für den Identitätswechsel verfügbar.
 
-PASSWORD **='**_password_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+PASSWORD **='** _password_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt das Kennwort für die Anmeldung an, die geändert wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 > [!IMPORTANT]
 > Wenn für eine Anmeldung (oder den Benutzer einer eigenständigen Datenbank) eine Verbindung hergestellt und diese authentifiziert wird, werden von der Verbindung Identitätsinformationen zur Anmeldung zwischengespeichert. Bei einer Anmeldung unter Verwendung der Windows-Authentifizierung umfassen die Informationen Angaben zur Mitgliedschaft in Windows-Gruppen. Die Identität der Anmeldung bleibt für die Dauer der Verbindung authentifiziert. Um Identitätsänderungen zu erzwingen, z. B. das Zurücksetzen eines Kennworts oder eine Änderung der Windows-Gruppenmitgliedschaft, muss die Anmeldung von der Authentifizierungsstelle (Windows oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) abgemeldet und erneut angemeldet werden. Ein Mitglied der festen Serverrolle **sysadmin** oder eine beliebige Anmeldung mit der **ALTER ANY CONNECTION** -Berechtigung kann den **KILL** -Befehl verwenden, um eine Verbindung zu beenden und zu erzwingen, dass für eine Anmeldung eine erneute Verbindung hergestellt wird. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist in der Lage, Verbindungsinformationen wiederzuverwenden, wenn mehrere Verbindungen mit dem Fenster Objekt-Explorer und Abfrage-Editor hergestellt werden. Schließen Sie alle Verbindungen, um eine erneute Verbindung zu erzwingen.
 
-OLD_PASSWORD **='**_oldpassword_**'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
+OLD_PASSWORD **='** _oldpassword_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Das aktuelle Kennwort der Anmeldung, der ein neues Kennwort zugewiesen wird. Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 
 MUST_CHANGE Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Falls diese Option angegeben wird, fordert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Eingabe eines aktualisierten Kennworts auf, wenn die geänderte Anmeldung zum ersten Mal verwendet wird.
 

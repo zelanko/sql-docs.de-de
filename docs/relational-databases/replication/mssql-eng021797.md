@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1a52d067879d201b8c003bc985e2bee64c737613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de77394927405bacc279a00e1cf5c1e4755b9461
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022934"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,12 +26,12 @@ ms.locfileid: "47834398"
   
 |||  
 |-|-|  
-|Produktname|SQL Server|  
+|Produktname|SQL Server|  
 |Ereignis-ID|21797|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolischer Name||  
-|Meldungstext|'%1!s!' muss eine gültige Windows-Anmeldung der folgenden Form sein: 'MACHINE\Login' oder 'DOMAIN\Login'. Lesen Sie die Dokumentation zu '%3!s!'.|  
+|Meldungstext|„%s“ muss eine gültige Windows-Anmeldung der folgenden Form sein: "MACHINE Login" oder "DOMAIN Login". Lesen Sie die Dokumentation zu '%3!s!'.|  
   
 ## <a name="explanation"></a>Erklärung  
  Dieser Fehler wird von folgenden gespeicherten Replikationsprozeduren ausgelöst, wenn der für **@job_login** angegebene Parameter Null oder ungültig ist. Dieser Fehler kann auftreten, wenn ein Mitglied der festen Datenbankrolle **db_owner** Skripts aus vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführt. Das Sicherheitsmodell wurde in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]geändert, daher müssen die Skripts aktualisiert werden.  
@@ -56,7 +55,7 @@ ms.locfileid: "47834398"
 ## <a name="user-action"></a>Benutzeraktion  
  Stellen Sie sicher, dass Sie ein gültiges Windows-Konto für den **@job_login** -Parameter der einzelnen Prozeduren angeben. Wenn Sie Replikationsskripts aus vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übernehmen, aktualisieren Sie diese Skripts, sodass sie die für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]erforderlichen gespeicherten Prozeduren und Parameter enthalten. Weitere Informationen finden Sie unter [Aktualisieren von Replikationsskripts &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md).  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

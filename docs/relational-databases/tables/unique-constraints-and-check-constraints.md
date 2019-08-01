@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e6f9b1731e49f110da9ac4dbab5ab782f30ba4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017660"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE- und CHECK-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47735218"
   
  Sie können mehrere CHECK-Einschränkungen auf eine einzelne Spalte anwenden. Es ist auch möglich, eine einzelne CHECK-Einschränkung auf mehrere Spalten anzuwenden, indem die Einschränkung auf Tabellenebene erstellt wird. So könnte z. B. eine CHECK-Einschränkung für mehrere Spalten verwendet werden, um sicherzustellen, dass jede Zeile mit dem Wert **USA** in der **country_region** -Spalte auch einen aus zwei Zeichen bestehenden Wert in der **state** -Spalte aufweist. Auf diese Weise können mehrere Bedingungen an einer Stelle überprüft werden.  
   
- CHECK-Einschränkungen sind insofern FOREIGN KEY-Einschränkungen ähnlich, als sie die Werte kontrollieren, die in eine Spalte geschrieben werden. Sie unterscheiden sich jedoch in der Methode, mit der die gültigen Werte bestimmt werden: FOREIGN KEY-Einschränkungen rufen die Liste der gültigen Werte von einer anderen Tabelle ab, und CHECK-Einschränkungen ermitteln die gültigen Werte anhand eines logischen Ausdrucks.  
+ CHECK-Einschränkungen sind insofern FOREIGN KEY-Einschränkungen ähnlich, als sie die Werte kontrollieren, die in eine Spalte geschrieben werden. Der Unterschied besteht darin, wie sie bestimmen, welche Werte gültig sind: FOREIGN KEY-Einschränkungen rufen die Liste der gültigen Werte von einer anderen Tabelle ab, und CHECK-Einschränkungen ermitteln die gültigen Werte anhand eines logischen Ausdrucks.  
   
 > [!CAUTION]  
 >  Einschränkungen, die implizite oder explizite Datentypkonvertierungen einschließen, können bei bestimmten Vorgängen einen Fehler erzeugen. So können z. B. Einschränkungen, die für Tabellen definiert werden, die ihrerseits die Quellen von Partitionswechseln sind, bei einer ALTER TABLE...SWITCH-Operation zu einem Fehler führen. Vermeiden Sie deshalb die Datentypkonvertierung in Einschränkungsdefinitionen.  

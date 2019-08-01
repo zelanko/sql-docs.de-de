@@ -10,12 +10,12 @@ ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cabfc21ea16192eb7a397b72c4075cedc0a8ea26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b4f227270b201e40b22deb9e3d060407bc0bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126011"
 ---
 # <a name="uninstall-reporting-services"></a>Deinstallieren von Reporting Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47772698"
   
 -   **Temporäre Berichtsserver-Datenbank:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB  
   
--   **Berichtsserver-Warnungsdatenbank:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
+-   **Datenbank für Berichtsserverwarnungen:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting  
   
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>Deinstallation des Add-Ins für SharePoint-Produkte.  
  Wenn Sie das Add-In von einem Computer deinstallieren, können Sie auswählen, ob Sie nur die Dateien entfernen möchten oder auch die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktion von der Farm entfernen möchten. Informationen zur Deinstallation des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-Ins für SharePoint-Produkte finden Sie unter [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "47772698"
   
 5.  Schließen Sie den Assistenten ab.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

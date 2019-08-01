@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070334"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52420374"
   
  Eine Sequenz ist ein benutzerdefiniertes schemagebundenes Objekt, das anhand einer Spezifikation eine Reihe von numerischen Werten generiert. Neue Werte werden aus einer Sequenz generiert, indem die NEXT VALUE FOR-Funktion aufgerufen wird. Mit **sp_sequence_get_range** können Sie mehrere Sequenznummern gleichzeitig abrufen. Informationen und Szenarios, in denen die CREATE SEQUENCE-Funktion, **sp_sequence_get_range** und die NEXT VALUE FOR-Funktion verwendet werden, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  Beispiele zum Erstellen von Sequenzen und Verwenden der **NEXT VALUE FOR**-Funktion für das Generieren von Sequenznummern finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### <a name="a-altering-a-sequence"></a>A. Ändern einer Sequenz  
- Im folgenden Beispiel werden das Schema „Test“ und die Sequenz „TestSeq“ mit dem **int**-Datentyp und einem Bereich von 0 bis 255 erstellt. Die Sequenz beginnt mit 125 und wird immer um 25 inkrementiert, wenn eine Zahl generiert wurde. Da die Sequenz zum Durchlaufen konfiguriert wurde, wird sie beim Überschreiten des maximalen Werts von 200 beim minimalen Wert von 100 neu gestartet.  
+ Im folgenden Beispiel werden das Schema „Test“ und die Sequenz „TestSeq“ mit dem **int**-Datentyp und einem Bereich von 100 bis 200 erstellt. Die Sequenz beginnt mit 125 und wird immer um 25 inkrementiert, wenn eine Zahl generiert wurde. Da die Sequenz zum Durchlaufen konfiguriert wurde, wird sie beim Überschreiten des maximalen Werts von 200 beim minimalen Wert von 100 neu gestartet.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- Im folgenden Beispiel wird die Sequenz „TestSeq“ so geändert, dass sie über einen Bereich von 0 bis 255 verfügt. Die Nummerierung wird von der Sequenz bei 100 neu gestartet und wird immer um 50 inkrementiert, wenn eine Zahl generiert wurde.  
+ Im folgenden Beispiel wird die Sequenz „TestSeq“ so geändert, dass sie über einen Bereich von 50 bis 200 verfügt. Die Nummerierung wird von der Sequenz bei 100 neu gestartet und wird immer um 50 inkrementiert, wenn eine Zahl generiert wurde.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  
@@ -178,7 +177,7 @@ ALTER SEQUENCE Test.CountBy1
   
  Der Besitzer hat festgestellt, dass der **bigint**-Datentyp jeweils 8 Byte verwendet. Der **int**-Datentyp, der 4 Byte verwendet, ist ausreichend. Der Datentyp eines Sequenzobjekts kann jedoch nicht geändert werden. Eine Änderung in den **int**-Datentyp erfordert das Löschen des Sequenzobjekts durch den Besitzer und das Neuerstellen des Objekts mit dem korrekten Datentyp.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   

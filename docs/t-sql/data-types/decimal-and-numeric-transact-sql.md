@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37c2ec562f0207edcf67cb8ef9a59c2710c921b8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086741"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal und numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "56802019"
 Numerische Datentypen mit fester Genauigkeit und fester Anzahl von Dezimalstellen. decimal und numeric sind Synonyme und können austauschbar verwendet werden.
   
 ## <a name="arguments"></a>Argumente  
-**decimal**[ **(**_p_[ **,**_s_] **)**] und **numeric**[ **(**_p_[ **,**_s_] **)**]  
-Zahlen mit fester Genauigkeit und mit fester Anzahl von Dezimalstellen. Wenn maximale Genauigkeit verwendet wird, liegen gültige Werte zwischen - 10^38 +1 und 10^38 - 1. Die ISO-Synonyme für **decimal** lauten **dec** und **dec(**_p_, _s_**)**. Die Funktion von **numeric** ist mit der von **decimal** identisch.
+**decimal**[ **(** _p_[ **,** _s_] **)** ] und **numeric**[ **(** _p_[ **,** _s_] **)** ]  
+Zahlen mit fester Genauigkeit und mit fester Anzahl von Dezimalstellen. Wenn maximale Genauigkeit verwendet wird, liegen gültige Werte zwischen - 10^38 +1 und 10^38 - 1. Die ISO-Synonyme für **decimal** lauten **dec** und **dec(** _p_, _s_ **)** . Die Funktion von **numeric** ist mit der von **decimal** identisch.
   
 p (Precision = Genauigkeit)  
 Die maximale Gesamtanzahl der zu speichernden Dezimalstellen. Diese Zahl schließt die Ziffern links und rechts des Dezimaltrennzeichens ein. Die Genauigkeit muss ein Wert zwischen 1 und der maximalen Genauigkeit von 38 sein. Die Standardgenauigkeit beträgt 18.

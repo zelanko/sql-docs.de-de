@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006524"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ Erstellt eine gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]- oder CLR
   
 -   Annehmen von Eingabeparametern und Zurückgeben mehrerer Werte in Form von Ausgabeparametern an die aufrufende Prozedur oder den aufrufenden Batch.  
   
--   Aufnehmen von Programmierungsanweisungen, die Operationen in der Datenbank ausführen, einschließlich des Aufrufens anderer Prozeduren.  
+-   Aufnehmen von Programmierungsanweisungen, die Vorgänge in der Datenbank ausführen, einschließlich des Aufrufens anderer Prozeduren.  
   
 -   Zurückgeben eines Statuswertes an eine aufrufende Prozedur oder einen aufrufenden Batch, der Erfolg oder Fehlschlagen (sowie die Ursache für das Fehlschlagen) anzeigt.  
   
@@ -157,7 +156,7 @@ OR ALTER
   
  Beim Benennen von Prozeduren sollten Sie das Präfix **_sp** vermeiden. Dieses Präfix wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um Systemprozeduren zu bestimmen. Das Verwenden des Präfixes kann zur Beschädigung von Anwendungscode führen, falls eine Systemprozedur mit dem gleichen Namen vorhanden ist.  
   
- Lokale oder globale temporäre Prozeduren können erstellt werden, indem *procedure_name* ein einzelnes Nummernzeichen (#) (*#procedure_name*) für lokale temporäre Prozeduren und ein doppeltes Nummernzeichen (*##procedure_name*) für globale temporäre Prozeduren vorangestellt wird. Eine lokale temporäre Prozedur ist nur für die Verbindung sichtbar, von der sie erstellt wurde. Die Prozedur wird automatisch gelöscht, wenn die Verbindung geschlossen wird. Eine globale temporäre Prozedur ist für alle Verbindungen verfügbar und wird am Ende der letzten Sitzung gelöscht, die die Prozedur verwendet. Für CLR-Prozeduren können keine temporären Namen angegeben werden.  
+ Lokale oder globale temporäre Prozeduren können erstellt werden, indem *procedure_name* ein einzelnes Nummernzeichen (#) ( *#procedure_name*) für lokale temporäre Prozeduren und ein doppeltes Nummernzeichen ( *##procedure_name*) für globale temporäre Prozeduren vorangestellt wird. Eine lokale temporäre Prozedur ist nur für die Verbindung sichtbar, von der sie erstellt wurde. Die Prozedur wird automatisch gelöscht, wenn die Verbindung geschlossen wird. Eine globale temporäre Prozedur ist für alle Verbindungen verfügbar und wird am Ende der letzten Sitzung gelöscht, die die Prozedur verwendet. Für CLR-Prozeduren können keine temporären Namen angegeben werden.  
   
  Der vollständige Name einer Prozedur oder einer globalen temporären Prozedur, einschließlich ##, darf 128 Zeichen nicht überschreiten. Der vollständige Name einer lokalen temporären Prozedur, einschließlich #, darf 116 Zeichen nicht überschreiten.  
   
@@ -172,13 +171,13 @@ OR ALTER
  Nummerierte Prozeduren können nicht den **xml**-Typ oder benutzerdefinierte CLR-Typen verwenden und können nicht in einer Planhinweisliste verwendet werden.  
   
  **@** *parameter*  
- Ein in der Prozedur deklarierter Parameter. Geben Sie einen Parameternamen an, der mit dem „at“-Zeichen (**@**) beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Prozedur, d. h., dass Sie die gleichen Parameternamen in anderen Prozeduren verwenden können.  
+ Ein in der Prozedur deklarierter Parameter. Geben Sie einen Parameternamen an, der mit dem „at“-Zeichen ( **@** ) beginnt. Der Parametername muss den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Parameter gelten lokal in der jeweiligen Prozedur, d. h., dass Sie die gleichen Parameternamen in anderen Prozeduren verwenden können.  
   
  Mindestens ein Parameter (maximal 2.100) kann deklariert werden. Der Benutzer muss beim Aufrufen der Prozedur den Wert jedes deklarierten Parameters bereitstellen, sofern kein Standardwert für den Parameter definiert oder der Wert nicht auf den eines anderen Parameters festgelegt ist. Wenn eine Prozedur [Tabellenwertparameter](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) enthält und der Parameter im Aufruf fehlt, wird eine leere Tabelle übergeben. Parameter können nur die Stelle von Konstantenausdrücken einnehmen. Sie können nicht anstelle von Tabellennamen, Spaltennamen oder Namen anderer Datenbankobjekte verwendet werden. Weitere Informationen finden Sie unter [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
  Parameter können nicht deklariert werden, wenn FOR REPLICATION angegeben ist.  
   
- [ _type\_schema\_name_**.** ] *data_type*  
+ [ _type\_schema\_name_ **.** ] *data_type*  
  Der Datentyp des Parameters und das Schema, zu dem der Datenbanktyp gehört.  
   
 **Richtlinien für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren:**  
@@ -228,7 +227,7 @@ ENCRYPTION
 EXECUTE AS-*Klausel*  
  Gibt den Sicherheitskontext an, unter dem die Prozedur ausgeführt wird.  
   
- Für nativ kompilierte gespeicherte Prozeduren, die mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] beginnen, bestehen keine Einschränkungen für die EXECUTE AS-Klausel. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] werden die SELF-, OWNER- und *'user_name'*-Klauseln bei nativ kompilierten gespeicherten Prozeduren unterstützt.  
+ Für nativ kompilierte gespeicherte Prozeduren, die mit [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] beginnen, bestehen keine Einschränkungen für die EXECUTE AS-Klausel. In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] werden die SELF-, OWNER- und *'user_name'* -Klauseln bei nativ kompilierten gespeicherten Prozeduren unterstützt.  
   
  Weitere Informationen finden Sie unter [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
@@ -242,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Eine oder mehrere [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die den Textkörper der Prozedur umfassen. Sie können die optionalen BEGIN- und END-Schlüsselwörter zum Einschließen der Anweisungen verwenden. Informationen hierzu erhalten Sie in den folgenden Abschnitten zu bewährten Methoden, allgemeinen Hinweisen und Einschränkungen.  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Gibt für eine CLR-Prozedur, auf die verwiesen wird, die Methode einer [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly an. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse einen mit einem Namespace qualifizierten Namen hat, in dem ein Punkt (**.**) zur Trennung der Bestandteile des Namespace verwendet wird, muss der Klassenname mithilfe von Klammern (**[]**) oder mit Anführungszeichen (**""**) getrennt werden. Bei der angegebenen Methode muss es sich um eine statische Methode der Klasse handeln.  
+ Gibt für eine CLR-Prozedur, auf die verwiesen wird, die Methode einer [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly an. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner und als Klasse in der Assembly vorhanden sein. Wenn die Klasse einen mit einem Namespace qualifizierten Namen hat, in dem ein Punkt ( **.** ) zur Trennung der Bestandteile des Namespace verwendet wird, muss der Klassenname mithilfe von Klammern ( **[]** ) oder mit Anführungszeichen ( **""** ) getrennt werden. Bei der angegebenen Methode muss es sich um eine statische Methode der Klasse handeln.  
   
  Standardmäßig kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen CLR-Code ausführen. Sie können Datenbankobjekte, die auf CLR-Module (Common Language Runtime) verweisen, erstellen, ändern und löschen. Bevor Sie diese Verweise in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen können, müssen Sie jedoch die Option [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) aktivieren. Verwenden Sie dazu [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -344,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 ```   
 Diese gespeicherte Prozedur lässt sich mit der Anweisung `EXEC What_DB_is_this;` aufrufen.   
 
-Sie ist etwas komplexer und dient dazu, einen Eingabeparameter bereitzustellen, um die Prozedur flexibler zu gestalten. Zum Beispiel:  
+Sie ist etwas komplexer und dient dazu, einen Eingabeparameter bereitzustellen, um die Prozedur flexibler zu gestalten. Beispiel:  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
@@ -441,7 +440,7 @@ GO
 ## <a name="metadata"></a>Metadaten  
  In der folgenden Tabelle sind die Katalogsichten und dynamischen Verwaltungssichten aufgeführt, die Sie verwenden können, um Informationen zu gespeicherten Prozeduren zurückzugeben.  
   
-|Sicht|Beschreibung|  
+|Sicht|und Beschreibung|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|Gibt die Definition einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur zurück. Der Text einer mit der ENCRYPTION-Option erstellten Prozedur kann nicht mit der **sys.sql_modules**-Katalogsicht angezeigt werden.|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Gibt Informationen zu einer CLR-Prozedur zurück.|  
@@ -456,7 +455,7 @@ GO
 ||Cacheseiten|  
 ||Cacheobjektzähler*|  
   
- * Diese Indikatoren sind für verschiedene Kategorien von Cacheobjekten verfügbar, einschließlich Ad-hoc-[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, vorbereiteten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Prozeduren, Triggern usw. Weitere Informationen finden Sie unter [SQL Server, Plancache-Objekt](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
+ \* Diese Indikatoren sind für verschiedene Kategorien von Cacheobjekten verfügbar, einschließlich Ad-hoc-[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, vorbereiteten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Prozeduren, Triggern usw. Weitere Informationen finden Sie unter [SQL Server, Plancache-Objekt](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
   
 ## <a name="security"></a>Security  
   
@@ -999,7 +998,7 @@ EXEC Get10TopResellers;
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
- [Gespeicherte Prozeduren &amp;amp;#40;Datenbank-Engine&amp;amp;#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
  [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

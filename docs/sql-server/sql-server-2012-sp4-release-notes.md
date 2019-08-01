@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: cc09ccfbf23e200f8771b84d40fb5a1dd3d1dc9c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136517"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,17 +76,17 @@ Identifizieren Sie anhand der unten stehenden Tabelle und entsprechend der derze
 |Aktuell installierte Version...|Gewünschter Vorgang...|Download und Installation von...|  
 |---|---|---|   
 |32-Bit-Installationen:|||  
-|32-Bit-Version einer beliebigen Edition von SQL Server 2012|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** von der [Downloadseite für SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|Eine 32-Bit-Version von SQL Server 2012 RTM Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 Express SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32-Bit-Version nur der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Eine 32-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|32-Bit-Version einer beliebigen Edition von SQL Server 2012 und 32-Bit-Version der Client- und Verwaltbarkeitstools (einschließlich SQL Server 2012 RTM Management Studio)|Upgrade aller Produkte auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLEXPRADV_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32-Bit-Version einer beliebigen Edition von SQL Server 2012|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-** <arch> **-** <lang id> **.exe** von der [Downloadseite für SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|Eine 32-Bit-Version von SQL Server 2012 RTM Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 Express SP2|**SQLEXPR_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32-Bit-Version nur der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Eine 32-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 32-Bit-Version von SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|32-Bit-Version einer beliebigen Edition von SQL Server 2012 und 32-Bit-Version der Client- und Verwaltbarkeitstools (einschließlich SQL Server 2012 RTM Management Studio)|Upgrade aller Produkte auf die 32-Bit-Version von SQL Server 2012 SP2|**SQLEXPRADV_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32-Bit-Version eines oder mehrerer Tools des [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) oder des [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Upgrade der Tools auf die 32-Bit-Version des Microsoft SQL Server 2012 SP2 Feature Pack|Eines oder mehrere Tools von der [Downloadseite für Microsoft SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)|  
 |64-Bit-Installationen:|||  
 |64-Bit-Version einer beliebigen Edition von SQL Server 2012|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe von der [Downloadseite für SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|64-Bit-Version von SQL Server 2012 RTM Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|64-Bit-Version ausschließlich der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 64-Bit-Version von SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|64-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64-Bit-Version von SQL Server 2012 RTM Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2|**SQLEXPR_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64-Bit-Version ausschließlich der Client- und Verwaltbarkeitstools für SQL Server 2012 (einschließlich SQL Server 2012 Management Studio)|Upgrade der Client- und Verwaltbarkeitstools auf die 64-Bit-Version von SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|64-Bit-Version von SQL Server 2012 Management Studio Express|Upgrade auf die 64-Bit-Version von SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** von der [Downloadseite für SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |64-Bit-Version eines oder mehrerer Tools des [Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) oder des [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Upgrade der Tools auf die 64-Bit-Version des Microsoft SQL Server 2012 SP2 Feature Pack|Eines oder mehrere Tools von der [Downloadseite für Microsoft SQL Server 2012 SP2 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=401008)|   
 
 
@@ -147,9 +146,9 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
 3.  Klicken Sie auf **PowerPivot-Katalog**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Zur Verwendung von PowerPivot für Excel mit Excel 2013 müssen Sie das mit Excel installierte Add-In verwenden  
-**Problem:** Bei Office 2010 ist PowerPivot für Excel ein eigenständiges Add-In, das von [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) heruntergeladen werden kann. Alternativ kann es auch vom [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29074)heruntergeladen werden. Beachten Sie, dass zwei Versionen des PowerPivot-Add-Ins als Download verfügbar sind: Eine, die im Lieferumfang von SQL Server 2008 R2 enthalten ist, und eine andere, die im Lieferumfang von SQL Server 2012 enthalten war. Im Falle von Office 2013 ist PowerPivot für Excel jedoch im Lieferumfang von Office enthalten und wird zusammen mit Excel installiert. Während die SQL Server 2008 R2- und SQL Server 2012-Versionen von PowerPivot für Excel 2010 nicht mit Excel 2013 kompatibel sind, können Sie weiterhin PowerPivot für Excel 2010 auf dem Clientcomputer installieren, wenn Sie Excel 2010 parallel zu Excel 2013 ausführen möchten. Da die beiden Excel-Versionen gleichzeitig vorhanden sein können, gilt dies auch für die entsprechenden PowerPivot-Add-Ins.  
+**Problem:** Bei Office 2010 ist PowerPivot für Excel ein eigenständiges Add-In, das von [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) heruntergeladen werden kann. Alternativ kann es auch vom [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=29074)heruntergeladen werden. Beachten Sie, dass zwei Versionen des PowerPivot-Add-Ins als Download verfügbar sind: Eine, die im Lieferumfang von SQL Server 2008 R2 enthalten ist, und eine andere, die im Lieferumfang von SQL Server 2012 enthalten ist. Im Falle von Office 2013 ist PowerPivot für Excel jedoch im Lieferumfang von Office enthalten und wird zusammen mit Excel installiert. Während die SQL Server 2008 R2- und SQL Server 2012-Versionen von PowerPivot für Excel 2010 nicht mit Excel 2013 kompatibel sind, können Sie weiterhin PowerPivot für Excel 2010 auf dem Clientcomputer installieren, wenn Sie Excel 2010 parallel zu Excel 2013 ausführen möchten. Da die beiden Excel-Versionen gleichzeitig vorhanden sein können, gilt dies auch für die entsprechenden PowerPivot-Add-Ins.  
   
-**Problemumgehung:** Um PowerPivot für Excel 2013 zu verwenden, müssen Sie das COM-Add-In aktivieren. Wählen Sie in Excel 2013 **Datei** | **Optionen** | **Add-Ins**aus. Wählen Sie im Dropdownfeld **Verwalten** die Option **COM-Add-Ins** aus, und klicken Sie auf **Ausführen**. Wählen Sie unter **COM-Add-Ins**die Option **Microsoft Office PowerPivot für Excel 2013** aus, und klicken Sie auf **OK**.  
+**Problemumgehung:** Aktivieren Sie das COM-Add-In, um PowerPivot für Excel 2013 zu verwenden. Wählen Sie in Excel 2013 **Datei** | **Optionen** | **Add-Ins**aus. Wählen Sie im Dropdownfeld **Verwalten** die Option **COM-Add-Ins** aus, und klicken Sie auf **Ausführen**. Wählen Sie unter **COM-Add-Ins**die Option **Microsoft Office PowerPivot für Excel 2013** aus, und klicken Sie auf **OK**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
@@ -167,7 +166,7 @@ Eine vollständige Liste von Fehlern und bekannten Problemen, die in diesem Serv
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>Power View erfordert „Microsoft.AnalysisServices.SPClient.dll“ in SharePoint Server 2013  
 **Problem:** Die erforderliche Komponente **Microsoft.AnalysisServices.SPClient.dll** wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nicht installiert. Wenn Sie die Vorschauversion von SharePoint Server 2013 und [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im SharePoint-Modus installieren, ohne das Installationspaket für PowerPivot für SharePoint 2013 **spPowerPivot.msi** herunterzuladen und zu installieren, ist Power View nicht funktionsfähig und zeigt folgende Symptome.  
   
-**Symptome:** Beim Erstellen eines Power View-Berichts wird eine mit der folgenden vergleichbare Fehlermeldung ausgegeben:  
+**Symptome:** Beim Erstellen eines Power View-Berichts wird eine mit der folgenden Fehlermeldung vergleichbare Fehlermeldung ausgegeben:  
   
 -   "Es kann keine Verbindung mit der Datenquelle hergestellt werden..."  
   

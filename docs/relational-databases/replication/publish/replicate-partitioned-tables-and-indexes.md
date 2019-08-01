@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aface984e9cc370ed906ab5abef65ac6f4bb6bd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1962546b83926f1ff189ece6757ebbf3659976ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073579"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replizieren partitionierter Tabellen und Indizes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47787258"
   
  Durch die Replikation werden Objekte während der Erstsynchronisierung auf den Abonnenten kopiert. Wenn im Partitionsschema andere Dateigruppen als die PRIMARY-Dateigruppe verwendet werden, müssen diese vor der Erstinitialisierung auf dem Abonnenten vorhanden sein.  
   
- Nachdem der Abonnent initialisiert wurde, werden Datenänderungen an den Abonnenten weitergegeben und auf die entsprechenden Partitionen übertragen. Änderungen am Partitionsschema werden jedoch nicht unterstützt. Bei Transaktions- und Mergereplikationen wird die Replikation der folgenden Befehle nicht unterstützt: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME bzw. die Anweisung REBUILD WITH PARTITION von ALTER INDEX Die ihnen zugeordneten Änderungen werden nicht automatisch auf den Abonnenten repliziert. Es liegt in der Zuständigkeit des Benutzers, ähnliche Änderungen manuell für den Abonnenten vorzunehmen.  
+ Nachdem der Abonnent initialisiert wurde, werden Datenänderungen an den Abonnenten weitergegeben und auf die entsprechenden Partitionen übertragen. Änderungen am Partitionsschema werden jedoch nicht unterstützt. Bei Transaktionsreplikation und Mergereplikation wird die Replikation der folgenden Befehle nicht unterstützt: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME oder die REBUILD WITH PARTITION-Anweisung von ALTER INDEX. Die ihnen zugeordneten Änderungen werden nicht automatisch auf den Abonnenten repliziert. Es liegt in der Zuständigkeit des Benutzers, ähnliche Änderungen manuell für den Abonnenten vorzunehmen.  
   
 ## <a name="replication-support-for-partition-switching"></a>Replikationsunterstützung für Partitionswechsel  
  Ein wesentlicher Vorteil der Tabellenpartitionierung besteht in der Fähigkeit, Teilmengen von Daten rasch und effizient zwischen Partitionen zu verschieben. Daten werden mit dem Befehl SWITCH PARTITION verschoben. Wenn eine Tabelle für die Replikation aktiviert wurde, werden SWITCH PARTITION-Vorgänge aus folgenden Gründen standardmäßig blockiert:  
@@ -72,13 +71,13 @@ ms.locfileid: "47787258"
 ### <a name="enabling-partition-switching"></a>Aktivieren des Partitionswechsels  
  Die folgenden Eigenschaften von Transaktionsveröffentlichungen ermöglichen es den Benutzern, das Verhalten von Partitionswechseln in einer replizierten Umgebung zu steuern:  
   
--   **@allow_partition_switch**, wenn diese Eigenschaft auf **Tabellenpartitionierungsschemas kopieren**festgelegt wird, kann SWITCH PARTITION für die Veröffentlichungsdatenbank ausgeführt werden.  
+-   **@allow_partition_switch** , wenn diese Eigenschaft auf **Tabellenpartitionierungsschemas kopieren**festgelegt wird, kann SWITCH PARTITION für die Veröffentlichungsdatenbank ausgeführt werden.  
   
 -   **@replicate_partition_switch** bestimmt, ob die SWITCH PARTITION DDL-Anweisung auf Abonnenten repliziert werden soll. Diese Option ist nur gültig, wenn **@allow_partition_switch** auf **Tabellenpartitionierungsschemas kopieren**.  
   
  Sie können diese Eigenschaften beim Erstellen der Veröffentlichung mit [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) oder nach der Erstellung der Veröffentlichung mit [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) festlegen. Wie bereits erwähnt, unterstützen Mergereplikationen keine Partitionswechsel. Entfernen Sie die Tabelle aus der Datenbank, um SWITCH PARTITION für eine Tabelle auszuführen, die für Mergereplikationen aktiviert wurde.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

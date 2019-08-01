@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 398820f012e60181ec6327a67fd5e1abb7adc407
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115685"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm (SQL Server-Hilfsprogramm)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Instanz angeben  
  Geben Sie die folgenden Informationen zum UCP an, den Sie erstellen:  
   
--   **Instanzname**: Klicken Sie auf **Verbinden...**, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit.  
+-   **Instanzname**: Klicken Sie auf **Verbinden...** , um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit.  
   
 -   **Hilfsprogrammname** – Geben Sie einen Namen an, der zur Erkennung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms im Netzwerk verwendet wird.  
   
@@ -145,7 +144,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Wenn die Verbindung verschlüsselt ist, wird dieser Verbindungstyp verwendet. Wenn die Verbindung nicht verschlüsselt ist, stellt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm über eine verschlüsselte Verbindung erneut eine Verbindung her.  
   
- Klicken Sie auf **Verbinden...**, um den Vorgang fortzusetzen.  
+ Klicken Sie auf **Verbinden...** , um den Vorgang fortzusetzen.  
   
 ##  <a name="Agent_configuration"></a> Konto des Hilfsprogramm-Sammlungssatzes  
  Geben Sie ein Windows-Domänenkonto an, um den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms auszuführen. Dieses Konto wird als Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms verwendet. Alternativ können Sie das vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto verwenden. Um die Überprüfungsanforderungen zu erfüllen, geben Sie das Konto unter Beachtung folgender Richtlinien an.  
@@ -227,7 +226,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Problembehandlung beim SQL Server-Hilfsprogramm](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

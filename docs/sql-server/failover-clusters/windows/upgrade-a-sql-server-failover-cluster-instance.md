@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 54863db300d7a63404161e438bede2ecc2ec8928
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 681e944da0a49c6a1b485606e5ed1ed0bd8ffd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904982"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Aktualisieren einer SQL Server-Failoverclusterinstanz (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ ms.locfileid: "47783728"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Lesen Sie die folgenden wichtigen Informationen, bevor Sie beginnen:  
   
--   [Supported Version and Edition Upgrades (Unterstützte Versions- und Editionsupgrades)](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob Sie von Ihrer Version des Windows-Betriebssystems und Ihrer Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] upgraden können. Sie können beispielsweise kein direktes Upgrade von einer SQL Server 2005-Failoverclusterinstanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausführen und keinen Failovercluster upgraden, der unter [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] ausgeführt wird.  
+-   [Unterstützte Versions- und Editionsupgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Überprüfen Sie, ob ein Upgrade von Ihrer Version des Windows-Betriebssystems und Ihrer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Version auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] möglich ist. Sie können beispielsweise kein direktes Upgrade von einer SQL Server 2005-Failoverclusterinstanz auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausführen und keinen Failovercluster upgraden, der unter [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)] ausgeführt wird.  
   
--   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie die passende Upgrademethode und die Schritte aus, die sowohl auf Ihrer Betrachtung der unterstützten Version und Editionsupgrades als auch auf den anderen in Ihrer Umgebung installierten Komponenten basieren, um die Komponenten in der richtigen Reihenfolge upzugraden.  
+-   [Auswählen einer Upgrademethode für die Datenbank-Engine](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): Wählen Sie basierend auf Ihrer Prüfung der unterstützten Versions- und Editionsupgrades sowie basierend auf den anderen in Ihrer Umgebung installierten Komponenten die passende Upgrademethode und die passenden Upgradeschritte aus, um das Upgrade der Komponenten in der richtigen Reihenfolge durchzuführen.  
   
--   [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie den Upgradeplan.  
+-   [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): Überprüfen Sie die Anmerkungen zu dieser Version, die bekannten Upgradeprobleme und die Prüfliste vor dem Upgrade. Entwickeln und testen Sie dann den Upgradeplan.  
   
--   [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
+-   [Hardware- und Softwareanforderungen für die Installation von SQL Server:](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  Überprüfen Sie die Softwareanforderungen für die Installation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Falls zusätzliche Software erforderlich ist, installieren Sie diese auf jedem Knoten, bevor Sie mit dem Upgradevorgang beginnen, um die Downtime zu minimieren.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Ausführen eines parallelen Upgrades oder Updates  
  Verwenden Sie für das Upgrade eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup, um das Upgrade jedes Failoverclusterknotens einzeln nacheinander auszuführen. Dabei sollte mit den passiven Knoten begonnen werden. Beim Aktualisieren der einzelnen Knoten wird der jeweilige Knoten nicht als möglicher Besitzer des Failoverclusters angezeigt. Im Fall eines unerwarteten Failovers können die aktualisierten Knoten erst im Failover verwendet werden, wenn der Besitz von Clusterressourcengruppen vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup zu einem aktualisierten Knoten verschoben wurde.  

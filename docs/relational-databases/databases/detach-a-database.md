@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3b39f333b4e280b9b01bb8dc9fa5fcfe98f7324
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 35a118575be4ac15cb44588f1773ea1bb4fbc257
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006194"
 ---
 # <a name="detach-a-database"></a>Trennen einer Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,21 +79,21 @@ ms.locfileid: "52502773"
      Standardmäßig werden während des Trennvorgangs alle der Datenbank zugeordneten Volltextkataloge beibehalten. Um sie zu entfernen, deaktivieren Sie das Kontrollkästchen **Volltextkataloge beibehalten** . Diese Option wird nur beim Aktualisieren einer Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]angezeigt.  
   
      **Status**  
-     Zeigt für den Status einen der folgenden Werte an: **Bereit** oder **Nicht bereit**.  
+     Zeigt einen der folgenden Statuswerte an: **Ready** (Bereit) der **Not ready** (Nicht bereit).  
   
      **MessageBox**  
      Unter **Meldung** können folgende Informationen zur Datenbank angezeigt werden:  
   
     -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
   
-    -   Wenn eine Datenbank über eine oder mehrere Verbindungen verfügt, weist der **Status** den Wert **Nicht bereit** auf, und in der Spalte **Meldung** wird _<Anzahl_aktiver_Verbindungen>_**Aktive Verbindung(en)** angezeigt, z.B.: **1 Aktive Verbindung(en)**. Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank über eine oder mehrere Verbindungen verfügt, weist der **Status** den Wert **Nicht bereit** auf, und in der Spalte **Meldung** wird _<Anzahl_aktiver_Verbindungen>_ **Aktive Verbindung(en)** angezeigt, z. B.: **1 Aktive Verbindung(en)** . Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   
 4.  Wenn Sie zum Trennen der Datenbank bereit sind, klicken Sie auf **OK**.  
   
 > [!NOTE]  
->  Die jetzt getrennte Datenbank bleibt im **Datenbanken** -Knoten des Objekt-Explorers sichtbar, bis die Ansicht aktualisiert wird. Sie können die Ansicht jederzeit aktualisieren, indem Sie in den Objekt-Explorer-Bereich klicken und in der Menüleiste **Ansicht** und dann **Aktualisieren**auswählen.  
+>  Die jetzt getrennte Datenbank bleibt im **Datenbanken** -Knoten des Objekt-Explorers sichtbar, bis die Ansicht aktualisiert wird. Sie können die Ansicht jederzeit aktualisieren: Klicken Sie in den Objekt-Explorer-Bereich, und wählen Sie in der Menüleiste **Ansicht** und dann **Aktualisieren** aus.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -110,7 +109,7 @@ ms.locfileid: "52502773"
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   

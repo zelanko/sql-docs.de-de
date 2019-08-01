@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84b1656e15f37dd0c1491d9eb8e385813f579fca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085903"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +36,15 @@ ms.locfileid: "51659401"
   
 |Meldungs-ID|Vordefinierte Warnung|Bedingung, die die Warnung auslöst|Zusätzlich eingegebene Informationen in msdb..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
-|14150|**Replikation: Der Agent war erfolgreich.**|Agent wird erfolgreich heruntergefahren.|Benutzerkontensteuerung|  
-|14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|Benutzerkontensteuerung|  
-|14152|**Replikation: Wiederholung des Agents.**|Der Agent wird nach dem erfolglosen erneuten Versuch einer Operation beendet (der Agent stellt einen Fehler fest, wie z. B. einen nicht verfügbaren Server, einen Deadlock, einen Verbindungsfehler oder einen Timeoutfehler).|Benutzerkontensteuerung|  
-|14157|**Replikation: Abgelaufenes Abonnement wurde gelöscht.**|Ein abgelaufenes Abonnement wurde gelöscht.|nein|  
-|20572|**Replikation: Das Abonnement wurde nach einem Überprüfungsfehler neu initialisiert.**|Antwortauftrag 'Abonnements bei Datenüberprüfungsfehler erneut initialisieren' initialisiert ein Abonnement erfolgreich erneut.|nein|  
-|20574|**Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|Benutzerkontensteuerung|  
-|20575|**Replikation: Der Abonnent hat die Datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|Benutzerkontensteuerung|  
+|14150|**Replikation: Der Agent war erfolgreich.**|Agent wird erfolgreich heruntergefahren.|Ja|  
+|14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|Ja|  
+|14152|**Replikation: Wiederholung des Agents.**|Der Agent wird nach dem erfolglosen erneuten Versuch einer Operation beendet (der Agent stellt einen Fehler fest, wie z. B. einen nicht verfügbaren Server, einen Deadlock, einen Verbindungsfehler oder einen Timeoutfehler).|Ja|  
+|14157|**Replikation: Abgelaufenes Abonnement wurde gelöscht.**|Ein abgelaufenes Abonnement wurde gelöscht.|Nein|  
+|20572|**Replikation: Das Abonnement wurde nach einem Überprüfungsfehler neu initialisiert.**|Antwortauftrag 'Abonnements bei Datenüberprüfungsfehler erneut initialisieren' initialisiert ein Abonnement erfolgreich erneut.|Nein|  
+|20574|**Replikation: Fehler bei der Datenüberprüfung auf dem Abonnenten.**|Datenüberprüfung durch Verteilungs- oder Merge-Agent fehlgeschlagen.|Ja|  
+|20575|**Replikation: Der Abonnent hat die Datenüberprüfung erfolgreich durchlaufen.**|Verteilungs- oder Merge-Agent durchläuft eine Datenüberprüfung.|Ja|  
 |20578|**Replikation: Der Agent wurde benutzerdefiniert heruntergefahren.**|||  
-|22815|**Peer-zu-Peer-Konflikterkennungswarnung**|Der Verteilungs-Agent hat bei dem Versuch, eine Änderung an einem Peer-zu-Peer-Knoten vorzunehmen, einen Konflikt erkannt.|Benutzerkontensteuerung|  
+|22815|**Peer-zu-Peer-Konflikterkennungswarnung**|Der Verteilungs-Agent hat bei dem Versuch, eine Änderung an einem Peer-zu-Peer-Knoten vorzunehmen, einen Konflikt erkannt.|Ja|  
   
  Zusätzlich zu diesen Warnungen bietet der Replikationsmonitor eine Reihe von status- und leistungsbezogenen Warnungen. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md). Mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Infrastruktur für Warnungen können Sie außerdem auch Warnungen für andere Replikationsereignisse definieren. Weitere Informationen finden Sie unter [Erstellen eines benutzerdefinierten Ereignisses](https://msdn.microsoft.com/library/03d71a35-97fa-4bba-aa9a-23ac9c9cf879).  
   
@@ -62,7 +61,7 @@ ms.locfileid: "51659401"
 ### <a name="framework-for-automating-responses"></a>Framework für automatische Antworten  
  Wenn eine Warnung auftritt, sind in der Regel die einzigen Informationen, mit deren Hilfe Sie verstehen können, was die Warnung auslöste und welche entsprechende Maßnahme ergriffen werden sollte, in der Warnmeldung enthalten. Eine Analyse dieser Informationen kann sich als fehleranfällig und zeitraubend erweisen. Die Replikation vereinfacht automatische Antworten, da in der **sysreplicationalerts** -Systemtabelle zusätzliche Informationen zur Warnung bereitgestellt werden. Diese Informationen sind bereits so analysiert, dass sie einfach in benutzerdefinierten Programmen verwendet werden können.  
   
- Wenn z. B. die Daten in der **Sales.SalesOrderHeader** -Tabelle auf dem Abonnenten A die Gültigkeitsüberprüfung nicht bestehen, löst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Warnmeldung 20574 aus, in der Sie über dieses Fehlschlagen benachrichtigt werden. Sie empfangen die folgende Meldung: "Fehler bei der Datenüberprüfung für das Abonnement des Abonnenten 'A', für den 'SalesOrderHeader'-Artikel in der in der 'MyPublication'-Veröffentlichung."  
+ Wenn z. B. die Daten in der **Sales.SalesOrderHeader** -Tabelle auf dem Abonnenten A die Gültigkeitsüberprüfung nicht bestehen, löst [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Warnmeldung 20574 aus, in der Sie über dieses Fehlschlagen benachrichtigt werden. Sie empfangen die folgende Meldung: „Fehler bei der Datenüberprüfung für das Abonnement des Abonnenten 'A' für den 'SalesOrderHeader'-Artikel in der 'MyPublication'-Veröffentlichung.“  
   
  Wenn Sie eine Antwort basierend auf dieser Meldung erstellen, müssen Sie den Namen des Abonnenten, den Artikelnamen, den Veröffentlichungsnamen und den Fehler aus der Meldung manuell analysieren. Da der Verteilungs-Agent und der Merge-Agent aber die gleichen Informationen in **sysreplicationalerts** schreiben, zusammen mit Details wie Agenttyp, Zeitpunkt der Warnung, Veröffentlichungsdatenbank und Veröffentlichungstyp, kann der Antwortauftrag die relevanten Informationen direkt aus der Tabelle abfragen. Obwohl die genaue Zeile nicht einer spezifischen Warnungsinstanz zugeordnet werden kann, kann die **status** -Spalte in der Tabelle zum Nachverfolgen der Diensteinträge verwendet werden. Die Einträge in dieser Tabelle werden während der Beibehaltungsdauer für den Verlauf beibehalten.  
   
@@ -88,7 +87,7 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwaltung des Replikations-Agents](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Überwachen &#40;Replikation&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  

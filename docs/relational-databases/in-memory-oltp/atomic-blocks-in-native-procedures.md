@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02d5c28e975346ff048ef656fecc2e35f7c82692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951223"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>ATOMIC-Blöcke in nativen Prozeduren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -127,21 +126,21 @@ ORDER BY c1
 GO  
 ```  
   
- Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines ATOMIC-Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332, 41333, und 41839.  
+ Bei folgenden, für speicheroptimierte Tabellen spezifischen Fehlern schlägt eine Transaktion fehl. Wenn sie im Bereich eines atomischen Blocks auftreten, wird die Transaktion abgebrochen: 10772, 41301, 41302, 41305, 41325, 41332, 41333 und 41839.  
   
 ## <a name="session-settings"></a>Sitzungseinstellungen  
  Die Sitzungseinstellungen in ATOMIC-Blöcken werden bei der Kompilierung der gespeicherte Prozedur fest definiert. Einige Einstellungen können mit **BEGIN ATOMIC** angegeben werden, während andere immer denselben festen Wert aufweisen.  
   
  Die folgenden Optionen sind für **BEGIN ATOMIC**erforderlich:  
   
-|Erforderliche Einstellung|Beschreibung|  
+|Erforderliche Einstellung|und Beschreibung|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Unterstützte Werte sind **SNAPSHOT**, **REPEATABLEREAD**und **SERIALIZABLE**.|  
 |**LANGUAGE**|Bestimmt Datums- und Uhrzeitformate sowie Systemmeldungen. Alle Sprachen und Aliase in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) werden unterstützt.|  
   
  Die folgenden Einstellungen sind optional:  
   
-|Optionale Einstellung|Beschreibung|  
+|Optionale Einstellung|und Beschreibung|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Alle Datumsformate von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden unterstützt. Falls angegeben, überschreibt **DATEFORMAT** das Standarddatumsformat, das **LANGUAGE**zugeordnet ist.|  
 |**DATEFIRST**|Falls angegeben, überschreibt **DATEFIRST** den Standardwert, der **LANGUAGE**zugeordnet ist.|  
@@ -165,7 +164,7 @@ GO
 |TEXTSIZE|0|  
 |XACT_ABORT|OFF<br /><br /> Nicht abgefangene Ausnahmen bewirken ein Rollback für den ATOMIC-Block, führen jedoch nicht zu einem Abbruch der Transaktion, solange die Transaktion durch den Fehler nicht fehlschlägt.|  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Systemintern kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

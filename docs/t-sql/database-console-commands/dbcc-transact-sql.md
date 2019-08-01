@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040518"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ Wenn Sie einen dieser DBCC-Befehle ausführen, erstellt [!INCLUDE[ssDE](../../in
   
 Manchmal ist eine interne Datenbankmomentaufnahme nicht erforderlich oder kann nicht erstellt werden. In diesem Fall wird der DBCC-Befehl für die aktuelle Datenbank ausgeführt. Wenn die Datenbank online ist, verwendet der DBCC-Befehl Tabellensperren, um die Konsistenz der zu überprüfenden Objekte sicherzustellen. Dieses Verhalten ist identisch mit der WITH TABLOCK-Option.
   
-Es wird keine interne Datenbankmomentaufnahme erstellt, wenn unter folgenden Bedingungen ein DBCC-Befehl ausgeführt wird:  
+Es wird keine interne Datenbankmomentaufnahme erstellt, wenn unter folgenden Bedingungen ein DBCC-Befehl ausgeführt wird:
 -   Der Befehl wird für die **master**-Datenbank ausgeführt, und die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird im Einzelbenutzermodus ausgeführt.  
 -   Der Befehl wird für eine andere Datenbank als die **master**-Datenbank ausgeführt, aber die Datenbank wurde mit der ALTER DATABASE-Anweisung in den Einzelbenutzermodus versetzt.  
 -   Der Befehl wird für eine schreibgeschützte Datenbank ausgeführt.  
@@ -97,11 +96,11 @@ Die **sys.dm_exec_requests**-Katalogsicht enthält Informationen zum Fortschritt
   
 Die Definition einer Statuseinheit hängt von der aktuellen Ausführungsphase des DBCC-Befehls ab. Manchmal wird der Status mit der Granularität einer Datenbankseite angezeigt, in anderen Phasen wird er mit der Granularität einer einzelnen Datenbank oder Zuordnungsreparatur gemeldet. In der folgenden Tabelle werden die einzelnen Ausführungsphasen beschrieben sowie die Granularität, mit der der Status der Befehlsausführung gemeldet wird.
   
-|Ausführungsphase|Beschreibung|Granularität der Statusmeldungen|  
+|Ausführungsphase|und Beschreibung|Granularität der Statusmeldungen|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Während dieser Phase wird die logische und physische Konsistenz der Objekte in der Datenbank geprüft.|Der Status wird auf Datenbankseitenebene angezeigt.<br /><br /> Der Wert der Statusmeldung wird nach jeweils 1000 geprüften Datenbankseiten aktualisiert.|  
 |DBCC TABLE REPAIR|Während dieser Phase werden Datenbankreparaturen ausgeführt, sofern REPAIR_FAST, REPAIR_REBUILD oder REPAIR_ALLOW_DATA_LOSS angegeben ist und Objektfehler vorliegen, die behoben werden müssen.|Der Status wird auf der Ebene einzelner Reparaturvorgänge angezeigt.<br /><br /> Der Zähler wird für jeden abgeschlossenen Reparaturvorgang aktualisiert.|  
-|DBCC ALLOC CHECK|Während dieser Phase werden Zuordnungsstrukturen in der Datenbank geprüft.<br /><br /> Hinweis: Mit DBCC CHECKALLOC werden dieselben Überprüfungen ausgeführt.|Der Status wird nicht gemeldet. |  
+|DBCC ALLOC CHECK|Während dieser Phase werden Zuordnungsstrukturen in der Datenbank geprüft.<br /><br /> Hinweis: Mit DBCC CHECKALLOC werden dieselben Überprüfungen ausgeführt.|Der Status wird nicht gemeldet.|  
 |DBCC ALLOC REPAIR|Während dieser Phase werden Datenbankreparaturen ausgeführt, sofern REPAIR_FAST, REPAIR_REBUILD oder REPAIR_ALLOW_DATA_LOSS angegeben ist und Zuordnungsfehler vorliegen, die behoben werden müssen.|Der Status wird nicht angezeigt.|  
 |DBCC SYS CHECK|Während dieser Phase werden die Datenbanksystemtabellen geprüft.|Der Status wird auf Datenbankseitenebene angezeigt.<br /><br /> Der Wert der Statusmeldung wird nach jeweils 1000 geprüften Datenbankseiten aktualisiert.|  
 |DBCC SYS REPAIR|Während dieser Phase werden Datenbankreparaturen ausgeführt, sofern REPAIR_FAST, REPAIR_REBUILD oder REPAIR_ALLOW_DATA_LOSS angegeben ist und Systemtabellenfehler vorliegen, die behoben werden müssen.|Der Status wird auf der Ebene einzelner Reparaturvorgänge angezeigt.<br /><br /> Der Zähler wird für jeden abgeschlossenen Reparaturvorgang aktualisiert.|  

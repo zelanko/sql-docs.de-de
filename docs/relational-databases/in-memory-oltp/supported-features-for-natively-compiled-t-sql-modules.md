@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88a7eb6303509766cbd7ae703135d6a33a4e54fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a1cf5b6242f5c76abf8dca638a2596eb2cae9641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025083"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Unterstützte Funktionen für nativ kompilierte T-SQL-Module
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ FROM-Klausel:
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden JOINS für nativ kompilierte T-SQL-Module unterstützt.
 
--   Unterabfragen `[AS] table_alias`. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md). 
+-   Unterabfragen `[AS] table_alias`. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL &#41;](../../t-sql/queries/from-transact-sql.md). 
     - **Gilt für:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Ab [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] werden Unterabfragen für nativ kompilierte T-SQL-Module unterstützt.
 
@@ -220,7 +219,7 @@ Die folgenden DML-Anweisungen werden unterstützt.
 
 -   Systemfunktionen: @@rowcount. Durch Anweisungen in nativ kompilierten gespeicherten Prozeduren wird @@rowcount aktualisiert, und Sie können @@rowcount in einer nativ kompilierten gespeicherten Prozedur verwenden, um die Anzahl der Zeilen zu bestimmen, die von der letzten Anweisung betroffen sind, die innerhalb der nativ kompilierten gespeicherten Prozedur ausgeführt wurde. Allerdings wird @@rowcount am Anfang und am Ende der Ausführung einer nativ kompilierten gespeicherten Prozedur auf 0 zurückgesetzt.  
 
--   Sicherheitsfunktionen: IS_MEMBER({'Gruppe' | 'Rolle'}), IS_ROLEMEMBER ('Rolle' [, 'database_principal']), IS_SRVROLEMEMBER ('Rolle' [, 'Anmeldename']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['Anmeldename']), SUSER_SID(['Anmeldename'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['Benutzer']), USER_NAME([ID]), CONTEXT_INFO().
+-   Sicherheitsfunktionen: IS_MEMBER({'Gruppe' | 'Rolle'}), IS_ROLEMEMBER ('Rolle' [, 'database_principal']), IS_SRVROLEMEMBER ('Rolle' [, 'Anmeldename']), ORIGINAL_LOGIN(), SESSION_USER, CURRENT_USER, SUSER_ID(['Anmeldename']), SUSER_SID(['Anmeldename'] [, Param2]), SUSER_SNAME([server_user_sid]), SYSTEM_USER, SUSER_NAME, USER, USER_ID(['Benutzer']), USER_NAME([id]), CONTEXT_INFO().
 
 -   Die Ausführungen nativer Module können geschachtelt werden.
 
@@ -245,13 +244,13 @@ Die folgenden DML-Anweisungen werden unterstützt.
 ##  <a name="los"></a> Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) kann [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
 
- Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die Fehlermeldung angezeigt: **Msg 41398, Level 16, State 1, Procedure *\<ProzedurName>*, Line *\<ZeilenNummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurde angefordert.**  
+ Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die folgende Fehlermeldung angezeigt: **Meldung 41398, Ebene 16, Status 1, Prozedur *\<Prozedurname>* , Zeile *\<Zeilennummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurden angefordert.**  
 
  Wenn keine TOP-Klausel vorhanden ist, kann eine beliebige Anzahl von Zeilen mit ORDER BY sortiert werden.  
 
  Wenn keine ORDER BY-Klausel verwendet wird, können Sie jeden ganzzahligen Wert mit dem TOP-Operator verwenden.  
 
- Beispiel mit TOP N = 8192: Wird kompiliert  
+ Beispiel mit TOP N = 8192: Wird kompiliert  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -264,7 +263,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- Beispiel mit TOP N > 8192: Kann nicht kompiliert werden  
+ Beispiel mit TOP N > 8192: Kann nicht kompiliert werden.  
 
 ```sql  
 CREATE PROCEDURE testTop  
@@ -293,7 +292,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen sich die Anzahl der Zeilen, die vom TOP-Operator zurückgegeben werden können, u. U. verringert:  
+ **Einschränkungen für die zurückgegebenen Zeilen:** Es gibt zwei Fälle, in denen die Anzahl von Zeilen, die vom TOP-Operator zurückgegeben werden kann, verringert wird:  
 
 -   Verwenden von JOINs in der Abfrage  Die Auswirkungen von JOINs auf die Einschränkung sind vom Abfrageplan abhängig.  
 
@@ -301,7 +300,7 @@ GO
 
  Die Formel zum Berechnen eines im ungünstigsten Fall unterstützten Maximalwerts für N in TOP N lautet wie folgt: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Nativ kompilierte gespeicherte Prozeduren](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
 

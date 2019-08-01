@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067576"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52400623"
   
  In dieser Tabelle werden die Schreibweisen im vorigen Diagramm beschrieben:  
   
-|Wert|Beschreibung|  
+|value|und Beschreibung|  
 |-----------|-----------------|  
 |0..1|Null oder Eins|  
 |1|Genau eins|  
@@ -62,7 +61,7 @@ ms.locfileid: "52400623"
   
 -   Ein physischer Prozessor kann aus einem oder mehreren Kernen bestehen. Ein physischer Prozessor ist das Gleiche wie ein Prozessorpaket oder ein Socket.  
   
-Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Ihr Computer z.B. zwei Quad-Core-Prozessoren mit aktiviertem Hyperthreading und zwei Threads pro Kern aufweist, verfügen Sie über 16 logische Prozessoren: 2 Prozessoren x 4 Kernen pro Prozessor x 2 Threads pro Kern. Beachten Sie dabei Folgendes:  
+Systeme mit mehr als einem physischen Prozessor oder Systeme mit physischen Prozessoren, die mehrere Kerne und/oder Hyperthreads haben, ermöglichen dem Betriebssystem, mehrere Tasks gleichzeitig auszuführen. Jeder Thread der Ausführung wird als logischer Prozessor angezeigt. Wenn Ihr Computer z. B. zwei Quad-Core-Prozessoren mit aktiviertem Hyperthreading und zwei Threads pro Kern aufweist, verfügen Sie über 16 logische Prozessoren: 2 Prozessoren × 4 Kerne pro Prozessor × 2 Threads pro Kern. Beachten Sie dabei Folgendes:  
   
 -   Die Rechenkapazität eines logischen Prozessors von einem einzelnen Thread eines Hyperthread-Kerns ist geringer als die Rechenkapazität eines logischen Prozessors von diesem gleichen Kern mit deaktiviertem Hyperthreading.  
   
@@ -80,7 +79,7 @@ Die folgende Tabelle gibt die Rechenkapazitätsgrenzen für eine einzelne Instan
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition|Maximale Rechenkapazität für eine einzelne Instanz ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale Rechenkapazität für eine einzelne Instanz (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
-|Enterprise Edition: Core-basierte Lizenzierung\*|Maximum des Betriebssystems|Maximum des Betriebssystems|  
+|Enterprise Edition: Kernbasierte Lizenzierung\*|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Entwickler|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Standard|Beschränkt auf weniger als 4 Sockets oder 24 Kerne|Beschränkt auf weniger als 4 Sockets oder 24 Kerne|  
 |Express|Beschränkt auf weniger als 1 Socket oder 4 Kerne|Beschränkt auf weniger als 1 Socket oder 4 Kerne|  

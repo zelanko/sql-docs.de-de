@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4e5c1182bb2aeb9a5a3a5c0db640b89237c58a29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063944"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installieren von Clienttools auf einem SQL Server-Failovercluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +43,16 @@ ms.locfileid: "47792898"
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>Installieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools über die Eingabeaufforderung  
   
-1.  Zur Installation der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools und der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation müssen Sie folgenden Befehl ausführen: Setup.exe/q/Action=Install /Features=Tools  
+1.  Führen Sie die folgenden Befehl aus, um die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Clienttools und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Onlinedokumentation zu installieren: Setup.exe/q/Action=Install /Features=Tools  
   
-2.  Wenn Sie nur die grundlegenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verwaltungstools installieren möchten, müssen Sie folgenden Befehl verwenden: Setup.exe/q/Action=Install Features=SSMS. Damit wird die [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] -Unterstützung für [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], das sqlcmd-Dienstprogramm und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Anbieter installiert.  
+2.  Führen Sie den folgenden Befehl aus, um nur die grundlegenden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verwaltungstools zu installieren: Setup.exe/q/Action=Install Features=SSMS. Damit wird die [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] -Unterstützung für [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)], das sqlcmd-Dienstprogramm und den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Anbieter installiert.  
   
-3.  Wenn Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verwaltungstools vollständig installieren möchten, müssen Sie folgenden Befehl verwenden: Setup.exe/q/Action=Install /Features=ADV_SSMS. Weitere Informationen zu den Parameterwerten für die Funktionen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+3.  Führen Sie den folgenden Befehl aus, um alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verwaltungstools zu installieren: Setup.exe/q/Action=Install /Features=ADV_SSMS. Weitere Informationen zu den Parameterwerten für die Funktionen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>Deinstallieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools  
  Sie werden in der Systemsteuerung unter Software als **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** angezeigt und können dort auch entfernt werden. Wenn Sie die Option Knoten entfernen zum Deinstallieren einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] im Failovercluster verwenden, werden die Clientkomponenten nicht gleichzeitig deinstalliert.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

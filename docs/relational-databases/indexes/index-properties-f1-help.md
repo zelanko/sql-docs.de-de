@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909712"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47846369"
  Zeigt den Namen des Indexes an. Dieses Feld ist bei einem vorhandenen Index schreibgeschützt. Wenn ein neuer Index erstellt wird, geben Sie den Namen des Indexes an.  
   
  **Indextyp**  
- Gibt den Indextyp an. Gibt bei neuen Indizes den Indextyp an, der beim Öffnen des Dialogfelds ausgewählt ist. Indizes können folgende Typen aufweisen: **Gruppiert**, **Nicht gruppiert**, **Primäre XML**, **Sekundäre XML**, **Räumlich**, **Gruppierter Columnstore**oder **Nicht gruppierter Columnstore**.  
+ Gibt den Indextyp an. Gibt bei neuen Indizes den Indextyp an, der beim Öffnen des Dialogfelds ausgewählt ist. Indizes können folgende Typen aufweisen: **Gruppiert**, **Nicht gruppiert**, **Primäre XML**, **Sekundäre XML**, **Räumlich**, **Gruppierter Columnstore** oder **Nicht gruppierter Columnstore**.  
   
  **Hinweis** Es ist nur ein gruppierter Index pro Tabelle zulässig. Pro Tabelle ist nur ein speicheroptimierter xVelocity-columnstore-Index zulässig.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "47846369"
 ### <a name="bounding-box"></a>Umgebendes Feld  
  Das *umgebende Feld* ist der Umkreis des Rasters der höchsten Ebene einer geometrischen Ebene. Die Parameter für das umgebende Feld sind nur im Geometrierastermosaik vorhanden. Diese Parameter sind nicht verfügbar, wenn das **Mosaikschema** auf **Geografieraster**festgelegt ist.  
   
- In dem Bereich werden die Koordinaten **(**_X-min_**,**_Y-min_**)** und **(**_X-max_**,**_Y-max_**)** des umgebenden Felds angezeigt. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ **geometry** erstellen.  
+ In dem Bereich werden die Koordinaten **(** _X-min_ **,** _Y-min_ **)** und **(** _X-max_ **,** _Y-max_ **)** des umgebenden Felds angezeigt. Es gibt keine Standardkoordinatenwerte. Daher müssen Sie die Koordinatenwerte angeben, wenn Sie einen neuen räumlichen Index für eine Spalte vom Typ **geometry** erstellen.  
   
  **X-min**  
  Die X-Koordinate der unteren linken Ecke des umgebenden Felds.  
@@ -242,7 +241,7 @@ ms.locfileid: "47846369"
  **Filterausdruck**  
  Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen von Indexoptionen](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

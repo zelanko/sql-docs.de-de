@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Signieren von gespeicherten Prozeduren mit einem Zertifikat | Microsoft-Dokumentation'
+title: 'Lernprogramm: Signieren von gespeicherten Prozeduren mit einem Zertifikat | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 08/23/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cb9a7a9ddb5bba961b6d0df54cab4fdcf91ed1a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 225f827de70f4946cabca3e06e7a7be364094479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138384"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Lernprogramm: Signieren von gespeicherten Prozeduren mit einem Zertifikat
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ ADD SIGNATURE TO TestCreditRatingSP
 GO  
 ```  
   
-Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &amp;#40;Datenbank-Engine&amp;#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
+Weitere Informationen zum Aufrufen von gespeicherten Prozeduren finden Sie unter [Gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../relational-databases/stored-procedures/stored-procedures-database-engine.md).  
   
 Weitere Informationen zum Signieren von gespeicherten Prozeduren finden Sie unter [ADD SIGNATURE &#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md).  
   
@@ -285,7 +284,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
 [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

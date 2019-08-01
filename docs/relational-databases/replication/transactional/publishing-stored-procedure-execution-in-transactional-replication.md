@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85643186d92e2033fc909ae166533cac0e18f44d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbe9c2805a6e8b5354207534b5758c28081011e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121281"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Replikationsprogrammierung mit Transact-SQL: Führen Sie [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) aus, und geben Sie anschließend für den **@type**-Parameter den Wert 'serializable proc exec' (empfohlen) oder 'proc exec' an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Replikationsprogrammierung mit Transact-SQL: Führen Sie [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) aus, und geben Sie anschließend für den **@type** -Parameter den Wert 'serializable proc exec' (empfohlen) oder 'proc exec' an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Ändern der Prozedur auf dem Abonnenten  
  Standardmäßig wird die Definition der gespeicherten Prozedur auf dem Verleger an jeden Abonnenten weitergegeben. Sie können aber auch die gespeicherte Prozedur auf dem Abonnenten ändern. Dies ist dann sinnvoll, wenn auf dem Verleger und dem Abonnenten eine unterschiedliche Logik ausgeführt werden soll. Gehen wir als Beispiel von **sp_big_delete**aus, einer gespeicherten Prozedur auf dem Verleger mit zwei Funktionen: Zum einen löscht die Prozedur 1.000.000 Zeilen aus der replizierten **big_table1** -Tabelle, zum anderen aktualisiert sie die nicht replizierte **big_table2**-Tabelle. Um den Bedarf an Netzwerkressourcen zu reduzieren, sollten Sie das Löschen der 1 Million Zeilen als gespeicherte Prozedur weitergeben, indem Sie **sp_big_delete**veröffentlichen. Auf dem Abonnenten können Sie **sp_big_delete** so ändern, dass nur die 1 Million Zeilen gelöscht werden, ohne ein nachfolgendes Update von **big_table2**auszuführen.  
@@ -95,7 +94,7 @@ COMMIT TRANSACTION T2
   
  Wenn für XACT_ABORT OFF angegeben werden muss, geben Sie den **-SkipErrors** -Parameter für den Verteilungs-Agent an. Auf diese Weise kann der Agent auch dann die Änderungen auf den Abonnenten anwenden, wenn es zu einem Fehler kommt.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

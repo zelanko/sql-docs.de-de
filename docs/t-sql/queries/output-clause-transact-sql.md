@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901871"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT-Klausel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle, die geändert wird, müssen entweder durch das INSERTED- oder das DELETED-Präfix richtig gekennzeichnet werden, INSERTED **.**_column\_name_.  
+ Ist ein expliziter Spaltenverweis. Alle Verweise auf die Tabelle, die geändert wird, müssen entweder durch das INSERTED- oder das DELETED-Präfix richtig gekennzeichnet werden, zum Beispiel: INSERTED **.** _column\_name_.  
   
  $action  
- Ist verfügbar nur für die MERGE-Anweisung. Gibt in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen der drei folgenden Werte für jede Zeile zurückgibt, eine Spalte des Typs **nvarchar(10)** an: 'INSERT', 'UPDATE' oder 'DELETE', je nach der für diese Zeile ausgeführten Aktion.  
+ Ist verfügbar nur für die MERGE-Anweisung. Gibt in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen der drei folgenden Werte für jede Zeile zurückgibt, eine Spalte des Typs **nvarchar(10)** an: 'INSERT', 'UPDATE' oder 'DELETE', je nachdem, welche Aktion für diese Zeile ausgeführt wurde.  
   
 ## <a name="remarks"></a>Remarks  
- Die OUTPUT \<dml_select_list>-Klausel und die OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ }-Klausel können in einer einzelnen INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert werden.  
+ Die OUTPUT \<dml_select_list>-Klausel und die OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ }-Klausel können in einer einzelnen INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert werden.  
   
 > [!NOTE]  
 >  Sofern nicht anderweitig angegeben, beziehen sich Verweise auf die OUTPUT-Klausel sowohl auf die OUTPUT- als auch die OUTPUT INTO-Klausel.  
@@ -227,7 +226,7 @@ Wenn im Kontext einer Datenbank, für die ein Kompatibilitätsgrad von mindesten
  Wird die sp_configure-Option Ergebnisse von Triggern nicht zulassen festgelegt, hat eine OUTPUT-Klausel ohne INTO-Klausel zur Folge, dass die Anweisung fehlschlägt, wenn sie aus einem Trigger heraus aufgerufen wird.  
   
 ## <a name="data-types"></a>Datentypen  
- Die OUTPUT-Klausel unterstützt die LOB-Datentypen: **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image** und **xml**. Wird die .WRITE-Klausel in der UPDATE-Anweisung zum Ändern einer **nvarchar(max)**-, **varchar(max)**- oder **varbinary(max)**-Spalte verwendet, werden die vollständigen Anfangs- und Endimages der Werte zurückgegeben, wenn auf sie verwiesen wird. Die TEXTPTR( )-Funktion kann nicht im Rahmen eines Ausdrucks in einer **text**, **ntext**- oder **image**-Spalte in der OUTPUT-Klausel angezeigt werden.  
+ Die OUTPUT-Klausel unterstützt die LOB-Datentypen: **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** und **xml**. Wird die .WRITE-Klausel in der UPDATE-Anweisung zum Ändern einer **nvarchar(max)** -, **varchar(max)** - oder **varbinary(max)** -Spalte verwendet, werden die vollständigen Anfangs- und Endimages der Werte zurückgegeben, wenn auf sie verwiesen wird. Die TEXTPTR( )-Funktion kann nicht im Rahmen eines Ausdrucks in einer **text**, **ntext**- oder **image**-Spalte in der OUTPUT-Klausel angezeigt werden.  
   
 ## <a name="queues"></a>Warteschlangen  
  OUTPUT kann in Anwendungen, die Tabellen als Warteschlangen verwenden, oder zum Aufbewahren von Zwischenresultsets verwendet werden. Die Anwendung fügt der Tabelle somit kontinuierlich Zeilen hinzu oder entfernt sie daraus. Im folgenden Beispiel wird die OUTPUT-Klausel in einer DELETE-Anweisung verwendet, um die gelöschte Zeile an die aufrufende Anwendung zurückzugeben.  

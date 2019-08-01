@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6194b035ae28a1c70dbba2f2b72050fb87a76328
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948664"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329320"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt die Anzahl von Zeichen im angegebenen Zeichenfolgenausdruck zurück, wobei nachfolgende Leerzeichen ausgeschlossen werden.  
+  Gibt die Anzahl von Zeichen im angegebenen Zeichenfolgenausdruck zurück, wobei nachstehende Leerzeichen ausgeschlossen werden.  
   
 > [!NOTE]  
 >  Verwenden Sie die [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md)-Funktion, um die Anzahl von Bytes zurückzugeben, die zur Darstellung eines Ausdrucks verwendet werden.  
@@ -54,7 +53,7 @@ LEN ( string_expression )
  Wenn Sie SC-Sortierungen verwenden, betrachtet der zurückgegebene ganzzahlige Wert UTF-16-Ersatzpaare als einzelne Zeichen. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Remarks  
- Durch LEN werden nachfolgende Leerräume ausgeschlossen. Wenn dies ein Problem darstellt, erwägen Sie die Verwendung der Funktion [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), die die Zeichenfolge nicht abtrennt. Wenn eine Unicode-Zeichenfolge verarbeitet wird, gibt DATALENGTH die doppelte Anzahl von Zeichen zurück. Im folgenden Beispiel werden LEN und DATALENGTH mit nachfolgenden Leerräumen veranschaulicht.  
+ Durch LEN werden nachstehende Leerzeichen ausgeschlossen. Wenn dies ein Problem darstellt, erwägen Sie die Verwendung der Funktion [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), die die Zeichenfolge nicht abtrennt. Wenn eine Unicode-Zeichenfolge verarbeitet wird, gibt DATALENGTH die doppelte Anzahl von Zeichen zurück. Im folgenden Beispiel werden LEN und DATALENGTH mit nachfolgenden Leerräumen veranschaulicht.  
   
 ```  
 DECLARE @v1 varchar(40),  

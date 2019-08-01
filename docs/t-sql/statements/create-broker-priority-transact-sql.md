@@ -25,20 +25,19 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061151"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Definiert eine Prioritätsebene und die Gruppe von Kriterien, anhand derer bestimmt wird, welchen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen die Prioritätsebene zugeordnet wird. Die Prioritätsebene wird jedem Konversationsendpunkt zugeordnet, der die gleiche Kombination aus Verträgen und Diensten verwendet, die für die Konversationspriorität angegeben sind. Die Prioritätswerte liegen zwischen 1 (niedrig) und 10 (hoch). Der Standardwert ist 5.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -94,7 +93,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Gibt den Namen eines Diensts an, der als Kriterium verwendet werden kann, um zu bestimmen, ob die Konversationspriorität für einen Konversationsendpunkt übernommen wird.  
   
- *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
+ *RemoteServiceName* ist ein Literal vom Typ **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet einen bitweisen Vergleich für den Abgleich der *RemoteServiceName*-Zeichenfolge. Bei dem Vergleich wird die Groß-/Kleinschreibung beachtet, die aktuelle Sortierung hingegen wird nicht berücksichtigt. Der Zieldienst kann in der aktuellen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder in einer Remoteinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] vorhanden sein.  
   
  '*RemoteServiceName*'  
  Gibt an, dass die Konversationspriorität für Folgendes übernommen werden kann:  
@@ -219,7 +218,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ```  
   
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. Erstellen von drei Prioritätsebenen für einen Zieldienst mithilfe von Diensten  
- Unterstützt ein System, das drei Leistungsebenen bereitstellt: Gold (hoch), Silver (mittel) und Bronze (niedrig). Es gibt einen Vertrag, aber jede Ebene weist einen separaten Initiatordienst auf. Alle Initiatordienste kommunizieren mit einem zentralen Zieldienst.  
+ Unterstützt ein System, das drei Leistungsstufen bietet: Gold (hoch), Silber (mittel) und Bronze (niedrig). Es gibt einen Vertrag, aber jede Ebene weist einen separaten Initiatordienst auf. Alle Initiatordienste kommunizieren mit einem zentralen Zieldienst.  
   
 ```  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
@@ -261,7 +260,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ```  
   
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. Erstellen von drei Prioritätsebenen für mehrere Dienste mithilfe von Verträgen  
- Unterstützt ein System, das drei Leistungsebenen bereitstellt: Gold (hoch), Silver (mittel) und Bronze (niedrig). Jede Ebene weist einen separaten Vertrag auf. Diese Prioritäten werden für alle Dienste übernommen, auf die von Konversationen verwiesen wird, die die Verträge verwenden.  
+ Unterstützt ein System, das drei Leistungsstufen bietet: Gold (hoch), Silber (mittel) und Bronze (niedrig). Jede Ebene weist einen separaten Vertrag auf. Diese Prioritäten werden für alle Dienste übernommen, auf die von Konversationen verwiesen wird, die die Verträge verwenden.  
   
 ```  
 CREATE BROKER PRIORITY GoldPriority  
@@ -284,7 +283,7 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   

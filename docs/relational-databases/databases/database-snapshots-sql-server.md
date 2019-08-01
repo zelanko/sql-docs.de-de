@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4507a56146b6324e065d6d24a19855292ebf5276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861219"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300436"
 ---
 # <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Beim Aktualisieren der Quelldatenbank wird auch die Datenbankmomentaufnahme aktualisiert. Daher wird wahrscheinlich der verfügbare Speicherplatz aufgebraucht, je länger eine Datenbankmomentaufnahme besteht.  
+
+Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank (die *Quelldatenbank*). Die Datenbankmomentaufnahme ist hinsichtlich der Transaktionen mit der Quelldatenbank zum Zeitpunkt der Momentaufnahmeerstellung konsistent. Eine Datenbankmomentaufnahme befindet sich immer auf derselben Serverinstanz wie ihre Quelldatenbank. Während Datenbankmomentaufnahmen eine schreibgeschützte Ansicht der Daten im selben Zustand bereitstellen, in dem die Momentaufnahme erstellt wurde, wächst die Größe der Momentaufnahmendatei, wenn Änderungen an der Quelldatenbank vorgenommen werden. Weitere Informationen finden Sie weiter unten im Abschnitt mit der [Funktionsübersicht](#FeatureOverview).
   
  In einer bestimmten Quelldatenbank können mehrere Momentaufnahmen vorhanden sein. Jede Datenbankmomentaufnahme ist so lange vorhanden, bis sie explizit vom Datenbankbesitzer gelöscht wird.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051289"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ insert
   
 ## <a name="arguments"></a>Argumente  
  *Expression1*  
- Gibt einen oder mehrere einzufügende Knoten an. Dabei kann es sich um eine konstante XML-Instanz, einen Verweis auf eine typisierte XML-Datentypinstanz der gleichen XML-Schemaauflistung, auf der die modify-Methode angewendet wird, eine nicht typisierte XML-Datentypinstanz mit einer eigenständigen **sql:column()**/**sql:variable()**-Funktion oder einen XQuery-Ausdruck handeln. Der Ausdruck kann als Ergebnis einen Knoten, einen Textknoten oder eine geordnete Sequenz von Knoten haben. Der Ausdruck kann nicht den Stammknoten (/) auflösen. Wenn das Ergebnis des Ausdrucks ein Wert oder eine Sequenz von Werten ist, werden diese Werte als einzelner Textknoten eingefügt, wobei ein Leerzeichen die einzelnen Werte in der Sequenz trennt. Wenn Sie mehrere Knoten als Konstante angeben, werden die Knoten in Klammern eingeschlossen und durch Kommas getrennt. Sie können keine heterogenen Sequenzen wie z. B. eine Sequenz aus Elementen, Attributen oder Werten einfügen. Wenn *Expression1* in eine leere Sequenz aufgelöst wird, findet kein Einfügevorgang statt, und es werden keine Fehler zurückgegeben.  
+ Gibt einen oder mehrere einzufügende Knoten an. Dabei kann es sich um eine konstante XML-Instanz, einen Verweis auf eine typisierte XML-Datentypinstanz der gleichen XML-Schemaauflistung, auf der die modify-Methode angewendet wird, eine nicht typisierte XML-Datentypinstanz mit einer eigenständigen **sql:column()** /**sql:variable()** -Funktion oder einen XQuery-Ausdruck handeln. Der Ausdruck kann als Ergebnis einen Knoten, einen Textknoten oder eine geordnete Sequenz von Knoten haben. Der Ausdruck kann nicht den Stammknoten (/) auflösen. Wenn das Ergebnis des Ausdrucks ein Wert oder eine Sequenz von Werten ist, werden diese Werte als einzelner Textknoten eingefügt, wobei ein Leerzeichen die einzelnen Werte in der Sequenz trennt. Wenn Sie mehrere Knoten als Konstante angeben, werden die Knoten in Klammern eingeschlossen und durch Kommas getrennt. Sie können keine heterogenen Sequenzen wie z. B. eine Sequenz aus Elementen, Attributen oder Werten einfügen. Wenn *Expression1* in eine leere Sequenz aufgelöst wird, findet kein Einfügevorgang statt, und es werden keine Fehler zurückgegeben.  
   
  into  
  Knoten, die durch *Expression1* angegeben werden, werden als direkte Nachfolger (untergeordnete Knoten) des Knotens eingefügt, der durch *Expression2* angegeben wird. Wenn der Knoten in *Expression2* bereits über einen oder mehrere untergeordnete Knoten verfügt, müssen Sie **as first** oder **as last** verwenden, wenn Sie angeben möchten, wo der neue Knoten hinzugefügt werden soll. Beispielsweise am Anfang bzw. Ende der Liste der untergeordneten Knoten. Die **as first**- und **as last**-Schlüsselwörter werden ignoriert, wenn Attribute eingefügt werden.  
@@ -212,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. Einfügen von Daten mit einem CDATA-Abschnitt  
- Wenn Sie Text mit Zeichen einfügen, die in XML nicht verwendet werden können, z. B. < oder >, können Sie die Daten mithilfe von CDATA-Abschnitten einfügen, wie in der folgenden Abfrage veranschaulicht. Die Abfrage gibt einen CDATA-Abschnitt an, wird jedoch als Textknoten hinzugefügt, wobei alle ungültigen Zeichen in Entitäten konvertiert werden. '<' wird beispielsweise als &lt; gespeichert.  
+ Wenn Sie Text mit Zeichen einfügen, die in XML nicht verwendet werden können, z. B. < oder >, können Sie die Daten wie in der folgenden Abfrage veranschaulicht mithilfe von CDATA-Abschnitten einfügen. Die Abfrage gibt einen CDATA-Abschnitt an, wird jedoch als Textknoten hinzugefügt, wobei alle ungültigen Zeichen in Entitäten konvertiert werden. '<' wird beispielsweise als &lt; gespeichert.  
   
 ```  
 USE AdventureWorks;  
