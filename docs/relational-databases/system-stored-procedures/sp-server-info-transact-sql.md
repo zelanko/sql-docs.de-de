@@ -1,5 +1,5 @@
 ---
-title: Sp_server_info (Transact-SQL) | Microsoft-Dokumentation
+title: sp_server_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104454"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702852"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Liste von Attributnamen und entsprechenden Werten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], das Datenbankgateway oder die zugrunde liegende Datenquelle zurück.  
   
@@ -39,7 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @attribute_id = ] 'attribute_id'` Ist die ganzzahlige ID des Attributs an. *Attribute_id* ist **Int**, hat den Standardwert NULL.  
+`[ @attribute_id = ] 'attribute_id'`Die ganzzahlige ID des Attributs. *attribute_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -49,10 +50,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**int**|ID-Nummer des Attributs.|  
-|**ATTRIBUTE_NAME**|**Varchar (** 60 **)**|Der Attributname.|  
-|**ATTRIBUTE_VALUE**|**Varchar (** 255 **)**|Aktuelle Einstellung des Attributs.|  
+|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Der Attributname.|  
+|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Aktuelle Einstellung des Attributs.|  
   
- Die Attribute sind in der folgenden Tabelle aufgeführt. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC-Clientbibliotheken verwenden zurzeit die Attribute **1**, **2**, **18**, **22**, und **500** beim Herstellen der Verbindung Zeit.  
+ Die Attribute sind in der folgenden Tabelle aufgeführt. [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC-Client Bibliotheken verwenden derzeit die Attribute **1**, **2**, **18**, **22**und **500** zur Verbindungszeit.  
   
 |ATTRIBUTE_ID|Beschreibung in ATTRIBUTE_NAME|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -69,12 +70,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> Gibt die Sortierung des Zeichensatzes für diesen Server an.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> Gibt an, ob das zugrunde liegende DBMS benannte Sicherungspunkte unterstützt.|J|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Gibt an, ob die zugrunde liegende Datenbank oder das Gateway selbst mehrere Resultsets unterstützt (mehrere Anweisungen können über das Gateway gesendet werden, wobei mehrere Resultsets an den Client zurückgegeben werden).|J|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Gibt an, ob im **Sp_tables**, das Gateway gibt nur Tabellen, Ansichten und So weiter, die vom aktuellen Benutzer (d. h. der Benutzer, die zumindest über SELECT-Berechtigungen für die Tabelle verfügt) zugegriffen werden kann.|J|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Gibt an, ob das Gateway in **sp_tables**nur Tabellen, Sichten usw. zurückgibt, auf die der aktuelle Benutzer zugreifen kann (d. h. der Benutzer, der mindestens über SELECT-Berechtigungen für die Tabelle verfügt).|J|  
 |**100**|USERID_LENGTH<br /><br /> Gibt die maximal zulässige Anzahl der Zeichen für einen Benutzernamen an.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> Gibt den DBMS-Herstellerausdruck für einen Tabellenqualifizierer an (der erste Teil eines dreiteiligen Tabellennamens).|Datenbank|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Gibt an, ob das zugrunde liegende DBMS benannte Transaktionen unterstützt.|J|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> Gibt an, ob gespeicherte Prozeduren als Sprachereignisse ausgeführt werden können.|J|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> Gibt an, ob im **Sp_stored_procedures**, das Gateway gibt nur gespeicherte Prozeduren, die vom aktuellen Benutzer ausgeführt werden.|J|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> Gibt an, ob das Gateway in **sp_stored_procedures**nur gespeicherte Prozeduren zurückgibt, die vom aktuellen Benutzer ausführbare Dateien sind.|J|  
 |**105**|MAX_INDEX_COLS<br /><br /> Gibt die maximal zulässige Anzahl der Spalten eines Index für das DBMS an.|16|  
 |**106**|RENAME_TABLE<br /><br /> Gibt an, ob Tabellen umbenannt werden können.|J|  
 |**107**|RENAME_COLUMN<br /><br /> Gibt an, ob Spalten umbenannt werden können.|J|  
@@ -87,13 +88,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**500**|SYS_SPROC_VERSION<br /><br /> Gibt die Katalogversion der derzeit implementierten gespeicherten Prozeduren an.|Aktuelle Versionsnummer|  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_server_info** gibt eine Teilmenge der Informationen von **SQLGetInfo** in ODBC.  
+ **sp_server_info** gibt eine Teilmenge der Informationen zurück, die von **SQLGetInfo** in ODBC bereitgestellt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Prozeduren für Kataloginformationen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Gespeicherte Katalog Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

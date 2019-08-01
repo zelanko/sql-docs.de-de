@@ -1,5 +1,5 @@
 ---
-title: Sp_table_privileges (Transact-SQL) | Microsoft-Dokumentation
+title: sp_table_privileges (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 14e532d76f70f6a2d4fa623d80fa02e6c756348a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 595f8adb46602109751b1912feed99ae4702fb55
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096143"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702843"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Liste der Tabellenberechtigungen (beispielsweise INSERT, DELETE, UPDATE, SELECT, REFERENCES) für die angegebene Tabelle oder Tabellen zurück.  
   
@@ -42,19 +43,19 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @table_name=] '*Table_name*"  
- Die Tabelle zum Zurückgeben von Kataloginformationen. *TABLE_NAME* ist **Nvarchar (** 384 **)** , hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+ [ @table_name=] '*table_name*'  
+ Die Tabelle zum Zurückgeben von Kataloginformationen. *table_name* ist vom Datentyp **nvarchar (** 384 **)** und hat keinen Standardwert. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
- [ @table_owner=] '*Table_owner*"  
- Der Tabellenbesitzer für die Tabelle zum Zurückgeben von Kataloginformationen. *Table_owner*ist **Nvarchar (** 384 **)** , hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn der Besitzer nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
+ [ @table_owner=] '*TABLE_OWNER*'  
+ Der Tabellenbesitzer für die Tabelle zum Zurückgeben von Kataloginformationen. *TABLE_OWNER*ist vom Datentyp **nvarchar (** 384 **)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn der Besitzer nicht angegeben ist, werden die Standardregeln für die Sichtbarkeit von Tabellen des zugrunde liegenden DBMS angewendet.  
   
- Wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt, werden die Spalten einer Tabelle zurückgegeben. Wenn *Besitzer* nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit den angegebenen *Namen*, sieht Sie dieses Verfahren für eine Tabelle mit dem angegebenen *Table_name* im Besitz der Besitzer der Datenbank. Wenn eine vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
+ Wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt, werden die Spalten einer Tabelle zurückgegeben. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Namen*besitzt, sucht diese Prozedur nach einer Tabelle mit dem angegebenen *table_name* , die im Besitz des Daten Bank Besitzers ist. Wenn eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
- [ @table_qualifier=] '*Table_qualifier*"  
- Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist **Sysname**, hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (*qualifier.owner.name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ [ @table_qualifier=] '*TABLE_QUALIFIER*'  
+ Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
- [ @fUsePattern=] '*fUsePattern*"  
- Bestimmt, ob der Unterstrich (_), Prozentzeichen (%), und Klammern ([oder]) Zeichen als Platzhalterzeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
+ [ @fUsePattern=] '*fUsePattern*'  
+ Bestimmt, ob die Zeichen Unterstrich (_), Prozentzeichen (%) und eckige Klammern ([oder]) als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  None  
@@ -63,11 +64,11 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|TABLE_QUALIFIER|**sysname**|Name des Qualifizierers Tabelle. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Dieses Feld kann den Wert NULL annehmen.|  
-|TABLE_OWNER|**sysname**|Name des Tabellenbesitzers. Dieses Feld gibt immer einen Wert zurück.|  
+|TABLE_QUALIFIER|**sysname**|Tabellen qualifizierername. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Dieses Feld kann den Wert NULL annehmen.|  
+|TABLE_OWNER|**sysname**|Der Name des Tabellen Besitzers. Dieses Feld gibt immer einen Wert zurück.|  
 |table_name|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |GRANTOR|**sysname**|Der Datenbankbenutzername, der dem aufgelisteten GRANTEE Berechtigungen für TABLE_NAME erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist diese Spalte stets mit dem TABLE_OWNER identisch. Dieses Feld gibt immer einen Wert zurück. Zudem kann die GRANTOR-Spalte entweder der Datenbankbesitzer (TABLE_OWNER) oder ein Benutzer sein, dem der Datenbankbesitzer mithilfe der WITH GRANT OPTION-Klausel in der GRANT-Anweisung die Berechtigung erteilt hat.|  
-|GRANTEE|**sysname**|Der Datenbank-Benutzername, dem vom aufgeführten GRANTOR Berechtigungen für TABLE_NAME erteilt wurden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], enthält diese Spalte immer einen Datenbankbenutzer aus der Sicht sys.database_principalssystem. Dieses Feld gibt immer einen Wert zurück.|  
+|GRANTEE|**sysname**|Der Datenbank-Benutzername, dem vom aufgeführten GRANTOR Berechtigungen für TABLE_NAME erteilt wurden. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthält diese Spalte immer einen Datenbankbenutzer aus der sys. database_principalssystem-Sicht. Dieses Feld gibt immer einen Wert zurück.|  
 |PRIVILEGE|**sysname**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen (bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> SELECT = GRANTEE kann Daten aus einer oder mehreren Spalten abrufen.<br /><br /> INSERT = GRANTEE kann in einer oder mehreren Spalten Daten für neue Zeilen bereitstellen.<br /><br /> UPDATE = GRANTEE kann vorhandene Daten in einer oder mehreren Spalten ändern.<br /><br /> DELETE = GRANTEE kann Zeilen aus der Tabelle entfernen.<br /><br /> REFERENCES = der Berechtigte (GRANTEE) kann bei einer Primär-/Fremdschlüssel-Beziehung auf eine Spalte in einer Fremdschlüsseltabelle verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen über Tabelleneinschränkungen definiert.<br /><br /> Der dem GRANTEE durch ein bestimmtes Tabellenprivileg erteilte Aktionsbereich ist datenquellenabhängig. Beispielsweise kann der GRANTEE mit dem UPDATE-Privileg alle Spalten in einer Tabelle für eine Datenquelle aktualisieren, während er für eine andere Datenquelle nur die Spalten aktualisieren kann, für die der GRANTOR das UPDATE-Privileg besitzt.|  
 |IS_GRANTABLE|**sysname**|Zeigt an, ob der GRANTEE anderen Benutzern Berechtigungen erteilen darf (oft als "Berechtigung mit Recht zum Erteilen" bezeichnet). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert (oder NULL-Wert) verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
   
@@ -88,7 +89,7 @@ EXEC sp_table_privileges
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Prozeduren für Kataloginformationen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Gespeicherte Katalog Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
