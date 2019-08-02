@@ -1,18 +1,19 @@
 ---
 title: Aktivieren oder Deaktivieren der Remote-R-Paketverwaltung
-description: Aktivieren der Remote-r-Paketverwaltung auf SQL Server 2016 R Services oder SQL Server 2017 Machine Learning Services (in-Database)
+description: Aktivieren der Remote-r-Paketverwaltung auf SQL Server 2016 R-Diensten oder SQL Server Machine Learning Services (in-Database)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc08b1227751559ea509838fe8fc3a446296770
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 260109e978c8997622f24c41341e11f1e2efa7cc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470022"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715633"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Aktivieren oder Deaktivieren der Remote Paketverwaltung für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ Standardmäßig ist das Feature für die externe Paketverwaltung für SQL Server
 
 Verwenden Sie zum Aktivieren oder Deaktivieren der Paketverwaltung auf SQL Server das Befehlszeilen Dienstprogramm **registerrext. exe**, das im **revoscaler** -Paket enthalten ist.
 
-[Das Aktivieren](#bkmk_enable) dieses Features ist ein zweistufiger Prozess, bei dem ein Datenbankadministrator erforderlich ist: Sie können die Paketverwaltung auf der SQL Server Instanz (einmal pro SQL Server Instanz) aktivieren und dann die Paketverwaltung für die SQL-Datenbank aktivieren (einmal pro SQL Server Datenbank). ).
+Das [Aktivieren](#bkmk_enable) dieses Features ist ein zweistufiger Prozess, bei dem ein Datenbankadministrator erforderlich ist: Sie können die Paketverwaltung auf der SQL Server Instanz (einmal pro SQL Server Instanz) aktivieren und dann die Paketverwaltung für die SQL-Datenbank aktivieren (einmal pro SQL Server Datenbank). ).
 
 Das [Deaktivieren](#bkmk_disable) des Paket Verwaltungs Features erfordert auch multipel-Schritte: Sie entfernen Pakete und Berechtigungen auf Datenbankebene (einmal pro Datenbank) und entfernen dann die Rollen vom Server (einmal pro Instanz).
 

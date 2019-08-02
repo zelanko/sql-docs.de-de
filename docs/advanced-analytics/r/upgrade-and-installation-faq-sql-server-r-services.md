@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fe196a82badcab9ebe05004ee05cd67131942dd1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469901"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715615"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>FAQ zu Upgrade und Installation für SQL Server Machine Learning oder R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ Dieses Thema enthält Antworten auf einige häufig gestellte Fragen zur Installa
 + Einige Probleme treten nur bei Upgrades von vorab Versionen auf. Daher wird empfohlen, dass Sie die Version und die Edition zuerst ermitteln, bevor Sie diese Notizen lesen. Um Versionsinformationen zu erhalten, `@@VERSION` führen Sie in einer Abfrage aus SQL Server Management Studio aus.
 + Führen Sie ein Upgrade auf die aktuellste Version oder Dienst Freigabe so bald wie möglich durch, um Probleme zu beheben, die in den letzten Releases behoben wurden.
 
-**Gilt für:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (in-Database)
+**Gilt für:** SQL Server 2016 R Services, SQL Server Machine Learning Services (in-Database)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Anforderungen und Einschränkungen für ältere Versionen von SQL Server 2016 
 
@@ -30,7 +31,7 @@ Abhängig vom Build der SQL Server, die Sie installieren, gelten möglicherweise
 
 - In frühen Versionen von SQL Server 2016 R Services war eine 8.3-Notation auf dem Laufwerk erforderlich, das das Arbeitsverzeichnis enthält. Wenn Sie eine Vorabversion installiert haben, sollte dieses Problem durch ein Upgrade auf SQL Server 2016 Service Pack 1 behoben werden. Diese Anforderung gilt nicht für Releases nach SP1.
 
-- Zurzeit ist es nicht [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] möglich, auf einem Failovercluster zu installieren. SQL Server 2019 Preview bietet jedoch Failoverunterstützung, wenn Sie diese Funktion in einer Testumgebung auswerten möchten. Weitere Informationen finden Sie unter [Neuigkeiten.](../what-s-new-in-sql-server-machine-learning-services.md)
+- Zurzeit ist es nicht [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] möglich, auf einem Failovercluster zu installieren. SQL Server 2019 Preview bietet jedoch Failoverunterstützung, wenn Sie diese Funktion in einer Testumgebung auswerten möchten. Weitere Informationen finden Sie unter [Neuigkeiten](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - Auf einem virtuellen Azure-Computer sind möglicherweise einige zusätzliche Konfigurationen erforderlich. Beispielsweise kann es erforderlich sein, eine Firewallausnahme zu erstellen, um den Remote Zugriff zu unterstützen.
 
