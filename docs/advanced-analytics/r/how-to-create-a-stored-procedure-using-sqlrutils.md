@@ -7,14 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470148"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715704"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Erstellen einer gespeicherten pprocedure mithilfe von sqlrutils
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>Erstellen einer gespeicherten Prozedur mithilfe von sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 In diesem Artikel werden die Schritte zum Umrechnen des R-Codes beschrieben, der als gespeicherte T-SQL-Prozedur ausgeführt werden soll. Zum Erzielen bestmöglicher Ergebnisse kann es erforderlich sein, dass Ihr Code ein wenig geändert wird, damit sichergestellt ist, dass alle Eingaben parametrisiert werden können.
@@ -29,7 +30,7 @@ Da die Eingabeparameter für die R-Funktion zu den Eingabe Parametern der gespei
 
 ### <a name="inputs"></a>Eingaben
 
-In den Eingabeparametern darf es höchstens einen Datenrahmen geben.
+Zwischen den Eingabe Parametern kann höchstens ein Datenrahmen vorhanden sein.
 
 Der Objekte in dem Datenrahmen müssen, so wie alle anderen Eingabeparameter der Funktion, die folgenden R-Datentypen haben:
 - POSIXct
@@ -116,7 +117,7 @@ Beide Methoden erfordern, dass die gespeicherte Prozedur in der Datenbank regist
 
 Sie können die gespeicherte Prozedur mithilfe von R registrieren, oder Sie können die CREATE PROCEDURE-Anweisung in T-SQL ausführen.
 
-- Verwenden von T-SQL.  Wenn Sie mit T-SQL besser vertraut sind, öffnen Sie SQL Server-Management Studio (oder einen anderen Client, der SQL-DDL-Befehle ausführen kann), und führen Sie die CREATE PROCEDURE `StoredProcedure` -Anweisung mit dem von der Funktion vorbereiteten Code aus.
+- Verwenden von T-SQL.  Wenn Sie mit T-SQL besser vertraut sind, öffnen Sie SQL Server Management Studio (oder einen anderen Client, der SQL-DDL-Befehle ausführen kann), und führen Sie die CREATE PROCEDURE- `StoredProcedure` Anweisung mit dem von der Funktion vorbereiteten Code aus.
 - Verwenden von R. Obwohl Sie sich noch in Ihrer R-Umgebung befinden, können Sie `registerStoredProcedure` die-Funktion in **sqlrutils** verwenden, um die gespeicherte Prozedur bei der Datenbank zu registrieren.
 
   Sie können z. b. die gespeicherte Prozedur **sp_rsample** in der Instanz und in der Datenbank registrieren, die in *sqldinnstr*definiert ist, indem Sie diesen R-Befehl ausführen:

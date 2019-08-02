@@ -6,19 +6,20 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8db20295c2e21b6499d4d935f9c99161983b588f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469890"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715581"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Verwenden von revoscaler-Funktionen zum Suchen oder Installieren von R-Paketen auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Revoscaler 9.0.1 und höher umfasst Funktionen für die R-Paketverwaltung a SQL Server computekontext. Diese Funktionen können von Remote-, nicht--Administratoren verwendet werden, um Pakete auf SQL Server ohne direkten Zugriff auf den-Server zu installieren.
 
-SQL Server 2017 Machine Learning Services enthält bereits eine neuere Version von revoscaler. SQL Server 2016 R Services-Kunden müssen ein [Komponenten Upgrade](../install/upgrade-r-and-python.md) ausführen, um die revoscaler-Paketverwaltungsfunktionen zu erhalten. Anweisungen zum Abrufen der Paketversion und des Inhalts finden Sie unter Abrufen von [Paketinformationen](../package-management/installed-package-information.md).
+SQL Server Machine Learning Services enthält bereits eine neuere Version von revoscaler. SQL Server 2016 R Services-Kunden müssen ein [Komponenten Upgrade](../install/upgrade-r-and-python.md) ausführen, um die revoscaler-Paketverwaltungsfunktionen zu erhalten. Anweisungen zum Abrufen der Paketversion und des Inhalts finden Sie unter Abrufen von [Paketinformationen](../package-management/installed-package-information.md).
 
 ## <a name="revoscaler-functions-for-package-management"></a>Revoscaler-Funktionen für die Paketverwaltung
 

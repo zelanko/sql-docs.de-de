@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 686ba69425dc9bc6554b369be3d5fadd24b5a234
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: eb007525834c312952f9eb02809edadebaefa305
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469401"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715433"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Schnellstart: Verarbeiten von Datentypen und Objekten mithilfe von R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +108,7 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-Wie Sie sehen können, hatte eine geringfügige Änderung in der R-Syntax einen großen Einfluss auf das Schema der Ergebnisse. Wir gehen nicht in den Grund ein, aber die Unterschiede in R-Datentypen werden im *Abschnitt* ["Advanced R" von Hadley Wickham](http://adv-r.had.co.nz)ausführlich erläutert.
+Wie Sie sehen können, hatte eine geringfügige Änderung in der R-Syntax einen großen Einfluss auf das Schema der Ergebnisse. Wir gehen nicht in den Grund ein, aber die Unterschiede in R-Datentypen werden im Abschnitt ["Advanced R" von Hadley Wickham](http://adv-r.had.co.nz)ausführlich erläutert.
 
 Jetzt müssen Sie nur Bedenken, dass Sie die erwarteten Ergebnisse überprüfen müssen, wenn Sie R-Objekte in Datenrahmen umwandeln müssen.
 

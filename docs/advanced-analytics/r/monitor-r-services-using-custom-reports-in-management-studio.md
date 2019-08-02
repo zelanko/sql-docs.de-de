@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: effcfe458fc004fd8fb44bb58095e91a2fb56b8d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a7ab7a4ccd4956bd1752be398b25a6ff9fd92ce5
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470069"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715083"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Überwachung von Machine Learning Services mithilfe von benutzerdefinierten Berichten in Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ Um die Verwaltung der für Machine Learning verwendeten Instanz zu vereinfachen,
 - Erweiterte Ereignisse für R Services
 - Auf der aktuellen Instanz installierte R-oder python-Pakete
 
-In diesem Artikel wird erläutert, wie Sie die benutzerdefinierten Berichte installieren und verwenden, die speziell für die maschinelle Übersetzung bereitgestellt werden 
+In diesem Artikel wird erläutert, wie Sie die benutzerdefinierten Berichte installieren und verwenden, die speziell für Machine Learning bereitgestellt werden 
 
 Eine allgemeine Einführung in die Berichte in Management Studio finden Sie unter [benutzerdefinierte Berichte in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 

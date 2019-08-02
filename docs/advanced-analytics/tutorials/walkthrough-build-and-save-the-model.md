@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af2b1bf8f619800737863ff955011b011f4819d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470529"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715393"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Erstellen eines R-Modells und speichern in SQL Server (Exemplarische Vorgehensweise)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ In diesem Abschnitt experimentieren Sie mit beiden Techniken.
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    Dieser Rückruf gibt die Werte zurück, die beim Berechnen des ROC-Diagramms verwendet werden. Die Bezeichnungs Spalte _ist mit_den tatsächlichen Ergebnissen versehen, die Sie vorhersagen möchten, während die _Score_ -Spalte die Vorhersage enthält.
+    Dieser Rückruf gibt die Werte zurück, die beim Berechnen des ROC-Diagramms verwendet werden. Die Bezeichnungs Spalteist mit den tatsächlichen Ergebnissen versehen, die Sie vorhersagen möchten, während die _Score_ -Spalte die Vorhersage enthält.
 
 2. Um das Diagramm tatsächlich zu zeichnen, können Sie das Roc-Objekt speichern und es dann mit der plotfunktion zeichnen. Das Diagramm wird im remotecomputekontext erstellt und an Ihre R-Umgebung zurückgegeben.
 
@@ -163,7 +164,7 @@ In diesem Abschnitt experimentieren Sie mit beiden Techniken.
     plot(rocObjectOut);
     ```
 
-    Zeigen Sie das Diagramm an, indem Sie das Grafikgerät von R öffnen, oder indem Sie in rstudio auf das **Zeichnungs Fenster klicken** .
+    Zeigen Sie das Diagramm an, indem Sie das Grafikgerät von R öffnen , oder indem Sie in rstudio auf das Zeichnungs Fenster klicken.
 
     ![ROC-Zeichnung für das Modell](media/rsql-e2e-rocplot.png "ROC plot for the model")
 

@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b5f406ec4b6cfbd65db7a4ecd3a1ad14dff6d8e1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470238"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715185"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Einrichten eines Data Science Clients für die Python-Entwicklung auf SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +50,9 @@ Mit einem Installationsskript werden drei Microsoft-spezifische Bibliotheken zum
 
 1. Herunterladen eines Installations Skripts.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py)installiert die Version 9.2.1 der Microsoft Python-Pakete. Diese Version entspricht einem Standard SQL Server 2017-Instanz. 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py)installiert die Version 9.2.1 der Microsoft Python-Pakete. Diese Version entspricht einem Standard SQL Server-Instanz. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)installiert Version 9,3 der Microsoft Python-Pakete. Diese Version ist eine bessere Wahl, wenn die Remote SQL Server 2017-Instanz [an Machine Learning Server 9,3 gebunden](../install/upgrade-r-and-python.md)ist.
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)installiert Version 9,3 der Microsoft Python-Pakete. Diese Version ist eine bessere Wahl, wenn Ihre Remote SQL Server-Instanz [an Machine Learning Server 9,3 gebunden](../install/upgrade-r-and-python.md)ist.
 
 2. Öffnen Sie ein PowerShell-Fenster mit erhöhten Administratorrechten (Klicken Sie mit der rechten Maustaste auf **als Administrator ausführen**).
 

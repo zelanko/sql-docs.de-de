@@ -1,18 +1,19 @@
 ---
 title: Revoscaler R-Funktionsbibliothek
-description: Einführung in die revoscaler-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit R.
+description: Einführung in die revoscaler-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server Machine Learning Services mit R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d73399522966a132b025244a1739afa01a194116
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: b5dcd2f14d1a1d8e23a62be299b1ff6f41814041
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470009"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715065"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>Revoscaler (R-Bibliothek in SQL Server)
 
@@ -35,7 +36,7 @@ Die **revoscaler** -Bibliothek ist in mehreren Microsoft-Produkten verteilt, abe
 Die **revoscaler** -Bibliothek basiert auf R 3.4.3 und ist nur verfügbar, wenn Sie eines der folgenden Microsoft-Produkte oder-Downloads installieren:
 
 + [SQL Server 2016 R-Dienste](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server-Machine Learning-Dienste](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 oder höher](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R-Client](set-up-a-data-science-client.md)
 
@@ -48,7 +49,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorie aufgelistet, um Ihnen e
 
 ## <a name="1-data-source-and-compute"></a>1: Datenquelle und Compute
 
-**Revoscaler** enthält Funktionen zum Erstellen von Datenquellen und zum Festlegen des Speicher Orts bzw. des computekontexts, in dem Berechnungen durchgeführt werden. Ein Datenquellenobjekt ist ein Container, der eine Verbindungszeichenfolge zusammen mit dem gewünschten Datensatz als Tabelle, Ansicht oder Abfrage definiert angibt. Aufrufe von gespeicherten Prozeduren werden nicht unterstützt. In der folgenden Tabelle sind die für SQL Server Szenarien relevanten Funktionen aufgeführt.
+**Revoscaler** enthält Funktionen zum Erstellen von Datenquellen und zum Festlegen des SpeicherOrts bzw. des computekontexts, in dem Berechnungen durchgeführt werden. Ein Datenquellenobjekt ist ein Container, der eine Verbindungszeichenfolge zusammen mit dem gewünschten Datensatz als Tabelle, Ansicht oder Abfrage definiert angibt. Aufrufe von gespeicherten Prozeduren werden nicht unterstützt. In der folgenden Tabelle sind die für SQL Server Szenarien relevanten Funktionen aufgeführt.
 
 SQL Server und R verwenden in einigen Fällen unterschiedliche Datentypen. Eine Liste der Zuordnungen zwischen SQL-und r-Datentypen finden [Sie unter R-zu-SQL-Datentypen](r-libraries-and-data-types.md).
 

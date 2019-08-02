@@ -1,30 +1,29 @@
 ---
 title: Installieren von SQL Server Machine Learning Services (in-Database) unter Windows
-description: R in SQL Server oder python auf SQL Server Installationsschritte für SQL Server 2017 Machine Learning Services unter Windows.
+description: R in SQL Server oder python auf SQL Server Installationsschritte für SQL Server Machine Learning Services unter Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470449"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715224"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installieren von SQL Server Machine Learning Services unter Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Ab SQL Server 2017 werden R-und Python-Unterstützung für Daten bankübergreifende Analysen in **SQL Server Machine Learning Services**bereitgestellt, der Nachfolger der in SQL Server 2016 eingeführten [SQL Server R Services](../r/sql-server-r-services.md) . Funktionsbibliotheken sind in R und Python verfügbar und können in einer Datenbank-Engine-Instanz als externes Skript ausgeführt werden. 
-
 In diesem Artikel wird beschrieben, wie Sie die Machine Learning-Komponente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch Ausführen des Setup-Assistenten installieren, und befolgen Sie die Anweisungen auf dem Bildschirm.
 
 ## <a name="bkmk_prereqs"></a> Prüfliste vor der Installation
 
-+ SQL Server 2017 (oder höher) ist erforderlich, wenn Sie Machine Learning Services mit der R-oder python-Sprachunterstützung installieren möchten. Wenn Sie stattdessen über SQL Server 2016-Installationsmedium verfügen, können Sie [SQL Server 2016 r Services (in-Database)](sql-r-services-windows-install.md) installieren, um die R-Sprachunterstützung zu erhalten.
++ SQL Server 2017 (oder höher) ist erforderlich, wenn Sie Machine Learning Services mit der R-oder python-Sprachunterstützung installieren möchten. Wenn Sie stattdessen über SQL Server 2016-Installationsmedium verfügen, können Sie [SQL Server R Services (in-Database)](sql-r-services-windows-install.md) installieren, um die R-Sprachunterstützung zu erhalten.
 
 + Eine Datenbank-Engine-Instanz ist erforderlich. Sie können nicht nur R-oder python-Funktionen installieren, Sie können Sie jedoch inkrementell zu einer vorhandenen-Instanz hinzufügen.
 
@@ -170,7 +169,7 @@ Gehen Sie folgendermaßen vor, um zu überprüfen, ob alle zum Starten eines ext
    
 3. Wenn Launchpad ausgeführt wird, sollten Sie einfache R-und python-Skripts ausführen können, um zu überprüfen, ob externe Skript Laufzeiten mit SQL Server kommunizieren können.
 
-   Öffnen Sie in  ein neues Abfrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Fenster, und führen Sie dann ein Skript wie den folgenden aus:
+   Öffnen Sie in ein neues Abfrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Fenster, und führen Sie dann ein Skript wie den folgenden aus:
     
     + Für R
     
@@ -283,8 +282,7 @@ Die r-Lösungen, die Sie für SQL Server erstellen, können grundlegende R-Funkt
 
 Pakete, die Sie von SQL Server verwenden möchten, müssen in der Standardbibliothek installiert sein, die von der Instanz verwendet wird. Wenn Sie über eine separate Installation von R auf dem Computer verfügen oder Pakete in Benutzer Bibliotheken installiert haben, können Sie diese Pakete nicht aus t-SQL verwenden.
 
-Der Prozess zum Installieren und Verwalten von R-Paketen unterscheidet sich in SQL Server 2016 und SQL Server 2017. In SQL Server 2016 muss ein Datenbankadministrator R-Pakete installieren, die von den Benutzern benötigt werden. In SQL Server 2017 können Sie Benutzergruppen für die Freigabe von Paketen auf Datenbankebene einrichten oder Daten bankrollen so konfigurieren, dass Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [Installieren neuer R-Pakete in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
-
+Zum Installieren und Verwalten von R-Paketen können Sie Benutzergruppen für die Freigabe von Paketen auf Datenbankebene einrichten oder Daten bankrollen so konfigurieren, dass Benutzer ihre eigenen Pakete installieren können. Weitere Informationen finden Sie unter [Installieren neuer R-Pakete in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

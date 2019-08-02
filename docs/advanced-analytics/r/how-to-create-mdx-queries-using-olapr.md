@@ -7,12 +7,13 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 09f2f1dcca3fd8d0828a87e8c781d05c4ad8e5f5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: db9afc06a02825b8db449492d8cec6ee6d67801d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470123"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715127"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Erstellen von MDX-Abfragen in R mithilfe von olapr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +91,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + In Spalten können Sie mehrere Measures als Elemente einer durch Trennzeichen getrennten Zeichenfolge angeben.
 + Die Zeilenachse verwendet alle möglichen Werte (alle ELEMENTE) der Dimension „Produktlinie“. 
-+ Diese Abfrage gibt eine Tabelle mit drei Spalten zurück, die eine  rollupzusammenfassung der Internet Verkäufe aus allen Ländern enthält.
++ Diese Abfrage gibt eine Tabelle mit drei Spalten zurück, die eine rollupzusammenfassung der Internet Verkäufe aus allen Ländern enthält.
 + Die WHERE-Klausel gibt die _Slicerachse_an. In diesem Beispiel verwendet der Slicer einen Member der **SalesTerritory** -Dimension, um die Abfrage so zu filtern, dass nur die Verkäufe aus Australien in Berechnungen verwendet werden.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>So erstellen Sie diese Abfrage mithilfe der in olapR bereitgestellten Funktionen

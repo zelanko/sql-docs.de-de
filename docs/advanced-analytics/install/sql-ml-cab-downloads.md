@@ -1,18 +1,19 @@
 ---
 title: CAB-Downloads für SQL Server kumulative Updates
-description: R und python CAB und Paket Downloads für SQL Server 2017 Machine Learning Services und SQL Server 2016 R Services.
+description: R und python CAB und Paket Downloads für SQL Server Machine Learning Services und SQL Server 2016 R-Dienste.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470317"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715830"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB-Downloads für kumulative Updates von SQL Server in-Database-Analyse Instanzen
 
@@ -20,16 +21,18 @@ ms.locfileid: "68470317"
 
 SQL Server Instanzen, die für Daten bankübergreifende Analysen konfiguriert sind, umfassen R-und Python-Funktionen. Diese Features werden in CAB-Dateien ausgeliefert, installiert und über SQL Server-Setup gewartet. Bei Geräten, die mit dem Internet verbunden sind, werden CAB-Updates normalerweise über Windows Update angewendet. Auf getrennten Servern müssen CAB-Dateien heruntergeladen und manuell angewendet werden. 
 
-Dieser Artikel stellt Download Links zu CAB-Dateien für jedes kumulative Update bereit. Links werden sowohl für SQL Server 2017 Machine Learning Services (R und python) als auch für SQL Server 2016 R-Dienste bereitgestellt. Weitere Informationen zu Offline Installationen finden Sie unter [Installieren von SQL Server Machine Learning-Komponenten ohne Internetzugang](sql-ml-component-install-without-internet-access.md#apply-cu).
+Dieser Artikel stellt Download Links zu CAB-Dateien für jedes kumulative Update bereit. Weitere Informationen zu Offline Installationen finden Sie unter [Installieren von SQL Server Machine Learning-Komponenten ohne Internetzugang](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
 Beginnen Sie mit einer Baselineversion.
 
-+ Auf SQL Server 2017 Machine Learning Services ist die erste Version die grundlegende Installation. 
++ Auf SQL Server Machine Learning Services handelt es sich bei der ersten Version um die grundlegende Installation. 
 + Auf SQL Server 2016 R-Diensten können Sie mit der ersten Version von SP1 oder SP2 beginnen. 
 
 Außerdem können Sie kumulative Updates auf einen eigenständigen Server anwenden.
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017-Cabs
 
@@ -88,6 +91,9 @@ CAB-Dateien werden in umgekehrter chronologischer Reihenfolge aufgelistet. Wenn 
 | | Microsoft python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 | | Python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+::: moniker-end
+
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -134,7 +140,9 @@ Bei SQL Server 2016 R-Diensten sind baselinereleases entweder die RTM-Version od
 
 Wenn Sie den Quellcode für Microsoft R anzeigen möchten, können Sie ihn als Archiv im tar-Format herunterladen: [Herunterladen R Server Installationsprogramme](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>Siehe auch
+::: moniker-end
+
+## <a name="next-steps"></a>Nächste Schritte
 
 [Anwenden von kumulativen Updates auf Computern ohne Internet Zugriff](sql-ml-component-install-without-internet-access.md#apply-cu)
 

@@ -1,18 +1,19 @@
 ---
 title: Microsoftml-R-Funktionsbibliothek
-description: Einführung in die microsoftml-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit R.
+description: Einführung in die microsoftml-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server Machine Learning Services mit R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6808fa01bd4b62a67b220cec86d025820958298d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af9e85586a2aad69a87072caa820fff4026d1feb
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470019"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715665"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>Microsoftml (R-Bibliothek in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ Die **microsoftml** -Bibliothek ist in mehreren Microsoft-Produkten verteilt, ab
 Die **microsoftml** -Bibliothek basiert auf R 3.4.3 und ist nur verfügbar, wenn Sie eines der folgenden Microsoft-Produkte oder-Downloads installieren:
 
 + [SQL Server 2016 R-Dienste](../install/sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server-Machine Learning-Dienste](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 oder höher](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R-Client](set-up-a-data-science-client.md)
 

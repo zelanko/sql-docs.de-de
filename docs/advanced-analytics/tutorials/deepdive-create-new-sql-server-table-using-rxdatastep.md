@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b88de049cb73cf8539067e708963bd82ee7086ae
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: b18f2bd42070746551d21ff7508e7fce58b49037
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469828"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714911"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Erstellen einer neuen SQL Server Tabelle mithilfe von rxdatastep (SQL Server-und revoscaler-Tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +108,7 @@ Sobald Daten in der Tabelle vorhanden sind, können Sie Sie mithilfe einer einfa
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-2. Wieder  aufzurufen, um eine Zusammenfassung der Daten in der Abfrage zu überprüfen.
+2. Wieder aufzurufen, um eine Zusammenfassung der Daten in der Abfrage zu überprüfen.
   
     ```R
     rxSummary(~., data = sqlServerAirDemo2)

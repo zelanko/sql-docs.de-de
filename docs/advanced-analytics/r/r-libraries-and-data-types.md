@@ -1,18 +1,19 @@
 ---
 title: Konvertierungen von R- in SQL-Datentypen
-description: Überprüfen Sie die impliziten und expliziten Datentyp konverteronen zwischen R und SQL Server in Data Science und Machine Learning-Lösungen.
+description: Überprüfen Sie die impliziten und expliziten Datentyp Konvertierungen zwischen R und SQL Server in Data Science und in Machine Learning-Lösungen.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470058"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715091"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Datentyp Zuordnungen zwischen R und SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ Für r-Lösungen, die auf der r-Integrationsfunktion in SQL Server Machine Learn
 
 ## <a name="base-r-version"></a>Basis-R-Version
 
-SQL Server 2016 r Services und SQL Server 2017 Machine Learning Services mit R sind an bestimmten Releases von Microsoft R Open ausgerichtet. Die neueste Version, SQL Server 2017 Machine Learning Services, baut beispielsweise auf Microsoft R Open 3.3.3 auf.
+SQL Server 2016 r-Dienste und SQL Server Machine Learning Services mit R sind an bestimmten Releases von Microsoft R Open ausgerichtet. Die neueste Version, SQL Server Machine Learning Services, baut beispielsweise auf Microsoft R Open 3.3.3 auf.
 
 Öffnen Sie **rgui**, um die einer bestimmten Instanz von SQL Server zugeordnete R-Version anzuzeigen. Für die Standard Instanz lautet der Pfad wie folgt:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
@@ -65,7 +66,7 @@ Die folgende Tabelle zeigt die Änderungen der Datentypen und Werte an, wenn Dat
 
 Folgende Typen von Datentypkategorien, die vom [Typsystem von SQL Server](../../t-sql/data-types/data-types-transact-sql.md) unterstützt werden, verursachen möglicherweise Probleme, wenn Sie an R-Code übergeben werden:
 
-+ Datentypen, die im **folgenden Abschnitt des** SQL-Typsystem Artikels aufgelistet sind: **Cursor**, **Zeitstempel**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **XML**, **Table**
++ Datentypen, die im folgenden Abschnitt des SQL-Typsystem Artikels aufgelistet sind: **Cursor**, **Zeitstempel**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **XML**, **Table**
 + Alle räumlichen Typen
 + **image**
 

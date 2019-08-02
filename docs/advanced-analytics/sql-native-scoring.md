@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344758"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714952"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Native Bewertung mithilfe der Vorhersage T-SQL-Funktion
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ Die-Funktion gibt die Vorhersagen für die Eingabedaten sowie alle Spalten der Q
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-Die Vorhersage ist in allen Editionen von SQL Server 2017-Datenbank-Engine verfügbar und standardmäßig aktiviert, einschließlich SQL Server 2017 Machine Learning Services unter Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) oder Azure SQL-Datenbank. Sie müssen R, python nicht installieren oder zusätzliche Funktionen aktivieren.
+Die Vorhersage ist in allen Editionen von SQL Server 2017-Datenbank-Engine verfügbar und standardmäßig aktiviert, einschließlich SQL Server Machine Learning Services unter Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) oder Azure SQL-Datenbank. Sie müssen R, python nicht installieren oder zusätzliche Funktionen aktivieren.
 
 + Das Modell muss im Voraus mithilfe eines der unten aufgeführten unterstützten **RX** -Algorithmen trainiert werden.
 

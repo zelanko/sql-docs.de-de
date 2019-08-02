@@ -7,19 +7,20 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc14328e0e43106f9fec0779f073bcd1568e888
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345008"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715811"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installieren von SQL Server 2016 R-Diensten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel wird erläutert, wie Sie **SQL Server 2016 R-Dienste**installieren und konfigurieren. Wenn Sie über SQL Server 2016 verfügen, installieren Sie diese Funktion, um die Ausführung von R-Code in SQL Server zu ermöglichen.
 
-In SQL Server 2017 wird die R-Integration in [Machine Learning Services](../r/r-server-standalone.md)angeboten, was das Hinzufügen von python widerspiegelt. Wenn Sie R-Integration benötigen und SQL Server 2017-Installationsmedien haben, finden Sie weitere Informationen unter [Install SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) , um das Feature hinzuzufügen. 
+In SQL Server 2017 wird die R-Integration in [Machine Learning Services](../r/r-server-standalone.md)angeboten, was das Hinzufügen von python widerspiegelt. Wenn Sie R-Integration benötigen und SQL Server 2017-Installationsmedien haben, finden Sie weitere Informationen unter [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) , um das Feature hinzuzufügen. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -156,7 +157,7 @@ Gehen Sie folgendermaßen vor, um zu überprüfen, ob alle zum Starten eines ext
 
 7. Wenn Launchpad ausgeführt wird, sollten Sie eine einfache R ausführen können, um zu überprüfen, ob externe Skript Laufzeiten mit SQL Server kommunizieren können. 
 
-    Öffnen Sie in  ein neues Abfrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Fenster, und führen Sie dann ein Skript wie den folgenden aus:
+    Öffnen Sie in ein neues Abfrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Fenster, und führen Sie dann ein Skript wie den folgenden aus:
     
     ```sql
     EXEC sp_execute_external_script  @language =N'R',

@@ -7,12 +7,13 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 41403018f6b3a2740328ad1576f8c357e7896b12
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 85115d55f10ebafde4fe2da9c0311425c5e870dc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470566"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715341"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Trainieren und Speichern eines python-Modells mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +114,7 @@ Um das erneute Trainieren des Modells für neue Daten zu vereinfachen, wrappen S
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    Die Verarbeitung der Daten und die Anpassung des Modells kann einige Minuten in Anspruch nehmen. Nachrichten, die an den **stdout** -Stream von python weitergeleitet werden,  werden im Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Meldungen von angezeigt. Zum Beispiel:
+    Die Verarbeitung der Daten und die Anpassung des Modells kann einige Minuten in Anspruch nehmen. Nachrichten, die an den **stdout** -Stream von python weitergeleitet werden, werden im Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Meldungen von angezeigt. Zum Beispiel:
 
     *Stdout-Meldung (en) aus dem externen Skript:* 
   *c:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
@@ -166,7 +167,7 @@ Mithilfe von **revoscalepy**können Sie remotecomputekontexte erstellen, Daten z
     Diese gespeicherte Prozedur führt die folgenden Schritte im Rahmen des Modell Trainings aus:
 
     - Die SELECT-Abfrage wendet die benutzerdefinierte Skalarfunktion _fncalculatedistance_ an, um die direkte Entfernung zwischen den Pick-up-und Dropdown-Speicherorten zu berechnen. Die Ergebnisse der Abfrage werden in der standardmäßigen python-Eingabevariablen, `InputDataset`, gespeichert.
-    - Die _binäre Variable wird_ als Bezeichnungs- *oder Ergebnis* Spalte verwendet, und das Modell ist mit den folgenden Merkmals Spalten geeignet: _passenger_count_, _trip_distance_, _trip_time_in_secs_und _direct_distance_.
+    - Die binäre Variable wird als Bezeichnungs- oder Ergebnisspalte verwendet, und das Modell ist mit den folgenden Merkmals Spalten geeignet: _passenger_count_, _trip_distance_, _trip_time_in_secs_und _direct_distance_.
     - Das trainierte Modell wird serialisiert und in der python-Variablen `logitObj`gespeichert. Durch Hinzufügen der T-SQL-Schlüsselwort Ausgabe können Sie die Variable als Ausgabe der gespeicherten Prozedur hinzufügen. Im nächsten Schritt wird diese Variable verwendet, um den binären Code des Modells in eine Datenbanktabelle _nyc_taxi_models_einzufügen. Dieser Mechanismus vereinfacht das Speichern und wieder verwenden von Modellen.
 
 2. Führen Sie die gespeicherte Prozedur wie folgt aus, um das trainierte **revoscalepy** -Modell in die *nyc_taxi_models*-Tabelle einzufügen.
@@ -177,7 +178,7 @@ Mithilfe von **revoscalepy**können Sie remotecomputekontexte erstellen, Daten z
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    Die Verarbeitung der Daten und die Anpassung des Modells kann einige Zeit in Anspruch nehmen. Nachrichten, die an den **stdout** -Stream von python weitergeleitet werden,  werden im Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Meldungen von angezeigt. Zum Beispiel:
+    Die Verarbeitung der Daten und die Anpassung des Modells kann einige Zeit in Anspruch nehmen. Nachrichten, die an den **stdout** -Stream von python weitergeleitet werden, werden im Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Meldungen von angezeigt. Zum Beispiel:
 
     *Stdout-Meldung (en) aus dem externen Skript:* 
   *c:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*

@@ -3,16 +3,17 @@ title: Erweiterbarkeits Architektur für R-Sprache und Python-Skript
 description: Unterstützung externer Code für die SQL Server-Datenbank-Engine mit doppelter Architektur zum Ausführen von R-und python-Skripts für relationale Daten.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470456"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715252"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Erweiterbarkeits Architektur in SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server verfügt über ein Erweiterbarkeits Framework zum Ausführen externer
 
 ## <a name="background"></a>Hintergrund
 
-Das Erweiterbarkeit Framework wurde in SQL Server 2016 eingeführt, um die R-Laufzeit zu unterstützen. SQL Server 2017 bietet Unterstützung für python
+Das Erweiterbarkeit Framework wurde in SQL Server 2016 eingeführt, um die R-Laufzeit zu unterstützen. SQL Server 2017 und höher unterstützt python.
 
 Der Zweck des Erweiterbarkeits-Frameworks besteht darin, eine Schnittstelle zwischen SQL Server und Data Science Sprachen wie R und python bereitzustellen, die beim verlagern Data Science Lösungen in die Produktion und beim Schützen von Daten, die während der Entwicklung verfügbar gemacht werden, zu reduzieren. ESS. Durch Ausführen einer vertrauenswürdigen Skriptsprache innerhalb eines von SQL Server verwalteten sicheren Frameworks können Datenbankadministratoren die Sicherheit aufrechterhalten, während Datenanalysten Zugriff auf Unternehmensdaten erhalten.
 
@@ -55,8 +56,8 @@ Bei [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] handelt e
 
 | Vertrauenswürdige Launcher | Erweiterung | SQL Server Versionen |
 |-------------------|-----------|---------------------|
-| "Rlauncher. dll" für die Sprache "R" | [R-Erweiterung](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher. dll für python 3,5 | [Python-Erweiterung](extension-python.md) | SQL Server 2017 |
+| "Rlauncher. dll" für die Sprache "R" | [R-Erweiterung](extension-r.md) | SQL Server 2016 und höher |
+| Pythonlauncher. dll für python 3,5 | [Python-Erweiterung](extension-python.md) | SQL Server 2017 und höher |
 
 Der [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]-Dienst wird unter dem eigenen Benutzerkonto ausgeführt. Wenn Sie das Konto ändern, mit dem Launchpad ausgeführt wird, stellen Sie sicher, dass dies mit SQL Server-Konfigurations-Manager erfolgt, um sicherzustellen, dass Änderungen in verwandte Dateien geschrieben werden.
 
@@ -70,7 +71,7 @@ Zum Ausführen von Aufgaben in einer bestimmten unterstützten Sprache erhält d
 
 Bxlserver ist in der Tat ein Begleit Verfahren für eine Sprachlaufzeit-Umgebung, die mit SQL Server zum Übertragen von Daten und Verwalten von Aufgaben arbeitet. BXL steht für binäre Austausch Sprache und bezieht sich auf das Datenformat, das zum effizienten Verschieben von Daten zwischen SQL Server und externen Prozessen verwendet wird. Bxlserver ist auch ein wichtiger Bestandteil verwandter Produkte wie Microsoft R Client und Microsoft R Server.
 
-Der **SQL-Satellit** ist eine Erweiterbarkeits-API, die in der Datenbank-Engine ab SQL Server 2016 enthalten ist, die externen Code oder externe Laufzeiten unter C++stützt, die mit C oder implementiert werden.
+Der **SQL-Satellit** ist eine Erweiterbarkeits-API, die in der Datenbank-Engine enthalten ist, die externen Code oder externe Laufzeiten C++unterstützt, die mithilfe von C oder implementiert werden.
 
 BxlServer verwendet den SQL-Satelliten für die folgenden Aufgaben:.
 

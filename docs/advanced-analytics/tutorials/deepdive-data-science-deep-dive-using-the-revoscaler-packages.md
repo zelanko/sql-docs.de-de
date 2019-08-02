@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470624"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714883"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Verwenden von revoscaler R-Funktionen mit SQL Server Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ In diesem mehrteiligen Tutorial haben Sie eine Reihe von **revoscaler** -Funktio
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) mit der R-Funktion oder [SQL Server 2016 R Services (in-Database)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) mit der R-Funktion oder [SQL Server R Services (in-Database)](../install/sql-r-services-windows-install.md)
   
 + [Daten Bank Berechtigungen](../security/user-permission.md) und eine SQL Server Datenbank-Benutzeranmeldung
 
@@ -31,7 +32,7 @@ In diesem mehrteiligen Tutorial haben Sie eine Reihe von **revoscaler** -Funktio
 
 + Eine IDE wie rstudio oder das integrierte rgui-Tool, das in R enthalten ist
 
-Um zwischen lokalen und remotecomputekontexten hin-und herwechseln zu können, benötigen Sie zwei Systeme. Local ist in der Regel eine Entwicklungs Arbeitsstation mit einer suffitze Stromversorgung für Data Science Arbeits Auslastungen. Remote ist in diesem Fall SQL Server 2017 oder SQL Server 2016, wenn die R-Funktion aktiviert ist. 
+Um zwischen lokalen und remotecomputekontexten hin-und herwechseln zu können, benötigen Sie zwei Systeme. Local ist in der Regel eine Entwicklungs Arbeitsstation mit einer suffitze Stromversorgung für Data Science Arbeits Auslastungen. Remote ist in diesem Fall SQL Server, wenn die R-Funktion aktiviert ist. 
 
 Das Umschalten von computekontexten ist darauf ausgerichtet, dass die gleiche-Version- **revoscaler** auf lokalen Systemen und Remote Systemen vorhanden ist. Auf einer lokalen Arbeitsstation können Sie die **revoscaler** -Pakete und die zugehörigen Anbieter abrufen, indem Sie Microsoft R Client installieren.
 

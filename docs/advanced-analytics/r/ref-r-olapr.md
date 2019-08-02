@@ -1,18 +1,19 @@
 ---
 title: olapr R-Funktionsbibliothek
-description: Einführung in die olapr-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit R.
+description: Einführung in die olapr-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server Machine Learning Services mit R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 674e4ed4d1967452093e81e7bb4f5518d9237cf6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469977"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715007"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapr (R-Bibliothek in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ Dieses Paket wird in den folgenden Produkten sowie auf mehreren Images virtuelle
 
 Produkt | Speicherort |
 --------|----------|
-SQL Server 2017 Machine Learning Services (mit R-Integration) | C:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\R_SERVICES\library | 
+SQL Server Machine Learning Services (mit R-Integration) | C:\Programme\Microsoft SQL server\mssql14. MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R-Dienste | C:\Programme\Microsoft SQL server\mssql13. MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\programme\microsoft\r Client\R_SERVER\library |

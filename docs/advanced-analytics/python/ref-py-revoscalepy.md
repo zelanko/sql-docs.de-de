@@ -1,18 +1,19 @@
 ---
 title: revoscalepy-Python-Paket
-description: Einführung in das revoscalepy-Modul in SQL Server 2017 Machine Learning Services mit Python.
+description: Einführung in das revoscalepy-Modul in SQL Server Machine Learning Services mit Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 76c68d0753c4ba29387b3378c1086ce9bce4f53b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470328"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715775"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (Python-Modul in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ Die **revoscalepy** -Bibliothek wird in mehreren Microsoft-Produkten verteilt, a
 
 Das **revoscalepy** -Modul basiert auf Python 3,5 und ist nur verfügbar, wenn Sie eines der folgenden Microsoft-Produkte oder-Downloads installieren:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server-Machine Learning-Dienste](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 oder höher](https://docs.microsoft.com/machine-learning-server/)
 + [Python-Client Bibliotheken für einen Data Science-Client](setup-python-client-tools-sql.md)
 
@@ -47,7 +48,7 @@ In diesem Abschnitt werden die Funktionen nach Kategorie aufgelistet, um Ihnen e
 
 ## <a name="1-data-source-and-compute"></a>1: Datenquelle und Compute
 
-**revoscalepy** enthält Funktionen zum Erstellen von Datenquellen und zum Festlegen des Speicher Orts bzw. des computekontexts, in dem Berechnungen durchgeführt werden. In der folgenden Tabelle sind die für SQL Server Szenarien relevanten Funktionen aufgeführt.
+**revoscalepy** enthält Funktionen zum Erstellen von Datenquellen und zum Festlegen des SpeicherOrts bzw. des computekontexts, in dem Berechnungen durchgeführt werden. In der folgenden Tabelle sind die für SQL Server Szenarien relevanten Funktionen aufgeführt.
 
 SQL Server und Python verwenden in einigen Fällen unterschiedliche Datentypen. Eine Liste der Zuordnungen zwischen SQL-und python-Datentypen finden [Sie unter Python-zu-SQL-Datentypen](python-libraries-and-data-types.md).
 

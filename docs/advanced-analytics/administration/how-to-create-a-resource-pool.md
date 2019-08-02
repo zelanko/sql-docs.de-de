@@ -1,20 +1,21 @@
 ---
 title: Erstellen eines Ressourcenpools für R und python
-description: Definieren Sie einen SQL Server Ressourcenpool für R-oder python-Prozesse auf einer SQL Server 2016-oder SQL Server 2017-Datenbank-Engine-Instanz.
+description: Definieren Sie einen SQL Server Ressourcenpool für R-oder python-Prozesse auf einer SQL Server Datenbank-Engine-Instanz.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344069"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715905"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Erstellen eines Ressourcenpools für Machine Learning in SQL Server
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>Erstellen eines Ressourcenpools für SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In diesem Artikel wird beschrieben, wie Sie einen Ressourcenpool speziell für die Verwaltung von Machine Learning-Workloads für R und python in SQL Server erstellen und verwenden können. Es wird davon ausgegangen, dass Sie die Machine Learning-Features bereits installiert und aktiviert haben und die Instanz neu konfigurieren möchten, um eine präzisere Verwaltung der Ressourcen zu unterstützen, die von einem externen Prozess wie R oder python verwendet werden.
@@ -188,7 +189,7 @@ Um zu überprüfen, ob die Änderungen vorgenommen wurden, sollten Sie die Konfi
   
      Da die Pools mit der Affinität „AUTO“ erstellt wurden, wird in diesem Fall keine Informationen angezeigt. Weitere Informationen finden Sie unter [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="next-steps"></a>Nächste Schritte
 
 Weitere Informationen zum Verwalten von Server Ressourcen finden Sie unter:
 

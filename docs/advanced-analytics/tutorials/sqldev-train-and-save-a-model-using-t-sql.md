@@ -7,12 +7,13 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0825d99aee2639d28e95dfcaf79e1a8e915bf25a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f23f4c350855b71a3633587bb3c092988fe89fef
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470533"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715335"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Lektion 3: Trainieren und Speichern eines Modells mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ Da die gespeicherte Prozedur bereits eine Definition der Eingabedaten enthält, 
     INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
-2. Sehen Sie  sich das Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Meldungen von für Nachrichten an, die an den **stdout** -Datenstrom von R weitergeleitet werden, wie in der folgenden Meldung: 
+2. Sehen Sie sich das Fenster [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Meldungen von für Nachrichten an, die an den **stdout** -Datenstrom von R weitergeleitet werden, wie in der folgenden Meldung: 
 
     "Stdout-Meldung (en) aus dem externen Skript: Gelesene Zeilen: 1193025, verarbeitete Zeilen gesamt: 1193025, gesamte Segment Zeit: 0,093 Sekunden "
 

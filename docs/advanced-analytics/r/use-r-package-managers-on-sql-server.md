@@ -1,18 +1,19 @@
 ---
 title: Verwenden des R-Paket-Managers
-description: Verwenden Sie Standard-r-Befehle wie install. Packages zum Hinzufügen neuer r-Pakete zu SQL Server 2016 R Services oder SQL Server 2017 Machine Learning Services (in-Database).
+description: Verwenden Sie Standard-r-Befehle wie install. Packages zum Hinzufügen neuer r-Pakete zu SQL Server 2016 R Services oder SQL Server Machine Learning Services (in-Database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469875"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715023"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Verwenden Sie r-Paket-Manager zum Installieren von r-Paketen auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ In diesem Verfahren wird rgui verwendet, aber Sie können RTERM oder ein beliebi
 
 Wenn das Zielpaket von weiteren Paketen abhängig ist, lädt das R-Installationsprogramm die Abhängigkeiten automatisch herunter und installiert Sie für Sie.
 
-Wenn Sie über mehrere Instanzen von SQL Server verfügen, z. b. parallele Instanzen von SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services, führen Sie die Installation für jede Instanz separat aus, wenn Sie das Paket in beiden Kontexten verwenden möchten. Pakete können nicht über mehrere Instanzen hinweg freigegeben werden.
+Wenn Sie über mehrere Instanzen von SQL Server verfügen, z. b. parallele Instanzen von SQL Server 2016 R Services und SQL Server Machine Learning Services, führen Sie die Installation für jede Instanz separat aus, wenn Sie das Paket in beiden Kontexten verwenden möchten. Pakete können nicht über mehrere Instanzen hinweg freigegeben werden.
 
 ## <a name = "bkmk_offlineInstall"></a>Offline Installation mithilfe von R-Tools
 

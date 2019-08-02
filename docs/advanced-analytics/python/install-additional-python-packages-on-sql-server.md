@@ -1,29 +1,30 @@
 ---
 title: Installieren neuer python-Sprachpakete
-description: Fügen Sie SQL Server 2017 Machine Learning Services (in-Database) und Machine Learning Server (eigenständig) neue Python-Pakete hinzu.
+description: Fügen Sie SQL Server Machine Learning Services (in-Database) und Machine Learning Server (eigenständig) neue Python-Pakete hinzu.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470258"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715805"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installieren neuer Python-Pakete auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Artikel wird beschrieben, wie Sie neue Python-Pakete auf einer Instanz von SQL Server 2017 Machine Learning Services installieren. Im Allgemeinen ähnelt der Prozess zum Installieren neuer Pakete dem in einer python-Standardumgebung. Es sind jedoch einige zusätzliche Schritte erforderlich, wenn der Server nicht über eine Internetverbindung verfügt.
+In diesem Artikel wird beschrieben, wie Sie neue Python-Pakete auf einer Instanz von SQL Server Machine Learning Services installieren. Im Allgemeinen ähnelt der Prozess zum Installieren neuer Pakete dem in einer python-Standardumgebung. Es sind jedoch einige zusätzliche Schritte erforderlich, wenn der Server nicht über eine Internetverbindung verfügt.
 
 Weitere Informationen zum Speicherort und zu den Installations Pfaden finden [Sie unter Informationen zu R-oder python-Paketen](../package-management/installed-package-information.md).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
-+ [SQL Server 2017 Machine Learning Services (in-Database)](../install/sql-machine-learning-services-windows-install.md) mit der python-Sprachoption. 
++ [SQL Server Machine Learning Services (in-Database)](../install/sql-machine-learning-services-windows-install.md) mit der python-Sprachoption. 
 
 + Pakete müssen Python 3,5-kompatibel sein und unter Windows ausgeführt werden. 
 
@@ -122,7 +123,7 @@ cntk._version_
 
 Es gibt verschiedene Möglichkeiten, eine Liste der installierten Pakete zu erhalten. Beispielsweise können Sie die installierten Pakete im Fenster " **python-Umgebungen** " von Visual Studio anzeigen.
 
-Wenn Sie die python-Befehlszeile verwenden, können Sie entweder **PIP** oder **den Paket-** Manager von Configuration Manager verwenden, der in der Anaconda python-Umgebung enthalten ist, die durch SQL Server-Setup hinzugefügt wurde.
+Wenn Sie die python-Befehlszeile verwenden, können Sie entweder **PIP** oder den Paket -Manager von Configuration Manager verwenden, der in der Anaconda python-Umgebung enthalten ist, die durch SQL Server-Setup hinzugefügt wurde.
 
 1. Wechseln Sie zu "c:\Programme\Microsoft SQL server\mssql14.". MSSQLSERVER\PYTHON_SERVICES\Scripts
 
@@ -130,7 +131,7 @@ Wenn Sie die python-Befehlszeile verwenden, können Sie entweder **PIP** oder **
 
 1. Klicken Sie mit der rechten Maustaste auf **PIP. exe** > **als Administrator ausführen**, `pip list` und geben Sie ein, um die gleichen Informationen zurückzugeben. 
 
-Weitere Informationen zu "Configuration Manager **" und deren** Verwendung zum Erstellen und Verwalten mehrerer python-Umgebungen finden Sie unter [Verwalten von Umgebungen mit](https://conda.io/docs/user-guide/tasks/manage-environments.html)einem anderen Konfigurations-Manager.
+Weitere Informationen zu " Configuration Manager" und deren Verwendung zum Erstellen und Verwalten mehrerer python-Umgebungen finden Sie unter [Verwalten von Umgebungen mit](https://conda.io/docs/user-guide/tasks/manage-environments.html)einem anderen Konfigurations-Manager.
 
 > [!Note]
 > Wenn SQL Server-Setup dem Systempfad und einer Produktions SQL Server Instanz PIP oder das nicht hinzugefügt wird, empfiehlt es sich, nicht erforderliche ausführbare Dateien aus dem Pfad zu behalten. Für Entwicklungs-und Testumgebungen können Sie jedoch den Ordner "Scripts" der systempath-Umgebungsvariable hinzufügen, um den Befehl "Pip" und "Configuration on" an einem beliebigen Speicherort auszuführen.

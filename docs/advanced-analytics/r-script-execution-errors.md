@@ -6,20 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 10ec78bf8627bfef3232dfc72d7ef7f638604b15
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470292"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715753"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>R-Skript Fehler in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Artikel werden mehrere scriptin-gerroren dokumentiert, wenn R-Code in SQL Server ausgeführt wird. Die Liste ist nicht vollständig. Es gibt viele Pakete, und Fehler können zwischen den Versionen desselben Pakets variieren. Es wird empfohlen, Skript Fehler im [Machine Learning Server Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)zu veröffentlichen, das die Machine Learning-Komponenten unterstützt, die in R Services (in-Database), Microsoft R Client und Microsoft R Server verwendet werden.
-
-**Gilt für:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
-
+In diesem Artikel werden mehrere Skript Fehler beschrieben, wenn R-Code in SQL Server ausgeführt wird. Die Liste ist nicht vollständig. Es gibt viele Pakete, und Fehler können zwischen den Versionen desselben Pakets variieren. Es wird empfohlen, Skript Fehler im [Machine Learning Server Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)zu veröffentlichen, das die Machine Learning-Komponenten unterstützt, die in R Services (in-Database), Microsoft R Client und Microsoft R Server verwendet werden.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Gültiger Skript Fehler in T-SQL oder in gespeicherten Prozeduren
 

@@ -3,16 +3,17 @@ title: Installieren von R-Sprache und python-Komponenten ohne Internetzugang
 description: Offline oder getrennt Machine Learning R-und python-Setup auf isolierter SQL Server Instanz hinter einer Netzwerk Firewall.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c68ce075c34c6475828e81a66121e21afcf2482
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ddeea99addae3229575ca581f344332587e85981
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345022"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715826"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installieren von SQL Server Machine Learning R und python auf Computern ohne Internet Zugriff
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,14 +22,15 @@ Standardmäßig stellen Installationsprogramme eine Verbindung mit Microsoft-Dow
 
 Daten bankübergreifende Analysen bestehen aus der Datenbank-Engine-Instanz und zusätzlichen Komponenten für R-und python-Integration, abhängig von der Version von SQL Server. 
 
-+ SQL Server 2017 umfasst R und python. 
++ SQL Server 2017 und höher enthält R und python. 
 + SQL Server 2016 ist R-only.
 
 Auf einem isolierten Server werden die sprachspezifischen Features von Machine Learning und R/python über CAB-Dateien hinzugefügt. 
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="sql-server-2017-offline-install"></a>SQL Server 2017-Offline Installation
 
-Wenn Sie SQL Server 2017 Machine Learning Services (R und python) auf einem isolierten Server installieren möchten, laden Sie zunächst die erste Version von SQL Server und die entsprechenden CAB-Dateien für R-und Python-Unterstützung herunter. Auch wenn Sie beabsichtigen, den Server umgehend auf das neueste kumulative Update zu aktualisieren, muss zunächst eine erste Version installiert werden.
+Um SQL Server Machine Learning Services (R und python) auf einem isolierten Server zu installieren, müssen Sie zunächst die erste Version von SQL Server und die entsprechenden CAB-Dateien für R-und Python-Unterstützung herunterladen. Auch wenn Sie beabsichtigen, den Server umgehend auf das neueste kumulative Update zu aktualisieren, muss zunächst eine erste Version installiert werden.
 
 > [!Note]
 > SQL Server 2017 weist keine Service Packs auf. Es ist die erste Version von SQL Server, die erste Version als einzige Basislinie zu verwenden, bei der nur kumulative Updates gewartet werden. 
@@ -52,6 +54,10 @@ Microsoft python-Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwl
 
    ![Wählen Sie den Installationstyp herunterladen] aus. (media/offline-download-tile.png "Medien herunterladen")
 
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016-Offline Installation
 
 SQL Server 2016-Datenbankanalyse ist r-only, mit nur zwei CAB-Dateien für Produktpakete und der Microsoft-Verteilung von Open Source-r. Installieren Sie zunächst eine der folgenden Versionen: RTM, SP 1, SP 2. Sobald eine Basisinstallation vorhanden ist, können kumulative Updates als nächster Schritt angewendet werden.
@@ -72,15 +78,19 @@ Sie können SQL Server 2016 RTM, SP 1 oder SP 2 als erste Installation auf dem Z
 
 Eine Möglichkeit, eine ISO-Datei mit den Installationsmedien zu erhalten, ist die [Visual Studio dev Essentials](https://visualstudio.microsoft.com/dev-essentials/). Melden Sie sich an, und verwenden Sie dann den Link **Downloads** , um die Version SQL Server 2016 zu finden, die Sie installieren möchten. Der Download erfolgt in Form einer ISO-Datei, die Sie für eine Offline Installation auf den Bereitstellungs Zielcomputer kopieren können.
 
+::: moniker-end
+
 ## <a name="transfer-files"></a>Dateien übertragen
 
 Kopieren Sie die SQL Server-Installationsmedien (ISO-oder CAB-Dateien) und CAB-Dateien in der Datenbankanalyse auf den Zielcomputer. Platzieren Sie die CAB-Dateien und die Installationsmedien Datei im selben Ordner auf dem Zielcomputer, z. b. im Ordner "% Temp *" des Setup Benutzers.
 
 Der Ordner "% Temp%" ist für python-CAB-Dateien erforderlich. Für R können Sie% Temp% verwenden oder den myrcachedirectory-Parameter auf den CAB-Pfad festlegen.
 
-Der folgende Screenshot zeigt SQL Server 2017-CAB-und ISO-Dateien. SQL Server 2016-Downloads sehen anders aus: weniger Dateien (keine python-Datei), und der Name der Installationsmedien Datei ist für 2016.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Der folgende Screenshot zeigt SQL Server CAB-und ISO-Dateien. 
 
 ![Liste der zu übertragenden Dateien](media/offline-file-list.png "Datei Liste")
+::: moniker-end
 
 ## <a name="run-setup"></a>Ausführen von 'Setup'
 
@@ -104,15 +114,21 @@ Wenn Sie SQL Server Setup auf einem Computer ausführen, der nicht mit dem Inter
 
 Es wird empfohlen, dass Sie das neueste kumulative Update sowohl auf die Datenbank-Engine als auch auf die Machine Learning-Komponenten anwenden. Kumulative Updates werden über das-Setup Programm installiert. 
 
-1. Beginnen Sie mit einer Baseline-Instanz. Sie können nur kumulative Updates auf vorhandene Installationen von SQL Server anwenden:
-
-  + SQL Server 2017-erste Version
-  + SQL Server 2016, erste Release SQL Server 2016 SP 1 oder SQL Server 2016 SP 2
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+1. Beginnen Sie mit einer Baseline-Instanz. Sie können nur kumulative Updates auf vorhandene Installationen der ersten Version von SQL Server anwenden.
 
 2. Wechseln Sie auf einem mit dem Internet verbundenen Gerät zur Liste der kumulativen Updates für Ihre Version von SQL Server:
 
   + [SQL Server 2017 Updates](https://sqlserverupdates.com/sql-server-2017-updates/)
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+1. Beginnen Sie mit einer Baseline-Instanz. Sie können nur kumulative Updates auf vorhandene Installationen der ersten Version von SQL Server 2016, SQL Server 2016 SP 1 oder SQL Server 2016 SP 2 anwenden.
+
+2. Wechseln Sie auf einem mit dem Internet verbundenen Gerät zur Liste der kumulativen Updates für Ihre Version von SQL Server:
+
   + [SQL Server 2016 Updates](https://sqlserverupdates.com/sql-server-2016-updates/)
+::: moniker-end
 
 3. Wählen Sie das neueste kumulative Update zum Herunterladen der ausführbaren Datei
 
@@ -122,7 +138,7 @@ Es wird empfohlen, dass Sie das neueste kumulative Update sowohl auf die Datenba
 
 6. Führen Sie das Setup aus. Akzeptieren Sie die Lizenzbedingungen, und überprüfen Sie auf der Seite Funktionsauswahl die Funktionen, für die kumulative Updates angewendet werden. Es sollte jede installierte Funktion für die aktuelle Instanz angezeigt werden, einschließlich Machine Learning-Features.
 
-  ![Wählen Sie Features aus der Funktionsstruktur aus] . (media/cumulative-update-feature-selection.png "Funktionsliste")
+    ![Wählen Sie Features aus der Funktionsstruktur aus] . (media/cumulative-update-feature-selection.png "Funktionsliste")
 
 5. Fahren Sie mit dem Assistenten fort, und akzeptieren Sie die Lizenzbedingungen für R-und python-Distributionen. Während der Installation werden Sie aufgefordert, den Speicherort des Ordners mit den aktualisierten CAB-Dateien auszuwählen.
 
@@ -141,19 +157,30 @@ Für diesen Schritt ist ein Neustart des Servers erforderlich. Wenn Sie im Begri
 
 ## <a name="post-install-configuration"></a>Konfiguration nach der Installation
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Starten Sie nach Abschluss der Installation den Dienst neu, und konfigurieren Sie dann den Server, um die Skriptausführung zu aktivieren:
 
-+ [Externe Skriptausführung aktivieren (SQL Server 2017)](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
-+ [Externe Skriptausführung aktivieren (SQL Server 2016)](sql-r-services-windows-install.md#bkmk_enableFeature)
++ [Externe Skriptausführung aktivieren](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
 
-Eine anfängliche Offline Installation von SQL Server 2017 Machine Learning Services oder SQL Server 2016 R Services erfordert dieselbe Konfiguration wie eine Online Installation:
+Eine anfängliche Offline Installation von SQL Server Machine Learning Services erfordert die gleiche Konfiguration wie eine Online Installation:
 
-+ [Überprüfen der Installation](sql-machine-learning-services-windows-install.md#verify-installation)  (Klicken Sie für SQL Server 2016 auf [hier](sql-r-services-windows-install.md#verify-installation)).
-+ [Zusätzliche Konfiguration nach Bedarf](sql-machine-learning-services-windows-install.md#additional-configuration)  (Klicken Sie für SQL Server 2016 auf [hier](sql-r-services-windows-install.md#bkmk_FollowUp)).
++ [Überprüfen der Installation](sql-machine-learning-services-windows-install.md#verify-installation)
++ [Zusätzliche Konfiguration nach Bedarf](sql-machine-learning-services-windows-install.md#additional-configuration)
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Starten Sie nach Abschluss der Installation den Dienst neu, und konfigurieren Sie dann den Server, um die Skriptausführung zu aktivieren:
+
++ [Externe Skriptausführung aktivieren](sql-r-services-windows-install.md#bkmk_enableFeature)
+
+Eine anfängliche Offline Installation von SQL Server R Services erfordert die gleiche Konfiguration wie eine Online Installation:
+
++ [Überprüfen der Installation](sql-r-services-windows-install.md#verify-installation)
++ [Zusätzliche Konfiguration nach Bedarf](sql-r-services-windows-install.md#bkmk_FollowUp)
+::: moniker-end
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Informationen zum Überprüfen des Installationsstatus der-Instanz und zum Beheben von häufigen Problemen finden Sie unter [benutzerdefinierte Berichte für SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
+Informationen zum Überprüfen des Installationsstatus der-Instanz und zum Beheben von häufigen Problemen finden Sie unter [benutzerdefinierte Berichte für SQL Server](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
 Hilfe zu unbekannten Nachrichten oder Protokoll Einträgen finden Sie unter Häufig gestellte Fragen zu [Upgrade und Installation-Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
-

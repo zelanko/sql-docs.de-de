@@ -1,20 +1,20 @@
 ---
-title: Neuerungen | Microsoft-Dokumentation
-description: Neue Funktions Ankündigungen für jede Version von SQL Server 2016 R Services, R Server SQL Server 2017 Machine Learning Services.
-ms.date: 05/22/2019
+title: Neues
+description: Neue Funktions Ankündigungen für jede Version von SQL Server 2016 R Services, R Server SQL Server Machine Learning Services.
+ms.date: 07/31/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c466c7e039e515be4ef65b4f5680ece2e1d861a8
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468976"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715304"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neues in SQL Server Machine Learning Services
 
@@ -22,7 +22,7 @@ ms.locfileid: "68468976"
 
 Machine Learning-Funktionen werden SQL Server in jeder Version hinzugefügt, da wir die Integration zwischen der Datenplattform, der erweiterten Analyse und Data Science fortsetzen, erweitern und vertiefen. 
 
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019-preview"></a>Neu in SQL Server 2019 Preview
 
 In dieser Version werden die oben angeforderten Features für R-und python Machine Learning-Vorgänge in SQL Server hinzugefügt. Weitere Informationen zu allen Features in dieser Version finden Sie unter [What es New in SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) und [Release Notes for SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
@@ -32,6 +32,8 @@ In dieser Version werden die oben angeforderten Features für R-und python Machi
 
 | Release | Funktions Update |
 |---------|----------------|
+| CTP 3.2 | Keine Änderungen. |
+| CTP 3.1 | Keine Änderungen. |
 | CTP 3.0 | Keine Änderungen. |
 | CTP 2.5 | Keine Änderungen. |
 | CTP 2.4 | Linux-Unterstützung für [Create externe Library (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) für R und python. |
@@ -53,7 +55,7 @@ Weitere Informationen zu featureankündigungen finden Sie unter [What es New in 
 
 ### <a name="r-enhancements"></a>R-Erweiterungen
 
-Die R-Komponente von SQL Server 2017 Machine Learning Services ist die nächste Generation von SQL Server 2016 R Services mit aktualisierten Versionen von Base R, revoscaler und anderen Paketen.
+Bei der r-Komponente von SQL Server Machine Learning Services handelt es sich um die nächste Generation von SQL Server 2016 R Services mit aktualisierten Versionen von Base R, revoscaler und anderen Paketen.
 
 Zu den neuen Funktionen von R zählen die [**Paketverwaltung**](r/install-additional-r-packages-on-sql-server.md)mit den folgenden Highlights: 
 
@@ -69,7 +71,7 @@ Zu den neuen Funktionen von R zählen die [**Paketverwaltung**](r/install-additi
 
 ### <a name="python-integration-for-in-database-analytics"></a>Python-Integration für Daten bankübergreifende Analysen
 
-Python ist eine Sprache, die für eine Vielzahl von Machine Learning-Aufgaben eine hohe Flexibilität und Leistungsfähigkeit bietet. Open-Source-Bibliotheken für python umfassen verschiedene Plattformen für anpassbare neuronale Netzwerke sowie beliebte Bibliotheken für die Verarbeitung natürlicher Sprache. Diese häufig verwendete Sprache wird in SQL Server 2017 Machine Learning unterstützt.
+Python ist eine Sprache, die für eine Vielzahl von Machine Learning-Aufgaben eine hohe Flexibilität und Leistungsfähigkeit bietet. Open-Source-Bibliotheken für python umfassen verschiedene Plattformen für anpassbare neuronale Netzwerke sowie beliebte Bibliotheken für die Verarbeitung natürlicher Sprache. 
 
 Da python in die Datenbank-Engine integriert ist, können Sie Analysen in der Nähe der Daten aufbewahren und die Kosten und Sicherheitsrisiken, die mit der Daten Verschiebung verbunden sind, vermeiden. Sie können Machine Learning-Lösungen basierend auf python mithilfe von Tools wie Visual Studio bereitstellen. Ihre Produktionsanwendungen können mit SQL Server Datenzugriffs Methoden Vorhersagen, Modelle oder visuelle Elemente aus der Python 3,5-Laufzeit abrufen.
 
@@ -93,6 +95,7 @@ Sie können die T-SQL- [Vorhersage](../t-sql/queries/predict-transact-sql.md) Fu
 Diese Version bietet auch [SQL Server Machine Learning Server (eigenständig)](r/r-server-standalone.md), einen vollständig unabhängigen Data Science Server, der statistische und Predictive Analytics in R und python unterstützt. Wie bei R Services ist dieser Server die nächste Version von SQL Server 2016 R Server (eigenständig). Mit dem eigenständigen Server können Sie R-oder python-Lösungen ohne Abhängigkeiten von SQL Server verteilen und skalieren.
 ::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2016"></a>Neu in SQL Server 2016
 
 In dieser Version wurden Machine Learning-Funktionen in SQL Server über **SQL Server 2016 R Services**eingeführt, eine Datenbankanalyse-Engine für die Verarbeitung von R-Skripts in Residenten Daten innerhalb einer Datenbank-Engine-Instanz.
@@ -106,19 +109,23 @@ Weitere Informationen zu featureankündigungen finden Sie unter [What es New in 
 | Cu-Ergänzungen | Die [**Echtzeitbewertung**](real-time-scoring.md) basiert auf nativen C++ Bibliotheken, um ein in einem optimierten Binärformat gespeichertes Modell zu lesen und dann Vorhersagen zu generieren, ohne die R-Laufzeit aufrufen zu müssen. Dadurch werden Bewertungs Vorgänge erheblich beschleunigt. Mit der Echtzeitbewertung können Sie eine gespeicherte Prozedur ausführen oder die Echtzeitbewertung aus R-Code durchführen. Die Echtzeitbewertung ist auch für SQL Server 2016 verfügbar, wenn für die Instanz ein Upgrade auf die neueste Version [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]von durchgeführt wurde. |
 | Erste Veröffentlichung | [**R-Integration für in-Database-Analysen**](r/sql-server-r-services.md). <br/><br/> R-Pakete zum Aufrufen von r-Funktionen in T-SQL und umgekehrt. Mithilfe von revoscaler-Funktionen können R-Analysen skaliert werden, indem Daten in Komponenten Teile aufgeteilt werden, verteilte Verarbeitung koordiniert und verwaltet wird und Ergebnisse aggregierte werden. In SQL Server 2016 R Services (in-Database) ist die revoscaler-Engine in eine Instanz der Datenbank-Engine integriert, sodass Daten und Analysen im gleichen Verarbeitungs Kontext zusammengefasst werden. <br/><br/>T-SQL-und R-Integration über [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Mit dieser gespeicherten Prozedur können Sie jeden beliebigen R-Code abrufen. Diese sichere Infrastruktur ermöglicht die Bereitstellung von RN-Modellen und-Skripts auf Unternehmens Niveau, die mithilfe einer einfachen gespeicherten Prozedur von einer Anwendung aufgerufen werden können. Zusätzliche Leistungssteigerungen werden erzielt, indem Daten von SQL zu R-Prozessen und MPI-Ring Parallelisierung gestreamt werden. <br/><br/>Sie können die T-SQL- [Vorhersage](../t-sql/queries/predict-transact-sql.md) Funktion verwenden, um eine [native Bewertung](sql-native-scoring.md) für ein vorab trainiertes Modell auszuführen, das zuvor im erforderlichen Binärformat gespeichert wurde.|
 
-## <a name="linux-support-roadmap"></a>Roadmap für Linux-Support
+::: moniker-end
 
-SQL Server 2019 CTP 2,3 fügt die Linux-Unterstützung für R und python hinzu, wenn Sie die Machine Learning-Pakete mit einer Datenbank-Engine-Instanz installieren. Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Learning Services unter Linux](../linux/sql-server-linux-setup-machine-learning.md).
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+## <a name="linux-support"></a>Linux-Unterstützung
+
+SQL Server 2019 fügt die Linux-Unterstützung für R und python hinzu, wenn Sie die Machine Learning-Pakete mit einer Datenbank-Engine-Instanz installieren. Weitere Informationen finden Sie unter [Installieren von SQL Server Machine Learning Services unter Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
 Unter Linux verfügt SQL Server 2017 nicht über R-oder python-Integration, Sie können jedoch die [native Bewertung](sql-native-scoring.md) unter Linux verwenden, da diese Funktionalität über die T-SQL- [Vorhersage](../t-sql/queries/predict-transact-sql.md)verfügbar ist, die unter Linux ausgeführt wird. Die native Bewertung ermöglicht eine Bewertung mit hoher Leistung aus einem vorab trainierten Modell, ohne dass aufgerufen wird oder eine R-Laufzeit benötigt wird.
+::: moniker-end
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning Services in Azure SQL-Datenbank
 
-Machine Learning Services (mit R) in Azure SQL-Datenbank befindet sich in der öffentlichen Vorschau Phase. Weitere Informationen finden Sie unter [Azure SQL-Datenbank Machine Learning Services mit R (Vorschau)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
+Machine Learning Services in Azure SQL-Datenbank befindet sich in der öffentlichen Vorschau Phase. Weitere Informationen finden Sie unter [Azure SQL-Datenbank-Machine Learning Services (Vorschau)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-+ [Installieren von SQL Server 2017 Machine Learning Services (Daten bankeigen)](install/sql-machine-learning-services-windows-install.md)
++ [Installieren von SQL Server Machine Learning Services (Daten bankeigen)](install/sql-machine-learning-services-windows-install.md)
 + [Tutorials und Beispiele für Machine Learning](tutorials/machine-learning-services-tutorials.md)

@@ -7,17 +7,18 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f1e07ffa4423ccfc2cc0082910a2ca8aff8fd087
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468679"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715494"
 ---
 # <a name="create-data-features-using-t-sql"></a>Erstellen von Datenfunktionen mit T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Nachdem Sie die Daten durchsucht haben, haben Sie einige Einblicke in die Daten gesammelt und sind nun bereit , mit der Featureentwicklung fortzufahren. Dieser Prozess der Erstellung von Features aus den Rohdaten kann ein wichtiger Schritt bei der Erstellung erweiterter Analysen sein.
+Nachdem Sie die Daten durchsucht haben, haben Sie einige Einblicke in die Daten gesammelt und sind nun bereit, mit der Featureentwicklung fortzufahren. Dieser Prozess der Erstellung von Features aus den Rohdaten kann ein wichtiger Schritt bei der Erstellung erweiterter Analysen sein.
 
 Dieser Artikel ist Teil eines Tutorials, [in-Database-python-Analyse für SQL-Entwickler](sqldev-in-database-python-for-sql-developers.md). 
 

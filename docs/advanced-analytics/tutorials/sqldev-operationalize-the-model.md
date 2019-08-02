@@ -7,12 +7,13 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a3bd6671ee1f48c67f58e9b1ee17772b18184bc0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: abacf3c384430417dbf0630f2f8dcd8adff68259
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469049"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714728"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lektion 4: Ausführen von Vorhersagen mithilfe von R Embedded in einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,7 +132,7 @@ Die gespeicherte Prozedur gibt eine Reihe von Werten zurück, die die Vorhersage
 
 > [!TIP]
 > 
-> Anstatt nur die Ergebnisse "Yes-Tip" und "No-Tip" zurückzugeben, können Sie auch das Wahrscheinlichkeits Ergebnis für die Vorhersage zurückgeben und dann eine WHERE-Klausel auf die Werte der _Bewertungs Spalte anwenden_ , um das Ergebnis als "wahrscheinlich Tip" oder "unwahrscheinlich an Tip" zu kategorisieren, indem Sie einen Schwellenwert, z. b. 0,5 oder 0,7. Dieser Schritt ist nicht in der gespeicherten Prozedur enthalten, aber es wäre leicht, ihn zu implementieren.
+> Anstatt nur die Ergebnisse "Yes-Tip" und "No-Tip" zurückzugeben, können Sie auch das Wahrscheinlichkeits Ergebnis für die Vorhersage zurückgeben und dann eine WHERE-Klausel auf die Werte der Bewertungs Spalte anwenden, um das Ergebnis als "wahrscheinlich Tip" oder "unwahrscheinlich an Tip" zu kategorisieren, indem Sie einen Schwellenwert, z. b. 0,5 oder 0,7. Dieser Schritt ist nicht in der gespeicherten Prozedur enthalten, aber es wäre leicht, ihn zu implementieren.
 
 ## <a name="single-row-scoring-of-multiple-inputs"></a>Einzeilige Bewertung mehrerer Eingaben
 

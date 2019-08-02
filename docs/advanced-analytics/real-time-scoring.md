@@ -3,16 +3,17 @@ title: Echtzeitbewertung mithilfe der gespeicherten Prozedur sp_rxPredict
 description: Generieren von Vorhersagen mithilfe von sp_rxPredict, bewerten von Dateneingaben anhand eines vorab trainierten Modells, das in R auf SQL Server geschrieben ist.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 26701ac6e538d195a5a85ad66af9578848889d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469970"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715647"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Echtzeitbewertung mit sp_rxPredict in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ Bei der Echtzeitbewertung werden die gespeicherten System Prozeduren [sp_rxPredi
 
 ## <a name="how-real-time-scoring-works"></a>Funktionsweise der Echtzeitbewertung
 
-Die Echtzeitbewertung wird sowohl in SQL Server 2017 als auch SQL Server 2016 unterstützt, für bestimmte Modelltypen auf der Grundlage von revoscaler-oder microsoftml-Funktionen, wie z. [b. rxlinmod (revoscaler)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxneural net (microsoftml)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Native C++ Bibliotheken werden verwendet, um Bewertungen basierend auf Benutzereingaben zu generieren, die für ein in einem speziellen Binärformat gespeichertes Machine Learning-Modell bereitgestellt werden.
+Die Echtzeitbewertung wird für bestimmte Modelltypen unterstützt, die auf revoscaler-oder microsoftml-Funktionen, wie [rxlinmod (revoscaler)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxneural net (microsoftml)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet), basieren. Native C++ Bibliotheken werden verwendet, um Bewertungen basierend auf Benutzereingaben zu generieren, die für ein in einem speziellen Binärformat gespeichertes Machine Learning-Modell bereitgestellt werden.
 
 Da ein trainiertes Modell zur Bewertung verwendet werden kann, ohne eine externe Sprachlaufzeit aufrufen zu müssen, verringert sich der Aufwand mehrerer Prozesse. Dies unterstützt eine wesentlich schnellere Vorhersage Leistung für Produktions Bewertungs Szenarien. Da die Daten niemals SQL Server bleiben, können Ergebnisse generiert und in eine neue Tabelle eingefügt werden, ohne dass eine Daten Übersetzung zwischen R und SQL durchgeführt werden muss.
 

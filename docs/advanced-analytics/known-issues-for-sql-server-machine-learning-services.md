@@ -6,17 +6,18 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: be55e779f335277a1c0f03fe871b8dcb952e088f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470405"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715195"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel beschreibt bekannte Probleme oder Einschränkungen bei Machine Learning-Komponenten, die als Option in [SQL Server 2016 R Services](install/sql-r-services-windows-install.md) und [SQL Server 2017 Machine Learning Services mit R und python](install/sql-machine-learning-services-windows-install.md)bereitgestellt werden.
+Dieser Artikel beschreibt bekannte Probleme oder Einschränkungen bei Machine Learning-Komponenten, die als Option in [SQL Server 2016 R-Dienste](r/sql-server-r-services.md) und [SQL Server Machine Learning Services mit R und python](what-is-sql-server-machine-learning.md)bereitgestellt werden.
 
 ## <a name="setup-and-configuration-issues"></a>Setup-und Konfigurationsprobleme
 
@@ -76,7 +77,7 @@ Im folgenden Beispiel werden die Befehle mit der Standard Instanz "MSSQL14" geze
 
 ### <a name="3-unable-to-install-sql-server-machine-learning-features-on-a-domain-controller"></a>3. SQL Server Machine Learning-Funktionen auf einem Domänen Controller können nicht installiert werden.
 
-Wenn Sie versuchen, SQL Server 2016 R Services oder SQL Server 2017 Machine Learning Services auf einem Domänen Controller zu installieren, tritt bei der Installation ein Fehler auf, mit den folgenden Fehlern:
+Wenn Sie versuchen, SQL Server 2016 R-Dienste oder SQL Server Machine Learning Services auf einem Domänen Controller zu installieren, schlägt das Setup mit den folgenden Fehlern fehl:
 
 > *Fehler beim Setup Vorgang des Features.*
 > 
@@ -335,7 +336,7 @@ Verwenden Sie die UTF-8-Codierung ( [!INCLUDE[ssNoVersion](../includes/ssnoversi
 
 ### <a name="13-only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>13. Es kann nur ein Wert `raw` des Typs zurückgegeben werden.`sp_execute_external_script`
 
-Wenn ein binärer Datentyp (der  r-rohdatentyp) von r zurückgegeben wird, muss der Wert im Ausgabedaten Rahmen gesendet werden.
+Wenn ein binärer Datentyp (der r-rohdatentyp) von r zurückgegeben wird, muss der Wert im Ausgabedaten Rahmen gesendet werden.
 
 Bei anderen Datentypen als **RAW**können Sie Parameterwerte zusammen mit den Ergebnissen der gespeicherten Prozedur zurückgeben, indem Sie das OUTPUT-Schlüsselwort hinzufügen. Weitere Informationen finden Sie unter [Parameter](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters).
 

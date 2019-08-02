@@ -7,17 +7,18 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cd03837644ec1cd4d818615bb8a17728c58a1f17
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff1027a3a791ef0151e61982445cafff7be40329
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470587"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715420"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Lernprogramme für die SQL Server R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Artikel werden die Lernprogramme für R-Sprache für Daten bankübergreifende Analysen in [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) oder [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)beschrieben.
+In diesem Artikel werden die Lernprogramme für r-Sprache für Daten bankübergreifende Analysen in [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) oder [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)beschrieben.
 
 + Erfahren Sie, wie Sie R-Code in gespeicherten Prozeduren Verpacken und ausführen.
 + Serialisieren und speichern Sie r-basierte Modelle in SQL Server Datenbanken.

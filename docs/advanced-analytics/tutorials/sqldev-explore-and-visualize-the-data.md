@@ -7,12 +7,13 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 362e7866636f83b9c75bf75ce30a0f012b3751fa
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470638"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715369"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren der Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ Im ursprünglichen öffentlichen DataSet wurden die Taxi-IDs und die Fahrt Daten
   
 -   Jeder Fahrpreisdatensatz enthält die Zahlungsinformationen wie die Zahlungsart, der Gesamtbetrag und den Fahrtpreis.
   
--   Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die _Tip\_Amount_ -Spalte enthält fortlaufende numerische Werte und kann als Bezeichnungs **Spalte für** die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _Tip\_-Klassen_ Spalte verfügt über mehrere **Klassen Bezeichnungen** und kann daher als Bezeichnung für Klassifizierungs Aufgaben mit mehreren Klassen verwendet werden.
+-   Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die _Tip\_Amount_ -Spalte enthält fortlaufende numerische Werte und kann als Bezeichnungs Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _Tip\_-Klassen_ Spalte verfügt über mehrere **Klassen Bezeichnungen** und kann daher als Bezeichnung für Klassifizierungs Aufgaben mit mehreren Klassen verwendet werden.
   
     Diese exemplarische Vorgehensweise enthält nur die binäre Klassifizierungsaufgabe. Sie können gerne versuchen, Modelle für die anderen beiden Machine Learning-Tasks und für mehrklassige Klassifizierung zu erstellen.
   

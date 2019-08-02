@@ -2,21 +2,22 @@
 title: Häufige Probleme mit dem Launchpad-Dienst und externer Skriptausführung
 ms.prod: sql
 ms.technology: ''
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c90c59f3b59850bb0e2d1cf4cf40eb569e965eba
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470483"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715287"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Häufige Probleme mit dem Launchpad-Dienst und der externen Skriptausführung in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- SQL Server vertrauenswürdigen Launchpad-Dienst unterstützt die Ausführung externer Skripts für R und python. Auf SQL Server 2016 R Services stellt SP1 den-Dienst bereit. SQL Server 2017 enthält den Launchpad-Dienst als Teil der Erstinstallation.
+SQL Server vertrauenswürdigen Launchpad-Dienst unterstützt die Ausführung externer Skripts für R und python. 
 
 Mehrere Probleme können verhindern, dass Launchpad gestartet wird, einschließlich Konfigurationsprobleme, Änderungen oder fehlende Netzwerkprotokolle. Dieser Artikel enthält Anleitungen zur Problembehandlung für viele Probleme. Für jeden, den wir verpasst haben, können Sie im [Machine Learning Server Forum](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)Fragen stellen.
 
@@ -76,6 +77,7 @@ Weitere Informationen finden Sie unter [Grant (Transact-SQL](../t-sql/statements
 
 In diesem Abschnitt werden die häufigsten Fehlermeldungen aufgelistet, die von Launchpad zurückgegeben werden.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>"Die Laufzeit für R-Skript kann nicht gestartet werden."
 
 Wenn sich die Windows-Gruppe für R-Benutzer (auch für python verwendet) nicht bei der Instanz anmelden können, auf der R Services ausgeführt wird, werden möglicherweise die folgenden Fehler angezeigt:
@@ -94,10 +96,11 @@ Wenn sich die Windows-Gruppe für R-Benutzer (auch für python verwendet) nicht 
 
     * *Sicherheitsprotokolle weisen darauf hin, dass sich der NT-Dienst des Kontos nicht anmelden konnte.*
 
-Informationen dazu, wie Sie dieser Benutzergruppe die erforderlichen Berechtigungen erteilen, finden Sie unter [Install SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
+Informationen dazu, wie Sie dieser Benutzergruppe die erforderlichen Berechtigungen erteilen, finden Sie unter [Install SQL Server R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Diese Einschränkung gilt nicht, wenn Sie SQL-Benutzernamen verwenden, um von einer Remotearbeitsstation R-Skripts auszuführen.
+::: moniker-end
 
 ## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"Fehler bei der Anmeldung: dem Benutzer wurde nicht der angeforderte Anmeldetyp erteilt."
 
@@ -183,9 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 Um das Problem zu beheben, müssen Sie das Paket in der SQL Server-instanzbibliothek neu installieren.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
 >Wenn Sie eine Instanz von SQL Server 2016 aktualisiert haben, um die neueste Version von Microsoft R zu verwenden, unterscheidet sich der Standard Speicherort der Bibliothek. Weitere Informationen finden Sie unter [Verwenden von sqlbindr zum Aktualisieren einer Instanz von R Services](install/upgrade-r-and-python.md).
+::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Launchpad wird aufgrund von nicht übereinstimmenden DLLs heruntergefahren.
 
 Wenn Sie die Datenbank-Engine mit anderen Features installieren, den Server patchen und später das Machine Learning Feature mithilfe der ursprünglichen Medien hinzufügen, ist möglicherweise die falsche Version der Machine Learning Komponenten installiert. Wenn das Launchpad einen Versions Konflikt erkennt, wird es heruntergefahren, und eine Dumpdatei wird erstellt.
@@ -224,7 +230,7 @@ Um dieses Problem zu umgehen, können Sie die 8 DOT3-Notation auf dem Volume akt
 3. Verwenden Sie das Hilfsprogramm fsutil mit dem *File* -Argument, um einen kurzen Dateipfad für den Ordner anzugeben, der in WORKING_DIRECTORY angegeben ist.
 
 4. Bearbeiten Sie die Konfigurationsdatei, um das gleiche Arbeitsverzeichnis anzugeben, das Sie in der WORKING_DIRECTORY-Eigenschaft eingegeben haben. Alternativ können Sie ein anderes Arbeitsverzeichnis angeben und einen vorhandenen Pfad auswählen, der bereits mit der 8.3-Notation kompatibel ist.
-
+::: moniker-end
 
 ## <a name="next-steps"></a>Nächste Schritte
 

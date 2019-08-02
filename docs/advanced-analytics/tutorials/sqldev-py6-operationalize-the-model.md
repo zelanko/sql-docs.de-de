@@ -7,12 +7,13 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b04e57c45c6113d4a0404a3a338e6beba4cda813
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468600"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715353"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ausführen von Vorhersagen mithilfe von python Embedded in einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ Die ersten beiden gespeicherten Prozeduren veranschaulichen die grundlegende Syn
 - Der Name des exakten Modells, das verwendet werden soll, wird als Eingabeparameter für die gespeicherte Prozedur bereitgestellt. Die gespeicherte Prozedur lädt das serialisierte Modell mithilfe der SELECT- `nyc_taxi_models`Anweisung in der gespeicherten Prozedur aus der Datenbanktabelle. Table.
 - Das serialisierte Modell wird zur weiteren Verarbeitung mithilfe von `mod` python in der python-Variablen gespeichert.
 - Die neuen Fälle, die bewertet werden müssen, werden aus der [!INCLUDE[tsql](../../includes/tsql-md.md)] in `@input_data_1`angegebenen Abfrage abgerufen. Wenn die Abfragedaten gelesen werden, werden die Zeilen im Standard-Datenrahmen, `InputDataSet`, gespeichert.
-- Beide gespeicherten Prozeduren verwenden `sklearn` Funktionen von, um eine Genauigkeits Metrik zu berechnen, AUC (Bereich unter Kurve). Genauigkeits Metriken wie z. b. AUC können nur generiert werden, wenn Sie  auch die Ziel Bezeichnung (die gekippte Spalte) angeben. Für Vorhersagen ist die Ziel Bezeichnung (Variable `y`) nicht erforderlich, aber die Berechnung der Genauigkeits Metrik.
+- Beide gespeicherten Prozeduren verwenden `sklearn` Funktionen von, um eine Genauigkeits Metrik zu berechnen, AUC (Bereich unter Kurve). Genauigkeits Metriken wie z. b. AUC können nur generiert werden, wenn Sie auch die Ziel Bezeichnung (die gekippte Spalte) angeben. Für Vorhersagen ist die Ziel Bezeichnung (Variable `y`) nicht erforderlich, aber die Berechnung der Genauigkeits Metrik.
 
     Wenn Sie also keine Ziel Bezeichnungen für die zu bewertenden Daten haben, können Sie die gespeicherte Prozedur so ändern, dass die AUC-Berechnungen entfernt werden, und nur die Tipp Wahrscheinlichkeiten aus den Funktionen `X` zurückgeben (Variable in der gespeicherten Prozedur).
 

@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 951ffc07a32434b2f8d333140445f12c2971b811
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 072a6f34a7cb91505d77356d6ec3835915c310d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470614"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715398"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>Schnellstart: Überprüfen der Verfügbarkeit von R in SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,13 +25,13 @@ Die Skriptausführung erfolgt mithilfe gespeicherter Prozeduren, wobei eine der 
 + Integrierte gespeicherte Prozedur [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) , wobei R-Skript in als Eingabeparameter übergeben wird.
 + Wrappen Sie das R-Skript in einer von Ihnen erstellten [benutzerdefinierten gespeicherten Prozedur](sqldev-in-database-r-for-sql-developers.md) .
 
-In dieser Schnellstartanleitung überprüfen Sie, ob [SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md) oder [SQL Server 2016 R Services](../r/sql-server-r-services.md) installiert und konfiguriert ist.
+In dieser Schnellstartanleitung überprüfen Sie, ob [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) -oder [SQL Server 2016 R-Dienste](../r/sql-server-r-services.md) installiert und konfiguriert sind.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
 Diese Übung erfordert Zugriff auf eine Instanz von SQL Server mit einer der folgenden bereits installierten:
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)mit installierter R-Sprache
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)mit installierter R-Sprache
 + [SQL Server 2016 R-Dienste](../install/sql-r-services-windows-install.md)
 
 Ihre SQL Server Instanz kann sich auf einem virtuellen Azure-Computer oder lokal befinden. Beachten Sie, dass das Feature für die externe Skripterstellung standardmäßig deaktiviert ist. Daher müssen Sie möglicherweise [externe Skripterstellung aktivieren](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) und überprüfen, ob **SQL Server-Launchpad-Dienst** ausgeführt wird, bevor Sie beginnen.
@@ -73,7 +74,7 @@ Sie können überprüfen, ob Machine Learning Services (mit R) für Ihre SQL Ser
     nickname       Another Canoe               
     ```
 
-Wenn Sie von dieser Abfrage Fehler erhalten, sollten Sie alle Installationsprobleme ausschließen. Die Konfiguration nach der Installation ist erforderlich, um die Verwendung externer Codebibliotheken zu aktivieren. Weitere Informationen finden Sie unter [Installieren von SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) oder [Installieren von SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Stellen Sie auch sicher, dass der Launchpad-Dienst ausgeführt wird.
+Wenn Sie von dieser Abfrage Fehler erhalten, sollten Sie alle Installationsprobleme ausschließen. Die Konfiguration nach der Installation ist erforderlich, um die Verwendung externer Codebibliotheken zu aktivieren. Weitere Informationen finden Sie unter [installieren SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) oder [Installieren von SQL Server 2016 R Services](../install/sql-r-services-windows-install.md). Stellen Sie auch sicher, dass der Launchpad-Dienst ausgeführt wird.
 
 Je nach Umgebung kann es erforderlich sein, dass Sie die R-Workerkonten für die Verbindung mit SQL Server aktivieren, zusätzliche Netzwerkbibliotheken installieren, Remotecodeausführung zulassen oder die Instanz neu starten, nachdem alles konfiguriert wurde. Weitere Informationen finden Sie unter [FAQ zu Installation und Upgrade von R Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 

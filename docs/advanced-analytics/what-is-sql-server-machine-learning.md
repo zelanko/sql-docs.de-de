@@ -3,24 +3,22 @@ title: Übersicht über SQL Server Machine Learning Services (R, python)
 description: Übersicht über das Machine Learning Services Feature in SQL Server, in dem Sie python und R mit relationalen Daten für Data Science und statistische Modellierung, Machine Learning-Modelle, Predictive Analytics, Datenvisualisierung und vieles mehr integrieren können.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/24/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4ab4cd7c93cfd1a98a819a849e643d590450cd28
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495397"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714669"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services ist eine Funktion von SQL Server, die zum Ausführen von R-und python-Skripts in der Datenbank verwendet wird. Das Feature umfasst [Microsoft R-und Python-Pakete](#components) für Hochleistungs Predictive Analytics und Maschinelles Lernen. Die relationalen Daten können in r-und python-Skripts durch gespeicherte Prozeduren, T-SQL-Skripts mit r-und python-Anweisungen oder r-und Python-Code mit T-SQL verwendet werden.
-
-Wenn Sie zuvor [SQL Server 2016 R-Dienste](r/sql-server-r-services.md)verwendet haben, ist Machine Learning Services in SQL Server 2017 und höher die nächste Generation von r-Unterstützung mit aktualisierten Versionen von Base r, revoscaler, microsoftml und anderen Bibliotheken, die in 2016 eingeführt wurden.
 
 In Azure SQL-Datenbank befindet sich [Machine Learning Services (mit R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) zurzeit in der öffentlichen Vorschau Phase.
 
@@ -39,7 +37,7 @@ Durch die Verwendung der richtigen Kombination von SQL und R für verschiedene D
 
 ## <a name="components"></a>Komponenten
 
-SQL Server-2017 unterstützt R und Python. In der folgenden Tabelle werden die-Komponenten beschrieben.
+SQL Server unterstützt R und python. In der folgenden Tabelle werden die-Komponenten beschrieben.
 
 | Komponente | Beschreibung |
 |-----------|-------------|
@@ -128,19 +126,6 @@ Um die Features für die Ressourcenverwaltung und die Sicherheit in SQL Server n
 + Aktivieren der Ressourcenkontrolle (erfordert die Enterprise Edition)
 
 Weitere Informationen finden Sie unter [Ressourcenkontrolle für r](r/resource-governance-for-r-services.md) und [r-Paketverwaltung für SQL Server](r/install-additional-r-packages-on-sql-server.md).
-
-## <a name="version-history"></a>Versionsverlauf
-
-SQL Server 2017 Machine Learning Services ist die nächste Generation von SQL Server 2016 R Services, erweitert um Python. Die folgende Tabelle stellt eine vollständige Liste aller Produktversionen dar, von Anfang bis zur aktuellen Version. 
-
-| Produktname | Engine-Version | Veröffentlichungsdatum |
-|--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (in-Database) | R Server 9.2.1 <br/> Python-Server 9,2 | Oktober 2017 |
-| SQL Server 2017 Machine Learning Server (eigenständig) | R Server 9.2.1 <br/> Python-Server 9,2 | Oktober 2017 |
-| SQL Server 2016 R Services (in-Database) | R Server 9,1  | 2017. Juli  |
-| SQL Server 2016 R Server (eigenständig)  |  R Server 9,1 | 2017. Juli |
-
-Informationen zu Paketversionen nach Release finden Sie in der Versions Zuordnung unter Upgraden von [R-und python-Komponenten](install/upgrade-r-and-python.md#version-map).
 
 ## <a name="portability-and-related-products"></a>Portabilität und Verwandte Produkte
 

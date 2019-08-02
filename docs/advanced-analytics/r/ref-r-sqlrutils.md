@@ -1,18 +1,19 @@
 ---
 title: sqlrutils-Hilfsfunktionen
-description: Verwenden Sie die sqlrutils-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server 2017 Machine Learning Services mit r, um gespeicherte Prozeduren zu generieren, die r-Skripts enthalten.
+description: Verwenden Sie die sqlrutils-Funktionsbibliothek in SQL Server 2016 R Services und SQL Server Machine Learning Services mit r, um gespeicherte Prozeduren zu generieren, die r-Skripts enthalten
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469946"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715031"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (R-Bibliothek in SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

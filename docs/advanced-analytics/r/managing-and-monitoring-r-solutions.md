@@ -7,12 +7,13 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 705df9d06a7dbf4563df3670894351d15c0962a5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2677b48daf253a85f2b74078bdad7de65e37d572
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470098"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715049"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Verwalten und integrieren von Machine Learning-Workloads auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ R und python Machine Learning werden von [SQL Server Machine Learning Services](
 
 ## <a name="feature-availability"></a>Funktions Verfügbarkeit
 
-Die Integration von R und python wird durch eine Reihe von Schritten verfügbar. Der erste ist Setup, wenn Sie das Machine Learning Services Feature in eine Instanz der Datenbank-Engine [einschließen oder hinzufügen  ](../install/sql-machine-learning-services-windows-install.md) . Als nachfolgenden Schritt müssen Sie die externe Skripterstellung für die Datenbank-Engine-Instanz aktivieren (standardmäßig deaktiviert).
+Die Integration von R und python wird durch eine Reihe von Schritten verfügbar. Der erste ist Setup, wenn Sie das Machine Learning Services Feature in eine Instanz der Datenbank-Engine [einschließen oder hinzufügen ](../install/sql-machine-learning-services-windows-install.md) . Als nachfolgenden Schritt müssen Sie die externe Skripterstellung für die Datenbank-Engine-Instanz aktivieren (standardmäßig deaktiviert).
 
 An diesem Punkt haben nur Datenbankadministratoren die volle Berechtigung zum Erstellen und Ausführen externer Skripts, zum Hinzufügen oder Löschen von Paketen und zum Erstellen von gespeicherten Prozeduren und anderen Objekten.
 

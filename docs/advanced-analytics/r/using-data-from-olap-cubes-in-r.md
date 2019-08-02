@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ec50ee1b10a51e16b72d7ffc110448dcf016a13f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469863"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714973"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Verwenden von Daten aus OLAP-Cubes in R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +89,7 @@ Eine einzelne Analysis Services Instanz kann nur einen Modelltyp enthalten, Sie 
 
 Wenn Sie mithilfe eines Clients wie SQL Server Management Studio eine Verbindung mit Analysis Services herstellen, können Sie auf einen Blick feststellen, welcher Modelltyp unterstützt wird, indem Sie sich das Symbol für die Datenbank ansehen.
 
-Sie können auch die Server Eigenschaften anzeigen und Abfragen, um zu bestimmen, welcher Modelltyp von der Instanz unterstützt wird. Die  servermoduseigenschaft unterstützt zwei Werte: mehr _dimensional_ oder _Tabellarisch_.
+Sie können auch die Server Eigenschaften anzeigen und Abfragen, um zu bestimmen, welcher Modelltyp von der Instanz unterstützt wird. Die servermoduseigenschaft unterstützt zwei Werte: mehr _dimensional_ oder _Tabellarisch_.
 
 Allgemeine Informationen zu den beiden Modelltypen finden Sie im folgenden Artikel:
 

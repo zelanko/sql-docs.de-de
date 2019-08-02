@@ -7,17 +7,18 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d901d11b11019a19d5e26e12956e9ba520e33e8f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 5e05a62be604b9d1a3feeaea1ed4f05dc3538493
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469629"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715474"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>SQL Server Machine Learning Tutorials in R und python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel enthält eine umfassende Liste von Tutorials und Codebeispielen, die die Machine Learning-Features von [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) oder [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)veranschaulichen. 
+Dieser Artikel enthält eine umfassende Liste von Tutorials und Codebeispielen, die die Machine Learning-Features von [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) oder [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)veranschaulichen. 
 
 + Schnellstarts verwenden integrierte Daten oder keine Daten für die schnelle Untersuchung mit geringstmöglichen Anstrengungen.
 + In den Tutorials werden weitere Aufgaben, größere Datasets und längere Erläuterungen näher behandelt.
