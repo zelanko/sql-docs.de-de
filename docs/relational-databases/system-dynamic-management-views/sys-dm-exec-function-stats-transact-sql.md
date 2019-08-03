@@ -1,5 +1,5 @@
 ---
-title: dm_exec_function_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. DM _exec_function_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -18,67 +18,67 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e67a50287e0878a3dcc0779bb4a78dbcbbdd0260
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259256"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742832"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>dm_exec_function_stats (Transact-SQL)
+# <a name="sysdmexecfunctionstats-transact-sql"></a>sys. DM _exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Gibt die aggregatleistungsstatistik für zwischengespeicherte Funktionen aus. Gibt die Sicht eine Zeile für jeden Plan der zwischengespeicherten Funktion zurück, und die Lebensdauer der Zeile zwischengespeichert wird, solange die Funktion befindet. Wenn eine Funktion aus dem Cache entfernt wird, wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats**entspricht. Informationen zu den skalaren Funktionen, einschließlich der in-Memory-Funktionen und CLR-Skalarfunktionen zurückgegeben. Informationen zu Tabellenwertfunktionen wird nicht zurückgegeben werden.  
+  Gibt aggregierte Leistungsstatistiken für zwischengespeicherte Funktionen zurück. Die Sicht gibt eine Zeile für jeden zwischengespeicherten Funktionsplan zurück, und die Lebensdauer der Zeile ist so lange, wie die Funktion zwischengespeichert bleibt. Wenn eine Funktion aus dem Cache entfernt wird, wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats**entspricht. Gibt Informationen zu skalaren Funktionen zurück, einschließlich in-Memory-Funktionen und CLR-Skalarfunktionen. Gibt keine Informationen zu Tabellenwert Funktionen zurück.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, diese Informationen bereitstellen, wird jede Zeile, die Daten enthält, die zum verbundenen Mandanten gehören nicht herausgefiltert.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile, die Daten enthält, die nicht zum verbundenen Mandanten gehören, herausgefiltert.  
   
 > [!NOTE]
-> Erste Abfrage von **dm_exec_function_stats** kann zu ungenauen Ergebnissen führen, wenn eine arbeitsauslastung, die gerade ausgeführt wird, auf dem Server vorhanden ist. Erneutes Ausführen der Abfrage liefert unter Umständen genauere Ergebnisse.  
-  
+> Die Ergebnisse von **sys. DM _exec_function_stats** können sich bei jeder Ausführung unterscheiden, da die Daten nur abgeschlossene Abfragen widerspiegeln, und keine, die noch aktiv sind. 
+
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|Datenbank-ID, die in der die Funktion befindet.|  
+|**database_id**|**int**|Datenbank-ID, in der sich die Funktion befindet.|  
 |**object_id**|**int**|Objekt-ID der Funktion.|  
-|**type**|**char(2)**|Der Objekttyp:   FN = Funktionen mit skalaren Werten|  
+|**type**|**char(2)**|Der Objekttyp:   FN = Skalarwertfunktionen|  
 |**type_desc**|**nvarchar(60)**|Beschreibung des Objekttyps: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|Dies kann verwendet werden, um die Korrelation mit Abfragen in **Sys. dm_exec_query_stats** , die in dieser Funktion aus ausgeführt wurden.|  
-|**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Immer wird 0 x 000, wenn eine systemintern kompilierte Funktion Abfragen, die eine Speicheroptimierte Tabelle sein.|  
-|**cached_time**|**datetime**|Zeitpunkt, an dem die Funktion mit dem Cache hinzugefügt wurde.|  
-|**last_execution_time**|**datetime**|Letzte Zeitpunkt, an dem die Funktion ausgeführt wurde.|  
-|**execution_count**|**bigint**|Anzahl der Fälle, in denen die Funktion seit ausgeführt wurde der letzten Kompilierung.|  
-|**total_worker_time**|**bigint**|Gesamtanzahl der Menge an CPU-Zeit Mikrosekunden, wurde diese Funktion Ausführungen seit der Kompilierung.<br /><br /> Bei nativ kompilierten Funktionen **Total_worker_time** möglicherweise nicht genau, wenn zahlreiche Ausführungen weniger als 1 Millisekunde dauern.|  
-|**last_worker_time**|**bigint**|CPU-Zeit in Mikrosekunden, die den Zeitpunkt der letzten genutzt wurden, die die Funktion ausgeführt wurde. <sup>1</sup>|  
-|**min_worker_time**|**bigint**|Minimale CPU-Zeit in Mikrosekunden, diese Funktion immer eine einzelne Ausführung. <sup>1</sup>|  
-|**max_worker_time**|**bigint**|Maximale CPU-Zeit in Mikrosekunden, diese Funktion immer eine einzelne Ausführung. <sup>1</sup>|  
-|**total_physical_reads**|**bigint**|Die Gesamtanzahl physischer Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_physical_reads**|**bigint**|Anzahl physischer Lesevorgänge ausgeführt, der letzten Ausführung die Funktion ausgeführt wurde.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_physical_reads**|**bigint**|Minimale Anzahl physischer Lesevorgänge, die diese Funktion eine einzelne Ausführung bisherige.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_physical_reads**|**bigint**|Maximale Anzahl physischer Lesevorgänge, die diese Funktion eine einzelne Ausführung bisherige.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**sql_handle**|**varbinary(64)**|Dies kann verwendet werden, um mit Abfragen in **sys. DM _exec_query_stats** zu korrelieren, die in dieser Funktion ausgeführt wurden.|  
+|**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Ist immer 0x000, wenn eine nativ kompilierte Funktion eine Speicher optimierte Tabelle abfragt.|  
+|**cached_time**|**datetime**|Der Zeitpunkt, zu dem die Funktion dem Cache hinzugefügt wurde.|  
+|**last_execution_time**|**datetime**|Der Zeitpunkt, zu dem die Funktion zuletzt ausgeführt wurde.|  
+|**execution_count**|**bigint**|Gibt an, wie oft die Funktion seit der letzten Kompilierung ausgeführt wurde.|  
+|**total_worker_time**|**bigint**|Die Gesamtmenge der CPU-Zeit (in Mikrosekunden), die von Ausführungen dieser Funktion seit der Kompilierung verbraucht wurde.<br /><br /> Bei nativ kompilierten Funktionen ist **total_worker_time** möglicherweise nicht genau, wenn viele Ausführungen weniger als 1 Millisekunde benötigen.|  
+|**last_worker_time**|**bigint**|Die CPU-Zeit (in Mikrosekunden), die bei der letzten Ausführung der Funktion verbraucht wurde. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|Die minimale CPU-Zeit (in Mikrosekunden), die diese Funktion seit einer einzelnen Ausführung verbraucht hat. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|Maximale CPU-Zeit (in Mikrosekunden), die diese Funktion seit einer einzelnen Ausführung verbraucht hat. <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|Die Gesamtanzahl der physischen Lesevorgänge, die von Ausführungen dieser Funktion seit der Kompilierung durchgeführt wurden.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_physical_reads**|**bigint**|Anzahl physischer Lesevorgänge bei der letzten Ausführung der Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_physical_reads**|**bigint**|Minimale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_physical_reads**|**bigint**|Maximale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
 |**total_logical_writes**|**bigint**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
 |**last_logical_writes**|**bigint**|Die Anzahl der Pufferpoolseiten, die seit der letzten Planausführung modifiziert wurden. Wenn eine Seite bereits modifiziert (geändert) wurde, werden keine Schreibvorgänge gezählt.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_logical_writes**|**bigint**|Minimale Anzahl logischer Schreibvorgänge, die diese Funktion eine einzelne Ausführung bisherige.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_logical_writes**|**bigint**|Maximale Anzahl logischer Schreibvorgänge, die diese Funktion eine einzelne Ausführung bisherige.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_logical_writes**|**bigint**|Die minimale Anzahl logischer Schreibvorgänge, die diese Funktion während einer einzelnen Ausführung durchgeführt hat.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_logical_writes**|**bigint**|Maximale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
 |**total_logical_reads**|**bigint**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_logical_reads**|**bigint**|Anzahl logischer Lesevorgänge ausgeführt, der letzten Ausführung die Funktion ausgeführt wurde.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_logical_reads**|**bigint**|Minimale Anzahl logischer Lesevorgänge, die diese Funktion eine einzelne Ausführung bisherige.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_logical_reads**|**bigint**|Maximale Anzahl logischer Lesevorgänge, die diese Funktion eine einzelne Ausführung bisherige.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**total_elapsed_time**|**bigint**|Insgesamt verstrichene Zeit in Mikrosekunden, die für abgeschlossene Ausführungen dieser Funktion.|  
-|**last_elapsed_time**|**bigint**|Verstrichene Zeit in Mikrosekunden, die für die letzte abgeschlossene Ausführung dieser Funktion.|  
-|**min_elapsed_time**|**bigint**|Mindestens verstrichene Zeit, die in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
-|**max_elapsed_time**|**bigint**|Maximal verstrichene Zeit, die in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
-|**total_page_server_reads**|**bigint**|Gesamtanzahl der Seite Server Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
-|**last_page_server_reads**|**bigint**|Anzahl der Seitenlesevorgänge-Server ausgeführt, der letzten Ausführung die Funktion ausgeführt wurde.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
-|**min_page_server_reads**|**bigint**|Minimale Anzahl von Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|  
-|**max_page_server_reads**|**bigint**|Maximale Anzahl von Seitenserver liest, dass diese Funktion eine einzelne Ausführung bisherige.<br /><br /> **Gilt für:** Azure SQL-Datenbank hochgradig skalierbaren.|
+|**last_logical_reads**|**bigint**|Anzahl logischer Lesevorgänge bei der letzten Ausführung der Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_logical_reads**|**bigint**|Bisherige Mindestanzahl logischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_logical_reads**|**bigint**|Maximale Anzahl logischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**total_elapsed_time**|**bigint**|Insgesamt verstrichene Zeit (in Mikrosekunden) für abgeschlossene Ausführungen dieser Funktion.|  
+|**last_elapsed_time**|**bigint**|Verstrichene Zeit (in Mikrosekunden) für die zuletzt abgeschlossene Ausführung dieser Funktion.|  
+|**min_elapsed_time**|**bigint**|Mindestens verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
+|**max_elapsed_time**|**bigint**|Maximal verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
+|**total_page_server_reads**|**bigint**|Die Gesamtanzahl von Seiten Server Lesevorgängen, die von Ausführungen dieser Funktion seit der Kompilierung ausgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
+|**last_page_server_reads**|**bigint**|Anzahl von Seiten Server Lesevorgängen, die bei der letzten Ausführung der Funktion ausgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
+|**min_page_server_reads**|**bigint**|Die minimale Anzahl von Seiten Server Lesevorgängen, die diese Funktion jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
+|**max_page_server_reads**|**bigint**|Maximale Anzahl von Seiten Server Lesevorgängen, die diese Funktion jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt Informationen zu den Top 10-Funktionen, die durchschnittlich verstrichenen Zeit zurück.  
+ Im folgenden Beispiel werden Informationen zu den zehn wichtigsten Funktionen zurückgegeben, die nach durchschnittlich verstrichener Zeit identifiziert werden.  
   
 ```  
 SELECT TOP 10 d.object_id, d.database_id, OBJECT_NAME(object_id, database_id) 'function name',   
@@ -90,7 +90,7 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;in Bezug auf die Ausführung mit Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
