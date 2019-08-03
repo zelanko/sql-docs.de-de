@@ -1,5 +1,5 @@
 ---
-title: Sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7fc3b5e8fb8b6bc8d5d98d14ede475b8f5a3f75c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110848"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768949"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Ändert den Agentauftrag, der die Momentaufnahme für ein Abonnement einer Veröffentlichung mit einem parametrisierten Zeilenfilter generiert. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Ändert den Agentauftrag, der die Momentaufnahme für ein Abonnement einer Veröffentlichung mit einem parametrisierten Zeilenfilter generiert. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +51,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Der Name des momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobname*ist **Sysname**, Standardwert N '% s'. Wenn *Dynamic_snapshot_jobid* wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Der Name des Momentaufnahme Auftrags, der geändert wird. *dynamic_snapshot_jobname*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert N '% '. Wenn *dynamic_snapshot_jobid* angegeben wird, müssen Sie den Standardwert für *dynamic_snapshot_jobname*verwenden.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Die ID des momentaufnahmeauftrags, der geändert wird. *Dynamic_snapshot_jobid* ist **Uniqueidentifier**, mit dem Standardwert NULL. Wenn *Dynamic_snapshot_jobname*wird angegeben, muss den Standardwert für *Dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Die ID des Momentaufnahme Auftrags, der geändert wird. *dynamic_snapshot_jobid* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL. Wenn *dynamic_snapshot_jobname*angegeben wird, müssen Sie den Standardwert für *dynamic_snapshot_jobid*verwenden.  
   
-`[ @frequency_type = ] frequency_type` Ist die Häufigkeit, mit dem Planen des Agents. *Frequency_type* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -71,7 +71,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Wiederholt|  
 |NULL (Standard)||  
   
-`[ @frequency_interval = ] frequency_interval` Die Tage, die der Agent ausgeführt wird. *Frequency_interval* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_interval = ] frequency_interval`Die Tage, an denen der Agent ausgeführt wird. *frequency_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -83,11 +83,11 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**6**|Freitag|  
 |**7**|Samstag|  
 |**8**|Day|  
-|**9**|Wochentage|  
+|**9**|Tage|  
 |**10**|Wochenendtage|  
 |NULL (Standard)||  
   
-`[ @frequency_subday = ] frequency_subday` Ist die Häufigkeit für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -97,9 +97,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hour|  
 |NULL (Standard)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum, das der Merge-Agent ausgeführt wird. Dieser Parameter wird verwendet, wenn *Frequency_type* nastaven NA hodnotu **32** (mit relativem Monatsintervall). *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum, an dem die Merge-Agent ausgeführt wird. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -110,19 +110,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Letzter|  
 |NULL (Standard)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an den Merge-Agent zuerst ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date`Das Datum, an dem die Merge-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Merge-Agent nicht mehr, geplant JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date`Das Datum, an dem der Merge-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit aus, wenn der Merge-Agent zuerst ist, wird geplant HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Die Tageszeit, zu der die Merge-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Merge-Agent nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Die Tageszeit, zu der die Merge-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @job_login = ] 'job_login'` Ist die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, wenn die Momentaufnahme für ein Abonnement mit einem parametrisierten Zeilenfilter generiert. *Job_login* ist **nvarchar(257)** , hat den Standardwert NULL.  
+`[ @job_login = ] 'job_login'`Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Momentaufnahmen-Agent ausgeführt wird, wenn die Momentaufnahme für ein Abonnement mithilfe eines parametrisierten Zeilen Filters erzeugt wird. *job_login* ist vom Datentyp **nvarchar (257)** und hat den Standardwert NULL.  
   
-`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Momentaufnahme-Agent ausgeführt wird, wenn die Momentaufnahme für ein Abonnement generiert, wird einen parametrisierter Zeilenfilter verwendet werden. *Job_password* ist **nvarchar(257)** , hat den Standardwert NULL.  
+`[ @job_password = ] 'job_password'`Das Kennwort für das Windows-Konto, unter dem die Momentaufnahmen-Agent ausgeführt wird, wenn die Momentaufnahme für ein Abonnement mithilfe eines parametrisierten Zeilen Filters erzeugt wird. *job_password* ist vom Datentyp **nvarchar (257)** und hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
@@ -131,12 +131,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changedynamicsnapshot_job** wird bei der Mergereplikation für Veröffentlichungen mit parametrisierten Zeilenfiltern verwendet.  
+ **sp_changedynamicsnapshot_job** wird bei der Mergereplikation für Veröffentlichungen mit parametrisierten Zeilen filtern verwendet.  
   
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_changedynamicsnapshot_job**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changedynamicsnapshot_job**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

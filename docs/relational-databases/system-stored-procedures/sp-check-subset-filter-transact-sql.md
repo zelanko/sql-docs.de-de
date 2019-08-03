@@ -1,5 +1,5 @@
 ---
-title: Sp_check_subset_filter (Transact-SQL) | Microsoft-Dokumentation
+title: sp_check_subset_filter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fa956275619286c059dacf25a5b9b2b83ed732e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c1510260a5b381b91a399984121834ca4ce30b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070519"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771313"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Wird zum Überprüfen einer Filterklausel gegen eine beliebige Tabelle verwendet, um die Gültigkeit der Filterklausel für die Tabelle zu ermitteln. Diese gespeicherte Prozedur gibt Informationen zum bereitgestellten Filter zurück, einschließlich der Angabe, ob der Filter mit vorausberechneten Partitionen verwendet werden kann. Diese gespeicherte Prozedur wird auf dem Verleger für die Datenbank ausgeführt, die die Veröffentlichung enthält.  
   
@@ -44,32 +44,32 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @filtered_table = ] 'filtered_table'` Ist der Name einer gefilterten Tabelle. *Filtered_table* ist **nvarchar(400)** , hat keinen Standardwert.  
+`[ @filtered_table = ] 'filtered_table'`Der Name einer gefilterten Tabelle. *filtered_table* ist vom Datentyp **nvarchar (400)** und hat keinen Standardwert.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'` Wird die Filterklausel getestet wird. *Subset_filterclause* ist **nvarchar(1000)** , hat keinen Standardwert.  
+`[ @subset_filterclause = ] 'subset_filterclause'`Die Filter Klausel, die getestet wird. *subset_filterclause* ist vom Datentyp **nvarchar (1000)** und hat keinen Standardwert.  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters` Ist, wenn die Filterklausel ein parametrisierter Zeilenfilter ist. *Has_dynamic_filters* ist **Bit**, hat den Standardwert NULL und ist ein Output-Parameter. Gibt einen Wert von **1** Wenn die Filterklausel ein parametrisierter Zeilenfilter ist.  
+`[ @has_dynamic_filters = ] has_dynamic_filters`Gibt an, ob die Filter Klausel ein parametrisierter Zeilen Filter ist. *has_dynamic_filters* ist vom Typ **Bit**. der Standardwert ist NULL, und es handelt sich um einen Output-Parameter. Gibt den Wert **1** zurück, wenn die Filter Klausel ein parametrisierter Zeilen Filter ist.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|Ist, ob die Veröffentlichung Vorausberechnete Partitionen verwenden. wo **1** bedeutet, dass Partitionen verwendet werden können vorausberechnete, und **0** bedeutet, dass nicht verwendet werden.|  
-|**has_dynamic_filters**|**bit**|Ist, wenn die bereitgestellte Filterklausel mindestens einen parametrisierten Zeilenfilter enthält. wo **1** bedeutet, dass ein parametrisierter Zeilenfilter verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  
+|**can_use_partition_groups**|**bit**|Gibt an, ob die Veröffentlichung für die Verwendung Voraus berechneter Partitionen qualifiziert ist. Dabei bedeutet **1** , dass Voraus berechnete Partitionen verwendet werden können, und **0** bedeutet, dass Sie nicht verwendet werden können.|  
+|**has_dynamic_filters**|**bit**|Gibt an, ob die angegebene Filter Klausel mindestens einen parametrisierten Zeilen Filter enthält. wobei **1** bedeutet, dass ein parametrisierter Zeilen Filter verwendet wird, und **0** bedeutet, dass eine solche Funktion nicht verwendet wird.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Liste der Funktionen in der Filterklausel, die einen Artikel dynamisch filtern, wobei die Funktionen durch Semikolon voneinander getrennt sind.|  
-|**uses_host_name**|**bit**|Wenn die [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md) Funktion in der Filterklausel verwendet wird, in denen **1** bedeutet, dass diese Funktion vorhanden ist.|  
-|**uses_suser_sname**|**bit**|Wenn die [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md) Funktion in der Filterklausel verwendet wird, in denen **1** bedeutet, dass diese Funktion vorhanden ist.|  
+|**uses_host_name**|**bit**|, Wenn die [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) -Funktion in der Filter-Klausel verwendet wird, wobei **1** bedeutet, dass diese Funktion vorhanden ist.|  
+|**uses_suser_sname**|**bit**|, Wenn die [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) -Funktion in der Filter-Klausel verwendet wird, wobei **1** bedeutet, dass diese Funktion vorhanden ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_check_subset_filter** wird bei der Mergereplikation verwendet.  
+ **sp_check_subset_filter** wird bei der Mergereplikation verwendet.  
   
- **Sp_check_subset_filter** kann für eine Tabelle ausgeführt werden, auch wenn die Tabelle nicht veröffentlicht wird. Mit dieser gespeicherten Prozedur kann eine Filterklausel vor dem Definieren eines gefilterten Artikels überprüft werden.  
+ **sp_check_subset_filter** kann auch dann für beliebige Tabellen ausgeführt werden, wenn die Tabelle nicht veröffentlicht wird. Mit dieser gespeicherten Prozedur kann eine Filterklausel vor dem Definieren eines gefilterten Artikels überprüft werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_check_subset_filter**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_check_subset_filter**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  

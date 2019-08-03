@@ -1,5 +1,5 @@
 ---
-title: Sp_changesubstatus (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changesubstatus (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113809"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771329"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Ändert den Status eines vorhandenen Abonnenten. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Ändert den Status eines vorhandenen Abonnenten. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,29 +64,29 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** . Wenn *Veröffentlichung* nicht angegeben ist, werden alle Veröffentlichungen betroffen sind.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Wenn *Publication* nicht angegeben wird, sind alle Veröffentlichungen betroffen.  
   
-`[ @article = ] 'article'` Ist der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. *Artikel* ist **Sysname**, hat den Standardwert **%** . Wenn *Artikel* nicht angegeben ist, wird allen Artikeln betroffen sind.  
+`[ @article = ] 'article'`Der Name des Artikels. Er muss für die Veröffentlichung eindeutig sein. der *Artikel* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. Wenn der *Artikel* nicht angegeben wird, sind alle Artikel betroffen.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten, die den Status zu ändern. *Abonnenten* ist **Sysname**, hat den Standardwert **%** . Wenn *Abonnenten* nicht angegeben ist, ändert sich der Status für alle Abonnenten des angegebenen Artikels.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten, dessen Status geändert werden soll. *Subscriber* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Wenn der *Abonnent* nicht angegeben wird, wird der Status für alle Abonnenten in den angegebenen Artikel geändert.  
   
-`[ @status = ] 'status'` Wird der Abonnementstatus in der **Syssubscriptions** Tabelle. *Status* ist **Sysname**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
+`[ @status = ] 'status'`Der Abonnement Status in der **sysabonnements** -Tabelle. der *Status* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**aktiv**|Der Abonnent ist synchronisiert und empfängt Daten.|  
-|**inaktiv**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
-|**abonniert**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
+|**enden**|Der Abonnent ist synchronisiert und empfängt Daten.|  
+|**VSTE**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
+|**zehnmal**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
   
-`[ @previous_status = ] 'previous_status'` Ist der vorherige Status für das Abonnement an. *Previous_status* ist **Sysname**, hat den Standardwert NULL. Dieser Parameter können Sie Abonnements zu ändern, die aktuell diesen Status, und er ermöglicht damit Gruppenfunktionen für eine bestimmte Gruppe von Abonnements aufweisen (Beispiel: Wenn alle aktiven Abonnements zurück, in **abonniert**).  
+`[ @previous_status = ] 'previous_status'`Der vorherige Status des Abonnements. *previous_status* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mithilfe dieses Parameters können Sie alle Abonnements ändern, die den Status aktuell aufweisen, sodass Sie Gruppenfunktionen für einen bestimmten Satz von Abonnements zulassen (z. b. das Zurücksetzen aller aktiven Abonnements auf **abonniert**).  
   
-`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert **%** .  
+`[ @destination_db = ] 'destination_db'`Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist.  
   
-`[ @frequency_type = ] frequency_type` Kann die Häufigkeit, mit denen des Verteilungstasks. *Frequency_type* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Verteilungs Task geplant werden soll. *frequency_type* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @frequency_interval = ] frequency_interval` Ist der Wert der Häufigkeit festgelegt, die durch Anwenden *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_interval = ] frequency_interval`Der Wert, der auf die von *frequency_type*festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Verteilungstasks. Dieser Parameter wird verwendet, wenn *Frequency_type* auf 32 (monatlich, relativ) festgelegt wird. *Frequency_relative_interval* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum des Verteilungs Tasks. Dieser Parameter wird verwendet, wenn *frequency_type* auf 32 (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -97,9 +97,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**16**|Letzter|  
 |NULL (Standard)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @frequency_subday = ] frequency_subday` Wie oft ist, in Minuten, für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @frequency_subday = ] frequency_subday`Gibt an, wie oft (in Minuten) während des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -109,19 +109,19 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**8**|Hour|  
 |NULL (Standard)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, die bei der der Verteilungstask erste ist wird geplant HHMMSS. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Die Tageszeit, zu der der Verteilungs Task zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, ab der Verteilungstask nicht mehr, wird geplant ist HHMMSS verwendet. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Die Tageszeit, zu der der Verteilungs Task nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an der Verteilungstask erste ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date`Das Datum, an dem der Verteilungs Task zum ersten Mal geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_start_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Verteilungstask nicht mehr, geplant ist JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date`Das Datum, an dem der Verteilungs Task nicht mehr geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_end_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Ist eine optionale Eingabeaufforderung. *Der Standardwert* ist **nvarchar(4000)** , hat den Standardwert NULL.  
+`[ @optional_command_line = ] 'optional_command_line'`Ist eine optionale Eingabeaufforderung. *optional_command_line* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL.  
   
-`[ @distribution_jobid = ] distribution_jobid` Die Auftrags-ID des Verteilungs-Agents auf dem Verteiler für das Abonnement ist, wenn den Abonnementstatus von inaktiv auf aktiv geändert. In anderen Fällen wird sie nicht definiert. Wenn an einem einzelnen Aufruf dieser gespeicherten Prozedur mehrere Verteilungs-Agents beteiligt sind, ist Ergebnis nicht definiert. *Distribution_jobid* ist **'binary(16)'** , hat den Standardwert NULL.  
+`[ @distribution_jobid = ] distribution_jobid`Die Auftrags-ID der Verteilungs-Agent auf dem Verteiler für das Abonnement, wenn der Abonnement Status von "inaktiv" in "aktiv" geändert wird. In anderen Fällen wird sie nicht definiert. Wenn an einem einzelnen Aufruf dieser gespeicherten Prozedur mehrere Verteilungs-Agents beteiligt sind, ist Ergebnis nicht definiert. *distribution_jobid* ist vom Typ **Binary (16)** und hat den Standardwert NULL.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -129,40 +129,40 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @offloadagent = ] remote_agent_activation`
  > [!NOTE]  
->  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Festlegen von *Remote_agent_activation* auf einen anderen Wert als **0** wird ein Fehler generiert.  
+>  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Wenn *remote_agent_activation* auf einen anderen Wert als **0** festgelegt wird, wird ein Fehler generiert.  
   
 `[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
->  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Festlegen von *Remote_agent_server_name* auf einen beliebigen Wert ungleich NULL wird ein Fehler generiert.  
+>  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Wenn *remote_agent_server_name* auf einen anderen Wert als NULL festgelegt wird, wird ein Fehler generiert.  
   
-`[ @dts_package_name = ] 'dts_package_name'` Gibt den Namen des Pakets Data Transformation Services (DTS). *Dts_package_name* ist eine **Sysname**, hat den Standardwert NULL. Z. B. für ein Paket mit dem Namen **DTSPub_Package** möchten, geben `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Gibt den Namen des DTS-Pakets (Data Transformation Services) an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Für ein Paket mit dem Namen **DTSPub_Package** würden Sie z. `@dts_package_name = N'DTSPub_Package'`b. angeben.  
   
-`[ @dts_package_password = ] 'dts_package_password'` Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der angibt, dass die Kennworteigenschaft ist, werden nicht geändert.  
+`[ @dts_package_password = ] 'dts_package_password'`Gibt das Kennwort für das Paket an. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** . der Standardwert ist NULL. der Wert gibt an, dass die Kenn Wort Eigenschaft unverändert bleiben soll.  
   
 > [!NOTE]  
 >  Ein DTS-Paket muss über ein Kennwort verfügen.  
   
-`[ @dts_package_location = ] dts_package_location` Gibt den Speicherort des Pakets an. *Dts_package_location* ist ein **Int**, hat den Standardwert **0**. Wenn **0**, den Speicherort des Pakets auf dem Verteiler ist. Wenn **1**, den Speicherort des Pakets wird auf dem Abonnenten. Der Speicherort des Pakets kann sein **Verteiler** oder **Abonnenten**.  
+`[ @dts_package_location = ] dts_package_location`Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **int**und hat den Standardwert **0**. Bei **0**befindet sich der Speicherort des Pakets auf dem Verteiler. Bei **1**befindet sich der Speicherort des Pakets auf dem Abonnenten. Der Speicherort des Pakets kann **Distributor** oder **Subscriber**sein.  
   
 `[ @skipobjectactivation = ] skipobjectactivation` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @distribution_job_name = ] 'distribution_job_name'` Ist der Name des Verteilungsauftrags. *distribution_job _name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @distribution_job_name = ] 'distribution_job_name'`Der Name des Verteilungs Auftrags. *distribution_job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* sollte nicht verwendet werden, beim Ändern von Artikeleigenschaften auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
+>  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Verleger geändert werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changesubstatus** wird bei Momentaufnahme- und Transaktionsreplikation verwendet.  
+ **sp_changesubstatus** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
- **Sp_changesubstatus** ändert sich der Status des Abonnenten in die **Syssubscriptions** Tabelle mit den geänderten Status. Falls erforderlich, aktualisiert der Artikelstatus in der **Sysarticles** Tabelle, um die Aktivität bzw. Inaktivität anzuzeigen. Falls erforderlich, wird das Replikationsflag ein- oder ausschalten die **Sysobjects** Tabelle für die replizierte Tabelle.  
+ **sp_changesubstatus** ändert den Status des Abonnenten in der **sysabonnements** -Tabelle mit dem geänderten Status. Bei Bedarf wird der Artikel Status in der **sysarticles** -Tabelle aktualisiert, um den Status "aktiv" oder "inaktiv" anzugeben. Bei Bedarf wird das Replikationsflag in der **sysobjects** -Tabelle für die replizierte Tabelle auf on oder OFF festgelegt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle **Db_owner** feste Datenbankrolle oder der Ersteller des Abonnements kann ausführen **Sp_changesubstatus**.  
+ Nur Mitglieder der festen Server Rolle ' **sysadmin'** , der festen Daten Bank Rolle **db_owner** oder der Ersteller des Abonnements können **sp_changesubstatus**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_adddistributor (Transact-SQL) | Microsoft-Dokumentation
+title: sp_adddistributor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072766"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771318"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Erstellt einen Eintrag in der [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) Tabelle (sofern es nicht), markiert ihn als Verteiler und speichert Eigenschafteninformationen. Diese gespeicherte Prozedur wird auf dem Verteiler für die master-Datenbank ausgeführt, um den Server als Verteiler zu registrieren und zu markieren. Im Falle eines Remoteverteilers wird sie zusätzlich auf dem Verleger für die master-Datenbank ausgeführt, um den Remoteverteiler zu registrieren.  
+  Erstellt einen Eintrag in der [sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) -Tabelle (sofern nicht vorhanden), markiert den Server Eintrag als Verteiler und speichert Eigenschafts Informationen. Diese gespeicherte Prozedur wird auf dem Verteiler für die master-Datenbank ausgeführt, um den Server als Verteiler zu registrieren und zu markieren. Im Falle eines Remoteverteilers wird sie zusätzlich auf dem Verleger für die master-Datenbank ausgeführt, um den Remoteverteiler zu registrieren.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +42,11 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @distributor = ] 'distributor'` Ist der verteilungsservername. *Verteiler* ist **Sysname**, hat keinen Standardwert. Dieser Parameter wird nur bei der Einrichtung eines Remoteverteilers verwendet. Er fügt die Verteilereigenschaften der **Msdb... MSdistributor** Tabelle.  
+`[ @distributor = ] 'distributor'`Der Name des Verteilungs Servers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Dieser Parameter wird nur bei der Einrichtung eines Remoteverteilers verwendet. Es werden Einträge für die Verteiler Eigenschaften in der msdb-Datenbank hinzugefügt **. MSdistributor** -Tabelle.  
   
-`[ @heartbeat_interval = ] heartbeat_interval` Ist die maximale Anzahl von Minuten an, denen ein Agent ohne Protokollierung einer verlaufsmeldung aufgenommen werden kann. *Heartbeat_interval* ist **Int**, hat den Standardwert von 10 Minuten. Ein Auftrag des SQL Server-Agents wird erstellt, der nach diesem Zeitraum ausgeführt wird, um den Status der ausgeführten Replikations-Agents zu überprüfen.  
+`[ @heartbeat_interval = ] heartbeat_interval`Die maximale Anzahl von Minuten, die ein Agent durchlaufen werden kann, ohne eine Fortschrittsmeldung zu protokollieren. *heartbeat_interval* ist vom Datentyp **int**. der Standardwert ist 10 Minuten. Ein Auftrag des SQL Server-Agents wird erstellt, der nach diesem Zeitraum ausgeführt wird, um den Status der ausgeführten Replikations-Agents zu überprüfen.  
   
-`[ @password = ] 'password']` Das Kennwort des der **Distributor_admin** Anmeldung. *Kennwort* ist **Sysname**, hat den Standardwert NULL. Bei NULL oder einer leeren Zeichenfolge wird das Kennwort auf einen Zufallswert festgelegt. Das Kennwort muss konfiguriert sein, wenn der erste Remoteverteiler hinzugefügt wird. **Distributor_admin** Anmeldung und *Kennwort* werden gespeichert, für den verbindungsservereintrag für eine *Verteiler* RPC-Verbindung, einschließlich lokaler Verbindungen. Wenn *Verteiler* ist lokal, das Kennwort für **Distributor_admin** auf einen neuen Wert festgelegt ist. Für Verleger mit einem Remoteverteiler der gleiche Wert für *Kennwort* muss angegeben werden, wenn die Ausführung **Sp_adddistributor** auf sowohl dem Verleger und Verteiler. [Sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) können verwendet werden, um das Verteilerkennwort zu ändern.  
+`[ @password = ] 'password']`Das Kennwort der **distributor_admin** -Anmeldung. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL oder einer leeren Zeichenfolge wird das Kennwort auf einen Zufallswert festgelegt. Das Kennwort muss konfiguriert sein, wenn der erste Remoteverteiler hinzugefügt wird. **distributor_admin** Login und *Password* werden für den Eintrag für den Verbindungs Server gespeichert, der für eine *Verteiler* -RPC-Verbindung verwendet wird, einschließlich lokaler Verbindungen. Wenn der *Verteiler* lokal ist, wird das Kennwort für **distributor_admin** auf einen neuen Wert festgelegt. Für Verleger mit einem Remote Verteiler muss beim Ausführen von **sp_adddistributor** sowohl auf dem Verleger als auch auf dem Verteiler der gleiche Wert für das *Kennwort* angegeben werden. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) kann verwendet werden, um das Verteiler Kennwort zu ändern.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
@@ -57,13 +57,13 @@ sp_adddistributor [ @distributor= ] 'distributor'
  0 (Erfolg) oder 1 (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_adddistributor** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **sp_adddistributor** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_adddistributor**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_adddistributor**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   

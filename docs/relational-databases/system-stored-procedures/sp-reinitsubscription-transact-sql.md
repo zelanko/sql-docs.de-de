@@ -1,5 +1,5 @@
 ---
-title: Sp_reinitsubscription (Transact-SQL) | Microsoft-Dokumentation
+title: sp_reinitsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 85911e4ce5652d15b99be4d87f75a04214a7f854
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075643"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762528"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Kennzeichnet das Abonnement für die erneute Initialisierung. Diese gespeicherte Prozedur wird auf dem Verleger für Pushabonnements ausgeführt.  
   
@@ -44,40 +44,40 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all.  
   
-`[ @article = ] 'article'` Ist der Name des Artikels. *Artikel* ist **Sysname**, hat den Standardwert all. Für eine sofort aktualisierbare Veröffentlichung *Artikel* muss **alle**ist, andernfalls die gespeicherte Prozedur überspringt die Veröffentlichung und meldet einen Fehler.  
+`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all. Bei einer Veröffentlichung mit sofortigem Update muss der Artikel **alle**lauten. andernfalls überspringt die gespeicherte Prozedur die Veröffentlichung und meldet einen Fehler.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @destination_db = ] 'destination_db'` Ist der Name der Zieldatenbank. *Destination_db* ist **Sysname**, hat den Standardwert all.  
+`[ @destination_db = ] 'destination_db'`Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all.  
   
-`[ @for_schema_change = ] 'for_schema_change'` Gibt an, ob eine erneute Initialisierung als Ergebnis einer schemaänderung in der Veröffentlichungsdatenbank. *For_schema_change* ist **Bit**, hat den Standardwert 0. Wenn **0**, aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, werden erneut aktiviert werden, solange die gesamte Veröffentlichung, nicht nur einige Artikel darin, erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Wenn **1**, aktive Abonnements werden nicht erneut aktiviert, bis der Momentaufnahme-Agent ausgeführt wird.  
+`[ @for_schema_change = ] 'for_schema_change'`Gibt an, ob die erneute Initialisierung als Ergebnis einer Schema Änderung in der Veröffentlichungs Datenbank erfolgt. *for_schema_change* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, werden aktive Abonnements für Veröffentlichungen, die sofortiges Aktualisieren zulassen, erneut aktiviert, solange die gesamte Veröffentlichung und nicht nur einige der zugehörigen Artikel erneut initialisiert werden. Die erneute Initialisierung wird demnach als Ergebnis von Schemaänderungen initiiert. Bei **1**werden aktive Abonnements erst wieder aktiviert, wenn die Momentaufnahmen-Agent ausgeführt wird.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* sollte nicht verwendet werden, für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.  
+>  *Publisher* sollte nicht für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger verwendet werden.  
   
-`[ @ignore_distributor_failure = ] ignore_distributor_failure` Lässt die erneute Initialisierung auch, wenn der Verteiler nicht vorhanden ist oder offline ist. *Ignore_distributor_failure* ist **Bit**, hat den Standardwert 0. Wenn **0**, erneute Initialisierung erfolglos, wenn der Verteiler nicht vorhanden ist oder offline ist.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure`Lässt die erneute Initialisierung zu, auch wenn der Verteiler nicht vorhanden oder offline ist. *ignore_distributor_failure* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **0**ist, schlägt die erneute Initialisierung fehl, wenn der Verteiler nicht vorhanden oder offline ist.  
   
-`[ @invalidate_snapshot = ] invalidate_snapshot` Erklärt die vorhandene veröffentlichungsmomentaufnahme für ungültig. *Invalidate_snapshot* ist **Bit**, hat den Standardwert 0. Wenn **1**, eine neue Momentaufnahme für die Veröffentlichung generiert wird.  
+`[ @invalidate_snapshot = ] invalidate_snapshot`Erklärt die vorhandene Veröffentlichungs Momentaufnahme für ungültig. *invalidate_snapshot* ist vom Typ **Bit**. der Standardwert ist 0. Wenn der Wert **1**ist, wird für die Veröffentlichung eine neue Momentaufnahme generiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_reinitsubscription** wird in Transaktionsreplikationen verwendet.  
+ **sp_reinitsubscription** wird bei der Transaktions Replikation verwendet.  
   
- **Sp_reinitsubscription** wird nicht für die Peer-zu-Peer-Transaktionsreplikation unterstützt.  
+ **sp_reinitsubscription** wird für die Peer-zu-Peer-Transaktions Replikation nicht unterstützt.  
   
  Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung keine aktualisierbaren Abonnements zulässt, muss der Momentaufnahme-Agent ausgeführt werden, nachdem diese gespeicherte Prozedur ausgeführt wird, sodass Programmdateien für das Schema- und Massenkopieren vorbereitet werden und die Verteilungs-Agents in der Lage sind, die Abonnements neu zu synchronisieren.  
   
- Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung aktualisierbare Abonnements zulässt, führt der Verteilungs-Agent eine erneute Synchronisierung für das Abonnement durch, indem die neuesten Programmdateien für das Schema- und Massenkopieren verwendet werden, die zuvor vom Momentaufnahme-Agent erstellt wurden. Der Verteilungs-Agent synchronisiert das Abonnement sofort, nachdem der Benutzer führt **Sp_reinitsubscription**, wenn der Verteilungs-Agent nicht Synchronisierung kann auftreten, nachdem die Nachricht Intervall (ausgelastet ist, andernfalls Verteilungs-Agent-Befehlszeilenparameter angegeben: **MessageInterval**).  
+ Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung aktualisierbare Abonnements zulässt, führt der Verteilungs-Agent eine erneute Synchronisierung für das Abonnement durch, indem die neuesten Programmdateien für das Schema- und Massenkopieren verwendet werden, die zuvor vom Momentaufnahme-Agent erstellt wurden. Der Verteilungs-Agent synchronisiert das Abonnement nach dem Ausführen von **sp_reinitsubscription**neu, wenn die Verteilungs-Agent nicht ausgelastet ist. Andernfalls kann die Synchronisierung nach dem Nachrichten Intervall erfolgen (angegeben durch Verteilungs-Agent Befehlszeilenparameter: **Messageingeterval**).  
   
- **Sp_reinitsubscription** hat keine Auswirkungen auf Abonnements, in denen die anfangsmomentaufnahme manuell angewendet wird.  
+ **sp_reinitsubscription** hat keine Auswirkung auf Abonnements, bei denen die Anfangs Momentaufnahme manuell angewendet wird.  
   
- Übergeben Sie zur neusynchronisierung anonymer Abonnements einer Veröffentlichung **alle** oder NULL als *Abonnenten*.  
+ Zum erneuten Synchronisieren anonymer Abonnements für eine Veröffentlichung übergeben Sie **all** oder NULL als *Abonnenten*.  
   
  Die Transaktionsreplikation unterstützt die erneute Initialisierung von Abonnements auf Artikelebene. Die Momentaufnahme des Artikels wird während der nächsten Synchronisierung erneut auf den Abonnenten angewendet, nachdem der Artikel für die erneute Initialisierung markiert wurde. Wenn jedoch abhängige Artikel vorhanden sind, die von demselben Abonnenten abonniert werden, kann die erneute Anwendung der Momentaufnahme auf den Artikel möglicherweise einen Fehler erzeugen, wenn in der Veröffentlichung nicht auch abhängige Artikel unter bestimmten Umständen automatisch erneut initialisiert werden:  
   
@@ -89,7 +89,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** , den Mitgliedern der festen Serverrolle die **Db_owner** feste Datenbankrolle oder der Ersteller des Abonnements kann ausführen **Sp_reinitsubscription** .  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , Mitglieder der festen Daten Bank Rolle **db_owner** oder der Ersteller des Abonnements können **sp_reinitsubscription**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erneutes Initialisieren eines Abonnements](../../relational-databases/replication/reinitialize-a-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: Sp_replflush (Transact-SQL) | Microsoft-Dokumentation
+title: sp_replflush (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: eaf42b746fca4999e7a67e0aff220ff2d09772cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6745589616dec5b129992cc555e1238cd62b545
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950720"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771586"
 ---
 # <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Leert den Artikelcache. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Leert den Artikelcache. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Sie sollten diese Prozedur nicht manuell ausführen müssen. **Sp_replflush** sollte nur für die Problembehandlung bei der Replikation ein erfahrener Supportmitarbeiter verwendet werden.  
+>  Sie sollten diese Prozedur nicht manuell ausführen müssen. **sp_replflush** sollte nur zur Problembehandlung bei der Replikation verwendet werden, wie von einem erfahrenen Supportmitarbeiter unterstützt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,19 +43,19 @@ sp_replflush
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_replflush** wird in Transaktionsreplikationen verwendet.  
+ **sp_replflush** wird bei der Transaktions Replikation verwendet.  
   
- Artikeldefinitionen werden aus Effizienzgründen im Cache gespeichert. **Sp_replflush** wird von anderen gespeicherten Replikationsprozeduren verwendet, wenn eine Artikeldefinition geändert oder gelöscht wird.  
+ Artikeldefinitionen werden aus Effizienzgründen im Cache gespeichert. **sp_replflush** wird von anderen gespeicherten Replikations Prozeduren verwendet, wenn eine Artikel Definition geändert oder gelöscht wird.  
   
- Auf jede Datenbank kann nur eine Clientverbindung Protokolllesezugriff haben. Wenn ein Client Protokolllesezugriff auf eine Datenbank verfügt, **Sp_replflush** bewirkt, dass den Client seinen Zugriff freigibt. Andere Clients können dann überprüfen die Transaction Log mit **Sp_replcmds** oder **Sp_replshowcmds**.  
+ Auf jede Datenbank kann nur eine Clientverbindung Protokolllesezugriff haben. Wenn ein Client über Protokoll Lesezugriff auf eine Datenbank verfügt, bewirkt das Ausführen von **sp_replflush** , dass der Client seinen Zugriff freigibt. Andere Clients können dann das Transaktionsprotokoll mithilfe von **sp_replcmds** oder **sp_replshowcmds**scannen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_replflush**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replflush**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [Sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repltrans &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

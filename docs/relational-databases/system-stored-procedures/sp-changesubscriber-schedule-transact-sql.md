@@ -1,5 +1,5 @@
 ---
-title: Sp_changesubscriber_schedule (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changesubscriber_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a61dfd60dbde554ba3db24a4740b6220f9d68a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22ecb1601108562607d1fdc550daaa945fe72910
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091330"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770732"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ändert den Zeitplan des Verteilungs- und Merge-Agents für einen Abonnenten. Diese gespeicherte Prozedur wird auf dem Verleger für jede Datenbank ausgeführt.  
   
@@ -48,43 +48,43 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**. Der Name des Abonnenten muss innerhalb der Datenbank eindeutig sein und darf nicht bereits vorhanden sein. Außerdem darf er nicht gleich NULL sein.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Abonnent* ist vom **Datentyp vom Datentyp sysname**. Der Name des Abonnenten muss innerhalb der Datenbank eindeutig sein und darf nicht bereits vorhanden sein. Außerdem darf er nicht gleich NULL sein.  
   
-`[ @agent_type = ] type` Ist der Typ des Agents. *Typ* ist **Smallint**, hat den Standardwert **0**. **0** zeigt einen Verteilungs-Agent. **1** zeigt einen Merge-Agent.  
+`[ @agent_type = ] type`Der Typ des Agents. *Type ist vom Datentyp* **smallint**. der Standardwert ist **0**. **0** gibt eine Verteilungs-Agent an. **1** gibt eine Merge-Agent an.  
   
-`[ @frequency_type = ] frequency_type` Kann die Häufigkeit, mit denen des Verteilungstasks. *Frequency_type* ist **Int**, hat den Standardwert **64**. Es gibt 10 Zeitplanspalten.  
+`[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Verteilungs Task geplant werden soll. *frequency_type* ist vom Datentyp **int**und hat den Standardwert **64**. Es gibt 10 Zeitplanspalten.  
   
-`[ @frequency_interval = ] frequency_interval` Ist der Wert der Häufigkeit festgelegt angewendet *Frequency_type*. *Frequency_interval* ist **Int**, hat den Standardwert **1**.  
+`[ @frequency_interval = ] frequency_interval`Der Wert, der auf die von *frequency_type*festgelegte Häufigkeit angewendet wird. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Ist das Datum des Verteilungstasks. *Frequency_relative_interval* ist **Int**, hat den Standardwert **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum des Verteilungs Tasks. *frequency_relative_interval* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Wird von verwendete Wiederholungsfaktor *Frequency_type*. *Frequency_recurrence_factor* ist **Int**, hat den Standardwert **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @frequency_subday = ] frequency_subday` Wie oft ist, in Minuten, für die erneute geplante Ausführung während des definierten Zeitraums. *Frequency_subday* ist **Int**, hat den Standardwert **4**.  
+`[ @frequency_subday = ] frequency_subday`Gibt an, wie oft (in Minuten) während des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. der Standardwert ist **4**.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für *Frequency_subday*. *Frequency_subday_interval* ist **Int**, hat den Standardwert **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Ist die Zeit des Tages, bei der Verteilungstask zum ersten Mal geplant ist. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Die Tageszeit, zu der der Verteilungs Task zum ersten Mal geplant ist. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Ist die Tageszeit, ab der Verteilungstask nicht mehr geplant. *das Format HHMMSS verwendet* ist **Int**, hat den Standardwert **235959**, womit 23:59:59 Uhr im 24-Stunden-Format).  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Die Tageszeit, zu der der Verteilungs Task nicht mehr geplant ist. *active_end_time_of_day* ist vom Datentyp **int**. der Standardwert ist **235959**. der Wert ist 11:59:59 Uhr. im 24-Stunden-Format).  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an der Verteilungstask erste ist geplant Format: YYYYMMDD. *Active_start_date* ist **Int**, hat den Standardwert **0**.  
+`[ @active_start_date = ] active_start_date`Das Datum, an dem der Verteilungs Task zum ersten Mal geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_start_date* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @active_end_date = ] active_end_date` Ist das Datum, ab der Verteilungstask nicht mehr, geplant ist JJJJMMTT. *Active_end_date* ist **Int**, hat den Standardwert **99991231**, womit der 31. Dezember 9999.  
+`[ @active_end_date = ] active_end_date`Das Datum, an dem der Verteilungs Task nicht mehr geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_end_date* ist vom Datentyp **int**. der Standardwert ist **99991231**, d. h. der 31. Dezember 9999.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* sollte nicht verwendet werden, beim Ändern von Artikeleigenschaften auf einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
+>  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Verleger geändert werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changesubscriber_schedule** wird in allen Replikationstypen verwendet.  
+ **sp_changesubscriber_schedule** wird für alle Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changesubscriber_schedule**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changesubscriber_schedule**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   

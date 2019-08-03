@@ -1,5 +1,5 @@
 ---
-title: Sp_helpreplicationdboption (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpreplicationdboption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997569"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771534"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Zeigt an, ob die Datenbanken auf dem Verleger für die Replikation aktiviert sind. Diese gespeicherte Prozedur wird auf dem Verleger für jede Datenbank ausgeführt. *Für Oracle-Verlegern unterstützt nicht.*  
+  Zeigt an, ob die Datenbanken auf dem Verleger für die Replikation aktiviert sind. Diese gespeicherte Prozedur wird auf dem Verleger für jede Datenbank ausgeführt. *Wird für Oracle-Verleger nicht unterstützt.*  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,17 +39,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'` Ist der Name der Datenbank. *Dbname* ist **Sysname**, hat den Standardwert **%** . Wenn **%** , klicken Sie dann das Resultset enthält alle Datenbanken auf dem Verleger, andernfalls nur Informationen für die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
+`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. Wenn **%** der Wert ist, enthält das Resultset alle Datenbanken auf dem Verleger; andernfalls werden nur Informationen über die angegebene Datenbank zurückgegeben. Es werden keine Informationen für Datenbanken zurückgegeben, für die der Benutzer wie nachstehend beschrieben keine entsprechenden Berechtigungen besitzt.  
   
-`[ @type = ] 'type'` Beschränkt das Resultset enthält nur Datenbanken, für die der angegebenen Replikationsoption *Typ* Wert aktiviert wurde. *Typ* ist **Sysname**, und kann einen der folgenden Werte.  
+`[ @type = ] 'type'`Schränkt das Resultset so ein, dass es nur Datenbanken enthält, für die der angegebene Wert des Replikations options *Typs* aktiviert wurde *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**publish**|Transaktionsreplikation ist zulässig.|  
-|**Veröffentlichen von Merge**|Mergereplikation ist zulässig.|  
-|**Replikation zulässig** (Standard)|Transaktionsreplikation und Mergereplikation sind zulässig.|  
+|**Zusammenführen der Veröffentlichung**|Mergereplikation ist zulässig.|  
+|**Replikation zulässig** vorgegebene|Transaktionsreplikation und Mergereplikation sind zulässig.|  
   
-`[ @reserved = ] reserved` Gibt an, ob Informationen zu vorhandenen Veröffentlichungen und Abonnements zurückgegeben werden. *reservierte* ist **Bit**, hat den Standardwert 0. Wenn **1**, enthält das Resultset Informationen dazu, ob die angegebene Datenbank über vorhandene Veröffentlichungen oder Abonnements verfügt.  
+`[ @reserved = ] reserved`Gibt an, ob Informationen zu vorhandenen Veröffentlichungen und Abonnements zurückgegeben werden. *reserved* ist vom Typ **Bit**und hat den Standardwert 0. Wenn der Wert **1**ist, enthält das Resultset Informationen dazu, ob die angegebene Datenbank über vorhandene Veröffentlichungen oder Abonnements verfügt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -57,21 +57,21 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Datenbank.|  
 |**id**|**int**|Datenbankbezeichner.|  
-|**transpublish**|**bit**|Wenn die Datenbank für Momentaufnahme- oder transaktionsveröffentlichungen aktiviert wurde; ein Wert von **1** bedeutet, dass die Momentaufnahme- oder transaktionsveröffentlichungen aktiviert ist.|  
-|**mergepublish**|**bit**|Wenn die Datenbank für die Mergereplikation, die Veröffentlichung aktiviert wurde; ein Wert von **1** bedeutet, dass mergeveröffentlichungen aktiviert ist.|  
-|**dbowner**|**bit**|Wenn der Benutzer Mitglied ist die **Db_owner** festen; ein Wert von **1** gibt an, dass der Benutzer ein Mitglied dieser Rolle ist.|  
-|**dbreadonly**|**bit**|Ist, wenn die Datenbank als schreibgeschützt markiert ist. ein Wert von **1** bedeutet, dass die Datenbank schreibgeschützt ist.|  
-|**haspublications**|**bit**|Ist, wenn die Datenbank vorhandenen Veröffentlichungen aufweist. ein Wert von **1** bedeutet, dass Veröffentlichungen vorhanden sind.|  
-|**haspullsubscriptions**|**bit**|Ist, wenn die Datenbank vorhandene Pullabonnements verfügt. ein Wert von **1** bedeutet, dass Pullabonnements vorhanden sind.|  
+|**transpublish**|**bit**|, Wenn die Datenbank für die Momentaufnahme-oder Transaktions Veröffentlichung aktiviert wurde. der Wert **1** bedeutet, dass die Momentaufnahme-oder Transaktions Veröffentlichung aktiviert ist.|  
+|**mergepublish**|**bit**|, Wenn die Datenbank für die Mergeveröffentlichung aktiviert wurde. der Wert **1** bedeutet, dass die Mergeveröffentlichung aktiviert ist.|  
+|**dbowner**|**bit**|, Wenn der Benutzer ein Mitglied der Daten Bank Rolle **db_owner** ist. mit dem Wert **1** wird angegeben, dass der Benutzer ein Mitglied dieser Rolle ist.|  
+|**dbreadonly**|**bit**|Gibt an, ob die Datenbank als schreibgeschützt gekennzeichnet ist. der Wert **1** bedeutet, dass die Datenbank schreibgeschützt ist.|  
+|**haspublications**|**bit**|Gibt an, ob die Datenbank über vorhandene Veröffentlichungen verfügt. der Wert **1** bedeutet, dass vorhandene Veröffentlichungen vorhanden sind.|  
+|**haspullsubscriptions**|**bit**|Ist, wenn die Datenbank über vorhandene Pullabonnements verfügt. der Wert **1** bedeutet, dass vorhandene Pullabonnements vorhanden sind.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpreplicationdboption** wird bei Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **sp_helpreplicationdboption** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Mitglieder der **Sysadmin** feste Serverrolle **Sp_helpreplicationdboption** für jede beliebige Datenbank. Mitglieder der **Db_owner** feste Datenbankrolle können ausführen **Sp_helpreplicationdboption** für diese Datenbank.  
+ Mitglieder der festen Server Rolle **sysadmin** können **sp_helpreplicationdboption** für jede beliebige Datenbank ausführen. Mitglieder der Daten Bank Rolle **db_owner** können **sp_helpreplicationdboption** für diese Datenbank ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   

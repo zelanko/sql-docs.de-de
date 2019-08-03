@@ -1,5 +1,5 @@
 ---
-title: Sp_article_validation (Transact-SQL) | Microsoft-Dokumentation
+title: sp_article_validation (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4c9d0a82422675c9698d7216b92e1c9401392a79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004822"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769025"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Initiiert eine Datenüberprüfungsanforderung für den angegebenen Artikel. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank und auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
   
@@ -44,53 +44,53 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, in der der Artikel vorhanden ist. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung, in der der Artikel vorhanden ist. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Ist der Name des zu überprüfenden Artikels. *Artikel* ist **Sysname**, hat keinen Standardwert.  
+`[ @article = ] 'article'`Der Name des zu validierenden Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @rowcount_only = ] type_of_check_requested` Gibt an, ob nur die Zeilenanzahl für die Tabelle zurückgegeben wird. *Type_of_check_requested* ist **Smallint**, hat den Standardwert **1**.  
+`[ @rowcount_only = ] type_of_check_requested`Gibt an, ob nur die Zeilen Anzahl für die Tabelle zurückgegeben wird. *type_of_check_requested* ist vom Datentyp **smallint**. der Standardwert ist **1**.  
   
- Wenn **0**, eine Zeilenzählung und eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 kompatible prüfsummenberechnung.  
+ Wenn der Wert **0**ist, führen Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Zeilen Anzahl und eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 kompatible Prüfsumme aus.  
   
- Wenn **1**, nur eine Zeilenzählung durchgeführt.  
+ Wenn **1**, wird nur eine Überprüfung der Zeilen Anzahl durchgeführt.  
   
- Wenn **2**, Zeilenanzahl und binäre Prüfsumme.  
+ Wenn **2**, führen Sie eine Zeilen Anzahl und eine binäre Prüfsumme aus.  
   
-`[ @full_or_fast = ] full_or_fast` Wird die Methode, die zum Berechnen der Zeilenanzahl verwendet wird. *Full_or_fast* ist **Tinyint**, und kann einen der folgenden Werte sein.  
+`[ @full_or_fast = ] full_or_fast`Die Methode, die zum Berechnen der Zeilen Anzahl verwendet wird. *full_or_fast* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich.  
   
 |**Wert**|**Beschreibung**|  
 |---------------|---------------------|  
-|**0**|Führt eine vollständige Zählung mit COUNT(*).|  
-|**1**|Führt eine schnelle Zählung von **sysindexes.rows**. Zählen der Zeilen im **"sysindexes"** ist schneller als das Zählen von Zeilen in der eigentlichen Tabelle. Allerdings **"sysindexes"** verzögert aktualisiert wird und die Zeilenanzahl möglicherweise nicht ganz genau.|  
-|**2** (Standardwert)|Führt die bedingte schnelle Zählung durch zunächst versucht wird, die schnelle Methode. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *Expected_rowcount* NULL ist und die gespeicherte Prozedur wird verwendet, um den Wert abzurufen, wird immer eine vollständige Zählung mit COUNT(*) verwendet.|  
+|**0**|Führt die vollständige Anzahl mithilfe von count (*) aus.|  
+|**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in **sysindexes** ist schneller als das zählen der Zeilen in der eigentlichen Tabelle. **Sysindexes** wird jedoch verzögert aktualisiert, und die Zeilen Anzahl ist möglicherweise nicht korrekt.|  
+|**2** (Standardwert)|Führt die bedingte schnelle Zählung durch, indem zuerst die schnelle Methode versucht wird. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* den Wert NULL hat und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
   
-`[ @shutdown_agent = ] shutdown_agent` Gibt an, wenn der Verteilungs-Agent sofort nach dem Abschluss der Überprüfung heruntergefahren werden soll. *Shutdown_agent* ist **Bit**, hat den Standardwert **0**. Wenn **0**, den Verteilungs-Agent nicht heruntergefahren. Wenn **1**, den Verteilungs-Agent nach der Überprüfung des Artikels beendet.  
+`[ @shutdown_agent = ] shutdown_agent`Gibt an, ob der Verteilungs-Agent unmittelbar nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn der Wert **0**ist, wird der Verteilungs-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird der Verteilungs-Agent nach der Validierung des Artikels heruntergefahren.  
   
-`[ @subscription_level = ] subscription_level` Gibt an, und zwar unabhängig davon, ob die Überprüfung durch eine Reihe von Abonnenten übernommen wird. *Subscription_level* ist **Bit**, hat den Standardwert **0**. Wenn **0**, Überprüfung auf alle Abonnenten angewendet. Wenn **1**, Überprüfung wird nur angewendet, um eine Teilmenge der Abonnenten durch Aufrufe von angegeben **Sp_marksubscriptionvalidation** in die aktuell geöffnete Transaktion.  
+`[ @subscription_level = ] subscription_level`Gibt an, ob die Überprüfung von einer Gruppe von Abonnenten übernommen wird. *subscription_level* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn der Wert **0**ist, wird die Überprüfung auf alle Abonnenten angewendet. Wenn der Wert **1**ist, wird die Validierung nur auf eine Teilmenge der Abonnenten angewendet, die durch Aufrufe von **sp_marksubscriptionvalidation** in der aktuellen geöffneten Transaktion angegeben werden.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger. *Publisher* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[msCoName](../../includes/msconame-md.md)] - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  *Publisher* sollte nicht verwendet werden, bei der Überprüfung auf Anforderung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger.  
+>  der *Verleger* sollte nicht verwendet werden, wenn die über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prüfung auf einem Verleger angefordert wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_article_validation** wird in Transaktionsreplikationen verwendet.  
+ **sp_article_validation** wird bei der Transaktions Replikation verwendet.  
   
- **Sp_article_validation** bewirkt, dass Überprüfungsinformationen für den angegebenen Artikel gesammelt werden und eine überprüfungsanforderung in das Transaktionsprotokoll geschrieben. Wenn der Verteilungs-Agent diese Anforderung empfängt, vergleicht er die Überprüfungsinformationen in der Anforderung mit der Abonnententabelle. Die Ergebnisse der Überprüfung werden im Replikationsmonitor und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen angezeigt.  
+ **sp_article_validation** bewirkt, dass Validierungs Informationen für den angegebenen Artikel erfasst und eine Überprüfungs Anforderung an das Transaktionsprotokoll gesendet werden. Wenn der Verteilungs-Agent diese Anforderung empfängt, vergleicht er die Überprüfungsinformationen in der Anforderung mit der Abonnententabelle. Die Ergebnisse der Überprüfung werden im Replikationsmonitor und in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Benutzer mit allen Berechtigungen für die Quelltabelle auswählen, für die zu überprüfende Artikel kann **Sp_article_validation**.  
+ Nur Benutzer mit der Option Alle Berechtigungen für die Quell Tabelle für den zu validierenden Artikel können **sp_article_validation**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Überprüfen von replizierten Daten](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [Replizierte Daten überprüfen](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [Sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_table_validation &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_add_agent_profile (Transact-SQL) | Microsoft-Dokumentation
+title: sp_add_agent_profile (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: b6cd4013d3126442b02c660c54215c0b0b17e157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941798"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770855"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Erstellt für einen Replikations-Agent ein neues Profil. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -42,11 +42,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id` Die ID ist der neu eingefügten Profil zugeordnet. *Profile_id* ist **Int** und ist ein optionaler OUTPUT-Parameter. Wenn profile_id angegeben wird, wird der Wert auf die ID des neuen Profils festgelegt.  
+`[ @profile_id = ] profile_id`Die ID, die dem neu eingefügten Profil zugeordnet ist. *profile_id* ist vom Datentyp **int** und ein optionaler OUTPUT-Parameter. Wenn profile_id angegeben wird, wird der Wert auf die ID des neuen Profils festgelegt.  
   
-`[ @profile_name = ] 'profile_name'` Ist der Name des Profils. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @profile_name = ] 'profile_name'`Der Name des Profils. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @agent_type = ] 'agent_type'` Ist der Typ des Replikations-Agents. *Agent_type* ist **Int**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
+`[ @agent_type = ] 'agent_type'`Der Typ des Replikations-Agents. *agent_type* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -56,26 +56,26 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|Merge-Agent|  
 |**9**|Warteschlangenlese-Agent|  
   
-`[ @profile_type = ] profile_type` Ist der Typ des Profils. *Profile_type* ist **Int**, hat den Standardwert **1**.  
+`[ @profile_type = ] profile_type`Der Typ des Profils. *profile_type* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
- **0** bezeichnet ein Systemprofil. **1** bezeichnet ein benutzerdefiniertes Profil. Mit dieser gespeicherten Prozedur können nur benutzerdefinierte Profile erstellt werden. aus diesem Grund ist der einzige gültige Wert **1**. Nur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt Systemprofile.  
+ **0** gibt ein Systemprofil an. **1** gibt ein benutzerdefiniertes Profil an. Mit dieser gespeicherten Prozedur können nur benutzerdefinierte Profile erstellt werden. Daher ist der einzige gültige Wert **1**. Erstellt [!INCLUDE[msCoName](../../includes/msconame-md.md)] nur[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Systemprofile.  
   
-`[ @description = ] 'description'` Ist eine Beschreibung des Profils. *Beschreibung* ist **nvarchar(3000)** , hat keinen Standardwert.  
+`[ @description = ] 'description'`Ist eine Beschreibung des Profils. die *Beschreibung* ist vom Datentyp **nvarchar (3000)** und hat keinen Standardwert.  
   
-`[ @default = ] default` Gibt an, ob das Profil das Standardprofil für ist *Agent_type **.* *standardmäßige* ist **Bit**, hat den Standardwert **0**. **1** gibt an, dass das hinzuzufügende Profil zum neuen Standardprofil für den Agent gemäß wird *Agent_type*.  
+`[ @default = ] default`Gibt an, ob das Profil der Standardwert für *agent_type * * ist.* der *Standard* Wert ist **Bit**. der Standardwert ist **0**. **1** gibt an, dass das hinzu zufügende Profil zum neuen Standardprofil für den von *agent_type*angegebenen Agent wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_add_agent_profile** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **sp_add_agent_profile** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
- Benutzerdefinierte Agentprofile werden mit den standardmäßigen Agentparameterwerten hinzugefügt. Verwendung [Sp_change_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) so ändern Sie diese Standardwerte oder [Sp_add_agent_parameter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) zusätzliche Parameter hinzufügen.  
+ Benutzerdefinierte Agentprofile werden mit den standardmäßigen Agentparameterwerten hinzugefügt. Verwenden [Sie &#40;sp_change_agent_parameter Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) , um diese Standardwerte [oder &#40;sp_add_agent_parameter Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) zu ändern, um zusätzliche Parameter hinzuzufügen.  
   
- Wenn **Sp_add_agent_profile** wird ausgeführt, für das neue benutzerdefinierte Profil in eine Zeile hinzugefügt wird die [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle und die zugehörigen Standardparameter für diese Profil werden hinzugefügt, um die [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) Tabelle.  
+ Wenn **sp_add_agent_profile** ausgeführt wird, wird eine Zeile für das neue benutzerdefinierte Profil in der [MSagent_profiles &#40;-Transact-&#41; SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) -Tabelle hinzugefügt, und die zugehörigen Standardparameter für dieses Profil werden dem MSagent_parameters hinzugefügt. [ Transact-SQL&#41; -Tabelle. &#40;](../../relational-databases/system-tables/msagent-parameters-transact-sql.md)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_add_agent_profile**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_agent_profile**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

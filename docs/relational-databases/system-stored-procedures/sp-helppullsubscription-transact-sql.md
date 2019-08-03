@@ -1,5 +1,5 @@
 ---
-title: Sp_helppullsubscription (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helppullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 777e9b2afceb3e9a58030a225a0cbff34375165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914962"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771436"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Zeigt Informationen zu einem oder mehreren Abonnements auf dem Abonnenten an. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
+  Zeigt Informationen zu einem oder mehreren Abonnements auf dem Abonnenten an. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,67 +40,67 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Ist der Name des Remoteservers. *Publisher* ist **Sysname**, hat den Standardwert **%** , womit Informationen zu allen Verlegern zurückgegeben werden.  
+`[ @publisher = ] 'publisher'`Der Name des Remote Servers. *Publisher* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen für alle Verleger zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert **%** , dem alle Verlegerdatenbanken zurückgegeben.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem alle Verleger Datenbanken zurückgegeben werden.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** , die alle Veröffentlichungen zurückgegeben. Wenn dieser Parameter allen nur Pullabonnements mit Independent_agent entspricht = **0** zurückgegeben werden.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem alle Veröffentlichungen zurückgegeben werden. Wenn dieser Parameter dem Wert all entspricht, werden nur Pullabonnements mit independent_agent = **0** zurückgegeben.  
   
-`[ @show_push = ] 'show_push'` Ist, ob alle Pushabonnements sind, zurückgegeben werden. *Show_push*ist **nvarchar(5)** , Standardwert "false" ist, wird die keine Pushabonnements zurückgegeben.  
+`[ @show_push = ] 'show_push'`Gibt an, ob alle Pushabonnements zurückgegeben werden sollen. *show_push*ist vom Datentyp **nvarchar (5)** und hat den Standardwert false, der keine Pushabonnements zurückgibt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|Name des Verlegers.|  
-|**Verlegerdatenbank**|**sysname**|Name der Verlegerdatenbank.|  
+|**Verleger Datenbank**|**sysname**|Name der Verlegerdatenbank.|  
 |**publication**|**sysname**|Name der Veröffentlichung.|  
 |**independent_agent**|**bit**|Zeigt an, ob ein Verteilungs-Agent im Einzelplatzmodus für diese Veröffentlichung vorhanden ist.|  
 |**Abonnementtyp**|**int**|Abonnementtyp für die Veröffentlichung.|  
-|**Verteilungs-agent**|**nvarchar(100)**|Verteilungs-Agent für die Verarbeitung des Abonnements.|  
-|**veröffentlichungsbeschreibung**|**nvarchar(255)**|Beschreibung der Veröffentlichung.|  
+|**Verteilungs-Agent**|**nvarchar (100)**|Verteilungs-Agent für die Verarbeitung des Abonnements.|  
+|**Veröffentlichungs Beschreibung**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
 |**Zeitpunkt der letzten Aktualisierung**|**Datum**|Zeitpunkt, zu dem die Abonnementinformationen aktualisiert wurden. Dies ist eine UNICODE-Zeichenfolge aus ISO-Datum (114) + ODBC-Zeit (121). Das Format ist yyyymmdd hh:mi:sss.mmm, wobei yyyy das Jahr, mm den Monat, dd den Tag, hh die Stunde, mi die Minute, sss die Sekunden und mmm die Millisekunden angibt.|  
-|**Abonnementname**|**varchar(386)**|Name des Abonnements.|  
-|**transaktionszeitstempel der letzten**|**varbinary(16)**|Timestamp der letzten replizierten Transaktion.|  
-|**Updatemodus**|**tinyint**|Zulässige Updatetypen.|  
-|**Job_id der Verteilungs-agent**|**int**|Auftrags-ID des Verteilungs-Agents.|  
+|**Abonnement Name**|**varchar (386)**|Name des Abonnements.|  
+|**Zeitstempel der letzten Transaktion**|**varbinary(16)**|Timestamp der letzten replizierten Transaktion.|  
+|**Aktualisierungs Modus**|**tinyint**|Zulässige Updatetypen.|  
+|**Verteilungs-Agent job_id**|**int**|Auftrags-ID des Verteilungs-Agents.|  
 |**enabled_for_synmgr**|**int**|Zeigt an, ob das Abonnement über die Synchronisierungsverwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] synchronisiert werden kann.|  
-|**Abonnement-guid**|**binary(16)**|Globaler Bezeichner für die Version des Abonnements für die Veröffentlichung.|  
+|**Abonnement-GUID**|**binary(16)**|Globaler Bezeichner für die Version des Abonnements für die Veröffentlichung.|  
 |**subid**|**binary(16)**|Globaler Bezeichner für ein anonymes Abonnement.|  
 |**immediate_sync**|**bit**|Gibt an, ob die Synchronisierungsdateien bei jeder Ausführung des Momentaufnahme-Agents erstellt oder neu erstellt werden.|  
-|**verlegeranmeldung**|**sysname**|Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
-|**das Kennwort des Verlegers**|**nvarchar(524)**|Das Kennwort (verschlüsselt), das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
-|**Publisher security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung<br /><br /> **2** = der Synchronisierungstrigger verwenden einen statischen **Sysservers** -Eintrag für einen Remoteprozeduraufruf (RPC), und *Verleger* muss definiert werden, der **Sysservers**-Tabelle als Remoteserver oder Verbindungsserver.|  
+|**Verleger Anmeldung**|**sysname**|Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
+|**Verleger Kennwort**|**nvarchar(524)**|Das Kennwort (verschlüsselt), das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
+|**Verleger security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> 0 =  -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung<br /><br /> **2** = die Synchronisierungs Trigger verwenden einen statischen **sysservers** -Eintrag für Remote Prozedur Aufrufe (RPC), und der *Herausgeber* muss in der **sysservers** -Tabelle als Remote Server oder Verbindungs Server definiert sein.|  
 |**distributor**|**sysname**|Name des Verteilers.|  
 |**distributor_login**|**sysname**|Auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
-|**distributor_password**|**nvarchar(524)**|Kennwort (verschlüsselt) verwendet, auf dem Verteiler für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
-|**distributor_security_mode**|**int**|Auf dem Verteiler implementierter Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**distributor_password**|**nvarchar(524)**|Kennwort (verschlüsselt), das auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verteiler für die Authentifizierung verwendet wird.|  
+|**distributor_security_mode**|**int**|Auf dem Verteiler implementierter Sicherheitsmodus:<br /><br /> 0 =  -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_port**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_password**|**nvarchar(524)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Der Speicherort des Momentaufnahmeordners, wenn dies nicht der standardmäßige Speicherort ist oder ein zusätzlicher Speicherort zum Standardspeicherort vorhanden ist.|  
 |**working_directory**|**nvarchar(255)**|Der vollgekennzeichnete Pfad zum Verzeichnis, in das die Momentaufnahmedateien mit File Transfer Protocol (FTP) übertragen werden, wenn diese Option angegeben ist.|  
-|**use_ftp**|**bit**|Abonnement abonniert die Veröffentlichung über die konfigurierten Internet- und FTP-Adressierungseigenschaften. Wenn **0**, Abonnement nicht FTP verwendet. Wenn **1**, FTP verwendet.|  
-|**publication_type**|**int**|Gibt den Replikationstyp der Veröffentlichung an.<br /><br /> **0** = Transaktionsreplikation<br /><br /> **1** = momentaufnahmereplikation<br /><br /> **2** = Mergereplikation|  
+|**use_ftp**|**bit**|Abonnement abonniert die Veröffentlichung über die konfigurierten Internet- und FTP-Adressierungseigenschaften. Wenn der Wert **0**ist, verwendet das Abonnement nicht FTP. Bei **1**verwendet das Abonnement FTP.|  
+|**publication_type**|**int**|Gibt den Replikationstyp der Veröffentlichung an.<br /><br /> **0** = Transaktions Replikation<br /><br /> **1** = Momentaufnahme Replikation<br /><br /> **2** = Mergereplikation|  
 |**dts_package_name**|**sysname**|Gibt den Namen des DTS-Pakets (Data Transformation Services) an.|  
 |**dts_package_location**|**int**|Der Speicherort des DTS-Pakets:<br /><br /> **0** = Verteiler<br /><br /> **1** = Abonnent|  
-|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn **0**, der Agent nicht remote aktiviert werden.|  
+|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn der Wert **0**ist, kann der Agent nicht remote aktiviert werden.|  
 |**offload_server**|**sysname**|Gibt den Netzwerknamen des Servers an, der für die Remoteaktivierung verwendet wird.|  
-|**last_sync_status**|**int**|Abonnementstatus:<br /><br /> **0** = alle Aufträge werden für den start bereit.<br /><br /> **1** = ein oder mehrere Aufträge werden gestartet<br /><br /> **2** = alle Aufträge wurden erfolgreich ausgeführt.<br /><br /> **3** = mindestens ein Auftrag wird ausgeführt<br /><br /> **4** = alle Aufträge sind geplant und im Leerlauf<br /><br /> **5** = mindestens ein Auftrag versucht, führen Sie nach einem vorherigen Fehler<br /><br /> **6** = mindestens ein Auftrag konnte nicht erfolgreich ausgeführt|  
+|**last_sync_status**|**int**|Abonnementstatus:<br /><br /> **0** = alle Aufträge warten auf den Start<br /><br /> **1** = mindestens ein Auftrag wird gestartet.<br /><br /> **2** = alle Aufträge wurden erfolgreich ausgeführt.<br /><br /> **3** = mindestens ein Auftrag wird ausgeführt<br /><br /> **4** = alle Aufträge sind geplant und im Leerlauf<br /><br /> **5** = mindestens ein Auftrag versucht, nach einem vorherigen Fehler auszuführen<br /><br /> **6** = mindestens ein Auftrag konnte nicht erfolgreich ausgeführt werden.|  
 |**last_sync_summary**|**sysname**|Beschreibung der letzten Synchronisierungsergebnisse.|  
 |**last_sync_time**|**datetime**|Zeitpunkt, zu dem die Abonnementinformationen aktualisiert wurden. Dies ist eine UNICODE-Zeichenfolge aus ISO-Datum (114) + ODBC-Zeit (121). Das Format ist yyyymmdd hh:mi:sss.mmm, wobei yyyy das Jahr, mm den Monat, dd den Tag, hh die Stunde, mi die Minute, sss die Sekunden und mmm die Millisekunden angibt.|  
-|**job_login**|**nvarchar(512)**|Ist das Windows-Konto unter dem der Verteilungs-Agent ausgeführt wird, der zurückgegeben wird, im Format *Domäne*\\*Benutzername*.|  
-|**job_password**|**sysname**|Aus Sicherheitsgründen den Wert " **\*\*\*\*\*\*\*\*\*\*** " ist immer zurückgegeben.|  
+|**job_login**|**nvarchar(512)**|Das Windows-Konto, unter dem der Verteilungs-Agent ausgeführt wird, das im Format *Domäne*\\*Benutzername*zurückgegeben wird.|  
+|**job_password**|**sysname**|Aus Sicherheitsgründen wird immer der Wert " **\*\*\*\*\*"zurück\*gegeben.\*\*\*\***|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helppullsubscription** wird bei der Momentaufnahme- und Transaktionsreplikation verwendet.  
+ **sp_helppullsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_helppullsubscription** .  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_helppullsubscription** ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   

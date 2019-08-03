@@ -1,5 +1,5 @@
 ---
-title: Sp_helpsubscription_properties (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpsubscription_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e9da98ffc01d7ee62ac89a516a7eabe52cae3df1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048384"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771565"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Ruft Sicherheitsinformationen aus der [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Tabelle. Diese gespeicherte Prozedur wird auf dem Abonnenten ausgeführt.  
+  Ruft Sicherheitsinformationen aus der [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) -Tabelle ab. Diese gespeicherte Prozedur wird auf dem Abonnenten ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,13 +40,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat den Standardwert **%** , Informationen über alle Verleger zurückgegeben.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert **%** , Informationen über alle Verlegerdatenbanken zurückgegeben.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** , Informationen zu allen Veröffentlichungen zurückgegeben.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
   
-`[ @publication_type = ] publication_type` Ist der Typ der Veröffentlichung. *Publication_type* ist **Int**, hat den Standardwert NULL. Wenn angegeben, *Publication_type* muss einer der folgenden Werte sein:  
+`[ @publication_type = ] publication_type`Der Typ der Veröffentlichung. *publication_type* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn angegeben, muss *publication_type* einer der folgenden Werte sein:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -61,32 +61,32 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publisher**|**sysname**|Name des Verlegers.|  
 |**publisher_db**|**sysname**|Name der Verlegerdatenbank.|  
 |**publication**|**sysname**|Name der Veröffentlichung.|  
-|**publication_type**|**int**|Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung<br /><br /> **1** = Momentaufnahme<br /><br /> **2** = Merge|  
+|**publication_type**|**int**|Typ der Veröffentlichung:<br /><br /> **0** = transaktional<br /><br /> **1** = Momentaufnahme<br /><br /> **2** = zusammenführen|  
 |**publisher_login**|**sysname**|Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
 |**publisher_password**|**nvarchar(524)**|Das Kennwort, das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird (verschlüsselt).|  
-|**publisher_security_mode**|**int**|Auf dem Verleger verwendeter Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**publisher_security_mode**|**int**|Auf dem Verleger verwendeter Sicherheitsmodus:<br /><br /> 0 =  -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**distributor**|**sysname**|Name des Verteilers.|  
 |**distributor_login**|**sysname**|Verteilerbenutzername.|  
 |**distributor_password**|**nvarchar(524)**|Verteilerkennwort (verschlüsselt).|  
-|**distributor_security_mode**|**int**|Auf dem Verteiler verwendeter Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**distributor_security_mode**|**int**|Auf dem Verteiler verwendeter Sicherheitsmodus:<br /><br /> 0 =  -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten Die Netzwerkadresse des FTP-Dienstes für den Verteiler.|  
 |**ftp_port**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten Die Nummer des Anschlusses für den FTP-Dienst des Verteilers.|  
 |**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten Der Benutzername, mit dem eine Verbindung mit dem FTP-Dienst hergestellt wird.|  
-|**ftp_password**|**nvarchar(524)**|Nur aus Gründen der Abwärtskompatibilität beibehalten Kennwort des Benutzers verwendet, um mit dem FTP-Dienst herstellen.|  
+|**ftp_password**|**nvarchar(524)**|Nur aus Gründen der Abwärtskompatibilität beibehalten Benutzer Kennwort, das zum Herstellen einer Verbindung mit dem FTP-Dienst verwendet|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Gibt den Speicherort des anderen Ordners für die Momentaufnahme an.|  
 |**working_directory**|**nvarchar(255)**|Der Name des Arbeitsverzeichnisses, das zum Speichern der Daten- und Schemadateien verwendet wird.|  
-|**use_ftp**|**bit**|Gibt anstelle des normalen Protokolls FTP an, um Momentaufnahmen abzurufen. Wenn **1**, wird FTP verwendet.|  
-|**dts_package_name**|**sysame**|Gibt den Namen des DTS-Pakets (Data Transformation Services) an.|  
+|**use_ftp**|**bit**|Gibt anstelle des normalen Protokolls FTP an, um Momentaufnahmen abzurufen. Bei **einem**Wert von 1 wird FTP verwendet.|  
+|**dts_package_name**|**sygleich**|Gibt den Namen des DTS-Pakets (Data Transformation Services) an.|  
 |**dts_package_password**|**nvarchar(524)**|Gibt gegebenenfalls das Kennwort des Pakets an.|  
-|**dts_package_location**|**int**|Der Speicherort, in dem das DTS-Paket gespeichert ist.<br /><br /> **0** des Pakets = Speicherort ist, auf dem Verteiler.<br /><br /> **1** des Pakets = Speicherort ist, auf dem Abonnenten.|  
-|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn **0**, der Agent nicht remote aktiviert werden.|  
+|**dts_package_location**|**int**|Speicherort, an dem das DTS-Paket gespeichert wird.<br /><br /> **0** = der Speicherort des Pakets befindet sich auf dem Verteiler.<br /><br /> **1** = der Speicherort des Pakets befindet sich auf dem Abonnenten.|  
+|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn der Wert **0**ist, kann der Agent nicht remote aktiviert werden.|  
 |**offload_server**|**sysname**|Gibt den Netzwerknamen des Servers an, der für die Remoteaktivierung verwendet wird.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Gibt den Pfad zum Ordner an, in dem die Momentaufnahmedateien gespeichert werden.|  
-|**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTPS synchronisiert werden kann ein Wert von **1** bedeutet, dass dieses Feature aktiviert ist.|  
-|**internet_url**|**nvarchar(260)**|URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
+|**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTPS synchronisiert werden kann, wobei der Wert **1** bedeutet, dass diese Funktion aktiviert ist.|  
+|**internet_url**|**nvarchar(260)**|URL, die den Speicherort des Replikations-Listener für die Websynchronisierung darstellt.|  
 |**internet_login**|**nvarchar(128)**|Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**|**nvarchar(524)**|Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
-|**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet ein Wert von **1** bedeutet, dass Windows-Authentifizierung und einen Wert von **0** Standardauthentifizierung.|  
+|**internet_security_mode**|**int**|Der Authentifizierungsmodus, der beim Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung verwendet. der Wert **1** steht für die Windows-Authentifizierung und der Wert **0** für die Standard Authentifizierung.|  
 |**internet_timeout**|**int**|Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
 |**hostname**|**nvarchar(128)**|Gibt den Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
   
@@ -94,10 +94,10 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpsubscription_properties** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **sp_helpsubscription_properties** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_helpsubscription_properties**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_helpsubscription_properties**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

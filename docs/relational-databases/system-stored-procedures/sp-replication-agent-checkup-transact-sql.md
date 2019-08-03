@@ -1,5 +1,5 @@
 ---
-title: Sp_replication_agent_checkup (Transact-SQL) | Microsoft-Dokumentation
+title: sp_replication_agent_checkup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 15d226e20448e503344667ed801bdbd9b7cb07f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b434d4bda50cf03442020ba2f0c029aaa1e09cd9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950717"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771229"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Überprüft alle Verteilungsdatenbanken auf Replikations-Agents, die zwar ausgeführt werden, aber innerhalb des angegebenen Taktintervalls keine Verlaufsdaten protokolliert haben. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -37,16 +37,16 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @heartbeat_interval = ] 'heartbeat_interval'` Ist die maximale Anzahl von Minuten an, denen ein Agent ohne Protokollierung einer verlaufsmeldung aufgenommen werden kann. *Heartbeat_interval* ist **Int**, hat den Standardwert von 10 Minuten.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'`Die maximale Anzahl von Minuten, die ein Agent durchlaufen werden kann, ohne eine Fortschrittsmeldung zu protokollieren. *heartbeat_interval* ist vom Datentyp **int**. der Standardwert ist 10 Minuten.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- **Sp_replication_agent_checkup** löst Fehler 14151 aus, für die einzelnen Agents, die als verdächtig erkannt. Außerdem wird eine Fehlerverlaufsmeldung für die Agents protokolliert.  
+ **sp_replication_agent_checkup** löst Fehler 14151 für jeden Agent aus, der als Fehler verdächtig erkannt wird. Außerdem wird eine Fehlerverlaufsmeldung für die Agents protokolliert.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_replication_agent_checkup** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **sp_replication_agent_checkup** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_replication_agent_checkup**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_replication_agent_checkup**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sp_replcmds (Transact-SQL) | Microsoft-Dokumentation
+title: sp_replcmds (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8aad9f67b155c1f247426053b948cc6dd29e4cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006902"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771011"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Mit dieser Prozedur werden die Transaktionsbefehle zurückgegeben, die für die Replikation gekennzeichnet sind. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Mit dieser Prozedur werden die Transaktionsbefehle zurückgegeben, die für die Replikation gekennzeichnet sind. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Die **Sp_replcmds** Prozedur sollte nur zur Fehlerbehebung bei der Replikation ausgeführt werden.  
+>  Die Prozedur **sp_replcmds** sollte nur ausgeführt werden, um Probleme bei der Replikation zu beheben.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,13 +40,13 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @maxtrans = ] maxtrans` Ist die Anzahl von Transaktionen, die Informationen zurückgegeben werden sollen. *Maxtrans* ist **Int**, hat den Standardwert **1**, die angibt, dass der nächsten Transaktions, die Verteilung wartet.  
+`[ @maxtrans = ] maxtrans`Die Anzahl der Transaktionen, für die Informationen zurückgegeben werden sollen. *maxtrans* ist vom Datentyp **int**. der Standardwert ist **1**. dieser gibt die nächste Transaktion an, die auf die Verteilung wartet.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**Artikel-id**|**int**|Die ID des Artikels.|  
+|**Artikel-ID**|**int**|Die ID des Artikels.|  
 |**partial_command**|**bit**|Gibt an, ob es sich um einen Teilbefehl handelt.|  
 |**Befehl**|**varbinary(1024)**|Der Befehlswert.|  
 |**xactid**|**binary(10)**|Transaktions-ID|  
@@ -62,27 +62,27 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung|  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_replcmds** wird vom Protokollleseprozess bei der Transaktionsreplikation verwendet.  
+ **sp_replcmds** wird vom Protokoll Leseprozess bei der Transaktions Replikation verwendet.  
   
- Replikation behandelt den ersten Client, der ausgeführt wird **Sp_replcmds** innerhalb einer bestimmten Datenbank als Protokollleser.  
+ Bei der Replikation wird der erste Client, auf dem **sp_replcmds** ausgeführt wird, in einer bestimmten Datenbank als Protokoll Leser behandelt.  
   
  Diese Prozedur kann Befehle für mit dem Besitzer qualifizierte Tabellen erstellen oder den Tabellennamen nicht kennzeichnen (Standard). Das Hinzufügen von qualifizierten Tabellennamen ermöglicht die Datenreplikation von Tabellen mit einem bestimmten Besitzer innerhalb einer Datenbank zu Tabellen mit demselben Besitzer in einer anderen Datenbank.  
   
 > [!NOTE]  
 >  Da der Tabellenname in der Quelldatenbank durch den Besitzernamen qualifiziert wird, muss es sich bei dem Tabellenbesitzer in der Zieldatenbank um den gleichen Besitzernamen handeln.  
   
- Clients, die versuchen, führen Sie **Sp_replcmds** innerhalb derselben Datenbank erhalten den Fehler 18752, bis die Verbindung getrennt wurde. Nachdem die Verbindung getrennt wurde, kann einen anderen Client ausführen **Sp_replcmds**, und wird von der neuen Protokollleser.  
+ Clients, die versuchen, **sp_replcmds** innerhalb derselben Datenbank auszuführen, erhalten den Fehler 18752, bis der erste Client die Verbindung trennt. Nachdem der erste Client die Verbindung trennt, kann ein anderer Client **sp_replcmds**ausführen und zum neuen Protokoll Leser werden.  
   
- Fehlermeldungsnummer 18759 wird sowohl hinzugefügt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll und die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendung zu protokollieren, wenn **Sp_replcmds** kann keinen Textbefehl repliziert werden, da der Textzeiger nicht war in der gleichen Transaktion abgerufen.  
+ Im- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokoll und im Windows-Anwendungsprotokoll [!INCLUDE[msCoName](../../includes/msconame-md.md)] wird eine Warnmeldung [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit der Nummer 18759 hinzugefügt, wenn **sp_replcmds** einen Textbefehl nicht replizieren kann, da der Text Zeiger nicht in der gleichen Datei abgerufen wurde. Geschäfte.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_replcmds**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replcmds**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [Sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_repltrans &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

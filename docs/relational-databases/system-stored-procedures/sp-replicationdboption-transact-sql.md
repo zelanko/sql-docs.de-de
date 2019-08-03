@@ -1,5 +1,5 @@
 ---
-title: Sp_replicationdboption (Transact-SQL) | Microsoft-Dokumentation
+title: sp_replicationdboption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac51409db23f4b8eefb3616d5daf5ca43b3ab0f6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950663"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771250"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Legt für die angegebene Datenbank eine Replikationsdatenbankoption fest. Diese gespeicherte Prozedur wird auf dem Verleger oder Abonnenten für jede Datenbank ausgeführt.  
   
@@ -41,22 +41,22 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@dbname=** ] **"***Dbname***"**  
- Die Datenbank, für die die Replikationsdatenbankoption festgelegt wird. *Db_name* ist **Sysname**, hat keinen Standardwert.  
+ **[@dbname=** ] **'***dbname***'**  
+ Die Datenbank, für die die Replikationsdatenbankoption festgelegt wird. *db_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ **@optname=** ] **"***Optname***"**  
- Die Replikationsdatenbankoption, die aktiviert oder deaktiviert werden soll. *Optname* ist **Sysname**, und kann einen der folgenden Werte sein.  
+ **[@optname=** ] **'***optname***'**  
+ Die Replikationsdatenbankoption, die aktiviert oder deaktiviert werden soll. *optname* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Veröffentlichen von Merge**|Die Datenbank kann für die Mergeveröffentlichung verwendet werden.|  
+|**Zusammenführen der Veröffentlichung**|Die Datenbank kann für die Mergeveröffentlichung verwendet werden.|  
 |**publish**|Die Datenbank kann für andere Veröffentlichungstypen verwendet werden.|  
 |**subscribe**|Die Datenbank ist eine Abonnementdatenbank.|  
-|**Synchronisieren Sie mit der Sicherung**|Die Datenbank ist für eine koordinierte Sicherung aktiviert. Weitere Informationen finden Sie unter [aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**Synchronisierung mit Sicherung**|Die Datenbank ist für eine koordinierte Sicherung aktiviert. Weitere Informationen finden Sie unter [aktivieren koordinierter Sicherungen für die Transaktions Replikations &#40;Replikation mit Transact-SQL-Programmierung&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` Ist Sie, ob aktiviert oder deaktiviert die angegebene Replikationsdatenbankoption. *Wert* ist **Sysname**, und kann **"true"** oder **"false"** . Wenn dieser Wert ist **"false"** und *Optname* ist **Merge veröffentlichen**, Abonnements für die Datenbank mit Mergeveröffentlichung werden ebenfalls gelöscht.  
+`[ @value = ] 'value'`Gibt an, ob die angegebene Replikations Datenbankoption aktiviert oder deaktiviert werden soll. *value* ist vom **Datentyp vom Datentyp sysname**und kann **true** oder **false**sein. Wenn dieser Wert " **false** " und " *optname* " eine **Mergeveröffentlichung**ist, werden die Abonnements für die veröffentlichte Datenbank des Merge ebenfalls gelöscht.  
   
-`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**, der Verteiler sollte verbunden und mit den neuen Status der Verlegerdatenbank aktualisiert werden. Der Wert **1** sollte nur angegeben werden, wenn der Verteiler nicht zugegriffen werden kann und **Sp_replicationdboption** wird verwendet, um die Veröffentlichung deaktivieren.  
+`[ @ignore_distributor = ] ignore_distributor`Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**. Dies bedeutet, dass der Verteiler mit dem neuen Status der Veröffentlichungs Datenbank verbunden und aktualisiert werden soll. Der Wert **1** sollte nur angegeben werden, wenn auf den Verteiler nicht zugegriffen werden kann und **sp_replicationdboption** zum Deaktivieren der Veröffentlichung verwendet wird.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -64,14 +64,14 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_replicationdboption** wird in Momentaufnahme-, Transaktions- und Mergereplikation verwendet.  
+ **sp_replicationdboption** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
- Diese Prozedur erstellt oder löscht bestimmte Replikationssystemtabellen, Sicherheitskonten usw. in Abhängigkeit von den gegebenen Optionen. Legt das entsprechende in Kategoriebit der **master.sysdatabases** Systemtabelle und erstellt die erforderlichen Systemtabellen.  
+ Diese Prozedur erstellt oder löscht bestimmte Replikationssystemtabellen, Sicherheitskonten usw. in Abhängigkeit von den gegebenen Optionen. Legt das entsprechende Kategoriebit in der **Master. sysdatenbanken** -Systemtabelle fest und erstellt die erforderlichen Systemtabellen.  
   
  Das Veröffentlichen kann nur deaktiviert werden, wenn die Veröffentlichungsdatenbank online ist. Wenn für die Veröffentlichungsdatenbank eine Datenbankmomentaufnahme vorhanden ist, muss diese vor dem Deaktivieren des Veröffentlichens gelöscht werden. Eine Datenbankmomentaufnahme ist eine schreibgeschützte Offlinekopie einer Datenbank und steht nicht in Verbindung mit einer Replikationsmomentaufnahme. Weitere Informationen finden Sie unter [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_replicationdboption**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_replicationdboption**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   

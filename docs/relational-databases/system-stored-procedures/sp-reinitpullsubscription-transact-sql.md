@@ -1,5 +1,5 @@
 ---
-title: Sp_reinitpullsubscription (Transact-SQL) | Microsoft-Dokumentation
+title: sp_reinitpullsubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1389e76d4e679a3ee16c548bf752d5668dfa48b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 078cb7f1607e6af94756d43efc2e6d21fbada52c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075676"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762341"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Diese Prozedur markiert ein Transaktionspullabonnement oder ein anonymes Abonnement für die Neuinitialisierung bei der nächsten Ausführung des Verteilungs-Agents. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Pullabonnementdatenbank ausgeführt.  
   
@@ -39,31 +39,31 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert all, die alle Abonnements für die erneute Initialisierung markiert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der Standardwert all gibt an, dass alle Abonnements für die erneute Initialisierung markiert werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_reinitpullsubscription** wird in Transaktionsreplikationen verwendet.  
+ **sp_reinitpullsubscription** wird bei der Transaktions Replikation verwendet.  
   
- **Sp_reinitpullsubscription** wird nicht für die Peer-zu-Peer-Transaktionsreplikation unterstützt.  
+ **sp_reinitpullsubscription** wird für die Peer-zu-Peer-Transaktions Replikation nicht unterstützt.  
   
- **Sp_reinitpullsubscription** aufgerufen werden kann, vom Abonnenten auf das Abonnement, bei der nächsten Ausführung des Verteilungs-Agents erneut initialisiert.  
+ **sp_reinitpullsubscription** kann vom Abonnenten aufgerufen werden, um das Abonnement während der nächsten Durchführung der Verteilungs-Agent erneut zu initialisieren.  
   
- Abonnements für Veröffentlichungen erstellt wurden, mit dem Wert **"false"** für **@immediate_sync** kann nicht vom Abonnenten nicht erneut initialisiert werden.  
+ Abonnements für Veröffentlichungen, die mit dem Wert **false** für **@immediate_sync** erstellt wurden, können vom Abonnenten nicht erneut initialisiert werden.  
   
- Sie können ein Pullabonnement erneut zu initialisieren, durch das Ausführen **Sp_reinitpullsubscription** auf dem Abonnenten oder **Sp_reinitsubscription** auf dem Verleger.  
+ Sie können ein Pullabonnement erneut initialisieren, indem Sie entweder **sp_reinitpullsubscription** auf dem Abonnenten oder **sp_reinitsubscription** auf dem Verleger ausführen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_reinitpullsubscription**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_reinitpullsubscription**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Erneutes Initialisieren eines Abonnements](../../relational-databases/replication/reinitialize-a-subscription.md)   

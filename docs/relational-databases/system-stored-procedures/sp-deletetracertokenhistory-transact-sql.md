@@ -1,5 +1,5 @@
 ---
-title: Sp_deletetracertokenhistory (Transact-SQL) | Microsoft-Dokumentation
+title: sp_deletetracertokenhistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0a7f70f5cd56867add98150d471d61cbc70faad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111923"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771140"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-Entfernt Überwachungstoken-Datensätze aus der [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) und [MStracer_history &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) -Systemtabellen. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Verteiler für die Verteilungsdatenbank ausgeführt.
+Entfernt Überwachungs Token-Datensätze aus den Systemtabellen [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) und [MStracer_history &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Verteiler für die Verteilungsdatenbank ausgeführt.
 
 ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -43,25 +43,25 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumente
 
 `@publication= 'publication'`  
-Der Name der Veröffentlichung, in die das Überwachungstoken eingefügt wurde. Der Datentyp **Sysname**. Dieser Parameter ist erforderlich.
+Der Name der Veröffentlichung, in die das Überwachungstoken eingefügt wurde. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Dieser Parameter ist erforderlich.
 
 `[ @tracer_id= ] tracer_id`  
-Die ID des zu löschenden Überwachungstokens. Der Datentyp **Int**. Der Standardwert ist *NULL*. Wenn *null*, alle Überwachungstoken, die zur Veröffentlichung gehörenden werden gelöscht.
+Die ID des zu löschenden Überwachungstokens. Der Datentyp ist " **int**". Der Standardwert ist *NULL*. Wenn der Wert *null*ist, werden alle Überwachungs Token gelöscht, die zur Veröffentlichung gehören.
 
 `[ @cutoff_date= ] cutoff_date`  
-Überwachungstoken, die in der Veröffentlichung eingefügt werden, vor diesem Datum werden gelöscht. Der Datentyp **"DateTime"** . Der Standardwert ist *NULL*.
+Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der Datentyp ist " **DateTime**". Der Standardwert ist *NULL*.
 
 `[ @publisher= ] 'publisher'`  
-Der Name des Verlegers. Der Datentyp **Sysname**. Der Standardwert ist *NULL*.
+Der Name des Verlegers. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert ist *NULL*.
 
 > [!NOTE]
-> Dieser Parameter sollte nur angegeben werden, für nicht - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber oder beim Ausführen der gespeicherten Prozedur vom Verteiler.
+> Dieser Parameter sollte nur für nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger oder beim Ausführen der gespeicherten Prozedur vom Verteiler angegeben werden.
 
 `[ @publisher_db= ] 'publisher_db'`  
-Der Name der Veröffentlichungsdatenbank. Der Datentyp **Sysname**. Der Standardwert ist NULL. Dieser Parameter wird ignoriert, wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird.
+Der Name der Veröffentlichungsdatenbank. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert ist NULL. Dieser Parameter wird ignoriert, wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird.
 
 > [!NOTE]
-> Dieser Parameter sollte angegeben werden, wenn die gespeicherte Prozedur vom Verteiler ausgeführt.
+> Dieser Parameter muss beim Ausführen der gespeicherten Prozedur vom Verteiler angegeben werden.
 
 ## <a name="return-code-values"></a>Rückgabecodewerte
 
@@ -69,22 +69,22 @@ Der Name der Veröffentlichungsdatenbank. Der Datentyp **Sysname**. Der Standard
 
 ## <a name="remarks"></a>Hinweise
 
-**Sp_deletetracertokenhistory** wird in Transaktionsreplikationen verwendet.  
+**sp_deletetracertokenhistory** wird bei der Transaktions Replikation verwendet.  
 
-Ein Fehler auftritt, wenn Sie beide Parameter angeben *Tracer_id* und *Cutoff_date*.
+Wenn Sie beide Parameter angeben *tracer_id* und *cutoff_date*, tritt ein Fehler auf.
 
-Wenn Sie nicht ausgeführt werden **Sp_deletetracertokenhistory** um Überwachungstoken-Metadaten zu löschen, die Informationen werden gelöscht, wenn die regelmäßig verlaufscleanups.
+Wenn Sie **sp_deletetracertokenhistory** nicht zum Löschen von Überwachungs Token-Metadaten ausführen, werden die Informationen bei einer regelmäßigen geplanten Verlaufs Bereinigung gelöscht.
 
-Überwachungstoken-IDs können bestimmt werden, indem Sie Ausführung [Sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) oder durch Abfragen der [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) -Systemtabelle.
+Überwachungs Token-IDs können durch Ausführen von [ &#40;sp_helptracertokens Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) oder durch Abfragen der MStracer_tokens [ &#40;-Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) -Systemtabelle ermittelt werden.
 
 ## <a name="permissions"></a>Berechtigungen
 
-Nur die folgenden Mitarbeiter über die Berechtigung zum Ausführen verfügen **Sp_deletetracertokenhistory**:
+Nur die folgenden Mitarbeiter verfügen über die Berechtigung zum Ausführen von **sp_deletetracertokenhistory**:
 
-- Mitglieder der **Replmonitor** Rollen in der Verteilungsdatenbank
-- Mitglieder der **Sysadmin** -Serverrolle sein.
-- Mitglieder der **Db_owner** festen Datenbankrolle, in der Veröffentlichungsdatenbank.
-- Die **Db_owner** der festen Datenbankrolle.
+- Mitglieder der **replmonitor** -Rollen in der Verteilungs Datenbank
+- Mitglieder der festen Server Rolle **sysadmin** .
+- Mitglieder der Fixed-Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank.
+- Der **db_owner** der fixierten Datenbank.
 
 ## <a name="see-also"></a>Siehe auch
 

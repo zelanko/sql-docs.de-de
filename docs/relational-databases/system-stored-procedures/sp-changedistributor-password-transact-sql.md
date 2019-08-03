@@ -1,5 +1,5 @@
 ---
-title: Sp_changedistributor_password (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changedistributor_password (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 29974fc7a60f675dc9921f527fd8348beb4f2134
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120084"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768904"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ändert das Kennwort für einen Verteiler. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -37,19 +37,19 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @password = ] 'password'` Ist das neue Kennwort. *Kennwort* ist **Sysname**, hat keinen Standardwert. Wenn der Verteiler lokal ist, ist das Kennwort für die **Distributor_admin** systemanmeldung geändert wird.  
+`[ @password = ] 'password'`Das neue Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn der Verteiler lokal ist, wird das Kennwort des **distributor_admin** -System Anmelde namens geändert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changedistributor_password** wird in allen Replikationstypen verwendet.  
+ **sp_changedistributor_password** wird für alle Replikations Typen verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changedistributor_password**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_password**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

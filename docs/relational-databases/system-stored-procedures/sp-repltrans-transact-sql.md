@@ -1,5 +1,5 @@
 ---
-title: Sp_repltrans (Transact-SQL) | Microsoft-Dokumentation
+title: sp_repltrans (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b1bdcdcd0f2128a08546e8b322449ec0b28cc29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129782"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770863"
 ---
 # <a name="sprepltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Gibt ein Resultset aller Transaktionen im Transaktionsprotokoll der Veröffentlichungsdatenbank zurück, die zwar für die Replikation gekennzeichnet, aber noch nicht als verteilt gekennzeichnet sind. Diese gespeicherte Prozedur wird auf dem Verleger für eine Veröffentlichungsdatenbank ausgeführt.  
   
@@ -37,15 +37,15 @@ sp_repltrans
 ```  
   
 ## <a name="result-sets"></a>Resultsets  
- **Sp_repltrans** gibt Informationen über die Veröffentlichungsdatenbank, die von der es ausgeführt wird, sodass Sie derzeit keine verteilte Transaktionen anzeigen (die Transaktionen im Transaktionsprotokoll, die nicht gesendet wurden, verbleiben die Verteiler). Das Resultset zeigt für jede Transaktion die Protokollfolgenummer des ersten und letzten Datensatzes an. **Sp_repltrans** ähnelt [Sp_replcmds &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) jedoch nicht die Befehle für die Transaktionen zurück.  
+ **sp_repltrans** gibt Informationen über die Veröffentlichungs Datenbank zurück, aus der Sie ausgeführt wird, sodass Sie derzeit nicht verteilte Transaktionen anzeigen können (die im Transaktionsprotokoll verbleibenden Transaktionen, die nicht an den Verteiler gesendet wurden). Das Resultset zeigt für jede Transaktion die Protokollfolgenummer des ersten und letzten Datensatzes an. **sp_repltrans** ähnelt [sp_replcmds &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) , gibt jedoch keine Befehle für die Transaktionen zurück.  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_repltrans** wird in Transaktionsreplikationen verwendet.  
+ **sp_repltrans** wird bei der Transaktions Replikation verwendet.  
   
- **Sp_repltrans** wird nicht unterstützt, für nicht - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Herausgeber.  
+ **sp_repltrans** wird für nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger nicht unterstützt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_repltrans**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_repltrans**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_repldone &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   

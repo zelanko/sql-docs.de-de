@@ -1,5 +1,5 @@
 ---
-title: Sp_change_agent_parameter (Transact-SQL) | Microsoft-Dokumentation
+title: sp_change_agent_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 610d63df2bf3496abaed8682ac83a72883e184b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045901"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768942"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Änderungen, die ein Parameter eines Replikations-Agentprofils, in gespeichert der [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) -Systemtabelle. Diese gespeicherte Prozedur wird auf dem Verteiler, auf dem der Agent ausgeführt wird, für jede Datenbank ausgeführt.  
+  Ändert einen Parameter eines Replikations-Agentprofils, das in der [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) -Systemtabelle gespeichert ist. Diese gespeicherte Prozedur wird auf dem Verteiler, auf dem der Agent ausgeführt wird, für jede Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,16 +37,16 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id,` Ist die ID des Profils. *Profile_id* ist **Int**, hat keinen Standardwert.  
+`[ @profile_id = ] profile_id,`Die ID des Profils. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @parameter_name = ] 'parameter_name'` Ist der Name des Parameters. *Parameter_name* ist **Sysname**, hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welche von Agent dies Art *Profile_id* darstellt, suchen die *Profile_id* -Spalte in der **Msagent_profiles** Tabelle, und beachten die *agent_type-Wert*  Wert.  
+`[ @parameter_name = ] 'parameter_name'`Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welcher Typ von Agent dieser *profile_id* repräsentiert, suchen Sie die *profile_id* -Spalte in der **MSagent_profiles** -Tabelle, und notieren Sie sich den *agent_type* -Wert.  
   
 > [!NOTE]  
->  Wenn für ein Parameter unterstützt wird eine bestimmte *Agent_type*, aber im Agentprofil nicht definiert wurde ein Fehler zurückgegeben. Zum Hinzufügen eines Parameters zu einem Agentprofil Sie ausführen müssen, [Sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+>  Wenn ein Parameter für eine bestimmte *agent_type*unterstützt, aber nicht im Agentprofil definiert wurde, wird ein Fehler zurückgegeben. Wenn Sie einem Agentprofil einen Parameter hinzufügen möchten, müssen Sie [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausführen.  
   
- Für eine Momentaufnahme-Agent (*Agent_type*=**1**), in das Profil definiert, die folgenden Eigenschaften können geändert werden:  
+ Bei einer Momentaufnahmen-Agent (*agent_type*=**1**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
--   **70Subscribers**  
+-   **70er-Abonnenten**  
   
 -   **BcpBatchSize**  
   
@@ -70,13 +70,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- Für einen Protokolllese-Agent (*Agent_type*=**2**), in das Profil definiert, die folgenden Eigenschaften können geändert werden:  
+ Bei einer Protokolllese-Agent (*agent_type*=**2**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **HistoryVerboseLevel**  
   
 -   **LoginTimeout**  
   
--   **Meldungsintervall**  
+-   **MessageInterval**  
   
 -   **Ausgabe**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- Für einen Verteilungs-Agent (*Agent_type*=**3**), in das Profil definiert, die folgenden Eigenschaften können geändert werden:  
+ Bei einer Verteilungs-Agent (*agent_type*=**3**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **BcpBatchSize**  
   
@@ -112,7 +112,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxDeliveredTransactions**  
   
--   **Meldungsintervall**  
+-   **MessageInterval**  
   
 -   **Ausgabe**  
   
@@ -124,13 +124,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **QueryTimeout**  
   
--   **"QuotedIdentifier"**  
+-   **QuotedIdentifier**  
   
 -   **SkipErrors**  
   
 -   **TransactionsPerHistory**  
   
- Für einen Merge-Agent (*Agent_type*=**4**), in das Profil definiert, die folgenden Eigenschaften können geändert werden:  
+ Bei einer Merge-Agent (*agent_type*=**4**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **AltSnapshotFolder**  
   
@@ -160,7 +160,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **InputMessageFile**  
   
--   **InteractiveResolution**  
+-   **Interactiveresolution**  
   
 -   **InterruptOnMessagePattern**  
   
@@ -200,13 +200,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **QueryTimeout**  
   
--   **QueueSizeMultiplier**  
+-   **Queuesizemultiplikator**  
   
 -   **SrcThreads**  
   
 -   **StartQueueTimeout**  
   
--   **SyncToAlternate**  
+-   **Syncdealternate**  
   
 -   **UploadGenerationsPerBatch**  
   
@@ -220,7 +220,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ValidateInterval**  
   
- Für einen Warteschlangenlese-Agent (*Agent_type*=**9**), in das Profil definiert, die folgenden Eigenschaften können geändert werden:  
+ Bei einer Warteschlangenlese-Agent (*agent_type*=**9**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **HistoryVerboseLevel**  
   
@@ -234,22 +234,22 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **QueryTimeout**  
   
--   **ResolverState**  
+-   **Resolverstate**  
   
 -   **SQLQueueMode**  
   
- Um festzustellen, welche Parameter für ein bestimmtes Profil definiert wurden, führen Sie **Sp_help_agent_profile** und notieren Sie sich die *Profile_name* zugeordneten der *Profile_id*. Mit dem entsprechenden *Profile_id*, führen Sie anschließend **Sp_help_agent_parameters** verwenden, die *Profile_id* , die dem Profil zugeordneten Parameter anzuzeigen. Parameter können einem Profil hinzugefügt werden, durch Ausführen [Sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Wenn Sie sehen möchten, welche Parameter für ein bestimmtes Profil definiert wurden, führen Sie **sp_help_agent_profile** aus, und notieren Sie sich die *profile_name* , die mit *profile_id*verknüpft ist. Führen Sie mit dem entsprechenden *profile_id*Next **sp_help_agent_parameters** using this *profile_id* aus, um die Parameter anzuzeigen, die dem Profil zugeordnet sind. Parameter können einem Profil hinzugefügt werden, indem [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausgeführt wird.  
   
-`[ @parameter_value = ] 'parameter_value'` Ist der neue Wert des Parameters. *Parameter_value* ist **nvarchar(255)** , hat keinen Standardwert.  
+`[ @parameter_value = ] 'parameter_value'`Der neue Wert des-Parameters. *parameter_value* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_change_agent_parameter** wird in allen Replikationstypen verwendet.  
+ **sp_change_agent_parameter** wird für alle Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_change_agent_parameter**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_change_agent_parameter**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Replikations-Agent-Profile](../../relational-databases/replication/agents/replication-agent-profiles.md)   

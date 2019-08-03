@@ -1,5 +1,5 @@
 ---
-title: Sp_help_publication_access (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_publication_access (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085261"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770995"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Gibt eine Liste aller Anmeldenamen zurück, denen der Zugriff auf eine Veröffentlichung erteilt wurde. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Gibt eine Liste aller Anmeldenamen zurück, denen der Zugriff auf eine Veröffentlichung erteilt wurde. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,40 +40,40 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, die Zugriff auf. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung, auf die zugegriffen werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @return_granted = ] 'return_granted'` Die Login-ID *Return_granted* ist **Bit**, hat den Standardwert 1. Wenn **0** angegeben ist und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger aber nicht auf dem Verteiler angezeigt werden zurückgegeben. Wenn **0** angegeben ist und Windows-Authentifizierung verwendet wird, die Anmeldungen nicht explizit verweigert wurde Zugriff auf den Verleger oder Verteiler zurückgegeben werden.  
+`[ @return_granted = ] 'return_granted'`Die Anmelde-ID. *return_granted* ist vom Typ **Bit**. der Standardwert ist 1. Wenn **0** angegeben und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger, aber nicht auf dem Verteiler angezeigt werden, zurückgegeben. Wenn **0** angegeben ist und die Windows-Authentifizierung verwendet wird, werden die Anmeldungen zurückgegeben, denen der Zugriff auf dem Verleger oder dem Verteiler nicht ausdrücklich verweigert wird.  
   
-`[ @login = ] 'login'` Ist die standardmäßige Sicherheits-Anmelde-ID. *Anmeldung* ist **Sysname**, hat den Standardwert **%** .  
+`[ @login = ] 'login'`Die Standard-Sicherheits Anmelde-ID. *Login* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist.  
   
-`[ @initial_list = ] initial_list` Gibt an, ob alle Elemente mit veröffentlichungszugriff oder nur diejenigen Zugriff hatten, bevor der Liste neue Elemente hinzugefügt wurden zurückgegeben werden soll. *Initial_list* bit und hat den Standardwert **0**.  
+`[ @initial_list = ] initial_list`Gibt an, ob alle Member mit Veröffentlichungs Zugriff oder nur diejenigen zurückgegeben werden sollen, die vor dem Hinzufügen neuer Mitglieder zur Liste Zugriff hatten. *initial_list* ist vom Typ Bit. der Standardwert ist **0**.  
   
- **1** gibt Informationen für alle Mitglieder der **Sysadmin** Serverrolle mit gültigen Anmeldenamen auf dem Verteiler, die vorhanden waren, wenn die Veröffentlichung erstellt wurde, sowie die aktuelle Anmeldung.  
+ **1** gibt Informationen für alle Mitglieder der festen Server Rolle **sysadmin** mit gültigen Anmeldungen auf dem Verteiler zurück, die beim Erstellen der Veröffentlichung vorhanden waren, sowie den aktuellen Anmelde Namen.  
   
- **0** gibt Informationen für alle Mitglieder der **Sysadmin** über gültige Anmeldenamen auf dem Verteiler, die vorhanden waren, beim Erstellen der Veröffentlichung sowie über sämtliche Benutzer in der veröffentlichungszugriffsliste, die keinen festen Serverrolle gehören zu den **Sysadmin** -Serverrolle sein.  
+ **0** gibt Informationen für alle Mitglieder der festen Server Rolle **sysadmin** mit gültigen Anmeldungen auf dem Verteiler zurück, die beim Erstellen der Veröffentlichung vorhanden waren, sowie alle Benutzer in der Veröffentlichungs Zugriffsliste, die nicht zur **sysadmin gehören.** festes Server Rolle.  
   
 ## <a name="result-sets"></a>Resultsets  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar(256)**|Tatsächlicher Anmeldename|  
-|**Isntname**|**int**|**0** = Anmeldename ist kein Windows-Benutzer.<br /><br /> **1** = Anmeldename ist ein Windows-Benutzer.|  
-|**Isntgroup**|**int**|**0** = Anmeldename ist nicht mit einer Windows-Gruppe.<br /><br /> **1** = Anmeldename ist eine Windows-Gruppe.|  
+|**Isntname**|**int**|**0** = der Anmelde Name ist kein Windows-Benutzer.<br /><br /> **1** = der Anmelde Name ist ein Windows-Benutzer.|  
+|**Isntgroup**|**int**|**0** = der Anmelde Name ist keine Windows-Gruppe.<br /><br /> **1** = der Anmelde Name ist eine Windows-Gruppe.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_help_publication_access** wird in allen Replikationstypen verwendet.  
+ **sp_help_publication_access** wird für alle Replikations Typen verwendet.  
   
- Wenn beide **Isntname** und **Isntgroup** im Ergebnis sind **0**, davon aus, dass die Anmeldung ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung.  
+ Wenn sowohl **Isntname** als auch **Isntgroup** im Resultset den Wert **0**haben, wird davon ausgegangen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Anmeldung eine Anmeldung ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_help_publication_access**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_help_publication_access**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [Sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

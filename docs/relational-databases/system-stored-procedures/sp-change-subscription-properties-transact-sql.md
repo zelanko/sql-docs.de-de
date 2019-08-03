@@ -1,5 +1,5 @@
 ---
-title: Sp_change_subscription_properties (Transact-SQL) | Microsoft-Dokumentation
+title: sp_change_subscription_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfc42dbf08b6718e72970a703f56fb0bfff850f4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045783"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771408"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Aktualisiert Informationen für Pullabonnements. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
+  Aktualisiert Informationen für Pullabonnements. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,17 +42,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @property = ] 'property'` Ist die Eigenschaft geändert werden. *Eigenschaft* ist **Sysname**.  
+`[ @property = ] 'property'`Die Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @value = ] 'value'` Ist der neue Wert der Eigenschaft. *Wert* ist **nvarchar(1000)** , hat keinen Standardwert.  
+`[ @value = ] 'value'`Der neue Wert der-Eigenschaft. der Wert ist vom Datentyp **nvarchar (1000)** und hat keinen Standard *Wert* .  
   
-`[ @publication_type = ] publication_type` Gibt den Replikationstyp der Veröffentlichung an. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @publication_type = ] publication_type`Gibt den Replikationstyp der Veröffentlichung an. *publication_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Veröffentlichungstyp|  
 |-----------|----------------------|  
@@ -69,12 +69,12 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**distrib_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**distributor_login**||Verteilerbenutzername.|  
-|**distributor_password**||Verteilerkennwort.|  
+|**distributor_password**||Verteiler Kennwort.|  
 |**distributor_security_mode**|**1**|Verwendet die Windows-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 ||**0**|Verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 |**dts_package_name**||Gibt den Namen des SQL Server 2000 DTS-Pakets (Data Transformation Services) an. Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
-|**dts_package_password**||Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der angibt, dass die Kennworteigenschaft ist, werden nicht geändert.<br /><br /> Hinweis: Ein DTS-Paket muss über ein Kennwort verfügen.<br /><br /> Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
-|**dts_package_location**||Der Speicherort, in dem das DTS-Paket gespeichert ist. Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
+|**dts_package_password**||Gibt das Kennwort für das Paket an. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** . der Standardwert ist NULL. der Wert gibt an, dass die Kenn Wort Eigenschaft unverändert bleiben soll.<br /><br /> Hinweis: Ein DTS-Paket muss über ein Kennwort verfügen.<br /><br /> Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
+|**dts_package_location**||Speicherort, an dem das DTS-Paket gespeichert wird. Dieser Wert kann nur bei einer Transaktions- oder Momentaufnahmeveröffentlichung angegeben werden.|  
 |**dynamic_snapshot_location**||Gibt den Pfad zum Ordner an, in dem die Momentaufnahmedateien gespeichert werden. Dieser Wert kann nur bei einer Mergeveröffentlichung angegeben werden.|  
 |**ftp_address**||Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_login**||Nur aus Gründen der Abwärtskompatibilität beibehalten|  
@@ -84,14 +84,14 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**||Das vom Merge-Agent verwendete Kennwort für die Herstellung einer Verbindung mit dem Webserver, der die Websynchronisierung hostet, wobei die Verbindung über die Standardauthentifizierung erfolgt.|  
 |**internet_security_mode**|**1**|Verwendet für die Websynchronisierung die integrierte Windows-Authentifizierung. Wir empfehlen, bei der Websynchronisierung die Standardauthentifizierung zu verwenden. Weitere Informationen finden Sie unter [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Verwendet für die Websynchronisierung die Standardauthentifizierung.<br /><br /> Hinweis: Websynchronisierung erfordert eine SSL-Verbindung an den Webserver.|  
+||**0**|Verwendet für die Websynchronisierung die Standardauthentifizierung.<br /><br /> Hinweis: Für die Websynchronisierung ist eine SSL-Verbindung mit dem Webserver erforderlich.|  
 |**internet_timeout**||Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
-|**internet_url**||URL, die den Speicherort der replikationsüberwachung für die websynchronisierung darstellt.|  
+|**internet_url**||URL, die den Speicherort des Replikations-Listener für die Websynchronisierung darstellt.|  
 |**merge_job_login**||Anmeldename für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**merge_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
-|**publisher_login**||Der Benutzername des Verlegers. Ändern der *Publisher_login* wird nur für Abonnements von mergeveröffentlichungen unterstützt.|  
-|**publisher_password**||Kennwort des Verlegers. Ändern der *Publisher_password* wird nur für Abonnements von mergeveröffentlichungen unterstützt.|  
-|**publisher_security_mode**|**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger. Ändern der *Publisher_security_mode* wird nur für Abonnements von mergeveröffentlichungen unterstützt.|  
+|**publisher_login**||Der Benutzername des Verlegers. Das Ändern von *publisher_login* wird nur für Abonnements von Mergeveröffentlichungen unterstützt.|  
+|**publisher_password**||Herausgeber Kennwort Das Ändern von *publisher_password* wird nur für Abonnements von Mergeveröffentlichungen unterstützt.|  
+|**publisher_security_mode**|**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger. Das Ändern von *publisher_security_mode* wird nur für Abonnements von Mergeveröffentlichungen unterstützt.|  
 ||**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Verleger.|  
 |**use_ftp**|**true**|Verwendet FTP anstelle des regulären Protokolls zum Abrufen von Momentaufnahmen.|  
 ||**false**|Verwendet das reguläre Protokoll zum Abrufen von Momentaufnahmen.|  
@@ -103,19 +103,19 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_change_subscription_properties** wird in allen Replikationstypen verwendet.  
+ **sp_change_subscription_properties** wird für alle Replikations Typen verwendet.  
   
- **Sp_change_subscription_properties** für Pullabonnements verwendet wird.  
+ **sp_change_subscription_properties** wird für Pullabonnements verwendet.  
   
- Für Oracle-Verleger den Wert der *Publisher_db* wird ignoriert, da Oracle nur eine Datenbank pro Serverinstanz zulässt.  
+ Bei Oracle-Verlegern wird der Wert von *publisher_db* ignoriert, da Oracle nur eine Datenbank pro Instanz des Servers zulässt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_change_subscription_properties**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_change_subscription_properties**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [Sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_addmergepullsubscription_agent &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sp_dropsubscriber (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dropsubscriber (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 02d46b5df95335920dca9ef9cf80e9fa6dabb94f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef68803beedbfdb0d6034b2a92665f033d9641
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124799"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768288"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Entfernt die Abonnentenangabe auf einem registrierten Server. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Entfernt die Abonnentenangabe auf einem registrierten Server. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
 >  Diese gespeicherte Prozedur wurde als veraltet markiert. Es ist nicht mehr erforderlich, einen Abonnenten ausdrücklich auf dem Verleger zu registrieren.  
@@ -42,7 +42,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @subscriber = ] 'subscriber'` Ist der Name des zu löschenden Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten, der gelöscht werden soll. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -52,12 +52,12 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_dropsubscriber** wird in allen Replikationstypen verwendet.  
+ **sp_dropsubscriber** wird für alle Replikations Typen verwendet.  
   
- Diese gespeicherte Prozedur entfernt den Server **Sub** aus, und entfernt die Zuordnung von Remoteanmeldenamen von Systemadministrator **Repl_subscriber**.  
+ Diese gespeicherte Prozedur entfernt die Server **Sub** -Option und entfernt die Remote Anmeldungs Zuordnung des Systemadministrators zu **repl_subscriber**.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_dropsubscriber**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropsubscriber**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Löschen eines Pushabonnements](../../relational-databases/replication/delete-a-push-subscription.md)   

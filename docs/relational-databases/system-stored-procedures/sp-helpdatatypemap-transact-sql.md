@@ -1,5 +1,5 @@
 ---
-title: Sp_helpdatatypemap (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpdatatypemap (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101401"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771059"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu den definierten datentypzuordnungen zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Managementsysteme (DBMS). Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
+  Gibt Informationen zu den definierten Datentyp Zuordnungen zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Management Systems (DBMS) zurück. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,31 +43,31 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @source_dbms = ] 'source_dbms'` Ist der Name des DBMS aus dem die Datentypen zugeordnet werden. *Source_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
+`[ @source_dbms = ] 'source_dbms'`Der Name des DBMS, von dem die Datentypen zugeordnet werden. *source_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Die Quelle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
-|**ORACLE**|Die Quelle ist eine Oracle-Datenbank.|  
+|**ORAKEL**|Die Quelle ist eine Oracle-Datenbank.|  
   
-`[ @source_version = ] 'source_version'` Ist die Produktversion des Quell-DBMS. *Source_version*ist **varchar(10)** , wenn nicht angegeben, die datentypzuordnungen für alle Versionen des Quell-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Quellversion des DBMS.  
+`[ @source_version = ] 'source_version'`Die Produktversion des Quell-DBMS. *source_version*ist vom Datentyp **varchar (10)** . Wenn kein Wert angegeben wird, werden die Datentyp Zuordnungen für alle Versionen des Quell-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Quellversion des DBMS.  
   
-`[ @source_type = ] 'source_type'` Im Quell-DBMS aufgelistete Datentyp. *Source_type* ist **Sysname**, und wenn nicht angegeben, werden die Zuordnungen für alle Datentypen im Quell-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach dem Datentyp im Quell-DBMS.  
+`[ @source_type = ] 'source_type'`Der im Quell-DBMS aufgelistete Datentyp. *source_type* ist vom **Datentyp vom Datentyp sysname**. Wenn dieser Wert nicht angegeben wird, werden die Zuordnungen für alle Datentypen im Quell-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach dem Datentyp im Quell-DBMS.  
   
-`[ @destination_dbms = ] 'destination_dbms'` Ist der Name des Ziel-DBMS. *Destination_dbms* ist **Sysname**, und kann einen der folgenden Werte.  
+`[ @destination_dbms = ] 'destination_dbms'`Der Name des Ziel-DBMS. *destination_dbms* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Das Ziel ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
-|**ORACLE**|Das Ziel ist eine Oracle-Datenbank.|  
+|**ORAKEL**|Das Ziel ist eine Oracle-Datenbank.|  
 |**DB2**|Das Ziel ist eine IBM DB2-Datenbank.|  
 |**SYBASE**|Das Ziel ist eine Sybase-Datenbank.|  
   
-`[ @destination_version = ] 'destination_version'` Ist die Produktversion des Ziel-DBMS. *Destination_version*ist **varchar(10)** , und wenn nicht angegeben, werden die Zuordnungen für alle Versionen des Ziel-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Zielversion des DBMS.  
+`[ @destination_version = ] 'destination_version'`Die Produktversion des Ziel-DBMS. *destination_version*ist vom Datentyp **varchar (10)** . Wenn kein Wert angegeben wird, werden die Zuordnungen für alle Versionen des Ziel-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach der Zielversion des DBMS.  
   
-`[ @destination_type = ] 'destination_type'` Im Ziel-DBMS aufgelistete Datentyp. *Destination_type*ist **Sysname**, und wenn nicht angegeben, werden die Zuordnungen für alle Datentypen im Ziel-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach dem Datentyp im Ziel-DBMS.  
+`[ @destination_type = ] 'destination_type'`Der im Ziel-DBMS aufgelistete Datentyp. *destination_type*ist vom **Datentyp vom Datentyp sysname**. Wenn dieser Wert nicht angegeben wird, werden die Zuordnungen für alle Datentypen im Ziel-DBMS zurückgegeben. Ermöglicht das Filtern des Resultsets nach dem Datentyp im Ziel-DBMS.  
   
-`[ @defaults_only = ] defaults_only` Wird nur die standardmäßigen datentypzuordnungen zurückgegeben werden. *Defaults_only* ist **Bit**, hat den Standardwert **0**. **1** bedeutet, dass nur die standardmäßigen datentypzuordnungen zurückgegeben werden. **0** bedeutet, dass die standardmäßige und benutzerdefinierte Daten datentypzuordnungen zurückgegeben werden.  
+`[ @defaults_only = ] defaults_only`Gibt an, ob nur die standardmäßigen Datentyp Zuordnungen zurückgegeben werden. *defaults_only* ist vom Typ **Bit**. der Standardwert ist **0**. **1** bedeutet, dass nur die standardmäßigen Datentyp Zuordnungen zurückgegeben werden. **0** bedeutet, dass die Standard-und alle benutzerdefinierten Datentyp Zuordnungen zurückgegeben werden.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -78,18 +78,18 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**source_type**|Der Datentyp im Quell-DBMS.|  
 |**destination_dbms**|Der Name des Ziel-DBMS.|  
 |**destination_type**|Der Datentyp im Ziel-DBMS.|  
-|**is_default**|Gibt an, ob die Zuordnung eine Standardzuordnung oder eine alternative Zuordnung ist. Der Wert **0** gibt an, dass diese Zuordnung Benutzerdefiniert ist.|  
+|**is_default**|Gibt an, ob die Zuordnung eine Standardzuordnung oder eine alternative Zuordnung ist. Der Wert **0** gibt an, dass diese Zuordnung Benutzer definiert ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_helpdatatypemap** definiert datentypzuordnungen von nicht - SQL Server-Verlegern und von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verlegern zu nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
+ **sp_helpdatatypemap** definiert Datentyp Zuordnungen sowohl von nicht-SQL Server Verlegern als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch von Verlegern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu nicht--Abonnenten.  
   
- Wenn die angegebene Kombination aus Quelle und Ziel-DBMS nicht unterstützt wird, **Sp_helpdatatypemap** wird ein leeres Resultset zurückgegeben.  
+ Wenn die angegebene Kombination aus Quell-und Ziel-DBMS nicht unterstützt wird, gibt **sp_helpdatatypemap** ein leeres Resultset zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** auf dem Verteiler oder Mitglieder der festen Serverrolle die **Db_owner** -Datenbankrolle in der Verteilungsdatenbank kann ausführen **Sp_helpdatatypemap**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** auf dem Verteiler oder Mitglieder der festen Daten Bank Rolle **db_owner** in der Verteilungs Datenbank können **sp_helpdatatypemap**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   

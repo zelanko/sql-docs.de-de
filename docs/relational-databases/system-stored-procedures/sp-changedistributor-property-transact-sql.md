@@ -1,5 +1,5 @@
 ---
-title: Sp_changedistributor_property (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changedistributor_property (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ea4590e129812dd0acc68b6353fc4f379bb0b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110878"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771305"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ändert die Eigenschaften des Verteilers. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -38,26 +38,26 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @property = ] 'property'` Ist die Eigenschaft für einen bestimmten Verteiler. *Eigenschaft* ist **Sysname**, und kann einen der folgenden Werte sein.  
+`[ @property = ] 'property'`Die-Eigenschaft für einen angegebenen Verteiler. *Property* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|**heartbeat_interval**|Maximale Anzahl von Minuten an, denen ein Agent ohne Protokollierung einer verlaufsmeldung ausgeführt werden kann.|  
-|NULL (Standard)|Alle verfügbaren *Eigenschaft* Werte ausgegeben werden.|  
+|**heartbeat_interval**|Maximale Anzahl von Minuten, die ein Agent ohne Protokollierung einer Statusmeldung ausgeführt werden kann.|  
+|NULL (Standard)|Alle verfügbaren *Eigenschafts* Werte werden gedruckt.|  
   
-`[ @value = ] 'value'` Ist der Wert für die angegebene Verteilereigenschaft. *Wert* ist **varchar(255)** , hat den Standardwert NULL.  
+`[ @value = ] 'value'`Der Wert für die angegebene Verteiler Eigenschaft. der Wert ist vom Datentyp **varchar (255)** und hat den Standard *Wert* NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changedistributor_property** wird in allen Replikationstypen verwendet.  
+ **sp_changedistributor_property** wird für alle Replikations Typen verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changedistributor_property**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_property**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

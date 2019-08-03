@@ -1,5 +1,5 @@
 ---
-title: Sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 55f5597af15a264d85cd31175d570cc33ee47f63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081306"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762554"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Ändert die DTS-Paketeigenschaften (Data Transformation Services) eines Abonnements. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
+  Ändert die DTS-Paketeigenschaften (Data Transformation Services) eines Abonnements. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,25 +40,25 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Ist die Auftrags-ID des Verteilungs-Agents für das Pushabonnement. *Job_id* ist **varbinary(16)** , hat keinen Standardwert. Um die Verteilungsauftrags-ID zu ermitteln, führen Sie **Sp_helpsubscription** oder **Sp_helppullsubscription**.  
+`[ @job_id = ] job_id`Die Auftrags-ID des Verteilungs-Agent für das Pushabonnement. *job_id* ist vom Datentyp **varbinary (16)** und hat keinen Standardwert. Führen Sie **sp_helpsubscription** oder **sp_helppullsubscription**aus, um die Verteilungs Auftrags-ID zu ermitteln.  
   
-`[ @dts_package_name = ] 'dts_package_name'` Gibt den Namen des DTS-Pakets. *Dts_package_name* ist eine **Sysname**, hat den Standardwert NULL. Beispielsweise geben Sie ein Paket mit dem Namen **DTSPub_Package**, geben Sie `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Gibt den Namen des DTS-Pakets an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn Sie z. b. ein Paket mit dem Namen **DTSPub_Package**angeben `@dts_package_name = N'DTSPub_Package'`möchten, geben Sie an.  
   
-`[ @dts_package_password = ] 'dts_package_password'` Gibt das Kennwort für das Paket an. *Dts_package_password* ist **Sysname** hat den Standardwert NULL, der angibt, dass die Kennworteigenschaft ist, werden nicht geändert.  
+`[ @dts_package_password = ] 'dts_package_password'`Gibt das Kennwort für das Paket an. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** . der Standardwert ist NULL. der Wert gibt an, dass die Kenn Wort Eigenschaft unverändert bleiben soll.  
   
 > [!NOTE]  
 >  Ein DTS-Paket muss über ein Kennwort verfügen.  
   
-`[ @dts_package_location = ] 'dts_package_location'` Gibt den Speicherort des Pakets an. *Dts_package_location* ist eine **nvarchar(12)** , hat den Standardwert NULL, der angibt, dass der Speicherort des Pakets ist, werden nicht geändert. Der Speicherort des Pakets kann geändert werden, um **Verteiler** oder **Abonnenten**.  
+`[ @dts_package_location = ] 'dts_package_location'`Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **nvarchar (12)** und hat den Standardwert NULL, der angibt, dass der Speicherort des Pakets unverändert bleiben soll. Der Speicherort des Pakets kann in **Verteiler** oder **Abonnent**geändert werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changesubscriptiondtsinfo** wird verwendet, für Momentaufnahme- und Transaktionsreplikation, die nur für Pushabonnements geeignet sind.  
+ **sp_changesubscriptiondtsinfo** wird für die Momentaufnahme-und Transaktions Replikation verwendet, bei denen es sich nur um Pushabonnements handelt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** festen Serverrolle **Db_owner** feste Datenbankrolle oder der Ersteller des Abonnements kann ausführen **Sp_changesubscriptiondtsinfo**.  
+ Nur Mitglieder der festen Server Rolle ' **sysadmin'** , der festen Daten Bank Rolle **db_owner** oder der Ersteller des Abonnements können **sp_changesubscriptiondtsinfo**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

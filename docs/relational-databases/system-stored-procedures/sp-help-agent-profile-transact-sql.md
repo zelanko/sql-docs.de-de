@@ -1,5 +1,5 @@
 ---
-title: Sp_help_agent_profile (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_agent_profile (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055209"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771458"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Zeigt das Profil eines bestimmten Agents an. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -38,7 +38,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @agent_type = ] agent_type` Ist der Typ des Agents. *Agent_type* ist **Int**, hat den Standardwert **0**, und kann einen der folgenden Werte sein.  
+`[ @agent_type = ] agent_type`Der Typ des Agents. *agent_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -48,7 +48,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Merge-Agent|  
 |**9**|Warteschlangenlese-Agent|  
   
-`[ @profile_id = ] profile_id` Ist die ID des Profils, die angezeigt werden. *Profile_id* ist **Int**, hat den Standardwert **-1**, womit alle Profile in der **MSagent_profiles** Tabelle.  
+`[ @profile_id = ] profile_id`Die ID des Profils, das angezeigt werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert **-1**, mit dem alle Profile in der **MSagent_profiles** -Tabelle zurückgegeben werden.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -56,23 +56,23 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|ID des Profils.|  
 |**profile_name**|**sysname**|Eindeutig für den Agenttyp.|  
-|**agent_type**|**int**|**1** = Momentaufnahme-Agent<br /><br /> **2** = Protokolllese-Agent<br /><br /> **3** = Verteilungs-Agent<br /><br /> **4** = Merge-Agent<br /><br /> **9** = Warteschlangenlese-Agent|  
-|**Typ**|**int**|**0** = System<br /><br /> **1** = Benutzerdefiniert|  
-|**description**|**varchar(3000)**|Beschreibung des Profils.|  
+|**agent_type**|**int**|**1** = Momentaufnahmen-Agent<br /><br /> **2** = Protokolllese-Agent<br /><br /> **3** = Verteilungs-Agent<br /><br /> **4** = Merge-Agent<br /><br /> **9** = Warteschlangenlese-Agent|  
+|**Typ**|**int**|**0** = System<br /><br /> **1** = Benutzer definiert|  
+|**description**|**varchar (3000)**|Beschreibung des Profils.|  
 |**def_profile**|**bit**|Gibt an, ob dieses Profil das Standardprofil für diesen Agenttyp ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_help_agent_profile** wird in allen Replikationstypen verwendet.  
+ **sp_help_agent_profile** wird für alle Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Replmonitor** feste Datenbankrolle können ausführen **Sp_help_agent_profile**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **replmonitor** können **sp_help_agent_profile**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [Sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_add_agent_profile &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
  [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_dropdistributiondb (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dropdistributiondb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3acf4ee5515bad2db88e2d928ca897ba9e04a085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927813"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768859"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Löscht eine Verteilungsdatenbank. Löscht die von der Datenbank verwendeten physischen Dateien, falls sie nicht von einer anderen Datenbank verwendet werden. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -37,17 +37,17 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'` Ist die Datenbank zu löschen. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
+`[ @database = ] 'database'`Die Datenbank, die gelöscht werden soll. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_dropdistributiondb** wird in allen Replikationstypen verwendet.  
+ **sp_dropdistributiondb** wird für alle Replikations Typen verwendet.  
   
- Diese gespeicherte Prozedur muss ausgeführt werden, bevor der Verteiler durch Ausführen von **Sp_dropdistributor**.  
+ Diese gespeicherte Prozedur muss ausgeführt werden, bevor der Verteiler durch Ausführen von **sp_dropdistributor**gelöscht wird.  
   
- **Sp_dropdistributiondb** auch einen Warteschlangenlese-Agent-Auftrag für die Verteilungsdatenbank entfernt, sofern vorhanden.  
+ **sp_dropdistributiondb** entfernt auch einen Warteschlangenlese-Agent Auftrag für die Verteilungs Datenbank, sofern vorhanden.  
   
  Zum Deaktivieren der Verteilung muss die Verteilungsdatenbank online geschaltet sein. Wenn eine Datenbankmomentaufnahme für die Verteilungsdatenbank vorhanden ist, muss diese vor dem Deaktivieren der Verteilung gelöscht werden. Eine Datenbankmomentaufnahme ist eine schreibgeschützte Offlinekopie einer Datenbank und steht nicht in Verbindung mit einer Replikationsmomentaufnahme. Weitere Informationen finden Sie unter [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
@@ -55,7 +55,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_dropdistributiondb**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropdistributiondb**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   

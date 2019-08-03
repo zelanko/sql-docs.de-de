@@ -1,5 +1,5 @@
 ---
-title: Sp_dropdistributor (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dropdistributor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9943e6f3d43ff1b543a86425b2644ee4c46a105c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 032ecf59a3ffba4a7a7a6f4739c92b688858d501
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081512"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768869"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Deinstalliert den Verteiler. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank mit Ausnahme der Verteilungsdatenbank ausgeführt.  
   
@@ -38,33 +38,33 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @no_checks = ] no_checks` Gibt an, ob abhängige Objekte überprüft vor dem Löschen des Verteilers. *No_checks* ist **Bit**, hat den Standardwert 0.  
+`[ @no_checks = ] no_checks`Gibt an, ob nach abhängigen Objekten gesucht werden soll, bevor der Verteiler gelöscht wird. *no_checks* ist vom Typ **Bit**. der Standardwert ist 0.  
   
- Wenn **0**, **Sp_dropdistributor** überprüft, um sicherzustellen, dass alle Objekte von Veröffentlichungs- und Verteilungsobjekte zusätzlich zum Verteiler gelöscht wurden.  
+ Bei **0**überprüft **sp_dropdistributor** , ob alle Veröffentlichungs-und Verteilungs Objekte zusätzlich zum Verteiler gelöscht wurden.  
   
- Wenn **1**, **Sp_dropdistributor** löscht alle Veröffentlichungs- und Verteilungsobjekte vor dem Deinstallieren des Verteilers.  
+ Bei **1**löscht **sp_dropdistributor** alle Veröffentlichungs-und Verteilungs Objekte vor der Deinstallieren des Verteilers.  
   
-`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ohne Herstellen einer Verbindung mit dem Verteiler ausgeführt wird. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**.  
+`[ @ignore_distributor = ] ignore_distributor`Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
- Wenn **0**, **Sp_dropdistributor** eine Verbindung mit dem Verteiler her und entfernt alle Replikationsobjekte. Wenn **Sp_dropdistributor** kann keine Verbindung mit dem Verteiler, schlägt die gespeicherte Prozedur fehl.  
+ Bei **0**stellt **sp_dropdistributor** eine Verbindung mit dem Verteiler her und entfernt alle Replikations Objekte. Wenn **sp_dropdistributor** keine Verbindung mit dem Verteiler herstellen kann, schlägt die gespeicherte Prozedur fehl.  
   
- Wenn **1**, keine Verbindung mit dem Verteiler hergestellt wird und die Replikationsobjekte werden nicht entfernt. Diese Möglichkeit wird verwendet, wenn der Verteiler deinstalliert wird oder dauerhaft offline ist. Die Objekte für diesen Verleger werden auf dem Verteiler nicht entfernt, bis der Verteiler zu einem späteren Zeitpunkt neu installiert wird.  
+ Wenn der Wert **1**ist, wird keine Verbindung mit dem Verteiler hergestellt, und die Replikations Objekte werden nicht entfernt. Diese Möglichkeit wird verwendet, wenn der Verteiler deinstalliert wird oder dauerhaft offline ist. Die Objekte für diesen Verleger werden auf dem Verteiler nicht entfernt, bis der Verteiler zu einem späteren Zeitpunkt neu installiert wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_dropdistributor** wird in allen Replikationstypen verwendet.  
+ **sp_dropdistributor** wird für alle Replikations Typen verwendet.  
   
- Wenn andere Verleger- oder Verteilungsobjekte auf dem Server befinden **Sp_dropdistributor** schlägt fehl, es sei denn, **@no_checks** nastaven NA hodnotu **1**.  
+ Wenn andere Verleger-oder Verteilungs Objekte auf dem Server vorhanden sind, schlägt **@no_checks** sp_dropdistributor fehl, es sei denn, ist auf **1**festgelegt.  
   
- Diese gespeicherte Prozedur muss ausgeführt werden, nach dem Löschen der Distribution-Datenbank durch Ausführen von **Sp_dropdistributiondb**.  
+ Diese gespeicherte Prozedur muss ausgeführt werden, nachdem die Verteilungs Datenbank durch Ausführen von **sp_dropdistributiondb**gelöscht wurde.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_dropdistributor**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropdistributor**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   

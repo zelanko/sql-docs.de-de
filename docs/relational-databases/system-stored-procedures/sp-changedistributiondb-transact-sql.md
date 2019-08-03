@@ -1,5 +1,5 @@
 ---
-title: Sp_changedistributiondb (Transact-SQL) | Microsoft-Dokumentation
+title: sp_changedistributiondb (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b2f098fab2856b51b389e2161fdbe3281e1e3cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120174"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768962"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ändert die Eigenschaften der Verteilungsdatenbank. Diese gespeicherte Prozedur wird auf dem Verteiler für jede Datenbank ausgeführt.  
   
@@ -39,30 +39,30 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'` Ist der Name der Verteilungsdatenbank. *Datenbank* ist **Sysname**, hat keinen Standardwert.  
+`[ @database = ] 'database'`Der Name der Verteilungs Datenbank. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @property = ] 'property'` Ist die Eigenschaft für die angegebene Datenbank zu ändern. *Eigenschaft* ist **Sysname**, und kann einen der folgenden Werte sein.  
+`[ @property = ] 'property'`Die Eigenschaft, die für die angegebene Datenbank geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich.  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |**history_retention**|Beibehaltungsdauer für die Verlaufstabelle.|  
 |**max_distretention**|Maximale Beibehaltungsdauer für die Verteilung.|  
 |**min_distretention**|Minimale Beibehaltungsdauer für die Verteilung.|  
-|NULL (Standard)|Alle verfügbaren *Eigenschaft* Werte ausgegeben werden.|  
+|NULL (Standard)|Alle verfügbaren *Eigenschafts* Werte werden gedruckt.|  
   
-`[ @value = ] 'value'` Ist der neue Wert für die angegebene Eigenschaft. *Wert* ist **nvarchar(255)** , hat den Standardwert NULL.  
+`[ @value = ] 'value'`Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (255)** und hat den Standard *Wert* NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_changedistributiondb** wird in allen Replikationstypen verwendet.  
+ **sp_changedistributiondb** wird für alle Replikations Typen verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle **Sp_changedistributiondb**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributiondb**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
