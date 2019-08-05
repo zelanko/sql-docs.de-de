@@ -10,14 +10,17 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895538"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769352"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Problembehandlung: Suchen von Fehlern bei SQL Server-Transaktionsreplikationen 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
 Die Problembehandlung von Replikationsfehlern kann ohne grundlegende Kenntnisse der Transaktionsreplikation frustrierend sein. Der erste Schritt beim Erstellen einer Veröffentlichung besteht darin, den Momentaufnahmen-Agent eine Momentaufnahme erstellen zu lassen und diese im Ordner für Momentaufnahmen zu speichern. Anschließend wendet der Verteilungs-Agent die Momentaufnahme auf den Abonnenten an. 
 
 Bei diesem Vorgang wird die Veröffentlichung erstellt und in den Zustand *Wird synchronisiert* versetzt. Die Synchronisierung erfolgt in drei Phasen:
