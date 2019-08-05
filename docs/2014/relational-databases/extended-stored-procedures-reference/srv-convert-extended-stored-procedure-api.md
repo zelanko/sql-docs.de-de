@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127270"
 ---
-# <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (API für erweiterte gespeicherte Prozeduren)
+# <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
@@ -112,7 +112,7 @@ destlen
 -   Beim Konvertieren einer Zeichenfolge in einen numerischen Datentyp ist ein Syntaxfehler aufgetreten.  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Siehe auch  
  [srv_setutype (API für erweiterte gespeicherte Prozeduren)](srv-setutype-extended-stored-procedure-api.md)   
