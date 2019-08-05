@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df93be45d9e914d97e9fd8f0c2f712f3935ea8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939331"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770810"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Überprüfen replizierter Tabellen auf Unterschiede (Replikationsprogrammierung)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Mithilfe der Artikelüberprüfung wird ermittelt, ob veröffentlichte Daten für Tabellenartikel auf dem Verleger und dem Verteiler identisch sind. Unterschiede können auf Nichtkonvergenz hinweisen. Weitere Informationen zur Überprüfung finden Sie unter [Überprüfen von replizierten Daten](../../../relational-databases/replication/validate-data-at-the-subscriber.md). Die Überprüfung gibt jedoch lediglich Auskunft darüber, ob die Daten identisch sind oder nicht. Details zu Unterschieden zwischen der Quell- und der Zieltabelle werden nicht zurückgegeben. Das Befehlszeilenhilfsprogramm **tablediff** gibt ausführliche Informationen zu den Unterschieden zwischen zwei Tabellen zurück und kann sogar ein [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript generieren, mit dem ein Abonnement mit den Daten auf dem Verleger in Übereinstimmung gebracht werden kann.  
   
 > [!NOTE]  

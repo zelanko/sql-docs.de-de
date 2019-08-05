@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9de11f0fcb73eda1b00d7b956e55995d13cd40f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 62816ac084a565f75d50f5f1f8b2b23467158242
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104623"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768433"
 ---
 # <a name="scripting-replication"></a>Erstellen von Skripts für die Replikation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Für die Replikationskomponenten in einer Topologie sollten im Rahmen des Plans zur Wiederherstellung im Notfall Skripts erstellt werden; diese können dann auch zur Automatisierung sich wiederholender Tasks verwendet werden. Skripts enthalten die gespeicherten Transact-SQL-Systemprozeduren, die zum Implementieren der Replikationskomponenten im Skript, wie z. B. der Veröffentlichungen oder Abonnements, benötigt werden. Skripts können nach dem Erstellen einer Komponente nicht mithilfe eines Assistenten (z. B. dem Assistenten für neue Veröffentlichung) oder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellt werden. Sie können das Skript mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder **sqlcmd**anzeigen, ändern oder ausführen. Skripts können mit Sicherungsdateien gespeichert und dann verwendet werden, wenn eine Replikationstopologie erneut konfiguriert werden muss.  
   
  Wenn die Eigenschaften einer Komponente geändert werden, muss das Skript für diese Komponente neu erstellt werden. Wenn Sie bei einer Transaktionsreplikation benutzerdefinierte gespeicherte Prozeduren verwenden, sollte zusammen mit den Skripts eine Kopie aller dieser Prozeduren gespeichert werden. Nach Änderungen an der Prozedur sollte die Kopie dann aktualisiert werden (zu Prozedurupdates kommt es in der Regel nach Schemaänderungen oder wenn sich die Anwendungsanforderungen ändern). Weitere Informationen zu benutzerdefinierten Prozeduren finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  

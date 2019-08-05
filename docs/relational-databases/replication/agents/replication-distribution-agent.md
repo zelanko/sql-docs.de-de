@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 12d61ca049f74268eda66e612d4b79406b42114e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027737"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770751"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Der Replikationsverteilungs-Agent ist eine ausführbare Datei, die die Momentaufnahme (bei der Momentaufnahme- und Transaktionsreplikation) und die in den Tabellen der Verteilungsdatenbank gespeicherten Transaktionen (bei der Transaktionsreplikation) in die Zieltabellen auf den Abonnenten verschiebt.  
   
 > [!NOTE]  

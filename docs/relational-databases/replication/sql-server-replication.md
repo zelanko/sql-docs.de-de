@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 17561f22d85a7bd6564d898d84da22364c0c92a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e158860b786a7612a31acd629a7b5d5deff203f3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129952"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769478"
 ---
 # <a name="sql-server-replication"></a>SQL Server-Replikation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Bei der Replikation handelt es sich um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren zwischen den Datenbanken, um die Konsistenz der Daten sicherzustellen. Mithilfe von Replikation können Sie Daten an verschiedene Standorte, an Remotebenutzer oder mobile Benutzer über lokale Netzwerke und WANs (Wide Area Network), über DFÜ-Verbindungen, Funkverbindungen oder über das Internet verteilen.  
   
  Die Transaktionsreplikation wird typischerweise in reinen Serverumgebungen verwendet, die einen hohen Durchsatz erfordern, und ist für die folgenden Fälle geeignet: Verbessern der Skalierbarkeit und Verfügbarkeit, Data Warehousing und Berichterstellung, Integrieren von Daten aus mehreren Standorten, Integrieren heterogener Daten und Auslagern der Batchverarbeitung. Die Mergereplikation ist in erster Linie für mobile Anwendungen oder verteilte Serveranwendungen mit möglichen Datenkonflikten konzipiert. Dazu gehören folgende häufige Szenarien: Datenaustausch mit mobilen Benutzern, Point-of-Sale-Anwendungen (POS) und Integrieren von Daten aus mehreren Standorten. Momentaufnahmereplikation wird verwendet, um das Anfangsdataset für Transaktions- und Mergereplikation bereitzustellen. Sie kann auch verwendet werden, wenn vollständige Aktualisierungen von Daten erforderlich sind. Mit diesen drei Replikationstypen stellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein leistungsfähiges und flexibles System zum Synchronisieren von Daten im gesamten Unternehmen bereit. Die Replikation in SQLCE 3.5 und SQLCE 4.0 wird unter [!INCLUDE[win8srv](../../includes/win8srv-md.md)] und [!INCLUDE[win8](../../includes/win8-md.md)]unterstützt.  

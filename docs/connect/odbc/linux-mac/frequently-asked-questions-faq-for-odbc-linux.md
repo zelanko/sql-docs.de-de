@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d3de76486a44d8c107d0ee35f6069f6854758477
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008807"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702771"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Häufig gestellte Fragen (FAQ) zu ODBC (Linux und macOS)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -35,7 +35,7 @@ Der ODBC-Treiber unter Linux und macOS unterstützt mit Ausnahme von LocalDB all
 Ja. Wenn Sie über ein vorhandenes Setup der Kerberos-Umgebung verfügen, sollten Sie mithilfe der `Trusted_Connection=Yes` Option DSN oder Verbindungs Zeichenfolge eine Verbindung mit Servern herstellen können. Weitere Informationen finden Sie unter [Using Integrated Authentication (Verwenden der integrierten Authentifizierung)](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
   
 **Welche Unicode-Codierung sollte eine Anwendung verwenden?**  
-UTF-8 für SQL_CHAR-Daten und UTF-16 für SQL_WCHAR-Daten.  
+UTF-8 für SQL_CHAR-Daten und UTF-16 für SQL_WCHAR-Daten. Abhängig vom System Gebiets Schema und der Treiber Version können nicht-UTF-8-Daten in einer von mehreren Codierungen ebenfalls unterstützt werden. Weitere Informationen finden Sie unter [Programmier Richtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md).
 
 **Gibt es ODBC-Beispiele, die ich herunterladen und mit dem Treiber laufen lassen kann, um damit zu experimentieren oder sie auszuwerten?**
 

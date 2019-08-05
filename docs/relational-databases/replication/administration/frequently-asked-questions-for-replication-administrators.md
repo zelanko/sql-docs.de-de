@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0da7b4425a5ca5c27e6f4ec745880bbcdfb6d09c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939147"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770823"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Die folgenden Fragen und Antworten bieten einen Leitfaden für zahlreiche Aufgaben, die Administratoren von replizierten Datenbanken ausführen müssen.  
   
 ## <a name="configuring-replication"></a>Konfigurieren der Replikation  

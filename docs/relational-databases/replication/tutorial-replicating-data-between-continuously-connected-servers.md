@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9c0a47062d50f4306af3ffb92e9e575317a014f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895390"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769413"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Lernprogramm: Konfigurieren der Replikation zwischen zwei Servern mit kontinuierlicher Verbindung (Transaktionsreplikation)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Die Transaktionsreplikation stellt eine bewährte Lösung für das Problem des V
 In diesem Tutorial wird die Konfiguration einer Topologie für Transaktionsreplikationen für Server mit kontinuierlicher Verbindung erläutert. Weitere Informationen zur Funktionsweise der Transaktionsreplikation finden Sie unter [Übersicht über die Transaktionsreplikation](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication). 
   
 ## <a name="what-you-will-learn"></a>Lernziele  
-In diesem Tutorial erfahren Sie, wie Sie Daten aus einer Datenbank mithilfe der Transaktionsreplikation in einer anderen Datenbank veröffentlichen. 
+In diesem Tutorial erfahren Sie, wie Sie Daten aus einer Datenbank mithilfe der Transaktionsreplikation in einer anderen Datenbank veröffentlichen.  
 
 In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]

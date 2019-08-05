@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 19e37ca43e7fcac57e9cac2ae5c953d608e1e172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2bb56fedd47434f865bc8121cd906a73528f5c1c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046693"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769625"
 ---
 # <a name="identity-and-access-control-replication"></a>Identität und Zugriffssteuerung (Replikation)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Als Authentifizierung wird der Vorgang bezeichnet, bei dem eine Entität (in diesem Kontext normalerweise ein Computer) überprüft, dass eine andere Entität, die auch als *Prinzipal*bezeichnet wird (normalerweise ein anderer Computer oder Benutzer), tatsächlich das ist, was sie vorgibt. Als Autorisierung wird der Vorgang bezeichnet, bei dem einem authentifizierten Prinzipal Zugriff auf Ressourcen gewährt wird, beispielsweise auf eine Datei in einem Dateisystem oder eine Tabelle in einer Datenbank.  
   
  Für die Replikationssicherheit wird mithilfe von Authentifizierung und Autorisierung der Zugriff auf replizierte Datenbankobjekte sowie auf die Computer und Agents gesteuert, die in die Replikationsverarbeitung involviert sind. Hierzu werden drei Mechanismen herangezogen:  

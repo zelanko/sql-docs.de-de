@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34e0bc66497d789e13005b1bdaa85e50bb062234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e4ec223179bf7fdb2e2fae250f95ab241ed1acf7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120276"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770013"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>Veröffentlichungsinformationen, Überwachungstoken (SQL Server 2005 und höher)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Mithilfe der Registerkarte **Überwachungstoken** können Sie Verbindungen überprüfen und die Latenzzeit eines Systems messen, das die Transaktionsreplikation verwendet. Ein Token (eine geringe Mange an Daten) wird in das Transaktionsprotokoll der Veröffentlichungsdatenbank geschrieben, wie eine normale replizierte Transaktion gekennzeichnet und über das System gesendet. Auf diese Weise werden die folgenden Berechnungen ermöglicht:  
   
 -   Wie viel Zeit zwischen dem Commit einer Transaktion auf dem Verleger und dem Einfügen des zugehörigen Befehls in die Verteilungsdatenbank auf dem Verteiler verstreicht.  

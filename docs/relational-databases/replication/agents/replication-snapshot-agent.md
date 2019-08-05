@@ -15,19 +15,22 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1e0c9d8d91bce3cc632e6cfd8a5f50353a55793a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085931"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768272"
 ---
 # <a name="replication-snapshot-agent"></a>Replikationsmomentaufnahme-Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Der Replikationsmomentaufnahme-Agent ist eine ausführbare Datei, die Momentaufnahmedateien vorbereitet, die das Schema und die Daten von veröffentlichten Tabellen und Datenbankobjekten enthalten, die Dateien im Momentaufnahmeordner speichert und Synchronisierungsaufträge in der Verteilungsdatenbank aufzeichnet.  
   
 > [!NOTE]  
->  Parameter können in beliebiger Reihenfolge angegeben werden.  
+>  - Parameter können in beliebiger Reihenfolge angegeben werden.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="syntax"></a>Syntax  
   

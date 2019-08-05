@@ -18,12 +18,12 @@ author: aliceku
 ms.author: aliceku
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b01b076e696b5c607b6c9257e309f74c6d53ef55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef9e0378d3a7ca0b5749788471b4ef97832d179d
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111864"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670596"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -241,7 +241,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 Auf ähnliche Weise können Sie den TDE-Verschlüsselungsscan mithilfe der folgenden Syntax fortsetzen:
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
 `encryption_scan_state` wurde der dynamischen Verwaltungssicht `sys.dm_database_encryption_keys` hinzugefügt, um den aktuellen Status des Verschlüsselungsscans anzuzeigen. Außerdem wurde eine neue Spalte namens `encryption_scan_modify_date` hinzugefügt, die das Datum und die Uhrzeit der letzten Änderung des Status des Verschlüsselungsscans enthält. Beachten Sie außerdem, dass beim Start eine Meldung im Fehlerprotokoll protokolliert wird, die angibt, dass ein vorhandener Scan pausiert wurde, wenn die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz neu gestartet wird, während die Verschlüsselungsüberprüfung angehalten ist.

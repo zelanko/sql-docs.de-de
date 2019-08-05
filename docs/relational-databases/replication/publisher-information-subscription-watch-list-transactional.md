@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dbdb879f51c564dcfeb156a8b56b77bbe8d5d10e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 9c550e12b671f7063b8659de8d7b998f86917ff2
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021352"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763944"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>Verlegerinformationen, Überwachungsliste für Abonnements (Transaktion)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Die Registerkarte **Überwachungsliste für Abonnements** ist für Verteiler verfügbar, die SQL Server 2005 oder spätere Versionen ausführen. Sie ist dafür konzipiert, Informationen zu Abonnements von allen Veröffentlichungen anzuzeigen, die für den ausgewählten Verleger verfügbar sind. Sie können die Liste der Abonnements filtern, um Fehler, Warnungen und Abonnements mit schlechter Leistung anzuzeigen. Auf dieser Registerkarte können Administratoren sämtliche Replikationsaktivitäten auf einem Verleger überwachen: Der Replikationsmonitor zeigt entsprechend des ausgewählten Replikationstyps und der im Dropdown-Listenfeld **Anzeigen** ausgewählten Option alle Abonnements an, für die Handlungsbedarf besteht. Da die auf dieser Registerkarte angezeigten Elemente auf den aktuellen Daten für Status und Leistung basieren, werden auf dieser Seite nur Abonnements angezeigt, die mit der Option im Listenfeld **Anzeigen** zum aktuellen Zeitpunkt übereinstimmen.  
   
 ## <a name="options"></a>enthalten  

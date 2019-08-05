@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edcd8f68fbd35867a1c733304e67d0b0d7992bd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 69d0337fe66af61e66290117d94043cc01547524
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085883"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770714"
 ---
 # <a name="article-issues"></a>Artikelprobleme
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Auf der Seite **Artikelprobleme** werden die für Artikel ermittelten Bedingungen aufgeführt sowie alle Änderungen, die als Folge dieser Bedingungen erforderlich sind. In der folgenden Tabelle werden mögliche Probleme und Aktionen aufgeführt, die erforderlich sind, um die richtige Funktionsweise von Replikation und vorhandenen Anwendungen sicherzustellen.  
   
 |Artikelproblem|Details|Erforderliche Aktion|  

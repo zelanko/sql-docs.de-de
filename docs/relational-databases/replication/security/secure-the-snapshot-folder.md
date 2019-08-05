@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30e0f800477af8305f64b617aa3af543e789bdc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 68f87d4707f17eab8a37332b6db2baff5ed5a42f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051892"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768464"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sichern des Momentaufnahmeordners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Der Momentaufnahmeordner ist ein Verzeichnis, in dem Momentaufnahmedateien gespeichert werden. Es empfiehlt sich, dieses Verzeichnis zum Speichern von Momentaufnahmen zu reservieren. Gewähren Sie dem Momentaufnahme-Agent Schreibzugriff auf den Ordner, und stellen Sie sicher, dass nur das Windows-Konto Leseberechtigung erhält, das der Merge-Agent bzw. der Verteilungs-Agent für den Zugriff auf den Ordner verwendet. Das dem Agent zugeordnete Windows-Konto muss ein Domänenkonto sein, damit auf den Momentaufnahmeordner zugegriffen werden kann, der sich auf einem Remotecomputer befindet.  
   
 > [!NOTE]  

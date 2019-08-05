@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1813cb8f1790fc7383b4eb2fac747cb3efdcb290
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 416a4dd7b2c4d68860263b7417d2c48ddffd644b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021283"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769761"
 ---
 # <a name="publishers"></a>Verleger
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Sie können anderen Verlegern die Berechtigung zum Verwenden dieses Verteilers erteilen. Beachten Sie, dass dieser Server nicht zu einem Verleger wird, wenn Sie es einem Verleger ermöglichen, diesen Server als Verteiler zu verwenden. Sie müssen eine Verbindung mit dem Verleger herstellen, ihn für das Veröffentlichen konfigurieren und diesen Server als Verteiler auswählen. Sie können den Verleger konfigurieren und mithilfe des Assistenten für neue Veröffentlichung einen Verteiler auswählen.  
   
  Die von Ihnen als Verleger ausgewählten Server verwenden die auf der Seite **Verteilungsdatenbank** dieses Assistenten ausgewählte Verteilungsdatenbank. Aktivieren Sie zu diesem Zeitpunkt nicht den Verleger, wenn Sie eine andere Verteilungsdatenbank verwenden möchten. Verwenden Sie stattdessen das Dialogfeld **Verteilereigenschaften** , um Verleger nach dem Abschließen des Verteilungskonfigurations-Assistenten hinzuzufügen.  

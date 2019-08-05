@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 4ab035890dad4e51b6bc3a8d3f1c463e64143ac1
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307583"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670603"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Konfigurieren von Always Encrypted mit Secure Enclaves
 
@@ -866,13 +866,13 @@ Um Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung verwend
 4. Installieren Sie das folgende NuGet-Paket, indem Sie zu **Tools** (Hauptmenü) > **NuGet-Paket-Manager** > **Paket-Manager-Konsole** gehen. Führen Sie den folgenden Code in der Paket-Manager-Konsole aus.
 
    ```powershell
-   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider --IncludePrerelease
+   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders -IncludePrerelease
    ```
 
 5. Wenn Sie Azure Key Vault für die Speicherung Ihrer Spaltenhauptschlüssel verwenden, installieren Sie die folgenden NuGet-Pakete, indem Sie zu **Tools** (Hauptmenü) > **NuGet-Paket-Manager** > **Paket-Manager-Konsole** gehen. Führen Sie den folgenden Code in der Paket-Manager-Konsole aus.
 
    ```powershell
-   Install-Package  Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider  --IncludePrerelease -Version 2.2.0
+   Install-Package Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -IncludePrerelease -Version 2.2.0
    Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
    ```
 
@@ -881,16 +881,17 @@ Um Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung verwend
 8. Suchen Sie den Abschnitt \<configuration\>. Suchen Sie im Abschnitt \<configuration\> den Abschnitt \<configSections\> auf. Fügen Sie folgenden Abschnitt innerhalb von \<configSections\> hinzu:
 
    ```xml
-   <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient. SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
+   <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
 9. Fügen Sie innerhalb des Abschnitts „configuration", unterhalb von \<configSections\>, den folgenden Abschnitt hinzu, der einen Enclave-Provider spezifiziert, der für die Bestätigung und Interaktion mit Intel SGX-Enclaves verwendet werden soll:
 
    ```xml
-   \<SqlColumnEncryptionEnclaveProviders\>
-       \<providers\>
-       \<add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders. VirtualizationBasedSecurityEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/\>
-       \</SqlColumnEncryptionEnclaveProviders\>
+   <SqlColumnEncryptionEnclaveProviders>
+       <providers>
+           <add name="VBS"  type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.VirtualizationBasedSecurityEnclaveProvider,  Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders,    Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"/>
+       </providers>
+   </SqlColumnEncryptionEnclaveProviders>
    ```
 
 ### <a name="develop-and-test-your-app"></a>Entwickeln und Testen Ihrer Anwendung

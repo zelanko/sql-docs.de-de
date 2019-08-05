@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24bb3bc28929921c7a6aae5c19b990a8d931fc5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b70f8c24ed54a6f36a2c224a0fb3ea5182bf3c30
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085864"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770664"
 ---
 # <a name="articles"></a>Artikel
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Auf der Seite **Artikel** können Sie angeben, welche Datenbankobjekte als Artikel in die Veröffentlichung eingeschlossen werden sollen. Wenn Sie ein Datenbankobjekt veröffentlichen, das von mindestens einem weiteren Datenbankobjekt abhängt, müssen Sie alle Objekte veröffentlichen, auf die verwiesen wird. Wenn Sie beispielsweise eine Sicht veröffentlichen, die von einer Tabelle abhängt, muss auch die Tabelle veröffentlicht werden.  
   
  Objekte, die nicht veröffentlicht werden können, sind neben dem Objekt durch ein rotes Symbol gekennzeichnet. Zusätzlich wird im Informationsbereich am unteren Rand der Assistentenseite eine Erläuterung angezeigt. Folgende Objekte können nicht veröffentlicht werden:  

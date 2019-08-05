@@ -24,15 +24,16 @@ helpviewer_keywords:
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e56b5a2e81532e6b7a26711977ec6ae9db5d7f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 050197c7ce5a6098397b6ad3db13a933983270d6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027747"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770739"
 ---
 # <a name="replication-agents-overview"></a>Replikations-Agents (Übersicht)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Von der Replikation werden eine Reihe eigenständiger Programme verwendet, die Agents genannt werden. Diese Agents führen die mit dem Nachverfolgen von Änderungen und Verteilen von Daten verbundenen Aufgaben aus. Standardmäßig werden Replikations-Agents als Aufträge ausgeführt, die unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent geplant werden. Zum Ausführen dieser Aufträge muss der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ausgeführt werden. Replikations-Agents können auch in der Befehlszeile und von Anwendungen ausgeführt werden, die Replikationsverwaltungsobjekte (RMO) verwenden. Replikations-Agents können im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsmonitor und in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwaltet werden.  
   
 ## <a name="sql-server-agent"></a>SQL Server-Agent  

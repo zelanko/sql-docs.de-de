@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b70b52951bd5da8abe16d3276d8608ff37f4924e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 8a52640a104af0030d0ebf51162e0efbda80d56a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128270"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768128"
 ---
 # <a name="enable-a-database-for-replication-sql-server-management-studio"></a>Aktivieren einer Datenbank für die Replikation (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
 Eine Datenbank wird implizit für die Replikation aktiviert, wenn ein Mitglied der festen Serverrolle **sysadmin** mit dem Assistenten für neue Veröffentlichung eine Veröffentlichung erstellt. Ein Mitglied der festen Serverrolle **sysadmin** kann eine Datenbank auch explizit für die Replikation aktivieren, sodass ein Mitglied der festen Datenbankrolle **db_owner** eine oder mehrere Veröffentlichungen in der Datenbank erstellen kann. Verwenden Sie zum expliziten Aktivieren einer Datenbank im Dialogfeld **Verlegereigenschaften – \<Verleger>** die Seite **Veröffentlichungsdatenbanken**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   

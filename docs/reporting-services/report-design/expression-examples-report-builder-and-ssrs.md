@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 888d46c7c03b9665c64e54ddffed9d29c67afcad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579145"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661342"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
 Ausdrücke werden in paginierten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichten häufig zum Steuern des Inhalts und der Darstellung des Berichts verwendet. Ausdrücke werden in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]geschrieben und können integrierte Funktionen, benutzerdefinierten Code, Berichts- und Gruppenvariablen sowie benutzerdefinierte Variablen verwenden. Ausdrücke beginnen immer mit einem Gleichheitszeichen (=). Weitere Informationen zum Ausdrucks-Editor und den Verweistypen, die Sie einfügen können, finden Sie unter [Ausdrucksverwendungen in Berichten (Berichts-Generator und SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) und [Hinzufügen eines Ausdrucks (Berichts-Generator und SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -247,7 +247,7 @@ Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Opera
 -   Durch Angabe eines Schlüsselfelds können Sie mit der **Lookup** -Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, beispielsweise ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset („Product“) an, wenn der Produktbezeichner als Grundlage für die Übereinstimmung angegeben ist:  
   
     ```  
-    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
     ```  
   
 ### <a name="lookupset"></a>LookupSet  

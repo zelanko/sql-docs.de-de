@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127891"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767768"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialisieren eines Transaktionsabonnements ohne Momentaufnahme
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Standardmäßig wird ein Abonnement für eine Transaktionsveröffentlichung mithilfe einer Momentaufnahme initialisiert, die vom Momentaufnahme-Agent generiert und vom Verteilungs-Agent angewendet wird. In einigen Szenarien, wenn z. B. große Anfangsdatasets eine Rolle spielen, ist es vorteilhafter, ein Abonnement mit einer anderen Methode zu initialisieren. Folgende weitere Methoden stehen zum Initialisieren eines Abonnements zur Verfügung:  
   
 -   Angeben einer Sicherung. Stellen Sie die Sicherung auf dem Abonnenten her. Der Verteilungs-Agent kopiert dann alle erforderlichen Replikationsmetadaten und gespeicherten Prozeduren. Mit der Initialisierung über eine Sicherung können Daten am schnellsten und bequemsten auf den Abonnenten übertragen werden. Das liegt daran, dass jede neuere Sicherung verwendet werden kann, die nach dem Aktivieren einer Veröffentlichung für das Initialisieren mit einer Sicherung vorgenommen wurde.  

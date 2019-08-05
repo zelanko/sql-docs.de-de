@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a6b8521564d6b085a4cab0102a5138682077b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b226bb096a532aaeec77cc38bcecd0ef805c9d2f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939085"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768740"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Versetzen einer Replikationstopologie in einen inaktiven Status (Replikationsprogrammierung mit Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Um das System*in einen inaktiven Status zu versetzen* , beenden Sie alle Aktivitäten in veröffentlichten Tabellen an allen Knoten, und stellen Sie sicher, dass jeder Knoten alle Änderungen aller anderen Knoten erhalten hat. In diesem Thema wird erläutert, wie eine Replikationstopologie in einen inaktiven Status versetzt wird. Dies ist für eine Reihe von Verwaltungsaufgaben erforderlich. Zudem finden Sie hier Informationen dazu, wie Sie überprüfen können, ob ein Knoten alle Änderungen anderer Knoten erhalten hat.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>So versetzen Sie eine Transaktionsreplikationstopologie mit schreibgeschützten Abonnements in einen inaktiven Status  

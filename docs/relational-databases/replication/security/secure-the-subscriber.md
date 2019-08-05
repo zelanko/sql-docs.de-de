@@ -14,16 +14,19 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9914246135350540b0155e61905d1e548a033fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f07a80d5667a91376c9e5936be2474c826d6569a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051870"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769613"
 ---
 # <a name="secure-the-subscriber"></a>Sichern des Abonnenten
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Merge-Agents und Verteilungs-Agents stellen Verbindungen mit dem Abonnenten her. Diese Verbindungen können im Kontext einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung oder einer Windows-Anmeldung erfolgen. Es ist wichtig, eine geeignete Anmeldung für diese Agents bereitzustellen, ohne dass dabei der Grundsatz verletzt wird, dass nur so viele Rechte erteilt werden sollten, wie unbedingt erforderlich sind. Außerdem muss der Aufbewahrungsort für die Kennwörter geschützt sein. Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="distribution-agent"></a>Verteilungs-Agent  
  Es gibt entweder einen Verteilungs-Agent pro Abonnement (unabhängiger Agent – dies ist der Standard bei Veröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt werden) oder einen Verteilungs-Agent pro Veröffentlichungsdatenbank/Abonnementdatenbank-Paar (ein freigegebener Agent). T  

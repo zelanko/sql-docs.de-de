@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: efaff5ca7858048413440c9cfe774397bdc9069f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c9a5e8924139cf01a75bf48407c769a839a77f5e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128332"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770651"
 ---
 # <a name="distributor-password"></a>Verteilerkennwort
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Wenn Sie auf der Seite **Verleger** des Assistenten mindestens einen Verleger für die Verwendung dieses Servers als Remoteverteiler aktivieren, müssen Sie für die von der Replikation hergestellte Verbindung zwischen dem Verleger und dem Remoteverteiler mithilfe des Anmeldenamens **distributor_admin** ein Kennwort angeben. Dieses Kennwort muss auch für jeden Verleger eingegeben werden, von dem der Verteiler über die Seite **Administratorkennwort** des Assistenten für neue Veröffentlichung oder des Verteilungskonfigurations-Assistenten verwendet wird. Weitere Informationen zur Sicherheit für Verteiler finden Sie unter [Schützen des Verteilers](../../relational-databases/replication/security/secure-the-distributor.md).  
   
 ## <a name="options"></a>enthalten  

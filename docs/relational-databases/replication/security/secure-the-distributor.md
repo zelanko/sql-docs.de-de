@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fef7b32c2da62c4e61e0ef2da4f4e2a5d17f777c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3f82a7cc00a80bcddec32161d0a2c877c6bf1175
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051899"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768410"
 ---
 # <a name="secure-the-distributor"></a>Schützen des Verteilers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Die folgenden Replikations-Agents stellen eine Verbindung mit dem Verteiler her: Protokolllese-Agent, Momentaufnahme-Agent, Warteschlangenlese-Agent und Merge-Agent. Es ist wichtig, dass jeder dieser Agents einen geeigneten Anmeldenamen besitzt, dass grundsätzlich nur die minimal erforderlichen Rechte erteilt werden und dass die Speicherung aller Kennwörter geschützt ist:  
   
 -   Informationen zum Verwalten von Anmeldungen und Kennwörtern finden Sie unter [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  

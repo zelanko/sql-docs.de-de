@@ -14,26 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27f94d21a4fcc773c30d2a43d2502eb1f4c5225b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e38cd74e9f916484c804890686e2a3b03d9ec64c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021229"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768570"
 ---
 # <a name="reinitialize-a-subscription"></a>Erneutes Initialisieren eines Abonnements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie ein Abonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) neu initialisiert wird. Einzelne Abonnements können für die erneute Initialisierung markiert werden, sodass während der nächsten Synchronisierung eine neue Momentaufnahme angewendet wird.  
   
- **In diesem Thema**  
-  
--   **So initialisieren Sie ein Abonnement erneut mit:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
+
   
 ##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Das erneute Initialisieren eines Abonnements ist ein zweistufiger Prozess:  

@@ -1,6 +1,6 @@
 ---
 title: Paginierung in Reporting Services (Berichts-Generator und SSRS) | Microsoft-Dokumentation
-ms.date: 03/01/2017
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93ba4ad975c940979cd1e5604de51e92f2c441cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582210"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632025"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginierung in Reporting Services (Berichts-Generator und SSRS)
   Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden. Wenn Sie einen Bericht auf dem Berichtsserver erstellen, verwendet der Bericht den HTML-Renderer. Für HTML gilt ein bestimmter Satz von Paginierungsregeln. Wenn Sie den gleichen Bericht nach PDF exportieren, wird beispielsweise der PDF-Renderer verwendet, und es findet ein anderer Satz von Regeln Anwendung. Daher wird der Bericht unterschiedlich paginiert. Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen.  
@@ -36,7 +36,7 @@ ms.locfileid: "65582210"
   
  Das Seitenformat beträgt standardmäßig 8,5 x 11 Zoll. Sie können dieses Format jedoch über den Bereich **Berichtseigenschaften** , das Dialogfeld **Seite einrichten** oder über die Eigenschaften PageHeight und PageWidth im Bereich **Eigenschaften** ändern. Das Seitenformat wird nicht dem Inhalt des Hauptteils des Berichts entsprechend vergrößert oder verkleinert. Wenn der Bericht auf einer einzelnen Seite angezeigt werden soll, muss der gesamte Inhalt des Hauptteils des Berichts auf die physische Seite passen. Passt der Inhalt nicht und Sie verwenden ein Format mit harten Seitenumbrüchen, sind für den Bericht zusätzliche Seiten erforderlich. Wenn der Hauptteil des Berichts über den rechten Rand der physischen Seite hinausragt, wird ein horizontaler Seitenumbruch eingefügt. Wenn der Hauptteil des Berichts über den unteren Rand der physischen Seite hinausragt, wird ein vertikaler Seitenumbruch eingefügt.  
   
- Wenn Sie das im Bericht definierte physische Seitenformat überschreiben möchten, können Sie das physische Seitenformat in den Geräteinformationseinstellungen für den entsprechenden Renderer angeben, mit dem Sie den Bericht exportieren. Weitere Informationen finden Sie unter [Geräteinformationseinstellungen in Reporting Services](https://go.microsoft.com/fwlink/?LinkId=102515).  
+ Wenn Sie das im Bericht definierte physische Seitenformat überschreiben möchten, können Sie das physische Seitenformat in den Geräteinformationseinstellungen für den entsprechenden Renderer angeben, mit dem Sie den Bericht exportieren. Weitere Informationen finden Sie unter [Geräteinformationseinstellungen in Reporting Services](../device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ### <a name="margins"></a>Ränder  
  Ränder werden vom Rand der physischen Seitendimensionen nach innen zur angegebenen Seitenrandeinstellung gezogen. Erstreckt sich ein Berichtselement in den Randbereich, wird es abgeschnitten, sodass der überlappende Bereich nicht gerendert wird. Wenn Sie Seitenränder angeben, durch die die horizontale oder vertikale Seitenbreite null ergibt, werden die Seitenrandeinstellungen standardmäßig auf null gesetzt. Seitenränder werden im Bereich **Berichtseigenschaften** , im Dialogfeld **Seite einrichten** oder durch Ändern der Eigenschaften TopMargin, BottomMargin, LeftMargin und RightMargin im Bereich **Eigenschaften** festgelegt. Wenn Sie die im Bericht definierte Seitenrandgröße überschreiben möchten, können Sie die Randgröße in den Geräteinformationseinstellungen für den entsprechenden Renderer angeben, mit dem Sie den Bericht exportieren.  

@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b73736233e7bb0d8431746d4dcc5119a2a0a32e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e6db876f54d28594786e585ba9f907c59f645c93
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939266"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768781"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Informationsskript für Verleger und Verteiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Dieses Skript verwendet Tabellen und gespeicherte Prozeduren für die Replikation zur Beantwortung allgemeiner Fragen in Bezug auf Objekte auf dem Verteiler und dem Verleger. Das Skript kann, so wie es ist, verwendet werden, oder es kann als Basis für benutzerdefinierte Skripts dienen. Das Skript erfordert möglicherweise zwei Änderungen, damit es in Ihrer Umgebung ausgeführt werden kann:  
   
 -   Ändern Sie die Zeile `use AdventureWorks2012` so, dass sie den Namen Ihrer Veröffentlichungsdatenbank enthält.  
