@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd17c07b9154761f5f9c665e10941d04093c1dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 0f7cca09018f9486c831e3803aedb5c969c422d1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907602"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769504"
 ---
 # <a name="sort-columns"></a>Spalten sortieren
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Im Dialogfeld **Spalten sortieren** können Sie Raster im Replikationsmonitor nach einer oder mehreren Spalten sortieren. (Zum Sortieren nach einer einzelnen Spalte klicken Sie im Raster im Replikationsmonitor auf den betreffenden Spaltenheader.) Wenn Sie z. B. die Abonnements auf der Registerkarte **Alle Abonnements** nach Status und Verbindungstyp sortieren möchten, führen Sie die folgenden Schritte aus:  
   
 1.  Wählen Sie in der ersten Zeile des Rasters in der Spalte **Spaltenname** den Eintrag **Status** und dann einen Wert in der Spalte **Sortierreihenfolge** aus.  

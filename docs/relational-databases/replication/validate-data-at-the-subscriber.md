@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e750743eb98307433d8ad6878cec12ea4e43ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895233"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769289"
 ---
 # <a name="validate-replicated-data"></a>Überprüfen von replizierten Daten
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In diesem Thema wird beschrieben, wie Daten beim Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) überprüft werden.  
   
 Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die Daten auf dem Abonnenten mit denen auf dem Verleger übereinstimmen. Die Überprüfung kann für bestimmte Abonnements oder für alle Abonnements für eine Veröffentlichung ausgeführt werden. Geben Sie einen der folgenden Überprüfungstypen an. Bei der nächsten Ausführung des Verteilungs-Agents oder des Merge-Agents werden die Daten dann überprüft:  
@@ -34,6 +34,8 @@ Bei der Transaktions- und der Mergereplikation können Sie überprüfen, ob die 
 -   **Zeilenanzahl und binäre Prüfsumme.** Bei dieser Form der Überprüfung wird zusätzlich zum Vergleich der Zeilenanzahl auf dem Verleger und dem Abonnenten mithilfe des Prüfsummenalgorithmus eine Prüfsumme aller Daten berechnet. Ist die Zeilenanzahl fehlerhaft, wird die Berechnung der Prüfsumme nicht ausgeführt.  
   
  Bei der Mergereplikation kann außer der Übereinstimmung der Daten auf dem Abonnenten und dem Verleger auch überprüft werden, ob die Daten auf den einzelnen Abonnenten richtig partitioniert sind. Weitere Informationen finden Sie unter [Überprüfen von Partitionsinformationen für einen Mergeabonnenten](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Funktionsweise der Datenüberprüfung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft Daten, indem es auf dem Verleger die Zeilenanzahl bzw. eine Prüfsumme berechnet und dann diese Werte mit der für den Abonnenten berechneten Zeilenanzahl bzw. Prüfsumme vergleicht. Bei der Berechnung der Prüfsumme wird ein Wert für die gesamte Veröffentlichungstabelle und ein Wert für die gesamte Abonnementtabelle berechnet (die Daten in der **text**-, **ntext**- bzw. **image** -Spalte fließen nicht mit ein).  

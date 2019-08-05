@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6eda04bcf60758cfaddcdebfb12391f0d703ae1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9f8e46dd253514329ee486c940a14f8dc48b4e9b
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008520"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702693"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -40,6 +40,7 @@ Das folgende C++-Beispiel zeigt, wie die ODBC-APIs verwendet werden, um eine Ver
 ### <a name="features"></a>Funktionen
 
 - [Benutzerdefinierte Keystore-Anbieter](../../connect/odbc/custom-keystore-providers.md)
+- [Datenklassifizierung](../../connect/odbc/data-classification.md)
 - [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](dsn-connection-string-attribute.md)
 - [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (Die verfügbaren Features gelten mit Ausnahme von OLEDB auch für den ODBC-Treiber für SQL Server)
 - [Verwendung von Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4964789fb69af676a84f049183a88df183d6e82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f428510cbc2ddaed72567cd26a42a48556a72639
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948645"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768253"
 ---
 # <a name="administrative-password"></a>Administratorkennwort
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Wenn Sie auf der Seite **Verteiler** dieses Assistenten einen Remoteverteiler für diesen Verleger ausgewählt haben, müssen Sie ein Kennwort für die Verbindung eingeben, die die Replikation mithilfe des Anmeldenamens **distributor_admin** zwischen dem Verleger und dem Verteiler herstellt. Das Kennwort muss dem Kennwort entsprechen, das auf der Seite **Verteilerkennwort** des Verteilungskonfigurations-Assistenten oder auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** angegeben wurde.  
   
 ## <a name="options"></a>enthalten  

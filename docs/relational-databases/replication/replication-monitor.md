@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a926e4735c29d92f9faaec69e06171e134360aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005438"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769681"
 ---
 # <a name="replication-monitor"></a>Replikationsmonitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Dieser Abschnitt der Dokumentation enthält Informationen zum Replikationsmonitor. Die im Monitor angezeigten Seiten und Dialogfelder können Unterschiede aufweisen, abhängig vom Replikationstyp und der Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die überwacht wird.  
   
 -   [Replikationsmonitor (Hauptseite)](../../relational-databases/replication/replication-monitor-main-page.md)  

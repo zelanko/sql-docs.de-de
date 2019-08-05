@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948686"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768731"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Drei Bereiche sind beim Entwickeln einer Sicherungs- und Wiederherstellungsstrategie für die Momentaufnahme- und Transaktionsreplikation zu berücksichtigen:  
   
--   Die zu sichernden Datenbanken.  
-  
--   Die Sicherungseinstellungen für die Transaktionsreplikation.  
-  
+-   Die zu sichernden Datenbanken.
+-   Die Sicherungseinstellungen für die Transaktionsreplikation.
 -   Die zum Wiederherstellen einer Datenbank erforderlichen Schritte. Diese hängen vom Typ der Replikation und den Optionen ab, der bzw. die ausgewählt werden.  
   
  In diesem Thema wird jeder dieser Bereiche in den nächsten drei Abschnitten erläutert. Weitere Informationen zum Sichern und Wiederherstellen bei Oracle-Verlegern finden Sie unter [Sichern und Wiederherstellen bei Oracle-Verlegern](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>Sichern von Datenbanken  
  Sichern Sie bei der Momentaufnahme- und Transaktionsreplikation regelmäßig die folgenden Datenbanken:  
