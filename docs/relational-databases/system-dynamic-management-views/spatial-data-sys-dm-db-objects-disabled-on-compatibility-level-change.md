@@ -1,5 +1,5 @@
 ---
-title: dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft-Dokumentation
+title: sys. DM _db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937103"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809904"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Räumliche Daten - dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Räumliche Daten: sys. DM _db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Führt die Indizes und die Einschränkungen auf, die in Folge der Änderung des Kompatibilitätsgrads in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deaktiviert werden. Indizes und Einschränkungen, die persistierte berechnete Spalten enthalten, deren Ausdrücke räumliche UDTs verwenden, werden nach einem Upgrade oder einer Änderung des Kompatibilitätsgrads deaktiviert. Bestimmen Sie die Auswirkungen einer Änderung des Kompatibilitätsgrads mithilfe dieser dynamischen Verwaltungsfunktion.  
@@ -52,7 +52,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
 |**major_id**|**int**|OBJECT ID der Einschränkungen<br /><br /> OBJECT ID der Tabelle, die Indizes und Heaps enthält|  
 |**minor_id**|**int**|NULL für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|**Abhängigkeit**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
+|**gkeit**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Persistente berechnete Spalten, die systeminterne Funktionen verwenden, werden bei einer Änderung des Kompatibilitätsgrads deaktiviert. Darüber hinaus werden persistierte berechnete Spalten, die eine Geometry-Methode oder Geography-Methode verwenden, beim Upgrade einer Datenbank deaktiviert.  
@@ -108,16 +108,16 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geografie:: Analysieren**  
   
--   **Geografie:: Reduzieren**  
+-   **Geografie:: Ver**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Verhalten der deaktivierten Objekte  
  **Indizes**  
   
- Wenn der gruppierte Index deaktiviert ist oder wenn ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "Der Abfrageprozessor kann keinen Plan erzeugen, da der Index ' %. \*ls für die Tabelle oder Sicht ' %. \*ls deaktiviert ist. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade durch Aufruf **ALTER INDEX ON... REBUILD** ändern.  
+ Wenn der gruppierte Index deaktiviert ist oder ein nicht gruppierter Index erzwungen wird, wird der folgende Fehler ausgelöst: "Der Abfrage Prozessor kann keinen Plan durchführen, da der Index '%. \*ls ' für Tabelle oder Sicht '%. \*ls ' ist deaktiviert. " Um diese Objekte erneut zu aktivieren, erstellen Sie die Indizes nach dem Upgrade **neu, indem Sie Alter Index on... aufrufen. REBUILD** ändern.  
   
  **Heaps**  
   
- Wenn eine Tabelle mit einem deaktivierten Heap verwendet wird, wird der folgende Fehler ausgelöst. Um diese Objekte erneut zu aktivieren, erstellen Sie nach dem Upgrade durch Aufruf **ALTER INDEX alle ON... REBUILD** ändern.  
+ Wenn eine Tabelle mit einem deaktivierten Heap verwendet wird, wird der folgende Fehler ausgelöst. Um diese Objekte erneut zu aktivieren, erstellen Sie nach dem Upgrade **erneut, indem Sie Alter Index all on... aufrufen. REBUILD** ändern.  
   
 ```  
 // ErrorNumber: 8674  
@@ -130,11 +130,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- Wenn Sie versuchen, die während eines Onlinevorgangs den Heap neu zu erstellen, wird ein Fehler ausgelöst.  
+ Wenn Sie versuchen, den Heap während eines Online Vorgangs neu zu erstellen, wird ein Fehler ausgelöst.  
   
- **CHECK-Einschränkungen und Fremdschlüssel**  
+ **Check-Einschränkungen und Fremdschlüssel**  
   
- Deaktivierte CHECK-Einschränkungen und Fremdschlüssel lösen keinen Fehler aus. Die Einschränkungen werden jedoch nicht erzwungen, wenn Zeilen geändert werden. Um diese Objekte erneut zu aktivieren, überprüfen Sie die Einschränkungen nach der Aktualisierung durch Aufrufen von **ALTER TABLE... CHECK-EINSCHRÄNKUNG**.  
+ Deaktivierte CHECK-Einschränkungen und Fremdschlüssel lösen keinen Fehler aus. Die Einschränkungen werden jedoch nicht erzwungen, wenn Zeilen geändert werden. Um diese Objekte erneut zu aktivieren, überprüfen Sie die Einschränkungen nach dem **Upgrade durch Aufrufen von ALTER TABLE... CHECK-** EINSCHRÄNKUNG.  
   
  **Persistente berechnete Spalten**  
   

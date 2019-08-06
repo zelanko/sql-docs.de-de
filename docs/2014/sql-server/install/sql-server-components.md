@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Komponenten | Microsoft-Dokumentation
+title: SQL Server Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,19 +21,19 @@ ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52045095714bfc2be7e929ed27a26a800c860fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092091"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811091"
 ---
 # <a name="sql-server-components"></a>SQL Server-Komponenten
-  Sie können den Analyse-Assistenten ausführen, für einen lokal oder remote-Computer, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installiert. Der erste Schritt bei der Analyse vor dem Upgrade besteht darin, den Computer und die Komponenten für die Analyse zu identifizieren.  
+  Sie können den Analyse-Assistenten des Upgrade Advisors auf einem lokalen Computer oder einem Remote [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Computer ausführen [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] dem, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], oder installiert ist. Der erste Schritt bei der Analyse vor dem Upgrade besteht darin, den Computer und die Komponenten für die Analyse zu identifizieren.  
   
 ## <a name="options"></a>Optionen  
- **Name des Computers**  
- Gibt den Namen des zu analysierenden Computers an. Der Upgrade Advisor füllt die **Servernamen** Feld mit dem Namen des lokalen Computers. Sie können auch "." und "localhost" verwenden, um die Verbindung mit dem lokalen Computer herzustellen.  
+ **Computer Name**  
+ Gibt den Namen des zu analysierenden Computers an. Der Upgrade Advisor füllt das Feld **Server Name** mit dem Namen des lokalen Computers auf. Sie können auch "." und "localhost" verwenden, um die Verbindung mit dem lokalen Computer herzustellen.  
   
  Wenn Sie einen anderen Computer analysieren, beachten Sie die folgenden Hinweise:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66092091"
   
 -   Um gruppierte Instanzen zu scannen, geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ein.  
   
--   Um nicht gruppierte Komponenten zu scannen, die auf einem Knoten eines Clusters installiert sind, geben Sie den Computernamen des Failovercluster-Knotens ein.  
+-   Um nicht gruppierte Komponenten zu scannen, die auf einem Knoten eines Clusters installiert sind, geben Sie den Computernamen des Failoverclusterknotens ein.  
   
     > [!IMPORTANT]  
     >  Geben Sie nicht den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen an.  
@@ -50,8 +50,8 @@ ms.locfileid: "66092091"
   
  Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Namen des lokalen Computers angeben. Der Upgrade Advisor scannt nur lokale Berichtsserver.  
   
- **Erkennen**  
- Die **erkennen** Schaltfläche greift auf den angegebenen Computer und die zu analysierenden Komponenten:  
+ **Auf**  
+ Die Schaltfläche **ermitteln** greift auf den angegebenen Computer zu und erkennt die zu analysierenden Komponenten:  
   
 -   Wenn Sie auf einem Remotecomputer eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz analysieren, müssen Sie die Remoteregistrierungsdienste auf dem Remotecomputer aktivieren.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "66092091"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird erkannt, wenn [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Registrierung des Computers gefunden wird. Allerdings scannt der Upgrade Advisor nur lokale Berichtsserver.  
   
  **Components**  
- Wählen Sie die zu analysierenden Komponenten aus. Klicken Sie auf die **erkennen** klicken, um alle auf dem Computer installierten Komponenten auszuwählen. Ein Häkchen wird neben den Komponenten angezeigt, die als auf dem Computer installiert erkannt wurden. Sie können die zu analysierenden Komponenten auch manuell auswählen, indem Sie die Kontrollkästchen neben den Komponenten aktivieren bzw. deaktivieren.  
+ Wählen Sie die zu analysierenden Komponenten aus. Sie können auf die Schaltfläche **erkennen** klicken, um alle auf dem Computer installierten Komponenten auszuwählen. Ein Häkchen wird neben den Komponenten angezeigt, die als auf dem Computer installiert erkannt wurden. Sie können die zu analysierenden Komponenten auch manuell auswählen, indem Sie die Kontrollkästchen neben den Komponenten aktivieren bzw. deaktivieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Upgrade Advisor Referenz zur Benutzeroberfläche](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+ [Arbeiten mit Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Referenz zur Benutzeroberfläche des Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

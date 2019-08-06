@@ -1,5 +1,5 @@
 ---
-title: Sp_estimate_data_compression_savings (Transact-SQL) | Microsoft-Dokumentation
+title: sp_estimate_data_compression_savings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e15f0755cac41f0f262582417e0e22ead39f9be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e7d9c1e2f3c6d0de5e41775c445b46f232d5985
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124561"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811383"
 ---
-# <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
+# <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt die aktuelle Größe des angeforderten Objekts zurück und schätzt die Objektgröße für den angeforderten Komprimierungsstatus. Die Komprimierung kann für ganze Tabellen oder Teile von Tabellen ermittelt werden. Dazu gehören Heaps, gruppierte Indizes, nicht gruppierte Indizes, columnstore-Indizes, indizierte Sichten, Tabelle und Indexpartitionen. Die Objekte können mithilfe der Zeile, Seite, columnstore- oder columnstore-archivkomprimierung komprimiert werden. Wenn die Tabelle, der Index oder die Partition bereits komprimiert ist, können Sie mithilfe dieser Prozedur die Größe der erneut komprimierten Tabelle, des erneut komprimierten Index oder der erneut komprimierten Partition einschätzen.  
+  Gibt die aktuelle Größe des angeforderten Objekts zurück und schätzt die Objektgröße für den angeforderten Komprimierungsstatus. Die Komprimierung kann für ganze Tabellen oder Teile von Tabellen ermittelt werden. Dazu zählen Heaps, gruppierte Indizes, nicht gruppierte Indizes, columnstore--Indizes, indizierte Sichten und Tabellen-und Index Partitionen. Die Objekte können mithilfe von Zeilen-, Seiten-, columnstore--oder columnstore--Archiv Komprimierung komprimiert werden. Wenn die Tabelle, der Index oder die Partition bereits komprimiert ist, können Sie mithilfe dieser Prozedur die Größe der erneut komprimierten Tabelle, des erneut komprimierten Index oder der erneut komprimierten Partition einschätzen.  
   
 > [!NOTE]
->  Komprimierung und **Sp_estimate_data_compression_savings** sind nicht verfügbar in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Komprimierung und **sp_estimate_data_compression_savings** sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Um die Größe des Objekts bei Verwendung der angeforderten Komprimierungseinstellung einzuschätzen, fragt diese gespeicherte Prozedur das Quellobjekt ab und lädt diese Daten in eine entsprechende Tabelle und einen entsprechenden Index in tempdb. Die Tabelle oder der Index, die bzw. der in tempdb erstellt wurde, wird anschließend entsprechend der angeforderten Einstellung komprimiert, und die Komprimierungseinsparungen werden berechnet.  
   
- So ändern Sie den Komprimierungsstatus der eine Tabelle, Index oder Partition, die Verwendung der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) Anweisungen. Allgemeine Informationen zur Komprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
+ Verwenden Sie die [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -Anweisung oder die [Alter Index](../../t-sql/statements/alter-index-transact-sql.md) -Anweisung, um den Komprimierungs Status einer Tabelle, eines Indexes oder einer Partition zu ändern. Allgemeine Informationen zur Komprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
 > [!NOTE]  
 >  Wenn die vorhandenen Daten fragmentiert sind, können Sie ihre Größe möglicherweise ohne Komprimierung verringern, indem Sie den Index neu erstellen. Für Indizes wird der Füllfaktor während der Neuerstellung des Indexes angewendet. Dadurch könnte die Größe des Indexes zunehmen.  
@@ -56,22 +56,22 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @schema_name=] '*Schema_name*"  
- Der Name des Datenbankschemas, das die Tabelle oder die indizierte Sicht enthält. *Schema_name* ist **Sysname**. Wenn *Schema_name* NULL ist, wird das Standardschema des aktuellen Benutzers verwendet.  
+ [ @schema_name=] '*schema_name*'  
+ Der Name des Datenbankschemas, das die Tabelle oder die indizierte Sicht enthält. *schema_name* ist vom **Datentyp vom Datentyp sysname**. Wenn *schema_name* NULL ist, wird das Standardschema des aktuellen Benutzers verwendet.  
   
- [ @object_name=] '*Object_name*"  
+ [ @object_name=] '*object_name*'  
  Der Name der Tabelle oder der indizierten Sicht des Indexes. *database_name* ist vom Datentyp **sysname**.  
   
- [ @index_id=] '*Index_id*"  
- Die ID des Indexes. *Index_id* ist **Int**, und kann einen der folgenden Werte: die ID eines Indexes, NULL oder 0, wenn *Object_id* ein Heap ist. Geben Sie NULL an, wenn Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie NULL angeben, müssen Sie auch angeben, auf NULL für *Partition_number*.  
+ [ @index_id=] '*index_id*'  
+ Die ID des Indexes. *index_id* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen: die ID-Nummer eines Indexes, NULL oder 0, wenn *object_id* ein Heap ist. Geben Sie NULL an, wenn Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie NULL angeben, müssen Sie für *partition_number*auch NULL angeben.  
   
- [ @partition_number=] '*Partition_number*"  
- Die Partitionsnummer im Objekt. *Partition_number* ist **Int**, und kann einen der folgenden Werte: die Partitionsnummer eines Indexes oder Heaps, NULL oder 1 für einen nicht partitionierten Index oder Heap.  
+ [ @partition_number=] '*partition_number*'  
+ Die Partitionsnummer im Objekt. *partition_number* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen: die Partitionsnummer eines Indexes oder Heaps, NULL oder 1 für einen nicht partitionierten Index oder Heap.  
   
- Sie können auch angeben, um die Partition anzugeben, die [$partition](../../t-sql/functions/partition-transact-sql.md) Funktion. Geben Sie NULL an, wenn Informationen zu allen Partitionen des besitzenden Objekts zurückgegeben werden sollen.  
+ Um die Partition anzugeben, können Sie auch die [$Partition](../../t-sql/functions/partition-transact-sql.md) -Funktion angeben. Geben Sie NULL an, wenn Informationen zu allen Partitionen des besitzenden Objekts zurückgegeben werden sollen.  
   
- [ @data_compression=] '*Data_compression*"  
- Der Typ der Komprimierung, die ausgewertet werden soll. *DATA_COMPRESSION* kann eine der folgenden Werte: KEINE, Zeile, Seite, COLUMNSTORE und COLUMNSTORE_ARCHIVE.  
+ [ @data_compression=] '*DATA_COMPRESSION*'  
+ Der Typ der Komprimierung, die ausgewertet werden soll. *DATA_COMPRESSION* kann einen der folgenden Werte aufweisen: None, Row, Page, columnstore oder COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -91,7 +91,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_requested_compression_setting (KB)|**bigint**|Die Größe der Stichprobe, die mithilfe der angeforderten Komprimierungseinstellung erstellt wird, mit vorhandenem Füllfaktor (sofern zutreffend) und ohne Fragmentierung.|  
   
 ## <a name="remarks"></a>Hinweise  
- Verwenden Sie Sp_estimate_data_compression_savings, um die einsparungen abschätzen, die auftreten können, wenn Sie eine Tabelle oder Partition für die Zeile, Seite, columnstore- oder columnstore-archivkomprimierung aktivieren. Wenn beispielsweise die durchschnittliche Größe der Zeile um 40 Prozent verringert werden kann, können Sie die Größe des Objekts potenziell um 40 Prozent verringern. Möglicherweise erzielen Sie keine Platzeinsparung, weil dies vom Füllfaktor und von der Zeilengröße abhängt. Wenn eine Zeile beispielsweise 8000 Bytes lang ist und Sie die Größe um 40 Prozent verringern, passt weiterhin nur eine Zeile auf eine Datenseite. Daher werden keine Einsparungen erzielt.  
+ Verwenden Sie sp_estimate_data_compression_savings, um die Einsparungen zu schätzen, die beim Aktivieren einer Tabelle oder einer Partition für die Zeilen-, Seiten-, columnstore--oder columnstore--Archiv Komprimierung auftreten können. Wenn beispielsweise die durchschnittliche Größe der Zeile um 40 Prozent verringert werden kann, können Sie die Größe des Objekts potenziell um 40 Prozent verringern. Möglicherweise erzielen Sie keine Platzeinsparung, weil dies vom Füllfaktor und von der Zeilengröße abhängt. Wenn eine Zeile beispielsweise 8000 Bytes lang ist und Sie die Größe um 40 Prozent verringern, passt weiterhin nur eine Zeile auf eine Datenseite. Daher werden keine Einsparungen erzielt.  
   
  Wenn die Ergebnisse der Ausführung von sp_estimate_data_compression_savings darauf hindeuten, dass sich die Tabelle vergrößert, bedeutet dies, dass für viele Zeilen in der Tabelle fast die gesamte Genauigkeit der Datentypen verwendet wird, und der geringe zusätzliche Verarbeitungsaufwand für das komprimierte Format ist größer als die Einsparungen durch die Komprimierung. Aktivieren Sie in diesem seltenen Fall die Komprimierung nicht.  
   
@@ -107,31 +107,31 @@ sp_estimate_data_compression_savings
  Erfordert die SELECT-Berechtigung für die Tabelle.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
- Vor SQL Server-2019 dieses Verfahren wurde nicht für columnstore-Indizes angewendet, und daher die datenkomprimierungsparameter COLUMNSTORE und COLUMNSTORE_ARCHIVE nicht akzeptiert hat.  Ab SQL Server-2019, können columnstore-Indizes ein Quellobjekt, für die Schätzung, sowohl als einen Typ für die angeforderte komprimierungseinstellung verwendet werden.
+ Vor SQL Server 2019 wurde dieses Verfahren nicht für columnstore--Indizes angewendet und akzeptierte daher nicht die Daten Komprimierungs Parameter columnstore-und COLUMNSTORE_ARCHIVE.  Ab SQL Server 2019 können columnstore--Indizes als Quell Objekt zur Schätzung und als angeforderter Komprimierungstyp verwendet werden.
 
-## <a name="considerations-for-columnstore-indexes"></a>Überlegungen für columnstore-Indizes
- Beginnend mit SQL Server-2019, Sp_estimate_compression_savings unterstützt das Schätzen der sowohl für columnstore-als auch für columnstore-archivkomprimierung. Im Gegensatz zu Seiten- und zeilenkomprimierung erfordert das Anwenden von columnstore-Komprimierung auf ein Objekt einen neuen columnstore-Index. Aus diesem Grund bei Verwendung der Optionen COLUMNSTORE und COLUMNSTORE_ARCHIVE dieses Verfahrens bestimmt der Typ des Quellobjekts bereitgestellt, um die Prozedur den Typ des columnstore-Index für die komprimierte größenschätzung verwendet. Die folgende Tabelle zeigt den Verweis Objekten, die zum Schätzen der komprimierungseinsparungen für jedes Objekt verwendet werden. Geben Sie bei der @data_compression Parameter auf columnstore- oder die COLUMNSTORE_ARCHIVE festgelegt ist.
+## <a name="considerations-for-columnstore-indexes"></a>Überlegungen zu columnstore-Indizes
+ Ab SQL Server 2019 unterstützt sp_estimate_compression_savings das Schätzen der columnstore--und columnstore--Archiv Komprimierung. Anders als bei der Seiten-und Zeilen Komprimierung muss beim Anwenden der columnstore--Komprimierung auf ein Objekt ein neuer columnstore--Index erstellt werden Aus diesem Grund wird bei Verwendung der columnstore--und COLUMNSTORE_ARCHIVE-Optionen dieser Prozedur der Typ des für die Prozedur bereitgestellten Quell Objekts bestimmt den Typ des columnstore--Indexes, der für die geschätzte Größen Schätzung verwendet wird. In der folgenden Tabelle werden die Verweis Objekte veranschaulicht, die zur Schätzung der Komprimierungs Einsparungen für jeden @data_compression Quell Objekttyp verwendet werden, wenn der Parameter auf columnstore oder COLUMNSTORE_ARCHIVE festgelegt ist.
 
- |Quellobjekt|Verweis-Objekt|
+ |Quell Objekt|Verweis Objekt|
  |-----------------|---------------|
  |Heap|Gruppierter Columnstore-Index|
  |Gruppierter Index|Gruppierter Columnstore-Index|
- |Nicht gruppierter index|Nicht gruppierte columnstore-Index (einschließlich der Schlüsselspalten und des angegebenen nicht gruppierten Indexes eingeschlossen Spalten sowie die Partitionsspalte der Tabelle, sofern vorhanden)|
- |Nicht gruppierter columnstore-Index|Nicht gruppierte columnstore-Index (einschließlich die gleichen Spalten wie der angegebene nicht gruppierte columnstore-Index)|
+ |Nicht gruppierter Index|Nicht gruppierter columnstore--Index (einschließlich der Schlüssel Spalten und aller enthaltenen Spalten des bereitgestellten nicht gruppierten Indexes sowie der partitions Spalte der Tabelle, sofern vorhanden)|
+ |Nicht gruppierter Columnstore-Index|Nicht gruppierter columnstore--Index (einschließlich der gleichen Spalten wie der angegebene nicht gruppierte columnstore--Index)|
  |Gruppierter Columnstore-Index|Gruppierter Columnstore-Index|
 
 > [!NOTE]  
-> Wenn der columnstore-Komprimierung von einem Rowstore-Quellobjekt (gruppierter Index, nicht gruppierten Index oder Heap) zu schätzen, wenn es werden alle Spalten im Quellobjekt, die einen Datentyp aufweisen, der nicht in einem columnstore-Index Sp_estimate_compression_ unterstützt wird Fehler bei der einsparungen.
+> Beim Schätzen der columnstore--Komprimierung aus einem rowstore-Quell Objekt (gruppierter Index, nicht gruppierter Index oder Heap), wenn Spalten im Quell Objekt vorhanden sind, die einen Datentyp aufweisen, der in einem columnstore--Index nicht unterstützt wird, sp_estimate_compression_savings schlägt mit einem Fehler fehl.
 
- Auf ähnliche Weise, wenn die @data_compression Parameter ist auf NONE, ROW oder PAGE festgelegt und das Quellobjekt ein columnstore-Index, in der folgende Tabelle wird beschrieben, die Verweisobjekte verwendet.
+ Wenn der @data_compression -Parameter auf None, Row oder Page festgelegt ist und das Quell Objekt ein columnstore--Index ist, werden in der folgenden Tabelle die verwendeten Verweis Objekte beschrieben.
 
- |Quellobjekt|Verweis-Objekt|
+ |Quell Objekt|Verweis Objekt|
  |-----------------|---------------|
  |Gruppierter Columnstore-Index|Heap|
- |Nicht gruppierter columnstore-Index|Nicht gruppierte Index (einschließlich ggf. als eingeschlossene Spalte in den nicht gruppierten columnstore-Index als Schlüsselspalten und die Partitionsspalte der Tabelle enthaltenen Spalten)|
+ |Nicht gruppierter Columnstore-Index|Nicht gruppierter Index (einschließlich der Spalten, die im nicht gruppierten columnstore--Index als Schlüssel Spalten enthalten sind, und die Partitions Spalte der Tabelle, sofern vorhanden, als enthaltene Spalte)|
 
 > [!NOTE]  
-> Wenn von einem columnstore-Quellobjekt Rowstore-Komprimierung (NONE, Zeile oder Seite) zu schätzen, achten Sie darauf, dass der Quellindex nicht mehr als 32 Spalten enthält, wie dadurch das Limit in einen Rowstore-Index (nicht gruppiert) unterstützt wird.
+> Wenn Sie die rowstore-Komprimierung (None, Row oder Page) aus einem columnstore--Quell Objekt schätzen, stellen Sie sicher, dass der Quell Index nicht mehr als 32 Spalten enthält, da dies der Grenzwert ist, der in einem rowstore-Index (Nonclustered) unterstützt wird.
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Größe der `Production.WorkOrderRouting`-Tabelle geschätzt, wenn sie mit der `ROW`-Komprimierung komprimiert wird.  
@@ -147,7 +147,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Datenbank-Engine gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implementierung von Unicode-Komprimierung](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

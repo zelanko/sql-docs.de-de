@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) | Microsoft-Dokumentation
+title: sys. PDW _materialized_view_column_distribution_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059456"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811429"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (preview)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Zeigt die Verteilungsinformationen für Spalten in einer materialisierten Sicht an.  
+Zeigt Verteilungs Informationen für Spalten in einer materialisierten Sicht an.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|Die ID des Objekts, zu der die Spalte gehört. |  
+|object_id|**int**|ID des Objekts, zu dem die Spalte gehört. |  
 |column_id|**int**|Die ID der Spalte.|  
-|distribution_ordinal|**tinyint**|0 = nicht für eine verteilungsspalte.</br> 1 = SQL Data Warehouse ist diese Spalte verwenden, um die materialisierte Sicht zu verteilen.|
+|distribution_ordinal|**tinyint**|0 = keine Verteilungs Spalte.</br> 1 = SQL Data Warehouse verwendet diese Spalte, um die materialisierte Sicht zu verteilen.|
  
 ## <a name="permissions"></a>Berechtigungen 
 

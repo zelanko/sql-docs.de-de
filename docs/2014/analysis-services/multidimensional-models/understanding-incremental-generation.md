@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zur inkrementellen Generierung | Microsoft-Dokumentation
+title: Verständnis der inkrementellen Generierung Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 003b56fe3dbfae3f442be6b966f3cdc3008909b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072682"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811058"
 ---
 # <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
   Nach der Generierung des Anfangsschemas können Sie Cube- und Dimensionsdefinitionen mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern und dann den Schemagenerierungs-Assistenten erneut ausführen. Der Assistent aktualisiert das Schema in der Themenbereichsdatenbank und in der zugehörigen Datenquellensicht, um die Änderungen wiederzugeben. Dabei werden die aktuell in den erneut zu generierenden Tabellen vorhandenen Daten so weit wie möglich beibehalten. Wenn Sie die Tabellen nach der Anfangsgenerierung geändert haben, werden diese Änderungen, falls möglich, vom Schemagenerierungs-Assistenten unter Berücksichtigung folgender Regeln beibehalten:  
@@ -62,7 +62,7 @@ ms.locfileid: "66072682"
  Hinzufügen eines neuen Objekts, z. B. einer Dimension, eines Cubes oder eines Attributs  
  Der Schemagenerierungs-Assistent fügt die zugrunde liegenden Objekte, denen das neue Objekt zugeordnet ist, hinzu.  
   
- Kann der Schemagenerierungs-Assistent die erforderliche Änderung wegen des Vorhandenseins eines Benutzerobjekts in der Themenbereichsdatenbank nicht vornehmen (da die Datenbank-Engine einen Fehler zurückgibt), erzeugt der Schemagenerierungs-Assistent einen Fehler und zeigt den von der Datenbank-Engine zurückgegebenen Fehler an. Wenn Sie beispielsweise eine Primärschlüsseleinschränkung oder einen nicht gruppierten Index für eine Tabelle erstellen, nachdem der Assistent die Tabelle generiert hat, wird diese Tabelle nicht vom Schemagenerierungs-Assistenten gelöscht, da er die Einschränkung bzw. den Index nicht erstellt hat.  
+ Kann der Schemagenerierungs-Assistent die erforderliche Änderung wegen des Vorhandenseins eines Benutzerobjekts in der Themenbereichsdatenbank nicht vornehmen (da die Datenbank-Engine einen Fehler zurückgibt), erzeugt der Schemagenerierungs-Assistent einen Fehler und zeigt den von der Datenbank-Engine zurückgegebenen Fehler an. Wenn Sie z. b. eine Primärschlüssel Einschränkung oder einen nicht gruppierten Index für eine Tabelle erstellen, nachdem der Assistent die Tabelle generiert hat, wird diese Tabelle nicht vom Schemagenerierungs-Assistenten gelöscht, da die Einschränkung oder der Index nicht erstellt wurde.  
   
 ## <a name="supporting-schema-changes"></a>Unterstützen von Schemaänderungen  
  Wenn Sie die Eigenschaften der Tabellen oder Spalten in der Themenbereichsdatenbank oder in der zugeordneten Datenquellensicht ändern, behandelt der Schemagenerierungs-Assistent die Änderungen wie in der folgenden Tabelle beschrieben.  

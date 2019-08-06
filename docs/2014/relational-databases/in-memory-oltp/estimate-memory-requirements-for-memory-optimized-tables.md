@@ -10,15 +10,15 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157961"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811011"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
-  Gibt an, ob Sie ein neues erstellen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] eine Speicheroptimierte Tabelle oder eine vorhandene datenträgerbasierte Tabelle zu einer speicheroptimierten Tabelle migrieren, ist es wichtig, dass der Arbeitsspeicherbedarf der einzelnen Tabellen realistisch einzuschätzen, damit Sie den Server mit ausreichend bereitstellen können Arbeitsspeicher. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
+  Unabhängig davon, ob Sie eine [!INCLUDE[hek_2](../../includes/hek-2-md.md)] neue Speicher optimierte Tabelle erstellen oder eine vorhandene Datenträger basierte Tabelle zu einer Speicher optimierten Tabelle migrieren, ist es wichtig, dass Sie eine sinnvolle Schätzung der Arbeitsspeicher Anforderungen der einzelnen Tabellen haben, damit Sie den Server mit ausreichenden Anforderungen bereitstellen können. Gedenkens. In diesem Abschnitt wird beschrieben, wie die Speichermenge geschätzt wird, die für die Daten einer speicheroptimierten Tabelle benötigt wird.  
   
  Wenn Sie die Migration von datenträgerbasierten zu speicheroptimierten Tabellen in Erwägung ziehen, finden Sie im Thema [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) Informationen dazu, welche Tabellen sich am besten migrieren lassen. Anschließend können Sie mit diesem Thema fortfahren. Alle Themen unter [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md) bieten eine Anleitung zum Migrieren von datenträgerbasierten zu speicheroptimierten Tabellen.  
   
@@ -75,7 +75,7 @@ GO
   
  Im Folgenden eine Größenberechnung für 5.000.000 (5 Millionen) Zeilen in einer speicheroptimierten Tabelle. Der von den Datenzeilen belegte Gesamtspeicher wird wie folgt geschätzt:  
   
- **Arbeitsspeicher für die Zeilen der Tabelle**  
+ **Arbeitsspeicher für die Tabellenzeilen**  
   
  Aus den vorherigen Berechnungen ergibt sich für jede Zeile in der speicheroptimierten Tabelle eine Größe von 24 + 32 + 200 oder 256 Bytes.  Da sie 5 Million Zeilen enthält, belegt die Tabelle 5.000.000 * 256 Bytes oder 1.280.000.000 Bytes, also ungefähr 1,28 GB.  
   
@@ -115,11 +115,11 @@ SELECT COUNT(DISTINCT [Col2])
   
  Informationen zur Funktionsweise von Hashindizes in speicheroptimierten [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Tabellen finden Sie unter [Hashindizes](../../database-engine/hash-indexes.md).  
   
- **Hinweis**: Sie können nicht die Arraygröße des Hash-Index im Handumdrehen ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
+ **Hinweis**: Sie können die Array Größe des Hash Indexes nicht dynamisch ändern. Um die Arraygröße des Hashindexes zu ändern, müssen Sie die Tabelle löschen, den bucket_count-Wert ändern und die Tabelle erneut erstellen.  
   
- **Die Arraygröße der Hash-Index festlegen**  
+ **Festlegen der Array Größe des Hash Indexes**  
   
- Die hasharraygröße wird festgelegt, indem `(bucket_count= <value>)` , in denen \<Wert > ist ein ganzzahliger Wert größer als 0 (null). Wenn \<Wert > ist keine Potenz von 2 ist, der tatsächliche bucket_count-Wert wird gerundet auf die nächste nächste Potenz von 2.  In der Beispieltabelle (Bucket_count = 5000000), weil 5.000.000 keine Potenz von 2 ist, die tatsächliche Bucketanzahl auf 8.388.608 (2<sup>23</sup>).  Wenn Sie den vom Hasharray benötigten Arbeitsspeicher berechnen, müssen Sie diesen Wert und nicht 5.000.000 verwenden.  
+ Die Hash Array Größe wird durch `(bucket_count= <value>)` festgelegt, wobei \<value > ein ganzzahliger Wert größer als 0 (null) ist. Wenn \<value > keine Potenz von 2 ist, wird der tatsächliche bucket_count-Wert auf die nächste nächste Potenz von 2 aufgerundet.  In der Beispiel Tabelle (bucket_count = 5 Millionen) wird die tatsächliche Bucketanzahl auf 8.388.608 (2<sup>23</sup>) gerundet, da 5 Millionen keine Potenz von 2 ist.  Wenn Sie den vom Hasharray benötigten Arbeitsspeicher berechnen, müssen Sie diesen Wert und nicht 5.000.000 verwenden.  
   
  Daher beträgt der für jedes Hasharray erforderliche Arbeitsspeicher im Beispiel:  
   
@@ -129,20 +129,20 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Arbeitsspeicher für nicht gruppierte Indizes**  
   
- Nicht gruppierte Indizes werden als BTrees implementiert, deren innere Knoten den Indexwert und Zeiger auf nachfolgende Knoten enthalten.  Blattknoten enthalten den Indexwert und einen Zeiger auf die Tabellenzeile im Arbeitsspeicher.  
+ Nicht gruppierte Indizes werden als BTrees implementiert, wobei die inneren Knoten den Indexwert und Zeiger auf nachfolgende Knoten enthalten.  Blattknoten enthalten den Indexwert und einen Zeiger auf die Tabellenzeile im Arbeitsspeicher.  
   
- Nicht gruppierte Indizes verfügen im Gegensatz Hashindizes nicht über eine feste Bucketgröße. Der Index vergrößert bzw. verkleinert sich dynamisch mit den Daten.  
+ Im Gegensatz zu Hash Indizes haben nicht gruppierte Indizes keine fixierte Bucket-Größe. Der Index vergrößert bzw. verkleinert sich dynamisch mit den Daten.  
   
- Der von nicht gruppierten Indizes belegte Arbeitsspeicher kann wie folgt berechnet werden:  
+ Der von nicht gruppierten Indizes benötigte Arbeitsspeicher kann wie folgt berechnet werden:  
   
 -   **Arbeitsspeicher, der Nichtblattknoten zugeordnet ist**   
     Bei einer typischen Konfiguration hat der Arbeitsspeicher, der Nichtblattknotenden zugeordnet wird, einen geringen prozentualen Anteil am gesamten vom Index belegten Arbeitsspeicher, der so klein ist, dass er problemlos ignoriert werden kann.  
   
 -   **Arbeitsspeicher für Blattknoten**   
-    Die Blattknoten weisen eine Zeile für jeden eindeutigen Schlüssel in der Tabelle auf, die auf die Datenzeilen mit dem eindeutigen Schlüssel verweist.  Wenn Sie über mehrere Zeilen mit demselben Schlüssel (also über einen nicht eindeutigen nicht gruppierten Index) verfügen, enthält der Indexblattknoten nur eine Zeile, die auf eine der Zeilen verweist, während die anderen Zeilen miteinander verknüpft sind.  Folglich kann für den insgesamt erforderlichen Arbeitsspeicher wie folgt ein Näherungswert ermittelt werden:   
+    Die Blattknoten weisen eine Zeile für jeden eindeutigen Schlüssel in der Tabelle auf, die auf die Datenzeilen mit dem eindeutigen Schlüssel verweist.  Wenn Sie über mehrere Zeilen mit demselben Schlüssel verfügen (d. h., Sie verfügen über einen nicht eindeutigen nicht gruppierten Index), gibt es nur eine Zeile im Index Blattknoten, die auf eine der Zeilen verweist, in der die anderen Zeilen miteinander verknüpft sind.  Folglich kann für den insgesamt erforderlichen Arbeitsspeicher wie folgt ein Näherungswert ermittelt werden:   
     memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Nicht gruppierte Indizes eignen sich am besten für Bereichssuchen, wie in der folgenden Abfrage veranschaulicht:  
+ Nicht gruppierte Indizes eignen sich am besten für Bereichs suchen, wie in der folgenden Abfrage veranschaulicht:  
   
 ```sql  
   
@@ -161,7 +161,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- Wird durch die Anzahl veralteter Zeilen mit der Größe einer Zeile einer speicheroptimierten Tabelle multipliziert Arbeitsspeicherbedarf für veraltete Zeilen geschätzt (finden Sie unter [Arbeitsspeicher für die Tabelle](#bkmk_MemoryForTable) oben).  
+ Der Arbeitsspeicher Bedarf für veraltete Zeilen wird dann geschätzt, indem die Anzahl veralteter Zeilen um die Größe einer Speicher optimierten Tabellenzeile multipliziert wird (siehe Arbeits [Speicher für die Tabelle](#bkmk_MemoryForTable) oben).  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

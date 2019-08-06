@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164969"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811302"
 ---
 # <a name="understanding-the-database-schemas"></a>Grundlegendes zu Datenbankschemas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164969"
  Beziehungen  
  Der Assistent generiert eine Beziehung für jede reguläre Dimensionsbeziehung der Faktentabelle zum Granularitätsattribut der Dimensionstabelle. Wenn die Granularität auf dem Schlüsselattribut der Dimensionstabelle basiert, wird die Beziehung in der Datenbank und in der Datenquellensicht erstellt. Wenn die Granularität auf einem anderen Attribut basiert, wird die Beziehung nur in der Datenquellensicht erstellt.  
   
- Wenn Sie im Assistenten die Indizes generieren, wird ein nicht gruppierter Index für jede dieser Beziehungsspalten generiert.  
+ Wenn Sie die Generierung von Indizes im Assistenten ausgewählt haben, wird ein nicht gruppierter Index für jede dieser Beziehungs Spalten generiert.  
   
  Einschränkungen  
  Primärschlüssel werden nicht in Faktentabellen generiert.  

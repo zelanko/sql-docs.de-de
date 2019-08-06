@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250880"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811230"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
   Die Tabellen, die als Transaktionsreplikationsabonnenten fungieren, können (mit Ausnahme der Peer-zu-Peer-Transaktionsreplikation) als speicheroptimierte Tabellen konfiguriert werden. Andere Replikationskonfigurationen sind mit speicheroptimierten Tabellen nicht kompatibel.  
@@ -23,7 +23,7 @@ ms.locfileid: "63250880"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>Konfigurieren einer speicheroptimierten Tabelle als Abonnent  
  Führen Sie die folgenden Schritte aus, um eine speicheroptimierte Tabelle als Abonnenten zu konfigurieren.  
   
- **Erstellen und Aktivieren einer Veröffentlichung**  
+ **Erstellen und Aktivieren der Veröffentlichung**  
   
 1.  Erstellen einer Veröffentlichung  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63250880"
     GO  
     ```  
   
- **Generieren Sie eine Momentaufnahme und passen Sie des Schemas an**  
+ **Generieren einer Momentaufnahme und Anpassen des Schemas**  
   
 1.  Erstellen Sie einen Momentaufnahmeauftrag, und generieren Sie eine Momentaufnahme.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "63250880"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navigieren Sie zum Ordner für Momentaufnahmen. Der Standardspeicherort lautet "c:\Programme\Microsoft c:\Programme\Microsoft SQL Server\MSSQL12. \<Instanz > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\".  
+2.  Navigieren Sie zum Ordner für Momentaufnahmen. Der Standard Speicherort ist "c:\Programme\Microsoft SQL server\mssql12.". INSTANCE > \mssql\repldata\unc\xxx\yyyymmddhhmmss\\". \<  
   
-3.  Suchen Sie die **. SCH** -Datei für die Tabelle, und klicken Sie in Management Studio zu öffnen. Ändern Sie das Tabellenschema, und aktualisieren Sie die gespeicherte Prozedur, wie im Folgenden beschrieben.  
+3.  Suchen Sie nach **. Sch** -Datei für die Tabelle, und öffnen Sie Sie in Management Studio. Ändern Sie das Tabellenschema, und aktualisieren Sie die gespeicherte Prozedur, wie im Folgenden beschrieben.  
   
      Werten Sie die in der IDX-Datei definierten Indizes aus. Ändern Sie `CREATE TABLE`, um die erforderlichen Indizes, die Einschränkungen, den Primärschlüssel und die speicheroptimierte Syntax anzugeben. Für speicheroptimierte Tabellen dürfen Indexspalten NICHT NULL sein, und Indexspalten von Zeichentypen müssen Unicode sein und eine BIN2-Sortierung aufweisen. Siehe das unten stehende Beispiel:  
   
@@ -226,7 +226,7 @@ ms.locfileid: "63250880"
     go  
     ```  
   
-5.  Erstellen der Abonnentendatenbank mithilfe der **elevate_to_snapshot_isolation** aus, und legen Sie die standardsortierung auf Latin1_General_CS_AS_KS_WS, wenn die Nichtunicode-Zeichendatentypen verwenden.  
+5.  Erstellen Sie eine Abonnenten Datenbank mithilfe der Option **Elevate to Snapshot Isolation** , und legen Sie die Standardsortierung auf Latin1_General_CS_AS_KS_WS fest, wenn nicht-Unicode-Zeichen Datentypen verwendet werden.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -241,7 +241,7 @@ ms.locfileid: "63250880"
     GO  
     ```  
   
-6.  Wenden Sie das Schema auf die Datenbank eines Abonnenten an, und speichern Sie das Schema für die zukünftige Verwendung.  
+6.  Wenden Sie das Schema auf die Datenbank eines Abonnenten an, und speichern Sie das Schema für die spätere Verwendung.  
   
 7.  Laden Sie die Verlegerdaten (Quelldaten) in den Abonnenten. Die Daten dürfen beim Verleger nicht geändert werden, bis Sie ein Abonnement hinzufügen.  Sie können BCP verwenden, wie unten veranschaulicht:  
   
@@ -263,7 +263,7 @@ ms.locfileid: "63250880"
     GO  
     ```  
   
- **Fügen Sie keine Synchronisierung Abonnement hinzu.**  
+ **Kein Synchronisierungs Abonnement hinzufügen**  
   
  Fügen Sie ein "No sync"-Abonnement hinzu.  
   
@@ -293,13 +293,13 @@ GO
   
  Auf dem Abonnenten können die Tabellen, die bei einer Transaktionsreplikation berücksichtigt werden, als speicheroptimierte Tabellen konfiguriert werden. Die Abonnententabellen müssen jedoch die Anforderungen für speicheroptimierte Tabellen erfüllen. Dies erfordert folgende Einschränkungen.  
   
--   Zum Erstellen einer speicheroptimierten Tabelle auf einem Transaktionsreplikationsabonnenten müssen die Momentaufnahme-Schemadateien, mit denen die speicheroptimierten Tabellen erstellt werden, manuell geändert werden. Weitere Informationen finden Sie unter [Ändern einer Schemadatei](#Schema).  
+-   Zum Erstellen einer speicheroptimierten Tabelle auf einem Transaktionsreplikationsabonnenten müssen die Momentaufnahme-Schemadateien, mit denen die speicheroptimierten Tabellen erstellt werden, manuell geändert werden. Weitere Informationen finden Sie unter [Ändern einer Schema Datei](#Schema).  
   
 -   Tabellen, die mit speicheroptimierten Tabellen auf einem Abonnenten repliziert werden, sind auf das Limit von 8060 Byte pro Zeile für speicheroptimierte Tabellen beschränkt.  
   
--   Tabellen, die mit speicheroptimierten Tabellen auf Abonnenten repliziert werden, sind auf die Datentypen beschränkt, die für speicheroptimierte Tabellen zulässig sind. Weitere Informationen finden Sie unter [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
+-   Tabellen, die mit speicheroptimierten Tabellen auf Abonnenten repliziert werden, sind auf die Datentypen beschränkt, die für speicheroptimierte Tabellen zulässig sind. Weitere Informationen finden Sie [unter Unterstützte Datentypen](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   Es gelten Einschränkungen für das Aktualisieren des Primärschlüssels von Tabellen, die mit einer speicheroptimierten Tabelle auf einem Abonnenten repliziert werden. Weitere Informationen finden Sie unter [Replizieren von Änderungen mit einem Primärschlüssel](#PrimaryKey).  
+-   Es gelten Einschränkungen für das Aktualisieren des Primärschlüssels von Tabellen, die mit einer speicheroptimierten Tabelle auf einem Abonnenten repliziert werden. Weitere Informationen finden Sie unter [Replizieren von Änderungen an einem Primärschlüssel](#PrimaryKey).  
   
 -   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen finden Sie unter [Von In-Memory OLTP nicht unterstützte T-SQL-Konstrukte](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING muss auf ON festgelegt sein.  
   
-##  <a name="PrimaryKey"></a> Replizieren von Änderungen mit einem Primärschlüssel  
+##  <a name="PrimaryKey"></a>Replizieren von Änderungen an einem Primärschlüssel  
  Der Primärschlüssel einer speicheroptimierten Tabelle kann nicht aktualisiert werden. Wenn Sie ein Primärschlüsselupdate auf einem Abonnenten replizieren möchten, ändern Sie die gespeicherte Updateprozedur so, dass der Updatevorgang als DELETE/INSERT-Paar übermittelt wird.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -14,19 +14,19 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520408"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811262"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Statusbericht: Online Index Operation-Ereignisklasse
-  Die Progress Report: Online Index Operation-Ereignisklasse zeigt den Fortschritt einer onlineindexerstellung an, während des Buildprozesses ausgeführt wird.  
+  Die Progress Report: Online Index Operation-Ereignisklasse gibt den Status eines Onlineindexvorgangs während des Erstellungsprozesses an.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Statusbericht: Online Index Operation Ereignisklassen-Datenspalten  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Statusbericht: Datenspalten der Progress Report: Online Index Operation-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |BigintData1|`bigint`|Die Anzahl der eingefügten Zeilen.|52|Ja|  
@@ -34,11 +34,11 @@ ms.locfileid: "62520408"
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
 |DatabaseID|`int`|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |DatabaseName|`nvarchar`|Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  
-|Duration|`bigint`|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|Ja|  
+|Dauer|`bigint`|Die Zeit (in Mikrosekunden), die für das Ereignis benötigt wurde.|13|Ja|  
 |EndTime|`datetime`|Der Zeitpunkt, an dem der Onlineindexvorgang abgeschlossen war.|15|Ja|  
 |EventClass|`int`|Ereignistyp = 190.|27|Nein|  
 |EventSequence|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
-|EventSubClass|`int`|Der Typ der Ereignisunterklasse.<br /><br /> 1 = Start<br /><br /> 2 = Beginn der Ausführung von Phase 1<br /><br /> 3 = Ende der Ausführung von Phase 1<br /><br /> 4 = Beginn der Ausführung von Phase 2<br /><br /> 5 = Ende der Ausführung von Phase 2<br /><br /> 6 = Zählung der eingefügten Zeilen<br /><br /> 7 = Fertig<br /><br /> Phase 1 verweist auf das Basisobjekt (gruppierter Index oder Heap) oder darauf, ob der Indexvorgang nur einen nicht gruppierten Index einschließt. Phase 2 wird verwendet, wenn ein Indexerstellungsvorgang sowohl die ursprüngliche erneute Erstellung als auch zusätzliche nicht gruppierte Indizes einschließt.  Wenn ein Objekt z. B. über einen gruppierten Index und mehrere nicht gruppierte Indizes verfügt, würden bei Verwendung des Befehls "Alle neu erstellen" alle Indizes neu erstellt werden. Das Basisobjekt (der gruppierte Index) wird in Phase 1 neu erstellt, und anschließend werden alle nicht gruppierten Indizes in Phase 2 neu erstellt.|21|Ja|  
+|EventSubClass|`int`|Der Typ der Ereignisunterklasse.<br /><br /> 1 = Start<br /><br /> 2 = Beginn der Ausführung von Phase 1<br /><br /> 3 = Ende der Ausführung von Phase 1<br /><br /> 4 = Beginn der Ausführung von Phase 2<br /><br /> 5 = Ende der Ausführung von Phase 2<br /><br /> 6 = Zählung der eingefügten Zeilen<br /><br /> 7 = Fertig<br /><br /> Phase 1 verweist auf das Basisobjekt (gruppierter Index oder Heap) oder, wenn der Index Vorgang nur einen nicht gruppierten Index umfasst. Phase 2 wird verwendet, wenn ein indexbuildvorgang sowohl die ursprüngliche Neuerstellung als auch zusätzliche nicht gruppierte Indizes einschließt.  Wenn ein Objekt z. b. über einen gruppierten Index und mehrere nicht gruppierte Indizes verfügt, werden bei "Rebuild all" alle Indizes neu erstellt. Das Basisobjekt (der gruppierte Index) wird in Phase 1 neu erstellt, und anschließend werden alle nicht gruppierten Indizes in Phase 2 neu erstellt.|21|Ja|  
 |GroupID|`int`|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|`nvarchar`|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IndexID|`int`|ID für den Index des Objekts, das von dem Ereignis betroffen ist.|24|Ja|  

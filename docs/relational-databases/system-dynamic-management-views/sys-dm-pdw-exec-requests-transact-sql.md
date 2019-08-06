@@ -1,5 +1,5 @@
 ---
-title: dm_pdw_exec_requests (Transact-SQL) | Microsoft-Dokumentation
+title: sys. DM _pdw_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,44 +9,44 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e6514991c0819342861a50a2a50b37e7d8748cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72af3975378b2450e51b3880e8814705bb514c1a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899399"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811398"
 ---
-# <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
+# <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu Anforderungen, die alle zurzeit oder zuletzt im aktiven [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Sie enthält eine Zeile für jede Anforderung bzw. die Abfrage.  
+  Enthält Informationen zu allen Anforderungen, die derzeit oder vor [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]kurzem in aktiv sind. Es wird eine Zeile pro Anforderung/Abfrage aufgelistet.  
   
 |Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Der Schlüssel für diese Sicht. Eindeutige numerische ID der Anforderung zugeordnet ist.|Für alle Anforderungen im System eindeutig.|  
-|session_id|**nvarchar(32)**|Eindeutige numerische ID in Zusammenhang mit der Sitzung, in der diese Abfrage ausgeführt wurde. Finden Sie unter [dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|status|**nvarchar(32)**|Aktuellen Status der Anforderung.|"Wird ausgeführt", "Angehalten", "Abgeschlossen", "Abgebrochen", "Failed".|  
-|submit_time|**datetime**|Zeit mit der die Anforderung gesendet wurde für die Ausführung.|Gültige **"DateTime"** kleiner oder gleich der aktuellen Uhrzeit und Start_time.|  
-|start_time|**datetime**|Zeitpunkt, an dem die anforderungsausführung gestartet wurde.|NULL für Anforderungen in der Warteschlange. andernfalls, gültige **"DateTime"** kleiner oder gleich der aktuellen Zeit.|  
-|end_compile_time|**datetime**|Zeitpunkt, an dem das Modul abgeschlossen Kompilieren die Anforderung.|NULL für Anforderungen, die noch nicht kompiliert wurden. andernfalls ein gültiger **"DateTime"** Start_time kleiner und kleiner als oder gleich der aktuellen Zeit.|
-|end_time|**datetime**|Zeitpunkt, an dem die anforderungsausführung abgeschlossen, Fehler, oder wurde abgebrochen.|NULL für in der Warteschlange oder aktiven Anforderungen. andernfalls, eine gültige **"DateTime"** kleiner oder gleich der aktuellen Zeit.|  
-|total_elapsed_time|**int**|Bei der Ausführung verstrichene Zeit seit Beginn die Anforderung, in Millisekunden.|Zwischen 0 und der Unterschied zwischen Start_time "und" End_time.</br></br> Wenn Total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, weiterhin Total_elapsed_time der maximale Wert sein. Diese Bedingung generiert die Warnung "der maximale Wert überschritten wurde."</br></br> Der maximale Wert in Millisekunden ist identisch mit rund 24,8 Tage.|  
-|Bezeichnung|**nvarchar(255)**|Optionale Bezeichnung-Zeichenfolge, die einige Anweisungen SELECT-Abfrage zugeordnet.|Eine beliebige Zeichenfolge mit "a – Z", "A – Z", "0-9,"_".|  
-|error_id|**nvarchar(36)**|Eindeutige ID des Fehlers der Anforderung zugeordnet ist, falls vorhanden.|Finden Sie unter [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); auf NULL festgelegt werden, wenn kein Fehler aufgetreten ist.|  
-|database_id|**int**|Der Bezeichner der Datenbank, die durch explizite Kontext (z. B. Verwendung DB_X) verwendet.|Finden Sie unter-ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|Befehl|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung durch den Benutzer gesendet.|Alle gültigen Abfrage oder einen Anforderung-Text. Abfragen, die länger als 4.000 Byte sind, werden abgeschnitten.|  
-|resource_class|**nvarchar(20)**|Die Ressourcenklasse für diese Anforderung. Finden Sie im Zusammenhang **Concurrency_slots_used** in [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Weitere Informationen zu Ressourcenklassen, finden Sie unter [ressourcenverwaltung Ressourcenklassen und workloadverwaltung](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>"Smallrc"</br>"Mediumrc"</br>"Largerc"</br>"Xlargerc"|
-|importance|**nvarchar(32)**|Die Bedeutung die Anforderung festlegen eingereicht wurde. Anforderungen mit einer niedrigeren Wichtigkeit werden in der Warteschlange unterbrochenen Zustand verbleiben, wenn höhere Wichtigkeit-Anforderungen gesendet werden.  Anforderungen und einer höheren Priorität werden vor niedriger Wichtigkeit Anforderungen ausgeführt werden, die zuvor gesendet wurden.  Weitere Informationen zu Wichtigkeit, finden Sie unter [Workload Wichtigkeit](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>niedriger als normal</br>Normal (Standard)</br>höher als normal</br>high|
+|request_id|**nvarchar(32)**|Der Schlüssel für diese Ansicht. Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Eindeutig für alle Anforderungen im System.|  
+|session_id|**nvarchar(32)**|Eindeutige numerische ID, die der Sitzung zugeordnet ist, in der die Abfrage ausgeführt wurde. Weitere Informationen finden Sie unter [sys. DM &#40;_pdw_exec_sessions&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|status|**nvarchar(32)**|Aktueller Status der Anforderung.|"Wird ausgeführt", "angehalten", "abgeschlossen", "abgebrochen", "fehlerhaft".|  
+|submit_time|**datetime**|Der Zeitpunkt, zu dem die Anforderung zur Ausführung übermittelt wurde.|Gültiger **DateTime** -Wert, der kleiner oder gleich der aktuellen Uhrzeit und start_time ist.|  
+|start_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung der Anforderung gestartet wurde.|NULL bei Anforderungen in der Warteschlange; Andernfalls ist ein gültiger **DateTime** -Wert kleiner oder gleich der aktuellen Zeit.|  
+|end_compile_time|**datetime**|Der Zeitpunkt, zu dem die Engine das Kompilieren der Anforderung abgeschlossen hat.|NULL für Anforderungen, die noch nicht kompiliert wurden. andernfalls ein gültiger **DateTime** -Wert, der kleiner als start_time und kleiner oder gleich der aktuellen Uhrzeit ist.|
+|end_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung der Anforderung abgeschlossen wurde, fehlgeschlagen ist oder abgebrochen wurde.|NULL für Warteschlangen-oder aktive Anforderungen; andernfalls ein gültiger **DateTime** -Wert, der kleiner oder gleich der aktuellen Zeit ist.|  
+|total_elapsed_time|**int**|Verstrichene Zeit seit dem Start der Anforderung in Millisekunden.|Zwischen 0 und dem Unterschied zwischen start_time und end_time.</br></br> Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, ist total_elapsed_time weiterhin der Höchstwert. Mit dieser Bedingung wird die Warnung "der Höchstwert wurde überschritten" generiert.</br></br> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
+|ETI|**nvarchar(255)**|Optionale Zeichnungs Zeichenfolge, die einigen SELECT-Abfrage Anweisungen zugeordnet ist.|Eine beliebige Zeichenfolge, die "a-z", "a-z", "0-9", "_" enthält.|  
+|error_id|**nvarchar (36)**|Eindeutige ID des Fehlers, der der Anforderung zugeordnet ist, sofern vorhanden.|Weitere Informationen finden Sie unter [sys. DM &#40;_pdw_errors&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); auf NULL festgelegt, wenn kein Fehler aufgetreten ist.|  
+|database_id|**int**|Der Bezeichner der vom expliziten Kontext verwendeten Datenbank (z. b. use DB_X).|Siehe ID in [sys. Datenbanken &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|Befehl|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde.|Jeder gültige Abfrage-oder Anforderungs Text. Abfragen, die länger als 4000 Bytes sind, werden abgeschnitten.|  
+|resource_class|**nvarchar (20)**|Die Ressourcen Klasse für diese Anforderung. Weitere Informationen finden Sie unter Related **concurrency_slots_used** in [sys. DM &#40;_pdw_resource_waits&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Weitere Informationen zu Ressourcen Klassen finden Sie unter [Ressourcen Klassen &](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) workloadverwaltung. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
+|importance|**nvarchar(32)**|Die Wichtigkeits Einstellung, mit der die Anforderung übermittelt wurde. Anforderungen mit niedrigerer Wichtigkeit bleiben im angehaltenen Zustand, wenn Anforderungen höherer Wichtigkeit übermittelt werden.  Anforderungen mit höherer Wichtigkeit werden vor Anforderungen niedrigerer Wichtigkeit ausgeführt, die zuvor übermittelt wurden.  Weitere Informationen zur Wichtigkeit finden Sie unter [Wichtigkeit der Arbeitsauslastung](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
 |group_name| |Für die interne Verwendung vorgesehen.</br>Betrifft: Azure SQL Data Warehouse|
 |resource_allocation_percentage| |Für die interne Verwendung vorgesehen.</br>Betrifft: Azure SQL Data Warehouse|
-|result_set_cache|**bit**|Beschreibt, ob eine abgeschlossene Abfrage ein Cachetreffer Ergebnis (1) oder nicht war (0).|0,1|
+|result_set_cache|**bit**|Gibt an, ob eine abgeschlossene Abfrage ein Ergebnis Cache Treffer (1) oder nicht (0) war.|0,1|
 ||||
   
- Informationen, die maximale Anzahl Zeilen, die von dieser Sicht beibehalten können, finden Sie im Abschnitt "Metadaten" in der [Kapazitätsgrenzen](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) Thema.   
+ Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .   
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -54,11 +54,11 @@ ms.locfileid: "67899399"
   
 ## <a name="security"></a>Sicherheit
 
- dm_pdw_exec_requests nicht Abfrageergebnisse entsprechend datenbankspezifischen Berechtigungen zu filtern. Anmeldungen mit VIEW SERVER STATE-Berechtigung können die Ergebnisse Abfrageergebnisse für alle Datenbanken abrufen  
+ sys. DM _pdw_exec_requests filtert die Abfrageergebnisse nicht nach datenbankspezifischen Berechtigungen. Anmeldungen mit der View Server State-Berechtigung können Ergebnisse-Abfrageergebnisse für alle Datenbanken abrufen.  
   
 >[!WARNING]  
->Angreifer können dm_pdw_exec_requests für das Abrufen von Informationen über bestimmte Datenbankobjekte, indem Sie einfache Maßnahmen handeln, VIEW SERVER STATE-Berechtigung und ohne eine datenbankspezifische-Berechtigung.  
+>Ein Angreifer kann sys. DM _pdw_exec_requests verwenden, um Informationen zu bestimmten Datenbankobjekten abzurufen, indem er einfach die View Server State-Berechtigung und keine datenbankspezifische Berechtigung besitzt.  
   
 ## <a name="see-also"></a>Siehe auch
 
- [SQL Datawarehouse und Parallel Data Warehouse-dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md) 
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md) 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 6c456334d9d77424c1955f392e8c8a5d16261234
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e41cd9e244a39f5ec2e84d6f3512a709319acb24
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632041"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811465"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Neues in SSMA für DB2 (DB2ToSQL)
 
@@ -43,7 +43,7 @@ Das v 8.3-Release von SSMA für DB2 wurde durch gezielte Korrekturen verbessert,
 
 Die Version 8.2 von SSMA für DB2 wurde mit erweitert, um Probleme mit Verbindungen mit Azure SQL-Datenbank über das SSMA-Konsolen Tool und fehlende COUNT_BIG-Spalten in der views-Deklaration während der Konvertierung zu beheben. Darüber hinaus enthält diese Version einen Satz von Korrekturen, die für die Verbesserung von Qualitäts-und konvertierungsmetriken entworfen wurden, sowie Fehlerbehebungen für:
 
-* Ein Problem mit deaktivierten nicht gruppierten Indizes nach der Datenmigration.
+* Ein Problem mit deaktivierten, nicht gruppierten Indizes nach der Datenmigration.
 * Erkennung von .NET Framework während der automatischen Installation.
 * Ein zeitweiliger Absturz, der auftritt, wenn eine neue Version heruntergeladen wird.
 

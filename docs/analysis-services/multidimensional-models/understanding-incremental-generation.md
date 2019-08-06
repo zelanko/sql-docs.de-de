@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zur inkrementellen Generierung | Microsoft-Dokumentation
+title: Verständnis der inkrementellen Generierung Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802704"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811309"
 ---
 # <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802704"
  Hinzufügen eines neuen Objekts, z. B. einer Dimension, eines Cubes oder eines Attributs  
  Der Schemagenerierungs-Assistent fügt die zugrunde liegenden Objekte, denen das neue Objekt zugeordnet ist, hinzu.  
   
- Kann der Schemagenerierungs-Assistent die erforderliche Änderung wegen des Vorhandenseins eines Benutzerobjekts in der Themenbereichsdatenbank nicht vornehmen (da die Datenbank-Engine einen Fehler zurückgibt), erzeugt der Schemagenerierungs-Assistent einen Fehler und zeigt den von der Datenbank-Engine zurückgegebenen Fehler an. Wenn Sie beispielsweise eine Primärschlüsseleinschränkung oder einen nicht gruppierten Index für eine Tabelle erstellen, nachdem der Assistent die Tabelle generiert hat, wird diese Tabelle nicht vom Schemagenerierungs-Assistenten gelöscht, da er die Einschränkung bzw. den Index nicht erstellt hat.  
+ Kann der Schemagenerierungs-Assistent die erforderliche Änderung wegen des Vorhandenseins eines Benutzerobjekts in der Themenbereichsdatenbank nicht vornehmen (da die Datenbank-Engine einen Fehler zurückgibt), erzeugt der Schemagenerierungs-Assistent einen Fehler und zeigt den von der Datenbank-Engine zurückgegebenen Fehler an. Wenn Sie z. b. eine Primärschlüssel Einschränkung oder einen nicht gruppierten Index für eine Tabelle erstellen, nachdem der Assistent die Tabelle generiert hat, wird diese Tabelle nicht vom Schemagenerierungs-Assistenten gelöscht, da die Einschränkung oder der Index nicht erstellt wurde.  
   
 ## <a name="supporting-schema-changes"></a>Unterstützen von Schemaänderungen  
  Wenn Sie die Eigenschaften der Tabellen oder Spalten in der Themenbereichsdatenbank oder in der zugeordneten Datenquellensicht ändern, behandelt der Schemagenerierungs-Assistent die Änderungen wie in der folgenden Tabelle beschrieben.  

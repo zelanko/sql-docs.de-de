@@ -2,19 +2,19 @@
 title: Erstellen und Exportieren von Spark-Machine Learning-Modellen mit msprung
 titleSuffix: SQL Server big data clusters
 description: Verwenden Sie pyspark, um Machine Learning-Modelle mit Spark auf SQL Server Big Data Clustern (Vorschauversion) zu trainieren und zu erstellen. Exportieren Sie mit msprung, und bewerten Sie dann das Modell mit Java in SQL Server.
-author: lgongmsft
-ms.author: lgong
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67727374"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811206"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Erstellen, exportieren und bewerten von Spark-Machine Learning-Modellen auf SQL Server Big Data Clustern
 

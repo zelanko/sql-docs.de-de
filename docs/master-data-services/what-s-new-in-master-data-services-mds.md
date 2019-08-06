@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017218"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810499"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Neues in Master Data Services (MDS)
 
@@ -177,7 +177,7 @@ ms.locfileid: "68017218"
     
  **Benutzerdefinierte Indizes**  
   
- Sie können einen benutzerdefinierten Index für ein Attribut (einzelner Index) oder für eine Liste von Attributen (zusammengesetzter Index) in einer Entität erstellen, um die Abfrageleistung zu verbessern. Weitere Informationen finden Sie unter [Benutzerdefinierter Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
+ Sie können einen nicht gruppierten Index für ein Attribut (einzelner Index) oder für eine Liste von Attributen (zusammengesetzter Index) in einer Entität erstellen, um die Abfrageleistung zu verbessern. Weitere Informationen finden Sie unter [Benutzerdefinierter Index &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md).  
  
   **Attributfilter**  
   

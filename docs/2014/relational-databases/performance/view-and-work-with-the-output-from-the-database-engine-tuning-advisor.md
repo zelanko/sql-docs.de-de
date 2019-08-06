@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151455"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811019"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
   Wenn der Datenbankoptimierungsratgeber Datenbanken optimiert, erstellt er Zusammenfassungen, Empfehlungen, Berichte und Optimierungsprotokolle. Sie können die Optimierungsprotokollausgabe dazu verwenden, Probleme bei Optimierungssitzungen des Datenbankoptimierungsratgebers zu beheben. Mithilfe der Zusammenfassungen, Empfehlungen und Berichte können Sie bestimmen, ob Sie Optimierungsempfehlungen implementieren möchten oder die Optimierung fortsetzen möchten, bis Sie die Abfrageleistungsverbesserungen erreicht haben, die Sie für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation benötigen. Informationen über die Verwendung des Datenbankoptimierungsratgebers zum Erstellen von Arbeitslasten und zum Optimieren einer Datenbank finden Sie unter [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "63151455"
   
 2.  Kopieren Sie das [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md), und fügen Sie es in Ihren XML-Editor oder einen Text-Editor ein. Verwenden Sie dieses Beispiel zum Erstellen einer XML-Eingabedatei für Ihre Optimierungssitzung. Informationen zum Ausführen dieses Tasks finden Sie im Abschnitt "Erstellen von XML-Eingabedateien" in [Starten und Verwenden des Datenbankoptimierungsratgebers](database-engine-tuning-advisor.md).  
   
-3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen `TuningOptions`- und `Configuration`-Elemente. Geben Sie im `TuningOptions`-Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im `Configuration`-Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Informationen darüber, welche Attribute und untergeordneten Elementen können Sie mit der `TuningOptions` und `Configuration` übergeordneten Elementen, finden Sie unter [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Bearbeiten Sie die in der Beispiel-XML-Eingabedatei enthaltenen `TuningOptions`- und `Configuration`-Elemente. Geben Sie im `TuningOptions`-Element an, welche physischen Entwurfsstrukturen der Datenbankoptimierungsratgeber während der Optimierungssitzung berücksichtigen soll. Geben Sie im `Configuration`-Element die physischen Entwurfsstrukturen an, die der hypothetischen Konfiguration der physischen Datenbankentwurfsstrukturen entsprechen, die der Datenbankoptimierungsratgeber analysieren soll. Informationen zu den Attributen und unter `TuningOptions` `Configuration` geordneten Elementen, die Sie mit den übergeordneten Elementen und verwenden können, finden Sie unter Referenz [ &#40;Datenbankoptimierungsratgeber&#41;für die XML-Eingabedatei](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Speichern Sie die Eingabedatei mit der Dateinamenerweiterung **XML**.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "63151455"
  Der Index oder die Sicht, auf den/die sich die Empfehlung bezieht. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel**zu löschen oder hinzuzufügen.  
   
  **Details**  
- Eine Beschreibung der Werts unter **Empfehlungsziel**. Mögliche Werte sind: gruppierte, indizierte Sicht oder leer bei einer nicht gruppierten Sicht. Gibt auch an, ob der Index eindeutig ist.  
+ Eine Beschreibung der Werts unter **Empfehlungsziel**. Mögliche Werte sind Clustered, indizierte Sicht oder leer, die einen nicht gruppierten Index angeben. Gibt auch an, ob der Index eindeutig ist.  
   
  **Partitionsschema**  
  Das Partitionsschema wird in dieser Spalte bei empfohlener Partitionierung bereitgestellt.  

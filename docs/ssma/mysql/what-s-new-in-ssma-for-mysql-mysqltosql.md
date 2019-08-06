@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 54edb2b971cbc83d56498065efa72a4e84257147
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632046"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811492"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Neuerungen in SSMA für MySQL (MySqlToSql)
 
@@ -34,7 +34,7 @@ Das v 8.3-Release von SSMA für MySQL wurde durch gezielte Korrekturen verbesser
 
 Die Version 8.2 von SSMA für MySQL wurde durch eine Reihe von Korrekturen ergänzt, die zum Verbessern von Qualitäts-und konvertierungsmetriken entworfen wurden, sowie für folgende Korrekturen:
 
-* Ein Problem mit deaktivierten nicht gruppierten Indizes nach der Datenmigration.
+* Ein Problem mit deaktivierten, nicht gruppierten Indizes nach der Datenmigration.
 * Erkennung von .NET Framework während der automatischen Installation.
 * Ein zeitweiliger Absturz, der auftritt, wenn eine neue Version heruntergeladen wird.
 

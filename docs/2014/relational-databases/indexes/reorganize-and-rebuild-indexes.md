@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475958"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811032"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
   In diesem Thema wird beschrieben, wie Sie einen fragmentierten Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]neu organisieren oder neu erstellen. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwaltet Indizes automatisch, wenn Einfüge-, Update- oder Löschvorgänge an den zugrunde liegenden Daten vorgenommen werden. Im Lauf der Zeit können diese Änderungen dazu führen, dass die Informationen im Index in der Datenbank verstreut (fragmentiert) werden. Fragmentierung liegt vor, wenn Indizes über Seiten verfügen, in denen die logische Reihenfolge (basierend auf dem Schlüsselwert) nicht der physischen Reihenfolge in der Datendatei entspricht. Hochgradig fragmentierte Indizes können die Abfrageleistung beeinträchtigen und dazu führen, dass Ihre Anwendung nur langsam reagiert.  
@@ -87,7 +87,7 @@ ms.locfileid: "68475958"
 <sup>1</sup> Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden.  
   
 > [!TIP]
-> Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Wenn beispielsweise ein bestimmter Index hauptsächlich für Scanvorgänge verwendet wird, kann das Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Der Leistungsvorteil ist für Indizes, die in erster Linie für Suchvorgänge verwendet werden, weniger bemerkbar. Ebenso ist das Entfernen von Fragmentierung in einem Heap (eine Tabelle ohne gruppierten Index) besonders nützlich für nicht gruppierte Index Scanvorgänge, wirkt sich aber kaum auf Suchvorgänge aus.
+> Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Wenn beispielsweise ein bestimmter Index hauptsächlich für Scanvorgänge verwendet wird, kann das Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Der Leistungsvorteil ist für Indizes, die in erster Linie für Suchvorgänge verwendet werden, weniger bemerkbar. Ebenso ist das Entfernen der Fragmentierung in einem Heap (eine Tabelle ohne gruppierten Index) besonders nützlich für Vorgänge für nicht gruppierte Indexscans, aber hat nur wenig Auswirkungen auf Suchvorgänge.
 
 Bei sehr niedrigen Fragmentierungsniveaus (unter 5 Prozent) sollten diese Befehle normalerweise nicht eingesetzt werden, da die Vorteile des Entfernens einer so geringen Fragmentierung die Kosten für das Neuorganisieren und Neuerstellen des Indexes nicht aufwiegen. 
 
@@ -97,7 +97,7 @@ Bei sehr niedrigen Fragmentierungsniveaus (unter 5 Prozent) sollten diese Befehl
 ### <a name="index-defragmentation-considerations"></a>Überlegungen zur Index Defragmentierung
 Unter bestimmten Umständen werden bei der Neuerstellung eines gruppierten Indexes automatisch alle nicht gruppierten Indizes neu erstellt, die auf den Clustering-Schlüssel verweisen, wenn sich die in den nicht gruppierten Indexdaten Sätzen enthaltenen physischen oder logischen IDs ändern müssen.
 
-Szenarien, die erzwingen, dass alle nicht gruppierten Indizes automatisch für eine Tabelle neu erstellt werden:
+Szenarien, die erzwingen, dass alle nicht gruppierten Indizes automatisch in einer Tabelle neu erstellt werden:
 
 -  Erstellen eines gruppierten Indexes für eine Tabelle
 -  Entfernen eines gruppierten Indexes, wodurch die Tabelle als Heap gespeichert wird

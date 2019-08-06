@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 4da3fa07c4cdcdf2f3666c3bf85ba3669eb7e5bf
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632055"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811440"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Neues in SSMA für SAP ASE (sybasedesql)
 In diesem Artikel werden die Änderungen an SQL Server Migration Assistant (SSMA) für SAP ASE (ehemals SSMA für Sybase) in jeder Version aufgeführt.
@@ -33,7 +33,7 @@ Das v 8.3-Release von SSMA für SAP ASE wurde durch gezielte Korrekturen ergänz
 
 Die Version 8.2 von SSMA für SAP ASE wurde durch eine Reihe von Korrekturen ergänzt, die zum Verbessern von Qualitäts-und konvertierungsmetriken entworfen wurden, sowie für folgende Korrekturen:
 
-* Ein Problem mit deaktivierten nicht gruppierten Indizes nach der Datenmigration.
+* Ein Problem mit deaktivierten, nicht gruppierten Indizes nach der Datenmigration.
 * Erkennung von .NET Framework während der automatischen Installation.
 * Ein zeitweiliger Absturz, der auftritt, wenn eine neue Version heruntergeladen wird.
 
@@ -272,7 +272,7 @@ Die SSMA-Version vom November 2006 für Sybase enthält die folgenden Änderunge
 * Es wurde eine neue Migrations Option hinzugefügt, mit der Sie angeben können, wie SSMA Datums [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Angaben außerhalb des Datums Bereichs behandeln soll.  
 * Auf der Registerkarte " **SQL** " wurde eine **formatierte SQL** -Einstellung hinzugefügt, die den Code für eine verbesserte Lesbarkeit formatiert.  
 * Fehlerbehebungen, einschließlich:
-  * SSMA konvertiert nun die Tabelle "Lock Table *" in {* Shared | Exklusive}-Modus-Anweisungen durch Hinzufügen eines TABLOCK-oder TABLOCKX-Hinweises zur nachfolgenden SELECT-Abfrage für die Tabelle.  
+  * SSMA konvertiert nun die Tabelle "LOCK TABLE" in {Shared | Exklusive}-Modus-Anweisungen durch Hinzufügen eines TABLOCK-oder TABLOCKX-Hinweises zur nachfolgenden SELECT-Abfrage für die Tabelle.  
   * Die notwendigen Umwandlungen werden nun hinzugefügt, wenn binäre Typen in Zeichen Ausdrücken verwendet werden.  
   * Arbeitsspeicher-und Leistungsverbesserungen.  
   

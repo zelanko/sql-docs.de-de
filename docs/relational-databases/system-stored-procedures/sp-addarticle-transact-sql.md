@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7be448918599918bdf638b43178030703da724a9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771371"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811393"
 ---
-# <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
+# <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Erstellt einen Artikel und fügt ihn zu einer Veröffentlichung hinzu. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
@@ -211,7 +211,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x40000000000**|Aktivieren Sie die Skripterstellung durch den Momentaufnahme-Agent, um eine Speicher optimierte Tabelle auf dem Abonnenten zu erstellen.|  
 |**0x80000000000**|Konvertiert den gruppierten Index für Speicher optimierte Artikel in einen nicht gruppierten Index.|  
 |**0x400000000000**|Repliziert Alle nicht gruppierten columnstore--Indizes für die Tabelle (n).|  
-|**0x800000000000**|Repliziert Alle geflitzten nicht gruppierten columnstore--Indizes für die Tabelle (n).|  
+|**0x800000000000**|Repliziert Alle geclusterten nicht gruppierten columnstore--Indizes für die Tabelle (n).|  
 |NULL|Bei der Replikation wird *schema_option* automatisch auf einen Standardwert festgelegt, dessen Wert von anderen Artikeleigenschaften abhängig ist. Die in den Hinweisen enthaltene Tabelle "Default Schema Options" zeigt die Standardschemaoptionen auf der Grundlage des Artikeltyps und des Replikationstyps an.<br /><br /> Der Standardwert für nicht[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] --Veröffentlichungen ist **0x050D3**.|  
   
  Nicht alle *schema_option* -Werte sind für jeden Replikationstyp und Artikeltyp gültig. Die Tabelle **gültige Schema Optionen** im Abschnitt "Hinweise" zeigt die gültigen Schema Optionen an, die basierend auf der Kombination des Artikel Typs und des Replikations Typs ausgewählt werden können.  

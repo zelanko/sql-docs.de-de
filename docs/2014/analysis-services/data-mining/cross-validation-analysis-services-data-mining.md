@@ -1,5 +1,5 @@
 ---
-title: Kreuzvalidierung (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Kreuz Validierung (Analysis Services Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27a2d837071ddd6a1bddb7d3aa05a4d7ec34cfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085232"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809854"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Kreuzvalidierung (Analysis Services - Data Mining)
   Die *Kreuzvalidierung* ist ein Standardtool in der Analyse und eine wichtige Funktion, die Sie bei der Entwicklung und Feinabstimmung von Data Mining-Modellen unterstützt. Sie verwenden die übergreifende Überprüfung, nachdem Sie eine Miningstruktur und zugehörige Miningmodelle erstellt haben, um die Gültigkeit des Modells sicherzustellen.  Die übergreifende Überprüfung verfügt über die folgenden Anwendungen:  
@@ -60,7 +60,7 @@ ms.locfileid: "66085232"
   
  Das Beispiel im Diagramm veranschaulicht die Verwendung der Daten, wenn drei Aufteilungen angegeben werden.  
   
- ![Wie die kreuzvalidierung Daten segmentiert](../media/xvoverviewmain.gif "wie übergreifende Überprüfung Daten segmentiert")  
+ Segmentierung von Daten in der ![Kreuz Validierung] Segmentierung von Daten in der (../media/xvoverviewmain.gif "Kreuz Validierung")  
   
  In dem Szenario in dem Diagramm enthält die Miningstruktur ein Zurückhaltungsdataset, das zu Testzwecken verwendet wird, das Testdataset wurde jedoch noch nicht für die Kreuzvalidierung hinzugefügt. Als Ergebnis werden alle Daten in dem Trainingsdataset, d. h. 70 Prozent der Daten in der Miningstruktur, für die Kreuzvalidierung verwendet. Der Bericht für die Kreuzvalidierung zeigt die Gesamtzahl der in jeder Partition verwendeten Fälle an.  
   
@@ -82,11 +82,11 @@ ms.locfileid: "66085232"
 ### <a name="choosing-models-and-columns-to-validate"></a>Auswählen von Modellen und Spalten zur Überprüfung  
  Wenn Sie die Registerkarte **Kreuzvalidierung** im Data Mining-Designer verwenden, müssen Sie zunächst aus einer Liste eine vorhersagbare Spalte auswählen. Eine einzelne Miningstruktur kann in der Regel mehrere Miningmodelle unterstützen, von denen nicht alle die gleiche vorhersagbare Spalte verwenden. Wenn Sie die Kreuzvalidierung ausführen, können nur die Modelle in den Bericht aufgenommen werden, die die gleiche vorhersagbare Spalte verwenden.  
   
- Um ein vorhersagbares Attribut auszuwählen, klicken Sie auf **Zielattribut** , und wählen Sie die Spalte aus der Liste aus. Wenn das Zielattribut eine geschachtelte Spalte oder eine Spalte in einer geschachtelten Tabelle ist, geben Sie den Namen der geschachtelten Spalte im Format \<Name der geschachtelten Tabelle > (Schlüssel).\< Geschachtelte Spalte >. Wenn die Spalte aus der geschachtelten Tabelle die Schlüsselspalte ist, können Sie \<Name der geschachtelten Tabelle > (Schlüssel).  
+ Um ein vorhersagbares Attribut auszuwählen, klicken Sie auf **Zielattribut** , und wählen Sie die Spalte aus der Liste aus. Wenn das Ziel Attribut eine in einer Spalte mit einer Spalte oder eine Spalte in einer Tabelle ist, müssen Sie den Namen der Spalte mit dem Namen > (Key) \<in der Format-Tabellen Tabelle eingeben.\< Die > der der Spalte. Wenn die einzige Spalte in der Tabelle, die in der Tabelle verwendet wird, die Schlüssel Spalte \<ist, können Sie den Namen > (Key) für eine Tabellen Tabelle verwenden.  
   
  Nachdem Sie das vorhersagbare Attribut ausgewählt haben, testet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatisch alle Modelle, die das gleiche vorhersagbare Attribut verwenden. Enthält das Zielattribut nach der Auswahl der vorhersagbaren Spalte diskrete Werte, können Sie optional einen vorhergesagten Status eingeben, wenn es einen bestimmten Wert gibt, den Sie vorhersagen möchten.  
   
- Die Auswahl des vorhergesagten Status beeinflusst die Measures, die zurückgegeben werden. Wenn Sie angeben, dass ein Zielattribut-d. h. ein Spaltenname-, und wählen Sie einen bestimmten Wert an, die Sie möchten das Modell zum Vorhersagen des Modells für die Vorhersage des wahrscheinlichsten Status bewertet werden, wird standardmäßig nicht.  
+ Die Auswahl des vorhergesagten Status beeinflusst die Measures, die zurückgegeben werden. Wenn Sie ein Ziel Attribut angeben, d. h. einen Spaltennamen und keinen bestimmten Wert auswählen, den das Modell Vorhersagen soll, wird das Modell standardmäßig anhand seiner Vorhersage des wahrscheinlichsten Zustands ausgewertet.  
   
  Wenn Sie die Kreuzvalidierung mit Clustermodellen verwenden, gibt es keine vorhersagbare Spalte. Stattdessen wählen Sie im Listenfeld **Zielattribut** den Eintrag **#Cluster** aus der Liste aus. Nachdem Sie diese Option ausgewählt haben, werden andere Optionen, die für Clusteringmodelle nicht relevant sind, z. B. **Zielstatus**, deaktiviert. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testet dann alle Clusteringmodelle, die der Miningstruktur zugeordnet sind.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66085232"
   
  Die gespeicherten Prozeduren werden nach Miningmodelltyp gruppiert. Ein Satz mit gespeicherten Prozeduren funktioniert nur mit Clustermodellen. Der andere Satz mit gespeicherten Prozeduren funktioniert mit anderen Miningmodellen.  
   
- Für jeden Typ des Miningmodells (gruppiert oder nicht gruppiert) führen die gespeicherten Prozeduren eine Kreuzvalidierung in zwei separaten Phasen aus.  
+ Die gespeicherten Prozeduren führen für jeden gruppierten oder nicht gruppierten Mining Modelltyp eine Kreuz Validierung in zwei separaten Phasen aus.  
   
  **Partitionieren von Daten und Generieren von Metriken für Partitionen**  
   

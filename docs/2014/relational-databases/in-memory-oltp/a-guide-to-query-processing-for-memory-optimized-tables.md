@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468090"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811069"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
   Mit In-Memory OLTP werden speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eingeführt. Dieser Artikel gibt eine Übersicht über die Abfrageverarbeitung für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren.  
@@ -77,7 +77,7 @@ Abfrageplan für einen Join datenträgerbasierter Tabellen.
   
 -   Die Zeilen der Customer-Tabelle werden aus dem gruppierten Index abgerufen, der die primäre Datenstruktur darstellt und die vollständigen Tabellendaten enthält.  
   
--   Daten aus der Reihenfolge-Tabelle werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
+-   Daten aus der Order-Tabelle werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
   
 -   Der logische Operator `Inner Join` wird vom physischen Operator `Merge Join` implementiert. Die anderen physischen Jointypen sind `Nested Loops` und `Hash Join`. Der `Merge Join`-Operator nutzt die Tatsache, dass beide Indizes nach der Joinspalte CustomerID sortiert werden.  
   
@@ -114,7 +114,7 @@ Abfrageverarbeitungspipeline in SQL Server.
   
 6.  Über Zugriffsmethoden werden die Zeilen aus den Index- und Datenseiten im Pufferpool abgerufen und Seiten nach Bedarf vom Datenträger in den Pufferpool geladen.  
   
- Für die erste Beispielabfrage fordert die Ausführungs-Engine von Zugriffsmethoden Zeilen im gruppierten Index für Customer und im nicht gruppierten Index für Order an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
+ Für die erste Beispiel Abfrage fordert die Ausführungs-Engine Zeilen im gruppierten Index für Customer und den nicht gruppierten Index für die Reihenfolge von Zugriffsmethoden an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] werden auch als interpretiertes [!INCLUDE[tsql](../../../includes/tsql-md.md)]. "Interpretiert" bezieht sich auf die Tatsache, dass der Abfrageplan von der Abfrageausführungs-Engine für jeden Operator im Abfrageplan interpretiert wird. Die Ausführungs-Engine liest den Operator und die Parameter und führt den Vorgang aus.  
@@ -222,7 +222,7 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur lässt sich folgendermaßen beschreiben:  
   
-1.  Der Benutzer gibt eine `EXEC` *USP MyProc* Anweisung.  
+1.  Der Benutzer gibt eine `EXEC` *usp_myproc* -Anweisung aus.  
   
 2.  Der Parser extrahiert den Namen und die Parameter der gespeicherten Prozedur.  
   

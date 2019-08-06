@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666797"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811079"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Auswählen eines Kontos für den SQL Server-Agent-Dienst
   Das Dienststartkonto definiert das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, in dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, und legt dessen Netzwerkberechtigungen fest. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird als angegebenes Benutzerkonto ausgeführt. Sie wählen ein Konto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers aus. Dort können Sie zwischen folgenden Optionen wählen:  
@@ -74,7 +74,7 @@ ms.locfileid: "62666797"
 ## <a name="supported-service-account-types"></a>Unterstützte Dienstkontotypen  
  In der folgenden Tabelle werden die Windows-Kontotypen aufgelistet, die für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst verwendet werden können.  
   
-|Dienstkontotyp|Nicht gruppierter Server|Gruppierter Server|Domänencontroller (nicht gruppiert)|  
+|Dienstkontotyp|Nicht gruppierter Server|Gruppierter Server|Domänen Controller (nicht gruppiert)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Domänenkonto (Mitglied der Windows-Administratorengruppe)|Supported|Supported|Supported|  
 |Windows-Domänenkonto (kein Administratorkonto)|Unterstützt<sup>1</sup>|Unterstützt<sup>1</sup>|Unterstützt<sup>1</sup>|  
@@ -83,13 +83,13 @@ ms.locfileid: "62666797"
 |Lokales Systemkonto (NT AUTHORITY\System)|Unterstützt<sup>2</sup>|Nicht unterstützt|Unterstützt<sup>2</sup>|  
 |Lokales Dienstkonto (NT AUTHORITY\LocalService)|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
   
- <sup>1</sup> Siehe Einschränkung 1 weiter unten.  
+ <sup>1</sup> siehe Einschränkung 1 unten.  
   
- <sup>2</sup> Siehe Einschränkung 2 weiter unten.  
+ <sup>2</sup> siehe Einschränkung 2 weiter unten.  
   
- <sup>3</sup> Siehe Einschränkung 3 weiter unten.  
+ <sup>3</sup> siehe Einschränkung 3 unten.  
   
- <sup>4</sup> Siehe Einschränkung 4 weiter unten.  
+ <sup>4</sup> siehe Einschränkung 4 unten.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Einschränkung 1: Verwenden von Nichtadministratorkonten für die Multiserververwaltung  
  Beim Eintragen von Zielservern für einem Masterserver kann ein Fehler mit der folgenden Fehlermeldung auftreten: "The enlist operation failed." (Fehler beim Eintragungsvorgang)  
