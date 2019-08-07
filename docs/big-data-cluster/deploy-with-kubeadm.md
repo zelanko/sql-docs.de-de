@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3d8e8ce2683aef5922efe9a13ee88fa5920aa4af
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470753"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661368"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server-Big Data-Cluster-Bereitstellungen
 
@@ -26,7 +26,7 @@ Dieser Artikel enthält ein Beispiel für die Verwendung von **kubeadm** zum Kon
 > Beispielskripts zum Konfigurieren von Kubernetes finden Sie unter [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm) (Erstellen eines Kubernetes-Clusters mit Kubeadm auf Ubuntu 16.04 LTS oder 18.04 LTS).
 In [diesem ](deployment-script-single-node-kubeadm.md) Thema finden Sie auch ein Beispielskript, das eine kubeadm-Bereitstellung eines einzelnen Knotens auf einem virtuellen Computer automatisiert und dann eine Standardkonfiguration des Big Data-Clusters darauf bereitstellt.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 - Mindestens 3 physische Linux-Computer oder virtuelle Computer
 - Empfohlene Konfiguration pro Computer:
@@ -61,7 +61,7 @@ Auf jedem Computer müssen mehrere Voraussetzungen erfüllt sein. Führen Sie in
 1. Konfigurieren Sie die Docker- und Kubernetes-Voraussetzungen auf dem Computer.
 
    ```bash
-   KUBE_DPKG_VERSION=1.11.3-00
+   KUBE_DPKG_VERSION=1.15.0-00
    sudo apt-get update && /
    sudo apt-get install -y ebtables ethtool && /
    sudo apt-get install -y docker.io && /
