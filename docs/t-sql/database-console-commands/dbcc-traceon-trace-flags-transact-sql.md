@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4b6b05436f85fa96a164f6e86733c5bc4bf95f0d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345463"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388440"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 
@@ -138,7 +138,7 @@ In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssn
 |**7412**|Aktiviert die einfache Profilerstellungsinfrastruktur für die Abfrageausführungsstatistik. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/3170113).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 und höheren Builds verfügbar. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] hat dieses Ablaufverfolgungsflag keine Auswirkungen mehr, weil die Lightweight-Profilerstellung standardmäßig aktiviert ist.<br /><br />**Bereich:** nur global|
 |**7471**|Aktiviert das Ausführen mehrerer [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) für verschiedene Statistiken gleichzeitig in einer einzelnen Tabelle. Weitere Informationen finden Sie im folgenden [Microsoft Support-Artikel](https://support.microsoft.com/kb/3156157).<br /><br />**Hinweis:** Dieses Ablaufverfolgungsflag ist in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 und höheren Builds verfügbar.<br /><br />**Bereich:** nur global|
 |**7745**|Erzwingt, dass der Abfragespeicher beim Herunterfahren der Datenbank keine Daten an den Datenträger ausgibt.<br /><br />**Hinweis:** Wenn Sie dieses Ablaufverfolgungsflag verwenden, gehen Abfragespeicherdaten, die noch nicht an den Datenträger ausgegeben wurden, beim Herunterfahren ggf. verloren. Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herunterzufahren, kann der Befehl SHUTDOWN WITH NOWAIT anstelle dieses Ablaufverfolgungsflags verwendet werden, um ein sofortiges Herunterfahren zu erzwingen.<br /><br />**Bereich:** nur global|
-|**7752**|Aktiviert das asynchrone Laden des Abfragespeichers.<br /><br />**Hinweis:** Nutzen Sie dieses Ablaufverfolgungsflag, wenn in [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] eine große Anzahl von QDS_LOADDB-Wartevorgängen auftreten, die mit dem synchronen Laden des Abfragedatenspeichers zu tun haben (Standardverhalten während einer Datenbankwiederherstellung).<br /><br />**Bereich:** nur global|
+|**7752**|Aktiviert das asynchrone Laden des Abfragespeichers.<br /><br />**Hinweis:** Nutzen Sie dieses Ablaufverfolgungsflag, wenn in [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] eine große Anzahl von QDS_LOADDB-Wartevorgängen auftreten, die mit dem synchronen Laden des Abfragedatenspeichers zu tun haben (Standardverhalten während einer Datenbankwiederherstellung).<br /><br />**Hinweis:** Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird dieses Verhalten durch die Engine gesteuert, und das Ablaufverfolgungsflag 7752 hat keine Auswirkungen.<br /><br />**Bereich:** nur global|
 |**7806**|Aktiviert eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC) in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Standardmäßig werden in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] keine DAC-Ressourcen reserviert. Weitere Informationen finden Sie unter [Diagnoseverbindung für Datenbankadministratoren](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<br /><br />**Bereich:** nur global|  
 |**8011**|Deaktiviert den Ringpuffer für Ressourcenmonitor. Weitere Informationen finden Sie im folgenden [Microsoft Support-](https://support.microsoft.com/kb/920093)Artikel.<br /><br />**Bereich:** global und Sitzung|
 |**8012**|Deaktiviert den Ringpuffer für Zeitplaner. Weitere Informationen finden Sie im folgenden [Microsoft Support-](https://support.microsoft.com/kb/920093)Artikel.<br /><br />**Bereich:** nur global|

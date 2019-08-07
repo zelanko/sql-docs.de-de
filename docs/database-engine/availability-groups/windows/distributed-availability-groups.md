@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7fadeded7c979631cabc763d1be8d037b5913d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968301"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702739"
 ---
 # <a name="distributed-availability-groups"></a>Verteilte Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ In der folgenden Abbildung wird ein Beispiel für eine Ausgabe des zweiten WSFC-
 
 ![Beispielausgabe der vorangegangenen Abfrage](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>DMV für die Auflistung der Integrität der verteilten Verfügbarkeitsgruppe
+### <a name="dmv-to-list-distributed-ag-health"></a>DMV für die Auflistung der Integrität der verteilten Verfügbarkeitsgruppe
 
 Jeder Status, der in SQL Server Management Studio auf dem Dashboard und in anderen Bereichen angezeigt wird, ist nur für die lokale Synchronisierung innerhalb dieser Verfügbarkeitsgruppe bestimmt. Führen Sie eine Abfrage der dynamischen Verwaltungsansicht durch, um die Integrität einer verteilten Verfügbarkeitsgruppe anzuzeigen. Die folgende Beispielabfrage erweitert und präzisiert die vorherige Abfrage:
 

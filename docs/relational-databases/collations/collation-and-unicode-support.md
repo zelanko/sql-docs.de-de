@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118488"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471045"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -301,7 +304,9 @@ Weitere Überlegungen zur finden Sie unter [Schreiben internationaler Transact-S
 [Schreiben internationaler Transact-SQL-Anweisungen](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [Bewährte Methode in SQL Server für die Migration zu Unicode](https://go.microsoft.com/fwlink/?LinkId=113890) – wird nicht mehr angeboten   
 [Website des Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Unicode Standard](http://www.unicode.org/standard/standard.html)      
+[Unicode-Standard](http://www.unicode.org/standard/standard.html)     
+[UTF-8-Unterstützung im OLE DB-Treiber für SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+Blog [Einführung von UTF-8-Unterstützung für SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
     
 ## <a name="see-also"></a>Weitere Informationen    
 [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)     

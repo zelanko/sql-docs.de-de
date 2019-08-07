@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264153"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742792"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -64,7 +64,7 @@ Die folgenden Features sind nicht in dieser Version des ODBC-Treibers für macOS
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   Sqlbrowseconnetct (vor Version 17,2)
 -   C-Intervall-Typen, wie z.B. SQL_C_INTERVAL_YEAR_TO_MONTH (dokumentiert in [-Datentypbezeichnungen und Deskriptoren](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)), werden derzeit nicht unterstützt.
 -   Der Wert SQL_CUR_USE_ODBC des Attributs SQL_ATTR_ODBC_CURSORS der Funktion SQLSetConnectAttr.
 
@@ -116,6 +116,12 @@ Weitere Informationen zur Sortierung und Codierung finden Sie unter [Sortierung 
 Zwischen Windows und mehreren Versionen der iconv-Bibliothek unter Linux und macOS gibt es einige Unterschiede bei der Konvertierung der Codierung. Textdaten in der Codepage 1255 (Hebräisch) verfügen über einen Codepunkt (0xCA), der sich bei der Konvertierung in Unicode anders verhält. Unter Windows wird das Zeichen in den UTF-16-Codepunkt 0x05BA konvertiert. Unter macOS und Linux wird es bei libiconv-Versionen vor Version 1.15 in 0x00CA konvertiert. Zeichen, die unter Linux mit iconv-Bibliotheken hinzugefügt werden, die die Revision von Big5/CP950 (namens `BIG5-2003`) von 2003 nicht unterstützen, werden nicht ordnungsgemäß konvertiert. In der Codepage 932 (Japanisch, Shift_JIS) unterscheidet sich das Ergebnis der Decodierung von Zeichen, die nicht ursprünglich im Codierungsstandard definiert wurden, ebenfalls. Zum Beispiel wird das Byte 0x80 unter Windows in U+0080 konvertiert, jedoch kann es je nach iconv-Version unter Linux und macOS auch in U+30FB konvertiert werden.
 
 Im ODBC-Treiber 13 und 13.1 werden Daten beschädigt, wenn UTF-8-Mehrbytezeichen oder UTF-16-Ersatzzeichen auf SQLPutData-Puffer aufgeteilt werden. Für das Streamen von SQLPutData, verwenden Sie Puffer, die nicht in partiellen Zeichencodierungen enden. Diese Einschränkung wurde mit dem Version 17 des ODBC-Treibers entfernt.
+
+## <a name="bkmk-openssl"></a>OpenSSL
+Ab Version 17,4 lädt der Treiber OpenSSL dynamisch, sodass er auf Systemen ausgeführt werden kann, die entweder über die Version 1,0 oder 1,1 verfügen, ohne dass separate Treiberdateien erforderlich sind. Wenn mehrere OpenSSL-Versionen vorhanden sind, versucht der Treiber, die neueste Version zu laden. Der Treiber unterstützt derzeit openssl 1.0. x und 1.1. x.
+
+> [!NOTE]  
+> Ein potenzieller Konflikt kann auftreten, wenn die Anwendung, die den Treiber (oder eine ihrer Komponenten) verwendet, mit einer anderen Version von OpenSSL verknüpft oder dynamisch geladen wird. Wenn mehrere OpenSSL-Versionen auf dem System vorhanden sind und diese von der Anwendung verwendet werden, wird dringend empfohlen, sicherzustellen, dass die von der Anwendung geladene Version und der Treiber nicht übereinstimmen, da die Fehler den Arbeitsspeicher beeinträchtigen und somit wird nicht notwendigerweise auf offensichtliche oder konsistente Weise Manifest.
 
 ## <a name="additional-notes"></a>Weitere Hinweise  
 

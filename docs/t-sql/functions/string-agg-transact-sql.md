@@ -16,14 +16,14 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3af59410ed151e54a5cc7ea7a546f8979a318693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906873"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632124"
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
+# <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Verkettet die Werte von Zeichenfolgenausdrücken und platziert Trennzeichenwerte zwischen diesen. Das Trennzeichen wird am Ende einer Zeichenfolge nicht hinzugefügt.
@@ -95,6 +95,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 `NULL`-Werte, die in `name`-Zellen gefunden werden, werden im Ergebnis nicht zurückgegeben.   
+
 > [!NOTE]  
 >  Wenn Sie den Abfrage-Editor von Management Studio verwenden, kann die Option **Ergebnisse in Raster** den Wagenrücklauf nicht implementieren. Wechseln Sie zu **Ergebnisse in Text**, um das Resultset ordnungsgemäß anzuzeigen.   
 
@@ -127,16 +128,17 @@ FROM Person.Person;
 |Ken Sánchez (Feb 8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec 5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  Wenn Sie den Abfrage-Editor von Management Studio verwenden, kann die Option **Ergebnisse in Raster** den Wagenrücklauf nicht implementieren. Wechseln Sie zu **Ergebnisse in Text**, um das Resultset ordnungsgemäß anzuzeigen.   
+> Wenn Sie den Abfrage-Editor von Management Studio verwenden, kann die Option **Ergebnisse in Raster** den Wagenrücklauf nicht implementieren. Wechseln Sie zu **Ergebnisse in Text**, um das Resultset ordnungsgemäß anzuzeigen.
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. Zurückgeben von Artikeln mit zugehörigen Tags 
+### <a name="d-return-news-articles-with-related-tags"></a>D. Zurückgeben von Artikeln mit zugehörigen Tags
+
 Artikel und Tags werden in unterschiedliche Tabellen aufgeteilt. Der Entwickler möchte eine Zeile mit allen zugehörigen Tags pro Artikel zurückgeben. Dafür wird folgende Abfrage verwendet:
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -144,9 +146,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |Transponder |
 |--- |--- |--- |
-|172 |Umfragen deuten auf knappe Wahlergebnisse hin |politics,polls,city council | 
+|172 |Umfragen deuten auf knappe Wahlergebnisse hin |politics,polls,city council |
 |176 |Neue Autobahn soll Überlastung reduzieren |NULL |
-|177 |Hunde sind weiterhin beliebter als Katzen |polls,animals| 
+|177 |Hunde sind weiterhin beliebter als Katzen |polls,animals|
+
+> [!NOTE]
+> Die `GROUP BY`-Klausel ist erforderlich, wenn die `STRING_AGG`-Funktion nicht das einzige Element in der `SELECT`-Liste ist.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. Generieren einer Liste von E-Mails pro Stadt
 

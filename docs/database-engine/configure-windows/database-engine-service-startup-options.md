@@ -1,7 +1,7 @@
 ---
 title: Startoptionen für den Datenbank-Engine-Dienst | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011968"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763231"
 ---
 # <a name="database-engine-service-startup-options"></a>Startoptionen für den Datenbank-Engine-Dienst
 
@@ -82,8 +82,9 @@ Startoptionen legen bestimmte während des Starts benötigte Speicherorte fest u
  Sie können Startoptionen bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Für diese Optionen, z.B. das Starten mit einem Ablaufverfolgungsflag, konfigurieren Sie die Startparameter am besten mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager. Dieses Tool speichert die Startoptionen als Registrierungsschlüssel, sodass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stets mit den Startoptionen gestartet werden kann.  
   
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung  
- Der **-h**  -Parameter wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht unterstützt. Dieser Parameter wurde in früheren Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um virtuellen Adressraum für Metadaten zum Hinzufügen von Speicher im laufenden Systembetrieb (Hot Add Memory) zu reservieren, wenn AWE aktiviert ist. Weitere Informationen finden Sie unter [Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
-  
+
+Optionen, die aus früheren Releases entfernt wurden, finden Sie unter [sqlservr-Anwendung](../../tools/sqlservr-application.md#compatibility-support).
+
 ## <a name="related-tasks"></a>Related Tasks  
 [Konfigurieren der Serverkonfigurationsoption Startprozeduren suchen](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Starten, Beenden, Anhalten, Fortsetzen und Neustarten der Datenbank-Engine, von SQL Server Agent oder des SQL Server-Browserdiensts](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

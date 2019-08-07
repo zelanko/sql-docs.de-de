@@ -1,6 +1,6 @@
 ---
 title: Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
-ms.date: 06/21/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 78db7a94e462238b65e90d9b2af035a9906403ac
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256705"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632004"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server
 Die folgenden Anweisungen gehen von einer sauberen Umgebung aus und zeigen, wie PHP 7.x, der Microsoft ODBC-Treiber, Apache und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 18.10, Red Hat 7, Debian 8 und 9, Suse 12 und 15 sowie macOS 10.12, 10.13 und 10.14 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können die vorab erstellten Binärdateien auch von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Laden der Microsoft-Treiber für PHP für SQL Server) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -175,7 +175,7 @@ Hinweise zum [Testen der Installation](#testing-your-installation) finden Sie am
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>Installieren der Treiber unter Suse 12 und 15
 
 > [!NOTE]
-> Ersetzen Sie in den folgenden Anweisungen <SuseVersion> durch Ihre Version von Suse: Wenn Sie Suse Enterprise Linux 15 verwenden, lautet diese SLE_15 oder SLE_15_SP1 (gleichermaßen für andere Versionen). Nicht alle PHP-Versionen sind für alle Versionen von Suse Linux verfügbar. Unter `http://download.opensuse.org/repositories/devel:/languages:/php` erfahren Sie, welche Versionen von Suse über die Standardversion von PHP verfügen, und unter `http://download.opensuse.org/repositories/devel:/languages:/php:/`, welche anderen Versionen von PHP für welche Versionen von Suse verfügbar sind.
+> Ersetzen Sie in den folgenden Anweisungen <SuseVersion> durch Ihre Version von SUSE. Wenn Sie SUSE Enterprise Linux 15 verwenden, lautet diese SLE_15 oder SLE_15_SP1. Verwenden Sie für SUSE 12 SLE_12_SP4 (oder höher, falls zutreffend). Nicht alle PHP-Versionen sind für alle Versionen von Suse Linux verfügbar. Unter `http://download.opensuse.org/repositories/devel:/languages:/php` erfahren Sie, welche Versionen von Suse über die Standardversion von PHP verfügen, und unter `http://download.opensuse.org/repositories/devel:/languages:/php:/`, welche anderen Versionen von PHP für welche Versionen von Suse verfügbar sind.
 
 > [!NOTE]
 > Pakete für PHP 7.3 sind für Suse 12 nicht verfügbar. Zur Installation von PHP 7.1 ersetzen Sie die unten gezeigte Repository-URL durch folgende URL: `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/<SuseVersion>/devel:languages:php:php71.repo`.

@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df3f1e188593e3e193faed98b7932a3dffa1adde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b6ead290451c17499825f051158020b2b88b37b9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005366"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769662"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Die Tabellen, die als Momentaufnahmen- und Transaktionsreplikationsabonnenten fungieren, können (mit Ausnahme der Peer-zu-Peer-Transaktionsreplikation) als speicheroptimierte Tabellen konfiguriert werden. Andere Replikationskonfigurationen sind mit speicheroptimierten Tabellen nicht kompatibel. Diese Funktion ist ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]verfügbar.  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68005366"
   
 -   **Konfigurieren der Abonnentendatenbank für die Unterstützung der Replikation in speicheroptimierte Tabellen**  
   
-     Legen Sie die **@memory_optimized** -Eigenschaft auf **true** fest, indem Sie [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) oder [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) verwenden.  
+     Legen Sie die **\@memory_optimized**-Eigenschaft auf **TRUE** fest, indem Sie [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) oder [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) verwenden.  
   
 -   **Konfigurieren des Artikels für die Unterstützung der Replikation in speicheroptimierte Tabellen**  
   
@@ -38,8 +39,8 @@ ms.locfileid: "68005366"
   
 2.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
   
-     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** der gespeicherten **sp_addarticle** -Prozedur auf   
-    **0x40000000000**verfügbar.  
+     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] erfolgt, legen Sie den **\@schema_option**-Parameter der gespeicherten Prozedur **sp_addarticle** folgendermaßen fest:   
+    **0x40000000000**.  
   
 3.  Legen Sie im Fenster mit den Artikeleigenschaften **Enable Memory optimization** auf **true**fest.  
   
@@ -55,16 +56,16 @@ ms.locfileid: "68005366"
   
 1.  Gehen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu den Abonnementeigenschaften, und legen Sie **Memory Optimized Subscription** auf **true**fest. Die Änderungen werden erst nach der erneuten Initialisierung des Abonnements wirksam.  
   
-     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] vornehmen, legen Sie den neuen **@memory_optimized** der gespeicherten **sp_addsubscription** -Prozedur auf "true" fest.  
+     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] vornehmen, legen Sie den neuen **\@memory_optimized**-Parameter der gespeicherten Prozedur **sp_addsubscription** auf TRUE fest.  
   
 2.  Gehen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zu den Artikeleigenschaften einer Veröffentlichung, und legen Sie **Enable Memory optimization** auf "true" fest.  
   
-     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** der gespeicherten **sp_addarticle** -Prozedur auf   
+     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] erfolgt, legen Sie den **\@schema_option**-Parameter der gespeicherten Prozedur **sp_addarticle** folgendermaßen fest:   
     **0x40000000000**verfügbar.  
   
 3.  Speicheroptimierte Tabellen unterstützen keine gruppierten Indizes. Daher müssen gruppierte Indizes bei der Replikation auf dem Ziel in nicht gruppierte Indizes konvertiert werden. Hierzu muss der Parameter **Convert clustered index to nonclustered for memory optimized article** auf "true" festgelegt werden.  
   
-     Falls Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] set the **@schema_option** der gespeicherten **sp_addarticle** -Prozedur auf  **0x0000080000000000**verfügbar.  
+     Wenn Sie die Konfiguration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] vornehmen, legen Sie den Parameter **\@schema_option** der gespeicherten Prozedur **sp_addarticle** auf **0xx0000080000000000** fest.  
   
 4.  Generieren Sie die Momentaufnahme erneut.  
   

@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b345e8084b491adeadb5a814655284e9699f5550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094912"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742844"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
 
@@ -73,7 +73,7 @@ Eine Liste aller Berechtigungen finden Sie auf dem Poster [Database Engine Permi
 |Name der festen Datenbankrolle|und Beschreibung|  
 |-------------------------------|-----------------|  
 |**db_owner**|Mitglieder der festen Datenbankrolle **db_owner** können alle Aktivitäten zur Konfiguration und Wartung an der Datenbank ausführen und die Datenbank in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]auch löschen. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]sind für einige Wartungsaktivitäten Berechtigungen auf Serverebene erforderlich; sie können von **db_owners**nicht ausgeführt werden.)|  
-|**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft nur für benutzerdefinierte Rollen ändern, Benutzer ohne Anmeldungen erstellen und Berechtigungen verwalten. Das Hinzufügen von Prinzipalen zu dieser Rolle könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.|  
+|**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft nur für benutzerdefinierte Rollen ändern und Berechtigungen verwalten. Mitglieder dieser Rolle können Ihre Berechtigungen möglicherweise erhöhen, und ihre Aktionen sollten überwacht werden.|  
 |**db_accessadmin**|Mitglieder der festen Datenbankrolle **db_accessadmin** können den Zugriff auf die Datenbank für Windows-Anmeldungen, Windows-Gruppen und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen hinzufügen oder entfernen.|  
 |**db_backupoperator**|Mitglieder der festen Datenbankrolle **db_backupoperator** können eine Sicherung der Datenbank durchführen.|  
 |**db_ddladmin**|Mitglieder der festen Datenbankrolle **db_ddladmin** können in einer Datenbank sämtliche DDL-Befehle (Data Definition Language) ausführen.|  
@@ -86,7 +86,7 @@ Die den festen Datenbankrollen zugewiesenen Berechtigungen können nicht geände
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Besondere Rollen für [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>Besondere Rollen für [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] und [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
 Diese Datenbankrollen sind nur in der virtuellen Masterdatenbank vorhanden. Ihre Berechtigungen sind auf Aktionen beschränkt, die auf dem Master ausgeführt werden. Nur Datenbankbenutzer im Master können diesen Rollen hinzugefügt werden. Diesen Rollen können keine Anmeldungen hinzugefügt werden, jedoch können Benutzer auf der Grundlage von Anmeldungen erstellt werden, und diese Benutzer können den Rollen dann hinzugefügt werden. Auch eigenständige Datenbankbenutzer im Master können diesen Rollen hinzugefügt werden. Enthaltene Datenbankbenutzer, die der Rolle **dbmanager** im Master hinzugefügt wurden, können jedoch nicht zum Erstellen neuer Datenbanken verwendet werden.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011872"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670469"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Diagnoseverbindung für Datenbankadministratoren
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011872"
     -   Enthält die dieser Sitzung zugeordnete sys.dm_os_tasks-Sicht keine Tasks, während die Sitzung nach der Ausführung des KILL-Befehls in sys.dm_exec_sessions verbleibt, bedeutet dies, dass kein Arbeitsthread verfügbar ist. Wählen Sie einen der aktuell ausgeführten Tasks aus (einen Task in der sys.dm_os_tasks-Sicht mit `sessions_id <> NULL`), und beenden Sie die diesem zugeordnete Sitzung, um den Arbeitsthread freizugeben. Beachten Sie, dass das Beenden einer einzelnen Sitzung möglicherweise nicht ausreicht. Unter Umständen müssen Sie mehrere Sitzungen beenden.  
   
 ## <a name="dac-port"></a>DAC-Port  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht am TCP-Port 1434 (sofern verfügbar) oder einem TCP-Port, der beim Starten von [!INCLUDE[ssDE](../../includes/ssde-md.md)] dynamisch zugewiesen wurde, auf eine DAC. Das Fehlerprotokoll enthält die Nummer des Ports, der von der DAC überwacht wird. Standardmäßig nimmt die DAC-Überwachung nur am lokalen Port Verbindungen an. Ein Codebeispiel zum Aktivieren von Remoteverwaltungsverbindungen finden Sie unter [Remoteadministratorverbindungen (Serverkonfigurationsoption)](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht am TCP-Port 1434 (sofern verfügbar) oder einem TCP-Port, der beim Starten von [!INCLUDE[ssDE](../../includes/ssde-md.md)] dynamisch zugewiesen wurde, auf eine DAC. Das [Fehlerprotokoll](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md) enthält die Nummer des Ports, an dem der DAC lauscht. Standardmäßig nimmt die DAC-Überwachung nur am lokalen Port Verbindungen an. Ein Codebeispiel zum Aktivieren von Remoteverwaltungsverbindungen finden Sie unter [Remoteadministratorverbindungen (Serverkonfigurationsoption)](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  
   
  Nachdem die Remoteverwaltungsverbindung konfiguriert wurde, wird die DAC-Überwachung aktiviert, ohne dass ein Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erforderlich ist. Jetzt kann ein Client remote eine DAC herstellen. Sie können die DAC-Überwachung für die Annahme von Remoteverbindungen auch dann aktivieren, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht reagiert, indem Sie zunächst unter lokaler Verwendung der DAC eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und dann die gespeicherte Prozedur sp_configure ausführen, sodass Verbindungen über Remoteverbindungen angenommen werden.  
   

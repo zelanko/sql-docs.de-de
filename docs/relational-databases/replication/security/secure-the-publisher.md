@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095638"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769641"
 ---
 # <a name="secure-the-publisher"></a>Sichern des Verlegers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
--   Protokolllese-Agent  
+Die folgenden Replikations-Agents stellen eine Verbindung zum Verleger her:  
   
--   Momentaufnahme-Agent  
-  
+-   Protokolllese-Agents
+-   Momentaufnahme-Agent
 -   Warteschlangenlese-Agent  
-  
 -   Merge-Agent  
   
  Es empfiehlt sich, eine geeignete Anmeldung für diese Agents bereitzustellen, sich an den Grundsatz zu halten, dass nur so viele Rechte erteilt werden sollten, wie unbedingt erforderlich sind, und den Aufbewahrungsort für die Kennwörter zu schützen. Informationen zu den für die einzelnen Agents erforderlichen Berechtigungen finden Sie unter [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  

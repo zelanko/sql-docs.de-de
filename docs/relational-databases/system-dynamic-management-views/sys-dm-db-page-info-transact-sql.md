@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_page_info (Transact-SQL) | Microsoft-Dokumentation
+title: sys. DM _db_page_info (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,18 +20,22 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263825"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841596"
 ---
-# <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
+# <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-Gibt Informationen zu einer Seite in einer Datenbank zurück.  Die Funktion gibt eine Zeile mit den Headerinformationen auf der Seite, einschließlich der `object_id`, `index_id`, und `partition_id`.  Dank dieser Funktion ist die Verwendung von `DBCC PAGE` in den meisten Fällen nicht mehr erforderlich.
+Gibt Informationen zu einer Seite in einer Datenbank zurück.  Die-Funktion gibt eine Zeile zurück, die die Header Informationen der Seite enthält, `object_id`einschließlich `index_id`, und `partition_id`.  Dank dieser Funktion ist die Verwendung von `DBCC PAGE` in den meisten Fällen nicht mehr erforderlich.
+
+> [!NOTE]
+> `sys.dm_db_page_info`wird derzeit nur in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher unterstützt.
+
 
 ## <a name="syntax"></a>Syntax   
 ```  
@@ -39,17 +43,17 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 ``` 
 
 ## <a name="arguments"></a>Argumente  
-*DatabaseId* | NULL | STANDARDWERT     
-Ist die ID der Datenbank. *DatabaseId* ist **Smallint**. Gültige Eingabe ist die ID einer Datenbank. Der Standardwert ist NULL, senden jedoch, dass ein NULL-Wert für diesen Parameter zu einem Fehler führt.
+*DatabaseID* | NULL | Vorgegebene     
+Die ID der Datenbank. *DatabaseID* ist vom Datentyp **smallint**. Eine gültige Eingabe ist die ID einer Datenbank. Der Standardwert ist NULL. das Senden eines NULL-Werts für diesen Parameter führt jedoch zu einem Fehler.
  
-*FileId* | NULL | STANDARDWERT   
-Die ID der Datei. *FileId* ist **Int**.  Gültige Eingabe ist die ID einer Datei in der Datenbank durch *DatabaseId*. Der Standardwert ist NULL, senden jedoch, dass ein NULL-Wert für diesen Parameter zu einem Fehler führt.
+Mit der NULL | Vorgegebene   
+Die ID der Datei. " *Fleid* " ist " **int**"  Eine gültige Eingabe ist die ID-Nummer einer Datei in der Datenbank, die von *DatabaseID*angegeben wird. Der Standardwert ist NULL. das Senden eines NULL-Werts für diesen Parameter führt jedoch zu einem Fehler.
 
-*PageId* | NULL | STANDARDWERT   
-Ist die ID der Seite.  *PageId* ist **Int**.  Gültige Eingabe ist die ID einer Seite in der angegebenen Datei *FileId*. Der Standardwert ist NULL, senden jedoch, dass ein NULL-Wert für diesen Parameter zu einem Fehler führt.
+*PageID* | NULL | Vorgegebene   
+Die ID der Seite.  *PageID* ist vom Datentyp **int**.  Eine gültige Eingabe ist die ID einer Seite in der Datei, die von " *fleid*" angegeben wird. Der Standardwert ist NULL. das Senden eines NULL-Werts für diesen Parameter führt jedoch zu einem Fehler.
 
-*Modus* | NULL | STANDARDWERT   
-Bestimmt die Detailebene in der Ausgabe der Funktion. "Begrenzt" wird für alle Beschreibung Spalten NULL-Werte zurückgeben, "Detaillierte" füllt Beschreibung Spalten.  Der Standardwert ist "Eingeschränkt".
+*Modus* | NULL | Vorgegebene   
+Bestimmt die Detailebene in der Ausgabe der Funktion. "Limited" gibt NULL-Werte für alle Beschreibungs Spalten zurück, "ausführlich" füllt Beschreibungs Spalten auf.  Der Standardwert ist ' Limited '.
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
 
@@ -58,82 +62,83 @@ Bestimmt die Detailebene in der Ausgabe der Funktion. "Begrenzt" wird für alle 
 |database_id |ssNoversion |Datenbank-ID |
 |file_id |ssNoversion |Datei-ID |
 |page_id |ssNoversion |Seiten-ID |
+|page_header_version |ssNoversion |Seitenkopf Version |
 |page_type |ssNoversion |Seitentyp |
-|page_type_desc |Nvarchar(64) |Beschreibung der Seitentyp |
-|page_flag_bits |Nvarchar(64) |Flagbits im Seitenkopf |
-|page_flag_bits_desc |nvarchar(256) |Beschreibung des Flags Bits im Seitenkopf |
-|page_type_flag_bits |Nvarchar(64) |Geben Sie im Seitenkopf Flagbits |
-|page_type_flag_bits_desc |Nvarchar(64) |Bits-Flag Beschreibung im Seitenkopf |
+|page_type_desc |nvarchar (64) |Beschreibung des Seiten Typs |
+|page_type_flag_bits |nvarchar (64) |Typflag "Bits" in Seitenkopf |
+|page_type_flag_bits_desc |nvarchar (64) |Typflag "Bits Description" im Seitenkopf |
+|page_flag_bits |nvarchar (64) |Bits im Seitenkopf markieren |
+|page_flag_bits_desc |nvarchar(256) |Bits-Beschreibung im Seitenkopf markieren |
+|page_lsn |nvarchar (64) |Protokoll Sequenznummer/Zeitstempel |
+|page_level |ssNoversion |Ebene der Seite in Index (Blatt = 0) |
 |object_id |ssNoversion |ID des Objekts, das die Seite besitzt |
-|index_id |ssNoversion |Die ID des Indexes (0 für Heap von Datenseiten) |
-|partition_id |BIGINT |ID der partition |
-|alloc_unit_id |BIGINT |ID der Zuordnungseinheit |
-|page_level |ssNoversion |Auf der Seite im Index (Blatt = 0) |
-|slot_count |SMALLINT |Gesamte Anzahl von Einschubfächern (verwendeten und nicht verwendeten) <br> Für eine Datenseite entspricht diese Zahl die Anzahl der Zeilen. |
-|ghost_rec_count |SMALLINT |Anzahl der Datensätze, die als inaktiv, auf der Seite markiert <br> Ein inaktiver Datensatz ist eine, die zum Löschen gekennzeichnet wurde, aber noch nicht entfernt werden soll. |
-|torn_bits |ssNoversion |1 Bit pro Sektor für die Erkennung von zerrissenen Seiten schreibt. Auch verwendet, um die Prüfsumme zu speichern. <br> Dieser Wert wird verwendet, um datenbeschädigung zu erkennen. |
-|is_iam_pg |bit |Bit, um anzugeben, und zwar unabhängig davon, ob die Seite einer IAM-Seite ist.  |
-|is_mixed_ext |bit |Um anzugeben, wenn zugeordnete Bit, in einen gemischten Block |
-|pfs_file_id |SMALLINT |Datei-ID der entsprechenden PFS-Seite |
+|index_id |ssNoversion |ID des Indexes (0 für Heap Datenseiten) |
+|partition_id |BIGINT |Die ID der Partition. |
+|alloc_unit_id |BIGINT |ID der Zuordnungs Einheit |
+|is_encrypted |bit |Bit, das angibt, ob die Seite verschlüsselt ist |
+|has_checksum |bit |Bit, um anzugeben, ob die Seite einen Prüfsummen Wert hat |
+|Prüfsumme |ssNoversion |Speichert den Prüfsummen Wert, mit dem Daten beschädigt erkannt werden. |
+|is_iam_pg |bit |Bit, um anzugeben, ob es sich bei der Seite um eine IAM-Seite handelt  |
+|is_mixed_ext |bit |Bit, das angibt, ob es in einem gemischten Block zugeordnet ist |
+|has_ghost_records |bit |Bit, das angibt, ob die Seite inaktive Datensätze enthält <br> Ein inaktive Datensatz ist ein Datensatz, der zum Löschen markiert wurde, aber noch entfernt werden muss.|
+|has_version_records |bit |Bit, das angibt, ob die Seite für die [Beschleunigte Daten Bank Wiederherstellung](../backup-restore/restore-and-recovery-overview-sql-server.md#adr) verwendete Versionsdaten Sätze enthält |
 |pfs_page_id |ssNoversion |Seiten-ID der entsprechenden PFS-Seite |
-|pfs_alloc_percent |ssNoversion |PFS-Bytes durch Zuweisung in Prozent |
-|pfs_status |Nvarchar(64) |PFS-Bytes |
-|pfs_status_desc |Nvarchar(64) |Beschreibung der PFS-Bytes |
-|gam_file_id |SMALLINT |Datei-ID der entsprechenden GAM-Seite |
+|pfs_is_allocated |bit |Bit, um anzugeben, ob die Seite auf der entsprechenden PFS-Seite als zugeordnet gekennzeichnet ist |
+|pfs_alloc_percent |ssNoversion |Belegungs Prozentsatz, wie durch das entsprechende PFS-Byte angegeben |
+|pfs_status |nvarchar (64) |PFS-Byte |
+|pfs_status_desc |nvarchar (64) |Die Beschreibung des PFS-bytes. |
 |gam_page_id |ssNoversion |Seiten-ID der entsprechenden GAM-Seite |
-|gam_status |bit |Bit um anzugeben, wenn in der GAM zugeordnet |
-|gam_status_desc |Nvarchar(64) |Beschreibung für das GAM-Bit-status |
-|sgam_file_id |SMALLINT |Datei-ID der entsprechenden SGAM-Seite |
+|gam_status |bit |Bit, das angibt, ob es in GAM zugeordnet ist |
+|gam_status_desc |nvarchar (64) |Beschreibung des GAM-Status Bit |
 |sgam_page_id |ssNoversion |Seiten-ID der entsprechenden SGAM-Seite |
-|sgam_status |bit |Bit um anzugeben, wenn in der SGAM zugeordnet |
-|sgam_status_desc |Nvarchar(64) |Beschreibung der SGAM-Bit-status |
-|diff_map_file_id |SMALLINT |Datei-ID der entsprechenden differenzielles Bitmuster-Seite |
-|diff_map_page_id |ssNoversion |Seiten-ID der entsprechenden differenzielles Bitmuster-Seite |
-|diff_status |bit |Bit, um anzugeben, ob die Diff-Status geändert wird |
-|diff_status_desc |Nvarchar(64) |Beschreibung des Diff-Status-Bits |
-|ml_file_id |SMALLINT |Datei-ID der entsprechenden minimale Protokollierung Bitmap-Seite |
-|ml_page_id |ssNoversion |Seiten-ID der entsprechenden minimale Protokollierung Bitmap-Seite |
-|ml_status |bit |Bit, um anzugeben, ob die Seite minimal protokolliert wird |
-|ml_status_desc |Nvarchar(64) |Beschreibung des Status die minimale Protokollierung bit |
-|free_bytes |SMALLINT |Anzahl freier Bytes auf der Seite |
-|free_data_offset |ssNoversion |Offset des freien Speicherplatzes am Ende des Datenbereich |
-|reserved_bytes |SMALLINT |Anzahl freier Bytes, die durch alle Transaktionen reserviert (wenn Heap) <br> Anzahl der inaktive Zeilen (sofern es sich um eine Index Blattelemente) |
-|reserved_xdes_id |SMALLINT |Speicherplatz von M_xdesID zu M_reservedCnt beigetragenen <br> Nur zu Debugzwecken |
-|xdes_id |Nvarchar(64) |Aktuelle Transaction von M_reserved beigetragenen <br> Nur zu Debugzwecken |
-|prev_page_file_id |SMALLINT |Vorherige Seite-Datei-ID |
-|prev_page_page_id |ssNoversion |Vorherige Seite-Seiten-ID |
-|next_page_file_id |SMALLINT |Nächste Seite von Datei-ID |
-|next_page_page_id |ssNoversion |Nächste Seite der Seiten-ID |
-|MIN_LEN |SMALLINT |Länge der Zeilen mit fester Größe |
-|lsn |Nvarchar(64) |Log Sequence Number, / Zeitstempel |
-|header_version |ssNoversion |Seite-Headerversion |
+|sgam_status |bit |Bit, das angibt, ob es in SGAM zugeordnet ist |
+|sgam_status_desc |nvarchar (64) |Beschreibung des SGAM-Status Bit |
+|diff_map_page_id |ssNoversion |Seiten-ID der entsprechenden differenziellen Bitmap-Seite |
+|diff_status |bit |Bit, das angibt, ob der diff-Status geändert wird |
+|diff_status_desc |nvarchar (64) |Beschreibung des diff-Statusbits |
+|ml_map_page_id |ssNoversion |Seiten-ID der entsprechenden Bitmap-Seite der minimalen Protokollierung |
+|ml_status |bit |Bit, das angibt, ob die Seite minimal protokolliert wird |
+|ml_status_desc |nvarchar (64) |Beschreibung des Bits mit minimaler Protokollierungs Status |
+|prev_page_file_id |SMALLINT |Datei-ID der vorherigen Seite |
+|prev_page_page_id |ssNoversion |Seiten-ID der vorherigen Seite |
+|next_page_file_id |SMALLINT |Datei-ID der nächsten Seite |
+|next_page_page_id |ssNoversion |ID der nächsten Seiten Seite |
+|fixed_length |SMALLINT |Länge von Zeilen mit fester Größe |
+|slot_count |SMALLINT |Gesamtanzahl der Slots (verwendet und nicht verwendet) <br> Bei einer Datenseite entspricht diese Zahl der Anzahl von Zeilen. |
+|ghost_rec_count |SMALLINT |Anzahl von Datensätzen, die auf der Seite als "Ghost" gekennzeichnet <br> Ein inaktive Datensatz ist ein Datensatz, der zum Löschen markiert wurde, aber noch entfernt werden muss. |
+|free_bytes |SMALLINT |Anzahl der freien Bytes auf der Seite |
+|free_data_offset |ssNoversion |Offset des freien Speicherplatzes am Ende des Datenbereichs |
+|reserved_bytes |SMALLINT |Anzahl von freien bytes, die von allen Transaktionen (bei Heap) reserviert werden <br> Anzahl der ggf. gehosteten Zeilen (bei Index Blatt) |
+|reserved_bytes_by_xdes_id |SMALLINT |Von m_xdesID zu m_reservedCnt beigetragener Speicherplatz <br> Nur zu Debuggingzwecken |
+|xdes_id |nvarchar (64) |Letzte von m_reserved beigetragene Transaktion <br> Nur zu Debuggingzwecken |
+||||
 
 ## <a name="remarks"></a>Hinweise
-Die `sys.dm_db_page_info` dynamische Verwaltungsfunktion gibt Informationen wie `page_id`, `file_id`, `index_id`, `object_id` usw., die in einem Seitenkopf vorhanden sind. Diese Informationen sind hilfreich für die Problembehandlung und Debuggen von verschiedenen Leistung (Sperren und Latchwartevorgänge-Konflikt) und Probleme durch Beschädigungen behandelt.
+Die `sys.dm_db_page_info` dynamische Verwaltungsfunktion gibt Seiten Informationen wie `page_id`, `file_id`, `index_id` `object_id` usw. zurück, die in einem Seitenkopf vorhanden sind. Diese Informationen sind für die Problembehandlung und das Debuggen verschiedener Leistungsprobleme (Sperr-und Latchkonflikte) und Beschädigungs Probleme nützlich.
 
-`sys.dm_db_page_info` kann verwendet werden, anstelle von der `DBCC PAGE` -Anweisung in vielen Fällen, aber es gibt nur die Seite Headerinformationen, nicht den Text der Seite zurück. `DBCC PAGE` wird für Anwendungsfälle weiterhin benötigt, wenn der gesamte Inhalt der Seite erforderlich sind.
+`sys.dm_db_page_info`kann anstelle der- `DBCC PAGE` Anweisung in vielen Fällen verwendet werden, aber es werden nur die Seitenheader Informationen und nicht der Text der Seite zurückgegeben. `DBCC PAGE`wird immer noch für Anwendungsfälle benötigt, in denen der gesamte Inhalt der Seite erforderlich ist.
 
-## <a name="using-in-conjunction-with-other-dmvs"></a>Verwendung in Verbindung mit anderen DMVs
-Der wichtige Anwendungsfälle von `sys.dm_db_page_info` besteht darin, es mit anderen DMVs einzubinden, die Informationen verfügbar machen.  Um diesen Anwendungsfall zu ermöglichen, eine neue Spalte namens `page_resource` der Informationen in einem 8-Byte-hex-Format verfügbar macht hinzugefügt wurde. Diese Spalte wurde zu `sys.dm_exec_requests` und `sys.sysprocesses` und andere DMVs in der Zukunft nach Bedarf hinzugefügt.
+## <a name="using-in-conjunction-with-other-dmvs"></a>Verwenden von in Verbindung mit anderen DMVs
+Einer der wichtigen Anwendungsfälle von `sys.dm_db_page_info` besteht darin, ihn mit anderen DMVs zu verknüpfen, die Seiten Informationen verfügbar machen.  Um diesen Anwendungsfall zu vereinfachen, wurde eine neue `page_resource` Spalte namens hinzugefügt, die Seiten Informationen in einem 8-Byte-Hexadezimal Format verfügbar macht. Diese Spalte wurde zu `sys.dm_exec_requests` und `sys.sysprocesses` hinzugefügt und wird in Zukunft nach Bedarf anderen DMVs hinzugefügt.
 
-Eine neue Funktion, `sys.fn_PageResCracker`, dauert die `page_resource` als Eingabe und gibt eine einzelne Zeile, die enthält `database_id`, `file_id` und `page_id`.  Diese Funktion kann dann verwendet werden, um die Joins zwischen zu vereinfachen `sys.dm_exec_requests` oder `sys.sysprocesses` und `sys.dm_db_page_info`.
+Eine neue Funktion, `sys.fn_PageResCracker`, `page_resource` übernimmt als Eingabe und gibt eine einzelne Zeile aus, die `database_id`, `file_id` und `page_id`enthält.  Diese Funktion kann dann verwendet werden, um Joins zwischen `sys.dm_exec_requests` oder `sys.sysprocesses` und `sys.dm_db_page_info`zu vereinfachen.
 
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank.  
+Erfordert die `VIEW DATABASE STATE` -Berechtigung in der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-displaying-all-the-properties-of-a-page"></a>A. Alle Eigenschaften einer Seite anzeigen
-Die folgende Abfrage gibt eine Zeile mit den Seiteninformationen für einen bestimmten `database_id`, `file_id`, `page_id` zusammen mit der Standardmodus ("begrenzt")
+### <a name="a-displaying-all-the-properties-of-a-page"></a>A. Anzeigen aller Eigenschaften einer Seite
+Die folgende Abfrage gibt eine Zeile mit allen Seiten Informationen für eine bestimmte `database_id` `file_id`Kombination aus `page_id` ,, mit dem Standardmodus (' Limited ') zurück.
 
 ```sql
 SELECT *  
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>B. Verwenden sys.dm_db_page_info mit anderen DMVs 
+### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>B. Verwenden von sys. DM _db_page_info mit anderen DMVs 
 
-Die folgende Abfrage gibt eine Zeile pro `wait_resource` von verfügbar gemachten `sys.dm_exec_requests` Wenn die Zeile eine Wert ungleich Null enthält `page_resource`
+Die folgende Abfrage gibt eine Zeile `wait_resource` zurück, die von verfügbar gemacht wird `sys.dm_exec_requests` , wenn die Zeile einen nicht-NULL-Wert enthält`page_resource`
 
 ```sql
 SELECT page_info.* 
@@ -144,7 +149,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 
 ## <a name="see-also"></a>Siehe auch  
 [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Dynamische Verwaltungs Sichten &#40;in Verbindung mit der Datenbank Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 

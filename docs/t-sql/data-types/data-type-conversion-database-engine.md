@@ -21,12 +21,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001686"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697492"
 ---
 # <a name="data-type-conversion-database-engine"></a>Datentypkonvertierung (Datenbank-Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +57,44 @@ Verwenden Sie CAST anstelle von CONVERT, wenn der [!INCLUDE[tsql](../../includes
 In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **xml**, **bigint** und **sql_variant**. Es gibt keine implizite Konvertierung bei der Zuweisung vom **sql_variant**-Datentyp, eine implizite Konvertierung zum **sql_variant**-Datentyp findet jedoch statt.
   
 ![Konvertierungstabelle für Datentypen](../../t-sql/data-types/media/lrdatahd.png "Data type conversion table")
-  
+
+Das Diagramm oben veranschaulicht zwar alle expliziten und impliziten Konvertierungen, die in SQL Server zulässig sind, gibt aber nicht den sich ergebenden Datentyp der Konvertierung an. Wenn SQL Server eine explizite Konvertierung ausführt, bestimmt die Anweisung selbst den sich ergebenden Datentyp. Bei impliziten Konvertierungen führen Zuweisungsanweisungen wie das Festlegen des Werts einer Variablen oder das Einfügen eines Werts in eine Spalte zu dem Datentyp, der durch die Variablendeklaration oder Spaltendefinition definiert wurde. Bei Vergleichsoperatoren oder anderen Ausdrücken hängt der sich ergebende Datentyp von den Regeln der Datentyprangfolge ab.
+
+Das folgende Skript definiert z.B. eine Variable vom Typ `varchar`, weist der Variablen einen `int`-Typwert zu und wählt dann eine Verkettung der Variablen mit einer Zeichenfolge aus.
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+Der `int`-Wert von `1` wird in einen `varchar`-Wert konvertiert, sodass die `SELECT`-Anweisung den Wert `1 is a string.`zurückgibt.
+
+Das folgende Beispiel zeigt stattdessen ein ähnliches Skript mit einer `int`-Variablen:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+In diesem Fall löst die `SELECT`-Anweisung den folgenden Fehler aus:
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+Um den Ausdruck `@notastring + ' is not a string.'` auszuwerten, folgt SQL Server den Regeln der Datentyprangfolge, um die implizite Konvertierung abzuschließen, bevor das Ergebnis des Ausdrucks berechnet werden kann. Da `int` eine höhere Rangfolge als `varchar` hat, versucht SQL Server, die Zeichenfolge in einen Integerwert zu konvertieren, und schlägt fehl, da diese Zeichenfolge nicht in einen Integerwert konvertiert werden kann. Wenn der Ausdruck eine Zeichenfolge bereitstellt, die konvertiert werden kann, wird die Anweisung erfolgreich ausgeführt, wie im folgenden Beispiel gezeigt:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+In diesem Fall kann die Zeichenfolge `1` in den Integerwert `1` konvertiert werden, sodass diese `SELECT`-Anweisung den Wert `2` zurückgibt. Beachten Sie, dass der Operator `+` eher zu einer Addition als zu einer Verkettung führt, wenn die angegebenen Datentypen Integerwerte sind.
+
 ## <a name="data-type-conversion-behaviors"></a>Verhalten bei der Datentypkonvertierung
+
 Einige implizite und explizite Datentypkonvertierungen werden nicht unterstützt, wenn Sie den Datentyp eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekts in einen anderen konvertieren. Ein **nchar**-Wert kann nicht in einen **image**-Wert konvertiert werden. **nchar** kann nur mit der expliziten Konvertierung in **binary** konvertiert werden; eine implizite Konvertierung in **binary** wird nicht unterstützt. **nchar** kann jedoch explizit oder implizit in **nvarchar** konvertiert werden.
   
 In den folgenden Themen wird das Konvertierungsverhalten der entsprechenden Datentypen beschrieben:

@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100263"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715293"
 ---
 # <a name="overview-and-usage-scenarios"></a>Übersicht und Verwendungsszenarien
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -224,7 +224,7 @@ GO
 
 [In-Memory-OLTP-Technologien für höhere T-SQL-Leistung](https://msdn.microsoft.com/library/mt694156.aspx)   
 Eine Demo der Leistung bei der Verwendung von In-Memory-OLTP finden Sie unter: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
-[17-minütiges Video mit einer Erläuterung von In-Memory-OLTP und Präsentation der Demo](https://www.youtube.com/watch?v=l5l5eophmK4) (Demo bei 8:25)   
+[17-minütiges Video mit einer Erläuterung von In-Memory-OLTP und Präsentation der Demo](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
 [Skript zum Aktivieren von In-Memory-OLTP und zum Festlegen empfohlener Optionen](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [Hauptdokumentation zu In-Memory-OLTP](in-memory-oltp-in-memory-optimization.md)   
 [Vorteile bei der Nutzung von Leistung und Ressourcen des In-Memory OLTP in der Azure SQL-Datenbank](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f1bbdb044afd8fb4a5ff55d1a9d5fea2b3f14da1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008830"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702806"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -54,7 +54,7 @@ Server = [protocol:]server[,port]
 
 Sie können optional das Protokoll und den Port für die Verbindung mit dem Server angeben. Beispiel: **Server = TCP: Server**_Name_ **, 12345**. Beachten Sie, dass das einzige Protokoll, das von Linux-und `tcp`macOS-Treibern unterstützt wird.
 
-Um eine Verbindung mit einer benannten Instanz auf einem statischen Port herzustellen, verwenden Sie <b>Server=</b>*servername*,**port_number**. Das Verbinden mit einem dynamischen Port wird nicht unterstützt.  
+Um eine Verbindung mit einer benannten Instanz auf einem statischen Port herzustellen, verwenden Sie <b>Server=</b>*servername*,**port_number**. Das Herstellen einer Verbindung mit einem dynamischen Port wird vor Version 17.4 nicht unterstützt.
 
 Alternativ können Sie die DSN-Informationen auch einer Vorlagendatei hinzufügen und den folgenden Befehl ausführen, um sie `~/.odbc.ini` hinzuzufügen:
  - **odbcinst -i -s -f** _template_file_  
@@ -86,20 +86,31 @@ SSL verwendet die OpenSSL-Bibliothek. Die folgende Tabelle zeigt die minimalen u
 
 |Platform|Minimale OpenSSL-Version|Standard-Zertifikatsvertrauensspeicherort|  
 |------------|---------------------------|--------------------------------------------|
+|Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
-|Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Debian 8.71|1.0.1|/etc/ssl/certs|
+|OS X 10,11, macOS 10,12, 10,13, 10,14|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
-|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
-|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
-  
+|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.04|1.1.0|/etc/ssl/certs|
+|Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
+|Ubuntu 14.04|1.0.1|/etc/ssl/certs|
+
 Sie können auch die Verschlüsselung in der Verbindungs Zeichenfolge `Encrypt` mithilfe der Option angeben, wenn Sie **SQLDriverConnect** verwenden, um eine Verbindung herzustellen.
+
+## <a name="adjusting-the-tcp-keep-alive-settings"></a>Anpassen der TCP-Keep-Alive-Einstellungen
+
+Beginnend mit dem ODBC-Treiber 17,4, wie oft der Treiber Keep-Alive-Pakete sendet und Sie erneut überträgt, wenn eine Antwort nicht empfangen wird, ist konfigurierbar.
+Fügen Sie zum Konfigurieren von die folgenden Einstellungen entweder dem Abschnitt des Treibers `odbcinst.ini`in oder dem Abschnitt des DSN in `odbc.ini`hinzu. Beim Herstellen einer Verbindung mit einem DSN verwendet der Treiber die Einstellungen im Abschnitt des DSN, sofern vorhanden. Andernfalls werden die Einstellungen im Abschnitt des Treibers in `odbcinst.ini`verwendet, wenn nur eine Verbindung mit einer Verbindungs Zeichenfolge hergestellt wird. Wenn die Einstellung an keinem der Orte vorhanden ist, verwendet der Treiber den Standardwert.
+
+- `KeepAlive=<integer>`steuert, wie oft TCP versucht, zu überprüfen, ob eine Verbindung im Leerlauf noch intakt ist, indem ein Keep-Alive-Paket gesendet wird. Der Standardwert ist **30** Sekunden.
+
+- `KeepAliveInterval=<integer>`bestimmt das Intervall, das Keep-Alive-Neuübertragungen trennt, bis eine Antwort empfangen wird.  Der Standardwert beträgt **1** Sekunde.
+
 
 ## <a name="see-also"></a>Weitere Informationen  
 [Installieren des Microsoft ODBC Driver for SQL Server unter Linux und macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  

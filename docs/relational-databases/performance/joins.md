@@ -1,7 +1,7 @@
 ---
 title: Joins (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/18/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,31 +10,33 @@ helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
 - MERGE join
+- ADAPTIVE join
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051955"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419587"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet bei Sortier-, Schnittmengen- und Vereinigungsvorgängen sowie bei Vorgängen zum Feststellen von Unterschieden arbeitsspeicherinterne Sortierverfahren und Hashjointechniken. Beim Verwenden dieses Abfrageplantyps unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vertikale Tabellenpartitionierung, auch spaltenweise Speicherung genannt.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt drei Typen von Joinvorgängen:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt vier Typen von Joinvorgängen:    
 -   Joins geschachtelter Schleifen     
 -   Zusammenführungsjoins   
 -   Hashjoins   
+-   Adaptive Joins (beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="fundamentals"></a> Grundlegende Informationen zu Joins
-Mithilfe von Joins können Sie Daten aus zwei oder mehr Tabellen basierend auf logischen Beziehungen zwischen den Tabellen abrufen. Joins zeigen an, wie Microsoft SQL Server Daten aus einer Tabelle zum Auswählen der Zeilen in einer anderen Tabelle verwenden soll.    
+Mithilfe von Joins können Sie Daten aus zwei oder mehr Tabellen basierend auf logischen Beziehungen zwischen den Tabellen abrufen. Joins zeigen an, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten aus einer Tabelle zum Auswählen der Zeilen in einer anderen Tabelle verwenden soll.    
 
 Eine Joinbedingung definiert die Beziehung zweier Tabellen in einer Abfrage auf folgende Art:    
 -   Sie gibt die Spalte aus jeder Tabelle an, die für den Join verwendet werden soll. Eine typische Joinbedingung gibt einen Fremdschlüssel aus einer Tabelle und den zugehörigen Schlüssel in der anderen Tabelle an.    
@@ -115,6 +117,8 @@ Im einfachsten Fall wird beim Suchvorgang eine Tabelle oder ein Index vollständ
 
 Ein Nested Loops-Join ist besonders wirksam, wenn die äußere Eingabe klein und die innere Eingabe vorindiziert und umfangreich ist. In vielen kleinen Transaktionen, die beispielsweise nur wenige Zeilen betreffen, sind indizierte Nested Loops-Joins sowohl Zusammenführungsjoins als auch Hashjoins überlegen. In umfangreichen Abfragen dagegen sind Nested Loops-Joins häufig nicht die optimale Wahl.    
 
+Wenn das „OPTIMIZED“-Attribut eines Operators für Joins geschachtelter Schleifen auf **True**festgelegt ist, bedeutet dies, dass ein optimierter Join geschachtelter Schleifen (oder eine Sortierung im Batchmodus) verwendet wird, um E/A-Vorgänge zu minimieren, wenn die innere Tabelle groß ist, unabhängig davon, ob sie parallelisiert wird oder nicht. Das Vorhandensein dieser Optimierung in einem bestimmten Plan ist beim Analysieren eines Ausführungsplans möglicherweise nicht offensichtlich, da die Sortierung selbst ein verborgener Vorgang ist. Wenn jedoch in der Plan-XML nach dem Attribut „OPTIMIZED“ gesucht wird, deutet dies darauf hin, dass der Join geschachtelter Schleifen möglicherweise versucht, die Eingabezeilen neu anzuordnen und die E/A-Leistung zu verbessern.
+
 ## <a name="merge"></a> Grundlegendes zu Zusammenführungsjoins
 Sind beide Joineingaben nicht klein, aber nach ihrer Joinspalte sortiert (was beispielsweise der Fall ist, wenn sie beim Scannen sortierter Indizes gewonnen wurden), so ist ein Zusammenführungsjoin der schnellste Joinvorgang. Sind beide Joineingaben umfangreich und etwa gleich groß, so bietet ein Zusammenführungsjoin mit vorherigem Sortiervorgang und ein Hashjoin vergleichbares Leistungsverhalten. Hashjoinvorgänge sind jedoch häufig erheblich schneller, wenn sich beide Eingaben im Umfang deutlich unterscheiden.       
 
@@ -142,15 +146,12 @@ Hashjoins werden für viele ergebnismengenorientierte Operationen verwendet: INN
 In den folgenden Abschnitten werden verschiedene Typen von Hashjoins beschrieben: arbeitsspeicherinterne Hashjoins, schrittweise Hashjoins und rekursive Hashjoins.    
 
 ### <a name="inmem_hash"></a> Arbeitsspeicherinterne Hashjoins
-
 Der Hashjoin scannt oder berechnet zuerst die gesamte Erstellungseingabe und erstellt dann eine Hashtabelle im Arbeitsspeicher. Jede Zeile wird in ein Hashbucket eingefügt, abhängig von dem für den Hashschlüssel berechneten Hashwert. Wenn die gesamte Erstellungseingabe kleiner als der verfügbare Arbeitsspeicher ist, können alle Zeilen in die Hashtabelle eingefügt werden. Auf diese Erstellungsphase folgt die Untersuchungsphase. Die gesamte Untersuchungseingabe wird zeilenweise gescannt oder berechnet, und für jede Untersuchungszeile wird der Wert des Hashschlüssels berechnet, das entsprechende Hashbucket wird gescannt, und die Übereinstimmungen werden erzeugt.    
 
 ### <a name="grace_hash"></a> GRACE-Hashjoins
-
 Wenn die Erstellungseingabe nicht vollständig in den Arbeitsspeicher passt, wird der Hashjoin in mehreren Schritten durchgeführt. Dies wird als schrittweiser Hashjoin bezeichnet. Jeder Schritt besteht aus einer Erstellungsphase und einer Untersuchungsphase. Zuerst wird die gesamte Erstellungseingabe und Untersuchungseingabe verarbeitet und (durch Anwenden einer Hashfunktion auf die Hashschlüssel) in mehrere Dateien aufgeteilt. Durch Anwenden der Hashfunktion auf die Hashschlüssel wird sichergestellt, dass die zwei zu verknüpfenden Datensätze sich stets in demselben Dateipaar befinden. So wird die Aufgabe, zwei umfangreiche Eingaben zu verknüpfen, auf mehrere kleinere gleichartige Teilaufgaben reduziert. Der Hashjoin wird dann auf jedes Paar partitionierter Dateien angewendet.    
 
 ### <a name="recursive_hash"></a> Rekursive Hashjoins
-
 Wenn die Erstellungseingabe so umfangreich ist, dass Eingaben für einen standardmäßigen externen Mergeprozess mehrere Mergeebenen erfordern würden, sind mehrere Partitionierungsschritte und mehrere Partitionierungsebenen erforderlich. Sind nur einige Partitionen umfangreich, so sind zusätzliche Partitionierungsschritte nur für diese Partitionen erforderlich. Um alle Partitionierungsschritte möglichst schnell zu machen, werden umfangreiche, asynchrone E/A-Operationen verwendet, sodass bereits ein Thread mehrere Datenträger auslastet.    
 
 > [!NOTE]
@@ -164,14 +165,132 @@ Wenn der Abfrageoptimierer falsch einschätzt, welche Eingabe kleiner ist und da
 > Der Rollentausch tritt unabhängig von Abfragehinweisen oder von der Struktur auf. Der Rollentausch wird nicht im Abfrageplan angezeigt. Wenn ein solcher Vorgang auftritt, erfolgt er transparent für den Benutzer.
 
 ### <a name="hash_bailout"></a> Hashabbruch
-
 Der Begriff „Hashabbruch“ wird manchmal zur Beschreibung von GRACE- oder rekursiven Hashjoins verwendet.    
 
 > [!NOTE]
 > Rekursive Hashjoins oder Hashabbrüche verursachen eine reduzierte Leistung auf dem Server. Wenn in einer Ablaufverfolgung viele Hash Warning-Ereignisse angezeigt werden, sollten Sie die Statistiken für die verknüpften Spalten aktualisieren.    
 
 Weitere Informationen zu Hashabbrüchen finden Sie unter [Hash Warning-Ereignisklasse](../../relational-databases/event-classes/hash-warning-event-class.md).    
-  
+
+## <a name="adaptive"></a> Grundlegendes zu adaptiven Joins
+Mit dem [Batchmodus](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) für adaptive Joins können Sie wählen, ob eine Methode für [Hashjoins](#hash) oder [Joins geschachtelter Schleifen](#nested_loops) zurückgestellt wird. Die Methode wird dann erst **nach** der Überprüfung der ersten Eingabe angewendet. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann ein Abfrageplan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln, ohne dass er erneut kompiliert werden muss. 
+
+> [!TIP]
+> Workloads mit häufiger Oszillation zwischen kleinen und großen Joineingabescans profitieren am meisten von dieser Funktion.
+
+Die Laufzeitentscheidung basiert auf den folgenden Schritten:
+-  Wenn die Anzahl der Zeilen der Buildjoineingabe so klein ist, dass ein Join geschachtelter Schleifen passender wäre als ein Hashjoin, wechselt der Plan zu einem Algorithmus geschachtelter Schleifen.
+-  Wenn die Buildjoineingabe eine bestimmte Anzahl an Zeilen übersteigt, wird nicht gewechselt, und der Plan wird mit einem Hashjoin fortgesetzt.
+
+Die folgende Abfrage veranschaulicht ein Beispiel für einen adaptiven Join:
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+Die Abfrage gibt 336 Zeilen zurück. Bei Aktivierung der [Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.md) wird der folgende Plan angezeigt:
+
+![Abfrageergebnis: 336 Zeilen](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+Beachten Sie im Plan Folgendes:
+1. Ein Columnstore-Indexscan wurde verwendet, um Zeilen für die Buildphase des Hashjoins bereitzustellen.
+2. Den neuen Operator für adaptive Joins. Dieser Operator definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. In diesem Beispiel entspricht der Schwellenwert 78 Zeilen. Alles mit &gt;= 78 Zeilen verwendet einen Hashjoin. Wenn der Schwellenwert nicht überschritten wird, wird ein Join geschachtelter Schleifen verwendet.
+3. Da von der Abfrage 336 Zeilen zurückgegeben werden, wird der Schwellenwert überschritten. Deshalb stellt der zweite Branch die Überprüfungsphase eines standardmäßigen Hashjoinvorgangs dar. Beachten Sie, dass die Liveabfragestatistik Zeilen anzeigt, die die Operatoren durchlaufen: in diesem Fall „672 von 672“.
+4. Beim letzten Branch handelt es sich um eine Suche im gruppierten Index, die vom Join geschachtelter Schleifen verwendet worden wäre, wenn der Schwellenwert nicht überschritten worden wäre. Beachten Sie, dass „0 von 336“ Zeilen angezeigt werden (der Branch wird nicht verwendet).
+
+Vergleichen Sie den Plan nun mit derselben Abfrage, dieses Mal aber mit einem *Mengenwert*, der nur eine Zeile in der Tabelle hat:
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+Die Abfrage gibt eine Zeile zurück. Bei Aktivierung der „Liveabfragestatistik“ wird der folgende Plan angezeigt:
+
+![Abfrageergebnis eine Zeile](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+Beachten Sie im Plan Folgendes:
+- Bei einer zurückgegebenen Zeile durchlaufen Zeilen jetzt den Clustered Index Seek.
+- Da die Buildphase des Hashjoins nicht fortgesetzt wurde, wird der zweite Branch nicht von Zeilen durchlaufen.
+
+### <a name="adaptive-join-remarks"></a>Hinweise zu adaptiven Joins
+Adaptive Joins erfordern mehr Speicherplatz als ein äquivalenter Plan eines indizierten Joins geschachtelter Schleifen. Der zusätzliche Speicherplatz wird so angefordert, als wären die geschachtelte Schleifen ein Hashjoin. Auch die Buildphase ist mit Aufwand verbunden: sowohl für einen Stop-and-Go-Vorgang als auch für einen äquivalenten Join eines Streamings geschachtelter Schleifen. Dieser zusätzliche Aufwand geht mit Flexibilität für Szenarios einher, in denen die Zeilenzahl möglicherweise in der Buildeingabe schwankt.
+
+Adaptive Joins im Batchmodus funktionieren bei der ersten Ausführung einer Anweisung. Nach der ersten Kompilierung bleiben aufeinanderfolgende Ausführungen adaptiv, basierend auf dem Schwellenwert des kompilierten adaptiven Joins und den Laufzeitzeilen, die die Buildphase der äußeren Eingabe durchlaufen.
+
+Wenn ein adaptiver Join zu einem Vorgang geschachtelter Schleifen wechselt, verwendet er die Zeilen, die bereits vom Hashjoinbuild gelesen wurden. Der Operator liest **nicht** erneut die Zeilen des äußeren Verweises.
+
+### <a name="tracking-adaptive-join-activity"></a>Nachverfolgen der Aktivität adaptiver Joins
+Der Operator für adaptive Joins verfügt über folgende Planoperatorattribute:
+
+|Planattribut|und Beschreibung|
+|---|---|
+|AdaptiveThresholdRows|Gibt den beim Wechsel von einem Hashjoin zu einem Nested Loop-Join zu verwendenden Schwellenwert an|
+|EstimatedJoinType|Gibt den erwarteten Jointyp an|
+|ActualJoinType|Gibt in einem Plan an, welcher Joinalgorithmus basierend auf dem Schwellenwert verwendet wurde.|
+
+Der geschätzte Plan zeigt die Form des adaptiven Joinplans an sowie den definierten Schwellenwert für adaptive Joins und den geschätzten Jointyp.
+
+> [!TIP]
+> Der Abfragespeicher erfasst einen adaptiven Joinplan im Batchmodus und kann diesen erzwingen.
+
+### <a name="adaptive-join-eligible-statements"></a>Zulässige Anweisungen für adaptive Joins
+Ein logischer Join ist dann für adaptive Joins im Batchmodus zulässig, wenn er folgende Bedingungen erfüllt:
+- Der Datenbank-Kompatibilitätsgrad ist 140 oder höher.
+- Die Abfrage ist eine `SELECT`-Anweisung (Anweisungen zur Datenänderung sind aktuell nicht verfügbar).
+- Der Join kann sowohl vom physischen Algorithmus eines indizierten Joins geschachtelter Schleifen als auch eines Hashjoins ausgeführt werden.
+- Der Hashjoin verwendet den [Batchmodus](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) entweder über einen vorhandenen Columnstore-Index in der Abfrage oder eine mit Columnstore indizierte Tabelle, auf die direkt vom Join verwiesen wird.
+- Die generierten alternativen Lösungen des Joins geschachtelter Schleifen und Hashjoins sollten dasselbe erste untergeordnete Element haben (äußerer Verweis).
+
+### <a name="adaptive-threshold-rows"></a>Adaptive Schwellenwertzeilen
+Das folgende Diagramm zeigt eine beispielhafte Überschneidung zwischen den Ressourcen eines Hashjoins und den Ressourcen des alternativen Joins geschachtelter Schleifen. Am Überschneidungspunkt wird der Schwellenwert bestimmt, der wiederum den für den Joinvorgang verwendeten Algorithmus bestimmt.
+
+![Schwellenwert des Joins](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Deaktivieren von adaptiven Joins ohne Änderung des Kompatibilitätsgrads
+Adaptive Joins können im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 140 und höher bleibt.  
+Führen Sie die folgende Anweisung im Kontext der betreffenden Datenbank aus, um adaptive Joins für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
+Um adaptive Joins für alle Abfrageausführungen wieder zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Durch Festlegen von `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) können adaptive Joins für eine bestimmte Abfrage auch deaktiviert werden. Beispiel:
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung. 
+
 ## <a name="nulls_joins"></a> NULL-Werte und Joins
 Wenn die Spalten der zu verknüpfenden Tabellen NULL-Werte enthalten, werden diese Werte nicht als übereinstimmend angesehen. Das Vorhandensein von NULL-Werten in einer Spalte aus einer der verknüpften Tabellen kann nur mithilfe eines äußeren Joins zurückgegeben werden (wenn die `WHERE`-Klausel keine NULL-Werte ausschließt).     
 
@@ -236,7 +355,3 @@ In den Ergebnissen ist ein NULL-Wert in den Daten nicht ohne Weiteres von einem 
 [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Unterabfragen](../../relational-databases/performance/subqueries.md)      
 [Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

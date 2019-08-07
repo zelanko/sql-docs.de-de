@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
-ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
+ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68231857"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702705"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,9 +25,11 @@ ms.locfileid: "68231857"
 
 ### <a name="introduction"></a>Einführung
 
-Dieser Artikel enthält Informationen zum Entwickeln von ODBC-Anwendungen mithilfe von [Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+Dieser Artikel bietet Informationen zum Entwickeln von ODBC-Anwendungen mithilfe von [Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) und dem [ODBC-Treiber für SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
-Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem Always Encrypted aktiviert ist, z.B. ODBC Driver for SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. Weitere Informationen finden Sie unter [Immer verschlüsselt (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md).
+Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem Always Encrypted aktiviert ist, z.B. ODBC Driver for SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. *Always Encrypted mit Secure Enclaves* erweitert dieses Feature um umfangreichere Funktionen für vertrauliche Daten und sorgt gleichzeitig dafür, dass diese Daten vertraulich bleiben.
+
+Weitere Informationen finden Sie unter [Always encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und [Always Encrypted mit sicheren Enklaven](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -54,6 +56,17 @@ Beachten Sie, dass das Aktivieren von Always Encrypted für eine erfolgreiche Ve
 - Die Anwendung verfügt über die Datenbankberechtigungen *VIEW ANY COLUMN MASTER KEY DEFINITION* und *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* , die für den Zugriff auf die Metadaten in der Datenbank über Always Encrypted-Schlüssel erforderlich sind. Einzelheiten hierzu finden Sie unter [Datenbankberechtigungen](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 
 - Die Anwendung muss auf den CMK zugreifen können, der die CEKs für die abgefragten verschlüsselten Spalten schützt. Dies hängt vom Schlüsselspeicheranbieter ab, bei dem der CMK gespeichert wird. Weitere Informationen finden Sie im Abschnitt [Arbeiten mit Spaltenhauptschlüsselspeichern](#working-with-column-master-key-stores).
+
+### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Aktivieren von Always Encrypted mit Secure Enclaves
+
+Ab Version 17,4 unterstützt der Treiber Always Encrypted mit sicheren Enklaven. Wenn Sie die Verwendung von Enclave beim Herstellen einer Verbindung mit SQL Server 2019 oder höher aktivieren `ColumnEncryption` möchten, legen Sie den DSN, die Verbindungs Zeichenfolge oder das Verbindungs Attribut auf den Namen des Enclave-und Nachweis Protokolls sowie die zugehörigen Nachweis Daten durch ein Komma getrennt fest. In Version 17,4 wird nur der [virtualisierungsbasierte Sicherheits](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) Enclave- Typ und das von `VBS-HGS`angegebene [Host-Überwachungsdienst-Nachweis](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) Protokoll unterstützt. Geben Sie die URL des Nachweis Servers an, um Sie zu verwenden. Beispiel:
+
+```
+Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
+```
+
+Wenn der Server und der Nachweis Dienst ordnungsgemäß konfiguriert sind, sowie für Enclave-aktivierte CMAS und ceert für die gewünschten Spalten, sollten Sie nun Abfragen ausführen können, die die Enclave verwenden, wie z. b. direkte Verschlüsselung und umfangreiche Berechnungen, zusätzlich zum vorhandene Funktionen, die von Always Encrypted bereitgestellt werden. Weitere Informationen finden Sie [unter Konfigurieren von Always Encrypted mit sicheren Enklaven](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) .
+
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Abrufen und Ändern von Daten in verschlüsselten Spalten
 
@@ -148,7 +161,7 @@ Im folgenden Beispiel wird das Filtern von Daten auf Basis verschlüsselter Wert
 - Alle Werte werden vom Programm als Klartext ausgegeben, da der Treiber die aus den Spalten „SSN“ und „BirthDate“ abgerufenen Daten transparent entschlüsselt.
 
 > [!NOTE]
-> Abfragen können Übereinstimmungsvergleiche für verschlüsselte Spalten nur bei deterministischer Verschlüsselung ausführen. Weitere Informationen finden Sie im Abschnitt [Auswählen der deterministischen oder zufälligen Verschlüsselung](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+> Abfragen können Gleichheits Vergleiche für verschlüsselte Spalten nur dann durchführen, wenn die Verschlüsselung deterministisch ist oder wenn die sichere Enclave aktiviert ist. Weitere Informationen finden Sie im Abschnitt [Auswählen der deterministischen oder zufälligen Verschlüsselung](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 ```
 SQLCHAR SSN[12];
@@ -579,7 +592,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|`ColumnEncryption`|Zulässige Werte sind `Enabled`/`Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled`: deaktiviert Always Encrypted-Funktionen für die Verbindung. <br><br>Der Standardwert ist `Disabled`.|  
+|`ColumnEncryption`|Zulässige Werte sind `Enabled`/`Disabled`.<br>`Enabled`: aktiviert Always Encrypted-Funktionen für die Verbindung.<br>`Disabled`: deaktiviert Always Encrypted-Funktionen für die Verbindung.<br>*Type*,*Data* -(Version 17,4 und höher) ermöglicht Always Encrypted mit dem sicheren Enclave-und Nachweis *Protokolltyp* sowie den zugehörigen Nachweis *Daten*. <br><br>Der Standardwert ist `Disabled`.|
 |`KeyStoreAuthentication` | Gültige Werte: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Wenn `KeyStoreAuthentication` = `KeyVaultPassword`, legen Sie diesen Wert auf einen gültigen Benutzerprinzipalnamen in Azure Active Directory fest. <br>Wenn `KeyStoreAuthetication` = `KeyVaultClientSecret`, legen Sie diesen Wert auf eine gültige Anwendungsclient-ID in Azure Active Directory fest. |
 |`KeyStoreSecret` | Wenn `KeyStoreAuthentication` = `KeyVaultPassword`, legen Sie diesen Wert auf das Kennwort für den entsprechenden Benutzernamen fest. <br>Wenn `KeyStoreAuthentication` = `KeyVaultClientSecret`, legen Sie diesen Wert auf das Anwendungsgeheimnis fest, das einer gültigen Anwendungsclient-ID in Azure Active Directory zugeordnet wird. |
@@ -589,7 +602,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 
 |Name|Typ|und Beschreibung|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Vor dem Herstellen einer Verbindung|`SQL_COLUMN_ENCRYPTION_DISABLE` (0): Always Encrypted wird deaktiviert. <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1): Always Encrypted wird aktiviert.|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Vor dem Herstellen einer Verbindung|`SQL_COLUMN_ENCRYPTION_DISABLE` (0): Always Encrypted wird deaktiviert. <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1): Always Encrypted wird aktiviert.<br> Zeiger auf *Typ*,*Daten* Zeichenfolge--(Version 17,4 und höher) mit sicherer Enclave aktivieren|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Nach dem Herstellen einer Verbindung|[SET] Es wird versucht, „CEKeystoreProvider“ zu laden.<br>[GET] Ein CEKeystoreProvider-Name wird zurückgegeben.|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Nach dem Herstellen einer Verbindung|[SET] Daten werden in „CEKeystoreProvider“ geschrieben.<br>[GET] Daten werden aus „CEKeystoreProvider“ gelesen.|
 |`SQL_COPT_SS_CEKCACHETTL`|Nach dem Herstellen einer Verbindung|[SET] Gültigkeitsdauer des CEK-Caches wird festgelegt.<br>[GET] Gültigkeitsdauer des aktuellen CEK-Caches wird abgerufen.|
@@ -607,7 +620,7 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 Bytes)|0|Bei 0 (Standardeinstellung): Entscheidung, ob dieser Parameter verschlüsselt wird, basiert auf der Verfügbarkeit von Verschlüsselungsmetadaten.<br><br>Bei ungleich 0: Parameter wird verschlüsselt, wenn Verschlüsselungsmetadaten dafür verfügbar sind. Andernfalls schlägt die Anforderung fehl [CE300] [Microsoft][ODBC Driver 13 for SQL Server] Die obligatorische Verschlüsselung wurde für einen Parameter angegeben, es wurden vom Server jedoch keine Verschlüsselungsmetadaten bereitgestellt.|
 
-### <a name="bcpcontrol-options"></a>Optionen für „bcp_control“
+### <a name="bcp_control-options"></a>Optionen für „bcp_control“
 
 |Optionsname|Standardwert|und Beschreibung|
 |-|-|-|
@@ -616,5 +629,6 @@ Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted ges
 ## <a name="see-also"></a>Weitere Informationen
 
 - [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Always Encrypted-Blog](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

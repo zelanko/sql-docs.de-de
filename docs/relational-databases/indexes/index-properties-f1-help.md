@@ -19,12 +19,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909712"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476301"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,76 @@ ms.locfileid: "67909712"
   
  **Allow Nulls**  
  Zeigt **Ja** an, wenn die Tabellendefinition für die Spalte NULL-Werte zulässt. Zeigt **Nein** an, wenn die Tabellendefinition für die Spalte keine NULL-Werte zulässt.  
+
+##  <a name="Options"></a> Optionen auf der Seite „Optionen“
+ Auf dieser Seite können Sie verschiedene Indexoptionen anzeigen und ändern.
+
+### <a name="general-options"></a>Allgemeine Optionen
+**Statistiken automatisch neu berechnen**<br>
+Gibt an, ob Verteilungsstatistiken automatisch neu berechnet werden. Der Standardwert ist **True**, was dem Festlegen von STATISTICS_NORECOMPUTE auf „OFF“ (Deaktiviert) entspricht. Wird diese Einstellung auf **False** festgelegt, wird STATISTICS_NORECOMPUTE auf „ON“ (Aktiviert) festgelegt.
+
+**Doppelte Werte ignorieren** <br>
+Gibt die Fehlermeldung an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen.
+
+Wahr<br>
+Eine Warnmeldung wird ausgegeben, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Es schlagen nur die Zeilen fehl, die gegen die Eindeutigkeitseinschränkung verstoßen.
+
+False<br>
+Eine Fehlermeldung wird ausgegeben, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Für den gesamten INSERT-Vorgang wird ein Rollback ausgeführt.
+
+### <a name="locks-options"></a>Sperroptionen
+
+**Zeilensperren zulassen**<br>
+Gibt an, ob Zeilensperren zulässig sind.
+
+**Seitensperren zulassen**<br>
+Gibt an, ob Seitensperren zulässig sind.
+
+### <a name="operation-options"></a>Vorgangsoptionen
+
+ **DML-Onlineverarbeitung zulassen**  
+ Ermöglicht Benutzern während eines Indexvorgangs wie CREATE oder ALTER den Zugriff auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und zugehörigen nicht gruppierten Indizes. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
+> [!NOTE]  
+>  Diese Option ist für XML-Indizes nicht verfügbar. Das gilt auch, wenn der Index ein deaktivierter gruppierter Index ist.  
+  
+ **Maximaler Grad an Parallelität**  
+ Begrenzt die Anzahl der bei der Ausführung paralleler Pläne einzusetzenden Prozessoren. Der Standardwert ist 0; bei diesem Wert wird die tatsächliche Anzahl der verfügbaren CPUs verwendet. Wenn Sie den Wert auf 1 setzen, wird die Ausführung paralleler Pläne unterdrückt; bei einem Wert von größer als 1 wird die maximale Anzahl der bei der Ausführung einer einzelnen Abfrage zu verwendenden Prozessoren begrenzt. Diese Option ist nur verfügbar, wenn sich das Dialogfeld im Status **Neu organisieren** oder **Neu erstellen** befindet. Weitere Informationen finden Sie unter [Festlegen der 'Max. Grad an Parallelität'-Option auf optimale Leistung](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+  
+> [!NOTE]  
+>  Wird ein Wert angegeben, der über der Anzahl der verfügbaren CPUs liegt, wird die tatsächliche Anzahl der CPUs verwendet.  
+
+
+**Für sequenziellen Schlüssel optimieren**<br>
+Gibt an, ob der Konflikt beim Einfügen der letzten Seite optimiert werden soll. Weitere Informationen finden Sie unter [Sequenzielle Schlüssel](../../t-sql/statements/create-index-transact-sql.md#sequential-keys).
+
+### <a name="storage-options"></a>Speicheroptionen
+
+**In tempdb sortieren**<br>
+Gibt an, ob temporäre Ergebnisse des Sortierens in tempdb gespeichert werden sollen.
+
+Wahr<br>
+Die Zwischenergebnisse von Sortierungen, mit denen der Index erstellt wird, werden in tempdb gespeichert. Diese Option verringert u. U. den Zeitaufwand, der mit der Erstellung eines Indexes verbunden ist, wenn sich tempdb auf einem anderen Datenträgersatz befindet als die Benutzerdatenbank. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.
+
+False<br>
+Die Zwischenergebnisse der Sortierung werden in derselben Datenbank gespeichert wie der Index. Weitere Informationen finden Sie unter [SORT_IN_TEMPDB-Option für Indizes](./sort-in-tempdb-option-for-indexes.md).
+
+**Füllfaktor**<br>
+Gibt an, zu wie viel Prozent die Blattebene jeder Indexseite während der Indexerstellung oder -neuerstellung von der Datenbank-Engine aufgefüllt werden soll. „fillfactor“ muss ein Integer zwischen 1 und 100 sein. Wenn der „fillfactor“-Wert 100 ist, erstellt die Datenbank-Engine Indizes mit vollständig aufgefüllten Blattseiten.
+Die FILLFACTOR-Einstellung gilt nur, wenn der Index erstellt oder neu erstellt wird. Die Datenbank-Engine hält den angegebenen Prozentsatz des Speicherplatzes auf den Seiten nicht dynamisch frei.
+
+Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](./specify-fill-factor-for-an-index.md).
+
+**Index mit Leerstellen auffüllen**<br>
+Gibt die Auffüllung von Indizes an.
+
+Wahr<br>
+Der Prozentsatz des mit „fillfactor“ angegebenen freien Speicherplatzes wird für die Zwischenebenenseiten des Indexes angewendet.
+
+„False“ oder „fillfactor“ sind nicht angegeben<br>
+Die Zwischenebenenseiten sind nahezu vollständig aufgefüllt. Allerdings ist ausreichend Speicherplatz vorhanden, um mindestens eine Zeile in der maximal für den Index möglichen Größe aufzunehmen, wenn der Schlüsselsatz auf den Zwischenseiten berücksichtigt wird.
+
+
 ##  <a name="Storage"></a> Optionen auf der Seite "Speicher"  
  Auf dieser Seite können Sie Dateigruppen- bzw. Partitionsschemaeigenschaften für den ausgewählten Index anzeigen und ändern. Zeigt nur Optionen in Zusammenhang mit dem Indextyp an.  
   
@@ -164,18 +233,6 @@ ms.locfileid: "67909712"
   
 > [!NOTE]  
 >  Wenn die Tabellenspalte eine berechnete Spalte ist, wird unter **Spaltendatentyp** „berechnete Spalte“ angezeigt.  
-  
- **Onlineverarbeitung von DML-Anweisungen während der Indexverschiebung zulassen**  
- Ermöglicht Benutzern während des Indexvorgangs den Zugriff auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und zugehörigen nicht gruppierten Indizes. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
-  
-> [!NOTE]  
->  Diese Option ist für XML-Indizes nicht verfügbar. Das gilt auch, wenn der Index ein deaktivierter gruppierter Index ist.  
-  
- **Maximalen Grad an Parallelität festlegen**  
- Begrenzt die Anzahl der bei der Ausführung paralleler Pläne einzusetzenden Prozessoren. Der Standardwert ist 0; bei diesem Wert wird die tatsächliche Anzahl der verfügbaren CPUs verwendet. Wenn Sie den Wert auf 1 setzen, wird die Ausführung paralleler Pläne unterdrückt; bei einem Wert von größer als 1 wird die maximale Anzahl der bei der Ausführung einer einzelnen Abfrage zu verwendenden Prozessoren begrenzt. Diese Option ist nur verfügbar, wenn sich das Dialogfeld im Status **Neu organisieren** oder **Neu erstellen** befindet. Weitere Informationen finden Sie unter [Festlegen der 'Max. Grad an Parallelität'-Option auf optimale Leistung](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
-  
-> [!NOTE]  
->  Wird ein Wert angegeben, der über der Anzahl der verfügbaren CPUs liegt, wird die tatsächliche Anzahl der CPUs verwendet.  
   
 ##  <a name="Spatial"></a> Indexoptionen auf der Seite "Räumlich"  
  Auf der Seite **Räumlich** können Sie die Werte der räumlichen Eigenschaften anzeigen oder angeben. Weitere Informationen finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  

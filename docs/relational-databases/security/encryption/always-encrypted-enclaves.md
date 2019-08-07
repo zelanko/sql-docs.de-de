@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043204"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661225"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -149,11 +149,11 @@ Die folgenden Sicherheitsaspekte sind für Always Encrypted mit Secure Enclaves 
 - Die Verschlüsselung einer Spalte mit zufälliger Verschlüsselung mit einem Enclave-fähigen CEK kann dazu führen, dass die Reihenfolge der in der Spalte gespeicherten Daten verloren geht, da solche Spalten Bereichsvergleiche unterstützen. Wenn beispielsweise eine verschlüsselte Spalte, die Gehälter von Mitarbeitern enthält, einen Index verwendet, könnte ein böswilliger DBA den Index scannen, um den maximalen verschlüsselten Wert für das Gehalt zu finden und eine Person mit dem maximalen Gehalt zu identifizieren (vorausgesetzt, der Name der Person ist nicht verschlüsselt). 
 - Wenn Sie Always Encrypted verwenden, um sensible Daten vor unbefugtem Zugriff durch DBAs zu schützen, sollten Sie die Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel nicht an die DBAs weitergeben. Ein DBA kann Indizes auf verschlüsselten Spalten verwalten, ohne direkten Zugriff auf die Schlüssel zu haben, indem er den Cache der Spaltenverschlüsselungsschlüssel innerhalb der Enclave nutzt.
 
-## <a name="considerations-for-alwayson-and-database-migration"></a>Überlegungen zu AlwaysOn und Datenmigration
+## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> Überlegungen zu Verfügbarkeitsgruppen und Datenbankmigration
 
-Bei der Konfiguration einer AlwaysOn-Verfügbarkeitsgruppe, die für die Unterstützung von Abfragen mit Enclaves erforderlich ist, müssen Sie sicherstellen, dass alle SQL Server-Instanzen, die die Datenbanken in der Verfügbarkeitsgruppe hosten, Always Encrypted mit Secure Enclaves unterstützen und eine Enclave konfiguriert ist. Wenn die primäre Datenbank Enclaves unterstützt, eine sekundäre Replik jedoch nicht, schlägt jede Abfrage fehl, die versucht, die Funktionalität von Always Encrypted mit Secure Enclaves zu nutzen.
+Bei der Konfiguration einer Always On-Verfügbarkeitsgruppe, die für die Unterstützung von Abfragen mit Enclaves erforderlich ist, müssen Sie sicherstellen, dass alle SQL Server-Instanzen, die die Datenbanken in der Verfügbarkeitsgruppe hosten, Always Encrypted mit Secure Enclaves unterstützen und eine Enclave konfiguriert ist. Wenn die primäre Datenbank Enclaves unterstützt, eine sekundäre Replik jedoch nicht, schlägt jede Abfrage fehl, die versucht, die Funktionalität von Always Encrypted mit Secure Enclaves zu nutzen.
 
-Wenn Sie eine Sicherungsdatei einer Datenbank wiederherstellen, die die Funktionalität von Always Encrypted mit Secure Enclaves auf einer SQL Server-Instanz verwendet, für die die Enclave nicht konfiguriert ist, wird der Wiederherstellungsvorgang erfolgreich durchgeführt, und alle Funktionen, die nicht auf die Enclave angewiesen sind, sind verfügbar. Alle nachfolgenden Abfragen, die die Enclave-Funktionalität verwenden, schlagen jedoch fehl, und Indizes auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung werden ungültig.  Dasselbe gilt, wenn Sie eine Datenbank mit Always Encrypted mit Secure Enclaves an die Instanz anfügen, für die die Enclave nicht konfiguriert ist.
+Wenn Sie eine Sicherungsdatei einer Datenbank wiederherstellen, die die Funktionalität von Always Encrypted mit Secure Enclaves auf einer SQL Server-Instanz verwendet, für die die Enclave nicht konfiguriert ist, wird der Wiederherstellungsvorgang erfolgreich durchgeführt, und alle Funktionen, die nicht auf die Enclave angewiesen sind, sind verfügbar. Alle nachfolgenden Abfragen, die die Enclave-Funktionalität verwenden, schlagen jedoch fehl, und Indizes auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung werden ungültig. Dasselbe gilt, wenn Sie eine Datenbank mit Always Encrypted mit Secure Enclaves an die Instanz anfügen, für die die Enclave nicht konfiguriert ist.
 
 Wenn Ihre Datenbank Indizes auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung enthält, stellen Sie sicher, dass Sie die [Schnellere Datenbankwiederherstellung (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) in der Datenbank aktivieren, bevor Sie eine Datenbanksicherung erstellen. Mit ADR wird sichergestellt, dass die Datenbank, einschließlich der Indizes, sofort nach der Wiederherstellung der Datenbank verfügbar ist. Weitere Informationen finden Sie unter [Datenbankwiederherstellung](#database-recovery).
 

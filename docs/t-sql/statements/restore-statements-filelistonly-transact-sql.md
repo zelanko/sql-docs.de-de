@@ -22,12 +22,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9e256287f178999d1bb5f23a4739c17d0abc8ff2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141236"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742981"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE-Anweisungen - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -71,12 +71,15 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+
+> [!NOTE] 
+> URL ist das Format, das verwendet wird, um den Speicherort und den Dateinamen für Microsoft Azure Blob Storage anzugeben und wird ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 Cu2 unterstützt. Obwohl es sich bei Microsoft Azure Storage um einen Dienst handelt, ist die Implementierung mit einem Datenträger und Band vergleichbar, um für alle drei Geräte eine konsistente und nahtlose Wiederherstellung zu ermöglichen.
+
 ## <a name="arguments"></a>Argumente  
  Eine Beschreibung der RESTORE FILELISTONLY-Argumente finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   

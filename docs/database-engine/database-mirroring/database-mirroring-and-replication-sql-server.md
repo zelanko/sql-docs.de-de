@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9296bd28852eda3abd29e8a54984ec37f726c8b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006458"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661434"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68006458"
   
 3.  Konfigurieren Sie die Verteilung für die Spiegeldatenbank. Geben Sie den Namen der Spiegeldatenbank als Verleger an, und geben Sie denselben Verteiler- und Momentaufnahmeordner an, den auch die Prinzipaldatenbank verwendet. Wenn Sie z. B. eine Replikation mit gespeicherten Prozeduren konfigurieren, führen Sie auf dem Verteiler [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) aus. Führen Sie anschließend auf der Spiegeldatenbank [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) aus. Für **sp_adddistpublisher**:  
   
-    -   Setzen Sie den Wert des **@publisher** -Parameters auf den Netzwerknamen der Spiegeldatenbank.  
+    -   Legen Sie den Wert des **\@publisher**-Parameters auf den Netzwerknamen der Spiegeldatenbank fest.  
   
-    -   Setzen Sie den Wert des **@working_directory** -Parameters auf den Momentaufnahmeordner fest, der von dem Prinzipal verwendet wird.  
+    -   Legen Sie den Wert des **\@working_directory**-Parameters auf den Momentaufnahmeordner fest, der von dem Prinzipal verwendet wird.  
   
 4.  Geben Sie den Spiegeldatenbanknamen für den Parameter **-PublisherFailoverPartner** des Agents an. Dieser Parameter ist für die folgenden Agents erforderlich, um die Spiegeldatenbank nach einem Failover zu identifizieren:  
   
@@ -134,12 +134,12 @@ ms.locfileid: "68006458"
   
 -   Beim Verwenden gespeicherter Prozeduren oder Replikationsverwaltungsobjekte (RMO, Replication Management Objects) zum Verwalten der Replikation in der Spiegeldatenbank müssen Sie in Fällen, in denen Sie den Verlegernamen angeben, den Namen der Instanz angeben, auf der die Datenbank für die Replikation aktiviert wurde. Den entsprechenden Namen ermitteln Sie mithilfe der [publishingservername](../../t-sql/functions/replication-functions-publishingservername.md)-Funktion.  
   
-     Wenn eine Veröffentlichungsdatenbank gespiegelt wird, sind die in der gespiegelten Datenbank gespeicherten Replikationsmetadaten identisch mit den Metadaten, die in der Prinzipaldatenbank gespeichert sind. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der Prinzipaldatenbank zur Replikation aktiviert wurden, der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen der Prinzipaldatenbank und nicht dem Namen der Spiegeldatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur Spiegeldatenbank erfolgt. Wenn Sie z. B. nach einem Failover zur Spiegeldatenbank die Replikation mit gespeicherten Prozeduren konfigurieren und ein Pullabonnement für eine Veröffentlichungsdatenbank hinzufügen wollen, die in der Prinzipaldatenbank aktiviert wurde, müssen Sie für den **@publisher** -Parameter von **sp_addpullsubscription** oder **sp_addmergepullsubscription**.  
+     Wenn eine Veröffentlichungsdatenbank gespiegelt wird, sind die in der gespiegelten Datenbank gespeicherten Replikationsmetadaten identisch mit den Metadaten, die in der Prinzipaldatenbank gespeichert sind. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der Prinzipaldatenbank zur Replikation aktiviert wurden, der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen der Prinzipaldatenbank und nicht dem Namen der Spiegeldatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur Spiegeldatenbank erfolgt. Wenn Sie z. B. nach einem Failover zur Spiegeldatenbank die Replikation mit gespeicherten Prozeduren konfigurieren und ein Pullabonnement für eine Veröffentlichungsdatenbank hinzufügen wollen, die in der Prinzipaldatenbank aktiviert wurde, müssen Sie für den **\@publisher**-Parameter von **sp_addpullsubscription** oder **sp_addmergepullsubscription** nicht den Spiegeldatenbanknamen, sondern den Prinzipaldatenbanknamen angeben.  
   
-     Wenn Sie nach einem Failover zur Spiegeldatenbank eine Veröffentlichungsdatenbank in der Spiegeldatenbank aktivieren, entspricht der Verlegerinstanzname in den Systemtabellen dem Namen der Spiegeldatenbank. In diesem Fall würden Sie den Namen der Spiegeldatenbank für den **@publisher** -Parameter verwenden.  
+     Wenn Sie nach einem Failover zur Spiegeldatenbank eine Veröffentlichungsdatenbank in der Spiegeldatenbank aktivieren, entspricht der Verlegerinstanzname in den Systemtabellen dem Namen der Spiegeldatenbank. In diesem Fall würden Sie den Namen der Spiegeldatenbank für den **\@publisher**-Parameter verwenden.  
   
     > [!NOTE]  
-    >  In einigen Fällen, z. B. bei **sp_addpublication**, wird der **@publisher** -Parameter nur für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger unterstützt. In diesen Fällen ist er nicht relevant für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankspiegelung.  
+    >  In einigen Fällen, z.B. bei **sp_addpublication**, wird der **\@publisher**-Parameter nur für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger unterstützt. In diesen Fällen ist er nicht relevant für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankspiegelung.  
   
 -   Synchronisieren Sie die Pullabonnements vom Abonnenten und die Pushabonnements vom aktiven Verleger, um ein Abonnement in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nach einem Failover zu synchronisieren.  
   

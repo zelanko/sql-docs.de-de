@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895433"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742941"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Lernprogramm: Vorbereiten von SQL Server auf die Replikation (Verleger, Verteiler und Abonnent)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ Wenn Ihre SSMS-Instanz mit Administratorrechten ausgeführt wird, können Sie de
 >[!NOTE]
 > Wenn der SQL-Agent nicht sichtbar gestartet wird, klicken Sie in SSMS mit der rechten Maustaste auf den SQL Server-Agent und anschließend auf **Aktualisieren**. Wenn er weiterhin nicht gestartet wird, müssen Sie ihn manuell über den SQL Server-Konfigurations-Manager starten.    
   
-### <a name="set-database-permissions-at-the-publisher"></a>Festlegen der Datenbankberechtigungen auf dem Verleger  
+## <a name="set-database-permissions"></a>Festlegen von Datenbankberechtigungen  
   
 1. Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung** aus:  
 
@@ -233,6 +233,8 @@ Wenn Ihre SSMS-Instanz mit Administratorrechten ausgeführt wird, können Sie de
 5. Wiederholen Sie die Schritte 1 bis 4, um eine Anmeldung für die anderen lokalen Konten (repl_distribution, repl_logreader und repl_merge) zu erstellen. Diese Anmeldungen müssen auch den Benutzern zugeordnet werden, die Mitglieder der festen Datenbankrolle **db_owner** in den Datenbanken **distribution** und **AdventureWorks** sind.  
 
    ![Ansicht mit allen vier Konten im Objekt-Explorer](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. Wiederholen Sie die Schritte 1-4 für den Verteilungs-Agent und den Merge-Agent auf dem Abonnenten, und ändern Sie den Computernamen in den Namen des Abonnenten. 
   
   
 Weitere Informationen finden Sie in den folgenden Themen:

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adef2650015edadfe61d331c6358fa85c0099c99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014652"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742933"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014652"
   
 -   **Schreibgeschützter Zugriff auf ein oder mehrere sekundäre Replikate (lesbare sekundäre Replikate)**  
   
-     In der sekundären Rolle kann jedes Verfügbarkeitsreplikat für den schreibgeschützten Zugriff auf die zugehörige lokale Datenbank konfiguriert werden, jedoch werden dabei einige Vorgänge nicht vollständig unterstützt. Wenn Sie verhindern möchten, dass schreibgeschützte Arbeitslasten auf dem primären Replikat ausgeführt werden, können Sie zudem die Replikate bei Ausführung in der primären Rolle für den ausschließlichen Lese-/Schreib-Zugriff konfigurieren. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Alle sekundären Verfügbarkeitsreplikate können so konfiguriert werden, dass nur schreibgeschützter Zugriff auf die lokalen Datenbanken zulässig ist, obwohl einige Vorgänge nicht vollständig unterstützt werden. Dadurch werden Verbindungsversuche mit Lese-/Schreibzugriff auf das sekundäre Replikat verhindert. Es ist auch möglich, schreibgeschützte Workloads auf dem _primären_ Replikat zu verhindern, indem nur Lese-/Schreibzugriff zugelassen wird. Dadurch wird verhindert, dass schreibgeschützte Verbindungen mit dem primären Replikat hergestellt werden. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;Always On-Verfügbarkeitsgruppen&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Wenn eine Verfügbarkeitsgruppe derzeit einen Verfügbarkeitsgruppenlistener und mindestens ein lesbares sekundäres Replikat besitzt, können Verbindungsanforderungen für beabsichtigte Lesevorgänge von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an eines dieser Replikate weitergeleitet werden (*schreibgeschütztes Routing*). Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)wichtig sind.  
   

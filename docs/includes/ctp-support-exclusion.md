@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: 522e06e85343a19f80490f07290a1435cebd2d77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220719"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419552"
 ---
-### <a name="enabled-deployment-scenarios"></a>Aktivierte Bereitstellungsszenarios
+## <a name="enabled-deployment-scenarios"></a>Aktivierte Bereitstellungsszenarios
 
-CTP 3.1 aktiviert die folgenden Szenarios:
+CTP 3.2 ermöglicht die folgenden Szenarios:
 
-- Parallele Installation. Installieren Sie Instanzen von SQL Server 2019 CTP 3.1 mit Instanzen von SQL Server 2012 bis SQL Server 2017 oder anderen Instanzen von SQL Server 2019 CTP 3.0 oder höher.
+- Parallele Installation. Installieren Sie Instanzen von SQL Server 2019 CTP 3.2 mit Instanzen von SQL Server 2012 bis SQL Server 2017 oder anderen Instanzen von SQL Server 2019 CTP 3.0 oder höher.
    >[!NOTE]
    >Die parallele Installation mit SQL Server 2008 und 2008 R2 ist zwar nicht gesperrt, es gibt jedoch keine allgemein unterstützten Windows-Betriebssystemversionen zwischen diesen Versionen und SQL Server 2019.
-- Direktes Upgrade. Aktualisieren Sie Instanzen von SQL Server 2019 CTP 3.1 von Instanzen von SQL Server 2012 bis SQL Server 2017 und SQL Server CTP 3.0. Ein Upgrade von einer früheren CTP-Version als SQL Server 2019 CTP 3.0 wird nicht unterstützt. In diesem Fall muss eine neue Installation durchgeführt werden.
+- Direktes Upgrade. Aktualisieren Sie Instanzen von SQL Server 2019 CTP 3.2 von Instanzen von SQL Server 2012 bis SQL Server 2017 und SQL Server CTP 3.0. Ein Upgrade von einer früheren CTP-Version als SQL Server 2019 CTP 3.0 wird nicht unterstützt. In diesem Fall muss eine neue Installation durchgeführt werden.
    >[!NOTE]
    >Ein direktes Upgrade von SQL Server 2008 und 2008 R2 ist nicht gesperrt, es gibt jedoch keine allgemein unterstützten Windows-Betriebssystemversionen zwischen diesen Versionen und SQL Server 2019.
 
-### <a name="support"></a>Support
+## <a name="support"></a>Support
 
-SQL Server 2019 CTP 3.1 ist eine Vorschausoftware. Sie wird nicht öffentlich für Vorgänge unterstützt. Kunden, die am [SQL Early Adopter-Programm](http://aka.ms/sqleap) teilnehmen, können SQL Server 2019 CTP 3.1 möglicherweise durch eine spezielle Vereinbarung in Abstimmung mit Microsoft ausführen.
+SQL Server 2019 CTP 3.2 ist eine Vorschausoftware. Sie wird nicht öffentlich für Vorgänge unterstützt. Kunden, die am [SQL Early Adopter-Programm](http://aka.ms/sqleap) teilnehmen, können SQL Server 2019 CTP 3.2 möglicherweise durch eine spezielle Vereinbarung in Abstimmung mit Microsoft ausführen.
 
 Begrenzten Support für Kunden, die nicht am Early Adopter-Programm teilnehmen, finden Sie möglicherweise über folgende Quellen:
 

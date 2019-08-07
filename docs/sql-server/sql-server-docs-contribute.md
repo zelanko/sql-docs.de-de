@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136388"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693188"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Mitwirken an der SQL Server-Dokumentation
 
@@ -32,14 +32,24 @@ Alle öffentlichen Beiträge werden vom SQL-Inhaltsteam auf technische Richtigke
 
 ## <a id="githubui"></a> Bearbeiten von Inhalten im Browser
 
-Sie können im Browser einfache Änderungen an SQL Server-Inhalten vornehmen und diese dann an Microsoft übermitteln. Der vollständige Ablauf ist im Artikel [Leitfaden für Mitwirkende an der Microsoft-Dokumentation: Übersicht](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) dokumentiert. Im folgenden Video wird der gesamte Ablauf zur Übermittlung von Änderungen in Ihrem Browser veranschaulicht:
+Sie können im Browser einfache Änderungen an SQL Server-Inhalten vornehmen und diese dann an Microsoft übermitteln. Weitere Informationen finden Sie im [Leitfaden für Mitwirkende der Microsoft-Dokumentation: Übersicht](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents). 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+Die folgenden Schritte fassen den Prozess zusammen: 
 
-> [!TIP]
-> Beachten Sie, dass die Position der Schaltfläche **Bearbeiten** etwas anders ist als im Video, doch der Ablauf ist derselbe.
->
-> ![Schaltfläche „Bearbeiten“](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. Wählen Sie auf der Seite, zu der Sie Feedback übermitteln möchten, oben rechts den Link **Bearbeiten** aus.
+1. Wählen Sie auf der nächsten Seite oben rechts das Symbol **Stift** aus.
+1. Nehmen Sie auf der nächsten Seite im Textfenster **Datei bearbeiten** Ihre Änderungen direkt an dem Text vor, den Sie ändern möchten.
+    Wenn Sie Hilfe beim Formatieren des neuen oder geänderten Texts benötigen, sehen Sie sich den [„Spickzettel“ zum Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) an.
+1. Nachdem Sie Ihre Änderungen vorgenommen haben, gehen Sie unter **Änderungen vornehmen** folgendermaßen vor:
+    1. Geben Sie im ersten Textfeld eine kurze Beschreibung der Änderung ein, die Sie vorgenommen haben.
+    1. Geben Sie im Feld **Eine optionale erweiterte Beschreibung hinzufügen** eine kurze Erläuterung Ihrer Änderung an.
+1. Wählen Sie **Dateiänderung vorschlagen** aus.
+1. Wählen Sie auf der Seite **Änderungen werden verglichen** die Option **Pull Request erstellen** aus. 
+1. Wählen Sie auf der Seite **Pull Request öffnen** die Option **Pull Request erstellen** aus. 
+
+Die folgende GIF-Datei veranschaulicht den gesamten Ablauf zur Übermittlung von Änderungen in Ihrem Browser:
+
+![SQL-Dokumentation bearbeiten](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> Lokales Bearbeiten von Inhalten mit Tools
 

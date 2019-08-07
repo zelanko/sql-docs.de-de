@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998055"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697555"
 ---
 # <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Mit dem hybriden Pufferpool kann die Datenbank-Engine direkt auf Datenseiten in Datenbankdateien zugreifen, die auf Geräten mit persistentem Speicher (PMEM) gespeichert sind. Dieses Feature wird in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] eingeführt.
 
-Bei einem herkömmlichen System ohne PMEM werden Datenseiten von SQL Server im DRAM-basierten Pufferpool zwischengespeichert. Bei Verwendung des hybriden Pufferpools kopiert SQL Server die Seite nicht in den DRAM-basierten Teil des Pufferpools. Stattdessen wird direkt auf die Seite in der Datenbankdatei auf einem PMEM-Gerät zugegriffen. Der Zugriff auf Datendateien auf PMEM-Geräten für den hybriden Pufferpool erfolgt mit der im Speicher abgebildeten E/A, die auch als *Optimierung* von Datendateien in SQL Server bezeichnet wird.
+Bei einem herkömmlichen System ohne PMEM werden Datenseiten von SQL Server im Pufferpool zwischengespeichert. Bei Verwendung des hybriden Pufferpools kopiert SQL Server die Seite nicht in den DRAM-basierten Teil des Pufferpools, sondern greift stattdessen direkt auf die Seite in der Datenbankdatei auf einem PMEM-Gerät zu. Der Lesezugriff auf Datendateien auf PMEM-Geräten für den Hybridpufferpool erfolgt direkt durch das Folgen eines Zeigers auf die Datenseiten auf dem PMEM-Gerät.  
 
-Auf einem PMEM-Gerät kann nur auf nicht modifizierte Seiten direkt zugegriffen werden. Wenn eine Seite als geändert markiert ist, wird sie in den DRAM-basierten Pufferpool kopiert, bevor sie schließlich zurück auf das PMEM-Gerät geschrieben und wieder als nicht modifiziert markiert wird. Dieser Prozess findet während normaler Prüfpunktvorgänge statt.
+Auf einem PMEM-Gerät kann nur auf nicht modifizierte Seiten direkt zugegriffen werden. Wenn eine Seite als geändert markiert ist, wird sie in den DRAM-Pufferpool kopiert, bevor sie schließlich zurück auf das PMEM-Gerät geschrieben und als nicht modifiziert markiert wird. Dies findet während normaler Prüfpunktvorgänge statt. Der Mechanismus zum Kopieren der Datei vom PMEM-Gerät in DRAM ist eine direkte, dem zugeordnete E/A (MMIO) und wird auch als *Optimierung* von Datendateien in SQL Server bezeichnet.
+
 
 Die Funktion für hybriden Pufferpool ist für Windows und Linux verfügbar. Das PMEM-Gerät muss mit einem Dateisystem formatiert sein, das DAX (DirectAccess) unterstützt. Die Dateisystem XFS, EXT4 und NTFS bieten Unterstützung für DAX. SQL Server erkennt automatisch, ob sich Datendateien auf einem entsprechend formatierten PMEM-Gerät befinden, und führt die Speicherzuordnung im Benutzerbereich aus. Diese Speicherzuordnung erfolgt beim Start, wenn eine neue Datenbank angefügt, wiederhergestellt oder erstellt wird, oder wenn die Funktion für hybriden Pufferpool für eine Datenbank aktiviert ist.
 
