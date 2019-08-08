@@ -1,5 +1,5 @@
 ---
-title: Sp_replmonitorchangepublicationthreshold (Transact-SQL) | Microsoft-Dokumentation
+title: sp_replmonitorchangepublicationthreshold (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d23822fc27e02d5f40824f738c70044c61020eb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd8dd31b1468cb718af286f6c00e26cfa2e1ba0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950655"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771216"
 ---
-# <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ändert die Schwellenwertmetrik für die Überwachung einer Veröffentlichung. Diese gespeicherte Prozedur, die zur Überwachung der Replikation verwendet wird, wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
@@ -45,13 +45,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der veröffentlichten Datenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung, für die Überwachung die schwellenwertattribute geändert werden. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung, für die die Überwachungs Schwellenwert Attribute geändert werden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication_type = ] publication_type` Wenn der Typ der Veröffentlichung. *Publication_type* ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @publication_type = ] publication_type`Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -60,36 +60,36 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Mergeveröffentlichung.|  
 |NULL (Standard)|Replikationsversuche zum Bestimmen des Veröffentlichungstyps.|  
   
-`[ @metric_id = ] metric_id` Wird die ID der schwellenwertmetrik für die Veröffentlichung geändert. *Metric_id* ist **Int**, hat den Standardwert NULL und kann einen der folgenden Werte sein.  
+`[ @metric_id = ] metric_id`Die ID der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. *metric_id* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|Metrikname|  
 |-----------|-----------------|  
 |**1**|**expiration** - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
 |**2**|**latency** - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
 |**4**|**mergeexpiration** - überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
-|**5**|**Mergeslowrunduration** -überwacht die Dauer von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).|  
-|**6**|**Mergefastrunduration** -überwacht die Dauer von mergesynchronisierungen über Verbindungen hoher Bandbreite Local Area Network (LAN).|  
+|**5**|**mergeslowrunduration** : überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
+|**6**|**mergefastrauunduration** : überwacht die Dauer von Mergesynchronisierungen über LAN-Verbindungen (Local Area Network) mit hoher Bandbreite.|  
 |**7**|**mergefastrunspeed** - Überwachung der Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
-|**8**|**Mergeslowrunspeed** -überwacht die synchronisierungsgeschwindigkeit von mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ).|  
+|**8**|**mergeslowrunspeed** : überwacht die Synchronisierungs Geschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
   
- Geben Sie *Metric_id* oder *Thresholdmetricname*. Wenn *Thresholdmetricname* angegeben ist, klicken Sie dann *Metric_id* sollte NULL sein.  
+ Sie müssen entweder *metric_id* oder. Wenn " *stammoldmetricname* " angegeben ist, sollte " *metric_id* " NULL sein.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'` Wird der Name der schwellenwertmetrik für die Veröffentlichung geändert. *Thresholdmetricname* ist **Sysname**, hat den Standardwert NULL. Geben Sie *Thresholdmetricname* oder *Metric_id*. Wenn *Metric_id* angegeben ist, klicken Sie dann *Thresholdmetricname* sollte NULL sein.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'`Der Name der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. " *stammoldmetricname* " ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Sie müssen entweder den *Namen* "" für "" und " *metric_id*" angeben. Wenn *metric_id* angegeben wird, muss der Wert von "" für "".  
   
-`[ @value = ] value` Ist der neue Wert der schwellenwertmetrik für die Veröffentlichung. *Wert* ist **Int**, hat den Standardwert NULL. Wenn **null**, und klicken Sie dann der Metrikwert nicht aktualisiert wird.  
+`[ @value = ] value`Der neue Wert der Schwellenwert Metrik für die Veröffentlichung. der *Wert* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn der Wert **null**ist, wird der Metrikwert nicht aktualisiert.  
   
-`[ @shouldalert = ] shouldalert` Ist, wenn eine Warnung generiert wird, wenn die schwellenwertmetrik für eine Veröffentlichung erreicht wird. *Shouldalert* ist **Bit**, hat den Standardwert NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und den Wert **0** bedeutet, dass keine Warnung generiert wird.  
+`[ @shouldalert = ] shouldalert`Gibt an, ob eine Warnung generiert wird, wenn eine Schwellenwert Metrik für die Veröffentlichung erreicht wird der Wert ist " **Bit**", der Standardwert ist NULL. Der Wert **1** bedeutet, dass eine Warnung generiert wird, und der Wert **0** bedeutet, dass keine Warnung generiert wird.  
   
-`[ @mode = ] mode` Ist, wenn die schwellenwertmetrik für die Veröffentlichung aktiviert ist. *Modus* ist **Tinyint**, hat den Standardwert **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist, und den Wert **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
+`[ @mode = ] mode`Ist, wenn die Schwellenwert Metrik für die Veröffentlichung aktiviert ist. der *Modus* ist vom Datentyp **tinyint**. der Standardwert ist **1**. Der Wert **1** bedeutet, dass die Überwachung dieser Metrik aktiviert ist und der Wert **2** bedeutet, dass die Überwachung dieser Metrik deaktiviert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- **Sp_replmonitorchangepublicationthreshold** wird für alle Replikationstypen verwendet.  
+ **sp_replmonitorchangepublicationthreshold** wird für alle Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Db_owner** oder **Replmonitor** -Datenbankrolle in der Verteilungsdatenbank kann ausführen **Sp_replmonitorchangepublicationthreshold**.  
+ Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorchangepublicationthreshold**ausführen.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
