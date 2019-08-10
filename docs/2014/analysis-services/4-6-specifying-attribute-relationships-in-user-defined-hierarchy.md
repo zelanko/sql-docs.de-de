@@ -1,5 +1,5 @@
 ---
-title: Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie | Microsoft-Dokumentation
+title: Angeben von Attribut Beziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490d9f6e1cdaeab274290649d2bb7f5c691595ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe6b022300a873ab7e7e747265c96a3abf43ea59
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063032"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887470"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie
   Wie Sie bereits in diesem Lernprogramm erfahren haben, können Sie Attributhierarchien in Ebenen innerhalb von Benutzerhierarchien organisieren, um Navigationspfade für Benutzer in einem Cube zur Verfügung zu stellen. Eine Benutzerhierarchie kann eine natürliche Hierarchie wie beispielsweise Ort, Land/Region und Staat repräsentieren oder nur einen Navigationspfad wie beispielsweise Angestelltenname, Titel und Abteilungsname. Für den Benutzer, der in einer Hierarchie navigiert, stellen sich diese beiden Hierarchietypen gleich dar.  
@@ -181,10 +181,10 @@ ms.locfileid: "66063032"
 14. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](https://docs.microsoft.com/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md)   
+ [Definieren von Attribut Beziehungen](multidimensional-models/attribute-relationships-define.md)   
  [Eigenschaften der Benutzerhierarchie](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

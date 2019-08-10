@@ -1,5 +1,5 @@
 ---
-title: Objektbenennungsregeln (Analysis Services) | Microsoft-Dokumentation
+title: Benennungs Regeln für Objekte (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,17 +12,17 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64e04754fd4bc4a404854eb5260daddf543e3c2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be8bec262afc67571c67ad6919ae9e9163a434be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65979962"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889436"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
   In diesem Thema werden Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschrieben, die in Objektnamen, in Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht verwendet werden können.  
   
-##  <a name="bkmk_Names"></a> Benennungskonventionen  
+##  <a name="bkmk_Names"></a>Benennungs Konventionen  
  Jedes Objekt verfügt über eine `Name`-Eigenschaft und eine `ID`-Eigenschaft, die innerhalb des Bereichs der übergeordneten Auflistung eindeutig sein müssen. Beispielsweise können zwei Dimensionen denselben Namen haben, solange sich beide in unterschiedlichen Datenbanken befinden.  
   
  Sie können die `ID` manuell eingeben. In der Regel wird diese jedoch automatisch beim Erstellen des Objekts generiert. Die `ID` sollte nicht mehr geändert werden, nachdem Sie mit dem Erstellen eines Modells begonnen haben. Alle Objektverweise im gesamten Modell basieren auf der `ID`. Daher kann das Ändern der `ID` sehr schnell zu Fehlern im Modell führen.  
@@ -31,7 +31,7 @@ ms.locfileid: "65979962"
   
  Die folgenden Regeln gelten für `Name`-Eigenschaften und `ID`-Eigenschaften.  
   
--   Bei den Namen wird die Groß-/Kleinschreibung nicht berücksichtigt. Sie können einen Cube mit dem Namen "Sales" keine und eine andere mit dem Namen "Sales" in der gleichen Datenbank.  
+-   Bei den Namen wird die Groß-/Kleinschreibung nicht berücksichtigt. Ein Cube mit dem Namen "Sales" und ein anderer mit dem Namen "Sales" können nicht in derselben Datenbank vorhanden sein.  
   
 -   Führende oder nachfolgende Leerzeichen sind in Objektnamen nicht zulässig. Innerhalb des Namens können Leerzeichen verwendet werden. Führende und nachstehende Leerzeichen werden implizit abgeschnitten. Dies gilt für die `Name`-Eigenschaft und die `ID`-Eigenschaft eines Objekts.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65979962"
   
 -   Es gibt keine besondere Anforderung für das erste Zeichen eines Bezeichners. Das erste Zeichen kann ein beliebiges gültiges Zeichen sein.  
   
-##  <a name="bkmk_reserved"></a> Reservierte Wörter und Zeichen  
+##  <a name="bkmk_reserved"></a>Reservierte Wörter und Zeichen  
  Reservierte Wörter sind auf Englisch und gelten für Objektnamen, nicht für Beschriftungen. Falls Sie ein reserviertes Wort versehentlich in einem Objektnamen verwenden, tritt ein Überprüfungsfehler auf. Die unten aufgeführten reservierten Wörter dürfen in keinem Fall in Objektnamen für mehrdimensionale Modelle und Data Mining-Modelle verwendet werden.  
   
  Bei tabellarischen Modellen mit dem Datenbank-Kompatibilitätsgrad 1103 wurden die Überprüfungsregeln für bestimmte Objekte gelockert, um zu gewährleisten, dass sie mit den Anforderungen an erweiterte Zeichen und Benennungskonventionen bestimmter Clientanwendungen kompatibel sind. Datenbanken, die diese Kriterien erfüllen, unterliegen weniger strengen Überprüfungsregeln. In diesem Fall kann ein Objekt die Überprüfung bestehen, obwohl es ein eingeschränktes Zeichen enthält.  
@@ -68,13 +68,13 @@ ms.locfileid: "65979962"
   
 |Objekt|Ungültige Zeichen|  
 |------------|------------------------|  
-|`Server`|Befolgen Sie beim Benennen von Serverobjekten die Benennungskonventionen für Windows-Server. Finden Sie unter [Benennungskonventionen (Windows)](/windows/desktop/DNS/naming-conventions) Details.|  
+|`Server`|Befolgen Sie beim Benennen von Serverobjekten die Benennungskonventionen für Windows-Server. Weitere Informationen finden Sie unter [Benennungs Konventionen (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`|`: / \ * | ? " () [] {} <>`|  
 |`Level` oder `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
 |`Dimension` oder `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
 |Alle anderen Objekte|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
   
- **Ausnahmen: Wenn reservierte Zeichen zulässig sind**  
+ **Ausnahmen Wenn reservierte Zeichen zulässig sind**  
   
  Wie bereits erwähnt, können Datenbanken mit einem bestimmten Modalitäts- und Kompatibilitätsgrad Objektnamen enthalten, die reservierte Zeichen aufweisen. Dimensionsattribut-, Hierarchie-, Ebenen-, Measure- und KPI-Objektnamen für tabellarische Datenbanken (1103 oder höher) können reservierte Zeichen enthalten, wenn diese Datenbanken die Verwendung erweiterter Zeichen zulassen:  
   
@@ -83,13 +83,13 @@ ms.locfileid: "65979962"
 |MOLAP (alle Versionen)|Nein|  
 |Tabellarischer Modus - 1050|Nein|  
 |Tabellarischer Modus - 1100|Nein|  
-|Tabellarischer Modus – 1130 und höher|Ja|  
+|Tabellarisch-1130 und höher|Ja|  
   
  ModelType kann für Datenbanken auf default festgelegt sein. Da default mit multidimensional identisch ist, werden reservierte Zeichen in Spaltennamen folglich nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Reservierte Wörter in MDX](/sql/mdx/mdx-reserved-words)   
- [Übersetzungen &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis-Kompatibilität &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [Reservierte MDX-Wörter](/sql/mdx/mdx-reserved-words)   
+ [Über &#40;setzungen Analysis Services&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [XMLA für die XML for Analysis Konformität &#40;&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

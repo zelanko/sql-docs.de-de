@@ -1,5 +1,5 @@
 ---
-title: PredictSupport (DMX) | Microsoft-Dokumentation
+title: Prätsupport (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe9fb0222dc745e48c248214c42ce706ea18d89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 701d8fb43b468f6bbd33fbff9ff7cfc8deb386f9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041874"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893835"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,15 +31,15 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  Ein skalare Spalte.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein Skalarwert des Typs, der angegebenen *\<* skalarspaltenverweis *>* .  
+ Ein Skalarwert des Typs, der durch *\<* einen skalaren Spalten Verweis *>* angegeben wird.  
   
 ## <a name="remarks"></a>Hinweise  
- Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Um Bucket der fehlenden Status einzuschließen, setzen die \<vorhergesagten Status > auf **INCLUDE_NULL**.  
+ Ist der vorhergesagte Status (predicted state) nicht angegeben, wird der Status verwendet, der die höchste vorhersagbare Wahrscheinlichkeit hat, wobei der Bucket der fehlenden Status ausgeschlossen wird. Wenn Sie den Bucket Missing States einschließen möchten, \<legen Sie den vorhergesagten Status > auf **INCLUDE_NULL**fest.  
   
- Um die Unterstützung für die fehlenden Status zurückzugeben, legen die \<vorhergesagten Status > auf NULL.  
+ Um die Unterstützung für die fehlenden Zustände zurückzugeben, \<legen Sie den vorhergesagten Status > auf NULL fest.  
   
 > [!NOTE]  
->  Die Unterstützungswerte werden abweichend berechnet oder können in Abhängigkeit von dem abgefragten Modelltyp eine abweichende Interpretation aufweisen. Weitere Informationen zur Berechnung der Unterstützung für bestimmte Modelltypen finden Sie unter dem spezifischen Algorithmustyp unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Die Unterstützungswerte werden abweichend berechnet oder können in Abhängigkeit von dem abgefragten Modelltyp eine abweichende Interpretation aufweisen. Weitere Informationen zur Berechnung der Unterstützung für einen bestimmten Modelltyp finden Sie unter der Typ des einzelnen Algorithmus in [Mining Modell &#40;Inhalt Analysis Services-Data&#41;Mining](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine SINGLETON-Abfrage verwendet, um vorherzusagen, ob eine Person ein Fahrrad kaufen wird. Außerdem wird die Unterstützung der Vorhersage basierend auf dem TM Decision Tree-Miningmodell bestimmt.  
@@ -59,8 +59,8 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

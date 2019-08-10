@@ -1,5 +1,5 @@
 ---
-title: Verwenden eine geänderte Version der Analyse Services-Tutorial-Projekt | Microsoft-Dokumentation
+title: Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 43ec549444fd108dbee9e53518a4e996b281b46b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42116af318d6549b5b70b190aaf5f24b551c2069
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078804"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888395"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
   Die verbleibenden Lektionen in diesem Lernprogramm basieren auf einer erweiterten Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekts, das Sie in den ersten drei Lektionen abgeschlossen haben. Zusätzliche Tabellen und benannte Berechnungen wurden der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt, zusätzliche Dimensionen wurden dem Projekt hinzugefügt, und diese neuen Dimensionen wurden dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube hinzugefügt. Außerdem wurde eine zweite Measuregruppe, die Measures aus einer zweiten Faktentabelle enthält, hinzugefügt. Mithilfe dieses erweiterten Projekts können Sie lernen, wie Sie Ihrer Business Intelligence-Anwendung Funktionalität hinzufügen können, ohne dass Sie bereits durchgeführte Lernschritte wiederholen müssen.  
@@ -40,7 +40,7 @@ ms.locfileid: "66078804"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Laden und Verarbeiten des erweiterten Projekts  
   
-1.  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf die **Datei** Menü klicken Sie auf **Projektmappe schließen** , Dateien zu schließen, nicht verwendet.  
+1.  Klicken [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Sie in im Menü Datei auf Projekt **Mappe** **Schließen** , um Dateien zu schließen, die Sie nicht verwenden.  
   
 2.  Zeigen Sie im Menü **Datei** auf **Öffnen**, und klicken Sie anschließend auf **Projekt/Projektmappe**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66078804"
 ### <a name="data-source-view"></a>Datenquellensicht  
  Die Datenquellensicht im erweiterten Projekt enthält eine zusätzliche Faktentabelle und vier zusätzliche Dimensionstabellen aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
   
- Beachten Sie, die mit zehn Tabellen in der Datenquellensicht die \<alle Tabellen > Diagramm überfüllt wird. Dadurch wird das Verständnis der Beziehungen zwischen den Tabellen und die Suche nach bestimmten Tabellen erschwert. Die Tabellen sind in zwei logischen Diagrammen organisiert – das **Internet Sales** - und das **Reseller Sales** -Diagramm, um dieses Problem zu lösen. Diese Diagramme sind jeweils um eine einzelne Faktentabelle herum organisiert. Mithilfe von logischen Diagrammen können Sie eine bestimmte Untermenge der Tabellen in einer Datenquellensicht anzeigen und damit arbeiten, statt immer alle Tabellen und deren Beziehungen in einem einzigen Diagramm anzuzeigen.  
+ Beachten Sie, dass bei zehn Tabellen in der Datenquellen Sicht \<das Diagramm alle Tabellen > überfüllt wird. Dadurch wird das Verständnis der Beziehungen zwischen den Tabellen und die Suche nach bestimmten Tabellen erschwert. Die Tabellen sind in zwei logischen Diagrammen organisiert – das **Internet Sales** - und das **Reseller Sales** -Diagramm, um dieses Problem zu lösen. Diese Diagramme sind jeweils um eine einzelne Faktentabelle herum organisiert. Mithilfe von logischen Diagrammen können Sie eine bestimmte Untermenge der Tabellen in einer Datenquellensicht anzeigen und damit arbeiten, statt immer alle Tabellen und deren Beziehungen in einem einzigen Diagramm anzuzeigen.  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales-Diagramm  
  Das **Internet Sales** -Diagramm enthält die Tabellen, die mit dem Verkauf von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Produkten direkt an Kunden über das Internet verknüpft sind. Bei den Tabellen im Diagramm handelt es sich um die vier Dimensionstabellen und eine Faktentabelle, die Sie in Lektion 1 der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt haben. Nachfolgend sind diese Tabellen aufgeführt:  
@@ -117,6 +117,6 @@ ms.locfileid: "66078804"
  [Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Siehe auch  
- [Bereitstellen eines Analysis Services-Projekts](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+ [Bereitstellen eines Analysis Services-Projekts](https://docs.microsoft.com/analysis-services/lesson-2-5-deploying-an-analysis-services-project)  
   
   

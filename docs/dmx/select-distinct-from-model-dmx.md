@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM &lt;Modell &gt; (DMX) | Microsoft-Dokumentation
+title: SELECT verschieden vom &lt;Modell &gt; (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928448"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892531"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;Modell &gt; (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT-FROM &lt;- &gt; Modell (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt alle möglichen Status für die ausgewählte Spalte im Modell zurück. Die zurückgegebenen Werte variieren, je nachdem, ob die angegebene Spalte diskrete Werte, diskretisierte numerische Werte oder fortlaufende numerische Werte enthält.  
@@ -30,30 +30,30 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Optional. Eine ganze Zahl, die angeben, wie viele Zeilen zurückgegeben.  
+ Optional. Eine ganze Zahl, die die Anzahl der zurück zugebende Zeilen angibt.  
   
- *Liste mit Ausdrücken*  
+ *Ausdrucks Liste*  
  Eine durch Trennzeichen getrennte Liste mit Bezeichnern verbundener Spalten (abgeleitet aus dem Modell) oder mit Ausdrücken.  
   
  *model*  
  Ein Modellbezeichner.  
   
- *Liste der Bedingungen*  
+ *Bedingungs Liste*  
  Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
  Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **SELECT DISTINCT FROM** -Anweisung kann nur mit einer einzelnen Spalte oder eine Gruppe verbundener Spalten. Für eine Gruppe nicht verbundener Spalten kann diese Klausel nicht verwendet werden.  
+ Die SELECT-Anweisung unter **schiedlicher from** -Anweisung kann nur mit einer einzelnen Spalte oder mit einem Satz verwandter Spalten verwendet werden. Für eine Gruppe nicht verbundener Spalten kann diese Klausel nicht verwendet werden.  
   
- Die **SELECT DISTINCT FROM** Anweisung können Sie direkt auf eine Spalte in einer geschachtelten Tabelle verweisen. Zum Beispiel:  
+ Mit der **SELECT SELECT** -Anweisung können Sie direkt auf eine Spalte in einer geschachtelten Tabelle verweisen. Zum Beispiel:  
   
 ```  
 <model>.<table column reference>.<column reference>  
 ```  
   
- Die Ergebnisse der **SELECT DISTINCT FROM \<Modell >** Anweisung variieren, je nach Spaltentyp. In der folgenden Tabelle sind die unterstützten Spaltentypen sowie die Ausgabe beschrieben, die von der Anweisung erstellt wird.  
+ Die Ergebnisse der SELECT-Anweisung **vom \<Typ "Select verschieden from Model >** " variieren je nach Spaltentyp. In der folgenden Tabelle sind die unterstützten Spaltentypen sowie die Ausgabe beschrieben, die von der Anweisung erstellt wird.  
   
 |Spaltentyp|Ausgabe|  
 |-----------------|------------|  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|Der Mittelpunkt für die Werte in der Spalte.|  
   
 ## <a name="discrete-column-example"></a>Beispiel zu einer diskreten Spalte  
- Das folgende Codebeispiel basiert auf der `[TM Decision Tree]` Modell, das Sie, in Erstellen der [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfrage gibt die eindeutigen Werte zurück, die in der diskreten Spalte `Gender` vorhanden sind.  
+ Das folgende Codebeispiel basiert auf dem `[TM Decision Tree]` Modell, das Sie im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt haben. Die Abfrage gibt die eindeutigen Werte zurück, die in der diskreten Spalte `Gender` vorhanden sind.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -99,10 +99,10 @@ FROM [TM Decision Tree]
  Die Abfrage gibt auch eine einzelne Zeile mit Nullwerten zurück, um die fehlenden Werte darzustellen.  
   
 ## <a name="discretized-column-example"></a>Beispiel zu einer diskretisierten Spalte  
- Im folgenden Codebeispiel werden der Mittelpunkt sowie der maximale und minimale Wert für jeden Bucket zurückgegeben, der von dem Algorithmus für die Spalte [`Yearly Income]` erstellt wurde. Um die Ergebnisse für dieses Beispiel zu reproduzieren, müssen Sie eine neue Miningstruktur erstellen, die der von `[Targeted Mailing]` entspricht. Ändern Sie im Assistenten den Inhaltstyp der `Yearly Income` Spalte aus **fortlaufend** zu **Discretized**.  
+ Im folgenden Codebeispiel werden der Mittelpunkt sowie der maximale und minimale Wert für jeden Bucket zurückgegeben, der von dem Algorithmus für die Spalte [`Yearly Income]` erstellt wurde. Um die Ergebnisse für dieses Beispiel zu reproduzieren, müssen Sie eine neue Miningstruktur erstellen, die der von `[Targeted Mailing]` entspricht. Ändern Sie im Assistenten den Inhaltstyp der `Yearly Income` Spalte von **fortlaufend** in **diskretisiert**.  
   
 > [!NOTE]  
->  Sie können das im Lernprogramm zu Data Mining-Grundlagen erstellte Miningmodell auch so ändern, dass die Miningstrukturspalte [`Yearly Income]` diskretisiert wird. Informationen hierzu finden Sie unter [Ändern der Diskretisierung von Spalten in Miningmodellen](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). Wenn Sie jedoch die Diskretisierung der Spalte ändern, wird die Miningstruktur neu verarbeitet, wodurch die Ergebnisse anderer Modelle, die mithilfe dieser Struktur erstellt wurden, geändert werden.  
+>  Sie können das im Lernprogramm zu Data Mining-Grundlagen erstellte Miningmodell auch so ändern, dass die Miningstrukturspalte [`Yearly Income]` diskretisiert wird. Weitere Informationen hierzu finden Sie unter [Ändern der Diskretisierung einer Spalte in einem Mining Modell](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). Wenn Sie jedoch die Diskretisierung der Spalte ändern, wird die Miningstruktur neu verarbeitet, wodurch die Ergebnisse anderer Modelle, die mithilfe dieser Struktur erstellt wurden, geändert werden.  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -128,14 +128,14 @@ FROM [TM Decision Tree]
   
  Wenn Sie das Modell beispielsweise mithilfe des Entscheidungsstruktur-Viewers durchsuchen und auf einen Knoten klicken, der Kunden gruppiert nach Einkommen enthält, werden in der Quickinfo folgende Knoteneigenschaften angezeigt:  
   
- Age > = 69 und Yearly Income < 39221.41  
+ Alter > = 69 und Jahreseinkommen < 39221,41  
   
 > [!NOTE]  
 >  Der Minimalwert des Minimalbuckets und der Maximalwert des Maximalbuckets sind lediglich die höchsten und niedrigsten ermittelten Werte. Von allen Werten, die außerhalb dieses ermittelten Bereichs liegen, wird angenommen, dass sie zu den Minimal- und Maximalbuckets gehören.  
   
 ## <a name="see-also"></a>Siehe auch  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

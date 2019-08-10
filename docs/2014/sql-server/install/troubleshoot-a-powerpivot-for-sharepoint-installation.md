@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung für eine PowerPivot für SharePoint-Installation | Microsoft-Dokumentation
+title: Problembehandlung bei einer PowerPivot für SharePoint Installation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091780"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892446"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Problembehandlung für eine PowerPivot für SharePoint-Installation
   Wenn Sie anstelle der erwateten Seiten und Funktionen Fehler erhalten, gehen Sie wie folgt vor.  
@@ -31,7 +31,7 @@ ms.locfileid: "66091780"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Miniaturbilder werden im PowerPivot-Katalog als rotes X dargestellt  
  Eine Möglichkeit besteht darin, dass die **PowerPivot-Funktionsintegration für Websitesammlungen** nichtaktiv ist. Führen Sie folgende Schritte aus:  
   
-1.  Klicken Sie in der PowerPivot-katalogbibliothek auf **Standorteinstellungen** über das Zahnradsymbol ![SharePoint Settings](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") oder **Home** Liste.  
+1.  Klicken Sie in der Power Pivot-Katalog Bibliothek auf **Site Einstellungen** , entweder über ![]das Zahnrad Symbol SharePoint-Einstellungen(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint") -Einstellungen oder die Liste **Home** .  
   
 2.  Klicken Sie im Abschnitt **Websitesammlungsverwaltung** auf **Websitesammlungs-Features**.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "66091780"
   
 4.  Stellen Sie sicher, dass die **PowerPivot-Funktionsintegration für Websitesammlungen** auf **Aktiv**festgelegt ist.  
   
- Weitere Ursachen für dieses Problem zu erhalten, finden Sie unter [PowerPivot-Katalog wird rotes x angezeigt](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
+ Weitere Informationen zu diesem Problem finden Sie unter [Power Pivot-Katalog zeigt rote X-Symbole für Symbole](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559).  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48621e242fae86b0b9fca689149ed1364cb7ff1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079837"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893103"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,22 +28,22 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle, z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie \<z. b. ein Tabellen Spalten Verweis > oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellenausdruck >  
+ \<Tabellen Ausdrucks >  
   
 ## <a name="remarks"></a>Hinweise  
- Der Wert, der vom bereitgestellt wird die \<rank Expression > Argument bestimmt die absteigende Rangreihenfolge für die Zeilen, die im bereitgestellt werden die \<Tabellenausdruck > Argument und der Anzahl von obersten Zeilen, die in der angegebenist\<Count >-Argument zurückgegeben wird.  
+ Der Wert, der vom \<Rang Ausdrucks >-Arguments angegeben wird, bestimmt die absteigende Rangfolge für die Zeilen, die \<im Tabellen Ausdruck > Argument angegeben werden, und die Anzahl der obersten Zeilen, die im \<count > Argument zurückgegeben wird.  
   
- Die TopCount-Funktion wurde ursprünglich eingeführt, um assoziative Vorhersagen zu ermöglichen und im Allgemeinen erzeugt die gleichen Ergebnisse wie eine Anweisung, enthält **SELECT TOP** und **ORDER BY** Klauseln. Sie erhalten eine bessere Leistung bei assoziativen Vorhersagen, bei der Verwendung der **Vorhersagen (DMX)** -Funktion, die Anzahl der zurückzugebenden Vorhersagen an-Spezifikation unterstützt.  
+ Die TopCount-Funktion wurde ursprünglich eingeführt, um assoziative Vorhersagen zu ermöglichen, und im Allgemeinen werden dieselben Ergebnisse wie eine Anweisung erzeugt, die **Select Top** -und **Order by** -Klauseln enthält. Sie erhalten eine bessere Leistung für assoziative Vorhersagen, wenn Sie die **Vorhersagefunktion (DMX)** verwenden, die die Angabe einer Reihe von Vorhersagen unterstützt.  
   
- Es gibt jedoch Situationen, in dem Sie dennoch eventuell TopCount verwenden. DMX unterstützt beispielsweise nicht die **oben** -Qualifizierer in untergeordneten select-Anweisung. Die [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) Funktion nicht unterstützt, ist das Hinzufügen von **oben**.  
+ Es gibt jedoch Situationen, in denen Sie möglicherweise weiterhin TopCount verwenden müssen. DMX unterstützt z. b. den **Top** -Qualifizierer in einer untergeordneten SELECT-Anweisung nicht. Die [DMX &#40;&#41; -Funktion "präthistogram](../dmx/predicthistogram-dmx.md) " unterstützt auch das Hinzufügen von **Top**nicht.  
   
 ## <a name="examples"></a>Beispiele  
- In den folgenden Beispielen werden Vorhersageabfragen für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfragen zurück, die gleichen Ergebnisse, aber im ersten Beispiel wird die TopCount, und im zweiten Beispiel wird der Predict-Funktion.  
+ Die folgenden Beispiele sind Vorhersage Abfragen für das Association-Modell, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen. Die Abfragen geben die gleichen Ergebnisse zurück, im ersten Beispiel wird jedoch TopCount verwendet, und im zweiten Beispiel wird die Vorhersagefunktion verwendet.  
   
- Um zu verstehen, wie TopCount funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
+ Um zu verstehen, wie TopCount funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersage Abfrage auszuführen, die nur die geclusterte Tabelle zurückgibt.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -54,7 +54,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [erstellen Sie eine Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Beispielergebnisse:  
   
@@ -71,7 +71,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- Die TopCount-Funktion verwendet die Ergebnisse dieser Abfrage und gibt die angegebene Anzahl der Zeilen mit kleinsten Werten zurück.  
+ Die TopCount-Funktion nimmt die Ergebnisse dieser Abfrage und gibt die angegebene Anzahl von Zeilen mit dem kleinsten Wert zurück.  
   
 ```  
 SELECT   
@@ -86,23 +86,23 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument für die TopCount-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, indem Sie die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument.  
+ Das erste Argument für die TopCount-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die-Tabelle durch Aufrufen der Vorhersagefunktion und Verwenden des INCLUDE_STATISTICS-Arguments zurückgegeben.  
   
- Das zweite Argument für die TopCount-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel werden die Ergebnisse mithilfe von $SUPPORT sortiert.  
+ Das zweite Argument für die TopCount-Funktion ist die Spalte in der Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel werden die Ergebnisse mithilfe von $SUPPORT sortiert.  
   
- Das dritte Argument für die TopCount-Funktion gibt die Anzahl der Zeilen, die als ganze Zahl zurück. Für die obersten drei Produkte, sortiert nach $ SUPPORT, geben Sie 3 ein.  
+ Das dritte Argument für die TopCount-Funktion gibt die Anzahl von Zeilen an, die als ganze Zahl zurückgegeben werden. Für die obersten drei Produkte, sortiert nach $ SUPPORT, geben Sie 3 ein.  
   
  Beispielergebnisse:  
   
 |Modell|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0,29...|0,25...|  
-|Water Bottle|2866|0.19...|0,17...|  
-|Patchkit|2113|0,14...|0.13...|  
+|Water Bottle|2866|0,19...|0,17...|  
+|Patchkit|2113|0,14...|0,13...|  
   
  Dieser Abfragetyp kann jedoch die Leistung in einer Produktionseinstellung beeinträchtigen. Das liegt daran, dass die Abfrage einen Satz aller Vorhersagen für den Algorithmus zurückgibt, diese Vorhersagen sortiert und die obersten 3 Vorhersagen zurückgibt.  
   
- Das folgende Beispiel enthält eine alternative Anweisung, die die gleichen Ergebnisse zurückgibt, aber bedeutend schneller ausgeführt wird. In diesem Beispiel ersetzt die TopCount mit der Predict-Funktion, die eine Anzahl von Vorhersagen als Argument akzeptiert. Dieses Beispiel verwendet auch die **$SUPPORT** Schlüsselwort, um direkt auf die geschachtelte Tabellenspalte abrufen.  
+ Das folgende Beispiel enthält eine alternative Anweisung, die die gleichen Ergebnisse zurückgibt, aber bedeutend schneller ausgeführt wird. In diesem Beispiel wird TopCount durch die Vorhersagefunktion ersetzt, die eine Reihe von Vorhersagen als Argument akzeptiert. In diesem Beispiel wird auch das **$Support** -Schlüsselwort verwendet, um die Spalte der Spalte mit den Spalten direkt abzurufen.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
@@ -111,10 +111,10 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
  Die Ergebnisse enthalten die obersten 3 Vorhersagen sortiert nach dem Unterstützungswert. Sie können $SUPPORT durch $PROBABILITY oder $ADJUSTED_PROBABILITY ersetzen, um nach Wahrscheinlichkeit oder angepasster Wahrscheinlichkeit sortierte Vorhersagen zurückzugeben. Weitere Informationen finden Sie unter **Vorhersagen (DMX)** .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
+ [Topprozent &#40;-DMX&#41;](../dmx/toppercent-dmx.md)   
+ [TopSum &#40;-DMX&#41;](../dmx/topsum-dmx.md)  
   
   

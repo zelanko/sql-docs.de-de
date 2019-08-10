@@ -1,5 +1,5 @@
 ---
-title: Definieren von Eigenschaften des übergeordneten Attributs in einer über-/ Unterordnungshierarchie | Microsoft-Dokumentation
+title: Definieren von Eigenschaften des übergeordneten Attributs in einer Hierarchie mit über-und Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078667"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888389"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
   Eine Hierarchie mit über- und untergeordneten Elementen ist eine Hierarchie in einer Dimension, die auf zwei Tabellenspalten basiert. Zusammen definieren diese Spalten die hierarchischen Beziehungen zwischen den Elementen der Dimension. Die erste Spalte, die so genannte *Elementschlüsselspalte*, identifiziert jedes Dimensionselement. Die zweite Spalte, die so genannte *übergeordnete Spalte*, identifiziert das übergeordnete Element der einzelnen Dimensionselemente. Die **NamingTemplate** -Eigenschaft eines übergeordneten Attributs bestimmt den Namen jeder Ebene in der Über-/Unterordnungshierarchie, und die **MembersWithData** -Eigenschaft bestimmt, ob Daten für übergeordnete Elemente angezeigt werden sollen.  
   
- Weitere Informationen finden Sie unter [über-/ Unterordnungshierarchie](multidimensional-models/parent-child-dimension.md), [Attribute in über-/ Unterordnungshierarchien](multidimensional-models/parent-child-dimension-attributes.md)  
+ Weitere Informationen finden Sie unter über [-](multidimensional-models/parent-child-dimension.md)/unterordnungshierarchie, [Attribute in über-und untergeordneten Hierarchien](multidimensional-models/parent-child-dimension-attributes.md) .  
   
 > [!NOTE]  
 >  Wenn Sie zum Erstellen einer Dimension den Dimensions-Assistenten verwenden, werden vom Assistenten Tabellen erkannt, die Über-/Unterordnungsbeziehungen enthalten, und die Über-/Unterordnungshierarchie wird automatisch definiert.  
@@ -57,7 +57,7 @@ ms.locfileid: "66078667"
   
      In der folgenden Abbildung wird die erweiterte Employees-Hierarchie angezeigt.  
   
-10. ![PivotTable mit der Employees-Hierarchie](../../2014/tutorials/media/l4-employee-1.gif "PivotTable mit der Employees-Hierarchie")  
+10. ![PivotTables mit der Mitarbeiter Hierarchie](../../2014/tutorials/media/l4-employee-1.gif "PivotTables mit der Mitarbeiter Hierarchie")  
   
      Beachten Sie, dass die von jedem Manager in Ebene 03 gemachten Verkäufe auch in Ebene 04 angezeigt werden. Das liegt daran, dass jeder Manager auch ein Mitarbeiter eines anderen Managers ist. In der nächsten Aufgabe blenden Sie diese Verkaufszahlen aus.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078667"
   
      Die folgende Abbildung zeigt die Änderungen im Dialogfeld **Vorlage zur Ebenenbenennung** .  
   
-     ![Dialogfeld für Ebene Vorlage zur Ebenenbenennung](../../2014/tutorials/media/l4-namingtemplate.gif "Vorlage zur Ebenenbenennung (Dialogfeld)")  
+     ![Vorlage für ebenenbenennungs Vorlage](../../2014/tutorials/media/l4-namingtemplate.gif "Vorlage für ebenenbenennungs Vorlage")  
   
 5.  Klicken Sie auf **OK**.  
   
@@ -101,13 +101,13 @@ ms.locfileid: "66078667"
   
      Die folgende Abbildung zeigt die Änderungen, die Sie an der Employees-Hierarchie vorgenommen haben. Beachten Sie, dass Stephen Y. Jiang nicht mehr als sein eigener Mitarbeiter angezeigt wird.  
   
-     ![Änderung der Employees-Hierarchie](../../2014/tutorials/media/l4-employee-2.png "geändert Employees-Hierarchie")  
+     ![Geänderte Employees-Hierarchie](../../2014/tutorials/media/l4-employee-2.png "Geänderte Employees-Hierarchie")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Automatisches Gruppieren von Attributelementen](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
+ [Automatisches Gruppieren von Attributelementen](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Über-/ Unterordnungshierarchie](multidimensional-models/parent-child-dimension.md)   
+ [Über-und untergeordnete Hierarchie](multidimensional-models/parent-child-dimension.md)   
  [Attribute in Über-/Unterordnungshierarchien](multidimensional-models/parent-child-dimension-attributes.md)  
   
   

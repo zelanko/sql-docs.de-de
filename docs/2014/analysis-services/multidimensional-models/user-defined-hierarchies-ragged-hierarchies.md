@@ -12,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072523"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889325"
 ---
 # <a name="ragged-hierarchies"></a>Unregelmäßige Hierarchien
   Eine unregelmäßige Hierarchie ist eine benutzerdefinierte Hierarchie, die über eine ungerade Anzahl von Ebenen verfügt. Typische Beispiele dafür sind ein Organigramm, bei dem einer hochrangigen Führungskraft sowohl Abteilungsleiter als auch Nicht-Abteilungsleiter unterstellt sind, oder geografische Hierarchien aus Ländern, Regionen und Städten, bei denen einige Städte keinen übergeordneten Bundesstaat bzw. keine übergeordnete Provinz aufweisen, z. B. Washington D. C., Vatikanstadt oder Neu-Delhi.  
@@ -41,9 +41,9 @@ ms.locfileid: "66072523"
   
 -   Verwenden Sie eine reguläre Hierarchie, wobei Sie jedoch für jede Ebene die `HideMemberIf`-Eigenschaft festlegen. Dadurch geben Sie an, ob eine fehlende Ebene für den Benutzer sichtbar gemacht wird. Wenn Sie `HideMemberIf` festlegen, sollten Sie auch `MDXCompatibility` für die Verbindungszeichenfolge festlegen, um das standardmäßige Navigationsverhalten zu überschreiben. Anweisungen zum Festlegen dieser Eigenschaften finden Sie in diesem Thema.  
   
--   Erstellen Sie eine Über-/Unterordnungshierarchie, von der die Ebenenelemente explizit verwaltet werden. Eine grafische Darstellung dieser Methode finden Sie im Blogbeitrag [Ragged Hierarchy in SSAS](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(Unregelmäßige SSAS-Hierarchie). Weitere Informationen in der Onlinedokumentation finden Sie unter [über-/ Unterordnungshierarchie](parent-child-dimension.md). Die Erstellung einer Über-/Unterordnungshierarchie hat den Nachteil, dass Sie pro Dimension nur eine solche Hierarchie erstellen können. Darüber hinaus treten in der Regel Leistungsprobleme auf, wenn Sie Aggregationen für Zwischenelemente berechnen.  
+-   Erstellen Sie eine Über-/Unterordnungshierarchie, von der die Ebenenelemente explizit verwaltet werden. Eine grafische Darstellung dieser Methode finden Sie im Blogbeitrag [Ragged Hierarchy in SSAS](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)(Unregelmäßige SSAS-Hierarchie). Weitere Informationen finden Sie in der-Online Dokumentation unter über [-](parent-child-dimension.md)/unterordnungshierarchie. Die Erstellung einer Über-/Unterordnungshierarchie hat den Nachteil, dass Sie pro Dimension nur eine solche Hierarchie erstellen können. Darüber hinaus treten in der Regel Leistungsprobleme auf, wenn Sie Aggregationen für Zwischenelemente berechnen.  
   
- Wenn die Dimension mehr als eine unregelmäßige Hierarchie enthält, sollten Sie die erste Methode verwenden, also `HideMemberIf` festlegen. BI-Entwickler, die bereits praktische Erfahrungen mit unregelmäßigen Hierarchien gesammelt haben, würden sogar zusätzliche Änderungen in den physischen Datentabellen befürworten und getrennte Tabellen für jede Ebene erstellen. Finden Sie unter [die finanziellen SSAS-Cube-Part 1a – unregelmäßige Hierarchien (Blog) Blog von Martin Mason](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) ausführliche Informationen zu diesem Verfahren.  
+ Wenn die Dimension mehr als eine unregelmäßige Hierarchie enthält, sollten Sie die erste Methode verwenden, also `HideMemberIf` festlegen. BI-Entwickler, die bereits praktische Erfahrungen mit unregelmäßigen Hierarchien gesammelt haben, würden sogar zusätzliche Änderungen in den physischen Datentabellen befürworten und getrennte Tabellen für jede Ebene erstellen. Ausführliche Informationen zu diesem Verfahren finden Sie [in den Hierarchien des SSAS-Finanz Cubes in Martin Maurer (Blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) .  
   
 ##  <a name="bkmk_Hide"></a> Festlegen von "HideMemberIf" zum Ausblenden von Elementen in einer regulären Hierarchie  
  In der Tabelle einer unregelmäßigen Dimension können logisch fehlende Elemente auf verschiedene Weise dargestellt werden. Die Tabellenzellen können NULL-Werte oder leere Zeichenfolgen enthalten. Sie können jedoch auch denselben Wert wie das übergeordnete Objekt enthalten, der in diesem Fall als Platzhalter dient. Die Darstellung von Platzhaltern wird vom Platzhalterstatus der untergeordneten Elemente gemäß der `HideMemberIf`-Eigenschaft und der `MDX Compatibility`-Verbindungszeichenfolgen-Eigenschaft für die Clientanwendung festgelegt.  
@@ -54,7 +54,7 @@ ms.locfileid: "66072523"
   
 2.  Klicken Sie mit der rechten Maustaste auf ein Element innerhalb der Hierarchie, und wählen Sie **Eigenschaften**aus. Legen Sie `HideMemberIf` auf einen der unten beschriebenen Werte fest.  
   
-    |HideMemberIf-Einstellung|Description|  
+    |HideMemberIf-Einstellung|Beschreibung|  
     |--------------------------|-----------------|  
     |`Never`|Ebenenelemente werden nie ausgeblendet. Dies ist der Standardwert.|  
     |**OnlyChildWithNoName**|Ein Ebenenelement wird ausgeblendet, wenn es das einzige untergeordnete Element eines übergeordneten Elements und der Name NULL oder eine leere Zeichenfolge ist.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66072523"
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen von benutzerdefinierten Hierarchien](user-defined-hierarchies-create.md)   
  [Benutzerhierarchien](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
- [Über-/ Unterordnungshierarchie](parent-child-dimension.md)   
- [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Über-und untergeordnete Hierarchie](parent-child-dimension.md)   
+ [Verbindungszeichenfolgen-Eigenschaften &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

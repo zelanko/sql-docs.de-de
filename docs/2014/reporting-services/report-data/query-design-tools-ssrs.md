@@ -1,5 +1,5 @@
 ---
-title: Abfrageentwurfstools im Berichts-Designer SQL Server Data Tools (SSRS) | Microsoft-Dokumentation
+title: Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,12 +20,12 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7b952414a86a647655a7a0c0dbc2754b352e671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65294483b65b0df44e7a4b01899319697e441fa1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107178"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891010"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Abfrageentwurfstools in SQL Server-Datentools (SSRS) des Berichts-Designers
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt eine Reihe von Abfrageentwurfstools bereit, mit denen Sie im Berichts-Designer Datasetabfragen erstellen können. Ob ein bestimmter Abfrage-Designer verfügbar ist, hängt von dem Typ der Datenquelle ab, mit der Sie arbeiten. Darüber hinaus stellen einige Abfrage-Designer alternative Modi bereit, sodass Sie entscheiden können, ob Sie im visuellen Modus oder direkt in der Abfragesprache arbeiten möchten. In diesem Thema werden die einzelnen Tools sowie die von ihnen unterstützten Datenquellen beschrieben. Folgende Tools werden in diesem Thema vorgestellt:  
@@ -49,7 +49,7 @@ ms.locfileid: "66107178"
 ##  <a name="Textbased"></a> Textbasierter Abfrage-Designer  
  Der textbasierte Abfrage-Designer ist das Standardtool zum Erstellen von Abfragen für die meisten unterstützten relationalen Datenquellen, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML und ODBC. Im Gegensatz zum grafischen Abfrage-Designer wird bei diesem Abfrageentwurfstools die Abfragesyntax während des Abfrageentwurfs nicht überprüft. In der folgenden Grafik wird der textbasierte Abfrage-Designer veranschaulicht.  
   
- ![Generischer Abfrage-Designer für relationale Datenabfragen](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
+ ![Generischer Abfrage-Designer für relationale Datenabfragen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
   
  Der textbasierte Abfrage-Designer wird zum Erstellen komplexer Abfragen unter Verwendung gespeicherter Prozeduren, zum Abfragen von XML-Daten und zum Schreiben dynamischer Abfragen empfohlen. Je nach Datenquelle können Sie möglicherweise die Schaltfläche **Als Text bearbeiten** auf der Symbolleiste aktivieren bzw. deaktivieren, um zwischen dem grafischen und dem textbasierten Abfrage-Designer zu wechseln. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers](../text-based-query-designer-user-interface.md).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66107178"
 ##  <a name="MDX"></a> MDX-Abfrage-Designer  
  Der MDX-Abfrage-Designer (Multidimensional Expression) dient zum Erstellen oder Ändern von Abfragen, die für eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenquelle mit mehrdimensionalen Cubes ausgeführt werden. In der folgenden Grafik wird der MDX-Abfrage-Designer nach dem Definieren der Abfrage und der Filter veranschaulicht.  
   
- ![Analysis Services-MDX-Abfrage-Designer, Entwurfsansicht](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
+ ![Analysis Services-MDX-Abfrage-Designer, Entwurfsansicht](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
   
  Wenn Sie den MDX-Abfrage-Designer verwenden möchten, müssen Sie nach einer Datenquelle suchen, die einen verfügbaren Analysis Service-Cube aufweist, der gültig ist und verarbeitet wurde. Wenn Sie ein Dataset für die Datenquelle definieren, können Sie die Abfrage im MDX-Abfrage-Designer öffnen. Falls erforderlich, können Sie die MDX- und DMX-Schaltfläche auf der Symbolleiste verwenden, um zwischen MDX- und DMX-Modus zu wechseln. Weitere Informationen finden Sie unter [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
@@ -95,8 +95,8 @@ ms.locfileid: "66107178"
   
 ## <a name="see-also"></a>Siehe auch  
  [Reporting Services-Tools](../tools/reporting-services-tools.md)   
- [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Hinzufügen von Daten zu &#40;einem Bericht Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services-Tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)   
  [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  

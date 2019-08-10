@@ -1,5 +1,5 @@
 ---
-title: Entwickler&#39;Benutzerhandbuch (Datenbank-Engine) | Microsoft-Dokumentation
+title: Entwickler&#39;-e-Guide (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872616"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890805"
 ---
-# <a name="developer39s-guide-database-engine"></a>Entwickler&#39;Benutzerhandbuch (Datenbank-Engine)
+# <a name="developer39s-guide-database-engine"></a>Entwickler&#39;-e-Guide (Datenbank-Engine)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt einen umfangreichen Satz von Tools zum Entwickeln, Verwalten und Steuern von Datenbankanwendungen bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -52,10 +52,10 @@ ms.locfileid: "62872616"
  Beschreibt, wie Sie das Ausnahmemeldungsfeld (eine programmgesteuerte Schnittstelle) in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Programmierung](../analysis-services/dev-guide/data-mining-programming.md)   
- [Entwicklerhandbuch für &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Entwicklerhandbuch für &#40;Integrationsdienste&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Entwicklerhandbuch für &#40;Replikation&#41;](replication/concepts/replication-developer-documentation.md)   
- [Entwicklerhandbuch für &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+ [Data Mining-Programmierung](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Entwicklerhandbuch &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [Entwicklerhandbuch &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [Entwicklerhandbuch &#40;-Replikation&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Entwicklerhandbuch &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

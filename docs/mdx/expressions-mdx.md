@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8ed2484bb3eb31b1bb73000f848dffd27e85e9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118870"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893590"
 ---
 # <a name="expressions-mdx"></a>Ausdrücke (MDX)
 
 
-  Ein Ausdruck ist eine Kombination aus Bezeichnern, Werten und Operatoren, die ausgewertet werden können, um ein Ergebnis zu erhalten. Die Daten können an verschiedenen Orten beim Zugreifen auf oder Ändern von Daten verwendet werden. Beispielsweise können Sie einen Ausdruck als Teil der Daten, die von einer Abfrage abgerufen werden sollen, oder als Suchbedingung verwenden, um nach Daten zu suchen, die bestimmte Kriterien erfüllen.  
+  Ein Ausdruck ist eine Kombination aus bezeichern, Werten und Operatoren, die ausgewertet werden können, um ein Ergebnis zu erhalten. Die Daten können an verschiedenen Stellen verwendet werden, wenn Sie auf Daten zugreifen oder diese ändern. Beispielsweise können Sie einen Ausdruck als Teil der Daten, die von einer Abfrage abgerufen werden sollen, oder als Suchbedingung verwenden, um nach Daten zu suchen, die bestimmte Kriterien erfüllen.  
   
 ## <a name="simple-and-complex-expressions"></a>Einfache und komplexe Ausdrücke  
  Ein Ausdruck in MDX kann einfach oder komplex sein.  
@@ -32,7 +32,7 @@ ms.locfileid: "68118870"
  Eine Skalarfunktion gibt einen einzelnen Wert im Kontext einer Auswertung in MDX zurück. Zum Verständnis, wie Skalarfunktionen von MDX ausgewertet werden, muss der Unterschied zu den anderen MDX-Ausdrücken klar sein, denn die meisten MDX-Ausdrücke, -Anweisungen und -Skripts werden nicht für ein einzelnes Datenelement, sondern iterativ für eine Gruppe von Datenelementen (z. B. Zellen oder Elemente) ausgewertet. Zu dem Zeitpunkt, zu dem eine Skalarfunktion ausgewertet wird, ermittelt die Funktion üblicherweise nur den Wert für ein einzelnes Datenelement.  
   
  Objektbezeichner  
- MDX ist wegen der Beschaffenheit der mehrdimensionalen Daten objektorientiert. Objektbezeichner werden in MDX als einfache Ausdrücke angesehen. Weitere Informationen zu Bezeichnern finden Sie unter [Bezeichner &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
+ MDX ist wegen der Beschaffenheit der mehrdimensionalen Daten objektorientiert. Objektbezeichner werden in MDX als einfache Ausdrücke angesehen. Weitere Informationen zu bezeichlern finden Sie unter Bezeichner [ &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Ein komplexer Ausdruck kann aus Kombinationen dieser Entitäten erstellt werden, die durch Operatoren verknüpft sind.  
   
@@ -85,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

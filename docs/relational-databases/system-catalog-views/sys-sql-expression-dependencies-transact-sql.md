@@ -1,5 +1,5 @@
 ---
-title: Sys. sql_expression_dependencies (Transact-SQL) | Microsoft-Dokumentation
+title: sys. SQL _expression_dependencies (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bee68e3ba1863602d9a96635cdfa4c533a00c649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29bf4991ce5dd52e9c66c31abade833e4fe319b2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073173"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893546"
 ---
-# <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
+# <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Enthält eine Zeile für jede Namensabhängigkeit in einer benutzerdefinierten Entität in der aktuellen Datenbank. Dies schließt Abhängigkeiten zwischen nativ kompilierte, skalare benutzerdefinierte Funktionen und andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Module. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine Entität, die *Entität verwiesen*, namentlich in einem persistenten SQL-Ausdruck, der eine andere Entität, die aufgerufen wird die *verweisende Entität*. Wird beispielsweise in der Definition einer Sicht auf eine Tabelle verwiesen, hängt die Sicht als verweisende Entität von der Tabelle ab, der Entität, auf die verwiesen wird. Wenn die Tabelle gelöscht wird, ist die Sicht unbrauchbar.  
+  Enthält eine Zeile für jede Namensabhängigkeit in einer benutzerdefinierten Entität in der aktuellen Datenbank. Dies umfasst Abhängigkeiten zwischen nativ kompilierten benutzerdefinierten Skalarfunktionen und anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Modulen. Eine Abhängigkeit zwischen zwei Entitäten wird erstellt, wenn eine Entität, die als *Referenzierte Entität*bezeichnet wird, in einem permanenten SQL-Ausdruck einer anderen Entität, die als *verweisende Entität*bezeichnet wird, nach Namen Wird beispielsweise in der Definition einer Sicht auf eine Tabelle verwiesen, hängt die Sicht als verweisende Entität von der Tabelle ab, der Entität, auf die verwiesen wird. Wenn die Tabelle gelöscht wird, ist die Sicht unbrauchbar.  
   
  Weitere Informationen dazu finden Sie unter [Benutzerdefinierte Skalarfunktionen für In-Memory-OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68073173"
   
 -   Datenbankübergreifende und serverübergreifende Entitäten. Entitätsnamen werden gemeldet; Entitäts-IDs werden jedoch nicht aufgelöst.  
   
--   Abhängigkeiten auf Spaltenebene für schemagebundene Entitäten. Abhängigkeiten auf Spaltenebene für nicht schemagebundene Objekte zurückgegeben werden können, mithilfe von [Sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
+-   Abhängigkeiten auf Spaltenebene für schemagebundene Entitäten. Abhängigkeiten auf Spaltenebene für nicht Schema gebundene Objekte können mit [sys. DM _sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)zurückgegeben werden.  
   
 -   DDL-Trigger auf Serverebene im Kontext der Masterdatenbank.  
   
@@ -55,17 +55,20 @@ ms.locfileid: "68073173"
 |is_schema_bound_reference|**bit**|1 = Entität, auf die verwiesen wird, ist schemagebunden.<br /><br /> 0 = Entität, auf die verwiesen wird, ist nicht schemagebunden.<br /><br /> Lässt keine NULL-Werte zu.|  
 |referenced_class|**tinyint**|Klasse der Entität, auf die verwiesen wird.<br /><br /> 1 = Objekt oder Spalte<br /><br /> 6 = Typ<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 21 = Partitionsfunktion<br /><br /> Lässt keine NULL-Werte zu.|  
 |referenced_class_desc|**nvarchar(60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Lässt keine NULL-Werte zu.|  
-|referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Weitere Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Entitäten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für schemagebundene Entitäten, da sie in der gleichen Datenbank sein und aus diesem Grund können nur definiert werden mit einem zweiteiligen (*schema.object*) Namen.|  
-|referenced_database_name|**sysname**|Datenbankname der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für datenbankübergreifende oder serverübergreifende Verweise aufgefüllt, die auf der Angabe eines gültigen dreiteiligen oder vierteiligen Namens basieren.<br /><br /> NULL für nicht schemagebundene Verweise, wenn auf Basis eines einteiligen oder zweiteiligen Namens angegeben.<br /><br /> NULL für schemagebundene Entitäten, da sie in der gleichen Datenbank sein und aus diesem Grund können nur definiert werden mit einem zweiteiligen (*schema.object*) Namen.|  
+|referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Weitere Informationen zu mehrteiligen Namen finden Sie unter Transact- [SQL- &#40;Syntax Konventionen Transact&#41;-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Entitäten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für Schema gebundene Entitäten, da Sie sich in derselben Datenbank befinden müssen und deshalb nur mit einem zweiteiligen Namen (*Schema. Object*) definiert werden können.|  
+|referenced_database_name|**sysname**|Datenbankname der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für datenbankübergreifende oder serverübergreifende Verweise aufgefüllt, die auf der Angabe eines gültigen dreiteiligen oder vierteiligen Namens basieren.<br /><br /> NULL für nicht schemagebundene Verweise, wenn auf Basis eines einteiligen oder zweiteiligen Namens angegeben.<br /><br /> NULL für Schema gebundene Entitäten, da Sie sich in derselben Datenbank befinden müssen und deshalb nur mit einem zweiteiligen Namen (*Schema. Object*) definiert werden können.|  
 |referenced_schema_name|**sysname**|Schema, in das die Entität gehört, auf die verwiesen wird.<br /><br /> NULL für nicht schemagebundene Verweise, in denen ohne Angabe des Schemanamens auf die Entität verwiesen wird.<br /><br /> Niemals NULL für schemagebundene Verweise, da schemagebundene Entitäten mit einem zweiteiligen Namen definiert werden müssen und mit diesem zweiteiligen Namen auf sie verwiesen werden muss.|  
 |referenced_entity_name|**sysname**|Name der Entität, auf die verwiesen wird. Lässt keine NULL-Werte zu.|  
-|referenced_id|**int**|ID der Entität, auf die verwiesen wird. Der Wert dieser Spalte ist niemals NULL für schemagebundene Verweise. Der Wert dieser Spalte ist immer NULL für serverübergreifende und datenbankübergreifende Verweise.<br /><br /> NULL für Verweise innerhalb der Datenbank, wenn die ID nicht bestimmt werden kann. Für nicht schemagebundene Verweise kann die ID in den folgenden Fällen nicht aufgelöst werden:<br /><br /> Die Entität, auf die verwiesen wird, ist in der Datenbank nicht vorhanden.<br /><br /> Das Schema der Entität, auf die verwiesen wird, hängt vom Schema des Aufrufers ab und wird zur Laufzeit aufgelöst. In diesem Fall wird is_caller_dependent auf 1 festgelegt.|  
+|referenced_id|**int**|ID der Entität, auf die verwiesen wird. Der Wert dieser Spalte ist für Schema gebundene Verweise nie NULL. Der Wert dieser Spalte ist immer NULL für Server übergreifende und datenbankübergreifende Verweise.<br /><br /> NULL für Verweise innerhalb der Datenbank, wenn die ID nicht bestimmt werden kann. Für nicht schemagebundene Verweise kann die ID in den folgenden Fällen nicht aufgelöst werden:<br /><br /> Die Entität, auf die verwiesen wird, ist in der Datenbank nicht vorhanden.<br /><br /> Das Schema der Entität, auf die verwiesen wird, hängt vom Schema des Aufrufers ab und wird zur Laufzeit aufgelöst. In diesem Fall wird is_caller_dependent auf 1 festgelegt.|  
 |referenced_minor_id|**int**|ID der Spalte, auf die verwiesen wird, wenn es sich bei der verweisenden Entität um eine Spalte handelt. Andernfalls ist der Wert 0. Lässt keine NULL-Werte zu.<br /><br /> Eine Entität, auf die verwiesen wird, ist eine Spalte, wenn diese in der verweisenden Entität namentlich identifiziert wird oder wenn die übergeordnete Entität in einer SELECT *-Anweisung verwendet wird.|  
 |is_caller_dependent|**bit**|Gibt an, dass die Schemabindung für die Entität, auf die verwiesen wird, zur Laufzeit erfolgt. Deshalb hängt die Auflösung der Entitäts-ID vom Schema des Aufrufers ab. Dies ist der Fall, wenn es sich bei der Entität, auf die verwiesen wird, um eine gespeicherte Prozedur, eine erweiterte gespeicherte Prozedur oder um eine nicht schemagebundene benutzerdefinierte Funktion handelt, die in einer EXECUTE-Anweisung aufgerufen wird.<br /><br /> 1 = Die Entität, auf die verwiesen wird, hängt vom Aufrufer ab und wird zur Laufzeit aufgelöst. In diesem Fall ist referenced_id gleich NULL.<br /><br /> 0 = Die Entitäts-ID, auf die verwiesen wird, ist nicht aufruferabhängig.<br /><br /> Immer 0 für schemagebundene Verweise sowie für datenbankübergreifende und serverübergreifende Verweise, die explizit einen Schemanamen angeben. Zum Beispiel ist ein Verweis auf eine Entität im Format `EXEC MyDatabase.MySchema.MyProc` nicht aufruferabhängig. Ein Verweis im Format `EXEC MyDatabase..MyProc` ist jedoch aufruferabhängig.|  
-|is_ambiguous|**bit**|Gibt an, der Verweis ist mehrdeutig und kann zur Laufzeit in eine benutzerdefinierte Funktion, einen benutzerdefinierten Typ (UDT) oder einen Xquery-Verweis auf eine Spalte vom Typ auflösen **Xml**.<br /><br /> Angenommen, die `SELECT Sales.GetOrder() FROM Sales.MySales`-Anweisung ist in einer gespeicherten Prozedur definiert. Bis zur Ausführung der gespeicherten Prozedur ist unbekannt, ob `Sales.GetOrder()` eine benutzerdefinierte Funktion im Schema `Sales` oder in der Spalte namens `Sales` vom Typ UDT mit einer Methode namens `GetOrder()` ist.<br /><br /> 1 = Verweis ist mehrdeutig.<br /><br /> 0 = Verweis ist eindeutig, oder die Entität kann beim Aufruf der Sicht erfolgreich gebunden werden.<br /><br /> 0 für das Schema wird immer Verweise gebunden.|  
+|is_ambiguous|**bit**|Gibt an, dass der Verweis mehrdeutig ist und zur Laufzeit in eine benutzerdefinierte Funktion, in einen benutzerdefinierten Typ (User-Defined Type, UDT) oder in einen XQuery-Verweis auf eine Spalte vom Typ **XML**aufgelöst werden kann.<br /><br /> Angenommen, die `SELECT Sales.GetOrder() FROM Sales.MySales`-Anweisung ist in einer gespeicherten Prozedur definiert. Bis zur Ausführung der gespeicherten Prozedur ist unbekannt, ob `Sales.GetOrder()` eine benutzerdefinierte Funktion im Schema `Sales` oder in der Spalte namens `Sales` vom Typ UDT mit einer Methode namens `GetOrder()` ist.<br /><br /> 1 = Verweis ist mehrdeutig.<br /><br /> 0 = Verweis ist eindeutig, oder die Entität kann beim Aufruf der Sicht erfolgreich gebunden werden.<br /><br /> Immer 0 für Schema gebundene Verweise.|  
   
 ## <a name="remarks"></a>Hinweise  
  In der folgenden Tabelle werden die Typen von Entitäten aufgelistet, für die Abhängigkeitsinformationen erstellt und verwaltet werden. Für Regeln, Standardwerte, temporäre Tabellen, temporär gespeicherte Prozeduren oder Systemobjekte werden keine Abhängigkeitsinformationen erstellt oder verwaltet.  
+
+> [!NOTE]
+> Azure SQL Data Warehouse und parallele Data Warehouse unterstützen Tabellen, Sichten, gefilterte Statistiken und Entitäts Typen von gespeicherten Prozeduren von Transact-SQL aus dieser Liste.  Abhängigkeitsinformationen werden nur für Tabellen, Sichten und gefilterte Statistiken erstellt und verwaltet.  
   
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
@@ -88,7 +91,7 @@ ms.locfileid: "68073173"
 |XML-Schemaauflistung|Nein|Ja|  
 |Partitionsfunktion|Nein|Ja|  
   
- \* Eine Tabelle als verweisende Entität nachverfolgt wird, nur dann, wenn er verweist auf eine [!INCLUDE[tsql](../../includes/tsql-md.md)] -Modul, einen benutzerdefinierten Typ oder XML-schemaauflistung in der Definition einer berechneten Spalte, einer CHECK-Einschränkung oder einer DEFAULT-Einschränkung.  
+ \*Eine Tabelle wird nur als verweisende Entität nachverfolgt, wenn Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] auf ein Modul, einen benutzerdefinierten Typ oder eine XML-Schema Auflistung in der Definition einer berechneten Spalte, einer Check-Einschränkung oder einer DEFAULT-Einschränkung verweist.  
   
  ** Jede im Filterprädikat verwendete Spalte wird als verweisende Entität aufgezeichnet.  
   

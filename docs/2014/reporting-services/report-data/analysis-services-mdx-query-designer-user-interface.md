@@ -16,12 +16,12 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b6872ae2fe52e9ea9d30a41fe663a75b5bfe7d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a704046f63e89e482e46dfa03f254c2bb9f1260
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107475"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890964"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stellt grafische Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expressions) und DMX-Abfragen (Data Mining Expressions) für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle bereit. In diesem Thema wird der MDX-Abfrage-Designer beschrieben. Weitere Informationen zum DMX-Abfrage-Designer finden Sie unter [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "66107475"
   
  In der folgenden Abbildung werden die Bereiche für den Entwurfsmodus bezeichnet.  
   
- ![Analysis Services-MDX-Abfrage-Designer, Entwurfsansicht](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
+ ![Analysis Services-MDX-Abfrage-Designer, Entwurfsansicht](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
   
  In der folgenden Tabelle sind die Bereiche in diesem Modus aufgeführt.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66107475"
 |Filter (Bereich)|Wird zum Auswählen von Dimensionen und zugehörigen Hierarchien verwendet, um Daten an der Quelle zu filtern und die an den Bericht zurückgegebenen Daten zu beschränken.|  
 |Daten (Bereich)|Zeigt die Spaltenüberschriften für das Resultset an, während Sie Elemente aus dem Metadatenbereich und dem Bereich für berechnete Elemente ziehen. Aktualisiert automatisch das Resultset, wenn die Schaltfläche **Automatisch ausführen** ausgewählt wird. .|  
   
- Sie können Dimensionen, Measures und KPIs aus dem Metadatenbereich sowie berechnete Elemente aus dem Bereich für berechnete Elemente in den Datenbereich ziehen. Im Filterbereich können Sie Dimensionen und zugehörige Hierarchien auswählen sowie Filterausdrücke festlegen, um die für eine Abfrage zur Verfügung stehenden Daten zu beschränken. Wenn die Umschaltfläche **AutoExecute** (![Automatisches Ausführen der Abfrage](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")) auf der Symbolliste ausgewählt wird, führt der Abfrage-Designer die Abfrage jedes Mal aus, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können die Abfrage mithilfe der Schaltfläche **Ausführen** (![Ausführen der Abfrage](../../analysis-services/media/rsqdicon-run.gif "Run the query")) auf der Symbolleiste manuell ausführen.  
+ Sie können Dimensionen, Measures und KPIs aus dem Metadatenbereich sowie berechnete Elemente aus dem Bereich für berechnete Elemente in den Datenbereich ziehen. Im Filterbereich können Sie Dimensionen und zugehörige Hierarchien auswählen sowie Filterausdrücke festlegen, um die für eine Abfrage zur Verfügung stehenden Daten zu beschränken. Wenn die Umschaltfläche **AutoExecute** (![Automatisches Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")) auf der Symbolliste ausgewählt wird, führt der Abfrage-Designer die Abfrage jedes Mal aus, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können die Abfrage mithilfe der Schaltfläche **Ausführen** (![Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")) auf der Symbolleiste manuell ausführen.  
   
  Wenn Sie in diesem Modus eine MDX-Abfrage erstellen, werden die folgenden zusätzlichen Eigenschaften automatisch in die Abfrage eingeschlossen:  
   
@@ -65,26 +65,26 @@ ms.locfileid: "66107475"
 |------------|-----------------|  
 |**Als Text bearbeiten**|Nicht aktiviert für diesen Datenquellentyp.|  
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Wechseln zur MDX-Abfrageansicht](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Wechselt zum MDX-Befehlstyp.|  
+|![Wechseln zur MDX-Abfrageansicht](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Wechselt zum MDX-Befehlstyp.|  
 |![Wechseln zur DMX-Abfragesprachenansicht](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Wechselt zum DMX-Befehlstyp.|  
-|![Aktualisieren der Ergebnisdaten](../../analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Aktualisieren von Metadaten aus der Datenquelle.|  
-|![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
-|![Umschalten zum Anzeigen von leeren Zellen](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
-|![Automatisches Ausführen der Abfrage](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Bei jeder Änderung wird die Abfrage automatisch ausgeführt, und das Ergebnis wird angezeigt. Die Ergebnisse werden im Datenbereich angezeigt.|  
-|![Anzeigen der Schaltfläche „Aggregationen“](../../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|Zeigt Aggregationen im Datenbereich an.|  
-|![Löschen](../../analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
-|![Symbol für das Dialogfeld „Abfrageparameter“](../../analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Berichtsparameter mit demselben Namen erstellt. Der Wert des Abfrageparameters wird auf einen Ausdruck festgelegt, der auf den Berichtsparameter verweist.|  
-|![Schaltfläche „Abfrage vorbereiten“](../../analysis-services/media/rsqdicon-preparequery.gif "Prepare Query button")|Bereitet die Abfrage vor.|  
-|![Führen Sie die Abfrage aus](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
-|![Abbrechen der Abfrage](../../analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Abbrechen der Abfrage.|  
-|![In Entwurfsmodus wechseln](../../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|  
+|![Aktualisieren der Ergebnisdaten](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Aktualisieren von Metadaten aus der Datenquelle.|  
+|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an.|  
+|![Umschalten zum Anzeigen von leeren Zellen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Schaltet zwischen dem Anzeigen und Nichtanzeigen von leeren Zellen im Datenbereich um. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
+|![Automatisches Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Bei jeder Änderung wird die Abfrage automatisch ausgeführt, und das Ergebnis wird angezeigt. Die Ergebnisse werden im Datenbereich angezeigt.|  
+|![Anzeigen der Schaltfläche „Aggregationen“](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button")|Zeigt Aggregationen im Datenbereich an.|  
+|![Löschen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
+|![Symbol für das Dialogfeld „Abfrageparameter“](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Anzeigen des Dialogfelds **Abfrageparameter** . Bei der Angabe von Werten für einen Abfrageparameter wird automatisch ein Berichtsparameter mit demselben Namen erstellt. Der Wert des Abfrageparameters wird auf einen Ausdruck festgelegt, der auf den Berichtsparameter verweist.|  
+|![Schaltfläche „Abfrage vorbereiten“](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-preparequery.gif "Prepare Query button")|Bereitet die Abfrage vor.|  
+|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
+|![Abbrechen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Abbrechen der Abfrage.|  
+|![In Entwurfsmodus wechseln](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Grafischer MDX-Abfrage-Designer im Abfragemodus  
  Wenn Sie vom grafischen Abfrage-Designer in den **Abfragemodus** wechseln möchten, klicken Sie auf der Symbolleiste auf die Schaltfläche **Entwurfsmodus** .  
   
  In der folgenden Abbildung sind die Bereiche für den Abfragemodus veranschaulicht.  
   
- ![Analysis Services-MDX-Abfrage-Designer, Abfrageansicht](../../analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX query designer, query view")  
+ ![Analysis Services-MDX-Abfrage-Designer, Abfrageansicht](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX query designer, query view")  
   
  In der folgenden Tabelle sind die Bereiche in diesem Modus aufgeführt.  
   
@@ -106,13 +106,13 @@ ms.locfileid: "66107475"
   
 -   **Als Text bearbeiten**  
   
--   **Berechnetes Element hinzufügen** (![Add calculated member](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Berechnetes Element hinzufügen** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Leere Zellen anzeigen** (![Umschalten zum Anzeigen von leeren Zellen](../../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
+-   **Leere Zellen anzeigen** (![Umschalten zum Anzeigen von leeren Zellen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   
--   **AutoExecute** (![Automatisches Ausführen der Abfrage](../../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
+-   **AutoExecute** (![Automatisches Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
--   **Aggregationen anzeigen** (![Anzeigen der Schaltfläche „Aggregationen“](../../analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button"))  
+-   **Aggregationen anzeigen** (![Anzeigen der Schaltfläche „Aggregationen“](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Show Aggregations button"))  
   
 ## <a name="see-also"></a>Siehe auch  
  [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40;Berichts-Generator und SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   

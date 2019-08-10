@@ -1,5 +1,5 @@
 ---
-title: Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-in (SharePoint 2013) | Microsoft-Dokumentation
+title: Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins (SharePoint 2013) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1fb1e718f8b2ab0257651ff47674d293a9e6a95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4cf0d930d6e32c28c9b89a8a430b06368ed63a1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079874"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888639"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-Ins (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] ist eine Sammlung von Anwendungsserverkomponenten und Back-End-Diensten, die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Datenzugriff in einer [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] -Farm ermöglichen. Das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerpivot.msi**) ist ein Installationspaket, mit dem die Anwendungsserverkomponenten installiert werden.  
@@ -24,7 +24,7 @@ ms.locfileid: "66079874"
   
 -   In einer einzelnen Serverbereitstellung, die SharePoint 2013 und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im SharePoint-Modus umfasst, ist das Add-In nicht erforderlich. Wenn Sie einen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus installieren, sind die durch das Add-In installierten Komponenten bereits enthalten. Diagramme von Beispielsbereitstellungen mit dem Add-In finden Sie unter [Deployment Topologies for SQL Server BI Features in SharePoint](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
- **Hinweis**: Dieses Thema beschreibt die Installation von der [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Lösungsdateien und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool. Nach der Installation finden Sie Informationen in das Konfigurationstool und zusätzlichen Funktionen: [Konfigurieren von PowerPivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+ **Hinweis**: In diesem Thema wird die [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Installation von Projektmappendateien und [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für das Konfigurationstool für SharePoint 2013 beschrieben. Nach der Installation finden Sie im folgenden Thema Informationen zum Konfigurationstool und zusätzlichen Features, zum [Konfigurieren von Power Pivot und zum bereit &#40;stellen von Lösungen&#41;in SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013).  
   
  Informationen zum Herunterladen von **spPowerPivot.msi**finden Sie unter [Microsoft® SQL Server® 2014 PowerPivot® für Microsoft SharePoint®](https://go.microsoft.com/fwlink/?LinkID=324854).  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66079874"
   
 -   [Anforderungen und erforderliche Komponenten](#bkmk_prereq)  
   
--   [Zur Installation von PowerPivot für SharePoint](#bkmk_install)  
+-   [So installieren Sie PowerPivot für SharePoint](#bkmk_install)  
   
--   [Bereitstellen der SharePoint-Lösungsdateien mit PowerPivot für SharePoint 2013-Konfigurationstool](#bkmk_deploy_solution)  
+-   [Bereitstellen der SharePoint-Lösungs Dateien mit dem Konfigurations Tool "PowerPivot für SharePoint 2013"](#bkmk_deploy_solution)  
   
 -   [Deinstallieren oder Reparieren des Add-Ins](#bkmk_remove_addin)  
   
@@ -56,23 +56,23 @@ ms.locfileid: "66079874"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Management Objects.  
   
--   **Back-End-Dienste:** Bei Verwendung von [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für Excel-Arbeitsmappen zu erstellen, die analytische Daten enthalten, müssen Sie Excel Services mit einem BI-Server mit [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im SharePoint-Modus, den Zugriff auf diese Daten in einer serverumgebung. Sie können SQL Server-Setup auf einem Computer ausführen, auf dem SharePoint Server 2013 installiert ist, oder auf einem anderen Computer, der keine SharePoint-Software enthält. Zwischen Analysis Services und SharePoint bestehen keine Abhängigkeiten.  
+-   **Backend-Dienste:** Wenn Sie für [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel verwenden, um Arbeitsmappen mit analytischen Daten zu erstellen, müssen Sie Excel Services mit einem BI-Server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] konfigurieren, auf dem im SharePoint-Modus ausgeführt wird, um in einer Serverumgebung auf diese Daten zuzugreifen. Sie können SQL Server-Setup auf einem Computer ausführen, auf dem SharePoint Server 2013 installiert ist, oder auf einem anderen Computer, der keine SharePoint-Software enthält. Zwischen Analysis Services und SharePoint bestehen keine Abhängigkeiten.  
   
      Weitere Informationen zum Installieren, Deinstallieren und Konfigurieren der Back-End-Dienste finden Sie unter:  
   
-    -   [PowerPivot für SharePoint 2013 Installation](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+    -   [PowerPivot für SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
     -   [Deinstallieren von PowerPivot für SharePoint](../../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
   
 ##  <a name="bkmk_where_to_install"></a> Installationsort der Datei "spPowerPivot.msi"  
  Als bewährte Methode wird empfohlen, **spPowerPivot.msi** aus Konsistenzgründen auf allen Servern in der SharePoint-Farm zu installieren, einschließlich der Anwendungsserver und Web-Front-End-Server. Das Installationspaket schließt die Analysis Services-Datenanbieter sowie das [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] -Konfigurationstool ein. Bei der Installation von **spPowerPivot.msi** können Sie die Installation anpassen, indem Sie einzelne Komponenten ausschließen.  
   
- **Datenanbieter:** Mehrere SharePoint- und SQL Server-Technologien verwenden die Analysis Services-Datenanbieter einschließlich Excel Services, PerformancePoint Services und Power View. Durch die Installation von **SpPowerPivot.msi** auf allen SharePoint-Servern wird sichergestellt, dass der vollständige Satz der Analysis Services-Datenanbieter und PowerPivot-Konnektivität durchgehend in der Farm verfügbar ist.  
+ **Datenanbieter:** Mehrere SharePoint-und SQL Server-Technologien verwenden die Analysis Services Datenanbieter, einschließlich Excel Services, PerformancePoint Services und Power View. Durch die Installation von **SpPowerPivot.msi** auf allen SharePoint-Servern wird sichergestellt, dass der vollständige Satz der Analysis Services-Datenanbieter und PowerPivot-Konnektivität durchgehend in der Farm verfügbar ist.  
   
 > [!NOTE]  
 >  Sie müssen die Analysis Services-Datenanbieter mit **spPowerPivot.msi**auf einem SharePoint 2013-Server installieren. Andere im [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Feature Pack verfügbaren Installationspakete werden nicht unterstützt, da diese Pakete keine SharePoint 2013-Unterstützungsdateien enthalten, die von den Datenanbietern in dieser Umgebung benötigt werden.  
   
- **Konfigurationstool:** Das PowerPivot für SharePoint 2013-Konfigurationstool ist auf nur einem der SharePoint-Server erforderlich. Als bewährte Methode in Multiserverfarmen empfiehlt es sich, das Konfigurationstool auf mindestens zwei Servern zu installieren, damit Sie Zugriff auf das Konfigurationstool haben, wenn einer der beiden Server offline ist.  
+ **Konfigurations Tool:** Das PowerPivot für SharePoint 2013-Konfigurationstool ist auf nur einem der SharePoint-Server erforderlich. Als bewährte Methode in Multiserverfarmen empfiehlt es sich, das Konfigurationstool auf mindestens zwei Servern zu installieren, damit Sie Zugriff auf das Konfigurationstool haben, wenn einer der beiden Server offline ist.  
   
 ##  <a name="bkmk_prereq"></a> Anforderungen und erforderliche Komponenten  
   
@@ -82,12 +82,12 @@ ms.locfileid: "66079874"
   
 -   Ein [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] -Server im PowerPivot-Modus. Excel Services verwenden die SQL Server Analysis Services-Instanz als PowerPivot-Server. Analysis Services können auf dem lokalen oder einem Remotecomputer ausgeführt werden.  
   
--   **Berechtigungen:** So installieren Sie [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)], der aktuelle Benutzer muss ein Administrator auf dem Computer und einer SharePoint-Farmadministratoren-Gruppe sein.  
+-   **Berechtigungen:** Zur Installation [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]von muss der aktuelle Benutzer ein Administrator auf dem Computer und eine Gruppe der SharePoint-Farm Administratoren sein.  
   
--   Weitere Informationen zu [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] Anforderungen und Voraussetzungen, finden Sie unter [Hardware- und Softwareanforderungen für Analysis Services-Server im SharePoint-Modus &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
+-   Weitere Informationen [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] zu Anforderungen und Voraussetzungen finden Sie unter [Hardware-und Software Anforderungen für Analysis Services Server im SharePoint-Modus &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   
-##  <a name="bkmk_install"></a> Zur Installation von PowerPivot für SharePoint  
- Das Installationspaket **spPowerpivot.msi** unterstützt sowohl eine grafische Benutzeroberfläche als auch einen Befehlszeilenmodus. Beide Installationsmethoden setzen voraus, dass die MSI-Datei mit Administratorrechten ausgeführt wird. Nach der Installation finden Sie Informationen in das Konfigurationstool und zusätzlichen Funktionen: [Konfigurieren von PowerPivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+##  <a name="bkmk_install"></a>So installieren Sie PowerPivot für SharePoint  
+ Das Installationspaket **spPowerpivot.msi** unterstützt sowohl eine grafische Benutzeroberfläche als auch einen Befehlszeilenmodus. Beide Installationsmethoden setzen voraus, dass die MSI-Datei mit Administratorrechten ausgeführt wird. Nach der Installation finden Sie im folgenden Thema Informationen zum Konfigurationstool und zusätzlichen Features, zum [Konfigurieren von Power Pivot und zum bereit &#40;stellen von Lösungen&#41;in SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013).  
   
 ### <a name="user-interface-installation"></a>Installation über die Benutzeroberfläche  
  Um [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] über die grafische Benutzeroberfläche zu installieren, führen Sie die folgenden Schritte aus:  
@@ -109,7 +109,7 @@ ms.locfileid: "66079874"
   
  `Msiexec.exe /i SpPowerPivot.msi`.  
   
- Um ein Installationsprotokoll zu erstellen, verwenden Sie die Standardoptionen für die MsiExec-Protokollierung. Das folgende Beispiel erstellt die Protokolldatei "Install_Log.txt" über den Switch "V" ausführliche Protokollierung.  
+ Um ein Installationsprotokoll zu erstellen, verwenden Sie die Standardoptionen für die MsiExec-Protokollierung. Im folgenden Beispiel wird die Protokolldatei "Install_Log. txt" mit dem Schalter "v" ausführliche Logging erstellt.  
   
 ```  
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt  
@@ -140,7 +140,7 @@ Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common"  
 ```  
   
-|Option|Description|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin|PowerPivot-Konfiguration|  
 |SQL_OLAPDM|MSOLAP|  
@@ -148,7 +148,7 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
 |SQL_AMO|AMO-Anbieter|  
 |SQLAS_SP_Common|Allgemeine Analysis Services-Komponenten für SharePoint 2013|  
   
-##  <a name="bkmk_deploy_solution"></a> Bereitstellen der SharePoint-Lösungsdateien mit PowerPivot für SharePoint 2013-Konfigurationstool  
+##  <a name="bkmk_deploy_solution"></a>Bereitstellen der SharePoint-Lösungs Dateien mit dem Konfigurations Tool "PowerPivot für SharePoint 2013"  
  Drei der Dateien, die von spPowerPivot.msi auf die Festplatte kopiert werden, sind SharePoint-Lösungsdateien. Eine Lösungsdatei bezieht sich auf die Webanwendungsebene, während sich die anderen Dateien auf die Farmebene beziehen. Die Dateien lauten:  
   
 -   `PowerPivotFarmSolution.wsp`  
@@ -165,9 +165,9 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  **So starten Sie das Konfigurationstool:**  
   
- "Im Windows-Startbildschirm Power" und klicken Sie in den Suchergebnissen der Apps auf **PowerPivot für SharePoint 2013-Konfigurationstool**. Beachten Sie, dass die Suchergebnisse u. U. zwei Links enthalten, weil [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Konfigurationstools für SharePoint 2010 und SharePoint 2013 installiert. Stellen Sie sicher, dass Sie das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool starten.  
+ Geben Sie auf dem Windows-Start Bildschirm "Power" ein, und klicken Sie in den Suchergebnissen der apps auf **PowerPivot für SharePoint 2013-Konfiguration**. Beachten Sie, dass die Suchergebnisse u. U. zwei Links enthalten, weil [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup separate [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] -Konfigurationstools für SharePoint 2010 und SharePoint 2013 installiert. Stellen Sie sicher, dass Sie das [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool starten.  
   
- ![zwei Powerpivot-Konfigurationstools](../../../analysis-services/media/as-powerpivot-configtools-bothicons.gif "zwei Powerpivot-Konfigurationstools")  
+ ![zwei Power Pivot-Konfigurationstools](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "zwei Power Pivot-Konfigurationstools")  
   
  **Or**  
   
@@ -188,11 +188,11 @@ Msiexec /i spPowerPivot.msi AGREETOLICENSE="yes" ADDLOCAL=" SQL_OLAPDM,SQL_ADOMD
   
  Sie können [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] mithilfe einer der folgenden Methoden deinstallieren oder reparieren:  
   
-1.  **Windows-Systemsteuerung:** Wählen Sie **für Microsoft SQL Server 2012 PowerPivot für SharePoint 2013**. Klicken Sie entweder auf **Deinstallieren** oder auf **Reparieren**.  
+1.  **Windows-Systemsteuerung:** Wählen Sie **Microsoft SQL Server 2012 PowerPivot für SharePoint 2013**aus. Klicken Sie entweder auf **Deinstallieren** oder auf **Reparieren**.  
   
 2.  Führen Sie spPowerPivot.msi aus, und wählen Sie die Option **Entfernen** oder **Reparieren** aus.  
   
- **Befehlszeile:** Um zu reparieren oder Deinstallieren von PowerPivot für SharePoint 2013 über die Befehlszeile, öffnen Sie eine Eingabeaufforderung **mit Administratorberechtigungen** und führen Sie einen der folgenden Befehle aus:  
+ **Befehlszeile:** Öffnen Sie eine Eingabeaufforderung **mit Administrator Berechtigungen** , und führen Sie einen der folgenden Befehle aus, um PowerPivot für SharePoint 2013 mit der Befehlszeile zu reparieren oder zu deinstallieren:  
   
 -   Zum Reparieren führen Sie den folgenden Befehl aus:  
   

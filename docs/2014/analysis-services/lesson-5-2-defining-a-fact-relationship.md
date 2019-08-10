@@ -1,5 +1,5 @@
 ---
-title: Definieren einer Faktenbeziehung | Microsoft-Dokumentation
+title: Definieren einer Fakten Beziehung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078564"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888240"
 ---
 # <a name="defining-a-fact-relationship"></a>Definieren einer Faktenbeziehung
   Von Benutzern wird manchmal der Wunsch geäußert, Measures nach Datenelementen dimensionieren zu können, die sich in der Faktentabelle befinden, oder die Faktentabelle nach bestimmten zusätzlichen verknüpften Informationen durchsuchen zu können, beispielsweise Rechnungsnummern oder Auftragsbestätigungsnummern, die mit bestimmten Verkaufsfakten verknüpft sind. Wenn Sie eine Dimension basierend auf einem solchen Faktentabellenelement definieren, wird diese Dimension als *Faktendimension*bezeichnet. Eine Faktendimension wird auch als degenerierte Dimension bezeichnet. Faktendimensionen sind für das Gruppieren verknüpfter Faktentabellenzeilen nützlich, beispielsweise aller Zeilen, die sich auf eine bestimmte Rechnungsnummer beziehen. Obwohl Sie diese Informationen in einer separaten Dimensionstabelle in der relationalen Datenbank speichern können, stellt das Erstellen einer separaten Dimensionstabelle für die Informationen keinen Vorteil dar, weil die Dimensionstabelle genauso schnell wachsen würde wie die Faktentabelle und nur zu doppelt vorhandenen Daten und unnötiger Komplexität führen würde.  
   
- Innerhalb von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]können Sie bestimmen, ob die Faktendimensionsdaten in einer MOLAP-Dimensionsstruktur für verbesserte Abfrageleistung dupliziert werden sollen, oder ob die Faktendimension als ROLAP-Dimension definiert werden soll, um Speicherplatz auf Kosten der Abfrageleistung zu sparen. Wenn Sie eine Dimension mit dem MOLAP-Speichermodus speichern, werden alle Dimensionselemente in der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nicht nur in den Partitionen der Measuregruppe, sondern auch in einer hochkomprimierten MOLAP-Struktur gespeichert. Wenn Sie eine Dimension mit dem ROLAP-Speichermodus speichern, nur die Dimensionsdefinition befindet sich in der MOLAP-Struktur-die Dimensionselemente selbst aus der zugrunde liegenden relationalen Faktentabelle zur Abfragezeit abgefragt werden. Sie treffen Ihre Entscheidung bezüglich des entsprechenden Speichermodus aufgrund der Häufigkeit, mit der die Faktendimension abgefragt wird, der Anzahl von Zeilen, die von einer typischen Abfrage zurückgegeben wird, der Leistung der Abfrage und der Verarbeitungskosten. Das Definieren einer Dimension als ROLAP setzt nicht voraus, dass alle Cubes, die die Dimension verwenden, ebenfalls mit dem ROLAP-Speichermodus gespeichert werden. Der Speichermodus kann für jede Dimension unabhängig konfiguriert werden.  
+ Innerhalb von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]können Sie bestimmen, ob die Faktendimensionsdaten in einer MOLAP-Dimensionsstruktur für verbesserte Abfrageleistung dupliziert werden sollen, oder ob die Faktendimension als ROLAP-Dimension definiert werden soll, um Speicherplatz auf Kosten der Abfrageleistung zu sparen. Wenn Sie eine Dimension mit dem MOLAP-Speichermodus speichern, werden alle Dimensionselemente in der Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nicht nur in den Partitionen der Measuregruppe, sondern auch in einer hochkomprimierten MOLAP-Struktur gespeichert. Wenn Sie eine Dimension mit dem ROLAP-Speicher Modus speichern, wird nur die Dimensions Definition in der MOLAP-Struktur gespeichert. die Dimensions Elemente selbst werden zur Abfragezeit von der zugrunde liegenden relationalen Fakten Tabelle abgefragt. Sie treffen Ihre Entscheidung bezüglich des entsprechenden Speichermodus aufgrund der Häufigkeit, mit der die Faktendimension abgefragt wird, der Anzahl von Zeilen, die von einer typischen Abfrage zurückgegeben wird, der Leistung der Abfrage und der Verarbeitungskosten. Das Definieren einer Dimension als ROLAP setzt nicht voraus, dass alle Cubes, die die Dimension verwenden, ebenfalls mit dem ROLAP-Speichermodus gespeichert werden. Der Speichermodus kann für jede Dimension unabhängig konfiguriert werden.  
   
  Wenn Sie eine Faktendimension definieren, können Sie die Beziehung zwischen der Faktendimension und der Measuregruppe als eine Faktenbeziehung definieren. Die folgenden Einschränkungen gelten für Faktenbeziehungen:  
   
@@ -63,15 +63,15 @@ ms.locfileid: "66078564"
   
 13. Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-14. In der **Attribute** Bereich des Dimensions-Designers für die **Internet Sales Order Details** Dimension wählen **Sales Order Number**, und ändern Sie dann die  **Namen** Eigenschaft im Eigenschaftenfenster an `Item Description.`  
+14. Wählen Sie im Bereich **Attribute** des Dimensions-Designers für die Dimension **Internet Sales Order Details** die Option **Sales Order Number**aus, und ändern Sie dann die Eigenschaft **Name** in der Eigenschaftenfenster auf.`Item Description.`  
   
-15. In der **NameColumn** Eigenschaft Zelle, klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld **Namensspalte** den Eintrag **Produkt** in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
+15. Klicken Sie in der Eigenschafts Zelle **namecolenn** auf die Schaltfläche zum Durchsuchen **(...)** . Wählen Sie im Dialogfeld **Namensspalte** den Eintrag **Produkt** in der **Quelltabelle** -Liste aus, wählen Sie **EnglishProductName** für die **Quellspalte**aus, und klicken Sie anschließend auf **OK**.  
   
 16. Fügen Sie das **Sales Order Number** -Attribut zur Dimension hinzu, indem Sie die **SalesOrderNumber** -Spalte aus der **InternetSales** -Tabelle in den Bereich **Datenquellensicht** zum Bereich **Attribute** ziehen.  
   
-17. Ändern der **Namen** -Eigenschaft des neuen **Sales Order Number** Attribut `Order Number`, und ändern Sie die **OrderBy** Eigenschaft, um **Schlüssel**.  
+17. Ändern Sie **die Name** -Eigenschaft des neuen **Sales Order Number** - `Order Number`Attributs in, und ändern Sie die **OrderBy** -Eigenschaft in **Key**.  
   
-18. In der **Hierarchien** Bereich erstellen Sie eine **Internet Sales Orders** Benutzerhierarchie, die enthält die `Order Number` und **Item Description** Ebenen in dieser Reihenfolge.  
+18. Erstellen Sie im Bereich **Hierarchien** eine **Internet Sales Orders** -Benutzer Hierarchie, die `Order Number` die-und- **Element Beschreibungs** Ebenen in dieser Reihenfolge enthält.  
   
 19. Wählen Sie im Bereich **Attribute** **Internet Sales Order Details**aus, und überprüfen Sie anschließend den Wert für die **StorageMode** -Eigenschaft im Eigenschaftenfenster.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "66078564"
   
      Beachten Sie, dass die **Internet Sales Order Details** -Cubedimension automatisch mit einer Faktenbeziehung konfiguriert wird, wie durch das eindeutige Symbol angezeigt wird.  
   
-2.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) in der **Item Description** -Zelle am Schnittpunkt der der **Internetverkäufe** Measuregruppe und der **Internet Sales Order Details** dimension, zu Überprüfen Sie die faktenbeziehungseigenschaften aus.  
+2.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ) in der **Element Beschreibungs** Zelle, an der Schnittmenge der **Internet Sales** -Measure-Gruppe und der **Internet Sales Order Details** -Dimension, um die Eigenschaften der Fakten Beziehung zu überprüfen.  
   
      Das Dialogfeld **Beziehung definieren** wird geöffnet. Beachten Sie, dass Sie keine der Eigenschaften konfigurieren können.  
   
      Die folgende Abbildung zeigt die Faktenbeziehungseigenschaften im Dialogfeld **Beziehung definieren** .  
   
-     ![Das Dialogfeld Beziehung definieren](../../2014/tutorials/media/l5-factrelationship-2.gif "Dialogfeld Beziehung definieren")  
+     ![Beziehung definieren (Dialogfeld] ) (../../2014/tutorials/media/l5-factrelationship-2.gif "Beziehung definieren (Dialogfeld") )  
   
 3.  Klicken Sie auf **Abbrechen**.  
   
@@ -115,10 +115,10 @@ ms.locfileid: "66078564"
   
      Die folgende Abbildung zeigt das Ergebnis der vorherigen Schritte.  
   
-     ![Dimensionieren von Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "dimensionieren von Internet Sales-Sales Amount")  
+     ![Dimensionierung von Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensionierung von Internet Sales-Sales Amount")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Definieren einer m:n-Beziehung](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Definieren einer m:n-Beziehung](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

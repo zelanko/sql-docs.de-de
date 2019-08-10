@@ -1,5 +1,5 @@
 ---
-title: IMPORTIEREN (DMX) | Microsoft-Dokumentation
+title: Importieren (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74b718515fc03d0babbda36851f61d96f07e854a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074772"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892752"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ IMPORT FROM <filename>
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Dateiname*  
+ *Einfügen*  
  Eine Zeichenfolge, die den Namen und den Speicherort der Datei angibt, die importiert werden soll.  
   
 ## <a name="remarks"></a>Hinweise  
@@ -44,10 +44,10 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [DMX&#41; - &#40;Anweisungs Referenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-statements.md)   
  [EXPORT &#40;DMX&#41;](../dmx/export-dmx.md)   
- [Exportieren und Importieren von Data Mining-Objekten](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [Exportieren und Importieren von Data Mining-Objekten](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

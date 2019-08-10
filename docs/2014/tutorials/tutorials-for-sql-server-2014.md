@@ -1,5 +1,5 @@
 ---
-title: Tutorials für SQLServer 2014 | Microsoft-Dokumentation
+title: Tutorials für SQL Server 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21c94cbc7b5adc1e65cb21aa14d4ab2cec9122ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956301"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892934"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Lernprogramme für SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] führt viele neue Technologien und Funktionen ein.  
@@ -29,7 +29,7 @@ ms.locfileid: "62956301"
 -   Um ein [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsbuch und [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Berichte zur Verwendung mit [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] -Lernprogrammen herunterzuladen, gehen Sie zu [Image Files for HelloWorldPicnic Sample Model in PowerPivot and Power View](https://www.microsoft.com/download/details.aspx?id=26719)(in englischer Sprache).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] ist ein Feature von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]ist eine Funktion des [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-Ins [!INCLUDE[msCoName](../includes/msconame-md.md)] für [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   Um [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] -Versionen von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Datenbanken herunterzuladen, rufen Sie [Adventure Works 2014 Sample Databases](http://msftdbprodsamples.codeplex.com/releases/view/125550) (in englischer Sprache) auf CodePlex auf.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "62956301"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Für die folgenden [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] -Technologien sind Lernprogramme verfügbar.  
   
-|Technologie|Description|  
+|Technologie|Beschreibung|  
 |----------------|-----------------|  
-|[Analysis Services-Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
+|[Analysis Services-Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Hier erfahren Sie, wie grundlegende Berichte und Abonnements erstellt werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  
 |[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  

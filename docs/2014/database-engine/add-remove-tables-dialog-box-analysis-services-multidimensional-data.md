@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen und Entfernen von Tabellen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Dialog Feld "Tabellen entfernen" (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ea017c7b463a0287e6b6f4437549db667bd251
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065243"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889218"
 ---
-# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Hinzufügen und Entfernen von Tabellen (Dialogfeld) (Analysis Services – mehrdimensionale Daten)
+# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Tabellen hinzufügen (Dialog Feld) (Analysis Services-Mehrdimensionale Daten)
   Im Dialogfeld **Tabellen hinzufügen/entfernen** von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] können Sie einer Datenquelle Tabellen hinzufügen und Tabellen aus einer Datenquelle entfernen. Zum Anzeigen des Dialogfelds **Tabellen hinzufügen/entfernen** führen Sie einen der folgenden Schritte aus:  
   
 -   Klicken Sie im Bereich **Symbolleiste** von **Datenquellensicht-Designer** auf **Objekte hinzufügen/entfernen**.  
@@ -43,16 +43,16 @@ ms.locfileid: "66065243"
  **Systemobjekte anzeigen**  
  Wählen Sie diese Option aus, um Systemobjekte für die in **Verfügbare Objekte** angegebene Datenquelle anzuzeigen.  
   
- **Eingeschlossene Objekte**  
+ **Enthaltene Objekte**  
  Zeigt die Objekte und die dazugehörigen Typen an, die der Datenquellensicht bereits hinzugefügt wurden.  
   
  Klicken Sie auf **<<** , um alle in **Eingeschlossene Objekte** aufgeführten Objekte in **Verfügbare Objekte** zu übertragen, oder wählen Sie ein oder mehrere Objekte aus, und klicken Sie auf **<** , um die ausgewählten Objekte in **Verfügbare Objekte** zu übertragen.  
   
- **Fügen verknüpfter Tabellen hinzu**  
+ **Verknüpfte Tabellen hinzufügen**  
  Klicken Sie hier, um alle Tabellen hinzuzufügen, die mit den in **Verfügbare Objekte** ausgewählten Tabellen verknüpft sind.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
   
   

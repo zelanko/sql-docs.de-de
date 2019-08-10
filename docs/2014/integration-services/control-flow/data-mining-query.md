@@ -12,12 +12,12 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832384"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890331"
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
   Im Entwurfsbereich befindet sich der Data Mining-Generator für Vorhersageabfragen, mit dem Sie Data Mining-Vorhersageabfragen erstellen können. Vorhersageabfragen können entweder auf der Grundlage von Eingabetabellen oder von SINGLETON-Vorhersageabfragen erstellt werden. Wechseln Sie zur Ergebnissicht, um die Abfrage auszuführen und die Ergebnisse anzuzeigen. Die Abfragesicht zeigt die vom Generator für Vorhersageabfragen erstellte DMX-Abfrage (Data Mining Extensions).  
@@ -63,7 +63,7 @@ ms.locfileid: "62832384"
  Geben Sie eine Bedingung oder einen benutzerdefinierten Ausdruck an, der auf die Spalte angewendet wird. Spalten können aus den das Miningmodell enthaltenden Tabellen und den Eingabespalten auf die Zelle gezogen werden.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining Abfrageschnittstellen](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Schnittstellen für Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

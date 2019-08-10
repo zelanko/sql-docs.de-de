@@ -1,5 +1,5 @@
 ---
-title: Sys.sysservers (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sysservers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018114"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941102"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,27 +49,27 @@ ms.locfileid: "68018114"
 |**TopologyX**|**int**|Wird nicht verwendet.|  
 |**TopologyY**|**int**|Wird nicht verwendet.|  
 |**catalog**|**sysname**|Katalog, der beim Herstellen einer Verbindung mit einem OLE DB-Anbieter verwendet wird.|  
-|**srvcollation**|**sysname**|Die Sortierung des Servers.|  
+|**srvcollations**|**sysname**|Die Sortierung des Servers.|  
 |**connecttimeout**|**int**|Timeouteinstellung für die Serververbindung.|  
 |**querytimeout**|**int**|Timeouteinstellung für Abfragen auf den Server.|  
-|**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**srvnetname**|**char (30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = Server ist ein Remoteserver.<br /><br /> 0 = Server ist ein Verbindungsserver.|  
-|**rpc**|**bit**|1 = **sp_serveroption@rpc** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@rpc** festgelegt **"false"** oder **aus**.|  
-|**pub**|**bit**|1 = **sp_serveroption@pub** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@pub** festgelegt **"false"** oder **aus**.|  
-|**sub**|**bit**|1 = **sp_serveroption@sub** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@sub** festgelegt **"false"** oder **aus**.|  
-|**dist**|**bit**|1 = **sp_serveroption@dist** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@dist** festgelegt **"false"** oder **aus**.|  
-|**dpub**|**bit**|1 = **sp_serveroption@dpub** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@dpub** festgelegt **"false"** oder **aus**.|  
-|**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@rpc out** festgelegt **"false"** oder **aus**.|  
-|**dataaccess**|**bit**|1 =  **sp_serveroption@data Zugriff** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@data Zugriff** festgelegt **"false"** oder **aus**.|  
-|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation kompatibel** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@collation kompatibel** festgelegt **"false"** oder **aus**.|  
-|**system**|**bit**|1 = **sp_serveroption@system** festgelegt **"true"** oder **auf**.<br /><br /> 0 = **sp_serveroption@system** festgelegt **"false"** oder **aus**.|  
-|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote Sortierreihenfolge** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@remote Sortierreihenfolge** festgelegt **"false"** oder **aus**.|  
-|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy -Schema-Validation** festgelegt **"true"** oder **auf**.<br /><br /> 0 =  **sp_serveroption@lazy -Schema-Validation** festgelegt **"false"** oder **aus**.|  
-|**Sortierung**|**sysname**|Server-Sortierung mit  **sp_serveroption@collation Namen**.|  
+|**rpc**|**bit**|1 = **sp_serveroption\@RPC** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@RPC** ist auf **false** oder **Off**festgelegt.|  
+|**pub**|**bit**|1 = **sp_serveroption\@pub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@pub** ist auf **false** oder **Off**festgelegt.|  
+|**sub**|**bit**|1 = **sp_serveroption\@Sub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Sub** ist auf **false** oder **Off**festgelegt.|  
+|**dist**|**bit**|1 = **sp_serveroption\@dist** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@dist** ist auf **false** oder **Off**festgelegt.|  
+|**dpub**|**bit**|1 = **sp_serveroption\@dpub ist** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@dpub ist** ist auf **false** oder **Off**festgelegt.|  
+|**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@RPC out** ist auf **false** oder **Off**festgelegt.|  
+|**dataaccess**|**bit**|1 = **sp_serveroption\@Data Access** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Data Access** ist auf **false** oder **Off**festgelegt.|  
+|**collationcompatible**|**bit**|1 = **sp_serveroption\@COLLATIONS Compatible** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@COLLATIONS Compatible** ist auf **false** oder **Off**festgelegt.|  
+|**system**|**bit**|1 = **sp_serveroption\@System** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@System** ist auf **false** oder **Off**festgelegt.|  
+|**useremotecollation**|**bit**|1 = **sp_serveroption\@Remote Sortierung** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Remote Sortierung** ist auf **false** oder **Off**festgelegt.|  
+|**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@Lazy Schema Validation** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Lazy Schema Validation** ist auf **false** oder **Off**festgelegt.|  
+|**Sortierung**|**sysname**|Die Server Sortierung wird durch **sp_serveroption\@COLLATIONS Name**festgelegt.|  
 |**nonsqlsub**|bit|0 = Server ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = Server ist keine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Mapping von Systemtabellen zu System &#40;Sichten Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

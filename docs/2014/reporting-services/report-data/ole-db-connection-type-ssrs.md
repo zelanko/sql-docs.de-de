@@ -10,19 +10,19 @@ ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0361e58bac4468fd41d62547c8b93adb849d39ac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107220"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891992"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE-Datenbank-Verbindungstyp (SSRS)
   Wenn Sie Daten von einem OLE DB-Datenanbieter einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ "OLE DB" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -OLE DB-Datenverarbeitungserweiterung.  
   
  OLE DB ist eine Datenzugriffstechnologie, die es Clients ermöglicht, eine Verbindung mit einer Vielzahl von Datenanbietern herzustellen. Nachdem Sie den Datenquellentyp OLE DB ausgewählt haben, müssen Sie einen bestimmten Datenanbieter auswählen. Die Unterstützung für Funktionen wie Parameter und Anmeldeinformationen hängt vom ausgewählten Datenanbieter ab.  
   
- Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schrittweise Anweisungen finden Sie unter [hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schritt-für-Schritt-Anweisungen finden [Sie unter Hinzufügen und Überprüfen einer Datenverbindung &#40;oder einer Datenquelle&#41;Berichts-Generator und SSRS](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Verbindungszeichenfolge  
  Die Verbindungszeichenfolge für die OLE DB-Datenverarbeitungserweiterung hängt vom gewünschten Datenanbieter ab. Eine typische Verbindungszeichenfolge enthält Name-Wert-Paare, die vom Datenanbieter unterstützt werden. Die folgende Verbindungszeichenfolge gibt z. B. den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und die AdventureWorks-Datenbank an:  
@@ -42,7 +42,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) Zeichenfolgen in Reporting Services oder [Angeben von Anmelde Informationen in Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
 ###### <a name="special-characters-in-a-password"></a>Sonderzeichen in Kennwörtern  
  Wenn Sie die OLE DB-Datenquelle so konfigurieren, dass ein Kennwort angegeben werden muss oder das Kennwort in der Verbindungszeichenfolge enthalten ist, und Benutzer das Kennwort mit Sonderzeichen (z. B. Satzzeichen) eingeben, können einige zugrunde liegende Datenquellentreiber die Sonderzeichen nicht überprüfen. Wenn Sie den Bericht verarbeiten, ist die Meldung "Kein zulässiges Kennwort" möglicherweise ein Anzeichen für dieses Problem.  
@@ -62,7 +62,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Zum erfolgreichen Abrufen der gewünschten Daten muss eine vom Datenanbieter unterstützte Abfragesyntax angegeben werden. Die Parameterunterstützung variiert abhängig vom Datenanbieter. Weitere Informationen finden Sie in den spezifischen Themen für den ausgewählten Datenanbieter. Zum Beispiel:  
   
--   [OLE DB-Anbieter für Analysis Services &#40;Analysis Services – mehrdimensionale Daten&#41;](../../analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)  
+-   [OLE DB-Anbieter für Analysis Services &#40;Analysis Services – mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data)  
   
 -   [Verwenden des .NET Framework-Datenanbieters für Oracle](https://go.microsoft.com/fwlink/?LinkId=112314)  
   
@@ -75,7 +75,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets.  
   
- [Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Hinzufügen und Überprüfen einer Datenverbindung oder &#40;einer Datenquelle Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -86,7 +86,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
- [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
+ [Hinzufügen von Daten zu &#40;einem Bericht Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

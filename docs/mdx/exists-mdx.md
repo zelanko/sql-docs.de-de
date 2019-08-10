@@ -1,5 +1,5 @@
 ---
-title: Vorhanden ist (MDX) | Microsoft-Dokumentation
+title: Vorhanden (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 781c03283c39ab5ec100ba7f7d83b3cbe19a7c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139181"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893610"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Gibt die Menge der Tupel der ersten angegebenen Menge zurück, die zusammen mit einem oder mehreren Tupeln der zweiten angegebenen Menge vorhanden sind. Diese Funktion führt die Operationen manuell aus, die Auto-exist automatisch ausführt. Weitere Informationen zu Auto vorhanden ist, finden Sie unter [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+  Gibt die Menge der Tupel der ersten angegebenen Menge zurück, die zusammen mit einem oder mehreren Tupeln der zweiten angegebenen Menge vorhanden sind. Diese Funktion führt die Operationen manuell aus, die Auto-exist automatisch ausführt. Weitere Informationen zu "automatisch vorhanden" finden Sie unter [Schlüsselkonzepte in &#40;MDX-Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Wenn der optionale \<Measuregruppenname > angegeben wird, gibt die Funktion Tupel, vorhanden sind, mit einem oder mehreren Tupeln zurück, aus der zweiten Menge und solchen Tupeln, die Zeilen in der Faktentabelle der angegebenen Measuregruppe zugeordnet sind.  
+ Wenn der optionale \<measurengruppenname > bereitgestellt wird, gibt die Funktion Tupel zurück, die mit einem oder mehreren Tupeln aus der zweiten Menge und den Tupeln mit zugeordneten Zeilen in der Fakten Tabelle der angegebenen Measure-Gruppe vorhanden sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,9 +41,9 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
   
 ## <a name="remarks"></a>Hinweise  
   
-1.  Measuregruppenzeilen mit Measures, die null-Werte zu beitragen **Exists** Wenn das MeasureGroupName-Argument angegeben wird. Dies ist der Unterschied zwischen dieser Form von Exists und die Nonempty-Funktion: Wenn die NullProcessing-Eigenschaft dieser Measures auf Preserve festgelegt ist, dies bedeutet, dass die Measures Null-Werte angezeigt, wenn es sich bei Abfragen für diesen Teil des Cubes; ausgeführt werden NonEmpty entfernt immer Tupel aus einer Reihe, die Measures Null-Werte aufweisen, während Exists mit dem MeasureGroupName-Argument nicht gefiltert werden Tupel aus, die measuregruppenzeilen, zugeordnet sind, auch wenn die Measurewerte Null sind.  
+1.  Measure-Gruppen Zeilen mit Measures, die NULL-Werte enthalten, sind **vorhanden** , wenn das Argument "measregroupname" angegeben wird. Dies ist der Unterschied zwischen dieser Form von vorhanden und der NonEmpty-Funktion: Wenn die NullProcessing-Eigenschaft dieser Measures auf "preserve" festgelegt ist, bedeutet dies, dass die Measures NULL-Werte anzeigen, wenn Abfragen für diesen Teil des Cubes ausgeführt werden. NonEmpty entfernt immer Tupel aus einer Menge, die NULL-measurenwerte hat, während mit dem Argument "measregroupname" vorhanden ist, filtert keine Tupel mit zugeordneten Measure-Gruppen Zeilen, auch wenn die Measure-Werte NULL sind.  
   
-2.  Wenn *MeasureGroupName* -Parameter verwendet wird, hängen Ergebnisse, ob es sichtbare Measures in der referenzierten Measuregruppe gibt; Wenn keine sichtbaren Measures in der referenzierten Measuregruppe vorliegen, und klicken Sie dann EXISTS stets gibt eine leere Menge ist, unabhängig von den Werten der *Set_Expression1* und *Set_Expression2*.  
+2.  Wenn der Parameter " *measregroupname* " verwendet wird, sind die Ergebnisse davon abhängig, ob in der referenzierten Measure-Gruppe sichtbare Measures vorhanden sind. Wenn die Measure-Gruppe, auf die verwiesen wird, keine sichtbaren Measures enthält, gibt immer eine leere Menge zurück, unabhängig von den Werten von *Set_Expression1* und *Set_Expression2*.  
   
 ## <a name="examples"></a>Beispiele  
  Kunden in Kalifornien:  
@@ -94,9 +94,9 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
- [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
+ [Crossjoin &#40;(MDX)&#41;](../mdx/crossjoin-mdx.md)   
+ [NonEmptyCrossjoin &#40;(MDX)&#41;](../mdx/nonemptycrossjoin-mdx.md)   
+ [Nicht leeres &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

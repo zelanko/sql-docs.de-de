@@ -1,5 +1,5 @@
 ---
-title: Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern | Microsoft-Dokumentation
+title: Implementieren dynamischer Sicherheit mithilfe von Zeilen filtern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 9ce4f0a9735c14aed6289527b47f76995e1c10d2
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285022"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893603"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
-  In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynamische Sicherheit implementiert. Dynamische Sicherheit bietet Sicherheit auf Zeilenebene basierend auf dem Benutzernamen oder der Anmelde-ID des angemeldeten Benutzers. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  
+  In dieser ergänzenden Lektion erstellen Sie eine zusätzliche Rolle, die dynamische Sicherheit implementiert. Dynamische Sicherheit bietet Sicherheit auf Zeilenebene basierend auf dem Benutzernamen oder der Anmelde-ID des angemeldeten Benutzers. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular).  
   
  Um dynamische Sicherheit zu implementieren, müssen Sie dem Modell eine Tabelle hinzufügen, die die Windows-Benutzernamen der Benutzer enthält, die eine Verbindung mit dem Modell als Datenquelle erstellen und Modellobjekte und Daten durchsuchen dürfen. In diesem Lernprogramm erstellen Sie ein Modell im Kontext der Adventure Works Corp. Sie müssen jedoch eine Tabelle mit Benutzern Ihrer Domäne hinzufügen, um diese Lektion abzuschließen. Die Kennwörter für die hinzuzufügenden Benutzernamen sind nicht erforderlich. Um die Tabelle Employee Security mit einem kleinen Teil der Benutzer Ihrer Domäne zu erstellen, verwenden Sie die Funktion Einfügen, und fügen Sie die Mitarbeiterdaten aus einem Excel-Arbeitsblatt ein. In der wirklichen Welt verwendet die Tabelle mit den Benutzernamen, die Sie einem Modell hinzugefügt haben, in der Regel eine Tabelle aus einer tatsächlichen Datenbank als Datenquelle, z. B. eine reale dimEmployee-Tabelle.  
   
- Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME-Funktion &#40;DAX&#41; ](/dax/username-function-dax) und [LOOKUPVALUE-Funktion &#40;DAX&#41;](/dax/lookupvalue-function-dax). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Die Formel gibt mit der LOOKUPVALUE-Funktion einen Wert aus der Tabelle Employee Security an und übergibt diesen Wert anschließend an die USERNAME-Funktion, die den Benutzernamen des angemeldeten Benutzers angibt, der ein Mitglied dieser Rolle ist. Der Benutzer kann dann nur Daten, die vom Zeilenfilter der Rolle angegebenen durchsuchen. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
+ Um dynamische Sicherheit zu implementieren, verwenden Sie zwei neue DAX-Funktionen: [USERNAME- &#40;Funktion&#41; DAX](/dax/username-function-dax) und [lookupvalue &#40;-&#41;Funktion DAX](/dax/lookupvalue-function-dax). Diese Funktionen, die in einer Zeilenfilterformel angewendet werden, werden in einer neuen Rolle definiert. Die Formel gibt mit der LOOKUPVALUE-Funktion einen Wert aus der Tabelle Employee Security an und übergibt diesen Wert anschließend an die USERNAME-Funktion, die den Benutzernamen des angemeldeten Benutzers angibt, der ein Mitglied dieser Rolle ist. Der Benutzer kann dann nur die Daten durchsuchen, die von den Zeilen filtern der Rolle angegeben werden. In diesem Szenario legen Sie fest, dass Verkaufsmitarbeiter nur nach Internetumsatzdaten für die Vertriebsgebiete, denen sie angehören, suchen können.  
   
  In dieser ergänzenden Lektion führen Sie eine Reihe von Aufgaben durch. Aufgaben, die nur für dieses Adventure Works-Szenario für die Tabellenmodellierung relevant sind und nicht unbedingt in der realen Welt anwendbar sind, werden als solche identifiziert. Jede Aufgabe umfasst weitere Informationen, die den Zweck der Aufgabe beschreiben.  
   
- Geschätzte Zeit zum Abschließen dieser Lektion: **30 Minuten**  
+ Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Dieses ergänzende Thema ist Teil eines Lernprogramms zur Tabellenmodellierung, das in der entsprechenden Reihenfolge bearbeitet werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser ergänzenden Lektion alle vorherigen Lektionen abgeschlossen haben.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Hinzufügen der dimSalesTerritory-Tabelle zum Projekt 'AW Internet Sales Tabular Model'  
@@ -40,7 +40,7 @@ ms.locfileid: "67285022"
   
 2.  Überprüfen Sie im Dialogfeld **Vorhandene Verbindungen** , ob die Datenquellenverbindung **Adventure Works DB from SQL** (Adventure Works-Datenbank aus SQL) ausgewählt ist, und klicken Sie anschließend auf **Öffnen**.  
   
-     Wenn der Identitätswechsel-Anmeldeinformationen im Dialogfeld angezeigt wird, geben Sie die Identitätswechselinformationen, die Sie in Lektion 2 verwendet: Hinzufügen von Daten.  
+     Wenn das Dialogfeld Identitätswechsel Informationen angezeigt wird, geben Sie die Identitätswechsel-Anmelde Informationen ein, die Sie in Lektion 2 verwendet haben: Fügen Sie Daten hinzu.  
   
 3.  Behalten Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen** die Auswahl der Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** bei, und klicken Sie auf **Weiter**.  
   
@@ -85,14 +85,14 @@ ms.locfileid: "67285022"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |1|2|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
-    |1|3|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
-    |2|4|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
-    |3|5|\<Vorname des Benutzers >|\<Nachname des Benutzers >|\<domain\username>|  
+    |1|2|\<Benutzer Vorname >|\<Nachname des Benutzers >|\<Domäne \ Benutzername >|  
+    |1|3|\<Benutzer Vorname >|\<Nachname des Benutzers >|\<Domäne \ Benutzername >|  
+    |2|4|\<Benutzer Vorname >|\<Nachname des Benutzers >|\<Domäne \ Benutzername >|  
+    |3|5|\<Benutzer Vorname >|\<Nachname des Benutzers >|\<Domäne \ Benutzername >|  
   
 3.  Ersetzen Sie im neuen Arbeitsblatt "Vorname", "Nachname" sowie "Domäne\Benutzername" durch die Namen und Anmelde-IDs von drei Benutzern in Ihrer Organisation. Verwenden Sie den gleichen Benutzer in den ersten beiden Zeilen für Employee Id 1. Dadurch wird angezeigt, dass der Benutzer zu mehreren Vertriebsgebieten gehört. Ändern Sie die Felder Employee Id und Sales Territory Id nicht.  
   
-4.  Speichern Sie das Arbeitsblatt als `Sample Employee`.  
+4.  Speichern Sie das Arbeitsblatt `Sample Employee`als.  
   
 5.  Wählen Sie im Arbeitsblatt alle Zellen mit Mitarbeiterdaten, einschließlich der Kopfzeilen, aus, klicken Sie mit der rechten Maustaste auf die ausgewählten Daten, und klicken Sie anschließend auf **Kopieren**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67285022"
   
      Wenn „Einfügen“ abgeblendet dargestellt ist, klicken Sie im Modell-Designer-Fenster in einer beliebigen Tabelle auf eine Spalte, und klicken Sie anschließend auf das Menü **Bearbeiten** und auf **Einfügen**.  
   
-7.  In der **Vorschau einfügen** Dialogfeld **Tabellenname**, Typ `Employee Security`.  
+7.  Geben`Employee Security`Sie im Dialogfeld **Vorschau einfügen** unter **Tabellen Name den Namen**ein.  
   
 8.  Überprüfen Sie unter **Einzufügende Daten**, ob die Daten alle Benutzerdaten und Kopfzeilen aus dem Arbeitsblatt „Sample Employee“ enthalten.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67285022"
      Beachten Sie, dass die Eigenschaft Aktiv für diese Beziehung False ist, das bedeutet inaktiv. Das liegt daran, dass die Tabelle Internet Sales bereits eine andere aktive Beziehung aufweist, die in Measures verwendet wird.  
   
 ## <a name="hide-the-employee-security-table-from-client-applications"></a>Ausblenden der Employee Security-Tabelle in Clientanwendungen  
- In dieser Aufgabe werden Sie die Tabelle Employee Security blenden, sodass sie in der Feldliste einer Clientanwendung angezeigt werden. Denken Sie daran, dass eine Tabelle durch Ausblenden nicht gesichert wird. Benutzer können weiterhin Daten der Tabelle Employee Security abfragen, wenn sie über die nötigen Kenntnisse verfügen. Um die Daten der Tabelle Employee Security zu sichern, damit Benutzer keine der Daten abfragen können, wenden Sie in einer späteren Aufgabe einen Filter an.  
+ In dieser Aufgabe blenden Sie die Tabelle Employee Security aus, sodass Sie nicht in der Feldliste einer Client Anwendung angezeigt wird. Denken Sie daran, dass eine Tabelle durch Ausblenden nicht gesichert wird. Benutzer können weiterhin Daten der Tabelle Employee Security abfragen, wenn sie über die nötigen Kenntnisse verfügen. Um die Daten der Tabelle Employee Security zu sichern, damit Benutzer keine der Daten abfragen können, wenden Sie in einer späteren Aufgabe einen Filter an.  
   
 #### <a name="to-hide-the-employee-table-from-client-applications"></a>So blenden Sie die Employee Security-Tabelle in Clientanwendungen aus  
   
@@ -130,7 +130,7 @@ ms.locfileid: "67285022"
  In dieser Aufgabe erstellen Sie eine neue Benutzerrolle. Diese Rolle umfasst einen Zeilenfilter, der definiert, welche Zeilen der Tabelle Sales Territory für die Benutzer sichtbar sind. Der Filter wird dann über die 1:n-Beziehung auf alle anderen Tabellen angewendet, die mit der Tabelle Sales Territory verknüpft sind. Sie wenden außerdem einen einfachen Filter an, der die vollständige Tabelle Employee Security sichert, damit keine Benutzer, die Mitglied der Rolle sind, Daten in der Tabelle abfragen können.  
   
 > [!NOTE]  
->  Die Rolle Sales Employees by Territory, die Sie in dieser Lektion erstellen, schränkt Mitglieder ein, sodass sie nur Umsatzdaten für das Vertriebsgebiet suchen (oder abfragen) können, zu dem sie gehören. Wenn Sie einen Benutzer als Mitglied für die Sales-Mitarbeiter nach Territory-Rolle, die auch vorhanden ist hinzufügen, wie ein Element in einer Rolle in erstellt [Lektion 12: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md), erhalten Sie eine Kombination von Berechtigungen. Wenn ein Benutzer Mitglied mehrerer Rollen ist, sind die für jede Rolle definierten Berechtigungen und Zeilenfilter kumulativ. Der Benutzer verfügt also um mehr Berechtigungen, entsprechend der kombinierten Rollen.  
+>  Die Rolle Sales Employees by Territory, die Sie in dieser Lektion erstellen, schränkt Mitglieder ein, sodass sie nur Umsatzdaten für das Vertriebsgebiet suchen (oder abfragen) können, zu dem sie gehören. Wenn Sie einen Benutzer als Mitglied der Rolle Sales Employees by Territory hinzufügen, die auch als Mitglied einer in [Lektion 12 erstellten Rolle vorhanden ist: Erstellen von](https://docs.microsoft.com/analysis-services/lesson-11-create-roles)Rollen, erhalten Sie eine Kombination von Berechtigungen. Wenn ein Benutzer Mitglied mehrerer Rollen ist, sind die für jede Rolle definierten Berechtigungen und Zeilenfilter kumulativ. Der Benutzer verfügt also um mehr Berechtigungen, entsprechend der kombinierten Rollen.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>So erstellen Sie die Benutzerrolle 'Sales Employees by Territory'  
   
@@ -140,7 +140,7 @@ ms.locfileid: "67285022"
   
      Der Liste wird eine neue Rolle mit der Berechtigung Keine hinzugefügt.  
   
-3.  Klicken Sie auf die neue Rolle, und klicken Sie dann in der **Namen** Spalte benennen Sie die Rolle zum `Sales Employees by Territory`.  
+3.  Klicken Sie auf die neue Rolle, und benennen Sie in der Spalte **Name** die Rolle in `Sales Employees by Territory`um.  
   
 4.  Klicken Sie in der Spalte **Berechtigungen** auf die Dropdownliste, und wählen Sie anschließend die Berechtigung **Lesen** aus.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "67285022"
   
 7.  Klicken Sie auf die Registerkarte **Zeilenfilter** .  
   
-8.  Für die `Employee Security` -Tabelle in der **DAX-Filter** Spalte geben die folgende Formel ein.  
+8.  Geben Sie `Employee Security` für die Tabelle in der Spalte **DAX Filter** die folgende Formel ein.  
   
      `=FALSE()`  
   
@@ -198,8 +198,8 @@ ms.locfileid: "67285022"
      Dieser Benutzer kann nur Internetumsatzdaten des Gebiets, dem er zugeordnet ist, durchsuchen oder abfragen, da der für die Tabelle Sales Territory in der Benutzerrolle Sales Employees by Territory definierte Zeilenfilter eine effektive Sicherung der Daten in Bezug auf andere Vertriebsgebiete bedeutet.  
   
 ## <a name="see-also"></a>Siehe auch  
- [USERNAME-Funktion &#40;DAX&#41;](/dax/username-function-dax)   
- [LOOKUPVALUE-Funktion &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
- [CUSTOMDATA-Funktion &#40;DAX&#41;](/dax/customdata-function-dax)  
+ [USERNAME- &#40;Funktion in DAX&#41;](/dax/username-function-dax)   
+ [Lookupvalue- &#40;Funktion (DAX)&#41;](/dax/lookupvalue-function-dax)   
+ [CustomData- &#40;Funktion (DAX)&#41;](/dax/customdata-function-dax)  
   
   

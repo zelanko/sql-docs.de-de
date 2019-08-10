@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 258e648ac2ebe3da2c30faa908a3474e9e51264a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050ceeaa8eb5700f108b7135616817e09c0031cb
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937719"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889036"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,20 +28,20 @@ IsTestCase()
 ```  
   
 ## <a name="result-type"></a>Ergebnistyp  
- Gibt **"true"** ist der Fall ein Teil des testdatasets; andernfalls **"false"** .  
+ Gibt " **true** " zurück, wenn der Fall ein Teil des Test Datasets ist. andernfalls **false**.  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn Sie eine Miningstruktur und ein damit verknüpftes Miningmodell mit dem Data Mining-Assistenten erstellen, werden standardmäßig 30 Prozent der Fälle zur Verwendung als Testdataset zurückgehalten. Die übrigen Fälle werden zum Trainieren des Data Mining-Modells verwendet. Dasselbe Testdataset kann mit allen Modellen verwendet werden, die auf der Struktur basieren. Wenn Sie das Miningmodell jedoch mithilfe von DMX erstellen, werden standardmäßig alle Daten zum Trainieren des Modells verwendet, und es wird kein Testsatz erstellt. Um ein testdataset erstellt werden kann, müssen Sie die Parameter der WITH HOLDOUT-Klausel festlegen.  
+ Wenn Sie eine Miningstruktur und ein damit verknüpftes Miningmodell mit dem Data Mining-Assistenten erstellen, werden standardmäßig 30 Prozent der Fälle zur Verwendung als Testdataset zurückgehalten. Die übrigen Fälle werden zum Trainieren des Data Mining-Modells verwendet. Dasselbe Testdataset kann mit allen Modellen verwendet werden, die auf der Struktur basieren. Wenn Sie das Miningmodell jedoch mithilfe von DMX erstellen, werden standardmäßig alle Daten zum Trainieren des Modells verwendet, und es wird kein Testsatz erstellt. Um die Erstellung eines Test Datasets zu aktivieren, müssen Sie die Parameter der WITH HOLDOUT-Klausel festlegen.  
   
  Sie können ermitteln, ob ein Testsatz für eine bestimmte Miningstruktur erstellt wurde, indem Sie den Wert der Eigenschaften von <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> und <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> anzeigen.  
   
 > [!NOTE]  
->  Für das Modell muss Drillthrough aktiviert werden, wenn die IsTrainingCase oder IsTestCase-Funktion zu verwenden, um Details zu den Fällen in einem bestimmten Modell zurückgegeben werden sollen. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
+>  Drillthrough muss für das Modell aktiviert sein, wenn Sie die IsTrainingCase-Funktion oder die IsTestCase-Funktion verwenden möchten, um Details zu den Fällen in einem bestimmten Modell zurückzugeben. Weitere Informationen finden Sie unter [Aktivieren von Drillthrough für ein Miningmodell](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
- Um Fälle zurückzugeben, die Teil des trainingsdatasets sind, verwenden Sie die Funktion [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
+ Verwenden Sie die [ &#40;IsTrainingCase DMX&#41;](../dmx/istrainingcase-dmx.md)-Funktion, um die Fälle zurückzugeben, die Teil des Trainings Datasets sind.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die `Targeted Mailing` Mining-Struktur, die in erstellt haben, wird die [Lernprogramm zu Data Mining](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Die Abfrage gibt alle Fälle der Struktur zurück, die für Tests verwendet werden.  
+ Im folgenden Beispiel wird die `Targeted Mailing` Mining Struktur verwendet, die im Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellt wird. Die Abfrage gibt alle Fälle der Struktur zurück, die für Tests verwendet werden.  
   
 ```  
 SELECT *  
@@ -49,11 +49,11 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- Weitere Informationen zum Abfragen von Fällen im Datamining verwendet wird, finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) und [SELECT FROM &#60;Struktur&#62;. Fällen](../dmx/select-from-structure-cases.md).  
+ Weitere Informationen zum Abfragen von Fällen, die in Data Mining verwendet werden, finden [Sie &#60;unter&#62;Select from Model. &#40;&#41; DMX-Fälle](../dmx/select-from-model-cases-dmx.md) und [Select &#60;from&#62;-Struktur. Fälle](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Data Mining-Abfrage](../analysis-services/data-mining/data-mining-queries.md)   
- [Trainings- und Testdatasets](../analysis-services/data-mining/training-and-testing-data-sets.md)  
+ [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
+ [Data Mining-Abfrage](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
+ [Trainings- und Testdatasets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
   
   

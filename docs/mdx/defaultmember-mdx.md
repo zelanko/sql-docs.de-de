@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c5843ec42cf4ba712a2e55c9cc96dd6f482c0760
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047096"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892903"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  Das Standardelement eines Attributs wird zum Auswerten von Ausdrücken verwendet, wenn ein Attribut nicht in einer Abfrage enthalten ist.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die **DefaultMember** -Funktion in Verbindung mit der **Namen** -Funktion verwendet, um das Standardelement der Destination Currency-Dimension im Adventure Works-Cube zurückzugeben. Im Beispiel gibt **US-Dollar**. Die **Namen** Funktion dient zum Zurückgeben der Name des Measures anstelle der Standardeigenschaft des Measures, so handelt es sich **Wert**.  
+ Im folgenden Beispiel wird die **DefaultMember** -Funktion in Verbindung mit der **Name** -Funktion verwendet, um das Standardelement für die Ziel Währungs Dimension im Adventure Works-Cube zurückzugeben. Im Beispiel wird **US-Dollar**zurückgegeben. Die Funktion " **Name** " wird verwendet, um den Namen des Measures anstelle der Standard Eigenschaft des Measures zurückzugeben, das den **Wert "Value**" hat.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,6 +46,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Definieren eines Standardelements](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [Definieren eines Standardelements](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

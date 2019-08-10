@@ -15,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cd5890df8ddc080aaa3e647c77b3c09d8d35216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832601"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890410"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
   Der Data Mining-Abfragetask führt Vorhersageabfragen basierend auf in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellten Data Mining-Modellen aus. Die Vorhersageabfrage erstellt mithilfe von Miningmodellen eine Vorhersage für neue Daten. Beispielsweise kann eine Vorhersageabfrage vorhersagen, wie viele Segelboote in den Sommermonaten voraussichtlich verkauft werden, oder sie kann eine Liste potenzieller Kunden generieren, die mit hoher Wahrscheinlichkeit ein Segelboot kaufen werden.  
@@ -36,9 +36,9 @@ ms.locfileid: "62832601"
 ## <a name="prediction-queries"></a>Vorhersageabfragen  
  Bei der Abfrage handelt es sich um eine DMX-Anweisung (Data Mining Extensions). Die DMX-Sprache ist eine Erweiterung der SQL-Sprache, die das Arbeiten mit Miningmodellen unterstützt. Weitere Informationen zum Verwenden der DMX-Sprache finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference).  
   
- Der Task kann mehrere Miningmodelle abfragen, die auf der gleichen Miningstruktur basieren. Ein Miningmodell wird mithilfe eines der Data Mining-Algorithmen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt. Die Miningstruktur des Data Mining-Abfragetasks kann mehrere Miningmodelle einschließen, die mit verschiedenen Algorithmen erstellt wurden. Weitere Informationen finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) und [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Der Task kann mehrere Miningmodelle abfragen, die auf der gleichen Miningstruktur basieren. Ein Miningmodell wird mithilfe eines der Data Mining-Algorithmen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt. Die Miningstruktur des Data Mining-Abfragetasks kann mehrere Miningmodelle einschließen, die mit verschiedenen Algorithmen erstellt wurden. Weitere Informationen finden Sie unter [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) und [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
- Die Vorhersageabfrage, die der Data Mining-Abfragetask ausführt, gibt als Ergebnis eine einzelne Zeile oder ein Dataset zurück. Eine Abfrage, die eine einzelne Zeile zurückgibt, wird als SINGLETON-Abfrage bezeichnet: Beispielsweise gibt die Abfrage zur Vorhersage, wie viele Segelboote in den Sommermonaten verkauft werden, eine Zahl zurück. Weitere Informationen zu Vorhersageabfragen, die eine einzelne Zeile zurückgeben, finden Sie unter [Data Mining-Abfrageschnittstellen](../../analysis-services/data-mining/data-mining-query-tools.md).  
+ Die Vorhersageabfrage, die der Data Mining-Abfragetask ausführt, gibt als Ergebnis eine einzelne Zeile oder ein Dataset zurück. Eine Abfrage, die eine einzelne Zeile zurückgibt, wird als SINGLETON-Abfrage bezeichnet: Beispielsweise gibt die Abfrage zur Vorhersage, wie viele Segelboote in den Sommermonaten verkauft werden, eine Zahl zurück. Weitere Informationen zu Vorhersage Abfragen, die eine einzelne Zeile zurückgeben, finden Sie unter [Data Mining-Abfrageschnittstellen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
   
  Die Abfrageergebnisse werden in Tabellen gespeichert. Falls eine Tabelle mit dem vom Data Mining-Abfragetask angegebenen Namen bereits vorhanden ist, kann der Task eine neue Tabelle erstellen, wobei der gleiche Name verwendet und eine Zahl angefügt wird, oder der Tabelleninhalt kann überschrieben werden.  
   

@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189150"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893136"
 ---
 # <a name="manage-job-steps"></a>Verwalten von Auftragsschritten
   Ein Auftragsschritt ist eine Aktion, die der Auftrag auf einer Datenbank oder einem Server ausführt. Jeder Auftrag muss mindestens einen Auftragsschritt aufweisen. Folgende Auftragsschritte sind möglich:  
@@ -50,7 +50,7 @@ ms.locfileid: "68189150"
   
  Jeder Auftragsschritt wird in einem bestimmten Sicherheitskontext ausgeführt. Wenn der Auftragsschritt einen Proxy erfordert, wird er im Sicherheitskontext der Anmeldeinformationen des Proxys ausgeführt. Wenn ein Auftragsschritt keinen Proxy erfordert, wird er im Kontext des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkontos ausgeführt. Nur Mitglieder der festen Serverrolle sysadmin können Aufträge erstellen, die nicht ausdrücklich einen Proxy angeben.  
   
- Weil Auftragsschritte im Kontext eines bestimmten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzers ausgeführt werden, muss dieser Benutzer über die Berechtigungen und Konfigurationen verfügen, die für die Ausführung des Auftragsschritts erforderlich sind. Wenn Sie beispielsweise einen Auftrag erstellen, der einen Laufwerkbuchstaben oder einen UNC-Pfad (Universal Naming Convention) erfordert, können die Auftragsschritte unter Ihrem Windows-Benutzerkonto ausgeführt werden, während die Tasks getestet werden. Allerdings muss der Windows-Benutzer für den Auftragsschritt auch über die notwendigen Berechtigungen, die Laufwerkbuchstabenkonfigurationen oder den Zugriff auf das erforderliche Laufwerk verfügen. Andernfalls erzeugt der Auftragsschritt einen Fehler. Um dieses Problem zu verhindern, stellen Sie sicher, dass der Proxy für jeden Auftragsschritt über die notwendigen Berechtigungen für den Task verfügt, von dem der Auftragsschritt ausgeführt wird. Weitere Informationen finden Sie unter [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
+ Weil Auftragsschritte im Kontext eines bestimmten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzers ausgeführt werden, muss dieser Benutzer über die Berechtigungen und Konfigurationen verfügen, die für die Ausführung des Auftragsschritts erforderlich sind. Wenn Sie beispielsweise einen Auftrag erstellen, der einen Laufwerkbuchstaben oder einen UNC-Pfad (Universal Naming Convention) erfordert, können die Auftragsschritte unter Ihrem Windows-Benutzerkonto ausgeführt werden, während die Tasks getestet werden. Allerdings muss der Windows-Benutzer für den Auftragsschritt auch über die notwendigen Berechtigungen, die Laufwerkbuchstabenkonfigurationen oder den Zugriff auf das erforderliche Laufwerk verfügen. Andernfalls erzeugt der Auftragsschritt einen Fehler. Um dieses Problem zu verhindern, stellen Sie sicher, dass der Proxy für jeden Auftragsschritt über die notwendigen Berechtigungen für den Task verfügt, von dem der Auftragsschritt ausgeführt wird. Weitere Informationen finden Sie unter [Security Center für SQL Server Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).  
   
 ## <a name="job-step-logs"></a>Auftragsschrittprotokolle  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent kann die Ausgabe bestimmter Auftragsschritte entweder in eine Betriebssystemdatei oder in die sysjobstepslogs-Tabelle der msdb-Datenbank schreiben. Von den folgenden Auftragsschritttypen können Ausgaben in beide Ziele geschrieben werden:  
@@ -89,7 +89,7 @@ ms.locfileid: "68189150"
   
  Sie können auch eine vorhandene [!INCLUDE[tsql](../../includes/tsql-md.md)] -Datei als Befehl für den Auftragsschritt öffnen.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Auftragsschritte verwenden keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys. Stattdessen wird der Auftragsschritt als Besitzer des Auftragsschritts bzw. als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto ausgeführt, wenn der Besitzer des Auftragsschritts Mitglied der festen Serverrolle sysadmin ist. Mitglieder der festen Serverrolle „sysadmin“ können auch angeben, dass [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte unter dem Kontext eines anderen Benutzers ausgeführt werden, indem der *database_user_name* -Parameter der gespeicherten Prozedur „sp_add_jobstep“ verwendet wird. Weitere Informationen finden Sie unter [Sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Auftragsschritte verwenden keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys. Stattdessen wird der Auftragsschritt als Besitzer des Auftragsschritts bzw. als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto ausgeführt, wenn der Besitzer des Auftragsschritts Mitglied der festen Serverrolle sysadmin ist. Mitglieder der festen Serverrolle „sysadmin“ können auch angeben, dass [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte unter dem Kontext eines anderen Benutzers ausgeführt werden, indem der *database_user_name* -Parameter der gespeicherten Prozedur „sp_add_jobstep“ verwendet wird. Weitere Informationen finden Sie unter [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 > [!NOTE]  
 >  Ein einzelner [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritt kann mehrere Batches enthalten. [!INCLUDE[tsql](../../includes/tsql-md.md)] Auftragsschritte können mehrere eingebettete GO-Befehle enthalten.  
@@ -166,7 +166,7 @@ Set oServer = nothing
   
 -   Eingeben der auszuführenden Anweisung. Bei der Anweisung muss es sich um eine MDX-Abfrage handeln (Multidimensional Expressions, mehrdimensionale Ausdrücke).  
   
- Weitere Informationen zu MDX finden Sie unter [Grundlegendes zu MDX-Abfrage &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
+ Weitere Informationen zu MDX finden Sie unter [Grund &#40;Legendes zu MDX&#41;-Abfragen Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ## <a name="integration-services-packages"></a>Integration Services-Pakete  
  Wenn Sie einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketauftragsschritt erstellen, müssen Sie folgende Schritte durchführen:  
@@ -211,7 +211,7 @@ Set oServer = nothing
 |Beschreibt, wie ein Auftragsschrittprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Löschen eines Auftragsschrittprotokolls](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Siehe auch  
- [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo. sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Erstellen von Aufträgen](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

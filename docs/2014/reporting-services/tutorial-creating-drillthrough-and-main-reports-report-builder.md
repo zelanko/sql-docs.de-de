@@ -10,76 +10,76 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66098878"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892384"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough- und Hauptberichten (Berichts-Generator)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Erstellen von Drillthrough-und Haupt Berichten (Berichts-Generator)
   In diesem Lernprogramm erfahren Sie, wie Sie zwei Berichtsarten erstellen: einen Drillthroughbericht und einen Hauptbericht. Die in diesen Berichten verwendeten Beispielvertriebsdaten werden aus einem Analysis Services-Cube abgerufen. Die folgende Abbildung zeigt die Berichte, die Sie erstellen.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- Die folgende Abbildung zeigt, wie der Feldwert, Games and Toys, im Hauptbericht im Titel des des Drillthroughberichts zeigt. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie "Games and Toys".  
+ Die folgende Abbildung zeigt, wie der Feldwert, Games und Toys, im Hauptbericht im Titel des Drillthrough-Berichts angezeigt wird. Die Daten im Drillthroughbericht beziehen sich auf die Produktkategorie "Games and Toys".  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
- **In den Drillthroughbericht lernen Sie, wie Sie:**  
+ **Im Drillthrough-Bericht lernen Sie Folgendes:**  
   
-1.  [Erstellen eines Drillthrough-Matrixberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten](#DMatrixAndDataset)  
+1.  [Erstellen eines Drillthrough-Matrix Berichts und eines Datasets mit dem Tabellen-oder Matrix-Assistenten](#DMatrixAndDataset)  
   
     1.  [Angeben einer Datenverbindung](#DConnection)  
   
-    2.  [Erstellen Sie eine MDX-Abfrage](#DMDXQuery)  
+    2.  [Erstellen einer MDX-Abfrage](#DMDXQuery)  
   
-    3.  [Organisieren Sie Daten in Gruppen Style](#DLayout)  
+    3.  [Organisieren von Daten im Gruppenformat](#DLayout)  
   
-    4.  [Fügen Sie Teilergebnisse und Summen hinzu](#DTotals)  
+    4.  [Hinzufügen von Teilergebnissen und Summen](#DTotals)  
   
-    5.  [Wählen Sie einen Stil](#DStyle)  
+    5.  [Stil auswählen](#DStyle)  
   
 2.  [Formatieren von Daten als Währung](#DFormat)  
   
-3.  [Hinzufügen von Spalten zum Anzeigen von Umsatzwerten in Sparklines](#DSparkline)  
+3.  [Hinzufügen von Spalten zum Anzeigen von Umsatz Werten in Sparklines](#DSparkline)  
   
-4.  [Hinzufügen des Berichtstitels mit dem Namen der Produktkategorie](#DReportTitle)  
+4.  [Hinzufügen eines Berichts Titels mit dem Namen der Produktkategorie](#DReportTitle)  
   
-5.  [Aktualisieren von Parametereigenschaften](#DParameter)  
+5.  [Parameter Eigenschaften aktualisieren](#DParameter)  
   
 6.  [Speichern des Berichts in einer SharePoint-Bibliothek](#DSave)  
   
- **Im Hauptbericht erfahren Sie, wie Sie:**  
+ **Im Hauptbericht lernen Sie Folgendes:**  
   
-1.  [Erstellen Sie die Hauptmatrixberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten](#MMatrixAndDataset)  
+1.  [Erstellen des Haupt Matrix Berichts und des Datasets mit dem Tabellen-oder Matrix-Assistenten](#MMatrixAndDataset)  
   
     1.  [Angeben einer Datenverbindung](#MConnection)  
   
-    2.  [Erstellen Sie eine MDX-Abfrage](#MMDXQuery)  
+    2.  [Erstellen einer MDX-Abfrage](#MMDXQuery)  
   
-    3.  [Daten in Gruppen organisieren](#MLayout)  
+    3.  [Organisieren von Daten in Gruppen](#MLayout)  
   
-    4.  [Fügen Sie Teilergebnisse und Summen hinzu](#MTotals)  
+    4.  [Hinzufügen von Teilergebnissen und Summen](#MTotals)  
   
-    5.  [Wählen Sie einen Stil](#MStyle)  
+    5.  [Stil auswählen](#MStyle)  
   
-2.  [Entfernen der Gesamtergebniszeile](#MGrandTotal)  
+2.  [Entfernen der Gesamt Ergebniszeile](#MGrandTotal)  
   
-3.  [Konfigurieren der Textfeldaktion für den Drillthrough](#MDrillthrough)  
+3.  [Konfigurieren der Text Feld Aktion für Drillthrough](#MDrillthrough)  
   
 4.  [Ersetzen von numerischen Werten durch Indikatoren](#MIndicators)  
   
-5.  [Aktualisieren von Parametereigenschaften](#MParameter)  
+5.  [Parameter Eigenschaften aktualisieren](#MParameter)  
   
-6.  [Hinzufügen eines Berichtstitels](#MTitle)  
+6.  [Hinzufügen eines Berichts Titels](#MTitle)  
   
 7.  [Speichern des Berichts in einer SharePoint-Bibliothek](#MSave)  
   
-8.  [Führen Sie die Haupt- und Drillthroughberichts](#MRunReports)  
+8.  [Ausführen der Haupt-und Drillthrough-Berichte](#MRunReports)  
   
- Ungefähre Dauer dieses Lernprogramms: 30 Minuten.  
+ Geschätzte Zeit zum Durchführen dieses Tutorials: 30 Minuten.  
   
 ## <a name="requirements"></a>Anforderungen  
  Dieses Lernprogramm erfordert Zugriff auf den Contoso Sales-Cube. Diese Anforderung gilt sowohl für den Drillthrough- als auch für den Hauptbericht. Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -89,9 +89,9 @@ ms.locfileid: "66098878"
   
 #### <a name="to-create-a-new-report"></a>So erstellen Sie einen neuen Bericht  
   
-1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
+1.  Klicken Sie auf **Start**,zeigen Sie auf Programme [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , zeigen Sie auf **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-     Die **Einstieg** Dialogfeld wird geöffnet. Wenn es nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
+     Das Dialogfeld " **Getting Started** " wird geöffnet. Wenn Sie nicht angezeigt wird, klicken Sie auf der Schaltfläche **Berichts-Generator** auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66098878"
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
     > [!TIP]  
-    >  Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 6 unter [So erstellen Sie das Dataset](#DSkip) fort.  
+    >  Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 6 unter [So erstellen Sie das Dataset](#DSkip) fort.  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -167,7 +167,7 @@ ms.locfileid: "66098878"
   
 5.  Erweitern Sie in der Filterausdruckliste den Eintrag **All Channel**, klicken Sie auf **Online**, auf **Reseller**und anschließend auf **OK**.  
   
-     Die Abfrage enthält nun einen Filter, um nur die folgenden Vertriebswege einzuschließen: Online und Wiederverkäufer.  
+     Die Abfrage enthält nun einen Filter, um nur die folgenden Kanäle einzuschließen: Online und Wiederverkäufer.  
   
 6.  Erweitern Sie die Dimension „Sales Territory“, und ziehen Sie anschließend „Sales Territory Group“ in die Spalte **Hierarchie** unter **Channel Name**.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66098878"
     > [!NOTE]  
     >  Der Parameter enthält die Namen von Produktkategorien. Wenn Sie im Hauptbericht auf den Namen einer Produktkategorie klicken, wird dieser Name durch Verwendung dieses Parameters an den Drillthroughbericht übergeben.  
   
-###  <a name="DSkip"></a> Zum Erstellen des Datasets  
+###  <a name="DSkip"></a>So erstellen Sie das DataSet  
   
 1.  Ziehen Sie „Channel Name“ aus der Dimension „Channel“ in den Datenbereich.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "66098878"
   
 7.  Klicken Sie auf **Weiter**.  
   
-##  <a name="DLayout"></a> 1c. Gruppieren von Daten  
+##  <a name="DLayout"></a>1C. Gruppieren von Daten  
  Durch das Auswählen von Feldern für die Datengruppierung entwerfen Sie eine Matrix mit Zeilen und Spalten, in denen Detaildaten und aggregierte Daten angezeigt werden.  
   
 #### <a name="to-organize-data-into-groups"></a>So gruppieren Sie Daten  
@@ -238,7 +238,7 @@ ms.locfileid: "66098878"
   
 6.  Klicken Sie auf **Weiter**.  
   
-##  <a name="DTotals"></a> 1d. Hinzufügen von Teilergebnissen und Summen  
+##  <a name="DTotals"></a>1D. Hinzufügen von Teilergebnissen und Summen  
  Nachdem Sie Gruppen erstellt haben, können Sie Zeilen hinzufügen und formatieren, in denen Aggregatwerte für die Felder angezeigt werden. Sie können auch auswählen, ob alle Daten angezeigt werden oder der Benutzer gruppierte Daten interaktiv erweitern und reduzieren kann.  
   
 #### <a name="to-add-subtotals-and-totals"></a>So fügen Sie Teilergebnisse und Summen hinzu  
@@ -249,12 +249,12 @@ ms.locfileid: "66098878"
   
 2.  Klicken Sie auf **Weiter**.  
   
-##  <a name="DStyle"></a> 1E. Auswählen eines Formats  
+##  <a name="DStyle"></a>1E. Auswählen eines Formats  
  Ein Format dient zum Angeben eines Schriftschnitts, einer Farbpalette und einer Rahmenart.  
   
 #### <a name="to-specify-a-style"></a>So geben Sie ein Format an  
   
-1.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich Formate Slate-Objekt.  
+1.  Wählen Sie auf der Seite Format **auswählen** im Bereich Stile die Option Slate aus.  
   
 2.  Klicken Sie auf **Fertig stellen**.  
   
@@ -389,12 +389,12 @@ ms.locfileid: "66098878"
   
 7.  Klicken Sie auf **Speichern**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Erstellen eines neuen Berichts aus der Tabelle oder Matrix-Assistenten  
+##  <a name="MMatrixAndDataset"></a> 1. Erstellen eines neuen Berichts mit dem Tabellen-oder Matrix-Assistenten  
  Erstellen Sie im Dialogfeld **Erste Schritte** mit dem **Tabellen- oder Matrix-Assistenten**einen Matrixbericht.  
   
 #### <a name="to-create-a-new-report"></a>So erstellen Sie einen neuen Bericht  
   
-1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
+1.  Klicken Sie auf **Start**,zeigen Sie auf Programme [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , zeigen Sie auf **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
 2.  Überprüfen Sie im Dialogfeld **Erste Schritte** , dass **Neuer Bericht** ausgewählt ist, und klicken Sie anschließend auf **Tabellen- oder Matrix-Assistent**.  
   
@@ -447,7 +447,7 @@ ms.locfileid: "66098878"
 2.  Klicken Sie im Dialogfeld **Cubeauswahl** auf „Sales“ und anschließend auf **OK**.  
   
     > [!TIP]  
-    >  Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 5 unter [So erstellen Sie das Dataset](#MSkip) fort.  
+    >  Wenn Sie die MDX-Abfrage nicht manuell erstellen möchten, klicken Sie auf das Symbol ![In den Entwurfsmodus wechseln](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode"), wechseln Sie im Abfrage-Designer zum Abfragemodus, fügen Sie die abgeschlossene MDX in den Abfrage-Designer ein, und fahren Sie anschließend mit Schritt 5 unter [So erstellen Sie das Dataset](#MSkip) fort.  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -461,7 +461,7 @@ ms.locfileid: "66098878"
   
 5.  Erweitern Sie in der Filterausdruckliste den Eintrag **All Channel**, klicken Sie auf **Online** und **Reseller**und anschließend auf **OK**.  
   
-     Die Abfrage enthält nun einen Filter, um nur die folgenden Vertriebswege einzuschließen: Online und Wiederverkäufer.  
+     Die Abfrage enthält nun einen Filter, um nur die folgenden Kanäle einzuschließen: Online und Wiederverkäufer.  
   
 6.  Erweitern Sie die Dimension „Sales Territory“, und ziehen Sie anschließend „Sales Territory Group“ in die Spalte **Hierarchie** unter **Channel Name**.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "66098878"
   
 8.  Geben Sie im Feld **Name** den Text  **Net Sales**ein, und klicken Sie anschließend auf **OK**. Im Bereich Berechnete Elemente wird das berechnete Element **Net Sales** aufgeführt.  
   
-###  <a name="MSkip"></a> Zum Erstellen des Datasets  
+###  <a name="MSkip"></a>So erstellen Sie das DataSet  
   
 1.  Ziehen Sie „Channel Name“ aus der Dimension „Channel“ in den Datenbereich.  
   
@@ -535,7 +535,7 @@ ms.locfileid: "66098878"
   
 6.  Klicken Sie auf **Weiter**.  
   
-##  <a name="MLayout"></a> 1c. Gruppieren von Daten  
+##  <a name="MLayout"></a>1C. Gruppieren von Daten  
  Durch das Auswählen von Feldern für die Datengruppierung entwerfen Sie eine Matrix mit Zeilen und Spalten, in denen Detaildaten und aggregierte Daten angezeigt werden.  
   
 #### <a name="to-organize-data-into-groups"></a>So gruppieren Sie Daten  
@@ -554,23 +554,23 @@ ms.locfileid: "66098878"
   
      In Schritt 3 und 4 werden die Daten angegeben, die in der Matrix angezeigt werden sollen.  
   
-##  <a name="MTotals"></a> 1d. Hinzufügen von Teilergebnissen und Summen  
+##  <a name="MTotals"></a>1D. Hinzufügen von Teilergebnissen und Summen  
  Sie können in Berichten Teil- und Gesamtergebnisse anzeigen. Die Daten im Hauptbericht zeigen einen Indikator an; Sie werden die Gesamtsumme nach Abschluss des Assistenten entfernen.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>So fügen Sie Teilergebnisse und Gesamtsummen hinzu  
   
 1.  Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
   
-     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt: Die erste Zeile ist die Spaltengruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`, und die vierte Zeile enthält die Ergebnisse.  
+     Im Vorschaubereich des Assistenten wird eine Matrix mit vier Zeilen angezeigt.  Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt: Die erste Zeile ist die Spalten Gruppe, die zweite Zeile enthält die Spaltenüberschriften, die dritte Zeile enthält die produktkategoriedaten (`[Sum(Net_ QTY)]` und `[Sum(Net_Sales)]`), und die vierte Zeile enthält die Summen.  
   
 2.  Klicken Sie auf **Weiter**.  
   
-##  <a name="MStyle"></a> 1E. Auswählen eines Formats  
+##  <a name="MStyle"></a>1E. Auswählen eines Formats  
  Wenden Sie auf den Bericht das Format "Schiefer" an. Dies ist das gleiche Format, das auch beim Drillthroughbericht verwendet wird.  
   
 #### <a name="to-specify-a-style"></a>So geben Sie ein Format an  
   
-1.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich Formate Slate-Objekt.  
+1.  Wählen Sie auf der Seite Format **auswählen** im Bereich Stile die Option Slate aus.  
   
 2.  Klicken Sie auf **Fertig stellen**.  
   
@@ -738,6 +738,6 @@ ms.locfileid: "66098878"
 5.  Sie können sich auch andere Produktkategorien ansehen, indem Sie auf deren Namen klicken.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)  
+ [Lern &#40;Programme Berichts-Generator&#41;](report-builder-tutorials.md)  
   
   

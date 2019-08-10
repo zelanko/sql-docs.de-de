@@ -8,32 +8,32 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8eff7603fa0d0be0e90af201e524554f5e336ea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57909c1bb4009ae85b7e1b38b8b3cf3fa0e70ea9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937797"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892771"
 ---
 # <a name="general-prediction-functions-dmx"></a>Allgemeine Vorhersagefunktionen (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Können Sie die **wählen** Anweisung im Data Mining Extensions (DMX) auf verschiedene Arten von Abfragen zu erstellen. Eine Abfrage kann verwendet werden, um Informationen zum Miningmodell selbst zurückzugeben, neue Vorhersagen zu treffen oder das Modell durch Trainieren mit neuen Daten zu ändern. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet eine Vielzahl von spezialisierten Funktionen, die die Art der Informationen zu steuern, die in einer Abfrage zurückgegeben wird. Durch Hinzufügen dieser Funktionen zu einer DMX-Abfrage können Sie zusätzliche statistische Daten oder Datenspalten abrufen. Jeder Abfragetyp und jeder Modelltyp unterstützt jedoch nur bestimmte Funktionen.  
+  Sie können die **Select** -Anweisung in Data Mining-Erweiterungen (DMX) verwenden, um unterschiedliche Abfrage Typen zu erstellen. Eine Abfrage kann verwendet werden, um Informationen zum Miningmodell selbst zurückzugeben, neue Vorhersagen zu treffen oder das Modell durch Trainieren mit neuen Daten zu ändern. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]stellt eine Reihe von spezialisierten Funktionen bereit, die den Typ der Informationen steuern, die in einer Abfrage zurückgegeben werden. Durch Hinzufügen dieser Funktionen zu einer DMX-Abfrage können Sie zusätzliche statistische Daten oder Datenspalten abrufen. Jeder Abfragetyp und jeder Modelltyp unterstützt jedoch nur bestimmte Funktionen.  
   
 ## <a name="common-functions"></a>Allgemeine Funktionen  
- Mit Funktionen können Sie die Ergebnisse erweitern, die von einem Miningmodell zurückgegeben werden. Sie können die folgenden Funktionen für alle **wählen** -Anweisung, die einen Tabellenausdruck zurückgibt:  
+ Mit Funktionen können Sie die Ergebnisse erweitern, die von einem Miningmodell zurückgegeben werden. Die folgenden Funktionen können für jede **Select** -Anweisung verwendet werden, die einen Tabellen Ausdruck zurückgibt:  
   
 |||  
 |-|-|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
-|[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
-|[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|  
-|[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
+|[DMX ( &#40;bottomprozent)&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[Topprozent &#40;-DMX&#41;](../dmx/toppercent-dmx.md)|  
+|[Rangemax &#40;-DMX&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;-DMX&#41;](../dmx/topsum-dmx.md)|  
+|[RangeMid &#40;-DMX&#41;](../dmx/rangemid-dmx.md)||  
   
  Außerdem werden die folgenden Funktionen für fast alle Modelltypen unterstützt:  
   
--   [Vorhanden &#40;DMX&#41;](../dmx/exists-dmx.md)  
+-   [DMX ist vorhanden &#40;.&#41;](../dmx/exists-dmx.md)  
   
 -   [IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)  
   
@@ -43,38 +43,38 @@ ms.locfileid: "67937797"
   
 -   [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
--   [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
+-   [Rangemax &#40;-DMX&#41;](../dmx/rangemax-dmx.md)  
   
--   [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
+-   [RangeMid &#40;-DMX&#41;](../dmx/rangemid-dmx.md)  
   
 -   [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
   
--   [StructureColumn &#40;DMX&#41;](../dmx/structurecolumn-dmx.md)  
+-   [Structurecolren &#40;DMX&#41;](../dmx/structurecolumn-dmx.md)  
   
- Einzelne Algorithmen unterstützen möglicherweise weitere Funktionen. Eine Liste der Funktionen, die von jedem Modelltyp unterstützt werden, finden Sie unter [Data Mining-Abfragen](../analysis-services/data-mining/data-mining-queries.md).  
+ Einzelne Algorithmen unterstützen möglicherweise weitere Funktionen. Eine Liste der Funktionen, die von den einzelnen Modelltypen unterstützt werden, finden Sie unter [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).  
   
 ## <a name="functions-specific-to-select-syntax"></a>Spezielle Funktionen für die SELECT-Syntax  
- Die folgende Tabelle enthält die Funktionen, mit denen Sie für jeden Typ von **wählen** Anweisung.  
+ In der folgenden Tabelle sind die Funktionen aufgelistet, die Sie für jeden Typ von **Select** -Anweisung verwenden können.  
   
- Allgemeine Informationen zu Funktionen in DMX finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; Funktionsverweis](../dmx/data-mining-extensions-dmx-function-reference.md).  
+ Allgemeine Informationen zu Funktionen in DMX finden Sie unter [DMX- &#40;&#41; Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 |Abfragetyp|Unterstützte Funktionen|Hinweise|  
 |----------------|-------------------------|-------------|  
-|[SELECT DISTINCT FROM \<Modell >](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|Mit diesen Funktionen können maximale Werte, minimale Werte und Durchschnittswerte für jede Spalte angegeben werden, die einen numerischen Datentyp enthält. Dies ist unabhängig davon, ob die Spalte kontinuierliche oder diskrete Werte enthält.|  
-|[SELECT FROM \<Modell >. INHALT](../dmx/select-from-model-content-dmx.md)<br /><br /> oder<br /><br /> [SELECT FROM \<Modell >. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Mit dieser Funktion werden untergeordnete Knoten für den angegebenen Knoten im Modell abgerufen. Die Funktion kann beispielsweise zum Durchlaufen der Knoten im Miningmodellinhalt verwendet werden. Die Anordnung der Knoten im Miningmodellinhalt hängt vom Modeltyp ab. Informationen über die Struktur für jeden Mining-Modelltyp finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).<br /><br /> Wenn Sie den Miningmodellinhalt als Dimension gespeichert haben, können Sie auch andere Multidimensional Expressions-Funktionen (MDX) verwenden, die für die Abfrage in einer Attributhierarchie verfügbar sind.|  
-|[SELECT FROM \<Modell >. FÄLLEN](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag-Klasse](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Die Lag-Funktion ist nur für zeitreihenmodelle unterstützt.<br /><br /> Die IsTestCase-Funktion wird in Modellen unterstützt, die auf einer Struktur basieren, die mit der Option Zurückgehaltene Daten, erstellen Sie ein testdataset erstellt wurde. Wenn das Modell nicht auf einer Struktur mit einem Zurückhaltungstestdataset basiert, werden alle Fälle als Trainingsfälle interpretiert.|  
-|[SELECT FROM \<Modell >. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In diesem Fall gibt die IsInNode-Funktion einen Fall, der auf einen Satz von Beispielfälle gehört.|  
-|SELECT FROM \<Modell >. PMML|Nicht zutreffend. Verwenden Sie stattdessen XML-Abfragefunktionen.|PMML-Darstellungen werden nur für die folgenden Modelltypen unterstützt:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
-|[SELECT FROM \<Model > PREDICTION JOIN-Anweisung](../dmx/select-from-model-prediction-join-dmx.md)|Vorhersagefunktionen, die speziell für den Algorithmus verwendet werden, mit dem Sie das Modell erstellen.|Eine Liste der Vorhersagefunktionen für jeden Modelltyp, finden Sie unter [Data Mining-Abfragen](../analysis-services/data-mining/data-mining-queries.md).|  
-|[SELECT FROM \<Modell >](../dmx/select-from-model-dmx.md)|Vorhersagefunktionen, die speziell für den Algorithmus verwendet werden, mit dem Sie das Modell erstellen.|Eine Liste der Vorhersagefunktionen für jeden Modelltyp, finden Sie unter [Data Mining-Abfragen](../analysis-services/data-mining/data-mining-queries.md).|  
+|[Wählen Sie unter \<schiedliche from Model->](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;-DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [Rangemax &#40;-DMX&#41;](../dmx/rangemax-dmx.md)|Mit diesen Funktionen können maximale Werte, minimale Werte und Durchschnittswerte für jede Spalte angegeben werden, die einen numerischen Datentyp enthält. Dies ist unabhängig davon, ob die Spalte kontinuierliche oder diskrete Werte enthält.|  
+|[Wählen Sie \<aus Modell > aus. Inhaltliche](../dmx/select-from-model-content-dmx.md)<br /><br /> oder<br /><br /> [Wählen Sie \<aus Modell > aus. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Mit dieser Funktion werden untergeordnete Knoten für den angegebenen Knoten im Modell abgerufen. Die Funktion kann beispielsweise zum Durchlaufen der Knoten im Miningmodellinhalt verwendet werden. Die Anordnung der Knoten im Miningmodellinhalt hängt vom Modeltyp ab. Weitere Informationen zur Struktur für jeden Mining Modelltyp finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Wenn Sie den Miningmodellinhalt als Dimension gespeichert haben, können Sie auch andere Multidimensional Expressions-Funktionen (MDX) verwenden, die für die Abfrage in einer Attributhierarchie verfügbar sind.|  
+|[Wählen Sie \<aus Modell > aus. Denen](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag-Klasse](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Die lag-Funktion wird nur für Zeitreihen Modelle unterstützt.<br /><br /> Die IsTestCase-Funktion wird in Modellen unterstützt, die auf einer Struktur basieren, die mithilfe der Option "zurück gehaltene Daten" erstellt wurde, um ein Test Dataset zu erstellen. Wenn das Modell nicht auf einer Struktur mit einem Zurückhaltungstestdataset basiert, werden alle Fälle als Trainingsfälle interpretiert.|  
+|[Wählen Sie \<aus Modell > aus. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In diesem Kontext gibt die IsInNode-Funktion einen Fall zurück, der zu einem Satz idealisierter Beispiel Fälle gehört.|  
+|Wählen Sie \<aus Modell > aus. PMML|Nicht zutreffend. Verwenden Sie stattdessen XML-Abfragefunktionen.|PMML-Darstellungen werden nur für die folgenden Modelltypen unterstützt:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
+|[Aus \<Modell > Vorhersage Join auswählen](../dmx/select-from-model-prediction-join-dmx.md)|Vorhersagefunktionen, die speziell für den Algorithmus verwendet werden, mit dem Sie das Modell erstellen.|Eine Liste der Vorhersagefunktionen für die einzelnen Modelltypen finden Sie unter [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
+|[Aus \<Modell auswählen >](../dmx/select-from-model-dmx.md)|Vorhersagefunktionen, die speziell für den Algorithmus verwendet werden, mit dem Sie das Modell erstellen.|Eine Liste der Vorhersagefunktionen für die einzelnen Modelltypen finden Sie unter [Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41; - &#40;Operator Verweis für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41; - &#40;Anweisungs Referenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-statements.md)   
+ [DMX&#41; - &#40;Syntax Konventionen für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [DMX&#41; - &#40;Syntax Elemente für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Struktur und Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Berichtsserver-Inhaltstypen zu einer Bibliothek (Reporting Services im integrierten SharePoint-Modus) | Microsoft-Dokumentation
+title: Hinzufügen von Berichts Server-Inhaltstypen zu einer Bibliothek (Reporting Services im integrierten SharePoint-Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110009"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891622"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Hinzufügen von Berichtsserver-Inhaltstypen zu einer Bibliothek (Reporting Services im integrierten SharePoint-Modus)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Für SharePoint werden vordefinierte Inhaltstypen bereitgestellt, die zum Verwalten freigegebener Datenquellendateien (RSDS), Berichtsmodelldateien (SMDL) und Berichtsgenerator-Berichtsdefinitionsdateien (RDL) verwendet werden können. Wenn einer Bibliothek ein Inhaltstyp ( **Berichts-Generator-Bericht**, **Berichtsmodell**und **Berichtsdatenquelle** ) hinzugefügt wird, wird der Befehl **Neu** aktiviert, sodass Sie neue Dokumente des betreffenden Typs erstellen können.  
@@ -31,7 +31,7 @@ ms.locfileid: "66110009"
 > [!TIP]  
 >  Wenn Sie zuvor **keine** Inhaltstypen für eine Bibliothek konfiguriert haben, aktivieren Sie zunächst die Verwaltung von Inhaltstypen und dann die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstypen. Siehe die Verfahren zum Aktivieren der Inhaltstypverwaltung in einer einzelnen Dokumentbibliothek.  
   
- **Kurzvideo:** [(SSRS) Aktivieren von Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Kurzes Video:** [(SSRS) Aktivieren von Inhaltstypen in Sharepoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **In diesem Thema:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110009"
   
 2.  Wechseln Sie zu **Siteeinstellungen**.  
   
-    -   Klicken Sie in SharePoint 2013 auf das **Einstellungssymbol**. ![SharePoint-Einstellungen](../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
+    -   Klicken Sie in SharePoint 2013 auf das **Einstellungssymbol**. ![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings")  
   
     -   Klicken Sie in SharePoint 2010 auf **Websiteaktionen**und auf **Siteeinstellungen**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66110009"
 9. > [!NOTE]  
     >  Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Inhaltstypgruppe **SQL Server Reporting Services-Inhaltstypen** wird unter folgenden Bedingungen auf der Seite **Inhaltstypen hinzufügen** nicht angezeigt:  
   
-    -   Das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte wurde nicht installiert. Weitere Informationen finden Sie unter [installieren oder deinstallieren Sie das Reporting Services-Add-in für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Das Thema enthält Informationen zum Installieren des Add-Ins und es wird Schritt für Schritt erläutert, wie Sie eine Nur-Datei-Installation des Add-Ins ausführen können, um Probleme zu umgehen.  
+    -   Das [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte wurde nicht installiert. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des Reporting Services-Add-Ins für &#40;SharePoint SharePoint 2010 und Share&#41;Point 2013](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Das Thema enthält Informationen zum Installieren des Add-Ins und es wird Schritt für Schritt erläutert, wie Sie eine Nur-Datei-Installation des Add-Ins ausführen können, um Probleme zu umgehen.  
   
     -   Das Add-In wird installiert, aber die **Funktion für die Berichtsserverintegration** für die Websitesammlung ist nicht aktiv. Prüfen Sie die Websitesammlungsfunktion unter **Siteeinstellungen**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66110009"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> So aktivieren Sie die Inhaltstypverwaltung für eine einzelne Dokumentbibliothek (SharePoint 2010)  
   
-1.  Öffnen Sie die Bibliothek, für die Sie mehrere Inhaltstypen aktivieren möchten. Klicken Sie auf der Menüleiste der Bibliothek sollte die folgenden Menüs angezeigt werden: **Neue**, **hochladen**, **Aktionen**, und **Einstellungen**. Falls **Einstellungen**nicht angezeigt wird, sind Sie nicht berechtigt, Inhaltstypen hinzuzufügen.  
+1.  Öffnen Sie die Bibliothek, für die Sie mehrere Inhaltstypen aktivieren möchten. In der Menüleiste der Bibliothek sollten die folgenden Menüs angezeigt werden: **Neu**, **Upload**, **Aktionen**und **Einstellungen**. Falls **Einstellungen**nicht angezeigt wird, sind Sie nicht berechtigt, Inhaltstypen hinzuzufügen.  
   
 2.  Klicken Sie im Menüband **Bibliothekstools** auf **Bibliothek**.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66110009"
   
 ## <a name="see-also"></a>Siehe auch  
  [Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Starten Sie Berichts-Generator &#40;Berichts-Generator&#41;](report-builder/start-report-builder.md)  
+ [Berichts-Generator &#40;starten Berichts-Generator&#41;](report-builder/start-report-builder.md)  
   
   

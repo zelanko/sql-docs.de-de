@@ -1,5 +1,5 @@
 ---
-title: Erstellen von GLOBAL CUBE-Anweisung (MDX) | Microsoft-Dokumentation
+title: Create Global CUBE-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 57ee0867373f67bfd0684734685ab39791bafc39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098406"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892149"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX-Datendefinition – CREATE GLOBAL CUBE
 
 
-  Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich. Weitere Informationen zu lokalen Cubes finden Sie unter [lokale Cubes &#40;Analysis Services – mehrdimensionale Daten&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich. Weitere Informationen zu lokalen Cubes finden Sie unter [lokale Cubes &#40;Analysis Services-Mehrdimensionale&#41;Daten](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -82,7 +82,7 @@ FROM source_cube_name (<param list>)
 <visibility qualifier>::= HIDDEN   
 ```  
   
-## <a name="syntax-elements"></a>Syntaxelemente  
+## <a name="syntax-elements"></a>Syntax Elemente  
  local_cube_name  
  Der Name des lokalen Cubes.  
   
@@ -104,19 +104,19 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Der Name der Dimension im lokalen Cube.  
   
- VON \<dim from-Klausel >  
+ From \<Dim from-Klausel >  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
  NOT_RELATED_TO_FACTS  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
- \<Typ der Ebene >  
+ \<> der Ebene  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
 ## <a name="remarks"></a>Hinweise  
- Ein lokaler Cube ist, eigene Bedingungen der Measures und Definitionen, die sie definieren. Es gibt zwei Typen von Dimensionen.  
+ Ein lokaler Cube ist definedin der Begriffe und Definitionen, die ihn definieren. Es gibt zwei Typen von Dimensionen.  
   
--   Quelldimensionen – sind diese Dimensionen, die Teil von einer oder mehrerer Quellcubes waren.  
+-   Quell Dimensionen: Hierbei handelt es sich um Dimensionen, die Teil eines der weiteren Quellcubes waren.  
   
 -   Abgeleitete Dimensionen – Hierbei handelt es sich um Dimensionen, die neue Analysefunktionen bereitstellen. Bei einer abgeleiteten Dimension kann es sich um eine reguläre Dimension handeln, die basierend auf einer Quelldimension definiert wird, die entweder vertikal oder horizontal in Slices aufgeteilt ist oder die eine benutzerdefinierte Gruppierung von Dimensionselementen enthält. Eine abgeleitete Dimension kann auch eine Data Mining-Dimension sein, die auf einem Data Mining-Modell basiert.  
   
@@ -125,15 +125,15 @@ FROM source_cube_name (<param list>)
   
  In einem lokalen Cube können Sie folgende Aufgaben ausführen:  
   
--   Entfernen von Dimensionen, die im Quellcube vorhanden sind.  
+-   Entfernen von Dimensionen, die im Quellcube vorhanden sind  
   
 -   Hierarchien aus einer Dimension hinzufügen oder entfernen  
   
--   Measuregruppen oder bestimmte Measures entfernen  
+-   Entfernen von Measure-Gruppen oder bestimmten Measures  
   
  Die CREATE GLOBAL CUBE-Anweisung hält die folgenden Regeln ein:  
   
--   Mit der CREATE GLOBAL CUBE-Anweisung werden automatisch alle Befehle, z. B. berechnete Measures oder Aktionen, in den lokalen Cube kopiert. Enthält ein Befehl einen MDX-Ausdruck (Multidimensional Expression), der explizit auf den übergeordneten Cube verweist, kann dieser Befehl nicht vom lokalen Cube ausgeführt werden. Um dieses Problem zu vermeiden, verwenden die **CURRENTCUBE** Schlüsselwort beim Definieren von MDX-Ausdrücken für Befehle. Die **CURRENTCUBE** -Schlüsselwort verwendet den aktuellen Cubekontext aus, wenn Sie einen Cube in einer MDX-Ausdruck zu verweisen.  
+-   Mit der CREATE GLOBAL CUBE-Anweisung werden automatisch alle Befehle, z. B. berechnete Measures oder Aktionen, in den lokalen Cube kopiert. Enthält ein Befehl einen MDX-Ausdruck (Multidimensional Expression), der explizit auf den übergeordneten Cube verweist, kann dieser Befehl nicht vom lokalen Cube ausgeführt werden. Um dieses Problem zu vermeiden, verwenden Sie das **CURRENTCUBE** -Schlüsselwort, wenn Sie MDX-Ausdrücke für Befehle definieren. Das **CURRENTCUBE** -Schlüsselwort verwendet den aktuellen Cubekontext beim Verweisen auf einen Cube innerhalb eines MDX-Ausdrucks.  
   
 -   Ein globaler Cube, der aus einem vorhandenen globalen Cube in einer lokalen Cubedatei erstellt wurde, kann nicht in derselben lokalen Cubedatei gespeichert werden. Angenommen, Sie erstellen einen globalen Cube mit dem Namen SalesLocal1 und speichern ihn in der Datei C:\SalesLocal.cub. Sie können dann eine Verbindung zur Datei C:\SalesLocal.cub herstellen und einen zweiten globalen Cube mit dem Namen SalesLocal2 erstellen. Wenn Sie nun versuchen, den globalen Cube SalesLocal2 in der Datei C:\SalesLocal.cub zu speichern, erhalten Sie eine Fehlermeldung. Sie können den globalen Cube SalesLocal2 allerdings in einer anderen lokalen Cubedatei speichern.  
   
@@ -197,7 +197,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE SESSION CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+ [MDX für MDX &#40;-Daten Definitions Anweisungen&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Create Session Cube- &#40;Anweisung (MDX)&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7d6e072cd47233b6cb76c09fb3bc0e9b9b42604
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020650"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893676"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -31,20 +31,20 @@ Member_Expression.Properties(Property_Name [, TYPED])
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
- *Property_name*  
+ *Property_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen einer Elementeigenschaft enthält.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **Eigenschaften** Funktion gibt den Wert des angegebenen Elements für die angegebene Elementeigenschaft zurück. Die Elementeigenschaft möglich die systeminternen Elementeigenschaften, wie z. B. **Namen**, **ID**, **Schlüssel**, oder **Beschriftung**, oder es kann ein eine benutzerdefinierte Elementeigenschaft. Weitere Informationen finden Sie unter [integrierte Elementeigenschaften &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) und [benutzerdefinierte Elementeigenschaften &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ Die **Properties** -Funktion gibt den Wert des angegebenen Members für die angegebene Element Eigenschaft zurück. Die Element Eigenschaft kann eine beliebige der systeminternen Element Eigenschaften sein, z. b. " **Name**", " **ID**", " **Key**" oder " **Caption**", oder es kann sich um eine benutzerdefinierte Element Eigenschaft handeln. Weitere Informationen finden Sie unter systeminterne Element [ &#40;Eigenschaften MDX&#41; ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) und [benutzerdefinierte Element Eigenschaften &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
- Standardmäßig muss der Wert zwingend eine Zeichenfolge sein. Wenn **TYPISIERTE** angegeben ist, wird der Rückgabewert ist stark typisiert.  
+ Standardmäßig muss der Wert zwingend eine Zeichenfolge sein. Wenn **eingegeben** angegeben wird, ist der Rückgabewert stark typisiert.  
   
 -   Bei einer systeminternen Eigenschaft gibt die Funktion den ursprünglichen Typ des Elements zurück.  
   
--   Wenn der Eigenschaftentyp Benutzerdefiniert ist, der Typ des Rückgabewerts entspricht der Typ des Rückgabewerts der der **MemberValue** Funktion.  
+-   Wenn der Eigenschaftentyp Benutzer definiert ist, ist der Typ des Rückgabewerts mit dem Typ des Rückgabewerts der Mitgliedschafts Funktion identisch.  
   
 > [!NOTE]  
->  Properties ('Key') gibt das gleiche Ergebnis wie Key0 zurück, außer für zusammengesetzte Schlüssel. Properties ('Key') gibt für zusammengesetzte Schlüssel den Wert NULL zurück. Verwenden Sie die Taste*x* -Syntax für zusammengesetzte Schlüssel, wie im Beispiel dargestellt. Properties ('Key0'), Properties('Key1'), Properties('Key2') usw. bilden zusammen den zusammengesetzten Schlüssel.  
+>  Properties ('Key') gibt das gleiche Ergebnis wie Key0 zurück, außer für zusammengesetzte Schlüssel. Properties ('Key') gibt für zusammengesetzte Schlüssel den Wert NULL zurück. Verwenden Sie die Key*x* -Syntax für zusammengesetzte Schlüssel, wie im Beispiel veranschaulicht. Properties ('Key0'), Properties('Key1'), Properties('Key2') usw. bilden zusammen den zusammengesetzten Schlüssel.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden sowohl systemeigene als auch benutzerdefinierte Elementeigenschaften zurückgegeben. Dabei wird das TYPED-Argument verwendet, um den stark typisierten Wert für die Day Name-Elementeigenschaft zurückzugeben.  
@@ -85,7 +85,7 @@ SELECT {Measures.MemberName
 FROM [Adventure Works]  
 ```  
   
- Das folgende Beispiel zeigt die Verwendung des Schlüssels*x* Eigenschaft.  
+ Das folgende Beispiel zeigt die Verwendung der Key*x* -Eigenschaft.  
   
 ```  
 WITH   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verwenden von Elementeigenschaften &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Verwenden von Elementeigenschaften &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

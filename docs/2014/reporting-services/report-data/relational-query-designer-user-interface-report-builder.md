@@ -16,15 +16,15 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c273e453d4eec6d754f38d6be03385957ad50fec
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107141"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890951"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)
-  Berichts-Generator enthält sowohl einen grafischen Abfrage-Designer als auch einen textbasierten Abfrage-Designer können Sie eine Abfrage erstellen, der angibt, die Daten zum Abrufen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relationalen Datenbanken und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] für ein Berichtsdataset. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
+  Berichts-Generator bietet einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer, mit dem Sie eine Abfrage erstellen können, die die Daten angibt [!INCLUDE[msCoName](../../../includes/msconame-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] die aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] relationalen und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relationalen Datenbanken [!INCLUDE[msCoName](../../../includes/msconame-md.md)] abgerufen werden sollen. [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] für ein Berichts DataSet. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
   
 > [!NOTE]  
 >  In Berichts-Generator müssen Sie den textbasierten Abfrage-Designer verwenden, um eine Abfrage für die Oracle-, OLE DB-, ODBC- und Teradata-Datenquellentypen zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](text-based-query-designer-user-interface-report-builder.md).  
@@ -42,11 +42,11 @@ ms.locfileid: "66107141"
   
  Die folgende Abbildung zeigt den grafischen Abfrage-Designer, wenn er mit Tabellen oder Sichten verwendet wird.  
   
- ![Grafischer Designer für Abfragen](../../analysis-services/media/rsqd-relational-graphical.gif "Grafischer Designer für Abfragen")  
+ ![Grafischer Designer für Abfragen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Grafischer Designer für Abfragen")  
   
  Die folgende Abbildung zeigt den grafischen Abfrage-Designer an, wenn er mit gespeicherten Prozeduren oder Tabellenwertfunktionen verwendet wird.  
   
- ![Gespeicherte Prozedur im grafischen Abfrage-Designer](../../analysis-services/media/rs-relational-graphical-sp.gif "Gespeicherte Prozedur im grafischen Abfrage-Designer")  
+ ![Gespeicherte Prozedur im grafischen Abfrage-Designer](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Gespeicherte Prozedur im grafischen Abfrage-Designer")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   

@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078391"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888047"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lektion 6: Definieren von Berechnungen
   In dieser Lektion erfahren Sie, wie Berechnungen definiert werden, bei denen es sich um MDX-Ausdrücke oder -Skripts (Multidimensional Expressions) handelt. Berechnungen ermöglichen es Ihnen, berechnete Elemente und benannte Mengen zu definieren und weitere Skriptbefehle auszuführen, um die Fähigkeiten eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubes zu erweitern. Sie können z. B. einen Skriptbefehl ausführen, um einen Teilcube zu definieren und dann den Zellen im Teilcube eine Berechnung zuordnen.  
@@ -45,19 +45,19 @@ ms.locfileid: "66078391"
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
- [Definieren berechneter Elemente](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [Definieren berechneter Elemente](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
  In dieser Aufgabe erfahren Sie, wie berechnete Elemente definiert werden.  
   
- [Definieren von benannten Mengen](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Definieren von benannten Mengen](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
  In diesem Task erfahren Sie, wie benannte Mengen definiert werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 7: Definieren Key Performance Indicators &#40;KPIs&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lektion 7: Definieren von &#40;KPIs für Key Performance Indicator&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Lernprogrammszenario](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [Erstellen von benannten Mengen](multidimensional-models/create-named-sets.md)   
+ [Analysis Services Tutorial-Szenario](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Tutorial zur &#40;mehrdimensionalen Modellierung von Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Benannte Mengen erstellen](multidimensional-models/create-named-sets.md)   
  [Erstellen von berechneten Elementen](multidimensional-models/create-calculated-members.md)  
   
   

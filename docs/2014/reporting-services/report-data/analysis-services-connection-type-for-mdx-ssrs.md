@@ -10,19 +10,19 @@ ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9541dd8023eecc6f9d4943821672a4eae0b67c55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dbd62eff94b1a885198c62a9a36cb8eef7ba57c7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107458"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892125"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Analysis Services-Verbindungstyp für MDX (SSRS)
   Wenn Sie Daten aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle vom Typ " [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]" basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenerweiterung. Sie können Metadaten über Dimensionen, Hierarchien, Ebenen, Key Performance Indicators (KPIs), Measures und Attribute zur Verwendung als Berichtsdaten aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube abrufen.  
   
  Diese Datenverarbeitungserweiterung unterstützt mehrwertige Parameter, Serveraggregate und getrennt von der Verbindungszeichenfolge verwaltete Anmeldeinformationen.  
   
- Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schrittweise Anweisungen finden Sie unter [hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schritt-für-Schritt-Anweisungen finden [Sie unter Hinzufügen und Überprüfen einer Datenverbindung &#40;oder einer Datenquelle&#41;Berichts-Generator und SSRS](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Verbindungszeichenfolge  
  Wenn Sie eine Verbindung mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube herstellen, stellen Sie eine Verbindung mit dem Datenbankobjekt in einer Analysis Services-Instanz auf einem Server her. Die Datenbank kann mehrere Cubes enthalten. Sie geben den Cube beim Erstellen der Abfrage im Abfrage-Designer an. Das folgenden Beispiel zeigt eine Verbindungszeichenfolge:  
@@ -50,7 +50,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   Anmeldeinformationen sind nicht erforderlich. Zur Verwendung dieser Option müssen Sie zuvor das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) auf msdn.microsoft.com.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) Zeichenfolgen in Reporting Services oder [Angeben von Anmelde Informationen in Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
   
   
@@ -83,7 +83,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="Remarks"></a> Hinweise  
- Die Analysis Services-Datenerweiterung basiert auf dem XMLA-Protokoll (XML for Analysis). Resultsets von Cubes werden durch das XMLA-Protokoll als vereinfachtes Rowset abgerufen. Unregelmäßige Hierarchien werden nicht unterstützt. Weitere Informationen zu Hierarchien finden Sie unter [Unregelmäßige Hierarchien](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
+ Die Analysis Services-Datenerweiterung basiert auf dem XMLA-Protokoll (XML for Analysis). Resultsets von Cubes werden durch das XMLA-Protokoll als vereinfachtes Rowset abgerufen. Unregelmäßige Hierarchien werden nicht unterstützt. Weitere Informationen zu Hierarchien finden Sie unter [Unregelmäßige Hierarchien](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Sie können auch mit dem OLE DB-Datenquellentyp Daten aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube abrufen. Weitere Informationen finden Sie unter [OLE DB-Verbindungstyp &#40;SSRS&#41;](ole-db-connection-type-ssrs.md).  
   
@@ -94,7 +94,7 @@ data source=<server name>;initial catalog=<database name>
 ##  <a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
- [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
+ [Hinzufügen von Daten zu &#40;einem Bericht Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  

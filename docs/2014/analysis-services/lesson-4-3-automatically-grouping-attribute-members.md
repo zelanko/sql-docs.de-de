@@ -1,5 +1,5 @@
 ---
-title: Automatisches Gruppieren von Attributelementen | Microsoft-Dokumentation
+title: Automatisches Gruppieren von Attribut Elementen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078645"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888417"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Automatisches Gruppieren von Attributelementen
   Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer Attributhierarchie nach den Elementen einer anderen Attributhierarchie. Sie können beispielsweise Kundenverkäufe nach der Stadt, dem erworbenen Produkt oder dem Geschlecht gruppieren. Bei bestimmten Attributtypen ist es allerdings sinnvoll, von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch Gruppierungen von Attributelementen erstellen zu lassen, die auf der Verteilung der Elemente innerhalb einer Attributhierarchie basieren. Sie können beispielsweise von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppen der jährlichen Einkommenswerte für Kunden erstellen lassen. Es werden dann für Benutzer, die die Attributhierarchie durchsuchen, die Namen und Werte der Gruppen anstelle der Elemente selbst angezeigt. Dadurch wird die Anzahl der Ebenen beschränkt, die für Benutzer angezeigt werden, was für die Analyse sinnvoller sein kann.  
@@ -44,11 +44,11 @@ ms.locfileid: "66078645"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Yearly Income**aus.  
   
-5.  Ändern Sie im Eigenschaftenfenster den Wert für die **DiscretizationMethod** Eigenschaft **automatische** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft um `5`.  
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **automatisch** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
   
      Die folgende Abbildung zeigt die geänderten Eigenschaften für **Yearly Income**.  
   
-     ![Geänderte Eigenschaften für Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "geänderte Eigenschaften für Yearly Income")  
+     ![Geänderte Eigenschaften für Jahreseinkommen](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Geänderte Eigenschaften für Jahreseinkommen")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Gruppieren von Attributhierarchieelementen in der Employee-Dimension  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66078645"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Sick Leave Hours**aus.  
   
-5.  Ändern Sie im Eigenschaftenfenster den Wert für die **DiscretizationMethod** Eigenschaft **Cluster** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft `5`.  
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Cluster** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
   
 6.  Wählen Sie im Bereich **Attribute** den Eintrag **Vacation Hours**aus.  
   
-7.  Ändern Sie im Eigenschaftenfenster den Wert für die **DiscretizationMethod** Eigenschaft **Equal Areas** und ändern Sie den Wert für die **DiscretizationBucketCount** Eigenschaft um `5`.  
+7.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Equal Areas** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Durchsuchen der geänderten Attributhierarchien  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66078645"
   
      Die folgende Abbildung zeigt Verkäufe dimensioniert nach krankheitsbedingten Ausfallstunden der Angestellten.  
   
-     ![Sales dimensioniert nach den Krankheitstagen lassen Stunden](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales dimensioniert nach den Krankheitstagen lassen Stunden")  
+     ![Umsätze durch Mitarbeiter krank](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Umsätze durch Mitarbeiter krank")  
   
 10. Entfernen Sie die **Sick Leave Hours** -Attributhierarchie aus dem Spaltenbereich des Bereichs **Daten** .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66078645"
      Beachten Sie, dass jetzt drei Gruppen von Elementen des **Vacation Hours** -Attributs vorhanden sind, die Verkaufswerte für Produkte aufweisen. Die anderen sieben Gruppen enthalten Elemente ohne Verkaufsdaten.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Ausblenden und Deaktivieren von Attributhierarchien](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Ausblenden und Deaktivieren von Attributhierarchien](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

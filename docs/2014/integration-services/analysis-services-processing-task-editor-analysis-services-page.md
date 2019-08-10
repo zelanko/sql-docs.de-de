@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Editor-Verarbeitungstask (Seite im Analysis Services) | Microsoft-Dokumentation
+title: Editor für den Analysis Services Verarbeitungs Task (Seite Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061472"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890371"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Analysis Services)
   Auf der Seite **Analysis Services** des Dialogfelds **Editor für den Analysis Services-Verarbeitungstask** können Sie den Analysis Services-Verbindungs-Manager angeben, die zu verarbeitenden Analyseobjekte auswählen und die Verarbeitungs- und Fehlerbehandlungsoptionen festlegen.  
@@ -46,11 +46,11 @@ ms.locfileid: "66061472"
  **Verwandte Themen:** [Analysis Services-Verbindungs-Manager](connection-manager/analysis-services-connection-manager.md), [Referenz zur Benutzeroberfläche des Dialogfelds Analysis Services-Verbindungs-Manager hinzufügen](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Objektliste**  
- |Eigenschaft|Description|  
+ |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**Objektname**|Listet die angegebenen Objektnamen auf.|  
 |**Typ**|Listet die Typen der angegebenen Objekte auf.|  
-|**Verarbeitungsoptionen**|Wählen Sie eine Verarbeitungsoption in der Liste aus.<br /><br /> **Verwandte Themen:** [Verarbeitung von mehrdimensionalen Modellobjekten](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Verarbeitungsoptionen**|Wählen Sie eine Verarbeitungsoption in der Liste aus.<br /><br /> **Verwandte Themen:** [Objekt Verarbeitung für mehrdimensionale Modelle](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Einstellungen**|Listet die Verarbeitungseinstellungen für die angegebenen Objekte auf.|  
   
  **Hinzufügen**  

@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27508ec35e6d7d061a278859a0a9bf38e63a95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078375"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888089"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definieren und Durchsuchen von KPIs
   Zum Definieren von KPIs (Key Performance Indicators) müssen Sie zuerst einen KPI-Namen und die Measuregruppe definieren, der der KPI zugeordnet wird. Ein KPI kann entweder allen Measuregruppen oder einer einzelnen Measuregruppe zugeordnet werden. Anschließend definieren Sie die folgenden Elemente des KPIs:  
@@ -59,15 +59,15 @@ ms.locfileid: "66078375"
   
      In der folgenden Abbildung ist die Registerkarte **KPIs** des Cube-Designers dargestellt.  
   
-     ![Registerkarte "KPIs", Cube-Designer](../../2014/tutorials/media/l7-kpi-1.gif "Registerkarte ' KPIs ', Cube-Designer")  
+     ![Registerkarte "KPIs" im Cube-Designer](../../2014/tutorials/media/l7-kpi-1.gif "Registerkarte \"KPIs\" im Cube-Designer")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Neuer KPI** .  
   
      Im Anzeigebereich wird eine leere KPI-Vorlage angezeigt, wie in der folgenden Abbildung dargestellt.  
   
-     ![Leere KPI-Vorlage im Anzeigebereich](../../2014/tutorials/media/l7-kpi-2.gif "leere KPI-Vorlage im Anzeigebereich")  
+     ![Leere KPI-Vorlage im Anzeige] Bereich (../../2014/tutorials/media/l7-kpi-2.gif "Leere KPI-Vorlage im Anzeige") Bereich  
   
-3.  In der **Namen** geben `Reseller Revenue`, und wählen Sie dann **Verkäufe des Wiederverkäufers** in die **zugeordnete Measuregruppe** Liste.  
+3.  Geben`Reseller Revenue`Sie im Feld Name ein, und wählen Sie dann **Reseller Sales** in der Liste zugeordnete **Measure-Gruppe** aus.  
   
 4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Optionen **Measures**und **Reseller Sales**, und ziehen Sie anschließend das Measure **Reseller Sales-Sales Amount** in das Feld **Wertausdruck** .  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66078375"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Formularansicht** und anschließend auf die Schaltfläche **Neuer KPI** .  
   
-2.  In der **Namen** geben `Product Gross Profit Margin`, und überprüfen Sie, ob  **\<alle >** wird in der **zugeordnete Measuregruppe** Liste.  
+2.  Geben`Product Gross Profit Margin`Sie im Feld Name ein,  **\<** und überprüfen Sie dann, ob alle > in der Liste zugeordnete **Measure-Gruppe** angezeigt werden.  
   
 3.  Ziehen Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** das **Total GPM** -Measure in das Feld **Wertausdruck** .  
   
@@ -261,13 +261,13 @@ ms.locfileid: "66078375"
   
 2.  Klicken Sie nach der erfolgreichen Bereitstellung auf der Symbolleiste der Registerkarte **KPIs** auf **Verbindung wiederherstellen** und anschließend auf **Browseransicht**.  
   
-     Die `Product Gross Profit Margin` KPI angezeigt wird, und zeigt den KPI-Wert für **Q3 CY 2007** und **Nordamerika** Vertriebsgebiet.  
+     Der `Product Gross Profit Margin` KPI wird angezeigt und zeigt den KPI-Wert für **Q3 CY 2007** und den **Nordamerika** Sales Territory an.  
   
 3.  Wählen Sie im Bereich **Filter** in der Liste **Dimension** die Option **Product** , in der Liste **Hierarchy** die Option **Category** , in der Liste **Operator** die Option **Gleich** und in der Liste **Filterausdruck** die Option **Bikes** aus. Klicken Sie anschließend auf **OK**.  
   
      Die Bruttorendite für die von Wiederverkäufern verkauften Fahrräder in Nordamerika wird für das dritte Quartal des Kalenderjahres 2007 angezeigt.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 8: Definieren von Aktionen](../analysis-services/lesson-8-defining-actions.md)  
+ [Lektion 8: Definieren von Aktionen](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107991"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891135"
 ---
 # <a name="relational-query-designer-user-interface"></a>Benutzeroberfläche des relationalen Abfrage-Designers
   Berichts-Generator in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer zum Erstellen von Abfragen bereit, mit dem die Daten angegeben werden, die aus relationalen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] für ein Berichtsdataset abgerufen werden. Verwenden Sie den grafischen Abfrage-Designer zum Durchsuchen von Metadaten, interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Ergebnisse der Abfrage. Verwenden Sie den textbasierten Abfrage-Designer, um die Abfrage anzuzeigen, die vom grafischen Abfrage-Designer erstellt wurde, oder um eine Abfrage zu ändern. Sie können auch eine vorhandene Abfrage aus einer Datei oder einem Bericht importieren.  
@@ -36,11 +36,11 @@ ms.locfileid: "66107991"
   
  Die folgende Abbildung zeigt den grafischen Abfrage-Designer, wenn er mit Tabellen oder Sichten verwendet wird.  
   
- ![Grafischer Designer für Abfragen](../analysis-services/media/rsqd-relational-graphical.gif "Grafischer Designer für Abfragen")  
+ ![Grafischer Designer für Abfragen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Grafischer Designer für Abfragen")  
   
  Die folgende Abbildung zeigt den grafischen Abfrage-Designer an, wenn er mit gespeicherten Prozeduren oder Tabellenwertfunktionen verwendet wird.  
   
- ![Gespeicherte Prozedur im grafischen Abfrage-Designer](../analysis-services/media/rs-relational-graphical-sp.gif "Gespeicherte Prozedur im grafischen Abfrage-Designer")  
+ ![Gespeicherte Prozedur im grafischen Abfrage-Designer](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Gespeicherte Prozedur im grafischen Abfrage-Designer")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   
@@ -83,13 +83,13 @@ ms.locfileid: "66107991"
   
  Aggregate stellen Zusammenfassungen der Daten bereit. Die Daten werden gruppiert, um das Aggregat zu unterstützen, das die Zusammenfassungsdaten übermittelt. Wenn Sie in der Abfrage ein Aggregat verwenden, werden die anderen von der Abfrage zurückgegebenen Felder automatisch gruppiert, und die Abfrage enthält die SQL-Klausel GROUP BY. Sie können Daten zusammenfassen, ohne ein Aggregat hinzuzufügen, indem Sie nur die Option **Gruppiert nach** in der Liste **Gruppieren und aggregieren** verwenden. Viele der Aggregate schließen eine Version ein, die das Schlüsselwort DISTINCT verwendet. Durch das Einschließen von DISTINCT werden doppelte Werte ausgeschlossen.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] verwendet [!INCLUDE[tsql](../includes/tsql-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] verwendet [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Beide Dialekte der SQL-Sprache unterstützen die Klausel, das Schlüsselwort und die Aggregate, die der Abfrage-Designer bereitstellt.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]verwendet [!INCLUDE[tsql](../includes/tsql-md.md)] und [!INCLUDE[msCoName](../includes/msconame-md.md)] verwendet.[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Beide Dialekte der SQL-Sprache unterstützen die Klausel, das Schlüsselwort und die Aggregate, die der Abfrage-Designer bereitstellt.  
   
  Weitere Informationen zu [!INCLUDE[tsql](../includes/tsql-md.md)] finden Sie unter [Transact-SQL-Referenz &#40;Datenbank-Engine&#41;](/sql/t-sql/language-reference) in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-[Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=141687) auf „msdn.microsoft.com“.  
   
  In der folgenden Tabelle sind die Aggregate einschließlich einer kurzen Beschreibung aufgelistet.  
   
-|Aggregat|Description|  
+|Aggregat|Beschreibung|  
 |---------------|-----------------|  
 |Avg|Gibt den Mittelwert der Werte in einer Gruppe zurück. Implementiert das SQL AVG-Aggregat.|  
 |Count|Gibt die Anzahl von Elementen in einer Gruppe zurück. Implementiert das SQL COUNT-Aggregat.|  

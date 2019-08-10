@@ -14,12 +14,12 @@ ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab38a4465ec03415f9c1d903419ccbe2b07e6a86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a914aeeae889189453b4f4e6f47ebfbcd0fc44c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015906"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892273"
 ---
 # <a name="introduction-to-sql-server-management-studio-for-business-intelligence"></a>Einführung in SQL Server Management Studio für Business Intelligence
   Verwenden Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] für den Zugriff auf und die Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Obwohl alle drei Business Intelligence-Technologien auf [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]basieren, weichen die mit den jeweiligen Technologien verbundenen Verwaltungsaufgaben leicht voneinander ab.  
@@ -32,7 +32,7 @@ ms.locfileid: "63015906"
   
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptprojekt, in dem Sie in Multidimensional Expressions (MDX), Data Mining Extensions (DMX) und XML for Analysis (XMLA) geschriebene Skripts entwickeln und speichern können. Sie verwenden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptprojekte, um Verwaltungsaufgaben auszuführen oder Objekte wie Datenbanken oder Cubes in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanzen neu zu erstellen. Sie können beispielsweise ein XMLA-Skript in einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptprojekt entwickeln, das neue Objekte direkt auf einer vorhandenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz erstellt. Die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptprojekte können als Teil einer Lösung gespeichert werden und mit dem Quellcodeverwaltungssystem integriert werden.  
   
- Weitere Informationen zur Verwendung von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], finden Sie unter [Analysis Services-Skriptprojekt in SQL Server Management Studio](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md).  
+ Weitere Informationen zum verwenden [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]von finden Sie unter [Analysis Services Scripts-Projekt in SQL Server Management Studio](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).  
   
 ## <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>Verwalten von Integration Services-Lösungen mit SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ermöglicht Ihnen die Verwendung des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts, mit dem Sie Pakete verwalten und ausgeführte Pakete überwachen können. Zudem können Sie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] zur Organisation von Paketen in Ordnern, zum Ausführen von Paketen, zum Im- und Exportieren von Paketen, zum Migrieren von DTS-Paketen (Data Transformation Services) sowie zum Aktualisieren von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen verwenden.  
@@ -44,7 +44,7 @@ ms.locfileid: "63015906"
   
 -   [Reporting Services in SQL Server Management Studio (SSRS)](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
--   [Verwalten eine Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+-   [Verwalten einer Berichts Server- &#40;Datenbank (einheitlicher SSRS-Modus)&#41;](../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
   
 -   [Create the RSExecRole (Erstellen der Rolle RSExecRole)](../reporting-services/security/create-the-rsexecrole.md)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63015906"
 -   [Enable and Disable Client-Side Printing for Reporting Services (Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services)](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Reporting Services in SQL Server-Datentools &#40;SSDT&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
+ [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)   
+ [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
   
   

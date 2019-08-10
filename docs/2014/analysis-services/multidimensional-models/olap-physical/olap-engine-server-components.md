@@ -1,5 +1,5 @@
 ---
-title: OLAP-Engine-Serverkomponenten | Microsoft-Dokumentation
+title: OLAP-Engine-Server Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 138a5ec08ae7ca427352f8c0332b2012e6c0ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0537be8bda9c367fc381140183b10ddf383cf16a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62725079"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889522"
 ---
 # <a name="olap-engine-server-components"></a>OLAP-Engine-Serverkomponenten
-  Die Serverkomponente des [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ist die **msmdsrv.exe** -Anwendung, die als Windows-Dienst ausgeführt wird. Diese Anwendung besteht aus Sicherheitskomponenten, einer XMLA-Überwachungskomponente (XML for Analysis), einer Abfrageverarbeitungskomponente und zahlreichen internen Komponenten, die die folgenden Funktionen ausführen:  
+  Die Serverkomponente von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ist die Anwendung **msmdsrv. exe** , die als Windows-Dienst ausgeführt wird. Diese Anwendung besteht aus Sicherheitskomponenten, einer XMLA-Überwachungskomponente (XML for Analysis), einer Abfrageverarbeitungskomponente und zahlreichen internen Komponenten, die die folgenden Funktionen ausführen:  
   
 -   Analysieren von Anweisungen, die von Client empfangen werden  
   
@@ -48,10 +48,10 @@ ms.locfileid: "62725079"
   
  Die folgende Abbildung stellt die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Komponentenarchitektur dar, einschließlich aller wichtigen Elemente, die in der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Instanz ausgeführt werden, und aller Benutzerkomponenten, die mit der Instanz zusammenarbeiten. Diese Abbildung zeigt auch, dass nur mit dem XMLA (XML for Analysis)-Listener entweder über HTTP oder TCP auf die Instanz zugegriffen werden kann.  
   
- ![Analysis Services-System-Architekturdiagramm](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services-System-Architekturdiagramm")  
+ ![Diagramm der Analysis Services-System Architektur](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Diagramm der Analysis Services-System Architektur")  
   
 ## <a name="xmla-listener"></a>XMLA-Überwachung  
- Die XMLA-Überwachungskomponente verarbeitet die gesamte XMLA-Kommunikation zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und den zugehörigen Clients. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Konfigurationseinstellung in der Datei "Msmdsrv.ini" kann verwendet werden, um einen anderen Port angeben, auf denen eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz überwacht. Wird in dieser Datei der Wert 0 angegeben, wird der Standardport von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] überwacht. Falls nicht anders angegeben, verwendet [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die folgenden TCP-Standardports:  
+ Die XMLA-Überwachungskomponente verarbeitet die gesamte XMLA-Kommunikation zwischen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] und den zugehörigen Clients. Mithilfe [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] der `Port` Konfigurationseinstellung in der Datei Msmdsrv. ini können Sie einen Port angeben, an dem eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz lauscht. Wird in dieser Datei der Wert 0 angegeben, wird der Standardport von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] überwacht. Falls nicht anders angegeben, verwendet [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die folgenden TCP-Standardports:  
   
 |Port|Beschreibung|  
 |----------|-----------------|  
@@ -59,11 +59,11 @@ ms.locfileid: "62725079"
 |2382|Redirector für andere Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |Dynamische Zuweisung beim Serverstart.|Benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
- Finden Sie unter [konfigurieren Sie die Windows Firewall to Allow Analysis Services Access](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) Weitere Details.  
+ Weitere Informationen finden [Sie unter Konfigurieren der Windows-Firewall, um Analysis Services Zugriff zuzulassen](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 ## <a name="see-also"></a>Siehe auch  
- [Benennungsregeln Objekt &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
+ [Benennungs Regeln &#40;für Objekte Analysis Services&#41;](object-naming-rules-analysis-services.md)   
  [Physische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](understanding-microsoft-olap-physical-architecture.md)   
- [Logische Architektur &#40;Analysis Services – mehrdimensionale Daten&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+ [Logische Architektur &#40;Analysis Services-Mehrdimensionale Daten&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

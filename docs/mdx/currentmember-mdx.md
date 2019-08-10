@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 03583c9af74bd21511dfe871b229d03370a7b436
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047107"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892922"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -32,13 +32,13 @@ Hierarchy_Expression.CurrentMember
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Hierarchie zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Bei der Iteration durch eine Menge von Hierarchieelementen stellt bei jedem Iterationsschritt das jeweils bearbeitete Element das aktuelle Element dar. Die **CurrentMember** Funktion gibt dieses Element zurück.  
+ Bei der Iteration durch eine Menge von Hierarchieelementen stellt bei jedem Iterationsschritt das jeweils bearbeitete Element das aktuelle Element dar. Die **CurrentMember** -Funktion gibt dieses Element zurück.  
   
 > [!IMPORTANT]  
 >  Wenn eine Dimension nur eine einzige sichtbare Hierarchie enthält, kann auf die Hierarchie entweder mit dem Dimensionsnamen oder mit dem Hierarchienamen verwiesen werden, weil der Dimensionsname in seine einzige sichtbare Hierarchie aufgelöst wird. `Measures.CurrentMember` ist z. B. ein gültiger MDX-Ausdruck, weil er in die einzige vorhandene Hierarchie in der Measures-Dimension aufgelöst wird.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgende Abfrage zeigt, wie **Currentmember** können verwendet werden, um das aktuelle Element aus Hierarchien für die Spalten, Zeilen und Slice-Achse zu finden:  
+ Die folgende Abfrage zeigt, wie " **CurrentMember** " verwendet werden kann, um den aktuellen Member aus Hierarchien in den Spalten, Zeilen und slicenachse zu finden:  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -74,7 +74,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Das aktuelle Element ändert sich in einer Hierarchie, die auf einer Achse in einer Abfrage verwendet wird. Aus diesem Grund kann das aktuelle Element in anderen Hierarchien derselben Dimension, die nicht auf einer Achse verwendet werden, auch ändern; Dieses Verhalten wird aufgerufen, "Auto-exist" und Weitere Informationen finden Sie im [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Die folgende Abfrage zeigt beispielsweise, wie sich das aktuelle Element in der Calendar Year-Hierarchie der Date-Dimension mit dem aktuellen Element der Calendar-Hierarchie ändert, wenn dieses auf der ROWS-Achse angezeigt wird:  
+ Das aktuelle Element ändert sich in einer Hierarchie, die auf einer Achse in einer Abfrage verwendet wird. Daher kann sich der aktuelle Member in anderen Hierarchien in derselben Dimension, die nicht auf einer Achse verwendet werden, auch ändern; Dieses Verhalten wird als "automatisch vorhanden" bezeichnet. Weitere Informationen finden Sie unter [Schlüsselkonzepte in &#40;MDX-Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Die folgende Abfrage zeigt beispielsweise, wie sich das aktuelle Element in der Calendar Year-Hierarchie der Date-Dimension mit dem aktuellen Element der Calendar-Hierarchie ändert, wenn dieses auf der ROWS-Achse angezeigt wird:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -92,7 +92,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember** ist sehr wichtig, um Berechnungen über den Kontext der Abfrage im verwendet wird. Das folgende Beispiel gibt die Bestellmenge jedes Produkts sowie den Prozentsatz der Bestellmengen nach Kategorie und Modell aus der **Adventure Works** Cube. Die **CurrentMember** -Funktion identifiziert das Produkt, dessen Bestellmenge während der Berechnung verwendet werden wird.  
+ **CurrentMember** ist äußerst wichtig, damit Berechnungen den Kontext der Abfrage erkennen, in der Sie verwendet werden. Im folgenden Beispiel wird die Bestellmenge jedes Produkts und der Prozentsatz der Bestellmengen nach Kategorie und Modell aus dem **Adventure Works** -Cube zurückgegeben. Die **CurrentMember** -Funktion identifiziert das Produkt, dessen Bestellmenge während der Berechnung verwendet werden soll.  
   
 ```  
 WITH   

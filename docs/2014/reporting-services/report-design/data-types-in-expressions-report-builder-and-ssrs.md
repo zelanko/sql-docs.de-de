@@ -10,12 +10,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106065"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891864"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -33,7 +33,7 @@ ms.locfileid: "66106065"
 |Zeichenfolge|Standard: Zeichenfolge<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Standard: Boolean|  
 |Integer|Standard: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|datetime|Standard: datetime<br /><br /> DateTimeOffset|  
+|DateTime|Standard: DateTime<br /><br /> DateTimeOffset|  
 |float|Standard: Double<br /><br /> Single, Decimal|  
 |Binär|Standard: Byte[]|  
 |Variant|Beliebiger Wert von oben außer Byte []|  
@@ -116,9 +116,9 @@ ms.locfileid: "66106065"
   
     -   Mit dem folgenden Ausdruck wird die Zeichenfolge in einen Datums- und Uhrzeitwert konvertiert: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Das Ergebnis wird der folgende `DateTime` Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007, 16:07).  
+         Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Das Ergebnis ist der folgende `DateTime` Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007, 16:07).  
   
- Weitere Informationen zum Konvertieren von Zeichenfolgen, die `DateTime` -Datentypen finden Sie unter [Analysieren von Zeichenfolgen für Datum und Uhrzeit](https://go.microsoft.com/fwlink/?LinkId=89703), [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](https://go.microsoft.com/fwlink/?LinkId=89704), und [auswählen Zwischen DateTime, DateTimeOffset und TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) auf MSDN.  
+ Weitere Informationen zum Einfügen von Zeichen folgen `DateTime` in-Datentypen finden Sie unter Generieren von [Datums-und Uhrzeit](https://go.microsoft.com/fwlink/?LinkId=89703)Zeichenfolgen, [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](https://go.microsoft.com/fwlink/?LinkId=89704)und [auswählen zwischen "DateTime", "DateTimeOffset" und "TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) " unter. MSDN.  
   
 -   Fügen Sie ein neues berechnetes Feld dem Berichtsdataset hinzu, das einen Ausdruck verwendet, mit dem Teile der Zeichenfolge extrahiert werden. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66106065"
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datentypen fin derden Sie unter [Datentypen in der Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) in der [SQL Server Books Onlin dere](https://go.microsoft.com/fwlink/?linkid=120955).  
+ Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datentypen fin derden Sie unter [Datentypen in der Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) in der [SQL Server Books Onlin dere](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

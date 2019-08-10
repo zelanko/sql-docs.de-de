@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Analysis Services-Projekts (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
+title: Erstellen eines Analysis Services Projekts (Lernprogramm zu Data Mining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855195"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893347"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Erstellen eines Analysis Services-Projekts (Lernprogramm zu Data Mining-Grundlagen)
   Für jedes Projekt von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden die Objekte in einer einzelnen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank definiert. Eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank kann viele verschiedene Objekttypen enthalten.  
@@ -32,7 +32,7 @@ ms.locfileid: "62855195"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet standardmäßig die **localhost** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz oder einen anderen Server verwenden, müssen Sie zunächst das Projekt erstellen und öffnen und anschließend den Instanznamen ändern.  
   
- Weitere Informationen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekten finden Sie unter [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Weitere Informationen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekten finden Sie unter [Creating an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project).  
   
 ### <a name="to-create-an-analysis-services-project"></a>So erstellen Sie ein Analysis Services-Projekt  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62855195"
   
 4.  Wählen Sie im Bereich **Vorlagen** die Vorlage für mehrdimensionale Projekte bzw. **Data Mining-Projekte von Analysis Services** aus.  
   
-5.  In der **Namen** benennen Sie das neue Projekt `BasicDataMining`.  
+5.  Benennen Sie das neue Projekt `BasicDataMining`in das Feld Name.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -57,10 +57,10 @@ ms.locfileid: "62855195"
 3.  Überprüfen Sie, ob auf der rechten Seite des Bereichs **Eigenschaftenseiten** unter **Ziel**der **Servername** **localhost**angegeben ist. Wenn Sie eine andere Instanz verwenden, geben Sie den Namen der Instanz ein. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Erstellen einer Datenquelle &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Erstellen eines Lernprogramms &#40;zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

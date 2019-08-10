@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1af3719a658711b1a232b0248e511e0a658414d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078176"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887887"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lektion 9: Definieren von Perspektiven und Übersetzungen
   In dieser Lektion erfahren Sie, wie Perspektiven und Übersetzungen definiert werden. Sie können Perspektiven definieren, um die offensichtliche Komplexität eines Cubes zu reduzieren. Durch das Definieren von Übersetzungen können Benutzer die Cubemetadaten in der Sprache ihrer Wahl anzeigen.  
@@ -28,19 +28,19 @@ ms.locfileid: "66078176"
  [Definieren und Durchsuchen von Perspektiven](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  Im Rahmen dieser Aufgabe definieren und durchsuchen Sie Perspektiven, um die Ansicht des Cubes für bestimmte Benutzer oder Verwendungen zu vereinfachen.  
   
- [Definieren und Durchsuchen von Übersetzungen](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Definieren und Durchsuchen von Übersetzungen](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
  In diesem Task definieren und durchsuchen Sie Übersetzungen bestimmter Metadaten für bestimmte Sprachen.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 10: Definieren von Administratorrollen](lesson-10-defining-administrative-roles.md)  
+ [Lektion 10: Definieren von Administrator Rollen](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Lernprogrammszenario](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Perspektiven](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [Analysis Services Tutorial-Szenario](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Tutorial zur &#40;mehrdimensionalen Modellierung von Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Eröffnen](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [Perspektiven in mehrdimensionalen Modellen](multidimensional-models/perspectives-in-multidimensional-models.md)   
- [Dimensionsübersetzungen](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
+ [Dimensions Übersetzungen](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Cubeübersetzungen](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
- [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md)  
+ [Über &#40;setzungen Analysis Services&#41;](translations-analysis-services.md)  
   
   

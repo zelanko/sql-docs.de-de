@@ -12,15 +12,15 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5c79d078e8a9e2a8928c98c9d7ca56e220e86051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9c9719f3e73326c2b86117b3a78a8ede927198d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66099991"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888938"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Umgebung mit spezifischen Erweiterungen auf Business Intelligence-Lösungen. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ist in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten.  
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Umgebung mit Erweiterungen, die für Business Intelligence-Lösungen spezifisch sind. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ist in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten.  
   
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] zum Erstellen und Verwalten von Lösungen und Projekten für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Berichte und berichtsbezogene Elemente. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] stellt die Erstellungsumgebung des Berichts-Designers bereit. Im Bericht-Designer können Sie Berichtsdefinitionen, freigegebene Datenquellen, freigegebene Datasets und Berichtsteile öffnen, bearbeiten, speichern, bereitstellen und in der Vorschau anzeigen.  
   
@@ -37,14 +37,14 @@ ms.locfileid: "66099991"
 ##  <a name="bkmk_ReportServerProjects"></a> Berichtsserverprojekte  
  Bei der Installation von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]werden die folgenden Projektvorlagen in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]verfügbar gemacht:  
   
--   **Berichtsserverprojekt.** Wenn Sie ein Berichtsserverprojekt auswählen, wird der Berichts-Designer geöffnet. Bei einem Berichtsserverprojekt handelt es sich um eine von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] installierte Business Intelligence-Projektvorlage, die über das Dialogfeld **Neues Projekt** aufgerufen werden kann. Weitere Informationen finden Sie unter [Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Eigenschaften von Berichtsserverprojekten gelten für alle Berichte und alle freigegebenen Datenquellen in einem [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]-Projekt. Zu diesen Eigenschaften zählen die URL für den Berichtsserver sowie die Ordnernamen für Berichte und freigegebene Datenquellen. Verwenden Sie das Dialogfeld **Eigenschaftenseiten für Projekt** , um die aktuellen Eigenschaftenwerte anzuzeigen. Das Dialogfeld zum Öffnen der **Projekt** Menü klicken Sie auf  _\<Projektname >_ **Eigenschaften**.  
+-   **Berichtsserverprojekt.** Wenn Sie ein Berichtsserverprojekt auswählen, wird der Berichts-Designer geöffnet. Bei einem Berichtsserverprojekt handelt es sich um eine von [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] installierte Business Intelligence-Projektvorlage, die über das Dialogfeld **Neues Projekt** aufgerufen werden kann. Weitere Informationen finden Sie unter [Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)](add-a-new-or-existing-report-to-a-report-project-ssrs.md). Eigenschaften von Berichtsserverprojekten gelten für alle Berichte und alle freigegebenen Datenquellen in einem [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]-Projekt. Zu diesen Eigenschaften zählen die URL für den Berichtsserver sowie die Ordnernamen für Berichte und freigegebene Datenquellen. Verwenden Sie das Dialogfeld **Eigenschaftenseiten für Projekt** , um die aktuellen Eigenschaftenwerte anzuzeigen. Um dieses Dialogfeld zu öffnen, klicken Sie  _\<_ im Menü Projekt auf Projektname > Eigenschaften.  
   
 -   **Berichtsserverprojekt-Assistent.** Wenn Sie ein Berichtsserver-Assistenten-Projekt auswählen, wird automatisch ein Berichtsserverprojekt erstellt und der Berichts-Assistent geöffnet. Mithilfe des Assistenten können Sie einen Bericht erstellen. Befolgen Sie hierzu die Anweisungen auf den einzelnen Seiten, um eine Verbindungszeichenfolge für eine Datenquelle zu erstellen, Datenquellen-Anmeldeinformationen festzulegen, eine Abfrage zu entwerfen, einen Tabellen- oder Matrixdatenbereich hinzuzufügen, Berichtsdaten und -gruppen anzugeben, Schriftart und Farbe auszuwählen, den Bericht auf einem Berichtsserver zu veröffentlichen und den Bericht lokal in der Vorschau anzuzeigen. Nachdem Sie mithilfe des Assistenten einen Bericht erstellt haben, können Sie die Berichtsdaten und den Berichts-Designer ändern, und zwar mithilfe des Berichts-Designers im Berichtsserverprojekt.  
   
- ![Neue Projektvorlagen in SSDT](../../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![Neue Projektvorlagen in SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
 
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenster und Bereiche des Berichts-Designers  
- Berichts-Designer werden zwei Ansichten unterstützt: **Entwurf** zum Definieren der Berichtsdaten und des Berichtslayouts sowie **Vorschau** zum Anzeigen einer gerenderten Ansicht des Berichts. In jeder Ansicht können Sie mehrere Fenster anzeigen, die Sie beim Entwerfen unterstützen. Außerdem können Sie einen gerenderten Bericht anzeigen.  
+ Berichts-Designer unterstützt zwei Ansichten: **Entwurf** zum Definieren der Berichtsdaten und des Berichtslayouts sowie **Vorschau** zum Anzeigen einer gerenderten Ansicht des Berichts. In jeder Ansicht können Sie mehrere Fenster anzeigen, die Sie beim Entwerfen unterstützen. Außerdem können Sie einen gerenderten Bericht anzeigen.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Berichtsdatenbereich  
  im Berichtsdatenbereich werden integrierte Felder, Datenquellen, Datasets, Feldauflistungen, Berichtsparameter und Bilder angezeigt.  
@@ -63,10 +63,10 @@ ms.locfileid: "66099991"
   
 -   **Bilder** Die Liste der Bilder, die als Bildberichtselement in einen Bericht eingeschlossen werden können.  
   
- Datenquellen und Datasets im Berichtsdatenbereich stellen die Elemente in der Berichtsdefinition dar. Der Berichtsdatenbereich ist eine Funktion, die von mehreren Berichtserstellungsumgebungen unterstützt wird. Im Berichts-Generator ist dies der einzige Bereich der zum Verwalten von Datenquellen und Datasets verfügbar ist. In Berichts-Designer kann der Berichtsdatenbereich mit dem Projektmappen-Explorer verwendet werden, der freigegebene Datenquellen und freigegebene Datasets als Dateien auflistet. Freigegebene Datenquellen und freigegebene Datasets im Berichtsdatenbereich müssen auf ihre entsprechenden freigegebenen Datenquellen und freigegebenen Datasets im Projektmappen-Explorer zeigen. Die Elemente des Berichtsdatenbereichs enthalten dann einen Verweis auf die Datendateien im Projektmappen-Explorer. Die Projekteigenschaften bestimmen, ob die freigegebenen Datenquellen und freigegebenen Datasets auf der Berichtsserver- oder SharePoint-Website bereitgestellt werden. Weitere Informationen finden Sie unter [eingebettet in freigegebene Datenquelle konvertieren &#40;Berichts-Generator und SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
+ Datenquellen und Datasets im Berichtsdatenbereich stellen die Elemente in der Berichtsdefinition dar. Der Berichtsdatenbereich ist eine Funktion, die von mehreren Berichtserstellungsumgebungen unterstützt wird. Im Berichts-Generator ist dies der einzige Bereich der zum Verwalten von Datenquellen und Datasets verfügbar ist. In Berichts-Designer kann der Berichtsdatenbereich mit dem Projektmappen-Explorer verwendet werden, der freigegebene Datenquellen und freigegebene Datasets als Dateien auflistet. Freigegebene Datenquellen und freigegebene Datasets im Berichtsdatenbereich müssen auf ihre entsprechenden freigegebenen Datenquellen und freigegebenen Datasets im Projektmappen-Explorer zeigen. Die Elemente des Berichtsdatenbereichs enthalten dann einen Verweis auf die Datendateien im Projektmappen-Explorer. Die Projekteigenschaften bestimmen, ob die freigegebenen Datenquellen und freigegebenen Datasets auf der Berichtsserver- oder SharePoint-Website bereitgestellt werden. Weitere Informationen finden Sie unter [Konvertieren einer Datenquelle aus Embedded in frei &#40;gegebene Berichts-Generator und SSRS&#41;](../report-data/convert-data-sources-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Wenn Sie nicht im Bereich Berichtsdaten angezeigt der **Ansicht** Menü klicken Sie auf **Berichtsdaten**. Wenn der Berichtsdatenbereich unverankert ist, können Sie ihn verankern. Weitere Informationen finden Sie unter [Andocken des Berichtsdatenbereichs im Berichts-Designer &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
+>  Wenn der Berichtsdaten Bereich nicht angezeigt wird, klicken Sie im Menü **Ansicht** auf **Berichtsdaten**. Wenn der Berichtsdatenbereich unverankert ist, können Sie ihn verankern. Weitere Informationen finden Sie unter [Andocken des Berichtsdatenbereichs im Berichts-Designer &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
 
 ###  <a name="bkmk_GroupingPane"></a> Gruppierungsbereich  
  Verwenden Sie den Gruppierungsbereich, um Gruppen für einen Tablix-Datenbereich zu definieren. Sie können Zeilengruppen und Detailgruppen für Tabellen sowie Zeilen- und Spaltengruppen für Matrizen definieren. Sie können den Gruppierungsbereich nicht verwenden, um Gruppen für Diagramme und andere Datenbereiche zu definieren. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -232,12 +232,12 @@ ms.locfileid: "66099991"
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] kann in Quellen-Plug-Ins integriert werden. Verwenden Sie im Dialogfeld **Optionen** die Seiten zu Projekten und Projektmappen, um das Plug-In anzugeben und Einstellungen zu konfigurieren:  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Benutzerdefinierte Berichtsvorlagen  
- Wenn Sie benutzerdefinierte Berichte als Vorlagen für neue Berichte verwenden möchten, kopieren Sie diese einfach in den Ordner ReportProject auf dem Computer mit [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Dieser Ordner wird standardmäßig \<Laufwerk >: \Programme\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Wenn Sie dem Berichtsprojekt ein neues Element hinzufügen, wird der benutzerdefinierte Bericht im Vorlagenbereich angezeigt.  
+ Wenn Sie benutzerdefinierte Berichte als Vorlagen für neue Berichte verwenden möchten, kopieren Sie diese einfach in den Ordner ReportProject auf dem Computer mit [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] . Standardmäßig befindet sich dieser Ordner im \<Laufwerk >: \Programme\Microsoft Visual Studio 10.0 \ Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Wenn Sie dem Berichtsprojekt ein neues Element hinzufügen, wird der benutzerdefinierte Bericht im Vorlagenbereich angezeigt.  
   
  Zudem können Sie dem Berichts-Assistenten benutzerdefinierte Stile hinzufügen.  
 
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Befehlszeilenunterstützung für SQL Server-Datentools  
- [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] basiert auf [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 und der zugrunde liegenden Anwendung devenv.exe. Bevor Sie diese Optionen verwenden können, müssen Sie für beide folgenden Elemente gültige Werte festlegen:  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]basiert auf [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10,0 und der zugrunde liegenden Anwendung "wevenv. exe". Bevor Sie diese Optionen verwenden können, müssen Sie für beide folgenden Elemente gültige Werte festlegen:  
   
 -   Projekteigenschaften für OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder und TargetServerURL.  
   

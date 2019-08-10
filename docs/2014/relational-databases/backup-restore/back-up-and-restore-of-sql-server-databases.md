@@ -22,12 +22,12 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922941"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890820"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
   In diesem Thema werden die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung erläutert. Darüber hinaus bietet das Thema eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen und -Wiederherstellungen.  
@@ -101,7 +101,7 @@ ms.locfileid: "62922941"
   
 
   
-##  <a name="BnrStrategies"></a> Einführung in Sicherungs- und Wiederherstellungsstrategien  
+##  <a name="BnrStrategies"></a>Einführung in Sicherungs-und Wiederherstellungs Strategien  
  Das Sichern und Wiederherstellen von Daten muss jedoch auf die entsprechende Umgebung und auf die verfügbaren Ressourcen abgestimmt werden. Die zuverlässige Verwendung von Sicherungen und Wiederherstellungen erfordert daher eine Sicherungs- und Wiederherstellungsstrategie. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie maximiert Datenverfügbarkeit und minimiert Datenverluste, wobei die besonderen Anforderungen des entsprechenden Unternehmens berücksichtigt werden.  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "62922941"
   
  Eine Sicherungs- und Wiederherstellungsstrategie enthält einen Sicherungsteil und einen Wiederherstellungsteil. Der Sicherungsteil der Strategie definiert den Typ und die Häufigkeit der Sicherungen, die Art und die Geschwindigkeit der dafür benötigten Hardware, die vorgesehene Testmethode für die Sicherungen sowie Aufbewahrungsort und -methode von Sicherungsmedien (einschließlich Sicherheitsüberlegungen). Der Wiederherstellungsteil der Strategie definiert, wer für die Ausführung der Wiederherstellungen verantwortlich ist und wie Wiederherstellungen ausgeführt werden sollen, um die jeweiligen Ziele hinsichtlich der Verfügbarkeit der Datenbank und Minimierung von Datenverlusten zu erreichen. Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.  
   
- Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Dabei handelt es sich z. B. um:  
+ Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Hierzu gehört Folgendes:  
   
 -   Die Produktionsziele des Unternehmens im Verhältnis zur Datenbank, besonders die Anforderungen an Verfügbarkeit und Schutz vor Datenverlusten.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "62922941"
   
      Weitere Informationen hierzu finden Sie unter [Schätzen der Größe einer vollständigen Datenbanksicherung](#EstimateDbBuSize)weiter unten in diesem Thema.  
   
-####  <a name="EstimateDbBuSize"></a> Schätzen der Größe einer vollständigen Datenbanksicherung  
+####  <a name="EstimateDbBuSize"></a>Schätzen der Größe einer vollständigen Datenbanksicherung  
  Vor dem Implementieren einer Sicherungs- und Wiederherstellungsstrategie sollten Sie schätzen, wie viel Speicherplatz eine vollständige Datenbanksicherung auf dem Datenträger belegen wird. Beim Sicherungsvorgang werden die in der Datenbank enthaltenen Daten in die Sicherungsdatei kopiert. Die Sicherung enthält nur die in der Datenbank vorhandenen Daten, nicht etwa ungenutzten Speicherplatz. Daher ist die Sicherung normalerweise kleiner als die Datenbank selbst. Ein Schätzwert der Größe einer vollständigen Datenbanksicherung kann mithilfe der gespeicherten Systemprozedur **sp_spaceused** ermittelt werden. Weitere Informationen finden Sie unter [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Planen von Sicherungen  
@@ -226,7 +226,7 @@ ms.locfileid: "62922941"
 ### <a name="restoring-data-backups"></a>Wiederherstellen von Datensicherungen  
  **Verwendung von SQL Server Management Studio**  
   
--   [Wiederherstellen einer Datenbanksicherung &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Wiederherstellen einer Daten &#40;Bank Sicherung SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Wiederherstellen einer Datenbank an einem neuen Speicherort &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -277,7 +277,7 @@ ms.locfileid: "62922941"
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Sichern und Wiederherstellen von Analysis Services-Datenbanken](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [Sichern und Wiederherstellen von Analysis Services-Datenbanken](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

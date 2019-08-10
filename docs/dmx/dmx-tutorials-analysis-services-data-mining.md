@@ -1,5 +1,5 @@
 ---
-title: DMX-Lernprogramme (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: DMX-Tutorials (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 28f7788b0dc11c8c06e98b385d6814cb7fe81142
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061732"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892787"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX-Lernprogramme (Analysis Services – Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,16 +30,16 @@ ms.locfileid: "68061732"
  Sie erfahren, wie ein Miningmodell erstellt wird, das vorhersagt, welche Produkte voraussichtlich gemeinsam gekauft werden. Außerdem wird erläutert, wie geschachtelte Tabellen für das Data Mining verwendet werden.  
   
 ## <a name="reference"></a>Referenz  
- [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
+ [DMX&#41; - &#40;Syntax Elemente für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)  
   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
+ [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Zugriff auf mehrdimensionale Modelldaten &#40;Analysis Services – mehrdimensionale Daten&#41;](../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)  
+ [Datenzugriff &#40;auf mehrdimensionale Modelle Analysis Services-Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Struktur und Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

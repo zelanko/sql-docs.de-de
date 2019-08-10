@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6be7de10c10c39e5e53cbe43ca7be46219e7d4cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023397"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892914"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 
@@ -32,13 +32,13 @@ Member_Expression.DataMember
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Diese Funktion nimmt Nichtblattelemente in einer beliebigen Hierarchie und kann verwendet werden, indem die [UPDATE CUBE-Anweisung (MDX)](../mdx/mdx-data-manipulation-update-cube.md) um Daten zu direkt einem Nichtblattelement anstatt zu das Blattelement Nachfolger.  
+ Diese Funktion wird für nicht Blatt Elemente in einer beliebigen Hierarchie verwendet und kann vom Befehl " [Update CUBE-Anweisung (MDX)](../mdx/mdx-data-manipulation-update-cube.md) " verwendet werden, um Daten direkt an ein nicht Blatt Element zurückzuschreiben, anstatt in die Nachfolger Elemente des Blatt Elements.  
   
 > [!NOTE]  
 >  Gibt das angegebene Element zurück, wenn es ein Blattelement ist, oder wenn das Nichtblattelement über keine dazugehörigen Datenelemente verfügt.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die **DataMember** Funktion in einem berechneten Measure aus, um die verkaufsquote für jeden einzelnen Mitarbeiter anzuzeigen:  
+ Im folgenden Beispiel wird die **DataMember** -Funktion in einem berechneten Measure verwendet, um das Vertriebs Kontingent für jeden einzelnen Mitarbeiter anzuzeigen:  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Siehe auch  
  [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

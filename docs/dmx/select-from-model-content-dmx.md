@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;Modell&gt;. INHALT (DMX) | Microsoft-Dokumentation
+title: Wählen Sie &lt;aus&gt;dem Modell aus. Inhalt (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906737"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892830"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;Modell&gt;. INHALT (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Wählen Sie &lt;aus&gt;dem Modell aus. Inhalt (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Gibt das Miningmodell-Schemarowset für das angegebene Data Mining-Modell zurück.  
@@ -33,25 +33,25 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *n*  
  Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
- *Liste mit Ausdrücken*  
+ *Ausdrucks Liste*  
  Eine durch Trennzeichen getrennte Liste mit Spalten, die aus dem Schemarowset des Inhalts abgeleitet wurden.  
   
  *model*  
  Ein Modellbezeichner.  
   
- *Bedingungsausdruck*  
- Dies ist optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
+ *Bedingungs Ausdruck*  
+ Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
  *expression*  
- Dies ist optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Hinweise  
- Die **SELECT FROM**  _\<Modell >_ **. Inhalt** -Anweisung gibt Inhalt, der für jeden Algorithmus spezifischen zurück. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **SELECT FROM \<Modell >. Inhalt** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
+ Das **Select from**  _\<-Modell >_ **. Die Inhalts** Anweisung gibt Inhalt zurück, der für jeden Algorithmus spezifisch ist. Angenommen, Sie möchten die Beschreibungen aller Regeln eines Modells für Zuordnungsregeln in einer benutzerdefinierten Anwendung verwenden. Sie können eine **Select from \<Model-> verwenden. Inhalts** Anweisung zum Zurückgeben von Werten in der NODE_RULE-Spalte des Modells.  
   
  In der folgenden Tabelle sind die im Miningmodellinhalt enthaltenen Spalten aufgeführt.  
   
 > [!NOTE]  
->  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung der für jeden Algorithmus und Tipps zur Interpretation und Abfrage für jeden Modelltyp Inhalt des Miningmodells Inhalt des Miningmodells, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Algorithmen können die Spalten unterschiedlich auswerten, um den Inhalt richtig darzustellen. Eine Beschreibung des Mining Modell Inhalts für jeden Algorithmus und Tipps zur Interpretation und Abfrage des Mining Modell Inhalts für die einzelnen Modelltypen finden Sie unter [Mining Model Content &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |CONTENT-Rowsetspalte|Beschreibung|  
 |---------------------------|-----------------|  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |NODE_UNIQUE_NAME|Der eindeutige Name des Knotens innerhalb des Modells.|  
 |NODE_TYPE|Eine ganze Zahl, die den Typ des Knotens darstellt. .|  
 |NODE_GUID|Der GUID (Globally Unique Identifier) des Knotens. NULL, wenn es keinen GUID gibt.|  
-|NODE_CAPTION|Eine Bezeichnung oder Beschriftung, die dem Knoten zugeordnet ist. Wird hauptsächlich für Anzeigezwecke verwendet. Ist keine Beschriftung vorhanden, wird NODE_NAME zurückgegeben.|  
+|NODE_CAPTION|Eine Bezeichnung oder eine Beschriftung, die dem Knoten zugeordnet ist. Wird hauptsächlich für Anzeigezwecke verwendet. Ist keine Beschriftung vorhanden, wird NODE_NAME zurückgegeben.|  
 |CHILDREN_CARDINALITY|Die Anzahl der untergeordneten Elemente des Knotens.|  
 |PARENT_UNIQUE_NAME|Der eindeutige Name des dem Knoten übergeordneten Elements.|  
 |NODE_DESCRIPTION|Eine Beschreibung des Knotens.|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- Die folgende Abfrage verwendet die **IsDescendant** Funktion, um die unmittelbar untergeordneten Elemente des Knotens zurückzugeben, die in der vorherigen Abfrage zurückgegeben wurde.  
+ In der folgenden Abfrage wird die isnachfolger-Funktion verwendet, um die unmittelbaren untergeordneten Elemente des Knotens zurückzugeben, der in der vorherigen Abfrage zurückgegeben wurde.  
   
 > [!NOTE]  
->  Da der Wert von NODE_NAME eine Zeichenfolge ist, können keine untergeordneten select-Anweisung zurückzugebenden die NODE_ID als Argument an die **IsDescendant** Funktion.  
+>  Da der Wert von NODE_NAME eine Zeichenfolge ist, können Sie keine untergeordnete SELECT-Anweisung verwenden, um die NODE_ID als Argument an die **isnachfolger** -Funktion zurückzugeben.  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  Erwartete Ergebnisse:  
   
- Da das Modell ein Entscheidungsstrukturmodell ist, enthalten die nachfolgenden Elemente des übergeordneten Knotens des Modells einen einzelnen Knoten für Randstatistik, einen Knoten, der das vorhersagbare Attribut darstellt, und mehrere Knoten, die Eingabeattribute und Werte enthalten. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Da das Modell ein Entscheidungsstrukturmodell ist, enthalten die nachfolgenden Elemente des übergeordneten Knotens des Modells einen einzelnen Knoten für Randstatistik, einen Knoten, der das vorhersagbare Attribut darstellt, und mehrere Knoten, die Eingabeattribute und Werte enthalten. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Verwenden des FLATTENED-Schlüsselworts  
  Der Miningmodellinhalt enthält in geschachtelten Tabellenspalten häufig interessante Informationen über das Modell. Mithilfe des FLATTENED-Schlüsselworts können Sie Daten aus geschachtelten Tabellen abrufen, ohne einen Anbieter zu benötigen, der hierarchische Rowsets unterstützt.  
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>Siehe auch  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

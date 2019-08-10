@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038273"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887437"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX-Datendefinition – CREATE SUBCUBE
 
@@ -35,7 +35,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Ein gültiger SELECT-Ausdruck in MDX (Multidimensional Expressions), der keine WITH-, NON EMPTY- oder HAVING-Klausel enthält und keine Dimensions- oder Zelleigenschaften anfordert.  
   
- Finden Sie unter [SELECT-Anweisung &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) für eine ausführliche Erläuterung der Syntax für Select-Anweisungen und die **NON VISUAL** Klausel.  
+ Eine ausführliche Syntax Erklärung zu SELECT-Anweisungen und der **Non-Visual** -Klausel finden Sie unter [Select- &#40;Anweisung MDX&#41; ](../mdx/mdx-data-manipulation-select.md) .  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Standardelemente in der Definition eines Teilcubes ausgeschlossen werden, ändern sich die Koordinaten entsprechend. Für Attribute, die aggregiert werden können, wird [All] zum Standardelement erklärt. Für Attribute, die nicht aggregiert werden können, wird ein im Teilcube vorhandenes Element zum Standardelement. In der folgenden Tabelle sind Beispiele für Kombinationen aus Teilcubes und Standardelementen aufgeführt.  
@@ -43,19 +43,19 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |Ursprüngliches Standardelement|Kann aggregiert werden|Untergeordneter SELECT-Ausdruck|Geändertes Standardelement|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|Ja|{Time.Year.2003}|Keine Änderung|  
-|Time.Year. [1997]|Ja|{Time.Year.2003}|Time.Year.All|  
-|Time.Year. [1997]|Nein|{Time.Year.2003}|Time.Year. [2003]|  
-|Time.Year. [1997]|Ja|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year. [1997]|Nein|{Time.Year.2003, Time.Year.2004}|Entweder Time.Year.[2003] oder<br /><br /> Time.Year.[2004]|  
+|Zeit. Jahr. [1997]|Ja|{Time.Year.2003}|Time.Year.All|  
+|Zeit. Jahr. [1997]|Nein|{Time.Year.2003}|Zeit. Jahr. [2003]|  
+|Zeit. Jahr. [1997]|Ja|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Zeit. Jahr. [1997]|Nein|{Time.Year.2003, Time.Year.2004}|Entweder Time.Year.[2003] oder<br /><br /> Time.Year.[2004]|  
   
  [All]-Elemente sind immer in einem Teilcube vorhanden.  
   
  Sitzungsobjekte, die im Kontext eines Teilcubes erstellt wurden, werden gelöscht, wenn der Teilcube gelöscht wird.  
   
- Weitere Informationen zu Teilcubes finden Sie unter [Erstellen von Teilcubes in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Weitere Informationen zu Teilcubes finden Sie unter [Building Subcubes in MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird ein Teilcube erstellt, der den scheinbaren Cuberaum auf Elemente einschränkt, die gemeinsam mit dem Land Kanada vorhanden sind. Anschließend wird mithilfe der **Mitglieder** Funktion, um alle Elemente des Lands, das von der Geography eine benutzerdefinierte Hierarchie zurückzugeben, wobei lediglich das Land Kanada zurückgegeben.  
+ Im folgenden Beispiel wird ein Teilcube erstellt, der den scheinbaren Cuberaum auf Elemente einschränkt, die gemeinsam mit dem Land Kanada vorhanden sind. Anschließend wird die **Members** -Funktion verwendet, um alle Elemente der Länderebene der benutzerdefinierten Geography-Hierarchie zurückzugeben, wobei nur das Land von Kanada zurückgegeben wird.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -87,7 +87,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  `where [Measures].[Reseller Sales Amount]`  
   
- Führt zu folgenden Ergebnissen:  
+ Ergibt die folgenden Ergebnisse:  
   
 |||||  
 |-|-|-|-|  
@@ -128,9 +128,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  Die Spalte [All Products] und die Zeile [All Resellers] enthalten die Gesamtsummen für alle Elemente, nicht nur die Gesamtsummen der sichtbaren Elemente.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [MDX-Skriptanweisungen &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX für MDX-Skript Anweisungen &#40;&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP SUBCUBE- &#40;Anweisung (MDX)&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

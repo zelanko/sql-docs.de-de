@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063880"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891759"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Abfrage- und Text-Editoren (SQL Server Management Studio)
   Mit den Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lassen sich [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- oder XML/A-Skripts interaktiv bearbeiten und testen sowie XML- oder einfache Textdateien bearbeiten. Die einzelnen Editoren werden durch einen sprachspezifischen Dienst unterstützt, der Schlüsselwörter farblich kennzeichnet und den Code auf Syntaxfehler überprüft. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor enthält einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger, mit dem Sie Probleme in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code beheben können.  
@@ -108,8 +108,8 @@ ms.locfileid: "66063880"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie die grundlegenden Funktionen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor angezeigt und verwendet werden.|[Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|Beschreibt, wie die grundlegenden Funktionen im MDX-Abfrage-Editor angezeigt und verwendet werden.|[MDX-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|Beschreibt, wie die grundlegenden Funktionen im DMX-Abfrage-Editor angezeigt und verwendet werden.|[DMX-Abfrage-Editor &#40;Analysis Services &mdash; Data Mining&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|Beschreibt, wie die grundlegenden Funktionen im MDX-Abfrage-Editor angezeigt und verwendet werden.|[MDX-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|Beschreibt, wie die grundlegenden Funktionen im DMX-Abfrage-Editor angezeigt und verwendet werden.|[DMX-Abfrage-Editor &#40;Analysis Services &mdash; Data Mining&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |Beschreibt, wie die grundlegenden Funktionen im XML/A-Abfrage-Editor angezeigt und verwendet werden.|[XML-Editor &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |Beschreibt, wie Optionen für die verschiedenen Editoren konfiguriert werden, z. B. Zeilennummerierung und IntelliSense-Optionen.|[Konfigurieren von Editoren &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |Beschreibt die verschiedenen Methoden zum Öffnen der Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].|[Öffnen eines Editors &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  

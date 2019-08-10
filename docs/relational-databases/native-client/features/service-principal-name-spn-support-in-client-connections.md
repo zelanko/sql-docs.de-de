@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 126a419f52ee88349d1d64fcfe756fcb3681c03a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069181"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893317"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Unterstützung von Dienstprinzipalnamen (SPN) in Clientverbindungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68069181"
   
  Weitere Informationen zu Kerberos finden Sie in den folgenden Artikeln:  
   
--   [Kerberos – Technische Ergänzung für Windows](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos – Technische Ergänzung für Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
@@ -72,18 +72,18 @@ ms.locfileid: "68069181"
  Das neue Verbindungsverhalten ist clientseitig implementiert und daher kein spezifisches Verhalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Verbindungsserver und Delegierung  
- Beim Einrichten von Verbindungsservern wird der Parameter **@provstr** von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Die Vorteile dieser Vorgehensweise sind die gleichen wie die bei der Angabe von SPNs in Client-Verbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die Kerberos-Authentifizierung verwenden.  
+ Beim Einrichten von Verbindungsservern wird der Parameter **@provstr** von [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) verwendet, um den SPN für den Server und Failoverpartner festzulegen. Die Vorteile dieser Vorgehensweise sind die gleichen wie die bei der Angabe von SPNs in Client-Verbindungszeichenfolgen: Es ist einfacher und zuverlässiger, Verbindungen herzustellen, die die Kerberos-Authentifizierung verwenden.  
   
  Delegierung über Verbindungsserver erfordert die Kerberos-Authentifizierung.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Verwaltungsaspekte von SPNs, die von Anwendungen angegeben werden  
  Berücksichtigen Sie die folgenden Faktoren bei der Entscheidung, ob SPNs in einer Anwendung (über Verbindungszeichenfolgen) oder programmgesteuert über Verbindungseigenschaften (anstatt sich auf den standardmäßig vom Anbieter erstellten SPN zu verlassen) angegeben werden.  
   
--   Sicherheit: Ist der angegebene SPN geschützte Informationen offen?  
+-   Sicherheit: Gibt der angegebene SPN geschützte Informationen offen?  
   
--   Zuverlässigkeit: So aktivieren Sie die Verwendung von Standard-SPNs muss das Dienstkonto in der die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz ausgeführt wird, müssen zum update von Active Directory im KDC von Systemdiensten besitzen.  
+-   Angeht Zum Aktivieren der Verwendung von Standard-SPNs muss das Dienst Konto, in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dem die Instanz ausgeführt wird, über ausreichende Berechtigungen zum Aktualisieren der Active Directory auf dem KDC verfügen.  
   
--   Benutzerfreundlichkeit und Speicherorttransparenz: Wie die SPNs einer Anwendung wirkt, wenn die Datenbank auf einen anderen verschiebt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
+-   Transparenz und Speicherort Transparenz: Wie wirkt es sich auf die SPNs einer Anwendung aus, wenn die Datenbank in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine andere Instanz verschoben wird? Dies gilt für sowohl den Prinzipalserver als auch seinen Failoverpartner, wenn Sie die Datenbankspiegelung verwenden. Wie wirkt es sich auf Anwendungen aus, wenn eine Serveränderung bedeutet, dass SPNs geändert werden müssen? Werden die Änderungen verwaltet?  
   
 ## <a name="specifying-the-spn"></a>Angeben des SPN  
  Sie können einen SPN in Dialogfeldern und Code angeben. In diesem Abschnitt wird erläutert, wie Sie einen SPN angeben können.  
@@ -105,7 +105,7 @@ ms.locfileid: "68069181"
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>SPNs, die ODBC und OLE DB-Syntax unterstützen  
  Informationen zur Syntax finden Sie in den folgenden Themen:  
   
--   [Dienstprinzipalnamen &#40;SPNs&#41; in Clientverbindungen &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Dienst Prinzipal &#40;Namen-&#41; SPNs in &#40;Client Verbindungen ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
 -   [Dienstprinzipalnamen (SPN) &#40;SPNs&#41; in Clientverbindungen &#40;(OLE DB&#41;)](../../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)  
   

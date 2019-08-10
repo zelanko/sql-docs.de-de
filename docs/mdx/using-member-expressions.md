@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Elementausdrücken | Microsoft-Dokumentation
+title: Verwenden von Element Ausdrücken | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097114"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893515"
 ---
 # <a name="using-member-expressions"></a>Verwenden von Elementausdrücken
 
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- Es gibt viele MDX-Funktionen, die Elemente zurückgeben. Eine vollständige Liste finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ Es gibt viele MDX-Funktionen, die Elemente zurückgeben. Eine vollständige Liste finden Sie unter [MDX- &#40;Funktionsreferenz&#41; MDX](../mdx/mdx-function-reference-mdx.md) .  
   
 > [!NOTE]  
->  Weitere Informationen zu Elementnamen und Elementschlüsseln finden Sie unter [arbeiten mit Elementen, Tupeln und Mengen &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+>  Weitere Informationen zu Elementnamen und Element Schlüsseln finden Sie unter [Arbeiten mit Membern, Tupeln und &#40;Mengen von&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Ausdrücke &#40;(MDX)&#41;](../mdx/expressions-mdx.md)  
   
   

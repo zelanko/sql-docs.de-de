@@ -1,5 +1,5 @@
 ---
-title: CSDL-Anmerkungen für Business Intelligence (CSDLBI) | Microsoft-Dokumentation
+title: CSDL-Anmerkungen für Business Intelligence (csdlbi) | Microsoft-Dokumentation
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3eac4057f8a4db818a02068f33cbc7b295353f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23a7433ffb0f06330c948de0955193a885eec768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68207905"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890184"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>CSDL-Anmerkungen für Business Intelligence (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68207905"
   
  Das CSDLBI-Schema wird vom Analysis Services-Server als Reaktion auf eine Anforderung für eine Modelldefinition von einem Client wie [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] generiert. Die Clientanwendung sendet eine XML-Abfrage an den Analysis Services-Server, der die Modelldaten hostet. Im Gegenzug sendet der Server mithilfe der CSDLBI-Anmerkungen eine XML-Meldung, die eine Definition der Entitäten im Modell enthält. Der Berichtsclient verwendet dann die Informationen zur Darstellung der im Modell verfügbaren Felder, Aggregationen und Measures. Die CSDLBI-Anmerkungen enthalten auch Informationen zum Gruppieren, Sortieren und Formatieren der Daten.  
   
- Allgemeine Informationen über die CSDLBI finden Sie unter [CSDLBI-Konzepte](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
+ Allgemeine Informationen zu csdlbi finden Sie unter [csdlbi-Konzepte](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts).  
   
 ### <a name="working-with-csdl"></a>Arbeiten mit CSDL  
  Der Satz von CSDLBI-Anmerkungen, der ein bestimmtes tabellarische Modell darstellt, ist ein XML-Dokument, das eine Auflistung einfacher und komplexer Entitäten enthält. Die Entitäten definieren Tabellen (oder Dimensionen), Spalten (Attribute), Zuordnungen (Beziehungen) und Formeln in berechneten Spalten, Measures oder KPIs.  
@@ -63,11 +63,11 @@ ms.locfileid: "68207905"
   
 -   Unterstützung für Perspektiven.  
   
- Ausführliche Informationen zu einzelnen Elemente in CSDLBI-Anmerkungen finden Sie unter [technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Informationen zu CSDL-hauptspezifikation finden Sie unter den [CSDL-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=205855) auf MSDN.  
+ Ausführliche Informationen zu einzelnen Elementen in den csdlbi-Anmerkungen finden Sie unter [Technische Referenz für BI-Anmerkungen zu CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Weitere Informationen zur CSDL-Kern Spezifikation finden Sie in der [CSDL-Spezifikation](http://go.microsoft.com/fwlink/?LinkId=205855) auf MSDN.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zum tabellarischen Objektmodell mit Ebenen 1050 bis 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [CSDLBI-Konzepte](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
- [Grundlegendes zum tabellarischen Objektmodell mit Ebenen 1050 bis 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Grundlegendes zum tabellarischen Objektmodell mit Kompatibilitäts Grad 1050 bis 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)   
+ [Csdlbi-Konzepte](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [Grundlegendes zum tabellarischen Objektmodell mit Kompatibilitäts Grad 1050 bis 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)  
   
   

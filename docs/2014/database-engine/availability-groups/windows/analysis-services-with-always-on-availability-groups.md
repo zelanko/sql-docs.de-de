@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791879"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889223"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
   Eine AlwaysOn-Verfügbarkeitsgruppe ist eine vordefinierte Auflistung relationaler SQL Server-Datenbanken, für die gemeinsam ein Failover erfolgt, wenn Bedingungen in einer der Datenbanken ein Failover auslösen. Dabei werden Anforderungen an eine gespiegelte Datenbank in einer anderen Instanz in der gleichen Verfügbarkeitsgruppe umgeleitet. Wenn Sie als Hochverfügbarkeitslösung Verfügbarkeitsgruppen verwenden, können Sie in einer tabellarischen oder mehrdimensionalen Analysis Services-Lösung eine Datenbank in dieser Gruppe als Datenquelle verwenden. Alle folgenden Analysis Services-Vorgänge werden bei Verwendung einer Verfügbarkeitsdatenbank wie erwartet ausgeführt: das Verarbeiten oder Importieren von Daten, das direkte Abfragen von relationalen Daten (im ROLAP-Speichermodus oder DirectQuery-Modus) und das Rückschreiben.  
@@ -115,7 +115,7 @@ ms.locfileid: "62791879"
   
      Erstellen Sie anschließend eine Datenquelle in einem Analysis Services-Modell, die eine Datenbank aus der soeben von Ihnen konfigurierten Gruppe verwendet.  
   
-##  <a name="bkmk_ssasAODB"></a> Erstellen einer Analysis Services-Datenquelle mithilfe einer Always On-verfügbarkeitsdatenbank  
+##  <a name="bkmk_ssasAODB"></a>Erstellen einer Analysis Services Datenquelle mithilfe einer AlwaysOn-Verfügbarkeits Datenbank  
  In diesem Abschnitt wird das Erstellen einer Analysis Services-Datenquelle beschrieben, die eine Verbindung mit einer Datenbank in einer Verfügbarkeitsgruppe herstellt. Sie können mithilfe dieser Anweisungen eine Verbindung mit einem primären Replikat (Standard) oder einem lesbaren sekundären Replikat konfigurieren, das Sie mit Schritten in einem vorherigen Abschnitt konfiguriert haben. AlwaysOn-Konfigurationseinstellungen sowie die im Client festgelegten Verbindungseigenschaften bestimmen, ob ein primäres oder sekundäres Replikat verwendet wird.  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] in einem Analysis Services-Projekt für mehrdimensionale und Data Mining-Modelle mit der rechten Maustaste auf **Datenquellen**, und wählen Sie **Neue Datenquelle** aus. Klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
@@ -130,7 +130,7 @@ ms.locfileid: "62791879"
   
      Um den Namen des Verfügbarkeitsgruppenlisteners zu bestimmen, können Sie einen Datenbankadministrator fragen oder eine Verbindung mit einer Instanz in der Verfügbarkeitsgruppe herstellen und die entsprechende AlwaysOn-Verfügbarkeitskonfiguration anzeigen. Im folgenden Screenshot lautet der Name des Verfügbarkeitsgruppenlisteners **AdventureWorks2**.  
   
-     ![AlwaysOn-verfügbarkeitsordner in Management Studio](../../media/ssas-alwaysoninfoinssms.png "AlwaysOn-verfügbarkeitsordner in Management Studio")  
+     ![AlwaysOn-Verfügbarkeits Ordner in Management Studio](../../media/ssas-alwaysoninfoinssms.png "AlwaysOn-Verfügbarkeits Ordner in Management Studio")  
   
 4.  Klicken Sie im Verbindungs-Manager im linken Navigationsbereich auf **Alle** , um das Eigenschaftenraster des Datenanbieters anzuzeigen.  
   
@@ -201,13 +201,13 @@ ms.locfileid: "62791879"
 ##  <a name="bkmk_whathappens"></a> Vorgänge nach einem Failover  
  Während eines Failovers geht ein sekundäres Zielreplikat in die primäre Rolle über, und das frühere primäre Replikat geht in die sekundäre Rolle über. Alle Clientverbindungen werden beendet, der Besitz am Verfügbarkeitsgruppenlistener wechselt mit der primären Replikatrolle zu einer neuen SQL Server-Instanz, und der Listenerendpunkt wird an die virtuellen IP-Adressen und TCP-Ports der neuen Instanz gebunden. Weitere Informationen finden Sie unter [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Wenn es bei der Verarbeitung zu einem Failover kommen sollte, wird die folgende Fehlermeldung in der Protokolldatei oder im Ausgabefenster in Analysis Services zurückgegeben: "OLE DB error: OLEDB- oder ODBC-Fehler: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01.“  
+ Wenn es bei der Verarbeitung zu einem Failover kommen sollte, wird die folgende Fehlermeldung in der Protokolldatei oder im Ausgabefenster in Analysis Services zurückgegeben: "OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01.“  
   
  Dieser Fehler sollte behoben sein, wenn Sie eine Minute lang warten und es dann erneut versuchen. Sofern die Verfügbarkeitsgruppe ordnungsgemäß für ein lesbares sekundäres Replikat konfiguriert ist, wird die Verarbeitung auf dem neuen sekundären Replikat fortgesetzt, wenn Sie die Verarbeitung erneut starten.  
   
  Persistente Fehler treten wahrscheinlich aufgrund eines Konfigurationsproblems auf. Sie können versuchen, das T-SQL-Skript erneut auszuführen, um Probleme mit der Routingliste, mit URLs für das schreibgeschützte Routing und mit beabsichtigten Lesevorgängen auf dem sekundären Replikat zu beheben. Sie sollten außerdem überprüfen, ob das primäre Replikat alle Verbindungen zulässt.  
   
-##  <a name="bkmk_writeback"></a> Rückschreiben mithilfe einer Always On-verfügbarkeitsdatenbank  
+##  <a name="bkmk_writeback"></a>Rück schreiben bei Verwendung einer AlwaysOn-Verfügbarkeits Datenbank  
  Rückschreiben ist eine Analysis Services-Funktion, die Was-wäre-wenn-Analysen in Excel unterstützt. Sie wird auch häufig für Budgetierungs- und Prognosetasks in benutzerdefinierten Anwendungen verwendet.  
   
  Die Unterstützung für Rückschreiben erfordert eine READWRITE-Clientverbindung. Wenn Sie in Excel versuchen, in eine schreibgeschützte Verbindung zurückzuschreiben, tritt der folgende Fehler auf: „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“ „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“  
@@ -218,9 +218,9 @@ ms.locfileid: "62791879"
   
 ## <a name="see-also"></a>Siehe auch  
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Aktive sekundäre Replikate: Lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Erstellen einer Datenquelle (SSAS: mehrdimensional)](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Rückschreiben von Dimensionen aktivieren](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Aktive sekundäre Replikate: Lesbare sekundäre &#40;Replikate AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [AlwaysOn-Richtlinien für Betriebsprobleme &#40;mit AlwaysOn-Verfügbarkeitsgruppen SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Erstellen einer Datenquelle (SSAS: mehrdimensional)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Rückschreiben von Dimensionen aktivieren](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

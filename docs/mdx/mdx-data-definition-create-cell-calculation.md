@@ -1,5 +1,5 @@
 ---
-title: Erstellen von CELL CALCULATION-Anweisung (MDX) | Microsoft-Dokumentation
+title: Create Cell Berechnung-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ba563c848179e8cf3dc12f64d2b3c4233955159
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098478"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892164"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX-Datendefinition – CREATE CELL CALCULATION
 
@@ -74,12 +74,12 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 >  Die Backus-Naur-Form (BNF) von `{*(<comment> | <whitespace> | <newline>)}` wird aus Gründen der Abwärtskompatibilität als `{*}` analysiert.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen berechnete Zellen im Bereich einer Sitzung](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [Erstellen von Zellenberechnungen im Bereich einer Abfrage &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Erstellen von Zellenberechnungen in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [Verwenden von Zelleneigenschaften &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [FORMAT_STRING-Inhalt &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [FORE_COLOR und BACK_COLOR-Inhalte &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
- [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Erstellen berechneter Zellen im Bereich einer Sitzung](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
+ [Erstellen von Zellenberechnungen im Bereich einer Abfrage &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
+ [Aufbauen von Zellen Berechnungen in MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
+ [Verwenden von Zelleneigenschaften &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
+ [FORMAT_STRING-Inhalt &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
+ [MDX für FORE_COLOR &#40;und BACK_COLOR-Inhalt&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
+ [MDX für MDX &#40;-Daten Definitions Anweisungen&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

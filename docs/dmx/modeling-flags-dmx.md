@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 01be0e2d0ead01a3b6c630e0ddd0f53e55620104
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008317"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893932"
 ---
 # <a name="modeling-flags-dmx"></a>Modellierungsflags (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68008317"
  **MODEL_EXISTENCE_ONLY**  
  Die Werte für die Attributspalte sind weniger wichtig als das Vorhandensein des Attributs. Dieses Flag ist für eine Miningmodellspalte definiert.  
   
- Algorithmen von Drittanbietern unterstützen möglicherweise weitere Modellierungsflags. Um zu bestimmen, welche Modellierungsflags ein Algorithmus unterstützt, verwenden Sie die **SUPPORTED_MODELING_FLAGS** -Schemarowsets. Sie können auch den Miningdienst auf dem Server abfragen, um festzustellen, welche Modellierungsflags für einen bestimmten Algorithmus unterstützt werden. Die folgende Abfrage gibt beispielsweise die Modellierungsflags zurück, die für den Microsoft Linear Regression-Algorithmus auf dem aktuellen Server unterstützt werden:  
+ Algorithmen von Drittanbietern unterstützen möglicherweise weitere Modellierungsflags. Um zu ermitteln, welche Modellierungsflags ein Algorithmus unterstützt, verwenden Sie das **SUPPORTED_MODELING_FLAGS** -Schemarowset Sie können auch den Miningdienst auf dem Server abfragen, um festzustellen, welche Modellierungsflags für einen bestimmten Algorithmus unterstützt werden. Die folgende Abfrage gibt beispielsweise die Modellierungsflags zurück, die für den Microsoft Linear Regression-Algorithmus auf dem aktuellen Server unterstützt werden:  
   
 ```  
 SELECT SUPPORTED_MODELING_FLAGS  
@@ -44,21 +44,21 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>Festlegen von Modellierungsflags auf einem Miningmodell  
- Beispiele für die Syntax, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt, für das Festlegen eines Flags für eine Miningstrukturspalte, finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
+ Beispiele für die Syntax [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , die unterstützt, um ein Flag für eine Mining Struktur Spalte anzugeben, finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- Ein Beispiel für die Syntax zum Angeben eines Modellierungsflags für eine Miningmodellspalte, finden Sie unter [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
+ Ein Beispiel für die Syntax zum Angeben einer Modellierungs-Modellierungsflags für eine Mining Modell Spalte finden Sie unter [Alter Mining &#40;Structure DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
- Weitere Informationen zum Arbeiten mit Miningmodellspalten finden Sie unter [Miningmodellspalten](../analysis-services/data-mining/mining-model-columns.md).  
+ Weitere Informationen zum Arbeiten mit Mining Modell Spalten finden Sie unter [Mining Modell Spalten](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../dmx/data-mining-extensions-dmx-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Syntaxelemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Syntaxkonventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41; - &#40;Syntax Elemente für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41; - &#40;Operator Verweis für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41; - &#40;Anweisungs Referenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-statements.md)   
+ [DMX&#41; - &#40;Syntax Konventionen für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struktur und Verwendung von DMX-Vorhersageabfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   

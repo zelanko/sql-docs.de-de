@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212055"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941067"
 ---
 # <a name="view-and-modify-publication-properties"></a>Anzeigen und Ändern von Veröffentlichungseigenschaften
   In diesem Thema wird beschrieben, wie die Veröffentlichungseigenschaften in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden.  
@@ -102,29 +102,29 @@ ms.locfileid: "68212055"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften einer Momentaufnahme oder einer Transaktionsveröffentlichung an  
   
-1.  Führen Sie [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
+1.  Führen Sie [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den  **\@Veröffentlichungs** Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>So ändern Sie die Eigenschaften einer Momentaufnahme oder einer Transaktionsveröffentlichung  
   
-1.  Führen Sie [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus, und geben Sie dabei die zu ändernde Veröffentlichungseigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
+1.  Führen Sie [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)aus, und geben Sie dabei die zu ändernde Veröffentlichungs Eigenschaft im  **\@Property** -Parameter und den neuen  **\@** Wert dieser Eigenschaft im value-Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie den Wert **1** für **@force_reinit_subscription** . Weitere Informationen zu den Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
+    >  Wenn die Änderung die Generierung einer neuen Momentaufnahme erfordert, müssen Sie auch den Wert **1** für  **\@force_invalidate_snapshot**angeben, und wenn die Änderung erfordert, dass die Abonnenten erneut initialisiert werden, müssen Sie den Wert 1 angeben.  **für\@force_reinit_subscription**. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>So zeigen Sie die Eigenschaften einer Mergeveröffentlichung an  
   
-1.  Führen Sie [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
+1.  Führen Sie [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den  **\@Veröffentlichungs** Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>So ändern Sie die Eigenschaften einer Mergeveröffentlichung  
   
-1.  Führen Sie [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus, und geben Sie dabei die zu ändernde Veröffentlichungseigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
+1.  Führen Sie [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)aus, und geben Sie dabei die zu ändernde Veröffentlichungs Eigenschaft im  **\@Property** -Parameter und den neuen  **\@** Wert dieser Eigenschaft im value-Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie auch einen Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung erfordert, dass Abonnenten erneut initialisiert werden, geben Sie den Wert **1** für **@force_reinit_subscription** an. Weitere Informationen zu den Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern der Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
+    >  Wenn die Änderung die Generierung einer neuen Momentaufnahme erfordert, müssen Sie auch den Wert **1** für  **\@force_invalidate_snapshot**angeben, und wenn die Änderung erfordert, dass die Abonnenten erneut initialisiert werden, müssen Sie den Wert 1 angeben.Weitere Informationen zu den Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs-und Artikeleigenschaften](change-publication-and-article-properties.md).  **\@**  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>So zeigen Sie die Eigenschaften einer Momentaufnahme an  
   
-1.  Führen Sie [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter an.  
+1.  Führen Sie [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den  **\@Veröffentlichungs** Parameter an.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>So ändern Sie die Eigenschaften einer Momentaufnahme  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68212055"
   
 3.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen. Wenn diese Methode `false` zurückgibt, sind die Veröffentlichungseigenschaften in Schritt 2 falsch definiert, oder die Veröffentlichung ist nicht vorhanden.  
   
-4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen AND-Operator (`&` in Visual C#- und `And` in Visual Basic) zu entscheiden, ob eine angegebene <xref:Microsoft.SqlServer.Replication.PublicationAttributes> Wert wird festgelegt, für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> Eigenschaft. Verwenden Sie den inklusiven logischen OR-Operator (`|` in Visual C# and `Or` in Visual Basic) und den exklusiven logischen OR-Operator (`^` in Visual C# und `Xor` in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft zu ändern.  
+4.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine oder mehrere festlegbaren Eigenschaften fest. Verwenden Sie den logischen and-`&` Operator ( C# in `And` Visual und in Visual Basic), um zu <xref:Microsoft.SqlServer.Replication.PublicationAttributes> bestimmen, ob ein bestimmter <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> Wert für die-Eigenschaft festgelegt ist. Verwenden Sie den inklusiven logischen OR-Operator (`|` in Visual C# and `Or` in Visual Basic) und den exklusiven logischen OR-Operator (`^` in Visual C# und `Xor` in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft zu ändern.  
   
 5.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "68212055"
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md)   
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Fügen Sie und Löschen von Artikeln aus einer Veröffentlichung hinzu](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [Hinzufügen von Artikeln zu einer Veröffentlichung und Löschen von Artikeln aus einer Veröffentlichung](add-articles-to-and-drop-articles-from-a-publication.md)   
  [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md)  
   

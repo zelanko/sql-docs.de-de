@@ -10,12 +10,12 @@ ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e1aa9411fbc11becf8e7b159c27ef609e38083b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: baf802929aa4bf0becc5eece41a445f180580daf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094551"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890766"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Installieren von PowerPivot für SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] umfasst Dienste der mittleren Ebene sowie Back-End-Dienste, die den PowerPivot-Datenzugriff in einer SharePoint 2010-Farm ermöglichen. Falls Ihre Organisation die Clientanwendung [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel 2010 zum Erstellen von Arbeitsmappen mit analytischen Daten nutzt, benötigen Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], um in einer Serverumgebung auf diese Daten zuzugreifen. In diesem Thema wird der grundlegende Installationsvorgang erläutert. Zusätzlich enthält es Links zu weiteren Themen, die Sie bei der Konfiguration von PowerPivot unterstützen.  
@@ -26,9 +26,9 @@ ms.locfileid: "66094551"
   
  
   
- Anweisungen zum Installieren von [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf dem gleichen Server, finden Sie unter [Checkliste für die Bereitstellung: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
+ Anweisungen zum Installieren [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] von und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf demselben Server finden [Sie unter Deployment Checkliste: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
   
 1.  Sie müssen lokaler Administrator sein, um SQL Server-Setup auszuführen.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "66094551"
   
 4.  Der Computer muss einer Domäne hinzugefügt werden.  
   
-5.  Sie müssen ein Domänenbenutzerkonto besitzen, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitzustellen. In einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installation muss das Analysis Services-Dienstkonto einem Domänenbenutzerkonto entsprechen, damit Sie es über die Zentraladministration verwalten können. Sie werden auf das Konto und Anmeldeinformationen eingeben den **Serverkonfiguration** Seite als Teil der Schritte in diesem Dokument.  
+5.  Sie müssen ein Domänenbenutzerkonto besitzen, um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bereitzustellen. In einer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Installation muss das Analysis Services-Dienstkonto einem Domänenbenutzerkonto entsprechen, damit Sie es über die Zentraladministration verwalten können. Sie müssen das Konto und die Anmelde Informationen im Rahmen der Schritte in diesem Dokument auf der Seite **Server Konfiguration** eingeben.  
   
 6.  Der Name der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz muss verfügbar sein. Es darf keine benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Instanz auf dem Computer vorhanden sein, auf dem Sie PowerPivot für SharePoint installieren.  
   
-7.  Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Instanz darf nicht Teil eines SQL Server-Failoverclusters sein. Verwenden Sie die Hochverfügbarkeitsfunktionen des SharePoint-Produkts. Der Lastenausgleich unter PowerPivot für SharePoint-Servern wird beispielsweise von Excel Services verwaltet. Weitere Informationen finden Sie unter [Verwalten von Excel Services-datenmodelleinstellungen (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
+7.  Die [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]-Instanz darf nicht Teil eines SQL Server-Failoverclusters sein. Verwenden Sie die Hochverfügbarkeitsfunktionen des SharePoint-Produkts. Der Lastenausgleich unter PowerPivot für SharePoint-Servern wird beispielsweise von Excel Services verwaltet. Weitere Informationen finden Sie unter [Verwalten von Einstellungen für das Excel Services-Datenmodell (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).  
   
-8.  Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf einer vorhandenen Farm installieren, benötigen Sie mindestens eine SharePoint-Webanwendung, die für die Authentifizierung im klassischen Modus konfiguriert ist. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenzugriff wird nur unterstützt, wenn die Webanwendung die Authentifizierung im klassischen Modus unterstützt. Weitere Informationen zu Anforderungen für den klassischen Modus, finden Sie unter [PowerPivot-Authentifizierung und Autorisierung](../../analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization.md).  
+8.  Wenn Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] auf einer vorhandenen Farm installieren, benötigen Sie mindestens eine SharePoint-Webanwendung, die für die Authentifizierung im klassischen Modus konfiguriert ist. Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Datenzugriff wird nur unterstützt, wenn die Webanwendung die Authentifizierung im klassischen Modus unterstützt. Weitere Informationen zu den Anforderungen für den klassischen Modus finden Sie unter [Power Pivot-Authentifizierung und-Autorisierung](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization).  
   
 9. Überprüfen Sie die folgenden weiteren Themen, um System- und Versionsanforderungen zu verstehen:  
   
@@ -53,13 +53,13 @@ ms.locfileid: "66094551"
 ##  <a name="InstallSQL"></a>Schritt 1: Installieren von PowerPivot für SharePoint  
  Im diesem Schritt führen Sie SQL Server-Setup aus, um [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] zu installieren. In einem nachfolgenden Schritt konfigurieren Sie den Server in einem Task nach der Installation.  
   
-1.  Die Installationsmedien, oder öffnen Sie einen Ordner, der die Setupdateien für SQL Server enthält, und doppelklicken Sie dann auf **setup.exe**.  
+1.  Legen Sie die Installationsmedien ein, oder öffnen Sie einen Ordner, der die Setup Dateien für SQL Server enthält, und doppelklicken Sie dann auf **Setup. exe**.  
   
-2.  Klicken Sie auf **Installation** im linken Navigationsbereich.  
+2.  Klicken Sie im linken Navigationsbereich auf **Installation** .  
   
 3.  Klicken Sie auf **Neue eigenständige SQL Server-Installation oder Hinzufügen von Funktionen zu einer vorhandenen Installation**.  
   
-4.  Auf der **Product Key** Seite, geben Sie die Evaluation Edition aus, oder geben Sie einen Product Key für eine lizenzierte Kopie der Enterprise Edition.  
+4.  Geben Sie auf der Seite **Product Key** die Evaluation Edition an, oder geben Sie eine Product Key für eine lizenzierte Kopie der Enterprise Edition ein.  
   
      Klicken Sie auf **Weiter**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66094551"
   
 6.  Aktualisieren Sie die Setupdateien, falls Sie dazu aufgefordert werden.  
   
-7.  Auf der **Installationsregeln** Seite Setup identifiziert alle Probleme, die Installation möglicherweise verhindern. Überprüfen Sie die Liste, um zu ermitteln, ob Setup auf dem System potenzielle Probleme erkannt hat.  
+7.  Auf der Seite **Installations Regeln** werden alle Probleme identifiziert, die die Installation von verhindern könnten. Überprüfen Sie die Liste, um zu ermitteln, ob Setup auf dem System potenzielle Probleme erkannt hat.  
   
     > [!NOTE]  
     >  Da die Windows-Firewall aktiviert ist, werden Sie davor gewarnt, Ports zu öffnen, um den Remotezugriff zu ermöglichen. Diese Warnung gilt im Allgemeinen nicht für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Installationen. Verbindungen mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Diensten und -Datendateien werden über die SharePoint-Ports hergestellt, die bereits für die Dienst-zu-Dienst-Kommunikation von SharePoint geöffnet sind.  
@@ -76,23 +76,23 @@ ms.locfileid: "66094551"
   
 8.  Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server PowerPivot für SharePoint**aus.  
   
-9. Optional können Sie der Installation eine Instanz der Datenbank-Engine hinzufügen. Sie können so vorgehen, wenn Sie eine neue Farm einrichten und einen Datenbankserver der Farm-Konfiguration und-Inhaltsdatenbanken ausgeführt. Wenn Sie die Datenbank-Engine hinzufügen, wird sie als benannte PowerPivot-Instanz installiert. Wenn Sie müssen angeben, eine Verbindung mit dieser Instanz (z. B. im Assistenten für die Farmkonfiguration, wenn Sie diesen Assistenten zum Konfigurieren der Farm verwenden), geben Sie den Datenbanknamen im folgenden Format: <`servername`> \PowerPivot.  
+9. Optional können Sie der Installation eine Instanz der Datenbank-Engine hinzufügen. Dies können Sie tun, wenn Sie eine neue Farm einrichten und einen Datenbankserver benötigen, um die Konfigurations-und Inhalts Datenbanken der Farm auszuführen. Wenn Sie die Datenbank-Engine hinzufügen, wird sie als benannte PowerPivot-Instanz installiert. Wenn Sie eine Verbindung mit dieser Instanz angeben müssen (z. b. Wenn Sie den Assistenten für die Farm Konfiguration zum Konfigurieren der Farm verwenden), geben Sie den Datenbanknamen im folgenden Format ein:`servername`< > \powerpivot.  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
 10. Klicken Sie auf **Weiter**.  
   
-11. Auf der **Funktionsauswahl** Seite eine schreibgeschützte Liste der Funktionen, die installiert werden, wird zu Informationszwecken angezeigt. Sie können keine Elemente hinzufügen oder entfernen, die vorab für diese Rolle ausgewählt wurden. Klicken Sie auf **Weiter**.  
+11. Auf der Seite **Funktionsauswahl** wird eine schreibgeschützte Liste der Funktionen, die installiert werden, zu Informationszwecken angezeigt. Sie können keine Elemente hinzufügen oder entfernen, die vorab für diese Rolle ausgewählt wurden. Klicken Sie auf **Weiter**.  
   
-12. Auf der **Funktionsregeln** auf **Weiter**. Die Seite kann übersprungen werden.  
+12. Klicken Sie auf der Seite **Funktions Regeln** auf **weiter**. Die Seite kann übersprungen werden.  
   
-13. Auf der Seite **Instanzkonfiguration** wird der schreibgeschützte Instanzname 'PowerPivot' zu Informationszwecken angezeigt. Dieser Instanzname von **POWERPIVOT** ist **erforderlich und kann nicht geändert werden**. Sie können jedoch eine eindeutige Instanz-ID eingeben, um einen beschreibenden Verzeichnisnamen und Registrierungsschlüssel anzugeben. Klicken Sie auf **Weiter**.  
+13. Auf der Seite **Instanzkonfiguration** wird der schreibgeschützte Instanzname 'PowerPivot' zu Informationszwecken angezeigt. Dieser Instanzname von **Power Pivot** ist **erforderlich und kann nicht geändert werden**. Sie können jedoch eine eindeutige Instanz-ID eingeben, um einen beschreibenden Verzeichnisnamen und Registrierungsschlüssel anzugeben. Klicken Sie auf **Weiter**.  
   
-14. Auf der **Serverkonfiguration** Seite, und geben Sie die gewünschten Kontoinformationen.  
+14. Geben Sie auf der Seite **Server Konfiguration** die gewünschten Kontoinformationen ein.  
   
-     Für SQL Server Analysis Services müssen Sie ein Domänenbenutzerkonto angeben. Geben Sie kein integriertes Konto an. Domänenkonten sind erforderlich, für die Verwaltung von der Analysis Services-Dienstkonto als ein *verwaltetes Konto* in der SharePoint-Zentraladministration.  
+     Für SQL Server Analysis Services müssen Sie ein Domänenbenutzerkonto angeben. Geben Sie kein integriertes Konto an. Domänen Konten sind erforderlich, um das Analysis Services-Dienst Konto als *verwaltetes Konto* in der SharePoint-zentral Administration zu verwalten.  
   
-     ![SSAS-Serverkonfiguration](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS Server-Konfiguration")  
+     ![SSAS-Server Konfiguration](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS-Server Konfiguration")  
   
      Wenn Sie die SQL Server-Datenbank-Engine und den SQL Server-Agent hinzugefügt haben, können Sie die Dienste zur Ausführung unter Domänenbenutzerkonten oder unter dem standardmäßigen virtuellen Konto konfigurieren.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66094551"
   
 15. Klicken Sie auf **Weiter**.  
   
-16. Wenn Sie die Datenbank-Engine installieren, wird die Datenbank-Engine-Konfigurationsseite angezeigt. Klicken Sie in der Datenbank-Engine-Konfiguration auf **aktuellen Benutzer hinzufügen** um Ihrem Benutzerkonto Administratorberechtigungen für die Datenbank-Engine-Instanz gewähren. Klicken Sie auf **hinzufügen** zusätzliche Konten hinzufügen. Klicken Sie auf **Weiter**.  
+16. Wenn Sie die Datenbank-Engine installieren, wird die Datenbank-Engine-Konfigurationsseite angezeigt. Klicken Sie in Datenbank-Engine Konfiguration auf **aktuellen Benutzer hinzufügen** , um Ihrem Benutzerkonto Administrator Berechtigungen für die Datenbank-Engine Instanz zu erteilen. Klicken Sie auf **Hinzufügen** , um zusätzliche Konten hinzuzufügen. Klicken Sie auf **Weiter**.  
   
 17. Klicken Sie auf der Seite **Analysis Services-Konfiguration** auf **Aktuellen Benutzer hinzufügen** , um Ihrem Benutzerkonto Administratorberechtigungen zu gewähren. Sie benötigen die Administratorberechtigung, um den Server nach Abschluss von Setup zu konfigurieren.  
   
@@ -108,47 +108,47 @@ ms.locfileid: "66094551"
   
 19. Klicken Sie auf **Weiter**.  
   
-20. Klicken Sie auf **Weiter** auf jedem der verbleibenden Seiten, bis Sie auf der Seite Installationsbereit gelangen.  
+20. Klicken Sie auf jeder der verbleibenden Seiten so lange auf **weiter** , bis Sie zur Seite Installations bereit gelangen.  
   
 21. Klicken Sie auf **Installieren**.  
   
 > [!TIP]  
->  Wenn Sie Probleme beim müssen SQL Server-Installation vorgesehen, finden Sie unter [anzeigen und Lesen SQL Server-Setup-Protokolldateien](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+>  Wenn Sie Probleme mit der SQL Server Installation beheben müssen, finden Sie weitere Informationen unter [anzeigen und lesen SQL Server Setup-Protokolldateien](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ##  <a name="bkmk_config"></a>Schritt 2: Konfigurieren des Servers  
   
 > [!IMPORTANT]  
 >  SharePoint 2010 SP2 muss installiert sein, bevor Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] oder eine SharePoint-Farm konfigurieren können, die einen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Datenbankserver verwendet. Wenn Sie das Service Pack noch nicht installiert haben, holen Sie dies jetzt nach, bevor Sie mit der Serverkonfiguration beginnen.  
   
- Die Installation ist erst abgeschlossen, wenn der Server konfiguriert ist. In dieser Version wird die Serverkonfiguration immer als Task nach der Installation mithilfe einer der folgenden Ansätze ausgeführt: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool, Zentraladministration oder PowerShell. Wählen Sie eine der folgenden Vorgehensweisen aus, um den Vorgang fortzusetzen:  
+ Die Installation ist erst abgeschlossen, wenn der Server konfiguriert ist. In dieser Version wird die Serverkonfiguration immer mithilfe eines der folgenden Methoden nach der Installation ausgeführt: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Konfigurations Tool, zentral Administration oder PowerShell. Wählen Sie eine der folgenden Vorgehensweisen aus, um den Vorgang fortzusetzen:  
   
--   [Konfigurieren oder Reparieren von PowerPivot für SharePoint 2010 &#40;PowerPivot-Konfigurationstool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
+-   [Konfigurieren oder Reparieren von PowerPivot für SharePoint &#40;2010 Power Pivot-Konfigurations Tool&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
--   [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+-   [PowerPivot-Serververwaltung und -konfiguration in der Zentraladministration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
--   [PowerPivot-Konfiguration mit Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
+-   [PowerPivot-Konfiguration mit Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **Verbindung mit der Datenbank-Engine-Instanz.** Als Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert haben, hatten Sie in SQL Server-Setup die Möglichkeit, der Installation eine Instanz der Datenbank-Engine hinzuzufügen. Sie können eine-Engine-Datenbankmodulinstanz für Ihre Installation hinzugefügt haben, wenn Sie eine neue Farm einrichten und für das Ausführen von Konfigurations- und Inhaltsdatenbanken der Farm als Datenbankserver benötigen. Wenn Sie die Datenbank-Engine hinzugefügt haben, wurde sie als benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Instanz installiert. Wenn Sie müssen angeben, eine Verbindung mit dieser Instanz (z. B. im Assistenten für die Farmkonfiguration, wenn Sie diesen Assistenten zum Konfigurieren der Farm verwenden), denken Sie daran, den Datenbanknamen im folgenden Format eingeben: <`servername`> \PowerPivot.  
+ **Verbindung mit der Datenbank-Engine-Instanz wird hergestellt.** Als Sie [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert haben, hatten Sie in SQL Server-Setup die Möglichkeit, der Installation eine Instanz der Datenbank-Engine hinzuzufügen. Möglicherweise haben Sie Ihrer Installation eine Datenbank-Engine-Instanz hinzugefügt, wenn Sie eine neue Farm einrichten und einen Datenbankserver benötigen, um die Konfigurations-und Inhalts Datenbanken der Farm auszuführen. Wenn Sie die Datenbank-Engine hinzugefügt haben, wurde sie als benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Instanz installiert. Wenn Sie eine Verbindung mit dieser Instanz angeben müssen (wenn Sie z. b. den Assistenten für die Farm Konfiguration zum Konfigurieren der Farm verwenden), geben Sie den Datenbanknamen im folgenden Format ein: <`servername`> \powerpivot.  
   
-##  <a name="bkmk_redist"></a>Schritt 3: Installieren von Analysis Services OLE DB-Anbietern auf Excel Services-Anwendungsservern  
+##  <a name="bkmk_redist"></a>Schritt 3: Installieren von Analysis Services OLE DB Anbietern auf Excel Services-Anwendungsservern  
  Zusätzliche Installationsschritte sind erforderlich, wenn Sie Dienste für Excel-Berechnungen und [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] auf separaten Anwendungsservern ausführen. Installieren Sie auf den Anwendungsservern, auf denen Dienste für Excel-Berechnungen ausgeführt werden, die geeignete Version des Analysis Services OLE DB-Anbieters (MSOLAP).  
   
 -   Die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von MSOLAP ist in SQL Server-Setup enthalten. Folglich muss die MSOLAP-Version aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nur explizit installiert werden, wenn der Anwendungsserver kein PowerPivot-Anwendungsserver ist.  
   
     > [!NOTE]  
-    >  Excel Calculation Services Application Server benötigt außerdem eine Instanz der Datei **Microsoft.AnalysisServices.Xmla.dll** im globalen Assemblycache. Zur Installation der DLL-Datei auf dem Anwendungsserver installieren Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wählen Sie die "Verwaltungstools – abgeschlossen werden" auf die **Funktionsauswahl** Seite des SQL Server-Setup-Assistenten.  
+    >  Der Anwendungsserver für die Excel-Berechnungs Dienste benötigt außerdem eine Instanz der Datei **Microsoft. AnalysisServices. XMLA. dll** in der globalen Assembly. Zur Installation der DLL-Datei auf dem Anwendungsserver installieren Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wählen Sie im SQL Server Setup-Assistenten auf der Seite **Funktionsauswahl** die Option Verwaltungs Tools-fertig aus.  
   
 -   Wenn der Anwendungsserver ältere [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappen unterstützen soll, müssen Sie die SQL Server 2008 R2-Version von MSOLAP installieren.  
   
- Weitere Informationen zum Installieren des Anbieters, einschließlich der Überprüfungsschritte, finden Sie unter [Installieren von Analysis Services OLE DB-Anbieter auf SharePoint-Servern](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ Weitere Informationen zum Installieren des Anbieters, einschließlich der Überprüfungs Schritte, finden Sie unter [install the Analysis Services OLE DB-Anbieter on SharePoint Servers](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
-##  <a name="bkmk_verify"></a> Schritt 4: Überprüfen Sie die Installation  
- In diesem letzten Schritt überprüfen Sie, ob SharePoint 2010 und [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] voll funktionsfähig sind. Anweisungen hierzu finden Sie unter [Überprüfen der PowerPivot für SharePoint-Installation](../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).  
+##  <a name="bkmk_verify"></a> Schritt 4: Überprüfen der Installation  
+ In diesem letzten Schritt überprüfen Sie, ob SharePoint 2010 und [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] voll funktionsfähig sind. Anweisungen hierzu finden Sie unter [Überprüfen einer PowerPivot für SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation).  
   
 ## <a name="see-also"></a>Siehe auch  
  [PowerPivot für SharePoint 2010-Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [Bereitstellungsprüfliste: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
- [Bereitstellungsprüfliste: Horizontale Skalierung durch Hinzufügen von PowerPivot-Server zu einer SharePoint 2010-farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
- [Bereitstellungsprüfliste: Multiserverinstallation von PowerPivot für SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
+ [Bereitstellungs Checkliste: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
+ [Bereitstellungs Checkliste: Horizontales Skalieren durch Hinzufügen von Power Pivot-Servern zu einer SharePoint 2010-Farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
+ [Bereitstellungs Checkliste: Multiserverinstallation von PowerPivot für SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Mengenausdrücken | Microsoft-Dokumentation
+title: Verwenden von Mengen Ausdrücken | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038020"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893503"
 ---
 # <a name="using-set-expressions"></a>Verwenden von Mengenausdrücken
 
@@ -22,7 +22,7 @@ ms.locfileid: "68038020"
   
  Der vollständige Ausdruck einer Menge besteht aus null oder mehr explizit angegebenen Tupeln, die in geschweiften Klammern stehen:  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
   
  Die in einem Mengenausdruck angegebenen Elementausdrücke werden in Tupelausdrücke mit einem Element konvertiert.  
   
@@ -49,17 +49,17 @@ ms.locfileid: "68038020"
   
  besteht aus zwei Elementen der Measures-Dimension. Auf der ROWS-Achse besteht die Menge  
   
- {([Product]. [Product Categories]. [Category]. & [4], [Date]. [Calendar]. [Kalenderjahr]. & [2004]),  
+ {([Product]). [Produktkategorien]. [Category]. & [4], [Date]. [Kalender]. [Calendar Year]. & [2004]),  
   
- ([Product]. [Product Categories]. [Category]. & [1], [Date]. [Calendar]. [Kalenderjahr]. & [2003]),  
+ ([Product]. [Produktkategorien]. [Category]. & [1], [Date]. [Kalender]. [Calendar Year]. & [2003]),  
   
- ([Product]. [Product Categories]. [Category]. & [3], [Date]. [Calendar]. [Calendar Year]. & [2004])}  
+ ([Product]. [Produktkategorien]. [Category]. & [3], [Date]. [Kalender]. [Calendar Year]. & [2004])}  
   
  aus drei Tupeln, von denen jede zwei explizite Verweise auf Elemente in der Product Categories-Hierarchie der Product-Dimension und der Calendar-Hierarchie der Date-Dimension enthält.  
   
- Beispiele für Funktionen, die Mengen zurückgeben, finden Sie unter [arbeiten mit Elementen, Tupeln und Mengen &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ Beispiele für Funktionen, die Mengen zurückgeben, finden Sie unter [Arbeiten mit Membern, Tupeln und Mengen &#40;von&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Ausdrücke &#40;(MDX)&#41;](../mdx/expressions-mdx.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078220"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888064"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definieren und Durchsuchen von Perspektiven
   Mithilfe von Perspektiven kann die Ansicht eines Cubes für bestimmte Zwecke vereinfacht werden. Standardmäßig können Benutzer alle Elemente in einem Cube sehen, für den sie die entsprechenden Berechtigungen besitzen. Wenn Benutzer einen ganzen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube anzeigen, wird ihnen die Standardperspektive des Cubes angezeigt. Die Ansicht des gesamten Cubes kann auf Benutzer äußerst komplex wirken, vor allem dann, wenn sie nur mit einem kleinen Teil des Cubes arbeiten, um ihre Anforderungen hinsichtlich Business Intelligence und Berichterstellung zu erfüllen.  
@@ -33,15 +33,15 @@ ms.locfileid: "66078220"
   
      Alle Objekte und ihre Objekttypen werden im Bereich **Perspektiven** angezeigt, wie in der folgenden Abbildung dargestellt.  
   
-     ![Perspektivenbereich des Cube-Designer](../../2014/tutorials/media/l9-perspectives-1.gif "perspektivenbereich des Cube-Designer")  
+     ![Perspektiven Bereich des Cube-Designers](../../2014/tutorials/media/l9-perspectives-1.gif "Perspektiven Bereich des Cube-Designers")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
      In der **Perspektivenname** -Spalte wird eine neue Perspektive mit dem Standardnamen **Perspektive**angezeigt, wie in der folgenden Abbildung dargestellt. Die Kontrollkästchen aller Objekte sind so lange aktiviert, bis Sie eines der Kontrollkästchen für ein Objekt deaktivieren. Diese Perspektive entspricht der Standardperspektive dieses Cubes.  
   
-     ![Neue Perspektive in der Spalte "Perspektivenname"](../../2014/tutorials/media/l9-perspectives-2.gif "neue Perspektive in der Spalte \"Perspektivenname\"")  
+     ![Neue Perspektive in der Spalte "Perspektiven Name] " (../../2014/tutorials/media/l9-perspectives-2.gif "Neue Perspektive in der Spalte \"Perspektiven Name") "  
   
-3.  Ändern Sie den Perspektivennamen zu `Internet Sales`.  
+3.  Ändern Sie den Perspektiven Namen `Internet Sales`in.  
   
 4.  Legen Sie in der nächsten Zeile **Internet Sales-Sales Amount**als Standardmeasure fest.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66078220"
   
 5.  Deaktivieren Sie die Kontrollkästchen der folgenden Objekte:  
   
-    -   `Reseller Sales` Measuregruppe  
+    -   `Reseller Sales`Measure-Gruppe  
   
     -   **Sales Quotas** -Measuregruppe  
   
@@ -70,19 +70,19 @@ ms.locfileid: "66078220"
   
     -   **Reseller Revenue** -KPI  
   
-    -   Benannte Menge**Large Resellers**   
+    -   Benannte Menge**Large Resellers**  
   
-    -   Berechnetes Element**Total Sales Amount**   
+    -   Berechnetes Element**Total Sales Amount**  
   
-    -   Berechnetes Element**Total Product Cost**   
+    -   Berechnetes Element**Total Product Cost**  
   
-    -   Berechnetes Element**Reseller GPM**   
+    -   Berechnetes Element**Reseller GPM**  
   
-    -   Berechnetes Element**Total GPM**   
+    -   Berechnetes Element**Total GPM**  
   
-    -   Berechnetes Element**Reseller Sales Ratio to All Products**   
+    -   Berechnetes Element**Reseller Sales Ratio to All Products**  
   
-    -   Berechnetes Element**Total Sales Ratio to All Products**   
+    -   Berechnetes Element**Total Sales Ratio to All Products**  
   
      Diese Objekte stehen nicht im Zusammenhang mit Internetverkäufen (Internet Sales).  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66078220"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
-2.  Ändern Sie den Namen der neuen Perspektive zu `Reseller Sales`.  
+2.  Ändern Sie den Namen der neuen Perspektive in `Reseller Sales`.  
   
 3.  Legen Sie **Reseller Sales-Sales Amount** als Standardmeasure fest.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66078220"
   
 4.  Deaktivieren Sie die Kontrollkästchen der folgenden Objekte:  
   
-    -   `Internet Sales` Measuregruppe  
+    -   `Internet Sales`Measure-Gruppe  
   
     -   **Internet Sales Reason** -Measuregruppe  
   
@@ -113,17 +113,17 @@ ms.locfileid: "66078220"
   
     -   **Internet Sales Details Drillthrough Action** -Drillthroughaktion  
   
-    -   Berechnetes Element**Total Sales Amount**   
+    -   Berechnetes Element**Total Sales Amount**  
   
-    -   Berechnetes Element**Total Product Cost**   
+    -   Berechnetes Element**Total Product Cost**  
   
-    -   Berechnetes Element**Internet GPM**   
+    -   Berechnetes Element**Internet GPM**  
   
-    -   Berechnetes Element**Total GPM**   
+    -   Berechnetes Element**Total GPM**  
   
-    -   Berechnetes Element**Internet Sales Ratio to All Products**   
+    -   Berechnetes Element**Internet Sales Ratio to All Products**  
   
-    -   Berechnetes Element**Total Sales Ratio to All Products**   
+    -   Berechnetes Element**Total Sales Ratio to All Products**  
   
      Diese Objekte stehen nicht im Zusammenhang mit Verkäufen durch Wiederverkäufer (Reseller Sales).  
   
@@ -131,16 +131,16 @@ ms.locfileid: "66078220"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **Perspektiven** auf die Schaltfläche **Neue Perspektive** .  
   
-2.  Ändern Sie den Namen der neuen Perspektive zu `Sales Summary`.  
+2.  Ändern Sie den Namen der neuen Perspektive in `Sales Summary`.  
   
     > [!NOTE]  
     >  Es kann kein berechnetes Measure als Standardmeasure angegeben werden.  
   
 3.  Deaktivieren Sie die Kontrollkästchen der folgenden Objekte:  
   
-    -   `Internet Sales` Measuregruppe  
+    -   `Internet Sales`Measure-Gruppe  
   
-    -   `Reseller Sales` Measuregruppe  
+    -   `Reseller Sales`Measure-Gruppe  
   
     -   **Internet Sales Reason** -Measuregruppe  
   
@@ -174,27 +174,27 @@ ms.locfileid: "66078220"
   
 5.  Alternativ können Sie Excel vom Windows-Startmenü aus starten, eine Verbindung mit der Analysis Services Tutorial-Datenbank auf localhost definieren und eine Perspektive im Datenverbindungs-Assistenten auswählen, wie in der folgenden Abbildung dargestellt.  
   
-     ![Datenverbindungs-Assistent in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Datenverbindungs-Assistenten in Excel")  
+     ![Datenverbindungs-Assistent in Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Datenverbindungs-Assistent in Excel")  
   
-6.  Wählen Sie `Internet Sales` in die **Perspektive** aus, und überprüfen Sie dann die Measures und Dimensionen im Metadatenbereich.  
+6.  Wählen `Internet Sales` Sie in der Liste **Perspektive** aus, und überprüfen Sie dann die Measures und Dimensionen im Metadatenbereich.  
   
      Es werden nur die Objekte angezeigt, die für die Internet Sales-Perspektive angegeben wurden.  
   
 7.  Erweitern Sie im Bereich Metadaten die Option **Measures**.  
   
-     Beachten Sie, dass nur die `Internet Sales` Measuregruppe angezeigt wird, zusammen mit den **Internet GPM** und **Internet Sales Ratio to All Products** berechnete Elemente.  
+     Beachten Sie, dass `Internet Sales` nur die Measure-Gruppe sowie die berechneten Elemente **Internet-GPM** und **Internet Sales für alle Produkte** angezeigt werden.  
   
-8.  Wählen Sie im Modell erneut Excel aus. Wählen Sie `Sales Summary`aus.  
+8.  Wählen Sie im Modell erneut Excel aus. Klicken Sie auf `Sales Summary`.  
   
      In jeder der Measuregruppen wird nur ein einzelnes Measure angezeigt, wie in der folgenden Abbildung dargestellt.  
   
-     ![Internet Sales und Reseller Sales-Measures](../../2014/tutorials/media/l9-perspectives-4.gif "Internet Sales und Reseller Sales-Measures")  
+     ![Measures "Internet Sales" und "Reseller Sales] " (../../2014/tutorials/media/l9-perspectives-4.gif "Measures \"Internet Sales\" und \"Reseller Sales") "  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Definieren und Durchsuchen von Übersetzungen](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Definieren und Durchsuchen von Übersetzungen](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Perspektiven](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [Eröffnen](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspektiven in mehrdimensionalen Modellen](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

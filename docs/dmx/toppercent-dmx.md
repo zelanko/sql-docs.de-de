@@ -1,5 +1,5 @@
 ---
-title: TopPercent (DMX) | Microsoft-Dokumentation
+title: Topprozent (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,17 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 46ce9f82f06d2e6ba15f7e5f6583aa36c498f30c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: acd35dc68c4f42231aa6f71d6cc2a150ff027811
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065373"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893061"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Die **TopPercent** Funktion zurückgibt, in absteigender Rangreihenfolge die obersten Zeilen einer Tabelle, deren kumulativer Gesamtwert ist mindestens ein, angegebener Prozentsatz.  
+  Die **topprozent** -Funktion gibt die obersten Zeilen einer Tabelle zurück, deren kumulativer Gesamtwert mindestens einem angegebenen Prozentsatz entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,18 +28,18 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle, z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie \<z. b. ein Tabellen Spalten Verweis > oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellenausdruck >  
+ \<Tabellen Ausdrucks >  
   
 ## <a name="remarks"></a>Hinweise  
- Die **TopPercent** Funktion gibt die obersten Zeilen zurück, in absteigender Rangreihenfolge entsprechend den ausgewerteten Wert des der \<rank Expression >-Arguments für jede Zeile, so, dass die Summe der der \<rank Expression > Werte sind mindestens die Prozentsatz sein muss, die angegeben wird die \<Prozent >-Argument. **TopPercent** die kleinste Anzahl von Elementen gibt mögliche zurück, denen den angegebenen Prozentwert erreicht.  
+ Die **topprozent** -Funktion gibt die obersten Zeilen in absteigender Rangfolge zurück, basierend auf dem ausgewerteten \<Wert des Rang Ausdrucks > Argument für jede Zeile, sodass \<die Summe des Rang Ausdrucks > Werte mindestens dem der angegebene Prozentsatz, der durch \<das Prozent > Argument angegeben wird. **Topprozent** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Prozentwert erreicht wird.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  
   
- Um die Funktionsweise von TopPercent zu verstehen, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
+ Um die Funktionsweise von topprozent zu verstehen, kann es hilfreich sein, zuerst eine Vorhersage Abfrage auszuführen, die nur die geclusterte Tabelle zurückgibt.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -50,7 +50,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [erstellen Sie eine Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Beispielergebnisse:  
   
@@ -67,7 +67,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- Die TopPercent-Funktion verwendet die Ergebnisse dieser Abfrage und gibt den Zeilen mit den größten Werten ergeben, die den angegebenen Prozentsatz.  
+ Die topprozent-Funktion nimmt die Ergebnisse dieser Abfrage und gibt die Zeilen mit den größten Werten zurück, die sich auf den angegebenen Prozentsatz summieren.  
   
 ```  
 SELECT   
@@ -82,29 +82,29 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument für die TopPercent-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, indem Sie die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument.  
+ Das erste Argument für die topprozent-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die-Tabelle durch Aufrufen der Vorhersagefunktion und Verwenden des INCLUDE_STATISTICS-Arguments zurückgegeben.  
   
- Das zweite Argument für die TopPercent-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $SUPPORT verwendet, da diese Werte keine Bruchteile besitzen und daher leichter zu überprüfen sind.  
+ Das zweite Argument der topprozent-Funktion ist die Spalte in der Tabelle, die Sie verwenden, um die Ergebnisse zu sortieren. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $SUPPORT verwendet, da diese Werte keine Bruchteile besitzen und daher leichter zu überprüfen sind.  
   
- Das dritte Argument für die TopPercent-Funktion gibt den Prozentsatz als Double-Wert. Geben Sie 50 ein, um die Zeilen für die obersten Produkte zu erhalten, die 50 Prozent der Gesamtunterstützung ergeben.  
+ Das dritte Argument für die topprozent-Funktion gibt den Prozentsatz als Double-Wert an. Geben Sie 50 ein, um die Zeilen für die obersten Produkte zu erhalten, die 50 Prozent der Gesamtunterstützung ergeben.  
   
  Beispielergebnisse:  
   
 |Modell|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0,29...|0,25...|  
-|Water Bottle|2866|0.19...|0,17...|  
-|Patchkit|2113|0,14...|0.13...|  
-|Mountain Tire Tube|1992|0.133...|0,12...|  
+|Water Bottle|2866|0,19...|0,17...|  
+|Patchkit|2113|0,14...|0,13...|  
+|Mountain Tire Tube|1992|0,133...|0,12...|  
   
- **Beachten Sie** in diesem Beispiel wird nur bereitgestellt, um die Verwendung von TopPercent zu veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
+ **Hinweis** Dieses Beispiel wird nur zur Veranschaulichung der Verwendung von topprozent bereitgestellt. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
 > [!WARNING]  
->  Die MDX-Funktionen für TOPPERCENT und BOTTOMPERCENT können unerwartete Ergebnisse generieren, wenn die Werte zur Berechnung des Prozentsatzes negative Zahlen enthalten. Dieses Verhalten wirkt sich nicht auf die DMX-Funktionen aus. Weitere Informationen finden Sie unter [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
+>  Die MDX-Funktionen für TOPPERCENT und BOTTOMPERCENT können unerwartete Ergebnisse generieren, wenn die Werte zur Berechnung des Prozentsatzes negative Zahlen enthalten. Dieses Verhalten wirkt sich nicht auf die DMX-Funktionen aus. Weitere Informationen finden Sie unter [bottomprozent &#40;MDX&#41;](../mdx/bottompercent-mdx.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

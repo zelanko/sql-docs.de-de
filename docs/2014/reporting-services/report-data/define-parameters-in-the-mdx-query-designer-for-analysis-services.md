@@ -16,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c1b3696612ab9d0693b3c0135b6aff34137906b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fc220eb4b3dc74e5550312c5658760b6cb699c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107312"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892173"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services (Berichts-Generator und SSRS)
   Um eine MDX-Abfrage von einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenquelle zu parametrisieren, müssen Sie der Abfrage einen Abfrageparameter hinzufügen. Im MDX-Abfrage-Designer können Sie im Entwurfsmodus und im Abfragemodus einen Abfrageparameter hinzufügen, indem Sie einen Filter angeben. Nachdem Sie die Abfrage mit einem Abfrageparameter definiert haben, erstellt Reporting Services automatisch einen Berichtsparameter und ein Dataset für die Bereitstellung der Liste mit gültigen Werten. Dies ermöglicht einem Benutzer, einen Wert anzugeben, der direkt an die Abfrage übergeben wird.  
@@ -59,9 +59,9 @@ ms.locfileid: "66107312"
   
 2.  Klicken Sie auf der Symbolleiste auf **Entwurf** , um in den Abfragemodus zu wechseln.  
   
-3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrageparameter** (![Symbol für das Dialogfeld Abfrageparameter](../../analysis-services/media/iconqueryparameter.gif "Symbol für das Dialogfeld Abfrageparameter")). Das Dialogfeld Abfrageparameter wird geöffnet.  
+3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrageparameter** (![Symbol für das Dialogfeld Abfrageparameter](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Symbol für das Dialogfeld Abfrageparameter")). Das Dialogfeld Abfrageparameter wird geöffnet.  
   
-4.  Klicken Sie in der Spalte **Parameter** auf **\<Parameter eingeben>**, und geben Sie dann den Namen eines Parameters ein.  
+4.  Klicken Sie in der Spalte **Parameter** auf **\<Parameter eingeben>** , und geben Sie dann den Namen eines Parameters ein.  
   
 5.  Wählen Sie in der Spalte **Dimension** einen Wert aus der Dropdownliste aus.  
   

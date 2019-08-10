@@ -1,5 +1,5 @@
 ---
-title: Editor für Data Mining-Abfrage-Abfragetasks (Abfrageregisterkarte) | Microsoft-Dokumentation
+title: Editor für Data Mining-Abfrage Tasks (Registerkarte Abfrage) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec0c3e2187bc0fb97af733021e39b405470fc373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059853"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890712"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
   Mithilfe der Registerkarte **Abfrage** des Dialogfelds **Data Mining-Abfragetask** können Sie Vorhersageabfragen auf der Grundlage eines Miningmodells erstellen. In diesem Dialogfeld können Sie auch Parameter und Resultsets an Variablen anbinden.  
   
- Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](../analysis-services/data-mining/data-mining-solutions.md).  
+ Weitere Informationen zur Implementierung von Data Mining in Paketen finden Sie unter [Data Mining-Abfragetask](control-flow/data-mining-query-task.md) und [Data Mining-Projektmappen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Allgemeine Optionen  
  **Name**  
@@ -82,6 +82,6 @@ ms.locfileid: "66059853"
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor für Data Mining-Abfragetasks &#40;Registerkarte Miningmodell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Data Mining-Designer](../analysis-services/data-mining/data-mining-designer.md)  
+ [Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

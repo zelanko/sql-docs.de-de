@@ -39,7 +39,7 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Verwenden Sie python in T-SQL</a>: Durchsuchen</a>von Daten, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (fünf teilige Reihe)'
+          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Verwenden Sie python in T-SQL</a>: Durchsuchen von Daten, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (fünf teilige Reihe)'
           - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Verwenden von R in T-SQL</a>: Durchsuchen von Daten, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (fünf teilige Reihe)'
           - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Verwenden Sie Machine Learning Services in R-Tools</a>: Durchsuchen von Daten, Erstellen von Diagrammen und Diagrammen, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (sechs teilige Reihe)'
   - title: Projektmappen
@@ -67,3 +67,4 @@ sections:
           - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL-Datenbank-Machine Learning Services<a>
           - html: <a href="/azure/machine-learning/">Azure Machine Learning</a>
           - html: <a href="/dotnet/machine-learning/">ML.NET</a>
+          - html: <a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">Was sind die Machine Learning-Produkte bei Microsoft?</a>

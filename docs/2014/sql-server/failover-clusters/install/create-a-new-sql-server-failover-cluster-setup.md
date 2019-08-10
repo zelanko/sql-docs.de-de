@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740600"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893712"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
   Zum Installieren oder Aktualisieren eines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie das Setupprogramm für jeden einzelnen Knoten des Failoverclusters ausführen. Zum Hinzufügen eines Knotens zu einem vorhandenen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failovercluster müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup für den Knoten ausführen, der der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz hinzugefügt werden soll. Führen Sie zum Verwalten der anderen Knoten Setup nicht für den aktiven Knoten aus.  
@@ -35,7 +35,7 @@ ms.locfileid: "62740600"
   
  Die folgenden Optionen sind für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclustern verfügbar:  
   
- **Option1: Integrierte Installation mit Knoten hinzufügen**  
+ **Option 1: Integrierte Installation mithilfe von Knoten hinzufügen**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstallation besteht aus den folgenden Schritten:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62740600"
   
  Weitere Informationen zur Installation von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in einem Windows-Failovercluster finden Sie unter [Verwenden von SQL Server Analysis Services in einem Cluster](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Vorraussetzungen  
  Konsultieren Sie vor der Installation die folgenden Themen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation:  
   
 -   [Planen einer SQL Server-Installation](../../install/planning-a-sql-server-installation.md)  
@@ -98,9 +98,9 @@ ms.locfileid: "62740600"
   
 7.  Geben Sie auf der Seite Product Key an, ob Sie eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installieren oder über einen PID-Schlüssel für eine Produktionsversion des Produkts verfügen. Weitere Informationen finden Sie unter [Editionen und Komponenten von SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
   
-8.  Lesen Sie auf der Seite mit den Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../../includes/msconame-md.md)]senden. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Klicken Sie auf **Abbrechen**, wenn Sie den Setupvorgang beenden möchten.  
+8.  Lesen Sie auf der Seite mit den Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../../includes/msconame-md.md)]senden. Klicken Sie auf **Weiter**, um fortzufahren. Klicken Sie auf **Abbrechen**, wenn Sie den Setupvorgang beenden möchten.  
   
-9. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62740600"
   
      **Instanzstammverzeichnis:** Standardmäßig lautet das Instanzstammverzeichnis „C:\Programme\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\“. Wenn Sie ein nicht standardmäßiges Stammverzeichnis angeben möchten, verwenden Sie das dafür vorgesehene Feld. Sie können auch auf die Schaltfläche mit den drei Punkten klicken, um einen Installationsordner zu suchen.  
   
-     **Erkannte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen und -Funktionen auf diesem Computer** – Im Raster werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert werden. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+     **Erkannte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen und -Funktionen auf diesem Computer** – Im Raster werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert werden. Klicken Sie auf **Weiter**, um fortzufahren.  
   
 12. Auf der Seite Clusterressourcengruppe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie den Namen der Clusterressourcengruppe angeben, in der sich die Ressourcen des virtuellen Servers für  befinden. Sie verfügen über zwei Optionen, um den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clusterressourcengruppe anzugeben:  
   
@@ -143,7 +143,7 @@ ms.locfileid: "62740600"
   
     -   Geben Sie den Namen der neuen Gruppe ein, die Sie erstellen möchten. Beachten Sie, dass der Name "Verfügbarer Speicherplatz" kein gültiger Gruppenname ist.  
   
-13. Wählen Sie auf der Seite Datenträgerauswahl für Cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die freigegebene Cluster-Datenträgerressource für den -Failovercluster aus. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Daten werden auf dem Clusterdatenträger abgelegt. Es können mehrere Datenträger angegeben werden. Im Raster Verfügbare freigegebene Datenträger werden verfügbare Datenträger sowie Informationen zur Qualifikation der Datenträger als freigegebene Datenträger und eine Beschreibung der einzelnen Datenträgerressourcen angezeigt. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+13. Wählen Sie auf der Seite Datenträgerauswahl für Cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die freigegebene Cluster-Datenträgerressource für den -Failovercluster aus. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Daten werden auf dem Clusterdatenträger abgelegt. Es können mehrere Datenträger angegeben werden. Im Raster Verfügbare freigegebene Datenträger werden verfügbare Datenträger sowie Informationen zur Qualifikation der Datenträger als freigegebene Datenträger und eine Beschreibung der einzelnen Datenträgerressourcen angezeigt. Klicken Sie auf **Weiter**, um fortzufahren.  
   
     > [!NOTE]  
     >  Das erste Laufwerk wird als Standardlaufwerk für alle Datenbanken verwendet. Es kann jedoch auf der Konfigurationsseite von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] geändert werden.  
@@ -154,7 +154,7 @@ ms.locfileid: "62740600"
   
     -   **Netzwerkeinstellungen** – Geben Sie den IP-Typ und die IP-Adresse für die Failoverclusterinstanz an.  
   
-     Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+     Klicken Sie auf **Weiter**, um fortzufahren.  
   
 15. Auf dieser Seite können Sie die Sicherheitsrichtlinie für Cluster angeben.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "62740600"
   
     -   Geben Sie unter [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]Domänengruppen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienste an. Alle Ressourcenberechtigungen werden durch Gruppen auf Domänenebene gesteuert, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten als Mitglieder enthalten.  
   
-     Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+     Klicken Sie auf **Weiter**, um fortzufahren.  
   
 16. Der Ablauf für die weiteren Vorgänge dieses Themas ist von den Funktionen abhängig, die Sie für die Installation angegeben haben. Je nach Auswahl ([!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]) werden möglicherweise nicht alle Seiten angezeigt.  
   
@@ -182,9 +182,9 @@ ms.locfileid: "62740600"
   
     -   Sicherheitsmodus: Wählen Sie die Windows-Authentifizierung oder die Authentifizierung im gemischten Modus für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aus. Bei Auswahl des gemischten Authentifizierungsmodus müssen Sie ein sicheres Kennwort für das integrierte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Systemadministratorkonto angeben.  
   
-         Nachdem ein Gerät erfolgreich eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hergestellt hat, wird für die Windows-Authentifizierung und den gemischten Modus derselbe Sicherheitsmechanismus verwendet. Weitere Informationen finden Sie unter [-Datenbank-Engine-Konfiguration - Kontobereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
+         Nachdem ein Gerät erfolgreich eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hergestellt hat, wird für die Windows-Authentifizierung und den gemischten Modus derselbe Sicherheitsmechanismus verwendet. Weitere Informationen finden Sie unter [Datenbank-Engine Konfiguration-Konto Bereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administratoren – Sie müssen mindestens einen Systemadministrator für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz haben sollen. Weitere Informationen finden Sie unter [-Datenbank-Engine-Konfiguration - Kontobereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administratoren – Sie müssen mindestens einen Systemadministrator für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz haben sollen. Weitere Informationen finden Sie unter [Datenbank-Engine Konfiguration-Konto Bereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
   
      Wenn Sie die Bearbeitung der Liste abgeschlossen haben, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Überprüfen Sie die Liste der Administratoren im Konfigurationsdialogfeld. Sobald die Liste vollständig ist, klicken Sie auf **Weiter**.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "62740600"
   
      Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](../../install/database-engine-configuration-data-directories.md).  
   
-21. Aktivieren Sie auf der Seite „ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Konfiguration – FILESTREAM“ den FILESTREAM für Ihre Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Weitere Informationen zu FILESTREAM finden Sie unter [Konfiguration der Datenbank-Engine - Filestream](../../install/database-engine-configuration-filestream.md). Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+21. Aktivieren Sie auf der Seite „ [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Konfiguration – FILESTREAM“ den FILESTREAM für Ihre Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Weitere Informationen zu FILESTREAM finden Sie unter [Konfiguration der Datenbank-Engine - Filestream](../../install/database-engine-configuration-filestream.md). Klicken Sie auf **Weiter**, um fortzufahren.  
   
 22. Verwenden Sie die Seite [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Konfiguration – Kontobereitstellung, um die Benutzer oder Konten anzugeben, die über Administratorberechtigungen für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] verfügen sollen. Sie müssen wenigstens einen Systemadministrator für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]haben sollen. Weitere Informationen finden Sie unter [Analysis Services-Konfiguration - Kontobereitstellung](../../install/analysis-services-configuration-account-provisioning.md).  
   
@@ -234,7 +234,7 @@ ms.locfileid: "62740600"
   
 ##  <a name="prepare"></a> Vorbereiten  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Die erweiterte bzw. Enterprise-Failovercluster installieren Schritt 1: Vorbereiten  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Schritt 1 für die erweiterte bzw. Enterprise-Failoverclusterinstallation: Vorbereiten  
   
 1.  Legen Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationsmedium ein, und doppelklicken Sie im Stammordner auf Setup.exe. Wenn Sie eine Installation über eine Netzwerkfreigabe ausführen möchten, navigieren Sie in der Freigabe zum Stammordner, und doppelklicken Sie dann auf Setup.exe. Weitere Informationen zum Installieren der erforderlichen Komponenten finden Sie unter [Before Installing Failover Clustering](before-installing-failover-clustering.md). Möglicherweise werden Sie aufgefordert, die erforderlichen Komponenten zu installieren, falls sie nicht bereits installiert wurden.  
   
@@ -257,9 +257,9 @@ ms.locfileid: "62740600"
     > [!NOTE]  
     >  Sie müssen für alle Knoten, die Sie für denselben Failovercluster vorbereiten, denselben Produktschlüssel angeben.  
   
-9. Lesen Sie auf der Seite mit den Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../../includes/msconame-md.md)]senden. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Klicken Sie auf **Abbrechen**, wenn Sie den Setupvorgang beenden möchten.  
+9. Lesen Sie auf der Seite mit den Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../../includes/msconame-md.md)]senden. Klicken Sie auf **Weiter**, um fortzufahren. Klicken Sie auf **Abbrechen**, wenn Sie den Setupvorgang beenden möchten.  
   
-10. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird.  
   
@@ -280,7 +280,7 @@ ms.locfileid: "62740600"
   
      **Instanzstammverzeichnis:** Standardmäßig lautet das Instanzstammverzeichnis „C:\Programme\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\“. Wenn Sie ein nicht standardmäßiges Stammverzeichnis angeben möchten, verwenden Sie das dafür vorgesehene Feld. Sie können auch auf die Schaltfläche mit den drei Punkten klicken, um einen Installationsordner zu suchen.  
   
-     **Installierte Instanzen** – Im Raster werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installiert werden. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+     **Installierte Instanzen** – Im Raster werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen angezeigt, die sich auf dem Computer befinden, auf dem Setup ausgeführt wird. Wenn bereits eine Standardinstanz auf dem Computer installiert ist, muss eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]installiert werden. Klicken Sie auf **Weiter**, um fortzufahren.  
   
 12. Auf der Seite Erforderlicher Speicherplatz wird der für die angegebenen Funktionen erforderliche Speicherplatz berechnet, und die Anforderungen werden mit dem Speicherplatz verglichen, der auf dem Computer verfügbar ist, auf dem Setup ausgeführt wird.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "62740600"
   
     -   Geben Sie unter [!INCLUDE[winxpsvr](../../../includes/winxpsvr-md.md)]Domänengruppen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienste an. Alle Ressourcenberechtigungen werden durch Gruppen auf Domänenebene gesteuert, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten als Mitglieder enthalten.  
   
-     Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+     Klicken Sie auf **Weiter**, um fortzufahren.  
   
 14. Der Ablauf für die weiteren Vorgänge dieses Themas ist von den Funktionen abhängig, die Sie für die Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt.  
   
@@ -306,7 +306,7 @@ ms.locfileid: "62740600"
   
 16. Mithilfe der Registerkarte **Serverkonfiguration – Sortierung** können Sie für [!INCLUDE[ssDE](../../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]Sortierungen angeben, die von der Standardeinstellung abweichen. Weitere Informationen finden Sie unter [Serverkonfiguration – Sortierung](../../install/server-configuration-collation.md).  
   
-17. Verwenden Sie **Serverkonfiguration – FILESTREAM** , um FILESTREAM für Ihre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zu aktivieren. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine - Filestream](../../install/database-engine-configuration-filestream.md). Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+17. Verwenden Sie **Serverkonfiguration – FILESTREAM** , um FILESTREAM für Ihre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz zu aktivieren. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine - Filestream](../../install/database-engine-configuration-filestream.md). Klicken Sie auf **Weiter**, um fortzufahren.  
   
 18. Auf der Seite für die Konfiguration von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Sie die Art der zu erstellenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Installation angeben. Für die Failoverclusterinstallation ist die Option auf Nicht konfigurierte -Installation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] festgelegt. Nach dem Abschluss der Installation müssen Sie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Dienste konfigurieren.  
   
@@ -328,7 +328,7 @@ ms.locfileid: "62740600"
   
 ## <a name="complete"></a>Abgeschlossen  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Die erweiterte bzw. Enterprise-Failovercluster installieren Sie Schritt 2: Abgeschlossen  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Schritt 2 für die erweiterte bzw. Enterprise-Failoverclusterinstallation: Abgeschlossen  
   
 1.  Nachdem Sie alle Knoten wie im Schritt [Vorbereiten](#prepare)beschrieben vorbereitet haben, führen Sie Setup für einen der vorbereiteten Knoten aus, und zwar nach Möglichkeit für den Knoten, der Besitzer des freigegebenen Datenträgers ist. Klicken Sie im -Installationscenter auf der Registerkarte **Erweitert** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf **Erweiterter Clusterabschluss**.  
   
@@ -355,7 +355,7 @@ ms.locfileid: "62740600"
   
     -   Geben Sie den Namen der neuen Gruppe ein, die Sie erstellen möchten. Beachten Sie, dass der Name "Verfügbarer Speicherplatz" kein gültiger Gruppenname ist.  
   
-9. Wählen Sie auf der Seite Datenträgerauswahl für Cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die freigegebene Cluster-Datenträgerressource für den -Failovercluster aus. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Daten werden auf dem Clusterdatenträger abgelegt. Es können mehrere Datenträger angegeben werden. Im Raster Verfügbare freigegebene Datenträger werden verfügbare Datenträger sowie Informationen zur Qualifikation der Datenträger als freigegebene Datenträger und eine Beschreibung der einzelnen Datenträgerressourcen angezeigt. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+9. Wählen Sie auf der Seite Datenträgerauswahl für Cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die freigegebene Cluster-Datenträgerressource für den -Failovercluster aus. Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Daten werden auf dem Clusterdatenträger abgelegt. Es können mehrere Datenträger angegeben werden. Im Raster Verfügbare freigegebene Datenträger werden verfügbare Datenträger sowie Informationen zur Qualifikation der Datenträger als freigegebene Datenträger und eine Beschreibung der einzelnen Datenträgerressourcen angezeigt. Klicken Sie auf **Weiter**, um fortzufahren.  
   
     > [!NOTE]  
     >  Das erste Laufwerk wird als Standardlaufwerk für alle Datenbanken verwendet. Es kann jedoch auf der Konfigurationsseite von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] geändert werden.  
@@ -372,9 +372,9 @@ ms.locfileid: "62740600"
   
     -   Sicherheitsmodus: Wählen Sie die Windows-Authentifizierung oder die Authentifizierung im gemischten Modus für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aus. Bei Auswahl des gemischten Authentifizierungsmodus müssen Sie ein sicheres Kennwort für das integrierte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Systemadministratorkonto angeben.  
   
-         Nachdem ein Gerät erfolgreich eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hergestellt hat, wird für die Windows-Authentifizierung und den gemischten Modus derselbe Sicherheitsmechanismus verwendet. Weitere Informationen finden Sie unter [-Datenbank-Engine-Konfiguration - Kontobereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
+         Nachdem ein Gerät erfolgreich eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]hergestellt hat, wird für die Windows-Authentifizierung und den gemischten Modus derselbe Sicherheitsmechanismus verwendet. Weitere Informationen finden Sie unter [Datenbank-Engine Konfiguration-Konto Bereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administratoren – Sie müssen mindestens einen Systemadministrator für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz haben sollen. Weitere Informationen finden Sie unter [-Datenbank-Engine-Konfiguration - Kontobereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administratoren – Sie müssen mindestens einen Systemadministrator für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz angeben. Um das Konto hinzuzufügen, unter dem das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup ausgeführt werden soll, klicken Sie auf **Aktuellen Benutzer hinzufügen**. Um Konten zur Liste der Systemadministratoren hinzuzufügen bzw. daraus zu entfernen, klicken Sie auf **Hinzufügen** bzw. **Entfernen**, und bearbeiten Sie anschließend die Liste der Benutzer, Gruppen bzw. Computer, die Administratorrechte für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz haben sollen. Weitere Informationen finden Sie unter [Datenbank-Engine Konfiguration-Konto Bereitstellung](../../install/database-engine-configuration-account-provisioning.md).  
   
      Wenn Sie die Bearbeitung der Liste abgeschlossen haben, [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. Überprüfen Sie die Liste der Administratoren im Konfigurationsdialogfeld. Sobald die Liste vollständig ist, klicken Sie auf **Weiter**.  
   

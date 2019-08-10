@@ -19,20 +19,20 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6324606dea5f3ea6f094e9b3c3dbe31d5fbcf92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fc424ec2354130d361305b0e3dd2a0bb015cca6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107263"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891095"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Grafische Benutzeroberfläche des Abfrage-Designers
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer zum Erstellen von Abfragen, um Daten aus einer relationalen Datenbank für ein Berichtsdataset im Berichts-Designer abzurufen. Verwenden Sie den grafischen Abfrage-Designer zum interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Datenquellentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB und ODBC. Verwenden Sie den textbasierten Abfrage-Designer, um mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen, komplexe Abfragen oder Befehlssyntax und ausdrucksbasierte Abfragen anzugeben. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers](../text-based-query-designer-user-interface.md). Weitere Informationen zum Arbeiten mit bestimmten Datenquellentypen finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet einen grafischen Abfrage-Designer und einen textbasierten Abfrage-Designer zum Erstellen von Abfragen, um Daten aus einer relationalen Datenbank für ein Berichtsdataset im Berichts-Designer abzurufen. Verwenden Sie den grafischen Abfrage-Designer zum interaktiven Erstellen einer Abfrage sowie zum Anzeigen der Datenquellentypen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB und ODBC. Verwenden Sie den textbasierten Abfrage-Designer, um mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen, komplexe Abfragen oder Befehlssyntax und ausdrucksbasierte Abfragen anzugeben. Weitere Informationen finden Sie unter [Benutzeroberfläche des textbasierten Abfrage-Designers](../text-based-query-designer-user-interface.md). Weitere Informationen zum Arbeiten mit bestimmten Datenquellen Typen finden Sie unter [Hinzufügen von Daten zu &#40;einem Bericht Berichts-Generator und&#41;SSRS](report-datasets-ssrs.md).  
   
  .  
   
 ## <a name="graphical-query-designer"></a>Grafischer Abfrage-Designer  
- Grafische Abfrage-Designer unterstützt drei Typen von Abfragebefehlen: **Text**, **StoredProcedure**, oder **TableDirect**. Bevor Sie eine Abfrage für Ihr Dataset erstellen, müssen Sie eine Befehlstypoption auf der Seite Abfrage im Dialogfeld [Dataseteigenschaften](../dataset-properties-dialog-box-query.md) auswählen.  
+ Dieser grafische Abfrage-Designer unterstützt drei Typen von Abfrage Befehlen: **Text**, **StoredProcedure**oder **TableDirect**. Bevor Sie eine Abfrage für Ihr Dataset erstellen, müssen Sie eine Befehlstypoption auf der Seite Abfrage im Dialogfeld [Dataseteigenschaften](../dataset-properties-dialog-box-query.md) auswählen.  
   
  Die folgenden Optionen sind als Abfragetyp verfügbar:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66107263"
 #### <a name="toolbar-for-the-graphical-query-designer"></a>Symbolleiste des grafischen Abfrage-Designers  
  Die Symbolleiste des grafischen Abfrage-Designers stellt Schaltflächen bereit, mit denen Sie [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfragen mithilfe der grafischen Benutzeroberfläche entwerfen können.  
   
-|Schaltfläche|Description|  
+|Schaltfläche|Beschreibung|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
@@ -76,7 +76,7 @@ ms.locfileid: "66107263"
 |![Rasterbereich ein-/ausblenden (Umschaltfläche)](../media/rsqdicon-showhidegrid.gif "Show or Hide Grid pane toggle")|Ein- und Ausblenden des Rasterbereichs.|  
 |![SQL-Bereich ein-/ausblenden (Umschaltfläche)](../media/rsqdicon-showhidesql.gif "Show or Hide Grid pane toggle")|Ein- und Ausblenden des SQL-Bereichs.|  
 |![Ergebnisbereich ein-/ausblenden (Umschaltfläche)](../media/rsqdicon-showhideresult.gif "Show or Hide Grid pane toggle")|Ein- und Ausblenden des Ergebnisbereichs.|  
-|![Führen Sie die Abfrage aus](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Führen Sie die Abfrage aus.|  
+|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Führen Sie die Abfrage aus.|  
 |![Überprüfen von SQL im SQL-Bereich (Schaltfläche)](../media/rsqdicon-verifysql.gif "Verify SQL in SQL pane button")|Überprüfen, ob die Syntax des Abfragetexts richtig ist.|  
 |![Festlegen des aufsteigenden Sortierens für das ausgewählte Feld](../media/rsqdicon-sortascending.gif "Set Sort Ascending on selected field")|Festlegen der Sortierreihenfolge auf **Aufsteigend sortieren** für die ausgewählte Spalte im Diagrammbereich.|  
 |![Festlegen des absteigenden Sortierens für das ausgewählte Feld](../media/rsqdicon-sortdescending.gif "Set Sort Ascending on selected field")|Festlegen der Sortierreihenfolge auf **Absteigend sortieren** für die ausgewählte Spalte im Diagrammbereich.|  
@@ -118,7 +118,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Symbol der Schaltfläche Standardabfrage-Designer](../media/icongenericquerydesigner.gif "Icon of the Generic Query Designer button")|Wechseln zwischen dem standardmäßigen Abfrage-Designer und dem grafischen Abfrage-Designer, wobei die Ansicht des Abfragetexts oder der gespeicherten Prozedur beibehalten wird.|  
-|![Führen Sie die Abfrage aus](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Auswählen aller Spalten aus der ausgewählten Tabelle.|  
+|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Auswählen aller Spalten aus der ausgewählten Tabelle.|  
   
 ### <a name="command-type-storedprocedure"></a>StoredProcedure-Befehlstyp  
  Für den **StoredProcedure** -Befehlstyp zeigt der grafische Abfrage-Designer eine Dropdownliste der verfügbaren gespeicherten Prozeduren aus der Datenquelle und einen Ergebnisbereich an. Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
@@ -131,11 +131,11 @@ EXEC uspGetEmployeeManagers '1';
 #### <a name="toolbar-buttons-for-command-type-storedprocedure"></a>Schaltflächen der Symbolleiste für den StoredProcedure-Befehlstyp  
  Die Symbolleiste des grafischen Abfrage-Designers stellt eine Dropdownliste mit gespeicherten Prozeduren der Datenquelle bereit. In der folgenden Tabelle wird jede Schaltfläche und ihre Funktion aufgelistet.  
   
-|Schaltfläche|Description|  
+|Schaltfläche|Beschreibung|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer.|  
 |**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Führen Sie die Abfrage aus](../../analysis-services/media/rsqdicon-run.gif "Run the query")|Ausführen der ausgewählten gespeicherten Prozedur.|  
+|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Ausführen der ausgewählten gespeicherten Prozedur.|  
 |Dropdownliste der gespeicherten Prozeduren|Klicken Sie auf den Pfeil nach unten, um eine Liste verfügbarer gespeicherter Prozeduren aus der Datenquelle anzuzeigen. Klicken Sie auf eine gespeicherte Prozedur aus der Liste, um sie auszuwählen.|  
   
 #### <a name="example"></a>Beispiel  
@@ -144,11 +144,11 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`  
   
 ## <a name="see-also"></a>Siehe auch  
- [Abfrageentwurfstools im Berichts-Designer SQL-Server-Datatools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
+ [Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [Hinzufügen von Daten zu &#40;einem Bericht Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
  [SQL Server-Verbindungstyp &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
  [OLE DB-Verbindungstyp (SSRS)](ole-db-connection-type-ssrs.md)   
- [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
+ [Hinzufügen von Daten zu &#40;einem Bericht Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
  [Oracle-Verbindungstyp (SSRS)](oracle-connection-type-ssrs.md)   
  [RSReportDesigner-Konfigurationsdatei](../report-server/rsreportdesigner-configuration-file.md)   
  [Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

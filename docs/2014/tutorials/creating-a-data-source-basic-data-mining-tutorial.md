@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Datenquelle (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
+title: Erstellen einer Datenquelle (Lernprogramm zu Data Mining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: eb18bc37f63b74981fcccbcb889bd80dcb816d12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273161"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888750"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Erstellen einer Datenquelle (Lernprogramm zu Data Mining-Grundlagen)
   A *Datenquelle* ist eine Datenverbindung, die innerhalb Ihres Projekts gespeichert sowie verwaltet und für Ihre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank bereitgestellt wird. Die Datenquelle umfasst neben anderen erforderlichen Verbindungseigenschaften den Servernamen und den Namen der Datenbank, auf dem sich Ihre Quelldaten befinden.  
@@ -40,7 +40,7 @@ ms.locfileid: "63273161"
 6.  Wählen Sie in der Gruppe **Am Server anmelden** die Option **Windows-Authentifizierung verwenden**aus.  
   
     > [!IMPORTANT]  
-    >  Die Windows-Authentifizierung sollte wenn immer möglich verwendet werden, da hiermit eine größere Sicherheit als bei der SQL Server-Authentifizierung verbunden ist. Die SQL Server-Authentifizierung wird aus Gründen der Abwärtskompatibilität bereitgestellt. Weitere Informationen zu Authentifizierungsmethoden finden Sie unter [-Datenbank-Engine-Konfiguration - Kontobereitstellung](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
+    >  Die Windows-Authentifizierung sollte wenn immer möglich verwendet werden, da hiermit eine größere Sicherheit als bei der SQL Server-Authentifizierung verbunden ist. Die SQL Server-Authentifizierung wird aus Gründen der Abwärtskompatibilität bereitgestellt. Weitere Informationen zu Authentifizierungsmethoden finden Sie unter [Datenbank-Engine Konfiguration-Konto Bereitstellung](../../2014/sql-server/install/database-engine-configuration-account-provisioning.md).  
   
 7.  Wählen Sie in der Liste **Datenbanknamen eingeben oder auswählen** den Eintrag [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] aus, und klicken Sie dann auf **OK**.  
   
@@ -55,14 +55,14 @@ ms.locfileid: "63273161"
      Die neue Datenquelle **Adventure Works DW 2012** wird im Ordner Datenquellen im Projektmappen-Explorer angezeigt.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Erstellen eine Datenquellensicht &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [Erstellen einer Datenquellen Sicht &#40;-Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Erstellen eines Analysis Services-Projekt &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Erstellen eines Analysis Services- &#40;Lernprogramms zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Datenquelle (SSAS: mehrdimensional)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Definieren einer Datenquelle](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)  
+ [Erstellen einer Datenquelle (SSAS: mehrdimensional)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Definieren einer Datenquelle](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

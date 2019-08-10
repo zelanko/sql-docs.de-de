@@ -1,5 +1,5 @@
 ---
-title: Definieren und Verwenden einer Drillthroughaktion | Microsoft-Dokumentation
+title: Definieren und Verwenden von Drillthrough-Aktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078265"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888108"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definieren und Verwenden einer Drillthroughaktion
   Das Dimensionieren von Faktendaten mit einer Faktendimension, ohne die von der Abfrage zurückgegebenen Daten richtig zu filtern, kann bei Abfragen zu einer verminderten Leistung führen. Um dies zu vermeiden, können Sie eine Drillthroughaktion definieren, mit der die Gesamtanzahl der Zeilen, die zurückgegeben werden, reduziert wird. Dadurch wird die Abfrageleistung erheblich verbessert.  
@@ -30,15 +30,15 @@ ms.locfileid: "66078265"
   
      In der folgenden Abbildung ist die Registerkarte **Aktionen** des Cube-Designers dargestellt.  
   
-     ![Registerkarte "Aktionen", Cube-Designer](../../2014/tutorials/media/l8-action1.gif "Registerkarte ' Aktionen ', Cube-Designer")  
+     ![Registerkarte Aktionen des Cube-Designers](../../2014/tutorials/media/l8-action1.gif "Registerkarte Aktionen des Cube-Designers")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Aktionen** auf **Neue Drillthroughaktion** .  
   
      Es wird eine leere Aktionsvorlage im Anzeigebereich angezeigt.  
   
-     ![Leere Aktionsvorlage im Anzeigebereich](../../2014/tutorials/media/l8-action2.gif "leere Aktionsvorlage im Anzeigebereich")  
+     ![Leere Aktions Vorlage im Anzeige] Bereich (../../2014/tutorials/media/l8-action2.gif "Leere Aktions Vorlage im Anzeige") Bereich  
   
-3.  In der **Namen** ändern den Namen der Aktion zu `Internet Sales Details Drillthrough Action`.  
+3.  Ändern Sie `Internet Sales Details Drillthrough Action`im Feld Name den Namen dieser Aktion in.  
   
 4.  Wählen Sie in der Liste **Measuregruppenelemente** die Option **Internet Sales**aus.  
   
@@ -46,19 +46,19 @@ ms.locfileid: "66078265"
   
 6.  Aktivieren Sie in der Liste **Rückgabespalten** die Kontrollkästchen für **Elementbeschreibung** und **Bestellnummer** , und klicken Sie anschließend auf **OK**. In der folgenden Abbildung ist die Aktionsvorlage zu sehen, wie sie zum jetzigen Zeitpunkt in dieser Prozedur aussehen sollte.  
   
-     ![Drillthroughspalten (Feld)](../../2014/tutorials/media/l8-action3.gif "Drillthroughspalten (Feld)")  
+     ![Feld "Drillthrough-Spalten] " (../../2014/tutorials/media/l8-action3.gif "Feld \"Drillthrough-Spalten") "  
   
 7.  Erweitern Sie das Feld **Weitere Eigenschaften** , wie in der folgenden Abbildung dargestellt.  
   
-     ![Zusätzliche Eigenschaftendialogfeld](../../2014/tutorials/media/l8-action4.gif "im zusätzliche Eigenschaften")  
+     ![Weitere Eigenschaften (Feld] ) (../../2014/tutorials/media/l8-action4.gif "Weitere Eigenschaften (Feld") )  
   
-8.  In der **maximale Zeilenanzahl** geben `10`.  
+8.  Geben`10`Sie im Feld **Maximale Zeilen** Anzahl ein.  
   
-9. In der **Beschriftung** geben `Drillthrough to Order Details...`.  
+9. Geben`Drillthrough to Order Details...`Sie im Feld **Beschriftung** den Text ein.  
   
      Durch diese Einstellungen wird die Anzahl der zurückgegebenen Zeilen beschränkt und die Beschriftung angegeben, die im Clientanwendungsmenü angezeigt wird. In der folgenden Abbildung werden diese Einstellungen im Feld **Weitere Eigenschaften** dargestellt.  
   
-     ![Zusätzliche Eigenschaftendialogfeld](../../2014/tutorials/media/l8-action5.gif "im zusätzliche Eigenschaften")  
+     ![Weitere Eigenschaften (Feld] ) (../../2014/tutorials/media/l8-action5.gif "Weitere Eigenschaften (Feld") )  
   
 ## <a name="using-the-drillthrough-action"></a>Verwenden der Drillthroughaktion  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66078265"
   
      Die Details der an Adam Powell gelieferten Bestellungen werden im **Datenstichproben-Viewer**angezeigt, wie in der folgenden Abbildung zu sehen ist. Einige zusätzliche Details wären jedoch hilfreich, wie z. B. Bestelldatum, Fälligkeitsdatum und Lieferdatum. Sie fügen diese zusätzlichen Details in der nächsten Prozedur hinzu.  
   
-     ![Bestellungen an Adam Powell gelieferten](../../2014/tutorials/media/l8-action6.gif "Bestellungen an Adam Powell gelieferten")  
+     ![An Adam Powell gelieferte Aufträge](../../2014/tutorials/media/l8-action6.gif "An Adam Powell gelieferte Aufträge")  
   
 8.  Schließen von Excel/  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66078265"
   
     -   ShipDateKey  
   
-6.  Ändern der **Namen** -Eigenschaft für die **Order Date Key** Attribut `Order Date` klicken Sie auf die Schaltfläche zum Durchsuchen für die **Spalte "Name"** -Eigenschaft, und in der **Spalte "Name"** wählen Sie im Dialogfeld **Datum** als Quelltabelle und SimpleDate als Quellspalte. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Ändern Sie die **Name** -Eigenschaft für das **Order Date Key** -Attribut in `Order Date` , und klicken Sie dann auf die Schaltfläche zum Durchsuchen für die **Name Column** -Eigenschaft, und wählen Sie im Dialogfeld **Namensspalte** den Wert **Date** als Quell Tabelle und dann SimpleDate als Quell Spalte. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Ändern der **Namen** -Eigenschaft für die **Due Date Key** -Attribut auf `Due Date`, und klicken Sie dann mithilfe derselben Methode wie die **Order Date Key** Attribut, ändern Sie die  **Benennen Sie Spalte** -Eigenschaft für dieses Attribut in **Date.SimpleDate (WChar)** .  
+7.  Ändern Sie die **Name** -Eigenschaft für das **Due Date Key** -Attribut in `Due Date`, und ändern Sie dann mithilfe derselben Methode wie das **Order Date Key** -Attribut die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar).** .  
   
-8.  Ändern der **Namen** -Eigenschaft für die **Ship Date Key** Attribut `Ship Date`, und ändern Sie dann die **Spalte "Name"** -Eigenschaft für dieses Attribut in  **Date.SimpleDate (WChar)** .  
+8.  Ändern Sie die **Name** -Eigenschaft für das **Ship Date Key** -Attribut in `Ship Date`, und ändern Sie dann die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)** .  
   
 9. Wechseln Sie zur Registerkarte **Aktionen** des Cube-Designers für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66078265"
   
      In der folgenden Abbildung sind diese Spalten markiert.  
   
-     ![Drillthroughspalten (Feld)](../../2014/tutorials/media/l8-action7.gif "Drillthroughspalten (Feld)")  
+     ![Feld "Drillthrough-Spalten] " (../../2014/tutorials/media/l8-action7.gif "Feld \"Drillthrough-Spalten") "  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Überprüfen der geänderten Drillthroughaktion  
   
@@ -140,16 +140,16 @@ ms.locfileid: "66078265"
   
      Die Details dieser an Adam Powell gelieferten Bestellungen werden in einem temporären Arbeitsblatt angezeigt. Dies umfasst Artikelbeschreibung, Bestellnummer, Bestelldatum, Fälligkeitsdatum und Versanddatum, wie in der folgenden Abbildung dargestellt.  
   
-     ![Bestellungen an Adam Powell gelieferten](../../2014/tutorials/media/l8-action8.gif "Bestellungen an Adam Powell gelieferten")  
+     ![An Adam Powell gelieferte Aufträge](../../2014/tutorials/media/l8-action8.gif "An Adam Powell gelieferte Aufträge")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 9: Definieren von Perspektiven und Übersetzungen](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Lektion 9: Definieren von Perspektiven und Übersetzungen](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Aktionen &#40;Analysis Services-Mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Aktionen in mehrdimensionalen Modellen](multidimensional-models/actions-in-multidimensional-models.md)   
  [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definieren einer Faktenbeziehung](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [Definieren einer Fakten Beziehung](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
  [Definieren von Faktenbeziehungen und Faktenbeziehungseigenschaften](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

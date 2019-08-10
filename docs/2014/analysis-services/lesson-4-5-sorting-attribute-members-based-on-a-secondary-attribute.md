@@ -1,5 +1,5 @@
 ---
-title: Sortieren von Attributelementen basierend auf einem sekundären Attribut | Microsoft-Dokumentation
+title: Sortieren von Attribut Elementen basierend auf einem sekundären Attribut | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078698"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888307"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Sortieren von Attributelementen basierend auf einem sekundären Attribut
-  In Lektion 3 haben Sie das Sortieren von Attributelementen basierend auf ihrem Namen oder ihrem Schlüsselwert kennen gelernt. Sie haben sich auch mit der Verwendung eines zusammengesetzten Elementschlüssels in Bezug auf Attributelemente und Sortierreihenfolge vertraut gemacht. Weitere Informationen finden Sie unter [Ändern der Date-Dimension](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Wenn jedoch weder der Name noch der Schlüssel des Attributs die von Ihnen gewünschte Sortierreihenfolge ermöglicht, müssen Sie Attributelemente basierend auf einem sekundären Attribut sortieren, um die gewünschte Sortierreihenfolge zu erhalten. Wenn zwischen den Attributen eine Beziehung definiert wurde, können Sie das zweite Attribut verwenden, um die Elemente des ersten Attributs zu sortieren.  
+  In Lektion 3 haben Sie das Sortieren von Attributelementen basierend auf ihrem Namen oder ihrem Schlüsselwert kennen gelernt. Sie haben sich auch mit der Verwendung eines zusammengesetzten Elementschlüssels in Bezug auf Attributelemente und Sortierreihenfolge vertraut gemacht. Weitere Informationen finden Sie unter [Ändern der Date-Dimension](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension). Wenn jedoch weder der Name noch der Schlüssel des Attributs die von Ihnen gewünschte Sortierreihenfolge ermöglicht, müssen Sie Attributelemente basierend auf einem sekundären Attribut sortieren, um die gewünschte Sortierreihenfolge zu erhalten. Wenn zwischen den Attributen eine Beziehung definiert wurde, können Sie das zweite Attribut verwenden, um die Elemente des ersten Attributs zu sortieren.  
   
  Attributbeziehungen definieren die Beziehungen oder Abhängigkeiten zwischen Attributen. In einer Dimension, die auf einer einzelnen relationalen Tabelle basiert, sind typischerweise alle Attribute durch das Schlüsselattribut miteinander verknüpft. Der Grund hierfür ist, dass alle Attribute für eine Dimension Informationen zu den Elementen bereitstellen, die über das Schlüsselattribut der Dimension mit den Fakten in der Faktentabelle für jede verbundene Measuregruppe verknüpft sind. In einer Dimension, die auf mehreren Tabellen basiert, sind Elemente typischerweise basierend auf dem Joinschlüssel zwischen den Tabellen verknüpft. Verknüpfte Attribute können verwendet werden, um eine Sortierreihenfolge anzugeben, wenn dies durch die zugrunde liegenden Daten unterstützt wird. Sie können z. B. ein neues Attribut erstellen, das die Sortierlogik für ein verknüpftes Attribut bereitstellt.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078698"
   
      Beachten Sie, dass die Monate jetzt in chronologischer Ordnung sortiert sind, wie im folgenden Bild zu sehen.  
   
-     ![Geändert von Benutzerhierarchie in chronologischer Reihenfolge](../../2014/tutorials/media/l4-memberproperties-3.gif "Benutzerhierarchie in chronologischer Reihenfolge geändert")  
+     ![Geänderte Benutzer Hierarchie in chronologischer Reihenfolge](../../2014/tutorials/media/l4-memberproperties-3.gif "Geänderte Benutzer Hierarchie in chronologischer Reihenfolge")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definieren von Attributbeziehungen und der Sortierreihenfolge in der Customer-Dimension  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078698"
   
      Die folgende Abbildung zeigt die Elemente der **Commute Distance** -Attributhierarchie sortiert nach den ASCII-Werten des Elementschlüssels.  
   
-     ![Commute Distance-Attributhierarchie](../../2014/tutorials/media/l4-memberproperties-4.gif "Commute Distance-Attributhierarchie")  
+     ![Attribut Hierarchie der arbeitsentfernungs](../../2014/tutorials/media/l4-memberproperties-4.gif "Attribut Hierarchie der arbeitsentfernungs")  
   
 2.  Wechseln Sie zur Registerkarte **Dimensionsstruktur** im Dimensions-Designer für die Customer-Dimension, klicken Sie mit der rechten Maustaste auf **CommuteDistanceSort** in der **Customer** -Tabelle im Bereich **Datenquellensicht** und anschließend auf **Neues Attribut aus Spalte**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66078698"
   
      Beachten Sie, dass die Hierarchieelemente jetzt in einer logischen Reihenfolge basierend auf zunehmender Entfernung sortiert sind, wie im folgenden Bild zu sehen.  
   
-     ![Neu sortiert Commute Distance-Attributhierarchie](../../2014/tutorials/media/l4-memberproperties-5.gif "Re-sorted Commute Distance-Attributhierarchie")  
+     ![Neu sortierte arbeitsentfernungs-Attribut Hierarchie](../../2014/tutorials/media/l4-memberproperties-5.gif "Neu sortierte arbeitsentfernungs-Attribut Hierarchie")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

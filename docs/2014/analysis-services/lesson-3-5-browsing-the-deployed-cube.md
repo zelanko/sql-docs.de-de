@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c4b80f65b894ebe81ab440e4e7a8f2a7080d2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078910"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888472"
 ---
 # <a name="browsing-the-deployed-cube"></a>Durchsuchen des bereitgestellten Cubes
   In der folgenden Aufgabe durchsuchen Sie den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube. Da Measures in der Analyse dimensionsübergreifend verglichen werden, verwenden Sie zum Durchsuchen von Daten eine Excel-PivotTable. Mithilfe einer PivotTable lassen sich Kunden-, Datums- und Produktinformationen auf verschiedenen Achsen platzieren. So können Sie verfolgen, wie sich die Internetverkäufe ändern, wenn sie für bestimmte Zeiträume, Kundendemografien und Produktlinien angezeigt werden.  
@@ -42,9 +42,9 @@ ms.locfileid: "66078910"
   
      Internetverkäufe nach Region und Produktgruppe für den Monat Februar 2006 werden wie im folgenden Bild angezeigt.  
   
-     ![Internetverkäufe nach Region und Produktgruppe](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internetverkäufe nach Region und Produktgruppe")  
+     ![Internet Verkäufe nach Region und Produktlinie](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet Verkäufe nach Region und Produktlinie")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lektion 4: Definieren von erweiterten Attributen und Dimensions Eigenschaften](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
   
   

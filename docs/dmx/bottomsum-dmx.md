@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 51ebd164ae5c184177367f59b5643712b14718a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071134"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889762"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,18 +28,18 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Ein Ausdruck, der eine Tabelle, z. B. zurückgibt eine \<Tabelle Spaltenverweis >, oder eine Funktion, die eine Tabelle zurückgibt.  
+ Ein Ausdruck, der eine Tabelle zurückgibt, wie \<z. b. ein Tabellen Spalten Verweis > oder eine Funktion, die eine Tabelle zurückgibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellenausdruck >  
+ \<Tabellen Ausdrucks >  
   
 ## <a name="remarks"></a>Hinweise  
- Die **BottomSum** Funktion gibt die untersten Zeilen in aufsteigender Rangreihenfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des der \<rank Expression >-Arguments für jede Zeile, so, dass die Summe der der \<rank Expression > ist mindestens Gesamtwert, der angegeben wird die \<Summe > Argument. **BottomSum** die kleinste Anzahl von Elementen gibt mögliche zurück, denen der angegebene Summenwert erreicht.  
+ Die **BottomSum** -Funktion gibt die untersten Zeilen in steigender Rangfolge zurück. Der Rang basiert auf dem ausgewerteten Wert des \<Rang Ausdrucks > Argument für jede Zeile, sodass die Summe \<des Rang Ausdrucks > Werte mindestens dem angegebenen Gesamtwert entspricht, der durch das \<Sum >-Argument angegeben wird. **BottomSum** gibt die kleinste mögliche Anzahl von Elementen zurück, während gleichzeitig der angegebene Summenwert erreicht wird.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel erstellt eine Vorhersageabfrage für das Association-Modell, das Sie erstellen, indem Sie mit der [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Im folgenden Beispiel wird eine Vorhersage Abfrage für das Association-Modell erstellt, das Sie mit dem Lernprogramm zu [Data Mining-Grundlagen](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)erstellen.  
   
- Um zu verstehen, wie die BottomSum funktioniert, ist es möglicherweise hilfreich, zunächst eine Vorhersageabfrage auszuführen, die lediglich die geschachtelte Tabelle zurückgibt.  
+ Um zu verstehen, wie BottomSum funktioniert, kann es hilfreich sein, zuerst eine Vorhersage Abfrage auszuführen, die nur die in der Tabelle abgesterte Tabelle zurückgibt.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -50,7 +50,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [erstellen Sie eine Singleton-Abfrage im Data Mining-Designer](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  In diesem Beispiel enthält der als Eingabe bereitgestellte Wert ein einzelnes Anführungszeichen und muss daher mit Escapezeichen versehen werden, indem ihm ein weiteres einzelnes Anführungszeichen vorangestellt wird. Wenn Sie über die Syntax zum Einfügen von Escapezeichen nicht sicher sind, können Sie den Generator für Vorhersageabfragen verwenden, um die Abfrage zu erstellen. Wenn Sie den Wert aus der Dropdownliste auswählen, wird das erforderliche Escapezeichen automatisch eingefügt. Weitere Informationen finden Sie unter [Erstellen einer SINGLETON-Abfrage im Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Beispielergebnisse:  
   
@@ -67,7 +67,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- Die BottomSum-Funktion verwendet die Ergebnisse dieser Abfrage und gibt den Zeilen mit den niedrigsten Werten ergeben, die die angegebene Anzahl.  
+ Die BottomSum-Funktion nimmt die Ergebnisse dieser Abfrage und gibt die Zeilen mit den niedrigsten Werten zurück, die die angegebene Anzahl summieren.  
   
 ```  
 SELECT   
@@ -82,11 +82,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- Das erste Argument für die BottomSum-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die geschachtelte Tabelle zurückgegeben, indem Sie die Predict-Funktion aufrufen und das INCLUDE_STATISTICS-Argument.  
+ Das erste Argument der BottomSum-Funktion ist der Name einer Tabellenspalte. In diesem Beispiel wird die-Tabelle durch Aufrufen der Vorhersagefunktion und Verwenden des INCLUDE_STATISTICS-Arguments zurückgegeben.  
   
- Das zweite Argument für die BottomSum-Funktion ist die Spalte in der geschachtelten Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $PROBABILITY zum Zurückgeben von Zeilen verwendet, die mindestens eine Wahrscheinlichkeit von 50 % ergeben.  
+ Das zweite Argument der BottomSum-Funktion ist die Spalte in der Tabelle, die Sie zum Sortieren der Ergebnisse verwenden. In diesem Beispiel gibt die INCLUDE_STATISTICS-Option die Spalten $SUPPORT, $PROBABILTY und $ADJUSTED PROBABILITY zurück. In diesem Beispiel wird $PROBABILITY zum Zurückgeben von Zeilen verwendet, die mindestens eine Wahrscheinlichkeit von 50 % ergeben.  
   
- Das dritte Argument für die BottomSum-Funktion gibt die zielsumme als Double-Wert an. Geben Sie .1 ein, um die Zeilen für die Produkte mit der niedrigsten Anzahl zu erhalten, die 10 Prozent Wahrscheinlichkeit ergeben.  
+ Das dritte Argument der BottomSum-Funktion gibt die Ziel Summe als Double-Wert an. Geben Sie .1 ein, um die Zeilen für die Produkte mit der niedrigsten Anzahl zu erhalten, die 10 Prozent Wahrscheinlichkeit ergeben.  
   
  Beispielergebnisse:  
   
@@ -95,11 +95,11 @@ NATURAL PREDICTION JOIN
 |Road Bottle Cage|1195|0,08...|0,07...|  
 |Mountain Bottle Cage|1367|0,09...|0,08...|  
   
- **Beachten Sie** in diesem Beispiel wird nur bereitgestellt, um die Verwendung von BottomSum veranschaulichen. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
+ **Hinweis** Dieses Beispiel wird nur zur Veranschaulichung der Verwendung von "BottomSum" bereitgestellt. Je nach Größe des Datasets kann die Ausführung dieser Abfrage lange dauern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
+ [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX ( &#40;bottomprozent)&#41;](../dmx/bottompercent-dmx.md)  
   
   

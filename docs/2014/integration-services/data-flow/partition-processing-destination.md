@@ -16,15 +16,15 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2d36d354aee299efdeefc38d6000c16f1d0fc6b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53ef09d19b62c0e6ce7742c41581d3cdefdfc374
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62901425"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890553"
 ---
 # <a name="partition-processing-destination"></a>Ziel für Partitionsverarbeitung
-  Das Ziel für Partitionsverarbeitung lädt und verarbeitet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Partition. Weitere Informationen zu Partitionen finden Sie unter [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
+  Das Ziel für Partitionsverarbeitung lädt und verarbeitet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Partition. Weitere Informationen zu Partitionen finden Sie unter [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
   
  Das Ziel für Partitionsverarbeitung schließt die folgenden Funktionen ein:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62901425"
   
 -   Zuordnung von Eingabespalten zu Partitionsspalten.  
   
- Weitere Informationen zum Verarbeiten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekten finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+ Weitere Informationen zum Verarbeiten von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekten finden Sie unter [Verarbeitungsoptionen und -einstellungen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services).  
   
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](../control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  

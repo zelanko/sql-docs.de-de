@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 754180cfa1ff907e9590b70ba074cd28eaaa804e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769088"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894045"
 ---
-# <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
+# <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Fügt einen neuen geplanten Agentauftrag hinzu, der zum Synchronisieren eines Pushabonnements mit einer Transaktionsveröffentlichung verwendet wird. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
@@ -71,7 +71,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @subscriber = ] 'subscriber'`Der Name der Abonnenten Instanz oder der Name des Verfügbarkeits Gruppen-Listener, wenn die Abonnenten Datenbank eine Verfügbarkeits Gruppe ist. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. 
   
 `[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Geben Sie für einen nicht-SQL Server Abonnenten den Wert **(Standardziel)** für *subscriber_db*an.  
   

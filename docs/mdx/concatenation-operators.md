@@ -1,5 +1,5 @@
 ---
-title: Verkettungsoperatoren | Microsoft-Dokumentation
+title: Verkettungs Operatoren | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 235320a65bf04e8b0ce1d7c23da588a4d541a0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915859"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892460"
 ---
 # <a name="concatenation-operators"></a>Operator für Verkettungen
 
@@ -32,10 +32,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="language-considerations"></a>Sprachbezogene Aspekte  
- Haben die beiden in einer Verkettung verwendeten Zeichenfolgen dieselbe Sortierung, hat die sich ergebende verkettete Zeichenfolge dieselbe Sortierung wie die Eingaben. Haben die in einer Verkettung verwendeten Zeichenfolgen unterschiedliche Sortierungen, wird die Sortierung der sich ergebenden verketteten Zeichenfolge durch die Regeln für die Sortierungsrangfolge bestimmt. Weitere Informationen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ Haben die beiden in einer Verkettung verwendeten Zeichenfolgen dieselbe Sortierung, hat die sich ergebende verkettete Zeichenfolge dieselbe Sortierung wie die Eingaben. Haben die in einer Verkettung verwendeten Zeichenfolgen unterschiedliche Sortierungen, wird die Sortierung der sich ergebenden verketteten Zeichenfolge durch die Regeln für die Sortierungsrangfolge bestimmt. Weitere Informationen finden Sie unter [Sprachen und Sortierungen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
 ## <a name="see-also"></a>Siehe auch  
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX-Operator &#40;Verweis (MDX)&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Operatoren &#40;MDX-Syntax&#41;](../mdx/operators-mdx-syntax.md)  
   
   

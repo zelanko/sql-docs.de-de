@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET-serverobjektarchitektur | Microsoft-Dokumentation
+title: ADOMD.NET-Server Objekt Architektur | Microsoft-Dokumentation
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f5ad515251a783705e3f8e04c73674a8e978348
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63059434"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889991"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET-Serverobjektarchitektur
-  Die ADOMD.NET-Serverobjekte sind Hilfsobjekte, die verwendet werden können, zum Erstellen von benutzerdefinierten Funktionen (UDFs) oder gespeicherte Prozeduren in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Die ADOMD.NET-Server Objekte sind Hilfsobjekte, die zum Erstellen von benutzerdefinierten Funktionen (UDFs) oder gespeicherten [!INCLUDE[msCoName](../../includes/msconame-md.md)] Prozeduren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwendet werden können.  
   
 > [!NOTE]  
->  Verwenden der **Microsoft.AnalysisServices.AdomdServer** Namespace (und diese Objekte), eine Referenz auf msmgdsrv.dll zum Projekt der benutzerdefinierten Funktion oder gespeicherte Prozedur hinzugefügt werden muss.  
+>  Um den **Microsoft. AnalysisServices. AdomdServer** -Namespace (und diese Objekte) zu verwenden, muss ein Verweis auf die Datei "msmdssrv. dll" dem UDF-Projekt oder der gespeicherten Prozedur hinzugefügt werden.  
   
- ![Zeigt die objektbeziehungen im ADOMD.NET-Server](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "zeigt die objektbeziehungen im ADOMD.NET-Server")  
+ ![Zeigt die Objektbeziehungen in ADOMD.NET Server an] . (https://docs.microsoft.com/analysis-services/analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "Zeigt die Objektbeziehungen in ADOMD.NET Server an") .  
 ADOMD.NET-Objektmodell  
   
  Die Interaktion mit der ADOMD.NET-Objekthierarchie beginnt normalerweise mit einem oder mehreren der Objekte auf der obersten Ebene, wie in der folgenden Tabelle erläutert.  
   
-|Aktion|Verwenden Sie dieses Objekt|  
+|Beschreibung|Verwenden Sie dieses Objekt|  
 |--------|---------------------|  
 |Auswerten von MDX-Ausdrücken (Multidimensional Expressions)|<xref:Microsoft.AnalysisServices.AdomdServer.Expression><br /> Das <xref:Microsoft.AnalysisServices.AdomdServer.Expression>-Objekt stellt eine Möglichkeit bereit, einen MDX-Ausdruck auszuführen und diesen Ausdruck unter einem bestimmten Tupel auszuwerten.|  
 |Bereitstellen von Unterstützung für die Ausführung von MDX-Funktionen ohne Erstellung der vollständigen MDX-Anweisung|<xref:Microsoft.AnalysisServices.AdomdServer.MDX><br /> Das <xref:Microsoft.AnalysisServices.AdomdServer.MDX>-Objekt ist zweckmäßig für den Aufruf von vordefinierten MDX-Funktionen ohne die Verwendung des <xref:Microsoft.AnalysisServices.AdomdServer.Expression>-Objekts. Weitere Funktionen für das <xref:Microsoft.AnalysisServices.AdomdServer.MDX>-Objekt werden voraussichtlich in zukünftigen Versionen verfügbar sein.|  
