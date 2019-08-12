@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5352a4b71e485a58907d4702dd10929955f92500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570978"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892554"
 ---
 # <a name="grouping-pane"></a>Gruppierungsbereich
 Wenn Sie [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Berichte entwerfen, werden im Gruppierungsbereich die Zeilengruppen und Spaltengruppen für den derzeit ausgewählten Tablix-Datenbereich angezeigt. Der Gruppierungsbereich ist für die Diagramm- und Messgerätdatenbereiche nicht verfügbar. Der Gruppierungsbereich besteht aus dem Bereich Zeilengruppen und dem Bereich Spaltengruppen. Der Gruppierungsbereich weist zwei Modi auf, den Standard- und den erweiterten Modus. Im Standardmodus wird eine hierarchische Sicht der dynamischen Elemente für Zeilen- und Spaltengruppen angezeigt. Im erweiterten Modus werden dynamische und statische Elemente für Zeilen- und Spaltengruppen angezeigt. Eine Gruppe ist ein benannter Satz von Daten aus einem Berichtsdataset, der in einem Datenbereich angezeigt wird. Gruppen werden in Hierarchien organisiert, die statische und dynamische Elemente einschließen. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Bericht** auf **Gruppierung**.
+  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Wenn der Gruppierungsbereich nicht angezeigt wird, klicken Sie im Menü **Bericht** auf **Gruppierung**.
   
  Zellen in den Zeilen- und Spaltengruppenbereiche können statische oder dynamische Elemente einer Gruppe sein. Statische Elemente wiederholen sich einmal pro Gruppe und enthalten meist Bezeichnungen oder Gesamtbeträge. Dynamische Elemente wiederholen sich einmal pro Gruppeninstanz und enthalten meist die eindeutigen Werte des Gruppierungsausdrucks. Wenn Sie Tablix-Zellen im Zeilengruppenbereich oder Spaltengruppenbereich auswählen, wird das entsprechende Gruppenelement im Bereich Zeilengruppen oder Spaltengruppen ausgewählt. Wenn Sie umgekehrt Gruppen im Gruppierungsbereich auswählen, wird die entsprechende, dem Gruppenelement zugeordnete Zelle auf der Entwurfsoberfläche ausgewählt. Weitere Informationen zu Zeilen und Spalten von Tablix-Gruppierungsbereichen finden Sie unter [Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -49,7 +49,7 @@ Wenn Sie [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Beric
 ## <a name="advanced-mode"></a>erweiterten Modus  
 Im erweiterten Modus können Sie alle statischen und dynamischen Elemente einer Gruppe anzeigen. Wenn Sie ein Element auswählen, zeigt das Eigenschaftenfenster Eigenschaften für das derzeit ausgewählte **Tablix-Element**an.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Wenn Sie den **erweiterten Modus**umschalten möchten, klicken Sie am Rand des Bereichs „Spaltengruppen“ mit der rechten Maustaste auf den Pfeil nach unten, und klicken Sie dann auf **Erweiterter Modus**.  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Wenn Sie den **erweiterten Modus**umschalten möchten, klicken Sie am Rand des Bereichs „Spaltengruppen“ mit der rechten Maustaste auf den Pfeil nach unten, und klicken Sie dann auf **Erweiterter Modus**.  
   
 In den meisten Fällen werden Eigenschaften, die die Anzeige statischer und dynamischer Gruppenzeilen und Gruppenspalten steuern, automatisch beim Erstellen einer Gruppe oder Hinzufügen von Gesamtwerten festgelegt. 
 

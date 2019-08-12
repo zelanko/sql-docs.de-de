@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a7bd22ee9317e60d1b755e8ef3755735e0d845
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098734"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893790"
 ---
-# <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
+# <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Gibt das Ergebnis eines Ausdrucks zurück, das in den angeforderten Datentyp übersetzt wurde. Schlägt die Umwandlung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fehl, wird NULL zurückgegeben. Verwenden Sie TRY_PARSE nur, um eine Zeichenfolge in ein Datum und eine Uhrzeit oder in eine Zahl zu konvertieren.  
@@ -101,7 +101,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|Niederländisch|1043|nl-NL|  
 |Norsk|Norwegisch|2068|nn-NO|  
 |Português|Portugiesisch|2070|pt-PT|  
-|Suomi|Finnisch|1035|fi|  
+|Suomi|Finnisch|1035|fi-FI|  
 |Svenska|Schwedisch|1053|sv-SE|  
 |čeština|Tschechisch|1029|Cs-CZ|  
 |magyar|Ungarisch|1038|Hu-HU|  
@@ -127,7 +127,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-simple-example-of-tryparse"></a>A. Einfaches Beispiel für TRY_PARSE  
+### <a name="a-simple-example-of-try_parse"></a>A. Einfaches Beispiel für TRY_PARSE  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -143,7 +143,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>B. Erkennen von NULL-Werten mit TRY_PARSE  
+### <a name="b-detecting-nulls-with-try_parse"></a>B. Erkennen von NULL-Werten mit TRY_PARSE  
   
 ```  
 SELECT  
@@ -164,7 +164,7 @@ True
 (1 row(s) affected)  
 ```  
   
-### <a name="c-using-iif-with-tryparse-and-implicit-culture-setting"></a>C. Verwenden von IIF mit TRY_PARSE und impliziter Kultureinstellung  
+### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. Verwenden von IIF mit TRY_PARSE und impliziter Kultureinstellung  
   
 ```  
 SET LANGUAGE English;  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502672"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889700"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Behandlung von Problemen bei der Installation von Reporting Services
 
@@ -74,7 +74,7 @@ ms.locfileid: "65502672"
   
  **Problemumgehung:** Verwenden Sie zum Konfigurieren eines Berichtsservers im SharePoint-Modus die SharePoint-Zentraladministration. Weitere Informationen finden Sie unter [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> Nach der Installation von SQL Server 2016 SSRS im SharePoint-Modus wird der SQL Server Reporting Services-Dienst nicht in der SharePoint-Zentraladministration angezeigt.  
  **Beschreibung:** Wenn Ihnen nach einer erfolgreichen Installation von SQL Server 2016 Reporting Services im SharePoint-Modus und dem SQL Server 2016 Reporting Services-Add-In für SharePoint 2013/2016 in den folgenden beiden Menüs nicht der Eintrag „SQL Server Reporting Services“ angezeigt wird, wurde der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst nicht registriert:  
@@ -103,7 +103,7 @@ ms.locfileid: "65502672"
   
 2.  Vergewissern Sie sich, dass der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienst auf der folgenden Seite den Status „**Gestartet**“ aufweist: SharePoint 2013/2016-Zentraladministration > „**Anwendungsverwaltung**“ > „**Dienste auf dem Server verwalten**“.  
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> PowerShell-Cmdlets für Reporting Services sind nicht verfügbar, und Befehle werden nicht erkannt.  
  **Beschreibung:** Wenn Sie versuchen, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-PowerShell-Cmdlet auszuführen, wird eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt:  
@@ -124,7 +124,7 @@ ms.locfileid: "65502672"
   
 -   [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Sie sehen eine Fehlermeldung, die angibt, dass die URL nicht konfiguriert ist  
  **Beschreibung:** Sie erhalten eine ähnliche Fehlermeldung wie diese:  
@@ -147,7 +147,7 @@ ms.locfileid: "65502672"
   
 -   Verwalten einer Dienstanwendung.  
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> Setup erzeugt einen Fehler, wenn SharePoint auf einem Computer zwar installiert, aber nicht konfiguriert ist.  
  **Beschreibung:** Wenn Sie auswählen, Reporting Services SharePoint-Modus auf einem Computer zu installieren, auf dem SharePoint installiert, aber nicht konfiguriert ist, sehen Sie eine Meldung ähnlich der folgenden, und Setup wird angehalten:  
@@ -158,7 +158,7 @@ ms.locfileid: "65502672"
   
  **Weitere Informationen:** Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in eine vorhandene SharePoint-Installation installieren, versucht Setup, den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint-Dienst zu installieren und zu starten. Wenn SharePoint nicht konfiguriert ist, schlägt die Dienstinstallation fehl, sodass Setup fehlschlägt.  
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> Die Seite der SharePoint-Zentraladministration ist leer.  
  **Beschreibung:** Sie konnten SharePoint 2013/2016 ohne Installationsfehler erfolgreich installieren. Wenn Sie jedoch zur Zentraladministration wechseln, sehen Sie nur eine leere Seite:  
@@ -171,7 +171,7 @@ ms.locfileid: "65502672"
   
 -   Das Dienstkonto, das Sie für SharePoint-Dienste verwenden, z.B. der SharePoint 2013/2016-Zentraladministrationsdienst, sollte im lokalen Betriebssystem Administratorprivilegien haben.  
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> Eine Fehlermeldung wird angezeigt, wenn Sie versuchen, einen neuen Bericht mit dem Berichts-Generator zu erstellen.  
  **Beschreibung:** Sie sehen eine Fehlermeldung ähnlich der folgenden, wenn Sie versuchen, in einer Dokumentbibliothek einen Bericht mit dem Berichts-Generator zu erstellen:  
@@ -180,7 +180,7 @@ ms.locfileid: "65502672"
   
  **Problemumgehung:** Überprüfen Sie, ob eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung vorhanden und ordnungsgemäß konfiguriert ist. Weitere Informationen finden Sie unter [Installieren des ersten Berichtsservers im SharePoint-Modus](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Eine Fehlermeldung wird angezeigt, die besagt, dass RS_SHP nicht mit PREPAREIMAGE unterstützt wird.  
  **Beschreibung:** Wenn Sie versuchen, PREPAREIMAGE für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auszuführen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
@@ -189,7 +189,7 @@ ms.locfileid: "65502672"
   
  **Problemumgehung:** Es gibt keine Problemumgehung. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt SYSPREP (PREPAREIMAGE) nicht. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt SYSPREP.  
   
- ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
+ ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Schwierigkeiten beim Beheben von Problemen bei Installationen im SharePoint-Modus](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   

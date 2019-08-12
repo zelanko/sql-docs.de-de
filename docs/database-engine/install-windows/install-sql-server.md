@@ -14,12 +14,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dff9635858d1fba1f5c8999bd6b49a3d845c412b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d790ef532a66bf7f8e34f69b9f982bef3416d0a1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055937"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893985"
 ---
 # <a name="install-sql-server"></a>Installieren von SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "68055937"
 |-----------|-----------------|  
 |[Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Dieser Artikel bietet eine Übersicht über die Konfiguration von Firewalls und sowie Anleitungen zum Konfigurieren der Windows-Firewall.|  
 |[Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|Dieser Artikel beschreibt, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.|  
-|[Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|Sie können die in diesem Artikel beschriebenen Schritte zur Konfiguration von Port- und Firewalleinstellungen ausführen, um den Zugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint zuzulassen.|  
+|[Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Sie können die in diesem Artikel beschriebenen Schritte zur Konfiguration von Port- und Firewalleinstellungen ausführen, um den Zugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint zuzulassen.|  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 [Editionen und unterstützte Funktionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

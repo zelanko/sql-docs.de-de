@@ -1,5 +1,5 @@
 ---
-title: Hyperion Essbase Query Designer User Interface (Berichts-Generator) | Microsoft-Dokumentation
+title: Benutzeroberfläche des Abfrage-Designers von Hyperion ESS Base (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a4960524f7723f91a96790b579b588be73425502
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d751b91bf21e30fb910f306c1b37155b209887a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108998"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891398"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des Abfrage-Designers von Hyperion Essbase (Berichts-Generator)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet einen grafischer Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expression) für eine [!INCLUDE[extEssbase](../includes/extessbase-md.md)] -Datenquelle. MDX-grafischen Abfrage-Designer verfügt über zwei Modi: Im Entwurfsmodus und Abfragemodus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus einem für die Datenquelle definierten Cube ziehen können, um eine MDX-Abfrage zu erstellen, die beim Verarbeiten des Berichts Daten abruft.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet einen grafischer Abfrage-Designer zum Erstellen von MDX-Abfragen (Multidimensional Expression) für eine [!INCLUDE[extEssbase](../includes/extessbase-md.md)] -Datenquelle. Der grafische MDX-Abfrage-Designer verfügt über zwei Modi: Entwurfs Modus und Abfrage Modus. Jeder Modus stellt einen Metadatenbereich bereit, in dem Sie Elemente aus einem für die Datenquelle definierten Cube ziehen können, um eine MDX-Abfrage zu erstellen, die beim Verarbeiten des Berichts Daten abruft.  
   
 > [!IMPORTANT]  
 >  Benutzer greifen auf Datenquellen zu, wenn sie Abfragen erstellen und ausführen. Sie sollten minimale Berechtigungen für die Datenquellen gewähren, z. B. nur Leseberechtigungen.  
@@ -52,18 +52,18 @@ ms.locfileid: "66108998"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>Symbolleiste für den grafischen Abfrage-Designer im Entwurfsmodus  
  Die Symbolleiste des Abfrage-Designers stellt Schaltflächen bereit, die Ihnen beim Entwurf von MDX-Abfragen mit der grafischen Oberfläche helfen. In der folgenden Tabelle werden die Schaltflächen gezeigt und ihre Funktionen beschrieben.  
   
-|Schaltfläche|Description|  
+|Schaltfläche|Beschreibung|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer. Nicht verfügbar für diesen Datenquellentyp.|  
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem.|  
 |![Datasetfelder aktualisieren](media/rsqdicon-refreshfields.gif "Refresh dataset fields")|Aktualisieren von Metadaten aus der Datenquelle.|  
-|![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an. Verwenden Sie dies, um Ausdrücke für ein berechnetes Element zu erstellen bzw. zu bearbeiten, sowie zum Festlegen der **Lösungsreihenfolge** -Eigenschaft.|  
-|![Umschalten zum Anzeigen von leeren Zellen](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Umschalten zwischen Einblenden und Ausblenden leerer Zellen im Datenbereich. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
-|![Automatisches Ausführen der Abfrage](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatisches Ausführen der Abfrage und Anzeigen des Ergebnisses, sobald eine Änderung vorgenommen wird, beispielsweise Löschen einer Spalte im Datenbereich. Die Ergebnisse werden im Datenbereich angezeigt.|  
-|![Löschen](../analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen des ausgewählten Elements aus der Abfrage. Verwenden Sie diese Schaltfläche, um ausgewählte Zeilen im Filterbereich zu löschen.|  
-|![Führen Sie die Abfrage aus](../analysis-services/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
-|![Abbrechen der Abfrage](../analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Abbrechen der Abfrage.|  
-|![In Entwurfsmodus wechseln](../analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|  
+|![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Zeigt das Dialogfeld **Generator für berechnete Elemente** an. Verwenden Sie dies, um Ausdrücke für ein berechnetes Element zu erstellen bzw. zu bearbeiten, sowie zum Festlegen der **Lösungsreihenfolge** -Eigenschaft.|  
+|![Umschalten zum Anzeigen von leeren Zellen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells")|Umschalten zwischen Einblenden und Ausblenden leerer Zellen im Datenbereich. (Dies entspricht dem Verwenden der NON EMPTY-Klausel in MDX.)|  
+|![Automatisches Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query")|Automatisches Ausführen der Abfrage und Anzeigen des Ergebnisses, sobald eine Änderung vorgenommen wird, beispielsweise Löschen einer Spalte im Datenbereich. Die Ergebnisse werden im Datenbereich angezeigt.|  
+|![Löschen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen des ausgewählten Elements aus der Abfrage. Verwenden Sie diese Schaltfläche, um ausgewählte Zeilen im Filterbereich zu löschen.|  
+|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Führt die Abfrage aus und zeigt die Ergebnisse im Datenbereich an.|  
+|![Abbrechen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancel the query")|Abbrechen der Abfrage.|  
+|![In Entwurfsmodus wechseln](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Umschalten zwischen Entwurfsmodus und Abfragemodus.|  
   
 ## <a name="graphical-query-designer-in-query-mode"></a>Grafischer Abfrage-Designer im Abfragemodus  
  Klicken Sie zum Umschalten des grafischen Abfrage-Designers in den Abfragemodus auf der Symbolleiste auf die Umschaltfläche **Entwurfsmodus** .  
@@ -86,11 +86,11 @@ ms.locfileid: "66108998"
   
 -   **Als Text bearbeiten**  
   
--   **Berechnetes Element hinzufügen** (![Add calculated member](../analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **Berechnetes Element hinzufügen** (![Add calculated member](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
--   **Leere Zellen anzeigen** (![Umschalten zum Anzeigen von leeren Zellen](../analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
+-   **Leere Zellen anzeigen** (![Umschalten zum Anzeigen von leeren Zellen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Toggle for show empty cells"))  
   
--   **AutoExecute** (![Automatisches Ausführen der Abfrage](../analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
+-   **AutoExecute** (![Automatisches Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "AutoExecute the query"))  
   
 ## <a name="see-also"></a>Siehe auch  
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../../2014/reporting-services/query-designers-report-builder.md)  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9ef5288ea0ffef804aeb9c11aff51b0db6ef4093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b7a527770e41870729c194bd9c7651b77cffd2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057871"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890849"
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
 
@@ -104,7 +104,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-general-page"></a>Editor für den Task 'WMI-Datenleser' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'WMI-Datenleser'** können Sie einen Namen und eine Beschreibung für den Task 'WMI-Datenleser' angeben.  
   
-  Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
+  Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Abfragen mit WQL) in der MSDN Library.  
   
 ### <a name="options"></a>enthalten  
  **Name**  
@@ -119,7 +119,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor für den Task 'WMI-Datenleser' (Seite WMI-Optionen)
   Auf der Seite **WMI-Optionen** des Dialogfelds **Editor für den Task „WMI-Datenleser“** können Sie die Quelle der WQL-Abfrage (Windows Management Instrumentation Query Language) und das Ziel des Abfrageergebnisses angeben.  
   
- Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
+ Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Abfragen mit WQL) in der MSDN Library.  
   
 ### <a name="static-options"></a>Statische Optionen  
  **WMIConnectionName**  

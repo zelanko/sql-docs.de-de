@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580869"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892995"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
   Datentypen stellen verschiedene Arten von Daten dar, die auf diese Weise effizient gespeichert und verarbeitet werden können. Zu den gängigen Datentypen gehören Text (auch String oder Zeichenfolge genannt), Zahlen mit oder ohne Dezimalstellen, Datum und Uhrzeit sowie Bilder. Werte in einem Bericht müssen dem RDL-Datentyp (Report Definition Language) entsprechen. Sie können einen Wert beliebig formatieren, wenn Sie ihn in einem Bericht anzeigen. So kann ein Feld, das eine Währung darstellt, als Gleitkommazahl in der Berichtsdefinition gespeichert, jedoch je nach gewählter Formatierungseigenschaft in verschiedenen Formaten angezeigt werden.  
@@ -138,7 +138,7 @@ ms.locfileid: "65580869"
   
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanktypen finden Sie unter [Datentypen (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md) und [Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datentypen fin derden Sie unter [Datentypen in der Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md).  
+ Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datentypen fin derden Sie unter [Datentypen in der Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

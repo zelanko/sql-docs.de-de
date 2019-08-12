@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 9f09757c009c9690c4348b722e498a8772033657
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c6294e6313178c17edce2b85aab947a52aaa3fbc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264622"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892573"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse und Berichterstellung mit Microsoft Business Intelligence-Tools (BI)
 
@@ -39,14 +39,14 @@ In der folgenden Tabelle werden die verschiedenen Arbeitsauslastungen für Daten
 |Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige von Dateien unter 10 MB)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (unterstützt die Anzeige von unter 250 GB)](http://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Mobile Power BI-App auf iOS-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Mobile Power BI-App auf Android-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Mobile Power BI-App für Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |Zusammenarbeit und gemeinsame Nutzung|||[SharePoint-Websites](https://docs.microsoft.com/sharepoint/getting-started)|[SharePoint-Teamwebsites](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI-Websites](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Unternehmens-BI**|Professionelle IT-Anwender||||||  
-|Erstellen mehrdimensionaler/tabellarischer Unternehmensmodelle||||||[Analysis Services](../analysis-services/analysis-services.md)|  
+|Erstellen mehrdimensionaler/tabellarischer Unternehmensmodelle||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
 |Erstellen von Ad-hoc-Datenvisualisierungen|||[Power View für SharePoint](https://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Erstellen von Dashboards|||[SharePoint-Dashboards](https://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint-Dienste](https://technet.microsoft.com/library/ee424392.aspx)||[Dashboards in Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Erstellen von Betriebsberichten||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Erstellen benutzerdefinierter und eingebetteter Berichte|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Erweiterte Analysen**|Datenanalysten||||||  
 |Ausführen von Self-Service-Vorhersageanalysen||||||[Data Mining-Add-Ins für Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
-|Verwenden von Data Mining-Algorithmen||||||[Data Mining in Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|Verwenden von Data Mining-Algorithmen||||||[Data Mining in Analysis Services](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  *Reporting Services bietet verschiedene Funktionen, die die Bereitstellung von Betriebsberichten und benutzerdefinierten Berichten wie modernen, paginierten Berichten unterstützen.

@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3504de2e73d3320768e5db67995285f442dfdf22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8f18c72deffc33878de95ebc07a80c07cd49d67
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013898"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892263"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Seite „Zusammenfassung“ (Always On-Verfügbarkeitsgruppen-Assistenten)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68013898"
  **Abbrechen**  
  Klicken Sie, um den Assistenten abzubrechen. Auf der Seite **Zusammenfassung** wird durch Abbrechen des Assistenten dieser beendet, ohne Aktionen auszuführen.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68013898"
   
 -   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [&#91;Top&#93;](#Top)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  

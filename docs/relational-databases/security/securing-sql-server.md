@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5cf3a03385ee30d1c037090d47ca91094bdd0aae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 473c12211ada579c3ceb441792788a1e975a85e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081679"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892496"
 ---
 # <a name="securing-sql-server"></a>Sichern von SQL Server
 
@@ -55,7 +55,7 @@ Das Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann a
 |---------------------------|---------|  
 |Konfigurieren einer Firewall für das Funktionieren mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Konfigurieren einer Firewall für das Funktionieren mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services-Dienst &#40;SSIS-Dienst&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|Konfigurieren einer Firewall für das Funktionieren mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Konfigurieren einer Firewall für das Funktionieren mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Öffnen bestimmter Ports für eine Firewall zum Zulassen des Zugriffs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Konfigurieren von Unterstützung für den erweiterten Schutz für die Authentifizierung mit Channelbindung und Dienstbindung|[Herstellen einer Verbindung mit der Datenbank-Engine unter Verwendung von Erweiterter Schutz](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |

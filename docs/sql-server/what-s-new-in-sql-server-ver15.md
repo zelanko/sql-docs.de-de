@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702896"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893993"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -46,7 +46,7 @@ CTP 3.2 (Community Technology Preview) ist das neueste öffentliche Release von
 
 | Neue Funktion oder Update | Details |
 |:---|:---| 
-| Governanceeinstellung für Power BI-Cacheaktualisierungen.  | Der Power BI-Dienst speichert Dashboardkacheldaten und Berichtsdaten für das anfängliche Laden des Live Connect-Berichts zwischen, was dazu führt, dass eine übermäßige Anzahl von Cacheanfragen an SSAS übermittelt wird und in extremen Fällen den Server überlastet. In diesem Release wird die **ClientCacheRefreshPolicy**-Eigenschaft eingeführt. Diese Eigenschaft ermöglicht Ihnen, dieses Verhalten auf Serverebene zu überschreiben. Weitere Informationen finden Sie unter [Allgemeine Eigenschaften](../analysis-services/server-properties/general-properties.md). |
+| Governanceeinstellung für Power BI-Cacheaktualisierungen.  | Der Power BI-Dienst speichert Dashboardkacheldaten und Berichtsdaten für das anfängliche Laden des Live Connect-Berichts zwischen, was dazu führt, dass eine übermäßige Anzahl von Cacheanfragen an SSAS übermittelt wird und in extremen Fällen den Server überlastet. In diesem Release wird die **ClientCacheRefreshPolicy**-Eigenschaft eingeführt. Diese Eigenschaft ermöglicht Ihnen, dieses Verhalten auf Serverebene zu überschreiben. Weitere Informationen finden Sie unter [Allgemeine Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Online anfügen  | Diese Funktion bietet die Möglichkeit, ein tabellarisches Modell als Onlinevorgang anzufügen. Onlineanfügen kann für die Synchronisierung schreibgeschützter Replikate in horizontal skalierten Umgebungen für lokale Abfragen verwendet werden. Weitere Informationen finden Sie unter [Online anfügen](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
 | &nbsp; | &nbsp; |
 

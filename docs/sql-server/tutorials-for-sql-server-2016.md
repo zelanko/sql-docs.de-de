@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091821"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893084"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutorials für SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091821"
   
 |Technologie|und Beschreibung|  
 |--------------|---------------|  
-|[Analysis Services-Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
+|[Analysis Services-Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Hier erfahren Sie, wie tabellarische oder mehrdimensionale [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Modelle entwickelt und bereitgestellt werden. Darüber hinaus wird erläutert, wie Sie die in den Modellen enthaltenen Daten mithilfe von Tools wie PowerPivot analysieren.|  
 |[Lernprogramme zur Datenbank-Engine](../relational-databases/database-engine-tutorials.md)|Hier erfahren Sie, wie Sie eine Verbindung mit einer Datenbank-Engine-Instanz herstellen und dann Transact-SQL-Anweisungen erstellen und ausführen.|  
 |[Enterprise Information Management-Lernprogramme](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Hier erfahren Sie, wie Informationen in einem Unternehmen mit EIM-Technologien von Microsoft verwaltet werden.|  
 |[Integration Services-Lernprogramme](../integration-services/integration-services-tutorials.md)|Hier erfahren Sie, wie [!INCLUDE[ssIS](../includes/ssis-md.md)] -Pakete erstellt und bereitgestellt werden.|  

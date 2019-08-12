@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984754"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893037"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Was ist neu in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -62,7 +62,7 @@ SQL Server 2016 Analysis Services bietet eine verbesserte Leistung und Funktiona
 - Der neue Namespace **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** verwaltet Instanzen und Modelle im tabellarischen Modus. 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) wurde überarbeitet und enthält jetzt eine zweite Assembly: **Microsoft.AnalysisServices.Core.dll**.
 
-Weitere Informationen finden Sie unter [Analysis Services-Engine (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+Weitere Informationen finden Sie unter [Analysis Services-Engine (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - Unterstützung für **Always On-Verfügbarkeitsgruppen**

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: c326237456d7c4a427f2077dce8d148be3501902
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdff711249e7fd356ad74f37faf5bb98482672d2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106327"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893096"
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
 
@@ -67,7 +67,7 @@ ms.locfileid: "68106327"
  Geben Sie eine Bedingung oder einen benutzerdefinierten Ausdruck an, der auf die Spalte angewendet wird. Spalten können aus den das Miningmodell enthaltenden Tabellen und den Eingabespalten auf die Zelle gezogen werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Data Mining-Abfragetools](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Data Mining-Abfragetools](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -11,12 +11,12 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290366"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892473"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
@@ -45,7 +45,7 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 17. Juli 2019  
+_Veröffentlicht_ : &nbsp; 17. Juli 2019  
 _Buildnummer:_ &nbsp; 14.0.16194.0  
 _SSDT für Visual Studio 2017._
 
@@ -76,7 +76,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 27. April 2019  
+_Veröffentlicht_ : &nbsp; 27. April 2019  
 _Buildnummer:_ &nbsp; 14.0.16191.0  
 _SSDT für Visual Studio 2017._
 
@@ -108,7 +108,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 28. Januar 2019  
+_Veröffentlicht_ : &nbsp; 28. Januar 2019  
 _Buildnummer:_ &nbsp; 14.0.16186.0  
 _SSDT für Visual Studio 2017._
 
@@ -142,7 +142,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1582nbsp-ssdt-for-vs-2017"></a>15.8.2,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 5. November 2018  
+_Veröffentlicht_ : &nbsp; 5. November 2018  
 _Buildnummer:_ &nbsp; 14.0.16182.0  
 _SSDT für Visual Studio 2017._
 
@@ -158,7 +158,7 @@ Ein Problem wurde behoben, bei dem die Bereitstellung eines SSIS-Projekts in Azu
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 27. September 2018  
+_Veröffentlicht_ : &nbsp; 27. September 2018  
 _Buildnummer:_ &nbsp; 14.0.16179.0  
 _SSDT für Visual Studio 2017._
 
@@ -178,7 +178,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 5. September 2018  
+_Veröffentlicht_ : &nbsp; 5. September 2018  
 _Buildnummer:_ &nbsp; 14.0.16174.0  
 _SSDT für Visual Studio 2017._
 
@@ -201,7 +201,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1571nbsp-ssdt-for-vs-2017"></a>15.7.1,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 2. Juli 2018  
+_Veröffentlicht_ : &nbsp; 2. Juli 2018  
 _Buildnummer:_ &nbsp; 14.0.16167.0  
 _SSDT für Visual Studio 2017._
 
@@ -224,7 +224,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1570nbsp-ssdt-for-vs-2017"></a>15.7.0,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 4. Juni 2018  
+_Veröffentlicht_ : &nbsp; 4. Juni 2018  
 _Buildnummer:_ &nbsp; 14.0.16165.0  
 _SSDT für Visual Studio 2017._
 
@@ -249,7 +249,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1560nbsp-ssdt-for-vs-2017"></a>15.6.0,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_: &nbsp; 10. April 2018  
+_Veröffentlicht_ : &nbsp; 10. April 2018  
 _Buildnummer:_ &nbsp; 14.0.16162.0  
 _SSDT für Visual Studio 2017._
 
@@ -722,7 +722,7 @@ _Unterstützung bis SQL Server 2017._
 
 ## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_: &nbsp; 20. Oktober 2016  
+_Veröffentlicht_ : &nbsp; 20. Oktober 2016  
 _Buildnummer:_ &nbsp; 14.0.61021.0  
 _SSDT für Visual Studio 2015._  
 _Unterstützung bis SQL Server 2016._
@@ -815,7 +815,7 @@ Weitere Informationen finden Sie im [Blogbeitrag von Analysis Services](https://
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4, SSDT für VS 2015
 
-_Veröffentlicht_: &nbsp; 20. September 2016  
+_Veröffentlicht_ : &nbsp; 20. September 2016  
 _Buildnummer:_ &nbsp; 14.0.60918  
 _Für SQL Server 2016._
 
@@ -854,7 +854,7 @@ Der SSDT-Tabellen-Designer umfasst jetzt eine interne SSAS-Instanz, die der SSDT
 
 ## <a name="163nbsp-ssdt-for-vs-2015"></a>16.3,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_: &nbsp; 15. August 2016  
+_Veröffentlicht_ : &nbsp; 15. August 2016  
 _Buildnummer:_ &nbsp; 14.0.60812.0  
 _Für SQL Server 2016._
 
@@ -892,7 +892,7 @@ _Für SQL Server 2016._
 
 ## <a name="july-2016nbsp-ssdt-for-vs-2015"></a>Juli 2016,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_: &nbsp; 30. Juni 2016  
+_Veröffentlicht_ : &nbsp; 30. Juni 2016  
 _Buildnummer:_ &nbsp; 14.0.60629.0  
 _Für SQL Server 2016._
 
@@ -936,7 +936,7 @@ _Für SQL Server 2016._
 
 ## <a name="june-2016nbsp-ssdt-for-vs-2015"></a>Juni 2016,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_: &nbsp; 1. Juni 2016  
+_Veröffentlicht_ : &nbsp; 1. Juni 2016  
 _Buildnummer:_ &nbsp; 14.0.60525.0  
 _Für SQL Server 2016._
 
@@ -947,6 +947,6 @@ SSDT General Availability (GA) ist nun erhältlich. Das Update von SSDT GA vom J
 [Herunterladen von SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Vorgängerversionen von SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [Neuigkeiten in der Datenbank-Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Neuigkeiten in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[Neuigkeiten in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
 [Neuigkeiten in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

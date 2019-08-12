@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd0f8310fa0b11b8816f15194da19c856230991b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cefdef6a787b522f7d185a67f329054ed868eb5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301531"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892812"
 ---
 # <a name="technical-reference-ssrs"></a>Technische Referenz (SSRS)
 
   Hier finden Sie die Tools und die PowerShell-Referenzdokumentation zum Verwenden oder Verwalten von SQL Server Reporting Services.  
   
- ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Fehler und Ereignisse**  
+ ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Fehler und Ereignisse**  
  [Cause and Resolution of Reporting Services Errors (Ursachen und Lösungen für Reporting Services-Fehler)](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Featurereferenz**  
+ ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Kleines Dateiordnersymbol") **Featurereferenz**  
  [Report Designer F1 Help (Berichts-Designer (F1-Hilfe))](../reporting-services/tools/report-designer-f1-help.md)  
   
  [Berichts-Manager (F1-Hilfe)](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
@@ -41,14 +41,14 @@ ms.locfileid: "63301531"
   
  [Geräteinformationseinstellungen für Renderingerweiterungen &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Eingabeaufforderungs-Hilfsprogramme für Berichtsserver**  
+ ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **Eingabeaufforderungs-Hilfsprogramme für Berichtsserver**  
  [Hilfsprogramm RS.exe (SSRS)](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig-Hilfsprogramm (SSRS)](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [rskeymgmt-Hilfsprogramm &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Kleines Dateiordnersymbol](../analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider-Klassenbibliothek**  
+ ![Kleines Dateiordnersymbol](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services WMI Provider-Klassenbibliothek**  
  [Reporting Services WMI Provider-Bibliotheksreferenz (SSRS)](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126203"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892293"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ Um über eine Firewall auf eine Instanz von [!INCLUDE[ssNoVersion](../../include
  Benutzer, die mit der Verwaltung der **Windows-Firewall** vertraut sind und wissen, welche Firewalleinstellungen sie konfigurieren möchten, können direkt zu den Artikeln für fortgeschrittene Benutzer wechseln:  
   
 -   [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> Grundlegende Firewallinformationen  
@@ -159,7 +159,7 @@ Standardmäßig werden von SQL Server Analysis Services und verknüpften Dienste
   
  Wenn Benutzer über IIS und das Internet auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zugreifen, müssen Sie den Port öffnen, den IIS überwacht, und diesen Port in der Clientverbindungszeichenfolge angeben. In diesem Fall müssen keine Ports für den direkten Zugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]geöffnet sein. Der Standardport 2389 und Port 2382 sollten gemeinsam mit allen anderen Ports eingeschränkt werden, die nicht benötigt werden.  
   
- Eine Schritt-für-Schritt-Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Eine Schritt-für-Schritt-Anleitung zum Konfigurieren der Windows-Firewall für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access).  
   
 ###  <a name="BKMK_ssrs"></a> Von Reporting Services verwendete Ports  
 

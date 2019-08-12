@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: c2ce0a9f30232f1d5c5c25fc92068be1e40bd2f5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264386"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891858"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle
 
@@ -33,7 +33,7 @@ ms.locfileid: "68264386"
 Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver auf externe Daten für einen Bericht zugreift, konfigurieren. Gespeicherte Anmeldeinformationen werden verwendet, wenn der unbeaufsichtigt ausgeführt, beispielsweise bei einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnement, das einen Bericht als E-Mail veröffentlicht. Der Berichtsserver ruft die Anmeldeinformationen ab und verwendet sie, wenn die Berichtsverarbeitung geplant oder ausgelöst wird. In diesem Thema werden die einzelnen Schritte für die Konfiguration gespeicherter Anmeldeinformationen für Berichtsserver im einheitlichen Modus und im SharePoint-Modus dargestellt.  
   
 ##  <a name="bkmk_top"></a> Sicherheitsrichtlinienanforderungen für gespeicherte Anmeldeinformationen  
- ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Für das Konto, das Sie für gespeicherte Anmeldeinformationen verwenden, muss eine der folgenden Sicherheitsrichtlinien auf dem Berichtsserver konfiguriert sein. Es wird empfohlen, dass Sie die Richtlinie mit den mindestens erforderlichen Berechtigungen für Ihre Umgebung auswählen.  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") Für das Konto, das Sie für gespeicherte Anmeldeinformationen verwenden, muss eine der folgenden Sicherheitsrichtlinien auf dem Berichtsserver konfiguriert sein. Es wird empfohlen, dass Sie die Richtlinie mit den mindestens erforderlichen Berechtigungen für Ihre Umgebung auswählen.  
   
 1.  **Lokal anmelden zulassen**. Weitere Informationen finden Sie unter [Lokal anmelden zulassen](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx).  
   
@@ -67,7 +67,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 8.  Klicken Sie auf **Anwenden**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine berichtsspezifische Datenquelle (SharePoint-Modus)  
   
@@ -95,7 +95,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 8.  Klicken Sie auf **OK**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine freigegebene Datenquelle (einheitlicher Modus)  
   
@@ -121,7 +121,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 6.  Klicken Sie auf **Anwenden**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> Konfigurieren von gespeicherten Anmeldeinformationen für eine freigegebene Datenquelle (SharePoint-Modus)  
   
@@ -149,7 +149,7 @@ Sie können gespeicherte Anmeldeinformationen, mit denen ein [!INCLUDE[ssRSnover
   
 7.  Klicken Sie auf **OK**.  
   
-     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](../../analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
+     ![Pfeilsymbol mit Rückverweis auf den Seitenanfang](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Arrow icon used with Back to Top link") [Anforderungen an Sicherheitsrichtlinien für gespeicherte Anmeldeinformationen](#bkmk_top)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

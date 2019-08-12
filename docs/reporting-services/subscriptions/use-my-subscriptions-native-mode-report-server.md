@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2fc2566e643c247c5fb1ea79c5ef5f03ac032d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4066d5ea8e44fca9b63a24d25e4f18a4f0ccb78
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65578028"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892326"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Verwenden von "Meine Abonnements" (Berichtsserver im einheitlichen Modus)
 Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal enthält die Seite **Meine Abonnements** , auf der alle Ihre Abonnements zentral aufgelistet werden. Mithilfe von *Meine Abonnements* können Sie vorhandene Abonnements anzeigen, ändern und löschen. Abonnements können damit jedoch nicht erstellt werden.  Meine Abonnements zeigt nur die von Ihnen erstellten Abonnements. Abonnements anderer Benutzer werden nicht angezeigt, selbst wenn Sie als Abonnent zu diesen Abonnements hinzugefügt werden, und es werden auch keine datengesteuerten Abonnements angezeigt.
@@ -35,7 +35,7 @@ Das Suchfeld filtert die Liste der Abonnements dynamisch. Sie können nicht basi
 Weitere Informationen finden Sie unter [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
 
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>Verwenden von Windows PowerShell zum Auflisten von MySubscriptions  
- ![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
+ ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")  
   
  Mit dem folgenden PowerShell-Skript wird die Liste der Abonnements und Abonnementeigenschaften für den aktuellen Benutzer zurückgegeben. Weitere Informationen finden Sie unter [ReportingService2010.ListMySubscriptions-Methode](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx).  
   

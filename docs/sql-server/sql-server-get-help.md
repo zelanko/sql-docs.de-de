@@ -1,7 +1,7 @@
 ---
 title: SQL Server-Hilfe und -Feedback | Microsoft-Dokumentation
 description: Eine Ressource, um Möglichkeiten zu finden, Hilfe bei Ihrem Problem zu erhalten oder Feedback entweder für das SQL Server-Produkt oder die technische Dokumentation von SQL Server zu übermitteln.
-ms.date: 07/11/2010
+ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e55c7f224313edda1039b994fd64166551d2b38
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
+ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68693169"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926949"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server-Hilfe und -Feedback
 
@@ -67,7 +67,7 @@ Sie können Verbesserungsvorschläge einreichen und Fehler für Folgendes überm
 
 Die beste Möglichkeit, das Team für SQL Server-Inhalte zu kontaktieren, ist über Git-Probleme. Sie finden am unteren Rand der meisten unserer Seiten eine Option, um ein Git-Problem zu übermitteln: 
 
-![Inhaltsfeedback als „Git Issue“](media/sql-server-get-help/git-issues.png)
+![Inhaltsfeedback per „Git-Problem“](media/sql-server-get-help/git-issues.png)
 
 Wenn Sie etwas anderes mitteilen möchten – eine Idee, einen Vorschlag, Feedback irgendetwas anderes –, können Sie ein allgemeines Git Issue öffnen, indem Sie zu [https://aka.ms/SQLDocsFeedback](https://aka.ms/SQLDocsFeedback) navigieren und **New Issue** auswählen. 
 

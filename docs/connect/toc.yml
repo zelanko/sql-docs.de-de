@@ -2373,12 +2373,16 @@
       items:
         - name: Herunterladen des Microsoft JDBC-Treibers für SQL Server
           href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: Analysieren der Ergebnisse
+          href: ../connect/jdbc/parsing-the-results.md
         - name: Versionshinweise für den JDBC-Treiber
           href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
         - name: Systemanforderungen für den JDBC-Treiber
           href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
         - name: Verwenden des JDBC-Treibers
           href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: Verwenden von useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
         - name: Grundlegendes zur Java EE-Unterstützung
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: Bereitstellen des JDBC-Treibers
@@ -2538,6 +2542,8 @@
               href: ../connect/jdbc/understanding-data-type-differences.md
             - name: Verwenden von mehreren Resultsets
               href: ../connect/jdbc/using-multiple-result-sets.md
+            - name: Verwenden der NTLM-Authentifizierung
+              href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
             - name: Verwenden der Haltbarkeit
               href: ../connect/jdbc/using-holdability.md
             - name: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung

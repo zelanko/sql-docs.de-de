@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343882"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893284"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Von den SQL Server-Editionen unterstützte SQL Server Reporting Services-Features
 
@@ -24,9 +24,9 @@ In diesem Thema sind die Microsoft SQL Server Reporting Services-Features (SSRS)
 
  ## <a name="try-sql-server-2017"></a>Testen Sie SQL Server 2017
 
-> [![Download von SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download von SQL Server 2017 aus dem Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Download von SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Download von SQL Server 2017 aus dem Evaluation Center](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Virtueller Azure-Computer (klein)](../analysis-services/media/azure-virtual-machine-small.png) **[Starten eines virtuellen Computers, auf dem SQL Server 2017 bereits installiert ist](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Virtueller Azure-Computer (klein)](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Starten eines virtuellen Computers, auf dem SQL Server 2017 bereits installiert ist](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Informationen über Funktionen, die von den Evaluation- und Developer-Editionen unterstützt werden, finden Sie in der folgenden Tabelle in der Spalte für die SQL Server-Edition Enterprise.
 

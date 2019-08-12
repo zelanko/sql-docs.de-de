@@ -10,19 +10,19 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107290"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892033"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte feldeigenschaftswerte in den Bericht einschließen, indem Sie das Schreiben von Ausdrücken, die sie angeben, durch den Namen in der integrierten `Fields` Auflistung.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte Feld Eigenschaftswerte in den Bericht einschließen, indem Sie Ausdrücke schreiben, die diese mithilfe der integrierten- `Fields` Auflistung anhand des Namens angeben.  
   
  Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden für mehrere Datenquellen gemeinsam verwendet und bestimmten Feldeigenschaftsnamen zugeordnet. Sie sind über die integrierte `Fields`-Auflistung nach Namen verfügbar. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte `Fields`-Auflistung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
   
- Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen, finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md).  
+ Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen, finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten (MDX)](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Arbeiten mit Feldeigenschaften in einem Bericht  
  Zu erweiterten Feldeigenschaften zählen vordefinierte Eigenschaften und datenanbieterspezifische Eigenschaften. Feldeigenschaften werden nicht in der Feldliste im **Berichtsdatenbereich** angezeigt, obwohl sie in der für ein Dataset erstellten Abfrage vorhanden sind. Deshalb können Sie keine Feldeigenschaften in Ihre Berichtsentwurfsoberfläche ziehen. Stattdessen ziehen Sie das Feld in den Bericht und ändern anschließend die `Value`-Eigenschaft des Felds in die gewünschte Eigenschaft. Wenn z.B. die Zelldaten aus einem Cube bereits formatiert sind, können Sie die FormattedValue-Feldeigenschaft mithilfe des folgenden Ausdrucks verwenden: `=Fields!FieldName.FormattedValue`.  
@@ -46,7 +46,7 @@ ms.locfileid: "66107290"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Gibt den Datenwert des Felds an.|  
 |`IsMissing`|`Boolean`|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
-|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Z. B. die `UniqueName` Wert für einen Mitarbeiter kann *[Employee]. [ Employee Department]. [Department]. & [Sales]. & [North American Sales Manager]. & [272]* .|  
+|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Beispielsweise könnte der `UniqueName` Wert für einen Mitarbeiter *[Employee] lauten. [ Mitarbeiter Abteilung]. [Department]. & [Sales]. & [North American Sales Manager]. & [272]* .|  
 |`BackgroundColor`|`String`|Gibt die Hintergrundfarbe zurück, die in der Datenbank für das Feld definiert ist.|  
 |`Color`|`String`|Gibt die Vordergrundfarbe zurück, die in der Datenbank für das Element definiert ist.|  
 |`FontFamily`|`String`|Gibt den Namen der Schriftart an, die in der Datenbank für das Element definiert ist.|  
@@ -54,7 +54,7 @@ ms.locfileid: "66107290"
 |`FontWeight`|`String`|Gibt die Schriftbreite an, die in der Datenbank für das Element definiert ist.|  
 |`FontStyle`|`String`|Gibt den Schriftschnitt an, der in der Datenbank für das Element definiert ist.|  
 |`TextDecoration`|`String`|Gibt spezielle Textformatierungen zurück, die in der Datenbank für das Element definiert sind.|  
-|`FormattedValue`|`String`|Gibt einen formatierten Wert für ein Measure oder eine Kennzahl zurück. Z. B. die `FormattedValue` -Eigenschaft für **Sales Amount Quota** gibt ein Währungsformat wie 1.124.400,00 €zurück.|  
+|`FormattedValue`|`String`|Gibt einen formatierten Wert für ein Measure oder eine Kennzahl zurück. Die `FormattedValue` -Eigenschaft für **Sales Amount Quota** gibt z. b. ein Währungs Format wie $1.124.400,00 zurück.|  
 |`Key`|`Object`|Gibt den Schlüssel für eine Ebene zurück.|  
 |`LevelNumber`|`Integer`|Gibt bei Über-/Unterordnungshierarchien die Nummer der Ebene oder Dimension zurück.|  
 |`ParentUniqueName`|`String`|Gibt bei Über-/Unterordnungshierarchien einen vollqualifizierten Namen der übergeordneten Ebene zurück.|  

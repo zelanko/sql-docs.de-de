@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063972"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893182"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Erstellen eines neuen SQL Server-Failoverclusters (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063972"
   
 8.  Lesen Sie auf der Seite mit den Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../../includes/msconame-md.md)]senden. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Klicken Sie auf **Abbrechen**, wenn Sie den Setupvorgang beenden möchten.  
   
-9. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68063972"
   
 9. Lesen Sie auf der Seite mit den Lizenzbedingungen den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../../includes/msconame-md.md)]senden. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen. Klicken Sie auf **Abbrechen**, wenn Sie den Setupvorgang beenden möchten.  
   
-10. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. Wählen Sie auf der Seite Funktionsauswahl die Komponenten für die Installation aus. Nach Auswahl des Funktionsnamens wird im rechten Bereich eine Beschreibung für die einzelnen Komponentengruppen angezeigt. Sie können eine beliebige Kombination von Kontrollkästchen aktivieren, das Failoverclustering wird jedoch nur von [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im tabellarischen Modus und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] im mehrdimensionalen Modus unterstützt. Andere ausgewählte Komponenten werden als eigenständige Funktion ohne Failoverfunktionen für den aktuellen Knoten ausgeführt, für den das Setup erfolgt. Weitere Informationen zu [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Bereitstellungsmodi finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Die erforderlichen Komponenten für die ausgewählten Funktionen werden im rechten Bereich angezeigt. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup installiert die erforderlichen Komponenten, die nicht bereits während des Installationsschritts installiert werden, der im weiteren Verlauf dieser Prozedur beschrieben wird.  
   

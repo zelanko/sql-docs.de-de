@@ -16,12 +16,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d5d9c379aaa2b8b0b92e064ed6dc21a4eb968b95
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412592"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893453"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Leistungsindikatoren für MSRS 2011-Webdienstleistungsobjekte
   In diesem Thema werden Leistungsindikatoren für die Leistungsobjekte **MSRS 2011 Web Service** und **MSRS 2011 Windows Service** beschrieben. Diese Objekte sind Teil einer [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Bereitstellung im einheitlichen Modus.  
@@ -111,7 +111,7 @@ ms.locfileid: "67412592"
 |**Updates von Momentaufnahmen gesamt**|Die Gesamtanzahl der Updates für Berichtsausführungs-Momentaufnahmen.|  
   
 ##  <a name="bkmk_powershell"></a> Zurückgeben von Listen mithilfe von PowerShell-Cmdlets  
- ![PowerShell-Inhalt](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen CounterSetName mit „msr“ beginnt:  
+ ![PowerShell-Inhalt](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content")Das folgende Windows PowerShell-Skript gibt die Indikatorensätze zurück, bei denen CounterSetName mit „msr“ beginnt:  
   
 ```  
 get-counter -listset msr*  

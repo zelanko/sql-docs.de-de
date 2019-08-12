@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b2cb0ecbaf608a1dd7b11d610321fbc7e943334
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 962f07f5e5f6ce00bc21c362ce905bec2773c28c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582009"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893804"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix (Berichts-Generator und SSRS)
   Sie können interaktive Sortierschaltflächen hinzufügen, um es Benutzern zu ermöglichen, die Sortierreihenfolge von Zeilen und Spalten in Tabellen und Matrizen zu ändern. Diese Funktion wird nur in Renderingformaten unterstützt, die Benutzeraktionen unterstützen, z. B. HTML.  
@@ -60,7 +60,7 @@ ms.locfileid: "65582009"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktiven Sortierschaltflächen klicken.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> Sortieren einer übergeordneten Zeilengruppe der obersten Ebene für eine Tabelle oder eine Matrix  
  Fügen Sie einem Spaltenheader eine interaktive Sortierschaltfläche hinzu, um es Benutzern zu ermöglichen, auf den Spaltenheader zu klicken und die übergeordneten Gruppenzeilen in einer Tabelle oder Matrix nach den in der betreffenden Spalte angezeigten Werten zu sortieren. Die Reihenfolge der untergeordneten Gruppen bleibt unverändert.  
@@ -84,7 +84,7 @@ ms.locfileid: "65582009"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktiven Sortierschaltflächen klicken.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> Sortieren von untergeordneten Gruppen oder Detailzeilen für eine Gruppe  
  Fügen Sie einer Gruppenkopfzeile eine interaktive Sortierschaltfläche hinzu, um es Benutzern zu ermöglichen, die Werte einer untergeordneten Gruppe von einer übergeordneten Gruppe oder aber die Detailzeilen für die innerste untergeordnete Gruppe zu sortieren.  
@@ -107,7 +107,7 @@ ms.locfileid: "65582009"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktiven Sortierschaltflächen klicken.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> Sortieren von Zeilen anhand eines komplexen Gruppierungsausdrucks  
  Fügen Sie einem Spaltenheader eine interaktive Sortierschaltfläche hinzu, um es Benutzern zu ermöglichen, auf den Spaltenheader zu klicken und die kombinierten übergeordneten und untergeordneten Gruppen zu sortieren. Um diesen Effekt zu erzielen, müssen Sie den Gruppierungsausdruck in eine Zusammensetzung beider Gruppen ändern. Angenommen, in einer Matrix werden Gesamtwerte für die Lagerbestände eines Geschäfts angezeigt, wobei die Artikel nach Farbe und nach Größe gruppiert sind. Wenn Sie die Zeilen nach Kombination von Farbe und Größe sortieren möchten und keine getrennten Gruppen für Farbe und Größe verwendet werden sollen, können Sie eine Gruppe definieren, die auf der Kombination von Farbe und Größe beruht. Weitere Informationen zum Definieren von Gruppenausdrücken finden Sie unter [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -164,7 +164,7 @@ ms.locfileid: "65582009"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktive Sortierschaltfläche klicken. Die Matrix wird nach den kombinierten Werten des Gruppierungsausdrucks sortiert, jedoch wird jeder einzelne Wert in einer eigenen Spalte angezeigt.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> Synchronisieren der Sortierreihenfolge für mehrere Datenbereiche  
  Fügen Sie eine interaktive Sortierschaltfläche hinzu, die es Benutzern ermöglicht, auf eine Sortierschaltfläche zu klicken und mehrere Datenbereiche zu sortieren. Wenn Sie eine interaktive Sortierschaltfläche erstellen, können Sie angeben, ob die Sortierung für mehrere Datenbereiche anhand desselben Berichtsdatasets synchronisiert werden soll. Zum Beispiel kann ein Bericht eine Matrix und ein Diagramm enthalten, in denen die Daten grafisch dargestellt sind. Wenn ein Benutzer die Sortierreihenfolge der Zeilen in der Matrix ändert, wird das Diagramm automatisch mit derselben Sortierreihenfolge angezeigt.  
@@ -213,7 +213,7 @@ ms.locfileid: "65582009"
   
  Sie können den Sortierungsvorgang überprüfen, indem Sie mit **Ausführen** eine Vorschau des Berichts anzeigen und dann auf die interaktive Sortierschaltfläche klicken. Die Matrix wird nach den kombinierten Werten des Gruppierungsausdrucks sortiert, jedoch wird jeder einzelne Wert in einer eigenen Spalte angezeigt.  
   
- ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](../../analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
+ ![Pfeilsymbol mit dem Link „Zurück zum Anfang“](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Pfeilsymbol mit dem Link „Zurück zum Anfang“") [Zurück zum Anfang](#BackToTop)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

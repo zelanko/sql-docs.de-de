@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a162e816186c0bae2ff9da2d1aef62f169491b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ebcbe8d0263a31f772f711dd40853267dcd238a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112616"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893141"
 ---
 # <a name="data-mining-query-transformation"></a>Transformation für Data Mining-Abfragen
 
@@ -31,7 +31,7 @@ ms.locfileid: "68112616"
 
   Die Transformation für Data Mining-Abfragen führt Vorhersageabfragen für Data Mining-Modelle aus. Diese Transformation enthält einen Abfrage-Generator zum Erstellen von DMX-Abfragen (Data Mining Extensions). Mit dem Abfrage-Generator können Sie mithilfe der DMX-Sprache benutzerdefinierte Anweisungen erstellen, um Transformationseingabedaten mit einem vorhandenen Miningmodell zu vergleichen. Weitere Informationen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](../../../dmx/data-mining-extensions-dmx-reference.md).  
   
- Eine Transformation kann mehrere Vorhersageabfragen ausführen, falls die Modelle mit der gleichen Data Mining-Struktur erstellt wurden. Weitere Informationen finden Sie unter [Data Mining-Abfragetools](../../../analysis-services/data-mining/data-mining-query-tools.md).  
+ Eine Transformation kann mehrere Vorhersageabfragen ausführen, falls die Modelle mit der gleichen Data Mining-Struktur erstellt wurden. Weitere Informationen finden Sie unter [Data Mining-Abfragetools](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
   
 ## <a name="configuration-of-the-data-mining-query-transformation"></a>Konfiguration der Transformation für Data Mining-Abfragen  
  Die Transformation für Data Mining-Abfragen stellt mithilfe eines Verbindungs-Managers für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eine Verbindung mit dem [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Projekt oder der Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] her, die die Miningstruktur und die Miningmodelle enthält. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../../../integration-services/connection-manager/analysis-services-connection-manager.md).  

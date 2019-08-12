@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581345"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889834"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services in SQL Server-Datentools (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65581345"
   
 -   **Berichtsserverprojekt-Assistent.** Wenn Sie ein Berichtsserver-Assistenten-Projekt auswählen, wird automatisch ein Berichtsserverprojekt erstellt und der Berichts-Assistent geöffnet. Mithilfe des Assistenten können Sie einen Bericht erstellen. Befolgen Sie hierzu die Anweisungen auf den einzelnen Seiten, um eine Verbindungszeichenfolge für eine Datenquelle zu erstellen, Datenquellen-Anmeldeinformationen festzulegen, eine Abfrage zu entwerfen, einen Tabellen- oder Matrixdatenbereich hinzuzufügen, Berichtsdaten und -gruppen anzugeben, Schriftart und Farbe auszuwählen, den Bericht auf einem Berichtsserver zu veröffentlichen und den Bericht lokal in der Vorschau anzuzeigen. Nachdem Sie mithilfe des Assistenten einen Bericht erstellt haben, können Sie die Berichtsdaten und den Berichts-Designer ändern, und zwar mithilfe des Berichts-Designers im Berichtsserverprojekt.  
   
- ![Neue Projektvorlagen in SSDT](../../analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
+ ![Neue Projektvorlagen in SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "New Project templates in SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenster und Bereiche des Berichts-Designers  

@@ -1,5 +1,5 @@
 ---
-title: PredictHistogram (DMX) | Microsoft-Dokumentation
+title: Prädistogram (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61a90dc7fa034fc8983246aa4eb7119832a2d47d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008012"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893853"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Tabelle  
   
 ## <a name="remarks"></a>Hinweise  
- Ein Histogramm generiert Statistikspalten. Die Spaltenstruktur des zurückgegebenen Histogramms hängt der Typ des Spaltenverweises, die verwendet wird, mit der **PredictHistogram** Funktion.  
+ Ein Histogramm generiert Statistikspalten. Die Spalten Struktur des zurückgegebenen Histogramms hängt vom Typ des Spalten Verweises ab, der mit der Funktion "vorherd..." verwendet wird.  
   
 ## <a name="scalar-columns"></a>Skalare Spalten  
- Für eine \<skalarspaltenverweis >, das Histogramm, das **PredictHistogram** Funktionsrückgaben besteht aus den folgenden Spalten:  
+ Bei einem \<Verweis > für eine skalare Spalte besteht das Histogramm, das die Funktion " **präthistogram** " zurückgibt, aus den folgenden Spalten:  
   
 -   Der Wert, der vorhergesagt wird.  
   
@@ -47,27 +47,27 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] Datamining-Algorithmen unterstützen keine **$ProbabilityVariance**. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]Data Mining Algorithmen unterstützen **$ProbabilityVariance**nicht. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] Datamining-Algorithmen unterstützen keine **$ProbabilityStdev**. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]Data Mining Algorithmen unterstützen **$ProbabilityStdev**nicht. Diese Spalte enthält für [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen immer 0.  
   
 -   **$AdjustedProbability**  
   
      Die **$AdjustedProbability** Spalte ist eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Erweiterung der [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining-Spezifikation.  
   
 ## <a name="cluster-columns"></a>Clusterspalten  
- Das Histogramm, das **PredictHistogram** Funktionsergebnis ist für eine \<Spaltenverweis cluster > besteht aus den folgenden Spalten:  
+ Das Histogramm, das die Funktion " **präthistogram** " \<für einen Cluster Spalten Verweis zurückgibt > besteht aus den folgenden Spalten:  
   
--   **$Cluster** (entspricht dem Clusternamen)  
+-   **$Cluster** (stellt den Cluster Namen dar)  
   
 -   **$Distance**  
   
 -   **$Probability**  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird der vorhergesagte Status der Bike Buyer-Spalte in einer SINGLETON-Abfrage zurückgegeben. Die Abfrage gibt auch die oberen beiden wahrscheinlichsten Statuswerte des Bike Buyer-Attributs, basierend auf der angepassten Wahrscheinlichkeit abgerufen, indem Sie mit der **PredictHistogram** Funktion.  
+ Im folgenden Beispiel wird der vorhergesagte Status der Bike Buyer-Spalte in einer SINGLETON-Abfrage zurückgegeben. Die Abfrage gibt auch die beiden wahrscheinlichsten Zustände des Bike Buyer-Attributs basierend auf der angepassten Wahrscheinlichkeit zurück, die mithilfe der Funktion " **präthistogram** " abgerufen wurde.  
   
 ```  
 SELECT  
@@ -84,16 +84,16 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [Cluster &#40;-DMX&#41;](../dmx/cluster-dmx.md)   
+ [Clusterwahrscheinlichkeits &#40;-DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
+ [Präwahrscheinlichkeits &#40;-DMX&#41;](../dmx/predictprobability-dmx.md)   
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
- [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
+ [Prätsupport &#40;-DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

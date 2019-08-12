@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 87be157406b169a0978fd282c9ee40e4808c2599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d519d0c298e3a92506902bc42d3fdb4e8b1d2cc7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057844"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893753"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI-Ereignisüberwachung (Task)
 
@@ -111,7 +111,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-general-page"></a>Editor für den Task 'WMI-Ereignisüberwachung' (Seite Allgemein)
   Auf der Seite **Allgemein** des Dialogfelds **Editor für den Task 'WMI-Ereignisüberwachung'** können Sie einen Namen und eine Beschreibung für den Task 'WMI-Ereignisüberwachung' angeben.  
   
- Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
+ Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Abfragen mit WQL) in der MSDN Library.  
   
 ### <a name="options"></a>enthalten  
  **Name**  
@@ -126,7 +126,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor für den Task 'WMI-Ereignisüberwachung' (Seite WMI-Optionen)
   Auf der Seite **WMI-Optionen** des Dialogfelds **Editor für den Task „WMI-Ereignisüberwachung“** können Sie die Quelle der WQL-Abfrage (Windows Management Instrumentation Query Language) und das Verhalten angeben, mit dem der Task „WMI-Ereignisüberwachung“ auf WMI-Ereignisse (Microsoft Windows Instrumentation) antwortet.  
   
- Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Abfragen mit WQL) in der MSDN Library.  
+ Weitere Informationen zur WMI Query Language (WQL) finden Sie im Thema zur Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI) unter [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Abfragen mit WQL) in der MSDN Library.  
   
 ### <a name="static-options"></a>Statische Optionen  
  **WMIConnectionName**  

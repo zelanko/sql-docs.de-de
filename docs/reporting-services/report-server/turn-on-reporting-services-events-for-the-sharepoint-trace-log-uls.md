@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580951"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893242"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)
 
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |Gemeinsamer Dienst|Beispieleinträge:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> MediumGranting-Zugriff auf Inhaltsdatenbanken.<br /><br /> MediumProvisioning-Instanzen für ReportingWebServiceApplication<br /><br /> MediumProcessing-Dienstkontoänderung für ReportingWebServiceApplication<br /><br /> MediumSetting-Datenbankberechtigungen.|  
   
 ##  <a name="bkmk_powershell"></a> Anzeigen einer Protokolldatei mit PowerShell  
- ![PowerShell related content](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") Sie können PowerShell verwenden, um eine Liste der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-bezogenen Ereignisse aus einer ULS-Protokolldatei zurückzugeben. Geben Sie über die SharePoint 2010-Verwaltungsshell folgenden Befehl ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die „**sql server reporting services**“ enthalten:  
+ ![PowerShell related content](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell related content") Sie können PowerShell verwenden, um eine Liste der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-bezogenen Ereignisse aus einer ULS-Protokolldatei zurückzugeben. Geben Sie über die SharePoint 2010-Verwaltungsshell folgenden Befehl ein, um eine gefilterte Liste mit den Zeilen der ULS-Protokolldatei „UESQL11SPOINT-20110606-1530.log“ zurückzugeben, die „**sql server reporting services**“ enthalten:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

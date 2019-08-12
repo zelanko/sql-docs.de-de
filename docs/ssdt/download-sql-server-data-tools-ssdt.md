@@ -13,12 +13,12 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 06b2d138ce3d12fdf2a115343d922368accbeda7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290347"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892426"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Herunterladen und Installieren von SQL Server Data Tools (SSDT) für Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -148,7 +148,7 @@ Gehen Sie nach der Installation von SSDT die folgenden Tutorials durch, um zu er
 
 - [Projektorientierte Offlinedatenbankentwicklung](project-oriented-offline-database-development.md)  
 - [SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md)  
-- [Analysis Services-Tutorials](../analysis-services/analysis-services-tutorials-ssas.md)  
+- [Analysis Services-Tutorials](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)  
 - [Erstellen eines einfachen Tabellenberichts (SSRS-Lernprogramm)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

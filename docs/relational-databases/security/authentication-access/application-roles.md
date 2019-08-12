@@ -1,7 +1,7 @@
 ---
 title: Anwendungsrollen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,16 +21,16 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a64d707ff73f228d45a9e977c20be6ac57eed5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b26765281f650a73e7c21e40ce63916eeb9fa21f
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095056"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841592"
 ---
 # <a name="application-roles"></a>Anwendungsrollen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Eine Anwendungsrolle ist ein Datenbankprinzipal, mit dem eine Anwendung mit eigenen Berechtigungen ausgeführt werden kann. Sie können Anwendungsrollen verwenden, um den Zugriff auf bestimmte Daten nur den Benutzern zu ermöglichen, die über eine bestimmte Anwendung eine Verbindung herstellen. Im Gegensatz zu Datenbankrollen enthalten Anwendungsrollen keine Mitglieder und sind standardmäßig inaktiv. Anwendungsrollen können in beiden Authentifizierungsmodi verwendet werden. Anwendungsrollen werden mit **sp_setapprole**aktiviert, wofür ein Kennwort erforderlich ist. Da es sich bei Anwendungsrollen um einen Prinzipal auf Datenbankebene handelt, können sie auf andere Datenbanken nur über die Berechtigungen zugreifen, die in diesen Datenbanken dem Konto **guest**erteilt wurden. Anwendungsrollen anderer Datenbanken können daher auf keine Datenbank zugreifen, in der **guest** deaktiviert wurde.  
+  Eine Anwendungsrolle ist ein Datenbankprinzipal, mit dem eine Anwendung mit eigenen Berechtigungen ausgeführt werden kann. Sie können Anwendungsrollen verwenden, um den Zugriff auf bestimmte Daten nur den Benutzern zu ermöglichen, die über eine bestimmte Anwendung eine Verbindung herstellen. Im Gegensatz zu Datenbankrollen enthalten Anwendungsrollen keine Mitglieder und sind standardmäßig inaktiv. Anwendungsrollen werden mit **sp_setapprole**aktiviert, wofür ein Kennwort erforderlich ist. Da es sich bei Anwendungsrollen um einen Prinzipal auf Datenbankebene handelt, können sie auf andere Datenbanken nur über die Berechtigungen zugreifen, die in diesen Datenbanken dem Konto **guest**erteilt wurden. Anwendungsrollen anderer Datenbanken können daher auf keine Datenbank zugreifen, in der **guest** deaktiviert wurde.  
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]können Anwendungsrollen nicht auf Metadaten auf Serverebene zugreifen, da sie nicht mit einem Prinzipal auf Serverebene verbunden sind. Sie können diese Einschränkung deaktivieren und dabei den Anwendungsrollen den Zugriff auf Metadaten auf Serverebene ermöglichen, indem Sie das globale Flag 4616 festlegen. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) und [DBCC TRACEON &#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).  
   

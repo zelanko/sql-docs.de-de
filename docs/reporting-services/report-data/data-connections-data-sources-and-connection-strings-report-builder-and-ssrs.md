@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de21c7d552e117dd14054cfb9f408a66ccf2ca0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2e8eb3d2f20392c1884c79455e8c3bdfdacd949
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573219"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891961"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)
 
@@ -107,7 +107,7 @@ ms.locfileid: "65573219"
 |Azure SQL-Datenbank|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Legen Sie den Datenquellentyp auf **Microsoft Azure SQL-Datenbank** fest. Weitere Informationen finden Sie unter [SQL Azure-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server Parallel Data Warehouse**fest. Weitere Informationen finden Sie unter [SQL Server Parallel Data Warehouse-Verbindungstyp &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Analysis Services-Datenbank auf dem lokalen Server|`data source=localhost;initial catalog=Adventure Works DW`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server Analysis Services**fest. Weitere Informationen finden Sie unter [Analysis Services-Verbindungstyp für MDX (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) oder [Analysis Services-Verbindungstyp für DMX (SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Analysis Services-Datenbank für tabellarische Modelle mit Sales-Perspektive|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server Analysis Services**fest. Geben Sie den Perspektivennamen in der "cube="-Einstellung an. Weitere Informationen finden Sie unter [Perspektiven &#40;SSAS – tabellarisch&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Analysis Services-Datenbank für tabellarische Modelle mit Sales-Perspektive|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Legen Sie den Datenquellentyp auf **Microsoft SQL Server Analysis Services**fest. Geben Sie den Perspektivennamen in der "cube="-Einstellung an. Weitere Informationen finden Sie unter [Perspektiven &#40;SSAS – tabellarisch&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
 |Berichtsmodell-Datenquelle auf einem Berichtsserver, der im einheitlichen Modus konfiguriert ist|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|Geben Sie die URL des Berichtsservers oder der Dokumentbibliothek sowie den Pfad des veröffentlichten Modells im Namespace des Berichtsserverordners oder Dokumentbibliotheksordners an.
 |Berichtsmodell-Datenquelle auf einem Berichtsserver, der im integrierten SharePoint-Modus konfiguriert ist|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|Geben Sie die URL des Berichtsservers oder der Dokumentbibliothek sowie den Pfad des veröffentlichten Modells im Namespace des Berichtsserverordners oder Dokumentbibliotheksordners an.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Legen Sie den Datenquellentyp auf **OLE DB-Anbieter für OLAP Services 8.0**fest.<br /><br /> Sie können eine schnellere Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquellen erzielen, wenn Sie die **ConnectTo** -Eigenschaft auf **8.0**festlegen. Sie können diese Eigenschaft im Dialogfeld **Verbindungseigenschaften** auf der Registerkarte **Erweiterte Eigenschaften** festlegen.|  

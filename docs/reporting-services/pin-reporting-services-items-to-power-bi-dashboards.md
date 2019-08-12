@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500030"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891999"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Anheften von paginierten Reporting Services-Berichtselementen an Dashboards in Power BI
 
@@ -68,7 +68,7 @@ Sie können ein lokales, paginiertes [!INCLUDE[ssRSnoversion](../includes/ssrsno
   
 4. Wählen Sie das Berichtselement aus, das Sie an [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]anheften möchten. Sie können jeweils nur ein Element anheften.  Der Berichts-Viewer zeigt eine schattierte Sicht des Berichts an, und die Berichtselemente, die Sie anheften können, werden hervorgehoben. Die Elemente, die nicht angeheftet werden können, sind dunkel schattiert.  
   
-    **(1)** Wählen Sie die Gruppe aus, die das Dashboard enthält, an das Sie das Element anheften möchten, **(2)** wählen Sie das Dashboard aus, an das Sie das Element anheften möchten, und **(3)** wählen Sie aus, wie oft die Kachel im Dashboard aktualisiert werden soll.   ![Hinweis](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Die Aktualisierung wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angehängt wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.  
+    **(1)** Wählen Sie die Gruppe aus, die das Dashboard enthält, an das Sie das Element anheften möchten, **(2)** wählen Sie das Dashboard aus, an das Sie das Element anheften möchten, und **(3)** wählen Sie aus, wie oft die Kachel im Dashboard aktualisiert werden soll.   ![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Die Aktualisierung wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angehängt wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
