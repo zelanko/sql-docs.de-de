@@ -1,7 +1,7 @@
 ---
 title: Verwenden des JDBC-Treibers | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 997c797116e1424f8747d493de2af5b4fd57082e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916155"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893664"
 ---
 # <a name="using-the-jdbc-driver"></a>Verwenden des JDBC-Treibers
 
@@ -26,6 +26,8 @@ Dieser Abschnitt enthält Anleitungen, um in kurzer Zeit mit [!INCLUDE[jdbcNoVer
 ## <a name="choosing-the-right-jar-file"></a>Auswählen der richtigen JAR-Datei
 
 Der Microsoft JDBC-Treiber bietet verschiedene JAR-Dateien, die in Verbindung mit Ihren bevorzugten Einstellungen für die Java Runtime Environment (JRE) verwendet werden können:
+
+Der Microsoft JDBC-Treiber 7.4 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** und **mssql-jdbc-7.4.1.jre12.jar**.
 
 Der Microsoft JDBC-Treiber 7.2 für SQL Server bietet die Klassenbibliotheksdateien **mssql-jdbc-7.2.2.jre8.jar** und **mssql-jdbc-7.2.2.jre11.jar**.
 
@@ -49,13 +51,37 @@ Wenn Sie JDBC-Treiber 4.1 oder 4.2 verwenden, legen Sie fest, dass der Klassenpf
 
 Wenn Sie JDBC-Treiber 6.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-6.2.2.jre7.jar** oder **mssql-jdbc-6.2.2.jre8.jar** enthält.
 
-Wenn Sie JDBC-Treiber 6.4 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-6.4.0.jre7.jar**, „**mssql-jdbc-6.4.0.jre8.jar“ oder **mssql-jdbc-6.4.0.jre9.jar** enthält.
+Wenn Sie den JDBC-Treiber 6.4 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** oder **mssql-jdbc-6.4.0.jre9.jar** enthält.
 
 Wenn Sie JDBC-Treiber 7.0 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-7.0.0.jre8.jar** oder **mssql-jdbc-7.0.0.jre10.jar** enthält.
 
 Wenn Sie JDBC-Treiber 7.2 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-7.2.2.jre8.jar** oder **mssql-jdbc-7.2.2.jre11.jar** enthält.
 
+Wenn Sie den JDBC-Treiber 7.4 verwenden, legen Sie fest, dass der Klassenpfad die Datei **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** oder **mssql-jdbc-7.4.1.jre12.jar** enthält.
+
 Wenn im Klassenpfad kein Eintrag für die richtige JAR-Datei vorhanden ist, löst eine Anwendung die allgemeine Ausnahme `Class not found` aus.  
+
+### <a name="for-microsoft-jdbc-driver-74"></a>Für Microsoft JDBC-Treiber 7.4
+
+Die Datei **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** oder **mssql-jdbc-7.4.1.jre12.jar** wird im folgenden Verzeichnis installiert:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.4.1.jre12.jar
+```
+
+Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Windows-Anwendung verwendet wird:
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.4 for SQL Server\sqljdbc_7.4\enu\mssql-jdbc-7.4.1.jre11.jar`
+
+Der folgende Codeausschnitt stellt ein Beispiel für die CLASSPATH-Anweisung dar, die für eine Linux/Unix-Anwendung verwendet wird:
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.4/enu/mssql-jdbc-7.4.1.jre11.jar`
+
+Stellen Sie sicher, dass die CLASSPATH-Anweisung nur eine [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Datei enthält, z.B. entweder **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** oder **mssql-jdbc-7.4.1.jre12.jar**.
 
 ### <a name="for-microsoft-jdbc-driver-72"></a>Für Microsoft JDBC-Treiber 7.2
 

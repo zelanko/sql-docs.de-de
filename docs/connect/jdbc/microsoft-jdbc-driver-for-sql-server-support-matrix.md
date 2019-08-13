@@ -1,7 +1,7 @@
 ---
 title: Supportmatrix für den Microsoft JDBC-Treiber für SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,20 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 464ecdb79ee3a143deccec703438e35217503e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.openlocfilehash: 04d7fe419c8639d9f14c3c3795a1007d947c3998
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956335"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893257"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Auf dieser Seite finden Sie die Unterstützungsmatrix und die Support Lifecycle-Richtlinie für den Microsoft JDBC-Treiber für SQL Server.  
   
-## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Unterstützungsmatrix und Support Lifecycle-Richtlinie für Microsoft JDBC-Treiber  
+## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Support Lifecycle-Matrix und -Richtlinie für Microsoft JDBC-Treiber  
  Die Microsoft Support Lifecycle-Richtlinie (MLS) bietet transparente, vorhersagbare Informationen hinsichtlich der Supportdauer bei Microsoft-Produkten. Für die Versionen 3.0, 4.x, 6.x und 7.x des JDBC-Treibers wird ab dem Veröffentlichungsdatum fünf Jahre grundlegender Support (Mainstream-Support) geleistet. Die Definition für den grundlegenden Support finden Sie auf der Website der Microsoft Support Lifecycle-Richtlinie.  
   
  Erweiterte und benutzerdefinierte Support-Optionen sind für den Microsoft JDBC-Treiber nicht verfügbar.  
@@ -31,6 +32,7 @@ ms.locfileid: "67956335"
   
 |Treibername|Version des Treiberpakets|Zutreffende JAR-Datei(en)|Ende des grundlegenden Supports|
 |-|-|-|-|  
+|Microsoft JDBC-Treiber 7.4 für SQL Server|7.4|MSSQL-JDBC-Version 7.4.1. jre12. jar<br> MSSQL-JDBC-Version 7.4.1. jre11. jar<br> MSSQL-JDBC-Version 7.4.1. jre8. jar|2\. August 2024|
 |Microsoft JDBC-Treiber 7.2 für SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16. April 2024|
 |Microsoft JDBC-Treiber 7.0 für SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31. Juli 2023|  
 |Microsoft JDBC-Treiber 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27. Februar 2023|    
@@ -53,11 +55,12 @@ ms.locfileid: "67956335"
   
 ## <a name="sql-version-compatibility"></a>SQL-Versionskompatibilität  
   
-|Treiberversion|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL-Datenbank|PDW 2008R2 AU3<sup>4</sup>|SQLServer 2014|SQL Server 2016|SQL Server 2017|Verwaltete Azure SQL-Instanz (erweiterte private Vorschau)|  
-|-|-|-|-|-|-|-|-|-|-|
-|7.2|N|J|J|J|J|J|J|J|J|  
-|7.0|N|J|J|J|J|J|J|J|J|  
-|6.4|N|J|J|J|J|J|J|J|J|  
+|Treiberversion|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL-Datenbank|PDW 2008R2 AU3<sup>4</sup>|SQLServer 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|-|-|-|-|-|-|-|-|-|-|-|
+|7.4|N|N|J|J|J|J|J|J|J|
+|7.2|N|J|J|J|J|J|J|J|N| 
+|7.0|N|J|J|J|J|J|J|J|N| 
+|6.4|N|J|J|J|J|J|J|J|N| 
 |6.2|J|J|J|J|J|J|J|J|N|
 |6.1|J|J|J|J|J|J|J|N|N|
 |6.0|J|J|J|J|J|J|J|N|N|
@@ -85,6 +88,7 @@ ms.locfileid: "67956335"
   
 |Version des JDCB-Treibers|JRE-Version|JDBC-API-Version| 
 |-|-|-|  
+|7.4|1.8, 11, 12|4.2, 4.3 (teilweise)|
 |7.2|1.8, 11|4.2, 4.3 (teilweise)|
 |7.0|1.8, 10|4.2, 4.3 (teilweise)|
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (teilweise)|  
@@ -107,6 +111,6 @@ ms.locfileid: "67956335"
  Das JDBC-Produktteam testet unsern Treiber unter Windows, Sun Solaris, SUSE Linux und RedHat Linux.  Der Kundendienst steht dem Kunden auf allen Plattformen zur Verfügung. Jedoch kann es vorkommen, dass Sie gebeten werden, Ihr Problem auf einer anderen Plattform, z. B. auf Windows, zu reproduzieren.  
   
 ## <a name="application-server-support"></a>Support für Anwendungsserver  
- Der Microsoft JDBC-Treiber für SQL Server wird mit verschiedenen Anwendungsservern getestet.  Wenden Sie sich an den Anbieter Ihres Anwendungsserver, um detaillierte Informationen über die zu seinem Produkt kompatible Treiberversion zu erhalten.  
-  
-  
+ Der Microsoft JDBC-Treiber für SQL Server wird mit verschiedenen Anwendungsservern getestet.  Wenden Sie sich an den Anbieter Ihres Anwendungsserver, um detaillierte Informationen über die zu seinem Produkt kompatible Treiberversion zu erhalten.
+ 
+ 

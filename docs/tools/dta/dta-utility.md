@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132768"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809708"
 ---
 # <a name="dta-utility"></a>dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ dta -d AdventureWorks2012 ...
  Gibt an, dass gefilterte Indizes für neue Empfehlungen berücksichtigt werden. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Gibt an, dass Columnstore-Indizes für neue Empfehlungen berücksichtigt werden sollen. Dta berücksichtigt sowohl gruppierte als auch nicht gruppierte columnstore--Indizes. Weitere Informationen finden Sie unter    
+ Gibt an, dass Columnstore-Indizes für neue Empfehlungen berücksichtigt werden sollen. DTA unterstützt gruppierte und nicht gruppierte Columnstore-Indizes. Weitere Informationen finden Sie unter    
 [Empfehlungen für den Columnstore-Index im Datenbankoptimierungsratgeber (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  

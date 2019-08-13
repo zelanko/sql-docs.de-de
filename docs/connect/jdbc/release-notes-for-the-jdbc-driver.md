@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise zum JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,67 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 45af95d26da9b05b6e8e99dd78936e1f7bb6ed6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002440"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891285"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Versionshinweise zum Microsoft JDBC-Treiber
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Server_ aufgeführt. Für jede Version werden die Änderungen benannt und beschrieben.
+## <a name="741"></a>7.4.1
+
+### <a name="compliance"></a>Kompatibilität
+
+2\. August 2019
+
+| Kompatibilitäts-/Konformitätsänderung | Details |
+| :---------------- | :------ |
+| Laden Sie die neuesten Updates für den JDBC-Treiber 7.4 herunter. | &bull; &nbsp; [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Vollständig konform mit JDBC-API-Spezifikation 4.2. | Die JAR-Dateien im 7.4-Paket sind gemäß Java-Versionskompatibilität benannt.<br/><br/>Beispielsweise muss die Datei „mssql-jdbc-7.4.1.jre11.jar“ aus dem 7.4-Paket mit Java 11 verwendet werden. |
+| Kompatibel mit Java Development Kit (JDK), Version 12,0, 11,0 und 1,8. | Der Microsoft JDBC-Treiber 7.4 für SQL Server ist jetzt zusätzlich zu JDK 11.0 und 1.8 mit der JDK-Version 12.0 (Java Development Kit) kompatibel. |
+| &nbsp; | &nbsp; |
+
+### <a name="support-for-jdk-12"></a>Unterstützung für JDK 12
+
+Der Microsoft JDBC-Treiber 7.4 für SQL Server ist jetzt zusätzlich zu JDK 11.0 und 1.8 mit der JDK-Version 12.0 (Java Development Kit) kompatibel.
+
+### <a name="introduces-ntlm-authentication"></a>Führt die NTLM-Authentifizierung ein
+
+| NTLM-Änderung | Details |
+| :--------- | :------ |
+| Unterstützt den NTLM-Authentifizierungsmodus. | Dieser Authentifizierungsmodus ermöglicht es Windows-und nicht-Windows-Clients, sich bei SQL Server mithilfe von Windows-Domänen Benutzern zu authentifizieren. |
+| Weitere Details und eine Beispielanwendung zum Verwenden dieses Authentifizierungsmodus. | Siehe [Herstellen einer Verbindung mit der NTLM-Authentifizierung](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>Bietet eine Einführung in die Abfrage von parametermetadata über _USEF_ .
+
+| USEF-only-Änderung | Details |
+| :---------- | :------ |
+| die **USEF-only** -Verbindungs Eigenschaft wurde hinzugefügt. | Diese Funktion ermöglicht es Benutzern, parametermetadata optional über die `SET FMTONLY ON` Legacy-API abzufragen. Dies ist nützlich für Szenarien, `sp_describe_undeclared_parameters` in denen nicht wie erwartet ausgeführt wird. |
+| Weitere Details und Einschränkungen. | Siehe [Verwenden von useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>Aktualisiert: _Microsoft Azure Key Vault SDK für Java_, Version 1.2.1
+
+| Key Vault SDK-Änderung | Details |
+| :------------------- | :------ |
+| Die Maven-Abhängigkeit von _Microsoft Azure Key Vault SDK für Java_ wurde auf Version 1.2.1 aktualisiert. | &nbsp; |
+| Entfernt _Microsoft Azure SDK für Key Vault WebKey_ als Maven-Abhängigkeit. | &nbsp; |
+| Zusätzliche Details. | Informationen hierzu finden Sie unter [Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+| Bekannte Probleme | Details |
+| :----------- | :------ |
+| Bei Verwendung der NTLM-Authentifizierung. | Die zeitgleiche Aktivierung des erweiterten Schutzes und von verschlüsselten Verbindungen wird derzeit nicht unterstützt. |
+| Bei Verwendung von useFmtOnly. | Es gibt einige Probleme mit diesem Feature. Diese sind auf Mängel in der SQL-Parserlogik zurückzuführen. Weitere Informationen und Vorschläge zur Problem Umgehung finden [Sie unter Verwenden von USEF](../../connect/jdbc/using-usefmtonly.md) . |
+| &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
@@ -43,7 +92,7 @@ In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Ser
 > 
 > Es wird empfohlen, Ihre Projekte zur Verwendung der JAR-Dateien der Version 7.2.2 zu aktualisieren. Weitere Informationen finden Sie in den Versionshinweisen unter [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) und [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Authentifizierung mit einer _verwalteten Dienstidentität_ (Managed Service Identity, MSI) von Active Directory
+### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Authentifizierung mit einer _verwalteten Dienstidentität_ (Managed Service Identity, MSI) von Active Directory
 
 | MSI-Änderung | Details |
 | :--------- | :------ |
@@ -51,7 +100,7 @@ In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Ser
 | Weitere Details und eine Beispielanwendung zum Verwenden dieses Authentifizierungsmodus. | Informationen hierzu finden Sie unter [Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>Einführung der Unterstützung von _Open Service Gateway Initiative_ (OSGi)
+### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>Einführung der Unterstützung von _Open Service Gateway Initiative_ (OSGi)
 
 | OSGi-Änderung | Details |
 | :---------- | :------ |
@@ -59,7 +108,7 @@ In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Ser
 | Die **Activator**-Implementierung wurde hinzugefügt. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-sqlservererror-apis"></a>Einführung von _SQLServerError_-APIs
+### <a name="introduces-_sqlservererror_-apis"></a>Einführung von _SQLServerError_-APIs
 
 | Fehler-API-Änderung | Details |
 | :--------------- | :------ |
@@ -67,7 +116,7 @@ In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Ser
 | Zusätzliche Details. | Informationen hierzu finden Sie unter [Behandlung von Fehlern](../../connect/jdbc/handling-errors.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Die _Microsoft Azure Active Directory-Authentifizierungsbibliothek für Java (ADAL4J)_ , Version 1.6.3, wurde aktualisiert.
+### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>Die _Microsoft Azure Active Directory-Authentifizierungsbibliothek für Java (ADAL4J)_ , Version 1.6.3, wurde aktualisiert.
 
 | ADAL4J-Änderung | Details |
 | :------------ | :------ |
@@ -76,7 +125,7 @@ In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Ser
 | Zusätzliche Details. | Informationen hierzu finden Sie unter [Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Aktualisiert: _Microsoft Azure Key Vault SDK für Java_, Version 1.2.0
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>Aktualisiert: _Microsoft Azure Key Vault SDK für Java_, Version 1.2.0
 
 | Key Vault SDK-Änderung | Details |
 | :------------------- | :------ |
@@ -178,7 +227,7 @@ Der Treiber unterstützt jetzt das Angeben eines benutzerdefinierten TrustManage
 
 Der Treiber unterstützt jetzt die Datentypen `datetime` und `smallDatetime` bei der Verwendung von Tabellenwertparametern (Table-Valued Parameters, TVPs).
 
-### <a name="added-support-for-the-sqlvariant-datatype"></a>Hinzugefügt: Unterstützung für den Datentyp „sql_variant“
+### <a name="added-support-for-the-sql_variant-datatype"></a>Hinzugefügt: Unterstützung für den Datentyp „sql_variant“
 
 Der JDBC-Treiber unterstützt jetzt `sql_variant`-Datentypen für die Verwendung mit SQL Server. Der Datentyp `sql_variant` wird auch in Verbindung mit Features wie TVPs und Massenkopieren mit folgenden Einschränkungen unterstützt:
 

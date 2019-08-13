@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264595"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893524"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Neues in SQL Server Reporting Services (SSRS)
 
@@ -26,7 +26,7 @@ Die aktuellen Versionsanmerkungen finden Sie in den [Anmerkungen zu SQL Server 2
 
 Weitere Informationen zu Power BI-Berichtsserver finden Sie unter [Was ist der Power BI-Berichtsserver?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Herunterladen** ![download](../analysis-services/media/download.png "download")
+**Herunterladen** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center herunter](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -34,7 +34,7 @@ Laden Sie SQL Server 2017 Reporting Services im **[Microsoft Download Center her
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>Vorschauversion von SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services ist für CTP 3.1 nicht verfügbar. Installieren Sie die aktuelle Version [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services ist für CTP 3.2 nicht verfügbar. Installieren Sie die aktuelle Version [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ Weitere Informationen zur Browserunterstützung von finden Sie unter [Browserunt
 2. Wählen Sie das Dashboard aus, an das Sie das Element anheften möchten.
 3. Wählen Sie aus, wie oft die Kachel im Dashboard aktualisiert werden soll.
 
-![Hinweis](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Die Aktualisierung wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angehängt wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.
+![Hinweis](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note") Die Aktualisierung wird von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Abonnements verwaltet, und nachdem das Element angehängt wurde, können Sie das Abonnement bearbeiten und einen anderen Aktualisierungszeitplan konfigurieren.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 

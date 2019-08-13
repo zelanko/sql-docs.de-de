@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463605"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941142"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
 
@@ -75,13 +75,13 @@ Wenn Sie einen Bericht mit Parametern anzeigen, werden auf der Berichts-Viewer-S
   
 1. **Parameterbereich** Auf der Berichts-Viewer-Symbolleiste werden für jeden Parameter eine Eingabeaufforderung und ein Standardwert angezeigt. Sie können das Layout von Parametern im Parameterbereich anpassen. Weitere Informationen finden Sie unter [Benutzerdefiniertes Anpassen des Parameterbereichs in einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)erstellen.  
   
-2. **@SalesDate parameter** Der Parameter @SalesDate weist den Datentyp **DateTime** auf. Neben dem Textfeld wird die Aufforderung „Datum auswählen“ angezeigt. Geben Sie zum Ändern des Datums ein neues Datum in das Textfeld ein, oder verwenden Sie das Kalendersteuerelement.  
+2. **\@SalesDate-Parameter** Der Parameter @SalesDate hat den Datentyp **DateTime**. Neben dem Textfeld wird die Aufforderung „Datum auswählen“ angezeigt. Geben Sie zum Ändern des Datums ein neues Datum in das Textfeld ein, oder verwenden Sie das Kalendersteuerelement.  
   
-3. **@ShowAll parameter** Der Parameter @ShowAll weist den Datentyp **Boolean** auf. Geben Sie mithilfe der Optionsfelder entweder **True** oder **False**an.  
+3. **\@ShowAll-parameter** Der Parameter @ShowAll hat den Datentyp **Boolean**. Geben Sie mithilfe der Optionsfelder entweder **True** oder **False**an.  
   
 4. **Handle "Parameterbereich ein-/ausblenden"** Klicken Sie auf der Berichts-Viewer-Symbolleiste auf diesen Pfeil, um den Parameterbereich anzuzeigen oder auszublenden.  
   
-5. **@CategoryQuota parameter** Der Parameter @CategoryQuota weist den Datentyp **Float** auf und akzeptiert numerische Werte.  @CategoryQuota ist darauf festgelegt, mehrere Werte zuzulassen.  
+5. **\@CategoryQuota-Parameter** Der Parameter @CategoryQuota hat den Datentyp **Float** und akzeptiert numerische Werte.  @CategoryQuota ist darauf festgelegt, mehrere Werte zuzulassen.  
   
 6. **Bericht anzeigen**  Klicken Sie auf **Bericht anzeigen** , um nach der Eingabe von Parameterwerten den Bericht auszuführen. Wurden für alle Parameter Standardwerte festgelegt, wird der Bericht beim erstmaligen Anzeigen automatisch ausgeführt.  
   

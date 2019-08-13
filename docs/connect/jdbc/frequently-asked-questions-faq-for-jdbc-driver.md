@@ -1,7 +1,7 @@
 ---
 title: Häufig gestellte Fragen (FAQ) zum JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956573"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892377"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 
@@ -35,7 +35,15 @@ Detaillierte Informationen hierzu finden Sie auf der Seite [Supportmatrix für d
 Die im GitHub-Repository für den Microsoft JDBC-Treiber verfügbaren JDBC-Treiberdateien bilden den Kern des JDBC-Treibers und stehen unter der im Repository aufgeführten Open-Source-Lizenz. Die Treiberpakete im Microsoft Download Center enthalten zusätzliche Bibliotheken für die integrierte Windows-Authentifizierung und die Aktivierung von XA-Transaktionen mit dem JDBC-Treiber. Diese zusätzliche Bibliotheken stehen unter der Lizenz, die im herunterladbaren Paket enthalten ist.
 
 **Was sollte ich wissen, bevor ich meinen Treiber aktualisiere?**
-Der Microsoft JDBC-Treiber 7.2 unterstützt die JDBC-Spezifikation 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält zwei JAR-Klassenbibliotheken:
+Der Microsoft JDBC-Treiber 7.4 unterstützt die JDBC-Spezifikationen 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält drei JAR-Klassenbibliotheken:
+
+| JAR                        | JDBC-Spezifikation            | JDK-Version |
+| -------------------------- | ----------------------------- | ----------- |
+| MSSQL-JDBC-Version 7.4.1. jre12. jar | JDBC 4.3 (teilweise) und 4.2 | JDK 12.0    |
+| MSSQL-JDBC-Version 7.4.1. jre11. jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
+| MSSQL-JDBC-Version 7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+
+ Der Microsoft JDBC-Treiber 7.2 unterstützt die JDBC-Spezifikation 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält zwei JAR-Klassenbibliotheken:
 
 | JAR                        | JDBC-Spezifikation            | JDK-Version |
 | -------------------------- | ----------------------------- | ----------- |
@@ -134,6 +142,6 @@ Kunden, die SAP-Produkte verwenden und die Unterstützung für JRE 14. benötige
 **Kann der Treiber mit durch FIPS validierten Algorithmen kommunizieren?**  
 Der Microsoft JDBC-Treiber enthält keine kryptografischen Algorithmen. Wenn ein Kunde Algorithmen für Betriebssysteme, Anwendungen und JVM verwendet, die entsprechend der Federal Information Processing Standards (FIPS) zulässig sind, und der Kunde den Treiber für die Verwendung dieser Algorithmen konfiguriert, dann verwendet der Treiber nur die festgelegten Algorithmen für die Kommunikation.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)

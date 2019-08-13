@@ -1,7 +1,7 @@
 ---
 title: Systemanforderungen für den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9acd6eeec40421a778c1ab829b9633e1e93a80b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004268"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893976"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "68004268"
 - Java-Laufzeitumgebung (Java Runtime Environment, JRE)
 
 ## <a name="java-runtime-environment-requirements"></a>Anforderungen der Java-Laufzeitumgebung  
+
+ Ab dem Microsoft JDBC-Treiber 7.4 für SQL Server werden das JDK 12.0 (Java Development Kit) und die JRE 12.0 (Java Runtime Environment) unterstützt.
 
  Ab dem Microsoft JDBC-Treiber 7.2 für SQL Server werden das JDK 11.0 (Java Development Kit) und die JRE 11.0 (Java Runtime Environment) unterstützt.
  
@@ -40,6 +42,31 @@ ms.locfileid: "68004268"
  Seit der Einführung von [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wurde die JDBC-Treiberunterstützung für die API der JDBC- (Java Database Connectivity-)Spezifikation um die JDBC 4.0-API erweitert. Die JDBC-API 4.0 wurde als Bestandteil des JDK 6.0 und der JRE 6.0 eingeführt. JDBC 4.0 ist eine Obermenge der JDBC 3.0-API.
   
  Bei der Bereitstellung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unter Windows- und UNIX-Betriebssystemen müssen Sie entsprechend eines der folgenden Installationspakete verwenden: *sqljdbc_\<version> _enu.exe* oder *sqljdbc_\<version>_enu.tar.gz*. Weitere Informationen zum Bereitstellen des JDBC-Treibers finden Sie unter dem Thema [Bereitstellen des JDBC-Treibers](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+
+**Microsoft JDBC-Treiber 7.4 für SQL Server:**  
+
+  Der Microsoft JDBC-Treiber 7.4 enthält in jedem Installationspaket drei JAR-Klassenbibliotheken: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** und **mssql-jdbc-7.4.1.jre12.jar**.
+
+  Der JDBC-Treiber 7.4 ist für die Verwendung und Unterstützung aller wichtigen virtuellen Java-Computer konzipiert. Er wird jedoch nur für OpenJDK 1.8, OpenJDK 11.0, OpenJDK 12.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 und Azul Zulu JRE 12.0. getestet.
+  
+  Im Folgenden finden Sie eine Übersicht über die Unterstützung, die von den beiden im Microsoft JDBC-Treiber 7.4 für SQL Server enthaltenen JAR-Dateien bereitgestellt wird:  
+  
+  |JAR|JDBC-Versionskompatibilität|Empfohlene Java-Version|und Beschreibung|  
+|---------|-----------------------------|----------------------|-----------------|   
+|MSSQL-JDBC-Version 7.4.1. jre8. jar|4.2|8|Erfordert die JRE-Version 1.8 (Java Runtime Environment). Bei Verwendung von JRE 1.7 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Zu den neuen Features in 7,4 gehören: JDK 12-Unterstützung, NTLM-Authentifizierung und USEF-Authentifizierung. |    
+|MSSQL-JDBC-Version 7.4.1. jre11. jar|4.3|11|Erfordert die JRE 11.0. Bei Verwendung von JRE 10.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Zu den neuen Features in 7,4 gehören: JDK 12-Unterstützung, NTLM-Authentifizierung und USEF-Authentifizierung. |  
+|MSSQL-JDBC-Version 7.4.1. jre12. jar|4.3|12|Erfordert die Java Runtime Environment (JRE) 12.0. Bei Verwendung von JRE 11.0 oder niedriger wird eine Ausnahme ausgelöst.<br /><br /> Zu den neuen Features in 7,4 gehören: JDK 12-Unterstützung, NTLM-Authentifizierung und USEF-Authentifizierung. |   
+
+
+  Der JDBC-Treiber 7.4 steht auch im zentralen Maven-Repository zur Verfügung und kann einem Maven-Projekt hinzugefügt werden, indem Sie der Datei POM.XML den folgenden Code hinzufügen:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC-Treiber 7.2 für SQL Server:**  
 
