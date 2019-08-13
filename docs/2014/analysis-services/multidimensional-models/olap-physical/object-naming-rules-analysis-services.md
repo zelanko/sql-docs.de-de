@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be8bec262afc67571c67ad6919ae9e9163a434be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889436"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957322"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
   In diesem Thema werden Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschrieben, die in Objektnamen, in Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht verwendet werden können.  
@@ -69,10 +69,10 @@ ms.locfileid: "68889436"
 |Objekt|Ungültige Zeichen|  
 |------------|------------------------|  
 |`Server`|Befolgen Sie beim Benennen von Serverobjekten die Benennungskonventionen für Windows-Server. Weitere Informationen finden Sie unter [Benennungs Konventionen (Windows)](/windows/desktop/DNS/naming-conventions) .|  
-|`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` oder `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
-|`Dimension` oder `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
-|Alle anderen Objekte|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
+|`DataSource`| `: / \ * \| ? " () [] {} <>` |  
+|`Level` oder `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` oder `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|Alle anderen Objekte|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **Ausnahmen Wenn reservierte Zeichen zulässig sind**  
   

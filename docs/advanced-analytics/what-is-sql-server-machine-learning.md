@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 59e005e0075c9bb26210c6be9be5f52a3aa9a164
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 4a1a9a3b0f712458466051ce2c67c0a725ef0a76
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926920"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957441"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Was ist SQL Server Machine Learning Services (python und R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ In Azure SQL-Datenbank befindet sich [Machine Learning Services](https://docs.mi
 
 Mit SQL Server Machine Learning Services können Sie python-und R-Skripts in der-Datenbank ausführen. Sie können Sie verwenden, um Daten vorzubereiten und zu bereinigen, Featureentwicklung durchzuführen und Machine Learning-Modelle in einer Datenbank zu trainieren, auszuwerten und bereitzustellen. Die Funktion führt Ihre Skripts aus, in denen sich die Daten befinden, und die Übertragung der Daten über das Netzwerk auf einen anderen Server entfällt.
 
-Basis Verteilungen von Python und R sind in Machine Learning Services enthalten. Sie können Open-Source-Pakete und-Frameworks wie pytorch, tensorflow und scikit-Learn zusätzlich zu den Microsoft-Paketen [revoscalepy](python/ref-py-revoscalepy.md) und [microsoftml](python/ref-py-microsoftml.md) für python und [revoscaler](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), [olapr](r/ref-r-olapr.md), und [sqlrutils](r/ref-r-sqlrutils.md) für R.
+Basis Verteilungen von Python und R sind in Machine Learning Services enthalten. Sie können Open-Source-Pakete und-Frameworks, wie z. b. pytorch, tensorflow und scikit-Learn, zusätzlich zu den Microsoft-Paketen [revoscalepy](python/ref-py-revoscalepy.md) und [microsoftml](python/ref-py-microsoftml.md) für python und [revoscaler](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), [olapr verwenden. ](r/ref-r-olapr.md)und [sqlrutils](r/ref-r-sqlrutils.md) für R.
 
 Machine Learning Services verwendet ein Erweiterbarkeits Framework, um Python-und R-Skripts in SQL Server auszuführen. Weitere Informationen finden Sie hier:
 

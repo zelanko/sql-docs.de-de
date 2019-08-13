@@ -1,73 +1,92 @@
 ---
-title: R Services in SQL Server 2016
-description: R in SQL Server für integrierte R-Aufgaben für relationale Daten, einschließlich Data Science und statistischen Modellierung, Predictive Analytics, Datenvisualisierung und mehr.
+title: Was ist SQL Server 2016 R Services?
+titleSuffix: ''
+description: R Services ist ein Feature in SQL Server 2016, das die Möglichkeit bietet, R-Skripts mit relationalen Daten auszuführen. Sie können Open-Source-Pakete und-Frameworks sowie die Microsoft R-Pakete für Predictive Analytics und Machine Learning verwenden. Die Skripts werden in der Datenbank ausgeführt, ohne dass Daten aus SQL Server oder über das Netzwerk verschoben werden. In diesem Artikel werden die Grundlagen von SQL Server R Services erläutert.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/10/2018
+ms.date: 08/12/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 973c09be9cff6e66043b056e1a772ab8974cebb4
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469908"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957490"
 ---
-# <a name="r-services-in-sql-server-2016"></a>R Services in SQL Server 2016
+# <a name="what-is-sql-server-2016-r-services"></a>Was ist SQL Server 2016 R Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-R Services ist ein Add-on für eine SQL Server 2016-Datenbank-Engine-Instanz, die zum Ausführen von R-Code und Funktionen auf SQL Server verwendet wird. Der Code wird in einem Erweiterbarkeits Framework ausgeführt, das von Kern Modul Prozessen isoliert ist, aber vollständig für relationale Daten als gespeicherte Prozeduren, als T-SQL-Skript mit r-Anweisungen oder als R-Code mit t-SQL verfügbar ist. 
-
-R Services beinhaltet eine grundlegende Verteilung von r, überlagert mit Enterprise R-Paketen von Microsoft, sodass Sie große Datenmengen auf mehreren Kernen laden und verarbeiten und die Ergebnisse in einer einzigen konsolidierten Ausgabe aggregieren können. Die R-Funktionen und-Algorithmen von Microsoft sind sowohl für die Skalierung als auch das Hilfsprogramm konzipiert: Bereitstellung von Predictive Analytics, statistischen Modellierung, Datenvisualisierungen und führenden Machine Learning-Algorithmen in einem kommerziellen Server Produkt, das entwickelt wurde und von Microsoft unterstützt. 
-
-R-Bibliotheken enthalten [**revoscaler**](ref-r-revoscaler.md), [**microsoftml (r)** ](ref-r-microsoftml.md)und andere. Da R Services in die Datenbank-Engine integriert ist, können Sie Analysen in der Nähe der Daten aufbewahren und die Kosten und Sicherheitsrisiken, die mit der Daten Verschiebung verbunden sind, vermeiden.
+R Services ist ein Feature in SQL Server 2016, das die Möglichkeit bietet, R-Skripts mit relationalen Daten auszuführen. Sie können Open-Source-Pakete und-Frameworks sowie die [Microsoft R-Pakete](#packages) für Predictive Analytics und Machine Learning verwenden. Die Skripts werden in der Datenbank ausgeführt, ohne dass Daten aus SQL Server oder über das Netzwerk verschoben werden. In diesem Artikel werden die Grundlagen von SQL Server R Services erläutert.
 
 > [!Note]
-> R Services wurde in SQL Server 2017 und höher umbenannt, um [Machine Learning Services SQL Server](../what-is-sql-server-machine-learning.md), was das Hinzufügen von python widerspiegelt.
+> R Services wurde in SQL Server 2017 und höher in [Machine Learning Services](../what-is-sql-server-machine-learning.md) umbenannt und unterstützt sowohl python als auch R.
 
-## <a name="components"></a>Komponenten
+## <a name="what-is-r-services"></a>Was sind R Services?
 
-SQL Server 2016 ist nur R. In der folgenden Tabelle werden die Features in SQL Server 2016 beschrieben.
+Mit SQL Server R Services können Sie R-Skripts in der-Datenbank ausführen. Sie können Sie verwenden, um Daten vorzubereiten und zu bereinigen, Featureentwicklung durchzuführen und Machine Learning-Modelle in einer Datenbank zu trainieren, auszuwerten und bereitzustellen. Die Funktion führt Ihre Skripts aus, in denen sich die Daten befinden, und die Übertragung der Daten über das Netzwerk auf einen anderen Server entfällt.
 
-| Komponente | Beschreibung |
-|-----------|-------------|
-| SQL Server-Launchpad-Dienst | Ein Dienst, der die Kommunikation zwischen den externen R-Laufzeiten und der SQL Server Instanz verwaltet. |
-| R-Pakete | [**Revoscaler**](ref-r-revoscaler.md) ist die primäre Bibliothek für skalierbare R. Funktionen in dieser Bibliothek gehören zu den am häufigsten verwendeten Funktionen. In diesen Bibliotheken finden Sie Daten Transformationen und-Manipulation, statistische Zusammenfassung, Visualisierung und viele Formen der Modellierung und Analyse. Außerdem verteilen Funktionen in diesen Bibliotheken Workloads automatisch auf verfügbare Kerne für die parallele Verarbeitung, mit der Möglichkeit, an Datenblöcken zu arbeiten, die von der Berechnungs-Engine koordiniert und verwaltet werden.  <br/>[**Microsoftml (R)** ](ref-r-microsoftml.md) fügt Machine Learning-Algorithmen hinzu, um benutzerdefinierte Modelle für die Textanalyse, die Bildanalyse und die Stimmungs Analyse zu erstellen. <br/>[**sqlrutils**](ref-r-sqlrutils.md) stellt Hilfsfunktionen für das Einfügen von R-Skripts in eine gespeicherte T-SQL-Prozedur, das Registrieren einer gespeicherten Prozedur in einer Datenbank und das Ausführen der gespeicherten Prozedur aus einer R-Entwicklungsumgebung bereit.<br/>[**olapr**](ref-r-olapr.md) dient zum Angeben von MDX-Abfragen in R.|
-| Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) ist die Open Source-Verteilung von R von Microsoft. Das Paket und der Interpreter sind eingeschlossen. Verwenden Sie immer die von Setup installierte MRO-Version. |
-| R-Tools | R-Konsolenfenster und Eingabe Aufforderungen sind Standard Tools in einer R-Distribution.  |
-| R-Beispiele und-Skripts |  Open-Source-R-und revoscaler-Pakete enthalten integrierte Datasets, damit Sie mithilfe vorinstallierter Daten Skripts erstellen und ausführen können. |
-| Vortrainierte Modelle in R | Vorab trainierte Modelle werden für bestimmte Anwendungsfälle erstellt und vom Data Science Engineering-Team bei Microsoft verwaltet. Mit den von Ihnen bereitgestellten neuen Dateneingaben können Sie die vorab trainierten Modelle unverändert verwenden, um positive negative Stimmungen in Text zu bewerten oder Features in Bildern zu erkennen. Die Modelle werden in R Services ausgeführt, können jedoch nicht über SQL Server-Setup installiert werden. Weitere Informationen finden Sie unter [Installieren von vorab trainierten Machine Learning-Modellen auf SQL Server](../install/sql-pretrained-models-install.md). |
+Basis Verteilungen von r sind in r Services enthalten. Open-Source-Pakete und-Frameworks können zusätzlich zu den Microsoft-Paketen [revoscaler](../r/ref-r-revoscaler.md), [microsoftml](../r/ref-r-microsoftml.md), [olapr]. verwendet werden. /r/Ref-r-olapr.MD) und [sqlrutils](../r/ref-r-sqlrutils.md) für r.
 
-## <a name="using-r-services"></a>Verwenden von R Services
+R Services verwendet ein Erweiterbarkeits Framework, um R-Skripts in SQL Server auszuführen. Weitere Informationen finden Sie hier:
 
-Entwickler und Analysten verfügen häufig über Code, der auf einer lokalen SQL Server-Instanz ausgeführt wird. Indem Sie Machine Learning Services hinzufügen und die Ausführung externer Skripts aktivieren, erhalten Sie die Möglichkeit, R-Code in SQL Server Modalitäten auszuführen: das Umwickeln von Skripts in gespeicherten Prozeduren, das Speichern von Modellen in einer SQL Server Tabelle oder das Kombinieren von T-SQL und R-Funktionen
++ [Erweiterbarkeits Framework](../concepts/extensibility-framework.md)
++ [R-Erweiterung](../concepts/extension-r.md)
 
-Der gängigste Ansatz für Daten bankübergreifende Analysen ist die Verwendung von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)und die Übergabe des R-Skripts als Eingabeparameter.
+## <a name="what-can-i-do-with-r-services"></a>Was kann ich mit R Services tun?
 
-Klassische Client-Server-Interaktionen sind ein weiterer Ansatz. Auf jeder Client Arbeitsstation mit einer IDE können Sie [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)installieren und dann Code schreiben, der die Ausführung (als remotecomputekontext bezeichnet) auf Daten und Vorgänge an eine Remote SQL Server überträgt. 
+Sie können R Services verwenden, um Machine Learning-und Deep Learning-Modelle in SQL Server zu erstellen und zu trainieren. Sie können auch vorhandene Modelle für R-Dienste bereitstellen und relationale Daten für Vorhersagen verwenden.
 
-Wenn Sie einen [eigenständigen Server](r-server-standalone.md) und die Developer Edition verwenden, können Sie mit denselben Bibliotheken und Interpretern Lösungen auf einer Client Arbeitsstation erstellen und dann Produktionscode auf SQL Server Machine Learning Services (Daten bankeigen) bereitstellen. 
+Beispiele für die Art von Vorhersagen, die Sie für SQL Server R Services verwenden können, sind:
 
-## <a name="how-to-get-started"></a>Vorgehensweise beim Einstieg
+|||
+|-|-|
+|Klassifizierung/Kategorisierung|Automatisches Aufteilen von Kundenfeedback in positive und negative Kategorien|
+|Regression/Vorhersage von kontinuierlichen Werten|Vorhersagen des Preis von Häusern basierend auf Größe und Standort|
+|Erkennung von Anomalien|Erkennen betrügerischer Banktransaktionen |
+|Empfehlungen|Produkte vorschlagen, die Online-Einkäufer basierend auf Ihren vorherigen Käufen erwerben können|
 
-Beginnen Sie mit dem Setup, fügen Sie die Binärdateien an Ihr bevorzugtes Entwicklungs Tool an, und schreiben Sie das erste Skript.
+### <a name="how-to-execute-r-scripts"></a>Ausführen von R-Skripts
 
-**Schritt 1:** Installieren und konfigurieren Sie die Software. 
+Es gibt zwei Möglichkeiten zum Ausführen von r-Skripts in r Services:
 
-+ [Installieren von SQL Server 2016 R Services (Daten bankeigen)](../install/sql-r-services-windows-install.md)
++ Die gängigste Methode ist die Verwendung der gespeicherten T-SQL-Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-**Schritt 2:** Nutzen Sie eines der folgenden Tutorials, um praktische Erfahrungen zu sammeln:
++ Sie können auch Ihren bevorzugten R-Client verwenden und Skripts schreiben, die die Ausführung (als remotecomputekontext bezeichnet) per Push auf eine Remote SQL Server überführen. Weitere Informationen finden [Sie unter Einrichten einer Data Science-Client-R-Entwicklung](../r/set-up-a-data-science-client.md) .
 
-+ [Tutorial: Erlernen von Daten bankbasierten Analysen mit R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [Tutorial: Exemplarische End-to-End-Exemplarische Vorgehensweise mit R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+<a name="packages"></a>
 
-**Schritt 3:** Fügen Sie Ihre bevorzugten R-Pakete hinzu, und verwenden Sie Sie mit von Microsoft bereitgestellten Paketen.
+## <a name="r-packages"></a>R-Pakete
 
-+ [R-Paketverwaltung für SQL Server](install-additional-r-packages-on-sql-server.md)
+Zusätzlich zu den Unternehmens Paketen von Microsoft können Sie auch Open-Source-Pakete und-Frameworks verwenden. Die häufigsten Open Source-r-Pakete werden in r Services vorinstalliert. Die folgenden R-Pakete von Microsoft sind ebenfalls enthalten:
 
+| Package | Beschreibung |
+|-|-|
+| [RevoScaleR](../r/ref-r-revoscaler.md) | Das primäre Paket für skalierbare R. Daten Transformationen und-Manipulation, statistische Zusammenfassung, Visualisierung und viele Modellierungs Formen. Außerdem verteilen Funktionen in diesem Paket Arbeits Auslastungen für die parallele Verarbeitung automatisch auf verfügbare Kerne. |
+| [Microsoftml (R)](../r/ref-r-microsoftml.md) | Fügt Machine Learning-Algorithmen hinzu, um benutzerdefinierte Modelle für die Textanalyse, die Bildanalyse und die Stimmungs Analyse zu erstellen. |
+| [olapR](../r/ref-r-olapr.md) | R-Funktionen, die für MDX-Abfragen für einen SQL Server Analysis Services OLAP-Cube verwendet werden. |
+| [sqlrutils](../r/ref-r-sqlrutils.md) | Ein Mechanismus zur Verwendung von R-Skripts in einer gespeicherten T-SQL-Prozedur, Registrieren dieser gespeicherten Prozedur bei einer Datenbank und Ausführen der gespeicherten Prozedur aus einer [R-Entwicklungsumgebung](../r/set-up-a-data-science-client.md). |
+| [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft r Open (MRO) ist die verbesserte Verteilung von R von Microsoft. Es handelt sich um eine umfassende Open Source-Plattform für statistische Analysen und Data Science. Es basiert auf und 100%, die mit R kompatibel sind, und bietet zusätzliche Funktionen für eine verbesserte Leistung und Reproduzierbarkeit. |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="how-do-i-get-started-with-rservices"></a>Gewusst wie Sie die ersten Schritte mit rservices aus?
 
- [Installieren von SQL Server 2016 R-Diensten](../install/sql-r-services-windows-install.md)
+1. [Installieren von SQL Server 2016 R-Diensten](../install/sql-r-services-windows-install.md)
+
+1. Konfigurieren Sie Ihre Entwicklungs Tools. Sie können Folgendes verwenden:
+
+    + [Azure Data Studio](../../azure-data-studio/what-is.md) oder [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md) , um T-SQL und die gespeicherte Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) zum Ausführen Ihres R-Skripts zu verwenden.
+    + R auf einem eigenen Entwicklungs Laptop oder einer Arbeitsstation, um Skripts auszuführen. Sie können Daten entweder lokal abrufen oder die Ausführung per Push Remote an SQL Server mit [revoscaler](../r/ref-r-revoscaler.md)überwachen. Weitere Informationen finden [Sie unter Einrichten einer Data Science-Client-R-Entwicklung](../r/set-up-a-data-science-client.md) .
+
+1. Schreiben Ihres ersten R-Skripts
+
+    + Schnellstart: [Ausführen eines "Hello World"-Skripts in R](../tutorials/quickstart-r-run-using-tsql.md)
+    + Schnellstart: [Erstellen eines Vorhersagemodells in R](../tutorials/quickstart-r-create-predictive-model.md)
+    + Tutorial: [Verwenden von R in T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Durchsuchen von Daten, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (fünf teilige Reihe)
+    + Tutorial: [Verwenden von r Services in r-Tools](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Durchsuchen von Daten, Erstellen von Diagrammen und Diagrammen, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (sechs teilige Reihe)
+
+## <a name="next-steps"></a>Nächste Schritte
+
++ [Installieren von SQL Server 2016 R-Diensten](../install/sql-r-services-windows-install.md)
++ [Einrichten eines Data Science-Clients für die R-Entwicklung](../r/set-up-a-data-science-client.md)
