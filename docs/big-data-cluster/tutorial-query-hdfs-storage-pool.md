@@ -1,7 +1,7 @@
 ---
 title: Abfragen von HDFS-Daten im Speicherpool
 titleSuffix: SQL Server big data clusters
-description: Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in eine SQL Server-2019 big Data-Cluster (Vorschau) Abfragen. Sie erstellen eine externe Tabelle für Daten im Speicherpool und anschließend eine Abfrage ausführen.
+description: Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in einem Big Data-Cluster für SQL Server 2019 (Vorschauversion) abfragen. Sie erstellen eine externe Tabelle für Daten im Speicherpool und führen dann eine Abfrage aus.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,53 +10,53 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957704"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: HDFS-Abfrage in einer SQL Server-big Data-cluster
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Lernprogramm: Abfragen von HDFS in einem Big-Data-Cluster für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in eine SQL Server-2019 big Data-Cluster (Vorschau) Abfragen.
+Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in einem Big Data-Cluster für SQL Server 2019 (Vorschauversion) abfragen.
 
-In diesem Tutorial erfahren Sie, wie Sie:
+In diesem Tutorial lernen Sie Folgendes:
 
 > [!div class="checklist"]
-> * Erstellen Sie eine externe Tabelle, die auf den HDFS-Daten in einer big Data-Cluster verweist.
-> * Verknüpfen Sie diese Daten mit hohem Wert Daten in der master-Instanz.
+> * Erstellen einer externen Tabelle, die auf HDFS-Daten in einem Big Data-Cluster zeigt
+> * Verknüpfen dieser Daten mit hochwertigen Daten in der Masterinstanz
 
 > [!TIP]
-> Falls gewünscht, können Sie herunterladen und Ausführen eines Skripts für die Befehle in diesem Tutorial. Anweisungen finden Sie in der [Virtualisierung Datenstichproben](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) auf GitHub.
+> Wenn Sie möchten, können Sie ein Skript für die Befehle in diesem Tutorial herunterladen und ausführen. Anweisungen finden Sie in den [Beispielen zur Datenvirtualisierung](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) auf GitHub.
 
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
-- [Big Data-tools](deploy-big-data-tools.md)
+- [Big Data-Tools](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **SQL Server-2019-Erweiterung**
-- [Laden Sie Beispieldaten in Ihre big Data-cluster](tutorial-load-sample-data.md)
+   - **SQL Server 2019-Erweiterung**
+- [Laden von Beispieldaten in Ihren Big Data-Cluster](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-to-hdfs"></a>Erstellen einer externen Tabelle in HDFS
+## <a name="create-an-external-table-to-hdfs"></a>Erstellen einer externen Tabelle für HDFS
 
-Der Speicherpool enthält Web Clickstream-Daten in eine CSV-Datei in HDFS gespeichert. Verwenden Sie die folgenden Schritte aus, um eine externe Tabelle zu definieren, die die Daten in dieser Datei zugreifen kann.
+Der Speicherpool enthält Daten zu Webclickstreams in einer in HDFS gespeicherten CSV-Datei. Führen Sie die folgenden Schritte aus, um eine externe Tabelle zu definieren, die auf die Daten in dieser Datei zugreifen kann.
 
-1. Verbinden Sie in Azure Data Studio mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
+1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
-1. Doppelklicken Sie auf die Verbindung in der **Server** Fenster im Server-Dashboard für die master-SQL Server-Instanz angezeigt wird. Wählen Sie **neue Abfrage**.
+1. Doppelklicken Sie im Fenster **Server** auf die Verbindung, um das Serverdashboard der SQL Server-Masterinstanz anzuzeigen. Wählen Sie **Neue Abfrage** aus.
 
-   ![SQL Server-Masterinstanz-Abfrage](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
+   ![Abfrage der SQL Server-Masterinstanz](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-1. Führen Sie den folgenden Transact-SQL-Befehl, um den Kontext zum Ändern der **Sales** Datenbank in der master-Instanz.
+1. Führen Sie den folgenden Transact-SQL-Befehl aus, um den Kontext in der Masterinstanz in die **Sales**-Datenbank zu ändern.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Definieren Sie das Format der CSV-Datei zum Lesen aus HDFS. Drücken Sie F5, um die Anweisung auszuführen.
+1. Definieren Sie das Format der CSV-Datei, die aus HDFS gelesen werden soll. Drücken Sie zum Ausführen der Anweisung die Taste F5.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -70,7 +70,7 @@ Der Speicherpool enthält Web Clickstream-Daten in eine CSV-Datei in HDFS gespei
    );
    ```
 
-1. Erstellen Sie eine externe Datenquelle für den Speicherpool aus, wenn es nicht bereits vorhanden ist.
+1. Erstellen Sie eine externe Datenquelle für den Speicherpool, wenn diese nicht bereits vorhanden ist.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -80,7 +80,7 @@ Der Speicherpool enthält Web Clickstream-Daten in eine CSV-Datei in HDFS gespei
    END
    ```
 
-1. Erstellen einer externen Tabelle, die gelesen wird, kann die `/clickstream_data` aus dem Speicherpool. Die **SqlStoragePool** wird von der Masterinstanz von big Data-Cluster zugegriffen werden kann.
+1. Erstellen Sie eine externe Tabelle, die `/clickstream_data` aus dem Speicherpool lesen kann. Auf den **SqlStoragePool** kann von der Masterinstanz eines Big Data-Clusters aus zugegriffen werden.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -96,7 +96,7 @@ Der Speicherpool enthält Web Clickstream-Daten in eine CSV-Datei in HDFS gespei
 
 ## <a name="query-the-data"></a>Abfragen der Daten
 
-Führen Sie die folgende Abfrage aus, um die HDFS-Daten zu verknüpfen, der `web_clickstream_hdfs` externe Tabelle mit relationalen Daten in der lokalen `Sales` Datenbank.
+Führen Sie die folgende Abfrage aus, um die HDFS-Daten in der externen Tabelle `web_clickstream_hdfs` mit den relationalen Daten in der lokalen Datenbank `Sales` zu verknüpfen.
 
 ```sql
 SELECT  
@@ -118,9 +118,9 @@ GROUP BY  wcs_user_sk;
 GO
 ```
 
-## <a name="clean-up"></a>Bereinigen
+## <a name="clean-up"></a>Bereinigung
 
-Verwenden Sie den folgenden Befehl aus, um die externe Tabelle, die in diesem Tutorial verwendeten zu entfernen.
+Verwenden Sie den folgenden Befehl, um die in diesem Tutorial erstellte externe Tabelle zu entfernen.
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
@@ -129,6 +129,6 @@ GO
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wechseln Sie zum nächsten Artikel erfahren, wie Sie Oracle aus einer big Data-Cluster Abfragen.
+Fahren Sie mit dem nächsten Artikel fort, um zu lernen, wie Sie Oracle aus einem Big Data-Cluster abfragen.
 > [!div class="nextstepaction"]
-> [Abfragen von externen Daten in Oracle](tutorial-query-oracle.md)
+> [Abfragen externer Daten in Oracle](tutorial-query-oracle.md)

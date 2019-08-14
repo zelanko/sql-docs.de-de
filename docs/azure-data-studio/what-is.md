@@ -1,7 +1,7 @@
 ---
-title: Was ist Azure Data Studio
+title: Was ist Azure Data Studio?
 titleSuffix: Azure Data Studio
-description: Azure Data Studio ist ein Tool mit der kostenlose, leicht, die auf Windows, MacOS und Linux ausgeführt wird, für die Verwaltung von SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse.
+description: Azure Data Studio ist ein kostenloses, schlankes Tool, das unter Windows, macOS und Linux ausgeführt werden kann und zur Verwaltung von SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse dient.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: overview
@@ -11,74 +11,74 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.openlocfilehash: 1dd66b432ff489b5576b9ce7f69c1860cb9240d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958932"
 ---
 # <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
-Azure Data Studio ist ein plattformübergreifendes Tool für datenexperten mithilfe der Microsoft-Familie der lokalen Datenbank und cloud-datenplattformen unter Windows, MacOS und Linux.
+Azure Data Studio ist ein plattformübergreifendes Datenbanktool für Datenexperten, das die Microsoft-Produktfamilie der lokalen und cloudbasierten Datenplattformen unter Windows, macOS und Linux nutzt.
 
-Zuvor unter dem Namen Vorschau SQL Operations Studio veröffentlicht, bietet Studio für Azure Data eine moderne-Editor mit IntelliSense, Codeausschnitte, Integration der quellcodeverwaltung und eine integrierte Terminal. Es wurde mit dem Data-Plattform Benutzer Denken Sie daran, konzipiert integriert die diagrammerstellung für Abfrageresultsets und anpassbaren Dashboards.
+Azure Data Studio wurde zuvor in einer Vorschauversion unter dem Namen SQL Operations Studio veröffentlicht und bietet eine moderne Editor-Benutzeroberfläche mit IntelliSense, Codeausschnitten und Integration der Quellcodeverwaltung sowie ein integriertes Terminal. Das Tool wurde speziell für die Bedürfnisse der Benutzer von Datenplattformen konzipiert und bietet eine integrierte Diagrammdarstellung von Abfrageresultsets sowie anpassbare Dashboards.
 
-**[Herunterladen und installieren [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
+**[Herunterladen und Installieren von [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
 ## <a name="sql-code-editor-with-intellisense"></a>SQL-Code-Editor mit IntelliSense
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet eine moderne, per Tastatur bedienbare SQL, codierumgebung, die Ihre alltäglichen Aufgaben mit integrierten Features wie Fenstern mit Registerkarten, einen umfangreichen SQL-Editor, IntelliSense, Vervollständigung von Schlüsselwörtern, Codeausschnitten, codenavigation und Datenquellen-Steuerelement erleichtert Integration (Git). Führen Sie bei Bedarf SQL-Abfragen, zeigen Sie an und speichern Sie die Ergebnisse als Text, JSON oder Excel. Bearbeiten von Daten, Ihre bevorzugten Datenbankverbindungen organisieren und Datenbankobjekte in einer vertrauten Oberfläche durchsuchen. Gewusst wie: Verwenden Sie den SQL-Editor finden Sie unter [verwenden Sie den SQL-Editor zum Erstellen von Datenbankobjekten](tutorial-sql-editor.md).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet ein modernes Benutzererlebnis für die Programmierung in SQL. Das Tool erleichtert Ihnen die tägliche Arbeit, da Sie viele Funktionen über die Tastatur ansteuern können und zudem von einer Reihe integrierter Features profitieren: Fenster mit mehreren Registerkarten, umfangreicher SQL-Editor, IntelliSense, Vervollständigung von Schlüsselwörtern, Codeausschnitte, Codenavigation und Integration der Quellcodeverwaltung (Git). Sie können SQL-Abfragen bedarfsgesteuert ausführen und Ergebnisse im Text-, JSON- oder Excel-Format anzeigen und speichern. Bearbeiten Sie Daten, organisieren Sie Ihre bevorzugten Datenbankverbindungen und durchsuchen Sie Datenbankobjekte in einem vertrauten Objektbrowser. Informationen zum Verwenden des SQL-Editors finden Sie unter [Verwenden des SQL-Editors zum Erstellen von Datenbankobjekten](tutorial-sql-editor.md).
 
 ## <a name="smart-sql-code-snippets"></a>Intelligente SQL-Codeausschnitte
 
-SQL-Codeausschnitte generieren, die richtige SQL-Syntax zum Erstellen von Datenbanken, Tabellen, Sichten, gespeicherte Prozeduren, Benutzern, Anmeldungen, Rollen, usw., und klicken Sie zum Aktualisieren vorhandener Datenbankobjekte. Intelligente Codeausschnitte verwenden, um Kopien der Datenbank für Entwicklungs- oder Testzwecke, schnell zu erstellen und zu generieren und Ausführen erstellen, und fügen die Skripts.
+SQL-Codeausschnitte generieren die richtige SQL-Syntax zum Erstellen von Datenbanken, Tabellen, Ansichten, gespeicherten Prozeduren, Benutzern, Anmeldungen, Rollen usw. und zum Aktualisieren vorhandener Datenbankobjekte. Verwenden Sie intelligente Codeausschnitte, um zu Entwicklungs- oder Testzwecken schnell Kopien Ihrer Datenbank zu erstellen und um Skripts für CREATE- und INSERT-Vorgänge zu generieren und auszuführen.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt auch Funktionen zum Erstellen von benutzerdefinierter SQL-Codeausschnitten bereit. Weitere Informationen finden Sie unter [erstellen und Verwenden von Codeausschnitten](code-snippets.md).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt auch Funktionen zum Erstellen benutzerdefinierter SQL-Codeausschnitte bereit. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Codeausschnitten](code-snippets.md).
 
 
-## <a name="customizable-server-and-database-dashboards"></a>Anpassbare Server und Datenbank-Dashboards
+## <a name="customizable-server-and-database-dashboards"></a>Anpassbare Server- und Datenbankdashboards
 
-Erstellen Sie umfangreiche, anpassbare Dashboards zum Überwachen und schnell beheben von Leistungsengpässen in Ihren Datenbanken. Einblicke, Dashboards und Gadgets-Datenbank (und Server), finden Sie unter [Verwalten von Servern und Datenbanken mit einblickwidgets](insight-widgets.md).
+Erstellen Sie informative, anpassbare Dashboards, um Ihre Datenbanken zu überwachen und Leistungsengpässe schnell zu beheben. Informationen zu Erkenntniswidgets sowie Dashboards für Datenbanken (und Server) finden Sie unter [Verwalten von Servern und Datenbanken mit Erkenntniswidgets](insight-widgets.md).
 
 ## <a name="connection-management-server-groups"></a>Verbindungsverwaltung (Servergruppen)
 
-Servergruppen bieten eine Möglichkeit zum Organisieren von Verbindungsinformationen für die Server und Datenbanken, mit denen Sie zusammenarbeiten. Weitere Informationen finden Sie unter [Servergruppen](server-groups.md).
+Servergruppen stellen eine Möglichkeit dar, Informationen zu Verbindungen mit den Servern und Datenbanken zu organisieren, mit denen Sie arbeiten. Weitere Informationen dazu finden Sie unter [Servergruppen](server-groups.md).
 
 ## <a name="integrated-terminal"></a>Integriertes Terminal
 
-Verwenden Sie Ihre bevorzugten Befehlszeilentools (beispielsweise Bash, PowerShell, Sqlcmd und Bcp, per ssh) im integrierten Terminal-Fenster innerhalb der [!INCLUDE[name-sos](../includes/name-sos-short.md)] -Benutzeroberfläche. Weitere Informationen zu integrierten Terminal finden Sie unter [integriertes Terminal](integrated-terminal.md).
+Verwenden Sie Ihre bevorzugten Befehlszeilentools (z.B. Bash, PowerShell, sqlcmd, bcp und ssh) direkt auf der Benutzeroberfläche von [!INCLUDE[name-sos](../includes/name-sos-short.md)] im Fenster „Integriertes Terminal“. Weitere Informationen zum integrierten Terminal finden Sie unter [Integriertes Terminal](integrated-terminal.md).
 
-## <a name="extensibility-and-extension-authoring"></a>Erweiterbarkeit und der Erweiterung erstellen
+## <a name="extensibility-and-extension-authoring"></a>Erweiterbarkeit und Erstellen von Erweiterungen
 
-Verbessern der [!INCLUDE[name-sos](../includes/name-sos-short.md)] durch Erweitern der Funktionalität der Basisinstallation auftreten. [!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt Erweiterungspunkte für Aktivitäten zur datenverwaltung sowie Unterstützung für das Erstellen von Erweiterung bereit.
+Optimieren Sie das Benutzererlebnis in [!INCLUDE[name-sos](../includes/name-sos-short.md)], indem Sie die Funktionalität der Basisinstallation erweitern. [!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt Erweiterbarkeitspunkte für Datenverwaltungsaktivitäten sowie Unterstützung für die Erstellung von Erweiterungen bereit.
 
-Informationen über die Erweiterbarkeit in [!INCLUDE[name-sos](../includes/name-sos-short.md)], finden Sie unter [Erweiterbarkeit](extensibility.md).
-Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension authoring](extension-authoring.md).
+Informationen zur Erweiterbarkeit in [!INCLUDE[name-sos](../includes/name-sos-short.md)] finden Sie unter [Erweiterbarkeit](extensibility.md).
+Informationen zum Erstellen von Erweiterungen finden Sie unter [Erstellen von Erweiterungen](extension-authoring.md).
 
-## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Vergleich der Features mit SQL Server Management Studio (SSMS)
+## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Featurevergleich mit SQL Server Management Studio (SSMS)
 
-**Verwenden von Azure Data Studio, wenn Sie:**
-- Unter MacOS oder Linux ausgeführt werden müssen
-- Eine Verbindung mit einem SQL Server-2019 big Data-cluster
-- Verbringen Sie die meiste Zeit bearbeiten oder Ausführen von Abfragen
-- Benötigen Sie die Möglichkeit, schnell Diagramm- und Visualisieren von Resultsets
-- Die meisten administrative Aufgaben über das integrierte Terminal mithilfe von Sqlcmd oder Powershell können ausgeführt werden.
-- Müssen Sie minimale für die Assistenten-Umgebungen
-- Müssen Sie nicht tief administrative Konfiguration übernehmen
+**Verwenden Sie Azure Data Studio in folgenden Fällen**:
+- Sie müssen macOS oder Linux verwenden.
+- Sie stellen eine Verbindung mit einem SQL Server 2019-Big Data-Cluster her.
+- Sie verbringen einen Großteil Ihrer Zeit mit der Bearbeitung oder Ausführung von Abfragen.
+- Sie benötigen eine Funktion, mit der Sie Resultsets schnell visualisieren und in Diagrammen darstellen können.
+- Sie können die meisten administrativen Aufgaben mit sqlcmd oder PowerShell über das integrierte Terminal ausführen.
+- Sie benötigen nur selten die Funktionen eines Assistenten.
+- Sie müssen keine umfassende oder detaillierte administrative Konfiguration durchführen.
 
-**SQL Server Management Studio verwenden, wenn Sie:**
-- Aufgaben für die datenbankverwaltung verbringen Sie die meiste Zeit
-- Eine umfassende administrative Konfiguration durchführen
-- Machen die sicherheitsverwaltung, einschließlich benutzerverwaltung, sicherheitsrisikobewertung und Konfiguration von Sicherheitsfunktionen
-- Die Berichte für SQL Server Query Store verwenden
-- Müssen Sie Performance tuning Berater und Dashboards verwenden
-- Import/Export von DACPAC-Dateien durchführen
-- Benötigen Sie Zugriff auf registrierte Server, und steuern möchten, SQL Server-Dienste auf Windows
+**Verwenden Sie SQL Server Management Studio in folgenden Fällen**:
+- Sie verbringen einen Großteil Ihrer Zeit mit Aufgaben für die Datenbankverwaltung.
+- Sie führen umfassende oder detaillierte administrative Konfigurationsaufgaben durch.
+- Sie sind für die Sicherheitsverwaltung zuständig, einschließlich der Benutzerverwaltung, der Sicherheitsrisikobewertung und der Konfiguration von Sicherheitsfeatures.
+- Sie nutzen die Berichte für den SQL Server-Abfragespeicher.
+- Sie benötigen Ratgeber und Dashboards für die Leistungsoptimierung.
+- Sie importieren bzw. exportieren DACPACs.
+- Sie müssen auf registrierte Server zugreifen und möchten SQL Server-Dienste unter Windows steuern.
 
 ### <a name="shell"></a>Shell
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure-Anmeldung|Ja|Ja|
 |Dashboard|Ja||
@@ -87,38 +87,38 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 |Objekt-Explorer|Ja|Ja|
 |Skripterstellung für Objekte|Ja|Ja|
 |Projektsystem|Ja||
-|Wählen Sie aus der Tabelle|Ja|Ja|
+|Aus Tabelle auswählen|Ja|Ja|
 |Quellcodeverwaltung|Ja||
 |Aufgabenbereich|Ja||
-|Design|Ja||
-|Dunkel-Modus|Ja||
+|Designs|Ja||
+|Dunkler Modus|Ja||
 |Azure-Ressourcen-Explorer|Vorschau||
 |Assistent zum Generieren von Skripts||Ja|
-|Importieren/Exportieren DACPAC-Datei||Ja|
-|Objekt – Eigenschaften||Ja|
+|DACPACs importieren/exportieren||Ja|
+|Objekteigenschaften||Ja|
 |Tabellen-Designer||Ja|
 
 
 ### <a name="query-editor"></a>Abfrage-Editor
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Diagramm-Viewer|Ja||
-|Exportieren Sie Ergebnisse in CSV, JSON, XLSX|Ja||
+|Diagrammviewer|Ja||
+|Ergebnisse im CSV-, JSON- oder XLSX-Format exportieren|Ja||
 |IntelliSense|Ja|Ja|
 |Codeausschnitte|Ja|Ja|
-|Plan angezeigt werden|Vorschau|Ja|
+|Plan anzeigen|Vorschau|Ja|
 |Clientstatistiken||Ja|
-|Live-Abfragestatistik||Ja|
+|Liveabfragestatistiken||Ja|
 |Abfrageoptionen||Ja|
 |Ergebnisse in Datei||Ja|
 |Ergebnisse in Text||Ja|
-|Räumliche Viewer||Ja|
+|Räumlicher Viewer||Ja|
 |SQLCMD||Ja|
 
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Linux|Ja||
 |macOS|Ja||
@@ -126,27 +126,27 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 
 ### <a name="data-engineering"></a>Datentechnik
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Erstellen externer Tabellen-Assistent|Vorschau||
+|Assistent zum Erstellen externer Tabellen|Vorschau||
 |HDFS-Integration|Vorschau||
 |Notebooks|Vorschau||
 
 ### <a name="database-administration"></a>Datenbankverwaltung
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Sicherung / Wiederherstellung|Ja|Ja|
-|Flatfile-Datei importieren|Vorschau|Ja|
+|Sicherung/Wiederherstellung|Ja|Ja|
+|Flatfile-Import|Vorschau|Ja|
 |SQL-Agent|Vorschau|Ja|
 |SQL Profiler|Vorschau|Ja|
 |Always On||Ja|
 |Always Encrypted||Ja|
 |Assistent zum Kopieren von Daten||Ja|
-|Daten-Datenbankoptimierungsratgeber||Ja|
-|Fehler-Protokoll-Viewer||Ja|
+|Ratgeber für die Datenoptimierung||Ja|
+|Fehlerprotokollanzeige||Ja|
 |Wartungspläne||Ja|
-|Multi-Server-Abfrage||Ja|
+|Abfrage mehrerer Server||Ja|
 |Richtlinienbasierte Verwaltung||Ja|
 |PolyBase||Ja|
 |Abfragespeicher||Ja|
@@ -161,9 +161,9 @@ Informationen zum Erstellen von Erweiterungen finden Sie unter [Extension author
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Herunterladen und installieren [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
-- [Verbinden und Abfragen von SQL Server](quickstart-sql-server.md)
-- [Verbinden und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
+- [Herunterladen und Installieren von [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Herstellen einer Verbindung mit und Abfragen von SQL Server](quickstart-sql-server.md)
+- [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 

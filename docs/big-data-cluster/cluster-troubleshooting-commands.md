@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419478"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841560"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Überwachen und Behandeln von Problemen eines Big Data-Clusters für SQL Server
 
@@ -92,7 +92,7 @@ Wenn ein Fehler aufgetreten ist, wird Ihnen dieser manchmal unter den aktuellen 
 Sie können die Protokolle für Container abrufen, die in einem Pod ausgeführt werden. Der folgende Befehl ruft die Protokolle für alle Container im Pod `master-0` ab und gibt sie in einer Datei mit dem Namen `master-0-pod-logs.txt` aus:
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Abrufen des Status von Diensten
@@ -111,7 +111,7 @@ kubectl get svc -n mssql-cluster
 
 Die folgenden Dienste unterstützen externe Verbindungen mit dem Big-Data-Cluster:
 
-| Dienst | und Beschreibung |
+| Dienst | Beschreibung |
 |---|---|
 | **master-svc-external** | Bietet Zugriff auf die Masterinstanz.<br/>(**EXTERNAL-IP,31433** und der **SA**-Benutzer) |
 | **controller-svc-external** | Unterstützt Tools und Clients, die den Cluster verwalten. |
@@ -133,36 +133,6 @@ Im folgenden Beispiel werden ausführliche Informationen zum Dienst **master-svc
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>Ausführen von Befehlen in einem Container
-
-Wenn Sie eine bestimmte Aufgabe nicht durch vorhandene Tools oder die Infrastruktur ausführen können, ohne sich im Kontext des Containers zu befinden, können Sie sich mithilfe des Befehls `kubectl exec` beim Container anmelden. Möglicherweise müssen Sie z. B. überprüfen, ob eine bestimmte Datei vorhanden ist, oder Sie müssen Dienste im Container neu starten. 
-
-Verwenden Sie die folgende Syntax, um den Befehl `kubectl exec` zu verwenden:
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-Die folgenden beiden Abschnitte umfassen zwei Beispiele zur Ausführung eines Befehls in einem bestimmten Container.
-
-### <a id="restartsql"></a> Anmelden bei einem bestimmten Container und Neustarten des SQL Server-Prozesses
-
-Im folgenden Beispiel wird gezeigt, wie Sie den SQL Server-Prozess im Container `mssql-server` im Pod `master-0` neu starten:
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> Anmelden bei einem bestimmten Container und Neustarten von Diensten in einem Container
- 
-Im folgenden Beispiel wird gezeigt, wie alle durch **supervisord** verwalteten Dienste neu gestartet werden: 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> Kopieren von Dateien

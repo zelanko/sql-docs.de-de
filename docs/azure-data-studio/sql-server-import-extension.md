@@ -1,7 +1,7 @@
 ---
-title: Erweiterung für SQL Server-Import
+title: Erweiterung „SQL Server Import“
 titleSuffix: Azure Data Studio
-description: Installieren und Verwenden der SQL Server-Import-Erweiterung (Vorschau) für Azure Data Studio
+description: Installieren und Verwenden der Erweiterung „SQL Server Import“ (Vorschau) für Azure Data Studio
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
@@ -11,53 +11,53 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959124"
 ---
-# <a name="sql-server-import-extension-preview"></a>SQL Server-Import-Erweiterung (Vorschau)
+# <a name="sql-server-import-extension-preview"></a>Erweiterung „SQL Server Import“ (Vorschau)
 
-Die Erweiterung für SQL Server-Import (Vorschau) konvertiert TXT- und CSV-Dateien in einer SQL-Tabelle. Dieser Assistent führt eine Microsoft Research-Frameworks, bekannt als [Program Synthesis using Beispiele (Text)](https://microsoft.github.io/prose/) , die Datei mit minimalen Benutzereingaben auf intelligente Weise zu analysieren. Es ist ein leistungsfähiges Framework für die Datenanalyse, und es ist die gleiche Technologie, die unterstützt Flash Fill in Microsoft Excel
+Die Erweiterung „SQL Server Import“ (Vorschau) konvertiert TXT- und CSV-Dateien in eine SQL-Tabelle. Der Assistent nutzt das Microsoft Research-Framework [PROSE (Program Synthesis using Examples)](https://microsoft.github.io/prose/), um die Dateien mit minimalen Benutzereingaben auf intelligente Weise zu analysieren. PROSE stellt ein leistungsstarkes Framework für das Data Wrangling dar und ist die gleiche Technologie, auf der die Blitzvorschau in Microsoft Excel basiert.
 
-Weitere Informationen zu den SSMS-Version dieser Funktion finden Sie [in diesem Artikel](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
+Informationen über die SSMS-Version dieses Features finden Sie in [diesem Artikel](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
 
 
-## <a name="install-the-sql-server-import-extension"></a>Installieren Sie die SQL Server-Import-Erweiterung
+## <a name="install-the-sql-server-import-extension"></a>Installieren der Erweiterung „SQL Server Import“
 
-1. Um Erweiterungs-Manager öffnen und den Zugriff auf die verfügbaren Erweiterungen, wählen Sie das Symbol für Erweiterungen oder **Erweiterungen** in die **Ansicht** Menü.
-2. Wählen Sie eine verfügbare Erweiterung, um seine Details anzuzeigen.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, klicken Sie auf das Symbol für Erweiterungen, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
 
-   ![Importieren von Erweiterungs-manager](media/sql-server-import-extension/import-wizard-install.png)
+   ![Erweiterungs-Manager mit Erweiterung für den Import](media/sql-server-import-extension/import-wizard-install.png)
 
-1. Wählen Sie die gewünschte Erweiterung und **installieren** es.
-2. Wählen Sie **Reload** zum Aktivieren der Erweiterung (nur beim ersten eine Erweiterung der Installation erforderlich).
+1. Wählen Sie die gewünschte Erweiterung aus, und **installieren** Sie diese.
+2. Klicken Sie auf **Erneut laden**, um die Erweiterung zu aktivieren (nur bei der Erstinstallation einer Erweiterung erforderlich).
 
-## <a name="start-import-wizard"></a>Tabellenimport-Assistenten starten
+## <a name="start-import-wizard"></a>Starten des Import-Assistenten
 
-1. Um SQL Server-Import zu starten, stellen Sie zunächst eine Verbindung mit einem Server, auf die Registerkarte "Server".
-2. Nachdem Sie eine Verbindung herstellen, einen Drilldown für die Zieldatenbank, die Sie eine Datei in eine SQL-Tabelle importieren möchten.
-3. Mit der rechten Maustaste auf die Datenbank, und klicken Sie auf **Tabellenimport-Assistenten**.
-    ![Öffnen der tabellenimport-Assistenten](media/sql-server-import-extension/open-import-wizard.png)
+1. Um SQL Server Import zu starten, stellen Sie zunächst auf der Registerkarte „Server“ eine Verbindung mit einem Server her.
+2. Wenn die Verbindung hergestellt ist, zeigen Sie die Detailinformationen zu der Zieldatenbank an, aus der Sie eine Datei in eine SQL-Tabelle importieren möchten.
+3. Klicken Sie mit der rechten Maustaste auf die Datenbank, und klicken Sie auf **Import-Assistent**.
+    ![Öffnen des Import-Assistenten](media/sql-server-import-extension/open-import-wizard.png)
 
 ## <a name="importing-a-file"></a>Importieren einer Datei
-1. Wenn Sie mit der rechten Maustaste auf um den Assistenten zu starten, sind Server und Datenbank bereits automatisch ausgefüllten. Wenn es andere aktiven Verbindungen, können Sie in der Dropdownliste auswählen. 
+1. Wenn Sie mit der rechten Maustaste klicken, um den Assistenten zu starten, sind Server und Datenbank bereits automatisch ausgefüllt. Wenn weitere aktive Verbindungen bestehen, können Sie diese in der Dropdownliste auswählen. 
     
-    Wählen Sie eine Datei, indem Sie auf **durchsuchen.** Sollte den Namen der Tabelle auf den Dateinamen basierend automatisch ausgefüllt, aber Sie können auch ändern, es selbst.
+    Wählen Sie eine Datei aus, indem Sie auf **Durchsuchen** klicken. Der Tabellenname sollte basierend auf dem Dateinamen bereits automatisch ausgefüllt sein, Sie können den Namen aber auch selbst ändern.
 
-    Standardmäßig das Schema wird Dbo, aber Sie können ihn ändern. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
+    Das Schema lautet standardmäßig „dbo“, Sie können es jedoch ändern. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
     ![Eingabedatei](media/sql-server-import-extension/import-wizard-input-file.png)
-1. Der Assistent generiert eine Vorschau auf die ersten 50 Zeilen basiert. Es sind keine zusätzlichen Aktionen auf dieser Seite als überprüfen, dass die Daten korrekt aussieht. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
-    ![Öffnen der tabellenimport-Assistenten](media/sql-server-import-extension/import-wizard-preview-data.png)
-2. Auf dieser Seite können Sie Änderungen vornehmen, Spaltenname, Datentyp, ob es ein primärer Schlüssel ist oder NULL-zu ermöglichen Werte. Sie können beliebig viele Änderungen wie gewünscht festlegen. Klicken Sie auf **Importdaten** um den Vorgang fortzusetzen.
-    ![Öffnen der tabellenimport-Assistenten](media/sql-server-import-extension/import-wizard-modify-columns.png)
-3. Diese Seite bietet einen Überblick über die Aktionen, die ausgewählt werden. Sie können auch sehen, ob die Tabelle erfolgreich eingefügt. 
+1. Der Assistent generiert eine Vorschau basierend auf den ersten 50 Zeilen. Auf dieser Seite sind keine weiteren Aktionen erforderlich, außer, dass Sie überprüfen müssen, ob die Daten richtig aussehen. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.
+    ![Offener Import-Assistent](media/sql-server-import-extension/import-wizard-preview-data.png)
+2. Auf dieser Seite können Sie einige Änderungen vornehmen, z.B. für den Spaltennamen, den Datentyp, die Angabe, ob es sich um einen Primärschlüssel handelt, und Angaben dazu, ob NULL-Werte zugelassen sin. Sie können so viele Änderungen vornehmen, wie Sie wünschen. Klicken Sie auf **Daten importieren**, um fortzufahren.
+    ![Offener Import-Assistent](media/sql-server-import-extension/import-wizard-modify-columns.png)
+3. Diese Seite bietet eine Zusammenfassung der ausgewählten Aktionen. Sie können auch ermitteln, ob Ihre Tabelle erfolgreich eingefügt wurde oder nicht. 
 
-    Können Sie entweder auf **Fertig "," Previous** Wenn Sie Änderungen vornehmen müssen oder **neue Importdatei** um schnell eine andere Datei zu importieren.
-    ![Öffnen der tabellenimport-Assistenten](media/sql-server-import-extension/import-wizard-summary.png)
-1. Überprüfen Sie, ob die Tabelle erfolgreich importiert, durch Ihre Zieldatenbank zu aktualisieren oder durch Ausführen einer SELECT-Abfrage auf den Namen der Tabelle.
+    Sie können auf **Zurück** klicken, wenn Sie Änderungen vornehmen müssen, oder Sie klicken auf **Neue Datei importieren**, um schnell eine weitere Datei zu importieren.
+    ![Offener Import-Assistent](media/sql-server-import-extension/import-wizard-summary.png)
+1. Überprüfen Sie, ob Ihre Tabelle erfolgreich importiert wurde, indem Sie Ihre Zieldatenbank aktualisieren oder eine SELECT-Query für den Tabellennamen ausführen.
 
 ## <a name="next-steps"></a>Nächste Schritte
-- Weitere Informationen zum Importassistenten finden unter den [Blogbeitrag](https://cloudblogs.microsoft.com/sqlserver/2018/08/30/the-august-release-of-sql-operations-studio-is-now-available/).
-- Weitere Informationen zu PROSE finden unter den [Dokumentation.](https://microsoft.github.io/prose/)
+- Weitere Informationen über den Import-Assistenten finden Sie in diesem [Blogbeitrag](https://cloudblogs.microsoft.com/sqlserver/2018/08/30/the-august-release-of-sql-operations-studio-is-now-available/).
+- Weitere Informationen über PROSE finden Sie in der [Dokumentation](https://microsoft.github.io/prose/).

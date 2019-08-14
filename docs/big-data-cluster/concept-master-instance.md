@@ -1,7 +1,7 @@
 ---
-title: Was ist der Masterinstanz?
+title: Was ist die Masterinstanz?
 titleSuffix: SQL Server big data clusters
-description: Dieser Artikel beschreibt die SQL Server-Masterinstanz in einer SQL Server-2019 big Data-Cluster (Vorschau).
+description: In diesem Artikel wird die SQL Server-Masterinstanz in einem Big Data-Cluster für SQL Server 2019 (Vorschau) beschrieben.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,65 +9,65 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958701"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822694"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Was ist die Masterinstanz in einer SQL Server-big Data-Cluster?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Was ist die Masterinstanz in einem SQL Server-Big Data Cluster?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel beschreibt die Rolle der *SQL Server-Masterinstanz* in einer SQL Server-2019 big Data-Cluster. Die master-Instanz ist eine SQL Server-Instanz, die in einer SQL Server-big Data-Cluster ausgeführt [Steuerungsebene](big-data-cluster-overview.md#controlplane).
+In diesem Artikel wird die Rolle der *SQL Server Master Instanz* in einem Big Data Cluster für SQL Server 2019 beschrieben. Die Master Instanz ist eine SQL Server-Instanz, die in einem Big Data Cluster ausgeführt wird, um Konnektivität, horizontal hochskalierbare Abfragen, Metadaten und Benutzer Datenbanken sowie Machine Learning-Dienste zu verwalten.
 
-Die SQL Server-Masterinstanz bietet die folgenden Funktionen:
+Die SQL Server-Masterinstanz bietet folgende Funktionen:
 
 ## <a name="connectivity"></a>Connectivity
 
-Master SQL Server-Instanz wird ein extern zugänglichen TDS-Endpunkt für den Cluster. Sie können Anwendungen oder SQL Server-Tools wie Azure Data Studio verbinden, oder SQL Server Management Studio an diesen Endpunkt wie würden jede andere SQL Server-Instanz.
+Die SQL Server-Masterinstanz stellt einen extern erreichbaren TDS-Endpunkt für den Cluster bereit. Sie können Anwendungen oder SQL Server-Tools wie Azure Data Studio oder SQL Server Management Studio mit diesem Endpunkt verbinden, genauso wie mit jeder anderen SQL Server-Instanz.
 
-## <a name="scale-out-query-management"></a>Verwaltung von hochskalierungsabfragen
+## <a name="scale-out-query-management"></a>Horizontale Skalierung der Abfrageverwaltung
 
-Master SQL Server-Instanz enthält, die horizontale Skalierung-Abfrage-Engine, die verwendet wird, um Abfragen zu SQL Server-Instanzen auf Knoten im Verteilen der [compute Pool](concept-compute-pool.md). Die horizontale Skalierung-Abfrage-Engine bietet auch Zugriff über Transact-SQL auf alle Hive-Tabellen im Cluster ohne zusätzliche Konfiguration.
+Die SQL Server-Masterinstanz enthält die Abfrage-Engine für die horizontale Skalierung, mit der Abfragen auf SQL Server-Instanzen auf Knoten im [Computepool](concept-compute-pool.md) verteilt werden. Die Abfrage-Engine für die horizontale Skalierung bietet über Transact-SQL auch Zugriff auf alle Hive-Tabellen im Cluster, ohne dass zusätzliche Konfiguration erforderlich ist.
 
 ## <a name="metadata-and-user-databases"></a>Metadaten und Benutzerdatenbanken
 
-Zusätzlich zu den standardmäßigen SQL Server-Systemdatenbanken enthält die master-SQL-Instanz auch Folgendes:
+Zusätzlich zu den standardmäßigen SQL Server-Systemdatenbanken enthält die SQL Server-Masterinstanz Folgendes:
 
-- Eine metadatendatenbank, die HDFS-Tabellenmetadaten enthält.
-- Eine Ebene-Shard-Zuordnung
-- Details der externen Tabellen, die Zugriff auf die Datenebene für den Cluster bereitstellen.
-- PolyBase, externe Datenquellen und externe Tabellen, die in den Benutzerdatenbanken definiert.
+- Eine Metadaten-Datenbank für HDFS-Tabellenmetadaten
+- Eine Zuordnung der Datenebenenshards
+- Details aus externen Tabellen, die Zugriff auf die Clusterdatenebene bieten.
+- In Benutzerdatenbanken definierte externe PolyBase-Datenquellen und externe Tabellen.
 
-Sie können auch Ihre eigenen Benutzerdatenbanken master SQL Server-Instanz hinzufügen.
+Sie können der SQL Server-Masterdatenbank auch Ihre eigenen Benutzerdatenbanken hinzufügen.
 
-## <a name="machine-learning-services"></a>Machine Learning-Dienste
+## <a name="machine-learning-services"></a>Dienste für maschinelles Lernen
 
-SQL Server-Machine learning-Dienste ist ein Add-On-Feature der Datenbank-Engine, die zum Ausführen von Java, R und Python-Code in SQL Server verwendet. Dieses Feature basiert auf dem SQL Server Extensibility Framework, die isoliert von externer Prozessen von der Kern-Engine-Prozesse, aber die vollständige Integration mit relationalen Daten als gespeicherte Prozeduren, wie T-SQL-Skript, R oder Python-Anweisungen enthält, oder als Java, R oder T-SQL mit Python-Code.
+Die SQL Server-Dienste für maschinelles Lernen stehen als Add-On für die Datenbank-Engine zur Verfügung und werden für die Ausführung von Java-, R- und Python-Code in SQL Server verwendet. Dieses Feature basiert auf dem SQL Server-Erweiterbarkeitsframework, das externe Prozesse von den Engine-Kernprozessen isoliert, aber in Form von gespeicherten Prozeduren, T-SQL-Skript mit R- oder Python-Anweisungen oder Java-, R- oder Python-Code mit T-SQL vollständig in die relationalen Daten integriert ist.
 
-Als Teil einer SQL Server-big Data-Cluster stehen Machine Learning-Dienste für die master SQL Server-Instanz in der Standardeinstellung. Dies bedeutet, dass nach der Ausführung des externen Skripts für die master SQL Server-Instanz aktiviert ist, es ist möglich, Java, R- und Python-Skripts, die mithilfe von Sp_execute_external_script auszuführen ist.
+Als Teil eines SQL Server-Big Data-Clusters sind die Dienste für maschinelles Lernen standardmäßig in der SQL Server-Masterinstanz verfügbar. Das bedeutet, dass Sie mit „sp_execute_external_script“ Java-, R- und Python-Skripts ausführen können, sobald die externe Skriptausführung in der SQL Server-Masterinstanz aktiviert ist.
 
-### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vorteile von Machine Learning-Dienste in einer big Data-cluster
+### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Vorteile der Dienste für maschinelles Lernen in einem Big Data-Cluster
 
-SQL Server-2019 erleichtert für big Data mit verknüpft die Dimensionsdaten in der Regel in der Enterprise-Datenbank gespeichert werden. Der Wert der big Data wird erheblich erhöht, ist nicht nur in den Händen von Teilen einer Organisation, jedoch ist auch in Berichten, Dashboards und -Anwendungen enthalten. Datenanalysten können weiterhin zur gleichen Zeit, zu verwenden, die Spark/HDFS-ökosystemtools einfach und Real-Time-Zugriff auf die Daten in der master-SQL Server-Instanz und in externen Datenquellen zugegriffen werden kann _über_ der SQL Server-Master -Instanz.
+In SQL Server 2019 lassen sich Big Data ganz einfach mit den Dimensionsdaten verknüpfen, die typischerweise in einer Unternehmensdatenbank gespeichert sind. Der Wert der Big Data vervielfacht sich, wenn diese nicht nur einem Teil der Organisation zur Verfügung stehen, sondern auch in Berichte, Dashboards und Anwendungen eingebunden werden können. Gleichzeitig können Data Scientists weiter die Tools des Spark/HDFS-Ökosystems nutzen und von einfachem Echtzeitzugriff auf die Daten in der SQL Server-Masterinstanz und in den externe Datenquellen profitieren, auf die _über_ die Masterinstanz zugegriffen werden kann.
 
-SQL Server-2019 big Data-Cluster können Sie mehr erreichen mit Ihrem Enterprise Data Lakes. SQL Server-Entwickler und Wirtschaftsanalytiker können Aktionen ausführen:
+Mit Big Data-Clustern für SQL Server 2019 können Sie einen noch größeren Mehrwert aus den Data Lakes Ihres Unternehmens erzielen. SQL Server-Entwickler und Analysten stehen folgende Möglichkeiten offen:
 
-* Erstellen Sie Anwendungen, die Nutzung von Daten aus Enterprise Data Lakes.
-* Der Grund für alle Daten mit Transact-SQL-Abfragen.
-* Verwenden Sie die vorhandene Ökosystem aus SQL Server-Tools und Anwendungen aufrufen und Analysieren von Daten des Unternehmens ein.
-* Reduzieren Sie den Bedarf für die datenverschiebung durch Virtualisieren und Datamarts.
-* Verwenden von Spark für big Data-Szenarien weiterhin.
-* Erstellen Sie intelligenter Anwendungen, die mithilfe von Spark oder SQL Server zum Trainieren von Modellen über Data Lakes.
-* Operationalisieren von Modellen in den Produktionsdatenbanken für eine optimale Leistung.
-* Stream-Daten direkt in der Enterprise Datamarts für die Analyse in Echtzeit.
-* Untersuchen Sie Daten visuell mit interaktive Analyse und BI-Tools.
+* Sie können Anwendungen erstellen, die Daten aus den Data Lakes des Unternehmens verwenden.
+* Sie können mithilfe von Transact-SQL-Abfragen Schlussfolgerungen aus allen Daten ziehen.
+* Sie können das vorhandene Ökosystem mit SQL Server-Tools und -Anwendungen verwenden, um auf Unternehmensdaten zuzugreifen und diese zu analysieren.
+* Sie können mithilfe von Datenvirtualisierung und Data Marts die Anzahl von Datenverschiebungen reduzieren.
+* Sie können weiterhin Spark für Big Data-Szenarien verwenden.
+* Sie können mit Spark oder SQL Server intelligente Unternehmensanwendungen erstellen, um Modelle mit Data Lakes zu trainieren.
+* Sie können Modelle in Produktionsdatenbanken operationalisieren, um eine optimale Leistung zu erzielen.
+* Sie können Daten direkt in Unternehmens-Data Marts streamen, um Echtzeitanalysen durchzuführen.
+* Sie können Daten mithilfe von interaktiven Analyse- und BI-Tools visuell erkunden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
+In den folgenden Artikeln finden Sie weitere Informationen zu den Big-Data-Clustern für SQL Server:
 
-- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) (Workshop: Big Data-Cluster für SQL Server – Architektur)

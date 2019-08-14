@@ -12,40 +12,40 @@ author: SQLvariant
 ms.author: aanelson
 manager: matthend
 ms.openlocfilehash: c7a2dbdccf92a52d5733a04915acc3f76dc3f033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "65105948"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>PowerShell-Editor-Unterstützung für Azure Data Studio
 
-Diese Erweiterung bietet umfassende PowerShell-Editor-Unterstützung in [Studio für Azure Data](https://github.com/Microsoft/azuredatastudio).
-Jetzt können Sie schreiben und Debuggen von PowerShell-Skripts, die mithilfe der ausgezeichneten IDE-ähnliche-Schnittstelle, die Azure Data Studio bereitstellt.
+Diese Erweiterung bietet umfassende Unterstützung für den PowerShell-Editor in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio).
+Jetzt können Sie PowerShell-Skripts mit der ausgezeichneten IDE-ähnlichen Schnittstelle schreiben und debuggen, die Azure Data Studio bereitstellt.
 
 ![PowerShell-Erweiterung](media/powershell-extension/powershell-extension.png)
 
 
-## <a name="features"></a>Features
+## <a name="features"></a>Funktionen
 
 - Syntaxhervorhebung
 - Codeausschnitte
-- IntelliSense für Cmdlets und vieles mehr
-- Regel-basierte Analysen, die von bereitgestellte [PowerShell Script Analyzer](http://github.com/PowerShell/PSScriptAnalyzer)
-- Gehe zu Definition von Cmdlets und Variablen
-- Suchen von Verweisen von Cmdlets und Variablen
-- Dokument und Arbeitsbereich-Symbol-Ermittlung
-- Führen Sie die ausgewählten Auswahl von Code mithilfe von PowerShell <kbd>F8</kbd>
-- Starten Sie die Onlinehilfe für das Symbol unter dem Cursor mit <kbd>STRG</kbd>+<kbd>F1</kbd>
-- Grundlegende interaktive konsolenunterstützung!
+- IntelliSense für Cmdlets und mehr
+- Von [PowerShell Script Analyzer](http://github.com/PowerShell/PSScriptAnalyzer) bereitgestellte regelbasierte Analyse
+- „Gehe zu Definition“ von Cmdlets und Variablen
+- „Verweise suchen“ von Cmdlets und Variablen
+- Ermittlung von Dokument- und Arbeitsbereichssymbolen
+- Auswahl von „Ausgewählte ausführen“ in PowerShell-Code mithilfe von <kbd>F8</kbd>
+- Starten der Onlinehilfe für das Symbol unter dem Cursor mithilfe von <kbd>STRG</kbd>+<kbd>F1</kbd>
+- Grundlegende interaktive Konsolenunterstützung!
 
 
-## <a name="installing-the-extension"></a>Die Installation der Erweiterung
+## <a name="installing-the-extension"></a>Installieren der Erweiterung
 
-Sie können das offizielle Release des PowerShell-Erweiterung installieren, indem Sie die Schritte in der [Dokumentation zu Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-Klicken Sie in den Bereich "Erweiterungen" Suchen Sie nach "PowerShell" Erweiterung, und installieren sie es.  Sie werden automatisch über alle Änderungen für die zukünftige Erweiterung benachrichtigt werden.
+Sie können das offizielle Release der PowerShell-Erweiterung installieren, indem Sie die Schritte in der [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions)-Dokumentation ausführen.
+Suchen Sie im Bereich „Erweiterungen“ nach der Erweiterung „PowerShell“, und installieren Sie sie dort.  Sie werden automatisch über alle zukünftigen Updates der Erweiterung benachrichtigt.
 
-Sie können auch ein VSIX-Paket aus installieren unsere [Seite "Releases"](https://github.com/PowerShell/vscode-powershell/releases) und installieren Sie es über die Befehlszeile ausführen:
+Sie können auch ein VSIX-Paket von unserer Seite [Releases](https://github.com/PowerShell/vscode-powershell/releases) herunterladen und über die Befehlszeile installieren:
 
 ```powershell
 azuredatastudio --install-extension PowerShell-<version>.vsix
@@ -53,39 +53,39 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 
 ## <a name="platform-support"></a>Plattformunterstützung
 
-- **Windows 7 bis 10** mit Windows PowerShell Version 3 und höher, und PowerShell Core
-- **Linux** mit PowerShell Core (alle PowerShell-unterstützten Distributionen)
-- **MacOS** mit PowerShell Core
+- **Windows 7 bis 10** mit Windows PowerShell V3 und höher und PowerShell Core
+- **Linux** mit PowerShell Core (alle von PowerShell unterstützten Distributionen)
+- **macOS** mit PowerShell Core
 
-Lesen der [– häufig gestellte Fragen](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) finden Sie Antworten auf häufig gestellte Fragen.
+In den [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) finden Sie Antworten auf häufig gestellte Fragen.
 
 ## <a name="installing-powershell-core"></a>Installieren von PowerShell Core
 
-Wenn Sie Azure Data Studio unter MacOS oder Linux ausführen, müssen Sie auch PowerShell Core zu installieren.
+Wenn Sie Azure Data Studio unter macOS oder Linux ausführen, müssen Sie möglicherweise auch PowerShell Core installieren.
 
-PowerShell Core ist ein Open-Source-Projekt auf [GitHub](https://github.com/powershell/powershell).
-Weitere Informationen zum Installieren von PowerShell Core unter MacOS oder Linux-Plattformen finden Sie unter den folgenden Artikeln:
+PowerShell Core ist ein Open Source-Projekt auf [GitHub](https://github.com/powershell/powershell).
+Weitere Informationen zur Installation von PowerShell Core auf macOS- oder Linux-Plattformen finden Sie in den folgenden Artikeln:
 
 - [Installieren von PowerShell Core unter Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
 - [Installieren von PowerShell Core unter macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>Beispielskripts
 
-Es gibt einige Beispielskripts in der Erweiterungs `examples` Ordner, den Sie verwenden können, um PowerShell zum Bearbeiten und Debuggen Funktionen zu ermitteln.  Sehen Sie sich den enthaltenen ["Readme.MD"](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md) Datei, um weitere Informationen zu deren Verwendung.
+Im `examples`-Ordner der Erweiterung finden Sie einige Beispielskripts, mit denen Sie die PowerShell-Funktionen zum Bearbeiten und Debuggen erkunden können.  Weitere Informationen zur Verwendung finden Sie in der enthaltenen [README.md](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md)-Datei.
 
-In diesem Ordner finden Sie unter folgendem Pfad:
+Dieser Ordner befindet im folgenden Pfad:
 
 ```powershell
 $HOME/.azuredatastudio/extensions/ms-vscode.PowerShell-<version>/examples
 ```
 
-oder wenn Sie die Preview-Version der Erweiterung verwenden
+Wenn Sie die Vorschauversion der Erweiterung verwenden, befindet sich der Ordner hier:
 
  ```powershell
 $HOME/.azuredatastudio/extensions/ms-vscode.powershell-preview-<version>/examples
 ```
 
-Zum Öffnen/Beispiele für die der Erweiterung in Azure Data Studio anzeigen, führen Sie den folgenden Code aus der PowerShell-Eingabeaufforderung ein:
+Um die Beispiele der Erweiterung in Azure Data Studio zu öffnen und anzuzeigen, führen Sie den folgenden Code an der PowerShell-Eingabeaufforderung aus:
 
 ```powershell
 azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.PowerShell-*\examples)[-1]
@@ -93,53 +93,53 @@ azuredatastudio (Get-ChildItem $Home\.azuredatastudio\extensions\ms-vscode.Power
 
 ### <a name="creating-and-opening-files"></a>Erstellen und Öffnen von Dateien
 
-Verwenden Sie zum Erstellen und öffnen Sie eine neue Datei im Editor, und das New-EditorFile aus in das integrierte Terminal von PowerShell.
+Um im Editor eine neue Datei zu erstellen und zu öffnen, verwenden Sie den Befehl „New-EditorFile“ im integrierten PowerShell-Terminal.
 
 ```powershell
 PS C:\temp> New-EditorFile ExportData.ps1
 ```
 
-Dieser Befehl kann für einen beliebigen Dateityp, nicht nur die PowerShell-Dateien.
+Dieser Befehl funktioniert für jeden Dateityp, nicht nur für PowerShell-Dateien.
 
 ```powershell
 PS C:\temp> New-EditorFile ImportData.py
 ```
 
-Um eine oder mehrere Dateien in Azure Data Studio zu öffnen, verwenden die `Open-EditorFile` Befehl.
+Um eine oder mehrere Dateien in Azure Data Studio zu öffnen, verwenden Sie den Befehl `Open-EditorFile`.
 
 ```powershell
 Open-EditorFile ExportData.ps1, ImportData.py
 ```
 
-### <a name="no-focus-on-console-when-executing"></a>Ohne Fokus auf die Konsole beim Ausführen
+### <a name="no-focus-on-console-when-executing"></a>Kein Fokus auf der Konsole beim Ausführen
 
-Sie für diese Benutzer, die für die Arbeit mit SSMS vertraut sind, dann wissen, die Fähigkeit zum Ausführen einer Abfrage und dann wird es noch Mal erneut ausführen ohne wieder in den Abfragebereich zu wechseln.  In diesem Fall das Standardverhalten des Code-Editor merkwürdig erscheinen, Sie fühlen sich möglicherweise.  Zu den Fokus im Editor, beim Ausführen von mit <kbd>F8</kbd> ändern Sie die folgende Einstellung:
+Wenn Sie mit der Arbeit mit SSMS vertraut sind, sind Sie daran gewöhnt, eine Abfrage ausführen und erneut ausführen zu können, ohne zum Abfragebereich zurückkehren zu müssen.  In diesem Fall kommt Ihnen das Standardverhalten des Code-Editors möglicherweise etwas fremd vor.  Um den Fokus im Editor beizubehalten, wenn Sie den Code mit <kbd>F8</kbd> ausführen, ändern Sie die folgende Einstellung:
 
 ```json
 "powershell.integratedConsole.focusConsoleOnExecute": false
 ```
 
-Der Standardwert ist `true` aus Gründen der Barrierefreiheit.
+Der Standardwert lautet aus Gründen der Barrierefreiheit `true`.
 
-Beachten Sie diese Einstellung verhindert, dass den Fokus an der Konsole ändern, selbst wenn Sie einen Befehl, der explizit Aufrufe für die Eingabe, wie nutzen `Get-Credential`.
+Beachten Sie, dass diese Einstellung verhindert, dass der Fokus zur Konsole wechselt, auch wenn Sie einen Befehl verwenden, der explizit eine Eingabe erfordert, wie z.B. `Get-Credential`.
 
-## <a name="sql-powershell-examples"></a>SQL PowerShell-Beispiele
-Um diese Beispiele (siehe unten) zu verwenden, müssen Sie installieren das SqlServer-Modul aus der [PowerShell-Katalog](https://www.powershellgallery.com/packages/SqlServer).
+## <a name="sql-powershell-examples"></a>SQL-PowerShell-Beispiele
+Um diese Beispiele (unten) verwenden zu können, müssen Sie das Modul „SqlServer“ aus dem [PowerShell-Katalog](https://www.powershellgallery.com/packages/SqlServer) installieren.
 
 ```powershell
 Install-Module -Name SqlServer
 ```
 
 > [!NOTE]
-> Mit Version `21.1.18102` und höher, die `SqlServer` -Modul unterstützt [PowerShell Core](https://github.com/PowerShell/PowerShell) 6.2 und, zusätzlich zu Windows PowerShell.
+> Ab Version `21.1.18102` unterstützt das `SqlServer`-Modul zusätzlich zu Windows PowerShell auch [PowerShell Core 6.2](https://github.com/PowerShell/PowerShell) und höher.
 
-In diesem Beispiel verwenden wir die `Get-SqlInstance` Cmdlet zum Abrufen von Server-SMO-Objekte für ServerA und ServerB.  Die Standardausgabe für mit diesem Befehl den Instanznamen enthalten Version, Service Pack & CU-Update-Level-Instanzen.
+In diesem Beispiel wird das `Get-SqlInstance`-Cmdlet verwendet, um die Server-SMO-Objekte für ServerA und ServerB abzurufen.  Die Standardausgabe für diesen Befehl enthält den Instanznamen, die Version, das Service Pack und die CU-Updateebene der Instanzen.
 
 ```powershell
 Get-SqlInstance -ServerInstance ServerA, ServerB
 ```
 
-Hier ist ein Beispiel von möglichen Ausgabe:
+Die Ausgabe sieht ähnlich wie das folgende Beispiel aus:
 
 ```
 Instance Name             Version    ProductLevel UpdateLevel  HostPlatform HostDistribution
@@ -147,21 +147,21 @@ Instance Name             Version    ProductLevel UpdateLevel  HostPlatform Host
 ServerA                   13.0.5233  SP2          CU4          Windows      Windows Server 2016 Datacenter
 ServerB                   14.0.3045  RTM          CU12         Linux        Ubuntu
 ```
-Die `SqlServer` -Modul enthält einen Anbieter mit dem Namen `SQLRegistration` können Sie die folgenden Typen von gespeicherten SQL Server-Verbindungen programmgesteuert zugreifen:
+Das `SqlServer`-Modul enthält einen Anbieter namens `SQLRegistration`, mit dem Sie programmgesteuert auf die folgenden Arten gespeicherter SQL Server-Verbindungen zugreifen können:
 
-+ Datenbank-Engine-Server (registrierten Server)
-+ Zentrale Verwaltungsserver (CMS)
++ Datenbank-Engine-Server (registrierte Server)
++ Zentraler Verwaltungsserver
 + Analysis Services
 + Integration Services
 + Reporting Services
 
- Im folgenden Beispiel werden wir eine `dir` (alias für `Get-ChildItem`) zum Abrufen der Liste aller SQL Server-Instanzen, die in der Datei registrierte Server aufgeführt.
+ Im folgenden Beispiel wird ein `dir`-Befehl (Alias für `Get-ChildItem`) verwendet, um die Liste aller SQL Server-Instanzen abzurufen, die in der Datei mit den registrierten Servern aufgeführt sind.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
 ```
 
-Hier ist ein Beispiel von möglichen Ausgabe aussehen könnte:
+Die Ausgabe sieht ähnlich wie das folgende Beispiel aus:
 
 ```powershell
 Mode Name
@@ -173,9 +173,9 @@ Mode Name
 -    localhost\SQL2017
 ```
 
-Für viele Vorgänge, bei denen eine Datenbank oder Objekte innerhalb einer Datenbank, die `Get-SqlDatabase` Cmdlet kann verwendet werden.  Wenn Sie Werte für das Angeben der `-ServerInstance` und `-Database` Parameter nur dieses eine Datenbank-Objekt abgerufen werden soll.  Aber wenn Sie nur angeben der `-ServerInstance` Parameter, eine vollständige Liste aller Datenbanken in dieser Instanz zurückgegeben.
+Bei vielen Vorgängen, die eine Datenbank oder Objekte in einer Datenbank einbeziehen, kann das Cmdlet `Get-SqlDatabase` verwendet werden.  Wenn Sie Werte für den `-ServerInstance`-Parameter und den `-Database`-Parameter angeben, wird nur dieses Datenbankobjekt abgerufen.  Wenn Sie jedoch nur den `-ServerInstance`-Parameter angeben, wird eine vollständige Liste aller Datenbanken in dieser Instanz zurückgegeben.
 
-Hier ist ein Beispiel von möglichen Ausgabe:
+Die Ausgabe sieht ähnlich wie das folgende Beispiel aus:
 
 ```
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -192,7 +192,7 @@ tempdb               Normal       72.00 MB   61.25 MB Simple       140 sa
 WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 ```
 
-Im folgenden Beispiel verwendet die `Get-SqlDatabase` -Cmdlet zum Abrufen einer Liste aller Datenbanken auf der Serverinstanz ServerB präsentiert eine Tabellenraster (mithilfe der `Out-GridView` Cmdlet) auswählen, welche Datenbanken gesichert werden sollen.  Sobald der Benutzer auf die Schaltfläche "OK" klickt nur die markierten Datenbanken gesichert wird.
+Im nächsten Beispiel wird mit dem Cmdlet `Get-SqlDatabase` eine Liste aller Datenbanken auf der Instanz „ServerB“ abgerufen. Anschließend wird (mithilfe des Cmdlets `Out-GridView`) ein Raster bzw. eine Tabelle dargestellt, in dem bzw. der Sie auswählen können, welche Datenbanken gesichert werden sollen.  Sobald der Benutzer auf die Schaltfläche „OK“ klickt, werden nur die markierten Datenbanken gesichert.
 
 ```powershell
 Get-SqlDatabase -ServerInstance ServerB |
@@ -200,7 +200,7 @@ Out-GridView -PassThru |
 Backup-SqlDatabase -CompressionOption On
 ```
 
-In diesem Beispiel, in diesem Fall ruft die Liste aller SQL Server-Instanzen aufgeführt, die in der Datei registrierte Server ruft dann die `Get-SqlAgentJobHistory` welche Berichte alle fehlerhaften SQL-Agentenauftrags, seit Mitternacht für jede SQL Server-Instanz aufgeführt.
+In diesem Beispiel wird wiederum eine Liste aller SQL Server-Instanzen abgerufen, die in der Datei mit registrierten Servern aufgeführt sind. Anschließend wird das `Get-SqlAgentJobHistory`-Element abgerufen, das jeden fehlerhaften SQL Agent-Auftrag seit Mitternacht für jede aufgeführte SQL Server-Instanz meldet.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
@@ -210,7 +210,7 @@ FOREACH {
 }
 ```
 
-In diesem Beispiel werden wir eine `dir` (alias für `Get-ChildItem`), rufen Sie die Liste aller SQL Server-Instanzen, die in der Datei registrierte Server aufgeführt, und verwenden Sie dann die `Get-SqlDatabase` -Cmdlet zum Abrufen einer Liste der Datenbanken für jede dieser Instanzen.
+Im folgenden Beispiel wird ein `dir`-Befehl (Alias für `Get-ChildItem`) verwendet, um die Liste aller SQL Server-Instanzen abzurufen, die in der Datei mit den registrierten Servern aufgeführt sind. Anschließend wird das Cmdlet `Get-SqlDatabase` verwendet, um eine Liste der Datenbanken für jede dieser Instanzen abzurufen.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
@@ -220,7 +220,7 @@ FOREACH {
 }
 ```
 
-Hier ist ein Beispiel von möglichen Ausgabe:
+Die Ausgabe sieht ähnlich wie das folgende Beispiel aus:
 
 ```
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -239,17 +239,17 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 
 ## <a name="reporting-problems"></a>Melden von Problemen
 
-Wenn Sie Probleme mit der PowerShell-Erweiterung haben, finden Sie unter [Dokumentation zur Problembehandlung](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md) Informationen zur Diagnose und das Melden von Problemen.
+Wenn Probleme mit der PowerShell-Erweiterung auftreten, finden Sie in der [Dokumentation zur Problembehandlung](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md) Informationen zum Diagnostizieren und Melden von Problemen.
 
 #### <a name="security-note"></a>Sicherheitshinweis
 
-Alle Sicherheitsprobleme zu erkennen, finden Sie unter [hier](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security).
+Informationen zu Sicherheitsproblemen finden Sie [hier.](https://github.com/PowerShell/vscode-powershell/blob/master/docs/troubleshooting.md#note-on-security)
 
-## <a name="contributing-to-the-code"></a>Beitragen zum Code
+## <a name="contributing-to-the-code"></a>Mitwirken am Code
 
-Sehen Sie sich die [entwicklungsdokumentation](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md) ausführliche Informationen zum mitwirken an diese Erweiterung!
+Informationen dazu, wie Sie an dieser Erweiterung mitwirken können, finden Sie in der [Dokumentation zur Entwicklung](https://github.com/PowerShell/vscode-powershell/blob/master/docs/development.md).
 
-## <a name="maintainers"></a>Verwalter
+## <a name="maintainers"></a>Maintainer
 
 - [Keith Hill](https://github.com/rkeithhill) - [@r_keith_hill](http://twitter.com/r_keith_hill)
 - [Tyler Leonhardt](https://github.com/tylerl0706) - [@TylerLeonhardt](http://twitter.com/tylerleonhardt)
@@ -257,12 +257,12 @@ Sehen Sie sich die [entwicklungsdokumentation](https://github.com/PowerShell/vsc
 
 ## <a name="license"></a>License (Lizenz)
 
-Diese Erweiterung ist [unter MIT-Lizenz lizenziert](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Ausführliche Informationen zu den Binärdateien von Drittanbietern, die wir mit Versionen des Projekts enthalten, finden Sie unter den [drittanbieterhinweise](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt) Datei.
+Diese Erweiterung ist [unter der MIT-Lizenz lizenziert](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Informationen zu den Binärdateien von Drittanbietern, die in Releases dieses Projekts enthalten sind, finden Sie Datei mit [Hinweisen zu Drittanbietern](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Verhaltenskodex][conduct-md]
+## <a name="code-of-conductconduct-md"></a>[Verhaltensregeln][conduct-md]
 
-Dieses Projekt folgt dem [Microsoft Open Source-Verhaltenskodex][conduct-code].
-Weitere Informationen finden Sie unter den [Code von durchführen – häufig gestellte Fragen] [ conduct-FAQ] oder wenden Sie sich an [ opencode@microsoft.com ] [ conduct-email] weitere Fragen und Kommentare.
+Für dieses Projekt gelten die Microsoft-Verhaltensregeln für Open Source ([Microsoft Open Source Code of Conduct][conduct-code]).
+Um weitere Informationen zu erhalten, lesen Sie die häufig gestellten Fragen zu den Verhaltensregeln ([Code of Conduct FAQ][conduct-FAQ]), oder wenden Sie sich mit weiteren Fragen und Kommentaren an [opencode@microsoft.com][conduct-email].
 
 [conduct-code]: http://opensource.microsoft.com/codeofconduct/
 [conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/

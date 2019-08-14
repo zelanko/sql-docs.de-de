@@ -1,7 +1,7 @@
 ---
-title: Schlüsselbegriffe der Sicherheit
+title: Sicherheitskonzepte
 titleSuffix: SQL Server big data clusters
-description: Dieser Artikel beschreibt die Sicherheitskonzepte für SQL Server-2019 big Data-Cluster (Vorschau). Dies schließt ein, die die clusterendpunkte und die clusterauthentifizierung beschreibt.
+description: In diesem Artikel werden Sicherheitskonzepte für Big Data-Cluster für SQL Server 2019 (Vorschauversion) beschrieben. Der Artikel umfasst auch eine Beschreibung von Clusterendpunkten und Clusterauthentifizierung.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -10,79 +10,79 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958668"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Schlüsselbegriffe der Sicherheit für SQL Server-big Data-Cluster
+# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Sicherheitskonzepte für SQL Server-Big Data-Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Ein sichere big Data-Cluster bedeutet konsistenten und kohärenten-Unterstützung für Authentifizierung und Autorisierung Szenarien, in SQL Server und HDFS/Spark. Authentifizierung ist der Prozess der Überprüfung der Identität eines Benutzers oder der Dienst aus, und stellen Sie sicher, dass sie sind, die sie behauptet werden, dass sein. Autorisierung bezieht sich auf gewähren oder Verweigern des Zugriffs auf bestimmte Ressourcen, die basierend auf der Identität des anfordernden Benutzers. Dieser Schritt wird ausgeführt, nachdem ein Benutzer über die Authentifizierung identifiziert wurde.
+Ein sicherer Big Data-Cluster impliziert konsistente und kohärente Unterstützung für Authentifizierung- und Autorisierungsszenarien sowohl für SQL Server als auch für HDFS/Spark. Authentifizierung ist der Prozess, mit dem die Identität eines Benutzers oder Diensts überprüft und sichergestellt wird, dass der Benutzer oder Dienst das ist, was er zu sein vorgibt. Autorisierung bezieht sich auf das Gewähren oder Verweigern des Zugriffs auf bestimmte Ressourcen basierend auf der Identität des Benutzers, der den Zugriff anfordert. Dieser Schritt wird ausgeführt, nachdem ein Benutzer per Authentifizierung identifiziert wurde.
 
-Autorisierung in Big Data-Kontext erfolgt in der Regel über Zugriffssteuerungslisten (ACLs), die Zuordnen von Benutzeridentitäten mit bestimmten Berechtigungen. HDFS unterstützt Autorisierung, indem Sie Zugriff auf Dienst-APIs, die HDFS-Dateien und die Ausführung von Aufträgen beschränkt.
+Im Big Data-Kontext erfolgt die Autorisierung in der Regel über Zugriffssteuerungslisten (Access Control Lists, ACLs), die Benutzeridentitäten bestimmte Berechtigungen zuordnen. HDFS unterstützt die Autorisierung durch Einschränken des Zugriffs auf Dienst-APIs, HDFS-Dateien und Auftragsausführung.
 
-Dieser Artikel behandelt die wichtigsten sicherheitsbezogenen Konzepte in die big Data-Cluster.
+In diesem Artikel werden die wichtigsten sicherheitsbezogenen Konzepte in Big Data-Clustern erläutert.
 
-## <a name="cluster-endpoints"></a>Cluster-Endpunkte
+## <a name="cluster-endpoints"></a>Clusterendpunkte
 
-Es gibt drei Einstiegspunkte für die big Data-cluster
+Es gibt drei Einstiegspunkte für den Big Data-Cluster:
 
-* HDFS/Spark (Knox)-Gateway – Dies ist eine HTTPS-basierte-Endpunkt. Andere Endpunkte werden über diesen Proxy. HDFS/Spark-Gateway wird verwendet, für den Zugriff auf Dienste wie WebHDFS und Livy. Wenn Sie Verweise auf Knox sehen, ist dies der Endpunkt an.
+* HDFS/Spark-Gateway (Knox): Dies ist ein HTTPS-basierter Endpunkt. Andere Endpunkte werden per Proxy über diesen Endpunkt geleitet. Ein HDFS/Spark-Gateway wird für den Zugriff auf Dienste wie webHDFS und Livy verwendet. Wenn Sie Verweise auf Knox sehen – dies ist der Endpunkt.
 
-* Controllerendpunkt - big Data-Cluster Management-Dienst, der REST-APIs, die für die Verwaltung des Clusters verfügbar macht. Einige Tools sind auch über diesen Endpunkt zugegriffen werden.
+* Controllerendpunkt: Verwaltungsdienst für Big Data-Cluster, der REST-APIs für die Verwaltung des Clusters verfügbar macht. Über diesen Endpunkt wird auch auf einige Tools zugegriffen.
 
-* Masterinstanz - TDS-Endpunkts für die Datenbanktools und Anwendungen im Cluster eine Verbindung mit Master für SQL Server-Instanz.
+* Masterinstanz: TDS-Endpunkt für Datenbanktools und Anwendungen zum Herstellen einer Verbindung mit der SQL Server-Masterinstanz im Cluster.
 
-![Cluster-Endpunkte](media/concept-security/cluster_endpoints.png)
+![Clusterendpunkte](media/concept-security/cluster_endpoints.png)
 
-Derzeit besteht keine Möglichkeit, Öffnung zusätzlicher Ports für den Zugriff auf den Cluster von außerhalb.
+Derzeit gibt es keine Option, zusätzliche Ports zu öffnen, um von außen auf den Cluster zuzugreifen.
 
-### <a name="how-endpoints-are-secured"></a>Wie Endpunkte gesichert werden
+### <a name="how-endpoints-are-secured"></a>Sichern von Endpunkten
 
-Sichern von Endpunkten in der big Data-Cluster erfolgt mit Kennwörtern, die sein können/aktualisiert entweder mithilfe von Umgebungsvariablen oder die CLI-Befehle. Alle internen Cluster-Kennwörter werden als Kubernetes-Geheimnisse gespeichert.  
+Endpunkte im Big Data-Cluster werden über Kennwörter gesichert, die mithilfe von Umgebungsvariablen oder CLI-Befehlen festgelegt oder aktualisiert werden können. Alle internen Clusterkennwörter werden als Kubernetes-Geheimnisse gespeichert.  
 
 ## <a name="authentication"></a>Authentifizierung
 
-Bei der Bereitstellung des Clusters an, eine Anzahl von Anmeldungen erstellt.
+Beim Bereitstellen des Clusters wird eine Reihe von Anmeldungen erstellt.
 
-Einige diese Anmeldungen sind für Dienste miteinander kommunizieren, und andere sind für Endbenutzer auf den Cluster zugreifen.
+Einige dieser Anmeldungen dienen dazu, dass Dienste miteinander kommunizieren können, andere werden von Endbenutzern für den Zugriff auf den Cluster verwendet.
 
 ### <a name="end-user-authentication"></a>Authentifizierung von Endbenutzern
-Bei der Bereitstellung des Clusters, muss eine Anzahl von Kennwörtern für Endbenutzer über Umgebungsvariablen festgelegt werden. Dies sind Kennwörter, die SQL-Administratoren und Clusteradministratoren den Zugriff auf Dienste zu verwenden:
+Beim Bereitstellen des Clusters muss mithilfe von Umgebungsvariablen eine Reihe von Kennwörtern für Endbenutzer festgelegt werden. Dies sind Kennwörter, die SQL-Administratoren und Clusteradministratoren für den Zugriff auf Dienste verwenden:
 
-Controller-Benutzername:
- + CONTROLLER_USERNAME = < Controller_username >
+Benutzername des Controllers:
+ + CONTROLLER_USERNAME=<Benutzername_des_Controllers>
 
-Kennwort des Domänencontrollers:  
- + CONTROLLER_PASSWORD = < Controller_password >
+Kennwort des Controllers:  
+ + CONTROLLER_PASSWORD=<Kennwort_des_Controllers>
 
-SQL-Master-SA-Kennwort: 
- + MSSQL_SA_PASSWORD = < Controller_sa_password >
+Systemadministratorkennwort für SQL Master: 
+ + MSSQL_SA_PASSWORD=<SA_Kennwort_des_Controllers>
 
-Kennwort für den Zugriff auf das HDFS/Spark-Endpunkt:
- + KNOX_PASSWORD = < Knox_password >
+Kennwort für den Zugriff auf den HDFS/Spark-Endpunkt:
+ + KNOX_PASSWORD=<KNOX_Kennwort>
 
-### <a name="intra-cluster-authentication"></a>Innerhalb des Clusters-Authentifizierung
+### <a name="intra-cluster-authentication"></a>Clusterinterne Authentifizierung
 
-Nach der Bereitstellung des Clusters sind eine Reihe von SQL-Anmeldungen erstellt:
+Beim Bereitstellen des Clusters wird eine Reihe von SQL-Anmeldungen erstellt:
 
-* Eine spezielle SQL-Anmeldung wird in der Controller-SQL-Instanz erstellt, die vom System verwaltet, mit der Rolle "Sysadmin" ist. Das Kennwort für diese Anmeldung wird als geheimer Schlüssel K8s erfasst.
+* In der vom System verwalteten SQL-Controllerinstanz wird eine spezielle SQL-Anmeldung mit der Systemadministratorrolle erstellt. Das Kennwort für diese Anmeldung wird als K8s-Geheimnis aufgezeichnet.
 
-* Eine Sysadmin-Anmeldung wird in allen SQL-Instanzen im Cluster erstellt, die Controller besitzt und verwaltet. Es ist erforderlich für Controller, um administrative Aufgaben wie das HA-Installation oder Aktualisierung, auf diese Instanzen auszuführen. Diese Anmeldungen werden auch für die Kommunikation zwischen SQL-Instanzen, z. B. die master SQL-Instanz, die Kommunikation mit einem Datenpool innerhalb des Clusters verwendet.
+* Eine Systemadministratoranmeldung wird in allen SQL-Instanzen in dem Cluster erstellt, die der Controller besitzt und verwaltet. Diese Anmeldung ist erforderlich, damit der Controller auf diesen Instanzen Verwaltungsaufgaben wie das Setup oder Upgrade von Hochverfügbarkeit ausführen kann. Diese Anmeldungen werden auch für die clusterinterne Kommunikation zwischen SQL-Instanzen verwendet, beispielsweise für die Kommunikation der SQL-Masterinstanz mit einem Datenpool.
 
 > [!NOTE]
-> In der aktuellen Version wird nur Standardauthentifizierung unterstützt. Differenzierte Zugriffssteuerung auf Objekte von HDFS und SQL big Data-Cluster COMPUTE- und Pools ist noch nicht verfügbar.
+> Im aktuellen Release wird nur die Standardauthentifizierung unterstützt. Eine differenzierte Steuerung des Zugriffs auf HDFS-Objekte und Compute- und Datenpools für SQL-Big Data-Cluster ist noch nicht verfügbar.
 
-## <a name="intra-cluster-communication"></a>Kommunikation zwischen Clustern
+## <a name="intra-cluster-communication"></a>Clusterinterne Kommunikation
 
-Kommunikation mit nicht-SQL-Dienste in der big Data-Cluster, z.B. Livy Spark oder Spark für den Speicherpool wird mithilfe von Zertifikaten gesichert. Alle SQL Server auf SQL Server-Kommunikation wird mithilfe von SQL-Anmeldungen gesichert.
+Die Kommunikation mit Nicht-SQL-Diensten innerhalb des Big Data-Clusters wie z.B. zwischen Livy und Spark oder zwischen Spark und dem Speicherpool wird mithilfe von Zertifikaten gesichert. Die gesamte Kommunikation zwischen SQL Server-Instanzen wird mithilfe von SQL-Anmeldungen gesichert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
+In den folgenden Artikeln finden Sie weitere Informationen zu den Big Data-Clustern für SQL Server:
 
-- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) (Workshop: Big Data-Cluster für SQL Server – Architektur)

@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7bdb1eb59fd36d065df9dba0f6d6879c1a294914
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419385"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731091"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Vorgehensweise: Aktualisieren von SQL Server-Big Data-Clustern
 
@@ -42,7 +42,7 @@ Derzeit besteht die einzige Möglichkeit zum Aktualisieren eines Big Data-Cluste
    Führen Sie für CTP 2.3 oder höher den folgenden Befehl aus. Ersetzen Sie `ctp3.1` im Befehl durch die Version von **mssqlctl**, die Sie deinstallieren. Fügen Sie bei einer früheren Version als CTP 3.1 einen Bindestrich vor der Versionsnummer ein (z.B. `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall -r https://mcr.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. Installieren Sie die neueste Version von **azdata**. Mit den folgenden Befehlen wird **azdata** für CTP 3.2 installiert:
@@ -76,4 +76,4 @@ Nachdem Sie den vorherigen Big Data-Cluster entfernt und die neueste **azdata**-
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind SQL Server-Big Data-Cluster?](big-data-cluster-overview.md).
+Weitere Informationen zu Big Data-Clustern finden Sie unter [What are SQL Server big data clusters? (Was sind Big Data-Cluster für SQL Server?)](big-data-cluster-overview.md).

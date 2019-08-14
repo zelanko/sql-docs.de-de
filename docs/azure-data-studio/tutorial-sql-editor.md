@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Verwenden Sie den Transact-SQL-Editor zum Erstellen von Datenbankobjekten'
+title: 'Lernprogramm: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten'
 titleSuffix: Azure Data Studio
-description: Dieses Tutorial veranschaulicht die wichtigsten Features in Azure Data Studio, die die Arbeit mit T-SQL zu vereinfachen.
+description: Dieses Tutorial veranschaulicht die wichtigsten Features in Azure Data Studio, die die Arbeit mit T-SQL vereinfachen.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,70 +11,70 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959012"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Verwendung der Transact-SQL-Editor, um Datenbankobjekte zu erstellen: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Lernprogramm: Verwenden des Transact-SQL-Editors zum Erstellen von Datenbankobjekten – [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Erstellen und Ausführen von Abfragen, werden gespeicherte Prozeduren, Skripts usw. Datenbankexperten die zentralen Aufgaben. Dieses Tutorial veranschaulicht die wichtigsten Funktionen der T-SQL-Editor, um Datenbankobjekte zu erstellen.
+Das Erstellen und Ausführen von Abfragen, gespeicherten Prozeduren, Skripts usw. sind die Hauptaufgaben von Datenbankexperten. Dieses Tutorial veranschaulicht die wichtigsten Funktionen im T-SQL-Editor zum Erstellen von Datenbankobjekten.
 
-In diesem Tutorial erfahren Sie, wie Sie mit [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] auf:
+In diesem Tutorial lernen, wie Sie [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] für folgende Vorgänge verwenden:
 > [!div class="checklist"]
-> * Die Datenbankobjekte suchen
-> * Bearbeiten Sie Tabellendaten 
-> * Verwenden Sie Codeausschnitte schnell Schreiben von T-SQL
-> * View Database Details zum Objekt mit *"Definition einsehen"* und *Gehe zu Definition*
+> * Suchen nach Datenbankobjekten
+> * Bearbeiten von Tabellendaten 
+> * Verwenden von Codeausschnitten zum schnellen Schreiben von T-SQL-Code
+> * Anzeigen von Datenbankobjektdetails mithilfe von *Definition einsehen* und *Gehe zu Definition*
 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"* . Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
+Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
 
-- [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Verbinden und Abfragen von Azure SQL-Datenbank [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>Schnell suchen Sie ein Datenbankobjekt zu, und führen Sie eine gängige Aufgabe
+## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>Schnelles Auffinden eines Datenbankobjekts und Ausführen einer allgemeinen Aufgabe
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] bietet eine Such-Widget-Datenbankobjekte schnell zu finden. Die Ergebnisliste enthält ein Kontextmenü für allgemeine Aufgaben, die relevant für das ausgewählte Objekt wie z. B. *Daten bearbeiten* für eine Tabelle.
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] bietet ein Suchwidget, mit dem sich Datenbankobjekte schnell finden lassen. Die Ergebnisliste bietet ein Kontextmenü für allgemeine Aufgaben in Bezug auf das ausgewählte Objekt, wie z.B. *Daten bearbeiten* für eine Tabelle.
 
-1. Öffnen Sie die Server-Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, und wählen Sie **"tutorialdb"** . 
+1. Öffnen Sie die Randleiste SERVER (**STRG+G**), erweitern Sie **Datenbanken**, und wählen Sie **TutorialDB** aus. 
 
-1. Öffnen der *"tutorialdb" Dashboard* mit der rechten Maustaste **"tutorialdb"** und **verwalten** aus dem Kontextmenü:
+1. Öffnen Sie das *TutorialDB-Dashboard*, indem Sie mir der rechten Maustaste auf **TutorialDB** klicken und im Kontextmenü **Verwalten** auswählen:
 
-   ![Kontextmenü – verwalten](./media/tutorial-sql-editor/insight-open-dashboard.png)
+   ![Kontextmenü – Verwalten](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. Klicken Sie auf dem Dashboard mit der Maustaste **Dbo. Kunden** (in der Such-Widget), und wählen Sie **Daten bearbeiten**.
+1. Klicken Sie auf dem Dashboard mit der rechten Maustaste auf **dbo.Customers** (im Suchwidget), und wählen Sie **Daten bearbeiten** aus.
    
    > [!TIP]
-   > Verwenden Sie das Such-Widget für Datenbanken mit vielen Objekten um schnell zu finden, die Tabelle, Sicht usw., die Sie suchen.
+   > Verwenden Sie bei Datenbanken mit vielen Objekten das Suchwidget, um die gesuchte Tabelle oder Ansicht schnell zu finden.
 
-   ![Schnellsuche-widget](./media/tutorial-sql-editor/quick-search-widget.png)
+   ![Widget für die Schnellsuche](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Bearbeiten der **-e-Mail** -Spalte in der ersten Zeile Typ *orlando0@adventure-works.com* , und drücken Sie **EINGABETASTE** um die Änderung zu speichern.
+1. Bearbeiten Sie die Spalte **Email** in der ersten Zeile, geben Sie *orlando0@adventure-works.com* ein, und drücken Sie die **EINGABETASTE**, um die Änderung zu speichern.
 
    ![Bearbeiten von Daten](./media/tutorial-sql-editor/edit-data.png)
 
-## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Verwenden Sie T-SQL-Ausschnitten, um gespeicherte Prozeduren erstellen
+## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Verwenden von T-SQL-Codeausschnitten zum Erstellen von gespeicherten Prozeduren
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] stellt viele integrierte T-SQL-Ausschnitte für das schnelle Erstellen von Anweisungen bereit.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet viele integrierte T-SQL-Codeausschnitte zum schnellen Erstellen von Anweisungen.
 
 
-1. Öffnen Sie einen neues Abfrage-Editor, indem Sie mit **STRG + N**.
+1. Öffnen Sie einen neuen Abfrage-Editor, indem Sie **STRG+N** drücken.
 
-2. Typ **Sql** im Editor, Pfeil nach unten bis zum **SqlCreateStoredProcedure**, und drücken Sie die *Registerkarte* Schlüssel (oder *EINGABETASTE*) beim Laden des gespeicherten erstellen Ausschnitt einer Prozedur.
+2. Geben Sie im Editor **sql** ein, navigieren Sie mit der NACH-UNTEN-TASTE nach unten zu **sqlCreateStoredProcedure**, und drücken Sie die *TAB-TASTE* (oder die *EINGABETASTE*), um den Codeausschnitt mit der gespeicherten Prozedur zu laden.
 
-   ![Codeausschnitt-Liste](./media/tutorial-sql-editor/snippet-list.png)
+   ![Liste mit Codeausschnitten](./media/tutorial-sql-editor/snippet-list.png)
 
-3. Der Codeausschnitt der erstellen-gespeicherte Prozedur enthält zwei Felder, die richten Sie für schnelle Bearbeitung *StoredProcedureName* und *SchemaName*. Wählen Sie *StoredProcedureName*, mit der rechten Maustaste, und wählen **ändern alle Vorkommen**. Geben Sie nun *GetCustomer* und alle *StoredProcedureName* Einträge zu ändern, um *GetCustomer*.
+3. Der Codeausschnitt mit der gespeicherten Prozedur verfügt zur schnellen Bearbeitung über zwei Felder: *StoredProcedureName* und *SchemaName*. Wählen Sie *StoredProcedureName* aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Alle Vorkommen ändern** aus. Geben Sie jetzt *getCustomer* ein – alle *StoredProcedureName*-Einträge ändern sich zu *getCustomer*.
 
    ![Codeausschnitt](./media/tutorial-sql-editor/snippet.png)
 
-5. Ändern Sie alle Vorkommen von *SchemaName* zu *Dbo*. 
-6. Der Ausschnitt enthält für Platzhalterparameter und Textkörper, die benötigt wird aktualisiert. Die *EXECUTE* -Anweisung enthält ebenfalls Platzhaltertext, da die Prozedur verfügt über wie viele Parameter unbekannt ist. Für dieses Tutorial aktualisieren Sie den Ausschnitt es sieht so wie im folgenden Code:
+5. Ändern aller Vorkommen von *SchemaName* zu *dbo*. 
+6. Der Codeausschnitt enthält Platzhalterparameter und Text, der aktualisiert werden muss. Die *EXECUTE*-Anweisung enthält auch Platzhaltertext, da noch nicht bekannt ist, wie viele Parameter in der Prozedur enthalten sein werden. Aktualisieren Sie den Codeausschnitt für dieses Tutorial so, dass er wie der folgende Code aussieht:
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -107,36 +107,36 @@ In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"* .
     GO
     ```
     
-5. Erstellen die gespeicherte Prozedur, und geben sie einen Testlauf, drücken Sie die **F5**.
+5. Um die gespeicherte Prozedur zu erstellen und testweise auszuführen, drücken Sie **F5**.
 
-Die gespeicherte Prozedur wird jetzt erstellt, und die **Ergebnisse** Bereich zeigt den zurückgegebenen Kunden im JSON-Format. Um formatierten JSON anzuzeigen, klicken Sie auf die zurückgegebenen Datensätze. 
+Die gespeicherte Prozedur ist jetzt erstellt, und der Bereich **ERGEBNISSE** zeigt den zurückgegebenen Kunden in JSON-Format an. Um den formatierten JSON-Eintrag anzuzeigen, klicken Sie auf den zurückgegebenen Datensatz. 
 
 
-## <a name="use-peek-definition"></a>Verwenden von "Definition einsehen" 
+## <a name="use-peek-definition"></a>Verwenden von „Definition einsehen“ 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet die Möglichkeit, eine Objekte Definition mithilfe der Funktion der Peek-Definition anzuzeigen. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und "Definition einsehen" verwendet, um festzustellen, welche Spalten in einer Tabelle, um schnell den Text der gespeicherten Prozedur zu erstellen sind.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet die Möglichkeit, mithilfe des Features „Definition einsehen“ eine Objektdefinition anzuzeigen. In diesem Abschnitt wird eine zweite gespeicherte Prozedur erstellt und „Definition einsehen“ verwendet, um anzuzeigen, welche Spalten in einer Tabelle vorliegen, und schnell den Text der gespeicherten Prozedur zu erstellen.
 
-1. Öffnen Sie einen neuen Editor, indem Sie mit **STRG + N**. 
+1. Öffnen Sie einen neuen Editor, indem Sie **STRG+N** drücken. 
 
-2. Typ *Sql* im Editor, Pfeil nach unten bis zum *SqlCreateStoredProcedure*, und drücken Sie die *Registerkarte* Schlüssel (oder *EINGABETASTE*) beim Laden des gespeicherten erstellen Ausschnitt einer Prozedur.
-3. Geben Sie in *SetCustomer* für *StoredProcedureName* und *Dbo* für *SchemaName*
+2. Geben Sie im Editor *sql* ein, navigieren Sie mit der NACH-UNTEN-TASTE nach unten zu *sqlCreateStoredProcedure*, und drücken Sie die *TAB-TASTE* (oder die *EINGABETASTE*), um den Codeausschnitt mit der gespeicherten Prozedur zu laden.
+3. Geben Sie *setCustomer* als *StoredProcedureName* und *dbo* als *SchemaName* ein.
 
-3. Ersetzen Sie die @param -Platzhalter durch den folgenden Parameterdefinition:
+3. Ersetzen Sie die @param-Platzhalter durch die folgende Parameterdefinition:
 
    ```sql
    @json_val nvarchar(max)
    ```
 
-4. Ersetzen Sie den Text der gespeicherten Prozedur, durch den folgenden Code:
+4. Ersetzen Sie den Text der gespeicherten Prozedur durch den folgenden Code:
    ```sql
    INSERT INTO dbo.Customers
    ```
 
-5. In der *einfügen* Zeile Sie gerade hinzugefügt, mit der rechten Maustaste **Dbo. Kunden** , und wählen Sie **"Definition einsehen"** .
+5. Klicken Sie in der Zeile *INSERT*, die Sie gerade eingefügt haben, mit der rechten Maustaste auf **dbo.Customers**, und wählen Sie **Definition einsehen** aus.
 
-   !["Definition einsehen"](./media/tutorial-sql-editor/peek-definition.png)
+   ![Definition einsehen](./media/tutorial-sql-editor/peek-definition.png)
 
-6. Die Definition der Tabelle angezeigt, damit Sie schnell sehen welche Spalten in der Tabelle enthalten sind. Finden Sie in der Liste der Spalten auf einfache Weise die Anweisungen für die gespeicherte Prozedur abschließen. Beenden Sie die INSERT-Anweisung, die Sie zuvor hinzugefügt haben, führen den Text der gespeicherten Prozedur, und Schließen des Peek-definitionsfensters erstellen:
+6. Die Tabellendefinition wird angezeigt, sodass Sie auf einen Blick erkennen können, welche Spalten sich in der Tabelle befinden. Verwenden Sie die Spaltenliste als Referenz, um die Anweisungen für Ihre gespeicherte Prozedur ganz einfach zu erstellen. Schließen Sie die zuvor hinzugefügte INSERT-Anweisung ab, um den Text der gespeicherten Prozedur vollständig anzugeben, und schließen Sie das Fenster „Definition einsehen“:
 
    ```sql
    INSERT INTO dbo.Customers (CustomerId, Name, Location, Email)
@@ -148,8 +148,8 @@ Die gespeicherte Prozedur wird jetzt erstellt, und die **Ergebnisse** Bereich ze
                Email nvarchar(50)
     )
    ```
-7. Kommentieren Sie (oder löschen) den *EXECUTE* Befehl am Ende der Abfrage.
-8. Die gesamte Anweisung sollte wie im folgenden Code aussehen:
+7. Löschen Sie den Befehl *EXECUTE* am Ende der Abfrage, oder kommentieren Sie sie aus.
+8. Die gesamte Anweisung sollte wie der folgende Code aussehen:
 
    ```sql
    -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
@@ -178,22 +178,22 @@ Die gespeicherte Prozedur wird jetzt erstellt, und die **Ergebnisse** Bereich ze
    GO
    ```
 
-8. Zum Erstellen der *SetCustomer* gespeicherte Prozedur, drücken Sie **F5**.
+8. Um die gespeicherte Prozedur *setCustomer* zu erstellen, drücken Sie **F5**.
 
-## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Verwenden Sie Abfrageergebnissen als JSON-Code zum Testen der SetCustomer, die gespeicherte Prozedur speichern
+## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Verwenden von „Abfrageergebnisse als JSON speichern“ zum Testen der gespeicherten Prozedur „setCustomer“
 
-Die *SetCustomer* gespeicherte Prozedur, die im vorherigen Abschnitt erstellten erfordert JSON Daten übergeben werden, in der *@json_val* Parameter. Dieser Abschnitt beschreibt die abzurufenden etwas ordnungsgemäß formatierter JSON-Code für den Parameter übergeben, damit Sie die gespeicherte Prozedur testen können.
+Die im vorherigen Abschnitt erstellte gespeicherte Prozedur *setCustomer* erfordert JSON-Daten für die Übergabe an den *@json_val* -Parameter. In diesem Abschnitt wird erläutert, wie Sie ordnungsgemäß formatierte JSON-Daten zum Übergeben an den Parameter erhalten, damit Sie die gespeicherte Prozedur testen können.
 
-1. In der **Server** mit der rechten Maustaste der Randleiste die *Dbo. Kunden* Tabelle, und klicken Sie auf **oberste 1000 Zeilen auswählen**.
+1. Klicken Sie in der Randleiste **SERVER** mit der rechten Maustaste auf die Tabelle *dbo.Customers*, und klicken Sie auf **SELECT TOP 1000 Rows**.
 
-2. Wählen Sie die erste Zeile in der Ergebnisansicht, stellen Sie sicher, dass die gesamte Zeile ausgewählt ist (klicken Sie auf die Zahl 1 in der Spalte ganz links), und wählen Sie **als JSON speichern**.  
-3. Ändern Sie den Ordner an einem Speicherort, die Sie erinnern sich, löschen Sie die Datei später (für Beispiel-Desktop) und klicken Sie auf **speichern**. Die JSON formatierte Datei wird geöffnet.
+2. Wählen Sie in der Ergebnisansicht die erste Zeile aus, stellen Sie sicher, dass die gesamte Zeile ausgewählt ist (klicken Sie auf die Nummer 1 in der Spalte ganz links), und wählen Sie **Als JSON speichern** aus.  
+3. Ändern Sie den Ordner in einen leicht zu merkenden Speicherort (beispielsweise den Desktop), damit Sie die Datei später löschen können, und klicken Sie auf **Speicherort**. Die JSON-formatierte Datei wird geöffnet.
 
-   ![im JSON-Format speichern](./media/tutorial-sql-editor/save-as-json.png)
+   ![Speichern als JSON](./media/tutorial-sql-editor/save-as-json.png)
 
-4. Wählen Sie die JSON-Daten im Editor, und kopieren Sie ihn.
-5. Öffnen Sie einen neuen Editor, indem Sie mit **STRG + N**.
-6. Die vorherigen Schritte zeigen, wie Sie die ordnungsgemäß formatierten Daten den Aufruf abgeschlossen problemlos abrufen können die *SetCustomer* Verfahren. Sie sehen, dass der folgende Code verwendet das gleiche JSON-Format mit neuen Details für Kunden, damit wir testen, können die *SetCustomer* Verfahren. Die Anweisung enthält Syntax zum Deklarieren Sie den Parameter, und führen Sie die neue Get und set-Prozeduren. Sie können fügen Sie die kopierten Daten aus dem vorherigen Abschnitt und bearbeiten sie daher das gleiche wie im folgenden Beispiel wird, oder fügen Sie einfach die folgende Anweisung in der Abfrage-Editor.
+4. Wählen Sie die JSON-Daten im Editor aus, und kopieren Sie sie.
+5. Öffnen Sie einen neuen Editor, indem Sie **STRG+N** drücken.
+6. Die oben genannten Schritte haben Ihnen gezeigt, wie Sie ganz einfach ordnungsgemäß formatierte Daten erhalten, um den Aufruf der Prozedur *setCustomer* abzuschließen. Wie Sie sehen, verwendet der folgende Code das gleiche JSON-Format, aber mit neuen Kundeninformationen, sodass wir die Prozedur *setCustomer* testen können. Die Anweisung enthält eine Syntax zum Deklarieren des Parameters und Ausführen der neuen get- und set-Prozeduren. Sie können die kopierten Daten aus dem vorherigen Abschnitt einfügen und bearbeiten, sodass sie dem folgenden Beispiel entsprechen. Sie können auch einfach die folgende Anweisung in den Abfrage-Editor einfügen.
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -213,20 +213,20 @@ Die *SetCustomer* gespeicherte Prozedur, die im vorherigen Abschnitt erstellten 
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. Führen Sie das Skript durch Drücken von **F5**. Das Skript fügt einen neuen Kunden und die neuen Informationen des Kunden im JSON-Format zurückgibt. Klicken Sie auf das Ergebnis, um eine formatierte Ansicht zu öffnen.
+7. Führen Sie das Skript aus, indem Sie **F5** drücken. Das Skript fügt einen neuen Kunden ein und gibt die neuen Kundeninformationen im JSON-Format zurück. Klicken Sie auf das Ergebnis, um eine formatierte Ansicht zu öffnen.
 
    ![Testergebnis](./media/tutorial-sql-editor/test-result.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
-> * Schnellsuche Schemaobjekte
-> * Bearbeiten Sie Tabellendaten 
-> * Schreiben von T-SQL-Skript mithilfe von Codeausschnitten
-> * Erfahren Sie mehr über die Details der Datenbank-Objekt mithilfe von "Definition einsehen" und Gehe zu Definition
+> * Schnelles Suchen nach Schemaobjekten
+> * Bearbeiten von Tabellendaten 
+> * Schreiben von T-SQL-Skripts mithilfe von Codeausschnitten
+> * Anzeigen von Datenbankobjektdetails mithilfe von „Definition einsehen“ und „Gehe zu Definition“
 
 
-Informationen zum Aktivieren der **fünf langsamsten Abfragen** -Widget erstellen, führen Sie im nächste Tutorial:
+Um zu erfahren, wie Sie das Widget für die **fünf langsamsten Abfragen** aktivieren, arbeiten Sie das nächste Tutorial durch:
 
 > [!div class="nextstepaction"]
-> [Aktivieren Sie das langsame Abfragen Beispiel Insight-widget](tutorial-qds-sql-server.md)
+> [Aktivieren des Beispielwidgets für Erkenntnisse zu den langsamsten Abfragen](tutorial-qds-sql-server.md)

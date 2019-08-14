@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit Leistungsfeatures von SQL Server unter Linux
-description: Dieser Artikel enthält eine Einführung in SQL Server-Leistung-Funktionen für Linux-Benutzer, die mit SQL Server vertraut sind. Viele dieser Beispiele auf allen Plattformen funktioniert, aber im Rahmen dieses Artikels ist Linux.
+title: Erste Schritte mit den Leistungsfeatures von SQL Server für Linux
+description: Dieser Artikel bietet eine Einführung in die SQL Server-Leistungsfeatures für Linux-Benutzer, die mit SQL Server noch nicht vertraut sind. Viele dieser Beispiele funktionieren auf allen Plattformen, in diesem Artikel geht es aber um Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -9,25 +9,25 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67896161"
 ---
-# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Leistungsmerkmale von SQL Server unter Linux
+# <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Exemplarische Vorgehensweise für die Leistungsfeatures von SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Wenn Sie einen Linux-Benutzer, der in SQL Server neu ist sind, durchlaufen die folgenden Aufgaben Sie einige der Leistungsfeatures. Diese sind nicht eindeutig oder speziell für Linux, aber es hilft, erhalten Sie eine Vorstellung von Bereichen, um weiter zu untersuchen. In jedem Beispiel wird ein Link in der Tiefe Dokumentation für den entsprechenden Bereich bereitgestellt.
+Wenn Sie Linux-Benutzer sind, der noch nicht mit SQL Server vertraut ist, lernen Sie mit den folgenden Aufgaben einige der Leistungsfeatures kennen. Diese Features gelten nicht ausschließlich und speziell nur für Linux, aber mit diesem Artikel können Sie sich einen Überblick über die Bereiche verschaffen, die Sie näher untersuchen sollten. In jedem Beispiel wird ein Link zu der ausführlichen Dokumentation für diesen Bereich bereitgestellt.
 
 > [!NOTE]
-> In den folgenden Beispielen wird die Beispieldatenbank Adventure Works verwendet. Anweisungen zum Abrufen und Installieren dieser Beispieldatenbank finden Sie [wiederherstellen eine SQL Server-Datenbank von Windows bis Linux](sql-server-linux-migrate-restore-database.md).
+> In den folgenden Beispielen wird die Beispieldatenbank Adventure Works verwendet. Anweisungen zum Abrufen und Installieren dieser Beispieldatenbank finden Sie unter [Migrieren einer SQL Server-Datenbank-Instanz von Windows zu Linux mit Sicherung und Wiederherstellung](sql-server-linux-migrate-restore-database.md).
 
-## <a name="create-a-columnstore-index"></a>Erstellen Sie einen columnstore-Index
-Ein columnstore-Index ist eine Technologie zum Speichern und Abfragen von große Datenspeicher in einer spaltenbasierten Datenformats, das als Columnstore bezeichnet wird.  
+## <a name="create-a-columnstore-index"></a>Erstellen eines Columnstore-Indexes
+Ein Columnstore-Index ist eine Technologie zum Speichern und Abrufen von großen Datenspeichern in einem spaltenbasierten Datenformat, das als „Columnstore“ bezeichnet wird.  
 
-1. Fügen Sie einen columnstore-Index der SalesOrderDetail-Tabelle hinzu, durch die folgenden Transact-SQL-Befehle ausführen:
+1. Fügen Sie der Tabelle „SalesOrderDetail“ einen Columnstore-Index hinzu, indem Sie die folgenden Transact-SQL-Befehle ausführen:
 
    ```sql
    CREATE NONCLUSTERED COLUMNSTORE INDEX [IX_SalesOrderDetail_ColumnStore]
@@ -36,7 +36,7 @@ Ein columnstore-Index ist eine Technologie zum Speichern und Abfragen von große
    GO
    ```
 
-2. Führen Sie die folgende Abfrage, die den columnstore-Index verwendet, um die Tabelle zu scannen:
+2. Führen Sie die folgende Abfrage aus, die den Columnstore-Index zum Überprüfen der Tabelle verwendet:
 
    ```sql
    SELECT ProductID, SUM(UnitPrice) SumUnitPrice, AVG(UnitPrice) AvgUnitPrice,
@@ -46,7 +46,7 @@ Ein columnstore-Index ist eine Technologie zum Speichern und Abfragen von große
       ORDER BY ProductID
    ```
 
-3. Stellen Sie sicher, dass der columnstore-Index verwendet wurde, indem Sie die Objekt-ID für den columnstore-Index suchen und zu bestätigen, dass er in die Verwendungsstatistiken für der SalesOrderDetail-Tabelle angezeigt wird:
+3. Überprüfen Sie, ob der Columnstore-Index verwendet wurde, indem Sie die object_id für den Columnstore-Index suchen und sicherstellen, dass sie in den Nutzungsstatistiken für die Tabelle „SalesOrderDetail“ angezeigt wird:
 
    ```sql
    SELECT * FROM sys.indexes WHERE name = 'IX_SalesOrderDetail_ColumnStore'
@@ -59,10 +59,10 @@ Ein columnstore-Index ist eine Technologie zum Speichern und Abfragen von große
    ```
    
 ## <a name="use-in-memory-oltp"></a>Verwenden von In-Memory-OLTP
-SQL Server bietet In-Memory-OLTP-Funktionen, die die Leistung von Anwendungssystemen erheblich verbessern können.  In diesem Abschnitt, der das Evaluierungshandbuch führt Sie durch die Schritte zum Erstellen einer speicheroptimierten Tabelle gespeichert, die im Arbeitsspeicher und einer systemintern kompilierten gespeicherten Prozedur, die in der Tabelle ohne kompiliert oder interpretiert werden zugreifen können.
+SQL Server bietet In-Memory-OLTP-Funktionen, mit denen sich die Leistung von Anwendungssystemen erheblich verbessern lässt.  Dieser Abschnitt des Evaluierungsleitfadens führt Sie durch die Schritte zum Erstellen einer speicheroptimierten Tabelle, die im Arbeitsspeicher gespeichert ist, und einer nativ kompilierten gespeicherten Prozedur, die auf die Tabelle zugreifen kann, ohne kompiliert oder interpretiert werden zu müssen.
 
-### <a name="configure-database-for-in-memory-oltp"></a>Konfigurieren Sie für In-Memory-OLTP-Datenbank
-1. Es wird empfohlen, für die Datenbank auf einen Kompatibilitätsgrad von mindestens 130 mit In-Memory OLTP zu aktivieren.  Verwenden Sie die folgende Abfrage, um den aktuellen Kompatibilitätsgrad von AdventureWorks zu überprüfen:  
+### <a name="configure-database-for-in-memory-oltp"></a>Konfigurieren einer Datenbank für In-Memory-OLTP
+1. Es wird empfohlen, zur Verwendung von In-Memory-OLTP einen Kompatibilitätsgrad von mindestens 130 für die Datenbank festzulegen.  Verwenden Sie die folgende Abfrage, um den aktuellen Kompatibilitätsgrad von AdventureWorks zu überprüfen:  
 
    ```sql
    USE AdventureWorks
@@ -73,7 +73,7 @@ SQL Server bietet In-Memory-OLTP-Funktionen, die die Leistung von Anwendungssyst
    GO
    ```
    
-   Aktualisieren Sie die Ebene in 130, bei Bedarf:
+   Aktualisieren Sie den Grad ggf. auf 130:
 
    ```sql
    ALTER DATABASE CURRENT
@@ -81,14 +81,14 @@ SQL Server bietet In-Memory-OLTP-Funktionen, die die Leistung von Anwendungssyst
    GO
    ```
 
-2. Wenn eine Transaktion eine datenträgerbasierte Tabelle und eine Speicheroptimierte Tabelle einschließt, namens es wesentlich, die der Speicheroptimierte Teil der Transaktion ausgeführt werden, auf die Transaktionsisolationsstufe SNAPSHOT.  Um dieser Stufe für Speicheroptimierte Tabellen in einer containerübergreifenden Transaktion zuverlässig zu erzwingen, führen Sie die folgenden Schritte aus:
+2. Wenn sowohl eine datenträgerbasierte als auch eine speicheroptimierte Tabelle an einer Transaktion beteiligt ist, muss der speicheroptimierte Teil der Transaktion unbedingt auf der Transaktionsisolationsstufe SNAPSHOT ausgeführt werden.  Um diese Stufe für speicheroptimierte Tabellen in einer containerübergreifenden Transaktion zuverlässig zu erzwingen, führen Sie folgenden Code aus:
 
    ```sql
    ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
    GO
    ```
 
-3. Vor der Erstellung eine speicheroptimierten Tabelle müssen Sie zunächst erstellen Sie eine Speicheroptimierte DATEIGRUPPE und ein Container für Datendateien:
+3. Bevor Sie eine speicheroptimierte Tabelle erstellen können, müssen Sie zuerst eine speicheroptimierte FILEGROUP und einen Container für Datendateien erstellen:
 
    ```sql
    ALTER DATABASE AdventureWorks ADD FILEGROUP AdventureWorks_mod CONTAINS memory_optimized_data
@@ -97,10 +97,10 @@ SQL Server bietet In-Memory-OLTP-Funktionen, die die Leistung von Anwendungssyst
    GO
    ```
 
-### <a name="create-a-memory-optimized-table"></a>Erstellen Sie eine Speicheroptimierte Tabelle
-Beim Primärspeicher für Speicheroptimierte Tabellen Hauptspeicher und im Gegensatz zu datenträgerbasierten Tabellen ist daher, muss Daten nicht in Speicherpuffer im vom Datenträger gelesen werden.  Verwenden Sie zum Erstellen einer speicheroptimierten Tabelle die MEMORY_OPTIMIZED = ON-Klausel.
+### <a name="create-a-memory-optimized-table"></a>Erstellen einer speicheroptimierten Tabelle
+Der primäre Speicher für speicheroptimierte Tabellen ist der Hauptspeicher, daher müssen Daten im Gegensatz zu datenträgerbasierten Tabellen nicht von Datenträgern in Arbeitsspeicherpuffer eingelesen werden.  Verwenden Sie zum Erstellen einer speicheroptimierten Tabelle die Klausel MEMORY_OPTIMIZED = ON.
 
-1. Führen Sie die folgende Abfrage aus, um das "Dbo" eine Speicheroptimierte Tabelle zu erstellen. ShoppingCart.  Standardmäßig werden die Daten beibehalten werden auf dem Datenträger zu (Beachten Sie, die DAUERHAFTIGKEIT auch festgelegt werden kann, um das Schema nur beizubehalten). 
+1. Führen Sie die folgende Abfrage aus, um die speicheroptimierte Tabelle „dbo.ShoppingCart“ zu erstellen.  Standardmäßig werden die Daten aus Gründen der Dauerhaftigkeit auf einem Datenträger gespeichert (beachten Sie, dass DURABILITY auch so festgelegt werden kann, dass nur das Schema dauerhaft gespeichert wird). 
 
    ```sql
    CREATE TABLE dbo.ShoppingCart ( 
@@ -112,7 +112,7 @@ Beim Primärspeicher für Speicheroptimierte Tabellen Hauptspeicher und im Gegen
    GO
    ```
 
-2. Einige Datensätze in die Tabelle einzufügen:
+2. Fügen Sie einige Datensätze in die Tabelle ein:
 
    ```sql
    INSERT dbo.ShoppingCart VALUES (8798, SYSDATETIME(), NULL) 
@@ -121,10 +121,10 @@ Beim Primärspeicher für Speicheroptimierte Tabellen Hauptspeicher und im Gegen
    INSERT dbo.ShoppingCart VALUES (342, SYSDATETIME(), 65.4) 
    ```
 
-### <a name="natively-compiled-stored-procedure"></a>Systemintern kompilierte gespeicherte Prozedur
-SQL Server unterstützt systemintern kompilierte gespeicherte Prozeduren, die auf Speicheroptimierte Tabellen zugreifen. T-SQL-Anweisungen sind in Computercode kompiliert und als systemeigene DLLs, aktivieren schnelleren Datenzugriff und eine effizientere abfrageausführung als herkömmlichen T-SQL gespeichert.   Gespeicherte Prozeduren, die mit NATIVE_COMPILATION markiert sind, werden systemintern kompiliert. 
+### <a name="natively-compiled-stored-procedure"></a>Nativ kompilierte gespeicherte Prozedur
+SQL Server unterstützt nativ kompilierte gespeicherte Prozeduren, die auf speicheroptimierte Tabellen zugreifen. Die T-SQL-Anweisungen werden in Computercode kompiliert und als native DLLs gespeichert – so ermöglichen sie einen schnelleren Datenzugriff und eine effizientere Abfrageausführung als herkömmliches T-SQL.   Gespeicherte Prozeduren, die mit NATIVE_COMPILATION markiert sind, werden systemintern kompiliert. 
 
-1. Führen Sie das folgende Skript aus, um eine systemintern kompilierte gespeicherte Prozedur zu erstellen, die eine große Anzahl von Datensätzen in die ShoppingCart-Tabelle eingefügt:
+1. Führen Sie das folgende Skript aus, um eine nativ kompilierte gespeicherte Prozedur zu erstellen, die eine große Anzahl von Datensätzen in die Tabelle „ShoppingCart“ einfügt:
 
 
    ```sql
@@ -148,14 +148,14 @@ SQL Server unterstützt systemintern kompilierte gespeicherte Prozeduren, die au
    EXEC usp_InsertSampleCarts 1000000 
    ```
 
-3. Stellen Sie sicher, dass die Zeilen eingefügt wurden:
+3. Überprüfen Sie, ob die Zeilen eingefügt wurden:
 
    ```sql
    SELECT COUNT(*) FROM dbo.ShoppingCart 
    ```
 
-### <a name="learn-more-about-in-memory-oltp"></a>Erfahren Sie mehr über In-Memory-OLTP
-Weitere Informationen zu In-Memory OLTP finden Sie unter den folgenden Themen:
+### <a name="learn-more-about-in-memory-oltp"></a>Weitere Informationen zu In-Memory-OLTP
+Weitere Informationen zu In-Memory-OLTP finden Sie in den folgenden Themen:
 
 - [Schnellstart 1: In-Memory-OLTP-Technologien für höhere Transact-SQL-Leistung](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [Migrieren zu In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
@@ -163,16 +163,16 @@ Weitere Informationen zu In-Memory OLTP finden Sie unter den folgenden Themen:
 - [Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
 - [In-Memory OLTP (Arbeitsspeicheroptimierung)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
-## <a name="use-query-store"></a>Die Query Store verwenden
-Query Store werden ausführliche Informationen zu Abfragen, Ausführungspläne und Laufzeitstatistiken erfasst.
+## <a name="use-query-store"></a>Verwenden des Abfragespeichers
+Der Abfragespeicher sammelt detaillierte Leistungsinformationen zu Abfragen, Ausführungsplänen und Laufzeitstatistiken.
 
-Query Store ist nicht standardmäßig aktiviert, und können mit ALTER DATABASE aktiviert werden:
+Der Abfragespeicher ist standardmäßig nicht aktiv und kann mit ALTER DATABASE aktiviert werden:
 
    ```sql
    ALTER DATABASE AdventureWorks SET QUERY_STORE = ON;
    ```
 
-Führen Sie die folgende Abfrage aus, um Informationen zu Abfragen und Pläne im Abfragespeicher zurückzugeben: 
+Führen Sie die folgende Abfrage aus, um Informationen zu Abfragen und Plänen im Abfragespeicher zurückzugeben: 
 
    ```sql
    SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*
@@ -183,10 +183,10 @@ Führen Sie die folgende Abfrage aus, um Informationen zu Abfragen und Pläne im
          ON Qry.query_text_id = Txt.query_text_id ;
    ```
 
-## <a name="query-dynamic-management-views"></a>Dynamische Verwaltungssichten für Abfrage
-Dynamische Verwaltungssichten zurück Informationen zum Serverstatus, die verwendet werden kann, um den Zustand einer Serverinstanz zu überwachen, Diagnostizieren von Problemen und Optimieren der Leistung.
+## <a name="query-dynamic-management-views"></a>Abfragen von dynamischen Verwaltungssichten
+Dynamische Verwaltungssichten (DMVs) und geben Serverstatusinformationen zurück, mit denen Sie die Integrität einer Serverinstanz überwachen, Probleme diagnostizieren und die Leistung optimieren können.
 
-So fragen Sie die Dm_os_wait Statistiken des dynamische verwaltungssicht:
+So fragen Sie die dynamische Verwaltungssicht „dm_os_wait stats“ ab:
 
    ```sql
    SELECT wait_type, wait_time_ms

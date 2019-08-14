@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959387"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731060"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
@@ -137,7 +137,7 @@ ms.locfileid: "67959387"
 **Problemumgehung:** Das Problem wird im nächsten Release behoben. 
 - [#4458:](https://github.com/Microsoft/azuredatastudio/issues/4458) Der DACPAC-Extraktionsvorgang führt dazu, dass SQL Tools Service abstürzt, wenn eine ungültige Version verwendet wird. <br/>
 **Problemumgehung:** Starten Sie Azure Data Studio neu, und stellen Sie sicher, dass die richtige Version verwendet wird.
-- Die Symbole für „Neues Notebook“ und „Notebook öffnen“ werden nicht mehr angezeigt. <br/> 
+- Die Symbole für „Neues Notebook“ und „Notebook öffnen“ werden nicht mehr angezeigt. <br/>
 **Problemumgehung:** Der Legacyverbindungstyp ist veraltet. Empfohlen wird, eine Verbindung mit dem SQL Server-Endpunkt herzustellen. Anschließend werden alle Aktionen („Neues Notebook“ und „Spark Job“ (Spark-Auftrag)) wie erwartet angezeigt. 
 
 ## <a name="february-2019"></a>Februar 2019
@@ -290,7 +290,7 @@ _Version 0.32.8 enthält Fehlerbehebungen für einige Regressionen, die in Vers
 | Sitzungsvorlagen für SQL Server Profiler werden unterstützt. | &nbsp; |
 | Verbesserungen am SQL Server-Agent wurden vorgenommen. | &nbsp; |
 | Neue Communityerweiterung: First Responder Kit. | &nbsp; |
-| Verbesserungen bei der Benutzerfreundlichkeit: Verbindungszeichenfolgen. | &nbsp; |
+| Verbesserungen bei der Benutzerfreundlichkeit: Verbindungszeichenfolgen | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-august-2018"></a>Fehlerbehebungen im August 2018

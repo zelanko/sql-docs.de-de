@@ -1,7 +1,7 @@
 ---
-title: Verbinden von Spark mit SQLServer
+title: Verbinden von Spark mit SQL Server
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie mit der MSSQL-Spark-Connector in Spark zum Lesen und Schreiben in SQL Server.
+description: Erfahren Sie, wie Sie den MSSQL-Spark-Connector in Spark zum Lesen und Schreiben von Daten in SQL Server verwenden.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -10,84 +10,84 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957830"
 ---
-# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Das Lesen und Schreiben in SQL Server aus Spark mithilfe von der MSSQL-Spark-Connector
+# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Lesen und Schreiben von Daten in SQL Server aus Spark mithilfe des MSSQL-Spark-Connectors
 
-Ein Schlüssel big Data-Verwendungsmuster ist umfangreiche Data-Verarbeitung in Spark durch Schreiben von Daten in SQL Server für den Zugriff auf LOB-Anwendungen befolgt. Diese Verwendungsmuster profitieren von einer Connector nutzt die wichtige Optimierungen für SQL und bietet einen Mechanismus für die effiziente schreiben.
+Ein sehr wichtiges Muster für die Big Data-Nutzung ist die Verarbeitung großer Datenvolumen in Spark und das anschließende Schreiben der Daten in SQL Server, damit Branchenanwendungen darauf zugreifen können. Diese Nutzungsmuster profitieren von einem Connector, der wichtige SQL-Optimierungen nutzt und einen effizienten Schreibmechanismus bereitstellt.
 
-Dieser Artikel enthält ein Beispiel zur Verwendung des MSSQL-Spark-Connectors zum Lesen und Schreiben in den folgenden Speicherorten innerhalb einer big Data-Cluster:
+In diesem Artikel wird anhand eines Beispiels erläutert, wie Sie den MSSQL-Spark-Connector verwenden, um Daten in folgenden Speicherorten innerhalb eines Big Data-Clusters zu lesen und zu schreiben:
 
-1. Master SQL Server-Instanz
-1. Die SQL Server-Daten-pool
+1. SQL Server-Masterinstanz
+1. SQL Server-Datenpool
 
-   ![Diagramm der MSSQL-Spark-connector](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+   ![Diagramm: MSSQL-Spark-Connector](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-Das Beispiel führt die folgenden Aufgaben:
+Das Beispiel führt die folgenden Aufgaben aus:
 
-- Lesen einer Datei aus einem HDFS und einige grundlegende Verarbeitungsvorgänge ausführen.
-- Schreiben Sie den Dataframe in eine SQL Server-Masterinstanz als eine SQL-Tabelle und Lesen Sie die Tabelle in einen Dataframe.
-- Schreiben Sie den Dataframe in einen Pool des SQL Server-Daten als eine externe SQL-Tabelle, und Lesen Sie die externe Tabelle in einen Dataframe.
+- Lesen einer Datei aus HDFS und Ausführen einiger grundlegender Verarbeitungsschritte
+- Schreiben des Dataframes in eine SQL Server-Masterinstanz als SQL-Tabelle und Einlesen der Tabelle in einen Dataframe
+- Schreiben des Dataframes in einen SQL Server-Datenpool als externe SQL-Tabelle und Einlesen der externen Tabelle in einen Dataframe
 
-## <a name="mssql-spark-connector-interface"></a>MSSQL-Spark-Connector-Schnittstelle
+## <a name="mssql-spark-connector-interface"></a>Schnittstelle des MSSQL-Spark-Connectors
 
-SQL Server-2019 Preview bietet die **MSSQL-Spark-Connector** für big Data Clustern, die SQL Server-Bulk verwendet Schreiben von APIs für Spark für SQL-Schreibvorgänge. MSSQL-Spark-Connector basiert auf Spark-Datenquelle, APIs und bietet eine vertraute Oberfläche des Spark-JDBC-Connector. Netzwerkschnittstellen-Parametern finden Sie unter [Apache Spark-Dokumentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Der MSSQL-Spark-Connector wird anhand des Namens verwiesen **com.microsoft.sqlserver.jdbc.spark**.
+SQL Server 2019 (Vorschauversion) stellt den **MSSQL-Spark-Connector** für Big Data-Cluster bereit, die SQL Server-APIs für Massenschreibvorgänge zum Schreiben von Spark in SQL verwenden. Der MSSQL-Spark-Connector basiert auf Datenquellen-APIs von Spark und stellt eine vertraute Spark-JDBC-Connectorschnittstelle bereit. Informationen zu den Parametern der Schnittstelle finden Sie in der [Apache Spark-Dokumentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Der MSSQL-Spark-Connector wird als **com.microsoft.sqlserver.jdbc.spark** referenziert.
 
-Die folgende Tabelle beschreibt die Parameter für die Benutzeroberfläche, die geändert oder sind neu:
+Die folgende Tabelle beschreibt neue oder geänderte Schnittstellenparameter:
 
-| Eigenschaftenname | Optional | Beschreibung |
+| Eigenschaftenname | Optional | und Beschreibung |
 |---|---|---|
-| **isolationLevel** | Ja | Hier wird beschrieben, die Isolationsstufe der Verbindung. Der Standardwert für MSSQLSpark Connector ist **READ_COMMITTED** |
+| **isolationLevel** | Ja | Beschreibt die Isolationsstufe der Verbindung. Der Standardwert für den MSSQL-Spark-Connector lautet **READ_COMMITTED**. |
 
-Der Connector verwendet SQL Server-Bulk Schreiben von APIs. Jeder Bulk-Schreibvorgang Parameter können als optionale Parameter übergeben werden, durch den Benutzer und werden als übergeben-ist, indem Sie den Connector an die zugrunde liegende API. Weitere Informationen über die massenbearbeitung von Schreibvorgängen, finden Sie unter [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
+Der Connector verwendet SQL Server-APIs für Massenschreibvorgänge. Alle Parameter für Massenschreibvorgänge können vom Benutzer als optionale Parameter übergeben werden und werden vom Connector unverändert an die zugrunde liegende API übergeben. Weitere Informationen zu Massenschreibvorgängen finden Sie unter [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Ein [SQL Server-big Data-Cluster](deploy-get-started.md).
+- Ein [SQL Server-Big Data-Cluster](deploy-get-started.md)
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders).
+- [Azure Data Studio](https://aka.ms/azdata-insiders)
 
-## <a name="create-the-target-database"></a>Erstellen Sie die Zieldatenbank
+## <a name="create-the-target-database"></a>Erstellen der Zieldatenbank
 
-1. Öffnen Sie Azure Data Studio, und [Verbinden mit der SQL Server-Masterinstanz von Ihrer big Data-Cluster](connect-to-big-data-cluster.md).
+1. Öffnen Sie Azure Data Studio, und [stellen Sie eine Verbindung mit der SQL Server-Masterinstanz Ihres Big Data-Clusters her](connect-to-big-data-cluster.md).
 
-1. Erstellen einer neuen Abfrage ein, und führen Sie den folgenden Befehl zum Erstellen einer Beispieldatenbank mit dem Namen **MyTestDatabase**.
+1. Erstellen Sie eine neue Abfrage, und führen Sie den folgenden Befehl aus, um eine Beispieldatenbank namens **MyTestDatabase** zu erstellen.
 
    ```sql
    Create DATABASE MyTestDatabase
    GO
    ```
 
-## <a name="load-sample-data-into-hdfs"></a>Laden Sie Beispieldaten in HDFS
+## <a name="load-sample-data-into-hdfs"></a>Laden von Beispieldaten in HDFS
 
-1. Herunterladen [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) auf Ihrem lokalen Computer.
+1. Laden Sie [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) auf Ihren lokalen Computer herunter.
 
-1. Starten Sie Azure Data Studio, und [Herstellen einer Verbindung Ihrer big Data-Cluster mit](connect-to-big-data-cluster.md).
+1. Starten Sie Azure Data Studio, und [stellen Sie eine Verbindung mit Ihrem Big Data-Cluster her](connect-to-big-data-cluster.md).
 
-1. Mit der rechten Maustaste auf den HDFS-Ordner in Ihrem big Data-Cluster, und wählen **neues Verzeichnis**. Nennen Sie das Verzeichnis **Spark_data**.
+1. Klicken Sie mit der rechten Maustaste auf den HDFS-Ordner in Ihrem Big Data-Cluster, und wählen Sie **Neues Verzeichnis** aus. Nennen Sie das Verzeichnis **spark_data**.
 
-1. Klicken Sie mit der rechten Maustaste auf die **Spark_data** , und wählen **Hochladen von Dateien**. Hochladen der **AdultCensusIncome.csv** Datei.
+1. Klicken Sie mit der rechten Maustaste auf das Verzeichnis **spark_data**, und wählen Sie **Dateien hochladen** aus. Laden Sie die Datei **AdultCensusIncome.csv** hoch.
 
-   ![AdultCensusIncome CSV-Datei](./media/spark-mssql-connector/spark_data.png)
+   ![CSV-Datei „AdultCensusIncome“](./media/spark-mssql-connector/spark_data.png)
 
-## <a name="run-the-sample-notebook"></a>Führen Sie die Beispiel-notebook
+## <a name="run-the-sample-notebook"></a>Ausführen des Beispielnotebooks
 
-Um die Verwendung von der MSSQL-Spark-Connector mit diesen Daten zu veranschaulichen, können Sie ein Beispiel-Notebook herunterladen, öffnen Sie sie in Azure Data Studio und führen Sie jeden Codeblock. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwendung von Notebooks in der Vorschau von SQL Server-2019](notebooks-guidance.md).
+Um sich die Verwendung des MSSQL-Spark-Connectors mit diesen Daten anzusehen, können Sie ein Beispielnotebook herunterladen, es in Azure Data Studio öffnen und jeden Codeblock ausführen. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks in SQL Server 2019 (Vorschauversion)](notebooks-guidance.md).
 
-1. Führen Sie über eine PowerShell- oder Bash-Befehlszeile den folgenden Befehl zum Herunterladen der **mssql_spark_connector.ipynb** Beispiel-Notebook:
+1. Führen Sie an einer PowerShell- oder Bash-Befehlszeile den folgenden Befehl aus, um das Beispielnotebook **mssql_spark_connector.ipynb** herunterzuladen:
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
-1. Öffnen Sie in Azure Data Studio die Beispiel-Notebook-Datei. Stellen Sie sicher, dass er mit dem HDFS/Spark-Gateway für Ihre big Data-Cluster verbunden ist.
+1. Öffnen Sie die Datei mit dem Beispielnotebook in Azure Data Studio. Überprüfen Sie, ob eine Verbindung mit Ihrem HDFS-/Spark-Gateway für Ihren Big Data-Cluster besteht.
 
-1. Führen Sie jede codezelle aus, in der Stichprobe, die Verwendung von MSSQL-Spark-Connector finden Sie unter.
+1. Führen Sie jede Codezelle im Beispiel aus, um sich die Verwendung des MSSQL-Spark-Connectors anzusehen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen über big Data-Cluster finden Sie unter [große SQL Server-Daten bereitstellen in Kubernetes-Clustern](deployment-guidance.md)
+Weitere Informationen zu Big Data-Clustern finden Sie unter [Vorgehensweise: Bereitstellen von Big Data-Clustern für SQL Server in Kubernetes](deployment-guidance.md).
