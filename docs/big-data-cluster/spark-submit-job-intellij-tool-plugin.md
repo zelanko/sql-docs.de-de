@@ -1,7 +1,7 @@
 ---
-title: Ausführen von Spark-Aufträgen im Azure-Toolkit für IntelliJ auf SQL Server-big Data-cluster
+title: Ausführen von Spark-Aufträgen in Azure-Toolkit für IntelliJ auf Big-Data-Clustern für SQL Server
 titleSuffix: SQL Server big data clusters
-description: Übermitteln von Spark-Aufträgen in SQL Server-big Data-Clustern in Azure-Toolkit für IntelliJ.
+description: Übermitteln Sie Spark-Aufträge an Big Data-Cluster für SQL Server in Azure-Toolkit für IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,190 +9,190 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d2bb4b55b578530a29490a0a1a284f338686c38
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f17544ed4dd37ff43be97d114abb58f4fbbbe319
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728368"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470698"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Übermitteln von Spark-Aufträgen in SQL Server-big Data-Clustern in IntelliJ
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Übermitteln von Spark-Aufträgen an Big Data-Cluster für SQL Server in IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Einer der wichtigsten Szenarios für die SQL Server-big Data-Cluster ist die Möglichkeit zum Übermitteln von Spark-Aufträgen. Die Spark Job Submission-Funktion können Sie eine lokale JAR- oder Py-Dateien mit Verweisen auf SQL Server-big Data-Cluster zu übermitteln. Darüber hinaus können Sie zum Ausführen von einer JAR-Datei oder Py-Dateien, die sich bereits in das HDFS-Dateisystem befinden. 
+Eines der Hauptszenarios für Big Data-Cluster für SQL Server besteht darin, dass Spark-Aufträge an diese übermittelt werden können. Mit dem Feature zum Übermitteln von Spark-Aufträgen können Sie lokale JAR- oder PY-Dateien mit Verweisen auf Big Data-Cluster für SQL Server übermitteln. Außerdem können Sie JAR- oder PY-Dateien ausführen, die sich bereits auf dem HDFS-Dateisystem befinden. 
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-- SQL Server-big Data-Cluster.
-- Oracle Java Development Kit. Sie können die Installation über die [Oracle-Website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
-- IntelliJ IDEA. Sie können die Installation über die [JetBrains-Website](https://www.jetbrains.com/idea/download/).
+- Big-Data-Cluster für SQL Server.
+- Java Development Kit von Oracle. Sie können dieses von der [Oracle-Website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) herunterladen und installieren.
+- IntelliJ IDEA. Sie können diese IDE von der [JetBrains-Website](https://www.jetbrains.com/idea/download/) herunterladen und installieren.
 - Azure-Toolkit für IntelliJ-Erweiterung. Installationsanweisungen finden Sie unter [Installieren des Azure-Toolkits für IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
-## <a name="link-sql-server-big-data-cluster"></a>Link-SQL Server-big Data-cluster
+## <a name="link-sql-server-big-data-cluster"></a>Verknüpfen von Big-Data-Clustern für SQL Server
 1. Öffnen Sie das IntelliJ IDEA-Tool.
 
-2. Wenn Sie selbst signiertes Zertifikat verwenden, deaktivieren Sie die Überprüfung des SSL-Zertifikat von **Tools** , wählen Sie im Menü **Azure**, **Spark-Cluster SSL-Zertifikat überprüfen**, dann  **Deaktivieren Sie**.
+2. Wenn Sie ein selbst signiertes Zertifikat verwenden, deaktivieren Sie die Überprüfung von SSL-Zertifikaten über **Tools** > **Azure** > **Validate Spark Cluster SSL Certificate** (SSL-Zertifikat für Spark-Cluster überprüfen) > **Disable** (Deaktivieren).
 
-    ![SQL Server-big Data-Cluster verknüpfen – Deaktivieren von SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![Verknüpfen von Big-Data-Clustern für SQL Server: Deaktivieren von SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
-3. Öffnen Sie Azure-Explorer aus **Ansicht** , wählen Sie im Menü **Tool Windows**, und wählen Sie dann **Azure Explorer**.
-4. Klicken Sie mit der rechten Maustaste auf **SQL Server-big Data-Cluster**Option **Link SQL Server-big Data-Cluster**. Geben Sie die **Server**, **Benutzernamen**, und **Kennwort**, klicken Sie dann auf **OK**.
+3. Öffnen Sie den Azure-Explorer über **View** (Ansicht) > **Tool Windows** (Toolfenster) > **Azure Explorer** (Azure-Explorer).
+4. Klicken Sie mit der rechten Maustaste auf **SQL Server big data cluster** (Big-Data-Cluster für SQL Server) und anschließend auf **Link SQL Server big data cluster** (Big-Data-Cluster für SQL Server verknüpfen). Geben Sie für **Server**, **User Name** (Benutzername) und **Password** (Kennwort) die entsprechenden Werte ein, und klicken Sie auf **OK**.
 
-    ![Verknüpfen von Big Data-Cluster - Dialogfeld](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
+    ![Verknüpfen des Big-Data-Clusters: Dialogfeld](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
-5. Wenn der nicht vertrauenswürdigen Server-Dialogfeld "Zertifikat" angezeigt wird, klicken Sie auf **Accept**. Sie können das Zertifikat später zu verwalten, finden Sie unter [Serverzertifikate](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
+5. Wenn das Dialogfeld für nicht vertrauenswürdige Serverzertifikate angezeigt wird, klicken Sie auf **Accept** (Akzeptieren). Sie können die Verwaltungseinstellungen für das Zertifikat später ändern. Weitere Informationen finden Sie unter [Serverzertifikate](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-6. Die verknüpfte Cluster listet unter **SQL Server-big Data-Cluster**. Sie können Spark-Auftrag überwachen, indem Sie öffnen die Spark-verlaufsbenutzeroberfläche und die Yarn-Benutzeroberfläche, Sie können auch die Verknüpfung aufheben, indem Sie mit der rechten Maustaste auf dem Cluster.
+6. Der verknüpfte Cluster wird unter **SQL Server big data cluster** (Big-Data-Cluster für SQL Server) aufgeführt. Hier können Sie Spark-Aufträge überwachen, indem Sie die Benutzeroberfläche für den Spark-Verlauf und die Yarn-Benutzeroberfläche öffnen. Sie können auch die Verknüpfung aufheben, indem Sie mit der rechten Maustaste auf den Cluster klicken.
 
-    ![Verknüpfen von Big Data-Cluster - Kontextmenü](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
+    ![Verknüpfen des Big-Data-Clusters: Kontextmenü](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
-## <a name="create-a-spark-scala-application-from-hdinsight-template"></a>Erstellen von Spark Scala-Anwendung aus HDInsight-Vorlage
+## <a name="create-a-spark-scala-application-from-spark-template"></a>Erstellen einer Spark Scala-Anwendung mithilfe einer Spark-Vorlage
 
-1. Starten Sie IntelliJ IDEA, und erstellen Sie ein Projekt. In der **neues Projekt** (Dialogfeld), führen Sie folgende Schritte aus: 
+1. Starten Sie IntelliJ IDEA, und erstellen Sie ein Projekt. Führen Sie im Dialogfeld **New Project** (Neues Projekt) die folgenden Schritte aus: 
 
-   a. Wählen Sie **Azure Spark/HDInsight** > **Spark-Projekt mit Beispielen (Scala)** .
+   A. Klicken Sie auf **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Spark-Projekt mit Beispielen (Scala)).
 
-   b. In der **Buildtool** wählen Sie eines der folgenden, je nach Ihren Anforderungen:
+   B. Wählen Sie in der Liste **Build tool** (Buildtool) eine der folgenden Optionen entsprechend Ihrer Anforderungen aus:
 
-      * **Maven**, für die Unterstützung des Scala-projekterstellungs-Assistenten
-      * **SBT**, zum Verwalten von Abhängigkeiten, und erstellen für das Scala-Projekt
+      * **Maven:** Bei dieser Auswahl wird der Scala-Projekterstellungsassistent unterstützt.
+      * **SBT:** Bei dieser Auswahl werden Abhängigkeiten und der Buildvorgang für das Scala-Projekt verwaltet.
 
-    ![Das Dialogfeld "Neues Projekt"](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
+    ![Dialogfeld „New Project“ (Neues Projekt)](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
 2. Wählen Sie **Weiter**aus.
 
-3. Fügt der Scala-projekterstellungs-Assistent erkennt automatisch, ob das Scala-Plug-In installiert haben. Wählen Sie **Installieren**aus.
+3. Der Scala-Projekterstellungsassistent erkennt automatisch, ob Sie das Scala-Plug-In installiert haben. Wählen Sie **Installieren**aus.
 
-   ![Scala-Plug-in-Überprüfung](./media/spark-submit-job-intellij-tool-plugin/Scala-Plugin-check-Reminder.PNG) 
+   ![Überprüfung des Scala-Plug-Ins](./media/spark-submit-job-intellij-tool-plugin/Scala-Plugin-check-Reminder.PNG) 
 
-4. Wählen Sie zum Herunterladen des Scala-Plug-in **OK**. Befolgen Sie die Anweisungen zum Neustart von IntelliJ. 
+4. Klicken Sie auf **OK**, um das Scala-Plug-In herunterzuladen. Folgen Sie den Anweisungen, um IntelliJ neu zu starten. 
 
-   ![Dialogfeld für die Scala-Plug-in-installation](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
+   ![Dialogfeld für die Installation des Scala-Plug-Ins](./media/spark-submit-job-intellij-tool-plugin/Choose-Scala-Plugin.PNG)
 
-5. In der **neues Projekt** Fenster die folgenden Schritte aus:  
+5. Führen Sie im Fenster **New Project** (Neues Projekt) die folgenden Schritte aus:  
 
-    ![Auswählen des Spark-SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
+    ![Auswählen des Spark SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   a. Geben Sie einen Projektnamen und einen Speicherort aus.
+   A. Geben Sie einen Projektnamen und einen Speicherort ein.
 
-   b. In der **Projekt-SDK** Dropdown-Liste **Java 1.8** für Spark 2.x-Cluster oder Select **Java 1.7** für Spark 1.x-Cluster.
+   B. Wählen Sie in der Dropdownliste **Project SDK** (SDK für Projekt) **Java 1.8** für den Spark 2.x-Cluster oder **Java 1.7** für den Spark 1.x-Cluster aus.
 
-   c. In der **Spark-Version** Dropdown-Liste "," Scala-projekterstellungs-Assistent integriert die richtige Version von Spark-SDK und Scala-SDK. Wenn die Spark-Clusterversion niedriger als 2.0 ist, wählen Sie **Spark 1.x**. Wählen Sie andernfalls **Spark 2.x**. Dieses Beispiel verwendet **Spark 2.0.2 (Scala 2.11.8)** .
+   c. Der Scala-Projekterstellungsassistent füllt die Dropdownliste **Spark version** (Spark-Version) mit der richtigen Version für das Spark SDK und das Scala SDK auf. Wenn Sie eine ältere Spark-Clusterversion als 2.0 verwenden, wählen Sie **Spark 1.x** aus. Wählen Sie andernfalls **Spark 2.x** aus. In diesem Beispiel wird **Spark 2.0.2 (Scala 2.11.8)** verwendet.
 
 6. Wählen Sie **Fertig stellen** aus.
 
-7. Das Spark-Projekt erstellt automatisch ein Artefakt für Sie. Um das Artefakt anzuzeigen, führen Sie die folgenden Schritte aus:
+7. Das Spark-Projekt erstellt automatisch ein Artefakt. Führen Sie die folgenden Schritte aus, um sich das Artefakt anzeigen zu lassen:
 
-   a. Auf der **Datei** , wählen Sie im Menü **Projektstruktur**.
+   A. Klicken Sie im Menü **File** (Datei) auf **Project Structure** (Projektstruktur).
 
-   b. In der **Projektstruktur** wählen Sie im Dialogfeld **Artefakte** um das standardartefakt anzuzeigen, die erstellt wird. Sie können auch eigene Artefakte erstellen, wählen Sie das Pluszeichen ( **+** ).
+   B. Klicken Sie im Dialogfeld **Project Structure** (Projektstruktur) auf **Artifacts** (Artefakte), um sich das erstellte Standardartefakt anzeigen zu lassen. Sie können auch ein eigenes Artefakt erstellen, indem Sie auf das Pluszeichen ( **+** ) klicken.
 
-      ![Informationen zum Artefakt im Dialogfeld](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
+      ![Artefaktinformationen im Dialogfeld](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## <a name="submit-application-to-sql-server-big-data-cluster"></a>Übermitteln der Anwendung in SQL Server-big Data-cluster
-Nach der Verknüpfung einer SQL Server-big Data-Cluster können Sie die Anwendung übermitteln.
+## <a name="submit-application-to-sql-server-big-data-cluster"></a>Übermitteln der Anwendung an den Big-Data-Cluster für SQL Server
+Nachdem Sie einen Big-Data-Cluster für SQL Server verknüpft haben, können Sie eine Anwendung an diesen übermitteln.
 
-1. Richten Sie die Konfiguration in **Ausführungs-/Debugkonfigurationen** Fenster, klicken Sie auf und ->**Apache Spark für SQL Server**auf Registerkarte **im Cluster Remote ausführen**, legen Sie die Parameter als Befolgen Sie die, dann klicken Sie auf OK.
+1. Nehmen Sie die Konfiguration im Fenster **Run/Debug Configurations** (Ausführen/Debugkonfigurationen) vor. Klicken Sie auf das Pluszeichen und anschließend auf **Apache Spark on SQL Server** (Apache Spark in SQL Server). Klicken Sie dann auf die Registerkarte **Remotely Run in Cluster** (Remoteausführung in Cluster), legen Sie die unten gezeigten Parameter fest, und klicken Sie auf OK.
 
-    ![Interaktiver Konsole hinzufügen Konfigurationseintrag](./media/spark-submit-job-intellij-tool-plugin/interactive-console-add-config-entry.png)
+    ![Interaktive Konsole: Hinzufügen eines Konfigurationseintrags](./media/spark-submit-job-intellij-tool-plugin/interactive-console-add-config-entry.png)
 
-    ![Verknüpfen von Big Data-Cluster - Konfiguration](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-config.png)
+    ![Verknüpfen des Big-Data-Clusters: Konfiguration](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-config.png)
 
-    * Für **Spark-Cluster (nur Linux)** , wählen Sie den Cluster, auf denen die Anwendung ausgeführt werden sollen.
+    * Wählen Sie für **Spark clusters (Linux only)** (Spark-Cluster (nur Linux)) den Cluster aus, auf dem Sie die Anwendung ausführen möchten.
 
-    * Wählen Sie ein Artefakt aus dem IntelliJ-Projekt, oder wählen Sie eine von der Festplatte.
+    * Wählen Sie ein Artefakt aus, das sich im IntelliJ-Projekt oder auf der Festplatte befindet.
 
-    * **Main-Klassennamen** Feld: Der Standardwert ist die Hauptklasse aus der ausgewählten Datei. Sie können die Klasse ändern, indem Sie auf die Auslassungspunkte ( **...** ) und einer anderen Klasse auswählen.   
+    * Feld **Main class name** (Name der Hauptklasse): Der Standardwert ist die Hauptklasse der ausgewählten Datei. Sie können eine andere Klasse auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) klicken.   
 
-    * **Auftragskonfigurationen** Feld:  Die Standardwerte werden als Bild oben festgelegt. Sie können den Wert ändern oder Hinzufügen von neue Schlüssel-Wert zum Übermitteln von Aufträgen. Weitere Informationen:   [Apache Livy-REST-API](http://livy.incubator.apache.org./docs/latest/rest-api.html)
+    * Feld **Job Configurations** (Auftragskonfigurationen):  Die Standardwerte sind auf dem obigen Screenshot abgebildet. Sie können für die Auftragsübermittlung die Werte ändern oder neue Schlüssel-Wert-Paare hinzufügen. Weitere Informationen:   [Apache Livy-REST-API](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
-      ![Die Spark-Übermittlung Dialogfeld Feld Auftrag Konfiguration Bedeutung](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
+      ![Dialogfeld mit Übersicht über Auftragskonfigurationen zur Übermittlung von Spark-Aufträgen](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
-    * **Befehlszeilenargumente** Feld: Sie können die Teilen, indem Sie Speicherplatz für die Hauptklasse, die bei Bedarf Argumente-Werte eingeben.
+    * Feld **Command line arguments** (Befehlszeilenargumente): Sie können bei Bedarf die Argumente getrennt durch Leerzeichen für die Hauptklasse eingeben.
 
-    * **JAR-Dateien verwiesen** und **referenzierten Dateien** Felder: Sie können die Pfade für den referenzierten JAR-Dateien und Dateien ggf. eingeben. Weitere Informationen:   [Apache Spark-Konfiguration](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
+    * Felder **Referenced Jars** (Verweise auf JAR-Dateien) und **Referenced Files** (Verweise auf Dateien): Sie können bei Bedarf die Pfade für die JAR-Dateien und für die anderen Dateien eingeben, auf die verwiesen wird. Weitere Informationen:   [Apache Spark-Konfiguration](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
 
-      ![Die Spark-Übermittlung Dialogfeld Feld JAR-Dateien, die bedeutet](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
+      ![Dialogfeld mit Übersicht über (JAR-)Dateien zur Übermittlung von Spark-Aufträgen](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > Um Ihre JAR-Dateien auf die verwiesen wird und die referenzierten Dateien hochladen zu können, finden Sie unter: [Ressourcen für den cluster hochladen.](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > Informationen zum Hochladen von JAR-Dateien und anderen Dateien, auf die verwiesen wird, finden Sie unter: [Hochladen von Ressourcen auf den Cluster](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer).
                          
-    * **Hochladen von Pfad**: Sie können den Speicherort für die Übermittlung JAR- oder Scala-Projekt Ressourcen angeben. Es gibt verschiedene Speichertypen unterstützt: **Verwenden von interaktiven Spark-Sitzung zum Hochladen** und **verwenden WebHDFS hochladen**
+    * **Upload Path** (Uploadpfad): Sie können den Speicherort für die Übermittlung von JAR- oder Scala-Projektressourcen angeben. Es werden mehrere Speichertypen unterstützt: **Use Spark interactive session to upload** (Interaktive Spark-Sitzung für Upload verwenden) und **Use WebHDFS to upload** (WebHDFS für Upload verwenden).
     
-2. Klicken Sie auf **SparkJobRun** um das Projekt für den ausgewählten Cluster zu übermitteln. Die **Remote-Spark-Auftrags im Cluster** Registerkarte zeigt den Status der auftragsausführung unten. Sie können die Anwendung beenden, indem Sie auf die rote Schaltfläche.  
+2. Klicken Sie auf **SparkJobRun** (Spark-Auftrag ausführen), um das Projekt an den ausgewählten Cluster zu übermitteln. Auf der Registerkarte **Remote Spark Job in Cluster** (Remote-Spark-Auftrag auf Cluster) wird im unteren Bereich der Fortschritt der Auftragsausführung angezeigt. Sie können die Anwendung anhalten, indem Sie auf die rote Schaltfläche klicken.  
 
-    ![Link-Big Data-Cluster - Ausführung](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
+    ![Verknüpfen des Big-Data-Clusters: Ausführung](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
 
 ## <a name="spark-console"></a>Spark-Konsole
-Sie können lokale Console(Scala) Spark ausführen oder Ausführen von interaktiven Livy-Sitzung-Console(Scala) von Spark.
+Sie können „Spark Local Console(Scala)“ (Lokale Spark-Konsole (Scala)) oder „Spark Livy Interactive Session Console(Scala)“ (Spark-Livy-Konsole für interaktive Sitzungen) ausführen.
 
-### <a name="spark-local-consolescala"></a>Lokale Spark-Console(Scala)
-Stellen Sie sicher, dass Sie die WINUTILS erfüllt haben. Voraussetzung der EXE-Datei.
+### <a name="spark-local-consolescala"></a>Spark Local Console(Scala)
+Stellen Sie sicher, dass die Voraussetzungen von „WINUTILS.exe“ erfüllt sind.
 
-1. Navigieren Sie in der Menüleiste zum **ausführen** > **Konfigurationen bearbeiten...** .
+1. Navigieren Sie in der Menüleiste zu **Run** (Ausführen) > **Edit Configurations...** (Konfigurationen bearbeiten…).
 
-2. Von der **Ausführungs-/Debugkonfigurationen** Fenster im linken Bereich navigieren Sie zu **Apache Spark für SQL Server-big Data-Cluster** >  **[Spark-SQL] "MyApp"** .
+2. Navigieren Sie im Fenster **Run/Debug Configurations** (Ausführen/Debugkonfigurationen) im linken Bereich zu **Apache Spark on SQL Server big data cluster** (Apache Spark auf einem Big-Data-Cluster für SQL Server) >  **[Spark on SQL] myApp** ([Spark in SQL] meineApp).
 
-3. Wählen Sie im Hauptfenster der **lokal** Registerkarte.
+3. Klicken Sie im Hauptfenster auf die Registerkarte **Locally Run** (Lokal ausführen).
 
-4. Geben Sie die folgenden Werte ein, und wählen Sie dann **OK**:
+4. Geben Sie die folgenden Werte an, und klicken Sie anschließend auf **OK**:
 
-    |Eigenschaft |Wert |
+    |Eigenschaft |value |
     |----|----|
-    |Auftrag main-Klasse|Der Standardwert ist die Hauptklasse aus der ausgewählten Datei. Sie können die Klasse ändern, indem Sie auf die Auslassungspunkte ( **...** ) und einer anderen Klasse auswählen.|
-    |Umgebungsvariablen|Stellen Sie sicher, dass der Wert für HADOOP_HOME richtig ist.|
-    |WINUTILS.exe location|Stellen Sie sicher, dass der Pfad richtig ist.|
+    |„Job main class“ (Hauptklasse des Auftrags)|Der Standardwert ist die Hauptklasse der ausgewählten Datei. Sie können eine andere Klasse auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) klicken.|
+    |Umgebungsvariablen|Stellen Sie sicher, dass für HADOOP_HOME der richtige Wert festgelegt ist.|
+    |„WINUTILS.exe location“ (Speicherort von „WINUTILS.exe“)|Stellen Sie sicher, dass der richtige Pfad festgelegt ist.|
 
-    ![Lokale Konsole Festlegen der Konfiguration](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+    ![Konfigurieren der lokalen Konsole](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
 
-5. Navigieren Sie in-Projekt zu **"MyApp"**  > **Src** > **main** > **Scala**  >  **"MyApp"** .  
+5. Navigieren Sie in „Project“ (Projekt) zu **myApp** > **src** > **main** > **scala** > **myApp**.  
 
-6. Navigieren Sie in der Menüleiste zum **Tools** > **Spark Konsole** > **lokale Spark-Console(Scala) ausführen**.
+6. Navigieren Sie in der Menüleiste zu **Tools** > **Spark Console (Spark-Konsole)**  > **Run Spark Local Console(Scala)** (Lokale Spark-Konsole ausführen (Scala)).
 
-7. Klicken Sie dann möglicherweise zwei Dialogfelder angezeigt werden, um anzufordern, dass Sie das sollten Sie automatisch die Abhängigkeiten beheben. Wenn dies der Fall ist, wählen Sie **automatisch korrigieren**.
+7. Zwei Dialogfelder werden möglicherweise angezeigt, in denen Sie gefragt werden, ob Probleme mit Abhängigkeiten automatisch behoben werden sollen. Klicken Sie ggf. auf **Auto Fix** (Automatisch beheben).
 
-    ![Spark Auto Fix1](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+    ![Automatische Problembehebung in Spark (1)](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
 
-    ![Spark Auto Fix2](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+    ![Automatische Problembehebung in Spark (2)](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
 
-8. Die Konsole sollte ähnlich der folgenden Abbildung aussehen. In der Konsole Fenstertyp `sc.appName`, und drücken Sie STRG + EINGABETASTE.  Das Ergebnis wird angezeigt. Sie können die lokale Konsole beenden, indem Sie die rote Schaltfläche klicken.
+8. Die Konsole sollte in etwa wie auf dem folgenden Screenshot aussehen. Geben Sie im Konsolenfenster `sc.appName` ein, und drücken Sie STRG+EINGABETASTE.  Das Ergebnis wird angezeigt. Sie können die lokale Konsole beenden, indem Sie auf die rote Schaltfläche klicken.
 
-    ![Ergebnis der lokalen Konsole](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+    ![Ergebnis in der lokalen Konsole](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
 
 
-### <a name="spark-livy-interactive-session-consolescala"></a>Die interaktive Sitzung Console(Scala) Livy Spark
-Die interaktive Spark Livy-Sitzung Console(Scala) wird nur für IntelliJ 2018.2 und 2018.3 unterstützt.
+### <a name="spark-livy-interactive-session-consolescala"></a>Spark Livy Interactive Session Console (Scala)
+Spark Livy Interactive Session Console(Scala) wird nur für IntelliJ 2018.2 und 2018.3 unterstützt.
 
-1. Navigieren Sie in der Menüleiste zum **ausführen** > **Konfigurationen bearbeiten...** .
+1. Navigieren Sie in der Menüleiste zu **Run** (Ausführen) > **Edit Configurations...** (Konfigurationen bearbeiten…).
 
-2. Von der **Ausführungs-/Debugkonfigurationen** Fenster im linken Bereich navigieren Sie zu **Apache Spark für SQL Server-big Data-Cluster** >  **[Spark-SQL] "MyApp"** .
+2. Navigieren Sie im Fenster **Run/Debug Configurations** (Ausführen/Debugkonfigurationen) im linken Bereich zu **Apache Spark on SQL Server big data cluster** (Apache Spark auf einem Big-Data-Cluster für SQL Server) >  **[Spark on SQL] myApp** ([Spark in SQL] meineApp).
 
-3. Wählen Sie im Hauptfenster der **im Cluster Remote ausführen** Registerkarte.
+3. Klicken Sie im Hauptfenster auf die Registerkarte **Remotely Run in Cluster** (Remoteausführung in Cluster).
 
-4. Geben Sie die folgenden Werte ein, und wählen Sie dann **OK**:
+4. Geben Sie die folgenden Werte an, und klicken Sie anschließend auf **OK**:
 
-    |Eigenschaft |Wert |
+    |Eigenschaft |value |
     |----|----|
-    |Spark-Cluster (nur Linux)|Wählen Sie den SQL Server-Big Data-Cluster, die auf dem Sie Ihre Anwendung ausführen möchten.|
-    |Name der Hauptklasse|Der Standardwert ist die Hauptklasse aus der ausgewählten Datei. Sie können die Klasse ändern, indem Sie auf die Auslassungspunkte ( **...** ) und einer anderen Klasse auswählen.|
+    |„Spark clusters (Linux only)“ (Spark-Cluster (nur Linux))|Wählen Sie den Big-Data-Cluster für SQL Server aus, auf dem Sie Ihre Anwendung ausführen möchten.|
+    |„Main class name“ (Name der Hauptklasse)|Der Standardwert ist die Hauptklasse der ausgewählten Datei. Sie können eine andere Klasse auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) klicken.|
 
-    ![Interaktive Konsole Festlegen der Konfiguration](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+    ![Konfigurieren der interaktiven Konsole](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
 
-5. Navigieren Sie in-Projekt zu **"MyApp"**  > **Src** > **main** > **Scala**  >  **"MyApp"** .  
+5. Navigieren Sie in „Project“ (Projekt) zu **myApp** > **src** > **main** > **scala** > **myApp**.  
 
-6. Navigieren Sie in der Menüleiste zum **Tools** > **Spark Konsole** > **führen Sie Spark Livy interaktive Sitzung Console(Scala)** .
+6. Navigieren Sie in der Menüleiste zu **Tools** > **Spark Console (Spark-Konsole)**  > **Run Spark Livy Interactive Session Console(Scala)** (Spark-Livy-Konsole für interaktive Sitzungen ausführen).
 
-7. Die Konsole sollte ähnlich der folgenden Abbildung aussehen. In der Konsole Fenstertyp `sc.appName`, und drücken Sie STRG + EINGABETASTE.  Das Ergebnis wird angezeigt. Sie können die lokale Konsole beenden, indem Sie die rote Schaltfläche klicken.
+7. Die Konsole sollte in etwa wie auf dem folgenden Screenshot aussehen. Geben Sie im Konsolenfenster `sc.appName` ein, und drücken Sie STRG+EINGABETASTE.  Das Ergebnis wird angezeigt. Sie können die lokale Konsole beenden, indem Sie auf die rote Schaltfläche klicken.
 
-    ![Ergebnis der interaktiven Konsole](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+    ![Ergebnis in der interaktiven Konsole](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
 
-### <a name="send-selection-to-spark-console"></a>Auswahl an Spark-Konsole zu senden
+### <a name="send-selection-to-spark-console"></a>Senden einer Auswahl an die Spark-Konsole
 
-Der Einfachheit halber sehen Sie das skriptergebnis durch das Senden von Code an die lokale Konsole oder interaktiven Livy-Sitzung-Console(Scala). Sie können Code in die Scala-Datei markieren und dann mit der rechten Maustaste **senden Auswahl zu Spark Konsole**. Der ausgewählte Code wird an die Konsole gesendet werden und ausgeführt werden. Das Ergebnis wird nach dem Code in der Konsole angezeigt werden. Die Konsole wird der Fehler überprüfen Sie, ob vorhandene.  
+Sie können sich ganz einfach die Ergebnisse eines Skripts ansehen, indem Sie Code an die lokale Konsole oder an die Livy-Konsole für interaktive Sitzungen senden. Markieren Sie dazu Code in der Scala-Datei, und klicken Sie mit der rechten Maustaste auf **Send Selection To Spark Console** (Auswahl an Spark-Konsole senden). Der ausgewählte Code wird an die Konsole gesendet und ausgeführt. Das Ergebnis wird nach dem Code in der Konsole angezeigt. Die Konsole überprüft, ob Fehler vorliegen.  
 
-   ![Auswahl an Spark-Konsole zu senden](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
+   ![Senden einer Auswahl an die Spark-Konsole](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zu SQL Server-big Data-Cluster und die zugehörigen Szenarien, finden Sie unter [was SQL Server-2019 big Data-Cluster sind](big-data-cluster-overview.md)?
+Weitere Informationen zu Big Data-Clustern für SQL Server und zugehörigen Szenarios finden Sie unter [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)

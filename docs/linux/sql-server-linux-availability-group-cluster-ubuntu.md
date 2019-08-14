@@ -1,7 +1,7 @@
 ---
-title: Ubuntu-Cluster für SQL Server-Verfügbarkeitsgruppe konfigurieren
+title: Konfigurieren von Ubuntu-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 titleSuffix: SQL Server
-description: Weitere Informationen Sie zum Erstellen von Availability Group-Clustern für Ubuntu
+description: Weitere Informationen zum Erstellen von Verfügbarkeitsgruppenclustern für Ubuntu
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,45 +11,45 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027312"
 ---
-# <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Konfigurieren von Ubuntu-Cluster und Availability Group-Ressource
+# <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Konfigurieren von Ubuntu-Clustern und Verfügbarkeitsgruppenressource
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Dokument wird erläutert, wie erstellen einen Cluster mit drei Knoten unter Ubuntu, und fügen eine zuvor erstellte verfügbarkeitsgruppe als Ressource im Cluster. Für hohe Verfügbarkeit, eine verfügbarkeitsgruppe für Linux erfordert drei Knoten – Siehe [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md).
+In diesem Dokument wird erläutert, wie ein Cluster mit drei Knoten unter Ubuntu erstellt und eine zuvor erstellte Verfügbarkeitsgruppe als Ressource im Cluster hinzugefügt wird. Zur Gewährleistung einer hohen Verfügbarkeit benötigt eine Verfügbarkeitsgruppe unter Linux drei Knoten. Weitere Informationen hierzu finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md).
 
 > [!NOTE] 
-> SQL Server Integration mit Pacemaker unter Linux ist an diesem Punkt nicht als gekoppelt als mit WSFC unter Windows. Aus innerhalb von SQL, es ist keine Kenntnisse über das Vorhandensein des Clusters alle Orchestrierung befindet sich außerhalb im und der Dienst wird als eigenständige Instanz von Pacemaker gesteuert. Darüber hinaus Name des virtuellen Netzwerks ist spezifisch für die WSFC, es gibt keine Entsprechung desselben in Pacemaker. Always On-dynamische Verwaltungssichten, die Clusterinformationen Abfragen werden leere Zeilen zurückgeben. Sie können einen Listener für die Verwendung für transparente erneute Verbindung nach einem Failover weiterhin erstellen, aber müssen Sie manuell den verfügbarkeitsgruppenlistener-Namen in der DNS-Server registrieren, mit der IP-Adresse verwendet, um die virtuelle IP-Ressource (wie in den folgenden Abschnitten erläutert wird) zu erstellen.
+> An diesem Punkt ist die Integration von SQL Server in Pacemaker unter Linux nicht so stark gekoppelt wie in WSFC unter Windows. Aus SQL kann der Cluster nicht erkannt werden. Die gesamte Orchestrierung erfolgt außerhalb durch Pacemaker. Zudem wird der Dienst als eigenständige Instanz von Pacemaker gesteuert. Ferner gilt der virtuelle Netzwerkname für WSFC. Dazu gibt es in Pacemaker keine Entsprechung. Dynamische Always On-Verwaltungssichten, die Clusterinformationen abfragen, geben leere Zeilen zurück. Sie können weiterhin einen Listener erstellen, um ihn nach einem Failover für eine transparente erneute Verbindung zu verwenden. Sie müssen jedoch den Listenernamen im DNS-Server manuell mit der IP-Adresse registrieren, die zum Erstellen der virtuellen IP-Ressource verwendet wurde (eine Erläuterung hierzu finden Sie in den folgenden Abschnitten).
 
-Die folgenden Abschnitte führen die Schritte zum Einrichten einer Lösung mit Failovercluster. 
+In den folgenden Abschnitten werden die Schritte zum Einrichten einer Failoverclusterlösung erläutert. 
 
-## <a name="roadmap"></a>Roadmap für die
+## <a name="roadmap"></a>Roadmap
 
-Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern für hochverfügbarkeit unterscheiden sich von den Schritten in einem Windows Server-Failovercluster. Die folgende Liste beschreibt die allgemeinen Schritte: 
+Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für Hochverfügbarkeit unterscheiden sich von den Schritten in Windows Server-Failoverclustern. Die allgemeinen Schritte werden in der folgenden Liste beschrieben: 
 
-1. [Konfigurieren von SQL Server auf den Clusterknoten](sql-server-linux-setup.md).
+1. [Konfigurieren von SQL Server in den Clusterknoten](sql-server-linux-setup.md).
 
-2. [Erstellen der verfügbarkeitsgruppe](sql-server-linux-availability-group-configure-ha.md). 
+2. [Erstellen der Verfügbarkeitsgruppe](sql-server-linux-availability-group-configure-ha.md). 
 
-3. Konfigurieren Sie eine Clusterressourcen-Manager, z.B. Pacemaker. Diese Anweisungen sind in diesem Dokument.
+3. Konfigurieren Sie einen Cluster Resource Manager wie Pacemaker. Diese Anweisungen finden Sie in diesem Dokument.
    
-   Die Möglichkeit, einen Cluster-Ressourcen-Manager zu konfigurieren, hängt von der jeweilige Linux-Distribution. 
+   Wie ein Cluster Resource Manager konfiguriert wird, hängt von der jeweiligen Linux-Distribution ab. 
 
    >[!IMPORTANT]
-   >Produktionsumgebungen sind erforderlich, einen umgrenzungs-Agent, wie STONITH für hohe Verfügbarkeit. Die Demos in dieser Dokumentation verwenden keine Umgrenzung-Agents. Die Demos sind für Tests und Überprüfung nur auf. 
+   >In Produktionsumgebungen wird zur Gewährleistung von Hochverfügbarkeit ein Umgrenzungsagent wie STONITH benötigt. In den Demos dieser Dokumentation werden keine Umgrenzungsagents verwendet. Die Demos dienen lediglich zu Testzwecken und Überprüfungen. 
    
-   >Ein Linux-Cluster verwendet Umgrenzung, um den Cluster in einen bekannten Zustand zurückzugeben. Die Möglichkeit zum Konfigurieren der Umgrenzung hängt davon ab, die Verteilung und der Umgebung. Zu diesem Zeitpunkt ist die Umgrenzung nicht in eine Cloud-Umgebungen verfügbar. Finden Sie unter [Supportrichtlinien für RHEL High Availability Cluster - Virtualisierungsplattformen](https://access.redhat.com/articles/29440) für Weitere Informationen.
+   >Ein Linux-Cluster verwendet die Umgrenzung, um den Cluster in einen bekannten Zustand zurückzusetzen. Wie die Umgrenzung konfiguriert wird, hängt von der Distribution und der Umgebung ab. Zurzeit ist die Umgrenzung nicht in allen Cloudumgebungen verfügbar. Weitere Informationen finden Sie unter [Supportrichtlinien für RHEL-Hochverfügbarkeitscluster – Virtualisierungsplattformen](https://access.redhat.com/articles/29440).
 
-5.  [Fügen Sie die verfügbarkeitsgruppe als Ressource im Cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
+5.  [Hinzufügen der Verfügbarkeitsgruppe als Ressource im Cluster](sql-server-linux-availability-group-cluster-ubuntu.md#create-availability-group-resource). 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren Sie und konfigurieren Sie auf jedem Clusterknoten die Pacemaker
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
 
-1. Öffnen Sie die Firewallports auf allen Knoten. Öffnen Sie den Port für die Pacemaker-Dienst hohe Verfügbarkeit, SQL Server-Instanz und den Endpunkt der verfügbarkeitsgruppe. Der TCP-Standardport für SQL Server ausgeführt wird, ist 1433.  
+1. Öffnen Sie auf allen Knoten die Firewallports. Öffnen Sie den Port für den Pacemaker-Dienst für hohe Verfügbarkeit, die SQL Server-Instanz und den Endpunkt der Verfügbarkeitsgruppe. Der Standard-TCP-Port für den Server, auf dem SQL Server ausgeführt wird, ist 1433.  
 
    ```bash
    sudo ufw allow 2224/tcp
@@ -63,13 +63,13 @@ Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern für ho
    sudo ufw reload
    ```
    
-   Alternativ können Sie nur die Firewall deaktivieren:
+   Alternativ können Sie einfach die Firewall deaktivieren:
         
    ```bash
    sudo ufw disable
    ```
 
-1. Installieren Sie Pacemaker-Pakete. Führen Sie auf allen Knoten die folgenden Befehle aus:
+1. Installieren Sie Pacemaker-Pakete. Führen Sie die folgenden Befehle auf allen Knoten aus:
 
    ```bash
    sudo apt-get install pacemaker pcs fence-agents resource-agents
@@ -81,9 +81,9 @@ Die Schritte zum Erstellen einer verfügbarkeitsgruppe auf Linux-Servern für ho
    sudo passwd hacluster
    ```
 
-## <a name="enable-and-start-pcsd-service-and-pacemaker"></a>Aktivieren Sie und starten Sie Pcsd-Dienst und Pacemaker
+## <a name="enable-and-start-pcsd-service-and-pacemaker"></a>Aktivieren und starten Sie den pcsd-Dienst und Pacemaker.
 
-Der folgende Befehl aktiviert und beginnt Pcsd-Dienst und Pacemaker. Führen Sie auf allen Knoten. Dadurch werden die Knoten des Clusters nach dem Neustart erneut beitreten. 
+Mit dem folgenden Befehl werden pcsd-Dienst und Pacemaker aktiviert und gestartet. Führen Sie dies auf allen Knoten aus. So können die Knoten dem Cluster nach dem Neustart erneut beitreten. 
 
 ```bash
 sudo systemctl enable pcsd
@@ -91,35 +91,35 @@ sudo systemctl start pcsd
 sudo systemctl enable pacemaker
 ```
 >[!NOTE]
->Enable Pacemaker Befehl möglicherweise mit Fehler abgeschlossen "Pacemaker Standard-Start enthält keine Ausführungsstufe, wird abgebrochen." Dieser harmlos ist, kann die Clusterkonfiguration fortgesetzt. 
+>Der Befehl zum Aktivieren von Pacemaker könnte mit der Fehlermeldung „pacemaker Default-Start contains no runlevels, aborting“ (Pacemaker-Standardstart enthält keine Ausführungsebenen, Abbruch) beendet werden. Dies ist harmlos, die Clusterkonfiguration kann fortgesetzt werden. 
 
 ## <a name="create-the-cluster"></a>Erstellen des Clusters
 
-1. Entfernen Sie alle vorhandenen Clusterkonfiguration, von allen Knoten. 
+1. Entfernen Sie alle vorhandenen Clusterkonfigurationen von allen Knoten. 
 
-   Laufende "Sudo apt-Get Install Pcs" Pacemaker und Corosync-Pcs zur selben Zeit installiert und startet die Ausführung alle 3 der Dienste.  Starten Corosync eine Vorlage generiert "/ etc/cluster/corosync.conf' Datei.  Damit die nächsten Schritte erfolgreich ausgeführt werden, kann diese Datei sollte nicht vorhanden: damit die problemumgehung besteht, beim Beenden des Pacemaker darin / Corosync und Löschen von "/ etc/cluster/corosync.conf", und klicken Sie dann weitere Schritte erfolgreich abgeschlossen. "Pcs Cluster destroy" führt die gleiche Aufgabe aus, und Sie können es verwenden, wie eine Zeitschritt ersten Cluster-Setup.
+   Wenn Sie „sudo apt-get install pcs“ ausführen, werden Pacemaker, Corosync und pcs gleichzeitig installiert, und alle drei Dienste werden gestartet.  Beim Starten von Corosync wird eine „/etc/cluster/corosync.conf“-Vorlagendatei generiert.  Damit die nächsten Schritte erfolgreich ausgeführt werden, sollte diese Datei nicht vorhanden sein. Zur Problemumgehung wird Pacemaker/Corosync beendet und „/etc/cluster/corosync.conf“ gelöscht. Anschließend werden die nächsten Schritte erfolgreich abgeschlossen. „pcs cluster destroy“ erfüllt denselben Zweck, und Sie können diesen Befehl als einmaligen ersten Clustersetupschritt verwenden.
    
-   Der folgende Befehl entfernt alle vorhandenen Konfigurationsdateien für den Cluster und alle Clusterdienste beendet. Dies zerstört dauerhaft den Cluster. Führen sie als ersten Schritt in einer präproduktionsumgebung. Beachten Sie, dass "Pcs Cluster destroy" deaktiviert die Pacemaker-Dienst und muss erneut aktiviert werden. Führen Sie den folgenden Befehl auf allen Knoten aus.
+   Mit dem folgenden Befehl werden alle vorhandenen Clusterkonfigurationsdateien entfernt und alle Clusterdienste angehalten. Dadurch wird der Cluster dauerhaft zerstört. Führen Sie dies als ersten Schritt in einer Präproduktionsumgebung aus. Beachten Sie, dass der Pacemaker-Dienst von „pcs cluster destroy“ deaktiviert wurde und erneut aktiviert werden muss. Führen Sie den folgenden Befehl auf allen Knoten aus.
    
    >[!WARNING]
-   >Der Befehl löscht alle vorhandenen Clusterressourcen.
+   >Der Befehl zerstört alle vorhandenen Clusterressourcen.
 
    ```bash
    sudo pcs cluster destroy 
    sudo systemctl enable pacemaker
    ```
 
-1. Erstellen des Clusters an. 
+1. Erstellen Sie den Cluster. 
 
    >[!WARNING]
-   >Aufgrund eines bekannten Problems, die der clustering-Anbieter ist untersuchen, starten gibt der Cluster ("Pcs Cluster Start") folgende Fehlermeldung zurück. Dies ist, da die Protokolldatei in /etc/corosync/corosync.conf die wird erstellt, wenn der Cluster-Setup-Befehl ausgeführt wird, ist falsch konfiguriert. Um dieses Problem zu umgehen, ändern Sie die Protokolldatei: /var/log/corosync/corosync.log. Alternativ können Sie die /var/log/cluster/corosync.log-Datei erstellen.
+   >Aufgrund eines bekannten Problems, das der Clusteringanbieter untersucht, tritt beim Starten des Clusters („pcs cluster start“) der folgende Fehler auf. Dies liegt daran, dass die in „/etc/corosync/corosync.conf“ konfigurierte Protokolldatei, die beim Ausführen des Befehls zum Einrichten des Clusters erstellt wird, falsch ist. Um dieses Problem zu umgehen, ändern Sie die Protokolldatei in „/var/log/corosync/corosync.log“ um. Alternativ könnten Sie die Datei „/var/log/cluster/corosync.log“ erstellen.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-Der folgende Befehl erstellt einen Cluster mit drei Knoten. Bevor Sie das Skript ausführen, ersetzen Sie die Werte zwischen `< ... >`. Führen Sie den folgenden Befehl auf dem primären Knoten. 
+Mit dem folgenden Befehl wird ein Cluster mit drei Knoten erstellt. Bevor Sie das Skript ausführen, ersetzen Sie die Werte zwischen `< ... >`. Führen Sie den folgenden Befehl auf dem primären Knoten aus. 
 
    ```bash
    sudo pcs cluster auth <node1> <node2> <node3> -u hacluster -p <password for hacluster>
@@ -132,45 +132,45 @@ Der folgende Befehl erstellt einen Cluster mit drei Knoten. Bevor Sie das Skript
    >Wenn Sie vorher einen Cluster auf denselben Knoten konfiguriert haben, müssen Sie die Option „--force“ verwenden, wenn Sie „pcs cluster setup“ ausführen. Beachten Sie, dass dies der Ausführung von „pcs cluster destroy“ entspricht, und der Peacemaker-Dienst muss erneut mithilfe von „sudo systemctl enable pacemaker“ aktiviert werden.
 
 
-## <a name="configure-fencing-stonith"></a>Konfigurieren von Umgrenzung (STONITH)
+## <a name="configure-fencing-stonith"></a>Konfigurieren der Umgrenzung (STONITH)
 
-Pacemaker-Clusters Anbieter erfordern STONITH aktiviert werden und ein umgrenzungs-Gerät, das für einen unterstützten Cluster-Setup konfiguriert. Wenn der Clusterressourcen-Manager den Status eines Knotens oder einer Ressource auf einem Knoten nicht ermitteln kann, Umgrenzung dient zum Cluster erneut in einen bekannten Zustand zu bringen. Ressource Ebene Umgrenzung hauptsächlich wird sichergestellt, dass es keine datenbeschädigung bei einem Ausfall durch Konfigurieren einer Ressource. Können Sie Ressourcen auf Umgrenzung, z. B. mit DRBD (Distributed repliziert Blockgerät), um den Datenträger auf einem Knoten, wie wenn veraltet zu markieren die kommunikationsverbindung ausfällt. Ebene Umgrenzung Knoten wird sichergestellt, dass alle Ressourcen von ein Knoten nicht ausgeführt werden kann. Dies erfolgt durch das Zurücksetzen des Knotens, und die Implementierung dieser Pacemaker STONITH (das steht für "den anderen Knoten im Kopf dafür") aufgerufen. Pacemaker unterstützt eine Vielzahl von umgrenzungs-Geräte, z. B. eine unterbrechungsfreie Stromversorgung oder Management Netzwerkschnittstellenkarten für Server. Weitere Informationen finden Sie unter [Pacemaker-Cluster von Grund auf Neu](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) und [Umgrenzung und Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
+Bei Anbietern von Pacemaker-Clustern muss für eine unterstützte Clustereinrichtung STONITH aktiviert und ein Umgrenzungsgerät konfiguriert sein. Wenn der Cluster Resource Manager den Status eines Knotens oder einer Ressource auf einem Knoten nicht ermitteln kann, wird die Umgrenzung verwendet, um den Cluster wieder in einen bekannten Status zu versetzen. Durch die Umgrenzung auf Ressourcenebene wird vor allem sichergestellt, dass bei einem Ausfall durch die Konfiguration einer Ressource keine Daten beschädigt werden. Die Umgrenzung auf Ressourcenebene können Sie beispielsweise mit DRBD (Distributed Replicated Block Device) verwenden, damit der Datenträger auf einem Knoten bei einem Ausfall der Kommunikationsverbindung als veraltet markiert wird. Mit der Umgrenzung auf Knotenebene wird sichergestellt, dass ein Knoten keine Ressourcen ausführt. Dies erfolgt durch Zurücksetzen des Knotens. Die zugehörige Pacemaker-Implementierung wird als STONITH bezeichnet (was für „Shoot the Other Node in the Head“ (Schieß dem anderen Knoten in den Kopf) steht). Pacemaker unterstützt eine Vielzahl von Umgrenzungsgeräten, z.B. eine unterbrechungsfreie Stromversorgung oder Verwaltungsschnittstellenkarten für Server. Weitere Informationen finden Sie unter [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) (Pacemaker-Cluster völlig neu erstellen) und [Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html) (Umgrenzung und STONITH). 
 
-Da die Ebene des Knotens für das umgrenzen der Konfiguration in Ihrer Umgebung stark abhängig ist, deaktivieren wir sie für dieses Tutorial (es kann zu einem späteren Zeitpunkt konfiguriert werden). Führen Sie das folgende Skript auf dem primären Knoten aus: 
+Da die Umgrenzungskonfiguration auf Knotenebene stark von Ihrer Umgebung abhängt, wird sie für dieses Tutorial deaktiviert (sie kann zu einem späteren Zeitpunkt konfiguriert werden). Führen Sie das folgende Befehlsskript auf dem primären Knoten aus: 
 
 ```bash
 sudo pcs property set stonith-enabled=false
 ```
 
 >[!IMPORTANT]
->Deaktivieren die STONITH ist nur für Testzwecke verwenden. Wenn Sie Pacemaker in einer produktionsumgebung verwenden möchten, sollten Sie eine STONITH-Implementierung planen, je nach Umgebung und behalten sie die Einstellung aktiviert. Beachten Sie, dass an diesem Punkt keine Umgrenzung-Agents für alle Cloud-Umgebungen (einschließlich Azure) oder Hyper-V. Nichts enthält, bietet der Hersteller der Cluster keine Unterstützung für Produktionscluster in diesen Umgebungen ausgeführt. 
+>STONITH wird lediglich zu Testzwecken deaktiviert. Wenn Sie Pacemaker in einer Produktionsumgebung verwenden möchten, sollten Sie je nach Ihrer Umgebung eine STONITH-Implementierung planen und aktiviert halten. Beachten Sie an diesem Punkt, dass keine Umgrenzungsagents für Cloudumgebungen (wie Azure) oder Hyper-V vorhanden sind. Folglich bietet der Clusteranbieter keine Unterstützung für die Ausführung von Produktionsclustern in diesen Umgebungen. 
 
-## <a name="set-cluster-property-cluster-recheck-interval"></a>Legen Sie die Cluster-Cluster-erneute zugriffsprüfung während-Interval-Eigenschaft
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Festlegen der Clustereigenschaft „cluster-recheck-interval“
 
-`cluster-recheck-interval` Gibt an, das Abrufintervall auf Änderungen in der Ressourcenparameter, Einschränkungen oder andere Clusteroptionen an dem der Cluster überprüft. Wenn ein Replikat ausfällt, versucht der Cluster, das Replikat in einem Intervall neu zu starten, die gebunden wird, indem die `failure-timeout` Wert und die `cluster-recheck-interval` Wert. Z. B. wenn `failure-timeout` auf 60 Sekunden festgelegt ist und `cluster-recheck-interval` festgelegt ist auf 120 Sekunden, wird versucht, der Neustart in einem Intervall, das mehr als 60 Sekunden, jedoch weniger als 120 Sekunden ist. Es wird empfohlen, dass Sie die Fehler-Timeout 60er-Bereich und die Cluster-erneute zugriffsprüfung während--Intervall auf einen Wert, der größer als 60 Sekunden festlegen. Cluster-erneute zugriffsprüfung während-Intervall auf einen niedrigen Wert festlegen, wird nicht empfohlen.
+`cluster-recheck-interval` gibt das Abrufintervall an, mit dem der Cluster prüft, ob Änderungen in den Ressourcenparametern, Einschränkungen oder anderen Clusteroptionen vorliegen. Wenn ein Replikat ausfällt, versucht der Cluster, das Replikat in einem Intervall neu zu starten, das durch den Wert `failure-timeout` und den Wert `cluster-recheck-interval` gebunden ist. Wenn `failure-timeout` beispielsweise auf 60 Sekunden und `cluster-recheck-interval` auf 120 Sekunden festgelegt ist, wird der Neustart in einem Intervall versucht, das größer als 60 Sekunden, aber kleiner als 120 Sekunden ist. Es wird empfohlen, „failure-timeout“ auf 60 Sekunden und „cluster-recheck-interval“ auf einen Wert größer als 60 Sekunden festzulegen. Es wird nicht empfohlen, „cluster-recheck-interval“ auf einen kleinen Wert festzulegen.
 
-Aktualisieren Sie den Eigenschaftswert an `2 minutes` ausführen:
+So aktualisieren Sie den Eigenschaftswert auf ein Ausführungsintervall von `2 minutes`:
 
 ```bash
 sudo pcs property set cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Wenn Sie bereits eine Ressource durch einen Pacemaker-Cluster verwaltet haben, beachten Sie, dass alle Verteilungen, die die neuesten verfügbaren Pacemaker Paket 1.1.18-11.el7 verwenden eine verhaltensänderung für den Start-Fehler-ist--Schwerwiegender-Einstellung, wenn Cluster stellen Sie vor der Wert ist "false". Diese Änderung wirkt sich auf die testfailover-Workflow. Wenn ein primäres Replikat ein Ausfall auftritt, wird der Cluster für ein Failover auf eines der sekundären Replikate verfügbar erwartet. Stattdessen sehen Benutzer, dass der Cluster immer wieder versucht, das fehlerhafte primäre Replikat zu starten. Wenn dieser primären (aufgrund von einem dauerhaften Ausfall) nicht online ist, ein Failover des Clusters nicht an ein anderes verfügbares sekundäres Replikat. Aufgrund dieser Änderung eine zuvor empfohlene Konfiguration festzulegende Start Fehler-ist-schwerwiegender ist nicht mehr gültig und die Einstellung muss auf den Standardwert zurückgesetzt werden `true`. Darüber hinaus muss die AG-Ressource aktualisiert werden, enthält die `failover-timeout` Eigenschaft. 
+> Wenn Sie bereits über eine Verfügbarkeitsgruppenressource verfügen, die von einem Pacemaker-Cluster verwaltet wird, wird mit allen Verteilungen, für die das aktuellste verfügbare Pacemaker-Pakte 1.1.18-11.el7 verwendet wird, ein Behavior Change für die Clustereinstellung „start-failure-is-fatal“ für den Fall eingeführt, dass deren Wert auf FALSE festgelegt ist. Diese Änderung wirkt sich auf den Failoverworkflow aus. Wenn ein primäres Replikat ausfällt, wird für den Cluster ein Failover auf eines der verfügbaren sekundären Replikate erwartet. Stattdessen werden die Benutzer bemerken, dass der Cluster versucht, das ausgefallene primäre Replikat zu starten. Wenn dieses primäre Replikat (aufgrund eines dauerhaften Ausfalls) nicht online geschaltet wird, führt der Cluster kein Failover zu einem anderen verfügbaren sekundären Replikat durch. Aufgrund dieser Änderung ist eine zuvor empfohlene Konfiguration zum Festlegen von „start-failure-is-fatal“ nicht mehr gültig, und für die Einstellung muss der Standardwert `true` wiederhergestellt werden. Darüber hinaus muss die Verfügbarkeitsgruppenressource aktualisiert werden, um die Eigenschaft `failover-timeout` einzubeziehen. 
 >
->Aktualisieren Sie den Eigenschaftswert an `true` ausführen:
+>So aktualisieren Sie den Eigenschaftswert auf ein Ausführungsintervall von `true`:
 >
 >```bash
 >sudo pcs property set start-failure-is-fatal=true
 >```
 >
->Aktualisieren Sie Ihre vorhandenen Verfügbarkeitsgruppe Ressourceneigenschaft `failure-timeout` zu `60s` ausführen (ersetzen Sie `ag1` durch den Namen des Ihre Verfügbarkeitsgruppen-Ressource):
+>Aktualisieren Sie die Eigenschaft `failure-timeout` Ihrer vorhandenen Verfügbarkeitsgruppenressource auf ein Ausführungsintervall von `60s` (ersetzen Sie hierzu `ag1` durch den Namen Ihrer Verfügbarkeitsgruppenressource):
 >
 >```bash
 >pcs resource update ag1 meta failure-timeout=60s
 >```
 
-## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installieren von SQL Server-ressourcenagent für die Integration mit Pacemaker
+## <a name="install-sql-server-resource-agent-for-integration-with-pacemaker"></a>Installieren des SQL Server-Ressourcen-Agent für die Integration in Pacemaker
 
 Führen Sie die folgenden Befehle auf allen Knoten aus. 
 
@@ -178,13 +178,13 @@ Führen Sie die folgenden Befehle auf allen Knoten aus.
 sudo apt-get install mssql-server-ha
 ```
 
-## <a name="create-a-sql-server-login-for-pacemaker"></a>Erstellen Sie eine SQL Server-Anmeldung für Pacemaker
+## <a name="create-a-sql-server-login-for-pacemaker"></a>Erstellen eines SQL Server-Anmeldenamens für Pacemaker
 
 [!INCLUDE [SLES-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
-## <a name="create-availability-group-resource"></a>Verfügbarkeitsgruppen-Ressource erstellen
+## <a name="create-availability-group-resource"></a>Erstellen von Verfügbarkeitsgruppenressourcen
 
-Verwenden Sie zum Erstellen der verfügbarkeitsgruppenressource `pcs resource create` -Befehl aus, und legen Sie die Ressourceneigenschaften. Folgenden Befehl erstellt eine `ocf:mssql:ag` Typressource für die verfügbarkeitsgruppe mit dem Namen, Primär-/Sekundärgerät `ag1`. 
+Um die Verfügbarkeitsgruppenressource zu erstellen, verwenden Sie den `pcs resource create`-Befehl, und legen Sie die Ressourceneigenschaften fest. Der folgende Befehl erstellt eine `ocf:mssql:ag`-Ressource vom Typ Master/Slave für die Verfügbarkeitsgruppe mit dem Namen `ag1`. 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true
@@ -193,52 +193,52 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 
-## <a name="create-virtual-ip-resource"></a>Erstellen Sie virtuelle IP-Ressource
+## <a name="create-virtual-ip-resource"></a>Erstellen einer virtuellen IP-Ressource
 
-Um die virtuelle IP-Adressressource zu erstellen, führen Sie den folgenden Befehl auf einem Knoten ein. Verwenden Sie eine verfügbare statische IP-Adresse aus dem Netzwerk. Bevor Sie das Skript ausführen, ersetzen Sie die Werte zwischen `< ... >` mit einer gültigen IP-Adresse.
+Führen Sie den folgenden Befehl auf einem Knoten aus, um die virtuelle IP-Adressressource zu erstellen. Verwenden Sie eine verfügbare statische IP-Adresse aus dem Netzwerk. Bevor Sie das Skript ausführen, ersetzen Sie die Werte zwischen `< ... >` durch eine gültige IP-Adresse.
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 ```
 
-Es gibt keinen virtuellen Server-Namen Pacemaker entspricht. Verwenden Sie eine Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist und nicht die IP-Adresse, die Adresse der IP-Ressource und den Namen des gewünschten virtuellen Servers in DNS registrieren. Registrieren Sie für DR-Konfigurationen den gewünschten virtuellen Servernamen und die IP-Adresse mit dem DNS-Servern auf primären und DR-Standort aus.
+In Pacemaker ist der Name eines virtuellen Servers nicht gleichwertig. Wenn Sie eine Verbindungszeichenfolge verwenden möchten, die auf einen Zeichenfolgen-Servernamen verweist, und nicht die IP-Adresse verwenden, registrieren Sie die IP-Ressourcenadresse und den gewünschten Namen des virtuellen Servers in DNS. Registrieren Sie für Notfallwiederherstellungs-Konfigurationen den gewünschten Namen des virtuellen Servers und die IP-Adresse bei den DNS-Servern am primären Standort und Notfallwiederherstellungs-Standort.
 
-## <a name="add-colocation-constraint"></a>Zusammenstellung-Einschränkung hinzufügen
+## <a name="add-colocation-constraint"></a>Hinzufügen einer Kollokationseinschränkung
 
-Fast jeder Entscheidung im eines Pacemaker-Clusters, z. B. auswählen, in dem eine Ressource ausgeführt werden soll, erfolgt durch Vergleichen der Ergebnisse. Pro Ressource Bewertungen berechnet werden, und der Clusterressourcen-Manager wählt den Knoten mit der höchsten Bewertung für eine bestimmte Ressource. (Wenn ein Knoten ein negatives Ergebnis für eine Ressource verfügt, kann nicht die Ressourcen auf diesem Knoten ausgeführt.) Verwenden Sie Einschränkungen, um die Entscheidungen des Clusters zu konfigurieren. Eine Bewertung eine Beschränkung vorliegt. Wenn eine Einschränkung auf einen Wert kleiner als UNENDLICH ist, ist es nur eine Empfehlung aus. Eine Bewertung von UNENDLICH bedeutet, dass es erforderlich ist. Um sicherzustellen, dass das primäre Replikat und die virtuelle IP-Ressource auf dem gleichen Host sind, definieren Sie eine Zusammenstellung-Einschränkung mit einer Bewertung von UNENDLICH. Um die Zusammenstellung Einschränkung hinzuzufügen, führen Sie den folgenden Befehl auf einem Knoten ein. 
+Fast jede Entscheidung in einem Pacemaker-Cluster, wie etwa die Auswahl des Orts, an dem eine Ressource ausgeführt werden soll, erfolgt durch Vergleichen von Bewertungen. Dabei werden Bewertungen pro Ressource berechnet, und der Cluster Resource Manager wählt den Knoten mit der höchsten Bewertung für eine bestimmte Ressource aus. (Wenn ein Knoten eine negative Bewertung für eine Ressource aufweist, kann die Ressource auf diesem Knoten nicht ausgeführt werden.) Verwenden Sie Einschränkungen, um die Entscheidungen des Clusters zu konfigurieren. Einschränkungen weisen eine Bewertung auf. Wenn eine Einschränkung eine Bewertung unter INFINITY aufweist, ist dies lediglich eine Empfehlung. Die Bewertung INFINITY steht für eine obligatorische Einschränkung. Um sicherzustellen, dass das primäre Replikat und die virtuelle IP-Ressource sich auf demselben Host befinden, definieren Sie eine Kollokationseinschränkung mit der Bewertung INFINITY. Führen Sie den folgenden Befehl auf einem Knoten aus, um eine Kollokationseinschränkung hinzuzufügen. 
 
 ```bash
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
 ```
 
-## <a name="add-ordering-constraint"></a>Sortieren-Einschränkung hinzufügen
+## <a name="add-ordering-constraint"></a>Hinzufügen einer Sortierungseinschränkung
 
-Die Zusammenstellung-Einschränkung verfügt über eine implizite Sortierung Einschränkung. Die virtuelle IP-Adressressource verschoben wird, bevor sie die verfügbarkeitsgruppenressource verschoben. Standardmäßig ist die Abfolge der Ereignisse:
+Die Kollokationseinschränkung weist eine implizite Sortierungseinschränkung auf. Damit wird die virtuelle IP-Ressource verschoben, bevor diese die Verfügbarkeitsgruppenressource verschiebt. Die Ereignisse laufen standardmäßig wie folgt ab:
 
-1. Benutzerproblemen `pcs resource move` auf dem primären verfügbarkeitsgruppenobjekt von Knoten1 auf Knoten2.
-1. Die virtuelle IP-Adressressource, die auf node1 beendet werden.
-1. Die virtuelle IP-Adressressource startet auf Node2 her.
+1. Der Benutzer gibt den Befehl `pcs resource move` aus, um die primäre Verfügbarkeitsgruppe von node1 zu node2 zu verschieben.
+1. Die virtuelle IP-Ressource wird auf node1 angehalten.
+1. Die virtuelle IP-Ressource wird auf node2 gestartet.
 
    >[!NOTE]
-   >An diesem Punkt die IP-Adresse vorübergehend Punkte auf node2 während node2 immer noch ein vor dem Failover ist sekundären. 
+   >Zu diesem Zeitpunkt verweist die IP-Adresse vorübergehend auf node2, während node2 noch ein sekundäres Replikat vor dem Failover darstellt. 
    
-1. Die verfügbarkeitsgruppe auf node1 primären zum sekundären Standort tiefer gestuft wird.
-1. Die sekundären Datenbank auf node2 verfügbarkeitsgruppe wird zum primären Replikat höher gestuft. 
+1. Die primäre Verfügbarkeitsgruppe auf node1 wird auf sekundär herabgestuft.
+1. Die sekundäre Verfügbarkeitsgruppe auf node2 wird auf primär heraufgestuft. 
 
-Um zu verhindern, dass die IP-Adresse vorübergehend auf den Knoten mit der vor dem Failover sekundären Datenbank verweist, fügen Sie eine Sortierung Einschränkung hinzu. 
+Fügen Sie eine Sortierungseinschränkung hinzu, um zu vermeiden, dass die IP-Adresse vorübergehend auf den Knoten mit dem sekundären Replikat vor dem Failover verweist. 
 
-Um eine Sortierung Einschränkung hinzuzufügen, führen Sie den folgenden Befehl auf einem Knoten ein:
+Führen Sie den folgenden Befehl auf einem Knoten aus, um eine Sortierungsbeschränkung hinzuzufügen:
 
 ```bash
 sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
 
 >[!IMPORTANT]
->Nachdem Sie den Cluster konfigurieren, und fügen Sie als Clusterressource der verfügbarkeitsgruppe hinzu, können Sie Transact-SQL keine für das Failover der verfügbarkeitsgruppenressourcen. Ressourcen für SQL Server-Clusters unter Linux sind nicht so eng mit dem Betriebssystem verknüpft, wie sie auf einem Windows Server Failover Cluster (WSFC) sind. SQL Server-Dienst ist nicht über das Vorhandensein des Clusters. Alle Orchestrierung erfolgt über die Verwaltungstools. In RHEL oder Ubuntu verwenden `pcs`. 
+>Nachdem Sie den Cluster konfiguriert und die Verfügbarkeitsgruppe als Clusterressource hinzugefügt haben, können Sie ein Failover der Verfügbarkeitsgruppenressourcen nicht mehr mit Transact-SQL durchführen. SQL Server-Clusterressourcen unter Linux sind nicht so eng mit dem Betriebssystem gekoppelt wie in einem Windows Server-Failovercluster (WSFC). Der SQL Server-Dienst kann das Vorhandensein des Clusters nicht erkennen. Die gesamte Orchestrierung erfolgt über die Clusterverwaltungstools. Verwenden Sie in RHEL oder Ubuntu `pcs`. 
 
 <!---[!INCLUDE [Pacemaker Concepts](..\includes\ss-linux-cluster-pacemaker-concepts.md)]--->
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Betreiben von HA-verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md)
+[Arbeiten mit einer Hochverfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md)
 

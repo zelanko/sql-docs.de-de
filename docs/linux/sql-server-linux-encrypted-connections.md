@@ -1,6 +1,6 @@
 ---
-title: Verschlüsseln von Verbindungen zu SQLServer unter Linux
-description: Dieser Artikel beschreibt Verschlüsseln von Verbindungen zu SQL Server unter Linux.
+title: Verschlüsseln von Verbindungen mit SQL Server für Linux
+description: In diesem Artikel wird das Verschlüsseln von Verbindungen mit SQL Server für Linux beschrieben.
 ms.date: 01/30/2018
 author: vin-yu
 ms.author: vinsonyu
@@ -11,38 +11,38 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077287"
 ---
-# <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen zu SQLServer unter Linux
+# <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen mit SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unter Linux können Transport Layer Security (TLS) zum Verschlüsseln von Daten, die über ein Netzwerk zwischen einer Clientanwendung und einer Instanz von übertragen werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt die gleichen TLS-Protokolle unter Windows und Linux: TLS 1.2, 1.1 und 1.0. Die Schritte zum Konfigurieren von TLS sind jedoch spezifisch für das Betriebssystem auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux kann Transport Layer Security (TLS) zum Verschlüsseln der Daten verwendet werden, die über ein Netzwerk zwischen einer Clientanwendung und einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] übertragen werden. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt unter Windows und Linux die gleichen TLS-Protokolle: TLS 1.2, 1.1 und 1.0. Die Schritte zum Konfigurieren von TLS sind jedoch spezifisch für das Betriebssystem, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.  
 
-## <a name="requirements-for-certificates"></a>Anforderungen für Zertifikate 
-Bevor Sie beginnen, müssen Sie sicherstellen, dass Ihre Zertifikate die folgenden Voraussetzungen erfüllen:
-- Die aktuelle Systemzeit muss nach der gültig von-Eigenschaft des Zertifikats und vor der gültig bis-Eigenschaft des Zertifikats liegen.
-- Das Zertifikat muss für die Serverauthentifizierung vorgesehen sein. Dies erfordert die Enhanced Key Usage-Eigenschaft des Zertifikats, das Serverauthentifizierung (1.3.6.1.5.5.7.3.1) angeben.
-- Das Zertifikat muss mit der Option KeySpec AT_KEYEXCHANGE erstellt werden. Das Zertifikat des Key Usage-Eigenschaft (KEY_USAGE) enthält in der Regel auch Schlüsselverschlüsselung (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- Dass der allgemeine Name (CN) den Hostnamen oder den vollqualifizierten Domänennamen (FQDN) des Servercomputers übereinstimmt, muss die Eigenschaft Subject des Zertifikats angeben. Hinweis: Platzhalterzertifikate werden unterstützt.
+## <a name="requirements-for-certificates"></a>Anforderungen an Zertifikate 
+Bevor Sie beginnen, müssen Sie sicherstellen, dass Ihre Zertifikate den folgenden Anforderungen entsprechen:
+- Die aktuelle Systemzeit muss nach der Eigenschaft „Gültig ab“ und vor der Eigenschaft „Gültig bis“ des Zertifikats liegen.
+- Das Zertifikat muss für die Serverauthentifizierung vorgesehen sein. Dazu muss für die Eigenschaft „Erweiterte Schlüsselverwendung“ des Zertifikats „Serverauthentifizierung (1.3.6.1.5.5.7.3.1)“ angegeben sein.
+- Das Zertifikat muss mit der KeySpec-Option von AT_KEYEXCHANGE erstellt werden. Normalerweise enthält die Schlüsselverwendungseigenschaft (KEY_USAGE) des Zertifikats auch die Schlüsselverschlüsselung (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- Mit der Eigenschaft „Antragsteller“ des Zertifikats muss angegeben werden, dass der allgemeine Name (Common Name, CN) mit dem Hostnamen oder dem vollqualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) des Servercomputers übereinstimmt. Hinweis: Platzhalterzertifikate werden unterstützt.
 
-## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Konfigurieren die OpenSSL-Bibliotheken für die Verwendung (Optional)
-Können Sie symbolische Verknüpfungen erstellen die `/opt/mssql/lib/` Verzeichnis, das dem verweisen auf `libcrypto.so` und `libssl.so` Bibliotheken für die Verschlüsselung verwendet werden soll. Dies ist nützlich, wenn Sie SQL Server verwenden eine bestimmte Version von OpenSSL anstelle der Standardeinstellung, die vom System bereitgestellten erzwingen möchten. Wenn diese symbolischen Verknüpfungen nicht vorhanden sind, wird SQL Server die konfiguriert standardmäßig OpenSSL-Bibliotheken auf dem System geladen.
+## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Konfigurieren der OpenSSL-Bibliotheken zur Verwendung (optional)
+Sie können symbolische Verknüpfungen im `/opt/mssql/lib/`-Verzeichnis erstellen, die darauf verweisen, welche `libcrypto.so`- und `libssl.so`-Bibliotheken für die Verschlüsselung verwendet werden sollen. Dies ist hilfreich, wenn Sie erzwingen möchten, dass SQL Server eine bestimmte andere OpenSSL-Version als die vom System bereitgestellte Standardversion verwendet. Wenn diese symbolischen Verknüpfungen nicht vorhanden sind, lädt SQL Server die standardmäßig auf dem System konfigurierten OpenSSL-Bibliotheken.
 
-Diese symbolischen Verknüpfungen heißen `libcrypto.so` und `libssl.so` und platziert Sie in der `/opt/mssql/lib/` Verzeichnis.
+Diese symbolischen Verknüpfungen sollten mit `libcrypto.so` und `libssl.so` benannt und in das `/opt/mssql/lib/`-Verzeichnis eingefügt werden.
 
 ## <a name="overview"></a>Übersicht
-TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wenn ordnungsgemäß konfiguriert ist, bietet TLS sowohl Datenschutz und Integrität der Daten für die Kommunikation zwischen dem Client und dem Server.  TLS-Verbindungen können es sich entweder um Client initiiert oder Server initiierten sein. 
+TLS wird zum Verschlüsseln von Verbindungen einer Clientanwendung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Bei ordnungsgemäßer Konfiguration bietet TLS sowohl Datenschutz als auch Datenintegrität für die Kommunikation zwischen dem Client und dem Server.  TLS-Verbindungen können entweder vom Client oder vom Server initiiert werden. 
 
-## <a name="client-initiated-encryption"></a>Vom Client initiierten Verschlüsselung 
-- **Zertifikat generieren** (/ CN sollte mit Ihrem SQL Server-Host des vollständig qualifizierten Domänennamen überein)
+## <a name="client-initiated-encryption"></a>Vom Client initiierte Verschlüsselung 
+- **Generieren des Zertifikats** („/CN“ sollte mit dem vollqualifizierten Domänennamen des SQL Server-Hosts identisch sein)
 
 > [!NOTE]
-> Für dieses Beispiel, dass wir ein selbstsigniertes Zertifikat verwenden sollte dies nicht für Produktionsszenarien verwendet werden. Sie sollten ZS-Zertifikate verwenden. 
+> In diesem Beispiel verwenden wir ein selbstsigniertes Zertifikat, das nicht für Produktionsszenarien verwendet werden sollte. Sie sollten Zertifizierungsstellenzertifikate verwenden. 
 
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
@@ -50,7 +50,7 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
         sudo mv mssql.pem /etc/ssl/certs/ 
         sudo mv mssql.key /etc/ssl/private/ 
 
-- **Konfigurieren von SQLServer**
+- **Konfigurieren von SQL Server**
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
@@ -59,18 +59,18 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
         sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
         sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
 
-- **Registrieren des Zertifikats auf dem Client (Windows, Linux oder MacOS)**
+- **Registrieren des Zertifikats auf dem Clientcomputer (Windows, Linux oder macOS)**
 
-    -   Wenn Sie mit der Zertifizierungsstelle signiertes Zertifikat arbeiten, müssen Sie das Zertifikat der Zertifizierungsstelle (Certificate Authority, CA) anstelle des Benutzerzertifikats auf den Clientcomputer kopieren. 
-    -   Wenn Sie das selbstsignierte Zertifikat verwenden, kopieren Sie die PEM-Datei in die folgenden Ordner, die je nach Verteilung und führen Sie die Befehle, um sie zu aktivieren 
-        - **Ubuntu**: Copy-Zertifikats in den ```/usr/share/ca-certificates/``` CRT-Erweiterung umbenennen Dpkg-Reconfigure ZS-Zertifikate verwenden, um es als System-CA-Zertifikat zu aktivieren. 
-        - **RHEL**: Copy-Zertifikats in den ```/etc/pki/ca-trust/source/anchors/``` verwenden ```update-ca-trust``` als System-CA-Zertifikat aktivieren.
-        - **SUSE**: Copy-Zertifikats in den ```/usr/share/pki/trust/anchors/``` verwenden ```update-ca-certificates``` als System-CA-Zertifikat aktivieren.
-        - **Windows**:  Importieren Sie die PEM-Datei als ein Zertifikat unter dem aktuellen Benutzer -> Vertrauenswürdige Stammzertifizierungsstellen-Zertifikate >
+    -   Wenn Sie ein von der Zertifizierungsstelle signiertes Zertifikat verwenden, müssen Sie das Zertifizierungsstellenzertifikat (Certificate Authority, CA) anstelle des Benutzerzertifikats auf den Clientcomputer kopieren. 
+    -   Wenn Sie das selbstsignierte Zertifikat verwenden, kopieren Sie einfach die PEM-Datei in die folgenden Ordner bzw. in die Distribution, und führen Sie die Befehle aus, um sie zu aktivieren. 
+        - **Ubuntu**: Kopieren Sie das Zertifikat in ```/usr/share/ca-certificates/```, benennen Sie die Erweiterung in „.crt“ um, und aktivieren Sie es mit „dpkg-reconfigure ca-certificates“ als System-Zertifizierungsstellenzertifikat. 
+        - **RHEL**: Kopieren Sie das Zertifikat in ```/etc/pki/ca-trust/source/anchors/```, und aktivieren Sie es mit ```update-ca-trust``` als System-Zertifizierungsstellenzertifikat.
+        - **SUSE**: Kopieren Sie das Zertifikat in ```/usr/share/pki/trust/anchors/```, und aktivieren Sie es mit ```update-ca-certificates``` als System-Zertifizierungsstellenzertifikat.
+        - **Windows**:  Importieren Sie die PEM-Datei als Zertifikat unter „Aktueller Benutzer -> Vertrauenswürdige Stammzertifizierungsstellen -> Zertifikate“.
         - **macOS**: 
-           - Kopieren Sie das Zertifikat zu ```/usr/local/etc/openssl/certs```
-           - Führen Sie den folgenden Befehl aus, um den Hashwert zu erhalten: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - Benennen Sie das Zertifikat in Wert ein. Beispiel: ```mv mssql.pem dc2dd900.0```. Stellen Sie sicher, dass dc2dd900.0 ```/usr/local/etc/openssl/certs```
+           - Kopieren Sie das Zertifikat in ```/usr/local/etc/openssl/certs```.
+           - Führen Sie den folgenden Befehl aus, um den Hashwert zu erhalten: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```.
+           - Benennen Sie das Zertifikat in den Wert um. Beispiel: ```mv mssql.pem dc2dd900.0```. Stellen Sie sicher, dass dc2dd900.0 sich in ```/usr/local/etc/openssl/certs``` befindet.
     
 -   **Exemplarische Verbindungszeichenfolgen** 
 
@@ -92,7 +92,7 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
 
 ## <a name="server-initiated-encryption"></a>Vom Server initiierte Verschlüsselung 
 
-- **Zertifikat generieren** (/ CN sollte mit Ihren SQL Server-Host den vollqualifizierten Domänennamen überein)
+- **Generieren des Zertifikats** („/CN“ sollte mit dem vollqualifizierten Domänennamen des SQL Server-Hosts identisch sein)
         
         openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
         sudo chown mssql:mssql mssql.pem mssql.key 
@@ -100,7 +100,7 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
         sudo mv mssql.pem /etc/ssl/certs/ 
         sudo mv mssql.key /etc/ssl/private/ 
 
-- **Konfigurieren von SQLServer**
+- **Konfigurieren von SQL Server**
 
         systemctl stop mssql-server 
         cat /var/opt/mssql/mssql.conf 
@@ -125,13 +125,13 @@ TLS wird zum Verschlüsseln von Verbindungen von einer Clientanwendung verwendet
             "encrypt=false; trustServerCertificate=false;" 
             
 > [!NOTE]
-> Legen Sie **TrustServerCertificate** auf "true", wenn der Client an Zertifizierungsstelle, um die Authentizität des Zertifikats überprüft keine Verbindung herstellen kann
+> Legen Sie für **TrustServerCertificate** „True“ fest, wenn der Client keine Verbindung mit der Zertifizierungsstelle herstellen kann, um die Authentizität des Zertifikats zu überprüfen.
 
-## <a name="common-connection-errors"></a>Häufigen Verbindungsproblemen  
+## <a name="common-connection-errors"></a>Häufige Verbindungsfehler  
 
 |Fehlermeldung |Fix |
 |--- |--- |
-|Die Zertifikatkette wurde von einer Zertifizierungsstelle ausgestellt, die nicht vertrauenswürdig ist.  |Dieser Fehler tritt auf, wenn Clients nicht zum Überprüfen der Signatur auf das von SQL Server während des TLS-Handshakes bereitgestellte Zertifikat können. Stellen Sie sicher, dass der Client vertraut wird entweder die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] direkt Zertifikat oder der Zertifizierungsstelle, die das SQL Server-Zertifikat signiert. |
-|Der Zielprinzipalname ist falsch.  |Stellen Sie sicher, dass das Feld "Common Name" für SQL Server Zertifikat in der Clientverbindungszeichenfolge angegebene Servername entspricht. |  
-|An existing connection was forcibly closed by the remote host. |Dieser Fehler kann auftreten, wenn der Client die TLS-Protokollversion, die erforderlich sind, von SQL Server nicht unterstützt. Z. B. wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für TLS 1.2 erfordern, stellen Sie sicher, dass Ihre Clients unterstützen auch das TLS 1.2-Protokoll konfiguriert ist. |
+|Die Zertifikatkette wurde von einer nicht vertrauenswürdigen Zertifizierungsstelle ausgestellt.  |Dieser Fehler tritt auf, wenn Clients die Signatur des Zertifikats, das von SQL Server während des TLS-Handshakes angezeigt wird, nicht überprüfen können. Stellen Sie sicher, dass der Client entweder direkt dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Zertifikat vertraut, oder der Zertifizierungsstelle, die das SQL Server-Zertifikat signiert hat. |
+|Der Zielprinzipalname ist falsch.  |Stellen Sie sicher, dass das Feld „Allgemeiner Name“ auf dem SQL Server-Zertifikat mit dem in der Verbindungszeichenfolge des Clients angegebenen Servernamen übereinstimmt. |  
+|An existing connection was forcibly closed by the remote host. |Dieser Fehler kann auftreten, wenn der Client die für SQL Server erforderliche TLS-Protokollversion nicht unterstützt. Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] beispielsweise für die Verwendung von TLS 1.2 konfiguriert ist, müssen Sie sicherstellen, dass Ihre Clients auch das TLS 1.2-Protokoll unterstützen. |
 | | |   

@@ -1,5 +1,5 @@
 ---
-title: Always On-Verfügbarkeitsgruppen für SQLServer unter Linux
+title: Always On-Verfügbarkeitsgruppen für SQL Server für Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,62 +10,62 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
 ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67967512"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel beschreibt die Merkmale des Always On Availability Groups (Verfügbarkeitsgruppen) unter Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Installationen. Darüber hinaus werden die Unterschiede zwischen Linux und Windows Server-Failovercluster (WSFC)-Basis-Verfügbarkeitsgruppen. Finden Sie unter den [Dokumentation zu Windows-basierten](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) für die Grundlagen der Verfügbarkeitsgruppen, wenn sie die gleichen unter Windows und Linux mit Ausnahme von der WSFC arbeiten.
+In diesem Artikel werden die Merkmale von Always on-Verfügbarkeitsgruppen unter Linux-basierten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Installationen beschrieben. Außerdem werden die Unterschiede zwischen auf Linux-und Windows Server-Failoverclustern (WSFC) basierenden Tags behandelt. Grundlegende Informationen zu Verfügbarkeitsgruppen finden Sie in der [Windows-Dokumentation](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). Die Funktionsweise unter Windows und Linux ist mit Ausnahme von WSFCs identisch.
 
-Vom Standpunkt auf hoher Ebene Verfügbarkeitsgruppen unter [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux sind dieselben wie die WSFC-basierte Implementierungen werden. Das bedeutet, dass alle Einschränkungen und Funktionen identisch, abgesehen von einigen Ausnahmen sind. Die Hauptunterschiede sind:
+Im Allgemeinen entsprechen die Verfügbarkeitsgruppen unter [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] für Linux den WSFC-basierten Implementierungen. Das bedeutet, dass alle Einschränkungen und Features (mit einigen Ausnahmen) identisch sind. Die Hauptunterschiede bestehen in Folgendem:
 
--   Wird unter Linux in Microsoft Distributed Transaction Coordinator (DTC) unterstützt [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Wenn Ihre Anwendungen die Verwendung von verteilten Transaktionen erfordern, benötigen eine Verfügbarkeitsgruppe bereitstellen [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] auf Windows.
--   Linux-basierten Bereitstellungen verwenden Pacemaker anstelle von einem WSFC.
--   Im Gegensatz zu den meisten Konfigurationen für Verfügbarkeitsgruppen in Windows mit Ausnahme des Workgroupcluster-Szenarios erfordert Pacemaker nie Active Directory Domain Services (AD DS).
--   Wie Sie eine Verfügbarkeitsgruppe von einem Knoten auf einen anderen durchführen, unterscheidet sich zwischen Linux und Windows.
--   Bestimmte Einstellungen wie z. B. `required_synchronized_secondaries_to_commit` kann nur über Pacemaker unter Linux, geändert werden, während eine WSFC-basierte Installation Transact-SQL verwendet.
+-   Microsoft Distributed Transaction Coordinator (MS DTC) wird unter Linux in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] nicht unterstützt. Wenn Ihre Anwendungen verteilte Transaktionen verwenden und eine Verfügbarkeitsgruppe benötigen, stellen Sie [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Windows bereit.
+-   Für Linux-basierte Bereitstellungen wird Pacemaker anstelle von WSFCs verwendet.
+-   Im Gegensatz zu den meisten Konfiguration für Verfügbarkeitsgruppen unter Windows (außer im Workgroupclusterszenario) ist Active Directory Domain Services (AD DS) für Pacemaker nicht erforderlich.
+-   Das Failover einer Verfügbarkeitsgruppe von einem Knoten auf einen anderen unterscheidet sich zwischen Linux und Windows.
+-   Bestimmte Einstellungen wie `required_synchronized_secondaries_to_commit` können unter Linux nur über Pacemaker geändert werden, während bei einer WSFC-basierten Installation Transact-SQL verwendet wird.
 
 ## <a name="number-of-replicas-and-cluster-nodes"></a>Anzahl der Replikate und Clusterknoten
 
-Eine Verfügbarkeitsgruppe in der [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] haben zwei Replikate: ein primäres und ein sekundäres Replikat, das nur aus Gründen der Verfügbarkeit verwendet werden kann. Es kann nicht für nichts anderes, z. B. lesbare Abfragen verwendet werden. Eine Verfügbarkeitsgruppe in der [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)] können bis zu neun Replikate aufweisen: einen primären und bis zu acht sekundäre Datenbanken, von denen bis zu drei (einschließlich des primären Replikats) synchron sein kann. Wenn einen zugrunde liegender Cluster verwenden, kann es sein bis zu 16 Knoten insgesamt, wenn Corosync beteiligt ist. Eine verfügbarkeitsgruppe kann höchstens neun von 16 Knoten mit umfassen [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)], und zwei mit [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)].
+Eine Verfügbarkeitsgruppe in [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] kann insgesamt über zwei Replikate verfügen: ein primäres Replikat und ein sekundäres Replikat, das nur zu Verfügbarkeitszwecken verwendet werden kann. Es kann nicht für andere Zwecke wie lesbare Abfragen verwendet werden. Eine Verfügbarkeitsgruppe in [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)] kann insgesamt über bis zu neun Replikate verfügen: ein primäres Replikat und bis zu acht sekundäre Replikate, von denen bis zu drei (einschließlich des primären Replikats) synchron sein können. Wenn ein zugrunde liegender Cluster verwendet wird, können maximal 16 Knoten vorhanden sein, wenn Corosync beteiligt ist. Eine Verfügbarkeitsgruppe kann mit [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)] neun von 16 Knoten umfassen und mit [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] zwei Knoten.
 
-Eine zwei Replikaten-Konfiguration, erfordert die Möglichkeit, automatisch ein Failover auf ein anderes Replikat ausgeführt, erfordert die Verwendung eines Replikats nur die Konfiguration aus, wie in beschrieben [reine konfigurationsreplikat und Quorum](#configuration-only-replica-and-quorum). Reines konfigurationsreplikat Replikate wurden in eingeführt [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] kumulative Update 1 (CU1) damit, die die mindestens erforderliche Version für diese Konfiguration bereitgestellt werden soll.
+Für eine Konfiguration mit zwei Replikaten, für die ein automatisches Failover auf ein anderes Replikat möglich sein muss, muss unter [Reine Konfigurationsreplikate und Quoren](#configuration-only-replica-and-quorum) beschrieben ein Replikat verwendet werden, das ausschließlich für die Konfiguration konfiguriert ist. Reine Konfigurationsreplikate wurden in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] Cumulative Update 1 (CU1) eingeführt. Diese Version sollte für die Konfiguration also als mindestens erforderliche Version festgelegt werden.
 
-Wenn Pacemaker verwendet wird, muss er ordnungsgemäß konfiguriert werden, damit er betriebsbereit bleibt. Dies bedeutet, dass das Quorum und STONITH hinsichtlich der Pacemaker zusätzlich zu ordnungsgemäß implementiert werden müssen [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Anforderungen wie z. B. ein reines konfigurationsreplikat Replikat.
+Wenn Pacemaker verwendet wird, muss die Software ordnungsgemäß konfiguriert werden, damit sie weiterhin ausgeführt wird. Das bedeutet, dass Quorum und STONITH gemäß Pacemaker-Anforderungen zusätzlich zu anderen [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Anforderungen wie reinen Konfigurationsreplikaten ordnungsgemäß implementiert werden müssen.
 
-Lesbare sekundäre Replikate werden nur unterstützt, mit [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)].
+Lesbare sekundäre Replikate werden nur mit [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)] unterstützt.
 
-## <a name="cluster-type-and-failover-mode"></a>Cluster-Typ und Failover-Modus
+## <a name="cluster-type-and-failover-mode"></a>Clustertyp und Failovermodus
 
-Neu bei [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ist die Einführung eines clustertyps für Verfügbarkeitsgruppen. Für Linux gibt es zwei gültige Werte: Externe und keine. Ein clustertyps externer bedeutet, dass Pacemaker unter der Verfügbarkeitsgruppe verwendet wird. Verwenden von externen für Clustertyp erfordert, dass der Failover-Modus als auch externe festgelegt werden (ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Automatisches Failover wird unterstützt, aber im Gegensatz zu einem WSFC ist Failovermodus mit externen, nicht automatisch festgelegt, wenn Pacemaker verwendet wird. Im Gegensatz zu einem WSFC wird der Pacemaker-Teil der Verfügbarkeitsgruppe erstellt, nachdem die Verfügbarkeitsgruppe konfiguriert wurde.
+In [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] wurden Clustertypen für Verfügbarkeitsgruppen eingeführt. Für Linux gibt es zwei gültige Werte: „EXTERNAL“ und „NONE“. Der Clustertyp „EXTERNAL“ bedeutet, dass Pacemaker unterhalb der Verfügbarkeitsgruppe verwendet wird. Wenn Sie den Clustertyp „EXTERNAL“ verwenden, muss auch der Failovermodus auf „External“ festgelegt werden (ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]). Das automatische Failover wird unterstützt, aber im Gegensatz zu einem WSFC wird der Failovermodus bei Verwendung von Pacemaker nicht automatisch auf „EXTERNAL“ festgelegt. Im Gegensatz zu einem WSFC wird der Pacemaker-Teil der Verfügbarkeitsgruppe nach der Konfiguration der Verfügbarkeitsgruppe erstellt.
 
-Ein Clustertyp ' None ' bedeutet, dass keine Notwendigkeit für besteht, und die Verfügbarkeitsgruppe verwendet wird, Pacemaker. Auch auf Servern, die pacemaker konfiguriert wurde, ist eine Verfügbarkeitsgruppe so konfiguriert, mit dem Clustertyp None, Pacemaker nicht sehen oder verwalten diese Verfügbarkeitsgruppe. Ein Clustertyp ' None ' unterstützt nur Manuelles Failover von einem primären zu einem sekundären Replikat. Eine Verfügbarkeitsgruppe erstellt haben, mit dem keine ist in erster Linie für die schreibgeschützte horizontale Skalierung, Szenario sowie Upgrades vorgesehen. Während es in Szenarien wie die Wiederherstellung im Notfall oder lokalen verfügbarkeitsgruppe arbeiten kann, in denen kein automatisches Failover erforderlich ist, wird nicht empfohlen. Die Listener-Geschichte ist auch eine komplexere ohne Pacemaker.
+Der Clustertyp „NONE“ bedeutet, dass Pacemaker nicht erforderlich ist und von der Verfügbarkeitsgruppe nicht verwendet wird. Auch wenn Pacemaker auf einem Server konfiguriert wird, werden Verfügbarkeitsgruppen nicht über Pacemaker angezeigt oder verwaltet, wenn der Clustertyp „NONE“ für eine Verfügbarkeitsgruppe festgelegt ist. Der Clustertyp „NONE“ unterstützt nur manuelles Failover von einem primären zu einem sekundären Replikat. Eine Verfügbarkeitsgruppe, die mit „NONE“ erstellt wurde, ist hauptsächlich für das schreibgeschützte Hochskalieren und für Upgrades vorgesehen. Sie könnte zwar für die Notfallwiederherstellung oder die lokale Verfügbarkeit eingesetzt werden, bei denen kein automatisches Failover nötig ist, doch diese Vorgehensweise wird nicht empfohlen. Ohne Pacemaker ist der Listenerverlauf zudem komplexer.
 
-Clustertyp befindet sich in der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] dynamische verwaltungssicht (DMV) `sys.availability_groups`, in den Spalten `cluster_type` und `cluster_type_desc`.
+Der Clustertyp wird in der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]dynamischen Verwaltungssicht (DMV)`sys.availability_groups` in den Spalten `cluster_type` und `cluster_type_desc` gespeichert.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>erforderliche\_synchronisiert\_sekundäre Replikate\_zu\_Commit
+## <a name="required_synchronized_secondaries_to_commit"></a>required\_synchronized\_secondaries\_to\_commit
 
-Neu bei [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ist eine Einstellung, mit dem Verfügbarkeitsgruppen-wird aufgerufen, `required_synchronized_secondaries_to_commit`. Dadurch wird der Verfügbarkeitsgruppe auf die Anzahl der sekundären Replikate, die im Gleichschritt mit der primären sein müssen. Dies ermöglicht Dinge wie automatische Failover (nur bei Pacemaker mit dem Clustertyp External integriert) und das Verhalten der Dinge wie die Verfügbarkeit der primären Datenbank steuert, ob die richtige Anzahl von sekundären Replikaten entweder online oder offline ist. Weitere Informationen hierzu finden Sie unter [hohe Verfügbarkeit und Datenschutz für verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Die `required_synchronized_secondaries_to_commit` Wert ist standardmäßig festgelegt und von Pacemaker verwaltet / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Sie können diesen Wert manuell überschreiben.
+In [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ist nun die neue Einstellung `required_synchronized_secondaries_to_commit` vorhanden, die von Verfügbarkeitsgruppen verwendet wird. Über diese wird der Verfügbarkeitsgruppe die Anzahl der sekundären Replikate mitgeteilt, die auf das primäre Replikat abgestimmt sein müssen. Dadurch können beispielsweise das automatische Failover (nur bei Integration mit Pacemaker und dem Clustertyp „EXTERNAL“) ermöglicht und das Verhalten der Verfügbarkeit des Replikats gesteuert werden, wenn die richtige Anzahl sekundärer Replikate online oder offline ist. Weitere Informationen zu diesem Thema finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](sql-server-linux-availability-group-ha.md). Der Wert `required_synchronized_secondaries_to_commit` wird standardmäßig festgelegt und von Pacemaker/[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]verwaltet. Sie können diesen Wert manuell überschreiben.
 
-Die Kombination von `required_synchronized_secondaries_to_commit` und die neue Sequenznummer (befindet sich in `sys.availability_groups`) informiert Sie Pacemaker und [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] , z. B. Automatisches Failover auftreten kann. In diesem Fall müsste ein sekundäres Replikat gleichen Sequenznummer wie die primäre Datenbank, was bedeutet, dass es mit der aktuellen Konfigurationsinformationen auf dem neuesten Stand ist.
+Die Kombination von `required_synchronized_secondaries_to_commit` und der neuen Sequenznummer (in `sys.availability_groups` gespeichert) informiert Pacemaker und [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] darüber, dass beispielsweise ein automatisches Failover möglich ist. In diesem Fall würde ein sekundäres Replikat die gleiche Sequenznummer wie das primäre Replikat aufweisen, was bedeutet, dass alle Konfigurationsinformationen auf dem neuesten Stand sind.
 
-Es gibt drei Werte, die für die festgelegt werden, können `required_synchronized_secondaries_to_commit`: 0, 1 oder 2. Sie steuern das Verhalten von Was geschieht, wenn ein Replikat nicht mehr verfügbar ist. Die Zahlen entsprechen der Anzahl von sekundären Replikaten, die mit dem primären Replikat synchronisiert werden müssen. Das Verhalten ist wie folgt unter Linux:
+Für `required_synchronized_secondaries_to_commit` können drei Werte festgelegt werden: 0, 1 oder 2. Sie steuern, was geschieht, wenn ein Replikat nicht mehr verfügbar ist. Die Zahlen entsprechen der Anzahl von sekundären Replikaten, die mit dem primären Replikat synchronisiert werden müssen. Das Verhalten ist unter Linux wie folgt:
 
--   0 – sekundäre Replikate müssen nicht im Status "synchronisiert" mit dem primären Replikat werden. Aber wenn die sekundären Datenbanken nicht synchronisiert werden, fallen kein automatisches Failover. 
--   1 – ein sekundäres Replikat muss in einem synchronisierten Zustand befindet, mit dem primären Replikat liegen. Automatisches Failover ist möglich. Die primäre Datenbank ist nicht verfügbar, bis ein sekundäres synchronisiertes Replikat verfügbar ist.
--   2 – beide sekundären Replikate in einer drei oder mehr Knoten AG-Konfiguration müssen mit dem primären Replikat synchronisiert werden; Automatisches Failover ist möglich.
+-   0: Sekundäre Replikate müssen nicht mit dem primären Replikat synchronisiert sein. Wenn die sekundären Replikate jedoch nicht synchronisiert werden, wird kein automatisches Failover ausgeführt. 
+-   1: Ein sekundäres Replikat muss mit dem primären Replikat synchronisiert sein. Ein automatisches Failover ist möglich. Die primäre Datenbank ist erst verfügbar, wenn ein sekundäres synchrones Replikat verfügbar ist.
+-   2: Beide sekundären Replikate in einer Verfügbarkeitsgruppenkonfiguration mit drei oder mehr Knoten müssen mit dem primären Replikat synchronisiert werden. Ein automatisches Failover ist möglich.
 
-`required_synchronized_secondaries_to_commit` Steuert, nicht nur das Verhalten der Failover mit synchronen Replikaten, aber Daten verloren gehen. Mit einem Wert von 1 oder 2 muss ein sekundäres Replikat immer synchronisiert werden, also wird immer die Datenredundanz. Das bedeutet keine Daten verloren gehen.
+`required_synchronized_secondaries_to_commit` steuert nicht nur das Verhalten von Failovern mit synchronen Replikaten, sondern auch den Datenverlust. Bei einem Wert von 1 oder 2 muss immer ein sekundäres Replikat synchronisiert werden, sodass immer Datenredundanz vorliegt. Dies bedeutet, dass kein Datenverlust auftritt.
 
-So ändern Sie den Wert der `required_synchronized_secondaries_to_commit`, verwenden Sie die folgende Syntax:
+Verwenden Sie die folgende Syntax, um den Wert von `required_synchronized_secondaries_to_commit` zu ändern:
 
 >[!NOTE]
->Ändern des Werts führt dazu, dass die Ressource neu zu starten, einen kurzen Ausfall bedeutet. Die einzige Möglichkeit, dies zu vermeiden ist, legen Sie die Ressource, die nicht vom Cluster verwaltet wird, vorübergehend sein.
+>Das Ändern des Werts bewirkt, dass die Ressource neu gestartet wird. Es kommt zu einem kurzen Ausfall. Sie können diesen Ausfall nur vermeiden, indem Sie die Ressource so konfigurieren, dass sie vorübergehend nicht vom Cluster verwaltet wird.
 
 **Red Hat Enterprise Linux (RHEL) und Ubuntu**
 
@@ -79,76 +79,76 @@ sudo pcs resource update <AGResourceName> required_synchronized_secondaries_to_c
 sudo crm resource param ms-<AGResourceName> set required_synchronized_secondaries_to_commit <value>
 ```
 
-wo *AGResourceName* ist der Name der Ressource für die Verfügbarkeitsgruppe, konfiguriert und *Wert* ist 0, 1 oder 2. Um es wieder auf den Standardwert von Pacemaker verwalten den Parameter festzulegen, führen Sie der gleichen Anweisung ohne Wert.
+Hierbei entspricht *AGResourceName* dem Namen der Ressource, die für die Verfügbarkeitsgruppe konfiguriert wurde, und *value* entspricht 0, 1 oder 2. Wenn Sie den Standardzustand wiederherstellen möchten, dass Pacemaker den Parameter verwaltet, führen Sie die gleiche Anweisung ohne Wert (value) aus.
 
-Automatisches Failover einer Verfügbarkeitsgruppe ist möglich, wenn die folgenden Bedingungen erfüllt sind:
+Ein automatisches Failover einer Verfügbarkeitsgruppe ist möglich, wenn die folgenden Bedingungen erfüllt sind:
 
--   Die primäre und das sekundäre Replikat werden zur synchronen datenverschiebung festgelegt.
--   Die sekundäre Datenbank dem Status synchronisiert (nicht synchronisiert), was bedeutet, dass derselbe Zeitpunkt Daten handelt es sich um.
--   Der Typ des Clusters ist auf External festgelegt. Automatisches Failover ist nicht möglich, mit dem Clustertyp None.
--   Die `sequence_number` des sekundären Replikats zu der primären die höchste Sequenznummer - hat also des sekundären Replikats des `sequence_number` entspricht, die über das ursprüngliche primäre Replikat.
+-   Das primäre und das sekundäre Replikat sind auf synchrone Datenverschiebung festgelegt.
+-   Das sekundäre Replikat weist den Status „Synchronisiert“ (keine Synchronisierung) auf, die beiden Replikate befinden sich also am selben Datenpunkt.
+-   Der Clustertyp ist auf „EXTERNAL“ festgelegt. Ein automatisches Failover ist mit dem Clustertyp „NONE“ nicht möglich.
+-   Der Wert `sequence_number` des sekundären Replikats, das zum primären Replikat werden soll, weist die höchste Sequenznummer auf. Das bedeutet, dass der `sequence_number`-Wert des sekundären Replikats dem Wert des ursprünglichen primären Replikats entspricht.
 
-Wenn diese Bedingungen erfüllt sind, und der Server, die das primäre Replikat hostet, ein Fehler auftritt, wird in die Verfügbarkeitsgruppe auf ein synchrones Replikat Besitz geändert werden. Das Verhalten für synchronen Replikaten (der es drei stehen gesamt: ein primäres und zwei sekundäre Replikate) können von weiteren gesteuert werden `required_synchronized_secondaries_to_commit`. Dies funktioniert mit Verfügbarkeitsgruppen unter Windows und Linux, aber es ist vollkommen unterschiedlich konfiguriert. Unter Linux wird der Wert automatisch vom Cluster für die AG-Ressource selbst konfiguriert werden.
+Wenn diese Bedingungen erfüllt sind und der Server ausfällt, auf dem das primäre Replikat gehostet wird, wechselt die Verfügbarkeitsgruppe den Besitz zu einem synchronen Replikat. Das Verhalten von synchronen Replikaten (maximal ein primäres und zwei sekundäre Replikate) kann weiter von `required_synchronized_secondaries_to_commit` gesteuert werden. Das gilt für Verfügbarkeitsgruppen unter Windows und Linux, die Konfiguration unterscheidet sich jedoch grundlegend. Unter Linux wird der Wert automatisch vom Cluster auf der Verfügbarkeitsgruppenressource konfiguriert.
 
-## <a name="configuration-only-replica-and-quorum"></a>Reine konfigurationsreplikat und quorum
+## <a name="configuration-only-replica-and-quorum"></a>Reine Konfigurationsreplikate und Quoren
 
-Ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] ab CU1 ist ein reines konfigurationsreplikat Replikat. Da Pacemaker eines WSFC unterscheidet, insbesondere, wenn es um das Quorum und erfordern von STONITH, geht funktioniert mit nur einer Konfiguration mit zwei Knoten nicht bei einer Verfügbarkeitsgruppe. Für eine FCI können die Quorum-Mechanismen von Pacemaker in Ordnung, sein, da alle Vermittlung der FCI-Failover auf den Cluster-Ebene erfolgt. Für eine Verfügbarkeitsgruppe, erfolgt die Vermittlung unter Linux in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], wobei alle Metadaten gespeichert werden. Dies ist das reine konfigurationsreplikat kommt ins Spiel.
+Reine Konfigurationsreplikate sind ebenfalls neu in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] CU1. Da Pacemaker sich von WSFCs unterscheidet – insbesondere in Bezug auf Quoren und die Notwendigkeit von STONITH – funktioniert die Konfiguration mit nur zwei Knoten bei Verfügbarkeitsgruppen nicht. Bei einer Failoverclusterinstanz können die von Pacemaker bereitgestellten Quorummechanismen funktionieren, da die gesamte Vermittlung bei Failoverclusterinstanzen auf Clusterebene erfolgt. Bei einer Verfügbarkeitsgruppe erfolgt die Vermittlung unter Linux in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Dort werden alle Metadaten gespeichert. In diesem Fall können reine Konfigurationsreplikate genutzt werden.
 
-Ohne etwas anderes wäre einem dritten Knoten und mindestens ein synchronisiertes Replikat erforderlich. Das reine konfigurationsreplikat speichert die Konfiguration der Verfügbarkeitsgruppe, in der master-Datenbank identisch mit den anderen Replikaten in der Konfiguration der Verfügbarkeitsgruppe. Das reine konfigurationsreplikat muss nicht die Benutzerdatenbanken, die in der Verfügbarkeitsgruppe teilnehmen. Die Konfigurationsdaten werden von der primären Datenbank synchron gesendet. Diese Konfigurationsdaten werden, ob sie automatische oder manuelle sind während eines Failovers verwendet.
+Ohne weitere Schritte wären ein dritter Knoten und mindestens ein synchronisiertes Replikat erforderlich. Das reine Konfigurationsreplikat speichert die Verfügbarkeitsgruppenkonfiguration in der Masterdatenbank. Das gleiche gilt für die anderen Replikate in der Verfügbarkeitsgruppenkonfiguration. Das reine Konfigurationsreplikat verfügt nicht über die Benutzerdatenbanken, die an der Verfügbarkeitsgruppe teilnehmen. Die Konfigurationsdaten werden synchron vom primären Replikat gesendet. Diese Konfigurationsdaten werden dann während eines Failovers verwendet, unabhängig davon, ob es automatisch oder manuell ausgeführt wird.
 
-Für eine Verfügbarkeitsgruppe Quorum beibehalten und automatische Failover mit einem externen Cluster aktivieren müssen sie entweder:
+Damit eine Verfügbarkeitsgruppe das Quorum beibehalten und automatische Failovers für den Clustertyp „EXTERNAL“ ermöglichen kann, muss eine der folgenden Bedingungen erfüllt sein:
 
--   Haben Sie drei synchrone Replikaten ([!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)] nur); oder
--   Haben Sie zwei Replikate (Primär und sekundär) als auch in einer reinen konfigurationsreplikat.
+-   Drei synchrone Replikate müssen vorhanden sein (nur [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]).
+-   Zwei Replikate (primär und sekundär) und ein reines Konfigurationsreplikat müssen vorhanden sein.
 
-Ein manuelles Failover möglich, unabhängig davon, ob extern oder keine Clustertypen für AG-Konfigurationen. Obwohl ein reines konfigurationsreplikat Replikat einer Verfügbarkeitsgruppe konfiguriert werden kann, der einen vom Clustertyp ' None ', ist es nicht empfohlen, da es erschwert, dass die Bereitstellung. Bei Konfigurationen, ändern Sie manuell `required_synchronized_secondaries_to_commit` Wert von mindestens 1 haben, sodass mindestens ein synchronisiertes Replikat vorhanden ist.
+Ein manuelles Failover kann unabhängig davon durchgeführt werden, ob der Clustertyp „EXTERNAL“ oder „NONE“ für Verfügbarkeitsgruppenkonfigurationen verwendet wird. Ein reines Konfigurationsreplikat kann zwar für eine Verfügbarkeitsgruppe konfiguriert werden, deren Clustertyp „NONE“ ist, doch diese Vorgehensweise wird nicht empfohlen, da Sie die Bereitstellung erschwert. Ändern Sie `required_synchronized_secondaries_to_commit` für diese Konfigurationen manuell, damit der Wert mindestens auf „1“ festgelegt und mindestens ein synchronisiertes Replikat vorhanden ist.
 
-Eine reine konfigurationsreplikat kann auf eine beliebige Edition von gehostet werden [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], einschließlich [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)]. Dies wird minimiert, Lizenzierungskosten und stellt sicher, es funktioniert mit Verfügbarkeitsgruppen in [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)]. Dies bedeutet, dass die dritte erforderliche Server lediglich zum Erfüllen der Mindestanforderungen für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], da es keine Transaktion von Benutzerdatenverkehr für die Verfügbarkeitsgruppe empfängt.
+Ein reines Konfigurationsreplikat kann in jeder [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Edition (einschließlich [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)]) gehostet werden. Dadurch werden die Lizenzierungskosten minimiert, und es wird sichergestellt, dass es mit Verfügbarkeitsgruppen in [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] kompatibel ist. Das bedeutet, dass der dritte erforderliche Server lediglich die Mindestspezifikation für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erfüllen muss, da er keinen Benutzertransaktionsdatenverkehr für die Verfügbarkeitsgruppe empfängt.
 
-Wenn ein reines konfigurationsreplikat Replikat verwendet wird, ist es das folgende Verhalten:
+Wenn ein reines Konfigurationsreplikat verwendet wird, weist es folgendes Verhalten auf:
 
--   In der Standardeinstellung `required_synchronized_secondaries_to_commit` auf 0 festgelegt ist. Dies kann manuell auf 1 geändert werden, falls gewünscht.
--   Wenn die primäre Datenbank ausfällt und `required_synchronized_secondaries_to_commit` gleich 0 ist, das sekundäre Replikat wird zu der neuen primären Datenbank und für Lese- und Schreibvorgänge verfügbar. Wenn der Wert 1 ist, automatisches Failover ausgeführt wird, sondern akzeptiert keine neue Transaktionen aus, bis das andere Replikat online ist.
--   Wenn ein sekundäres Replikat ausfällt und `required_synchronized_secondaries_to_commit` ist 0, das primäre Replikat wird weiterhin Transaktionen akzeptiert, aber wenn die primäre an diesem Punkt fehlschlägt, besteht kein Schutz der Daten noch Failover möglich (manuell oder automatisch), da ein sekundäres Replikat nicht verfügbar ist.
--   Wenn die Replikate nur die Konfiguration ein Fehler auftritt, wird ein ordnungsgemäß für die Verfügbarkeitsgruppe, aber kein automatisches Failover ist möglich.
--   Wenn sowohl ein synchrones sekundäres Replikat als auch das reine konfigurationsreplikat Fehler auftreten, die primäre kann nicht akzeptiert Transaktionen werden und es an keiner Stelle für die primäre auf.
+-   `required_synchronized_secondaries_to_commit` ist standardmäßig auf „0“ festgelegt. Der Wert kann bei Bedarf manuell in „1“ geändert werden.
+-   Wenn das primäre Replikat ausfällt und `required_synchronized_secondaries_to_commit` den Wert „0“ aufweist, wird das sekundäre Replikat zum neuen primären Replikat und ist für das Lesen und Schreiben verfügbar. Wenn der Wert „1“ ist, wird ein automatisches Failover ausgeführt. Es werden jedoch erst dann neue Transaktionen akzeptiert, wenn das andere Replikat online ist.
+-   Wenn ein sekundäres Replikat ausfällt und `required_synchronized_secondaries_to_commit` den Wert „0“ aufweist, akzeptiert das primäre Replikat weiterhin Transaktionen, aber wenn das primäre Replikat zu diesem Zeitpunkt ausfällt, werden Daten nicht geschützt, und Failover (manuell oder automatisch) sind nicht möglich, da kein sekundäres Replikat verfügbar ist.
+-   Wenn die reinen Konfigurationsreplikate ausfallen, funktioniert die Verfügbarkeitsgruppe wie gewohnt, es ist jedoch kein automatisches Failover möglich.
+-   Wenn ein synchrones sekundäres Replikat und das reine Konfigurationsreplikat ausfallen, kann das primäre Replikat keine Transaktionen akzeptieren, und das primäre Replikat kann kein Failover durchführen.
 
-In CU1 besteht ein bekanntes Problem in der Protokollierung in der corosync.log-Datei, die generiert wird, über `mssql-server-ha`. Wenn ein sekundäres Replikat nicht können primären aufgrund der Anzahl der erforderlichen Replikate verfügbar ist, meldet, dass die aktuelle Nachricht "1 Sequenznummern zu empfangen erwartet aber nur 2 empfangen. Nicht genügend Replikate sind online auf sichere Weise das lokale Replikat höher stufen." Die Zahlen sollten rückgängig gemacht werden soll, und es müsste "erwartet 2 Sequenznummern zu empfangen, aber nur 1 empfangen. Nicht genügend Replikate sind online auf sichere Weise das lokale Replikat höher stufen." 
+In CU1 gibt es einen bekannten Fehler bei der Protokollierung in der Datei „corosync.log“, die über `mssql-server-ha` generiert wird. Wenn ein sekundäres Replikat aufgrund der Anzahl erforderlicher verfügbarer Replikate nicht zum primären Replikat werden kann, enthält die Meldung aktuell den Text „Expected to receive 1 sequence numbers but only received 2. Not enough replicas are online to safely promote the local replica.“ (Es wird erwartet, 1 Sequenznummer zu empfangen, es wurden jedoch nur 2 empfangen. Es sind nicht genügend Replikate online, um das lokale Replikat sicher höher zu stufen.) Die Zahlen sollten umgekehrt eingefügt werden. Der Text sollte also lauten: „Expected to receive 2 sequence numbers but only received 1. Not enough replicas are online to safely promote the local replica.“ (Es wird erwartet, 2 Sequenznummern zu empfangen, es wurden jedoch nur 1 empfangen. Es sind nicht genügend Replikate online, um das lokale Replikat sicher höher zu stufen.) 
 
 ## <a name="multiple-availability-groups"></a>Mehrere Verfügbarkeitsgruppen 
 
-Pro Pacemaker-Clusters oder einer Gruppe von Servern kann mehr als eine Verfügbarkeitsgruppe erstellt werden. Die einzige Einschränkung besteht darin, Systemressourcen beansprucht wird. AG-Besitz wird vom Master angezeigt. Unterschiedliche Verfügbarkeitsgruppen können von verschiedenen Knoten im Besitz sein. Sie müssen nicht alle auf demselben Knoten ausgeführt werden.
+Pro Pacemaker-Cluster oder -Servergruppe kann mehr als eine Verfügbarkeitsgruppe erstellt werden. Die Systemressourcen stellen die einzige Einschränkung dar. Der Besitzer der Verfügbarkeitsgruppe wird vom Master angezeigt. Unterschiedliche Verfügbarkeitsgruppen können sich im Besitz verschiedener Knoten befinden. Sie müssen nicht alle auf demselben Knoten ausgeführt werden.
 
-## <a name="drive-and-folder-location-for-databases"></a>Laufwerks- und Speicherort für Datenbanken
+## <a name="drive-and-folder-location-for-databases"></a>Laufwerk und Ordnerpfad für Datenbanken
 
-Die Struktur Laufwerk- und Ordnerpfad für die Benutzerdatenbanken in einer Verfügbarkeitsgruppe teilnehmen sollten identisch sein, wie auf Windows-basierte Verfügbarkeitsgruppen. Wenn die Benutzerdatenbanken in sind z. B. `/var/opt/mssql/userdata` auf Server A, sollte dieser Ordner auf Server b vorhanden sein Die einzige Ausnahme hierbei finden Sie im Abschnitt [Interoperabilität mit Windows-basierte Verfügbarkeitsgruppen und Replikaten](#interoperability-with-windows-based-availability-groups-and-replicas).
+Bei Windows-basierten Verfügbarkeitsgruppen sollten das Laufwerk und die Ordnerstruktur für die Benutzerdatenbanken, die an einer Verfügbarkeitsgruppe teilnehmen, identisch sein. Wenn sich die Benutzerdatenbank auf Server A beispielsweise unter `/var/opt/mssql/userdata` befindet, sollte der gleiche Ordner auf Server B vorhanden sein. Die einzige Ausnahme wird im Abschnitt [Interoperabilität mit Windows-basierten Verfügbarkeitsgruppen und Replikaten](#interoperability-with-windows-based-availability-groups-and-replicas) behandelt.
 
 ## <a name="the-listener-under-linux"></a>Der Listener unter Linux
 
-Der Listener ist die optionale Funktionen für eine Verfügbarkeitsgruppe. Er bietet nur einen Eintrag für alle Verbindungen (Lesen/Schreiben, um das primäre Replikat und/oder schreibgeschützte sekundäre Replikate), damit Anwendungen und Endbenutzern nicht müssen wissen, welcher Server die Daten gehostet wird. In einem WSFC ist dies die Kombination von einer Netzwerknamenressource und einer IP-Adressressource, die dann in AD DS (falls erforderlich) registriert ist und DNS an. In Kombination mit der AG-Ressource selbst wird diese Abstraktion. Weitere Informationen über einen Listener, finden Sie unter [Listener, Clientkonnektivität und Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
+Der Listener ist eine optionale Funktionalität für Verfügbarkeitsgruppen. Er bietet einen einzigen Einstiegspunkt für alle Verbindungen (Lese-/Schreibzugriff auf das primäre Replikat und/oder schreibgeschützter Zugriff auf sekundäre Replikate), damit Anwendungen und Endbenutzer nicht darüber informiert sein müssen, auf welchem Server die Daten gehostet werden. In einem WSFC besteht dieser aus einer Netzwerknamenressource und einer IP-Ressource, die dann (bei Bedarf) in AD DS und als DNS registriert wird. In Kombination mit der Verfügbarkeitsgruppenressource wird diese Abstraktion bereitgestellt. Weitere Informationen zu Listenern finden Sie unter [Listener, Clientkonnektivität und Anwendungsfailover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).
 
-Der Listener unter Linux ist anders konfiguriert, aber die Funktionalität ist identisch. Es ist kein Konzept für eine Netzwerknamenressource in Pacemaker, noch wird ein Objekt in AD DS erstellt; Es gibt nur eine IP-Adressressource erstellt in Pacemaker, die auf einem Knoten ausgeführt werden kann. Ein Eintrag der IP-Ressource zugeordnet sind, für den Listener in DNS mit dem "Anzeigenamen" muss erstellt werden. Die IP-Adressressource für den Listener werden nur auf dem Server, die das primäre Replikat für diese verfügbarkeitsgruppe hostet.
+Der Listener unter Linux ist anders konfiguriert, aber seine Funktionalität ist identisch. Das Konzept der Netzwerknamenressource ist in Pacemaker nicht vorhanden, und es wird kein Objekt in AD DS erstellt. Es gibt nur eine IP-Adressressource, die in Pacemaker erstellt und auf einem beliebigen Knoten ausgeführt werden kann. Es muss ein Eintrag erstellt werden, der der IP-Ressource für den Listener im DNS mit einem Anzeigenamen zugeordnet ist. Die IP-Ressource für den Listener ist nur auf dem Server aktiv, auf dem das primäre Replikat für diese Verfügbarkeitsgruppe gehostet wird.
 
-Wenn Pacemaker verwendet wird, und eine IP-Adressressource wird erstellt, die mit dem Listener verbunden ist, werden ein kurzen Ausfall die IP-Adresse wird auf den Server beendet und gestartet wird, auf dem anderen, ob sie die automatische oder manuelle Failover ist. Während dieser Abstraktion über die Kombination aus einem einzelnen Namen und die IP-Adresse bereitgestellt werden, wird es der Ausfall nicht maskiert. Eine Anwendung muss so behandeln Sie die Trennung der Verbindung müssen eine Art von Funktionalität zu erkennen und erneut eine Verbindung herstellen können.
+Wenn Pacemaker verwendet und eine IP-Adressressource erstellt wird, die dem Listener zugeordnet ist, kommt es zu einem kurzen Ausfall, weil die IP-Adresse auf einem Server angehalten und auf dem anderen gestartet wird, unabhängig davon, ob es sich um ein automatisches oder manuelles Failover handelt. Dadurch wird zwar durch die Kombination aus einem einzelnen Namen und einer IP-Adresse eine Abstraktion ermöglicht, doch der Ausfall wird nicht maskiert. Eine Anwendung muss den Verbindungsverlust mithilfe einer Funktion zum Erkennen und Wiederherstellen der Verbindung bewältigen können.
 
-Allerdings ist die Kombination des DNS-Namen und IP-Adresse noch nicht genug, um die gesamte Funktionalität zu gewährleisten, die ein Listener auf einem WSFC bereitstellt, wie z. B. das schreibgeschützte routing für sekundäre Replikate. Wenn Sie eine Verfügbarkeitsgruppe zu konfigurieren, wird ein "Listener" noch konfiguriert werden muss [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Dies kann im Assistenten als auch die Transact-SQL-Syntax angezeigt werden. Es gibt zwei Möglichkeiten, dieses konfiguriert werden kann, wie unter Windows funktioniert:
+Die Kombination aus dem DNS-Namen und der IP-Adresse genügt jedoch nicht, um alle Funktionen zu bieten, die ein Listener auf einem WSFC bietet (z. B. schreibgeschütztes Routing für sekundäre Replikate). Wenn Sie eine Verfügbarkeitsgruppe konfigurieren, muss dennoch ein Listener in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] konfiguriert werden. Das wird im Assistenten und in der Syntax von Transact-SQL deutlich. Es gibt zwei Möglichkeiten, die gleiche Funktionsweise wie unter Windows durch Konfiguration zu erreichen:
 
--   Für eine Verfügbarkeitsgruppe mit dem Clustertyp External, die IP-Adresse verknüpft ist, mit der "Listener" im erstellten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] sollte die IP-Adresse der Ressource in Pacemaker erstellt werden.
--   Verwenden Sie für eine Verfügbarkeitsgruppe mit dem Clustertyp None erstellt wurde die IP-Adresse, die mit dem primären Replikat verknüpft ist.
+-   Bei einer Verfügbarkeitsgruppe, die den Clustertyp „EXTERNAL“ aufweist, muss die IP-Adresse, die dem in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erstellten Listener zugeordnet ist, der IP-Adresse der in Pacemaker erstellten Ressource entsprechen.
+-   Bei einer Verfügbarkeitsgruppe, die den Clustertyp „NONE“ aufweist, sollten Sie die IP-Adresse verwenden, die dem primären Replikat zugeordnet ist.
 
-Die Instanz, die die angegebene IP-Adresse zugeordnet sind, dann wird der Koordinator für Aufgaben wie das schreibgeschützte routing Anforderungen von Anwendungen.
+Die Instanz, die der bereitgestellten IP-Adresse zugeordnet ist, koordiniert dann beispielsweise schreibgeschützte Routinganforderungen für Anwendungen.
 
-## <a name="interoperability-with-windows-based-availability-groups-and-replicas"></a>Interoperabilität mit Windows-basierte Verfügbarkeitsgruppen und Replikaten 
+## <a name="interoperability-with-windows-based-availability-groups-and-replicas"></a>Interoperabilität mit Windows-basierten Verfügbarkeitsgruppen und Replikaten 
 
-Eine Verfügbarkeitsgruppe, die den Clustertyp External oder einem WSFC sind keine Plattformen plattformübergreifende Replikate. Dies ist "true" gibt an, ob die Verfügbarkeitsgruppe [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] oder [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)]. Dies bedeutet, dass in einer herkömmlichen verfügbarkeitsgruppenkonfiguration mit einem zugrunde liegenden Cluster, nicht möglich ein Replikat auf einem WSFC und der andere auf Linux mit Pacemaker.
+Eine Verfügbarkeitsgruppe, die den Clustertyp „EXTERNAL“ oder einen nicht in WSFCs verfügbaren Clustertyp aufweist, kann keine plattformübergreifenden Replikate besitzen. Dies gilt unabhängig davon, ob die Verfügbarkeitsgruppe für [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)] oder [!INCLUDE[ssenterprise-md](../includes/ssenterprise-md.md)] verwendet wird. Das bedeutet, dass es in einer herkömmlichen Verfügbarkeitsgruppenkonfiguration mit einem zugrunde liegenden Cluster nicht möglich ist, dass ein Replikat sich auf einem WSFC und ein anderes unter Linux mit Pacemaker befindet.
 
-Eine Verfügbarkeitsgruppe mit dem Clustertyp None haben ihre Replikate OS-Grenzen überschreiten, es könnte also sowohl Linux- und Windows-basierte Replikaten in derselben Verfügbarkeitsgruppe. Ein Beispiel ist hier dargestellt, in dem das primäre Replikat ist Windows-basiert, während die sekundäre Datenbank auf einem der Linux-Distributionen ist.
+Eine Verfügbarkeitsgruppe mit dem Clustertyp „NONE“ kann Replikate auf unterschiedlichen Betriebssystemen besitzen. Es können also Linux- und Windows-basierte Replikate in derselben Verfügbarkeitsgruppe vorhanden sein. Im Folgenden sehen Sie ein Beispiel, bei dem das primäre Replikat Windows-basiert ist, während das sekundäre sich auf einer Linux-Distribution befindet.
 
-![Hybride keine](./media/sql-server-linux-availability-group-overview/image1.png)
+![Hybride Replikate unter „NONE“](./media/sql-server-linux-availability-group-overview/image1.png)
 
-Eine verteilte Verfügbarkeitsgruppe kann auch OS-Grenzen überschreiten. Die zugrunde liegende Verfügbarkeitsgruppen anhand der Regeln gebunden sind, für deren, z. B. eine, bei denen externe Konfiguration nur-Linux-, aber die Verfügbarkeitsgruppe, die sie hinzugefügt wurde mit einem WSFC konfiguriert werden konnte. Betrachten Sie das folgende Beispiel:
+Auch eine verteilte Verfügbarkeitsgruppe kann betriebssystemübergreifende Replikate besitzen. Die zugrunde liegenden Verfügbarkeitsgruppen sind an die Regeln der entsprechenden Konfiguration gebunden. So können beispielsweise eine für Linux konfigurierte Verfügbarkeitsgruppe mit dem Clustertyp „EXTERNAL“ und eine mithilfe eines WSFC konfigurierte Verfügbarkeitsgruppe miteinander verknüpft sein. Betrachten Sie das folgende Beispiel:
 
-![Hybrid-Dist-Verfügbarkeitsgruppe](./media/sql-server-linux-availability-group-overview/image2.png)
+![Hybride verteilte Verfügbarkeitsgruppe](./media/sql-server-linux-availability-group-overview/image2.png)
 
 <!-- Distributed AGs are also supported for upgrades from [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] to [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. For more information on how to achieve this, see [the article "x"].
 
@@ -156,15 +156,15 @@ If using automatic seeding with a distributed availability group that crosses OS
 -->
  
 ## <a name="next-steps"></a>Nächste Schritte
-[Konfigurieren von Verfügbarkeitsgruppen für SQL Server unter Linux](sql-server-linux-availability-group-configure-ha.md)
+[Konfigurieren von Verfügbarkeitsgruppen für SQL Server für Linux](sql-server-linux-availability-group-configure-ha.md)
 
-[Konfigurieren von schreibgeschützten Verfügbarkeitsgruppen für SQL Server unter Linux](sql-server-linux-availability-group-configure-rs.md)
+[Konfigurieren von Leseskalierungs-Verfügbarkeitsgruppen für SQL Server für Linux](sql-server-linux-availability-group-configure-rs.md)
 
-[Fügen Sie der verfügbarkeitsgruppe Clusterressource unter RHEL](sql-server-linux-availability-group-cluster-rhel.md)
+[Hinzufügen einer Clusterressource für Verfügbarkeitsgruppen unter RHEL](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Verfügbarkeitsgruppe-Clusterressource auf SLES hinzufügen](sql-server-linux-availability-group-cluster-sles.md)
+[Hinzufügen einer Clusterressource für Verfügbarkeitsgruppen unter SLES](sql-server-linux-availability-group-cluster-sles.md)
 
-[Hinzufügen der verfügbarkeitsgruppe Clusterressource unter Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Hinzufügen einer Clusterressource für Verfügbarkeitsgruppen unter Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
-[Konfigurieren einer plattformübergreifenden verfügbarkeitsgruppe](sql-server-linux-availability-group-cross-platform.md)
+[Konfigurieren einer plattformübergreifenden Verfügbarkeitsgruppe](sql-server-linux-availability-group-cross-platform.md)
 

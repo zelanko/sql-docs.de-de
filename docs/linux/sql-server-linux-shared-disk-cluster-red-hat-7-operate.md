@@ -1,6 +1,6 @@
 ---
-title: Arbeiten Sie freigegebenen Cluster Red Hat Enterprise Linux für SQL Server
-description: Implementieren Sie hohen Verfügbarkeit durch Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server konfigurieren.
+title: Betreiben eines freigegebenen Clusters mit Red Hat Enterprise Linux für SQL Server
+description: Implementieren Sie Hochverfügbarkeit, indem Sie einen freigegebenen Datenträgercluster mit Red Hat Enterprise Linux für SQL Server konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,81 +10,81 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: e7b81a97ab186ef79f27ee3456a5761157c02f3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032240"
 ---
-# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben Sie Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server
+# <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Betreiben eines freigegebenen Datenträgerclusters mit Red Hat Enterprise Linux für SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Dokument wird beschrieben, wie Sie die folgenden Aufgaben für SQL Server auf einem Failovercluster für freigegebene Datenträger mit Red Hat Enterprise Linux.
+In diesem Artikel wird beschrieben, wie Sie die folgenden Aufgaben für SQL Server auf einem freigegebenen Datenträger-Failovercluster mit Red Hat Enterprise Linux ausführen.
 
-- Ein manuelles Failover des Clusters
-- Überwachen eines Failoverclusters SQL Server-Dienst
+- Durchführen eines manuellen Clusterfailovers
+- Überwachen eines SQL Server-Diensts für Failovercluster
 - Hinzufügen eines Clusterknotens
 - Entfernen eines Clusterknotens
-- Ändern Sie den SQL Server-Ressourcen, die Überwachung der Häufigkeit
+- Ändern der Häufigkeit der SQL Server-Ressourcenüberwachung
 
 ## <a name="architecture-description"></a>Beschreibung der Architektur
 
-Die clustering-Ebene basiert auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) baut auf [Pacemaker](https://clusterlabs.org/). Corosync und Pacemaker Clusterkommunikation und ressourcenverwaltung zu koordinieren. SQL Server-Instanz ist auf einem Knoten oder die andere aktiv.
+Die Clusteringebene basiert auf einem [Hochverfügbarkeits-Add-On](https://clusterlabs.org/) für Red Hat Enterprise Linux (RHEL), das auf [Pacemaker](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) aufbaut. Corosync und Pacemaker koordinieren die Clusterkommunikation und die Ressourcenverwaltung. Die SQL Server-Instanz ist auf einem der beiden Knoten aktiv.
 
 Das folgende Diagramm veranschaulicht die Komponenten in einem Linux-Cluster mit SQL Server. 
 
-![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Freigegebener SQL-Datenträgercluster mit Red Hat Enterprise Linux 7](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Weitere Informationen zu Clusterkonfiguration, Optionen für Agents und Management finden Sie unter [RHEL-Referenzdokumentation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Weitere Informationen zu Clusterkonfiguration, Optionen für Ressourcen-Agents und Verwaltung finden Sie in der [Referenzdokumentation von RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
-## <a name = "failManual"></a>Failovercluster manuell
+## <a name = "failManual"></a>Durchführen eines manuellen Clusterfailovers
 
-Die `resource move` Befehl erstellt eine Einschränkung, die die Ressource auf dem Zielknoten zu erzwingen.  Nach dem Ausführen der `move` Befehl, eine Ressource ausgeführt, `clear` wird die Einschränkung entfernt, deshalb es möglich ist, verschieben Sie die Ressource erneut, oder die Ressource automatisch ein Failover ausgeführt haben. 
+Der Befehl `resource move` erstellt eine Einschränkung, die die Ressource zwingt, auf dem Zielknoten zu starten.  Nachdem der Befehl `move` ausgeführt wurde, entfernt die ausführende Ressource `clear` die Einschränkung, sodass die Ressource erneut verschoben oder ein automatisches Failover für die Ressource durchgeführt werden kann. 
 
 ```bash
 sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
-Im folgenden Beispiel wird die **Mssqlha** Ressource, um einen Knoten namens **sqlfcivm2**, und klicken Sie dann die Einschränkung entfernt, sodass die Ressource später auf einen anderen Knoten verschieben kann.  
+Im folgenden Beispiel wird die Ressource **mssqlha** auf den Knoten **sqlfcivm2** verschoben. Dann wird die Einschränkung entfernt, sodass die Ressource später auf einen anderen Knoten verschoben werden kann.  
 
 ```bash
 sudo pcs resource move mssqlha sqlfcivm2 
 sudo pcs resource clear mssqlha 
 ```
 
-## <a name="monitor-a-failover-cluster-sql-server-service"></a>Überwachen eines Failoverclusters SQL Server-Dienst
+## <a name="monitor-a-failover-cluster-sql-server-service"></a>Überwachen eines SQL Server-Diensts für Failovercluster
 
-Zeigen Sie den Status des aktuellen Clusters an:
+Anzeigen des aktuellen Clusterstatus:
 
 ```bash
 sudo pcs status  
 ```
 
-Live Status des Clusters und Ressourcen anzeigen:
+Anzeigen des aktuellen Status von Cluster und Ressourcen:
 
 ```bash
 sudo crm_mon 
 ```
 
-Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
+Die Protokolle des Ressourcen-Agents können Sie unter `/var/log/cluster/corosync.log` anzeigen
 
-## <a name="add-a-node-to-a-cluster"></a>Hinzufügen eines Knotens zu einem cluster
+## <a name="add-a-node-to-a-cluster"></a>Hinzufügen eines Knotens zu einem Cluster
 
-1. Überprüfen Sie die IP-Adresse für jeden Knoten. Das folgende Skript zeigt die IP-Adresse Ihres aktuellen Knotens. 
+1. Überprüfen Sie die IP-Adresse für jeden Knoten. Das folgende Skript zeigt die IP-Adresse des aktuellen Knotens an. 
 
    ```bash
    ip addr show
    ```
 
-3. Der neue Knoten benötigt einen eindeutigen Namen, die 15 Zeichen lang ist oder weniger. In Red Hat Linux standardmäßig den Namen des Computers ist `localhost.localdomain`. Dieser Standardname möglicherweise nicht eindeutig sein und ist zu lang. Legen Sie den Namen des Computers den neuen Knoten. Den Namen des Computers festlegen, indem Sie es `/etc/hosts`. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
+3. Der neue Knoten benötigt einen eindeutigen Namen, der höchstens 15 Zeichen lang ist. In Red Hat Enterprise Linux ist der Computername standardmäßig `localhost.localdomain`. Dieser Standardname ist möglicherweise nicht eindeutig und außerdem zu lang. Legen Sie den Computernamen für den neuen Knoten fest. Fügen Sie den Computernamen dafür zu `/etc/hosts` hinzu. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
 
    ```bash
    sudo vi /etc/hosts
    ```
 
-   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für drei Knoten, die mit dem Namen `sqlfcivm1`, `sqlfcivm2`, und`sqlfcivm3`.
+   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für drei Knoten mit den Namen `sqlfcivm1`, `sqlfcivm2` und `sqlfcivm3`.
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -94,19 +94,19 @@ Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
    10.128.14.26 fcivm3
     ```
     
-   Die Datei sollte auf allen Knoten identisch sein. 
+   Die Datei sollte auf jedem Knoten dieselbe sein. 
 
-1. Beenden Sie den SQL Server-Dienst auf dem neuen Knoten an.
+1. Beenden Sie den SQL Server-Dienst auf dem neuen Knoten.
 
-1. Führen Sie die Anweisungen, um das Verzeichnis der Datenbankdatei auf den freigegebenen Speicherort bereitstellen:
+1. Befolgen Sie die Anweisungen, um das Datenbankdatei-Verzeichnis am freigegebenen Speicherort einzubinden:
 
-   Aus der NFS-Server installieren `nfs-utils`
+   Installieren Sie vom NFS-Server aus `nfs-utils`:
 
    ```bash
    sudo yum -y install nfs-utils 
    ``` 
 
-   Öffnen Sie die Firewall auf Clients und Server für NFS 
+   Öffnen Sie die Firewall auf Clients und dem NFS-Server: 
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -115,15 +115,15 @@ Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
    sudo firewall-cmd --reload
    ```
 
-   Bearbeiten von/etc/fstab-Datei, um den Mount-Befehl enthalten: 
+   Bearbeiten Sie die Datei „/etc/fstab“ so, dass sie den Einbindungsbefehl enthält: 
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr
    ```
 
-   Führen Sie `mount -a` für die Änderungen wirksam werden.
+   Führen Sie `mount -a` aus, damit die Änderungen wirksam werden.
    
-1. Erstellen Sie eine Datei zum Speichern von SQL Server-Benutzername und Kennwort für die Pacemaker-Anmeldung, auf dem neuen Knoten. Der folgende Code erstellt und füllt diese Tabelle:
+1. Erstellen Sie auf dem neuen Knoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung. Der folgende Code erstellt und füllt diese Tabelle:
 
    ```bash
    sudo touch /var/opt/mssql/passwd
@@ -141,24 +141,24 @@ Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
    ```
 
    > [!NOTE]
-   > Wenn Sie eine andere Firewall verwenden, die nicht über eine integrierte Konfiguration mit hoher Verfügbarkeit verfügt, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren können
+   > Wenn Sie eine andere Firewall verwenden, in die keine Konfiguration mit Hochverfügbarkeit integriert ist, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren kann:
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
 
-1. Installieren Sie Pacemaker-Pakete auf dem neuen Knoten an.
+1. Installieren Sie Pacemaker-Pakete auf dem neuen Knoten.
 
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
  
-2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie dasselbe Kennwort wie die vorhandenen Knoten. 
+2. Legen Sie das Kennwort für den Standardbenutzer fest, der beim Installieren von Pacemaker und Corosync-Paketen erstellt wird. Verwenden Sie dasselbe Kennwort wie bei den vorhandenen Knoten. 
 
    ```bash
    sudo passwd hacluster
    ```
  
-3. Aktivieren und starten Sie den `pcsd`-Dienst und Pacemaker. Dadurch wird den neuen Knoten des Clusters nach dem Neustart erneut beitreten. Führen Sie den folgenden Befehl auf dem neuen Knoten an.
+3. Aktivieren und starten Sie den `pcsd`-Dienst und Pacemaker. So kann der neue Knoten dem Cluster nach dem Neustart erneut beitreten. Führen Sie den folgenden Befehl auf dem neuen Knoten aus.
 
    ```bash
    sudo systemctl enable pcsd
@@ -166,62 +166,62 @@ Anzeigen der Ressourcen-Agent-Protokolle an `/var/log/cluster/corosync.log`
    sudo systemctl enable pacemaker
    ```
 
-4. Installieren Sie den FCI-Ressourcenagent für SQL Server. Führen Sie die folgenden Befehle auf dem neuen Knoten an. 
+4. Installieren Sie den FCI-Ressourcenagent für SQL Server. Führen Sie die folgenden Befehle auf dem neuen Knoten aus. 
 
    ```bash
    sudo yum install mssql-server-ha
    ```
 
-1. Klicken Sie auf einen vorhandenen Knoten aus dem Cluster authentifizieren Sie den neuen Knoten, und es soll dem Cluster hinzugefügt:
+1. Authentifizieren Sie den neuen Knoten vom Cluster aus auf einem vorhandenen Knoten, und fügen Sie ihn dem Cluster hinzu.
 
     ```bash
     sudo pcs    cluster auth <nodeName3> -u hacluster 
     sudo pcs    cluster node add <nodeName3> 
     ```
 
-    Das folgende Beispiel fügt einen Knoten namens **vm3** mit dem Cluster.
+    Im folgenden Beispiel wird der Knoten **vm3** dem Cluster hinzugefügt.
 
     ```bash
     sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
-## <a name="remove-nodes-from-a-cluster"></a>Entfernen von Knoten aus einem cluster
+## <a name="remove-nodes-from-a-cluster"></a>Entfernen von Knoten aus einem Cluster
 
-Zum Entfernen eines Knotens aus einem Cluster den folgenden Befehl ausführen:
+Führen Sie den folgenden Befehl aus, um einen Knoten aus einem Cluster zu entfernen:
 
 ```bash
 sudo pcs    cluster node remove <nodeName>  
 ```
 
-## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Ändern Sie die Häufigkeit der Überwachungszeitraum Sqlservr-Ressource
+## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Ändern der Häufigkeit der SQL Server-Ressourcenüberwachung
 
 ```bash
 sudo pcs    resource op monitor interval=<interval>s <sqlResourceName> 
 ```
 
-Im folgenden Beispiel wird das Überwachungsintervall auf 2 Sekunden für die Mssql-Ressource:
+Im folgenden Beispiel wird das Überwachungsintervall für die Ressource „mssql“ auf 2 Sekunden festgelegt:
 
 ```bash
 sudo pcs    resource op monitor interval=2s mssqlha 
 ```
-## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Problembehandlung für Cluster mit freigegebenen Datenträgern Red Hat Enterprise Linux für SQL Server
+## <a name="troubleshoot-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Problembehandlung für einen freigegebenen Datenträgercluster mit Red Hat Enterprise Linux für SQL Server
 
-Bei der Problembehandlung des Clusters kann es hilfreich sein, um zu verstehen, wie die drei Daemons zusammenarbeiten, um Clusterressourcen zu verwalten. 
+Für die Behandlung von Problemen mit dem Cluster kann es hilfreich sein, zu verstehen, wie die drei Daemons bei der Verwaltung von Clusterressourcen zusammenarbeiten. 
 
-| Daemon | Beschreibung 
+| Daemon | und Beschreibung 
 | ----- | -----
-| Corosync | Bietet Quorum-Mitgliedschaft und messaging zwischen Clusterknoten.
-| Pacemaker | Befindet sich auf Corosync und stellt die Zustandsautomaten für Ressourcen bereit. 
-| PCSD | Verwaltet sowohl Pacemaker und Corosync über die `pcs` Tools
+| Corosync | Ermöglicht Quorum-Mitgliedschaft und Messaging zwischen Clusterknoten
+| Pacemaker | Baut auf Corosync auf und bietet Zustandsautomaten für Ressourcen 
+| PCSD | Verwaltet Pacemaker und Corosync über die `pcs`-Tools
 
-PCSD muss ausgeführt werden, um verwenden `pcs` Tools. 
+PCSD muss ausgeführt werden, damit die `pcs`-Tools verwendet werden können. 
 
-### <a name="current-cluster-status"></a>Aktuellen Status des Clusters 
+### <a name="current-cluster-status"></a>Aktueller Clusterstatus 
 
-`sudo pcs status` grundlegende Informationen zu den Cluster, Quorum, Knoten, Ressourcen und Daemon-Status für jeden Knoten zurückgegeben. 
+`sudo pcs status` gibt grundlegende Informationen zu Cluster, Quorum, Knoten, Ressourcen und Daemonstatus für jeden Knoten zurück. 
 
-Ein Beispiel für eine fehlerfreie Pacemaker-Quorum-Ausgabe wäre:
+Eine fehlerfreie Pacemaker-Quorumausgabe könnte wie folgt aussehen:
 
 ```
 Cluster name: MyAppSQL 
@@ -246,33 +246,33 @@ corosync: active/disabled
 pacemaker: active/enabled 
 ```
 
-Im Beispiel `partition with quorum` bedeutet, dass ein mehrheitsquorum von Knoten online ist. Wenn der Cluster ein mehrheitsquorum von Knoten, verliert `pcs status` zurück `partition WITHOUT quorum` und alle Ressourcen werden beendet. 
+Im Beispiel bedeutet `partition with quorum`, dass ein Mehrheitsquorum von Knoten online ist. Wenn der Cluster ein Mehrheitsquorum von Knoten verliert, gibt `pcs status` `partition WITHOUT quorum` zurück, und alle Ressourcen werden angehalten. 
 
-`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` Gibt den Namen aller Knoten, die zurzeit Teil des Clusters. Wenn keine Knoten beteiligt sind, `pcs status` gibt `OFFLINE: [<nodename>]`.
+`online: [sqlvmnode1 sqlvmnode2 sqlvmnode3]` gibt die Namen aller Knoten zurück, die aktuell am Cluster beteiligt sind. Wenn ein oder mehrere Knoten nicht beteiligt sind, gibt `pcs status` `OFFLINE: [<nodename>]` zurück.
 
-`PCSD Status` Zeigt den Status für jeden Knoten des Clusters an.
+`PCSD Status` zeigt den Clusterstatus für jeden Knoten an.
 
 ### <a name="reasons-why-a-node-may-be-offline"></a>Gründe, warum ein Knoten offline sein kann
 
-Überprüfen Sie die folgenden Elemente aus, wenn ein Knoten offline ist.
+Überprüfen Sie Folgendes, wenn ein Knoten offline ist:
 
 - **Firewall**
 
-    Die folgenden Ports müssen auf allen Knoten, damit Pacemaker kommunizieren können geöffnet sein.
+    Die folgenden Ports müssen auf allen Knoten geöffnet sein, damit Pacemaker kommunizieren kann:
     
-    - ** TCP: 2224, 3121, 21064
+    - **TCP: 2224, 3121, 21064
 
-- **Pacemaker oder Corosync-Dienste, die ausgeführt wird**
+- **Ausführung von Pacemaker oder Corosync**
 
-- **Kommunikation von Knoten**
+- **Knotenkommunikation**
 
-- **Knoten namenszuordnungen**
+- **Zuordnungen von Knotennamen**
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
-* [Clustern von Grund auf Neu](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Leitfaden für Pacemaker
+* [Detaillierte Anleitung für das Erstellen von Clustern](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) von Pacemaker
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konfigurieren Sie Red Hat Enterprise Linux Cluster mit freigegebenen Datenträgern werden für SQL Server.](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
+[Configure Red Hat Enterprise Linux shared disk cluster for SQL Server (Konfigurieren eines freigegebenen Datenträgerclusters mit Red Hat Enterprise Linux für SQL Server)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 

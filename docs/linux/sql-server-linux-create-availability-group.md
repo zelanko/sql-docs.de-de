@@ -1,6 +1,6 @@
 ---
-title: Erstellen Sie und konfigurieren Sie eine verfügbarkeitsgruppe für SQL Server unter Linux
-description: Dieses Tutorial veranschaulicht das Erstellen und Konfigurieren von Verfügbarkeitsgruppen für SQL Server unter Linux.
+title: Erstellen und Konfigurieren einer Verfügbarkeitsgruppe für SQL Server für Linux
+description: In diesem Tutorial wird gezeigt, wie Verfügbarkeitsgruppen für SQL Server für Linux erstellt und konfiguriert werden.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,49 +9,49 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077442"
 ---
-# <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen Sie und konfigurieren Sie eine verfügbarkeitsgruppe für SQL Server unter Linux
+# <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Erstellen und Konfigurieren einer Verfügbarkeitsgruppe für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Tutorial wird beschrieben, wie zum Erstellen und Konfigurieren einer verfügbarkeitsgruppe (AG) für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux. Im Gegensatz zu [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] und zuvor auf Windows, können Verfügbarkeitsgruppen mit oder ohne zuerst den zugrunde liegenden Pacemaker-Cluster zu erstellen. Integration mit dem Cluster bei Bedarf einem späteren Zeitpunkt erfolgt nicht.
+In diesem Tutorial wird gezeigt, wie eine Verfügbarkeitsgruppe (AG) für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] für Linux erstellt und konfiguriert wird. Im Gegensatz zu [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] und früheren Versionen unter Windows ist es zum Aktivieren von Verfügbarkeitsgruppen nun egal, ob Sie zuerst den zugrunde liegenden Cluster erstellen oder nicht. Die Integration in den Cluster erfolgt bei Bedarf erst später.
 
-Das Tutorial umfasst die folgenden Aufgaben:
+Im Tutorial werden die folgenden Aufgaben behandelt:
  
 > [!div class="checklist"]
-> * Aktivieren Sie Verfügbarkeitsgruppen.
-> * Erstellen Sie die Availability Group-Endpunkten und Zertifikaten.
-> * Verwendung [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL zum Erstellen einer verfügbarkeitsgruppe.
-> * Erstellen der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Anmeldung und Berechtigungen für Pacemaker.
-> * Erstellen Sie Verfügbarkeit Gruppieren von Ressourcen in einem Pacemaker-Cluster (nur für externen Typ).
+> * Aktivieren von Verfügbarkeitsgruppen
+> * Erstellen von Verfügbarkeitsgruppenendpunkten und -zertifikaten
+> * Verwenden von [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL zum Erstellen einer Verfügbarkeitsgruppe
+> * Erstellen des [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Anmeldenamens und der Berechtigungen für Pacemaker
+> * Erstellen von Verfügbarkeitsgruppenressourcen in einem Pacemaker-Cluster (nur externer Typ)
 
 ## <a name="prerequisite"></a>Voraussetzung
-- Pacemaker Cluster mit hochverfügbarkeit bereitstellen, wie in beschrieben [ein Pacemaker-Clusters für SQL Server unter Linux bereitstellen](sql-server-linux-deploy-pacemaker-cluster.md).
+- Stellen Sie den Pacemaker-Cluster mit Hochverfügbarkeit wie in [Deploy a Pacemaker cluster for SQL Server on Linux (Bereitstellen eines Pacemaker-Clusters für SQL Server für Linux)](sql-server-linux-deploy-pacemaker-cluster.md) beschrieben bereit.
 
 
-## <a name="enable-the-availability-groups-feature"></a>Aktivieren Sie die Funktion "Verfügbarkeitsgruppen"
+## <a name="enable-the-availability-groups-feature"></a>Aktivieren der Verfügbarkeitsgruppenfunktion
 
-Im Gegensatz zu auf Windows, Sie können nicht mithilfe von PowerShell oder [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Konfigurations-Manager die Verfügbarkeit zu Gruppen (AG)-Funktion. Sie müssen unter Linux verwenden `mssql-conf` zum Aktivieren des Features. Es gibt zwei Möglichkeiten, um die Funktion "Verfügbarkeitsgruppen" zu aktivieren: Verwenden der `mssql-conf` -Hilfsprogramm, oder Sie bearbeiten die `mssql.conf` Datei manuell.
+Anders als unter Windows können Sie PowerShell oder [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Configuration Manager nicht verwenden, um die Verfügbarkeitsgruppenfunktion (AG) zu aktivieren. Unter Linux müssen Sie `mssql-conf` zum Aktivieren der Funktion verwenden. Es gibt zwei Möglichkeiten, die Verfügbarkeitsgruppenfunktion zu aktivieren: Entweder Sie verwenden das `mssql-conf`-Hilfsprogramm, oder Sie Bearbeiten die `mssql.conf`-Datei manuell.
 
 > [!IMPORTANT]
-> Die AG-Funktion muss für reines konfigurationsreplikat Replikate aktiviert sein, auch auf [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)].
+> Die Verfügbarkeitsgruppenfunktion muss nur für Replikate im Modus „Nur Konfiguration“ aktiviert werden (auch für [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)]).
 
-### <a name="use-the-mssql-conf-utility"></a>Verwenden Sie das Dienstprogramm für die Mssql-conf
+### <a name="use-the-mssql-conf-utility"></a>Verwenden des mssql-conf-Hilfsprogramms
 
-Geben Sie an einer Eingabeaufforderung Folgendes ein:
+Geben Sie bei einer Eingabeaufforderung Folgendes ein:
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 ```
 
-### <a name="edit-the-mssqlconf-file"></a>Bearbeiten Sie die Datei mssql.conf
+### <a name="edit-the-mssqlconf-file"></a>Bearbeiten der mssql.conf-Datei
 
-Sie können auch ändern, die `mssql.conf` -Datei befindet sich unter der `/var/opt/mssql` Ordner die folgenden Zeilen hinzufügen:
+Sie können zum Hinzufügen der folgenden Zeilen auch die `mssql.conf`-Datei ändern, die sich unter dem Ordner `/var/opt/mssql` befindet:
 
 ```
 [hadr]
@@ -59,34 +59,34 @@ Sie können auch ändern, die `mssql.conf` -Datei befindet sich unter der `/var/
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>Neu starten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-Nach der Aktivierung von Verfügbarkeitsgruppen, wie auf Windows, Sie neu starten müssen [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Kann durch Folgendes geschehen:
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] neu starten
+Nachdem Sie Verfügbarkeitsgruppen wie unter Windows aktiviert haben, müssen Sie [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] neu starten. Dies erreichen Sie auf folgende Weise:
 
 ```bash
 sudo systemctl restart mssql-server
 ```
 
-## <a name="create-the-availability-group-endpoints-and-certificates"></a>Erstellen Sie die verfügbarkeitsgruppenendpunkte Verfügbarkeit und Zertifikate
+## <a name="create-the-availability-group-endpoints-and-certificates"></a>Erstellen der Verfügbarkeitsgruppenendpunkte und -zertifikate
 
-Eine verfügbarkeitsgruppe verwendet TCP-Endpunkte für die Kommunikation. Unter Linux werden die Endpunkte für eine Verfügbarkeitsgruppe nur unterstützt, wenn Zertifikate für die Authentifizierung verwendet werden. Dies bedeutet, dass das Zertifikat von einer Instanz muss auf allen anderen Instanzen wiederhergestellt werden, die Replikate, die in derselben Verfügbarkeitsgruppe beteiligt werden. Der Prozess ist auch für eine reine konfigurationsreplikat erforderlich. 
+Eine Verfügbarkeitsgruppe verwendet TCP-Endpunkte für die Kommunikation. Unter Linux werden Endpunkte für eine Verfügbarkeitsgruppe nur dann unterstützt, wenn Zertifikate für die Authentifizierung verwendet werden. Dies bedeutet, dass das Zertifikat von einer Instanz auf allen anderen Instanzen wiederhergestellt werden muss, die Replikate der gleichen Verfügbarkeitsgruppe sind. Der Zertifikatprozess ist auch für ein Replikat im Modus „Nur Zertifikat“ erforderlich. 
 
-Erstellen von Endpunkten und Wiederherstellen von Zertifikaten können nur über Transact-SQL erfolgen. Sie können nicht [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-generierte Zertifikate auch. Sie benötigen auch einen Prozess zum Verwalten, und Ersetzen Sie alle Zertifikate, die ablaufen.
+Das Erstellen von Endpunkten und Speichern von Zertifikaten ist nur über Transact-SQL möglich. Sie können auch nicht von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] generierte Zertifikate verwenden. Außerdem benötigen Sie einen Prozess zum Verwalten und Ersetzen von Zertifikaten, die ablaufen.
 
 > [!IMPORTANT]
-> Wenn Sie planen, verwenden Sie die [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] Assistenten zum Erstellen der Verfügbarkeitsgruppe, Sie trotzdem müssen zum Erstellen und Wiederherstellen der Zertifikate mithilfe von Transact-SQL unter Linux.
+> Wenn Sie den [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]-Assistenten zum Erstellen der Verfügbarkeitsgruppe verwenden möchten, müssen Sie die Zertifikate mithilfe von Transact-SQL unter Linux erstellen und wiederherstellen.
 
-Wenden Sie für die vollständige Syntax für die verfügbaren Optionen für die verschiedenen Befehle (z. B. die Erhöhung der Sicherheit) ist sich an:
+Eine vollständige Syntax der Optionen, die für die verschiedenen Befehle verfügbar sind (wie zusätzliche Sicherheit), finden Sie unter:
 
 -   [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
--   [ZERTIFIKAT ERSTELLEN](../t-sql/statements/create-certificate-transact-sql.md)
+-   [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
 -   [CREATE ENDPOINT](../t-sql/statements/create-endpoint-transact-sql.md)
 
 > [!NOTE]
-> Auch wenn Sie eine verfügbarkeitsgruppe erstellen, die der Typ des Endpunkts verwendet *FOR DATABASE_MIRRORING*, da einige Aspekte der zugrunde liegenden für diese jetzt veralteten Funktion einmal freigegeben wurden.
+> Obwohl Sie eine Verfügbarkeitsgruppe erstellen, verwendet der Typ des Endpunkts *FOR DATABASE_MIRRORING*, da einige zugrunde liegende Aspekte einmal mit dem mittlerweile veralteten Feature freigegeben wurden.
 
-In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten erstellt. Die Instanznamen sind LinAGN1 LinAGN2 und LinAGN3.
+In diesem Beispiel werden Zertifikate für eine Konfiguration mit drei Knoten erstellt. Die Instanznamen lauten LinAGN1, LinAGN2 und LinAGN3.
 
-1.  Führen Sie den folgenden LinAGN1, um den Hauptschlüssel, Zertifikat und Endpunkt zu erstellen sowie sichern Sie das Zertifikat. In diesem Beispiel wird die typische TCP-Port 5022 für den Endpunkt verwendet.
+1.  Führen Sie auf LinAGN1 den folgenden Befehl aus, um den Hauptschlüssel, das Zertifikat und den Endpunkt zu erstellen, und sichern Sie das Zertifikat. In diesem Beispiel wird der typische TCP-Port 5022 für den Endpunkt verwendet.
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -115,7 +115,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-2.  Führen Sie auf LinAGN2 identisch:
+2.  Führen Sie auf LinAGN2 ebenfalls die zuvor beschriebenen Schritte aus:
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -144,7 +144,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-3.  Führen Sie abschließend die gleiche Sequenz auf LinAGN3 ein:
+3.  Führen Sie schließlich die gleiche Sequenz auf LinAGN3 aus:
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -173,21 +173,21 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-4.  Mithilfe von `scp` oder einem anderen Hilfsprogramm, die Sicherungen des Zertifikats in jedem Knoten zu kopieren, die Teil der Verfügbarkeitsgruppe sein wird.
+4.  Kopieren Sie mithilfe von `scp` oder einem anderen Hilfsprogramm die Sicherungsdateien des Zertifikats auf jedem Knoten, der Teil der Verfügbarkeitsgruppe wird.
     
-    Für dieses Beispiel:
+    In diesem Beispiel:
     
-    - Kopieren Sie LinAGN1_Cert.cer LinAGN2 und LinAGN3
-    - Kopieren Sie LinAGN2_Cert.cer LinAGN1 und LinAGN3.
-    - Kopieren Sie LinAGN3_Cert.cer LinAGN1 und LinAGN2.
+    - Kopieren Sie LinAGN1_Cert.cer in LinAGN2 und LinAGN3.
+    - Kopieren Sie LinAGN2_Cert.cer in LinAGN1 und LinAGN3.
+    - Kopieren Sie LinAGN3_Cert.cer in LinAGN1 und LinAGN2.
     
-5.  Ändern Sie den Besitz und die Gruppe, die die kopierten Dateien auf zugeordneten `mssql`.
+5.  Ändern Sie den Besitzer und die Gruppe, die `mssql` zusammen mit den kopierten Zertifikatsdateien zugeordnet sind.
     
     ```bash
     sudo chown mssql:mssql <CertFileName>
     ```
     
-6.  Erstellen Sie auf Instanzebene Anmeldungen und Benutzer mit LinAGN2 und LinAGN3 auf LinAGN1 verknüpft sind.
+6.  Erstellen Sie die Anmeldungen auf Instanzebene und die Benutzer, die auf LinAGN1 LinAGN2 und LinAGN3 zugeordnet sind.
     
     ```SQL
     CREATE LOGIN LinAGN2_Login WITH PASSWORD = '<StrongPassword>';
@@ -201,7 +201,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-7.  Wiederherstellen Sie LinAGN2_Cert und LinAGN3_Cert auf LinAGN1. Die anderen Replikate Zertifikate ist ein wichtiger Aspekt der AG-Kommunikation und Sicherheit.
+7.  Stellen Sie LinAGN2_Cert und LinAGN3_Cert auf LinAGN1 wieder her. Die Zertifikate der anderen Replikate sind ein wichtiger Aspekt der Kommunikation und Sicherheit der Verfügbarkeitsgruppe.
     
     ```SQL
     CREATE CERTIFICATE LinAGN2_Cert
@@ -228,7 +228,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-9.  Erstellen Sie auf Instanzebene Anmeldungen und Benutzer mit LinAGN1 und LinAGN3 auf LinAGN2 verknüpft sind.
+9.  Erstellen Sie die Anmeldenamen auf Instanzebene und die Benutzer, die auf LinAGN2 LinAGN1 und LinAGN3 zugeordnet sind.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -242,7 +242,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-10. Wiederherstellen Sie LinAGN1_Cert und LinAGN3_Cert auf LinAGN2.
+10. Stellen Sie LinAGN1_Cert und LinAGN3_Cert auf LinAGN2 wieder her.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -258,7 +258,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-11. Erteilen Sie die Anmeldungen bei der Herstellung einer Verbindung mit dem Endpunkt LinAGN2 LinAG1 und LinAGN3 berechtigt zugeordnet.
+11. Erteilen Sie den Anmeldenamen, die LinAGN1 und LinAGN3 zugeordnet sind, die Berechtigungen, eine Verbindung mit dem Endpunkt auf LinAGN2 herzustellen.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +270,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-12. Erstellen Sie auf Instanzebene Anmeldungen und Benutzer mit LinAGN1 und LinAGN2 auf LinAGN3 verknüpft sind.
+12. Erstellen Sie die Anmeldenamen auf Instanzebene und die Benutzer, die auf LinAGN3 LinAGN1 und LinAGN2 zugeordnet sind.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +284,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-13. Wiederherstellen Sie LinAGN1_Cert und LinAGN2_Cert auf LinAGN3. 
+13. Stellen Sie LinAGN1_Cert und LinAGN2_Cert auf LinAGN3 wieder her. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -300,7 +300,7 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
     
-14. Erteilen Sie die Anmeldungen bei der Herstellung einer Verbindung mit dem Endpunkt LinAGN3 LinAG1 und LinAGN2 berechtigt zugeordnet.
+14. Erteilen Sie den Anmeldenamen, die LinAGN1 und LinAGN2 zugeordnet sind, die Berechtigungen, eine Verbindung mit dem Endpunkt auf LinAGN3 herzustellen.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -312,78 +312,78 @@ In diesem Beispiel wird die Zertifikate für eine Konfiguration mit drei Knoten 
     GO
     ```
 
-## <a name="create-the-availability-group"></a>Erstellen der verfügbarkeitsgruppe
+## <a name="create-the-availability-group"></a>Erstellen der Verfügbarkeitsgruppe
 
-In diesem Abschnitt wird beschrieben, wie mit [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL zum Erstellen der verfügbarkeitsgruppe für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+In diesem Abschnitt wird beschrieben, wie [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL zum Erstellen der Verfügbarkeitsgruppe für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] verwendet wird.
 
 ### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>Verwendung von [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]
 
-In diesem Abschnitt zeigt, wie zum Erstellen einer Verfügbarkeitsgruppe mit dem Clustertyp External mithilfe von SSMS mit dem Assistenten für neue Verfügbarkeitsgruppen.
+In diesem Abschnitt wird gezeigt, wie mithilfe von SSMS mit dem neuen Verfügbarkeitsgruppenassistenten eine Verfügbarkeitsgruppe mit dem Clustertyp „Extern“ erstellt wird.
 
-1.  Erweitern Sie in SSMS **hohe Verfügbarkeit mit AlwaysOn**, klicken Sie mit der rechten Maustaste auf **Verfügbarkeitsgruppen**, und wählen Sie **Assistenten für neue Verfügbarkeitsgruppen**.
+1.  Erweitern Sie in SSMS **Hochverfügbarkeit mit Always On**, und klicken Sie zuerst mit der rechten Maustaste auf **Verfügbarkeitsgruppen** und dann auf **Assistent für neue Verfügbarkeitsgruppen**.
 
-2.  Klicken Sie auf das Einführungsdialogfeld **Weiter**.
+2.  Klicken Sie im Dialogfeld „Einführung“ auf **Weiter**.
 
-3.  Klicken Sie im Dialogfeld "Optionen der Verfügbarkeitsgruppe angeben" Geben Sie einen Namen für die verfügbarkeitsgruppe, und wählen Sie einen Clustertyp EXTERNAL oder NONE, in der Dropdownliste aus. Externe sollte verwendet werden, wenn Pacemaker bereitgestellt wird. None ist für spezielle Szenarien, z. B. read Scale out. Auswählen der Option für die integritätserkennung auf Datenbankebene ist optional. Weitere Informationen zu dieser Option finden Sie unter [Datenbank auf Datenbankebene Detection Failover verfügbarkeitsgruppenoption](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Klicken Sie auf **Weiter**.
+3.  Geben Sie im Dialogfeld „Optionen der Verfügbarkeitsgruppe angeben“ einen Namen für die Verfügbarkeitsgruppe ein, und wählen Sie in der Dropdownliste den Clustertyp „EXTERN“ oder „KEINE“ aus. „Extern“ sollte verwendet werden, wenn Pacemaker bereitgestellt wird. „Keine“ ist für spezialisierte Szenarios wie horizontale Leseskalierung. Die Auswahl der Option für die Integritätserkennung auf Datenbankebene ist optional. Weitere Informationen zu dieser Option finden Sie unter [Availability group database level health detection failover option (Failoveroption für die Integritätserkennung auf Datenbankebene in einer Verfügbarkeitsgruppe)](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Klicken Sie auf **Weiter**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  Klicken Sie im Dialogfeld "Datenbanken auswählen" Wählen Sie die Datenbanken, die in der Verfügbarkeitsgruppe einbezogen werden. Jede Datenbank muss eine vollständige Sicherung haben, bevor es zu einer Verfügbarkeitsgruppe hinzugefügt werden kann. Klicken Sie auf **Weiter**.
+4.  Klicken Sie im Dialogfeld „Datenbanken auswählen“ auf die Datenbank(en), die in die Verfügbarkeitsgruppe vorhanden sein sollen. Jede Datenbank muss über eine vollständige Sicherung verfügen, bevor sie zur Verfügbarkeitsgruppe hinzugefügt werden kann. Klicken Sie auf **Weiter**.
 
-5.  Klicken Sie in das Dialogfeld "Replikate angeben" auf **Hinzufügen von Replikaten**.
+5.  Klicken Sie im Dialogfeld „Replikate angeben“ auf **Replikat hinzufügen**.
 
-6.  Verbindung mit dem Dialogfeld "Server" herstellen, geben Sie den Namen der Instanz von Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] , werden die Anmeldeinformationen für die Verbindung und das sekundäre Replikat. Klicken Sie auf **Verbinden**.
+6.  Geben Sie im Dialogfeld „Verbindung mit Server herstellen“ den Namen der Linux-Instanz von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], die das sekundäre Replikat sein wird, und die Anmeldeinformationen zum Herstellen einer Verbindung ein. Klicken Sie auf **Verbinden**.
 
-7.  Wiederholen Sie die vorherigen beiden Schritte aus, für die Instanz, die ein reines konfigurationsreplikat Replikat oder ein weiteres sekundäres Replikat enthält.
+7.  Wiederholen Sie die vorherigen beiden Schritte für die Instanz, die ein Replikat im Modus „Nur Konfiguration“ oder ein anderes sekundäres Replikat enthalten soll.
 
-8.  Alle drei Instanzen sollte jetzt auf das Dialogfeld "Replikate angeben" aufgeführt werden. Wenn Sie einen Cluster "extern" für das sekundäre Replikat zu verwenden, die "true" einer sekundären Datenbank werden, stellen Sie sicher, dass der Verfügbarkeitsmodus übereinstimmt, der das primäre Replikat und Failovermodus auf External festgelegt ist. Wählen Sie für das reine konfigurationsreplikat nur ein Verfügbarkeitsmodus der Konfiguration ein.
+8.  Alle drei Instanzen sollten jetzt im Dialogfeld „Replikate angeben“ aufgeführt werden. Wenn Sie den Clustertyp „Extern“ verwenden, sollten Sie sicherstellen, dass der „Verfügbarkeitsmodus“ für das (tatsächlich) sekundäre Replikat mit dem des primären Replikats übereinstimmt, und dass der Failovermodus auf „Extern“ festgelegt ist. Wählen Sie für das Replikat im Modus „Nur Konfiguration“ den Verfügbarkeitsmodus „Nur Konfiguration“ aus.
 
-    Das folgende Beispiel zeigt eine Verfügbarkeitsgruppe mit zwei Replikate mit dem Clustertyp External und ein reines konfigurationsreplikat Replikat.
+    Das folgende Beispiel zeigt eine Verfügbarkeitsgruppe mit zwei Replikaten, den Clustertyp „Extern“ und ein Replikat im Modus „Nur Konfiguration“.
 
     ![](./media/sql-server-linux-create-availability-group/image4.png)
 
-    Das folgende Beispiel zeigt eine Verfügbarkeitsgruppe mit zwei Replikaten, die dem Clustertyp None und ein reines konfigurationsreplikat Replikat.
+    Das folgende Beispiel zeigt eine Verfügbarkeitsgruppe mit zwei Replikaten, den Clustertyp „Keine“ und ein Replikat im Modus „Nur Konfiguration“.
 
     ![](./media/sql-server-linux-create-availability-group/image5.png)
 
-9.  Wenn Sie die sicherungseinstellungen ändern möchten, klicken Sie auf der Registerkarte "Sicherungseinstellungen". Weitere Informationen zu sicherungseinstellungen mit Verfügbarkeitsgruppen, finden Sie unter [Konfigurieren der Sicherung auf verfügbarkeitsreplikaten](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
+9.  Klicken Sie auf die Registerkarte „Sicherungseinstellungen“, wenn Sie die Sicherungseinstellungen ändern möchten. Weitere Informationen zu Sicherungseinstellungen für Verfügbarkeitsgruppen finden Sie unter [Konfigurieren der Sicherung von Verfügbarkeitsreplikaten](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
-10. Wenn lesbare sekundäre Datenbanken verwenden, oder erstellen eine Verfügbarkeitsgruppe mit einem Cluster keine leseskalierung eingeben möchten, können Sie einen Listener erstellen, durch Auswählen der Registerkarte "Listener". Ein Listener kann auch später hinzugefügt werden. Um einen Listener zu erstellen, wählen Sie die Option **erstellen ein verfügbarkeitsgruppenlisteners** , und geben Sie einen Namen, einen TCP/IP-Port und angibt, ob eine statische oder automatisch zugewiesene DHCP IP-Adresse verwendet. Denken Sie daran, dass für eine Verfügbarkeitsgruppe mit dem Clustertyp None, die IP-Adresse statisch und festgelegt werden soll in der primären IP-Adresse.
+10. Wenn Sie lesbare sekundäre Replikate verwenden oder eine Verfügbarkeitsgruppe mit dem Clustertyp „Keine“ für die Leseskalierung erstellen, können Sie durch Auswählen der Registerkarte „Listener“ einen Listener erstellen. Ein Listener kann auch zu einem späteren Zeitpunkt hinzugefügt werden. Klicken Sie zum Erstellen eines Listeners auf die Option **Verfügbarkeitsgruppenlistener erstellen**. Geben Sie dann einen Namen und einen TCP/IP-Port ein, und legen Sie fest, ob eine statisch oder automatisch zugewiesene DHCP-IP-Adresse verwendet werden soll. Beachten Sie, dass die IP-Adresse für eine Verfügbarkeitsgruppe mit dem Clustertyp „Keine“ statisch sein sollte und auf die IP-Adresse des primären Replikats festgelegt ist.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
-11. Wenn ein Listener für lesbare Szenarien erstellt wird, kann SSMS 17.3 oder höher die Erstellung des schreibgeschützten Routings im Assistenten aus. Sie können auch später über SSMS oder Transact-SQL-hinzugefügt werden. So fügen Sie schreibgeschütztes routing jetzt hinzu
+11. Wenn für lesbare Szenarios ein Listener erstellt wird, ermöglicht SSMS 17.3 oder höher die Erstellung des schreibgeschützten Routings im Assistenten. Er kann auch später über SSMS oder Transact-SQL hinzugefügt werden. So fügen Sie das schreibgeschützte Routing jetzt hinzu:
 
-    a.  Wählen Sie die Registerkarte des schreibgeschützten Routing.
+    A.  Klicken Sie auf die Registerkarte „Read-Only Routing“ (Schreibgeschütztes Routing).
 
-    b.  Geben Sie die URLs für den schreibgeschützten Replikaten ein. Diese URLs sind Endpunkte zu ähnlich, außer sie den Port der Instanz nicht auf den Endpunkt zu verwenden.
+    B.  Geben Sie die URLs für die schreibgeschützten Replikate ein. Diese URLs ähneln den Endpunkten, mit dem Unterschied, dass sie anstelle des Endpunkts den Port der Instanz verwenden.
 
-    c.  Wählen Sie jede URL, und wählen Sie im unteren Bereich die lesbaren Replikate. Halten Sie um mehrere Metriken auszuwählen UMSCHALT oder klicken und ziehen.
+    c.  Wählen Sie die einzelnen URLs und weiter unten die lesbaren Replikate aus. Sie können die UMSCHALTTASTE gedrückt halten oder klicken und ziehen, um alle auszuwählen.
 
 12. Klicken Sie auf **Weiter**.
 
-13. Wählen Sie, wie sekundären Replikat initialisiert werden. Der Standardwert ist die Verwendung [Automatisches seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), erfordert den gleichen Pfad auf allen Servern, die in der Verfügbarkeitsgruppe teilnehmen. Sie können auch veranlassen, den Assistenten werden ein sicherungs-, Kopier- und Wiederherstellen (die zweite Option erstellt). Lassen Sie sie verknüpfen, wenn Sie manuell gesichert, kopiert und die Datenbank auf den Replikaten wiederhergestellt haben (dritte option); oder fügen Sie die Datenbank später (letzte Option). Wie bei der Zertifikate, wenn Sie manuell Sicherungen sind, und kopieren, muss Berechtigungen für die Sicherungsdateien für den anderen Replikaten festgelegt werden soll. Klicken Sie auf **Weiter**.
+13. Wählen Sie aus, wie das/die sekundäre(n) Replikat(e) initialisiert werden soll(en). Standardmäßig wird das [automatische Seeding](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) verwendet, das denselben Pfad auf allen an der Verfügbarkeitsgruppe beteiligten Server benötigt. Sie können die Datenbank auch mithilfe des Assistenten sichern, kopieren und wiederherstellen (zweite Option). Wenn Sie die Datenbank manuell gesichert, kopiert und wiederhergestellt haben, wird diese auf dem/den Replikat(en) verknüpft (dritte Option). Eine weitere Möglichkeit besteht darin, die Datenbank zu einem späteren Zeitpunkt hinzuzufügen (letzte Option). Wie bei Zertifikaten müssen beim manuellen Sichern und Kopieren Berechtigungen für die Sicherungsdateien für die anderen Replikate festgelegt werden. Klicken Sie auf **Weiter**.
 
-14. Klicken Sie im Dialogfeld "Überprüfung" Wenn alles, was nicht als Erfolg zurückgegeben, zu untersuchen. Einige Warnungen sind zulässig und werden nicht schwerwiegend, z. B. Wenn Sie keinen Listener erstellen. Klicken Sie auf **Weiter**.
+14. Wenn nicht alles als „Erfolgreich“ zurückgegeben wird, können Sie die Ergebnisse im Dialogfeld „Validierung“ überprüfen. Einige Warnungen, die beispielsweise ausgegeben werden, wenn Sie keinen Listener erstellen, sind nicht so schlimm und haben keine großen Auswirkungen. Klicken Sie auf **Weiter**.
 
-15. Klicken Sie auf das Dialogfeld "Zusammenfassung" auf **Fertig stellen**. Der Prozess zum Erstellen der Verfügbarkeitsgruppe wird jetzt gestartet werden.
+15. Klicken Sie im Dialogfeld „Zusammenfassung“ auf **Fertig stellen**. Der Prozess zum Erstellen der Verfügbarkeitsgruppe beginnt jetzt.
 
-16. Wenn die Erstellung der Verfügbarkeitsgruppe abgeschlossen ist, klicken Sie auf **schließen** auf den Ergebnissen. Sie sehen nun die Verfügbarkeitsgruppe auf den Replikaten in der dynamischen Verwaltungssichten sowie die hohe Verfügbarkeit mit AlwaysOn-Ordner, in SSMS.
+16. Klicken Sie nach der Erstellung der Verfügbarkeitsgruppe in der Registerkarte „Ergebnisse“ auf **Schließen**. Jetzt können Sie in der dynamischen Verwaltungssicht und unter dem Ordner „Hochverfügbarkeit mit Always On“ in SSMS die Verfügbarkeitsgruppe auf den Replikaten sehen.
 
 ### <a name="use-transact-sql"></a>Verwenden von Transact-SQL
 
-Dieser Abschnitt zeigt Beispiele für die Erstellung einer Verfügbarkeitsgruppe mit Transact-SQL. Der Listener und schreibgeschütztes routing können konfiguriert werden, nachdem die Verfügbarkeitsgruppe erstellt wurde. Die Verfügbarkeitsgruppe selbst geändert werden kann, mit `ALTER AVAILABILITY GROUP`, aber ändern den Cluster-Typ kann nicht durchgeführt werden, [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Wenn Sie nicht zum Erstellen einer Verfügbarkeitsgruppe mit dem Clustertyp External beabsichtigt, müssen Sie löschen und neu erstellen, mit dem Clustertyp None. Weitere Informationen und anderen Optionen die folgenden Links finden Sie unter:
+Dieser Abschnitt enthält Beispiele für das Erstellen einer Verfügbarkeitsgruppe mithilfe von Transact-SQL. Der Listener und das schreibgeschützte Routing können nach dem Erstellen der Verfügbarkeitsgruppe konfiguriert werden. Die Verfügbarkeitsgruppe kann zwar mit `ALTER AVAILABILITY GROUP` geändert werden, doch der Clustertyp kann in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] nicht geändert werden. Wenn Sie keine Verfügbarkeitsgruppe mit dem Clustertyp „Extern“ erstellen wollten, müssen Sie sie löschen, und neu mit dem Clustertyp „Keine“ erstellen. Weitere Informationen und andere Optionen finden Sie unter den folgenden Links:
 
 -   [CREATE AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)
 -   [ALTER AVAILABILITY GROUP (Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)
--   [Konfigurieren des schreibgeschützten Routings für eine Verfügbarkeitsgruppe (SQLServer)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
--   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQLServer)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
+-   [Konfigurieren des schreibgeschützten Routings für eine Verfügbarkeitsgruppe (SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
+-   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners (SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Beispiel 1: 2 Replikate mit einem Replikat für reines konfigurationsreplikat (externen Cluster-Typ)
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>Beispiel 1: Zwei Replikate mit einem Replikat im Modus „Nur Konfiguration“ (externer Clustertyp)
 
-Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe zwei Replikaten erstellen, die ein reines konfigurationsreplikat Replikat verwendet wird.
+Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe mit zwei Replikaten erstellen, die ein Replikat im Modus „Nur Konfiguration“ verwendet.
 
-1.  Führen Sie auf den Knoten, der das primäre Replikat mit der vollständig Lese-/Schreibkopie der Datenbank(en) werden. Dieses Beispiel verwendet das automatische seeding.
+1.  Die Ausführung erfolgt auf dem Knoten, der das primäre Replikat mit der vollständigen Lese-/Schreibkopie der Datenbank(en) sein soll. In diesem Beispiel wird das automatische Seeding verwendet.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -405,7 +405,7 @@ Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe zwei Replikaten erstel
     GO
     ```
     
-2.  Führen Sie in einem Abfrage-Fenster, das das andere Replikat verbunden ist Folgendes ein, um verknüpfen Sie das Replikat zur Verfügbarkeitsgruppe, und der Seedingvorgang müssen vom primären zum sekundären Replikat zu initiieren.
+2.  Führen Sie in einem Abfragefenster, das mit dem anderen Replikat verbunden ist, Folgendes aus, um das Replikat mit der Verfügbarkeitsgruppe zu verknüpfen und den Seedingprozess vom primären zum sekundären Replikat zu initiieren.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -417,7 +417,7 @@ Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe zwei Replikaten erstel
     GO
     ```
     
-3. Fügen sie in einem Abfrage-Fenster, das mit dem reinen konfigurationsreplikat verbunden ist der Verfügbarkeitsgruppe.
+3. Verknüpfen Sie es in einem Abfragefenster, das mit dem Replikat im Modus „Nur Konfiguration“ verbunden ist, mit der Verfügbarkeitsgruppe.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -425,11 +425,11 @@ Dieses Beispiel zeigt, wie Sie eine Verfügbarkeitsgruppe zwei Replikaten erstel
     GO
    ```
 
-#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Beispiel für zwei bis drei Replikate mit schreibgeschütztes routing (externen Cluster-Typ)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>Beispiel 2: Drei Replikate mit schreibgeschütztem Routing (externer Clustertyp)
 
-Dieses Beispiel zeigt drei vollständige, dass die Replikate und wie schreibgeschütztes routing im Rahmen der anfänglichen Erstellung der Verfügbarkeitsgruppe konfiguriert werden können.
+In diesem Beispiel werden drei vollständige Replikate und die Konfiguration des schreibgeschützten Routings als Teil der Erstellung der anfänglichen Verfügbarkeitsgruppe veranschaulicht.
 
-1.  Führen Sie auf den Knoten, der das primäre Replikat mit der vollständig Lese-/Schreibkopie der Datenbank(en) werden. Dieses Beispiel verwendet das automatische seeding.
+1.  Die Ausführung erfolgt auf dem Knoten, der das primäre Replikat mit der vollständigen Lese-/Schreibkopie der Datenbank(en) sein soll. In diesem Beispiel wird das automatische Seeding verwendet.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -461,15 +461,15 @@ Dieses Beispiel zeigt drei vollständige, dass die Replikate und wie schreibgesc
     GO
     ```
     
-    Einige Dinge zu dieser Konfiguration zu beachten:
+    Bei dieser Konfiguration sind einige Punkte zu beachten:
     
-    - *AGName* ist der Name der verfügbarkeitsgruppe.
-    - *DBName* ist der Name der Datenbank, die mit der verfügbarkeitsgruppe verwendet wird. Es kann auch eine Liste von Namen durch Kommas getrennt sein.
-    - *ListenerName* ist ein Name, der den zugrunde liegenden-Server/Knoten unterscheidet. Wird registriert, im DNS zusammen mit *IP-Adresse*.
-    - *IP-Adresse* eine IP-Adresse, die mit zugeordnetem *ListenerName*. Es ist auch eindeutig und nicht identisch mit den Servern/Knoten. Anwendungen und Endbenutzern verwendet entweder *ListenerName* oder *IP-Adresse* zur Verbindung mit der Verfügbarkeitsgruppe.
-    - *Subnetzmaske* ist die Subnetzmaske des *IP-Adresse*; z. B. 255.255.255.0.
+    - *AGName* ist der Name der Verfügbarkeitsgruppe.
+    - *DBName* ist der Name der Datenbank, die mit der Verfügbarkeitsgruppe verwendet wird. Dies kann auch eine Liste mit durch Kommas getrennte Namen sein.
+    - *ListenerName* ist ein Name, der sich von den zugrunde liegenden Servern/Knoten unterscheidet. Sie wird in DNS zusammen mit *IPAddress* registriert.
+    - *IPAddress* ist eine IP-Adresse, die *ListenerName* zugeordnet ist. Sie ist eindeutig und mit keinem Server/Knoten identisch. Anwendungen und Endbenutzer verwenden entweder *ListenerName* oder *IPAddress*, um eine Verbindung mit der Verfügbarkeitsgruppe herzustellen.
+    - *SubnetMask* ist die Subnetzmaske von *IPAddress* (beispielsweise 255.255.255.0).
 
-2.  Führen Sie in einem Abfrage-Fenster, das das andere Replikat verbunden ist Folgendes ein, um verknüpfen Sie das Replikat zur Verfügbarkeitsgruppe, und der Seedingvorgang müssen vom primären zum sekundären Replikat zu initiieren.
+2.  Führen Sie in einem Abfragefenster, das mit dem anderen Replikat verbunden ist, Folgendes aus, um das Replikat mit der Verfügbarkeitsgruppe zu verknüpfen und den Seedingprozess vom primären zum sekundären Replikat zu initiieren.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -481,13 +481,13 @@ Dieses Beispiel zeigt drei vollständige, dass die Replikate und wie schreibgesc
     GO
     ```
     
-3.  Wiederholen Sie Schritt2 für das dritte Replikat aus.
+3.  Wiederholen Sie Schritt 2 für das dritte Replikat.
 
-#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Beispiel 3: 2 Replikate mit schreibgeschütztes routing (kein cluster-Typ)
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>Beispiel 3: Zwei Replikate mit schreibgeschütztem Routing (Clustertyp „Keine“)
 
-Dieses Beispiel zeigt die Erstellung einer Konfiguration mit zwei Replikaten mithilfe eines clustertyps ' None '. Es wird für das Szenario leseskalierung verwendet wird, auf dem kein Failover erwartet. Dadurch wird den Listener, der tatsächlich auf dem primären Replikat als auch das schreibgeschützte routing ist die Verwendung der Roundrobin-Funktionalität erstellt.
+In diesem Beispiel wird gezeigt, wie eine Konfiguration mit zwei Replikaten mit dem Clustertyp „Keine“ erstellt wird. Sie wird für das Leseskalierungsszenario verwendet, bei dem kein Failover erwartet wird. Dadurch wird der Listener, der tatsächlich das primäre Replikat ist, sowie das schreibgeschützte Routing mit der Roundrobin-Funktionalität erstellt.
 
-1.  Führen Sie auf den Knoten, der das primäre Replikat mit der vollständig Lese-/Schreibkopie der Datenbank(en) werden. Dieses Beispiel verwendet das automatische seeding.
+1.  Die Ausführung erfolgt auf dem Knoten, der das primäre Replikat mit der vollständigen Lese-/Schreibkopie der Datenbank(en) sein soll. In diesem Beispiel wird das automatische Seeding verwendet.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -513,15 +513,15 @@ Dieses Beispiel zeigt die Erstellung einer Konfiguration mit zwei Replikaten mit
     ```
     
     Erläuterungen
-    - *AGName* ist der Name der verfügbarkeitsgruppe.
-    - *DBName* ist der Name der Datenbank, die mit der verfügbarkeitsgruppe verwendet wird. Es kann auch eine Liste von Namen durch Kommas getrennt sein.
-    - *PortOfEndpoint* ist die Portnummer ein, die den Endpunkt erstellt.
-    - *PortOfInstance* ist die Portnummer, die von der Instanz verwendeten [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
-    - *ListenerName* ist ein Name, die unterscheidet sich von der zugrunde liegenden Replikate, jedoch wird nicht tatsächlich verwendet werden.
+    - *AGName* ist der Name der Verfügbarkeitsgruppe.
+    - *DBName* ist der Name der Datenbank, die mit der Verfügbarkeitsgruppe verwendet wird. Dies kann auch eine Liste mit durch Kommas getrennte Namen sein.
+    - *PortOfEndpoint* ist die Portnummer, die vom erstellten Endpunkt verwendet wird.
+    - *PortOfInstance* ist die Portnummer, die von der Instanz von [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] verwendet wird.
+    - *ListenerName* ist ein Name, der sich von den zugrunde liegenden Replikaten unterscheidet, aber nicht verwendet wird.
     - *PrimaryReplicaIPAddress* ist die IP-Adresse des primären Replikats.
-    - *Subnetzmaske* ist die Subnetzmaske des *IP-Adresse*. Z. B. 255.255.255.0.
+    - *SubnetMask* ist die Subnetzmaske von *IPAddress*. Beispiel: 255.255.255.0.
     
-2.  Fügen Sie das sekundäre Replikat der Verfügbarkeitsgruppe, und initiieren Sie das automatische seeding.
+2.  Verknüpfen Sie das sekundäre Replikat mit der Verfügbarkeitsgruppe, und initiieren Sie das automatische Seeding.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = NONE);
@@ -533,11 +533,11 @@ Dieses Beispiel zeigt die Erstellung einer Konfiguration mit zwei Replikaten mit
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Erstellen der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Anmeldung und Berechtigungen für Pacemaker
+## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Erstellen des [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Anmeldenamens und der Berechtigungen für Pacemaker
 
-Eine Pacemaker hochverfügbarkeit-Cluster zugrunde liegenden [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux benötigt Zugriff auf die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Instanz sowie Berechtigungen für die verfügbarkeitsgruppe selbst. Diesen Schritten erstellen Sie die Anmeldung und den zugeordneten Berechtigungen zusammen mit einer Datei, der angibt, wie Sie die Anmeldung beim Pacemaker [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
+Ein unter Linux [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] zugrunde liegender Pacemaker-Cluster mit Hochverfügbarkeit benötigt Zugriff auf die [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Instanz und Berechtigungen für die Verfügbarkeitsgruppe selbst. Mit diesen Schritten werden der Anmeldename und die zugehörigen Berechtigungen zusammen mit einer Datei erstellt, die Pacemaker mitteilt, wie die Anmeldung bei [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erfolgen soll.
 
-1.  Führen Sie in einem Abfrage-Fenster, das mit dem ersten Replikat verbunden ist die folgenden Schritte aus:
+1.  Führen Sie in einem Abfragefenster, das mit dem ersten Replikat verbunden ist, Folgendes aus:
 
     ```SQL
     CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
@@ -553,38 +553,38 @@ Eine Pacemaker hochverfügbarkeit-Cluster zugrunde liegenden [!INCLUDE[ssnoversi
     GO
     ```
     
-2.  Geben Sie den Befehl, auf Knoten 1 
+2.  Geben Sie auf Knoten 1 den Befehl ein. 
     ```bash
     sudo emacs /var/opt/mssql/secrets/passwd
     ```
     
-    Emacs-Editor wird geöffnet.
+    Dadurch wird der Emacs-Editor geöffnet.
     
-3.  Geben Sie die folgenden zwei Zeilen in den Editor ein:
+3.  Geben Sie die beiden folgenden Zeilen in den Editor ein:
 
     ```
     PMLogin
     <StrongPassword>
     ```
     
-4.  Halten Sie die STRG-Taste gedrückt, und drücken Sie dann die X, dann C, um zu beenden, und speichern Sie die Datei.
+4.  Halten Sie die STRG-Taste gedrückt, drücken Sie X und anschließend C, um die Datei zu beenden und zu speichern.
 
 5.  Execute 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```
     
-    die Datei zu sperren.
+    um die Datei zu sperren.
 
-6.  Wiederholen Sie die Schritte 1 bis 5 für die anderen Server, die als Replikate dient.
+6.  Wiederholen Sie die Schritte 1 bis 5 auf den anderen Servern, die als Replikate fungieren.
 
-## <a name="create-the-availability-group-resources-in-the-pacemaker-cluster-external-only"></a>Erstellen Sie die Ressourcen in der Pacemaker-Clusters (nur extern)
+## <a name="create-the-availability-group-resources-in-the-pacemaker-cluster-external-only"></a>Erstellen der Verfügbarkeitsgruppenressourcen im Pacemaker-Cluster (nur „Extern“)
 
-Gruppe wird nach einer verfügbarkeitsgruppe erstellt [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], die entsprechenden Ressourcen müssen in Pacemaker erstellt, wenn ein Clustertyp externer angegeben wird. Es gibt zwei Ressourcen, die mit einer Verfügbarkeitsgruppe verknüpft ist: die Verfügbarkeitsgruppe selbst und eine IP-Adresse. Konfigurieren die IP-Adressressource ist optional, wenn Sie die Listener-Funktionen nicht verwenden, werden jedoch empfohlen.
+Nachdem eine Verfügbarkeitsgruppe in [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] erstellt wurde, müssen die entsprechenden Ressourcen in Pacemaker erstellt werden, wenn der Clustertyp „Extern“ angegeben wird. Einer Verfügbarkeitsgruppe sind zwei Ressourcen zugeordnet: die Verfügbarkeitsgruppe selbst und eine IP-Adresse. Das Konfigurieren der IP-Adressressource ist zwar optional, wird allerdings empfohlen, wenn Sie die Listenerfunktion nicht verwenden.
 
-Die AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource mit dem Namen eines Klons. Die AG-Ressource ist im Wesentlichen Kopien auf jedem Knoten, und es gibt eine steuernde Ressource mit dem Namen des Masters. Der Master ist verknüpft mit dem Server, die das primäre Replikat hostet. Die sekundären Replikate (reguläre oder reines konfigurationsreplikat) werden als untergeordnete Server und höher gestuft werden können, um master in einem Failovercluster.
+Die erstellte Verfügbarkeitsgruppenressource ist eine spezielle Art von Ressource, die als Klon bezeichnet wird. Die Verfügbarkeitsgruppe verfügt im Wesentlichen über Kopien der einzelnen Knoten, und es gibt eine Steuerungsressource, die als „Master“ bezeichnet wird. Diese Ressource wird dem Server zugeordnet, der das primäre Replikat hostet. Die sekundären Replikate („Regulär“ oder „Nur Konfiguration“) werden als untergeordnet betrachtet und können in einem Failover zum Master heraufgestuft werden.
 
-1.  Erstellen Sie die AG-Ressource mit der folgenden Syntax aus:
+1.  Erstellen Sie die Verfügbarkeitsgruppenressource mit der folgenden Syntax:
 
     **Red Hat Enterprise Linux (RHEL) und Ubuntu**
     
@@ -593,7 +593,7 @@ Die AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource mit de
     ```
 
     >[!NOTE]
-    >Für RHEL 7.4 können Sie eine Warnung mit der Verwendung von – Master auftreten. Um dies zu vermeiden, verwenden `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
+    >Unter RHEL 7.4 kann bei der Verwendung von „--master“ eine Warnung auftreten. Verwenden Sie `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`, um dies zu vermeiden.
    
     **SUSE Linux Enterprise Server (SLES)**
     
@@ -616,9 +616,9 @@ Die AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource mit de
     commit
     ```
     
-    in denen *NameForAGResource* ist von den eindeutigen Namen für die Verfügbarkeitsgruppe, zu der dieser Clusterressource und *AGName* ist der Name der Verfügbarkeitsgruppe, die erstellt wurde.
+    wird verwendet, wenn *NameForAGResource* der eindeutige Name dieser Clusterressource für die Verfügbarkeitsgruppe und *AGName* der Name der erstellten Verfügbarkeitsgruppe ist.
  
-2.  Erstellen Sie die IP-Adressressource, für die Verfügbarkeitsgruppe, der die Listener-Funktionen zugeordnet werden soll.
+2.  Erstellen Sie die IP-Adressressource für die Verfügbarkeitsgruppe, die der Listenerfunktion zugeordnet wird.
 
     **RHEL und Ubuntu**
     
@@ -636,9 +636,9 @@ Die AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource mit de
           cidr_netmask=<Netmask>
     ```
     
-    in denen *NameForIPResource* ist der eindeutige Name für die IP-Adressressource und *IP-Adresse* die statische IP-Adresse der Ressource zugeordnet ist. Unter SLES müssen Sie auch die Netzmaske angeben. Beispielsweise müsste 255.255.255.0 einen Wert von 24 für *Netzmaske an.*
+    wird verwendet, wenn *NameForIPResource* der eindeutige Name der IP-Adressressource und *IPAddress* die der Ressource zugewiesene statische IP-Adresse ist. In SLES müssen Sie auch die Netzmaske angeben. So hat 255.255.255.0 für *Netmask* beispielsweise den Wert „24“.
     
-3.  Eine Zusammenstellung-Einschränkung muss konfiguriert werden, um sicherzustellen dass die IP-Adresse und die AG-Ressource auf dem gleichen Knoten ausgeführt werden.
+3.  Es muss eine Kollokationseinschränkung konfiguriert werden, um sicherzustellen, dass die IP-Adresse und die Verfügbarkeitsgruppenressource auf demselben Knoten ausgeführt werden.
 
     **RHEL und Ubuntu**
     
@@ -654,9 +654,9 @@ Die AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource mit de
     commit
     ```
     
-    in denen *NameForIPResource* ist der Name für die IP-Adressressource *NameForAGResource* ist der Name für die AG-Ressource, und klicken Sie auf SLES, *NameForConstraint* ist der Name für die Einschränkung.
+    wird verwendet, wenn *NameForIPResource* der Name der IP-Adressressource, *NameForAGResource* der Name der Verfügbarkeitsgruppenressource und *NameForConstraint* in SLES der Name der Einschränkung ist.
 
-4.  Erstellen Sie eine Sortierung der Einschränkung, um sicherzustellen, dass die AG-Ressource aktiv ist und ausgeführt wird, bevor Sie die IP-Adresse ein. Während die Einschränkung für die Zusammenstellung eine Bestellung-Einschränkung impliziert, werden diese erzwungen.
+4.  Erstellen Sie eine Sortierungseinschränkung, um sicherzustellen, dass die Verfügbarkeitsgruppenressource vor der IP-Adresse ausgeführt wird. Obwohl die Kollokationseinschränkung eine Sortierungseinschränkung impliziert, erzwingt sie diese.
 
     **RHEL und Ubuntu**
     
@@ -672,20 +672,20 @@ Die AG-Ressource, die erstellt wird, ist eine besondere Art von Ressource mit de
     commit
     ```
     
-    in denen *NameForIPResource* ist der Name für die IP-Adressressource *NameForAGResource* ist der Name für die AG-Ressource, und klicken Sie auf SLES, *NameForConstraint* ist der Name für die Einschränkung.
+    wird verwendet, wenn *NameForIPResource* der Name der IP-Adressressource, *NameForAGResource* der Name der Verfügbarkeitsgruppenressource und *NameForConstraint* in SLES der Name der Einschränkung ist.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial haben Sie gelernt, wie zum Erstellen und Konfigurieren einer verfügbarkeitsgruppe für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux. Sie haben gelernt, wie auf:
+In diesem Tutorial wurde gezeigt, wie eine Verfügbarkeitsgruppe für [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Linux erstellt und konfiguriert wird. Sie haben Folgendes gelernt:
 > [!div class="checklist"]
-> * Aktivieren Sie Verfügbarkeitsgruppen.
-> * Erstellen von AG-Endpunkten und Zertifikaten.
-> * Verwendung [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL, um eine Verfügbarkeitsgruppe zu erstellen.
-> * Erstellen der [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Anmeldung und Berechtigungen für Pacemaker.
-> * Erstellen Sie AG-Ressourcen in einen Pacemaker-Cluster.
+> * Aktivieren von Verfügbarkeitsgruppen
+> * Erstellen von Verfügbarkeitsgruppenendpunkten und -zertifikaten
+> * Verwenden von [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) oder Transact-SQL zum Erstellen einer Verfügbarkeitsgruppe
+> * Erstellen des [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Anmeldenamens und der Berechtigungen für Pacemaker
+> * Erstellen von Verfügbarkeitsgruppenressourcen in einem Pacemaker-Cluster
 
-Die meisten AG Verwaltungsaufgaben, einschließlich Upgrades und Ausführen eines Failovers finden Sie unter:
+Informationen zu den meisten Verwaltungsaufgaben in Bezug auf Verfügbarkeitsgruppen einschließlich Upgrades und Failovers finden Sie unter:
 
 > [!div class="nextstepaction"]
-> [Arbeiten Sie HA-verfügbarkeitsgruppe für SQL Server unter Linux](sql-server-linux-availability-group-failover-ha.md)
+> [Arbeiten mit einer Verfügbarkeitsgruppe mit Hochverfügbarkeit für SQL Server für Linux](sql-server-linux-availability-group-failover-ha.md)
 

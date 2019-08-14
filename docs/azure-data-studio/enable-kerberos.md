@@ -1,7 +1,7 @@
 ---
-title: Verwenden Sie Active Directory-Authentifizierung (Kerberos)
+title: Verwenden der Azure Active Directory-Authentifizierung (Kerberos)
 titleSuffix: Azure Data Studio
-description: Informationen Sie zum Aktivieren von Kerberos verwendet Active Directory-Authentifizierung für Azure Data Studio
+description: Erfahren Sie, wie Sie Kerberos zur Verwendung für die Active Directory-Authentifizierung für Azure Data Studio aktivieren.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,35 +11,35 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959664"
 ---
-# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Herstellen einer mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] zu Ihrem SQL Server mithilfe der Windows-Authentifizierung – Kerberos 
+# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Stellen Sie eine Verbindung von [!INCLUDE[name-sos](../includes/name-sos-short.md)] mit Ihrer SQL Server-Instanz mithilfe der Windows-Authentifizierung (Kerberos) her. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] unterstützt das Herstellen einer Verbindung mit SQL Server mithilfe von Kerberos.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] unterstützt das Herstellen der Verbindung mit SQL Server mithilfe von Kerberos.
 
-Um die integrierte Authentifizierung (Windows-Authentifizierung) unter MacOS oder Linux verwenden zu können, müssen Sie richten eine **Kerberos-Ticket** verknüpfen Ihres aktuellen Benutzers zu einem Windows-Domänenkonto. 
+Um die integrierte Authentifizierung (Windows-Authentifizierung) unter macOS oder Linux verwenden zu können, müssen Sie ein **Kerberos-Ticket** einrichten, mit dem Ihr aktueller Benutzer mit einem Windows-Domänenkonto verknüpft wird. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Zugriff auf ein Windows-Domäne eingebundenen Computer zum Abfragen von Ihrem Kerberos-Domänencontroller.
-- SQL Server sollte für die Kerberos-Authentifizierung können konfiguriert werden. Für den Clienttreiber auf Unix ausgeführt wird wird nur der integrierten Authentifizierung unterstützt mithilfe von Kerberos. Weitere Informationen zum Einrichten von Sql Server für die Authentifizierung mit Kerberos finden Sie [hier](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). Es sollte Dienstprinzipalnamen für jede Instanz von Sql Server, die Sie herstellen möchten. Finden Sie Informationen über das Format von SQL Server-SPNs [hier](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
-
-
-## <a name="checking-if-sql-server-has-kerberos-setup"></a>Überprüft, ob Sql Server auf Kerberos-Einrichtung ist
-
-Melden Sie sich den Hostcomputer des Sql Server. Verwenden von Windows-Eingabeaufforderung die `setspn -L %COMPUTERNAME%` zum Auflisten aller Dienstprinzipalnamen für den Host. Sie sollte Einträge, die mit MSSQLSvc/HostName.Domain.com, was bedeutet beginnen, dass Sql Server einen SPN registriert hat und zum Annehmen von Kerberos-Authentifizierung bereit ist. 
-- Wenn Sie keinen Zugriff auf den Host des Sql Servers, von einem beliebigen anderen Windows Betriebssystem mit der gleichen Active Directory verknüpft, können Sie den Befehl `setspn -L <SQLSERVER_NETBIOS>` , in denen < SQLSERVER_NETBIOS > ist der Computername des von Sql Server-Hosts.
+- Zugriff auf einen in die Windows-Domäne eingebundenen Computer, um den Kerberos-Domänencontroller abzufragen.
+- SQL Server sollte so konfiguriert werden, dass die Kerberos-Authentifizierung zulässig ist. Für den Clienttreiber, der unter UNIX ausgeführt wird, wird die integrierte Authentifizierung nur mit Kerberos unterstützt. Weitere Informationen zum Einrichten von SQL Server für die Authentifizierung mithilfe von Kerberos finden Sie [hier](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). Für jede Instanz von SQL Server, mit der Sie eine Verbindung herstellen möchten, müssen SPNs registriert sein. Details zum Format der SQL Server-SPNs sind [hier](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats) aufgeführt.
 
 
-## <a name="get-the-kerberos-key-distribution-center"></a>Abrufen von Kerberos Key Distribution Center
+## <a name="checking-if-sql-server-has-kerberos-setup"></a>Überprüfen, ob SQL Server ein Kerberos-Setup aufweist
 
-Suchen Sie den Konfigurationswert für die Kerberos-KDC (Key Distribution Center). Führen Sie den folgenden Befehl auf einem Windows-Computer, der mit Ihrer Active Directory-Domäne verknüpft ist: 
+Melden Sie sich beim Hostcomputer von SQL Server an. Verwenden Sie in der Windows-Eingabeaufforderung `setspn -L %COMPUTERNAME%`, um alle Dienstprinzipalnamen für den Host aufzulisten. Es sollten Einträge angezeigt werden, die mit „MSSQLSvc/HostName.Domain.com“ beginnen. Dies bedeutet, dass SQL Server einen SPN registriert hat und bereit ist, die Kerberos-Authentifizierung zu akzeptieren. 
+- Wenn Sie keinen Zugriff auf den Host von SQL Server haben, könnten Sie von allen anderen Windows-Betriebssystemen aus, die mit derselben Active Directory-Instanz verknüpft sind, den Befehl `setspn -L <SQLSERVER_NETBIOS>` verwenden, wobei <SQLSERVER_NETBIOS> der Computername des Hosts von SQL Server ist.
 
-Starten Sie `cmd.exe` , und führen Sie `nltest`.
+
+## <a name="get-the-kerberos-key-distribution-center"></a>Abrufen des Kerberos-Schlüsselverteilungscenters
+
+Suchen Sie den Kerberos-KDC-Konfigurationswert (Key Distribution Center, Schlüsselverteilungscenter). Führen Sie den folgenden Befehl auf einem Windows-Computer aus, der mit Ihrer Active Directory-Domäne verknüpft ist: 
+
+Starten Sie `cmd.exe`, und führen Sie `nltest` aus.
 
 ```
 nltest /dsgetdc:DOMAIN.COMPANY.COM (where "DOMAIN.COMPANY.COM" maps to your domain's name)
@@ -50,16 +50,16 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-Kopieren Sie den DC-Namen, die den Wert der erforderlichen KDC-Konfiguration, in diesem Fall dc-33.domain.company.com
+Kopieren Sie den DC-Namen, der der erforderliche KDC-Konfigurationswert ist, in diesem Fall „dc-33.domain.company.com“.
 
-## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Verknüpfen Sie Ihr Betriebssystem, mit der Active Directory-Domänencontroller
+## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Verknüpfen Ihres Betriebssystems mit dem Active Directory-Domänencontroller
 
 ### <a name="ubuntu"></a>Ubuntu
 ```bash
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Bearbeiten der `/etc/network/interfaces` Datei, damit Ihre AD-Domänencontroller-IP-Adresse als eine Dns-Namenserver aufgeführt ist. Beispiel: 
+Bearbeiten Sie die `/etc/network/interfaces`-Datei so, dass die IP-Adresse Ihres AD-Domänencontrollers als DNS-Namensserver aufgeführt ist. Beispiel: 
 
 ```/etc/network/interfaces
 <...>
@@ -71,15 +71,15 @@ dns-search **<AD domain name>**
 ```
 
 > [!NOTE]
-> Die Netzwerkschnittstelle ("eth0") kann für verschiedene Computer abweichen. Um herauszufinden, welche, die Sie verwenden, führen Sie "ifconfig" aus, und kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
+> Die Netzwerkschnittstelle (eth0) kann für verschiedene Computer unterschiedlich sein. Um herauszufinden, welche Sie verwenden, führen Sie ifconfig aus, und kopieren Sie die Schnittstelle, die über eine IP-Adresse verfügt und Bytes übermittelt und empfangen hat.
 
-Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
+Nachdem Sie diese Datei bearbeitet haben, starten Sie den Netzwerkdienst neu:
 
 ```bash
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie folgt:  
+Überprüfen Sie nun, ob die `/etc/resolv.conf`-Datei eine Zeile wie die folgende enthält:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -91,12 +91,12 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
+### <a name="redhat-enterprise-linux"></a>Red Hat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
 
-Bearbeiten der `/etc/sysconfig/network-scripts/ifcfg-eth0` Datei (oder andere Schnittstelle Config-Datei nach Bedarf), damit die IP-Adresse Ihrer Active Directory-Domänencontroller als DNS-Server aufgeführt ist:
+Bearbeiten Sie die `/etc/sysconfig/network-scripts/ifcfg-eth0`-Datei (oder eine andere entsprechende Schnittstellenkonfigurations-Datei), sodass die IP-Adresse Ihres AD-Domänencontrollers als DNS-Server aufgeführt wird:
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -104,13 +104,13 @@ PEERDNS=no
 DNS1=**<AD domain controller IP address>**
 ```
 
-Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
+Nachdem Sie diese Datei bearbeitet haben, starten Sie den Netzwerkdienst neu:
 
 ```bash
 sudo systemctl restart network
 ```
 
-Nun überprüfen Sie, ob Ihre `/etc/resolv.conf` Datei enthält eine Zeile wie folgt:  
+Überprüfen Sie nun, ob die `/etc/resolv.conf`-Datei eine Zeile wie die folgende enthält:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -125,13 +125,13 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>macOS
 
-- Verbinden Sie Ihr MacOS mit der Active Directory-Domänencontroller, mit folgenden Schritten:
+- Verknüpfen Sie Ihr macOS mit dem Active Directory-Domänencontroller ein, indem Sie die folgenden Schritte ausführen:
 
 
 
-## <a name="configure-kdc-in-krb5conf"></a>Konfigurieren von KDC in krb5.conf
+## <a name="configure-kdc-in-krb5conf"></a>Konfigurieren von KDC in „krb5.conf“
 
-Bearbeiten der `/etc/krb5.conf` in einem Editor Ihrer Wahl. Konfigurieren Sie die folgenden Schlüssel
+Bearbeiten Sie `/etc/krb5.conf` in einem Editor Ihrer Wahl. Konfigurieren Sie die folgenden Schlüssel
 
 ```bash
 sudo vi /etc/krb5.conf
@@ -145,21 +145,21 @@ DOMAIN.COMPANY.COM = {
 }
 ```
 
-Speichern Sie die Datei krb5.conf, und beenden
+Speichern Sie dann die Datei „krb5.conf“, und beenden Sie den Editor.
 
 > [!NOTE]
-> Domäne muss in Großbuchstaben sein.
+> Die Domäne muss VOLLSTÄNDIG IN GROSSBUCHSTABEN angegeben werden.
 
 
-## <a name="test-the-ticket-granting-ticket-retrieval"></a>Testen Sie das Ticket-Granting-Ticket abrufen
+## <a name="test-the-ticket-granting-ticket-retrieval"></a>Testen des Ticket Granting Ticket-Abrufs
 
-Rufen Sie ein Ticket, das Ticket (TGT) vom KDC gewähren.
+Rufen Sie ein Ticket Granting Ticket (TGT) aus dem KDC ab.
 
 ```bash
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Zeigen Sie die verfügbaren Tickets Klist verwenden. Wenn die Kinit erfolgreich war, sehen Sie ein Ticket. 
+Zeigen Sie die verfügbaren Tickets mithilfe von „klist“ an. Wenn „kinit“ erfolgreich war, sollte ein Ticket angezeigt werden. 
 
 ```bash
 klist
@@ -169,10 +169,10 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 ## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Herstellen einer Verbindung mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-* Erstellen Sie ein neues Verbindungsprofil
+* Erstellen Sie ein neues Verbindungsprofil.
 
-* Wählen Sie **Windows-Authentifizierung** als Authentifizierungstyp
+* Wählen Sie **Windows-Authentifizierung** als Authentifizierungstyp aus.
 
-* Das Verbindungsprofil abgeschlossen ist, klicken Sie auf **verbinden**
+* Vervollständigen Sie das Verbindungsprofil, und klicken Sie auf **Verbinden**.
 
-Nach der erfolgreichen Verbindung, auf dem Server, wird Sie der *Server* Randleiste.
+Nachdem die Verbindung erfolgreich hergestellt wurde, wird Ihr Server in der Randleiste *Server* angezeigt.

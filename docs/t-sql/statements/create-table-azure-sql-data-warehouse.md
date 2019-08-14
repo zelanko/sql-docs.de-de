@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116995"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419610"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -167,18 +167,7 @@ Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizonta
 
 „Sortierter Columnstore-Index“ ist der Standard für das Erstellen von Tabellen in Azure SQL Data Warehouse.  Die Angabe „ORDER“ wird standardmäßig mit „COMPOUND“-Schlüsseln umgesetzt.  Die Sortierung erfolgt immer in aufsteigender Reihenfolge. Wenn keine ORDER-Klausel angegeben ist, wird der Columnstore nicht sortiert. Aufgrund des Sortiervorgangs kann es bei einer Tabelle mit sortiertem geclustertem Columnstore-Index zu längeren Datenladezeiten kommen als bei nicht sortierten geclusterten Columnstore-Indizes. Wenn Sie beim Laden von Daten mehr tempdb-Speicherplatz benötigen, können Sie die Datenmenge pro Einfügung verringern.
 
-Während der Vorschauphase können Sie diese Abfrage ausführen, um die Spalten mit aktivierter ORDER zu überprüfen.
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+Benutzer können die Spalte „column_store_order_ordinal“ in „sys.index_columns“ für die Spalte(n) nach der die Tabelle sortiert ist und nach der Sequenz der Sortierung abfragen.  
 
 ### <a name="DataTypes"></a> Datentyp
 

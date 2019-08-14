@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren Sie SLES Cluster mit freigegebenen Datenträgern werden für SQL Server.
-description: Implementieren Sie hohen Verfügbarkeit, indem freigegebene Datenträgercluster für SUSE Linux Enterprise Server (SLES) für SQL Server konfigurieren.
+title: Konfigurieren eines freigegebenen SLES-Datenträgerclusters für SQL Server
+description: Implementieren Sie Hochverfügbarkeit, indem Sie einen freigegebenen Datenträgercluster mit SUSE Linux Enterprise Server (SLES) für SQL Server konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,33 +10,33 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032222"
 ---
-# <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Konfigurieren Sie SLES Cluster mit freigegebenen Datenträgern werden für SQL Server.
+# <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Konfigurieren eines freigegebenen SLES-Datenträgerclusters für SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Handbuch enthält Anweisungen zum Erstellen von eines Clusters mit zwei Knoten freigegebenen Datenträgern für SQL Server unter SUSE Linux Enterprise Server (SLES). Die clustering-Ebene basiert darauf, dass SUSE [hohe Verfügbarkeit-Erweiterung (HAE)](https://www.suse.com/products/highavailability) baut auf [Pacemaker](https://clusterlabs.org/). 
+Diese Anleitung enthält Anweisungen zum Erstellen eines freigegebenen Datenträgerclusters mit zwei Knoten für SQL Server unter SUSE Linux Enterprise Server (SLES). Die Clusteringebene basiert auf der SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability), die auf [Pacemaker](https://clusterlabs.org/) aufbaut. 
 
-Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, bewährte Methoden und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+Weitere Informationen zu Clusterkonfiguration, Ressourcenagentoptionen, Verwaltung, Best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server so konfigurieren Sie die NFS-Freigabe bereitzustellen. Unten aufgeführten Schritte beschreiben Sie, wie diese Server konfiguriert werden.
+Für das folgende End-to-End-Szenario benötigen Sie zwei Computer, um den Cluster mit zwei Knoten und einen weiteren Server zum Konfigurieren der NFS-Freigabe bereitzustellen. Die folgenden Schritte beschreiben, wie diese Server konfiguriert werden.
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Richten Sie ein und konfigurieren Sie das Betriebssystem auf jedem Clusterknoten
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Einrichten und Konfigurieren des Betriebssystems auf den einzelnen Clusterknoten
 
-Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren. Verwenden Sie für diese exemplarische Vorgehensweise SLES mit einem gültigen Abonnement, für die HA-Add-On.
+Der erste Schritt besteht darin, das Betriebssystem auf den Clusterknoten zu konfigurieren. Verwenden Sie für diese exemplarische Vorgehensweise SLES mit einem gültigen Abonnement für das Hochverfügbarkeits-Add-On.
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installieren und Konfigurieren von SQL Server auf jedem Clusterknoten
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installieren und Konfigurieren der SQL Server-Instanz auf den einzelnen Clusterknoten
 
-1. Installieren und Einrichten von SQL Server auf beiden Knoten. Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server unter Linux](sql-server-linux-setup.md).
-2. Festlegen Sie ein Knoten als primärer und der andere wird als sekundäre Datenbank, für die Zwecke der Konfiguration. Verwenden Sie diese Bedingungen für die folgenden dieses Handbuchs. 
-3. Klicken Sie auf dem sekundären Knoten beenden, und Deaktivieren von SQL Server. Im folgenden Beispiel wird beendet und deaktiviert SQL Server:
+1. Installieren Sie SQL Server auf beiden Knoten, und richten Sie die Anwendung ein. Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server für Linux](sql-server-linux-setup.md).
+2. Legen Sie für die Konfiguration einen Knoten als primär und den anderen als sekundär fest. Verwenden Sie diese Begriffe für den weiteren Verlauf dieses Leitfadens. 
+3. Beenden und deaktivieren Sie SQL Server auf dem sekundären Knoten. Im folgenden Beispiel wird SQL Server beendet und deaktiviert:
 
     ```bash
     sudo systemctl stop mssql-server
@@ -44,13 +44,13 @@ Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren.
     ```
 
     > [!NOTE]
-    > Beim Setup ein Server-Hauptschlüssel für die SQL Server-Instanz generiert und an platziert `/var/opt/mssql/secrets/machine-key`. Unter Linux wird SQL Server immer ausgeführt, als ein lokales Konto Mssql aufgerufen werden. Da es sich um ein lokales Konto handelt, ist nicht die Identität über Knoten hinweg gemeinsam genutzt werden. Aus diesem Grund müssen Sie den Verschlüsselungsschlüssel aus dem primären Knoten für jeden sekundären Knoten kopieren, damit jedes lokalen Mssql-Konto, um den Server-Hauptschlüssel entschlüsseln zugreifen kann.
-4. Klicken Sie auf dem Primärknoten, erstellen Sie eine SQL Server-Anmeldung für Pacemaker, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Pacemaker verwendet dieses Konto, um zu überprüfen, welcher Knoten die SQL Server ausgeführt wird.
+    > Zum Zeitpunkt der Einrichtung wird ein Serverhauptschlüssel für die SQL Server-Instanz generiert und unter `/var/opt/mssql/secrets/machine-key` platziert. Unter Linux wird SQL Server immer als lokales Konto mit dem Namen „mssql“ ausgeführt. Da es sich um ein lokales Konto handelt, wird dessen Identität nicht knotenübergreifend freigegeben. Daher müssen Sie den Verschlüsselungsschlüssel vom primären Knoten auf jeden sekundären Knoten kopieren, damit jedes lokale mssql-Konto darauf zugreifen kann, um den Serverhauptschlüssel zu entschlüsseln.
+4. Erstellen Sie auf dem primären Knoten einen SQL Server-Anmeldenamen für Pacemaker, und erteilen Sie dem Anmeldenamen die Berechtigung zum Ausführen von `sp_server_diagnostics`. Pacemaker verwendet dieses Konto, um zu überprüfen, welcher Knoten auf SQL Server ausgeführt wird.
 
     ```bash
     sudo systemctl start mssql-server
     ```
-    Verbinden mit der SQL Server-Masterdatenbank mit dem Konto "sa", und führen Sie Folgendes:
+    Stellen Sie mithilfe des sa-Kontos eine Verbindung mit der Masterdatenbank von SQL Server her, und führen Sie Folgendes aus:
 
     ```sql
     USE [master]
@@ -58,18 +58,18 @@ Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren.
     CREATE LOGIN [<loginName>] with PASSWORD= N'<loginPassword>'
     GRANT VIEW SERVER STATE TO <loginName>
     ```
-5. Klicken Sie auf dem primären Knoten beenden, und Deaktivieren von SQL Server.
-6. Befolgen Sie die Anweisungen [in der SUSE-Dokumentation](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) konfigurieren und Aktualisieren der Hosts-Datei für jeden Clusterknoten. Die Datei "Hosts" muss es sich um den IP-Adresse und den Namen der einzelnen Clusterknoten enthalten.
+5. Beenden und deaktivieren Sie SQL Server auf dem primären Knoten.
+6. Befolgen Sie die Anweisungen [in der SUSE-Dokumentation](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html), um die hosts-Datei für die einzelnen Clusterknoten zu konfigurieren und zu aktualisieren. Die hosts-Datei muss die IP-Adresse und den Namen jedes Clusterknotens enthalten.
 
-    So überprüfen Sie die IP-Adresse des aktuellen Knotens ausführen
+    So überprüfen Sie die IP-Adresse des aktuellen Knotens:
 
     ```bash
     sudo ip addr show
     ```
 
-    Legen Sie den Namen des Computers, auf den einzelnen Knoten. Weisen Sie jedem Knoten einen eindeutigen Namen, die 15 Zeichen lang ist oder weniger. Den Namen des Computers festlegen, indem Sie es `/etc/hostname` mit [Yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) oder [manuell](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html).
+    Legen Sie den Computernamen auf jedem Knoten fest. Geben Sie jedem Knoten einen eindeutigen Namen, der höchstens 15 Zeichen lang ist. Legen Sie den Computernamen fest, indem Sie ihn `/etc/hostname` mithilfe von [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) oder [manuell](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html) hinzufügen.
 
-    Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für zwei Knoten, die mit dem Namen `SLES1` und `SLES2`.
+    Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für zwei Knoten mit den Namen `SLES1` und `SLES2`.
 
     ```
     127.0.0.1   localhost
@@ -78,36 +78,36 @@ Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren.
     ```
 
     > [!NOTE]
-    > Alle Clusterknoten müssen über SSH, aufeinander zugreifen können. Tools wie „hb_report“ oder „crm_report“ (zur Problembehandlung) und Hawk's History Explorer erfordern kennwortlosen SSH-Zugriff zwischen den Knoten, andernfalls können sie nur Daten vom aktuellen Knoten sammeln. Für den Fall, dass Sie einen nicht standardmäßigen SSH-Port verwenden, verwenden Sie die Option-X ([Siehe Hauptseite](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). Wenn Ihr SSH-Port 3479 ist, rufen Sie z. B. ein "crm_report" mit:
+    > Alle Clusterknoten müssen in der Lage sein, über SSH aufeinander zuzugreifen. Tools wie „hb_report“ oder „crm_report“ (zur Problembehandlung) und Hawk's History Explorer erfordern kennwortlosen SSH-Zugriff zwischen den Knoten, andernfalls können sie nur Daten vom aktuellen Knoten sammeln. Falls Sie keinen nicht-standardmäßigen SSH-Port verwenden, nutzen Sie die Option „-X“ ([siehe Hauptseite](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html)). Wenn Ihr SSH-Port z.B. 3479 ist, rufen Sie crm_report mit Folgendem auf:
     >
     >```bash
     >crm_report -X "-p 3479" [...]
     >```
-    >Weitere Informationen finden Sie unter [Administratorhandbuch]. (https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
+    >Weitere Informationen finden Sie im [Administratorhandbuch].(https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
 
-Im nächsten Abschnitt Konfigurieren freigegebenen Speicher und die Datenbankdateien auf den Speicher zu verschieben.  
+Im nächsten Abschnitt konfigurieren Sie den freigegebenen Speicher und verschieben Ihre Datenbankdateien in diesen Speicher.  
 
-## <a name="configure-shared-storage-and-move-database-files"></a>Konfigurieren von freigegebenem Speicher, und Verschieben von Datenbankdateien
+## <a name="configure-shared-storage-and-move-database-files"></a>Konfigurieren von freigegebenem Speicher und Verschieben von Datenbankdateien
 
-Es gibt eine Vielzahl von Lösungen zum Bereitstellen von freigegebenen Speichers. In dieser exemplarischen Vorgehensweise veranschaulicht das Konfigurieren von freigegebenen Speichers mit NFS. Es wird empfohlen, bewährte Methoden befolgen und verwenden Kerberos, um NFS zu schützen: 
+Es gibt eine Reihe von Lösungen für die Bereitstellung von freigegebenem Speicher. Diese exemplarische Vorgehensweise veranschaulicht das Konfigurieren von freigegebenem Speicher mit NFS. Sie sollten auf die bewährten Methoden zurückzugreifen und Kerberos zum Sichern von NFS verwenden: 
 
-- [Freigeben von Dateisystemen für NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs)
+- [Sharing File Systems with NFS](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.nfs) (Freigeben von Dateisystemen mit NFS)
 
-Wenn Sie nicht diese Anleitung befolgen, werden jeder, der Zugriff auf Ihr Netzwerk und die IP-Adresse eines SQL-Knotens zu spoofen kann auf die Datendateien zugreifen. Wie immer, stellen Sie sicher, dass Sie Bedrohungsmodells für Ihr System vor der Verwendung in der Produktion. 
+Wenn Sie diese Anleitung nicht befolgen, kann jeder Benutzer, der auf Ihr Netzwerk zugreifen und die IP-Adresse eines SQL-Knotens spoofen kann, auf Ihre Datendateien zugreifen. Stellen Sie wie immer sicher, dass Sie ein Gefahrenmodell für Ihr System erstellen, bevor Sie es in der Produktion verwenden. 
 
-Eine weitere Option für Storage ist die Verwendung von SMB-Dateifreigabe:
+Eine andere Speicheroption ist die Verwendung der SMB-Dateifreigabe:
 
 - [Samba-Abschnitt der SUSE-Dokumentation](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#cha.samba)
 
-### <a name="configure-an-nfs-server"></a>Konfigurieren Sie einen NFS-server
+### <a name="configure-an-nfs-server"></a>Konfigurieren eines NFS-Servers
 
-Um einen NFS-Server zu konfigurieren, finden Sie in die folgenden Schritte aus, in der SUSE-Dokumentation: [Konfigurieren von NFS-Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server).
+Informationen zum Konfigurieren eines NFS-Servers finden Sie in den folgenden Schritten in der SUSE-Dokumentation: [Configuring NFS Server](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-server) (Konfigurieren des NFS-Servers).
 
-### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Konfigurieren Sie alle Knoten des Clusters für die Verbindung mit dem freigegebenen NFS-Speicher
+### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Konfigurieren aller Clusterknoten für die Verbindung mit dem freigegebenen NFS-Speicher
 
-Vor dem Konfigurieren des Clients NFS zum Einbinden der Pfad des SQL Server-Datenbank-Dateien auf freigegebenen Speicherort zu verweisen, sicher, dass Sie die Datenbankdateien an einem temporären Speicherort können sie später kopieren Sie die Freigabe speichern:
+Bevor Sie das Client-NFS zum Einbinden des SQL Server-Datenbankdateien-Pfads zum Verweisen auf den freigegebenen Speicherort konfigurieren, stellen Sie sicher, dass Sie die Datenbankdateien an einem temporären Speicherort speichern, um Sie später auf die Freigabe kopieren zu können:
 
-1. **Auf dem primären Knoten nur**, speichern Sie die Datenbankdateien an einem temporären Speicherort. Das folgende Skript erstellt ein neues temporäres Verzeichnis, die die Datenbankdateien in das neue Verzeichnis kopiert und entfernt die alten Datenbankdateien. Wie SQL Server als lokaler Benutzer Mssql ausgeführt wird, müssen Sie sicherstellen, dass nach dem Übertragen von Daten in der eingebundenen Freigabe, lokaler Benutzer Lese-/ Schreibzugriff auf die Freigabe verfügt. 
+1. Speichern Sie die Datenbankdateien **nur auf dem primären Knoten** an einem temporären Speicherort. Das folgende Skript erstellt ein neues temporäres Verzeichnis, kopiert die Datenbankdateien in das neue Verzeichnis und entfernt die alten Datenbankdateien. Da SQL Server als lokaler Benutzer „mssql“ ausgeführt wird, müssen Sie sicherstellen, dass der lokale Benutzer nach der Datenübertragung zur eingebundenen Freigabe Lese- und Schreibzugriff auf die Freigabe hat. 
 
     ```bash
     su mssql
@@ -117,14 +117,14 @@ Vor dem Konfigurieren des Clients NFS zum Einbinden der Pfad des SQL Server-Date
     exit
     ```
 
-    Konfigurieren Sie die NFS-Client auf allen Clusterknoten aus:
+    Konfigurieren Sie den NFS-Client auf allen Clusterknoten:
 
-    - [Konfigurieren von Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients)
+    - [Configuring Clients](https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#sec.nfs.configuring-nfs-clients) (Konfigurieren von Clients)
 
     > [!NOTE]
-    > Es wird empfohlen, befolgen Sie SUSEs-best Practices und Empfehlungen in Bezug auf hoch verfügbaren NFS-Speicher: [Hochverfügbarer NFS-Speicher mit DRBD und Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html).
+    > Sie sollten die bewährten Methoden und Empfehlungen von SUSE in Bezug auf den hoch verfügbaren NFS-Speicher befolgen: [Highly Available NFS Storage with DRBD and Pacemaker](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html) (Hoch verfügbarer NFS-Speicher mit DRBD und Pacemaker).
 
-2. Überprüfen Sie, dass SQL Server erfolgreich mit dem neuen Dateipfad gestartet wird. Hierzu auf jedem Knoten. An diesem Punkt sollte nur ein Knoten, über SQL Server zu einem Zeitpunkt ausführen. Sie können nicht beide gleichzeitig ausgeführt, da sie beide versuchen werden, auf die Datendateien gleichzeitig (um zu vermeiden, versehentlich Starten von SQL Server auf beiden Knoten eine Dateisystem-Clusterressource verwenden, um sicherzustellen, dass die Dateifreigabe nicht zweimal von den anderen Knoten bereitgestellt ist). Die folgenden Befehle Starten von SQL Server, den Status überprüfen und beenden Sie SQL Server.
+2. Überprüfen Sie, ob SQL Server mit dem neuen Dateipfad erfolgreich gestartet wurde. Führen Sie dies auf jedem Knoten durch. An diesem Punkt sollte SQL Server immer nur auf einem Knoten ausgeführt werden. Sie können SQL Server nicht auf beiden Knoten gleichzeitig ausführen, da diese ansonsten versuchen würden, gleichzeitig auf die Datendateien zuzugreifen (verwenden Sie zur Vermeidung eines versehentlichen Starts von SQL Server auf beiden Knoten eine File System-Clusterressource, um sicherzustellen, dass die Freigabe nicht zweimal von verschiedenen Knoten eingebunden wird). Die folgenden Befehle starten SQL Server, überprüfen den Status und beenden SQL Server dann.
 
     ```bash
     sudo systemctl start mssql-server
@@ -132,9 +132,9 @@ Vor dem Konfigurieren des Clients NFS zum Einbinden der Pfad des SQL Server-Date
     sudo systemctl stop mssql-server
     ```
 
-An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den Datenbankdateien auf dem freigegebenen Speicher konfiguriert. Der nächste Schritt ist so konfigurieren Sie SQL Server für Pacemaker. 
+An diesem Punkt sind beide Instanzen von SQL Server so konfiguriert, dass sie mit den Datenbankdateien im freigegebenen Speicher ausgeführt werden. Der nächste Schritt besteht darin, SQL Server für Pacemaker zu konfigurieren. 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren Sie und konfigurieren Sie auf jedem Clusterknoten die Pacemaker
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
 
 1. **Erstellen Sie auf beiden Clusterknoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung**. Der folgende Code erstellt und füllt diese Tabelle:
 
@@ -151,11 +151,11 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
     crm_report -X "-p 3479" [...]
     ```
 
-    Weitere Informationen finden Sie unter [Systemanforderungen und Empfehlungen in der SUSE-Dokumentation ](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html).
+    Weitere Informationen finden Sie unter [System Requirements and Recommendations in the SUSE documentation (Systemanforderungen und Empfehlungen in der SUSE-Dokumentation)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_requirements_other.html).
 
 3. **Installieren Sie die Erweiterung für hohe Verfügbarkeit**. Um die Erweiterung zu installieren, befolgen Sie die Schritte im folgenden SUSE-Thema:
     
-    [Installation und Setup – Schnellstart](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)
+    [Installation and Setup Quick Start (Installation und Setup – Schnellstart)](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html)
 
 4. **Installieren Sie den FCI-Ressourcenagent für SQL Server**. Führen Sie die folgenden Befehle auf beiden Knoten aus:
 
@@ -191,14 +191,14 @@ An diesem Punkt sind beide Instanzen von SQL Server für die Ausführung mit den
 
 7.  **Vorgehensweisen zum Entfernen**. Wenn Sie einen Knoten aus dem Cluster entfernen möchten, verwenden Sie das Bootstrap-Skript **ha-cluster-remove**. Weitere Informationen finden Sie unter [Overview of the Bootstrap Scripts (Übersicht über die Bootstrap-Skripts)](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap).  
 
-## <a name="configure-the-cluster-resources-for-sql-server"></a>Konfigurieren Sie die Clusterressourcen für SQL Server
+## <a name="configure-the-cluster-resources-for-sql-server"></a>Konfigurieren der Clusterressourcen für SQL Server
 
-Die folgenden Schritte erläutern die Clusterressource für SQL Server zu konfigurieren. Es gibt zwei Einstellungen, die Sie anpassen müssen.
+In den folgenden Schritten wird erläutert, wie Sie die Clusterressource für SQL Server konfigurieren. Es gibt zwei Einstellungen, die Sie anpassen müssen.
 
-- **SQL Server-Ressourcenname**: Ein Name für die SQL Server-Clusterressource. 
-- **Timeoutwert**: Der Timeoutwert ist die Zeitspanne, die der Cluster wartet, während eine Ressource online geschaltet wird. Für SQL Server, ist dies die Zeit, die Sie erwarten, dass SQL Server ausführen, um bringen die `master` Datenbank online. 
+- **SQL Server-Ressourcenname**: Ein Name für die gruppierte SQL Server-Ressource. 
+- **Timeoutwert**: Der Timeoutwert ist die Zeitspanne, die der Cluster wartet, während eine Ressource online geschaltet wird. In SQL Server ist dies die Zeit, die SQL Server Ihrer Erwartung zufolge benötigt, um die `master`-Datenbank online zu schalten. 
 
-Aktualisieren Sie die Werte aus dem folgenden Skript für Ihre Umgebung. Führen Sie auf einem Knoten zum Konfigurieren und starten den Clusterdienst.
+Aktualisieren Sie die Werte des folgenden Skripts für Ihre Umgebung. Führen Sie auf einem Knoten aus, um den gruppierten Dienst zu konfigurieren und zu starten.
 
 ```bash
 sudo crm configure
@@ -209,7 +209,7 @@ commit
 exit
 ```
 
-Das folgende Skript erstellt z. B. eine gruppierten SQL Server-Ressource, die mit dem Namen Mssqlha. 
+Das folgende Skript erstellt beispielsweise eine gruppierte SQL Server-Ressource mit dem Namen „mssqlha“. 
 
 ```bash
 sudo crm configure
@@ -220,19 +220,19 @@ commit
 exit
 ```
 
-Nachdem die Konfiguration ein Commit ausgeführt wurde, wird SQL Server auf demselben Knoten wie die virtuelle IP-Adressressource gestartet. 
+Nachdem ein Commit für die Konfiguration ausgeführt wurde, wird SQL Server auf demselben Knoten gestartet wie die virtuelle IP-Ressource. 
 
-Weitere Informationen finden Sie unter [konfigurieren und Verwalten von Clusterressourcen (Befehlszeile)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config). 
+Weitere Informationen finden Sie unter [Configuring and Managing Cluster Resources (Command Line)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config) (Konfigurieren und Verwalten von Clusterressourcen (Befehlszeile)). 
 
-### <a name="verify-that-sql-server-is-started"></a>Stellen Sie sicher, dass SQL Server gestartet wurde. 
+### <a name="verify-that-sql-server-is-started"></a>Überprüfen Sie, ob SQL Server gestartet wird. 
 
-Um sicherzustellen, dass SQL Server gestartet wird, führen Sie die **Crm Status** Befehl:
+Führen Sie den Befehl **crm status** aus, um zu überprüfen, ob SQL Server gestartet wurde:
 
 ```bash
 crm status
 ```
 
-In den folgenden Beispielen werden die Ergebnisse auf, wenn Pacemaker als geclusterte Ressource wurde erfolgreich gestartet wurde. 
+Die folgenden Beispiele zeigen die Ergebnisse, wenn Pacemaker erfolgreich als gruppierte Ressource gestartet wurde. 
 ```
 2 nodes configured
 2 resources configured
@@ -247,19 +247,19 @@ Full list of resources:
 
 ## <a name="managing-cluster-resources"></a>Verwalten von Clusterressourcen
 
-Um Ihre Clusterressourcen zu verwalten, finden Sie in der folgende SUSE-Thema: [Verwalten von Clusterressourcen](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
+Informationen zum Verwalten von Clusterressourcen finden Sie im folgenden SUSE-Thema: [Managing Cluster Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm ) (Verwalten von Clusterressourcen)
 
 ### <a name="manual-failover"></a>Manuelles Failover
 
-Obwohl Ressourcen konfiguriert werden, um automatisch ein Failover (oder migrieren), auf andere Knoten des Clusters bei einem Ausfall von Hardware oder Software, können Sie auch manuell eine Ressource auf einen anderen Knoten im Cluster mithilfe der Pacemaker-GUI oder der Befehlszeile verschieben . 
+Obwohl Ressourcen so konfiguriert sind, dass bei einem Hardware- oder Softwarefehler automatisch ein Failover (oder eine Migration) zu anderen Knoten des Clusters ausgeführt wird, können Sie eine Ressource auch über die Pacemaker-GUI oder die Befehlszeile manuell auf einen anderen Knoten im Cluster verschieben. 
 
-Verwenden Sie den Migrationsbefehl für diese Aufgabe. Beispielsweise zum Migrieren der SQL-Ressource auf einem Cluster Knotennamen SLES2 ausführen: 
+Verwenden Sie für diese Aufgabe den Migrationsbefehl. Um z.B. die SQL-Ressource zu einem Clusterknoten mit dem Namen SLES2 zu migrieren, führen Sie Folgendes aus: 
 
 ```bash
 crm resource
 migrate mssqlha SLES2
 ```
 
-## <a name="additional-resources"></a>Zusätzliche Ressourcen
+## <a name="additional-resources"></a>Weitere Ressourcen
 
-[Erweiterung für SUSE Linux Enterprise hohe Verfügbarkeit – Administratorhandbuch](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) 
+[SUSE Linux Enterprise High Availability Extension – Administration Guide](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html) (SUSE Linux Enterprise High Availability Extension – Administratorhandbuch). 

@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von SQL Server-Replikation unter Linux
-description: Dieses Tutorial veranschaulicht das Konfigurieren von SQL Server-Snapshotreplikation unter Linux.
+description: In diesem Tutorial wird gezeigt, wie Sie die Replikation von SQL Server-Momentaufnahmen unter Linux konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68130107"
 ---
 # <a name="configure-replication-with-t-sql"></a>Konfigurieren der Replikation mit T-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-In diesem Tutorial konfigurieren Sie SQL Server-Snapshotreplikation unter Linux mit zwei Instanzen von SQL Server mithilfe von Transact-SQL. Dem Verleger und Verteiler dieselbe Instanz sein werden, und der Abonnenten werden auf einer separaten Instanz.
+In diesem Tutorial konfigurieren Sie die Replikation von SQL Server-Momentaufnahmen unter Linux mit zwei Instanzen von SQL Server mithilfe von Transact-SQL. Der Herausgeber und der Verteiler sind dieselbe Instanz, und der Abonnent befindet sich auf einer separaten Instanz.
 
 > [!div class="checklist"]
-> * Aktivieren von SQL Server-Replikations-Agents für Linux
+> * Aktivieren von SQL Server-Replikations-Agents unter Linux
 > * Erstellen einer Beispieldatenbank
-> * Der momentaufnahmeordner für SQL Server-Agents-Zugriff konfigurieren
+> * Konfigurieren des Momentaufnahmeordners für den Zugriff durch SQL Server-Agents
 > * Konfigurieren des Verteilers
-> * Konfigurieren des Verlegers
-> * Konfigurieren von Veröffentlichung und Artikeln
-> * Konfigurieren von Abonnenten 
-> * Führen Sie die Replikationsaufträge
+> * Konfigurieren des Herausgebers
+> * Konfigurieren von Veröffentlichungen und Artikeln
+> * Konfigurieren des Abonnenten 
+> * Ausführen der Replikationsaufträge
 
-Alle Konfigurationen können konfiguriert werden, mit [gespeicherte Replikationsprozeduren](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+Alle Replikationskonfigurationen können mit [gespeicherten Replikationsprozeduren](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md) konfiguriert werden.
 
-## <a name="prerequisites"></a>Vorraussetzungen  
-Um dieses Tutorial abzuschließen, benötigen Sie:
+## <a name="prerequisites"></a>Voraussetzungen  
+Zum Durcharbeiten dieses Tutorials benötigen Sie Folgendes:
 
-- Zwei Instanzen von SQL Server mit der neuesten Version von SQL Server unter Linux
-- Ein Tool zum Problem T-SQL-Abfragen zum Einrichten der Replikation, z. B. SQLCMD oder SSMS
+- Zwei Instanzen von SQL Server mit der aktuellen Version von SQL Server für Linux
+- Ein Tool zum Ausgeben von T-SQL-Abfragen zum Einrichten der Replikation, z.B. SQLCMD oder SSMS
 
-  Finden Sie unter [Verwenden von SSMS zum Verwalten von SQLServer unter Linux](./sql-server-linux-manage-ssms.md).
+  Siehe [Verwenden von SSMS zum Verwalten von SQL Server für Linux](./sql-server-linux-manage-ssms.md).
 
 ## <a name="detailed-steps"></a>Die Schritte im Detail
 
-1. Aktivieren Sie SQL Server-Replikations-Agents für Linux aktivieren Sie SQL Server-Agents Replikations-Agents verwenden. Führen Sie auf beiden Hostcomputern die folgenden Befehle im Terminal ein. 
+1. Aktivieren Sie SQL Server-Replikation-Agents unter Linux. Aktivieren Sie den SQL Server-Agent zur Verwendung von Replikations-Agents. Führen Sie auf beiden Hostcomputern die folgenden Befehle im Terminal aus. 
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
   ```
 
-1. Erstellen Sie die Beispieldatenbank und eine Tabelle auf Ihre Herausgeber Erstellen einer Beispieldatenbank und eine Tabelle, die als die Artikel für eine Veröffentlichung fungiert.
+1. Erstellen Sie eine Beispieldatenbank und -tabelle auf dem Herausgeber. Erstellen Sie eine Beispieldatenbank und -tabelle, die als Artikel für eine Veröffentlichung fungieren.
 
   ```sql
   CREATE DATABASE Sales
@@ -63,14 +63,14 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   INSERT INTO CUSTOMER (CustomerID, SalesAmount) VALUES (1,100),(2,200),(3,300)
   ```
 
-  Erstellen Sie auf der anderen SQL Server-Instanz, dem Abonnenten, die Datenbank, um den Artikeln zu erhalten.
+  Erstellen Sie auf der anderen SQL Server-Instanz, dem Abonnenten, die Datenbank, um die Artikel zu empfangen.
 
   ```sql
   CREATE DATABASE Sales
   GO
   ```
 
-1. Erstellen Sie der momentaufnahmeordner für SQL Server-Agents zum Lesen und schreiben, auf dem Verteiler, erstellen den momentaufnahmeordner und gewähren von Zugriff für "Mssql" Benutzer 
+1. Erstellen Sie einen Momentaufnahmeordner für SQL Server-Agents zum Lesen/Schreiben. Erstellen Sie auf dem Verteiler den Momentaufnahmeordner, und gewähren Sie dem Benutzer „mssql“ Zugriff. 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -78,7 +78,7 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-1. Konfigurieren des Verteilers In diesem Beispiel, der Verleger werden sich auch auf dem Verteiler. Führen Sie die folgenden Befehle auf dem Verleger die Instanz für die Verteilung sowie konfigurieren.
+1. Konfigurieren Sie den Verteiler in diesem Beispiel, der Verleger ist ebenfalls der Verteiler. Führen Sie die folgenden Befehle auf dem Verleger aus, um die Instanz ebenfalls für die Verteilung zu konfigurieren.
 
   ```sql
   DECLARE @distributor AS sysname
@@ -111,7 +111,7 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   GO
   ```
 
-1. Konfigurieren Sie Verleger, führen die folgenden TSQL-Befehle auf dem Verleger.
+1. Konfigurieren Sie den Herausgeber. Führen Sie die folgenden TSQL-Befehle auf dem Herausgeber aus.
 
   ```sql
   DECLARE @publisher AS sysname
@@ -136,7 +136,7 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   GO
   ```
 
-1. Konfigurieren Sie Veröffentlichung Auftragsausführung die folgenden TSQL-Befehle auf dem Verleger.
+1. Konfigurieren Sie den Veröffentlichungsauftrag. Führen Sie die folgenden TSQL-Befehle auf dem Herausgeber aus.
 
   ```sql
   DECLARE @replicationdb AS sysname
@@ -175,7 +175,7 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   @publisher_password = @publisherpassword
   ```
 
-1. Erstellen Sie Artikel aus der Tabelle "sales" führen Sie die folgenden TSQL-Befehle auf dem Verleger.
+1. Erstellen Sie Artikel aus der Verkaufstabelle. Führen Sie die folgenden TSQL-Befehle auf dem Herausgeber aus.
 
   ```sql
   use [Sales]
@@ -195,7 +195,7 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   @vertical_partition = N'false'
   ```
 
-1. Konfigurieren Sie Abonnement führen die folgenden TSQL-Befehle auf dem Verleger an.
+1. Konfigurieren Sie das Abonnement. Führen Sie die folgenden TSQL-Befehle auf dem Herausgeber aus.
 
   ```sql
   DECLARE @subscriber AS sysname
@@ -238,15 +238,15 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   GO
   ```
 
-1. Ausführen von Replikations-Agent-Aufträge
+1. Führen Sie die Replikations-Agent-Aufträge aus.
 
-  Führen Sie die folgende Abfrage zum Abrufen einer Liste von Aufträgen:
+  Führen Sie die folgende Abfrage aus, um eine Liste der Aufträge zu erhalten:
 
   ```sql
   SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
   ```
 
-  Führen Sie den momentaufnahmeauftrag Replikation, um die Momentaufnahme zu generieren:
+  Führen Sie den Momentaufnahme- Replikationsauftrag zum Generieren der Momentaufnahme aus:
 
   ```sql
   USE msdb;  
@@ -255,7 +255,7 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   GO
   ```
 
-  Führen Sie den momentaufnahmeauftrag Replikation, um die Momentaufnahme zu generieren:
+  Führen Sie den Momentaufnahme- Replikationsauftrag zum Generieren der Momentaufnahme aus:
 
   ```sql
   USE msdb;  
@@ -264,32 +264,32 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
   GO
   ```
 
-1. Abonnenten herstellen und Abfragen von replizierten Daten 
+1. Stellen Sie eine Verbindung mit dem Abonnenten her, und fragen Sie replizierte Daten ab. 
 
-  Überprüfen Sie auf dem Abonnenten die die Replikation funktioniert, indem Sie die folgende Abfrage ausführen:
+  Überprüfen Sie auf dem Abonnenten, ob die Replikation funktioniert, indem Sie die folgende Abfrage ausführen:
 
   ```sql
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-In diesem Tutorial haben Sie den SQL Server-Snapshotreplikation unter Linux mit zwei Instanzen von SQL Server mithilfe von Transact-SQL konfiguriert.
+In diesem Tutorial konfigurierten Sie die Replikation von SQL Server-Momentaufnahmen unter Linux mit zwei Instanzen von SQL Server mithilfe von Transact-SQL.
 
 > [!div class="checklist"]
-> * Aktivieren von SQL Server-Replikations-Agents für Linux
+> * Aktivieren von SQL Server-Replikations-Agents unter Linux
 > * Erstellen einer Beispieldatenbank
-> * Der momentaufnahmeordner für SQL Server-Agents-Zugriff konfigurieren
+> * Konfigurieren des Momentaufnahmeordners für den Zugriff durch SQL Server-Agents
 > * Konfigurieren des Verteilers
-> * Konfigurieren des Verlegers
-> * Konfigurieren von Veröffentlichung und Artikeln
-> * Konfigurieren von Abonnenten 
-> * Führen Sie die Replikationsaufträge
+> * Konfigurieren des Herausgebers
+> * Konfigurieren von Veröffentlichungen und Artikeln
+> * Konfigurieren des Abonnenten 
+> * Ausführen der Replikationsaufträge
 
 ## <a name="see-also"></a>Siehe auch
 
-Ausführliche Informationen zur Replikation finden Sie unter [Dokumentation zu SQL Server-Replikation](../relational-databases/replication/sql-server-replication.md).
+Ausführliche Informationen über Replikation finden Sie unter [SQL Server-Replikation](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Konzepte: SQL Server-Replikation unter Linux](sql-server-linux-replication.md)
 
-[Gespeicherte Replikationsprozeduren](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Gespeicherte Prozeduren für die Replikation](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).

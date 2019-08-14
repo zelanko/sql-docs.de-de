@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495411"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941136"
 ---
 # <a name="extended-events-overview"></a>Übersicht über erweiterte Ereignisse
 
@@ -52,7 +52,7 @@ Weitere Informationen zu „Erweiterte Ereignisse“ finden Sie unter [Schnellst
   
 ## <a name="extended-events-architecture"></a>Architektur von erweiterten Ereignissen  
 
-„Erweiterte Ereignisse“ ist unser Name für ein allgemeines Ereignisbehandlungssystem für Serversysteme. Die „Erweiterte Ereignisse“-Infrastruktur unterstützt die Korrelation von Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie unter bestimmten Umständen die Korrelation von Daten vom Betriebssystem und von Datenbankanwendungen. Für Daten vom Betriebssystem muss die Ausgabe von „Erweiterte Ereignisse“ an Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) weitergeleitet werden. ETW kann die Ereignisdaten mit Betriebssystem- oder Anwendungsereignisdaten korrelieren.  
+„Erweiterte Ereignisse“ ist unser Name für ein allgemeines Ereignisbehandlungssystem für Serversysteme. Die Infrastruktur für erweiterte Ereignisse unterstützt die Korrelation von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sowie unter bestimmten Umständen die Korrelation von Daten aus dem Betriebssystem und aus Datenbankanwendungen. Für Daten vom Betriebssystem muss die Ausgabe von „Erweiterte Ereignisse“ an Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) weitergeleitet werden. ETW kann die Ereignisdaten mit Betriebssystem- oder Anwendungsereignisdaten korrelieren.  
 
 Alle Anwendungen weisen Ausführungspunkte auf, die sowohl innerhalb der Anwendung als auch außerhalb nützlich sind. In der Anwendung kann die asynchrone Verarbeitung in die Warteschlange eingereiht werden, wobei Informationen zugrunde gelegt werden, die bei der ersten Ausführung eines Tasks gesammelt wurden. Außerhalb der Anwendung stellen Ausführungspunkte Überwachungshilfsprogrammen Informationen bereit. In den Informationen sind die Verhaltens- und Leistungsmerkmale der überwachten Anwendung beschrieben.  
 

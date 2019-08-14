@@ -1,7 +1,7 @@
 ---
 title: Installieren von SQL Server-Befehlszeilentools unter Linux
 titleSuffix: SQL Server
-description: Dieser Artikel beschreibt, wie Sie die SQL Server-Tools unter Linux zu installieren.
+description: In diesem Artikel wird beschrieben, wie die SQL Server-Tools unter Linux installiert werden.
 author: VanMSFT
 ms.author: vanto
 ms.date: 06/07/2019
@@ -11,22 +11,22 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68085722"
 ---
-# <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren von Sqlcmd und Bcp die SQL Server-Befehlszeilenprogramme unter Linux
+# <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren der SQL Server-Befehlszeilentools sqlcmd und bcp unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Die folgenden Schritte installieren Sie die Befehlszeilentools, Microsoft ODBC-Treiber und deren Abhängigkeiten. Die **Mssql-Tools** Paket enthält:
+Über die folgenden Schritte werden die Befehlszeilentools, die Microsoft ODBC-Treiber und deren Abhängigkeiten installiert. Das Paket **mssql-tools** enthält Folgendes:
 
-- **sqlcmd**: Befehlszeilen-Abfrage-Hilfsprogramm.
-- **BCP**: BULK Import / Export-Dienstprogramm.
+- **sqlcmd**: Abfragehilfsprogramm für die Befehlszeile
+- **bcp**: Hilfsprogramm für den Massenimport/-export
 
-Installieren der Tools für Ihre Plattform:
+Installieren Sie die Tools für Ihre Plattform:
 
 - [Red Hat Enterprise Linux](#RHEL)
 - [Ubuntu](#ubuntu)
@@ -34,81 +34,81 @@ Installieren der Tools für Ihre Plattform:
 - [macOS](#macos)
 - [Docker](#docker)
 
-In diesem Artikel wird beschrieben, wie die Befehlszeilentools installiert wird. Wenn Sie Beispiele zum Verwenden von Suchen **Sqlcmd** oder **Bcp**, finden Sie unter den [Links](#next-steps) am Ende dieses Themas.
+In diesem Artikel wird beschrieben, wie die Befehlszeilentools installiert werden. Beispiele zur Verwendung von **sqlcmd** oder **bcp** finden Sie unter den [Links](#next-steps) am Ende dieses Artikels.
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installieren Sie auf dem virtuellen RHEL 7-tools
+## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installieren von Tools unter RHEL 7
 
-Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools** unter Red Hat Enterprise Linux. 
+Führen Sie zum Installieren von **mssql-tools** unter Red Hat Enterprise Linux die folgenden Schritte aus. 
 
-1. Geben Sie ein Superuser-Modus.
+1. Wechseln Sie in den Superuser-Modus.
 
    ```bash
    sudo su
    ```
 
-1. Laden Sie die Konfigurationsdatei des Microsoft Red Hat-Repository herunter.
+1. Laden Sie die Konfigurationsdatei für das Microsoft Red Hat-Repository herunter.
 
    ```bash
    curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
-1. Exit-Superuser-Modus.
+1. Beenden Sie den Superuser-Modus.
 
    ```bash
    exit
    ```
 
-1. Wenn Sie eine frühere Version von hatten **Mssql-Tools** installiert haben, entfernen Sie alle älteren UnixODBC-Pakete.
+1. Wenn Sie eine frühere Version von **mssql-tools** installiert hatten, entfernen Sie alle älteren unixODBC-Pakete.
 
    ```bash
    sudo yum remove mssql-tools unixODBC-utf16-devel
    ```
 
-1. Führen Sie die folgenden Befehle zum Installieren **Mssql-Tools** mit dem UnixODBC-Developer-Paket.
+1. Führen Sie die folgenden Befehle aus, um **mssql-tools** mit dem unixODBC-Entwicklerpaket zu installieren.
 
    ```bash
    sudo yum install mssql-tools unixODBC-devel
    ```
 
    > [!Note] 
-   > Aktualisieren Sie auf die neueste Version der **Mssql-Tools** führen Sie die folgenden Befehle:
+   > Führen Sie die folgenden Befehle aus, um auf die neueste Version von **mssql-tools** zu aktualisieren:
    >    ```bash
    >   sudo yum check-update
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
+1. **Optional**: Fügen Sie `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen in einer Bash-Shell hinzu.
 
-   Zu **Sqlcmd/Bcp** zugegriffen werden kann, in der Bash-Shell für und-anmeldesitzungen, ändern Ihre **Pfad** in die **~/.bash_profile** -Datei mit den folgenden Befehl aus:
+   Ändern Sie **PATH** in der Datei **~/.bash_profile** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für Anmeldesitzungen zugänglich zu machen:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Vornehmen **Sqlcmd/Bcp-** zugegriffen werden kann, in der Bash-Shell für interaktive/Sitzungen ohne Anmeldung, ändern Sie die **Pfad** in die **~/.bashrc** -Datei mit den folgenden Befehl aus:
+   Ändern Sie **PATH** in der Datei **~/.bashrc** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für interaktive Sitzungen oder Sitzungen ohne Anmeldung zugänglich zu machen:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Installieren von Tools auf Ubuntu 16.04
+## <a id="ubuntu"></a>Installieren von Tools unter Ubuntu 16.04
 
-Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools** unter Ubuntu. 
+Führen Sie zum Installieren von **mssql-tools** unter Ubuntu die folgenden Schritte aus. 
 
-1. Importieren Sie die öffentlichen Repository GPG-Schlüssel.
+1. Importieren Sie die öffentlichen GPG-Schlüssel des Repositorys.
 
    ```bash
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Registrieren Sie das Microsoft-Ubuntu-Repository.
+1. Registrieren Sie das Ubuntu-Repository für Microsoft.
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. Aktualisieren Sie die Liste der Datenquellen, und führen Sie den Installationsbefehl mit dem UnixODBC-Developer-Paket.
+1. Aktualisieren Sie die Liste mit Quellen, und führen Sie den Installationsbefehl mit dem unixODBC-Entwicklerpaket aus.
 
    ```bash
    sudo apt-get update 
@@ -116,60 +116,60 @@ Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools*
    ```
 
    > [!Note] 
-   > Aktualisieren Sie auf die neueste Version der **Mssql-Tools** führen Sie die folgenden Befehle:
+   > Führen Sie die folgenden Befehle aus, um auf die neueste Version von **mssql-tools** zu aktualisieren:
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
+1. **Optional**: Fügen Sie `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen in einer Bash-Shell hinzu.
 
-   Zu **Sqlcmd/Bcp** zugegriffen werden kann, in der Bash-Shell für und-anmeldesitzungen, ändern Ihre **Pfad** in die **~/.bash_profile** -Datei mit den folgenden Befehl aus:
+   Ändern Sie **PATH** in der Datei **~/.bash_profile** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für Anmeldesitzungen zugänglich zu machen:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Vornehmen **Sqlcmd/Bcp-** zugegriffen werden kann, in der Bash-Shell für interaktive/Sitzungen ohne Anmeldung, ändern Sie die **Pfad** in die **~/.bashrc** -Datei mit den folgenden Befehl aus:
+   Ändern Sie **PATH** in der Datei **~/.bashrc** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für interaktive Sitzungen oder Sitzungen ohne Anmeldung zugänglich zu machen:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>Installieren von Tools unter SLES 12
+## <a id="SLES"></a>Installieren von Tools unter SLES 12
 
-Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools** unter SUSE Linux Enterprise Server. 
+Führen Sie zum Installieren von **mssql-tools** unter SUSE Linux Enterprise Server die folgenden Schritte aus. 
 
-1. Die Microsoft SQL Server-Repository Zypper hinzufügen.
+1. Fügen Sie das Microsoft SQL Server-Repository zu Zypper hinzu.
 
    ```bash
    sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo 
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Installieren Sie **Mssql-Tools** mit dem UnixODBC-Developer-Paket.
+1. Installieren Sie **mssql-tools** mit dem unixODBC-Entwicklerpaket.
 
    ```bash
    sudo zypper install mssql-tools unixODBC-devel
    ```
 
    > [!Note] 
-   > Aktualisieren Sie auf die neueste Version der **Mssql-Tools** führen Sie die folgenden Befehle:
+   > Führen Sie die folgenden Befehle aus, um auf die neueste Version von **mssql-tools** zu aktualisieren:
    >    ```bash
    >   sudo zypper refresh
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Optionale**: Hinzufügen `/opt/mssql-tools/bin/` auf Ihre **Pfad** in einer Bash-Shell-Umgebungsvariablen angegeben.
+1. **Optional**: Fügen Sie `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen in einer Bash-Shell hinzu.
 
-   Zu **Sqlcmd/Bcp** zugegriffen werden kann, in der Bash-Shell für und-anmeldesitzungen, ändern Ihre **Pfad** in die **~/.bash_profile** -Datei mit den folgenden Befehl aus:
+   Ändern Sie **PATH** in der Datei **~/.bash_profile** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für Anmeldesitzungen zugänglich zu machen:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   Vornehmen **Sqlcmd/Bcp-** zugegriffen werden kann, in der Bash-Shell für interaktive/Sitzungen ohne Anmeldung, ändern Sie die **Pfad** in die **~/.bashrc** -Datei mit den folgenden Befehl aus:
+   Ändern Sie **PATH** in der Datei **~/.bashrc** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für interaktive Sitzungen oder Sitzungen ohne Anmeldung zugänglich zu machen:
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
@@ -178,13 +178,13 @@ Verwenden Sie die folgenden Schritte aus, um das Installieren der **Mssql-Tools*
 
 ## <a id="macos"></a> Installieren von Tools unter macOS
 
-Eine Vorschau der **Sqlcmd** und **Bcp** ist jetzt unter MacOS verfügbar. Weitere Informationen finden Sie unter den [Ankündigung](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
+Eine Vorschauversion von **sqlcmd** und **bcp** ist nun unter macOS verfügbar. Weitere Informationen finden Sie in der [Ankündigung](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/).
 
-*Installieren Sie [Homebrew](https://brew.sh) , wenn Sie noch nicht vorhanden ist:*
+*Installieren Sie [Homebrew](https://brew.sh), falls Sie es noch nicht installiert haben:*
 
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-Zum Installieren der Tools für Mac El Capitan und Sierra, verwenden Sie die folgenden Befehle aus:
+Verwenden Sie zum Installieren der Tools für Mac El Capitan und Sierra die folgenden Befehle:
 
 ```
 # brew untap microsoft/mssql-preview if you installed the preview version 
@@ -197,57 +197,57 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-Die SQL Server-Befehlszeilentools sind im Docker-Image enthalten. Wenn Sie das Image mit einer interaktiven Eingabeaufforderung anfügen, können Sie die Tools lokal ausführen.
+Die SQL Server-Befehlszeilentools sind im Docker-Image enthalten. Wenn Sie diese mit einer interaktiven Befehlszeile an das Image anfügen, können Sie die Tools lokal ausführen.
 
 ## <a name="offline-installation"></a>Offlineinstallation
 
 [!INCLUDE[SQL Server Linux offline package installation](../includes/sql-server-linux-offline-package-install-intro.md)]
 
-1. Zunächst suchen und kopieren Sie die **Mssql-Tools** -Paket für Ihre Linux-Distribution:
+1. Suchen und kopieren Sie zunächst das Paket **mssql-tools** für Ihre Linux-Verteilung:
 
-   | Linux-distribution | **MSSQL-Tools** Paketspeicherort |
+   | Linux-Verteilung | Speicherort des Pakets **mssql-tools** |
    |---|---|
    | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/mssql-tools) |
 
-1. Außerdem suchen und kopieren Sie die **Msodbcsql** -Paket, das eine Abhängigkeit ist. Die **Msodbcsql** Paket besteht eine Abhängigkeit auf **UnixODBC-entwickl** (Red Hat und SLES) oder **Unixodbc-Dev-** (Ubuntu). Den Speicherort der **Msodbcsql** Pakete werden in der folgenden Tabelle aufgeführt:
+1. Suchen und kopieren Sie auch das Paket **msodbcsql**, bei dem es sich um eine Abhängigkeit handelt. Das Paket **msodbcsql** verfügt ebenfalls über eine Abhängigkeit von **unixODBC-devel** (Red Hat und SLES) oder **unixodbc-dev** (Ubuntu). Die Speicherorte der **msodbcsql**-Pakete sind in der folgenden Tabelle aufgeführt:
 
-   | Linux-distribution | Speicherort der ODBC-Pakete |
+   | Linux-Verteilung | Speicherort von ODBC-Paketen |
    |---|---|
    | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
-1. **Verschieben Sie die heruntergeladenen Pakete auf Ihren Linux-Computer**. Wenn Sie einen anderen Computer verwendet, um die Pakete herunterzuladen, ist eine Möglichkeit, verschieben Sie die Pakete auf Ihren Linux-Computer mit der **scp** Befehl.
+1. **Verschieben Sie die heruntergeladenen Pakete auf Ihren Linux-Computer**. Wenn Sie einen anderen Computer zum Herunterladen der Pakete verwendet haben, stellt der Befehl **scp** eine Möglichkeit dar, die Pakete auf Ihren Linux-Computer zu verschieben.
 
-1. **Installieren der und Pakete**: Installieren Sie die **Mssql-Tools** und **Msodbc** Pakete. Wenn Sie alle abhängigkeitsfehler erhalten, bis der nächste Schritt ignorieren.
+1. **Installieren der Pakete**: Installieren Sie die Pakete **mssql-tools** und **msodbc**. Wenn Abhängigkeitsfehler auftreten, ignorieren Sie diese bis zum nächsten Schritt.
 
-    | Platform | Installieren der Paketbefehle |
+    | Platform | Befehle zur Paketinstallation |
     |-----|-----|
     | Red Hat | `sudo yum localinstall msodbcsql-<version>.rpm`<br/>`sudo yum localinstall mssql-tools-<version>.rpm` |
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **Beheben Sie fehlende Abhängigkeiten**: Möglicherweise müssen Sie Abhängigkeiten an diesem Punkt fehlt. Wenn dies nicht der Fall ist, können Sie diesen Schritt überspringen. In einigen Fällen müssen Sie manuell suchen und diese Abhängigkeiten zu installieren.
+1. **Auflösen fehlender Abhängigkeiten**: An dieser Stelle fehlen möglicherweise Abhängigkeiten. Falls nicht, können Sie diesen Schritt überspringen. In einigen Fällen müssen Sie diese Abhängigkeiten manuell suchen und installieren.
 
-    Für RPM-Pakete können Sie die erforderlichen Abhängigkeiten mit den folgenden Befehlen überprüfen:
+    Bei RPM-Paketen können Sie die erforderlichen Abhängigkeiten mithilfe der folgenden Befehle überprüfen:
 
     ```bash
     rpm -qpR msodbcsql-<version>.rpm
     rpm -qpR mssql-tools-<version>.rpm
     ```
 
-    Für Debian-Pakete, wenn Sie Zugriff auf genehmigte Repositorys, die mit diesen Abhängigkeiten, haben die einfachste Lösung ist die Verwendung der **apt-Get** Befehl:
+    Wenn Sie bei Debian-Paketen Zugriff auf genehmigte Repositorys mit diesen Abhängigkeiten haben, ist die einfachste Lösung die Verwendung des Befehls **apt-get**:
 
     ```bash
     sudo apt-get -f install
     ```
 
     > [!NOTE]
-    > Dieser Befehl schließt die Installation der SQL Server-Pakete auch.
+    > Mit diesem Befehl wird auch die Installation der SQL Server-Pakete abgeschlossen.
 
-    Wenn dies nicht für das Debian-Paket funktioniert, können Sie die erforderlichen Abhängigkeiten mit den folgenden Befehlen überprüfen:
+    Wenn das bei Ihren Debian-Paketen nicht funktioniert, können Sie die erforderlichen Abhängigkeiten mithilfe der folgenden Befehle überprüfen:
 
     ```bash
     dpkg -I msodbcsql_<version>_amd64.deb | grep "Depends:"
@@ -256,11 +256,11 @@ Die SQL Server-Befehlszeilentools sind im Docker-Image enthalten. Wenn Sie das I
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ein Beispiel zur Verwendung für **Sqlcmd** zum Verbinden mit SQL Server, und erstellen Sie eine Datenbank, finden Sie in der folgenden schnellstartanleitungen:
+Ein Beispiel für die Verwendung von **sqlcmd** zum Herstellen einer Verbindung mit SQL Server und zum Erstellen einer Datenbank finden Sie in einem der folgenden Schnellstarts:
 
-- [Installieren Sie unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Installation unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installation unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Führen unter Docker aus](quickstart-install-connect-ubuntu.md)
+- [Ausführung in Docker](quickstart-install-connect-ubuntu.md)
 
-Ein Beispiel zur Verwendung für **Bcp** um per Massenvorgang zu importieren und Exportieren von Daten, finden Sie unter [Massenkopieren von Daten in SQL Server unter Linux](sql-server-linux-migrate-bcp.md).
+Ein Beispiel für die Verwendung von **bcp** für den Massenimport und -export von Daten finden Sie unter [Bulk copy data to SQL Server on Linux (Massenkopieren von Daten auf SQL Server für Linux)](sql-server-linux-migrate-bcp.md).

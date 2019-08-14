@@ -1,5 +1,5 @@
 ---
-title: SQLServer unter Linux mit Active Directory Join
+title: Verknüpfen von SQL Server für Linux mit Active Directory
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027339"
 ---
-# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server auf einem Linux-Host zu einer Active Directory-Domäne beitreten
+# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Verknüpfen eines Hosts für SQL Server für Linux mit einer Active Directory-Domäne
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel enthält allgemeine Hinweise dazu, wie auf einen SQL Server Linux-Host-Computer mit einer Active Directory (AD)-Domäne zu verknüpfen. Es gibt zwei Methoden: Verwenden Sie eine integrierte SSSD-Paket oder dritten Active Directory-Anbieter. Beispiele für Drittanbieter-Domänendienst-Join-Produkte sind [PowerBroker Identität Dienste (PBIS)](https://www.beyondtrust.com/), [eine Identität](https://www.oneidentity.com/products/authentication-services/), und [Centrify](https://www.centrify.com/). Dieses Handbuch enthält die Schritte aus, um Ihre Active Directory-Konfiguration zu überprüfen. Es ist jedoch nicht vorgesehen, Anweisungen dazu, wie Sie einen Computer in eine Domäne einbinden, bei Verwendung der Hilfsprogramme bereitstellen.
+Dieser Artikel enthält allgemeine Anleitungen zum Verknüpfen eines Hostcomputers für SQL Server für Linux mit einer Active Directory-Domäne (AD). Es gibt zwei Möglichkeiten: Sie können entweder ein integriertes SSSD-Paket oder ein Drittanbietertool für Active Directory verwenden. Beispielsweise können Sie die folgenden Drittanbieterprodukte für den Domänenbeitritt verwenden: [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) und [Centrify](https://www.centrify.com/). Außerdem wird in diesem Artikel ausführlich beschrieben, wie Sie Ihre Active Directory-Konfiguration überprüfen können. Wir werden jedoch keine Anweisungen dazu bereitstellen, wie Sie mithilfe von Drittanbietertools einen Computer mit einer Domäne verknüpfen können.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Bevor Sie die Active Directory-Authentifizierung konfigurieren, müssen Sie eine Active Directory-Domänencontroller, Windows, in Ihrem Netzwerk eingerichtet. Anschließend verknüpfen Sie Ihre SQL Server auf Linux-Host zu einer Active Directory-Domäne.
+Bevor Sie die Active Directory-Authentifizierung konfigurieren können, müssen Sie einen Active Directory-Domänencontroller (Windows) für Ihr Netzwerk einrichten. Verknüpfen Sie dann Ihren Host für SQL Server für Linux mit einer Active Directory-Domäne.
 
 > [!IMPORTANT]
-> Die in diesem Artikel beschriebenen Schritte sind nur zur Erklärung zur. Tatsächlichen Schritte können leicht abweichen, in Ihrer Umgebung je nach Ihrer gesamten Umgebung Konfiguration. Nutzen Sie Ihre Administratoren System- und Domänennamen für Ihre Umgebung für bestimmte Konfiguration, Anpassung und alle erforderlichen Problembehandlung zu erreichen.
+> Die in diesem Artikel beschriebenen Beispielschritte dienen nur zur Veranschaulichung. Die tatsächlichen Schritte können sich je nach Konfiguration Ihrer gesamten Umgebung geringfügig unterscheiden. Setzen Sie sich mit den System- und Domänenadministratoren für Ihre Umgebung in Verbindung, um genaue Informationen zur Konfiguration, Anpassung und zur Behandlung von möglicherweise auftretenden Problemen zu erhalten.
 
-## <a name="check-the-connection-to-a-domain-controller"></a>Überprüfen Sie die Verbindung zu einem Domänencontroller
+## <a name="check-the-connection-to-a-domain-controller"></a>Überprüfen der Verbindung mit einem Domänencontroller
 
-Überprüfen Sie, dass Sie den Domänencontroller mit den kurz- und den vollqualifizierten Namen der Domäne herstellen können:
+Überprüfen Sie, ob Sie den Domänencontroller mithilfe des Domänenkurznamens und des vollqualifizierten Domänennamens kontaktieren können:
 
 ```bash
 ping contoso
@@ -39,13 +39,13 @@ ping contoso.com
 ```
 
 > [!TIP]
-> Dieses Tutorial verwendet **"contoso.com"** und **"contoso.com"** als Beispielnamen Domäne und dem Bereich, bzw. Darüber hinaus verwendet er **DC1. "Contoso.com"** wie im Beispiel Domänenname des Domänencontrollers vollqualifizierte. Sie müssen diese Namen durch Ihre eigenen Werte ersetzen.
+> In diesem Tutorial werden die Beispielnamen **contoso.com** (für die Domäne) und **CONTOSO.COM** (für den Bereich) verwendet. Außerdem wird **DC1.CONTOSO.COM** als vollqualifizierter Domänenname des Domänencontrollers verwendet. Diese Namen müssen Sie durch eigene ersetzen.
 
-Wenn entweder der Name Überprüfungen ein Fehler auftritt, aktualisieren Sie die Suchliste für Ihre Domäne. Die folgenden Abschnitte enthalten Anweisungen für Ubuntu, Red Hat Enterprise Linux (RHEL) und SUSE Linux Enterprise Server (SLES).
+Wenn eine dieser Namensprüfungen fehlschlägt, aktualisieren Sie Ihre Domänensuchliste. In den folgenden Abschnitten finden Sie Anweisungen für Ubuntu, Red Hat Enterprise Linux (RHEL) und SuSE Linux Enterprise Server (SLES).
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Bearbeiten der **/etc/network/interfaces** Datei, damit Active Directory-Domäne in der Domänenliste für die Suche ist:
+1. Bearbeiten Sie die Datei **/etc/network/interfaces** so, dass Ihre Active Directory-Domäne in die Domänensuchliste aufgenommen wird:
 
    ```/etc/network/interfaces
    # The primary network interface
@@ -56,15 +56,15 @@ Wenn entweder der Name Überprüfungen ein Fehler auftritt, aktualisieren Sie di
    ```
 
    > [!NOTE]
-   > Die Netzwerkschnittstelle `eth0`, unterscheiden sich für verschiedene Computer. Um herauszufinden, welche Sie verwenden, führen Sie **"ifconfig"** . Kopieren Sie die Schnittstelle, die eine IP-Adresse und die gesendeten und empfangenen Bytes hat.
+   > Die Netzwerkschnittstelle `eth0` kann je nach Computer abweichen. Führen Sie **ifconfig** aus, um herauszufinden, welche Schnittstelle für Ihren Computer verwendet wird. Kopieren Sie dann die Schnittstelle, die eine IP-Adresse aufweist sowie Bytes übertragen und empfangen hat.
 
-1. Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
+1. Nachdem Sie diese Datei bearbeitet haben, sollten Sie den Netzwerkdienst neu starten:
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
    ```
 
-1. Als Nächstes überprüfen Sie, ob Ihre **/etc/resolv.conf** Datei enthält eine Zeile wie im folgenden Beispiel:
+1. Überprüfen Sie als Nächstes, ob die Datei **/etc/resolv.conf** eine Zeile wie die Folgende enthält:
 
    ```/etc/resolv.conf
    search contoso.com com  
@@ -73,7 +73,7 @@ Wenn entweder der Name Überprüfungen ein Fehler auftritt, aktualisieren Sie di
 
 ### <a name="rhel"></a>RHEL
 
-1. Bearbeiten der **/etc/sysconfig/network-scripts/ifcfg-eth0** Datei, damit Active Directory-Domäne in der Suchliste für die Domäne ist. Oder Bearbeiten einer anderen Schnittstelle Config-Datei nach Bedarf:
+1. Bearbeiten Sie die Datei **/etc/sysconfig/network-scripts/ifcfg-eth0** so, dass Ihre Active Directory-Domäne in die Domänensuchliste aufgenommen wird. Stattdessen können Sie auch eine andere Konfigurationsdatei entsprechend bearbeiten:
 
    ```/etc/sysconfig/network-scripts/ifcfg-eth0
    PEERDNS=no
@@ -81,20 +81,20 @@ Wenn entweder der Name Überprüfungen ein Fehler auftritt, aktualisieren Sie di
    DOMAIN="contoso.com com"
    ```
 
-1. Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
+1. Nachdem Sie diese Datei bearbeitet haben, sollten Sie den Netzwerkdienst neu starten:
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. Nun überprüfen Sie, ob Ihre **/etc/resolv.conf** Datei enthält eine Zeile wie im folgenden Beispiel:
+1. Überprüfen Sie als Nächstes, ob die Datei **/etc/resolv.conf** eine Zeile wie die Folgende enthält:
 
    ```/etc/resolv.conf
    search contoso.com com  
    nameserver **<AD domain controller IP address>**
    ```
 
-1. Wenn Sie dennoch den Domänencontroller pingen können, finden Sie den vollqualifizierten Domänennamen und IP-Adresse des Domänencontrollers aus. Eine Beispiel-Domänenname ist **DC1. "Contoso.com"** . Fügen Sie den folgenden Eintrag **/Etc/Hosts**:
+1. Wenn Sie weiterhin nicht den Domänencontroller pingen können, suchen Sie den vollqualifizierten Domänennamen und die IP-Adresse des Domänencontrollers. Der Domänenname kann z. B. **DC1.CONTOSO.COM** lauten. Fügen Sie den folgenden Eintrag zur Datei **/etc/hosts** hinzu:
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -102,43 +102,43 @@ Wenn entweder der Name Überprüfungen ein Fehler auftritt, aktualisieren Sie di
 
 ### <a name="sles"></a>SLES
 
-1. Bearbeiten der **/etc/sysconfig/network/config** Datei, damit die Active Directory Domain Controller-IP-Adresse, für die DNS-Abfragen verwendet wird und Active Directory-Domäne in der Liste der Domäne suchen:
+1. Bearbeiten Sie die Datei **/etc/sysconfig/network/config** so, dass die IP-Adresse des Active Directory-Domänencontrollers für DNS-Abfragen verwendet und Ihre Active Directory-Domäne in die Domänensuchliste aufgenommen wird:
 
    ```/etc/sysconfig/network/config
    NETCONFIG_DNS_STATIC_SEARCHLIST=""
    NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
    ```
 
-1. Starten Sie nach der Bearbeitung dieser Datei den Netzwerkdienst neu:
+1. Nachdem Sie diese Datei bearbeitet haben, sollten Sie den Netzwerkdienst neu starten:
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. Als Nächstes überprüfen Sie, ob Ihre **/etc/resolv.conf** Datei enthält eine Zeile wie im folgenden Beispiel:
+1. Überprüfen Sie als Nächstes, ob die Datei **/etc/resolv.conf** eine Zeile wie die Folgende enthält:
 
    ```/etc/resolv.conf
    search contoso.com com
    nameserver **<AD domain controller IP address>**
    ```
 
-## <a name="join-to-the-ad-domain"></a>Fügen Sie die AD-Domäne
+## <a name="join-to-the-ad-domain"></a>Beitreten zur AD-Domäne
 
-Nachdem die Basiskonfiguration und die Verbindung mit dem Domänencontroller wird überprüft, gibt es zwei Optionen für das Beitreten zu einer SQL Server Linux-Host-Computer mit Active Directory-Domänencontroller:
+Nachdem Sie die Basiskonfiguration und die Konnektivität mit dem Domänencontroller überprüft haben, haben Sie zwei Möglichkeiten, um einen Hostcomputer für SQL Server für Linux mit dem Active Directory-Domänencontroller zu verknüpfen:
 
-- [Option 1: Verwenden Sie eine SSSD-Paket](#option1)
-- [Option 2: Verwenden von Drittanbietern Openldap-Anbieter-Hilfsprogramme](#option2)
+- [Option 1: Verwenden eines SSSD-Pakets](#option1)
+- [Option 2: Verwenden von OpenLDAP-Drittanbietertools](#option2)
 
-### <a id="option1"></a> Option 1: Verwenden Sie SSSD-Paket, um AD-Domäne
+### <a id="option1"></a> Option 1: Verwenden des SSSD-Pakets für den Beitritt zur AD-Domäne
 
-Diese Methode verknüpft, die SQL Server-Host auf ein AD-Domäne mit **Realmd** und **Sssd** Pakete.
+Bei dieser Methode wird der SQL Server-Host mithilfe von **realmd** und **SSSD**-Paketen mit einer AD-Domäne verknüpft.
 
 > [!NOTE]
-> Dies ist die bevorzugte Methode für das Beitreten zu einem Linux-Host mit einem AD-Domänencontroller.
+> Diese Methode wird bevorzugt, um einen Linux-Host mit einem AD-Domänencontroller zu verknüpfen.
 
-Verwenden Sie die folgenden Schritte aus, um eine SQL Server-Host zu einer Active Directory-Domäne zu verknüpfen:
+Führen Sie die folgenden Schritte aus, um einen SQL Server-Host mit einer Active Directory-Domäne zu verknüpfen:
 
-1. Verwendung [Realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) auf den Hostcomputer aus Ihrer AD-Domäne beitreten. Sie müssen zuerst beide installieren die **Realmd** und Kerberos-Client-Pakete auf dem SQL Server-Hostcomputer, die mit Ihrer Linux-Distribution-Paket-Manager:
+1. Verwenden Sie [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join), um den Hostcomputer mit Ihrer AD-Domäne zu verknüpfen. Zuvor müssen Sie mithilfe des Paket-Managers für Ihre Linux-Distribution sowohl das **realmd**- als auch das Kerberos-Clientpaket auf dem SQL Server-Hostcomputer installieren:
 
    **RHEL:**
 
@@ -158,29 +158,29 @@ Verwenden Sie die folgenden Schritte aus, um eine SQL Server-Host zu einer Activ
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
-1. Wenn die Installation des Kerberos-Client-Pakets für den ein Bereichsname aufgefordert werden, geben Sie Ihren Domänennamen in Großbuchstaben.
+1. Wenn Sie bei der Installation des Pakets für den Kerberos-Client aufgefordert werden, einen Bereichsnamen einzugeben, geben Sie Ihren Domänennamen in Großbuchstaben ein.
 
-1. Nachdem Sie bestätigt haben, dass DNS ordnungsgemäß konfiguriert ist, treten Sie der Domäne mithilfe des folgenden Befehls. Sie müssen zur Authentifizierung verwenden ein AD-Konto, das über ausreichende Berechtigungen in AD, um das Hinzufügen eines neuen Computers zur Domäne verfügt. Dieser Befehl erstellt ein neues Computerkonto in AD, die **/etc/krb5.keytab** Keytab-Datei zu hosten, konfiguriert die Domäne in **/etc/sssd/sssd.conf**, und Updates **/etc/krb5.conf**.
+1. Nachdem Sie sich vergewissert haben, dass Ihr DNS ordnungsgemäß konfiguriert wurde, führen Sie den folgenden Befehl aus, um der Domäne beizutreten. Sie müssen sich mit einem AD-Konto authentifizieren, das über ausreichende Berechtigungen in AD verfügt, um einen neuen Computer mit der Domäne verknüpfen zu können. Mithilfe des folgenden Befehls wird ein neues Computerkonto in AD und die KEYTAB-Datei für den Host ( **/etc/krb5.keytab**) erstellt, die Domäne in der Datei **/etc/sssd/sssd.conf** wird konfiguriert, und die Datei **/etc/krb5.conf** wird aktualisiert.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    ```
 
-   Daraufhin sollte die Meldung `Successfully enrolled machine in realm`.
+   Dann sollte die Meldung `Successfully enrolled machine in realm` angezeigt werden.
 
-   Die folgende Tabelle enthält einige Fehlermeldungen, die Sie empfangen konnte und Vorschläge zur Behebung an:
+   In der folgenden Tabelle sind einige Fehlermeldungen,die Sie erhalten könnten, einschließlich möglicher Lösungen aufgeführt:
 
    | Fehlermeldung | Empfehlung |
    |---|---|
-   | `Necessary packages are not installed` | Installieren Sie diese Pakete mit Ihrer Linux-Distribution-Paket-Manager vor dem erneuten Ausführen des Realm Join-Befehls. |
-   | `Insufficient permissions to join the domain` | Überprüfen Sie einen Domänenadministrator, dass Sie über ausreichende Berechtigungen zum Verknüpfen von Linux-Computer mit der Domäne verfügen. |
-   | `KDC reply did not match expectations` | Sie können nicht den richtigen Bereichsnamen für den Benutzer angegeben haben. Bereichsnamen Groß-/Kleinschreibung beachtet werden, in der Regel in Großbuchstaben und mit dem Befehl Bereich identifiziert werden können "contoso.com" zu ermitteln. |
+   | `Necessary packages are not installed` | Installieren Sie diese Pakete mithilfe des Paket-Managers für Ihre Linux-Distribution, bevor Sie den Befehl „realm join“ erneut ausführen. |
+   | `Insufficient permissions to join the domain` | Vergewissern Sie sich bei einem Domänenadministrator, ob Sie über ausreichende Berechtigungen verfügen, um Linux-Computer mit einer Domäne verknüpfen zu können. |
+   | `KDC reply did not match expectations` | Sie haben möglicherweise nicht den richtigen Bereichsnamen für den Benutzer angegeben. Bei Bereichsnamen wird die Groß-/Kleinschreibung beachtet. Normalerweise werden sie in Großbuchstaben geschrieben und können über den Befehl „realm discover contoso.com“ ermittelt werden. |
 
-   SQL Server verwendet SSSD und NSS für die Zuordnung von Benutzerkonten und-Gruppen zu Sicherheits-IDs (SIDs). SSSD muss konfiguriert und für SQL Server zum erfolgreichen Erstellen von AD-Anmeldungen wird ausgeführt. **Realmd** in der Regel wird automatisch als Teil der Domäne beizutreten, aber in einigen Fällen müssen Sie diese separat.
+   SQL Server verwendet SSSD und NSS, um Benutzerkonten und Gruppen Sicherheits-IDs zuzuordnen. SSSD muss konfiguriert sein und ausgeführt werden, damit SQL Server erfolgreich Anmeldeinformationen für AD erstellen kann. **realmd** tut dies in der Regel zwar automatisch beim Domänenbeitritt, aber in einigen Fällen müssen Sie sich selbst darum kümmern.
 
-   Weitere Informationen finden Sie unter Vorgehensweise [Manuelles Konfigurieren des SSSD](https://access.redhat.com/articles/3023951), und [Konfigurieren des NSS zum Arbeiten mit SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Weitere Informationen finden Sie unter [Manuelles Konfigurieren von SSSD](https://access.redhat.com/articles/3023951) und [Konfigurieren von NSS für SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
-1. Stellen Sie sicher, dass Sie jetzt Informationen zu einem Benutzer in der Domäne erfasst werden können und Sie ein Kerberos-Ticket als dieser Benutzer abrufen können. Im folgenden Beispiel wird **Id**, [Kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), und [Klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) Befehle für diese.
+1. Überprüfen Sie, ob Sie jetzt über die Domäne Informationen zum Benutzer erfassen und als dieser Benutzer ein Kerberos-Ticket abrufen können. Im folgenden Beispiel werden dafür die Befehle **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) und [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) verwendet.
 
    ```bash
    id user@contoso.com
@@ -197,22 +197,22 @@ Verwenden Sie die folgenden Schritte aus, um eine SQL Server-Host zu einer Activ
    ```
 
    > [!NOTE]
-   > - Wenn **Id user@contoso.com**  zurückgibt, `No such user`, stellen Sie sicher, dass der SSSD-Dienst erfolgreich gestartet werden, mithilfe des Befehls `sudo systemctl status sssd`. Wenn der Dienst wird ausgeführt, und den Fehler weiterhin angezeigt, versuchen Sie die ausführlichen Protokollierung für SSSD zu aktivieren. Weitere Informationen finden Sie auf die Red Hat-Dokumentation für [Problembehandlung SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - Wenn der Befehl **id user@contoso.com** `No such user` zurückgibt, vergewissern Sie sich, ob der SSSD-Dienst erfolgreich gestartet wurde, indem Sie den Befehl `sudo systemctl status sssd` ausführen. Wenn der Dienst ausgeführt, aber der Fehler weiterhin angezeigt wird, können Sie versuchen, die ausführliche Protokollierung für SSSD zu aktivieren. Weitere Informationen finden Sie in der Red Hat-Dokumentation zur [Behandlung von Problemen mit SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - Wenn **Kinit user@CONTOSO.COM**  zurückgibt, `KDC reply did not match expectations while getting initial credentials`, stellen Sie sicher, dass Sie den Bereich in Großbuchstaben angegeben haben.
+   > - Wenn der Befehl **kinit user@CONTOSO.COM** `KDC reply did not match expectations while getting initial credentials` zurückgibt, vergewissern Sie sich, dass Sie den Bereichsnamen in Großbuchstaben angegeben haben.
 
-Weitere Informationen finden Sie auf die Red Hat-Dokumentation für [Ermitteln von und Identität beitreten zu Domänen](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
+Weitere Informationen finden Sie in der Red Hat-Dokumentation zum [Ermitteln und Verknüpfen von Identitätsdomänen](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 
-### <a id="option2"></a> Option 2: Verwenden von Drittanbietern Openldap-Anbieter-Hilfsprogramme
+### <a id="option2"></a> Option 2: Verwenden von OpenLDAP-Drittanbietertools
 
-Können Sie Hilfsprogramme wie z. B. [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/), oder [Centrify](https://www.centrify.com/). Dieser Artikel deckt die Schritte für jedes einzelne Dienstprogramm nicht. Sie müssen zunächst eines dieser Dienstprogramme verwenden, den Linux-Host für SQL Server in die Domäne zu verknüpfen, bevor Sie fortfahren, weiterleiten.  
+Sie können auch Hilfsprogramme von Drittanbietern wie [PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) oder [Centrify](https://www.centrify.com/) verwenden. In diesem Artikel können aber keine Anweisungen zu den einzelnen Hilfsprogrammen bereitgestellt werden. Sie müssen zunächst mithilfe eines dieser Hilfsprogramme den Linux-Host für SQL Server mit der Domäne verknüpfen, bevor Sie fortfahren können.  
 
-SQL Server ist nicht der Drittanbieter-Integrator oder die Bibliotheksdatei für AD-bezogene Abfragen verwenden. SQL Server fragt immer AD Openldap-Bibliotheksaufrufe direkte Verwendung in diesem Setup. Die Integratoren, die von Drittanbietern werden nur verwendet, um die Linux-Server mit AD-Domäne zu verknüpfen, und SQL Server verfügt nicht über eine direkte Kommunikation mit diesen Dienstprogrammen.
+SQL Server verwendet keinen Integratorcode oder Bibliotheken von Drittanbietern für AD-bezogene Abfragen. SQL Server fragt AD bei diesem Setup immer mithilfe von direkten Aufrufen der OpenLDAP-Bibliothek ab. Die Drittanbieterintegratoren werden nur verwendet, um den Linux-Host mit der AD-Domäne zu verknüpfen. SQL Server kommuniziert nicht direkt mit diesen Hilfsprogrammen.
 
 > [!IMPORTANT]
-> Informieren Sie sich die Empfehlungen für die Verwendung der **Mssql-Conf** `network.disablesssd` Konfigurationsoption in der **zusätzliche Konfigurationsoptionen** Abschnitt des Artikels [verwenden Active Directory-Authentifizierung mit SQL Server unter Linux](sql-server-linux-active-directory-authentication.md#additionalconfig).
+> Lesen Sie sich die Empfehlungen für die Verwendung der **mssql-conf**-Konfiguration `network.disablesssd` im Abschnitt **Zusätzliche Konfigurationsoptionen** des Artikels [Verwenden der Active Directory-Authentifizierung mit SQL Server für Linux](sql-server-linux-active-directory-authentication.md#additionalconfig) durch.
 
-Überprüfen Sie, ob Ihre **/etc/krb5.conf** ordnungsgemäß konfiguriert ist. Für die meisten Drittanbieter-Active Directory-Dienstanbietern erfolgt diese Konfiguration automatisch. Vergewissern Sie sich jedoch **/etc/krb5.conf** für die folgenden Werte ein, um zukünftige Probleme zu vermeiden:
+Vergewissern Sie sich, dass die Datei **/etc/krb5.conf** ordnungsgemäß konfiguriert ist. Bei den meisten Drittanbietern für Active Directory erfolgt diese Konfiguration automatisch. Überprüfen Sie jedoch die Datei **/etc/krb5.conf** auf die folgenden Werte, um zukünftige Probleme zu vermeiden:
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -227,16 +227,16 @@ contoso.com = CONTOSO.COM
 .contoso.com = CONTOSO.COM
 ```
 
-## <a name="check-that-the-reverse-dns-is-properly-configured"></a>Überprüfen Sie, dass der reverse-DNS ordnungsgemäß konfiguriert ist
+## <a name="check-that-the-reverse-dns-is-properly-configured"></a>Überprüfen, ob das Reverse-DNS ordnungsgemäß konfiguriert ist
 
-Der folgende Befehl sollte den vollständig qualifizierten Domänennamen (FQDN) des Hosts zurück, die SQL Server ausgeführt wird. Ein Beispiel hierfür ist **SqlHost.contoso.com**.
+Der folgende Befehl sollte den vollqualifizierten Domänennamen des Hosts zurückgeben, der SQL Server ausführt, z. B. **SqlHost.contoso.com**.
 
 ```bash
 host **<IP address of SQL Server host>**
 ```
 
-Die Ausgabe dieses Befehls sollte etwa wie `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. Wenn dieser Befehl kein FQDN des Hosts zurückgibt oder wenn der FQDN falsch ist, fügen Sie eine reverse-DNS-Eintrag für Ihre SQL Server auf Linux-Host auf einen DNS-Server hinzu.
+Die Ausgabe dieses Befehls sollte in etwa wie folgt aussehen: `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`. Wenn dieser Befehl nicht den vollqualifizierten Domänennamen des Hosts zurückgibt oder wenn dieser falsch ist, fügen Sie dem DNS-Server einen Reverse-DNS-Eintrag für Ihren Host für SQL Server für Linux hinzu.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Dieser Artikel behandelt die Voraussetzung dafür, wie eine SQL Server auf einem Linux-Host-Computer mit Active Directory-Authentifizierung zu konfigurieren. Um SQL Server unter Linux zur Unterstützung von Active Directory-Konten konfiguriert haben, befolgen Sie die Anweisungen unter [verwenden Active Directory-Authentifizierung mit SQL Server unter Linux](sql-server-linux-active-directory-authentication.md).
+In diesem Artikel werden die Voraussetzungen für die Konfiguration eines Hostcomputers für SQL Server für Linux über die Active Directory-Authentifizierung behandelt. Führen Sie die unter [Verwenden der Active Directory-Authentifizierung mithilfe von SQL Server für Linux](sql-server-linux-active-directory-authentication.md) beschriebenen Schritte aus, um die Konfiguration der Unterstützung von Active Directory-Konten für SQL Server für Linux abzuschließen.

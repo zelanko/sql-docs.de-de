@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a5513c6f1f326984c93a760afdd88f949dc18b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007977"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388403"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack für Integration Services (SSIS)
 
@@ -88,6 +88,14 @@ Die Downloadseiten enthalten auch Informationen zu erforderlichen Komponenten. S
     -   [Flexibles Dateiziel](../integration-services/data-flow/flexible-file-destination.md)
 
 -   Azure Blob, Azure Data Lake Store und Data Lake Storage Gen2-Datei-Enumerator. Siehe [Foreach Loop Container](../integration-services/control-flow/foreach-loop-container.md) (Foreach-Schleifencontainer).
+
+## <a name="use-tls-12"></a>Verwenden von TLS 1.2
+
+Die vom Azure Feature Pack verwendete TLS-Version folgt den .NET Framework-Einstellungen.
+Wenn Sie TLS 1.2 verwenden möchten, fügen Sie einen `REG_DWORD`-Wert mit dem Namen `SchUseStrongCrypto` für „data“ (Daten) unter den folgenden zwei Registrierungsschlüsseln `1` hinzu.
+
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
+2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
 ## <a name="scenario-processing-big-data"></a>Szenario: Verarbeitung großer Datenmengen
  Verwenden Sie den Azure Connector zum Ausführen der folgenden Big Data-Verarbeitungsaufgaben:

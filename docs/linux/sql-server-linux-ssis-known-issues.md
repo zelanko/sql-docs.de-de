@@ -1,6 +1,6 @@
 ---
-title: Einschränkungen und bekannte Probleme für SSIS unter Linux
-description: In diesem Artikel wird beschrieben, Einschränkungen und bekannte Probleme für SQL Server Integration Services (SSIS) auf Linux-Computern
+title: Einschränkungen und bekannte Probleme bei SSIS unter Linux
+description: In diesem Artikel werden Einschränkungen und bekannte Probleme bei den SQL Server Integration Services (SSIS) auf Linux-Computern beschrieben.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,38 +9,38 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032217"
 ---
-# <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannte Probleme für SSIS unter Linux
+# <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Einschränkungen und bekannte Probleme bei SSIS unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel beschreibt Einschränkungen und bekannte Probleme für SQL Server Integration Services (SSIS) für Linux.
+In diesem Artikel werden Einschränkungen und bekannte Probleme bei den SQL Server Integration Services (SSIS) unter Linux beschrieben.
 
 ## <a name="general-limitations-and-known-issues"></a>Allgemeine Einschränkungen und bekannte Probleme
 
-Die folgenden Funktionen werden in dieser Version von SSIS unter Linux nicht unterstützt:
-  - SSIS-Katalogdatenbank
-  - Geplante paketausführung vom SQL-Agent
+Die folgenden Features werden in diesem Release von SSIS unter Linux nicht unterstützt:
+  - SSIS-Katalog-Datenbank
+  - Geplante Paketausführung des SQL Agent
   - Windows-Authentifizierung
-  - Drittanbieter-Komponenten
+  - Drittanbieterkomponenten
   - Change Data Capture (CDC)
-  - SSIS Scale Out-
-  - Azure FeaturePack für SSIS
-  - Hadoop und HDFS-Unterstützung
+  - SSIS Scale Out
+  - Azure Feature Pack für SSIS
+  - Hadoop- und HDFS-Unterstützung
   - Microsoft Connector for SAP BW
 
-Weitere Einschränkungen und bekannte Probleme mit SSIS unter Linux, finden Sie unter den [– Anmerkungen zu dieser](sql-server-linux-release-notes.md#ssis).
+Weitere Einschränkungen und bekannte Probleme mit SSIS unter Linux finden Sie in den [Versionshinweisen](sql-server-linux-release-notes.md#ssis).
 
 ## <a name="components"></a> Unterstützte und nicht unterstützte Komponenten
 
-Die folgenden integrierten Integration Services-Komponenten werden unter Linux unterstützt. Einige davon gelten Einschränkungen für die Linux-Plattform. Integrierte Komponenten, die hier nicht aufgeführt sind, werden unter Linux nicht unterstützt.
+Die folgenden integrierten Integration Services-Komponenten werden unter Linux unterstützt. Für einige von ihnen gelten Einschränkungen auf der Linux-Plattform. Integrierte Komponenten, die hier nicht aufgeführt sind, werden unter Linux nicht unterstützt.
 
-## <a name="supported-control-flow-tasks"></a>Ablaufsteuerungstasks unterstützt
+## <a name="supported-control-flow-tasks"></a>Unterstützte Ablaufsteuerungsaufgaben
 - Masseneinfügungstask
 - Datenflusstask
 - Datenprofilerstellungs-Task
@@ -51,56 +51,56 @@ Die folgenden integrierten Integration Services-Komponenten werden unter Linux u
 - Webdienst (Task)
 - XML-Task
 
-## <a name="control-flow-tasks-supported-with-limitations"></a>Ablaufsteuerungstasks, die mit Einschränkungen unterstützt
+## <a name="control-flow-tasks-supported-with-limitations"></a>Unterstützte Ablaufsteuerungsaufgaben mit Einschränkungen
 
-| Aufgabe | Einschränkungen |
+| Task | Einschränkungen |
 |------------|---|
-| Task Prozess ausführen | Nur unterstützt in-Process-Modus. |
-| Task "Dateisystem" | Die *verschieben Directory* und *Festlegen von Dateiattributen* Aktionen werden nicht unterstützt. |
-| Skripttask | Unterstützt nur standard .NET Framework-APIs. |
-| Mail senden (Task) | Unterstützt nur anonyme Benutzer-Modus. |
-| Der Task Datenbanken übertragen | UNC-Pfade werden nicht unterstützt. |
+| Task Prozess ausführen | Nur im In-Process-Modus unterstützt. |
+| Dateisystem (Task) | Die Aktionen *Verzeichnis verschieben* und *Dateiattribute festlegen* werden nicht unterstützt. |
+| Skripttask | Unterstützt nur standardmäßige .NET Framework-APIs. |
+| Mail senden (Task) | Unterstützt nur den anonymen Benutzermodus. |
+| Datenbank übertragen (Task) | UNC-Pfade werden nicht unterstützt. |
 | | |
 
 ## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>Unterstützte und nicht unterstützte Wartungsplantasks
 
 In einem SQL Server-Wartungsplan können Sie in der Regel eine Vielzahl von SSIS-Tasks verwenden.
 
-Die folgenden Wartungsplantasks sind unter Linux nicht unterstützt:
+Die folgenden Wartungsplantasks werden unter Linux nicht unterstützt:
 - Operator benachrichtigen
-- Führen Sie SQL Server-Agent-Auftrag
+- Auftrag des SQL Server-Agent ausführen
 
-Die folgenden Wartungsplantasks sind unter Linux unterstützt:
+Die folgenden Wartungsplantasks werden unter Linux unterstützt:
 - Datenbankintegrität überprüfen
 - Datenbank verkleinern
 - Index neu organisieren
 - Index neu erstellen
 - Statistikaktualisierung
-- Verlaufscleanup
+- Verlauf bereinigen
 - Datenbank sichern
 - T-SQL-Anweisung
 
-## <a name="supported-control-flow-containers"></a>Ablaufsteuerungscontainer unterstützt
+## <a name="supported-control-flow-containers"></a>Unterstützte Ablaufsteuerungscontainer
 - Sequenzcontainer
 - For-Schleifencontainer
 - Foreach-Schleifencontainer
 
-## <a name="supported-data-flow-sources-and-destinations"></a>Flow für unterstützte Datenquellen und Ziele
-- Rohdatendatei-Quelle und Ziel
+## <a name="supported-data-flow-sources-and-destinations"></a>Unterstützte Datenflussquellen und -ziele
+- Rohdatendatei-Quelle und -Ziel
 - XML-Quelle
 
-## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Flow-Datenquellen und Ziele, die mit Einschränkungen unterstützt
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Datenflussquellen und -ziele, die mit Einschränkungen unterstützt werden
 
 | Komponente | Einschränkungen |
 |------------|---|
-| ADO NET-Quelle und Ziel | Unterstützt nur den SQLClient-Datenanbieter. |
-| Flatfilequelle und das Ziel | Unterstützt nur Windows-Stil Dateipfade, auf die die standardmäßige Zuordnung Pfadregel angewendet wird. Z. B. `D:\home\ssis\travel.csv` wird `/home/ssis/travel.csv`. |
+| ADO.NET-Quelle und -Ziel | Unterstützt nur den SQLClient-Datenanbieter. |
+| Flatfilequelle und -ziel | Unterstützt nur Dateipfade im Windows-Stil, auf die die Standardpfad-Zuordnungsregel angewendet wird. `D:\home\ssis\travel.csv` wird z.B. zu `/home/ssis/travel.csv`. |
 | OData-Quelle | Unterstützt nur die Standardauthentifizierung. |
-| ODBC-Quelle und -Ziel | Unterstützt die 64-Bit-Unicode-ODBC-Treiber unter Linux. Hängt von der UnixODBC-Treiber-Manager unter Linux. |
-| OLE DB-Quelle und Ziel | Unterstützt nur SQL Server Native Client 11.0 und Microsoft OLE DB-Anbieter für SQL Server ein. |
+| ODBC-Quelle und -Ziel | Unterstützt 64-Bit-Unicode-ODBC-Treiber unter Linux. Hängt vom UnixODBC-Treiber-Manager unter Linux ab. |
+| OLE DB-Quelle und -Ziel | Unterstützt nur SQL Server Native Client 11.0 und Microsoft OLE DB-Anbieter für SQL Server. |
 | | |
 
-## <a name="supported-data-flow-transformations"></a>Datenflusstransformationen unterstützt
+## <a name="supported-data-flow-transformations"></a>Unterstützte Datenflusstransformationen
 - Aggregat
 - Überwachen von
 - Balanced Data Distributor
@@ -125,25 +125,25 @@ Die folgenden Wartungsplantasks sind unter Linux unterstützt:
 - Union All
 - Entpivotieren
 
-## <a name="data-flow-transformations-supported-with-limitations"></a>Datenflusstransformationen, die mit Einschränkungen unterstützt
+## <a name="data-flow-transformations-supported-with-limitations"></a>Mit Einschränkungen unterstützte Datenflusstransformationen
 
 | Komponente | Einschränkungen |
 |------------|---|
-| Transformation für OLE DB-Befehl | Dieselben Einschränkungen wie bei den OLE DB-Quelle und Ziel. |
-| Skriptkomponente | Unterstützt nur standard .NET Framework-APIs. |
+| Transformation für OLE DB-Befehl | Die gleichen Einschränkungen wie OLE DB-Quelle und -Ziel. |
+| Skriptkomponente | Unterstützt nur standardmäßige .NET Framework-APIs. |
 | | |
 
 ## <a name="supported-and-unsupported-log-providers"></a>Unterstützte und nicht unterstützte Protokollanbieter
-Alle die integrierte SSIS-Protokollanbieter für Linux unterstützt werden, mit Ausnahme der Windows-Ereignisprotokollprovider.
+Alle integrierten SSIS-Protokollanbieter außer dem Windows-Ereignisprotokollanbieter werden unter Linux unterstützt.
 
-Der Protokollanbieter für SQL Server unterstützt nur die SQL-Authentifizierung; Er unterstützt keine Windows-Authentifizierung.
+Der SQL Server-Protokollanbieter unterstützt nur die SQL-Authentifizierung, nicht die Windows-Authentifizierung.
 
-Die SSIS-Protokollanbieter für Textdateien, XML-Dateien, und für SQL Server Profiler schreiben ihre Ausgabe in eine Datei, die Sie angeben. Die folgenden Überlegungen gelten für den Dateipfad:
--   Wenn Sie einen Pfad angeben, schreibt der Protokollanbieter, auf das aktuelle Verzeichnis des Hosts. Wenn der aktuelle Benutzer nicht über Schreibberechtigung für das aktuelle Verzeichnis des Hosts verfügt, löst der Protokollanbieter einen Fehler aus.
--   Sie können nicht auf eine Umgebungsvariable in einem Dateipfad verwenden. Wenn Sie eine Umgebungsvariable angeben, wird die Literale Text, den Sie angeben im Dateipfad angezeigt. Wenn Sie angeben, z. B. `%TMP%/log.txt`, der Protokollanbieter fügt den Literaltext `/%TMP%/log.txt` auf das aktuelle Hostverzeichnis.
+Die SSIS-Protokollanbieter für Textdateien, XML-Dateien und SQL Server Profiler schreiben ihre Ausgabe in eine von Ihnen angegebene Datei. Die folgenden Überlegungen betreffen den Dateipfad:
+-   Wenn Sie keinen Pfad angeben, schreibt der Protokollanbieter in das aktuelle Verzeichnis des Hosts. Wenn der aktuelle Benutzer nicht über die Berechtigung zum Schreiben in das aktuelle Verzeichnis des Hosts verfügt, löst der Protokollanbieter einen Fehler aus.
+-   Es ist nicht möglich, eine Umgebungsvariable in einem Dateipfad zu verwenden. Wenn Sie eine Umgebungsvariable angeben, wird der von Ihnen angegebene literale Text im Dateipfad angezeigt. Wenn Sie z.B. `%TMP%/log.txt` angeben, fügt der Protokollanbieter den literalen Text `/%TMP%/log.txt` an das aktuelle Hostverzeichnis an.
 
 ## <a name="related-content-about-ssis-on-linux"></a>Verwandte Inhalte zu SSIS unter Linux
 -   [Extrahieren, Transformieren und Laden von Daten unter Linux mit SSIS](sql-server-linux-migrate-ssis.md)
--   [Installieren von SQL Server Integration Services (SSIS) unter Linux](sql-server-linux-setup-ssis.md)
--   [Konfigurieren von SQL Server Integration Services unter Linux mit Ssis-conf](sql-server-linux-configure-ssis.md)
--   [Zeitplan SQL Server Integration Services-paketausführung unter Linux mit cron](sql-server-linux-schedule-ssis-packages.md)
+-   [Installieren von SSIS (SQL Server Integration Services) unter Linux](sql-server-linux-setup-ssis.md)
+-   [Konfigurieren von SQL Server Integration Services unter Linux mit ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Zeitliches Planen der Ausführung von SSIS-Paketen unter Linux mit Cron](sql-server-linux-schedule-ssis-packages.md)

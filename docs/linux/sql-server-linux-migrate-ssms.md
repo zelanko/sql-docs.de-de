@@ -9,70 +9,70 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68105554"
 ---
-# <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportieren und Importieren einer Datenbank unter Linux mit SSMS oder SqlPackage.exe auf Windows
+# <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Exportieren und Importieren einer Datenbank unter Linux mit SSMS oder Sqlpackage.exe unter Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel wird gezeigt, wie Sie mit [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) und [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) exportieren und importieren eine Datenbank auf SQL Server unter Linux. SSMS und SqlPackage.exe sind Windows-Anwendungen, also verwenden Sie dieses Verfahren, wenn Sie einen Windows-Computer verfügen, der zu einer Remoteinstanz von SQL Server unter Linux eine Verbindung herstellen können.
+In diesem Artikel wird beschrieben, wie Sie mit [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) und [Sqlpackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) eine Datenbank unter SQL Server für Linux exportieren und importieren. SSMS und SqlPackage.exe sind Windows-Anwendungen und können daher auf einem Windows-Computer ausgeführt werden, der eine Verbindung mit einer SQL Server-Remoteinstanz unter Linux herstellen kann.
 
-Sollten Sie immer installieren und verwenden Sie die neueste Version von SQL Server Management Studio (SSMS), siehe [Verwenden von SSMS unter Windows zur Verbindung mit SQL Server unter Linux](sql-server-linux-manage-ssms.md)
+Sie sollten immer die neueste Version von SQL Server Management Studio (SSMS) installieren und verwenden, wie unter [Verwenden von SQL Server Management Studio unter Windows zum Verwalten von SQL Server für Linux](sql-server-linux-manage-ssms.md) beschrieben.
 
 > [!NOTE]
-> Wenn Sie eine Datenbank von einer SQL Server-Instanz zu einem anderen migrieren, es wird empfohlen, verwenden Sie [Sicherungs- und Wiederherstellungsvorgänge](sql-server-linux-migrate-restore-database.md).
+> Wenn Sie eine Datenbank von einer SQL Server-Instanz zu einer anderen migrieren, sollten Sie [Sicherung und Wiederherstellung](sql-server-linux-migrate-restore-database.md) verwenden.
 
 ## <a name="export-a-database-with-ssms"></a>Exportieren einer Datenbank mit SSMS
 
-1. Starten Sie SSMS, indem Sie eingeben **Microsoft SQL Server Management Studio** in der Windows-Suchfeld ein, und klicken Sie dann auf die desktop-app.
+1. Starten Sie SSMS, indem Sie **Microsoft SQL Server Management Studio** in das Windows-Suchfeld eingeben, und klicken Sie dann auf die Desktop-App.
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. Verbinden Sie mit Ihrer Quelldatenbank im Objekt-Explorer. Die Quelldatenbank kann in Microsoft SQL Server lokal oder in der Cloud unter Linux, Windows oder Docker und Azure SQL-Datenbank oder Azure SQL Data Warehouse sein.
+2. Stellen Sie im Objekt-Explorer eine Verbindung mit der Quelldatenbank her. Die Quelldatenbank kann in Microsoft SQL Server lokal ausgeführt werden oder in der Cloud, unter Linux, Windows oder Docker und Azure SQL-Datenbank oder Azure SQL Data Warehouse.
 
-3. Mit der rechten Maustaste in der Quelldatenbank im Objekt-Explorer, zeigen Sie auf **Aufgaben**, und klicken Sie auf **Datenebenenanwendung exportieren...**
+3. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Quelldatenbank, zeigen Sie auf **Aufgaben**, und klicken Sie auf **Datenebenenanwendung exportieren**.
 
-4. Im Export-Assistenten, klicken Sie auf **Weiter**, und klicken Sie dann auf die **Einstellungen** konfigurieren die exportieren, um die bacpac-Datei auf einen lokalen Speicherort oder in ein Azure-Blob zu speichern.
+4. Klicken Sie im Export-Assistenten auf **Weiter** und dann auf die Registerkarte **Einstellungen**, und konfigurieren Sie den Export, um die BACPAC-Datei entweder an einem lokalen Speicherort oder in einem Azure-Blob zu speichern.
 
-5. Standardmäßig werden alle Objekte in der Datenbank exportiert. Klicken Sie auf die **Registerkarte "Erweitert"** , und wählen Sie die Datenbankobjekte, die Sie exportieren möchten.
+5. Standardmäßig werden alle Objekte in der Datenbank exportiert. Klicken Sie auf die **Registerkarte „Erweitert“** , und wählen Sie die Datenbankobjekte aus, die Sie exportieren möchten.
 
 6. Klicken Sie auf **Weiter** und anschließend auf **Fertig stellen**.
 
-Die *. Bacpac-Datei wurde erfolgreich erstellt, an der Position, die Sie ausgewählt haben, und Sie bereit sind, die sie in eine Zieldatenbank importieren.
+Die *.BACPAC-Datei wird erfolgreich an dem von Ihnen ausgewählten Speicherort erstellt, und Sie können Sie in eine Zieldatenbank importieren.
 
 ## <a name="import-a-database-with-ssms"></a>Importieren einer Datenbank mit SSMS
 
-1. Starten Sie SSMS, indem Sie eingeben **Microsoft SQL Server Management Studio** in der Windows-Suchfeld ein, und klicken Sie dann auf die desktop-app.
+1. Starten Sie SSMS, indem Sie **Microsoft SQL Server Management Studio** in das Windows-Suchfeld eingeben, und klicken Sie dann auf die Desktop-App.
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
-2. Verbinden Sie mit Ihrem Ziel-Server im Objekt-Explorer. Der Zielserver kann Microsoft SQL Server, die lokal ausgeführt werden oder in der Cloud unter Linux, Windows oder Docker und Azure SQL-Datenbank oder Azure SQL Data Warehouse.
+2. Stellen Sie im Objekt-Explorer eine Verbindung mit Ihrem Zielserver her. Der Zielserver kann in Microsoft SQL Server lokal ausgeführt werden oder in der Cloud, unter Linux, Windows oder Docker und Azure SQL-Datenbank oder Azure SQL Data Warehouse.
 
-3. Mit der rechten Maustaste die **Datenbanken** Ordner im Objekt-Explorer, und klicken Sie auf **Datenebenenanwendung importieren...**
+3. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie dann auf **Datenebenenanwendung importieren**.
 
-4. Klicken Sie zum Erstellen der Datenbank auf Ihrem Zielserver, geben Sie eine bacpac-Datei von Ihrem lokalen Datenträger, oder wählen Sie das Azure-Speicherkonto und den Container, zu dem Sie die bacpac-Datei hochgeladen haben.
+4. Um die Datenbank auf dem Zielserver zu erstellen, geben Sie eine BACPAC-Datei auf Ihrem lokalen Datenträger an, oder wählen Sie das Azure-Speicherkonto und den Container aus, wohin Sie Ihre BACPAC-Datei hochgeladen haben.
 
-5. Geben Sie den neuen Datenbanknamen für die Datenbank an. Wenn Sie eine Datenbank auf Azure SQL-Datenbank importieren, legen Sie die Edition von Microsoft Azure SQL-Datenbank (Dienstebene), maximale Datenbankgröße und Dienstziel (Leistungsstufe).
+5. Geben Sie den neuen Datenbanknamen für die neue Datenbank an. Wenn Sie eine Datenbank in Azure SQL-Datenbank importieren, legen Sie die Edition von Microsoft Azure SQL-Datenbank (Dienstebene), die maximale Datenbankgröße und das Dienstziel (Leistungsebene) fest.
 
-6. Klicken Sie auf **Weiter** , und klicken Sie dann auf **Fertig stellen** die bacpac-Datei in eine neue Datenbank auf dem Zielserver zu importieren.
+6. Klicken Sie auf **Weiter** und dann auf **Fertigstellen**, um die BACPAC-Datei in eine neue Datenbank auf dem Zielserver zu importieren.
 
-Die *. Bacpac-Datei wird importiert, um eine neue Datenbank auf dem Zielserver zu erstellen, die Sie angegeben haben.
+Die *.BACPAC-Datei wird importiert, um eine neue Datenbank auf dem von Ihnen angegebenen Zielserver zu erstellen.
 
-## <a id="sqlpackage"></a> Die Befehlszeilenoption "Sqlpackage"
+## <a id="sqlpackage"></a> SqlPackage-Befehlszeilenoption
 
-Es ist auch möglich, die SQL Server Data Tools (SSDT), Befehlszeilentools [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx), zum Exportieren und Importieren der bacpac-Dateien.
+Es ist auch möglich, das Befehlszeilentool SQL Server Data Tools (SSDT), [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx), zum Exportieren und Importieren von BACPAC-Dateien zu verwenden.
 
-Der Befehl im folgenden Beispiel wird eine bacpac-Datei exportiert:
+Mit dem folgenden Beispielbefehl wird eine BACPAC-Datei exportiert:
 
 ```bash
 SqlPackage.exe /a:Export /ssn:tcp:<your_server> /sdn:<your_database> /su:<username> /sp:<password> /tf:<path_to_bacpac>
 ```
 
-Verwenden Sie zum Importieren von Datenbank-Schema und Daten aus den folgenden Befehl ein. Bacpac-Datei:
+Verwenden Sie den folgenden Befehl, um das Datenbankschema und die Benutzerdaten aus einer BACPAC-Datei zu importieren:
 
 ```bash
 SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<username> /tp:<password> /sf:<path_to_bacpac>
@@ -80,4 +80,4 @@ SqlPackage.exe /a:Import /tsn:tcp:<your_server> /tdn:<your_database> /tu:<userna
 ```
 
 ## <a name="see-also"></a>Siehe auch
-Weitere Informationen zur Verwendung von SSMS finden Sie unter [Verwenden von SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx). Weitere Informationen zu SqlPackage.exe, finden Sie unter den ["Sqlpackage" Referenzdokumentation](https://msdn.microsoft.com/library/hh550080.aspx).
+Weitere Informationen zum Verwenden von SSMS finden Sie unter [Was ist SQL Server Management Studio (SSMS)?](https://msdn.microsoft.com/library/ms174173.aspx). Weitere Informationen zu SqlPackage.exe finden Sie in der [Referenzdokumentation zu SqlPackage](https://msdn.microsoft.com/library/hh550080.aspx).

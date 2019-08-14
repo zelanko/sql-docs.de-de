@@ -1,7 +1,7 @@
 ---
-title: FAQ
+title: HÄUFIG GESTELLTE FRAGEN
 titleSuffix: Azure Data Studio
-description: Häufig gestellte Fragen (FAQ) zu Azure Data Studio ein.
+description: Häufig gestellte Fragen (Frequently Asked Questions, FAQ) zu Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,76 +11,76 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959546"
 ---
-# <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] HÄUFIG GESTELLTE FRAGEN
+# <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
 ## <a name="what-is-azure-data-studio"></a>Was ist Azure Data Studio?
 
-Azure Data Studio ist eine neue Open-source-Cross-Platform-desktop-Umgebung für Data-Experten, die mit der Daten in Azure-Familie von lokalen und cloud-datenplattformen unter Windows, MacOS und Linux. Zuvor unter dem Namen Vorschau SQL Operations Studio veröffentlicht, extrem Studio für Azure Data-Angebote, die ein modernen Editor Erfahrung im Umgang mit schnellen IntelliSense, Codeausschnitte, Integration der quellcodeverwaltung und eine integrierte Terminal. Es wurde mit dem Data-Plattform Benutzer Denken Sie daran, konzipiert integriert die diagrammerstellung für Abfrageresultsets und anpassbaren Dashboards.
+Azure Data Studio ist eine neue plattformübergreifende Open-Source-Desktopumgebung für Datenexperten, die zu den Azure Data-Produkten lokaler und cloudbasierter Datenplattformen unter Windows, macOS und Linux gehören. Azure Data Studio wurde zuvor in einer Vorschauversion unter dem Namen SQL Operations Studio veröffentlicht und bietet eine moderne Editor-Funktion mit einem integrierten Terminal sowie einer schnellen Integration von IntelliSense, Codeausschnitten und der Quellcodeverwaltung. Bei der Entwicklung wurde der Fokus auf den Benutzer der Datenplattform gelegt und die Darstellung von Abfrageergebnissen und anpassbaren Dashboards integriert.
 
-Untersuchung ergab, dass Benutzer bedeutend mehr Zeit, die abfragebearbeitung als für andere Aufgaben mit SQL Server Management Studio gearbeitet haben. Aus diesem Grund wurde Azure Data Studio entwickelt, um umfassend auf die Funktionalität konzentrieren, die am häufigsten mit zusätzlichen Funktionen, die als optionale Erweiterungen in das Produkt zur Verfügung gestellt werden. Dadurch kann jeder Benutzer ihrer Umgebung auf die Workflows anpassen, die sie am häufigsten verwenden.
+Studien haben ergeben, dass die Benutzer von SQL Server Management Studio (SSMS) viel mehr Zeit mit der Bearbeitung von Abfragen verbringen als mit jeder anderen Aufgabe. Aus diesem Grund standen bei der Entwicklung von Azure Data Studio die Funktionen im Mittelpunkt, die am meisten verwendet werden. Zusätzliche Funktionen stehen als optionale Erweiterungen für das Produkt zur Verfügung. Dadurch kann jeder Benutzer seine Umgebung an die Workflows anpassen, die er am häufigsten verwendet.
 
 
 ## <a name="how-much-does-azure-data-studio-cost"></a>Wie viel kostet Azure Data Studio?
 
-Azure Data Studio ist kostenlos für private oder gewerbliche Zwecke verwenden.
+Azure Data Studio ist sowohl bei privater als auch bei kommerzieller Verwendung kostenlos.
 
-## <a name="who-should-use-azure-data-studio"></a>Wer sollte die Azure Data Studio verwenden
+## <a name="who-should-use-azure-data-studio"></a>Wer sollte Azure Data Studio verwenden?
 
-Jeder Benutzer kann Azure Data Studio verwenden. Es soll jedoch Entwickler, Datenbankadministratoren, Systemadministratoren und unabhängige Softwarehersteller ausgeführte Aufgaben zu vereinfachen.
+Grundsätzlich kann jeder Azure Data Studio verwenden. Das Tool wurde jedoch in erster Linie dafür entwickelt, um Aufgaben zu vereinfachen, die von Datenbankentwicklern, Datenbankadministratoren, Systemadministratoren und unabhängigen Softwareanbietern durchgeführt werden.
 
-## <a name="what-can-i-do-with-azure-data-studio"></a>Was kann ich mit Azure Data Studio tun?
+## <a name="what-can-i-do-with-azure-data-studio"></a>Wofür kann ich Azure Data Studio verwenden?
 
-Azure Data Studio basiert auf Visual Studio Code und bietet eine einfache, Tastaturfokus installationsworkflows modernen Code beim Arbeiten mit SQL Server, Azure SQL-Datenbank, Azure SQL Data Warehouse. Azure Data Studio macht die Core-Benutzeroberflächen, die Sie täglich, einfach und leicht mit integrierten Features wie Fenstern mit Registerkarten, einen umfangreichen SQL-Editor, IntelliSense, Vervollständigung von Schlüsselwörtern, Codeausschnitten und Navigation in Code und Integration der quellcodeverwaltung (Git nutzen und TFS). Sie können bedarfsgesteuerte Abfragen ausführen, anzeigen & Ergebnisse als Text, JSON oder Excel speichern, Bearbeiten von Daten, organisieren und verwalten Ihre bevorzugten Datenbankverbindungen und Datenbankobjekte in einer vertrauten Oberfläche durchsuchen.
+Azure Data Studio basiert auf Visual Studio Code und bietet bei der Arbeit mit SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse einfache, moderne Funktionen für den Codeworkflow, bei denen der Fokus auf der Tastatur liegt. Azure Data Studio erleichtert die wichtigsten Funktionen, die Sie regelmäßig einsetzen, mithilfe von integrierten Features wie mehreren Registerkartenfenstern, einem umfangreichen SQL-Editor, IntelliSense, der Vervollständigung von Schlüsselwörtern, Codeausschnitten, Codenavigation und der Integration der Quellcodeverwaltung (Git und TFS). Sie können bedarfsgesteuerte Abfragen ausführen, Ergebnisse in Textformaten oder im JSON- oder Excel-Format abrufen und speichern, Daten bearbeiten, bevorzugte Datenbankverbindungen organisieren und verwalten sowie Datenbankobjekte auf einer vertrauten Benutzeroberfläche durchsuchen.
 
-Verwenden Sie Ihre bevorzugten Befehlszeilentools (beispielsweise Bash, PowerShell "," Sqlcmd "," Bcp "," Psql, per ssh) im integrierten Terminal-Fenster direkt in der Azure Data Studio-Benutzeroberfläche. Einfach zu generieren und Ausführen erstellen und Einfügen-Skripts für Datenbankobjekte, Kopien Ihrer Datenbank für Entwicklungs- oder Testzwecke zu erstellen. Steigern Sie Ihre Produktivität mit intelligenter Code Snippets und eine umfassende grafische Benutzeroberflächen, die neue Datenbanken und Datenbankobjekte (z. B. Tabellen, Sichten, gespeicherte Prozeduren, Benutzern, Anmeldungen, Rollen, usw.) zu erstellen oder vorhandene Datenbankobjekte zu aktualisieren. Verwendung umfangreiche anpassbare Dashboards überwachen und Leistungsengpässe in Ihrer lokalen Datenbanken, in Azure oder jede andere Cloud schnell zu beheben.
+Sie können die von Ihnen bevorzugten Befehlszeilentools (z. B. Bash, PowerShell, sqlcmd, bcp, psql und ssh) auf der Azure Data Studio-Benutzeroberfläche direkt im Fenster „Integriertes Terminal“ verwenden. Sie können ganz einfach CREATE- und INSERT-Skripts für Ihr Datenbankobjekt erstellen und ausführen, um für die Entwicklung oder für Tests Kopien Ihrer Datenbank zu erstellen. Steigern Sie Ihre Produktivität durch intelligente Codeausschnitte und umfassende grafische Funktionen für die Erstellung neuer Datenbanken und Datenbankobjekte (z. B. Tabellen, Sichten, gespeicherte Prozeduren, Benutzer, Anmeldeinformationen, Rollen usw.) oder für das Aktualisieren von Datenbankobjekten. Sie können umfangreiche anpassbare Dashboards verwenden, um Leistungsengpässe in Ihren lokalen Datenbanken, in Azure oder in einer beliebigen Cloud zu überwachen und Probleme schnell zu beheben.
 
-Azure Data Studio bietet eine konsistente Umgebung zum Sichern und Wiederherstellen Ihrer Datenbanken. Mit geplante Unterstützung für SQL Server Always On-Verfügbarkeitsgruppen können Sie ganz einfach konfigurieren, überwachen und Problembehandlung von Verfügbarkeitsgruppen für Ihre unternehmenskritischen SQL Server-Datenbanken und schnell ein Failover auf eine sekundäre Datenbank während eines Notfalls. Azure Data Studio wurde entwickelt, um in den DevOps-Lebenszyklus Ihrer Datenbanken Ihrer Wahl unter den Betriebssystemen Ihrer Wahl produktiver arbeiten können. Daher, Sie können jederzeit steuern, und Sie Risiken verringern, Probleme schneller zu lösen und liefern Sie fortlaufend Qualität, die Erwartungen der Kunden überschreiten können.
+Azure Data Studio bietet einheitliche Funktionen zum Sichern und Wiederherstellen Ihrer Datenbanken. In Zukunft sollen auch für SQL Server Always On-Verfügbarkeitsgruppen unterstützt werden, damit Sie diese für Ihre unternehmenskritischen SQL Server-Datenbanken problemlos konfigurieren, überwachen und Probleme beheben können sowie im Falle eines Notfalls schnell ein Failover auf eine sekundäre Datenbank durchführen können. Azure Data Studio wurde entwickelt, damit der DevOps-Lebenszyklus aller Datenbanken auf sämtlichen Betriebssystemen produktiver gestaltet werden kann. So haben Sie immer die Kontrolle und können Risiken mindern, Probleme schneller lösen und kontinuierlich Ergebnisse liefern, die die Erwartungen der Kunden übertreffen.
 
-## <a name="is-azure-data-studio-open-source"></a>Ist Azure Data Studio Open-Source?
+## <a name="is-azure-data-studio-open-source"></a>Ist Azure Data Studio ein Open-Source-Produkt?
 
-Der Quellcode für Azure Data Studio und der Datenanbieter ist auf GitHub verfügbar. Der Quellcode für das Front-End-Azure-Daten-Studio (die basierend auf Visual Studio Code) ist verfügbar unter ein Quellcode-Endbenutzer-Lizenzvertrag, die Rechte zum Ändern und verwenden Sie die Software, jedoch nicht zu verteilen oder hosten Sie es in einem Clouddienst bereitstellt. Der Quellcode für die Datenanbieter finden Sie unter MIT-Lizenz auf [ https://github.com/Microsoft/sqltoolsservice ](https://github.com/Microsoft/sqltoolsservice).
+Der Quellcode für Azure Data Studio und die zugehörigen Datenanbieter sind auf GitHub verfügbar. Der Quellcode für das Front-End von Azure Data Studio (basiert auf Visual Studio Code) ist Gegenstand eines Lizenzvertrags für Quellcode, gemäß dem die Software zwar geändert und verwendet, aber nicht weitervertrieben oder auf einem Clouddienst gehostet werden darf. Den Quellcode für die Datenanbieter finden Sie in der MIT-Lizenz unter [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice).
 
-## <a name="do-we-plan-to-open-source-ssms"></a>Möchten wir die open Source SSMS?
+## <a name="do-we-plan-to-open-source-ssms"></a>Soll es in Zukunft eine Open-Source-Version von SSMS geben?
 
-Nein. Allerdings sind der nächsten Generation betriebssystemübergreifenden-CLI und GUI-Tools mit open-Source. Beispielsweise sind die Mssql-Erweiterung für Visual Studio Code und Mssql-Skripter Msql-CLI für alle open Source auf GitHub. Der Quellcode für Azure Data Studio ist auf GitHub verfügbar.  
+Nein. Die CLI für mehrere Betriebssysteme und die GUI-Tools der nächsten Generation werden allerdings als Open-Source-Produkte angeboten. Beispielsweise sind für die MSSQL-Erweiterung für VS Code, den MSSQL-Scripter und die MSSQL-CLI in GitHub Open-Source-Versionen verfügbar. Der Quellcode für Azure Data Studio ist auf GitHub verfügbar.  
 
-## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Nun, da Azure Data Studio, plant Microsoft, SSMS und SSDT als veraltet kennzeichnen? 
+## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Plant Microsoft nun, da es Azure Data Studio gibt, SSMS und SSDT als veraltet zu kennzeichnen? 
 
-Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden und Multi-DB-CLI und GUI-Tools weiterhin Investitionen in die wichtigsten Windows-Tools (SSMS, SSDT, PowerShell). Ziel ist es, Kunden anbieten, verwenden Sie die gewünschten Tools für die Plattformen ihrer Wahl für ihre Szenarien. Azure Data Studio enger konzentriert sich auf die Erfahrungen mit abfragebearbeitung und Datenentwicklung, die Untersuchung zeigte ist die am meisten verwendeten-Funktion in SQL Server Management Studio durch eine Zehnerpotenz. Außerdem stehen zusätzliche hochwertige Verwaltungsfunktionen wie z. B. Sicherung, Wiederherstellung, Agent-auftragsverwaltung und erstellen als Erweiterungen in Azure Data Studio zur Verfügung. Azure Data Studio ist auch plattformübergreifende, sodass Benutzer auf der Plattform Ihrer Wahl arbeiten. SQL Server Management Studio wird allerdings weiterhin bietet die breiteste Palette an Verwaltungsfunktionen, und der bleibt das führende Tool für Verwaltungsaufgaben für die Plattform. 
+Nein. Wir werden zusätzlich zur nächsten Generation der CLI für mehrere Betriebssysteme und mehrere Datenbanken und der GUI-Tools weiter in die Vorzeigetools von Windows (SSMS, SSDT, PowerShell) investieren. Ziel ist es, Kunden die Möglichkeit zu bieten, für alle Szenarios die Tools und Plattformen zu verwenden, mit denen sie gern arbeiten. Der Schwerpunkt von Azure Data Studio liegt in erster Linie auf den Funktionen für die Bearbeitung von Abfragen und die Datenentwicklung, da diese Studien zufolge die am häufigsten in SQL Server Management Studio verwendet werden. Zusätzlich sind weitere tolle administrative Funktionen wie die Sicherung, Wiederherstellung, Agent-Auftragsverwaltung und Serverprofilerstellung auch als Erweiterungen in Azure Data Studio verfügbar. Azure Data Studio kann plattformübergreifend verwendet werden und ermöglicht es Benutzern, mit der Plattform ihrer Wahl zu arbeiten. SQL Server Management Studio bietet jedoch weiterhin die meisten administrativen Funktionen und bleibt unser wichtigstes Tool für Aufgaben zur Plattformverwaltung. 
 
-## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Wenn sollte ich mich mit Azure Data Studio und SQL Server Management Studio?
+## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Wann sollte ich Azure Data Studio und wann besser SQL Server Management Studio verwenden?
 
-*Verwenden von Azure Data Studio, wenn Sie:*
+*Verwenden Sie Azure Data Studio, wenn Folgendes der Fall ist:*
 
-- Verbringen Sie die meiste Zeit bearbeiten oder Ausführen von Abfragen.
-- Benötigen Sie die Möglichkeit, schnell Diagramm- und Visualisieren von Resultsets.
-- Können die meisten administrative Aufgaben über das integrierte Terminal mithilfe von Sqlcmd oder Powershell ausführen.
-- Müssen Sie minimale Assistenten arbeiten.
-- Müssen Sie sich nicht für umfassende administrative oder verwandte Plattformkonfiguration.
-- Unter MacOS oder Linux ausgeführt werden müssen.
+- Sie verbringen einen Großteil Ihrer Zeit mit der Bearbeitung oder Ausführung von Abfragen.
+- Sie benötigen eine Funktion, mit der Sie Resultsets schnell visualisieren und in Diagrammen darstellen können.
+- Sie können die meisten administrativen Aufgaben mithilfe von sqlcmd oder PowerShell über das integrierte Terminal ausführen.
+- Sie benötigen nur wenige Assistentenfunktionen.
+- Sie müssen keine detaillierten administrativen oder plattformbezogenen Konfiguration durchführen.
+- Sie verwenden macOS oder Linux.
 
-*SQL Server Management Studio verwenden, wenn Sie:*
+*Verwenden Sie SQL Server Management Studio, wenn Folgendes der Fall ist:*
 
-- Verbringen Sie die meiste Zeit Aufgaben für die datenbankverwaltung.
-- Komplexe Verwaltungs- oder Platform-Konfiguration durchführen.
-- Sicherheitsverwaltung, einschließlich benutzerverwaltung, sicherheitsrisikobewertung und Konfiguration von Sicherheitsfunktionen durchführen.
-- Müssen Sie Performance tuning Berater und Dashboards verwenden.
-- Verwenden Sie Datenbankdiagramme und Tabellen-Designer.
-- Import/Export von DACPAC-Dateien durchführen.
-- Benötigen Sie Zugriff auf registrierte Server.
-- Stellen Sie die Sqlcmd-Modus verwenden, live-Abfragestatistik oder Clientstatistiken.
+- Sie verbringen einen Großteil Ihrer Zeit mit Aufgaben für die Datenbankverwaltung.
+- Sie führen komplexe administrative Konfigurationen oder Plattformkonfigurationen durch.
+- Die Sicherheitsverwaltung, einschließlich der Benutzerverwaltung, der Sicherheitsrisikobewertung und der Konfiguration von Sicherheitsfeatures, gehört zu Ihren Aufgaben.
+- Sie benötigen Ratgeber und Dashboards für die Leistungsoptimierung.
+- Sie verwenden Datenbankdiagramme und Tabellen-Designer.
+- Sie importieren bzw. exportieren DACPAC-Pakete.
+- Sie benötigen Zugriff auf registrierte Server.
+- Sie verwenden den sqlcmd-Modus, Liveabfragestatistiken oder Clientstatistiken.
 
-## <a name="feature-comparison"></a>Funktionsvergleich zwischen "
+## <a name="feature-comparison"></a>Featurevergleich
 
-### <a name="shell-features"></a>Shell-features
+### <a name="shell-features"></a>Shellfeatures
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Azure-Anmeldung|Ja|Ja|
 |Dashboard|Ja| |
@@ -89,38 +89,38 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 |Objekt-Explorer|Ja|Ja|
 |Skripterstellung für Objekte|Ja|Ja|
 |Projektsystem|Ja||
-|Wählen Sie aus der Tabelle|Ja|Ja|
+|Select from Table (Aus Tabelle auswählen)|Ja|Ja|
 |Quellcodeverwaltung|Ja||
 |Aufgabenbereich|Ja||
 |Design|Ja||
-|Dunkel-Modus|Ja||
+|Dunkler Modus|Ja||
 |Azure-Ressourcen-Explorer|Vorschau||
 |Assistent zum Generieren von Skripts||Ja
-|Importieren/Exportieren DACPAC-Datei||Ja|
-|Objekt – Eigenschaften||Ja|
+|Import/Export DACPAC (DACPAC importieren/exportieren)||Ja|
+|Objekteigenschaften||Ja|
 |Tabellen-Designer||Ja|
 
 ### <a name="query-editor"></a>Abfrage-Editor
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Diagramm-Viewer|Ja||
-|Exportieren Sie Ergebnisse in CSV, JSON, XLSX|Ja||
+|Chart Viewer (Diagrammviewer)|Ja||
+|Export Results to CSV, JSON, XLSX (Ergebnissen als CSV-, JSON- oder XLSX-Datei exportieren)|Ja||
 |IntelliSense|Ja|Ja|
-|Codeausschnitte|Ja|Ja|
-|Plan angezeigt werden|Vorschau|Ja|
+|Ausschnitte|Ja|Ja|
+|Plan anzeigen|Vorschau|Ja|
 |Clientstatistiken||Ja|
-|Live-Abfragestatistik||Ja|
+|Live Query Stats (Live-Abfragestatistiken)||Ja|
 |Abfrageoptionen||Ja|
 |Ergebnisse in Datei||Ja|
 |Ergebnisse in Text||Ja|
-|Räumliche Viewer||Ja|
+|Spatial Viewer (Räumlicher Viewer)||Ja|
 |SQLCMD||Ja|
 |T-SQL-Debugger||Ja|
 
 ### <a name="operating-system-support"></a>Betriebssystemunterstützung
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|Ja|Ja|
 |macOS|Ja||
@@ -128,28 +128,28 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 
 ### <a name="data-engineering"></a>Datentechnik
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Externe Daten-Assistenten|Vorschau||
+|External Data Wizard (Assistent für externe Daten)|Vorschau||
 |HDFS-Integration|Vorschau||
 |Notebooks|Vorschau||
 
 ### <a name="database-administration"></a>Datenbankverwaltung
 
-|Feature|Azure Data Studio|SSMS|
+|Funktion|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Sicherung / Wiederherstellung|Ja|Ja|
-|Flatfile-Datei importieren|Vorschau|Ja|
+|Sicherung/Wiederherstellung|Ja|Ja|
+|Flat File Import (Flatfileimport)|Vorschau|Ja|
 |SQL-Agent|Vorschau|Ja|
 |SQL Profiler|Vorschau|Ja|
 |Always On||Ja|
 |Always Encrypted||Ja|
-|Assistent zum Kopieren von Daten||Ja|
-|Daten-Datenbankoptimierungsratgeber||Ja|
+|Copy Data Wizard (Assistent zum Kopieren von Daten)||Ja|
+|Data Tuning Advisor (Ratgeber für die Datenoptimierung)||Ja|
 |Datenbankdiagramme||Ja|
-|Fehler-Protokoll-Viewer||Ja|
+|Error Log Viewer (Fehlerprotokollanzeige)||Ja|
 |Wartungspläne||Ja|
-|Multi-Server-Abfrage||Ja|
+|Multi-Server Query (Multiserverabfrage)||Ja|
 |Richtlinienbasierte Verwaltung||Ja|
 |PolyBase||Ja|
 |Abfragespeicher||Ja|
@@ -160,33 +160,33 @@ Nein. Zusätzlich zu die nächste Generation von betriebssystemübergreifenden u
 |SQL Mail||Ja|
 |Template Explorer||Ja|
 |Sicherheitsrisikobewertung||Ja|
-|XEvent-Verwaltung||Ja|
+|XEvent Management (XEvent-Verwaltung)||Ja|
 
 
-## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio fehlt ein Feature, das in SSMS/SSDT ist. Fügen Sie sie hinzu?
+## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>In Azure Data Studio fehlt eine Funktion, die in SSMS bzw. SQL Server Data Tools (SSDT) enthalten ist. Soll das in Zukunft geändert werden?
 
-Es hängt Szenario &/Geschäftsbetrieb des Kunden erforderlich. Zum priorisieren, melden Sie einen Vorschlag auf [GitHub](https://github.com/microsoft/azuredatastudio/issues).
+Dies ist vom Szenario und von den Anforderungen des Kunden bzw. des Unternehmens abhängig. Machen Sie einen Vorschlag auf [GitHub](https://github.com/microsoft/azuredatastudio/issues), damit wir die Anfragen besser priorisieren können.
 
-## <a name="i-understand-azure-data-studio-and-the-mssql-extension-for-vs-code-are-powered-by-a-new-tools-service-that-uses-smo-apis-under-the-covers-is-smo-available-on-linux-and-macos"></a>Mir ist bewusst, dass es sich bei Studio für Azure Data und die Mssql-Erweiterung für Visual Studio Code durch einen neuen Dienst für die Tools basieren, die SMO-APIs im Hintergrund verwendet. Ist SMO wird unter Linux und MacOS verfügbar?
+## <a name="i-understand-azure-data-studio-and-the-mssql-extension-for-vs-code-are-powered-by-a-new-tools-service-that-uses-smo-apis-under-the-covers-is-smo-available-on-linux-and-macos"></a>Azure Data Studio und die MSSQL-Erweiterung für VS Code werden von einem neuen Tooldienst unterstützt, der im Hintergrund SQL Server Management Objects-APIs (SMO) verwendet. Ist SMO unter Linux und macOS verfügbar?
 
-Die SMO-APIs sind noch nicht verfügbar unter Linux oder MacOS in einer Weise genutzt werden. Wir haben eine Teilmenge der .NET Core, die wir brauchten für Azure Data Studio, und wir erweitern möchten, als Teil der Roadmap für die SMO-APIs portiert. Der SQL-Tools-Dienst ist auf GitHub: [ https://github.com/Microsoft/sqltoolsservice ](https://github.com/Microsoft/sqltoolsservice).
+Die SMO-APIs können unter Linux oder macOS noch nicht verarbeitet werden. Wir haben einen Teil der SMO-APIs auf .NET Core übertragen, da diese für Azure Data Studio benötigt wurden, und haben in unserer Roadmap zusätzliche Erweiterungen angegeben. SQL Tools Service finden Sie auf GitHub unter [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice).
 
-## <a name="do-you-plan-to-port-the-dacfx-apis-andor-sqlpackageexe-andor-ssdt-to-linux-and-macos"></a>Möchten Sie die DACFx-APIs und/oder sqlpackage.exe und/oder SSDT für Linux und MacOS-port?
+## <a name="do-you-plan-to-port-the-dacfx-apis-andor-sqlpackageexe-andor-ssdt-to-linux-and-macos"></a>Ist es geplant, die APIs für Microsoft SQL Server Data-Tier Application Framework (DACFx) und/oder die Datei „sqlpackage.exe“ und/oder SSDT für Linux und macOS zu integrieren?
 
-Es ist für die langfristige Roadmap. Zum priorisieren, melden Sie einen Vorschlag auf [GitHub](https://github.com/microsoft/azuredatastudio/issues).
+Langfristig ist dies geplant. Machen Sie einen Vorschlag auf [GitHub](https://github.com/microsoft/azuredatastudio/issues), damit wir die Anfragen besser priorisieren können.
 
-## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>Werden SQL PowerShell-Cmdlets werden unter Linux und MacOS verfügbar sein?
+## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>Werden in Zukunft SQL PowerShell-Cmdlets unter Linux und macOS zur Verfügung stehen?
 
-SQL PowerShell ist auf dem PowerShell-Katalog erhältlich und können Sie sie in Windows mit SQL Server auf einem beliebigen Standort, einschließlich SQL unter Linux funktioniert. Befindet sich Angebot SQL PowerShell-Cmdlets auf Linux und MacOS in der Roadmap enthalten. Zum priorisieren, melden Sie einen Vorschlag auf [GitHub](https://github.com/microsoft/azuredatastudio/issues).
+SQL PowerShell ist derzeit über den PowerShell-Katalog verfügbar und kann unter Windows zusammen mit SQL Server-Instanzen verwendet werden. Dabei spielt es keine Rolle, wo diese Instanzen ausgeführt werden, auch die Ausführung unter Linux stellt kein Problem dar. Wir planen, die SQL PowerShell-Cmdlets unter Linux und macOS in Zukunft anzubieten. Machen Sie einen Vorschlag auf [GitHub](https://github.com/microsoft/azuredatastudio/issues), damit wir die Anfragen besser priorisieren können.
 
-## <a name="who-usually-uses-azure-data-studio"></a>Wer verwendet in der Regel Studio für Azure Data?
+## <a name="who-usually-uses-azure-data-studio"></a>Wer verwendet in der Regel Azure Data Studio?
 
-Entwickler und Datenbankadministratoren sind in der Regel die Benutzer von Azure Data Studio.
+In der Regel wird Azure Data Studio von Entwicklern und Datenbankadministratoren verwendet.
 
-## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Integrieren Azure Data Studio lässt sich mit Azure SQL Data Warehouse?
+## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Kann Azure Data Studio in Azure SQL Data Warehouse integriert werden?
 
-Ja. Azure Data Studio-Unterstützung für Azure SQL Data Warehouse befindet sich derzeit in der Vorschau, zusammen mit Azure SQL-Datenbank verwaltete Instanz und SQL Server 2019 Big Data.
+Ja. Die Unterstützung von Azure Data Studio für Azure SQL Data Warehouse befindet sich derzeit genauso wie die Integration in verwaltete Azure SQL-Datenbank-Instanzen und Big-Data-Cluster für SQL Server 2019 in der Vorschauphase.
 
-## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>Warum ist Azure Data Studio wichtig, für die neue Version von SQL Server?
+## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>Warum ist Azure Data Studio wichtig für die neue Version von SQL Server?
 
-Wie SQL Server seine Funktionen in den Big Data-Bereich erweitert wird, benötigt es neuen Tools unterstützen die Anwendungsfälle. Aus diesem Grund wird Studio für Azure Data noch heute eine neue Benutzeroberfläche für die Vorschau der Unterstützung für SQL Server Big Data, einschließlich der ersten Auslieferung jemals Notebook-Benutzeroberfläche in das SQL Server-Toolset, und einen neuen Create External Table-Assistenten, die Zugriff auf Daten vom remote-SQL stellt Server- und Oracle-Instanzen schnell und einfach.
+Da die Funktionen von SQL Server auf den Big-Data-Bereich ausgeweitet werden sollen, werden neue Features benötigt. Aus diesem Grund gibt es ab heute eine neue Vorschauversion von Azure Data Studio, die Big-Data-Cluster für SQL Server unterstützt. Diese Version umfasst u. a. die erste Notebookfunktion aller SQL Server-Tools und einen neuen Assistenten für die Erstellung externer Tabellen, mit dem einfacher und schneller über Remoteinstanzen von SQL Server und Oracle auf Daten zugegriffen werden kann.

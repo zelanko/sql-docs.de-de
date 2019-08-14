@@ -9,108 +9,108 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077401"
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden Sie Visual Studio zum Erstellen von Datenbanken für SQL Server unter Linux
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Verwenden von Visual Studio zum Erstellen von Datenbanken für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) wird Visual Studio in eine leistungsstarke Entwicklungs- und Datenbank-Lebenszyklus (DLM) verwaltungsumgebung für SQL Server unter Linux. Sie können zu entwickeln, erstellen, testen und veröffentlichen Sie Ihre Datenbank aus einem quellcodeverwalteten Projekt aus, wie Sie den Anwendungscode entwickeln.
+SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Umgebung für Entwicklung und Datenbanklebenszyklus-Verwaltung (Database Lifecycle Management, DLM) für SQL Server für Linux um. Sie können Ihre Datenbank in einem Projekt mit Quellcodeverwaltung entwickeln, erstellen, testen und veröffentlichen, genauso wie Sie Ihren Anwendungscode entwickeln.
 
-## <a name="install-visual-studio-and-sql-server-data-tools"></a>Visual Studio und SQL Server Datatools installieren
+## <a name="install-visual-studio-and-sql-server-data-tools"></a>Installieren von Visual Studio und SQL Server Data Tools
 
-1. Wenn Sie nicht bereits Visual Studio auf Ihrem Windows-Computer installiert haben [Herunterladen Sie und installieren Sie Visual Studio]. Wenn Sie nicht über ein Visual Studio-Lizenz verfügen, wird Visual Studio Community Edition ist eine kostenlose, voll ausgestattete IDE für Studenten, Open Source- und einzelne Entwickler.
+1. Wenn Sie Visual Studio noch nicht auf dem Windows-Computer installiert haben, [laden Sie Visual Studio herunter, und installieren Sie es]. Wenn Sie nicht über eine Visual Studio-Lizenz verfügen, können Sie die Visual Studio Community-Edition als kostenlose, voll ausgestattete IDE für Studenten, Open Source und einzelne Entwickler nutzen.
 
-2. Wählen Sie während der Installation von Visual Studio **benutzerdefinierte** für die **wählen Sie die Installationsart** Option. Klicken Sie auf **Weiter**.
+2. Wählen Sie während der Installation von Visual Studio **Benutzerdefiniert** für die Option **Wählen Sie die Installationsart aus** aus. Klicken Sie auf **Weiter**.
 
-3. Wählen Sie **Microsoft SQL Server Data Tools**, **Git für Windows**, und **GitHub-Erweiterung für Visual Studio** aus der Auswahlliste der Funktion.
+3. Wählen Sie in der Featureauswahlliste **Microsoft SQL Server Data Tools**, **Git für Windows** und **GitHub-Erweiterung für Visual Studio** aus.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/ssdt-setup.png" alt="ssdt setup" style="width: 400px;"/>
 
-4. Weiter, und schließen Sie die Installation von Visual Studio. Es kann einige Minuten dauern.
+4. Fahren Sie fort, und schließen Sie die Installation von Visual Studio ab. Dies kann einige Minuten dauern.
 
-## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Aktualisieren von SQL Server Data Tools auf SSDT 17.0 RC-Version
+## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Upgrade von SQL Server Data Tools auf SSDT 17.0 RC-Release
 
-SQL Server unter Linux wird von SSDT-Version 17.0 RC oder höher unterstützt.
+SQL Server für Linux wird von SSDT Version 17.0 RC oder höher unterstützt.
 
-* [Herunterladen und installieren Sie SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
+* [Laden Sie SSDT 17.0 RC2 herunter, und installieren Sie sie](https://go.microsoft.com/fwlink/?linkid=837939).
 
-## <a name="create-a-new-database-project-in-source-control"></a>Erstellen eines neuen Datenbankprojekts in der quellcodeverwaltung
+## <a name="create-a-new-database-project-in-source-control"></a>Erstellen eines neuen Datenbankprojekts in der Quellcodeverwaltung
 
 1. Starten Sie Visual Studio.
 
-2. Wählen Sie **Team Explorer** auf die **Ansicht** Menü. 
+2. Wählen Sie **Team Explorer** im Menü **Ansicht** aus. 
 
-3. Klicken Sie auf **neu** in **lokales Git-Repository** im Abschnitt der **Connect** Seite.
+3. Klicken Sie im Abschnitt **Lokales Git-Repository** auf der Seite **Verbinden** auf **Neu**.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Klicken Sie auf **Erstellen**. Nach lokalen Git-Repositorys erstellt wird, doppelklicken klicken Sie auf **SSDTRepo**.
+3. Klicken Sie auf **Erstellen**. Nachdem das lokale Git-Repository erstellt wurde, doppelklicken Sie auf **SSDTRepo**.
 
-4. Klicken Sie auf **neu** in die **Lösungen** Abschnitt. Wählen Sie **SQL Server** unter **andere Sprachen** Knoten in der **neues Projekt** Dialogfeld.
+4. Klicken Sie im Abschnitt **Projektmappen** auf **Neu**. Wählen Sie im Dialogfeld **Neues Projekt** unter dem Knoten **Andere Sprachen** die Option **SQL Server** aus.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/new-project.png" alt="local repository" style="width: 480px;"/>
 
-5. Geben Sie in **"tutorialdb"** ein, und klicken Sie auf **OK** um ein neues Datenbankprojekt zu erstellen.
+5. Geben Sie **TutorialDB** als Name ein, und klicken Sie auf **OK**, um ein neues Datenbankprojekt zu erstellen.
 
-## <a name="create-a-new-table-in-the-database-project"></a>Erstellen Sie eine neue Tabelle im Datenbankprojekt
+## <a name="create-a-new-table-in-the-database-project"></a>Erstellen einer neuen Tabelle im Datenbankprojekt
 
-1. Wählen Sie **Projektmappen-Explorer** auf die **Ansicht** Menü.
+1. Wählen Sie **Projektmappen-Explorer** im Menü **Ansicht** aus.
 
-2. Öffnen Sie die Datenbank-Menü "Projekt", indem Sie mit der rechten Maustaste auf **"tutorialdb"** im Projektmappen-Explorer.
+2. Öffnen Sie das Datenbankprojektmenü, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf **TutorialDB** klicken.
 
-3. Wählen Sie **Tabelle** unter **hinzufügen**.
+3. Wählen Sie **Tabelle** unter **Hinzufügen** aus.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/create-table.png" alt="create table" style="width: 480px;"/>
 
-4. Fügen Sie mithilfe der Tabellen-Designer zwei Spalten Name hinzu `nvarchar(50)` und den Speicherort `nvarchar(50)`, wie in der Abbildung dargestellt. SSDT generiert die `CREATE TABLE` Skript, wenn Sie die Spalten im Designer hinzufügen.
+4. Fügen Sie mit dem Tabellen-Designer die zwei Spalten „Name“ `nvarchar(50)` und „Location“ `nvarchar(50)` wie in der Abbildung dargestellt hinzu. SSDT generiert das `CREATE TABLE`-Skript, wenn Sie die Spalten im Designer hinzufügen.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/add-columns.png" alt="add columns" style="width: 480px;"/>
 
-5. Speichern Sie die **Table1.sql** Datei.
+5. Speichern Sie die Datei **Table1.sql**.
 
-## <a name="build-and-validate-the-database"></a>Erstellen Sie und überprüfen Sie die Datenbank
+## <a name="build-and-validate-the-database"></a>Erstellen und Validieren der Datenbank
 
-1. Öffnen Sie auf die Datenbank-Menü "Projekt" **"tutorialdb"** , und wählen Sie **erstellen**. SSDT kompiliert SQL-Quellcodedateien im Projekt und erstellt eine Datenebenen-Paketdatei (DACPAC-Datei). Dies kann zum Veröffentlichen einer Datenbank in Ihrer SQL Server-Instanz unter Linux verwendet werden. 
+1. Öffnen Sie das Datenbankprojektmenü auf **TutorialDB**, und wählen Sie **Erstellen** aus. SSDT kompiliert SQL-Quellcodedateien in Ihrem Projekt und erstellt eine DACPAC-Datei (Data-tier Application Package, Datenschichtanwendungs-Paket). Diese kann zum Veröffentlichen einer Datenbank auf Ihrer SQL Server-Instanz unter Linux verwendet werden. 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
-2. Überprüfen Sie die Build-Erfolgsmeldung im **Ausgabe** Fenster in Visual Studio. 
+2. Überprüfen Sie in Visual Studio die Builderfolgsmeldung im Fenster **Ausgabe**. 
 
-## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Veröffentlichen Sie die Datenbank in SQL Server-Instanz unter Linux
+## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Veröffentlichen der Datenbank auf der SQL Server-Instanz unter Linux
 
-1. Öffnen Sie auf die Datenbank-Menü "Projekt" **"tutorialdb"** , und wählen Sie **veröffentlichen**.
+1. Öffnen Sie das Datenbankprojektmenü auf **TutorialDB**, und wählen Sie **Veröffentlichen** aus.
 
-2. Klicken Sie auf **bearbeiten** , wählen Sie Ihre SQL Server-Instanz unter Linux.
+2. Klicken Sie auf **Bearbeiten**, um Ihre SQL Server-Instanz unter Linux auszuwählen.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-dialog.png" alt="publish dialog" style="width: 480px;"/>
 
-3. Geben Sie im Dialogfeld "Verbindung" in der IP-Adresse oder den Hostnamen der Name Ihrer SQL Server-Instanz unter Linux, Benutzername und Kennwort.
+3. Geben Sie im Verbindungsdialogfeld die IP-Adresse oder den Hostnamen Ihrer SQL Server-Instanz unter Linux, Benutzername und Kennwort ein.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/connection-dialog.png" alt="connection dialog" style="width: 400px;"/>
 
-4. Klicken Sie auf die **veröffentlichen** auf das Dialogfeld "Veröffentlichen" auf die Schaltfläche.
+4. Klicken Sie im Veröffentlichungsdialogfeld auf die Schaltfläche **Veröffentlichen**.
 
-5. Überprüfen Sie den Veröffentlichungsstatus der **Datentoolvorgänge** Fenster.
+5. Beachten Sie den Veröffentlichungsstatus im Fenster **Datentoolvorgänge**.
 
-6. Klicken Sie auf **Anzeigen der Ergebnisse** oder **Skript anzeigen** der Datenbank auf dem SQL Server unter Linux ergebnisveröffentlichung angezeigt.
+6. Klicken Sie auf **Ergebnisse anzeigen** oder **Skript anzeigen**, um Details zum Ergebnis der Datenbankveröffentlichung auf Ihrer Instanz von SQL Server für Linux anzuzeigen.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-Sie haben erfolgreich eine neue Datenbank auf SQL Server-Instanz unter Linux erstellt und wurden die Grundlagen der Entwicklung einer Datenbank mit einem Datenbankprojekt mit quellcodeverwaltung.
+Sie haben erfolgreich eine neue Datenbank auf der SQL Server-Instanz für Linux erstellt und die Grundlagen der Entwicklung einer Datenbank mit einem Datenbankprojekt mit Quellcodeverwaltung gelernt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie mit T-SQL vertraut sind, finden Sie unter [Tutorial: Schreiben von Transact-SQL-Anweisungen] und [Transact-SQL-Referenz (Datenbank-Engine)].
+Wenn T-SQL für Sie neu ist, finden Sie weitere Informationen unter [Tutorial: Schreiben von Transact-SQL-Anweisungen] und in der [Transact-SQL-Referenz (Datenbank-Engine)].
 
-Weitere Informationen zum Entwickeln von einer Datenbank mit SQL Data Tools finden Sie unter [SSDT MSDN-Dokumente]
+Weitere Informationen zum Entwickeln von Datenbanken mit SQL Data Tools finden Sie unter [SQL Server Data Tools].
 
-[Herunterladen Sie und installieren Sie Visual Studio]: https://www.visualstudio.com/downloads/
+[Herunterladen und Installieren von Visual Studio]:https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN-Dokumente]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Schreiben von Transact-SQL-Anweisungen]: https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL-Referenz (Datenbank-Engine)]: https://msdn.microsoft.com/library/bb510741.aspx
+[SQL Server Data Tools]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
+[Tutorial: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
+[Transact-SQL-Referenz (Datenbank-Engine)]:https://msdn.microsoft.com/library/bb510741.aspx

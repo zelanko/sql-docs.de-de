@@ -1,7 +1,7 @@
 ---
-title: Integriertes terminal
+title: Integriertes Terminal
 titleSuffix: Azure Data Studio
-description: Lernen Sie das integrierte Terminal in Azure Data Studio aus.
+description: Hier erfahren Sie mehr über das integrierte Terminal in Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,45 +11,45 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959539"
 ---
 # <a name="integrated-terminal"></a>Integriertes Terminal
 
-In [!INCLUDE[name-sos](../includes/name-sos-short.md)], Sie können ein integriertes Terminal öffnen, der anfänglich im Stammverzeichnis des Arbeitsbereichs ab. Dies kann praktisch sein, da Sie keine Windows wechseln, oder ändern den Status einer vorhandenen Terminal aus, um eine schnelle Befehlszeilenaufgabe ausführen.
+In [!INCLUDE[name-sos](../includes/name-sos-short.md)] können Sie ein integriertes Terminal öffnen und am Stamm Ihres Arbeitsbereichs beginnen. Das ist möglicherweise ganz praktisch, da Sie weder zwischen Fenstern wechseln noch den Status eines vorhandenen Terminals ändern müssen, um eine einfache Befehlszeilenaufgabe auszuführen.
 
 So öffnen Sie das Terminal:
 
-* Verwenden der **STRG +'** Tastenkombination mit Akzentzeichen.
-* Verwenden der **Ansicht** | **integriertes Terminal** Menübefehl.
-* Aus der **Befehlspalette** (**STRG + UMSCHALT + P**), verwenden Sie die **: ein/aus integrierten Terminal** Befehl.
+* Verwenden Sie die Tastenkombination **STRG+`** mit dem Backtick.
+* Verwenden Sie den Menübefehl **Ansicht** | **Integriertes Terminal**.
+* Verwenden Sie in der **Befehlspalette** (**STRG+UMSCHALT+P**) den Befehl **Ansicht:Integriertes Terminal umschalten**.
 
-![Terminaldienste](media/integrated-terminal/terminal-screen.png)
+![Terminal](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> Sie können weiterhin eine externe Shell mit dem Explorer öffnen **in Eingabeaufforderung öffnen** Befehl (**in Terminal öffnen** unter Mac oder Linux), wenn Sie lieber außerhalb arbeiten [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> Sie können weiterhin eine externe Shell mit dem Explorer-Befehl **In Eingabeaufforderung öffnen** (**In Terminal öffnen** unter Mac oder Linux) öffnen, wenn Sie lieber außerhalb von [!INCLUDE[name-sos](../includes/name-sos-short.md)] arbeiten möchten.
 
-## <a name="managing-multiple-terminals"></a>Verwalten von mehreren Terminals
+## <a name="managing-multiple-terminals"></a>Verwalten mehrerer Terminals
 
-Sie erstellen mehrere Terminals für unterschiedliche Speicherorte und problemlos zwischen diesen navigieren. Terminaldienste-Instanzen können hinzugefügt werden, indem Sie auf das plus-Symbol auf der oberen rechten Ecke der der **TERMINAL** panel oder durch Auslösen der **STRG + UMSCHALT +'** Befehl. Dies erstellt einen weiteren Eintrag in der Dropdownliste aus, die verwendet werden kann, um zwischen diesen wechseln.
+Sie können mehrere Terminals erstellen, die an verschiedenen Orten geöffnet sind, und ganz bequem zwischen diesen Terminals navigieren. Terminalinstanzen können Sie hinzufügen, indem Sie auf das Pluszeichen oben rechts im Panel **TERMINAL** klicken oder den Befehl **STRG+UMSCHALT+`** eingeben. Damit wird ein weiterer Eintrag in der Dropdownliste erstellt, über den Sie zwischen den Terminalinstanzen wechseln können.
 
 ![Mehrere Terminals](media/integrated-terminal/terminal-multiple-instances.png)
 
-Entfernen Sie die Terminaldienste Hostinstanzen durch Drücken der Papierkorb können auf die Schaltfläche.
+Entfernen Sie Terminalinstanzen, indem Sie auf die Schaltfläche mit dem Papierkorb klicken.
 
 > [!TIP]
-> Wenn Sie mehrere Terminals häufig verwenden, können Sie tastenzuordnungen für Hinzufügen der `focusNext`, `focusPrevious` und `kill` Befehle beschrieben, die in der [Tastenbindungen Abschnitt](#key-bindings) um Navigation zwischen ihnen die Verwendung der Tastatur zu ermöglichen.
+> Wenn Sie häufig mehrere Terminals verwenden, können Sie für die Befehle `focusNext`, `focusPrevious` und `kill` die im Abschnitt [Tastenzuordnungen](#key-bindings) beschriebenen Tastenzuordnungen hinzufügen, um eine Navigation über die Tastatur zu ermöglichen.
 
 ## <a name="configuration"></a>Konfiguration
 
-Die Shell verwendet standardmäßig `$SHELL` unter Linux und MacOS, PowerShell unter Windows 10 und cmd.exe in früheren Versionen von Windows. Dies können durch Festlegen von manuell überschrieben werden `terminal.integrated.shell.*` in [Einstellungen](settings.md). Argumente für die terminal-Shell unter Linux und MacOS verwenden, übergeben werden können die `terminal.integrated.shellArgs.*` Einstellungen.
+Die verwendete Shell verwendet standardmäßig `$SHELL` unter Linux und macOS, PowerShell unter Windows 10 und cmd.exe unter früheren Versionen von Windows. Diese Einstellungen können Sie manuell überschreiben, indem Sie `terminal.integrated.shell.*` in [settings](settings.md) festlegen. Argumente können unter Linux und macOS mithilfe der Einstellung `terminal.integrated.shellArgs.*` an die Terminalshell übergeben werden.
 
 ### <a name="windows"></a>Windows
 
-Ordnungsgemäße Konfiguration der Shell auf Windows, ist eine Frage, suchen die richtige ausführbare Datei, und aktualisieren die Einstellung. Im folgenden finden Sie eine Liste der allgemeinen ausführbare Shelldateien und ihren Standardspeicherorten an:
+Bei der ordnungsgemäßen Konfiguration der Shell unter Windows kommt es darauf an, die richtige ausführbare Datei zu finden und die Einstellung zu aktualisieren. Im Folgenden finden Sie eine Liste mit gängigen ausführbaren Shelldateien und deren Standardspeicherorten:
 
 ```json
 // 64-bit cmd if available, otherwise 32-bit
@@ -63,91 +63,91 @@ Ordnungsgemäße Konfiguration der Shell auf Windows, ist eine Frage, suchen die
 ```
 
 > [!NOTE]
-> Als ein integriertes Terminal verwendet werden soll, muss die Shell ausführbare Datei eine Konsolenanwendung, damit `stdin/stdout/stderr` können umgeleitet werden.
+> Damit die Verwendung als integriertes Terminal möglich ist, muss es sich bei der ausführbaren Shelldatei um eine Konsolenanwendung handeln, sodass `stdin/stdout/stderr` umgeleitet werden kann.
 
 > [!TIP]
-> Die integrierte terminal-Shell ausgeführt wird, mit den Berechtigungen des [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Wenn Sie einen Shell-Befehl mit erhöhten Berechtigungen (Administrator) oder andere Berechtigungen ausführen müssen, können Plattform-Dienstprogramme wie z. B. `runas.exe` in einem Terminal aus.
+> Die integrierte Terminalshell wird mit den Berechtigungen von [!INCLUDE[name-sos](../includes/name-sos-short.md)] ausgeführt. Wenn Sie einen Shellbefehl mit erhöhten Rechten (Administratorrechten) oder anderen Berechtigungen ausführen müssen, können Sie Plattformdienstprogramme wie `runas.exe` in einem Terminal verwenden.
 
-### <a name="shell-arguments"></a>Shell-Argumente
+### <a name="shell-arguments"></a>Shellargumente
 
-Sie können Argumente an die Shell übergeben, wenn er gestartet wird.
+Sie können Shellargumente an die Shell übergeben, wenn diese gestartet wird.
 
-Beispielsweise, um das Aktivieren von Bash als Anmeldeshell ausführen (führt `.bash_profile`), übergeben Sie die `-l` Argument (mit doppelten Anführungszeichen):
+Um beispielsweise die Ausführung von Bash als Anmelde-Shell (wodurch `.bash_profile` ausgeführt wird) zu ermöglichen, übergeben Sie das Argument `-l` (mit doppelten Anführungszeichen):
 
 ```json
 // Linux
 "terminal.integrated.shellArgs.linux": ["-l"]
 ```
 
-## <a name="terminal-display-settings"></a>Der Terminalserver-Anzeigeeinstellungen
+## <a name="terminal-display-settings"></a>Einstellungen für die Terminalanzeige
 
-Sie können die integrierten terminal Schriftart und die Zeilenhöhe mit den folgenden Einstellungen anpassen:
+Die Schriftart und die Zeilenhöhe für das integrierte Terminal können Sie mit den folgenden Einstellungen anpassen:
 
 * `terminal.integrated.fontFamily`
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Der Terminalserver Tastenbindungen
+## <a id="key-bindings"></a>Tastenzuordnungen für das Terminal
 
-Die **anzeigen: Integriertes Terminal umschalten** Befehl gebunden ist **STRG +'** zum Umschalten der im integrierten terminal-Bereichs ein-und schnell.
+Der Befehl **Ansicht: Integriertes Terminal umschalten** ist der Tastenkombination **STRG+`** zugeordnet, sodass Sie das Panel des integrierten Terminals schnell ein- und ausblenden können.
 
-Im folgenden sind die Tastenkombinationen, um schnell in das integrierte Terminal zu navigieren:
+Im Folgenden finden Sie die Tastenkombinationen zum schnellen Navigieren im integrierten Terminal:
 
 |Key|Befehl|  
 |---|---|  
-|**STRG +\`**|Integriertes Terminal anzeigen|  
-|**STRG + UMSCHALT +\`**|Erstellen Sie neues terminal|  
-|**STRG + nach-oben**|Bildlauf nach oben|  
-|**STRG + nach-unten**|Scrollen Sie nach unten|  
-|**Strg + Bild**|Seite nach oben Scrollen|  
-|**Strg + Bild-ab**|Seite nach unten scrollen|  
-|**STRG + POS1**|Bildlauf zur obersten Zeile|  
-|**STRG + Ende**|Führen Sie einen Bildlauf nach unten|  
-|**STRG + K**|Deaktivieren Sie das terminal|  
+|**STRG+\`**|Integriertes Terminal anzeigen|  
+|**STRG+UMSCHALT+\`**|Neues Terminal erstellen|  
+|**STRG+NACH-OBEN**|Bildlauf nach oben|  
+|**STRG+NACH-UNTEN**|Bildlauf nach unten|  
+|**STRG+BildAuf**|Bildlauf nach oben für Seite|  
+|**STRG+BildAb**|Bildlauf nach unten für Seite|  
+|**STRG+POS1**|Bildlauf nach oben|  
+|**STRG+ENDE**|Bildlauf nach unten|  
+|**STRG+K**|Terminal löschen|  
 
-Andere Terminalbefehle stehen und an die bevorzugten Tastenkombinationen gebunden werden können.
+Es sind weitere Terminalbefehle verfügbar, denen Sie die gewünschten Tastenkombinationen zuordnen können.
 
 Die Überladungen sind:
 
-* `workbench.action.terminal.focus`: Das Terminal zu konzentrieren. Dies ist wie ein/aus, aber der Schwerpunkt liegt das Terminal nicht ausgeblendet, wenn es sichtbar ist.
-* `workbench.action.terminal.focusNext`: Geht es um die nächste Terminaldienste-Instanz.
-* `workbench.action.terminal.focusPrevious`: Liegt der Schwerpunkt der vorherigen Terminaldienste-Instanz.
-* `workbench.action.terminal.kill`: Entfernen Sie die aktuelle Instanz des Terminalserver.
-* `workbench.action.terminal.runSelectedText`: Führen Sie den markierten Text in der terminal-Instanz.
-* `workbench.action.terminal.runActiveFile`: Führen Sie die aktive Datei in der terminal-Instanz.
+* `workbench.action.terminal.focus`: Blendet das Terminal ein. Dieser Befehl entspricht dem Umschaltbefehl, blendet jedoch das Terminal ein, statt es auszublenden, sofern es angezeigt wird.
+* `workbench.action.terminal.focusNext`: Blendet die nächste Terminalinstanz ein.
+* `workbench.action.terminal.focusPrevious`: Blendet die vorherige Terminalinstanz ein.
+* `workbench.action.terminal.kill`: Entfernt die aktuelle Terminalinstanz.
+* `workbench.action.terminal.runSelectedText`: Führt den ausgewählten Text in der Terminalinstanz aus.
+* `workbench.action.terminal.runActiveFile`: Führt die aktive Datei in der Terminalinstanz aus.
 
 ### <a name="run-selected-text"></a>Ausführen von ausgewähltem Text
 
-Verwenden der `runSelectedText` Befehl, markieren Sie Text in einem Editor, und führen Sie den Befehl **Terminal: Ausführen von ausgewähltem Text in aktiven Terminal** über die **Befehlspalette** (**STRG + UMSCHALT + P**). Das Terminal wird versucht, den markierten Text ausführen:
+Wenn Sie den Befehl `runSelectedText` verwenden möchten, wählen Sie in einem Editor Text aus und führen Sie den Befehl **Terminal: Ausgewählten Text im aktiven Terminal ausführen** über die **Befehlspalette** (**STRG+UMSCHALT+P**) aus. Das Terminal versucht, den ausgewählten Text auszuführen:
 
-![Ausführen von ausgewähltem text](media/integrated-terminal/terminal_run_selected.png)
+![Ausführen von ausgewähltem Text](media/integrated-terminal/terminal_run_selected.png)
 
-Wenn kein Text im aktiven Editor ausgewählt ist, wird die Zeile, der der Cursor befindet im Terminal ausgeführt.
+Wenn im aktiven Editor kein Text ausgewählt wird, wird im Terminal die Zeile, in der sich der Cursor befindet, ausgeführt.
 
-### <a name="copy--paste"></a>Kopieren und einfügen
+### <a name="copy--paste"></a>Kopieren und Einfügen
 
-Die tastenzuordnungen zum Kopieren und Einfügen führen Sie die Plattform-Standards:
+Die Tastenzuordnungen zum Kopieren und Einfügen entsprechen den Standards der jeweiligen Plattform:
 
-* Linux: **STRG + UMSCHALT + C** und **STRG + UMSCHALT + V**
-* Mac: **Cmd + C** und **Cmd + V**
-* Windows: **STRG + C** und **STRG + V**
+* Linux: **STRG+UMSCHALT+C** und **STRG+UMSCHALT+V**
+* Mac: **CMD+C** und **CMD+V**
+* Windows: **STRG+C** und **STRG+V**
 
 ### <a name="find"></a>Suchen
 
-Das integrierte Terminal hat grundlegende Suchfunktionen, die mit ausgelöst werden, kann **STRG + F**.
+Das integrierte Terminal verfügt über eine einfache Suchfunktion, die mit der Tastenkombination **STRG+F** aufgerufen werden kann.
 
-Wenn Sie möchten **STRG + F** um mit der Shell nicht das Widget "Suchen" unter Linux und Windows gestartet fortzufahren, müssen Sie die tastenzuordnung entfernen wie folgt:
+Wenn Sie mit **STRG+F** unter Linux und Windows nicht das Suchwidget aufrufen, sondern stattdessen zur Shell wechseln möchten, müssen Sie die Tastenzuordnung wie folgt entfernen on Linux and Windows:
 
 ```js
 { "key": "ctrl+f", "command": "-workbench.action.terminal.focusFindWidget",
                       "when": "terminalFocus" },
 ```
 
-### <a name="rename-terminal-sessions"></a>Benennen Sie terminalsitzungen
+### <a name="rename-terminal-sessions"></a>Umbenennen von Terminalsitzungen
 
-Integrierte terminalsitzungen können nun umbenannt werden mithilfe der **Terminal: Benennen Sie** (`workbench.action.terminal.rename`) Befehl. Der neue Name wird in der terminal Auswahl-Dropdownliste angezeigt.
+Sitzungen mit dem integrierten Terminal können nun mit dem Befehl **Terminal: (`workbench.action.terminal.rename`) umbenennen** umbenannt werden. Der neue Name wird in der Dropdownliste für die Terminalauswahl angezeigt.
 
-### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Erzwingen die Tastenkombinationen, um über das Terminal zu übergeben.
+### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Erzwingen, dass Tastenzuordnungen an das Terminal weitergeleitet werden
 
-Während der Fokus im integrierten Terminal ist, funktionieren viele tastenzuordnungen nicht daran, dass die Tastatureingaben zu übergeben und von Terminal selbst genutzt werden. Die `terminal.integrated.commandsToSkipShell` Einstellung kann verwendet werden, um dieses Problem umgehen. Sie enthält ein Array von Befehlsnamen, deren tastenzuordnungen Verarbeitung von der Shell zu überspringen und stattdessen vom verarbeitet werden, die [!INCLUDE[name-sos](../includes/name-sos-short.md)] Bindungssystem Schlüssel. Standardmäßig schließt dies alle Terminalserver tastenzuordnungen zusätzlich zu einer auf einige häufig verwendete tastenzuordnungen.
+Während der Fokus auf dem integrierten Terminal liegt, funktionieren viele Tastenzuordnungen nicht, da die Tastatureingaben an das Terminal selbst weitergeleitet und von diesem verwendet werden. Mit der Einstellung `terminal.integrated.commandsToSkipShell` kann dies umgangen werden. Sie enthält eine Reihe von Befehlsnamen, deren Tastenzuordnungen die Verarbeitung durch die Shell überspringen und stattdessen vom Tastenzuordnungssystem [!INCLUDE[name-sos](../includes/name-sos-short.md)] verarbeitet werden. Standardmäßig betrifft dies alle Tastenzuordnungen des Terminals sowie bestimmte weniger häufig verwendete Tastenzuordnungen.
 

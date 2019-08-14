@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von Linux-Repositorys für SQL Server 2017 und 2019
-description: Überprüfen Sie, und konfigurieren Sie des Quellcode-Repositorys für 2019 für SQL Server und SQL Server 2017 unter Linux. Das Quellrepository wirkt sich auf die Version von SQL Server, die während der Installation und Upgrade angewendet wird.
+title: Konfigurieren von Linux-Repositorys für SQL Server 2017 und 2019
+description: Überprüfen und konfigurieren Sie Quellrepositorys für SQL Server 2019 und SQL Server 2017 unter Linux. Das Quellrepository wirkt sich auf die Version von SQL Server aus, die während der Installation und beim Upgrade verwendet wird.
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/11/2019
@@ -9,143 +9,143 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67967521"
 ---
-# <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Konfigurieren von Repositorys zum Installieren und Aktualisieren von SQL Server unter Linux
+# <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Konfigurieren von Repositorys zum Installieren und Upgraden von SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-Dieser Artikel beschreibt, wie Sie die richtige Repository für SQL Server 2017 und 2019 für SQL Server-Installationen und Upgrades unter Linux konfigurieren. Im oberen Bereich die aktuelle Auswahl ist **Red Hat (RHEL)** .
+In diesem Artikel wird beschrieben, wie das richtige Repository für die Installation und das Upgrade von SQL Server 2017 und SQL Server 2019 unter Linux konfiguriert wird. Ganz oben in Ihrer aktuellen Auswahl steht **Red Hat (RHEL)** .
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-Dieser Artikel beschreibt, wie Sie die richtige Repository für SQL Server 2017 und 2019 für SQL Server-Installationen und Upgrades unter Linux konfigurieren. Im oberen Bereich die aktuelle Auswahl ist **SUSE (SLES)** .
+In diesem Artikel wird beschrieben, wie das richtige Repository für die Installation und das Upgrade von SQL Server 2017 und SQL Server 2019 unter Linux konfiguriert wird. Ganz oben in Ihrer aktuellen Auswahl steht **SUSE (SLES)** .
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-Dieser Artikel beschreibt, wie Sie die richtige Repository für SQL Server 2017 und 2019 für SQL Server-Installationen und Upgrades unter Linux konfigurieren. Im oberen Bereich die aktuelle Auswahl ist **Ubuntu**.
+In diesem Artikel wird beschrieben, wie das richtige Repository für die Installation und das Upgrade von SQL Server 2017 und SQL Server 2019 unter Linux konfiguriert wird. Ganz oben in Ihrer aktuellen Auswahl steht **Ubuntu**.
 ::: zone-end
 
 > [!TIP]
-> SQL Server-2019 Preview ist jetzt verfügbar! Um dies auszuprobieren, verwenden Sie diesen Artikel zum Konfigurieren der neuen **Mssql-Server-Preview** Repository. Installieren Sie dann mithilfe der Anweisungen in der [Installationshandbuch](sql-server-linux-setup.md).
+> Die Vorschauversion von SQL Server 2019 ist ab sofort verfügbar. Wenn Sie sie ausprobieren möchten, verwenden Sie diesen Artikel zum Konfigurieren des neuen **mssql-server-preview**-Repositorys. Führen Sie anschließend die Installation mithilfe der Anweisungen im [Installationshandbuch](sql-server-linux-setup.md) durch.
 
 ## <a id="repositories"></a> Repositorys
 
-Wenn Sie SQL Server unter Linux installieren, müssen Sie ein Microsoft-Repository konfigurieren. Dieses Repository dient zum Abrufen der Datenbank-Engine-Paket, **Mssql-Server**, und SQL Server-Pakete. Es gibt derzeit drei wichtigsten Repositorys:
+Wenn Sie SQL Server für Linux installieren, müssen Sie ein Microsoft-Repository konfigurieren. Dieses Repository dient zum Abrufen des Datenbank-Engine-Pakets **mssql-server** und der zugehörigen SQL Server-Pakete. Derzeit gibt es im Wesentlichen drei Repositorys:
 
-| Repository | Name | Beschreibung |
+| Repository | Name | und Beschreibung |
 |---|---|---|
-| **Vorschauversion (2017)** | **mssql-server** | SQL Server 2017 CTP und RC-Repository (nicht mehr unterstützt). |
-| **Vorschau (2019)** | **mssql-server-preview** | Vorschau der SQL Server-2019 und RC-Repository. |
-| **CU** | **mssql-server-2017** | SQL Server 2017 kumulativen Update (CU)-Repository. |
-| **GDR** | **mssql-server-2017-gdr** | SQL Server 2017-GDR-Repository für nur kritische Updates. |
+| **Vorschauversion (2017)** | **mssql-server** | SQL Server 2017 CTP und RC-Repository (wird nicht mehr unterstützt) |
+| **Vorschauversion (2019)** | **mssql-server-preview** | Vorschauversion von SQL Server 2019 und RC-Repository |
+| **CU** | **mssql-server-2017** | Repository zum kumulativen SQL Server 2017-Update (Cumulative Update, CU) |
+| **GDR** | **mssql-server-2017-gdr** | Repository zur allgemeinen Vertriebsversion (General Distribution Release, GDR) von SQL Server 2017, nur für kritische Updates |
 
-## <a id="cuversusgdr"></a> Kumulatives Update im Vergleich zu GDR
+## <a id="cuversusgdr"></a> Kumulatives Update und allgemeine Vertriebsversion im Vergleich
 
-Es ist wichtig zu beachten, dass es zwei Haupttypen von Repositorys für jede Verteilung gibt:
+Beachten Sie, dass es für jede Vertriebsversion im Wesentlichen zwei Arten von Repositorys gibt:
 
-- **Kumulative Updates (CU)** : Das kumulative Update (CU)-Repository enthält Pakete für die grundlegenden SQL Server-Version und alle Fehler behoben oder Verbesserungen seit diesem Release. Kumulative Updates sind spezifisch für ein Releaseversion, z. B. SQL Server 2017. Sie werden in regelmäßigen Abständen veröffentlicht.
+- **Kumulative Updates (Cumulative Updates, CU)** : Das CU-Repository enthält Pakete für das SQL Server-Basisrelease sowie sämtliche Fehlerbehebungen und Verbesserungen seit diesem Release. Kumulative Updates gelten für eine bestimmte Releaseversion wie SQL Server 2017. Sie werden in regelmäßigen Abständen veröffentlicht.
 
-- **GDR**: Das GDR-Repository enthält Pakete für die grundlegenden SQL Server-Version und nur wichtige Updates und Sicherheitsupdates seit diesem Release. Diese Updates werden auch die nächste CU-Version hinzugefügt.
+- **Allgemeine Vertriebsversion (General Distribution Release, GDR)** Das GDR-Repository enthält Pakete für das SQL Server-Basisrelease sowie ausschließlich kritische Fixes und Sicherheitsupdates seit diesem Release. Mit diesen Updates wird auch das nächste CU-Release ergänzt.
 
-Jede CU und GDR-Version enthält die vollständige SQL Server-Pakets und aller früheren Updates für das Repository. Beim Aktualisieren einer GDR-Version auf eine CU-Version wird durch die Änderung der Ihre konfigurierte Repositorys für SQL Server unterstützt. Sie können auch [downgrade](sql-server-linux-setup.md#rollback) für jede Version in Ihrer Hauptversion (Beispiel: 2017).
+Alle CU- und GDR-Releases enthalten das vollständige SQL Server-Paket sowie alle bisherigen Updates für das jeweilige Repository. Die Aktualisierung eines GDR-Releases auf ein CU-Release wird durch Ändern des konfigurierten Repositorys für SQL Server unterstützt. Ferner kann innerhalb einer Hauptversion auf ein beliebiges Release [herabgestuft](sql-server-linux-setup.md#rollback) werden (ab 2017).
 
 > [!NOTE]
-> Sie können ein GDR-Version aktualisieren, um CU zu einem beliebigen Zeitpunkt durch Ändern der Repositorys freizugeben. Aktualisieren von einer CU-Version mit einer GDR-Version wird nicht unterstützt.
+> Durch Ändern des Repositorys können Sie jederzeit von einem GDR-Release auf ein CU-Release aktualisieren. Die Aktualisierung von einem CU-Release auf ein GDR-Release wird dagegen nicht unterstützt.
 
 ## <a name="configure-repositories"></a>Konfigurieren von Repositorys
 
 ::: zone pivot="ld2-rhel"
-Verwenden Sie die Schritte in den folgenden Abschnitten, um Repositorys auf Red Hat Enterprise Server (RHEL) konfigurieren.
+Führen Sie die in den folgenden Abschnitten beschriebenen Schritte aus, um Repositorys unter Red Hat Enterprise Server (RHEL) zu konfigurieren.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-Verwenden Sie die Schritte in den folgenden Abschnitten, um Repositorys auf SUSE Linux Enterprise Server (SLES) konfigurieren.
+Führen Sie die in den folgenden Abschnitten beschriebenen Schritte aus, um Repositorys unter SUSE Linux Enterprise Server (SLES) zu konfigurieren.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
-Verwenden Sie die Schritte in den folgenden Abschnitten zum Konfigurieren von Repositorys auf Ubuntu.
+Führen Sie die in den folgenden Abschnitten beschriebenen Schritte aus, um Repositorys unter Ubuntu zu konfigurieren.
 ::: zone-end
 
-## <a name="check-for-previously-configured-repositories"></a>Kontrollkästchen für Repositorys, die zuvor konfigurierten
+## <a name="check-for-previously-configured-repositories"></a>Prüfen, ob bereits konfigurierte Repositorys vorhanden sind
 
 <!--RHEL-->
 ::: zone pivot="ld2-rhel"
-Zuerst stellen Sie sicher, ob Sie bereits ein SQL Server-Repository registriert haben.
+Überprüfen Sie zunächst, ob Sie bereits ein SQL Server-Repository registriert haben.
 
-1. Zeigen Sie die Dateien der **/etc/yum.repos.d** Verzeichnis mit dem folgenden Befehl:
+1. Zeigen Sie hierzu die Dateien im Verzeichnis **/etc/yum.repos.d** mit folgendem Befehl an:
 
    ```bash
    sudo ls /etc/yum.repos.d
    ```
 
-2. Suchen Sie nach einer Datei, die der SQL Server gespeichert, z. B. konfiguriert **Mssql-server.repo**.
+2. Suchen Sie nach einer Datei, mit der das SQL Server-Verzeichnis konfiguriert wird, z. B. **mssql-server.repo**.
 
-3. Druckt den Inhalt der Datei.
+3. Drucken Sie den Inhalt der Datei.
 
    ```bash
    sudo cat /etc/yum.repos.d/mssql-server.repo
    ```
 
-4. Die **Namen** -Eigenschaft ist das Repository konfiguriert. Sie können sie ermitteln, mit der Tabelle in der [Repositorys](#repositories) Abschnitt dieses Artikels.
+4. Bei der Eigenschaft **name** handelt es sich um das konfigurierte Repository. Sie können es anhand der Tabelle im Abschnitt [Repositorys](#repositories) in diesem Artikel ausfindig machen.
 
 ::: zone-end
 
 <!--SLES-->
 ::: zone pivot="ld2-sles"
-Zuerst stellen Sie sicher, ob Sie bereits ein SQL Server-Repository registriert haben.
+Überprüfen Sie zunächst, ob Sie bereits ein SQL Server-Repository registriert haben.
 
-1. Verwendung **Zypper Informationen** zum Abrufen von Informationen über alle zuvor konfigurierten Repository.
+1. Verwenden Sie **zypper info**, um Informationen zu einem zuvor konfigurierten Repository zu erhalten.
 
    ```bash
    sudo zypper info mssql-server
    ```
 
-2. Die **Repository** -Eigenschaft ist das Repository konfiguriert. Sie können sie ermitteln, mit der Tabelle in der [Repositorys](#repositories) Abschnitt dieses Artikels.
+2. Bei der Eigenschaft **Repository** handelt es sich um das konfigurierte Repository. Sie können es anhand der Tabelle im Abschnitt [Repositorys](#repositories) in diesem Artikel ausfindig machen.
 
 ::: zone-end
 
 <!--Ubuntu-->
 ::: zone pivot="ld2-ubuntu"
-Zuerst stellen Sie sicher, ob Sie bereits ein SQL Server-Repository registriert haben.
+Überprüfen Sie zunächst, ob Sie bereits ein SQL Server-Repository registriert haben.
 
-1. Anzeigen des Inhalts der **/etc/apt/sources.list** Datei.
+1. Zeigen Sie den Inhalt der Datei **/etc/apt/sources.list** an.
 
    ```bash
    sudo cat /etc/apt/sources.list
    ```
 
-2. Überprüfen Sie die Paket-URL für Mssql-Server. Sie können sie ermitteln, mit der Tabelle in der [Repositorys](#repositories) Abschnitt dieses Artikels.
+2. Überprüfen Sie die Paket-URL für mssql-server. Sie können es anhand der Tabelle im Abschnitt [Repositorys](#repositories) in diesem Artikel ausfindig machen.
 
 ::: zone-end
 
-## <a name="remove-old-repository"></a>Entfernen Sie alte repository
+## <a name="remove-old-repository"></a>Entfernen eines alten Repositorys
 
 <!--RHEL-->
 ::: zone pivot="ld2-rhel"
-Entfernen Sie ggf. das alte-Repository mit den folgenden Befehl aus.
+Entfernen Sie ggf. das alte Repository mit folgendem Befehl.
 
 ```bash
 sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ```
 
-Mit diesem Befehl wird davon ausgegangen, dass die Datei, die im vorherigen Abschnitt angegeben hatte **Mssql-server.repo**.
+Bei diesem Befehl wird davon ausgegangen, dass die im vorherigen Abschnitt ausfindig gemachte Datei den Namen **mssql-server.repo** hatte.
 
 ::: zone-end
 
 <!--SLES-->
 ::: zone pivot="ld2-sles"
-Entfernen Sie ggf. das alte Repository. Verwenden Sie eine der folgenden Befehle basierend auf den Typ des zuvor konfigurierten Repositorys.
+Entfernen Sie ggf. das alte Repository. Verwenden Sie je nach Typ des zuvor konfigurierten Repositorys einen der folgenden Befehle.
 
 | Repository | Befehl zum Entfernen |
 |---|---|
 | **Vorschauversion (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-| **Vorschau (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
+| **Vorschauversion (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
 | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
 | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
 
@@ -153,26 +153,26 @@ Entfernen Sie ggf. das alte Repository. Verwenden Sie eine der folgenden Befehle
 
 <!--Ubuntu-->
 ::: zone pivot="ld2-ubuntu"
-Entfernen Sie ggf. das alte Repository. Verwenden Sie eine der folgenden Befehle basierend auf den Typ des zuvor konfigurierten Repositorys.
+Entfernen Sie ggf. das alte Repository. Verwenden Sie je nach Typ des zuvor konfigurierten Repositorys einen der folgenden Befehle.
 
 | Repository | Befehl zum Entfernen |
 |---|---|
 | **Vorschauversion (2017)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
-| **Vorschau (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
+| **Vorschauversion (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 ::: zone-end
 
-## <a name="configure-new-repository"></a>Neues Repository konfigurieren
+## <a name="configure-new-repository"></a>Konfigurieren eines neuen Repositorys
 
 <!--RHEL-->
 ::: zone pivot="ld2-rhel"
-Konfigurieren Sie das neue Repository für SQL Server-Installationen und Upgrades verwendet. Verwenden Sie einen der folgenden Befehle aus, um das Repository Ihrer Wahl zu konfigurieren.
+Konfigurieren Sie das neue Repository, das für Installationen und Upgrades von SQL Server verwendet werden soll. Verwenden Sie einen der folgenden Befehle, um das Repository Ihrer Wahl zu konfigurieren.
 
-| Repository | Version | Befehl |
+| Repository | Versionsoptionen | Befehl |
 |---|---|---|
-| **Vorschau (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **Vorschauversion (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -180,11 +180,11 @@ Konfigurieren Sie das neue Repository für SQL Server-Installationen und Upgrade
 
 <!--SLES-->
 ::: zone pivot="ld2-sles"
-Konfigurieren Sie das neue Repository für SQL Server-Installationen und Upgrades verwendet. Verwenden Sie einen der folgenden Befehle aus, um das Repository Ihrer Wahl zu konfigurieren.
+Konfigurieren Sie das neue Repository, das für Installationen und Upgrades von SQL Server verwendet werden soll. Verwenden Sie einen der folgenden Befehle, um das Repository Ihrer Wahl zu konfigurieren.
 
-| Repository | Version | Befehl |
+| Repository | Versionsoptionen | Befehl |
 |---|---|---|
-| **Vorschau (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **Vorschauversion (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
 
@@ -192,23 +192,23 @@ Konfigurieren Sie das neue Repository für SQL Server-Installationen und Upgrade
 
 <!--Ubuntu-->
 ::: zone pivot="ld2-ubuntu"
-Konfigurieren Sie das neue Repository für SQL Server-Installationen und Upgrades verwendet.
+Konfigurieren Sie das neue Repository, das für Installationen und Upgrades von SQL Server verwendet werden soll.
 
-1. Importieren Sie die öffentlichen Repository GPG-Schlüssel.
+1. Importieren Sie die öffentlichen GPG-Schlüssel des Repositorys.
 
    ```bash
    sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. Verwenden Sie einen der folgenden Befehle aus, um das Repository Ihrer Wahl zu konfigurieren.
+2. Verwenden Sie einen der folgenden Befehle, um das Repository Ihrer Wahl zu konfigurieren.
 
-   | Repository | Version | Befehl |
+   | Repository | Versionsoptionen | Befehl |
    |---|---|---|
-   | **Vorschau (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
+   | **Vorschauversion (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
    | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 
-3. Führen Sie **apt-Get-Update**.
+3. Führen **apt-get update** aus.
 
    ```bash
    sudo apt-get update
@@ -218,21 +218,21 @@ Konfigurieren Sie das neue Repository für SQL Server-Installationen und Upgrade
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie die richtige Repository konfiguriert haben, können Sie zum Fortfahren [installieren](sql-server-linux-setup.md#platforms) oder [aktualisieren](sql-server-linux-setup.md#upgrade) SQL Server und der verbundenen Pakete aus dem Repository neue.
+Nachdem Sie das richtige Repository konfiguriert haben, können Sie SQL Server und alle zugehörigen Paket aus dem neuen Repository [installieren](sql-server-linux-setup.md#platforms) oder [aktualisieren](sql-server-linux-setup.md#upgrade).
 
 ::: zone pivot="ld2-rhel"
 > [!IMPORTANT]
-> An diesem Punkt möchten Sie verwenden die [RHEL-Schnellstart](quickstart-install-connect-red-hat.md), denken Sie daran, dass Sie die Ziel-Repository bereits konfiguriert haben. Wiederholen Sie diesen Schritt nicht in den Tutorials ein. Dies ist insbesondere dann, wenn Sie das GDR-Repository konfigurieren, da der Schnellstart das CU-Repository verwendet.
+> Wenn Sie sich für die Verwendung des [RHEL-Schnellstarts](quickstart-install-connect-red-hat.md) entscheiden, denken Sie daran, dass Sie das Zielrepository bereits konfiguriert haben. Wiederholen Sie diesen Schritt in den Tutorials nicht. Dies trifft vor allem dann zu, wenn Sie das GDR-Repository konfigurieren, da beim Schnellstart das CU-Repository verwendet wird.
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
 > [!IMPORTANT]
-> An diesem Punkt möchten Sie verwenden die [SLES Schnellstart](quickstart-install-connect-suse.md), denken Sie daran, dass Sie die Ziel-Repository bereits konfiguriert haben. Wiederholen Sie diesen Schritt nicht in den Tutorials ein. Dies ist insbesondere dann, wenn Sie das GDR-Repository konfigurieren, da der Schnellstart das CU-Repository verwendet.
+> Wenn Sie sich für die Verwendung des [SLES-Schnellstarts](quickstart-install-connect-suse.md) entscheiden, denken Sie daran, dass Sie das Zielrepository bereits konfiguriert haben. Wiederholen Sie diesen Schritt in den Tutorials nicht. Dies trifft vor allem dann zu, wenn Sie das GDR-Repository konfigurieren, da beim Schnellstart das CU-Repository verwendet wird.
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
 > [!IMPORTANT]
-> An diesem Punkt möchten Sie verwenden die [Ubuntu Schnellstart](quickstart-install-connect-ubuntu.md), denken Sie daran, dass Sie die Ziel-Repository bereits konfiguriert haben. Wiederholen Sie diesen Schritt nicht in den Tutorials ein. Dies ist insbesondere dann, wenn Sie das GDR-Repository konfigurieren, da der Schnellstart das CU-Repository verwendet.
+> Wenn Sie sich für die Verwendung des [Ubuntu-Schnellstarts](quickstart-install-connect-ubuntu.md) entscheiden, denken Sie daran, dass Sie das Zielrepository bereits konfiguriert haben. Wiederholen Sie diesen Schritt in den Tutorials nicht. Dies trifft vor allem dann zu, wenn Sie das GDR-Repository konfigurieren, da beim Schnellstart das CU-Repository verwendet wird.
 ::: zone-end
 
-Weitere Informationen zum Installieren von SQL Server 2017 unter Linux finden Sie unter [zur Installation von SQL Server unter Linux](sql-server-linux-setup.md).
+Weitere Informationen zum Installieren von SQL Server 2017 unter Linux finden Sie unter [Leitfaden für die Installation von SQL Server für Linux](sql-server-linux-setup.md).

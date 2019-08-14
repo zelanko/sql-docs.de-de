@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren von bereit Stellungen
+title: Konfigurieren von Bereitstellungen
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie eine Big Data Cluster Bereitstellung mit Konfigurationsdateien anpassen.
+description: Erfahren Sie, wie Sie eine Big-Data-Clusterbereitstellung mit Konfigurationsdateien anpassen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,32 +9,32 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d7559ecf9c7b17ca21c088ed531a347f88e89ee2
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419436"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969493"
 ---
-# <a name="configure-deployment-settings-for-big-data-clusters"></a>Konfigurieren von Bereitstellungs Einstellungen für Big Data Cluster
+# <a name="configure-deployment-settings-for-big-data-clusters"></a>Konfigurieren von Bereitstellungseinstellungen für Big-Data-Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Zum Anpassen der Konfigurationsdateien für die Cluster Bereitstellung können Sie einen beliebigen JSON-Format-Editor verwenden, z. b. vscode. Verwenden Sie den Befehl **azdata BDC config** , um diese bearbeitbaren Änderungen zu automatisieren. In diesem Artikel wird erläutert, wie Sie Big Data Cluster Bereitstellungen konfigurieren, indem Sie Bereitstellungs Konfigurationsdateien ändern. Es enthält Beispiele zum Ändern der Konfiguration für verschiedene Szenarien. Weitere Informationen zur Verwendung von Konfigurationsdateien in bereit Stellungen finden Sie im [Leitfaden zur Bereitstellung](deployment-guidance.md#configfile).
+Sie können einen beliebigen JSON-Format-Editor verwenden (z. B. VS Code), um die Konfigurationsdateien für Ihre Clusterbereitstellung anzupassen. Verwenden Sie den Befehl **azdata bdc config**, um für diese Bearbeitungen Skripts zu erstellen und sie zu automatisieren. In diesem Artikel wird erläutert, wie Sie Big-Data-Clusterbereitstellungen konfigurieren, indem Sie Bereitstellungskonfigurationsdateien ändern. Er enthält Beispiele zum Ändern der Konfiguration für verschiedene Szenarios. Weitere Informationen zur Verwendung von Konfigurationsdateien in Bereitstellungen finden Sie im [Leitfaden zur Bereitstellung](deployment-guidance.md#configfile).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
 - [Installieren Sie azdata](deploy-install-azdata.md).
 
-- Bei jedem der Beispiele in diesem Abschnitt wird davon ausgegangen, dass Sie eine Kopie einer der Standardkonfigurationen erstellt haben. Weitere Informationen finden Sie unter [Erstellen einer benutzerdefinierten Konfiguration](deployment-guidance.md#customconfig). Der folgende Befehl erstellt z. b. ein Verzeichnis `custom` namens, das zwei JSON-Bereitstellungs Konfigurationsdateien (" **Cluster. JSON** " und " **Control. JSON**") basierend auf der Standardkonfiguration " **AKS-dev-Test** " enthält:
+- Bei jedem der Beispiele in diesem Abschnitt wird davon ausgegangen, dass Sie eine Kopie einer der Standardkonfigurationen erstellt haben. Weitere Informationen finden Sie unter [Create a custom configuration (Erstellen einer benutzerdefinierten Konfiguration)](deployment-guidance.md#customconfig). Mit dem folgenden Befehl wird z. B. ein Verzeichnis namens `custom` erstellt, das die beiden JSON-Bereitstellungskonfigurationsdateien **cluster.json** und **control.json** enthält, basierend auf der Standardkonfiguration für **aks-dev-test**:
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
    ```
 
-## <a id="clustername"></a>Ändern des Cluster namens
+## <a id="clustername"></a> Ändern von Clusternnamen
 
-Der Cluster Name ist der Name des Big Data Clusters und der Kubernetes-Namespace, der bei der Bereitstellung erstellt wird. Der Wert wird im folgenden Teil der Bereitstellungs Konfigurationsdatei " **Cluster. JSON** " angegeben:
+Der Clustername entspricht dem Namen des Big-Data-Clusters und dem Kubernetes-Namespace, der bei der Bereitstellung erstellt wird. Er wird im folgenden Teil der Bereitstellungskonfigurationsdatei **cluster.json** angegeben:
 
 ```json
 "metadata": {
@@ -43,18 +43,18 @@ Der Cluster Name ist der Name des Big Data Clusters und der Kubernetes-Namespace
 },
 ```
 
-Der folgende Befehl sendet ein Schlüssel-Wert-Paar an den Parameter " **--JSON-Values** ", um den Big Data Cluster Namen in **Test-Cluster**zu ändern:
+Der folgende Befehl sendet ein Schlüssel-Wert-Paar an den **--json-values**-Parameter, um den Big-Data-Clusternamen in **test-cluster** zu ändern:
 
 ```bash
 azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
-> Der Name des Big Data Clusters darf nur alphanumerische Zeichen (Kleinbuchstaben) und keine Leerzeichen enthalten. Alle Kubernetes-Artefakte (Container, Pods, Zustands behaftete Sets, Dienste) für den Cluster werden in einem Namespace mit dem gleichen Namen wie der angegebene Cluster Name erstellt.
+> Der Name Ihres Big-Data-Clusters darf nur alphanumerische Zeichen (Kleinbuchstaben) und keine Leerzeichen enthalten. Alle Kubernetes-Artefakte (Container, Pods, zustandsbehaftete Sets, Dienste) für den Cluster werden in einem Namespace mit dem gleichen Namen wie der angegebene Clustername erstellt.
 
-## <a id="ports"></a>Endpunkt Anschlüsse aktualisieren
+## <a id="ports"></a> Aktualisieren von Endpunktports
 
-Endpunkte werden für den Controller in der **Datei "Control. JSON** " und für das Gateway und SQL Server Master Instanz in den entsprechenden Abschnitten in " **Cluster. JSON**" definiert. Der folgende Teil der " **Control. JSON** "-Konfigurationsdatei zeigt die Endpunkt Definitionen für den Controller an:
+Endpunkte werden für den Controller in der Datei **control.json** und für das Gateway und die SQL Server-Masterinstanz in den entsprechenden Abschnitten in der Datei **cluster.json** definiert. Der folgende Teil der Konfigurationsdatei **control.json** zeigt die Endpunktdefinitionen für den Controller an:
 
 ```json
 "endpoints": [
@@ -71,15 +71,15 @@ Endpunkte werden für den Controller in der **Datei "Control. JSON** " und für 
 ]
 ```
 
-Im folgenden Beispiel wird die Inline-JSON verwendet, um den Port für den **Controller** Endpunkt zu ändern:
+Im folgenden Beispiel wird das Inline-JSON-Format verwendet, um den Port für den **Controller**-Endpunkt zu ändern:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a>Pool Replikate konfigurieren
+## <a id="replicas"></a> Konfigurieren von Poolreplikaten
 
-Die Merkmale der einzelnen Pools (z. b. der Speicherpool) werden in der Konfigurationsdatei " **Cluster. JSON** " definiert. Der folgende Teil der **Datei "Cluster. JSON** " zeigt z. b. eine Speicherpool Definition:
+Die Merkmale der einzelnen Pools (z. B. des Speicherpools) werden in der Konfigurationsdatei **cluster.json** definiert. Der folgende Teil der Datei **cluster.json** zeigt z. B. eine Speicherpooldefinition an:
 
 ```json
 "pools": [
@@ -96,16 +96,16 @@ Die Merkmale der einzelnen Pools (z. b. der Speicherpool) werden in der Konfigur
 ]
 ```
 
-Sie können die Anzahl der Instanzen in einem Pool konfigurieren, indem Sie den Wert **Replikate** für die einzelnen Pools ändern. Im folgenden Beispiel wird die Inline-JSON verwendet, um diese Werte für die Speicher- `10` und `4` Datenpools in bzw. zu ändern:
+Sie können die Anzahl der Instanzen in einem Pool konfigurieren, indem Sie den **Replikate**-Wert für die einzelnen Pools ändern. Im folgenden Beispiel wird das Inline-JSON-Format verwendet, um diese Werte für die Speicher- und Datenpools in `10` bzw. `4` zu ändern:
 
 ```bash
 azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
 azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
-## <a id="storage"></a>Konfigurieren des Speichers
+## <a id="storage"></a> Konfigurieren des Speichers
 
-Sie können auch die Speicher Klasse und die Merkmale ändern, die für die einzelnen Pools verwendet werden. Im folgenden Beispiel wird dem Speicherpool eine benutzerdefinierte Speicher Klasse zugewiesen und die Größe des Anspruchs für persistente Volumes zum Speichern von Daten auf 100 GB aktualisiert. Erstellen Sie zuerst eine Datei Patch. JSON wie unten beschrieben, die zusätzlich zu *Typ* und *Replikaten* den neuen *Speicher* Abschnitt enthält.
+Sie können auch die Speicherklasse und die Merkmale ändern, die für die einzelnen Pools verwendet werden. Im folgenden Beispiel wird dem Speicherpool eine benutzerdefinierte Speicherklasse zugewiesen, und die Größe des Anspruchs für persistente Volumes zum Speichern von Daten wird auf 100 GB aktualisiert. Erstellen Sie zuerst eine „patch.json“-Datei (wie unten beschrieben), die zusätzlich zu *Typ* und *Replikaten* den neuen *Speicher*-Abschnitt enthält.
 
 ```json
 {
@@ -134,23 +134,23 @@ Sie können auch die Speicher Klasse und die Merkmale ändern, die für die einz
 }
 ```
 
-Anschließend können Sie die Konfigurationsdatei " **Cluster. JSON** " mit dem Befehl " **azdata BDC config Patch** " aktualisieren.
+Anschließend können Sie mit dem Befehl **azdata bdc config patch** die Konfigurationsdatei **cluster.json** aktualisieren.
 ```bash
 azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 ```
 
 > [!NOTE]
-> Eine auf **kubeadm-dev-Test** basierende Konfigurationsdatei besitzt keine Speicher Definition für jeden Pool, aber Sie können den obigen Prozess bei Bedarf hinzufügen.
+> Eine auf **kubeadm-dev-test** basierende Konfigurationsdatei besitzt keine Speicherdefinition für die einzelnen Pools, aber Sie können sie mit dem obigen Prozess bei Bedarf hinzufügen.
 
-Weitere Informationen zur Speicherkonfiguration finden Sie unter [Daten Persistenz mit SQL Server Big Data-Cluster auf Kubernetes](concept-data-persistence.md).
+Weitere Informationen zur Speicherkonfiguration finden Sie unter [Datenpersistenz mit Big-Data-Cluster für SQL Server in Kubernetes](concept-data-persistence.md).
 
-## <a id="sparkstorage"></a>Konfigurieren des Speicherpools ohne Spark
+## <a id="sparkstorage"></a> Konfigurieren von Speicherpools ohne Spark
 
-Sie können auch die Speicherpools so konfigurieren, dass Sie ohne Spark ausgeführt werden, und einen separaten Spark-Pool erstellen. Dies ermöglicht es Ihnen, Spark-Compute-Energie unabhängig vom Speicher zu skalieren. Informationen zum Konfigurieren des Spark-Pools finden Sie in der [JSON-Patchdatei im Beispiel](#jsonpatch) am Ende dieses Artikels.
+Sie können die Speicherpools auch so konfigurieren, dass sie ohne Spark ausgeführt werden, und einen separaten Spark-Pool erstellen. Dies ermöglicht es Ihnen, Spark-Computeleistung unabhängig vom Speicher zu skalieren. Informationen zum Konfigurieren des Spark-Pools finden Sie im [JSON-Patchdateibeispiel](#jsonpatch) am Ende dieses Artikels.
 
 
 
-Standardmäßig ist die Einstellung " **includespark** " für den Speicherpool auf "true" festgelegt. Daher müssen Sie das Feld " **includespark** " der Speicherkonfiguration hinzufügen, um Änderungen vorzunehmen. Die folgende JSON-Patchdatei zeigt, wie diese hinzugefügt wird.
+Standardmäßig ist die Einstellung **includeSpark** für den Speicherpool auf „true“ festgelegt. Daher müssen Sie das Feld **includeSpark** der Speicherkonfiguration hinzufügen, um Änderungen vorzunehmen. Die folgende JSON-Patchdatei zeigt, wie dieses hinzugefügt wird.
 
 ```json
 {
@@ -159,9 +159,9 @@ Standardmäßig ist die Einstellung " **includespark** " für den Speicherpool a
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
       "value": {
-        "type":"Storage",
-        "replicas":2,
-        "includeSpark":false
+       "type":"Storage",
+       "replicas":2,
+       "includeSpark":false
       }
     }
   ]
@@ -172,33 +172,60 @@ Standardmäßig ist die Einstellung " **includespark** " für den Speicherpool a
 azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 ```
 
-## <a id="podplacement"></a>Konfigurieren der Pod-Platzierung mithilfe von Kubernetes-Bezeichnungen
+## <a id="podplacement"></a> Konfigurieren von Pod-Platzierungen mit Kubernetes-Bezeichnungen
 
-Sie können die Pod-Platzierung auf Kubernetes-Knoten mit bestimmten Ressourcen steuern, um verschiedene Arten von workloadanforderungen zu erfüllen. Beispielsweise können Sie sicherstellen, dass die Speicherpool-Pods auf Knoten mit mehr Speicherplatz oder SQL Server Master Instanzen in Knoten platziert werden, die über höhere CPU-und Arbeitsspeicher Ressourcen verfügen. In diesem Fall erstellen Sie zuerst einen heterogenen Kubernetes-Cluster mit unterschiedlichen Hardwaretypen und [weisen dann Knoten Bezeichnungen](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) entsprechend zu. Zum Zeitpunkt der Bereitstellung Big Data Clusters können Sie in der Konfigurationsdatei für die Cluster Bereitstellung dieselben Bezeichnungen auf Poolebene angeben. Kubernetes kümmert sich dann um die Affinität der Pods auf Knoten, die den angegebenen Bezeichnungen entsprechen.
+Sie können Pod-Platzierungen auf Kubernetes-Knoten steuern, die über bestimmten Ressourcen verfügen, um verschiedene Arten von Arbeitsauslastungsanforderungen zu erfüllen. Beispielsweise können Sie sicherstellen, dass die Speicherpoolpods auf Knoten mit mehr Speicherplatz platziert werden oder SQL Server-Masterinstanzen in Knoten platziert werden, die über höhere CPU- und Arbeitsspeicherressourcen verfügen. In diesem Fall erstellen Sie zuerst einen heterogenen Kubernetes-Cluster mit unterschiedlichen Hardwaretypen. Anschließend nehmen Sie die entsprechende [Zuweisung von Knotenbezeichnungen](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) vor. Zum Zeitpunkt der Bereitstellung des Big-Data-Clusters können Sie in der Konfigurationsdatei für die Clusterbereitstellung dieselben Bezeichnungen auf Poolebene angeben. Kubernetes kümmert sich dann um die Affinität der Pods auf Knoten, die den angegebenen Bezeichnungen entsprechen. Der spezifische Bezeichnungs Schlüssel, der den Knoten im kubernetes-Cluster hinzugefügt werden muss, ist **MSSQL-Cluster-Wide**. Der Wert dieser Bezeichnung kann jede beliebige Zeichenfolge sein, die Sie auswählen.
 
-Im folgenden Beispiel wird gezeigt, wie eine benutzerdefinierte Konfigurationsdatei bearbeitet wird, um eine Knoten Bezeichnungs Einstellung für die SQL Server Master Instanz einzuschließen. Beachten Sie, dass in den integrierten Konfigurationen kein *noschabel* -Schlüssel vorhanden ist, sodass Sie entweder manuell eine benutzerdefinierte Konfigurationsdatei bearbeiten oder eine Patchdatei erstellen und auf die benutzerdefinierte Konfigurationsdatei anwenden müssen.
+Im folgenden Beispiel wird gezeigt, wie Sie eine benutzerdefinierte Konfigurationsdatei bearbeiten, um eine Knoten Bezeichnungs Einstellung für die SQL Server Master Instanz, den computepool, den Daten Pool & Speicherpools einzuschließen. Beachten Sie, dass in den integrierten Konfigurationen kein *nodeLabel*-Schlüssel vorhanden ist, sodass Sie entweder manuell eine benutzerdefinierte Konfigurationsdatei bearbeiten oder eine Patchdatei erstellen und auf die benutzerdefinierte Konfigurationsdatei anwenden müssen. Der SQL Server Master Instanz-Pod wird auf einem Knoten bereitgestellt, der eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-Master**" enthält. Der computepool und die Daten Pool-Pods werden auf Knoten bereitgestellt, die eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-SQL**" enthalten. Die Speicher Pool-Pods werden auf Knoten bereitgestellt, die eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-Storage**" enthalten.
 
-Erstellen Sie im aktuellen Verzeichnis eine Datei mit dem Namen " **Patch. JSON** " mit folgendem Inhalt:
+Erstellen Sie in Ihrem aktuellen Verzeichnis eine Datei mit dem Namen **patch.json** und dem folgenden Inhalt:
 
 ```json
 {
   "patch": [
-     {
+    {
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
-           "type": "Master",
-         "replicas": 1,
-         "hadrEnabled": false,
-         "endpoints": [
+    "type": "Master",
+        "replicas": 1,
+        "hadrEnabled": false,
+        "endpoints": [
             {
              "name": "Master",
              "serviceType": "NodePort",
              "port": 31433
             }
           ],
-         "nodeLabel": "<yourNodeLabel>"
-       }
+        "nodeLabel": "bdc-master"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "value": {
+    "type": "Compute",
+        "replicas": 1,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "value": {
+    "type": "Data",
+        "replicas": 2,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+    "type": "Storage",
+        "replicas": 3,
+        "nodeLabel": "bdc-storage"
+      }
     }
   ]
 }
@@ -208,13 +235,13 @@ Erstellen Sie im aktuellen Verzeichnis eine Datei mit dem Namen " **Patch. JSON*
 azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
-## <a id="jsonpatch"></a>JSON-Patchdateien
+## <a id="jsonpatch"></a> JSON-Patchdateien
 
-JSON-Patchdateien konfigurieren mehrere Einstellungen gleichzeitig. Weitere Informationen zu JSON-Patches finden Sie unter [JSON-Patches in python](https://github.com/stefankoegl/python-json-patch) und [jsonpath Online Evaluator](https://jsonpath.com/).
+JSON-Patchdateien konfigurieren mehrere Einstellungen gleichzeitig. Weitere Informationen zu JSON-Patches finden Sie unter [JSON-Patches in Python](https://github.com/stefankoegl/python-json-patch) und [JSONPath Online Evaluator](https://jsonpath.com/).
 
-Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
+Die folgende Datei **patch.json** führt die folgenden Änderungen durch:
 
-- Aktualisiert den Port eines einzelnen Endpunkts in " **Control. JSON**".
+- Aktualisiert den Port eines einzelnen Endpunkts in der Datei **control.json**.
     ```json
     {
       "patch": [
@@ -227,7 +254,7 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
     }
     ```
 
-- Aktualisiert alle Endpunkte (**Port** und **serviceType**) in der **Datei "Control. JSON**".
+- Aktualisiert alle Endpunkte (**port** und **serviceType**) in der Datei **control.json**.
     ```json
     {
       "patch": [
@@ -241,9 +268,9 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
           "name": "Controller"
         },
         {
-            "serviceType": "LoadBalancer",
-            "port": 30778,
-            "name": "ServiceProxy"
+          "serviceType": "LoadBalancer",
+          "port": 30778,
+          "name": "ServiceProxy"
         }
           ]
         }
@@ -251,7 +278,7 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
     }
     ```
 
-- Aktualisiert die Controller Speichereinstellungen in " **Control. JSON**". Diese Einstellungen gelten für alle Cluster Komponenten, es sei denn, Sie werden auf Poolebene überschrieben.
+- Aktualisiert die Controllerspeichereinstellungen in der Datei **control.json**. Diese Einstellungen gelten für alle Clusterkomponenten, es sei denn, sie werden auf Poolebene überschrieben.
     ```json
     {
       "patch": [
@@ -259,23 +286,23 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
           "op": "replace",
           "path": "spec.storage",
           "value": {
-          "data": {
+        "data": {
             "className": "managed-premium",
             "accessMode": "ReadWriteOnce",
             "size": "100Gi"
-          },
-          "logs": {
+               },
+        "logs": {
             "className": "managed-premium",
             "accessMode": "ReadWriteOnce",
             "size": "32Gi"
-          }
-        }
-        }   
+               }
+           }
+         }  
       ]
     }
     ```
 
-- Aktualisiert den Speicher Klassennamen in der **Datei "Control. JSON**".
+- Aktualisiert den Speicherklassennamen in der Datei **control.json**.
     ```json
     {
       "patch": [
@@ -288,7 +315,7 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
     }
     ```
 
-- Aktualisiert die Pool Speichereinstellungen für den Speicherpool in " **Cluster. JSON**".
+- Aktualisiert die Poolspeichereinstellungen für den Speicherpool in der Datei **cluster.json**.
     ```json
     {
       "patch": [
@@ -316,7 +343,7 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
     }
     ```
 
-- Aktualisiert die Spark-Einstellungen für den Speicherpool in " **Cluster. JSON**".
+- Aktualisiert die Spark-Einstellungen für den Speicherpool in der Datei **cluster.json**.
     ```json
     {
       "patch": [
@@ -335,7 +362,7 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
     }
     ```
 
-- Erstellt einen Spark-Pool mit zwei Instanzen in " **Cluster. JSON**".
+- Erstellt einen Spark-Pool mit zwei Instanzen in der Datei **cluster.json**.
     ```json
     {
       "patch": [
@@ -383,9 +410,9 @@ Die folgende Datei " **Patch. JSON** " führt die folgenden Änderungen durch:
 
 
 > [!TIP]
-> Weitere Informationen zur Struktur und zu den Optionen zum Ändern einer Bereitstellungs Konfigurationsdatei finden Sie unter [Referenz zur Bereitstellungs Konfigurationsdatei für Big Data-Cluster](reference-deployment-config.md).
+> Weitere Informationen zur Struktur und zu den Optionen zum Ändern einer Bereitstellungskonfigurationsdatei finden Sie unter [Referenz zur Bereitstellungskonfigurationsdatei für Big-Data-Cluster](reference-deployment-config.md).
 
-Verwenden Sie **azdata BDC config** -Befehle, um die Änderungen in der JSON-Patchdatei anzuwenden. Im folgenden Beispiel wird die Datei **Patch. JSON** auf eine Ziel Bereitstellungs Konfigurationsdatei **Custom/Cluster. JSON**angewendet.
+Verwenden Sie **azdata bdc config**-Befehle, um die Änderungen in der JSON-Patchdatei anzuwenden. Im folgenden Beispiel wird die Datei **patch.json** auf eine Zielkonfigurationsdatei **custom/cluster.json** für die Bereitstellung angewendet.
 
 ```bash
 azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
@@ -393,4 +420,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Verwenden von Konfigurationsdateien in Big Data Cluster Bereitstellungen finden Sie unter Bereitstellen [von SQL Server Big Data Clustern auf Kubernetes](deployment-guidance.md#configfile).
+Weitere Informationen zum Verwenden von Konfigurationsdateien in Big Data-Clusterbereitstellungen finden Sie unter [Bereitstellen von Big Data-Clustern für SQL Server in Kubernetes](deployment-guidance.md#configfile).

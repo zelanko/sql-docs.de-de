@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18880c6cf0590c8a10c232cd2dd9d11e5279f918
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: fb1da50fb84cbfd44aeab50a00be1c8433b3041e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470787"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892454"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Bereitstellen eines Big Data-Clusters für SQL Server mit Azure Data Studio-Notebooks
 
@@ -26,11 +26,11 @@ ms.locfileid: "68470787"
 
 Sie können Notebooks verwenden, um Big Data-Cluster für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bereitzustellen.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Die folgenden Voraussetzungen müssen erfüllt sein, damit das Notebook gestartet werden kann:
 
-* Die neueste Version von [Azure Data Studio Insiders-Build](http://docs.microsoft.com/sql/azure-data-studio/download) ist installiert.
+* Neueste Version von [Azure Data Studio Insider-Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) installiert
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Erweiterung ist in Azure Data Studio installiert.
 
 Zusätzlich hierzu sind folgende Komponenten erforderlich, um einen Big Data-Cluster für SQL Server 2019 bereitstellen zu können:
@@ -41,7 +41,7 @@ Zusätzlich hierzu sind folgende Komponenten erforderlich, um einen Big Data-Clu
 
 ## <a name="launch-the-notebook"></a>Starten des Notebooks
 
-1. Installieren und starten Sie den [Azure Data Studio Insiders-Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master).
+1. Starten Sie die Azure Data Studio Insider.
 
 1. Klicken Sie auf der Registerkarte **Verbindungen** auf **...** , und wählen Sie **SQL Server-Big Data-Cluster bereitstellen...** aus.
 
@@ -49,8 +49,11 @@ Zusätzlich hierzu sind folgende Komponenten erforderlich, um einen Big Data-Clu
 
 1. Wählen Sie in **Bereitstellungsziel** unter **Optionen** entweder **Neuer Azure Kubernetes-Cluster** oder **Vorhandener Azure Kubernetes Service-Cluster** aus.
 
-1. Wählen Sie **Notebook öffnen** aus.
+1. Klicken Sie auf Schaltfläche **auswählen** .
 
+1. Mit dieser Aktion wird ein Dialogfeld geöffnet, in dem die Benutzereingaben erfasst, die erforderlichen Informationen bereitgestellt und die Standardwerte überprüft werden.
+
+1. Klicken Sie auf **Notebook öffnen** .
 Mit dieser Aktion wird das entsprechende Notebook gestartet. Um die Bereitstellung abzuschließen, befolgen Sie die Anweisungen im Notebook, um einen Big Data Cluster für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] in einem vorhandenen oder neuen Azure Kubernetes Service-Cluster bereitzustellen.
 
 ## <a name="next-steps"></a>Nächste Schritte

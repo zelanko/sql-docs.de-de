@@ -1,7 +1,7 @@
 ---
-title: Hinzufügen von zusätzlichen Funktionen über Erweiterbarkeit
+title: Hinzufügen zusätzlicher Funktionen durch Erweiterbarkeit
 titleSuffix: Azure Data Studio
-description: Erfahren Sie mehr über das Erweiterbarkeitsmodell und die wichtigsten Erweiterungen Bereiche zum Erweitern der Funktionalität von Azure Data Studio
+description: Erfahren Sie mehr über das Erweiterbarkeitsmodell und die wichtigsten Erweiterbarkeitsbereiche zum Erweitern der Funktionalität von Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,53 +11,53 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959599"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Erste Schritte mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] Erweiterbarkeit
+# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Erste Schritte mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Erweiterbarkeit
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] verfügt über mehrere Mechanismen zur Erweiterbarkeit Anpassung der benutzerumgebung und diese Anpassungen für der gesamte Benutzercommunity zur Verfügung stellen. Die wichtigsten [!INCLUDE[name-sos](../includes/name-sos.md)] Plattform basiert auf Visual Studio Code, sodass die meisten der Visual Studio Code-Erweiterbarkeits-APIs verfügbar sind. Darüber hinaus haben wir Weitere Erweiterungspunkte für Data Management-spezifische Aktivitäten bereitgestellt.
+[!INCLUDE[name-sos](../includes/name-sos.md)] verfügt über mehrere Erweiterbarkeitsmechanismen, um die Benutzeroberfläche anzupassen und diese Anpassungen der gesamten Benutzercommunity zur Verfügung zu stellen. Die Kern der [!INCLUDE[name-sos](../includes/name-sos.md)]-Plattform basiert auf Visual Studio Code, sodass die meisten Erweiterbarkeits-APIs von Visual Studio Code verfügbar sind. Außerdem haben wir zusätzliche Erweiterbarkeitspunkte für Aktivitäten bereitgestellt, die für die Datenverwaltung spezifisch sind.
 
-Einige der wichtigsten Erweiterungspunkte sind:
+Zu den wichtigsten Erweiterbarkeitspunkten gehören:
 
 - Visual Studio Code-Erweiterbarkeits-APIs
-- Tools zum Erstellen von Azure Data Studio-Erweiterung
-- Verwalten von Dashboard-Registerkarte Bereich Beiträge
-- Einblicke mit Aktionen Erfahrungen
-- Azure Data Studio-Erweiterbarkeits-APIs
-- Benutzerdefinierte Anbieter-APIs
+- Tools zur Erstellung von Erweiterungen für Azure Data Studio
+- Verwalten von Beiträgen zum Dashboard-Registerkartenbereich
+- Erkenntnisse mit Actions-Erfahrungen
+- Erweiterbarkeits-APIs für Azure Data Studio
+- Benutzerdefinierte Datenanbieter-APIs
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code-Erweiterbarkeits-APIs
 
-Da die wichtigsten [!INCLUDE[name-sos](../includes/name-sos.md)] Plattform baut auf Visual Studio Code, Details zu den Visual Studio Code-Erweiterungs-APIs befinden sich die [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) und [Erweiterungs-API](https://code.visualstudio.com/docs/extensionAPI/overview) die Dokumentation auf der Visual Studio Code-Website.
+Da die Kernplattform von [!INCLUDE[name-sos](../includes/name-sos.md)] auf Visual Studio Code basiert, finden Sie ausführliche Informationen zu den Erweiterbarkeits-APIs von Visual Studio Code in der Dokumentation zu [Erweiterungserstellung](https://code.visualstudio.com/docs/extensions/overview) und [Erweiterungs-APIs](https://code.visualstudio.com/docs/extensionAPI/overview) auf der Visual Studio Code-Website.
 
-## <a name="manage-dashboard-tab-panel-contributions"></a>Verwalten von Dashboard-Registerkarte Bereich Beiträge
+## <a name="manage-dashboard-tab-panel-contributions"></a>Verwalten von Beiträgen zum Dashboard-Registerkartenbereich
 
-Weitere Informationen finden Sie unter [Beitrag Punkte](#contribution-points) und [Kontextvariablen](#context-variables).
+Weitere Informationen finden Sie unter [Beitragspunkte](#contribution-points) und [Kontextvariablen](#context-variables).
 
-## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio-Erweiterbarkeits-APIs
+## <a name="azure-data-studio-extensibility-apis"></a>Erweiterbarkeits-APIs für Azure Data Studio
 
-Weitere Informationen finden Sie unter [Erweiterbarkeits-APIs](extensibility-apis.md).
+Weitere Informationen finden Sie unter [Azure Data Studio-Erweiterbarkeits-APIs](extensibility-apis.md).
 
 
-## <a name="contribution-points"></a>Beitrag zeigt
+## <a name="contribution-points"></a>Beitragspunkte
 
-Dieser Abschnitt behandelt die verschiedenen Beitrag Punkte, die im Erweiterungsmanifest "Package.JSON" definiert sind.
+In diesem Abschnitt werden die verschiedenen Beitragspunkte behandelt, die im package.json-Erweiterungsmanifest definiert sind.
 
-IntelliSense wird innerhalb von Azuredatastudio unterstützt.
+IntelliSense wird in azuredatastudio unterstützt.
 
-## <a name="contributes-dashboard"></a>Dashboard beitragen
+## <a name="contributes-dashboard"></a>Beiträge zum Dashboard
 
-Tragen Sie die Registerkarte "," Container "," Insight-Widgets zum Dashboard.
+Tragen Sie Registerkarte, Container und Erkenntniswidget zum Dashboard bei.
 
 ![Dashboard](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
-Dashboard.Tabs wird die Registerkarte Abschnitte in der Dashboard-Seite erstellt. Es erwartet ein Objekt oder ein Array von Objekten.  
+„Dashboard.tabs“ erstellt die Registerkartenabschnitte innerhalb der Dashboardseite. Es wird ein Objekt oder ein Array von Objekten erwartet.  
 
 ```json
 "dashboard.tabs": [
@@ -76,7 +76,7 @@ Dashboard.Tabs wird die Registerkarte Abschnitte in der Dashboard-Seite erstellt
 
 `dashboard.containers`
 
-Anstatt Dashboard Container Inline (im Rahmen der dashboard.tab). Sie können den Container mithilfe der dashboard.containers registrieren. Es akzeptiert ein Objekt oder ein Array des Objekts.
+Anstatt den Dashboardcontainer inline anzugeben (innerhalb von dashboard.tab), können Sie Container mithilfe von „dashboard.containers“ registrieren. Es wird ein Objekt oder ein Array des Objekts akzeptiert.
 
 ```json
 "dashboard.containers": [
@@ -95,7 +95,7 @@ Anstatt Dashboard Container Inline (im Rahmen der dashboard.tab). Sie können de
 ]
 ```
 
-Geben Sie zum Verweisen auf den registrierten Container. die Id des Containers
+Um auf registrierte Container zu verweisen, geben Sie die ID des Containers an.
 
 ```json
 "dashboard.tabs": [
@@ -112,7 +112,7 @@ Geben Sie zum Verweisen auf den registrierten Container. die Id des Containers
 
 `dashboard.insights`
 
-Sie können mithilfe von dashboard.insights Insights registrieren. Dies ist vergleichbar mit [Lernprogramm: Erstellen eines benutzerdefinierten Einblicks-Widgets](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Sie können Erkenntnisse mithilfe von „dashboard.insights“ registrieren. Dies ähnelt [Tutorial: Erstellen eines benutzerdefinierten Erkenntniswidgets](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -131,15 +131,15 @@ Sie können mithilfe von dashboard.insights Insights registrieren. Dies ist verg
 ```
 
 
-### <a name="dashboard-container-types"></a>Dashboard-Containertypen
+### <a name="dashboard-container-types"></a>Typen von Dashboardcontainern
 
-Derzeit stehen vier unterstützten Containertypen:
+Zurzeit werden vier Containertypen unterstützt:
 
 1. `widgets-container`
 
-    ![Widgets-container](media/extensibility/widgets-container.png)
+    ![Widgetscontainer](media/extensibility/widgets-container.png)
 
-    Die Liste von Widgets, die im Container angezeigt werden. Es ist eine Flow-Layout. Er akzeptiert die Liste von Widgets.
+    Die Liste der Widgets, die im Container angezeigt werden. Es ist ein Flusslayout. Es akzeptiert die Liste der Widgets.
 
     ```json
     "container": {
@@ -162,9 +162,9 @@ Derzeit stehen vier unterstützten Containertypen:
 
 2. `webview-container`
 
-    ![WebView-container](media/extensibility/webview-container.png)
+    ![WebView-Container](media/extensibility/webview-container.png)
 
-    Die Webansicht werden in den gesamten Container angezeigt. Es erwartet, dass Webview-Id zu, dass dem Registerkarten-ID übereinstimmt
+    Die WebView wird im gesamten Container angezeigt. Es wird erwartet, dass die WebView-ID mit der Registerkarten-ID identisch ist.
 
     ```json
     "container": {
@@ -174,9 +174,9 @@ Derzeit stehen vier unterstützten Containertypen:
 
 3. `grid-container`
 
-   !["Grid"-Container](media/extensibility/grid-container.png)
+   ![Rastercontainer](media/extensibility/grid-container.png)
 
-   Die Liste der Widgets oder Webviews, die im Rasterlayout angezeigt werden
+   Die Liste der Widgets oder WebViews, die im Rasterlayout angezeigt werden.
 
     ```json
     "container": {
@@ -226,9 +226,9 @@ Derzeit stehen vier unterstützten Containertypen:
 
 4.  `nav-section`
 
-    ![NAV-Abschnitt](media/extensibility/nav-section.png)
+    ![Navigationsabschnitt](media/extensibility/nav-section.png)
 
-    Im Abschnitt für die Navigation wird im Container angezeigt werden
+    Der Navigationsabschnitt wird im Container angezeigt.
 
     ```json
     "container": {
@@ -263,18 +263,18 @@ Derzeit stehen vier unterstützten Containertypen:
 
 ## <a name="context-variables"></a>Kontextvariablen
 
-Allgemeine Informationen zu Kontext in Visual Studio Code und anschließend auf Azure Data Studio, finden Sie unter [Erweiterbarkeit](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
+Allgemeine Informationen zum Kontext in Visual Studio Code und anschließend Azure Data Studio finden Sie unter [Erweiterbarkeit](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
 
-In Azure Data Studio haben wir die spezifischen Kontext zu Datenbankverbindungen für Erweiterungen verfügbar.
+In Azure Data Studio gibt es einen spezifischen Kontext um Datenbankverbindungen, die für Erweiterungen verfügbar sind.
 
 ### <a name="dashboard"></a>Dashboard
 
-Im Dashboard bieten wir die folgenden Kontextvariablen:
+Im Dashboard stellen wir die folgenden Kontextvariablen bereit:
 
-|Kontextvariablen| description|
+|Kontextvariable| description|
 |:---|:---|
 |`connectionProvider` | Eine Zeichenfolge des Bezeichners für den Anbieter der aktuellen Verbindung. Ex. `connectionProvider == 'MSSQL'`.|
-|`serverName`|Eine Zeichenfolge mit den Namen des die aktuelle Verbindung. Ex. `serverName == 'localhost'`. installiert haben.|
-|`databaseName` | Eine Zeichenfolge mit der Datenbankname des die aktuelle Verbindung. Ex. `databaseName == 'master'`.|
-|`connection` | Das Profilobjekt für vollständige Verbindungszeichenfolge für die aktuelle Verbindung (IConnectionProfile)|
-|`dashboardContext` | Eine Zeichenfolge mit dem Kontext der Seite des Dashboards befindet sich derzeit auf. 'Database' oder 'Server'. Ex. `dashboardContext == 'database'`|
+|`serverName`|Eine Zeichenfolge des Servernamens der aktuellen Verbindung. Ex. `serverName == 'localhost'`.|
+|`databaseName` | Eine Zeichenfolge des Datenbanknamens der aktuellen Verbindung. Ex. `databaseName == 'master'`.|
+|`connection` | Das vollständige Verbindungsprofilobjekt für die aktuelle Verbindung (IConnectionProfile)|
+|`dashboardContext` | Eine Zeichenfolge des Kontexts der Seite des Dashboards ist derzeit aktiv. Entweder „database“ oder „server“. Ex. `dashboardContext == 'database'`|

@@ -1,5 +1,5 @@
 ---
-title: Massenkopieren von Daten in SQL Server unter Linux
+title: Massenkopieren von Daten in SQL Server für Linux
 description: ''
 author: VanMSFT
 ms.author: vanto
@@ -9,43 +9,43 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68127322"
 ---
-# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Massenkopieren von Daten mit Bcp für den SQL Server unter Linux
+# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Massenkopieren von Daten mit BCP in SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel wird gezeigt, wie Sie mit der [Bcp](../tools/bcp-utility.md) Befehlszeilen-Hilfsprogramm zum Massenkopieren von Daten zwischen einer Instanz von SQL Server unter Linux und einer Datendatei in eine vom Benutzer angegebenes Format.
+In diesem Artikel wird beschrieben, wie Sie das Befehlszeilen-Hilfsprogramm [BCP](../tools/bcp-utility.md) zum Massenkopieren von Daten zwischen einer Instanz von SQL Server für Linux und einer Datendatei in einem benutzerdefinierten Format verwenden.
 
-Sie können `bcp` große Anzahl von Zeilen in SQL Server-Tabellen zu importieren oder Exportieren von Daten aus SQL Server-Tabellen in Datendateien. Außer in Verbindung mit der Option Queryout `bcp` erfordert keine Kenntnisse von Transact-SQL. Die `bcp` Befehlszeilen-Hilfsprogramm funktioniert nur mit Microsoft SQL Server lokal oder in der Cloud unter Linux, Windows oder Docker und Azure SQL-Datenbank und Azure SQL Data Warehouse.
+Sie können mit `bcp` große Mengen neuer Zeilen in SQL Server-Tabellen importieren oder Daten aus SQL Server-Tabellen in Datendateien exportieren. Außer in Verbindung mit der Option „queryout“ sind für `bcp` keine Kenntnisse von Transact-SQL erforderlich. Das Befehlszeilen-Hilfsprogramm `bcp` kann in Microsoft SQL Server lokal ausgeführt werden oder in der Cloud, unter Linux, Windows oder Docker sowie SQL-Datenbank und Azure SQL Data Warehouse.
 
 In diesem Artikel lernen Sie Folgendes:
-- Importieren von Daten in einer Tabelle mit den `bcp in` Befehl
-- Exportieren von Daten aus einer Tabelle mit den `bcp out` Befehl
+- Importieren von Daten in eine Tabelle mithilfe des `bcp in`
+- Exportieren von Daten aus einer Tabelle mithilfe des `bcp out`-Befehls
 
 ## <a name="install-the-sql-server-command-line-tools"></a>Installieren der SQL Server-Befehlszeilentools
 
-`bcp` ist Teil der SQL Server-Befehlszeilentools, die mit SQL Server unter Linux nicht automatisch installiert werden. Wenn Sie die SQL Server-Befehlszeilentools auf Ihrem Linux-Computer noch nicht installiert haben, müssen Sie sie installieren. Wählen Sie für Weitere Informationen zum Installieren der Tools Ihrer Linux-Distribution, in der folgenden Liste:
+`bcp` ist Teil der SQL Server-Befehlszeilentools, die nicht automatisch mit SQL Server für Linux installiert werden. Wenn Sie die SQL Server-Befehlszeilentools nicht bereits auf Ihrem Linux-Computer installiert haben, müssen Sie sie installieren. Um weitere Informationen zum Installieren der Tools zu erhalten, wählen Sie Ihre Linux-Distribution in der folgenden Liste aus:
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
 - [SUSE Linux Enterprise Server (SLES)](sql-server-linux-setup-tools.md#SLES)
 
-## <a name="import-data-with-bcp"></a>Importieren von Daten mit bcp
+## <a name="import-data-with-bcp"></a>Importieren von Daten mit BCP
 
-In diesem Tutorial erstellen Sie einer Beispieldatenbank und eine Tabelle in der lokalen SQL Server-Instanz ( **"localhost"** ) und dann `bcp` , in dem Beispiel für die Tabelle aus einer Textdatei auf dem Datenträger zu laden.
+In diesem Tutorial erstellen Sie eine Beispieldatenbank und eine Tabelle auf der lokalen SQL Server-Instanz (**localhost**) und laden dann mit `bcp` eine Textdatei auf dem Datenträger in die Beispieltabelle.
 
-### <a name="create-a-sample-database-and-table"></a>Erstellen einer Beispieldatenbank und eine Tabelle
+### <a name="create-a-sample-database-and-table"></a>Erstellen einer Beispieldatenbank und -tabelle
 
-Wir erstellen zunächst eine Beispieldatenbank mit einer einfachen Tabelle, die im weiteren Verlauf in diesem Tutorial verwendet wird.
+Zunächst erstellen wir eine Beispieldatenbank mit einer einfachen Tabelle, die im restlichen Tutorial verwendet wird.
 
-1. Öffnen Sie auf Ihrer Linux-Feld ein Befehl-Terminal ein.
+1. Öffnen Sie in Ihrer Linux-Box ein Befehlsterminal.
 
-2. Kopieren Sie die folgenden Befehle in der terminal-Fenster. Diese Befehle verwenden die **Sqlcmd** Befehlszeilen-Hilfsprogramm zum Erstellen einer Beispieldatenbank (**BcpSampleDB**) und eine Tabelle (**TestEmployees**) in der lokalen SQL Server-Instanz ( **"localhost"** ). Ersetzen Sie die `username` und `<your_password>` vor dem Ausführen der Befehle nach Bedarf.
+2. Kopieren Sie die folgenden Befehle, und fügen Sie sie in das Terminalfenster ein. Diese Befehle erstellen mit dem Befehlszeilen-Hilfsprogramm **sqlcmd** eine Beispieldatenbank (**BcpSampleDB**) und eine Tabelle (**TestEmployees**) auf der lokalen SQL Server-Instanz (**localhost**). Denken Sie daran, `username` und `<your_password>` vor dem Ausführen der Befehle nach Bedarf zu ersetzen.
 
 Erstellen Sie die Datenbank **BcpSampleDB**:
 ```bash 
@@ -55,8 +55,8 @@ Erstellen Sie die Tabelle **TestEmployees** in der Datenbank **BcpSampleDB**:
 ```bash 
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
-### <a name="create-the-source-data-file"></a>Erstellen Sie die Quelldatendatei
-Kopieren Sie den folgenden Befehl in Ihrem Terminalfenster. Wir verwenden die integrierte `cat` Befehl zum Erstellen einer Datei mit Beispieldaten Text mit drei Datensätze speichern Sie die Datei in Ihrem Basisverzeichnis als **~/test_data.txt**. Die Felder in den Einträgen werden durch ein Komma getrennt.
+### <a name="create-the-source-data-file"></a>Erstellen der Quelldatendatei
+Kopieren Sie den folgenden Befehl, und fügen Sie ihn in das Terminalfenster ein. Wir erstellen mit dem integrierten `cat`-Befehl eine Beispiel-Textdatendatei mit drei Datensätzen. Speichern Sie die Datei in Ihrem Basisverzeichnis als **~/test_data.txt**. Die Felder in den Datensätzen werden durch Kommas getrennt.
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -66,12 +66,12 @@ cat > ~/test_data.txt << EOF
 EOF
 ```
 
-Sie können überprüfen, ob die Datendatei ordnungsgemäß erstellt wurde, indem Sie den folgenden Befehl in Ihrem Terminalfenster ausführen:
+Sie können überprüfen, ob die Datendatei ordnungsgemäß erstellt wurde, indem Sie den folgenden Befehl im Terminalfenster ausführen:
 ```bash 
 cat ~/test_data.txt
 ```
 
-Dies sollte Folgendes in Ihrem Terminalfenster angezeigt werden:
+Im Terminalfenster sollte Folgendes angezeigt werden:
 ```bash
 1,Jared,Australia
 2,Nikita,India
@@ -79,29 +79,29 @@ Dies sollte Folgendes in Ihrem Terminalfenster angezeigt werden:
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Importieren von Daten aus der Quelldatendatei
-Kopieren Sie die folgenden Befehle in der terminal-Fenster. Dieser Befehl verwendet `bcp` für die Verbindung mit der lokalen SQL Server-Instanz ( **"localhost"** ) und importieren Sie die Daten aus der Datendatei ( **~/test_data.txt**) in die Tabelle (**TestEmployees** ) in der Datenbank (**BcpSampleDB**). Denken Sie daran, ersetzen Sie den Benutzernamen und `<your_password>` vor dem Ausführen der Befehle nach Bedarf.
+Kopieren Sie die folgenden Befehle, und fügen Sie sie in das Terminalfenster ein. Dieser Befehl stellt mit `bcp` eine Verbindung mit der lokalen SQL Server-Instanz (**localhost**) her und importiert die Daten aus der Datendatei ( **~/test_data.txt**) in die Tabelle (**TestEmployees**) in der Datenbank (**BcpSampleDB**). Denken Sie daran, den Benutzernamen und `<your_password>` vor dem Ausführen der Befehle nach Bedarf zu ersetzen.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
 ```
 
-Hier ist eine kurze Übersicht über die Befehlszeilenparameter und verwendet `bcp` in diesem Beispiel:
-- `-S`: Gibt die Instanz von SQL Server für die Verbindung
-- `-U`: Gibt die Anmelde-ID verwendet, um die Verbindung mit SQL Server
-- `-P`: Gibt das Kennwort für die Anmelde-ID
-- `-d`: Gibt die Datenbank für die Verbindung
-- `-c`: führt Vorgänge, die mit einem Zeichendatentyp
-- `-t`: Gibt das Feldabschlusszeichen. Wir verwenden `comma` als Feldabschlusszeichen für die Datensätze in unsere Datendatei
+Im Folgenden finden Sie eine kurze Übersicht über die Befehlszeilenparameter, die in diesem Beispiel mit `bcp` verwendet wurden:
+- `-S`: Gibt die SQL Server-Instanz an, mit der eine Verbindung hergestellt werden soll.
+- `-U`: Gibt die Anmelde-ID an, die zum Herstellen einer Verbindung mit SQL Server verwendet wird.
+- `-P`: Gibt das Kennwort für die Anmelde-ID an.
+- `-d`: Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll.
+- `-c`: Führt die Vorgänge mithilfe eines Zeichendatentyps aus.
+- `-t`: Gibt das Feldabschlusszeichen an. Wir verwenden `comma` als Feldabschlusszeichen für die Datensätze in der Datendatei.
 
 > [!NOTE]
-> Geben wir kein benutzerdefiniertes Zeilenabschlusszeichen in diesem Beispiel an. Zeilen in der Textdatei für die Daten wurden mit ordnungsgemäß beendet `newline` , wenn es verwendet die `cat` Befehl aus, um die Datei zuvor zu erstellen.
+> In diesem Beispiel wird kein benutzerdefiniertes Zeilenabschlusszeichen angegeben. Die Zeilen in der Textdatendatei wurden mit `newline` ordnungsgemäß beendet, als zuvor der `cat`-Befehl zum Erstellen der Datendatei verwendet wurde.
 
-Sie können überprüfen, ob die Daten erfolgreich importiert wurde, indem Sie den folgenden Befehl in Ihrem Terminalfenster ausführen. Ersetzen Sie die `username` und `<your_password>` vor Ausführung des Befehls nach Bedarf.
+Sie können überprüfen, ob die Daten ordnungsgemäß importiert wurden, indem Sie den folgenden Befehl im Terminalfenster ausführen. Denken Sie daran, `username` und `<your_password>` vor dem Ausführen des Befehls nach Bedarf zu ersetzen.
 ```bash 
 sqlcmd -S localhost -d BcpSampleDB -U sa -P <your_password> -I -Q "SELECT * FROM TestEmployees;"
 ```
 
-Dies sollte die folgenden Ergebnisse angezeigt werden:
+Daraufhin sollten folgende Ergebnisse angezeigt werden:
 ```bash
 Id          Name                Location
 ----------- ------------------- -------------------
@@ -112,22 +112,22 @@ Id          Name                Location
 (3 rows affected)
 ```
 
-## <a name="export-data-with-bcp"></a>Exportieren von Daten mit bcp
+## <a name="export-data-with-bcp"></a>Exportieren von Daten mit BCP
 
-In diesem Tutorial verwenden Sie `bcp` zum Exportieren von Daten aus der Beispieltabelle, die wir zuvor erstellt haben, eine neue Datei.
+In diesem Tutorial verwenden Sie `bcp`, um Daten aus der zuvor erstellten Beispieltabelle in eine neue Datendatei zu exportieren.
 
-Kopieren Sie die folgenden Befehle in der terminal-Fenster. Diese Befehle verwenden die `bcp` Befehlszeilen-Hilfsprogramm zum Exportieren von Daten aus der Tabelle **TestEmployees** in der Datenbank **BcpSampleDB** in eine neue Datendatei namens **~/test_export.txt** .  Denken Sie daran, ersetzen Sie den Benutzernamen und `<your_password>` vor Ausführung des Befehls nach Bedarf.
+Kopieren Sie die folgenden Befehle, und fügen Sie sie in das Terminalfenster ein. Diese Befehle exportieren mit dem Befehlszeilen-Hilfsprogramm `bcp` Daten aus der Tabelle **TestEmployees** in der Datenbank **BcpSampleDB** in eine neue Datendatei mit dem Namen **~/test_export.txt**.  Denken Sie daran, den Benutzernamen und `<your_password>` vor dem Ausführen des Befehls nach Bedarf zu ersetzen.
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','
 ```
 
-Sie können überprüfen, ob die Daten ordnungsgemäß exportiert wurde, indem Sie den folgenden Befehl in Ihrem Terminalfenster ausführen:
+Sie können überprüfen, ob die Daten ordnungsgemäß exportiert wurden, indem Sie den folgenden Befehl im Terminalfenster ausführen:
 ```bash 
 cat ~/test_export.txt
 ```
 
-Dies sollte Folgendes in Ihrem Terminalfenster angezeigt werden:
+Im Terminalfenster sollte Folgendes angezeigt werden:
 ```
 1,Jared,Australia
 2,Nikita,India
@@ -136,6 +136,6 @@ Dies sollte Folgendes in Ihrem Terminalfenster angezeigt werden:
 
 ## <a name="see-also"></a>Siehe auch
 - [bcp (Hilfsprogramm)](../tools/bcp-utility.md)
-- [Datenformate für die Kompatibilität bei Verwendung von bcp](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [Datenformate für die Kompatibilität bei Verwendung von BCP](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [Importieren von Massendaten mithilfe von BULK INSERT](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 - [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

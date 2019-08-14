@@ -1,5 +1,5 @@
 ---
-title: Entwickeln von Anwendungen für SQL Server unter Linux
+title: Entwickeln von Apps für SQL Server für Linux
 description: ''
 author: VanMSFT
 ms.author: vanto
@@ -9,62 +9,62 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
 ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077415"
 ---
-# <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Vorgehensweise zum Einstieg in die Entwicklung von Anwendungen für SQL Server unter Linux
+# <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Erste Schritte bei der Entwicklung von Apps für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Sie können Anwendungen erstellen, die Herstellen einer Verbindung mit und Verwenden von SQL Server unter Linux aus einer Vielzahl von Programmiersprachen, z. B. c#, Java, Node.js, PHP, Python, Ruby und C++. Sie können auch beliebte webframeworks und Frameworks der Object Relational Mapping (ORM) verwenden.
+Sie können Apps erstellen, die SQL Server für Linux mit einer Vielzahl von Programmiersprachen, wie C#, Java, Node.js, PHP, Python, Ruby und C++, verwenden und sich damit verbinden. Sie können auch beliebte Webframeworks und ORM-Frameworks (Object Relational Mapping, objektrelationale Abbildung) nutzen.
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> Diese gleichen Entwicklungsoptionen können Sie auch in SQL Server auf anderen Plattformen als Ziel. Anwendungen können Ziel-SQL-Server lokal oder in der Cloud unter Linux, Windows oder mit Docker unter MacOS. Oder Sie können als Ziel Azure SQL-Datenbank und Azure SQL Data Warehouse.
+> Mithilfe dieser Entwicklungsoptionen können Sie SQL Server auch auf anderen Plattformen verwenden. Apps können SQL Server lokal oder in der Cloud, unter Linux, unter Windows oder in Docker unter macOS ausführen. Sie können auch Azure SQL-Datenbank und Azure SQL Data Warehouse verwenden.
 
-## <a name="try-the-tutorials"></a>Nutzen Sie die tutorials
+## <a name="try-the-tutorials"></a>Ausprobieren der Tutorials
 
-Die beste Möglichkeit, erste Schritte aus, und Erstellen von Anwendungen mit SQL Server ist es selbst auszuprobieren.
+Am besten steigen Sie in das Erstellen von Anwendungen mit SQL Server ein, indem Sie es einfach ausprobieren.
 
-- Navigieren Sie zu [erste Schritte-Tutorials](https://aka.ms/sqldev).
-- Wählen Sie Ihre Plattform für Sprach- und Entwicklungstools.
-- Wiederholen Sie die Codebeispiele aus.
+- Navigieren Sie zu den [Tutorials für die ersten Schritte](https://aka.ms/sqldev).
+- Wählen Sie Ihre Sprache und Entwicklungsplattform aus.
+- Testen Sie die Codebeispiele.
 
 > [!TIP]
-> Wenn Sie für SQL Server unter Docker entwickeln möchten, sehen Sie sich die **MacOS** Tutorials.
+> Weitere Informationen zur Entwicklung für SQL Server in Docker finden Sie in den Tutorials von **macOS**.
 
-## <a name="create-new-applications"></a>Erstellen Sie neue Anwendungen
+## <a name="create-new-applications"></a>Erstellen neuer Apps
 
-Wenn Sie eine neue Anwendung erstellen, sehen Sie sich eine Liste mit den [verbindungsbibliotheken](sql-server-linux-develop-connectivity-libraries.md) eine Zusammenfassung der Connectors und beliebte Frameworks, die für verschiedene Programmiersprachen zur Verfügung.
+Wenn Sie eine neue App erstellen, sehen Sie sich eine Liste der [Konnektivitätsbibliotheken](sql-server-linux-develop-connectivity-libraries.md) an, um eine Zusammenfassung der Connectors und beliebten Frameworks zu erhalten, die für verschiedene Programmiersprachen verfügbar sind.
 
-## <a name="use-existing-applications"></a>Nutzen Sie bestehende Anwendungen
+## <a name="use-existing-applications"></a>Verwenden vorhandener Apps
 
-Wenn Sie eine vorhandene datenbankanwendung verfügen, können Sie einfach die Verbindungszeichenfolge in SQL Server unter Linux als Ziel ändern. Achten Sie darauf, die zum Lesen der [bekannte Probleme](sql-server-linux-release-notes.md) in SQL Server unter Linux.
+Wenn Sie bereits eine Datenbank-App haben, können Sie die Verbindungszeichenfolge einfach so ändern, dass SQL Server für Linux verwendet wird. Lesen Sie sich den Abschnitt [Bekannte Probleme](sql-server-linux-release-notes.md) in SQL Server für Linux durch.
 
-## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Verwenden von vorhandenen SQL-Tools in Windows mit SQL Server unter Linux
+## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Verwenden vorhandener SQL-Tools unter Windows mit SQL Server für Linux
 
-Tools, die derzeit für Windows wie z. B. SSMS, SSDT und PowerShell, ausgeführt werden, funktionieren auch mit SQL Server unter Linux. Auch wenn ihnen nicht nativ unter Linux ausgeführt wird, können Sie remote SQL Server-Instanzen unter Linux noch verwalten. 
+Tools, die derzeit unter Windows ausgeführt werden, wie SSMS, SSDT und PowerShell, funktionieren auch mit SQL Server für Linux. Obwohl sie nicht nativ unter Linux ausgeführt werden, können Sie weiterhin SQL Server-Remoteinstanzen unter Linux verwalten. 
 
-Finden Sie unter den folgenden Themen Weitere Informationen:
+Weitere Informationen finden Sie in den nachfolgenden Themen:
 
 - [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
-- [SQL-PowerShell](sql-server-linux-manage-powershell.md)
+- [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
 > [!Note]
-> Stellen Sie sicher, dass Sie für optimale Ergebnisse die neuesten Versionen dieser Tools verwenden.
+> Vergewissern Sie sich, dass Sie die neuesten Versionen dieser Tools verwenden.
 
-## <a name="use-new-sql-tools-for-linux"></a>Verwenden Sie die neue SQL-Tools für Linux
+## <a name="use-new-sql-tools-for-linux"></a>Verwenden neuer SQL-Tools für Linux
 
-Sie können die neue [Mssql-Erweiterung](https://aka.ms/mssql-marketplace) für [Visual Studio Code](https://code.visualstudio.com) unter Linux, MacOS und Windows. Eine schrittweise Anleitung finden Sie unter dem folgenden Tutorial:
+Sie können die neue [mssql-Erweiterung](https://aka.ms/mssql-marketplace) für [Visual Studio Code](https://code.visualstudio.com) unter Linux, macOS und Windows verwenden. Eine detaillierte Anleitung finden Sie im folgenden Tutorial:
 
 - [Use Visual Studio Code (Verwenden von Visual Studio Code)](sql-server-linux-develop-use-vscode.md)
 
-Sie können auch neue Befehlszeilentools verwenden, die native für Linux sind. Diese Tools umfassen Folgendes:
+Sie können auch neue Befehlszeilentools verwenden, die für Linux nativ sind. Hierzu gehören die folgenden Tools:
 
 - [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
@@ -72,9 +72,9 @@ Sie können auch neue Befehlszeilentools verwenden, die native für Linux sind. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Installieren von SQL Server unter Linux mit einer der folgenden schnellstartanleitungen zum Einstieg:
+Installieren Sie zunächst SQL Server für Linux mithilfe einer der nachfolgenden Schnellstarts:
 
-- [Installieren Sie unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-- [Installieren Sie unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+- [Installation unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installation unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Führen unter Docker aus](quickstart-install-connect-ubuntu.md)
+- [Ausführung in Docker](quickstart-install-connect-ubuntu.md)

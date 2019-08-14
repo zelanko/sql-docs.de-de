@@ -1,6 +1,6 @@
 ---
-title: Problembehandlung bei SQLServer unter Linux
-description: Bietet Tipps zur Problembehandlung für die Verwendung von SQL Server unter Linux.
+title: Problembehandlung bei SQL Server unter Linux
+description: Bietet Tipps zur Problembehandlung bei der Verwendung von SQL Server unter Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -9,64 +9,64 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.openlocfilehash: 6ff5c1c5944e1313d6c95cd35be288ad4d2154c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032208"
 ---
-# <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQLServer unter Linux
+# <a name="troubleshoot-sql-server-on-linux"></a>Problembehandlung bei SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieses Dokument beschreibt, wie Sie die Problembehandlung für Microsoft SQL Server unter Linux oder in einem Docker-Container ausgeführt wird. Bei der Problembehandlung SQL Server unter Linux, denken Sie daran, überprüfen die unterstützten Funktionen und bekannte Einschränkungen in der [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
+In diesem Dokument wird beschrieben, wie Sie Probleme mit Microsoft SQL Server behandeln, die unter Linux oder in Docker-Containern ausgeführt werden. Berücksichtigen Sie bei der Problembehebung bei SQL Server unter Linux die Informationen zu den unterstützten Features und bekannten Einschränkungen in Abschnitt [SQL Server on Linux Release Notes (Versionsanmerkungen zu SQL Server unter Linux)](sql-server-linux-release-notes.md).
 
 > [!TIP]
-> Antworten auf häufig gestellte Fragen finden Sie unter den [SQL Server unter Linux – häufig gestellte Fragen](sql-server-linux-faq.md).
+> Antworten auf häufig gestellte Fragen finden Sie unter [SQL Server on Linux FAQ (Häufig gestellte Fragen zu SQL Server unter Linux)](sql-server-linux-faq.md).
 
-## <a id="connection"></a> Problembehandlung bei Verbindungsfehlern
-Wenn beim Herstellen einer Verbindung mit dem Linux-SQL-Server Probleme auftreten, sind einige Punkte zu überprüfen.
+## <a id="connection"></a> Beheben von Verbindungsfehlern
+Wenn Sie Probleme beim Herstellen einer Verbindung mit Ihrem SQL Server unter Linux haben, müssen Sie einige Dinge überprüfen.
 
-- Wenn Sie nicht lokal über eine Verbindung herstellen können **"localhost"** , versuchen Sie es stattdessen mit die IP-Adresse 127.0.0.1. Es ist möglich, **"localhost"** ist nicht ordnungsgemäß an diese Adresse zugeordnet.
+- Wenn es nicht möglich ist, mithilfe von **Localhost** eine Verbindung lokal herzustellen, probieren es mit der Verwendung der IP-Adresse 127.0.0.1. Es ist möglich, dass **Localhost** dieser Adresse nicht ordnungsgemäß zugeordnet ist.
 
-- Stellen Sie sicher, dass der Servername oder IP-Adresse von Ihrem Clientcomputer erreichbar ist.
+- Überprüfen Sie, ob der Servername oder die IP-Adresse über den Clientcomputer erreichbar ist.
 
    > [!TIP]
-   > Um die IP-Adresse Ihrem Ubuntu-Computer zu suchen, können Sie den Befehl "Ifconfig", wie im folgenden Beispiel ausführen:
+   > Um die IP-Adresse Ihres Ubuntu-Computers zu ermitteln, können Sie den Befehl „ifconfig“ wie im folgenden Beispiel ausführen:
    >
    >   ```bash
    >   sudo ifconfig eth0 | grep 'inet addr'
    >   ```
-   > Für Red Hat können Sie die IP-Adresse wie im folgenden Beispiel gezeigt:
+   > Für Red Hat können Sie die IP-Adresse wie im folgenden Beispiel verwenden:
    >
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Eine Ausnahme aus, um dieses Verfahren bezieht sich auf virtuellen Azure-Computern. Für Azure-VMs [finden Sie die öffentliche IP-Adresse für den virtuellen Computer im Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Eine Ausnahme von dieser Methode stellen Azure-VMs dar. Die [öffentliche IP-Adresse für Azure-VMs finden Sie im Azure-Portal](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
-- Falls zutreffend, überprüfen Sie, dass Sie SQL Server-Port (Standardport: 1433) in der Firewall geöffnet haben.
+- Überprüfen Sie ggf., ob Sie den SQL Server-Port (standardmäßig 1433) in der Firewall geöffnet haben.
 
-- Für Azure-VMs, überprüfen Sie, ob eine [netzwerksicherheitsgruppen-Regel für den SQL Server-Standardport](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- Überprüfen Sie bei Verwendung von Azure-VMs, [ob für den SQL Server-Standardport eine Netzwerksicherheitsgruppen-Regel festgelegt ist](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
-- Stellen Sie sicher, dass der Benutzername und das Kennwort keine Schreibfehler oder zusätzlichen Leerzeichen oder falsche Groß-/Kleinschreibung enthalten.
+- Vergewissern Sie sich, dass der Benutzername und das Kennwort keine Tippfehler oder zusätzliche Leerzeichen enthalten oder falsch geschrieben wurden.
 
-- Versuchen Sie es explizit auf die Anzahl Protokoll und Port mit dem Namen des Servers wie im folgenden Beispiel festlegen: **Tcp:servername, 1433**.
+- Versuchen Sie, das Protokoll und die Portnummer explizit mit dem Servernamen wie im folgenden Beispiel festzulegen: **tcp:servername,1433**.
 
-- Probleme mit der Netzwerkkonnektivität können auch Verbindungsfehlern und zeitüberschreitungen führen. Nachdem Sie überprüft haben, die Verbindungsinformationen und die Netzwerkkonnektivität, versuchen Sie es erneut, die Verbindung.
+- Probleme bei der Netzwerkverbindung können auch Verbindungsfehler und Timeouts verursachen. Nachdem Sie die Verbindungsinformationen und die Netzwerkkonnektivität überprüft haben, versuchen Sie erneut, die Verbindung herzustellen.
 
-## <a name="manage-the-sql-server-service"></a>Verwalten von SQL Server-Diensts
+## <a name="manage-the-sql-server-service"></a>Verwalten des SQL Server-Diensts
 
-Die folgenden Abschnitte zeigen, wie Sie starten, beenden, Neustarten und überprüfen Sie den Status des SQL Server-Diensts. 
+In den folgenden Abschnitten wird beschrieben, wie der SQL Server-Dienst gestartet, beendet, neu gestartet und dessen Status überprüft wird. 
 
-### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Verwalten des Diensts Mssql-Server, Red Hat Enterprise Linux (RHEL) und Ubuntu 
+### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Verwalten des MSSQL-Server-Diensts unter Red Hat Enterprise Linux (RHEL) und Ubuntu 
 
-Überprüfen Sie den Status des SQL Server-Dienst mit dem folgenden Befehl ein:
+Überprüfen Sie den Status des SQL Server-Diensts mit dem folgenden Befehl:
 
    ```bash
    sudo systemctl status mssql-server
    ```
 
-Sie können zu beenden, starten oder Neustarten von SQL Server-Diensts, je nach Bedarf mit den folgenden Befehlen:
+Sie können den SQL Server-Dienst nach Bedarf mit den folgenden Befehlen beenden, starten oder neu starten:
 
    ```bash
    sudo systemctl stop mssql-server
@@ -74,15 +74,15 @@ Sie können zu beenden, starten oder Neustarten von SQL Server-Diensts, je nach 
    sudo systemctl restart mssql-server
    ```
 
-### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Die Ausführung von der Mssql-Docker-Container verwalten
+### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Verwalten der Ausführung des MSSQL-Docker-Containers
 
-Sie können den Status und Container-ID, von der zuletzt erstellte SQL Server-Docker-Container abrufen, indem Sie den folgenden Befehl ausführen (die ID ist unter den **CONTAINER-ID** Spalte):
+Sie können den Status und die Container-ID des zuletzt erstellten SQL Server Docker-Containers durch Ausführen des folgenden Befehls abrufen (die ID befindet sich in der Spalte **CONTAINER-ID**):
 
    ```bash
    sudo docker ps -l
    ```
    
-Sie beenden oder starten Sie SQL Server-Dienst nach Bedarf mit den folgenden Befehlen neu:
+Sie können den SQL Server-Dienst nach Bedarf mit den folgenden Befehlen beenden oder neu starten:
    
    ```bash
    sudo docker stop <container ID>
@@ -90,59 +90,59 @@ Sie beenden oder starten Sie SQL Server-Dienst nach Bedarf mit den folgenden Bef
    ```
 
 > [!TIP]
-> Weitere Problembehandlungstipps für Docker finden Sie unter [zur Problembehandlung von SQL Server-Docker-Containern](sql-server-linux-configure-docker.md#troubleshooting).
+> Weitere Tipps zur Problembehandlung für Docker finden Sie unter [Troubleshooting SQL Server Docker containers (Problembehandlung bei SQL Server in Docker-Containern)](sql-server-linux-configure-docker.md#troubleshooting).
 
-## <a name="access-the-log-files"></a>Zugriff auf die Protokolldateien
+## <a name="access-the-log-files"></a>Zugreifen auf die Protokolldateien
    
-Der SQL Server-Engine protokolliert in die Datei /var/opt/mssql/log/errorlog in Linux- und Docker-Installationen. Sie müssen im Modus "Superuser", dieses Verzeichnis zu durchsuchen.
+Die SQL Server-Engine protokolliert sowohl in der Linux- als auch in der Docker-Installation in der Datei „/var/opt/mssql/log/errorlog“. Sie müssen sich im Modus „Superuser“ befinden, um dieses Verzeichnis durchsuchen zu können.
 
-Der Installer protokolliert hier: / Var/opt/Mssql/Setup-< Zeitstempel, der Zeitpunkt der Installation darstellt > können Sie die Errorlog-Dateien mit einem beliebigen kompatible UTF-16-Tool wie 'Vim' Durchsuchen, oder "cat" wie folgt aus: 
+Das Installationsprogramm protokolliert hier: „/var/opt/mssql/setup-“< Zeitstempel, der die Uhrzeit der Installation darstellt > Sie können die Fehlerprotokolldateien mit einem beliebigen UTF-16-kompatiblen Tool wie „vim“ oder „cat“ wie folgt durchsuchen: 
 
    ```bash
    sudo cat errorlog
    ```
 
-Falls gewünscht, können Sie auch die Dateien in UTF-8 mit eingelesen konvertieren "more" oder "kleiner", mit dem folgenden Befehl:
+Wenn Sie möchten, können Sie die Dateien auch in UTF-8 konvertieren, um sie mit „more“ oder „less“ mit dem folgenden Befehl zu lesen:
    
    ```bash
    sudo iconv -f UTF-16LE -t UTF-8 <errorlog> -o <output errorlog file>
    ```
 ## <a name="extended-events"></a>Erweiterte Ereignisse
 
-Erweiterte Ereignisse können über einen SQL‑Befehl abgefragt werden.  Weitere Informationen zu erweiterten Ereignissen finden [hier](https://technet.microsoft.com/library/bb630282.aspx):
+Erweiterte Ereignisse können über einen SQL-Befehl abgefragt werden.  Weitere Informationen zu erweiterten Ereignissen finden Sie [hier](https://technet.microsoft.com/library/bb630282.aspx):
 
 ## <a name="crash-dumps"></a>Absturzabbilder 
 
-Suchen Sie nach der Absturzabbilder in das Protokollverzeichnis unter Linux. Überprüfen Sie, ob unter dem Verzeichnis /var/opt/mssql/log Speicherabbilder von Linux-Core (. tar.gz2-Erweiterung) oder SQL-Minidumps (Durchwahl .mdmp)
+Suchen Sie im Protokollverzeichnis unter Linux nach Abbildern. Überprüfen Sie das Verzeichnis „/var/opt/mssql/log“ auf Linux-Kernabbilder (.tar.gz2-Erweiterung) oder SQL-Miniabbilder (.mdmp-Erweiterung).
 
-Für kernspeicherabbilder 
+Für Kernabbilder 
    ```bash
    sudo ls /var/opt/mssql/log | grep .tar.gz2 
    ```
 
-Für SQL-dumps 
+Für SQL-Abbilder 
    ```bash
    sudo ls /var/opt/mssql/log | grep .mdmp 
    ```
    
-## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>Starten Sie SQLServer in der Minimalkonfiguration oder im Einzelbenutzermodus
+## <a name="start-sql-server-in-minimal-configuration-or-in-single-user-mode"></a>Starten von SQL Server im Minimalkonfigurationsmodus oder Einzelbenutzermodus
 
-### <a name="start-sql-server-in-minimal-configuration-mode"></a>Starten Sie SQLServer im Modus der Minimalkonfiguration
+### <a name="start-sql-server-in-minimal-configuration-mode"></a>Starten von SQL Server im Minimalkonfiguration
 Dies ist hilfreich, wenn der Server aufgrund der Einstellung eines Konfigurationswerts (z. B. aufgrund von Arbeitsspeichermangel) nicht gestartet werden kann.
   
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -f
    ```
 
-### <a name="start-sql-server-in-single-user-mode"></a>Starten Sie SQLServer im Einzelbenutzermodus
-Unter bestimmten Umständen müssen Sie möglicherweise zu einer Instanz von SQL Server im Einzelbenutzermodus mithilfe der Startoption-m. Dies ist z. B. der Fall, wenn Sie Serverkonfigurationsoptionen ändern oder eine beschädigte master-Datenbank oder andere Systemdatenbanken wiederherstellen möchten. Beispielsweise sollten Sie Serverkonfigurationsoptionen ändern oder eine beschädigte master-Datenbank oder andere Systemdatenbanken Wiederherstellen von   
+### <a name="start-sql-server-in-single-user-mode"></a>Starten von SQL Server im Einzelbenutzermodus
+Unter bestimmten Umständen müssen Sie möglicherweise eine Instanz von SQL Server mithilfe der Startoption „-m“ im Einzelbenutzermodus starten. Dies ist z. B. der Fall, wenn Sie Serverkonfigurationsoptionen ändern oder eine beschädigte master-Datenbank oder andere Systemdatenbanken wiederherstellen möchten. Ein Beispiel ist, wenn Sie die Serverkonfigurationsoptionen ändern oder eine beschädigte Masterdatenbank oder andere Systemdatenbanken wiederherstellen müssen.   
 
-Starten Sie SQLServer im Einzelbenutzermodus
+Starten von SQL Server im Einzelbenutzermodus
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m
    ```
 
-Starten Sie SQLServer im Einzelbenutzermodus mit SQLCMD
+Starten von SQL Server im Einzelbenutzermodus mit „SQLCMD“
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr -m SQLCMD
    ```
@@ -150,42 +150,42 @@ Starten Sie SQLServer im Einzelbenutzermodus mit SQLCMD
 > [!WARNING]  
 >  Starten Sie SQL Server unter Linux mit dem Benutzer „MSSQL“, um zukünftige Startprobleme zu vermeiden. Beispiel „sudo-u mssql /opt/mssql/bin/sqlservr [STARTOPTIONEN]“ 
 
-Wenn Sie SQL Server mit einem anderen Benutzer versehentlich begonnen haben, müssen Sie den Besitz der SQL Server-Datenbankdateien zurück an den Benutzer "Mssql" vor dem Starten von SQL Server mit "systemd" ändern. Führen Sie z. B. den folgenden Befehl zum Ändern des Besitzes aller Datenbankdateien unter /var/opt/mssql für den Benutzer "Mssql"
+Wenn Sie SQL Server versehentlich mit einem anderen Benutzer gestartet haben, müssen Sie den Besitzer der SQL Server-Datenbankdateien wieder in den Benutzer „MSSQL“ ändern, bevor Sie SQL Server mit „systemd“ starten. Wenn Sie z. B. den Besitzer aller Datenbankdateien unter „/var/opt/mssql“ in den Benutzer „MSSQL“ ändern möchten, führen Sie den folgenden Befehl aus:
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
 ## <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
-Als letzten Ausweg können Sie zum Neuerstellen des Masters und Model-Datenbanken sichern, um Standardversionen aus.
+Als letztes Mittel können Sie die Master-und Modeldatenbanken wieder auf die Standardversionen zurücksetzen.
 
 > [!WARNING]
-> Mit diesen Schritten werden **Löschen aller Daten von SQL Server-System** , die Sie konfiguriert haben. Dies umfasst Informationen über die Benutzerdatenbanken (aber nicht die Benutzerdatenbanken sich selbst). Es werden auch andere Informationen gespeichert, die in den Systemdatenbanken, einschließlich der folgenden gelöscht: Master Key-Informationen, alle Zertifikate in Master, das Kennwort des Anmeldenamens "SA", projektbezogenen Informationen aus Msdb, DB E-Mail-Informationen aus Msdb "und" Sp_configure-Optionen geladen. Verwenden Sie nur, wenn Sie die Auswirkungen kennen!
+> Mit diesen Schritten **werden alle SQL Server-Systemdaten GELÖSCHT**, die Sie konfiguriert haben. Dies schließt die Informationen über Ihre Benutzerdatenbanken ein (jedoch nicht die Benutzerdatenbanken selbst). Außerdem werden andere in den Systemdatenbanken gespeicherte Informationen gelöscht, einschließlich der folgenden: Informationen zum Hauptschlüssel, alle in „master“ geladenen Zertifikate, SA-Anmeldekennwörter, auftragsbezogene Informationen aus der MSDB-Datenbank, Datenbank-E-Mail-Informationen aus der MSDB-Datenbank und sp_configure-Optionen. Verwenden Sie diese Methode nur, wenn Sie sich über die Konsequenzen im Klaren sind!
 
-1. Beenden Sie SqlServer.
+1. Beenden Sie SQL Server.
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Führen Sie **Sqlservr** mit der **-Force-Setup** Parameter. 
+1. Führen Sie **sqlservr** mit dem Parameter **force-setup** aus. 
 
    ```bash
    sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
    ```
    
    > [!WARNING]
-   > Siehe die vorherige Warnung! Sie müssen außerdem Ausführen als die **Mssql** Benutzer wie hier gezeigt.
+   > Siehe die vorherige Warnung! Außerdem muss die Ausführung als **MSSQL**-Benutzer erfolgen, wie hier gezeigt.
 
-1. Nachdem der Meldung "Wiederherstellung ist abgeschlossen" angezeigt wird, drücken Sie STRG + C. Dieser wird Computer mit SQL Server heruntergefahren
+1. Wenn die Meldung „Recovery is complete“ (Die Wiederherstellung ist abgeschlossen) angezeigt wird, drücken Sie STRG+C. SQL Server wird daraufhin heruntergefahren.
 
-1. Konfigurieren Sie das SA-Kennwort ein.
+1. Konfigurieren Sie das Systemadministratorkennwort neu.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set-sa-password
    ```
    
-1. Starten Sie SQL Server und konfigurieren Sie den Server neu. Dies schließt wiederherstellen oder erneuten Anfügen einer beliebigen Benutzerdatenbank.
+1. Starten Sie SQL Server, und konfigurieren Sie den Server neu. Dies schließt die Wiederherstellung oder das erneute Anfügen von Benutzerdatenbanken ein.
 
    ```bash
    sudo systemctl start mssql-server
@@ -193,41 +193,41 @@ Als letzten Ausweg können Sie zum Neuerstellen des Masters und Model-Datenbanke
 
 ## <a name="improve-performance"></a>Verbessern der Leistung
 
-Es gibt viele Faktoren, die Leistung zu erzielen, einschließlich Datenbankentwurf, Hardware- und arbeitsauslastungsanforderungen zu beeinflussen. Wenn Sie zur Verbesserung der Leistung möchten, zunächst die bewährten Methoden im Artikel [bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux](sql-server-linux-performance-best-practices.md). Anschließend lernen Sie einige der verfügbaren Tools für die Behandlung von Leistungsproblemen.
+Es gibt zahlreiche Faktoren, wie z. B. Datenbankentwurf, Hardware und Workloadanforderungen, die sich auf die Leistung auswirken. Wenn Sie die Leistung verbessern möchten, lesen Sie zunächst die bewährten Methoden im Artikel [Performance best practices and configuration guidelines for SQL Server on Linux (Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux)](sql-server-linux-performance-best-practices.md). Erkunden Sie dann einige der verfügbaren Tools zur Behandlung von Leistungsproblemen.
 
 - [Abfragespeicher](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
-- [Dynamische Verwaltungssichten (DMVs) für System](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [Dynamische Systemverwaltungssichten (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 - [Leistungsdashboard in SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
 
 ## <a name="common-issues"></a>Häufige Probleme
 
-1. Sie können nicht mit Ihrer SQL Server-Remoteinstanz verbinden.
+1. Sie können keine Verbindung mit der SQL Server-Remoteinstanz herstellen.
 
-   Finden Sie im Abschnitt zur Problembehandlung im Artikel [Herstellen einer Verbindung mit SQL Server unter Linux](#connection).
+   Weitere Informationen finden Sie im Abschnitt zur Fehlerbehebung im Artikel [Connect to SQL Server on Linux (Herstellen einer Verbindung mit SQL Server)](#connection).
 
-2. FEHLER: Hostname darf 15 Zeichen sein oder weniger.
+2. FEHLER: Der Hostname darf höchstens 15 Zeichen enthalten.
 
-   Dies ist eine bekannte Problem, das ausgeführt wird, wenn der Name des Computers, der versucht, installieren das Debian-Paket von SQLServer mehr als 15 Zeichen ist. Es gibt derzeit keine problemumgehungen als den Namen des Computers ändern. Eine Möglichkeit, dies zu erreichen, ist durch Bearbeiten der Hostname-Datei und Neustarten des Computers. Die folgenden [Website Handbuch](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) wird dies ausführlich erläutert.
+   Dies ist ein bekanntes Problem, das auftritt, wenn der Name des Computers, auf dem das Debian-Paket von SQL Server installiert werden soll, länger als 15 Zeichen ist. Diese Problem kann zurzeit nur durch Ändern des Computernamens umgangen werden. Bearbeiten Sie hierzu die Hostnamendatei und starten Sie den Computer neu. Im folgenden [Onlineartikel](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) wird die Vorgehensweise ausführlich erläutert.
 
-3. Das System-Verwaltung (SA)-Kennwort zurücksetzen.
+3. Zurücksetzen des Systemadministratorkennworts
 
-   Wenn Sie das Systemadministratorkennwort (SA vergessen haben) oder einem anderen Grund zurücksetzen müssen, gehen Sie wie folgt vor.
+   Wenn Sie das Kennwort des Systemadministrators vergessen haben oder es aus einem anderen Grund zurücksetzen müssen, führen Sie die folgenden Schritte aus.
 
    > [!NOTE]
-   > Die folgenden Schritte aus, beendet SQL Server-Dienst vorübergehend.
+   > Während der Ausführung dieser Schritten wird der SQL Server-Dienst vorübergehend beendet.
 
-   Melden Sie sich das Host-Terminal, führen Sie die folgenden Befehle aus, und befolgen Sie die Anweisungen zum Zurücksetzen des SA-Kennworts:
+   Melden Sie sich beim Hostterminal an, führen Sie die folgenden Befehle aus, und befolgen Sie die Anweisungen zum Zurücksetzen des Systemadministratorkennworts:
 
    ```bash
    sudo systemctl stop mssql-server
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-4. Verwenden Sonderzeichen im Kennwort an.
+4. Verwenden von Sonderzeichen in Kennwörtern
 
-   Wenn Sie einige Zeichen in das Anmeldekennwort für SQL Server verwenden, müssen Sie sie mit einem umgekehrten Schrägstrich als Escapezeichen, bei Verwendung in einem Linux-Befehl im Terminal. Beispielsweise müssen Sie mit Escapezeichen versehen das Dollarzeichen ($) jedes Mal, wenn Sie sie verwenden in einem terminal Befehls-Shell-Skript:
+   Bei Verwenden einiger Zeichen im Anmeldekennwort für SQL Server müssen Sie diese möglicherweise mit einem Escapezeichen bzw. umgekehrten Schrägstrich versehen, wenn Sie es in einem Linux-Befehl im Terminal verwenden. Beispielsweise müssen Sie das Dollarzeichen ($) jedes Mal mit Escapezeichen versehen, wenn Sie es in einem Terminalbefehl/Shellskript verwenden:
 
-   Ist nicht geeignet:
+   Funktioniert nicht:
 
    ```bash
    sudo sqlcmd -S myserver -U sa -P Test$$
@@ -240,6 +240,6 @@ Es gibt viele Faktoren, die Leistung zu erzielen, einschließlich Datenbankentwu
    ```
 
    Ressourcen: [Sonderzeichen](https://tldp.org/LDP/abs/html/special-chars.html)
-   [Escaping](https://tldp.org/LDP/abs/html/escapingsection.html)
+   [Escapezeichen](https://tldp.org/LDP/abs/html/escapingsection.html)
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 778980ac6b93e7db79d59182fbd18ab4cfdb8b75
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 6f29c473bdd4b665389e97bc2e0dbff572dc7288
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426090"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969400"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -38,7 +38,7 @@ azdata bdc spark statement list --session-id -i
 ### <a name="examples"></a>Beispiele
 Listen Sie alle Sitzungsanweisungen auf.
 ```bash
-azdata spark statement list --session-id 0
+azdata bdc spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -51,7 +51,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
@@ -63,7 +63,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>Beispiele
 Führen Sie eine Anweisung aus.
 ```bash
-azdata spark statement create --session-id 0 --code "2+2"
+azdata bdc spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -90,7 +90,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>Beispiele
 Rufen Sie die Anweisungsinformationen für die Sitzung mit der ID 0 und die Anweisung mit der ID 0 ab.
 ```bash
-azdata spark statement info --session-id 0 --statement-id 0
+azdata bdc spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -117,7 +117,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>Beispiele
 Brechen Sie eine Anweisung ab.
 ```bash
-azdata spark statement cancel --session-id 0 --statement-id 0
+azdata bdc spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`

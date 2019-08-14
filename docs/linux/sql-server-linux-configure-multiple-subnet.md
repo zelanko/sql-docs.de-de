@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von mehreren Subnetzen AlwaysOn-Verfügbarkeitsgruppen und Failoverclusterinstanzen unter Linux
+title: Konfigurieren von Always On-Verfügbarkeitsgruppen und Failoverclusterinstanzen für Multisubnetze unter Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,33 +9,33 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077587"
 ---
-# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Konfigurieren von mehreren Subnetzen AlwaysOn-Verfügbarkeitsgruppen und Failoverclusterinstanzen
+# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Konfigurieren von Always On-Verfügbarkeitsgruppen für und Failoverclusterinstanzen für Multisubnetze
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Wenn eine Always On Availability Group (-Verfügbarkeitsgruppen) oder ein Failover Cluster-Instanz (FCI) mehr als ein Standort, der jeder Standort in der Regel umfasst verfügt über eigene Netzwerke aus. Dies bedeutet häufig, dass jeder Standort eine eigene IP-Adressen hat. Starten z. B. Standort A-Adressen mit 192.168.1 aufweisen. *x* und Standort B Adressen mit 192.168.2 zu beginnen. *X*, wobei *x* ist der Teil der IP-Adresse, die für den Server eindeutig ist. Ohne irgendein auf Netzwerkebene direktes routing werden dieser Server nicht miteinander kommunizieren können. Es gibt zwei Möglichkeiten zum Behandeln dieses Szenarios: Einrichten eines Netzwerks, das die zwei verschiedenen Subnetzen, bekannt als ein VLAN verbindet, oder Konfigurieren des Routings zwischen den Subnetzen.
+Wenn eine Always On-Verfügbarkeitsgruppe (Availability Group, AG) oder eine Failoverclusterinstanz (FCI) mehrere Standorte umfasst, verfügt jeder Standort in der Regel über ein eigenes Netzwerk. Dies bedeutet häufig, dass jeder Standort über eine eigene IP-Adressierung verfügt. Beispielsweise beginnen die Adressen von Standort A mit 192.168.1*x* und die Adressen von Standort B mit 192.168.2.*x*, wobei *x* der Teil der IP-Adresse ist, der für den Server eindeutig ist. Wenn auf der Netzwerkebene kein Routing vorhanden ist, sind diese Server nicht in der Lage, miteinander zu kommunizieren. Es gibt zwei Möglichkeiten, dieses Szenario zu behandeln: richten Sie ein Netzwerk ein, das als Brücke zwischen den beiden unterschiedlichen Subnetzen dient – auch als VLAN bezeichnet – oder konfigurieren Sie das Routing zwischen den Subnetzen.
 
 ## <a name="vlan-based-solution"></a>VLAN-basierte Lösung
  
-**Erforderliche**: Für eine VLAN-basierte Lösung benötigt jeder Server, die Teil einer Verfügbarkeitsgruppe oder FCI zwei Netzwerkkarten (NICs) für eine ordnungsgemäße Verfügbarkeit (zwei Ports NIC wäre eine einzelne Fehlerquelle auf einem physischen Server), damit dieser IP-Adressen auf einem systemeigenen Subnetz als auch zugewiesen werden kann Klicken Sie auf das VLAN. Dies erfolgt zusätzlich zu anderen netzwerkanforderungen, wie z. B. iSCSI, die auch ein eigenen Netzwerk benötigt.
+**Voraussetzung**: Bei einer VLAN-basierten Lösung benötigt jeder Server, der zu einer Verfügbarkeitsgruppe oder FCI gehört, zwei Netzadapter (NICs) für die ordnungsgemäße Verfügbarkeit (ein Dualanschluss-NIC wäre auf einem physischen Server ein Single Point of Failure), sodass Ihm IP-Adressen sowohl in seinem nativen Subnetz als auch dem VLAN zugewiesen werden können. Dies gilt zusätzlich zu allen anderen Netzwerkanforderungen, z.B. iSCSI, die auch ein eigenes Netzwerk benötigen.
 
-Die Erstellung der IP-Adresse für die Verfügbarkeitsgruppe oder FCI wird auf das VLAN ausgeführt. Im folgenden Beispiel hat das VLAN ein Subnetz mit 192.168.3. *x*, sodass die IP-Adresse für die Verfügbarkeitsgruppe oder FCI erstellt 192.168.3.104 ist. Keine weiteren Aktionen erforderlich konfiguriert werden, da eine einzelne IP-Adresse, die die Verfügbarkeitsgruppe oder FCI zugewiesen ist.
+Die IP-Adresserstellung für die Verfügbarkeitsgruppe oder FCI erfolgt im VLAN. Im folgenden Beispiel weist das VLAN ein Subnetz von 192.168.3*x*auf, daher lautet die für die Verfügbarkeitsgruppe oder FCI erstellte IP-Adresse 192.168.3.104. Es müssen keine zusätzlichen Elemente konfiguriert werden, da der Verfügbarkeitsgruppe oder FCI eine einzelne IP-Adresse zugewiesen ist.
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
-## <a name="configuration-with-pacemaker"></a>Mit der Pacemaker
+## <a name="configuration-with-pacemaker"></a>Konfiguration mit Pacemaker
 
-In der Windows-Welt wird ein Windows Server Failover Cluster (WSFC) nativ mehrere Subnetze unterstützt, und mehrere IP-Adressen über einen OR-Abhängigkeit der IP-Adresse behandelt. Unter Linux es gibt keine OR-Abhängigkeit, aber gibt es eine Möglichkeit, eine ordnungsgemäße multisubnetz systemintern mit Pacemaker zu erreichen ist, wie im folgenden Beispiel dargestellt. Sie können nicht dazu einfach mit der normalen Pacemaker-Befehlszeile zum Ändern von Ressourcen. Sie müssen die Clusterinformationen Basis (CIB) zu ändern. Die CIB ist eine XML-Datei mit der Pacemaker-Konfiguration.
+In der Windows-Welt unterstützt ein Windows Server-Failovercluster (WSFC) nativ mehrere Subnetze und verarbeitet mehrere IP-Adressen über eine OR-Abhängigkeit der IP-Adresse. Unter Linux gibt es keine OR-Abhängigkeit, aber es gibt eine Möglichkeit, ein ordnungsgemäßes Multisubnetz nativ mit Pacemaker zu erreichen, wie im Folgenden gezeigt. Hierfür können Sie nicht einfach die normale Pacemaker-Befehlszeile verwenden, um eine Ressource zu ändern. Sie müssen die Clusterinformationenbasis (CIB) ändern. Die CIB ist eine XML-Datei mit der Pacemaker-Konfiguration.
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
-### <a name="update-the-cib"></a>Aktualisieren Sie die CIB
+### <a name="update-the-cib"></a>Aktualisieren der CIB
 
 1.  Exportieren Sie die CIB.
 
@@ -51,9 +51,9 @@ In der Windows-Welt wird ein Windows Server Failover Cluster (WSFC) nativ mehrer
     sudo cibadmin -Q > <filename>
     ```
 
-    Wo *Filename* ist der Name der CIB aufgerufen werden soll.
+    Wobei *filename* der Name ist, den Sie als CIB bezeichnen möchten.
 
-2.  Bearbeiten Sie die Datei, die generiert wurde. Suchen Sie nach der `<resources>` Abschnitt. Sie sehen die verschiedenen Ressourcen, die für die Verfügbarkeitsgruppe oder FCI erstellt wurden. Suchen der IP-Adresse zugeordnet. Hinzufügen einer `<instance attributes>` im Abschnitt mit den Informationen für die zweite IP-Adresse oberhalb oder unterhalb der vorhandenen Dateigruppe, jedoch bevor `<operations>`. Es ähnelt der folgenden Syntax:
+2.  Bearbeiten Sie die generierte Datei. Suchen Sie nach dem `<resources>`-Abschnitt. Die verschiedenen Ressourcen, die für die Verfügbarkeitsgruppe oder FCI erstellt wurden, werden angezeigt. Suchen Sie diejenige, die der IP-Adresse zugeordnet ist. Fügen Sie einen `<instance attributes>`-Abschnitt mit den Informationen für die zweite IP-Adresse hinzu, entweder oberhalb oder unterhalb der vorhandenen IP-Adresse, jedoch vor `<operations>`. Dies ähnelt der folgenden Syntax:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -65,9 +65,9 @@ In der Windows-Welt wird ein Windows Server Failover Cluster (WSFC) nativ mehrer
     </instance attributes>
     ```
     
-    in denen *NameForAttribute* ist der eindeutige Name für dieses Attribut, *Bewertung* ist das Attribut, das höher als die primären Subnetzes sein muss, zugewiesene Nummer *RuleName*ist der Name der Regel *ExpressionName* ist der Name des Ausdrucks *NodeNameInSubnet2* ist der Name des Knotens in das andere Subnetz *NameForSecondIP* ist der Name der zweiten IP-Adresse zugeordnet *IP-Adresse* ist die IP-Adresse des zweiten Subnetzes *NameForSecondIPNetmask* ist der Name, der die Netzmaske, zugeordnet und *Netzmaske* die Netzmaske für das zweite Subnetz ist.
+    wobei *NameForAttribute* der eindeutige Name für dieses Attribut ist, *Score* ist die Nummer, die dem Attribut zugewiesen ist, die höher sein muss als die des primären Subnetzes, *RuleName* ist der Name der Regel, *ExpressionName* ist der Name des Ausdrucks, *NodeNameInSubnet2* ist der Name des Knotens im anderen Subnetz, *NameForSecondIP* ist der Name, der der zweiten IP-Adresse zugeordnet ist, *IPAddress* ist die IP-Adresse für das zweite Subnetz, *NameForSecondIPNetmask* ist der Name, der der Netzmaske zugeordnet ist, und *Netmask* ist die Netzmaske für das zweite Subnetz.
     
-    Das folgende Beispiel zeigt ein Beispiel aus.
+    Die Folgenden wird ein Beispiel gezeigt.
     
     ```xml
     <instance attributes id="Node3-2nd-IP" score="2">
@@ -79,7 +79,7 @@ In der Windows-Welt wird ein Windows Server Failover Cluster (WSFC) nativ mehrer
     </instance attributes>
     ```
 
-3.  Importieren Sie die geänderte CIB, und konfigurieren Sie Pacemaker.
+3.  Importieren Sie die geänderte CIB, und konfigurieren Sie Pacemaker neu.
 
     **RHEL/Ubuntu**
     
@@ -93,11 +93,11 @@ In der Windows-Welt wird ein Windows Server Failover Cluster (WSFC) nativ mehrer
     sudo cibadmin -R -x <filename>
     ```
 
-    wo *Filename* ist der Name der Datei CIB durch die geänderte IP-Adressinformationen.
+    wobei *filename* der Name der CIB-Datei mit den geänderten IP-Adressinformationen ist.
 
-### <a name="check-and-verify-failover"></a>Überprüfen Sie, und überprüfen Sie failover
+### <a name="check-and-verify-failover"></a>Überprüfen des Failovers
 
-1.  Nachdem die CIB mit der aktualisierten Konfiguration wurde erfolgreich angewendet wurde, Pingen Sie den DNS-Namen, die die IP-Adressressource in Pacemaker zugeordnet. Sie sollten die IP-Adresse, die dem Subnetz, das derzeit gehostet wird, die Verfügbarkeitsgruppe oder FCI zugeordnet widerspiegeln.
-2.  Fehlschlagen der AG und FCI dem anderen Subnetz an.
-3.  Nachdem die Verfügbarkeitsgruppe oder FCI vollständig online ist, Pingen Sie den DNS-Namen der IP-Adresse zugeordnet. Sie sollten die IP-Adresse des zweiten Subnetzes widerspiegeln.
-4.  Falls gewünscht, führen Sie die Verfügbarkeitsgruppe oder FCI Failback zu das ursprüngliche Subnetz an.
+1.  Nachdem die CIB mit der aktualisierten Konfiguration erfolgreich angewendet wurde, pingen Sie den DNS-Namen, der mit der IP-Adressressource in Pacemaker verknüpft ist. Dies sollte die IP-Adresse des Subnetzes widerspiegeln, das zurzeit die Verfügbarkeitsgruppe oder FCI hostet.
+2.  Führen Sie ein Failover der Verfügbarkeitsgruppe oder FCI zum anderen Subnetz aus.
+3.  Nachdem die Verfügbarkeitsgruppe oder FCI vollständig online ist, pingen Sie den DNS-Namen, der der IP-Adresse zugeordnet ist. Er sollte die IP-Adresse im zweiten Subnetz widerspiegeln.
+4.  Falls gewünscht, führen Sie ein Failback der Verfügbarkeitsgruppe oder FCI zum ursprünglichen Subnetz aus.

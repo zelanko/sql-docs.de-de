@@ -1,7 +1,7 @@
 ---
-title: 'Schnellstart: Verbinden und Abfragen von SQL Server'
+title: 'Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server'
 titleSuffix: Azure Data Studio
-description: In dieser schnellstartanleitung veranschaulicht, wie Azure Data Studio eine Verbindung mit SQL Server, und führen Sie eine Abfrage
+description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit SQL Server herstellen und eine Abfrage ausführen.
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,53 +11,53 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959396"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden mit SQL Server, und klicken Sie dann mithilfe von Transact-SQL (T-SQL)-Anweisungen zum Erstellen der *"tutorialdb"* verwendet [!INCLUDE[name-sos](../includes/name-sos-short.md)] Tutorials.
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit SQL Server herstellen und anschließend Transact-SQL-Anweisungen (T- SQL) verwenden, um die in [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Tutorials verwendete *TutorialDB* zu erstellen.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
-Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], und den Zugriff auf eine SQL Server.
+Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] und Zugriff auf eine SQL Server-Instanz.
 
-- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
+- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-Wenn Sie keinen Zugriff auf einen SQL Server haben, wählen Sie Ihre Plattform aus den folgenden Links (Stellen Sie sicher, dass Sie denken Sie daran, Ihren SQL-Anmeldung und das Kennwort!):
+Wenn Sie nicht auf eine SQL Server-Instanz zugreifen können, wählen Sie Ihre Plattform über einen der folgenden Links aus (hierzu benötigen Sie Ihren SQL-Anmeldenamen und das zugehörige Kennwort):
 - [Windows: Herunterladen der SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS: Herunterladen von SQL Server 2017 für Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -müssen Sie nur die Schritte bis zu *erstellen und Abfragen von Daten*.
+- [Linux: Herunterladen der SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install): Sie müssen nur die Schritte zum *Erstellen und Abfragen von Daten* ausführen.
 
 
 ## <a name="connect-to-a-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 
    
 1. Starten Sie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. Der ersten Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Willkommen** Seite sollte zu öffnen. Wenn Sie nicht sehen die **Willkommen** Seite **Hilfe** > **Willkommen**. Wählen Sie **neue Verbindung** zum Öffnen der **Verbindung** Bereich:
+1. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum ersten Mal ausführen, sollte die **Homepage** geöffnet werden. Wenn die **Homepage** nicht angezeigt wird, wählen Sie **Hilfe** > **Willkommen** aus. Wählen Sie **Neue Verbindung** aus, um den Bereich **Verbindung** zu öffnen:
    
-   ![Symbol "neue Verbindung"](media/quickstart-sql-server/new-connection-icon.png)
+   ![Symbol „Neue Verbindung“](media/quickstart-sql-server/new-connection-icon.png)
 
-1. In diesem Artikel wird *SQL-Anmeldung*, aber *Windows-Authentifizierung* wird unterstützt. Füllen Sie die Felder wie folgt aus:
+1. In diesem Artikel wird die *SQL-Anmeldung* verwendet, aber auch die *Windows-Authentifizierung* unterstützt. Füllen Sie die Felder wie folgt aus:
  
-    - **Name des Servers:** "localhost"
+    - **Servername:** localhost
     - **Authentifizierungstyp:** SQL-Anmeldung  
-    - **Benutzername:** Benutzername für den SQL Server  
-    - **Kennwort:** Kennwort für den SQLServer  
-    - **Datenbankname:** dieses Feld leer lassen 
-    - **Server-Gruppe:** \<Default\>  
+    - **Benutzername:** Benutzername für die SQL Server-Instanz  
+    - **Kennwort:** Kennwort für die SQL Server-Instanz  
+    - **Datenbankname:** Lassen Sie dieses Feld leer. 
+    - **Servergruppe:** \<Standard\>  
 
-   ![Neuen Bildschirm "Flowverbindung"](media/quickstart-sql-server/new-connection-screen.png)
+   ![Bildschirm „Neue Verbindung“](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
 ## <a name="create-a-database"></a>Erstellen einer Datenbank
 
-Die folgenden Schritte erstellen Sie eine Datenbank, die mit dem Namen **"tutorialdb"** :
+Mit den folgenden Schritten wird eine Datenbank mit dem Namen **TutorialDB** erstellt:
 
-1. Klicken Sie mit der rechten Maustaste auf, auf dem Server **"localhost"** , und wählen Sie **neue Abfrage.**
+1. Klicken Sie mit der rechten Maustaste auf Ihren Server, **localhost**, und wählen Sie **Neue Abfrage** aus.
 1. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein: 
 
    ```sql
@@ -74,25 +74,25 @@ Die folgenden Schritte erstellen Sie eine Datenbank, die mit dem Namen **"tutori
        ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
-1. Um die Abfrage auszuführen, klicken Sie auf **ausführen** .
+1. Klicken Sie zum Ausführen der Abfrage auf **Ausführen**.
 
-Nach Abschluss die Abfrage, die neue **"tutorialdb"** wird in der Liste der Datenbanken angezeigt. Wenn Sie nicht angezeigt wird, mit der rechten Maustaste die **Datenbanken** Knoten, und wählen **aktualisieren**.
+Nachdem die Abfrage abgeschlossen ist, wird die neue Datenbank **TutorialDB** in der Datenbankliste angezeigt. Wenn die Datenbank nicht angezeigt wird, klicken Sie zuerst mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie **Aktualisieren** aus.
 
 
 ## <a name="create-a-table"></a>Erstellen einer Tabelle
 
-Abfrage-Editor immer noch verbunden ist die *master* -Datenbank, aber wir möchten eine Tabelle in der *"tutorialdb"* Datenbank. 
+Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir möchten eine Tabelle in der Datenbank *TutorialDB* erstellen. 
 
-1. Ändern den Verbindungskontext für **"tutorialdb"** :
+1. Ändern Sie den Verbindungskontext in **TutorialDB**:
 
-   ![Kontext ändern](media/quickstart-sql-server/change-context.png)
+   ![Ändern des Kontexts](media/quickstart-sql-server/change-context.png)
 
 
 
-1. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **ausführen**:
+1. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
 
    > [!NOTE]
-   > Sie können fügen Sie diese Option, um, oder überschreiben die vorherige Abfrage in Editor. Beachten Sie, dass beim Klicken auf **ausführen** führt nur die Abfrage, die ausgewählt ist. Wenn nichts ausgewählt ist, durch Klicken auf **ausführen** alle Abfragen im Editor ausgeführt.
+   > Sie können diesen Codeausschnitt der vorherigen Abfrage anfügen oder sie im Editor überschreiben. Beachten Sie, dass beim Klicken auf **Ausführen** nur die ausgewählte Abfrage ausgeführt wird. Wenn nichts ausgewählt ist, werden beim Klicken auf **Ausführen** alle Abfragen im Editor ausgeführt.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -111,11 +111,11 @@ Abfrage-Editor immer noch verbunden ist die *master* -Datenbank, aber wir möcht
    GO
    ```
 
-Nach Abschluss die Abfrage, die neue **Kunden** Tabelle in der Liste der Tabellen angezeigt wird. Möglicherweise müssen Sie mit der rechten Maustaste die **TutorialDB > Tabellen** Knoten, und wählen **aktualisieren**.
+Nachdem die Abfrage abgeschlossen ist, wird die neue Tabelle **Customers** in der Tabellenliste angezeigt. Möglicherweise müssen Sie mit der rechten Maustaste auf den Knoten **TutorialDB > Tables** klicken und **Aktualisieren** auswählen.
 
 ## <a name="insert-rows"></a>Einfügen von Zeilen
 
-- Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **ausführen**:
+- Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -131,20 +131,20 @@ Nach Abschluss die Abfrage, die neue **Kunden** Tabelle in der Liste der Tabelle
 
 
 
-## <a name="view-the-data-returned-by-a-query"></a>Zeigen Sie die von einer Abfrage zurückgegebenen Daten an
-1. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **ausführen**:
+## <a name="view-the-data-returned-by-a-query"></a>Anzeigen der von einer Abfrage zurückgegebenen Daten
+1. Fügen Sie den folgenden Codeausschnitt in das Abfragefenster ein, und klicken Sie auf **Ausführen**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Die Ergebnisse der Abfrage werden angezeigt:
+1. Die Abfrageergebnisse werden angezeigt:
 
-   ![Select-Ergebnisse](media/quickstart-sql-server/select-results.png)
+   ![Auswählen von Ergebnissen](media/quickstart-sql-server/select-results.png)
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Nun, da Sie mit SQL Server und Ausführen einer Abfrage verbunden haben, probieren Sie die [Code-Editor-Tutorials](tutorial-sql-editor.md).
+Nachdem Sie erfolgreich eine Verbindung mit der SQL Server-Instanz hergestellt und eine Abfrage ausgeführt haben, testen Sie das [Tutorial zum Code-Editor](tutorial-sql-editor.md).
 
 

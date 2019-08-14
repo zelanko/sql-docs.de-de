@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Sie Failoverclusterinstanz – SQL Server unter Linux (RHEL)
+title: 'Konfigurieren einer Failoverclusterinstanz: SQL Server für Linux (RHEL)'
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,61 +10,61 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032301"
 ---
-# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Konfigurieren Sie Failoverclusterinstanz – SQL Server unter Linux (RHEL)
+# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Konfigurieren einer Failoverclusterinstanz: SQL Server für Linux (RHEL)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Eine Failoverclusterinstanz von SQL Server zwei Knoten freigegebenen Datenträger bietet Redundanz auf Serverebene, um hochverfügbarkeit zu erzielen. In diesem Tutorial erfahren Sie, wie eine zwei-Knoten-Failover-Clusterinstanz von SQL Server unter Linux zu erstellen. Die einzelnen Schritte, die Sie abgeschlossen werden, gehören:
+Eine SQL Server-Failoverclusterinstanz mit zwei Knoten auf einem freigegebenen Datenträger bietet Redundanz für Hochverfügbarkeit auf Serverebene. In diesem Tutorial lernen Sie, wie Sie eine Failoverclusterinstanz von SQL Server für Linux mit zwei Knoten erstellen. Sie führen dabei die folgenden Schritte durch:
 
 > [!div class="checklist"]
 > * Einrichten und Konfigurieren von Linux
 > * Installieren und Konfigurieren von SQL Server
-> * Konfigurieren Sie die Datei "Hosts"
-> * Konfigurieren von freigegebenem Speicher, und verschieben Sie die Dateien
-> * Installieren Sie und konfigurieren Sie auf jedem Clusterknoten die Pacemaker
-> * Konfigurieren Sie die Failover-Clusterinstanz
+> * Konfigurieren der Hostdatei
+> * Konfigurieren von freigegebenem Speicher und Verschieben der Datenbankdateien
+> * Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
+> * Konfigurieren der Failoverclusterinstanz
 
-In diesem Artikel wird erläutert, wie eine zwei-Knoten freigegebenen Datenträger-Failoverclusterinstanz (FCI) für SQL Server zu erstellen. Der Artikel enthält Anleitungen und Skriptbeispiele für Red Hat Enterprise Linux (RHEL). Ubuntu-Distributionen sind ähnlich wie RHEL, sodass die Skriptbeispiele normalerweise werden auch unter Ubuntu funktionieren. 
+In diesem Artikel wird beschrieben, wie Sie für SQL Server eine Failoverclusterinstanz mit zwei Knoten auf einem freigegebenen Datenträger erstellen. Der Artikel enthält Anweisungen und Skriptbeispiele für Red Hat Enterprise Linux (RHEL). Ubuntu-Verteilungen ähneln RHEL, sodass die Skriptbeispiele normalerweise auch unter Ubuntu funktionieren. 
 
-Konzeptionelle Informationen finden Sie unter [SQL Server Failoverclusterinstanz (FCI) unter Linux](sql-server-linux-shared-disk-cluster-concepts.md).
+Konzeptionelle Informationen finden Sie unter [SQL Server Failover Cluster Instance (FCI) on Linux (SQL Server-Failoverclusterinstanzen unter Linux)](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Um das folgende End-to-End-Szenario abzuschließen, benötigen Sie zwei Computer, der zwei Knoten-Cluster und einem anderen Server für den Speicher bereitstellen. Unten aufgeführten Schritte beschreiben Sie, wie diese Server konfiguriert werden.
+Für das folgende End-to-End-Szenario benötigen Sie zwei Computer, um den Cluster mit zwei Knoten und einen weiteren Server zum Speichern bereitzustellen. Die folgenden Schritte beschreiben, wie diese Server konfiguriert werden.
 
 ## <a name="set-up-and-configure-linux"></a>Einrichten und Konfigurieren von Linux
 
-Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren. Konfigurieren Sie auf jedem Knoten im Cluster eine Linux-Distribution. Verwenden Sie die gleichen Distribution und Version, auf beiden Knoten. Verwenden Sie entweder einen oder dem anderen die folgenden Distributionen:
+Der erste Schritt besteht darin, das Betriebssystem auf den Clusterknoten zu konfigurieren. Konfigurieren Sie auf jedem Knoten im Cluster eine Linux-Verteilung. Verwenden Sie auf beiden Knoten die gleiche Verteilung und Version. Verwenden Sie eine der folgenden Verteilungen:
     
-* RHEL mit einem gültigen Abonnement, für die HA-Add-On
+* RHEL mit einem gültigen Abonnement für das Add-On für Hochverfügbarkeit
 
 ## <a name="install-and-configure-sql-server"></a>Installieren und Konfigurieren von SQL Server
 
-1. Installieren und Einrichten von SQL Server auf beiden Knoten.  Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server unter Linux](sql-server-linux-setup.md).
-1. Festlegen Sie ein Knoten als primärer und der andere wird als sekundäre Datenbank, für die Zwecke der Konfiguration. Verwenden Sie diese Bedingungen für die folgenden dieses Handbuchs.  
-1. Klicken Sie auf dem sekundären Knoten beenden, und Deaktivieren von SQL Server.
-    Im folgenden Beispiel wird beendet und deaktiviert SQL Server: 
+1. Installieren Sie SQL Server auf beiden Knoten, und richten Sie ihn ein.  Ausführliche Anweisungen finden Sie unter [Install SQL Server on Linux (Installieren von SQL Server für Linux)](sql-server-linux-setup.md).
+1. Legen Sie für die Konfiguration einen Knoten als primär und den anderen als sekundär fest. Verwenden Sie diese Begriffe für den weiteren Verlauf dieses Leitfadens.  
+1. Beenden und deaktivieren Sie SQL Server auf dem sekundären Knoten.
+    Im folgenden Beispiel wird SQL Server beendet und deaktiviert: 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
     ```
 
     > [!NOTE] 
-    > Gruppe Zeit, einen Server-Hauptschlüssel für die SQL Server-Instanz generiert und platziert `var/opt/mssql/secrets/machine-key`. Unter Linux wird SQL Server immer ausgeführt, als ein lokales Konto Mssql aufgerufen werden. Da es sich um ein lokales Konto handelt, ist nicht die Identität über Knoten hinweg gemeinsam genutzt werden. Aus diesem Grund müssen Sie den Verschlüsselungsschlüssel aus dem primären Knoten für jeden sekundären Knoten kopieren, damit jedes lokalen Mssql-Konto, um den Server-Hauptschlüssel entschlüsseln zugreifen kann. 
+    > Zum Zeitpunkt der Einrichtung wird ein Serverhauptschlüssel für die SQL Server-Instanz generiert und unter `var/opt/mssql/secrets/machine-key` platziert. Unter Linux wird SQL Server immer als lokales Konto mit dem Namen „mssql“ ausgeführt. Da es sich um ein lokales Konto handelt, wird dessen Identität nicht knotenübergreifend freigegeben. Daher müssen Sie den Verschlüsselungsschlüssel vom primären Knoten auf jeden sekundären Knoten kopieren, damit jedes lokale mssql-Konto darauf zugreifen kann, um den Serverhauptschlüssel zu entschlüsseln. 
 
-1.  Klicken Sie auf dem Primärknoten, erstellen Sie eine SQL Server-Anmeldung für Pacemaker, und erteilen Sie die Login-Berechtigung zum Ausführen `sp_server_diagnostics`. Pacemaker verwendet dieses Konto, um zu überprüfen, welcher Knoten die SQL Server ausgeführt wird. 
+1.  Erstellen Sie auf dem primären Knoten einen SQL Server-Anmeldenamen für Pacemaker, und erteilen Sie dem Anmeldenamen die Berechtigung zum Ausführen von `sp_server_diagnostics`. Pacemaker verwendet dieses Konto, um zu überprüfen, welcher Knoten auf SQL Server ausgeführt wird. 
 
     ```bash
     sudo systemctl start mssql-server
     ```
    
-   Verbinden mit dem SQL Server `master` -Datenbank mit der sa-Konto, und führen Sie Folgendes:
+   Stellen Sie mithilfe des sa-Kontos eine Verbindung mit der `master`-Datenbank von SQL Server her, und führen Sie Folgendes aus:
 
    ```sql
    USE [master]
@@ -73,26 +73,26 @@ Der erste Schritt ist das Betriebssystem auf den Clusterknoten zu konfigurieren.
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   Alternativ können Sie die Berechtigungen detaillierter festlegen. Die Pacemaker-Anmeldung erfordert `VIEW SERVER STATE` zum Abfrage-Integritätsstatus mit Sp_server_diagnostics, `setupadmin` und `ALTER ANY LINKED SERVER` auf den Namen der FCI-Instanz mit den Namen der Ressource zu aktualisieren, indem Sie Ausführung Sp_dropserver und Sp_addserver. 
+   Alternativ können Sie die Berechtigungen detaillierter festlegen. Der Pacemaker-Anmeldename benötigt `VIEW SERVER STATE`, um mithilfe von sp_server_diagnostics den Integritätsstatus abzufragen, sowie `setupadmin` und `ALTER ANY LINKED SERVER`, um den Namen der Failoverclusterinstanz mit dem Ressourcennamen zu aktualisieren, indem sp_dropserver und sp_addserver ausgeführt werden. 
 
-1. Klicken Sie auf dem primären Knoten beenden, und Deaktivieren von SQL Server. 
+1. Beenden und deaktivieren Sie SQL Server auf dem primären Knoten. 
 
-## <a name="configure-the-hosts-file"></a>Konfigurieren Sie die Datei "Hosts"
+## <a name="configure-the-hosts-file"></a>Konfigurieren der Hostdatei
 
-Konfigurieren Sie die Datei "Hosts" auf jedem Clusterknoten. Die Datei "Hosts" muss es sich um den IP-Adresse und den Namen der einzelnen Clusterknoten enthalten.
+Konfigurieren Sie auf jedem Clusterknoten die Hostdatei. Die Hostdatei muss die IP-Adresse und den Namen jedes Clusterknotens enthalten.
 
-1. Überprüfen Sie die IP-Adresse für jeden Knoten. Das folgende Skript zeigt die IP-Adresse Ihres aktuellen Knotens. 
+1. Überprüfen Sie die IP-Adresse jedes Knotens. Das folgende Skript zeigt die IP-Adresse des aktuellen Knotens an. 
 
     ```bash
     sudo ip addr show
     ```
 
-1. Legen Sie den Namen des Computers, auf den einzelnen Knoten. Weisen Sie jedem Knoten einen eindeutigen Namen, die 15 Zeichen lang ist oder weniger. Den Namen des Computers festlegen, indem Sie es `/etc/hosts`. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
+1. Legen Sie den Computernamen auf jedem Knoten fest. Geben Sie jedem Knoten einen eindeutigen Namen, der höchstens 15 Zeichen lang ist. Legen Sie den Computernamen fest, indem Sie diesen zu `/etc/hosts` hinzufügen. Mithilfe des folgenden Skripts können Sie `/etc/hosts` mit `vi` bearbeiten. 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für zwei Knoten, die mit dem Namen `sqlfcivm1` und `sqlfcivm2`.
+   Das folgende Beispiel zeigt `/etc/hosts` mit Ergänzungen für zwei Knoten mit den Namen `sqlfcivm1` und `sqlfcivm2`.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -101,15 +101,15 @@ Konfigurieren Sie die Datei "Hosts" auf jedem Clusterknoten. Die Datei "Hosts" m
    10.128.16.77 sqlfcivm2
    ```
 
-## <a name="configure-storage--move-database-files"></a>Konfigurieren des Speichers und das Verschieben von Datenbankdateien  
+## <a name="configure-storage--move-database-files"></a>Konfigurieren des Speichers & Verschieben von Datenbankdateien  
 
-Sie müssen Speicher bereitzustellen, die auf beiden Knoten zugreifen können. Sie können es sich um iSCSI, SMB oder NFS verwenden. Konfigurieren Sie des Speichers, vorhanden Sie des Speichers auf den Clusterknoten und klicken Sie dann verschieben Sie die Datenbankdateien auf den neuen Speicher. In den folgenden Artikeln wird erläutert, die Schritte für jeden Speichertyp:
+Sie müssen einen Speicher bereitstellen, auf den beide Knoten zugreifen können. Sie können iSCSI, NFS oder SMB verwenden. Konfigurieren Sie den Speicher, stellen Sie ihn für die Clusterknoten bereit, und verschieben Sie die Datenbankdateien dann in den neuen Speicher. In den folgenden Artikeln werden die Schritte für jeden Speichertyp erläutert:
 
-- [Konfigurieren von Failover-Clusterinstanz - iSCSI - SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [Konfigurieren Sie Failoverclusterinstanz – NFS - SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [Konfigurieren der Failoverclusterinstanz – SMB – SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [Configure failover cluster instance - iSCSI - SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz (iSCSI): SQL Server für Linux)](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [Configure failover cluster instance - NFS - SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz (NFS): SQL Server für Linux)](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [Configure failover cluster instance - SMB - SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz (SMB): SQL Server für Linux)](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren Sie und konfigurieren Sie auf jedem Clusterknoten die Pacemaker
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
 
 1. Erstellen Sie auf beiden Clusterknoten eine Datei zum Speichern von Benutzername und Kennwort für SQL Server für die Pacemaker-Anmeldung. 
 
@@ -130,7 +130,7 @@ Sie müssen Speicher bereitzustellen, die auf beiden Knoten zugreifen können. S
    sudo firewall-cmd --reload
    ```
 
-   > Wenn Sie eine andere Firewall verwenden, die nicht über eine integrierte Konfiguration mit hoher Verfügbarkeit verfügt, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren können
+   > Wenn Sie eine andere Firewall verwenden, in die keine Konfiguration mit Hochverfügbarkeit integriert ist, müssen die folgenden Ports geöffnet werden, damit Pacemaker mit anderen Knoten im Cluster kommunizieren kann:
    >
    > * TCP: Ports 2224, 3121, 21064
    > * UDP: Port 5405
@@ -159,17 +159,17 @@ Sie müssen Speicher bereitzustellen, die auf beiden Knoten zugreifen können. S
    sudo yum install mssql-server-ha
    ```
 
-## <a name="configure-the-failover-cluster-instance"></a>Konfigurieren Sie die Failover-Clusterinstanz
+## <a name="configure-the-failover-cluster-instance"></a>Konfigurieren der Failoverclusterinstanz
 
-Die FCI wird in einer Ressourcengruppe erstellt. Dies ist etwas einfacher, da die Ressourcengruppe für Einschränkungen nicht werden muss. Fügen Sie die Ressourcen jedoch in der Ressourcengruppe, in der Reihenfolge, in die sie gestartet werden soll. Ist die Reihenfolge, die sie gestartet werden soll: 
+Die FCI wird in einer Ressourcengruppe erstellt. Dies ist ein bisschen einfacher, da durch die Ressourcengruppe weniger Einschränkungen nötig sind. Fügen Sie die Ressourcen der Ressourcengruppe jedoch in der Reihenfolge hinzu, in der sie gestartet werden sollen. Die Startreihenfolge sieht wie folgt aus: 
 
-1. Storage-Ressource
-2. Network-Ressource
+1. Speicherressource
+2. Netzwerkressource
 3. Anwendungsressource
 
-In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name der Ressourcengruppe muss über eine Ressource in Pacemaker erstellt eindeutig sein.
+In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name der Ressourcengruppe muss für jede Ressource eindeutig sein, die in Pacemaker erstellt wurde.
 
-1.  Erstellen Sie die Datenträgerressource. Sie erhalten keine Antwort zurück, wenn es kein Problem ist. Die Möglichkeit zum Erstellen der Ressource hängt von den Speichertyp ab. Folgendes ist ein Beispiel für jeden Speichertyp. Verwenden Sie das Beispiel, das für den Speichertyp für Ihren Cluster Speicher gilt.
+1.  Erstellen Sie die Datenträgerressource. Wenn kein Problem vorliegt, wird keine Antwort zurückgegeben. Die Art und Weise der Erstellung der Datenträgerressource hängt vom Speichertyp ab. Im Folgenden finden Sie ein Beispiel für jeden Speichertyp. Verwenden Sie das Beispiel, das für den Speichertyp für Ihren Clusterspeicher gilt.
 
     **iSCSI**
 
@@ -177,15 +177,15 @@ In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name d
     sudo pcs resource create <iSCSIDiskResourceName> Filesystem device="/dev/<VolumeGroupName>/<LogicalVolumeName>" directory="<FolderToMountiSCSIDisk>" fstype="<FileSystemType>" --group RGName
     ```
 
-    \<iSCSIDIskResourceName > ist der Name der Ressource verknüpft ist, mit dem iSCSI-Datenträger
+    \<iSCSIDIskResourceName> ist der Name der Ressource, die dem iSCSI-Datenträger zugeordnet ist.
 
-    \<VolumeGroupName > ist der Name der Volumegruppe  
+    \<VolumeGroupName> ist der Name der Volumegruppe.  
 
-    \<LogicalVolumeName > ist der Name des logischen Volumes, die erstellt wurde  
+    \<LogicalVolumeName> ist der Name des erstellten logischen Volumes.  
 
-    \<FolderToMountiSCSIDIsk > ist der Ordner zum Bereitstellen des Datenträgers (Systemdatenbanken und den Standardspeicherort, es wäre /var/opt/mssql/data)
+    \<FolderToMountiSCSIDIsk> ist der Ordner für die Bereitstellung des Datenträgers (bei Systemdatenbanken und dem Standardspeicherort wäre das „/var/opt/mssql/data“).
 
-    \<FileSystemType > wäre EXT4 oder das XFS je nachdem, wie Dinge formatiert wurden und welche die Verteilung unterstützt. 
+    \<FileSystemType> wäre EXT4 oder XFS, je nachdem, wie formatiert wurde und was die Verteilung unterstützt. 
 
     **NFS**
 
@@ -194,15 +194,15 @@ In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name d
     mount -t nfs4 IPAddressOfNFSServer:FolderOnNFSServer /var/opt/mssql/data -o 
     ```
 
-    \<NFSDIskResourceName > der Name der Ressource, die NFS-Freigabe zugeordnet
+    \<NFSDIskResourceName> ist der Name der Ressource, die der NFS-Freigabe zugeordnet ist.
 
-    \<IPAddressOfNFSServer > ist die IP-Adresse der NFS-Server, die verwendet werden
+    \<IPAddressOfNFSServer> ist die IP-Adresse des NFS-Servers, den Sie verwenden werden.
 
-    \<FolderOnNFSServer > ist der Name des der NFS-Freigabe
+    \<FolderOnNFSServer> ist der Name der NFS-Freigabe.
 
-    \<FolderToMountNFSShare > ist der Ordner zum Bereitstellen des Datenträgers (Systemdatenbanken und den Standardspeicherort, es wäre /var/opt/mssql/data)
+    \<FolderToMountNFSShare> ist der Ordner für die Einbindung des Datenträgers (bei Systemdatenbanken und dem Standardspeicherort wäre das „/var/opt/mssql/data“).
 
-    Ein Beispiel sehen Sie hier:
+    Das folgende Beispiel soll dies erläutern:
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -214,61 +214,61 @@ In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name d
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<ServerName > ist der Name des Servers mit der SMB-Freigabe
+    \<ServerName> ist der Name des Servers mit der SMB-Freigabe.
 
-    \<ShareName > ist der Name der Freigabe
+    \<ShareName> ist der Name der Freigabe.
 
-    \<Ordnername > ist der Name des Ordners im letzten Schritt erstellt haben
+    \<FolderName> ist der Name des Ordners, der im letzten Schritt erstellt wurde.
     
-    \<Benutzername > ist der Name des Benutzers, der Zugriff auf die Dateifreigabe
+    \<UserName> ist der Name des Benutzers, der auf die Freigabe zugreift.
 
-    \<Kennwort > ist das Kennwort für den Benutzer
+    \<Password> ist das Kennwort des Benutzers.
 
-    \<ADDomain > wird von die AD DS-Domäne (falls zutreffend, wenn Sie eine Windows Server-basierten SMB-Freigabe zu verwenden)
+    \<ADDomain> ist die AD DS-Domäne (falls zutreffend, wenn eine Windows Server-basierte SMB-Freigabe verwendet wird).
 
-    \<MssqlUID > ist die UID die Mssql-Benutzer
+    \<mssqlUID> ist die Benutzer-ID des mssql-Benutzers.
 
-    \<MssqlGID > ist die GID von der Mssql-Benutzer
+    \<mssqlGID> ist die Gruppen-ID des mssql-Benutzers.
 
-    \<RGName > ist der Name der Ressourcengruppe
+    \<RGName> ist der Name der Ressourcengruppe.
  
-2.  Erstellen Sie die IP-Adresse, die von der FCI verwendet werden. Sie erhalten keine Antwort zurück, wenn es kein Problem ist.
+2.  Erstellen Sie die IP-Adresse, die von der FCI verwendet wird. Wenn kein Problem vorliegt, wird keine Antwort zurückgegeben.
 
     ```bash
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
     ```
 
-    \<IPResourceName > der Name der Ressource, die IP-Adresse zugeordnet ist
+    \<IPResourceName> ist der Name der Ressource, die der IP-Adresse zugeordnet ist.
 
-    \<IP-Adresse > ist die IP-Adresse für die FCI
+    \<IPAddress> ist die IP-Adresse für die FCI.
 
-    \<NetworkCard > ist die Netzwerkkarte, die dem Subnetz (d. h. "eth0") zugeordnet
+    \<NetworkCard> ist die Netzwerkkarte, die dem Subnetz zugeordnet ist (d. h. eth0).
 
-    \<Netzmaske > ist die Netzmaske des Subnetzes (z.B. 24)
+    \<NetMask> ist die Netzmaske des Subnetzes (d. h. 24).
 
-    \<RGName > ist der Name der Ressourcengruppe
+    \<RGName> ist der Name der Ressourcengruppe.
  
-3.  Die FCI-Ressource zu erstellen. Sie erhalten keine Antwort zurück, wenn es kein Problem ist.
+3.  Erstellen Sie die FCI-Ressource. Wenn kein Problem vorliegt, wird keine Antwort zurückgegeben.
 
     ```bash
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName > ist nicht nur den Namen der Ressource, sondern auch der Anzeigename, der die FCI zugeordnet ist. Dies wird Benutzern und Anwendungen verwendet, um eine Verbindung herstellen. 
+    \<FCIResourceName> ist nicht nur der Name der Ressource, sondern auch der Anzeigename, der der FCI zugeordnet ist. Damit stellen Benutzer und Anwendungen eine Verbindung her. 
 
-    \<RGName > ist der Name der Ressourcengruppe.
+    \<RGName> ist der Name der Ressourcengruppe.
  
-4.  Führen Sie den Befehl `sudo pcs resource`. Die FCI muss online sein.
+4.  Führen Sie den Befehl `sudo pcs resource` aus. Die FCI muss online sein.
  
-5.  Verbinden Sie mit der FCI mit SSMS oder mithilfe des DNS-/ Resource-Namens der FCI Sqlcmd.
+5.  Stellen Sie mithilfe des DNS-/Ressourcennamens der FCI eine Verbindung mit SSMS oder sqlcmd her.
 
-6.  Geben Sie die Anweisung `SELECT @@SERVERNAME`. Sie sollte den Namen der FCI zurückgeben.
+6.  Geben Sie die Anweisung `SELECT @@SERVERNAME` aus. Sie sollte den Namen der FCI zurückgeben.
 
-7.  Geben Sie die Anweisung `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`. Der Name des Knotens sollte zurückgegeben, die die FCI ausgeführt wird.
+7.  Geben Sie die Anweisung `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')` aus. Sie sollte den Namen des Knotens zurückgeben, auf dem die FCI ausgeführt wird.
 
-8.  Manuelles Failover der anderen Knoten der FCI. Lesen Sie die Anweisungen unter [Operate-Failoverclusterinstanz – SQL Server unter Linux](sql-server-linux-shared-disk-cluster-operate.md).
+8.  Führen Sie ein manuelles Failover der FCI auf den oder die anderen Knoten durch. Weitere Informationen finden Sie in den Anweisungen unter [Operate failover cluster instance - SQL Server on Linux (Betreiben einer Failoverclusterinstanz: SQL Server für Linux)](sql-server-linux-shared-disk-cluster-operate.md).
 
-9.  Abschließend die FCI wieder auf den ursprünglichen Knoten fehl, und entfernen Sie die Zusammenstellung-Einschränkung.
+9.  Führen Sie schließlich ein Failback auf den ursprünglichen Knoten durch, und entfernen Sie die Verbindungseinschränkung.
 
 <!---
 
@@ -280,18 +280,18 @@ In diesem Beispiel wird eine FCI in der Gruppe NewLinFCIGrp erstellt. Der Name d
 -->
 ## <a name="summary"></a>Zusammenfassung
 
-In diesem Tutorial haben Sie die folgenden Aufgaben aus.
+In diesem Tutorial haben Sie die folgenden Aufgaben abgeschlossen.
 
 > [!div class="checklist"]
 > * Einrichten und Konfigurieren von Linux
 > * Installieren und Konfigurieren von SQL Server
-> * Konfigurieren Sie die Datei "Hosts"
-> * Konfigurieren von freigegebenem Speicher, und verschieben Sie die Dateien
-> * Installieren Sie und konfigurieren Sie auf jedem Clusterknoten die Pacemaker
-> * Konfigurieren Sie die Failover-Clusterinstanz
+> * Konfigurieren der Hostdatei
+> * Konfigurieren von freigegebenem Speicher und Verschieben der Datenbankdateien
+> * Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
+> * Konfigurieren der Failoverclusterinstanz
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Arbeiten Sie Failoverclusterinstanz – SQL Server unter Linux](sql-server-linux-shared-disk-cluster-operate.md)
+- [Operate failover cluster instance - SQL Server on Linux (Betreiben einer Failoverclusterinstanz: SQL Server für Linux)](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->

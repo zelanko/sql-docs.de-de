@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von SQL Server-Replikation momentaufnahmefreigaben Ordner unter Linux
-description: Dieser Artikel beschreibt, wie SQLServer-Replikation von Momentaufnahmen Ordner Freigaben unter Linux konfigurieren.
+title: Konfigurieren der SQL Server-Replikation von Momentaufnahmeordner-Freigaben unter Linux
+description: In diesem Artikel wird beschrieben, wie Sie die SQL Server-Replikation von Momentaufnahmeordner-Freigaben unter Linux konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,49 +10,49 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68093117"
 ---
-# <a name="configure-replication-snapshot-folder-with-shares"></a>Konfigurieren Sie die Ordner des Replikations-Momentaufnahme mit Dateifreigaben
+# <a name="configure-replication-snapshot-folder-with-shares"></a>Konfigurieren der Replikation eines Momentaufnahmeordners mit Freigaben
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Der momentaufnahmeordner ist ein Verzeichnis, das Sie als Freigabe festgelegt haben. Agents, die Lese- und Schreibzugriff auf diesen Ordner müssen ausreichende Berechtigungen für den Zugriff haben.
+Der Momentaufnahmeordner ist ein von Ihnen freigegebenes Verzeichnis. Agents, die aus diesem Ordner lesen bzw. in den Ordner schreiben, benötigen ausreichende Zugriffsberechtigungen.
 
-![Diagramm der Replikation][1]
+![Replikationsdiagramm][1]
 
-### <a name="replication-snapshot-folder-share-explained"></a>Replikation Ordner Momentaufnahmefreigabe erläutert
+### <a name="replication-snapshot-folder-share-explained"></a>Erläuterung der Replikation der Momentaufnahmeordner-Freigabe
 
-Bevor Sie die Beispiele betrachten wie Samba-Freigaben von SQL Server bei der Replikation verwendet. Es folgt ein einfaches Beispiel, wie dies funktioniert.
+Vor den Beispielen wird erläutert, wie SQL Server Samba-Freigaben in der Replikation verwendet. Im Folgenden finden Sie ein einfaches Beispiel hierfür.
 
-1. Samba-Freigaben werden konfiguriert, die Dateien geschrieben, um `/local/path1` die Replikation-Agents auf dem Verleger angezeigt werden können, vom Abonnenten
-2. SQL Server für die Verwendung konfiguriert freigabepfade beim Einrichten des Verlegers auf den Verteilungsserver so, dass alle Instanzen ansehen würden die `//share/path`
-3. SQL Server findet den lokalen Pfad aus dem `//share/path` wissen, wo nach Dateien gesucht werden soll
-4. SQL Server-Lese-und Schreibvorgänge auf lokale Pfade, die gesichert werden, indem Sie einen Samba-Freigabe
+1. Samba-Freigaben sind so konfiguriert, dass die von den Replikations-Agents auf dem Herausgeber auf `/local/path1` geschriebenen Dateien vom Abonnenten angezeigt werden können.
+2. SQL Server ist für die Verwendung von Freigabepfaden beim Einrichten des Herausgebers auf dem Verteilungsserver so konfiguriert, dass alle Instanzen den `//share/path` beachten.
+3. SQL Server sucht den lokalen Pfad in `//share/path`, um zu wissen, wo die Dateien gesucht werden sollen.
+4. SQL Server liest/schreibt in lokale Pfade, die von einer Samba-Freigabe gesichert sind.
 
 
-## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Konfigurieren Sie eine Samba-Freigabe für den momentaufnahmeordner 
+## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Konfigurieren einer Samba-Freigabe für den Momentaufnahmeordner 
 
-Replikations-Agents benötigen ein freigegebenes Verzeichnis zwischen Hosts der Replikation auf Snapshot-Ordner auf andere Computer zugreifen. Beispielsweise befindet sich im transaktionalen Pull-Replikation der Verteilungs-Agent auf dem Abonnenten, der Zugriff auf dem Verteiler für die erste Artikel erfordert. In diesem Abschnitt werden wir ein Beispiel so konfigurieren Sie eine Samba-Freigabe auf zwei Hosts der Replikation durchlaufen.
+Replikations-Agents benötigen ein zwischen den Replikationshosts freigegebenes Verzeichnis, um auf Momentaufnahmeordner zuzugreifen, die sich auf anderen Computern befinden. Beispielsweise befindet sich der Verteilungs-Agent bei der transaktionalen Pullreplikation auf dem Abonnenten, der Zugriff auf den Verteiler benötigt, um Artikel abzurufen. In diesem Abschnitt untersuchen wir ein Beispiel für die Konfiguration einer Samba-Freigabe auf zwei Replikationshosts.
 
 
 ## <a name="steps"></a>Schritte
 
-Als Beispiel konfigurieren wir einen Standardordner für momentaufnahmeordner auf dem Host 1 (dem Verteiler), Host 2 (Abonnent), Samba Verwendung freigegeben werden. 
+Als Beispiel konfigurieren wir einen Momentaufnahmeordner auf Host 1 (dem Verteiler), der mithilfe von Samba für Host 2 (den Abonnenten) freigegeben werden soll. 
 
-### <a name="install-and-start-samba-on-both-machines"></a>Installieren Sie und starten Sie auf beiden Computern Samba 
+### <a name="install-and-start-samba-on-both-machines"></a>Installieren und Starten von Samba auf beiden Computern 
 
-Unter Ubuntu:
+Auf Ubuntu:
 
 ```bash
 sudo apt-get -y install samba
 sudo service smbd restart
 ```
 
-Unter RHEL:
+Auf RHEL:
 
 ```bash
 sudo yum install samba
@@ -60,15 +60,15 @@ sudo service smb start
 sudo service smb status
 ```
 
-### <a name="on-host-1-distributor-set-up-the-samba-share"></a>Auf Host 1 (Verteiler) richten die Samba-Freigabe 
+### <a name="on-host-1-distributor-set-up-the-samba-share"></a>Einrichten der Samba-Freigabe auf Host 1 (Verteiler) 
 
-1. Setup-Benutzer und das Kennwort für Samba:
+1. Einrichten von Benutzernamen und Kennwort für Samba:
 
   ```bash
   sudo smbpasswd -a mssql 
   ```
 
-1. Bearbeiten der `/etc/samba/smb.conf` auf den folgenden Eintrag enthalten, und geben Sie die *Freigabename* und *Pfad* Felder
+1. Bearbeiten Sie die Datei `/etc/samba/smb.conf`, sodass der folgende Eintrag enthalten ist, und füllen Sie die Felder *share_name* und *path* aus.
  ```bash
   <[share_name]>
   path = </local/path/on/host/1>
@@ -89,9 +89,9 @@ sudo service smb status
   valid users = mssql   <- list of users who can login to this share
   ```
 
-### <a name="on-host-2-subscriber--mount-the-samba-share"></a>Stellen Sie die Samba-Freigabe, auf dem Host 2 (Abonnent)
+### <a name="on-host-2-subscriber--mount-the-samba-share"></a>Einbinden der Samba-Freigabe auf Host 2 (Abonnent)
 
-Bearbeiten Sie den Befehl durch die richtigen Pfade aus, und führen Sie den folgenden Befehl in "machine2":
+Bearbeiten Sie den Befehl mit den richtigen Pfaden, und führen Sie den folgenden Befehl auf machine2 aus:
 
   ```bash
   sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -107,9 +107,9 @@ Bearbeiten Sie den Befehl durch die richtigen Pfade aus, und führen Sie den fol
   gid=mssql   <- sets the mssql group as the owner of the mounted directory
   ```
 
-### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>Auf beiden Hosts konfigurieren von SQL Server für Linux-Instanzen, verwenden Sie die Momentaufnahmefreigabe
+### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>Konfigurieren von SQL Server für Linux-Instanzen auf beiden Hosts für die Verwendung der Momentaufnahmenfreigabe
 
-Fügen Sie folgenden Abschnitt auf `mssql.conf` auf beiden Computern. Verwenden Sie immer das Samba-Freigabe für den / / / Freigabepfad. In diesem Beispiel wäre dies `//host1/mssql_data`
+Fügen Sie auf beiden Computern `mssql.conf` den folgenden Abschnitt hinzu. Ersetzen Sie „//share/path“ überall durch die Samba-Freigabe. In diesem Beispiel wäre es `//host1/mssql_data`.
 
   ```bash
   [uncmapping]
@@ -118,7 +118,7 @@ Fügen Sie folgenden Abschnitt auf `mssql.conf` auf beiden Computern. Verwenden 
 
   **Beispiel**
 
-  Klicken Sie auf "host1":
+  Auf host1:
 
   ```bash
   [uncmapping]
@@ -132,15 +132,15 @@ Fügen Sie folgenden Abschnitt auf `mssql.conf` auf beiden Computern. Verwenden 
   //host1/mssql_data = /local/path/on/hosts/2
   ```
 
-### <a name="configuring-publisher-with-shared-paths"></a>Konfigurieren des Verlegers mit Shared-Pfaden
+### <a name="configuring-publisher-with-shared-paths"></a>Konfigurieren des Herausgebers mit freigegebenen Pfaden
 
-* Beim Einrichten der Replikation verwenden Sie den Freigaben-Pfad (z. B. `//host1/mssql_data`
-* Zuordnung `//host1/mssql_data` auf einem lokalen Verzeichnis und die Zuordnung hinzugefügt `mssql.conf`.
+* Verwenden Sie beim Einrichten der Replikation den Freigabenpfad (Beispiel: `//host1/mssql_data`).
+* Ordnen Sie `//host1/mssql_data` einem lokalen Verzeichnis und der Zuordnung zu, die `mssql.conf` hinzugefügt wurde.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 [Konzepte: SQL Server-Replikation unter Linux](sql-server-linux-replication.md)
 
-[Gespeicherte Replikationsprozeduren](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Gespeicherte Prozeduren für die Replikation](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

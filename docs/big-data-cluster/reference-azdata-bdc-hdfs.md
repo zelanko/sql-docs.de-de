@@ -1,7 +1,7 @@
 ---
-title: azdata BDC HDFS-Referenz
+title: Referenz zu „azdata bdc hdfs“
 titleSuffix: SQL Server big data clusters
-description: Referenz Artikel zu azdata BDC-HDFS-Befehlen.
+description: Referenzartikel zu „azdata bdc hdfs“-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,62 +10,62 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 8e892c2d501902ef915a297440ae5a6ffda83bce
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426180"
 ---
-# <a name="azdata-bdc-hdfs"></a>azdata-BDC-HDFS
+# <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Der folgende Artikel enthält einen Verweis auf die **BDC-HDFS** -Befehle im **azdata** -Tool. Weitere Informationen zu anderen **azdata** -Befehlen finden Sie unter [azdata-Referenz](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den **bdc hdfs**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[azdata BDC HDFS-Shell](#azdata-bdc-hdfs-shell) | Die HDFS-Shell ist eine einfache interaktive Befehlsshell für das HDFS-Dateisystem.
-[azdata BDC HDFS-ls](#azdata-bdc-hdfs-ls) | Listet den Status der angegebenen Datei bzw. des angegebenen Verzeichnisses auf.
-[azdata BDC HDFS vorhanden](#azdata-bdc-hdfs-exists) | Bestimmen Sie, ob eine Datei oder ein Verzeichnis vorhanden ist.  Gibt true zurück, wenn vorhanden, andernfalls false.
-[azdata BDC HDFS-mkdir](#azdata-bdc-hdfs-mkdir) | Erstellen Sie ein Verzeichnis unter dem angegebenen Pfad.
-[azdata BDC HDFS-MV](#azdata-bdc-hdfs-mv) | Verschiebt die angegebene Datei bzw. den angegebenen Pfad an den angegebenen Speicherort.
-[azdata BDC HDFS-Erstellung](#azdata-bdc-hdfs-create) | Erstellen Sie die Textdatei am angegebenen Speicherort.  Einfacher Text Inhalt kann über den Daten Parameter hinzugefügt werden.
-[azdata BDC HDFS Cat](#azdata-bdc-hdfs-cat) | Lesen Sie den Inhalt einer Datei.  Offset und Länge in Bytes sind optionale Parameter.
-[azdata BDC HDFS RM](#azdata-bdc-hdfs-rm) | Entfernen Sie eine Datei oder ein Verzeichnis.
-[azdata BDC HDFS RMR](#azdata-bdc-hdfs-rmr) | Entfernen Sie eine Datei oder ein Verzeichnis rekursiv.
-[azdata BDC HDFS chmod](#azdata-bdc-hdfs-chmod) | Ändern Sie die-Berechtigung für die angegebene Datei oder das angegebene Verzeichnis.
-[azdata BDC HDFS-Besitzer](#azdata-bdc-hdfs-chown) | Ändern Sie den Besitzer oder die Gruppe der angegebenen Datei.
-[azdata BDC-HDFS-einbinden](reference-azdata-bdc-hdfs-mount.md) | Verwalten der Bereitstellung von Remote speichern in HDFS.
-## <a name="azdata-bdc-hdfs-shell"></a>azdata BDC HDFS-Shell
+[azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | Die HDFS-Shell ist eine einfache interaktive Befehlsshell für das HDFS-Dateisystem.
+[azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | Auflisten des Status der angegebenen Datei bzw. des angegebenen Verzeichnisses.
+[azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Bestimmen, ob eine Datei oder ein Verzeichnis vorhanden ist.  Gibt „True“ bei Vorhandensein zurück, andernfalls „False“.
+[azdata bdc hdfs mkdir](#azdata-bdc-hdfs-mkdir) | Erstellen eines Verzeichnisses im angegebenen Pfad.
+[azdata bdc hdfs mv](#azdata-bdc-hdfs-mv) | Verschieben der angegebenen Datei bzw. des angegebenen Pfads an den angegebenen Speicherort.
+[azdata bdc hdfs create](#azdata-bdc-hdfs-create) | Erstellen der Textdatei am angegebenen Speicherort.  Einfacher Textinhalt kann über den Datenparameter hinzugefügt werden.
+[azdata bdc hdfs cat](#azdata-bdc-hdfs-cat) | Lesen des Inhalts einer Datei.  Offset und Länge in Bytes sind optionale Parameter.
+[azdata bdc hdfs rm](#azdata-bdc-hdfs-rm) | Entfernen einer Datei oder eines Verzeichnisses.
+[azdata bdc hdfs rmr](#azdata-bdc-hdfs-rmr) | Rekursives Entfernen einer Datei oder eines Verzeichnisses.
+[azdata bdc hdfs chmod](#azdata-bdc-hdfs-chmod) | Ändern der Berechtigung für die angegebene Datei oder das angegebene Verzeichnis.
+[azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Ändern des Besitzers oder der Gruppe der angegebenen Datei.
+[azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Verwalten des Einbindens von Remotespeichern in HDFS.
+## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 Die HDFS-Shell ist eine einfache interaktive Befehlsshell für das HDFS-Dateisystem.
 ```bash
 azdata bdc hdfs shell 
 ```
 ### <a name="examples"></a>Beispiele
-Starten Sie die Shell.
+Starten der Shell.
 ```bash
 azdata bdc hdfs shell
 ```
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-ls"></a>azdata BDC HDFS-ls
-Listet den Status der angegebenen Datei bzw. des angegebenen Verzeichnisses auf.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
+Auflisten des Status der angegebenen Datei bzw. des angegebenen Verzeichnisses.
 ```bash
 azdata bdc hdfs ls --path -p 
                    
 ```
 ### <a name="examples"></a>Beispiele
-Listen Status
+Auflisten des Status
 ```bash
 azdata bdc hdfs ls --path '/tmp'
 ```
@@ -74,73 +74,73 @@ azdata bdc hdfs ls --path '/tmp'
 Der Pfad zum Auflisten des Status.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-exists"></a>azdata BDC HDFS vorhanden
-Bestimmen Sie, ob eine Datei oder ein Verzeichnis vorhanden ist.  Gibt true zurück, wenn vorhanden, andernfalls false.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
+Bestimmen, ob eine Datei oder ein Verzeichnis vorhanden ist.  Gibt „True“ bei Vorhandensein zurück, andernfalls „False“.
 ```bash
 azdata bdc hdfs exists --path -p 
                        
 ```
 ### <a name="examples"></a>Beispiele
-Prüfen Sie, ob die Datei oder das Verzeichnis vorhanden ist.
+Überprüfen, ob die Datei oder das Verzeichnis vorhanden ist.
 ```bash
 azdata bdc hdfs exists --path '/tmp'
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Pfad zum Überprüfen auf das vorhanden sein.
+Pfad, dessen Vorhandensein überprüft wird.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-mkdir"></a>azdata BDC HDFS-mkdir
-Erstellen Sie ein Verzeichnis unter dem angegebenen Pfad.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
+Erstellen eines Verzeichnisses im angegebenen Pfad.
 ```bash
 azdata bdc hdfs mkdir --path -p 
                       
 ```
 ### <a name="examples"></a>Beispiele
-Erstellen Sie das Verzeichnis.
+Erstellen eines Verzeichnisses.
 ```bash
 azdata bdc hdfs mkdir --path '/tmp'
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Name des zu erstellenden Verzeichnisses.
+Name des zu erstellenden Verzeichnisses.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-mv"></a>azdata BDC HDFS-MV
-Verschiebt die angegebene Datei bzw. den angegebenen Pfad an den angegebenen Speicherort.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
+Verschieben der angegebenen Datei bzw. des angegebenen Pfads an den angegebenen Speicherort.
 ```bash
 azdata bdc hdfs mv --source-path -s 
                    --target-path -t
 ```
 ### <a name="examples"></a>Beispiele
-Verschieben Sie die Datei oder das Verzeichnis.
+Verschieben von Datei oder Verzeichnis.
 ```bash
 azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 ```
@@ -148,20 +148,20 @@ azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 #### `--source-path -s`
 Das Verzeichnis, das verschoben werden soll.
 #### `--target-path -t`
-Der Speicherort, zu dem gewechselt werden soll.
+Der Speicherort, zu dem verschoben werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-create"></a>azdata BDC HDFS-Erstellung
-Erstellen Sie die Textdatei am angegebenen Speicherort.  Einfacher Text Inhalt kann über den Daten Parameter hinzugefügt werden.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
+Erstellen der Textdatei am angegebenen Speicherort.  Einfacher Textinhalt kann über den Datenparameter hinzugefügt werden.
 ```bash
 azdata bdc hdfs create --path -p 
                        --data -d
@@ -173,22 +173,22 @@ azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Name der zu erstellenden Datei.
+Name der Datei, die erstellt werden soll.
 #### `--data -d`
-Inhalt der Datei.  Für einfachen Text Inhalt vorgesehen.
+Inhalt der Datei.  Für einfachen Textinhalt vorgesehen.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-cat"></a>azdata BDC HDFS Cat
-Lesen Sie den Inhalt einer Datei.  Offset und Länge in Bytes sind optionale Parameter.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
+Lesen des Inhalts einer Datei.  Offset und Länge in Bytes sind optionale Parameter.
 ```bash
 azdata bdc hdfs cat --path -p 
                     --offset  
@@ -201,130 +201,130 @@ azdata bdc hdfs cat --path '/tmp/test.txt'
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Name der zu lesenden Datei.
+Name der Datei, die gelesen wird.
 #### `--offset`
-Anzahl der Bytes in der zu lesenden Datei.
+Offset in der zu lesenden Datei in Anzahl der Bytes.
 #### `--length -l`
 Länge der zu lesenden Daten.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-rm"></a>azdata BDC HDFS RM
-Entfernen Sie eine Datei oder ein Verzeichnis.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
+Entfernen einer Datei oder eines Verzeichnisses.
 ```bash
 azdata bdc hdfs rm --path -p 
                    
 ```
 ### <a name="examples"></a>Beispiele
-Entfernen Sie eine Datei oder ein Verzeichnis.
+Entfernen einer Datei oder eines Verzeichnisses.
 ```bash
 azdata bdc hdfs rm --path '/tmp'
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Name der zu entfernenden Datei.
+Name der Datei, die entfernt werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-rmr"></a>azdata BDC HDFS RMR
-Entfernen Sie eine Datei oder ein Verzeichnis rekursiv.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
+Rekursives Entfernen einer Datei oder eines Verzeichnisses.
 ```bash
 azdata bdc hdfs rmr --path -p 
                     
 ```
 ### <a name="examples"></a>Beispiele
-Rekursives Entfernungs Verzeichnis.
+Rekursives Entfernen des Verzeichnisses.
 ```bash
 azdata bdc hdfs rmr --path '/tmp'
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Name der Datei, die rekursiv entfernt werden soll.
+Name der Datei, die rekursiv entfernt werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-chmod"></a>azdata BDC HDFS chmod
-Ändern Sie die-Berechtigung für die angegebene Datei oder das angegebene Verzeichnis.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
+Ändern der Berechtigung für die angegebene Datei oder das angegebene Verzeichnis.
 ```bash
 azdata bdc hdfs chmod --path -p 
                       --permission
 ```
 ### <a name="examples"></a>Beispiele
-Ändern Sie die Datei-oder Verzeichnis Berechtigung.
+Ändern der Datei- oder Verzeichnisberechtigung.
 ```bash
 azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Name der Datei oder des Verzeichnisses, für die Berechtigungen festgelegt werden sollen.
+Name der Datei oder des Verzeichnisses, wofür Berechtigungen festgelegt werden sollen.
 #### `--permission`
-Berechtigungs-Oktette festlegen.  Beispiel: "775".
+Festzulegende Berechtigungsoktette.  Beispiel „775“.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-chown"></a>azdata BDC HDFS-Besitzer
-Ändern Sie den Besitzer oder die Gruppe der angegebenen Datei.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
+Ändern des Besitzers oder der Gruppe der angegebenen Datei.
 ```bash
 azdata bdc hdfs chown --path -p 
                       --owner  
                       --group -g
 ```
 ### <a name="examples"></a>Beispiele
-Ändern Sie den Besitzer und die Gruppe.
+Ändern von Besitzer und Gruppe.
 ```bash
 azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--path -p`
-Der Name der Datei oder des Verzeichnisses, für die der Besitzer geändert werden soll.
+Name der Datei oder des Verzeichnisses, wofür der Besitzer geändert werden soll.
 #### `--owner`
-Der Name des Besitzers, auf den festgelegt werden soll.
+Festzulegender Besitzername.
 #### `--group -g`
-Der Gruppenname, der auf festgelegt wird.
+Festzulegender Gruppenname.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Anzeigen dieser Hilfemeldung und beenden.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
+Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata** -Befehlen finden Sie unter [azdata-Referenz](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden [Sie unter Install azdata to Manage SQL Server 2019 Big Data Clusters](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019](deploy-install-azdata.md).

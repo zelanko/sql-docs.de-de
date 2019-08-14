@@ -1,5 +1,5 @@
 ---
-title: Failovercluster-Instanzen – SQLServer unter Linux
+title: Failoverclusterinstanzen – SQL Server für Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,80 +9,80 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032388"
 ---
-# <a name="failover-cluster-instances---sql-server-on-linux"></a>Failovercluster-Instanzen – SQLServer unter Linux
+# <a name="failover-cluster-instances---sql-server-on-linux"></a>Failoverclusterinstanzen – SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel erläutert die Konzepte im Zusammenhang mit SQL Server Failoverclusterinstanzen (FCI) unter Linux. 
+In diesem Artikel werden die Konzepte im Zusammenhang mit SQL Server-Failoverclusterinstanzen (FCI) unter Linux erläutert. 
 
-Zum Erstellen einer SQL Server-FCI unter Linux finden Sie unter [Konfigurieren von SQL Server-FCI unter Linux](sql-server-linux-shared-disk-cluster-configure.md)
+Informationen zum Erstellen einer SQL Server-FCI unter Linux finden Sie unter [Configure SQL Server FCI on Linux (Konfigurieren von SQL Server-FCI unter Linux)](sql-server-linux-shared-disk-cluster-configure.md).
 
-## <a name="the-clustering-layer"></a>Der Clustering-Ebene
+## <a name="the-clustering-layer"></a>Die Clusteringebene
 
-* In RHEL, basiert die clustering-Ebene auf Red Hat Enterprise Linux (RHEL) [HA-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf). 
+* Die Clusteringebene basiert auf einem [Hochverfügbarkeits-Add-On](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) für Red Hat Enterprise Linux (RHEL). 
 
     > [!NOTE] 
-    > Zugriff auf Red Hat-HA-Add-On und Dokumentation erfordert ein Abonnement. 
+    > Für den Zugriff auf das Red Hat-Hochverfügbarkeits-Add-On und die Dokumentation ist ein Abonnement erforderlich. 
 
-* Bei SLES, die clustering-Ebene auf SUSE Linux Enterprise basiert [hohe Verfügbarkeit-Erweiterung (HAE)](https://www.suse.com/products/highavailability).
+* Die Clusteringebene in SLES basiert auf SUSE Linux Enterprise [High Availability Extension (HAE)](https://www.suse.com/products/highavailability).
 
-    Weitere Informationen für die Clusterkonfiguration, Ressourcenoptionen-Agent, Management, bewährte Methoden und Empfehlungen finden Sie unter [SUSE Linux Enterprise hohe Verfügbarkeit Erweiterung 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+    Weitere Informationen zu Clusterkonfiguration, Ressourcen-Agent-Optionen, Verwaltung, Best Practices und Empfehlungen finden Sie unter [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-Sowohl für das RHEL-HA-Add-On als auch für die SUSE HAE basieren auf [Pacemaker](https://clusterlabs.org/).
+Sowohl das RHEL-Hochverfügbarkeits-Add-On als auch SUSE HAE basieren auf [Pacemaker](https://clusterlabs.org/).
 
-Wie das folgende Diagramm zeigt, wird der Speicher auf zwei Servern angezeigt. Clustering Komponenten - Corosync und Pacemaker - Kommunikation und ressourcenverwaltung zu koordinieren. Einer der Server hat die aktive Verbindung mit dem Storage-Ressourcen und der SQL Server. Wenn Pacemaker ein Fehler erkannt wird verwalten die Clusterkomponenten an, die Ressourcen auf dem anderen Knoten verschieben.  
+Wie in der folgenden Abbildung zu sehen, wird der Speicher zwei Servern präsentiert. Clusteringkomponenten – Corosync und Pacemaker – koordinieren die Kommunikation und die Ressourcenverwaltung. Ein Server verfügt über die aktive Verbindung mit den Speicherressourcen und SQL Server. Wenn Pacemaker einen Fehler erkennt, übernehmen die Clusteringkomponenten das Verschieben der Ressourcen auf den anderen Knoten.  
 
-![Red Hat Enterprise Linux 7 freigegebene Datenträgercluster für SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Freigegebener SQL-Datenträgercluster mit Red Hat Enterprise Linux 7](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> SQL Server Integration mit Pacemaker unter Linux ist an diesem Punkt nicht als gekoppelt als mit WSFC unter Windows. Von in SQL, besteht keine Kenntnisse über das Vorhandensein des Clusters, alle Orchestrierung befindet sich außerhalb im und der Dienst wird als eigenständige Instanz von Pacemaker gesteuert. Darüber hinaus Name des virtuellen Netzwerks ist spezifisch für die WSFC, es gibt keine Entsprechung desselben in Pacemaker. Es wird erwartet, @@servername und sys.servers des Knotennamens zurückgegeben, während die Cluster-Dmvs Sys. dm_os_cluster_nodes und dm_os_cluster_properties keine Datensätze werden. Eine Verbindungszeichenfolge, die auf einem Zeichenfolgennamen für den Server verweist und nicht die IP-Adresse verwenden, müssen sie in ihren DNS-Server die IP-Adresse verwendet, um die virtuelle IP-Adressressource erstellen (wie in den folgenden Abschnitten erläutert wird) mit dem ausgewählten Server registrieren.
+> An diesem Punkt ist die Integration von SQL Server in Pacemaker unter Linux nicht so stark gekoppelt wie in WSFC unter Windows. Aus SQL kann der Cluster nicht erkannt werden. Die gesamte Orchestrierung erfolgt außerhalb durch Pacemaker. Zudem wird der Dienst als eigenständige Instanz von Pacemaker gesteuert. Ferner gilt der virtuelle Netzwerkname für WSFC. Dazu gibt es in Pacemaker keine Entsprechung. Es wird erwartet, dass „@@servername“ und „sys.servers“ den Knotennamen zurückgeben, während „dmvs sys.dm_os_cluster_nodes“ und „sys.dm_os_cluster_properties“ keine Datensätze erstellen. Wenn Sie eine Verbindungszeichenfolge verwenden möchten, die auf einen Zeichenfolgenservernamen zeigt und nicht die IP-Adresse verwendet, müssen Sie die IP-Adresse, die (wie in den folgenden Abschnitten beschrieben) zum Erstellen der virtuellen IP-Ressource verwendet wird, mit dem ausgewählten Servernamen beim DNS-Server registrieren.
 
 ## <a name="number-of-instances-and-nodes"></a>Anzahl der Instanzen und Knoten
 
-Ein Hauptunterschied mit SQL Server unter Linux ist, dass es kann nur eine Installation von SQL Server / Linux-Server vorhanden sein. Diese Installation wird als Instanz bezeichnet. Dies bedeutet, dass im Gegensatz zu Windows Server unterstützt bis zu 25 FCIs pro Windows Server-Failovercluster (WSFC), eine Linux-basierten FCI nur eine einzelne Instanz hat. Diese eine Instanz ist auch eine Standardinstanz; Es gibt kein Konzept für eine benannte Instanz unter Linux. 
+Ein wichtiger Unterschied bei SQL Server für Linux besteht darin, dass es pro Linux-Server nur eine Installation von SQL Server geben kann. Diese Installation wird als Instanz bezeichnet. Das bedeutet, dass eine Linux-basierte FCI nur über eine einzige Instanz verfügt, während von Windows Server bis zu 25 FCIS pro Windows Server-Failovercluster (WSFC) unterstützt werden. Diese eine Instanz ist zudem eine Standardinstanz. Es gibt kein Konzept für eine benannten Instanz unter Linux. 
 
-Ein Pacemaker-Cluster kann nur bis zu 16 Knoten haben Wenn Corosync beteiligt ist, sodass bis zu 16 Server mit eine einzelne FCI einbeziehen kann. Eine FCI implementiert, mit der Standard Edition von SQL Server unterstützt bis zu zwei Knoten eines Clusters aus, auch wenn der Pacemaker-Clusters die maximale Anzahl von 16 Knoten hat.
+Wenn Corosync verwendet wird, kann ein Pacemaker-Cluster nur bis zu 16 Knoten enthalten, sodass eine einzelne FCI bis zu 16 Server umfassen kann. Eine mit der Standard Edition von SQL Server implementierte FCI unterstützt bis zu zwei Knoten eines Clusters, auch wenn der Pacemaker-Cluster über die maximal möglichen 16 Knoten verfügt.
 
-In einer SQL Server-FCI ist SQL Server-Instanz auf einem Knoten oder anderen aktiv.
+Die SQL Server-Instanz in einer SQL Server-FCI ist nur auf einem der beiden Knoten aktiv.
 
-## <a name="ip-address-and-name"></a>IP-Adresse und den Namen
-In einem Cluster mit Linux Pacemaker benötigt jeder SQL Server-FCI eine eigene eindeutige IP-Adresse und den Namen. Wenn die FCI-Konfiguration über mehrere Subnetze erstreckt, werden eine IP-Adresse pro Subnetz erforderlich. Der eindeutige Name und IP-Adressen werden verwendet, die FCI auf, sodass Anwendungen und Endbenutzern nicht wissen, welche zugrunde liegenden-Server des Pacemaker-Clusters müssen.
+## <a name="ip-address-and-name"></a>IP-Adresse und Name
+In einem Linux Pacemaker-Cluster benötigt jede SQL Server-FCI eine eigene eindeutige IP-Adresse und einen eigenen Namen. Wenn die FCI-Konfiguration mehrere Subnetze umfasst, ist eine IP-Adresse pro Subnetz erforderlich. Der eindeutige Name und die IP-Adressen werden für den Zugriff auf die FCI verwendet, damit Anwendungen und Endbenutzer nicht wissen müssen, welcher Server dem Pacemaker-Cluster zugrunde liegt.
 
-Der Name der FCI in DNS muss identisch mit den Namen der der FCI-Ressource, die in der Pacemaker-Cluster erstellt wird.
-Die Namens- und IP-Adresse müssen in DNS registriert werden.
+Der Name der FCI in DNS muss mit dem Namen der FCI-Ressource übereinstimmen, die im Pacemaker-Cluster erstellt wird.
+Sowohl der Name als auch die IP-Adresse müssen in DNS registriert werden.
 
 ## <a name="shared-storage"></a>Freigegebener Speicher
-Alle FCIs, ob diese unter Linux oder Windows Server sind eine Art von gemeinsam genutzten Speicher erfordern. Dieser Speicher wird angezeigt, auf allen Servern, die möglicherweise die FCI hosten können, aber nur ein einzelner Server kann den Speicher für die FCI verwenden, zu jedem Zeitpunkt. Die Optionen für den freigegebenen Speicher unter Linux verfügbar sind:
+Alle FCIs benötigen unabhängig davon, ob sie unter Linux oder Windows Server ausgeführt werden, einen freigegebenen Speicher. Dieser Speicher wird allen Servern präsentiert, die die FCI hosten können, aber nur ein einziger Server kann den Speicher jederzeit für die FCI verwenden. Für den freigegebenen Speicher unter Linux sind folgende Optionen verfügbar:
 
 - iSCSI
 - Network File System (NFS)
-- Server Message Block (SMB) unter Windows Server leicht unterschiedliche Optionen stehen. Eine Möglichkeit, die derzeit nicht unterstützt für Linux-basierten FCIs ist die Möglichkeit, einen Datenträger zu verwenden, der lokal auf den Knoten für die tempdb-Datenbank ist die SQL Server temporäre Arbeitsbereich ist.
+- SMB (Server Message Block): Unter Windows Server gibt es etwas andere Optionen. Eine Option, die derzeit für Linux-basierte FCIS nicht unterstützt wird, ist die Möglichkeit, für tempdb einen für den Knoten lokalen Datenträger zu verwenden, bei dem es sich um den temporären Arbeitsbereich von SQL Server handelt.
 
-In einer Konfiguration, die mehrere Standorte umfasst, muss was in einem Rechenzentrum gespeichert ist mit den anderen synchronisiert werden. Bei einem Failover wird die FCI wird online geschaltet werden und des Speichers als identisch sein. Erreichen Sie dies erfordert eine externe Methode für die Storage-Replikation, ob sie über die zugrunde liegende Speicherhardware oder softwarebasierten Dienstprogramm durchgeführt wird. 
+In einer Konfiguration, die mehrere Standorte umfasst, muss das, was in einem Rechenzentrum gespeichert wird, mit dem anderen synchronisiert werden. Bei einem Failovers kann die FCI online geschaltet werden, und der Speicher wird als identisch betrachtet. Hierfür ist eine externe Methode für die Speicherreplikation erforderlich, und zwar unabhängig davon, ob dies über die zugrunde liegende Speicherhardware oder ein softwarebasiertes Dienstprogramm erfolgt. 
 
 >[!NOTE]
->Für SQL Server müssen die Linux-basierten Bereitstellungen mithilfe von Datenträgern, die angezeigt wird, direkt auf einem Server mit XFS oder EXT4 formatiert sein. Andere Dateisysteme werden derzeit nicht unterstützt. Hier werden alle Änderungen übernommen.
+>Bei SQL Server müssen Linux-basierte Bereitstellungen, in denen Datenträger verwendet werden, die einem Server direkt präsentiert werden, mit XFS oder EXT4 formatiert werden. Andere Dateisysteme werden derzeit nicht unterstützt. Sämtliche Änderungen werden hier berücksichtigt.
 
-Der Prozess zum Darstellen von freigegebenen Speichers ist für die verschiedenen unterstützten Methoden identisch:
+Der Prozess für die Präsentation von freigegebenem Speicher ist für die verschiedenen unterstützten Methoden identisch:
 
-- Konfigurieren Sie den freigegebenen Speicher
-- Einbinden des Speichers als Ordner mit den Servern, die als Knoten des Pacemaker-Clusters, für die FCI dienen
-- Falls erforderlich, verschieben Sie die SQL Server-Systemdatenbanken in freigegebenen Speicher
-- Test, der Funktionsweise von SQL Server von jedem Server verbunden, auf freigegebenen Speicher
+- Konfigurieren des freigegebenen Speichers
+- Einbinden des Speichers als Ordner auf den Servern, die als Knoten des Pacemaker-Clusters für die FCI dienen sollen
+- Ggf. Verschieben der SQL Server-Systemdatenbanken in den freigegebenen Speicher
+- Testen, ob SQL Server über alle mit dem freigegebenen Speicher verbundenen Server funktioniert
 
-Ein Hauptunterschied mit SQL Server unter Linux ist, während Sie am Standarddateispeicherort Benutzer Daten- und Protokolldateien konfigurieren können, die Systemdatenbanken immer am vorhanden sein müssen `/var/opt/mssql/data`. In Windows Server besteht die Möglichkeit, verschieben die Systemdatenbanken, einschließlich TempDB zur Verfügung. Diese Tatsache spielt in der Verwendung von freigegebenem Speicher für eine FCI konfiguriert ist.
+Ein wesentlicher Unterschied bei SQL Server für Linux besteht darin, dass die Systemdatenbanken während der Konfiguration der standardmäßigen Benutzerdaten und des Speicherorts für die Protokolldatei immer unter `/var/opt/mssql/data` vorhanden sein müssen. Unter Windows Server besteht die Möglichkeit, die Systemdatenbanken sowie tempdb zu verschieben. Dieser Umstand spielt bei der Konfiguration des freigegebenen Speichers für eine FCI eine Rolle.
 
-Die Standardpfade für nicht-System-Datenbanken können geändert werden, mithilfe der `mssql-conf` Hilfsprogramm. Informationen zum Ändern der Standardwerte, [ändern Sie die Daten- oder Protokolldatei den Speicherort des Standardverzeichnisses](sql-server-linux-configure-mssql-conf.md#datadir). Sie können auch SQL Server-Daten und Transaktionsprotokolle an anderen Orten speichern, solange sie die richtigen Sicherheitseinstellungen besitzen, auch wenn es sich nicht um einen Standardspeicherort ist; der Speicherort muss angegeben werden.
+Die Standardpfade für systemfremde Datenbanken können mithilfe des Hilfsprogramms `mssql-conf` geändert werden. Informationen zum Ändern der Standardeinstellungen finden Sie unter [Ändern des Speicherorts für das Datenbankdateien- oder Protokollverzeichnis](sql-server-linux-configure-mssql-conf.md#datadir). Sofern Sie über die richtigen Sicherheitseinstellungen verfügen, können Sie SQL Server-Daten und -Transaktionen auch an anderen Speicherorten speichern, selbst dann, wenn es sich nicht um einen Standardspeicherort handelt. Der Speicherort muss dann angegeben werden.
 
-In den folgenden Themen wird erläutert, wie so konfigurieren Sie die unterstützten Speichertypen für eine Linux-SQL Server-FCI basierte wird:
+In den folgenden Themen wird erläutert, wie unterstützte Speichertypen für eine Linux-basierte SQL Server-FCI konfiguriert werden:
 
-- [Konfigurieren von Failover-Clusterinstanz - iSCSI - SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [Konfigurieren Sie Failoverclusterinstanz – NFS - SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [Konfigurieren der Failoverclusterinstanz – SMB – SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [Configure failover cluster instance - iSCSI - SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz (iSCSI): SQL Server für Linux)](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [Configure failover cluster instance - NFS - SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz (NFS): SQL Server für Linux)](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [Configure failover cluster instance - SMB - SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz (SMB): SQL Server für Linux)](sql-server-linux-shared-disk-cluster-configure-smb.md)

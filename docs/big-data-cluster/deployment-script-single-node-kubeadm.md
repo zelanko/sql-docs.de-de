@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 37017221b636146a003f8af8890c655ed605bca9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68473072"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715897"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
 
@@ -22,16 +22,30 @@ ms.locfileid: "68473072"
 
 In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um einen Kubernetes-Einzelknotencluster über kubeadm und in dem Cluster einen Big Data-Cluster für SQL Server bereitzustellen.  
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
-- Eine VM mit einem Vanilla-Ubuntu 18.04- oder 16.04-**Server**. Alle Abhängigkeiten werden vom Skript eingerichtet, und Sie führen das Skript aus der VM aus.
+- Einen virtuellen oder physischen Computer mit einem Vanille-Ubuntu 18,04-oder 16,04- **Server** . Alle Abhängigkeiten werden vom Skript eingerichtet, und Sie führen das Skript aus der VM aus.
 
   > [!NOTE]
-  > Das Verwenden von Azure-VMs wird noch nicht unterstützt.
+  > Die Verwendung von Azure-Linux-VMs wird noch nicht unterstützt.
 
-- Die VM (virtueller Computer) muss mindestens 8 CPUs, 64 GB RAM und 100 GB Speicherplatz haben. Nachdem Sie alle Docker-Images für den Big Data-Cluster abgerufen haben, verbleiben Ihnen 50 GB für Daten und Protokolle, die für alle Komponenten verwendet werden.
+- Der virtuelle Computer muss über mindestens 8 CPUs, 64 GB RAM und 100 GB Speicherplatz verfügen. Nachdem Sie alle Docker-Images für den Big Data-Cluster abgerufen haben, verbleiben Ihnen 50 GB für Daten und Protokolle, die für alle Komponenten verwendet werden.
 
-## <a name="instructions"></a>Instructions
+- Aktualisieren Sie vorhandene Pakete mithilfe der folgenden Befehle, um sicherzustellen, dass das Betriebssystem Image auf dem neuesten Stand ist.
+
+   ``` bash
+   sudo apt update&&apt upgrade -y
+   sudo systemctl reboot
+   ```
+
+## <a name="recommended-virtual-machine-settings"></a>Empfohlene Einstellungen für virtuelle Computer
+
+1. Verwenden Sie die statische Arbeitsspeicher Konfiguration für den virtuellen Computer. Beispielsweise wird in Hyper-V-Installationen nicht die dynamische Speicher Belegung verwendet, sondern stattdessen die empfohlenen 64 GB oder höher zugeordnet.
+
+1. Verwenden Sie die Prüfpunkt-oder Momentaufnahme Funktion in Ihrem Hypervisor, damit Sie einen Rollback für den virtuellen Computer ausführen können.
+
+
+## <a name="instructions-to-deploy-sql-server-big-data-cluster"></a>Anweisungen zum Bereitstellen von SQL Server Big Data-Cluster
 
 1. Laden Sie das Skript auf die VM herunter, die Sie für die Bereitstellung verwenden möchten.
 
@@ -45,13 +59,13 @@ In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um eine
    chmod +x setup-bdc.sh
    ```
 
-3. Führen Sie das Skript mit **sudo** aus.
+3. Ausführen des Skripts (stellen Sie sicher, dass Sie mit *sudo*ausführen)
 
    ```bash
    sudo ./setup-bdc.sh
    ```
 
-   Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort an, das für die folgenden externen Endpunkte verwendet werden soll: Controller, SQL Server-Master und -Gateway. Der Benutzername für den Controller ist standardmäßig *admin*.
+   Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort an, das für die folgenden externen Endpunkte verwendet werden soll: Controller, SQL Server-Master und -Gateway. Das Kennwort sollte basierend auf den vorhandenen Regeln für SQL Server Kennwort ausreichend komplex sein. Der Benutzername für den Controller ist standardmäßig *admin*.
 
 4. Richten Sie einen Alias für das **azdata**-Tool ein.
 
@@ -59,12 +73,16 @@ In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um eine
    source ~/.bashrc
    ```
 
-5. Überprüfen Sie, ob der Alias funktioniert.
+5. Aktualisieren Sie Alias Setup für azdata.
 
    ```bash
    azdata --version
    ```
 
+## <a name="cleanup"></a>Bereinigen
+
+Das [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) -Skript wird als praktische Hilfe bereitgestellt, um die Umgebung bei Bedarf zurückzusetzen. Es empfiehlt sich jedoch, einen virtuellen Computer zu Testzwecken zu verwenden und die Momentaufnahme Funktion in Ihrem Hypervisor zu verwenden, um einen Rollback für den virtuellen Computer in einen sauberen Zustand auszuführen.
+
 ## <a name="next-steps"></a>Nächste Schritte
 
-Folgen Sie [diesem Tutorial](tutorial-load-sample-data.md), um die ersten Schritte zur Verwendung eines Big Data-Clusters auszuführen.
+Informationen zu den ersten Schritten mit der Verwendung von [Big Data Clustern finden Sie unter Tutorial: Laden von Beispiel Daten in einen SQL Server Big Data](tutorial-load-sample-data.md)Cluster.

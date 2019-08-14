@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Sie die Instanz failoverclusterspeicher NFS - SQL Server unter Linux
+title: 'Konfigurieren einer Failoverclusterinstanz (NFS-Speicher): SQL Server für Linux'
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,95 +9,95 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 1088060b8f1af418f14210b7e09a6641fc3a62d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032365"
 ---
-# <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Konfigurieren Sie Failoverclusterinstanz – NFS - SQL Server unter Linux
+# <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Konfigurieren einer Failoverclusterinstanz (NFS): SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel wird erläutert, wie Sie NFS-Speicher für eine Failoverclusterinstanz (FCI) unter Linux konfigurieren. 
+In diesem Artikel wird erklärt, wie Sie NFS-Speicher für eine Failoverclusterinstanz (Failover Cluster Instance, FCI) unter Linux konfigurieren. 
 
-NFS oder NFS, ist eine gängige Methode für die Datenträger in der Linux-Welt, aber nicht die Windows eine Freigabe. Ähnlich wie bei iSCSI werden können NFS auf einem Server oder eine Art von Gerät oder Speichereinheiten konfiguriert werden, solange es sich um die speicheranforderungen für SQL Server erfüllt.
+Ein Network File System (NFS) ist ein gängiger Weg zum Freigeben von Datenträgern unter Linux, jedoch nicht unter Windows. Ähnlich wie iSCSI kann ein NFS auf einem Server, auf einem Gerät oder einer Speichereinheit konfiguriert werden, sofern die Speicheranforderungen für SQL Server eingehalten werden.
 
-## <a name="important-nfs-server-information"></a>Wichtige Informationen der NFS-server
+## <a name="important-nfs-server-information"></a>Wichtige Informationen zum NFS-Server
 
-Die Source-Hostingsite von NFS (einem Linux-Server oder etwas anderes) muss mithilfe von/kompatibel mit Version 4.2 oder höher sein. Frühere Versionen funktionieren nicht mit SQL Server unter Linux.
+Die Quelle, die das NFS hostet, z. B. ein Linux-Server, muss Version 4.2 oder höher verwenden oder damit kompatibel sein. Frühere Versionen funktionieren mit SQL Server für Linux nicht.
 
-Wenn Sie die Ordner auf dem Server für NFS freigegeben werden konfigurieren zu können, stellen Sie sicher, dass sie diese Richtlinien allgemeine Optionen entsprechen:
-- `rw` um sicherzustellen, dass den Ordner können werden gelesen und geschrieben
-- `sync` um sicherzustellen, dass garantiert Schreibvorgänge auf den Ordner
-- Verwenden Sie keine `no_root_squash` optional; gilt dies ein Sicherheitsrisiko
-- Stellen Sie sicher, dass der Ordner Vollzugriff (777) angewendet hat.
+Beachten Sie beim Konfigurieren des Ordners/der Ordner, die auf dem NFS-Server freigegeben werden sollen, Folgendes:
+- `rw` ist erforderlich, damit aus dem Ordner gelesen und in den Ordner geschrieben werden kann
+- `sync` ist erforderlich für garantierte Schreibvorgänge in den Ordner
+- Verwenden Sie `no_root_squash` nicht als Option, da dies ein Sicherheitsrisiko darstellt
+- Für den Ordner muss Vollzugriff (777) eingerichtet sein
 
-Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwungen werden. Wenn Sie den Ordner konfigurieren zu können, stellen Sie sicher, dass nur die Server, die Teilnahme an der FCI für den NFS-Ordner finden Sie unter sollten. Ein Beispiel für eine geänderte/etc/Exports auf einer Linux-basierten NFS-Lösung wird unten, in dem der Ordner auf FCIN1 und FCIN2 beschränkt ist.
+Stellen Sie sicher, dass Ihre Sicherheitsstandards für den Zugriff erzwungen werden. Achten Sie beim Konfigurieren des Ordners darauf, dass nur die an der FCI beteiligten Server den NFS-Ordner sehen können. Unten ist als Beispiel eine angepasste „/etc/exports“-Datei auf einer Linux-basierten NFS-Lösung zu sehen. Der Ordner ist auf FCIN1 und FCIN2 beschränkt.
 
-![05 – nfsacl][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 
-1. Wählen Sie einen der Server, die einbezogen werden, in der FCI-Konfiguration. Es spielt keine Rolle die. 
+1. Wählen Sie einen der Server aus, der an der FCI-Konfiguration beteiligt sein wird. Es spielt keine Rolle, welchen Sie auswählen. 
 
-2. Überprüfen, ob der Server auf dem NFS-Server die Mount(s) sehen.
+2. Stellen Sie sicher, dass der Server die Einbindung/en auf dem NFS-Server sehen kann.
 
     ```bash
     sudo showmount -e <IPAddressOfNFSServer>
     ```
 
-    \<IPAddressOfNFSServer > ist die IP-Adresse der NFS-Server, die verwendet werden.
+    \<IPAddressOfNFSServer> ist die IP-Adresse des NFS-Servers, den Sie verwenden werden.
 
-3. Für Systemdatenbanken oder etwas in der Standardspeicherort für die Daten gespeichert die folgenden Schritte aus. Andernfalls fahren Sie mit Schritt 4.
+3. Befolgen Sie für Systemdatenbanken oder Daten, die am Standardspeicherort gespeichert sind, die folgenden Schritte. Fahren Sie andernfalls mit Schritt 4 fort.
  
-   * Stellen Sie sicher, dass SQL Server auf dem Server beendet wird, an dem Sie arbeiten.
+   * Stellen Sie sicher, dass SQL Server auf dem Server, auf dem Sie arbeiten, angehalten wurde.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-   * Wechseln Sie vollständig zu den Superuser sein. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Wechseln Sie vollständig zum Superuser. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     sudo -i
     ```
 
-   * Wechseln Sie zu der Mssql-Benutzer sein. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Wechseln Sie zum mssql-Benutzer. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     su mssql
     ```
 
-   * Erstellen Sie ein temporäres Verzeichnis zum Speichern von SQL Server-Daten und Protokolldateien an. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Erstellen Sie ein temporäres Verzeichnis, in dem Sie die SQL Server-Daten und -Protokolldateien speichern. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     mkdir <TempDir>
     ```
 
-    \<"TempDir" > ist der Name des Ordners. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/tmp.
+    \<TempDir> ist der Name des Ordners. Im folgenden Beispiel wird ein Ordner mit dem Namen „/var/opt/mssql/tmp“ erstellt.
 
     ```bash
     mkdir /var/opt/mssql/tmp
     ```
 
-   * Kopieren Sie die SQL Server-Daten und Protokolldateien-Dateien in das temporäre Verzeichnis. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Kopieren Sie die SQL Server-Daten und -Protokolldateien in das temporäre Verzeichnis. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
     
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<"TempDir" > ist der Name des Ordners aus dem vorherigen Schritt.
+    \<TempDir> ist der Name des Ordners aus dem vorherigen Schritt.
 
-   * Stellen Sie sicher, dass die Dateien im Verzeichnis.
+   * Stellen Sie sicher, dass sich die Dateien im Verzeichnis befinden.
 
     ```bash
     ls TempDir
     ```
 
-    \<"TempDir" > ist der Name des Ordners aus Schritt d fort.
+    \<TempDir> ist der Name des Ordners aus Schritt d.
 
-   * Löschen Sie die Dateien aus dem vorhandenen Verzeichnis der SQL Server-Daten. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Löschen Sie die Dateien aus dem vorhandenen SQL Server-Datenverzeichnis. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     rm - f /var/opt/mssql/data/*
@@ -109,23 +109,23 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
     ls /var/opt/mssql/data
     ```
     
-   * Geben Sie beenden, wechseln zurück an den Root-Benutzer.
+   * Geben Sie „exit“ ein, um zum Root-Benutzer zurück zu wechseln.
 
-   * Binden Sie die NFS-Freigabe in der SQL Server-Datenordner. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Binden Sie die NFS-Freigabe in den SQL Server-Datenordner ein. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer > ist die IP-Adresse der NFS-Server, die verwendet werden 
+    \<IPAddressOfNFSServer> ist die IP-Adresse des NFS-Servers, den Sie verwenden werden. 
 
-    \<FolderOnNFSServer > ist der Name des der NFS-Freigabe. Die folgende Beispielsyntax entspricht die NFS-Informationen aus Schritt2.
+    \<FolderOnNFSServer> ist der Name der NFS-Freigabe. Die folgende Beispielsyntax entspricht den NFS-Informationen aus Schritt 2.
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
     ```
 
-   * Überprüfen, ob die Bereitstellung erfolgreich war, indem Sie die Bereitstellung ohne Schalter ausgeben.
+   * Überprüfen Sie, ob die Einbindung erfolgreich war, indem Sie „mount“ ohne Parameter ausgeben.
 
     ```bash
     mount
@@ -133,61 +133,61 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
 
     ![10-mountnoswitches][2]
 
-   * Wechseln Sie zu der Mssql-Benutzer. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Wechseln Sie zum Benutzer „mssql“. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     su mssql
     ```
 
-   * Kopieren Sie die Dateien aus dem temporären Verzeichnis /var/opt/mssql/data. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Kopieren Sie die Dateien aus dem temporären Verzeichnis „/var/opt/mssql/data“. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
     ```
 
-   * Stellen Sie sicher, dass die Dateien vorhanden sind.
+   * Überprüfen Sie, ob die Dateien vorhanden sind.
 
     ```bash
     ls /var/opt/mssql/data
     ```
 
-   * Geben Sie beenden, um nicht mssql 
+   * Geben Sie für „exit“ nicht „mssql“ ein. 
     
-   * Geben Sie beenden, um das Root nicht verwendet werden
+   * Geben Sie für „exit“ nicht „root“ ein.
 
-   * Starten Sie SqlServer. Wenn alles richtig kopiert wurde und angewendeten Sicherheitsfunktionen ordnungsgemäß SQL Server zeigen sollte, wie gestartet.
+   * Starten Sie SQL Server. Wenn alles richtig kopiert wurde und die Sicherheitsmaßnahmen ordnungsgemäß angewendet wurden, sollte SQL Server als gestartet angezeigt werden.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
     
-   * Erstellen Sie eine Datenbank zum Testen, ob die Sicherheit ordnungsgemäß eingerichtet ist. Das folgende Beispiel zeigt, die über Transact-SQL ausgeführt wird; Er kann über SSMS ausgeführt werden.
+   * Erstellen Sie eine Datenbank, um zu testen, ob die Sicherheit richtig eingerichtet wurde. Im folgenden Beispiel geschieht dies über Transact-SQL, es ist jedoch auch über SSMS möglich.
  
     ![CreateTestdatabase][3]
 
-   * Beenden Sie SQL Server, und stellen Sie sicher, dass es heruntergefahren ist.
+   * Beenden Sie SQL Server, und vergewissern Sie sich, dass die Serverinstanz heruntergefahren wurde.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   * Wenn Sie keine anderen NFS-Bereitstellungen erstellen, die Bereitstellung heben Sie die Freigabe auf. Wenn Sie sind, nicht aufheben der Bereitstellung.
+   * Heben Sie die Einbindung der Freigabe auf, wenn Sie keine weiteren NFS-Freigaben erstellen. Heben Sie andernfalls die Freigabe nicht auf.
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer > ist die IP-Adresse der NFS-Server, die verwendet werden
+    \<IPAddressOfNFSServer> ist die IP-Adresse des NFS-Servers, den Sie verwenden werden.
 
-    \<FolderOnNFSServer > ist der Name des der NFS-Freigabe
+    \<FolderOnNFSServer> ist der Name der NFS-Freigabe.
 
-    \<FolderMountedIn > ist der Ordner, der im vorherigen Schritt erstellt haben. 
+    \<FolderMountedIn> ist der Ordner, der im vorherigen Schritt erstellt wurde. 
 
-4. Für etwas anderes als ein Systemdatenbanken, z. B. Benutzerdatenbanken oder Backups die folgenden Schritte aus. Wenn Sie nur den Standardspeicherort zu verwenden, fahren Sie mit Schritt 5 fort.
+4. Führen Sie folgende Schritte aus, wenn es nicht um Systemdatenbanken, sondern um Benutzerdatenbanken oder Sicherungen geht. Wenn nur der Standardspeicherort verwendet wird, können Sie mit Schritt 5 fortfahren.
 
-   * Wechseln Sie zu der Superuser sein. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Wechseln Sie zum Superuser. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     sudo -i
@@ -199,54 +199,54 @@ Stellen Sie sicher, dass für den Zugriff auf Ihre Sicherheitsstandards erzwunge
     mkdir <FolderName>
     ```
 
-    \<Ordnername > ist der Name des Ordners. Vollständiger Pfad des Ordners muss angegeben werden, sofern Sie nicht den richtigen Speicherort. Das folgende Beispiel erstellt einen Ordner namens /var/opt/mssql/userdata.
+    \<FolderName> ist der Name des Ordners. Wenn sich der Ordner nicht am richtigen Speicherort befindet, muss der vollständige Pfad angegeben werden. Im folgenden Beispiel wird ein Ordner mit dem Namen „/var/opt/mssql/userdata“ erstellt.
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   * Binden Sie die NFS-Freigabe, in dem Ordner, der im vorherigen Schritt erstellt wurde. Sie erhalten Bestätigung nicht bei erfolgreicher Ausführung.
+   * Binden Sie die NFS-Freigabe in den Ordner ein, der im vorherigen Schritt erstellt wurde. Wenn dies erfolgreich war, erhalten Sie keine Bestätigung.
 
     ```bash
     Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer > ist die IP-Adresse der NFS-Server, die verwendet werden
+    \<IPAddressOfNFSServer> ist die IP-Adresse des NFS-Servers, den Sie verwenden werden.
 
-    \<FolderOnNFSServer > ist der Name des der NFS-Freigabe
+    \<FolderOnNFSServer> ist der Name der NFS-Freigabe.
 
-    \<FolderToMountIn > ist der Ordner, der im vorherigen Schritt erstellt haben. Im folgenden ist ein Beispiel. 
+    \<FolderToMountIn> ist der Ordner, der im vorherigen Schritt erstellt wurde. Unten finden Sie ein Beispiel. 
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
     ```
 
-   * Überprüfen, ob die Bereitstellung erfolgreich war, indem Sie die Bereitstellung ohne Schalter ausgeben.
+   * Überprüfen Sie, ob die Einbindung erfolgreich war, indem Sie „mount“ ohne Parameter ausgeben.
   
-   * Geben Sie beenden, um die Benutzer mit Administratorrechten nicht mehr.
+   * Geben Sie „exit“ ein, um nicht mehr der Superuser zu sein.
 
-   * Um zu testen, erstellen Sie eine Datenbank in diesem Ordner. Im folgenden Beispiel wird Sqlcmd, erstellen Sie eine Datenbank, damit den Kontext wechseln, überprüfen die Dateien vorhanden sind, auf der Betriebssystemebene und löscht dann den temporären Speicherort. Sie können SSMS verwenden.
+   * Erstellen Sie eine Datenbank in diesem Ordner, um dies zu testen. Im folgenden Beispiel wird „sqlcmd“ verwendet, um eine Datenbank zu erstellen, den Kontext zu wechseln und zu überprüfen, ob die Dateien auf der Betriebssystemebene vorhanden sind. Anschließend wird der temporäre Speicherort gelöscht. Sie können SSMS verwenden.
 
     ![15-createtestdatabase][4]
  
-   * Aufheben der Freigabe 
+   * Heben Sie die Einbindung der Freigabe auf. 
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer > ist die IP-Adresse der NFS-Server, die verwendet werden
+    \<IPAddressOfNFSServer> ist die IP-Adresse des NFS-Servers, den Sie verwenden werden.
     
-    \<FolderOnNFSServer > ist der Name des der NFS-Freigabe
+    \<FolderOnNFSServer> ist der Name der NFS-Freigabe.
 
-    \<FolderMountedIn > ist der Ordner, der im vorherigen Schritt erstellt haben. Im folgenden ist ein Beispiel. 
+    \<FolderMountedIn> ist der Ordner, der im vorherigen Schritt erstellt wurde. Unten finden Sie ein Beispiel. 
  
-5. Wiederholen Sie die Schritte in den anderen Knoten aus.
+5. Wiederholen Sie die Schritte auf dem/den anderen Knoten.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konfigurieren Sie Failoverclusterinstanz – SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure.md)
+[Configure failover cluster instance – SQL Server on Linux (Konfigurieren einer Failoverclusterinstanz – SQL Server unter Linux)](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/05-nfsacl.png

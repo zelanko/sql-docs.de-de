@@ -1,6 +1,6 @@
 ---
-title: Leistung, bewährte Methoden für SQL Server unter Linux
-description: In diesem Artikel werden bewährte Methoden für Leistung und Richtlinien für die Ausführung von SQL Server unter Linux bieten.
+title: Bewährte Methoden für die Leistung für SQL Server für Linux
+description: Dieser Artikel enthält bewährte Methoden für die Leistung sowie Ausführungsrichtlinien für SQL Server für Linux.
 author: rgward
 ms.author: bobward
 ms.reviewer: vanto
@@ -9,106 +9,106 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68105444"
 ---
-# <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux
+# <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Dieser Artikel enthält bewährte Methoden und Empfehlungen zum Maximieren der Leistung von datenbankanwendungen, die mit SQL Server unter Linux verbinden. Diese Empfehlungen gelten speziell für die Ausführung auf der Linux-Plattform. Alle normalen SQL Server-Empfehlungen, wie z. B. Indexentwurf, gelten weiterhin.
+Dieser Artikel enthält bewährte Methoden und Empfehlungen, um die Leistung für Datenbankanwendungen zu maximieren, die mit SQL Server für Linux verbunden sind. Diese Empfehlungen gelten speziell für die Ausführung auf der Linux-Plattform. Alle normalen SQL Server Empfehlungen wie der Indexentwurf gelten weiterhin.
 
-Die folgenden Richtlinien enthalten Empfehlungen zum Konfigurieren von SQL Server und Linux-Betriebssystem.
+Im Folgenden erhalten Sie Empfehlungen zum Konfigurieren von SQL Server und des Linux-Betriebssystems.
 
-## <a name="sql-server-configuration"></a>SQL Server-Konfiguration
+## <a name="sql-server-configuration"></a>SQL Server-Konfiguration
 
-Es wird empfohlen, um die folgenden Konfigurationsaufgaben ausführen, nach der Installation von SQL Server für Linux, um die optimale Leistung für Ihre Anwendung zu erzielen.
+Es wird empfohlen, nach der Installation von SQL Server für Linux die folgenden Konfigurationsaufgaben auszuführen, um eine optimale Leistung für Ihre Anwendung zu erzielen.
 
 ### <a name="best-practices"></a>Bewährte Methoden
 
-- **Verwenden Sie die PROZESSAFFINITÄT für CPUs und/oder den Knoten**
+- **Verwenden von PROCESS AFFINITY für Knoten und/oder CPUs**
 
-   Es wird empfohlen, verwenden Sie `ALTER SERVER CONFIGURATION` festzulegende `PROCESS AFFINITY` für alle der **NUMANODEs** und/oder CPUs Sie verwenden für SQL Server (in der Regel für alle Knoten und CPUs) auf Linux-Betriebssystem. Prozessor-Affinität kann effizient Linux und Planen von SQL-Verhalten zu verwalten. Mithilfe der **NUMANODE** Option ist die einfachste Methode. Beachten Sie, verwenden Sie **PROZESSAFFINITÄT** auch wenn Sie nur einen einzelnen NUMA-Knoten auf Ihrem Computer verfügen.  Finden Sie unter den [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) Dokumentation für Weitere Informationen zum Festlegen von **PROZESSAFFINITÄT**.
+   Es wird empfohlen, `ALTER SERVER CONFIGURATION` zu verwenden, um `PROCESS AFFINITY` für alle **NUMANODE**-Elemente und/oder CPUs festzulegen, die Sie für SQL Server (in der Regel für alle Knoten und CPUs) unter Linux verwenden. Die Prozessoraffinität hilft dabei, das Verhalten von Linux und SQL effizient zu planen. Die Verwendung der Option **NUMANODE** ist die einfachste Methode. Beachten Sie, dass Sie **PROCESS AFFINITY** auch dann verwenden sollten, wenn auf Ihrem Computer nur ein einzelner NUMA-Knoten vorhanden ist.  Weitere Informationen zum Festlegen von **PROCESS AFFINITY** finden Sie in der Dokumentation zu [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md).
 
-- **Konfigurieren Sie mehrere Tempdb-Datendateien**
+- **Konfigurieren mehrerer tempdb-Datendateien**
 
-   Da es sich bei einer SQL Server auf Linux-Installation keine Option zum Konfigurieren mehrerer Tempdb-Dateien bietet, wird empfohlen, die Sie berücksichtigen, erstellen mehrere Tempdb-Datendateien, nach der Installation. Weitere Informationen finden Sie in der Anleitung im Artikel [Empfehlungen zur zuweisungskonflikt in SQL Server-Tempdb-Datenbank zu vermeiden](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
+   Da die Installation von SQL Server für Linux keine Option zum Konfigurieren mehrerer tempdb-Dateien umfasst, empfiehlt es sich, erst nach der Installation die tempdb-Datendateien zu erstellen. Weitere Informationen finden Sie im Artikel [Empfehlungen zum Reduzieren von Konflikten bei der Zuweisung in tempdb-Datenbank für SQL Server](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d).
 
 ### <a name="advanced-configuration"></a>Erweiterte Konfiguration
 
-Die folgenden Empfehlungen sind optionale Einstellungen, die Sie auswählen können, nach der Installation von SQL Server unter Linux ausführen. Diese Optionen basieren auf den Anforderungen Ihrer Workload und die Konfiguration von Ihrem Linux-Betriebssystem.
+Die folgenden Empfehlungen stellen optionale Konfigurationseinstellungen dar, die Sie nach der Installation von SQL Server für Linux durchführen können. Diese Optionen basieren auf den Anforderungen Ihrer Workload und der Konfiguration Ihres Linux-Betriebssystems.
 
-- **Legen Sie ein Arbeitsspeicherlimit mit Mssql-conf**
+- **Festlegen eines Arbeitsspeicherlimits mithilfe von mssql-conf**
 
-   Um sicherzustellen, dass genügend freier physischer Arbeitsspeicher für das Linux-Betriebssystem vorhanden ist, werden nur 80 % des physischen Arbeitsspeichers von SQL Server-Prozess wird standardmäßig verwendet. Für einige Systeme, die große Menge an physischen RAM, 20 % möglicherweise, eine erhebliche Anzahl. Beispielsweise würde auf einem System mit 1 TB RAM, die Standardeinstellung beibehalten ca. 200 GB RAM nicht verwendete. In diesem Fall empfiehlt es sich möglicherweise so konfigurieren Sie die Begrenzung der Menge auf einen höheren Wert. Finden Sie in der Dokumentation für die **Mssql-Conf** Tool und die [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit) festlegen, die steuert, des Arbeitsspeichers für SQL Server (in Einheiten von MB) sichtbar.
+   Damit immer genügend physischer Speicherplatz für Linux vorhanden ist, verwendet der SQL Server-Prozess standardmäßig nur 80 % des physischen Speichers. Bei großen Systemen können 20 % einen beachtlichen Unterschied darstellen. Bei einem System mit 1 TB RAM werden durch diese Standardeinstellung ca. 200 GB RAM freigelassen. In diesem Fall sollten Sie das Arbeitsspeicherlimit auf einen höheren Wert festlegen. Weitere Informationen finden Sie in der Dokumentation zum Tool **mssql-config** und der Einstellung [memory.memorylimitmb](sql-server-linux-configure-mssql-conf.md#memorylimit), die den für SQL Server sichtbaren Speicherplatz (in MB) steuert.
 
-   Wenn Sie diese Einstellung zu ändern, achten Sie darauf, dass Sie nicht auf ein zu hoher Wert festgelegt. Wenn Sie nicht genügend Arbeitsspeicher verfügbar ist, können Sie Probleme mit Linux-Betriebssystem und anderen Linux-Anwendungen auftreten.
+   Wenn Sie diese Einstellung ändern, achten Sie darauf, diesen Wert nicht zu hoch festzulegen. Wenn nicht genügend Arbeitsspeicher frei ist, können Probleme mit dem Linux-Betriebssystem und anderen Linux-Anwendungen auftreten.
 
-## <a name="linux-os-configuration"></a>Linux-Betriebssystem-Konfiguration
+## <a name="linux-os-configuration"></a>Konfigurieren des Linux-Betriebssystems
 
-Erwägen Sie die folgenden Linux-Betriebssystem-Konfigurationseinstellungen, um die beste Leistung für SQL Server-Installationen auftreten.
+Verwenden Sie die folgenden Konfigurationseinstellungen für das Linux-Betriebssystem, um bei einer SQL Server-Installation die beste Leistung zu erzielen.
 
-### <a name="kernel-settings-for-high-performance"></a>Kerneleinstellungen für eine hohe Leistung
-Dies sind die empfohlenen Linux-Betriebssystem-Einstellungen im Zusammenhang mit hoher Leistung und Durchsatz für eine SQL Server-Installation. Finden Sie in Ihrer Linux-Betriebssystem-Dokumentation für den Prozess zum Konfigurieren dieser Einstellungen.
+### <a name="kernel-settings-for-high-performance"></a>Kerneleinstellungen für hohe Leistung
+Für das Linux-Betriebssystem werden die folgenden Einstellungen empfohlen, um bei einer SQL Server-Installation hohe Leistung und einen hohen Durchsatz zu erzielen. Der Prozess zum Konfigurieren dieser Einstellungen wird in der Linux-Dokumentation beschrieben.
 
 
 
 > [!Note]
-> Für Benutzer von Red Hat Enterprise Linux (RHEL) wird das Profil für die durchsatzleistung diese Einstellungen automatisch (mit Ausnahme von C-Status) konfiguriert.
+> Für Red Hat Enterprise Linux-Benutzer (RHEL) konfiguriert das Profil „throughput-performance“ diese Einstellungen automatisch (mit Ausnahme von C-Status).
 
-Die folgende Tabelle enthält Empfehlungen für die CPU-Einstellungen:
+In der folgenden Tabelle finden Sie Empfehlungen für die CPU-Einstellungen:
 
-| Einstellung | Wert | Weitere Informationen |
+| Einstellung | value | Weitere Informationen |
 |---|---|---|
-| CPU-Frequenz Ressourcenkontrolle | Leistung | Finden Sie unter den **Cpupower** Befehl |
-| ENERGY_PERF_BIAS | Leistung | Finden Sie unter den **x86_energy_perf_policy** Befehl |
-| min_perf_pct | 100 | Finden Sie in der Dokumentation auf Intel-p-Status |
-| C-Status | Nur C1 | Finden Sie unter der Dokumentation zu Linux oder System dazu, wie ein, um sicherzustellen, dass C-Status nur das C1 festgelegt ist |
+| CPU frequency governor (Kontrolle der CPU-Häufigkeit) | Leistung | Dokumentation zum Befehl **cpupower** |
+| ENERGY_PERF_BIAS | Leistung | Dokumentation zum Befehl **x86_energy_perf_policy** |
+| min_perf_pct | 100 | Dokumentation zum Status „intel p“ |
+| C-States (C-Status) | C1 only (Nur C1) | In der Linux- oder Systemdokumentation erhalten Sie Informationen dazu, wie Sie sicherstellen können, dass die Einstellung „C-States“ (C-Status) auf „C1 only“ (Nur C1) festgelegt ist. |
 
-Die folgende Tabelle enthält Empfehlungen für die datenträgereinstellungen:
+In der folgenden Tabelle finden Sie Empfehlungen für die Datenträgereinstellungen:
 
-| Einstellung | Wert | Weitere Informationen |
+| Einstellung | value | Weitere Informationen |
 |---|---|---|
-| Datenträger-Read-Aheads | 4096 | Finden Sie unter den **Blockdev** Befehl |
-| Sysctl-Einstellungen | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns 15000000 =<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>VM.swappiness = 10 | Finden Sie unter den **Sysctl** Befehl |
+| disk readahead | 4096 | Dokumentation zum Befehl **blockdev** |
+| sysctl-Einstellungen | kernel.sched_min_granularity_ns = 10.000.000<br/>kernel.sched_wakeup_granularity_ns = 15.000.000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | Dokumentation zum Befehl **sysctl** |
 
-### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel-Einstellung automatisch Numa Lastenausgleich für NUMA-Systemen mit mehreren Knoten
+### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel-Einstellung für den automatischen NUMA-Ausgleich für NUMA-Systeme mit mehreren Knoten
 
-Bei der Installation von SQL Server auf mehreren Knoten **NUMA** Systeme, die folgenden **kernel.numa_balancing** Kernel-Einstellung ist standardmäßig aktiviert. Um SQL Server zu verarbeitende maximale Effizienz ermöglichen eine **NUMA** System, deaktivieren automatisch Numa Lastenausgleich auf einem NUMA-System mit mehreren Knoten:
+Wenn Sie SQL Server auf einem **NUMA**-System mit mehreren Knoten installieren, ist die folgende **kernel.numa_balancing**-Kerneleinstellung standardmäßig aktiviert. Deaktivieren Sie den automatischen NUMA-Ausgleich für das **NUMA**-System mit mehreren Knoten, damit SQL Server auf diesem mit bestmöglicher Effizienz arbeiten können:
 
 ```bash
 sysctl -w kernel.numa_balancing=0
 ```
 
-### <a name="kernel-settings-for-virtual-address-space"></a>Kerneleinstellungen für den virtuellen Adressraum.
+### <a name="kernel-settings-for-virtual-address-space"></a>Kerneleinstellungen für virtuelle Adressräume
 
-Die Standardeinstellung von **vm.max_map_count** (was 65536 ist) möglicherweise nicht hoch genug ist, für eine SQL Server-Installation. Ändern Sie diesen Wert (das obere Limit erreicht ist), auf 256 KB.
+Die Standardeinstellung für **vm.max_map_count** (65536) ist für eine SQL Server-Installation möglicherweise nicht hoch genug. Ändern Sie diesen Wert, der die Obergrenze darstellt, in 256.000.
 
 ```bash
 sysctl -w vm.max_map_count=262144
 ```
 
-### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Deaktivieren des letzten Zugriffs auf Datum/Uhrzeit in Dateisystemen für SQL Server Daten und Protokolldateien
+### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Deaktivieren von Datum/Uhrzeit des letzten Zugriffs auf Dateisysteme für SQL Server-Daten- und -Protokolldateien
 
-Verwenden der **Noatime** Attribut mit einem beliebigen Dateisystem, das zum Speichern von SQL Server-Daten und Protokolldateien verwendet wird. Finden Sie in der Linux-Dokumentation zum Festlegen dieses Attributs.
+Verwenden Sie das Attribut **noatime** mit einem beliebigen Dateisystem, das zum Speichern von SQL Server-Daten- und -Protokolldateien verwendet wird. Informationen zum Festlegen dieses Attributs finden Sie in der Linux-Dokumentation.
 
-### <a name="leave-transparent-huge-pages-thp-enabled"></a>Lassen Sie Transparent Huge Pages (THP) aktiviert
+### <a name="leave-transparent-huge-pages-thp-enabled"></a>Lassen Sie die Option „Transparent Huge Pages“ aktiviert.
 
-Bei den meisten Linux-Installationen sollten diese Option standardmäßig auf, auf. Es wird empfohlen, für die konsistenteste Leistungsverhalten zu bieten, diese Konfigurationsoption aktiviert lassen.
+Bei den meisten Linux-Installationen sollte diese Option standardmäßig aktiviert sein. Es wird empfohlen, dies nicht zu ändern, damit die Leistung konstant gut bleibt.
 
 ### <a name="swapfile"></a>Auslagerungsdatei
 
-Stellen Sie sicher, dass man auf eine ordnungsgemäß konfigurierte Auslagerungsdatei, einer unzureichenden Arbeitsspeicher zu vermeiden. In der Dokumentation für das Erstellen und die ordnungsgemäße Größe einer Auslagerungsdatei Linux.
+Stellen Sie sicher, dass Sie über eine ordnungsgemäß konfigurierte Auslagerungsdatei verfügen, damit keine Probleme mit dem Arbeitsspeicher auftreten. In der Linux-Dokumentation erhalten Sie Informationen über die Erstellung und ordnungsgemäße Größenanpassung von Auslagerungsdateien.
 
 ### <a name="virtual-machines-and-dynamic-memory"></a>Virtuelle Computer und dynamischer Arbeitsspeicher
 
-Wenn Sie SQL Server unter Linux auf einem virtuellen Computer ausführen, stellen Sie sicher, dass Sie Optionen auswählen, beheben Sie die Menge an Arbeitsspeicher für den virtuellen Computer reserviert. Verwenden Sie keine Features wie Hyper-V Dynamic Memory.
+Wenn Sie SQL Server für Linux auf einem virtuellen Computer ausführen, stellen Sie sicher, dass Sie entsprechende Optionen auswählen, um dem für den virtuellen Computer reservierten Arbeitsspeicher gerecht zu werden. Verwenden Sie keine Features wie Hyper-V Dynamic Memory.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server-Funktionen, die Leistung verbessern, finden Sie unter [erste Schritte mit Leistungsfeatures](sql-server-linux-performance-get-started.md).
+Weitere Informationen zu SQL Server-Features, die die Leistung verbessern, finden Sie unter [Erste Schritte mit den Leistungsfeatures](sql-server-linux-performance-get-started.md).
 
-Weitere Informationen zu SQL Server unter Linux finden Sie unter [Übersicht über SQL Server unter Linux](sql-server-linux-overview.md).
+Weitere Informationen zu SQL Server für Linux finden Sie in der [Übersicht für SQL Server für Linux](sql-server-linux-overview.md).

@@ -1,7 +1,7 @@
 ---
-title: 'Schnellstart: Verbinden und Abfragen von Azure SQL-Datenbank'
+title: 'Schnellstart: Herstellen einer Verbindung mit einer Azure SQL-Datenbank-Instanz und deren Abfrage'
 titleSuffix: Azure Data Studio
-description: In dieser schnellstartanleitung veranschaulicht, wie Azure Data Studio eine Verbindung mit einer SQL-Datenbank, und führen Sie eine Abfrage
+description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer SQL-Datenbank-Instanz herstellen und eine Abfrage ausführen.
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,66 +11,66 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959437"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Azure SQL-Datenbank
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen
 
-In diesem Schnellstart verwenden Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] für die Verbindung mit einem Azure SQL-Datenbank-Server. Führen Sie anschließend Transact-SQL (T-SQL)-Anweisungen zum Erstellen und Abfragen der Datenbank "tutorialdb", die in anderen dient [!INCLUDE[name-sos](../includes/name-sos-short.md)] Tutorials.
+In dieser Schnellstartanleitung stellen Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit einer Azure SQL-Datenbank-Serverinstanz her. Anschließend führen Sie Transact-SQL-Anweisungen (T-SQL) aus, um die TutorialDB-Datenbank zu erstellen und abzufragen, die in anderen [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Tutorials verwendet wird.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], und eine Azure SQL-Datenbank-Server.
+Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] und eine Azure SQL-Datenbank-Serverinstanz.
 
-- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-Wenn Sie nicht über eine Azure SQL-Server verfügen, führen Sie eines der folgenden Schnellstarts für Azure SQL-Datenbank. Beachten Sie den vollqualifizierten Servernamen, und melden Sie sich die Anmeldeinformationen für die Verwendung in späteren Schritten:
+Wenn Sie noch nicht über eine Azure SQL-Serverinstanz verfügen, führen Sie einen der folgenden Schnellstarts für Azure SQL-Datenbank aus. Merken Sie sich den voll qualifizierten Servernamen und die Anmeldeinformationen für die späteren Schritte:
 
-- [Erstellen Sie DB - Portal.](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Erstellen Sie DB - CLI.](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
+- [Erstellen einer Datenbank – Portal](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+- [Erstellen einer Datenbank – CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
 - [Erstellen einer Datenbank – PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
-## <a name="connect-to-your-azure-sql-database-server"></a>Verbindungsherstellung mit Ihrem Azure SQL-Datenbank-server
+## <a name="connect-to-your-azure-sql-database-server"></a>Herstellen einer Verbindung mit Ihrer Azure SQL-Datenbank-Serverinstanz
 
-Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen einer Verbindung mit Ihrem Azure SQL-Datenbank-Server.
+Stellen Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit Ihrer Azure SQL-Datenbank-Serverinstanz her.
 
-1. Der ersten Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Willkommen** Seite sollte zu öffnen. Wenn Sie nicht sehen die **Willkommen** Seite **Hilfe** > **Willkommen**. Wählen Sie **neue Verbindung** zum Öffnen der **Verbindung** Bereich:
+1. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum ersten Mal ausführen, sollte die **Homepage** geöffnet werden. Wenn die **Homepage** nicht angezeigt wird, wählen Sie **Hilfe** > **Willkommen** aus. Wählen Sie **Neue Verbindung** aus, um den Bereich **Verbindung** zu öffnen:
    
-   ![Symbol "neue Verbindung"](media/quickstart-sql-database/new-connection-icon.png)
+   ![Symbol „Neue Verbindung“](media/quickstart-sql-database/new-connection-icon.png)
 
-2. In diesem Artikel wird die SQL-Anmeldung verwendet, aber Sie unterstützt auch die Windows-Authentifizierung. Geben Sie die folgenden Felder, die mit der Servername, Benutzername und das Kennwort für Ihre Azure SQL-Server:
+2. In diesem Artikel wird die SQL-Anmeldung verwendet, aber auch die Windows-Authentifizierung unterstützt. Füllen Sie die folgenden Felder mit dem Servernamen, Benutzernamen und Kennwort für Ihre Azure SQL-Serverinstanz aus:
 
-   | Einstellung       | Empfohlener Wert | Description |
+   | Einstellung       | Vorgeschlagener Wert | und Beschreibung |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Servername** | Der vollqualifizierte Servername | Ähnlich: **servername.database.windows.net**. |
-   | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird SQL-Authentifizierung verwendet. |
-   | **Benutzername** | Die Server Admin-Kontobenutzername | Der Benutzername aus dem Konto verwendet, um den Server zu erstellen. |
-   | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Server-Administratorkonto | Das Kennwort aus dem Konto verwendet, um den Server zu erstellen. |
-   | **Kennwort speichern** | Ja oder Nein | Wählen Sie **Ja** , wenn Sie nicht jedes Mal das Kennwort eingeben möchten. |
-   | **Datenbankname** | *Leer lassen* | Sie können nur eine Verbindung mit dem Server hier. |
-   | **Gruppe "Server"** | Wählen Sie<Default> | Sie können dieses Feld auf eine bestimmte Servergruppe festlegen, die Sie erstellt haben. | 
+   | **Servername** | Der vollqualifizierte Servername | Etwa: **servername.database.windows.net**. |
+   | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird die SQL-Authentifizierung verwendet. |
+   | **User name** | Der Benutzername des Serveradministratorkontos | Der Benutzername des Kontos, das zum Erstellen des Servers verwendet wird. |
+   | **Kennwort (SQL-Anmeldung)** | Das Kennwort des Serveradministratorkontos | Das Kennwort des Kontos, das zum Erstellen des Servers verwendet wird. |
+   | **Kennwort speichern** | Ja oder Nein | Wählen Sie **Ja** aus, wenn Sie nicht bei jedem Neustart Ihr Kennwort eingeben möchten. |
+   | **Datenbankname** | *Leer lassen* | Sie stellen hier nur eine Verbindung mit dem Server her. |
+   | **Servergruppe** | Wählen Sie <Default> aus. | Sie können für dieses Feld eine bestimmte Servergruppe festlegen, die Sie erstellt haben. | 
 
-   ![Symbol "neue Verbindung"](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Symbol „Neue Verbindung“](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. Wählen Sie **Verbinden**.
 
-4. Wenn es sich bei Ihrem Server eine Firewallregel mit dem Azure Data Studio eine Verbindung herstellen, sodass keine der **Firewallregel erstellen** -Formular wird geöffnet. Führen Sie das Formular, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. Wenn der Server nicht über eine Firewallregel verfügt, die Azure Data Studio ermöglicht, eine Verbindung herzustellen, wird das Formular **Neue Firewallregel erstellen** geöffnet. Füllen Sie das Formular aus, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Neue Firewallregel](media/quickstart-sql-database/firewall.png)  
 
-Nach der erfolgreichen verbindungsherstellung Ihren Server wird geöffnet, der **Server** Randleiste.
+Nachdem die Verbindung erfolgreich hergestellt wurde, wird Ihr Server in der Randleiste **SERVER** geöffnet.
 
-## <a name="create-the-tutorial-database"></a>Erstellen der Tutorial-Datenbank
+## <a name="create-the-tutorial-database"></a>Erstellen der Tutorialdatenbank
 
-In den nächsten Abschnitten erstellen Sie die Datenbank "tutorialdb", die verwendet wird, in anderen [!INCLUDE[name-sos](../includes/name-sos-short.md)] Tutorials.
+In den nächsten Abschnitten wird die TutorialDB-Datenbank erstellt, die in anderen [!INCLUDE[name-sos](../includes/name-sos-short.md)]-Tutorials verwendet wird.
 
-1. Mit der rechten Maustaste auf Ihre Azure SQL-Server in der **Server** Randleiste, und wählen **neue Abfrage**.
+1. Klicken Sie in Ihrer Azure SQL-Serverinstanz mit der rechten Maustaste auf die Randleiste **SERVER**, und wählen Sie **Neue Abfrage** aus.
 
-1. Fügen Sie diese SQL-Anweisungen in den Abfrage-Editor ein.
+1. Fügen Sie diesen SQL-Code in den Abfrage-Editor ein.
 
    ```sql
    IF NOT EXISTS (
@@ -85,21 +85,21 @@ In den nächsten Abschnitten erstellen Sie die Datenbank "tutorialdb", die verwe
    GO
    ```
 
-1. Wählen Sie in der Symbolleiste **ausführen**. Benachrichtigungen werden in der **Nachrichten** Bereich zeigt die Abfrage wird ausgeführt.
+1. Wählen Sie in der Symbolleiste **Ausführen** aus. Benachrichtigungen werden im Bereich **MELDUNGEN** angezeigt, der den Status der Abfrage anzeigt.
 
 ## <a name="create-a-table"></a>Erstellen einer Tabelle
 
-Mit der Abfrage-Editor verbunden ist die **master** -Datenbank, aber wir möchten eine Tabelle in der **"tutorialdb"** Datenbank. 
+Der Abfrage-Editor ist mit der Datenbank **master** verbunden, aber wir möchten eine Tabelle in der Datenbank **TutorialDB** erstellen. 
 
-1. Herstellen einer Verbindung mit der **"tutorialdb"** Datenbank.
+1. Stellen Sie eine Verbindung mit der **TutorialDB**-Datenbank her.
 
-   ![Kontext ändern](media/quickstart-sql-database/change-context2.png)
+   ![Ändern des Kontexts](media/quickstart-sql-database/change-context2.png)
 
 
 
-1. Erstellen Sie eine `Customers` Tabelle. 
+1. Erstellen Sie eine `Customers`-Tabelle. 
 
-   Ersetzen Sie die vorherige Abfrage im Abfrage-Editor durch diese, und wählen Sie **ausführen**.
+   Ersetzen Sie die vorherige Abfrage im Abfrage-Editor durch diese, und wählen Sie **Ausführen** aus.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -119,9 +119,9 @@ Mit der Abfrage-Editor verbunden ist die **master** -Datenbank, aber wir möchte
    ```
 
 
-## <a name="insert-rows-into-the-table"></a>Einfügen von Zeilen in der Tabelle
+## <a name="insert-rows-into-the-table"></a>Einfügen von Zeilen in die Tabelle
 
-Ersetzen Sie die vorherige Abfrage durch diese, und wählen Sie **ausführen**.
+Ersetzen Sie die vorherige Abfrage durch diese, und wählen Sie **Ausführen** aus.
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -135,24 +135,24 @@ Ersetzen Sie die vorherige Abfrage durch diese, und wählen Sie **ausführen**.
    GO
    ```
 
-## <a name="view-the-result"></a>Das Ergebnis anzeigen
+## <a name="view-the-result"></a>Anzeigen des Ergebnisses
 
-Ersetzen Sie die vorherige Abfrage durch diese, und wählen Sie **ausführen**.
+Ersetzen Sie die vorherige Abfrage durch diese, und wählen Sie **Ausführen** aus.
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-Die Abfrageergebnisse anzeigen zu können:
+Die Abfrageergebnisse werden angezeigt:
 
-   ![Select-Ergebnisse](media/quickstart-sql-database/select-results2.png)
+   ![Auswählen von Ergebnissen](media/quickstart-sql-database/select-results2.png)
 
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
-Spätere schnellstartartikel baut auf die hier erstellten Ressourcen. Wenn Sie diese Artikel durcharbeiten möchten, achten Sie darauf, dass Sie nicht, um diese Ressourcen zu löschen. Löschen Sie andernfalls im Azure-Portal, die nicht mehr benötigten Ressourcen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Spätere Schnellstartartikel bauen auf den hier erstellten Ressourcen auf. Wenn Sie beabsichtigen, diese Artikel durchzuarbeiten, achten Sie darauf, diese Ressourcen nicht zu löschen. Andernfalls können Sie im Azure-Portal die Ressourcen löschen, die Sie nicht mehr benötigen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie erfolgreich mit einer Azure SQL-Datenbank und Ausführen einer Abfrage verbunden haben, können Sie die [Code-Editor-Tutorials](tutorial-sql-editor.md).
+Nachdem Sie erfolgreich eine Verbindung mit einer Azure SQL-Datenbank-Instanz hergestellt und eine Abfrage ausgeführt haben, testen Sie das [Tutorial zum Code-Editor](tutorial-sql-editor.md).

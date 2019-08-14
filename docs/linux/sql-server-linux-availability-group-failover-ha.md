@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Failover der verfügbarkeitsgruppe – SQL Server unter Linux
+title: 'Verwalten des Failovers einer Verfügbarkeitsgruppe: SQL Server für Linux'
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,44 +10,44 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027222"
 ---
-# <a name="always-on-availability-group-failover-on-linux"></a>Failover von AlwaysOn-Verfügbarkeitsgruppe unter Linux
+# <a name="always-on-availability-group-failover-on-linux"></a>Failover der Always On-Verfügbarkeitsgruppe unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Im Kontext einer verfügbarkeitsgruppe (AG) sind die primäre und sekundäre Rolle von verfügbarkeitsreplikaten normalerweise Rahmen wird als Failover bezeichnet. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Beim automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe ein Failover auf das verfügbarkeitsreplikat-Ebene. D. h. eine Verfügbarkeitsgruppe führt ein Failover auf eine ihrer sekundären Replikate (das aktuelle failoverziel). 
+Im Kontext einer Verfügbarkeitsgruppe können die primäre und die sekundäre Rolle von Verfügbarkeitsreplikaten normalerweise im Rahmen des sogenannten Failovers ausgetauscht werden. Failover können in drei Formen auftreten: automatisches Failover (ohne Datenverlust), geplantes manuelles Failover (ohne Datenverlust) und erzwungenes manuelles Failover (mit möglichem Datenverlust), welches in der Regel *erzwungenes Failover*genannt wird. Bei automatischen und geplanten manuellen Failover bleiben alle Daten erhalten. Eine Verfügbarkeitsgruppe führt ein Failover auf der Ebene des Verfügbarkeitsreplikats aus. Das heißt, eine Verfügbarkeitsgruppe führt ein Failover auf eines ihrer sekundären Replikate (das aktuelle Failoverziel) aus. 
 
-Hintergrundinformationen zum Failover finden Sie unter [Failover und failovermodi](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
+Hintergrundinformationen zum Failover finden Sie unter [Failover und Failovermodi (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).
 
-## <a name="failover"></a>Manuelles failover
+## <a name="failover"></a>Manuelles Failover
 
-Verwenden Sie die Clusterverwaltungstools, um ein Failover einer Verfügbarkeitsgruppe, die von einem externen Cluster-Manager verwaltet werden. Verwenden Sie z. B. wenn eine Projektmappe Pacemaker verwendet, um einen Linux-Cluster zu verwalten, `pcs` um ein manuelles Failover für RHEL oder Ubuntu auszuführen. Verwenden Sie unter SLES `crm`. 
+Verwenden Sie die Clusterverwaltungstools für ein Failover einer Verfügbarkeitsgruppe, die von einem externen Cluster-Manager verwaltet wird. Wenn z. B. eine Lösung einen Linux-Cluster mithilfe von Pacemaker verwaltet, verwenden Sie `pcs`, um manuelle Failover auf RHEL oder Ubuntu durchzuführen. Auf dem SLES verwenden Sie `crm`. 
 
 > [!IMPORTANT]
-> Unter normalen Betriebs wird kein Failover ausgeführt mit Transact-SQL oder SQL Server-Management-Tools wie SSMS oder PowerShell. Wenn `CLUSTER_TYPE = EXTERNAL`, der einzige zulässige Wert für `FAILOVER_MODE` ist `EXTERNAL`. Mit diesen Einstellungen werden alle failoveraktionen für manuelle oder automatische vom externen Cluster-Manager ausgeführt. Informationen zum Erzwingen eines Failovers mit potenziellem Datenverlust finden Sie unter [Failover erzwingen](#forceFailover).
+> Verwenden Sie bei normalen Vorgängen für Failover keine Transact-SQL- oder SQL Server-Verwaltungstools wie SSMS oder PowerShell. Falls `CLUSTER_TYPE = EXTERNAL`, ist `EXTERNAL` der einzige akzeptable Wert für `FAILOVER_MODE`. Mit diesen Einstellungen werden alle manuellen oder automatischen Failoveraktionen vom externen Cluster-Manager ausgeführt. Anweisungen zum Erzwingen eines Failovers mit möglichem Datenverlust finden Sie unter [Force failover (Erzwungenes Failover)](#forceFailover).
 
-### <a name="a-namemanualfailovermanual-failover-steps"></a><a name="manualFailover">Schritte für das manuelle failover
+### <a name="a-namemanualfailovermanual-failover-steps"></a><a name="manualFailover">Schritte für ein manuelles Failover
 
-Zum Ausführen eines Failovers muss das sekundäre Replikat, das das primäre Replikat wird synchron sein. Wenn ein sekundäres Replikat asynchron ist [Ändern des Verfügbarkeitsmodus](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).
+Das sekundäre Replikat, das zum primären Replikat wird, muss für das Failover synchron sein. Wenn ein sekundäres Replikat asynchron ist, [ändern Sie den Verfügbarkeitsmodus](../database-engine/availability-groups/windows/change-the-availability-mode-of-an-availability-replica-sql-server.md).
 
-Manuelles Failover in zwei Schritten.
+Das manuelle Failover erfolgt in zwei Schritten.
 
-   Zuerst [manuelles Failover der Tabulatortaste verschieben AG-Ressource](#manualMove) aus dem Clusterknoten, der die Ressourcen, um einen neuen Knoten besitzt.
+   Führen Sie zunächst ein [manuelles Failover durch, indem Sie die Verfügbarkeitsgruppenressource vom Clusterknoten, der die Ressource besitzt, zu einem neuen Knoten verschieben](#manualMove).
 
-   Der Cluster die AG-Ressource ein Failover und fügt Sie eine speicherorteinschränkung hinzu. Diese Einschränkung wird konfiguriert, die Ressource, die auf dem neuen Knoten ausgeführt wird. Entfernen Sie diese Einschränkung, um ein Failover in der Zukunft ausgeführt werden.
+   Der Cluster führt ein Failover der Verfügbarkeitsgruppenressource aus und fügt eine Speicherorteinschränkung hinzu. Durch diese Einschränkung wird die Ressource so konfiguriert, dass sie auf dem neuen Knoten ausgeführt wird. Entfernen Sie diese Einschränkung, um ein Failover in Zukunft erfolgreich durchführen zu können.
 
-   Zweitens [Entfernen der speicherorteinschränkung](#removeLocConstraint).
+   [Entfernen Sie im nächsten Schritt die Speicherorteinschränkung](#removeLocConstraint).
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Schritt 1. Manuelles Failover durch Verfügbarkeitsgruppen-Ressource verschieben
+#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Schritt 1: Manuelles Failover durch Verschieben der Verfügbarkeitsgruppenressource
 
-Um manuell ein Failover einer Verfügbarkeitsgruppe-Ressource, die mit dem Namen *Ag_cluster* auf Clusterknoten, die mit dem Namen *nodeName2*, führen Sie den entsprechenden Befehl für Ihre Distribution:
+Führen Sie den entsprechenden Befehl für Ihre Verteilung aus, um ein Failover von einer Verfügbarkeitsgruppenressource namens *ag_cluster* auf den Clusterknoten namens *nodeName2* durchzuführen:
 
-- **RHEL/Ubuntu-Beispiel**
+- **RHEL-/Ubuntu-Beispiel**
 
    ```bash
    sudo pcs resource move ag_cluster-master nodeName2 --master
@@ -60,13 +60,13 @@ Um manuell ein Failover einer Verfügbarkeitsgruppe-Ressource, die mit dem Namen
    ```
 
 >[!IMPORTANT]
->Nachdem Sie eine Ressource manuell ein Failover, müssen Sie eine speicherorteinschränkung entfernen, die automatisch hinzugefügt wird.
+>Nachdem Sie ein manuelles Failover einer Ressource ausgeführt haben, müssen Sie eine Speicherorteinschränkung entfernen, die automatisch hinzugefügt wird.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> Schritt 2. Entfernen der Speicherorteinschränkung
+#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">Schritt 2: Entfernen der Speicherorteinschränkung
 
-Während eines manuellen Failovers der `pcs` Befehl `move` oder `crm` Befehl `migrate` Fügt eine speicherorteinschränkung für die Ressource auf dem neuen Zielknoten platziert werden. Um die neue Einschränkung anzuzeigen, führen Sie den folgenden Befehl nach dem Verschieben der Ressource aus:
+Während eines manuellen Failovers fügt der `pcs`-Befehl `move` oder der `crm`-Befehl `migrate` eine Speicherorteinschränkung hinzu, damit die Ressource auf dem neuen Zielknoten platziert wird. Um die neue Einschränkung anzuzeigen, führen Sie den folgenden Befehl nach dem Verschieben der Ressource aus:
 
-- **RHEL/Ubuntu-Beispiel**
+- **RHEL-/Ubuntu-Beispiel**
 
    ```bash
    sudo pcs constraint list --full
@@ -81,7 +81,7 @@ Während eines manuellen Failovers der `pcs` Befehl `move` oder `crm` Befehl `mi
 Ein Beispiel für die Einschränkung, die aufgrund eines manuellen Failovers erstellt wird. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
-- **RHEL/Ubuntu-Beispiel**
+- **RHEL-/Ubuntu-Beispiel**
 
    Im folgenden Befehl ist `cli-prefer-ag_cluster-master` die ID der Einschränkung, die entfernt werden muss. `sudo pcs constraint list --full` gibt diese ID zurück. 
    
@@ -91,7 +91,7 @@ Ein Beispiel für die Einschränkung, die aufgrund eines manuellen Failovers ers
    
 - **SLES-Beispiel**
 
-   In den folgenden Befehl `cli-prefer-ms-ag_cluster` ist die ID der Einschränkung. `crm config show` gibt diese ID zurück. 
+   Im folgenden Befehl ist `cli-prefer-ms-ag_cluster` die ID der Einschränkung. `crm config show` gibt diese ID zurück. 
    
    ```bash
    crm configure
@@ -104,72 +104,72 @@ Ein Beispiel für die Einschränkung, die aufgrund eines manuellen Failovers ers
 
 Weitere Informationen:
 - [Red Hat - Managing Cluster Resources (Red Hat – Verwalten von Clusterressourcen)](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
-- [Pacemaker – Manuelles Verschieben von Ressourcen](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
- [SLES-Administratorhandbuch - Ressourcen](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
+- [Pacemaker - Move Resources Manually (Pacemaker – Manuelles Verschieben von Ressourcen)](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
+ [SLES Administration Guide - Resources (SLES-Verwaltungsleitfaden – Ressourcen)](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
-## <a name="forceFailover"></a> Erzwungenen failover 
+## <a name="forceFailover"></a> Erzwungenes Failover 
 
-Ein erzwungenes Failover ist ausschließlich für die notfallwiederherstellung vorgesehen. In diesem Fall kann nicht mit Tools für die Clusterverwaltung Failover, da das primäre Rechenzentrum ausgefallen ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Erzwingen Sie Failover nur, wenn Sie den Dienst an die Verfügbarkeitsgruppe sofort wiederherstellen müssen und bereit sind, besteht das Risiko, dass Daten verloren gehen.
+Ein erzwungenes Failover ist ausschließlich für die Notfallwiederherstellung gedacht. In diesem Fall können Sie kein Failover mit Clusterverwaltungstools durchführen, da das primäre Rechenzentrum ausgefallen ist. Wenn Sie ein Failover auf ein nicht synchronisiertes sekundäres Replikat erzwingen, ist Datenverlust möglich. Erzwingen Sie ein Failover nur, wenn Sie den Dienst für die Verfügbarkeitsgruppe sofort wiederherstellen müssen und bereit sind, das Risiko des Datenverlustes in Kauf zu nehmen.
 
-Wenn Sie die Clusterverwaltungstools verwenden können nicht für die Interaktion mit dem Cluster – z. B. wenn der Cluster nicht mehr reagiert, auf einen Notfall zurückzuführen im primären Rechenzentrum ist, müssen Sie möglicherweise Erzwingen eines Failovers den externen Cluster-Manager zu umgehen. Dieses Verfahren wird für normale Vorgänge nicht empfohlen, da besteht das Risiko von Datenverlusten. Verwenden Sie diese Option, wenn Sie die Clusterverwaltungstools zum Ausführen der failoveraktion fehl. Dieses Verfahren ist funktionell ähnelt [Ausführen eines erzwungenen manuellen Failovers](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) auf eine Verfügbarkeitsgruppe in Windows.
+Wenn Sie die Clusterverwaltungstools für die Interaktion mit dem Cluster nicht verwenden können, z. B. wenn der Cluster aufgrund eines Notfallereignisses im primären Rechenzentrum nicht erreichbar ist, müssen Sie das Failover möglicherweise erzwingen, um den externen Cluster-Manager zu umgehen. Dieses Verfahren wird für reguläre Vorgänge nicht empfohlen, da das Risiko des Datenverlusts besteht. Greifen Sie auf dieses Verfahren zurück, wenn die Clusterverwaltungstools das Failover nicht durchführen können. Funktionell ähnelt dieses Verfahren der [Durchführung eines erzwungenen manuellen Failovers](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) einer Verfügbarkeitsgruppe unter Windows.
  
-Dieser Prozess für das Erzwingen eines Failovers ist spezifisch für SQL Server unter Linux.
+Dieser Prozess zum Erzwingen eines Failovers ist für SQL Server für Linux spezifisch.
 
-1. Stellen Sie sicher, dass die AG-Ressource nicht mehr vom Cluster verwaltet wird. 
+1. Vergewissern Sie sich, dass die Verfügbarkeitsgruppenressource nicht mehr vom Cluster verwaltet wird. 
 
-      - Legen Sie die Ressource auf dem Ziel-Clusterknoten in den nicht verwalteten Modus. Mit diesem Befehl signalisiert den Ressourcen-Agent, Verwaltung und Überwachung von Ressourcen beenden. Zum Beispiel: 
+      - Legen Sie für die Ressource auf dem Zielclusterknoten den nicht verwalteten Modus fest. Dieser Befehl signalisiert dem Ressourcen-Agent, dass er die Ressourcenüberwachung und -verwaltung abbrechen soll. Beispiel: 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - Wenn der Versuch, den ressourcenmodus auf den nicht verwalteten Modus festgelegt ein Fehler auftritt, löschen Sie die Ressource. Zum Beispiel:
+      - Wenn Sie den Modus der Ressource nicht auf „nicht verwaltet“ festlegen können, löschen Sie die Ressource. Beispiel:
 
       ```bash
       sudo pcs resource delete <resourceName>
       ```
 
       >[!NOTE]
-      >Wenn Sie eine Ressource löschen, löscht es auch alle zugehörigen Einschränkungen. 
+      >Wenn Sie eine Ressource löschen, werden auch alle zugeordneten Einschränkungen gelöscht. 
 
-1. Legen Sie auf der Instanz von SQL Server, die das sekundäre Replikat hostet, die Sitzung Kontextvariable `external_cluster`.
+1. Legen Sie auf der SQL Server-Instanz, von der das sekundäre Replikat gehostet wird, als Sitzungskontextvariable `external_cluster` fest.
 
    ```Transact-SQL
    EXEC sp_set_session_context @key = N'external_cluster', @value = N'yes';
    ```
 
-1. Ein Failover der Verfügbarkeitsgruppe mit Transact-SQL. Ersetzen Sie im folgenden Beispiel `<MyAg>` durch den Namen Ihrer Verfügbarkeitsgruppe. Verbinden mit der Instanz von SQL Server, das das sekundäre Zielreplikat hostet, und führen Sie den folgenden Befehl aus:
+1. Führen Sie mithilfe von Transact-SQL ein Failover der Verfügbarkeitsgruppe durch. Ersetzen Sie im folgenden Beispiel `<MyAg>` durch den Namen Ihrer Verfügbarkeitsgruppe. Stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Zielreplikat hostet, und führen Sie den folgenden Befehl aus:
 
    ```Transact-SQL
    ALTER AVAILABILITY GROUP <MyAg> FORCE_FAILOVER_ALLOW_DATA_LOSS;
    ```
 
-1.  Schalten Sie nach einem erzwungenen Failover der Verfügbarkeitsgruppe in einen fehlerfreien Zustand vor dem Neustart die ressourcenüberwachung für Cluster und die Verwaltung oder die AG-Ressource neu zu erstellen. Überprüfen Sie die [wichtige Aufgaben nach einem erzwungenen Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp).
+1.  Versetzen Sie die Verfügbarkeitsgruppe nach einem erzwungenen Failover in einen ordnungsgemäßen Zustand, bevor Sie entweder die Clusterressourcenüberwachung und -verwaltung neu starten oder die Verfügbarkeitsgruppenressource neu erstellen. Lesen Sie sich den Abschnitt [Wichtige Aufgaben nach einem erzwungenen Failover](../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#FollowUp) durch.
 
-1.  Starten Sie Cluster Ressourcen überwachen und verwalten:
+1.  Starten Sie die Clusterressourcenüberwachung und -verwaltung neu:
 
-   Um die Cluster Resource Überwachung und Verwaltung neu zu starten, führen Sie den folgenden Befehl aus:
+   Führen Sie den folgenden Befehl aus, um die Clusterressourcenüberwachung und -verwaltung neu zu starten:
 
    ```bash
    sudo pcs resource manage <resourceName>
    sudo pcs resource cleanup <resourceName>
    ```
 
-   Wenn Sie die Clusterressource gelöscht, neu erstellen. Um die Clusterressource neu zu erstellen, befolgen Sie die Anweisungen unter [erstellen verfügbarkeitsgruppenressource](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).
+   Falls Sie die Clusterressource gelöscht haben, erstellen Sie sie neu. Befolgen Sie die Anweisungen unter [Create availability group resource (Verfügbarkeitsgruppenressource erstellen)](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource), um die Clusterressource neu zu erstellen.
 
 >[!Important]
->Verwenden Sie nicht die vorherigen Schritten für Übungen zur notfallwiederherstellung, da das Risiko für Datenverluste. Stattdessen Ändern des asynchronen Replikats als synchron und die Anweisungen für die [normalen Manuelles Failover](#manualFailover).
+>Verwenden Sie die vorhergehenden Schritte nicht für Übungen zur Notfallwiederherstellung, da dabei das Risiko des Datenverlusts besteht. Ändern Sie stattdessen das asynchrone Replikat in ein synchrones Replikat, und befolgen Sie die Anweisungen für ein [normales manuelles Failover](#manualFailover).
 
-## <a name="database-level-monitoring-and-failover-trigger"></a>Ebene endpunktüberwachung und -Failover-Trigger auf Datenbankebene
+## <a name="database-level-monitoring-and-failover-trigger"></a>Überwachung auf Datenbankebene und Failovertrigger
 
-Für `CLUSTER_TYPE=EXTERNAL`, die Failover-Triggersemantik unterscheiden sich im Vergleich zu den WSFC. Wenn die Verfügbarkeitsgruppe auf einer Instanz von SQL Server in einem WSFC ist, wechselt von `ONLINE` Status für die Datenbank bewirkt, die Integrität der Verfügbarkeitsgruppe dass um einen Fehler zu melden. Als Antwort wird der Cluster-Manager eine Failover-Aktion ausgelöst. Unter Linux kann nicht die SQL Server-Instanz mit dem Cluster kommunizieren. Überwachung für die Integrität der erfolgt *indirekte*. Wenn Benutzer sich, für die Datenbank auf Überwachung und Failover entschieden (durch Festlegen der Option `DB_FAILOVER=ON` beim Erstellen der Verfügbarkeitsgruppe), der Cluster überprüft, ob der Datenbankstatus ist `ONLINE` jedes Mal, wenn sie eine Überwachung Aktion ausgeführt wird. Der Cluster fragt den Status im `sys.databases`. Für sämtliche Staaten unterscheiden `ONLINE`, es wird ein Failover ausgelöst, automatisch (wenn automatisches Failover-Bedingungen erfüllt sind). Die tatsächliche Zeit des Failovers hängt von der Häufigkeit der Überwachungsaktion sowie den Zustand der Datenbank in sys.databases aktualisiert wird.
+Für `CLUSTER_TYPE=EXTERNAL` unterscheidet sich die Semantik des Failovertriggers im Vergleich zu WSCF. Wenn sich die Verfügbarkeitsgruppe auf einer SQL Server-Instanz in einem WSFC befindet, führt der Übergang aus dem `ONLINE`-Status für die Datenbank zu einem Fehler bei der Integrität der Verfügbarkeitsgruppe. Als Reaktion löst der Cluster-Manager eine Failoveraktion aus. Unter Linux kann die SQL Server-Instanz nicht mit dem Cluster kommunizieren. Die Überwachung der Datenbankintegrität erfolgt *indirekt*. Wenn der Benutzer die Failoverüberwachung und Failover auf Datenbankebene aktiviert hat (durch Festlegen der Option `DB_FAILOVER=ON` beim Erstellen der Verfügbarkeitsgruppe), überprüft der Cluster bei jeder Ausführung einer Überwachungsaktion, ob der Status der Datenbank `ONLINE` lautet. Der Cluster fragt den Status unter `sys.databases` ab. Wenn der Status nicht `ONLINE` lautet, löst er automatisch ein Failover aus (falls die Bedingungen für das automatische Failover erfüllt sind). Die tatsächliche Dauer des Failovers hängt sowohl von der Frequenz der Überwachungsaktion als auch vom Datenbankstatus ab, der unter „sys.databases“ aktualisiert wird.
 
-Automatisches Failover erfordert mindestens ein synchrones Replikat.
+Für ein automatisches Failover wird mindestens ein synchrones Replikat benötigt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konfigurieren von Red Hat Enterprise Linux-Cluster für die Verfügbarkeitsgruppe für SQL Server-Clusterressourcen](sql-server-linux-availability-group-cluster-rhel.md)
+[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des Red Hat Enterprise Linux-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Konfigurieren von SUSE Linux Enterprise Server-Cluster für die Verfügbarkeitsgruppe für SQL Server-Clusterressourcen](sql-server-linux-availability-group-cluster-sles.md)
+[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des SUSE Linux Enterprise Server-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-sles.md)
 
-[Konfigurieren Sie Ubuntu-Cluster für die Verfügbarkeitsgruppe für SQL Server-Clusterressourcen](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des Ubuntu-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-ubuntu.md)

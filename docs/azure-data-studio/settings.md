@@ -1,7 +1,7 @@
 ---
-title: Benutzer und -Arbeitsbereichseinstellungen
+title: Benutzer- und Arbeitsbereichseinstellungen
 titleSuffix: Azure Data Studio
-description: Vorgehensweise zum Studio für Azure Data anpassen, indem Sie Benutzer und Arbeitsbereichseinstellungen ändern.
+description: Vorgehensweise beim Anpassen von Azure Data Studio durch Ändern von Benutzer -und Arbeitsbereichseinstellungen.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,56 +11,56 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959270"
 ---
-# <a name="modify-user-and-workspace-settings"></a>Benutzer und Arbeitsbereichseinstellungen ändern
+# <a name="modify-user-and-workspace-settings"></a>Ändern von Benutzer- und Arbeitsbereichseinstellungen
 
-Es ist leicht zu konfigurierender [!INCLUDE[name-sos](../includes/name-sos-short.md)] an Ihre vorstellungen über die Einstellungen an. Fast jeder Teil [!INCLUDE[name-sos](../includes/name-sos-short.md)]des Editor-Benutzeroberfläche und Verhalten verfügt über Optionen können Sie ändern.
+Es ist einfach, [!INCLUDE[name-sos](../includes/name-sos-short.md)] mittels Einstellungen nach Ihren Wünschen zu konfigurieren. Nahezu jeder Teil des Editors von [!INCLUDE[name-sos](../includes/name-sos-short.md)], Benutzeroberfläche und funktionales Verhalten bieten Optionen, die Sie ändern können.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet zwei unterschiedliche Gültigkeitsbereiche für die Einstellungen an:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] bietet zwei unterschiedliche Bereiche für Einstellungen:
 
-* **Benutzer** diese Einstellungen gelten global für eine beliebige Instanz von [!INCLUDE[name-sos](../includes/name-sos-short.md)] öffnen.
-* **Arbeitsbereich** arbeitsbereichseinstellungen sind Einstellungen, die spezifisch für einen Ordner auf Ihrem Computer, und sind nur verfügbar, wenn der Ordner in der Randleiste Explorer geöffnet ist. In diesem Bereich definierte Einstellungen überschreiben den Benutzerbereich an.
+* **Benutzer** Diese Einstellungen gelten global für jede Instanz von [!INCLUDE[name-sos](../includes/name-sos-short.md)], die Sie öffnen.
+* **Arbeitsbereich** Arbeitsbereichseinstellungen sind spezifische Einstellungen für einen Ordner auf Ihrem Computer und nur verfügbar, wenn der Ordner in der Explorer-Randleiste geöffnet ist. Für diesen Bereich definierte Einstellungen überschreiben den Benutzerbereich.
 
 ## <a name="creating-user-and-workspace-settings"></a>Erstellen von Benutzer- und Arbeitsbereichseinstellungen
 
-Der Menübefehl **Datei** > **Voreinstellungen** > **Einstellungen** (**Code**  >  **Voreinstellungen** > **Einstellungen** auf Mac) stellt den Einstiegspunkt zum Konfigurieren von Einstellungen für Benutzer und -Arbeitsbereich bereit. Sie werden eine Liste mit den Standardeinstellungen bereitgestellt. Kopieren Sie jede Einstellung, die Sie in den entsprechenden ändern möchten `settings.json` Datei. Die Registerkarten auf der rechten Seite können Sie schnell zwischen den Einstellungen für Benutzer und -Arbeitsbereich zu wechseln.
+Der Menübefehl **Datei** > **Einstellungen** > **Einstellungen**(**Code** > **Einstellungen** > **Einstellungen** auf Mac) stellt den Einstiegspunkt zum Konfigurieren von Benutzer- und Arbeitsbereichseinstellungen bereit. Ihnen wird eine Liste der Standardeinstellungen bereitgestellt. Kopieren Sie jede Einstellung, die Sie ändern möchten, in die entsprechende `settings.json`-Datei. Mit den Registerkarten auf der rechten Seite können Sie schnell zwischen den Einstellungsdateien für Benutzer- und Arbeitsbereich wechseln.
 
-Sie können auch die Einstellungen für Benutzer und -Arbeitsbereich aus öffnen die **Befehlspalette** (**STRG + UMSCHALT + P**) mit **Einstellungen: Öffnen Sie die Benutzereinstellungen** und **Einstellungen: Öffnen Sie die Einstellungen für Systemarbeitsbereich** oder verwenden Sie die Tastenkombination (**STRG +,** ).
+Sie können die Benutzer- und Arbeitsbereichseinstellungen auch über die **Befehlspalette** (**STRG+UMSCHALT+P**) mit **Einstellungen: Benutzereinstellungen öffnen** und **Einstellungen: Arbeitsbereichseinstellungen öffnen** aufrufen oder die Tastenkombination (**STRG+,** ) verwenden.
 
-Das folgende Beispiel deaktiviert die Zeilennummern im Editor und Codezeilen automatisch eingezogen werden konfiguriert.
+Im folgenden Beispiel werden die Zeilennummern im Editor deaktiviert und Codezeilen so konfiguriert, dass sie automatisch eingezogen werden.
 
 ![Beispieleinstellungen](media/settings/sample-settings.png)
 
-Änderungen an den Einstellungen werden neu geladen, indem [!INCLUDE[name-sos](../includes/name-sos-short.md)] nach geänderten `settings.json` -Datei wird gespeichert.
+Änderungen an den Einstellungen werden von [!INCLUDE[name-sos](../includes/name-sos-short.md)] neu geladen, nachdem die geänderte `settings.json`-Datei gespeichert wurde.
 
->**Hinweis**: Arbeitsbereichseinstellungen eignen sich für die Freigabe von projektspezifische Einstellungen innerhalb eines Teams.
+>**Hinweis:** Arbeitsbereichseinstellungen sind nützlich für die gemeinsame Nutzung von projektspezifischen Einstellungen in einem Team.
 
-## <a name="settings-file-locations"></a>Von Dateispeicherorten
+## <a name="settings-file-locations"></a>Speicherorte für Einstellungsdateien
 
-Je nach Plattform befindet sich die Datei mit den Benutzer hier:
+Abhängig von Ihrer Plattform befindet sich die Datei mit den Benutzereinstellungen hier:
 
 * **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-Die Arbeitsbereich-Einstellungsdatei befindet sich unter dem `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` -Ordner des Projekts.
+Die Datei mit den Arbeitsbereichseinstellungen befindet sich unter dem `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]`-Ordner in Ihrem Projekt.
 
-## <a name="hot-exit"></a>"Hot" Beenden
+## <a name="hot-exit"></a>Hot-Exit
 
-Azure Data Studio speichert nicht gespeicherte Änderungen auf Dateien, beim Beenden des standardmäßig. Dies ist identisch mit den "Hot" Exit-Funktion in Visual Studio Code.
+Azure Data Studio speichert nicht gespeicherte Änderungen an Dateien, wenn Sie die Anwendung standardmäßig beenden. Dies entspricht der Hot-Exit-Funktion in Visual Studio Code.
 
-Standardmäßig ist die "Hot" Beenden aus. Aktivieren von "Hot" Beenden durch Bearbeiten der `files.hotExit` festlegen. Weitere Informationen finden Sie unter ["Hot" Beenden (in der Dokumentation zu Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+Standardmäßig ist Hot-Exit deaktiviert. Aktivieren Sie Hot-Exit, indem Sie die `files.hotExit`-Einstellung bearbeiten. Weitere Informationen finden Sie unter [Hot-Exit (in der Visual Studio Code-Dokumentation)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 
-## <a name="tab-color"></a>Der Farbe
+## <a name="tab-color"></a>Registerkartenfarbe
 
-Zur Vereinfachung der Identifizierung von Verbindungen mit dem Sie arbeiten, haben die geöffneten Registerkarten in den Editor ihre Farbe festlegen, die die Farbe des der Servergruppe übereinstimmen, die die Verbindung zu gehört. Sind standardmäßig registerkartenfarben standardmäßig deaktiviert. Aktivieren der registerkartenfarben durch Bearbeiten der `sql.tabColorMode` festlegen.
+Um mühelos zu erkennen, mit welchen Verbindungen Sie arbeiten, können Sie die Farben der geöffneten Registerkarten im Editor so festlegen, dass sie mit der Farbe der Servergruppe übereinstimmen, zu denen die Verbindung gehört. Standardmäßig sind Registerkartenfarben deaktiviert. Aktivieren Sie Registerkartenfarben, indem Sie die `sql.tabColorMode`-Einstellung bearbeiten.
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
-Da [!INCLUDE[name-sos](../includes/name-sos-short.md)] erbt die Benutzer- und Arbeitsbereich-Einstellungen, die von Visual Studio Code, der detaillierte Informationen zu Einstellungen, die die Funktion in ist der [Einstellungen für Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) Artikel.
+Da [!INCLUDE[name-sos](../includes/name-sos-short.md)] die Funktionalität von Benutzer- und Arbeitsbereichseinstellungen von Visual Studio Code erbt, finden Sie ausführliche Informationen zu den Einstellungen im Artikel [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings) (Benutzer- und Arbeitsbereichseinstellungen).

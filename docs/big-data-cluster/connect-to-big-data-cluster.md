@@ -1,7 +1,7 @@
 ---
-title: Verbindung mit Master und HDFS
+title: Herstellen einer Verbindung mit der Masterinstanz und HDFS
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie für die master SQL Server-Instanz und das HDFS/Spark-Gateway für eine SQL Server-2019 big Data-Cluster (Vorschau) eine Verbindung herstellen.
+description: Erfahren Sie, wie Sie eine Verbindung mit der SQL Server-Masterinstanz und dem HDFS/Spark-Gateway für einen Big-Data-Cluster für SQL Server 2019 (Vorschauversion) herstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,64 +10,64 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958642"
 ---
-# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Verbinden Sie mit einer SQL Server-big Data-Cluster mit Azure Data Studio
+# <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server mit Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie aus Azure Data Studio eine Verbindung mit einer SQL Server-2019 big Data-Cluster (Vorschau) wird.
+In diesem Artikel wird beschrieben, wie Sie eine Verbindung mit einem Big-Data-Cluster für SQL Server 2019 (Vorschauversion) aus Azure Data Studio herstellen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Ein bereitgestellter [big Data-Cluster für SQL Server-2019](deployment-guidance.md).
-- [SQL Server-2019 big Data-Tools](deploy-big-data-tools.md):
+- Ein bereitgestellter [Big-Data-Cluster für SQL Server 2019](deployment-guidance.md).
+- [Big-Data-Tools für SQL Server 2019:](deploy-big-data-tools.md)
    - **Azure Data Studio**
-   - **SQL Server-2019-Erweiterung**
+   - **Erweiterung von SQL Server 2019**
    - **kubectl**
 
-## <a id="master"></a> Verbinden mit dem cluster
+## <a id="master"></a> Herstellen einer Verbindung mit dem Cluster
 
-Stellen Sie zum Verbinden mit einem big Data-Cluster mit Azure Data Studio eine neue Verbindung mit SQL Server-Instanz master im Cluster. Die folgenden Schritte beschreiben, Herstellen einer Verbindung mit der Verwendung von Azure Data Studio Masterinstanz.
+Stellen Sie eine neue Verbindung mit der SQL Server-Masterinstanz im Cluster her, um eine Verbindung mit einem Big-Data-Cluster mit Azure Data Studio herzustellen. In den folgenden Schritten wird beschrieben, wie mithilfe von Azure Data Studio eine Verbindung mit der Masterinstanz hergestellt wird.
 
-1. Finden Sie über die Befehlszeile die IP-Adresse Ihrer master-Instanz mit dem folgenden Befehl aus:
+1. Suchen Sie in der Befehlszeile die IP-Adresse Ihrer Masterinstanz mit dem folgenden Befehl:
 
    ```
    kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Der big Data-cluster standardmäßig mit **Mssql-Cluster** , wenn Sie den Namen in einer Konfigurationsdatei für die Bereitstellung angepasst. Weitere Informationen finden Sie unter [Konfigurieren von bereitstellungseinstellungen für big Data-Cluster](deployment-custom-configuration.md#clustername).
+   > Der Name des Big-Data-Clusters lautet standardmäßig **mssql-cluster**, sofern Sie den Namen nicht in einer Bereitstellungskonfigurationsdatei angepasst haben. Weitere Informationen finden Sie unter [Konfigurieren von Bereitstellungseinstellungen für Big-Data-Cluster](deployment-custom-configuration.md#clustername).
 
-1. Drücken Sie in Azure Data Studio **F1** > **neue Verbindung**.
+1. Drücken Sie **F1** > **Neue Verbindung** in Azure Data Studio.
 
-1. In **Verbindungstyp**Option **Microsoft SQL Server**.
+1. Wählen Sie unter **Verbindungstyp** die Option **Microsoft SQL Server** aus.
 
-1. Geben Sie die IP-Adresse in der SQL Server-Masterinstanz **Servernamen** (z. B.: **\<IP-Adresse\>, 31433**).
+1. Geben Sie für **Servername** die IP-Adresse der SQL Server-Masterinstanz ein (z. B.: **\<IP-Adresse\>,31433**).
 
-1. Geben Sie einen SQL-Anmeldenamen **Benutzernamen** und **Kennwort**.
+1. Geben Sie einen **Benutzernamen** und ein **Kennwort** für die SQL-Anmeldung ein.
 
    > [!TIP]
-   > Standardmäßig ist der Benutzername **SA** und, sofern nicht geändert, das Kennwort entspricht der **MSSQL_SA_PASSWORD** Umgebungsvariable, die während der Bereitstellung verwendet.
+   > Standardmäßig lautet der Benutzername **SA**, und das Kennwort (sofern nicht geändert) entspricht der Umgebungsvariable **MSSQL_SA_PASSWORD**, die während der Bereitstellung verwendet wird.
 
-1. Ändern Sie das Ziel **Datenbanknamen** eines relationalen Datenbanken.
+1. Ändern Sie den **Zieldatenbanknamen** in einen ihrer relationalen Datenbanken.
 
-   ![Verbinden Sie mit der master-Instanz](./media/connect-to-big-data-cluster/connect-to-cluster.png)
+   ![Herstellen einer Verbindung mit der Masterinstanz](./media/connect-to-big-data-cluster/connect-to-cluster.png)
 
-1. Drücken Sie **Connect**, und die **Serverdashboard** sollte angezeigt werden.
+1. Klicken Sie auf **Verbinden**, und das **Serverdashboard** sollte angezeigt werden.
 
-Mit der Version Februar 2019 von Azure Data Studio kann mit der SQL Server-Masterinstanz Sie auch für die Interaktion mit dem HDFS/Spark-Gateway. Dies bedeutet, dass Sie nicht benötigen, verwenden Sie eine separate Verbindung für HDFS und Spark, die im nächsten Abschnitt beschrieben.
+Mit der Azure Data Studio-Version vom Februar 2019 können Sie mit dem Herstellen einer Verbindung mit der SQL Server-Masterinstanz auch mit dem HDFS/Spark-Gateway interagieren. Dies bedeutet, dass Sie keine separate Verbindung für HDFS und Spark verwenden müssen, die im nächsten Abschnitt beschrieben wird.
 
-- Die Objekt-Explorer enthält nun ein neues **Datendienste** Knoten mit der rechten Maustaste-Unterstützung für big Data-Cluster Aufgaben wie erstellen neue Notebooks oder Spark-Aufträge übermitteln. 
-- Die **Datendienste** Knoten enthält auch eine **HDFS** Ordner für das HDFS-durchsuchen und Ausführen von Aktionen wie z. B. Create External Table, oder Analysieren im Notebook.
-- Die **Serverdashboard** für die Verbindung auch Registerkarten für enthält **SQL Server-big Data-Cluster** und **SQL Server-2019 (Vorschau)** beim Installieren der Erweiterung.
+- Der Objekt-Explorer enthält jetzt einen neuen **Data Services**-Knoten für Big-Data-Cluster-Aufgaben (z. B. das Erstellen neuer Notebooks oder das Übermitteln von Spark-Aufträgen), die mit einem Rechtsklick ausgeführt werden können. 
+- Der **Data Services**-Knoten enthält außerdem einen **HDFS**-Ordner zum Durchsuchen von HDFS und zum Ausführen von Aktionen wie das Erstellen einer externen Tabelle oder das Analysieren in Notebook.
+- Das **Serverdashboard** für die Verbindung enthält auch Registerkarten für **Big-Data-Cluster für SQL Server** und **SQL Server 2019 (Vorschauversion)** , wenn die Erweiterung installiert ist.
 
-   ![Azure Data Services Studio Datenknoten](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+   ![Data Services-Knoten für Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server-2019 big Data-Cluster, finden Sie unter [was SQL Server-2019 big Data-Cluster sind](big-data-cluster-overview.md).
+Weitere Informationen zu Big Data-Clustern für SQL Server 2019 finden Sie unter [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md).

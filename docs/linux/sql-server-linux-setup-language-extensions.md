@@ -1,6 +1,6 @@
 ---
-title: Installieren von SQL Server-Spracherweiterungen (Java) unter Linux
-description: Erfahren Sie, wie zum Installieren von SQL Server-Spracherweiterungen (Java) auf Red Hat, Ubuntu und SUSE.
+title: Installieren von SQL Server-Spracherweiterungen (Java) unter Linux
+description: Erfahren Sie, wie Sie SQL Server-Spracherweiterungen (Java) unter Red Hat, Ubuntu und SUSE installieren können.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -10,64 +10,66 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
-ms.translationtype: MT
+ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834698"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476024"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux
+# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux
 
-Es sind Spracherweiterungen ein Add-on für die Datenbank-Engine. Zwar Sie können [installieren Sie die Datenbank-Engine und Spracherweiterungen gleichzeitig](#install-all), es ist eine bewährte Methode zum Installieren und konfigurieren die SQL Server-Datenbank-Engine zuerst, damit Sie Probleme beheben können, bevor Sie weitere Komponenten hinzufügen. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Führen Sie die Schritte in diesem Artikel zum Installieren der Erweiterung der Java-Sprache aus.
+Spracherweiterungen stellen ein Add-On für die Datenbank-Engine dar. Obwohl Sie die [Datenbank-Engine und Spracherweiterungen gleichzeitig installieren](#install-all) können, empfiehlt es sich, zuerst die SQL Server-Datenbank-Engine zu installieren und zu konfigurieren, damit Sie eventuelle Probleme beheben können, bevor Sie weitere Komponenten hinzufügen. 
 
-Speicherort des Pakets für die Java-Erweiterungen ist in den SQL Server Linux-Quell-Repositorys. Wenn Sie bereits über Quellcode-Repositorys für die Datenbank-Engine-Installation konfiguriert, können Sie Ausführen der **Mssql-Server-Erweiterbarkeit – Java** Paket Befehle zur Installation über die gleichen Repository-Registrierung.
+Führen Sie die in diesem Artikel beschriebenen Schritte aus, um die Java-Spracherweiterung zu installieren.
 
-Spracherweiterungen wird auch auf Linux-Container unterstützt. Wir bieten keine vorab erstellten Container mit Erweiterungen der Sprache, aber erstellen Sie einen aus der SQL Server-Containern unter Verwendung von [eine Beispielvorlage auf GitHub verfügbar](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
+Erweiterungspakete für Java werden unter Linux in den Quellrepositorys für SQL Server gespeichert. Wenn Sie für die Installation der Datenbank-Engine bereits Quellrepositorys konfiguriert haben, können Sie die **mssql-server-extensibility-java**-Befehle für die Paketinstallation unter Verwendung derselben Repositorregistrierung ausführen.
 
-## <a name="uninstall-previous-ctp"></a>Deinstallieren der vorherigen CTP-Version
+Spracherweiterungen werden auch in Linux-Containern unterstützt. Wir stellen keine vorgefertigten Container mit Spracherweiterungen bereit. Sie können jedoch [mithilfe einer in GitHub verfügbaren Vorlage](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) einen Container aus den SQL Server-Containern erstellen.
 
-Die Liste der Pakete hat sich über die letzten CTP-Version Versionen, was zu weniger Pakete geändert werden. Es wird empfohlen, deinstallieren CTP 2.x So entfernen Sie alle früheren Pakete vor der Installation von CTP 3.1. Seite-an-Seite Installation mehrerer Versionen wird nicht unterstützt.
+## <a name="uninstall-previous-ctp"></a>Deinstallieren von früheren CTP-Versionen
 
-### <a name="1-confirm-package-installation"></a>1. Paketinstallation bestätigen
+Die Paketliste wurde in den letzten CTP-Versionen geändert, sodass sie nun weniger Pakete enthält. Es wird empfohlen, CTP 2.x zu deinstallieren, um alle früheren Pakete vor der Installation von CTP 3.2 zu entfernen. Die Installation mehrerer Versionen gleichzeitig wird nicht unterstützt.
 
-Sie möchten möglicherweise prüfen, ob das Vorhandensein einer früheren Installation als ersten Schritt. Die folgenden Dateien angeben eine vorhandene Installation: checkinstallextensibility.sh, Exthost, Launchpad.
+### <a name="1-confirm-package-installation"></a>1. Bestätigen der Paketinstallation
+
+Sie sollten in einem ersten Schritt überprüfen, ob eine frühere Version installiert ist. Die folgenden Dateien sind Zeichen dafür, dass bereits eine Installation durchgeführt wurde: „checkinstallextensibility.sh“, „exthost“ und „launchpad“.
 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Deinstallieren der vorherigen CTP-Version 2.x-Pakete
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Deinstallieren von CTP 2.x-Paketen
 
-Deinstallieren Sie auf der untersten Paketebene. Alle abhängigen für ein Paket auf niedrigerer Ebene upstreampaket wird automatisch deinstalliert.
+Führen Sie die Deinstallation auf der niedrigsten Paketebene durch. Alle Upstreampakete, die von einem Paket auf einer niedrigeren Ebene abhängig sind, werden automatisch deinstalliert.
 
-  + Entfernen Sie für die Java-Integration **Mssql-Server-Erweiterbarkeit – Java**
+  + Entfernen Sie für die Java-Integration **mssql-server-extensibility-java**.
 
-Befehle zum Löschen von Paketen, die in der folgenden Tabelle angezeigt werden.
+Die Befehle zum Entfernen von Paketen können Sie der folgenden Tabelle entnehmen.
 
-| Platform  | Paket entfernen Befehle | 
+| Platform  | Befehl(e) zum Entfernen eines Pakets | 
 |-----------|----------------------------|
 | RHEL  | `sudo yum remove msssql-server-extensibility-java` |
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-31-install"></a>3. CTP 3.1-Installation nicht fortsetzen
+### <a name="3-proceed-with-ctp-32-install"></a>3. Fortsetzen der Installation von CTP 3.2
 
-Auf der höchsten Paketebene, die mithilfe der Anweisungen in diesem Artikel für Ihr Betriebssystem installieren.
+Führen Sie die Installation gemäß den in diesem Artikel beschriebenen Anweisungen für Ihr Betriebssystem auf der höchsten Paketebene durch.
 
-Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchsten Paketebene* ist entweder **Beispiel 1 – vollständige Installation** für den vollständigen Satz von Paketen oder **Beispiel 2: minimale Installation**  für die geringste Anzahl von Paketen, die für die kleinstmögliche Installation erforderlich.
+Für sämtliche betriebssystemspezifischen Installationsanweisungen ist die *höchste Paketebene* entweder **Beispiel 1: vollständige Installation** für alle Pakete oder **Beispiel 2: minimale Installation** für die geringste Anzahl von Paketen, die für eine verwendbare Installation erforderlich sind.
 
-1. Führen Sie Befehle zur Installation mit dem Paket-Manager und die Syntax für Ihre Linux-Distribution: 
+1. Führen Sie Installationsbefehle mithilfe des Paket-Managers und der Syntax für Ihre Linux-Distribution aus: 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-+ Die Linux-Version muss [von SQL Server unterstützte](sql-server-linux-release-notes-2019.md#supported-platforms), aber nicht die Docker-Engine enthalten ist. Versionen werden unterstützt:
++ Die Linux-Version muss [von SQL Server unterstützt](sql-server-linux-release-notes-2019.md#supported-platforms) werden, muss aber nicht die Docker-Engine enthalten. Folgende Versionen werden unterstützt:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -75,32 +77,32 @@ Für jeden Satz betriebssystemspezifischen Anweisungen zur Installation *höchst
 
    + [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-+ Sie sollten ein Tool zum Ausführen von T-SQL-Befehlen haben. Ein Abfrage-Editor ist für die Konfiguration nach der Installation und Überprüfung erforderlich. Es wird empfohlen [Studio für Azure Data](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux), kostenloser Download, die unter Linux ausgeführt wird.
++ Sie sollten über ein Tool zum Ausführen von T-SQL-Befehlen verfügen. Sie benötigen einen Abfrage-Editor für die Konfiguration und Validierung nach der Installation. Es wird empfohlen, [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download?view=sql-server-2017#get-azure-data-studio-for-linux) zu verwenden. Dabei handelt es sich um ein kostenloses Tools, dass unter Linux verwendet werden kann.
 
-## <a name="package-list"></a>Liste der Pakete
+## <a name="package-list"></a>Paketliste
 
-Pakete sind auf einem Gerät Internetverbindung heruntergeladen und installiert, unabhängig von der Datenbank-Engine, die mit dem Paketinstaller für jedes Betriebssystem. Die folgende Tabelle beschreibt alle verfügbaren Pakete.
+Auf einem mit dem Internet verbundenen Gerät werden Pakete unabhängig von der Datenbank-Engine mithilfe des Paketinstallationsprogramms für das betreffende Betriebssystem heruntergeladen und installiert. Die folgende Tabelle enthält alle verfügbaren Pakete.
 
-| Paketname | Applies-to | Beschreibung |
+| Paketname | Gilt für | und Beschreibung |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Alle Sprachen | Das Erweiterungsframework zum Ausführen der Java-Code verwendet. |
-|mssql-server-extensibility-java | Java | Java-Erweiterung für das Laden einer Java-ausführungsumgebung. Es gibt keine zusätzliche Bibliotheken oder Pakete für Java. |
+|mssql-server-extensibility  | Alle Sprachen | Erweiterbarkeitsframework, das zum Ausführen von Java-Code verwendet wird. |
+|mssql-server-extensibility-java | Java | Java-Erweiterung zum Laden einer Java-Ausführungsumgebung. Es gibt keine zusätzlichen Bibliotheken oder Pakete für Java. |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>Installieren von Spracherweiterungen
 
-Sie können Spracherweiterungen und Java unter Linux installieren, durch die Installation von **Mssql-Server-Erweiterbarkeit – Java**. Bei der Installation **Mssql-Server-Erweiterbarkeit – Java**, das Paket automatisch JRE 8 installiert, wenn es nicht bereits installiert ist. Es wird eine Umgebungsvariable namens JRE_HOME auch die JVM-Pfad hinzufügen.
+Sie können Spracherweiterungen und Java unter Linux über das Paket **mssql-server-extensibility-java** installieren. Wenn Sie das Paket **mssql-server-extensibility-java** installieren, wird auch automatisch JRE 8 installiert, falls noch nicht geschehen. Außerdem wird der JVM-Pfad einer Umgebungsvariablen mit dem Namen „JRE_HOME“ hinzugefügt.
 
 > [!Note]
-> Bei einem Server mit Internetverbindung paketabhängigkeiten heruntergeladen und als Teil der Installation des Hauptpakets installiert. Wenn Ihr Server nicht mit dem Internet verbunden ist, finden Sie weitere Details in der [offlineeinrichtung](#offline-install).
+> Auf einem mit dem Internet verbundenen Server werden Paketabhängigkeiten im Rahmen der Hauptpaketinstallation heruntergeladen und installiert. Wenn Ihr Server nicht mit dem Internet verbunden ist, finden Sie weitere Informationen unter [Offlineeinrichtung](#offline-install).
 
-### <a name="redhat-install-command"></a>Red hat-Befehl "Install"
+### <a name="redhat-install-command"></a>Red Hat-Installationsbefehl
 
-Sie können die Spracherweiterungen für Java auf Red hat, die mit dem folgenden Befehl installieren.
+Mithilfe des folgenden Befehls können Sie Spracherweiterungen für Java unter Red Hat installieren.
 
 > [!Tip]
-> Führen Sie nach Möglichkeit `yum clean all` Pakete auf dem System vor der Installation zu aktualisieren.
+> Führen Sie nach Möglichkeit `yum clean all` aus, um vor der Installation Pakete auf dem System zu aktualisieren.
 
 ```bash
 # Install as root or sudo
@@ -109,12 +111,12 @@ sudo yum install mssql-server-extensibility-java
 
 <a name="ubuntu"></a>
 
-### <a name="ubuntu-install-command"></a>Befehl "Install" Ubuntu
+### <a name="ubuntu-install-command"></a>Ubuntu-Installationsbefehl
 
-Sie können die Spracherweiterungen für Java unter Ubuntu, die mit dem folgenden Befehl installieren.
+Mithilfe des folgenden Befehls können Sie Spracherweiterungen für Java unter Ubuntu installieren.
 
 > [!Tip]
-> Führen Sie nach Möglichkeit `apt-get update` Pakete auf dem System vor der Installation zu aktualisieren. Darüber hinaus möglicherweise einige Docker-Images von Ubuntu nicht die Option "apt-Transport-Https". Verwenden sie zur Installation `apt-get install apt-transport-https`.
+> Führen Sie nach Möglichkeit `apt-get update` aus, um vor der Installation Pakete auf dem System zu aktualisieren. Außerdem verfügen einige Docker-Images von Ubuntu möglicherweise nicht über die HTTPS-Transportoption „apt“. Verwenden Sie `apt-get install apt-transport-https`, um diese zu installieren.
 
 ```bash
 # Install as root or sudo
@@ -123,44 +125,44 @@ sudo apt-get install mssql-server-extensibility-java
 
 <a name="suse"></a>
 
-### <a name="suse-install-command"></a>SUSE-Befehl "Install"
+### <a name="suse-install-command"></a>SUSE-Installationsbefehl
 
-Sie können die Spracherweiterungen für Java unter SUSE mit dem folgenden Befehl installieren.
+Mithilfe des folgenden Befehls können Sie Spracherweiterungen für Java unter SUSE installieren.
 
 ```bash
 # Install as root or sudo
 sudo zypper install mssql-server-extensibility-java
 ```
 
-## <a name="post-install-config-required"></a>Nach der Installation Config (erforderlich)
+## <a name="post-install-config-required"></a>Konfigurieren nach der Installation (erforderlich)
 
-1. Erteilen von Berechtigungen für Linux
+1. Erteilen Sie Berechtigungen unter Linux.
 
-    Sie müssen diesen Schritt ausführen, wenn Sie externe Bibliotheken verwenden. Die empfohlene Vorgehensweise für arbeiten verwendet externe Bibliotheken zurückzugreifen. Hilfe zum Erstellen einer externen Bibliothek aus Ihrer JAR-Datei, finden Sie unter [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
+    Wenn Sie externe Bibliotheken verwenden, müssen Sie diesen Schritt nicht ausführen. Es wird empfohlen, externe Bibliotheken für die Arbeit zu verwenden. Informationen zum Erstellen einer externen Bibliothek aus der JAR-Datei finden Sie unter [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
 
-    Wenn Sie keine externe Bibliotheken verwenden, müssen Sie SQL Server mit Berechtigungen zum Ausführen der Java-Klassen in Ihrer JAR-Datei zur Verfügung.
+    Wenn Sie keine externen Bibliotheken verwenden, müssen Sie SQL Server Berechtigungen zum Ausführen der Java-Klassen in Ihrer JAR-Datei erteilen.
 
-    Zum Gewähren von Lese- und Ausführungsberechtigungen für eine JAR-Datei, führen Sie den folgenden **Chmod** Befehl die JAR-Datei. Es wird empfohlen, immer die Klassendateien in eine JAR-Datei einfügen, bei der Arbeit mit SQL Server. Hilfe, die eine JAR-Datei erstellen, finden Sie unter [Vorgehensweise: Erstellen Sie eine JAR-Datei](https://docs.microsoft.com/sql/language-extensions/how-to/create-a-java-jar-file-from-class-files).
+    Sie können einer JAR-Datei Lese-und Ausführungszugriff gewähren, indem Sie den folgenden **chmod**-Befehl auf diese ausführen. Wenn Sie mit SQL Server arbeiten, empfiehlt es sich, die Klassendateien immer in eine JAR-Datei zu speichern. Informationen zum Erstellen einer JAR-Datei finden Sie unter [Erstellen einer JAR-Datei](https://docs.microsoft.com/sql/language-extensions/how-to/create-a-java-jar-file-from-class-files).
 
     ```cmd
     chmod ug+rx <MyJarFile.jar>
     ```
 
-    Sie müssen auch Mssql_satellite gewähren die JAR-Datei zum Lesen/ausführen.
+    Außerdem müssen Sie „mssql_satellite“ Berechtigungen erteilen, um die JAR-Datei zu lesen oder auszuführen.
 
     ```cmd
     chown mssql_satellite:mssql_satellite <MyJarFile.jar>
     ```
 
-    Zusätzliche Konfiguration ist in erster Linie durch die [Mssql-Conf-Tool](sql-server-linux-configure-mssql-conf.md).
+    Die zusätzliche Konfiguration erfolgt in erster Linie über das Tool [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-2. Fügen Sie der Mssql-Benutzerkonto zum Ausführen von SQL Server-Dienst hinzu. Dies ist erforderlich, wenn Sie das Setup nicht zuvor ausgeführt haben.
+2. Fügen Sie das MSSQL-Benutzerkonto hinzu, um den SQL Server-Dienst auszuführen. Dies ist erforderlich, wenn Sie das Setup vorher noch nicht ausgeführt haben.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. Aktivieren Sie ausgehender Netzwerkzugriff. Ausgehender Netzwerkzugriff ist standardmäßig deaktiviert. Um ausgehende Anforderungen zu aktivieren, legen Sie die "Outboundnetworkaccess" boolesche Eigenschaft, die mit dem Mssql-Conf-Tool. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server unter Linux mit Mssql-Conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
+3. Aktivieren Sie den Zugriff auf ausgehenden Netzwerkdatenverkehr. Der Zugriff auf ausgehenden Netzwerkdatenverkehr ist standardmäßig deaktiviert. Sie können mithilfe des Tools mssql-conf die boolesche Eigenschaft „outboundnetworkaccess“ festlegen, um ausgehende Anforderungen zu aktivieren. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server für Linux mithilfe von mssql-conf](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access).
 
    ```bash
    # Run as SUDO or root
@@ -168,7 +170,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
    ```
 
-4. Neustart der SQL Server Launchpad-Dienst und der Datenbank-Engine-Instanz, um die aktualisierten Werte aus der INI-Datei zu lesen. Eine Neustart-Nachricht daran erinnert Sie jedes Mal, wenn eine Erweiterbarkeit Einstellung geändert wird.  
+4. Starten Sie anschließend das SQL Server-Launchpad und die Datenbank-Engine-Instanz neu, um die aktualisierten Werte aus der INI-Datei zu lesen. Wenn eine Erweiterbarkeitseinstellung geändert wird, werden Sie in einer Neustartmeldung darauf hingewiesen.  
 
    ```bash
    systemctl restart mssql-launchpadd
@@ -176,22 +178,22 @@ sudo zypper install mssql-server-extensibility-java
    systemctl restart mssql-server.service
    ```
 
-5. Aktivieren Sie die Ausführung des externen Skripts mithilfe von Azure Data Studio oder einem anderen Tool wie SQL Server Management Studio (nur Windows), die Transact-SQL ausgeführt wird.
+5. Aktivieren Sie die externe Skriptausführung mithilfe von Azure Data Studio oder einem anderen Tool wie SQL Server Management Studio (nur unter Windows), das Transact-SQL ausführt.
 
    ```bash
    EXEC sp_configure 'external scripts enabled', 1
    RECONFIGURE WITH OVERRIDE
    ```
 
-6. Neustart der `mssql-launchpadd` -Dienst erneut.
+6. Starten Sie den Dienst `mssql-launchpadd` neu.
 
-7. Für jede Datenbank in-spracherweiterungen verwenden möchten, müssen Sie die externe Sprache mit registrieren [Erstellen externer Sprachen](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+7. Für jede Datenbank, in der Sie Spracherweiterungen verwenden möchten, müssen Sie die externe Sprache über den Befehl [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) registrieren.
 
-## <a name="register-external-language"></a>Registrieren Sie externe Sprache
+## <a name="register-external-language"></a>Registrieren einer externen Sprache
 
-Für jede Datenbank in-spracherweiterungen verwenden möchten, müssen Sie die externe Sprache mit registrieren [Erstellen externer Sprachen](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Für jede Datenbank, in der Sie Spracherweiterungen verwenden möchten, müssen Sie die externe Sprache über den Befehl [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql) registrieren.
 
-Im folgenden Beispiel wird eine externe Sprache namens Java in eine Datenbank auf SQL Server unter Linux.
+Im folgenden Beispiel wird die externe Sprache mit dem Namen Java zu einer Datenbank unter SQL Server für Linux hinzugefügt.
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
@@ -199,35 +201,35 @@ FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
 GO
 ```
 
-Weitere Informationen finden Sie unter [Erstellen externer Sprachen](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+Weitere Informationen finden Sie unter [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
 ## <a name="verify-installation"></a>Überprüfen der Installation
 
-Integration der Java-Funktion enthält keine Bibliotheken, Sie können jedoch ausführen `grep -r JRE_HOME /etc` , bestätigen die JAVA_HOME-Umgebungsvariable erstellen.
+Die Integration von Java-Funktionen umfasst keine Bibliotheken, aber Sie können `grep -r JRE_HOME /etc` ausführen, um die Erstellung der Umgebungsvariablen JAVA_HOME zu bestätigen.
 
-Gespeicherte Prozedur, die Aufrufen von Java Überprüfen der Installation, zum Ausführen eines T-SQL-Skripts, das ein System ausgeführt wird. Für diese Aufgabe benötigen Sie ein Abfragetool. Azure Data Studio ist eine gute Wahl. Andere häufig verwendete Tools wie SQL Server Management Studio oder PowerShell sind nur für Windows. Wenn Sie einen Windows-Computer mit diesen Tools verfügen, verwenden Sie es für die Verbindung zu Ihrer Linux-Installation der Datenbank-Engine.
+Sie können die Installation überprüfen, indem Sie ein T-SQL-Skript ausführen, das eine gespeicherte Systemprozedur ausführt, die Java aufruft. Für diese Aufgabe benötigen Sie ein Abfragetool. Azure Data Studio ist eine gute Wahl. Andere häufig verwendete Tools wie SQL Server Management Studio oder PowerShell können nur unter Windows verwendet werden. Wenn Sie über einen Windows-Computer mit diesen Tools verfügen, verwenden Sie diesen, um eine Verbindung mit Ihrer Linux-Installation der Datenbank-Engine herzustellen.
 
 <a name="install-all"></a>
 
-## <a name="full-install-of-sql-server-and-language-extensions"></a>Vollständige Installation von SQL Server und Spracherweiterungen
+## <a name="full-install-of-sql-server-and-language-extensions"></a>Vollständige Installation von SQL Server und Spracherweiterungen
 
-Sie können installieren und konfigurieren die Datenbank-Engine und Spracherweiterungen in eine Prozedur durch Anfügen von Java-Pakete und die Parameter für einen Befehl, der die Datenbank-Engine installiert.
+Sie können die Datenbank-Engine und die Spracherweiterungen zusammen installieren und konfigurieren, indem Sie Java-Pakete und -Parameter an einen Befehl anfügen, der wiederum die Datenbank-Engine installiert.
 
-1. Geben Sie eine Befehlszeile, die den Datenbank-Engine sowie die Sprachfeatures für die Erweiterung enthält.
+1. Geben Sie eine Befehlszeile an, die die Datenbank-Engine sowie Spracherweiterungsfeatures enthält.
 
-  Sie können Java Installieren von Erweiterungen in einer Datenbank-Engine hinzufügen.
+  Sie können Java-Erweiterbarkeit zur Installation einer Datenbank-Engine hinzufügen.
 
   ```bash
   sudo yum install -y mssql-server mssql-server-extensibility-java 
   ```
 
-3. Zustimmen Sie Lizenzverträgen, und schließen Sie die Konfiguration nach der Installation. Verwenden der **Mssql-Conf** Tool für diese Aufgabe.
+3. Akzeptieren Sie die Lizenzbedingungen, und schließen Sie die Konfiguration im Anschluss an die Installation ab. Verwenden Sie das Tool **mssql-conf** für diese Aufgabe.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  Sie werden zum Akzeptieren des Lizenzvertrags für die Datenbank-Engine, wählen Sie eine Edition und Festlegen des Administratorkennworts aufgefordert werden. 
+  Sie werden dann aufgefordert, die Lizenzbedingungen für die Datenbank-Engine zu akzeptieren, eine Edition auszuwählen und das Administratorkennwort festzulegen. 
 
 4. Starten Sie den Dienst neu, wenn Sie dazu aufgefordert werden.
 
@@ -235,45 +237,45 @@ Sie können installieren und konfigurieren die Datenbank-Engine und Spracherweit
   sudo systemctl restart mssql-server.service
   ```
 
-## <a name="unattended-installation"></a>Für die unbeaufsichtigte installation
+## <a name="unattended-installation"></a>Unbeaufsichtigte Installation
 
-Mithilfe der [unbeaufsichtigte Installation](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended) für die Datenbank-Engine, fügen Sie die Pakete für die Mssql-Server-Erweiterbarkeit – Java.
+Fügen Sie die Pakete für „mssql-server-extensibility-java“ der Datenbank-Engine über eine [unbeaufsichtigte Installation](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended) hinzu.
 
 <a name="offline-install"></a>
 
 
 ## <a name="offline-installation"></a>Offlineinstallation
 
-Führen Sie die [Offline-Installation](sql-server-linux-setup.md#offline) Anweisungen für die Schritte zum Installieren der Pakete. Suchen Sie Ihre Download-Seite, und dann herunterladen Sie bestimmte Pakete, die mithilfe der folgenden Liste der Pakete.
+Befolgen Sie die Anweisungen zur [Offlineinstallation](sql-server-linux-setup.md#offline), um die Pakete zu installieren. Der nachfolgenden Liste können Sie entnehmen, auf welchen Websites Sie jeweils entsprechende Downloads finden. Laden Sie dann alle nötigen Pakete herunter.
 
 > [!Tip]
-> Einige der Paket-Tools bieten, dass Befehle, die Ihnen helfen können paketabhängigkeiten bestimmen. Verwenden Sie für Yum, `sudo yum deplist [package]`. Für Ubuntu verwenden `sudo apt-get install --reinstall --download-only [package name]` gefolgt von `dpkg -I [package name].deb`.
+> Einige der Paketverwaltungstools umfassen Befehle, mit denen Sie Paketabhängigkeiten ermitteln können. Verwenden Sie für yum `sudo yum deplist [package]` und für Ubuntu erst `sudo apt-get install --reinstall --download-only [package name]` und dann `dpkg -I [package name].deb`.
 
 #### <a name="download-site"></a>Downloadsite
 
-Sie können Pakete aus [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Alle Pakete für Java werden zusammen mit der Datenbank-Engine-Paket. 
+Sie können die Pakete unter [https://packages.microsoft.com/](https://packages.microsoft.com/) herunterladen. Alle Pakete für Java werden zusammen mit dem Datenbank-Engine-Paket bereitgestellt. 
 
-#### <a name="redhat7-paths"></a>RedHat/7-Pfade
-
-|||
-|--|----|
-| MSSQL/Erweiterbarkeit-Java-Pakete | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
-
-#### <a name="ubuntu1604-paths"></a>Ubuntu 16.04/Pfade
+#### <a name="redhat7-paths"></a>Red Hat/7-Pfade
 
 |||
 |--|----|
-| MSSQL/Erweiterbarkeit-Java-Pakete | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
 
-#### <a name="suse12-paths"></a>SUSE 12/Pfade
+#### <a name="ubuntu1604-paths"></a>Ubuntu/16.04-Pfade
 
 |||
 |--|----|
-| MSSQL/Erweiterbarkeit-Java-Pakete | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
 
-#### <a name="package-list"></a>Liste der Pakete
+#### <a name="suse12-paths"></a>SUSE/12-Pfade
 
-Je nachdem welche Erweiterungen möchten Sie verwenden, laden die Pakete, die für eine bestimmte Sprache erforderlich. Genauen Dateinamen Plattforminformationen in das Suffix einschließen sollten, aber die folgenden Dateinamen nahe genug, um zu bestimmen, welche Dateien erhalten Sie.
+|||
+|--|----|
+| mssql/extensibility-java-Pakete | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+
+#### <a name="package-list"></a>Paketliste
+
+Je nachdem, welche Erweiterungen Sie verwenden möchten, müssen Sie die für die jeweilige Sprache erforderlichen Pakete herunterladen. Genaue Dateinamen enthalten Plattforminformationen im Suffix, aber die unten aufgeführten Dateinamen sollten genau genug sein, damit Sie herausfinden können, welche Dateien Sie benötigen.
 
 ```
 # Core packages 
@@ -284,28 +286,28 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>Einschränkungen in der CTP-Versionen
+## <a name="limitations-in-ctp-releases"></a>Einschränkungen in CTP-Versionen
 
-Spracherweiterungen und Java-Erweiterbarkeit unter Linux ist immer noch in der aktiven Entwicklung. Die folgenden Features sind in der Vorschauversion noch nicht aktiviert.
+Die Spracherweiterungen und die Java-Erweiterbarkeit unter Linux befinden sich noch in der aktiven Entwicklungsphase. Die folgenden Features sind in der Vorschauversion noch nicht aktiviert.
 
-+ Implizite Authentifizierung ist zu diesem Zeitpunkt an, was bedeutet, dass Sie sich an den Server aus Java in Bearbeitung, den Zugriff auf Daten oder andere Ressourcen verbinden können derzeit nicht unter Linux verfügbar.
++ Die implizite Authentifizierung ist zurzeit nicht unter Linux verfügbar. Das bedeutet, dass Sie über Java-Code, der zu diesem Zeitpunkt ausgeführt wird, keine erneute Verbindung mit dem Server herstellen können, um auf Daten oder andere Ressourcen zuzugreifen.
 
 
-### <a name="resource-governance"></a>Ressourcenkontrolle
+### <a name="resource-governance"></a>Ressourcengovernance
 
-Es gibt Parität zwischen Linux und Windows für [Ressourcenkontrolle](../t-sql/statements/create-external-resource-pool-transact-sql.md) für externe Ressourcenpools, aber die Statistiken für [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) derzeit andere Einheiten unter Linux. Einheiten werden in einer zukünftigen CTP-Version ausgerichtet.
+In Bezug auf die [Ressourcengovernance](../t-sql/statements/create-external-resource-pool-transact-sql.md) besteht zwar zwischen Linux und Windows Parität für externe Ressourcenpools, aber die Statistiken für [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) haben derzeit unterschiedliche Einheiten unter Linux. Diese Einheiten werden in einer kommenden CTP-Version angepasst.
  
-| Spaltenname   | Beschreibung | Der Wert unter Linux | 
+| Spaltenname   | und Beschreibung | Wert unter Linux | 
 |---------------|--------------|---------------|
-|peak_memory_kb | Die Höchstmenge an Arbeitsspeicher, die für den Ressourcenpool verwendet werden soll. | Unter Linux ist diese Statistik des Arbeitsspeichersubsystems CGroups, stammen, in denen der Wert memory.max_usage_in_bytes |
-|write_io_count | Die Gesamtanzahl Schreibvorgänge seit dem Zurücksetzen der ressourcenkontrollenstatistiken wurden ausgegeben. | Unter Linux ist diese Statistik über das Subsystem für CGroups Blkio, stammt, in denen der Wert in der Zeile schreiben blkio.throttle.io_serviced | 
-|read_io_count | Die Gesamtanzahl Lesevorgänge seit dem Zurücksetzen der ressourcenkontrollenstatistiken wurden ausgegeben. | Unter Linux ist diese Statistik über das Subsystem für CGroups Blkio, stammt, in dem Wert der Zeile lesen blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | Die kumulierte CPU-Benutzer Kernelzeit in Millisekunden seit dem Zurücksetzen der ressourcenkontrollenstatistiken wurden. | Unter Linux ist diese Statistik über das Subsystem für CGroups Cpuacct, stammt, in denen der Wert für die Benutzerzeile cpuacct.stat |  
-|total_cpu_user_ms | Die kumulierte CPU-Benutzerzeit in Millisekunden seit dem Zurücksetzen der ressourcenkontrollenstatistiken wurden.| Unter Linux ist diese Statistik über das Subsystem für CGroups Cpuacct, stammt, in denen der Wert auf den Wert der System-Zeile cpuacct.stat | 
-|active_processes_count | Die Anzahl von externen Prozessen, die zum Zeitpunkt der Anforderung ausgeführt wird.| Unter Linux ist diese Statistik über das Subsystem für GGroups Pids, stammt, in denen der Wert pids.current | 
+|peak_memory_kb | Der maximale Speicher, der für den Ressourcenpool verwendet wird. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem entnommen. Dabei lautet der Wert „memory.max_usage_in_bytes“. |
+|write_io_count | Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Resource Governor-Statistiken ausgegeben wurden. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem „blkio“ entnommen. Dabei lautet der Wert der Zeile für die Schreibvorgänge „blkio.throttle.io_serviced“. | 
+|read_io_count | Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Resource Governor-Statistiken ausgegeben wurden. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem „blkio“ entnommen. Dabei lautet der Wert der Zeile für die Lesevorgänge „blkio.throttle.io_serviced“. | 
+|total_cpu_kernel_ms | Die kumulierte CPU-Benutzerkernelzeit in Millisekunden, seitdem die Resource Governor-Statistiken zurückgesetzt wurden. | Unter Linux wird diese Statistik dem CGroups-Speichersubsystem „cpuacct“ entnommen. Dabei lautet der Wert der Zeile für den Benutzer „cpuacct.stat“. |  
+|total_cpu_user_ms | Die kumulierte CPU-Benutzerzeit in Millisekunden, seitdem die Resource Governor-Statistiken zurückgesetzt wurden.| Unter Linux wird diese Statistik dem CGroups-Speichersubsystem „cpuacct“ entnommen. Dabei lautet der Systemzeilenwert „cpuacct.stat“. | 
+|active_processes_count | Die Anzahl externer Prozesse, die zum Zeitpunkt der Anforderung ausgeführt werden.| Unter Linux wird diese Statistik dem CGroups-Speichersubsystem „pids“ entnommen. Dabei lautet der Wert „pids.current“. | 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Java-Entwickler können mit einigen einfachen Beispielen beginnen, und die Grundlagen der Funktionsweise von Java mit SQL Server. Der nächste Schritt ist finden Sie in den folgenden Links:
+Java-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von Java unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
-+ [Tutorial: Reguläre Ausdrücke mit Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Tutorial: Reguläre Ausdrücke in Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

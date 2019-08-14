@@ -1,6 +1,6 @@
 ---
-title: Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
-description: In diesem Tutorial zeigt, wie Sie eine SQL Server-hochverfügbarkeitslösung mit Kubernetes in Azure Kubernetes Service bereitstellen.
+title: Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes Service
+description: In diesem Tutorial wird gezeigt, wie Sie eine SQL Server-Hochverfügbarkeitslösung mit Kubernetes in Azure Kubernetes Service bereitstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,78 +10,78 @@ ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
 ms.openlocfilehash: 2ae299553c700de7f22976917fa8556f93dbe61b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032052"
 ---
-# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes-Dienste (AKS)
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Bereitstellen eines SQL Server-Containers in Kubernetes mit Azure Kubernetes Service
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Erfahren Sie, wie eine SQL Server-Instanz unter Kubernetes in Azure Kubernetes Service (AKS) mit permanenten Speicher für hohe Verfügbarkeit (HA) konfigurieren zu können. Die Lösung bietet resilienz. Wenn SQL Server-Instanz ein Fehler auftritt, erstellt neu Kubernetes automatisch in einem neuen Pod. Kubernetes bietet auch besseren Schutz vor einem Ausfall eines Knotens.
+Erfahren Sie, wie Sie eine SQL Server-Instanz für Kubernetes in AKS (Azure Kubernetes Service) mit persistenten Speicher für Hochverfügbarkeit konfigurieren. Die Lösung stellt Resilienz bereit. Wenn die SQL Server-Instanz fehlschlägt, erstellt Kubernetes sie automatisch in einem neuen Pod neu. Kubernetes bietet auch Resilienz für Knotenausfälle.
 
-Dieses Tutorial veranschaulicht, wie Sie eine hoch verfügbare SQL Server-Instanz in einem Container in AKS zu konfigurieren. Sie können auch erstellen [Always On-Verfügbarkeitsgruppen für SQL Server-Containern](sql-server-ag-kubernetes.md). Um die zwei verschiedenen Kubernetes-Lösungen vergleichen zu können, finden Sie unter [hochverfügbarkeit für SQL Server-Containern](sql-server-linux-container-ha-overview.md).
+In diesem Tutorial wird veranschaulicht, wie eine hochverfügbare SQL Server-Instanz in einem Container in AKS konfiguriert wird. Sie können auch [Always On-Verfügbarkeitsgruppen für SQL Server-Container](sql-server-ag-kubernetes.md) erstellen. Einen Vergleich der zwei verschiedenen Kubernetes-Lösungen finden Sie unter [High availability for SQL Server containers (Hochverfügbarkeit für SQL Server-Container)](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
-> * Erstellen Sie ein SA-Kennwort
-> * Erstellen von Speicher
+> * Erstellen eines Systemadministratorkennworts
+> * Erstellen des Speichers
 > * Erstellen der Bereitstellung
-> * Herstellen einer Verbindung mit SQL Server Management Studio (SSMS)
-> * Überprüfen Sie, ob Fehler und Wiederherstellung
+> * Herstellen einer Verbindung mit SSMS (SQL Server Management Studio)
+> * Überprüfen von Fehlern und der Wiederherstellung
 
-## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>HA-Lösung unter Kubernetes in Azure Kubernetes Service ausgeführt wird
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Hochverfügbarkeitslösung in Kubernetes in Azure Kubernetes Service
 
-Kubernetes 1.6 und höher bietet Unterstützung für [Speicherklassen](https://kubernetes.io/docs/concepts/storage/storage-classes/), [persistentes Volume Ansprüche](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), und die [Volumetyp für Azure-Datenträger](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Sie können erstellen und verwalten Ihre SQL Server-Instanzen nativ in Kubernetes. In diesem Artikel gezeigt, wie zum Erstellen einer [Bereitstellung](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) , ähnlich einer freigegebenen Datenträger für die Failoverclusterinstanz Konfiguration mit hoher Verfügbarkeit zu erreichen. In dieser Konfiguration eingepackt Kubernetes clusterorchestrator. Wenn eine SQL Server-Instanz in einem Container ein Fehler auftritt, startet der Orchestrator eine andere Instanz des Containers, der an den gleichen persistenten Speicher angefügt wird.
+Kubernetes 1.6 und höher unterstützt [Speicherklassen](https://kubernetes.io/docs/concepts/storage/storage-classes/), [PersistentVolumeClaims](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims) und den [Volumetyp Azure-Datenträger](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Sie können Ihre SQL Server-Instanzen nativ in Kubernetes erstellen und verwalten. Das in diesem Artikel enthaltene Beispiel veranschaulicht die Erstellung einer [Bereitstellung](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/), um eine Hochverfügbarkeitskonfiguration ähnlich einer Failoverclusterinstanz auf einem freigegebenen Datenträger zu erstellen. In dieser Konfiguration spielt Kubernetes die Rolle des Clusterorchestrators. Wenn eine SQL Server-Instanz in einem Container fehlschlägt, startet der Orchestrator eine neues Instanz des Containers, der denselben persistenten Speicher anfügt.
 
-![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+![Diagramm eines Kubernetes-SQL Server-Clusters](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-Im obigen Diagramm `mssql-server` ist ein Container in einem [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Kubernetes orchestriert die Ressourcen im Cluster. Ein [Replikatgruppe](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) wird sichergestellt, dass der Pod automatisch nach einem Knotenausfall wiederhergestellt wird. Anwendungen eine Verbindung mit dem Dienst herstellen. In diesem Fall stellt der Dienst einen Load Balancer, der eine IP-Adresse hostet, die gleich nach einem Ausfall der bleibt die `mssql-server`.
+Im obigen Diagramm ist `mssql-server` ein Container in einem [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Kubernetes orchestriert die Ressourcen im Cluster. Eine [Replikatgruppe](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) stellt sicher, dass der Pod nach dem Ausfall eines Knotens automatisch wiederhergestellt wird. Anwendungen stellen eine Verbindung zum Dienst her. In diesem Fall stellt der Dienst einen Lastenausgleich dar, der eine IP-Adresse hostet, die sich nach dem Ausfall von `mssql-server` nicht ändert.
 
-Im folgenden Diagramm stellen die `mssql-server` Container ein Fehler aufgetreten. Als Orchestrator garantiert Kubernetes die richtige Anzahl von fehlerfreien Instanzen im Replikat festgelegt, und startet einen neuen Container entsprechend der Konfiguration. Der Orchestrator startet einen neuen Pod auf denselben Knoten und `mssql-server` Verbindung mit dem gleichen permanenten Speicher. Der Dienst eine Verbindung herstellt, auf das neu erstellte `mssql-server`.
+Im folgenden Diagramm ist der `mssql-server`-Container fehlgeschlagen. Als Orchestrator garantiert Kubernetes die richtige Anzahl fehlerfreier Instanzen in der Replikatgruppe und startet gemäß der Konfiguration einen neuen Container. Der Orchestrator startet einen neuen Pod auf demselben Knoten, und `mssql-server` stellt erneut eine Verbindung mit demselben persistenten Speicher her. Der Dienst stellt eine Verbindung zur neu erstellen `mssql-server`-Instanz her.
 
-![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagramm eines Kubernetes-SQL Server-Clusters](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
-Im folgenden Diagramm das hosting der Knoten die `mssql-server` Container ein Fehler aufgetreten. Der Orchestrator startet den neuen Pod auf einem anderen Knoten, und `mssql-server` Verbindung mit dem gleichen permanenten Speicher. Der Dienst eine Verbindung herstellt, auf das neu erstellte `mssql-server`.
+Im folgenden Diagramm ist der Knoten fehlgeschlagen, der den `mssql-server`-Container hostet. Der Orchestrator startet den neuen Pod auf einem anderen Knoten, und `mssql-server` stellt erneut eine Verbindung mit demselben persistenten Speicher her. Der Dienst stellt eine Verbindung zur neu erstellen `mssql-server`-Instanz her.
 
-![Diagramm der SQL Server von Kubernetes-cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagramm eines Kubernetes-SQL Server-Clusters](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-* **Kubernetes-cluster**
-   - Dieses Lernprogramm setzt voraus, einen Kubernetes-Cluster. Verwenden Sie die Schritte ["kubectl"](https://kubernetes.io/docs/user-guide/kubectl/) zum Verwalten des Clusters. 
+* **Kubernetes-Cluster**
+   - Für das Tutorial ist ein Kubernetes-Cluster erforderlich. In den Schritten wird [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) zum Verwalten des Clusters verwendet. 
 
-   - Finden Sie unter [Bereitstellen eines Azure Container Service (AKS)-Clusters](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) zu erstellen und Verbinden mit einem Einzelknoten-Kubernetes-Cluster in AKS mit `kubectl`. 
+   - Unter [Bereitstellen eines Azure Kubernetes Service-Clusters (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) erfahren Sie, wie Sie einen Kubernetes-Cluster mit einem einzelnen Knoten mithilfe von `kubectl` in AKS erstellen und eine Verbindung mit diesem herstellen. 
 
    >[!NOTE]
-   >Zum Schutz gegen den Ausfall eines Knotens erfordert ein Kubernetes-Cluster mehr als einem Knoten.
+   >Ein Kubernetes-Cluster benötigt mehrere Knoten zum Schutz vor Knotenausfällen.
 
-* **Azure-Befehlszeilenschnittstelle 2.0.23**
-   - Die Anweisungen in diesem Tutorial wurden für Azure-Befehlszeilenschnittstelle 2.0.23 überprüft.
+* **Azure CLI 2.0.23**
+   - Die Anweisungen in diesem Tutorial wurden für die Azure CLI 2.0.23 überprüft.
 
-## <a name="create-an-sa-password"></a>Erstellen Sie ein SA-Kennwort
+## <a name="create-an-sa-password"></a>Erstellen eines Systemadministratorkennworts
 
-Erstellen Sie ein SA-Kennwort im Kubernetes-Cluster. Verwalten von Kubernetes können vertrauliche Informationen, wie Kennwörter als [Geheimnisse](https://kubernetes.io/docs/concepts/configuration/secret/).
+Erstellen Sie ein Systemadministratorkennwort im Kubernetes-Cluster. Kubernetes kann vertrauliche Konfigurationsinformationen wie Kennwörter als [Geheimnisse](https://kubernetes.io/docs/concepts/configuration/secret/) verwalten.
 
-Der folgende Befehl erstellt ein Kennwort für das SA-Konto:
+Mit dem folgenden Befehl wird ein Kennwort für das Systemadministratorkonto erstellt:
 
    ```azurecli
    kubectl create secret generic mssql --from-literal=SA_PASSWORD="MyC0m9l&xP@ssw0rd"
    ```  
 
-   Ersetzen Sie dies `MyC0m9l&xP@ssw0rd` mit einem komplexen Kennwort.
+   Ersetzen Sie `MyC0m9l&xP@ssw0rd` durch ein komplexes Kennwort.
 
-   Um ein Geheimnis in Kubernetes mit dem Namen `mssql` , die den Wert enthält `MyC0m9l&xP@ssw0rd` für die `SA_PASSWORD`, führen Sie den Befehl.
+   Führen Sie den Befehl aus, um ein Geheimnis in Kubernetes namens `mssql` zu erstellen, das den Wert `MyC0m9l&xP@ssw0rd` für `SA_PASSWORD` enthält.
 
 
-## <a name="create-storage"></a>Erstellen von Speicher
+## <a name="create-storage"></a>Erstellen des Speichers
 
-Konfigurieren einer [persistentes Volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) und [permanenter volumeanspruch](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) im Kubernetes-Cluster. Führen Sie die folgenden Schritte aus: 
+Konfigurieren Sie ein [persistentes Volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) und einen [Anspruch auf ein persistentes Volume](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) im Kubernetes-Cluster. Führen Sie die folgenden Schritte aus: 
 
-1. Erstellen Sie ein Manifest Definition die Speicherklasse und des persistenten Volumes Anspruch.  Das Manifest gibt an, die Storage-Bereitstellung, Parameter und [freigeben Richtlinie](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). Kubernetes-Cluster verwendet dieses Manifest, um dem permanenten Speicher zu erstellen. 
+1. Erstellen Sie ein Manifest, um die Speicherklasse und den Anspruch auf ein persistentes Volume zu definieren.  Mit dem Manifest werden der Speicheranbieter, die Parameter und die [reclaim policy](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming) (Rückforderungsrichtlinie) festgelegt. Der Kubernetes-Cluster verwendet dieses Manifest, um den persistenten Speicher zu erstellen. 
 
-   Der folgende Yaml-Beispiel definiert eine Speicherklasse und permanenter volumeanspruch. Die Storage-Klasse Provisioner `azure-disk`, da dieser Kubernetes-Cluster in Azure bereitgestellt wird. Der speicherkontotyp wird `Standard_LRS`. Den Namen der permanenter volumeanspruch `mssql-data`. Persistentes Volume Anspruch Metadaten enthält eine Anmerkung verbinden, die es wieder zurück in die Storage-Klasse. 
+   Im folgenden YAML-Beispiel werden eine Speicherklasse und ein Anspruch auf persistente Volumes definiert. Der Speicherklassenanbieter lautet `azure-disk`, weil sich dieser Kubernetes-Cluster in Azure befindet. Der Speicherkontotyp lautet `Standard_LRS`. Der Anspruch auf persistente Volumes heißt `mssql-data`. Die Metadaten des Anspruchs auf persistente Volumes enthalten eine Anmerkung, durch die sie auf die Speicherklasse zurückgeführt werden können. 
 
    ```yaml
    kind: StorageClass
@@ -107,57 +107,57 @@ Konfigurieren einer [persistentes Volume](https://kubernetes.io/docs/concepts/st
          storage: 8Gi
    ```
 
-   Speichern Sie die Datei (z. B. **pvc.yaml**).
+   Speichern Sie die Datei (z. B. **pvc.yaml**).
 
-1. Erstellen Sie die permanenter volumeanspruch in Kubernetes.
+1. Erstellen Sie einen Anspruch auf ein permanentes Volume in Kubernetes.
 
    ```azurecli
    kubectl apply -f <Path to pvc.yaml file>
    ```
 
-   `<Path to pvc.yaml file>` ist der Speicherort, in dem Sie die Datei gespeichert.
+   `<Path to pvc.yaml file>` entspricht dem Speicherort, an dem Sie die Datei gespeichert haben.
 
-   Des persistenten Volumes wird automatisch als Azure Storage-Konto erstellt und an die permanenter volumeanspruch gebunden. 
+   Das persistente Volume wird automatisch als Azure-Speicherkonto erstellt und an den Anspruch auf ein persistentes Volume gebunden. 
 
-    ![Screenshot des Anspruchs-Befehls persistentes volume](media/tutorial-sql-server-containers-kubernetes/02_pvc_cmd.png)
+    ![Screenshot: Befehl für Anspruch auf persistentes Volume](media/tutorial-sql-server-containers-kubernetes/02_pvc_cmd.png)
 
-1. Vergewissern Sie sich die permanenter volumeanspruch.
+1. Überprüfen Sie den Anspruch auf persistente Volumes.
 
    ```azurecli
    kubectl describe pvc <PersistentVolumeClaim>
    ```
 
-   `<PersistentVolumeClaim>` ist der Name des Anspruchs persistentes Volume.
+   `<PersistentVolumeClaim>` ist der Name des Anspruchs auf persistente Volumes.
 
-   In den vorherigen Schritt, heißt die permanenter volumeanspruch `mssql-data`. Um die Metadaten über die permanenter volumeanspruch anzuzeigen, führen Sie den folgenden Befehl aus:
+   Im vorherigen Schritt wurde der Anspruch auf persistente Volumes `mssql-data` genannt. Führen Sie den folgenden Befehl aus, um die Metadaten über den Anspruch auf permanente Volumes anzuzeigen:
 
    ```azurecli
    kubectl describe pvc mssql-data
    ```
 
-   Die zurückgegebene Metadaten enthält einen Wert mit dem `Volume`. Dieser Wert entspricht dem Namen des BLOBs.
+   Die zurückgegebenen Metadaten enthalten einen Wert namens `Volume`. Dieser Wert wird dem Namen des Blobs zugeordnet.
 
-   ![Screenshot der zurückgegebenen Metadaten, wie z.B. die Menge](media/tutorial-sql-server-containers-kubernetes/describe-volume.png)
+   ![Screenshot: zurückgegebene Metadaten, einschließlich Volume](media/tutorial-sql-server-containers-kubernetes/describe-volume.png)
 
-   Teil des Namens des BLOBs in der folgenden Abbildung aus dem Azure-Portal mit dem Wert für Volume übereinstimmt: 
+   Der Wert für Volume entspricht einem Teil des Namens des Blobs in der folgenden Abbildung aus dem Azure-Portal: 
 
-   ![Screenshot des Azure-Portal-Blob-name](media/tutorial-sql-server-containers-kubernetes/describe-volume-portal.png)
+   ![Screenshot: Name des Blobs im Azure-Portal](media/tutorial-sql-server-containers-kubernetes/describe-volume-portal.png)
 
-1. Vergewissern Sie sich das persistente Volume.
+1. Überprüfen Sie das persistente Volume.
 
    ```azurecli
    kubectl describe pv
    ```
 
-   `kubectl` Gibt Metadaten für das persistente Volume, das automatisch erstellt und an die permanenter volumeanspruch gebunden wurde. 
+   `kubectl` gibt Metadaten zum persistenten Volume zurück, die automatisch generiert und an den Anspruch für das persistente Volume gebunden wurden. 
 
 ## <a name="create-the-deployment"></a>Erstellen der Bereitstellung
 
-In diesem Beispiel wird der Container, der SQL Server-Instanz als ein Objekt der Kubernetes-Bereitstellung beschrieben. Die Bereitstellung erstellt eine Replikatgruppe. Die Replikatgruppe erstellt den Pod. 
+In diesem Beispiel wird der Container, der die SQL Server-Instanz hostet, als Kubernetes-Bereitstellungsobjekt bezeichnet. Die Bereitstellung erstellt eine Replikatgruppe. Die Replikatgruppe erstellt einen Pod. 
 
-In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem SQL Server beschreiben [Mssql-Server-Linux](https://hub.docker.com/_/microsoft-mssql-server) Docker-Image. Das manifest verweisen die `mssql-server` permanenter volumeanspruch, und die `mssql` Geheimnis, das Sie bereits auf den Kubernetes-Cluster angewendet. Das Manifest beschreibt auch eine [Service](https://kubernetes.io/docs/concepts/services-networking/service/). Dieser Dienst ist ein Lastenausgleich. Der Load Balancer wird sichergestellt, dass die IP-Adresse erhalten bleibt, nachdem SQL Server-Instanz wiederhergestellt wird. 
+In diesem Schritt erstellen Sie ein Manifest, um den Container zu beschreiben, der auf dem Docker-Image der SQL Server-Instanz [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) basiert. Das Manifest referenziert den `mssql-server`-Anspruch auf das persistente Volume und das `mssql`-Geheimnis, das Sie bereits auf den Kubernetes-Cluster angewendet haben. Das Manifest beschreibt außerdem einen [Dienst](https://kubernetes.io/docs/concepts/services-networking/service/). Bei diesem Dienst handelt es sich um einen Lastenausgleich. Der Lastenausgleich garantiert, dass die IP-Adresse beibehalten wird, nachdem die SQL Server-Instanz wiederhergestellt wurde. 
 
-1. Erstellen Sie ein Manifest (eine YAML-Datei), um die Bereitstellung zu beschreiben. Im folgende Beispiel wird eine Bereitstellung, einschließlich eines Containers, der basierend auf dem SQL Server-Container-Image beschrieben.
+1. Erstellen Sie ein Manifest (eine YAML-Datei), um die Bereitstellung zu beschreiben. Im folgenden Beispiel wird eine Bereitstellung beschrieben, die einen Container enthält, der auf dem SQL Server-Containerimage basiert.
 
    ```yaml
    apiVersion: apps/v1beta1
@@ -209,16 +209,16 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem
      type: LoadBalancer
    ```
 
-   Kopieren Sie den vorherigen Code in eine neue Datei mit dem Namen `sqldeployment.yaml`. Aktualisieren Sie die folgenden Werte ein: 
+   Kopieren Sie den obigen Code in eine neue Datei namens `sqldeployment.yaml`. Ändern Sie die folgenden Werte: 
 
-   * MSSQL_PID `value: "Developer"`: Legt fest, den Container zum Ausführen von SQL Server Developer Edition. Developer-Edition ist nicht für die Produktion lizenziert. Wenn die Bereitstellung für die Produktion ist, legen Sie die passende Edition (`Enterprise`, `Standard`, oder `Express`). 
+   * MSSQL_PID `value: "Developer"`: Hiermit wird festgelegt, dass der Container die SQL Server Developer-Edition ausführt. Die Developer-Edition ist nicht für Produktionsdaten lizenziert. Wenn die Bereitstellung für die Produktion vorgesehen ist, legen Sie die entsprechende Edition fest (`Enterprise`, `Standard` oder `Express`). 
 
       >[!NOTE]
-      >Weitere Informationen finden Sie unter [wie SQL Server-Lizenz](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
+      >Weitere Informationen finden Sie unter [Lizenzierung von SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
-   * `persistentVolumeClaim`: Dieser Wert ist erforderlich, einen Eintrag für `claimName:` , der den Namen für die permanenter volumeanspruch zugeordnet. Dieses Tutorial verwendet `mssql-data`. 
+   * `persistentVolumeClaim`: Dieser Wert erfordert einen Eintrag für `claimName:`, der den verwendeten Namen dem Anspruch für das persistente Volume zuordnet. In diesem Tutorial wird `mssql-data` verwendet. 
 
-   * `name: SA_PASSWORD`: Konfiguriert das Container-Bild, um das SA-Kennwort festlegen, wie in diesem Abschnitt definiert.
+   * `name: SA_PASSWORD`: Konfiguriert das Containerimage, um das Systemadministratorkennwort wie in diesem Abschnitt beschrieben festzulegen.
 
      ```yaml
      valueFrom:
@@ -227,55 +227,55 @@ In diesem Schritt erstellen Sie ein Manifest, um den Container basierend auf dem
          key: SA_PASSWORD 
      ```
 
-     Wenn den Container in Kubernetes bereitgestellt wird, verweist er auf den geheimen Schlüssel mit dem Namen `mssql` um den Wert für das Kennwort abzurufen. 
+     Wenn Kubernetes den Container bereitstellt, verweist auf das Geheimnis namens `mssql`, um den Wert für das Kennwort abzurufen. 
 
    >[!NOTE]
-   >Mithilfe der `LoadBalancer` Diensttyp, der SQL Server-Instanz ist Remote (über das Internet) an Port 1433.
+   >Mithilfe des Diensttyps `LoadBalancer` wird der Remotezugriff auf die SQL Server-Instanz (über das Internet) über Port 1433 ermöglicht.
 
-   Speichern Sie die Datei (z. B. **sqldeployment.yaml**).
+   Speichern Sie die Datei (z. B. **sqldeployment.yaml**).
 
-1. Die Bereitstellung zu erstellen.
+1. Erstellen Sie die Bereitstellung.
 
    ```azurecli
    kubectl apply -f <Path to sqldeployment.yaml file>
    ```
 
-   `<Path to sqldeployment.yaml file>` ist der Speicherort, in dem Sie die Datei gespeichert.
+   `<Path to sqldeployment.yaml file>` entspricht dem Speicherort, an dem Sie die Datei gespeichert haben.
 
-   ![Screenshot der Bereitstellungsbefehl](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
+   ![Screenshot: Bereitstellungsbefehl](media/tutorial-sql-server-containers-kubernetes/04_deploy_cmd.png)
 
-   Die Bereitstellung und dem Dienst werden erstellt. SQL Server-Instanz werden in einem Container, in den permanenten Speicher verbunden ist.
+   Die Bereitstellung und der Dienst werden erstellt. Die SQL Server-Instanz befindet sich in einem Container, der mit dem persistenten Speicher verbunden ist.
 
-   Geben Sie zum Anzeigen des Status des Pods `kubectl get pod`.
+   Geben Sie `kubectl get pod` ein, um den Status des Pods anzuzeigen.
 
-   ![Screenshot des Get-Pod-Befehls](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
+   ![Screenshot: Befehl „get pod“](media/tutorial-sql-server-containers-kubernetes/05_get_pod_cmd.png)
 
-   Weist den Status in der vorherigen Abbildung der Pod `Running`. Dieser Status gibt an, dass der Container bereit ist. Dies kann einige Minuten dauern.
+   In der vorangehenden Abbildung weist der Pod den Status `Running` auf. Dieser Status gibt an, dass der Container bereit ist. Dies kann einige Minuten dauern.
 
    >[!NOTE]
-   >Nachdem die Bereitstellung erstellt wurde, dauert es einige Minuten, bevor Sie der Pod angezeigt wird. Die Verzögerung ist, da Sie der Cluster Ruft die [Mssql-Server-Linux](https://hub.docker.com/_/microsoft-mssql-server) -Image aus Docker Hub. Nach dem das Bild beim ersten abgerufen werden wird, möglicherweise nachfolgender Bereitstellungen schneller, wenn die Bereitstellung auf einen Knoten, die bereits für das Image darauf zwischengespeichert. 
+   >Nachdem die Bereitstellung erstellt wurde, kann es einige Minuten dauern, bis der Pod sichtbar ist. Die Verzögerung liegt daran, dass der Cluster das Image [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) per Pull aus dem Docker-Hub abruft. Nachdem das Image zum ersten Mal per Pull abgerufen wurde, können nachfolgende Bereitstellungen schneller sein, wenn die Bereitstellung einen Knoten nutzt, auf dem bereits ein Image zwischengespeichert wurde. 
 
-1. Stellen Sie sicher, dass die Dienste ausgeführt werden. Führen Sie den folgenden Befehl aus:
+1. Überprüfen Sie, ob die Dienste ausgeführt werden. Führen Sie den folgenden Befehl aus:
 
    ```azurecli
    kubectl get services 
    ```
 
-   Dieser Befehl gibt die Dienste, die ausgeführt werden, sowie die internen und externen IP-Adressen für die Dienste zurück. Beachten Sie die externe IP-Adresse für den `mssql-deployment` Service. Verwenden Sie diese IP-Adresse für die Verbindung mit SQL Server. 
+   Dieser Befehl gibt alle Dienste, die ausgeführt werden, und die internen sowie externen IP-Adressen der Dienste zurück. Beachten Sie die externe IP-Adresse für den `mssql-deployment`-Dienst. Verwenden Sie diese IP-Adresse, um eine Verbindung mit SQL Server herzustellen. 
 
-   ![Screenshot des Get-Service-Befehls](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
+   ![Screenshot: Befehl „get service“](media/tutorial-sql-server-containers-kubernetes/06_get_service_cmd.png)
 
-   Weitere Informationen über den Status der Objekte im Kubernetes-Cluster ausgeführt wird:
+   Führen Sie den folgenden Befehl aus, um weitere Informationen zum Status der Objekte im Kubernetes-Cluster zu erhalten:
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
    ```  
 
-## <a name="connect-to-the-sql-server-instance"></a>Verbinden Sie mit SQL Server-Instanz
+## <a name="connect-to-the-sql-server-instance"></a>Herstellen einer Verbindung mit der SQL Server-Instanz
 
-Wenn Sie den Container wie beschrieben konfiguriert haben, können Sie mit einer Anwendung von außerhalb von virtuellen Azure-Netzwerk verbinden. Verwenden der `sa` -Konto und die externe IP-Adresse für den Dienst. Verwenden Sie das Kennwort, das Sie als das Kubernetes-Geheimnis konfiguriert haben. 
+Wenn Sie den Container gemäß der Beschreibung konfiguriert haben, können Sie eine Verbindung mit einer Anwendung außerhalb des virtuellen Azure-Netzwerks herstellen. Verwenden Sie das `sa`-Konto und die externe IP-Adresse für den Dienst. Verwenden Sie das Kennwort, das Sie als Kubernetes-Geheimnis konfiguriert haben. 
 
-Sie können die folgenden Anwendungen verwenden, für die Verbindung mit der SQL Server-Instanz. 
+Sie können die folgenden Anwendungen verwenden, um eine Verbindung mit der SQL Server-Instanz herzustellen. 
 
 * [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
 
@@ -283,48 +283,48 @@ Sie können die folgenden Anwendungen verwenden, für die Verbindung mit der SQL
 
 * sqlcmd
    
-   Verbindung mit `sqlcmd`, führen Sie den folgenden Befehl:
+   Führen Sie den folgenden Befehl aus, um eine Verbindung mit `sqlcmd` herzustellen:
 
    ```cmd
    sqlcmd -S <External IP Address> -U sa -P "MyC0m9l&xP@ssw0rd"
    ```
 
-   Ersetzen Sie die folgenden Werte ein:
+   Ersetzen Sie die folgenden Werte:
       
-    - `<External IP Address>` mit der IP-Adresse für den `mssql-deployment` Service 
-    - `MyC0m9l&xP@ssw0rd` mit Ihrem Kennwort
+    - Ersetzen Sie `<External IP Address>` durch die IP-Adresse für den `mssql-deployment`-Dienst 
+    - Ersetzen Sie `MyC0m9l&xP@ssw0rd` durch Ihr Kennwort
 
-## <a name="verify-failure-and-recovery"></a>Überprüfen Sie, ob Fehler und Wiederherstellung
+## <a name="verify-failure-and-recovery"></a>Überprüfen von Fehlern und der Wiederherstellung
 
-Um Fehler und die Wiederherstellung zu überprüfen, können Sie den Pod löschen. Führen Sie die folgenden Schritte aus:
+Sie können den Pod löschen, um die Fehler und Wiederherstellung zu überprüfen. Führen Sie die folgenden Schritte aus:
 
-1. Listen Sie den Pod, der SQL Server ausgeführt wird.
+1. Listen Sie den Pod auf, der SQL Server ausführt.
 
    ```azurecli
    kubectl get pods
    ```
 
-   Notieren Sie den Namen des Pods SQL Server ausgeführt wird.
+   Notieren Sie sich den Namen des Pods, der SQL Server ausführt.
 
 1. Löschen Sie den Pod.
 
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
-   `mssql-deployment-0` der Wert wird aus dem vorherigen Schritt für den podnamen zurückgegeben werden. 
+   `mssql-deployment-0` ist der Wert, der im vorherigen Schritt als Name des Pods zurückgegeben wurde. 
 
-Kubernetes wird neu erstellt automatisch den Pod zum Wiederherstellen einer SQL Server-Instanz, und Verbinden mit dem permanenten Speicher. Verwendung `kubectl get pods` , stellen Sie sicher, dass ein neuer Pod bereitgestellt wird. Verwendung `kubectl get services` um sicherzustellen, dass die IP-Adresse für den neuen Container identisch ist. 
+Kubernetes erstellt den Pod automatisch neu, um die SQL Server-Instanz wiederherzustellen und eine Verbindung mit dem persistenten Speicher herzustellen. Verwenden Sie `kubectl get pods`, um zu überprüfen, dass ein neuer Pod bereitgestellt wurde. Verwenden Sie `kubectl get services`, um zu überprüfen, ob die IP-Adresse für den neuen Container gleich ist. 
 
 ## <a name="summary"></a>Zusammenfassung
 
-In diesem Tutorial haben Sie gelernt, wie SQL Server-Container in einem Kubernetes-Cluster für hohe Verfügbarkeit bereitstellen. 
+In diesem Tutorial haben Sie gelernt, wie Sie SQL Server-Container in einen Kubernetes-Cluster für Hochverfügbarkeit bereitstellen. 
 
 > [!div class="checklist"]
-> * Erstellen Sie ein SA-Kennwort
-> * Erstellen von Speicher
+> * Erstellen eines Systemadministratorkennworts
+> * Erstellen des Speichers
 > * Erstellen der Bereitstellung
-> * Herstellen einer Verbindung mit SQL Server Management Studio (SSMS)
-> * Überprüfen Sie, ob Fehler und Wiederherstellung
+> * Herstellen einer Verbindung mit SSMS (SQL Server Management Studio)
+> * Überprüfen von Fehlern und der Wiederherstellung
 
 ## <a name="next-steps"></a>Nächste Schritte
 

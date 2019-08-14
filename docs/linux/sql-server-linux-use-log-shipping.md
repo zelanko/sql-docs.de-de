@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren des Protokollversands für SQL Server unter Linux
-description: Dieses Lernprogramm zeigt ein einfaches Beispiel dafür, wie zum Replizieren von SQL Server-Instanz unter Linux in einer sekundären Instanz mithilfe des Protokollversands.
+title: Konfigurieren des Protokollversands für SQL Server für Linux
+description: Dieses Tutorial zeigt ein einfaches Beispiel für die Replikation einer SQL Server-Instanz unter Linux auf einer sekundären Instanz mithilfe des Protokollversands.
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/19/2017
@@ -8,43 +8,43 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032197"
 ---
-# <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit Protokollversand unter Linux
+# <a name="get-started-with-log-shipping-on-linux"></a>Erste Schritte mit dem Protokollversand unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server-Protokollversand ist eine HA-Konfiguration, in eine Datenbank von einem primären Server auf einem oder mehreren sekundären Servern repliziert werden. Kurz gesagt, wird eine Sicherung der Quelldatenbank auf dem sekundären Server wiederhergestellt. Klicken Sie dann der primäre Server erstellt Sicherungen des Transaktionsprotokolls in regelmäßigen Abständen und die sekundären Servern wiederhergestellt werden, aktualisieren die sekundäre Kopie der Datenbank. 
+Der SQL Server-Protokollversand ist eine Hochverfügbarkeitskonfiguration, bei der eine Datenbank von einem primären Server auf einem oder mehreren sekundären Servern repliziert wird. Kurz gesagt, wird eine Sicherung der Quelldatenbank auf dem sekundären Server wiederhergestellt. Der primäre Server erstellt dann regelmäßig Transaktionsprotokollsicherungen, die von den sekundären Servern wiederhergestellt werden, wobei die sekundäre Kopie der Datenbank aktualisiert wird. 
 
-  ![Informationen des Protokollversandmonitors](https://preview.ibb.co/hr5Ri5/logshipping.png)
+  ![Protokollversand](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst die folgenden Schritte aus:
+Wie in dieser Abbildung gezeigt, umfasst eine Protokollversandsitzung die folgenden Schritte:
 
-- Sichern die Transaktionsprotokolldatei auf der primären SQL Server-Instanz
-- Kopieren der Transaktionsprotokolldatei Sicherung über das Netzwerk auf eine oder mehrere sekundäre SQL Server-Instanzen
-- Wiederherstellen der Transaktion Protokollsicherungsdatei an, auf den sekundären SQL Server-Instanzen
+- Sichern der Transaktionsprotokolldatei auf der primären SQL Server-Instanz.
+- Kopieren der Transaktionsprotokoll-Sicherungsdatei über das Netzwerk in eine oder mehrere sekundäre SQL Server-Instanzen.
+- Wiederherstellen der Transaktionsprotokoll-Sicherungsdatei auf der sekundären SQL Server-Instanz.
 
-## <a name="prerequisites"></a>Vorraussetzungen
-- [Installieren von SQL Server-Agent unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+## <a name="prerequisites"></a>Voraussetzungen
+- [Installieren des SQL Server-Agent unter Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
-## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Einrichten von einer Netzwerkfreigabe für den Protokollversand mithilfe von CIFS 
+## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>Einrichten einer Netzwerkfreigabe für den Protokollversand mithilfe von CIFS 
 
 > [!NOTE] 
-> Dieses Tutorial verwendet CIFS + Samba zum Einrichten der Netzwerkfreigabe. Wenn Sie NFS verwenden möchten, einen Kommentar, und wir werden es hinzufügen, um das Dokument.       
+> In diesem Tutorial werden CIFS und Samba zum Einrichten der Netzwerkfreigabe verwendet. Wenn Sie NFS verwenden möchten, hinterlassen Sie einen Kommentar, und wir fügen ihn dem Dokument hinzu.       
 
 ### <a name="configure-primary-server"></a>Konfigurieren des primären Servers
--   Führen Sie Folgendes ein, um das Samba installieren
+-   Führen Sie Folgendes aus, um Samba zu installieren.
 
     ```bash
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   Erstellen Sie ein Verzeichnis zum Speichern der Protokolle für den Protokollversand, und geben Sie die erforderlichen Berechtigungen für die mssql
+-   Erstellen Sie ein Verzeichnis zum Speichern der Protokolle für den Protokollversand, und gewähren Sie MSSQL die erforderlichen Berechtigungen.
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -52,7 +52,7 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   Bearbeiten Sie die /etc/samba/smb.conf-Datei (Sie benötigen Root-Berechtigungen für diesen), und fügen Sie folgenden Abschnitt:
+-   Bearbeiten Sie die Datei „/etc/samba/smb.conf“ (Sie benötigen hierfür Stammverzeichnisberechtigungen), und fügen Sie den folgenden Abschnitt hinzu:
 
     ```bash
     [tlogs]
@@ -64,26 +64,26 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
     writable=no
     ```
 
--   Erstellen Sie einen Mssql-Benutzer für Samba
+-   Erstellen eines MSSQL-Benutzers für Samba
 
     ```bash
     sudo smbpasswd -a mssql
     ```
 
--   Das Samba-Dienste neu starten
+-   Neustart der Samba-Dienste
     ```bash
     sudo systemctl restart smbd.service nmbd.service
     ```
  
-### <a name="configure-secondary-server"></a>Konfigurieren Sie sekundären Server
+### <a name="configure-secondary-server"></a>Konfigurieren des sekundären Servers
 
--   Führen Sie Folgendes ein, um das CIFS-Client installieren
+-   Führen Sie Folgendes aus, um den CIFS-Client zu installieren.
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   Erstellen Sie eine Datei, um Ihre Anmeldeinformationen zu speichern. Verwenden Sie das Kennwort, die, das Sie vor kurzem für Ihr Mssql Samba-Konto festlegen 
+-   Erstellen Sie eine Datei zum Speichern Ihrer Anmeldeinformationen. Verwenden Sie das Kennwort, das Sie kürzlich für Ihr MSSQL-Samba-Konto festgelegt haben. 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -91,7 +91,7 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
         domain=<domain>
         password=<password>
 
--   Führen Sie die folgenden Befehle zum Erstellen eines leeren Verzeichnisses für die Einbindung aus, und legen Sie Berechtigungen und des Besitzes ordnungsgemäß
+-   Führen Sie die folgenden Befehle aus, um ein leeres Verzeichnis zum Einbinden zu erstellen und Berechtigung und Besitz richtig festzulegen.
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -100,18 +100,18 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   Fügen Sie die Zeile, Etc/Fstab die Dateifreigabe beibehalten werden. 
+-   Fügen Sie „etc/fstab“ die Zeile hinzu, um die Freigabe beizubehalten. 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
--   Finden Sie die Freigaben
+-   Binden Sie die Freigaben ein.
     ```bash   
     sudo mount -a
     ```
        
 ## <a name="setup-log-shipping-via-t-sql"></a>Einrichten des Protokollversands über T-SQL
 
-- Führen Sie dieses Skript aus dem primären server
+- Führen Sie dieses Skript auf Ihrem primären Server aus.
 
     ```sql
     BACKUP DATABASE SampleDB
@@ -177,7 +177,7 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
     ```
 
 
-- Führen Sie dieses Skript aus dem sekundären server
+- Führen Sie dieses Skript auf Ihrem sekundären Server aus.
 
     ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
@@ -283,9 +283,9 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>Überprüfen, ob des Protokollversands
+## <a name="verify-log-shipping-works"></a>Überprüfen der Funktion des Protokollversands
 
-- Überprüfen der Funktionsfähigkeit des Protokollversands von der folgende Auftrag wird gestartet, auf dem primären server
+- Überprüfen Sie, ob der Protokollversand funktioniert, indem Sie den folgenden Auftrag auf dem primären Server starten.
 
     ```sql
     USE msdb ;  
@@ -295,7 +295,7 @@ Wie beschrieben in diesem Bild ist, wird eine protokollversandsitzung umfasst di
     GO  
     ```
 
-- Überprüfen der Funktionsfähigkeit des Protokollversands von der folgende Auftrag wird gestartet, auf dem sekundären server
+- Überprüfen Sie, ob der Protokollversand funktioniert, indem Sie den folgenden Auftrag auf dem sekundären Server starten.
  
     ```sql
     USE msdb ;  

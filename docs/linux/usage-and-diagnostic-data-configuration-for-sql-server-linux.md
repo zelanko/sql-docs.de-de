@@ -1,26 +1,26 @@
 ---
-title: Konfigurieren von Nutzung und Erfassung von Diagnosedaten für SQLServer unter Linux
-description: Beschreibt, wie SQL Server Customer nutzungs- und Diagnosedaten gesammelt und auf Linux konfiguriert.
+title: Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server unter Linux
+description: Hier wird beschrieben, wie Kundennutzungs- und Diagnosedaten von SQL Server unter Linux gesammelt und konfiguriert werden.
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 36c5194df015b26e5c9925575a9e524ef17ce602
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: e89e6fc5ad1e661fe68b76465c316057e8e5aa7c
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057232"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476233"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Konfigurieren von Nutzung und Erfassung von Diagnosedaten für SQLServer unter Linux
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Microsoft SQL Server erfasst standardmäßig Informationen darüber, wie Kunden die Anwendung verwenden. Dies bedeutet, dass SQL Server Informationen zur Installationserfahrung, Nutzung und Leistung sammelt. Mit diesen Informationen kann Microsoft besser an die Bedürfnisse der Kunden anpassen. Microsoft erfasst z.B. Informationen zu Fehlercodes von Kunden, sodass wir damit verknüpfte Probleme beheben, die Dokumentation zu SQL Server verbessern und bestimmen können, ob wir dem Produkt weitere Funktionen hinzufügen müssen, um die Benutzererfahrung zu optimieren.
 
-Dieses Dokument enthält Informationen darüber, welche Arten von Informationen gesammelt werden und Informationen zum Konfigurieren von Microsoft SQL Server unter Linux zum Senden von diesem gesammelten Informationen an Microsoft. SQL Server 2017 beinhaltet eine datenschutzerklärung, die Informationen erläutert, wir und keine von Benutzern sammeln. Weitere Informationen finden Sie unter den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).
+Dieses Dokument enthält ausführliche Informationen dazu, welche Arten von Informationen gesammelt werden, und wie Microsoft SQL Server für Linux konfiguriert wird, um diese gesammelten Informationen an Microsoft zu senden. SQL Server 2017 enthält eine Datenschutzerklärung, in der erläutert wird, welche Informationen von den Benutzern gesammelt werden. Weitere Informationen finden Sie in den [Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 Microsoft sendet nicht die folgenden Informationen mit diesem Mechanismus:
 
@@ -28,39 +28,39 @@ Microsoft sendet nicht die folgenden Informationen mit diesem Mechanismus:
 - Anmeldeinformationen oder andere Authentifizierungsinformationen
 - personenbezogene Informationen (PII)
 
-SQL Server 2017 erfasst und sammelt kontinuierlich Informationen zur Installationserfahrung des Einrichtungsvorgangs, damit wir schnell Installationsprobleme erkennen und beheben können, die der Kunde hat. SQL Server 2017 kann so konfiguriert werden, nicht, dass Informationen (pro Instanz pro Server) über an Microsoft senden **Mssql-Conf**. MSSQL-Conf ist ein Konfigurationsskript, das mit SQL Server 2017 für Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Ubuntu installiert.
+SQL Server 2017 erfasst und sammelt kontinuierlich Informationen zur Installationserfahrung des Einrichtungsvorgangs, damit wir schnell Installationsprobleme erkennen und beheben können, die der Kunde hat. SQL Server 2017 kann so konfiguriert werden, dass keine Informationen (pro Serverinstanz) mit **mssql-conf** an Microsoft gesendet werden. „mssql-conf“ ist ein Konfigurationsskript, das mit SQL Server 2017 für Red Hat Enterprise Linux, SUSE Linux Enterprise Server und Ubuntu installiert wird.
 
 > [!NOTE]
 > Sie können das Senden von Informationen an Microsoft nur in bezahlten Versionen von SQL Server deaktivieren.
 
-## <a name="disable-usage-and-diagnostic-data-collection"></a>Deaktivieren Sie die Nutzung und Erfassung von Diagnosedaten
+## <a name="disable-usage-and-diagnostic-data-collection"></a>Deaktivieren der Nutzungs- und Diagnosedatensammlung
 
-Diese Option können Sie die ändern, wenn SQL Server Nutzung und Erfassung von Diagnosedaten an Microsoft oder nicht sendet. Dieser Wert wird standardmäßig festgelegt auf "true". Um den Wert zu ändern, führen Sie die folgenden Befehle aus:
+Mit dieser Option können Sie ändern, ob SQL Server die Nutzungs- und Diagnosedatensammlung an Microsoft sendet. Standardmäßig ist dieser Wert auf „true“ festgelegt. Führen Sie die folgenden Befehle aus, um den Wert zu ändern:
 
 > [!IMPORTANT]
-> Sie können nicht die Nutzung und Erfassung von Diagnosedaten für kostenlose Editionen von SQL Server "," Express "und" Developer deaktivieren.
+> Sie können die Nutzungs- und Diagnosedatensammlung für kostenlose Editionen von SQL Server, Express und Developer nicht deaktivieren.
 
-### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat, SUSE und Ubuntu
+### <a name="on-red-hat-suse-and-ubuntu"></a>Unter Red Hat, SUSE und Ubuntu
 
-1. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.customerfeedback**. Das folgende Beispiel deaktiviert die Nutzung und Erfassung von Diagnosedaten durch Angabe **"false"** .
+1. Führen Sie das mssql-conf-Skript als Rootbenutzer mit dem Befehl **set** für **telemetry.customerfeedback** aus. Im folgenden Beispiel wird die Nutzungs- und Diagnosedatensammlung durch Angabe von **false** deaktiviert.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
    ```
 
-1. Starten Sie SQL Server-Dienst neu:
+1. Starten Sie den SQL Server-Dienst neu:
 
    ```bash
    sudo systemctl restart mssql-server
    ```
    
-### <a name="on-docker"></a>Für Docker
-Um Nutzung und Erfassung von Diagnosedaten für Docker zu deaktivieren, müssen Sie Docker [speichern Ihre Daten](sql-server-linux-configure-docker.md). 
+### <a name="on-docker"></a>Unter Docker
+Zum Deaktivieren der Nutzungs- und Diagnosedatensammlung in Docker muss Docker [Ihre Daten persistent speichern](sql-server-linux-configure-docker.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis:
+1. Fügen Sie eine `mssql.conf`-Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis hinzu:
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -70,7 +70,7 @@ Um Nutzung und Erfassung von Diagnosedaten für Docker zu deaktivieren, müssen 
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
 
-2. Ausführen des containerimages
+2. Ausführen des Containerimages
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
@@ -84,7 +84,7 @@ Um Nutzung und Erfassung von Diagnosedaten für Docker zu deaktivieren, müssen 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis:
+1. Fügen Sie eine `mssql.conf`-Datei mit den Zeilen `[telemetry]` und `customerfeedback = false` im Hostverzeichnis hinzu:
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -94,66 +94,66 @@ Um Nutzung und Erfassung von Diagnosedaten für Docker zu deaktivieren, müssen 
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
 
-2. Ausführen des containerimages
+2. Ausführen des Containerimages
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
 ::: moniker-end
 
-## <a name="local-audit-for-sql-server-on-linux-usage-and-diagnostic-data-collection"></a>Lokale Überwachung für SQLServer unter Verwendung von Linux und Erfassung von Diagnosedaten
+## <a name="local-audit-for-sql-server-on-linux-usage-and-diagnostic-data-collection"></a>Lokale Überwachung für Nutzungs- und Diagnosedatensammlung in SQL Server für Linux
 
-Microsoft SQL Server 2017 enthält Internetaktivierte Features, die gesammelt und Informationen über Ihren Computer oder Gerät ("Standardcomputerinformationen") an Microsoft senden können. Die lokale Überwachung-Komponente des SQL Server-Verwendungs-und Diagnosedaten kann in einen bestimmten Ordner, die Darstellung der Daten (Protokolle), die an Microsoft gesendet werden, von dem Dienst erfassten Daten schreiben. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.
+Microsoft SQL Server 2017 enthält internetfähige Funktionen, die Daten über Ihren Computer oder Ihr Gerät („Standardcomputerinformationen“) erfassen und an Microsoft senden können. Die Komponente „Lokale Überwachung“ der SQL Server-Nutzungs- und Diagnosedatensammlung kann die vom Dienst erfassten Daten, die die an Microsoft zu sendenden Daten (Protokolle) darstellen, in einen bestimmten Ordner schreiben. Der Zweck der lokalen Überwachung besteht darin, dass es Benutzern gestattet wird, alle Daten hinsichtlich Zustimmung, behördlicher Bestimmungen oder aus Datenschutzgründen anzuzeigen, die Microsoft mithilfe dieses Features erfasst.
 
-In SQL Server unter Linux kann die lokale Überwachung auf Instanzebene für SQL Server-Datenbank-Engine konfiguriert. Andere SQL Server-Komponenten und die SQL Server-Tools müssen sich nicht auf lokale die Überwachungsfunktion für Nutzung und Erfassung von Diagnosedaten aus.
+In SQL Server für Linux kann die lokale Überwachung auf Instanzebene für die SQL Server-Datenbank-Engine konfiguriert werden. Andere SQL Server-Komponenten und SQL Server-Tools besitzen keine Funktion zur lokalen Überwachung für die Nutzungs- und Diagnosedatensammlung.
 
-### <a name="enable-local-audit"></a>Lokale Überwachung aktivieren
+### <a name="enable-local-audit"></a>Aktivieren der lokalen Überwachung
 
-Diese Option ermöglicht die lokale Überwachung und können Sie das Verzeichnis festlegen, in die Protokolle der lokalen Überwachung erstellt werden.
+Mit dieser Option wird die lokale Überwachung aktiviert. Zusätzlich können Sie das Verzeichnis festlegen, in dem die Protokolle für lokale Überwachungen erstellt werden.
 
-1. Erstellen Sie ein Zielverzeichnis für neue Protokolle der lokalen Überwachung. Das folgende Beispiel erstellt ein neues **/Tmp/Audit** Verzeichnis:
+1. Erstellen Sie ein Zielverzeichnis für neue Protokolle von lokalen Überwachungen. Im folgenden Beispiel wird das Verzeichnis **/tmp/audit** erstellt:
 
    ```bash
    sudo mkdir /tmp/audit
    ```
 
-2. Ändern Sie den Besitzer und die Gruppe des Verzeichnisses, das die **Mssql** Benutzer:
+2. Ändern Sie Besitzer und Gruppe des Verzeichnisses in den **mssql**-Benutzer:
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-3. Führen Sie das Mssql-Conf-Skript als Root-Benutzer mit der **festgelegt** Befehl **telemetry.userrequestedlocalauditdirectory**:
+3. Führen Sie das mssql-conf-Skript als Rootbenutzer mit dem **set**-Befehl für **telemetry.userrequestedlocalauditdirectory** aus:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-4. Starten Sie SQL Server-Dienst neu:
+4. Starten Sie den SQL Server-Dienst neu:
 
    ```bash
    sudo systemctl restart mssql-server
    ```
    
-### <a name="on-docker"></a>Für Docker
-Um die lokale Überwachung für Docker zu aktivieren, müssen Sie Docker [speichern Ihre Daten](sql-server-linux-configure-docker.md). 
+### <a name="on-docker"></a>Unter Docker
+Um die lokale Überwachung für Docker zu aktivieren, muss Docker [Ihre Daten persistent speichern](sql-server-linux-configure-docker.md). 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. Das Zielverzeichnis für die neue lokale Überwachungsprotokolle werden im Container. Erstellen Sie ein Zielverzeichnis für die neue lokale Überwachungsprotokolle, in die Hostverzeichnis auf Ihrem Computer. Das folgende Beispiel erstellt ein neues **/audit** Verzeichnis:
+1. Das Zielverzeichnis für neue Protokolle der lokalen Überwachung befindet sich im Container. Erstellen Sie ein Zielverzeichnis für neue Protokolle der lokalen Überwachung im Hostverzeichnis auf Ihrem Computer. Im folgenden Beispiel wird ein neues Verzeichnis **/audit** erstellt:
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `userrequestedlocalauditdirectory = <host directory>/audit` im Hostverzeichnis:
+1. Fügen Sie eine `mssql.conf`-Datei mit den Zeilen `[telemetry]` und `userrequestedlocalauditdirectory = <host directory>/audit` im Hostverzeichnis hinzu:
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -163,7 +163,7 @@ Um die lokale Überwachung für Docker zu aktivieren, müssen Sie Docker [speich
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
 
-1. Ausführen des containerimages
+1. Ausführen des Containerimages
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
@@ -177,13 +177,13 @@ Um die lokale Überwachung für Docker zu aktivieren, müssen Sie Docker [speich
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. Das Zielverzeichnis für die neue lokale Überwachungsprotokolle werden im Container. Erstellen Sie ein Zielverzeichnis für die neue lokale Überwachungsprotokolle, in die Hostverzeichnis auf Ihrem Computer. Das folgende Beispiel erstellt ein neues **/audit** Verzeichnis:
+1. Das Zielverzeichnis für neue Protokolle der lokalen Überwachung befindet sich im Container. Erstellen Sie ein Zielverzeichnis für neue Protokolle der lokalen Überwachung im Hostverzeichnis auf Ihrem Computer. Im folgenden Beispiel wird ein neues Verzeichnis **/audit** erstellt:
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-1. Hinzufügen einer `mssql.conf` -Datei mit den Zeilen `[telemetry]` und `userrequestedlocalauditdirectory = <host directory>/audit` im Hostverzeichnis:
+1. Fügen Sie eine `mssql.conf`-Datei mit den Zeilen `[telemetry]` und `userrequestedlocalauditdirectory = <host directory>/audit` im Hostverzeichnis hinzu:
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -193,18 +193,18 @@ Um die lokale Überwachung für Docker zu aktivieren, müssen Sie Docker [speich
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
 
-1. Ausführen des containerimages
+1. Ausführen des Containerimages
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server unter Linux finden Sie unter den [Übersicht über SQL Server unter Linux](sql-server-linux-overview.md).
+Weitere Informationen zu SQL Server für Linux finden Sie in der [Übersicht für SQL Server für Linux](sql-server-linux-overview.md).

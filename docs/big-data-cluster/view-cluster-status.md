@@ -1,7 +1,7 @@
 ---
 title: Clusterstatus anzeigen
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird erläutert, wie Sie den Status eines Big Data Clusters mithilfe der Befehle Azure Data Studio, Notebooks und azdata anzeigen.
+description: In diesem Artikel wird erläutert, wie Sie den Status eines Big-Data-Clusters mithilfe von Azure Data Studio, Notebooks und „azdata“-Befehlen anzeigen.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
@@ -10,114 +10,114 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68419286"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Anzeigen des Status eines Big Data Clusters
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Anzeigen des Status eines Big-Data-Clusters
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie auf die Dienst Endpunkte zugreifen und den Status einer SQL Server Big Data Cluster (Vorschau) anzeigen. Sie können sowohl Azure Data Studio als auch **azdata**verwenden, und in diesem Artikel werden beide Verfahren behandelt.
+In diesem Artikel wird beschrieben, wie Sie auf die Dienstendpunkte zugreifen und den Status eines Big-Data-Clusters für SQL Server (Vorschauversion) anzeigen. Sie können sowohl Azure Data Studio als auch **azdata** verwenden. Beide Verfahren werden in diesem Artikel erläutert.
 
-## <a id="datastudio"></a>Azure Data Studio verwenden
+## <a id="datastudio"></a> Verwenden von Azure Data Studio
 
-Nachdem Sie den neuesten **Insider-Build** von [Azure Data Studio](https://aka.ms/azdata-insiders)heruntergeladen haben, können Sie Dienst Endpunkte und den Status eines Big Data Clusters mit dem SQL Server Big Data Cluster-Dashboard anzeigen. Beachten Sie, dass einige der unten aufgeführten Features nur im Insider-Build Azure Data Studio verfügbar sind.
+Nachdem Sie den neuesten **Insider-Build** von [Azure Data Studio](https://aka.ms/azdata-insiders) heruntergeladen haben, können Sie mithilfe des Dashboards des Big-Data-Clusters für SQL Server Dienstendpunkte sowie den Status eines Big-Data-Clusters anzeigen. Beachten Sie, dass einige der unten aufgeführten Features erstmals im Insider-Build von Azure Data Studio verfügbar sind.
 
-1. Erstellen Sie zuerst eine Verbindung mit Ihrem Big Data Cluster in Azure Data Studio. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem SQL Server Big Data Cluster mit Azure Data Studio](connect-to-big-data-cluster.md).
+1. Stellen Sie zunächst eine Verbindung mit Ihrem Big-Data-Cluster in Azure Data Studio her. Weitere Informationen finden Sie unter [Connect to a SQL Server big data cluster with Azure Data Studio (Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server mithilfe von Azure Data Studio)](connect-to-big-data-cluster.md).
 
-1. Klicken Sie mit der rechten Maustaste auf den Big Data Cluster-Endpunkt, und klicken Sie auf **Verwalten**.
+1. Klicken Sie mit der rechten Maustaste auf den Endpunkt des Big-Data-Clusters, und klicken Sie auf **Verwalten**.
 
-   ![Rechtsklick verwalten](media/view-cluster-status/right-click-manage.png)
+   ![Rechtsklick auf „Verwalten“](media/view-cluster-status/right-click-manage.png)
 
-1. Wählen Sie die SQL Server Registerkarte **Big Data-Cluster** aus, um auf das Dashboard des Big Data Clusters zuzugreifen
+1. Klicken Sie auf die Registerkarte **SQL Server Big Data Cluster** (Big-Data-Cluster für SQL Server), um auf das Dashboard des Big-Data-Clusters zuzugreifen.
 
-   ![Dashboard für Big Data-Cluster](media/view-cluster-status/bdc-dashboard.png)
+   ![Dashboard des Big-Data-Clusters](media/view-cluster-status/bdc-dashboard.png)
 
-### <a name="service-endpoints"></a>Dienst Endpunkte
+### <a name="service-endpoints"></a>Dienstendpunkte
 
-Es ist wichtig, in der Lage zu sein, auf einfache Weise auf die verschiedenen Dienste innerhalb eines Big Data Clusters zuzugreifen. Das Big Data Cluster-Dashboard enthält eine Tabelle mit Dienst Endpunkten, mit der Sie die Dienst Endpunkte anzeigen und kopieren können.
+Es ist wichtig, einfach auf die verschiedenen Dienste innerhalb eines Big-Data-Clusters zugreifen zu können. Das Dashboard des Big-Data-Clusters stellt eine Dienstendpunkttabelle bereit, in der die Dienstendpunkte angezeigt werden und aus der diese kopiert werden können.
 
-![Dienst Endpunkte](media/view-cluster-status/service-endpoints.png)
+![Dienstendpunkte](media/view-cluster-status/service-endpoints.png)
 
-Die ersten Zeilen machen die folgenden Dienste verfügbar:
+Die ersten paar Zeilen umfassen folgende Dienste:
 
-- Anwendungs Proxy
-- Cluster Verwaltungsdienst
+- Anwendungsproxy
+- Clusterverwaltungsdienst
 - HDFS und Spark
-- Verwaltungs Proxy
+- Verwaltungsproxy
 
-Diese Dienste Listen die Endpunkte auf, die kopiert und eingefügt werden können, wenn Sie den Endpunkt zum Herstellen einer Verbindung mit diesen Diensten benötigen. Beispielsweise können Sie auf das Kopier Symbol rechts neben dem Endpunkt klicken und es dann in ein Textfenster einfügen, das diesen Endpunkt anfordert. Der Cluster Verwaltungsdienst-Endpunkt ist erforderlich, um das [Cluster Status Notebook](#notebook)auszuführen.
+Diese Dienste listen die Endpunkte auf, die Sie kopieren und einfügen können, wenn Sie den Endpunkt für die Verbindung mit diesen Diensten benötigen. Sie können beispielsweise auf das Kopiersymbol rechts neben dem Endpunkt klicken und diesen dann in ein Textfenster einfügen, in dem er angefordert wird. Der Endpunkt des Clusterverwaltungsdiensts wird zum Ausführen des [Notebooks für den Clusterstatus](#notebook) benötigt.
 
 ### <a name="dashboards"></a>Dashboards
 
-In der Tabelle "Service Endpunkte" sind auch mehrere Dashboards für die Überwachung verfügbar:
+In der Dienstendpunkttabelle werden auch mehrere Dashboards für die Überwachung offengelegt:
 
-- Metriken (grafana)
-- Protokolle (kibana)
-- Spark-Auftrags Überwachung
+- Metriken (Grafana)
+- Protokolle (Kibana)
+- Spark-Auftragsüberwachung
 - Spark-Ressourcenverwaltung
 
-Sie können direkt auf diese Links klicken. Sie werden zweimal aufgefordert, Ihren Benutzernamen und Ihr Kennwort anzugeben, bevor Sie eine Verbindung mit dem Dienst herstellen.
+Sie können direkt auf diese Links klicken. Sie werden zweimal aufgefordert, Ihren Benutzernamen und Ihr Kennwort anzugeben, bevor eine Verbindung mit dem Dienst hergestellt wird.
 
-### <a id="notebook"></a>Cluster Status Notebook
+### <a id="notebook"></a> Notebook für den Clusterstatus
 
-1. Sie können den Cluster Status des Big Data Clusters auch anzeigen, indem Sie das Notebook für den Cluster Status starten. Um das Notebook zu starten, klicken Sie auf den Task **Cluster Status** .
+1. Sie können auch den Clusterstatus des Big-Data-Clusters anzeigen, indem Sie das Notebook für den Clusterstatus starten. Klicken Sie auf die Aufgabe **Clusterstatus**, um das Notebook zu starten.
 
-    ![Gestartet](media/view-cluster-status/cluster-status-launch.png)
+    ![Starten](media/view-cluster-status/cluster-status-launch.png)
 
-2. Bevor Sie beginnen, benötigen Sie Folgendes:
+2. Bevor Sie beginnen, benötigen Sie folgende Elemente:
 
-    - Big Data-Cluster Name
-    - Controller Benutzername
-    - Controller Kennwort
-    - Controller Endpunkte
+    - Name des Big-Data-Clusters
+    - Benutzername des Controllers
+    - Kennwort des Controllers
+    - Endpunkte des Controllers
 
-    Der Standard Big Data Cluster Name lautet **MSSQL-Cluster** , es sei denn, Sie haben ihn während der Bereitstellung angepasst. Sie finden den Controller Endpunkt über das Big Data Cluster-Dashboard in der Tabelle Dienst Endpunkte. Der Endpunkt wird als **Cluster Verwaltungsdienst**aufgeführt. Wenn Sie die Anmelde Informationen nicht kennen, Fragen Sie den Administrator, der Ihren Cluster bereitgestellt hat.
+    Der Standardname des Big-Data-Clusters ist **mssql-cluster**, sofern Sie diesen nicht im Laufe der Bereitstellung angepasst haben. Sie finden den Endpunkt des Controllers in der Dienstendpunkttabelle im Dashboard des Big-Data-Clusters. Der Endpunkt wird als **Clusterverwaltungsdienst** aufgeführt. Wenn Sie die Anmeldeinformationen nicht kennen, fragen Sie den Administrator, der Ihren Cluster bereitgestellt hat.
 
-3. Klicken Sie in der oberen Symbolleiste auf **Zellen ausführen** .
+3. Klicken Sie in der oberen Symbolleiste auf **Run Cells** (Zellen ausführen).
 
-4. Befolgen Sie die Eingabeaufforderung für Ihre Anmelde Informationen. Drücken Sie die EINGABETASTE, nachdem Sie die Anmelde Informationen für den Big Data Cluster Namen, den Controller Benutzernamen und das Controller Kennwort eingegeben haben.
+4. Befolgen Sie die Aufforderung zur Eingabe Ihrer Anmeldeinformationen. Nachdem Sie die Anmeldeinformationen für den Namen des Big-Data-Clusters, den Benutzernamen sowie das Kennwort des Controllers eingegeben haben, drücken Sie die EINGABETASTE.
 
     > [!Note]
-    > Wenn Sie nicht über eine Konfigurationsdatei mit Ihrem Big Data verfügen, werden Sie aufgefordert, den Controller Endpunkt zu verwenden. Geben oder fügen Sie Sie ein, und drücken Sie die EINGABETASTE, um fortzufahren.
+    > Wenn Sie keine Konfigurationsdatei für Ihre Big Data eingerichtet haben, werden Sie nach dem Endpunkt des Controllers gefragt. Geben oder fügen Sie ihn ein, und drücken Sie dann die EINGABETASTE, um fortzufahren.
 
-5. Wenn Sie erfolgreich eine Verbindung hergestellt haben, zeigt der Rest des Notebooks die Ausgabe der einzelnen Komponenten des Big Data Clusters an. Wenn Sie eine bestimmte codezelle erneut ausführen möchten, zeigen Sie mit der Maus auf die codezelle, und klicken Sie auf das Symbol **Ausführen** .
+5. Wenn Sie erfolgreich eine Verbindung hergestellt haben, zeigt der Rest des Notebooks die Ausgabe der einzelnen Komponenten des Big-Data-Clusters an. Wenn Sie eine bestimmte Codezelle erneut ausführen möchten, zeigen Sie mit der Maus auf die Codezelle, und klicken Sie auf das Symbol zum **Ausführen**.
 
 ## <a name="use-azdata"></a>Verwenden von azdata
 
-Sie können auch [azdata](deploy-install-azdata.md) -Befehle verwenden, um sowohl Endpunkte als auch den Cluster Status anzuzeigen.
+Sie können auch [azdata](deploy-install-azdata.md)-Befehle zum Anzeigen beider Endpunkte sowie des Clusterstatus verwenden.
 
-### <a name="service-endpoints"></a>Dienst Endpunkte
+### <a name="service-endpoints"></a>Dienstendpunkte
 
-Mithilfe der folgenden Schritte können Sie die IP-Adressen der externen Endpunkte für den Big Data Cluster abrufen.
+Mithilfe der folgenden Schritte können Sie die IP-Adressen der externen Endpunkte für den Big-Data-Cluster abrufen.
 
-1. Suchen Sie die IP-Adresse des Controller Endpunkts, indem Sie die externe IP-Ausgabe des folgenden **kubectl** -Befehls überprüfen:
+1. Suchen Sie die IP-Adresse des Controller-Endpunkts in der Ausgabe der externen IP des folgenden **kubectl**-Befehls:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Wenn Sie den Standardnamen während der Bereitstellung nicht geändert haben `-n mssql-cluster` , verwenden Sie im vorherigen Befehl. **MSSQL-Cluster** ist der Standardname für den Big Data Cluster.
+   > Wenn Sie den Standardnamen während der Bereitstellung nicht geändert haben, verwenden Sie im vorherigen Befehl `-n mssql-cluster`. **mssql-cluster** ist der Standardname für den Big-Data-Cluster.
 
-1. Melden Sie sich mit der [azdata-Anmeldung](reference-azdata.md)beim Big Data-Cluster an. Legen Sie den Parameter **--Controller-Endpoint** auf die externe IP-Adresse des Controller Endpunkts fest.
+1. Melden Sie sich beim Big-Data-Cluster mit [azdata login](reference-azdata.md) an. Legen Sie den Parameter **--controller-endpoint** auf die externe IP-Adresse des Controllerendpunkts fest.
 
    ```bash
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Geben Sie den Benutzernamen und das Kennwort für den Controller (CONTROLLER_USERNAME und CONTROLLER_PASSWORD) während der Bereitstellung an.
+   Geben Sie den Benutzernamen und das Kennwort an (CONTROLLER_USERNAME und CONTROLLER_PASSWORD), die Sie während der Bereitstellung für den Controller konfiguriert haben.
 
-1. Führen Sie die [azdata BDC Endpoint List](reference-azdata-bdc-endpoint.md) aus, um eine Liste mit einer Beschreibung der einzelnen Endpunkte und ihrer entsprechenden IP-Adresse und Port Werte zu erhalten. 
+1. Führen Sie [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) aus, um eine Liste mit Beschreibungen jedes Endpunkts sowie deren entsprechende IP-Adressen und Portwerte abzurufen. 
 
    ```bash
    azdata bdc endpoint list -o table
    ```
 
-   Die folgende Liste zeigt die Beispielausgabe dieses Befehls:
+   Die folgende Liste zeigt eine Beispielausgabe dieses Befehls an:
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -137,16 +137,16 @@ Mithilfe der folgenden Schritte können Sie die IP-Adressen der externen Endpunk
 
 ### <a name="view-cluster-status"></a>Clusterstatus anzeigen
 
-Sie können den Status des Clusters mit dem Befehl [azdata BDC Status Show](reference-azdata-bdc-status.md) anzeigen.
+Sie können den Status des Clusters mit dem Befehl [azdata bdc status show](reference-azdata-bdc-status.md) anzeigen.
 
 ```bash
 azdata bdc status show -o table
 ```
 
 > [!TIP]
-> Zum Ausführen der Status Befehle müssen Sie sich zunächst mit dem **azdata-Anmelde** Befehl anmelden, der im Abschnitt vorherige Endpunkte angezeigt wurde.
+> Zum Ausführen der Statusbefehle müssen Sie sich zunächst mit dem Befehl **azdata login** anmelden, der im vorangegangenen Abschnitt zu Endpunkten gezeigt wurde.
 
-Das folgende Beispiel zeigt die Ausgabe dieses Befehls:
+Im Folgenden wird eine Beispielausgabe dieses Befehls angezeigt:
 
 ```output
 Kind     Name           State
@@ -159,23 +159,23 @@ Data     default        Ready
 Storage  default        Ready
 ```
 
-### <a name="view-pool-status"></a>Anzeigen des Pool Status
+### <a name="view-pool-status"></a>Anzeigen des Poolstatus
 
-Sie können den Status von Pools im Cluster mit dem Befehl [azdata BDC Pool Status Show](reference-azdata-bdc-pool-status.md) anzeigen. Wenn Sie diesen Befehl verwenden möchten, geben Sie den Pooltyp `--kind` mit dem Parameter an. Die pooltypen lauten wie folgt:
+Sie können den Status von Pools im Cluster mit dem Befehl [azdata bdc pool status show](reference-azdata-bdc-pool-status.md) anzeigen. Geben Sie den Typ von Pool mit dem Parameter `--kind` an, um diesen Befehl zu verwenden. Die Pooltypen sind folgende:
 
-- Compute
+- compute
 - data
 - master
-- Kerze
-- Speicher
+- spark
+- storage
 
-Der folgende Befehl zeigt z. b. den Pool Status des Speicherpools an:
+Der folgende Befehl zeigt z. B. den Poolstatus des Speicherpools an:
 
 ```bash
 azdata bdc pool status show --kind storage
 ```
 
-Es sollte ein Text angezeigt werden, der der folgenden Ausgabe ähnelt:
+Der Text sollte etwa wie die folgende Ausgabe aussehen:
 
 ```output
 [
@@ -198,20 +198,20 @@ Es sollte ein Text angezeigt werden, der der folgenden Ausgabe ähnelt:
 ]
 ```
 
-Der `logsUrl` Wert verknüpft mit einem kibana-Dashboard mit Protokollinformationen:
+Der `logsUrl`-Wert verweist auf ein Kibana-Dashboard mit Protokollinformationen:
 
 ![Kibana-Dashboard](./media/view-cluster-status/kibana-dashboard.png)
 
-Die `nodeMetricsUrl` Werte `sqlMetricsUrl` und sind mit einem grafana-Dashboard zum Überwachen der Knoten Integrität und SQL-Metriken verknüpft:
+Die Werte `nodeMetricsUrl` und `sqlMetricsUrl` verweisen auf ein Grafana-Dashboard für die Überwachung der Knotenintegrität sowie von SQL-Metriken:
 
 ![Grafana-Dashboard](./media/view-cluster-status/grafana-dashboard.png)
 
 ![SQL](./media/view-cluster-status/grafana-sql-status.png)
 
-### <a name="view-controller-status"></a>Anzeigen des Controller Status
+### <a name="view-controller-status"></a>Anzeigen des Controllerstatus
 
-Sie können den Controller Status mit dem Befehl [azdata BDC Control Status Show](reference-azdata-bdc-control-status.md) anzeigen. Es stellt ähnliche Links zu den Überwachungs Dashboards bereit, die sich auf die Controller Knoten des Big Data Clusters beziehen.
+Sie können den Status des Controllers mit dem Befehl [azdata bdc control status show](reference-azdata-bdc-control-status.md) anzeigen. Dieser stellt ähnliche Links zu den Dashboards für die Überwachung bereit, die im Zusammenhang mit den Controllerknoten des Big-Data-Clusters stehen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data Clustern finden Sie unter [Was sind SQL Server Big Data Cluster](big-data-cluster-overview.md).
+Weitere Informationen zu Big Data-Clustern finden Sie unter [What are SQL Server big data clusters? (Was sind Big Data-Cluster für SQL Server?)](big-data-cluster-overview.md).

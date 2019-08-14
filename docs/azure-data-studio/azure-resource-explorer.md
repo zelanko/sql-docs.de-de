@@ -1,7 +1,7 @@
 ---
-title: Entdecken Sie Azure SQL-Ressourcen mit Azure-Ressourcen-Explorer
+title: Untersuchen von Azure SQL-Ressourcen mit dem Azure-Ressourcen-Explorer
 titleSuffix: Azure Data Studio
-description: Erfahren Sie, wie Sie untersuchen und Verwalten von Azure SQL-Server, Azure SQL-Datenbank und Azure verwaltete SQL-Instanz über Azure-Ressourcen-Explorer.
+description: Erfahren Sie, wie Sie Azure SQL Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanzen mit dem Azure-Ressourcen-Explorer untersuchen und verwalten können.
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
@@ -10,96 +10,96 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959717"
 ---
-# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Untersuchen und Verwalten von Azure SQL-Ressourcen mit Azure-Ressourcen-Explorer
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Untersuchen und Verwalten von Azure SQL-Ressourcen mit dem Azure-Ressourcen-Explorer
 
-In diesem Dokument erfahren Sie, wie Sie untersuchen und Verwalten von Azure SQL-Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanz-Ressourcen über das Azure-Ressourcen-Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+In diesem Dokument erfahren Sie, wie Sie Azure SQL Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanzen mit dem Azure-Ressourcen-Explorer in [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] untersuchen und verwalten können.
 
 >[!NOTE]
->Der Azure-Ressourcen-Explorer wird in der Vorschau von SQL Server-2019 im Oktober unterstützt. Danach können Sie die vorschauerweiterung über die installieren [Erweiterungs-Manager](extensions.md) oder über **Datei** > **Installieren eines Pakets aus der VSIX-Paket**.
+>Der Azure-Ressourcen-Explorer wird in der SQL Server 2019-Vorschauversion im Oktober unterstützt. Danach können Sie die Vorschauerweiterung über den [Erweiterungs-Manager](extensions.md) oder **Datei** > **Paket aus dem VSIX-Paket installieren** installieren.
 
 
-## <a name="connect-to-azure"></a>Verbinden mit Azure
+## <a name="connect-to-azure"></a>Herstellen einer Verbindung mit Azure
 
-Nach der Installation der SQL-Vorschau-Plug-in wird Sie ein Azure-Symbol in der linken Menüleiste angezeigt. Klicken Sie auf das Symbol, um die Azure-Ressourcen-Explorer zu öffnen. Wenn Sie das Azure-Symbol nicht sehen, klicken Sie mit der rechten Maustaste auf der linken Menüleiste, und wählen **Azure-Ressourcen-Explorer**.
+Nach der Installation des SQL-Vorschau-Plug-Ins wird ein Azure-Symbol in der linken Menüleiste angezeigt. Klicken Sie auf das Symbol, um den Azure-Ressourcen-Explorer zu öffnen. Wenn das Azure-Symbol nicht angezeigt wird, klicken Sie mit der rechten Maustaste auf die linke Menüleiste, und wählen Sie **Azure-Ressourcen-Explorer** aus.
 
-### <a name="add-an-azure-account"></a>Azure-Konto hinzufügen
+### <a name="add-an-azure-account"></a>Hinzufügen eines Azure-Kontos
 
-Um die SQL-Ressourcen, die mit einem Azure-Konto verknüpfte anzuzeigen, müssen Sie zunächst das Konto hinzufügen [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
+Zum Anzeigen der SQL-Ressourcen, die einem Azure-Konto zugeordnet sind, müssen Sie das Konto zuerst [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] hinzufügen.
 
-1. Open **verknüpfte Konten** Dialogfeld über das Konto-Management-Symbol auf der linken unteren oder über einen **melden Sie sich beim Azure...**  Link im Azure-Ressourcen-Explorer.
+1. Öffnen Sie das Dialogfeld **Verknüpfte Konten** über das Kontoverwaltungssymbol links unten oder über den Link **Bei Azure anmelden** im Azure-Ressourcen-Explorer.
 
-    ![Melden Sie sich beim Azure](media/azure-resource-explorer/sign-in-to-azure.png)
+    ![„Bei Azure anmelden“](media/azure-resource-explorer/sign-in-to-azure.png)
 
-2. In der **verknüpfte Konten** Dialogfeld klicken Sie auf **Hinzufügen eines Kontos**.
+2. Klicken Sie im Dialogfeld **Verknüpfte Konten** auf **Konto hinzufügen**.
 
-    ![Azure-Konto hinzufügen](media/azure-resource-explorer/add-an-azure-account.png)
+    ![Hinzufügen eines Azure-Kontos](media/azure-resource-explorer/add-an-azure-account.png)
 
-3. Klicken Sie auf **kopieren und öffnen Sie** , öffnen Sie den Browser für die Authentifizierung.
+3. Klicken Sie auf **Kopieren und öffnen**, um den Browser für die Authentifizierung zu öffnen.
 
-    ![Offene Authentifizierung-Seite im browser](media/azure-resource-explorer/open-authentication-in-browser.png)
+    ![Öffnen der Authentifizierungsseite im Browser](media/azure-resource-explorer/open-authentication-in-browser.png)
 
-4. Fügen Sie der **Benutzercode** in der Webseite und auf **Weiter** authentifizieren.
+4. Fügen Sie den **Benutzercode** auf der Webseite ein, und klicken Sie auf **Weiter**, um sich zu authentifizieren.
 
-    ![Im Browser authentifizieren](media/azure-resource-explorer/authenticate-in-browser.png)
+    ![Authentifizieren im Browser](media/azure-resource-explorer/authenticate-in-browser.png)
 
-5. In [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] sollte jetzt finden Sie die protokollierten im Azure-Konto in **verknüpfte Konten** Dialogfeld.
+5. In [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] sollte nun das angemeldete Azure-Konto im Dialogfeld **Verknüpfte Konten** angezeigt werden.
 
-    ![Angemeldeten Azure-Konto](media/azure-resource-explorer/signed-in-azure-account.png)
+    ![Angemeldetes Azure-Konto](media/azure-resource-explorer/signed-in-azure-account.png)
 
-### <a name="add-more-azure-accounts"></a>Fügen Sie weitere Azure-Konten
+### <a name="add-more-azure-accounts"></a>Hinzufügen weiterer Azure-Konten
 
-Mehrere Azure-Konten werden in unterstützt [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]. Um mehr über Azure-Konten hinzuzufügen, klicken Sie auf die Schaltfläche rechts oben **verknüpfte Konten** Dialogfeld, und führen Sie dieselben Schritte mit fügen Sie einen Azure-Konto-Abschnitt, um weitere Azure-Konten hinzuzufügen.
+In [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] werden mehrere Azure-Konten unterstützt. Wenn Sie weitere Azure-Konten hinzufügen möchten, klicken Sie auf die Schaltfläche rechts oben im Dialogfeld **Verknüpfte Konten**, und befolgen Sie dieselben Schritte wie im Abschnitt „Hinzufügen eines Azure-Kontos“, um weitere Azure-Konten hinzuzufügen.
 
-![Weitere Azure-Konto hinzufügen](media/azure-resource-explorer/add-more-azure-account.png)
+![Hinzufügen weiterer Azure-Konten](media/azure-resource-explorer/add-more-azure-account.png)
 
-### <a name="remove-an-azure-account"></a>Entfernen Sie ein Azure-Konto
+### <a name="remove-an-azure-account"></a>Entfernen eines Azure-Kontos
 
-So entfernen Sie ein vorhandenes Azure-Konto angemeldet
+So entfernen Sie ein vorhandenes, angemeldetes Azure-Konto:
 
-1. Open **verknüpfte Konten** Dialogfeld über das Konto-Management-Symbol in der linken unteren.
-2. Klicken Sie auf die **X** Schalfläche rechts neben dem Azure-Konto, um ihn zu entfernen.
+1. Öffnen Sie das Dialogfeld **Verknüpfte Konten** über das Kontoverwaltungssymbol links unten.
+2. Klicken Sie auf die Schaltfläche **X** rechts neben dem Azure-Konto, um es zu entfernen.
 
-    ![Azure-Konto entfernen](media/azure-resource-explorer/remove-azure-account.png)
+    ![Entfernen eines Azure-Kontos](media/azure-resource-explorer/remove-azure-account.png)
 
-## <a name="filter-subscription"></a>Abonnements filtern
+## <a name="filter-subscription"></a>Filtern von Abonnements
 
-Nach der Anmeldung mit einem Azure-Konto zugeordnet ist alle Abonnements im Azure-Ressourcen-Explorer, Azure-Konto in angezeigt. Sie können Abonnements für jede Azure-Konto filtern.
+Nachdem Sie sich bei einem Azure-Konto angemeldet haben, werden alle Abonnements, die diesem Azure-Konto zugeordnet sind, im Azure-Ressourcen-Explorer angezeigt. Sie können für jedes Azure-Konto Abonnements filtern.
 
-1. Klicken Sie auf die **Select Subscription** Schaltfläche auf der rechten Seite des Azure-Kontos.
+1. Klicken Sie rechts im Azure-Konto auf die Schaltfläche **Abonnement auswählen**.
 
-   ![Abonnements filtern](media/azure-resource-explorer/filter-subscription.png)
+   ![Filtern von Abonnements](media/azure-resource-explorer/filter-subscription.png)
 
-2. Wählen Sie die Kontrollkästchen für die Kontoabonnements, die Sie verwenden möchten, navigieren Sie aus, und klicken Sie dann auf **OK**.
+2. Aktivieren Sie die Kontrollkästchen für die Kontoabonnements, die Sie durchsuchen möchten, und klicken Sie dann auf **OK**.
 
    ![Auswählen des Abonnements](media/azure-resource-explorer/select-subscription.png)
 
-## <a name="explore-azure-sql-resources"></a>Entdecken Sie Azure SQL-Ressourcen
+## <a name="explore-azure-sql-resources"></a>Untersuchen von Azure SQL-Ressourcen
 
-Um eine Azure SQL-Ressource im Azure-Ressourcen-Explorer zu navigieren, erweitern Sie in der Azure-Konten und die Ressourcengruppe aus, geben.
+Um im Azure-Ressourcen-Explorer zu einer Azure SQL-Ressource zu navigieren, erweitern Sie die Gruppe mit Azure-Konten und Ressourcentyp.
 
-Azure-Ressourcen-Explorer unterstützt derzeit bei Azure SQL-Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanz.
+Der Azure-Ressourcen-Explorer unterstützt derzeit Azure SQL Server, Azure SQL-Datenbank und verwaltete Azure SQL-Instanzen.
 
-## <a name="connect-to-azure-sql-resources"></a>Eine Verbindung mit Azure SQL-Ressourcen
+## <a name="connect-to-azure-sql-resources"></a>Herstellen einer Verbindung mit Azure SQL-Ressourcen
 
-Azure-Ressourcen-Explorer ermöglichen den schnellen Zugriff, der Sie für SQL Server-Instanzen und Datenbanken für Abfrage und die Verwaltung von verbinden kann. 
+Der Azure-Ressourcen-Explorer ermöglicht einen schnellen Zugriff, der Ihnen das Herstellen von Verbindungen mit SQL Server-Instanzen und Datenbanken für die Abfrage und Verwaltung erleichtert. 
 
-1. Erkunden Sie die SQL-Ressource, die Sie in der Strukturansicht eine Verbindung mit herstellen möchten.
-2. Klicken Sie mit der rechten Maustaste auf die Ressource, und wählen Sie **Connect**, finden Sie auch die Schaltfläche "Verbinden" auf der rechten Seite der Ressource.
+1. Untersuchen Sie in der Strukturansicht die SQL-Ressource, mit der Sie eine Verbindung herstellen möchten.
+2. Klicken Sie mit der rechten Maustaste auf die Ressource, und wählen Sie **Verbinden** aus. Sie können auch die Schaltfläche „Verbinden“ auf der rechten Seite der Ressource verwenden.
 
-   ![Verbinden Sie mit Azure SQL-Ressource](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
+   ![Herstellen einer Verbindung mit einer Azure SQL-Ressource](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
 
-3. Im geöffneten **Verbindung** Dialogfeld Geben Sie Ihr Kennwort ein, und klicken Sie auf **Connect**.
+3. Geben Sie im geöffneten Dialogfeld **Verbindung** Ihr Kennwort ein, und klicken Sie auf **Verbinden**.
 
-   ![Dialogfeld "SQL-Verbindung"](media/azure-resource-explorer/sql-connection-dialog.png)
-4. Die **Server** Fenster wird automatisch die neue verbundene SQL Server/Datenbank geöffnet, nachdem die Verbindung erfolgreich hergestellt wurde.
+   ![SQL-Verbindungsdialogfeld](media/azure-resource-explorer/sql-connection-dialog.png)
+4. Nachdem die Verbindung erfolgreich hergestellt wurde, wird das Fenster **Server** automatisch mit der neu verbundenen SQL Server-Instanz/Datenbank geöffnet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Verwendung [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Azure SQL-Datenbank](quickstart-sql-database.md)
-- [Verwendung [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Daten in Azure SQL Data Warehouse](quickstart-sql-dw.md)
+- [Verwenden von [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)], um eine Verbindung mit einer Azure SQL-Datenbank-Instanz herzustellen und sie abzufragen](quickstart-sql-database.md)
+- [Verwenden von [!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)], um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen](quickstart-sql-dw.md)

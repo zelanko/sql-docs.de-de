@@ -1,7 +1,7 @@
 ---
 title: Erweiterbarkeits-APIs
 titleSuffix: Azure Data Studio
-description: Weitere Informationen Sie zu den Erweiterungs-APIs für Azure Data Studio
+description: Weitere Informationen zu den Erweiterbarkeits-APIs für Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,30 +11,30 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959626"
 ---
-# <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio-Erweiterbarkeits-APIs
+# <a name="azure-data-studio-extensibility-apis"></a>Erweiterbarkeits-APIs für Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] Stellt eine API, die Erweiterungen für die Interaktion mit anderen Teilen von Azure Data Studio, z. B. die Objekt-Explorer verwenden können. Diese APIs stehen über die [ `src/sql/sqlops.d.ts` ](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) Datei, und werden unten beschrieben.
+[!INCLUDE[name-sos](../includes/name-sos.md)] bietet eine API, mit der Erweiterungen mit anderen Teilen von Azure Data Studio interagieren können, z.B. dem Objekt-Explorer. Diese APIs sind in der [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts)-Datei verfügbar und werden nachfolgend beschrieben.
 
 ## <a name="connection-management"></a>Verbindungsverwaltung
 `sqlops.connection`
 
 ### <a name="top-level-functions"></a>Funktionen der obersten Ebene
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` Ruft die aktuelle Verbindung basierend auf dem aktiven Editor oder die Objekt-Explorer-Auswahl ab.
+- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` Ruft die aktuelle Verbindung auf Grundlage des aktiven Editors oder der Objekt-Explorer-Auswahl ab.
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` Ruft eine Liste der Verbindungen des Benutzers, die aktiv sind. Gibt eine leere Liste zurück, wenn es keine solche Verbindungen.
+- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` Ruft eine Liste aller aktiven Verbindungen des Benutzers ab. Gibt eine leere Liste zurück, wenn keine solchen Verbindungen vorhanden sind.
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Ruft ein Wörterbuch mit den Anmeldeinformationen, die mit einer Verbindung verknüpft sind. Diese andernfalls als Teil der Optionen-Wörterbuch unter zurückgegeben werden würde eine `sqlops.connection.Connection` Objekt jedoch erhalten, die aus dem Objekt entfernt wurde. 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Ruft ein Wörterbuch ab, das die einer Verbindung zugeordneten Anmeldeinformationen enthält. Diese würden andernfalls als Teil des Optionswörterbuchs unter einem `sqlops.connection.Connection`-Objekt zurückgegeben, aber aus diesem Objekt entfernt werden. 
 
 ### `Connection`
 - `options: { [name: string]: string }` Das Wörterbuch der Verbindungsoptionen
-- `providerName: string` Der Name des Verbindungs-Anbieters (z.B.) "MSSQL")
+- `providerName: string` Der Name des Verbindungsanbieters (z.B. „MSSQL“)
 - `connectionId: string` Der eindeutige Bezeichner für die Verbindung
 
 ### <a name="example-code"></a>Beispielcode
@@ -64,16 +64,16 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>Funktionen der obersten Ebene
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Erhalten Sie einen Objekt-Explorer-Knoten, der der angegebenen Verbindung und der Pfad entspricht. Wenn kein Pfad angegeben ist, wird der Knoten den obersten Ebene für die angegebene Verbindung zurückgegeben. Wenn kein Knoten im angegebenen Pfad vorhanden ist, gibt es zurück `undefined`. Hinweis: Die `nodePath` für ein Objekt von der SQL-Tools-Dienst-Back-End generiert wird und schwer zu manuell erstellen. Zukünftige Verbesserungen der API können Sie zum Abrufen von Knotens basierend auf Metadaten, die Sie über den Knoten, z. B. Name, Typ und Schema bereitstellen.
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Abrufen eines Objekt-Explorer-Knotens, der der angegebenen Verbindung und dem angegebenen Pfad entspricht. Wenn kein Pfad angegeben wird, wird der Knoten der obersten Ebene für die angegebene Verbindung zurückgegeben. Wenn im angegebenen Pfad kein Knoten vorhanden ist, wird `undefined` zurückgegeben. Hinweis: Der `nodePath` für ein Objekt wird vom SQL Tools Service-Back-End generiert und ist schwer manuell zu konstruieren. Zukünftige API-Verbesserungen werden Ihnen ermöglichen, Knoten basierend auf Metadaten abzurufen, die Sie über den Knoten angeben, z.B. Name, Typ und Schema.
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Rufen Sie alle aktive Knoten für die Objekt-Explorer-Verbindung.
+- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Abrufen aller aktiven Objekt-Explorer-Verbindungsknoten.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Suchen Sie alle Objekt-Explorer-Knoten, die mit den angegebenen Metadaten überein. Die `schema`, `database`, und `parentObjectNames` Argumente muss `undefined` Wenn sie nicht anwendbar sind. `parentObjectNames` ist eine Liste der nicht mit der Datenbank übergeordnete Objekte, von der höchsten zur niedrigsten Ebene im Objekt-Explorer, der das gewünschte Objekt wird an. Bei der Suche für eine Spalte "column1", der eine Tabelle "schema1.table1" und die Datenbank "database1" angehört, mit dem Verbindungs-ID beispielsweise `connectionId`, rufen Sie `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Siehe auch die [Liste von Typen, die von Azure Data Studio standardmäßig unterstützt](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) für diese API-Aufruf.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Suchen aller Objekt-Explorer-Knoten, die den angegebenen Metadaten entsprechen. Die Argumente `schema`, `database` und `parentObjectNames` sollten `undefined` sein, wenn sie nicht anwendbar sind. `parentObjectNames` ist eine Liste im Objekt-Explorer von übergeordneten Nicht-Datenbank-Objekten, unter denen sich das gewünschte Objekt befindet, von der höchsten bis zur niedrigsten Ebene. Wenn Sie z.B. nach der Spalte „column1“ suchen, die zur Tabelle „schema1.table1“ und der Datenbank „database1“ mit Verbindungs-ID `connectionId` gehört, rufen Sie `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])` auf. Beachten Sie auch die [Liste der Typen, die Azure Data Studio standardmäßig für diesen API-Aufruf unterstützt](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API).
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
-- `connectionId: string` Die Id der Verbindung, der unter der Knoten vorhanden ist
+- `connectionId: string` Die ID der Verbindung, unter der der Knoten vorhanden ist.
 
-- `nodePath: string` Der Pfad des Knotens wie bei einem Aufruf der `getNode` Funktion.
+- `nodePath: string` Der Pfad des Knotens, der für einen Aufruf der `getNode`-Funktion verwendet wird.
 
 - `nodeType: string` Eine Zeichenfolge, die den Typ des Knotens darstellt.
 
@@ -81,23 +81,23 @@ credentials: {
 
 - `nodeStatus: string` Eine Zeichenfolge, die den Status des Knotens darstellt.
 
-- `label: string` Die Bezeichnung für den Knoten, wie er angezeigt wird, im Objekt-Explorer
+- `label: string` Die Bezeichnung für den Knoten, die im Objekt-Explorer angezeigt wird.
 
-- `isLeaf: boolean` Gibt an, ob der Knoten um einen Blattknoten handelt, und aus diesem Grund hat keine untergeordneten Elemente
+- `isLeaf: boolean` Gibt an, ob der Knoten ein Blattknoten ist und daher keine untergeordneten Elemente aufweist.
 
-- `metadata: sqlops.ObjectMetadata` Metadaten zur Beschreibung des Objekts, das von diesem Knoten dargestellt wird.
+- `metadata: sqlops.ObjectMetadata` Metadaten, die das von diesem Knoten dargestellte Objekt beschreiben.
 
-- `errorMessage: string` Meldung, die angezeigt wird, wenn der Knoten in einem Fehlerzustand ist
+- `errorMessage: string` Meldung, die angezeigt wird, wenn sich der Knoten in einem Fehlerzustand befindet.
 
-- `isExpanded(): Thenable<boolean>` Gibt an, ob der Knoten im Objekt-Explorer gerade erweitert wird
+- `isExpanded(): Thenable<boolean>` Gibt an, ob der Knoten derzeit im Objekt-Explorer erweitert ist.
 
-- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` Festlegen Sie, ob der Knoten erweitert oder reduziert ist. Wenn der Status auf "None" festgelegt ist, wird der Knoten nicht geändert werden.
+- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` Festlegen, ob der Knoten erweitert oder reduziert wird. Wenn der Status auf „None“ (Keine) festgelegt ist, wird der Knoten nicht geändert.
 
-- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Festlegen Sie, ob der Knoten ausgewählt ist. Wenn `clearOtherSelections` ist "true" fest, die keine andere Auswahl zu löschen, wenn Sie die neue Auswahl vornehmen. Wenn sie falsch ist, lassen Sie keine vorhandenen Auswahl. `clearOtherSelections` Der Standardwert ist true, wenn `selected` ist "true" und "false", wenn `selected` ist "false".
+- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Festlegen, ob der Knoten ausgewählt ist. Wenn `clearOtherSelections` „true“ ist, löschen Sie jede andere Auswahl, wenn Sie die neue Auswahl treffen. Wenn der Wert „false“ ist, behalten Sie jede vorhandene Auswahl bei. `clearOtherSelections` hat den Standardwert „true“, wenn `selected` „true“ ist, und „false“, wenn `selected` „false“ ist.
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Erhalten Sie alle untergeordneten Knoten dieses Knotens. Gibt eine leere Liste zurück, wenn keine untergeordneten Elemente vorhanden sind.
+- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Abrufen aller untergeordneten Knoten dieses Knotens. Gibt eine leere Liste zurück, wenn keine untergeordneten Knoten vorhanden sind.
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Rufen Sie den übergeordneten Knoten dieses Knotens. Gibt nicht definiert, wenn es kein übergeordnetes Element.
+- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Abrufen des übergeordneten Knotens dieses Knotens. Gibt „undefined“ (undefiniert) zurück, wenn kein übergeordneter Knoten vorhanden ist.
 
 ### <a name="example-code"></a>Beispielcode
 
@@ -159,6 +159,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>Vorgeschlagene APIs
 
-Wir haben vorgeschlagene APIs verwendet, um das Erweiterungen zum Anzeigen der benutzerdefinierten Benutzeroberfläche in den Dialogfeldern und Assistenten Dokumentregisterkarten, neben anderen Funktionen können hinzugefügt werden. Finden Sie unter den [vorgeschlagenen API-Typendatei](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts) Weitere Dokumentationen, aber Bedenken Sie, dass diese APIs können jederzeit geändert werden. Beispiele für die Verwendung einiger dieser APIs finden Sie in der ["Sqlservices" Beispiel-Erweiterung](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Wir haben vorgeschlagene APIs hinzugefügt, um Erweiterungen neben anderen Funktionen die Anzeige benutzerdefinierter Benutzeroberflächen in Dialogfeldern, Assistenten und Dokumentregisterkarten zu ermöglichen. Weitere Dokumentation finden Sie in der [Datei der vorgeschlagenen API-Typen](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts). Beachten Sie jedoch, dass diese APIs jederzeit geändert werden können. Beispiele für die Verwendung einiger dieser APIs finden Sie in der [Beispielerweiterung „sqlservices“](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
 
 
