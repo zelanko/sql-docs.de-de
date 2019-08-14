@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215637"
 ---
 ## <a name="connect-locally"></a>Lokal verbinden
@@ -52,7 +52,7 @@ Mit den folgenden Schritten wird eine neue Datenbank mit dem Namen `TestDB` erst
    ```
 
 > [!TIP]
-> Weitere Informationen zum Schreiben von Transact-SQL-Anweisungen und Abfragen finden Sie unter [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Um mehr über das Schreiben von Transact-SQL-Anweisungen und -Abfragen zu erfahren, lesen Sie das[Tutorial: Schreiben von Transact-SQL-Anweisungen](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Einfügen von Daten
 
@@ -108,20 +108,20 @@ QUIT
 
 ## <a name="performance-best-practices"></a>Bewährte Methoden für Leistung
 
-Überprüfen Sie nach der Installation von SQL Server unter Linux die bewährten Methoden zum Konfigurieren von Linux und SQL Server zur Verbesserung der Leistung für produktionsszenarios. Weitere Informationen finden Sie unter [bewährte Methoden für Leistung und von Konfigurationsrichtlinien für das SQL Server unter Linux](../linux/sql-server-linux-performance-best-practices.md).
+Nachdem Sie SQL Server für Linux installiert haben, sehen Sie sich die bewährten Methoden für das Konfigurieren von Linux und SQL Server an, um die Leistung für Produktionsszenarien zu verbessern. Weitere Informationen finden Sie unter [Bewährte Methoden für die Leistung und Konfigurationsrichtlinien für SQL Server für Linux](../linux/sql-server-linux-performance-best-practices.md).
 
-## <a name="cross-platform-data-tools"></a>Cross-Platform-Datentools
+## <a name="cross-platform-data-tools"></a>Plattformübergreifende Datentools
 
-Zusätzlich zu **Sqlcmd**, können Sie die folgenden plattformübergreifenden Tools zum Verwalten von SQL Server:
+Zusätzlich zu **sqlcmd** können Sie die folgenden plattformübergreifenden Tools verwenden, um SQL Server zu verwalten:
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | Eine plattformübergreifende GUI-Datenbank-Verwaltungsdienstprogramm. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Eine plattformübergreifende GUI-Code-Editor ausführen, Transact-SQL-Anweisungen mit der Mssql-Erweiterung. |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Ein plattformübergreifendes Automatisierungs- und Tool basierend auf Cmdlets. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Eine plattformübergreifende Anwendung mit grafischer Benutzeroberfläche zur Datenbankverwaltung. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Ein plattformübergreifender Code-Editor mit grafischer Benutzeroberfläche, in dem Transact-SQL-Anweisungen mit der mssql-Erweiterung ausgeführt werden. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Ein plattformübergreifendes Automatisierungs- und Konfigurationstool, das auf-Cmdlets basiert. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Eine plattformübergreifende Befehlszeilenschnittstelle zum Ausführen von Transact-SQL-Befehlen. |
 
-## <a name="connecting-from-windows"></a>Herstellen einer Verbindung von Windows
+## <a name="connecting-from-windows"></a>Herstellen einer Verbindung über Windows
 
 SQL Server-Tools unter Windows stellen eine Verbindung mit SQL Server-Instanzen unter Linux auf die gleiche Weise her, wie sie sich mit einer beliebigen Remoteinstanz von SQL Server verbinden würden.
 
@@ -133,7 +133,7 @@ Andere Tools, die unter Windows ausgeführt werden, die sich aber mit SQL Server
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="other-deployment-scenarios"></a>Andere Szenarien
+## <a name="other-deployment-scenarios"></a>Weitere Bereitstellungsszenarien
 
 Weitere Installationsszenarios finden Sie in den folgenden Ressourcen:
 
@@ -145,9 +145,9 @@ Weitere Installationsszenarios finden Sie in den folgenden Ressourcen:
 | [Offlineinstallation](../linux/sql-server-linux-setup.md#offline) | Erfahren Sie, wie Sie die Pakete für die Offlineinstallation manuell herunterladen können. |
 
 > [!TIP]
-> Antworten auf häufig gestellte Fragen finden Sie unter den [SQL Server unter Linux – häufig gestellte Fragen](../linux/sql-server-linux-faq.md).
+> Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server für Linux](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 > [!div class="nextstepaction"]
-> [Untersuchen Sie die Lernprogramme für SQL Server unter Linux](../linux/sql-server-linux-migrate-restore-database.md)
+> [Erkunden der Tutorials für SQL Server für Linux](../linux/sql-server-linux-migrate-restore-database.md)

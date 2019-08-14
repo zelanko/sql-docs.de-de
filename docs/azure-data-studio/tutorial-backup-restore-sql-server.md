@@ -1,7 +1,7 @@
 ---
 title: Sichern und Wiederherstellen einer Datenbank
 titleSuffix: Azure Data Studio
-description: Informationen Sie zum Sichern und Wiederherstellen einer Datenbank mithilfe von Azure Data Studio
+description: Erfahren Sie, wie Sie eine Datenbank mit Azure Data Studio sichern und wiederherstellen.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,80 +11,80 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 77679106577cd8f8374f932d8ddd22644beb63d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959100"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sichern und Wiederherstellen von Datenbanken mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sichern und Wiederherstellen von Datenbanken mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-In diesem Tutorial erfahren Sie, wie Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] auf:
+In diesem Tutorial lernen, wie Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] für folgende Vorgänge verwenden:
 > [!div class="checklist"]
 > * Sichern einer Datenbank 
-> * Anzeigen des Status den Sicherungen
-> * Generiert das Skript verwendet, um die Sicherung durchzuführen.
+> * Anzeigen des Sicherungsstatus
+> * Generieren des Skripts, mit dem die Sicherung ausgeführt wird
 > * Wiederherstellen einer Datenbank
-> * Anzeigen des Status des Wiederherstellungstasks
+> * Anzeigen des Status der Wiederherstellungsaufgabe
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-In diesem Tutorial ist die SQL Server *"tutorialdb"* . Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
+Für dieses Tutorial ist die SQL Server-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie einen der folgenden Schnellstarts vollständig aus:
 
-- [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-Dieses Lernprogramm erfordert die Verbindung mit einer SQL Server-Datenbank. Azure SQL-Datenbank hat Sicherungen, automatisiert werden, damit Azure Data Studio keine Azure SQL-Datenbank sicherungs- und Wiederherstellungsvorgänge auszuführen. Weitere Informationen finden Sie unter [erfahren Sie mehr über die automatischen Sicherungen von SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+In diesem Tutorial muss eine Verbindung mit einer SQL Server-Datenbank hergestellt werden. Azure SQL-Datenbank hat automatisierte Sicherungen, sodass Azure Data Studio keine Azure SQL-Datenbank-Sicherung und -Wiederherstellung ausführt. Ausführliche Informationen finden Sie unter [Automatisierte Sicherungen](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="backup-a-database"></a>Sichern einer Datenbank
 
-1. Öffnen Sie das Datenbank-Dashboard "tutorialdb" (Öffnen Sie die **Server** Randleiste (**STRG + G**), erweitern Sie **Datenbanken**, mit der rechten Maustaste **"tutorialdb"** , und wählen Sie **verwalten**).
+1. Öffnen Sie das Dashboard der TutorialDB-Datenbank (öffnen Sie die Randleiste **SERVER** (**STRG+G**), erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf **TutorialDB**, und wählen Sie **Verwalten** aus).
 
-2. Öffnen der **datenbanksicherung** Dialogfeld (klicken Sie auf **Sicherung** auf die **Aufgaben** Widget).
+2. Öffnen Sie das Dialogfeld **Datenbank sichern** (klicken Sie auf **Sichern** auf dem Widget **Aufgaben**).
 
-   ![Aufgaben-widget](./media/tutorial-backup-restore-sql-server/tasks.png)
+   ![Widget „Aufgaben“](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. In diesem Tutorial verwendet die Standard-Sicherungsoptionen, klicken Sie daher auf **Backup**.
-   ![Dialogfeld-Sicherung](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
+3. In diesem Tutorial werden die Standardsicherungsoptionen verwendet, klicken Sie deshalb auf **Sichern**.
+   ![Dialogfeld für Sichern](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-Nach dem Klicken auf **Backup**, **datenbanksicherung** Dialogfeld nicht mehr angezeigt, und der Sicherungsvorgang beginnt.
+Nachdem Sie auf **Sichern** geklickt haben, wird das Dialogfeld **Datenbank sichern** ausgeblendet, und der Sicherungsvorgang beginnt.
 
-## <a name="view-the-backup-status-and-view-the-backup-script"></a>Zeigen Sie des Status den Sicherungen an und zeigen das sicherungs-Skript an
+## <a name="view-the-backup-status-and-view-the-backup-script"></a>Anzeigen des Sicherungsstatus und Anzeigen des Sicherungsskripts
 
-1. Öffnen der **Taskverlauf** Randleiste, indem Sie auf das Uhrsymbol auf der *Aktionsleiste* , oder drücken Sie **STRG + T**.
+1. Öffnen Sie die Randleiste **Aufgabenverlauf**, indem Sie auf das Uhrsymbol auf der *Aktionsleiste* klicken oder **STRG+T** drücken.
 
-   ![Taskverlauf](./media/tutorial-backup-restore-sql-server/task-history.png)
+   ![Aufgabenverlauf](./media/tutorial-backup-restore-sql-server/task-history.png)
 
-2. Um das sicherungs-Skript im Editor anzuzeigen, Maustaste **Sicherungsdatenbank erfolgreich** , und wählen Sie **Skript**.
+2. Um das Sicherungsskript im Editor anzuzeigen, klicken Sie mit der rechten Maustaste auf **Datenbank sichern erfolgreich**, und wählen Sie **Skript** aus.
 
    ![Sicherungsskript](./media/tutorial-backup-restore-sql-server/task-script.png) 
 
 ## <a name="restore-a-database-from-a-backup-file"></a>Wiederherstellen einer Datenbank aus einer Sicherungsdatei
 
 
-1. Öffnen der **Server** Randleiste (**STRG + G**) mit der rechten Maustaste auf den Server, und wählen Sie **verwalten**. 
+1. Öffnen Sie die Randleiste **SERVER** (**STRG+ G**), klicken Sie mit der rechten Maustaste auf Ihren Server, und wählen Sie **Verwalten** aus. 
 
-2. Öffnen der **Wiederherstellen einer Datenbank** Dialogfeld (klicken Sie auf **wiederherstellen** auf die **Aufgaben** Widget).
+2. Öffnen Sie das Dialogfeld **Datenbank wiederherstellen** (klicken Sie auf **Wiederherstellen** auf dem Widget **Aufgaben**).
 
-2. Wählen Sie **Sicherungsdatei** in die **wiederherstellen aus** Feld. 
+2. Wählen Sie **Sicherungsdatei** im Feld **Wiederherstellen von** aus. 
 
-3. Klicken Sie auf die Auslassungspunkte (...) in der **Dateipfad der Zertifikatsicherung** ein, und wählen Sie die neuesten Sicherungsdatei für *"tutorialdb"* .
+3. Klicken Sie auf die Auslassungspunkte (...) im Feld**Pfad der Sicherungsdatei**, und wählen Sie die letzte Sicherungsdatei für *TutorialDB* aus.
 
-3. Typ **TutorialDB_Restored** in die **Zieldatenbank** -Feld in der **Ziel** Abschnitt aus, um die Sicherungsdatei in einer neuen Datenbank wiederherzustellen.
+3. Geben Sie **TutorialDB_Restored** in das Feld **Zieldatenbank** im Abschnitt **Ziel** ein, um die Sicherungsdatei in einer neuen Datenbank wiederherzustellen.
 
    ![Wiederherstellungsprozess](./media/tutorial-backup-restore-sql-server/restore.png)
 
-4. Klicken Sie auf **wiederherstellen**
+4. Klicken Sie auf **Wiederherstellen**.
 
-5. Drücken Sie zum Anzeigen des Status des Wiederherstellungsvorgangs **STRG + T** zum Öffnen der **Taskverlauf** Randleiste.
+5. Um den Status des Wiederherstellungsvorgangs anzuzeigen, drücken Sie **STRG+T**, um die Randleiste **Aufgabenverlauf** zu öffnen.
 
    ![Wiederherstellungsprozess](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
 
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
 > * Sichern einer Datenbank 
-> * Anzeigen des Status den Sicherungen
-> * Generiert das Skript verwendet, um die Sicherung durchzuführen.
+> * Anzeigen des Sicherungsstatus
+> * Generieren des Skripts, mit dem die Sicherung ausgeführt wird
 > * Wiederherstellen einer Datenbank
-> * Anzeigen des Status des Wiederherstellungstasks
+> * Anzeigen des Status der Wiederherstellungsaufgabe
 

@@ -1,7 +1,7 @@
 ---
-title: 'Schnellstart: Verbinden Sie und Fragen Sie einer Azure SQL Data Warehouse ab'
+title: 'Schnellstart: Herstellen einer Verbindung mit und Abfragen einer Azure SQL Data Warehouse-Datenbank'
 titleSuffix: Azure Data Studio
-description: Dieser schnellstartanleitung erfahren Sie, wie mit Azure Data Studio eine Verbindung mit einer Azure SQL Data Warehouse, und führen Sie eine Abfrage
+description: In diesem Schnellstart erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit einer Azure SQL Data Warehouse-Datenbank herstellen und eine Abfrage ausführen.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,58 +11,58 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959406"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden und Abfragen von Daten in Azure SQL Data Warehouse
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Schnellstart: Verwenden von [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit Daten in Azure SQL Data Warehouse herzustellen und sie abzufragen
 
-Dieser Schnellstart veranschaulicht, wie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Verbinden mit Azure SQL Datawarehouse, und anschließend mithilfe von Transact-SQL-Anweisungen erstellen, einfügen, und wählen Sie Daten aus. 
+In diesem Schnellstart erfahren Sie, wie Sie mit [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit Azure SQL Data Warehouse herstellen und anschließend Transact-SQL-Anweisungen verwenden, um Daten zu erstellen, einzufügen und auszuwählen. 
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
-Um diesen Schnellstart abzuschließen, müssen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], und eine Azure SQL Datawarehouse.
+## <a name="prerequisites"></a>Voraussetzungen
+Um diesen Schnellstart ausführen zu können, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] und eine Azure SQL Data Warehouse-Datenbank.
 
-- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
+- [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-Wenn Sie eine SQL Datawarehouse noch nicht, finden Sie unter [Erstellen eines SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Wenn Sie noch keine SQL Data Warehouse-Datenbank haben, lesen Sie [Erstellen einer Azure SQL Data Warehouse-Instanz](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
-Denken Sie daran, den Servernamen und Anmeldeinformationen!
+Merken Sie sich den Servernamen und die Anmeldeinformationen!
 
 
-## <a name="connect-to-your-data-warehouse"></a>Verbinden Sie mit Ihrer Datawarehouse
+## <a name="connect-to-your-data-warehouse"></a>Herstellen einer Verbindung mit Ihrer Data Warehouse-Datenbank
 
-Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen einer Verbindung mit Ihrem Azure SQL Data Warehouse-Server.
+Verwenden Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], um eine Verbindung mit Ihrem Azure SQL Data Warehouse-Server herzustellen.
 
-1. Der ersten Ausführung [!INCLUDE[name-sos](../includes/name-sos-short.md)] der **Verbindung** Seite sollte zu öffnen. Wenn Sie nicht angezeigt wird der **Verbindung** auf **Verbindung hinzufügen**, oder die **neue Verbindung** Symbol in der **Server** Randleiste:
+1. Wenn Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum ersten Mal ausführen, sollte die Seite **Verbindung** geöffnet werden. Wird die Seite **Verbindung** nicht angezeigt, klicken Sie auf **Verbindung hinzufügen**, oder klicken Sie in der Randleiste **SERVER** auf das Symbol **Neue Verbindung**:
    
-   ![Symbol "neue Verbindung"](media/quickstart-sql-dw/new-connection-icon.png)
+   ![Symbol „Neue Verbindung“](media/quickstart-sql-dw/new-connection-icon.png)
 
-2. In diesem Artikel wird *SQL-Anmeldung*, aber *Windows-Authentifizierung* wird ebenfalls unterstützt. Geben Sie die Felder, die wie folgt mithilfe der Servername, Benutzername und das Kennwort für *Ihre* Azure SQL-Server:
+2. In diesem Artikel wird die *SQL-Anmeldung* verwendet, aber auch die *Windows-Authentifizierung* wird unterstützt. Füllen Sie die Felder wie folgt aus, wozu Sie den Servernamen, den Benutzernamen und das Kennwort für *Ihre* Azure SQL Server-Instanz verwenden:
 
-   | Einstellung       | Empfohlener Wert | Description |
+   | Einstellung       | Vorgeschlagener Wert | und Beschreibung |
    | ------------ | ------------------ | ------------------------------------------------- | 
-   | **Servername** | Der vollqualifizierte Servername | Der Name sollte etwa wie folgt sein: **sqldwsample.database.windows.net** |
+   | **Servername** | Der vollqualifizierte Servername | Der Name sollte in etwa wie folgt lauten: **sqldwsample.database.windows.net** |
    | **Authentifizierung** | SQL-Anmeldung| In diesem Tutorial wird SQL-Authentifizierung verwendet. |
-   | **Benutzername** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
+   | **User name** | Das Konto des Serveradministrators | Dabei handelt es sich um das Konto, das Sie beim Erstellen des Servers angegeben haben. |
    | **Kennwort (SQL-Anmeldung)** | Das Kennwort für das Konto des Serveradministrators | Dabei handelt es sich um das Kennwort, das Sie beim Erstellen des Servers angegeben haben. |
-   | **Kennwort speichern** | Ja oder Nein | Wählen Sie Ja aus, wenn Sie nicht jedes Mal das Kennwort eingeben möchten. |
+   | **Kennwort speichern** | Ja oder Nein | Wählen Sie „Ja“ aus, wenn Sie Ihr Kennwort nicht jedes Mal eingeben möchten. |
    | **Datenbankname** | *Leer lassen* | Dies ist der Name der Datenbank, mit der eine Verbindung hergestellt werden soll. |
-   | **Gruppe "Server"** | Wählen Sie<Default> | Wenn Sie eine Servergruppe erstellt haben, können Sie auf eine bestimmte Servergruppe festlegen. | 
+   | **Servergruppe** | <Default> auswählen | Wenn Sie eine Servergruppe erstellt haben, können Sie dieses Feld auf eine bestimmte Servergruppe festlegen. | 
 
-   ![Symbol "neue Verbindung"](media/quickstart-sql-dw/new-connection-screen.png) 
+   ![Symbol „Neue Verbindung“](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Wenn es sich bei Ihrem Server eine Firewallregel mit dem Azure Data Studio eine Verbindung herstellen, sodass keine der **Firewallregel erstellen** -Formular wird geöffnet. Führen Sie das Formular, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Wenn der Server nicht über eine Firewallregel verfügt, die Azure Data Studio ermöglicht, eine Verbindung herzustellen, wird das Formular **Neue Firewallregel erstellen** geöffnet. Füllen Sie das Formular aus, um eine neue Firewallregel zu erstellen. Weitere Informationen finden Sie unter [Firewallregeln](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Neue Firewallregel](media/quickstart-sql-dw/firewall.png)  
 
-4. Nach der erfolgreichen Verbindung von Ihrem Server, die in der geöffnet wird die *Server* Randleiste.
+4. Nachdem die Verbindung erfolgreich hergestellt wurde, wird Ihr Server in der Randleiste *SERVER* geöffnet.
 
-## <a name="create-the-tutorial-data-warehouse"></a>Erstellen Sie das Tutorial Datawarehouse
-1. Klicken Sie mit der rechten Maustaste auf Ihrem Server, in dem Objekt-Explorer, und wählen Sie **neue Abfrage.**
+## <a name="create-the-tutorial-data-warehouse"></a>Erstellen der Data Warehouse-Datenbank für das Tutorial
+1. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf Ihren Server, und wählen Sie **Neue Abfrage** aus.
 
-1. Fügen Sie den folgenden Codeausschnitt in der Abfrage-Editor, und klicken Sie auf **ausführen**:
+1. Fügen Sie den folgenden Codeausschnitt in den Abfrage-Editor ein, und klicken Sie auf **Ausführen**:
 
    ```sql
     IF NOT EXISTS (
@@ -80,17 +80,17 @@ Verwendung [!INCLUDE[name-sos](../includes/name-sos-short.md)] zum Herstellen ei
 
 ## <a name="create-a-table"></a>Erstellen einer Tabelle
 
-Abfrage-Editor immer noch verbunden ist die *master* -Datenbank, aber wir möchten eine Tabelle in der *"tutorialdb"* Datenbank. 
+Der Abfrage-Editor ist immer noch mit der Datenbank *master* verbunden, aber wir möchten eine Tabelle in der Datenbank *TutorialDB* erstellen. 
 
-1. Ändern den Verbindungskontext für **"tutorialdb"** :
+1. Ändern Sie den Verbindungskontext in **TutorialDB**:
 
    ![Kontext ändern](media/quickstart-sql-database/change-context.png)
 
 
-1. Fügen Sie den folgenden Codeausschnitt in der Abfrage-Editor, und klicken Sie auf **ausführen**:
+1. Fügen Sie den folgenden Codeausschnitt in den Abfrage-Editor ein, und klicken Sie auf **Ausführen**:
 
    > [!NOTE]
-   > Sie können fügen Sie diese Option, um, oder überschreiben die vorherige Abfrage in Editor. Beachten Sie, dass beim Klicken auf **ausführen** führt nur die Abfrage, die ausgewählt ist. Wenn nichts ausgewählt ist, durch Klicken auf **ausführen** alle Abfragen im Editor ausgeführt.
+   > Sie können diesen Codeausschnitt im Editor an die vorherige Abfrage anfügen oder überschreiben. Beachten Sie, dass beim Klicken auf **Ausführen** nur die ausgewählte Abfrage ausgeführt wird. Wenn nichts ausgewählt ist, werden beim Klicken auf **Ausführen** alle Abfragen im Editor ausgeführt.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -112,7 +112,7 @@ Abfrage-Editor immer noch verbunden ist die *master* -Datenbank, aber wir möcht
 
 ## <a name="insert-rows"></a>Einfügen von Zeilen
 
-1. Fügen Sie den folgenden Codeausschnitt in der Abfrage-Editor, und klicken Sie auf **ausführen**:
+1. Fügen Sie den folgenden Codeausschnitt in den Abfrage-Editor ein, und klicken Sie auf **Ausführen**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -125,25 +125,25 @@ Abfrage-Editor immer noch verbunden ist die *master* -Datenbank, aber wir möcht
    ```
 
 
-## <a name="view-the-result"></a>Das Ergebnis anzeigen
-1. Fügen Sie den folgenden Codeausschnitt in der Abfrage-Editor, und klicken Sie auf **ausführen**:
+## <a name="view-the-result"></a>Anzeigen des Ergebnisses
+1. Fügen Sie den folgenden Codeausschnitt in den Abfrage-Editor ein, und klicken Sie auf **Ausführen**:
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
 
-1. Die Ergebnisse der Abfrage werden angezeigt:
+1. Die Abfrageergebnisse werden angezeigt:
 
-   ![Select-Ergebnisse](media/quickstart-sql-dw/select-results.png)
+   ![Select-Ergebnis](media/quickstart-sql-dw/select-results.png)
 
 
 ## <a name="clean-up-resources"></a>Bereinigen von Ressourcen
 
-Weitere Artikel in dieser Sammlung bauen auf diesem Schnellstart auf. Wenn Sie auf Weiter mit nachfolgenden Schnellstarts arbeiten möchten, nicht bereinigen die Ressourcen, die in diesem Schnellstart erstellt. Wenn Sie nicht beabsichtigen, um den Vorgang fortzusetzen, verwenden Sie die folgenden Schritte aus, um erstellten Ressourcen dieses Schnellstarts im Azure-Portal löschen.
-Bereinigen Sie Ressourcen durch Löschen der Ressourcengruppe, die Sie nicht mehr benötigen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Andere Artikel in dieser Sammlung bauen auf diesem Schnellstart auf. Wenn Sie die Absicht haben, mit den nachfolgenden Schnellstarts weiterzuarbeiten, sollten Sie die in diesem Schnellstart erstellten Ressourcen nicht bereinigen. Wenn Sie nicht weiterarbeiten möchten, führen Sie im Azure-Portal die folgenden Schritte aus, um die Ressourcen zu löschen, die in diesem Schnellstart erstellt wurden.
+Bereinigen Sie die Ressourcen, indem Sie die Ressourcengruppen löschen, die Sie nicht mehr benötigen. Weitere Informationen finden Sie unter [Bereinigen von Ressourcen](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nun, dass Sie erfolgreich eine Verbindung ein Azure SQL Datawarehouse hergestellt haben und eine Abfrage ausgeführt haben, probieren Sie die [Code-Editor-Tutorials](tutorial-sql-editor.md).
+Nachdem Sie erfolgreich eine Verbindung mit einer Azure SQL Data Warehouse-Datenbank hergestellt und eine Abfrage ausgeführt haben, wechseln Sie zum [Tutorial zum Code-Editor](tutorial-sql-editor.md).

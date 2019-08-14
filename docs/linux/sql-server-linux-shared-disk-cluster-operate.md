@@ -1,6 +1,6 @@
 ---
 title: Ausführen einer Failoverclusterinstanz – SQL Server unter Linux
-description: In diesem Artikel wird erläutert, wie eine SQL-Server-Failoverclusterinstanz (FCI) unter Linux ausgeführt wird.
+description: In diesem Artikel wird erläutert, wie Sie eine SQL Server-Failoverclusterinstanz (FCI) unter Linux ausführen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,62 +10,62 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032294"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Ausführen einer Failoverclusterinstanz – SQL Server unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel wird erläutert, wie eine SQL-Server-Failoverclusterinstanz (FCI) unter Linux ausgeführt wird. Wenn Sie eine SQL Server-FCI nicht unter Linux erstellt haben, finden Sie unter [konfigurieren-Failoverclusterinstanz – SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure.md). 
+In diesem Artikel wird erläutert, wie Sie eine SQL Server-Failoverclusterinstanz (FCI) unter Linux ausführen. Wenn Sie noch keine SQL Server-FCI unter Linux erstellt haben, lesen Sie [Konfigurieren einer Failoverclusterinstanz – SQL Server für Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
 ## <a name="failover"></a>Failover
 
-Failover für FCIs ähnelt einem Windows Server-Failovercluster (WSFC). Wenn der Cluster-Knoten die FCI hostet eine Art von Fehler auftritt, sollte die FCI automatisch ein Failover auf einen anderen Knoten ausgeführt. Im Gegensatz zu einem WSFC besteht keine Möglichkeit, bevorzugter Besitzer festgelegt, sodass Pacemaker auf den Knoten auswählt, die dem neuen Host für die FCI zur Verfügung.
+Failover für FCIs ähnelt einem Windows Server-Failovercluster (WSFC). Tritt auf dem Clusterknoten, der als Host für die FCI fungiert, ein Fehler auf, sollte die FCI automatisch einen Failover zu einem anderen Knoten ausführen. Anders als bei einem WSFC gibt es keine Möglichkeit, bevorzugte Besitzer festzulegen. Daher wählt Pacemaker den Knoten aus, der als neuer Host für die FCI fungieren soll.
 
-Es gibt Situationen, die Sie ggf. einen anderen Knoten die FCI manuelles Failover. Der Prozess ist nicht derselbe wie FCIs, die auf einem WSFC. Bei einem WSFC wird ein Failover der Ressourcen auf Rollenebene. In Pacemaker Auswahl einer Ressource zu verschieben, und vorausgesetzt, dass alle Einschränkungen richtig sind, alles wird verschieben ebenfalls. 
+Gelegentlich kann es vorkommen, dass Sie für die FCI manuell ein Failover zu einem anderen Knoten ausführen möchten. Die Vorgehensweise ist nicht mit FCIs in einem WSFC identisch. In einem WSFC führen Sie ein Failover für Ressourcen auf Rollenebene aus. In Pacemaker wählen Sie eine zu verschiebende Ressource aus, und unter der Voraussetzung, dass alle Einschränkungen korrekt sind, wird auch alles andere verschoben. 
 
-Die Möglichkeit zum Failover hängt von der Linux-Distribution. Befolgen Sie die Anweisungen für Ihre Linux-Distribution.
+Die Art und Weise, wie ein Failover ausgeführt wird, hängt von der Linux-Distribution ab. Gehen Sie entsprechend den die Anweisungen für Ihre Linux-Distribution vor.
 
 - [RHEL oder Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
 ## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Manuelles Failover (RHEL oder Ubuntu)
 
-Führen Sie zum Ausführen eines manuellen Failovers Onn Red Hat Enterprise Linux (RHEL) oder Ubuntu-Servern die folgenden Schritte aus.
-1.  Geben Sie den folgenden Befehl ein: 
+Um ein manuelles Failover auszuführen, führen Sie auf einem RHEL- (Red Hat Enterprise Linux) oder Ubuntu-Server die folgenden Schritte aus.
+1.  Führen Sie den folgenden Befehl aus: 
 
    ```bash
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName > ist der Name des Pacemaker-Ressourcen für die SQL Server-FCI.
+   \<FCIResourceName> ist der Pacemaker-Ressourcenname für die SQL Server-FCI.
 
-   \<NewHostNode > ist der Name des Clusterknotens, der die FCI gehostet werden soll. 
+   \<NewHostNode> ist der Name des Clusterknotens, der als Host für die FCI fungieren soll. 
 
-   Sie erhalten Bestätigung nicht.
+   Sie erhalten keine Bestätigung.
 
-2.  Während eines manuellen Failovers erstellt Pacemaker eine speicherorteinschränkung für die Ressource, die Sie ausgewählt wurde, manuell zu verschieben. Führen Sie zum Anzeigen dieser Einschränkung `sudo pcs constraint`.
+2.  Während eines manuellen Failovers erstellt Pacemaker eine Speicherorteinschränkung für die Ressource, die zur manuellen Verschiebung ausgewählt wurde. Führen Sie `sudo pcs constraint` aus, um diese Einschränkung anzuzeigen.
 
-3.  Nachdem das Failover abgeschlossen ist, entfernen Sie die Einschränkung durch ausgeben `sudo pcs resource clear <FCIResourceName>`. 
+3.  Nach Abschluss des Failovers entfernen Sie die Einschränkung, indem Sie `sudo pcs resource clear <FCIResourceName>` ausführen. 
 
-\<FCIResourceName > ist der Name des Pacemaker-Ressourcen für die FCI. 
+\<FCIResourceName> ist der Pacemaker-Ressourcenname für die FCI. 
 
 ## <a name = "#-manual-failover-sles"></a> Manuelles Failover (SLES)
 
 
-Verwenden Sie in die Suse Linux Enterprise Server (SLES), die `migrate` -Befehl, um ein manuelles Failover eine SQL Server-FCI. Zum Beispiel:
+Verwenden Sie in SuSE Linux Enterprise Server (SLES) den `migrate`-Befehl, um ein manuelles Failover zu einer SQL Server-FCI auszuführen. Beispiel:
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName > ist der Name der Failoverclusterinstanz Teamressourcen. 
+\<FCIResourceName> ist der Ressourcenname für die Failoverclusterinstanz (FCI). 
 
-\<NewHostNode > ist der Name des neuen Zielhosts. 
+\<NewHostNode> ist der Name des neuen Zielhosts. 
 
 
 <!---
@@ -77,8 +77,8 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>Nächste Schritte
+## <a name="next-steps"></a>Next Steps
 
-- [Konfigurieren Sie Failoverclusterinstanz – SQL Server unter Linux](sql-server-linux-shared-disk-cluster-configure.md)
+- [Konfigurieren einer Failoverclusterinstanz – SQL Server für Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->

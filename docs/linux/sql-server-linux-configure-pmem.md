@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von persistenten Speicher (PMEM) für SQL Server unter Linux
-description: Dieser Artikel enthält eine schrittweise Anleitung zum Konfigurieren von PMEM unter Linux.
+title: Konfigurieren von persistentem Speicher (PMEM) für SQL Server für Linux
+description: Dieser Artikel bietet eine exemplarische Vorgehensweise zum Konfigurieren von PMEM für Linux.
 author: DBArgenis
 ms.author: argenisf
 ms.reviewer: vanto
@@ -10,42 +10,42 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ed705b1b26193585a6278508ac98666d069418a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077565"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Konfigurieren von persistenten Speicher (PMEM) für SQL Server unter Linux
+# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Konfigurieren von persistentem Speicher (PMEM) für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel wird beschrieben, konfigurieren Sie den persistenten Speicher (PMEM) für SQL Server unter Linux. PMEM-Unterstützung unter Linux wurde in der SQL Server-2019 Vorschau eingeführt.
+In diesem Artikel ist beschrieben, wie der persistente Speicher (persistent memory, PMEM) für SQL Server für Linux konfiguriert wird. Die Unterstützung für PMEM für Linux wurde in SQL Server 2019 (Vorschau) eingeführt.
 
 ## <a name="overview"></a>Übersicht
 
-SQL Server 2016 wurde die Unterstützung für Non-Volatile-DIMMs und eine Optimierung namens [Ende der Protokoll-Zwischenspeicherung auf NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/). Diese Optimierungen reduziert die Anzahl von Vorgängen, die zum Absichern einer Protokollpuffer in den permanenten Speicher erforderlich sind. Diese nutzt die Windows-Server direkten Zugriff auf ein Gerät persistenten Speicher in DAX-Modus.
+In SQL Server 2016 wurden die Unterstützung für nicht flüchtige DIMMs (Non-Volatile DIMMs) und eine Optimierung namens [Tail Of Log Caching on NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) eingeführt. Diese Optimierungen verringern die Anzahl der Vorgänge, die erforderlich sind, um einen Protokollpuffer in persistenten Speicher zu überführen. Dies nutzt den direkten Zugriff von Windows Server auf ein Gerät mit persistentem Speicher im DAX-Modus.
 
-Vorschau der SQL Server-2019 erweitert die Unterstützung für den persistenten Speicher (PMEM) Geräte zu Linux, vollständige Erleuchtung von Daten- und Protokolldateien auf PMEM platziert bereitstellen. Erleuchtung bezieht sich auf die Methode des Zugriffs auf das Speichergerät mithilfe von effizienten Benutzerbereich `memcpy()` Vorgänge. Anstatt laufende über den Datei-System und Speicher-Stapel nutzt SQL Server DAX-Unterstützung unter Linux für das Hinzufügen von Daten direkt in Geräte, die Wartezeit reduziert.
+SQL Server 2019 (Vorschau) erweitert die Unterstützung für Geräte mit persistentem Speicher (PMEM) auf Linux, wodurch vollständige Offenlegung von Daten- und Transaktionsprotokolldateien erreicht wird, die in PMEM abgelegt sind. Die Offenlegung bezieht sich auf die Methode für den Zugriff auf das Speichergerät über effiziente `memcpy()`-Vorgänge im Benutzerbereich. Anstatt das Dateisystem und den Speicherstapel zu durchlaufen, nutzt SQL Server die DAX-Unterstützung unter Linux, um Daten direkt in Geräten zu platzieren, wodurch die Wartezeit verringert wird.
 
-## <a name="enable-enlightenment-of-database-files"></a>Aktivieren Sie an Aufklärung von Datenbankdateien
-Um Erleuchtung von Datenbankdateien in SQL Server unter Linux zu aktivieren, führen Sie die folgenden Schritte aus:
+## <a name="enable-enlightenment-of-database-files"></a>Aktivieren der Offenlegung von Datenbankdateien
+Führen Sie die folgenden Schritte aus, um die Offenlegung von Datenbankdateien in SQL Server für Linux zu aktivieren:
 
-1. Konfigurieren Sie die Geräte an.
+1. Konfigurieren Sie die Geräte.
 
-  Unter Linux verwenden die `ndctl` Hilfsprogramm.
+  Verwenden Sie in Linux das Hilfsprogramm `ndctl`.
 
-  - Installieren Sie `ndctl` PMEM Gerät konfigurieren. Sie finden es [hier](https://docs.pmem.io/getting-started-guide/installing-ndctl).
-  - Verwenden Sie [Ndctl], um einen Namespace zu erstellen.
+  - Installieren Sie `ndctl`, um das PMEM-Gerät zu konfigurieren. Sie finden das Hilfsprogramm [hier](https://docs.pmem.io/getting-started-guide/installing-ndctl).
+  - Verwenden Sie [ndctl], um einen Namespace zu erstellen.
 
   ```bash 
   ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
 
   >[!NOTE]
-  >Bei Verwendung von `ndctl` niedrigeren Version als 59, Verwendung `--mode=memory`.
+  >Wenn Sie `ndctl` in einer Version verwenden, die niedriger ist als 59, verwenden Sie `--mode=memory`.
 
-  Verwendung `ndctl` um den Namespace zu überprüfen. Die folgende Beispielausgabe:
+  Verwenden Sie `ndctl`, um den Namespace zu überprüfen. Die Beispielausgabe sieht wie folgt aus:
 
 ```bash
 ndctl list
@@ -60,9 +60,9 @@ ndctl list
 ]
 ```
 
-  - Erstellen und Bereitstellen von PMEM-Gerät
+  - Erstellen Sie ein PMEM-Gerät, und binden Sie es ein (mounten Sie es).
 
-    Z. B. mit XFS
+    Beispielsweise mit XFS
 
     ```bash
     mkfs.xfs -f /dev/pmem0
@@ -70,19 +70,19 @@ ndctl list
     xfs_io -c "extsize 2m" /mnt/dax
     ```
 
-    Z. B. mit EXT4
+    Beispielsweise mit EXT4
 
     ```bash
     mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-  Sobald das Gerät wurde mit Ndctl konfiguriert, formatiert und eingebunden wurde, können Sie Datenbankdateien darin platzieren. Sie können auch eine neue Datenbank erstellen. 
+  Sobald das Gerät mit „ndctl“ konfiguriert, formatiert und eingebunden wurde, können Sie Datenbankdateien in ihm ablegen. Sie können auch eine neue Datenbank erstellen. 
 
-1. Da PMEM Geräte O_DIRECT sicher sind, aktivieren Sie das Ablaufverfolgungsflag 3979 erzwungenen leeren Mechanismus zu deaktivieren. Dieses Ablaufverfolgungsflag ist das Ablaufverfolgungsflag beim Start und muss daher mit dem Hilfsprogramm für die Mssql-Conf aktiviert werden. Bitte beachten Sie, dass dies eine serverweite konfigurationsänderung ist, und Sie dieses Ablaufverfolgungsflag nicht verwenden sollten, wenn Sie nicht kompatible Geräte O_DIRECT, die den erzwungenen leeren Mechanismus verfügen, um die Datenintegrität sicherzustellen. Weitere Informationen finden Sie unter https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. Da PMEM-Geräte O_DIRECT-sicher sind, aktivieren Sie das Ablaufverfolgungsflag 3979, um den Mechanismus für erzwungenes Leeren zu deaktivieren. Dieses Ablaufverfolgungsflag ist ein Startablaufverfolgungsflag und muss daher mit dem Hilfsprogramm „mssql-conf“ aktiviert werden. Beachten Sie, dass es sich hierbei um eine serverweite Konfigurationsänderung handelt. Außerdem sollten Sie dieses Ablaufverfolgungsflag nicht verwenden, wenn Sie O_DIRECT-inkompatible Geräte haben, für die der Mechanismus für erzwungenes Leeren (forced flush) erforderlich ist, um Datenintegrität sicherzustellen. Weitere Informationen finden Sie unter https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux.
 
 1. Starten Sie SQL Server neu.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server unter Linux finden Sie unter [SQL Server unter Linux](sql-server-linux-overview.md).
+Weitere Informationen zu SQL Server für Linux finden Sie unter [SQL Server für Linux](sql-server-linux-overview.md).

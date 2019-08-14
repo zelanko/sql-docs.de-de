@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren Sie eine SQL Server-Verfügbarkeitsgruppe für schreibgeschützte horizontale Skalierung unter Linux
+title: Konfigurieren einer SQL Server-Verfügbarkeitsgruppe zur Leseskalierung unter Linux
 titleSuffix: SQL Server
-description: Informationen Sie zum Konfigurieren der eine SQL Server immer auf Availability Group (AG) für schreibgeschützte arbeitsauslastungen unter Linux.
+description: Erfahren Sie, wie Sie eine SQL Server-Always On-Verfügbarkeitsgruppe unter Linux für Workloads zur Leseskalierung konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027261"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Konfigurieren Sie eine SQL Server-Verfügbarkeitsgruppe für schreibgeschützte horizontale Skalierung unter Linux
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Konfigurieren einer SQL Server-Verfügbarkeitsgruppe zur Leseskalierung unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Sie können eine SQL Server immer auf Availability Group (AG) für schreibgeschützte arbeitsauslastungen unter Linux konfigurieren. Für Verfügbarkeitsgruppen gibt es zwei Architekturtypen. Eine Architektur für hochverfügbarkeit verwendet einen Cluster-Manager, um verbesserte Geschäftskontinuität zu ermöglichen. Diese Architektur kann auch schreibgeschützte Replikate enthalten. Um die Architektur für hohe Verfügbarkeit zu erstellen, finden Sie unter [Konfigurieren von SQL Server AlwaysOn-Verfügbarkeitsgruppe für hochverfügbarkeit bei Linux](sql-server-linux-availability-group-configure-ha.md). Die andere Architektur unterstützt nur Workloads zur Leseskalierung. In diesem Artikel wird erläutert, wie eine Verfügbarkeitsgruppe ohne Cluster-Manager für Workloads zur Leseskalierung erstellt wird. Diese Architektur bietet nur Leseskalierung. Sie bietet keine Hochverfügbarkeit.
+Sie können eine SQL Server-Always On-Verfügbarkeitsgruppe unter Linux für Workloads zur Leseskalierung konfigurieren. Für Verfügbarkeitsgruppen gibt es zwei Architekturtypen. In einer Architektur für Hochverfügbarkeit wird ein Cluster-Manager verwendet, um verbesserte Geschäftskontinuität bereitzustellen. Diese Architektur kann auch Replikate mit Leseskalierung enthalten. Informationen dazu, wie die Architektur für Hochverfügbarkeit erstellt wird, finden Sie unter [Konfigurieren von SQL Server-Always On-Verfügbarkeitsgruppen für Hochverfügbarkeit unter Linux](sql-server-linux-availability-group-configure-ha.md). Die andere Architektur unterstützt nur Workloads zur Leseskalierung. In diesem Artikel wird erläutert, wie eine Verfügbarkeitsgruppe ohne Cluster-Manager für Workloads zur Leseskalierung erstellt wird. Diese Architektur bietet nur Leseskalierung. Sie bietet keine Hochverfügbarkeit.
 
 > [!NOTE]
 > Eine Verfügbarkeitsgruppe mit `CLUSTER_TYPE = NONE` kann Replikate enthalten, die auf verschiedenen Betriebssystemplattformen gehostet werden. Sie kann keine Unterstützung für Hochverfügbarkeit bieten. 
@@ -67,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-Bei dieser Verfügbarkeitsgruppe handelt es sich um keine Hochverfügbarkeitskonfiguration. Wenn Sie hochverfügbarkeit benötigen, befolgen Sie die Anweisungen unter [Konfigurieren einer AlwaysOn-Verfügbarkeitsgruppe für SQL Server unter Linux](sql-server-linux-availability-group-configure-ha.md). Erstellen Sie insbesondere die Verfügbarkeitsgruppe mit `CLUSTER_TYPE=WSFC` (in Windows) oder `CLUSTER_TYPE=EXTERNAL` (in Linux). Integrieren Sie anschließend in einem Cluster-Manager, mit entweder Windows Server-Failoverclustering für Windows oder Pacemaker unter Linux.
+Bei dieser Verfügbarkeitsgruppe handelt es sich um keine Hochverfügbarkeitskonfiguration. Wenn Sie Hochverfügbarkeit benötigen, befolgen Sie die Anweisungen unter [Konfigurieren einer Always On-Verfügbarkeitsgruppe für SQL Server unter Linux](sql-server-linux-availability-group-configure-ha.md). Insbesondere ist zu beachten, dass die Verfügbarkeitsgruppe mit `CLUSTER_TYPE=WSFC` (unter Windows) oder `CLUSTER_TYPE=EXTERNAL` (unter Linux) erstellt werden muss. Integrieren Sie die Verfügbarkeitsgruppe anschließend in einen Cluster-Manager, indem Sie entweder Windows Server-Failoverclustering unter Windows oder Pacemaker unter Linux verwenden.
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>Verbinden mit schreibgeschützten sekundären Replikaten
 

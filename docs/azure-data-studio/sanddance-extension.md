@@ -11,41 +11,41 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a96bde6a66642bf02cc076c3d4d4f3ac44e02a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959335"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance für Azure Data Studio (Vorschau)
-Azure Data Studio bietet nun eine Möglichkeit, schnelle Visualisierungen für die CSV und TSV-Dateien zu erstellen, an dem Sie arbeiten. Dies schließt lokale Dateien oder Dateien in HDFS in den SQL Server 2019 Big Data-Cluster an. Diese Erweiterung ist hilfreich, wenn Sie versuchen, Sie haben eine kurze, sehen Sie sich die Daten und zu verstehen, was vor sich geht. Wir verwenden eine Technologie namens SandDance von Microsoft Research, die für ein direktes Visualisierungen der Daten generieren können.
+Azure Data Studio bietet nun eine Möglichkeit, schnelle Visualisierungen für die CSV- und TSV-Dateien zu erstellen, an denen Sie arbeiten. Dies gilt für lokale Dateien oder Dateien auf HDFS in Ihrem SQL Server 2019-Big Data-Cluster. Diese Erweiterung ist nützlich, wenn Sie einen schnellen Blick auf die Daten haben und verstehen möchten, was vor sich geht. Dazu wird eine Technologie namens SandDance von Microsoft Research verwendet, mit der direkte Visualisierungen der jeweiligen Daten generiert werden können.
 
-![Sanddance-animation](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
+![SandDance-Animation](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
 
-Leicht verständliche Ansichten SandDance können Sie zu Ihren Daten, die in der deaktivieren-Hilfe, die Sie Erzählen Sie Geschichten, die von den Daten, unterstützt Fälle basierend auf den Beweis zu erstellen Erkenntnisse, verwenden Hypothesen zu testen, tiefer in die Oberfläche Erklärungen, Unterstützung von Entscheidungen für Käufe, oder Verknüpfen Sie Daten in eine größere, praktische-Kontext.
+Durch Verwenden von leicht verständlichen Ansichten hilft SandDance Ihnen, Erkenntnisse über Ihre Daten zu gewinnen. Diese Erkenntnisse ermöglichen es Ihnen wiederum, datengestützte Analysen zu formulieren, Fälle auf der Grundlage von Beweisen zu erstellen, Hypothesen zu testen, tiefer in Oberflächenerläuterungen einzutauchen, Kaufentscheidungen zu unterstützen oder Daten in einen breiteren, realen Kontext einzubeziehen.
 
-SandDance verwendet Einheit Visualisierungen, die eine 1: 1-Zuordnung zwischen Zeilen in der Datenbank und Markierungen auf dem Bildschirm zu gelten.
-Smooth animierten Übergänge zwischen den Ansichten können Sie Kontext beibehalten, während Sie sich mit Ihren Daten interagieren.
+SandDance verwendet einheitenbezogene Visualisierungen, bei denen eine Eins-zu-eins-Zuordnung zwischen Zeilen in Ihrer Datenbank und Markierungen auf dem Bildschirm angewendet wird.
+Sanfte animierte Übergänge zwischen Ansichten helfen Ihnen, den Kontext beizubehalten, während Sie mit den Daten arbeiten.
 
 ## <a name="usage"></a>Verwendung
 
-Verwenden Sie beginnend mit dem Menü "Datei" Ordner öffnen "oder" [STRG + K, STRG + O], öffnen Sie das Verzeichnis mit der. CSV-Datei.  Als Nächstes von innerhalb des Bereichs Explorer mit der rechten Maustaste auf das CSV- oder TSV-Datei und *Ansicht SandDance*.
+Wählen Sie im Menü „Datei“ den Befehl „Ordner öffnen“ aus, oder drücken Sie [STRG+K STRG+O], um das Verzeichnis zu öffnen, in dem sich die CSV-Datei befindet.  Klicken Sie anschließend im Explorer-Bereich mit der rechten Maustaste auf die CSV- oder TSV-Datei, und wählen Sie *In SandDance anzeigen* aus.
 
-Mit der rechten Maustaste auf eine CSV- oder TSV-Datei in HDFS an, wenn Sie mit SQL Server 2019 Big Data-Cluster verbunden sind, und wählen Sie *Ansicht SandDance*.
+Klicken Sie mit der rechten Maustaste auf eine CSV- oder TSV-Datei in HDFS, wenn es eine Verbindung mit einem SQL Server 2019 Big Data-Cluster gibt, und wählen Sie *In SandDance anzeigen* aus.
 
 ## <a name="known-issues"></a>Bekannte Probleme
 
-Derzeit müssen die Daten die erste Spalte als eindeutiger Bezeichner.
+Aktuell müssen Ihre Daten die erste Spalte als eindeutigen Bezeichner haben.
 
-Wir sind derzeit nicht die Anzahl der Zeilen begrenzen, die sichtbar gemacht wird. Jedoch steigt Arbeitsspeicherverbrauch proportional auf die Anzahl der Zeilen, daher wird empfohlen, dass das Dataset oder die Sicht auf ungefähr 100 k Zeilen beschränkt ist.
+Derzeit wird die Anzahl der Zeilen, die visualisiert werden, nicht begrenzt. Da die Arbeitsspeichernutzung jedoch proportional zur Anzahl der Zeilen steigt, empfiehlt es sich, das Dataset oder die Ansicht auf etwa 100.000 Zeilen zu beschränken.
 
-Finden Sie unter [bekannte Probleme](https://microsoft.github.io/SandDance/#known-issues)
+Weitere Informationen finden Sie unter [Bekannte Probleme](https://microsoft.github.io/SandDance/#known-issues).
 
 ## <a name="release-notes"></a>Versionsanmerkungen
 
 ### <a name="100"></a>1.0.0
 
-Erste Version von Azdata-sanddance
+Erste Version von „azdata-sanddance“
 
-## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen, [finden Sie auf das GitHub-Repository.](https://github.com/Microsoft/SandDance)
+## <a name="next-steps"></a>Next Steps
+Um mehr zu erfahren, [besuchen Sie das GitHub-Repository](https://github.com/Microsoft/SandDance).

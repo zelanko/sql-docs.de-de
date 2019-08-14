@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065720"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495458"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -769,7 +769,10 @@ Eine auf der Größe basierte Bereinigung wird nicht automatisch aktiviert.
 SIZE_BASED_CLEANUP_MODE ist vom Typ **nvarchar**.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-Bestimmt den zum aktuellen Zeitpunkt aktiven Abfrageerfassungsmodus.
+Bestimmt den zum aktuellen Zeitpunkt aktiven Abfrageerfassungsmodus. Für jeden Modus sind bestimmte Abfrageerfassungsrichtlinien definiert.
+
+> [!NOTE]
+> Cursor, Abfragen in gespeicherten Prozeduren und nativ kompilierte Abfragen werden immer erfasst, wenn der Abfrageerfassungsmodus auf ALL, AUTO oder CUSTOM festgelegt ist.
 
 ALL         
 Erfasst alle Abfragen. ALL ist der Standardkonfigurationswert. Dies ist der Standardkonfigurationswert ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
@@ -1232,7 +1235,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>B. Festlegen der Datenbank auf READ_ONLY
+### <a name="b-setting-the-database-to-read_only"></a>B. Festlegen der Datenbank auf READ_ONLY
 
 Das Ändern des Status einer Datenbank oder Dateigruppe auf READ_ONLY oder READ_WRITE erfordert den exklusiven Zugriff auf die Datenbank. Im folgenden Beispiel wird die Datenbank auf den `SINGLE_USER`-Modus festgelegt, um exklusiven Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
@@ -2083,7 +2086,7 @@ Nicht alle Datenbankoptionen verwenden die WITH \<termination>-Klausel oder kön
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Festlegen der Datenbank auf READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Festlegen der Datenbank auf READ_ONLY
 Das Ändern des Status einer Datenbank oder Dateigruppe auf READ_ONLY oder READ_WRITE erfordert den exklusiven Zugriff auf die Datenbank. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
 ```sql
@@ -2789,7 +2792,7 @@ Sie können die Standardwerte einer Datenbankoption für alle neu erstellten Dat
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Festlegen der Datenbank auf READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Festlegen der Datenbank auf READ_ONLY
 Das Ändern des Status einer Datenbank oder Dateigruppe auf READ_ONLY oder READ_WRITE erfordert den exklusiven Zugriff auf die Datenbank. Im folgenden Beispiel wird die Datenbank in den `RESTRICTED_USER`-Modus gesetzt, um eingeschränkten Zugriff zu erhalten. Anschließend wird in dem Beispiel der Status der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank auf `READ_ONLY` festgelegt und der Zugriff auf die Datenbank an alle Benutzer zurückgegeben.
 
 ```sql

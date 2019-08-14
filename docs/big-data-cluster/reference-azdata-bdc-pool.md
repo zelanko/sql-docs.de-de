@@ -1,7 +1,7 @@
 ---
-title: azdata BDC-Pool Referenz
+title: 'azdata bdc pool: Referenz'
 titleSuffix: SQL Server big data clusters
-description: Referenz Artikel für azdata-BDC-Pool-Befehle.
+description: Referenzartikel zu azdata bdc pool-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,23 +10,23 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4bea34f6e0b1d2159d227ae60a8e686a02f00b9b
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426120"
 ---
-# <a name="azdata-bdc-pool"></a>azdata-BDC-Pool
+# <a name="azdata-bdc-pool"></a>azdata bdc pool
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Der folgende Artikel enthält einen Verweis auf die Befehle des **BDC-Pools** im **azdata** -Tool. Weitere Informationen zu anderen **azdata** -Befehlen finden Sie unter [azdata-Referenz](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den **bdc pool**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[Status des azdata-BDC-Pools](reference-azdata-bdc-pool-status.md) | Befehle für den Pool Status.
+[azdata bdc pool status](reference-azdata-bdc-pool-status.md) | Poolstatusbefehle
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Installieren des Tools **azdata** finden [Sie unter Install azdata to Manage SQL Server 2019 Big Data Clusters](deploy-install-azdata.md).
+Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).

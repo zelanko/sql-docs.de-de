@@ -11,46 +11,46 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 26a448dc27ae2512256ffb1a2929dd8cacc3e31c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959118"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>SQL Server Profiler-Erweiterung (Vorschau)
 
-Die SQL Server Profiler-Erweiterung (Vorschau) bietet eine einfache SQL Server-Ablaufverfolgung-Lösung, die für Sie ähnlich wie SQL Server Management Studio (SSMS) Profiler außer mit XEvents erstellt wurden. SQL Server Profiler ist sehr einfach zu verwenden und verfügt über gute Standardwerte für die am häufigsten verwendeten Konfigurationen für die Ablaufverfolgung. Die UX ist optimiert für Ereignisse durchsuchen und Anzeigen der zugehörigen Texts der Transact-SQL (T-SQL). Die SQL Server Profiler für Azure Data Studio wird vorausgesetzt, gute Standardwerte für das Sammeln von T-SQL-Ausführung-Aktivitäten mit eine benutzerfreundliche UX. Diese Erweiterung ist derzeit in der Vorschau.
+Die SQL Server Profiler-Erweiterung (Vorschauversion) bietet eine einfache SQL Server-Ablaufverfolgungslösung, die, abgesehen vom Erstellen mit erweiterten Ereignissen, sehr SQL Server Management Studio Profiler (SSMS Profiler) ähnelt. SQL Server Profiler ist sehr einfach zu verwenden und hat brauchbare Standardwerte für die gängigsten Ablaufverfolgungskonfigurationen. Die Umgebung ist für das Durchsuchen von Ereignissen und das Anzeigen des zugehörigen T-SQL-Texts (Transact-SQL) optimiert. Der SQL Server Profiler für Azure Data Studio hat außerdem brauchbare Standardwerte für die Erfassung von T-SQL-Ausführungsaktivitäten mit einer einfach zu bedienenden Umgebung. Diese Erweiterung befindet sich zurzeit in der Vorschau.
 
-**Allgemeine SQL Profiler Anwendungsfälle:**
+**Gängige Anwendungsfälle für SQL Server Profiler:**
 
 - Schrittweises Untersuchen problematischer Abfragen, um die Ursache des Problems zu ermitteln.
 - Suchen und Diagnostizieren von Abfragen, die sehr langsam ausgeführt werden.
-- Erfassen der Transact-SQL-Anweisungen, die zu einem Problem führen.
-- Überwachen die Leistung des SQL Servers, arbeitsauslastungen zu optimieren.
+- Erfassen der Reihe der Transact-SQL-Anweisungen, die zu einem Problem geführt haben.
+- Überwachen der Leistung von SQL Server, um die Arbeitsauslastung zu optimieren.
 - Korrelieren von Leistungsindikatoren zur Diagnose von Problemen.
 
 
-## <a name="install-the-sql-server-profiler-extension"></a>Installieren Sie die SQL Server Profiler-Erweiterung
+## <a name="install-the-sql-server-profiler-extension"></a>Installieren der SQL Server Profiler-Erweiterung
 
-1. Um Erweiterungs-Manager öffnen und den Zugriff auf die verfügbaren Erweiterungen, wählen Sie das Symbol für Erweiterungen oder **Erweiterungen** in die **Ansicht** Menü.
-2. Wählen Sie eine verfügbare Erweiterung, um seine Details anzuzeigen.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
 
-   ![Profiler-Erweiterungs-manager](media/extensions/sql-server-profiler-extension/profiler-extension.png)
+   ![Profiler-Erweiterungs-Manager](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
-1. Wählen Sie die gewünschte Erweiterung und **installieren** es.
-2. Wählen Sie **Reload** zum Aktivieren der Erweiterung (nur beim ersten eine Erweiterung der Installation erforderlich).
+1. Wählen Sie die gewünschte Erweiterung aus, und **Installieren** Sie diese.
+2. Wählen Sie **Neu laden** aus, um die Erweiterung zu aktivieren (nur bei der ersten Installation einer Erweiterung erforderlich).
 
-## <a name="start-profiler"></a>Starten von Profiler
+## <a name="start-profiler"></a>Starten des Profilers
 
-1. Um den Profiler zu starten, stellen Sie zunächst eine Verbindung mit einem Server, auf der Registerkarte "Server".
-2. Nachdem Sie eine Verbindung herstellen, geben Sie **Alt + P** Profiler zu starten.
-3. Geben Sie zum Starten von Profiler **Alt + S.** Nun können Sie erweiterte Ereignisse angezeigt.
-    ![Profiler-Erweiterungs-manager](media/extensions/sql-server-profiler-extension/view-profiler.png)    
-1. Um Profiler beenden möchten, geben **Alt + S.** Dieses Hotkeys ist eine Umschaltoption.
+1. Um den Profiler zu starten, stellen Sie zunächst eine Verbindung mit einem Server auf der Registerkarte „Server“ her.
+2. Nachdem Sie eine Verbindung hergestellt haben, drücken Sie **ALT+P**, um den Profiler zu starten.
+3. Um den Profiler zu starten, drücken Sie **ALT+S**. Ab jetzt können Sie beginnen, erweiterte Ereignisse anzuzeigen.
+    ![Profiler-Erweiterungs-Manager](media/extensions/sql-server-profiler-extension/view-profiler.png)    
+1. Um den Profiler zu stoppen, drücken Sie **ALT+S**. Diese Tastenkombination ist ein Umschalter.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Profiler und erweiterte Ereignisse finden Sie unter [erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
+Weitere Informationen zu Profiler und erweiterten Ereignissen finden Sie unter [Erweiterte Ereignisse](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 
 
 

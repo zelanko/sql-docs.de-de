@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: Installieren von R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: 'Installieren eines eigenständigen Servers (Python, R)'
+    - name: Installieren eigenständiger Server
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: Installieren von vortrainierten Modellen
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

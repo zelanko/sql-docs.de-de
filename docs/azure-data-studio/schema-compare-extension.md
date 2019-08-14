@@ -1,7 +1,7 @@
 ---
-title: Compare-schemaerweiterung
+title: Schemavergleich-Erweiterung
 titleSuffix: Azure Data Studio
-description: Installieren und Verwenden der Erweiterung Schemavergleich (Vorschau) für Azure Data Studio
+description: Installieren und Verwenden der Schemavergleich-Erweiterung (Vorschau) für Azure Data Studio
 ms.custom: seodec18
 ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
@@ -11,31 +11,31 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a51d64202d3d906b3106092084628b0a961297ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959325"
 ---
 # <a name="schema-compare-extension-preview"></a>Schemavergleicherweiterung (Vorschauversion)
-Der Schemavergleich-Erweiterung bietet eine benutzerfreundliche Oberfläche zum Vergleichen von DACPAC-Dateien und Datenbanken und Anwenden der Änderungen aus der Quelle zum Ziel.
+Die Schemavergleich-Erweiterung bietet eine benutzerfreundliche Umgebung, in der DACPAC-Dateien und Datenbanken verglichen und die Änderungen aus der Quelle auf das Ziel angewendet werden können.
 
-Diese Benutzeroberfläche befindet sich derzeit in der ersten Vorschauversion. Probleme melden und Funktionsanfragen [hier.](https://github.com/microsoft/azuredatastudio/issues)
+Diese Umgebung befindet sich derzeit in der ersten Vorschauphase. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
 
-## <a name="install-the-schema-compare-extension"></a>Installieren der Erweiterung für den Schemavergleich
+## <a name="install-the-schema-compare-extension"></a>Installieren der Schemavergleich-Erweiterung
 
-1. Um Erweiterungs-Manager öffnen und den Zugriff auf die verfügbaren Erweiterungen, wählen Sie das Symbol für Erweiterungen oder **Erweiterungen** in die **Ansicht** Menü.
-2. Wählen Sie eine verfügbare Erweiterung, um seine Details anzuzeigen.
-1. Wählen Sie die gewünschte Erweiterung (Schema vergleichen) und **installieren** es.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
+1. Wählen Sie die gewünschte Erweiterung (Schemavergleich) aus, und **Installieren** Sie diese.
 
-## <a name="how-do-i-start-a-schema-comparison"></a>Wie beginne ich eine Schemavergleich?
-* Der Haupteinstiegspunkt für Schemavergleich wird mit der rechten Maustaste in einer Datenbank im Objekt-Explorer, und klicken Sie auf **Schemavergleich**.
-* Der Benutzer kann auch das Dialogfeld "Schema vergleichen", über die befehlspalette (STRG + UMSCHALT + P) starten, indem die Suche nach **Schemavergleich**
+## <a name="how-do-i-start-a-schema-comparison"></a>Wie wird ein Schemavergleich gestartet?
+* Der Haupteinstiegspunkt für einen Schemavergleich ist ein Rechtsklick auf eine Datenbank im Objekt-Explorer und dann Klicken auf **Schemavergleich**.
+* Ein Benutzer kann das Dialogfeld „Schemavergleich“ auch über die Befehlspalette öffnen (STRG+UMSCHALT+P), indem er nach **Schemavergleich** sucht.
 
 ## <a name="why-would-i-use-the-schema-compare"></a>Warum sollte ich Schemavergleich verwenden?
-Schemavergleich wurde erstellt, um die Möglichkeit zum Vergleichen der Schemas von DACPAC-Dateien und Datenbanken, und wenden Sie die Änderungen hinzuzufügen.
+Schemavergleich wurde erstellt, um die Möglichkeit hinzuzufügen, die Schemas von DACPAC-Dateien und Datenbanken zu vergleichen und die Änderungen anzuwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zum Schema vergleichen, [finden Sie in unserer Dokumentation.](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+Weitere Informationen zu Schemavergleich finden Sie in der zugehörigen [Dokumentation](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions).
 
 

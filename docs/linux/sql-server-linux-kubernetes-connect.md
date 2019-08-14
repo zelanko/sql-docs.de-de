@@ -1,6 +1,6 @@
 ---
-title: Verbinden Sie mit SQL Server AlwaysOn-Verfügbarkeitsgruppe in Kubernetes-cluster
-description: In diesem Artikel wird erläutert, wie die Verbindung zu einer AlwaysOn-Verfügbarkeitsgruppe
+title: Herstellen einer Verbindung mit einer SQL Server-Always On-Verfügbarkeitsgruppe in einem Kubernetes-Cluster
+description: In diesem Artikel ist erläutert, wie eine Verbindung mit einer Always On-Verfügbarkeitsgruppe hergestellt wird.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f05bc51f587723414d3b0a4090fe2b27ad5fb837
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952603"
 ---
-# <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Verbinden Sie mit einer SQLServer Always On-Verfügbarkeitsgruppe auf Kubernetes
+# <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>Herstellen einer Verbindung mit einer SQL Server-Always On-Verfügbarkeitsgruppe in Kubernetes
 
-Erstellen Sie zum Verbinden mit SQL Server-Instanzen in Containern in einem Kubernetes-Cluster eine [Lastenausgleichsmodul-Dienst](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer). Der Load Balancer ist ein Endpunkt an. Es enthält eine IP-Adresse und leitet Anforderungen für die IP-Adresse in den Pod, der SQL Server-Instanz ausgeführt wird.
+Um Verbindungen mit SQL Server-Instanzen in Containern in einem Kubernetes-Cluster herzustellen, erstellen Sie einen [LoadBalancer-Dienst](https://kubernetes.io/docs/concepts/services-networking/service/#loadbalancer) (Lastenausgleichsdienst). Der Lastenausgleich ist ein Endpunkt. Er enthält eine IP-Adresse und leitet Anforderungen bezüglich der IP-Adresse an den Pod weiter, in dem die SQL Server-Instanz ausgeführt wird.
 
-Erstellen Sie einen Dienst für die anderen Replikat-Typen, zum Verbinden mit einem Replikat der verfügbarkeitsgruppe. Sehen Sie Beispiele für Dienste für verschiedene Arten von Replikaten in [Sql-Server-Beispiele/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
+Um eine Verbindung mit einem Verfügbarkeitsgruppenreplikat herzustellen, erstellen Sie einen Dienst für verschiedene Replikattypen. Beispiele für Dienste für verschiedene Typen von Replikaten finden Sie in [sql-server-samples/ag-services.yaml](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files).
 
 * `ag1-primary` verweist auf das primäre Replikat.
-* `ag1-secondary` verweist auf ein sekundäres Replikat.
+* `ag1-secondary` verweist auf das sekundäre Replikat.
 
-Wenn mehr als leitet ein sekundäres Replikat, Kubernetes die Verbindung mit den anderen Replikaten in einer Round-Robin-Basis.
+Gibt es mehrere sekundäre Replikate, leitet Kubernetes die Verbindung mit den verschiedenen Replikaten auf Round-Robin-Art weiter.
 
-## <a name="create-a-load-balancer-service"></a>Erstellen Sie einen Load Balancer-Dienst
+## <a name="create-a-load-balancer-service"></a>Erstellen eines LoadBalancer-Diensts
 
-Um Load Balancer-Dienste für die primäre und die Replikate zu erstellen, kopieren [ `ag1-services.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) aus [Sql Server Samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file) und aktualisieren Sie es für Ihre verfügbarkeitsgruppe.
+Um je einen LoadBalancer-Dienst für das primäre und das sekundäre Replikat zu erstellen, kopieren Sie [`ag1-services.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/ag-services.yaml) aus [sql-server-samples](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-file), und aktualisieren Sie die Datei entsprechend Ihrer Verfügbarkeitsgruppe.
 
-Der folgende Befehl wendet die Konfiguration der `.yaml` Datei Cluster:
+Der folgende Befehl wendet die Konfiguration aus der `.yaml`-Datei auf den Cluster an:
 
 ```kubectl
 kubectl apply -f ag1-services.yaml --namespace ag1
 ```
 
-## <a name="get-the-ip-address-for-your-load-balancer-service"></a>Rufen Sie die IP-Adresse für den Load Balancer-Dienst
+## <a name="get-the-ip-address-for-your-load-balancer-service"></a>Abrufen der IP-Adresse für den LoadBalancer-Dienst
 
-Rufen Sie die IP-Adresse des Load Balancers für den Load Balancer-Dienst ausführen.
+Um die IP-Adresse für Ihren Lastenausgleichsdienst (LoadBalancer-Dienst) abzurufen, führen Sie folgenden Befehl aus:
 
 ```kubectl
 kubectl get services
 ```
 
-Identifizieren Sie die IP-Adresse des Diensts, die Sie herstellen möchten.
+Ermitteln Sie die IP-Adresse des Diensts, mit dem Sie eine Verbindung herstellen möchten.
 
-## <a name="connect-to-primary-replica"></a>Verbinden mit primärem Replikat
+## <a name="connect-to-primary-replica"></a>Herstellen einer Verbindung mit dem primären Replikat
 
-Verwenden Sie zum Verbinden mit dem primären Replikat mit der SQL-Authentifizierung die `sa` -Konto, das den Wert für `sapassword` aus den geheimen Schlüssel, die Sie erstellt haben, und diese IP-Adresse.
+Um eine Verbindung mit dem primären Replikat mit SQL-Authentifizierung herzustellen, verwenden Sie das `sa`-Konto, den Wert für `sapassword` aus dem von Ihnen erstellten Geheimnis und diese IP-Adresse.
 
-Zum Beispiel:
+Beispiel:
 
 ```cmd
 sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"
@@ -59,6 +59,6 @@ sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Verwalten von SQL Server-verfügbarkeitsgruppe in Kubernetes-cluster](sql-server-linux-kubernetes-manage.md)
+[Verwalten einer SQL Server-Always On-Verfügbarkeitsgruppe in Kubernetes](sql-server-linux-kubernetes-manage.md)
 
-[SQL Server-verfügbarkeitsgruppe in Kubernetes-cluster](sql-server-ag-kubernetes.md)
+[SQL Server-Verfügbarkeitsgruppe in einem Kubernetes-Cluster](sql-server-ag-kubernetes.md)

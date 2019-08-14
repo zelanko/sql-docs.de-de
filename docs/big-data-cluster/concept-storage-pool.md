@@ -1,7 +1,7 @@
 ---
 title: Was ist der Speicherpool?
 titleSuffix: SQL Server big data clusters
-description: Dieser Artikel beschreibt den Speicherpool in einer SQL Server-2019 big Data-Cluster.
+description: Dieser Artikel enthält die Beschreibung des Speicherpools in einem Big Data-Cluster für SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,35 +10,35 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958657"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>Was ist der Speicher-Pool (SQL Server-big Data-Cluster)?
+# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>Was ist der Speicherpool (Big Data-Cluster für SQL Server)?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel beschreibt die Rolle der *SQL Server-Speicherpool* in einer SQL Server-2019 big Data-Cluster (Vorschau). Die folgenden Abschnitte beschreiben die Architektur und die Funktionalität eines SQL-Speicherpools.
+In diesem Artikel ist die Rolle beschrieben, die der *SQL Server-Speicherpool* in einem Big Data-Cluster für SQL Server 2019 (Vorschau) spielt. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Speicherpools beschrieben.
 
-## <a name="storage-pool-architecture"></a>Pool-Speicherarchitektur
+## <a name="storage-pool-architecture"></a>Speicherpoolarchitektur
 
-Der Speicherpool besteht aus Speicher, die Knoten des SQL Server unter Linux, Spark und HDFS aus. Alle Speicherknoten in einer SQL-big Data-Cluster sind Mitglieder eines Clusters von HDFS.
+Der Speicherpool besteht aus Speicherknoten, bestehend aus SQL Server für Linux, Spark und HDFS. Alle Speicherknoten in einem Big-Data-Cluster für SQL Server sind Mitglieder eines HDFS-Clusters.
 
-![Pool-Speicherarchitektur](media/concept-storage-pool/scale-big-data-on-demand.png)
+![Speicherpoolarchitektur](media/concept-storage-pool/scale-big-data-on-demand.png)
 
-## <a name="responsibilities"></a>Zuständigkeiten
+## <a name="responsibilities"></a>Aufgaben
 
-Storage-Knoten dienen:
+Speicherknoten werden für folgende Aufgaben verwendet:
 
 - Datenerfassung über Spark.
-- Speicherung von Daten in HDFS (Parquet-Format). HDFS bietet auch die Beständigkeit der Daten, wie Sie HDFS-Daten auf alle Speicherknoten in der SQL-big Data-Cluster verteilt werden.
-- Der Datenzugriff über Endpunkte mit HDFS und SQL Server.
+- Datenspeicherung in HDFS (Parquet-Format). HDFS bietet auch Datenpersistenz, weil HDFS-Daten auf alle Speicherknoten im Big Data-Cluster für SQL Server verteilt werden.
+- Datenzugriff über HDFS und SQL Server-Endpunkte.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
+In den folgenden Artikeln finden Sie weitere Informationen zu den Big-Data-Clustern für SQL Server:
 
-- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture (Workshop: Big-Data-Cluster für SQL Server – Architektur)](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

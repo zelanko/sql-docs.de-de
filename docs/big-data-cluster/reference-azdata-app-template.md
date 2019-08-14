@@ -1,7 +1,7 @@
 ---
-title: Referenz zur azdata-App-Vorlage
+title: 'azdata app template: Referenz'
 titleSuffix: SQL Server big data clusters
-description: Referenz Artikel zu Befehlen der azdata-App-Vorlage.
+description: Referenzartikel zu azdata app template-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,92 +10,92 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 3b257a2bacc56a7907ab0d25f492ed0ebd605543
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426330"
 ---
-# <a name="azdata-app-template"></a>azdata-App-Vorlage
+# <a name="azdata-app-template"></a>azdata app template
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Der folgende Artikel enthält einen Verweis auf die Befehle der **App-Vorlage** im **azdata** -Tool. Weitere Informationen zu anderen **azdata** -Befehlen finden Sie unter [azdata-Referenz](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den **app template**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[Vorlage der azdata-App-Vorlage](#azdata-app-template-list) | Abrufen unterstützter Vorlagen.
-[azdata-App-Vorlagen-Pull](#azdata-app-template-pull) | Unterstützte Vorlagen herunterladen.
-## <a name="azdata-app-template-list"></a>Vorlage der azdata-App-Vorlage
-Abrufen unterstützter Vorlagen unter dem angegebenen [URL] GitHub-Repository.
+[azdata app template list](#azdata-app-template-list) | Abrufen von unterstützten Vorlagen.
+[azdata app template pull](#azdata-app-template-pull) | Herunterladen von unterstützten Vorlagen.
+## <a name="azdata-app-template-list"></a>azdata app template list
+Abrufen von unterstützten Vorlagen aus dem GitHub-Repository unter der angegebenen [URL].
 ```bash
 azdata app template list [--url -u] 
                          
 ```
 ### <a name="examples"></a>Beispiele
-Rufen Sie alle Vorlagen unter dem Standard Speicherort des vorlagenrepository ab.
+Rufen Sie alle Vorlagen ab, die sich im Standardspeicherort des Vorlagenrepositorys befinden.
 ```bash
 azdata app template list
 ```
-Abrufen aller Vorlagen unter einem anderen Repository-Speicherort
+Rufen Sie alle Vorlagen ab, die sich in einem anderen Repositoryspeicherort befinden.
 ```bash
 azdata app template list --url https://github.com/diffrent/templates.git
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--url -u`
-Geben Sie einen anderen Speicherort für das Repository an. Vorgegebene https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Geben Sie einen anderen Speicherort für das Vorlagentepository an. Standard: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-app-template-pull"></a>azdata-App-Vorlagen-Pull
-Herunterladen unterstützter Vorlagen unter dem angegebenen [URL] GitHub-Repository.
+Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+## <a name="azdata-app-template-pull"></a>azdata app template pull
+Herunterladen von unterstützten Vorlagen, die sich im GitHub-Repository unter der angegebenen [URL] befinden.
 ```bash
 azdata app template pull [--name -n] 
                          [--url -u]  
                          [--destination -d]
 ```
 ### <a name="examples"></a>Beispiele
-Laden Sie alle Vorlagen unter dem Standard Speicherort des vorlagenrepository herunter.
+Laden Sie alle Vorlagen herunter, die sich im Standardspeicherort des Vorlagenrepositorys befinden.
 ```bash
 azdata app template pull
 ```
-Laden Sie alle Vorlagen unter einem anderen Repository-Speicherort herunter.
+Laden Sie alle Vorlagen herunter, die sich in einem anderen Repositoryspeicherort befinden.
 ```bash
 azdata app template list --url https://github.com/diffrent/templates.git
 ```
-Einzelne Vorlage nach Namen herunterladen.
+Laden Sie eine einzelne Vorlage über den Namen herunter.
 ```bash
 azdata app template pull --name ssis            
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--name -n`
-Vorlagen Name. Vollständige Liste der unterstützten Vorlagen namesrun`azdata app template list`
+Vorlagenname. Eine vollständige Liste der unterstützten Vorlagennamen erhalten Sie durch Ausführen von `azdata app template list`.
 #### `--url -u`
-Geben Sie einen anderen Speicherort für das Repository an. Vorgegebene https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Geben Sie einen anderen Speicherort für das Vorlagentepository an. Standard: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 #### `--destination -d`
-Wo die Anwendungs Skelett Vorlage platziert werden soll.
+Speicherort der Anwendungsgerüstvorlage.
 `./templates`
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
+Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata** -Befehlen finden Sie unter [azdata-Referenz](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden [Sie unter Install azdata to Manage SQL Server 2019 Big Data Clusters](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).

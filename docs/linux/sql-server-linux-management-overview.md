@@ -1,6 +1,6 @@
 ---
-title: Verwalten von SQLServer unter Linux
-description: Dieser Artikel enthält Links zu allgemeinen Verwaltungsaufgaben und Tools für SQL Server unter Linux ausgeführt wird.
+title: Verwalten von SQL Server für Linux
+description: Dieser Artikel enthält Links zu allgemeinen Verwaltungsaufgaben und Tools für SQL Server, die unter Linux ausgeführt werden.
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -9,42 +9,42 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68000053"
 ---
-# <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Auswählen des richtigen Tools zum Verwalten von SQL Server unter Linux
+# <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Auswählen des richtigen Tools zum Verwalten von SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Es gibt verschiedene Methoden zum Verwalten von SQL Server unter Linux. Der folgende Abschnitt enthält eine kurze Übersicht über verschiedene Tools und Techniken mit Zeigern auf Weitere Ressourcen.
+Es gibt mehrere Möglichkeiten, SQL Server für Linux zu verwalten. Der folgende Abschnitt enthält eine kurze Übersicht über verschiedene Verwaltungstools und -techniken mit Verweisen auf weitere Ressourcen.
 
 ## <a name="mssql-conf"></a>mssql-conf 
 
-Die **Mssql-Conf** Tool konfiguriert die SQL Server unter Linux. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server unter Linux mit Mssql-Conf](sql-server-linux-configure-mssql-conf.md).
+Mit dem **mssql-conf**-Tool wird SQL Server für Linux konfiguriert. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-Fast alles, was in einem Clienttool Maßnahme kann auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server bietet [Dynamic Management Views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) Abfrage den Status und die Konfiguration von SQL Server. Es gibt auch [Transact-SQL-Befehle](../t-sql/language-reference.md) für Aufgaben der datenbankverwaltung. Sie können diese Befehle ausführen, in jedem Clienttool, die eine Verbindung mit SQL Server herstellen und Ausführen von Transact-SQL-Abfragen, z. B. unterstützt [Sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
+Fast alle Aktionen, die Sie in einem Clienttool ausführen können, können auch mit Transact-SQL-Anweisungen ausgeführt werden. SQL Server stellt [dynamische Verwaltungssichten](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) (Dynamic Management Views, DMVs) bereit, mit denen der Status und die Konfiguration von SQL Server abgefragt werden können. Außerdem gibt es [Transact-SQL-Befehle](../t-sql/language-reference.md) für Datenbankverwaltungsaufgaben. Sie können diese Befehle in jedem Clienttool ausführen, das Herstellen von Verbindungen mit SQL Server und Ausführen von Transact-SQL-Abfragen unterstützt, etwa [sqlcmd](sql-server-linux-setup-tools.md) oder [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Das neue Azure Data Studio ist ein plattformübergreifendes Tool für die Verwaltung von SQL Server. Weitere Informationen finden Sie unter [Studio für Azure Data](../azure-data-studio/what-is.md).
+Das neue Azure Data Studio ist ein plattformübergreifendes Tool zum Verwalten von SQL Server. Weitere Informationen finden Sie unter [Azure Data Studio](../azure-data-studio/what-is.md).
 
 ## <a name="sql-server-management-studio-on-windows"></a>SQL Server Management Studio unter Windows
 
-SQL Server Management Studio (SSMS) ist eine Windows-Anwendung, die eine grafische Benutzeroberfläche bereitstellt, für die Verwaltung von SQL Server. Obwohl es derzeit nur unter Windows ausgeführt wird, können sie Sie eine Remoteverbindung mit Ihrem virtuellen SQL Server-Instanzen herstellen. Weitere Informationen zur Verwendung von SSMS zum Verwalten von SQL Server finden Sie unter [SSMS verwenden, um die Verwaltung von SQL Server unter Linux](sql-server-linux-manage-ssms.md).
+SQL Server Management Studio (SSMS) ist eine Windows-Anwendung, die eine grafische Benutzeroberfläche zum Verwalten von SQL Server bereitstellt. Obwohl die Anwendung zurzeit nur unter Windows ausgeführt wird, können Sie sie verwenden, um Remoteverbindungen mit Ihren Linux SQL Server-Instanzen herzustellen. Weitere Informationen zum Verwenden von SSMS, um SQL Server zu verwalten, finden Sie unter [Verwenden von SSMS zum Verwalten von SQL Server für Linux](sql-server-linux-manage-ssms.md).
 
-## <a name="mssql-cli-preview"></a>MSSQL-Cli (Vorschau)
+## <a name="mssql-cli-preview"></a>mssql-cli (Vorschauversion)
 
-Microsoft hat ein neues Skriptingtools Cross-Platform-Tool für SQL Server [Mssql-Cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). Dieses Tool befindet sich derzeit in der Vorschau.
+Microsoft hat ein neues plattformübergreifendes Skripterstellungstool für SQL Server, [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/), veröffentlicht. Dieses Tool befindet sich zurzeit in der Vorschau.
 
 ## <a name="powershell"></a>PowerShell
 
-PowerShell bietet eine umfassende befehlszeilenumgebung zum Verwalten von SQL Server unter Linux. Weitere Informationen finden Sie unter [Verwenden von PowerShell zum Verwalten von SQL Server unter Linux](sql-server-linux-manage-powershell.md).
+PowerShell stellt eine leistungsstarke Befehlszeilenumgebung zum Verwalten von SQL Server für Linux bereit. Weitere Informationen finden Sie unter [Verwenden von PowerShell unter Windows zum Verwalten von SQL Server für Linux](sql-server-linux-manage-powershell.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server unter Linux finden Sie unter [SQL Server unter Linux](sql-server-linux-overview.md).
+Weitere Informationen zu SQL Server für Linux finden Sie unter [SQL Server für Linux](sql-server-linux-overview.md).

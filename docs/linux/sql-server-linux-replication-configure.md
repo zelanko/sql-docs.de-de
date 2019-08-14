@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von SQL Server-Replikation unter Linux
-description: Dieser Artikel beschreibt, wie Sie SQL Server-Replikation unter Linux konfigurieren.
+description: In diesem Artikel ist beschrieben, wie Sie SQL Server-Replikation unter Linux konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,40 +11,40 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67895937"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Konfigurieren von SQL Server-Replikation unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] führt SQL Server-Replikation für Instanzen von SQL Server unter Linux.
+Mit [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] wird SQL Server-Replikation für Instanzen von SQL Server für Linux eingeführt.
 
-Ausführliche Informationen zur Replikation finden Sie unter [Dokumentation zu SQL Server-Replikation](../relational-databases/replication/sql-server-replication.md).
+Ausführliche Informationen über Replikation finden Sie unter [SQL Server-Replikation](../relational-databases/replication/sql-server-replication.md).
 
-Konfigurieren der Replikation unter Linux mit SQL Server Management Studio (SSMS) oder gespeicherte Transact-SQL-Prozeduren.
+Sie konfigurieren Replikation unter Linux entweder mit SQL Server Management Studio (SSMS) oder mit gespeicherten Transact-SQL-Prozeduren.
 
-* Zur Verwendung von SSMS können befolgen Sie die Anweisungen in diesem Artikel.
+* Wenn Sie SMSS verwenden möchten, gehen Sie entsprechend den Anweisungen in diesem Artikel vor.
 
-  Verwenden Sie SSMS auf einem Windows-Betriebssystem zur Verbindung mit Instanzen von SQL Server. Hintergrundinformationen und Anleitungen finden Sie [SSMS verwenden, um die Verwaltung von SQL Server unter Linux](./sql-server-linux-manage-ssms.md).
+  Verwenden Sie SSMS unter Windows, um Verbindungen mit Instanzen von SQL Server herzustellen. Hintergrundinformationen und Anweisungen finden Sie unter [Verwenden von SSMS zum Verwalten von SQL Server für Linux](./sql-server-linux-manage-ssms.md).
   
-* Ein Beispiel mit gespeicherten Prozeduren führen Sie die [Konfigurieren von SQL Server-Replikation unter Linux](sql-server-linux-replication-tutorial-tsql.md) Tutorial.
+* Ein Beispiel mit gespeicherten Prozeduren finden Sie im Tutorial [Konfigurieren von SQL Server-Replikation unter Linux](sql-server-linux-replication-tutorial-tsql.md).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-Vor dem Konfigurieren von Verlegern, Verteilern und Abonnenten, müssen Sie einige Konfigurationsschritte für die SQL Server-Instanz.
+Bevor Sie Verleger, Verteiler und Abonnenten konfigurieren können, müssen Sie einige Konfigurationsschritte für die SQL Server-Instanz ausführen.
 
-1. Aktivieren Sie SQL Server-Agent für die Replikations-Agents verwenden. Führen Sie auf allen Linux-Servern die folgenden Befehle im Terminal aus.
+1. Ermöglichen Sie dem SQL Server-Agent die Verwendung von Replikations-Agents. Führen Sie auf einem Linux-Server die folgenden Befehle im Terminal aus.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
   sudo systemctl restart mssql-server
   ```
 
-1. Konfigurieren Sie SQL Server-Instanz für die Replikation. Führen Sie zum Konfigurieren der SQL Server-Instanz für die Replikation `sys.sp_MSrepl_createdatatypemappings` für alle Instanzen, die bei der Replikation beteiligt.
+1. Konfigurieren Sie die SQL Server-Instanz für die Replikation. Um die SQL Server-Instanz für die Replikation zu konfigurieren, führen Sie `sys.sp_MSrepl_createdatatypemappings` für alle an der Replikation beteiligten Instanzen aus.
 
   ```sql
   USE msdb
@@ -53,9 +53,9 @@ Vor dem Konfigurieren von Verlegern, Verteilern und Abonnenten, müssen Sie eini
   GO
   ```
 
-1. Erstellen Sie einen Standardordner für momentaufnahmeordner an. Die SQL Server-Agents erfordern einen Standardordner für momentaufnahmeordner auf Lese-/Schreibzugriff auf. Erstellen Sie den momentaufnahmeordner auf dem Verteiler.
+1. Erstellen einen Momentaufnahmeordner. Die SQL Server-Agents benötigen einen Momentaufnahmeordner, für den sie Lese-/Schreibzugriff haben. Erstellen Sie den Momentaufnahmeordner auf dem Verteiler.
 
-  Erstellen den momentaufnahmeordner und gewähren des Zugriffs auf `mssql` Benutzer, die den folgenden Befehl ausführen:
+  Um den Momentaufnahmeordner zu erstellen und dem `mssql`-Benutzer Zugriff zu gewähren, führen Sie den folgenden Befehl aus:
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -63,38 +63,38 @@ Vor dem Konfigurieren von Verlegern, Verteilern und Abonnenten, müssen Sie eini
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>Konfigurieren Sie und überwachen Sie der Replikation mit SQL Server Management Studio (SSMS)
+## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>Konfigurieren und Überwachen der Replikation mit SQL Server Management Studio (SSMS)
 
 ### <a name="configure-the-distributor"></a>Konfigurieren des Verteilers
   
-So konfigurieren Sie den Verteiler 
+So konfigurieren Sie den Verteiler: 
 
-1. In SSMS eine Verbindung mit Ihrer Instanz von SQL Server in Objekt-Explorer herstellen.
+1. Stellen Sie aus SSMS eine Verbindung mit Ihrer Instanz von SQL Server im Objekt-Explorer her.
 
-1. Mit der rechten Maustaste **Replikation**, und klicken Sie auf **Verteilung konfigurieren...** .
+1. Klicken Sie mit der rechten Maustaste auf **Replikation**, und klicken Sie auf **Verteilung konfigurieren...** .
 
-1. Befolgen Sie die Anweisungen auf der **Verteilungskonfigurations-Assistenten**.
+1. Befolgen Sie die Anweisungen für den **Verteilungskonfigurations-Assistenten**.
 
-### <a name="create-publication-and-articles"></a>Erstellen der Veröffentlichung und die Artikel
+### <a name="create-publication-and-articles"></a>Erstellen von Veröffentlichung und Artikeln
 
-So erstellen Sie eine Veröffentlichung und Artikeln:
+So erstellen Sie eine Veröffentlichung und Artikel:
 
-1. Klicken Sie im Objekt-Explorer auf **Replikation** > **lokale Veröffentlichungen**> **neue Veröffentlichung...** .
+1. Klicken Sie im Objekt-Explorer auf **Replikation** > **Lokale Veröffentlichungen**> **Neue Veröffentlichung...** .
 
-1. Führen Sie die Anweisungen auf der **Assistenten für neue Veröffentlichung** so konfigurieren Sie den Typ der Replikation und die Artikel, die zur Veröffentlichung gehören.
+1. Befolgen Sie die Anweisungen im **Assistent für neue Veröffentlichung**, um den Typ der Replikation und die Artikel zu konfigurieren, die zur Veröffentlichung gehören.
 
-### <a name="configure-the-subscription"></a>Konfigurieren Sie das Abonnement
+### <a name="configure-the-subscription"></a>Konfigurieren des Abonnements
 
-Das Abonnement im Objekt-Explorer, klicken Sie auf **Replikation** > **lokale Abonnements**> **neue Abonnements...** .
+Um das Abonnement im Objekt-Explorer zu konfigurieren, klicken Sie auf **Replikation** > **Lokale Abonnements**> **Neue Abonnements...** .
 
-### <a name="monitor-replication-jobs"></a>Überwachen von Replikations-Aufträgen
+### <a name="monitor-replication-jobs"></a>Überwachen von Replikationsaufträgen
 
-Mithilfe des Replikationsmonitors Replikationsaufträge zu überwachen.
+Verwenden Sie „Replikationsmonitor“, um Replikationsaufträge zu überwachen.
 
-Klicken Sie im Objekt-Explorer mit der Maustaste **Replikation**, und klicken Sie auf **Replikationsmonitor starten**.
+Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Replikation**, und klicken Sie auf **Replikationsmonitor starten**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Konzepte: SQL Server-Replikation unter Linux](sql-server-linux-replication.md)
+[Konzepte: {0}SQL Server-Replikation unter Linux](sql-server-linux-replication.md)
 
-[Gespeicherte Replikationsprozeduren](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Gespeicherte Replikationsprozeduren (Transact-SQL)](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

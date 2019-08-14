@@ -1,6 +1,6 @@
 ---
-title: Sicherheitseinschränkungen für SQL Server unter Linux
-description: Dieser Artikel beschreibt die SQL Server auf Linux-Einschränkungen.
+title: Sicherheitseinschränkungen für SQL Server für Linux
+description: In diesem Artikel sind Einschränkungen für SQL Server für Linux beschrieben.
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/30/2018
@@ -9,25 +9,25 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.openlocfilehash: 9f54197c8613293b36c1eb1ec362a8ed4db835e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065124"
 ---
-# <a name="security-limitations-for-sql-server-on-linux"></a>Sicherheitseinschränkungen für SQL Server unter Linux
+# <a name="security-limitations-for-sql-server-on-linux"></a>Sicherheitseinschränkungen für SQL Server für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server unter Linux ist derzeit die folgenden Einschränkungen:
+Für SQL Server für Linux gibt es derzeit die folgenden Einschränkungen:
 
-* Eine standard-Kennwortrichtlinie wird bereitgestellt. MUST_CHANGE ist die einzige Möglichkeit, die Sie konfigurieren können.  
-* Erweiterbare Schlüsselverwaltung wird nicht unterstützt. 
-* Mit in Azure Key Vault gespeicherten Schlüsseln wird nicht unterstützt.
-* SQL Server generiert, über ein eigenes selbstsignierte Zertifikat zum Verschlüsseln von Verbindungen. SQL Server können konfiguriert werden, um einem vom Benutzer bereitgestellten Zertifikat für TLS zu verwenden. 
+* Es wird eine Standardkennwortrichtlinie bereitgestellt. MUST_CHANGE ist die einzige Option, die Sie konfigurieren können.  
+* Die erweiterbare Schlüsselverwaltung wird nicht unterstützt. 
+* Das Verwenden von Schlüsseln, die im Azure Key Vault gespeichert sind, wird nicht unterstützt.
+* SQL Server generiert ein eigenes selbstsigniertes Zertifikat zum Verschlüsseln von Verbindungen. SQL Server kann so konfiguriert werden, dass ein vom Benutzer bereitgestelltes Zertifikat für TLS verwendet wird. 
 
-Weitere Informationen zu Sicherheitsfunktionen in SQL Server verfügbar sind, finden Sie unter den [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+Weitere Informationen zu den in SQL Server verfügbaren Sicherheitsfunktionen finden Sie unter [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Häufig anfallender Sicherheitsaufgaben, finden Sie unter [erste Schritte mit den Sicherheitsfunktionen von SQL Server unter Linux](sql-server-linux-security-get-started.md). Ein Skript zum Ändern von TCP die Portnummer der SQL Server-Verzeichnisse, und Konfigurieren von Ablaufverfolgungsflags oder Sortierung, finden Sie unter [Konfigurieren von SQL Server unter Linux mit Mssql-Conf](sql-server-linux-configure-mssql-conf.md).
+Informationen zu allgemeinen Sicherheitsaufgaben finden Sie unter [Exemplarische Vorgehensweise für die Sicherheitsfeatures von SQL Server für Linux](sql-server-linux-security-get-started.md). Ein Skript, mit dem Sie die TCP-Portnummer und die SQL Server-Verzeichnisse ändern sowie Ablaufverfolgungsflags oder die Sortierung konfigurieren können, finden Sie unter [Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool](sql-server-linux-configure-mssql-conf.md).

@@ -1,7 +1,7 @@
 - name: Willkommen bei SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
-- name: Versionsverwaltung für die SQL-Dokumentation
-  href: toc/versioning-system-monikers-ui-sql-server.md
+  href: sql-server/sql-server-technical-documentation.md
+- name: Navigationstipps für die SQL-Dokumentation
+  href: sql-server/sql-docs-navigation-guide.md
 - name: "Vorgängerversionen von 2005\_bis\_2014"
   href: toc/previous-versions-sql-server.md
 - name: Übersicht
@@ -10459,8 +10459,8 @@
       items:
         - name: Hilfe
           href: sql-server/sql-server-get-help.md
-        - name: Navigationstipps für die SQL-Dokumentation
-          href: sql-server/sql-docs-navigation-guide.md
+        - name: Versionsverwaltung für die SQL-Dokumentation
+          href: sql-server/versioning-system-monikers-ui-sql-server.md
         - name: DBA-Stapelaustausch >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >

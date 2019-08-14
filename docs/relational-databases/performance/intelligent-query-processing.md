@@ -2,7 +2,7 @@
 title: Intelligente Abfrageverarbeitung in SQL-Datenbanken von Microsoft | Microsoft-Dokumentation
 description: Features zur intelligenten Abfrageverarbeitung, die die Abfrageleistung in SQL Server und in Azure SQL-Datenbank verbessern
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354624"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388369"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Intelligente Abfrageverarbeitung in SQL-Datenbanken
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Die Featurefamilie „Intelligente Abfrageverarbeitung“ umfasst Features mit weitreichenden Auswirkungen, die die Leistung vorhandener Workloads mit minimalem Implementierungsaufwand verbessern. 
+Die Featurefamilie „Intelligente Abfrageverarbeitung“ (Intelligent Query Processing, IQP) umfasst Features mit weitreichenden Auswirkungen, die die Leistung vorhandener Workloads mit minimalem Implementierungsaufwand verbessern. 
 
 ![Intelligente Abfrageverarbeitung](./media/iqp-feature-family.png)
 
-Sie können Workloads automatisch für die intelligente Abfrageverarbeitung anpassen, indem Sie den geeigneten Datenbank-Kompatibilitätsgrad für die Datenbank aktivieren. Diesen können Sie mit Transact-SQL festlegen. Beispiel:  
+Sie können Workloads automatisch für die intelligente Abfrageverarbeitung anpassen, indem Sie den geeigneten Datenbank-Kompatibilitätsgrad für die Datenbank aktivieren. Diesen können Sie mit [!INCLUDE[tsql](../../includes/tsql-md.md)] festlegen. Beispiel:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ In der folgenden Tabelle sind Details zu allen Features der intelligenten Abfrag
 
 | **IQP-Feature** | **Unterstützt in Azure SQL-Datenbank** | **Unterstützt in SQL Server** |**Beschreibung** |
 | --- | --- | --- |--- |
-| [Adaptive Joins (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Adaptive Joins wählen je nach tatsächlichen Eingabezeilen während der Laufzeit dynamisch einen Jointyp aus.|
-| [Approximate Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Ja, öffentliche Vorschauversion| Ja, ab SQL Server 2019 CTP 2.0, öffentliche Vorschauversion|Stellt die geschätzte Abfrageverarbeitung für Big Data-Szenarios mit dem Vorteil einer hohen Leistung und einem niedrigen Speicherbedarf bereit. |
-| [Batchmodus bei Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Stellt den Batchmodus für CPU-gebundene relationale Data Warehouse-Workloads bereit, ohne Columnstore-Indizes zu benötigen.  | 
-| [Verschachtelte Ausführung](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Verwendet die tatsächliche Kardinalität der Tabellenwertfunktion mit mehreren Anweisungen, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
-| [Feedback zur Speicherzuweisung (Batchmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 140| Ja,ab SQL Server 2017 unter Kompatibilitätsgrad 140|Wenn es für eine Abfrage im Batchmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
-| [Feedback zur Speicherzuweisung (Zeilenmodus)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Wenn es für eine Abfrage im Zeilenmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
-| [Inlining benutzerdefinierter Skalarfunktionen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Nein | Ja,ab SQL Server 2019 CTP 2.1 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Benutzerdefinierte Skalarfunktionen werden in äquivalente relationale Ausdrücke transformiert, für die „Inlining“ in die aufrufende Abfrage ausgeführt wird, was häufig zu erheblichen Leistungssteigerungen führt.|
-| [Verzögerte Kompilierung von Tabellenvariablen](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja,ab SQL Server 2019 CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Verwendet die tatsächliche Kardinalität der Tabellenvariable, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
+| [Adaptive Joins (Batchmodus)](#batch-mode-adaptive-joins) | Ja, unter Kompatibilitätsgrad 140| Ja, ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] unter Kompatibilitätsgrad 140|Adaptive Joins wählen je nach tatsächlichen Eingabezeilen während der Laufzeit dynamisch einen Jointyp aus.|
+| [Approximate Count Distinct](#approximate-query-processing) | Ja, öffentliche Vorschauversion| Ja, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Stellt die geschätzte Abfrageverarbeitung für Big Data-Szenarios mit dem Vorteil einer hohen Leistung und einem niedrigen Speicherbedarf bereit. |
+| [Batchmodus bei Rowstore](#batch-mode-on-rowstore) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Stellt den Batchmodus für CPU-gebundene relationale Data Warehouse-Workloads bereit, ohne Columnstore-Indizes zu benötigen.  | 
+| [Verschachtelte Ausführung](#interleaved-execution-for-mstvfs) | Ja, unter Kompatibilitätsgrad 140| Ja, ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] unter Kompatibilitätsgrad 140|Verwendet die tatsächliche Kardinalität der Tabellenwertfunktion mit mehreren Anweisungen, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
+| [Feedback zur Speicherzuweisung (Batchmodus)](#batch-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 140| Ja, ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] unter Kompatibilitätsgrad 140|Wenn es für eine Abfrage im Batchmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
+| [Feedback zur Speicherzuweisung (Zeilenmodus)](#row-mode-memory-grant-feedback) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Wenn es für eine Abfrage im Zeilenmodus Operationen gibt, die sich auf den Datenträger auswirken, wird für anschließende Ausführungen mehr Speicher hinzugefügt. Wenn eine Abfrage unnötigerweise mehr als die Hälfte des zugewiesenen Speichers belegt, wird die Speicherzuweisungsseite für anschließende Ausführungen reduziert.|
+| [Inlining benutzerdefinierter Skalarfunktionen](#scalar-udf-inlining) | Nein | Ja, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Benutzerdefinierte Skalarfunktionen werden in äquivalente relationale Ausdrücke transformiert, für die „Inlining“ in die aufrufende Abfrage ausgeführt wird, was häufig zu erheblichen Leistungssteigerungen führt.|
+| [Verzögerte Kompilierung von Tabellenvariablen](#table-variable-deferred-compilation) | Ja, unter Kompatibilitätsgrad 150, öffentliche Vorschauversion| Ja, ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 unter Kompatibilitätsgrad 150, öffentliche Vorschauversion|Verwendet die tatsächliche Kardinalität der Tabellenvariable, die bei der ersten Kompilierung aufgetreten ist, anstatt einer festgelegten Schätzung.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Adaptive Joins im Batchmodus
+Mit dem Feature „Adaptive Joins im Batchmodus“ wird es ermöglicht, die Wahl der Join-Methode ([Hashjoin oder Join geschachtelter Schleifen](../../relational-databases/performance/joins.md)) auf den Zeitpunkt **nach** der Überprüfung der ersten Eingabe zu verzögern, indem ein einzelner zwischengespeicherter Plan verwendet wird. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.
 
-Dieses Feature ermöglicht Ihrem Plan, während der Ausführung mithilfe eines einzelnen zwischengespeicherten Plans dynamisch zu einer besseren Joinstrategie zu wechseln.
-
-Mit dem Feature der adaptiven Joins im Batchmodus können Sie wählen, ob Methoden für [Hashjoins oder Joins geschachtelter Schleifen](../../relational-databases/performance/joins.md) auf **nach** der Überprüfung der ersten Eingabe zurückgestellt werden. Der Operator für adaptive Joins definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. Daher kann Ihr Plan während der Ausführung dynamisch zu einer passenderen Joinstrategie wechseln.
-Funktionsweise:
--  Wenn die Anzahl der Zeilen der Buildjoineingabe so klein ist, dass ein Join geschachtelter Schleifen passender als ein Hashjoin wäre, wechselt Ihr Plan zu einem Algorithmus geschachtelter Schleifen.
--  Wenn die Buildjoineingabe eine bestimmte Anzahl an Zeilen übersteigt, wird nicht gewechselt, und Ihr Plan wird mit einem Hashjoin fortgesetzt.
-
-Die folgende Abfrage veranschaulicht ein Beispiel für einen adaptiven Join:
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-Die Abfrage gibt 336 Zeilen zurück. Wenn Sie die [Liveabfragestatistik](../../relational-databases/performance/live-query-statistics.md) aktivieren, sehen Sie den folgenden Plan:
-
-![Abfrageergebnis: 336 Zeilen](./media/4_AQPStats336Rows.png)
-
-Im Plan sehen wir das Folgende:
-1. Ein Columnstore-Indexscan wurde verwendet, um Zeilen für die Buildphase des Hashjoins bereitzustellen.
-1. Wir sehen den neuen Operator für adaptive Joins. Dieser Operator definiert einen Schwellenwert, der bestimmt, wann zu einem Plan geschachtelter Schleifen gewechselt wird. In diesem Beispiel beträgt der Schwellenwert 78 Zeilen. Alles, was &gt;= 78 Zeilen enthält, verwendet einen Hashjoin. Wenn der Schwellenwert nicht überschritten wird, wird ein Join geschachtelter Schleifen verwendet.
-1. Da 336 Zeilen zurückgegeben werden, wird der Schwellenwert überschritten. Deshalb stellt der zweite Branch die Überprüfungsphase eines standardmäßigen Hashjoinvorgangs dar. Beachten Sie, dass die Liveabfragestatistik Zeilen anzeigt, die die Operatoren durchlaufen: in diesem Fall „672 von 672“.
-1. Der letzte Branch ist der Clustered Index Seek, der vom Nested Loop-Join verwendet worden wäre, wäre der Schwellenwert nicht überschritten worden. Beachten Sie, dass „0 von 336“ Zeilen angezeigt werden (der Branch wird nicht verwendet).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Schauen wir uns nun den Plan für die gleiche Abfrage, aber dieses Mal mit einem *Mengenwert* an, der nur eine Zeile in der Tabelle hat:
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-Die Abfrage gibt eine Zeile zurück. Wenn Sie die Liveabfragestatistik aktivieren, sehen Sie den folgenden Plan:
-
-![Abfrageergebnis eine Zeile](./media/5_AQPStatsOneRow.png)
-
-Im Plan sehen wir das Folgende:
-- Bei einer zurückgegebenen Zeile durchlaufen Zeilen jetzt den Clustered Index Seek.
-- Da die Buildphase des Hashjoins nicht fortgesetzt wurde, wird der zweite Branch nicht von Zeilen durchlaufen.
-
-### <a name="adaptive-join-benefits"></a>Vorteile adaptiver Joins
-Workloads mit häufiger Oszillation zwischen kleinen und großen Joineingabescans profitieren am meisten von dieser Funktion.
-
-### <a name="adaptive-join-overhead"></a>Mehraufwand adaptiver Joins
-Adaptive Joins erfordern mehr Speicherplatz als ein äquivalenter Plan eines indizierten Joins geschachtelter Schleifen. Der zusätzliche Speicherplatz wird so angefordert, als wären die geschachtelte Schleifen ein Hashjoin. Auch die Buildphase ist mit Aufwand verbunden: sowohl für einen Stop-and-Go-Vorgang als auch für einen äquivalenten Join eines Streamings geschachtelter Schleifen. Dieser zusätzliche Aufwand geht mit Flexibilität für Szenarios einher, in denen die Zeilenzahl möglicherweise in der Buildeingabe schwankt.
-
-### <a name="adaptive-join-caching-and-re-use"></a>Zwischenspeichern und Wiederverwenden von adaptiven Joins
-Adaptive Joins im Batchmodus funktionieren bei der ersten Ausführung einer Anweisung. Nach der ersten Kompilierung bleiben aufeinanderfolgende Ausführungen adaptiv und basieren auf dem Schwellenwert des kompilierten adaptiven Joins und den Laufzeitzeilen, die die Buildphase der äußeren Eingabe durchlaufen.
-
-### <a name="tracking-adaptive-join-activity"></a>Nachverfolgen der Aktivität adaptiver Joins
-Der Operator für adaptive Joins verfügt über folgende Planoperatorattribute:
-
-| Planattribut | und Beschreibung |
-|--- |--- |
-| AdaptiveThresholdRows | Gibt den beim Wechsel von einem Hashjoin zu einem Nested Loop-Join zu verwendenden Schwellenwert an |
-| EstimatedJoinType | Gibt den erwarteten Jointyp an |
-| ActualJoinType | Gibt in einem Plan an, welcher Joinalgorithmus basierend auf dem Schwellenwert verwendet wurde. |
-
-Der geschätzte Plan zeigt die Form des adaptiven Joinplans an sowie den definierten Schwellenwert für adaptive Joins und den geschätzten Jointyp.
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>Interoperabilität von adaptiven Joins und dem Abfragespeicher
-Der Abfragespeicher erfasst einen adaptiven Joinplan im Batchmodus und kann diesen erzwingen.
-
-### <a name="adaptive-join-eligible-statements"></a>Zulässige Anweisungen für adaptive Joins
-Ein logischer Join ist dann für adaptive Joins im Batchmodus zulässig, wenn er folgende Bedingungen erfüllt:
-- Der Datenbank-Kompatibilitätsgrad beträgt 140.
-- Die Abfrage ist eine SELECT-Anweisung (Anweisungen zur Datenmodifikation sind aktuell noch unzulässig).
-- Der Join kann sowohl vom physischen Algorithmus eines indizierten Joins geschachtelter Schleifen als auch eines Hashjoins ausgeführt werden.
-- Der Hashjoin verwendet den Batchmodus entweder über einen vorhandenen Columnstore-Index in der Abfrage oder eine mit Columnstore indizierte Tabelle, auf die direkt vom Join verwiesen wird.
-- Die generierten alternativen Lösungen des Joins geschachtelter Schleifen und Hashjoins sollten dasselbe erste untergeordnete Element haben (äußerer Verweis).
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Adaptive Joins und Nested Loop-Effizienz
-Wenn ein adaptiver Join zu einem Vorgang geschachtelter Schleifen wechselt, verwendet er die Zeilen, die bereits vom Hashjoinbuild gelesen wurden. Der Operator liest **nicht** erneut die Zeilen des äußeren Verweises.
-
-### <a name="adaptive-threshold-rows"></a>Adaptive Schwellenwertzeilen
-Das folgende Diagramm zeigt eine beispielhafte Überschneidung zwischen dem Aufwand eines Hashjoins und dem Aufwand des alternativen Joins geschachtelter Schleifen. Am Überschneidungspunkt wird der Schwellenwert bestimmt, der wiederum den für den Joinvorgang verwendeten Algorithmus bestimmt.
-
-![Schwellenwert des Joins](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Deaktivieren von adaptiven Joins ohne Änderung des Kompatibilitätsgrads
-
-Adaptive Joins können im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 140 und höher bleibt.  
-Um adaptive Joins für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
-Um adaptive Joins für alle Abfrageausführungen wieder zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-Sie können adaptive Joins auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-Ein USE HINT-Abfragehinweis hat Vorrang vor einer datenbankweit gültigen Konfiguration oder einer Ablaufverfolgungsflageinstellung.
+Weitere Informationen finden Sie unter [Grundlegendes zu adaptiven Joins](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Feedback zur Speicherzuweisung im Batchmodus
 Der Plan nach der Ausführung einer Abfrage in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält den für die Ausführung mindestens erforderlichen Speicherplatz und die ideale Speicherzuweisungsgröße, sodass alle Zeilen in den Speicher passen. Es gibt Leistungseinbußen, wenn die Speicherzuweisungsgrößen falsch sind. Zu große Zuweisungen führen zu verschwendetem Speicherplatz und geringerer Parallelität. Nicht ausreichende Speicherzuweisungen führen zu teuren Überläufen auf den Datenträger. Für wiederholte Workloads berechnet das Feedback zur Speicherzuweisung im Batchmodus den tatsächlich erforderlichen Speicherplatz für eine Abfrage neu und aktualisiert anschließend den Zuweisungswert des zwischengespeicherten Plans. Wenn eine identische Abfrageanweisung ausgeführt wird, verwendet die Abfrage die angepasste Speicherzuweisungsgröße. Dadurch werden zu hohe Speicherzuweisungen verringert, die die Parallelität beeinträchtigen, und Probleme bei zu gering geschätzten Speicherzuweisungen behoben, die teuren Überläufe auf den Datenträger verursachen.
@@ -212,7 +92,11 @@ Der tatsächlich zugewiesene Speicher berücksichtigt die Abfragespeichereinschr
 Das Feedback zur Speicherzuweisung kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 140 und höher bleibt. Um das Feedback zur Speicherzuweisung im Batchmodus für alle Abfrageausführungen, die aus der Datenbank stammen, zu deaktivieren, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
@@ -220,7 +104,11 @@ Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations
 Um das Feedback zur Speicherzuweisung im Batchmodus für alle Abfrageausführungen, die aus der Datenbank stammen, wieder zu aktivieren, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 Sie können das Feedback zur Speicherzuweisung im Batchmodus auch für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:
@@ -354,14 +242,22 @@ Pläne mit der verschachtelten Ausführung können erzwungen werden. Der Plan is
 Geschachtelte Ausführung kann im Datenbank- oder Anweisungsbereich deaktiviert werden, während der Datenbankkompatibilitätsgrad weiterhin bei 140 und höher bleibt.  Um geschachtelte Ausführung für alle Abfrageausführungen zu deaktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 Ist diese Einstellung aktiviert, wird sie in [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) als aktiviert aufgeführt.
 Um geschachtelte Ausführung für alle Abfrageausführungen wieder zu aktivieren, die aus der Datenbank stammen, führen Sie die folgende Anweisung im Kontext der betroffenen Datenbank aus:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 Sie können adaptive Joins auch für eine verschachtelte Ausführung für eine bestimmte Abfrage deaktivieren, indem Sie `DISABLE_INTERLEAVED_EXECUTION_TVF` als [USE HINT-Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) festlegen. Beispiel:

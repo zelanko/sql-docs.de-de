@@ -1,7 +1,7 @@
 ---
-title: Zentrale Verwaltungsserver für SQL Server-Erweiterung
+title: SQL Server-Erweiterung „Zentrale Verwaltungsserver“
 titleSuffix: Azure Data Studio
-description: Installieren Sie und verwenden Sie die zentrale Verwaltungsserver für SQL Server-Erweiterung (Vorschauversion) für Azure Data Studio
+description: Installieren und Verwenden der SQL Server-Erweiterung „Zentrale Verwaltungsserver“ (Vorschauversion) für Azure Data Studio
 ms.custom: seodec18
 ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
@@ -11,29 +11,29 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959206"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Erweiterung: zentrale Verwaltungsserver von SQL Server (Vorschauversion)
-Die zentrale Verwaltungsserver-Erweiterung kann Benutzer eine Liste mit Instanzen von SQL Server zu speichern, die in eine oder mehrere Gruppen aufgeteilt ist. Aktionen, die über eine CMS-Gruppe ausgeführt werden auf allen Servern in der Servergruppe fungieren.
+Die Erweiterung „Zentrale Verwaltungsserver“ ermöglicht es Benutzern, eine Liste von SQL Server-Instanzen zu speichern, die in mindestens einer Gruppe zusammengestellt sind. Aktionen, die mit einer Gruppe zentraler Verwaltungsserver ausgeführt werden, wirken sich auf alle Server in der Servergruppe aus.
 
-Diese Benutzeroberfläche befindet sich derzeit in der ersten Vorschauversion. Probleme melden und Funktionsanfragen [hier](https://github.com/microsoft/azuredatastudio/issues).
+Diese Umgebung befindet sich derzeit in der ersten Vorschauphase. Probleme und Featureanforderungen können Sie [hier](https://github.com/microsoft/azuredatastudio/issues) mitteilen.
 
-![CMS-Erweiterung](media/sql-server-cms-extension/cms-list.png)
+![Erweiterung „Zentrale Verwaltungsserver“](media/sql-server-cms-extension/cms-list.png)
 
-## <a name="install-the-sql-server-central-management-servers-extension"></a>Installieren Sie die zentrale Verwaltungsserver für SQL Server-Erweiterung
+## <a name="install-the-sql-server-central-management-servers-extension"></a>Installieren der SQL Server-Erweiterung „Zentrale Verwaltungsserver“
 
-1. Um Erweiterungs-Manager öffnen und den Zugriff auf die verfügbaren Erweiterungen, wählen Sie das Symbol für Erweiterungen oder **Erweiterungen** in die **Ansicht** Menü.
-2. Wählen Sie eine verfügbare Erweiterung, um seine Details anzuzeigen.
-1. Wählen Sie die gewünschte Erweiterung (SQL Server Central Management-Server) und **installieren** es.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
+1. Wählen Sie die gewünschte Erweiterung (SQL Server „Zentrale Verwaltungsserver“) aus, und **Installieren** Sie diese.
 
-### <a name="how-do-i-start-central-management-servers"></a>Wie beginne ich mit der zentrale Verwaltungsserver?
- Zentrale Verwaltungsserver können durch Klicken auf das Symbol "Verbindungen" (STRG/Cmd + G) angezeigt werden. Beim ersten Laden Sie Sie die Erweiterung, die CMS-Ansicht wird minimiert, und können Sie sie durch Klicken auf Öffnen **zentrale Verwaltungsserver**
+### <a name="how-do-i-start-central-management-servers"></a>Wie wird „Zentrale Verwaltungsserver“ gestartet?
+ „Zentrale Verwaltungsserver“ kann angezeigt werden, indem Sie auf das Symbol für Verbindungen geklickt wird (STRG/Cmd+G). Wenn Sie die Erweiterung zum ersten Mal herunterladen, ist die Ansicht „Zentrale Verwaltungsserver“ minimiert, und Sie können Sie öffnen, indem Sie auf **Zentrale Verwaltungsserver** klicken.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Konzeptionell mehr Informationen zu zentralen Verwaltungsservern, [finden Sie weitere Informationen finden.](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)
+Weitere Informationen zum Konzept von „Zentrale Verwaltungsserver“ [finden Sie hier](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group).
 
 

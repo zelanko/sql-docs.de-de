@@ -1,7 +1,7 @@
 ---
 title: Was sind Datenpools?
 titleSuffix: SQL Server big data clusters
-description: Dieser Artikel beschreibt die Datenpool in einer SQL Server-2019 big Data-Cluster.
+description: Dieser Artikel enthält die Beschreibung eines Datenpools in einem Big Data-Cluster für SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,31 +10,31 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f9355508e4d32dd9a6152781fba325ded2fa7425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958737"
 ---
-# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Was sind Datenpools in eine SQL Server-big Data-Cluster?
+# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Was sind Datenpools in einem Big-Data-Cluster für SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel beschreibt die Rolle des *Daten SQL Server-Ressourcenpools* in einer SQL Server-2019 big Data-Cluster (Vorschau). In den folgenden Abschnitten wird beschrieben, die Architektur und die Funktionalität von einem Pool der SQL-Daten.
+In diesem Artikel ist die Rolle beschrieben, die *SQL Server-Datenpools* in einem Big Data-Cluster für SQL Server 2019 (Vorschau) spielen. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Datenpools beschrieben.
 
-## <a name="data-pool-architecture"></a>Data-Pool-Architektur
+## <a name="data-pool-architecture"></a>Datenpoolarchitektur
 
-Ein Datenpool besteht aus einer oder mehreren Pools-Instanzen der SQL Server-Daten. SQL-Pool-Dateninstanzen geben beständigen Speicher von SQL Server für den Cluster. Ein Datenpool wird zum Erfassen von Daten aus SQL-Abfragen oder Spark-Aufträgen verwendet. Um eine bessere Leistung für umfangreiche Datasets bereitzustellen, werden Daten in einem Datenpool in Shards auf Datenmember-SQL-Pool-Instanzen verteilt.
+Ein Datenpool besteht aus mindestens einer SQL Server-Datenpoolinstanz. SQL-Datenpoolinstanzen stellen persistenten SQL Server-Speicher für den Cluster bereit. Ein Datenpool wird verwendet, um Daten über SQL-Abfragen oder Spark-Aufträge einzulesen. Um eine bessere Leistung für große Datasets zu ermöglichen, werden Daten in einem Datenpool auf Shards in den zugehörigen SQL-Datenpoolinstanzen verteilt.
 
-## <a name="scale-out-data-marts"></a>Horizontales Skalieren Datamarts
+## <a name="scale-out-data-marts"></a>Data Marts mit horizontaler Skalierung
 
-Datenpools ermöglichen die Erstellung von horizontaler Datamarts, in denen externe Daten aus mehreren Quellen in den Datenpool für die erfasst werden. Da die Daten auf die Daten-poolinstanzen verteilt sind, sind die parallele Abfragen für die ausgewählten Daten effizienter.
+Datenpools ermöglichen das Erstellen von Data Marts mit horizontaler Skalierung, über die externe Daten aus mehreren Quellen in den Datenpool eingelesen werden. Da die Daten über die Datenpoolinstanzen verteilt sind, sind parallele Abfragen zu den zusammengestellten Daten effizienter.
 
-![Scale-Out-Datamart](media/concept-data-pool/data-virtualization-improvements.png)
+![Data Mart mit horizontaler Skalierung](media/concept-data-pool/data-virtualization-improvements.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter den folgenden Ressourcen:
+In den folgenden Artikeln finden Sie weitere Informationen zu den Big-Data-Clustern für SQL Server:
 
-- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server-big Data-Cluster Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
+- [Workshop: Microsoft SQL Server big data clusters Architecture (Workshop: Big-Data-Cluster für SQL Server – Architektur)](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

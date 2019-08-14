@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bfc0e6a64c9895b4b118ec5c6c27a66657b0829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065802"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471160"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE-Kompatibilitätsgrad (Transact-SQL)
 
@@ -76,7 +76,7 @@ Die folgenden Verhaltensweisen werden für [!INCLUDE[ssSQL17](../../includes/sss
 
 - War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten.
 - War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] entspricht.
-- Der Kompatibilitätsgrad der Datenbanken „tempdb“, „model“, „msdb“ und „Resource“ wird nach dem Upgrade auf den aktuellen Kompatibilitätsgrad festgelegt.
+- Der Kompatibilitätsgrad der Datenbanken „tempdb“, „model“, „msdb“ und „Resource“ wird auf den Standardkompatibilitätsgrad für eine bestimmte [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Version festgelegt. 
 - Die „master“-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.
 
 Verwenden Sie `ALTER DATABASE`, um den Kompatibilitätsgrad der Datenbank zu ändern. Die neue Kompatibilitätsgradeinstellung für eine Datenbank wird wirksam, wenn ein `USE <database>`-Befehl ausgegeben oder eine neue Anmeldung mit dieser Datenbank als Standarddatenbankkontext verarbeitet wird.

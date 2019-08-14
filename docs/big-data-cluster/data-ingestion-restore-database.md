@@ -1,7 +1,7 @@
 ---
 title: Wiederherstellen einer Datenbank
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel zeigt, wie zum Wiederherstellen einer Datenbank in der Masterinstanz von einer SQL Server-2019 big Data-Cluster (Vorschau) wird.
+description: In diesem Artikel ist beschrieben, wie eine Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server 2019 (Vorschauversion) wiederhergestellt wird.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,30 +10,30 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958624"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Wiederherstellen einer Datenbank in SQL Server big Data-Cluster master-Instanz
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Wiederherstellen einer Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel beschreibt, wie Sie eine vorhandene Datenbank auf der Masterinstanz von einer SQL Server-2019 big Data-Cluster (Vorschau) wiederherstellen. Die empfohlene Methode ist, verwenden Sie eine sicherungs-, Kopier-und Ansatz wiederherstellen.
+In diesem Artikel ist beschrieben, wie eine vorhanden Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server 2019 (Vorschauversion) wiederhergestellt wird. Die empfohlene Methode besteht darin, einen Ansatz mit Sichern, Kopieren und Wiederherstellen zu verwenden.
 
-## <a name="backup-your-existing-database"></a>Sichern Sie Ihre vorhandene Datenbank
+## <a name="backup-your-existing-database"></a>Sichern Ihrer vorhandenen Datenbank
 
-Sichern Sie zunächst Ihre vorhandenen SQL Server-Datenbank über entweder SQL Server auf Windows oder Linux. Verwenden Sie die Standardverfahren für die Sicherung mit Transact-SQL oder mit einem Tool wie SQL Server Management Studio (SSMS).
+Sichern Sie zunächst Ihre vorhandene SQL Server-Datenbank aus SQL Server für Windows oder Linux. Verwenden Sie Standardsicherungsverfahren mit Transact-SQL oder mit einem Tool wie SQL Server Management Studio (SSMS).
 
-In diesem Artikel zeigt, wie Sie die AdventureWorks-Datenbank wiederherstellen, jedoch können Sie datenbanksicherung. 
+In diesem Artikel ist gezeigt, wie Sie die AdventureWorks-Datenbank wiederherstellen, Sie können aber jede beliebige Datenbanksicherung verwenden. 
 
 > [!TIP]
-> Sie können die AdventureWorks-Sicherung [hier](https://www.microsoft.com/download/details.aspx?id=49502).
+> Sie können die AdventureWorks-Sicherung von [hier](https://www.microsoft.com/download/details.aspx?id=49502) herunterladen.
 
 ## <a name="copy-the-backup-file"></a>Kopieren der Sicherungsdatei
 
-Kopieren der Sicherungsdatei auf den SQL Server-Container in den Pod-Masterinstanz des Kubernetes-Clusters an.
+Kopieren Sie die Sicherungsdatei in den SQL Server-Container im Masterinstanzpod des Kubernetes-Clusters.
 
 ```bash
 kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
@@ -45,7 +45,7 @@ Beispiel:
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
 ```
 
-Anschließend stellen Sie sicher, dass die Sicherungsdatei in den Pod-Container kopiert wurde.
+Vergewissern Sie sich anschließend, dass die Sicherungsdatei in den Podcontainer kopiert wurde.
 
 ```bash
 kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
@@ -62,9 +62,9 @@ ls /tmp
 exit
 ```
 
-## <a name="restore-the-backup-file"></a>Stellt die Sicherungsdatei
+## <a name="restore-the-backup-file"></a>Wiederherstellen der Sicherungsdatei
 
-Anschließend stellen Sie die datenbanksicherung, um SQL Server-Masterinstanz.  Wenn Sie eine datenbanksicherung wiederherstellen, die für Windows erstellt wurde, müssen Sie die Namen der Dateien abzurufen.  Klicken Sie in Azure Data Studio eine Verbindung mit dem master her, und führen Sie dieses SQL-Skript:
+Stellen Sie im nächsten Schritt die Datenbanksicherung in der Masterinstanz von SQL Server wieder her.  Wenn Sie eine Datenbanksicherung wiederherstellen, die unter Windows erstellt wurde, müssen Sie die Namen der Dateien ermitteln.  Stellen Sie in Azure Data Studio eine Verbindung mit der Masterinstanz her, und führen Sie dieses SQL-Skript aus:
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
@@ -76,9 +76,9 @@ Beispiel:
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 ```
 
-![Liste der Sicherungsdatei](media/restore-database/database-restore-file-list.png)
+![Sicherungsdateiliste](media/restore-database/database-restore-file-list.png)
 
-Nun wird wiederherstellen Sie die Datenbank. Das folgende Skript ist ein Beispiel. Ersetzen Sie die Namen/Pfade je nach Ihren sicherungsanforderungen für die Datenbank nach Bedarf.
+Stellen Sie die Datenbank nun wieder her. Das folgende Skript ist ein Beispiel. Ersetzen Sie die Namen/Pfade entsprechend den Anforderungen Ihrer Datenbanksicherung.
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -88,9 +88,9 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-## <a name="configure-data-pool-and-hdfs-access"></a>Datenpool und HDFS-Zugriff konfigurieren
+## <a name="configure-data-pool-and-hdfs-access"></a>Konfigurieren von Datenpool- und HDFS-Zugriff
 
-Führen Sie für die master SQL Server-Instanz, die Zugriff auf Datenpools und HDFS nun die Verfahren zum Daten-Pool und Pool gespeichert. Führen Sie die folgenden Transact-SQL-Skripts für Ihre neu wiederhergestellte Datenbank:
+Nun führen Sie, damit die SQL Server-Masterinstanz auf Datenpools und HDFS zugreifen kann, die gespeicherten Prozeduren für den Datenpool und den Speicherpool aus. Führen Sie die folgenden Transact-SQL-Skripts für Ihre neu wiederhergestellte Datenbank aus:
 
 ```sql
 USE AdventureWorks2016CTP3
@@ -108,10 +108,10 @@ GO
 ```
 
 > [!NOTE]
-> Sie müssen zum Ausführen über diese Setupskripts nur für Datenbanken, die von älteren Versionen von SQL Server wiederhergestellt. Wenn Sie eine neue Datenbank in SQL Server-Masterinstanz erstellen, werden Daten Pool und Pool gespeicherte Prozeduren bereits für Sie konfiguriert.
+> Sie müssen diese Einrichtungsskripts nur für Datenbanken durchlaufen, die aus älteren Versionen von SQL Server wiederhergestellt wurden. Wenn Sie eine neue Datenbank in der SQL Server-Masterinstanz erstellen, sind die gespeicherten Prozeduren für den Datenpool und den Speicherpool bereits für Sie konfiguriert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den SQL Server-big Data-Clustern finden Sie unter der Übersicht über die folgenden:
+In der folgenden Übersicht finden Sie weitere Informationen zu den Big-Data-Clustern für SQL Server:
 
-- [Was sind SQL Server-2019 big Data-Cluster?](big-data-cluster-overview.md)
+- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)

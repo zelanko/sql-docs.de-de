@@ -1,7 +1,7 @@
 ---
-title: Bereitstellung-konfigurationsdateireferenz
+title: Referenz einer Bereitstellungskonfigurationsdatei
 titleSuffix: SQL Server big data clusters
-description: Referenz für eine Bereitstellungskonfigurationsdatei für big Data-Cluster.
+description: Referenz für eine Bereitstellungskonfigurationsdatei für einen Big Data-Cluster
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958247"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Bereitstellung von-konfigurationsdateireferenz für big Data-Cluster
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referenz einer Bereitstellungskonfigurationsdatei für einen Big Data-Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel enthält eine JSON-Datei, die die Struktur einer Bereitstellungskonfigurationsdatei für SQL Server-2019 big Data-Cluster dokumentiert.
+Dieser Artikel enthält eine JSON-Datei, in der die Struktur einer Bereitstellungskonfigurationsdatei für einen Big Data-Cluster für SQL Server 2019 dokumentiert ist.
 
 > [!TIP]
-> Verwenden Sie dies nicht als die tatsächliche Bereitstellung-Konfigurationsdatei. Führen Sie stattdessen die Anweisungen in der [bereitstellungsanleitung](deployment-guidance.md#configfile) für die Arbeit mit Konfigurationsdateien.
+> Verwenden Sie diese Datei nicht als tatsächliche Bereitstellungskonfigurationsdatei. Befolgen Sie stattdessen die Anweisungen in der [Bereitstellungsanleitung](deployment-guidance.md#configfile) hinsichtlich des Arbeitens mit Konfigurationsdateien.
 
 ## <a name="deployment-configuration-file"></a>Konfigurationsdatei für die Bereitstellung
 
-Verwenden Sie die folgende JSON-Datei als Referenz für die Struktur und die Einstellungen in einer Bereitstellungskonfigurationsdatei für big Data-Cluster.
+Verwenden Sie die folgende JSON-Datei als Referenz für die Struktur und Einstellungen in einer Bereitstellungskonfigurationsdatei für einen Big Data-Cluster.
 
 ```json
 {
@@ -453,4 +453,4 @@ Verwenden Sie die folgende JSON-Datei als Referenz für die Struktur und die Ein
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum verwenden und Anpassen der Bereitstellung von Konfigurationsdateien finden Sie unter [große SQL Server-Daten bereitstellen in Kubernetes-Clustern](deployment-guidance.md#configfile).
+Weitere Informationen zum Verwenden und Anpassen von Bereitstellungskonfigurationsdateien finden Sie unter [Bereitstellen von Big-Data-Clustern für SQL Server in Kubernetes](deployment-guidance.md#configfile).

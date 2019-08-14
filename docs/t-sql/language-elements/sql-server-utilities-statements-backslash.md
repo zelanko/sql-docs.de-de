@@ -1,7 +1,7 @@
 ---
 title: Umgekehrter Schrägstrich (Zeilenfortsetzung) (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,14 +28,15 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cc949553b66e1bd8e8d501a40a367d23559bb96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121669"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495441"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Umgekehrter Schrägstrich (Zeilenfortsetzung) (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\` teilt eine lange Zeichenfolgen- oder Binärzeichenfolgenkonstante in mindestens zwei Zeilen auf, um die Lesbarkeit zu erhöhen.  
@@ -57,7 +58,7 @@ ms.locfileid: "68121669"
  Ist die Fortsetzung einer Zeichenfolge.  
   
 ## <a name="remarks"></a>Remarks  
- Dieser Befehl gibt den ersten und den fortgesetzten Abschnitt der Zeichenfolge ohne den umgekehrten Schrägstrich als eine einzige Zeichenfolge zurück.  
+Dieser Befehl gibt den ersten und den fortgesetzten Abschnitt der Zeichenfolge ohne den umgekehrten Schrägstrich als eine einzige Zeichenfolge zurück. Die neue Zeile nach dem umgekehrten Schrägstrich muss entweder ein Zeilenvorschubzeichen (U+000A) oder eine Kombination aus Wagenrücklaufzeichen (U+000D) und Zeilenvorschub (U+000A) in dieser Reihenfolge sein. 
 
 ## <a name="examples"></a>Beispiele  
 
@@ -84,7 +85,7 @@ def' AS [ColumnResult];
 Im folgenden Beispiel werden ein umgekehrter Schrägstrich und ein Wagenrücklauf verwendet, um eine Binärzeichenfolge in zwei Zeilen zu teilen.  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

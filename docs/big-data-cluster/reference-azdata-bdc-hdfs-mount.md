@@ -1,7 +1,7 @@
 ---
-title: azdata BDC-HDFS-Einstellungsreferenz
+title: 'azdata bdc hdfs mount: Referenz'
 titleSuffix: SQL Server big data clusters
-description: Referenz Artikel zu azdata BDC-HDFS-Einstellungsbefehlen.
+description: Referenzartikel zu azdata bdc hdfs mount-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,138 +10,138 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 7f0b259a3ac4ac0850fa05de3867e928b035307b
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426270"
 ---
-# <a name="azdata-bdc-hdfs-mount"></a>azdata BDC-HDFS-einbinden
+# <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Der folgende Artikel enthält eine Referenz für die **BDC-HDFS** -Einstellungsbefehle im **azdata** -Tool. Weitere Informationen zu anderen **azdata** -Befehlen finden Sie unter [azdata-Referenz](reference-azdata.md).
+Der folgende Artikel enthält Referenzinformationen zu den **bdc hdfs mount**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Befehle
 |     |     |
 | --- | --- |
-[azdata BDC HDFS Mount Create](#azdata-bdc-hdfs-mount-create) | Erstellen Sie bereit Stellungen von Remote speichern in HDFS.
-[azdata BDC HDFS Mount DELETE](#azdata-bdc-hdfs-mount-delete) | Löschen Sie die Bereitstellung von Remote speichern in HDFS.
-[azdata BDC HDFS Mount Status](#azdata-bdc-hdfs-mount-status) | Status der einreistellung (en).
-[azdata BDC HDFS-Einstellungsaktualisierung](#azdata-bdc-hdfs-mount-refresh) | Aktualisieren Sie den Inhalt einer Festlegung in HDFS.
-## <a name="azdata-bdc-hdfs-mount-create"></a>azdata BDC HDFS Mount Create
-Erstellen Sie bereit Stellungen von Remote speichern in HDFS. Die Anmelde Informationen für den Zugriff auf den Remote Speicher sollten ggf. mit der Umgebungsvariablen MOUNT_CREDENTIALS als eine durch Trennzeichen getrennte Liste von Key = Value-Paaren angegeben werden. Alle Kommas in den Schlüsseln oder Werten müssen mit Escapezeichen versehen werden.
+[azdata bdc hdfs mount create](#azdata-bdc-hdfs-mount-create) | Erstellen von Einbindungen (Mounts) von Remotespeichern in HDFS.
+[azdata bdc hdfs mount delete](#azdata-bdc-hdfs-mount-delete) | Löschen von Einbindungen von Remotespeicher in HDFS.
+[azdata bdc hdfs mount status](#azdata-bdc-hdfs-mount-status) | Der Status von Einbindungen (Mounts).
+[azdata bdc hdfs mount refresh](#azdata-bdc-hdfs-mount-refresh) | Aktualisieren des Inhalts einer Einbindung in HDFS.
+## <a name="azdata-bdc-hdfs-mount-create"></a>azdata bdc hdfs mount create
+Erstellen von Einbindungen (Mounts) von Remotespeichern in HDFS. Sofern Anmeldeinformationen für ein Zugreifen auf den Remotespeicher erforderlich sind, müssen diese mit der Umgebungsvariablen MOUNT_CREDENTIALS als eine Liste angegeben werden, die aus Schlüssel=Wert-Paaren mit Kommas als Trennzeichen besteht. Vor jedes Komma in den Schlüsseln oder Werten muss ein Escapezeichen gesetzt werden.
 ```bash
 azdata bdc hdfs mount create --remote-uri -r 
                              --mount-path -m
 ```
 ### <a name="examples"></a>Beispiele
-So stellen Sie Container "Data" in ADLS Gen 2-Konto "adlsv2example" im HDFS-Pfad/Mounts/adlsv2/Data mit dem gemeinsam verwendeten Schlüssel einbinden
+So binden Sie den Container „data“ im ADLS Gen 2-Konto „adlsv2example“ in den HDFS-Pfad „/mounts/adlsv2/data“ mit dem gemeinsam verwendeten Schlüssel ein
 ```bash
 Set the MOUNT_CREDENTIALS environment variable as "fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>".
 azdata bdc hdfs mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/
     --mount-path /mounts/adlsv2/data
 ```
-So einbinden Sie einen Remote-HDFS-BDC (HDFS://namenode1:8080/) auf dem lokalen HDFS-Pfad/Mounts/HDFS/
+So binden Sie einen Remote-HDFS-BDC (hdfs://namenode1:8080/) in den lokalen HDFS-Pfad „/mounts/hdfs/“ ein
 ```bash
 azdata bdc hdfs mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--remote-uri -r`
-Der URI des Remote Speicher, der eingebunden werden soll (Quelle der Bereitstellung).
+Der URI des Remotespeichers, der eingebunden werden soll (Quelle der Einbindung).
 #### `--mount-path -m`
-HDFS-Pfad, in dem die einreilegung erstellt werden muss (Ziel der einreilegung).
+Der HDFS-Pfad, in dem die Einbindung erstellt werden muss (Ziel der Einbindung).
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-mount-delete"></a>azdata BDC HDFS Mount DELETE
-Löschen Sie die Bereitstellung von Remote speichern in HDFS.
+Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+## <a name="azdata-bdc-hdfs-mount-delete"></a>azdata bdc hdfs mount delete
+Löschen von Einbindungen von Remotespeicher in HDFS.
 ```bash
 azdata bdc hdfs mount delete --mount-path -m 
                              
 ```
 ### <a name="examples"></a>Beispiele
-Löschen Sie die unter/Mounts/adlsv2/Data erstellte für ein ADLS Gen 2-Speicherkonto.
+Löschen Sie die Einbindung (Mount), die unter „/mounts/adlsv2/data“ für ein ADLS Gen 2-Speicherkonto erstellt wurde.
 ```bash
 azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--mount-path -m`
-der HDFS-Pfad, der der zu löschenden Festlegung entspricht.
+Der HDFS-Pfad, der der Einbindung entspricht, die gelöscht werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-mount-status"></a>azdata BDC HDFS Mount Status
-Status der einreistellung (en).
+Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+## <a name="azdata-bdc-hdfs-mount-status"></a>azdata bdc hdfs mount status
+Der Status von Einbindungen (Mounts).
 ```bash
 azdata bdc hdfs mount status [--mount-path -m] 
                              
 ```
 ### <a name="examples"></a>Beispiele
-Einstellungsstatus nach Pfad
+Rufen Sie den Einbindungsstatus nach Pfad ab.
 ```bash
 azdata bdc hdfs mount status --mount-path /mounts/hdfs
 ```
-Hiermit wird der Status aller bereit Stellungen angezeigt.
+Rufen Sie den Status aller Einbindungen ab.
 ```bash
 azdata bdc hdfs mount status
 ```
 ### <a name="optional-parameters"></a>Optionale Parameter
 #### `--mount-path -m`
-Einstellungspfad.
+Einbindungspfad (Mount-Pfad).
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
-## <a name="azdata-bdc-hdfs-mount-refresh"></a>azdata BDC HDFS-Einstellungsaktualisierung
-Aktualisieren Sie den Inhalt einer Festlegung in HDFS.
+Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+## <a name="azdata-bdc-hdfs-mount-refresh"></a>azdata bdc hdfs mount refresh
+Aktualisieren des Inhalts einer Einbindung in HDFS.
 ```bash
 azdata bdc hdfs mount refresh --mount-path -m 
                               
 ```
 ### <a name="examples"></a>Beispiele
-Aktualisieren der auf/Mounts/adlsv2/Data. erstellten Mount
+Aktualisieren Sie die Einbindung, die unter „/mounts/adlsv2/data“ erstellt wurde.
 ```bash
 azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--mount-path -m`
-Der HDFS-Pfad, der der zu aktualisierenden Festlegung entspricht.
+Der HDFS-Pfad, der der Einbindung entspricht, die aktualisiert werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Protokollierungs Ausführlichkeit, um alle Debugprotokolle anzuzeigen.
+Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Diese Hilfe Meldung anzeigen und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
-Ausgabeformat.  Zulässige Werte: JSON, jsonc, Table, TSV.  Standardwert: JSON.
+Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-Jmespath-Abfrage Zeichenfolge. Weitere [http://jmespath.org/](http://jmespath.org/]) Informationen und Beispiele finden Sie unter.
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Protokollierungs Ausführlichkeit. Verwenden Sie "--Debug" für vollständige Debugprotokolle.
+Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata** -Befehlen finden Sie unter [azdata-Referenz](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden [Sie unter Install azdata to Manage SQL Server 2019 Big Data Clusters](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).

@@ -1,7 +1,7 @@
 ---
 title: Quellcodeverwaltung
 titleSuffix: Azure Data Studio
-description: Informationen Sie zum Konfigurieren der quellcodeverwaltung in Azure Data Studio
+description: Erfahren Sie, wie Sie Quellcodeverwaltung in Azure Data Studio konfigurieren.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,42 +11,42 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959287"
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Verwenden der quellcodeverwaltung in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Verwenden von Quellcodeverwaltung in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] unterstützt Git für die Version/quellcodeverwaltung an.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] unterstützt Git zur Versionskontrolle/Quellcodeverwaltung.
 
 
 ## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Git-Unterstützung in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] umfasst ein Git Source dienststeuerungs-Manager (SCM), aber Sie müssen dennoch [installieren Sie Git (Version 2.0.0 oder höher)](https://git-scm.com/download) , bevor diese Features verfügbar sind. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] wird mit einem Git-Quellcodeverwaltungs-Manager (Source Control Manager, SCM) bereitgestellt. Sie müssen dennoch weiterhin [Git (Version 2.0.0 oder höher) installieren](https://git-scm.com/download), damit diese Features verfügbar sind. 
 
 
 
-## <a name="open-an-existing-git-repository"></a>Öffnen Sie ein vorhandenes Git-repository
+## <a name="open-an-existing-git-repository"></a>Öffnen eines vorhandenen Git-Repositorys
 
-1. Unter den **Datei** , wählen Sie im Menü **"Ordner öffnen"...**
-2. Navigieren Sie zu dem Ordner, die Dateien, die von Git nachverfolgt werden enthält, und klicken Sie auf **Ordner auswählen**. Unterordner in Ihrem lokalen Repository werden hier auswählen.
+1. Wählen Sie im Menü **Datei** den Befehl **Ordner öffnen...** aus.
+2. Navigieren Sie zu dem Ordner, der die Dateien enthält, die von Git nachverfolgt werden, und klicken Sie auf **Ordner auswählen**. Unterordner in Ihrem lokalen Repository können hier ausgewählt werden.
 
 
-## <a name="initialize-a-new-git-repository"></a>Initialisiert ein neues Git-repository
+## <a name="initialize-a-new-git-repository"></a>Initialisieren eines neuen Git-Repositorys
 
-1. Wählen Sie **Quellcodeverwaltung**, wählen Sie dann auf das Symbol "Git".
+1. Wählen Sie **Quellcodeverwaltung** und dann das Git-Symbol aus.
 
-   ![Source-Control-Git-Symbol](media/source-control/source-control.png)
+   ![Git-Symbol für Quellcodeverwaltung](media/source-control/source-control.png)
 
-1. Geben Sie den Pfad zu dem Ordner, die Sie als ein Git-Repository, und drücken Sie initialisieren möchten **EINGABETASTE**.
+1. Geben Sie den Pfad zu dem Ordner ein, den Sie als Git-Repository initialisieren möchten, und drücken Sie die **EINGABETASTE**.
 
    ![Git-Repository initialisieren](media/source-control/initialize-git-repository.png)
 
 ## <a name="working-with-git-repositories"></a>Arbeiten mit Git-Repositorys
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] die Git-Implementierung von Visual Studio Code erbt jedoch zusätzliche SCM-Anbieter wird derzeit nicht unterstützt. Ausführliche Informationen zum Arbeiten mit Git, nachdem Sie geöffnet, oder initialisieren Sie ein Repository, finden Sie unter [Git-Unterstützung in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] erbt seine Git-Implementierung von VS Code, unterstützt derzeit jedoch keine weiteren SCM-Anbieter. Ausführliche Informationen über das Arbeiten mit Git, nachdem Sie ein Repository geöffnet oder initialisiert haben, finden Sie unter [Git support in VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## <a name="additional-resources"></a>Weitere Ressourcen

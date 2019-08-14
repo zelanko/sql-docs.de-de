@@ -1,7 +1,7 @@
 ---
 title: SQL Server-Agent-Erweiterung
 titleSuffix: Azure Data Studio
-description: Installieren Sie und verwenden Sie die SQL Server-Agent-Erweiterung (Vorschauversion) für Azure Data Studio
+description: Installieren und Verwenden der SQL Server-Agent-Erweiterung (Vorschau) für Azure Data Studio
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
@@ -11,43 +11,43 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 05356cc815fdba22d55ee339d60994f2c9423373
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959186"
 ---
 # <a name="sql-server-agent-extension-preview"></a>SQL Server-Agent-Erweiterung (Vorschau)
 
-Die SQL Server-Agent-Erweiterung (Vorschauversion) ist eine Erweiterung für die Verwaltung und Problembehandlung von SQL Agent-Aufträge und die Konfiguration. Diese Erweiterung ist derzeit in der Vorschau.
+Die SQL Server-Agent-Erweiterung (Vorschau) ist eine Erweiterung zur Verwaltung und Problembehandlung von SQL Agent-Aufträgen und -Konfiguration. Diese Erweiterung befindet sich zurzeit in der Vorschau.
 
-Wichtige Aktionen zählen:
-- Liste SQL Server-Agent-Aufträge auf einem SQLServer konfiguriert
-- Auftragsverlauf anzeigen, mit den Ergebnissen der auftragsausführung
-- Grundlegende Auftrag-Steuerelement zum Starten und Beenden von Aufträgen
+Zu den wichtigsten Aktionen gehören:
+- Auflisten von SQL Server-Agent-Aufträgen, die auf einem SQL Server-Computer konfiguriert sind
+- Anzeigen eines Auftragsverlaufs mit Auftragsausführungsergebnissen
+- Grundlegende Auftragssteuerung, um Aufträge zu starten und zu stoppen
 
-## <a name="install-the-sql-server-agent-extension"></a>Installieren Sie die SQL Server-Agent-Erweiterung
+## <a name="install-the-sql-server-agent-extension"></a>Installieren der SQL Server-Agent-Erweiterung
 
-1. Um Erweiterungs-Manager öffnen und den Zugriff auf die verfügbaren Erweiterungen, wählen Sie das Symbol für Erweiterungen oder **Erweiterungen** in die **Ansicht** Menü.
-2. Wählen Sie eine verfügbare Erweiterung, um dessen Details anzuzeigen.
+1. Um den Erweiterungs-Manager zu öffnen und auf die verfügbaren Erweiterungen zuzugreifen, wählen Sie das Symbol für Erweiterungen aus, oder wählen Sie im Menü **Ansicht** den Befehl **Erweiterungen** aus.
+2. Wählen Sie eine verfügbare Erweiterung aus, um deren Details anzuzeigen.
 
-   ![Agentinstallation](media/extensions/sql-server-agent-extension/install-sql-agent.png)
+   ![Agent installieren](media/extensions/sql-server-agent-extension/install-sql-agent.png)
 
-1. Wählen Sie die gewünschte Erweiterung und **installieren** es.
-2. Wählen Sie **Reload** zum Aktivieren der Erweiterung (nur beim ersten eine Erweiterung der Installation erforderlich).
-1. Navigieren Sie zu Ihrem Management-Dashboard, indem mit der rechten Maustaste den Server oder die Datenbank, und wählen **verwalten**.
-2. Installierte Erweiterungen werden als Registerkarten auf dem Management-Dashboard angezeigt:
+1. Wählen Sie die gewünschte Erweiterung aus, und **Installieren** Sie diese.
+2. Wählen Sie **Neu laden** aus, um die Erweiterung zu aktivieren (nur bei der ersten Installation einer Erweiterung erforderlich).
+1. Navigieren Sie zu Ihrem Management-Dashboard, indem Sie mit der rechten Maustaste auf Ihren Server oder Ihre Datenbank klicken und **Verwalten** auswählen.
+2. Die installierten Erweiterungen werden als Registerkarten auf dem Management-Dashboard angezeigt:
 
    ![Agent anzeigen](media/extensions/sql-server-agent-extension/view-sql-agent.png)
 
 ## <a name="view-jobs"></a>Anzeigen von Aufträgen
 
-Wenn Sie mit der SQL Server-Agent-Erweiterung verbinden, ist als Erstes sehen Sie eine Liste aller Agentaufträge.
+Wenn Sie eine Verbindung mit der SQL Server-Agent-Erweiterung herstellen, wird als erstes eine vollständige Liste Ihrer Agent-Aufträge angezeigt.
 
    ![Anzeigen von Aufträgen](media/extensions/sql-server-agent-extension/job-view.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu SQL Server-Agent [finden Sie in unserer Dokumentation.](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017)
+Weitere Informationen zum SQL Server-Agent finden Sie in dessen [Dokumentation](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent?view=sql-server-2017).
 
 

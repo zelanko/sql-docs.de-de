@@ -1,7 +1,7 @@
 ---
-title: 'Tutorial: Erstellen eines benutzerdefinierten Einblicks-Widgets'
+title: 'Lernprogramm: Erstellen eines benutzerdefinierten Erkenntnis-Widgets'
 titleSuffix: Azure Data Studio
-description: Dieses Tutorial veranschaulicht das Erstellen von benutzerdefinierten einblickwidgets und-Datenbank und Server-Dashboards in Azure Data Studio hinzufügen.
+description: In diesem Tutorial wird veranschaulicht, wie Sie benutzerdefinierte Erkenntnis-Widgets erstellen und diese in Azure Data Studio zu Datenbank- und Serverdashboards hinzufügen.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: tutorial
@@ -11,39 +11,39 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959099"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Tutorial: Erstellen eines benutzerdefinierten Einblicks-Widgets
+# <a name="tutorial-build-a-custom-insight-widget"></a>Lernprogramm: Erstellen eines benutzerdefinierten Erkenntnis-Widgets
 
-Dieses Tutorial veranschaulicht, wie Ihre eigenen Einblicke-Abfragen verwenden, um benutzerdefinierte einblickwidgets zu erstellen.
+In diesem Tutorial wird veranschaulicht, wie Sie Ihre eigenen Erkenntnisabfragen erstellen, um benutzerdefinierte Erkenntnis-Widgets zu erstellen.
 
-In diesem Tutorial erfahren Sie, wie Sie:
+In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
-> * Führen Sie Ihre eigene Abfrage und zeigen Sie ihn in einem Diagramm
-> * Erstellen eines benutzerdefinierten Einblicks Widgets aus dem Diagramm
-> * Hinzufügen des Diagramms zu einem Server oder Datenbank-dashboard
-> * Hinzufügen von Details zu Ihrer benutzerdefinierten Einblicks-widget
+> * Ausführen ihrer eigenen Abfrage und Anzeigen der Abfrage in einem Diagramm
+> * Erstellen eines benutzerdefinierten Erkenntnis-Widgets aus dem Diagramm
+> * Hinzufügen des Diagramms zu einem Server- oder Datenbankdashboard
+> * Hinzufügen von Details zu Ihrem benutzerdefinierten Erkenntnis-Widget
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-In diesem Lernprogramm der SQL Server- oder Azure SQL-Datenbank *"tutorialdb"* . Zum Erstellen der *"tutorialdb"* Datenbank, führen Sie eine der folgenden schnellstartanleitungen:
+Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie einen der folgenden Schnellstarts vollständig aus:
 
-- [Verbinden und Abfragen von SQL Server verwenden [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Verbinden und Abfragen von Azure SQL-Datenbank [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Herstellen einer Verbindung mit und Abfragen von SQL Server mit [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Führen Sie Ihre eigene Abfrage und zeigen das Ergebnis in eine Diagrammsicht an
-Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven Sitzungen.
+## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Ausführen ihrer eigenen Abfrage und Anzeigen des Ergebnisses in einer Diagrammansicht
+In diesem Schritt führen Sie ein SQL-Skript aus, um die aktuellen aktiven Sitzungen abzufragen.
 
-1. Um einen neuen Editor zu öffnen, drücken Sie die **STRG + N**. 
+1. Um einen neuen Editor zu öffnen, drücken Sie **STRG+N**. 
 
-2. Ändern den Verbindungskontext für **"tutorialdb"** .
+2. Ändern Sie den Verbindungskontext in **TutorialDB**.
 
-3. Fügen Sie die folgende Abfrage in der Abfrage-Editor ein:
+3. Fügen Sie die folgende Abfrage im Abfrage-Editor ein:
 
    ```sql
    SELECT count(session_id) as [Active Sessions]
@@ -51,31 +51,31 @@ Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven 
    WHERE status = 'running'
    ```
 
-4. Speichern Sie die Abfrage in Editor, um eine \*.sql-Datei. In diesem Tutorial speichern Sie das Skript *activeSession.sql*.
+4. Speichern Sie die Abfrage im Editor in einer \*.sql-Datei. Speichern Sie das Skript für dieses Tutorial als *activeSession.sql*.
 
-5. Um die Abfrage auszuführen, drücken Sie die **F5**.
+5. Um die Abfrage auszuführen, drücken Sie **F5**.
 
-6. Nachdem die Ergebnisse der Abfrage angezeigt werden, klicken Sie auf **als Diagramm anzeigen**, klicken Sie dann auf die **Diagramm Viewer** Registerkarte.
+6. Nachdem die Abfrageergebnisse angezeigt werden, klicken Sie auf **Als Diagramm anzeigen**, und klicken Sie dann auf die Registerkarte **Diagramm-Viewer**.
 
-7. Änderung **Diagrammtyp** zu **Anzahl**. Diese Einstellungen werden einem Count-Diagramm gerendert.
+7. Ändern Sie **Diagrammtyp** in **count**. Diese Einstellung bewirkt, dass ein Zählungsdiagramm gerendert wird.
 
-## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Hinzufügen der benutzerdefinierten Einblicks an das datenbankdashboard
+## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Hinzufügen der benutzerdefinierten Erkenntnis zum Datenbankdashboard
 
-1. Um die Konfiguration des Widgets für Einblicke zu öffnen, klicken Sie auf **erstellen Sie einen Einblick** auf *Diagramm Viewer*:
+1. Um die Konfiguration des Erkenntnis-Widgets zu öffnen, klicken Sie auf **Erkenntnis erstellen** auf dem *Diagramm-Viewer*:
 
    ![Konfiguration](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
-2. Kopieren Sie die Konfiguration für speichereinblicke (die JSON-Daten). 
+2. Kopieren Sie die Erkenntniskonfiguration (die JSON-Daten). 
 
-3. Drücken Sie **STRG + Komma** öffnen *Benutzereinstellungen*.
+3. Drücken Sie **STRG+Komma**, um *Benutzereinstellungen* zu öffnen.
 
-4. Typ *Dashboard* in *Sucheinstellungen*.
+4. Geben Sie *dashboard* in *Sucheinstellungen* ein.
 
-5. Klicken Sie auf **bearbeiten** für *dashboard.database.widgets*.
+5. Klicken Sie für *dashboard.database.widgets* auf **Bearbeiten**.
 
-   ![dashboardeinstellungen](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
+   ![Dashboardeinstellungen](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
-6. Fügen Sie die Konfiguration für speichereinblicke JSON in *dashboard.database.widgets*. Datenbank-Dashboard Einstellungen sieht wie folgt aus:
+6. Fügen Sie die Erkenntniskonfiguration aus der JSON-Datei in *dashboard.database.widgets* ein. Die Einstellungen des Datenbankdashboards sehen wie folgt aus:
 
    ```json
     "dashboard.database.widgets": [
@@ -103,17 +103,17 @@ Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven 
     ]
    ```
 
-7. Speichern Sie die *Benutzereinstellungen* , und öffnen Sie die *"tutorialdb"* datenbankdashboard, um das Widget "aktive Sitzungen" finden Sie unter:
+7. Speichern Sie die *Benutzereinstellungen*-Datei, und öffnen Sie das Datenbankdashboard *TutorialDB*, um das aktive Sitzungen-Widget anzuzeigen:
 
-   ![Activesession Einblicke](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![Einblick in aktive Sitzung](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
-## <a name="add-details-to-custom-insight"></a>Hinzufügen von Details zu benutzerdefinierten Einblicks
+## <a name="add-details-to-custom-insight"></a>Hinzufügen von Details zu einer benutzerdefinierten Erkenntnis
 
-1. Um einen neuen Editor zu öffnen, drücken Sie die **STRG + N**.
+1. Um einen neuen Editor zu öffnen, drücken Sie **STRG+N**.
 
-2. Ändern den Verbindungskontext für **"tutorialdb"** .
+2. Ändern Sie den Verbindungskontext in **TutorialDB**.
 
-3. Fügen Sie die folgende Abfrage in der Abfrage-Editor ein:
+3. Fügen Sie die folgende Abfrage im Abfrage-Editor ein:
 
    ```sql
     SELECT session_id AS [SID], login_time AS [Login Time], host_name AS [Host Name], program_name AS [Program Name], login_name AS [Login Name]
@@ -121,11 +121,11 @@ Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven 
     WHERE status = 'running'
    ```
 
-4. Speichern Sie die Abfrage in Editor, um eine \*.sql-Datei. In diesem Tutorial speichern Sie das Skript *activeSessionDetail.sql*.
+4. Speichern Sie die Abfrage im Editor in einer \*.sql-Datei. Speichern Sie das Skript für dieses Tutorial als *activeSessionDetail.sql*.
 
-5. Drücken Sie **STRG + Komma** öffnen *Benutzereinstellungen*.
+5. Drücken Sie **STRG+Komma**, um *Benutzereinstellungen* zu öffnen.
 
-6. Bearbeiten Sie den vorhandenen *dashboard.database.widgets* Knoten in der Einstellungsdatei angegeben:
+6. Bearbeiten Sie den vorhandenen *dashboard.database.widgets*-Knoten in Ihrer Einstellungsdatei:
 
    ```json
     "dashboard.database.widgets": [
@@ -158,19 +158,19 @@ Führen Sie in diesem Schritt ein Sql-Skript zum Abfragen der aktuellen aktiven 
     ]
    ```
 
-7. Speichern Sie die *Benutzereinstellungen* , und öffnen Sie die *"tutorialdb"* Datenbank-Dashboard. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...) neben *Meine-Widget* um die Details anzuzeigen:
+7. Speichern Sie die *Benutzereinstellungen*-Datei, und öffnen Sie das Datenbankdashboard *TutorialDB*. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten (...) neben *My-Widget*, um die Details anzuzeigen:
 
-    ![Activesession Einblicke](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![Einblick in aktive Sitzung](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
-In diesem Tutorial haben Sie gelernt, wie die folgenden Aufgaben ausgeführt werden:
+In diesem Tutorial haben Sie Folgendes gelernt:
 > [!div class="checklist"]
-> * Führen Sie Ihre eigene Abfrage und zeigen Sie ihn in einem Diagramm
-> * Erstellen eines benutzerdefinierten Einblicks Widgets aus dem Diagramm
-> * Hinzufügen des Diagramms zu einem Server oder Datenbank-dashboard
-> * Hinzufügen von Details zu Ihrer benutzerdefinierten Einblicks-widget
+> * Ausführen ihrer eigenen Abfrage und Anzeigen der Abfrage in einem Diagramm
+> * Erstellen eines benutzerdefinierten Erkenntnis-Widgets aus dem Diagramm
+> * Hinzufügen des Diagramms zu einem Server- oder Datenbankdashboard
+> * Hinzufügen von Details zu Ihrem benutzerdefinierten Erkenntnis-Widget
 
-Weitere Informationen zum Sichern und Wiederherstellen von Datenbanken, führen Sie im nächste Tutorial:
+Um zu erfahren, wie Datenbanken gesichert und wiederhergestellt werden, führen Sie die Schritte im nächsten Tutorial aus:
 
 > [!div class="nextstepaction"]
 > [Sichern und Wiederherstellen von Datenbanken](tutorial-backup-restore-sql-server.md).

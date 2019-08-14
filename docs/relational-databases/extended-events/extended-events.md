@@ -1,7 +1,7 @@
 ---
 title: Übersicht über erweiterte Ereignisse (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,46 +10,52 @@ ms.topic: overview
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
+- XEvents
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: abdb5eae1bb24bcedd2095a607895ffa671b7d53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021843"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495411"
 ---
 # <a name="extended-events-overview"></a>Übersicht über erweiterte Ereignisse
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Die Funktion Erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besitzt eine sehr stark skalierbare und konfigurierbare Architektur, mit der Benutzer je nach Bedarf eine entsprechende Menge an Informationen sammeln können, die zum Beheben oder Identifizieren eines Leistungsproblems notwendig ist.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Funktionalität von „Erweiterte Ereignisse“ ermöglicht es Benutzern, Daten in dem Umfang zu sammeln, der erforderlich ist, um Leistungsproblem zu erkennen oder zu beheben. „Erweiterte Ereignisse“ kann konfiguriert werden und lässt sich sehr gut skalieren.
 
-Weitere Informationen zu erweiterten Ereignissen finden Sie hier: [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
-
+Weitere Informationen zu „Erweiterte Ereignisse“ finden Sie unter [Schnellstart: Erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
 
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Vorteile von erweiterten Ereignissen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Erweiterte Ereignisse ist ein Lightweight-Leistungsüberwachungssystem, das sehr wenige Leistungsressourcen verwendet. Die Funktion „Erweiterte Ereignisse“ stellt zwei grafische Benutzeroberflächen (**Assistent für neue Sitzungen** und **Neue Sitzung**) zum Erstellen, Ändern, Anzeigen und Analysieren der Sitzungsdaten bereit.  
-  
+
+„Erweiterte Ereignisse“ ist ein schlankes Leistungsüberwachungssystem, das minimale Leistungsressourcen verwendet. „Erweiterte Ereignisse“ stellt zwei grafische Benutzeroberflächen zum Erstellen, Ändern, Anzeigen und Analysieren von Sitzungsdaten bereit. Diese Oberflächen haben folgende Namen:
+
+- Assistent für neue Sitzungen
+- Neue Sitzung
+
 ## <a name="extended-events-concepts"></a>Konzepte für erweiterte Ereignisse  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Die Funktion „Erweiterte Ereignisse“ basiert auf vorhandenen Konzepten, z.B. einem Ereignis oder einem Ereignisconsumer, verwendet Konzepte aus der Ereignisablaufverfolgung für Windows und führt neue Konzepte ein.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] „Erweiterte Ereignisse“ basiert auf vorhandenen Konzepten, etwa einem Ereignis oder einem Ereignisconsumer, verwendet Konzepte aus der Ereignisablaufverfolgung für Windows und führt neue Konzepte ein.  
   
  In der folgenden Tabelle werden die Konzepte von "Erweiterte Ereignisse" beschrieben.  
   
 |Thema|und Beschreibung|  
 |-----------|-----------------|  
-|[Pakete für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Beschreibt die Pakete für erweiterte Ereignisse, in denen Objekte enthalten sind, mit denen Daten beim Ausführen einer Sitzung für erweiterte Ereignisse abgerufen und verarbeitet werden.|  
+|[Pakete für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|Beschreibt die „Erweiterte Ereignisse“-Pakete, die Objekte enthalten. Diese Objekte werden verwendet, um Daten abzurufen und zu verarbeiten, wenn eine „Erweiterte Ereignisse“-Sitzung ausgeführt wird.|  
 |[Ziele für erweiterte Ereignisse von SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  
 |[Engine für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|Beschreibt die Engine, die eine Sitzung für erweiterte Ereignisse implementiert und verwaltet.|  
 |[Sitzungen für erweiterte Ereignisse von SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|Beschreibt die Sitzung für erweiterte Ereignisse.|  
+| &nbsp; | &nbsp; |
   
 ## <a name="extended-events-architecture"></a>Architektur von erweiterten Ereignissen  
- Erweiterte Ereignisse entsprechen einem allgemeinen Ereignisbehandlungssystem für Serversysteme. Die Infrastruktur für erweiterte Ereignisse unterstützt die Korrelation von Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sowie unter bestimmten Umständen die Korrelation von Daten aus dem Betriebssystem und aus Datenbankanwendungen. Im zweiten Fall muss die Ausgabe von erweiterten Ereignissen an die Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) weitergeleitet werden, damit die Ereignisdaten mit Ereignisdaten aus dem Betriebssystem oder einer Anwendung korreliert werden können.  
-  
- Alle Anwendungen weisen Ausführungspunkte auf, die sowohl innerhalb der Anwendung als auch außerhalb nützlich sind. In der Anwendung kann die asynchrone Verarbeitung in die Warteschlange eingereiht werden, wobei Informationen zugrunde gelegt werden, die bei der ersten Ausführung eines Tasks gesammelt wurden. Außerhalb der Anwendung stellen Ausführungspunkte Überwachungshilfsprogrammen Informationen zum Verhalten und zu den Leistungsmerkmalen der überwachten Anwendung zur Verfügung.  
-  
+
+„Erweiterte Ereignisse“ ist unser Name für ein allgemeines Ereignisbehandlungssystem für Serversysteme. Die „Erweiterte Ereignisse“-Infrastruktur unterstützt die Korrelation von Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sowie unter bestimmten Umständen die Korrelation von Daten vom Betriebssystem und von Datenbankanwendungen. Für Daten vom Betriebssystem muss die Ausgabe von „Erweiterte Ereignisse“ an Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) weitergeleitet werden. ETW kann die Ereignisdaten mit Betriebssystem- oder Anwendungsereignisdaten korrelieren.  
+
+Alle Anwendungen weisen Ausführungspunkte auf, die sowohl innerhalb der Anwendung als auch außerhalb nützlich sind. In der Anwendung kann die asynchrone Verarbeitung in die Warteschlange eingereiht werden, wobei Informationen zugrunde gelegt werden, die bei der ersten Ausführung eines Tasks gesammelt wurden. Außerhalb der Anwendung stellen Ausführungspunkte Überwachungshilfsprogrammen Informationen bereit. In den Informationen sind die Verhaltens- und Leistungsmerkmale der überwachten Anwendung beschrieben.  
+
  Erweiterte Ereignisse unterstützen die Verwendung von Ereignisdaten außerhalb eines Prozesses. Diese Daten werden i. d. R. folgendermaßen verwendet:  
   
 -   Von Ablaufverfolgungstools wie der SQL-Ablaufverfolgung und dem Systemmonitor  
@@ -60,13 +66,13 @@ Weitere Informationen zu erweiterten Ereignissen finden Sie hier: [Schnellstart:
   
  Das Design von erweiterten Ereignissen zeichnet sich durch die folgenden zentralen Aspekte aus:  
   
--   Die Engine für erweiterte Ereignisse ist ereignisagnostisch. Daher kann die Engine jedes beliebige Ereignis an jedes beliebige Ziel binden, da es nicht durch den Ereignisinhalt eingeschränkt wird. Weitere Informationen zum Modul für erweiterte Ereignisse finden Sie unter [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
+-   Die Engine für erweiterte Ereignisse ist ereignisagnostisch. In der Engine kann jedes beliebige Ereignis an jedes beliebige Ziel gebunden werden, weil die Engine nicht durch den Ereignisinhalt eingeschränkt ist. Weitere Informationen zum Modul für erweiterte Ereignisse finden Sie unter [SQL Server Extended Events Engine](../../relational-databases/extended-events/sql-server-extended-events-engine.md).  
   
 -   Ereignisse werden von Ereignisconsumern getrennt, die in erweiterten Ereignissen als *Ziele* bezeichnet werden. Das bedeutet, dass jedes Ziel jedes Ereignis empfangen kann. Zusätzlich kann jedes ausgelöste Ereignis automatisch vom Ziel verarbeitet werden, das dann wiederum die Protokollierung ausführen oder zusätzlichen Ereigniskontext bereitstellen kann. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
 -   Ereignisse unterscheiden sich von der Aktion, die ausgeführt werden soll, wenn ein Ereignis auftritt. Dies führt dazu, dass jede beliebige Aktion jedem beliebigen Ereignis zugeordnet werden kann.  
   
--   Mithilfe von Prädikaten kann dynamisch gefiltert werden, wenn Ereignisdaten aufgezeichnet werden sollen. Dadurch wird die Infrastruktur für erweiterte Ereignisse noch flexibler. Weitere Informationen finden Sie unter [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
+-   Mithilfe von Prädikaten kann dynamisch gefiltert werden, wenn Ereignisdaten aufgezeichnet werden sollen. Dynamisches Filtern erhöht die Flexibilität der „Erweiterte Ereignisse“-Infrastruktur. Weitere Informationen finden Sie unter [SQL Server Extended Events Packages](../../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
  Erweiterte Ereignisse können Ereignisdaten synchron generieren (und asynchron verarbeiten), wodurch eine flexible Lösung für die Ereignisbehandlung bereitgestellt wird. Außerdem bieten erweiterte Ereignisse die folgenden Funktionen:  
   
@@ -100,18 +106,23 @@ Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] od
 |Beschreibt die Ermittlung der gesperrten Abfragen, des Plans der Abfrage und des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Stapels zum Zeitpunkt der Sperrung.|[Feststellen, welche Abfragen Sperren enthalten](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Beschreibt, wie Sie die Quelle von Sperren identifizieren, die die Datenbankleistung beeinträchtigen.|[Suchen der Objekte, die über die meisten Sperren verfügen](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Beschreibt, wie Sie anhand von erweiterten Ereignissen mit der Ereignisablaufverfolgung für Windows die Systemaktivität überwachen.|[Überwachen der Systemaktivität mit erweiterten Ereignissen](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-| Verwenden der Katalogsichten und dynamischen Verwaltungssichten für erweiterte Ereignisse | [SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+|Verwenden der Katalogsichten und dynamischen Verwaltungssichten für erweiterte Ereignisse | [SELECT- und JOIN-Anweisungen von Systemsichten für erweiterte Ereignisse in SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+| &nbsp; | &nbsp; |
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Codebeispiele können für Azure SQL-Datenbank abweichend sein.
 
 [!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
-## <a name="see-also"></a>Weitere Informationen  
- [Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
- [Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [Überwachen von Datenebenenanwendungen](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
- [Dynamische Verwaltungssichten für erweiterte Ereignisse](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Katalogsichten für erweiterte Ereignisse &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).   
- [PowerShell-Cmdlet Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent) (Veröffentlicht: Juni 2019).
+## <a name="see-also"></a>Weitere Informationen
+
+[Datenebenenanwendungen](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+[DAC-Unterstützung für SQL Server-Objekte und -Versionen](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[Bereitstellen einer Datenebenenanwendung](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+[Überwachen von Datenebenenanwendungen](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
+&nbsp;  
+[Dynamische Verwaltungssichten für erweiterte Ereignisse](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
+[Katalogsichten für erweiterte Ereignisse (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+&nbsp;  
+[XELite: Plattformübergreifende Bibliothek zum Lesen von XEvents aus XEL-Dateien oder SQL-Livestreams](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/) (Veröffentlicht: Mai 2019).  
+[PowerShell-Cmdlet Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent) (Veröffentlicht: Juni 2019).  
+[SQL Mysteries: Causality tracking vs Event Sequence for XEvent Sessions](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/) (Blogbeitrag, der am 1. April 2019 veröffentlicht wurde)  
