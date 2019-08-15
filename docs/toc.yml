@@ -10012,12 +10012,12 @@
           items:
             - name: SSMS-Supportrichtlinie
               href: ssms/support-policy.md
-            - name: Feedback und Hilfe
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: Benutzerhilfe in SSMS
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: Anonyme Nutzungsdaten
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: Feedback >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: Installieren von sqlpackage
