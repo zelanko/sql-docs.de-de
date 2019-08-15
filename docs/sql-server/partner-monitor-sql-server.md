@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bc04c25496b10e76eed70f11a37499d4d2395bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049752"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68974466"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server-Überwachungspartner
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Es gibt eine große Auswahl an branchenführenden Tools zur Überwachung Ihrer S
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Nähere Informationen über einige unserer anderen Partner finden Sie unter [Partner für Hochverfügbarkeit und Notfallwiederherstellung][hadr_partners], [management partners][management_partners] und [Entwicklungspartner][dev_partners].
+Nähere Informationen über einige unserer anderen Partner finden Sie unter [Partner für Hochverfügbarkeit und Notfallwiederherstellung][hadr_partners], [Verwaltungspartner][management_partners] und [Entwicklungspartner][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
@@ -67,7 +67,9 @@ Nähere Informationen über einige unserer anderen Partner finden Sie unter [Par
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
-[quest_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3 [solarwinds_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
+
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->
 <!--[idera_press]:-->
@@ -81,7 +83,7 @@ Nähere Informationen über einige unserer anderen Partner finden Sie unter [Par
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
 [sentryone_twitter]:https://twitter.com/sentryone
-[redgate_twitter]:https://twitter.com/redgate  
+[redgate_twitter]:https://twitter.com/redgate
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements

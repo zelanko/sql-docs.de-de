@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996449"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810966"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Spezifikation des VDI-Client SDK für SQL Server für Linux
 
@@ -29,7 +29,7 @@ In diesem Dokument werden die Schnittstellen beschrieben, die vom VDI-Client SDK
 - SQL Server für Linux unterstützt keine benannten Instanzen. Verweise auf Instanznamen wurden daher entfernt. 
 - Die gemeinsam verwendete Bibliothek ist in „libsqlvdi.so“ implementiert und unter /opt/mssql/lib/libsqlvdi.so installiert.
 
-Dieses Dokument ergänzt die Datei **vbackup.chm**, in der die VDI-Spezifikation für Windows enthalten ist. [VDI-Spezifikation für Windows](https://www.microsoft.com/download/details.aspx?id=17282) herunterladen
+Dieses Dokument ist ein Nachtrag zur Datei **vbackup.chm**, in dem die VDI-Spezifikation für MS SQL Server unter Windows enthalten ist. Laden Sie die [SQL-VDI-Spezifikation für Windows](https://www.microsoft.com/download/details.aspx?id=17282) herunter.
 
 Ein Beispiel für eine VDI-Sicherungslösung finden Sie im [GitHub-Repository für SQL Server-Beispiele](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux).
 
@@ -65,7 +65,7 @@ In diesem Abschnitt werden die einzelnen Clientfunktionen beschrieben. Die Besch
 - Funktionssyntax
 - Parameterliste
 - Rückgabewerte
-- Hinweise
+- Remarks
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 

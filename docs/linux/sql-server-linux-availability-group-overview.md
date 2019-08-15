@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967512"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794991"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On-Verfügbarkeitsgruppen unter Linux
 
@@ -24,8 +24,8 @@ In diesem Artikel werden die Merkmale von Always on-Verfügbarkeitsgruppen unter
 
 Im Allgemeinen entsprechen die Verfügbarkeitsgruppen unter [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] für Linux den WSFC-basierten Implementierungen. Das bedeutet, dass alle Einschränkungen und Features (mit einigen Ausnahmen) identisch sind. Die Hauptunterschiede bestehen in Folgendem:
 
--   Microsoft Distributed Transaction Coordinator (MS DTC) wird unter Linux in [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] nicht unterstützt. Wenn Ihre Anwendungen verteilte Transaktionen verwenden und eine Verfügbarkeitsgruppe benötigen, stellen Sie [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Windows bereit.
--   Für Linux-basierte Bereitstellungen wird Pacemaker anstelle von WSFCs verwendet.
+-   Microsoft Distributed Transaction Coordinator (MS DTC) wird unter Linux ab SQL Server 2017 CU16 unterstützt. In Verfügbarkeitsgruppen unter Linux wird DTC jedoch noch nicht unterstützt. Wenn Ihre Anwendungen verteilte Transaktionen verwenden und eine Verfügbarkeitsgruppe benötigen, stellen Sie [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] unter Windows bereit.
+-   Für Linux-basierte Bereitstellungen, die Hochverfügbarkeit erfordern, verwenden Sie für das Clustering Pacemaker anstelle eines WSFC.
 -   Im Gegensatz zu den meisten Konfiguration für Verfügbarkeitsgruppen unter Windows (außer im Workgroupclusterszenario) ist Active Directory Domain Services (AD DS) für Pacemaker nicht erforderlich.
 -   Das Failover einer Verfügbarkeitsgruppe von einem Knoten auf einen anderen unterscheidet sich zwischen Linux und Windows.
 -   Bestimmte Einstellungen wie `required_synchronized_secondaries_to_commit` können unter Linux nur über Pacemaker geändert werden, während bei einer WSFC-basierten Installation Transact-SQL verwendet wird.

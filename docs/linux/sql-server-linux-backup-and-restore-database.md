@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f3e27b283156bb23754a93161fc796e15baec7ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077691"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823113"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken für Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Sie können Sicherungen von Datenbanken von SQL Server 2017 für Linux mit denselben Tools wie andere Plattformen erstellen. Auf einem Linux-Server können Sie mit **sqlcmd** eine Verbindung mit dem SQL Server herstellen und Sicherungen erstellen. Von Windows aus können Sie eine Verbindung mit SQL Server für Linux herstellen und Sicherungen über die Benutzeroberfläche erstellen. Die Sicherungsfunktionalität ist plattformübergreifend identisch. Beispielsweise können Sie Datenbanken lokal, auf Remotelaufwerken oder im [Microsoft Azure Blob-Speicherdienst](../relational-databases/backup-restore/sql-server-backup-to-url.md) sichern.
+Es stehen viele verschiedene Optionen bereit, um Sicherungen von Datenbanken über SQL Server 2017 für Linux zu erstellen. Auf einem Linux-Server können Sie mit **sqlcmd** eine Verbindung mit dem SQL Server herstellen und Sicherungen erstellen. Von Windows aus können Sie eine Verbindung mit SQL Server für Linux herstellen und Sicherungen über die Benutzeroberfläche erstellen. Die Sicherungsfunktionalität ist plattformübergreifend identisch. Beispielsweise können Sie Datenbanken lokal, auf Remotelaufwerken oder im [Microsoft Azure Blob-Speicherdienst](../relational-databases/backup-restore/sql-server-backup-to-url.md) sichern.
 
 ## <a name="backup-a-database"></a>Sichern einer Datenbank
 

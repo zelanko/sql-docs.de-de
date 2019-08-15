@@ -3,46 +3,48 @@ title: Konfigurieren von MS DTC unter Linux
 description: Dieser Artikel bietet eine exemplarische Vorgehensweise zum Konfigurieren von MS DTC unter Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/21/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077611"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892527"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Konfigurieren von Microsoft Distributed Transaction Coordinator (MS DTC) unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-In diesem Artikel wird beschrieben, wie Microsoft Distributed Transaction Coordinator (MS DTC) unter Linux konfiguriert wird. Die Unterstützung für MS DTC für Linux wurde in SQL Server 2019 (Vorschauversion) eingeführt.
+In diesem Artikel wird beschrieben, wie Microsoft Distributed Transaction Coordinator (MS DTC) unter Linux konfiguriert wird.
+
+> [!NOTE]
+> MS DTC für Linux wird in SQL Server 2019 Preview SQL Server 2017 ab dem kumulativen Update 16 unterstützt.
 
 ## <a name="overview"></a>Übersicht
 
 Verteilte Transaktionen sind für SQL Server für Linux aktiviert, indem MS DTC und die Funktion der RPC-Endpunktzuordnung in SQL Server eingeführt werden. Standardmäßig lauscht ein RPC-Endpunktzuordnungsprozess an Port 135 für eingehende RPC-Anforderungen und bietet Informationen zu registrierten Komponenten für Remoteanforderungen. Remoteanforderungen können die von der Endpunktzuordnung zurückgegebenen Informationen zum Kommunizieren mit registrierten RPC-Komponenten wie MS DTC-Diensten verwenden. Ein Prozess erfordert unter Linux Superuser-Berechtigungen für die Bindung an bekannte Ports (Portnummern unter 1024). Systemadministratoren müssen iptables zum Erstellen einer Netzwerkadressenübersetzung für das Routen von Datenverkehr an Port 135 zum RPC-Endpunktzuordnungsprozess von SQL Server verwenden, um zu vermeiden, dass SQL Server mit Stammberechtigungen für den RPC-Endpunktzuordnungsprozess gestartet wird.
 
-In SQL Server 2019 werden zwei Konfigurationsparameter für das mssql-conf-Hilfsprogramm eingeführt.
+MS DTC verwendet zwei Konfigurationsparameter für das mssql-conf-Hilfsprogramm:
 
 | mssql-conf-Einstellung | und Beschreibung |
 |---|---|
 | **network.rpcport** | Der TCP-Port, an den der RPC-Endpunktzuordnungsprozess gebunden wird. |
 | **distributedtransaction.servertcpport** | Der Port, an dem der MS DTC-Server lauscht. Wenn dieser nicht festgelegt ist, verwendet der MS DTC-Dienst bei Neustarts des Diensts einen zufälligen kurzlebigen Port. Firewallausnahmen müssen neu konfiguriert werden, um sicherzustellen, dass die Kommunikation mit dem MS DTC-Dienst fortgesetzt werden kann. |
 
-Weitere Informationen zu diesen Einstellungen und weiteren MS DTC-Einstellungen finden Sie unter [Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool](sql-server-linux-configure-mssql-conf.md#msdtc).
+Weitere Informationen zu diesen Einstellungen und weiteren MS DTC-Einstellungen finden Sie unter [Konfigurieren von SQL Server für Linux mit dem mssql-conf-Tool](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="supported-msdtc-configurations"></a>Unterstützte MS DTC-Konfigurationen
 
 Die folgenden MS DTC-Konfigurationen werden unterstützt:
 
 - Verteilte OLE-TX-Transaktionen für SQL Server für Linux für ODBC-Anbieter.
-- Verteilte XA-Transaktionen für SQL Server für Linux mithilfe von JDBC- und ODBC-Anbietern. Damit XA-Transaktionen mit dem ODBC-Anbieter ausgeführt werden können, müssen Sie Microsoft ODBC Driver for SQL Server Version 17.3 oder höher verwenden.
-- Verteilte Transaktionen auf Verbindungsservern.
 
-Einschränkungen und bekannte Probleme in der Vorschauversion von MS DTC finden Sie unter [Versionshinweise für SQL Server 2019 (Vorschauversion) unter Linux](sql-server-linux-release-notes-2019.md#msdtc).
+- Verteilte XA-Transaktionen für SQL Server für Linux mithilfe von JDBC- und ODBC-Anbietern. Damit XA-Transaktionen mit dem ODBC-Anbieter ausgeführt werden können, müssen Sie Microsoft ODBC Driver for SQL Server Version 17.3 oder höher verwenden. Weitere Informationen finden Sie unter [Grundlegendes zu XA-Transaktionen](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
+
+- Verteilte Transaktionen auf Verbindungsservern.
 
 ## <a name="msdtc-configuration-steps"></a>MS DTC-Konfigurationsschritte
 
@@ -184,9 +186,24 @@ MS DTC für SQL Server für Linux verwendet standardmäßig keine Authentifizier
 
 | Einstellung | und Beschreibung |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. |
-| **distributedtransaction.turnoffrpcsecurity**               | Aktivieren oder Deaktivieren der RPC-Sicherheit für verteilte Transaktionen. |
+| **distributedtransaction.allowonlysecurerpccalls**          | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0 (null). |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Konfigurieren von sicheren RPC-Aufrufen für verteilte Transaktionen. Der Standardwert ist 0 (null). |
+| **distributedtransaction.turnoffrpcsecurity**               | Aktivieren oder Deaktivieren der RPC-Sicherheit für verteilte Transaktionen. Der Standardwert ist 0 (null). |
+
+## <a name="additional-guidance"></a>Zusätzliche Anleitungen
+
+### <a name="active-directory"></a>Active Directory
+
+Microsoft empfiehlt die Verwendung von MS DTC mit aktiviertem RPC, wenn SQL Server in einer Active Directory-Konfiguration (AD) registriert ist. Wenn SQL Server für die Verwendung der AD-Authentifizierung konfiguriert ist, verwendet MS DTC standardmäßig die RPC-Sicherheit mit gegenseitiger Authentifizierung.
+
+### <a name="windows-and-linux"></a>Windows und Linux
+
+Wenn sich ein Client mit Windows-Betriebssystem bei einer verteilten Transaktion mit SQL Server für Linux eintragen muss, benötigt er die folgende Mindestversion des Windows-Betriebssystems:
+
+| Betriebssystem | Mindestversion | Betriebssystembuild |
+|---|---|---|
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

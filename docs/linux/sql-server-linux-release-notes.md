@@ -3,17 +3,17 @@ title: Versionshinweise für SQL Server 2017 für Linux
 description: In diesem Artikel werden Versionshinweise und unterstützte Features für SQL Server 2017 für Linux aufgeführt. Es werden sowohl Versionshinweise zum neuesten Release als auch zu einigen früheren Releases aufgeführt.
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/25/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 5b6fce0bdde7e320eea0371125a61627652de80d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 93472679a524214010ccc2d10eacfd37d7e001e8
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68388409"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763146"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server 2017 für Linux
 
@@ -30,7 +30,7 @@ Die folgenden Versionshinweise gelten für [!INCLUDE[ssSQL17](../includes/sssql1
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3-, 7.4-, 7.5- oder 7.6-Server | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04 LTS | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
 | Docker-Engine 1.8+ für Windows, Mac oder Linux | – | [Installationshandbuch](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -46,6 +46,7 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[ssSQL17](../inclu
 
 | Release               | Versionsoptionen       | Veröffentlichungsdatum |
 |-----------------------|---------------|--------------|
+| [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
 | [CU15](#CU15)         | 14.0.3162.1   | 23.5.2019   |
 | [CU14](#CU14)         | 14.0.3076.1   | 25.3.2019   |
 | [CU13](#CU13)         | 14.0.3048.4   | 18.12.2018   |
@@ -72,10 +73,30 @@ Wenn Sie das CU-Repository (**mssql-server-2017**) konfiguriert haben, erhalten 
 
 Führen Sie den entsprechenden Updatebefehl für jedes Paket durch, wenn Sie vorhandene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Pakete aktualisieren, um das neueste kumulative Update zu erhalten. Spezifische Updateanweisungen für die einzelnen Pakete finden Sie in den folgenden Installationshandbüchern:
 
-- [Install SQL Server package (Installieren des SQL Server-Pakets)](sql-server-linux-setup.md#upgrade)
-- [Install Full-text Search package (Installieren des Pakets für die Volltextsuche)](sql-server-linux-setup-full-text-search.md)
+- [Installieren des SQL Server-Pakets](sql-server-linux-setup.md#upgrade)
+- [Installieren des Volltextsuchepakets](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
-- [Enable SQL Server Agent (Aktivieren des SQL Server-Agents)](sql-server-linux-setup-sql-agent.md)
+- [Aktivieren des SQL Server-Agents](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU16"></a> CU16 (August 2019)
+
+Dies ist das CU16-Release (Cumulative Update 16) von [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]-Version für dieses Release lautet 14.0.3223.3. Informationen zu den Fehlerbehebungen und Verbesserungen in diesem Release finden Sie unter [https://support.microsoft.com/en-us/help/4498951](https://support.microsoft.com/en-us/help/4498951).
+
+### <a name="whats-new"></a>Neues
+
+|Neue Funktion oder Update | Details |
+|:---|:---|
+| MS DTC-Unterstützung | Unterstützung für den Microsoft Distributed Transaction Coordinator (MS DTC) für SQL Server 2017. Weitere Informationen finden Sie unter [Konfigurieren des Microsoft Distributed Transaction Coordinator (MS DTC) unter Linux](sql-server-linux-configure-msdtc.md). |
+
+### <a name="package-details"></a>Paketdetails
+
+Für manuelle oder offline durchgeführte Paketinstallationen können Sie die RPM- und Debian-Pakete herunterladen, die in der folgenden Tabelle aufgeführt werden:
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat RPM-Paket | 14.0.3223.3-15 | [RPM-Engine-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM-Paket | 14.0.3223.3-15 | [RPM-Engine-Paket (mssql-server)](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm) | 
+| Debian-Paket für Ubuntu 16.04 | 14.0.3223.3-15 | [Debian-Engine-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3223.3-15_amd64.deb)</br>[Debian-Hochverfügbarkeitspaket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3223.3-15_amd64.deb)</br>[Debian-Paket für Volltextsuche](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3223.3-15_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU15"></a> CU15 (Mai 2019)
 
@@ -548,11 +569,11 @@ Die folgenden Einschränkungen gelten für [!INCLUDE[ssManStudioFull](../include
 
 In den folgenden Schnellstarts finden Sie Informationen zu den ersten Schritten:
 
-- [Install on Red Hat Enterprise Linux (Installation unter Red Hat Enterprise Linux)](quickstart-install-connect-red-hat.md)
-- [Install on SUSE Linux Enterprise Server (Installation unter SUSE Linux Enterprise Server)](quickstart-install-connect-suse.md)
+- [Installieren unter Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installation unter SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installation unter Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Ausführung in Docker](quickstart-install-connect-ubuntu.md)
 - [Provision a SQL VM in Azure (Bereitstellen einer SQL-VM in Azure)](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Ausführen und Verbinden – Cloud](quickstart-install-connect-clouds.md)
 
-Antworten auf häufig gestellte Fragen finden Sie unter [SQL Server on Linux FAQ (Häufig gestellte Fragen zu SQL Server unter Linux)](sql-server-linux-faq.md).
+Antworten auf häufig gestellte Fragen finden Sie unter [Häufig gestellte Fragen zu SQL Server unter Linux](sql-server-linux-faq.md).

@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 02cc19cb28a3141682786ca8192688c9c451fc43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476257"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811158"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
 
@@ -72,7 +72,7 @@ Nachdem der Grad der Fragmentierung bekannt ist, verwenden Sie die folgenden Tab
 <sup>1</sup> Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden.
 
 > [!TIP]
-> Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Wird ein bestimmter Index beispielsweise hauptsächlich für Überprüfungsvorgänge verwendet, kann ein Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Für Indizes, die in erster Linie für Suchvorgänge verwendet werden, fällt der Leistungsvorteil weniger auf. Ähnliches gilt für ein Entfernen von Fragmentierung in einem Heap (eine Tabelle ohne gruppierten Index). Auch dies ist besonders nützlich für Überprüfungsvorgänge für nicht gruppierte Indizes, wirkt sich aber kaum auf Suchvorgänge aus.
+> Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Wird ein bestimmter Index beispielsweise hauptsächlich für Überprüfungsvorgänge verwendet, kann ein Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Für Indizes, die in erster Linie für Suchvorgänge verwendet werden, fällt der Leistungsvorteil weniger auf. Ähnliches gilt für das Entfernen der Fragmentierung in einem Heap (einer Tabelle ohne gruppierten Index). Auch dies ist besonders nützlich für Überprüfungsvorgänge für nicht gruppierte Indizes, wirkt sich aber kaum auf Suchvorgänge aus.
 
 Bei sehr niedrigen Fragmentierungsniveaus (unter 5 Prozent) sollten diese Befehle normalerweise nicht eingesetzt werden, da die Vorteile des Entfernens einer so geringen Fragmentierung die Kosten für das Neuorganisieren und Neuerstellen des Indexes nicht aufwiegen. Weitere Informationen zu `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).
 
@@ -82,13 +82,13 @@ Bei sehr niedrigen Fragmentierungsniveaus (unter 5 Prozent) sollten diese Befehl
 ### <a name="index-defragmentation-considerations"></a>Überlegungen zur Indexdefragmentierung
 Bei Zutreffen bestimmter Bedingungen führt eine Neuerstellung eines gruppierten Indexes dazu, dass alle nicht gruppierten Indizes, in denen auf den Gruppierungsschlüssel verwiesen wird, automatisch neu erstellt werden, wenn die physischen oder logischen IDs geändert werden müssen, die sich in den nicht gruppierten Indexdatensätzen befinden.
 
-Szenarien, in denen erzwungen wird, dass alle nicht gruppierten Indizes automatisch für eine Tabelle neu erstellt werden:
+In diesen Szenarien wird erzwungen, dass alle nicht gruppierten Indizes automatisch für eine Tabelle neu erstellt werden:
 
 -  Erstellen eines gruppierten Indexes für eine Tabelle
 -  Entfernen eines gruppierten Indexes, was zur Folge hat, dass die Tabelle als Heap gespeichert wird
 -  Ändern des Gruppierungsschlüssels, um Spalten einzubeziehen oder auszuschließen
 
-Szenarien, in denen es nicht erforderlich ist, dass alle nicht gruppierten Indizes für eine Tabelle automatisch neu erstellt werden:
+In diesen Szenarien ist es nicht erforderlich, dass alle nicht gruppierten Indizes automatisch für eine Tabelle neu erstellt werden:
 
 -  Neuerstellen eines eindeutigen gruppierten Indexes
 -  Neuerstellen eines nicht eindeutigen gruppierten Indexes

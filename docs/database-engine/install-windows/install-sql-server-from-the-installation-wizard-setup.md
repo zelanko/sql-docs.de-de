@@ -1,7 +1,7 @@
 ---
 title: Installieren von SQL Server 2016 vom Installations-Assistenten aus (Setup) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419270"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742909"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -280,9 +280,9 @@ Dies gilt nicht für SQL Server 2019.
   
      Der Workflow für die weitere Installation ist von den Funktionen abhängig, die Sie für die Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt. 
 
-1. Wenn Sie die Option zum Installieren des PolyBase-Features auswählen, wird die Seite **PolyBase-Konfiguration** zum SQL Server-Setup hinzugefügt. Diese Seite wird nach der Seite **Instanzkonfiguration** angezeigt. PolyBase erfordert das Oracle JRE 7-Update 51 (mindestens). Ist dieses Update noch nicht installiert, können Sie ab SQL Server 2019 die Azul Zulu Open JRE zusammen mit SQL Server installieren. Auf der Seite **PolyBase-Konfiguration** können Sie wählen, ob die SQL Server-Instanz als eigenständige PolyBase-aktivierte Instanz oder als Bestandteil einer PolyBase-Erweiterungsgruppe verwendet werden soll. Wenn Sie sich für das Verwenden der Erweiterungsgruppe entscheiden, müssen Sie einen Portbereich von bis zu 6 oder mehr Ports angeben.  Auf der Seite **Java-Installationsspeicherort** können Sie wählen, dass die Azul Zulu Open JRE installiert werden soll, die in der SQL Server 2019-Installation enthalten ist, oder Sie können den Speicherort einer anderen JRE oder eines anderen JDK angeben, die oder das bereits auf dem Computer installiert ist.
+1. Ab SQL Server 2019 ist es für Polybase nicht mehr erforderlich, dass Oracle JRE 7 Update 51 (oder höher) vor der Installation des Features auf dem Computer vorinstalliert ist. Wenn Sie die Option zum Installieren des PolyBase-Features auswählen, wird dem SQL Server-Setup die Seite **Java-Installationsspeicherort** hinzugefügt. Diese wird nach der Seite **Instanzkonfiguration** angezeigt. Auf der Seite Java-Installationsspeicherort können Sie auswählen, dass die Azul Zulu Open JRE installiert werden soll, die in der SQL Server 2019-Installation enthalten ist, oder Sie können den Speicherort einer anderen JRE oder eines anderen JDK angeben, die bzw. das bereits auf dem Computer installiert ist.
 
-1. Ab SQL Server 2019 wurde Java, zusätzlich zu R und Python, zur Liste der Machine Learning Services und Spracherweiterungen hinzugefügt. Wenn Sie die Option zum Installieren des Java-Features auswählen, wird die Seite **Java-Installationsspeicherort** zum Dialogfenster „SQL Server-Setup“ hinzugefügt. Diese Seite wird nach der Seite **Instanzkonfiguration** angezeigt. Auf der Seite **Java-Installationsspeicherort** können Sie wählen, dass die Azul Zulu Open JRE installiert werden soll, die in der SQL Server 2019-Installation enthalten ist, oder Sie können den Speicherort einer anderen JRE oder eines anderen JDK angeben, die oder das bereits auf dem Computer installiert ist.
+1. Ab SQL Server 2019 wird Java mit Spracherweiterungen hinzugefügt. Wenn Sie die Option zum Installieren des Java-Features auswählen, wird die Seite **Java-Installationsspeicherort** zum Dialogfenster „SQL Server-Setup“ hinzugefügt. Diese Seite wird nach der Seite **Instanzkonfiguration** angezeigt. Auf der Seite **Java-Installationsspeicherort** können Sie auswählen, dass die Zulu Open JRE installiert werden soll, die in der SQL Server 2019-Installation enthalten ist, oder Sie können den Speicherort einer anderen JRE oder eines anderen JDK angeben, die bzw. das bereits auf dem Computer installiert ist.
 
 1. Geben Sie auf der Seite **Serverkonfiguration – Dienstkonten** Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben. Weitere Informationen zu den Konfigurationseinstellungen finden Sie unter [Hilfe zum Installations-Assistenten](../../sql-server/install/instance-configuration.md#serverconfig).
   
