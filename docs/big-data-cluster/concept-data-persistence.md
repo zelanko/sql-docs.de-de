@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470996"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028595"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Datenpersistenz mit SQL Server-Big-Data-Clustern in Kubernetes
 
@@ -60,7 +60,7 @@ Im Abschnitt [Konfigurieren von Speicher](#config-samples) finden Sie weitere Be
 Azure Kubernetes Service (AKS) verfügt über [zwei integrierte Speicherklassen](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) (**Standard** und **managed-premium** (Premiumverwaltung)) und den dynamischen Anbieter für diese Klassen. Sie können eine dieser Klassen angeben oder Ihre eigene Speicherklasse zum Bereitstellen von Big-Data-Clustern mit aktiviertem persistenten Speicher erstellen. Standardmäßig enthält die integrierte Clusterkonfigurationsdatei für aks (*aks-dev-test*) die permanente Speicherkonfigurationen für die Verwendung der Speicherklasse **Standard**.
 
 > [!WARNING]
-> Persistente Volumes, die mit den integrierten Speicherklassen **Standard** und **managed-premium** (Premiumverwaltung) erstellt wurden, verfügen über eine *Delete*-Rückforderungsrichtlinie. Wenn Sie also den SQL Server-Big-Data-Cluster löschen, werden persistente Volumeansprüche und dadurch auch persistente Volumes gelöscht. Sie können mithilfe des **azure-disk**-Anbieters benutzerdefinierte Speicherklassen mit einer *Retain*-Rückforderungsrichtlinie erstellen, wie in [diesem](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) Artikel gezeigt wird.
+> Persistente Volumes, die mit den integrierten Speicherklassen **Standard** und **managed-premium** (Premiumverwaltung) erstellt wurden, verfügen über eine *Delete*-Rückforderungsrichtlinie. Wenn Sie also den SQL Server-Big-Data-Cluster löschen, werden persistente Volumeansprüche und dadurch auch persistente Volumes gelöscht. Sie können mithilfe des **azure-disk**-Anbieters benutzerdefinierte Speicherklassen mit einer *Retain*-Rückforderungsrichtlinie erstellen, wie in [diesem](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) Artikel gezeigt wird.
 
 
 ## <a name="minikube-storage-class"></a>Minikube-Speicherklasse

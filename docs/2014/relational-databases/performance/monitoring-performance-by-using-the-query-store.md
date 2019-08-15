@@ -10,22 +10,22 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150768"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028599"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Überwachen der Leistung mit dem Abfragespeicher
   Der Abfragespeicher bietet über DBAs Einblick in die Auswahl und die Leistung des Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Das Feature erfasst automatisch einen Verlauf der Abfrage-, Plan- und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern und ermöglicht es Ihnen so, Verwendungsmuster für Datenbanken zu erkennen und zu verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Der Abfragespeicher kann mit der Option [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) konfiguriert werden.  
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Herunterladen](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Gilt für**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([Get](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Dies ist zurzeit eine Vorschaufunktion. Für die Verwendung des Abfragespeichers müssen Sie bestätigen und sich damit einverstanden erklären, dass diese Implementierung des Abfragespeichers den Vorschaubedingungen in Ihrem Lizenzvertrag (z. B. Enterprise Agreement, Microsoft Azure Agreement oder Microsoft Online-Abonnementvertrag) und ggf. den [Zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)unterliegt.  
+>  Dies ist zurzeit eine Vorschaufunktion. Für die Verwendung des Abfragespeichers müssen Sie bestätigen und sich damit einverstanden erklären, dass diese Implementierung des Abfragespeichers den Vorschaubedingungen in Ihrem Lizenzvertrag (z. B. Enterprise Agreement, Microsoft Azure Agreement oder Microsoft Online-Abonnementvertrag) und ggf. den [Zusätzlichen Nutzungsbestimmungen für Microsoft Azure-Vorschauen](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)unterliegt.  
   
 ##  <a name="Enabling"></a> Aktivieren des Abfragespeichers  
  Der Abfragespeicher ist bei neuen Datenbanken standardmäßig nicht aktiviert.  
@@ -88,11 +88,11 @@ JOIN sys.query_store_query_text AS Txt
 ## <a name="using-the-regressed-queries-feature"></a>Verwenden des Features für rückläufige Abfragen  
  Aktualisieren Sie nach der Aktivierung des Abfragespeichers den Datenbankbereich im Objekt-Explorer-Bereich, um den Abschnitt **Abfragespeicher** hinzuzufügen.  
   
- ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
+ ![Querystore](../../database-engine/media/querystore.PNG "Querystore")  
   
  Durch Auswahl von **Regressed Queries**wird der Bereich **Regressed Queries** in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]geöffnet. Im Bereich „Regressed Queries“ werden die Abfragen und Pläne im Abfragespeicher angezeigt. Über die Dropdownfelder oben können Sie Abfragen anhand verschiedener Kriterien auswählen. Wählen Sie einen Plan aus, um die grafische Darstellung des Abfrageplans anzuzeigen. Über verschiedene Schaltflächen können Sie die Quellabfrage anzeigen, einen Abfrageplan erzwingen und die Erzwingung wieder aufheben und die Ansicht aktualisieren.  
   
- ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
+ ![Regressedqueries](../../database-engine/media/regressedqueries.PNG "Regressedqueries")  
   
  Um einen Plan zu erzwingen, wählen Sie eine Abfrage und einen Plan aus und klicken dann auf **Force Plan** Sie können nur Pläne erzwingen, die mit dem Abfrageplanfeature gespeichert wurden und sich noch im Abfrageplancache befinden.  
   
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- Beachten Sie, dass beliebige Werte nicht zulässig sind: Sie die folgenden befolgen: 1, 5, 10, 15, 30 und 60.  
+ Beachten Sie, dass willkürliche Werte nicht zulässig sind. verwenden Sie einen der folgenden Werte: 1, 5, 10, 15, 30 und 60.  
   
  Der neue Wert für das Intervall wird in der Sicht `sys.database_query_store_options` angezeigt.  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  Im Beispiel oben wird die erweiterte gespeicherte Prozedur `sp_query_store_remove_query` verwendet, um nicht benötigte Daten zu entfernen. Sie können auch zwei andere Prozeduren verwenden.  
   
--   `sp_query_store_reset_exec_stats` -Löscht die Laufzeitstatistiken für einen angegebenen Plan.  
+-   `sp_query_store_reset_exec_stats`-Löschen Sie die Lauf Zeit Statistiken für einen angegebenen Plan.  
   
--   `sp_query_store_remove_plan` -Entfernt einen einzelnen Plan.  
+-   `sp_query_store_remove_plan`-entfernt einen einzelnen Plan.  
   
 
   
 ###  <a name="Peformance"></a> Leistungsüberwachung und Problembehandlung  
  Da der Abfragespeicher den Verlauf von Kompilierungs- und Laufzeitmetriken der Abfrageausführungen speichert, können Sie eine Vielzahl von verschiedenen Fragen im Hinblick auf Ihre Workload sehr einfach beantworten.  
   
- **Letzte *n* Abfragen, die für die Datenbank ausgeführt.**  
+ **Die letzten *n* Abfragen, die für die Datenbank ausgeführt wurden.**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -301,7 +301,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **Die Anzahl der Ausführungen für jede Abfrage.**  
+ **Anzahl der Ausführungen für jede Abfrage.**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **Die Anzahl der Abfragen mit die längste durchschnittliche Ausführungszeit innerhalb der letzten Stunde.**  
+ **Die Anzahl der Abfragen mit der längsten durchschnittlichen Ausführungszeit innerhalb der letzten Stunde.**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **Die Anzahl der Abfragen, die die größte durchschnittlichen physischen e/a-Lesevorgänge in den letzten 24 Stunden mit der entsprechenden durchschnittlichen Zeilen- und Ausführungsanzahl.**  
+ **Die Anzahl der Abfragen mit den größten durchschnittlichen physischen e/a-Lesevorgängen in den letzten 24 Stunden mit entsprechender durchschnittlicher Zeilen Anzahl und Ausführungs Anzahl.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Abfragen mit kürzlicher leistungsregression (Vergleich zu einem früheren Zeitpunkt).** Das folgende Abfragebeispiel gibt alle Abfragen zurück, für die sich die Ausführungszeit in den letzten 48 Stunden aufgrund einer Änderung der Planauswahl verdoppelt hat. Die Abfrage vergleicht alle Intervalle der Laufzeitstatistiken miteinander.  
+ **Abfragen, die vor kurzem in die Leistung zurückgegangen sind (Vergleichen von einem anderen Zeitpunkt).** Das folgende Abfragebeispiel gibt alle Abfragen zurück, für die sich die Ausführungszeit in den letzten 48 Stunden aufgrund einer Änderung der Planauswahl verdoppelt hat. Die Abfrage vergleicht alle Intervalle der Laufzeitstatistiken miteinander.  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Wenn Sie alle Leistungsregressionen (nicht nur die im Zusammenhang mit einer Änderung der Planauswahl) anzeigen möchten, entfernen Sie einfach die Bedingung `AND p1.plan_id <> p2.plan_id` aus der vorherigen Abfrage.  
   
- **Abfragen mit kürzlicher leistungsregression (Vergleich kürzlicher und älterer Ausführungen).** Die nächste Abfrage vergleicht die Abfrageausführung basierend auf den Zeiträumen der Ausführung. In diesem speziellen Beispiel vergleicht die Abfrage die Ausführung in jüngster Zeit (1 Stunde) mit einem älteren Zeitraum (letzter Tag) und identifiziert Ausführungen, die zu additional_duration_workload geführt haben. Diese Metrik wird als Differenz zwischen aktueller durchschnittlicher Ausführung und älterer durchschnittlicher Ausführung multipliziert mit der Anzahl der letzten Ausführungen berechnet. Sie stellt damit tatsächlich dar, wie viel zusätzliche Zeit die letzten Ausführungen im Vergleich zu älteren benötigt haben:  
+ **Abfragen, die vor kurzem in die Leistung zurückgegangen sind (Vergleich der aktuellen und Verlaufs Ausführung).** Die nächste Abfrage vergleicht die Abfrageausführung basierend auf den Zeiträumen der Ausführung. In diesem speziellen Beispiel vergleicht die Abfrage die Ausführung in jüngster Zeit (1 Stunde) mit einem älteren Zeitraum (letzter Tag) und identifiziert Ausführungen, die zu additional_duration_workload geführt haben. Diese Metrik wird als Differenz zwischen aktueller durchschnittlicher Ausführung und älterer durchschnittlicher Ausführung multipliziert mit der Anzahl der letzten Ausführungen berechnet. Sie stellt damit tatsächlich dar, wie viel zusätzliche Zeit die letzten Ausführungen im Vergleich zu älteren benötigt haben:  
   
 ```  
 --- "Recent" workload - last 1 hour  

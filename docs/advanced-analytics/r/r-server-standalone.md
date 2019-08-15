@@ -1,21 +1,21 @@
 ---
-title: Eigenständige R Server oder Machine Learning Server Installation
+title: Was sind eigenständige Machine Learning Server oder R Server in SQL Server?
 description: Übersicht über die Einführung in eigenständige R Server und Machine Learning Server in SQL Server Setup
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d4843aaf14a944e7beef73ef1330985666007498
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: cb7aef4502f42bc91067cdcbd598b9b2ea7477cf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715115"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028615"
 ---
-# <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (eigenständig) und Machine Learning Server (eigenständig) in SQL Server
+# <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>Was sind eigenständige Machine Learning Server oder R Server in SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server bietet Installationsunterstützung für eine eigenständige R Server oder Machine Learning Server, die unabhängig von SQL Server ausgeführt wird. Abhängig von Ihrer SQL Server Version verfügt ein eigenständiger Server über eine Grundlage von Open Source-R und möglicherweise python, überlagert mit Hochleistungs Bibliotheken von Microsoft, die statistische und Predictive Analytics skaliert hinzufügen. Bibliotheken aktivieren auch Machine Learning-Aufgaben in skriskripten in R oder python. 

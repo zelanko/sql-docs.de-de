@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a6156dad127ea2a86e8a6f4dfbdd6f692fd8f6e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7adc5c3d07b47b5310d8a45d00747d6dd6de9952
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893648"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028586"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Verwalten von Big Data-Clustern für SQL Server mit Azure Data Studio-Notebooks
 
@@ -22,7 +22,7 @@ ms.locfileid: "68893648"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] stellt eine Erweiterung für Azure Data Studio bereit, die Notebooks umfasst. Ein Notebook enthält Dokumentation und Code, die Sie in Azure Data Studio verwenden können, um Big Data-Cluster für SQL Server zu verwalten.
 
-[Notebooks](notebooks-guidance.md), die ursprünglich als Open-Source-Projekt implementiert wurden, wurden in [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download) implementiert. Sie können Markdown für Text in den Textzellen und einen der verfügbaren Kernel verwenden, um Code in den Codezellen zu schreiben.
+[Notebooks](notebooks-guidance.md), die ursprünglich als Open-Source-Projekt implementiert wurden, wurden in [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download) implementiert. Sie können Markdown für Text in den Textzellen und einen der verfügbaren Kernel verwenden, um Code in den Codezellen zu schreiben.
 
 Sie können Notebooks verwenden, um Big Data-Cluster für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bereitzustellen.
 

@@ -13,21 +13,21 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe9a196424a8d3488a49c86f0996dece71eee0f7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049483"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028532"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
   In diesem Thema wird beschrieben, wie der Start eines Windows Server-Failoverclustering-Clusterknotens ohne Quorum erzwungen wird.  Dies ist möglicherweise für die Notfallwiederherstellung sowie in Multisubnetzszenarien erforderlich, um Daten wiederherzustellen die hohe Verfügbarkeit für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen wieder vollständig einrichten zu können.  
   
 -   **Vorbereitung:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
   
--   **So erzwingen Sie einen Cluster ohne Quorum zu starten:**  [Failovercluster-Manager](#FailoverClusterManagerProcedure), [mithilfe von Powershell](#PowerShellProcedure), [Verwenden von Net.exe](#CommandPromptProcedure)  
+-   **So erzwingen Sie den Start eines Clusters ohne Quorum:**  [Verwenden des Failovercluster-Manager](#FailoverClusterManagerProcedure), [Verwenden von PowerShell](#PowerShellProcedure), [Verwenden von „net.exe“](#CommandPromptProcedure)  
   
--   **Zur Nachverfolgung:**  [Zur Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
+-   **Nachverfolgung:**  [Nächster Schritt: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63049483"
   
 3.  Klicken Sie im linken Bereich in der Struktur **Failovercluster-Manager** auf den Clusternamen.  
   
-4.  Klicken Sie im Zusammenfassungsbereich sicher, dass die aktuelle **Quorumkonfiguration** Wert ist:  **Warnung: Cluster wird im Status "ForceQuorum" ausgeführt**.  
+4.  Bestätigen Sie im Zusammenfassungsbereich, dass der aktuelle Wert für die **Quorumkonfiguration** folgendermaßen lautet:  **Warnung: Cluster wird im Status „ForceQuorum“ ausgeführt.**  
   
 ##  <a name="PowerShellProcedure"></a> Verwenden von PowerShell  
   
@@ -122,7 +122,7 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
 -   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   

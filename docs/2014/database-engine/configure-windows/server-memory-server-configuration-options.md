@@ -1,5 +1,5 @@
 ---
-title: Serverkonfigurationsoptionen für den Serverarbeitsspeicher | Microsoft-Dokumentation
+title: Konfigurationsoptionen für den Server Arbeitsspeicher | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475966"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028693"
 ---
-# <a name="server-memory-server-configuration-options"></a>Serverkonfigurationsoptionen für den Serverarbeitsspeicher
+# <a name="server-memory-configuration-options"></a>Konfigurationsoptionen für den Server Arbeitsspeicher
   Mit den beiden Arbeitsspeicheroptionen für den Server, **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher**, können Sie die Größe des Arbeitsspeichers (in Megabytes) umkonfigurieren, der vom SQL Server-Speicher-Manager für einen von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendeten SQL Server-Prozess verwaltet wird.  
   
  Die Standardeinstellung für **Min. Serverarbeitsspeicher** ist 0, die für **Max. Serverarbeitsspeicher** 2147483647 MB. Standardmäßig können die Arbeitsspeicheranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anhand der verfügbaren Systemressourcen dynamisch geändert werden.  
   
 > [!NOTE]  
->  Wenn die Option **Max. Serverarbeitsspeicher** auf den Minimalwert festgelegt ist, kann dies die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblich einschränken und sogar den Start von SQL Server verhindern. Wenn sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht starten lässt, müssen Sie es mithilfe der Startoption **-f** starten und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
+> Wenn die Option **Max. Serverarbeitsspeicher** auf den Minimalwert festgelegt ist, kann dies die Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erheblich einschränken und sogar den Start von SQL Server verhindern. Wenn sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Ändern dieser Option nicht starten lässt, müssen Sie es mithilfe der Startoption **-f** starten und die Option **Max. Serverarbeitsspeicher** auf ihren vorherigen Wert zurücksetzen. Weitere Informationen finden Sie unter [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md).  
   
  Bei dynamischer Verwendung des Arbeitsspeichers von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird der im System verfügbare Arbeitsspeicher in regelmäßigen Abständen abgefragt. Bei Beibehaltung dieses freien Arbeitsspeichers werden Auslagerungsvorgänge durch das Betriebssystem verhindert. Wenn weniger freier Arbeitsspeicher vorhanden ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arbeitsspeicher für das Betriebssystem frei. Wenn mehr Arbeitsspeicher frei ist, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auch mehr Speicher reservieren. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fügt Arbeitsspeicher nur dann hinzu, wenn durch die Arbeitsauslastung mehr Arbeitsspeicher erforderlich ist. Bei einem ruhenden Server wird die Größe seines virtuellen Adressraums nicht vergrößert.  
   
@@ -63,7 +63,7 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 
 <sup>2</sup> Informationen zu den standardmäßig berechneten Arbeitsthreads für eine bestimmte Anzahl kategorisierter CPUs auf dem aktuellen Host finden Sie auf der Dokumentationsseite zum [Konfigurieren der Serverkonfigurationsoption Maximale Anzahl von Arbeitsthreads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 
-<sup>3</sup> Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../../database-engine/configure-windows/database-engine-service-startup-options.md). Nur bis 32 Bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
+<sup>3</sup> Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014). Gilt nur für 32-Bit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 |Betriebssystemtyp|Mindestens zulässiger Arbeitsspeicher für **Max. Server Arbeitsspeicher**|  
 |-------------|----------------------------------------------------------------|  

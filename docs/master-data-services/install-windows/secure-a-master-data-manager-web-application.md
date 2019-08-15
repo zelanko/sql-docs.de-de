@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944891"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028806"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Schützen einer Master Data Manager-Webanwendung
 
@@ -61,7 +61,7 @@ ms.locfileid: "67944891"
 
 12. Ändern Sie `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` in `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`, um Probleme zu vermeiden, die im Silverlight-Client auftreten können.
 
-13. Speichern und schließen Sie die Datei. Wenn Sie einen Fehler erhalten, kann dies daran liegen, dass Sie die Benutzerkontensteuerung aktiviert haben. Weitere Informationen finden Sie unter [Deaktivieren der Benutzerkontensteuerung](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Benutzer sollten jetzt per HTTPS auf die Website zugreifen können.  
+13. Speichern und schließen Sie die Datei. Wenn Sie einen Fehler erhalten, kann dies daran liegen, dass Sie die Benutzerkontensteuerung aktiviert haben. Benutzer sollten jetzt per HTTPS auf die Website zugreifen können.  
 
   
 ## <a name="see-also"></a>Siehe auch  

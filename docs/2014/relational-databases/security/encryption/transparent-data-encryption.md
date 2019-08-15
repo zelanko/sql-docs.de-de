@@ -18,12 +18,12 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4581d91b9f57b48f22e66dc15ff03e6f7320d7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188036"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028541"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
   *Transparente Datenverschlüsselung* (TDE) verschlüsselt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] -Datendateien, bekannt als "Verschlüsselung ruhender Daten". Sie können verschiedene Vorsichtsmaßnahmen treffen, um eine Datenbank abzusichern, beispielsweise ein sicheres System entwerfen, vertrauliche Datenbestände verschlüsseln oder eine Firewall für die Datenbankserver einrichten. Wenn jedoch physische Medien (etwa Laufwerke oder Sicherungsbänder) gestohlen werden, muss ein böswilliger Benutzer die Datenbank einfach nur wieder herstellen und kann dann die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
@@ -44,9 +44,9 @@ ms.locfileid: "63188036"
   
  **Informationen zu [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Bei der Verwendung von TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([Vorschau in einigen Regionen](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) wird das auf Serverebene in der Masterdatenbank gespeicherte Zertifikat automatisch von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erstellt. Zum Verschieben einer TDE-Datenbank auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] müssen Sie die Datenbank entschlüsseln, verschieben und auf der Ziel- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erneut aktivieren. Schrittweise Anweisungen für TDE auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]finden Sie unter [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
+ Bei der Verwendung von TDE mit [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([Vorschau in einigen Regionen](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) wird das auf Serverebene in der Masterdatenbank gespeicherte Zertifikat automatisch von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erstellt. Zum Verschieben einer TDE-Datenbank auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] müssen Sie die Datenbank entschlüsseln, verschieben und auf der Ziel- [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]erneut aktivieren. Schrittweise Anweisungen für TDE auf [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]finden Sie unter [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
   
- Die Vorschau des Status von TDE gilt auch in der Teilmenge der geografischen Regionen, in denen die Versionsproduktfamilie V12 von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] als jetzt allgemein verfügbar angekündigt wird. TDE für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] dient nicht zur Verwendung in den Produktionsdatenbanken bis [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ankündigt, dass TDE von der Vorschau zu GA heraufgestuft wird. Weitere Informationen zu [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 finden Sie unter [Neuerungen in Azure SQL-Datenbank](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ Die Vorschau des Status von TDE gilt auch in der Teilmenge der geografischen Regionen, in denen die Versionsproduktfamilie V12 von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] als jetzt allgemein verfügbar angekündigt wird. TDE für [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] dient nicht zur Verwendung in den Produktionsdatenbanken bis [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ankündigt, dass TDE von der Vorschau zu GA heraufgestuft wird. Weitere Informationen zu [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 finden Sie unter [Neuerungen in Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
  **Informationen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -230,8 +230,8 @@ GO
  TDE kann auf einer Datenbank aktiviert werden, die über In-Memory OLTP-Objekte verfügt. In-Memory OLTP-Protokolldatensätze werden verschlüsselt, wenn TDE aktiviert ist. Daten in einer MEMORY_OPTIMIZED_DATA-Dateigruppe werden nicht verschlüsselt, wenn TDE aktiviert ist.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verschieben Sie eine TDE-geschützten Datenbank auf eine andere SQLServer](move-a-tde-protected-database-to-another-sql-server.md)   
- [Aktivieren von TDE unter Verwendung von EKM](enable-tde-on-sql-server-using-ekm.md)   
+ [Verschieben einer TDE-geschützten Datenbank in eine andere SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Aktivieren von TDE mithilfe von EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Transparent Data Encryption mit Azure SQL-Datenbank](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server-Verschlüsselung](sql-server-encryption.md)   
  [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
