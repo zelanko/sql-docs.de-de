@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050397"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811170"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,13 +143,13 @@ Daher beträgt der für jedes Hasharray erforderliche Arbeitsspeicher im Beispie
   
 Da wir über drei Hashindizes verfügen, ist der für die Hashindizes erforderliche Arbeitsspeicher 3 * 64 MB = 192 MB.  
   
-#### <a name="memory-for-non-clustered-indexes"></a>Arbeitsspeicher für nicht gruppierte Indizes  
+#### <a name="memory-for-nonclustered-indexes"></a>Arbeitsspeicher für nicht gruppierte Indizes  
   
 Nicht gruppierte Indizes werden als BTrees implementiert, deren innere Knoten den Indexwert und Zeiger auf nachfolgende Knoten enthalten.  Blattknoten enthalten den Indexwert und einen Zeiger auf die Tabellenzeile im Arbeitsspeicher.  
   
 Nicht gruppierte Indizes verfügen im Gegensatz Hashindizes nicht über eine feste Bucketgröße. Der Index vergrößert bzw. verkleinert sich dynamisch mit den Daten.  
   
-Der von nicht gruppierten Indizes belegte Arbeitsspeicher kann wie folgt berechnet werden:  
+Der von nicht gruppierten Indizes benötigte Arbeitsspeicher kann wie folgt berechnet werden:  
   
 - **Arbeitsspeicher, der Nichtblattknoten zugeordnet ist**   
     Bei einer typischen Konfiguration hat der Arbeitsspeicher, der Nichtblattknotenden zugeordnet wird, einen geringen prozentualen Anteil am gesamten vom Index belegten Arbeitsspeicher, der so klein ist, dass er problemlos ignoriert werden kann.  
@@ -158,7 +158,7 @@ Der von nicht gruppierten Indizes belegte Arbeitsspeicher kann wie folgt berechn
     Die Blattknoten weisen eine Zeile für jeden eindeutigen Schlüssel in der Tabelle auf, die auf die Datenzeilen mit dem eindeutigen Schlüssel verweist.  Wenn Sie über mehrere Zeilen mit demselben Schlüssel (also über einen nicht eindeutigen nicht gruppierten Index) verfügen, enthält der Indexblattknoten nur eine Zeile, die auf eine der Zeilen verweist, während die anderen Zeilen miteinander verknüpft sind.  Folglich kann für den insgesamt erforderlichen Arbeitsspeicher wie folgt ein Näherungswert ermittelt werden:
   - memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Nicht gruppierte Indizes eignen sich am besten für Bereichssuchen, wie in der folgenden Abfrage veranschaulicht:  
+ Nicht gruppierte Indizes eignen sich wie in der folgenden Abfrage veranschaulicht am besten für Bereichssuchen:  
   
 ```sql  
 SELECT * FRON t_hk  

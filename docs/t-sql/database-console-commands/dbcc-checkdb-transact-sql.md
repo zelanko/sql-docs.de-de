@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102108"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809892"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ Wenn sich die Datenbank im Notfallmodus befindet und DBCC CHECKDB mit der REPAIR
 Ist der DBCC CHECKDB-Befehl erfolgreich, befindet sich die Datenbank in einem physisch konsistenten Zustand, und der Datenbankstatus wird auf ONLINE festgelegt. Die Datenbank kann jedoch Transaktionsinkonsistenzen enthalten. Es wird empfohlen, [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) auszuführen, um mögliche Fehler in der Geschäftslogik zu identifizieren und die Datenbank dann sofort zu sichern.
 Falls der DBCC CHECKDB-Befehl einen Fehler generiert, kann die Datenbank nicht repariert werden.
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>Ausführen von DBCC CHECKDB mit REPAIR_ALLOW_DATA_LOSS in replizierten Datenbanken    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>Ausführen von DBCC CHECKDB mit REPAIR_ALLOW_DATA_LOSS in replizierten Datenbanken    
 Das Ausführen des Befehls DBCC CHECKDB mit der Option REPAIR_ALLOW_DATA_LOSS kann Auswirkungen auf Benutzerdatenbanken (Veröffentlichungs- und Abonnementdatenbanken) und die von der Replikation verwendete Verteilungsdatenbank haben. Veröffentlichungs- und Abonnementdatenbanken schließen veröffentlichte Tabellen und Tabellen mit Replikationsmetadaten ein. Beachten Sie die folgenden potenziellen Probleme in diesen Datenbanken:
 -   Veröffentlichte Tabellen. Aktionen, die vom CHECKDB-Prozess zur Reparatur beschädigter Benutzerdaten ausgeführt werden, werden möglicherweise nicht repliziert:    
 -   Die Mergereplikation verwendet Trigger, um Änderungen an veröffentlichten Tabellen nachzuverfolgen. Wenn Zeilen vom CHECKDB-Prozess eingefügt, aktualisiert oder gelöscht werden, werden die Trigger nicht ausgelöst. Daher wird die Änderung nicht repliziert.

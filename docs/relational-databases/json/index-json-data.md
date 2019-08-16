@@ -13,12 +13,12 @@ ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a31be55598d3a3df42a9d5a5fd39832fdbc08754
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbdea9d1ffd22fdedbfe15b66eb6d9b57f33d1f8
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909283"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809975"
 ---
 # <a name="index-json-data"></a>Indizieren von JSON-Daten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ ORDER BY JSON_VALUE(json,'$.name')
   
  ![Ausführungsplan](../../relational-databases/json/media/jsonindexblog2.png "Ausführungsplan")  
   
- Obwohl die Abfrage eine `ORDER BY`-Klausel hat, verwendet der Ausführungsplan keinen Sort-Operator. Der JSON-Index ist bereits nach den Regeln für serbisches Kyrillisch geordnet. Daher kann SQL Server den nicht gruppierten Index verwenden, in dem die Ergebnisse bereits sortiert sind.  
+ Obwohl die Abfrage eine `ORDER BY`-Klausel hat, verwendet der Ausführungsplan keinen Sort-Operator. Der JSON-Index ist bereits nach den Regeln für serbisches Kyrillisch geordnet. Daher kann SQL Server den nicht gruppierten Index verwenden, in dem die Ergebnisse bereits sortiert wurden.  
   
  Falls Sie jedoch die Sortierung des `ORDER BY`-Ausdrucks ändern, indem Sie beispielsweise `COLLATE French_100_CI_AS_SC` an die `JSON_VALUE`-Funktion anhängen, erhalten Sie einen anderen Ausführungsplan für die Abfrage.  
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4c4f504f-dd2b-42c5-8a20-1a8ad9a5d632
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: e9ccc245c540cfa6e87ee13f6cbb09f10c7734b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 38d79f3a76d71b677c722ca6226182b692dee506
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045437"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892257"
 ---
 # <a name="azure-data-lake-store-destination"></a>Azure Data Lake Store Destination
 
@@ -32,7 +32,8 @@ ms.locfileid: "68045437"
 > [!NOTE]
 > Um sicherzustellen, dass der Azure Data Lake Store-Verbindungsmanager und die Komponenten, die ihn verwenden – das bedeutet Azure Data Lake Store Source und Azure Data Lake Store Destination – eine Verbindung zu Diensten herstellen können, stellen Sie sicher, dass Sie die neueste Version von Azure Feature Pack [hier](https://www.microsoft.com/download/details.aspx?id=49492)herunterladen. 
 
-## <a name="configure-the-azure-data-lake-store-destination"></a>Konfigurieren von Azure Data Lake Store Destination  
+**Konfigurieren von Azure Data Lake Storage Destination**
+
 1. Ziehen Sie **Azure Data Lake Store Destination** auf den Datenfluss-Designer, und doppelklicken Sie darauf, um den Code-Editor aufzurufen.  
 
 2.  Geben Sie im Feld **Azure Data Lake Store connection manager** (Azure Data Lake Store-Verbindungs-Manager) einen vorhandenen Azure Data Lake Store-Verbindungs-Manager an, oder erstellen Sie einen neuen, der auf einen Azure Data Lake Store-Dienst verweist.  
@@ -43,30 +44,6 @@ ms.locfileid: "68045437"
   
        Wenn es sich um Textformat handelt, geben Sie den Wert für das **Spaltentrennzeichen** ein. Aktivieren Sie außerdem **Spaltennamen in der ersten Datenzeile** , wenn die erste Zeile in der Datei Spaltennamen enthält.  
 
-       Hat die Datei das Format ORC, müssen Sie die Java Runtime Environment (JRE) für die betreffende Plattform installieren.
+       Wenn das ORC-Dateiformat vorliegt, ist Java erforderlich. Ausführliche Informationen finden Sie [hier](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java).
   
 3.  Nachdem Sie die Verbindungsinformationen angegeben haben, wechseln Sie zur Seite **Spalten** , um Quellspalten zu den Zielspalten für den SSIS-Datenfluss zuzuordnen.  
-
-## <a name="prerequisite-for-orc-file-format"></a>Voraussetzung für das ORC-Dateiformat
-Zur Verwendung des ORC-Dateiformats ist Java erforderlich.
-Die Architektur (32/64 Bit) des Java-Builds muss mit der der zu verwendenden SSIS-Runtime übereinstimmen.
-Die folgenden Java-Builds wurden getestet.
-
-- [OpenJDK 8u192 für Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-### <a name="set-up-zulus-openjdk"></a>Einrichten von OpenJDK für Zulu
-1. Laden Sie das ZIP-Paket für die Installation herunter, und extrahieren Sie es.
-2. Führen Sie über die Eingabeaufforderung `sysdm.cpl` aus.
-3. Klicken Sie auf der Registerkarte **Erweitert** auf **Umgebungsvariablen**.
-4. Klicken Sie im Abschnitt **Systemvariablen** auf **Neu**.
-5. Geben Sie `JAVA_HOME` für den **Variablennamen** ein.
-6. Klicken Sie auf **Verzeichnis durchsuchen**, navigieren Sie zum extrahierten Ordner, und wählen Sie den Unterordner `jre` aus.
-   Wählen Sie anschließend **OK** aus. Daraufhin wird der **Variablenwert** automatisch aufgefüllt.
-7. Klicken Sie auf **OK**, um das Dialogfeld **New System Variable** (Neue Systemvariable) zu schließen.
-8. Klicken Sie auf **OK**, um das Dialogfeld **Umgebungsvariablen** zu schließen.
-9. Klicken Sie auf **OK**, um das Dialogfeld **Systemeigenschaften** zu schließen.
-
-### <a name="set-up-oracles-java-se-runtime-environment"></a>Einrichten von Oracle Java SE Runtime Environment
-1. Laden Sie das EXE-Installationsprogramm herunter, und führen Sie es aus.
-2. Führen Sie die Installationsanweisungen aus, um das Setup abzuschließen.

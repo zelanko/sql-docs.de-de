@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059036"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811284"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Neues in der Datenbank-Engine – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] bietet jetzt Graphdatenbank-Funktionen, mit denen aussagekräftigere beziehungsorientierte Daten modelliert werden können. Dazu zählt [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md)-Syntax zum Erstellen von Knoten- und Rahmentabellen und das Schlüsselwort [MATCH](../t-sql/queries/match-sql-graph.md) für Abfragen. Weitere Informationen finden Sie unter [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../relational-databases/graphs/sql-graph-overview.md).   
 - Eine neue Generation von Verbesserungen bei der Abfrageverarbeitung, durch die Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsworkload angewendet werden. In dieser ersten Version der Featurefamilie für die **adaptive Abfrageverarbeitung** gibt es drei neue Verbesserungen: **Adaptive Joins im Batchmodus**, **Feedback zur Speicherzuweisung im Batchmodus** und **überlappende Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen.  Weitere Informationen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md).
 - Die automatische Datenbankoptimierung bietet einen Einblick in die potentiellen Abfrageleistungsprobleme, empfiehlt Lösungen und kann identifizierte Probleme automatisch beheben. Die automatische Optimierung in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] benachrichtigt Sie, wenn ein mögliches Leistungsproblem erkannt wird. Sie können mit Ihr Korrekturmaßnahme ergreifen. Zudem kann [!INCLUDE[ssde-md](../includes/ssde-md.md)] die Leistungsprobleme automatisch beheben. Weitere Informationen finden Sie unter [Automatic tuning (Automatische Optimierung)](../relational-databases/automatic-tuning/automatic-tuning.md).
-- PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Die Leistung von bwtree-Indexneuerstellung (kein Cluster) für MEMORY_OPTIMIZED-Tabellen während der Datenbankwiederherstellung wurde deutliche optimiert. Diese Verbesserung reduziert die Zeit der Datenbankwiederherstellung deutlich, wenn Nicht-Cluster-Indizes verwendet werden.  
+- PERFORMANCE ENHANCEMENT FOR NON CLUSTERED INDEX BUILD ON MEMORY-OPTIMIZED TABLES. Die Leistung der Neuerstellung des nicht gruppierten Index „bwtree“ für MEMORY_OPTIMIZED-Tabellen während der Datenbankwiederherstellung wurde erheblich verbessert. Durch diese Verbesserung wird die erforderliche Zeit der Datenbankwiederherstellung deutlich reduziert, wenn nicht gruppierte Indizes verwendet werden.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) hat drei neue Spalten: socket_count, cores_per_socket, numa_node_count. Dies ist nützlich, wenn Sie Ihren Server in einer VM ausführen, weil ein übermäßiger NUMA zu einer Überbelegung von Hosts und so letztlich zu Leistungsproblemen führen kann.
 - Die neue Spalte column modified_extent_page_count\, wird in [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) eingeführt, um differenzielle Änderungen in jeder Datenbankdatei der Datenbank nachzuverfolgen. Mit der neuen Spalte „modified_extent_page_count“ können Sie intelligente Sicherungslösungen erstellen, die differenzielle Sicherungen durchführen, wenn die Prozentzahl der geänderten Seiten einen Schwellenwert (z.B. 70-80 %) nicht erreichen. Andernfalls wird eine vollständige Datenbanksicherung durchgeführt.
 - SELECT INTO ... ON FileGroup: [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) unterstützt jetzt das Laden einer Tabelle in eine Dateigruppe, die nicht die Standarddateigruppe des Benutzers ist. Dies ist durch die in die SELECT INTO TSQL-Syntax hinzugefügte Unterstützung des Schlüsselworts **ON** möglich.
@@ -50,7 +50,7 @@ In diesem Thema werden die Verbesserungen an [!INCLUDE[ssdenoversion-md](../incl
 - Verfügbarkeitsgruppen funktionieren jetzt auch über Windows-Linux, um OS-übergreifende Migrationen und Tests zu ermöglichen.
 - Temporale Tabellen für den Support der Beibehaltungsrichtlinien wurden hinzugefügt.
 - Neue DMV SYS.DM_DB_STATS_HISTOGRAM
-- Onlinesupport für die Erstellung und Neuerstellung des nicht geclusterten Columnstore-Index wurde hinzugefügt.
+- Onlinesupport für die Erstellung und Neuerstellung des nicht gruppierten Columnstore-Index wurde hinzugefügt
 - [Sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) wird zum Untersuchen von Statistiken hinzugefügt.
 - Der Datenbankoptimierungsratgebers (DTA), der mit SQL Server Management Studio Version 16.4 freigegeben wurde, verfügt über zusätzliche Optionen, wenn SQL Server 2016 analysiert wird.    
    - Verbesserte Leistung. Weitere Informationen finden Sie unter [Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations (Leistungsverbesserungen mithilfe von Empfehlungen des Datenbankoptimierungsratgebers (DTA))](../relational-databases/performance/performance-improvements-using-dta-recommendations.md).

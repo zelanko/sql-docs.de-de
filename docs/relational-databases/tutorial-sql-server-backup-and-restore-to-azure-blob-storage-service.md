@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837c720e115a41f9b41dfb0e0e1117966988040f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138371"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893637"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Schnellstart: SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +34,22 @@ Um diesen Schnellstart abzuschließen, müssen Sie mit den Sicherungs- und Wiede
 ## <a name="create-azure-blob-container"></a>Erstellen des Azure-Blobcontainers
 Ein Container stellt eine Gruppierung eines Blob-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Die Anzahl der Container für ein Konto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine unbegrenzte Anzahl von BLOBs gespeichert werden. 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Führen Sie die folgenden Schritte aus, um einen Container zu erstellen:
 
 1. Öffnen Sie das Azure-Portal. 
 1. Navigieren Sie zu Ihrem Speicherkonto. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. Wählen Sie das Speicherkonto aus, und scrollen Sie zu **Blobdienste**.
-   1. Wählen Sie **Blobs** und dann +**Container**, um einen neuen Container hinzuzufügen. 
-   1. Geben Sie den Namen für den Container ein, und notieren Sie sich diesen. Diese Informationen werden in der URL (Pfad der Sicherungsdatei) der T-SQL-Anweisungen im späteren Verlauf dieses Schnellstarts verwendet. 
-   1. Wählen Sie **OK**. 
+1. Wählen Sie das Speicherkonto aus, und scrollen Sie zu **Blobdienste**.
+1. Wählen Sie **Blobs** und dann +**Container**, um einen neuen Container hinzuzufügen. 
+1. Geben Sie den Namen für den Container ein, und notieren Sie sich diesen. Diese Informationen werden in der URL (Pfad der Sicherungsdatei) der T-SQL-Anweisungen im späteren Verlauf dieses Schnellstarts verwendet. 
+1. Wählen Sie **OK**. 
     
     ![Neuer Container](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >Sowohl Sicherungs- als auch Wiederherstellungsvorgänge in SQL Server erfordern eine Authentifizierung beim Speicherkonto. Dies gilt auch, wenn Sie einen öffentlichen Container erstellen. Container können mithilfe der REST-APIs auch programmgesteuert erstellt werden. Weitere Informationen finden Sie unter [Erstellen von Containern](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
+  > [!NOTE]
+  > Sowohl Sicherungs- als auch Wiederherstellungsvorgänge in SQL Server erfordern eine Authentifizierung beim Speicherkonto. Dies gilt auch, wenn Sie einen öffentlichen Container erstellen. Container können mithilfe der REST-APIs auch programmgesteuert erstellt werden. Weitere Informationen finden Sie unter [Erstellen von Containern](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
 
 ## <a name="create-a-test-database"></a>Erstellen einer Testdatenbank 
 
@@ -93,14 +92,14 @@ GO
 ## <a name="create-a-sql-server-credential"></a>Erstellen von SQL Server-Anmeldeinformationen
 SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. Hier werden Anmeldeinformationen von SQL Server-Sicherungs- und Wiederherstellungsvorgängen verwendet, um sich beim Windows Azure Blob Storage-Dienst zu authentifizieren. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen über Anmeldeinformationen finden Sie unter [Anmeldeinformationen](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
-  >[!IMPORTANT]
-  >Die unten beschriebenen Anforderungen für das Erstellen von SQL Server-Anmeldeinformationen sind spezifisch für SQL Server Sicherungsprozesse ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md)und [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server verwendet beim Zugriff auf Azure-Speicher zum Schreiben oder Lesen von Sicherungen den Namen des Speicherkontos und Informationen zu den Zugriffsschlüsseln.
+  > [!IMPORTANT]
+  > Die unten beschriebenen Anforderungen für das Erstellen von SQL Server-Anmeldeinformationen sind spezifisch für SQL Server Sicherungsprozesse ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md)und [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server verwendet beim Zugriff auf Azure-Speicher zum Schreiben oder Lesen von Sicherungen den Namen des Speicherkontos und Informationen zu den Zugriffsschlüsseln.
 
 ### <a name="access-keys"></a>Zugriffsschlüssel
-Da das Azure-Portal noch geöffnet ist, speichern Sie die Zugriffsschlüssel für das Erstellen der Anmeldeinformationen. 
+Sie benötigen die Zugriffsschlüssel für das Speicherkonto, um die Anmeldeinformationen zu erstellen. 
 
 1. Navigieren Sie zu **Speicherkonto** im Azure-Portal. 
-1. Scrollen Sie zu **Einstellungen**, und wählen Sie **Zugriffsschlüssel**. 
+1. Klicken Sie in den **Einstellungen** auf **Zugriffsschlüssel**. 
 1. Speichern Sie sowohl den Schlüssel als auch die Verbindungszeichenfolge, um diese im weiteren Verlauf des Schnellstarts zu verwenden. 
 
    ![Zugriffsschlüssel](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

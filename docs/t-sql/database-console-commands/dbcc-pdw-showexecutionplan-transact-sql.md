@@ -12,14 +12,14 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039070"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809841"
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Zeigt den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ausführungsplan für eine Abfrage an, die auf einem bestimmten [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]- oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]-Computeknoten oder -Steuerknoten ausgeführt wird. Verwenden Sie diese Funktion zum Behandeln von Problemen mit der Abfrageleistung, während Abfragen auf Compute- oder Steuerknoten ausgeführt werden.
@@ -59,7 +59,7 @@ Erfordert die VIEW-SERVER-STATE-Berechtigung auf die Anwendung.
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWEXECUTIONPLAN-Syntax  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. Grundlegende DBCC-PDW_SHOWEXECUTIONPLAN-Syntax  
  Wenn Sie die obenstehende Abfrage auf einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]-Instanz ausführen, müssen Sie diese verändern, um auch distribution_id auszuwählen.  
   
 ```sql
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. Grundlegende DBCC-PDW_SHOWEXECUTIONPLAN-Syntax  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. Grundlegende DBCC-PDW_SHOWEXECUTIONPLAN-Syntax  
  Die Abfrage, die zu lange ausgeführt wird, führt entweder einen Vorgang für einen DMS-Abfrageplan oder für einen SQL-Abfrageplan aus.  
   
 Wenn die Abfrage einen Vorgang für einen DMS-Abfrageplan ausführt. können Sie die folgende Abfrage verwenden, um eine Liste der Knoten- und Sitzungs-IDs für noch nicht abgeschlossene Schritte abzufragen.

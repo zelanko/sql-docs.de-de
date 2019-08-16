@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071352"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809805"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -657,7 +657,7 @@ Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Ind
 > Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] werden Statistiken aber mehr nicht durch das Scannen aller Zeilen in der Tabelle erstellt, wenn ein partitionierter Index erstellt oder neu erstellt wird. Stattdessen verwendet der Abfrageoptimierer den Standardalgorithmus zur Stichprobenentnahme, um diese Statistiken zu generieren. Um Statistiken zu partitionierten Indizes durch das Scannen aller Zeilen in der Tabelle abzurufen, verwenden Sie CREATE STATISTICS oder UPDATE STATISTICS mit der FULLSCAN-Klausel.  
   
 In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konnte in einigen Fällen ein nicht gruppierter Index neu erstellt werden, um durch Hardwarefehler verursachte Inkonsistenzen zu korrigieren.    
-Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Sie u. U. weiterhin in der Lage, derartige Inkonsistenzen zwischen dem Index und dem gruppierten Index zu beheben, indem Sie einen nicht gruppierten Index offline erstellen. Sie können die Inkonsistenzen eines nicht gruppierten Indexes jedoch nicht beheben, indem Sie den Index online neu erstellen, da der Onlineneuerstellungsmechanismus den vorhandenen nicht gruppierten Index als Grundlage für die Neuerstellung verwendet und somit die Inkonsistenzen bestehen bleiben. Wird der Index offline neu erstellt, wird in manchen Fällen ein Scan des gruppierten Indexes (oder Heaps) erzwungen. um dadurch Inkonsistenzen zu entfernen. Um eine Neuerstellung des gruppierten Indexes zu gewährleisten, löschen Sie den nicht gruppierten Index und erstellen Sie ihn neu. Wie in früheren Versionen wird zum Entfernen von Inkonsistenzen empfohlenen, die betroffenen Daten aus einer Sicherung wiederherzustellen. Die Inkonsistenzen des Indexes können möglicherweise auch behoben werden, indem der nicht gruppierte Index offline neu erstellt wird. Weitere Informationen finden Sie unter [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Sie u. U. weiterhin in der Lage, derartige Inkonsistenzen zwischen dem Index und dem gruppierten Index zu beheben, indem Sie einen nicht gruppierten Index offline erstellen. Sie können die Inkonsistenzen eines nicht gruppierten Indexes jedoch nicht beheben, indem Sie den Index online neu erstellen, da der Onlineneuerstellungsmechanismus den vorhandenen nicht gruppierten Index als Grundlage für die Neuerstellung verwendet und somit die Inkonsistenzen bestehen bleiben. Wird der Index offline neu erstellt, wird in manchen Fällen ein Scan des gruppierten Indexes (oder Heaps) erzwungen. um dadurch Inkonsistenzen zu entfernen. Löschen Sie den nicht gruppierten Index, und erstellen Sie ihn neu, um eine Neuerstellung über den gruppierter Index zu gewährleisten. Wie in früheren Versionen wird zum Entfernen von Inkonsistenzen empfohlenen, die betroffenen Daten aus einer Sicherung wiederherzustellen. Die Inkonsistenzen des Indexes können möglicherweise auch behoben werden, indem der nicht gruppierte Index offline neu erstellt wird. Weitere Informationen finden Sie unter [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
   
 Die Neuerstellung eines gruppierten columnstore-Indexes verläuft in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
   
@@ -754,7 +754,7 @@ Die folgenden Funktionen sind für Indexneuerstellungsvorgänge deaktiviert:
 
  Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY bei Onlineindexvorgängen  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY bei Onlineindexvorgängen  
   
  Um die DDL-Anweisung für eine Onlineindexneuerstellung auszuführen, müssen alle aktiven blockierenden Transaktionen, die für eine bestimmte Tabelle ausgeführt werden, abgeschlossen sein. Wenn die Onlineindexneuerstellung ausgeführt wird, werden alle neuen Transaktionen, die zur Ausführung in dieser Tabelle bereit sind, blockiert. Obwohl die Sperre für die Onlineindexneuerstellung nur kurz dauert, kann das Warten auf den Abschluss aller noch offenen Transaktionen und das Blockieren aller neuen, zu startenden Transaktionen für eine bestimmte Tabelle den Durchsatz beeinträchtigen, eine Verlangsamung oder einen Ausfall der Arbeitsauslastung verursachen und den Zugriff auf die zugrunde liegende Tabelle deutlich einschränken. Mit der **WAIT_AT_LOW_PRIORITY**-Option können Datenbankadministratoren die S-Sperre sowie Sch-M-Sperren, die für die Onlineneuerstellung von Indizes erforderlich sind, verwalten und eine von drei Optionen auswählen. In allen drei Fällen gilt: Sind während der Wartezeit (MAX_DURATION = n [Minuten]) keine blockierenden Aktivitäten vorhanden, wird die Onlineindexneuerstellung ohne Wartezeit sofort ausgeführt, und die DDL-Anweisung wird abgeschlossen.  
   

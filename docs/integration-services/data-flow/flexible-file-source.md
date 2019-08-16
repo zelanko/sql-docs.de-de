@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 277c688b77e74d1dad35b19c279a648e56b8f396
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 694a6c2307983c7003be80be5dc318fc756af392
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316680"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892328"
 ---
 # <a name="flexible-file-source"></a>Flexible Dateiquelle
 
@@ -38,7 +38,7 @@ Die folgenden Eigenschaften stehen im **Editor für die flexible Dateiquelle** z
 - **Typ des Verbindungs-Managers:** Gibt den Typ des Quellverbindungs-Managers an. Wählen Sie einen vorhandenen Manager des angegebenen Typs aus, oder erstellen Sie einen neuen.
 - **Ordnerpfad:** Gibt den Pfad des Quellordners an.
 - **Dateiname:** Gibt den Namen der Quelldatei an.
-- **Dateiformat:** Gibt das Format der Quelldatei an. Unterstützte Formate sind **Text**, **Avro**, **ORC**, **Parquet**.
+- **Dateiformat:** Gibt das Format der Quelldatei an. Unterstützte Formate sind **Text**, **Avro**, **ORC**, **Parquet**. Java ist für ORC/Parquet erforderlich. Ausführliche Informationen finden Sie [hier](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java).
 - **Spaltentrennzeichen:** Gibt das als Trennzeichen für Spalten verwendete Zeichen an (Trennzeichen, die aus mehreren Zeichen bestehen, werden nicht unterstützt).
 - **Erste Zeile als Spaltenname:** Gibt an, ob die erste Zeile als Spaltenname behandelt werden soll.
 - **Datei dekomprimieren:** Gibt an, ob die Quelldatei dekomprimiert werden soll.
@@ -71,31 +71,4 @@ Wenn der Anforderungsvorgang von den RBAC-Zuweisungen des Sicherheitsprinzipals 
 Wenn der Sicherheitsprinzipal über keine RBAC-Zuweisung verfügt oder der Vorgang der Anforderung nicht mit der zugewiesenen Berechtigung übereinstimmt, werden alternativ ACL-Prüfungen durchgeführt, um zu bestimmen, ob der Sicherheitsprinzipal für die Durchführung des angeforderten Vorgangs autorisiert ist.
 Für die Leseberechtigung müssen Sie mindestens die Berechtigung **Execute** (Ausführen) ab dem Quelldateisystem sowie die Berechtigung **Read** (Lesen) für die zu lesenden Dateien gewähren.
 Gewähren Sie alternativ mindestens die Rolle **Storage-Blobdatenleser** mit der RBAC.
-Weitere Informationen finden Sie in [diesem](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) Artikel.
-
-**Voraussetzung für das ORC/Parquet-Dateiformat**
-
-Zur Verwendung des ORC/Parquet-Dateiformats ist Java erforderlich.
-Die Architektur (32/64 Bit) des Java-Builds muss mit der der zu verwendenden SSIS-Runtime übereinstimmen.
-Die folgenden Java-Builds wurden getestet.
-
-- [OpenJDK 8u192 für Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**Einrichten von OpenJDK für Zulu**
-
-1. Laden Sie das ZIP-Paket für die Installation herunter, und extrahieren Sie es.
-2. Führen Sie über die Eingabeaufforderung `sysdm.cpl` aus.
-3. Klicken Sie auf der Registerkarte **Erweitert** auf **Umgebungsvariablen**.
-4. Klicken Sie im Abschnitt **Systemvariablen** auf **Neu**.
-5. Geben Sie `JAVA_HOME` für den **Variablennamen** ein.
-6. Klicken Sie auf **Verzeichnis durchsuchen**, navigieren Sie zum extrahierten Ordner, und wählen Sie den Unterordner `jre` aus.
-   Wählen Sie anschließend **OK** aus. Daraufhin wird der **Variablenwert** automatisch aufgefüllt.
-7. Klicken Sie auf **OK**, um das Dialogfeld **New System Variable** (Neue Systemvariable) zu schließen.
-8. Klicken Sie auf **OK**, um das Dialogfeld **Umgebungsvariablen** zu schließen.
-9. Klicken Sie auf **OK**, um das Dialogfeld **Systemeigenschaften** zu schließen.
-
-**Einrichten von Oracle Java SE Runtime** Environment
-
-1. Laden Sie das EXE-Installationsprogramm herunter, und führen Sie es aus.
-2. Führen Sie die Installationsanweisungen aus, um das Setup abzuschließen.
+Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).

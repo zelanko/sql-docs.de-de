@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ab035890dad4e51b6bc3a8d3f1c463e64143ac1
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 83a13dc043687096a2d2909e4573ebbc3ac4a1ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670603"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892715"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Konfigurieren von Always Encrypted mit Secure Enclaves
 
@@ -373,7 +373,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -777,7 +777,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -793,8 +793,8 @@ CEK1 ist ein Enclave-fähiger Spaltenverschlüsselungsschlüssel.
 Hier ist ein Beispiel für eine Abfrage dieser Tabelle, die den Richtlinien für die Parametrisierung entspricht:
 
 ```sql
-DECLARE @SSNPattern CHAR(11) = '%1111%'
-DECLARE @MinSalary INT = 1000
+DECLARE @SSNPattern [char](11) = '%1111%'
+DECLARE @MinSalary [money] = 1000
 SELECT *
 FROM [dbo].[Employees]
 WHERE SSN LIKE @SSNPattern
@@ -857,7 +857,7 @@ Schritt-für-Schritt-Anweisungen zur Verwendung dieser Methode finden Sie im [Tu
 
 ### <a name="set-up-your-visual-studio-project"></a>Einrichten Ihres Visual Studio-Projekts
 
-Um Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung verwenden zu können, müssen Sie sicherstellen, dass Ihre Anwendung auf dem.NET Framework 4.7.2 basiert und mit dem Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders-NuGet-Paket integriert ist. Wenn Sie Ihren Spaltenhauptschlüssel im Azure Key Vault speichern, müssen Sie Ihre Anwendung außerdem mit dem Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -NuGet-Paket, Version 2.2.0 oder höher, integrieren. 
+Damit Sie Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung verwenden können, müssen Sie sicherstellen, dass Ihre Anwendung auf .NET Framework 4.7.2 basiert und mit dem [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders-NuGet-Paket](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) integriert ist. Wenn Sie Ihren Spaltenhauptschlüssel im Azure Key Vault speichern, müssen Sie Ihre Anwendung außerdem mit Version 2.2.0 oder höher des [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider -NuGet-Pakets](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider) integrieren. 
 
 1. Öffnen Sie Visual Studio.
 2. Erstellen Sie ein neues Visual C1\#-Projekt, oder öffnen Sie ein vorhandenes Projekt.
@@ -878,13 +878,22 @@ Um Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung verwend
 
 6. Wählen Sie Ihr Projekt aus, und klicken Sie auf „Installieren“.
 7. Öffnen Sie die Konfigurationsdatei aus Ihrem Projekt (z.B. App.config oder Web.config).
-8. Suchen Sie den Abschnitt \<configuration\>. Suchen Sie im Abschnitt \<configuration\> den Abschnitt \<configSections\> auf. Fügen Sie folgenden Abschnitt innerhalb von \<configSections\> hinzu:
+8. Suchen Sie den Abschnitt \<configuration\>, und fügen Sie die \<configSections\>-Abschnitte hinzu, oder passen Sie sie an.
+
+   A. Wenn der Abschnitt \<configSections\> **nicht** im Abschnitt \<configuration\> enthalten ist, fügen Sie den folgenden Inhalt unmittelbar unter \<configuration\> ein.
+   
+      ```xml
+      <configSections>
+         <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </configSections>
+      ```
+   B. Wenn der Abschnitt \<configSections\> bereits im Abschnitt \<configuration\> enthalten ist, fügen Sie die folgende Zeile in \<configSections\> ein:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. Fügen Sie innerhalb des Abschnitts „configuration", unterhalb von \<configSections\>, den folgenden Abschnitt hinzu, der einen Enclave-Provider spezifiziert, der für die Bestätigung und Interaktion mit Intel SGX-Enclaves verwendet werden soll:
+9. Fügen Sie den folgenden Abschnitt unter \<configSections\> im Abschnitt „configuration“ hinzu, um einen Enclave-Anbieter festzulegen, der für die Bestätigung und Interaktion mit VBS-Enclaves verwendet werden soll:
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>
@@ -894,6 +903,24 @@ Um Always Encrypted mit Secure Enclaves in einer.NET Framework-Anwendung verwend
    </SqlColumnEncryptionEnclaveProviders>
    ```
 
+Hier ist ein vollständiges Beispiel für eine app.config-Datei für eine einfache Konsolenanwendung.
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </configSections>
+  <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
+      <add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders>
+</configuration>
+```
 ### <a name="develop-and-test-your-app"></a>Entwickeln und Testen Ihrer Anwendung
 
 Um Always Encrypted und Enclave-Berechnungen verwenden zu können, muss sich Ihre Anwendung mit der Datenbank mit den folgenden beiden Schlüsselwörtern in der Verbindungszeichenfolge verbinden: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (wobei xxxx eine IP-Adresse, eine Domäne usw. sein kann).
@@ -919,7 +946,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -969,7 +996,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
    SqlParameter MinSalary = cmd.CreateParameter();
    
    MinSalary.ParameterName = @"@MinSalary";
-   MinSalary.DbType = DbType.Int32;
+   MinSalary.DbType = DbType.Currency;
    MinSalary.Direction = ParameterDirection.Input;
    MinSalary.Value = 900;
    

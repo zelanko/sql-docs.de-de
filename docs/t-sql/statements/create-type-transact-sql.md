@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc1a51be4f86112623ca433256782369cbca36d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c061360d6308e9fb6927e26f887d084ec6058134
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938947"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809823"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -320,7 +320,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. Erstellen eines benutzerdefinierten Tabellentyp mit Primärschlüssel und Index
-Das folgende Beispiel erstellt einen benutzerdefinierten Tabellentyp mit drei Spalten, von denen eine (`Name`) der Primärschlüssel und eine andere (`Price`) ein nicht gruppierter Index ist.  Weitere Informationen zum Erstellen und Verwenden von Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+Im folgenden Beispiel wird ein benutzerdefinierter Tabellentyp mit drei Spalten erstellt, von denen eine (`Name`) der Primärschlüssel und eine andere (`Price`) ein nicht gruppierter Index ist.  Weitere Informationen zum Erstellen und Verwenden von Tabellenwertparametern finden Sie unter [Use Table-Valued Parameters &#40;Database Engine&#41; (Verwenden von Tabellenwertparametern &#40;Datenbank-Engine&#41;)](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
 
 ```sql
 CREATE TYPE InventoryItem AS TABLE

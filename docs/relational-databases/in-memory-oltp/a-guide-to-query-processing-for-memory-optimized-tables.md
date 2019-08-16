@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7d326e03c684a17d976d13c27a37aa97ae16792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091410"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811148"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Abfrageplan für einen Join datenträgerbasierter Tabellen.
   
 -   Die Zeilen der Customer-Tabelle werden aus dem gruppierten Index abgerufen, der die primäre Datenstruktur darstellt und die vollständigen Tabellendaten enthält.  
   
--   Daten aus der Reihenfolge-Tabelle werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
+-   Daten aus der Tabelle „Order“ werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
   
 -   Der logische Operator **Inner Join** wird vom physischen Operator **Merge Join**implementiert. Die anderen physischen Jointypen sind **Nested Loops** und **Hash Join**. Der **Merge Join** -Operator nutzt die Tatsache, dass beide Indizes nach der Joinspalte CustomerID sortiert werden.  
   

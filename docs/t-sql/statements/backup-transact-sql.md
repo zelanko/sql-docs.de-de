@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141218"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809731"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>Argumente
@@ -305,8 +305,10 @@ ENCRYPTION Wird verwendet, um die Verschlüsselung für eine Sicherung anzugeben
 
 Wenn Sie sich für die Verschlüsselung entscheiden, müssen Sie auch die Verschlüsselung mithilfe der Verschlüsselungsoptionen angeben:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+Bei `SERVER CERTIFICATE` und `SERVER ASYMMETRIC KEY` handelt es sich um ein Zertifikat und einen asymmetrischen Schlüssel, die in der `master`-Datenbank erstellt wurden. Weitere Informationen finden Sie jeweils unter [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) und [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md).
 
 > [!WARNING]
 > Bei Verwendung der Verschlüsselung in Verbindung mit dem `FILE_SNAPSHOT`-Argument wird die Metadatendatei selbst mithilfe des angegebenen Verschlüsselungsalgorithmus verschlüsselt, und das System überprüft, ob [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) für die Datenbank durchgeführt wurde. Für die Daten selbst erfolgt keine zusätzliche Verschlüsselung. Die Sicherung schlägt fehl, wenn die Datenbank nicht verschlüsselt oder die Verschlüsselung nicht abgeschlossen wurde, bevor die Backup-Anweisung ausgegeben wurde.
@@ -1008,8 +1010,8 @@ ENCRYPTION Wird verwendet, um die Verschlüsselung für eine Sicherung anzugeben
 
 Wenn Sie sich für die Verschlüsselung entscheiden, müssen Sie auch die Verschlüsselung mithilfe der Verschlüsselungsoptionen angeben:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Sicherungssatzoptionen**
 

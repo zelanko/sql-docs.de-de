@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661225"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841570"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ Secure Enclaves erweitern die Funktionalität von Always Encrypted. Die folgende
     > [!NOTE]
     > Die obigen Vorgänge werden für Zeichenfolgenspalten unterstützt, die Sortierungen mit einer binary2-Sortierreihenfolge (BIN2-Sortierungen) verwenden. Zeichenfolgenspalten mit Nicht-BIN2-Sortierung können mit zufälliger Verschlüsselung und Enclave-fähigen Spaltenverschlüsselungsschlüsseln verschlüsselt werden. Die einzige neue Funktionalität, die für solche Spalten aktiviert ist, ist jedoch die dirkte Verschlüsselung.
 - Erstellen von nicht gruppierten Indizes für Spalten mit zufälliger Verschlüsselung.
-- Berechnete Spalten unter Verwendung von Ausdrücken, die das LIKE-Prädikat enthalten, und Vergleichsoperatoren auf Spalten mit zufälliger Verschlüsselung.
 
 Alle anderen Einschränkungen (die durch die oben genannten Verbesserungen nicht berücksichtigt werden), die für Always Encrypted (ohne Secure Enclaves) unter [Details zur Funktion](always-encrypted-database-engine.md#feature-details) aufgeführt sind, gelten auch für Always Encrypted mit Secure Enclaves.
 
@@ -182,6 +181,7 @@ Die folgenden Einschränkungen sind für Always Encrypted mit Secure Enclaves zu
     - char[n], varchar[n], binary[n], varbinary[n], wenn „n“ größer als 7935 ist.
 - Direkte Verschlüsselungsvorgänge können nicht mit anderen Änderungen an Spaltenmetadaten kombiniert werden. Ausgenommen hiervon sind Änderungen einer Sortierung innerhalb derselben Codeseite und der NULL-Zulässigkeit. Beispiel: Sie können nicht in einer einzigen ALTER TABLE- oder ALTER COLUMN-Transact-SQL-Anweisung eine Spalte verschlüsseln, erneut verschlüsseln oder entschlüsseln UND den Datentyp der Spalte ändern. Sie müssen zwei separate Anweisungen verwenden.
 - Die Verwendung von Enclave-fähigen Schlüsseln für Spalten in In-Memory-Tabellen wird nicht unterstützt.
+- Ausdrücke, die berechnete Spalten definieren, können keine Berechnungen für enclave-fähige Spalten mit zufallsbasierter Verschlüsselung durchführen (auch wenn es sich bei den Berechnungen um LIKE- und Bereichsvergleiche handelt).
 - Die einzigen unterstützten Schlüsselspeicher für Enclave-fähige Spaltenhauptschlüssel sind Windows Certificate Store und Azure Key Vault.
 
 Die folgenden Einschränkungen gelten für [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], eine Lösung ist jedoch geplant:

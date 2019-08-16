@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdcac17ddc09223d63e7dd923fd561e0a334fc2
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68700053"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941167"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Navigationsleitfaden zur SQL Server-Dokumentation 
 
@@ -65,7 +65,7 @@ Sie können den Versionsfilter verwenden, um sicherzustellen, dass der Inhalt f�
 
 ![Versionsfilter der SQL-Dokumentation](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Wenn Sie **SQL Server** > **Nichts ausblenden** auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts hinter dem Versionsfilter verborgen ist. 
+Wenn Sie **All SQL** > **Hide nothing** (Alle SQL-Produkte > Nichts ausblenden) auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts hinter dem Versionsfilter verborgen ist. 
 
 ## <a name="breadcrumbs"></a>Brotkrümelnavigation
 
@@ -85,7 +85,7 @@ Im rechten Navigationsbereich können Sie schnell zu Abschnitten in einem Artike
 
 Wenn Sie einen Fehler in einem Artikel feststellen, können Sie Feedback an das SQL Content-Team für diesen Artikel übermitteln, indem Sie zum unteren Rand der Seite scrollen und dann **Inhaltsfeedback** auswählen.
 
-![Inhaltsfeedback als „Git Issue“](media/sql-server-get-help/git-issues.png)
+![Inhaltsfeedback per „Git-Problem“](media/sql-server-get-help/git-issues.png)
 
 Sie können auch allgemeines Feedback zur Dokumentation und Vorschläge unter [https://aka.ms/sqldocsfeedback](https://aka.ms/sqldocsfeedback)einreichen. 
 

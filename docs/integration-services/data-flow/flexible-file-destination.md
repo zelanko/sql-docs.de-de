@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a8200ed17e9581f0c39693ee7386f7f33c566265
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 4572651bb90098c9afb3a01c574401356dac6706
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316628"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892299"
 ---
 # <a name="flexible-file-destination"></a>Flexibles Dateiziel
 
@@ -39,7 +39,7 @@ Die folgenden Eigenschaften stehen im **Editor für das flexible Datenziel** zur
 - **Typ des Verbindungs-Managers:** Gibt den Typ des Quellverbindungs-Managers an. Wählen Sie einen vorhandenen Manager des angegebenen Typs aus, oder erstellen Sie einen neuen.
 - **Ordnerpfad:** Gibt den Pfad des Zielordners an.
 - **Dateiname:** Gibt den Namen der Zieldatei an.
-- **Dateiformat:** Gibt das Zieldateiformat an. Unterstützte Formate sind **Text**, **Avro**, **ORC**, **Parquet**.
+- **Dateiformat:** Gibt das Zieldateiformat an. Unterstützte Formate sind **Text**, **Avro**, **ORC**, **Parquet**. Java ist für ORC/Parquet erforderlich. Ausführliche Informationen finden Sie [hier](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java).
 - **Spaltentrennzeichen:** Gibt das als Trennzeichen für Spalten zu verwendende Zeichen an (Trennzeichen, die aus mehreren Zeichen bestehen, werden nicht unterstützt).
 - **Erste Zeile als Spaltenname:** Gibt an, ob Spaltennamen in die erste Zeile geschrieben werden sollen.
 - **Datei komprimieren:** Gibt an, ob die Datei komprimiert werden soll.
@@ -60,7 +60,7 @@ Nachdem Sie die Verbindungsinformationen angegeben haben, wechseln Sie zur Seite
 
 **Hinweise zur Konfiguration der Dienstprinzipalberechtigung**
 
-Damit die **Testverbindung** funktioniert (Blob Storage oder Data Lake Storage Gen2), müssen Sie dem Dienstprinzipal mindestens die Rolle **Storage Blob Data Reader** (Storage-Blobdatenleser) zuweisen.
+Damit die **Testverbindung** funktioniert (Blob Storage oder Data Lake Storage Gen2), müssen Sie dem Dienstprinzipal mindestens die Rolle **Storage-Blobdatenleser** zuweisen.
 Dies erfolgt mit der [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Für Blob Storage wird die Schreibberechtigung gewährt, indem mindestens die Rolle **Mitwirkender an Storage-Blobdaten** zugewiesen wird.
@@ -73,31 +73,4 @@ Wenn der Anforderungsvorgang von den RBAC-Zuweisungen des Sicherheitsprinzipals 
 Wenn der Sicherheitsprinzipal über keine RBAC-Zuweisung verfügt oder der Vorgang der Anforderung nicht mit der zugewiesenen Berechtigung übereinstimmt, werden alternativ ACL-Prüfungen durchgeführt, um zu bestimmen, ob der Sicherheitsprinzipal für die Durchführung des angeforderten Vorgangs autorisiert ist.
 Für die Schreibberechtigung müssen Sie mindestens die Berechtigung **Execute** (Ausführen) ab dem Senkedateisystem sowie die Berechtigung **Write** (Schreiben) für den Senkeordner gewähren.
 Gewähren Sie alternativ mindestens die Rolle **Storage Blob Data Contributor** (Mitwirkender an Storage-Blobdaten) mit der RBAC.
-Weitere Informationen finden Sie in [diesem Artikel](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control).
-
-**Voraussetzung für das ORC/Parquet-Dateiformat**
-
-Zur Verwendung des ORC/Parquet-Dateiformats ist Java erforderlich.
-Die Architektur (32/64 Bit) des Java-Builds muss mit der der zu verwendenden SSIS-Runtime übereinstimmen.
-Die folgenden Java-Builds wurden getestet.
-
-- [OpenJDK 8u192 für Zulu](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**Einrichten von OpenJDK für Zulu**
-
-1. Laden Sie das ZIP-Paket für die Installation herunter, und extrahieren Sie es.
-2. Führen Sie über die Eingabeaufforderung `sysdm.cpl` aus.
-3. Klicken Sie auf der Registerkarte **Erweitert** auf **Umgebungsvariablen**.
-4. Klicken Sie im Abschnitt **Systemvariablen** auf **Neu**.
-5. Geben Sie `JAVA_HOME` für den **Variablennamen** ein.
-6. Klicken Sie auf **Verzeichnis durchsuchen**, navigieren Sie zum extrahierten Ordner, und wählen Sie den Unterordner `jre` aus.
-   Wählen Sie anschließend **OK** aus. Daraufhin wird der **Variablenwert** automatisch aufgefüllt.
-7. Klicken Sie auf **OK**, um das Dialogfeld **New System Variable** (Neue Systemvariable) zu schließen.
-8. Klicken Sie auf **OK**, um das Dialogfeld **Umgebungsvariablen** zu schließen.
-9. Klicken Sie auf **OK**, um das Dialogfeld **Systemeigenschaften** zu schließen.
-
-**Einrichten von Oracle Java SE Runtime** Environment
-
-1. Laden Sie das EXE-Installationsprogramm herunter, und führen Sie es aus.
-2. Führen Sie die Installationsanweisungen aus, um das Setup abzuschließen.
+Weitere Informationen finden Sie in [diesem](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) Artikel.

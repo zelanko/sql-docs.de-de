@@ -14,12 +14,12 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b903668a68752edaad612b4ada31329e7dd80a77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3b0fdb182b3623f4461544d94347544d7d19bf6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081747"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811133"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Beschreibung von gruppierten und nicht gruppierten Indizes
 
@@ -49,7 +49,7 @@ Zusätzliche Indextypen für besondere Zwecke finden Sie unter [Indexes](../../r
 
 ## <a name="indexes-and-constraints"></a>Indizes und Einschränkungen
 
-Indizes werden automatisch erstellt, wenn PRIMARY KEY- und UNIQUE-Einschränkungen für Tabellenspalten definiert werden. Wenn Sie beispielsweise eine Tabelle mit einer UNIQUE-Einschränkung erstellen, erstellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch einen nicht gruppierten Index. Wenn Sie einen PRIMARY KEY konfigurieren, erstellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch einen gruppierten Index, falls noch kein gruppierter Index vorhanden ist. Wenn Sie versuchen, eine PRIMARY KEY-Einschränkung für eine vorhandene Tabelle zu erzwingen, und für die Tabelle bereits ein gruppierter Index vorhanden ist, erzwingt SQL Server den primären Schlüssel mit einem nicht gruppierten Index.
+Indizes werden automatisch erstellt, wenn PRIMARY KEY- und UNIQUE-Einschränkungen für Tabellenspalten definiert werden. Wenn Sie beispielsweise eine Tabelle mit einer UNIQUE-Einschränkung erstellen, erstellt [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch einen nicht gruppierten Index. Wenn Sie einen PRIMARY KEY konfigurieren, erstellt die [!INCLUDE[ssDE](../../includes/ssde-md.md)] automatisch einen gruppierten Index, falls noch kein gruppierter Index vorhanden ist. Wenn Sie versuchen, eine PRIMARY KEY-Einschränkung für eine vorhandene Tabelle zu erzwingen, und für die Tabelle bereits ein gruppierter Index vorhanden ist, erzwingt SQL Server den primären Schlüssel mit einem nicht gruppierten Index.
 
 Weitere Informationen finden Sie unter [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md) und [Create Unique Constraints](../../relational-databases/tables/create-unique-constraints.md).
 

@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b56627ea415a67016b4009c44556019e6fc20d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061040"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809752"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ ON <on_option> ] 
 [ ; ]  
   
---Create a non-clustered columnstore index on a disk-based table.  
+--Create a nonclustered columnstore index on a disk-based table.  
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ ,...n ] )  
@@ -139,7 +139,7 @@ Gibt den ein-, zwei- oder dreiteiligen Namen der Tabelle an, die als gruppierter
   
 #### <a name="with-options"></a>WITH-Optionen
 
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON
 
    `DROP_EXISTING = ON` gibt an, dass der vorhandene Index gelöscht und ein neuer Columnstore-Index erstellt werden soll.  
 ```sql
@@ -148,7 +148,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    Bei Verwendung der Standardeinstellung DROP_EXISTING = OFF wird erwartet, dass der Indexname mit dem vorhandenen Namen übereinstimmt. Wenn der angegebene Indexname bereits vorhanden ist, tritt ein Fehler auf.  
   
-##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    Überschreibt die Serverkonfiguration für den maximalen Grad an Parallelität für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
    *max_degree_of_parallelism* kann folgende Werte haben:  
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) und [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minuten ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minuten ]  
    Bei einer datenträgerbasierten Tabelle gibt *delay* die minimale Anzahl von Minuten an, die eine Delta-Zeilengruppe im Zustand CLOSED in der Delta-Zeilengruppe verbringen muss, bevor SQL Server sie in die komprimierte Zeilengruppe komprimieren kann. Da Einfügungs- und Aktualisierungszeiten in datenträgerbasierten Tabellen nicht für einzelne Zeilen nachverfolgt werden, wird in SQL Server die Verzögerung auf Delta-Zeilengruppen im Zustand CLOSED angewendet.  
    Die Standardeinstellung beträgt 0 Minuten.  
    
@@ -174,7 +174,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Empfehlungen zur Verwendung von COMPRESSION_DELAY finden Sie unter [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Folgende Optionen stehen zur Verfügung:   
 - `COLUMNSTORE` ist die Standardeinstellung und gibt an, dass die Komprimierung mit der leistungsstärksten Columnstore-Komprimierung ausgeführt werden soll. Dies ist die gängige Methode.  
 - Durch `COLUMNSTORE_ARCHIVE` wird die Tabelle oder Partition weiter in eine geringere Größe komprimiert. Verwenden Sie diese Option für Situationen wie etwa die Archivierung, bei denen es auf eine geringere Datenspeichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt.  
@@ -224,12 +224,12 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    Gibt den ein-, zwei- oder dreiteiligen Name der Tabelle an, die den Index enthält.  
 
 #### <a name="with-options"></a>WITH-Optionen
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON Der vorhandene Index wird gelöscht und neu erstellt. Der angegebene Indexname muss mit dem Namen eines derzeit vorhandenen Index übereinstimmen. Die Indexdefinition kann jedoch geändert werden. Sie können z. B. andere Spalten oder Indexoptionen angeben.
   
    DROP_EXISTING = OFF Es wird ein Fehler angezeigt, wenn der angegebene Indexname bereits vorhanden ist. Der Indextyp kann nicht mithilfe von DROP_EXISTING geändert werden. In abwärtskompatibler Syntax ist WITH DROP_EXISTING gleichwertig mit WITH DROP_EXISTING = ON.  
 
-###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    Überschreibt die Konfigurationsoption [Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für die Dauer des Indexvorgangs. Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.  
   
    *max_degree_of_parallelism* kann folgende Werte haben:  
@@ -250,10 +250,10 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minuten]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minuten]  
    Gibt eine Untergrenze für die Zeitdauer an, für die eine Zeile in der Deltazeilengruppe bleibt, bevor sie in die komprimierte Zeilengruppe migriert werden kann. Ein Kunde kann beispielsweise angeben, dass eine Zeile für die Komprimierung in das Spaltenspeicherformat freigegeben werden soll, wenn an ihr 120 Minuten lang keine Änderungen vorgenommen wurden. Bei Columnstore-Indizes in datenträgerbasierten Tabellen wird die Zeit nicht nachverfolgt, wenn eine Zeile eingefügt oder aktualisiert wird. Vielmehr wird die Zeit, in der die Deltazeilengruppe geschlossen war, als Proxy für die Zeile verwendet. Die Standardeinstellung beträgt 0 Minuten. Eine Zeile wird in einen Speicher im Spaltenformat migriert, nachdem sich 1 Million Zeilen in der Deltazeilengruppe angesammelt haben und die Zeile als geschlossen gekennzeichnet wurde.  
   
-###### <a name="datacompression"></a>DATA_COMPRESSION  
+###### <a name="data_compression"></a>DATA_COMPRESSION  
    Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Gilt nur für columnstore-Indizes, einschließlich nicht gruppierter und gruppierter columnstore-Indizes. Folgende Optionen stehen zur Verfügung:
    
 - `COLUMNSTORE`: Dies ist die Standardeinstellung und gibt an, dass die Komprimierung mit der leistungsstärksten Columnstore-Komprimierung ausgeführt werden soll. Dies ist die gängige Methode.  
@@ -261,7 +261,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
+##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    Gibt nach dem Aufruf eines Filterprädikats an, welche Zeilen in den Index aufgenommen werden sollen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt gefilterte Statistikdaten für die Datenzeilen im gefilterten Index.  
   
@@ -487,7 +487,7 @@ GO
 1.  Erstellen Sie zunächst eine kleine Tabelle, die für das Beispiel verwendet werden kann.  
   
     ```sql  
-    --Create a rowstore table with a clustered index and a non-clustered index.  
+    --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
         OrderDateKey [int] NOT NULL,  
@@ -498,14 +498,14 @@ GO
         CLUSTERED INDEX ( ProductKey )  
     );  
   
-    --Add a non-clustered index.  
+    --Add a nonclustered index.  
     CREATE INDEX my_index ON MyFactTable ( ProductKey, OrderDateKey );  
     ```  
   
 2.  Löschen Sie alle nicht gruppierten Indizes aus der Rowstore-Tabelle.  
   
     ```sql  
-    --Drop all non-clustered indexes  
+    --Drop all nonclustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
   

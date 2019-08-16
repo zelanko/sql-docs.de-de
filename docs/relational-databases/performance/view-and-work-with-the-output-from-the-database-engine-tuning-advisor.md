@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1ce0df5d3ebf4b4adde9e35be63c3c105df1d152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986633"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811358"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -285,7 +285,7 @@ ms.locfileid: "67986633"
  Der Index oder die Sicht, auf den/die sich die Empfehlung bezieht. Das Symbol in dieser Spalte steht für die Empfehlung, den Wert unter **Empfehlungsziel**zu löschen oder hinzuzufügen.  
   
  **Details**  
- Eine Beschreibung der Werts unter **Empfehlungsziel**. Mögliche Werte sind: gruppierte, indizierte Sicht oder leer bei einer nicht gruppierten Sicht. Gibt auch an, ob der Index eindeutig ist.  
+ Eine Beschreibung der Werts unter **Empfehlungsziel**. Mögliche Werte sind: „clustered“, „indexed view“ oder leer, was einen nicht gruppierten Index impliziert. Gibt auch an, ob der Index eindeutig ist.  
   
  **Partitionsschema**  
  Das Partitionsschema wird in dieser Spalte bei empfohlener Partitionierung bereitgestellt.  

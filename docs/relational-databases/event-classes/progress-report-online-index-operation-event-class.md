@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940643"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811143"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Statusbericht: Online Index Operation-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67940643"
 |EndTime|**datetime**|Der Zeitpunkt, an dem der Onlineindexvorgang abgeschlossen war.|15|Ja|  
 |EventClass|**int**|Ereignistyp = 190.|27|Nein|  
 |EventSequence|**int**|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
-|EventSubClass|**int**|Der Typ der Ereignisunterklasse.<br /><br /> 1 = Start<br /><br /> 2 = Beginn der Ausführung von Phase 1<br /><br /> 3 = Ende der Ausführung von Phase 1<br /><br /> 4 = Beginn der Ausführung von Phase 2<br /><br /> 5 = Ende der Ausführung von Phase 2<br /><br /> 6 = Zählung der eingefügten Zeilen<br /><br /> 7 = Fertig<br /><br /> Phase 1 verweist auf das Basisobjekt (gruppierter Index oder Heap) oder darauf, ob der Indexvorgang nur einen nicht gruppierten Index einschließt. Phase 2 wird verwendet, wenn ein Indexerstellungsvorgang sowohl die ursprüngliche erneute Erstellung als auch zusätzliche nicht gruppierte Indizes einschließt.  Wenn ein Objekt z. B. über einen gruppierten Index und mehrere nicht gruppierte Indizes verfügt, würden bei Verwendung des Befehls "Alle neu erstellen" alle Indizes neu erstellt werden. Das Basisobjekt (der gruppierte Index) wird in Phase 1 neu erstellt, und anschließend werden alle nicht gruppierten Indizes in Phase 2 neu erstellt.|21|Ja|  
+|EventSubClass|**int**|Der Typ der Ereignisunterklasse.<br /><br /> 1 = Start<br /><br /> 2 = Beginn der Ausführung von Phase 1<br /><br /> 3 = Ende der Ausführung von Phase 1<br /><br /> 4 = Beginn der Ausführung von Phase 2<br /><br /> 5 = Ende der Ausführung von Phase 2<br /><br /> 6 = Zählung der eingefügten Zeilen<br /><br /> 7 = Fertig<br /><br /> Phase 1 verweist auf das Basisobjekt (gruppierter Index oder Heap) oder darauf, ob der Indexvorgang nur einen nicht gruppierten Index einschließt. Phase 2 wird verwendet, wenn ein Indexerstellungsvorgang sowohl die ursprüngliche erneute Erstellung als auch zusätzliche nicht gruppierte Indizes einschließt.  Wenn ein Objekt z. B. über einen gruppierten Index und mehrere nicht gruppierte Indizes verfügt, würden bei Verwendung des Befehls „Alle neu erstellen“ alle Indizes neu erstellt werden. Das Basisobjekt (der gruppierte Index) wird in Phase 1 neu erstellt, und anschließend werden alle nicht gruppierten Indizes in Phase 2 neu erstellt.|21|Ja|  
 |GroupID|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |HostName|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
 |IndexID|**int**|ID für den Index des Objekts, das von dem Ereignis betroffen ist.|24|Ja|  

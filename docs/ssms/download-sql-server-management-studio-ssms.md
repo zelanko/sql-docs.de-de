@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495431"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823123"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Herunterladen von SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS ist kostenlos!
 
 **[![Download](../ssdt/media/download.png) SQL Server Management Studio 18.2 herunterladen](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2 ist die aktuelle Version von SSMS mit allgemeiner Verfügbarkeit (GA, General Availability). Wenn Sie SSMS 18.2 (GA) installiert haben, wird durch die Installation von SSMS 18.2 ein Upgrade auf Version 18.2 durchgeführt. Wenn eine ältere *Vorschauversion* von SSMS 18.x installiert ist, müssen Sie diese vor der Installation von SSMS 18.2 deinstallieren.
+SSMS 18.2 ist die aktuelle Version von SSMS mit allgemeiner Verfügbarkeit (GA, General Availability). Wenn Sie eine frühere allgemein verfügbare Version von SSMS 18 installiert haben, wird diese durch die Installation von SSMS 18.2 aktualisiert. Wenn eine ältere *Vorschauversion* von SSMS 18.x installiert ist, müssen Sie diese vor der Installation von SSMS 18.2 deinstallieren.
 
 **Versionsinformationen**
 
@@ -81,8 +81,7 @@ SQL Server Management Studio 18.2:
 | Abfrageausführung oder Ergebnisse | In den Meldungen wurde eine „Abschlusszeit“ hinzugefügt, um nachzuverfolgen, wann die Ausführung einer bestimmten Abfrage abgeschlossen wurde. |
 | Abfrageausführung oder Ergebnisse  | Ermöglicht, mehr Daten anzuzeigen (Ergebnis in Text) und in Zellen zu speichern (Ergebnis in Raster). SSMS erlaubt nun bis zu 2 Mio. Zeichen für beides (Steigerung von 256 bzw. 64 Tausend). Damit ist auch das Problem gelöst, dass Benutzer nicht in der Lage waren, mehr als 43.680 Zeichen aus den Zellen des Rasters abzurufen. |
 | Showplan | In QueryPlan wurde ein neues Attribut hinzugefügt für den Fall, dass das Inlining benutzerdefinierter Skalarfunktionen aktiviert ist (ContainsInlineScalarTsqlUdfs). |
-| SMO | Unterstützung für „Funktionseinschränkungen“ wurde hinzugefügt. Weitere Informationen zur Funktion selbst finden Sie unter [Funktionsbezogene Einschränkungen](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
-| SMO  | Bewertungserweiterungen. Siehe <we need a link to something> |
+| SMO | Unterstützung für „Funktionseinschränkungen“ wurde hinzugefügt. Informationen zum Feature selbst finden Sie unter [Funktionsbezogene Einschränkungen](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). Informationen zu Bewertungserweiterungen finden Sie in der [Einführung der SQL-Bewertungs-API](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Integration Services (SSIS) | Leistungsoptimierung für SSIS-Paketplaner in Azure |
 |  |  |
 

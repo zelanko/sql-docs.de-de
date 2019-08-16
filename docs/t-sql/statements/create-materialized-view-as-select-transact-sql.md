@@ -34,15 +34,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b58102644c596fde248861bb504bf06b932d6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912621"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893775"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (Vorschau)
 
@@ -120,11 +120,10 @@ ALTER TABLE SWITCH wird nicht für Tabellen unterstützt, die in materialisierte
 
 |Szenario|Der materialisierten Sicht neu hinzuzufügende Spalten|Anmerkung|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | Fehlt in der SELECT-List der Definition einer materialisierten Sicht. |COUNT_BIG (*) |Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
+|COUNT_BIG() fehlt in der SELECT-Liste der Definition einer materialisierten Sicht| COUNT_BIG (*) |Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
 |SUM(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, und „a“ ist ein Ausdruck, der NULL-Werte zulässt. |COUNT_BIG (a) |Benutzer müssen der Definition der materialisierten Sicht den Ausdruck „a“ manuell hinzufügen.|
 |AVG(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, „a“ ist hierbei ein Ausdruck, der NULL-Werte zulässt.|SUM(a), COUNT_BIG(a)|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich.|
-|STDEV(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, „a“ ist hierbei ein Ausdruck.|SUM(a),  
-COUNT_BIG(a) SUM(square(a))|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich. |
+|STDEV(a) wird von Benutzern in der SELECT-Liste der Definition einer materialisierten Sicht angegeben, „a“ ist hierbei ein Ausdruck.|SUM(a), COUNT_BIG(a), SUM(square(a))|Wird beim Erstellen der materialisierten Sicht automatisch hinzugefügt.  Es ist keine Benutzeraktion erforderlich. |
 | | | |
 
 Nach ihrer Erstellung werden materialisierte Sichten in SQL Server Management Studio unterhalb des Ordners mit Sichten der Azure SQL Data Warehouse-Instanz angezeigt.
