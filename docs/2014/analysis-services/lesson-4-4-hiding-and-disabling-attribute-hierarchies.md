@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888354"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530855"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ausblenden und Deaktivieren von Attributhierarchien
   Standardmäßig wird eine Attributhierarchie für jedes Attribut in einer Dimension erstellt, und jede Hierarchie ist für die Dimensionierung von Faktendaten verfügbar. Diese Hierarchie setzt sich aus einer Gesamtergebnisebene und einer Detailebene mit allen Elementen der Hierarchie zusammen. Ihnen ist bereits bekannt, dass Sie Attribute in benutzerdefinierten Hierarchien organisieren können, um Navigationspfade in einem Cube bereitzustellen. Unter bestimmten Umständen möchten Sie möglicherweise einige Attribute und deren Hierarchien deaktivieren oder ausblenden. Bestimmte Attribute wie Sozialversicherungs- oder Personalausweisnummer, Lohnsatz, Geburtsdatum und Anmeldeinformationen sind beispielsweise keine Attribute, mit denen Benutzer Cubeinformationen dimensionieren. Stattdessen werden diese Informationen nur als Details eines bestimmten Attributelements angezeigt. Diese Attributhierarchien können von Ihnen ausgeblendet werden, sodass die Attribute nur als Elementeigenschaften eines bestimmten Attributs angezeigt werden. Sie möchten Elemente anderer Attribute, beispielsweise Kundennamen oder Postleitzahlen, möglicherweise nur anzeigen lassen, wenn sie durch eine Benutzerhierarchie und nicht unabhängig durch eine Attributhierarchie angezeigt werden. Ein Grund dafür kann in der schieren Anzahl verschiedener Elemente in der Attributhierarchie liegen. Zur Steigerung der Verarbeitungsleistung sollten Sie schließlich Attributhierarchien deaktivieren, die nicht von Benutzern zum Durchsuchen verwendet werden.  
@@ -126,6 +126,6 @@ ms.locfileid: "68888354"
      Beachten Sie, dass die ausgeblendeten Ebenen **Postal Code** und **Full Name**in der benutzerdefinierten Hierarchie sichtbar sind.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Sortieren von Attributelementen basierend auf einem sekundären Attribut](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
+ [Sortieren von Attributelementen basierend auf einem sekundären Attribut](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

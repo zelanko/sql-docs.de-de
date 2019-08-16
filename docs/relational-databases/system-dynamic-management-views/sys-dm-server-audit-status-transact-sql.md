@@ -1,5 +1,5 @@
 ---
-title: dm_server_audit_status (Transact-SQL) | Microsoft-Dokumentation
+title: sys. DM _server_audit_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053221"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530862"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
+# <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine Zeile für jede serverüberwachung, die den aktuellen Status der Überwachung angibt. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Gibt eine Zeile für jede Serverüberwachung zurück, die den aktuellen Status der Überwachung angibt. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|Die ID der Überwachung. Ordnet die **Audit_id** -Feld in der **sys.audits** -Katalogsicht angezeigt.|  
-|**name**|**sysname**|Der Name der Überwachung. Identisch mit der **Namen** -Feld in der **Sys. server_audits** -Katalogsicht angezeigt.|  
-|**status**|**smallint**|Numerischer Status der Serverüberwachung:<br /><br /> 0 = nicht gestartet<br /><br /> 1 =<br />        Gestartet<br /><br /> 2 =<br />      Runtime-Fehler<br /><br /> 3 = Target Fehler erstellen<br /><br /> 4 = Herunterfahren|  
+|**audit_id**|**int**|Die ID der Überwachung. Wird dem **audit_id** -Feld in der **sys.** Überwachungen-Katalog Sicht zugeordnet.|  
+|**name**|**sysname**|Der Name der Überwachung. Identisch mit dem **namens** Feld in der **sys. server_audits** -Katalog Sicht.|  
+|**status**|**smallint**|Numerischer Status der Serverüberwachung:<br /><br /> 0 = nicht gestartet<br /><br /> 1 =<br />        Gestartet<br /><br /> 2 =<br />      Laufzeit schlägt fehl<br /><br /> 3 = Ziel Erstellung schlägt fehl<br /><br /> 4 = wird heruntergefahren|  
 |**status_desc**|**nvarchar(256)**|Zeichenfolge, die den Status der Serverüberwachung anzeigt:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Timestamp in UTC der letzten Statusänderung in der Überwachung.|  
-|**event_session_address**|**varbinary(8)**|Adresse der Sitzung für erweiterte Ereignisse, die der Überwachung zugeordnet. Im Zusammenhang mit der **sys.db_xe_sessions.address** -Katalogsicht angezeigt.|  
+|**event_session_address**|**varbinary(8)**|Adresse der Sitzung für erweiterte Ereignisse, die der Überwachung zugeordnet ist. Bezieht sich auf die **sys. DM _xe_sessions. Address** -Katalog Sicht.|  
 |**audit_file_path**|**nvarchar(256)**|Vollständiger Pfad- und Dateiname des Überwachungsdateiziels, das gerade verwendet wird. Nur bei Dateiüberwachungen angegeben.|  
 |**audit_file_size**|**bigint**|Ungefähre Größe der Überwachungsdatei in Bytes. Nur bei Dateiüberwachungen angegeben.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale müssen **VIEW SERVER STATE** und **wählen** Berechtigungen.  
+ Prinzipale müssen über **View Server State** -und **Select** -Berechtigungen verfügen.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715224"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531054"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installieren von SQL Server Machine Learning Services unter Windows
 
@@ -244,6 +244,10 @@ Auf Instanzebene kann eine zusätzliche Konfiguration Folgendes umfassen:
 * [Erstellen eines Anmelde namens für "sqlrusergroup"](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * [Verwalten](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) von Datenträger Kontingenten, um externe Skripts zu vermeiden, die Aufgaben ausführen
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+In SQL Server 2019 unter Windows hat sich der Isolations Mechanismus geändert. Dies wirkt sich auf **sqlrusergroup**, Firewallregeln, die Datei Berechtigung und die implizite Authentifizierung aus. Weitere Informationen finden Sie unter [Isolations Änderungen für Machine Learning Services](sql-server-machine-learning-services-2019.md).
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ In der-Datenbank benötigen Sie möglicherweise die folgenden Konfigurations Upd
 
 Nachdem Sie nun alles funktioniert haben, möchten Sie möglicherweise auch den Server für die Unterstützung von Machine Learning optimieren oder vorab trainierte Modelle installieren.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>Weitere workerkonten hinzufügen
 
 Wenn Sie erwarten, dass viele Benutzer Skripts gleichzeitig ausführen, können Sie die Anzahl der workerkonten erhöhen, die dem Launchpad-Dienst zugewiesen sind. Weitere Informationen finden Sie unter [Ändern des Benutzerkonten Pools für SQL Server Machine Learning Services](../administration/modify-user-account-pool.md).
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>Optimieren des Servers für die Skriptausführung
 
@@ -286,14 +292,14 @@ Zum Installieren und Verwalten von R-Paketen können Sie Benutzergruppen für di
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-R-Entwickler können mit einigen einfachen Beispielen beginnen und die Grundlagen der Funktionsweise von R mit SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
+R-Entwickler können mit einigen einfachen Beispielen loslegen und die Grundlagen der Funktionen von R unter SQL Server kennenlernen. Informationen zu den nächsten Schritten finden Sie unter den folgenden Links:
 
 + [Tutorial: Ausführen von R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Daten bankübergreifende Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Datenbankinterne Analysen für R-Entwickler](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Python-Entwickler können mit den folgenden Tutorials erfahren, wie Sie python mit SQL Server verwenden:
+Python-Entwickler können in den folgenden Tutorials erfahren, wie Python mit SQL Server verwendet werden kann:
 
-+ [Tutorial: Ausführen von python in T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutorial: Daten bankübergreifende Analysen für python-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutorial: Ausführen von Python in T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutorial: Datenbankinterne Analysen für Python-Entwickler](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Beispiele für Machine Learning, die auf realen Szenarios basieren, finden Sie unter [Machine Learning-Tutorials](../tutorials/machine-learning-services-tutorials.md).
+Praxisbeispiele für die Verwendung von Machine Learning finden Sie unter [Tutorials für Machine Learning](../tutorials/machine-learning-services-tutorials.md).

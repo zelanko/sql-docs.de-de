@@ -1,26 +1,26 @@
 ---
-title: Schnellstart für eine "Hallo Welt" grundlegende python-Codeausführung in T-SQL
-description: Schnellstart für das Python-Skript in SQL Server. Lernen Sie die Grundlagen zum Aufrufen eines python-Skripts mithilfe der gespeicherten System Prozedur sp_execute_external_script in einer Hello-World-Übung kennen.
+title: 'Schnellstart: Python "Hallo Welt"'
+description: In diesem Schnellstart lernen Sie die wichtigsten Konzepte kennen, indem Sie ein Python-Skript "Hallo Welt" auf SQL Server Machine Learning Services ausführen. Verwenden Sie die gespeicherte System Prozedur T-SQL sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714824"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530970"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Schnellstart: "Hello World"-Python-Skript in SQL Server 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>Schnellstart: Ausführen eines "Hello World"-python-Skripts auf SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Schnellstart lernen Sie wichtige Konzepte durch Ausführen eines "Hallo Welt"-python-Skripts int-SQL mit einer Einführung in die gespeicherte System Prozedur **sp_execute_external_script** . 
+In diesem Schnellstart lernen Sie die wichtigsten Konzepte kennen, indem Sie ein Python-Skript "Hallo Welt" auf SQL Server Machine Learning Services ausführen. Verwenden Sie die gespeicherte System Prozedur T-SQL **sp_execute_external_script** .
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Eine vorherige Schnellstartanleitung: [überprüfen, ob python in SQL Server vorhanden](quickstart-python-verify.md)ist, enthält Informationen und Links zum Einrichten der für diese Schnellstartanleitung erforderlichen python-Umgebung.
 

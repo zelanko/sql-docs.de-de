@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890805"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530951"
 ---
 # <a name="developer39s-guide-database-engine"></a>Entwickler&#39;-e-Guide (Datenbank-Engine)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt einen umfangreichen Satz von Tools zum Entwickeln, Verwalten und Steuern von Datenbankanwendungen bereit.  
@@ -52,7 +52,7 @@ ms.locfileid: "68890805"
  Beschreibt, wie Sie das Ausnahmemeldungsfeld (eine programmgesteuerte Schnittstelle) in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Data Mining-Programmierung](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Data Mining-Programmierung](../analysis-services/dev-guide/data-mining-programming.md)   
  [Entwicklerhandbuch &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [Entwicklerhandbuch &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [Entwicklerhandbuch &#40;-Replikation&#41;](replication/concepts/replication-developer-documentation.md)   

@@ -1,5 +1,5 @@
 ---
-title: Tools und Ansätze zum Verarbeiten (Analysis Services) | Microsoft-Dokumentation
+title: Tools und Ansätze für die Verarbeitung (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072821"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530942"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Tools und Ansätze zum Verarbeiten (Analysis Services)
   Die Verarbeitung ist ein Vorgang, bei dem Analysis Services Daten aus einer relationalen Datenquelle abfragt und Analysis Services-Objekte mit diesen Daten auffüllt.  
@@ -46,7 +46,7 @@ ms.locfileid: "66072821"
  Die Verarbeitung ist ein stark konfigurierbarer Vorgang. Selbiger wird von einem Satz von Verarbeitungsoptionen gesteuert, die bestimmen, ob vollständige oder inkrementelle Verarbeitung auf Objektebene auftritt. Weitere Informationen zu Verarbeitungsoptionen und -objekten finden Sie unter [Verarbeiten von Optionen und Einstellungen &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) und [Verarbeiten von Analysis Services-Objekten](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zur Verarbeitung von tabellarischer Models finden Sie unter [Verarbeiten von Datenbank, Tabelle oder Partition](../tabular-models/process-database-table-or-partition-analysis-services.md) und [Verarbeitungsdaten &#40;SSAS – tabellarisch&#41;](../process-data-ssas-tabular.md).  
+>  In diesem Thema werden die Tools und die Ansätze zum Verarbeiten von mehrdimensionalen Modellen beschrieben. Weitere Informationen zum Verarbeiten von tabellarischen Modellen finden Sie [im tabellarischen &#40;&#41;](../process-data-ssas-tabular.md) [Prozessdatenbank, Tabelle oder Partition](../tabular-models/process-database-table-or-partition-analysis-services.md) und Verarbeiten von Daten in SSAS.  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Verarbeiten von Objekten in SQL Server Management Studio  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66072821"
   
     -   Measuregruppen oder einzelne Partitionen in der Measuregruppe  
   
-    -   Dimensionen  
+    -   Abmessungen  
   
     -   Miningmodelle  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072821"
   
 1.  Ab dieser Version von SQL Server können Sie Analysis Services PowerShell-Cmdlets zum Verarbeiten von Objekten verwenden. Die folgenden Cmdlets können interaktiv oder per Skript ausgeführt werden:  
   
-    -   [Invoke-ProcessCube cmdlet (Invoke-ProcessCube-Cmdlet)](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube cmdlet (Invoke-ProcessCube-Cmdlet)](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension cmdlet (Invoke-ProcessDimension-Cmdlet)](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension cmdlet (Invoke-ProcessDimension-Cmdlet)](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition cmdlet (Invoke-ProcessPartition-Cmdlet)](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition cmdlet (Invoke-ProcessPartition-Cmdlet)](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd-Cmdlet](/sql/analysis-services/powershell/invoke-ascmd-cmdlet), das verwendet werden kann, um ein XMLA-, MDX- oder DMX-Skript mit Verarbeitungsbefehlen auszuführen.  
+    -   [Invoke-ASCmd-Cmdlet](/powershell/module/sqlserver/invoke-ascmd), das verwendet werden kann, um ein XMLA-, MDX- oder DMX-Skript mit Verarbeitungsbefehlen auszuführen.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Überwachungsobjektverarbeitung mit SQL Server Profiler  
   
@@ -157,6 +157,6 @@ ms.locfileid: "66072821"
 3.  Bearbeiten Sie den Task, um eine Verbindung zur Datenbank anzugeben und um zu bestimmen, welche Objekte verarbeitet werden sollen und um die Verarbeitungsoption zu bestimmen. Weitere Informationen zum Implementieren dieses Tasks finden Sie unter [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
 ## <a name="see-also"></a>Siehe auch  
- [Verarbeitung von mehrdimensionalen Modellobjekten](processing-a-multidimensional-model-analysis-services.md)  
+ [Objekt Verarbeitung für mehrdimensionale Modelle](processing-a-multidimensional-model-analysis-services.md)  
   
   

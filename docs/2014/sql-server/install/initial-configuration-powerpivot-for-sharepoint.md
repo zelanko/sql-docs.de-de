@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ba51a979572bb91b840f41483081464e8cd044e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891089"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530912"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Anfängliche Konfiguration (PowerPivot für SharePoint)
   Verwenden Sie die Schritte in diesem Thema, um eine ursprüngliche Installation von PowerPivot für SharePoint zu konfigurieren. Die einfachste Möglichkeit zur Konfiguration einer ursprünglichen Installation ist die Verwendung des PowerPivot-Konfigurationstools. Dieses Tool automatisiert alle unten beschriebenen Konfigurationsschritte.  
@@ -24,7 +24,7 @@ ms.locfileid: "68891089"
   
  
   
-## <a name="prerequisites"></a>Vorraussetzungen  
+## <a name="prerequisites"></a>Erforderliche Komponenten  
  Der SharePoint-Server muss im SharePoint-Setup mit der Installationsoption Serverfarm installiert worden sein. Ein eigenständiger SharePoint-Server, der eine integrierte Datenbank verwendet, wird nicht unterstützt. Weitere Informationen finden Sie unter [Anleitung für die Verwendung von SQL Server BI-Funktionen in einer SharePoint 2010-Farm](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -180,7 +180,7 @@ ms.locfileid: "68891089"
   
 10. Übernehmen Sie die restlichen Standardwerte, und klicken Sie dann auf **OK.** Die Dienstanwendung wird zusammen mit anderen verwalteten Diensten in der Dienstanwendungsliste der Farm angezeigt.  
   
-##### <a name="part-2-generate-the-master-key"></a>Teil 2: Generieren des Haupt Schlüssels  
+##### <a name="part-2-generate-the-master-key"></a>Teil 2: Generieren des Haupt Schlüssels  
   
 1.  Klicken Sie in der Liste auf die Secure Store Service-Anwendung.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "68891089"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Teil 3: Konfigurieren des unbeaufsichtigten Power Pivot-Daten Aktualisierungs Kontos  
  Häufig muss ein Konto für die unbeaufsichtigte Datenaktualisierung für den PowerPivot-Datenzugriff erstellt werden, damit während der Datenaktualisierung auf externe Daten zugegriffen werden kann. Wenn Kerberos z. B. nicht aktiviert ist, müssen Sie ein unbeaufsichtigtes Konto erstellen, über das der PowerPivot-Dienst eine Verbindung mit externen Datenquellen herstellen kann.  
   
- Anweisungen zum Erstellen des unbeaufsichtigten Power Pivot-Daten Aktualisierungs Kontos oder anderer gespeicherter Anmelde Informationen, die bei der Datenaktualisierung verwendet werden, finden Sie unter [Konfigurieren des &#40;Power&#41; Pivot-Kontos für die unbeaufsichtigte Datenaktualisierung PowerPivot für SharePoint](https://docs.microsoft.com/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint) und [Konfigurieren gespeicherte Anmelde Informationen für die Power Pivot &#40;-&#41;Datenaktualisierung PowerPivot für SharePoint](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Anweisungen zum Erstellen des unbeaufsichtigten Power Pivot-Daten Aktualisierungs Kontos oder anderer gespeicherter Anmelde Informationen, die bei der Datenaktualisierung verwendet werden, finden Sie unter [Konfigurieren des &#40;Power&#41; Pivot-Kontos für die unbeaufsichtigte Datenaktualisierung PowerPivot für SharePoint](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) und [Konfigurieren gespeicherte Anmelde Informationen für die Power Pivot &#40;-&#41;Datenaktualisierung PowerPivot für SharePoint](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
 ##  <a name="Usage"></a> Schritt 6: Sammlung von Verwendungs Daten aktivieren  
  PowerPivot für SharePoint erfasst Informationen zur PowerPivot-Verwendung überall in der Farm mithilfe der Infrastruktur zur Sammlung von SharePoint-Verwendungsdaten. Obwohl Verwendungsdaten immer Teil einer SharePoint-Installation sind, müssen sie möglicherweise aktiviert werden, damit sie verwendet werden können. Anweisungen finden Sie unter [Konfigurieren der Sammlung von Verwendungs &#40;Daten für PowerPivot für SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  

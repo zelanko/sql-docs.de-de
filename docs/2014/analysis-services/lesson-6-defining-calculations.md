@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493840"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530839"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lektion 6: Definieren von Berechnungen
   In dieser Lektion erfahren Sie, wie Berechnungen definiert werden, bei denen es sich um MDX-Ausdrücke oder -Skripts (Multidimensional Expressions) handelt. Berechnungen ermöglichen es Ihnen, berechnete Elemente und benannte Mengen zu definieren und weitere Skriptbefehle auszuführen, um die Fähigkeiten eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubes zu erweitern. Sie können z. B. einen Skriptbefehl ausführen, um einen Teilcube zu definieren und dann den Zellen im Teilcube eine Berechnung zuordnen.  
@@ -55,8 +55,8 @@ ms.locfileid: "69493840"
  [Lektion 7: Definieren von &#40;KPIs für Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Analysis Services Tutorial-Szenario](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [Tutorial zur &#40;mehrdimensionalen Modellierung von Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Analysis Services Tutorial-Szenario](analysis-services-tutorial-scenario.md)   
+ [Tutorial zur &#40;mehrdimensionalen Modellierung von Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Benannte Mengen erstellen](multidimensional-models/create-named-sets.md)   
  [Erstellen von berechneten Elementen](multidimensional-models/create-calculated-members.md)  
   
