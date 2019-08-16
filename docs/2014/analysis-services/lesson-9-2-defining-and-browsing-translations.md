@@ -10,12 +10,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6212bc112768af510bdb4a9dcff25150aa9f5e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888026"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493780"
 ---
 # <a name="defining-and-browsing-translations"></a>Definieren und Durchsuchen von Übersetzungen
   Eine Übersetzung ist eine Darstellung der Namen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Objekten in einer bestimmten Sprache. Objekte schließen Measuregruppen, Measures, Dimensionen, Attribute, Hierarchien, KPIs, Aktionen und berechnete Elemente ein. Übersetzungen bieten Serverunterstützung für Clientanwendungen, die mehrere Sprachen unterstützen können. Bei Verwendung eines solchen Clients übergibt der Client den Gebietsschemabezeichner (Locale Identifier, LCID) an die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die mithilfe des Gebietsschemabezeichners bestimmt, welche Übersetzungen beim Bereitstellen von Metadaten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte verwendet werden sollen. Enthält ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt keine Übersetzung für diese Sprache oder keine Übersetzung für ein angegebenes Objekt, wird die Standardsprache zur Rückgabe der Objektmetadaten an den Client verwendet. Wenn z. B. ein Anwender des Produkts im geschäftlichen Bereich in Frankreich von einer Arbeitsstation mit einer französischen Gebietsschemaeinstellung auf einen Cube zugreift, sieht er die Elementbeschriftungen und die Werte der Elementeigenschaften auf Französisch, sofern eine französische Übersetzung vorhanden ist. Wenn jedoch ein Anwender des Produkts im geschäftlichen Bereich in Deutschland von einer Arbeitsstation mit einer deutschen Gebietsschemaeinstellung auf denselben Cube zugreift, sieht er die Elementbeschriftungen und die Werte der Elementeigenschaften auf Deutsch. Weitere Informationen finden Sie unter [Dimensions Übersetzungen](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Cubeübersetzungen](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Übersetzungen &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -123,7 +123,7 @@ ms.locfileid: "68888026"
      Die Monatsnamen werden jetzt ebenso wie der Measurename in französischer Sprache angezeigt.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 10: Definieren von Administrator Rollen](https://docs.microsoft.com/analysis-services/lesson-10-defining-administrative-roles)  
+ [Lektion 10: Definieren von Administrator Rollen](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Dimensions Übersetzungen](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

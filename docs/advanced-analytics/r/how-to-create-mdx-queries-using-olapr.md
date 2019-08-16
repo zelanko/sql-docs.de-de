@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb2918e5fb89d85d7f6fa1cc12622481e585d848
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0b98e2bafd53eaabd606d09b3e0b51dd3d53aceb
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887665"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494066"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Erstellen von MDX-Abfragen in R mithilfe von olapr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Die folgenden Beispiele basieren auf dem Projekt AdventureWorks Data Mart und Cu
 
 + Erstellen Sie den Cube, der in diesen Beispielen verwendet wird, indem Sie das Analysis Services Tutorial bis zu Lektion 4 befolgen: [Erstellen eines OLAP-Cubes](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ Laden Sie einen vorhandenen Cube als Sicherung herunter, und stellen Sie ihn in einer Instanz von Analysis Services wieder her. Diese Site stellt z. b. einen vollständig verarbeiteten Cube im ZIP-Format bereit: [Adventure Works mehrdimensionales Modell SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrahieren Sie die Datei, und stellen Sie Sie dann auf der SSAS-Instanz wieder her. Weitere Informationen finden Sie unter [Backup und Restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)oder [Restore-asdatabase-Cmdlet](https://docs.microsoft.com/analysis-services/powershell/restore-asdatabase-cmdlet).
++ Laden Sie einen vorhandenen Cube als Sicherung herunter, und stellen Sie ihn in einer Instanz von Analysis Services wieder her. Diese Site stellt z. b. einen vollständig verarbeiteten Cube im ZIP-Format bereit: [Adventure Works mehrdimensionales Modell SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrahieren Sie die Datei, und stellen Sie Sie dann auf der SSAS-Instanz wieder her. Weitere Informationen finden Sie unter [Backup und Restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)oder [Restore-asdatabase-Cmdlet](/powershell/module/sqlserver/restore-asdatabase).
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. Einfache MDX mit Datenschnitt
 
@@ -92,7 +92,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 + In Spalten können Sie mehrere Measures als Elemente einer durch Trennzeichen getrennten Zeichenfolge angeben.
 + Die Zeilenachse verwendet alle möglichen Werte (alle ELEMENTE) der Dimension „Produktlinie“. 
 + Diese Abfrage gibt eine Tabelle mit drei Spalten zurück, die eine rollupzusammenfassung der Internet Verkäufe aus allen Ländern enthält.
-+ Die WHERE-Klausel gibt die _Slicerachse_ an. In diesem Beispiel verwendet der Slicer einen Member der **SalesTerritory** -Dimension, um die Abfrage so zu filtern, dass nur die Verkäufe aus Australien in Berechnungen verwendet werden.
++ Die WHERE-Klausel gibt die _Slicerachse_an. In diesem Beispiel verwendet der Slicer einen Member der **SalesTerritory** -Dimension, um die Abfrage so zu filtern, dass nur die Verkäufe aus Australien in Berechnungen verwendet werden.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>So erstellen Sie diese Abfrage mithilfe der in olapR bereitgestellten Funktionen
 

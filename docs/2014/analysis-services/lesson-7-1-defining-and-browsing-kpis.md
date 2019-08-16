@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888089"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493794"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definieren und Durchsuchen von KPIs
   Zum Definieren von KPIs (Key Performance Indicators) müssen Sie zuerst einen KPI-Namen und die Measuregruppe definieren, der der KPI zugeordnet wird. Ein KPI kann entweder allen Measuregruppen oder einer einzelnen Measuregruppe zugeordnet werden. Anschließend definieren Sie die folgenden Elemente des KPIs:  
@@ -268,6 +268,6 @@ ms.locfileid: "68888089"
      Die Bruttorendite für die von Wiederverkäufern verkauften Fahrräder in Nordamerika wird für das dritte Quartal des Kalenderjahres 2007 angezeigt.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 8: Definieren von Aktionen](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [Lektion 8: Definieren von Aktionen](lesson-8-defining-actions.md)  
   
   

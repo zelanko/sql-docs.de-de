@@ -10,12 +10,12 @@ ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 15cd000f0bcf61743301d130709be29b327efcdc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892543"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494002"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lektion 1: Vorbereiten der Analysis Services Datenbank (Lernprogramm zu Data Mining-Grundlagen)
   Sie sind ein neuer Mitarbeiter von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] und wurden mit der Entwicklung einer Business Intelligence-Anwendung in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]beauftragt. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]hoffen, dass Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Ihre Data Mining Erlebnisses nutzen können, um interessante und aussagekräftige Informationen über Personen zu ermitteln, die Fahrräder gekauft haben. Das Unternehmen möchte, dass Sie vorhersagen, welche potenziellen Kunden höchstwahrscheinlich in der Zukunft ein Fahrrad kaufen werden.  
@@ -40,6 +40,6 @@ ms.locfileid: "68892543"
  [Datenquellsichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)   
  [Von der mehr &#40;dimensionalen SSAS unterstützte Datenquellen&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)   
  [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [Erstellen eines Analysis Services-Projekts](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)  
+ [Erstellen eines Analysis Services-Projekts](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
   
   

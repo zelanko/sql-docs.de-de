@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887887"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493754"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lektion 9: Definieren von Perspektiven und Übersetzungen
   In dieser Lektion erfahren Sie, wie Perspektiven und Übersetzungen definiert werden. Sie können Perspektiven definieren, um die offensichtliche Komplexität eines Cubes zu reduzieren. Durch das Definieren von Übersetzungen können Benutzer die Cubemetadaten in der Sprache ihrer Wahl anzeigen.  
@@ -28,7 +28,7 @@ ms.locfileid: "68887887"
  [Definieren und Durchsuchen von Perspektiven](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  Im Rahmen dieser Aufgabe definieren und durchsuchen Sie Perspektiven, um die Ansicht des Cubes für bestimmte Benutzer oder Verwendungen zu vereinfachen.  
   
- [Definieren und Durchsuchen von Übersetzungen](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Definieren und Durchsuchen von Übersetzungen](lesson-9-2-defining-and-browsing-translations.md)  
  In diesem Task definieren und durchsuchen Sie Übersetzungen bestimmter Metadaten für bestimmte Sprachen.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  

@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888141"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493896"
 ---
 # <a name="defining-named-sets"></a>Definieren von benannten Mengen
   Eine benannte Menge ist ein MDX-Ausdruck (Multidimensional Expressions), der eine Menge von Dimensionselementen zurückgibt. Sie können benannte Mengen definieren und im Rahmen der Cubedefinition speichern. Sie können auch benannte Mengen in Clientanwendungen erstellen. Benannte Mengen können durch Kombinieren von Cubedaten, arithmetischen Operatoren, Zahlen und Funktionen erstellt werden. Benannte Mengen können von Benutzern in MDX-Abfragen in Clientanwendungen sowie zum Definieren von Mengen in Teilcubes verwendet werden. Ein Teilcube bezeichnet eine Auflistung von Mengen mit Kreuzprodukten, die den Cuberaum auf den definierten Teilbereich für nachfolgende Anweisungen beschränkt. Die Definition eines eingeschränkten Cuberaums stellt ein grundlegendes Konzept der MDX-Skripterstellung dar.  
@@ -132,7 +132,7 @@ ms.locfileid: "68888141"
      ![Filter Bereich mit zwei benannten Mengen](../../2014/tutorials/media/l6-named-set-05.gif "Filter Bereich mit zwei benannten Mengen")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Lektion 7: Definieren von &#40;KPIs für Key Performance Indicator&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lektion 7: Definieren von &#40;KPIs für Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Einbeziehen](multidimensional-models-olap-logical-cube-objects/calculations.md)   

@@ -10,12 +10,12 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888750"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494023"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Erstellen einer Datenquelle (Lernprogramm zu Data Mining-Grundlagen)
   A *Datenquelle* ist eine Datenverbindung, die innerhalb Ihres Projekts gespeichert sowie verwaltet und für Ihre [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank bereitgestellt wird. Die Datenquelle umfasst neben anderen erforderlichen Verbindungseigenschaften den Servernamen und den Namen der Datenbank, auf dem sich Ihre Quelldaten befinden.  
@@ -62,7 +62,7 @@ ms.locfileid: "68888750"
   
 ## <a name="see-also"></a>Siehe auch  
  [Erstellen einer Datenquelle (SSAS: mehrdimensional)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Definieren einer Datenquelle](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [Definieren einer Datenquelle](../analysis-services/lesson-1-2-defining-a-data-source.md)   
  [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

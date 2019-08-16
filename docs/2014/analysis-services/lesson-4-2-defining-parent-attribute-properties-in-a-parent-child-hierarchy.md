@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888389"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494016"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
   Eine Hierarchie mit über- und untergeordneten Elementen ist eine Hierarchie in einer Dimension, die auf zwei Tabellenspalten basiert. Zusammen definieren diese Spalten die hierarchischen Beziehungen zwischen den Elementen der Dimension. Die erste Spalte, die so genannte *Elementschlüsselspalte*, identifiziert jedes Dimensionselement. Die zweite Spalte, die so genannte *übergeordnete Spalte*, identifiziert das übergeordnete Element der einzelnen Dimensionselemente. Die **NamingTemplate** -Eigenschaft eines übergeordneten Attributs bestimmt den Namen jeder Ebene in der Über-/Unterordnungshierarchie, und die **MembersWithData** -Eigenschaft bestimmt, ob Daten für übergeordnete Elemente angezeigt werden sollen.  
@@ -104,7 +104,7 @@ ms.locfileid: "68888389"
      ![Geänderte Employees-Hierarchie](../../2014/tutorials/media/l4-employee-2.png "Geänderte Employees-Hierarchie")  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Automatisches Gruppieren von Attributelementen](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [Automatisches Gruppieren von Attributelementen](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Über-und untergeordnete Hierarchie](multidimensional-models/parent-child-dimension.md)   

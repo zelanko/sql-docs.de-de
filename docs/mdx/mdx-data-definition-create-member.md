@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 90db0be2372c3af9d3d079a187e4b3cbd8147566
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892129"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494077"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX-Datendefinition – CREATE MEMBER
 
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Die Reihenfolge, in der das berechnete Element in Fällen gelöst wird, in denen ein berechnetes Element auf ein anderes berechnetes Element verweist (also in Fällen, in denen berechnete Elemente sich überschneiden).|  
 |FORMAT_STRING|Eine Format Zeichenfolge im Office-Stil, die die Client Anwendung beim Anzeigen von Zellwerten verwenden kann.|  
 |VISIBLE|Ein Wert, der bestimmt, ob das berechnete Element in einem Schemarowset sichtbar ist. Sichtbare berechnete Elemente können einer Menge mit der [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) -Funktion hinzugefügt werden. Ein Wert ungleich 0 zeigt an, dass das berechnete Element sichtbar ist. Der Standardwert für diese Eigenschaft ist *sichtbar*.<br /><br /> Berechnete Elemente, die nicht sichtbar sind (für die dieser Wert auf 0 festgelegt ist), werden üblicherweise als Zwischenschritte in komplexeren berechneten Elementen verwendet. Auf diese berechneten Elemente können auch andere Arten von Elementen (z. B. Measures) verweisen.|  
-|NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt wird.<br /><br /> **Warnung :diese\*Eigenschaftistveraltet. \* \* \*** Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie unter [Veraltete Analysis Services-Funktionen in SQL Server 2016](https://docs.microsoft.com/analysis-services/deprecated-analysis-services-features-in-sql-server-2016) .|  
+|NON_EMPTY_BEHAVIOR|Das Measure oder die Menge, mit dem oder der beim Auflösen leerer Zellen das Verhalten berechneter Elemente bestimmt wird.<br /><br /> **Warnung :diese\*Eigenschaftistveraltet. \* \* \*** Vermeiden Sie es, sie festzulegen. Weitere Informationen finden Sie [unter Veraltete Analysis Services Features in SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) .|  
 |CAPTION|Eine Zeichenfolge, die von der Clientanwendung als Beschriftung für das Element verwendet wird.|  
 |DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, der von der Clientanwendung zum Anzeigen des Elements verwendet wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Bei den von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bereitgestellten Tools und Clients ist der umgekehrte schräg\\Strich () das ebenendtrennzeichen. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) als Trennzeichen für die Ordner.|  
 |ASSOCIATED_MEASURE_GROUP|Der Name der Measuregruppe, der dieses Element zugeordnet wird.|  

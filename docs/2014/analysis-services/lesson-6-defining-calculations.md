@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888047"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493840"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lektion 6: Definieren von Berechnungen
   In dieser Lektion erfahren Sie, wie Berechnungen definiert werden, bei denen es sich um MDX-Ausdrücke oder -Skripts (Multidimensional Expressions) handelt. Berechnungen ermöglichen es Ihnen, berechnete Elemente und benannte Mengen zu definieren und weitere Skriptbefehle auszuführen, um die Fähigkeiten eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubes zu erweitern. Sie können z. B. einen Skriptbefehl ausführen, um einen Teilcube zu definieren und dann den Zellen im Teilcube eine Berechnung zuordnen.  
@@ -45,14 +45,14 @@ ms.locfileid: "68888047"
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
- [Definieren berechneter Elemente](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [Definieren berechneter Elemente](lesson-6-1-defining-calculated-members.md)  
  In dieser Aufgabe erfahren Sie, wie berechnete Elemente definiert werden.  
   
- [Definieren von benannten Mengen](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Definieren von benannten Mengen](lesson-6-2-defining-named-sets.md)  
  In diesem Task erfahren Sie, wie benannte Mengen definiert werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 7: Definieren von &#40;KPIs für Key Performance Indicator&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lektion 7: Definieren von &#40;KPIs für Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Analysis Services Tutorial-Szenario](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   

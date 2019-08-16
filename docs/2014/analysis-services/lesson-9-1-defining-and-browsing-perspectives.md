@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888064"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493777"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definieren und Durchsuchen von Perspektiven
   Mithilfe von Perspektiven kann die Ansicht eines Cubes für bestimmte Zwecke vereinfacht werden. Standardmäßig können Benutzer alle Elemente in einem Cube sehen, für den sie die entsprechenden Berechtigungen besitzen. Wenn Benutzer einen ganzen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube anzeigen, wird ihnen die Standardperspektive des Cubes angezeigt. Die Ansicht des gesamten Cubes kann auf Benutzer äußerst komplex wirken, vor allem dann, wenn sie nur mit einem kleinen Teil des Cubes arbeiten, um ihre Anforderungen hinsichtlich Business Intelligence und Berichterstellung zu erfüllen.  
@@ -191,7 +191,7 @@ ms.locfileid: "68888064"
      ![Measures "Internet Sales" und "Reseller Sales] " (../../2014/tutorials/media/l9-perspectives-4.gif "Measures \"Internet Sales\" und \"Reseller Sales") "  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Definieren und Durchsuchen von Übersetzungen](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Definieren und Durchsuchen von Übersetzungen](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Eröffnen](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

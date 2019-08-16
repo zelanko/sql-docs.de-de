@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888458"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493963"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Lektion 10: Definieren von Administratorrollen
   In dieser Lektion erfahren Sie, wie Sicherheitsrollen für Verwaltungstasks definiert werden.  
@@ -25,7 +25,7 @@ ms.locfileid: "68888458"
   
  Diese Lektion beinhaltet die folgende Aufgabe:  
   
- [Erteilen von Berechtigungen zum Verarbeiten von Datenbanken](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
+ [Erteilen von Berechtigungen zum Verarbeiten von Datenbanken](lesson-10-granting-process-database-permissions.md)  
  Im Rahmen dieser Aufgabe definieren Sie eine Sicherheitsrolle, die berechtigt ist, die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank zu verarbeiten, und anschließend testen Sie diese Sicherheitsrolle.  
   
 ## <a name="see-also"></a>Siehe auch  

@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888108"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493825"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definieren und Verwenden einer Drillthroughaktion
   Das Dimensionieren von Faktendaten mit einer Faktendimension, ohne die von der Abfrage zurückgegebenen Daten richtig zu filtern, kann bei Abfragen zu einer verminderten Leistung führen. Um dies zu vermeiden, können Sie eine Drillthroughaktion definieren, mit der die Gesamtanzahl der Zeilen, die zurückgegeben werden, reduziert wird. Dadurch wird die Abfrageleistung erheblich verbessert.  
@@ -143,13 +143,13 @@ ms.locfileid: "68888108"
      ![An Adam Powell gelieferte Aufträge](../../2014/tutorials/media/l8-action8.gif "An Adam Powell gelieferte Aufträge")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 9: Definieren von Perspektiven und Übersetzungen](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [Lektion 9: Definieren von Perspektiven und Übersetzungen](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Aktionen &#40;Analysis Services-Mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Aktionen in mehrdimensionalen Modellen](multidimensional-models/actions-in-multidimensional-models.md)   
  [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definieren einer Fakten Beziehung](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [Definieren einer Fakten Beziehung](lesson-5-2-defining-a-fact-relationship.md)   
  [Definieren von Faktenbeziehungen und Faktenbeziehungseigenschaften](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

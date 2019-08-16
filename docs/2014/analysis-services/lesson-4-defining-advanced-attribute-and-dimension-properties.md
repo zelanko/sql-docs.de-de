@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888255"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493992"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften
   In dieser Lektion lernen Sie, wie einige erweiterte Attributeigenschaften, Attributhierarchien und Dimensionseigenschaften verwendet werden müssen.  
@@ -34,7 +34,7 @@ ms.locfileid: "68888255"
  [Automatisches Gruppieren von Attributelementen](lesson-4-3-automatically-grouping-attribute-members.md)  
  In dieser Aufgabe erstellen Sie automatisch Gruppierungen von Attributelementen basierend auf der Verteilung von Elementen innerhalb der Attributhierarchie. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
- [Ausblenden und Deaktivieren von Attributhierarchien](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [Ausblenden und Deaktivieren von Attributhierarchien](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  In dieser Aufgabe lernen Sie, wie und wann Attributhierarchien zu deaktivieren oder auszublenden sind.  
   
  [Sortieren von Attributelementen basierend auf einem sekundären Attribut](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
