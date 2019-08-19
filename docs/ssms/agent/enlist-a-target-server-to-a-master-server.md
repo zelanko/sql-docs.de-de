@@ -17,12 +17,12 @@ ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 88cecde3bcfd3a7b0c5f7512506dc7c259b1b2cd
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 67971ce06b79d7a56af6ae9bfe6f5d153babbe80
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265881"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552913"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Eintragen eines Zielservers bei einem Masterserver
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,14 +35,6 @@ In diesem Thema wird die Vorgehensweise zum Hinzufügen eines Zielservers zu ein
 Informationen zu den Auswirkungen des für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst verwendeten Windows-Kontos auf eine Multiserverumgebung finden Sie unter [Erstellen einer Multiserverumgebung](../../ssms/agent/create-a-multiserver-environment.md).  
   
 Die vollständige SSL-Verschlüsselung (Secure Sockets Layer) und die Zertifikatüberprüfung sind für Verbindungen zwischen Masterservern und Zielservern standardmäßig aktiviert. Weitere Informationen finden Sie unter [Festlegen von Verschlüsselungsoptionen auf Zielservern](../../ssms/agent/set-encryption-options-on-target-servers.md).  
-  
-**In diesem Thema**  
-  
--   **Eintragen eines Zielservers mit:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
   
 ## <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
   

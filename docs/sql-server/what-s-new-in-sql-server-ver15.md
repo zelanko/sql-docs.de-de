@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893993"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028909"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -35,8 +35,8 @@ CTP 3.2 (Community Technology Preview) ist das neueste öffentliche Release von
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Public Preview |Vor CTP 3.2 war SQL Server-Big Data-Cluster für registrierte Early Adopter verfügbar. Dieses Release ermöglicht allen Benutzern, die Funktionen von SQL Server-Big Data-Clustern zu nutzen. <br/><br/> Weitere Informationen finden Sie unter [Einstieg in SQL Server-Big Data-Cluster](../big-data-cluster/deploy-get-started.md).|
-|`azdata` |CTP 3.2 führt `azdata` ein – ein in Python geschriebenes Befehlszeilenprogramm, das Clusteradministratoren ermöglicht, den Big Data-Cluster über REST-APIs zu starten und zu verwalten. `azdata` ersetzt `mssqlctl`. Siehe [Installieren von `azdata`](../big-data-cluster/deploy-install-azdata.md). |
+|Public Preview |Vor CTP 3.2 war SQL Server-Big-Data-Cluster für registrierte Early Adopter verfügbar. Dieses Release ermöglicht allen Benutzern, die Funktionen von SQL Server-Big-Data-Clustern zu nutzen. <br/><br/> Weitere Informationen finden Sie unter [Einstieg in SQL Server-Big-Data-Cluster](../big-data-cluster/deploy-get-started.md).|
+|`azdata` |CTP 3.2 führt `azdata` ein – ein in Python geschriebenes Befehlszeilenprogramm, das Clusteradministratoren ermöglicht, den Big-Data-Cluster über REST-APIs zu starten und zu verwalten. `azdata` ersetzt `mssqlctl`. Siehe [Installieren von `azdata`](../big-data-cluster/deploy-install-azdata.md). |
 |PolyBase |Externe Tabellenspaltennamen werden jetzt zum Abfragen von SQL Server-, Oracle-, Teradata-, MongoDB- und ODBC-Datenquellen verwendet. In früheren CTP-Releases wurden die Spalten nur basierend auf der Ordnungszahl im Ziel gebunden und Spaltennamen in der Definition der externen Tabelle wurden nicht verwendet.|
 |HDFS-Tieringaktualisierung |Einführung der Aktualisierungsfunktionalität für HDFS-Tiering, sodass eine vorhandene Einbindung für die neueste Momentaufnahme der Remotedaten aktualisiert werden kann. Weitere Informationen finden Sie unter [HDFS-Tiering](../big-data-cluster/hdfs-tiering.md). |
 |Notebook-basierte Problembehandlung |CTP 3.2 stellt Jupyter-Notebooks vor, die die [Bereitstellung](../big-data-cluster/deploy-notebooks.md) und [Ermittlung, Diagnose und Problembehandlung](../big-data-cluster/manage-notebooks.md) für Komponenten in einem SQL Server-Big Data-Cluster unterstützen. |
@@ -83,7 +83,6 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Funktionseinschränkungen| Verhindern bei einigen Formen der Einschleusung von SQL-Befehlen auch dann die Offenlegung von Informationen über die Datenbank, wenn die Einschleusung erfolgreich ist. Siehe [Funktionseinschränkungen](../relational-databases/security/feature-restrictions.md).|
 |Indizieren verschlüsselter Spalten|Erstellen Sie Indizes für Spalten, die mit einer zufälligen Verschlüsselung und Enclave-fähigen Schlüsseln verschlüsselt wurden, um die Leistung umfangreicher Abfragen (mit `LIKE` und Vergleichsoperatoren) zu verbessern. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Anhalten und Fortsetzen der anfänglichen Überprüfung für Transparent Data Encryption (TDE)|Siehe [TDE-Überprüfung (Transparent Data Encryption): Anhalten und Fortsetzen](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 |Zertifikatverwaltung im SQL Server-Konfigurations-Manager|Siehe [Zertifikatverwaltung (SQL Server-Konfigurations-Manager)](../database-engine/configure-windows/manage-certificates.md).

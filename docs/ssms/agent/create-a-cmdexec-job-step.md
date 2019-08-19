@@ -13,12 +13,12 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70a68878c2b889e7763cd75491684b440648b8c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0767ce109e6278f4fa4852f650ac347a562958a0
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264921"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553166"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,20 +27,6 @@ ms.locfileid: "68264921"
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie einen [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftragsschritt in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , der ein ausführbares Programm oder einen Betriebssystembefehl verwendet, mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder SQL Server Management Objects erstellen und definieren können.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Security](#Security)  
-  
--   **So erstellen Sie einen CmdExec-Auftragsschritt mit**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

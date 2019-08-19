@@ -1,7 +1,5 @@
 ---
 title: Anzeigen von Informationen zu einer Warnung | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -16,33 +14,24 @@ helpviewer_keywords:
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c787f1805b407499998b8fe69befd4a878e67a33
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ade59742c282acbf3afb54b0aaf08722c34f6dea
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261290"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552317"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie Infodermationen in Bezug auf [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Security](#Security)  
-  
--   **So zeigen Sie Informationen zu einer Warnung an mit**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

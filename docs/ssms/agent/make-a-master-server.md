@@ -22,12 +22,12 @@ ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 641da060a315f7a0542e6ce1c4b0713483a0c5c5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 79f02ab705f6bf340403739ed01d46e8ab11b024
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267596"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552876"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,18 +36,6 @@ ms.locfileid: "68267596"
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Masterserver einrichten.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Security](#Security)  
-  
--   **Einrichten eines Masterservers mit:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

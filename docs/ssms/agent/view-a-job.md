@@ -1,7 +1,5 @@
 ---
 title: Anzeigen eines Auftrags | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -15,35 +13,24 @@ helpviewer_keywords:
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 40e636f6255df10b3a6b14b500336f51abc7ed0d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: a5fe5c783de64b6f8840c87574dda24e54f6b25d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260957"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552290"
 ---
 # <a name="view-a-job"></a>View a Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Security](#Security)  
-  
--   **So zeigen Sie einen Auftrag an mit**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

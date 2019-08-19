@@ -13,12 +13,12 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ba8bbd7b78a2ca0a246bf01836a33f2592a8c82
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 24a1b058fcada694bc117bb261c17b863e4be569
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251718"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553096"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Erstellen eines Proxys für den SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,21 +29,6 @@ ms.locfileid: "68251718"
 In diesem Thema wird beschrieben, wie SQL Server-Agent-Proxys in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt werden.  
   
 Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto definiert einen Sicherheitskontext, in dem ein Auftragsschritt ausgeführt werden kann. Jeder Proxy entspricht Sicherheitsanmeldeinformationen. Um Berechtigungen für einen bestimmten Auftragsschritt festzulegen, erstellen Sie ein Proxykonto mit den erforderlichen Berechtigungen für ein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents und weisen dann dieses Proxykonto dem Auftragsschritt zu.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Einschränkungen](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   **So erstellen Sie einen Proxy für den SQL Server-Agent mit**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
 ### <a name="Restrictions"></a>Einschränkungen  

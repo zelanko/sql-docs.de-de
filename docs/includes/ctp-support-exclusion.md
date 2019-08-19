@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: b51f93b12c51bd7bc9659ee1661a7fdc068dd2bd
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419552"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028864"
 ---
 ## <a name="enabled-deployment-scenarios"></a>Aktivierte Bereitstellungsszenarios
 
@@ -19,7 +19,7 @@ CTP 3.2 ermöglicht die folgenden Szenarios:
 
 ## <a name="support"></a>Support
 
-SQL Server 2019 CTP 3.2 ist eine Vorschausoftware. Sie wird nicht öffentlich für Vorgänge unterstützt. Kunden, die am [SQL Early Adopter-Programm](http://aka.ms/sqleap) teilnehmen, können SQL Server 2019 CTP 3.2 möglicherweise durch eine spezielle Vereinbarung in Abstimmung mit Microsoft ausführen.
+SQL Server 2019 CTP 3.2 ist eine Vorschausoftware. Sie wird nicht öffentlich für Vorgänge unterstützt. Kunden, die am [SQL Early Adopter-Programm](https://aka.ms/sqleap) teilnehmen, können SQL Server 2019 CTP 3.2 möglicherweise durch eine spezielle Vereinbarung in Abstimmung mit Microsoft ausführen.
 
 Begrenzten Support für Kunden, die nicht am Early Adopter-Programm teilnehmen, finden Sie möglicherweise über folgende Quellen:
 

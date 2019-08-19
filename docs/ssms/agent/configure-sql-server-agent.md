@@ -16,12 +16,12 @@ ms.assetid: 2e361a62-9e92-4fcd-80d7-d6960f127900
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0cf8b01fb6b12299318fcf433708539f2bd7b0c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7b5f766351e9551143fdbd66571224e11845d659
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256403"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553149"
 ---
 # <a name="configure-sql-server-agent"></a>Konfigurieren des SQL Server-Agents
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,16 +30,6 @@ ms.locfileid: "68256403"
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Das Aktivieren und Deaktivieren des SQL Server-Agents wird derzeit in der verwalteten SQL-Datenbank-Instanz nicht unterstützt. Der SQL-Agent wird immer ausgeführt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie einige Konfigurationsoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angeben. Die vollständigen Konfigurationsoptionen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent sind nur in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) oder den gespeicherten Prozeduren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents verfügbar.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Einschränkungen](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   [Sie konfigurieren Sie den SQL Server-Agent](#SSMSProcedure)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

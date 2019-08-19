@@ -15,12 +15,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 99b294ac7b2fb56cd3d5e5b62a5d7062eaf9796a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: b1c34e565365113629e64dda7500501816d7a222
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264836"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553136"
 ---
 # <a name="create-a-job-category"></a>Erstellen einer Auftragskategorie
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,22 +31,6 @@ ms.locfileid: "68264836"
 In diesem Thema wird beschrieben, wie Sie eine Auftragskategorie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects erstellen können.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent stellt integrierte Auftragskategorien bereit, denen Aufträge zugewiesen werden können. Sie können auch eine Auftragskategorie erstellen und diesen Aufträge zuweisen. Auftragskategorien helfen Ihnen dabei, Ihre Aufträge zum einfachen Filtern und Gruppieren zu organisieren. Sie können z. B. alle Aufträge für die Datenbanksicherung in der Datenbankwartungskategorie organisieren. Sie können zudem eigene Auftragskategorien erstellen.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Einschränkungen](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   **So erstellen Sie eine Auftragskategorie mit**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [Transact-SQL](#TSQL)  
-  
-    [SQL Server Management Objects](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

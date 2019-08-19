@@ -15,12 +15,12 @@ ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9851b29f61b78b481652182de13009f57f8120eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 64a5683a0eceb6e0297309c26b2094cb2a2fc899
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267304"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553067"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Create an Alert Using an Error Number
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,20 +29,6 @@ ms.locfileid: "68267304"
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie eine [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentwarnung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, die bei einem Fehler mit einer bestimmten Nummer ausgegeben wird, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet wird.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Einschränkungen](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   **So erstellen Sie eine Warnung mithilfe einer Fehlernummer mit**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
   
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   

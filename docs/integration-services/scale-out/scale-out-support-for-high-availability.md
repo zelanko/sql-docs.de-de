@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064565"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028753"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -73,7 +73,7 @@ Aktualisieren Sie die Konfigurationsdatei des Scale Out Masterdiensts (`\<drive\
 
 Sie können sich bei SSISDB mit der Anmelde-ID **##MS_SSISLogDBWorkerAgentLogin##** anmelden, für die ein automatisches Kennwort generiert wurde. Führen Sie die folgenden Schritte aus, damit die Protokollierung für alle SSISDB-Replikate funktioniert.
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Ändern Sie das Kennwort von **##MS_SSISLogDBWorkerAgentLogin##** auf dem primären SQL Server
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Ändern Sie das Kennwort von **##MS_SSISLogDBWorkerAgentLogin##** auf dem primären SQL Server
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2. Fügen Sie dem sekundären SQL Server die Anmelde-ID hinzu
 
@@ -98,7 +98,7 @@ Rufen Sie die gespeicherte Prozedur `[catalog].[update_logdb_info]` mithilfe der
 
 Auf virtuellen Azure-Computern erfordert diese Konfiguration zusätzliche Schritte. Eine vollständige Erläuterung dieser Konzepte und dieser Schritte ist nicht Gegenstand dieses Artikels.
 
-1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
+1.  Sie müssen eine Azure-Domäne einrichten. Windows Server-Failoverclustering erfordert, dass alle Computer im Cluster Mitglieder derselben Domäne sind. Weitere Informationen finden Sie unter [Enable Azure Active Directory Domain Services using the Azure portal (Aktivieren von Azure Active Directory Domain Services über das Azure-Portal)](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 2. Sie müssen einen Azure Load Balancer einrichten. Dies ist für den Verfügbarkeitsgruppenlistener erforderlich. Weitere Informationen finden Sie unter [Tutorial: Ausgleichen der internen Datenverkehrslast mithilfe eines Lastenausgleichs im Tarif „Basic“ über das Azure-Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

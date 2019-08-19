@@ -1,7 +1,5 @@
 ---
 title: Synchronisieren von Zielserveruhren (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -16,34 +14,25 @@ helpviewer_keywords:
 ms.assetid: 4fb80502-d271-4d06-bcbc-bfbbceb5f2a2
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 74939b313abc695012813f361189ac38a68eafe7
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 583ef664fa510ad4d71f15f4ea45bb8e679834cb
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263429"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552648"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 In diesem Thema wird beschrieben, wie Sie Zielserveruhren in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit der Masterserveruhr mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]synchronisieren können. Das Synchronisieren dieser Systemuhren unterstützt Auftragszeitpläne.  
-  
-**In diesem Thema**  
-  
--   **Vorbereitungen:**  
-  
-    [Security](#Security)  
-  
--   **So synchronisieren Sie die Uhren der Zielserver mit**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
+
 ## <a name="BeforeYouBegin"></a>Vorbereitungen  
   
 ### <a name="Security"></a>Sicherheit  

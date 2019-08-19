@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 80b6e7444f77fbd764402643887dcee94eaec7aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091798"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028936"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Konfigurieren der Sammlung von Nutzungs- und Diagnosedaten für SQL Server (CEIP)
 
@@ -144,7 +144,7 @@ Wie Sie diese Funktion deaktivieren oder aktivieren können, hängt von der Vers
  
 - Windows Server 2016 und Windows 10
 
-    [Konfigurieren von Windows-Diagnosedaten in Ihrem Unternehmen](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [Konfigurieren von Windows-Diagnosedaten in Ihrem Unternehmen](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows 2008 R2 und Windows Server 7
 
     [WER Settings (WER-Einstellungen)](/windows/desktop/wer/wer-settings)

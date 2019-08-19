@@ -1,7 +1,5 @@
 ---
 title: SQL Server-Agent | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265238"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552667"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
-  
-**In diesem Thema**  
-  
--   [Vorteile des SQL Server-Agents](#Benefits)  
-  
--   [Komponenten des SQL Server-Agents](#Components)  
-  
--   [Sicherheit beim Verwalten des SQL Server-Agents](#Security)  
-  
-## <a name="Benefits"></a>Vorteile des SQL Server-Agents  
+
+## <a name="Benefits"></a>Vorteile des SQL Server-Agents 
+
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Auftragsinformationen. Aufträge enthalten mindestens einen Auftragsschritt. Jeder Schritt umfasst einen eigenen Task, z.B. das Sichern einer Datenbank.  
   
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent kann einen Auftrag anhand eines Zeitplans, als Reaktion auf ein bestimmtes Ereignis oder bei Bedarf ausführen. Wenn Sie z.B. am Ende jedes Arbeitstages alle Server des Unternehmens sichern möchten, können Sie diesen Task automatisieren. Planen Sie die Sicherung so, dass sie montags bis freitags nach 22:00 Uhr ausgeführt wird. Falls bei der Sicherung ein Problem auftritt, kann der SQL Server-Agent das Ereignis aufzeichnen und Sie benachrichtigen.  

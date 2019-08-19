@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888883"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028808"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Lernprogramm: Erste Schritte mit Always Encrypted mit Secure Enclaves mithilfe von SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ Für die ersten Schritte mit Always Encrypted mit Secure Enclaves benötigen Sie
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] oder höher.
 - Windows 10 Enterprise, Version 1809, oder Windows Server 2019 Datacenter.
-- Wenn Ihr SQL Server-Computer ein physischer Computer ist, muss er die [Hardwareanforderungen für Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) erfüllen:
+- Wenn Ihr SQL Server-Computer ein physischer Computer ist, muss er die [Hardwareanforderungen für Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) erfüllen:
    - 64-Bit-Prozessor mit Second Level Address Translation (SLAT)
    - CPU-Unterstützung für VM-Überwachungsmoduserweiterung (VT-c bei Intel-CPUs)
    - Virtualisierungsunterstützung aktiviert (Intel VT-x- oder AMD-V)
 - Wenn Ihr SQL Server-Computer eine VM (virtueller Computer) ist, muss die VM so konfiguriert sein, dass die virtualisierungsbasierte Sicherheit (VBS) zugelassen wird.
-   - Verwenden Sie für Hyper-V 2016 oder höher eine VM der Generation 1, und [aktivieren Sie geschachtelte Virtualisierungserweiterungen](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) für den VM-Prozessor, oder verwenden Sie eine VM der Generation 2. Weitere Informationen zu VM-Generationen finden Sie unter [Sollte ich einen virtuellen Computer der Generation 1 oder 2 in Hyper-V erstellen?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
+   - Verwenden Sie für Hyper-V 2016 oder höher eine VM der Generation 1, und [aktivieren Sie geschachtelte Virtualisierungserweiterungen](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) für den VM-Prozessor, oder verwenden Sie eine VM der Generation 2. Weitere Informationen zu VM-Generationen finden Sie unter [Sollte ich einen virtuellen Computer der Generation 1 oder 2 in Hyper-V erstellen?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v). 
    - Stellen Sie sicher, dass Sie eine VM-Größe in Azure betreiben, die eine der folgenden Optionen unterstützt:
-      - Geschachtelte Virtualisierung, z. B. VMs der Serien Dv3 und Ev3. Siehe [Erstellen einer schachtelungsfähigen Azure-VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
-      - VMs der Generation 2, z. B. VMs der Serien Dsv3 und Esv3. Siehe [Unterstützung für VMs der Generation 2 in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2).
+      - Geschachtelte Virtualisierung, z. B. VMs der Serien Dv3 und Ev3. Siehe [Erstellen einer schachtelungsfähigen Azure-VM](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+      - VMs der Generation 2, z. B. VMs der Serien Dsv3 und Esv3. Siehe [Unterstützung für VMs der Generation 2 in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2).
    - Bei VMware vSphere 6.7 oder höher aktivieren Sie die Unterstützung für virtualisierungsbasierte Sicherheit für den virtuellen Computer, wie in der [VMware-Dokumentation](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html) beschrieben.
    - Andere Hypervisoren und Public Clouds unterstützen möglicherweise die Verwendung von Always Encrypted mit Secure Enclaves auf einem virtuellen Computer, solange Virtualisierungserweiterungen (manchmal als „geschachtelte Virtualisierung“ bezeichnet) für den virtuellen Computer verfügbar gemacht werden. Informationen zur Kompatibilität und Konfigurationsanweisungen finden Sie in der Dokumentation zu Ihrer Virtualisierungslösung.
 - [SQL Server Management Studio (SSMS) 18.0 oder höher](../../ssms/download-sql-server-management-studio-ssms.md)

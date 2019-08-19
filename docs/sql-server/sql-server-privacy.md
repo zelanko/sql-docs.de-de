@@ -9,12 +9,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329338"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028844"
 ---
 # <a name="sql-server-privacy-supplement"></a>Ergänzende Datenschutzbestimmungen zu SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "68329338"
 Dieser Artikel beschreibt internetfähige Features, die anonyme Featurenutzungs- und Diagnosedaten sammeln und an Microsoft senden können. SQL Server sammelt möglicherweise Standardinformationen zu Ihrem Computer, und Daten zur Nutzung und Leistung werden möglicherweise an Microsoft übermittelt und analysiert, um die Qualität, Sicherheit und Zuverlässigkeit des Produkts zu optimieren. Dieser Artikel ist ein Nachtrag zu den [Microsoft-Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=521839). Die Datenklassifizierung in diesem Artikel gilt nur für lokale Versionen von SQL Server. Sie gilt nicht für folgende Produkte:
 
 - Azure SQL-Datenbank
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Datenbankmigrations-Assistent
