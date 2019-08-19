@@ -36,7 +36,7 @@ Dieser Artikel beschreibt, wie Sie die Eigenschaften der Power Query-Quelle im S
 
 ## <a name="configure-the-power-query-source"></a>Konfigurieren der Power Query-Quelle
 
-Um den **Power Query-Quellen-Editor** in SSDT zu öffnen, ziehen Sie die **Power Query-Quelle** aus der SSIS-Toolbox, legen sie im Datenfluss-Designer ab, und doppelklicken darauf.  
+Um den **Power Query-Quellen-Editor** in SSDT zu öffnen, ziehen Sie die **Power Query-Quelle** aus der SSIS-Toolbox, legen sie im Datenfluss-Designer ab und doppelklicken darauf.  
 
 ![PQ-Quelle](media/power-query-source/pq-source.png)
 
