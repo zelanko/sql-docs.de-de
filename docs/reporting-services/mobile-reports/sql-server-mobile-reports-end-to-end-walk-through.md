@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502277"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028894"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Mobile Berichte mit SQL Server: End-to-End-Vorgehensweise
 Exemplarische Vorgehensweise zum Erstellen mobiler Berichte für sämtliche Bildschirmgrößen mit [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] im [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Webportal und ihrer Anzeige in mobilen Power BI-Apps.
@@ -39,7 +39,7 @@ Um folgen zu können, benötigen Sie diese Produkte:
 *  ODER: Wide World Importers-Beispieldatenbank (WWI), die auf der Seite [Microsoft SQL Server-Beispiele](../../sample/microsoft-sql-server-samples.md) verfügbar ist.
 * Führen Sie zum Anzeigen von Ergebnissen die folgenden Schritte aus: 
   *   [Registrieren beim Power BI-Dienst](https://go.microsoft.com/fwlink/?LinkID=513879) und
-  *  [Herunterladen der mobilen Power BI-App](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
+  *  [Herunterladen der mobilen Power BI-App](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) auf Ihr Mobilgerät: iOS, Android-Smartphone oder Windows 10-Gerät.  
 
   
 ## <a name="create-a-shared-data-source"></a>Erstellen einer freigegebenen Datenquelle  
