@@ -9,18 +9,18 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702870"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611422"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von S3 für HDFS-Tiering in einen Big Data-Cluster
 
 Die folgenden Abschnitte zeigen ein Beispiel für die Konfiguration von HDFS-Tiering mit einer S3-Speicherdatenquelle.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Bereitgestellte Big Data-Cluster](deployment-guidance.md)
 - [Big Data-Tools](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ Nachdem Sie nun eine Anmeldeinformationendatei mit Zugriffsschlüsseln vorbereit
    
 1. Legen Sie die Umgebungsvariable MOUNT_CREDENTIALS gemäß der obigen Anweisungen fest.
 
-1. Binden Sie den HDFS-Remotespeicher mit **azdata bdc storage-pool mount create** in Azure ein. Ersetzen Sie die Platzhalterwerte, bevor Sie den folgenden Befehl ausführen:
+1. Einbinden des HDFS-Remote Speichers in S3 mithilfe von **azdata BDC Storage-Pool Mount Create**. Ersetzen Sie die Platzhalterwerte, bevor Sie den folgenden Befehl ausführen:
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>

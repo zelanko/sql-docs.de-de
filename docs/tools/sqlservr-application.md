@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1778f9b3f6b4662de36e33e3ae7974f4eef4dd82
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771023"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028971"
 ---
 # <a name="sqlservr-application"></a>sqlservr (Anwendung)
 
@@ -84,8 +84,8 @@ Die folgenden Parameter sind veraltet und werden in [!INCLUDE[ssCurrent](../incl
 
 |Parameter | Weitere Informationen|
 |:-----|:-----|
-|**-h** | Wurde in früheren Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet, um virtuellen Adressraum für Hot-Add-Arbeitsspeichermetadaten zu reservieren, wenn AWE aktiviert ist. Unterstützt [!INCLUDE[sssql14](../includes/sssql14-md.md)]durch. Weitere Informationen finden Sie unter [Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).|
-|**-g** | *memory_to_reserve*<br/><br>Gilt für frühere Versionen von 32-Bit-Instanzen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]von. Unterstützt [!INCLUDE[sssql14](../includes/sssql14-md.md)]durch. Gibt in Form einer ganzen Zahl an, wie viele Megabytes (MB) des Arbeitsspeichers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Speicherbelegungen innerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Prozesses, jedoch außerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Speicherpools übrig lässt.|
+|**-h** | Wurde in früheren Versionen der 32-Bit-Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet, um virtuellen Adressraum für Hot-Add-Arbeitsspeichermetadaten zu reservieren, wenn AWE aktiviert ist. Unterstützt [!INCLUDE[sssql14](../includes/sssql14-md.md)]durch. Weitere Informationen finden Sie unter [Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-g** | *memory_to_reserve*<br/><br>Gilt für frühere Versionen von 32-Bit-Instanzen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]von. Unterstützt [!INCLUDE[sssql14](../includes/sssql14-md.md)]durch. Gibt in Form einer ganzen Zahl an, wie viele Megabytes (MB) des Arbeitsspeichers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Speicherbelegungen innerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Prozesses, jedoch außerhalb des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Speicherpools übrig lässt. Weitere Informationen finden Sie [in der Dokumentation zu SQL Server 2014 unter Konfigurationsoptionen für den Server Arbeitsspeicher](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Weitere Informationen
