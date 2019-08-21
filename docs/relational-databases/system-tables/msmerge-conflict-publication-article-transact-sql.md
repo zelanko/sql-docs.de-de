@@ -27,11 +27,11 @@ ms.locfileid: "68893584"
 # <a name="msmerge_conflict_ltpublicationgt_ltarticlegt-transact-sql"></a>\_Artikel&lt;&gt;zurmsmerge\_-Konflikt\_Veröffentlichung&lt;(Transact-SQL)&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **msmerge\_-\_Konflikt*Veröffentlichungs*\_ _**  Tabelle enthält Informationen zu Zeilen mit Konflikten oder für Zeilen Änderungen, die rückgängig gemacht wurden, um Daten Konvergenz zu erreichen. Eine Konflikttabelle besteht für jede replizierte Tabelle in einer Veröffentlichung, wobei der Name der Konflikttabelle mit der Veröffentlichung und dem Artikelnamen angefügt wird. Diese artikelspezifischen Konflikttabellen sind in der für die Konfliktprotokollierung verwendeten Datenbank gespeichert. Dies ist in der Regel die Verlegerdatenbank, kann aber auch die Abonnementdatenbank sein, wenn die Konfliktprotokollierung dezentralisiert erfolgt.  
+  Die **msmerge\_-\_Konflikt*Veröffentlichungs*\__Artikel_**  Tabelle enthält Informationen zu Zeilen mit Konflikten oder für Zeilen Änderungen, die rückgängig gemacht wurden, um Daten Konvergenz zu erreichen. Eine Konflikttabelle besteht für jede replizierte Tabelle in einer Veröffentlichung, wobei der Name der Konflikttabelle mit der Veröffentlichung und dem Artikelnamen angefügt wird. Diese artikelspezifischen Konflikttabellen sind in der für die Konfliktprotokollierung verwendeten Datenbank gespeichert. Dies ist in der Regel die Verlegerdatenbank, kann aber auch die Abonnementdatenbank sein, wenn die Konfliktprotokollierung dezentralisiert erfolgt.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|** _**|**variable**|Stellt eine Spalte in einer replizierten Tabelle dar. Diese Systemtabelle enthält eine Spalte für jede Spalte im Tabellenartikel.|  
+|**_Name\_der\_Artikel Spalte_**|**variable**|Stellt eine Spalte in einer replizierten Tabelle dar. Diese Systemtabelle enthält eine Spalte für jede Spalte im Tabellenartikel.|  
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die Konfliktzeile.|  
 |**ModifiedDate**|**datetime**|Der Zeitpunkt, zu dem der Konflikt aufgetreten ist.|  
 |**DataSource\_\_-ID des Ursprungs**|**uniqueidentifier**|Das Abonnement, für das die Zeilenänderung rückgängig gemacht wurde oder das den Konflikt verloren hat.|  

@@ -128,7 +128,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 | SQLCMDEDITOR            |                | R/W | "edit.com"              |
 | SQLCMDINI               |                | R   | ""                      |
 
-\* SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **:Connect** verwendet wird.  
+SQLCMDUSER, SQLCMDPASSWORD und SQLCMDSERVER werden festgelegt, wenn **:Connect** verwendet wird.  
 
 Durch R wird angezeigt, dass der Wert nur einmal während der Programminitialisierung festgelegt werden kann.  
   

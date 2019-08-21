@@ -91,7 +91,7 @@ Ausführliche Informationen zu Support und Lizenzen für CTP-Releases sind in `l
   > [!Note]
   > Derzeit gibt es keine Benutzeroberflächenunterstützung, um UTF-8-fähige Sortierungen in Azure Data Studio oder SQL Server Data Tools (SSDT) auszuwählen. Die neueste [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Version (SSMS) 18 unterstützt die Auswahl von UTF-8-fähigen Sortierungen auf der Benutzeroberfläche.
  
-- **Problemumgehung**: Dieses Problem kann für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs nicht behoben werden.
+- **Problemumgehung**: Dieses Problem kann für die [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTPs nicht behoben werden.
 
 - **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
