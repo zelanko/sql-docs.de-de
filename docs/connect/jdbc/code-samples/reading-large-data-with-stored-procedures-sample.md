@@ -1,7 +1,7 @@
 ---
 title: Beispiel zum Lesen umfangreicher Daten mit gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 22d510cec069a828588a6fdcd95fb366dbd27158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 924bcf388ddf74f3be3f4bb13f83e00789fb8777
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957145"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028299"
 ---
 # <a name="reading-large-data-with-stored-procedures-sample"></a>Beispiel zum Lesen umfangreicher Daten mit gespeicherten Prozeduren
 
@@ -31,7 +31,7 @@ Die Codedatei für dieses Beispiel heißt „ExecuteStoredProcedure.java“ und 
 
 ## <a name="requirements"></a>Anforderungen
 
-Zum Ausführen dieser Beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Nehmen Sie außerdem die Datei „mssql-jdbc.jar“ in den Klassenpfad auf. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).
+Zum Ausführen dieser Beispielanwendung benötigen Sie Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Nehmen Sie außerdem die Datei „mssql-jdbc.jar“ in den Klassenpfad auf. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [Verwenden des JDBC-Treibers](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > Der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zum Auswählen der richtigen JAR-Datei finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
@@ -63,6 +63,6 @@ Schließlich zeigt der Beispielcode die mit den OUT-Parametern zurückgegebenen 
 
 [!code[JDBC#UsingAdaptiveBuffering2](../../../connect/jdbc/codesnippet/Java/reading-large-data-with-_1_1.java)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Arbeiten mit umfangreichen Daten](../../../connect/jdbc/code-samples/working-with-large-data.md)

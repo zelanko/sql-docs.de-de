@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise zum JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891285"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027791"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Versionshinweise zum Microsoft JDBC-Treiber
 

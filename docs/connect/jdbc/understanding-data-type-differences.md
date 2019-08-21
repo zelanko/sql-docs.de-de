@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zu Datentyp unterschieden | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0cec994768fb5c3a49257da0fb310937c79c25b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 906a4abf0768fcad2e5ac31a0ee93345dcc8b30c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004164"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027383"
 ---
 # <a name="understanding-data-type-differences"></a>Grundlegendes zu den Unterschieden von Datentypen
 
@@ -77,6 +77,6 @@ Der JDBC- **timestamp** -Typ ist [!INCLUDE[ssNoVersion](../../includes/ssnoversi
 
 Die Zuordnungsfunktion für benutzerdefinierte Typen von JDBC, die die SQLData-Schnittstellen für die erweiterten JDBC-Typen (UDTs, Struct usw.) verwendet, ist im JDBC-Treiber nicht implementiert.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

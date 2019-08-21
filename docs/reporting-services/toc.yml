@@ -1,6 +1,6 @@
 - name: Was ist SQL Server Reporting Services (SSRS)?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-- name: Willkommen bei SQL Server >>
+- name: Willkommen bei SQL Server >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Übersicht
   items:
@@ -1676,7 +1676,7 @@
   items:
     - name: REST-API
       href: ../reporting-services/developer/rest-api.md
-    - name: REST-API-Beispiele >
+    - name: REST-API-Beispiele >>
       href: 'https://github.com/Microsoft/Reporting-Services'
     - name: Integration von Reporting Services in Anwendungen
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md

@@ -1,7 +1,7 @@
 ---
 title: Using sql_variant Data Type | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916173"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025841"
 ---
-# <a name="using-sqlvariant-data-type"></a>Verwenden des sql_variant-Datentyps
+# <a name="using-sql_variant-data-type"></a>Verwenden des Sql_variant-Datentyps
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Ab Version 6.3.0 unterstützt der JDBC-Treiber den sql_variant-Datentyp. Sql_variant wird auch unterstützt, wenn Features wie Tabellenwert Parameter und bulkcopy mit einigen Einschränkungen weiter unten auf dieser Seite verwendet werden. Nicht alle Datentypen können im sql_variant-Datentyp gespeichert werden. Eine Liste der unterstützten Datentypen mit sql_variant finden Sie in den [SQL Server-](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)Dokumentation.
+Ab Version 6.3.0 unterstützt der JDBC-Treiber den sql_variant-Datentyp. Sql_variant wird auch unterstützt, wenn Features wie Tabellenwert Parameter und bulkcopy mit einigen Einschränkungen weiter unten auf dieser Seite verwendet werden. Nicht alle Datentypen können im sql_variant-Datentyp gespeichert werden. Eine Liste der unterstützten Datentypen mit sql_variant finden Sie in den [SQL Server](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)-Dokumentation.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Auffüllen und Abrufen einer Tabelle:
 Angenommen, eine Tabelle enthält eine Tabelle mit einer sql_variant-Spalte wie:
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>Verwenden von gespeicherten Prozeduren mit sql_variant:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Verwenden von gespeicherten Prozeduren mit sql_variant:   
 Eine gespeicherte Prozedur wie z. b.:     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Einschränkungen von sql_variant:
+## <a name="limitations-of-sql_variant"></a>Einschränkungen von sql_variant:
 - Bei Verwendung von TVP zum Auffüllen einer Tabelle mit einem `datetime` `smalldatetime` `getSmallDateTime()` / `getDateTime()` / `date` / Wert, der in einem sql_variant gespeichert ist, wird beim Aufrufen / `getDate()` von für einen Resultset funktioniert nicht und löst die folgende Ausnahme aus:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
@@ -92,6 +92,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

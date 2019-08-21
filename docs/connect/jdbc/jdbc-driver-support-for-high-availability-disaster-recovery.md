@@ -1,7 +1,7 @@
 ---
 title: Unterstützung des JDBC-Treibers für Hochverfügbarkeit und Notfallwiederherstellung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 322a22c2236898876ae2fd5e942a1ad3617c1959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956381"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027956"
 ---
-# <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
+# <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>JDBC-Treiber-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   In diesem Artikel wird die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-Unterstützung für Hochverfügbarkeit und Notfallwiederherstellung ([!INCLUDE[ssHADR](../../includes/sshadr_md.md)]) thematisiert. Weitere Informationen über [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]finden Sie in der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Onlinedokumentation.  
@@ -48,7 +48,7 @@ Beachten Sie Folgendes:
   
  
   
-## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit MultiSubnetFailover  
+## <a name="connecting-with-multisubnetfailover"></a>Verbinden mit multiSubnetFailover  
  Geben Sie immer **multiSubnetFailover=true** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **multiSubnetFailover** ermöglicht einen schnelleren Failover für alle Verfügbarkeitsgruppen und Failoverclusterinstanzen in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und verringert die Failoverzeit für Always On-Topologien mit einem oder mehreren Subnetzen deutlich. Während eines Multisubnetzfailovers versucht der Client Verbindungen parallel. Während eines Subnetz-Failovers unternimmt [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aggressive Wiederholungsversuche zum Herstellen der TCP-Verbindung.  
   
  Die **multiSubnetFailover**-Verbindungseigenschaft gibt an, dass die Anwendung in einer Verfügbarkeitsgruppe oder einer Failoverclusterinstanz bereitgestellt wird und [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] versucht, eine Verbindung mit der Datenbank auf der primären [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herzustellen, indem mit allen IP-Adressen der Verfügbarkeitsgruppe Verbindungsversuche unternommen werden. Wenn **MultiSubnetFailover=true** für eine Verbindung angegeben wird, wiederholt der Client TCP-Verbindungsversuche schneller als dies bei den standardmäßigen TCP-Neuübertragungsintervallen des Betriebssystems der Fall ist. Auf diese Weise kann die Verbindung nach einem Failover einer AlwaysOn-Verfügbarkeitsgruppe oder einer AlwaysOn-Failoverclusterinstanz schneller wiederhergestellt werden. Diese Einstellung gilt sowohl für Einzelsubnetz- als auch Multisubnetz-Verfügbarkeitsgruppen und -Failoverclusterinstanzen.  
@@ -114,8 +114,8 @@ Beachten Sie Folgendes:
 ## <a name="ssl-certificate-validation"></a>SSL-Zertifikatüberprüfung  
  Eine Verfügbarkeitsgruppe besteht aus mehreren physischen Servern. In [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wird die Unterstützung von **alternativen Antragstellernamen** in SSL-Zertifikaten eingeführt, sodass einem Zertifikat mehrere Hosts zugeordnet werden können. Weitere Informationen zu SSL finden Sie Untergrund Legendes zur [SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Connecting to SQL Server with the JDBC Driver (Verbinden von SQL Server mit dem JDBC-Treiber)](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

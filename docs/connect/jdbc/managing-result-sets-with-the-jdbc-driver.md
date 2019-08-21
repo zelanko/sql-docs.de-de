@@ -1,7 +1,7 @@
 ---
 title: Verwalten von Resultsets mit dem JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f6b7dac1be8309ff5ece21dbb863b410edbf61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956345"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027913"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>Verwalten von Resultsets mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67956345"
 |[Grundlegendes zur Parallelitätssteuerung](../../connect/jdbc/understanding-concurrency-control.md)|Beschreibt, wie der JDBC-Treiber die Parallelitätssteuerung unterstützt.|  
 |[Grundlegendes zu Zeilensperren](../../connect/jdbc/understanding-row-locking.md)|Beschreibt, wie der JDBC-Treiber Zeilensperren unterstützt.|  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Ausführen von Transaktionen mit dem JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: afb7968f5173bf69fec3d4b0204798a430d49930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58c6282a11e3fcc0ca896a2e3e4075a4b51d928e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956210"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027853"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>Ausführen von Transaktionen mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67956210"
 |[Verwenden von Sicherungspunkten](../../connect/jdbc/using-savepoints.md)|Beschreibt die Verwendung des JDBC-Treibers für Sicherungspunkte für Transaktionen.|  
 |[Verwenden der Haltbarkeit](../../connect/jdbc/using-holdability.md)|Beschreibt die Verwendung des JDBC-Treibers für die Holdability für Resultsets.|  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Unterstützung für nationale Zeichensätze | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff8d7435e3a896c05281748568eacc2e92d32f6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956283"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027875"
 ---
 # <a name="national-character-set-support"></a>Unterstützung für nationale Zeichensätze
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67956283"
   
  Damit String-Parameter im Unicode-Format an den Server gesendet werden, sollten die Anwendungen entweder die neuen JDBC 4.0-Methoden für nationale Zeichensätze verwenden oder die **sendStringParametersAsUnicode**-Verbindungseigenschaft auf „**true**“ festlegen, wenn die Methoden für nicht nationale Zeichensätze verwendet werden. Es wird empfohlen, nach Möglichkeit die neuen JDBC 4.0-Methoden für nationale Zeichensätze zu verwenden. Weitere Informationen zur **sendStringParametersAsUnicode** -Verbindungs Eigenschaft finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

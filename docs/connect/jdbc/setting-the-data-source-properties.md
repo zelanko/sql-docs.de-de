@@ -1,7 +1,7 @@
 ---
 title: Festlegen der Datenquellen Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 97e285f5f2680e028a9d8fd00901e3e977ffdd80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004431"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027729"
 ---
 # <a name="setting-the-data-source-properties"></a>Festlegen der Datenquelleneigenschaften
 
@@ -27,6 +27,6 @@ Java EE-Produkte wie Anwendungsserver und Servlet-/JSP-Engines lassen normalerwe
 
 Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquellen finden Sie unter der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse. Ein Beispiel für die Verwendung der SQLServerDataSource-Klasse, um eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, finden Sie unter [Datenquellen Beispiel](../../connect/jdbc/data-source-sample.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

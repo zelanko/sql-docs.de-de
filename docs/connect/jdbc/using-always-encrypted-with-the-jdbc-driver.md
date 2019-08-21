@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Always Encrypted mit dem JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916451"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026646"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Ein Beispiel für das einschließen dieser Abhängigkeiten in ein Maven-Projekt finden Sie unter [Herunterladen von ADAL4J-und AKV-Abhängigkeiten mit Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven) .
 
 ### <a name="using-windows-certificate-store-provider"></a>Verwenden des Windows-Zertifikatspeicheranbieters
-Mit „SqlColumnEncryptionCertificateStoreProvider“ können Spaltenhauptschlüssel im Windows-Zertifikatspeicher gespeichert werden. Verwenden Sie den SQL Server Management Studio-Always Encrypted-Assistenten (SSMS) oder andere unterstützte Tools, um die Spalten Hauptschlüssel-und Spalten Verschlüsselungsschlüssel-Definitionen in der-Datenbank zu erstellen. Der gleiche Assistent kann verwendet werden, um ein selbst signiertes Zertifikat im Windows-Zertifikat Speicher zu generieren, das als Spalten Hauptschlüssel für die immer verschlüsselten Daten verwendet werden kann. Weitere Informationen zum Spaltenhauptschlüssel und der T-SQL-Syntax für den Spaltenverschlüsselungsschlüssel finden Sie unter [ERSTELLEN DES SPALTENHAUPTSCHLÜSSELS](../../t-sql/statements/create-column-master-key-transact-sql.md) bzw. [ERSTELLEN DES SPALTENVERSCHLÜSSELUNGSSCHLÜSSELS](../../t-sql/statements/create-column-encryption-key-transact-sql.md).
+Mit „SqlColumnEncryptionCertificateStoreProvider“ können Spaltenhauptschlüssel im Windows-Zertifikatspeicher gespeichert werden. Verwenden Sie den SQL Server Management Studio-Always Encrypted-Assistenten (SSMS) oder andere unterstützte Tools, um die Spalten Hauptschlüssel-und Spalten Verschlüsselungsschlüssel-Definitionen in der-Datenbank zu erstellen. Der gleiche Assistent kann verwendet werden, um ein selbst signiertes Zertifikat im Windows-Zertifikat Speicher zu generieren, das als Spalten Hauptschlüssel für die Always Encrypted Daten verwendet werden kann. Weitere Informationen zum Spaltenhauptschlüssel und der T-SQL-Syntax für den Spaltenverschlüsselungsschlüssel finden Sie unter [ERSTELLEN DES SPALTENHAUPTSCHLÜSSELS](../../t-sql/statements/create-column-master-key-transact-sql.md) bzw. [ERSTELLEN DES SPALTENVERSCHLÜSSELUNGSSCHLÜSSELS](../../t-sql/statements/create-column-encryption-key-transact-sql.md).
 
 Der Name des sqlservercolumnencryptioncertifikatestoreprovider ist MSSQL_CERTIFICATE_STORE und kann von der GetName ()-API des Provider-Objekts abgefragt werden. Sie wird automatisch vom Treiber registriert und kann nahtlos ohne Änderung der Anwendung verwendet werden.
 
@@ -649,6 +649,6 @@ Mit „SQLServerBulkCopy“ können Sie Daten, die bereits verschlüsselt sind u
 > [!NOTE]
 > Gehen Sie bei der Angabe von „AllowEncryptedValueModifications“ mit Bedacht vor, da dies möglicherweise zu einer Beschädigung der Datenbank führen kann, da der Microsoft JDBC-Treiber für SQL Server nicht überprüft, ob die Daten tatsächlich verschlüsselt oder mit demselben Verschlüsselungstyp, Algorithmus und Schlüssel wie die Zielspalte ordnungsgemäß verschlüsselt wurden.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [„Immer verschlüsselt“ (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

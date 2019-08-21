@@ -1,7 +1,7 @@
 ---
 title: Systemanforderungen für den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893976"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027671"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Systemanforderungen für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68893976"
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([Download](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java-Laufzeitumgebung (Java Runtime Environment, JRE)
 
-## <a name="java-runtime-environment-requirements"></a>Anforderungen der Java-Laufzeitumgebung  
+## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment-Anforderungen  
 
  Ab dem Microsoft JDBC-Treiber 7.4 für SQL Server werden das JDK 12.0 (Java Development Kit) und die JRE 12.0 (Java Runtime Environment) unterstützt.
 
@@ -41,7 +41,7 @@ ms.locfileid: "68893976"
   
  Seit der Einführung von [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wurde die JDBC-Treiberunterstützung für die API der JDBC- (Java Database Connectivity-)Spezifikation um die JDBC 4.0-API erweitert. Die JDBC-API 4.0 wurde als Bestandteil des JDK 6.0 und der JRE 6.0 eingeführt. JDBC 4.0 ist eine Obermenge der JDBC 3.0-API.
   
- Bei der Bereitstellung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unter Windows- und UNIX-Betriebssystemen müssen Sie entsprechend eines der folgenden Installationspakete verwenden: *sqljdbc_\<version> _enu.exe* oder *sqljdbc_\<version>_enu.tar.gz*. Weitere Informationen zum Bereitstellen des JDBC-Treibers finden Sie unter dem Thema [Bereitstellen des JDBC-Treibers](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+ Bei der Bereitstellung von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unter Windows- und UNIX-Betriebssystemen müssen Sie entsprechend eines der folgenden Installationspakete verwenden: *sqljdbc_\<version> _enu.exe* oder *sqljdbc_\<version>_enu.tar.gz*. Weitere Informationen zum Bereitstellen des JDBC-Treibers finden Sie unter [Bereitstellen des JDBC-Treibers](../../connect/jdbc/deploying-the-jdbc-driver.md).  
 
 **Microsoft JDBC-Treiber 7.4 für SQL Server:**  
 
@@ -203,7 +203,7 @@ Der JDBC-Treiber 6.4 steht auch im zentralen Maven-Repository zur Verfügung und
   
  Weitere Informationen zu Sortierungen finden Sie unter „Arbeiten mit Sortierungen“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Problembehandlung bei Konnektivität | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004233"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027620"
 ---
 # <a name="troubleshooting-connectivity"></a>Behandlung von Verbindungsproblemen
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "68004233"
   
 -   Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden, setzt der JDBC-Treiber voraus, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung installiert ist. Dabei handelt es sich nicht um die Standardeinstellung. Vergewissern Sie sich beim Installieren oder Konfigurieren der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dass diese Option enthalten ist.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
- [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956816"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028123"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -175,7 +175,7 @@ JDK ist in `kinit`verfügbar, mit dem Sie ein TGT von Schlüsselverteilungscente
 #### <a name="linux-and-mac"></a>Linux und Mac
 
 ##### <a name="requirements"></a>Anforderungen
-Zugriff auf einen in die Domäne eingebundenen Windows-Computer, um den Kerberos-Domänen Controller abzufragen.
+Zugriff auf einen in die Windows-Domäne eingebundenen Computer, um den Kerberos-Domänencontroller abzufragen.
 
 ##### <a name="step-1-find-kerberos-kdc"></a>Schritt 1: Suchen von Kerberos-KDC
 - **Führen Sie auf**: Windows-Befehlszeile
@@ -201,12 +201,12 @@ Zugriff auf einen in die Domäne eingebundenen Windows-Computer, um den Kerberos
      kdc = co1-red-dc-28.domain.company.com
   }
   ```
-  Speichern Sie dann die Datei krb5. conf, und beenden Sie
+  Speichern Sie dann die Datei „krb5.conf“, und beenden Sie den Editor.
 
 > [!NOTE]
->  Die Domäne muss in allen Obergrenzen vorliegen.
+>  Die Domäne muss VOLLSTÄNDIG IN GROSSBUCHSTABEN angegeben werden.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Schritt 3: Testen des Ticket Abruf Tickets
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Schritt 3: Testen des TGT-Abrufs (Ticket Granting Ticket)
 - **Ausführen unter**: Linux/Mac
 - **Aktion**:
   - Verwenden Sie den `kinit username@DOMAIN.COMPANY.COM` Befehl, um ein TGT von KDC zu erhalten, und Sie werden aufgefordert, Ihr Domänen Kennwort einzugeben.

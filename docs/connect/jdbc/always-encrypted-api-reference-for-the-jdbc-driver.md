@@ -1,7 +1,7 @@
 ---
 title: 'Always Encrypted: API-Referenz für den JDBC-Treiber | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 08/06/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a17dc46e2ee60832b51d606c2c7caaf497dfc7c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf8ce1b951621d58105d18b847306ff620d114
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957471"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028484"
 ---
-# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Always Encrypted – API-Referenz für den JDBC-Treiber
+# <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Always Encrypted: API-Referenz für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   „Immer verschlüsselt“ ermöglicht es Clients, sensible Daten in Clientanwendungen zu verschlüsseln und die Verschlüsselungsschlüssel niemals an SQL Server weiterzugeben. Ein auf dem Clientcomputer installierter Treiber, bei dem Always Encrypted aktiviert ist, erreicht diese Funktionalität durch die automatische Ver- und Entschlüsselung von sensiblen Daten in der SQL Server-Clientanwendung. Der Treiber verschlüsselt die Daten in vertraulichen Spalten, bevor er sie an SQL Server weitergibt, und schreibt Abfragen automatisch neu, sodass die Semantik der Anwendung beibehalten wird. Auf ähnliche Weise entschlüsselt der Treiber transparent Daten in verschlüsselten Datenbankspalten, die in Abfrageergebnissen enthalten sind. Weitere Informationen finden Sie unter [Always encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) und [Verwenden von Always Encrypted mit dem JDBC-Treiber](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
@@ -155,7 +155,7 @@ Neue Typen in der **Microsoft. SQL. types** -Klasse
 
 |Name|und Beschreibung|  
 |----------|-----------------|  
-|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Verwenden Sie diese Typen als Ziel-SQL-Typen, wenn Sie **Parameterwerte** mithilfe `setObject()/updateObject()` von API-Methoden an verschlüsselte DateTime-, smalldatetime-, Money-, smallmoney-und uniqueidentifier-Spalten senden.|  
+|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|Verwenden Sie diese Typen als Ziel-SQL-Typen, wenn Sie **Parameter** Werte mithilfe `setObject()/updateObject()` von API-Methoden an verschlüsselte DateTime-, smalldatetime-, Money-, smallmoney-und uniqueidentifier-Spalten senden.|  
   
   
  **Sqlserverstatuementcolumnencryptionsetting-Enum**  
@@ -193,7 +193,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Wenn Always Encrypted für eine Abfrage deaktiviert ist und die Abfrageergebnisse aus verschlüsselten Spalten zurückgibt, gibt die Abfrage verschlüsselte Werte zurück. Die verschlüsselten Werte haben den varbinary-Datentyp.  
   
- ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von „Immer verschlüsselt“ mit dem JDBC-Treiber](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+ ## <a name="see-also"></a>Siehe auch  
+ [Verwenden von Always Encrypted mit dem JDBC-Treiber](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

@@ -1,7 +1,7 @@
 ---
 title: Unterstützen von XML-Daten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: af528f507f39cde948ae269d58abb2c0d9dcce46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 799b22cfac669846c606456f1911e27353a9ba9f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004281"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027711"
 ---
 # <a name="supporting-xml-data"></a>Unterstützen von XML-Daten
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68004281"
 |[SQLXML-Schnittstelle](../../connect/jdbc/sqlxml-interface.md)|Beschreibt die SQLXML-Schnittstelle und ihre Methoden.|  
 |[Programmieren mit SQLXML](../../connect/jdbc/programming-with-sqlxml.md)|Beschreibt, wie mithilfe der API-Methoden von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] XML-Daten mit dem Java-Datentyp **SQLXML** in einer relationalen Datenbank gespeichert bzw. aus einer relationalen Datenbank abgerufen werden. Außerdem sind Informationen über die Typen von SQLXML-Objekten und eine Liste wichtiger Richtlinien und Einschränkungen für die Verwendung von SQLXML-Objekten enthalten.|  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

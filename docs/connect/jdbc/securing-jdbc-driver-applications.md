@@ -1,7 +1,7 @@
 ---
 title: Sichern von JDBC-Treiber Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945746"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027756"
 ---
-# <a name="securing-jdbc-driver-applications"></a>Sichern von JDBC-Treiberanwendungen
+# <a name="securing-jdbc-driver-applications"></a>Schützen von JDBC-Treiberanwendungen
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -35,6 +35,6 @@ In den Themen in diesem Abschnitt werden einige häufige Sicherheitsrisiken besc
 | [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)               | Beschreibt das Herstellen eines sicheren Kommunikationskanals mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe von Secure Sockets Layer (SSL). |
 | [FIPS-Modus](../../connect/jdbc/fips-mode.md)                                     | Beschreibt die Verwendung des JDBC-Treibers im fps-kompatiblen Modus.                                                                                                              |
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
- [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+ [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

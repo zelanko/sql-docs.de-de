@@ -1,7 +1,7 @@
 ---
 title: Verwenden der NTLM-Authentifizierung zum Herstellen einer Verbindung mit SQL Server | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 11fe35e1dc90e32cac460b61fe8a6078c817b0ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894102"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026101"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Verwenden der NTLM-Authentifizierung zum Herstellen einer Verbindung mit SQL Server
 
@@ -100,8 +100,8 @@ Weitere Informationen zum Herstellen einer Verbindung mit der SSL-Verschlüsselu
 - [Herstellen von Verbindungen mit SSL-Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
-> Bei Version 7,4 wird das Aktivieren **** von erweiterter Schutz und Verschlüsselung nicht unterstützt.
+> Bei Version 7,4 wird das Aktivieren **von** erweiterter Schutz und Verschlüsselung nicht unterstützt.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

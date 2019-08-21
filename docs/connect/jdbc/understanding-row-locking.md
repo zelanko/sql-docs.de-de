@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zum Sperren von Zeilen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a2d4faf6f66942cb8f1053bd7323a77795229d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcd18baf401378605abf0d53e203d0a3745ee887
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916621"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027327"
 ---
 # <a name="understanding-row-locking"></a>Grundlegendes zu Zeilensperren
 
@@ -31,6 +31,6 @@ Sperren werden verwendet, um Transaktionsintegrität und Datenbankkonsistenz zu 
 > [!NOTE]  
 > Weitere Informationen zu Zeilensperren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter „Sperren in [!INCLUDE[ssDE](../../includes/ssde_md.md)]“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwalten von Resultsets mit dem JDBC-Treiber](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

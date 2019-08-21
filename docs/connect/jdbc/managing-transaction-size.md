@@ -1,7 +1,7 @@
 ---
 title: Verwalten der Transaktions Größe | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b443e3541dbf86fd0cfa947f057faaf62e08226
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956353"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027900"
 ---
 # <a name="managing-transaction-size"></a>Verwalten des Transaktionsumfangs
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "67956353"
   
  Stellen Sie außerdem sicher, dass Sie die Timeouteinstellung für Sperren verwenden, wenn die Anwendung Probleme mit Sperren erwartet und hierfür Timeouts benötigt. Dies kann auf einfache Weise mithilfe der [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)-Methode ausgeführt werden. Der Standardwert für das Sperrtimeout ist -1. Dies bedeutet, dass beim Warten auf die Sperre unendlich lang blockiert wird. Sie können das Sperrtimeout auf 30 Sekunden festlegen. So tritt bei der gesperrten Verbindung nach 30 Sekunden ein Timeout auf, wenn eine Blockierung durch eine andere Verbindung vorliegt.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

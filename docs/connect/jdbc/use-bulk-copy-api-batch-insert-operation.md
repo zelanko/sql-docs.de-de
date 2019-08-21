@@ -1,7 +1,7 @@
 ---
 title: Verwenden der Massen Kopier-API für den Batch INSERT-Vorgang für den MSSQL JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004138"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027104"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Verwenden der Massenkopierungs-API für den Batcheinfügungsvorgang
 
@@ -25,7 +25,7 @@ Der Microsoft JDBC-Treiber 7,0 für SQL Server unterstützt die Verwendung einer
 
 Diese Funktion gilt nur für die `executeBatch()`  &  `executeLargeBatch()` APIs PreparedStatement und CallableStatement.
 
-## <a name="pre-requisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Zum Aktivieren der Massen Kopier-API für Batch INSERT müssen zwei Voraussetzungen erfüllt sein.
 
@@ -139,6 +139,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

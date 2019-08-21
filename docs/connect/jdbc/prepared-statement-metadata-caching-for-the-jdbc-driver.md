@@ -1,7 +1,7 @@
 ---
 title: Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956206"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027841"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Vorbereitetes Caching von Anweisungsmetadaten für den JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ Eine weitere Änderung, die von 6.1.6-Preview eingeführt wurde, ist, dass der T
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Mit dieser Einstellung wird gesteuert, wie viele ausstehende vorbereitete Aktionen für die Anweisungs Verwerfungs Aktion (sp_unprepare) pro Verbindung ausstehend sein können, bevor ein Cleanup der ausstehenden Handles auf dem Server ausgeführt wird. Wenn die Einstellung auf < = 1 festgelegt ist, werden die Aktionen zum Vorbereiten der Vorbereitung direkt für die vorbereitete Anweisung Close ausgeführt Wenn Sie auf {@literal >} 1 festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um den mehr Aufwand des Aufrufs von sp_unprepare zu vermeiden.|
 |int getServerPreparedStatementDiscardThreshold()|Mit dieser Einstellung wird gesteuert, wie viele ausstehende vorbereitete Aktionen für die Anweisungs Verwerfungs Aktion (sp_unprepare) pro Verbindung ausstehend sein können, bevor ein Cleanup der ausstehenden Handles auf dem Server ausgeführt wird. Wenn die Einstellung auf < = 1 festgelegt ist, werden die Aktionen zum Vorbereiten der Vorbereitung direkt für die vorbereitete Anweisung Close ausgeführt Wenn Sie auf {@literal >} 1 festgelegt ist, werden diese Aufrufe in einem Batch zusammengefasst, um den mehr Aufwand des Aufrufs von sp_unprepare zu vermeiden.|
 
-## <a name="prepared-statement-metatada-caching"></a>Die vorbereitete Anweisung metatada Caching
+## <a name="prepared-statement-metatada-caching"></a>Die vorbereitete Anweisung Metadaten Caching
 Ab der 6.3.0-Preview-Version unterstützt der Microsoft JDBC-Treiber für SQL Server vorbereitetes Anweisungs Caching. Wenn eine Abfrage, die bereits vorbereitet und im Cache gespeichert wurde, vor v 6.3.0-Preview ausgeführt wird, führt dies nicht zu einer Vorbereitung. Nun sucht der Treiber die Abfrage im Cache und findet das Handle und führt es mit sp_execute aus.
 Das Zwischenspeichern vorbereiteter Anweisungs Metadaten ist standardmäßig **deaktiviert** . Um es zu aktivieren, müssen Sie die folgende Methode für das Verbindungs Objekt aufzurufen:
 
@@ -87,7 +87,7 @@ Beispiel: `connection.setStatementPoolingCacheSize(10)`
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Gibt die Größe des vorbereiteten Anweisungs Caches für diese Verbindung an. Ein Wert kleiner als 1 bedeutet kein Cache.|
 |int getStatementPoolingCacheSize()|Gibt die Größe des vorbereiteten Anweisungs Caches für diese Verbindung zurück. Ein Wert kleiner als 1 bedeutet kein Cache.|
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

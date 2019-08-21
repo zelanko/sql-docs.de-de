@@ -1,7 +1,7 @@
 ---
 title: Informationen zur SSL-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916614"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027304"
 ---
 # <a name="understanding-ssl-support"></a>Grundlegendes zur SSL-Unterstützung
 
@@ -80,8 +80,8 @@ Während des SSL-Handshakes sendet der Server sein Zertifikat für öffentliche 
   
 - Ein DNS-Name kann Platzhalterzeichen enthalten. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] Allerdings unterstützt keine Platzhalter Übereinstimmung. Das heißt, „abc.com“ entspricht nicht „\*.com“, während „\*.com“ „\*.com“ entspricht.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)
 
-[Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
