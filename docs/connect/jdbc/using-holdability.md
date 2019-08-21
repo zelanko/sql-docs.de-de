@@ -1,7 +1,7 @@
 ---
 title: Verwenden der Haltbarkeit | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e447b5b9e1e24e716122622cc5cff873a452b1f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c126385955ce6e9fa9098ec5a09ba115b94ffb0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916239"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026197"
 ---
 # <a name="using-holdability"></a>Verwenden der Haltbarkeit
 
@@ -35,6 +35,6 @@ Im folgenden Beispiel wird die Resultsethaltbarkeit beim Ausführen einer lokale
 
 [!code[JDBC#UsingHoldability1](../../connect/jdbc/codesnippet/Java/using-holdability_1.java)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Ausführen von Transaktionen mit dem JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

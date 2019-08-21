@@ -5,16 +5,16 @@ description: Referenzartikel zu azdata app-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 793edde26ebebf9e55c5751adbedf662142280de
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 031d8283f14e06515394bb26aa94049a43b6b79f
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426280"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653226"
 ---
 # <a name="azdata-app"></a>azdata app
 
@@ -75,7 +75,7 @@ Speicherort des Anwendungsgerüsts. Standard: das aktuelle Arbeitsverzeichnis.
 Geben Sie einen anderen Speicherort für das Vorlagentepository an. Standard: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -83,7 +83,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-app-create"></a>azdata app create
 Erstellen einer Anwendung.
 ```bash
@@ -100,7 +100,7 @@ azdata app create --spec /path/to/dir/with/spec/yaml
 Der Pfad zu einem Verzeichnis mit einer YAML-Spezifikationsdatei, in der die Anwendung beschrieben ist.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -108,7 +108,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-app-update"></a>azdata app update
 Aktualisieren einer Anwendung.
 ```bash
@@ -127,7 +127,7 @@ Der Pfad zu einem Verzeichnis mit einer YAML-Spezifikationsdatei, in der die Anw
 Nicht zu einer Bestätigung auffordern, wenn eine Anwendung aus der „spec.yaml“-Datei aktualisiert wird, die sich im aktuellen Arbeitsverzeichnis befindet.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -135,7 +135,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-app-list"></a>azdata app list
 Auflisten von Anwendungen.
 ```bash
@@ -162,7 +162,7 @@ Anwendungsname
 Anwendungsversion
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -170,7 +170,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-app-delete"></a>azdata app delete
 Löschen einer Anwendung.
 ```bash
@@ -189,7 +189,7 @@ Anwendungsname
 Anwendungsversion
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -197,7 +197,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-app-run"></a>azdata app run
 Ausführen einer Anwendung.
 ```bash
@@ -228,7 +228,7 @@ Anwendungsversion
 Anwendungseingabeparameter im CSV-Format als `name=value`.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -236,7 +236,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-app-describe"></a>azdata app describe
 Beschreiben einer Anwendung.
 ```bash
@@ -258,7 +258,7 @@ Anwendungsname
 Anwendungsversion
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -266,8 +266,8 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.

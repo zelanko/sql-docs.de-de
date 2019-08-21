@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit Resultsets | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956955"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028241"
 ---
 # <a name="working-with-result-sets"></a>Arbeiten mit Resultsets
 
@@ -38,7 +38,7 @@ Die Themen in diesem Abschnitt beschreiben verschiedene Möglichkeiten, wie Sie 
 | [Ändern von Resultsetdaten – Beispiel](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Beschreibt die Verwendung eines Resultsets, um Daten in eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank einzufügen, daraus abzurufen bzw. darin zu ändern.                                                      |
 | [Zwischenspeichern von Resultsetdaten – Beispiel](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Beschreibt die Verwendung eines Resultsets, um umfangreiche Daten aus einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank abzurufen, sowie die Steuerung der Zwischenspeicherung dieser Daten im Client. |
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
 [Beispiele für JDBC-Treiberanwendungen](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

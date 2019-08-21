@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Anweisungen mit dem JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005923"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025794"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Verwenden von Anweisungen mit dem JDBC-Treiber
 
@@ -45,6 +45,6 @@ Der JDBC-Treiber umfasst drei Klassen zum Abrufen von Daten aus einer [!INCLUDE[
 | [Ausführen von Batchvorgängen](../../connect/jdbc/performing-batch-operations.md)                         | Beschreibt die Verwendung des JDBC-Treibers, um Batchoperationen auszuführen.                                                                                      |
 | [Verarbeiten komplexer Anweisungen](../../connect/jdbc/handling-complex-statements.md)                         | Beschreibt die Verwendung des JDBC-Treibers, um komplexe Anweisungen auszuführen, die vielfältige Tasks ausführen und verschiedene Datentypen zurückgeben können.               |
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

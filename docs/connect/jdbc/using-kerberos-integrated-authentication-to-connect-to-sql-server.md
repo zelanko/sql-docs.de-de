@@ -1,7 +1,7 @@
 ---
-title: Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server | Microsoft-Dokumentation
+title: Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916233"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026193"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung
 
@@ -49,7 +49,7 @@ Ab [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] können Anwendungen mit der
 
 Wenn Verbindungen mit einer Datenquelle erstellt werden, können Sie das Authentifizierungsschema programmgesteuert mit **setAuthenticationScheme** und optional den SPN für Kerberos mithilfe von **setServerSpn** festlegen.
 
-Zur Unterstützung der Kerberos-Authentifizierung wurde eine neue Protokollierung eingeführt: com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Weitere Informationen finden Sie unter [Tracing Driver Operation (Ablaufverfolgung für Treibervorgänge)](../../connect/jdbc/tracing-driver-operation.md).
+Zur Unterstützung der Kerberos-Authentifizierung wurde eine neue Protokollierung eingeführt: com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Weitere Informationen finden Sie unter [Ablaufverfolgung für Treibervorgänge](../../connect/jdbc/tracing-driver-operation.md).
 
 Befolgen Sie beim Konfigurieren von Kerberos die folgenden Richtlinien:
 
@@ -219,6 +219,6 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. Überprüfen Sie die Anmelde Informationen im `klist` Ticket über, und bestätigen Sie die Anmelde Informationen, die Sie für die Authentifizierung verwenden möchten.
 6. Führen Sie den obigen Beispielcode aus, und bestätigen Sie, dass die Kerberos-Authentifizierung erfolgreich war.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+[Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

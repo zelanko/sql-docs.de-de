@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren des Clients für die SSL-Verschlüsselung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956899"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028205"
 ---
-# <a name="configuring-the-client-for-ssl-encryption"></a>Konfigurieren des Clients für SSL-Verschlüsselung
+# <a name="configuring-the-client-for-ssl-encryption"></a>Konfigurieren des Clients für die SSL-Verschlüsselung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oder Client muss überprüfen, ob es sich bei dem Server um den richtigen Server handelt und das Serverzertifikat von einer Zertifizierungsstelle herausgegeben wurde, der der Client vertraut. Zum Überprüfen des Serverzertifikats müssen die Informationen zur Vertrauenswürdigkeit zur Verbindungszeit angegeben werden. Außerdem muss der Aussteller des Serverzertifikats eine Zertifizierungsstelle sein, der der Client vertraut.  
@@ -26,7 +26,7 @@ ms.locfileid: "67956899"
   
  Weitere Informationen zum Überprüfen des Serverzertifikats finden Sie im Abschnitt zum Überprüfen des SSL-Serverzertifikats unter [Grundlegendes zur SSL-Unterstützung](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="configuring-the-client-trust-store"></a>Konfigurieren des Clientvertrauensspeichers  
+## <a name="configuring-the-client-trust-store"></a>Konfigurieren des Clientvertrauensspeichers 
  Damit das Serverzertifikat überprüft werden kann, müssen die Vertrauensinformationen zur Verbindungszeit explizit mithilfe der **trustStore**- und **trustStorePassword**-Verbindungseigenschaft oder implizit mithilfe des Standardvertrauensspeichers der zugrunde liegenden Java Virtual Machine (JVM) übermittelt werden. Weitere Informationen zum Festlegen der **trustStore**- und **trustStorePassword**-Eigenschaft in einer Verbindungszeichenfolge finden Sie unter [Verbinden mit SSL-Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  Wenn die **trustStore**-Eigenschaft nicht angegeben oder auf NULL festgelegt ist, verwendet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] den Sicherheitsanbieter der zugrunde liegenden JVM, d. h. Java Secure Socket Extension (SunJSSE). Der SunJSSE-Anbieter stellt einen Standard-TrustManager bereit. Hiermit werden die von SQL Server zurückgegebenen X.509-Zertifikate anhand der in einem Vertrauensspeicher bereitgestellten Vertrauensinformationen überprüft.  
@@ -83,8 +83,8 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. Klicken Sie auf Weiter, und klicken Sie dann auf Fertig stellen, um das Zertifikat zu exportieren.  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Using SSL Encryption (Verwenden der SSL-Verschlüsselung)](../../connect/jdbc/using-ssl-encryption.md)   
- [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)   
+ [Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

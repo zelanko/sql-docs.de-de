@@ -1,7 +1,7 @@
 ---
 title: Verwenden einer SQL-Anweisung mit Parametern | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6716f670c42172f1721968124d7113e8f1936ddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7b8b3f8b387345d91451c726b7f74a5685913f6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916375"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026649"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Verwenden von SQL-Anweisungen mit Parametern
 
@@ -31,6 +31,6 @@ Im folgenden Beispiel wird eine offene Verbindung zur [!INCLUDE[ssSampleDBnormal
 
 [!code[JDBC#UsingSQLWithParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_1_1.java)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Anweisungen mit SQL](../../connect/jdbc/using-statements-with-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: Datenquellen Beispiel | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 61ad7ad7a2de372d4b223986d141fee76882d512
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c1ad1118b6576a5740f7c5a0f36309d39736407
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957216"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028344"
 ---
 # <a name="data-source-sample"></a>Beispiel für Datenquellen
 
@@ -85,6 +85,6 @@ public class ConnectDataSource {
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Verbinden und Abrufen von Daten](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)
+[Verbinden mit und Abrufen von Daten](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)

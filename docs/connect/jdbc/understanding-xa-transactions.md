@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zu XA-Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004153"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027218"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 
@@ -152,7 +152,7 @@ Ein Timeoutwert wird für jede Transaktion bei deren Start festgelegt, und es er
   
      Bedeutet, dass alle Transaktionen ein Timeout von 30 Sekunden (den Maximalwert) aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 30 Sekunden (den Maximalwert) beträgt.  
   
-### <a name="upgrading-sqljdbcxadll"></a>Aktualisieren von "sqljdbc_xa.dll"
+### <a name="upgrading-sqljdbc_xadll"></a>Aktualisieren von "sqljdbc_xa.dll"
 
 Wenn Sie eine neue Version des JDBC-Treibers installieren, sollten Sie auch sqljdbc_xa.dll aus der neuen Version verwenden, um sqljdbc_xa.dll auf dem Server zu aktualisieren.  
   
@@ -347,6 +347,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
 [Ausführen von Transaktionen mit dem JDBC-Treiber](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

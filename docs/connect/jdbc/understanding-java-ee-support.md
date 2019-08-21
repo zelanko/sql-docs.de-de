@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zur Java EE-Unterstützung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892310"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027266"
 ---
 # <a name="understanding-java-ee-support"></a>Grundlegendes zur Java EE-Unterstützung
 
@@ -41,7 +41,7 @@ JDBC-Treiber 7.4: Der Treiber ist in der Datei **mssql-jdbc-7.4.1.jre8.jar**, **
   
 Der Klassenname wird immer dann verwendet, wenn Sie den Treiber mit der JDBC-Klasse "DriverManager" Laden und wenn Sie den Klassennamen des Treibers in einer Treiber Konfiguration angeben. Für das Konfigurieren einer Datenquelle in einem Java EE-Anwendungsserver kann es beispielsweise erforderlich sein, den Treiberklassennamen einzugeben.  
   
-## <a name="data-sources"></a>Projektmappen-Explorer
+## <a name="data-sources"></a>Datenquellen
 
 Der JDBC-Treiber unterstützt Java EE-/JDBC 3.0-Datenquellen. Die JDBC-Treiberklasse [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) wird von `com.microsoft.sqlserver.jdbc.SQLServerXADataSource` implementiert.  
   
@@ -76,6 +76,6 @@ Connection c = ds.getConnection("user", "pwd");
 
 Weitere Informationen zu den Datenquelleneigenschaften finden Sie unter [Festlegen der Datenquelleneigenschaften](../../connect/jdbc/setting-the-data-source-properties.md).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

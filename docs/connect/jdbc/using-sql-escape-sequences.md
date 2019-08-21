@@ -1,7 +1,7 @@
 ---
 title: Verwenden von SQL-Escapesequenzen Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005935"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025895"
 ---
 # <a name="using-sql-escape-sequences"></a>Verwenden von SQL-Escapesequenzen
 
@@ -76,7 +76,7 @@ In der folgenden Tabelle werden die unterschiedlichen Funktionen aufgeführt, di
 > [!NOTE]  
 > Wenn Sie versuchen, eine von der Datenbank nicht unterstützte Funktion zu verwenden, tritt ein Fehler auf.  
 
-## <a name="date-and-time-literals"></a>Datums- und Uhrzeitliterale
+## <a name="date-and-time-literals"></a>Datums- und Zeitliterale
 
 Die Escapesyntax für Datums-, Zeit- und Timestampliterale lautet wie folgt:  
 
@@ -113,7 +113,7 @@ Dabei gibt `procedure-name` den Namen einer gespeicherten Prozedur an, und `para
   
 Weitere Informationen zum Verwenden der `call` Escapesequenz mit gespeicherten Prozeduren finden Sie unter Verwenden von [Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
-## <a name="outer-joins"></a>Äußere Verknüpfungen
+## <a name="outer-joins"></a>Äußere Joins
 
 Der JDBC-Treiber unterstützt die linke, rechte und vollständige äußere SQL92-Joinsyntax. Die Escapesequenz für äußere Joins lautet wie folgt:  
 
@@ -159,6 +159,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 Die Escapesyntax besteht aus zwei Teilen: \<*rows*> ist obligatorisch und gibt die Anzahl der zurückzugebenden Zeilen an. OFFSET und \<*row offset*> sind optional und geben die Anzahl der zu überspringenden Zeilen an, bevor mit der Rückgabe von Zeilen begonnen wird. Der JDBC-Treiber unterstützt nur den obligatorischen Teil, indem er die Abfrageklausel von LIMIT in TOP umwandelt. SQL Server unterstützt die LIMIT-Klausel nicht. **Der JDBC-Treiber unterstützt den optionalen Parameter \<row offset> nicht, und der Treiber löst eine Ausnahme aus, wenn er verwendet wird.**  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Tabellenwert Parametern | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd5f00d551c189f583af4232fe31716b51594df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98863afb5a47eddfd311563bd03a1c7c7120b161
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003926"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025710"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
 
@@ -312,6 +312,6 @@ Die folgenden Methoden wurden dieser Klasse hinzugefügt, um das Übergeben von 
 | öffentliches Finale void setstrukturierte (String Elementname, String tvpname, Resultset tvpresultset)             | Füllt einen Tabellenwert Parameter auf, der an eine gespeicherte Prozedur übergeben wird, wobei ein Resultset aus einer anderen Tabelle abgerufen wird. Parameter Name ist der Name des Parameters, tvpname ist der Name des Typs TVP, und tvpresultset ist das Quellresultset-Objekt.                                                                              |
 | öffentliches Finale void setstrukturierte (String Elementname, String tvpname, isqlserverdatarecord tvpdatarecord) | Füllt einen Tabellenwert Parameter auf, der mit einem isqlserverdatarecord-Objekt an eine gespeicherte Prozedur übergeben wird. Isqlserverdatarecord wird zum Streamen von Daten verwendet, und der Benutzer entscheidet, wie er verwendet werden soll. Parameter Name ist der Name des Parameters, tvpname ist der Name des Typs TVP, und tvpdatarecord ist ein isqlserverdatarecord-Objekt. |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,7 +1,7 @@
 ---
 title: Verwenden der adaptiven Pufferung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916464"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026798"
 ---
 # <a name="using-adaptive-buffering"></a>Verwenden der adaptiven Pufferung
 
@@ -91,6 +91,6 @@ Darüber hinaus enthält die folgende Liste einige Empfehlungen für scrollfähi
 
 - Bei aktualisierbaren Resultsets mit Vorwärtscursor liest der Treiber beim Abrufen eines Zeilenblocks normalerweise die von der [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts angegebene Anzahl von Zeilen in den Speicher ein, auch wenn die adaptive Pufferung für die Verbindung aktiviert ist. Wenn das Aufrufen der [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts einen OutOfMemoryError verursacht, können Sie die Anzahl der abgerufenen Zeilen verringern, indem Sie die [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)-Methode des [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekts aufrufen, um die Abrufgröße auf eine kleinere Zeilenanzahl festzulegen und ggf. sogar auf eine Zeile verringern. Sie können auch erzwingen, dass der Treiber keine Zeilen puffert, indem Sie vor dem Ausführen der Anweisung die [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)-Methode des [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekts mit dem Parameter **adaptiv** aufrufen. Da das Resultset nicht scrollfähig ist, verwirft der Treiber einen großen Spaltenwert, auf den die Anwendung mit einer der get\<Type>Stream-Methoden zugreift, wie bei schreibgeschützten Resultsets mit Vorwärtscursor, sobald er von der Anwendung gelesen wurde.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verbessern von Leistung und Zuverlässigkeit mit dem JDBC-Treiber](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

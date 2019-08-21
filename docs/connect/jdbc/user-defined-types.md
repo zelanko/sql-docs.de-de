@@ -1,7 +1,7 @@
 ---
 title: Benutzerdefinierte Typen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae4ada0ee18b9066df27a130a8f68405b760159d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004098"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027137"
 ---
 # <a name="user-defined-types"></a>Benutzerdefinierte Typen
 
@@ -25,6 +25,6 @@ Benutzerdefinierte Typen (UDTs) wurden in [!INCLUDE[ssVersion2005](../../include
 
 UDTs mit genau oder weniger als 8.000 Byte verhalten sich also genau wie bisher. Größere UDTs werden aber unterstützt und zeigen ihre Größe als "unbegrenzt" an.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

@@ -1,7 +1,7 @@
 ---
 title: Verwenden mehrerer Resultsets | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005960"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026275"
 ---
 # <a name="using-multiple-result-sets"></a>Verwenden von mehreren Resultsets
 
@@ -39,6 +39,6 @@ In diesem Fall ist bekannt, dass zwei Resultsets zurückgegeben werden. Der Code
 > [!NOTE]  
 > Wenn Sie die getMoreResults-Methode der SQLServerStatement-Klasse aufrufen, wird das zuvor zurückgegebene Resultset implizit geschlossen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

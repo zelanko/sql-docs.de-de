@@ -1,7 +1,7 @@
 ---
 title: SQL-Datenermittlung und -klassifizierung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b6f9962be0fa138786af425ab24bf9608bf3264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957233"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028385"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL-Datenermittlung und -klassifizierung
 
@@ -30,7 +30,7 @@ Die Codedatei für dieses Beispiel heißt "datadiscoveryandclassification. Java"
 
 ## <a name="requirements"></a>Anforderungen  
 
-Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../jdbc/using-the-jdbc-driver.md).
+Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [Verwenden des JDBC-Treibers](../../jdbc/using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;
@@ -182,6 +182,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Beispiele für JDBC-Treiberanwendungen](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  

@@ -1,7 +1,7 @@
 ---
 title: Ablauf Verfolgungs Treiber-Vorgang | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916687"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027592"
 ---
 # <a name="tracing-driver-operation"></a>Ablaufverfolgung für Treibervorgänge
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -131,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Aktivieren der Ablaufverfolgung mit der Datei "Logging.Properties"  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Aktivieren der Ablaufverfolgung mit der Datei „logging.properties“  
  Sie können die Ablaufverfolgung auch mit der Datei `logging.properties` aktivieren, die sich im Verzeichnis `lib` der JRE-Installation (Java Runtime Environment) befindet. In dieser Datei können Sie die Standardwerte für die Protokollierungund Handler festlegen, die bei Aktivierung der Ablaufverfolgung verwendet werden sollen.  
   
  Das folgende Beispiel veranschaulicht die Einstellungen, die in `logging.properties`-Dateien vorgenommen werden können:  
@@ -158,7 +158,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Mit dem Objekt „LogManager“, das Bestandteil von „java.util.logging“ ist, können Sie die Eigenschaften in der Datei `logging.properties` festlegen.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [Diagnostizieren von Problemen mit dem JDBC-Treiber](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

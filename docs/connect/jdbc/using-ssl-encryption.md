@@ -1,7 +1,7 @@
 ---
 title: Verwenden der SSL-Verschlüsselung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34a486a2bcde43ccccc053aed9ebd9392ce34e8c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003966"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026036"
 ---
 # <a name="using-ssl-encryption"></a>Verwenden der SSL-Verschlüsselung
 
@@ -42,6 +42,6 @@ In den Themen in diesem Abschnitt werden die Unterstützung der SSL-Verschlüsse
 | [Herstellen von Verbindungen mit SSL-Verschlüsselung](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Beschreibt das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mithilfe der neuen SSL-spezifischen Verbindungseigenschaften. |
 | [Konfigurieren des Clients für SSL-Verschlüsselung](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Beschreibt das Konfigurieren des Standardvertrauensspeichers auf Clientseite und das Importieren eines privaten Zertifikats im Vertrauensspeicher des Clientcomputers.   |
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  

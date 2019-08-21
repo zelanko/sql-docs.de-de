@@ -1,7 +1,7 @@
 ---
 title: Verwenden von erweiterten Datentypen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004067"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027010"
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 
@@ -148,7 +148,7 @@ Weitere Informationen zu Typen mit umfangreichen Werten finden Sie in der SQL Se
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfasst einen **XML**-Datentyp, mit dem Sie XML-Dokumente und -Fragmente in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank speichern können. Der **XML**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ähnelt in einigen Punkten anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **XML**-Datentyp beim Erstellen einer Tabelle als Spaltentyp, als Variablentyp, als Parametertyp oder als Funktionsrückgabetyp bzw. in den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen CAST und CONVERT verwenden.  
   
-Im JDBC-Treiber kann der **XML**-Datentyp als Zeichenfolgen-, Bytearray-, Stream-, CLOB-, BLOB- oder SQLXML-Objekt zugeordnet werden. Der Standard lautet Zeichenfolge. Ab JDBC Driver, Version 2.0, unterstützt der JDBC-Treiber die JDBC 4.0-API, in der die SQLXML-Schnittstelle eingeführt wurde. Die SQLXML-Schnittstelle definiert Methoden für die Interaktion mit und die Bearbeitung von XML-Daten. Der **SQLXML** -Datentyp wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XML** -Datentyp zugeordnet. Weitere Informationen über das Lesen und Schreiben von XML-Daten in bzw. aus einer relationalen Datenbank mit dem **SQLXML**-Java-Datentyp finden Sie unter [Supporting XML Data (Unterstützung von XML-Daten)](../../connect/jdbc/supporting-xml-data.md).  
+Im JDBC-Treiber kann der **XML**-Datentyp als Zeichenfolgen-, Bytearray-, Stream-, CLOB-, BLOB- oder SQLXML-Objekt zugeordnet werden. Der Standard lautet Zeichenfolge. Ab JDBC Driver, Version 2.0, unterstützt der JDBC-Treiber die JDBC 4.0-API, in der die SQLXML-Schnittstelle eingeführt wurde. Die SQLXML-Schnittstelle definiert Methoden für die Interaktion mit und die Bearbeitung von XML-Daten. Der **SQLXML** -Datentyp wird dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XML** -Datentyp zugeordnet. Weitere Informationen über das Lesen und Schreiben von XML-Daten in bzw. aus einer relationalen Datenbank mit dem **SQLXML**-Java-Datentyp finden Sie unter [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md).  
   
 Die Implementierung des **XML**-Datentyps im JDBC-Treiber ermöglicht Folgendes:  
   
@@ -170,7 +170,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein UDT als Sp
   
 Weitere Informationen zu benutzerdefinierten Datentypen finden Sie in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation unter „Verwenden und Ändern von Instanzen von benutzerdefinierten Typen“.  
   
-## <a name="sqlvariant-data-type"></a>Datentyp „Sql_variant“
+## <a name="sql_variant-data-type"></a>Sql_variant-Datentyp
 
 Weitere Informationen zum sql_variant-Datentyp finden [Sie unter Verwenden des sql_variant](../../connect/jdbc/using-sql-variant-datatype.md)-Datentyps.  
 
@@ -178,6 +178,6 @@ Weitere Informationen zum sql_variant-Datentyp finden [Sie unter Verwenden des s
 
 Informationen zu räumlichen Datentypen finden Sie unter [using Spatial Datatypes](../../connect/jdbc/use-spatial-datatypes.md).  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

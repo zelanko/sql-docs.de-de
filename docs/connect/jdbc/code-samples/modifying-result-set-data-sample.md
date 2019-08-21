@@ -1,7 +1,7 @@
 ---
 title: Beispiel zum Ändern von Resultsetdaten | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b5ae54dc-2a79-4664-bb21-cacdb7d745e1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4fda5493ac0f52cf8a6f669fd4989e44a6856278
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52ef5b12771cb7ef65f34dd7d890f19a8541d3ee
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957175"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028336"
 ---
-# <a name="modifying-result-set-data-sample"></a>Ändern von Resultsetdaten - Beispiel
+# <a name="modifying-result-set-data-sample"></a>Ändern von Resultsetdaten – Beispiel
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -31,7 +31,7 @@ Die Codedatei für dieses Beispiel heißt „UpdateResultSet.java“ und befinde
 
 ## <a name="requirements"></a>Anforderungen
 
-Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).
+Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei „mssql-jdbc.jar“ in den Klassenpfad aufnehmen. Sie benötigen darüber hinaus Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [Verwenden des JDBC-Treibers](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
 > Der [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] enthält die Klassenbibliotheksdateien „mssql-jdbc“ für die jeweilige Verwendung mit Ihren bevorzugten JRE-Einstellungen (Java Runtime Environment). Weitere Informationen zum Auswählen der richtigen JAR-Datei finden Sie unter [Systemanforderungen für den JDBC-Treiber](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
@@ -111,6 +111,6 @@ public class UpdateResultSet {
 
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Arbeiten mit Resultsets](../../../connect/jdbc/code-samples/working-with-result-sets.md)

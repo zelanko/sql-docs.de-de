@@ -1,7 +1,7 @@
 ---
 title: Anwendungssicherheit | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957464"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028515"
 ---
 # <a name="application-security"></a>Anwendungssicherheit
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -63,7 +63,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
   
  Die SSL-Unterstützung kann verwendet werden, um zusätzlich zu IPSEC eine weitere Schutzebene bereitzustellen. Weitere Informationen zur Verwendung von SSL finden Sie unter [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

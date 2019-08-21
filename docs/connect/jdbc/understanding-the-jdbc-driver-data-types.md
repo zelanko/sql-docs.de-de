@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zu den JDBC-Treiber Datentypen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916599"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027274"
 ---
-# <a name="understanding-the-jdbc-driver-data-types"></a>Grundlegendes zu den Datentypen in JDBC Driver
+# <a name="understanding-the-jdbc-driver-data-types"></a>Grundlegendes zu den Datentypen des JDBC-Treibers
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -40,6 +40,6 @@ Die Themen in diesem Abschnitt beschreiben die Verwendung der grundlegenden und 
 | [Unterstützen von XML-Daten](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Beschreibt die SQLXML-Schnittstelle. Beschreibt außerdem, wie Sie XML-Daten mit dem **SQLXML**-Java-Datentyp in bzw. aus einer relationalen Datenbank schreiben und lesen.                                                                                                             |
 | [Wrapper und Schnittstellen](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Behandelt die Schnittstellen, die über die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-spezifischen Methoden und Konstanten verfügen und es einem Anwendungsserver ermöglichen, einen Proxy der Klasse zu erstellen. Behandelt außerdem Unterstützungen für die `java.sql.Wrapper`-Schnittstelle. |
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

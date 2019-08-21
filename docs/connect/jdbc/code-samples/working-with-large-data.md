@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit großen Datenmengen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f4c8cf36ca44e4de7bf3b49ac59285fedded6dd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 425beac7bcae36170ff378b59d36da05838df645
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956988"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028256"
 ---
 # <a name="working-with-large-data"></a>Arbeiten mit umfangreichen Daten
 
@@ -37,7 +37,7 @@ Die Themen in diesem Abschnitt beschreiben verschiedene Möglichkeiten, wie Sie 
 | [Beispiel zum Lesen umfangreicher Daten mit gespeicherten Prozeduren](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Beschreibt das Abrufen eines umfangreichen CallableStatement OUT-Parameterwerts. |
 | [Beispiel zum Aktualisieren umfangreicher Daten](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Beschreibt das Aktualisieren von Daten mit umfangreichen Werten in einer Datenbank.                |
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Beispiele für JDBC-Treiberanwendungen](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

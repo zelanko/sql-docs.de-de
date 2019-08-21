@@ -1,7 +1,7 @@
 ---
 title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von Java | Microsoft-Dokumentation'
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004286"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027510"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java
   
 Dieses Beispiel sollte nur als Proof of Concept angesehen werden. Der Beispielcode wird aus Gründen der Übersichtlichkeit vereinfacht und repräsentiert nicht unbedingt die bewährten Methoden, die von Microsoft empfohlen werden.  
   
-## <a name="step-1--connect"></a>Schritt 1: verbinden  
+## <a name="step-1-connect"></a>Schritt 1: verbinden  
   
 Verwenden Sie die Verbindungs Klasse, um eine Verbindung mit SQL-Datenbank herzustellen.   
   

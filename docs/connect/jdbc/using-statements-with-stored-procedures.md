@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Anweisungen mit gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003937"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025862"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Verwenden von Anweisungen mit gespeicherten Prozeduren
 
@@ -56,6 +56,6 @@ Die Themen in diesem Abschnitt beschreiben, wie Sie gespeicherte [!INCLUDE[ssNoV
 |[Verwenden von gespeicherten Prozeduren mit einem Rückgabestatus](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Rückgabestatuswerte enthalten.|  
 |[Verwenden von gespeicherten Prozeduren mit einer Updatezählung](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Beschreibt die Verwendung des JDBC-Treibers zum Ausführen von gespeicherten Prozeduren, die Updatezählungen enthalten.|  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

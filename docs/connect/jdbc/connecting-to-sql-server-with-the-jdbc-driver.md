@@ -1,7 +1,7 @@
 ---
-title: Verbinden von SQL Server mit dem JDBC-Treiber | Microsoft-Dokumentation
+title: Verbinden mit SQL Server mit dem JDBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1b88d1824564a9b4fdd3d5340575a5afdff5ca3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956820"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028180"
 ---
-# <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Verbinden von SQL Server mit dem JDBC-Treiber
+# <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Verbinden mit SQL Server mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Eine der grundlegenden Aufgaben, die mit [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ausgeführt werden, ist das Herstellen einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank. Die gesamte Interaktion mit der Datenbank erfolgt über das [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)-Objekt. Da der JDBC-Treiber eine extrem flache Architektur aufweist, beziehen sich nahezu alle wesentlichen Verhalten auf das SQLServerConnection-Objekt.  
@@ -40,11 +40,11 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Arbeiten mit einer Verbindung](../../connect/jdbc/working-with-a-connection.md)|Beschreibt die verschiedenen Möglichkeiten, um die Instanz einer Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zu erstellen.|  
 |[Verwenden von Verbindungspools](../../connect/jdbc/using-connection-pooling.md)|Beschreibt die Unterstützung von Verbindungspools durch den JDBC-Treiber.|  
 |[Verwenden der Datenbankspiegelung &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Beschreibt die Unterstützung der Datenbankspiegelung durch den JDBC-Treiber.|  
-|[JDBC Driver-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Beschreibt das Entwickeln einer Anwendung, die eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe herstellt.|  
+|[JDBC-Treiber-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Beschreibt das Entwickeln einer Anwendung, die eine Verbindung mit einer AlwaysOn-Verfügbarkeitsgruppe herstellt.|  
 |[Verwenden der integrierten Kerberos-Authentifizierung für Verbindungen mit SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Erläutert eine Java-Implementierung für Anwendungen zum Herstellen von Verbindungen mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank mit integrierter Kerberos-Authentifizierung.|  
 |[Herstellen einer Verbindung mit einer Azure SQL-Datenbank](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Erläutert Verbindungsprobleme für Datenbanken in SQL Azure.|  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Overview of the JDBC Driver (Übersicht über den JDBC-Treiber)](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

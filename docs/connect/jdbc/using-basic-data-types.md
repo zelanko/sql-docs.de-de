@@ -1,7 +1,7 @@
 ---
 title: Verwenden von grundlegenden Datentypen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916361"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026514"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
@@ -126,6 +126,6 @@ Wenn Sie Parameter wieder aus einer gespeicherten Prozedur abrufen müssen, müs
   
 Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Ausgabeparametern finden [Sie unter Verwenden einer gespeicherten Prozedur mit Ausgabeparametern](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Grundlegendes zu den Datentypen in JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

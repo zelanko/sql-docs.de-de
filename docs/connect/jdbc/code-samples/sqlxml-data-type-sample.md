@@ -1,7 +1,7 @@
 ---
 title: SQLXML-Datentyp Beispiel | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8775c93afaa84570c5f4da51672bbec6379a927f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df376535f8f6c6a7d98e1744a2d2b70e813d400a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957050"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028285"
 ---
 # <a name="sqlxml-data-type-sample"></a>Beispiel für den SQLXML-Datentyp
 
@@ -38,7 +38,7 @@ Die Codedatei für dieses Beispiel heißt „SqlXmlDataType.java“ und befindet
 
 ## <a name="requirements"></a>Anforderungen
 
-Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei "sqljdbc4.jar" in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für „sqljdbc4.jar“ vorhanden ist, löst die Beispielanwendung die Ausnahme „ClassNotFound“ aus. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [mit dem JDBC-Treiber](../../../connect/jdbc/using-the-jdbc-driver.md).
+Wenn Sie diese Beispielanwendung ausführen möchten, müssen Sie die Datei "sqljdbc4.jar" in den Klassenpfad aufnehmen. Wenn im Klassenpfad kein Eintrag für „sqljdbc4.jar“ vorhanden ist, löst die Beispielanwendung die Ausnahme „ClassNotFound“ aus. Weitere Informationen zum Festlegen des Klassenpfads finden Sie unter [Verwenden des JDBC-Treibers](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 Außerdem benötigen Sie zum Ausführen dieser Beispielanwendung Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]-Beispieldatenbank.
 
@@ -60,6 +60,6 @@ Die showTransformer-Methode veranschaulicht das Abrufen von XML-Daten aus der ei
 
 [!code[JDBC#UsingSQLXML1](../../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Working with Data Types &#40;JDBC&#41; (Arbeiten mit Datentypen &#40;JDBC&#41;)](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)
+[Arbeiten mit Datentypen &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)

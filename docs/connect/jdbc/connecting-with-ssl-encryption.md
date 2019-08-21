@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit SSL-Verschlüsselung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ccbd9db2ae39113ca157651bdc6dc1486307419
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956805"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028154"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Herstellen von Verbindungen mit SSL-Verschlüsselung
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,8 +64,8 @@ String connectionUrl =
 >  Sie können den Wert von Verbindungseigenschaften auch mithilfe der entsprechenden **Setter**-Methoden festlegen, die von der [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)-Klasse bereitgestellt werden.  
   
  Wenn die Eigenschaft **verschlüsseln** auf **true** festgelegt ist und die **TrustServerCertificate** -Eigenschaft auf **false** festgelegt ist und der Servername in der Verbindungs Zeichenfolge nicht mit dem Servernamen im SSL-Zertifikat identisch ist, wird der folgende Fehler angezeigt: ausgestellt: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Ab Version 7,2 unterstützt der Treiber die Zuordnung von Platzhalter Mustern in der äußersten linken Bezeichnung des Server namens im SSL-Zertifikat.
-## <a name="see-also"></a>Weitere Informationen  
- [Using SSL Encryption (Verwenden der SSL-Verschlüsselung)](../../connect/jdbc/using-ssl-encryption.md)   
- [Sichern von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Verwenden der SSL-Verschlüsselung](../../connect/jdbc/using-ssl-encryption.md)   
+ [Schützen von JDBC-Treiberanwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

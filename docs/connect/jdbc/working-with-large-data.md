@@ -1,7 +1,7 @@
 ---
 title: Arbeiten mit großen Datenmengen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b685160f7d6a2c5c413425fe8d150214d3dd9897
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aab60ed1db5d7749c4edbc52fcad4bebddf93d52
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003841"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025462"
 ---
 # <a name="working-with-large-data"></a>Arbeiten mit umfangreichen Daten
 
@@ -37,6 +37,6 @@ Der **adaptive**-Wert ist der Standardpuffermodus, und der JDBC-Treiber puffert 
 | [Beispiel zum Lesen umfangreicher Daten mit gespeicherten Prozeduren](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) | Beschreibt das Abrufen eines umfangreichen CallableStatement OUT-Parameterwerts. |
 | [Beispiel zum Aktualisieren umfangreicher Daten](../../connect/jdbc/updating-large-data-sample.md)                                             | Beschreibt das Aktualisieren von Daten mit umfangreichen Werten in einer Datenbank.                |
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Beispiele für JDBC-Treiberanwendungen](../../connect/jdbc/sample-jdbc-driver-applications.md)  

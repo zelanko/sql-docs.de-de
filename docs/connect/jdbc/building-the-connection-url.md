@@ -1,7 +1,7 @@
 ---
 title: Aufbauen der Verbindungs-URL | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957376"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028454"
 ---
 # <a name="building-the-connection-url"></a>Erstellen der Verbindungs-URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67957376"
     > [!NOTE]  
     >  Um eine optimale Leistung der Verbindung zu gewährleisten, sollten Sie "portNumber" festlegen, wenn Sie eine Verbindung zu einer benannten Instanz herstellen. Dadurch werden Roundtrips zum Server vermieden, um die Portnummer zu ermitteln. Wenn "portNumber" und "instanceName" verwendet werden, hat "portNumber" Vorrang und "instanceName" wird ignoriert.  
   
--   **property** (optional) ist mindestens eine optionale Verbindungseigenschaft. Weitere Informationen zum Festlegen der Verbindungseigenschaften finden Sie unter [Setting the Connection Properties (Festlegen von Verbindungseigenschaften)](../../connect/jdbc/setting-the-connection-properties.md). Sie können eine beliebige Eigenschaft aus der Liste angeben. Mehrere Eigenschaften müssen durch ein Semikolon („;“) getrennt werden und dürfen nicht doppelt vorkommen.  
+-   **property** (optional) ist mindestens eine optionale Verbindungseigenschaft. Weitere Informationen zum Festlegen der Verbindungseigenschaften finden Sie unter [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md). Sie können eine beliebige Eigenschaft aus der Liste angeben. Mehrere Eigenschaften müssen durch ein Semikolon („;“) getrennt werden und dürfen nicht doppelt vorkommen.  
   
 > [!CAUTION]  
 >  Aus Sicherheitsgründen sollten Sie es vermeiden, die Verbindungs-URLs basierend auf Benutzereingaben zu erstellen. Sie sollten in der URL lediglich Servername und Treiber angeben. Verwenden Sie für Werte von Benutzernamen und Kennwörtern die properties-Auflistungen für Verbindungen. Weitere Informationen zur Sicherheit in ihren JDBC-Anwendungen finden Sie unter [Sichern von JDBC-Treiber Anwendungen](../../connect/jdbc/securing-jdbc-driver-applications.md).  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Siehe auch  
+ [Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

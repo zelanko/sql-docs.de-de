@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Anweisungen mit SQL | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 082671d3acf2873bb822e6b836599c00f42d6323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916162"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025828"
 ---
 # <a name="using-statements-with-sql"></a>Verwenden von Anweisungen mit SQL
 
@@ -39,6 +39,6 @@ Die folgenden Abschnitte enthalten Beschreibungen der verschiedenen Szenarios f�
 | [Ändern von Datenbankobjekten mit SQL-Anweisungen](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | Beschreibt die Verwendung von SQL-Anweisungen, um Datenbankobjekte zu ändern.   |
 | [Ändern von Daten mit SQL-Anweisungen](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | Beschreibt die Verwendung von SQL-Anweisungen, um Daten in einer Datenbank zu ändern. |
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Anweisungen mit dem JDBC-Treiber](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

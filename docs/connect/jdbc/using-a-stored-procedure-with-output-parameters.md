@@ -1,7 +1,7 @@
 ---
-title: Verwenden von gespeicherten Prozeduren mit Eingabeparametern | Microsoft-Dokumentation
+title: Verwenden von gespeicherten Prozeduren mit Ausgabeparametern | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9ee3a8d6b0a4c6514864a5990a87de9d732684d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916494"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026831"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Verwenden von gespeicherten Prozeduren mit Ausgabeparametern
 
@@ -86,6 +86,6 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 
 Gespeicherte Prozeduren können Updatezählungen und mehrere Resultsets zurückgeben. Die [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] folgt der JDBC 3,0-Spezifikation, die angibt, dass mehrere Resultsets und Update Zählungen abgerufen werden sollen, bevor die Out-Parameter abgerufen werden. Das heißt, dass die Anwendung alle ResultSet-Objekte und Update Zählungen abrufen muss, bevor die Out-Parameter mit den CallableStatement. Getter-Methoden abgerufen werden. Andernfalls gehen die noch nicht abgerufenen ResultSet-Objekte und Updatezählungen verloren, wenn die OUT-Parameter abgerufen werden. Weitere Informationen zu Update Zählungen und mehreren Resultsets finden [Sie unter Verwenden einer gespeicherten Prozedur mit einer Update Anzahl](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) und [Verwenden mehrerer Resultsets](../../connect/jdbc/using-multiple-result-sets.md).
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 [Verwenden von Anweisungen mit gespeicherten Prozeduren](../../connect/jdbc/using-statements-with-stored-procedures.md)
