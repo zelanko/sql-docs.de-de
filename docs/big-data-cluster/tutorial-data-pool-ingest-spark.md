@@ -1,26 +1,26 @@
 ---
 title: Erfassen von Daten mit Spark-Aufträgen
 titleSuffix: SQL Server big data clusters
-description: In diesem Tutorial wird veranschaulicht, wie Daten mithilfe von Spark-Aufträgen in Azure Data Studio im Datenpool eines Big-Data-Clusters für SQL Server 2019 (Vorschauversion) erfasst werden.
+description: In diesem Tutorial wird veranschaulicht, wie Daten [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] mithilfe von Spark-Aufträgen in Azure Data Studio in den Daten Pool eines erfasst werden.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957814"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653297"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Lernprogramm: Erfassen von Daten in einem SQL Server-Datenpool mithilfe von Spark-Aufträgen
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Erfassen von Daten in einem SQL Server-Datenpool mithilfe von Spark-Aufträgen
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial wird veranschaulicht, wie Daten mithilfe von Spark-Aufträgen in den [Datenpool](concept-data-pool.md) eines Big-Data-Clusters für SQL Server 2019 (Vorschauversion) geladen werden. 
+In diesem Tutorial wird veranschaulicht, wie Sie Spark-Aufträge verwenden, um Daten in den [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] [Daten Pool](concept-data-pool.md) eines zu laden. 
 
 In diesem Tutorial lernen Sie Folgendes:
 
@@ -44,9 +44,9 @@ In diesem Tutorial lernen Sie Folgendes:
 
 Mit den folgenden Schritten wird eine externe Tabelle mit dem Namen **web_clickstreams_spark_results** im Datenpool erstellt. Diese Tabelle kann dann als Speicherort für die Erfassung von Daten im Big-Data-Cluster verwendet werden.
 
-1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Connect to the SQL Server master instance (Herstellen einer Verbindung mit der SQL Server-Masterinstanz)](connect-to-big-data-cluster.md#master).
+1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
-1. Doppelklicken Sie auf die Verbindung im Fenster **Server**, um das Serverdashboard der SQL Server-Masterinstanz anzuzeigen. Wählen Sie **Neue Abfrage** aus.
+1. Doppelklicken Sie im Fenster **Server** auf die Verbindung, um das Serverdashboard der SQL Server-Masterinstanz anzuzeigen. Wählen Sie **Neue Abfrage** aus.
 
    ![Abfrage in der SQL Server-Masterinstanz](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
@@ -79,7 +79,7 @@ Mit den folgenden Schritten wird eine externe Tabelle mit dem Namen **web_clicks
 
 Im nächsten Schritt erstellen Sie einen Spark-Streamingauftrag, der Webclickstreamdaten aus dem Speicherpool (HDFS) in die externe Tabelle lädt, die Sie im Datenpool erstellt haben.
 
-1. Stellen Sie in Azure Data Studio eine Verbindung mit der Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Connect to a big data cluster (Herstellen einer Verbindung mit einem Big-Data-Cluster)](connect-to-big-data-cluster.md).
+1. Stellen Sie in Azure Data Studio eine Verbindung mit der Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einem Big-Data-Cluster](connect-to-big-data-cluster.md).
 
 1. Doppelklicken Sie im Fenster **Server** auf die HDFS/Spark-Gatewayverbindung. Wählen Sie dann **New Spark Job** (Neuer Spark-Auftrag) aus.
 
@@ -103,7 +103,7 @@ Im nächsten Schritt erstellen Sie einen Spark-Streamingauftrag, der Webclickstr
 
    In der folgenden Tabelle wird jedes Argument beschrieben:
 
-   | Argument | und Beschreibung |
+   | Argument | Beschreibung |
    |---|---|
    | Servername | Die zum Lesen des Tabellenschemas verwendete SQL Server-Instanz |
    | Portnummer | Der Port, an dem SQL Server lauscht (Standard: 1433) |

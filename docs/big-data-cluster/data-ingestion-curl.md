@@ -1,26 +1,26 @@
 ---
 title: Verwenden von curl, um Daten in HDFS zu laden | Microsoft-Dokumentation
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie curl, um Daten in HDFS in Big Data-Clustern für SQL Server 2019 zu laden.
+description: Verwenden Sie curl, um Daten in HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zu laden.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 729c3af97f98bafced482f7ead8ce85f93b55af3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958631"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652211"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Verwenden von curl, um Daten in HDFS in Big Data-Clustern für SQL Server zu laden
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Verwenden von curl zum Laden von Daten in HDFS unter[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird erläutert, wie Sie **curl** verwenden, um Daten in HDFS in Big Data-Clustern für SQL Server 2019 (Vorschauversion) zu laden.
+In diesem Artikel wird erläutert, wie Sie **curl** zum Laden von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Daten in HDFS in (Vorschau) verwenden.
 
 ## <a name="obtain-the-service-external-ip"></a>Abrufen der externen IP des Diensts
 
@@ -39,7 +39,7 @@ Nun können Sie die URL für den Zugriff auf das WebHDFS wie folgt erstellen:
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-Beispiel:
+Zum Beispiel:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 

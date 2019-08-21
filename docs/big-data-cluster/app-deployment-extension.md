@@ -1,31 +1,31 @@
 ---
 title: App Deploy-Erweiterung
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie ein Python- oder R-Skript als Anwendung auf einem Big-Data-Cluster für SQL Server 2019 (Vorschauversion) bereitstellen.
+description: Stellen Sie ein Python-oder R-Skript als [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Anwendung auf (Vorschau) bereit.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 49a59650c406e3b48394da45ad0eeb4589fc4374
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958915"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653657"
 ---
-# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Verwenden von VS Code zum Bereitstellen von Anwendungen auf Big-Data-Clustern für SQL Server
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Verwenden von Visual Studio Code zum Bereitstellen von Anwendungen[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie mit der App Deploy-Erweiterung (Erweiterung für App-Bereitstellungen) in Visual Studio Code Anwendungen auf einem Big-Data-Cluster für SQL Server bereitstellen. Diese Funktion wurde in CTP 2.3 eingeführt. 
+In diesem Artikel wird beschrieben, wie Sie Anwendungen in einem SQL Server Big Data Cluster mithilfe Microsoft Visual Studio Codes mit der APP-Bereitstellungs Erweiterung bereitstellen. Diese Funktion wurde in CTP 2.3 eingeführt. 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Big-Data-Cluster für SQL Server](big-data-cluster-overview.md) CTP 2.3 oder höher
+- [SQL Server Big Data Cluster](big-data-cluster-overview.md) CTP 2,3 oder höher
 
 ## <a name="capabilities"></a>Funktionen
 
@@ -44,11 +44,11 @@ In den folgenden Abschnitten wird der zuerst der Installationsvorgang beschriebe
 
 ### <a name="install"></a>Installieren
 
-Installieren Sie zuerst die App Deploy-Erweiterung in VS Code:
+Installieren Sie zunächst die Erweiterung der APP-Bereitstellung in Visual Studio Code:
 
-1. Laden Sie die [App Deploy-Erweiterung](https://aka.ms/app-deploy-vscode) für VS Code herunter.
+1. App-Bereitstellungs [Erweiterung](https://aka.ms/app-deploy-vscode) herunterladen, um die Erweiterung im Rahmen der Visual Studio Code zu installieren.
 
-1. Starten Sie VS Code, und navigieren Sie zur Randleiste mit den Erweiterungen.
+1. Starten Sie Visual Studio Code, und navigieren Sie zur Rand Leiste Erweiterungen.
 
 1. Klicken Sie oben in der Randleiste auf das Kontextmenü `…` und anschließend auf `Install from vsix`.
 
@@ -56,29 +56,48 @@ Installieren Sie zuerst die App Deploy-Erweiterung in VS Code:
 
 1. Wählen Sie die heruntergeladene `sqlservbdc-app-deploy.vsix`-Datei aus, die installiert werden soll.
 
-Nachdem die App Deploy-Erweiterung für Big-Data-Cluster in SQL Server installiert wurde, werden Sie aufgefordert, VS Code neu zu laden. In der Randleiste von VS Code sollte nun der „SQL Server BDC App Explorer“ (App-Explorer für SQL Server BDC) angezeigt werden.
+Nachdem die SQL Server Big Data Cluster-App Bereitstellung installiert wurde, werden Sie aufgefordert, Visual Studio Code neu zu laden. Nun sollte der SQL Server BDC App Explorer in der Visual Studio Code Rand Leiste angezeigt werden.
 
 ### <a name="app-explorer"></a>App-Explorer
 
 Klicken Sie auf die Erweiterung in der Randleiste, um ein Seitenpanel mit dem App-Explorer zu laden. Auf dem folgenden Screenshot ist der App-Explorer zu sehen. Darin sind in diesem Beispiel keine Apps oder App-Spezifikationen verfügbar:
 
-<img src="media/vs-extension/app_explorer.png" width=350px></img>
-<!--![App Explorer](media/vs-extension/app_explorer.png)-->
+![App-Explorer](media/vs-extension/app_explorer.png)
 
-#### <a name="new-connection"></a>Neue Verbindung
+#### <a name="connect-to-cluster"></a>Verbindung mit Cluster herstellen
 
 Verwenden Sie eine der folgenden Methoden, um eine Verbindung mit dem Clusterendpunkt herzustellen:
 
 - Klicken Sie unten in der Statusleiste auf `SQL Server BDC Disconnected`.
-- Alternativ können Sie auch im oberen Bereich auf die Schaltfläche `New Connection` klicken, auf der ein Pfeil auf einen Eingang zeigt.
+- Alternativ können Sie auch im oberen Bereich auf die Schaltfläche `Connect to Cluster` klicken, auf der ein Pfeil auf einen Eingang zeigt.
 
-   ![Neue Verbindung](media/vs-extension/connect_to_cluster.png)
+Visual Studio Code Eingabeaufforderung für den entsprechenden Endpunkt, Benutzernamen und das Kennwort ein.
 
-Sie werden von VS Code dazu aufgefordert, den Endpunkt, den Benutzernamen und das Kennwort anzugeben. Wenn Sie die richtigen Anmeldeinformationen und den korrekten App-Endpunkt angeben, werden Sie von VS Code benachrichtigt, dass Sie mit dem Cluster verbunden wurden. In der Randleiste werden außerdem alle bereitgestellten Apps angezeigt. Wenn die Verbindung hergestellt wird, werden der Endpunkt und Benutzername als Teil Ihres Benutzerprofils in `./sqldbc` gespeichert. Kennwörter oder Token werden nie gespeichert. Wenn Sie sich erneut anmelden, werden der gespeicherte Host- und Benutzername automatisch in der Eingabeaufforderung ergänzt. Sie müssen jedoch immer das Kennwort eingeben. Wenn Sie eine Verbindung mit einem anderen Clusterendpunkt herstellen möchten, klicken Sie einfach noch einmal auf `New Connection`. Die Verbindung wird automatisch getrennt, wenn Sie VS Code schließen oder einen anderen Arbeitsbereich öffnen und dann die Verbindung wiederherstellen müssen.
+Der Endpunkt für die Verbindungs Herstellung `Cluster Management Service` ist der Endpunkt mit Port 30080.
+
+Sie können diesen Endpunkt auch über die Befehlszeile suchen. 
+
+```
+azdata bdc endpoint list
+```
+
+Eine der anderen Möglichkeiten, diese Informationen zu erhalten, besteht darin, mit der rechten Maustaste auf dem Server in Azure Data Studio zu **Verwalten** , wo Sie die Endpunkte der aufgelisteten Dienste finden.
+
+![ADS-Endpunkt](media/vs-extension/ads_end_point.png)
+
+Nachdem Sie den zu verwendenden Endpunkt gefunden haben, stellen Sie eine Verbindung mit dem Cluster her.
+
+![Neue Verbindung](media/vs-extension/connect_to_cluster.png)
+
+ Wenn die richtigen Anmelde Informationen und der APP-Endpunkt angegeben werden, wird Visual Studio Code benachrichtigt, dass Sie mit dem Cluster verbunden sind. in der Rand Leiste werden alle bereitgestellten apps angezeigt. Wenn die Verbindung hergestellt wird, werden der Endpunkt und Benutzername als Teil Ihres Benutzerprofils in `./sqldbc` gespeichert. Kennwörter oder Token werden nie gespeichert. Wenn Sie sich erneut anmelden, werden der gespeicherte Host- und Benutzername automatisch in der Eingabeaufforderung ergänzt. Sie müssen jedoch immer das Kennwort eingeben. Wenn Sie eine Verbindung mit einem anderen Clusterendpunkt herstellen möchten, klicken Sie einfach noch einmal auf `New Connection`. Die Verbindung wird automatisch geschlossen, wenn Sie Visual Studio Code schließen, oder wenn Sie einen anderen Arbeitsbereich öffnen und die Verbindung wiederherstellen müssen.
 
 ### <a name="app-template"></a>App-Vorlage
 
-Sie können eine neue App mithilfe einer unserer Vorlagen bereitstellen. Klicken Sie dazu im Bereich `App Specifications` auf die Schaltfläche `New App Template`. Sie werden aufgefordert, den Namen, die Runtime und den Speicherort der App auf Ihrem lokalen Computer anzugeben. Sie sollten die App in Ihrem aktuellen VS Code-Arbeitsbereich platzieren, damit Sie alle Funktionen der Erweiterung nutzen können. Sie können jedoch auch einen anderen Speicherort auf Ihrem lokalen Dateisystem angeben.
+Sie müssen den *Arbeitsbereich* in Visual Studio Code öffnen, in dem Sie die Artefakte der APP speichern.
+
+Sie können eine neue App mithilfe einer unserer Vorlagen bereitstellen. Klicken Sie dazu im Bereich `App Specifications` auf die Schaltfläche `New App Template`. Sie werden aufgefordert, den Namen, die Runtime und den Speicherort der App auf Ihrem lokalen Computer anzugeben. Der Name und die Version, die Sie angeben, sollten eine DNS-1035-Bezeichnung sein und aus alphanumerischen Zeichen Kleinbuchstaben oder "-" bestehen, mit einem alphabetischen Zeichen beginnen und mit einem alphanumerischen Zeichen enden.
+
+Es wird empfohlen, dass Sie Sie in Ihrem aktuellen Visual Studio Code Arbeitsbereich platzieren, damit Sie die vollständige Funktionalität der Erweiterung verwenden können, aber Sie können Sie an einer beliebigen Stelle in Ihrem lokalen Dateisystem platzieren.
 
 ![Neue App-Vorlage](media/vs-extension/new_app_template.png)
 
@@ -86,13 +105,16 @@ Eine neue App-Vorlage wird am angegebenen Speicherort erstellt. Anschließend wi
 
 ![Geladene App-Vorlage](media/vs-extension/loading_app_template.png)
 
-Die Vorlage enthält eine einfache `Hello World`-App, die aus folgenden Dateien besteht:
+Die Vorlage ist eine einfache `helloworld` APP, die im Bereich "App-Spezifikationen" wie folgt angeordnet ist:
 
 - **spec.yaml**
    - Dieser Datei entnimmt der Cluster die Informationen darüber, wie die App bereitgestellt werden soll.
 - **run-spec.yaml**
    - Dieser Datei entnimmt der Cluster den Namen der App.
-- **handler.py**
+
+Der Quellcode der APP würde sich im Arbeitsbereichs Ordner befinden.
+
+- **Quell Dateiname**
    - Dies ist die Quellcodedatei, die in `spec.yaml` durch `src` angegeben ist.
    - Sie verfügt über eine Funktion (`handler`), die als Einstiegspunkt (`entrypoint`) der App entsprechend den Informationen in `spec.yaml` betrachtet wird. Die Funktion nimmt eine Zeichenfolgeneingabe namens `msg` entgegen und gibt eine Zeichenfolgenausgabe mit dem Namen `out` zurück. Diese Zeichenfolgen werden in `inputs` und `outputs` in der Datei `spec.yaml` angegeben.
 
@@ -129,7 +151,7 @@ Sie können sich alle bereitgestellten Apps mit den folgenden Informationen in d
   - Swagger
   - Details
 
-Wenn Sie auf `Links` klicken, können Sie auf die Datei `swagger.json` Ihrer bereitgestellten App zugreifen. Dadurch können Sie eigene Clients programmieren, die Ihre App aufrufen:
+Wenn Sie auf `Links`klicken, sehen Sie, dass Sie auf die `swagger.json` ihrer bereitgestellten App zugreifen können, damit Sie Ihre eigenen Clients schreiben können, die Ihre APP aufrufen:
 
 ![Swagger](media/vs-extension/swagger.png)
 
@@ -145,7 +167,7 @@ Ersetzen Sie `hello` durch eine beliebige Zeichenfolge, und führen Sie die Spez
 
 ![„Get Run Spec“ (Ausführungsspezifikation abrufen)](media/vs-extension/get_run_spec.png)
 
-Bearbeiten Sie die abgerufene Spezifikation entsprechend Ihren Anforderungen, und führen Sie sie danach aus. Nach der Ausführung der App stellt VS Code Feedback bereit:
+Bearbeiten Sie die abgerufene Spezifikation entsprechend Ihren Anforderungen, und führen Sie sie danach aus. Visual Studio Code gibt das entsprechende Feedback zurück, wenn die Ausführung der APP abgeschlossen ist:
 
 ![App-Ausgabe](media/vs-extension/app_output.png)
 
@@ -177,9 +199,9 @@ Wenn Sie eine App löschen möchten, klicken Sie neben der App im Seitenbereich 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Im Artikel [Nutzen von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md) erfahren Sie, wie Sie Apps, die auf Big Data-Clustern für SQL Server bereitgestellt wurden, in Ihre eigenen Anwendungen integrieren können. Zusätzliche Beispiele für die Erweiterung sind unter [Bereitstellen von Anwendungen auf Big-Data-Clustern für SQL Server](https://aka.ms/sql-app-deploy) verfügbar.
+Erfahren Sie, wie Sie apps [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] , die in in ihren eigenen Anwendungen bereitgestellt werden, unter Verwenden von [Anwendungen auf Big Data Clustern](big-data-cluster-consume-apps.md) für weitere Informationen integrieren. Zusätzliche Beispiele für die Erweiterung sind unter [Bereitstellen von Anwendungen auf Big-Data-Clustern für SQL Server](https://aka.ms/sql-app-deploy) verfügbar.
 
-Weitere Informationen zu Big Data-Clustern für SQL Server finden Sie unter [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md).
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist?](big-data-cluster-overview.md).
 
 
 Die vorgestellte Erweiterung soll Ihnen einen echten Mehrwert bieten. Wir freuen uns daher über Feedback. Bitte senden Sie dieses an das [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Team](https://aka.ms/sqlfeedback).

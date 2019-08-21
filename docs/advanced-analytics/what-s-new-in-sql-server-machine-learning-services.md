@@ -1,7 +1,7 @@
 ---
 title: Neues
 description: Neue Funktions Ankündigungen für jede Version von SQL Server 2016 R Services, R Server SQL Server Machine Learning Services.
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -9,12 +9,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f582088359c2878f5dfd84d4b353b1f9d8c369e5
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715304"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652294"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neues in SQL Server Machine Learning Services
 
@@ -32,6 +32,7 @@ In dieser Version werden die oben angeforderten Features für R-und python Machi
 
 | Release | Funktions Update |
 |---------|----------------|
+| RC 1 | [Die Loopback Verbindung mit SQL Server von einem Python-oder R-Skript](connect/loopback-connection.md) wird jetzt sowohl für Windows als auch für Linux unterstützt. |
 | CTP 3.2 | Keine Änderungen. |
 | CTP 3.1 | Keine Änderungen. |
 | CTP 3.0 | Keine Änderungen. |

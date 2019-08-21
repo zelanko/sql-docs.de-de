@@ -5,16 +5,16 @@ description: Referenzartikel zu azdata BDC-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 73db63c485b7a6cd2e9355be935ff574ef827a5d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894036"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653514"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -60,7 +60,7 @@ Erzwingen der Überschreibung der Zieldatei
 Stimmen Sie den Lizenzbedingungen zu? [yes/no]. Wenn Sie dieses Argument nicht verwenden möchten, können Sie die Umgebungsvariable ACCEPT_EULA auf „yes“ festlegen. 
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -68,7 +68,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
 Listet die verfügbaren Optionen für das Konfigurationsprofil zur Verwendung in `bdc config init` auf.
 ```bash
@@ -95,7 +95,7 @@ Welchen Konfigurationstyp Sie sehen möchten.
 Stimmen Sie den Lizenzbedingungen zu? [yes/no]. Wenn Sie dieses Argument nicht verwenden möchten, können Sie die Umgebungsvariable ACCEPT_EULA auf „yes“ festlegen. 
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -103,7 +103,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
 Zeigt die aktuelle Konfiguration des BDC oder die Konfiguration einer lokalen Datei an, die Sie angeben, z. B. „custom“/„cluster.json“. Der Befehl kann auch einen JSON-Pfad verwenden, wenn Sie nur einen Abschnitt erhalten möchten.  Sie können auch eine Zieldatei angeben, in die die Ausgabe ausgegeben werden soll.  Wenn keine Zieldatei angegeben ist, wird sie nur an das Terminal ausgegeben.
 ```bash
@@ -136,7 +136,7 @@ Der JSON-Schlüsselpfad, der zu dem von der Konfiguration gewünschten Abschnitt
 Erzwingen der Überschreibung der Zieldatei
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -144,7 +144,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
 Fügt den Wert im JSON-Pfad in der Konfigurationsdatei hinzu.  Alle nachfolgenden Beispiele sind in Bash angegeben.  Beachten Sie bei Verwenden einer anderen Befehlszeile, dass Sie möglicherweise entsprechende Escapezeichen hinzufügen müssen.  Alternativ können Sie auch die Patchdateifunktionen verwenden.
 ```bash
@@ -163,7 +163,7 @@ Pfad für die Konfigurationsdatei eines Big-Data-Clusters der Konfiguration, die
 Eine Schlüssel-Wert-Paar-Liste von JSON-Pfaden zu Werten: key1.subkey1=value1,key2.subkey2=value2 Sie können JSON-Inlinewerte angeben, z. B.: key='{"kind":"cluster","name":"test-cluster"}' oder einen Dateipfad, z. B. key=./values.json. Der Vorgang „Hinzufügen“ unterstützt KEINE Bedingungen.  Beispiele dazu, wie Ihr Pfad aussehen sollte, finden Sie unter http://jsonpatch.com/.  Wenn Sie auf ein Array zugreifen möchten, müssen Sie dazu den Index angeben, z. B. key.0=value.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -171,7 +171,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
 Entfernt den Wert im JSON-Pfad in der Konfigurationsdatei.  Alle nachfolgenden Beispiele sind in Bash angegeben.  Beachten Sie bei Verwenden einer anderen Befehlszeile, dass Sie möglicherweise entsprechende Escapezeichen hinzufügen müssen.  Alternativ können Sie auch die Patchdateifunktionen verwenden.
 ```bash
@@ -190,7 +190,7 @@ Pfad für die Konfigurationsdatei eines Big-Data-Clusters der Konfiguration, die
 Eine Liste von JSON-Pfaden, die auf der JSONPATCH-Bibliothek basiert und angibt, welche Werte entfernt werden sollen, z. B.: key1.subkey1,key2.subkey2. Der Vorgang „Entfernen“ unterstützt KEINE Bedingungen. Beispiele dazu, wie Ihr Pfad aussehen sollte, finden Sie unter http://jsonpatch.com/.  Wenn Sie auf ein Array zugreifen möchten, müssen Sie dazu den Index angeben, z. B. key.0=value.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -198,7 +198,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
 Ersetzt den Wert im JSON-Pfad in der Konfigurationsdatei.  Alle nachfolgenden Beispiele sind in Bash angegeben.  Beachten Sie bei Verwenden einer anderen Befehlszeile, dass Sie möglicherweise entsprechende Escapezeichen hinzufügen müssen.  Alternativ können Sie auch die Patchdateifunktionen verwenden.
 ```bash
@@ -225,7 +225,7 @@ Pfad für die Konfigurationsdatei eines Big-Data-Clusters der Konfiguration, die
 Eine Schlüssel-Wert-Paar-Liste von JSON-Pfaden zu Werten: key1.subkey1=value1,key2.subkey2=value2 Sie können JSON-Inlinewerte angeben, z. B.: key='{"kind":"cluster","name":"test-cluster"}' oder einen Dateipfad, z. B. key=./values.json. Der Vorgang „Ersetzen“ unterstützt Bedingungen über die JSONPATH-Bibliothek.  Um diesen Parameter zu verwenden, starten Sie den Pfad mit „$“. Dies ermöglicht die Verwendung einer Bedingung wie z. B. „-j $.key1.key2[?(@.key3=='someValue'].key4=value“. Nachfolgend sehen Sie hierzu Beispiele. Zusätzliche Hilfe finden Sie unter https://jsonpath.com/.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -233,7 +233,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
 Patcht die Konfigurationsdatei entsprechend der angegebenen Patchdatei. Informationen zum besseren Verständnis der Zusammensetzung der Pfade finden Sie unter http://jsonpatch.com/. Der Vorgang „Ersetzen“ kann Bedingungen im Pfad aufgrund der JSONPATH-Bibliothek verwenden (https://jsonpath.com/ ). Alle JSON-Patchdateien müssen mit einem „Patch“-Schlüssel beginnen, der über ein Array von Patches mit dem entsprechenden Vorgang (Hinzufügen, Ersetzen, Entfernen), Pfad und Wert verfügt. Der Vorgang „Entfernen“ erfordert keinen Wert, sondern nur einen Pfad. Siehe hierzu folgende Beispiele.
 ```bash
@@ -269,7 +269,7 @@ Pfad für die Konfigurationsdatei eines Big-Data-Clusters der Konfiguration, die
 Pfad zu einer JSON-Patchdatei, die auf der JSONPATCH-Bibliothek basiert: http://jsonpatch.com/ Sie müssen die JSON-Patchdatei mit einem Schlüssel mit der Bezeichnung „Patch“ starten, bei dessen Wert es sich um ein Array von Patchvorgängen handelt, die Sie ausführen möchten. Für den Pfad eines Patchvorgangs können Sie für die meisten Vorgänge die Punktnotation verwenden, z. B. „key1.key2“. Wenn Sie einen „Ersetzen“-Vorgang durchführen möchten und einen Wert in einem Array ersetzen, das eine Bedingung erfordert, verwenden Sie die JSONPATH-Notation, indem Sie den Pfad mit einem Dollarzeichen („$“) beginnen. Dies ermöglicht die Verwendung einer Bedingung wie z. B. „$.key1.key2[?(@.key3=='someValue'].key4“. Siehe hierzu folgende Beispiele. Zusätzliche Hilfe zu Bedingungen finden Sie unter https://jsonpath.com/.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -277,8 +277,8 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.

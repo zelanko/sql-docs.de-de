@@ -1,20 +1,20 @@
 ---
 title: Was ist Anwendungsbereitstellung?
-titleSuffix: SQL Server 2019 big data clusters
-description: In diesem Artikel wird die Anwendungsbereitstellung auf einem Big Data-Cluster für SQL Server 2019 (Vorschau) beschrieben.
+titleSuffix: Big Data Clusters for SQL Server 2019
+description: In diesem Artikel wird die Anwendungs Bereitstellung in einem Big Data-Cluster für SQL Server 2019 beschrieben.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d8cc44862af21c54bdbd0e4adbb35db912c3f7c9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419407"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653007"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Was ist Anwendungsbereitstellung auf einem Big Data-Cluster für SQL Server 2019?
 
@@ -61,12 +61,12 @@ Es ist auch möglich, dass eine Anwendung mit einem RESTful-Webdienst ausgeführ
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Erstellen und Ausführen von Anwendungen auf SQL Server-Big Data-Clustern finden Sie unter:
+Weitere Informationen zum Erstellen und Ausführen von Anwendungen unter [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]finden Sie in den folgenden Bereichen:
 
 - [Bereitstellen von Anwendungen mit „azdata“](big-data-cluster-create-apps.md)
 - [Vorgehensweise: Verwenden von Visual Studio Code zum Bereitstellen von Anwendungen für SQL Server-Big Data-Cluster](app-deployment-extension.md)
 - [Verwenden von Anwendungen auf Big Data-Clustern](big-data-cluster-consume-apps.md)
 
-In der folgenden Übersicht finden Sie weitere Informationen zu den Big Data-Clustern für SQL Server:
+Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zum finden Sie in der folgenden Übersicht:
 
-- [Was sind SQL Server 2019-Big Data-Cluster?](big-data-cluster-overview.md)
+- [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

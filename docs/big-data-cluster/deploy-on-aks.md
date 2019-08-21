@@ -1,26 +1,26 @@
 ---
 title: Konfigurieren von Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie Azure Kubernetes Service (AKS) für die Bereitstellung von Big-Data-Clustern für SQL Server 2019 (Vorschau) konfigurieren können.
+description: Erfahren Sie, wie Sie Azure Kubernetes Service (AKS) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] für bereit Stellungen konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470819"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652386"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für die Bereitstellung von Big-Data-Clustern für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie Azure Kubernetes Service (AKS) für die Bereitstellung von Big-Data-Clustern für SQL Server 2019 (Vorschau) konfigurieren können.
+In diesem Artikel wird beschrieben, wie Sie Azure Kubernetes Service (AKS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ) für bereit Stellungen konfigurieren.
 
 AKS vereinfacht das Erstellen, Konfigurieren und Verwalten von VM-Clustern, die mithilfe eines Kubernetes-Clusters für die Ausführung von Containeranwendungen vorkonfiguriert werden. Dadurch können Sie Ihre eigenen Kenntnisse oder die der stetig wachsenden Community einsetzen, um containerbasierte Anwendungen in Microsoft Azure bereitzustellen und zu verwalten.
 
@@ -29,7 +29,7 @@ In diesem Artikel wird ausführlich beschrieben, wie Sie mithilfe der Azure CLI
 > [!TIP]
 > Sie können auch ein Skript erstellen, mit dem die Bereitstellung von AKS und eines Big-Data-Clusters in einem Schritt ausgeführt wird. Weitere Informationen finden Sie im Artikel zur Verwendung eines [Python-Skripts](quickstart-big-data-cluster-deploy.md) oder im Artikel zur Nutzung eines [Notebooks](deploy-notebooks.md) in Azure Data Studio.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Stellen Sie die Big-Data-Tools für SQL Server 2019 bereit:](deploy-big-data-tools.md)
    - **Kubectl**
@@ -165,4 +165,4 @@ Wenn Sie die oben genannten Befehle verwenden und Probleme beim Erstellen einer 
 
 In diesem Artikel wurde beschrieben, wie Sie einen Kubernetes-Cluster in AKS konfigurieren können. Der nächste Schritt ist die Bereitstellung eines Big-Data-Clusters für SQL Server 2019 im AKS-Cluster. Weitere Informationen zum Bereitstellen von Big-Data-Clustern finden Sie im folgenden Artikel:
 
-[Bereitstellen von Big Data-Clustern für SQL Server in Kubernetes](deployment-guidance.md)
+[Bereitstellen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes](deployment-guidance.md)

@@ -5,24 +5,24 @@ description: Übermitteln Sie Spark-Aufträge an Big Data-Cluster für SQL Serve
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f17544ed4dd37ff43be97d114abb58f4fbbbe319
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470698"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653717"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Übermitteln von Spark-Aufträgen an Big Data-Cluster für SQL Server in IntelliJ
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Übermitteln von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark-Aufträgen in IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Eines der Hauptszenarios für Big Data-Cluster für SQL Server besteht darin, dass Spark-Aufträge an diese übermittelt werden können. Mit dem Feature zum Übermitteln von Spark-Aufträgen können Sie lokale JAR- oder PY-Dateien mit Verweisen auf Big Data-Cluster für SQL Server übermitteln. Außerdem können Sie JAR- oder PY-Dateien ausführen, die sich bereits auf dem HDFS-Dateisystem befinden. 
+Eines der wichtigsten Szenarios für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ist die Fähigkeit zum Übermitteln von Spark-Aufträgen. Mit dem Feature zum Übermitteln von Spark-Aufträgen können Sie lokale jar-oder py- [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]Dateien mit Verweisen auf übermitteln. Außerdem können Sie JAR- oder PY-Dateien ausführen, die sich bereits auf dem HDFS-Dateisystem befinden. 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Big-Data-Cluster für SQL Server.
 - Java Development Kit von Oracle. Sie können dieses von der [Oracle-Website](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) herunterladen und installieren.
@@ -51,9 +51,9 @@ Eines der Hauptszenarios für Big Data-Cluster für SQL Server besteht darin, da
 
 1. Starten Sie IntelliJ IDEA, und erstellen Sie ein Projekt. Führen Sie im Dialogfeld **New Project** (Neues Projekt) die folgenden Schritte aus: 
 
-   A. Klicken Sie auf **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Spark-Projekt mit Beispielen (Scala)).
+   a. Klicken Sie auf **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Spark-Projekt mit Beispielen (Scala)).
 
-   B. Wählen Sie in der Liste **Build tool** (Buildtool) eine der folgenden Optionen entsprechend Ihrer Anforderungen aus:
+   b. Wählen Sie in der Liste **Build tool** (Buildtool) eine der folgenden Optionen entsprechend Ihrer Anforderungen aus:
 
       * **Maven:** Bei dieser Auswahl wird der Scala-Projekterstellungsassistent unterstützt.
       * **SBT:** Bei dieser Auswahl werden Abhängigkeiten und der Buildvorgang für das Scala-Projekt verwaltet.
@@ -74,9 +74,9 @@ Eines der Hauptszenarios für Big Data-Cluster für SQL Server besteht darin, da
 
     ![Auswählen des Spark SDK](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Geben Sie einen Projektnamen und einen Speicherort ein.
+   a. Geben Sie einen Projektnamen und einen Speicherort ein.
 
-   B. Wählen Sie in der Dropdownliste **Project SDK** (SDK für Projekt) **Java 1.8** für den Spark 2.x-Cluster oder **Java 1.7** für den Spark 1.x-Cluster aus.
+   b. Wählen Sie in der Dropdownliste **Project SDK** (SDK für Projekt) **Java 1.8** für den Spark 2.x-Cluster oder **Java 1.7** für den Spark 1.x-Cluster aus.
 
    c. Der Scala-Projekterstellungsassistent füllt die Dropdownliste **Spark version** (Spark-Version) mit der richtigen Version für das Spark SDK und das Scala SDK auf. Wenn Sie eine ältere Spark-Clusterversion als 2.0 verwenden, wählen Sie **Spark 1.x** aus. Wählen Sie andernfalls **Spark 2.x** aus. In diesem Beispiel wird **Spark 2.0.2 (Scala 2.11.8)** verwendet.
 
@@ -84,9 +84,9 @@ Eines der Hauptszenarios für Big Data-Cluster für SQL Server besteht darin, da
 
 7. Das Spark-Projekt erstellt automatisch ein Artefakt. Führen Sie die folgenden Schritte aus, um sich das Artefakt anzeigen zu lassen:
 
-   A. Klicken Sie im Menü **File** (Datei) auf **Project Structure** (Projektstruktur).
+   a. Klicken Sie im Menü **File** (Datei) auf **Project Structure** (Projektstruktur).
 
-   B. Klicken Sie im Dialogfeld **Project Structure** (Projektstruktur) auf **Artifacts** (Artefakte), um sich das erstellte Standardartefakt anzeigen zu lassen. Sie können auch ein eigenes Artefakt erstellen, indem Sie auf das Pluszeichen ( **+** ) klicken.
+   b. Klicken Sie im Dialogfeld **Project Structure** (Projektstruktur) auf **Artifacts** (Artefakte), um sich das erstellte Standardartefakt anzeigen zu lassen. Sie können auch ein eigenes Artefakt erstellen, indem Sie auf das Pluszeichen ( **+** ) klicken.
 
       ![Artefaktinformationen im Dialogfeld](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -139,7 +139,7 @@ Stellen Sie sicher, dass die Voraussetzungen von „WINUTILS.exe“ erfüllt sin
 
 4. Geben Sie die folgenden Werte an, und klicken Sie anschließend auf **OK**:
 
-    |Eigenschaft |value |
+    |Eigenschaft |Wert |
     |----|----|
     |„Job main class“ (Hauptklasse des Auftrags)|Der Standardwert ist die Hauptklasse der ausgewählten Datei. Sie können eine andere Klasse auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) klicken.|
     |Umgebungsvariablen|Stellen Sie sicher, dass für HADOOP_HOME der richtige Wert festgelegt ist.|
@@ -173,7 +173,7 @@ Spark Livy Interactive Session Console(Scala) wird nur für IntelliJ 2018.2 und
 
 4. Geben Sie die folgenden Werte an, und klicken Sie anschließend auf **OK**:
 
-    |Eigenschaft |value |
+    |Eigenschaft |Wert |
     |----|----|
     |„Spark clusters (Linux only)“ (Spark-Cluster (nur Linux))|Wählen Sie den Big-Data-Cluster für SQL Server aus, auf dem Sie Ihre Anwendung ausführen möchten.|
     |„Main class name“ (Name der Hauptklasse)|Der Standardwert ist die Hauptklasse der ausgewählten Datei. Sie können eine andere Klasse auswählen, indem Sie auf die Schaltfläche mit den Auslassungspunkten ( **…** ) klicken.|
@@ -195,4 +195,4 @@ Sie können sich ganz einfach die Ergebnisse eines Skripts ansehen, indem Sie Co
    ![Senden einer Auswahl an die Spark-Konsole](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen zu Big Data-Clustern für SQL Server und zugehörigen Szenarios finden Sie unter [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
+Weitere Informationen zu SQL Server Big Data-Cluster und verwandten Szenarien finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist ](big-data-cluster-overview.md)?

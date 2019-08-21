@@ -1,26 +1,26 @@
 ---
 title: Einbinden von ADLS Gen2 für HDFS-Tiering
 titleSuffix: How to mount ADLS Gen2
-description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurieren, um ein externes Azure Data Lake Storage-Dateisystem auf einem SQL Server 2019-Big Data-Cluster (Vorschauversion) in HDFS einzubinden.
+description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering zum Einbinden eines externen Azure Data Lake Storage Dateisystems in HDFS auf einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]konfigurieren.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742732"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652316"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
 Die folgenden Abschnitte zeigen ein Beispiel für die Konfiguration von HDFS-Tiering mit einer Azure Data Lake Storage Gen2-Datenquelle.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Bereitgestellte Big Data-Cluster](deployment-guidance.md)
 - [Big Data-Tools](deploy-big-data-tools.md)
@@ -153,4 +153,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clustern unter SQL Server 2019 finden Sie unter [Was sind SQL Server 2019-Big Data-Cluster?](big-data-cluster-overview.md).
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist?](big-data-cluster-overview.md).

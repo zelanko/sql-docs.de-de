@@ -1,25 +1,26 @@
 ---
-title: Installieren von SQL Server Machine Learning Services (in-Database) unter Windows
-description: R in SQL Server oder python auf SQL Server Installationsschritte für SQL Server Machine Learning Services unter Windows.
+title: Installieren von SQL Server Machine Learning Services (python, R) unter Windows
+titleSuffix: ''
+description: In diesem Artikel wird erläutert, wie Sie SQL Server Machine Learning Services unter Windows installieren. Sie können Machine Learning Services verwenden, um Python-und R-Skripts in der-Datenbank auszuführen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531054"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634557"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installieren von SQL Server Machine Learning Services unter Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In diesem Artikel wird beschrieben, wie Sie die Machine Learning-Komponente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch Ausführen des Setup-Assistenten installieren, und befolgen Sie die Anweisungen auf dem Bildschirm.
+In diesem Artikel wird erläutert, wie Sie SQL Server Machine Learning Services unter Windows installieren. Sie können Machine Learning Services verwenden, um Python-und R-Skripts in der-Datenbank auszuführen.
 
 ## <a name="bkmk_prereqs"></a> Prüfliste vor der Installation
 

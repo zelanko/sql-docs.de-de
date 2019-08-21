@@ -1,26 +1,26 @@
 ---
 title: Erfassen von Daten in einem SQL Server-Datenpool
 titleSuffix: SQL Server big data clusters
-description: In diesem Tutorial wird veranschaulicht, wie Daten in den Datenpool eines Big Data-Clusters von SQL Server 2019 (Vorschauversion) eingelesen werden.
+description: In diesem Tutorial wird veranschaulicht, wie Sie Daten in den Daten Pool eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]erfassen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670521"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653313"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Erfassen von Daten in einem SQL Server-Datenpool mit Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial wird veranschaulicht, wie Daten über Transact-SQL in den [Datenpool](concept-data-pool.md) eines Big Data-Clusters von SQL Server 2019 (Vorschauversion) geladen werden. Mit Big Data-Clustern von SQL Server können Daten aus einer Vielzahl von Quellen eingelesen und auf Datenpoolinstanzen verteilt werden.
+In diesem Tutorial wird veranschaulicht, wie Transact-SQL zum Laden von Daten in den [Daten Pool](concept-data-pool.md) eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]verwendet wird. Mit [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]können Daten aus einer Vielzahl von Quellen erfasst und über Daten Pool Instanzen verteilt werden.
 
 In diesem Tutorial lernen Sie Folgendes:
 
@@ -34,21 +34,21 @@ In diesem Tutorial lernen Sie Folgendes:
 
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
-- [Big Data-Tools](deploy-big-data-tools.md)
+- [Big-Data-Tools](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Erweiterung von SQL Server 2019**
-- [Laden von Beispieldaten in einen Big Data-Cluster von SQL Server](tutorial-load-sample-data.md)
+- [Load sample data into your big data cluster (Laden von Beispieldaten in ihren Big-Data-Cluster)](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Erstellen einer externen Tabelle im Datenpool
 
 Mit den folgenden Schritten wird eine externe Tabelle namens **web_clickstream_clicks_data_pool** im Datenpool erstellt. Diese Tabelle kann dann als Speicherort für die Erfassung von Daten im Big Data-Cluster verwendet werden.
 
-1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big Data-Clusters her. Weitere Informationen finden Sie unter [Connect to the SQL Server master instance (Herstellen einer Verbindung mit der SQL Server-Masterinstanz)](connect-to-big-data-cluster.md#master).
+1. Stellen Sie in Azure Data Studio eine Verbindung mit der SQL Server-Masterinstanz Ihres Big-Data-Clusters her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der SQL Server-Masterinstanz](connect-to-big-data-cluster.md#master).
 
-1. Doppelklicken Sie auf die Verbindung im Fenster **Server**, um das Serverdashboard der SQL Server-Masterinstanz anzuzeigen. Wählen Sie **Neue Abfrage** aus.
+1. Doppelklicken Sie im Fenster **Server** auf die Verbindung, um das Serverdashboard der SQL Server-Masterinstanz anzuzeigen. Wählen Sie **Neue Abfrage** aus.
 
-   ![Abfrage in der SQL Server-Masterinstanz](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![Abfrage der SQL Server-Masterinstanz](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
 1. Führen Sie den folgenden Transact-SQL-Befehl aus, um in der Masterinstanz in den Kontext der **Sales**-Datenbank zu wechseln.
 

@@ -5,16 +5,16 @@ description: Referenzartikel zu „azdata bdc hdfs“-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e892c2d501902ef915a297440ae5a6ffda83bce
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fab1f3e831f660a01ea2f03967a1144725baabde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426180"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653466"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
@@ -49,15 +49,15 @@ azdata bdc hdfs shell
 ```
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
 Auflisten des Status der angegebenen Datei bzw. des angegebenen Verzeichnisses.
 ```bash
@@ -74,15 +74,15 @@ azdata bdc hdfs ls --path '/tmp'
 Der Pfad zum Auflisten des Status.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
 Bestimmen, ob eine Datei oder ein Verzeichnis vorhanden ist.  Gibt „True“ bei Vorhandensein zurück, andernfalls „False“.
 ```bash
@@ -99,15 +99,15 @@ azdata bdc hdfs exists --path '/tmp'
 Pfad, dessen Vorhandensein überprüft wird.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
 Erstellen eines Verzeichnisses im angegebenen Pfad.
 ```bash
@@ -124,15 +124,15 @@ azdata bdc hdfs mkdir --path '/tmp'
 Name des zu erstellenden Verzeichnisses.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
 Verschieben der angegebenen Datei bzw. des angegebenen Pfads an den angegebenen Speicherort.
 ```bash
@@ -151,15 +151,15 @@ Das Verzeichnis, das verschoben werden soll.
 Der Speicherort, zu dem verschoben werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
 Erstellen der Textdatei am angegebenen Speicherort.  Einfacher Textinhalt kann über den Datenparameter hinzugefügt werden.
 ```bash
@@ -178,15 +178,15 @@ Name der Datei, die erstellt werden soll.
 Inhalt der Datei.  Für einfachen Textinhalt vorgesehen.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
 Lesen des Inhalts einer Datei.  Offset und Länge in Bytes sind optionale Parameter.
 ```bash
@@ -208,15 +208,15 @@ Offset in der zu lesenden Datei in Anzahl der Bytes.
 Länge der zu lesenden Daten.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
 Entfernen einer Datei oder eines Verzeichnisses.
 ```bash
@@ -233,15 +233,15 @@ azdata bdc hdfs rm --path '/tmp'
 Name der Datei, die entfernt werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
 Rekursives Entfernen einer Datei oder eines Verzeichnisses.
 ```bash
@@ -258,15 +258,15 @@ azdata bdc hdfs rmr --path '/tmp'
 Name der Datei, die rekursiv entfernt werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
 Ändern der Berechtigung für die angegebene Datei oder das angegebene Verzeichnis.
 ```bash
@@ -285,15 +285,15 @@ Name der Datei oder des Verzeichnisses, wofür Berechtigungen festgelegt werden 
 Festzulegende Berechtigungsoktette.  Beispiel „775“.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
 Ändern des Besitzers oder der Gruppe der angegebenen Datei.
 ```bash
@@ -315,16 +315,16 @@ Festzulegender Besitzername.
 Festzulegender Gruppenname.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen der Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
-Anzeigen dieser Hilfemeldung und beenden.
+Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen der Ausführlichkeit der Protokollierung. „--debug“ für vollständige Debugprotokolle verwenden.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.

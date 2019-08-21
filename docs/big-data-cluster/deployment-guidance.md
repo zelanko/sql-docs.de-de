@@ -1,22 +1,22 @@
 ---
 title: Hinweise zur Bereitstellung
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie Big Data-Cluster für SQL Server 2019 (Vorschauversion) in Kubernetes bereitstellen.
+description: Erfahren Sie, [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] wie Sie (Vorschau) auf Kubernetes bereitstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995837"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652356"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Bereitstellen von Big Data-Clustern für SQL Server in Kubernetes
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Bereitstellen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ Bevor Sie einen Big-Data-Cluster für SQL Server 2019 bereitstellen können, mü
 
 ## <a id="prereqs"></a> Anforderungen an Kubernetes
 
-Big Data-Cluster für SQL Server benötigen für den Server und Client mindestens die Kubernetes-Version v1.10 (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]erfordert mindestens Version 1.10 für Server und Client (kubectl).
 
 > [!NOTE]
 > Die Kubernetes-Nebenversionen von Server und Client dürfen nach oben oder unten höchstens um die Zahl 1 abweichen. Weitere Informationen finden Sie unter [Kubernetes-Versionshinweise und SKU-Richtlinien für Versionsabweichungen](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -67,7 +67,7 @@ Führen Sie den Befehl **kubectl** aus, um sich die Clusterkonfiguration anzeige
 kubectl config view
 ```
 
-Nachdem Sie den Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung eines neuen Big-Data-Clusters für SQL Server fortfahren. Wenn Sie ein Upgrade von einem früheren Release durchführen, finden Sie weitere Informationen unter [Durchführen eines Upgrades für Big Data-Cluster für SQL Server](deployment-upgrade.md).
+Nachdem Sie den Kubernetes-Cluster konfiguriert haben, können Sie mit der Bereitstellung eines neuen Big-Data-Clusters für SQL Server fortfahren. Wenn Sie ein Upgrade von einer vorherigen Version durchführen, finden Sie weitere Informationen unter [Upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Übersicht über die Bereitstellung
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> Die vollständige Bereitstellung kann einige Zeit in Anspruch nehmen, da die Containerimages für die Komponenten des Big-Data-Clusters heruntergeladen werden müssen. Der Vorgang sollte jedoch nicht mehrere Stunden dauern. Wenn Probleme bei der Bereitstellung auftreten, finden Sie weitere Informationen unter [Überwachen und Behandeln von Problemen eines Big Data-Clusters für SQL Server](cluster-troubleshooting-commands.md).
+> Die vollständige Bereitstellung kann einige Zeit in Anspruch nehmen, da die Containerimages für die Komponenten des Big-Data-Clusters heruntergeladen werden müssen. Der Vorgang sollte jedoch nicht mehrere Stunden dauern. Wenn bei der Bereitstellung Probleme auftreten, finden Sie weitere Informationen unter [Überwachung [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]und ](cluster-troubleshooting-commands.md)Problembehandlung.
 
 Nachdem die Bereitstellung erfolgreich abgeschlossen wurde, wird die folgende Meldung ausgegeben:
 
@@ -314,4 +314,4 @@ In den folgenden Artikeln finden Sie weitere Informationen zur Bereitstellung vo
 
 - [Konfigurieren von Bereitstellungseinstellungen für Big-Data-Cluster](deployment-custom-configuration.md)
 - [Durchführen einer Offlinebereitstellung von Big-Data-Clustern für SQL Server](deploy-offline.md)
-- [Workshop: Big Data-Cluster für SQL Server – Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] -Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

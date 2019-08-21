@@ -5,16 +5,16 @@ description: Referenzartikel zu azdata bdc spark session-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9bf2cdca204598d72f511364f59f45f551298703
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 1573c5b95eeaf314db08acc60d6fe5e1e2c4b753
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811295"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653427"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
@@ -60,32 +60,32 @@ Der Name des Typs der zu erstellenden Sitzung.  Einer der folgenden Namen: spark
 #### `--jar-files -j`
 Die Liste der JAR-Dateipfade.  Um eine Liste zu übergeben, codieren Sie die Werte im JSON-Format.  Beispiel: '["Eintrag1", "Eintrag2"]'.
 #### `--py-files -p`
-Die Liste der python-Dateipfade.  Um eine Liste zu übergeben, codieren Sie die Werte im JSON-Format.  Beispiel: '["Eintrag1", "Eintrag2"]'.
+Liste der Python-Dateipfade.  Um eine Liste zu übergeben, codieren Sie die Werte im JSON-Format.  Beispiel: '["Eintrag1", "Eintrag2"]'.
 #### `--files -f`
-Die Liste der Dateipfade.  Um eine Liste zu übergeben, codieren Sie die Werte im JSON-Format.  Beispiel: '["Eintrag1", "Eintrag2"]'.
+Liste der Dateipfade.  Um eine Liste zu übergeben, codieren Sie die Werte im JSON-Format.  Beispiel: '["Eintrag1", "Eintrag2"]'.
 #### `--driver-memory`
-Die Menge an Arbeitsspeicher, die dem Treiber zugeordnet werden soll.  Geben Sie die Einheit als Teil des Werts an.  Beispiel: 512M oder 2G.
+Die Menge an Arbeitsspeicher, die dem Treiber zugeordnet werden soll.  Geben Sie Einheiten als Teil des Werts an.  Beispiel: 512M oder 2G.
 #### `--driver-cores`
 Die Anzahl der CPU-Kerne, die dem Treiber zugeordnet werden sollen.
 #### `--executor-memory`
-Die Menge an Arbeitsspeicher, die dem Executor zugeordnet werden soll.  Geben Sie die Einheit als Teil des Werts an.  Beispiel: 512M oder 2G.
+Die Menge an Arbeitsspeicher, die dem Executor zugeordnet werden soll.  Geben Sie Einheiten als Teil des Werts an.  Beispiel: 512M oder 2G.
 #### `--executor-cores`
 Die Anzahl der CPU-Kerne, die dem Executor zugeordnet werden sollen.
 #### `--executor-count`
 Die Anzahl der Executorinstanzen, die ausgeführt werden sollen.
 #### `--archives -a`
-Die Liste der Pfade für Archive.  Um eine Liste zu übergeben, codieren Sie die Werte im JSON-Format.  Beispiel: '["Eintrag1", "Eintrag2"]'.
+Liste der Pfade für Archive.  Um eine Liste zu übergeben, codieren Sie die Werte im JSON-Format.  Beispiel: '["Eintrag1", "Eintrag2"]'.
 #### `--queue -q`
-Der Name der Spark-Warteschlange, in der die Sitzung ausgeführt werden soll.
+Name der Spark-Warteschlange, in der die Sitzung ausgeführt werden soll.
 #### `--name -n`
-Der Name der Spark-Sitzung.
+Name der Spark-Sitzung.
 #### `--config -c`
-Die Liste mit den Name-Wert-Paaren, die Spark-Konfigurationswerte enthalten.  Codiert als JSON-Wörterbuch.  Beispiel: '{"Name":"Wert", "Name2":"Wert2"}'.
+Liste mit den Name-Wert-Paaren, die Spark-Konfigurationswerte enthalten.  Codiert als JSON-Wörterbuch.  Beispiel: '{"Name":"Wert", "Name2":"Wert2"}'.
 #### `--timeout-seconds -t`
 Timeout für Sitzung im Leerlauf in Sekunden
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -93,7 +93,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
 Auflisten aller aktiven Sitzungen in Spark.
 ```bash
@@ -106,7 +106,7 @@ azdata bdc spark session list
 ```
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -114,7 +114,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 Hiermit werden die Sitzungsinformationen für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
@@ -131,7 +131,7 @@ azdata bdc spark session info --session-id 0
 Die ID-Nummer der Spark-Sitzung.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -139,7 +139,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 Hiermit werden die Sitzungsprotokolleinträge für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
@@ -156,7 +156,7 @@ azdata bdc spark session log --session-id 0
 Die ID-Nummer der Spark-Sitzung.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -164,7 +164,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 Hiermit wird der Sitzungsstatus für eine aktive Spark-Sitzung abgerufen, die die angegebene ID hat.  Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
@@ -181,7 +181,7 @@ azdata bdc spark session state --session-id 0
 Die ID-Nummer der Spark-Sitzung.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -189,7 +189,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 Hiermit wird eine interaktive Spark-Sitzung gelöscht. Die Sitzungs-ID wird von „spark session create“ zurückgegeben.
 ```bash
@@ -206,7 +206,7 @@ azdata bdc spark session delete --session-id 0
 Die ID-Nummer der Spark-Sitzung.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -214,8 +214,8 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.

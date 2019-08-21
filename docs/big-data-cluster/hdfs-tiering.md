@@ -1,26 +1,26 @@
 ---
 title: Konfigurieren von HDFS-Tiering
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering konfigurieren, um ein externes Azure Data Lake Storage-Dateisystem auf einem SQL Server 2019-Big Data-Cluster (Vorschauversion) in HDFS einzubinden.
+description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering zum Einbinden eines externen Azure Data Lake Storage Dateisystems in HDFS auf einem [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]konfigurieren.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419377"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652324"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Konfigurieren von HDFS-Tiering auf SQL Server-Big Data-Clustern
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Konfigurieren von HDFS-Tiering für[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS-Tiering bietet die Möglichkeit, ein externes, HDFS-kompatibles Dateisystem in HDFS einzubinden. In diesem Artikel wird erläutert, wie Sie HDFS-Tiering für SQL Server 2019-Big Data-Cluster (Vorschauversion) konfigurieren. Zurzeit unterstützen wir das Herstellen einer Verbindung mit Azure Data Lake Storage Gen2 und Amazon S3. 
+HDFS-Tiering bietet die Möglichkeit, ein externes, HDFS-kompatibles Dateisystem in HDFS einzubinden. In diesem Artikel wird erläutert, wie das HDFS- [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Tiering für (Vorschau) konfiguriert wird. Zurzeit unterstützen wir das Herstellen einer Verbindung mit Azure Data Lake Storage Gen2 und Amazon S3. 
 
 ## <a name="hdfs-tiering-overview"></a>Übersicht zum HDFS-Tiering
 
@@ -38,7 +38,7 @@ Die folgenden Abschnitte zeigen ein Beispiel für die Konfiguration von HDFS-Tie
 
 Das HDFS-Tiering unterstützt die Aktualisierung. Aktualisieren Sie eine vorhandene Einbindung für die aktuelle Momentaufnahme der Remotedaten.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Bereitgestellte Big Data-Cluster](deployment-guidance.md)
 - [Big Data-Tools](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ Wir unterstützen das Herstellen einer Verbindung mit Azure Data Lake Storage Ge
 
 ## <a id="issues"></a> Einschränkungen und bekannte Probleme
 
-Die folgende Liste enthält bekannte Probleme und aktuelle Einschränkungen bei der Verwendung von HDFS-Tiering in SQL Server-Big Data-Clustern:
+Die folgende Liste enthält bekannte Probleme und die aktuellen Einschränkungen bei der Verwendung von HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]-Tiering in:
 
 - Wenn die Einbindung für einen längeren Zeitraum in einem `CREATING`-Zustand bleibt, ist wahrscheinlich ein Fehler aufgetreten. Brechen Sie in diesem Fall den Befehl ab, und löschen Sie die Einbindung, falls erforderlich. Vergewissern Sie sich vor einem erneuten Versuch, dass die Parameter und Anmeldeinformationen richtig sind.
 
@@ -76,4 +76,4 @@ Die folgende Liste enthält bekannte Probleme und aktuelle Einschränkungen bei 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clustern unter SQL Server 2019 finden Sie unter [Was sind SQL Server 2019-Big Data-Cluster?](big-data-cluster-overview.md).
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist?](big-data-cluster-overview.md).

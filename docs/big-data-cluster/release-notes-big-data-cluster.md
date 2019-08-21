@@ -1,28 +1,31 @@
 ---
 title: Versionshinweise
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel werden die neuesten Updates und bekannten Probleme von SQL Server 2019-Big-Data-Clustern (Vorschau) beschrieben.
+description: In diesem Artikel werden die neuesten Updates und bekannten Probleme [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] für (Vorschau) beschrieben.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476251"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653435"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Versionshinweise zu Big-Data-Clustern unter SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel werden die Updates und bekannten Problemen der neuesten Releases von SQL Server-Big-Data-Clustern aufgeführt.
+In diesem Artikel werden Updates und bekannte Probleme für die neuesten Versionen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]aufgeführt.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a> CTP 3.2 (Juli)
 
@@ -32,7 +35,7 @@ In den folgenden Abschnitten werden die neuen Funktionen und bekannten Probleme 
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Public Preview |Vor CTP 3.2 war SQL Server-Big-Data-Cluster für registrierte Early Adopter verfügbar. Dieses Release ermöglicht allen Benutzern, die Funktionen von SQL Server-Big-Data-Clustern zu nutzen. <br/><br/> Weitere Informationen finden Sie unter [Einstieg in SQL Server-Big-Data-Cluster](deploy-get-started.md).|
+|Public Preview |Vor CTP 3.2 war SQL Server-Big-Data-Cluster für registrierte Early Adopter verfügbar. Dieses Release ermöglicht allen Benutzern, die Funktionen von SQL Server-Big-Data-Clustern zu nutzen. <br/><br/> Weitere Informationen finden [Sie [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]unter Einstieg in ](deploy-get-started.md).|
 |`azdata` |CTP 3.2 führt `azdata` ein – ein in Python geschriebenes Befehlszeilenprogramm, das Clusteradministratoren ermöglicht, den Big-Data-Cluster über REST-APIs zu starten und zu verwalten. `azdata` ersetzt `mssqlctl`. Siehe [Installieren von `azdata`](deploy-install-azdata.md). |
 |PolyBase |Externe Tabellenspaltennamen werden jetzt zum Abfragen von SQL Server-, Oracle-, Teradata-, MongoDB- und ODBC-Datenquellen verwendet. In früheren CTP-Releases wurden die Spalten in der externen Datenquelle nur auf Basis der Ordinalposition gebunden, und die in der Definition der EXTERNEN TABELLE angegebenen Namen wurden nicht verwendet. |
 |HDFS-Tieringaktualisierung |Einführung der Aktualisierungsfunktionalität für HDFS-Tiering, sodass eine vorhandene Einbindung für die neueste Momentaufnahme der Remotedaten aktualisiert werden kann. Weitere Informationen finden Sie unter [HDFS-Tiering](hdfs-tiering.md). |
@@ -144,7 +147,7 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
 
 - Wenn Sie bei einem Notebook auf den Befehl **Text hinzufügen** klicken, wird die Textzelle nicht im Bearbeitungsmodus, sondern im Vorschaumodus hinzugefügt. Sie können auf das Vorschausymbol klicken, um in den Bearbeitungsmodus zu wechseln und die Zelle zu bearbeiten.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -248,7 +251,7 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
 
 - Wenn Sie bei einem Notebook auf den Befehl **Text hinzufügen** klicken, wird die Textzelle nicht im Bearbeitungsmodus, sondern im Vorschaumodus hinzugefügt. Sie können auf das Vorschausymbol klicken, um in den Bearbeitungsmodus zu wechseln und die Zelle zu bearbeiten.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -336,7 +339,7 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
 
 - Konfigurationsänderungen an HDFS, mit denen Änderungen an „hdfs-site.xml“ einhergehen, werden nicht unterstützt.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -353,7 +356,7 @@ In den folgenden Abschnitten werden die neuen Funktionen und bekannten Probleme 
 | Anleitung für die GPU-Unterstützung zum Ausführen von Deep Learning mit TensorFlow in Spark | Weitere Informationen finden Sie unter [Deploy a big data cluster with GPU support and run TensorFlow (Bereitstellen eines Big Data-Clusters mit GPU-Unterstützung und Ausführen von TensorFlow)](spark-gpu-tensorflow.md). |
 | Die Datenquellen **SqlDataPool** und **SqlStoragePool** werden nicht mehr standardmäßig erstellt. | Erstellen Sie diese nach Bedarf manuell. Weitere Informationen finden Sie im Abschnitt [Bekannte Probleme](#externaltablesctp24). |
 | Unterstützung von `INSERT INTO SELECT` für den Datenpool | Ein Beispiel finden Sie unter [Tutorial: Ingest data into a SQL Server data pool with Transact-SQL (Tutorial: Erfassen von Daten in einem SQL Server-Datenpool mit Transact-SQL)](tutorial-data-pool-ingest-sql.md). |
-| Optionen `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` | Erzwingt oder deaktiviert die Verwendung des Computepools für Abfragen für externe Tabellen. Beispiel: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Optionen `FORCE SCALEOUTEXECUTION` und `DISABLE SCALEOUTEXECUTION` | Erzwingt oder deaktiviert die Verwendung des Computepools für Abfragen für externe Tabellen. Beispiel: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. |
 | Aktualisierte Bereitstellungsempfehlungen für AKS | Für die Auswertung von Big Data-Clustern in AKS wird die Verwendung eines einzelnen Knotens der Größe **Standard_L8s** empfohlen. |
 | Upgrade der Spark-Runtime auf Spark 2.4 | |
 
@@ -467,7 +470,7 @@ Ein neuer Python Kubernetes-Client (Version 9.0.0) hat die API zum Löschen von
 
 - Konfigurationsänderungen an HDFS, mit denen Änderungen an „hdfs-site.xml“ einhergehen, werden nicht unterstützt.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -481,9 +484,9 @@ In den folgenden Abschnitten werden die neuen Funktionen und bekannten Probleme 
 
 | Neue Funktion oder Update | Details |
 | :---------- | :------ |
-| Übermitteln von Spark-Aufträgen an Big Data-Cluster in IntelliJ | [Submit Spark jobs on SQL Server big data clusters in IntelliJ (Übermitteln von Spark-Aufträgen an Big Data-Cluster von SQL Server in IntelliJ)](spark-submit-job-intellij-tool-plugin.md) |
-| Allgemeine CLI für die Anwendungsbereitstellung und Clusterverwaltung | [How to deploy an app on SQL Server 2019 big data cluster (preview) (Vorgehensweise: Bereitstellen einer App in Big Data-Clustern von SQL Server 2019 (Vorschau))](big-data-cluster-create-apps.md) |
-| VS Code-Erweiterung zum Bereitstellen von Anwendungen in einem Big Data-Cluster | [How to use VS Code to deploy applications to SQL Server big data clusters (Vorgehensweise: Verwenden von VS Code zum Bereitstellen von Anwendungen in Big Data-Clustern von SQL Server)](app-deployment-extension.md) |
+| Übermitteln von Spark-Aufträgen an Big Data-Cluster in IntelliJ | [Übermitteln von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark-Aufträgen in IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| Allgemeine CLI für die Anwendungsbereitstellung und Clusterverwaltung | [Bereitstellen einer APP auf[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| VS Code-Erweiterung zum Bereitstellen von Anwendungen in einem Big Data-Cluster | [Verwenden von vs Code zum Bereitstellen von Anwendungen[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Änderungen an der Befehlssyntax des Tools **azdata** | Weitere Informationen finden Sie unter [Bekannte Probleme bei „azdata“](#azdatactp23). |
 | Verwenden von Sparklyr in Big-Data-Clustern | [Use Sparklyr in SQL Server 2019 big data cluster (Verwenden von Sparklyr in Big Data-Clustern von SQL Server 2019)](sparklyr-from-RStudio.md) |
 | Einbinden von externen HDFS-kompatiblen Speichern (Hadoop Distributed File System) in Big Data-Clustern mit dem **HDFS-Tiering** | Weitere Informationen finden Sie unter [HDFS-Tiering](hdfs-tiering.md). |
@@ -589,7 +592,7 @@ Wenn Sie Kubeadm zum Bereitstellen von Kubernetes auf mehreren Computern verwend
 
 - Konfigurationsänderungen an HDFS, mit denen Änderungen an „hdfs-site.xml“ einhergehen, werden nicht unterstützt.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -658,7 +661,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - Konfigurationsänderungen an HDFS, mit denen Änderungen an „hdfs-site.xml“ einhergehen, werden nicht unterstützt.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -676,7 +679,7 @@ In den folgenden Abschnitten werden die neuen Funktionen und bekannten Probleme 
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-Die folgenden Abschnitte enthalten Informationen zu bekannten Problemen bei SQL Server-Big-Data-Clustern in CTP 2.1.
+In den folgenden Abschnitten finden Sie Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] zu bekannten Problemen für in CTP 2,1.
 
 #### <a name="deployment"></a>Bereitstellung
 
@@ -722,7 +725,7 @@ Die folgenden Abschnitte enthalten Informationen zu bekannten Problemen bei SQL 
 
 - Konfigurationsänderungen an HDFS, mit denen Änderungen an „hdfs-site.xml“ einhergehen, werden nicht unterstützt.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -751,7 +754,7 @@ In den folgenden Abschnitten werden die neuen Funktionen und bekannten Probleme 
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-Die folgenden Abschnitte enthalten Informationen zu bekannten Problemen bei SQL Server-Big-Data-Clustern in CTP 2.0.
+In den folgenden Abschnitten finden Sie Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] zu bekannten Problemen für in CTP 2,0.
 
 #### <a name="deployment"></a>Bereitstellung
 
@@ -793,7 +796,7 @@ Die folgenden Abschnitte enthalten Informationen zu bekannten Problemen bei SQL 
 
 - Konfigurationsänderungen an HDFS, mit denen Änderungen an „hdfs-site.xml“ einhergehen, werden nicht unterstützt.
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>Sicherheit
 
 - Die SA_PASSWORD-Variable ist Teil der Umgebung und kann erkannt werden (z. B. in einer CORD-Sicherungsdatei). Nach der Bereitstellung müssen Sie die SA_PASSWORD-Variable in der Masterinstanz zurücksetzen. Das ist kein Fehler, sondern eine Sicherheitsmaßnahme. Weitere Informationen zum Ändern der SA_PASSWORD-Variablen in einem Linux-Container finden Sie unter [Ändern des Systemadministratorkennworts](../linux/quickstart-install-connect-docker.md#sapassword).
 
@@ -801,4 +804,4 @@ Die folgenden Abschnitte enthalten Informationen zu bekannten Problemen bei SQL 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big-Data-Clustern unter SQL Server finden Sie unter [Was sind SQL Server 2019-Big-Data-Cluster?](big-data-cluster-overview.md).
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist?](big-data-cluster-overview.md).

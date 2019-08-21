@@ -5,22 +5,22 @@ description: Dieser Artikel enthält die Beschreibung des Speicherpools in einem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958657"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652245"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>Was ist der Speicherpool (Big Data-Cluster für SQL Server)?
+# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Was ist der Speicherpool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel ist die Rolle beschrieben, die der *SQL Server-Speicherpool* in einem Big Data-Cluster für SQL Server 2019 (Vorschau) spielt. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Speicherpools beschrieben.
+In diesem Artikel wird die Rolle des *SQL Server-Speicherpools* in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]einer beschrieben. In den folgenden Abschnitten sind die Architektur und die Funktionalität eines SQL-Speicherpools beschrieben.
 
 ## <a name="storage-pool-architecture"></a>Speicherpoolarchitektur
 
@@ -38,7 +38,7 @@ Speicherknoten werden für folgende Aufgaben verwendet:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In den folgenden Artikeln finden Sie weitere Informationen zu den Big-Data-Clustern für SQL Server:
+Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zu finden Sie in den folgenden Ressourcen:
 
-- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server big data clusters Architecture (Workshop: Big-Data-Cluster für SQL Server – Architektur)](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] -Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

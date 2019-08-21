@@ -1,20 +1,20 @@
 ---
 title: Was sind Computepools?
 titleSuffix: SQL Server big data clusters
-description: Dieser Artikel enthält die Beschreibung eines Computepools in einem Big Data-Cluster für SQL Server 2019 (Vorschau).
+description: In diesem Artikel wird der computepool in [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]einer beschrieben.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9ae112369ddad91bec125ec19713040a5aae915
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 6156d23fa55690224cd6df82e5f4bafe10e4d1ab
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958809"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653084"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Was sind Computepools in einem Big-Data-Cluster für SQL Server?
 
@@ -32,7 +32,7 @@ Ein Computepool kann als PolyBase-Erweiterungsgruppe für verteilte Abfragen üb
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In den folgenden Artikeln finden Sie weitere Informationen zu den Big-Data-Clustern für SQL Server:
+Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zu finden Sie in den folgenden Ressourcen:
 
-- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server big data clusters Architecture (Workshop: Big-Data-Cluster für SQL Server – Architektur)](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] -Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

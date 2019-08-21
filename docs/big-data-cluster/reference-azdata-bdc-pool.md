@@ -5,16 +5,16 @@ description: Referenzartikel zu azdata bdc pool-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bea34f6e0b1d2159d227ae60a8e686a02f00b9b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ba88c46d0925d739101b93e79664c4ec470ca73a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426120"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653684"
 ---
 # <a name="azdata-bdc-pool"></a>azdata bdc pool
 
@@ -29,4 +29,4 @@ Der folgende Artikel enthält Referenzinformationen zu den **bdc pool**-Befehlen
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.

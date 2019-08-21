@@ -5,25 +5,25 @@ description: Dieses Tutorial veranschaulicht das Laden von Beispieldaten in eine
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621666"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653287"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Laden von Beispieldaten in einen Big Data-Cluster für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Tutorial wird erläutert, wie Sie ein Skript zum Laden von Beispieldaten in einen Big Data-Cluster für SQL Server 2019 (Vorschau) verwenden. In vielen anderen Tutorials der Dokumentation werden diese Beispieldaten verwendet.
+In diesem Tutorial wird erläutert, wie Sie ein Skript zum Laden von Beispiel [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Daten in einen verwenden. In vielen anderen Tutorials der Dokumentation werden diese Beispieldaten verwendet.
 
 > [!TIP]
-> Weitere Beispiele für Big Data-Cluster für SQL Server 2019 (Vorschau) finden Sie im GitHub-Repository [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Sie befinden sich im Pfad **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Weitere Beispiele für finden Sie im [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] GitHub-Repository für [SQL Server-Beispiele](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Sie befinden sich im Pfad **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 

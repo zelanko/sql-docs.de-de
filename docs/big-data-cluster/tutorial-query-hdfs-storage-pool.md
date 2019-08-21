@@ -1,26 +1,26 @@
 ---
 title: Abfragen von HDFS-Daten im Speicherpool
 titleSuffix: SQL Server big data clusters
-description: Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in einem Big Data-Cluster für SQL Server 2019 (Vorschauversion) abfragen. Sie erstellen eine externe Tabelle für Daten im Speicherpool und führen dann eine Abfrage aus.
+description: In diesem Tutorial wird veranschaulicht, wie HDFS-Daten [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in einer abgefragt werden. Sie erstellen eine externe Tabelle für Daten im Speicherpool und führen dann eine Abfrage aus.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957704"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652443"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Lernprogramm: Abfragen von HDFS in einem Big-Data-Cluster für SQL Server
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Abfragen von HDFS in einem Big-Data-Cluster für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieses Tutorial veranschaulicht, wie Sie HDFS-Daten in einem Big Data-Cluster für SQL Server 2019 (Vorschauversion) abfragen.
+In diesem Tutorial wird veranschaulicht, wie HDFS-Daten [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]in einer abgefragt werden.
 
 In diesem Tutorial lernen Sie Folgendes:
 
@@ -33,10 +33,10 @@ In diesem Tutorial lernen Sie Folgendes:
 
 ## <a id="prereqs"></a> Erforderliche Komponenten
 
-- [Big Data-Tools](deploy-big-data-tools.md)
+- [Big-Data-Tools](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **SQL Server 2019-Erweiterung**
+   - **Erweiterung von SQL Server 2019**
 - [Laden von Beispieldaten in Ihren Big Data-Cluster](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-to-hdfs"></a>Erstellen einer externen Tabelle für HDFS

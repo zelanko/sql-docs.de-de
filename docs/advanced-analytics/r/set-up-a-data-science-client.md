@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715606"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633634"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Einrichten eines Data Science-Clients für die R-Entwicklung auf SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ Verweisen Sie Ihre IDE auf die lokalen r-Bibliotheken: Base R, revoscaler usw. D
 
 Wenn Sie [rstudio](https://www.rstudio.com/)verwenden, können Sie die Umgebung so konfigurieren, dass die R-Bibliotheken und ausführbaren Dateien verwendet werden, die den Elementen einer Remote SQL Server entsprechen.
 
-1. Überprüfen Sie die auf SQL Server installierten R-Paketversionen. Weitere Informationen finden Sie unter [Get R Package Information](../package-management/installed-package-information.md).
+1. Überprüfen Sie die auf SQL Server installierten R-Paketversionen. Weitere Informationen finden Sie unter [Get R Package Information](../package-management/r-package-information.md).
 
 1. Installieren Sie Microsoft R Client oder eine der eigenständigen Serveroptionen, um revoscaler und andere r-Pakete hinzuzufügen, einschließlich der von Ihrer SQL Server Instanz verwendeten Basis-r-Verteilung. Wählen Sie eine Version auf derselben Ebene oder niedriger (Pakete sind abwärts kompatibel), die die gleichen Paketversionen wie auf dem Server bereitstellt. Versionsinformationen finden Sie in der Versions Zuordnung in diesem Artikel: [Aktualisieren Sie die R-und python-Komponenten](../install/upgrade-r-and-python.md).
 
@@ -227,7 +227,7 @@ In diesem Beispiel wird Visual Studio 2017 Community Edition verwendet, wobei di
 
 1. Wählen Sie im Menü **Datei** die Option **neu** aus, und wählen Sie dann **Projekt**aus.
 
-2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **r**, und wählen Sie **r Project**aus. Geben`dbtest` Sie im Feld **Name** ein, und klicken Sie auf **OK**. 
+2. Der linke Bereich enthält eine Liste vorinstallierter Vorlagen. Klicken Sie auf **r**, und wählen Sie **r Project**aus. Geben`dbtest` Sie im Feld Name ein, und klicken Sie auf **OK**. 
 
   Visual Studio erstellt einen neuen Projektordner und eine Standardskript Datei, `Script.R`. 
 

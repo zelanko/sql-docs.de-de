@@ -1,22 +1,22 @@
 ---
 title: Installieren von azdata
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie das azdata-Tool zum Installieren und Verwalten von SQL Server 2019-Big Data-Clustern (Vorschauversion) installieren.
+description: Erfahren Sie, wie Sie das Tool azdata zum Installieren und [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Verwalten von (Vorschau) installieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: e95fe15877dd6d22ca575b79f9fb213b6104d3aa
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028565"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652416"
 ---
-# <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>Installieren von „azdata“ zum Verwalten von SQL Server-Big Data-Clustern
+# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Installieren von azdata zur Verwaltung[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -109,4 +109,4 @@ Unter Linux müssen Sie Python 3.5 installieren und dann pip aktualisieren. Das 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clustern finden Sie unter [Was sind SQL Server 2019-Big Data-Cluster?](big-data-cluster-overview.md).
+Weitere Informationen zu Big Data Clustern finden Sie unter [was [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ist?](big-data-cluster-overview.md).

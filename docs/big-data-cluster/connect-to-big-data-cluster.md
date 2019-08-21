@@ -1,28 +1,27 @@
 ---
-title: Herstellen einer Verbindung mit der Masterinstanz und HDFS
-titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie eine Verbindung mit der SQL Server-Masterinstanz und dem HDFS/Spark-Gateway für einen Big-Data-Cluster für SQL Server 2019 (Vorschauversion) herstellen.
+title: Herstellen einer Verbindung mit Master-und HDFS-Big Data-Clustern
+description: Erfahren Sie, wie Sie eine Verbindung mit der SQL Server Master Instanz und dem HDFS/Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]-Gateway für eine herstellen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958642"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652424"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Herstellen einer Verbindung mit einem Big-Data-Cluster für SQL Server mit Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel wird beschrieben, wie Sie eine Verbindung mit einem Big-Data-Cluster für SQL Server 2019 (Vorschauversion) aus Azure Data Studio herstellen.
+In diesem Artikel wird beschrieben, wie Sie [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] von Azure Data Studio aus eine Verbindung mit herstellen.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Ein bereitgestellter [Big-Data-Cluster für SQL Server 2019](deployment-guidance.md).
 - [Big-Data-Tools für SQL Server 2019:](deploy-big-data-tools.md)
@@ -70,4 +69,4 @@ Mit der Azure Data Studio-Version vom Februar 2019 können Sie mit dem Herstelle
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clustern für SQL Server 2019 finden Sie unter [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md).
+Weitere Informationen zu [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]finden Sie unter [Was ist [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md).

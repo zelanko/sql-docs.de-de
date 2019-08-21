@@ -1,22 +1,22 @@
 ---
 title: Sicherheitskonzepte
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel werden Sicherheitskonzepte für Big Data-Cluster für SQL Server 2019 (Vorschauversion) beschrieben. Der Artikel umfasst auch eine Beschreibung von Clusterendpunkten und Clusterauthentifizierung.
+description: In diesem Artikel werden die Sicherheits [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Konzepte für beschrieben. Der Artikel umfasst auch eine Beschreibung von Clusterendpunkten und Clusterauthentifizierung.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958668"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652254"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Sicherheitskonzepte für SQL Server-Big Data-Cluster
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Sicherheitskonzepte für[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -82,7 +82,7 @@ Die Kommunikation mit Nicht-SQL-Diensten innerhalb des Big Data-Clusters wie z.B
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In den folgenden Artikeln finden Sie weitere Informationen zu den Big Data-Clustern für SQL Server:
+Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zu finden Sie in den folgenden Ressourcen:
 
-- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
-- [Workshop: Microsoft SQL Server big data clusters Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters) (Workshop: Big Data-Cluster für SQL Server – Architektur)
+- [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] -Architektur](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie eine Big-Data-Clusterbereitstellung mit Konfi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 02e922ca909cd863d496f9c49a60dd986df8bedb
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969493"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652392"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Konfigurieren von Bereitstellungseinstellungen für Big-Data-Cluster
 
@@ -22,7 +22,7 @@ ms.locfileid: "68969493"
 
 Sie können einen beliebigen JSON-Format-Editor verwenden (z. B. VS Code), um die Konfigurationsdateien für Ihre Clusterbereitstellung anzupassen. Verwenden Sie den Befehl **azdata bdc config**, um für diese Bearbeitungen Skripts zu erstellen und sie zu automatisieren. In diesem Artikel wird erläutert, wie Sie Big-Data-Clusterbereitstellungen konfigurieren, indem Sie Bereitstellungskonfigurationsdateien ändern. Er enthält Beispiele zum Ändern der Konfiguration für verschiedene Szenarios. Weitere Informationen zur Verwendung von Konfigurationsdateien in Bereitstellungen finden Sie im [Leitfaden zur Bereitstellung](deployment-guidance.md#configfile).
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - [Installieren Sie azdata](deploy-install-azdata.md).
 
@@ -420,4 +420,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Verwenden von Konfigurationsdateien in Big Data-Clusterbereitstellungen finden Sie unter [Bereitstellen von Big Data-Clustern für SQL Server in Kubernetes](deployment-guidance.md#configfile).
+Weitere Informationen zum Verwenden von Konfigurationsdateien in Big Data Cluster Bereitstellungen finden [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-guidance.md#configfile)Sie unter Bereitstellen von auf Kubernetes.

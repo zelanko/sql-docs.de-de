@@ -1,22 +1,22 @@
 ---
 title: Erstellen und Exportieren von Spark-Machine Learning-Modellen mit msprung
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie pyspark, um Machine Learning-Modelle mit Spark auf SQL Server Big Data Clustern (Vorschauversion) zu trainieren und zu erstellen. Exportieren Sie mit msprung, und bewerten Sie dann das Modell mit Java in SQL Server.
+description: Verwenden Sie pyspark, um Machine Learning-Modelle mit Spark on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] (Vorschau) zu trainieren und zu erstellen. Exportieren Sie mit msprung, und bewerten Sie dann das Modell mit Java in SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893960"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653411"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Erstellen, exportieren und bewerten von Spark-Machine Learning-Modellen auf SQL Server Big Data Clustern
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Erstellen, exportieren und bewerten von Spark-Machine Learning-Modellen[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 Im folgenden Beispiel wird gezeigt, wie Sie ein Modell mit [Spark ml](https://spark.apache.org/docs/latest/ml-guide.html)erstellen, das Modell in [msprung](http://mleap-docs.combust.ml/)exportieren und das Modell in SQL Server mit seiner [Java-Spracherweiterung](../language-extensions/language-extensions-overview.md)bewerten. Dies erfolgt im Kontext eines SQL Server 2019 Big Data Clusters.
 
@@ -24,7 +24,7 @@ Das folgende Diagramm veranschaulicht die in diesem Beispiel ausgeführte Arbeit
 
 ![Trainieren des Ergebnis Exports mit Spark](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Alle Dateien für dieses Beispiel befinden sich unter [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml).
 
@@ -32,7 +32,7 @@ Zum Ausführen des Beispiels müssen die folgenden Voraussetzungen erfüllt sein
 
 - Ein [SQL Server Big Data-Cluster](deploy-get-started.md)
 
-- [Big Data-Tools](deploy-big-data-tools.md)
+- [Big-Data-Tools](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
    - **Azure Data Studio**
@@ -51,7 +51,7 @@ In diesem Beispiel wird die Verwendung von Volkszählungsdaten ("**adultcensusin
 
    Dieses Notebook enthält Zellen mit den erforderlichen Befehlen für diesen Abschnitt des Beispiels.
 
-1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock aus. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks in SQL Server 2019 Preview](notebooks-guidance.md).
+1. Öffnen Sie das Notebook in Azure Data Studio, und führen Sie jeden Codeblock aus. Weitere Informationen zum Arbeiten mit Notebooks finden Sie unter [Verwenden von Notebooks in SQL Server 2019 (Vorschauversion)](notebooks-guidance.md).
 
 Die Daten werden zuerst in Spark gelesen und in Trainings-und Test Datasets aufgeteilt. Anschließend trainiert der Code ein Pipeline Modell mit den Trainingsdaten. Schließlich wird das Modell in ein msprung-Bündel exportiert.
 
@@ -68,4 +68,4 @@ Nach dem Aufbau des Beispiels können Sie Transact-SQL verwenden, um die Java-An
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data Clustern finden Sie unter Bereitstellen [SQL Server Big Data Clustern auf Kubernetes](deployment-guidance.md)
+Weitere Informationen zu Big Data Clustern finden [Sie [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-guidance.md) unter Bereitstellen auf Kubernetes

@@ -5,24 +5,24 @@ description: Stellen Sie eine Verbindung mit Big Data Cluster mithilfe von spark
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 04/08/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67728375"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653325"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Verwenden von sparklyr in SQL Server Big Data-Cluster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr stellt eine R-Schnittstelle für Apache Spark bereit. Sparklyr ist eine beliebte Methode für R-Entwickler, Spark zu verwenden. In diesem Artikel wird beschrieben, wie Sie sparklyr in einem SQL Server 2019 Big Data-Cluster (Vorschau) mithilfe von rstudio verwenden.
+Sparklyr stellt eine R-Schnittstelle für Apache Spark bereit. Sparklyr ist eine beliebte Methode für R-Entwickler, Spark zu verwenden. In diesem Artikel wird beschrieben, wie Sie sparklyr [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] in einem mithilfe von rstudio verwenden.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Stellen Sie [eine SQL Server 2019 Big Data Cluster](quickstart-big-data-cluster-deploy.md)bereit.
 
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data Clustern finden Sie unter [Was sind SQL Server 2019 Big Data Cluster](big-data-cluster-overview.md).
+Weitere Informationen zu Big Data Clustern finden Sie unter [Was ist [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md).

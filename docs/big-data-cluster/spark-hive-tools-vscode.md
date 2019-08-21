@@ -5,16 +5,16 @@ description: Übermitteln Sie Spark-Aufträge mit der Erweiterung „Spark & Hiv
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4458666792d7f4629b4e1820e98e2dbb9901c2b6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68425980"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653727"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Übermitteln von Spark-Aufträgen an Big-Data-Cluster von SQL Server in Visual Studio Code
 
@@ -23,15 +23,15 @@ Hier erfahren Sie, wie Sie Spark & Hive Tools für VS Code verwenden, um PySpark
 Die Spark & Hive Tools-Erweiterung kann auf allen von Visual Studio Code unterstützten Plattformen installiert werden. Dazu gehören Windows, Linux und macOS. Im Folgenden werden die Voraussetzungen für verschiedene Plattformen aufgeführt.
 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Die folgenden Elemente sind zum Ausführen der Schritte in diesem Artikel erforderlich:
 
-- Ein Big-Data-Cluster für SQL Server. Siehe [Was sind Big Data-Cluster für SQL Server?](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)
+- Ein Big-Data-Cluster für SQL Server. Siehe [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono ist nur für Linux und macOS erforderlich.
 - [Einrichten einer interaktiven PySpark-Umgebung für Visual Studio Code](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment)
-- Ein lokales Verzeichnis namens **HDexample**.  In diesem Artikel wird das Verzeichnis **C:\HD\HDexample** verwendet.
+- Ein lokales Verzeichnis mit dem Namen **sqlbdcexample**.  In diesem Artikel wird **c:\sqlbdc\sqlbdcexample**verwendet.
 
 ## <a name="install-spark--hive-tools"></a>Installieren von Spark & Hive Tools
 
@@ -53,9 +53,9 @@ Sobald die Voraussetzungen erfüllt sind, können Sie Spark & Hive Tools für Vi
 
 Führen Sie die folgenden Schritte aus, um einen Arbeitsordner zu öffnen und eine Datei in Visual Studio Code zu erstellen:
 
-1. Navigieren Sie in der Menüleiste zu **Datei** > **Ordner öffnen...**  > **C:\HD\HDexample**, und klicken Sie dann auf **Ordner auswählen**. Daraufhin wird der Ordner links in der Ansicht **Explorer** angezeigt.
+1. Navigieren Sie in der Menüleiste zu **Datei** > **Ordner öffnen...**  >  **C:\sqlbdc\sqlbdcexample**, und wählen Sie dann die Schaltfläche **Ordner auswählen** aus. Daraufhin wird der Ordner links in der Ansicht **Explorer** angezeigt.
 
-2. Wählen Sie den Ordner **HDexample** in der Ansicht **Explorer** aus, und klicken Sie dann auf das Symbol **Neue Datei** neben dem Arbeitsordner.
+2. Wählen Sie in der Ansicht **Explorer** den Ordner **sqlbdcexample**aus, und klicken Sie dann auf das Symbol **neue Datei** neben dem Arbeitsordner.
 
    ![Neue Datei](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -116,7 +116,7 @@ Bevor Sie Skripts an Ihre Cluster über Visual Studio Code übermitteln können,
 
 ## <a name="set-default-cluster"></a>Festlegen eines Standardclusters
 
-1. Öffnen Sie den Ordner **HDexample** erneut, den Sie [zuvor](#open-work-folder) erstellt haben, wenn Sie ihn geschlossen haben.  
+1. Öffnen Sie den [zuvor](#open-work-folder) erstellten Ordner **sqlbdcexample** , wenn er geschlossen ist.  
 
 2. Wählen Sie die Datei **HelloWorld.py** aus, die Sie [zuvor](#open-work-folder) erstellt haben, um sie im Skript-Editor zu öffnen.
 
@@ -132,7 +132,7 @@ Bevor Sie Skripts an Ihre Cluster über Visual Studio Code übermitteln können,
 
 Sie können interaktive PySpark-Abfragen mithilfe der folgenden Schritte übermitteln:
 
-1. Öffnen Sie den Ordner **HDexample** erneut, den Sie [zuvor](#open-work-folder) erstellt haben, wenn Sie ihn geschlossen haben.  
+1. Öffnen Sie den [zuvor](#open-work-folder) erstellten Ordner **sqlbdcexample** , wenn er geschlossen ist.  
 
 2. Wählen Sie die Datei **HelloWorld.py** aus, die Sie [zuvor](#open-work-folder) erstellt haben, um sie im Skript-Editor zu öffnen.
 
@@ -159,7 +159,7 @@ Sie können interaktive PySpark-Abfragen mithilfe der folgenden Schritte übermi
 
 ## <a name="submit-pyspark-batch-job"></a>Übermitteln von PySpark-Batchaufträgen
 
-1. Öffnen Sie den Ordner **HDexample** erneut, den Sie [zuvor](#open-work-folder) erstellt haben, wenn Sie ihn geschlossen haben.  
+1. Öffnen Sie den [zuvor](#open-work-folder) erstellten Ordner **sqlbdcexample** , wenn er geschlossen ist.  
 
 2. Wählen Sie die Datei **HelloWorld.py** aus, die Sie [zuvor](#open-work-folder) erstellt haben, um sie im Skript-Editor zu öffnen.
 
@@ -203,20 +203,20 @@ Die [Apache Livy](https://livy.incubator.apache.org/)-Konfiguration wird unterst
 | NAME | description | Typ |
 | :- | :- | :- |
 | file | Die Datei, die die auszuführende Anwendung enthält | Pfad (erforderlich) |
-| proxyUser | Der Benutzer, dessen Identität beim Ausführen des Auftrags angenommen werden soll | Zeichenfolge |
-| className | Die Java-/Spark-Hauptklasse der Anwendung | Zeichenfolge |
+| proxyUser | Der Benutzer, dessen Identität beim Ausführen des Auftrags angenommen werden soll | String |
+| className | Die Java-/Spark-Hauptklasse der Anwendung | String |
 | args | Die Befehlszeilenargumente für die Anwendung | Eine Liste von Zeichenfolgen |
 | jars | Die JAR-Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
 | pyFiles | Die Python-Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
 | files | Die Dateien, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
-| driverMemory | Die Menge an Arbeitsspeicher, die für den Treiberprozess verwendet werden soll | Zeichenfolge |
-| driverCores | Die Anzahl der Kerne, die für den Treiberprozess verwendet werden soll | INT |
-| executorMemory | Die Menge an Arbeitsspeicher, die pro Executorprozess verwendet werden soll | Zeichenfolge |
-| executorCores | Die Anzahl von Kernen, die für jeden Executor verwendet werden sollen | INT |
-| numExecutors | Die Anzahl der Executors, die für diese Sitzung gestartet werden sollen | INT |
+| driverMemory | Die Menge an Arbeitsspeicher, die für den Treiberprozess verwendet werden soll | String |
+| driverCores | Die Anzahl der Kerne, die für den Treiberprozess verwendet werden soll | ssNoversion |
+| executorMemory | Die Menge an Arbeitsspeicher, die pro Executorprozess verwendet werden soll | String |
+| executorCores | Die Anzahl von Kernen, die für jeden Executor verwendet werden sollen | ssNoversion |
+| numExecutors | Die Anzahl der Executors, die für diese Sitzung gestartet werden sollen | ssNoversion |
 | archives | Die Archive, die in dieser Sitzung verwendet werden sollen | Eine Liste von Zeichenfolgen |
-| queue | Der Name der YARN-Warteschlange, an die übermittelt werden soll | Zeichenfolge |
-| NAME | Der Name der Sitzung | Zeichenfolge |
+| Warteschlange | Der Name der YARN-Warteschlange, an die übermittelt werden soll | String |
+| NAME | Der Name der Sitzung | String |
 | conf | Spark-Konfigurationseigenschaften | Zuordnung von Schlüsseln zu Werten |
 
 #### <a name="response-body"></a>Antworttext
@@ -225,11 +225,11 @@ Das erstellte Batchobjekt
 
 | NAME | description | Typ |
 | :- | :- | :- |
-| id | Die Sitzungs-ID | INT |
+| id | Die Sitzungs-ID | ssNoversion |
 | appId | Die Anwendungs-ID der Sitzung | Zeichenfolge |
 | appInfo | Die ausführliche Anwendungsinformationen | Zuordnung von Schlüsseln zu Werten |
 | log | Die Protokollzeilen | Eine Liste von Zeichenfolgen |
-| state | Der Batchzustand | Zeichenfolge |
+| state | Der Batchzustand | String |
 
 >[!NOTE]
 >Die zugewiesene Livy-Konfiguration wird im Ausgabebereich angezeigt, wenn das Skript übermittelt wird.
@@ -255,4 +255,4 @@ Spark & Hive für Visual Studio Code unterstützt die folgenden Features:
 3. Überprüfen Sie die **Ausgabe**.  
 
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen über Big Data-Cluster für SQL Server und zugehörige Szenarios finden Sie unter [Was sind Big Data-Cluster für SQL Server?](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions).
+Weitere Informationen zu SQL Server Big Data-Cluster und verwandten Szenarien finden [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)Sie unter.

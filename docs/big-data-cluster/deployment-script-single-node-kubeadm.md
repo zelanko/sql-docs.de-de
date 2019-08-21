@@ -1,20 +1,20 @@
 ---
 title: Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
 titleSuffix: SQL Server big data clusters
-description: Verwenden Sie ein Bash-Bereitstellungsskript, um einen Big Data-Cluster für SQL Server 2019 (Vorschau) in einem Kubernetes-Einzelknotencluster bereitzustellen.
+description: Verwenden Sie ein Bash-Bereitstellungs Skript [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] zum Bereitstellen eines für einen kubeadm-Cluster mit einem einzelnen Knoten.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715897"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652346"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Bereitstellen mit einem Bash-Skript in einem Kubernetes-Einzelknotencluster
 
@@ -22,7 +22,7 @@ ms.locfileid: "68715897"
 
 In diesem Tutorial verwenden Sie ein Bash-Beispielbereitstellungsskript, um einen Kubernetes-Einzelknotencluster über kubeadm und in dem Cluster einen Big Data-Cluster für SQL Server bereitzustellen.  
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Einen virtuellen oder physischen Computer mit einem Vanille-Ubuntu 18,04-oder 16,04- **Server** . Alle Abhängigkeiten werden vom Skript eingerichtet, und Sie führen das Skript aus der VM aus.
 

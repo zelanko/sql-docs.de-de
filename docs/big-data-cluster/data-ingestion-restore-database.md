@@ -1,26 +1,26 @@
 ---
 title: Wiederherstellen einer Datenbank
 titleSuffix: SQL Server big data clusters
-description: In diesem Artikel ist beschrieben, wie eine Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server 2019 (Vorschauversion) wiederhergestellt wird.
+description: In diesem Artikel wird gezeigt, wie eine Datenbank in der Master Instanz [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]eines wieder hergestellt wird.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969485"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652237"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Wiederherstellen einer Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-In diesem Artikel ist beschrieben, wie eine vorhanden Datenbank in der Masterinstanz eines Big Data-Clusters für SQL Server 2019 (Vorschauversion) wiederhergestellt wird. Die empfohlene Methode besteht darin, einen Ansatz mit Sichern, Kopieren und Wiederherstellen zu verwenden.
+In diesem Artikel wird beschrieben, wie eine vorhandene Datenbank in der Master Instanz [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]eines wieder hergestellt wird. Die empfohlene Methode besteht darin, einen Ansatz mit Sichern, Kopieren und Wiederherstellen zu verwenden.
 
 ## <a name="backup-your-existing-database"></a>Sichern Ihrer vorhandenen Datenbank
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In der folgenden Übersicht finden Sie weitere Informationen zu den Big-Data-Clustern für SQL Server:
+Weitere Informationen [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]zum finden Sie in der folgenden Übersicht:
 
-- [Was sind Big Data-Cluster für SQL Server 2019?](big-data-cluster-overview.md)
+- [Was sind [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

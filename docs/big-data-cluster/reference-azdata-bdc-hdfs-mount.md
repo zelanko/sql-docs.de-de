@@ -5,16 +5,16 @@ description: Referenzartikel zu azdata bdc hdfs mount-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f0b259a3ac4ac0850fa05de3867e928b035307b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: eca0bf6cab7d88d91bc52daf88d5e71cf652d474
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426270"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653693"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
@@ -53,7 +53,7 @@ Der URI des Remotespeichers, der eingebunden werden soll (Quelle der Einbindung)
 Der HDFS-Pfad, in dem die Einbindung erstellt werden muss (Ziel der Einbindung).
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -61,7 +61,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-hdfs-mount-delete"></a>azdata bdc hdfs mount delete
 Löschen von Einbindungen von Remotespeicher in HDFS.
 ```bash
@@ -78,7 +78,7 @@ azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 Der HDFS-Pfad, der der Einbindung entspricht, die gelöscht werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -86,7 +86,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-hdfs-mount-status"></a>azdata bdc hdfs mount status
 Der Status von Einbindungen (Mounts).
 ```bash
@@ -107,7 +107,7 @@ azdata bdc hdfs mount status
 Einbindungspfad (Mount-Pfad).
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -115,7 +115,7 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-hdfs-mount-refresh"></a>azdata bdc hdfs mount refresh
 Aktualisieren des Inhalts einer Einbindung in HDFS.
 ```bash
@@ -132,7 +132,7 @@ azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 Der HDFS-Pfad, der der Einbindung entspricht, die aktualisiert werden soll.
 ### <a name="global-arguments"></a>Globale Argumente
 #### `--debug`
-Erhöhen Sie die Ausführlichkeit der Protokollierung, um alle Debugprotokolle anzuzeigen.
+Ausführlichkeit der Protokollierung erhöhen, um alle Debugprotokolle anzuzeigen.
 #### `--help -h`
 Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
@@ -140,8 +140,8 @@ Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
 JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Erhöhen Sie die Ausführlichkeit der Protokollierung. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
+Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).
+Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.

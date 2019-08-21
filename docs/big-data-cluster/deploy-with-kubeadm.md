@@ -1,32 +1,32 @@
 ---
 title: Konfigurieren von Kubernetes mit kubeadm
 titleSuffix: SQL Server big data clusters
-description: Erfahren Sie, wie Sie Kubernetes auf mehreren Ubuntu 16.04- oder 18.04-Computern (physisch oder virtuell) für SQL Server 2019-Big Data-Cluster-Bereitstellungen (Vorschau) konfigurieren.
+description: Erfahren Sie, wie Sie Kubernetes auf mehreren Ubuntu 16,04-oder 18,04-Computern (physisch oder [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] virtuell) für bereit Stellungen konfigurieren.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 63a3529755267137cb7a1094060499e5db008ec8
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661368"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652373"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server-Big Data-Cluster-Bereitstellungen
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dieser Artikel enthält ein Beispiel für die Verwendung von **kubeadm** zum Konfigurieren von Kubernetes auf mehreren Computern für SQL Server 2019-Big Data-Cluster-Bereitstellungen (Vorschau). In diesem Beispiel sind mehrere Ubuntu 16.04- oder 18.04 LTS-Computer (physisch oder virtuell) das Ziel. Für Bereitstellungen auf einer anderen Linux-Plattform müssen Sie einige der Befehle so ändern, dass Sie Ihrem System entsprechen.  
+Dieser Artikel enthält ein Beispiel für die Verwendung von **kubeadm** zum Konfigurieren von Kubernetes auf mehreren Computern [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] für bereit Stellungen. In diesem Beispiel sind mehrere Ubuntu 16.04- oder 18.04 LTS-Computer (physisch oder virtuell) das Ziel. Für Bereitstellungen auf einer anderen Linux-Plattform müssen Sie einige der Befehle so ändern, dass Sie Ihrem System entsprechen.  
 
 > [!TIP] 
 > Beispielskripts zum Konfigurieren von Kubernetes finden Sie unter [Create a Kubernetes cluster using Kubeadm on Ubuntu 16.04 LTS or 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm) (Erstellen eines Kubernetes-Clusters mit Kubeadm auf Ubuntu 16.04 LTS oder 18.04 LTS).
 In [diesem ](deployment-script-single-node-kubeadm.md) Thema finden Sie auch ein Beispielskript, das eine kubeadm-Bereitstellung eines einzelnen Knotens auf einem virtuellen Computer automatisiert und dann eine Standardkonfiguration des Big Data-Clusters darauf bereitstellt.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Mindestens 3 physische Linux-Computer oder virtuelle Computer
 - Empfohlene Konfiguration pro Computer:

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 5b2629a50a73208181cc14fd843cd9ab9c0b05df
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715385"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633609"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: R-Datenanalysen für SQL-Entwickler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ Der Zweck dieses mehrteiligen Tutorials ist eine Einführung in einen typischen 
 
 Nachdem das Modell in der Datenbank gespeichert wurde, müssen Sie das Modell für Vorhersagen [!INCLUDE[tsql](../../includes/tsql-md.md)] aus mithilfe von gespeicherten Prozeduren abrufen.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Alle Tasks können mithilfe [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherter Prozeduren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ausgeführt werden.
 
@@ -55,7 +55,7 @@ In diesem Tutorial wird davon ausgegangen, dass Sie mit grundlegenden Daten Bank
 
 + [SQL Server 2016 R-Dienste](../install/sql-r-services-windows-install.md#verify-installation) oder [SQL Server Machine Learning Services mit aktiviertem R](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R-Bibliotheken](../package-management/installed-package-information.md)
++ [R-Bibliotheken](../package-management/r-package-information.md)
 
 + [Berechtigungen](../security/user-permission.md)
 

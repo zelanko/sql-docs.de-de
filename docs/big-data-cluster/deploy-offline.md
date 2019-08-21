@@ -5,22 +5,22 @@ description: Erfahren Sie, wie Sie eine Offlinebereitstellung von Big Data-Clust
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419370"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652369"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Durchführen einer Offlinebereitstellung von Big Data-Clustern für SQL Server
 
-In diesem Artikel wird beschrieben, wie Sie eine Offlinebereitstellung von Big Data-Clustern für SQL Server 2019 (Vorschau) durchführen. Big Data-Cluster müssen Zugriff auf ein Docker-Repository haben, aus dem Containerimages gepullt werden. Bei einer Offlineinstallation werden die erforderlichen Images in einem privaten Docker-Repository abgelegt. Dieses private Repository wird dann als Imagequelle für eine neue Bereitstellung verwendet.
+In diesem Artikel wird beschrieben, wie Sie eine Offline Bereitstellung einer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ausführen. Big Data-Cluster müssen Zugriff auf ein Docker-Repository haben, aus dem Containerimages gepullt werden. Bei einer Offlineinstallation werden die erforderlichen Images in einem privaten Docker-Repository abgelegt. Dieses private Repository wird dann als Imagequelle für eine neue Bereitstellung verwendet.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Docker-Engine 1.8 und höher auf unterstütztem Linux-Betriebssystem oder Docker für Mac bzw. Windows. Weitere Informationen finden Sie unter [Install Docker (Installieren von Docker)](https://docs.docker.com/engine/installation/).
 
@@ -171,4 +171,4 @@ In der Bereitstellung werden Sie aufgefordert, den Docker-Benutzernamen und das 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clusterbereitstellungen finden Sie unter [Vorgehensweise: Bereitstellen von Big Data-Clustern für SQL Server in Kubernetes](deployment-guidance.md).
+Weitere Informationen zu Big Data Cluster Bereitstellungen finden [Sie [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] unter Bereitstellen von auf Kubernetes](deployment-guidance.md).

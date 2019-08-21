@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie den MSSQL-Spark-Connector in Spark zum Lesen 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957830"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653300"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Lesen und Schreiben von Daten in SQL Server aus Spark mithilfe des MSSQL-Spark-Connectors
 
@@ -39,13 +39,13 @@ SQL Server 2019 (Vorschauversion) stellt den **MSSQL-Spark-Connector** für Big 
 
 Die folgende Tabelle beschreibt neue oder geänderte Schnittstellenparameter:
 
-| Eigenschaftenname | Optional | und Beschreibung |
+| Eigenschaftenname | Optional | Beschreibung |
 |---|---|---|
 | **isolationLevel** | Ja | Beschreibt die Isolationsstufe der Verbindung. Der Standardwert für den MSSQL-Spark-Connector lautet **READ_COMMITTED**. |
 
 Der Connector verwendet SQL Server-APIs für Massenschreibvorgänge. Alle Parameter für Massenschreibvorgänge können vom Benutzer als optionale Parameter übergeben werden und werden vom Connector unverändert an die zugrunde liegende API übergeben. Weitere Informationen zu Massenschreibvorgängen finden Sie unter [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 - Ein [SQL Server-Big Data-Cluster](deploy-get-started.md)
 
@@ -90,4 +90,4 @@ Um sich die Verwendung des MSSQL-Spark-Connectors mit diesen Daten anzusehen, k�
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Big Data-Clustern finden Sie unter [Vorgehensweise: Bereitstellen von Big Data-Clustern für SQL Server in Kubernetes](deployment-guidance.md).
+Weitere Informationen zu Big Data Clustern finden [Sie [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-guidance.md) unter Bereitstellen auf Kubernetes
