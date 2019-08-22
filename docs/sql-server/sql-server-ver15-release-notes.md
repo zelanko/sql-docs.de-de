@@ -54,7 +54,7 @@ Ausführliche Informationen zu Support und Lizenzen für CTP-Releases sind in `l
 
 ## <a name = "release-notes"></a>Vom Support ausgeschlossene Features
 
-- **Problem und Kundenbeeinträchtigung**: Bei [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] ist der Support für die folgenden Komponenten, Features und Szenarien ausgeschlossen:
+- **Problem und Kundenbeeinträchtigung**: Bei der [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] ist der Support für die folgenden Komponenten, Features und Szenarien ausgeschlossen:
   - SQL Server Analysis Services
   - SQL Server Reporting Services
   - Always On-Verfügbarkeitsgruppen in Kubernetes
