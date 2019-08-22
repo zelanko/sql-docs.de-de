@@ -10376,17 +10376,8 @@
             - name: Hohe Verfügbarkeit für Container
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: Always On-Verfügbarkeitsgruppen für SQL Server-Container
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: Bereitstellen
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: Verwalten
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: Verbinden
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: Erstellen von Bereitstellungsskripts
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: Konfigurieren eines Containers in Kubernetes
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Security
           href: linux/sql-server-linux-security-overview.md
           items:
