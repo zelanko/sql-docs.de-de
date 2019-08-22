@@ -1,7 +1,7 @@
 ---
 title: Herstellen einer Verbindung mit einer Azure SQL-Datenbank | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956852"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028162"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 
@@ -78,7 +78,7 @@ shutdown /r /t 1
 
 Vor Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] war es bei der Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] erforderlich, den Servernamen an die UserID in der Verbindungszeichenfolge anzufügen. Beispiel: user@servername. Ab Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] muss @servername nicht mehr an die UserID in der Verbindungszeichenfolge angefügt werden.  
 
-## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Einstellung "hostNameInCertificate" zur Verwendung der Verschlüsselung erforderlich
+## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Einstellung „hostNameInCertificate“ zur Verwendung der Verschlüsselung erforderlich
 
 Vor der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2-Version von sollten Sie beim Herstellen einer Verbindung mit ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] **hostNameInCertificate** angeben, wenn Sie " **verschlüsseln = True** " angeben (wenn der Servername in der Verbindung Zeichenfolge *ist "* ShortName". *Domain Name*: Legen Sie die **hostNameInCertificate** -Eigenschaft \*auf *fest. Domain Name*.). Diese Eigenschaft ist ab Version 7,2 des Treibers optional.
 
@@ -88,6 +88,6 @@ Beispiel:
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
-[Verbinden von SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
