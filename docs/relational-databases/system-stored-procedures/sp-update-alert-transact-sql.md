@@ -1,5 +1,5 @@
 ---
-title: Sp_update_alert (Transact-SQL) | Microsoft-Dokumentation
+title: sp_update_alert (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084942"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890845"
 ---
-# <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
+# <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aktualisiert die Einstellungen einer vorhandenen Warnung.  
@@ -62,21 +62,21 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name der Warnung, die aktualisiert werden soll. *Namen* ist **Sysname**, hat keinen Standardwert.  
+`[ @name = ] 'name'`Der Name der Warnung, die aktualisiert werden soll. *Name* ist vom Datentyp **vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @new_name = ] 'new_name'` Ein neuer Name für die Warnung. Der Name muss eindeutig sein. *New_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @new_name = ] 'new_name'`Ein neuer Name für die Warnung. Der Name muss eindeutig sein. *new_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @enabled = ] enabled` Gibt an, ob die Warnung aktiviert (**1**) oder nicht aktiviert ist (**0**). *aktiviert* ist **Tinyint**, hat den Standardwert NULL. Eine Warnung muss aktiviert sein, um ausgelöst werden zu können.  
+`[ @enabled = ] enabled`Gibt an, ob die Warnung aktiviert (**1**) oder nicht aktiviert (**0**) ist. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist NULL. Eine Warnung muss aktiviert sein, um ausgelöst werden zu können.  
   
-`[ @message_id = ] message_id` Eine neue Meldungs- oder Fehlernummer Zahl für die Warnungsdefinition. In der Regel *Message_id* entspricht einer Fehlernummer in der **Sysmessages** Tabelle. *Message_id* ist **Int**, hat den Standardwert NULL. Eine Nachricht, die ID verwendet werden, kann nur, wenn die Einstellung der Schweregrad der Warnung **0**.  
+`[ @message_id = ] message_id`Eine neue Meldung oder Fehlernummer für die Warnungs Definition. In der Regel entspricht *message_id* einer Fehlernummer in der Tabelle **sysmess Ages** . *message_id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine Nachrichten-ID kann nur verwendet werden, wenn die Einstellung für den Schweregrad für die Warnung den Wert **0**hat.  
   
-`[ @severity = ] severity` Ein neuer Schweregrad (von **1** über **25**) für die Warnungsdefinition. Alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nachricht in das Windows-Anwendungsprotokoll mit dem angegebenen Schweregrad wird die Warnung aktiviert. *Schweregrad* ist **Int**, hat den Standardwert NULL. Eine Ebene des Schweregrads dienen nur dann, wenn die Nachrichten-ID-Einstellung für die Warnung ist **0**.  
+`[ @severity = ] severity`Ein neuer Schweregrad (von **1** bis **25**) für die Warnungs Definition. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jede[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nachricht, die mit dem angegebenen Schweregrad an das Windows-Anwendungsprotokoll gesendet wird, aktiviert die Warnung. der *Schweregrad* ist vom Datentyp **int**und hat den Standardwert NULL. Ein Schweregrad kann nur verwendet werden, wenn die Einstellung für die Nachrichten-ID für die Warnung den Wert **0**hat.  
   
-`[ @delay_between_responses = ] delay_between_responses` Die neue Wartezeit zwischen Antworten auf die Warnung in Sekunden. *Delay_between_responses* ist **Int**, hat den Standardwert NULL.  
+`[ @delay_between_responses = ] delay_between_responses`Die Neue Wartezeit (in Sekunden) zwischen den Antworten auf die Warnung. *delay_between_responses* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @notification_message = ] 'notification_message'` Der überarbeitete Text einer zusätzlichen Nachricht, die an den Operator gesendet werden, als Teil der e-Mail- **net Send**,- oder Pagerbenachrichtigung. *Notification_message* ist **nvarchar(512)** , hat den Standardwert NULL.  
+`[ @notification_message = ] 'notification_message'`Der überarbeitete Text einer zusätzlichen Nachricht, die als Teil der e-Mail-, **net send**-oder Pager-Benachrichtigung an den Operator gesendet wurde. *notification_message* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL.  
   
-`[ @include_event_description_in = ] include_event_description_in` Gibt an, ob die Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlers aus dem Windows-Anwendungsprotokoll, die in die benachrichtigungsmeldung eingeschlossen werden soll. *Include_event_description_in* ist **Tinyint**, hat den Standardwert NULL. der Wert und eine oder mehrere der folgenden Werte sind möglich.  
+`[ @include_event_description_in = ] include_event_description_in`Gibt an, ob die Beschreibung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des Fehlers aus dem Windows-Anwendungsprotokoll in die Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in* ist vom Datentyp **tinyint**. der Standardwert ist NULL. die folgenden Werte sind möglich.  
   
 |Wert|Description|  
 |-----------|-----------------|  
@@ -86,31 +86,31 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|All|  
   
-`[ @database_name = ] 'database'` Der Name der Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst, werden soll. *Datenbank* ist **Sysname.** In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
+`[ @database_name = ] 'database'`Der Name der Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. *Database* ist vom **Datentyp sysname.** In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` Eine Sequenz von Zeichen, die in der Beschreibung des Fehlers im Fehlermeldungsprotokoll enthalten sein muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *Event_description_keyword* ist **nvarchar(100)** , hat den Standardwert NULL. Dieser Parameter ist hilfreich beim Filtern von Objektnamen (z. B. **%customer_table%** ).  
+`[ @event_description_keyword = ] 'event_description_keyword'`Eine Sequenz von Zeichen, die in der Beschreibung des Fehlers im Fehlermeldungs Protokoll gefunden werden muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *event_description_keyword* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL. Dieser Parameter ist nützlich zum Filtern von Objektnamen (z. b. **% customer_table%** ).  
   
-`[ @job_id = ] job_id` ID des Auftrags. *Job_id* ist **Uniqueidentifier**, hat den Standardwert NULL. Wenn *Job_id* angegeben wird, *Job_name* muss ausgelassen werden.  
+`[ @job_id = ] job_id`Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier**. der Standardwert ist NULL. Wenn *job_id* angegeben wird, muss *job_name* ausgelassen werden.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, der in Reaktion auf diese Warnung ausgeführt wird. *Job_name* ist **Sysname**, hat den Standardwert NULL. Wenn *Job_name* angegeben wird, *Job_id* muss ausgelassen werden.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags, der als Reaktion auf diese Warnung ausgeführt wird. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *job_name* angegeben wird, muss *job_id* ausgelassen werden.  
   
-`[ @occurrence_count = ] occurrence_count` Setzt die Anzahl der Häufigkeit, mit der die Warnung aufgetreten ist. *Occurrence_count* ist **Int**, hat den Standardwert NULL. der Wert kann festgelegt werden, nur für **0**.  
+`[ @occurrence_count = ] occurrence_count`Gibt zurück, wie oft die Warnung aufgetreten ist. *occurrence_count* ist vom Datentyp **int**. der Standardwert ist NULL. der Wert kann nur auf **0**festgelegt werden.  
   
-`[ @count_reset_date = ] count_reset_date` Setzt das Datum zurück, die, das Anzahl der Vorkommen zuletzt zurückgesetzt wurde. *Count_reset_date* ist **Int**, hat den Standardwert NULL.  
+`[ @count_reset_date = ] count_reset_date`Setzt das Datum zurück, an dem die Anzahl der Vorkommen zuletzt zurückgesetzt wurde. *count_reset_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @count_reset_time = ] count_reset_time` Setzt die Uhrzeit zurück, die die Anzahl der Vorkommen zuletzt zurückgesetzt wurde. *Count_reset_time* ist **Int**, hat den Standardwert NULL.  
+`[ @count_reset_time = ] count_reset_time`Setzt die Uhrzeit zurück, zu der die Anzahl der Vorkommen zuletzt zurückgesetzt wurde. *count_reset_time* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @last_occurrence_date = ] last_occurrence_date` Setzt das Datum zurück, die, das die Warnung zuletzt aufgetreten ist. *Last_occurrence_date* ist **Int**, hat den Standardwert NULL. der Wert kann festgelegt werden, nur für **0**.  
+`[ @last_occurrence_date = ] last_occurrence_date`Setzt das Datum zurück, an dem die Warnung zuletzt aufgetreten ist. *last_occurrence_date* ist vom Datentyp **int**. der Standardwert ist NULL. der Wert kann nur auf **0**festgelegt werden.  
   
-`[ @last_occurrence_time = ] last_occurrence_time` Setzt die Uhrzeit zurück, die die Warnung zuletzt aufgetreten ist. *Last_occurrence_time* ist **Int**, hat den Standardwert NULL. der Wert kann festgelegt werden, nur für **0**.  
+`[ @last_occurrence_time = ] last_occurrence_time`Setzt die Uhrzeit zurück, zu der die Warnung zuletzt aufgetreten ist. *last_occurrence_time* ist vom Datentyp **int**. der Standardwert ist NULL. der Wert kann nur auf **0**festgelegt werden.  
   
-`[ @last_response_date = ] last_response_date` Setzt das Datum zurück, die, das die Warnung zuletzt vom SQLServerAgent-Dienst auf reagiert hat. *Last_response_date* ist **Int**, hat den Standardwert NULL. der Wert kann festgelegt werden, nur für **0**.  
+`[ @last_response_date = ] last_response_date`Setzt das Datum zurück, an dem die Warnung zuletzt vom SQLServerAgent-Dienst beantwortet wurde. *last_response_date* ist vom Datentyp **int**. der Standardwert ist NULL. der Wert kann nur auf **0**festgelegt werden.  
   
-`[ @last_response_time = ] last_response_time` Setzt die Uhrzeit zurück, die die Warnung zuletzt vom SQLServerAgent-Dienst auf reagiert hat. *Last_response_time* ist **Int**, hat den Standardwert NULL. der Wert kann festgelegt werden, nur für **0**.  
+`[ @last_response_time = ] last_response_time`Setzt die Uhrzeit zurück, zu der die Warnung zuletzt vom SQLServerAgent-Dienst beantwortet wurde. *last_response_time* ist vom Datentyp **int**. der Standardwert ist NULL. der Wert kann nur auf **0**festgelegt werden.  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap` Reserviert.  
+`[ @raise_snmp_trap = ] raise_snmp_trap`Bleiben.  
   
-`[ @performance_condition = ] 'performance_condition'` Ein Wert im Format **"***Itemcomparatorvalue***"** . *Performance_condition* ist **nvarchar(512)** , hat den Standardwert NULL und besteht aus folgenden Elementen.  
+`[ @performance_condition = ] 'performance_condition'`Ein Wert im Format **'** _itemcomparatorvalue_ **'** . *performance_condition* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL und besteht aus diesen Elementen.  
   
 |Format-Element|Beschreibung|  
 |--------------------|-----------------|  
@@ -118,22 +118,22 @@ sp_update_alert
 |*Comparator*|Einer dieser Operatoren: **>** , **<** , **=**|  
 |*Wert*|Numerischer Wert des Indikators|  
   
-`[ @category_name = ] 'category'` Der Name der Warnungskategorie. *Kategorie* ist **Sysname** hat den Standardwert NULL.  
+`[ @category_name = ] 'category'`Der Name der Warnungs Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @wmi_namespace = ] 'wmi_namespace'` Der WMI-Namespace zum Abfragen von Ereignissen. *Wmi_namespace* ist **Sysname**, hat den Standardwert NULL.  
+`[ @wmi_namespace = ] 'wmi_namespace'`Der WMI-Namespace, der nach Ereignissen abgefragt werden soll. *wmi_namespace* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @wmi_query = ] 'wmi_query'` Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *Wmi_query* ist **nvarchar(512)** , hat den Standardwert NULL.  
+`[ @wmi_query = ] 'wmi_query'`Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *wmi_query* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- Nur **Sysmessages** geschrieben, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsprotokoll kann eine Warnung auslösen.  
+ Nur **sysmess** -Dateien, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] in das Windows-Anwendungsprotokoll geschrieben werden, können eine Warnung auslösen.  
   
- **Sp_update_alert** ändert nur die warnungseinstellungen an, die für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  
+ **sp_update_alert** ändert nur die Warnungs Einstellungen, für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer Mitglied werden die **Sysadmin** -Serverrolle sein.  
+ Zum Ausführen dieser gespeicherten Prozedur müssen Benutzer ein Mitglied der festen Server Rolle **sysadmin** sein.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Aktivierungseinstellung von `Test Alert` in `0` geändert.  
