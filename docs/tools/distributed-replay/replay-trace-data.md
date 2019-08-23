@@ -23,7 +23,7 @@ ms.locfileid: "67949957"
   
  Mit der Option **Wiedergabe** des Verwaltungstools können Sie die Ereigniswiedergabephase der verteilten Wiedergabe initiieren. Diese Phase besteht aus zwei Teilen: der Verteilung der Ablaufverfolgungsdaten und dem Start und der Synchronisierung der verteilten Wiedergabe.  
   
- Wieder ![Gabe verteilter Ereignisse] Wieder (../../tools/distributed-replay/media/eventreplay.gif "Gabe verteilter Ereignisse")  
+ Wieder ![Gabe verteilter Ereignisse](../../tools/distributed-replay/media/eventreplay.gif " Wieder Gabe verteilter Ereignisse")  
   
  Sie können Ablaufverfolgungsdaten in einem von zwei Sequenzierungsmodi wiedergeben: dem Belastungsmodus und dem Synchronisierungsmodus. Im Standardverhalten werden die Ablaufverfolgungsdaten im Belastungsmodus wiedergegeben. Weitere Informationen zur Ereigniswiedergabephase und den Sequenzierungsmodi finden Sie unter [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
