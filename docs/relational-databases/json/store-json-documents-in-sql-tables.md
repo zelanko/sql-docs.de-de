@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059571"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957446"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank
-SQL Server und Azure SQL-Datenbank verfügen über native JSON-Funktionen, mit denen Sie JSON-Dokumente durch die standardmäßige SQL-Sprache analysieren können. Jetzt können Sie JSON-Dokumente in SQL Server oder SQL-Datenbank speichern und JSON-Daten wie in einer NoSQL-Datenbank abfragen. Dieser Artikel beschreibt die Optionen zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank.
+SQL Server und Azure SQL-Datenbank verfügen über native JSON-Funktionen, mit denen Sie JSON-Dokumente durch die standardmäßige SQL-Sprache analysieren können. Sie können JSON-Dokumente in SQL Server oder SQL-Datenbank speichern und JSON-Daten wie in einer NoSQL-Datenbank abfragen. Dieser Artikel beschreibt die Optionen zum Speichern von JSON-Dokumenten in SQL Server oder SQL-Datenbank.
+
+## <a name="json-storage-format"></a>JSON-Speicherformat
+
+Die erste Entscheidung zum Speicherentwurf betrifft das Speichern von JSON-Dokumenten in den Tabellen. Es stehen zwei Optionen zur Verfügung:
+- **LOB-Speicher**: JSON-Dokumente können unverändert in `NVARCHAR`-Spalten gespeichert werden. Dies ist die beste Möglichkeit für schnelles Laden von Daten und Erfassen, da die Ladegeschwindigkeit dem Laden von Zeichenfolgenspalten entspricht. Dieser Ansatz kann zu einer zusätzlichen Leistungseinbuße bei der Abfrage-/Analysezeit führen, wenn die Indizierung von JSON-Werten nicht durchgeführt wird, da die unformatierten JSON-Dokumente analysiert werden müssen, während die Abfragen ausgeführt werden. 
+- **Relationaler Speicher**: JSON-Dokumente können analysiert werden, während sie mithilfe von `OPENJSON`-, `JSON_VALUE`- oder `JSON_QUERY`-Funktionen in die Tabelle eingefügt werden. Fragmente aus den eingegebenen JSON-Dokumenten können in den SQL-Datentypspalten oder in NVARCHAR-Spalten gespeichert werden, die JSON-Unterelemente enthalten. Diese Vorgehensweise erhöht die Ladezeit, da die JSON-Analyse beim Laden erfolgt. Die Abfrageleistung entspricht jedoch der Leistung bei klassischen Abfragen relationaler Daten.
 
 ## <a name="classic-tables"></a>Klassische Tabellen
 

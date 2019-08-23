@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 70e439dd6ed176fbb9c2d2fe666b314bd48f2f9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3b1526d55321e5f32a243a48f64bde2f579caa6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904273"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028795"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB-Verbindungs-Manager
 
@@ -93,6 +93,9 @@ ms.locfileid: "67904273"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Verwaltete Identitäten für die Authentifizierung von Azure-Ressourcen
 Beim Ausführen von SSIS-Paketen in [Azure-SSIS Integration Runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) können Sie die [verwaltete Identität](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity), die Ihrer Data Factory zugeordnet ist, zur Authentifizierung der Azure SQL-Datenbank (oder verwalteten Instanz) verwenden. Die angegebene Factory kann mithilfe dieser Identität auf Daten zugreifen und Daten aus der oder in die Datenbank kopieren.
 
+> [!NOTE]
+>  Wenn Sie Azure AD-Authentifizierung (einschließlich der Authentifizierung der verwalteten Identität) zum Herstellen einer Verbindung mit der Azure SQL-Datenbank-Instanz (oder verwalteten Instanz) verwenden, können bekannte Probleme zu Fehlern bei der Paketausführung oder unerwarteten Verhaltensänderungen führen. Weitere Informationen finden Sie unter [Funktionen und Einschränkungen von Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+
 Damit Sie die Authentifizierung der verwalteten Identität für die Azure SQL-Datenbank verwenden können, führen Sie die folgenden Schritte zum Konfigurieren der Datenbank aus:
 
 1. **Erstellen Sie eine Gruppe in Azure AD.** Geben Sie die verwaltete Identität als ein Mitglied der Gruppe an.
@@ -113,7 +116,7 @@ Damit Sie die Authentifizierung der verwalteten Identität für die Azure SQL-Da
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Gewähren Sie der Azure AD-Gruppe die notwendigen Berechtigungen**, wie Sie es normalerweise für SQL-Benutzer und andere tun. Führen Sie beispielsweise den folgenden Code aus:
+1. **Gewähren Sie der Azure AD-Gruppe die notwendigen Berechtigungen**, wie Sie es normalerweise für SQL-Benutzer und andere tun. Informationen zu den entsprechenden Rollen finden Sie unter [Rollen auf Datenbankebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles).  Führen Sie beispielsweise den folgenden Code aus:
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -138,11 +141,11 @@ Damit Sie die Authentifizierung der verwalteten Identität für die verwaltete A
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Erteilen Sie der verwalteten Identität für Data Factory die notwendigen Berechtigungen**. Führen Sie den folgenden T-SQL-Code für die Datenbank aus, aus der oder in die Daten kopiert werden sollen:
+1. **Erteilen Sie der verwalteten Identität für Data Factory die notwendigen Berechtigungen**. Informationen zu den entsprechenden Rollen finden Sie unter [Rollen auf Datenbankebene](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Führen Sie den folgenden T-SQL-Code für die Datenbank aus, aus der oder in die Daten kopiert werden sollen:
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 Dann **konfigurieren Sie den OLE DB-Anbieter** für den OLE DB-Verbindungs-Manager. Es gibt dafür zwei Möglichkeiten.
@@ -167,7 +170,7 @@ Zum Schluss **konfigurieren Sie die Authentifizierung der verwalteten Identität
     >  In Azure-SSIS Integration Runtime werden alle anderen Authentifizierungsmethoden (z.B. integrierte Sicherheit, Kennwort), die im OLE DB-Verbindungs-Manager vorkonfiguriert sind, **überschrieben**, wenn die Authentifizierung der verwalteten Identität zum Herstellen einer Datenbankverbindung verwendet wird.
 
 > [!NOTE]
->  Zum Konfigurieren der Authentifizierung der verwalteten Identität bei vorhandenen Paketen stellen Sie sicher, dass Sie das SSIS-Projekt mindestens einmal mit dem [neuesten SSIS-Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) neu erstellen und dieses SSIS-Projekt in Azure-SSIS Integration Runtime erneut bereitstellen, damit die neue Eigenschaft **ConnectUsingManagedIdentity** des Verbindungs-Managers automatisch allen OLE DB-Verbindungs-Managern im SSIS-Projekt hinzugefügt wird.
+>  Zum Konfigurieren der Authentifizierung der verwalteten Identität bei vorhandenen Paketen sollten Sie das SSIS-Projekt mindestens einmal mit dem [neuesten SSIS-Designer](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) neu erstellen und dieses SSIS-Projekt in der Azure-SSIS Integration Runtime erneut bereitstellen, damit die neue Eigenschaft **ConnectUsingManagedIdentity** des Verbindungs-Managers automatisch allen OLE DB-Verbindungs-Managern im SSIS-Projekt hinzugefügt wird. Die alternative Methode besteht darin, die Eigenschaft direkt mit dem Eigenschaftenpfad **\Package.Connections[{Name Ihres Verbindungs-Managers}].Properties[ConnectUsingManagedIdentity]** zur Runtime zu verwenden.
 
 ## <a name="see-also"></a>Weitere Informationen    
  [OLE DB-Quelle](../../integration-services/data-flow/ole-db-source.md)     

@@ -72,7 +72,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
   
 -   [Definieren und Ändern eines Spaltenfilters](publish/define-and-modify-a-column-filter.md)    
 -   [Definieren und Ändern eines statischen Zeilenfilters](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Optimieren von parametrisierten Zeilenfiltern](publish/optimize-parameterized-row-filters.md)    
 -   [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   

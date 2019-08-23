@@ -33,7 +33,7 @@ Sie können den Verbindungsfehler umgehen, indem Sie einen Anmelde Namen für **
 
 2. Klicken Sie im Dialogfeld **Anmeldung-neu** auf **Suchen**. (Geben Sie noch nichts in das Feld ein.)
     
-     ![Klicken Sie zum Hinzufügen einer neuen Anmeldung für Machine Learning auf Suchen] . (media/implied-auth-login1.png "Klicken Sie zum Hinzufügen einer neuen Anmeldung für Machine Learning auf Suchen") .
+     ![Klicken Sie zum Hinzufügen einer neuen Anmeldung für Machine Learning auf Suchen](media/implied-auth-login1.png "Klicken Sie zum Hinzufügen einer neuen Anmeldung für Machine Learning auf Suchen") .
 
 3. Klicken Sie im Feld **Benutzer oder Gruppe auswählen** auf die Schaltfläche **Objekttypen** .
 
@@ -41,7 +41,7 @@ Sie können den Verbindungsfehler umgehen, indem Sie einen Anmelde Namen für **
 
 4. Wählen Sie im Dialogfeld **Objekttypen** die Option **Gruppen**aus. Deaktivieren Sie alle anderen Kontrollkästchen.
 
-     ![Dialogfeld "Gruppen in Objekttypen auswählen] " (media/implied-auth-login3.png "Dialogfeld \"Gruppen in Objekttypen auswählen") "
+     ![Dialogfeld "Gruppen in Objekttypen auswählen](media/implied-auth-login3.png "Dialogfeld \"Gruppen in Objekttypen auswählen") "
 
 4. Klicken Sie auf **erweitert**, vergewissern Sie sich, dass der aktuelle Computer gesucht wird, und klicken Sie dann auf **jetzt**suchen.
 

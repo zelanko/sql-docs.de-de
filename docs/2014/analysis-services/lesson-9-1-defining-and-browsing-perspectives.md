@@ -39,7 +39,7 @@ ms.locfileid: "69493777"
   
      In der **Perspektivenname** -Spalte wird eine neue Perspektive mit dem Standardnamen **Perspektive**angezeigt, wie in der folgenden Abbildung dargestellt. Die Kontrollkästchen aller Objekte sind so lange aktiviert, bis Sie eines der Kontrollkästchen für ein Objekt deaktivieren. Diese Perspektive entspricht der Standardperspektive dieses Cubes.  
   
-     ![Neue Perspektive in der Spalte "Perspektiven Name] " (../../2014/tutorials/media/l9-perspectives-2.gif "Neue Perspektive in der Spalte \"Perspektiven Name") "  
+     ![Neue Perspektive in der Spalte "Perspektiven Name](../../2014/tutorials/media/l9-perspectives-2.gif " Neue Perspektive in der Spalte \"Perspektiven Name") "  
   
 3.  Ändern Sie den Perspektiven Namen `Internet Sales`in.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "69493777"
   
      In jeder der Measuregruppen wird nur ein einzelnes Measure angezeigt, wie in der folgenden Abbildung dargestellt.  
   
-     ![Measures "Internet Sales" und "Reseller Sales] " (../../2014/tutorials/media/l9-perspectives-4.gif "Measures \"Internet Sales\" und \"Reseller Sales") "  
+     ![Measures "Internet Sales" und "Reseller Sales](../../2014/tutorials/media/l9-perspectives-4.gif " Measures \"Internet Sales\" und \"Reseller Sales") "  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
  [Definieren und Durchsuchen von Übersetzungen](lesson-9-2-defining-and-browsing-translations.md)  

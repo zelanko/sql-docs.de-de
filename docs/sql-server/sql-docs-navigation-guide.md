@@ -1,6 +1,6 @@
 ---
-title: Navigationsleitfaden zur SQL Server-Dokumentation
-description: 'Ein Leitfaden für die Navigation durch die technische Dokumentation von SQL Server: Erläuterungen z.B. zur Hubseite, zum Inhaltsverzeichnis, zur Überschrift sowie zur Verwendung der Brotkrümelnavigation und zur Verwendung des Versionsfilters.'
+title: Navigationstipps zur SQL Server-Dokumentation
+description: 'Tipps und Tricks für die Navigation durch die technische Dokumentation von SQL Server: Erläuterungen z. B. zur Hubseite, zum Inhaltsverzeichnis, zur Überschrift sowie zur Verwendung der Brotkrümelnavigation und zur Verwendung des Versionsfilters.'
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941167"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028833"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Navigationsleitfaden zur SQL Server-Dokumentation 
 
@@ -61,11 +60,11 @@ Auf docs.microsoft.com können Sie den Inhalt des Inhaltsverzeichnisses über da
 ## <a name="version-filter"></a>Versionsfilter
 Die technische SQL Server-Dokumentation enthält Inhalte für mehrere unterstützte Versionen und Varianten von SQL Server. Die Funktionen können sich zwischen Versionen und Varianten von SQL Server unterscheiden. Daher kann der Inhalt manchmal unterschiedlich sein. 
 
-Sie können den Versionsfilter verwenden, um sicherzustellen, dass der Inhalt für die entsprechende Version und Variante von SQL Server angezeigt wird: 
+Sie können den [Versionsfilter](versioning-system-monikers-ui-sql-server.md) verwenden, um sicherzustellen, dass der Inhalt für die entsprechende Version und Variante von SQL Server angezeigt wird: 
 
 ![Versionsfilter der SQL-Dokumentation](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Wenn Sie **All SQL** > **Hide nothing** (Alle SQL-Produkte > Nichts ausblenden) auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts hinter dem Versionsfilter verborgen ist. 
+Wenn Sie **Alle SQL-Produkte** \> **Nichts ausblenden** auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts durch den Versionsfilter verborgen wird. Die Option [**Nichts ausblenden** wird für die routinemäßige Verwendung nicht empfohlen](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
 
 ## <a name="breadcrumbs"></a>Brotkrümelnavigation
 

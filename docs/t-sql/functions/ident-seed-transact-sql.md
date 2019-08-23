@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5c5e2ca321deb2b7e82774db1e91c0b0149deb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f68dd33d2a6d7a91aad0ceb4b606efaaa39429
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024367"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969447"
 ---
-# <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
+# <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt den ursprünglichen Ausgangswert (als **numeric**( **@@** MAXPRECISION,0)) zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht festgelegt wurde. Das Ändern des aktuellen Werts einer Identitätsspalte mit DBCC CHECKIDENT ändert nicht den Wert, der von dieser Funktion zurückgegeben wird.  
+  Gibt den ursprünglichen Ausgangswert zurück, der beim Erstellen einer Identitätsspalte in einer Tabelle oder Sicht festgelegt wurde. Das Ändern des aktuellen Werts einer Identitätsspalte mit DBCC CHECKIDENT ändert nicht den Wert, der von dieser Funktion zurückgegeben wird.  
   
  ![Artikellinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Article link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
@@ -45,7 +44,7 @@ IDENT_SEED ( 'table_or_view' )
  Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der die Tabelle oder die Sicht angibt, die auf einen ID-Ausgangswert überprüft werden soll. *table_or_view* kann eine Zeichenfolgenkonstante in Anführungszeichen, eine Variable, eine Funktion oder ein Spaltenname sein. *table_or_view* ist vom Datentyp **char**, **nchar**, **varchar** oder **nvarchar**.  
   
 ## <a name="return-types"></a>Rückgabetypen  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Ausnahmen  
  Gibt NULL zurück, wenn ein Fehler auftritt oder ein Aufrufer nicht über die Berechtigungen zum Anzeigen des Objekts verfügt.  
@@ -57,7 +56,7 @@ IDENT_SEED ( 'table_or_view' )
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. Zurückgeben des Ausgangswerts von einer angegebenen Tabelle  
  Im folgenden Beispiel wird der Ausgangswert für die `Person.Address`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_SEED('Person.Address') AS Identity_Seed;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. Zurückgeben des Ausgangswerts von mehreren Tabellen  
  Im folgenden Beispiel werden die Tabellen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben, die eine Identitätsspalte mit einem Ausgangswert enthalten.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

@@ -1,22 +1,22 @@
 ---
 title: Versionshinweise für SQL Server Data Tools (SSDT) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892473"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531027"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
@@ -43,24 +43,23 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 17. Juli 2019  
+_Veröffentlicht_: &nbsp; 17. Juli 2019  
 _Buildnummer:_ &nbsp; 14.0.16194.0  
 _SSDT für Visual Studio 2017._
 
 ### <a name="whats-new"></a>Neues
 
-#### <a name="ssis"></a>SSIS
-
 | Neues Element | Details |
-| :------- | :------ |
-| Die Funktion AzureEnabled wurde hinzugefügt. Diese Funktion ermöglicht, dass Pakete des Projekts auf der SSIS-Platform-as-a-Service (PaaS) in Azure Data Factory ausgeführt werden. | &nbsp; |
-| Es wurde das Problem behoben, dass die Eigenschaften des Oracle-Connectors nicht über einen variablen Ausdruck festgelegt werden können. | &nbsp; |
-| Es wurde das Problem behoben, dass der Oracle-Connector beim Debuggen von Paketen für ältere SQL Server-Versionen als Version 2019 den Fehler VS_NEEDSNEWMETATDATA zurückgibt. | &nbsp; |
-| Es wurde das Problem behoben, dass der Oracle-Connector ein Paket/Projekt nicht upgraden/downgraden kann, wenn das Paket/Projekt Ausdrücke für die Eigenschaften des Verbindungs-Managers verwendet. | &nbsp; |
-| Es wurde das Problem behoben, dass die Schaltfläche „WSDL herunterladen“ des Editors für den Task „Webdienst“ das Protokoll TLS 1.1 & 1.1 (für SQL Server 2019) nicht unterstützt. | &nbsp; |
-| Es wurde das Problem behoben, dass Pakete mit DQS-Verbindungs-Manager nach dem Speichern nicht erneut geladen werden können. | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Die Funktion AzureEnabled wurde hinzugefügt. Diese Funktion ermöglicht, dass Pakete des Projekts auf der SSIS-Platform-as-a-Service (PaaS) in Azure Data Factory ausgeführt werden. |
+| Integration Services (SSIS) | Es wurde das Problem behoben, dass die Eigenschaften des Oracle-Connectors nicht über einen variablen Ausdruck festgelegt werden können. |
+| Integration Services (SSIS) | Es wurde das Problem behoben, dass der Oracle-Connector beim Debuggen von Paketen für ältere SQL Server-Versionen als Version 2019 den Fehler VS_NEEDSNEWMETATDATA zurückgibt. |
+| Integration Services (SSIS) | Es wurde das Problem behoben, dass der Oracle-Connector ein Paket/Projekt nicht upgraden/downgraden kann, wenn das Paket/Projekt Ausdrücke für die Eigenschaften des Verbindungs-Managers verwendet. |
+| Integration Services (SSIS) | Es wurde das Problem behoben, dass die Schaltfläche „WSDL herunterladen“ des Editors für den Task „Webdienst“ die Protokolle TLS 1.1 und 1.2 (für SQL Server 2019) nicht unterstützt. |
+| Integration Services (SSIS) | Es wurde das Problem behoben, dass Pakete mit DQS-Verbindungs-Manager nach dem Speichern nicht erneut geladen werden können. |
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
@@ -76,23 +75,21 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 27. April 2019  
+_Veröffentlicht_: &nbsp; 27. April 2019  
 _Buildnummer:_ &nbsp; 14.0.16191.0  
 _SSDT für Visual Studio 2017._
 
 ### <a name="whats-new"></a>Neues
 
-#### <a name="ssis"></a>SSIS
-
 | Neues Element | Details |
-| :------- | :------ |
-| Korrigiert: Der Paketteil kann nicht ordnungsgemäß persistent in vorherigen SQL Server-Versionen gespeichert werden. | &nbsp; |
-| Korrigiert: Der Rangfolgeneinschränkung kann bei Verwendung von Paketteilen kein Ausdruck hinzugefügt werden. | &nbsp; |
-| Korrigiert: Die Schaltfläche „Hilfe“ der Power Query-Quelle und des Power Query-Verbindungs-Managers stellt keine Verbindung zum richtigen Dokument her. | &nbsp; |
-| Korrigiert: Die SSIS-Buildversion wird im VS-Hilfefenster nicht angezeigt. | &nbsp; |
-| Hinzufügen der Eigenschaft „ConnectByProxy“ für Ole DB- und Flatfile-Verbindungs-Manager, die den Zugriff auf lokale Daten mit selbstgehosteter IR in Azure-SSIS IR aktiviert | &nbsp; |
-| Korrigiert: ODBC-Komponenten ordnen den Datentyp DT_DBDATE nicht ordnungsgemäß zu. | &nbsp; |
-| Hinzufügen der Eigenschaft „ConnectUsingManagedIdentity“ für den ADO.NET- und OLE DB-Verbindungs-Manager, die die Authentifizierung der verwalteten Identität zum Herstellen einer Verbindung mit Azure-SSIS IR ermöglichen | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Korrigiert: Der Paketteil kann nicht ordnungsgemäß persistent in vorherigen SQL Server-Versionen gespeichert werden. |
+| Integration Services (SSIS) | Korrigiert: Der Rangfolgeneinschränkung kann bei Verwendung von Paketteilen kein Ausdruck hinzugefügt werden. |
+| Integration Services (SSIS) | Korrigiert: Die Schaltfläche „Hilfe“ der Power Query-Quelle und des Power Query-Verbindungs-Managers stellt keine Verbindung zum richtigen Dokument her. |
+| Integration Services (SSIS) | Korrigiert: Die SSIS-Buildversion wird im VS-Hilfefenster nicht angezeigt. |
+| Integration Services (SSIS) | Hinzufügen der Eigenschaft „ConnectByProxy“ für Ole DB- und Flatfile-Verbindungs-Manager, die den Zugriff auf lokale Daten mit selbstgehosteter IR in Azure-SSIS IR aktiviert. |
+| Integration Services (SSIS) | Korrigiert: ODBC-Komponenten ordnen den Datentyp DT_DBDATE nicht ordnungsgemäß zu. |
+| Integration Services (SSIS) | Hinzufügen der Eigenschaft „ConnectUsingManagedIdentity“ für den ADO.NET- und OLE DB-Verbindungs-Manager, die die Authentifizierung der verwalteten Identität zum Herstellen einer Verbindung mit der Datenquelle in Azure-SSIS IR ermöglichen. |
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
@@ -108,26 +105,25 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 28. Januar 2019  
+_Veröffentlicht_: &nbsp; 28. Januar 2019  
 _Buildnummer:_ &nbsp; 14.0.16186.0  
 _SSDT für Visual Studio 2017._
 
 ### <a name="whats-new"></a>Neues
 
-#### <a name="ssis"></a>SSIS
-
 | Neues Element | Details |
-| :------- | :------ |
-| Die Power Query-Quelle (Preview) für SSIS in ADF 2017 wurde hinzugefügt. | &nbsp; |
-| Unterstützung für SQL Server 2012 wurde wieder hinzugefügt. | &nbsp; |
-| Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden hinzugefügt. | Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden bereits von SSDT installiert.<br/><br/>Um Pakete für die Serverversion 2017 oder früher zu entwerfen, laden Sie die entsprechende Oracle-Connectorversion von der Microsoft-Downloadwebsite herunter und installieren sie auf dem SSDT-Computer. <br/>[Microsoft Connector, Version 5.0, für Oracle von Attunity für SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Microsoft Connector, Version 4.0, für Oracle von Attunity für SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Microsoft Connector, Version 3.0, für Oracle von Attunity für SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Microsoft Connector, Version 2.0, für Oracle von Attunity für SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
-| Es wurde ein Problem behoben, bei dem ein Skripttask bzw. eine Komponente bei der Migration von früheren SSIS-Versionen nicht geladen werden konnte. | &nbsp; |
-| Es wurde ein Problem behoben, bei dem der Daten-Viewer unter Windows 7 SP1 und Windows 8.1 nicht funktioniert hat. | &nbsp; |
-| Es wurde ein Problem behoben, bei dem in einigen Fällen das Speichern des Pakets zum Absturz von Visual Studio geführt hat. | &nbsp; |
-| Es wurde ein Problem behoben, bei dem in einigen Fällen das Paket nicht ausgeführt werden kann. | Dieses Problem trat auf, wenn die beiden folgenden Bedingungen wahr sind:<br/><br/>&bull; &nbsp; Die Schutzebene ist EncryptSensitiveWithPassword.<br/>&bull; &nbsp; Die Zielversion von SQL Server ist älter als SQL Server 2017. |
-| Es wurde ein Problem behoben, bei dem Anmerkungen in der Standardschriftart in SSDT nicht angezeigt wurden. | &nbsp; |
-| ISDeploymentWizard unterstützt die SQL-Authentifizierung, die integrierte Azure Active Directory-Authentifizierung und die Azure Active Directory-Kennwortauthentifizierung im Befehlszeilenmodus. | &nbsp; |
-| &nbsp; | &nbsp; |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Die Power Query-Quelle (Preview) für SSIS in ADF 2017 wurde hinzugefügt. |
+| Integration Services (SSIS) | Unterstützung für SQL Server 2012 wurde wieder hinzugefügt. |
+| Integration Services (SSIS) | Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden hinzugefügt. |
+| Integration Services (SSIS) | Eine Oracle-Quelle und ein Oracle-Ziel für SQL Server 2019 wurden bereits von SSDT installiert. <br/></br> Um Pakete für die Serverversion 2017 oder früher zu entwerfen, laden Sie die entsprechende Oracle-Connectorversion von der Microsoft-Downloadwebsite herunter und installieren sie auf dem SSDT-Computer. <br/></br> [Microsoft Connector Version 5.0 für Oracle von Attunity für SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Microsoft Connector Version 4.0 für Oracle von Attunity für SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Microsoft Connector Version 3.0 für Oracle von Attunity für SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Microsoft Connector Version 2.0 für Oracle von Attunity für SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem ein Skripttask bzw. eine Komponente bei der Migration von früheren SSIS-Versionen nicht geladen werden konnte. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem der Daten-Viewer unter Windows 7 SP1 und Windows 8.1 nicht funktioniert hat. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem in einigen Fällen das Speichern des Pakets zum Absturz von Visual Studio geführt hat. |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem in einigen Fällen das Paket nicht ausgeführt werden kann. |
+| Integration Services (SSIS) | Dieses Problem trat auf, wenn beide der folgenden Bedingungen zutrafen:< br />< br /> &bull;   Schutzebene ist EncryptSensitiveWithPassword.< br /> &bull;   Zielserverversion ist niedriger als SQL Server 2017.          |
+| Integration Services (SSIS) | Es wurde ein Problem behoben, bei dem Anmerkungen in der Standardschriftart in SSDT nicht angezeigt wurden. |
+| Integration Services (SSIS) | ISDeploymentWizard unterstützt die SQL-Authentifizierung, die integrierte Azure Active Directory-Authentifizierung und die Azure Active Directory-Kennwortauthentifizierung im Befehlszeilenmodus. |
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
@@ -142,7 +138,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1582nbsp-ssdt-for-vs-2017"></a>15.8.2,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 5. November 2018  
+_Veröffentlicht_: &nbsp; 5. November 2018  
 _Buildnummer:_ &nbsp; 14.0.16182.0  
 _SSDT für Visual Studio 2017._
 
@@ -158,7 +154,7 @@ Ein Problem wurde behoben, bei dem die Bereitstellung eines SSIS-Projekts in Azu
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 27. September 2018  
+_Veröffentlicht_: &nbsp; 27. September 2018  
 _Buildnummer:_ &nbsp; 14.0.16179.0  
 _SSDT für Visual Studio 2017._
 
@@ -178,7 +174,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15.8,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 5. September 2018  
+_Veröffentlicht_: &nbsp; 5. September 2018  
 _Buildnummer:_ &nbsp; 14.0.16174.0  
 _SSDT für Visual Studio 2017._
 
@@ -201,7 +197,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1571nbsp-ssdt-for-vs-2017"></a>15.7.1,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 2. Juli 2018  
+_Veröffentlicht_: &nbsp; 2. Juli 2018  
 _Buildnummer:_ &nbsp; 14.0.16167.0  
 _SSDT für Visual Studio 2017._
 
@@ -224,7 +220,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1570nbsp-ssdt-for-vs-2017"></a>15.7.0,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 4. Juni 2018  
+_Veröffentlicht_: &nbsp; 4. Juni 2018  
 _Buildnummer:_ &nbsp; 14.0.16165.0  
 _SSDT für Visual Studio 2017._
 
@@ -249,7 +245,7 @@ _SSDT für Visual Studio 2017._
 
 ## <a name="1560nbsp-ssdt-for-vs-2017"></a>15.6.0,&nbsp; SSDT für VS 2017
 
-_Veröffentlicht_ : &nbsp; 10. April 2018  
+_Veröffentlicht_: &nbsp; 10. April 2018  
 _Buildnummer:_ &nbsp; 14.0.16162.0  
 _SSDT für Visual Studio 2017._
 
@@ -258,7 +254,7 @@ _SSDT für Visual Studio 2017._
 **SSIS:**
 
 - Korrigiert: Die AS-Verarbeitungsaufgabe protokolliert keine Verarbeitungsschritte für SQL Server 2016 und SQL Server 2017.
-- Korrigiert: Zugriffsverletzung während des Öffnens von DTSX mit sehr langen, nicht englischsprachigen Aufgabennamen in SSDT.
+- Korrigiert: Zugriffsverletzung während des Öffnens von DTSX mit langen, nicht englischsprachigen Aufgabennamen in SSDT.
 - Korrigiert: Variablenliste von ScriptTask verschwindet manchmal in der Benutzeroberfläche des Tasks.
 - Korrigiert: Das Hinzufügen einer Kopie vorhandener Pakete schlägt fehl, wenn das Paket in SQL Server gespeichert ist.
 - Korrigiert: Der Fokus bleibt beim Zugriff auf das Kombinationsfeld in einigen Dialogfeldern des Editors hängen.
@@ -271,7 +267,7 @@ _SSDT für Visual Studio 2017._
 **Installationsprogramm:**
 
 - Fügen Sie den Link zum „Programm zur Verbesserung der Benutzerfreundlichkeit für SQL Server Data Tools“ in den Datenschutzbestimmungen hinzu.
-- Korrigiert: Das Visual Studio-Installer-Fenster erscheint bei der Auswahl von „Neue SQL Server Data Tools für Visual Studio 2017-Instanz installieren“.
+- Korrigiert: Das Visual Studio-Installer-Fenster wird bei der Auswahl von „Neue SQL Server Data Tools für Visual Studio 2017-Instanz installieren“ angezeigt.
 
 ### <a name="known-issues"></a>Bekannte Probleme:
 - Der SSIS-Task zum Ausführen eines Pakets unterstützt kein Debugging, wenn „ExecuteOutOfProcess“ auf TRUE festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
@@ -411,7 +407,7 @@ Dieses Release bietet einen eigenständigen Webinstaller für Projekte von SQL S
 - Ein Problem wurde behoben, bei dem der Assistent für Import/Export keine Datenquellen auflisten konnte, wenn Azure Feature Pack installiert ist.
 - Ein Problem wurde behoben, bei dem das Bearbeiten einer SSIS Analysis Services-Prozessaufgabe eine Ausnahme auslöst, wenn die Verbindung gewechselt wird.
 - Ein Problem wurde behoben, bei dem CDC-Komponenten unterbrochen wurden, nachdem die SQL-Problembehebung angewendet wurde, die die Spalte „__$command_id“ hinzufügt.
-- Ein Problem wurde behoben, bei dem Drittanbieterpakete nicht bearbeitet und ausgeführt werden konnten, wenn eine ältere Version von SQL Server angezielt wurde.
+- Ein Problem wurde behoben, bei dem Drittanbieterpakete für eine ältere Version von SQL Server nicht bearbeitet und ausgeführt werden konnten.
 - Ein Problem wurde behoben, bei dem das Dialogfeld „Konfigurieren“ der Flatfilequelle nicht ordnungsgemäß angezeigt wurde, wenn doppelt auf „DTSWizard.exe“ geklickt und „Flatfilequelle“ ausgewählt wurde.
 - Ein Problem wurde behoben, bei dem ein Paket, das Azure Feature Pack-Aufgaben und -Komponenten enthält, nicht ausgeführt werden konnte, wenn SQL Server 2017 angezielt wurde.
 
@@ -530,7 +526,7 @@ Diese Vorschauversion ist die erste Version von SSDT für Visual Studio 2017. Mi
 - Das Installationsprogramm ist nicht lokalisiert.
 - SSIS ist nicht lokalisiert.
 - Die SSIS-Aufgabe „Paket ausführen“ unterstützt kein Debuggen, wenn der Prozess *ExecuteOutofProcess* auf *TRUE* festgelegt ist. Dieses Problem gilt nur für das Debuggen. Das Speichern, Bereitstellen und Ausführen über „DTExec.exe“ oder den SSIS-Katalog wird nicht beeinträchtigt.
-- SSIS-Pakete mit Drittanbietererweiterungen können nicht so geändert werden, dass sie sich an andere Serverversionen richten.
+- SSIS-Pakete mit Drittanbietererweiterungen können nicht für andere Serverversionen geändert werden.
 
 
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2,&nbsp; SSDT für VS 2015
@@ -626,7 +622,7 @@ _Unterstützung bis SQL Server 2017._
 **Datenbankprojekte:**
 - Das Ändern eines gruppierten Index in einer Ansicht blockiert keine Bereitstellungen mehr
 - Schemavergleichszeichenfolgen, die mit der Spaltenverschlüsselung in Zusammenhang stehen, verwenden den tatsächlichen Namen und nicht den Instanznamen.   
-- Eine neue Befehlszeilenoption wurde zu SqlPackage hinzugefügt: ModelFilePath.  Dies bietet eine Option für fortgeschrittene Benutzer, um eine externe „model.xml“-Datei für Import-, Veröffentlichungs- und Skriptvorgänge anzugeben   
+- Eine neue Befehlszeilenoption wurde SqlPackage hinzugefügt: ModelFilePath.  Dies bietet eine Option für fortgeschrittene Benutzer, um eine externe „model.xml“-Datei für Import-, Veröffentlichungs- und Skriptvorgänge anzugeben   
 - Die DacFx-API wurde erweitert, um die universale Azure AD-Authentifizierung und die mehrstufige Authentifizierung (MFA) zu unterstützen
 
 **IS-Projekte:**
@@ -636,7 +632,7 @@ _Unterstützung bis SQL Server 2017._
 
 **AS-Projekte:**
 - Integration der Analysis Services-Power Query (tabellarisches Modell mit Kompatibilitätsgrad 1400):
-    - DirectQuery ist für SQL Oracle und Teradata verfügbar, wenn der Benutzer Treiber von Drittanbietern installiert hat
+    - DirectQuery ist für SQL Oracle und Teradata verfügbar, wenn der Benutzer Treiber von Drittanbietern installiert hat
     - Hinzufügen von Spalten anhand eines Beispiels in PowerQuery
     - Datenzugriffsoptionen in Modellen vom 1400-Typ (von der M-Engine verwendete Eigenschaften auf Modellebene)
         - Aktivieren von schnellem Kombinieren (der Standardwert ist „FALSE“, wenn er auf „TRUE“ gesetzt wird, ignoriert die Mashup-Engine die Datenschutzebenen der Datenquellen beim Kombinieren von Daten)
@@ -708,21 +704,21 @@ _Unterstützung bis SQL Server 2017._
 - Das Problem wurde behoben, dass Einstellungen für run64bitruntime nicht angenommen wurden.
 - Das Problem wurde behoben, dass angezeigten Spalten von DataViewer nicht gespeichert wurden.
 - Das Problem wurde behoben, dass Paketteile Anmerkungen verbergen. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
-- Das Problem wurde behoben, das Package Parts Anmerkungen und Layouts von Data Flow verwirft. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- Das Problem wurde behoben, dass Package Parts Anmerkungen und Layouts des Datenflusses verwirft. [Microsoft Connect-Artikel](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - Das Problem wurde behoben, dass SSDT beim Importieren eines Projekts aus SQL Server abstürzt.
 - Es wurde ein Fehler mit der Hadoop-Dateisystemaufgabe „TimeoutInMinutes default to 10“ behoben, der nach dem Öffnen des gespeicherten SSIS-Pakets und zur Laufzeit augetreten ist.
 
 **Datenbankprojekte:**
 - SSDT DACPAC Einstellung zurücksetzen für IgnoreColumnOrder bereitstellen [Connect item (Connect-Artikel)](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
 - SSDT kompiliert nicht, wenn STRING_SPLIT verwendet wird [Connect item (Connect-Artikel)](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
-- Einen Fehler beheben, bei dem DeploymentContributors auf das öffentliche Modell Zugriff haben, jedoch das Schema für die Sicherung nicht initialisiert wurde[Github issue (Github-Problem)](https://github.com/Microsoft/DACExtensions/issues/8)
+- Beheben des Fehlers, bei dem DeploymentContributors auf das öffentliche Modell Zugriff haben, jedoch das Schema für die Sicherung nicht initialisiert wurde ([GitHub-Problem](https://github.com/Microsoft/DACExtensions/issues/8))
 - Zeitliche Behebung von DacFx für die FILEGROUP-Platzierung
 - Beheben des Fehlers „Unresolved Reference“ (Nicht aufgelöster Verweis) für externe Synonyme. 
 - Always Encrypted: Die Onlineverschlüsselung deaktiviert bei Abbruch nicht die Änderungsnachverfolgung und funktioniert nicht ordnungsgemäß, wenn die Änderungsnachverfolgung nicht vor dem Start der Verschlüsselung bereinigt wurde.
 
 ## <a name="165nbsp-ssdt-for-vs-2015"></a>16.5,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_ : &nbsp; 20. Oktober 2016  
+_Veröffentlicht_: &nbsp; 20. Oktober 2016  
 _Buildnummer:_ &nbsp; 14.0.61021.0  
 _SSDT für Visual Studio 2015._  
 _Unterstützung bis SQL Server 2016._
@@ -744,7 +740,7 @@ Für Veröffentlichungs- und Skriptaktionen mit SqlPackage wurden zwei neue Argu
 * DeployScriptPath (Kurzname: dsp). Dies ist ein optionaler Pfad, in den das Bereitstellungsskript geschrieben wird. Wenn bei Azure-Bereitstellungen TSQL-Befehle zum Erstellen oder Ändern der Datenbank verwendet werden, wird ein Master-Skript in den gleichen Pfad geschrieben, wobei der Name der Ausgabedatei „Dateiname_Master.sql“ lautet.
 * DeployReportPath (Kurzname: drp). Dies ist ein optionaler Pfad, in den der Bereitstellungsbericht geschrieben wird.
 
-Beachten Sie, dass für die Skriptaktion entweder die vorhandenen Ausgabepfadargumente oder das neue Skript bzw. berichtsspezifische Argumente, jedoch nicht beides zusammen verwendet werden sollten.
+Für die Skriptaktion sollten entweder die vorhandenen Ausgabepfadargumente oder das neue Skript bzw. berichtsspezifische Argumente, jedoch nicht beides zusammen verwendet werden.
 
 Beispiel für die Verwendung:
 
@@ -805,7 +801,7 @@ Weitere Informationen finden Sie im [Blogbeitrag von Analysis Services](https://
 
 * Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Durch Klicken auf den Ziehpunkt der Bildlaufleiste im Datenraster kam es in bestimmten Situationen zum Absturz.
 * Folgendes Problem wurde behoben: Die Option, die Identität der Verbindung als aktueller Benutzer im SSDT AS-Tabellen-Designer zu übernehmen, war nicht verfügbar.
-* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Durch das zu starke Erweitern der Bearbeitungsleiste konnte das Projekt nicht erneut geöffnet werden.
+* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Durch das zu starke Erweitern der Bearbeitungsleiste konnte das Projekt nicht erneut geöffnet werden.
 * Folgendes Problem wurde behoben: Der SSDT AS-Tabellen-Designer stürzte ab, wenn die Tabellenregisterkarte ausgewählt und die Pfeiltaste gedrückt wurde.
 * Folgendes Problem in SSDT AS-Projekten wurde behoben: „In Excel analysieren“ konnte keine Verbindung zu früheren AS-Serverversionen herstellen.
 
@@ -815,7 +811,7 @@ Weitere Informationen finden Sie im [Blogbeitrag von Analysis Services](https://
 
 ## <a name="164-ssdt-for-vs-2015"></a>16.4, SSDT für VS 2015
 
-_Veröffentlicht_ : &nbsp; 20. September 2016  
+_Veröffentlicht_: &nbsp; 20. September 2016  
 _Buildnummer:_ &nbsp; 14.0.60918  
 _Für SQL Server 2016._
 
@@ -841,29 +837,29 @@ Der SSDT-Tabellen-Designer umfasst jetzt eine interne SSAS-Instanz, die der SSDT
 * Folgendes Problem in SSDT wurde behoben: Popup-Fehlertipps störten beim Bearbeiten von DAX für mit DirectQuery berechneten Spalten.
 * Folgendes Problem im SSDT AS-Tabellenraster wurde behoben: Das KPI-Symbol wurde im Measureraster nicht angezeigt, wenn der Windows-Skalierungsfaktor auf 200% + (hochauflösend) festgelegt wurde.
 * Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Durch das Einfügen von großen Datenmengen konnte die Reaktion des Tabellenprojekts beeinträchtigt werden.
-* Folgendes Problem im SSDT AS-Tabellen-Modell-Editor wurde behoben: Modelländerungen müssen gespeichert werden, wenn der Verbindungsanzeigenamen geändert wird.
+* Folgendes Problem im SSDT AS-Tabellen-Modell-Editor wurde behoben: Modelländerungen müssen gespeichert werden, wenn der Verbindungsanzeigename geändert wird.
 * Folgendes Problem in SSDT AS-Tabellenprojekten wurde behoben: Die Spaltenbreite im Dialogfeld zur Verwaltung von Beziehungen konnte nicht verändert werden.
 * Folgendes Problem in SSDT AS-Tabellenmodellen vom 1200-Typ wurde behoben: Beim Einfügen von Daten aus Excel wurde das Komma bei Gebietsschemaeinstellungen (z.B. für Deutsch) nicht ordnungsgemäß als Dezimaltrennzeichen behandelt.
 * Folgendes Problem in SSDT AS-Projekten wurde behoben: Einige KPI-Symbolsätze gaben den folgenden Fehler aus: „Couldn't retrieve the data for this visual“ (Die Daten für diese visuelle Anzeige konnten nicht abgerufen werden).
 * Folgendes Problem im Dialogfeld „Projekteigenschaften“ des SSDT AS-Tabellen-Designers wurde behoben: Das Dialogfeld wird jetzt bei einer hochauflösenden Skalierung ordnungsgemäß verankert.
 * Folgendes Problem in SSDT-AS-Projekten wurde behoben: Die Aktualisierung bestimmter Modelle mit eingefügten Tabellen konnte einen Fehler verursachen.
-* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Das Einfügen gefüllter Blattreihen von Excel erfolgte sehr langsam, und es wurden zahlreiche unerwünschte Spalten erstellt.
-* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Die Analyse umfangreicher statischer DataTable-Ausdrücke erfolgte sehr langsam oder schien ein Hängenbleiben zu verursachen.
+* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Das Einfügen gefüllter Blattreihen von Excel erfolgte sehr langsam, und es wurden zahlreiche unerwünschte Spalten erstellt.
+* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Die Analyse umfangreicher statischer DataTable-Ausdrücke erfolgte sehr langsam oder schien ein Hängenbleiben zu verursachen.
 * Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Measures und KPI-Werte lassen sich jetzt zu der im Editor ausgewählten aktuellen Perspektive hinzufügen.
 * Folgendes Problem in SSDT wurde behoben: Der Datenimport von SQL Azure in AS-Projekte unterstützt keine anderen Schematypen als „dbo“.
 
 ## <a name="163nbsp-ssdt-for-vs-2015"></a>16.3,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_ : &nbsp; 15. August 2016  
+_Veröffentlicht_: &nbsp; 15. August 2016  
 _Buildnummer:_ &nbsp; 14.0.60812.0  
 _Für SQL Server 2016._
 
 **Neuigkeiten**
 
-- **Versionsverwaltung und Nummerierung von Releases:** Releases werden jetzt nummeriert und nicht mehr mit Monatsangaben versehen. Dies steht im Einklang mit der neuen SSMS-Richtlinie und vereinfacht Fälle, in denen mehrere Versionen oder Hotfixes in einem Monat veröffentlicht werden. Dies ist Version 16.3, d.h. die dritte Aktualisierung nach der RTM-Version. Hotfixes erhalten die Angabe 16.3.1 etc., während die nächste Aktualisierung (für den nächsten Monat geplant) die Angabe 16.4 erhält.
+- **Versionsverwaltung und Nummerierung von Releases:** Releases werden jetzt nummeriert und nicht mehr mit Monatsangaben versehen. Dies steht im Einklang mit der neuen SSMS-Richtlinie und vereinfacht Fälle, in denen mehrere Versionen oder Hotfixes in einem Monat veröffentlicht werden. Dies ist Version 16.3, d. h. die dritte Aktualisierung nach der RTM-Version. Hotfixes erhalten die Angabe 16.3.1 etc., während die nächste Aktualisierung (für den nächsten Monat geplant) die Angabe 16.4 erhält.
 - **Analysis Services – Tabellarischer Modell-Explorer:** Mit dem tabellarischen Modell-Explorer können Sie bequem durch die verschiedenen Metadatenobjekte in einem Modell navigieren, z. B. Datenquellen, Tabellen, Measures und Beziehungen. Der Explorer besteht aus einem separaten Toolsfenster, das Sie über das Ansichtsmenü in Visual Studio anzeigen können. Zeigen Sie auf „Other Windows“ (Weitere Fenster), und klicken Sie anschließend auf „Tabellarischer Modell-Explorer“. Der tabellarische Modell-Explorer wird standardmäßig im Projektmappen-Explorer-Bereich auf einer separaten Registerkarte angezeigt. Der tabellarische Modell-Explorer ordnet die Metadatenobjekte in einer Struktur an, die dem Schema eines tabellarischen Modells vom 1200-Typ sehr ähnlich ist, und viele andere neue Funktionen.
 - **Datenbanktools – Always Encrypted:**  Dieses Release bietet neue Dialogfelder zur [Schlüsselverwaltung für Always Encrypted](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md). Dadurch lassen sich Spaltenhauptschlüssel oder Spaltenverschlüsselungsschlüssel problemlos zu Ihrem Datenbankprojekt oder einer Livedatenbank im SQL Server-Objekt-Explorer hinzufügen. Diese Version unterstützt Zertifikate im Windows-Zertifikatspeicher. In zukünftigen Versionen werden auch Azure Key Vault und CNG-Anbieter unterstützt.
-    - Beim Erstellen des Spaltenhauptschlüssels oder Spaltenverschlüsselungsschlüssels spiegeln sich Änderungen möglicherweise nicht sofort im Objekt-Explorer von SQL Server wider, nachdem Sie auf „Datenbank aktualisieren“ geklickt haben. Um dieses Problem zu umgehen, aktualisieren Sie den Datenbankknoten im SQL Server-Objekt-Explorer.
+    - Beim Erstellen des Spaltenhauptschlüssels oder Spaltenverschlüsselungsschlüssels spiegeln sich Änderungen möglicherweise nicht sofort im Objekt-Explorer von SQL Server wider, nachdem Sie auf „Datenbank aktualisieren“ geklickt haben. Um dieses Problem zu umgehen, aktualisieren Sie den Datenbankknoten im SQL Server-Objekt-Explorer.
     - Wenn Sie versuchen, eine Spalte in einer Tabelle mit Daten aus dem SQL Server-Objekt-Explorer zu verschlüsseln, können Fehler auftreten. Dieses Feature wird derzeit nur in SSDT-Datenbankprojekten und SSMS unterstützt. Die Unterstützung für den SQL Server-Objekt-Explorer ist für eine spätere Version geplant.
 
 
@@ -892,13 +888,13 @@ _Für SQL Server 2016._
 
 ## <a name="july-2016nbsp-ssdt-for-vs-2015"></a>Juli 2016,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_ : &nbsp; 30. Juni 2016  
+_Veröffentlicht_: &nbsp; 30. Juni 2016  
 _Buildnummer:_ &nbsp; 14.0.60629.0  
 _Für SQL Server 2016._
 
 **Neuigkeiten**  
 - **Always Encrypted-Unterstützung:** Für Datenbanken, die Always Encrypted-Spalten enthalten, bietet dieses Release über die Kern-APIs und das Befehlszeilentool („SqlPackage.exe“) vollständige Unterstützung für Always Encrypted. Sie können Datenbankprojekte erstellen und veröffentlichen und auf die vollständige Unterstützung für alle Always Encrypted-Funktionen zurückgreifen.  
-- **Erweiterte Unterstützung von temporalen Tabellen:** Die Verwendung temporaler Tabellen wurde vereinfacht, indem ihre Verknüpfung vor Änderungen aufgehoben und nach Abschluss der Änderungen wiederhergestellt werden. Dies bedeutet, dass zwischen temporalen Tabellen und anderen Tabellentypen (Standard- oder speicherinternen Tabellen) im Hinblick auf die Vorgänge, die unterstützt werden, Parität herrscht. 
+- **Erweiterte Unterstützung von temporalen Tabellen:** Die Verwendung temporärer Tabellen wurde vereinfacht, indem ihre Verknüpfung vor Änderungen aufgehoben und nach Abschluss der Änderungen wiederhergestellt werden. Dies bedeutet, dass zwischen temporalen Tabellen und anderen Tabellentypen (Standard- oder speicherinternen Tabellen) im Hinblick auf die Vorgänge, die unterstützt werden, Parität herrscht. 
 - **SqlPackage.exe und Installationsänderungen:** Änderungen zum Isolieren von SSDT von der SQL Server-Engine und SSMS-Updates wurden durchgeführt. Weitere Informationen finden Sie unter [Changes to SSDT and SqlPackage.exe installation and updates (Änderungen an SSDT und Installationen und Aktualisierungen von SqlPackage.exe)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/).
 
  
@@ -936,7 +932,7 @@ _Für SQL Server 2016._
 
 ## <a name="june-2016nbsp-ssdt-for-vs-2015"></a>Juni 2016,&nbsp; SSDT für VS 2015
 
-_Veröffentlicht_ : &nbsp; 1. Juni 2016  
+_Veröffentlicht_: &nbsp; 1. Juni 2016  
 _Buildnummer:_ &nbsp; 14.0.60525.0  
 _Für SQL Server 2016._
 

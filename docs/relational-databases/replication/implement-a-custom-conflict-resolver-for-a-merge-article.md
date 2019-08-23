@@ -1,5 +1,5 @@
 ---
-title: Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel | Microsoft Dokumentation
+title: Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,30 +16,30 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: feee489d990bfce813c0bb16aafaf9e7e3a673cf
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: b36d610912f518f0586739e0380e300efefbed40
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661397"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561136"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]mit[!INCLUDE[tsql](../../includes/tsql-md.md)] oder einem [COM-basierten benutzerdefinierten Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) in implementiert wird.  
+  In diesem Thema wird beschrieben, wie ein benutzerdefinierter Konfliktlöser für einen Mergeartikel mit [!INCLUDE[tsql](../../includes/tsql-md.md)] oder einem [COM-basierten benutzerdefinierten Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] implementiert wird.  
   
  **In diesem Thema**  
   
--   **So implementieren Sie einen benutzerdefinierten Konfliktlöser für einen Mergeartikel mit:**  
+-   **Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel mit:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [COM-basierter Konfliktlöser](#COM)  
+     [Ein COM-basierter Konfliktlöser](#COM)  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Sie können einen eigenen benutzerdefinierten Konfliktlöser als gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur in einem Verleger schreiben. Diese gespeicherte Prozedur wird während der Synchronisierung aufgerufen, wenn in einem Artikel, für den der Konfliktlöser registriert wurde, Konflikte erkannt werden. Die Informationen zur Konfliktzeile werden vom Merge-Agent an die erforderlichen Parameter der Prozedur übergeben. Auf gespeicherten Prozeduren basierende benutzerdefinierte Konfliktlöser werden immer auf dem Verleger erstellt.  
+ Sie können einen eigenen benutzerdefinierten Konfliktlöser als gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur in einem Verleger schreiben. Während der Synchronisierung wird diese gespeicherte Prozedur aufgerufen, wenn in einem Artikel, bei dem der Konfliktlöser registriert wurde, Konflikte auftreten. Informationen zur Konfliktzeile werden vom Merge-Agent an die erforderlichen Parameter der Prozedur übermittelt. Auf gespeicherten Prozeduren basierende benutzerdefinierte Konfliktlöser werden immer auf dem Verleger erstellt.  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfliktlöser für gespeicherte Prozeduren werden nur zur Behandlung änderungsbasierter Konflikte auf Zeilenebene aufgerufen. Sie können nicht zur Behandlung anderer Arten von Konflikten verwendet werden, z.&nbsp;B. von Einfügefehlern, die durch den Verstoß gegen eine PRIMARY&nbsp;KEY-Einschränkung oder einen eindeutigen Index verursacht werden.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfliktlöser für gespeicherte Prozeduren werden nur zur Behandlung änderungsbasierter Konflikte auf Zeilenebene aufgerufen. Sie können nicht zur Behandlung anderer Arten von Konflikten verwendet werden, z. B. von Einfügefehlern, die durch den Verstoß gegen eine PRIMARY KEY-Einschränkung oder einen eindeutigen Index ausgelöst werden.
   
 #### <a name="to-create-a-stored-procedure-based-custom-conflict-resolver"></a>So erstellen und registrieren Sie einen auf gespeicherten Prozeduren basierenden benutzerdefinierten Konfliktlöser  
   
@@ -49,22 +49,26 @@ ms.locfileid: "68661397"
     |---------------|---------------|-----------------|  
     |**\@tableowner**|**sysname**|Name des Besitzers der Tabelle, für die ein Konflikt gelöst wird. Dies ist der Besitzer der Tabelle der Veröffentlichungsdatenbank.|  
     |**\@tablename**|**sysname**|Name der Tabelle, für die ein Konflikt gelöst wird.|  
-    |**\@rowguid**|**uniqueidentifier**|Eindeutiger Bezeichner für die Zeile, die den Konflikt enthält.|  
+    |**\@rowguid**|**uniqueidentifier**|Eindeutiger Bezeichner für die Zeile, in der der Konflikt auftritt.|  
     |**\@subscriber**|**sysname**|Name des Servers, von dem eine konfliktverursachende Änderung weitergegeben wird.|  
     |**\@subscriber_db**|**sysname**|Name der Datenbank, von der eine konfliktverursachende Änderung weitergegeben wird.|  
-    |**\@log_conflict OUTPUT**|**int**|Ob der Mergeprozess einen Konflikt für eine spätere Auflösung protokollieren soll:<br /><br /> **0** = Den Konflikt nicht protokollieren.<br /><br /> **1** = Der Abonnent verliert den Konflikt.<br /><br /> **2** = Der Verleger verliert den Konflikt.|  
+    |**\@log_conflict OUTPUT**|**int**|Legt fest, ob der Mergeprozess einen Konflikt für eine spätere Auflösung protokollieren soll:<br /><br /> **0** = Den Konflikt nicht protokollieren.<br /><br /> **1** = Der Abonnent verliert den Konflikt.<br /><br /> **2** = Der Verleger verliert den Konflikt.|  
     |**\@conflict_message OUTPUT**|**nvarchar(512)**|Meldung, die über die Auflösung ausgegeben werden soll, wenn der Konflikt protokolliert wird.|  
     |**\@destowner**|**sysname**|Der Besitzer der auf dem Abonnenten veröffentlichten Tabelle.|  
   
-     Diese gespeicherte Prozedur verwendet die Werte, die vom Merge-Agent für diese Parameter übergeben werden, um die benutzerdefinierte Konfliktlöserlogik zu implementieren. Sie muss ein einzeiliges Resultset zurückgeben, dessen Struktur mit der Struktur der Basistabelle identisch ist, und das die Datenwerte für die gewinnende Version der Zeile enthält.  
+     Diese gespeicherte Prozedur verwendet die Werte, die vom Merge-Agent an diese Parameter übermittelt werden, um die benutzerdefinierte Konfliktlösungslogik zu implementieren. Sie muss ein einzelnes Zeilenresultset zurückgeben, das in der Struktur mit der Basistabelle identisch ist und die Datenwerte für die gewinnende Version der Zeile enthält.  
   
 2.  Gewähren Sie allen Anmeldungen, die von Abonnenten zum Verbindungsaufbau mit dem Verleger verwendet werden, EXECUTE-Berechtigungen für die gespeicherte Prozedur.  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-#### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem neuen Tabellenartikel  
+#### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>Verwenden eines benutzerdefinierten Konfliktlösers mit einem neuen Tabellenartikel  
   
-1.  Führen Sie zur Definition eines Artikels [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) unter Angabe eines Werts des **MicrosoftSQL**-**Konfliktlösers für gespeicherte Prozeduren** für den Parameter **\@article_resolver** und des Namens der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für den Parameter **\@resolver_info** aus. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
+1. Führen Sie [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus, um einen Artikel zu definieren. 
+1. Geben Sie einen Wert des **MicrosoftSQL** **Server Stored Procedure Resolver** für den **\@article_resolver**-Parameter an. 
+1. Geben Sie den Namen der gespeicherten Prozedur an, mit der die Konfliktlöserlogik für den **\@resolver_info**-Parameter implementiert wird. 
+
+   Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem vorhandenen Tabellenartikel  
   
@@ -73,7 +77,7 @@ ms.locfileid: "68661397"
 2.  Führen Sie [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, wobei Sie **\@publication**, **\@article**, den Wert **resolver_info** für **\@property** und den Namen der gespeicherten Prozedur, mit der die Konfliktlöserlogik implementiert wird, für **\@value** angeben.  
   
 ##  <a name="COM"></a> Verwenden eines COM-basierten benutzerdefinierten Konfliktlösers  
- Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver** -Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
+ Der <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> -Namespace implementiert eine Schnittstelle, mit der Sie eine komplexe Geschäftslogik zum Verarbeiten von Ereignissen und zur Lösung von Konflikten schreiben können, die während der Synchronisierung der Mergereplikation eintreten. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md). Sie können auch eine eigene, auf systemeigenem Code basierende benutzerdefinierte Geschäftslogik zur Lösung von Konflikten schreiben. Diese Logik wird mithilfe von Produkten wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ als COM-Komponente konzipiert und in DLLs (Dynamic-Link Libraries) kompiliert. Ein solcher COM-basierter benutzerdefinierter Konfliktlöser muss die **ICustomResolver**-Schnittstelle implementieren, die speziell für die Konfliktlösung entworfen wurde.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>So erstellen und registrieren Sie einen COM-basierten benutzerdefinierten Konfliktlöser  
   
@@ -87,42 +91,42 @@ ms.locfileid: "68661397"
   
 5.  Erstellen Sie das Projekt, um die benutzerdefinierte Konfliktlöserbibliotheksdatei zu erstellen.  
   
-6.  Stellen Sie die Bibliothek in dem Verzeichnis bereit, das die ausführbare Datei des Merge-Agents (normalerweise \Microsoft SQL Server\100\COM) enthält.  
+6.  Stellen Sie die Bibliothek in dem Verzeichnis bereit, das die ausführbare Datei des Merge-Agent (normalerweise \Microsoft SQL Server\100\COM) enthält.  
   
     > [!NOTE]  
     >  Ein benutzerdefinierter Konfliktlöser muss bei einem Pullabonnement auf dem Abonnenten, bei einem Pushabonnement auf dem Verteiler oder auf dem mit der Websynchronisierung verwendeten Webserver bereitgestellt werden.  
   
-7.  Registrieren Sie die benutzerdefinierte Konfliktlöserbibliothek folgendermaßen mit regsvr32.exe vom Bereitstellungsverzeichnis aus:  
+7.  Registrieren Sie die benutzerdefinierte Konfliktlöserbibliothek folgendermaßen mit „regsvr32.exe“ vom Bereitstellungsverzeichnis aus:  
   
     ```  
     regsvr32.exe mycustomresolver.dll  
     ```  
   
-8.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, um zu prüfen, ob die Bibliothek noch nicht als benutzerdefinierter Konfliktlöser registriert wurde.  
+8.  Führen Sie auf dem Herausgeber [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, um zu prüfen, ob die Bibliothek noch nicht als benutzerdefinierter Konfliktlöser registriert wurde.  
   
 9. Um die Bibliothek als benutzerdefinierten Konfliktlöser zu registrieren, führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) aus. Geben Sie den Anzeigenamen des COM-Objekts für **\@article_resolver**, die Bibliotheks-ID (CLSID) für **\@resolver_clsid** und den Wert **FALSE** für **\@is_dotnet_assembly** an.  
   
     > [!NOTE]  
-    >  Wenn er nicht mehr benötigt wird, kann die Registrierung eines benutzerdefinierten Konfliktlösers mit [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) aufgehoben werden.  
+    >  Wenn er nicht mehr benötigt wird, können Sie die Registrierung eines benutzerdefinierten Konfliktlösers mit [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) aufheben.  
   
-10. (Optional) Wiederholen Sie bei einem Cluster die Schritte 5&nbsp;bis&nbsp;8, um den benutzerdefinierten Konfliktlöser auf allen Knoten des Clusters zu registrieren. Dies ist erforderlich, um sicherzustellen, dass der benutzerdefinierte Konfliktlöser nach einem Failover die Synchronisierung korrekt laden kann.  
+10. (Optional) Wiederholen Sie bei einem Cluster die Schritte 6-9, um den benutzerdefinierten Konfliktlöser auf allen Knoten des Clusters zu registrieren. Diese Schritte sind erforderlich, um sicherzustellen, dass der benutzerdefinierte Konfliktlöser nach einem Failover die Synchronisierung korrekt laden kann.
   
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem neuen Tabellenartikel  
   
-1.  Führen Sie auf dem Verleger [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, und achten Sie auf den Anzeigenamen des gewünschten Konfliktlösers.  
+1.  Führen Sie auf dem Herausgeber [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, und achten Sie auf den Anzeigenamen des gewünschten Konfliktlösers.  
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) zur Definition eines Artikels aus. Geben Sie den Anzeigenamen des Artikelkonfliktlösers aus Schritt 1 für **\@article_resolver** an. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>So verwenden Sie einen benutzerdefinierten Konfliktlöser mit einem vorhandenen Tabellenartikel  
   
-1.  Führen Sie auf dem Verleger [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, und achten Sie auf den Anzeigenamen des gewünschten Konfliktlösers.  
+1.  Führen Sie auf dem Herausgeber [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus, und achten Sie auf den Anzeigenamen des gewünschten Konfliktlösers.  
   
 2.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie dabei **\@publication** , **\@article**, den Wert **article_resolver** für **\@property** und den Anzeigenamen des Artikelkonfliktlösers aus Schritt 1 für **\@value** an.  
   
 
-## <a name="see-also"></a>Weitere Informationen  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [COM-Based Custom Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Erweiterte Konflikterkennung und -lösung der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [COM-basierte, benutzerdefinierte Konfliktlöser](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Bewährte Methoden für die Replikationssicherheit](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

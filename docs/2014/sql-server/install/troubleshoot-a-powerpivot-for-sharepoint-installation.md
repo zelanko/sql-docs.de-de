@@ -31,7 +31,7 @@ ms.locfileid: "68892446"
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>Miniaturbilder werden im PowerPivot-Katalog als rotes X dargestellt  
  Eine Möglichkeit besteht darin, dass die **PowerPivot-Funktionsintegration für Websitesammlungen** nichtaktiv ist. Führen Sie folgende Schritte aus:  
   
-1.  Klicken Sie in der Power Pivot-Katalog Bibliothek auf **Site Einstellungen** , entweder über ![]das Zahnrad Symbol SharePoint-Einstellungen(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint") -Einstellungen oder die Liste **Home** .  
+1.  Klicken Sie in der Power Pivot-Katalog Bibliothek auf **Site Einstellungen** , entweder über ![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "das Zahnrad Symbol SharePoint") -Einstellungen oder die Liste **Home** .  
   
 2.  Klicken Sie im Abschnitt **Websitesammlungsverwaltung** auf **Websitesammlungs-Features**.  
   

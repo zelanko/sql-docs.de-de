@@ -74,7 +74,7 @@ ms.locfileid: "68889609"
 ### <a name="aggregates"></a>Aggregate  
  Anwender des Produkts im geschäftlichen Bereich, die einen Cube verwenden, können beliebige Measurewerte für jedes Element in jeder Dimension bestimmen, unabhängig von der Ebene des Elements innerhalb der Dimension, da Werte von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] auf höheren Ebenen als erforderlich aggregiert werden. Beispielsweise können die measurenwerte in der obigen Abbildung gemäß einer Standardkalender Hierarchie aggregiert werden, indem die Calendar Time-Hierarchie in der Time-Dimension verwendet wird, wie im folgenden Diagramm dargestellt.  
   
- ![Diagramm der Measures, die entlang der Zeitdimension organisiert] sind (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagramm der Measures, die entlang der Zeitdimension organisiert") sind  
+ ![Diagramm der Measures, die entlang der Zeitdimension organisiert](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif " sind Diagramm der Measures, die entlang der Zeitdimension organisiert") sind  
   
  Ergänzend zur Aggregation von Measures mithilfe einer einzigen Dimension können Sie Measures mithilfe von Kombinationen von Elementen unterschiedlicher Dimensionen aggregieren. Auf diese Weise ist es Anwendern des Produkts im geschäftlichen Bereich möglich, in mehreren Dimensionen gleichzeitig Measures auszuwerten. Wenn ein Anwender des Produkts im geschäftlichen Bereich z. B. die Quartalsimporte analysieren möchte, die per Luftfracht aus der östlichen und der westlichen Hemisphäre eingetroffen sind, kann der Anwender eine Abfrage an den Cube eingeben, um das folgende Dataset abzurufen.  
   

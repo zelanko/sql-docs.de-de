@@ -52,7 +52,7 @@ ms.locfileid: "69493780"
   
 8.  Wählen Sie in der Liste **Übersetzungsspalten** die Option **SpanishMonthName**wie in der folgenden Abbildung dargestellt aus.  
   
-     ![Attributdaten Übersetzung (Dialogfeld] ) (../../2014/tutorials/media/l9-translations-4.gif "Attributdaten Übersetzung (Dialogfeld") )  
+     ![Attributdaten Übersetzung (Dialogfeld](../../2014/tutorials/media/l9-translations-4.gif "Attributdaten Übersetzung Dialogfeld")  
   
 9. Klicken Sie auf **OK**, und klicken Sie dann auf die Auslassungs Punkte ( **...** ) für die **Französisch (Frankreich)** -Übersetzung für das **Month Name** -Attribut.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493780"
   
      Die Elemente im Metadatenbereich werden erneut aufgefüllt. Nach dem erneuten Auffüllen der Elemente im Metadatenbereich wird das Internet Sales-Sales Amount-Measure nicht mehr im Internet Sales-Anzeigeordner angezeigt. Stattdessen wird es in einem Spanisch in einem neuen Anzeige Ordner mit `Ventas del lnternet`dem Namen angezeigt, wie in der folgenden Abbildung dargestellt.  
   
-     Regefüllter ![Metadatenbereich] Regefüllter (../../2014/tutorials/media/l9-translations-6.gif "Metadatenbereich")  
+     Regefüllter ![Metadatenbereich](../../2014/tutorials/media/l9-translations-6.gif " Regefüllter Metadatenbereich")  
   
 6.  Klicken Sie im Metadatenbereich mit der `Cantidad de las Ventas del Internet` rechten Maustaste, und wählen Sie dann **zu Abfrage hinzufügen**aus.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "69493780"
   
      Die Monatsnamen werden, wie in der folgenden Abbildung zu sehen, in Spanisch angezeigt.  
   
-     ![Monatsnamen in Spanisch im Daten] Bereich (../../2014/tutorials/media/l9-translations-7.gif "Monatsnamen in Spanisch im Daten") Bereich  
+     ![Monatsnamen in Spanisch im Daten](../../2014/tutorials/media/l9-translations-7.gif " Bereich Monatsnamen in Spanisch im Daten") Bereich  
   
 10. Wählen Sie auf der Symbolleiste in der Liste **Sprache** die Option **Französisch (Frankreich)** aus.  
   

@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76e5accd2894e05fd9a9b346ad9b4825ccd81bc7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893026"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494310"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ SQL Server Analysis Services 2017 führt zahlreiche Verbesserungen für tabellar
 - Neue **Detailzeilen**-Endbenutzeraktion, um für aggregierte Informationen **Details anzeigen** zu können. Die Funktionen [SELECTCOLUMNS](/dax/selectcolumns-function-dax) und **DETAILROWS** zum Erstellen von Detailzeilenausdrücken. (CTP 1.1)
 - Der Operator DAX **IN** für die Angabe mehrerer Werte. (CTP 1.1)
 
-Weitere Informationen finden Sie unter [What's new in SQL Server Analysis Services 2017 (Neues in SQL Server Analysis Services 2017)](https://docs.microsoft.com/analysis-services/what-s-new-in-sql-server-analysis-services-2017).
+Weitere Informationen finden Sie unter [Neues in SQL Server Analysis Services](/analysis-services/what-s-new-in-analysis-services).
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services kann nicht mehr über das SQL Server-Setup installiert werden. Wechseln Sie zum Microsoft Download Center, um [Microsoft SQL Server 2017 Reporting Services herunterzuladen](https://www.microsoft.com/download/details.aspx?id=55252). 

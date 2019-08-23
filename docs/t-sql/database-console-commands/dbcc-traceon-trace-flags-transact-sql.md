@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809830"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553302"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON – Ablaufverfolgungsflags
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 Ablaufverfolgungsflags werden zum Festlegen bestimmter Servereigenschaften oder zum Ändern eines bestimmten Verhaltens verwendet. Das Ablaufverfolgungsflag 3226 ist beispielsweise ein häufig verwendetes Startablaufverfolgungsflag, das erfolgreiche Sicherungsmeldungen im Fehlerprotokoll unterdrückt. Ablaufverfolgungsflags werden häufig verwendet, um Leistungsprobleme oder komplexe Computersysteme zu diagnostizieren. Sie werden jedoch auch vom Microsoft-Support empfohlen, um gegen Verhalten vorzugehen, das eine Arbeitsauslastung negativ beeinträchtigt.  Alle dokumentierten Ablaufverfolgungsflags und die, die vom Microsoft-Support empfohlen werden, werden in Produktionsumgebungen vollständig unterstützt, wenn sie gemäß der Anweisungen verwendet werden.  Beachten Sie, dass für die Verwendung der jeweiligen Ablaufverfolgungsflags in dieser Liste möglicherweise zusätzliche Informationen erforderlich sind. Sie sollten die Empfehlungen, die hier oder von Ihrem Supporttechniker genannt werden, sorgfältig überprüfen. Wie bei jeder Konfigurationsänderung in SQL Server wird immer empfohlen, das Flag gründlich in einer Umgebung zu testen, die keine Produktionsumgebung ist, bevor Sie es bereitstellen.
 
@@ -51,8 +51,10 @@ Mithilfe des Befehls `DBCC TRACESTATUS` lässt sich bestimmen, welche Ablaufverf
 
 ## <a name="trace-flags"></a>Ablaufverfolgungsflags
 
-  
-In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Ablaufverfolgungsflags aufgelistet und beschrieben.
+In der folgenden Tabelle werden die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren Ablaufverfolgungsflags aufgelistet und beschrieben. 
+
+> [!NOTE]
+> Die verwaltete Azure SQL-Datenbank-Instanz unterstützt die folgenden globalen Ablaufverfolgungsflags: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389,1 0316 und 11024. Sitzungs-Ablaufverfolgungflags werden in der verwalteten Instanz noch nicht unterstützt.
  
 > [!NOTE]
 > Einige Ablaufverfolgungsflags wurden in bestimmten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen eingeführt. Weitere Informationen zur anwendbaren Version finden Sie im Microsoft Support-Artikel zum jeweiligen Ablaufverfolgungsflag.

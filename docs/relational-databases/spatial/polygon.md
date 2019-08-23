@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081662"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026146"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -49,9 +49,9 @@ Folgendes wird dargestellt:
  Akzeptierte **Polygon** -Instanzen sind Instanzen, die in einer **geometry** -Variablen oder einer **geography** -Variablen gespeichert werden können, ohne dass eine Ausnahme ausgelöst wird. Bei den folgenden **Polygon** -Instanzen handelt es sich um akzeptierte Instanzen:  
   
 -   Eine leere **Polygon** -Instanz  
--   Eine **Polygon** -Instanz, die einen akzeptablen äußeren Ring und null oder mehr akzeptable innere Ringe aufweist  
+-   Eine **Polygon**-Instanz, die einen akzeptablen äußeren Ring (**LineString**) und null (0) oder mehr akzeptable innere Ringe (**LineStrings**) aufweist.  
   
-Die folgenden Kriterien müssen erfüllt sein, damit ein Ring akzeptabel ist.  
+Die folgenden Kriterien müssen erfüllt sein, damit ein Ring (**LineString**) akzeptabel ist.  
   
 -   Die **LineString** -Instanz muss akzeptiert sein.  
 -   Die **LineString** -Instanz muss über mindestens vier Punkte verfügen.  

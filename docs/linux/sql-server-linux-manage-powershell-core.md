@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952534"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028723"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Verwalten von SQL Server für Linux mit PowerShell Core
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Erkunden der zurzeit in PS Core verfügbaren Cmdlets
-Für das SqlServer-Modul stehen derzeit in 106 Cmdlets in Windows PowerShell zur Verfügung, davon sind aber nur 59 in PS Core verfügbar. Im Folgenden finden Sie eine vollständige Liste der derzeit verfügbaren 59 Cmdlets.  Eine ausführliche Dokumentation aller Cmdlets im SqlServer-Modul finden Sie in der [Cmdlet-Referenz](https://docs.microsoft.com/powershell/module/sqlserver/) zu SqlServer.
+Für das SqlServer-Modul stehen derzeit 109 Cmdlets in Windows PowerShell zur Verfügung, davon sind aber nur 62 in PSCore verfügbar. Im Folgenden finden Sie eine vollständige Liste der derzeit verfügbaren 59 Cmdlets.  Eine ausführliche Dokumentation aller Cmdlets im SqlServer-Modul finden Sie in der [Cmdlet-Referenz](https://docs.microsoft.com/powershell/module/sqlserver/) zu SqlServer.
 
 Der folgende Befehl zeigt alle Cmdlets an, die in der von Ihnen verwendeten PowerShell-Version verfügbar sind.
 
@@ -216,6 +216,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -266,6 +268,7 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>Siehe auch
