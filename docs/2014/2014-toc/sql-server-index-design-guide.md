@@ -198,7 +198,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Die Sortierreihenfolge kann nur für Schlüsselspalten angegeben werden. Die Katalogsicht [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) und die INDEXKEY_PROPERTY-Funktion melden, ob eine Indexspalte in aufsteigender oder absteigender Reihenfolge gespeichert wird.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link zurück zum Anfang](media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") [In dieser Anleitung](#Top)  
   
 ##  <a name="Clustered"></a> Richtlinien für den Entwurf gruppierter Indizes  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Ausführliche Schlüssel sind aus mehreren Spalten oder mehreren großen Spalten zusammengesetzt. Die Schlüsselwerte aus dem gruppierten Index werden von allen nicht gruppierten Indizes als Suchschlüssel verwendet. Alle nicht gruppierten Indizes, die für dieselbe Tabelle definiert werden, sind erheblich größer, da die Einträge des nicht gruppierten Indexes den Gruppierungsschlüssel sowie die Schlüsselspalten enthalten, die für diesen nicht gruppierten Index definiert wurden.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link zurück zum Anfang](media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") [In dieser Anleitung](#Top)  
   
 ##  <a name="Nonclustered"></a> Entwurfsrichtlinien für einen nicht gruppierten Index  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Sie müssen überprüfen, ob die Steigerungen der Abfrageleistung die negativen Auswirkungen auf die Leistung während der Datenänderung sowie hinsichtlich zusätzlicher Speicherplatzanforderungen aufwiegen.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link zurück zum Anfang](media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") [In dieser Anleitung](#Top)  
   
 ##  <a name="Unique"></a> Richtlinien zum Entwerfen eindeutiger Indizes  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Ein eindeutiger, nicht gruppierter Index kann eingeschlossene Nichtschlüsselspalten enthalten. Weitere Informationen finden Sie unter [Index mit eingeschlossenen Spalten](#Included_Columns).  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link zurück zum Anfang](media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") [In dieser Anleitung](#Top)  
   
 ##  <a name="Filtered"></a> Richtlinien für den Entwurf gefilterter Indizes  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Durch das Verschieben der Datenkonvertierung von der linken Seite auf die rechte Seite eines Vergleichsoperators wird möglicherweise die Bedeutung der Konvertierung geändert. Im obigen Beispiel wurde aus einem Integer-Vergleich ein `varbinary`-Vergleich, als der CONVERT-Operator der rechten Seite hinzugefügt wurde.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang] " (media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") " [In dieser Anleitung](#Top)  
+ ![Pfeilsymbol mit dem Link zurück zum Anfang](media/uparrow16x16.gif "Pfeilsymbol mit dem Link \"zurück zum Anfang") [In dieser Anleitung](#Top)  
   
 ##  <a name="Additional_Reading"></a> Zusätzliches Lesematerial  
 

@@ -36,7 +36,7 @@ ms.locfileid: "69493825"
   
      Es wird eine leere Aktionsvorlage im Anzeigebereich angezeigt.  
   
-     ![Leere Aktions Vorlage im Anzeige] Bereich (../../2014/tutorials/media/l8-action2.gif "Leere Aktions Vorlage im Anzeige") Bereich  
+     ![Leere Aktions Vorlage im Anzeige](../../2014/tutorials/media/l8-action2.gif " Bereich Leere Aktions Vorlage im Anzeige") Bereich  
   
 3.  Ändern Sie `Internet Sales Details Drillthrough Action`im Feld Name den Namen dieser Aktion in.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "69493825"
   
 6.  Aktivieren Sie in der Liste **Rückgabespalten** die Kontrollkästchen für **Elementbeschreibung** und **Bestellnummer** , und klicken Sie anschließend auf **OK**. In der folgenden Abbildung ist die Aktionsvorlage zu sehen, wie sie zum jetzigen Zeitpunkt in dieser Prozedur aussehen sollte.  
   
-     ![Feld "Drillthrough-Spalten] " (../../2014/tutorials/media/l8-action3.gif "Feld \"Drillthrough-Spalten") "  
+     ![Feld "Drillthrough-Spalten](../../2014/tutorials/media/l8-action3.gif "Feld \"Drillthrough-Spalten") "  
   
 7.  Erweitern Sie das Feld **Weitere Eigenschaften** , wie in der folgenden Abbildung dargestellt.  
   
-     ![Weitere Eigenschaften (Feld] ) (../../2014/tutorials/media/l8-action4.gif "Weitere Eigenschaften (Feld") )  
+     ![Weitere Eigenschaften (Feld)](../../2014/tutorials/media/l8-action4.gif "Weitere Eigenschaften Feld")  
   
 8.  Geben`10`Sie im Feld **Maximale Zeilen** Anzahl ein.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "69493825"
   
      Durch diese Einstellungen wird die Anzahl der zurückgegebenen Zeilen beschränkt und die Beschriftung angegeben, die im Clientanwendungsmenü angezeigt wird. In der folgenden Abbildung werden diese Einstellungen im Feld **Weitere Eigenschaften** dargestellt.  
   
-     ![Weitere Eigenschaften (Feld] ) (../../2014/tutorials/media/l8-action5.gif "Weitere Eigenschaften (Feld") )  
+     ![Weitere Eigenschaften Feld](../../2014/tutorials/media/l8-action5.gif "Weitere Eigenschaften Feld")  
   
 ## <a name="using-the-drillthrough-action"></a>Verwenden der Drillthroughaktion  
   
@@ -122,7 +122,7 @@ ms.locfileid: "69493825"
   
      In der folgenden Abbildung sind diese Spalten markiert.  
   
-     ![Feld "Drillthrough-Spalten] " (../../2014/tutorials/media/l8-action7.gif "Feld \"Drillthrough-Spalten") "  
+     ![Feld "Drillthrough-Spalten](../../2014/tutorials/media/l8-action7.gif "Feld \"Drillthrough-Spalten")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Überprüfen der geänderten Drillthroughaktion  
   

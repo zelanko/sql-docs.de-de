@@ -52,7 +52,7 @@ ms.locfileid: "69493936"
   
      Die folgende Abbildung zeigt das Dialogfeld **Beziehung definieren** mit einer regulären Beziehung zwischen der **DimCustomer** -Dimensionstabelle und der **FactInternetSales** -Measuregruppentabelle.  
   
-     ![Beziehung definieren (Dialogfeld] ) (../../2014/tutorials/media/l5-referencedrelationship-4.gif "Beziehung definieren (Dialogfeld") )  
+     ![Beziehung definieren Dialogfeld](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Beziehung definieren Dialogfeld")  
   
 9. Klicken Sie auf **Abbrechen**.  
   
