@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 21d90c94c73eb6e49fcfedf997fffe2881146a22
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771384"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903630"
 ---
-# <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
+# <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Löscht Abonnements für bestimmte Artikel, Veröffentlichungen oder Abonnementgruppen auf dem Verleger. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
@@ -46,7 +46,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 `[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn **alle**, werden Abonnements für alle Artikel für jede angegebene Veröffentlichung und jeden Abonnenten gelöscht. Verwenden Sie **all** für Veröffentlichungen, die sofortiges Aktualisieren ermöglichen.  
   
-`[ @subscriber = ] 'subscribe_r'`Der Name des Abonnenten, dessen Abonnements gelöscht werden. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**, werden alle Abonnements für alle Abonnenten gelöscht.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten, dessen Abonnements gelöscht werden. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**, werden alle Abonnements für alle Abonnenten gelöscht.  
   
 `[ @destination_db = ] 'destination_db'`Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei einem Wert von NULL werden alle Abonnements dieses Abonnenten gelöscht.  
   
