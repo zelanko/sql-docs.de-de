@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652245"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009334"
 ---
 # <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Was ist der Speicherpool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
 
@@ -33,7 +33,7 @@ Der Speicherpool besteht aus Speicherknoten, bestehend aus SQL Server für Linux
 Speicherknoten werden für folgende Aufgaben verwendet:
 
 - Datenerfassung über Spark.
-- Datenspeicherung in HDFS (Parquet-Format). HDFS bietet auch Datenpersistenz, weil HDFS-Daten auf alle Speicherknoten im Big Data-Cluster für SQL Server verteilt werden.
+- Datenspeicherung in HDFS (Parkett und durch Trennzeichen getrenntes Textformat). HDFS bietet auch Datenpersistenz, weil HDFS-Daten auf alle Speicherknoten im Big Data-Cluster für SQL Server verteilt werden.
 - Datenzugriff über HDFS und SQL Server-Endpunkte.
 
 ## <a name="next-steps"></a>Nächste Schritte

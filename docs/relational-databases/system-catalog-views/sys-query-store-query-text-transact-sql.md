@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_query_text (Transact-SQL) | Microsoft-Dokumentation
+title: sys. query_store_query_text (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -21,28 +21,28 @@ ms.assetid: f7032fa0-7c16-4492-bb82-685806c63a8c
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c07ebb861d5dd9c118b48e4a80b5771fbd52c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b90f6641724ed526a9f7b496b792bb6cf786105f
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067985"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000793"
 ---
-# <a name="sysquerystorequerytext-transact-sql"></a>Sys.query_store_query_text (Transact-SQL)
+# <a name="sysquery_store_query_text-transact-sql"></a>sys. query_store_query_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Enthält die [!INCLUDE[tsql](../../includes/tsql-md.md)] Text und die SQL-Handle für die Abfrage.  
+  Enthält den [!INCLUDE[tsql](../../includes/tsql-md.md)] Text und das SQL-Handle der Abfrage.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**query_text_id**|**bigint**|Der Primärschlüssel.|  
-|**query_sql_text**|**nvarchar(max)**|SQL-Text der Abfrage, wie vom Benutzer bereitgestellt. Enthält nur Leerzeichen enthalten, Hinweise und Kommentare.|  
-|**statement_sql_handle**|**vabinary(64)**|SQL-Handle für die einzelne Abfrage.|  
-|**is_part_of_encrypted_module**|**bit**|Abfragetext ist Teil eines verschlüsselten-Moduls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**has_restricted_text**|**bit**|Abfragetext enthält, ein Kennwort oder andere unmentionable Wörter.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**query_sql_text**|**nvarchar(max)**|Der SQL-Text der Abfrage, wie er vom Benutzer bereitgestellt wird. Schließt Leerzeichen, Hinweise und Kommentare ein. Kommentare und Leerzeichen vor und nach dem Abfragetext werden ignoriert. Kommentare und Leerzeichen im Text werden nicht ignoriert.|  
+|**statement_sql_handle**|**vabor (64)**|SQL-Handle der einzelnen Abfrage.|  
+|**is_part_of_encrypted_module**|**bit**|Der Abfragetext ist Teil eines verschlüsselten Moduls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**has_restricted_text**|**bit**|Der Abfragetext enthält ein Kennwort oder andere nicht unter sprechenswerte Wörter.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **VIEW DATABASE STATE** Berechtigung.  
+ Erfordert die **View Database State** -Berechtigung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

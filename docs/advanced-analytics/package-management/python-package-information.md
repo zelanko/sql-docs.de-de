@@ -1,22 +1,22 @@
 ---
-title: Informationen zum Python-Paket erhalten
+title: Abrufen von Paketinformationen für Python
 description: Erfahren Sie, wie Sie Informationen zu installierten Python-Paketen, einschließlich Versionen und Installations Speicherorte, auf SQL Server Machine Learning Services erhalten.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bccfc97fe75a718ce76ea0d1292bfc7ea6cb6564
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641177"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000446"
 ---
-# <a name="get-python-package-information"></a>Informationen zum Python-Paket erhalten
+# <a name="get-python-package-information"></a>Abrufen von Paketinformationen für Python
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -77,19 +77,16 @@ Wenn Sie die Option "Python-Sprache" während des Setups auswählen, wird Anacon
 
 ## <a name="list-all-installed-python-packages"></a>Auflisten aller installierten Python-Pakete
 
-Das `pip` Modul wird standardmäßig installiert und unterstützt zahlreiche Vorgänge für die Auflistung installierter Pakete, zusätzlich zu den von python Standard unterstützten Paketen. Sie können über `pip` eine python-Eingabeaufforderung ausführen. Sie können jedoch auch einige PIP-Funktionen `sp_execute_external_script`von abrufen.
-
 Das folgende Beispielskript zeigt eine Liste installierter Pakete und ihrer Versionen an.
 
 ```sql
 EXECUTE sp_execute_external_script 
   @language = N'Python', 
   @script = N'
-import pip
+import pkg_resources
 import pandas as pd
-installed_packages = pip.get_installed_distributions()
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
-   for i in installed_packages])
+installed_packages = pkg_resources.working_set
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 df = pd.DataFrame(installed_packages_list)
 OutputDataSet = df
   '
@@ -107,10 +104,9 @@ Wenn das Paket gefunden wird, gibt der Code die Meldung "Package scikit-Learn is
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import pip
 import pkg_resources
 pckg_name = "scikit-learn"
-pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
+pckgs = pandas.DataFrame([(i.key) for i in pkg_resources.working_set], columns = ["key"])
 installed_pckg = pckgs.query(''key == @pckg_name'')
 print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
   '

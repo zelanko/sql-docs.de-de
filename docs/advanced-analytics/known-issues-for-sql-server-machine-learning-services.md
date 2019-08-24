@@ -1,23 +1,23 @@
 ---
-title: Bekannte Probleme bei der Integration von R-Sprache und python
+title: Bekannte Probleme für python und R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 9a8237887786066a8789cb319fc7de550fa7f535
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715195"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000454"
 ---
-# <a name="known-issues-in-machine-learning-services"></a>Bekannte Probleme in Machine Learning Services
+# <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dieser Artikel beschreibt bekannte Probleme oder Einschränkungen bei Machine Learning-Komponenten, die als Option in [SQL Server 2016 R-Dienste](r/sql-server-r-services.md) und [SQL Server Machine Learning Services mit R und python](what-is-sql-server-machine-learning.md)bereitgestellt werden.
+Dieser Artikel beschreibt bekannte Probleme oder Einschränkungen bei Machine Learning-Komponenten, die als Option in [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) und [SQL Server 2016 R Services](r/sql-server-r-services.md)bereitgestellt werden.
 
 ## <a name="setup-and-configuration-issues"></a>Setup-und Konfigurationsprobleme
 
@@ -43,7 +43,7 @@ Legen Sie die Umgebungs `'MKL_CBWR'=AUTO` Variable fest, um eine bedingte numeri
 3. Starten Sie R_SERVER neu. Auf SQL Server können Sie SQL Server-Launchpad-Dienst neu starten.
 
 > [!NOTE]
-> Wenn Sie die SQL Server 2019 Preview unter Linux ausführen, bearbeiten oder erstellen Sie *. bash_profile* im Stammverzeichnis Ihrer Benutzer, indem Sie die `export MKL_CBWR="AUTO"`Zeile hinzufügen. Führen Sie diese Datei aus `source .bash_profile` , indem Sie an einer bash-Eingabeaufforderung eingeben. Starten Sie R_SERVER neu `Sys.getenv()` , indem Sie an der R-Eingabeaufforderung eingeben.
+> Wenn Sie die SQL Server 2019 Preview unter Linux ausführen, bearbeiten oder erstellen Sie *. bash_profile* im Stammverzeichnis Ihrer Benutzer, indem Sie die `export MKL_CBWR="AUTO"`Zeile hinzufügen. Führen Sie diese Datei aus, indem Sie `source .bash_profile` in der Bash-Eingabeaufforderung eingeben. Starten Sie R_SERVER neu `Sys.getenv()` , indem Sie an der R-Eingabeaufforderung eingeben.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. Laufzeitfehler des R-Skripts (SQL Server 2017 CU5-CU7 Regression)
 
@@ -238,7 +238,7 @@ Der Fehler wird nicht angezeigt, wenn die API-Version identisch ist, oder wenn S
 
 Mit anderen Worten: Verwenden Sie die gleiche Version von revoscaler für Serialisierungs-und Deserialisierungsvorgänge.
 
-### <a name="3-real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>3. Bei der Echtzeitbewertung wird der _learningrate_ -Parameter in Struktur-und Gesamtstruktur Modellen nicht ordnungsgemäß behandelt.
+### <a name="3-real-time-scoring-does-not-correctly-handle-the-_learningrate_-parameter-in-tree-and-forest-models"></a>3. Bei der Echtzeitbewertung wird der _learningrate_ -Parameter in Struktur-und Gesamtstruktur Modellen nicht ordnungsgemäß behandelt.
 
 Wenn Sie ein Modell mithilfe einer Entscheidungsstruktur oder Entscheidungsstruktur Methode erstellen und die Lernrate angeben, werden möglicherweise inkonsistente Ergebnisse bei `sp_rxpredict` der Verwendung von `PREDICT` oder der SQL-Funktion im `rxPredict`Vergleich zur Verwendung von angezeigt.
 
@@ -322,7 +322,7 @@ Eine Erörterung dieses Problems und weitere Tipps finden Sie unter [Leistung f�
 
 Wenn Sie die Funktion rxdatastep verwenden, um Ergebnisse in eine Tabelle zu schreiben, ist die Verwendung von *varstokeep* und *varstodrop* eine praktische Möglichkeit, um die Spalten anzugeben, die als Teil des Vorgangs eingeschlossen oder ausgeschlossen werden sollen. Diese Argumente werden jedoch für SQL Server Datenquellen nicht unterstützt.
 
-### <a name="11-limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>11. Eingeschränkte Unterstützung für SQL-Datentypen\_in\_SP\_-Ausführungs externen Skripts
+### <a name="11-limited-support-for-sql-data-types-in-sp_execute_external_script"></a>11. Eingeschränkte Unterstützung für SQL-Datentypen\_in\_SP\_-Ausführungs externen Skripts
 
 Nicht alle Datentypen, die in SQL unterstützt werden, können in R verwendet werden. Um dieses Problem zu umgehen, sollten Sie den nicht unterstützten Datentyp in einen unterstützten Datentyp umwandeln,\_bevor\_Sie\_die Daten an das externe Skript ausführen.
 
@@ -334,7 +334,7 @@ Das übergeben von Unicode-Daten in varchar-Spalten von [!INCLUDE[ssNoVersion](.
 
 Verwenden Sie die UTF-8-Codierung ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]verfügbar), oder verwenden Sie den nvarchar-Typ für denselben, um nicht-ASCII-Zeichen folgen Daten von an R/python zu senden.
 
-### <a name="13-only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>13. Es kann nur ein Wert `raw` des Typs zurückgegeben werden.`sp_execute_external_script`
+### <a name="13-only-one-value-of-type-raw-can-be-returned-from-sp_execute_external_script"></a>13. Es kann nur ein Wert `raw` des Typs zurückgegeben werden.`sp_execute_external_script`
 
 Wenn ein binärer Datentyp (der r-rohdatentyp) von r zurückgegeben wird, muss der Wert im Ausgabedaten Rahmen gesendet werden.
 
@@ -502,6 +502,33 @@ Ab 2017 SQL Server kumulative Update 12 (CU12), numeric-, Decimal-und Money-Date
 
 Dies wurde in SQL Server kumulativen Update 14 (CU14) von 2017 korrigiert.
 
+### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Ungültiger interpreterfehler beim Installieren von Python-Paketen mit PIP unter Linux. 
+
+Auf SQL Server 2019, wenn Sie versuchen, **PIP**zu verwenden. Zum Beispiel:
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+Diese Fehlermeldung wird angezeigt:
+
+> *bash:/opt/MSSQL/mlservices/Runtime/python/bin/PIP:/opt/Microsoft/mlserver/9.4.7/bin/python/python: Ungültiger Interpreter: Datei oder Verzeichnis nicht.*
+
+**Problemumgehung**
+
+Installieren von **PIP** von der [Python-Paket Autorität (pypa)](https://www.pypa.io):
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**Empfehlung**
+
+Verwenden Sie [sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) , oder erstellen Sie eine [externe Bibliothek](../t-sql/statements/create-external-library-transact-sql.md) , um Python-Pakete zu installieren.
+
+**Gilt für:** SQL Server 2019 unter Linux
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise und Microsoft R Open
 
 In diesem Abschnitt werden Probleme aufgelistet, die für R-Konnektivität,-Entwicklung und-Leistungs Tools von Revolution Analytics spezifisch sind. Diese Tools wurden in früheren vorab Versionen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]bereitgestellt.
@@ -522,8 +549,6 @@ Aus Kompatibilitäts [!INCLUDE[rsql_productname](../includes/rsql-productname-md
 
 Revision 0,92 des SQLite-ODBC-Treibers ist mit revoscaler nicht kompatibel. Die Revisionen von 0,88-0,91 und 0,93 und höher sind bekanntermaßen kompatibel.
 
-## <a name="see-also"></a>Siehe auch
-
-[Neuerungen in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+## <a name="next-steps"></a>Nächste Schritte
 
 [Problembehandlung bei Machine Learning in SQL Server](machine-learning-troubleshooting-faq.md)

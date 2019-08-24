@@ -1,5 +1,5 @@
 ---
-title: Sp_detach_db (Transact-SQL) | Microsoft-Dokumentation
+title: sp_detach_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/30/2015
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912895"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000807"
 ---
-# <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
+# <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Trennt eine zurzeit nicht verwendete Datenbank von einer Serverinstanz und führt optional vor dem Trennvorgang für alle Tabellen UPDATE STATISTICS aus.  
@@ -45,16 +45,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'database_name'` Ist der Name der Datenbank getrennt werden. *Database_name* ist eine **Sysname** Wert hat den Standardwert NULL.  
+`[ @dbname = ] 'database_name'`Der Name der Datenbank, die getrennt werden soll. *database_name* ist ein Wert vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @skipchecks = ] 'skipchecks'` Gibt an, ob bzw. Führen Sie UPDATE STATISTIC übersprungen werden soll. *Skipchecks* ist eine **nvarchar(10)** Wert hat den Standardwert NULL. Geben Sie zum Aktualisieren von Statistiken auslassen, **"true"** . Um UPDATE STATISTICS explizit auszuführen zu können, geben **"false"** .  
+`[ @skipchecks = ] 'skipchecks'`Gibt an, ob die Update Statistik übersprungen oder ausgeführt werden soll. *wobei skipchecks "* ist ein **nvarchar (10)** -Wert mit dem Standardwert NULL. Um die Update Statistik zu überspringen, geben Sie **true**an Um Update Statistics explizit auszuführen, geben Sie **false**an.  
   
  UPDATE STATISTICS wird standardmäßig ausgeführt, um Informationen zu den Daten in den Tabellen und Indizes zu aktualisieren. Das Ausführen von UPDATE STATISTICS ist nützlich für Datenbanken, die auf Nur-Lese-Medien verschoben werden sollen.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Gibt an, dass die Volltextindex-Datei mit der Datenbank, die getrennt wird, nicht während der der Datenbank gelöscht wird Trennvorgang. *KeepFulltextIndexFile* ist eine **nvarchar(10)** hat den Standardwert des **"true"** . Wenn *KeepFulltextIndexFile* ist **"false"** , wird die Volltext-Indexdateien der Datenbank zugeordnet, und die Metadaten der der Volltextindex gelöscht, es sei denn, die Datenbank schreibgeschützt ist. Wenn der Wert NULL oder **"true"** , volltextbezogene Metadaten beibehalten werden.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
   
 > [!IMPORTANT]
->  Die **@keepfulltextindexfile** Parameter wird in einer zukünftigen Version entfernt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
+>  Der **@keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -63,19 +63,19 @@ sp_detach_db [ @dbname= ] 'database_name'
  None  
   
 ## <a name="remarks"></a>Hinweise  
- Wenn eine Datenbank getrennt wird, werden alle Metadaten darin gelöscht. Wenn die Datenbank die Standarddatenbank von Anmeldekonten war **master** wird ihre Standarddatenbank.  
+ Wenn eine Datenbank getrennt wird, werden alle Metadaten darin gelöscht. Wenn die Datenbank die Standarddatenbank aller Anmeldekonten war, wird **Master** zur Standarddatenbank.  
   
 > [!NOTE]  
->  Informationen dazu, wie Sie die Standarddatenbank für alle Anmeldekonten anzeigen, finden Sie unter [Sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Wenn Sie die erforderlichen Berechtigungen verfügen, können Sie [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) eine Anmeldung eine neue Standarddatenbank zuweisen.  
+>  Informationen dazu, wie Sie die Standarddatenbank aller Anmeldekonten anzeigen, finden Sie unter [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie die [Alter Login](../../t-sql/statements/alter-login-transact-sql.md) -Anweisung verwenden, um einer Anmeldung eine neue Standarddatenbank zuzuweisen.  
   
 ## <a name="restrictions"></a>Restrictions  
- Eine Datenbank kann nicht getrennt werden, wenn eine der folgenden Bedingungen zutrifft:  
+ Eine Datenbank kann nicht getrennt werden, wenn Folgendes zutrifft:  
   
 -   Die Datenbank ist zurzeit in Verwendung. Weitere Informationen finden Sie im Abschnitt "Erhalten exklusiven Zugriffs" weiter unten in diesem Thema.  
   
 -   Wenn die Datenbank repliziert ist, wird sie veröffentlicht.  
   
-     Bevor Sie die Datenbank trennen können, müssen Sie Veröffentlichung deaktivieren, indem Sie Ausführung [Sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+     Bevor Sie die Datenbank trennen können, müssen Sie die Veröffentlichung durch Ausführen von [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)deaktivieren.  
   
     > [!NOTE]  
     >  Wenn Sie **sp_replicationdboption**nicht verwenden können, können Sie die Replikation durch Ausführen von [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)entfernen.  
@@ -98,9 +98,11 @@ sp_detach_db [ @dbname= ] 'database_name'
 -   Die Datenbank ist eine Systemdatenbank.  
   
 ## <a name="obtaining-exclusive-access"></a>Erhalten exklusiven Zugriffs  
- Das Trennen einer Datenbank erfordert den exklusiven Zugriff auf die Datenbank. Wenn die zu trennende Datenbank gerade verwendet wird, müssen Sie vor dem Trennen für die Datenbank den SINGLE_USER-Modus festlegen, um exklusiven Zugriff zu erhalten.  
-  
- Beispielsweise die folgenden `ALTER DATABASE` -Anweisung erhalten Sie exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank nach allen aktuelle Benutzern aus der Datenbank trennen.  
+ Das Trennen einer Datenbank erfordert den exklusiven Zugriff auf die Datenbank. Wenn die zu trennende Datenbank gerade verwendet wird, müssen Sie vor dem Trennen für die Datenbank den SINGLE_USER-Modus festlegen, um exklusiven Zugriff zu erhalten.
+
+ Bevor Sie die Datenbank auf SINGLE_USER festlegen, müssen Sie überprüfen, ob die AUTO_UPDATE_STATISTICS_ASYNC-Option auf OFF festgelegt ist. Wenn diese Option auf ON festgelegt ist, stellt der Hintergrundthread, der zum Aktualisieren von Statistiken verwendet wird, eine Verbindung mit der Datenbank her, und Sie können im Einzelbenutzermodus nicht auf die Datenbank zugreifen. Weitere Informationen finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../databases/set-a-database-to-single-user-mode.md).
+
+ Beispielsweise erhält die folgende `ALTER DATABASE` Anweisung exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, nachdem alle aktuellen Benutzer die Verbindung mit der Datenbank getrennt haben.  
   
 ```  
 USE master;  
@@ -110,16 +112,16 @@ GO
 ```  
   
 > [!NOTE]  
->  So erzwingen die aktuellen Benutzer aus der Datenbank sofort oder innerhalb einer angegebenen Anzahl von Sekunden, verwenden auch die Option ROLLBACK: ALTER DATABASE *Database_name* SET SINGLE_USER WITH ROLLBACK *Rollback_option*. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Verwenden Sie die Rollback-Option, um zu erzwingen, dass aktuelle Benutzer sofort oder innerhalb einer angegebenen Anzahl von Sekunden aus der Datenbank stammen: ALTER DATABASE *database_name* SET SINGLE_USER with Rollback *rollback_option*. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Erneutes Anfügen einer Datenbank  
- Die getrennten Dateien bleiben und können mithilfe von CREATE DATABASE (mit der FOR ATTACH oder FOR ATTACH_REBUILD_LOG-Option) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  
+ Die getrennten Dateien bleiben erhalten und können mithilfe von Create Database (mit der for attach-Option oder der FOR ATTACH_REBUILD_LOG-Option) erneut angefügt werden. Die Dateien können auf einen anderen Server verschoben und dort angefügt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Sysadmin** feste Serverrolle oder die Mitgliedschaft in der **Db_owner** Rolle der Datenbank.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die Mitgliedschaft in der **db_owner** -Rolle der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgende Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank mit *Skipchecks* auf "true" festgelegt ist.  
+ Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank getrennt, wobei *wobei skipchecks "* auf true festgelegt ist.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
