@@ -9,17 +9,33 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/11/2019
-ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.date: 08/15/2019
+ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731060"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553106"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="august-2019"></a>August 2019
+
+15. August 2019 &nbsp; / &nbsp; Version: 1.10.0 
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Freigabe der SandDance 1.3.1-Erweiterung | &bull; &nbsp; Intelligente Diagrammerkennung <br/>&bull; &nbsp; 3D-Visualisierungen <br/> &bull; &nbsp; Datenfilterung |
+| Verbesserungen an Notebooks wurden vorgenommen. | &bull; &nbsp; Hinzufügen von Code- oder Textzelle in Zeilen <br/>&bull; &nbsp; Jetzt können Sie mit der rechten Maustaste auf SQL-Ergebnisraster klicken, um das Ergebnis als CSV- oder JSON-Datei etc. zu speichern. <br/> &bull; &nbsp; Verbesserung der Notebookladeleistung zum schnelleren Laden von JSON-Code <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed). |
+| Neue Features für SQL Server 2019 werden unterstützt. |  Mit diesem Release werden zusätzliche Features für Big-Data-Cluster in SQL Server 2019 unterstützt: <br/> &bull; &nbsp; Reduzierung der Zeit zum Laden von Tabellen- und Spalteninformationen auf der Objektzuordnungsseite. <br/> &bull; &nbsp; Es wurde ein Fehler in Verbindung mit dem Laden vorhandener datenbankweit gültiger Anmeldeinformationen auf der Verbindungsdetailsseite behoben. <br/> &bull; &nbsp; Erweiterte standardmäßige Stichprobengröße, die für die PROSE-Analyse verwendet wird. | 
+| Die DacPac-Erweiterung unterstützt jetzt AAD. | 
+| Das Mai-Release von Visual Studio Code (Merge 1.37) ist verfügbar. | Weitere Informationen finden Sie im [Artikel mit den aktuellen Verbesserungen](https://code.visualstudio.com/updates/v1_37). |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2019"></a>Juli 2019
 
