@@ -23,7 +23,7 @@ SQL Server Data Tools (SSDT) wandelt Visual Studio in eine leistungsstarke Umgeb
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Installieren von Visual Studio und SQL Server Data Tools
 
-1. Wenn Sie Visual Studio noch nicht auf dem Windows-Computer installiert haben, [laden Sie Visual Studio herunter, und installieren Sie es]. Wenn Sie nicht über eine Visual Studio-Lizenz verfügen, können Sie die Visual Studio Community-Edition als kostenlose, voll ausgestattete IDE für Studenten, Open Source und einzelne Entwickler nutzen.
+1. Wenn Sie Visual Studio noch nicht auf dem Windows-Computer installiert haben, [Herunterladen und Installieren von Visual Studio]. Wenn Sie nicht über eine Visual Studio-Lizenz verfügen, können Sie die Visual Studio Community-Edition als kostenlose, voll ausgestattete IDE für Studenten, Open Source und einzelne Entwickler nutzen.
 
 2. Wählen Sie während der Installation von Visual Studio **Benutzerdefiniert** für die Option **Wählen Sie die Installationsart aus** aus. Klicken Sie auf **Weiter**.
 
@@ -109,8 +109,8 @@ Wenn T-SQL für Sie neu ist, finden Sie weitere Informationen unter [Tutorial: S
 
 Weitere Informationen zum Entwickeln von Datenbanken mit SQL Data Tools finden Sie unter [SQL Server Data Tools].
 
-[Herunterladen und Installieren von Visual Studio]:https://www.visualstudio.com/downloads/
+[Herunterladen und Installieren von Visual Studio]: https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
 [SQL Server Data Tools]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Schreiben von Transact-SQL-Anweisungen]:https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL-Referenz (Datenbank-Engine)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Tutorial: Schreiben von Transact-SQL-Anweisungen]: https://msdn.microsoft.com/library/ms365303.aspx
+[Transact-SQL-Referenz (Datenbank-Engine)]: https://msdn.microsoft.com/library/bb510741.aspx
