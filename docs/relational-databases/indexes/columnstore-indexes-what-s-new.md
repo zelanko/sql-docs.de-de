@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b25d7c767be077764407d3eb47704f35146c94c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025009"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009421"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore-Indizes - Neuigkeiten
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -114,10 +114,7 @@ In-Memory-OLTP-basierte DMVs enthalten Updates für den Columnstore:
 |[sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md)|[sys.dm_db_xtp_nonclustered_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-nonclustered-index-stats-transact-sql.md)|  
 |[sys.dm_db_xtp_object_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-object-stats-transact-sql.md)|[sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)|  
   
-### <a name="limitations"></a>Einschränkungen  
-  
-
-  
+### <a name="limitations"></a>Einschränkungen    
 -   Für In-Memory-Tabellen muss ein Columnstore-Index alle Spalten enthalten. Der Columnstore-Index kann keine gefilterte Bedingung haben.  
 -   Für In-Memory-Tabellen können Abfragen für Columnstore-Indizes nur im InterOP-Modus und nicht im einheitlichen In-Memory-Modus ausgeführt werden. Parallele Ausführung wird unterstützt.  
   
@@ -144,7 +141,5 @@ In-Memory-OLTP-basierte DMVs enthalten Updates für den Columnstore:
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Columnstore-Indizes für Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md) 
-  
-  
+ [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   
