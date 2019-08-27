@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a8237887786066a8789cb319fc7de550fa7f535
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000454"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030291"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -525,7 +525,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 **Empfehlung**
 
-Verwenden Sie [sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) , oder erstellen Sie eine [externe Bibliothek](../t-sql/statements/create-external-library-transact-sql.md) , um Python-Pakete zu installieren.
+Weitere Informationen finden Sie [unter Installieren von Python-Paketen mit sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
 
 **Gilt für:** SQL Server 2019 unter Linux
 
