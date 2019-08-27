@@ -60,7 +60,7 @@ Das Hilfsprogramm `SqlLocalDb` kann neue Instanzen von LocalDB erstellen, eine I
 
 Die Instanzsortierung für LocalDB ist auf `SQL_Latin1_General_CP1_CI_AS` festgelegt und kann nicht geändert werden. Auf Datenbankebene, Spaltenebene und Ausdrucksebene werden Sortierungen normal unterstützt. Eigenständige Datenbanken basieren auf den Metadaten- und `tempdb`-Sortierungsregeln unter [Enthaltene Datenbanksortierungen](../../relational-databases/databases/contained-database-collations.md).
 
-### <a name="restrictions"></a>Restrictions
+### <a name="restrictions"></a>Beschränkungen
 
 - LocalDB kann nicht als Abonnent für die Mergereplikation hinzugefügt werden.
 
