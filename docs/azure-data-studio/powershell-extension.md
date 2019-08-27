@@ -63,7 +63,7 @@ In den [FAQ](https://github.com/PowerShell/vscode-powershell/wiki/FAQ) finden Si
 
 Wenn Sie Azure Data Studio unter macOS oder Linux ausführen, müssen Sie möglicherweise auch PowerShell Core installieren.
 
-PowerShell Core ist ein Open Source-Projekt auf [GitHub](https://github.com/powershell/powershell).
+PowerShell Core ist ein Open-Source-Projekt auf [GitHub](https://github.com/powershell/powershell).
 Weitere Informationen zur Installation von PowerShell Core auf macOS- oder Linux-Plattformen finden Sie in den folgenden Artikeln:
 
 - [Installieren von PowerShell Core unter Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
@@ -73,7 +73,7 @@ Weitere Informationen zur Installation von PowerShell Core auf macOS- oder Linux
 
 Im `examples`-Ordner der Erweiterung finden Sie einige Beispielskripts, mit denen Sie die PowerShell-Funktionen zum Bearbeiten und Debuggen erkunden können.  Weitere Informationen zur Verwendung finden Sie in der enthaltenen [README.md](https://github.com/PowerShell/vscode-powershell/blob/master/examples/README.md)-Datei.
 
-Dieser Ordner befindet im folgenden Pfad:
+Dieser Ordner befindet sich im folgenden Pfad:
 
 ```powershell
 $HOME/.azuredatastudio/extensions/ms-vscode.PowerShell-<version>/examples
@@ -113,7 +113,7 @@ Open-EditorFile ExportData.ps1, ImportData.py
 
 ### <a name="no-focus-on-console-when-executing"></a>Kein Fokus auf der Konsole beim Ausführen
 
-Wenn Sie mit der Arbeit mit SSMS vertraut sind, sind Sie daran gewöhnt, eine Abfrage ausführen und erneut ausführen zu können, ohne zum Abfragebereich zurückkehren zu müssen.  In diesem Fall kommt Ihnen das Standardverhalten des Code-Editors möglicherweise etwas fremd vor.  Um den Fokus im Editor beizubehalten, wenn Sie den Code mit <kbd>F8</kbd> ausführen, ändern Sie die folgende Einstellung:
+Wenn Sie häufiger mit SSMS arbeiten, kennen Sie das: Sie können eine bereits ausgeführte Abfrage erneut ausführen, ohne zuvor zum Abfragebereich zurückkehren zu müssen.  In diesem Fall kommt Ihnen das Standardverhalten des Code-Editors möglicherweise etwas fremd vor.  Um den Fokus im Editor beizubehalten, wenn Sie den Code mit <kbd>F8</kbd> ausführen, ändern Sie die folgende Einstellung:
 
 ```json
 "powershell.integratedConsole.focusConsoleOnExecute": false
@@ -155,7 +155,7 @@ Das `SqlServer`-Modul enthält einen Anbieter namens `SQLRegistration`, mit dem 
 + Integration Services
 + Reporting Services
 
- Im folgenden Beispiel wird ein `dir`-Befehl (Alias für `Get-ChildItem`) verwendet, um die Liste aller SQL Server-Instanzen abzurufen, die in der Datei mit den registrierten Servern aufgeführt sind.
+ Im folgenden Beispiel wird mit `dir` (einem Alias für `Get-ChildItem`) die Liste aller SQL Server-Instanzen abgerufen, die in der Datei mit den registrierten Servern aufgeführt sind.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse 
@@ -210,7 +210,7 @@ FOREACH {
 }
 ```
 
-Im folgenden Beispiel wird ein `dir`-Befehl (Alias für `Get-ChildItem`) verwendet, um die Liste aller SQL Server-Instanzen abzurufen, die in der Datei mit den registrierten Servern aufgeführt sind. Anschließend wird das Cmdlet `Get-SqlDatabase` verwendet, um eine Liste der Datenbanken für jede dieser Instanzen abzurufen.
+Im folgenden Beispiel wird zunächst mit `dir` (einem Alias für `Get-ChildItem`) die Liste aller SQL Server-Instanzen abgerufen, die in der Datei „Registrierte Server“ aufgeführt sind. Danach rufen wir mit dem Cmdlet `Get-SqlDatabase` eine Liste mit Datenbanken für jede dieser Instanzen ab.
 
 ```powershell
 dir 'SQLSERVER:\SQLRegistration\Database Engine Server Group' -Recurse |
@@ -257,7 +257,7 @@ Informationen dazu, wie Sie an dieser Erweiterung mitwirken können, finden Sie 
 
 ## <a name="license"></a>License (Lizenz)
 
-Diese Erweiterung ist [unter der MIT-Lizenz lizenziert](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Informationen zu den Binärdateien von Drittanbietern, die in Releases dieses Projekts enthalten sind, finden Sie Datei mit [Hinweisen zu Drittanbietern](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
+Diese Erweiterung ist [unter der MIT-Lizenz lizenziert](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Informationen zu den Binärdateien von Drittanbietern, die in Releases dieses Projekts enthalten sind, finden Sie in der Datei mit [Hinweisen zu Drittanbietern](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
 ## <a name="code-of-conductconduct-md"></a>[Verhaltensregeln][conduct-md]
 

@@ -26,7 +26,7 @@ ms.locfileid: "67559481"
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Version 17.2 und höher enthält das Leistungsdashboard. Dieses Dashboard wurde entworfen, um schnelle visuelle Einblicke in den Leistungszustand von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) und [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] bereitzustellen. 
 
-Mit dem Leistungsdashboard können Sie schnell herauszufinden, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] einen Leistungsengpass aufweisen. Wenn ein Engpass entdeckt wird, können ganz einfach zusätzliche Diagnosedaten erfasst werden, die für das Beheben des Problems erforderlich sein können. Zu den allgemeinen Leistungsproblemen, bei deren Identifizierung das Leistungsdashboard helfen kann, gehören:
+Mit dem Leistungsdashboard können Sie schnell herausfinden, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] einen Leistungsengpass aufweisen. Wenn ein Engpass entdeckt wird, können ganz einfach zusätzliche Diagnosedaten erfasst werden, die für das Beheben des Problems erforderlich sein können. Zu den allgemeinen Leistungsproblemen, bei deren Identifizierung das Leistungsdashboard helfen kann, gehören:
 -  CPU-Engpässe (bzw. welche Abfragen die meiste CPU-Leistung beanspruchen)
 -  E/A-Engpässe (bzw. welche Abfragen die meisten E/A-Vorgänge ausführen)
 -  Vom Abfrageoptimierer erzeugte Indexempfehlungen (fehlende Indizes)
