@@ -8,19 +8,33 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: 8088334f4bc9cfd03c23af654fbef9eb478aa9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e3f7929c17b161d3534474d3d9ad99e559714d2
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989450"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653806"
 ---
-# <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server on Windows
+# <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funktionen von Microsoft ODBC Driver for SQL Server unter Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
     
+## <a name="microsoft-odbc-driver-174-for-sql-server-on-windows"></a>Microsoft ODBC Driver 17.4 for SQL Server unter Windows
+
+Der ODBC-Treiber 17.4 bietet die Möglichkeit, TCP-Keep-Alive-Einstellungen anzupassen. Sie können geändert werden, indem Sie den Treiber-oder DSN-Registrierungs Schlüsseln Werte hinzufügen. Die Schlüssel befinden sich in `HKEY_LOCAL_MACHINE\Software\ODBC\` für Systemdaten Quellen und in `HKEY_CURRENT_USER\Software\ODBC\` für Benutzerdaten Quellen. Für DSN müssen die Werte zu `...\Software\ODBC\ODBC.INI\<DSN Name>` und für den `...\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`Treiber hinzugefügt werden.
+
+Weitere Informationen finden Sie unter [Registrierungseinträge für ODBC-Komponenten](../../../odbc/reference/install/registry-entries-for-odbc-components.md) .
+
+Die `REG_SZ`-Werte lauten wie folgt:
+
+- `KeepAlive`steuert, wie oft TCP versucht, zu überprüfen, ob eine Verbindung im Leerlauf noch intakt ist, indem ein Keep-Alive-Paket gesendet wird. Der Standardwert ist 30 Sekunden.
+
+- `KeepAliveInterval`bestimmt das Intervall, das Keep-Alive-Neuübertragungen trennt, bis eine Antwort empfangen wird. Der Standardwert beträgt 1 Sekunde.
+
+
+
 ## <a name="microsoft-odbc-driver-131-for-sql-server-on-windows"></a>Microsoft ODBC Driver 13.1 for SQL Server unter Windows
 
 Der ODBC-Treiber 13,1 für SQL Server enthält die gesamte Funktionalität der früheren Version (11) und fügt Unterstützung für Always Encrypted und Azure Active Directory Authentifizierung hinzu, wenn diese in Verbindung mit Microsoft SQL Server 2016 verwendet werden.  
