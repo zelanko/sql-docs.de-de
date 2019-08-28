@@ -41,7 +41,7 @@ ms.locfileid: "68136076"
   
 -   Überprüfen Sie die Netzwerkkonnektivität für den SQL Server-Computer.  
   
--   Stellen Sie sicher, dass die Azure-Firewall Ihren SQL-Server nicht daran hindert, sich mit dem Remoteendpunkt zu verbinden.  
+-   Stellen Sie sicher, dass die Azure Firewall Ihren SQL-Server nicht daran hindert, sich mit dem Remoteendpunkt zu verbinden.  
   
 -   Überprüfen Sie die dynamische Verwaltungssicht **sys.dm_db_rda_migration_status** für den Status des aktuellen Batches. Wenn ein Fehler aufgetreten ist, überprüfen Sie die Werte „error_number“, „error_state“ und „error_severity“ für den Batch.  
   
@@ -49,8 +49,8 @@ ms.locfileid: "68136076"
   
     -   Weitere Informationen zum Inhalt einer SQL Server-Fehlermeldung finden Sie unter [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md).  
   
- **Die Azure-Firewall blockiert Verbindungen von meinem lokalen Server.**  
- Möglicherweise müssen Sie eine Regel zu den Azure-Firewalleinstellungen des Azure-Servers hinzufügen, damit SQL Server mit dem Azure-Remoteserver kommunizieren kann.  
+ **Die Azure Firewall blockiert Verbindungen von meinem lokalen Server.**  
+ Möglicherweise müssen Sie eine Regel zu den Azure Firewall Einstellungen des Azure-Servers hinzufügen, damit SQL Server mit dem Azure-Remoteserver kommunizieren kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten und Problembehandlung von Stretch Database](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  

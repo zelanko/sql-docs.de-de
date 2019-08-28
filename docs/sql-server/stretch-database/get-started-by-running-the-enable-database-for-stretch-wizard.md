@@ -158,7 +158,7 @@ Wenn Sie zum Auswählen zu migrierender Zeilen eine andere Art von Filterfunktio
 ##  <a name="Network"></a> Auswählen der IP-Adresse  
  Verwenden Sie den IP-Adressbereich des Subnetzes (empfohlen) oder die öffentliche IP-Adresse Ihrer SQL Server-Instanz, um eine Firewallregel in Azure zu erstellen, durch die SQL Server mit dem Azure-Remoteserver kommunizieren kann.  
   
- Die IP-Adressen, die Sie auf dieser Seite bereitstellen, teilen dem Azure-Server mit, dass er von SQL Server initiierte, eingehende Daten, Abfragen und Verwaltungsvorgänge die Azure-Firewall passieren lassen soll. Der Assistent ändert nichts an den Firewalleinstellungen auf dem SQL Server.  
+ Die IP-Adressen, die Sie auf dieser Seite bereitstellen, teilen dem Azure-Server mit, dass er von SQL Server initiierte, eingehende Daten, Abfragen und Verwaltungsvorgänge die Azure Firewall passieren lassen soll. Der Assistent ändert nichts an den Firewalleinstellungen auf dem SQL Server.  
   
  ![Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten](../../relational-databases/tables/media/stretch-wizard-7.png "Wählen der IP-Adressseite des Stretch-Datenbank-Assistenten")  
   
