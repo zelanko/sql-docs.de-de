@@ -181,9 +181,9 @@ column_name <data_type>
 |**Datum**|**datetime**|**datetime2**|**datetimeoffset**|  
 |**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
-|**nvarchar(** *n* | **max)**|**real**|**smalldatetime**|**smallint**|  
+|**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
 |**smallmoney**|**sql_variant**|**text**|**time**|  
-|**tinyint**|**uniqueidentifier**|**varbinary(** *n* | **max)**|**varchar(** *n* | **max)**|  
+|**tinyint**|**uniqueidentifier**|**varbinary(** *n* &#124; **max)**|**varchar(** *n* &#124; **max)**|  
   
  *base_type* kann außerdem jedes Synonym für Datentypen sein, das einem dieser Systemdatentypen zugeordnet wird.  
   
