@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 05/29/2019
-ms.openlocfilehash: 8632bd86a19bdce57114e36247f0b805da6804e7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3def38b576103a7343816d0dc1c472d3bd64e1a1
+ms.sourcegitcommit: 7e63c612047f2bb1779c872b5180a3ea9afe7e80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893262"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976126"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Was ist SQL Server Management Studio (SSMS)? 
 
@@ -87,8 +87,8 @@ Weitere Informationen zu verschiedenen Gebietsschemas bei früheren Versionen fi
 ## <a name="support-policy-for-ssms"></a>Supportrichtlinie für SSMS
 
 - Ab SSMS 17.0 hat das SQL-Tools-Team die [Moderne Microsoft-Lebenszyklusrichtlinie](https://support.microsoft.com/help/30881/modern-lifecycle-policy) übernommen.
-- Lesen die ursprüngliche [Ankündigung der modernen Lebenszyklusrichtlinie](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy).
-- Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur modernen Richtlinie](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
+- Lesen die ursprüngliche [Ankündigung der modernen Lebenszyklusrichtlinie](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy). Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur modernen Richtlinie](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq).
+- Informationen zur Erfassung von Diagnosedaten und zur Featureverwendung finden Sie unter [Ergänzende Datenschutzbestimmungen zu SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-privacy).
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

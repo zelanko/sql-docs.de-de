@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 70c86c40f290c26db5bcbc3526d66466c20504d8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4803a99e0fb1435b545ec775b2a8abe063d9fd8d
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68214885"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890918"
 ---
-Das **SA**-Konto ist ein Systemadministrator auf der SQL Server-Instanz, der beim Setup erstellt wird. Nach dem Erstellen Ihres SQL Server-Containers wird die von Ihnen festgelegte `MSSQL_SA_PASSWORD` Umgebungsvariable sichtbar, wenn Sie sie in dem Container ausführen`echo $MSSQL_SA_PASSWORD`. Ändern Sie aus Sicherheitsgründen ihr SA-Kennwort.
+Das **SA**-Konto ist ein Systemadministrator für die SQL Server-Instanz, der während des Setups erstellt wird. Nach dem Erstellen Ihres SQL Server-Containers können Sie die von Ihnen festgelegte Umgebungsvariable `MSSQL_SA_PASSWORD` ermitteln, indem Sie `echo $MSSQL_SA_PASSWORD` im Container ausführen. Ändern Sie aus Sicherheitsgründen Ihr SA-Kennwort:
 
 1. Wählen Sie ein sicheres Kennwort für den SA-Benutzer aus.
 
-1. Verwenden Sie `docker exec` in Transact-SQL **sqlcmd** zum Ausführen und Ändern des Kennworts. Ersetzen Sie `<YourStrong!Passw0rd>` und `<YourNewStrong!Passw0rd>` mit Ihren eigenen Kennwortwerten.
+1. Verwenden Sie `docker exec` zum Ausführen des Hilfsprogramms **sqlcmd**, um das Kennwort über eine Transact-SQL-Anweisung zu ändern. Ersetzen Sie `<YourStrong!Passw0rd>` und `<YourNewStrong!Passw0rd>` durch Ihre eigenen Kennwortwerte:
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \

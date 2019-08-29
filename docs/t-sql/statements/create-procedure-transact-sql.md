@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006524"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000823"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +356,7 @@ Weitere Beispiele finden Sie unter [Beispiele](#Examples) am Ende dieses Themas.
 ## <a name="best-practices"></a>Bewährte Methoden  
  Im Folgenden werden zwar nicht alle bewährten Methoden aufgeführt, trotzdem können diese Vorschläge zur Verbesserung der Leistung beitragen.  
   
--   Verwenden Sie die SET NOCOUNT ON-Anweisung als erste Anweisung im Textkörper der Prozedur. Setzen Sie sie also direkt hinter das AS-Schlüsselwort. Hierdurch wird das Zurücksenden von Meldungen nach der Ausführung von SELECT-, INSERT-, UPDATE-, MERGE- und DELETE-Anweisungen durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an den Client deaktiviert. Die Gesamtleistung der Datenbank und der Anwendung wird durch Vermeiden dieses unnötigen Netzwerkverarbeitungsaufwands verbessert. Weitere Informationen finden Sie unter [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
+-   Verwenden Sie die SET NOCOUNT ON-Anweisung als erste Anweisung im Textkörper der Prozedur. Setzen Sie sie also direkt hinter das AS-Schlüsselwort. Hierdurch wird das Zurücksenden von Meldungen nach der Ausführung von SELECT-, INSERT-, UPDATE-, MERGE- und DELETE-Anweisungen durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an den Client deaktiviert. Dadurch wird die erzeugte Ausgabe zur besseren Übersichtlichkeit auf ein Minimum reduziert. Für die Hardware von heute ergibt sich jedoch kein messbarer Leistungsvorteil. Weitere Informationen finden Sie unter [SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md).  
   
 -   Verwenden Sie beim Erstellen oder Verweisen auf Datenbankobjekte in der Prozedur Schemanamen. Die [!INCLUDE[ssDE](../../includes/ssde-md.md)] kann Objektnamen schneller auflösen, wenn nicht mehrere Schemas durchsucht werden müssen. Zudem werden Probleme hinsichtlich Berechtigung und Zugriff vermieden, die durch das Zuweisen eines Standardschemas eines Benutzers hervorgerufen werden, wenn Objekte ohne Angabe des Schemas erstellt werden.  
   

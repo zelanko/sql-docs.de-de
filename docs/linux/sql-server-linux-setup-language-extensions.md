@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476024"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653521"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installieren von SQL Server 2019-Spracherweiterungen (Java) unter Linux
 
@@ -29,9 +29,9 @@ Erweiterungspakete für Java werden unter Linux in den Quellrepositorys für SQL
 
 Spracherweiterungen werden auch in Linux-Containern unterstützt. Wir stellen keine vorgefertigten Container mit Spracherweiterungen bereit. Sie können jedoch [mithilfe einer in GitHub verfügbaren Vorlage](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices) einen Container aus den SQL Server-Containern erstellen.
 
-## <a name="uninstall-previous-ctp"></a>Deinstallieren von früheren CTP-Versionen
+## <a name="uninstall-previous-ctp-version"></a>Deinstallieren einer früheren CTP-Version
 
-Die Paketliste wurde in den letzten CTP-Versionen geändert, sodass sie nun weniger Pakete enthält. Es wird empfohlen, CTP 2.x zu deinstallieren, um alle früheren Pakete vor der Installation von CTP 3.2 zu entfernen. Die Installation mehrerer Versionen gleichzeitig wird nicht unterstützt.
+Die Paketliste wurde in den letzten CTP-Versionen geändert, sodass sie nun weniger Pakete enthält. Es wird empfohlen, die CTP-Version zu deinstallieren, um alle früheren Pakete vor der Installation von RC 1 zu entfernen. Die Installation mehrerer Versionen gleichzeitig wird nicht unterstützt.
 
 ### <a name="1-confirm-package-installation"></a>1. Bestätigen der Paketinstallation
 
@@ -41,7 +41,7 @@ Sie sollten in einem ersten Schritt überprüfen, ob eine frühere Version insta
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Deinstallieren von CTP 2.x-Paketen
+### <a name="2-uninstall-previous-ctp-packages"></a>2. Deinstallieren früherer CTP-Pakete
 
 Führen Sie die Deinstallation auf der niedrigsten Paketebene durch. Alle Upstreampakete, die von einem Paket auf einer niedrigeren Ebene abhängig sind, werden automatisch deinstalliert.
 
@@ -55,7 +55,7 @@ Die Befehle zum Entfernen von Paketen können Sie der folgenden Tabelle entnehme
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. Fortsetzen der Installation von CTP 3.2
+### <a name="3-install-release-candidate-1-rc-1"></a>3. Installieren von Release Candidate 1 (RC 1)
 
 Führen Sie die Installation gemäß den in diesem Artikel beschriebenen Anweisungen für Ihr Betriebssystem auf der höchsten Paketebene durch.
 
@@ -85,14 +85,14 @@ Auf einem mit dem Internet verbundenen Gerät werden Pakete unabhängig von der 
 
 | Paketname | Gilt für | und Beschreibung |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Alle Sprachen | Erweiterbarkeitsframework, das zum Ausführen von Java-Code verwendet wird. |
-|mssql-server-extensibility-java | Java | Java-Erweiterung zum Laden einer Java-Ausführungsumgebung. Es gibt keine zusätzlichen Bibliotheken oder Pakete für Java. |
+|mssql-server-extensibility  | Alle Sprachen | Verwendetes Erweiterbarkeitsframework für die Java-Spracherweiterung |
+|mssql-server-extensibility-java | Java | Verwendetes Erweiterbarkeitsframework für die Java-Spracherweiterung, enthält außerdem eine unterstützte Java-Runtime |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>Installieren von Spracherweiterungen
 
-Sie können Spracherweiterungen und Java unter Linux über das Paket **mssql-server-extensibility-java** installieren. Wenn Sie das Paket **mssql-server-extensibility-java** installieren, wird auch automatisch JRE 8 installiert, falls noch nicht geschehen. Außerdem wird der JVM-Pfad einer Umgebungsvariablen mit dem Namen „JRE_HOME“ hinzugefügt.
+Sie können Spracherweiterungen und Java unter Linux über das Paket **mssql-server-extensibility-java** installieren. Wenn Sie das Paket **mssql-server-extensibility-java** installieren, wird auch automatisch JRE 11 installiert, sofern nicht bereits geschehen. Außerdem wird der JVM-Pfad einer Umgebungsvariablen mit dem Namen „JRE_HOME“ hinzugefügt.
 
 > [!Note]
 > Auf einem mit dem Internet verbundenen Server werden Paketabhängigkeiten im Rahmen der Hauptpaketinstallation heruntergeladen und installiert. Wenn Ihr Server nicht mit dem Internet verbunden ist, finden Sie weitere Informationen unter [Offlineeinrichtung](#offline-install).
@@ -223,7 +223,7 @@ Sie können die Datenbank-Engine und die Spracherweiterungen zusammen installier
   sudo yum install -y mssql-server mssql-server-extensibility-java 
   ```
 
-3. Akzeptieren Sie die Lizenzbedingungen, und schließen Sie die Konfiguration im Anschluss an die Installation ab. Verwenden Sie das Tool **mssql-conf** für diese Aufgabe.
+3. Akzeptieren Sie die Lizenzbedingungen, und schließen Sie die Konfiguration im Anschluss an die Installation ab. Verwenden Sie hierfür das Tool **mssql-conf**.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
@@ -249,7 +249,7 @@ Fügen Sie die Pakete für „mssql-server-extensibility-java“ der Datenbank-E
 Befolgen Sie die Anweisungen zur [Offlineinstallation](sql-server-linux-setup.md#offline), um die Pakete zu installieren. Der nachfolgenden Liste können Sie entnehmen, auf welchen Websites Sie jeweils entsprechende Downloads finden. Laden Sie dann alle nötigen Pakete herunter.
 
 > [!Tip]
-> Einige der Paketverwaltungstools umfassen Befehle, mit denen Sie Paketabhängigkeiten ermitteln können. Verwenden Sie für yum `sudo yum deplist [package]` und für Ubuntu erst `sudo apt-get install --reinstall --download-only [package name]` und dann `dpkg -I [package name].deb`.
+> Einige der Paketverwaltungstools umfassen Befehle, mit denen Sie Paketabhängigkeiten ermitteln können. Verwenden Sie für yum `sudo yum deplist [package]`. Verwenden Sie für Ubuntu erst `sudo apt-get install --reinstall --download-only [package name]` und dann `dpkg -I [package name].deb`.
 
 #### <a name="download-site"></a>Downloadsite
 
@@ -286,7 +286,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>Einschränkungen in CTP-Versionen
+## <a name="limitations-in-the-rc-1-release"></a>Einschränkungen im RC 1-Release
 
 Die Spracherweiterungen und die Java-Erweiterbarkeit unter Linux befinden sich noch in der aktiven Entwicklungsphase. Die folgenden Features sind in der Vorschauversion noch nicht aktiviert.
 
@@ -295,7 +295,7 @@ Die Spracherweiterungen und die Java-Erweiterbarkeit unter Linux befinden sich n
 
 ### <a name="resource-governance"></a>Ressourcengovernance
 
-In Bezug auf die [Ressourcengovernance](../t-sql/statements/create-external-resource-pool-transact-sql.md) besteht zwar zwischen Linux und Windows Parität für externe Ressourcenpools, aber die Statistiken für [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) haben derzeit unterschiedliche Einheiten unter Linux. Diese Einheiten werden in einer kommenden CTP-Version angepasst.
+In Bezug auf die [Ressourcengovernance](../t-sql/statements/create-external-resource-pool-transact-sql.md) besteht zwar zwischen Linux und Windows Parität für externe Ressourcenpools, aber die Statistiken für [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) haben derzeit unterschiedliche Einheiten unter Linux. 
  
 | Spaltenname   | und Beschreibung | Wert unter Linux | 
 |---------------|--------------|---------------|

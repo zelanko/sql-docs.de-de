@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9cbb85bafae51929676de93e4de285472bc5443
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023587"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621694"
 ---
 # <a name="install-integration-services"></a>Installieren von Integration Services
 
@@ -44,9 +44,9 @@ ms.locfileid: "68023587"
 -   [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
 ## <a name="install-standalone-or-side-by-side"></a>Eigenständige oder parallele Installation    
-Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in folgenden Konfigurationen installieren:    
+Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in folgenden Konfigurationen installieren:    
     
--   Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf einem Computer installieren, auf dem sich keine früheren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]befinden.    
+-   Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf einem Computer installieren, auf dem sich keine früheren Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befinden.    
     
 -   Sie können [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] parallel zu einer bestehenden Instanz von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installieren.    
     
@@ -122,6 +122,6 @@ Für eine vollständige Installation von [!INCLUDE[ssISnoversion](../../includes
 
 -   **Weitere optionale Komponenten**. Sie können optional weitere Drittanbieterkomponenten aus dem SQL Server-Feature Pack herunterladen.
 
-    -   MicrosoftÂ® Connector for SAP BW für Microsoft SQL ServerÂ®. Sie können diese Komponenten hier herunterladen: [MicrosoftÂ® SQL ServerÂ® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   Microsoft® Connector for SAP BW für Microsoft SQL Server®. Sie können diese Komponenten hier herunterladen: [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
     -   Microsoft Connector Version 5.0 für Oracle von Attunity und Microsoft Connector Version 5.0 für Teradata von Attunity. Sie können diese Komponenten hier herunterladen: [Microsoft Connectors v5.0 für Oracle und Teradata](https://www.microsoft.com/download/details.aspx?id=55179).

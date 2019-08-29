@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024962"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009373"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
 
@@ -110,7 +110,7 @@ ms.locfileid: "68024962"
 |Top Sort||nein|nein|ja||    
 |Window Aggregates||NA|NA|ja|Neuer Operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
-<sup>1</sup>Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarife, Standardtarife (S3 und höher) und alle V-Kern-Tarife sowie [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+<sup>1</sup> Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarife, Standard-Tarife (S3 und höher), alle vCore-Tarife sowie [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
     
 ### <a name="aggregate-pushdown"></a>Aggregatweitergabe    
  Ein normaler Ausführungspfad zur Aggregatberechnung, um die qualifizierenden Zeilen aus dem SCAN-Knoten abzurufen und die Werte im Batchmodus zu aggregieren. Dadurch wird eine gute Leistung bereitgestellt. Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann der Aggregatvorgang jedoch mittels Push an den SCAN-Knoten weitergegeben werden, um die Leistung der Aggregatberechnung in erheblichem Maße zusätzlich zur Ausführung im Batchmodus zu verbessern, sofern folgende Bedingungen erfüllt sind: 
@@ -166,7 +166,7 @@ Bei der Zeichenfolgenprädikatweitergabe berechnet die Abfrageausführung das Pr
  [Columnstore Indexes Data Loading Guidance (Leitfaden zum Laden von Daten in Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [Columnstore-Indizes für Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore Indexes Defragmentation (Defragmentierung von Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
+ [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Columnstore Index Architecture (Columnstore-Indizes: Architektur)](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

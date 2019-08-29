@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028833"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621720"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Navigationsleitfaden zur SQL Server-Dokumentation 
 
@@ -39,16 +39,15 @@ Wenn Sie eine PDF-Datei erstellen möchten, wählen Sie den Link **PDF herunterl
 
 ## <a name="toc-navigation-hints"></a>Navigationshinweise zum Inhaltsverzeichnis
 
-Einträge im Inhaltsverzeichnis (Table of Contents, TOC), die am Ende des Eintrags ein `>` aufweisen, geben an, dass Sie docs.microsoft.com verlassen. 
+Inhaltsverzeichniseinträge mit einem `>` am Ende weisen darauf hin, dass Sie zur technischer Dokumentation mit einem anderen Inhaltsverzeichnis geleitet werden. 
 
 ![Einzelnes Größer-als-Zeichen im Inhaltsverzeichnis](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Einträge im Inhaltsverzeichnis, die `>>` aufweisen, geben an, dass Sie zu technischer Dokumentation mit einem anderen Inhaltsverzeichnis gelangen. 
+Inhaltsverzeichniseinträge mit einem `>>` am Ende weisen darauf hin, dass Sie docs.microsoft.com verlassen. 
 
 ![Navigationsmarker im Inhaltsverzeichnis](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-Wenn Sie zu einer dieser Seiten navigieren, können Sie zur technischen Hauptseite von SQL Server und zum Inhaltsverzeichnis zurückkehren, indem Sie den Eintrag „Willkommen bei SQL Server >>“ auswählen, der sich oben in jedem dieser Inhaltsverzeichnisse befindet. 
+Wenn Sie zu einer dieser Seiten navigieren, können Sie zur technischen Hauptseite von SQL Server und zum Inhaltsverzeichnis zurückkehren, indem Sie den Eintrag „Willkommen bei SQL Server >“ auswählen, der sich oben in jedem dieser Inhaltsverzeichnisse befindet. 
 
 ![Navigieren zurück zum SQL-Inhaltsverzeichnis](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ Sie können den [Versionsfilter](versioning-system-monikers-ui-sql-server.md) ve
 
 ![Versionsfilter der SQL-Dokumentation](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Wenn Sie **Alle SQL-Produkte** \> **Nichts ausblenden** auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts durch den Versionsfilter verborgen wird. Die Option [**Nichts ausblenden** wird für die routinemäßige Verwendung nicht empfohlen](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
+Wenn Sie **Alle SQL-Produkte** \> **Nichts ausblenden** auswählen, wird sichergestellt, dass alle Inhalte sichtbar sind und nichts durch den Versionsfilter verborgen wird. Über die Option **Nichts ausblenden** können für verschiedene Versionen von SQL Server relevante Inhalte innerhalb desselben Artikels angezeigt werden. Dies kann widersprüchlich oder verwirrend sein. Aus diesem Grund wird die Option [**Nichts ausblenden** für die routinemäßige Verwendung nicht empfohlen](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Brotkrümelnavigation
 

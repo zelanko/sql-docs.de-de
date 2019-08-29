@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit Columnstore für operative Echtzeitanalyse | Microsoft-Dokumentation
+title: Erste Schritte mit Columnstore für die operative Echtzeitanalyse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -11,26 +11,26 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f3ce558bb9e5856e0cd5828f8facce28dc2c729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107080"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009492"
 ---
-# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für operative Echtzeitanalyse
+# <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für die operative Echtzeitanalyse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Mit SQL Server 2016 wird die operative Echtzeitanalyse eingeführt, die Möglichkeit, Analyse- und OLTP-Arbeitsauslastungen zugleich auf den gleichen Datenbanktabellen auszuführen. Abgesehen vom Ausführen von Analysen in Echtzeit kann auch das Erfordernis für ETL und ein Data Warehouse entfallen.  
+  Mit SQL Server 2016 wird die operative Echtzeitanalyse eingeführt, die Möglichkeit, Analyse- und OLTP-Arbeitsauslastungen zugleich auf den gleichen Datenbanktabellen auszuführen. Damit können Sie nicht nur Analysen in Echtzeit ausführen, sondern benötigen auch keine ETL-Aufträge und kein Data Warehouse mehr.  
   
 ## <a name="real-time-operational-analytics-explained"></a>Grundlagen der operativen Echtzeitanalyse  
- Bisher verwendeten Unternehmen separate Systeme für betriebsbedingte (d.h. OLTP) und analysebedingte Arbeitsauslastungen. Bei derartigen Systemen verschieben ETL-Aufträge (Extrahieren, Transformieren, Laden) die Daten aus dem Betriebs- in den Analysespeicher. Die Analysedaten sind normalerweise in einem Data Warehouse oder Data Mart gespeichert, die dediziert für die Ausführung von Analyseabfragen verwendet werden. Diese Lösung hat sich zwar als Standard etabliert, sie sieht sich jedoch diesen drei Herausforderungen gegenüber:  
+ Bisher verwendeten Unternehmen separate Systeme für operative (d. h. OLTP) und Analysearbeitsauslastungen. Bei derartigen Systemen verschieben ETL-Aufträge (Extrahieren, Transformieren, Laden) die Daten aus dem Betriebs- in den Analysespeicher. Die Analysedaten sind normalerweise in einem Data Warehouse oder Data Mart gespeichert, die dediziert für die Ausführung von Analyseabfragen verwendet werden. Diese Lösung hat sich zwar als Standard etabliert, sie sieht sich jedoch diesen drei Herausforderungen gegenüber:  
   
 -   **Komplexität.** Für das Implementieren von ETL kann Codeerstellung in erheblichem Umfang erforderlich werden, insbesondere, um nur geänderte Zeilen zu laden. Es kann schwierig sein, die geänderten Zeilen zu bestimmen.  
   
 -   **Kosten.** Die Implementierung von ETL verursacht Kosten durch den Erwerb von Hardware und zusätzlicher Softwarelizenzen.  
   
--   **Datenlatenz.** Die Implementierung von ETL bringt eine zeitliche Verzögerung mit sich, die durch die Ausführung der Analyse bedingt ist. Wenn der ETL-Auftrag beispielsweise am Ende jedes Geschäftstags ausgeführt wird, werden die Analyseabfragen auf Daten ausgeführt, die mindestens einen Tag alt sind. Für viele Unternehmen ist diese Verzögerung nicht akzeptabel, da das Unternehmen von der Analyse der Daten in Echtzeit abhängig ist. Beispielsweise ist für die Erkennung von Betrugsversuchen eine Echtzeitanalyse der Betriebsdaten erforderlich.  
+-   **Datenlatenz.** Die Implementierung von ETL bringt eine zeitliche Verzögerung mit sich, die durch die Ausführung der Analyse bedingt ist. Wenn der ETL-Auftrag beispielsweise am Ende jedes Geschäftstags ausgeführt wird, werden die Analyseabfragen auf Daten ausgeführt, die mindestens einen Tag alt sind. Für viele Unternehmen ist diese Verzögerung nicht akzeptabel, da das Unternehmen von einer Analyse der Daten in Echtzeit abhängig ist. Beispielsweise ist für die Erkennung von Betrugsversuchen eine Echtzeitanalyse der Betriebsdaten erforderlich.  
   
  ![Übersicht über operative Echtzeitanalysen](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "real-time operational analytics overview")  
   
@@ -107,12 +107,10 @@ ms.locfileid: "68107080"
   
 -   [Operative Echtzeitanalyse mit speicheroptimierten Tabellen (Real time operational analytics with memory-optimized tables)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
--   [Minimieren der Indexfragmentierung in einem Columnstore-Index (Minimize index fragmentation in a columnstore index)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
-  
 -   [Columnstore-Index und die Zusammenführungsrichtlinie für Zeilengruppen (Columnstore index and the merge policy for rowgroups)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>Leistungstipp Nr. 1: Verwenden von gefilterten Indizes zum Verbessern der Abfrageleistung  
- Das Ausführen der operativen Echtzeitanalyse kann die Leistung der OLTP-Arbeitsauslastung beeinträchtigen.  Dieser Einfluss sollte so klein wie möglich sein. Dieses Beispiel zeigt, wie gefilterte Indizes verwendet werden können, um den Einfluss eines nicht gruppierten Columnstore-Index auf die transaktionale Arbeitsauslastung zu minimieren, während zugleich Echtzeitanalyse bereitgestellt wird.  
+ Das Ausführen der operativen Echtzeitanalyse kann die Leistung der OLTP-Arbeitsauslastung beeinträchtigen.  Dieser Einfluss sollte so klein wie möglich sein. Dieses Beispiel zeigt, wie gefilterte Indizes verwendet werden können, um den Einfluss eines nicht gruppierten Columnstore-Indexes auf die transaktionale Arbeitsauslastung zu minimieren, während zugleich eine Echtzeitanalyse bereitgestellt wird.  
   
  Um den Mehraufwand für die Wartung eines nicht gruppierten Columnstore-Index für eine Betriebsarbeitsauslastung zu minimieren, können Sie eine gefilterte Bedingung verwenden, um einen nicht gruppierten Columnstore-Index nur für die *warmen* oder sich langsam ändernden Daten zu erstellen. Beispielsweise können Sie in einer Anwendung zur Bestellungsverwaltung einen nicht gruppierten Columnstore-Index für die bereits versendeten Bestellungen erstellen. Nach dem Versand ändert sich eine Bestellung in der Regel nicht mehr, daher können diese Daten als „warm“ angesehen werden. Bei einem gefilterten Index erfordern die Daten im nicht gruppierten Columnstore-Index weniger Aktualisierungen, wodurch sich der Einfluss auf die Transaktionsarbeitsauslastung verringert.  
   
@@ -175,7 +173,7 @@ Group By customername
  Zwar kann der Wartungsaufwand für den Columnstore-Index durch Verwendung eines gefilterten Columnstore-Index minimiert werden, die Analyseabfragen können jedoch trotzdem erhebliche Computerressoucen (CPU, E/A, Arbeitsspeicher) in Anspruch nehmen, was sich negativ auf die für die Betriebsarbeitsauslastung verfügbare Leistung auswirkt. Für die meisten unternehmenswichtigen Arbeitsauslastungen ergibt sich als unsere Empfehlung die Always On-Konfiguration. In dieser Konfiguration kann der Einfluss der Ausführung der Analyse beseitigt werden, indem sie in eine schreibgeschützte sekundäre Datenbank ausgelagert wird.  
   
 ## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>Leistungstipp Nr. 3: Reduzierung der Indexfragmentierung durch Speicherung der „heißen“ Daten in Deltazeilengruppen  
- Tabellen mit Columnstore-Index können stark fragmentiert werden (in Form von gelöschten Zeilen) , wenn durch die Arbeitsauslastung Zeilen aktualisiert/gelöscht werden, die komprimiert wurden. Ein fragmentierter Columnstore-Index führt zu einer ineffizienten Auslastung von Arbeitsspeicher/Speicherplatz. Neben dem ineffizienten Ressourceneinsatz wirkt er sich auch negativ auf die Analyseabfrageleistung aus, da zusätzliche E/A-Vorgänge anfallen und es erforderlich ist, die gelöschten Zeilen aus dem Resultset zu filtern.  
+ Tabellen mit Columnstore-Index können stark fragmentiert werden (in Form von gelöschten Zeilen), wenn durch die Arbeitsauslastung Zeilen aktualisiert/gelöscht werden, die komprimiert wurden. Ein fragmentierter Columnstore-Index führt zu einer ineffizienten Auslastung von Arbeitsspeicher/Speicherplatz. Neben dem ineffizienten Ressourceneinsatz wirkt er sich auch negativ auf die Analyseabfrageleistung aus, da zusätzliche E/A-Vorgänge anfallen und es erforderlich ist, die gelöschten Zeilen aus dem Resultset zu filtern.  
   
  Die gelöschten Zeilen werden physisch erst beim Ausführen der Indexdefragmentierung mit dem Befehl NEU ORGANISIEREN oder durch Neuerstellung des Columnstore-Index für die gesamte Tabelle oder die betroffene(n) Partition(en) entfernt. Sowohl NEU ORGANISIEREN als auch NEU ERSTELLEN sind aufwändige Vorgänge, die Ressourcen beanspruchen, die andernfalls für die Arbeitsauslastung zur Verfügung stünden. Ferner kann ein zu frühes Komprimieren von Zeilen dazu führen, dass sie aufgrund von Aktualisierungen mehrfach erneut komprimiert werden müssen, was einen unnützen Mehraufwand für die Komprimierung verursacht.  
 Die Indexfragmentierung kann mithilfe der Option COMPRESSION_DELAY minimiert werden.  
@@ -202,9 +200,9 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
  Hier finden Sie die empfohlenen bewährten Methoden  
   
 -   **Einfüge-/Abfragearbeitsauslastung:** Wenn Ihre Arbeitsauslastung in erster Linie Daten einfügt und sie abfragt, stellt der Standardwert 0 für COMPRESSION_DELAY die empfohlene Option dar. Die neu eingefügten Zeilen werden komprimiert, sobald eine Million Zeilen in eine einzelne Deltazeilengruppe eingefügt wurden.  
-    Beispiele für eine solche Arbeitsauslastung sind (a) traditionelle DW-Arbeitsauslastung (b) Klickdatenstrom-Analyse, bei der das Klickmuster in einer Webanwendung analysiert werden soll.  
+    Beispiele für eine solche Arbeitsauslastung sind (a) eine traditionelle DW-Arbeitsauslastung und (b) eine Klickdatenstrom-Analyse, bei der das Klickmuster in einer Webanwendung analysiert werden soll.  
   
--   **OLTP-Workload:** Wenn die Workload stark DML-lastig ist (also eine Mischung aus UPDATE, DELETE und INSERT), lässt sich die Fragmentierung des Columnstore-Index durch Untersuchen von DMV „sys. dm_db_column_store_row_group_physical_stats“ bestimmen. Wenn Sie dabei sehen, dass mehr als 10 % der Zeilen in kürzlich komprimierten Zeilengruppen als gelöscht markiert wurden, können Sie die Option COMPRESSION_DELAY verwenden, um eine Zeitverzögerung bis zur Qualifikation der Zeilen zur Komprimierung hinzuzufügen. Wenn bei Ihrer Arbeitsauslastung neu eingefügte Datensätze normalerweise für etwa 60 Minuten „heiß“ bleiben (d. h. in dieser Zeit mehrfach aktualisiert werden), sollten Sie COMPRESSION_DELAY auf 60 festlegen.  
+-   **OLTP-Workload:** Wenn die Arbeitsauslastung sehr DML-intensiv ist (also eine komplexe Mischung aus UPDATE-, DELETE- und INSERT-Vorgängen), lässt sich die Fragmentierung des Columnstore-Index durch Untersuchen von DMV „sys. dm_db_column_store_row_group_physical_stats“ bestimmen. Wenn Sie dabei sehen, dass mehr als 10 % der Zeilen in kürzlich komprimierten Zeilengruppen als gelöscht markiert wurden, können Sie die Option COMPRESSION_DELAY verwenden, um eine Zeitverzögerung bis zur Qualifikation der Zeilen zur Komprimierung hinzuzufügen. Wenn bei Ihrer Arbeitsauslastung neu eingefügte Datensätze normalerweise für etwa 60 Minuten „heiß“ bleiben (d. h. in dieser Zeit mehrfach aktualisiert werden), sollten Sie COMPRESSION_DELAY auf 60 festlegen.  
   
  Wir gehen davon aus, dass die meisten Kunden keine Anpassungen vornehmen müssen. Der Standardwert der Option COMPRESSION_DELAY sollte für ihren Fall funktionieren.  
 Fortgeschrittenen Benutzern empfehlen wir, die Abfrage unten auszuführen und den Prozentsatz der gelöschten Zeilen im Lauf der letzten 7 Tage zu bestimmen.  
@@ -226,6 +224,5 @@ ORDER BY created_time DESC
  [Laden von Daten für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Columnstore-Indizes für Data Warehousing](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

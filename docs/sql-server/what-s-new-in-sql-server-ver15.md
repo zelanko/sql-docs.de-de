@@ -1,6 +1,6 @@
 ---
 title: Neuigkeiten zu SQL Server 2019 | Microsoft-Dokumentation
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028909"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903639"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -27,55 +27,28 @@ Weitere Informationen und bekannte Probleme finden Sie unter [Release Notes zu [
 
 **Nutzen Sie die [neuesten Tools](what-s-new-in-sql-server-ver15-prerelease.md#tools) für die optimale Verwendung von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ctp-32-july-2019"></a>CTP 3.2 Juli 2019
+>[!NOTE]
+>Der Inhalt wird für den [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate veröffentlicht. Der Release Candidate ist eine Vorabversion der Software. Änderungen an den bereitgestellten Informationen vorbehalten. Informationen zu Supportszenarien finden Sie unter [Support](#support).
+>
+>Diese Version umfasst Verbesserungen, die zuvor in Community Technology Preview-Releases (CTP) angekündigt wurden. Zu diesen Verbesserungen gehören neu hinzugefügte Features, behobene Fehler, eine verbesserte Sicherheit und eine optimierte Leistung. Eine Liste der Features, die in den CTP-Releases vor [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate eingeführt oder verbessert wurden, finden Sie im [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP-Ankündigungsarchiv](what-s-new-in-sql-server-ver15-prerelease.md).
 
-CTP 3.2 (Community Technology Preview) ist das neueste öffentliche Release von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Dieses Release beinhaltet Verbesserungen im Vergleich zu vorherigen CTP-Releases zum Beheben von Fehlern, zur Verbesserung der Sicherheit und zur Optimierung der Leistung. Eine Liste der Features, die in den einzelnen CTP-Releases vor [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2 eingeführt oder verbessert wurden, finden Sie im [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP-Ankündigungsarchiv](what-s-new-in-sql-server-ver15-prerelease.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] führt [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] für [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] ein. Außerdem werden zusätzliche Funktionen und Verbesserungen für die SQL Server-Datenbank-Engine, SQL Server Analysis Services, SQL Server Machine Learning Services, SQL Server für Linux und SQL Server Master Data Services bereitgestellt.
 
-### <a name="new-in-big-data-clusters"></a>Neu in Big Data-Clustern
+Die folgenden Abschnitte bieten eine Übersicht über diese Features.
 
-|Neue Funktion oder Update | Details |
-|:---|:---|
-|Public Preview |Vor CTP 3.2 war SQL Server-Big-Data-Cluster für registrierte Early Adopter verfügbar. Dieses Release ermöglicht allen Benutzern, die Funktionen von SQL Server-Big-Data-Clustern zu nutzen. <br/><br/> Weitere Informationen finden Sie unter [Einstieg in SQL Server-Big-Data-Cluster](../big-data-cluster/deploy-get-started.md).|
-|`azdata` |CTP 3.2 führt `azdata` ein – ein in Python geschriebenes Befehlszeilenprogramm, das Clusteradministratoren ermöglicht, den Big-Data-Cluster über REST-APIs zu starten und zu verwalten. `azdata` ersetzt `mssqlctl`. Siehe [Installieren von `azdata`](../big-data-cluster/deploy-install-azdata.md). |
-|PolyBase |Externe Tabellenspaltennamen werden jetzt zum Abfragen von SQL Server-, Oracle-, Teradata-, MongoDB- und ODBC-Datenquellen verwendet. In früheren CTP-Releases wurden die Spalten nur basierend auf der Ordnungszahl im Ziel gebunden und Spaltennamen in der Definition der externen Tabelle wurden nicht verwendet.|
-|HDFS-Tieringaktualisierung |Einführung der Aktualisierungsfunktionalität für HDFS-Tiering, sodass eine vorhandene Einbindung für die neueste Momentaufnahme der Remotedaten aktualisiert werden kann. Weitere Informationen finden Sie unter [HDFS-Tiering](../big-data-cluster/hdfs-tiering.md). |
-|Notebook-basierte Problembehandlung |CTP 3.2 stellt Jupyter-Notebooks vor, die die [Bereitstellung](../big-data-cluster/deploy-notebooks.md) und [Ermittlung, Diagnose und Problembehandlung](../big-data-cluster/manage-notebooks.md) für Komponenten in einem SQL Server-Big Data-Cluster unterstützen. |
-| &nbsp; | &nbsp; |
-
-### <a name="new-in-analysis-services"></a>Neu in Analysis Services
-
-| Neue Funktion oder Update | Details |
-|:---|:---| 
-| Governanceeinstellung für Power BI-Cacheaktualisierungen.  | Der Power BI-Dienst speichert Dashboardkacheldaten und Berichtsdaten für das anfängliche Laden des Live Connect-Berichts zwischen, was dazu führt, dass eine übermäßige Anzahl von Cacheanfragen an SSAS übermittelt wird und in extremen Fällen den Server überlastet. In diesem Release wird die **ClientCacheRefreshPolicy**-Eigenschaft eingeführt. Diese Eigenschaft ermöglicht Ihnen, dieses Verhalten auf Serverebene zu überschreiben. Weitere Informationen finden Sie unter [Allgemeine Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
-| Online anfügen  | Diese Funktion bietet die Möglichkeit, ein tabellarisches Modell als Onlinevorgang anzufügen. Onlineanfügen kann für die Synchronisierung schreibgeschützter Replikate in horizontal skalierten Umgebungen für lokale Abfragen verwendet werden. Weitere Informationen finden Sie unter [Online anfügen](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
-| &nbsp; | &nbsp; |
-
-### <a name="new-in-language-extensions"></a>Neu in Spracherweiterungen
-
-|Neue Funktion oder Update | Details |
-|:---|:---|
-| Neue standardmäßige Java Runtime  | SQL Server umfasst jetzt Zulu Embedded von Azul System für Java-Unterstützung im gesamten Produkt. Weitere Informationen finden Sie unter [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/) (Kostenlose Java-Unterstützung in SQL Server 2019 jetzt verfügbar). |
-
-### <a name="new-in-sql-server-on-linux"></a>Neu in SQL Server unter Linux
-
-|Neue Funktion oder Update | Details |
-|:---|:---|
-| Unterstützung von Change Data Capture (CDC) | Change Data Capture (CDC) wird jetzt unter Linux für SQL Server 2019 unterstützt. |
-
-## <a name="includesql-server-2019includessssqlv15-mdmd-features-by-component"></a>Features von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] nach Komponente
-
-In den folgenden Abschnitten werden neue Komponenten und Features hervorgehoben, die in früheren Releases von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] verbessert wurden.
-
-## <a name="big-data-clusters"></a>Big Data-Cluster
+## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
 | Neue Funktion oder Update | Details |
 |:---|:---|
-| Skalierbare Big Data-Lösung | [Bereitstellen skalierbarer Cluster](../big-data-cluster/deploy-get-started.md) von SQL Server-, Spark- und HDFS-Containern, die auf Kubernetes ausgeführt werden <br/><br/> Lesen, Schreiben und Verarbeiten von Big Data von Transact-SQL oder Spark<br/><br/> Einfaches Kombinieren und Analysieren hochwertiger relationaler Daten mit hochvolumigem Big Data<br/><br/>Abfragen externer Datenquellen<br/><br/>Speichern von Big Data in von SQL Server verwaltetem HDFS<br/><br/>Abfragen von Daten aus mehreren externen Datenquellen über den Cluster<br/><br/> Verwenden der Daten für KI, Machine Learning und andere Analyseaufgaben<br/><br/> Bereitstellen und Ausführen von Anwendungen in Big Data-Clustern <br/>|
+| Skalierbare Big Data-Lösung | [Bereitstellen skalierbarer Cluster](../big-data-cluster/deploy-get-started.md) von SQL Server-, Spark- und HDFS-Containern, die auf Kubernetes ausgeführt werden <br/><br/> Lesen, Schreiben und Verarbeiten von Big Data von Transact-SQL oder Spark<br/><br/> Einfaches Kombinieren und Analysieren hochwertiger relationaler Daten mit hochvolumigem Big Data<br/><br/>Abfragen externer Datenquellen<br/><br/>Speichern von Big Data in von SQL Server verwaltetem HDFS<br/><br/>Abfragen von Daten aus mehreren externen Datenquellen über den Cluster<br/><br/> Verwenden der Daten für KI, Machine Learning und andere Analyseaufgaben<br/><br/> Bereitstellen und Ausführen von Anwendungen in [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/>|
 | &nbsp; | &nbsp; |
 
-Weitere Informationen finden Sie unter [Was sind SQL Server-Big Data-Cluster?](../big-data-cluster/big-data-cluster-overview.md).
+Weitere Informationen finden Sie unter [Was sind SQL Server-[!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)]?](../big-data-cluster/big-data-cluster-overview.md).
 
 Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv (CTP)](what-s-new-in-sql-server-ver15-prerelease.md) enthält eine Liste der Features, die für alle früheren CTP-Releases dieses Features angekündigt und geändert wurden.
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>Datenbank-Engine
 
@@ -85,9 +58,8 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |:---|:---|
 |Indizieren verschlüsselter Spalten|Erstellen Sie Indizes für Spalten, die mit einer zufälligen Verschlüsselung und Enclave-fähigen Schlüsseln verschlüsselt wurden, um die Leistung umfangreicher Abfragen (mit `LIKE` und Vergleichsoperatoren) zu verbessern. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Anhalten und Fortsetzen der anfänglichen Überprüfung für Transparent Data Encryption (TDE)|Siehe [TDE-Überprüfung (Transparent Data Encryption): Anhalten und Fortsetzen](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
-|Zertifikatverwaltung im SQL Server-Konfigurations-Manager|Siehe [Zertifikatverwaltung (SQL Server-Konfigurations-Manager)](../database-engine/configure-windows/manage-certificates.md).
+|Zertifikatverwaltung im SQL Server-Konfigurations-Manager|Siehe [Zertifikatverwaltung (SQL Server-Konfigurations-Manager)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |
-
 
 ### <a name="graph"></a>Diagramm
 
@@ -96,15 +68,16 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |Kaskadierende Löschaktionen für Edgeeinschränkung |Definieren von kaskadierenden Löschaktionen für eine Edgeeinschränkung in einer Graphdatenbank Siehe [Edgeeinschränkungen](../relational-databases/tables/graph-edge-constraints.md). |
 |Neue Graphfunktion: `SHORTEST_PATH` | Verwenden Sie `SHORTEST_PATH` in `MATCH`, um den kürzesten Pfad zwischen zwei Knoten in einem Graph zu ermitteln oder beliebige Längentraversierungen durchzuführen.|
 |Partitionierte Tabellen und Indizes| Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Graphdatenbank verteilt sein können. |
-|Verwenden von abgeleiteten Tabellen- oder Ansichtsaliasen in Graphabgleichsabfragen |Siehe [Graph-Edgeeinschränkungen](../relational-databases/tables/graph-edge-constraints.md). |
+|Verwenden von abgeleiteten Tabellen- oder Ansichtsaliasen in Graphabgleichsabfragen |Siehe [MATCH-Graphabfrage](../t-sql/queries/match-sql-graph.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="indexes"></a>Indizes
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Diese Option aktiviert eine Optimierung in der Datenbank-Engine, die den Durchsatz für Einfügevorgänge mit hoher Parallelität in den Index verbessert. Diese Option ist für Indizes vorgesehen, die anfällig für Konflikte durch Einfügevorgänge auf der letzten Seite sind. Dieser Fall tritt häufig bei Indizes mit fortlaufendem Schlüssel auf. Dazu zählen beispielsweise Identitätsspalten, Sequenzspalten oder Spalten für Datum und Uhrzeit. Weitere Informationen finden Sie unter [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
-|Erstellen und Neuerstellen eines gruppierten Columnstore-Onlineindex | Siehe [Ausführen von Onlineindexvorgängen](../relational-databases/indexes/perform-index-operations-online.md). |
+|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|Diese Option aktiviert eine Optimierung in der [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], die den Durchsatz für Einfügevorgänge mit hoher Parallelität in den Index verbessert. Diese Option ist für Indizes vorgesehen, die anfällig für Konflikte durch Einfügevorgänge auf der letzten Seite sind. Dieser Fall tritt häufig bei Indizes mit fortlaufendem Schlüssel auf. Dazu zählen beispielsweise Identitätsspalten, Sequenzspalten oder Spalten für Datum und Uhrzeit. Weitere Informationen finden Sie unter [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
+|Erstellen und Neuerstellen eines gruppierten Columnstore-Onlineindexes | Siehe [Ausführen von Onlineindexvorgängen](../relational-databases/indexes/perform-index-operations-online.md). |
+|Erstellen eines fortsetzbaren Rowstore-Onlineindexes | Siehe [Ausführen von Onlineindexvorgängen](../relational-databases/indexes/perform-index-operations-online.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="in-memory-databases"></a>In-Memory-Datenbanken
@@ -112,71 +85,60 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |Neue Funktion oder Update | Details |
 |:---|:---|
 |DDL-Steuerelement für den hybriden Pufferpool |Mit dem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) kann bei Bedarf direkt auf Datenbankseiten in Datenbankdateien zugegriffen werden, die sich auf einem Gerät mit beständigem Arbeitsspeicher (PMEM) befinden.|
-|Speicheroptimierte tempdb-Metadaten|Informationen finden Sie unter [Speicheroptimierte TempDB-Metadaten](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
-### <a name="linked-servers"></a>Verbindungsserver
+### <a name="unicode-support"></a>Unicode-Unterstützung
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Verbindungsserver unterstützen UTF-8-Zeichencodierung. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Unterstützung der UTF-8-Zeichencodierung |Unterstützung von UTF-8-Zeichen für die Import- und Exportcodierung sowie für die Sortierung von Zeichenfolgendaten auf Datenbank- oder Spaltenebene. Damit können Anwendungen auf globale Ebene ausgeweitet werden, für die globale mehrsprachige Datenbankanwendungen und -dienste bereitgestellt werden müssen, um die Kundenanforderungen und spezifischen Marktbedingungen zu erfüllen. Siehe [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate bietet UTF-8-Unterstützung für externe PolyBase-Tabellen und „Always Encrypted“.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|PolyBase |Externe Tabellenspaltennamen werden jetzt zum Abfragen von SQL Server-, Oracle-, Teradata-, MongoDB- und ODBC-Datenquellen verwendet. |
-| &nbsp; | &nbsp; |
-
-### <a name="collation"></a>Sortierung
-
-|Neue Funktion oder Update | Details |
-|:---|:---|
-|Unterstützung von UTF-8-Zeichencodierung |Aktiviert für eine BIN2-Sortierung (`Latin1_General_100_BIN2_UTF8`). Siehe [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md). |
-|Auswahl der UTF-8-Sortierung als Standard beim Setup | Siehe [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md#ctp23). |
+|Abfrage externer Tabellen |Externe Tabellenspaltennamen werden jetzt zum Abfragen von SQL Server-, Oracle-, Teradata-, MongoDB- und ODBC-Datenquellen verwendet. Siehe [Was ist PolyBase?](../relational-databases/polybase/polybase-guide.md).|
+|Unterstützung der UTF-8-Zeichencodierung|Unterstützung von UTF-8-Zeichen bei externen Tabellen. Siehe [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="server-settings"></a>Servereinstellungen
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Festlegen der Serverarbeitsspeicherwerte `MIN` und `MAX` beim Setup |Während des Setups können Sie die Serverarbeitsspeicherwerte festlegen. Verwenden Sie die Standardwerte, die berechneten empfohlenen Werte, oder geben Sie manuell eigene Werte an, wenn Sie die **empfohlene** Option [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) ausgewählt haben.|
-|SQL Server Setup aktiviert MAXDOP-Einstellungen. |Neue Empfehlungen folgen den dokumentierten Richtlinien. [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
-|Hybrider Pufferpool| Neues Feature der SQL Server-Datenbank-Engine, mit dem Sie bei Bedarf direkt auf Datenbankseiten in Datenbankdateien zugreifen können, die sich auf einem Gerät mit beständigem Arbeitsspeicher (PMEM) befinden. Siehe [Hybrider Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Hybrider Pufferpool| Neues Feature von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], mit dem bei Bedarf direkt auf Datenbankseiten in Datenbankdateien zugegriffen werden, die sich auf einem Gerät mit beständigem Arbeitsspeicher (PMEM) befinden. Siehe [Hybrider Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-monitoring"></a>Leistungsüberwachung
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Inlining benutzerdefinierter Skalarfunktionen |Wandelt die entsprechenden benutzerdefinierten Skalarfunktionen (UDF) automatisch in relationale Ausdrücke um und bettet sie in die aufrufende SQL-Abfrage ein. Siehe [Inlining benutzerdefinierter Skalarfunktionen](../relational-databases/user-defined-functions/scalar-udf-inlining.md). |
-| `sys.dm_exec_requests`-Spalten-`command` | Zeigt `SELECT (STATMAN)` an, wenn ein `SELECT`-Objekt darauf wartet, dass ein synchroner Statistikupdatevorgang abgeschlossen wird, bevor die Abfrage weiter ausgeführt wird. Siehe [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
 |`WAIT_ON_SYNC_STATISTICS_REFRESH` | Neuer Wartetyp in der dynamischen `sys.dm_os_wait_stats`-Verwaltungssicht. Er zeigt die kumulierte Zeit auf Instanzebene für synchrone Statistikaktualisierungen an. Siehe [`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|
 |Angepasste Erfassungsrichtlinie für den Abfragespeicher|Bei Aktivierung stehen zusätzliche Abfragespeicherkonfigurationen unter einer neuen Einstellung für die Erfassungsrichtlinie des Abfragespeichers zur Verfügung, um die Datensammlung auf einem bestimmten Server zu optimieren. Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|`LIGHTWEIGHT_QUERY_PROFILING`|Neue datenbankweite Konfiguration. Siehe [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
+|`sys.dm_exec_requests`-Spalten-`command` | Zeigt `SELECT (STATMAN)` an, wenn ein `SELECT`-Objekt darauf wartet, dass ein synchroner Statistikupdatevorgang abgeschlossen wird, bevor die Abfrage weiter ausgeführt wird. Siehe [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|
 |`sys.dm_exec_query_plan_stats` |Die neue dynamische Verwaltungsfunktion gibt das Äquivalent des letzten bekannten tatsächlichen Ausführungsplans für die meisten Abfragen zurück. Siehe [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | Neue datenbankweite Konfiguration zur Aktivierung von `sys.dm_exec_query_plan_stats`. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
-|`LIGHTWEIGHT_QUERY_PROFILING`|Neue datenbankweite Konfiguration. Siehe [`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp). |
 |`query_post_execution_plan_profile` | Im Gegensatz zum Ereignis `query_post_execution_showplan`, das die Standardprofilerstellung nutzt, erfasst das neue erweiterte Ereignis das Äquivalent eines tatsächlichen Ausführungsplans mithilfe einfacher Profilerstellung. Siehe [Profilerstellungsinfrastruktur für Abfragen](../relational-databases/performance/query-profiling-infrastructure.md).|
-|Feedback zur Speicherzuweisung im Zeilenmodus |[Feedback zur Speicherzuweisung im Zeilenmodus](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback) |
-|Verzögerte Kompilierung von Tabellenvariablen|[Verzögerte Kompilierung von Tabellenvariablen](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation) |
-|Geschätzte `COUNT DISTINCT`-Werte|[Geschätzte Abfrageverarbeitung](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)|
-|Batchmodus bei Rowstore|[Batchmodus bei Rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore) |
+| &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Spracherweiterungen
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Neues Java-Sprach-SDK | Vereinfacht die Entwicklung von Java-Programmen, die von SQL Server ausgeführt werden können. Weitere Informationen finden Sie unter [What's new in SQL Server Machine Learning Services (Neuerungen in SQL Server-Machine Learning Services)](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md). |
-|SQL Server-Spracherweiterungen – [Java-Spracherweiterung](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|Das [Microsoft-SDK für Java-Erweiterung für Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) ist jetzt Open Source und [auf GitHub verfügbar](https://github.com/microsoft/sql-server-language-extensions).|
-|Registrieren externer Sprachen|In einer neuen DDL, `CREATE EXTERNAL LANGUAGE`, werden externe Sprachen (z.B. Java) in SQL Server registriert. Informationen finden Sie unter [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|Neues Java-Sprach-SDK | Vereinfacht die Entwicklung von Java-Programmen, die von SQL Server ausgeführt werden können. Siehe [Microsoft-SDK für Java-Erweiterung für SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md). |
+|Java-Sprach-SDK ist Open Source |Das [Microsoft-SDK für Java-Erweiterung für Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) ist jetzt Open Source und [auf GitHub verfügbar](https://github.com/microsoft/sql-server-language-extensions).|
 |Unterstützung für Java-Datentypen|Informationen finden Sie unter [Java-Datentypen](../language-extensions/how-to/java-to-sql-data-types.md).|
+|Neue standardmäßige Java Runtime | SQL Server umfasst jetzt Zulu Embedded von Azul System für Java-Unterstützung im gesamten Produkt. Weitere Informationen finden Sie unter [Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/) (Kostenlose Java-Unterstützung in SQL Server 2019 jetzt verfügbar). |
+|SQL Server-Spracherweiterungen| Ausführung von externem Code mit dem Erweiterungsframework. Siehe [SQL Server-Spracherweiterungen](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+|Registrieren externer Sprachen|In einer neuen DDL, `CREATE EXTERNAL LANGUAGE`, werden externe Sprachen (z.B. Java) in SQL Server registriert. Informationen finden Sie unter [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+| &nbsp; | &nbsp; |
 
 ### <a name="spatial"></a>Räumlich
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-| Neue SRIDs (Spatial Reference Identifiers) |Das [australische GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) stellt robustere und genauere Datumsangaben bereit, die stärker an GPS-Systemen ausgerichtet sind. Die neuen SRIDs sind:<br/><br/> 7843: geografisches 2D-CRS<br/> 7844: geografisches 3D-CRS <br/><br/>Die Ansicht von [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) enthält die Definitionen der neuen SRIDs. |
+| Neue SRIDs (Spatial Reference Identifiers) |Das [australische GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) stellt robustere und genauere Datumsangaben bereit, die stärker an GPS-Systemen ausgerichtet sind. Die neuen SRIDs lauten:<br/><br/> 7843: geografische 2D-Darstellung<br/> 7844: geografische 3D-Darstellung <br/><br/>Die Ansicht von [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) enthält die Definitionen der neuen SRIDs. |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance"></a>Leistung
@@ -187,6 +149,13 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |Erzwingen von schnellen Vorwärts- und statischen Cursorn | Durch den Abfragespeicherplan erzwungene Unterstützung für schnelle Vorwärts- und statische Cursor Siehe [Erzwingen eines Plans für schnelle Vorwärts- und statische Cursor](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
 |Weniger Neukompilierungen für Workloads| Verbessert die Verwendung temporärer Tabellen über mehrere Bereiche hinweg. Siehe [Weniger Neukompilierungen für Workloads](../relational-databases/tables/tables.md#ctp23). |
 |Skalierbarkeit indirekter Prüfpunkte |Siehe [Verbesserte Skalierbarkeit indirekter Prüfpunkte](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
+|Speicheroptimierte `tempdb`-Metadaten| Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../relational-databases/in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte `tempdb`-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für `tempdb`-intensive Arbeitsauslastungen ergibt. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Siehe [Speicheroptimierte `tempdb`-Metadaten](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Parallele PFS-Aktualisierungen|[PFS-Seiten](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) sind spezielle Seiten innerhalb einer Datenbankdatei, die SQL Server verwendet, um beim Zuweisen von Speicherplatz für ein Objekt freien Speicherplatz zu ermitteln. Latchkonflikte für PFS-Seiten stehen häufig in Zusammenhang mit [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), können aber auch für Benutzerdatenbanken auftreten, wenn viele parallele Threads zur Objektzuweisung vorliegen. Diese Verbesserung ändert die Verwaltung paralleler Vorgänge bei PFS-Aktualisierungen, sodass die Aktualisierung nicht mit einem exklusiven Latch, sondern über einen gemeinsamen Latch erfolgen kann. Dieses Verhalten ist ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] in allen Datenbanken (`tempdb` eingeschlossen) standardmäßig aktiviert.|
+|Feedback zur Speicherzuweisung im Zeilenmodus |Erweitert die Feedbackfunktion zur Speicherzuweisung im Batchmodus, indem die Größe der Speicherzuweisung sowohl für Batch- als auch für Zeilenmodusoperatoren angepasst wird. Hierdurch können übermäßige Speicherzuweisungen korrigiert werden, die zu einer Speichervergeudung führen und die Parallelität beeinträchtigen, und es werden unzureichende Speicherzuweisungen korrigiert, die zu teuren Überläufen auf den Datenträger führen. Siehe [Feedback zur Speicherzuweisung im Zeilenmodus](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
+|Verzögerte Kompilierung von Tabellenvariablen|Verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung propagiert diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren. Diese genauen Zeilenzahlinformationen werden für die Optimierung der nachgelagerten Planvorgänge verwendet. Siehe [Verzögerte Kompilierung von Tabellenvariablen](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
+|`APPROX_COUNT_DISTINCT `|Für Szenarien, in denen keine absolute Genauigkeit notwendig, die Reaktionsfähigkeit aber entscheidend ist, führt `APPROX_COUNT_DISTINCT` Aggregationen über große Datasets hinweg mit weniger Ressourcen durch als `COUNT(DISTINCT())`, um die Parallelität zu verbessern. Siehe [Geschätzte Abfrageverarbeitung](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing).|
+|Batchmodus bei Rowstore|Ermöglicht die Ausführung im Batchmodus, ohne dass Columnstore-Indizes erforderlich sind. Die Ausführung im Batchmodus führt zu einer effizienteren CPU-Nutzung für Analysearbeitsauslastungen, aber bis [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wurde sie nur verwendet, wenn eine Abfrage Vorgänge mit Columnstore-Indizes enthielt. Einige Anwendungen verwenden jedoch möglicherweise Features, die keine Columnstore-Indizes unterstützen und den Batchmodus deshalb nicht nutzen können. Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird der Batchmodus für berechtigte Analysearbeitsauslastungen aktiviert, deren Abfragen Vorgänge mit beliebigen Indextypen (Rowstore oder Columnstore) umfassen. Siehe [Batchmodus bei Rowstore](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore). |
+|Inlining benutzerdefinierter Skalarfunktionen|Wandelt benutzerdefinierte Skalarfunktionen (UDF) automatisch in relationale Ausdrücke um und bettet sie in die aufrufende SQL-Abfrage ein. Diese Transformation verbessert die Leistung von Workloads, die skalare UDFs nutzen. Siehe [Inlining benutzerdefinierter Skalarfunktionen](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
 | &nbsp; | &nbsp; |
 
 ### <a name="availability-groups"></a>Verfügbarkeitsgruppen
@@ -195,6 +164,14 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |:---|:---|
 |Bis zu fünf synchrone Replikate|In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird die maximale Anzahl der synchronen Replikate von ehemals 3 in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] auf 5 erhöht. Sie können diese Gruppe aus fünf Replikaten für das automatische Failover in der Gruppe konfigurieren. Es gibt ein primäres Replikat sowie vier synchrone sekundäre Replikate.|
 |Umleiten der Verbindung vom sekundären zum primären Replikat| Durch dieses Feature können Clientanwendungsverbindungen zum primären Replikat weitergeleitet werden, unabhängig davon, ob der Zielserver in der Verbindungszeichenfolge angegeben ist. Weitere Informationen finden Sie unter [Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).|
+| &nbsp; | &nbsp; |
+
+### <a name="setup"></a>Einrichten 
+
+|Neue Funktion oder Update | Details | 
+|:---|:---| 
+|Neue Optionen für die Arbeitsspeichereinrichtung | Legt die Serverkonfigurationseinstellungen *Min. Serverarbeitsspeicher (MB)* und *Max. Serverarbeitsspeicher (MB)* während der Installation fest. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory) und in [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) in den Abschnitten zu den Parametern `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` und `SQLMAXMEMORY`. Der vorgeschlagene Wert entspricht den Richtlinien für die Arbeitsspeicherkonfiguration in [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Neue Optionen für die Nebenläufigkeitseinrichtung | Legt die Serverkonfigurationsoption *Max. Grad an Parallelität* während der Installation fest. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) und im Abschnitt zum `SQLMAXDOP`-Parameter in [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Der Standardwert entspricht den Richtlinien für die maximale Nebenläufigkeit in [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 | &nbsp; | &nbsp; |
 
 ### <a name="error-messages"></a>Fehlermeldungen
@@ -209,13 +186,21 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 | Neue Funktion oder Update | Details |
 |:-----|:-----|
 |Neue Containerregistrierung|[Get started with SQL Server containers on Docker (Erste Schritte mit SQL Server-Containern unter Docker)](../linux/quickstart-install-connect-docker.md) |
-|Always On-Verfügbarkeitsgruppe in Docker-Containern mit Kubernetes |[Always On Availability Groups for containers (Always On-Verfügbarkeitsgruppen für Container)](../linux/sql-server-ag-kubernetes.md) |
 |Replikationsunterstützung |[SQL Server Replication on Linux (SQL Server-Replikation unter Linux)](../linux/sql-server-linux-replication.md)
 |Unterstützung für den Microsoft Distributed Transaction Coordinator (MSDTC) |[How to configure MSDTC on Linux (Vorgehensweise: Konfigurieren von MSDTC unter Linux)](../linux/sql-server-linux-configure-msdtc.md) |
 |OpenLDAP-Unterstützung für AD-Drittanbieter |[Tutorial: Use Active Directory authentication with SQL Server on Linux (Tutorial: Verwenden der Azure Active Directory-Authentifizierung mit SQL Server unter Linux)](../linux/sql-server-linux-active-directory-authentication.md) |
 |Machine Learning unter Linux |[Configure Machine Learning on Linux (Konfigurieren von Machine Learning unter Linux)](../linux/sql-server-linux-setup-machine-learning.md) |
-|Tempdb-Verbesserungen | Standardmäßig erstellt eine neue Installation von SQL Server für Linux mehrere tempdb-Datendateien, deren Anzahl sich nach der Anzahl der logischen Kerne richtet (bis zu acht Datendateien). Das gilt nicht für direkte Upgrades der Neben- oder Hauptversion. Jede tempdb-Datei ist 8 MB groß und wird automatisch um 64 MB vergrößert. Dieses Verhalten ähnelt dem der SQL Server-Standardinstallation unter Windows. |
+|`tempdb`-Verbesserungen | Standardmäßig erstellt eine neue Installation von SQL Server für Linux mehrere `tempdb`-Datendateien, deren Anzahl sich nach der Anzahl von logischen Kernen richtet (bis zu 8 Datendateien). Das gilt nicht für direkte Upgrades der Neben- oder Hauptversion. Jede `tempdb`-Datei ist 8 MB groß und wird automatisch um 64 MB vergrößert. Dieses Verhalten ähnelt dem der SQL Server-Standardinstallation unter Windows. |
 | PolyBase unter Linux | [Installieren Sie PolyBase](../relational-databases/polybase/polybase-linux-setup.md) für Nicht-Hadoop-Connectors unter Linux.<br/><br/>[PolyBase type mapping (Typzuordnung mit PolyBase)](../relational-databases/polybase/polybase-type-mapping.md) |
+| Unterstützung von Change Data Capture (CDC) | Change Data Capture (CDC) wird jetzt unter Linux für SQL Server 2019 unterstützt. |
+| &nbsp; | &nbsp; |
+
+### <a name="setup"></a>Einrichten
+
+|Neue Funktion oder Update | Details |
+|:---|:---|
+|Neue Optionen für die Arbeitsspeichereinrichtung | Legt die Serverkonfigurationseinstellungen *Min. Serverarbeitsspeicher (MB)* und *Max. Serverarbeitsspeicher (MB)* während der Installation fest. Weitere Informationen finden Sie unter [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) in den Abschnitten zu den Parametern `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` und `SQLMAXMEMORY`. Der vorgeschlagene Wert entspricht den Richtlinien für die Arbeitsspeicherkonfiguration in [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
+|Neue Optionen für die Nebenläufigkeitseinrichtung | Legt die Serverkonfigurationsoption *Max. Grad an Parallelität* während der Installation fest. Weitere Informationen finden Sie unter [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) im Abschnitt zum `SQLMAXDOP`-Parameter. Der Standardwert entspricht den Richtlinien für die maximale Nebenläufigkeit in [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a>SQL Server-Machine Learning-Dienste
@@ -238,11 +223,15 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 
 | Neue Funktion oder Update | Details |
 |:---|:---|
+|Abfrageüberlappung| Siehe [Abfrageüberlappung](https://docs.microsoft.com/analysis-services/tabular-models/query-interleaving). |
+|Unterstützung von MDX-Abfragen für tabellarische Modelle mit Berechnungsgruppen | Siehe [Berechnungsgruppen](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
 |Berechnungsgruppen in einem tabellarischen Modell| [Berechnungsgruppen in einem tabellarischen Modell](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24) |
 |Unterstützung von MDX-Abfragen für tabellarische Modelle mit Berechnungsgruppen | Siehe [Berechnungsgruppen](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24). |
 |Dynamische Formatierung von Measures mithilfe von Berechnungsgruppen |Mit dieser Funktion können Sie Formatzeichenfolgen für Measures mit [Berechnungsgruppen](what-s-new-in-sql-server-ver15-prerelease.md#calc-ctp24) bedingt ändern. Beispielsweise kann mit der Währungsumrechnung ein Measure in verschiedenen Fremdwährungsformaten angezeigt werden.|
 |M:n-Beziehungen in tabellarischen Modellen|[m:n-Beziehungen in tabellarischen Modellen](what-s-new-in-sql-server-ver15-prerelease.md#many-to-many-ctp24)|
 |Eigenschafteneinstellungen für die Ressourcenkontrolle|[Eigenschafteneinstellungen für die Ressourcenkontrolle](what-s-new-in-sql-server-ver15-prerelease.md#property-ctp24)|
+| Governanceeinstellung für Power BI-Cacheaktualisierungen.  | Der Power BI-Dienst speichert Dashboardkacheldaten und Berichtsdaten für das anfängliche Laden des Live Connect-Berichts zwischen, was dazu führt, dass eine übermäßige Anzahl von Cacheanfragen an SSAS übermittelt wird und in extremen Fällen den Server überlastet. In diesem Release wird die **ClientCacheRefreshPolicy**-Eigenschaft eingeführt. Diese Eigenschaft ermöglicht Ihnen, dieses Verhalten auf Serverebene zu überschreiben. Weitere Informationen finden Sie unter [Allgemeine Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
+| Online anfügen  | Diese Funktion bietet die Möglichkeit, ein tabellarisches Modell als Onlinevorgang anzufügen. Onlineanfügen kann für die Synchronisierung schreibgeschützter Replikate in horizontal skalierten Umgebungen für lokale Abfragen verwendet werden. Weitere Informationen finden Sie unter [Online anfügen](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
 | &nbsp; | &nbsp; |
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]

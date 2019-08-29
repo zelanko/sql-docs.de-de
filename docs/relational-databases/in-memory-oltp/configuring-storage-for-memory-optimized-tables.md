@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915286"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634567"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Konfigurieren von Speicher für speicheroptimierte Tabellen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Sie müssen die Speicherkapazität und die E/A-Vorgänge pro Sekunde (IOPS) konfigurieren.  
   
 ## <a name="storage-capacity"></a>Speicherkapazität  
- Verwenden Sie die Informationen unter [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) , um für die dauerhaften speicheroptimierten Tabellen der Datenbank deren Größe im Arbeitsspeicher zu schätzen. Da die Indizes der speicheroptimierten Tabellen nicht beibehalten werden, muss die Größe der Indizes nicht berücksichtigt werden. Wenn Sie die Größe ermittelt haben, müssen Sie Speicherplatz bereitstellen, der vier Mal der Größe der dauerhaften Tabellen im Arbeitsspeicher entspricht.  
+
+Verwenden Sie die Informationen unter [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) , um für die dauerhaften speicheroptimierten Tabellen der Datenbank deren Größe im Arbeitsspeicher zu schätzen. Da die Indizes der speicheroptimierten Tabellen nicht beibehalten werden, muss die Größe der Indizes nicht berücksichtigt werden. 
+ 
+Nachdem Sie die Größe bestimmt haben, müssen Sie eine ausreichende Menge an Speicherplatz für die Prüfpunktdateien bereitstellen, die zum Speichern neu geänderter Daten verwendet werden. Die gespeicherten Daten enthalten nicht nur die Inhalte neuer Zeilen, die den speicheroptimierten Tabellen hinzugefügt werden, sondern auch neue Versionen vorhandener Zeilen. Dieser Speicher wächst an, wenn Zeilen eingefügt oder aktualisiert werden. Zeilenversionen werden zusammengeführt, und Speicher wird freigegeben, wenn eine Protokollkürzung erfolgt. Falls sich die Protokollkürzung aus irgendeinem Grund verzögert, wächst der In-Memory-OLTP-Speicher an.
+
+Ein guter Ausgangspunkt zur Dimensionierung des Speichers für diesen Bereich ist die vierfache Größe der dauerhaften In-Memory-Tabellen. Überwachen Sie die Speichernutzung, und bereiten Sie sich darauf vor, den verfügbaren Speicher bei Bedarf zu erweitern.
   
 ## <a name="storage-iops"></a>Speicher-IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] kann den Arbeitsauslastungsdurchsatz erheblich erhöhen. Daher ist es wichtig sicherzustellen, dass die E/A-Vorgänge keinen Engpass darstellen.  

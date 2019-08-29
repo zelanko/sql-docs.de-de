@@ -11,12 +11,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd114b329a479745fb8e0b1ce0967d025c10565
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912108"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009430"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Leitfaden zum Entwerfen von Columnstore-Indizes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -181,10 +181,9 @@ Hierbei handelt es sich um Aufgaben zum Erstellen und Verwalten von Columnstore-
 |Löschen eines Columnstore-Index|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Beim Löschen eines Columnstore-Indexes wird die DROP INDEX-Standardsyntax verwendet, die auch für B-Strukturindizes verwendet wird. Beim Löschen eines gruppierten Columnstore-Index wird die Columnstore-Tabelle in einen Heap konvertiert.|  
 |Löschen einer Zeile aus einem Columnstore-Index|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Verwenden Sie [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) zum Löschen einer Zeile.<br /><br /> **columnstore** -Zeile: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert die Zeile als logisch gelöscht, der physische Speicherplatz für die Zeile wird jedoch erst wieder freigegeben, wenn der Index neu erstellt wird.<br /><br /> **deltastore** -Zeile: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht die Zeile logisch und physisch.|  
 |Aktualisieren einer Zeile im columnstore-Index|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Verwenden Sie [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) , um eine Zeile zu aktualisieren.<br /><br /> **columnstore** -Zeile:  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] markiert die Zeile als logisch gelöscht und fügt dann die aktualisierte Zeile in den Deltastore ein.<br /><br /> **deltastore** -Zeile: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisiert die Zeile im Deltastore.|  
-|Durchsetzen, dass alle Zeilen im Deltastore in den Columnstore wechseln.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Columnstore-Indizes für Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX mit der REBUILD-Option erzwingt die Übernahme aller Zeilen in den Columnstore.|  
+|Durchsetzen, dass alle Zeilen im Deltastore in den Columnstore wechseln.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|ALTER INDEX mit der REBUILD-Option erzwingt die Übernahme aller Zeilen in den Columnstore.|  
 |Defragmentieren eines Columnstore-Index|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE defragmentiert-Columnstore-Indizes online.|  
 |Zusammenführen von Tabellen mit Columnstore-Indizes.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
-
 
 ## <a name="next-steps"></a>Nächste Schritte
 So erstellen Sie einen leeren Columnstore-Index für:

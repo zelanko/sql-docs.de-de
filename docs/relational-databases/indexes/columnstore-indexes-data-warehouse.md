@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d632934b3b350077606d93ca162e8f859f0a533
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912151"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009454"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67912151"
 -   Momentaufnahmenisolation für den Datenbank-Kompatibilitätsgrad 130 und höher  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Verbessern der Leistung durch Kombinieren von nicht gruppierten Indizes und Columnstore-Indizes  
- Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie nicht gruppierte Indizes für einen gruppierten Columnstore-Index definieren.   
+ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] können Sie nicht gruppierte Indizes für einen gruppierten Columnstore-Index definieren.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Beispiel: Verbessern der Effizienz von Suchabfragen auf Tabellen mit einem nicht gruppierten Index  
  Sie können einen nicht gruppierten Index erstellen, der Abfragen ausführt, die am besten mit Tabellenvorgängen funktionieren, um die Effizienz von Tabellenvorgängen in einem Data Warehouse zu verbessern. Zum Beispiel erzielen Abfragen, die nach übereinstimmenden Werten suchen oder eine kleine Anzahl von Werten zurückgeben, eine bessere Leistung für einen B-Strukturindex als für einen Columnstore-Index. Ein vollständiger Tabellenscan durch den Columnstore-Index ist für die Abfragen nicht erforderlich. Das korrekte Ergebnis wird durch eine binäre Suche in einem B-Strukturindex schneller zurückgeben.  
@@ -131,6 +131,6 @@ END TRAN
  [Columnstore Indexes Data Loading Guidance (Leitfaden zum Laden von Daten in Columnstore-Indizes)](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Abfrageleistung für Columnstore-Indizes](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Erste Schritte mit Columnstore für operative Echtzeitanalyse](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Columnstore-Index-Defragmentierung](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Neuorganisieren und Neuerstellen von Indizes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Columnstore Index Architecture (Columnstore-Indizes: Architektur)](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

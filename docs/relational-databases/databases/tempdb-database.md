@@ -2,7 +2,7 @@
 title: tempdb-Datenbank | Microsoft-Dokumentation
 description: Dieser Artikel enthält Details zur Konfiguration und Verwendung der tempdb-Datenbank in SQL Server und Azure SQL-Datenbank.
 ms.custom: P360
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e921c5b95a3d7fd4eb1e8c5b0cb9010c7d2344c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127140"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653770"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 
@@ -217,7 +217,7 @@ Weitere Informationen zu Verbesserungen der Leistung in tempdb finden Sie im fol
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte TempDB-Metadaten
 
-Bislang stellten TempDB-Metadatenkonflikte einen Engpass für die Skalierbarkeit vieler Workloads auf SQL Server dar. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Zur Verwendung dieser neuen Funktion führen Sie das folgende Skript aus:
+Bislang stellten TempDB-Metadatenkonflikte einen Engpass für die Skalierbarkeit vieler Workloads auf SQL Server dar. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden.  Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte tempdb-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Verwenden Sie das folgende Skript, um dieses neue Feature zu aktivieren:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -319,7 +319,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [Verschieben von Datenbankdateien](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a>Weitere Informationen
-
-- [Verwenden von tempdb in SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
-- [Problembehandlung bei unzureichendem Speicherplatz in tempdb](https://msdn.microsoft.com/library/ms176029.aspx)

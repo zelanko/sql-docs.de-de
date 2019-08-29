@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2daf65d8c080700767fc4c94c5e4e9e0aeafa9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903588"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -148,8 +148,8 @@ Angenommen, Sie verfügen über eine Gruppe von Tabellen, bei denen die Versions
   
 -   Minimale Wartungskosten  
   
- Beim Konvertieren einer vorhandenen Tabelle sollten Sie die Verwendung der Klausel **HIDDEN** in Betracht ziehen, um die neuen **PERIOD** -Spalten auszublenden und so Auswirkungen auf vorhandene Anwendungen zu vermeiden, die keine neue Spalten verarbeiten können.  
-  
+ Beim Konvertieren einer vorhandenen Tabelle sollten Sie die Verwendung der Klausel **HIDDEN** in Betracht ziehen, um die neuen **PERIOD**-Spalten (die datetime2-Spalten **SysStartTime** und **SysEndTime**) auszublenden und so Auswirkungen auf vorhandene Anwendungen zu vermeiden, die keine neuen Spalten verarbeiten können.  
+
 ### <a name="adding-versioning-to-non-temporal-tables"></a>Hinzufügen der Versionsverwaltung zu nicht temporalen Tabellen  
  Wenn Sie das Nachverfolgen von Änderungen für eine nicht temporale Tabelle mit den Daten starten möchten, müssen Sie die **PERIOD** -Definition hinzufügen und optional einen Namen für die leere Verlaufstabelle angeben, die SQL Server für Sie erstellt:  
   

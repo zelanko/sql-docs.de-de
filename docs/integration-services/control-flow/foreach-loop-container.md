@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316655"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621690"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
 
@@ -52,7 +52,7 @@ ms.locfileid: "68316655"
   
 -   Enumerator für Foreach-ADO.NET-Schemarowsets zum Aufzählen der Schemainformationen zu einer Datenquelle. Beispielsweise können Sie die Tabellen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank aufzählen und eine Liste dafür abrufen.  
   
--   Foreach-Dateienumerator zum Aufzählen von Dateien in einem Ordner. Der Enumerator kann Unterordner durchlaufen. Beispielsweise können Sie alle Dateien mit der Dateinamenerweiterung LOG im Windows-Ordner und deren Unterordner lesen.  
+-   Foreach-Dateienumerator zum Aufzählen von Dateien in einem Ordner. Der Enumerator kann Unterordner durchlaufen. Beispielsweise können Sie alle Dateien mit der Dateinamenerweiterung LOG im Windows-Ordner und in dessen Unterordnern lesen. Beachten Sie, dass die Reihenfolge, in der die Dateien abgerufen werden, nicht festgelegt werden kann.  
   
 -   Foreach-Enumerator für Daten aus Variablen zum Aufzählen des aufzählbaren Objekts, das in einer angegebenen Variable enthalten ist. Das aufzählbare Objekt kann z. B. ein Array, ein ADO.NET **DataTable**-Objekt oder ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Enumerator sein. Beispielsweise können Sie die Werte eines Arrays aufzählen, das den Namen der Server enthält.  
   

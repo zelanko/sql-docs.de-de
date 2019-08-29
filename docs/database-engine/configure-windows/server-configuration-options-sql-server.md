@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025623"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609633"
 ---
 # <a name="server-configuration-options-sql-server"></a>Serverkonfigurationsoptionen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Für Optionen, die einen Neustart von [!INCLUDE[ssNoVersion](../../includes/ssno
   
 Bei einigen Optionen tritt der neue Konfigurationswert erst nach einem Neustart des Servers in Kraft. Wenn Sie den neuen Wert festlegen und „sp_configure“ ausführen, bevor Sie den Server neu starten, wird der neue Wert in der **value** -Spalte der Konfigurationsoptionen, jedoch nicht in der **value_in_use** -Spalte angezeigt. Nach dem Neustart des Servers wird der neue Wert in der **value_in_use** -Spalte angezeigt.  
   
-Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gemäß den Anforderungen des Systems angepasst werden. In den meisten Fällen ist es dadurch nicht notwendig, die Werte manuell festzulegen. Beispiele dafür sind die Optionen **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** sowie die Option „Benutzerverbindungen“.  
+Selbstkonfigurierende Optionen sind jene Optionen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gemäß den Anforderungen des Systems angepasst werden. In den meisten Fällen ist es dadurch nicht notwendig, die Werte manuell festzulegen. Beispiele hierfür sind die Option **Max. Anzahl von Arbeitsthreads**  und die Option für Benutzerverbindungen.  
   
 ## <a name="configuration-options-table"></a>Tabelle der Konfigurationsoptionen  
  In der folgenden Tabelle werden alle verfügbaren Konfigurationsoptionen, der Bereich der möglichen Einstellungen und die Standardwerte aufgelistet. Konfigurationsoptionen sind wie folgt mit Buchstabencodes gekennzeichnet:  

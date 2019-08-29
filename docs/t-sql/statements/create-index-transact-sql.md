@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -51,15 +51,15 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-author: CarlRabeler
+author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809769"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009326"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -272,7 +272,8 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 Gefilterte Indizes gelten nicht für XML-Indizes und Volltextindizes. Bei UNIQUE-Indizes müssen nur die ausgewählten Zeilen über eindeutige Indexwerte verfügen. Bei gefilterten Indizes ist die IGNORE_DUP_KEY-Option nicht zulässig.
 
-ON *partition_scheme_name* **( _column_name_ )**       
+ON *partition_scheme_name* **( _column_name_ )**      
+
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt das Partitionsschema an, das die Dateigruppen definiert, denen die Partitionen eines partitionierten Index zugeordnet werden. Das Partitionsschema muss bereits durch Ausführen von [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) oder [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) in der Datenbank vorhanden sein. *column_name* gibt die Spalte an, auf deren Grundlage ein partitionierter Index partitioniert wird. Diese Spalte muss mit dem Datentyp, der Länge und der Genauigkeit des Arguments der Partitionsfunktion übereinstimmen, die *partition_scheme_name* verwendet. *column_name* ist nicht auf Spalten in der Indexdefinition beschränkt. Es können beliebige Spalten der Basistabelle angegeben werden, mit der Ausnahme, dass *column_name* beim Partitionieren von UNIQUE-Indizes aus den Spalten ausgewählt werden muss, die als eindeutige Schlüssel verwendet werden. Mit dieser Einschränkung kann [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Schlüsselwerte in nur einer einzigen Partition überprüfen.
@@ -288,11 +289,13 @@ Wenn _partition_scheme_name_ oder _filegroup_ bei einer partitionierten Tabelle 
 Weitere Informationen zur Partitionierung von Indizes finden Sie unter [Partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ON _filegroup_name_      
+
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Erstellt den angegebenen Index für die angegebene Dateigruppe. Wenn kein Speicherort angegeben und die Tabelle oder Sicht nicht partitioniert ist, verwendet der Index dieselbe Dateigruppe wie die zugrunde liegende Tabelle oder Sicht. Die Dateigruppe muss bereits vorhanden sein.
 
-ON **"** default **"**       
+ON **"** default **"**      
+
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Erstellt den angegebenen Index in derselben Dateigruppe oder in demselben Partitionsschema wie die Tabelle oder Sicht.
@@ -303,6 +306,7 @@ Die Benennung default ist in diesem Kontext kein Schlüsselwort. Es handelt sich
 > „default“ gibt nicht die Standarddateigruppe der Datenbank im Kontext von CREATE INDEX an. Dies unterscheidet sich von CREATE TABLE, wo „default“ die Tabelle in der Standarddateigruppe der Datenbank platziert.
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
+
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 Gibt die Platzierung der FILESTREAM-Daten für die Tabelle an, wenn ein gruppierter Index erstellt wird. Die FILESTREAM_ON-Klausel lässt zu, dass FILESTREAM-Daten in eine andere FILESTREAM-Dateigruppe oder ein anderes Partitionsschema verschoben werden.
@@ -340,6 +344,7 @@ Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] kann es sich bei dem Objekt
 Gibt die Optionen an, die beim Erstellen des Indexes verwendet werden sollen.
 
 PAD_INDEX = { ON | **OFF** }      
+
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.
@@ -355,6 +360,7 @@ Die Option PAD_INDEX ist nur dann hilfreich, wenn FILLFACTOR angegeben ist, da P
 In abwärtskompatibler Syntax ist WITH PAD_INDEX gleichwertig mit WITH PAD_INDEX = ON.
 
 FILLFACTOR **=** _fillfactor_      
+
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt einen Prozentsatz an, der angibt, wie weit das [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Blattebene jeder Indexseite während der Indexerstellung oder -neuerstellung füllen soll. *fillfactor* muss ein ganzzahliger Wert zwischen 1 und 100 sein. Wenn *fillfactor* 100 ist, erstellt das [!INCLUDE[ssDE](../../includes/ssde-md.md)] Indizes mit vollständig aufgefüllten Blattseiten.
@@ -367,6 +373,7 @@ Die FILLFACTOR-Einstellung gilt nur, wenn der Index erstellt oder neu erstellt w
 Weitere Informationen finden Sie unter [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
+
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, ob temporäre Ergebnisse des Sortierens in **tempdb** gespeichert werden sollen. Der Standardwert ist OFF.
@@ -412,7 +419,10 @@ Um das automatische Aktualisieren von Statistiken wiederherzustellen, müssen Si
 
 In abwärtskompatibler Syntax ist WITH STATISTICS_NORECOMPUTE gleichwertig mit WITH STATISTICS_NORECOMPUTE = ON.
 
-STATISTICS_INCREMENTAL = { ON | **OFF** }      
+STATISTICS_INCREMENTAL = { ON | **OFF** }     
+
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 Bei **ON** wird die Statistik pro Partition erstellt. Bei **OFF** wird die Statistikstruktur gelöscht und die Statistik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu berechnet. Der Standardwert ist **OFF**.
 
 Wenn Statistiken pro Partition nicht unterstützt werden, wird die Option ignoriert und eine Warnung generiert. Inkrementelle Statistiken werden für folgende Statistiktypen nicht unterstützt:
@@ -448,7 +458,7 @@ In abwärtskompatibler Syntax ist WITH DROP_EXISTING gleichwertig mit WITH DROP_
 ONLINE = { ON | **OFF** }      
 Gibt an, ob die zugrunde liegenden Tabellen und zugeordneten Indizes für Abfragen und Datenänderungen während des Indexvorgangs verfügbar sind. Der Standardwert ist OFF.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
 ON      
@@ -456,6 +466,18 @@ Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechter
 
 OFF      
 Die Tabellensperren werden für die Dauer des Indexvorgangs angewendet. Ein Offlineindexvorgang, bei dem ein gruppierter Index erstellt, neu erstellt oder gelöscht bzw. ein nicht gruppierter Index neu erstellt oder gelöscht wird, aktiviert eine Schemaänderungssperre (SCH-M) für die Tabelle. Dadurch wird verhindert, dass Benutzer für die Dauer des Vorgangs auf die zugrunde liegende Tabelle zugreifen können. Ein Offlineindexvorgang, bei dem ein nicht gruppierter Index erstellt wird, aktiviert eine freigegebene Sperre (S) für die Tabelle. Dadurch werden Updates der zugrunde liegenden Tabelle verhindert. Lesevorgänge, wie SELECT-Anweisungen, sind jedoch zulässig.
+
+Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
+
+Indizes, einschließlich Indizes globaler temporärer Tabellen, können online erstellt werden. Es gelten folgende Ausnahmen:
+
+- XML-Index
+- Index für eine lokale temp-Tabelle
+- Eindeutiger gruppierter Ausgangsindex für eine Sicht
+- Deaktivierte gruppierte Indizes
+- Columnstore-Indizes
+- Gruppierter Index, wenn die zugrunde liegende Tabelle LOB-Datentypen (**image**, **ntext**, **text**) und räumliche Datentypen enthält.
+- **varchar(max)** - und **varbinary(max)** -Spalten können nicht Teil eines Index sein. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] kann ein gruppierter Index mit der Option **ONLINE** erstellt oder neu erstellt werden, wenn eine Tabelle Spalten vom Typ **varchar(max)** oder **varbinary(max)** enthält. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] lässt die **ONLINE**-Option nicht zu, wenn die Basistabelle Spalten vom Typ **varchar(max)** oder **varbinary(max)** enthält.
 
 Weitere Informationen finden Sie unter [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md).
 
@@ -471,25 +493,17 @@ Der Indexvorgang ist fortsetzbar.
  OFF      
 Der Indexvorgang ist nicht fortsetzbar.
 
-MAX_DURATION **=** *time* [**MINUTES**] kombiniert mit **RESUMABLE = ON** (erfordert **ONLINE = ON**).      
+MAX_DURATION **=** *time* [**MINUTES**] kombiniert mit **RESUMABLE = ON** (erfordert **ONLINE = ON**).   
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (Vorschauversion)
 
 Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzbarer Onlineindexvorgang ausgeführt wird, bevor er angehalten wird.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Ausführlichere Informationen zu Indexvorgängen, die online ausgeführt werden können, finden Sie unter [Richtlinien für Onlineindexvorgänge](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
- Indizes, einschließlich Indizes für globale temporäre Tabellen, können mit den folgenden Ausnahmen online erstellt werden:
-
-- XML-Index
-- Index für eine lokale temporäre Tabelle.
-- Eindeutiger gruppierter Anfangsindex für eine Sicht.
-- Deaktivierte gruppierte Indizes.
-- Gruppierter Index, sofern die zugrunde liegende Tabelle LOB-Datentypen enthält: **image**, **ntext**, **text** und räumliche Typen.
-- **varchar(max)** - und **varbinary(max)** -Spalten können nicht Teil eines Index sein. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) und in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] kann ein gruppierter Index mit der Option **ONLINE** erstellt oder neu erstellt werden, wenn eine Tabelle Spalten vom Datentyp **varchar(max)** oder **varbinary(max)** enthält. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] lässt die **ONLINE**-Option nicht zu, wenn die Basistabelle Spalten vom Datentyp **varchar(max)** oder **varbinary(max)** enthält.
-
-Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .
+> [!NOTE] 
+> Fortsetzbare Neuerstellungen von Onlineindizes werden für Columnstore-Indizes nicht unterstützt.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -513,18 +527,17 @@ Seitensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../
 OFF      
 Seitensperren werden nicht verwendet.
 
-
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Gibt an, ob der Konflikt beim Einfügen der letzten Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](#sequential-keys).
 
-MAXDOP = _max_degree_of_parallelism_      
+MAXDOP = *max_degree_of_parallelism*      
 **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Überschreibt die Konfigurationsoption **max degree of parallelism** (Max. Grad an Parallelität) für die Dauer des Indexvorgangs. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Sie können mit MAXDOP die Anzahl der Prozessoren begrenzen, die bei der Ausführung paralleler Pläne verwendet werden. Maximal sind 64 Prozessoren zulässig.
 
-_max_degree_of_parallelism_ kann folgende Werte haben:
+*max_degree_of_parallelism* kann folgende Werte haben:
 
 1      
 Unterdrückt das Generieren paralleler Pläne.
@@ -1127,6 +1140,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
 
 ## <a name="see-also"></a>Weitere Informationen
 [Leitfaden zur Architektur und zum Design von SQL Server-Indizes](../../relational-databases/sql-server-index-design-guide.md)     
+[Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md)  
 [Indizes und ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     

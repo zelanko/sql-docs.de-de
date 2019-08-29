@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742909"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009382"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -54,8 +54,7 @@ Bevor Sie die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 Microsoft hat ein Problem erkannt, das die Runtime-Binärdateien von Microsoft Visual C++ 2013 betrifft, die von SQL Server 2016 und 2017 als erforderliche Komponente installiert werden. Ein Update ist verfügbar, um dieses Problem zu beheben. Wenn dieses Update der Runtime-Binärdateien von Visual C++ nicht installiert wird, können bei SQL Server in bestimmten Szenarios Stabilitätsprobleme auftreten. Bevor Sie SQL Server installieren, sollten Sie entsprechend den Anweisungen unter [Versionsanmerkungen zu SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch) vorgehen, um festzustellen, ob Ihr Computer einen Patch für die Runtime-Binärdateien von Visual C++ benötigt. 
 
-Dies gilt nicht für SQL Server 2019.  
-  
+Dies gilt nicht für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>So installieren Sie SQL Server2016 und 2017  
 
@@ -280,9 +279,9 @@ Dies gilt nicht für SQL Server 2019.
   
      Der Workflow für die weitere Installation ist von den Funktionen abhängig, die Sie für die Installation angegeben haben. Je nach Auswahl werden möglicherweise nicht alle Seiten angezeigt. 
 
-1. Ab SQL Server 2019 ist es für Polybase nicht mehr erforderlich, dass Oracle JRE 7 Update 51 (oder höher) vor der Installation des Features auf dem Computer vorinstalliert ist. Wenn Sie die Option zum Installieren des PolyBase-Features auswählen, wird dem SQL Server-Setup die Seite **Java-Installationsspeicherort** hinzugefügt. Diese wird nach der Seite **Instanzkonfiguration** angezeigt. Auf der Seite Java-Installationsspeicherort können Sie auswählen, dass die Azul Zulu Open JRE installiert werden soll, die in der SQL Server 2019-Installation enthalten ist, oder Sie können den Speicherort einer anderen JRE oder eines anderen JDK angeben, die bzw. das bereits auf dem Computer installiert ist.
+1. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ist es für PolyBase nicht mehr erforderlich, dass Oracle JRE 7 Update 51 (oder höher) vor der Installation des Features auf dem Computer vorinstalliert ist. Wenn Sie die Option zum Installieren des PolyBase-Features auswählen, wird dem SQL Server-Setup die Seite **Java-Installationsspeicherort** hinzugefügt. Diese wird nach der Seite **Instanzkonfiguration** angezeigt. Auf der Seite für den Java-Installationsspeicherort können Sie auswählen, dass die in der [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]-Installation enthaltene Azul Zulu Open JRE installiert werden soll. Alternativ können Sie den Speicherort einer anderen JRE oder eines anderen JDK angeben, die bzw. das bereits auf dem Computer installiert ist.
 
-1. Ab SQL Server 2019 wird Java mit Spracherweiterungen hinzugefügt. Wenn Sie die Option zum Installieren des Java-Features auswählen, wird die Seite **Java-Installationsspeicherort** zum Dialogfenster „SQL Server-Setup“ hinzugefügt. Diese Seite wird nach der Seite **Instanzkonfiguration** angezeigt. Auf der Seite **Java-Installationsspeicherort** können Sie auswählen, dass die Zulu Open JRE installiert werden soll, die in der SQL Server 2019-Installation enthalten ist, oder Sie können den Speicherort einer anderen JRE oder eines anderen JDK angeben, die bzw. das bereits auf dem Computer installiert ist.
+1. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird Java mit Spracherweiterungen hinzugefügt. Wenn Sie die Option zum Installieren des Java-Features auswählen, wird die Seite **Java-Installationsspeicherort** zum Dialogfenster „SQL Server-Setup“ hinzugefügt. Diese Seite wird nach der Seite **Instanzkonfiguration** angezeigt. Auf der Seite **Java-Installationsspeicherort** können Sie auswählen, dass die in der [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]-Installation enthaltene Zulu Open JRE installiert werden soll. Alternativ können Sie den Speicherort einer anderen JRE oder eines anderen JDK angeben, die bzw. das bereits auf dem Computer installiert ist.
 
 1. Geben Sie auf der Seite **Serverkonfiguration – Dienstkonten** Anmeldekonten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste an. Welche Dienste tatsächlich auf dieser Seite konfiguriert werden, ist von den Funktionen abhängig, die Sie für die Installation ausgewählt haben. Weitere Informationen zu den Konfigurationseinstellungen finden Sie unter [Hilfe zum Installations-Assistenten](../../sql-server/install/instance-configuration.md#serverconfig).
   
@@ -314,13 +313,29 @@ Dies gilt nicht für SQL Server 2019.
      Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Serverkonfiguration](../../sql-server/install/instance-configuration.md#datadir).
 
      Verwenden Sie die Seite **Konfiguration der Datenbank-Engine – TempDB**, um die Dateigröße, Anzahl der Dateien, nicht standardmäßige Installationsverzeichnisse und Dateiwachstumseinstellungen für **tempdb** zu konfigurieren. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – TempDB](../../sql-server/install/instance-configuration.md#tempdb).
-
+<<<<<<< HEAD
   
-     Geben Sie auf der Registerkarte für die **Konfiguration der [!INCLUDE[ssDE](../../includes/ssde-md.md)] – MaxDOP** den maximalen Grad an Parallelität an. Diese Einstellung bestimmt, wie viele Prozessoren eine einzelne Anweisung während der Ausführung verwenden kann. Der empfohlene Wert wird während der Installation automatisch berechnet. Weitere Informationen finden Sie unter den [Richtlinien für den max. Grad an Parallelität](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines). Diese Option ist nur ab SQL Server 2019 verfügbar. 
+     Geben Sie auf der Seite **[!INCLUDE[ssDE](../../includes/ssde-md.md)]Konfiguration – MaxDOP** den maximalen Grad an Parallelität an. Diese Einstellung bestimmt, wie viele Prozessoren eine einzelne Anweisung während der Ausführung verwenden kann. Der empfohlene Wert wird während der Installation automatisch berechnet. Diese Seite ist nur ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] im Setup verfügbar. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
 
-     Verwenden Sie die Registerkarte **Konfiguration der Datenbank-Engine – Speicher**, um die MIN- und MAX-Speicherwerte anzugeben, die diese Instanz von SQL Server nach dem Start verwenden soll. Sie können die Standardwerte oder die berechneten empfohlenen Werte verwenden oder Ihre eigenen Werte manuell angeben, nachdem Sie die Option **Empfohlen** gewählt haben. Diese Funktion ist nur in Setup ab SQL Server 2019 verfügbar. 
+     Verwenden Sie die Seite **Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“** , um die Werte für **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** anzugeben, die diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Start verwenden soll. Sie können die Standardwerte oder die berechneten empfohlenen Werte verwenden oder Ihre eigenen Werte manuell angeben, nachdem Sie die Option **Empfohlen** gewählt haben. Diese Seite ist nur ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] im Setup verfügbar. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+=======
 
-     Aktivieren Sie auf der Seite **Konfiguration der Datenbank-Engine – FILESTREAM** den FILESTREAM für Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
+     Geben Sie auf der Seite **[!INCLUDE[ssDE](../../includes/ssde-md.md)]Konfiguration – MaxDOP** den maximalen Grad an Parallelität an. Diese Einstellung bestimmt, wie viele Prozessoren eine einzelne Anweisung während der Ausführung verwenden kann. Der empfohlene Wert wird während der Installation automatisch berechnet. 
+     
+    > [!NOTE]  
+    > Diese Seite ist nur ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] im Setup verfügbar. 
+    
+    Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+
+     Verwenden Sie die Seite **Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“** , um die Werte für **Min. Serverarbeitsspeicher** und **Max. Serverarbeitsspeicher** anzugeben, die diese Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach dem Start verwenden soll. Sie können die Standardwerte oder die berechneten empfohlenen Werte verwenden oder Ihre eigenen Werte manuell angeben, nachdem Sie die Option **Empfohlen** gewählt haben.
+     
+    > [!NOTE]  
+    > Diese Seite ist nur ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] im Setup verfügbar. 
+    
+    Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „Arbeitsspeicher“](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
+
+     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. Verwenden Sie die Seite **Analysis Services-Konfiguration – Kontenbereitstellung**, um den Servermodus und die Benutzer oder Konten anzugeben, die über Administratorberechtigungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügen sollen. Durch den Servermodus wird bestimmt, welcher Arbeitsspeicher und welche Speichersubsysteme auf dem Server verwendet werden. Die unterschiedlichen Projektmappentypen werden in verschiedenen Servermodi ausgeführt. Wenn Sie beabsichtigen, mehrdimensionale Cubedatenbanken auf dem Server auszuführen, wählen Sie die Standardoption für den Servermodus **Mehrdimensionales und Data Mining** aus.
 

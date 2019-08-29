@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3299d13c2ff371f0194c501f34d5615486decc84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006102"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621781"
 ---
 # <a name="track-data-changes-sql-server"></a>Nachverfolgen von Datenänderungen (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "68006102"
   
 -   Wenn eine Datenbank getrennt und an denselben Server oder einen anderen Server angefügt wird, bleibt Change Data Capture aktiviert.  
   
--   Wenn eine Datenbank mit der Option **KEEP_CDC** an eine andere Edition als die Enterprise Edition angefügt oder dafür wiederhergestellt wird, wird der Vorgang blockiert, weil Change-Data-Capture [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise erfordert. Die Fehlermeldung 932 wird angezeigt:  
+-   Wenn eine Datenbank mit der Option **KEEP_CDC** an eine andere Edition als die Standard oder Enterprise Edition angefügt oder dafür wiederhergestellt wird, wird der Vorgang blockiert, weil für Change-Data-Capture die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard oder Enterprise Edition erforderlich ist. Die Fehlermeldung 932 wird angezeigt:  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

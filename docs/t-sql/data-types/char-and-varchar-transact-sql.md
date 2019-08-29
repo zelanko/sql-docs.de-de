@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8162c14620143aa70ea2e87f582ec99e613f234c
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354609"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "69653663"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char und varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Grö�
 ## <a name="arguments"></a>Argumente  
 **char** [ ( *n* ) ]: Zeichenfolgendaten mit fester Größe. *n* definiert die Größe der Zeichenfolge in Byte und muss ein Wert zwischen 1 und 8.000 sein. Für Einzelbyte-Codierungszeichensätze wie *Latein* beträgt die Speichergröße *n* Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für Multibyte-Codierungszeichensätze beträgt die Speichergröße noch *n* Byte, aber die Anzahl von Zeichen, die gespeichert werden können, ist ggf. kleiner als *n*. Das ISO-Synonym für **char** lautet **character**. Weitere Informationen zu Zeichensätzen finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
-**varchar** [ ( *n* | **max** ) ]: Zeichenfolgendaten mit variabler Größe. *n* definiert die Größe der Zeichenfolge in Byte und ist ein Wert zwischen 1 und 8.000. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte (2 GB) beträgt. Für Einzelbyte-Codierungszeichensätze wie *Latein* beträgt die Speichergröße *n* Byte + 2 Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für Multibyte-Codierungszeichensätze beträgt die Speichergröße immer noch *n* Byte + 2 Byte, jedoch ist die Anzahl von Zeichen, die gespeichert werden können, ggf. kleiner als *n*. Die ISO-Synonyme für **varchar** lauten **charvarying** oder **charactervarying**. Weitere Informationen zu Zeichensätzen finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+**varchar** [ ( *n* | **max** ) ]: Zeichenfolgendaten mit variabler Größe. Verwenden Sie *n*, um die Größe der Zeichenfolge in Byte zu definieren. Der Wert muss zwischen 1 und 8.000 liegen. Alternativ können Sie **max** verwenden, um eine Beschränkung der Spaltengröße bis zu einem maximalen Speicher von 2^31 - 1 Byte (2 GB) anzugeben. Für Einzelbyte-Codierungszeichensätze wie *Latein* beträgt die Speichergröße *n* Byte + 2 Byte, und die Anzahl von Zeichen, die gespeichert werden können, ist ebenfalls *n*. Für Multibyte-Codierungszeichensätze beträgt die Speichergröße immer noch *n* Byte + 2 Byte, jedoch ist die Anzahl von Zeichen, die gespeichert werden können, ggf. kleiner als *n*. Die ISO-Synonyme für **varchar** lauten **charvarying** oder **charactervarying**. Weitere Informationen zu Zeichensätzen finden Sie unter [Einzelbyte- und Mehrbyte-Zeichensätze](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Remarks  
 Ein gängiges Missverständnis besteht darin, dass das *n* in [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) die Anzahl von Zeichen definiert. Das *n* in [CHAR(*n*) und VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) definiert jedoch die Zeichenfolgenlänge in **Byte** (0-8.000). *n* definiert niemals die Anzahl von Zeichen, die gespeichert werden können. Dies ähnelt der Definition von [NCHAR(*n*) und NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md).    
