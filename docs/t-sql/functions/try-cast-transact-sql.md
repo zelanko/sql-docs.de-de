@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 313f1bd13cf1b12a0685eeb101998792e0586767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79ad225fd74b4c8fd136295f69f26d48c061692a
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098768"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123145"
 ---
-# <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
@@ -60,7 +60,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-trycast-returns-null"></a>A. TRY_CAST gibt NULL zurück.  
+### <a name="a-try_cast-returns-null"></a>A. TRY_CAST gibt NULL zurück.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CAST NULL zurückgibt, wenn die Umwandlung fehlerhaft ist.  
   
 ```sql  
@@ -100,7 +100,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-trycast-fails-with-an-error"></a>B. Bei TRY_CAST tritt ein Fehler auf.  
+### <a name="b-try_cast-fails-with-an-error"></a>B. Bei TRY_CAST tritt ein Fehler auf.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CAST einen Fehler zurückgibt, wenn die Umwandlung explizit nicht zulässig ist.  
   
 ```sql  
@@ -114,7 +114,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-trycast-succeeds"></a>C. TRY_CAST ist erfolgreich.  
+### <a name="c-try_cast-succeeds"></a>C. TRY_CAST ist erfolgreich.  
  In diesem Beispiel wird veranschaulicht, dass der Ausdruck das erwartete Format aufweisen muss.  
   
 ```  

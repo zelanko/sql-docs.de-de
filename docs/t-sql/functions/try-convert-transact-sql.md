@@ -3,7 +3,7 @@ title: TRY_CONVERT (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 02e4b66b1f215e513b005c770aebf9afc256ea8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f0b159230f89503aac00b4cc0b4ec5d0da5e39
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098759"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123175"
 ---
-# <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
@@ -64,7 +64,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT gibt NULL zurück.  
+### <a name="a-try_convert-returns-null"></a>A. TRY_CONVERT gibt NULL zurück.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT bei fehlerhafter Umwandlung NULL zurückgibt.  
   
 ```sql  
@@ -104,7 +104,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-tryconvert-fails-with-an-error"></a>B. Bei TRY_CONVERT tritt ein Fehler auf.  
+### <a name="b-try_convert-fails-with-an-error"></a>B. Bei TRY_CONVERT tritt ein Fehler auf.  
  Im folgenden Beispiel wird veranschaulicht, dass TRY_CONVERT einen Fehler zurückgibt, wenn die Umwandlung explizit nicht zulässig ist.  
   
 ```sql  
@@ -118,7 +118,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-tryconvert-succeeds"></a>C. TRY_CONVERT ist erfolgreich.  
+### <a name="c-try_convert-succeeds"></a>C. TRY_CONVERT ist erfolgreich.  
  In diesem Beispiel wird veranschaulicht, dass der Ausdruck das erwartete Format aufweisen muss.  
   
 ```  

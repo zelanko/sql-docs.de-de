@@ -21,13 +21,13 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af840298c0e17b61dd073c982e6dec440ec67d7
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 08/26/2019
 ms.locfileid: "68419602"
 ---
-# <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+# <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt ein **varbinary**-Bitmuster zurück, das die eingefügten oder aktualisierten Spalten der Tabelle oder Ansicht anzeigt. `COLUMNS_UPDATED` wird im Text eines INSERT- oder UPDATE-Triggers von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet, um zu testen, ob der Trigger bestimmte Aktionen ausführen soll.
@@ -74,7 +74,7 @@ Wenn ein Spaltensatz für eine Tabelle definiert wird, verhält sich die Funktio
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-columnsupdated-to-test-the-first-eight-columns-of-a-table"></a>A. Verwenden von COLUMNS_UPDATED zum Testen der ersten acht Spalten einer Tabelle  
+### <a name="a-using-columns_updated-to-test-the-first-eight-columns-of-a-table"></a>A. Verwenden von COLUMNS_UPDATED zum Testen der ersten acht Spalten einer Tabelle  
 In diesem Beispiel werden zwei Tabellen erstellt: `employeeData` und `auditEmployeeData`. Die `employeeData`-Tabelle enthält vertrauliche Gehaltsinformationen und kann von Mitgliedern der Personalabteilung geändert werden. Wenn die Sozialversicherungsnummer (SSN, Social Security Number), das Jahresgehalt oder die Kontonummer eines Mitarbeiters geändert wird, wird ein Überwachungsdatensatz generiert und in die `auditEmployeeData`-Überwachungstabelle eingefügt.
   
 Mit der `COLUMNS_UPDATED()`-Funktion kann auf schnelle Weise getestet werden, ob Änderungen an Spalten mit vertraulichen Informationen zu Mitarbeitern vorgenommen wurden. `COLUMNS_UPDATED()` kann jedoch nur dann auf diese Weise verwendet werden, wenn Sie Änderungen an den ersten acht Spalten in der Tabelle erkennen möchten.
@@ -183,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Verwenden von COLUMNS_UPDATED zum Testen von mehr als acht Spalten  
+### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. Verwenden von COLUMNS_UPDATED zum Testen von mehr als acht Spalten  
 Wenn Sie testen möchten, ob Updates in anderen Spalten als den ersten acht Spalten in einer Tabelle ausgeführt wurden, verwenden Sie die `SUBSTRING`-Funktion, um das richtige durch `COLUMNS_UPDATED` zurückgegebene Bit zu testen. In diesem Beispiel wird getestet, ob Updates vorhanden sind, die die Spalten `3`, `5` und `9` in der Tabelle `AdventureWorks2012.Person.Person` betreffen.
   
 ```sql
