@@ -6,13 +6,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/15/2018
-ms.openlocfilehash: a05ef92709974b314ea5865362946c1f053c5343
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 08/28/2019
+ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262797"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123014"
 ---
 # <a name="create-a-report-server-database"></a>Erstellen einer Berichtsserver-Datenbank 
 
@@ -24,10 +24,9 @@ Im einheitlichen Modus von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ss
 
 Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz werden die Datenbanken als **reportserver** und **reportservertempdb**benannt. Zusammen werden die beiden Datenbanken als die **Berichtsserver-Datenbank** oder der **Berichtsserver-Katalog** bezeichnet.
 
-Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine dritte Datenbank, die für Datenwarnungsmetadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-> [!NOTE]
-> Die Integration von Reporting Services in SharePoint ist nach SQL Server 2016 nicht mehr möglich.
+Der **SharePoint-Modus** von SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst eine dritte Datenbank, die für Datenwarnungsmetadaten verwendet wird. Die drei Datenbanken werden für jede SSRS-Dienstanwendung erstellt. Die Datenbanknamen enthalten standardmäßig eine GUID, die der Dienstanwendung entspricht. 
 
 Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
 
@@ -36,6 +35,8 @@ Im Folgenden finden Sie Beispielnamen der drei Datenbanken im SharePoint-Modus:
 - ReportingService_90a9f37075544f22953c4a62e4a9f370TempDB  
   
 - ReportingService_90a9f37075544f22953c4a62e4a9f370_Alerting  
+
+::: moniker-end
   
 > [!IMPORTANT]  
 > Schreiben Sie keine Anwendungen, die Abfragen für die Berichtsserver-Datenbank ausführen. Die Berichtsserver-Datenbank ist kein öffentliches Schema. Die Tabellenstruktur kann sich von einer Version zur nächsten ändern. Verwenden Sie für den Zugriff auf die Berichtsserver-Datenbank stets SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -APIs, wenn Sie eine Anwendung schreiben, die auf die Berichtsserver-Datenbank zugreifen muss.  
@@ -65,7 +66,18 @@ Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den 
 ## <a name="database-server-version-requirements"></a>Anforderungen hinsichtlich der Datenbankserverversion
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird zum Hosten der Berichtsserver-Datenbanken verwendet. Die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz kann eine lokale oder eine Remoteinstanz sein. Mit den folgenden unterstützten Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] können die Berichtsserver-Datenbanken gehostet werden:  
-  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+- Verwaltete Azure SQL-Instanz
+
+- SQL Server 2019
+
+::: moniker-end
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+- SQL Server 2017  
+::: moniker-end
+
 - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -73,9 +85,7 @@ Die Seite **Berichtsserver-Installationsoptionen** hat nur eine Option für den 
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 - [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
-  
-- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
-  
+
 Wenn Sie die Berichtsserver-Datenbank auf einem Remotecomputer erstellen, konfigurieren Sie die Verbindung so, dass ein Domänenbenutzerkonto oder ein Dienstkonto mit Netzwerkzugriff verwendet wird. Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Remoteinstanz verwenden, sollten Sie überlegen, welche Anmeldeinformationen der Berichtsserver für die Verbindung zur Instanz verwenden soll. Weitere Informationen finden Sie unter [Konfigurieren einer Berichtsserver-Datenbankverbindung &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
