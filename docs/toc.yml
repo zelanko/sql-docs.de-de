@@ -2093,7 +2093,7 @@
         - name: Kontextverbindung
           href: relational-databases/clr-integration/data-access/context-connection.md
           items:
-            - name: Restrictions
+            - name: Beschränkungen
               href: relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md
             - name: Kontext vs. reguläre Verbindungen
               href: relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md
@@ -4153,6 +4153,8 @@
     - name: Aktualisieren von SQL Server
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: Kompatibilitätszertifizierung
+          href: database-engine/install-windows/compatibility-certification.md
         - name: Unterstützte Versions- und Editionsupgrades in SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: Unterstützte Versions- und Editionsupgrades in SQL Server 2016
@@ -4190,6 +4192,8 @@
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
             - name: Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: Ändern des Datenbank-Kompatibilitätsmodus mithilfe des Abfrageoptimierungs-Assistenten
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Konfiguration
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5700,7 +5704,7 @@
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
             - name: Videos >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
-    - name: Assistent für Datenbankexperimente
+    - name: Assistent für Datenbankexperimente (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
         - name: Erste Schritte
@@ -7293,6 +7297,8 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: Überprüfen von Planhinweislisten nach einem Upgrade
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: Abfrageoptimierungs-Assistent
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: Resource Governor
           href: relational-databases/resource-governor/resource-governor.md
           items:
