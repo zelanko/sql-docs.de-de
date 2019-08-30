@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 8: Wiederherstellen einer Datenbank in Windows Azure-Speicher | Microsoft-Dokumentation'
+title: 'Lektion 8: Wiederherstellen einer Datenbank in Azure Storage | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090713"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153744"
 ---
-# <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Lektion 8: Wiederherstellen einer Datenbank im Windows Azure-Speicher
-  In dieser Lektion erfahren Sie, wie Sie eine Sicherungsdatei lokal erstellen und dann im Windows Azure-Speicher wiederherstellen. Ihre Datenbank kann sich entweder in einer lokalen Umgebung oder auf einem virtuellen Computer in Windows Azure befinden. Für diese Lektion müssen Sie Lektion 4, 5, 6 und 7 nicht abschließen.  
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lektion 8: Wiederherstellen einer Datenbank auf Azure Storage
+  In dieser Lektion erfahren Sie, wie Sie eine Sicherungsdatei lokal erstellen und anschließend in Azure Storage wiederherstellen. Beachten Sie, dass Sie Ihre Datenbank entweder lokal oder auf einem virtuellen Computer in Azure haben können. Für diese Lektion müssen Sie Lektion 4, 5, 6 und 7 nicht abschließen.  
   
  In dieser Lektion wird davon ausgegangen, dass Sie bereits die folgenden Schritte abgeschlossen haben:  
   
--   Sie verfügen über ein Windows Azure-Speicherkonto.  
+-   Sie verfügen über ein Azure Storage Konto.  
   
--   Sie haben einen Container über Ihr Windows Azure-Speicherkonto erstellt.  
+-   Sie haben unter Ihrem Azure Storage Konto einen Container erstellt.  
   
 -   Sie haben eine Richtlinie in einem Container mit Lese-, Schreib- und Auflistungsrechten erstellt. Sie haben auch einen SAS-Schlüssel generiert.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66090713"
   
 -   Sie haben eine Datenbank auf dem Quellcomputer erstellt.  
   
- Um eine Datenbank im Windows Azure-Speicher wiederherzustellen, können Sie folgende Schritte ausführen:  
+ Führen Sie die folgenden Schritte aus, um die Azure Storage einer Datenbank wiederherzustellen:  
   
 1.  Starten Sie SQL Server Management Studio auf dem Quellcomputer.  
   
@@ -67,25 +67,25 @@ ms.locfileid: "66090713"
   
      Am Ende dieses Schritts sollte der Container Daten (.mdf) und Dateien (.ldf) im Verwaltungsportal auflisten.  
   
- Um eine Datenbank mit Daten und Protokolldateien, die auf Windows Azure-Speicher verweisen, mithilfe der SQL Server Management Studio-Benutzeroberfläche wiederherzustellen, führen Sie die folgenden Schritte aus:  
+ Führen Sie zum Wiederherstellen einer Datenbank mit Daten-und Protokolldateien, die auf Azure Storage mithilfe SQL Server Management Studio Benutzeroberfläche verweisen, die folgenden Schritte aus:  
   
-1.  In **Objekt-Explorer**, klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  
+1.  Klicken Sie in **Objekt-Explorer**auf den Servernamen, um die Serverstruktur zu erweitern.  
   
-2.  Erweitern Sie **Datenbanken**, und wählen Sie Ihre Datenbank.  
+2.  Erweitern Sie **Datenbanken**, und wählen Sie Ihre Datenbank aus.  
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Wiederherstellen**.  
   
-4.  Auf der **allgemeine** auf der Seite die **wiederherstellen** im quellabschnitt, klicken Sie auf **Quelle** Gerät.  
+4.  Klicken Sie auf der Seite **Allgemein** im Abschnitt **Wiederherstellungs** Quelle auf **Quell** Gerät.  
   
-5.  Klicken Sie auf die Schaltfläche zum Durchsuchen für das **Quelle** Textfeld des Geräts, das öffnet die **Sicherungsmedien auswählen** im Dialogfeld.  
+5.  Klicken Sie im Textfeld **Quell** Gerät auf die Schaltfläche Durchsuchen, um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen.  
   
-6.  Wählen Sie in das Textfeld Backup Media **Datei**, und klicken Sie auf die **hinzufügen** um die Sicherungsdatei (bak) zu suchen. Klicken Sie auf **OK**.  
+6.  Wählen Sie im Textfeld Sicherungsmedien die Option **Datei**aus, und klicken Sie auf die Schaltfläche **Hinzufügen** , um die Sicherungsdatei (. bak) zu suchen. Klicken Sie auf **OK**.  
   
-7.  Klicken Sie auf **Dateien** auf der ersten Seite.  
+7.  Klicken Sie auf der ersten Seite auf **Dateien** .  
   
-8.  In der **Datenbankdateien wiederherstellen** Abschnitt unter **wiederherstellen als** Feld, und geben Sie die folgenden Schritte:  
+8.  Geben Sie im Abschnitt **Datenbankdateien wiederherstellen** als im Feld **Wiederherstellen als** den folgenden Wert ein:  
   
-     Geben Sie bei einer Datendatei ist: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. Geben Sie für die Protokolldatei: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
+     Geben Sie für Datendatei Folgendes `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`ein:. Geben Sie für Protokolldatei Folgendes `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`ein:.  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

@@ -14,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917082"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154585"
 ---
 # <a name="databases"></a>Datenbanken
   Eine Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] besteht aus einer Auflistung von Tabellen, in der eine bestimmte Menge strukturierter Daten gespeichert ist. Eine Tabelle enthält eine Auflistung von Zeilen, auch als Datensätze oder Tupel bezeichnet, sowie Spalten, auch als Attribute bezeichnet. Jede Spalte in der Tabelle dient zum Speichern eines bestimmten Informationstyps, z. B. Datumsangaben, Namen, Geldbeträge und Zahlen.  
@@ -42,7 +42,7 @@ ms.locfileid: "62917082"
 |-|-|  
 |[Systemdatenbanken](system-databases.md)|[Löschen von Daten- oder Protokolldateien aus einer Datenbank](delete-data-or-log-files-from-a-database.md)|  
 |[Eigenständige Datenbanken](contained-databases.md)|[Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank](display-data-and-log-space-information-for-a-database.md)|  
-|[SQL Server-Datendateien in Microsoft Azure](sql-server-data-files-in-microsoft-azure.md)|[Erhöhen der Größe einer Datenbank](increase-the-size-of-a-database.md)|  
+|[SQL Server von Datendateien in Azure](sql-server-data-files-in-microsoft-azure.md)|[Erhöhen der Größe einer Datenbank](increase-the-size-of-a-database.md)|  
 |[Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)|[Umbenennen einer Datenbank](rename-a-database.md)|  
 |[Datenbankstatus](database-states.md)|[Festlegen des Einzelbenutzermodus für eine Datenbank](set-a-database-to-single-user-mode.md)|  
 |[Dateistatus](file-states.md)|[Verkleinern einer Datenbank](shrink-a-database.md)|  

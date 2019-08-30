@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a84ff61d1656743953f5f854a1b658b303a7acf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b801dd3792755c93006c1c6a48cfa9dc5af9cc37
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992131"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152459"
 ---
 # <a name="dqs-administration"></a>DQS-Administration
 
@@ -35,7 +35,7 @@ ms.locfileid: "67992131"
   
 -   Ermöglicht es DQS-Administratoren, die DQS-Aktivitäten auf einem [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] von einem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]zu überwachen, und *beendet* eine ausgeführte Aktivität oder *beendet* einen laufenden Prozess innerhalb einer Aktivität nach Bedarf.  
   
--   Konfigurieren Sie die Einstellungen für Verweisdatendienste, beispielsweise das Einrichten der Konnektivität mit Windows Azure Marketplace und die direkte Verwaltung von Anbietern für Drittanbieter-Verweisdatendienste.  
+-   Konfigurieren Sie Einstellungen für den Verweis Datendienst, z. b. das Einrichten der Konnektivität mit Azure Marketplace und die Verwaltung direkter Reference Data Service-Anbieter von Drittanbietern.  
   
 -   Konfigurieren Sie Schwellenwerte für die Bereinigungs- und Abgleichsaktivitäten.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67992131"
 ### <a name="configuration"></a>Konfiguration  
  Der Bildschirm **Konfiguration** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] ermöglicht dem DQS-Administrator Folgendes:  
   
--   **Verweisdaten:** Konfigurieren Sie Reference Data Service-Anbieter: Microsoft Azure Marketplace oder direkte Reference Data Service-Anbieter. Nachdem Sie die Verweisdaten-Dienstanbieter eingerichtet haben, können Sie während einer Domänenverwaltungsaktivität in einer Wissensdatenbank den Verweisdaten eine Domäne bzw. Verbunddomäne zuordnen und anschließend die gleiche Wissensdatenbank für die Bereinigungsaktivität in einem Data Quality-Projekt verwenden. Damit können Sie auch die Proxyeinstellungen für die Verbindung mit dem Internet angeben, um Windows Azure Marketplace zu verwenden.  
+-   **Verweisdaten:** Konfigurieren Sie Reference Data Service-Anbieter: Azure Marketplace oder leiten Sie Reference Data Service-Anbieter ein. Nachdem Sie die Verweisdaten-Dienstanbieter eingerichtet haben, können Sie während einer Domänenverwaltungsaktivität in einer Wissensdatenbank den Verweisdaten eine Domäne bzw. Verbunddomäne zuordnen und anschließend die gleiche Wissensdatenbank für die Bereinigungsaktivität in einem Data Quality-Projekt verwenden. Außerdem können Sie die Proxy Einstellungen für die Verbindung mit dem Internet angeben, um Azure Marketplace zu verwenden.  
   
 -   **Allgemeine Einstellungen:** Geben Sie die Schwellenwerte für die Datenbereinigung und den Datenabgleich an, und legen Sie fest, ob Benachrichtigungen für die Profilerstellung in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] aktiviert sein soll. Diese Schwellenwerte werden von DQS bei der computergestützten Bereinigung und bei Abgleichsaktivitäten in einem Data Quality-Projekt verwendet.  
   

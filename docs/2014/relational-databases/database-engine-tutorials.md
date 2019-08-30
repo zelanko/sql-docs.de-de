@@ -10,12 +10,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872666"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154613"
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zur Datenbank-Engine
   Dieser Abschnitt enthält Lernprogramme für [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
@@ -44,17 +44,17 @@ ms.locfileid: "62872666"
  [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien zur Durchsetzung von Standards zur Websiteverwaltung erstellen.  
   
- [Tutorial: Auswerten von Best Practices mit der Richtlinie der richtlinienbasierten Verwaltung](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Tutorial: Auswerten bewährter Methoden mithilfe der Richtlinien basierten Verwaltung](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien erstellen, um [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanzen auf bekannte Probleme zu untersuchen.  
   
- [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und -Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- In diesem Lernprogramm wird veranschaulicht, wie Sie eine SQL Server-Sicherung und -Wiederherstellung im Lernprogramm für den Windows Azure-BLOB-Speicherdienst ausführen.  
+ [Tutorial: SQL Server sichern und Wiederherstellen in Azure BLOB Storage Dienst](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ In diesem Tutorial wird veranschaulicht, wie Sie eine SQL Server Sicherung und Wiederherstellung für den Azure BLOB Storage-Dienst ausführen.  
   
- [Tutorial: SQL Server-Datendateien im Windows Azure Storage-Dienst](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- Dieses Lernprogramm hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direkt im Windows Azure-BLOB-Speicherdienst speichern.  
+ [Tutorial: SQL Server von Datendateien in Azure Storage Dienst](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ In diesem Tutorial erfahren Sie, wie Sie SQL Server Datendateien direkt im Azure-BLOB-Speicherdienst speichern.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Tutorials für SQLServer 2014](../tutorials/tutorials-for-sql-server-2014.md)   
+ [Tutorials für SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet Wiki: SQL Server 2012-Beispiele](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

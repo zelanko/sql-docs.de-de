@@ -5,16 +5,16 @@ description: Erfahren Sie, wie Sie eine Offlinebereitstellung von Big Data-Clust
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652369"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155266"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Durchführen einer Offlinebereitstellung von Big Data-Clustern für SQL Server
 
@@ -33,7 +33,7 @@ In den folgenden Schritten wird beschrieben, wie Sie die Containerimages des Big
 > [!TIP]
 > Die folgenden Schritte erläutern den Prozess. Um die Aufgabe zu vereinfachen, können Sie jedoch das [automatisierte Skript](#automated) verwenden, anstatt diese Befehle manuell auszuführen.
 
-1. Pullen Sie die Big Data-Cluster-Containerimages, indem Sie den folgenden Befehl wiederholen. Ersetzen Sie `<SOURCE_IMAGE_NAME>` durch den jeweiligen [Imagenamen](#images). Ersetzen Sie `<SOURCE_DOCKER_TAG>` durch das Tag für das Release des Big Data-Clusters, z.B. **2019-CTP3.2-Ubuntu**.  
+1. Pullen Sie die Big Data-Cluster-Containerimages, indem Sie den folgenden Befehl wiederholen. Ersetzen Sie `<SOURCE_IMAGE_NAME>` durch den jeweiligen [Imagenamen](#images). Ersetzen `<SOURCE_DOCKER_TAG>` Sie dies durch das Tag für die Big Data Cluster Version, z. b. **2019-RC1-Ubuntu**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -60,27 +60,31 @@ In den folgenden Schritten wird beschrieben, wie Sie die Containerimages des Big
 ### <a id="images"></a> Big Data-Cluster-Containerimages
 
 Die folgenden Big Data-Cluster-Containerimages sind für eine Offlineinstallation erforderlich:
+- **mssql-app-service-proxy**
+- **MSSQL-Control-Watchdog**
+- **mssql-controller**
+- **MSSQL-DNS**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **MSSQL-Security-domainctl**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **MSSQL-Server-ha**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> Automatisiertes Skript
 
@@ -113,7 +117,7 @@ Sie können ein automatisiertes Python-Skript verwenden, das automatisch alle be
 
 ## <a name="install-tools-offline"></a>Offlineinstallation von Tools
 
-Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich **Python**, **azdata**und **kubectl**. Führen Sie die folgenden Schritte aus, um diese Tools auf einem Offlineserver zu installieren.
+Big Data-Cluster Bereitstellungen erfordern mehrere Tools, einschließlich **python**, `azdata`und **kubectl**. Führen Sie die folgenden Schritte aus, um diese Tools auf einem Offlineserver zu installieren.
 
 ### <a id="python"></a> Offlineinstallation von Python
 
@@ -135,13 +139,13 @@ Bereitstellungen von Big Data-Clustern erfordern mehrere Tools, einschließlich 
 
 ### <a id="azdata"></a> Offlineinstallation von azdata
 
-1. Führen Sie auf einem Computer mit Internetzugriff und [Python](https://wiki.python.org/moin/BeginnersGuide/Download) den folgenden Befehl aus, um alle **azdata**-Pakete in den aktuellen Ordner herunterzuladen.
+1. Führen Sie auf einem Computer mit Internet Zugriff und [python](https://wiki.python.org/moin/BeginnersGuide/Download)den folgenden Befehl aus, um alle `azdata` Pakete aus dem aktuellen Ordner herunterzuladen.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Kopieren Sie die heruntergeladenen Pakete und die Datei **requirements.txt** auf den Zielcomputer.
+1. Kopieren Sie die heruntergeladenen Pakete `requirements.txt` und die Datei auf den Zielcomputer.
 
 1. Führen Sie den folgenden Befehl auf dem Zielcomputer aus, und geben Sie dabei den Ordner an, in den Sie die vorherigen Dateien kopiert haben.
 
@@ -159,7 +163,7 @@ Führen Sie die folgenden Schritte aus, um **kubectl** auf einem Offlinecomputer
 
 ## <a name="deploy-from-private-repository"></a>Bereitstellen aus privatem Repository
 
-Verwenden Sie zum Bereitstellen über das private Repository die im [Bereitstellungshandbuch](deployment-guidance.md) beschriebenen Schritte, und verwenden Sie unbedingt eine benutzerdefinierte Bereitstellungskonfigurationsdatei, die die Informationen zu Ihrem privaten Docker-Repository enthält. Die folgenden **azdata**-Befehle veranschaulichen, wie die Docker-Einstellungen in einer benutzerdefinierten Bereitstellungskonfigurationsdatei namens **control.json** geändert werden:
+Verwenden Sie zum Bereitstellen über das private Repository die im [Bereitstellungshandbuch](deployment-guidance.md) beschriebenen Schritte, und verwenden Sie unbedingt eine benutzerdefinierte Bereitstellungskonfigurationsdatei, die die Informationen zu Ihrem privaten Docker-Repository enthält. Die folgenden `azdata` Befehle veranschaulichen, wie die Docker-Einstellungen in einer benutzerdefinierten Bereitstellungs Konfigurationsdatei namens `control.json`geändert werden:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,7 +171,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-In der Bereitstellung werden Sie aufgefordert, den Docker-Benutzernamen und das Kennwort einzugeben, oder Sie können sie in den Umgebungsvariablen **DOCKER_USERNAME** und **DOCKER_PASSWORD** angeben.
+In der Bereitstellung werden Sie aufgefordert, den docker-Benutzernamen und das Kennwort einzugeben `DOCKER_USERNAME` , `DOCKER_PASSWORD` oder Sie können Sie in den Umgebungsvariablen und angeben.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

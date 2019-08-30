@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Erstellen einer Datenbank in Windows Azure-Speicher | Microsoft-Dokumentation'
+title: 'Lektion 4: Erstellen einer Datenbank in Azure Storage | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7361cb5d0e68cfa3f45f46d7f99d68c88c1a556b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090823"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153761"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lektion 4: Erstellen einer Datenbank in Microsoft Azure Storage
-  In dieser Lektion erfahren Sie, wie Sie eine Datenbank mit der Funktion für SQL Server-Datendateien in Windows Azure erstellen. Vor dieser Lektion müssen Sie Lektion 1, 2 und 3 abschließen. Lektion 3 ist ein sehr wichtiger Schritt, da Sie die Informationen über Ihren Windows Azure-Speichercontainer und den zugehörigen Richtliniennamen und SAS-Schlüssel vor Lektion 4 im SQL Server-Anmeldeinformationsspeicher speichern müssen.  
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lektion 4: Erstellen einer Datenbank in Azure Storage
+  In dieser Lektion erfahren Sie, wie Sie eine Datenbank mithilfe des Features SQL Server Datendateien in Azure erstellen. Vor dieser Lektion müssen Sie Lektion 1, 2 und 3 abschließen. Lektion 3 ist ein sehr wichtiger Schritt, da Sie die Informationen über Ihren Azure-Speicher Container und den zugehörigen Richtlinien Namen und SAS-Schlüssel vor Lektion 4 im SQL Server Anmelde Informationsspeicher speichern müssen.  
   
- Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen. Anschließend können Sie eine neue Datenbank im Windows Azure-Speicher erstellen.  
+ Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen. Anschließend können Sie eine neue Datenbank in erstellen Azure Storage  
   
  In dieser Lektion wird davon ausgegangen, dass Sie bereits die folgenden Schritte abgeschlossen haben:  
   
--   Sie verfügen über ein Windows Azure-Speicherkonto.  
+-   Sie verfügen über ein Azure Storage Konto.  
   
--   Sie haben einen Container über Ihr Windows Azure-Speicherkonto erstellt.  
+-   Sie haben unter Ihrem Azure Storage Konto einen Container erstellt.  
   
 -   Sie haben eine Richtlinie in einem Container mit Lese-, Schreib- und Auflistungsrechten erstellt. Sie haben auch einen SAS-Schlüssel generiert.  
   
 -   Sie haben die SQL Server-Anmeldeinformationen auf dem Quellcomputer erstellt.  
   
- Um eine Datenbank in Windows Azure mithilfe der Funktion für SQL Server-Datendateien im Windows Azure-Speicher zu erstellen, führen Sie folgende Schritte aus:  
+ Führen Sie die folgenden Schritte aus, um eine Datenbank in Azure mithilfe der SQL Server Datendateien in Azure Storage zu erstellen:  
   
 1.  Stellen Sie eine Verbindung mit SQL Server Management Studio her.  
   
@@ -71,25 +71,25 @@ ms.locfileid: "66090823"
   
 5.  Um die neue Datenbank "TestDB1" auf einem lokalen SQL Server zu sehen, aktualisieren Sie die Datenbanken im Objekt-Explorer.  
   
-6.  Um die neu erstellte Datenbank im Speicherkonto anzuzeigen, stellen Sie eine Verbindung mit dem Speicherkonto über SQL Server Management Studio (SSMS) her. Um Informationen zum Herstellen einer Verbindung mit einem Windows Azure-Speicher unter Verwendung von SQL Server Management Studio zu erhalten, befolgen Sie diese Schritte:  
+6.  Um die neu erstellte Datenbank im Speicherkonto anzuzeigen, stellen Sie eine Verbindung mit dem Speicherkonto über SQL Server Management Studio (SSMS) her. Weitere Informationen zum Herstellen einer Verbindung mit einem Azure-Speicher mithilfe SQL Server Management Studio finden Sie in den folgenden Schritten:  
   
     1.  Rufen Sie zunächst die Speicherkontoinformationen ab. Melden Sie sich beim Verwaltungsportal an. Klicken Sie anschließend auf **Speicher** , und wählen Sie Ihr Speicherkonto aus. Wenn ein Speicherkonto ausgewählt ist, klicken Sie unten auf der Seite auf **Zugriffsschlüssel verwalten** . Dadurch wird ein ähnliches Dialogfeld geöffnet:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Kopieren Sie die Werte unter **Speicherkontoname** und **Primärer Zugriffsschlüssel** in das Dialogfeld **Mit Windows Azure-Speicher verbinden** in SSMS. Klicken Sie anschließend auf **Verbinden**. Die Informationen zu Speicherkontocontainern werden in SSMS angezeigt, wie im folgenden Bildschirmfoto veranschaulicht:  
+    2.  Kopieren Sie die Werte für **Speicherkonto Name** und **primärer Zugriffsschlüssel** in das Dialogfeld **mit Azure Storage verbinden** in SSMS. Klicken Sie anschließend auf **Verbinden**. Die Informationen zu Speicherkontocontainern werden in SSMS angezeigt, wie im folgenden Bildschirmfoto veranschaulicht:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
- Das folgende Bildschirmfoto zeigt die neu erstellte Datenbank in der lokalen Umgebung und in der Windows Azure-Speicherumgebung.  
+ Der folgende Screenshot zeigt die neu erstellte Datenbank sowohl in der lokalen Umgebung als auch in Azure Storage Umgebung.  
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Hinweis**: Wenn aktive Verweise auf Datendateien in einem Container wird alle Versuche, die zugeordneten SQL Server-Anmeldeinformationen zu löschen schlägt fehl. Wenn bereits eine Lease für eine bestimmte Datenbankdatei in einem BLOB vorhanden ist und Sie sie löschen möchten, müssen Sie die Lease auf dem BLOB unterbrechen. Um die Lease zu unterbrechen, können Sie [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)verwenden.  
+ **Hinweis**: Wenn aktive Verweise auf Datendateien in einem Container vorhanden sind, schlagen alle Versuche, die zugeordneten SQL Server Anmelde Informationen zu löschen, fehl. Wenn bereits eine Lease für eine bestimmte Datenbankdatei in einem BLOB vorhanden ist und Sie sie löschen möchten, müssen Sie die Lease auf dem BLOB unterbrechen. Um die Lease zu unterbrechen, können Sie [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)verwenden.  
   
- Mit dieser neuen Funktion können Sie SQL Server so konfigurieren, dass jede CREATE DATABASE-Anweisung standardmäßig eine Cloud-fähige Datenbank generiert. Das heißt, Sie können Standarddaten und Protokollspeicherorte in SQL Server Management Studio Server-Instanzeigenschaften festlegen. Immer wenn Sie eine Datenbank erstellen, werden dann alle Datenbankdateien (.mdf, .ld) als Seiten-BLOBs im Windows Azure-Speicher erstellt.  
+ Mit dieser neuen Funktion können Sie SQL Server so konfigurieren, dass jede CREATE DATABASE-Anweisung standardmäßig eine Cloud-fähige Datenbank generiert. Anders ausgedrückt: Sie können Standarddaten und Protokoll Speicherorte in SQL Server Management Studio serverinstanzeigenschaften festlegen, sodass alle Datenbankdateien (MDF-, LDF-Dateien) in Azure Storage als seitenblobs erstellt werden, wenn Sie eine Datenbank erstellen.  
   
- Um eine Datenbank im Windows Azure-Speicher mithilfe der SQL Server Management Studio-Benutzeroberfläche zu erstellen, führen Sie die folgenden Schritte aus:  
+ Führen Sie die folgenden Schritte aus, um eine Datenbank in Azure Storage mithilfe SQL Server Management Studio Benutzeroberfläche zu erstellen:  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie dann diese Instanz.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "66090823"
   
  **Nächste Lektion:**  
   
- [Lektion 5. &#40;Optional&#41; Verschlüsseln Ihrer Datenbank mithilfe von TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Lektion 5. &#40;Optionales&#41; Verschlüsseln der Datenbank mit TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

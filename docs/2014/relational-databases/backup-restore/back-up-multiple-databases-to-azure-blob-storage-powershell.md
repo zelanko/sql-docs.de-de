@@ -1,5 +1,5 @@
 ---
-title: Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Windows Azure-Blob-Speicherdienst | Microsoft-Dokumentation
+title: Verwenden von PowerShell zum Sichern mehrerer Datenbanken in Azure BLOB Storage Dienst | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1be1f05ff09d85d29903e4e3be7f1f11600a7b1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922574"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155033"
 ---
-# <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Windows Azure-BLOB-Speicherdienst
-  Dieses Thema enthält Beispielskripts, die verwendet werden können, um Sicherungen im Windows Azure-BLOB-Speicherdienst mit PowerShell-Cmdlets zu automatisieren.  
+# <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Verwenden von PowerShell zum Sichern mehrerer Datenbanken in Azure BLOB Storage-Dienst
+  Dieses Thema enthält Beispiel Skripts, die verwendet werden können, um Sicherungen im Azure-BLOB-Speicherdienst mithilfe von PowerShell-Cmdlets zu automatisieren.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Übersicht über PowerShell-Cmdlets für Sicherungen und Wiederherstellungen  
- `Backup-SqlDatabase` und `Restore-SqlDatabase` sind die beiden wichtigsten Cmdlets, die für Sicherungs- und Wiederherstellungsvorgänge verfügbar sind. Darüber hinaus gibt es andere Cmdlets, die möglicherweise erforderlich sind, um Sicherungen im Windows Azure BLOB-Speicher zu automatisieren, wie den Satz von **SqlCredential** -Cmdlets. Es folgt eine Liste der PowerShell-Cmdlets, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbar sind und die in den Sicherungs- und Wiederherstellungsvorgängen verwendet werden:  
+ `Backup-SqlDatabase` und `Restore-SqlDatabase` sind die beiden wichtigsten Cmdlets, die für Sicherungs- und Wiederherstellungsvorgänge verfügbar sind. Außerdem gibt es weitere Cmdlets, die möglicherweise erforderlich sind, um Sicherungen in Azure BLOB Storage zu automatisieren, wie z. b. die Gruppe der **sqlcredential** -Cmdlets. die folgende Liste [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthält die in verfügbaren PowerShell-Cmdlets, die für Sicherungs-und Wiederherstellungs Vorgänge verwendet werden:  
   
  Backup_SqlDatabase  
  Dieses Cmdlet wird verwendet, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung zu erstellen.  
@@ -30,7 +30,7 @@ ms.locfileid: "62922574"
  Wird zum Wiederherstellen einer Datenbank verwendet.  
   
  New-SqlCredential  
- Dieses Cmdlet wird verwendet, um SQL-Anmeldeinformationen zu erstellen, die für die SQL Server-Sicherung im Windows Azure-Speicher verwendet werden. Weitere Informationen zu Anmeldeinformationen und deren Verwendung in der SQL Server-Sicherung und -Wiederherstellung finden Sie unter [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Dieses Cmdlet wird verwendet, um SQL-Anmelde Informationen zu erstellen, die für die SQL Server Sicherung Azure Storage verwendet werden. Weitere Informationen zu Anmelde Informationen und deren Verwendung in SQL Server Sicherung und Wiederherstellung finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Dieses Cmdlet wird verwendet, um das Objekt mit den Anmeldeinformationen und den entsprechenden Eigenschaften abzurufen.  
@@ -42,7 +42,7 @@ ms.locfileid: "62922574"
  Dieses Cmdlet wird verwendet, um die Eigenschaften des Objekts mit SQL-Anmeldeinformationen festzulegen oder zu ändern.  
   
 > [!TIP]  
->  Die Credential-Cmdlets werden in Szenarien für den Windows Azure BLOB-Speicher bei der Sicherung und Wiederherstellung verwendet.  
+>  Die Credential-Cmdlets werden bei der Sicherung und Wiederherstellung in Azure BLOB Storage-Szenarien verwendet.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell für mehrere Datenbanken, Sicherungsvorgänge mit mehreren Instanzen  
  Die folgenden Abschnitte enthalten die Skripts für verschiedene Vorgänge wie das Erstellen von SQL-Anmeldeinformationen in mehreren SQL Server-Instanzen, das Sichern aller Benutzerdatenbanken in einer Instanz von SQL Server usw. Sie können diese Skripts verwenden, um Sicherungsvorgänge gemäß den Anforderungen Ihrer Umgebung zu automatisieren oder zu planen. Die Skripts, die hier bereitgestellt werden, sind Beispiele und können für Ihre Umgebung geändert oder erweitert werden.  
@@ -51,11 +51,11 @@ ms.locfileid: "62922574"
   
 1.  **Navigieren in SQL Server PowerShell-Pfaden:** Windows PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, die die Hierarchie von Objekten darstellt, die von einem PowerShell-Anbieter unterstützt werden. Wenn Sie zu einem Knoten im Pfad navigiert haben, können Sie andere Cmdlets verwenden, um grundlegende Vorgänge für das aktuelle Objekt auszuführen.  
   
-2.  `Get-ChildItem` -Cmdlet: Die zurückgegebenen Informationen den `Get-ChildItem` hängt vom Speicherort in einem SQL Server PowerShell-Pfad. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbank-Engine-Instanzen zurück, die auf dem Computer installiert sind. Wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlets eine Liste von Datenbankobjekten zurück.  Standardmäßig gibt das `Get-ChildItem`-Cmdlet keine Systemobjekte zurück.  Wenn Sie den -Force-Parameter verwenden, können Sie die Systemobjekte anzeigen.  
+2.  `Get-ChildItem`Cmdlet Welche Informationen von zurückgegeben `Get-ChildItem` werden, hängt vom Speicherort in einem SQL Server PowerShell Pfad ab. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbank-Engine-Instanzen zurück, die auf dem Computer installiert sind. Wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlets eine Liste von Datenbankobjekten zurück.  Standardmäßig gibt das `Get-ChildItem`-Cmdlet keine Systemobjekte zurück.  Wenn Sie den -Force-Parameter verwenden, können Sie die Systemobjekte anzeigen.  
   
      Weitere Informationen finden Sie unter [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
-3.  Die Codebeispiele können unabhängig voneinander ausprobiert werden, indem die Variablenwerte geändert werden. Die Erstellung des Windows Azure-Speicherkontos und der SQL-Anmeldeinformationen sind aber Voraussetzungen, die für alle Sicherungs- und Wiederherstellungsvorgänge im Windows Azure-BLOB-Speicherdienst erforderlich sind.  
+3.  Obwohl jedes Codebeispiel unabhängig von der Änderung der Variablen Werte ausprobiert werden kann, sind für alle Sicherungs-und Wiederherstellungs Vorgänge im Azure-BLOB-Speicherdienst die Erstellung eines Azure Storage Kontos und der SQL-Anmelde Informationen erforderlich.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Erstellen von SQL-Anmeldeinformationen für alle Instanzen von SQL Server  
  Es gibt zwei Beispielskripts, und beide erstellen Anmeldeinformationen mit der Bezeichnung „mybackupToURL“ für alle Instanzen von SQL Server auf einem Computer. Das erste Beispiel ist einfach; die Anmeldeinformationen werden erstellt und keine Ausnahmen aufgefangen.  Wenn beispielsweise bereits vorhandene Anmeldeinformationen mit dem gleichen Namen für eine der Instanzen des Computers vorliegen, schlägt das Skript fehl. Im zweiten Beispiel werden Fehler aufgefangen, und das Skript kann fortgesetzt werden.  
@@ -265,7 +265,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [SQL Server-Sicherung und-Wiederherstellung mit dem Windows Azure-Blob-Speicherdienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

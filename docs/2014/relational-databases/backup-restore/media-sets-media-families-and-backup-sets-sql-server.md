@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6f9d80f8ea696bfbe85a7f5a7aefac32eba1211
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876280"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154787"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Mediensätze, Medienfamilien und Sicherungssätze (SQL Server)
   Dieses Thema bietet eine Einführung zur grundlegenden Terminologie bezüglich der Sicherungsmedien für Sicherungen und Wiederherstellungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und ist für Leser gedacht, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] noch nicht kennen. Dieses Thema beschreibt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Format für Sicherungsmedien, die Entsprechung zwischen Sicherungsmedien und Sicherungsgeräten und die Organisation von Sicherungen auf Sicherungsmedien sowie verschiedene Aspekte im Zusammenhang mit Mediensätzen und Medienfamilien. Im Thema werden außerdem die Schritte zum Initialisieren oder Formatieren von Sicherungsmedien vor der ersten Verwendung oder das Ersetzen eines alten Mediensatzes durch einen neuen Mediensatz beschrieben. Es enthält zudem Informationen dazu, wie alte Sicherungssätze in einem Mediensatz überschrieben und neue Sicherungssätze an einen Mediensatz angefügt werden.  
   
 > [!NOTE]  
->  Weitere Informationen zur SQL Server-Sicherung im Windows Azure-BLOB-Speicherdienst finden Sie unter [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Weitere Informationen zur SQL Server Sicherung im Azure-BLOB-Speicherdienst finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
@@ -48,15 +48,15 @@ ms.locfileid: "62876280"
  Der Sicherungsinhalt, der bei einem erfolgreichen Sicherungsvorgang einem Mediensatz hinzugefügt wird.  
   
   
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> Übersicht über Mediensätze, Medienfamilien und Sicherungssätze  
- Die Sicherungen eines Satzes aus einem oder mehreren Sicherungsmedien bilden einen Mediensatz. Ein *Mediensatz* ist eine geordnete Sammlung von *Sicherungsmedien*, Bändern, Datenträgerdateien oder Windows Azure-BLOBs, die in mindestens einem Sicherungsvorgang mithilfe eines festen Typs sowie einer festen Anzahl von Sicherungsmedien beschrieben wurden. Für einen bestimmten Mediensatz werden Bandlaufwerke, Datenträgerlaufwerke oder Windows Azure-BLOBs verwendet, die jedoch nicht kombiniert werden können. Bei den mit einem Mediensatz verknüpften Sicherungsmedien kann es sich beispielsweise um drei Bandlaufwerke mit den Bezeichnungen `\\.\TAPE0`, `\\.\TAPE1`und `\\.\TAPE2`handeln. Dieser Mediensatz enthält nur Bänder und beginnt mit mindestens drei Bändern (eins pro Laufwerk). Die Art und Anzahl der Sicherungsmedien werden beim Erstellen eines Mediensatzes festgelegt und können dann nicht mehr geändert werden. Falls erforderlich, können bestimmte Medien jedoch zwischen Sicherungs- und Wiederherstellungsvorgängen durch ein Medium gleichen Typs ersetzt werden.  
+##  <a name="OvMediaSetsFamiliesBackupSets"></a>Übersicht über Mediensätze, Medien Familien und Sicherungs Sätze  
+ Die Sicherungen eines Satzes aus einem oder mehreren Sicherungsmedien bilden einen Mediensatz. Ein *Mediensatz* ist eine geordnete Sammlung von *Sicherungsmedien*, Bändern, Datenträgerdateien oder Azure-BLOBs, die in mindestens einem Sicherungsvorgang mithilfe eines festen Typs sowie einer festen Anzahl von Sicherungsmedien beschrieben wurden. Für einen bestimmten Mediensatz werden Bandlaufwerke, Datenträgerlaufwerke oder Azure-BLOBs verwendet, die jedoch nicht kombiniert werden können. Bei den mit einem Mediensatz verknüpften Sicherungsmedien kann es sich beispielsweise um drei Bandlaufwerke mit den Bezeichnungen `\\.\TAPE0`, `\\.\TAPE1`und `\\.\TAPE2`handeln. Dieser Mediensatz enthält nur Bänder und beginnt mit mindestens drei Bändern (eins pro Laufwerk). Die Art und Anzahl der Sicherungsmedien werden beim Erstellen eines Mediensatzes festgelegt und können dann nicht mehr geändert werden. Falls erforderlich, können bestimmte Medien jedoch zwischen Sicherungs- und Wiederherstellungsvorgängen durch ein Medium gleichen Typs ersetzt werden.  
   
  Ein Mediensatz wird auf dem Sicherungsmedium während eines Sicherungsvorgangs durch die Formatierung des Sicherungsmediums erstellt. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Erstellen eines neuen Mediensatzes](#CreatingMediaSet). Nach der Formatierung enthält jede Datei oder jedes Band einen Medienheader für den Mediensatz, und die Dateien oder Bänder sind für den Empfang von Sicherungsinhalten bereit. Nach dem Erstellen der Header wird der Sicherungsvorgang fortgesetzt, und die angegebenen Daten werden auf den für den Vorgang angegebenen Sicherungsmedien gesichert.  
   
 > [!NOTE]  
 >  Mediensätze können zum Schutz gegen beschädigte Medienvolumes (Band oder Datenträgerdatei) gespiegelt werden. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Gespiegelte Sicherungsmediensätze &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)noch nicht kennen.  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] oder höher kann komprimierte Sicherungen nicht lesen. Weitere Informationen finden Sie unter [Sicherungskomprimierung &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]oder später können komprimierte Sicherungen gelesen werden. Weitere Informationen finden Sie unter [Sicherungskomprimierung &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ### <a name="media-families"></a>Medienfamilien  
@@ -89,7 +89,7 @@ ms.locfileid: "62876280"
 -   Angabe, ob die Medienbeschreibung eine MTF-Medienbezeichnung oder eine Medienbeschreibung enthält.  
   
     > [!NOTE]  
-    >  Alle Medien, die für eine Backup- oder Restore-Vorgang verwendet wird, verwenden ein Standardformat der Sicherung wird aufgerufen, [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] werden alle von anderen Anwendungen geschriebenen MTF-medienbezeichnung werden jedoch keine MTF-medienbezeichnungen geschrieben.  
+    >  Alle Medien, die für einen Sicherungs-oder Wiederherstellungs Vorgang verwendet werden, verwenden ein [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] Standard Sicherungs Format mit dem Namen behält eine von einer anderen Anwendung geschriebene MTF-Medien Bezeichnung bei, schreibt jedoch keine MTF-Medien Bezeichnungen.  
   
 -   Medienbezeichnung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format oder die Medienbeschreibung (als Text).  
   
@@ -166,12 +166,12 @@ GO
   
 -   Anzahl der Sicherungssätze  
   
-##  <a name="ConsiderationsForMediaSetFamilies"></a> Mithilfe von Medien und Medienfamilien  
+##  <a name="ConsiderationsForMediaSetFamilies"></a>Verwenden von Medien Sätzen und Familien  
  In diesem Abschnitt werden verschiedene Aspekte im Zusammenhang mit der Verwendung von Mediensätzen und Medienfamilien behandelt.  
   
   
   
-###  <a name="CreatingMediaSet"></a> Erstellen eines neuen Mediensatzes  
+###  <a name="CreatingMediaSet"></a>Erstellen eines neuen Medien Satzes  
  Zum Erstellen eines neuen Mediensatzes müssen Sie die Sicherungsmedien (mindestens ein Band oder eine Datenträgerdatei) formatieren. Durch das Formatieren werden die Sicherungsmedien folgendermaßen geändert:  
   
 1.  Die alte Kopfzeile wird gelöscht (falls vorhanden), effektiv werden die ursprünglichen Inhalte der Sicherungsmedien gelöscht.  
@@ -181,7 +181,7 @@ GO
 2.  Es wird in jedem Sicherungsmedium ein neuer Medienheader in das Sicherungsmedium geschrieben (Band oder Datenträger).  
   
   
-###  <a name="UseExistingMediaSet"></a> Sichern auf einen vorhandenen Mediensatz  
+###  <a name="UseExistingMediaSet"></a>Sichern auf einen vorhandenen Medien Satz  
  Für das Sichern auf einen vorhandenen Mediensatz stehen Ihnen die folgenden zwei Optionen zur Verfügung:  
   
 -   Anfügen an den vorhandenen Sicherungssatz.  
@@ -200,7 +200,7 @@ GO
     > [!NOTE]  
     >  Das Überschreiben vorhandener Sicherungssätze wird mithilfe der Option INIT der BACKUP-Anweisung angegeben.  
   
-####  <a name="Appending"></a> Anfügen an vorhandene Sicherungssätze  
+####  <a name="Appending"></a>Anhängen an vorhandene Sicherungs Sätze  
  Sicherungen von derselben Datenbank oder von anderen Datenbanken, die zu unterschiedlichen Zeitpunkten ausgeführt werden, können auf denselben Medien gespeichert werden. Durch Anfügen eines weiteren Sicherungssatzes auf vorhandene Medien bleiben die bisherigen Inhalte der Medien erhalten, und die neue Sicherung wird nach dem Ende der letzten Sicherung auf die Medien geschrieben.  
   
  Standardmäßig fügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neue Sicherungen immer auf Medien an. Sie können Sicherungen nur an das Ende der Medien anfügen. Wenn ein Medienvolume beispielsweise fünf Sicherungssätze enthält, ist es nicht möglich, die ersten drei Sicherungssätze auszulassen, um den vierten Sicherungssatz durch einen neuen Sicherungssatz zu überschreiben.  
@@ -210,10 +210,10 @@ GO
  Microsoft Windows-Sicherungen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen können die gleichen Medien gemeinsam verwenden, sind allerdings nicht kompatibel. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung können keine Windows-Daten gesichert werden.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] oder höher können komprimierte Sicherungen nicht lesen. Weitere Informationen finden Sie unter [Sicherungskomprimierung &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]in oder höheren Versionen können komprimierte Sicherungen gelesen werden. Weitere Informationen finden Sie unter [Sicherungskomprimierung &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
-####  <a name="Overwriting"></a> Überschreiben von Sicherungssätzen  
+####  <a name="Overwriting"></a>Überschreiben von Sicherungs Sätzen  
  Das Überschreiben vorhandener Sicherungssätze wird mithilfe der Option INIT der BACKUP-Anweisung angegeben. Durch diese Option werden alle Sicherungssätze auf dem Medium überschrieben, und nur der Medienheader wird, falls vorhanden, beibehalten. Wenn kein Medienheader vorhanden ist, wird einer erstellt.  
   
  Bei Bandheadern ist es sinnvoll, den Header beizubehalten. Bei Datenträgersicherungsmedien werden nur die Dateien überschrieben, die von den Sicherungsmedien beim Sicherungsvorgang verwendet werden. Andere Dateien auf dem Datenträger sind nicht davon betroffen. Beim Überschreiben von Sicherungen wird jeder vorhandene Medienheader beibehalten. Die neue Sicherung wird dann als erste Sicherung auf dem Sicherungsmedium erstellt. Wenn kein Medienheader vorhanden ist, wird automatisch ein gültiger Medienheader mit einem zugehörigen Mediennamen und einer Medienbeschreibung geschrieben. Wenn der vorhandene Medienheader ungültig ist, wird der Sicherungsvorgang beendet. Wenn das Medium leer ist, wird der neue Medienheader mit den angegebenen Werten MEDIANAME, MEDIAPASSWORD und MEDIADESCRIPTION (falls verfügbar) generiert.  
@@ -236,7 +236,7 @@ GO
  Wenn das Sicherungsmedium durch Microsoft Windows kennwortgeschützt ist, wird von Microsoft SQL Server nicht auf die Medien geschrieben. Wenn Sie ein kennwortgeschütztes Medium überschreiben möchten, müssen Sie das Medium neu initialisieren.  
   
   
-###  <a name="SequenceNumbers"></a> Sequenznummern  
+###  <a name="SequenceNumbers"></a>Sequenznummern  
  Bei mehreren Medienfamilien innerhalb eines Mediensatzes oder mehreren Sicherungsmedien innerhalb einer Medienfamilie ist die richtige Reihenfolge wichtig. Aus diesem Grund werden bei einer Sicherung folgendermaßen Sequenznummern zugewiesen:  
   
 -   Sequenzielle Medienfamilien innerhalb eines Mediensatzes  
@@ -259,7 +259,7 @@ GO
      Bei einer Wiederherstellung von einer Datenträgersicherung oder jeder Onlinewiederherstellung müssen Sie die gesamte Medienfamilie gleichzeitig bereitstellen. Bei einer Offlinewiederherstellung von Bandsicherungen können Sie die Medienfamilie mit weniger Sicherungsmedien verarbeiten. Jede Medienfamilie wird vollständig verarbeitet, bevor die Verarbeitung einer anderen Medienfamilie begonnen wird. Außer bei der Wiederherstellung mit einem einzelnen Gerät werden Medienfamilien immer parallel verarbeitet.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **Legen Sie zum Erstellen einer neuen Mediensatz**  
+ **So erstellen Sie einen neuen Medien Satz**  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (Option **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen**)  
   
@@ -267,29 +267,29 @@ GO
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.FormatMedia%2A>  
   
- **Um eine neue Sicherung an vorhandene Medien angefügt werden soll.**  
+ **So fügen Sie eine neue Sicherung an vorhandene Medien an**  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (Option **An vorhandenen Sicherungssatz anfügen**)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (Option NOINIT)  
   
- **Vorhandenen Sicherungssätze überschreiben**  
+ **So überschreiben Sie vorhandene Sicherungs Sätze**  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (Option **Alle vorhandenen Sicherungssätze überschreiben**)  
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (Option INIT)  
   
- **Das Ablaufdatum festlegen**  
+ **So legen Sie das Ablaufdatum fest**  
   
 -   [Festlegen des Ablaufdatums für eine Sicherung &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **Um den zeigen Medien- und familiensequenznummern an**  
+ **So zeigen Sie die Medien Sequenz-und Familien Sequenznummern an**  
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [backupmediafamily &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql) (**family_sequence_number**-Spalte)  
   
- **Die Sicherungssätze auf einem bestimmten Sicherungsmedium anzeigen**  
+ **So zeigen Sie die Sicherungs Sätze auf einem bestimmten Sicherungsmedium an**  
   
 -   [Anzeigen der Daten und Protokolldateien in einem Sicherungssatz &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
@@ -297,7 +297,7 @@ GO
   
 -   [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   
- **Zum Lesen des Medienheaders des Mediums auf einem Sicherungsmedium**  
+ **So lesen Sie den Medien Header des Mediums auf einem Sicherungsmedium**  
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: Anfügen einer Domäne oder Verbunddomäne an Verweisdaten | Microsoft-Dokumentation
+title: Anfügen einer Domäne oder Verbund Domäne an Verweis Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 153f4e25372a7cbb5e58f7fdc4d5a9134b60ed61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481112"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154512"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Anfügen einer Domäne oder Verbunddomäne an Verweisdaten
-  In diesem Thema wird beschrieben, wie Domänen/Verbunddomänen in einer Data Quality-Wissensdatenbank an einen Verweisdatendienst im Windows Azure Marketplace angefügt werden, um Wissen mithilfe der hochwertigen Verweisdaten zu generieren. Jeder Verweisdatendienst enthält ein Schema (Datenspalten). Nachdem eine Domäne oder eine Verbunddomäne an einen Verweisdatendienst angefügt wurde, müssen Sie die angefügte Domäne bzw. die einzelnen Domänen innerhalb der Verbunddomäne den entsprechenden Spalten im Schema des Verweisdatendiensts zuordnen. Indem eine Verbunddomäne an einen Verweisdatendienst angefügt wird, haben Sie die Möglichkeit, nur eine Domäne an einen Verweisdatendienst anzufügen. Daraufhin können Sie den entsprechenden Spalten im Schema des Verweisdatendiensts die einzelnen Domänen innerhalb der Verbunddomäne zuordnen.  
+  In diesem Thema wird beschrieben, wie Domänen/Verbund Domänen in einer Data Quality-Wissensdatenbank an einen Verweis Datendienst in Azure Marketplace angefügt werden, um Wissen mit qualitativ hochwertigen Verweis Daten zu erstellen. Jeder Verweisdatendienst enthält ein Schema (Datenspalten). Nachdem eine Domäne oder eine Verbunddomäne an einen Verweisdatendienst angefügt wurde, müssen Sie die angefügte Domäne bzw. die einzelnen Domänen innerhalb der Verbunddomäne den entsprechenden Spalten im Schema des Verweisdatendiensts zuordnen. Indem eine Verbunddomäne an einen Verweisdatendienst angefügt wird, haben Sie die Möglichkeit, nur eine Domäne an einen Verweisdatendienst anzufügen. Daraufhin können Sie den entsprechenden Spalten im Schema des Verweisdatendiensts die einzelnen Domänen innerhalb der Verbunddomäne zuordnen.  
   
 > [!WARNING]  
 >  Die an einen Verweisdatendienst angefügte Verbunddomäne ist in der Domänen-Dropdownliste verfügbar, während Domänen den Spalten in Schema des Verweisdatendiensts zugeordnet werden. Ordnen Sie die Verbunddomäne keiner Spalte im Schema des Verweisdatendiensts zu; Sie dürfen den entsprechenden Spalten im Schema des Verweisdatendiensts nur einzelne Domänen innerhalb einer Verbunddomäne zuordnen. Andernfalls tritt ein Fehler auf.  
   
- Das Schema eines Verweisdatendiensts kann über eine erforderliche Spalte verfügen, die mit der entsprechenden Domäne zugeordnet werden muss, wenn Sie einen Verweisdatendienst verwenden möchten. Die erforderliche Spalte in einem Verweisdatenschema wird mit einem „(M)“ im Spaltennamen gekennzeichnet. So ist **AddressLine** beispielsweise die erforderliche Schemaspalte in **Melissa Data (Adressdaten)**, und **CompanyName** ist die erforderliche Schemaspalte in **Digital Trowel Inc. (US-Unternehmen und professionelle Daten für SQL-Benutzer)**.  
+ Das Schema eines Verweisdatendiensts kann über eine erforderliche Spalte verfügen, die mit der entsprechenden Domäne zugeordnet werden muss, wenn Sie einen Verweisdatendienst verwenden möchten. Die erforderliche Spalte in einem Verweisdatenschema wird mit einem „(M)“ im Spaltennamen gekennzeichnet. So ist **AddressLine** beispielsweise die erforderliche Schemaspalte in **Melissa Data (Adressdaten)** , und **CompanyName** ist die erforderliche Schemaspalte in **Digital Trowel Inc. (US-Unternehmen und professionelle Daten für SQL-Benutzer)** .  
   
  In diesem Artikel werden vier Domänen erstellt: **Adresszeile**, **Ort**, **Bundesland** und **PLZ**, unter einer Verbunddomäne, **Adressüberprüfung**, fügen die Verbunddomäne an den Reference Data Service **Melissa Data – Address Check** (Melissa Data (Adressüberprüfung)) an und ordnen die einzelnen Domänen innerhalb der Verbunddomäne anschließend den entsprechenden Spalten im Reference Data Service-Schema zu.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "65481112"
   
 8.  Im Dialogfeld **Onlinekatalog der Reference Data Service-Anbieter** :  
   
-    1.  Aktivieren Sie unter **DataMarket Data Quality Services** das Kontrollkästchen **Melissa Data (Adressüberprüfung)**.  
+    1.  Aktivieren Sie unter **DataMarket Data Quality Services** das Kontrollkästchen **Melissa Data (Adressüberprüfung)** .  
   
     2.  Ordnen Sie die Spalten des Verweisdatendiensts Melissa Data (Adressüberprüfung) den entsprechenden Domänen (Adresszeile, Ort, Bundesland und PLZ) zu. Sie ordnen die Spalten zu, indem Sie in der Spalte **RDS-Schema** eine Verweisdatendienst-Spalte auswählen und dann die entsprechende Domäne in der Spalte **Domäne** auswählen. Um mehr Zeilen in der Tabelle hinzuzufügen, klicken Sie auf das Symbol **Schemaeintrag hinzufügen** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "65481112"
          ![Dialogfeld „Onlinekatalog der Reference Data Service-Anbieter“](../../2014/data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Online Reference Data Providers Catalog dialog box")  
   
         > [!NOTE]  
-        >  -   Im Dialogfeld **Onlinekatalog der Reference Data Service-Anbieter** werden unter dem Knoten **DataMarket Data Quality Services** alle Verweisdaten-Dienstanbieter angezeigt, die Sie in Windows Azure Marketplace abonniert haben. Wenn Sie in DQS direkte Drittanbieter von Online-Verweisdatendiensten konfiguriert haben, werden diese unter einem anderen Knoten mit der Bezeichnung **Direkte Drittanbieter-Onlineanbieter** angezeigt (zu diesem Zeitpunkt nicht verfügbar, da keine direkten Drittanbieter von Online-Verweisdatendiensten in DQS konfiguriert sind).  
+        >  -   Im Dialogfeld **Online Katalog der Verweis Datenanbieter** zeigt der Knoten **datamarket Data Quality Services** alle Reference Data Service-Anbieter an, die Sie in Azure Marketplace abonniert haben. Wenn Sie in DQS direkte Drittanbieter von Online-Verweisdatendiensten konfiguriert haben, werden diese unter einem anderen Knoten mit der Bezeichnung **Direkte Drittanbieter-Onlineanbieter** angezeigt (zu diesem Zeitpunkt nicht verfügbar, da keine direkten Drittanbieter von Online-Verweisdatendiensten in DQS konfiguriert sind).  
   
 9. Sie kehren zur Registerkarte **Verweisdaten** zurück. Ändern Sie im Bereich **Anbietereinstellungen** ggf. die Werte in den folgenden Feldern:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65481112"
   
 10. Klicken Sie auf **Fertig stellen** , um die Wissensdatenbank zu veröffentlichen. Eine Bestätigungsmeldung wird angezeigt, nachdem die Wissensdatenbank erfolgreich veröffentlicht wurde.  
   
- Sie können diese Wissensdatenbank jetzt für Bereinigungsaktivitäten in einem Data Quality-Projekt verwenden, um US-Adressen in den Quelldaten basierend auf dem Wissen zu standardisieren und zu bereinigen, das von Melissa Data über den Windows Azure Marketplace bereitgestellt wird.  
+ Sie können diese Wissensdatenbank jetzt für Bereinigungs Aktivitäten in einem Data Quality-Projekt verwenden, um US-Adressen in den Quelldaten zu standardisieren und zu bereinigen, basierend auf den von Melissa Data über Azure Marketplace bereitgestellten Kenntnissen.  
   
 ##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Zuordnen einer Domäne zu Verweisdaten  
  Erstellen Sie ein Data Quality-Projekt, und führen Sie die Bereinigungsaktivität für die Quelldaten aus, die US-Adressen enthalten, indem Sie diese mit der in diesem Thema erstellten Wissensdatenbank vergleichen. Siehe [Bereinigen von Daten mit Wissen über &#40;externe&#41; Verweisdaten](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

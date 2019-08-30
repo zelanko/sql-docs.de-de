@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e085506e1c427a856202514f29a8f51d5859c881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5996eea620d61eb9ca6ccd0f499398492bad591
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935394"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152542"
 ---
 # <a name="data-quality-services-concepts"></a>Konzepte der Data Quality Services
 
@@ -40,7 +40,7 @@ ms.locfileid: "67935394"
   
  **Reference Data Services**  
   
- Sie können Verweisdaten verwenden, um die Daten zu überprüfen, zu korrigieren und anzureichern und dabei die Dienste von Unternehmen nutzen, die die Qualität ihrer Verweisdaten garantieren. Sie können die Dienste von Windows Azure Marketplace verwenden, um eine Verbindung mit Verweisdatenanbietern herzustellen, oder Sie können eine direkte Verbindung zu einem Anbieter nutzen. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
+ Sie können Verweisdaten verwenden, um die Daten zu überprüfen, zu korrigieren und anzureichern und dabei die Dienste von Unternehmen nutzen, die die Qualität ihrer Verweisdaten garantieren. Sie können die Dienste von Azure Marketplace verwenden, um eine Verbindung mit Verweis Datenanbietern herzustellen, oder Sie können eine direkte Verbindung zu einem Anbieter verwenden. Weitere Informationen finden Sie unter [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md).  
   
  Weitere Informationen zur Wissensverwaltung in DQS finden Sie unter [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   

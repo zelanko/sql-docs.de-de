@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e2a949511eea455c20880e053b64659b8f9c15f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76bb6ec47b0cfce0fb8e5f5e98f9e208f3b678b3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992349"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152733"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Bereinigen von Daten mit (externem) Verweisdaten-Wissen
 
@@ -56,7 +56,7 @@ ms.locfileid: "67992349"
  Sie müssen über die Rolle "dqs_kb_editor" oder "dqs_kb_operator" für die Datenbank DQS_MAIN verfügen, um eine Datenbereinigung auszuführen.  
   
 ##  <a name="Cleanse"></a> Bereinigen der Daten mit Verweisdaten-Wissen  
- Wir fahren mit demselben Beispiel zur Verwendung der Domänen fort, die wir im vorherigen Thema, [Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), mit dem Melissa-Datendienst im Azure Marketplace zugeordnet haben. Jetzt verwenden wir die gleichen Domänen, um einige Beispiel-US-Adressen zu bereinigen. Die Schritte zum Bereinigen von Daten sind dieselben wie in [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) beschrieben. Wir lenken Ihre Aufmerksamkeit jedoch während des Prozesses an die nötigen Stellen.  
+ Wir werden das gleiche Beispiel für die Verwendung der Domänen verwenden, die wir im vorherigen Thema, [Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md), mit dem Melissa-Datendienst in Azure Marketplace. Jetzt verwenden wir die gleichen Domänen, um einige Beispiel-US-Adressen zu bereinigen. Die Schritte zum Bereinigen von Daten sind dieselben wie in [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) beschrieben. Wir lenken Ihre Aufmerksamkeit jedoch während des Prozesses an die nötigen Stellen.  
   
 1.  Erstellen Sie ein Datenqualitätsprojekt, und wählen Sie die Aktivität **Bereinigung** aus. Siehe [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   

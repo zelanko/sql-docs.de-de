@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652386"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160704"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Azure Kubernetes Service für die Bereitstellung von Big-Data-Clustern für SQL Server
 
@@ -35,9 +35,9 @@ In diesem Artikel wird ausführlich beschrieben, wie Sie mithilfe der Azure CLI
    - **Kubectl**
    - **Azure Data Studio**
    - **Erweiterung für SQL Server 2019**
-   - **Azure CLI**
+   - **Azure CLI**
 
-- Mindestens Version 1.10 für Kubernetes-Server. Für AKS müssen Sie den Parameter `--kubernetes-version` verwenden, um eine andere als die Standardversion anzugeben.
+- Mindestens 1,13-Version für Kubernetes-Server. Für AKS müssen Sie den Parameter `--kubernetes-version` verwenden, um eine andere als die Standardversion anzugeben.
 
 - Verwenden Sie Folgendes, um AKS in einfachen Überprüfungsszenarios optimal nutzen zu können:
    - 8 vCPUs, die auf alle Knoten verteilt sind

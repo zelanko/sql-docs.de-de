@@ -5,22 +5,22 @@ description: Referenzartikel zu azdata bdc spark statement-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 57044b75219f4c2827c322c100a5d25d5f0b274a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 272a633a347f767145476e770e2d9b64b7470e49
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653197"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153081"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Der folgende Artikel enthält Referenzinformationen zu den **bdc spark statement**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
+Dieser Artikel ist ein Referenz Artikel für **azdata**. 
 
 ## <a name="commands"></a>Befehle
 |     |     |
@@ -38,7 +38,7 @@ azdata bdc spark statement list --session-id -i
 ### <a name="examples"></a>Beispiele
 Listen Sie alle Sitzungsanweisungen auf.
 ```bash
-azdata bdc spark statement list --session-id 0
+azdata spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -51,7 +51,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
@@ -63,7 +63,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>Beispiele
 Führen Sie eine Anweisung aus.
 ```bash
-azdata bdc spark statement create --session-id 0 --code "2+2"
+azdata spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -90,7 +90,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>Beispiele
 Rufen Sie die Anweisungsinformationen für die Sitzung mit der ID 0 und die Anweisung mit der ID 0 ab.
 ```bash
-azdata bdc spark statement info --session-id 0 --statement-id 0
+azdata spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -117,7 +117,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>Beispiele
 Brechen Sie eine Anweisung ab.
 ```bash
-azdata bdc spark statement cancel --session-id 0 --statement-id 0
+azdata spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Erforderliche Parameter
 #### `--session-id -i`
@@ -138,4 +138,6 @@ Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.
+- Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
+
+- Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).

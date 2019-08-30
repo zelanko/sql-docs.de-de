@@ -1,5 +1,5 @@
 ---
-title: Ablaufverfolgung und Wiedergabe von Ereignissen | Microsoft-Dokumentation
+title: Ablauf Verfolgung und Wiedergabe von Ereignissen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - events [SMO], replaying
 - events [SMO], tracing
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f441cceed84b873b31c7d4691b08a541a0aee06f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d83b716d9919bf322097b8ded8409950982d961c
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030161"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148362"
 ---
 # <a name="tracing-and-replaying-events"></a>Verfolgen und Wiedergeben von Ereignissen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO werden die **Ablaufverfolgung** und **Replay** Objekte in der <xref:Microsoft.SqlServer.Management.Trace> Namespace bieten programmgesteuerten Zugriff auf die [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] Funktionen, die verwendet wird, für die Überwachung einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen.  
+  In SMO bieten die **Trace** - **und Replay** <xref:Microsoft.SqlServer.Management.Trace> -Objekte im-Namespace programmgesteuerten Zugriff [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] auf die-Funktionalität, die zum Überwachen einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]von oder verwendet wird. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen.  
   
- Die **Ablaufverfolgung** und **Replay** Objekte stellen einen Satz von Objekten, die verwendet werden können, zum Erstellen von ablaufverfolgungen in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Diese Objekte können in Ihren eigenen Anwendungen verwendet werden, um manuell Ablaufverfolgungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] zu erstellen. Darüber hinaus SMO **Ablaufverfolgung** Objekte können verwendet werden, zum Lesen von SQL-Ablaufverfolgungs-Dateien und Tabellen, die durch die Überwachung erstellt wurden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], oder DTS-Protokollierung.  
+ Die Ablaufverfolgungs-und **Wiedergabe** Objekte stellen eine Reihe von-Objekten bereit, die zum Erstellen von Ablauf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Verfolgungen für eine Instanz von verwendet werden können. Diese Objekte können in Ihren eigenen Anwendungen verwendet werden, um manuell Ablaufverfolgungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] zu erstellen. Außerdem können SMO-Ablauf **Verfolgungs** Objekte zum Lesen von SQL-Ablauf Verfolgungs Dateien und-Tabellen verwendet werden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]die durch die Überwachung, oder die DTS-Protokollierung erstellt wurden.  
   
- SMO **Ablaufverfolgung** Objekten können Sie die folgenden Funktionen ausführen:  
+ Mit SMO-Ablauf **Verfolgungs** Objekten können Sie die folgenden Funktionen ausführen:  
   
 -   Erstellen einer Ablaufverfolgung.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "68030161"
   
 -   Wiedergeben von Ablaufverfolgungsdateien oder Ablaufverfolgungstabellen.  
   
- Die Ablaufverfolgungsdaten aus der **Ablaufverfolgung** und **Replay** Objekte können von der SMO-Anwendung verwendet werden, oder es untersucht werden kann, manuell mithilfe von [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Die Ablaufverfolgungsdaten sind auch kompatibel mit der [SQL-Ablaufverfolgung](../../../relational-databases/sql-trace/sql-trace.md) gespeicherte Prozeduren, die auch eine Ablaufverfolgung ermöglichen.  
+ Die Ablauf Verfolgungs Daten aus den **Trace** -und **Replay** -Objekten können von der SMO-Anwendung verwendet werden, oder Sie können mithilfe [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)manuell untersucht werden. Die Ablauf Verfolgungs Daten sind auch mit den gespeicherten Prozeduren der [SQL](../../../relational-databases/sql-trace/sql-trace.md) -Ablauf Verfolgung kompatibel, die ebenfalls Ablauf Verfolgungs Funktionen bieten  
   
  Die SMO-Ablaufverfolgungsobjekte befinden sich im <xref:Microsoft.SqlServer.Management.Trace>-Namespace, für den ein Verweis auf die Datei Microsoft.SQLServer.ConnectionInfo.dll erforderlich ist.  
   
- Die **Ablaufverfolgung** und **Replay** Objekte erfordern einer [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> Objekt zum Herstellen einer Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Die [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) Objekt befindet sich in der [Microsoft.SqlServer.Management.Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) -Namespace, der ein Verweis auf die Datei Microsoft.SQLServer.ConnectionInfo.dll erforderlich ist.  
+ Die **Trace** -und **Replay** -Objekte erfordern ein [Server Connection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> -Objekt, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Instanz von herzustellen. Das [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) -Objekt befindet sich im [Microsoft. SqlServer. Management. Common](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common) -Namespace, der einen Verweis auf die Datei Microsoft. SqlServer. ConnectionInfo. dll erfordert.  
   
 > [!NOTE]  
->  Die **Ablaufverfolgung** und **Replay** Objekte werden auf einer 64-Bit-Plattform nicht unterstützt.  
+>  Die Ablaufverfolgungs-und **Wiedergabe** Objekte werden auf einer 64-Bit-Plattform nicht unterstützt.  
   
   

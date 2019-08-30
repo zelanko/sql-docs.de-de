@@ -22,19 +22,19 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3854b9b49435cf9db453527deaa9d427b04e6f74
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890820"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155089"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
   In diesem Thema werden die Vorteile der Sicherung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und grundlegende Begriffe zu Sicherung und Wiederherstellung erläutert. Darüber hinaus bietet das Thema eine Einführung in Sicherungs- und Wiederherstellungsstrategien für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Sicherheitsüberlegungen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen und -Wiederherstellungen.  
   
  Durch die Sicherungs- und Wiederherstellungskomponente von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um das Risiko schwerwiegenden Datenverlusts zu verringern, müssen Sie die Datenbanken regelmäßig sichern, um Änderungen an den Daten beizubehalten. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie schützt Datenbanken vor Datenverlust, der durch die verschiedensten Fehler verursacht werden kann. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz wiederherstellen und dann die Datenbank wiederherstellen, um im Notfall effektiv reagieren zu können.  
   
- Neben dem lokalen Speicher für das Speichern der Sicherung unterstützt SQL Server auch das Sichern und Wiederherstellen mit dem Windows Azure-BLOB-Speicherdienst. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Windows Azure-BLOB-Speicherdienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Neben dem lokalen Speicher für das Speichern der Sicherungen unterstützt SQL Server auch die Sicherung und Wiederherstellung über den Azure BLOB Storage-Dienst. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "68890820"
   
     -   Hardwarefehler (z. B. ein beschädigter Datenträger oder der endgültige Verlust eines Servers)  
   
-    -   Naturkatastrophen. Mit der SQL Server-Sicherung im Windows Azure-BLOB-Speicherdienst können Sie eine externe Sicherung in einer anderen Region als an Ihrem lokalen Standort erstellen. Diese wird dann verwendet, wenn der lokale Standort durch eine Naturkatastrophe in Mitleidenschaft gezogen wird.  
+    -   Naturkatastrophen. Durch die Verwendung SQL Server Sicherung im Azure-BLOB-Speicherdienst können Sie eine externe Sicherung in einer anderen Region als Ihrem lokalen Standort erstellen, um Sie im Falle einer Naturkatastrophe zu verwenden, die Ihren lokalen Standort beeinträchtigt.  
   
 -   Darüber hinaus sind Sicherungen einer Datenbank hilfreich für Routineverwaltungsaufgaben, wie z. B. Kopieren einer Datenbank zwischen Servern, Einrichten von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] oder Datenbankspiegelung und Archivierung.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68890820"
  Eine Datenkopie, die zum Wiederherstellen der Daten nach einem Fehler verwendet werden kann. Sicherungen einer Datenbank können auch verwendet werden, um eine Kopie der Datenbank an einem neuen Speicherort wiederherzustellen.  
   
  Sicherungsgerät  
- Ein Datenträger oder Bandgerät, auf den bzw. das SQL Server-Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Windows Azure-BLOB-Speicherdienst geschrieben werden. Das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Windows Azure-BLOB-Speicherdienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Ein Datenträger oder Bandgerät, auf den bzw. das SQL Server-Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server Sicherungen können auch in einen Azure BLOB Storage-Dienst geschrieben werden. das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Sicherungsmedien  
  Bänder oder Datenträgerdateien, auf die Sicherungen geschrieben wurden.  

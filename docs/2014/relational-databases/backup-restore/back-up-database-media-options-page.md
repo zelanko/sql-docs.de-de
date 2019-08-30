@@ -13,12 +13,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876817"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154836"
 ---
 # <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
   Auf der Seite  **Medienoptionen** des Dialogfelds **Datenbank sichern** können Sie Medienoptionen zur Sicherung der Datenbank anzeigen oder ändern.  
@@ -38,7 +38,7 @@ ms.locfileid: "62876817"
 ## <a name="options"></a>Optionen  
   
 ### <a name="overwrite-media"></a>Medium überschreiben  
- Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Windows Azure-Speicher) als Sicherungsziel auswählen, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung `BACKUP TO URL.. WITH FORMAT` überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Azure Storage) als Sicherungs Ziel ausgewählt haben, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung `BACKUP TO URL.. WITH FORMAT` überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Nur die Option **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen** wird mit Verschlüsselungsoptionen unterstützt. Wenn Sie die Optionen im Abschnitt **Auf vorhandenen Mediensatz sichern** auswählen, werden die Verschlüsselungsoptionen auf der Seite **Sicherungsoptionen** deaktiviert.  
   

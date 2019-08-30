@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SMO [SQL Server], events
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ec6dccc41e160d2b56df3e3c6e7f85804552cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126736"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148727"
 ---
 # <a name="handling-smo-events"></a>Behandeln von SMO-Ereignissen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "68126736"
 ## <a name="event-subscription"></a>Ereignisabonnement  
  Sie behandeln Ereignisse, indem Sie eine Ereignishandlerklasse schreiben, eine Instanz dieser Klasse erstellen, den Ereignishandler dem übergeordneten Objekt zuordnen und dann das Ereignis abonnieren.  
   
- Eine Ereignishandlerklasse muss geschrieben werden, um Ereignisse zu behandeln. Die Ereignishandlerklasse kann mehr als eine Ereignishandlerfunktion enthalten und muss für die zu behandelnden Ereignisse installiert sein. Die Ereignishandlerfunktionen erhalten Informationen über das Ereignis aus der *ServerEventNotificatificationArgs* Parameter, der verwendet werden kann, um Informationen über das Ereignis zu melden.  
+ Eine Ereignishandlerklasse muss geschrieben werden, um Ereignisse zu behandeln. Die Ereignishandlerklasse kann mehr als eine Ereignishandlerfunktion enthalten und muss für die zu behandelnden Ereignisse installiert sein. Die Ereignishandlerfunktionen empfangen Informationen über das Ereignis vom *ServerEventNotificatificationArgs* -Parameter, der zum Melden von Informationen über das Ereignis verwendet werden kann.  
   
- Die Typen von Datenbank- und Serverereignisse, die verarbeitet werden können finden Sie in der <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> Klasse und die <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>Klasse.  
+ Die Typen von Datenbank-und Server Ereignissen, die behandelt werden können, sind <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> in der- <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>Klasse und der-Klasse aufgeführt.  
   
 ## <a name="example"></a>Beispiel  
-Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="registering-event-handlers-and-subscribing-to-event-handling-in-visual-basic"></a>Registrieren von Ereignishandlern und Abonnieren der Ereignisbehandlung in Visual Basic  

@@ -5,16 +5,16 @@ description: Erfahren Sie, wie die Datenpersistenz in einem SQL Server 2019-Big-
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028595"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155351"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Datenpersistenz mit SQL Server-Big-Data-Clustern in Kubernetes
 
@@ -83,7 +83,7 @@ Für alle Anpassungen müssen Sie zuerst eine Kopie der integrierten Konfigurati
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-Dadurch werden zwei Dateien erstellt (**cluster.json** und **control.json**), die entweder durch manuelles Bearbeiten oder mithilfe des Befehls **azdata bdc config** angepasst werden können. Sie können eine Kombination aus den Bibliotheken „jsonpath“ und „jsonpatch“ verwenden, um Möglichkeiten zum Bearbeiten von Konfigurationsdateien bereitzustellen.
+Dadurch werden zwei Dateien erstellt: " **BDC. JSON** " und " **Control. JSON** ", die angepasst werden können, indem Sie manuell bearbeitet werden, oder Sie können den Befehl " **azdata BDC config** " verwenden. Sie können eine Kombination aus den Bibliotheken „jsonpath“ und „jsonpatch“ verwenden, um Möglichkeiten zum Bearbeiten von Konfigurationsdateien bereitzustellen.
 
 
 ### <a id="config-samples"></a> Konfigurieren von Speicherklassennamen und/oder der Anspruchsgröße
@@ -109,7 +109,7 @@ Eine andere Möglichkeit besteht darin, die benutzerdefinierte Konfigurationsdat
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -134,7 +134,7 @@ Eine andere Möglichkeit besteht darin, die benutzerdefinierte Konfigurationsdat
 Wenden Sie die Patchdatei an. Verwenden Sie den **azdata bdc config patch**-Befehl, um die Änderungen in der JSON-Patchdatei anzuwenden. Im folgenden Beispiel wird die Datei „patch.json“ auf eine Zielkonfigurationsdatei „custom.json“ für die Bereitstellung angewendet.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Nächste Schritte

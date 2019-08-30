@@ -12,12 +12,12 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480741"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154485"
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  
@@ -57,7 +57,7 @@ ms.locfileid: "65480741"
  Zeigen Sie eine Sicht mit dem Status aller (aktuellen und vergangenen) Aktivitäten an, die sich auf den verbundenen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]beziehen. Die überwachten Aktivitätstypen umfassen die Wissensverwaltung, ein Data Quality-Projekt und die SSIS-basierte Datenkorrektur.  
   
  **Configuration**  
- Zeigen Sie die Konfigurationseigenschaften für Verweisdatendienstkonten, (beide durch Windows Azure Marketplace und direkt zu Verweisdatendiensten) allgemeine Einstellungen (interaktive Bereinigung, Abgleich und Profilerstellung) und Einstellungen über den Protokollschweregrad an.  
+ Zeigen Sie die Konfigurations Eigenschaften für Verweis Datendienst Konten (sowohl über Azure Marketplace als auch direkt auf Verweis Datendienste), allgemeine Einstellungen (interaktive Bereinigung, Abgleich und Profilerstellung) und Einstellungen für den Protokoll Schweregrad an.  
   
 ## <a name="see-also"></a>Siehe auch  
  [DQS-Wissensdatenbanken und -Domänen](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

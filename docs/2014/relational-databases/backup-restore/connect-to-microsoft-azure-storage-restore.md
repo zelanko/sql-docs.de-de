@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit Windows Azure-Speicher (Wiederherstellung) | Microsoft-Dokumentation
+title: Verbindung mit Azure Storage herstellen (Wiederherstellen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,25 +12,25 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876610"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154775"
 ---
-# <a name="connect-to-windows-azure-storage-restore"></a>Herstellen einer Verbindung mit dem Windows Azure-Speicher (Wiederherstellung)
-  Über das Dialogfeld können Sie die Verbindung zum Windows Azure-Speicherkonto angeben, um den Dateispeicher im Windows Azure-Speicherkonto abzurufen. Nachdem Sie die erforderlichen Informationen angegeben haben, klicken Sie auf **Verbinden** , um die Verbindung zum Windows Azure-Speicher herzustellen.  
+# <a name="connect-to-azure-storage-restore"></a>Verbindung mit Azure Storage herstellen (Wiederherstellen)
+  Mit dem Dialogfeld können Sie die Verbindung mit den Azure-Speicherkonto Informationen angeben, um den Dateispeicher im Azure-Speicherkonto abzurufen. Nachdem Sie die erforderlichen Informationen angegeben haben, klicken Sie auf **verbinden** , um die Verbindung mit dem Azure-Speicher herzustellen.  
   
-## <a name="windows-azure-storage-account"></a>Windows Azure-Speicherkonto  
+## <a name="azure-storage-account"></a>Azure-Speicherkonto  
  **Speicherkonto**  
- Geben Sie den Namen des Windows Azure-Speicherkontos an, das Sie verwenden möchten. Im Dropdownfeld werden die zuvor verwendeten Konten aufgeführt.  
+ Wählen Sie den Namen des Azure-Speicher Kontos aus, das Sie verwenden möchten, oder geben Sie ihn ein. Im Dropdownfeld werden die zuvor verwendeten Konten aufgeführt.  
   
  **Kontoschlüssel**  
- Geben Sie den Windows Azure-Speicherkonto-Zugriffsschlüssel an.  
+ Geben Sie den Zugriffsschlüssel des Azure-Speicher Kontos an.  
   
  **Sichere Endpunkte (HTTPS) verwenden** – Kontrollkästchen  
- Wählen Sie diese Option, um eine sichere Verbindung zu Azure Storage herzustellen (empfohlen).  
+ Wählen Sie diese Option aus, um eine sichere Verbindung mit Azure Storage herzustellen: empfohlen.  
   
  **Kontoschlüssel speichern** – Kontrollkästchen  
  Aktivieren Sie dieses Kontrollkästchen, wenn SQL Server den Zugriffsschlüssel für dieses Speicherkonto speichern soll.  

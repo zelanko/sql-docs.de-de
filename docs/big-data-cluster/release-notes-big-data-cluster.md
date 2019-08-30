@@ -5,27 +5,39 @@ description: In diesem Artikel werden die neuesten Updates und bekannten Problem
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653435"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160694"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Versionshinweise zu Big-Data-Clustern unter SQL Server
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>Anmerkungen zu dieser Version von SQL Server Big Data-Clustern
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 In diesem Artikel werden Updates und bekannte Probleme für die neuesten Versionen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]aufgeführt.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>Release Candidate (August)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+In den folgenden Abschnitten werden die neuen Features und bekannten Probleme für Big Data Cluster in SQL Server 2019 Release Candidate beschrieben.
+
+### <a name="whats-new"></a>Neues
+
+|Neue Funktion oder Update | Details |
+|:---|:---|
+|SQL Server Always on Verfügbarkeits Gruppe |Beim Bereitstellen eines SQL Server Big Data-Clusters können Sie die Bereitstellung so konfigurieren, dass eine Verfügbarkeits Gruppe erstellt wird, die Folgendes bereitstellt:<br/><br/>-Hohe Verfügbarkeit <br/><br/>-Read-Scale Out <br/><br/>-Horizontales Skalieren von Daten in den Daten Pool<br/><br>Siehe bereitstellen [mit hoher Verfügbarkeit](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Vereinfachte Installation für das Tool mit dem [Installations-Manager](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`s](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`s](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Laden Sie den Release Candidate-Build von Azure Data Studio herunter](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Problem Behandlungs Notebooks wurden im jupyter-Handbuch SQL Server 2019 Guide hinzugefügt.<br/><br/>Benutzeroberflächen Anmeldung hinzugefügt.<br/><br/>Controller Dashboard zum Anzeigen von Dienst Endpunkten, Anzeigen des Integritäts Status des Clusters und Zugreifen auf Problembehandlungs-Notebooks hinzugefügt.<br/><br/>Verbesserte Ausgabe-/Bearbeitungsleistung von Notebook Zellen.|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+
+SQL Server 2019 Big Data-Cluster Release Candidate Buildnummer `15.0.1900.47`aktualisieren ist.
 
 ## <a id="ctp32"></a> CTP 3.2 (Juli)
 
@@ -48,13 +60,13 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
 
 #### <a name="polybase"></a>PolyBase
 
-- Die Weitergabe der TOP-Klausel, wenn die Anzahl > 1000 ist, wird in diesem Release nicht unterstützt. In solchen Fällen werden alle Zeilen aus der Remotedatenquelle gelesen.
+- Die Weitergabe der TOP-Klausel, wenn die Anzahl > 1000 ist, wird in diesem Release nicht unterstützt. In solchen Fällen werden alle Zeilen aus der Remotedatenquelle gelesen. (In Release Candidate korrigiert)
 
 - Die Weitergabe von verbundenen Joins an externe Datenquellen wird in diesem Release nicht unterstützt. Mit der Weitergabe von zwei Datenpooltabellen vom Verteilungstyp ROUND_ROBIN gelangen die Daten zur Ausführung der JOIN-Operation in die SQL Master- oder Computepoolinstanz.
 
 #### <a name="compute-pool"></a>Computepool
 
-- Die Big-Data-Clusterbereitstellung unterstützt nur Computepools mit einer Instanz.
+- Die Big-Data-Clusterbereitstellung unterstützt nur Computepools mit einer Instanz. (In Release Candidate korrigiert)
 
 #### <a name="storage-pool"></a>Speicherpool
 

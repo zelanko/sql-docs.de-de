@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d09fa38377910c2960b43eb6534dba4546538b4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92cbea99941b6e9378c4400ae0b563d462c34f27
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942117"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152035"
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup. sp_backup_config_basic (Transact-SQL)
+# <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup. sp_backup_config_basic (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Konfiguriert die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] grundlegende Einstellungen für eine bestimmte Datenbank oder für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Konfiguriert die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] grundlegenden Einstellungen für eine bestimmte Datenbank oder für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Dieses Verfahren kann für eigene zum Erstellen einer einfachen verwalteten Sicherung Konfigurations aufgerufen werden. Jedoch wenn Sie erweiterte Funktionen oder benutzerdefinierten Zeitplan hinzufügen möchten, zunächst konfigurieren Sie diese Einstellungen mithilfe von [sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) und [managed_backup.sp_ Backup_config_schedule &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) vor dem Aktivieren der verwalteten Sicherung mit diesem Verfahren.  
+>  Diese Prozedur kann eigenständig aufgerufen werden, um eine grundlegende verwaltete Sicherungs Konfiguration zu erstellen. Wenn Sie jedoch planen, erweiterte Features oder einen benutzerdefinierten Zeitplan hinzuzufügen, konfigurieren Sie diese Einstellungen zuerst mithilfe von [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) und [managed_backup. sp_backup_config_schedule &#40; . Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) vor dem Aktivieren der verwalteten Sicherung mit diesem Verfahren.  
    
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,25 +47,25 @@ EXEC managed_backup.sp_backup_config_basic
   
 ##  <a name="Arguments"></a> Argumente  
  @enable_backup  
- Aktiviert oder deaktiviert [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die angegebene Datenbank. Die @enable_backup ist **BIT**. Erforderlicher Parameter beim Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die erste Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie ein vorhandenes ändern [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration dieser Parameter ist optional. In diesem Fall beibehalten Konfigurationswerten nicht angegeben, die vorhandenen Werte.  
+ Aktiviert oder deaktiviert [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die angegebene Datenbank. Der @enable_backup ist **Bit**. Erforderlicher Parameter beim [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfigurieren von für die erste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von. Wenn Sie eine vorhandene [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration ändern, ist dieser Parameter optional. In diesem Fall behalten alle nicht angegebenen Konfigurationswerte Ihre vorhandenen Werte bei.  
   
  @database_name  
- Der Name der Datenbank, für die verwaltete Sicherung in einer bestimmten Datenbank aktiviert werden soll.  
+ Der Datenbankname für die Aktivierung der verwalteten Sicherung für eine bestimmte Datenbank.  
   
  @container_url  
- Eine URL, die den Speicherort der Sicherung angibt. Wenn @credential_name NULL ist, diese URL ist die URL einer shared Access Signature (SAS) in einen blobcontainer im Azure-Speicher und die Sicherungen verwenden die neue Sicherungsfunktion Block-Blob. Weitere Informationen finden Sie in [Verständnis SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Wenn @credential_name angegeben wird, dies ist eine Speicherkonto-URL, und die Sicherungen verwenden, die als veraltet markierte Sicherungsfunktion Seite Blob.  
+ Eine URL, die den Speicherort der Sicherung angibt. Wenn @credential_name NULL ist, ist diese URL eine SAS-URL (Shared Access Signature) für einen BlobContainer in Azure Storage, und die Sicherungen verwenden die neue Sicherung zum Blockieren der blobfunktionalität. Weitere Informationen finden Sie Untergrund Legendes zu [SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Wenn @credential_name angegeben wird, handelt es sich hierbei um eine Speicherkonto-URL, und für die Sicherungen wird die veraltete Sicherung auf seitenblob-Funktionalität verwendet.  
   
 > [!NOTE]  
->  Eine SAS-URL wird für diesen Parameter zu diesem Zeitpunkt unterstützt.  
+>  Zurzeit wird nur eine SAS-URL für diesen Parameter unterstützt.  
   
  @retention_days  
- Die Beibehaltungsdauer für die Sicherungsdateien in Tagen. Die @storage_url ist "int". Dies ist ein erforderlicher Parameter beim Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] zum ersten Mal in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beim Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration dieser Parameter ist optional. Wenn der Parameter nicht angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
+ Die Beibehaltungsdauer für die Sicherungsdateien in Tagen. Ist @storage_url vom Datentyp int. Dies ist ein erforderlicher Parameter, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Wenn Sie zum ersten Mal für die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz konfigurieren. Wenn Sie die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration ändern, ist dieser Parameter optional. Wenn der Parameter nicht angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
   
  @credential_name  
- Der Name der SQL-Anmeldeinformationen, der zur Authentifizierung beim Windows Azure-Speicherkonto verwendet wird. @credentail_name ist **SYSNAME**. Wenn angegeben, wird die Sicherung in ein Seiten-Blob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als Block-Blob gespeichert werden. Seiten-Blob-Sicherung ist veraltet, sodass sie bevorzugt wird, verwenden Sie die neuen Block-BLOB-backup-Funktionen. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn nicht angegeben, werden dann die vorhandenen Konfigurationswerte beibehalten.  
+ Der Name der SQL-Anmelde Informationen, die für die Authentifizierung beim Azure Storage-Konto verwendet werden. @credentail_nameist vom **Datentyp sysname**. Wenn angegeben, wird die Sicherung in einem seitenblob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als blockblob gespeichert. Die Sicherung im seitenblob ist veraltet. Daher wird empfohlen, die neue blockblob-Sicherungsfunktion zu verwenden. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn kein Wert angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
   
 > [!WARNING]
->  Die **@credential_name** Parameter wird derzeit nicht unterstützt. Nur block-BLOB-Sicherung wird unterstützt, erfordert dieser Parameter gleich NULL sein.  
+>  Der **@credential_name** -Parameter wird zurzeit nicht unterstützt. Es wird nur eine Sicherung in blockblob unterstützt, für die dieser Parameter NULL sein muss.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg) oder 1 (Fehler)  
@@ -73,10 +73,10 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in **Db_backupoperator** -Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen und **EXECUTE** Berechtigungen für **Sp_delete_ Backuphistory** gespeicherte Prozedur.  
+ Erfordert die Mitgliedschaft in der Daten Bank Rolle **db_backupoperator** mit **ALTER ANY CREDENTIAL** -Berechtigungen und **Execute** -Berechtigungen für die gespeicherte Prozedur **sp_delete_backuphistory** .  
   
 ## <a name="examples"></a>Beispiele  
- Sie können sowohl die speicherkontocontainer und die SAS-URL erstellen, mit der aktuellen Azure PowerShell-Befehle. Das folgende Beispiel erstellt einen neuen Container, Mycontainer, in dem Speicherkonto Mystorageaccount und erhält dann eine SAS-URL für die sie mit vollen Berechtigungen.  
+ Sie können den Speicherkonto Container und die SAS-URL erstellen, indem Sie die neuesten Azure PowerShell Befehle verwenden. Im folgenden Beispiel wird der neue Container MyContainer im Speicherkonto mystorageaccount erstellt und anschließend eine SAS-URL mit vollständigen Berechtigungen abgerufen.  
   
 ```powershell  
 $context = New-AzureStorageContext -StorageAccountName mystorageaccount -StorageAccountKey (Get-AzureStorageKey -StorageAccountName mystorageaccount).Primary  
@@ -84,7 +84,7 @@ New-AzureStorageContainer -Name mycontainer -Context $context
 New-AzureStorageContainerSASToken -Name mycontainer -Permission rwdl -FullUri -Context $context  
 ```  
   
- Im folgenden Beispiel wird [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Instanz von SQL Server, die es ausgeführt wird, setzt die Aufbewahrungsrichtlinie auf 30 Tage, legt das Ziel in einem Container namens "Mycontainer" in einem Speicherkonto mit dem Namen "Mystorageaccount" fest.  
+ Im folgenden Beispiel wird [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Instanz von aktiviert, SQL Server Sie ausgeführt wird, die Aufbewahrungs Richtlinie auf 30 Tage festlegt und das Ziel auf einen Container namens "MyContainer" in einem Speicherkonto mit dem Namen "mystorageaccount" festlegt.  
   
 ```Transact-SQL 
 Use msdb;  

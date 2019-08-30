@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Visual c# SMO-Projekts in Visual Studio .NET | Microsoft-Dokumentation
+title: Erstellen eines Visual C# SMO-Projekts in Visual Studio .net | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,47 +10,47 @@ ms.topic: reference
 helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2a5b158a33bf678cd285bcd408379a3f0abb907
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11fb5e8aec7f61c83ec2b3edecdb3aa027cf2693
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098014"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148645"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Erstellen eines Visual C#-SMO-Projekts in Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In diesem Abschnitt wird beschrieben, wie eine einfache SMO-Konsolenanwendung erstellt wird.  
   
- In diesem Beispiel werden Namespaces importiert. Hierdurch kann das Programm auf SMO-Typen verweisen. Importiert die **Agent** Namespaces ist optional. Verwenden, wenn Sie ein Programm schreiben, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Die **allgemeine** Namespace ist erforderlich, um eine sichere Verbindung mit der Instanz von herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die **SqlClient** Namespace wird verwendet, um die SQL-Ausnahmefehler zu verarbeiten.  
+ In diesem Beispiel werden Namespaces importiert. Hierdurch kann das Programm auf SMO-Typen verweisen. Der Import des **Agent** -Namespace ist optional. Verwenden Sie es, wenn Sie ein Programm schreiben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das den-Agent verwendet. Der **gemeinsame** Namespace ist erforderlich, um eine sichere Verbindung mit der Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von herzustellen. Der **SqlClient** -Namespace wird verwendet, um SQL-Ausnahme Fehler zu verarbeiten.  
   
-### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Erstellen eines Visual c# SMO-Projekts in Visual Studio.NET  
+### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Erstellen eines Visual C# SMO-Projekts in Visual Studio.net  
   
-1. Starten Sie Visual Studio
+1. Starten von Visual Studio
   
-2. Auf der **Datei** Menü klicken Sie auf **neu** und dann **Projekt**.  Das Dialogfeld **Neues Projekt** wird angezeigt.   
+2. Klicken Sie im Menü **Datei** auf **neu** und dann auf **Projekt**.  Das Dialogfeld **Neues Projekt** wird angezeigt.   
   
-3. In der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **installiert** Bereich, navigieren Sie zu **Vorlagen**\\**Visual C#-** \\**Windows** und wählen Sie **Konsolenanwendung**.  
+3. \\ **C#** Navigieren Sie im Bereich installiert zu Vorlagen Visual\\Windows, und wählen Sie Konsolenanwendung aus. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
-4. (Optional) In der **Namen** Text geben den Namen der neuen Anwendung.  
+4. Optionale Geben Sie im Textfeld **Name** den Namen der neuen Anwendung ein.  
 
-5. Klicken Sie auf **OK** beim Laden der Vorlage für die Konsolenanwendung.  
+5. Klicken Sie auf **OK** , um die Vorlage Konsolenanwendung zu laden.  
 
-6. Befolgen Sie die Anweisungen auf [Installieren von SMO](installing-smo.md) zum Installieren des Pakets für Ihr Projekt zu verweisen.
+6. Befolgen Sie die Anweisungen unter [Installieren von SMO](installing-smo.md) , um das Paket zu installieren, auf das Ihr Projekt verweisen soll.
   
 7. Klicken Sie im Menü **Ansicht** auf **Code**.
     
-8. Geben Sie im Code vor der Namespace-Anweisung die folgenden **mit** Anweisungen, die die Typen im SMO-Namespace zu qualifizieren:
+8. Geben Sie im Code vor der Namespace-Anweisung die folgenden **using** -Anweisungen ein, um die Typen im SMO-Namespace zu qualifizieren:
   
     ```  
     using Microsoft.SqlServer.Management.Smo;  
     using Microsoft.SqlServer.Management.Common;  
     ```  
   
-15. SMO verfügt über verschiedene Namespaces unter Microsoft.SqlServer.Management.Smo, z. B. Microsoft.SqlServer.Management.Smo.Agent. Fügen Sie diese Namespaces, wie sie benötigt werden.  
+15. SMO verfügt über verschiedene Namespaces unter Microsoft.SqlServer.Management.Smo, z. B. Microsoft.SqlServer.Management.Smo.Agent. Fügen Sie diese Namespaces nach Bedarf hinzu.  
   
 16. Sie können jetzt den SMO-Code hinzufügen.  
 

@@ -1,5 +1,5 @@
 ---
-title: Planen von automatischen, administrativen Tasks im SQL Server-Agent | Microsoft-Dokumentation
+title: Planen automatischer Verwaltungsaufgaben in SQL Server-Agent | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64de081adef73e1480fd0bc4ca6b9bf3aacded7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030181"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148328"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planen von automatischen, administrativen Tasks im SQL Server-Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68030181"
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Objekte befinden sich im <xref:Microsoft.SqlServer.Management.Smo.Agent>-Namespace.  
   
 ## <a name="examples"></a>Beispiele  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Für Programme, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent, müssen Sie enthalten die **mit** Anweisung, um den Agent-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen **mit** Anweisungen, vor jeglichen Deklarationen in der Anwendung, z. B.:
+Für Programme, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den-Agent verwenden, müssen Sie die **using** -Anweisung einschließen, um den Agent-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen **using** -Anweisungen vor allen Deklarationen in der Anwendung ein, z. b.:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Die <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> -Typ erfordert eckige Klammern, da **Operator** ist eine [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort.  
+ Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Typ erfordert eckige Klammern, da **Operator** ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort ist.  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Die <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> -Typ erfordert eckige Klammern, da **Operator** ist eine [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort.  
+ Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Typ erfordert eckige Klammern, da **Operator** ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort ist.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

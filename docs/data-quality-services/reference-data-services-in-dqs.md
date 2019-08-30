@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 48a878473a356677fb3d322fc63bb2d346f9346c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97003159192ce36c685323028b7112fdc4d00573
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935034"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152370"
 ---
 # <a name="reference-data-services-in-dqs"></a>Reference Data Services in DQS
 
@@ -31,10 +31,10 @@ ms.locfileid: "67935034"
   
 -   Der Verweisdatenprozess wird in die Erstellung einer DQS-Wissensdatenbank und in ein Data Quality-Projekt integriert und ermöglicht es Ihnen, einen umfassenden Data Quality-Prozess einzuführen.  
   
--   Unterstützt das Verwenden von Verweisdaten von Windows Azure Marketplace sowie direkt von Reference Data Service-Drittanbietern.  
+-   Unterstützt die Verwendung von Verweis Daten sowohl aus Azure Marketplace als auch direkt von Verweis Datenanbietern von Drittanbietern.  
   
-##  <a name="Marketplace"></a> Verwenden von Verweisdaten von Windows Azure Marketplace  
- DQS unterstützt das Verwenden von Referenzdaten von Windows Azure Marketplace, um es Inhaltsanbietern zu ermöglichen, Verweisdatendienste durch Marketplace bereitzustellen. Marketplace ist ein Dienst von Microsoft, der einen Marketplace und einen Bereitstellungskanal für hochwertige Daten und Anwendungen als Clouddienste bereitstellt. Weitere Informationen zum Marketplace finden Sie unter [Informationen zum Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
+##  <a name="Marketplace"></a>Verwenden von Verweis Daten aus Azure Marketplace  
+ DQS unterstützt das Verwenden von Verweis Daten aus Azure Marketplace, damit Inhaltsanbieter Verweis Datendienste über den Marketplace bereitstellen können. Marketplace ist ein Dienst von Microsoft, der einen Marketplace und einen Bereitstellungskanal für hochwertige Daten und Anwendungen als Clouddienste bereitstellt. Weitere Informationen zum Marketplace finden Sie unter Informationen [zu Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about) ).
   
  Die nahtlose Integration zwischen Marketplace und DQS vereinfacht die Schritte, die für das Ermitteln, Untersuchen und Abrufen von Informationen für Data Quality-Projekte innerhalb von DQS erforderlich sind. Die Daten werden von DQS genutzt und helfen DQS-Benutzern dabei, eine hohe Datenqualität durch das Kombinieren von DQS, Marketplace und Verweisdaten-Dienstanbietern auf innovative Weise zu erreichen.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "67935034"
   
 1.  **Konfigurieren von Details der Verweisdatenanbieter in DQS**: Bevor Sie Verweisdaten in DQS verwenden können, müssen Sie die Dienstdetails der Verweisdaten in DQS konfigurieren.  
   
-    1.  Wenn Sie Marketplace verwenden, geben Sie einen gültigen Marketplace-kontoschlüssel, wechseln Sie zu der [Datendienste](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) Datenkategorie im Marketplace, und abonnieren Sie die erforderlichen Anbieter.  
+    1.  Wenn Sie Marketplace verwenden, geben Sie einen gültigen Marketplace-Kontoschlüssel an, navigieren Sie im Marketplace zur Kategorie [Data Services](https://azuremarketplace.microsoft.com/marketplace/apps/category/azure-active-directory-apps?page=1&subcategories=data-services) Daten, und abonnieren Sie die erforderlichen Anbieter.  
   
     2.  Wenn Sie einen direkten Onlineverweisdatenanbieter verwenden, müssen Sie direkte Verweisdatenanbieterdetails in DQS hinzufügen, bevor Sie den Anbieter verwenden können.  
   

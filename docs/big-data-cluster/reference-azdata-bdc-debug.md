@@ -5,22 +5,22 @@ description: Referenzartikel zu azdata bdc debug-Befehlen.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d2cdb04cfc0bf98e2143b8e7b5ae67a7b0db9069
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 9e14528baf80d08841f6e9e17a0476dfa81fd48d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653365"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153195"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Der folgende Artikel enthält Referenzinformationen zu den **bdc debug**-Befehlen im **azdata**-Tool. Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md).
+Dieser Artikel ist ein Referenz Artikel für **azdata**. 
 
 ## <a name="commands"></a>Befehle
 |     |     |
@@ -28,7 +28,7 @@ Der folgende Artikel enthält Referenzinformationen zu den **bdc debug**-Befehle
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Kopieren von Protokollen.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Auslösen einer Protokollierungssicherung.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
-Kopiert die Debugprotokolle aus dem Big Data-Cluster. Auf Ihrem System ist eine Kube-Konfiguration erforderlich.
+Kopieren Sie die Debugprotokolle aus dem Big Data-Cluster Kubernetes die Konfiguration ist auf Ihrem System erforderlich.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
@@ -60,7 +60,7 @@ JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unt
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-Sie lösen eine Protokollierungssicherung aus, und diese wird aus dem Container kopiert. Es ist eine Kube-Konfiguration auf Ihrem System erforderlich.
+Protokollieren der Protokollierung und Kopieren der Datei aus dem Container Kubernetes auf Ihrem System ist eine Konfiguration erforderlich.
 ```bash
 azdata bdc debug dump --namespace -n 
                       --container -c  
@@ -88,4 +88,6 @@ Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter Installieren von [azdata [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]zur Verwaltung ](deploy-install-azdata.md)von.
+- Weitere Informationen zu anderen **azdata**-Befehlen finden Sie unter [azdata](reference-azdata.md). 
+
+- Weitere Informationen zum Installieren des Tools **azdata** finden Sie unter [Install azdata to manage SQL Server 2019 big data clusters (Installieren von azdata zum Verwalten von Big-Data-Clustern von SQL Server 2019)](deploy-install-azdata.md).

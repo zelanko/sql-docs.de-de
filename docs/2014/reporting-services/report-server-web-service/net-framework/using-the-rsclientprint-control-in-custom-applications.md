@@ -15,12 +15,12 @@ ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519120"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155003"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
   Das [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-ActiveX-Steuerelement **RSPrintClient** sorgt für clientseitigen Druck von Berichten, die in einem HTML-Viewer angezeigt werden. Es enthält das Dialogfeld **Drucken**, mit dessen Hilfe ein Benutzer Druckaufträge initiieren, Berichte in der Vorschau anzeigen, Seiten zum Drucken angeben und Ränder ändern kann. Während eines clientseitigen Druckvorgangs rendert der Berichtsserver den Bericht mithilfe der Bildrenderingerweiterung (EMF) und verwendet die Druckfunktionen des Betriebssystems zum Erstellen des Druckauftrags und zum Senden des Auftrags an einen Drucker.  
@@ -42,9 +42,9 @@ ms.locfileid: "62519120"
 -   Lesen Sie sich die Themen in der Onlinedokumentation zur Bildrenderingerweiterung (EMF) durch, um Grundlegendes zum Rendern von Seiten für die Druckvorschau und -ausgabe zu erfahren.  
   
 ## <a name="rsprintclient-overview"></a>Übersicht über RSPrintClient  
- Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. Das ActiveX-Steuerelement **RSPrintClient** druckt den Bericht mithilfe der Bildrenderingerweiterung (EMF). Die folgende EMF-Geräteinformationen wird verwendet: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
+ Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. Das ActiveX-Steuerelement **RSPrintClient** druckt den Bericht mithilfe der Bildrenderingerweiterung (EMF). Die folgenden EMF-Geräteinformationen werden verwendet: Startpage, EndPage, MarginBottom, marginleft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
   
-### <a name="language-support"></a>Sprachunterstützung  
+### <a name="language-support"></a>Sprachenunterstützung  
  Das Drucksteuerelement stellt Text in der Benutzeroberfläche in unterschiedlichen Sprachen bereit und akzeptiert Eingabewerte mit einer Kalibrierung für unterschiedliche Maßsysteme. Welches Sprach- und Maßsystem verwendet wird, wird durch die Eigenschaften **Culture** und **UICulture** bestimmt. Beide Eigenschaften akzeptieren LCID-Werte. Wenn Sie einen LCID-Wert für eine Sprache angeben, die eine Variante einer unterstützten Sprache ist, wird die Sprache verwendet, die am nächsten zu Ihrer Angabe liegt. Falls Sie einen LCID-Wert angeben, der nicht unterstützt wird und auch keine enge Übereinstimmung mit einem anderen LCID-Wert aufweist, wird Englisch (Vereinigte Staaten) verwendet.  
   
 ## <a name="using-rsclientprint-in-code"></a>Verwenden von "RSClientPrint" im Code  
@@ -73,8 +73,8 @@ ms.locfileid: "62519120"
 |MarginBottom|Double|RW|Berichteinstellung|Ruft den unteren Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
 |PageWidth|Double|RW|Berichteinstellung|Ruft die Seitenbreite ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 215,9 Millimeter als Standardwert verwendet.|  
 |PageHeight|Double|RW|Berichteinstellung|Ruft die Seitenhöhe ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 279,4 Millimeter als Standardwert verwendet.|  
-|Culture|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer gibt z. B. `3`, der Wert in Millimetern gemessen, falls der Sprache Französisch oder Zoll, wenn die Sprache Englisch (Vereinigte Staaten) ist. Gültige Werte sind: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|Zeichenfolge|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Text in das Dialogfeld "Drucken" ist in den folgenden Sprachen lokalisiert: Chinesisch (vereinfacht), Chinesisch traditionell, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Gültige Werte sind: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Culture|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer `3`beispielsweise eingibt, wird der Wert in Millimetern gemessen, wenn die Sprache Französisch oder Zoll ist, wenn die Sprache Englisch (USA) ist. Gültige Werte sind: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|Zeichenfolge|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld Drucken ist in den folgenden Sprachen lokalisiert: Chinesisch (vereinfacht), Chinesisch (traditionell), Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Gültige Werte sind: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|RW|False|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Festlegen der Authenticate-Eigenschaft  
@@ -93,7 +93,7 @@ ms.locfileid: "62519120"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- Wenn Sie den Bericht in Windows Azure SQL Reporting ausführen, verwenden Sie die folgenden CLSID-Werte.  
+ Wenn Sie den Bericht in Azure SQL Reporting ausführen, verwenden Sie die folgenden CLSID-Werte.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
@@ -102,10 +102,10 @@ ms.locfileid: "62519120"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient-Unterstützung für die Print-Methode  
  Das **RSClientPrint**-Objekt unterstützt die zum Starten des Dialogfelds „Drucken“ verwendete **Print**-Methode. Die **Print**-Methode besitzt die folgenden Argumente.  
   
-|Argument|E/A|Typ|Description|  
+|Argument|E/A|Typ|Beschreibung|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|Zeichenfolge|Gibt das virtuelle Verzeichnis des Berichtsservers an (z. B. https://adventure-works/reportserver).|  
-|ReportPathParameters|In|Zeichenfolge|Gibt den vollständigen Namen zum Bericht im Ordnernamespace des Berichtsservers einschließlich Parameter an. Berichte werden über den URL-Zugriff abgerufen. Zum Beispiel: "/ AdventureWorks Sample Reports/Employee Sales Summary & EmpID = 1234"|  
+|ServerPath|In|Zeichenfolge|Gibt das virtuelle Verzeichnis des Berichts Servers an (z https://adventure-works/reportserver). b.|  
+|ReportPathParameters|In|Zeichenfolge|Gibt den vollständigen Namen zum Bericht im Ordnernamespace des Berichtsservers einschließlich Parameter an. Berichte werden über den URL-Zugriff abgerufen. Beispiel: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|In|Zeichenfolge|Der kurze Name des Berichts (im Beispiel oben lautet der kurze Name Employee Sales Summary). Dieser Name wird im Dialogfeld Drucken und in der Druckerwarteschlange angezeigt.|  
   
 ### <a name="example"></a>Beispiel  

@@ -1,5 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokolle | Microsoft-Dokumentation
+title: Sichern und Wiederherstellen von Datenbanken und Transaktions Protokollen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9480cf6bb80b73804046f8e8101567d1af26129f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b721a57d25a1187d924e8cf66b23a2f5c2b4daaa
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092816"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148550"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein <xref:Microsoft.SqlServer.Management.Smo.Backup> Objekt stellt eine spezifische Sicherungstask an, die nicht erforderlich ist eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Objekt auf der Serverinstanz.  
+  In SMO sind die Klassen <xref:Microsoft.SqlServer.Management.Smo.Backup> und <xref:Microsoft.SqlServer.Management.Smo.Restore> Hilfsprogrammklassen, die die Tools zur Durchführung bestimmter Tasks, wie Sichern und Wiederherstellen, bereitstellen. Ein <xref:Microsoft.SqlServer.Management.Smo.Backup> -Objekt stellt eine bestimmte Sicherungs Aufgabe dar, die anstelle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eines-Objekts auf der Serverinstanz erforderlich ist.  
   
  Wenn Datenverlust oder -beschädigung auftritt, muss die Sicherung entweder vollständig oder teilweise wiederhergestellt werden. Die partielle Wiederherstellung verwendet die <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>-Auflistung, um die zu wiederherstellenden Daten zu unterteilen. Bei der Sicherung eines Transaktionsprotokolls erfolgt die Datenwiederherstellung bis zu einem gewissen Zeitpunkt mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekts. Die Daten können auch mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>-Methode validiert werden. Der empfohlene Sicherungsvorgang besteht aus der Prüfung der Sicherung auf Integrität durch die Vornahme eines Wiederherstellungsvorgangs und durch die regelmäßige Prüfung der Daten in der Datenbank.  
   
- Wie die <xref:Microsoft.SqlServer.Management.Smo.Backup> -Objekt, das <xref:Microsoft.SqlServer.Management.Smo.Restore> Objekt muss nicht erstellt werden ein **erstellen** Methode da sie keines Objekt in der Instanz von darstellt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Beim <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekt handelt es sich um eine Gruppe von Eigenschaften und Methoden, die zur Wiederherstellung einer Datenbank verwendet werden.  
+ Ebenso wie <xref:Microsoft.SqlServer.Management.Smo.Backup> das-Objekt <xref:Microsoft.SqlServer.Management.Smo.Restore> muss das-Objekt nicht mithilfe einer **Create** -Methode erstellt werden, da es kein-Objekt für die-Instanz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt. Beim <xref:Microsoft.SqlServer.Management.Smo.Restore>-Objekt handelt es sich um eine Gruppe von Eigenschaften und Methoden, die zur Wiederherstellung einer Datenbank verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Sichern von Datenbanken und Transaktionsprotokollen in Visual Basic  
  Dieses Codebeispiel zeigt, wie eine vorhandene Datenbank in einer Datei gesichert und wiederhergestellt wird.  

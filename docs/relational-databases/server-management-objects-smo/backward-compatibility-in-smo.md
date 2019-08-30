@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a002b4f5d4b678171fc5dd396152d155779f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 013dfc93c5e6acfa22d4283cbb0460a1c8f97c23
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126766"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148775"
 ---
 # <a name="backward-compatibility-in-smo"></a>Abwärtskompatibilität in SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -59,6 +59,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  Wenn im Code das Transfer-Objekt direkt verwendet wird, müssen Sie eine Verknüpfung mit dem Microsoft.SqlServer.Management.SmoExtended-Namespace herstellen.  
   
- Wenn Sie Code migrieren, müssen Sie ihn ggf. ändern. Dies liegt daran, dass einige [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] - und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [veraltete Datenbankmodulfeatures in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Onlinedokumentation.  
+ Wenn Sie Code migrieren, müssen Sie ihn ggf. ändern. Dies liegt daran, dass einige [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] - und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]als veraltet markiert wurden. Weitere Informationen zu veralteten Funktionen finden Sie unter [veraltet Datenbank-Engine Features in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Online Dokumentation.  
   
   

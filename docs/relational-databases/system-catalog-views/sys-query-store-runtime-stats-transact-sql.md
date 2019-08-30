@@ -1,7 +1,7 @@
 ---
-title: Sys. query_store_runtime_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. query_store_runtime_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,86 +21,91 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ba19045d0184e498b559da0b97b3cd4d95d30c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bd7f1870a88ae2050445050565e0f268f4d9b0e
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067933"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148286"
 ---
-# <a name="sysquerystoreruntimestats-transact-sql"></a>Sys. query_store_runtime_stats (Transact-SQL)
+# <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Enthält Informationen zu der Common Language Runtime die Informationen für die Abfrage.  
+  Enthält Informationen zu den Lauf Zeit Ausführungs Statistik-Informationen für die Abfrage.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_id**|**bigint**|Bezeichner der Zeile für die Laufzeit-Ausführungsstatistik für den **Plan_id**, **Execution_type** und **Runtime_stats_interval_id**. Es ist nur für die letzten Runtime Statistics Intervalle eindeutig. Für die aktuell aktiven Intervalls möglicherweise mehrere Zeilen, die Laufzeitstatistiken für den Plan verweist darstellt **Plan_id**, mit dem dargestellt wird, indem Sie Ausführung **Execution_type**. In der Regel stellt eine Zeile Clientlaufzeit-Statistik, die geleert werden, auf dem Datenträger, während andere (s) im Speicher enthaltenen Status darstellen. Daher zum Abrufen der tatsächlichen Status für jedes Intervall, müssen Sie aggregierte Metriken Gruppieren nach **Plan_id**, **Execution_type** und **Runtime_stats_interval_id**.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**plan_id**|**bigint**|Fremdschlüssel. Verknüpft mit [Sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
-|**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Verknüpft mit [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
-|**execution_type**|**tinyint**|Bestimmt die Art der Ausführung einer Abfrage:<br /><br /> 0 – reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3 – Client initiierter Abbruch der Ausführung<br /><br /> 4 - Ausnahme hat die Ausführung abgebrochen.|  
-|**execution_type_desc**|**nvarchar(128)**|Die textbeschreibung des Type-Feld Ausführung:<br /><br /> 0 – reguläre<br /><br /> 3: abgebrochen<br /><br /> 4 - Ausnahme|  
-|**first_execution_time**|**datetimeoffset**|Zeitpunkt der ersten Ausführung für den Abfrageplan in aggregationsintervalls. Dies bezieht sich auf die Endzeit der Ausführung der Abfrage.|  
-|**last_execution_time**|**datetimeoffset**|Zeitpunkt der letzten Ausführung der Abfrage innerhalb des aggregationsintervalls zu planen. Dies bezieht sich auf die Endzeit der Ausführung der Abfrage.|  
-|**count_executions**|**bigint**|Die Gesamtzahl der Ausführungen für den Abfrageplan in aggregationsintervalls.|  
-|**avg_duration**|**float**|Die durchschnittliche Dauer für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).|  
-|**last_duration**|**bigint**|Planen Sie die letzte Dauer für die Abfrage innerhalb der aggregationsintervall (in Mikrosekunden gemeldet).|  
-|**min_duration**|**bigint**|Die Mindestdauer für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).|  
-|**max_duration**|**bigint**|Maximale Dauer für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).|  
-|**stdev_duration**|**float**|Dauer der Standardabweichung für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).|  
-|**avg_cpu_time**|**float**|Die durchschnittliche CPU-Zeit für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_cpu_time**|**bigint**|Planen Sie die letzte CPU-Zeit für die Abfrage innerhalb der aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_cpu_time**|**bigint**|Minimale CPU-Zeit für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_cpu_time**|**bigint**|Maximale CPU-Zeit für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_cpu_time**|**float**|CPU-Zeit die Standardabweichung für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**avg_logical_io_reads**|**float**|Durchschnittliche Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls liest. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_logical_io_reads**|**bigint**|Letzte Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls liest. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_logical_io_reads**|**bigint**|Minimale Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls liest. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_logical_io_reads**|**bigint**|Maximale Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls liest. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_logical_io_reads**|**float**|Anzahl logischer EA-Vorgänge liest die Standardabweichung für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**avg_logical_io_writes**|**float**|Durchschnittliche Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls schreibt.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_logical_io_writes**|**bigint**|Letzte Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls schreibt.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_logical_io_writes**|**bigint**|Minimale Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls schreibt.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_logical_io_writes**|**bigint**|Maximale Anzahl logischer EA-Vorgänge werden für den Abfrageplan in aggregationsintervalls schreibt.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_logical_io_writes**|**float**|Anzahl logischer EA-Vorgänge schreibt die Standardabweichung für den Abfrageplan in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**avg_physical_io_reads**|**float**|Durchschnittliche Anzahl physischer e/a-liest, für den Abfrageplan in aggregationsintervalls (ausgedrückt als eine Reihe von 8KB-Seiten lesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_physical_io_reads**|**bigint**|Letzten Anzahl physischer e/a-Lesevorgänge für den Abfrageplan in aggregationsintervalls (ausgedrückt als eine Reihe von 8KB-Seiten lesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_physical_io_reads**|**bigint**|Minimale Anzahl physischer e/a-liest, für den Abfrageplan in aggregationsintervalls (ausgedrückt als eine Reihe von 8KB-Seiten lesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_physical_io_reads**|**bigint**|Maximale Anzahl physischer e/a-liest, für den Abfrageplan in aggregationsintervalls (ausgedrückt als eine Reihe von 8KB-Seiten lesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_physical_io_reads**|**float**|Anzahl der physischen e/a liest die Standardabweichung für den Abfrageplan in aggregationsintervalls (ausgedrückt als eine Reihe von 8KB-Seiten lesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**avg_clr_time**|**float**|Die durchschnittliche CLR-Zeit für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_clr_time**|**bigint**|Planen Sie die letzte CLR-Zeit für die Abfrage innerhalb der aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_clr_time**|**bigint**|Minimale CLR-Zeit für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_clr_time**|**bigint**|Maximale CLR-Zeit für den Abfrageplan in die aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_clr_time**|**float**|Planen Sie die Standardabweichung der CLR-Zeit für die Abfrage innerhalb der aggregationsintervall (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**avg_dop**|**float**|Durchschnittliche DOP (Grad an Parallelität) für den Abfrageplan in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_dop**|**bigint**|Letzte DOP (Grad an Parallelität) für den Abfrageplan in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_dop**|**bigint**|Minimale DOP (Grad an Parallelität) für den Abfrageplan in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_dop**|**bigint**|Maximale DOP (Grad an Parallelität) für den Abfrageplan in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_dop**|**float**|DOP (Grad an Parallelität) die Standardabweichung für den Abfrageplan in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**avg_query_max_used_memory**|**float**|Durchschnittliche arbeitsspeicherzuweisung (angegeben als Anzahl von 8 KB-Seiten) für den Abfrageplan in aggregationsintervalls. 0 für Abfragen, die systemintern kompiliert immer Speicheroptimierte Verfahren.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_query_max_used_memory**|**bigint**|Letzte arbeitsspeicherzuweisung (angegeben als Anzahl von 8 KB-Seiten) für den Abfrageplan in aggregationsintervalls. 0 für Abfragen, die systemintern kompiliert immer Speicheroptimierte Verfahren.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_query_max_used_memory**|**bigint**|Minimale arbeitsspeicherzuweisung nutzen (als Anzahl von 8 KB-Seiten gemeldet) für den Abfrageplan in aggregationsintervalls. 0 für Abfragen, die systemintern kompiliert immer Speicheroptimierte Verfahren.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_query_max_used_memory**|**bigint**|Maximale arbeitsspeicherzuweisung (angegeben als Anzahl von 8 KB-Seiten) für den Abfrageplan in aggregationsintervalls. 0 für Abfragen, die systemintern kompiliert immer Speicheroptimierte Verfahren.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_query_max_used_memory**|**float**|Bei der arbeitsspeicherzuweisung Standardabweichung (angegeben als Anzahl von 8 KB-Seiten) für den Abfrageplan in aggregationsintervalls. 0 für Abfragen, die systemintern kompiliert immer Speicheroptimierte Verfahren.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**avg_rowcount**|**float**|Durchschnittliche Anzahl von zurückgegebenen Zeilen für den Abfrageplan in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_rowcount**|**bigint**|Die Anzahl der zurückgegebenen Zeilen der letzten Ausführung des Abfrageplans in aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_rowcount**|**bigint**|Planen Sie die minimale Anzahl von zurückgegebenen Zeilen für die Abfrage innerhalb des aggregationsintervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_rowcount**|**bigint**|Planen Sie die maximale Anzahl von zurückgegebenen Zeilen für die Abfrage innerhalb des aggregationsintervalls.|  
-|**stdev_rowcount**|**float**|Die Anzahl der zurückgegebenen Zeilen Standardabweichung für den Abfrageplan in aggregationsintervalls.|
-|**avg_log_bytes_used**|**float**|Durchschnittliche Anzahl von Bytes in das Datenbankprotokoll, die von der Abfrageplan in aggregationsintervalls verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**last_log_bytes_used**|**bigint**|Anzahl der Bytes im Protokoll von der letzten Ausführung des Abfrageplans, in dem aggregationsintervall verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**min_log_bytes_used**|**bigint**|Minimale Anzahl von Bytes in das Datenbankprotokoll, die von der Abfrageplan in aggregationsintervalls verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**max_log_bytes_used**|**bigint**|Maximale Anzahl von Bytes in das Datenbankprotokoll, die von der Abfrageplan in aggregationsintervalls verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
-|**stdev_log_bytes_used**|**float**|Standardabweichung der die Anzahl der Bytes im Datenbankprotokoll von innerhalb des aggregationsintervalls eines Abfrageplans verwendet.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
-|**avg_page_server_io_reads**|**float**|Durchschnittliche Anzahl der Seitenlesevorgänge Server-e/a für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank</br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
-|**last_page_server_io_reads**|**bigint**|Letzte Anzahl Seite Server e/a-Lesevorgänge für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
-|**min_page_server_io_reads**|**bigint**|Minimale Anzahl der Seitenlesevorgänge Server-e/a für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
-|**max_page_server_io_reads**|**bigint**|Maximale Anzahl der Seitenlesevorgänge Server-e/a für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
-|**stdev_page_server_io_reads**|**float**|Anzahl der Seitenserver e/a-Lesevorgänge auf Standardabweichung für den Abfrageplan in aggregationsintervalls. (ausgedrückt als eine Reihe von 8KB-Seiten zu lesen.)<br><br/>**Hinweis**: Gilt für: Hochgradig skalierbaren Azure SQL-Datenbank </br> Azure SQL Data Warehouse, Azure SQL-Datenbank, MI (nicht-hochgradig skalierbaren) gibt immer 0 (null) zurück.|
+|**runtime_stats_id**|**bigint**|Der Bezeichner der Zeile, die die Lauf Zeit Ausführungs Statistik für **plan_id**, **execution_type** und **runtime_stats_interval_id**darstellt. Er ist nur für die letzten Lauf Zeit Statistik Intervalle eindeutig. Für das derzeit aktive Intervall gibt es möglicherweise mehrere Zeilen, die Lauf Zeit Statistiken für den Plan darstellen, auf den von **plan_id**verwiesen wird, mit dem durch **execution_type**dargestellten Ausführungstyp In der Regel stellt eine Zeile Lauf Zeit Statistiken dar, die auf den Datenträger geleert werden, während andere (n) den Speicher internen Status darstellen. Um den tatsächlichen Status für jedes Intervall zu erhalten, müssen Sie daher Metriken aggregieren, indem Sie nach **plan_id**, **execution_type** und **runtime_stats_interval_id**gruppieren.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**plan_id**|**bigint**|Fremdschlüssel. Joins mit [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md).|  
+|**runtime_stats_interval_id**|**bigint**|Fremdschlüssel. Joins mit [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
+|**execution_type**|**tinyint**|Bestimmt den Typ der Abfrage Ausführung:<br /><br /> 0-reguläre Ausführung (erfolgreich abgeschlossen)<br /><br /> 3-vom Client initiierte Ausführung abgebrochen<br /><br /> 4-Ausnahme Abbruch abgebrochen|  
+|**execution_type_desc**|**nvarchar(128)**|Textbeschreibung des Felds "Ausführungstyp":<br /><br /> 0-regulär<br /><br /> 3-abgebrochen<br /><br /> 4-Ausnahme|  
+|**first_execution_time**|**datetimeoffset**|Die erste Ausführungszeit für den Abfrageplan innerhalb des Aggregations Intervalls. Dies bezieht sich auf die Endzeit der Abfrage Ausführung.|  
+|**last_execution_time**|**datetimeoffset**|Die letzte Ausführungszeit für den Abfrageplan innerhalb des Aggregations Intervalls. Dies bezieht sich auf die Endzeit der Abfrage Ausführung.|  
+|**count_executions**|**bigint**|Gesamtanzahl der Ausführungen für den Abfrageplan innerhalb des Aggregations Intervalls.|  
+|**avg_duration**|**float**|Die durchschnittliche Dauer für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).|  
+|**last_duration**|**bigint**|Die letzte Dauer für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).|  
+|**min_duration**|**bigint**|Minimale Dauer für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).|  
+|**max_duration**|**bigint**|Maximale Dauer für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).|  
+|**stdev_duration**|**float**|Dauer der Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden gemeldet).|  
+|**avg_cpu_time**|**float**|Durchschnittliche CPU-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_cpu_time**|**bigint**|Die letzte CPU-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_cpu_time**|**bigint**|Minimale CPU-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_cpu_time**|**bigint**|Maximale CPU-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_cpu_time**|**float**|Die Standardabweichung der CPU-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**avg_logical_io_reads**|**float**|Die durchschnittliche Anzahl von logischen e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_logical_io_reads**|**bigint**|Die letzte Anzahl von logischen e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_logical_io_reads**|**bigint**|Die Mindestanzahl logischer e/a-Lesevorgänge für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_logical_io_reads**|**bigint**|Maximale Anzahl von logischen e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_logical_io_reads**|**float**|Die Anzahl von logischen e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**avg_logical_io_writes**|**float**|Die durchschnittliche Anzahl logischer e/a-Schreibvorgänge für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_logical_io_writes**|**bigint**|Die letzte Anzahl logischer e/a-Schreibvorgänge für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_logical_io_writes**|**bigint**|Die Mindestanzahl logischer e/a-Schreibvorgänge für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_logical_io_writes**|**bigint**|Maximale Anzahl logischer e/a-Schreibvorgänge für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_logical_io_writes**|**float**|Die Anzahl von logischen e/a-Vorgängen schreibt die Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**avg_physical_io_reads**|**float**|Die durchschnittliche Anzahl physischer e/a-Lesevorgänge für den Abfrageplan innerhalb des Aggregations Intervalls (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_physical_io_reads**|**bigint**|Die letzte Anzahl physischer e/a-Lesevorgänge für den Abfrageplan innerhalb des Aggregations Intervalls (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_physical_io_reads**|**bigint**|Die Mindestanzahl physischer e/a-Lesevorgänge für den Abfrageplan innerhalb des Aggregations Intervalls (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_physical_io_reads**|**bigint**|Maximale Anzahl physischer e/a-Lesevorgänge für den Abfrageplan innerhalb des Aggregations Intervalls (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_physical_io_reads**|**float**|Die Anzahl physischer e/a-Vorgänge liest die Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls (ausgedrückt als Anzahl von 8 KB gelesenen Seiten).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**avg_clr_time**|**float**|Durchschnittliche CLR-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_clr_time**|**bigint**|Die letzte CLR-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_clr_time**|**bigint**|Minimale CLR-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_clr_time**|**bigint**|Maximale CLR-Zeit für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden angegeben).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_clr_time**|**float**|CLR-Zeitstandard Abweichung für den Abfrageplan innerhalb des Aggregations Intervalls (in Mikrosekunden gemeldet).<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**avg_dop**|**float**|Durchschnittlicher DOP (Grad an Parallelität) für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_dop**|**bigint**|Letztes DOP (Grad an Parallelität) für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_dop**|**bigint**|Minimaler DOP (Grad an Parallelität) für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_dop**|**bigint**|Maximaler DOP (Grad an Parallelität) für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_dop**|**float**|DOP (Grad an Parallelität) Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**avg_query_max_used_memory**|**float**|Durchschnittliche Arbeitsspeicher Zuweisung (als Anzahl von 8-KB-Seiten angegeben) für den Abfrageplan innerhalb des Aggregations Intervalls. Immer 0 für Abfragen, die nativ kompilierte Speicher optimierte Prozeduren verwenden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_query_max_used_memory**|**bigint**|Die letzte Arbeitsspeicher Zuweisung (als Anzahl von 8-KB-Seiten angegeben) für den Abfrageplan innerhalb des Aggregations Intervalls. Immer 0 für Abfragen, die nativ kompilierte Speicher optimierte Prozeduren verwenden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_query_max_used_memory**|**bigint**|Minimale Arbeitsspeicher Zuweisung (als Anzahl von 8-KB-Seiten angegeben) für den Abfrageplan innerhalb des Aggregations Intervalls. Immer 0 für Abfragen, die nativ kompilierte Speicher optimierte Prozeduren verwenden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_query_max_used_memory**|**bigint**|Maximale Arbeitsspeicher Zuweisung (als Anzahl von 8-KB-Seiten angegeben) für den Abfrageplan innerhalb des Aggregations Intervalls. Immer 0 für Abfragen, die nativ kompilierte Speicher optimierte Prozeduren verwenden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_query_max_used_memory**|**float**|Standardabweichung der Arbeitsspeicher Zuweisung (als Anzahl von 8-KB-Seiten angegeben) für den Abfrageplan innerhalb des Aggregations Intervalls. Immer 0 für Abfragen, die nativ kompilierte Speicher optimierte Prozeduren verwenden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**avg_rowcount**|**float**|Die durchschnittliche Anzahl der zurückgegebenen Zeilen für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_rowcount**|**bigint**|Anzahl der zurückgegebenen Zeilen bei der letzten Ausführung des Abfrage Plans innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_rowcount**|**bigint**|Mindestanzahl von zurückgegebenen Zeilen für den Abfrageplan innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_rowcount**|**bigint**|Maximale Anzahl der zurückgegebenen Zeilen für den Abfrageplan innerhalb des Aggregations Intervalls.|  
+|**stdev_rowcount**|**float**|Anzahl der zurückgegebenen Zeilen der Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls.|
+|**avg_log_bytes_used**|**float**|Die durchschnittliche Anzahl von Bytes im Daten Bank Protokoll, die vom Abfrageplan innerhalb des Aggregations Intervalls verwendet werden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**last_log_bytes_used**|**bigint**|Anzahl von Bytes im Daten Bank Protokoll, das von der letzten Ausführung des Abfrage Plans innerhalb des Aggregations Intervalls verwendet wird.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**min_log_bytes_used**|**bigint**|Die Mindestanzahl von Bytes im Daten Bank Protokoll, die vom Abfrageplan innerhalb des Aggregations Intervalls verwendet werden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**max_log_bytes_used**|**bigint**|Maximale Anzahl von Bytes im Daten Bank Protokoll, die vom Abfrageplan innerhalb des Aggregations Intervalls verwendet werden.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|
+|**stdev_log_bytes_used**|**float**|Standard Abweichung der Anzahl von Bytes im Daten Bank Protokoll, das von einem Abfrageplan verwendet wird, innerhalb des Aggregations Intervalls.<br/>**Hinweis**: Azure SQL Data Warehouse gibt immer 0 (null) zurück.|  
+|**avg_tempdb_space_used**|**float**|Durchschnittliche Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|Die letzte Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|Die Mindestanzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|Maximale Anzahl von Seiten Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Anzahl der Seiten, die Standardabweichung für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_page_server_io_reads**|**float**|Die durchschnittliche Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis**: Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
+|**last_page_server_io_reads**|**bigint**|Die letzte Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis**: Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
+|**min_page_server_io_reads**|**bigint**|Minimale Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis**: Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
+|**max_page_server_io_reads**|**bigint**|Maximale Anzahl von Seiten Server-e/a-Lesevorgängen für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis**: Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
+|**stdev_page_server_io_reads**|**float**|Die Anzahl der Seiten Server-e/a-Vorgänge für den Abfrageplan innerhalb des Aggregations Intervalls. (ausgedrückt als Anzahl von 8-KB-Seiten gelesen).<br><br/>**Gilt für:** Hyperskalierung von Azure SQL-Datenbank</br>**Hinweis**: Azure SQL Data Warehouse gibt Azure SQL-Datenbank, Mi (nicht Hyperscale), immer NULL (0) zurück.|
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **VIEW DATABASE STATE** Berechtigung.  
+Erfordert die `VIEW DATABASE STATE`-Berechtigung.  
   
 ## <a name="see-also"></a>Siehe auch  
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
@@ -112,6 +117,6 @@ ms.locfileid: "68067933"
  [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
-  
+ [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

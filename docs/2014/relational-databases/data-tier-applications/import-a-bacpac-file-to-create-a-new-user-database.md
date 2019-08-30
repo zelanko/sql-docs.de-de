@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918183"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154639"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank
   Importieren Sie eine Datei einer Datenebenenanwendung (eine BACPAC-Datei), um eine Kopie der ursprünglichen Datenbank mit den Daten auf einer neuen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder auf [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] zu erstellen. Die Export-/Importvorgänge können kombiniert werden, um eine DAC oder Datenbank zwischen Instanzen zu migrieren oder eine logische Sicherung zu erstellen. Dazu gehört z. B. das Erstellen einer lokalen Kopie einer in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]bereitgestellten Datenbank.  
@@ -101,9 +101,9 @@ ms.locfileid: "62918183"
   
 -   **Vom lokalen Datenträger importieren**: Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen, oder geben Sie den Pfad im dafür vorgesehenen Feld an. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
   
--   **Aus Windows Azure importieren** -importiert eine bacpac-Datei aus einem Windows Azure-Container. Sie müssen eine Verbindung mit einem Windows Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
+-   **Importieren aus Azure** : importiert eine BacPac-Datei aus einem Azure-Container. Sie müssen eine Verbindung mit einem Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Die temporäre Datei wird am angegebenen Speicherort erstellt und verbleibt dort, nachdem der Vorgang abgeschlossen wurde.  
   
-     Wenn Sie Windows Azure durchsuchen, können Sie zwischen Containern innerhalb eines Kontos wechseln. Sie müssen eine einzelne BACPAC-Datei angeben, um den Importvorgang fortzusetzen. Beachten Sie, dass Sie Spalten nach **Name**, **Größe**oder **Geändert am**sortieren können.  
+     Wenn Sie Azure durchsuchen, können Sie zwischen Containern innerhalb eines Kontos wechseln. Sie müssen eine einzelne BACPAC-Datei angeben, um den Importvorgang fortzusetzen. Beachten Sie, dass Sie Spalten nach **Name**, **Größe**oder **Geändert am**sortieren können.  
   
      Um fortzufahren, geben Sie die zu importierende BACPAC-Datei an, und klicken Sie dann auf **Öffnen**.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "62918183"
   
 -   **Neuer Datenbankname**: Geben Sie einen Namen für die importierte Datenbank an.  
   
--   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -Geben Sie [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  : geben [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Sie Business [!INCLUDE[ssSDS](../../includes/sssds-md.md)] oder Web an. Weitere Informationen zu den Editionen von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]finden Sie auf der Website zu [SQL-Datenbanken](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Maximale Datenbankgröße (GB)** -verwenden Sie im Dropdown-Menü, um die maximale Größe für Ihre Datenbank anzugeben.  
+-   **Maximale Datenbankgröße (GB)** : Verwenden Sie das Dropdown Menü, um die maximale Größe für die Datenbank anzugeben.  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   

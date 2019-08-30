@@ -1,5 +1,5 @@
 ---
-title: Datenbank-e-Mails mit | Microsoft-Dokumentation
+title: Verwenden von Datenbank-E-Mail | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - Database Mail [SMO]
 - mail [SMO]
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c1b91f8c1d8f032516a7b2e04a8533f4b792b3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3e29aaf45306c9ed5d8c8dd7c132dacd9af1e926
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030049"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148345"
 ---
 # <a name="using-database-mail"></a>Verwenden von Datenbank-E-Mail
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  In SMO wird das Datenbank-E-Mail-Subsystem durch das <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>-Objekt dargestellt, auf das durch die <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>-Eigenschaft verwiesen wird. Durch die Verwendung des SMO-<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>-Objekts können Sie das Datenbank-E-Mail-Subsystem konfigurieren und Profile und E-Mail-Konten verwalten. SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> -Objekt gehört zu den **Server** Objekt, d. h., dass der Bereich der e-Mail-Konten auf Serverebene ist.  
+  In SMO wird das Datenbank-E-Mail-Subsystem durch das <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>-Objekt dargestellt, auf das durch die <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>-Eigenschaft verwiesen wird. Durch die Verwendung des SMO-<xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>-Objekts können Sie das Datenbank-E-Mail-Subsystem konfigurieren und Profile und E-Mail-Konten verwalten. Das SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> -Objekt gehört zum **Server** Objekt, d. h., der Bereich der e-Mail-Konten befindet sich auf Serverebene.  
   
 ## <a name="examples"></a>Beispiele  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Für Programme, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank-E-Mail verwenden, müssen Sie die **Imports** -Anweisung einschließen, um den E-Mail-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen **Imports** -Anweisungen und vor jeglichen Deklarationen in der Anwendung wie folgt ein:  
   

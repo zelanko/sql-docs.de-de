@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 6: Migrieren einer Datenbank aus einer Quelle lokalen zu einem Zielcomputer in Windows Azure | Microsoft-Dokumentation'
+title: 'Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59c063b0aca4a373671efc28c9b0d45baced836a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090700"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153732"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Microsoft Azure
-  In dieser Lektion wird davon ausgegangen, dass bereits ein weiterer SQL Server vorhanden ist, der sich auf einem anderen lokalen Computer oder auf einem virtuellen Computer in Windows Azure befindet. Informationen zum Erstellen eines SQL Server-Computers in Windows Azure finden Sie unter [eine SQL Server-Computer in Windows Azure-Bereitstellung](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Nachdem Sie einen virtuellen SQL Server-Computer in Windows Azure bereitgestellt haben, überprüfen Sie, ob Sie eine Verbindung mit einer SQL Server-Instanz auf diesem virtuellen Computer über SQL Server Management Studio auf einem anderen Computer herstellen können.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure
+  In dieser Lektion wird davon ausgegangen, dass Sie bereits über eine andere SQL Server verfügen, die sich möglicherweise auf einem anderen lokalen Computer oder auf einem virtuellen Computer in Azure befindet. Informationen zum Erstellen eines virtuellen SQL Server virtuellen Computers in Azure finden Sie unter Bereitstellen [eines virtuellen SQL Server](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)Computers in Azure. Stellen Sie nach der Bereitstellung einer SQL Server virtuellen Maschine in Azure sicher, dass Sie über SQL Server Management Studio auf einem anderen Computer eine Verbindung mit einer Instanz von SQL Server auf diesem virtuellen Computer herstellen können.  
   
  In dieser Lektion wird auch davon ausgegangen, dass Sie bereits die folgenden Schritte abgeschlossen haben:  
   
--   Sie verfügen über ein Windows Azure-Speicherkonto.  
+-   Sie verfügen über ein Azure Storage Konto.  
   
--   Sie haben einen Container über Ihr Windows Azure-Speicherkonto erstellt.  
+-   Sie haben unter Ihrem Azure Storage Konto einen Container erstellt.  
   
 -   Sie haben eine Richtlinie in einem Container mit Lese-, Schreib- und Auflistungsrechten erstellt. Sie haben auch einen SAS-Schlüssel generiert.  
   
 -   Sie haben die SQL Server-Anmeldeinformationen auf dem Quellcomputer erstellt.  
   
--   Sie haben bereits einen virtuellen SQL Server-Zielcomputer in Windows Azure erstellt. Es wird empfohlen, dass Sie diesen erstellen, indem Sie ein Plattformimage mit SQL Server 2014 auswählen.  
+-   Sie haben bereits einen Ziel SQL Server virtuellen Computer in Azure erstellt. Es wird empfohlen, dass Sie diesen erstellen, indem Sie ein Plattformimage mit SQL Server 2014 auswählen.  
   
- Um eine Datenbank lokal von SQL Server zu einem anderen virtuellen Computer in Windows Azure zu migrieren, können Sie folgende Schritte ausführen:  
+ Führen Sie die folgenden Schritte aus, um eine Datenbank von SQL Server lokal zu einem anderen virtuellen Computer in Azure zu migrieren:  
   
 1.  Öffnen Sie auf dem Quellcomputer (in diesem Lernprogramm ein lokaler Computer) ein Abfragefenster in SQL Server Management Studio. Trennen Sie die Datenbank, um sie auf einen anderen Computer zu verschieben, indem Sie folgende Anweisungen ausführen:  
   
@@ -48,9 +48,9 @@ ms.locfileid: "66090700"
   
         1.  Stellen Sie eine Verbindung zum Zielcomputer über SQL Server Management Studio auf dem Quellcomputer her.  Oder starten Sie SQL Server Management Studio direkt auf dem Zielcomputer.  
   
-        2.  Klicken Sie auf der Standardsymbolleiste auf **neue Abfrage**.  
+        2.  Klicken Sie auf der Standard Symbolleiste auf **neue Abfrage**.  
   
-        3.  Kopieren Sie das folgende Beispiel in das Abfragefenster, und ändern Sie es nach Bedarf. Die folgende Anweisung erstellt SQL Server-Anmeldeinformationen zum Speichern des Zertifikats für Ihren Speichercontainers freigegebenen Zugriff.  
+        3.  Kopieren Sie das folgende Beispiel in das Abfragefenster, und ändern Sie es nach Bedarf. Mit der folgenden-Anweisung wird eine SQL Server Anmelde Informationen erstellt, um das Shared Access Certificate Ihres Speicher Containers zu speichern.  
   
             ```sql  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66090700"
   
              Am Ende dieses Schritts wird das vom Quellcomputer kopierte Verschlüsselungszertifikat vom Zielcomputer importiert. Anschließend können Sie die Datendateien auf dem Zielcomputer anfügen.  
   
-    2.  Erstellen Sie dann eine Datenbank mit Daten und Protokolldateien, die auf vorhandene Dateien im Windows Azure-Speicher verweisen. Verwenden Sie dazu die Option FOR ATTACH. Führen Sie die folgende Anweisung im Abfragefenster aus:  
+    2.  Erstellen Sie dann eine Datenbank mit Daten-und Protokolldateien, die auf die vorhandenen Dateien in Azure Storage verweisen, indem Sie die Option zum Anfügen verwenden. Führen Sie die folgende Anweisung im Abfragefenster aus:  
   
         ```sql  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66090700"
   
  Beachten Sie, dass die verschlüsselte Datenbank ohne Datenverschiebung auf eine andere Berechnungsinstanz übertragen wurde.  
   
- Um über die SQL Server Management Studio-Benutzeroberfläche eine Datenbank mit Daten und Protokolldateien zu erstellen, die auf vorhandene Dateien im Windows Azure-Speicher verweisen, führen Sie die folgenden Schritte aus:  
+ Führen Sie die folgenden Schritte aus, um eine Datenbank mit Daten-und Protokolldateien zu erstellen, die auf die vorhandenen Dateien in Azure Storage mithilfe SQL Server Management Studio Benutzeroberfläche verweisen:  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz der SQL Server-Datenbank-Engine her, und erweitern Sie anschließend diese Instanz.  
   
@@ -132,13 +132,13 @@ ms.locfileid: "66090700"
   
 3.  Stellen Sie eine Verbindung mit einem Zielcomputer her, der SQL Server 2014 CTP2 oder höher aufweist. Um den Zielcomputer vorzubereiten, müssen Sie SQL Server-Anmeldeinformationen auf dem Zielcomputer erstellen, um auf den gleichen Container zu verweisen, in dem sich TestDB1 befindet. Wenn Sie den erneuten Anfügevorgang auf dem gleichen Computer durchführen, ist es nicht erforderlich, andere Anmeldeinformationen zu erstellen.  
   
-4.  In **Objekt-Explorer**, mit der rechten Maustaste **Datenbanken** , und klicken Sie auf **Anfügen**.  
+4.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf **Datenbanken** und dann auf Anfügen  
   
-5.  In der **Datenbanken anfügen** Dialogfeld Geben Sie die Datenbank angefügt werden, klicken Sie auf **hinzufügen**. In der **Datenbankdateien** Dialogfeld:  
+5.  Klicken Sie im Dialogfeld **Datenbanken** anfügen auf **Hinzufügen**, um die anzufügende Datenbank anzugeben. Im Dialogfeld **Datenbankdateien suchen** :  
   
-     Geben Sie für die Datenbankdatendatei,: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
+     Geben Sie für den Speicherort der Datenbank `https://teststorageaccnt.blob.core.windows.net/testcontainer/`-Datendatei Folgendes ein:  
   
-     Geben Sie für Dateinamen: `TestDB1Data.mdf`.  
+     Geben Sie als Dateiname `TestDB1Data.mdf`Folgendes ein:.  
   
 6.  Klicken Sie auf **OK**.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "66090700"
   
  **Nächste Lektion:**  
   
- [Lektion 7: Verschieben von Datendateien in Microsoft Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lektion 7: Verschieben Sie die Datendateien in Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

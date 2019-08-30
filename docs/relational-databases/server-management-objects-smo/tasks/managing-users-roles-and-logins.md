@@ -12,15 +12,15 @@ helpviewer_keywords:
 - roles [SMO]
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fda8d8345b48853285db8c5d09754ed161420767
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030266"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148410"
 ---
 # <a name="managing-users-roles-and-logins"></a>Verwalten von Benutzern, Rollen und Anmeldungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68030266"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken verfügen darüber hinaus über Rollen, die eine Gruppe von Berechtigungen auf Datenbankebene festlegen, über die Benutzer bestimmte Tasks durchführen können. Im Gegensatz zu Serverrollen sind Datenbankrollen variabel. Sie können erstellt, geändert und gelöscht werden. Einer Datenbankrolle können für die Massenverwaltung Berechtigungen und Benutzer zugeordnet werden.  
   
 ## <a name="example"></a>Beispiel  
- Für die folgenden Codebeispiele müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Für die folgenden Codebeispiele müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Auflisten von Anmeldungen und zugeordneten Benutzern in Visual C#  
  Jeder Benutzer in einer Datenbank ist einer Anmeldung zugeordnet. Die Anmeldung kann Benutzern in mehreren Datenbanken zugeordnet werden. Das Codebeispiel zeigt, wie die <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>-Methode des <xref:Microsoft.SqlServer.Management.Smo.Login>-Objekts aufgerufen wird, um alle Datenbankbenutzer aufzulisten, die der Anmeldung zugeordnet sind. Im Beispiel werden eine Anmeldung und ein Benutzer in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt, um sicherzustellen, dass Zuordnungsinformationen vorliegen, die aufgelistet werden können.  
@@ -91,7 +91,7 @@ CD \sql\localhost\Default\Databases
 ```  
   
 ## <a name="managing-roles-and-users"></a>Verwalten von Rollen und Benutzern  
- Im folgenden Beispiel wird die Verwaltung von Rollen und Benutzern gezeigt. Zum Ausführen dieses Beispiels müssen Sie die folgenden Assemblys verweisen:  
+ Im folgenden Beispiel wird die Verwaltung von Rollen und Benutzern gezeigt. Um dieses Beispiel ausführen zu können, müssen Sie auf die folgenden Assemblys verweisen:  
   
 -   Microsoft.SqlServer.Smo.dll  
   

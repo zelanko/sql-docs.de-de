@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Eine vollständige Datenbanksicherung in den Windows Azure-Blob-Speicherdienst schreiben | Microsoft-Dokumentation'
+title: 'Lektion 3: Schreiben einer vollständigen Datenbanksicherung in den Azure BLOB Storage-Dienst | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653686"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153473"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Lektion 3: Schreiben einer vollständigen Datenbanksicherung in Microsoft Azure Blob Storage
-  In dieser Lektion wird erläutert, wie anhand der T-SQL-Anweisung eine vollständige Datenbanksicherung im Windows Azure-BLOB-Speicherdienst ausgeführt wird.  
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lektion 3: Schreiben einer vollständigen Datenbanksicherung in den Azure BLOB Storage-Dienst
+  Diese Lektion veranschaulicht die Verwendung der TQL-Anweisung zum Ausführen einer vollständigen Datenbanksicherung im Azure-BLOB-Speicherdienst.  
   
-## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Ausführen einer vollständigen Datenbanksicherung im Windows Azure-BLOB-Speicherdienst  
+## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Ausführen einer vollständigen Datenbanksicherung für den Azure BLOB Storage-Dienst  
  Führen Sie die folgenden Schritte aus, um eine vollständige Datenbanksicherung zu erstellen:  
   
 1.  Stellen Sie eine Verbindung mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]her.  
@@ -44,6 +44,6 @@ ms.locfileid: "62653686"
 5.  Stellen Sie im Objekt-Explorer eine Verbindung mit dem Azure-Speicher her. Navigieren Sie zum Container und den neu erstellten Sicherungsdateien.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
+ [Lektion 4: Führen Sie eine Wiederherstellung von einer voll](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)ständigen Datenbanksicherung aus.  
   
   

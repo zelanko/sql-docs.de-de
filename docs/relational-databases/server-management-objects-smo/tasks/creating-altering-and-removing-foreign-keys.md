@@ -10,27 +10,27 @@ ms.topic: reference
 helpviewer_keywords:
 - foreign keys [SMO]
 ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 787c0786719b1daa7f77495b8ce144f95796df79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4894535c0c9e7fc6908dd4e6a7129f874f16d4b5
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001353"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148511"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Erstellen, Ändern und Löschen von Fremdschlüsseln
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden Fremdschlüssel durch das <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>-Objekt dargestellt.  
   
- Um einen Fremdschlüssel in SMO zu erstellen, müssen Sie die Tabelle angeben, auf der der Fremdschlüssel im Konstruktor des <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>-Objekts angegeben ist. In der Tabelle müssen Sie mindestens eine Spalte als Fremdschlüssel auswählen. Um dies zu erreichen, erstellen Sie eine <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn>-Objektvariable und geben den Namen der Spalte an, die der Fremdschlüssel sein soll. Geben Sie dann die Tabelle und die Spalte an, auf die verwiesen wird. Verwenden der <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> Methode, um die Spalte hinzufügen der **Spalten** Objekteigenschaft.  
+ Um einen Fremdschlüssel in SMO zu erstellen, müssen Sie die Tabelle angeben, auf der der Fremdschlüssel im Konstruktor des <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>-Objekts angegeben ist. In der Tabelle müssen Sie mindestens eine Spalte als Fremdschlüssel auswählen. Um dies zu erreichen, erstellen Sie eine <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn>-Objektvariable und geben den Namen der Spalte an, die der Fremdschlüssel sein soll. Geben Sie dann die Tabelle und die Spalte an, auf die verwiesen wird. Verwenden Sie <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> die-Methode, um der **Columns** -Objekt Eigenschaft die Spalte hinzuzufügen.  
   
- Die Spalten, die den Fremdschlüssel darstellen finden Sie in der **Spalten** -Objekteigenschaft des der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> Objekt. Der Primärschlüssel, auf den vom Fremdschlüssel verwiesen wird, ist durch die <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>-Eigenschaft dargestellt, die sich in der Tabelle befindet, die in der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>-Eigenschaft angegeben ist.  
+ Die Spalten, die den Fremdschlüssel darstellen, werden in der **Columns** -Objekt Eigenschaft <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> des-Objekts aufgelistet. Der Primärschlüssel, auf den vom Fremdschlüssel verwiesen wird, ist durch die <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>-Eigenschaft dargestellt, die sich in der Tabelle befindet, die in der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>-Eigenschaft angegeben ist.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Erstellen, Ändern und Löschen eines Fremdschlüssels in Visual Basic  
  Dieses Codebeispiel zeigt, wie eine Fremdschlüsselbeziehung zwischen einer oder mehreren Spalten in einer Tabelle und einer Primärschlüsselspalte in einer anderen Tabelle erstellt wird.  
@@ -120,7 +120,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Beispiel: Fremdschlüssel, Primärschlüssel und Unique-Einschränkungsspalten  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Beispiel: Fremdschlüssel, Primärschlüssel und eindeutige Einschränkungs Spalten  
  Dieses Beispiel veranschaulicht Folgendes:  
   
 -   Finden eines Fremdschlüssels für ein vorhandenes Objekt  

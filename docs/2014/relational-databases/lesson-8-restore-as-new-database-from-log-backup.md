@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 9: Wiederherstellen einer Datenbank aus Windows Azure-Speicher | Microsoft-Dokumentation'
+title: 'Lektion 9: Wiederherstellen einer Datenbank aus Azure Storage | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,39 +10,39 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41fbe4cefb6a759befd8b96ded8487ff54b0a1c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a58b7c233c3b49cf85ba34bedcd74121047564
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090648"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154975"
 ---
-# <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lektion 9: Wiederherstellen einer Datenbank aus dem Windows Azure-Speicher
-  In dieser Lektion erfahren Sie, wie Sie eine Datenbanksicherungsdatei vom Windows Azure-Speicher in einer Datenbank wiederherstellen, die sich entweder in einer lokalen Umgebung oder auf einem virtuellen Computer in Windows Azure befindet. Für diese Lektion müssen Sie Lektion 4, 5, 6, 7 und 8 nicht abschließen.  
+# <a name="lesson-9-restore-a-database-from-azure-storage"></a>Lektion 9: Wiederherstellen einer Datenbank aus Azure Storage
+  In dieser Lektion erfahren Sie, wie Sie eine Daten Bank Sicherungsdatei aus Azure Storage in einer Datenbank wiederherstellen, die sich entweder lokal oder auf einem virtuellen Computer in Azure befindet. Für diese Lektion müssen Sie Lektion 4, 5, 6, 7 und 8 nicht abschließen.  
   
  In dieser Lektion wird davon ausgegangen, dass Sie bereits die folgenden Schritte abgeschlossen haben:  
   
 -   Sie haben eine Datenbank auf dem Quellcomputer erstellt.  
   
--   Sie haben eine Sicherung der Datenbank (bak) im Windows Azure-Speicher erstellt, mit der [SQL Server-Sicherung und-Wiederherstellung mit dem Windows Azure-Blob-Speicherdienst](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) Feature. Beachten Sie, dass Sie in diesem Schritt andere SQL Server-Anmeldeinformationen erstellen müssen. Diese Anmeldeinformationen verwenden Speicherkontoschlüssel.  
+-   Sie haben mithilfe des Features [SQL Server Sicherung und Wiederherstellung mit Azure BLOB Storage Dienst](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) eine Sicherung der-Datenbank (BAK) in Azure Storage erstellt. Beachten Sie, dass Sie in diesem Schritt andere SQL Server-Anmeldeinformationen erstellen müssen. Diese Anmeldeinformationen verwenden Speicherkontoschlüssel.  
   
--   Sie verfügen über ein Windows Azure-Speicherkonto.  
+-   Sie verfügen über ein Azure Storage Konto.  
   
--   Sie haben einen Container über Ihr Windows Azure-Speicherkonto erstellt.  
+-   Sie haben unter Ihrem Azure Storage Konto einen Container erstellt.  
   
 -   Sie haben eine Richtlinie in einem Container mit Lese-, Schreib- und Auflistungsrechten erstellt. Sie haben auch einen SAS-Schlüssel generiert.  
   
--   Sie haben auf dem Computer SQL Server-Anmeldeinformationen für die Windows Azure-Speicherintegration erstellt. Beachten Sie, dass diese Anmeldeinformationen einen Shared Access Signature (SAS)-Schlüssel erfordern.  
+-   Sie haben eine SQL Server Anmelde Informationen auf Ihrem Computer erstellt, um Azure Storage-Integrations Feature zu erstellen. Beachten Sie, dass diese Anmeldeinformationen einen Shared Access Signature (SAS)-Schlüssel erfordern.  
   
- Um eine Datenbank aus dem Windows Azure-Speicher wiederherzustellen, können Sie folgende Schritte ausführen:  
+ Zum Wiederherstellen einer Datenbank aus Azure Storage können Sie die folgenden Schritte ausführen:  
   
 1.  Starten von SQL Server Management Studio Stellen Sie eine Verbindung mit der Standardinstanz her.  
   
-2.  Klicken Sie auf **neue Abfrage** auf der Standardsymbolleiste.  
+2.  Klicken Sie auf der Standard Symbolleiste auf **neue Abfrage** .  
   
-3.  Kopieren Sie das folgenden komplette Skript, und fügen Sie es in das Abfrage-Fenster ein. Ändern Sie das Skript aus, je nach Bedarf.  
+3.  Kopieren Sie das folgenden komplette Skript, und fügen Sie es in das Abfrage-Fenster ein. Ändern Sie das Skript nach Bedarf.  
   
-     **Hinweis**: Sie führen die `RESTORE` Anweisung, um die datenbanksicherung (bak) im Windows Azure-Speicher auf einer Datenbankinstanz auf einem anderen Computer wiederherstellen.  
+     **Hinweis**: Sie führen die `RESTORE` -Anweisung aus, um die Datenbanksicherung (BAK) in Azure Storage in einer Daten Bank Instanz auf einem anderen Computer wiederherzustellen.  
   
     ```sql  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66090648"
     GO   
     SELECT * from dbo.Table1;   
     GO   
-    -- Create a credential to be used by SQL Server Backup and Restore with Windows Azure -----Blob Storage Service.   
+    -- Create a credential to be used by SQL Server Backup and Restore with Azure -----Blob Storage Service.   
     USE master;   
     GO   
     CREATE CREDENTIAL BackupCredential    
@@ -70,7 +70,7 @@ ms.locfileid: "66090648"
     GO   
     -- Display the newly created credential   
     SELECT * from sys.credentials   
-    -- Create a backup in Windows Azure Storage.   
+    -- Create a backup in Azure Storage.   
     BACKUP DATABASE TestDBRestoreFrom    
     TO URL = 'https://teststorageaccnt.blob.core.windows.net/testrestorefrom/TestDBRestoreFrom.bak'    
           WITH CREDENTIAL = 'BackupCredential'    
@@ -95,6 +95,6 @@ ms.locfileid: "66090648"
   
     ```  
   
- **Ende des Lernprogramms: SQL Server-Datendateien im Windows Azure Storage-Dienst**  
+ **Ende des Tutorials: SQL Server von Datendateien in Azure Storage Dienst**  
   
   

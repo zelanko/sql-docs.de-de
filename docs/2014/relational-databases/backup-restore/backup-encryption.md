@@ -10,12 +10,12 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e007dfaf2e14b488fb538f6b0c0ad958988a4c0
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922171"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154846"
 ---
 # <a name="backup-encryption"></a>Verschlüsseln der Sicherung
   Dieses Thema bietet eine Übersicht über die Verschlüsselungsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen. Es enthält Details zur Verwendung, zu den Vorteilen und empfohlenen Vorgehensweisen beim Verschlüsseln bei der Sicherung.  
@@ -26,20 +26,20 @@ ms.locfileid: "62922171"
   
  Um während der Sicherung eine Verschlüsselung durchzuführen, müssen Sie einen Verschlüsselungsalgorithmus und eine Verschlüsselungsmethode angeben, um den Verschlüsselungsschlüssel zu sichern. Folgende Verschlüsselungsoptionen werden unterstützt:  
   
--   **Verschlüsselungsalgorithmus:** Die unterstützten Verschlüsselungsalgorithmen sind: AES 128, AES 192, AES 256 und Triple DES  
+-   **Verschlüsselungsalgorithmus:** Die folgenden Verschlüsselungsalgorithmen werden unterstützt: AES 128, AES 192, AES 256 und Triple DES  
   
--   **Encryptor:** Ein Zertifikat oder asymmetrischer Schlüssel  
+-   **Verschlüsselung:** Ein Zertifikat oder asymmetrischer Schlüssel  
   
 > [!CAUTION]  
 >  Es ist sehr wichtig, das Zertifikat oder den asymmetrischen Schlüssel zu sichern – vorzugsweise an einem anderen Speicherort als die Sicherungsdatei, die zum Verschlüsseln verwendet wurde. Ohne das Zertifikat oder den asymmetrischen Schlüssel können Sie keine Sicherung wiederherstellen, sodass die Sicherungsdatei unbrauchbar ist.  
   
- **Wiederherstellen der verschlüsselten Sicherung:** SQL Server-Wiederherstellung erfordert keine Verschlüsselungsparameter, die während der Wiederherstellung angegeben werden. Sie setzt aber voraus, dass das Zertifikat oder der asymmetrische Schlüssel, die zum Verschlüsseln der Sicherungsdatei verwendet werden, in der Instanz verfügbar ist, auf der Sie die Wiederherstellung ausführen. Das Benutzerkonto, unter dem die Wiederherstellung ausgeführt wird, muss über `VIEW DEFINITION`-Berechtigungen für das Zertifikat oder den Schlüssel verfügen. Wenn Sie die verschlüsselte Sicherung in einer anderen Instanz wiederherstellen, müssen Sie sicherstellen, dass das Zertifikat für diese Instanz verfügbar ist.  
+ **Wiederherstellen der verschlüsselten Sicherung:** Die SQL Server-Wiederherstellung erfordert keine Angabe von Verschlüsselungsparametern während der Wiederherstellung. Sie setzt aber voraus, dass das Zertifikat oder der asymmetrische Schlüssel, die zum Verschlüsseln der Sicherungsdatei verwendet werden, in der Instanz verfügbar ist, auf der Sie die Wiederherstellung ausführen. Das Benutzerkonto, unter dem die Wiederherstellung ausgeführt wird, muss über `VIEW DEFINITION`-Berechtigungen für das Zertifikat oder den Schlüssel verfügen. Wenn Sie die verschlüsselte Sicherung in einer anderen Instanz wiederherstellen, müssen Sie sicherstellen, dass das Zertifikat für diese Instanz verfügbar ist.  
   
  Wenn Sie eine Sicherung von einer TDE-verschlüsselten Datenbank wiederherstellen, sollte das TDE-Zertifikat auf der Instanz verfügbar sein, auf der die Wiederherstellung erfolgen soll.  
   
 ##  <a name="Benefits"></a> Vorteile  
   
-1.  Verschlüsseln der datenbanksicherungen trägt zum Schutz der Daten: SQL Server bietet die Möglichkeit, die Sicherungsdaten beim Erstellen einer Sicherung zu verschlüsseln.  
+1.  Das Verschlüsseln der Datenbanksicherungen trägt zum Schutz der Daten bei: SQL Server bietet die Option, die Sicherungsdaten beim Erstellen einer Sicherung zu verschlüsseln.  
   
 2.  Verschlüsselung kann auch für Datenbanken verwendet werden, die mithilfe von TDE verschlüsselt werden.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62922171"
 ##  <a name="Prerequisites"></a> Erforderliche Komponenten  
  Voraussetzungen zum Verschlüsseln einer Sicherung:  
   
-1.  **Erstellen Sie ein Datenbank-Hauptschlüssel für die master-Datenbank:** Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Erstellen eines Datenbankhauptschlüssels für die Masterdatenbank:** Der Datenbank-Hauptschlüssel ist ein symmetrischer Schlüssel, der zum Schützen von privaten Schlüsseln der in der Datenbank vorhandenen Zertifikate und asymmetrischen Schlüssel verwendet wird. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel für SQL Server und Datenbank &#40;Datenbank-Engine&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Erstellen Sie ein Zertifikat oder einen asymmetrischen Schlüssel, der für die Sicherungsverschlüsselung verwendet wird. Weitere Informationen zum Erstellen eines Zertifikats finden Sie unter [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Weitere Informationen zum Erstellen eines asymmetrischen Schlüssels finden Sie unter [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -135,7 +135,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Thema/Aufgabe|Beschreibung|  
 |-----------------|-----------------|  
 |[Erstellen einer verschlüsselten Sicherung](create-an-encrypted-backup.md)|Beschreibt die grundlegenden Schritte, die erforderlich sind, um eine verschlüsselte Sicherung zu erstellen.|  
-|[SQL Server Managed Backup für Microsoft Azure: Beibehaltungs- und Speichereinstellungen](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Beschreibt die grundlegenden Schritte, die erforderlich sind, um [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mit den angegebenen Verschlüsselungsoptionen zu konfigurieren.|  
+|[SQL Server verwaltete Sicherung in Azure-Beibehaltungs-und Speichereinstellungen](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Beschreibt die grundlegenden Schritte, die erforderlich sind, um [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mit den angegebenen Verschlüsselungsoptionen zu konfigurieren.|  
 |[Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Enthält ein Beispiel zum Erstellen einer verschlüsselten Sicherung, die durch Schlüssel im Azure-Schlüsseltresor geschützt ist.|  
   
 ## <a name="see-also"></a>Siehe auch  

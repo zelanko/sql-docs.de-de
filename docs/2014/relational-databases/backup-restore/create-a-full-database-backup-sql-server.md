@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f8387d7b833a80cd4df09f7d4208974d40a7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922274"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154824"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Erstellen einer vollständigen Datenbanksicherung (SQL Server)
   In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder PowerShell eine vollständige Datenbanksicherung erstellen.  
   
 > [!NOTE]  
->  Informationen zur SQL Server-Sicherung im Windows Azure-BLOB-Speicherdienst finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Windows Azure-BLOB-Speicherdienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Informationen zur SQL Server Sicherung im Azure-BLOB-Speicherdienst finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **In diesem Thema**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62922274"
   
      [Sicherheit](#Security)  
   
--   **Zum Erstellen einer vollständigen Datenbank datenbanksicherung mit:**  
+-   **So erstellen Sie eine vollständige Datenbanksicherung mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62922274"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Sichern**. Das Dialogfeld **Datenbank sichern** wird angezeigt.  
   
-4.  In der `Database` Listenfeld, überprüfen Sie den Datenbanknamen. Sie können optional eine andere Datenbank aus der Liste auswählen.  
+4.  Überprüfen Sie im ListenfelddenDatenbanknamen.`Database` Sie können optional eine andere Datenbank aus der Liste auswählen.  
   
 5.  Eine Datenbanksicherung kann für jedes Wiederherstellungsmodell ausgeführt werden (**FULL**, **BULK_LOGGED**oder **SIMPLE**).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62922274"
     > [!NOTE]  
     >  Wenn die Option **Differenziell** aktiviert ist, können Sie keine Kopiesicherung erstellen.  
   
-8.  Für **Sicherungskomponente**, klicken Sie auf `Database`.  
+8.  Klicken Sie für **Sicherungs Komponente**auf `Database`.  
   
 9. Akzeptieren Sie entweder den im Textfeld **Name** vorgeschlagenen Standardnamen für den Sicherungssatz, oder geben Sie einen anderen Namen für den Sicherungssatz ein.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922274"
          Geben Sie bei dieser Option einen Namen in das Textfeld **Name für neuen Mediensatz** und optional eine Beschreibung des Mediensatzes in das Textfeld **Beschreibung für neuen Mediensatz** ein.  
   
         > [!IMPORTANT]  
-        >  Diese Option ist deaktiviert, wenn Sie auf der Seite **Allgemein** die Option **URL** ausgewählt haben. Diese Aktionen werden bei einer Sicherung im Windows Azure-Speicher nicht unterstützt.  
+        >  Diese Option ist deaktiviert, wenn Sie auf der Seite **Allgemein** die Option **URL** ausgewählt haben. Diese Aktionen werden bei der Sicherung im Azure-Speicher nicht unterstützt.  
   
 14. Aktivieren Sie im Abschnitt **Zuverlässigkeit** optional folgende Kontrollkästchen:  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62922274"
   
 18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] und höheren Versionen wird die [Sicherungskomprimierung](backup-compression-sql-server.md). Ob eine Sicherung standardmäßig komprimiert wird, ist abhängig vom Wert der Serverkonfigurationsoption **backup-compression default** . Sie können jedoch unabhängig von der aktuellen Standardeinstellung auf Serverebene eine Sicherung komprimieren, indem Sie die Option **Sicherung komprimieren**aktivieren, oder die Komprimierung verhindern, indem Sie die Option **Sicherung nicht komprimieren**aktivieren.  
   
-     **Zum Anzeigen oder Ändern der aktuellen backup Compression default**  
+     **So zeigen Sie den aktuellen Sicherungs Komprimierungs Standard an oder ändern ihn**  
   
     -   [Anzeigen oder Konfigurieren der Serverkonfigurationsoption Standardeinstellung für die Sicherungskomprimierung](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -188,7 +188,7 @@ ms.locfileid: "62922274"
   
      [ WITH *mit_Optionen* [ **,** ...*o* ] ] ;  
   
-    |Option|Description|  
+    |Option|Beschreibung|  
     |------------|-----------------|  
     |*database*|Die Datenbank, für die eine Sicherungskopie erstellt werden soll.|  
     |*Sicherungsmedium* [ **,** ...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=** _physischer_Sicherungsmediumname_<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
@@ -204,7 +204,7 @@ ms.locfileid: "62922274"
          VERSCHLÜSSELUNG (ALGORITHMUS, SERVERZERTIFIKAT | ASYMMETRISCHER SCHLÜSSEL)  
          Nur in SQL Server 2014 und höheren Versionen geben Sie den zu verwendenden Verschlüsselungsalgorithmus und das Zertifikat oder den asymmetrischen Schlüssel an, die die Sicherheit bei der Verschlüsselung erhöhen.  
   
-         DESCRIPTION **=** { **' *`text`* '**  |  **@** _text_variable_ }  
+         Beschreibung **=** { ***'`text`* '**  |  Text Variable **}@**  
          Gibt den Text an, mit dem der Sicherungssatz beschrieben wird. Die Zeichenfolge kann maximal 255 Zeichen haben.  
   
          NAME **=** { *backup_set_name* |  **@** _backup_set_name_var_ }  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
   
-1.  Verwenden Sie das `Backup-SqlDatabase`-Cmdlet. Um ausdrücklich anzugeben, dass es sich um eine vollständige datenbanksicherung handelt, geben die **- BackupAction** Parameter mit dessen Standardwert `Database`. Dieser Parameter ist bei vollständigen Datenbanksicherungen optional.  
+1.  Verwenden Sie das `Backup-SqlDatabase`-Cmdlet. Um explizit anzugeben, dass es sich um eine vollständige Datenbanksicherung handelt, geben Sie den **-Backup Action-** Parameter mit dem Standardwert `Database`an. Dieser Parameter ist bei vollständigen Datenbanksicherungen optional.  
   
      Im folgenden Beispiel wird eine vollständige Datenbanksicherung der `MyDB` -Datenbank am standardmäßigen Sicherungsspeicherort der Serverinstanz `Computer\Instance`erstellt. Optional wird im Beispiel `-BackupAction Database` angegeben.  
   
@@ -291,7 +291,7 @@ GO
   
 -   [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [Wiederherstellen einer Datenbanksicherung &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Wiederherstellen einer Daten &#40;Bank Sicherung SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Wiederherstellen einer Datenbanksicherung unter dem einfachen Wiederherstellungsmodell &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   

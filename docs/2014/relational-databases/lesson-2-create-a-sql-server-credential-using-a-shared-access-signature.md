@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Erstellen von SQL Server-Anmeldeinformationen | Microsoft-Dokumentation'
+title: 'Lektion 3: Erstellen eines SQL Server Anmelde Informationen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85e60c359df2a209742b5b10693fcb72ac9cb37a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090850"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153834"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lektion 3: Erstellen von SQL Server-Anmeldeinformationen
-  In dieser Lektion erstellen Sie Anmeldeinformationen, um die Sicherheitsinformationen für den Zugriff auf das Windows Azure-Speicherkonto zu speichern.  
+  In dieser Lektion erstellen Sie Anmelde Informationen zum Speichern der Sicherheitsinformationen, die für den Zugriff auf das Azure-Speicherkonto verwendet werden.  
   
  SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature-Schlüsselwerte gespeichert. Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen.  
   
- Allgemeine Informationen zu Anmeldeinformationen finden Sie unter [Anmeldeinformationen &#40;Datenbank-Engine&#41;](security/authentication-access/credentials-database-engine.md).  
+ Allgemeine Informationen zu Anmelde Informationen finden Sie [unter &#40;Anmelde&#41;Informationen Datenbank-Engine](security/authentication-access/credentials-database-engine.md).  
   
 > [!IMPORTANT]  
->  Die Anforderungen zum Erstellen einer SQL Server-Anmeldeinformationen, die unten beschriebenen sind spezifisch für die [SQL Server-Datendateien in Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md) Feature. Informationen zum Erstellen von Anmeldeinformationen für backup-Prozesse im Azure-Speicher finden Sie unter [Lektion 2: Erstellen Sie eine SQL Server-Anmeldeinformation](../tutorials/lesson-2-create-a-sql-server-credential.md).  
+>  Die Anforderungen zum Erstellen einer SQL Server Anmelde Informationen, die unten beschrieben werden, gelten speziell für das Feature [SQL Server Datendateien in Azure](databases/sql-server-data-files-in-microsoft-azure.md) . Informationen zum Erstellen von Anmelde Informationen für Sicherungs Prozesse in Azure Storage finden [Sie unter Lektion 2: Erstellen Sie eine SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)Anmelde Informationen.  
   
  Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu erstellen:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66090850"
   
 3.  Klicken Sie auf der Standardsymbolleiste auf "Neue Abfrage".  
   
-4.  Kopieren Sie das folgende Beispiel in das Abfragefenster, und ändern Sie es nach Bedarf. Die folgende Anweisung erstellt SQL Server-Anmeldeinformationen zum Speichern des Zertifikats für Ihren Speichercontainers freigegebenen Zugriff.  
+4.  Kopieren Sie das folgende Beispiel in das Abfragefenster, und ändern Sie es nach Bedarf. Mit der folgenden Anweisung wird eine SQL Server Anmelde Informationen erstellt, um das freigegebene Zugriffs Zertifikat Ihres Speicher Containers zu speichern.  
   
     ```sql  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66090850"
   
     ```  
   
-     Ausführliche Informationen finden Sie unter [CREATE CREDENTIAL &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) in SQL Server-Onlinedokumentation.  
+     Ausführliche Informationen finden Sie unter [Create Credential &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) in SQL Server-Onlinedokumentation.  
   
 5.  Um alle verfügbaren Anmeldeinformationen anzuzeigen, können Sie im Abfragefenster die folgende Anweisung ausführen:  
   
@@ -55,10 +55,10 @@ ms.locfileid: "66090850"
     SELECT * from sys.credentials  
     ```  
   
-     Weitere Informationen zu sys.credentials finden Sie unter [sys.credentials &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) in SQL Server-Onlinedokumentation.  
+     Weitere Informationen zu sys. Anmelde Informationen finden Sie unter [sys. &#40;Anmelde Informationen Transact&#41; -SQL](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) in SQL Server-Onlinedokumentation.  
   
  **Nächste Lektion:**  
   
- [Lektion 4: Erstellen einer Datenbank in Windows Azure-Speicher](lesson-3-database-backup-to-url.md)  
+ [Lektion 4: Erstellen einer Datenbank in Azure Storage](lesson-3-database-backup-to-url.md)  
   
   

@@ -12,36 +12,36 @@ helpviewer_keywords:
 - SMO [SQL Server], installing
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f57fc3ea1a677a2655f5358a1d5c4b27045ea6ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2785054fa9cc445b6ff03c46f7f145b4f422cb60
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098023"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148631"
 ---
 # <a name="installing-smo"></a>Installieren von SMO
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-Diese Seite enthält Informationen zum Installieren von SMO für die Verwendung von Anwendungen und Systemanforderungen für die Verwendung von SMO.
+Diese Seite enthält Informationen zum Installieren von SMO für die Verwendung durch Anwendungen und die Systemanforderungen für die Verwendung von SMO.
 
-## <a name="smo-nuget-package"></a>SMO-NuGet-Paket
+## <a name="smo-nuget-package"></a>SMO-nuget-Paket
 
-Beginnend mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO wird als verteilt die [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) NuGet-Paket, dass Benutzer Anwendungen mit SMO zu entwickeln können.
+Ab 2017 SMO wird als [Microsoft. SqlServer. sqlmanagementobjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) -nuget-Paket verteilt, damit Benutzer Anwendungen mit SMO entwickeln können. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-Dies ist ein Ersatz für SharedManagementObjects.msi, die zuvor als Teil der SQL-Feature Pack für jede Version von SQL Server veröffentlicht wurde. Anwendungen, die SMO verwenden sollten aktualisiert werden, um das NuGet-Paket verwenden und dafür verantwortlich, sicherzustellen, dass die Binärdateien installiert sind, mit der Anwendung, die entwickelt werden.
+Dies ist ein Ersatz für sharedmanagementobjects. msi, das zuvor als Teil des SQL Feature Packs für jede Version von SQL Server freigegeben wurde. Anwendungen, die SMO verwenden, sollten aktualisiert werden, um stattdessen das nuget-Paket zu verwenden, und Sie müssen sicherstellen, dass die Binärdateien mit der Anwendung, die entwickelt wird, installiert werden.
 
 >>[!Important]
->>Wie erwähnt die [Dateien und Versionsnummern](files-and-version-numbers.md) Seite, Sie sollten nicht die SMO-Assemblys im globalen Assemblycache installieren. Auf diese Weise kann dazu führen, dass Probleme mit anderen Anwendungen, die ebenfalls diese Versionen von SMO verwenden (z. B. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
+>>Wie auf der Seite [Dateien und Versionsnummern](files-and-version-numbers.md) erwähnt, sollten Sie die SMO-Assemblys nicht im GAC installieren. Dies könnte zu Problemen mit anderen Anwendungen führen, die auch diese Versionen von SMO verwenden (z [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b. Management Studio).
 
 ## <a name="installing-the-package"></a>Installieren des Pakets
 
-Finden Sie unter [NuGet Schnellstart - Verwenden eines Pakets](https://docs.microsoft.com/nuget/quickstart/use-a-package) Anweisungen und Beispiele für die Installation und Verwendung eines NuGet-Pakets. 
+Anweisungen und Beispiele für die Installation und Verwendung eines nuget-Pakets finden [Sie unter nuget-Schnellstart: Verwenden eines Pakets](https://docs.microsoft.com/nuget/quickstart/use-a-package) . 
   
 ## <a name="system-requirements"></a>Systemanforderungen
   
- SMO erfordert [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0 ausführen, sodass alle Anwendungen verwenden, sicherstellen müssen, dass Clientcomputer die Version oder höher installiert. Einige nativen-Binärdateien installiert, die mit den NetFx SMO-Bibliotheken erfordern auch die VC++ 2013 Runtime installiert werden; dieser Laufzeit ist nicht im Paket enthalten. Sie können die entsprechenden, auf der Zielarchitektur aus Redist herunterladen. https://www.microsoft.com/download/details.aspx?id=40784
+ SMO erfordert [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] die Ausführung von 4,0, sodass alle Anwendungen, die es verwenden, sicherstellen müssen, dass auf den Client Computern diese Version oder höher installiert ist. Für einige Native Binärdateien, die mit den netfx SMO-Bibliotheken installiert werden, muss auch die VC 2013-Laufzeit installiert werden. Diese Laufzeit ist nicht im Paket enthalten. Sie können den redist, der für Ihre Zielarchitektur geeignet ist, von https://www.microsoft.com/download/details.aspx?id=40784
   

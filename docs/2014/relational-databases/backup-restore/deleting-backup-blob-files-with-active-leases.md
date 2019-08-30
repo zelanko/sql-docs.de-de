@@ -10,15 +10,15 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e4550f64d815c40b4069c2e62e9eee7ffd0cf1d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876170"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154761"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Löschen von BLOB-Sicherungsdateien mit aktiver Lease
-  Wenn Sicherungs- oder Wiederherstellungsvorgänge im Windows Azure-Speicher ausgeführt werden, reserviert SQL Server eine Lease für eine unbegrenzte Dauer, um den exklusiven Zugriff auf das BLOB zu gewährleisten. Nachdem die Sicherung oder Wiederherstellung erfolgreich abgeschlossen wurde, wird die Lease wieder freigegeben. Wenn eine Sicherung oder Wiederherstellung fehlschlägt, wird im Rahmen des Sicherungsvorgangs versucht, ungültige BLOBs zu bereinigen. Kann die Sicherung jedoch aufgrund eines längeren bzw. dauerhaften Netzwerkverbindungsfehlers nicht ausgeführt werden, ist der Sicherungsvorgang u. U. nicht in der Lage, auf das BLOB zuzugreifen, sodass das BLOB verwaist ist. Dies bedeutet, dass das BLOB erst wieder beschreibbar ist bzw. gelöscht werden kann, nachdem die Lease freigegeben wurde. In diesem Thema wird beschrieben, wie die Lease freigegeben und das BLOB gelöscht wird.  
+  Beim Sichern oder Wiederherstellen von Azure Storage erhält SQL Server eine unbegrenzte Lease, um exklusiven Zugriff auf das BLOB zu sperren. Nachdem die Sicherung oder Wiederherstellung erfolgreich abgeschlossen wurde, wird die Lease wieder freigegeben. Wenn eine Sicherung oder Wiederherstellung fehlschlägt, wird im Rahmen des Sicherungsvorgangs versucht, ungültige BLOBs zu bereinigen. Kann die Sicherung jedoch aufgrund eines längeren bzw. dauerhaften Netzwerkverbindungsfehlers nicht ausgeführt werden, ist der Sicherungsvorgang u. U. nicht in der Lage, auf das BLOB zuzugreifen, sodass das BLOB verwaist ist. Dies bedeutet, dass das BLOB erst wieder beschreibbar ist bzw. gelöscht werden kann, nachdem die Lease freigegeben wurde. In diesem Thema wird beschrieben, wie die Lease freigegeben und das BLOB gelöscht wird.  
   
  Weitere Informationen zu Leasetypen finden Sie in diesem [Artikel](https://go.microsoft.com/fwlink/?LinkId=275664).  
   
@@ -29,9 +29,9 @@ ms.locfileid: "62876170"
 ## <a name="managing-orphaned-blobs"></a>Verwalten verwaister BLOBs  
  In den folgenden Schritten wird beschrieben, wie nach einem fehlerhaften Sicherungs- oder Wiederherstellungsvorgang ein Cleanup ausgeführt wird. Sämtliche Schritte können mithilfe von PowerShell-Skripts ausgeführt werden. Im folgenden Abschnitt finden Sie ein Codebeispiel:  
   
-1.  **Identifizieren von Blobs, die über Leases verfügen:** Falls Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungsvorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses ermitteln und die Blobs entsprechend bereinigen.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
+1.  **Identifizieren von blobspeicher mit Leases:** Falls Sie über ein Skript oder einen Prozess zum Ausführen der Sicherungsvorgänge verfügen, können Sie den Fehler möglicherweise innerhalb des Skripts oder Prozesses ermitteln und die Blobs entsprechend bereinigen.   Sie können die BLOBs mit aktiven Leases auch mithilfe der LeaseStats-Eigenschaft und LeastState-Eigenschaft identifizieren. Nachdem Sie die BLOBs identifiziert haben, sollten Sie die Liste überprüfen, sicherstellen, dass die Sicherungsdatei gültig ist, und erst dann das BLOB löschen.  
   
-2.  **Das Abbrechen der Lease:** Durch eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen werden. Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Unterbrechen der Lease:** Durch eine autorisierte Anforderung kann die Lease ohne Angabe einer Lease-ID unterbrochen werden. Weitere Informationen finden Sie [hier](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server gibt eine Lease-ID aus, um während des Wiederherstellungsvorgangs einen exklusiven Zugriff zu gewährleisten. Die ID für die Wiederherstellungslease lautet BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -39,7 +39,7 @@ ms.locfileid: "62876170"
 3.  **Löschen des BLOBs:** Um ein BLOB zu löschen, das über eine aktive Leasedauer verfügt, müssen Sie zunächst die Leasedauer unterbrechen.  
   
 ###  <a name="Code_Example"></a> Beispiel für ein PowerShell-Skript  
- **\*\* Wichtige \* \***  , wenn Sie PowerShell 2.0 ausführen, können Sie Probleme beim Laden der Assembly WindowsAzure.Storage.dll haben. Es wird empfohlen, ein Upgrade auf PowerShell 3.0 auszuführen, um das Problem zu beheben. Sie können auch die folgende Problemumgehung für PowerShell 2.0 verwenden:  
+ **Wichtig WennSie\* PowerShell 2,0 ausführen, haben Sie möglicherweise Probleme beim Laden der Assembly "Microsoft WindowsAzure. Storage. dll". \* \* \*** Es wird empfohlen, ein Upgrade auf PowerShell 3.0 auszuführen, um das Problem zu beheben. Sie können auch die folgende Problemumgehung für PowerShell 2.0 verwenden:  
   
 -   Lassen Sie die .NET 2.0- und .NET 4.0-Assemblys zur Laufzeit laden. Dazu erstellen Sie eine Datei powershell.exe.config bzw. ändern eine bereits vorhandene Datei mit folgendem Code:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "62876170"
  Tipps zum Ausführen des Skripts  
   
 > [!WARNING]  
->  Wenn zeitgleich mit diesem Skript eine Sicherung im Windows Azure-BLOB-Speicherdienst ausgeführt wird, kann die Sicherung fehlschlagen, weil durch das Skript die Lease unterbrochen wird, die der Sicherungsvorgang zu reservieren versucht. Es empfiehlt sich, das Skript während eines Wartungsfensters oder in Phasen auszuführen, in denen keine Sicherungsaktivitäten zu erwarten sind.  
+>  Wenn eine Sicherung im Azure-BLOB-Speicherdienst zur gleichen Zeit wie dieses Skript ausgeführt wird, kann die Sicherung fehlschlagen, da dieses Skript die Lease unterbricht, die von der Sicherung gleichzeitig abgerufen werden soll. Es empfiehlt sich, das Skript während eines Wartungsfensters oder in Phasen auszuführen, in denen keine Sicherungsaktivitäten zu erwarten sind.  
   
-1.  Beim Ausführen des Skripts werden Sie aufgefordert, Werte für folgende Parameter anzugeben: Speicherkonto, Speicherschlüssel und Container sowie Pfad und Name der Windows Azure-Speicherassembly. Der Pfad der Speicherassembly entspricht dem Installationsverzeichnis der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Der Dateiname der Speicherassembly lautet "Microsoft.WindowsAzure.Storage.dll". Im Folgenden ein Beispiel für die angeforderten und eingegebenen Werte:  
+1.  Wenn Sie dieses Skript ausführen, werden Sie aufgefordert, Werte für das Speicherkonto, den Speicher Schlüssel, den Container und den Pfad und die namens Parameter der Azure Storage-Assembly anzugeben. Der Pfad der Speicherassembly entspricht dem Installationsverzeichnis der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Der Dateiname der Speicherassembly lautet "Microsoft.WindowsAzure.Storage.dll". Im Folgenden ein Beispiel für die angeforderten und eingegebenen Werte:  
   
     ```  
     cmdlet  at command pipeline position 1  

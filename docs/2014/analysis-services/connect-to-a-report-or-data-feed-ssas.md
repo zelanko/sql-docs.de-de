@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit einem Bericht oder Datenfeed (SSAS) | Microsoft-Dokumentation
+title: Mit einem Bericht oder Datenfeed verbinden (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bc15a005371b719f880f9b64a11a7b33e81ff51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087171"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151830"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Mit einem Bericht oder Datenfeed verbinden (SSAS)
   Auf dieser Seite des **Tabellenimport-Assistenten** können Sie eine Verbindung mit einem Datenfeed herstellen. Um im [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf den Assistenten zuzugreifen, klicken Sie im Menü **Modell** auf **Aus Datenquelle importieren**.  
   
 ## <a name="from-a-report"></a>Aus einem Bericht  
- **Anzeigename der Verbindung**  
+ **Anzeige Name der Verbindung**  
  Geben Sie einen Anzeigenamen für die Verbindung mit dem Datenfeed ein.  
   
  **Berichtspfad**  
@@ -41,7 +41,7 @@ ms.locfileid: "66087171"
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
   
 ## <a name="from-an-azure-datamarket-dataset"></a>Aus einem Azure DataMarket-Dataset  
- **Anzeigename der Verbindung**  
+ **Anzeige Name der Verbindung**  
  Geben Sie einen Anzeigenamen für die Verbindung mit dem Datenfeed ein.  
   
  **Datenfeed-URL**  
@@ -53,12 +53,12 @@ ms.locfileid: "66087171"
  Klicken Sie auf **Verfügbare Azure DataMarket-Datasets anzeigen** , um verfügbare Datasets anzuzeigen.  
   
  **Kontoschlüssel**  
- Geben Sie den Kontoschlüssel an, mit dem auf die Windows Azure Marketplace-Datasetabonnements zugegriffen wird.  
+ Geben Sie den Kontoschlüssel an, mit dem auf Ihre Azure Marketplace DataSet-Abonnements zugegriffen wird.  
   
- **Find**  
+ **Sich**  
  Suchen Sie einen einem Windows Live-Konto zugeordneten Kontoschlüssel.  
   
- **Meinen kontoschlüssel speichern**  
+ **Meinen Kontoschlüssel speichern**  
  Speichert den Kontoschlüssel (verschlüsselt) mit der Datenverbindung.  
   
  **Erweitert**  
@@ -68,7 +68,7 @@ ms.locfileid: "66087171"
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
   
 ## <a name="from-other-feeds"></a>Aus anderen Feeds  
- **Anzeigename der Verbindung**  
+ **Anzeige Name der Verbindung**  
  Geben Sie einen Anzeigenamen für die Verbindung mit dem Datenfeed ein.  
   
  **Datenfeed-URL**  

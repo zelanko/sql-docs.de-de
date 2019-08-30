@@ -10,15 +10,15 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5599bbb0aa1736ba5c88904ae5152a0d73856dc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df1db964dc62e416260589b45dec2d85254550a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213787"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152853"
 ---
 # <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank mithilfe von SQL Server Native Client
-  Ein Beispiel, das zeigt, wie Sie das Herstellen einer Verbindung mit einem [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter [Entwicklung: Themen zur Vorgehensweise (Windows Azure SQL-Datenbank)](https://msdn.microsoft.com/library/ee621787.aspx).  
+  Ein Beispiel, das zeigt, wie eine Verbindung mit [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe von Native Client [hergestellt wird, finden Sie Unterentwicklung: Themen zur Vorgehensweise (Azure SQL-Datenbank](https://msdn.microsoft.com/library/ee621787.aspx)).  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>Bekannte Probleme beim Herstellen einer Verbindung mit einer SQL-Datenbank  
  Die folgenden bekannten Probleme können auftreten, wenn mithilfe von [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellt wird:  

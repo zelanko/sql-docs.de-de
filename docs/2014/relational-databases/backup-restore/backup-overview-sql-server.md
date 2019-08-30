@@ -22,12 +22,12 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922121"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155005"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Dieses Thema bietet eine Einführung in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungskomponente. Die Sicherung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank ist wichtig für den Schutz Ihrer Daten. In dieser Diskussion werden Sicherungstypen und Sicherungseinschränkungen behandelt. Darüber hinaus bietet das Thema eine Einführung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungsmedien und -Sicherungsgeräte.  
@@ -38,7 +38,7 @@ ms.locfileid: "62922121"
   
 -   [Sicherungskomprimierung](#BackupCompression)  
   
--   [Einschränkungen für Sicherungsvorgänge in SQLServer](#Restrictions)  
+-   [Einschränkungen für Sicherungs Vorgänge in SQL Server](#Restrictions)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62922121"
  [Wiederherstellungsprozess](restore-and-recovery-overview-sql-server.md)  
  Ein aus mehreren Phasen bestehender Prozess, in dem alle Daten und Protokollseiten aus einer angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung in eine angegebene Datenbank kopiert werden und ein Rollforward für alle Transaktionen ausgeführt wird, die in der Sicherung protokolliert sind. Dies wird erreicht, indem die Daten durch die Übernahme protokollierter Änderungen aktualisiert werden.  
   
- **Arten von Sicherungen**  
+ **Typen von Sicherungen**  
   
- [kopiesicherung](copy-only-backups-sql-server.md)  
+ [Kopiesicherung](copy-only-backups-sql-server.md)  
  Eine Sicherung zur besonderen Verwendung, die unabhängig von der normalen Sequenz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen erstellt wird.  
   
  Datensicherung  
@@ -77,16 +77,16 @@ ms.locfileid: "62922121"
  [Protokollsicherung](transaction-log-backups-sql-server.md)  
  Eine Sicherung von Transaktionsprotokollen, die alle Protokolldatensätze enthält, die nicht in einer vorherigen Protokollsicherung gesichert wurden. (Vollständiges Wiederherstellungsmodell)  
   
- [dateisicherung](full-file-backups-sql-server.md)  
+ [Datei Sicherung](full-file-backups-sql-server.md)  
  Eine Sicherung aller Datenbankdateien oder -dateigruppen.  
   
- [teilsicherung](partial-backups-sql-server.md)  
+ [Teilsicherung](partial-backups-sql-server.md)  
  Enthält Daten aus nur einigen der Dateigruppen in einer Datenbank, einschließlich Daten in der primären Dateigruppe, alle Dateigruppen mit Lese-/Schreibzugriff und aller optional angegebenen schreibgeschützten Dateien.  
   
- **Sicherungsmedien – Begriffe und Definitionen**  
+ **Begriffe und Definitionen für Sicherungsmedien**  
   
  [Sicherungsmedium](backup-devices-sql-server.md)  
- Ein Datenträger oder Bandmedium, auf den bzw. das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server-Sicherungen können auch in einen Windows Azure-BLOB-Speicherdienst geschrieben werden. Das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Windows Azure-BLOB-Speicherdienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Ein Datenträger oder Bandmedium, auf den bzw. das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen geschrieben werden und von dem sie wiederhergestellt werden können. SQL Server Sicherungen können auch in einen Azure BLOB Storage-Dienst geschrieben werden. das **URL** -Format wird verwendet, um das Ziel und den Namen der Sicherungsdatei anzugeben. Weitere Informationen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [Sicherungsmedien](media-sets-media-families-and-backup-sets-sql-server.md)  
  Bänder oder Datenträgerdateien, auf die Sicherungen geschrieben wurden.  
@@ -100,13 +100,13 @@ ms.locfileid: "62922121"
  [Mediensatz](media-sets-media-families-and-backup-sets-sql-server.md)  
  Eine geordnete Auflistung von Sicherungsmedien, Bändern oder Dateien auf Datenträgern, die in mindestens einem Sicherungsvorgang mithilfe eines festen Typs sowie einer festen Anzahl von Sicherungsmedien beschrieben wurden.  
   
- [gespiegelter Mediensatz](mirrored-backup-media-sets-sql-server.md)  
+ [gespiegelter Medien Satz](mirrored-backup-media-sets-sql-server.md)  
  Mehrere Kopien (Spiegel) eines Mediensatzes.  
   
-##  <a name="BackupCompression"></a> Sicherungskomprimierung  
+##  <a name="BackupCompression"></a>Sicherungs Komprimierung  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] können Sicherungen komprimiert werden, und ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ist die Wiederherstellung komprimierter Sicherungen möglich. Weitere Informationen finden Sie unter [Sicherungskomprimierung &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a> Einschränkungen für Sicherungsvorgänge in SQLServer  
+##  <a name="Restrictions"></a>Einschränkungen für Sicherungs Vorgänge in SQL Server  
  Eine Sicherung kann erfolgen, während die Datenbank online ist und verwendet wird. Es gelten dabei jedoch folgende Einschränkungen.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>Offlinedaten können nicht gesichert werden  
@@ -136,7 +136,7 @@ ms.locfileid: "62922121"
  Wenn sich ein Sicherungsvorgang mit einem Dateiverwaltungsvorgang oder einem Verkleinerungsvorgang überschneidet, tritt ein Konflikt auf. Unabhängig davon, welcher am Konflikt beteiligte Vorgang zuerst begonnen hat, wartet der zweite Vorgang auf das Timeout der Sperre, die vom ersten Vorgang festgelegt wurde. (Der Timeoutzeitraum wird durch eine Timeouteinstellung für die Sitzung gesteuert.) Wenn die Sperre während des Timeoutzeitraums aufgehoben wird, wird der zweite Vorgang fortgesetzt. Wenn das Timeout für die Sperre eintritt, erzeugt der zweite Vorgang einen Fehler.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **Arbeiten mit Sicherungsgeräten und Sicherungsmedien**  
+ **So arbeiten Sie mit Sicherungs Geräten und Sicherungsmedien**  
   
 -   [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,9 +156,9 @@ ms.locfileid: "62922121"
   
 -   [Wiederherstellung einer Sicherung von einem Medium &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server sichern und Wiederherstellen in Azure BLOB Storage Dienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
- **Zum Erstellen einer Sicherung**  
+ **So erstellen Sie eine Sicherung**  
   
 > [!NOTE]  
 >  Verwenden Sie für Teilsicherungen oder Kopiesicherungen die [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung mit der Option PARTIAL bzw. COPY_ONLY.  
@@ -179,7 +179,7 @@ ms.locfileid: "62922121"
   
 -   [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und-Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server sichern und Wiederherstellen in Azure BLOB Storage Dienst](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](back-up-and-restore-of-sql-server-databases.md)   

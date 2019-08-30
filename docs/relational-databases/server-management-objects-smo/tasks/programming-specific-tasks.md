@@ -1,5 +1,5 @@
 ---
-title: Programmieren von bestimmten Tasks | Microsoft-Dokumentation
+title: Programmieren spezifischer Aufgaben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030232"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148399"
 ---
 # <a name="programming-specific-tasks"></a>Programming Specific Tasks
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030232"
 |[Einbinden einer Volltextsuche](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Beschreibt, wie Volltextsuchkataloge und Indizes in SMO implementiert werden.|  
 |[Implementieren von Endpunkten](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Beschreibt, wie Endpunkte erstellt werden, um Nutzlasten für Datenbankspiegelungen, SOAP-Anforderungen und Service Broker zu handhaben.|  
 |[Erstellen und Aktualisieren von Statistiken](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Beschreibt, wie Bildschirmstatistiken auf einer Datenbank in SMO eingerichtet werden.|  
-|[Verfolgen und Wiedergeben von Ereignissen](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Beschreibt, wie die **Ablaufverfolgung** und **wiedergeben** Objekten in SMO-Ablaufverfolgung und-Wiedergabe Ereignisse.|  
+|[Verfolgen und Wiedergeben von Ereignissen](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Beschreibt, wie die Ablaufverfolgungs-und **Wiedergabe** Objekte in SMO verwendet werden, um Ereignisse zu verfolgen und wiederzugeben.|  
   
   

@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 716f3868fc8f9e1619f0c8dec1230cecb35f7d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac595fca4283a2775304e0f228fdedae3ccf5504
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939044"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148465"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Erstellen, Ändern und Löschen von Tabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden Tabellen durch das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt dargestellt. In der SMO-Objekthierarchie befindet sich das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt unter dem <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt.  
   
 ## <a name="example"></a>Beispiel  
- Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Erstellen, Ändern und Löschen einer Tabelle in Visual Basic  
  In diesem Codebeispiel wird eine Tabelle erstellt, die über mehrere Spalten mit unterschiedlichen Typen und Zwecken verfügt. Der Code bietet darüber hinaus Beispiele dafür, wie ein Identitätsfeld und ein Primärschlüssel erstellt und wie Tabelleneigenschaften geändert werden.  

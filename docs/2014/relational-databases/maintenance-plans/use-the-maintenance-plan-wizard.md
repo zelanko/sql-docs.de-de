@@ -34,12 +34,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806402"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153824"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
   In diesem Thema wird beschrieben, wie Sie einen Einzelserver- oder Multiserver-Wartungsplan mithilfe des Wartungsplanungs-Assistenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]erstellen. Der Wartungsplanungs-Assistent erstellt einen Wartungsplan, den der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent regelmäßig ausführen kann. Dies ermöglicht es Ihnen, verschiedene Aufgaben für die Datenbankverwaltung in bestimmten Intervallen auszuführen, z. B. Sicherungen, Datenbankintegritätsprüfungen oder Datenbankstatistikupdates.  
@@ -52,7 +52,7 @@ ms.locfileid: "62806402"
   
      [Sicherheit](#Security)  
   
--   [Erstellen einen Wartungsplan mithilfe des Wartungsplanungs-Assistenten in SQL Server Management Studio](#SSMSProcedure)  
+-   [Erstellen eines Wartungsplans mit dem Wartungsplanungs-Assistenten in SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62806402"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen Mitglied der festen Serverrolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können. Im Objekt-Explorer wird der **Wartungspläne** -Knoten nur für Benutzer angezeigt, die Mitglied der festen Serverrolle **sysadmin** sind.  
   
-##  <a name="SSMSProcedure"></a> Mithilfe des Wartungsplanungs-Assistent  
+##  <a name="SSMSProcedure"></a>Assistent zum Verwenden von Wartungsplänen  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>So starten Sie den Wartungsplanungs-Assistenten  
   
@@ -254,7 +254,7 @@ ms.locfileid: "62806402"
      Legt mithilfe der `SORT_IN_TEMPDB` -Option fest, wo die während der Indexerstellung generierten Zwischenergebnisse der Sortierung temporär gespeichert werden. Wenn ein Sortiervorgang nicht erforderlich ist oder im Arbeitsspeicher ausgeführt werden kann, wird die `SORT_IN_TEMPDB` -Option ignoriert.  
   
      Kontrollkästchen**Index online während Neuindizierung**  
-     Verwendet die `ONLINE` -Option, die es Benutzern ermöglicht, während Indexvorgängen auf die zugrunde liegenden Tabellen- oder gruppierten Indexdaten und alle zugehörigen nicht gruppierten Indizes zuzugreifen. Diese Option aktiviert zusätzliche Optionen zum Neuerstellen von Indizes, die nicht für online-Neuerstellung zulassen: **Indizes nicht neu erstellen** und **Indizes offline neu erstellen**.  
+     Verwendet die `ONLINE` -Option, die es Benutzern ermöglicht, während Indexvorgängen auf die zugrunde liegenden Tabellen- oder gruppierten Indexdaten und alle zugehörigen nicht gruppierten Indizes zuzugreifen. Bei Auswahl dieser Option werden zusätzliche Optionen zum Neuerstellen von Indizes aktiviert, die keine Onlineneuerstellungen zulassen: **Indizes nicht neu erstellen** und **Indizes offline neu erstellen**.  
   
     > [!NOTE]  
     >  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]verfügbar. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -364,13 +364,13 @@ ms.locfileid: "62806402"
      Gibt den Ordner an, in dem die automatisch erstellten Datenbankdateien gespeichert werden sollen. Diese Option ist deaktiviert, wenn Sie URL als Sicherungsziel ausgewählt haben.  
   
      **SQL-Anmeldeinformationen**  
-     Wählen Sie SQL-Anmeldeinformationen aus, die zur Authentifizierung beim Windows Azure-Speicher verwendet werden sollen. Wenn Sie über keine vorhandenen geeigneten SQL-Anmeldeinformationen verfügen, klicken Sie auf die Schaltfläche **Erstellen** , um neue SQL-Anmeldeinformationen zu erstellen.  
+     Wählen Sie SQL-Anmelde Informationen aus, die zum Authentifizieren bei Azure Storage verwendet werden. Wenn Sie über keine vorhandenen geeigneten SQL-Anmeldeinformationen verfügen, klicken Sie auf die Schaltfläche **Erstellen** , um neue SQL-Anmeldeinformationen zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Der Beispielcode in die [-Anmeldeinformationen erstellen](../security/authentication-access/create-a-credential.md#Credential) Thema zum Erstellen von Anmeldeinformationen mithilfe von Transact-SQL. Alternativ können Sie auf der Datenbank-Engine-Instanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
+    >  Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Informationen zum Erstellen von Anmelde Informationen mithilfe von Transact-SQL finden Sie im Beispielcode im Thema [to Create a Anmelde Informationen](../security/authentication-access/create-a-credential.md#Credential) . Alternativ können Sie auf der Datenbank-Engine-Instanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
   
      **Azure-Speichercontainer**  
-     Geben Sie den Namen des Windows Azure-Speichercontainers an.  
+     Geben Sie den Namen des Azure-Speicher Containers an.  
   
      **URL-Präfix:**  
      Wird automatisch entsprechend den Speicherkontoinformationen, die in den SQL-Anmeldeinformationen gespeichert sind, und dem Namen des Azure-Speichercontainers generiert. Es wird empfohlen, die Informationen in diesem Feld nur zu bearbeiten, wenn Sie eine Domäne mit einem anderen Format als **\<Speicherkonto.blob.core.windows.net** verwenden.  
@@ -491,7 +491,7 @@ ms.locfileid: "62806402"
      **Status**  
      Gibt an, ob für die Aktion des Assistenten insgesamt der Wert **Erfolg** oder der Wert **Fehler**zurückgegeben wurde.  
   
-     **MessageBox**  
+     **Meldung**  
      Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
   
      **Bericht**  

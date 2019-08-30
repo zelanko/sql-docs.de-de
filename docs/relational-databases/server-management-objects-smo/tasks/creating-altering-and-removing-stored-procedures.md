@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von gespeicherten Prozeduren | Microsoft-Dokumentation
+title: Erstellen, ändern und Löschen gespeicherter Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eaec75e05dba6d6fd859c1537d7a528df16959c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902f2a4b2dd60b96f26ed8d93eff28471baeb63c
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939038"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148501"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Erstellen, Ändern und Löschen von gespeicherten Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden gespeicherte Prozeduren durch das <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>-Objekt dargestellt.  
   
- Die Erstellung eines <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>-Objekts in SMO erfordert, dass die Einstellung der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>-Eigenschaft auf das [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript gesetzt wird, das die gespeicherte Prozedur definiert. Parameter erforderlich sind die \@ prefix und müssen einzeln erstellt werden, mithilfe von <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> Objekte und Hinzufügen der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> Auflistung von der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> Objekt.  
+ Die Erstellung eines <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>-Objekts in SMO erfordert, dass die Einstellung der <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>-Eigenschaft auf das [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript gesetzt wird, das die gespeicherte Prozedur definiert. Für Parameter ist \@ das Präfix erforderlich, und Sie müssen <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> einzeln mithilfe von-Objekten <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> erstellt und der-Auflistung des- Objektshinzugefügtwerden.<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Erstellen, Ändern und Entfernen einer gespeicherten Prozedur in Visual Basic  
  Dieses Codebeispiel zeigt, wie eine gespeicherte Prozedur für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt wird. Im Beispiel wird der Nachname eines Mitarbeiters zurückgegeben, wenn die Mitarbeiter-ID-Nummer angegeben wird. Die gespeicherte Prozedur erfordert einen Eingabeparameter zur Angabe der Mitarbeiter-ID-Nummer und einen Ausgabeparameter für die Rückgabe des Nachnamens des Mitarbeiters.  

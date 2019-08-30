@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung | Microsoft-Dokumentation'
+title: 'Lektion 4: Ausführen einer Wiederherstellung aus einer vollständigen Datenbanksicherung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 077fb708f09db0182bc5f1510f0264b139beab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312073"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153401"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lektion 4: Ausführen einer Wiederherstellung aus einer vollständigen Datenbanksicherung
   In dieser Lektion wird veranschaulicht, wie mithilfe einer T-SQL-Anweisung eine Wiederherstellung von einer vollständigen Datenbanksicherung ausgeführt wird, die in der vorherigen Lektion erstellt wurde.  
@@ -43,6 +43,6 @@ ms.locfileid: "63312073"
 5.  Überprüfen Sie die T-SQL-Anweisung, und klicken Sie auf **Ausführen**.  
   
 ### <a name="return-to-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme  
- [Tutorial: SQL Server-Sicherung und-Wiederherstellung im Windows Azure Blob Storage-Dienst](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Tutorial: SQL Server Sicherung und Wiederherstellung in Azure BLOB Storage](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)Dienst.  
   
   

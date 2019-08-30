@@ -14,12 +14,12 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 806c8ad1023c10c0176d1608841138a7380a8def
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788353"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154465"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Seite „Replikate angeben“ (Assistent für neue Verfügbarkeitsgruppen: Assistent zum Hinzufügen von Replikaten)
   In diesem Thema werden die Optionen auf der Seite **Replikate angeben** beschrieben. Diese Seite gilt für: [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie die Seite **Replikate angeben** , um mindestens ein Verfügbarkeitsreplikat anzugeben und zu konfigurieren und die Verfügbarkeitsgruppe hinzuzufügen. Diese Seite enthält vier Registerkarten, die in der folgenden Tabelle vorgestellt werden. Klicken Sie auf den Namen einer Registerkarte in der Tabelle, um zum entsprechenden Abschnitt weiter unten in diesem Thema zu wechseln.  
@@ -35,25 +35,25 @@ ms.locfileid: "62788353"
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, die als Host für das Verfügbarkeitsreplikat fungiert.  
   
- Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen** . Wenn Sie eine Verfügbarkeitsgruppe in einer hybriden IT-Umgebung konfigurieren (siehe [Hohe Verfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche **Azure-Replikat hinzufügen** klicken, um virtuelle Computer mit sekundären Replikaten in Windows Azure zu erstellen.  
+ Falls eine Serverinstanz, mit der Sie ein sekundäres Replikat hosten, nicht im Raster **Verfügbarkeitsreplikate** aufgeführt ist, klicken Sie auf die Schaltfläche **Replikat hinzufügen** . Wenn Sie eine Verfügbarkeits Gruppe in einer Hybrid-IT-Umgebung konfigurieren (siehe [hohe Verfügbarkeit und Notfall Wiederherstellung für SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), können Sie auf die Schaltfläche Azure-Replikat **Hinzufügen** klicken, um virtuelle Computer mit sekundärem Replikate in Azure.  
   
  **Anfangsrolle**  
- Gibt an, die Rolle, die das neue Replikat anfänglich ausführt: **Primary** (Primär) oder **Secondary** (Sekundär).  
+ Gibt die Rolle an, die das neue Replikat anfänglich ausführt: **Primary** (Primär) oder **Secondary** (Sekundär).  
   
- **Automatisches Failover (max. 2)**  
+ **Automatisches Failover (bis zu 2)**  
  Aktivieren Sie dieses Kontrollkästchen nur, wenn dieses Verfügbarkeitsreplikat ein automatischer Failoverpartner sein soll. Sie müssen zum Konfigurieren eines automatischen Failovers diese Option für das ursprüngliche primäre Replikat und ein sekundäres Replikat auswählen. Beide Replikate verwenden den Verfügbarkeitsmodus für synchrone Commits. Nur zwei Replikate können automatisches Failover unterstützen.  
   
- Informationen zum Verfügbarkeitsmodus mit synchronem Commit finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das automatische Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Weitere Informationen zum Verfügbarkeits Modus mit synchronem Commit finden Sie unter [Verfügbarkeits Modi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das automatische Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Synchroner Commit (max. 3)**  
  Wenn Sie **Automatisches Failover (max. 2)** für das Replikat ausgewählt haben, wird auch **Synchroner Commit (max. 3)** aktiviert. Ist das Kontrollkästchen deaktiviert, aktivieren Sie es nur, wenn von diesem Replikat der Modus für synchrone Commits nur mit geplantem manuellem Failover verwendet werden soll. Nur drei Replikate können den Modus für synchrone Commits verwenden.  
   
- Wenn von diesem Replikat der Verfügbarkeitsmodus für asynchrone Commits verwendet werden soll, lassen Sie dieses Kontrollkästchen deaktiviert. Das Replikat unterstützt nur erzwungenes manuelles Failover (mit möglichem Datenverlust). Informationen zum Verfügbarkeitsmodus mit asynchronem Commit finden Sie unter [Verfügbarkeitsmodi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das geplante manuelle Failover und das erzwungene manuelle Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+ Wenn von diesem Replikat der Verfügbarkeitsmodus für asynchrone Commits verwendet werden soll, lassen Sie dieses Kontrollkästchen deaktiviert. Das Replikat unterstützt nur erzwungenes manuelles Failover (mit möglichem Datenverlust). Weitere Informationen zum Verfügbarkeits Modus mit asynchronem Commit finden Sie unter [Verfügbarkeits Modi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md). Informationen über das geplante manuelle Failover und das erzwungene manuelle Failover finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
  **Lesbare sekundäre Rolle**  
  Wählen Sie aus der Dropdownliste **Lesbare sekundäre Rolle** folgendermaßen einen Wert aus:  
   
- **Nein**  
+ **No**  
  Es werden keine direkten Verbindungen mit sekundären Datenbanken dieses Replikats zugelassen. Sie sind für den Lesezugriff nicht verfügbar. Dies ist die Standardeinstellung.  
   
  **Nur beabsichtigte Lesevorgänge**  
@@ -66,7 +66,7 @@ ms.locfileid: "62788353"
  Klicken Sie, um ein sekundäres Replikat zur Verfügbarkeitsgruppe hinzuzufügen.  
   
  **Azure-Replikat hinzufügen**  
- Klicken Sie auf diese Option, um einen virtuellen Computer in Windows Azure zu erstellen, auf dem ein sekundäres Replikat in der Verfügbarkeitsgruppe ausgeführt wird. Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfallwiederherstellung für SQL Server auf virtuellen Windows Azure-Computern](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Klicken Sie hierauf, um einen virtuellen Azure-Computer zu erstellen, auf dem ein sekundäres Replikat in der Diese Option ist nur auf eine Verfügbarkeitsgruppe in der hybriden IT-Umgebung anwendbar, die lokale Replikate enthält. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Notfall Wiederherstellung für SQL Server in Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Replikat entfernen**  
  Klicken Sie, um das ausgewählte sekundäre Replikat aus der Verfügbarkeitsgruppe zu entfernen.  
@@ -122,7 +122,7 @@ ms.locfileid: "62788353"
  Gibt an, dass Sicherungsaufträge die Rolle der Verfügbarkeitsreplikate ignorieren sollen, wenn sie das Replikat zum Durchführen der Sicherungen auswählen. Sicherungsaufträge können andere Faktoren auswerten, wie z. B. die Sicherungspriorität jedes Verfügbarkeitsreplikats in Verbindung mit seinem Betriebszustand und Verbindungsstatus.  
   
 > [!IMPORTANT]  
->  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten (AlwaysOn-Verfügbarkeitsgruppen)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Die Einstellung "backup-preference" wird nicht erzwungen. Die Interpretation dieser Einstellung hängt von der Logik ab, die Sie ggf. per Skript in Sicherungsaufträge für die Datenbanken in einer angegebenen Verfügbarkeitsgruppe integriert haben. Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)(AlwaysOn-Verfügbarkeitsgruppen).  
   
 ### <a name="replica-backup-priorities-grid"></a>Raster "Sicherungsprioritäten für Replikate"  
  Verwenden Sie das Raster **Sicherungsprioritäten für Replikate** , um Sicherungsprioritäten für alle Replikate der Verfügbarkeitsgruppe anzugeben. Dieses Raster enthält die folgenden Spalten:  
@@ -206,11 +206,11 @@ ms.locfileid: "62788353"
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [Erstellen Sie eine Datenbank mit dem Datenbankspiegelungs-Endpunkts für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [Erstellen eines Datenbankspiegelungs- &#40;Endpunkts für AlwaysOn-Verfügbarkeitsgruppen SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
- [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

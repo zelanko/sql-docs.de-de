@@ -1,5 +1,5 @@
 ---
-title: SMO-Syntaxkonventionen | Microsoft-Dokumentation
+title: SMO-Syntax Konventionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - syntax [SMO]
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c61e53366e05e57e768c55e73f70a76b648f597
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092826"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148563"
 ---
 # <a name="smo-syntax-conventions"></a>SMO-Syntaxkonventionen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) geltenden typographischen Konventionen basieren auf jenen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Referenzmaterial für Visual Studio .NET.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Die typografischen Konventionen für Management Objects (SMO) basieren auf den in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .net-Referenzmaterialien verwendeten.  
   
-|Konvention|Syntaxelemente|  
+|Konvention|Verwendung|  
 |----------------|--------------|  
 |GROSSBUCHSTABEN|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, Makronamen und Begriffe, die auf Betriebssystemebene verwendet werden; Dateinamen im Text.|  
 |`monospace`|Beispielbefehlszeilen und Programmcode.|  

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: e762354a2f391ba4c52f8bc0aa5fece537c79288
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030291"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155371"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Bekannte Probleme in SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ Suchen Sie im `Binn` Ordner für die-Instanz nach launchpad. In einer Standardin
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9. Remotecomputekontexte werden von einer Firewall in SQL Server Instanzen blockiert, die auf virtuellen Azure-Computern ausgeführt werden.
 
-Wenn Sie auf einem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] virtuellen Computer in Windows Azure installiert haben, sind Sie möglicherweise nicht in der Lage, computekontexte zu verwenden, die die Verwendung des Arbeitsbereichs des virtuellen Computers erfordern. Der Grund hierfür ist, dass die Firewall auf virtuellen Azure-Computern standardmäßig eine Regel enthält, die den Netzwerk Zugriff für lokale R-Benutzerkonten blockiert.
+Wenn Sie auf einem [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] virtuellen Azure-Computer installiert haben, sind Sie möglicherweise nicht in der Lage, computekontexte zu verwenden, die die Verwendung des Arbeitsbereichs des virtuellen Computers erfordern. Der Grund hierfür ist, dass die Firewall auf virtuellen Azure-Computern standardmäßig eine Regel enthält, die den Netzwerk Zugriff für lokale R-Benutzerkonten blockiert.
 
 Um dieses Problem zu umgehen, öffnen Sie auf der Azure-VM **Windows-Firewall mit**erweiterter Sicherheit, wählen Sie **ausgehende Regeln**aus, und deaktivieren Sie die folgende Regel: **Blockieren Sie den Netzwerk Zugriff für lokale R-Benutzerkonten in SQL Server MSSQLSERVER-Instanz**. Sie können auch die Regel aktiviert lassen, aber die Sicherheits Eigenschaft ändern, um **if Secure zuzulassen**.
 

@@ -12,15 +12,15 @@ ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f5dc758a6f9243fc553f597687552fdb22a481
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788128"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154405"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server)
-  Der Assistent zum Hinzufügen von Azure-Replikaten unterstützt Sie dabei, eine neue Windows Azure-VM in einer hybriden IT-Umgebung zu erstellen und als sekundäres Replikat für eine neue oder vorhandene AlwaysOn-Verfügbarkeitsgruppe zu konfigurieren.  
+  Mithilfe des Assistenten zum Hinzufügen von Azure-Replikaten können Sie eine neue Azure-VM in Hybrid-IT erstellen und als sekundäres Replikat für eine neue oder vorhandene AlwaysOn-Verfügbarkeits Gruppe konfigurieren.  
   
 -   **Vorbereitungen:**  
   
@@ -28,20 +28,20 @@ ms.locfileid: "62788128"
   
      [Sicherheit](#Security)  
   
--   **Hinzufügen eines Replikats mit:**  [Hinzufügen von Azure-Replikat-Assistenten (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Hinzufügen eines Replikats mit:**  [Assistent zum Hinzufügen von Azure-Replikaten (SQL Server Management Studio](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
- Wenn Sie noch nie zu einer verfügbarkeitsgruppe ein verfügbarkeitsreplikat hinzugefügt haben, finden Sie unter der "Serverinstanzen" und "Verfügbarkeitsgruppen und Replikate" Abschnitte in [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Wenn Sie einer Verfügbarkeits Gruppe noch nie ein Verfügbarkeits Replikat hinzugefügt haben, lesen Sie die Abschnitte "Server Instanzen" und "Verfügbarkeits Gruppen und-Replikate" unter [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der das aktuelle primäre Replikat gehostet wird.  
   
--   Sie benötigen eine hybride IT-Umgebung, in der das lokale Subnetz über ein Standort-zu-Standort-VPN mit Windows Azure verbunden ist. Weitere Informationen finden Sie unter [Konfigurieren eines Standort-zu-Standort-VPNs im Verwaltungsportal](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Sie benötigen eine Hybrid-IT-Umgebung, in der das lokale Subnetz über ein Site-to-Site-VPN mit Azure verfügt. Weitere Informationen finden Sie unter [Konfigurieren eines Standort-zu-Standort-VPNs im Verwaltungsportal](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
   
 -   Ihre Verfügbarkeitsgruppe muss lokale Verfügbarkeitsreplikate enthalten.  
   
--   Clients des Verfügbarkeitsgruppenlisteners müssen über Internetverbindungen verfügen, falls sie mit dem Listener verbunden bleiben sollen, wenn für die Verfügbarkeitsgruppe ein Failover auf ein Windows Azure-Replikat ausgeführt wird.  
+-   Clients für den verfügbarkeitsgruppenlistener müssen eine Internet Verbindung haben, wenn Sie die Konnektivität mit dem Listener gewährleisten möchten, wenn für die Verfügbarkeits Gruppe ein Failover zu einem Azure-Replikat ausgeführt wird.  
   
 -   **Voraussetzungen für die Verwendung der vollständigen anfänglichen Datensynchronisierung** : Sie müssen eine Netzwerkfreigabe angeben, damit der Assistent Sicherungen erstellen und darauf zugreifen kann. Für das primäre Replikat kann das zum Starten von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] verwendete Konto über Lese- und Schreibberechtigungen für das Dateisystem in einer Netzwerkfreigabe verfügen. Bei sekundären Replikaten muss das Konto über eine Leseberechtigung für die Netzwerkfreigabe verfügen.  
   
@@ -61,57 +61,57 @@ ms.locfileid: "62788128"
   
  Nachdem Sie den Assistenten zum Hinzufügen von Azure-Replikaten gestartet haben, führen Sie die folgenden Schritte aus:  
   
-1.  Laden Sie zunächst ein Verwaltungszertifikat für Ihr Windows Azure-Abonnement herunter. Klicken Sie auf **Herunterladen** , um die Anmeldeseite zu öffnen.  
+1.  Laden Sie zunächst ein Verwaltungs Zertifikat für Ihr Azure-Abonnement herunter. Klicken Sie auf **Herunterladen** , um die Anmeldeseite zu öffnen.  
   
-2.  Melden Sie sich auf der Anmeldeseite beim Windows Azure-Abonnement an. Sobald Sie angemeldet sind, installiert der Assistent ein Verwaltungszertifikat auf dem lokalen Computer. Dieses Verwaltungszertifikat wird automatisch geladen, wenn Sie den Assistenten erneut verwenden. Wenn Sie mehrere Verwaltungszertifikate heruntergeladen haben, können Sie auf die Schaltfläche zum Durchsuchen ( **...** ) klicken, um das gewünschte Zertifikat auszuwählen.  
+2.  Melden Sie sich auf der Anmeldeseite bei Ihrem Azure-Abonnement an. Sobald Sie angemeldet sind, installiert der Assistent ein Verwaltungszertifikat auf dem lokalen Computer. Dieses Verwaltungszertifikat wird automatisch geladen, wenn Sie den Assistenten erneut verwenden. Wenn Sie mehrere Verwaltungszertifikate heruntergeladen haben, können Sie auf die Schaltfläche zum Durchsuchen ( **...** ) klicken, um das gewünschte Zertifikat auszuwählen.  
   
-3.  Stellen Sie als Nächstes eine Verbindung mit dem Abonnement her, indem Sie auf **Verbinden**klicken. Sobald die Verbindung hergestellt ist, werden die Dropdownlisten mit den Microsoft Azure-Parametern, wie **Virtuelles Netzwerk** und **Virtuelles Netzwerk – Subnetz**, aufgefüllt.  
+3.  Stellen Sie als Nächstes eine Verbindung mit dem Abonnement her, indem Sie auf **Verbinden**klicken. Nachdem Sie eine Verbindung hergestellt haben, werden die Dropdown Listen mit ihren Azure-Parametern aufgefüllt, z. b. **Virtual Network** und **Virtual Network Subnetz**.  
   
-4.  Geben Sie die Einstellungen für die Windows Azure-VM an, die das neue sekundäre Replikat hostet:  
+4.  Geben Sie die Einstellungen für die Azure-VM an, die das neue sekundäre Replikat hostet:  
   
      Bild  
-     Der Name des SQL Server-Images, das für die Windows Azure-VM verwendet werden soll.  
+     Der Name des SQL Server Abbilds, das für die Azure-VM verwendet werden soll.  
   
      VM-Größe  
-     Die Größe der Windows Azure-VM.  
+     Die Größe der Azure-VM  
   
      VM-Name  
-     Der DNS-Name der Windows Azure-VM.  
+     Der DNS-Name der Azure-VM.  
   
      VM-Benutzername  
-     Der Benutzername des Standardadministrators für die Windows Azure-VM.  
+     Der Benutzername des Standard Administrators für die Azure-VM  
   
      VM-Administratorkennwort (und Kennwortbestätigung)  
-     Das Kennwort des Standardadministrators für die Windows Azure-VM.  
+     Das Kennwort für den Standard Administrator für den virtuellen Azure-Computer  
   
      Virtuelles Netzwerk  
-     Das virtuelle Netzwerk, in das die Windows Azure-VM eingefügt werden soll.  
+     Das virtuelle Netzwerk, in dem die Azure-VM platziert werden soll  
   
      Virtuelles Netzwerk – Subnetz  
-     Das Subnetz des virtuellen Netzwerks, in das die Windows Azure-VM eingefügt werden soll.  
+     Das Subnetz des virtuellen Netzwerks, in dem die Azure-VM platziert werden soll  
   
-     Domäne  
-     Die Active Directory (AD)-Domäne, mit der die Windows Azure-VM verknüpft werden soll.  
+     Domain  
+     Die Active Directory Domäne (AD) zum beitreten zum virtuellen Azure-Computer  
   
      Domänenbenutzername  
-     Der AD-Benutzername, über den die Windows Azure-VM mit der Domäne verknüpft wird.  
+     Der AD-Benutzername, mit dem der virtuelle Azure-Computer der Domäne hinzugefügt wird  
   
      Kennwort  
-     Das Kennwort, über das die Windows Azure-VM mit der Domäne verknüpft wird.  
+     Das Kennwort, mit dem der virtuelle Azure-Computer der Domäne hinzugefügt wird  
   
 5.  Klicken Sie auf **OK** , um Ihre Einstellungen zu bestätigen und den Assistenten zum Hinzufügen von Azure-Replikaten zu beenden.  
   
 6.  Führen Sie die übrigen Konfigurationsschritte auf der Seite [Replikate angeben](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) wie für jedes neue Replikat aus.  
   
-     Sobald Sie den Assistenten für neue Verfügbarkeitsgruppen oder den Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen abgeschlossen haben, werden vom Konfigurationsprozess alle notwendigen Vorgänge in Windows Azure ausgeführt, um die neue VM zu erstellen, mit der AD-Domäne zu verknüpfen, dem Windows-Cluster hinzuzufügen, hohe Verfügbarkeit mit AlwaysOn zu aktivieren und das neue Replikat der Verfügbarkeitsgruppe hinzuzufügen.  
+     Wenn Sie den Assistenten für Verfügbarkeits Gruppen oder den Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeits Gruppen abgeschlossen haben, führt der Konfigurationsprozess alle Vorgänge in Azure aus, um den neuen virtuellen Computer zu erstellen, ihn mit der AD-Domäne zu verknüpfen, ihn dem Windows-Cluster hinzuzufügen und AlwaysOn hoch Verfügbarkeit, und fügen Sie das neue Replikat der Verfügbarkeits Gruppe hinzu.  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

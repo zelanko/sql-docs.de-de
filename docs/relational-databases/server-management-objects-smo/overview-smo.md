@@ -8,26 +8,26 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e7ca81fd276e8538e19c1a7670daf4da10dde6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098004"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148656"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) werden die Objekte für die programmgesteuerte Verwaltung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können SMO verwenden, um benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsanwendungen zu erstellen. Wenngleich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine leistungsstarke und umfassende Anwendung zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, sind Sie in manchen Fällen mit einer SMO-Anwendung möglicherweise besser beraten.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) sind Objekte, die für die Programm [!INCLUDE[msCoName](../../includes/msconame-md.md)]gesteuerte Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entwickelt wurden. Sie können SMO verwenden, um benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsanwendungen zu erstellen. Wenngleich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine leistungsstarke und umfassende Anwendung zur Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, sind Sie in manchen Fällen mit einer SMO-Anwendung möglicherweise besser beraten.  
   
  Beispielsweise müssen die Benutzeranwendungen zur Steuerung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsaufgaben eventuell vereinfacht werden, um den Anforderungen neuer Benutzer zu entsprechen und um die Schulungskosten zu senken. Oder Sie müssen benutzerdefinierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken bzw. eine Anwendung zum Erstellen und Überwachen der Indexeffizienz erstellen. Eine SMO-Anwendung kann auch verwendet werden, um Hard- oder Software anderer Hersteller nahtlos in die Anwendung zur Datenbankverwaltung einzubinden.  
   
  Da SMO mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen kompatibel ist, können Sie mühelos eine Multiversionsumgebung verwalten.  
   
- Funktionen in SMO gehören folgende:  
+ Zu den Funktionen in SMO zählen die folgenden:  
   
 -   Zwischengespeichertes Objektmodell und optimierte Objektinstanzerstellung. Objekte werden nur geladen, wenn auf sie ausdrücklich verwiesen wird. Objekteigenschaften werden beim Erstellen der Objekte nur teilweise geladen. Die übrigen Objekte und Eigenschaften werden geladen, wenn direkt auf sie verwiesen wird.  
   
@@ -45,29 +45,29 @@ ms.locfileid: "68098004"
   
 -   Tabellen- und Indexpartitionierung zur Speicherung der Daten über ein Partitionsschema. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
--   HTTP-Endpunkte zur Verwaltung von SOAP-Anforderungen. Weitere Informationen finden Sie unter [Endpunkte implementieren](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
+-   HTTP-Endpunkte zur Verwaltung von SOAP-Anforderungen. Weitere Informationen finden Sie unter [Implementieren von Endpunkten](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
 -   Momentaufnahmeisolation und Versionsverwaltung auf Zeilenebene für erhöhte Parallelität. Weitere Informationen finden Sie unter [Arbeiten mit der Momentaufnahmeisolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
--   XML-Schemaauflistung, XML-Indizes und XML-Datentyp zur Überprüfung und Speicherung von XML-Daten. Weitere Informationen finden Sie unter [XML-Schemaauflistungen &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) und [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
+-   XML-Schemaauflistung, XML-Indizes und XML-Datentyp zur Überprüfung und Speicherung von XML-Daten. Weitere Informationen finden Sie unter [XML-Schema &#40;&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) Auflistungen SQL Server und [Verwenden von XML-Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Momentaufnahmedatenbanken zur Erstellung schreibgeschützter Datenbankkopien.  
   
 -   [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Unterstützung für nachrichtenbasierte Kommunikation. Weitere Informationen finden Sie unter [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Synonymunterstützung für mehrere Namen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankobjekten. Weitere Informationen finden Sie unter [Synonyme &#40;Datenbank-Engine&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Synonymunterstützung für mehrere Namen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankobjekten. Weitere Informationen finden Sie unter [ &#40;Synonyme&#41;Datenbank-Engine](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
 -   Verwaltung von Datenbank-E-Mail zur Erstellung von E-Mail-Servern, E-Mail-Profilen und E-Mail-Konten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen finden Sie unter [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md).  
   
 -   Unterstützung registrierter Server zum Registrieren von Verbindungsinformationen. Weitere Informationen finden Sie unter [Registrieren von Servern](../../tools/sql-server-management-studio/register-servers.md).  
   
--   Ablaufverfolgung und Wiederholung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignissen. Weitere Informationen finden Sie unter [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), und [Extended Events](../../relational-databases/extended-events/extended-events.md).  
+-   Ablaufverfolgung und Wiederholung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignissen. Weitere Informationen finden Sie unter [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL](../../relational-databases/sql-trace/sql-trace.md)-Ablauf Verfolgung, [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)und [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md).  
   
--   Unterstützung von Zertifikaten und Schlüsseln für die Sicherheitssteuerung. Weitere Informationen finden Sie unter [Verschlüsselungshierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md).  
+-   Unterstützung von Zertifikaten und Schlüsseln für die Sicherheitssteuerung. Weitere Informationen finden Sie unter [Verschlüsselungs Hierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 -   DDL-Trigger für zusätzliche Funktionalität beim Auftreten von DDL-Ereignissen. Weitere Informationen finden Sie unter [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- Der SMO-Namespace lautet <xref:Microsoft.SqlServer.Management.Smo>. SMO wird als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly implementiert. Das bedeutet, dass die CLR (Common Language Runtime) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], Version 2.0, installiert werden muss, bevor die SMO-Objekte verwendet werden. Die SMO-Assemblys werden standardmäßig mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SDK-Option im globalen Assemblycache (GAC) installiert. Die Assemblys befinden sich in C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Weitere Informationen finden Sie unter den [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Dokumentation.  
+ Der SMO-Namespace lautet <xref:Microsoft.SqlServer.Management.Smo>. SMO wird als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly implementiert. Das bedeutet, dass die CLR (Common Language Runtime) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], Version 2.0, installiert werden muss, bevor die SMO-Objekte verwendet werden. Die SMO-Assemblys werden standardmäßig mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SDK-Option im globalen Assemblycache (GAC) installiert. Die Assemblys befinden sich unter "c:\Programme\Microsoft SQL server\130\sdk\assemblies\". Weitere Informationen finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Dokumentation.  
   
 ## <a name="smo-classes"></a>SMO-Klassen  
  SMO-Klassen umfassen zwei Kategorien: Instanzklassen und Hilfsprogrammklassen.  
@@ -88,20 +88,20 @@ ms.locfileid: "68098004"
   
 -   Scripter-Klasse. Diese wird zum Erstellen von Skriptdateien für die erneute Generierung von Objekten und ihren Abhängigkeiten verwendet.  
   
-## <a name="smo-features"></a>SMO-Funktionen  
+## <a name="smo-features"></a>SMO-Features  
  **Optimierte Leistung**  
   
- Die SMO-Architektur ist in Bezug auf Speicher effizient, da Objekte zunächst nur teilweise instanziiert und nur minimale Eigenschafteninformationen vom Server angefordert wird. Die vollständige Instanziierung der Objekte wird verzögert, bis auf das Objekt explizit verwiesen wird. Ein Objekt wird vollständig instanziiert, wenn eine Eigenschaft angefordert wird, die nicht Bestandteil der zunächst abgerufenen Eigenschaftengruppe ist, oder wenn eine Methode aufgerufen wird, die eine solche Eigenschaft erfordert. Der Übergang zwischen teilweise und vollständig instanziierten Objekten erfolgt für den Benutzer transparent. Darüber hinaus werden einige Eigenschaften, die viel Arbeitsspeicher belegen, nur dann abgerufen, wenn explizit auf die Eigenschaft verwiesen wird. Ein Beispiel hierfür ist die <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A>-Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekteigenschaft. Die teilweise Instanziierung erfordert jedoch mehr Netzwerkroundtrips und stellt möglicherweise nicht die leistungseffizienteste Option für Ihre Anwendung dar.  
+ Die SMO-Architektur ist im Hinblick auf den Speicher effizient, da Objekte zunächst nur teilweise instanziiert werden und vom Server nur minimale Eigenschaften Informationen angefordert werden. Die vollständige Instanziierung der Objekte wird verzögert, bis auf das Objekt explizit verwiesen wird. Ein Objekt wird vollständig instanziiert, wenn eine Eigenschaft angefordert wird, die nicht Bestandteil der zunächst abgerufenen Eigenschaftengruppe ist, oder wenn eine Methode aufgerufen wird, die eine solche Eigenschaft erfordert. Der Übergang zwischen teilweise und vollständig instanziierten Objekten erfolgt für den Benutzer transparent. Darüber hinaus werden einige Eigenschaften, die viel Arbeitsspeicher belegen, nur dann abgerufen, wenn explizit auf die Eigenschaft verwiesen wird. Ein Beispiel hierfür ist die <xref:Microsoft.SqlServer.Management.Smo.Database.Size%2A>-Eigenschaft der <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekteigenschaft. Die teilweise Instanziierung erfordert jedoch mehr Netzwerkroundtrips und stellt möglicherweise nicht die leistungseffizienteste Option für Ihre Anwendung dar.  
   
  Sie können die Instanziierung entsprechend der Systemumgebung steuern. Durch die verzögerte Instanziierung wird der von der Anwendung benötigte Arbeitsspeicher minimiert, wenngleich dadurch möglicherweise zahlreiche Serveranforderungen ausgelöst werden, wenn auf Eigenschaften verwiesen wird.  
   
  Für Instanzklassen (Objekte, die wirkliche Datenbankobjekte darstellen) sind drei Ebenen der Instanziierung möglich: minimal instanziiert (nur die erforderlichen Mindesteigenschaften werden in einem Block gelesen), teilweise instanziiert (alle Eigenschaften, die relativ viel Speicher in Anspruch nehmen, werden in einem Block gelesen) und vollständig instanziiert. Nicht instanziiert und vollständig instanziiert sind die herkömmlichen Instanziierungsstatuswerte. Die teilweise Instanziierung steigert die Effizienz, da ein teilweise instanziiertes Objekt nicht Werte für alle Objekteigenschaften enthält. Die teilweise Instanziierung ist der Standardstatus für ein Objekt, auf das nicht direkt verwiesen wird. Wird auf eine dieser Eigenschaften verwiesen, tritt ein Fehler auf, der zur vollständigen Instanziierung des Objekts auffordert.  
   
- **Aufzeichnen der Ausführung**  
+ **Ausführung erfassen**  
   
  Die direkte Ausführung ist die übliche Methode der Ausführung. Anweisungen werden direkt an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesendet. Eine Alternative stellt die Aufzeichnung der Ausführung dar.  
   
- Dabei können Sie [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches aufzeichnen, die in der Regel ausgeführt würden. Auf diese Weise kann der SMO-Programmierer das Skript aufschieben, zur späteren Ausführung speichern oder dem Endbenutzer eine Vorschau bereitstellen. Z. B. eine **Datenbank erstellen**, **Tabelle erstellen**, und ein **indexerstellung** Anweisung in einem einzigen Batch gesendet und dann als drei aufeinander folgende Schritte ausgeführt werden kann. Diese Funktionalität wird vom Benutzer mit dem <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>-Objekt gesteuert.  
+ Dabei können Sie [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches aufzeichnen, die in der Regel ausgeführt würden. Auf diese Weise kann der SMO-Programmierer das Skript aufschieben, zur späteren Ausführung speichern oder dem Endbenutzer eine Vorschau bereitstellen. Beispielsweise können eine **Create Database**-, **CREATE TABLE**-und **Create Index** -Anweisung in einem Batch gesendet und dann als drei sequenzielle Schritte ausgeführt werden. Diese Funktionalität wird vom Benutzer mit dem <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>-Objekt gesteuert.  
   
  **WMI-Anbieter**  
   
@@ -109,13 +109,13 @@ ms.locfileid: "68098004"
   
  **Skripterstellung**  
   
- In SMO werden Skripts wurde verbessert und verschoben werden, in der **Skripter** Klasse. Die **Skripter** -Klasse kann Abhängigkeiten ermitteln, verstehen Sie die Beziehungen zwischen Objekten, und die Bearbeitung der Abhängigkeitshierarchie. Das Hauptobjekt zur Skripterstellung ist die **Skripter** Objekt. Daneben gibt es mehrere unterstützende Objekte, die Abhängigkeiten behandeln und auf Fortschritts- oder Fehlerereignisse antworten.  
+ In SMO wurde die Skripterstellung verbessert und in die **Scripter** -Klasse verschoben. Die **Scripter** -Klasse kann Abhängigkeiten ermitteln, die Beziehungen zwischen Objekten verstehen und die Bearbeitung der Abhängigkeits Hierarchie ermöglichen. Das Hauptskript Objekt ist das **scripterobjekt** . Daneben gibt es mehrere unterstützende Objekte, die Abhängigkeiten behandeln und auf Fortschritts- oder Fehlerereignisse antworten.  
   
- Die **Skripter** -Objekt unterstützt die folgenden erweiterten Optionen zur Skripterstellung:  
+ Das **Scripter** -Objekt unterstützt die folgenden erweiterten Skript Erstellungs Optionen:  
   
 -   Einfache einphasige Skripterstellung (erstellt das Skript in einem Schritt)  
   
--   Erweiterte 3-Phasen Skripterstellung (erstellt das Skript in drei Schritten; Abhängigkeitsermittlung, listengenerierung, skriptgenerierung)  
+-   Erweiterte 3-Phasen-Skripterstellung (erstellt das Skript in drei Schritten: Abhängigkeits Ermittlung, Listen Generierung, Skript Generierung)  
   
 -   Bidirektionale Abhängigkeitsermittlung (ermöglicht die Ermittlung von Abhängigkeiten oder abhängigen Elementen)  
   
@@ -133,10 +133,10 @@ ms.locfileid: "68098004"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Scripter-Objekts verwendet ebenfalls URNs als Parameter an, die Objektreferenzen an die Methode übergeben die **Skripter** Objekt. Darüber hinaus kann ein URN angegeben werden, für die **GetSmoObject** Methode der **Server** Objekt. Damit wird eine Instanz des SMO-Objekts erstellt.  
+ Der URN eines Objekts kann abgerufen werden, indem auf seine URN-Eigenschaft verwiesen wird. Das Scripter-Objekt verwendet auch URNs als Parameter, die Objekt Verweise an die-Methode des **Scripter** -Objekts übergeben. Außerdem kann ein URN für die **gezmuobject** -Methode des **Server** Objekts angegeben werden. Damit wird eine Instanz des SMO-Objekts erstellt.  
   
-## <a name="sql-server-features-represented-in-smo"></a>SQL Server-Funktionen in SMO dargestellt  
- **Tabellen- und Indexpartitionierung**  
+## <a name="sql-server-features-represented-in-smo"></a>SQL Server in SMO dargestellte Features  
+ **Tabellen-und Index Partitionierung**  
   
  Mithilfe der Indextabellenpartitionierung können Sie die Spannweite von Daten in Tabellen und Indizes dateigruppenübergreifend verwalten. Diese neue Funktion wird durch SMO-Objekte dargestellt.  
   
@@ -144,15 +144,15 @@ ms.locfileid: "68098004"
   
  SOAP- und Datenbankspiegelungs-Anforderungen werden von Endpunkten verarbeitet, die das <xref:Microsoft.SqlServer.Management.Smo.Endpoint>-Objekt verwenden.  
   
- **Snapshot-Isolation/Versionsverwaltung auf Zeilenebene**  
+ **Momentaufnahme Isolation/Versionsverwaltung auf Zeilenebene**  
   
  Die Momentaufnahmeisolation (Zeilenebenen-Versionsverwaltung) wird durch neue <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekteigenschaften dargestellt.  
   
- **XML-Schema-Namespace, XML-Indizes und XML-Datentyp**  
+ **XML-Schema Namespace, XML-Indizes und XML-Datentyp**  
   
- XML-Schemanamespaces werden in SMO durch eine Auflistung von Objekten dargestellt. XML-Indizes werden dargestellt in SMO durch eine **Index** Objekteigenschaft.  
+ XML-Schemanamespaces werden in SMO durch eine Auflistung von Objekten dargestellt. XML-Indizes werden in SMO durch eine **Index** Objekt Eigenschaft dargestellt.  
   
- **Verbesserungen bei der Volltext-Suche**  
+ **Erweiterungen für die voll Text Suche**  
   
  In SMO werden neue Objekte bereitgestellt, die eine erweiterte Volltextsuche ermöglichen.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "68098004"
   
  Das <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A>-Objekt stellt Optionen zur Überprüfung von Datenbankseiten dar.  
   
- **Momentaufnahme-Datenbanken**  
+ **Momentaufnahme Datenbanken**  
   
  Eine Momentaufnahmedatenbank ist eine schreibgeschützte Kopie einer bestimmten Datenbank zu einem gegebenen Zeitpunkt. Eine Momentaufnahmedatenbank kann mit der <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A>-Eigenschaft des <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekts angegeben werden.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68098004"
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] und seine Funktionalität werden durch eine Gruppe von Objekten dargestellt.  
   
- **Indexerweiterungen**  
+ **Index Verbesserungen**  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indexerweiterungen werden durch neue Eigenschaften im <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt.  
   

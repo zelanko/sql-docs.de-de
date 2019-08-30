@@ -19,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8147471dc662b651ac9c99cc9290a383cc235ee8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fc918b390cedbca9016e4d14f72dea8c9ce8d148
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891564"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154590"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services
   Um Daten in einen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Bericht einzuschließen, müssen Sie zuerst *Datenquellen* und *Datasets*erstellen. In diesem Thema werden die Typen von Datenquellen und die Vorgehensweise bei der Erstellung von Datenquellen beschrieben. Zudem erhalten Sie wichtige Informationen zu Anmeldeinformationen für Datenquellen. Eine Datenquelle umfasst den Datenquellentyp, Verbindungsinformationen und den Typ der zu verwendenden Anmeldeinformationen. Es gibt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird im Bericht definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird unabhängig von einem Bericht definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) und [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -130,7 +130,7 @@ ms.locfileid: "68891564"
 |SQL Server-Datenbank auf dem lokalen Server|`data source="(local)";initial catalog=AdventureWorks`|Legen Sie den Datenquellentyp auf `Microsoft SQL Server` fest.|  
 |SQL Server-Instanz<br /><br /> Datenbank|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Legen Sie den Datenquellentyp auf `Microsoft SQL Server` fest.|  
 |SQL Server Express-Datenbank|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Legen Sie den Datenquellentyp auf `Microsoft SQL Server` fest.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)]in der Cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Legen Sie den Datenquellentyp auf `Windows Azure SQL Database` fest. Weitere Informationen finden Sie unter [SQL Azure-Verbindungstyp &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)]in der Cloud|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Legen Sie den Datenquellentyp auf `Azure SQL Database` fest. Weitere Informationen finden Sie unter [SQL Azure-Verbindungstyp &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |SQL Server Parallel Data Warehouse|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Legen Sie den Datenquellentyp auf `Microsoft SQL Server Parallel Data Warehouse` fest. Weitere Informationen finden Sie unter [SQL Server Parallel Data Warehouse-Verbindungstyp &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Analysis Services-Datenbank auf dem lokalen Server|`data source=localhost;initial catalog=Adventure Works DW`|Legen Sie den Datenquellentyp auf `Microsoft SQL Server Analysis Services` fest. Weitere Informationen finden Sie unter [Analysis Services-Verbindungstyp für MDX (SSRS)](report-data/analysis-services-connection-type-for-mdx-ssrs.md) oder [Analysis Services-Verbindungstyp für DMX (SSRS)](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Analysis Services-Datenbank für tabellarische Modelle mit Sales-Perspektive|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Legen Sie den Datenquellentyp auf `Microsoft SQL Server Analysis Services` fest. Geben Sie den Perspektivennamen in der "cube="-Einstellung an. Weitere Informationen finden Sie unter [Perspektiven &#40;SSAS – tabellarisch&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  

@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Datenquelle (SSAS – mehrdimensional) | Microsoft-Dokumentation
+title: Erstellen einer Datenquelle (SSAS Multidimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076520"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152900"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
   In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "66076520"
  Verbindungen mit Verwendung der Windows-Authentifizierung werden auf der Registerkarte **Identitätswechselinformationen** des Datenquellen-Designers angegeben. Auf dieser Registerkarte wählen Sie die Identitätswechseloption aus, die das Konto angibt, unter dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt wird, wenn Sie eine Verbindung mit der externen Datenquelle herstellen. Nicht alle Optionen können in allen Szenarien verwendet werden. Weitere Informationen zu diesen Optionen und ihrer Verwendung finden Sie unter [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ### <a name="database-authentication"></a>Datenbankauthentifizierung  
- Als Alternative zur Windows-Authentifizierung können Sie auch eine Verbindung angeben, für die ein vom Datenbankmanagementsystem bereitgestellter Authentifizierungsdienst verwendet wird. In manchen Fällen muss die Datenbankauthentifizierung verwendet werden. Zu den Szenarien, in denen die Datenbankauthentifizierung verwendet werden muss, gehören die Verwendung der SQL Server-Authentifizierung zum Verbinden mit einer Windows Azure SQL-Datenbank und der Zugriff auf eine relationale Datenquelle unter einem anderen Betriebssystem oder in einer nicht vertrauenswürdigen Domäne.  
+ Als Alternative zur Windows-Authentifizierung können Sie auch eine Verbindung angeben, für die ein vom Datenbankmanagementsystem bereitgestellter Authentifizierungsdienst verwendet wird. In manchen Fällen muss die Datenbankauthentifizierung verwendet werden. Zu den Szenarien, die für die Verwendung der Daten Bank Authentifizierung verwendet werden, gehören die Verwendung SQL Server Authentifizierung zum Herstellen einer Verbindung mit einer Azure SQL-Datenbank oder der Zugriff auf eine relationale Datenquelle, die unter einem anderen Betriebssystem oder einer nicht vertrauenswürdigen Domäne  
   
  Bei einer Datenquelle mit Verwendung der Datenbankauthentifizierung werden in der Verbindungszeichenfolge der Benutzername und das Kennwort einer Datenbankanmeldung angegeben. Wenn Sie beim Einrichten der Datenquellenverbindung im Verbindungs-Manager im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modell einen Benutzernamen und ein Kennwort eingeben, werden der Verbindungszeichenfolge Anmeldeinformationen hinzugefügt. Geben Sie unbedingt eine Benutzeridentität an, die über Leseberechtigungen für die Daten verfügt.  
   
@@ -76,19 +76,19 @@ ms.locfileid: "66076520"
   
 3.  Klicken Sie auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** auf **Eine Datenquelle basierend auf einer vorhandenen oder neuen Verbindung erstellen** , und klicken Sie dann auf **Neu** , um den **Verbindungs-Manager**zu öffnen.  
   
-     Neue Verbindungen werden im Verbindungs-Manager erstellt. Wählen Sie im Verbindungs-Manager einen Anbieter aus, und geben Sie dann die von diesem Anbieter verwendeten Verbindungszeichenfolgeneigenschaften an, um eine Verbindung mit den zugrunde liegenden Daten herzustellen. Welche Informationen hier genau erforderlich sind, hängt vom ausgewählten Anbieter ab. Im Allgemeinen gehören hierzu ein Server oder eine Dienstinstanz, Angaben zur Anmeldung am Server oder an der Dienstinstanz, ein Datenbank- oder Dateiname sowie andere anbieterspezifische Einstellungen. Für den Rest dieses Verfahrens wird eine SQL Server-datenbankverbindung angenommen.  
+     Neue Verbindungen werden im Verbindungs-Manager erstellt. Wählen Sie im Verbindungs-Manager einen Anbieter aus, und geben Sie dann die von diesem Anbieter verwendeten Verbindungszeichenfolgeneigenschaften an, um eine Verbindung mit den zugrunde liegenden Daten herzustellen. Welche Informationen hier genau erforderlich sind, hängt vom ausgewählten Anbieter ab. Im Allgemeinen gehören hierzu ein Server oder eine Dienstinstanz, Angaben zur Anmeldung am Server oder an der Dienstinstanz, ein Datenbank- oder Dateiname sowie andere anbieterspezifische Einstellungen. Im weiteren Verlauf dieses Verfahrens gehen wir davon aus, dass eine SQL Server Datenbankverbindung besteht.  
   
 4.  Wählen Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder den systemeigenen OLE DB-Anbieter aus, der für die Verbindung verwendet werden soll.  
   
      Der Standardanbieter für eine neue Verbindung ist der Native OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-Anbieter. Dieser Anbieter wird dazu verwendet, mit OLE DB eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Engine-Instanz herzustellen. Für Verbindungen zu einer relationalen SQL Server-Datenbank ist die Verwendung von Native OLE DB\SQL Server Native Client 11.0 oftmals schneller als die Verwendung von alternativen Anbietern.  
   
-     Sie können einen anderen Anbieter auswählen, um auf andere Datenquellen zuzugreifen. Eine Liste der Anbieter und relationalen Datenbanken, die von unterstützt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], finden Sie unter [unterstützte Datenquellen &#40;mehrdimensionale SSAS-&#41;](supported-data-sources-ssas-multidimensional.md).  
+     Sie können einen anderen Anbieter auswählen, um auf andere Datenquellen zuzugreifen. Eine Liste der von unterstützten Anbieter und relationalen Daten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Banken finden Sie unter von unterstützte [Datenquellen ( &#40;SSAS&#41;Multidimensional](supported-data-sources-ssas-multidimensional.md)).  
   
 5.  Geben Sie die für den ausgewählten Anbieter angeforderten Informationen ein, um eine Verbindung mit der zugrunde liegenden Datenquelle herzustellen. Wenn Sie den Anbieter **Native OLE DB\SQL Server Native Client** ausgewählt haben, geben Sie die folgenden Informationen ein:  
   
-    1.  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Namen der Instanz einschließen (z. B. \<Computername >\\< Instancename\>).  
+    1.  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen (z \<. b. Computername >\\< instancename\>) einschließen.  
   
-    2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. Mit**SQL Server-Authentifizierung verwenden** wird eine Datenbank-Benutzeranmeldung für eine Windows Azure SQL-Datenbank- oder SQL Server-Instanz angegeben, die eine Authentifizierung im gemischten Modus unterstützt.  
+    2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. **Verwendung SQL Server Authentifizierung** gibt eine Datenbankbenutzer Anmeldung für eine Azure SQL-Datenbank oder eine SQL Server Instanz an, die die Authentifizierung im gemischten Modus unterstützt.  
   
         > [!IMPORTANT]  
         >  Der Verbindungs-Manager umfasst das Kontrollkästchen **Kennwort speichern** für Verbindungen, die die SQL Server-Authentifizierung verwenden. Obwohl das Kontrollkästchen immer sichtbar ist, wird es nicht immer verwendet.  
@@ -172,7 +172,7 @@ ms.locfileid: "66076520"
 5.  Suchen Sie die hinzugefügte Tabelle, und wählen Sie sie aus. Klicken Sie mit der rechten Maustaste auf die Tabelle, und wählen Sie **Neue Beziehung**aus. Wählen Sie die Quell- und Zielspalten aus, die übereinstimmende Daten enthalten.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Von der mehr &#40;dimensionalen SSAS unterstützte Datenquellen&#41;](supported-data-sources-ssas-multidimensional.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

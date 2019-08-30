@@ -19,12 +19,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921237"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154780"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Wiederherstellen einer Datenbanksicherung (SQL Server Management Studio)
   In diesem Thema wird erläutert, wie eine vollständige Datenbanksicherung wiederhergestellt wird.  
@@ -40,7 +40,7 @@ ms.locfileid: "62921237"
   
 2.  Erweitern Sie **Datenbanken**. Wählen Sie je nach Datenbank entweder eine Benutzerdatenbank aus, oder erweitern Sie **Systemdatenbanken**, und wählen Sie eine Systemdatenbank aus.  
   
-3.  Mit der rechten Maustaste in der Datenbank, zeigen Sie auf **Aufgaben**, zeigen Sie auf **wiederherstellen**, und klicken Sie dann auf **Datenbank**, daraufhin die **Restore Database** Das Dialogfeld.  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, zeigen Sie auf **Tasks**, zeigen Sie auf **Wiederherstellen**, und klicken Sie dann auf **Datenbank**. Dadurch wird das Dialogfeld **Datenbank wiederherstellen**  
   
 4.  Legen Sie Quelle und Speicherort der wiederherzustellenden Sicherungssätze auf der Seite **Allgemein** mithilfe des Abschnitts **Quelle** fest. Wählen Sie eine der folgenden Optionen aus:  
   
@@ -63,20 +63,20 @@ ms.locfileid: "62921237"
         >  Diese Liste steht nur zur Verfügung, wenn **Sicherungsmedium** ausgewählt ist. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
          **Sicherungsmedien**  
-         Wählen Sie das Medium für den Wiederherstellungsvorgang frei: **Datei**, **Band**, **URL**oder **Sicherungsmedium**. Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.  
+         Wählen Sie das Medium für den Wiederherstellungs Vorgang aus: **Datei**, **Band**, **URL**oder **Sicherungs**Medium. Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.  
   
-         **Sicherungsspeicherort**  
+         **Sicherungs Speicherort**  
          Hier können Sie Medien für die Wiederherstellung anzeigen, hinzufügen oder entfernen. Die Liste kann bis zu 64 Dateien, Bänder oder Sicherungsmedien enthalten.  
   
          **Hinzufügen**  
-         Fügt den Speicherort eines Sicherungsmediums auf die **Sicherungsspeicherort** Liste. Abhängig vom Medientyp, den Sie im Feld **Sicherungsmedium** ausgewählt haben, wird durch das Klicken auf **Hinzufügen** eins der folgenden Dialogfelder geöffnet.  
+         Fügt der Liste der **Sicherungs Speicherort** den Speicherort eines Sicherungs Mediums hinzu. Abhängig vom Medientyp, den Sie im Feld **Sicherungsmedium** ausgewählt haben, wird durch das Klicken auf **Hinzufügen** eins der folgenden Dialogfelder geöffnet.  
   
         |Medientyp|Dialogfeld|Beschreibung|  
         |----------------|----------------|-----------------|  
         |**File**|**Sicherungsdatei suchen**|In diesem Dialogfeld können Sie eine lokale Datei aus der Struktur auswählen oder eine Remotedatei mithilfe des vollqualifizierten UNC-Namens (Universal Naming Convention) angeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md)aufgezeichnet wurde.|  
         |**Gerät**|**Sicherungsmedium auswählen**|In diesem Dialogfeld können Sie aus einer Liste logischer Sicherungsmedien auswählen, die auf der Serverinstanz definiert sind.|  
         |**Band**|**Sicherungsband auswählen**|In diesem Dialogfeld können Sie aus einer Liste der Bandlaufwerke auswählen, die physisch mit dem Computer verbunden sind, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird.|  
-        |**URL**|Die folgenden beiden Dialogfelder werden angezeigt:<br /><br /> 1) **Verbinden mit Windows Azure-Speicher**<br /><br /> 2) **Sicherungsdatei in Windows Azure suchen**|Wählen Sie im Dialogfeld **Mit Windows Azure-Speicher verbinden**  vorhandene SQL-Anmeldeinformationen aus, die den Namen des Windows Azure-Speicherkontos und den Zugriffsschlüssel enthalten, oder erstellen Sie neue SQL-Anmeldeinformationen, indem Sie den Namen des Speicherkontos und den Zugriffsschlüssel angeben. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Windows Azure-Speicher &#40;wiederherstellen&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Im Dialogfeld **Sicherungsdatei suchen** können Sie im linken Bereich aus der Liste der Container eine Datei auswählen.|  
+        |**URL**|Die folgenden beiden Dialogfelder werden angezeigt:<br /><br /> 1) **Verbindung mit Azure Storage herstellen**<br /><br /> 2) **Suchen Sie die Sicherungsdatei in Azure** .|Wählen Sie im Dialogfeld **mit Azure Storage verbinden** vorhandene SQL-Anmelde Informationen aus, in denen der Name des Azure-Speicher Kontos und die Zugriffsschlüssel Informationen gespeichert sind, oder erstellen Sie neue SQL-Anmelde Informationen, indem Sie den Namen des Speicher Kontos und den Speicherzugriffs Schlüssel angeben. Weitere Informationen finden Sie unter Herstellen einer [Verbindung &#40;mit&#41;Azure Storage Restore](connect-to-microsoft-azure-storage-restore.md).<br /><br /> Im Dialogfeld **Sicherungsdatei suchen** können Sie im linken Bereich aus der Liste der Container eine Datei auswählen.|  
   
          Wenn die Liste voll ist, ist die Schaltfläche **Hinzufügen** nicht verfügbar.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62921237"
   
         -   **RESTORE WITH STANDBY** belässt die Datenbank im schreibgeschützten Modus. Diese Option macht Transaktionen rückgängig, für die noch kein Commit ausgeführt wurde, speichert die Umkehraktionen aber in einer Standbydatei, damit die Auswirkungen der Wiederherstellung rückgängig gemacht werden können.  
   
-    3.  **Erstellen der Sicherung des Protokollfragments vor dem Wiederherstellen** wird ausgewählt, wenn es für den ausgewählten Zeitpunkt erforderlich ist. Sie müssen diese Einstellung nicht ändern, können das Protokollfragment jedoch sichern, auch wenn es nicht erforderlich ist. Dateiname hier? Wenn sich der erste Sicherungssatz auf der Seite **Allgemein** in Windows Azure befindet, wird in demselben Speichercontainer auch das Protokollfragment gesichert.  
+    3.  **Erstellen der Sicherung des Protokollfragments vor dem Wiederherstellen** wird ausgewählt, wenn es für den ausgewählten Zeitpunkt erforderlich ist. Sie müssen diese Einstellung nicht ändern, können das Protokollfragment jedoch sichern, auch wenn es nicht erforderlich ist. Dateiname hier? Wenn sich der erste Sicherungs Satz auf der Seite **Allgemein** in Azure befindet, wird das Protokoll Fragment ebenfalls im gleichen Speicher Container gesichert.  
   
     4.  Bei Wiederherstellungsvorgängen treten möglicherweise Fehler auf, wenn aktive Verbindungen zur Datenbank bestehen. Aktivieren Sie die Option **Bestehende Verbindungen schließen** , um sicherzustellen, dass alle aktiven Verbindungen zwischen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und der Datenbank geschlossen werden. Durch die Aktivierung dieses Kontrollkästchens wechselt die Datenbank in einen Einzelbenutzermodus, bevor Wiederherstellungsvorgänge ausgeführt werden. Außerdem wird dadurch die Datenbank auf einen Multibenutzermodus festgelegt, wenn der Vorgang abgeschlossen ist.  
   
