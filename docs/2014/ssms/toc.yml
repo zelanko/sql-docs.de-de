@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: Kennwort abgelaufen
       href: ../database-engine/password-expired.md
-    - name: Herstellen einer Verbindung mit Windows Azure-Speicher
+    - name: Verbinden mit Azure Storage
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
