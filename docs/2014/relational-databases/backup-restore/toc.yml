@@ -1,10 +1,10 @@
 - name: Sichern und Wiederherstellen von SQL Server-Datenbanken
   href: back-up-and-restore-of-sql-server-databases.md
   items:
-    - name: SQL Server-Sicherung und -Wiederherstellung mit dem Windows Azure-BLOB-Speicherdienst
+    - name: "SQL\_Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst"
       href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
-        - name: Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Windows Azure-BLOB-Speicherdienst
+        - name: Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Azure Blob Storage-Dienst
           href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
     - name: SQL Server-Sicherung über URLs
       href: sql-server-backup-to-url.md
@@ -13,24 +13,24 @@
           href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
     - name: Löschen von BLOB-Sicherungsdateien mit aktiver Lease
       href: deleting-backup-blob-files-with-active-leases.md
-- name: SQL Server Managed Backup für Windows Azure
+- name: "Verwaltete SQL\_Server-Sicherung in Azure"
   href: sql-server-managed-backup-to-microsoft-azure.md
   items:
-    - name: Einrichten von SQL Server Managed Backup für Windows Azure
+    - name: "Einrichten der verwalteten SQL\_Server-Sicherung in Azure"
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'SQL Server Managed Backup für Windows Azure: Interoperabilität und Koexistenz'
+    - name: "Verwaltete SQL\_Server-Sicherung in Azure: Interoperabilität und Koexistenz"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
-    - name: SQL Server Managed Backup für Windows Azure - Beibehaltungs- und Speichereinstellungen
+    - name: "Verwaltete SQL\_Server-Sicherung in Azure: Beibehaltungs- und Speichereinstellungen"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
-    - name: Einrichten von SQL Server Managed Backup für Windows Azure für Verfügbarkeitsgruppen
+    - name: "Einrichten der verwalteten SQL\_Server-Sicherung in Azure für Verfügbarkeitsgruppen"
       href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
-    - name: Überwachen von SQL Server Managed Backup für Windows Azure
+    - name: "Überwachen der verwalteten SQL\_Server-Sicherung in Azure"
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
-    - name: Problembehandlung für SQL Server Managed Backup für Windows Azure
+    - name: "Problembehandlung für die verwaltete SQL\_Server-Sicherung in Azure"
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
     - name: Konfigurieren der verwalteten Sicherung (SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
-    - name: Wiederherstellen von in Windows Azure gespeicherten Sicherungen
+    - name: Wiederherstellen aus in Azure gespeicherten Sicherungen
       href: restoring-from-backups-stored-in-microsoft-azure.md
 - name: Wiederherstellungsmodelle
   href: recovery-models-sql-server.md
@@ -160,7 +160,7 @@
       href: dbengine-continue-with-restore.md
     - name: Sicherungsmedium auswählen
       href: select-backup-device.md
-    - name: Herstellen einer Verbindung mit dem Windows Azure-Speicher (Wiederherstellung)
+    - name: Verbinden mit Azure Storage (Wiederherstellen)
       href: connect-to-microsoft-azure-storage-restore.md
     - name: Wiederherstellen einer Datenbank an einem neuen Speicherort
       href: restore-a-database-to-a-new-location-sql-server.md

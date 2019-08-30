@@ -1,11 +1,11 @@
 ---
-ms.openlocfilehash: 63b66f13f6a0143368ee5c9df6b598aa74b2287d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0e7c607da8994e223c870e045aae0deede701da0
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419308"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153449"
 ---
 > [!NOTE]
-> Ab SQL Server 2019 CTP 3.2 sind SQL Server-Big-Data-Cluster in der öffentlichen Vorschauversion verfügbar.
-> Vor SQL Server 2019 CTP 3.2 waren SQL Server-Big-Data-Cluster als eingeschränkte öffentliche Vorschauversion über das SQL Server 2019 Early Adoption Program verfügbar.
+>Der Release Candidate von SQL Server 2019 ist als öffentliche Vorschauversion verfügbar. Öffentliche Vorschauversionen von SQL Server 2019 enthalten CTP 3.2 und diesen Release Candidate.
+>Vor SQL Server 2019 CTP 3.2 waren SQL Server-Big-Data-Cluster als eingeschränkte öffentliche Vorschauversion über das SQL Server 2019 Early Adoption Program verfügbar.
