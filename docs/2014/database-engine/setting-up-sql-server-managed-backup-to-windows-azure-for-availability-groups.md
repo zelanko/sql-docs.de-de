@@ -10,14 +10,14 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76b19ace362d147520b9f39cecae3ce1cc65d53b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: aa2cbce81827c9085f87112b366d532077915f58
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154098"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176101"
 ---
-# <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Einrichten SQL Server verwalteten Sicherung in Azure für Verfügbarkeits Gruppen
+# <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Einrichten der verwalteten SQL Server-Sicherung in Azure für Verfügbarkeitsgruppen
   Dieses Thema ist ein Lernprogramm zum Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für Datenbanken, die an AlwaysOn-Verfügbarkeitsgruppen teilnehmen.  
   
 ## <a name="availability-group-configurations"></a>Verfügbarkeitsgruppenkonfigurationen  
@@ -68,7 +68,7 @@ ms.locfileid: "70154098"
 #### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Verfügbarkeitsdatenbank  
  In diesem Lernprogramm werden die Schritte zum Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] für eine Datenbank (AGTestDB) auf den Computern Node1 und Node2 beschrieben, gefolgt von den Schritten, mit denen die Überwachung des Integritätsstatus von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] aktiviert wird.  
   
-1.  **Erstellen Sie ein Azure Storage-Konto:** Die Sicherungen werden im Azure-BLOB-Speicherdienst gespeichert. Sie müssen zunächst ein Azure Storage-Konto erstellen, falls Sie noch nicht über ein Konto verfügen. Weitere Informationen finden Sie unter [Erstellen eines Azure Storage Kontos](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Notieren Sie sich den Namen und die URL des Speicherkontos sowie die Zugriffsschlüssel. Aus dem Speicherkontonamen und den Zugriffsschlüsseln werden SQL-Anmeldeinformationen erstellt. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet die SQL-Anmeldeinformationen während Sicherungsvorgängen, um sich beim Speicherkonto zu authentifizieren.  
+1.  **Erstellen eines Azure-Speicherkontos:** Die Sicherungen werden im Azure-BLOB-Speicherdienst gespeichert. Sie müssen zunächst ein Azure-Speicherkonto erstellen, falls Sie noch nicht über ein Konto verfügen. Weitere Informationen finden Sie unter [Erstellen eines Azure Storage Kontos](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/). Notieren Sie sich den Namen und die URL des Speicherkontos sowie die Zugriffsschlüssel. Aus dem Speicherkontonamen und den Zugriffsschlüsseln werden SQL-Anmeldeinformationen erstellt. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet die SQL-Anmeldeinformationen während Sicherungsvorgängen, um sich beim Speicherkonto zu authentifizieren.  
   
 2.  **Erstellen Sie SQL-Anmelde Informationen:** Erstellen Sie SQL-Anmelde Informationen, indem Sie den Namen des Speicher Kontos als Identität und den Speicherzugriffs Schlüssel als Kennwort verwenden.  
   

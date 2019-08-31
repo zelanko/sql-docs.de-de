@@ -10,12 +10,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59c063b0aca4a373671efc28c9b0d45baced836a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 3c91512bcc254a1ff778606726d54a9cdff7f67f
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153732"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175565"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure
   In dieser Lektion wird davon ausgegangen, dass Sie bereits über eine andere SQL Server verfügen, die sich möglicherweise auf einem anderen lokalen Computer oder auf einem virtuellen Computer in Azure befindet. Informationen zum Erstellen eines virtuellen SQL Server virtuellen Computers in Azure finden Sie unter Bereitstellen [eines virtuellen SQL Server](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)Computers in Azure. Stellen Sie nach der Bereitstellung einer SQL Server virtuellen Maschine in Azure sicher, dass Sie über SQL Server Management Studio auf einem anderen Computer eine Verbindung mit einer Instanz von SQL Server auf diesem virtuellen Computer herstellen können.  

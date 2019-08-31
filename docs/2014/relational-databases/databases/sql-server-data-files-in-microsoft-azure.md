@@ -10,14 +10,14 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55f0ab0cf2f1d4a29c0fca252c45f9e92740851c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154540"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175697"
 ---
-# <a name="sql-server-data-files-in-azure"></a>SQL Server von Datendateien in Azure
+# <a name="sql-server-data-files-in-azure"></a>SQL Server-Datendateien in Azure
   SQL Server Datendateien in Azure ermöglicht systemeigene Unterstützung für SQL Server Datenbankdateien, die als Azure-blobspeicher gespeichert sind Sie ermöglicht es Ihnen, eine Datenbank in SQL Server zu erstellen, die lokal oder auf einem virtuellen Computer in Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten in Azure BLOB Storage. Diese Erweiterung vereinfacht insbesondere das Verschieben von Datenbanken zwischen Computern mithilfe von Trenn- und Anfügevorgängen. Darüber hinaus bietet Sie einen alternativen Speicherort für Ihre Datenbank-Sicherungsdateien, da Sie eine Wiederherstellung von oder auf Azure Storage ermöglichen. Mit erweiterten Funktionen für das Virtualisieren und Verschieben von Daten sowie für Sicherheit und Verfügbarkeit unterstützt sie verschiedene Hybridlösungen und bietet zusätzlich kostengünstige, einfache Verwaltungsfunktionen für hohe Verfügbarkeit und flexible Skalierung.  
   
  In diesem Thema werden Konzepte und Überlegungen vorgestellt, die für das Speichern von SQL Server Datendateien in Azure Storage Dienst von zentraler Bedeutung sind  
@@ -93,7 +93,7 @@ ON
   
 -   **Lokaler SQL Server:** SQL Server Version 2014 enthält diese Funktion. Informationen zum Herunterladen von SQL Server 2014 finden Sie unter [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
--   SQL Server, die auf einem virtuellen Azure-Computer ausgeführt werden: Wenn Sie SQL Server auf einem virtuellen Azure-Computer installieren, installieren Sie SQL Server 2014, oder aktualisieren Sie Ihre vorhandene Instanz. Auf ähnliche Weise können Sie auch einen neuen virtuellen Computer in Azure erstellen, indem Sie SQL Server Platt Form Image 2014 verwenden. Informationen zum Herunterladen von SQL Server 2014 finden Sie unter [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   SQL Server auf einem virtuellen Azure-Computer: Wenn Sie SQL Server auf einem virtuellen Azure-Computer installieren, installieren Sie SQL Server 2014, oder aktualisieren Sie Ihre vorhandene Instanz. Auf ähnliche Weise können Sie auch einen neuen virtuellen Computer in Azure erstellen, indem Sie SQL Server Platt Form Image 2014 verwenden. Informationen zum Herunterladen von SQL Server 2014 finden Sie unter [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 ###  <a name="bkmk_Limitations"></a> Einschränkungen  
   

@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Azure SQL-Datenbank) (SybaseToSQL) | Microsoft-Dokumentation
+title: Projekteinstellungen (Azure SQL-Datenbank) (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -9,34 +9,34 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 98430a626a628d4c8cc040b53a9cf24ad1752048
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 829e7b0c51cd341193944fb2f28241f48618c407
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028780"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176222"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Projekteinstellungen (Azure SQL-DB) (SybaseToSQL)
-Die projekteinstellungen für die Azure SQL-Datenbank können Sie konfigurieren die Azure SQL-Datenbank-Datenbank-Suffix, um im Verbindungsdialogfeld hinzugefügt werden, und gleichzeitig ermöglichen taktmechanismus in Verbindung mit Azure SQL-Datenbank implementieren.  
+Mit den Azure SQL-Datenbankprojekt Einstellungen können Sie das Azure SQL-Daten Bank Suffix konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und die Implementierung des Takt Mechanismus in der Azure SQL-Daten Bankverbindung  
   
-Der Bereich für die Azure SQL-Datenbank finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Der Bereich Azure SQL-Datenbank ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Verwenden Sie das Dialogfeld "Projekteinstellungen", um das Festlegen von Konfigurationsoptionen für das aktuelle Projekt. Um die Einstellungen für Azure SQL-Datenbank, auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen Sie dann  **Azure SQL-Datenbank**.  
+-   Verwenden Sie das Dialogfeld Projekteinstellungen, um Konfigurationsoptionen für das aktuelle Projekt festzulegen. Um auf die Azure SQL-Datenbankeinstellungen zuzugreifen , wählen Sie im Menü Extras die Option **Projekteinstellungen**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Azure SQL**-Datenbank aus.  
   
--   Verwenden Sie das Dialogfeld Projekt-Standardeinstellungen, um das Festlegen von Konfigurationsoptionen für alle Projekte. Um die Einstellungen für Azure SQL-Datenbank, auf die **Tools** , wählen Sie im Menü **DefaultProject Einstellungen**, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen **Azure SQL-Datenbank**.  
+-   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Azure SQL-Datenbankeinstellungen zuzugreifen , wählen Sie im Menü Extras die Option **defaultproject Settings**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Azure SQL**-Datenbank aus.  
   
 ## <a name="connectivity"></a>Connectivity  
-**Taktintervall**  
+**Takt Intervall**  
   
-Gibt ein Zeitintervall für taktmechanismus verwendet werden, um die Azure SQL-Datenbank-Verbindung in aufrechtzuerhalten "Minuten: Sekunden Format.  
+Gibt ein Zeitintervall an, das für den Takt Mechanismus verwendet wird, um die Azure SQL-Daten Bankverbindung im Format "Minuten: Sekunden" zu wahren.  
   
-**Standardwert**: "4:45 '  
+**Standardwert**: "4:45"  
   
-Der Wert muss angegeben werden in bin: ss'-Format (z. B. "4:45 ' oder ' 0:50 ').  
+Der Wert muss im Format "m:SS" angegeben werden (z. b. "4:45" oder "0:50").  
   
-**Azure SQL DB Server-Suffix**  
+**Azure SQL-DB-Server Suffix**  
   
-Gibt ein Suffix der Azure SQL-Datenbank-server  
+Gibt ein Azure SQL-DB-Server Suffix an  
   
-**Standardwert**: "database.windows.net".  
+**Standardwert**: "Database.Windows.net".  
   

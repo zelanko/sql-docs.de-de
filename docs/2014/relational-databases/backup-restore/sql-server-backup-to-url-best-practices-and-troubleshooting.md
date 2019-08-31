@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6eb2d66203de226cd7ab414c97ecc219717573a0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154675"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175962"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
   Dieses Thema enthält bewährte Methoden und Tipps zur Problembehandlung für SQL Server Sicherung und Wiederherstellung im Azure-BLOB-Dienst.  

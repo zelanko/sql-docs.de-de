@@ -13,12 +13,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c4e690d13f8cd12992c2b26db8e5d640a971712
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154393"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176017"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Cloud-Adapter für SQL Server
   Der Cloudadapter-Dienst wird als Teil der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Bereitstellung auf einer Azure-VM erstellt. Der Cloud-Adapterdienst generiert bei der ersten Ausführung ein selbstsigniertes Zertifikat und wird danach unter dem Konto **Lokales System** ausgeführt. Er generiert eine Konfigurationsdatei, die für die eigene Konfiguration verwendet wird. Der Cloud-Adapter erstellt außerdem eine Windows-Firewall-Regel, um eingehende TCP-Verbindungen auf Standardport 11435 zuzulassen.  

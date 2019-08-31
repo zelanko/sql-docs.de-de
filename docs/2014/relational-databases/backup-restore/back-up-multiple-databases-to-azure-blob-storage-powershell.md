@@ -10,14 +10,14 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1be1f05ff09d85d29903e4e3be7f1f11600a7b1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f8d1917798137ed8aa96ddf106392ffd311ed9b1
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155033"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176008"
 ---
-# <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Verwenden von PowerShell zum Sichern mehrerer Datenbanken in Azure BLOB Storage-Dienst
+# <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Azure Blob Storage-Dienst
   Dieses Thema enthält Beispiel Skripts, die verwendet werden können, um Sicherungen im Azure-BLOB-Speicherdienst mithilfe von PowerShell-Cmdlets zu automatisieren.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Übersicht über PowerShell-Cmdlets für Sicherungen und Wiederherstellungen  

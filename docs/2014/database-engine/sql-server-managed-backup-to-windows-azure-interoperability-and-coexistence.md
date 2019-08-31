@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server verwaltete Sicherung in Azure: Interoperabilität und Koexistenz | Microsoft-Dokumentation'
+title: 'Verwaltete SQL Server-Sicherung in Azure: Interoperabilität und Koexistenz | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5a35fe9e2df55dd6b1f76c52503c5d4cad50bf
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154074"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176063"
 ---
-# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>SQL Server verwaltete Sicherung in Azure: Interoperabilität und Koexistenz
+# <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Verwaltete SQL Server-Sicherung in Azure: Interoperabilität und Koexistenz
   In diesem Thema wird [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Interoperabilität und -Koexistenz mit mehreren Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] beschrieben. Zu diesen Funktionen gehören folgende: AlwaysOn-Verfügbarkeitsgruppen, Daten Bank Spiegelung, Wartungspläne für Sicherungen, Protokoll Versand, Ad-hoc-Sicherungen, Datenbank trennen und Datenbank löschen.  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn-Verfügbarkeitsgruppen  
- AlwaysOn-Verfügbarkeitsgruppen, die als reine Azure-Lösung konfiguriert sind, die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]für unterstützt wird. Lokale oder gemischte Konfigurationen für AlwaysOn-Verfügbarkeitsgruppen werden nicht unterstützt. Weitere Informationen und weitere Überlegungen finden [Sie unter Einrichten SQL Server verwalteten Sicherung in Azure für Verfügbarkeits Gruppen](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md) .  
+ AlwaysOn-Verfügbarkeitsgruppen, die als reine Azure-Lösung für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]unterstützt werden. Lokale oder gemischte Konfigurationen für AlwaysOn-Verfügbarkeitsgruppen werden nicht unterstützt. Weitere Informationen und weitere Überlegungen finden [Sie unter Einrichten SQL Server verwalteten Sicherung in Azure für Verfügbarkeits Gruppen](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md) .  
   
 ### <a name="database-mirroring"></a>Datenbankspiegelung  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird nur für die Prinzipaldatenbank unterstützt. Wenn sowohl die Prinzipaldatenbank als auch der Spiegel für die Verwendung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] konfiguriert wurden, wird die gespiegelte Datenbank übersprungen und nicht gesichert. Bei einem Failover startet [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] allerdings den Sicherungsprozess, sobald der Spiegel den Rollenwechsel abgeschlossen hat und online ist. In diesem Fall werden die Sicherungen in einem neuen Container gespeichert. Wenn die Spiegeldatenbank nicht konfiguriert wird, um [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] im Falle eines Failovers zu verwenden, werden keine Sicherungen vorgenommen. Es wird empfohlen, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf dem Prinzipalserver und dem Spiegelserver zu konfigurieren, sodass Sicherungen im Falle eines Failovers fortgesetzt werden.  

@@ -10,14 +10,14 @@ ms.assetid: 74edd1fd-ab00-46f7-9e29-7ba3f1a446c5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6c43678851427d6498e57e8a2297449825adfb4f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154355"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176106"
 ---
-# <a name="lesson-1-create-azure-storage-objects"></a>Lektion 1: Erstellen von Azure Storage Objekten
+# <a name="lesson-1-create-azure-storage-objects"></a>Lektion 1: Erstellen von Azure Storage-Objekten
   Bevor Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherungen im Cloudspeicher erstellen, müssen Sie zunächst ein Speicherkonto und dann einen BLOB-Container erstellen. Lektion 1 führt Sie durch die Schritte zum Anmelden beim Azure-Verwaltungsportal und zum Erstellen eines Speicher Kontos und eines BLOB-Containers.  
   
 ## <a name="create-a-storage-account"></a>Erstellen eines Speicher Kontos  

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985281"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176294"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -45,8 +45,8 @@ Links zu Videos und Ressourcen zum Erlernen von [!INCLUDE[ssMDSshort_md](../incl
 - Wenn Sie [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem Computer mit Windows Server 2012 installieren, müssen Sie möglicherweise die verstärkte Sicherheit von Internet Explorer konfigurieren, um die Skripterstellung für die Webanwendungswebsite zuzulassen. Andernfalls kann auf dem Servercomputer Website nicht aufgerufen werden.
 - Um in der Webanwendung zu arbeiten, muss Silverlight 5 auf dem Clientcomputer installiert sein. Falls Sie nicht über die erforderliche Version von Silverlight verfügen, werden Sie aufgefordert, diese zu installieren, wenn Sie zu einem Bereich der Webanwendung navigieren, in dem sie erforderlich ist. Sie können Silverlight 5 von **[hier](https://www.microsoft.com/silverlight/)** installieren.
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer
-Wenn Sie einen virtuellen Azure-Computer starten, auf dem [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] bereits installiert ist, ist standardmäßig auch [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] installiert. 
+## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer
+Wenn Sie einen virtuellen Azure-Computer [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] einrichten, auf dem bereits installiert ist, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] wird standardmäßig ebenfalls installiert. 
 
 Als nächstes müssen Sie Internet Information Services (IIS) installieren. Weitere Informationen finden Sie im Abschnitt [Installieren und Konfigurieren von IIS](#InstallIIS). 
 
@@ -127,18 +127,18 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 2.  Klicken Sie auf **Datenbank erstellen**und anschließend im **Datenbank erstellen (Assistent)** auf **Weiter**.  
   
-3.  Auf der **Datenbankserver** Seite, geben Sie die SQL Server-Instanz. 
+3.  Geben Sie auf der Seite **Daten Bank Server** die SQL Server Instanz an. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] bietet Unterstützung für verwaltete SQL Server-Instanz. Legen Sie den Wert der **SQL Server-Instanz** an den Host der Azure SQL-Datenbank verwaltete Instanz. Beispiel: `xxxxxx.xxxxxx.database.windows.net`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host einer verwalteten Azure SQL-Datenbank-Instanz fest. Beispiel: `xxxxxx.xxxxxx.database.windows.net`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.
 
-4. Wählen Sie die **Authentifizierungstyp** , und klicken Sie dann auf **Testverbindung** zu bestätigen, dass Sie eine Verbindung herstellen können, mit der Datenbank, die mit den Anmeldeinformationen für den Authentifizierungstyp, die Sie ausgewählt haben. Klicken Sie auf **Weiter**.
+4. Wählen Sie den **Authentifizierungstyp** aus, und klicken Sie dann auf **Verbindung testen** , um zu bestätigen, dass Sie mithilfe der Anmelde Informationen für den von Ihnen ausgewählten Authentifizierungstyp eine Verbindung Klicken Sie auf **Weiter**.
 
-    >Für [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], verwalteten Instanz mit Azure SQL-Datenbank herstellen, verwenden Sie eine der folgenden Authentifizierungstypen:
+    >Verwenden [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Sie zum Herstellen einer Verbindung mit einer verwalteten Azure SQL-Datenbank-Instanz einen der folgenden Authentifizierungs Typen:
     >
-    >- Integrierte Azure Active Directory-Authentifizierung: **Aktueller Benutzer – integrierte Active Directory**
-    >- SQL Server-Authentifizierung: **SQL Server-Dienstkonto**.
+    >- Azure Active Directory integrierte Authentifizierung: **Aktueller Benutzer – Active Directory integriert**
+    >- SQL Server Authentifizierung: **SQL Server Konto**.
     >
-    >In verwalteten Azure SQL-Datenbank-Instanz, muss der Benutzer ein Mitglied der `sysadmin` -Serverrolle sein.
+    >In einer verwalteten Azure SQL-Datenbank-Instanz muss der Benutzer Mitglied der `sysadmin` Server Rolle "fester Server" sein.
 
     > [!NOTE]  
     >  Wenn Sie als Authentifizierungstyp **Aktueller Benutzer – Integrierte Sicherheit** auswählen, ist das Feld **Benutzername** schreibgeschützt und zeigt den Namen des Windows-Benutzerkontos an, das am Computer angemeldet ist. Wenn Sie [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] auf einem virtuellen Azure-Computer (VM) ausführen, zeigt das Feld **Benutzername** den VM-Namen sowie den Benutzernamen für das lokale Administratorkonto auf der VM an. 

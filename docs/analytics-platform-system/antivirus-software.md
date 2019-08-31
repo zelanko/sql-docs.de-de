@@ -1,6 +1,6 @@
 ---
-title: Antivirus-Software - Analytics Platform System | Microsoft-Dokumentation
-description: Wenn Ihr Rechenzentrum antivirus-Software erfordert, verwenden Sie diese Richtlinien, um die antivirus-Software in Analytics Platform System zu installieren. Es wird empfohlen, antivirus-Software nicht installiert, es sei denn, es sich um eine feste Anforderung Ihres Rechenzentrums ist.
+title: Antivirus Software-Analytics Platform System (APS) | Microsoft-Dokumentation
+description: Wenn Ihr Rechenzentrum Antivirensoftware erfordert, verwenden Sie diese Richtlinien zur Installation von Antivirensoftware auf dem Analytics Platform System (APS). Es wird empfohlen, die Antivirussoftware nur dann zu installieren, wenn Sie eine feste Anforderung Ihres Rechenzentrums ist
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,42 +8,42 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961606"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176055"
 ---
-# <a name="antivirus-software-for-analytics-platform-system"></a>Antivirus-Software für Analytics Platform System
-Wenn Ihr Rechenzentrum antivirus-Software erfordert, verwenden Sie diese Richtlinien, um die antivirus-Software in Analytics Platform System zu installieren. Es wird empfohlen, antivirus-Software nicht installiert, es sei denn, es sich um eine feste Anforderung Ihres Rechenzentrums ist.  
+# <a name="antivirus-software-for-analytics-platform-system-aps"></a>Antivirussoftware für Analytics Platform System (APS)
+Wenn Ihr Rechenzentrum Antivirensoftware erfordert, verwenden Sie diese Richtlinien, um Antivirensoftware auf dem Analytics Platform System zu installieren. Es wird empfohlen, die Antivirussoftware nur dann zu installieren, wenn Sie eine feste Anforderung Ihres Rechenzentrums ist  
   
 > [!WARNING]  
-> Es wird dringend empfohlen, dass Sie einzeln über das Sicherheitsrisiko für jeden Computer und für Analytics Platform System als Ganzes bewerten und Sie die Tools auswählen, die für die Sicherheitsrisiko Ebene der einzelnen Computer geeignet sind. Darüber hinaus empfehlen wir, dass vor dem Rollout Virenschutz Projekte, testen Sie des gesamten Systems unter voller Auslastung Änderungen hinsichtlich der Stabilität und Leistung zu messen.  
+> Es wird dringend empfohlen, dass Sie das Sicherheitsrisiko für die einzelnen Computer und das Analytics-Platt Form System als Ganzes individuell bewerten und die Tools auswählen, die für die Sicherheitsrisiko Stufe der einzelnen Computer geeignet sind. Außerdem wird empfohlen, dass Sie vor dem Rollout eines Virenschutz Projekts das gesamte System mit einer vollständigen Auslastung testen, um Änderungen an der Stabilität und Leistung zu messen.  
 >   
-> Virenschutzsoftware erfordert einige Systemressourcen ausgeführt. Sie müssen ausführen, testen, bevor und nachdem Sie Ihre antivirus-Software um zu bestimmen, ob es Auswirkung auf die Leistung in den Analytics Platform System ist installieren.  
+> Virenschutzsoftware erfordert einige Systemressourcen, die ausgeführt werden müssen. Sie müssen vor und nach der Installation der Antivirussoftware Tests durchführen, um zu ermitteln, ob es Leistungs Auswirkungen auf das Analytics-Platt Form System gibt.  
   
-Dieses Thema bezieht sich auf die Anleitung im [antivirus-Software auf Computern ausführen, auf denen SQL Server auswählen](https://support.microsoft.com/kb/309422) und [KB-Artikel 961804](https://support.microsoft.com/kb/961804/en-us).  
+Dieses Thema basiert auf dem Leitfaden zum [Auswählen von Antivirussoftware für die Ausführung auf Computern mit SQL Server](https://support.microsoft.com/kb/309422) und [KB-Artikel 961804](https://support.microsoft.com/kb/961804/en-us).  
   
-## <a name="exclusion-list-for-physical-hosts"></a>Ausschlussliste für die physischen Hosts  
-Um die antivirus-Software auf physischen Hosts installieren möchten, schließen Sie die folgende Liste der Verzeichnisse und Prozesse. Diese sollte nicht von der Antivirussoftware überprüft.  
+## <a name="exclusion-list-for-physical-hosts"></a>Ausschlussliste für physische Hosts  
+Wenn Sie die Antivirussoftware auf den physischen Hosts installieren möchten, schließen Sie die folgende Liste der Verzeichnisse und Prozesse aus. Diese sollten nicht von der Antivirussoftware gescannt werden.  
   
-**Schließen Sie diese Verzeichnisse:**  
+**Diese Verzeichnisse ausschließen:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - VM-Konfigurationsverzeichnis  
+-   C:\ProgramData\Microsoft\Windows\Hyper-v-Konfiguration Verzeichnis der virtuellen Maschine  
   
--   C:\Users\Public\Documents\Hyper-V\Virtual Festplatten - Standardverzeichnis für die virtuelle Festplatte  
+-   C:\Users\Public\Documents\Hyper-v\virtuelle Festplatten-Standardverzeichnis des virtuellen Festplatten Laufwerks  
   
--   C:\clusterStorage - Verzeichnisse der virtuellen Festplatte  
+-   C:\ClusterStorage: Verzeichnisse für virtuelle Festplattenlaufwerke  
   
 **Schließen Sie diese Prozesse aus:**  
   
--   Verwaltung virtueller Computer (Vmms.exe)  
+-   Verwaltung virtueller Maschinen (vmms. exe)  
   
--   VM-workprozesse (Vmwp.exe)  
+-   Arbeitsprozesse für virtuelle Maschinen (VMWP. exe)  
   
-## <a name="exclusion-list-for-virtual-machines-vms"></a>Ausschlussliste für virtuelle Computer (VMs)  
-Um die antivirus-Software auf den virtuellen Computern zu installieren, schließen Sie die folgende Liste von Verzeichnissen und Dateien. Diese sollte nicht von der Antivirussoftware überprüft.  
+## <a name="exclusion-list-for-virtual-machines-vms"></a>Ausschlussliste für Virtual Machines (VMS)  
+Um die Antivirussoftware auf den virtuellen Computern zu installieren, schließen Sie die folgende Liste der Verzeichnisse und Dateien aus. Diese sollten nicht von der Antivirussoftware gescannt werden.  
   
 **_PDW_region_-CTL01**  
   
@@ -51,11 +51,11 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
   
 -   G:\  
   
-**_Appliance_domain_-AD01** und  **_Appliance_domain_-AD02**  
+**_appliance_domain_-ad01** und  **_appliance_domain_-ad02**  
   
 -   Keine Einschränkungen  
   
-**Computeknoten-VMs**  
+**Computeknoten-VMS**  
   
 -   C:\windows\cluster\  
   
@@ -74,5 +74,5 @@ Um die antivirus-Software auf den virtuellen Computern zu installieren, schließ
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Siehe auch  
-[Tasks zur applianceverwaltung &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+[Geräte Verwaltungsaufgaben &#40;Analytics-Platt Form System&#41;](appliance-management-tasks.md)  
   
