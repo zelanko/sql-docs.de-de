@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715293"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059287"
 ---
 # <a name="overview-and-usage-scenarios"></a>Übersicht und Verwendungsszenarien
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Beispielrepository
 
 - [Quorum verdoppelt die Workload seiner wichtigen Datenbank und senkt die Auslastung um 70 % mithilfe von In-Memory-OLTP in Azure SQL-Datenbank](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet hat mit In-Memory-OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] die Leistung von Batch-Datenladevorgängen verbessert und die Notwendigkeit eines Mid-Tier-Caches beseitigt: [Data Services Firm Gains Real-Time Access to Product Data with In-Memory Technology (Anbieter von Datendiensten verschafft sich mit In-Memory-Technologie Echtzeitzugriff auf Produktdaten)](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Das Beth Israel Deaconess Medical Center konnte mithilfe von In-Memory-OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] die Datenerfassungsrate von Domänencontrollern drastisch steigern: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
+- Das Beth Israel Deaconess Medical Center konnte mithilfe von In-Memory-OLTP in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] die Datenerfassungsrate von Domänencontrollern deutlich steigern und Lastspitzen in der Arbeitsauslastung bewältigen: https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for
 
 ### <a name="caching-and-session-state"></a>Zwischenspeicherung und Sitzungszustand
 

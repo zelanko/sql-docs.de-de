@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091753"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026229"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert eine vorhandene Konfiguration einer Resource-Governor-Arbeitsauslastungsgruppe und weist sie optional einem Resource-Governor-Ressourcenpool zu.  
+  Ändert eine vorhandene Konfiguration einer Resource Governor-Arbeitsauslastungsgruppe und weist sie optional einem Resource Governor-Ressourcenpool zu.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
@@ -48,7 +48,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *group_name* | "**default**"  
+ *group_name* | "**default**"       
  Der Name einer vorhandenen benutzerdefinierten Arbeitsauslastungsgruppe oder der standardmäßigen Ressourcenkontrollen-Arbeitsauslastungsgruppe.  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > Für vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich kleingeschriebene Namen verwendet, z.B. "default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.  
   
- IMPORTANCE = { LOW | MEDIUM | HIGH }  
+ IMPORTANCE = { LOW | **MEDIUM** | HIGH }       
  Gibt die relative Wichtigkeit einer Anforderung in der Arbeitsauslastungsgruppe an. Die Wichtigkeit kann einen der folgenden Werte aufweisen:  
   
 -   LOW  
@@ -71,30 +71,29 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen mit verschiedener Wichtigkeit innerhalb desselben Ressourcenpools beeinflussen sich gegenseitig, haben jedoch keine Auswirkungen auf Arbeitsauslastungsgruppen in anderen Ressourcenpools.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
- Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. Dieser Prozentwert ist relativ zur Ressourcenpoolgröße, die von MAX_MEMORY_PERCENT festgelegt wird.  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
+ Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. *value* entspricht einem Prozentwert, der relativ zur Ressourcenpoolgröße ist, die mit MAX_MEMORY_PERCENT festgelegt wird.  
+
+*value* entspricht bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] einem Integer und ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] einer Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
   
 > [!NOTE]  
 > Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
   
- *value* muss 0 (null) oder ein positiver Integer sein. Der zulässige Bereich für *value* liegt zwischen 0 und 100. Die Standardeinstellung für *value* ist 25.  
-  
- Beachten Sie Folgendes:  
-  
--   Das Festlegen von *value* auf 0 (null) verhindert, dass Abfragen mit SORT- und HASH JOIN-Vorgängen in benutzerdefinierten Arbeitsauslastungsgruppen ausgeführt werden.  
-  
--   Es wird davon abgeraten, *value* auf einen höheren Wert als 70 festzulegen, da der Server möglicherweise nicht genug freien Arbeitsspeicher reservieren kann, wenn andere gleichzeitige Abfragen ausgeführt werden. Dadurch tritt möglicherweise der Timeoutfehler 8645 auf.  
+> [!IMPORTANT]
+> Das Festlegen von *value* auf 0 (null) verhindert, dass Abfragen mit SORT- und HASH JOIN-Vorgängen in benutzerdefinierten Arbeitsauslastungsgruppen ausgeführt werden.     
+>
+> Es wird davon abgeraten, *value* auf einen höheren Wert als 70 festzulegen, da der Server möglicherweise nicht genug freien Arbeitsspeicher reservieren kann, wenn andere Abfragen gleichzeitig ausgeführt werden. Dadurch tritt möglicherweise der Timeoutfehler 8645 auf.      
   
 > [!NOTE]  
->  Wenn die Arbeitsspeicheranforderungen der Abfrage den Grenzwert überschreiten, der von diesem Parameter angegeben wird, führt der Server folgende Vorgänge aus:  
+> Wenn die Arbeitsspeicheranforderungen der Abfrage den Grenzwert überschreiten, der von diesem Parameter angegeben wird, führt der Server folgende Vorgänge aus:  
 >   
->  Bei benutzerdefinierten Arbeitsauslastungsgruppen versucht der Server, den Grad der Parallelität für diese Abfrage zu reduzieren, bis die Arbeitsspeicheranforderung den Grenzwert unterschreitet oder bis der Grad der Parallelität dem Wert 1 entspricht. Wenn die Arbeitsspeicheranforderung der Abfrage den Grenzwert immer noch überschreitet, tritt Fehler 8657 auf.  
+> -  Bei benutzerdefinierten Arbeitsauslastungsgruppen versucht der Server, den Grad der Parallelität für diese Abfrage zu reduzieren, bis die Arbeitsspeicheranforderung den Grenzwert unterschreitet oder bis der Grad der Parallelität dem Wert 1 entspricht. Wenn die Arbeitsspeicheranforderung der Abfrage den Grenzwert immer noch überschreitet, tritt Fehler 8657 auf.  
 >   
->  Bei internen und Standard-Arbeitsauslastungsgruppen lässt der Server zu, dass der Abfrage der erforderliche Arbeitsspeicher zugewiesen wird.  
+> -  Bei internen und Standard-Arbeitsauslastungsgruppen lässt der Server zu, dass der Abfrage der erforderliche Arbeitsspeicher zugewiesen wird.  
 >   
->  Beachten Sie, dass in beiden Fällen der Timeoutfehler 8645 auftreten kann, wenn der Server nicht über ausreichend physischen Arbeitsspeicher verfügt.  
+> Beachten Sie, dass in beiden Fällen der Timeoutfehler 8645 auftreten kann, wenn der Server nicht über ausreichend physischen Arbeitsspeicher verfügt.  
   
- REQUEST_MAX_CPU_TIME_SEC =*value*  
+ REQUEST_MAX_CPU_TIME_SEC = *value*       
  Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kann. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value* ist 0 (null), also unbegrenzt.  
   
 > [!NOTE]  
@@ -109,9 +108,9 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > Eine Abfrage schlägt nicht grundsätzlich fehl, wenn das Timeout der Arbeitsspeicherzuweisung erreicht wird. Eine Abfrage schlägt nur fehl, wenn zu viele Abfragen gleichzeitig ausgeführt werden. Andernfalls könnte die Abfrage nur die minimale Arbeitsspeicherzuweisung nutzen, was zu reduzierter Abfrageleistung führen kann.  
   
- *value* muss eine positive ganze Zahl sein. Die Standardeinstellung für *value* ist 0 (null); hierbei wird eine interne Berechnung basierend auf den Abfragekosten verwendet, um die maximale Zeit zu ermitteln.  
+ *value* muss eine positive ganze Zahl sein. Die Standardeinstellung für *value* ist 0 (null). Hierbei wird eine interne Berechnung basierend auf den Abfragekosten verwendet, um die maximale Zeit zu ermitteln.  
   
- MAX_DOP =*value*  
+ MAX_DOP =*value*       
  Gibt den maximalen Grad der Parallelität (DOP) für parallele Anforderungen an. *value* muss 0 (null) oder eine positive Ganzzahl zwischen 1 und 255 sein. Wenn *value* 0 ist, wählt der Server den maximalen Grad an Parallelismus aus. Dies ist die Standardeinstellung und die empfohlene Einstellung.  
   
 > [!NOTE]  
@@ -128,14 +127,14 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
 -   Die Arbeitsauslastungsgruppe MAX_DOP überschreibt sp_configure 'Max. Grad an Parallelität'.  
   
--   Wenn die Abfrage zur Kompilierzeit als seriell (MAX_DOP = 1 ) markiert ist, kann sie zur Laufzeit nicht wieder in parallel geändert werden, und zwar unabhängig von der Arbeitsauslastungsgruppe oder der sp_configure-Einstellung.  
+-   Wenn die Abfrage zur Kompilierzeit als seriell (MAX_DOP = 1) gekennzeichnet ist, kann für sie zur Laufzeit nicht wieder die Paralleleinstellung festgelegt werden, und zwar unabhängig von der Arbeitsauslastungsgruppe oder der „sp_configure“-Einstellung.  
   
  Nach der Konfiguration kann DOP nur bei Arbeitsspeicher-Engpässen verringert werden. Die Neukonfiguration der Arbeitsauslastungsgruppe ist während des Wartens in der Speicherzuweisungs-Warteschlange nicht sichtbar.  
   
- GROUP_MAX_REQUESTS =*value*  
+ GROUP_MAX_REQUESTS = *value*      
  Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die in der Arbeitsauslastungsgruppe ausgeführt werden können. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value*, 0, lässt unbegrenzte Anforderungen zu. Wenn die maximale Anzahl gleichzeitiger Anforderungen erreicht wird, kann sich ein Benutzer dieser Gruppe zwar anmelden, wird jedoch in den Wartezustand versetzt, bis die Anzahl gleichzeitiger Anforderungen unter den angegebenen Wert gefallen ist.  
   
- USING { *pool_name* | "**default**" }  
+ USING { *pool_name* | "**default**" }      
  Verknüpft die Arbeitsauslastungsgruppe mit dem benutzerdefinierten Ressourcenpool, der durch *pool_name* angegeben wird, wodurch die Arbeitsauslastungsgruppe in den Ressourcenpool eingefügt wird. Wenn *pool_name* nicht bereitgestellt wird oder wenn das USING-Argument nicht verwendet wird, wird die Arbeitsauslastungsgruppe in den vordefinierten Standardpool von Resource Governor eingefügt.  
   
  Die "default"-Option muss in Anführungszeichen ("") oder Klammern ([]) eingeschlossen werden, wenn sie mit ALTER WORKLOAD GROUP verwendet wird, um einen Konflikt mit dem vom System reservierten Wort DEFAULT zu vermeiden. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
@@ -148,14 +147,14 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Änderungen an der Konfiguration der Arbeitsauslastungsgruppe werden erst wirksam, nachdem ALTER RESOURCE GOVERNOR RECONFIGURE ausgeführt wurde. Wenn Sie eine Einstellung mit Auswirkung auf den Plan ändern, wird die neue Einstellung nur in zuvor zwischengespeicherten Plänen nach dem Ausführen von DBCC FREEPROCCACHE (*pool_name*) wirksam, wobei *pool_name* der Name eines Ressourcenpools von Resource Governor ist, dem die Arbeitsauslastungsgruppe zugeordnet ist.  
   
--   Wenn Sie MAX_DOP in 1 ändern möchten, muss DBCC FREEPROCCACHE nicht ausgeführt werden, da parallele Pläne im seriellen Modus ausgeführt werden können. Möglicherweise ist dies jedoch nicht so effizient wie ein als serieller Plan kompilierter Plan.  
+-   Wenn Sie für MAX_DOP 1 festlegen, muss DBCC FREEPROCCACHE nicht ausgeführt werden, da parallele Pläne im seriellen Modus ausgeführt werden können. Möglicherweise ist dies jedoch nicht so effizient wie ein als serieller Plan kompilierter Plan.  
   
 -   Wenn Sie MAX_DOP von 1 in 0 oder in einen Wert größer als 1 ändern, muss DBCC FREEPROCCACHE nicht ausgeführt werden. Serielle Pläne können jedoch nicht parallel ausgeführt werden. Das Löschen des entsprechenden Cache ermöglicht daher neuen Plänen, mit Parallelität kompiliert zu werden.  
   
 > [!CAUTION]  
 > Das Löschen zwischengespeicherter Pläne aus einem Ressourcenpool, der mehreren Arbeitsauslastungsgruppen zugeordnet ist, wirkt sich auf alle Arbeitsauslastungsgruppen mit dem benutzerdefinierten Ressourcenpool aus, der durch *pool_name* ausgewiesen wird.  
   
- Sie sollten bei der Ausführung von DDL-Anweisungen mit dem Status der Ressourcenkontrolle vertraut sein. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+ Sie sollten bei der Ausführung von DDL-Anweisungen mit den Resource Governor-Zuständen vertraut sein. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
  REQUEST_MEMORY_GRANT_PERCENT: In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] kann die Indexerstellung verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Die Ressourcenkontrolle in höheren Versionen unterstützt diese besondere Behandlung, die ursprüngliche und alle weiteren Speicherzuweisungen werden jedoch durch den Ressourcenpool und die Einstellungen für Arbeitsauslastungsgruppe begrenzt.  
   
@@ -164,7 +163,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Der durch die Indexerstellung für nicht ausgerichtete partitionierte Tabellen belegte Arbeitsspeicher ist proportional zur Anzahl der beteiligten Partitionen.  Wenn der insgesamt erforderliche Arbeitsspeicher die Grenze übersteigt, die pro Abfrage von der unter Ressourcenkontrolle stehenden Arbeitsauslastungsgruppe festgelegt wurde (REQUEST_MAX_MEMORY_GRANT_PERCENT), kann die Indexerstellung möglicherweise nicht erfolgreich ausgeführt werden. Da die Arbeitsauslastungsgruppe "default" Abfragen zulässt, die die pro Abfrage festgelegte Grenze mit dem mindestens für eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Kompatibilität erforderlichen Arbeitsspeicher übersteigen, können Benutzer dieselbe Indexerstellung in Arbeitsauslastungsgruppen des Typs "default" ausführen. Voraussetzung ist, dass der Standard-Ressourcenpool über ausreichend Gesamtarbeitsspeicher verfügt, um eine solche Abfrage ausführen zu können.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die CONTROL SERVER-Berechtigung.  
+ Erfordert die `CONTROL SERVER`-Berechtigung.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel veranschaulicht, wie die Wichtigkeit von Anforderungen in der Standardgruppe von `MEDIUM` in `LOW` geändert werden kann.  

@@ -43,12 +43,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05d3dab8585dd62716a9846ab591c7d70479e1c3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265489"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123002"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +154,7 @@ Ein ausführlicheres Tutorial zum Verwenden des Assistenten zum Generieren und V
   
 -   **An Datei anfügen** – Im Falle von **True**wird dieses Skript am Ende eines vorhandenen Skripts angefügt, angegeben auf der Seite **Skripterstellungsoptionen festlegen** . Im Falle von **False**überschreibt das neue Skript ein vorheriges Skript. Der Standardwert ist **False**.  
   
--   **Skripterstellung bei einem Fehler fortsetzen** – Im Falle von **True**wird die Skripterstellung bei Auftreten eines Fehlers beendet. Im Falle von **False**wird die Skripterstellung fortgesetzt. Der Standardwert ist **False**.  
+-   **Skripterstellung bei einem Fehler fortsetzen:** Bei **False** wird die Skripterstellung bei Auftreten eines Fehlers beendet. Bei **True** wird die Skripterstellung fortgesetzt. Der Standardwert ist **False**.  
   
 -   **UDDTs in Basistypen konvertieren** – Im Falle von **True**werden benutzerdefinierte Datentypen (UDDT) in die zugrunde liegenden Basisdatentypen konvertiert, die zu ihrer Erstellung verwendet wurden. Verwenden Sie **True** , wenn der UDDT in der Datenbank, in der das Skript ausgeführt wird, nicht vorhanden ist. Im Falle von **False**werden UDDTs verwendet. Der Standardwert ist **False**.  
   

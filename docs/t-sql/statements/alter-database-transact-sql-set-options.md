@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495458"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110286"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -656,7 +656,7 @@ Gibt die Standardsprache für alle neu erstellten Benutzernamen an. Die Sprache 
 NESTED_TRIGGERS         
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Gibt an, ob ein AFTER-Trigger kaskadiert werden kann, d. h., ob er eine Aktion ausführen kann, durch die ein anderer Trigger ausgelöst wird, der einen weiteren Trigger ausgelöst usw. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
+Gibt an, ob ein AFTER-Trigger kaskadiert werden kann, d. h., ob er eine Aktion ausführen kann, durch die ein anderer Trigger initiiert wird, der einen weiteren Trigger initiiert usw. Diese Option ist nur zulässig, wenn CONTAINMENT auf PARTIAL festgelegt wurde. Wenn CONTAINMENT auf NONE festgelegt wird, treten Fehler auf.
 
 TRANSFORM_NOISE_WORDS         
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 Der Name der Datenbank, die geändert werden soll.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Gilt für Azure SQL Data Warehouse (Vorschauversion)
+**Gilt für** Azure SQL Data Warehouse (Vorschauversion)
 
 Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in `sys.databases` eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
 
@@ -2947,6 +2954,21 @@ Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets nicht im Az
 Befehl|Wie|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Gilt für** Azure SQL Data Warehouse (Vorschauversion)
+
+ON aktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
+
+OFF deaktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
+
+Wenn Sie für eine Datenbank die Option READ_COMMITTED_SNAPSHOT auf ON oder OFF festlegen, werden alle aktiven Verbindungen getrennt.  Sie sollten diese Änderung innerhalb des Datenbankwartungsfensters vornehmen oder warten, bis die Verbindung mit der Datenbank (mit Ausnahme der Verbindung, die zur Ausführung des ALTER DATABASE-Befehls verwendet wird) getrennt wird.  Die Datenbank muss sich nicht im Einzelbenutzermodus befinden.  Die Einstellung READ_COMMITTED_SNAPSHOT kann nicht auf Sitzungsebene geändert werden.  Sie können mithilfe der Spalte „is_read_committed_snapshot_on“ in „sys.databases“ überprüfen, welche Einstellung für die Datenbank festgelegt ist.
+
+Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen möglicherweise langsamer ausgeführt, wenn mehrere Datenversionen vorliegen und nach einer Version gesucht wird. Lange Transaktionen können außerdem zu einer größeren Datenbank führen, wenn von diesen Transaktionen Änderungen vorgenommen werden, die die Bereinigung von Versionen verhindern.  
+
+
+
+
 ## <a name="remarks"></a>Remarks
 
 Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn die folgenden Anforderungen erfüllt sind:
@@ -2959,12 +2981,9 @@ Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (O
 
 ## <a name="permissions"></a>Berechtigungen
 
-Folgende Berechtigungen sind erforderlich:
+Ein Benutzer muss entweder über die Serverebenenprinzipal-Anmeldung verfügen, die durch den Bereitstellungsprozess erstellt wurde, oder ein Mitglied der `dbmanager`-Datenbankrolle sein, um die Option RESULT_SET_CACHING festlegen zu können.  
 
-- Der Prinzipalanmeldename auf Serverebene (der während des Bereitstellungsprozesses erstellt wurde) oder
-- Mitgliedschaft in der `dbmanager`-Datenbankrolle
-
-Der Datenbankbesitzer kann die Datenbank nur ändern, wenn er Mitglied der Rolle „dbmanager“ ist.
+Ein Benutzer benötigt die ALTER-Berechtigung für eine Datenbank, um die Option READ_COMMITTED_SNAPSHOT festlegen zu können.
 
 ## <a name="examples"></a>Beispiele
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Aktivieren der Option READ_COMMITTED_SNAPSHOT für eine Datenbank
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>Siehe auch

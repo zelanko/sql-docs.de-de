@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086761"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148833"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ Definiert ein auf dem 24-Stunden-Format basierendes Datum, das mit einer Uhrzeit
 |Verwendung|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Standardmäßige Formate der Zeichenfolgenliterale (wird für Downlevelclients verwendet)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
 |Datumsbereich|0001-01-01 bis 9999-12-31<br /><br /> 1\. Januar 1 n. Chr. bis 31. Dezember 9999|  
-|Uhrzeitbereich|00:00:00 bis 23:59:59.9999999 (Sekundenbruchteile werden in Informatica nicht unterstützt)|  
-|Zeitzonenoffsetbereich|–14: 00 bis +14:00 (der Zeitzonenoffset wird in Informatica ignoriert)|  
-|Elementbereiche|Bei YYYY handelt es sich um vier Ziffern im Bereich von 0001 bis 9999, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen.<br /><br /> Bei n* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen. Sekundenbruchteile werden in Informatica nicht unterstützt.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von -14 bis +14. Der Zeitzonenoffset wird in Informatica ignoriert.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59. Der Zeitzonenoffset wird in Informatica ignoriert.|  
+|Uhrzeitbereich|00:00:00 bis 23:59:590,9999999|  
+|Zeitzonenoffsetbereich|-14:00 bis +14:00|  
+|Elementbereiche|Bei YYYY handelt es sich um vier Ziffern im Bereich von 0001 bis 9999, die ein Jahr darstellen.<br /><br /> Bei MM handelt es sich um zwei Ziffern im Bereich von 01 bis 12, die im angegebenen Jahr einen Monat darstellen.<br /><br /> Bei DD handelt es sich um zwei Ziffern im Bereich von 01 bis 31, die im angegebenen Monat einen Tag darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von 00 bis 23, die die Stunde darstellen.<br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Minute darstellen.<br /><br /> Bei ss handelt es sich um zwei Ziffern im Bereich von 00 bis 59, die die Sekunde darstellen.<br /><br /> Bei n* handelt es sich um bis zu sieben Ziffern im Bereich von 0 bis 9999999, die die Sekundenbruchteile darstellen.<br /><br /> Bei hh handelt es sich um zwei Ziffern im Bereich von -14 bis +14. <br /><br /> Bei mm handelt es sich um zwei Ziffern im Bereich von 00 bis 59.|  
 |Zeichenlänge|Mindestens 26 Positionen (YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm) bis maximal 34 Positionen (YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |Genauigkeit, Dezimalstellen|Siehe Tabelle unten.|  
 |Speichergröße|Standardmäßig 10 Bytes fest, wobei die Standardgenauigkeit in Sekundenbruchteilen 100 ns beträgt.|  

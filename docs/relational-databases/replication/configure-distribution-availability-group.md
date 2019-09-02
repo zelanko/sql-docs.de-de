@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768692"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030327"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Einrichten der Verteilungsdatenbank für die Replikation in einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ Nachdem eine Verteilungsdatenbank gemäß der nachfolgenden Anleitung in der Ver
 
 ## <a name="limitations-or-exclusions"></a>Einschränkungen oder Ausschlüsse
 
-- Lokale Verteiler werden nicht unterstützt. Verleger und Verteiler müssen sich beispielsweise auf verschiedenen SQL Server-Instanzen befinden. Ein Verleger, der sich selbst als Verteiler nutzt (ein sogenannter lokaler Verteiler) kann keine Verteilungsdatenbanken in Verfügbarkeitsgruppen unterstützen.
+- Lokale Verteiler werden nicht unterstützt. Verleger und Verteiler müssen sich beispielsweise auf verschiedenen SQL Server-Instanzen befinden. Diese Instanzen können auf denselben Knotengruppen gehostet werden.  Ein Verleger, der sich selbst als Verteiler nutzt (ein sogenannter lokaler Verteiler) kann keine Verteilungsdatenbanken in Verfügbarkeitsgruppen unterstützen.
 - Oracle-Verleger werden nicht unterstützt.
 - Die Mergereplikation wird nicht unterstützt.
 - Die Transaktionsreplikation mit sofortigen oder verzögerten Updates des Abonnenten wird nicht unterstützt.
 - Die Peer-zu-Peer-Replikation wird nicht unterstützt.
-- Alle SQL Server-Instanzen, die Verteilungsdatenbankreplikate hosten, müssen SQL Server 2017 CU 6 oder höher aufweisen. 
+- Alle SQL Server 2017-Instanzen, die Verteilungsdatenbank-Replikate hosten, müssen SQL Server 2017 CU 6 oder höher entsprechen. 
+- Alle SQL Server 2016-Instanzen, die Verteilungsdatenbank-Replikate hosten, müssen SQL Server 2016 SP2 CU3 oder höher entsprechen.
 - Alle SQL Server-Instanzen, die Verteilungsdatenbankreplikate hosten, müssen bis auf das kleine Zeitfenster, in dem das Upgrades stattfindet, jederzeit dieselbe Version aufweisen.
 - Die Verteilungsdatenbank muss sich im vollständigen Wiederherstellungsmodus befinden.
 - Konfigurieren Sie für die Wiederherstellung und zur Aktivierung der Kürzung von Transaktionsprotokollen vollständige und Transaktionsprotokollsicherungen.

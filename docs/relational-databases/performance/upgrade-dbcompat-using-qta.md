@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231629"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123126"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Wenn Sie von einer älteren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version zu [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder neuer migrieren und ein Upgrade auf den aktuellen [Datenbankkompatibilitätsgrad](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) durchführen, kann es bei einer Workload womöglich zu Leistungseinbußen kommen. Dies ist in geringerem Ausmaß auch beim Upgrade von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] auf eine neuere Version möglich.
 
-Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und mit jeder neuen Version werden alle Änderungen des Abfrageoptimierers auf den neuesten Datenbank-Kompatibilitätsgrad abgestimmt, sodass Ausführungspläne nicht direkt beim Upgrade geändert werden, sondern wenn ein Benutzer die `COMPATIBILITY_LEVEL`-Datenbankoption in die neueste verfügbare ändert. Weitere Informationen zu den in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eingeführten Änderungen des Abfrageoptimierers finden Sie unter [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md). Weitere Informationen zu Kompatibilitätsgraden und deren Auswirkungen auf Upgrades finden Sie unter [Kompatibilitätsgrade und SQL Server-Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades).
+Beginnend mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und mit jeder neuen Version werden alle Änderungen des Abfrageoptimierers auf den neuesten Datenbank-Kompatibilitätsgrad abgestimmt, sodass Ausführungspläne nicht direkt beim Upgrade geändert werden, sondern wenn ein Benutzer die `COMPATIBILITY_LEVEL`-Datenbankoption in die neueste verfügbare ändert. Weitere Informationen zu den in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] eingeführten Änderungen des Abfrageoptimierers finden Sie unter [Kardinalitätsschätzung](../../relational-databases/performance/cardinality-estimation-sql-server.md). Weitere Informationen zu Kompatibilitätsgraden und deren Auswirkungen auf Upgrades finden Sie unter [Kompatibilitätsgrade und Upgrades der Datenbank-Engine](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades).
 
 Diese Gatingfunktion, die durch den Datenbank-Kompatibilitätsgrad bereitgestellt wird, bietet Ihnen in Kombination mit dem Abfragespeicher große Kontrolle über die Abfrageleistung im Upgradeprozess, wenn das Upgrade dem empfohlenen Workflow folgt, der unten gezeigt wird. Weitere Informationen zum empfohlenen Workflow für das Aktualisieren des Kompatibilitätsgrads finden Sie unter [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
@@ -210,7 +210,7 @@ QTA ist eine sitzungsbasierte Funktion, die den Sitzungszustand im `msqta`-Schem
 Erfordert Mitgliedschaft in der Rolle **db_owner**.
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Kompatibilitätsgrade und SQL Server-Upgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [Kompatibilitätsgrade und Upgrades der Datenbank-Engine](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

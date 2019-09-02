@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 52d3a6f14042a5208803c84557d6b3b7e4e4f37e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986230"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190377"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -219,7 +219,8 @@ Eine Veröffentlichungsaktion von "SqlPackage.exe" aktualisiert inkrementell das
 |**/p:**|Scriptneweinschränintvalidation = (boolescher Wert ' true ')|Am Ende der Veröffentlichung werden alle Einschränkungen als ein Satz überprüft, wodurch Datenfehler vermieden werden, die durch eine Check-oder FOREIGN KEY-Einschränkung mitten in der Veröffentlichung verursacht werden. Wenn FALSE festgelegt wird, werden Einschränkungen ohne Überprüfung der entsprechenden Daten veröffentlicht.|
 |**/p:**|Scriptrefreshmodule = (boolescher Wert ' true ')|Schließt Aktualisierungsanweisungen am Ende des Veröffentlichungsskripts ein.|
 |**/p:**|Storage=({File&#124;Memory})|Gibt an, wie Elemente gespeichert werden, wenn das Datenbankmodell erstellt wird. Die Standardeinstellung lautet aus Leistungsgründen InMemory. Für große Datenbanken ist die dateigestützte Speicherung erforderlich.|
-|**/p:**|Treatverificationerrorsaswarning = (Boolean)|Gibt an, ob während der Veröffentlichungs Überprüfung aufgetretene Fehler als Warnungen behandelt werden sollen. Die Überprüfung wird für den generierten Bereitstellungsplan ausgeführt, bevor der Plan für Ihre Zieldatenbank ausgeführt wird. Bei der Planüberprüfung werden Probleme erkannt, z.B. der Verlust von reinen Zielobjekten (z.B. Indizes), die gelöscht werden müssen, um eine Änderung vorzunehmen. Bei der Überprüfung werden auch Situationen erkannt, in denen Abhängigkeiten (z.B. eine Tabelle oder Sicht) aufgrund eines Verweises auf ein zusammengesetztes Projekt vorhanden sind, jedoch nicht in der Zieldatenbank vorkommen. Dies ist möglicherweise der Fall, um eine vollständige Liste aller Probleme zu erhalten, statt zu verhindern, dass die Veröffentlichungs Aktion beim ersten Fehler beendet wird.|**/p:**|Unmodifiableobjectwarning = (boolescher Wert ' true ')|Gibt an, ob Warnungen generiert werden sollen, wenn Unterschiede in Objekten gefunden werden, die nicht änderbar sind (z. B. wenn die Dateigröße oder Dateipfade für eine Datei unterschiedlich sind).|
+|**/p:**|Treatverificationerrorsaswarning = (Boolean)|Gibt an, ob während der Veröffentlichungs Überprüfung aufgetretene Fehler als Warnungen behandelt werden sollen. Die Überprüfung wird für den generierten Bereitstellungsplan ausgeführt, bevor der Plan für Ihre Zieldatenbank ausgeführt wird. Bei der Planüberprüfung werden Probleme erkannt, z.B. der Verlust von reinen Zielobjekten (z.B. Indizes), die gelöscht werden müssen, um eine Änderung vorzunehmen. Bei der Überprüfung werden auch Situationen erkannt, in denen Abhängigkeiten (z.B. eine Tabelle oder Sicht) aufgrund eines Verweises auf ein zusammengesetztes Projekt vorhanden sind, jedoch nicht in der Zieldatenbank vorkommen. Dies ist möglicherweise der Fall, um eine vollständige Liste aller Probleme zu erhalten, statt zu verhindern, dass die Veröffentlichungs Aktion beim ersten Fehler beendet wird.
+|**/p:**|Unmodifiableobjectwarning = (boolescher Wert ' true ')|Gibt an, ob Warnungen generiert werden sollen, wenn Unterschiede in Objekten gefunden werden, die nicht änderbar sind (z. B. wenn die Dateigröße oder Dateipfade für eine Datei unterschiedlich sind).|
 |**/p:**|Verifycollationcompatibility = (boolescher Wert ' true ')|Gibt an, ob die Kompatibilität von Sortierungen überprüft wird.|
 |**/p:**|Verifydeployment = (boolescher Wert ' true ')|Gibt an, ob vor der Veröffentlichung Überprüfungen ausgeführt werden sollen, durch die die Veröffentlichungsaktion beendet wird, wenn Probleme vorliegen, die eine erfolgreiche Veröffentlichung blockieren könnten. Die Veröffentlichungsaktion könnte beispielsweise beendet werden, wenn in der Zieldatenbank Fremdschlüssel enthalten sind, die im Datenbankprojekt nicht vorhanden sind. Dies verursacht Fehler bei der Veröffentlichung.|
 |

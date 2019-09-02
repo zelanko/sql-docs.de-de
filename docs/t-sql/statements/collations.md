@@ -1,7 +1,7 @@
 ---
 title: COLLATE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 08/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b3b6a7987e4d02640bc1daadfd4cffe77b3354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbf588e3c9922f9b76363db64e9d4afade040b7f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141141"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190388"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -97,8 +97,6 @@ FROM fn_helpcollations();
 - Beim Wiederherstellen oder Anfügen einer Datenbank müssen die Standardsortierung der Datenbank und die Sortierungen aller Spalten und Parameter, die zur Datenbank gehören und den Datentyp **char**, **varchar** oder **text** aufweisen, vom Betriebssystem unterstützt werden.
 
 > [!NOTE]
-> Die von [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwaltete Instanz für die Serversortierung lautet **SQL_Latin1_General_CP1_CI_AS** und kann nicht geändert werden.
->
 > Codepageübersetzungen werden für die Datentypen **char** und **varchar**, nicht jedoch für den **text**-Datentyp unterstützt. Datenverlust während der Codepageübersetzung wird nicht gemeldet.
 >
 > Wenn die angegebene Sortierung oder die Sortierung, die von dem Objekt verwendet wird, auf das verwiesen wird, eine Codepage verwendet, die nicht von Windows unterstützt wird, zeigt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler an.

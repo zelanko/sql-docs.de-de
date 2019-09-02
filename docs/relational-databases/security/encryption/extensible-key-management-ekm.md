@@ -1,7 +1,7 @@
 ---
 title: Erweiterbare Schlüsselverwaltung (EKM) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16daf2968b80b5ca93ba117e850999a89411fb59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049883"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148796"
 ---
 # <a name="extensible-key-management-ekm"></a>Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Funktionen zur Datenverschlüsselung zusammen mit der *erweiterbaren Schlüsselverwaltung* (Extensible Key Management, EKM) bereit. Dabei wird der Anbieter *Microsoft Cryptographic API* (MSCAPI) zur Verschlüsselung und Schlüsselgenerierung verwendet. Verschlüsselungsschlüssel für die Daten- und Schlüsselverschlüsselung werden in temporären Schlüsselcontainern erstellt und müssen vom Anbieter exportiert werden, bevor sie in der Datenbank gespeichert werden. Dieser Ansatz ermöglicht eine Schlüsselverwaltung mit einer Verschlüsselungsschlüsselhierarchie und Schlüsselsicherung durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Da die Einhaltung behördlicher Bestimmungen und der Datenschutz immer wichtiger werden, nutzen Organisationen die Verschlüsselung als Lösung für eine "tiefgreifende Verteidigung". Dieser Lösungsansatz ist jedoch häufig mit den Verwaltungstools für die Datenbankverschlüsselung alleine nicht durchführbar. Hardwarehersteller bieten Produkte an, die die Schlüsselverwaltung in Unternehmen mittels *Hardwaresicherheitsmodulen* (HSM) umsetzen. HSM-Geräte speichern die Verschlüsselungsschlüssel auf Hardware- oder Softwaremodulen. Dies ist eine sicherere Lösung, da die Verschlüsselungsschlüssel von den Verschlüsselungsdaten getrennt werden.  

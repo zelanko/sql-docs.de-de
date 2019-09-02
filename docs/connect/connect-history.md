@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05936a9555cacfc88c9219e19bc57772109ed047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957510"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154183"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Treiber Verlauf für Microsoft SQL Server
 
@@ -57,7 +57,7 @@ Die Microsoft-Treiber für PHP für SQL Server werden in 2009 als Open-Source-Pr
 
 ### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>Microsoft-Treiber für Node. js für SQL Server
 
-Mit dem Microsoft-Treiber für Node. js für SQL Server können Node. js-Anwendungen unter Microsoft Windows und Microsoft Windows Azure auf Microsoft SQL Server und Microsoft Windows Azure SQL-Datenbank zugreifen. Der Schwerpunkt des Entwicklungsaufwands liegt nicht mehr auf diesem Treiber. Es wird nicht empfohlen, neue Anwendungen zu erstellen, indem Sie den Microsoft-Treiber für Node. js für SQL Server verwenden.
+Mit dem Microsoft-Treiber für Node. js für SQL Server können Node. js-Anwendungen in Microsoft Windows und Microsoft Azure auf Microsoft SQL Server und Microsoft Azure SQL-Datenbank zugreifen. Der Schwerpunkt des Entwicklungsaufwands liegt nicht mehr auf diesem Treiber. Es wird nicht empfohlen, neue Anwendungen zu erstellen, indem Sie den Microsoft-Treiber für Node. js für SQL Server verwenden.
 
 Weitere Informationen zum Microsoft-Treiber für Node. js für SQL Server finden Sie unter [WindowsAzure/Node-SQLServer](https://github.com/Azure/node-sqlserver).
 

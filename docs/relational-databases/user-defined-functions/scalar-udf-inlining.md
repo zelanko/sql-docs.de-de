@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: fc60a102a56aa5cb8c749db93290d20ec4b7f30e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126252"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030338"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -123,7 +123,7 @@ Der Ausführungsplan für diese Abfrage in SQL Server 2017 (Kompatibilitätsgrad
 
 ![Abfrageplan ohne Inlining](./media/query-plan-without-udf-inlining.png)
 
-Der Plan zeigt, dass SQL Server in diesem Fall eine einfache Strategie übernimmt: Für jedes Tupel in der `CUSTOMER`-Tabelle werden die benutzerdefinierte Funktion aufgerufen und die Ergebnisse ausgegeben. Diese Strategie ist nicht effizient. Durch Inlining werden solche benutzerdefinierten Funktionen in gleichwertige skalare Unterabfragen transformiert, die die benutzerdefinierte Funktion in der aufrufenden Abfrage ersetzen.
+Der Plan zeigt, dass SQL Server in diesem Fall eine einfache Strategie übernimmt: Für jedes Tupel in der `CUSTOMER`-Tabelle werden die benutzerdefinierte Funktion aufgerufen und die Ergebnisse ausgegeben. Diese Strategie ist jedoch zu einfach und nicht effizient. Durch Inlining werden solche benutzerdefinierten Funktionen in gleichwertige skalare Unterabfragen transformiert, die die benutzerdefinierte Funktion in der aufrufenden Abfrage ersetzen.
 
 Der Plan mit Inlining der benutzerdefinierten Funktion sieht für die gleiche Abfrage folgendermaßen aus.
 

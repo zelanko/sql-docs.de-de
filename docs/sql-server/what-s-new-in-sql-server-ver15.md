@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903639"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026240"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -91,7 +91,7 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Unterstützung der UTF-8-Zeichencodierung |Unterstützung von UTF-8-Zeichen für die Import- und Exportcodierung sowie für die Sortierung von Zeichenfolgendaten auf Datenbank- oder Spaltenebene. Damit können Anwendungen auf globale Ebene ausgeweitet werden, für die globale mehrsprachige Datenbankanwendungen und -dienste bereitgestellt werden müssen, um die Kundenanforderungen und spezifischen Marktbedingungen zu erfüllen. Siehe [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate bietet UTF-8-Unterstützung für externe PolyBase-Tabellen und „Always Encrypted“.|
+|Unterstützung der UTF-8-Zeichencodierung |Unterstützung von UTF-8-Zeichen für die Import- und Exportcodierung sowie für die Sortierung von Zeichenfolgendaten auf Datenbank- oder Spaltenebene. Damit können Anwendungen auf globale Ebene ausgeweitet werden, für die globale mehrsprachige Datenbankanwendungen und -dienste bereitgestellt werden müssen, um die Kundenanforderungen und spezifischen Marktbedingungen zu erfüllen. Siehe [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Release Candidate bietet UTF-8-Unterstützung für externe PolyBase-Tabellen und für Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -138,7 +138,7 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-| Neue SRIDs (Spatial Reference Identifiers) |Das [australische GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) stellt robustere und genauere Datumsangaben bereit, die stärker an GPS-Systemen ausgerichtet sind. Die neuen SRIDs lauten:<br/><br/> 7843: geografische 2D-Darstellung<br/> 7844: geografische 3D-Darstellung <br/><br/>Die Ansicht von [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) enthält die Definitionen der neuen SRIDs. |
+| Neue SRIDs (Spatial Reference Identifiers) |Das [australische GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) stellt robustere und genauere Datumsangaben bereit, die stärker an GPS-Systemen ausgerichtet sind. Die neuen SRIDs sind:<br/><br/> 7843: geografische 2D-Darstellung<br/> 7844: geografische 3D-Darstellung <br/><br/>Die Ansicht von [sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) enthält die Definitionen der neuen SRIDs. |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance"></a>Leistung
@@ -147,6 +147,7 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |:---|:---|
 |Verbesserte Wiederherstellung von Datenbanken | Aktivieren der verbesserten Wiederherstellung von Datenbanken pro Datenbank. Siehe [Verbesserte Wiederherstellung von Datenbanken](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).|
 |Erzwingen von schnellen Vorwärts- und statischen Cursorn | Durch den Abfragespeicherplan erzwungene Unterstützung für schnelle Vorwärts- und statische Cursor Siehe [Erzwingen eines Plans für schnelle Vorwärts- und statische Cursor](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23).|
+|Ressourcengovernance| Der Datentyp des konfigurierbaren Werts für die Option `REQUEST_MAX_MEMORY_GRANT_PERCENT` von `CREATE WORKLOAD GROUP` und `ALTER WORKLOAD GROUP` wurde geändert und entspricht nun nicht mehr einem Integer, sondern einer Gleitkommazahl. Dadurch können Speichergrößen präziser festgelegt werden. Weitere Informationen finden Sie unter [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) und [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Weniger Neukompilierungen für Workloads| Verbessert die Verwendung temporärer Tabellen über mehrere Bereiche hinweg. Siehe [Weniger Neukompilierungen für Workloads](../relational-databases/tables/tables.md#ctp23). |
 |Skalierbarkeit indirekter Prüfpunkte |Siehe [Verbesserte Skalierbarkeit indirekter Prüfpunkte](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
 |Speicheroptimierte `tempdb`-Metadaten| Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../relational-databases/in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte `tempdb`-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für `tempdb`-intensive Arbeitsauslastungen ergibt. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Siehe [Speicheroptimierte `tempdb`-Metadaten](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
@@ -195,14 +196,6 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 | Unterstützung von Change Data Capture (CDC) | Change Data Capture (CDC) wird jetzt unter Linux für SQL Server 2019 unterstützt. |
 | &nbsp; | &nbsp; |
 
-### <a name="setup"></a>Einrichten
-
-|Neue Funktion oder Update | Details |
-|:---|:---|
-|Neue Optionen für die Arbeitsspeichereinrichtung | Legt die Serverkonfigurationseinstellungen *Min. Serverarbeitsspeicher (MB)* und *Max. Serverarbeitsspeicher (MB)* während der Installation fest. Weitere Informationen finden Sie unter [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) in den Abschnitten zu den Parametern `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` und `SQLMAXMEMORY`. Der vorgeschlagene Wert entspricht den Richtlinien für die Arbeitsspeicherkonfiguration in [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).|
-|Neue Optionen für die Nebenläufigkeitseinrichtung | Legt die Serverkonfigurationsoption *Max. Grad an Parallelität* während der Installation fest. Weitere Informationen finden Sie unter [Installieren von SQL Server von der Eingabeaufforderung](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install) im Abschnitt zum `SQLMAXDOP`-Parameter. Der Standardwert entspricht den Richtlinien für die maximale Nebenläufigkeit in [Konfigurieren der Serverkonfigurationsoption „Max. Grad an Parallelität“](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).|
-| &nbsp; | &nbsp; |
-
 ## <a id="ml"></a>SQL Server-Machine Learning-Dienste
 
 |Neue Funktion oder Update | Details |
@@ -247,7 +240,7 @@ Außerdem wurden die folgenden Funktionen für [!INCLUDE[sql-server-2019](../inc
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Versionshinweise zu [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md)
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Versionshinweise](sql-server-ver15-release-notes.md)
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: Technical white paper (technisches Whitepaper)](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Veröffentlicht im September 2018. Gilt für Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 für Windows-, Linux- und Docker-Container.
 

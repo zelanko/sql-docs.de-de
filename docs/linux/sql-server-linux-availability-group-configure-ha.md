@@ -5,17 +5,17 @@ description: Erfahren Sie mehr über das Erstellen einer SQL Server-Always On-Ve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027255"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030308"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Konfigurieren von SQL Server-Always On-Verfügbarkeitsgruppen für Hochverfügbarkeit unter Linux
 
@@ -135,7 +135,7 @@ Führen Sie **nur eines** der folgenden Skripte aus:
 - Erstellen einer Verfügbarkeitsgruppe mit zwei synchronen Replikaten und einem Konfigurationsreplikat:
 
    >[!IMPORTANT]
-   >Mit dieser Architektur kann jede SQL Server-Edition das dritte Replikat hosten. Das dritte Replikat kann beispielsweise auf SQL Server Enterprise Edition gehostet werden. In Enterprise Edition ist `WITNESS` der einzige gültige Endpunkttyp. 
+   >Mit dieser Architektur kann jede SQL Server-Edition das dritte Replikat hosten. Das dritte Replikat kann beispielsweise auf SQL Server Express Edition gehostet werden. Unter Express Edition ist `WITNESS` der einzige gültige Endpunkttyp. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ Sie können eine Verfügbarkeitsgruppe auch mit `CLUSTER_TYPE=EXTERNAL` mithilfe
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Verknüpfen sekundärer Replikate mit der Verfügbarkeitsgruppe
 
-Der Pacemaker-Benutzer benötigt für die Verfügbarkeitsgruppe auf allen Replikaten Berechtigungen für `ALTER`, `CONTROL` und `VIEW DEFINITION`. Führen Sie zum Erteilen von Berechtigungen das folgende Transact-SQL-Skript aus, nachdem die Verfügbarkeitsgruppe auf dem primären und jedem sekundären Replikat erstellt wurde, sobald diese zur Verfügbarkeitsgruppe hinzugefügt wurden. Ersetzen Sie vor der Ausführung des Skripts `<pacemakerLogin>` durch den Namen des Pacemaker-Benutzerkontos.
+Der Pacemaker-Benutzer benötigt für die Verfügbarkeitsgruppe auf allen Replikaten Berechtigungen für `ALTER`, `CONTROL` und `VIEW DEFINITION`. Führen Sie zum Erteilen von Berechtigungen das folgende Transact-SQL-Skript aus, nachdem die Verfügbarkeitsgruppe auf dem primären und jedem sekundären Replikat erstellt wurde, sobald diese zur Verfügbarkeitsgruppe hinzugefügt wurden. Ersetzen Sie vor der Ausführung des Skripts `<pacemakerLogin>` durch den Namen des Pacemaker-Benutzerkontos. Wenn Sie nicht über eine Pacemaker-Anmeldung verfügen, [erstellen Sie einen SQL Server-Anmeldung für Pacemaker](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 Das folgende Transact-SQL-Skript verknüpft eine SQL Server-Instanz mit einer Verfügbarkeitsgruppe namens `ag1`. Aktualisieren Sie das Skript für Ihre Umgebung. Führen Sie auf jeder SQL Server-Instanz, die ein sekundäres Replikat hostet, das folgende Transact-SQL-Skript aus, um die Verfügbarkeitsgruppe zu verknüpfen.
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
@@ -226,8 +226,8 @@ Wenn Sie die Schritte in diesem Dokument befolgt haben, verfügen Sie über eine
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des Red Hat Enterprise Linux-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-rhel.md)
+[Konfigurieren des Red Hat Enterprise Linux-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des SUSE Linux Enterprise Server-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-sles.md)
+[Konfigurieren des SUSE Linux Enterprise Server-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen](sql-server-linux-availability-group-cluster-sles.md)
 
-[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des Ubuntu-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Konfigurieren des Ubuntu-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen](sql-server-linux-availability-group-cluster-ubuntu.md)

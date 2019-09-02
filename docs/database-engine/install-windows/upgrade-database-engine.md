@@ -14,27 +14,33 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: facdfe832b9bd7889d699f8c17f6397ba5d3dd4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cff2727815c5cd6cada3d2111e0aada4e722f800
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934833"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122962"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   Die Artikel in diesem Abschnitt unterstützen Sie dabei, ein Upgrade der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durchzuführen.  
   
-1.  [Wählen einer Upgrademethode für die Datenbank-Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Vor Beginn eines Upgrades sollten Sie die verschiedenen Upgrademethoden kennen. Dieser Artikel beschreibt die Upgrademethoden und die jeweils zugehörigen Schritte.  
+1.  [Auswählen einer Upgrademethode für die Datenbank-Engine:](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) Bevor Sie ein Upgrade durchführen, sollten Sie die verschiedenen Upgrademethoden kennen. Dieser Artikel beschreibt die Upgrademethoden und die jeweils zugehörigen Schritte.  
   
-2.  [Planen und Testen des Upgradeplans für die Datenbank-Engine](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Nach dem Überprüfen der Upgrademethoden können Sie die entsprechende Upgrademethode für Ihre Umgebung entwickeln und vor dem Upgrade der vorhandenen Umgebung testen. Dieser Artikel beschreibt das Entwickeln und Testen eines Upgradeplans.  
+2.  [Planen und Testen des Upgradeplans für die Datenbank-Engine:](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) Nachdem Sie sich einen Überblick über die Upgrademethoden verschafft haben, können Sie eine geeignete Upgrademethode für Ihre Umgebung entwickeln und vor dem Upgrade der vorhandenen Umgebung testen. Dieser Artikel beschreibt das Entwickeln und Testen eines Upgradeplans.  
   
-3.  [Abschließen des Datenbank-Engine-Upgrades](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) Nach dem Upgrade der Datenbanken auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] müssen Sie weitere Schritte ausführen, z.B. das Durchführen einer neuen Sicherung, die Aktivierung neuer Funktionen und das erneute Auffüllen der Volltextkataloge. Diese Schritte werden in diesem Artikel erläutert.  
+3.  [Abschließen des Datenbank-Engine-Upgrades:](../../database-engine/install-windows/complete-the-database-engine-upgrade.md) Nachdem die Datenbank-Engine auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert und die Datenbanken online gestellt wurden, sind noch weitere Schritte erforderlich. Beispielsweise müssen Sie eine neue Sicherung anfertigen, die Datenbankfunktionen so aktualisieren, dass neue Features unterstützt werden, und die Volltextkataloge neu auffüllen. Diese Schritte werden in diesem Artikel erläutert.  
   
-4.  [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Einer der Schritte nach dem Upgrade der Datenbanken auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ist das Aktivieren neuer Funktionen durch Ändern des Datenbankkompatibilitätsmodus und danach das Verwenden des Abfragespeichers zum Überwachen der Leistung. Dieser Artikel erläutert diesen Prozess und stellt einen empfohlenen Workflow bereit.  
-  
-5.  [Take Advantage of New SQL Server Features (Nutzen Sie die Vorteile der neuen Features von SQL Server)](https://www.microsoft.com/sql-server/sql-server-2017) Schließlich, nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie die speziellen neuen Erweiterungen der Datenbank-Engine nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
+4.  Durchführen eines Upgrades für den [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**gilt für:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]): Wenn Ihre Datenbanken online sind und mit der neuen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verwendet werden, müssen Sie möglicherweise für den Funktionsmodus der Datenbanken ein Upgrade durchführen, um neue Features zu aktivieren. Dazu ändern Sie den Datenbank-Kompatibilitätsgrad. Dieser Vorgang kann manuell oder mithilfe des Abfrageoptimierungs-Assistenten durchgeführt werden. 
+
+    - [Ändern des Datenbank-Kompatibilitätsmodus und Verwenden des Abfragespeichers:](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md) Nachdem Sie den Datenbank-Kompatibilitätsgrad manuell geändert haben, verwenden Sie den Abfragespeicher, um die Leistung zu überwachen und mögliche Regressionen zu ermitteln. In diesem Artikel werden die empfohlenen Schritte und der Workflow beschrieben.  
+
+    - [Ändern des Datenbank-Kompatibilitätsmodus mithilfe des Abfrageoptimierungs-Assistenten:](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) Wenn Sie die Änderungen nicht manuell vornehmen möchten, können Sie den **Abfrageoptimierungs-Assistenten** verwenden, der Sie durch die empfohlenen Schritte zur Änderung des Datenbank-Kompatibilitätsgrads führt. In diesem Artikel wird dieser Vorgang erläutert. Außerdem werden Anweisungen für den Workflow des Abfrageoptimierungs-Assistenten bereitgestellt.  
+
+    Weitere Informationen zu neuen Features und verbesserten Verhalten, die nach dem Ändern des Datenbank-Kompatibilitätsgrads verfügbar sind, finden Sie unter [Unterschiede zwischen Kompatibilitätsgraden](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-stored-procedures).
+
+5.  [Nutzen Sie die Vorteile der neuen Features von SQL Server](https://www.microsoft.com/sql-server/sql-server-2017). Nachdem Sie die vorherigen Schritte abgeschlossen haben, können Sie abschließend einige der neuen Verbesserungen der Datenbank-Engine nutzen. Dieser Artikel schlägt einige dieser Erweiterungen vor und stellt Links zu weiteren Informationen bereit.  
   
   

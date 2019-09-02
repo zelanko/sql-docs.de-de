@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136651"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110270"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  Wenn es sich bei dem Standardwert um eine Zeichenfolge handelt, die eingebettete Leerzeichen oder Satzzeichen enthält oder mit einer Zahl beginnt (z. B. 6xxx), muss der Wert in einfache, gerade Anführungszeichen eingeschlossen werden.  
+
+> [!NOTE] 
+> Standardparameter werden in Azure SQL Data Warehouse oder Parallel Data Warehouse nicht unterstützt. 
   
  Wenn kein entsprechender Wert als Standardwert für den Parameter angegeben werden kann, geben Sie NULL als Standardwert an. Es empfiehlt sich, die Prozedur eine benutzerdefinierte Meldung zurückgeben zu lassen, wenn sie ohne Wertangabe für den Parameter ausgeführt wird.  
   

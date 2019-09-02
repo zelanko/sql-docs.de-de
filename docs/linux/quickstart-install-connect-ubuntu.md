@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e21761c221ec83770be7c9aa19f8a4ec971617e2
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910464"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030316"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -47,6 +47,9 @@ Um Ubuntu 16.04 auf Ihrem eigenen Computer zu installieren, wechseln Sie zu [htt
 > Zurzeit wird das [Windows-Subsystem für Linux](https://msdn.microsoft.com/commandline/wsl/about) für Windows 10 als Installationsziel nicht unterstützt.
 
 Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Server für Linux](sql-server-linux-setup.md#system).
+
+> [!NOTE]
+> Ubuntu 18.04 wird noch nicht offiziell unterstützt. SQL Server kann aber bereits ausgeführt werden, wenn [Änderungen](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/) vorgenommen werden.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
