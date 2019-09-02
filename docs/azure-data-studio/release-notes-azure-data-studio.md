@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553106"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059267"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553106"
 | Verbesserungen an Notebooks wurden vorgenommen. | &bull; &nbsp; Hinzufügen von Code- oder Textzelle in Zeilen <br/>&bull; &nbsp; Jetzt können Sie mit der rechten Maustaste auf SQL-Ergebnisraster klicken, um das Ergebnis als CSV- oder JSON-Datei etc. zu speichern. <br/> &bull; &nbsp; Verbesserung der Notebookladeleistung zum schnelleren Laden von JSON-Code <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed). |
 | Neue Features für SQL Server 2019 werden unterstützt. |  Mit diesem Release werden zusätzliche Features für Big-Data-Cluster in SQL Server 2019 unterstützt: <br/> &bull; &nbsp; Reduzierung der Zeit zum Laden von Tabellen- und Spalteninformationen auf der Objektzuordnungsseite. <br/> &bull; &nbsp; Es wurde ein Fehler in Verbindung mit dem Laden vorhandener datenbankweit gültiger Anmeldeinformationen auf der Verbindungsdetailsseite behoben. <br/> &bull; &nbsp; Erweiterte standardmäßige Stichprobengröße, die für die PROSE-Analyse verwendet wird. | 
 | Die DacPac-Erweiterung unterstützt jetzt AAD. | 
-| Das Mai-Release von Visual Studio Code (Merge 1.37) ist verfügbar. | Weitere Informationen finden Sie im [Artikel mit den aktuellen Verbesserungen](https://code.visualstudio.com/updates/v1_37). |
+| Das Juli-Release von Visual Studio Code (Merge 1.37) ist verfügbar. | Weitere Informationen finden Sie im [Artikel mit den aktuellen Verbesserungen](https://code.visualstudio.com/updates/v1_37). |
 | Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553106"
 | Verbesserungen am Schemavergleich wurden vorgenommen. | &bull; &nbsp; Die Optionen „Ausschließen“ und „Einschließen“ wurden hinzugefügt. <br/>&bull; &nbsp; „Skript generieren“ öffnet ein Skript nach dessen Erstellung. <br/>&bull; &nbsp; Doppelte Scrollleisten wurden entfernt.  <br/>&bull; &nbsp; Verbesserungen an der Formatierung und am Layout wurden vorgenommen. <br/>&bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste aller Änderungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed).|
 | Der Abschnitt „Meldungen“ wurde auf eine separate Registerkarte verschoben. | Wenn Benutzer SQL-Abfragen ausführten, befanden sich die Ergebnisse und Meldungen bisher auf StackPanel-Elementen. Nun sind sie ebenso wie in SSMS auf eigenständigen Registerkarten in einem Panel aufgeführt. |
 | Verbesserungen an SQL-Notebooks wurden vorgenommen. | &bull; &nbsp; Benutzer können nun eigene Installationen von Python 3 oder Anaconda in Notebooks nutzen. <br/>&bull; &nbsp; Mehrere Stabilitätsprobleme und letzte Fehler wurden behoben. <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22).|
-| Das Mai-Release von Visual Studio Code (Merge 1.34) ist verfügbar. | Weitere Informationen finden Sie im [Artikel mit den aktuellen Verbesserungen](https://code.visualstudio.com/updates/v1_34). |
+| Das April-Release von Visual Studio Code (Merge 1.34) ist verfügbar. | Weitere Informationen finden Sie im [Artikel mit den aktuellen Verbesserungen](https://code.visualstudio.com/updates/v1_34). |
 | Fehler und Issues wurden behoben. | Weitere Informationen finden Sie in der [Liste der Fehler und Issues auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
 
