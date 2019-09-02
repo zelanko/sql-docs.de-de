@@ -10,14 +10,14 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153744"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175424"
 ---
-# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lektion 8: Wiederherstellen einer Datenbank auf Azure Storage
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lektion 8: Wiederherstellen einer Datenbank in Azure Storage
   In dieser Lektion erfahren Sie, wie Sie eine Sicherungsdatei lokal erstellen und anschließend in Azure Storage wiederherstellen. Beachten Sie, dass Sie Ihre Datenbank entweder lokal oder auf einem virtuellen Computer in Azure haben können. Für diese Lektion müssen Sie Lektion 4, 5, 6 und 7 nicht abschließen.  
   
  In dieser Lektion wird davon ausgegangen, dass Sie bereits die folgenden Schritte abgeschlossen haben:  
