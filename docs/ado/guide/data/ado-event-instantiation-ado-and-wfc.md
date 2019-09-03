@@ -1,5 +1,5 @@
 ---
-title: 'ADO-Ereignisinstanziierung: ADO und WFC | Microsoft-Dokumentation'
+title: 'ADO-Ereignisinstanziierung: ADO und wfc | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e83ffa37af2a6e33cad2645105b0df034f59d9f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67926183"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212339"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO-Ereignisinstanziierung: ADO und WFC
-ADO für die Windows Foundation Classes (ADO/WFC) baut auf das ADO-Ereignismodell und stellt eine vereinfachte Application programming Interface. Im allgemeinen ADO/WFC-ADO-Ereignisse abfängt konsolidiert die Ereignisparameter in einer einzelnen Event-Klasse und ruft dann den Ereignishandler.  
+ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell auf und stellt eine vereinfachte Anwendungsprogrammierschnittstelle dar. Im allgemeinen fängt ADO/WFC ADO-Ereignisse ab, konsolidiert die Ereignis Parameter in einer einzelnen Ereignisklasse und ruft dann Ihren Ereignishandler auf.  
   
-### <a name="to-use-ado-events-in-adowfc"></a>Verwenden von ADO-Ereignissen in ADO/WFC  
+### <a name="to-use-ado-events-in-adowfc"></a>So verwenden Sie ADO-Ereignisse in ADO/WFC  
   
-1.  Definieren Sie einen eigenen Ereignishandler, um ein Ereignis zu verarbeiten. Angenommen, Sie verarbeiten möchten die **ConnectComplete** Ereignis in der **ConnectionEvent** Familie, Sie können diesen Code:  
+1.  Definieren Sie einen eigenen Ereignishandler, um ein Ereignis zu verarbeiten. Wenn Sie z. b. das **ConnectComplete** -Ereignis in der **ConnectionEvent** -Familie verarbeiten möchten, können Sie diesen Code verwenden:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
@@ -31,38 +31,38 @@ ADO für die Windows Foundation Classes (ADO/WFC) baut auf das ADO-Ereignismodel
     }  
     ```  
   
-2.  Definieren Sie eine Handlerobjekt, um Ihren Ereignishandler darzustellen. Das Handlerobjekt muss der Datentyp **ConnectEventHandler** für ein Ereignis vom Typ **ConnectionEvent**, Datentyp oder **RecordsetEventHandler** für ein Ereignis vom Typ  **RecordsetEvent**. Z. B. den folgenden code für Ihre **ConnectComplete** -Ereignishandler:  
+2.  Definieren Sie ein Handlerobjekt, das Ihren Ereignishandler darstellt. Das Handlerobjekt muss vom Datentyp **ConnectEventHandler** für ein Ereignis des Typs **ConnectionEvent**oder der Datentyp **RecordsetEventHandler** für ein Ereignis vom Typ **RecordsetEvent**sein. Beispielsweise können Sie Folgendes für Ihren **ConnectComplete** -Ereignishandler programmieren:  
   
     ```  
     ConnectionEventHandler handler =   
         new ConnectionEventHandler(this, "onConnectComplete");  
     ```  
   
-     Das erste Argument von der **ConnectionEventHandler** Konstruktor ist ein Verweis auf die Klasse, die den Ereignishandler mit dem Namen in das zweite Argument enthält.  
+     Das erste Argument des **ConnectionEventHandler** -Konstruktors ist ein Verweis auf die-Klasse, die den Ereignishandler mit dem Namen im zweiten Argument enthält.  
   
-3.  Fügen Sie Ihrem Ereignishandler zu einer Liste von Handlern, die festgelegt werden, um einen bestimmten Typ von Ereignis zu verarbeiten. Verwenden Sie die Methode mit einem Namen, z. B. **AddOn** *EventName*(*Handler*).  
+3.  Fügen Sie den Ereignishandler einer Liste von Handlern hinzu, die für die Verarbeitung eines bestimmten Ereignis Typs vorgesehen sind. Verwenden Sie die-Methode mit einem Namen wie z. b. " **addOn**_EventName_(*Handler*)".  
   
-4.  ADO/WFC-implementiert intern die ADO-Ereignishandler. Aus diesem Grund ein Ereignis ausgelöst wurde, indem eine **Verbindung** oder **Recordset** Vorgang von einem ADO/WFC-Ereignishandler abgefangen wird.  
+4.  ADO/WFC implementiert intern alle ADO-Ereignishandler. Daher wird ein Ereignis, das durch einen **Verbindungs** -oder **recordsetvorgang** verursacht wurde, von einem ADO/WFC-Ereignishandler abgefangen.  
   
-     Der ADO/WFC-Ereignishandler übergibt ADO **ConnectionEvent** Parameter in einer Instanz von der ADO/WFC **ConnectionEvent** Klassen- oder ADO **RecordsetEvent** Parameter in einer Instanz von der ADO/WFC **RecordsetEvent** Klasse. Diese Klassen ADO/WFC-konsolidieren, die ADO-Ereignis-Parameter; d. h., jede ADO/WFC-Klasse enthält einen Datenmember für jeden eindeutigen Parameter im alle ADO.NET **ConnectionEvent** oder **RecordsetEvent** Methoden.  
+     Der ADO/WFC-Ereignishandler übergibt ADO **ConnectionEvent** -Parameter in einer Instanz der ADO/WFC **ConnectionEvent** -Klasse oder ADO **recordstitevent** -Parameter in einer Instanz der ADO/WFC **recordmentevent** -Klasse. Diese ADO/WFC-Klassen konsolidieren die ADO-Ereignis Parameter. Das heißt, jede ADO/WFC-Klasse enthält einen Datenmember für jeden eindeutigen Parameter in allen ADO **ConnectionEvent** -oder **recordmentevent** -Methoden.  
   
-5.  ADO/WFC-ruft dann den Ereignishandler mit dem ADO/WFC-Ereignisobjekt. Angenommen, Ihre **OnConnectComplete** Handler hat eine Signatur wie folgt:  
+5.  ADO/WFC ruft dann Ihren Ereignishandler mit dem ADO/WFC-Ereignis Objekt auf. Der **onConnectComplete** -Handler hat z. b. eine Signatur wie die folgende:  
   
     ```  
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     Das erste Argument ist der Typ des Objekts, das das Ereignis gesendet ([Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)), und das zweite Argument ist das Ereignisobjekt ADO/WFC-(**ConnectionEvent** oder **RecordsetEvent**).  
+     Das erste Argument ist der Typ des Objekts, das das Ereignis gesendet hat ([Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) oder [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)), und das zweite Argument ist das ADO/WFC-Ereignis Objekt (**ConnectionEvent** oder **RecordsetEvent**).  
   
-     Die Signatur der Ereignishandler ist einfacher als ein ADO-Ereignis. Allerdings müssen Sie dennoch wissen das ADO-Ereignismodell wissen, welche Parameter für ein Ereignis gelten und wie Sie reagieren.  
+     Die Signatur des Ereignis Handlers ist einfacher als ein ADO-Ereignis. Sie müssen jedoch weiterhin das ADO-Ereignis Modell verstehen, um zu wissen, welche Parameter für ein Ereignis gelten und wie Sie reagieren.  
   
-6.  Geben Sie an der ADO/WFC-Handler für das ADO-Ereignis über den Ereignishandler zurück. ADO/WFC-kopiert relevante ADO/WFC-Event-Datenmember zurück auf die ADO-Ereignis-Parameter und gibt dann der ADO-Ereignishandler zurück.  
+6.  Kehren Sie vom Ereignishandler zum ADO/WFC-Handler für das ADO-Ereignis zurück. ADO/WFC kopiert relevante ADO/WFC-ereignisdatenmember zurück in die ADO-Ereignis Parameter, und dann gibt der ADO-Ereignishandler zurück.  
   
-7.  Wenn Sie fertig sind Verarbeitung, entfernen Sie den Handler aus der Liste der ADO/WFC-Ereignishandler. Verwenden Sie die Methode mit einem Namen, z. B. **RemoveOn** *EventName*(*Handler*).  
+7.  Wenn die Verarbeitung abgeschlossen ist, entfernen Sie den Handler aus der Liste der ADO/WFC-Ereignishandler. Verwenden Sie die-Methode mit einem Namen wie **RemoveOn**_EventName_(*Handler*).  
   
 ## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO / WFC-Syntaxindex](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Ereignisparameter](../../../ado/guide/data/event-parameters.md)   
- [Zusammenwirken der Ereignishandler](../../../ado/guide/data/how-event-handlers-work-together.md)   
+ [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-WFC-Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
+ [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
+ [Zusammenarbeiten von Ereignis Handlern](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)

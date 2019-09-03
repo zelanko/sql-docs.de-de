@@ -21,39 +21,39 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c1105579dc5da82a66fb101e559e1fb96feac1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1ff346abc41ee4589a8d0b2193b167fb2cf24e0
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138628"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212375"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR-Integration: Benutzerdefinierte Attribute für CLR-Routinen
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Die aufgeführten Attribute können angewendet werden, common Language Runtime (CLR)-Routinen, benutzerdefinierte Typen und benutzerdefinierte Aggregate, die in registriert sind [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Wenn das Attribut nicht angewendet wird, nimmt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Standardwert an. Die aufgelisteten Attribute sind definiert, der **Microsoft.SqlServer.Server** Namespace.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  Die aufgelisteten Attribute können auf Common Language Runtime (CLR)-Routinen, benutzerdefinierte Typen und benutzerdefinierte Aggregate angewendet werden, die in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]registriert sind. Wenn das Attribut nicht angewendet wird, nimmt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Standardwert an. Die aufgelisteten Attribute werden im **Microsoft. SqlServer. Server** -Namespace definiert.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Das 'SqlUserDefinedAggregate'-Attribut  
- Die **SqlUserDefinedAggregate** Attribut gibt an, dass die Methode als benutzerdefiniertes Aggregat registriert werden soll. Jedem benutzerdefinierten Aggregat muss dieses Attribut angefügt werden.  
+ Das **SqlUserDefinedAggregate** -Attribut gibt an, dass die Methode als benutzerdefiniertes Aggregat registriert werden soll. Jedem benutzerdefinierten Aggregat muss dieses Attribut angefügt werden.  
   
  Weitere Informationen finden Sie unter [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
   
 ## <a name="the-sqlfunction-attribute"></a>Das 'SqlFunction'-Attribut  
- Die **SqlFunction** Attribut gibt an, die Methode als eine Funktion mit den entsprechend festgelegten Funktionsattributen registriert werden soll.  
+ Das **SqlFunction** -Attribut gibt an, dass die Methode als Funktion registriert werden soll, wobei die entsprechenden Funktions Attribute festgelegt sind.  
   
- Weitere Informationen finden Sie unter [mit ' SqlFunctionAttribute '](https://go.microsoft.com/fwlink/?LinkId=128019).  
+ Weitere Informationen finden Sie unter [SqlFunctionAttribute](https://go.microsoft.com/fwlink/?LinkId=128019).  
   
 ## <a name="the-sqlfacet-attribute"></a>Das 'SqlFacet'-Attribut  
- Die **' sqlfacet '** Attribut wird verwendet, um Informationen über den Rückgabetyp eines Ausdrucks für den benutzerdefinierten Typ (UDT) zurückgegeben werden sollen.  
+ Das **sqlface-Attribut** wird verwendet, um Informationen zum Rückgabetyp eines benutzerdefinierten Typs (User-Defined Type, UDT)-Ausdruck zurückzugeben.  
   
- Weitere Informationen finden Sie unter [SqlFacetAttribute](https://go.microsoft.com/fwlink/?LinkId=128020).  
+ Weitere Informationen finden Sie unter [sqlfaketattribute](https://go.microsoft.com/fwlink/?LinkId=128020).  
   
 ## <a name="the-sqlprocedure-attribute"></a>Das 'SqlProcedure'-Attribut  
- Die **SqlProcedure** Attribut gibt an, die Methode als eine gespeicherte Prozedur registriert werden soll. Dieses Attribut wird nur von Visual Studio verwendet, um die angegebene Methode automatisch als gespeicherte Prozedur zu registrieren. Sie wird nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet.  
+ Das **SqlProcedure** -Attribut gibt an, dass die Methode als gespeicherte Prozedur registriert werden soll. Dieses Attribut wird nur von Visual Studio verwendet, um die angegebene Methode automatisch als gespeicherte Prozedur zu registrieren. Sie wird nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet.  
   
  Weitere Informationen finden Sie unter [SqlProcedureAttribute](https://go.microsoft.com/fwlink/?LinkId=128021).  
   
 ## <a name="the-sqltrigger-attribute"></a>Das 'SqlTrigger'-Attribut  
- Die **SqlTrigger** Attribut gibt an, die Methode als Trigger registriert werden soll.  
+ Das **sqllock** -Attribut gibt an, dass die Methode als ein-Fehler registriert werden soll.  
   
  Weitere Informationen finden Sie unter [SqlTriggerContext](https://go.microsoft.com/fwlink/?LinkId=128022) und [SqlTriggerAttribute](https://go.microsoft.com/fwlink/?LinkId=203898).  
   
@@ -63,15 +63,15 @@ ms.locfileid: "68138628"
  Weitere Informationen finden Sie unter [SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024).  
   
 ## <a name="the-sqlmethod-attribute"></a>Das 'SqlMethod'-Attribut  
- Die **SqlMethod** -Attribut wird verwendet, um die Verwendung und Datenzugriffseigenschaften einer Methode oder eine Eigenschaft in einem UDT anzugeben.  
+ Das **SqlMethod** -Attribut wird verwendet, um die Determinismus-und Datenzugriffs Eigenschaften einer Methode oder einer Eigenschaft in einem UDT anzugeben.  
   
  Weitere Informationen finden Sie unter [SqlMethodAttribute](https://go.microsoft.com/fwlink/?LinkId=128025).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Benutzerdefinierte CLR-Aggregate](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)   
  [CLR-benutzerdefinierte Funktionen](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
- [CLR-benutzerdefinierte Typen](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
- [CLR-gespeicherte Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Benutzerdefinierte CLR-Typen](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)   
+ [Gespeicherte CLR-Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [CLR-Trigger](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
   
   

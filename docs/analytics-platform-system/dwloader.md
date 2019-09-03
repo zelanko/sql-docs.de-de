@@ -1,6 +1,6 @@
 ---
-title: Dwloader Command-Line-Ladeprogramm – Parallel Data Warehouse | Microsoft-Dokumentation
-description: Dwloader ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Tabellenzeilen in einem in einer vorhandenen Tabelle lädt.
+title: "\"dwloader-Befehlszeilen Lade Modul-parallele Data Warehouse | Microsoft-Dokumentation"
+description: "\"dwloader ist ein Befehlszeilen Tool für parallele Data Warehouse (PDW), das Tabellenzeilen in einem Massen Vorgang in eine vorhandene Tabelle lädt."
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,45 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 598a244849f843a2b95e6614d4e676a18ba54f61
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961028"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212264"
 ---
-# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Dwloader Command-Line-Ladeprogramm für Parallel Data Warehouse
-**Dwloader** ist ein Befehlszeilentool Parallel Data Warehouse (PDW), die Tabellenzeilen in einem in einer vorhandenen Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle hinzufügen (*append-Modus* oder *Fastappend-Modus*), neue Zeilen angefügt, und Aktualisieren von vorhandenen Zeilen (*Upsert-Modus*), oder löschen Sie alle vorhandene Zeilen vor dem Laden, und klicken Sie dann alle Zeilen in eine leere Tabelle einfügen (*laden Modus*).  
+# <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>"dwloader-Befehlszeilen Lade Modul für parallele Data Warehouse
+**"dwloader** ist ein Befehlszeilen Tool für parallele Data Warehouse (PDW), das Tabellenzeilen in einem Massen Vorgang in eine vorhandene Tabelle lädt. Beim Laden von Zeilen können Sie alle Zeilen am Ende der Tabelle (*Anfügen* -oder *vom fastappend Lademodus-Modus*) hinzufügen, neue Zeilen anfügen und vorhandene Zeilen aktualisieren (*Upsert-Modus*) oder alle vorhandenen Zeilen vor dem Laden löschen und dann alle Zeilen in eine leere Tabelle einfügen. (*Modus neu laden*).  
   
 **Prozess zum Laden von Daten**  
   
-1.  Vorbereiten der Quelldaten an.  
+1.  Bereiten Sie die Quelldaten vor.  
   
-    Verwenden Sie Ihre eigenen ETL-Prozess, um die Daten zu erstellen, die Sie laden möchten. Die Quelldaten müssen das Schema der Zieltabelle entsprechend formatiert sein. Die Quelldaten in eine oder mehrere Textdateien Store, und Kopieren der Dateien in dasselbe Verzeichnis auf dem Server geladen. Informationen über den Server laden können, finden Sie unter [abrufen und Konfigurieren eines Servers werden geladen](acquire-and-configure-loading-server.md)  
+    Verwenden Sie Ihren eigenen ETL-Prozess zum Erstellen der Quelldaten, die Sie laden möchten. Die Quelldaten müssen so formatiert werden, dass Sie dem Schema der Ziel Tabelle entsprechen. Speichern Sie die Quelldaten in einer oder mehreren Textdateien, und kopieren Sie die Textdateien in dasselbe Verzeichnis auf dem Lade Server. Weitere Informationen zum Lade Server finden Sie unter Abrufen [und Konfigurieren eines Lade Servers](acquire-and-configure-loading-server.md) .  
   
-2.  Bereiten Sie die Optionen für das Laden vor.  
+2.  Bereiten Sie die Lade Optionen vor.  
   
-    Entscheiden Sie, welche Optionen für das Laden Sie verwenden möchten. Store Optionen für das Laden in einer Konfigurationsdatei. Kopieren Sie die Konfigurationsdatei in einen lokalen Speicherort auf dem Server geladen. Die **Dwloader** Konfigurationsoptionen werden in diesem Thema beschrieben.  
+    Entscheiden Sie, welche Lade Optionen verwendet werden sollen. Speichert die Lade Optionen in einer Konfigurationsdatei. Kopieren Sie die Konfigurationsdatei an einen lokalen Speicherort auf dem Lade Server. Die **"dwloader** -Konfigurationsoptionen werden in diesem Thema beschrieben.  
   
-3.  Bereiten Sie die Last-Optionen vor.  
+3.  Bereiten Sie die Optionen für den Ladefehler vor.  
   
-    Festlegen, wie **Dwloader** zur Verarbeitung von Zeilen, die nicht geladen werden. Zum Ausführen der Auslastung **Dwloader** lädt zunächst die Daten in eine Stagingtabelle ein, und überträgt die Daten dann an die Zieltabelle. Wie das Ladeprogramm Daten in die Stagingtabelle geladen wurden, überwacht er die Anzahl der Zeilen, die nicht geladen werden. Beispielsweise können Zeilen, die nicht korrekt formatiert sind nicht geladen. Fehlerhafte Zeilen werden in einer Ablehnung-Datei kopiert. Standardmäßig wird die Last nach der ersten Ablehnung abgebrochen, wenn Sie einen anderen Ablehnung Schwellenwert angeben.  
+    Entscheiden Sie, wie **"dwloader** Zeilen verarbeiten soll, die nicht geladen werden können. Zum Ausführen der Last lädt **"dwloader** zuerst die Daten in eine Stagingtabelle und überträgt dann die Daten in die Ziel Tabelle. Wenn das Lade Modul Daten in die Stagingtabelle lädt, wird die Anzahl der Zeilen nachverfolgt, die nicht geladen werden können. Beispielsweise können Zeilen, die nicht ordnungsgemäß formatiert sind, nicht geladen werden. Fehlgeschlagene Zeilen werden in eine Ablehnungs Datei kopiert. Standardmäßig wird die Last nach der ersten Ablehnung abgebrochen, es sei denn, Sie geben einen anderen Ablehnungs Schwellenwert an.  
   
-4.  Installieren Sie **Dwloader**.  
+4.  Installieren von **"dwloader**.  
   
-    Installieren Sie Dwloader auf dem Server geladen, wenn es nicht bereits installiert ist. 
+    Installieren Sie "dwloader auf dem Server, auf dem der Server nicht bereits installiert ist. 
 
 <!-- MISSING LINK
     See [Install dwloader Command-Line Loader &#40;SQL Server PDW&#41;](install-dwloader-command-line-loader-sql-server-pdw.md). 
 --> 
   
-5.  Führen Sie **Dwloader**.  
+5.  Führen Sie **"dwloader**aus.  
   
-    Melden Sie sich an den Server geladen, und führen Sie die ausführbare Datei **dwloader.exe** mit den entsprechenden Befehlszeilenoptionen.  
+    Melden Sie sich beim Lade Server an, und führen Sie die ausführbare Datei " **dwloader. exe** " mit den entsprechenden Befehlszeilenoptionen aus.  
   
-6.  Überprüfen Sie die Ergebnisse aus.  
+6.  Überprüfen Sie die Ergebnisse.  
   
-    Sehen Sie sich die fehlerhaften Zeilen Datei (angegeben mit -R), um festzustellen, ob alle Zeilen konnte nicht geladen. Wenn diese Datei leer ist, werden alle Zeilen erfolgreich geladen. **Dwloader** transaktional ist, also wenn einer fehlschlägt (außer abgelehnten Zeilen) und befinden alle Schritte in ihren ursprünglichen Zustand Rollback ausgeführt werden.  
+    Sie können die Datei mit den fehlgeschlagenen Zeilen (angegeben mit-R) überprüfen, um festzustellen, ob Zeilen nicht geladen werden konnten. Wenn diese Datei leer ist, wurden alle Zeilen erfolgreich geladen. **"dwloader** ist transaktional. Wenn also ein Schritt fehlschlägt (außer abgelehnte Zeilen), werden alle Schritte in den ursprünglichen Zustand zurückgesetzt.  
   
 <!-- 
 ![Topic link icon](media/topic-link.gif "Topic_Link")[Syntax Conventions](syntax-conventions-sql-server-pdw.md)  
@@ -117,25 +117,25 @@ dwloader.exe
   
 ## <a name="arguments"></a>Argumente  
 **-h**  
-Zeigt die einfache Hilfe-Informationen zur Verwendung von des Ladeprogramms. Hilfe wird nur angezeigt, wenn keine anderen Befehlszeilenparametern angegeben werden.  
+Zeigt einfache Hilfe Informationen zur Verwendung des Lade Moduls an. Hilfe wird nur angezeigt, wenn keine anderen Befehlszeilenparameter angegeben sind.  
   
-**-U** *Login_name*  
-Eine gültige SQL Server-authentifizierungsanmeldung mit entsprechenden Berechtigungen, um den Ladevorgang durchzuführen.  
+**-U** *login_name*  
+Eine gültige SQL Server-Authentifizierungs Anmeldung mit den entsprechenden Berechtigungen zum Ausführen der Last.  
   
 **-P** *password*  
-Das Kennwort für eine SQL Server-Authentifizierung *Login_name*.  
+Das Kennwort für eine SQL Server Authentifizierungs *login_name*.  
   
 **-W**  
-Windows-Authentifizierung verwenden. (Keine *Login_name* oder *Kennwort* erforderlich.) 
+Windows-Authentifizierung verwenden. (Weder *login_name* noch *Kennwort* erforderlich.) 
 
 <!-- MISSING LINK
 For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
 -->
   
-**-f** *Parameter_file_name*  
-Verwenden Sie eine Parameterdatei *Parameter_file_name*, anstelle von Befehlszeilenparametern. *Parameter_file_name* darf Befehlszeilenparameter, mit Ausnahme von *User_name* und *Kennwort*. Wenn ein Parameter in der Befehlszeile und in der Parameterdatei angegeben wird, überschreibt der Befehlszeile den File-Parameter.  
+**-f** *parameter_file_name*  
+Verwenden Sie eine Parameterdatei, *parameter_file_name*, anstelle von Befehlszeilen Parametern. *parameter_file_name* kann jeden beliebigen Befehlszeilenparameter außer *user_name* und *Password*enthalten. Wenn ein Parameter in der Befehlszeile und in der Parameterdatei angegeben ist, überschreibt die Befehlszeile den file-Parameter.  
   
-Die Parameterdatei enthält einen Parameter, ohne die **-** Präfix pro Zeile.  
+Die Parameterdatei enthält einen Parameter ohne das **-** Präfix pro Zeile.  
   
 Beispiele:  
   
@@ -143,217 +143,217 @@ Beispiele:
   
 `rv=25`  
   
-* *-S *** Target_appliance*  
-Gibt an, die SQL Server-PDW-Appliance, die die geladenen Daten erhält.  
+**-S** *target_appliance*  
+Gibt die SQL Server PDW Appliance an, die die geladenen Daten empfängt.  
   
-*Infiniband-Verbindungen*, *Target_appliance* als < Appliance-Name > angegeben wird – SQLCTL01. Verbindung mit dem Namen für diese Konfiguration finden Sie unter [InfiniBand-Netzwerkadapter konfigurieren](configure-infiniband-network-adapters.md).  
+*Bei Infiniband-Verbindungen*wird *target_appliance* als < Appliance-Name >-SQLCTL01 angegeben. Informationen zum Konfigurieren dieser benannten Verbindung finden Sie unter [Konfigurieren von InfiniBand-Netzwerkadaptern](configure-infiniband-network-adapters.md).  
   
-Für Ethernet-Verbindungen *Target_appliance* ist die IP-Adresse für den Steuerelement-Knoten-Cluster.  
+Bei Ethernet-Verbindungen ist *target_appliance* die IP-Adresse für den Steuerelement Knoten Cluster.  
   
-Wenn nicht angegeben, wird standardmäßig Dwloader auf den Wert, der bei der Installation Dwloader angegeben wurde. 
+Wenn der Wert nicht angegeben wird, verwendet "dwloader standardmäßig den Wert, der bei der Installation von" dwloader angegeben wurde. 
 
 <!-- MISSING LINK
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *Target_database_name.* [*Schema*]. *Table_name*  
-Der dreiteilige Name für die Zieltabelle.  
+**-T** *target_database_name.* [*Schema*]. *table_name*  
+Der dreiteilige Name der Ziel Tabelle.  
   
-* *-I***source_data_location*  
-Der Speicherort des einen oder mehrere Quelldateien zu laden. Jede Quelldatei muss eine Textdatei oder einer Textdatei, die mit Gzip komprimiert wird. Nur eine Quelldatei kann in jede Gzip-Datei komprimiert werden.  
+**-I** *source_data_location*  
+Der Speicherort für eine oder mehrere zu ladende Quelldateien. Jede Quelldatei muss eine Textdatei oder eine Textdatei sein, die mit gzip komprimiert ist. In jeder GZIP-Datei kann nur eine Quelldatei komprimiert werden.  
   
 So formatieren Sie eine Quelldatei:  
   
--   Die Quelldatei muss in Übereinstimmung mit den Optionen für das Laden formatiert sein.  
+-   Die Quelldatei muss entsprechend den Lade Optionen formatiert werden.  
   
--   Jede Zeile in einer Quelldatei enthält, die Daten für eine Tabellenzeile wird. Die Quelldaten müssen das Schema der Zieltabelle übereinstimmen. Zusätzlich müssen die Spalte Reihenfolge und Datentypen übereinstimmen. Jedes Feld in der Zeile stellt eine Spalte in der Zieltabelle dar.  
+-   Jede Zeile in einer Quelldatei enthält die Daten für eine Tabellenzeile. Die Quelldaten müssen dem Schema der Ziel Tabelle entsprechen. Die Spaltenreihenfolge und die Datentypen müssen ebenfalls Stimmen. Jedes Feld in der Zeile stellt eine Spalte in der Ziel Tabelle dar.  
   
--   Standardmäßig werden die Felder variabler Länge sind und durch ein Trennzeichen getrennt. Um die Trennzeichentyp anzugeben, verwenden Sie die < Variable_length_column_options >-Befehlszeilenoptionen. Um Felder mit fester Länge anzugeben, verwenden Sie die < Fixed_width_column_options >-Befehlszeilenoptionen.  
+-   Standardmäßig sind die Felder variabler Länge und werden durch ein Trennzeichen getrennt. Um den Trenn Zeichentyp anzugeben, verwenden Sie die < variable_length_column_options-> Befehlszeilenoptionen. Um Felder mit fester Länge anzugeben, verwenden Sie die < fixed_width_column_options-> Befehlszeilenoptionen.  
   
-So geben Sie den Quellspeicherort für die Daten an:  
+So geben Sie den Quelldaten Speicherort an  
   
--   Der Quellspeicherort für die Daten kann es sich um einen Netzwerkpfad oder einen lokalen Pfad zu einem Verzeichnis auf dem Server geladen sein.  
+-   Beim Quelldaten Speicherort kann es sich um einen Netzwerkpfad oder einen lokalen Pfad zu einem Verzeichnis auf dem Lade Server handeln.  
   
--   Um alle Dateien in einem Verzeichnis anzugeben, geben Sie in den Verzeichnispfad an, gefolgt von den * Platzhalterzeichen.  Das Ladeprogramm lädt Dateien nicht über alle Unterverzeichnisse, die in den Quellspeicherort für die Daten sind. Das Ladeprogramm-Fehler, wenn ein Verzeichnis in einer Gzip-Datei vorhanden ist.  
+-   Wenn Sie alle Dateien in einem Verzeichnis angeben möchten, geben Sie den Verzeichnispfad ein, gefolgt von dem Platzhalter Zeichen *.  Das Lade Modul lädt keine Dateien aus Unterverzeichnissen, die sich am Quelldaten Speicherort befinden. Das Lade Modul ist fehlerhaft, wenn ein Verzeichnis in einer GZIP-Datei vorhanden ist.  
   
--   Um einige der Dateien in einem Verzeichnis anzugeben, verwenden Sie eine Kombination von Zeichen und die * Platzhalter.  
+-   Um einige der Dateien in einem Verzeichnis anzugeben, verwenden Sie eine Kombination aus Zeichen und dem Platzhalter *.  
   
 So laden Sie mehrere Dateien mit einem Befehl:  
   
--   Alle Dateien müssen im gleichen Verzeichnis vorhanden sind.  
+-   Alle Dateien müssen im gleichen Verzeichnis vorhanden sein.  
   
--   Die Dateien müssen alle Textdateien, alle Gzip-Dateien oder eine Kombination von sowohl Text als auch Gzip-Dateien sein.  
+-   Die Dateien müssen alle Textdateien, alle gzip-Dateien oder eine Kombination aus Text-und gzip-Dateien sein.  
   
--   Keine der Dateien kann es sich um Headerinformationen enthalten.  
+-   Keine der Dateien kann Header Informationen enthalten.  
   
--   Alle Dateien müssen den gleichen Zeichencodierungstyp verwenden. Die -e-Option wird angezeigt.  
+-   Für alle Dateien muss derselbe Zeichen Codierungstyp verwendet werden. Weitere Informationen finden Sie unter der Option-e.  
   
--   Alle Dateien müssen in derselben Tabelle geladen werden.  
+-   Alle Dateien müssen in dieselbe Tabelle geladen werden.  
   
--   Alle Dateien werden verkettet und geladen werden, als ob sie eine Datei, und der abgelehnten Zeilen in eine einzelne Reject-Datei gelangen.  
+-   Alle Dateien werden verkettet und geladen, als ob es sich um eine Datei handelt, und die abgelehnten Zeilen werden in einer einzelnen Ablehnungs Datei angezeigt.  
   
 Beispiele:  
   
--   -i \\\loadserver\loads\daily\\*.gz  
+-   -i \\\loadserver\loads\daily\\*. gz  
   
--   -i \\\loadserver\loads\daily\\*.txt  
+-   -i \\\loadserver\loads\daily\\*. txt  
   
--   -i \\\loadserver\loads\daily\monday.*  
+-   -i \\\loadserver\loads\daily\monday. *  
   
 -   -i \\\loadserver\loads\daily\monday.txt  
   
 -   -i \\\loadserver\loads\daily\\*  
   
-**-R** *Load_failure_file_name*  
-Treten Fehler beim Laden von **Dwloader** speichert die Zeile, die geladen und die Beschreibung des Fehlers die Fehlerinformationen in einer Datei namens Fehler *Load_failure_file_name*. Wenn diese Datei bereits vorhanden ist, wird die Dwloader die vorhandene Datei überschrieben. *Load_failure_file_name* wird erstellt, wenn der erste Fehler auftritt. Wenn alle Zeilen erfolgreich laden *Load_failure_file_name* wird nicht erstellt.  
+**-R** *load_failure_file_name*  
+Wenn Ladefehler auftreten, speichert **"dwloader** die Zeile, die nicht geladen werden konnte, und die Fehlerbeschreibung in einer Datei mit dem Namen *load_failure_file_name*. Wenn diese Datei bereits vorhanden ist, wird die vorhandene Datei von "dwloader überschrieben. *load_failure_file_name* wird erstellt, wenn der erste Fehler auftritt. Wenn alle Zeilen erfolgreich geladen werden, wird *load_failure_file_name* nicht erstellt.  
   
-**-Fh** *Number_header_rows*  
-Die Anzahl der Zeilen (Reihen), um am Anfang des ignorieren *Source_data_file_name*. Die Standardeinstellung ist 0.  
+**-FH** *number_header_rows*  
+Die Anzahl der Zeilen (Zeilen), die am Anfang von *source_data_file_name*ignoriert werden sollen. Die Standardeinstellung ist 0.  
   
 <variable_length_column_options>  
-Die Optionen für eine *Source_data_file_name* , die Zeichen getrennten Spalten mit variabler Länge hat. In der Standardeinstellung *Source_data_file_name* ASCII-Zeichen in Spalten variabler Länge enthält.  
+Die Optionen für ein *source_data_file_name* mit Zeichen getrennten Spalten variabler Länge. Standardmäßig enthält *source_data_file_name* ASCII-Zeichen in Spalten variabler Länge.  
   
-Für ASCII-Dateien werden NULL-Werte dargestellt, durch Trennzeichen nacheinander zu platzieren. Z. B. in eine Pipe getrennte Datei ("|"), ein NULL-Wert wird angegeben, indem "||". In einer durch Trennzeichen getrennte Datei, ein NULL-Wert angegeben ist, von ",". Darüber hinaus die **-E** (--EmptyStringAsNull) Option muss angegeben werden. Weitere Informationen zum -E finden Sie unten.  
+Bei ASCII-Dateien werden Nullen durch das aufeinanderfolgende Platzieren von Trennzeichen dargestellt. Beispielsweise wird in einer durch Trennzeichen getrennten Datei ("|") ein NULL-Wert durch "| |" angegeben. In einer durch Trennzeichen getrennten Datei wird ein NULL-Wert durch ",," angegeben. Außerdem muss die Option **-E** (--emptystringasnull) angegeben werden. Weitere Informationen zu-E finden Sie unten.  
   
-**-e:** *Character_encoding*  
-Gibt einen Typ zeichencodierung für die Daten aus der Datendatei geladen werden. Stehen, ASCII (Standard) "," UTF8 "," UTF16 "oder" UTF16BE, wobei UTF16-Format little-endian und UTF16BE ist big-Endian. Diese Optionen, die Groß-/Kleinschreibung beachtet werden.  
+**-e** *character_encoding*  
+Gibt einen Zeichen Codierungstyp für die Daten an, die aus der Datendatei geladen werden sollen. Bei den Optionen handelt es sich um ASCII (Standard), UTF8, UTF16 oder UTF16BE, wobei UTF16 Little Endian und UTF16BE der Big Endian ist. Diese Optionen Unterscheidung nach Groß-/Kleinschreibung  
   
 **-t** *field_delimiter*  
-Das Trennzeichen für jedes Feld (Spalte) in der Zeile. Das Feldtrennzeichen ist eine oder mehrere dieser ASCII-Escape-Zeichen oder ASCII-hex-Werten.  
+Das Trennzeichen für jedes Feld (Spalte) in der Zeile. Das Feld Trennzeichen ist mindestens ein ASCII-Escapezeichen oder ASCII-Hexadezimalwert.  
   
-|Name|Escapezeichen|Hexadezimale Zeichen|  
+|Name|Escapezeichen|Hex-Zeichen|  
 |--------|--------------------|-----------------|  
 |Registerkarte|\t|0x09|  
-|Wagenrücklauf (CR)|\r|0x0D|  
-|Zeilenvorschubzeichen (LF)|\n|0x0a|  
+|Wagen Rücklauf (CR)|\r|0x0D|  
+|Zeilenvorschub (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
 |Komma|','|0x2c|  
 |Doppeltes Anführungszeichen|\\"|0x22|  
 |Einfaches Anführungszeichen|\\'|0x27|  
   
-Um den senkrechten Strich in der Befehlszeile angeben, müssen Sie ihn in doppelte Anführungszeichen "|". Dies wird vom Befehlszeilenparser zu Fehlinterpretation vermeiden. Andere Zeichen sind einfache Anführungszeichen eingeschlossen.  
+Um das Pipezeichen in der Befehlszeile anzugeben, müssen Sie es mit doppelten Anführungszeichen ("|") einschließen. Dadurch wird die Fehlinterpretation durch den Befehlszeilen Parser vermieden. Andere Zeichen sind in einfache Anführungszeichen eingeschlossen.  
   
 Beispiele:  
   
 -t "|"  
   
--t ""  
+-t ' '  
   
--t 0x0a  
+-t 0x0A  
   
 -t \t  
   
--t ' ~ | ~'  
+-t ' ~ | ~ '  
   
 **-r** *row_delimiter*  
-Das Trennzeichen für jede Zeile der Datendatei der Quelle. Das Zeilentrennzeichen ist mindestens eine ASCII-Werten.  
+Das Trennzeichen für jede Zeile der Quell Datendatei. Das Zeilen Trennzeichen ist ein oder mehrere ASCII-Werte.  
   
-Um ein Wagenrücklauf (CR), Zeilenvorschubzeichen (LF) oder Tabstoppzeichen als Trennzeichen angeben, können Sie die Escape-Zeichen ("\r", "\n", "\t") oder ihre Hexadezimalwerte (0 X, 0d, 09) verwenden. Um ein anderes Sonderzeichen als Trennzeichen angeben, verwenden Sie ihren Hexadezimalwert.  
+Wenn Sie ein Wagen Rücklauf Zeichen (CR), Zeilenvorschub Zeichen (LF) oder Tabstopp Zeichen als Trennzeichen angeben möchten, können Sie die Escapezeichen (\r, \n, \t) oder Ihre hexadezimal Werte (0x, 0d, 09) verwenden. Wenn Sie andere Sonderzeichen als Trennzeichen angeben möchten, verwenden Sie den Hexadezimalwert.  
   
-Beispiele für CR -LF:  
+Beispiele für CR + LF:  
   
--R-\r\n  
+-r \r\n  
   
--R-0x0d0x0a  
+-r 0x0d0x0a  
   
 Beispiele für CR:  
   
--R-\r  
+-r \r  
   
--R 0x0d  
+-r 0x0D  
   
 Beispiele für LF:  
   
--R \n  
+-r \n  
   
--R 0x0a  
+-r 0x0A  
   
-Ein LF ist erforderlich für Unix. Ein CR ist für Windows erforderlich.  
+Für UNIX ist ein LF erforderlich. Für Windows ist eine CR erforderlich.  
   
 **-s** *string_delimiter*  
-Das Trennzeichen für Zeichenfolgendaten Typfeld der eine Datei mit Texttrennzeichen an. Das Zeichenfolgen-Trennzeichen ist eine oder mehrere ASCII-Werten.  Er kann als Zeichen angegeben werden (z. B. -s *) oder als einen hexadezimalen Wert (z. B. -s 0 x 22 für ein doppeltes Anführungszeichen).  
+Das Trennzeichen für das Zeichen folgen-Datentyp Feld einer Text getrennten Eingabedatei. Das Zeichen folgen Trennzeichen ist ein oder mehrere ASCII-Werte.  Sie kann als Zeichen (z. b.-s *) oder als Hexadezimalwert (z. b.-s 0x22 für ein doppeltes Anführungszeichen) angegeben werden.  
   
 Beispiele:  
   
--s *  
+Hymnen  
   
--s 0 x 22  
+-s 0x22  
   
-< Fixed_width_column_options >  
-Die Optionen für eine Quelldatei für die Daten, die Spalten fester Länge aufweist. In der Standardeinstellung *Source_data_file_name* ASCII-Zeichen in Spalten variabler Länge enthält.  
+< fixed_width_column_options >  
+Die Optionen für eine Quell Datendatei mit Spalten fester Länge. Standardmäßig enthält *source_data_file_name* ASCII-Zeichen in Spalten variabler Länge.  
   
-Spalten mit fester Breite werden nicht unterstützt, wenn – e UTF8 ist.  
+Spalten mit fester Breite werden nicht unterstützt, wenn-e UTF8 ist.  
   
 **-w** *fixed_width_config_file*  
-Pfad und Name der Konfigurationsdatei, die die Anzahl der Zeichen in jeder Spalte angibt. Jedes Feld muss angegeben werden.  
+Der Pfad und der Name der Konfigurationsdatei, die die Anzahl der Zeichen in jeder Spalte angibt. Jedes Feld muss angegeben werden.  
   
-Diese Datei muss auf dem Server laden befinden. Der Pfad kann es sich um einen UNC-relativer oder absoluter Pfad sein. Jede Zeile in *Fixed_width_config_file* enthält den Namen einer Spalte und die Anzahl der Zeichen für diese Spalte. Ist es eine Zeile pro Spalte wie folgt, und die Reihenfolge, in die Datei muss die Reihenfolge, in der Zieltabelle übereinstimmen:  
+Diese Datei muss sich auf dem Lade Server befinden. Der Pfad kann ein UNC-, relativer oder absoluter Pfad sein. Jede Zeile in *fixed_width_config_file* enthält den Namen einer Spalte und die Anzahl der Zeichen für diese Spalte. Es gibt eine Zeile pro Spalte, wie im folgenden dargestellt, und die Reihenfolge in der Datei muss mit der Reihenfolge in der Ziel Tabelle übereinstimmen:  
   
-*Column_name*=*Num_chars*  
+*column_name*num_chars=  
   
-*Column_name*=*Num_chars*  
+*column_name*num_chars=  
   
-Beispiel für feste Breite Config-Datei:  
+Beispiel für eine Konfigurationsdatei mit fester Breite:  
   
 SalesCode=3  
   
 SalesID = 10  
   
-Beispiel für Zeilen in *Source_data_file_name*:  
+Beispiel Zeilen in *source_data_file_name*:  
   
-230Shirts0056  
+230shiran 0056  
   
-320Towels1356  
+320um wels1356  
   
-Im vorherigen Beispiel hat die erste geladene Zeile SalesCode = "230" und SalesID = "Shirts0056". Die zweite geladene Zeile müssen SalesCode = "320" und SaleID = "Towels1356".  
+Im vorherigen Beispiel enthält die erste geladene Zeile Salescode = "230" und "SalesID = ' Shirts0056 '". Die zweite geladene Zeile weist "Salescode = ' 320 '" und "SaleID = ' Towels1356 '" auf.  
   
-Informationen zum Behandeln der führende und nachfolgende Leerzeichen oder Daten typkonvertierung im Modus mit fester Breite finden Sie unter [Datentyp Konvertierungsregeln für Dwloader](dwloader-data-type-conversion-rules.md).  
+Informationen dazu, wie führende und nachfolgende Leerzeichen oder die Datentyp Konvertierung im Modus mit fester Breite behandelt werden, finden Sie unter [Datentyp-Konvertierungsregeln für "dwloader](dwloader-data-type-conversion-rules.md).  
   
-**-e:** *Character_encoding*  
-Gibt einen Typ zeichencodierung für die Daten aus der Datendatei geladen werden. Stehen, ASCII (Standard) "," UTF8 "," UTF16 "oder" UTF16BE, wobei UTF16-Format little-endian und UTF16BE ist big-Endian. Diese Optionen, die Groß-/Kleinschreibung beachtet werden.  
+**-e** *character_encoding*  
+Gibt einen Zeichen Codierungstyp für die Daten an, die aus der Datendatei geladen werden sollen. Bei den Optionen handelt es sich um ASCII (Standard), UTF8, UTF16 oder UTF16BE, wobei UTF16 Little Endian und UTF16BE der Big Endian ist. Diese Optionen Unterscheidung nach Groß-/Kleinschreibung  
   
-Spalten mit fester Breite werden nicht unterstützt, wenn – e UTF8 ist.  
+Spalten mit fester Breite werden nicht unterstützt, wenn-e UTF8 ist.  
   
 **-r** *row_delimiter*  
-Das Trennzeichen für jede Zeile der Datendatei der Quelle. Das Zeilentrennzeichen ist mindestens eine ASCII-Werten.  
+Das Trennzeichen für jede Zeile der Quell Datendatei. Das Zeilen Trennzeichen ist ein oder mehrere ASCII-Werte.  
   
-Um ein Wagenrücklauf (CR), Zeilenvorschubzeichen (LF) oder Tabstoppzeichen als Trennzeichen angeben, können Sie die Escape-Zeichen ("\r", "\n", "\t") oder ihre Hexadezimalwerte (0 X, 0d, 09) verwenden. Um ein anderes Sonderzeichen als Trennzeichen angeben, verwenden Sie ihren Hexadezimalwert.  
+Wenn Sie ein Wagen Rücklauf Zeichen (CR), Zeilenvorschub Zeichen (LF) oder Tabstopp Zeichen als Trennzeichen angeben möchten, können Sie die Escapezeichen (\r, \n, \t) oder Ihre hexadezimal Werte (0x, 0d, 09) verwenden. Wenn Sie andere Sonderzeichen als Trennzeichen angeben möchten, verwenden Sie den Hexadezimalwert.  
   
-Beispiele für CR -LF:  
+Beispiele für CR + LF:  
   
--R-\r\n  
+-r \r\n  
   
--R-0x0d0x0a  
+-r 0x0d0x0a  
   
 Beispiele für CR:  
   
--R-\r  
+-r \r  
   
--R 0x0d  
+-r 0x0D  
   
 Beispiele für LF:  
   
--R \n  
+-r \n  
   
--R 0x0a  
+-r 0x0A  
   
-Ein LF ist erforderlich für Unix. Ein CR ist für Windows erforderlich.  
+Für UNIX ist ein LF erforderlich. Für Windows ist eine CR erforderlich.  
   
 **-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
-Gibt die Reihenfolge der Monat (m), (d) Tag und Jahr (y) für alle Datetime-Felder in der Eingabedatei an. Die Standardreihenfolge ist Ymd. Um mehrere Order-Formate für die gleiche Quelldatei anzugeben, verwenden Sie die -dt-Option.  
+Gibt die Reihenfolge von Monat (m), Tag (d) und Jahr (y) für alle DateTime-Felder in der Eingabedatei an. Die Standard Reihenfolge ist YMD. Verwenden Sie die Option-dt, um mehrere Bestell Formate für dieselbe Quelldatei anzugeben.  
   
 YMD | DMY  
-Das Ydm und Dmy können die gleichen Eingabeformate. Beide ermöglichen das Jahr am Anfang oder Ende des Datums sein. Z. B. für beide **Ydm** und **Dmy** Datumsformate, Sie können die 2013-02-03 oder 02-03-2013 haben, in der Eingabedatei.  
+ydm und DMY lassen dieselben Eingabeformate zu. Beide ermöglichen es, dass das Jahr am Anfang oder am Ende des Datums liegt. Beispielsweise können sowohl für **ydm** -als auch für **DMY** -Datumsformate in der Eingabedatei 2013-02-03 oder 02-03-2013 vorhanden sein.  
   
-Das ydm  
-Sie können nur als Ydm in Spalten vom Datentyp Datetime und Smalldatetime formatierte Eingabe laden. Sie können nicht das Ydm-Werte in eine Spalte mit dem datetime2, Datums- oder Datetimeoffset-Datentyp laden.  
+ydm  
+Sie können nur als ydm formatierte Eingaben in Spalten vom Datentyp DateTime und smalldatetime laden. Ydm-Werte können nicht in eine Spalte des Datentyps datetime2, Date oder DateTimeOffset geladen werden.  
   
 dmy  
-ermöglicht das Mdy <month> <space> <day> <comma> <year>.  
+MDY ermöglicht <month> <space>. <day> <comma> <year>  
   
-Beispiele für Mdy Eingabedaten für den 1. Januar 1975:  
+Beispiele für MDY-Eingabedaten für den 1. Januar 1975:  
   
--   Ab dem 1. Januar 1975  
+-   1\. Januar 1975  
   
 -   Jan 01, 75  
   
@@ -362,22 +362,22 @@ Beispiele für Mdy Eingabedaten für den 1. Januar 1975:
 -   01011975  
   
 myd  
-Geben Sie Beispiele für März 04,2010: 03-2010-04, 3/2010/4  
+Beispiele für die Eingabedatei für den 04. März 2010: 03-2010-04, 3/2010/4  
   
 dym  
-Beispiele für die Eingabedatei für 04 März 2010: 04-2010-03, 4/2010/3  
+Beispiele für die Eingabedatei für den 04. März, 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*Custom_date_format* ist einem benutzerdefinierten Datumsformat entsprechen (z. B. MM/TT/JJJJ) und nur für Abwärtskompatibilität enthalten. Dwloader erzwingt keine das benutzerdefinierte Datumsformat. Wenn Sie stattdessen ein benutzerdefiniertes Datumsformat angeben **Dwloader** konvertiert sie in die entsprechende Einstellung der Ymd Ydm, Mdy, MYD-, Dym oder Dmy.  
+*custom_date_format* ist ein benutzerdefiniertes Datumsformat (z. b. mm/dd/yyyy) und wird nur aus Gründen der Abwärtskompatibilität eingeschlossen. das benutzerdefinierte Datumsformat wird von "dwloader nicht erzwungen. Wenn Sie ein benutzerdefiniertes Datumsformat angeben, wird es stattdessen von **"dwloader** in die entsprechende Einstellung von ymd, ydm, MDY, MYD, dym oder DMY konvertiert.  
   
-Wenn Sie den -D MM/TT/JJJJ angeben, erwartet Dwloader z. B. alle Geben Sie zunächst mit Monat bestellt werden Datum und Tag und anschließend im Jahr (Mdy). Es werden keine Zeichen von 2 Monaten, 2-Digit Tage und 4 Ziffern laut das benutzerdefinierte Datumsformat erzwungen. Hier sind einige Beispiele für die Datumsangaben in der Eingabedatei formatiert werden können, wenn das Datum das Format ' -D MM/TT/JJJJ ist: 01/02/2013, Jan.02.2013, 1/2/2013  
+Wenn Sie z. b. "-D mm/dd/yyyy" angeben, erwartet "dwloader, dass alle Datums Eingaben mit" Month First "," Day "und" Year "(MDY) geordnet sind. Es werden nicht zwei Zeichen Monate, zweistellige Tage und vierstellige Jahre durch das benutzerdefinierte Datumsformat erzwungen. Im folgenden finden Sie einige Beispiele dafür, wie Datumsangaben in der Eingabedatei formatiert werden können, wenn das Datumsformat-D mm/dd/yyyy lautet: 01/02/2013, Jan. 02.2013, 1/2/2013  
   
-Eine umfassendere Formatierungsinformationen, finden Sie unter [Datentyp Konvertierungsregeln für Dwloader](dwloader-data-type-conversion-rules.md).  
+Umfassendere Formatierungsinformationen finden Sie unter [Datentyp-Konvertierungsregeln für "dwloader](dwloader-data-type-conversion-rules.md).  
   
-**-dt** *Datetime_format_file*  
-Jede Datetime-Format wird angegeben, in einer Datei namens *Datetime_format_file*. Im Gegensatz zu den Befehlszeilenparametern benötigen müssen die Parameter der Datei, die Leerzeichen enthalten nicht in doppelte Anführungszeichen eingeschlossen werden. Sie können das Datetime-Format nicht ändern, wie Sie Daten laden. Die Quelldatei und der entsprechenden Spalte in die Zieltabelle müssen das gleiche Format aufweisen.  
+**-dt** *datetime_format_file*  
+Jedes DateTime-Format wird in einer Datei mit dem Namen *datetime_format_file*angegeben. Im Gegensatz zu den Befehlszeilen Parametern dürfen Datei Parameter, die Leerzeichen enthalten, nicht in doppelte Anführungszeichen eingeschlossen werden. Das DateTime-Format kann beim Laden von Daten nicht geändert werden. Die Quell Datendatei und die zugehörige Spalte in der Ziel Tabelle müssen das gleiche Format aufweisen.  
   
-Jede Zeile enthält den Namen einer Spalte in der Zieltabelle und das Datetime-Format.  
+Jede Zeile enthält den Namen einer Spalte in der Ziel Tabelle und deren DateTime-Format.  
   
 Beispiele:  
   
@@ -385,85 +385,85 @@ Beispiele:
   
 `ModifiedDate=dym`  
   
-**-d** *Staging_database_name*  
-Der Name der Datenbank, die die Stagingtabelle enthalten soll. Der Standardwert ist die Datenbank mit der Option "-T", d.h. der Datenbank für die Zieltabelle angegeben werden. Weitere Informationen zur Verwendung einer Stagingdatenbank finden Sie unter [erstellen Sie die Staging-Datenbank](staging-database.md).  
+**-d** *staging_database_name*  
+Der Datenbankname, der die Stagingtabelle enthalten soll. Der Standardwert ist die Datenbank, die mit der Option-T angegeben wird. Hierbei handelt es sich um die Datenbank für die Ziel Tabelle. Weitere Informationen zur Verwendung einer Stagingdatenbank finden Sie unter [Create the Staging Database](staging-database.md).  
   
 **-M** *Load_mode_option*  
-Gibt an, ob anzufügen, "Upsert", oder die Daten erneut zu laden. Der Standardmodus ist angefügt.  
+Gibt an, ob Daten angefügt, Upsert oder neu geladen werden sollen. Der Standardmodus ist "append".  
   
 append  
-Das Ladeprogramm Zeilen am Ende der vorhandenen Zeilen in der Zieltabelle eingefügt.  
+Das Lade Modul fügt Zeilen am Ende der vorhandenen Zeilen in der Ziel Tabelle ein.  
   
-fastappend  
-Das Ladeprogramm Zeilen direkt ohne Verwendung einer temporären Tabelle am Ende der vorhandenen Zeilen in der Zieltabelle eingefügt. Fastappend erfordert die Multi-Transaktion (-m) Option. Eine Stagingdatenbank kann nicht angegeben werden, wenn Fastappend verwenden. Es ist kein Rollback mit Fastappend, was bedeutet, dass die Wiederherstellung nach einer fehlerhaften oder abgebrochenen Last durch Ihre eigenen Load-Prozess verarbeitet werden muss.  
+vom fastappend Lademodus  
+Das Lade Modul fügt Zeilen direkt, ohne eine temporäre Tabelle zu verwenden, an das Ende der vorhandenen Zeilen in der Ziel Tabelle ein. vom fastappend Lademodus erfordert die Option "Multi-Transaction (-m)". Eine Stagingdatenbank kann bei Verwendung von fastappend nicht angegeben werden. Es ist kein Rollback mit fastappend vorhanden. Dies bedeutet, dass die Wiederherstellung von einem fehlerhaften oder abgebrochenen Ladevorgang durch ihren eigenen Ladevorgang verarbeitet werden muss.  
   
-"Upsert" **-K***Merge_column* [,... *n* ]  
-Das Ladeprogramm verwendet die SQL Server-Merge-Anweisung zum Aktualisieren von vorhandener Zeilen aus, und fügen Sie neue Zeilen.  
+Upsert **-K**  *merge_column* [,... *n* ]  
+Das Lade Tool verwendet die SQL Server MERGE-Anweisung, um vorhandene Zeilen zu aktualisieren und neue Zeilen einzufügen.  
   
-Die Option ' -K ' gibt an, die Spalte oder Spalten, auf die Zusammenführung basieren. Diese Spalten bilden einen Merge-Schlüssel, der eine eindeutige Zeile darstellen soll. Wenn der Merge-Schlüssel in der Zieltabelle vorhanden ist, wird die Zeile aktualisiert. Wenn der Merge-Schlüssel in der Zieltabelle nicht vorhanden ist, wird die Zeile angefügt.  
+Die Option "-K" gibt die Spalten an, auf denen der Merge basieren soll. Diese Spalten bilden einen Merge-Schlüssel, der eine eindeutige Zeile darstellen sollte. Wenn der Merge-Schlüssel in der Ziel Tabelle vorhanden ist, wird die Zeile aktualisiert. Wenn der Merge-Schlüssel in der Ziel Tabelle nicht vorhanden ist, wird die Zeile angefügt.  
   
-Für Tabellen mit hashverteilung muss der Merge-Schlüssel werden oder die verteilungsspalte enthalten.  
+Bei Tabellen mit Hash Verteilung muss der Merge-Schlüssel die Verteilungs Spalte oder enthalten.  
   
-Für replizierte Tabellen ist der Merge-Schlüssel die Kombination einer oder mehreren Spalten. Diese Spalten werden gemäß den Anforderungen der Anwendung angegeben.  
+Bei replizierten Tabellen ist der Merge-Schlüssel die Kombination aus einer oder mehreren Spalten. Diese Spalten werden entsprechend den Anforderungen der Anwendung angegeben.  
   
-Mehrere Spalten müssen ohne Leerzeichen, Kommas oder Leerzeichen durch Kommas getrennt und in einfache Anführungszeichen eingeschlossen sein.  
+Mehrere Spalten müssen durch Kommas getrennt werden, ohne Leerzeichen oder durch Trennzeichen getrennte Leerzeichen und in einfache Anführungszeichen eingeschlossen zu werden.  
   
-Wenn zwei Zeilen in der Quelltabelle entsprechende Merge-Schlüsselwerte verfügen, müssen die entsprechenden Zeilen identisch sein.  
+Wenn zwei Zeilen in der Quell Tabelle übereinstimmende mergeschlüsselwerte aufweisen, müssen die entsprechenden Zeilen identisch sein.  
   
-Erneut laden  
-Das Ladeprogramm schneidet die Zieltabelle ab, bevor die Daten eingefügt.  
+brauchte  
+Das Lade Modul verkürzt die Ziel Tabelle, bevor die Quelldaten eingefügt werden.  
   
 **-b** *batchsize*  
-Nur für die Verwendung von Microsoft-Support, empfohlene *Batchsize* beträgt die Batchgröße für SQL Server für das Massenkopieren, die DMS in SQL Server-Instanzen auf den Computeknoten ausführt.  Wenn *Batchsize* angegeben ist, wird SQL Server PDW überschreibt die Batchgröße für das Laden, die bei jedem Laden der dynamisch berechnet wird.  
+Wird nur für die Verwendung durch Microsoft-Support empfohlen, *BatchSize* ist die SQL Server Batch Größe für das Massen kopieren, das DMS in SQL Server Instanzen auf den Computeknoten ausführt.  Wenn *BatchSize* angegeben wird, überschreibt SQL Server PDW die Batch Lade Größe, die für jede Last dynamisch berechnet wird.  
   
-Ab SQL Server 2012 PDW, berechnet der Steuerelementknoten aus dynamisch eine Batchgröße bei jedem Laden standardmäßig. Diese automatische Berechnung basiert auf mehrere Parameter wie Größe des Speichers, Zieltyp für die Tabelle, Tabelle Zielschema, Art der Arbeitslast, Dateigröße und Ressourcenklasse des Benutzers.  
+Ab SQL Server 2012 PDW berechnet der Steuer Knoten standardmäßig dynamisch eine Batch Größe für jede Last. Diese automatische Berechnung basiert auf mehreren Parametern, wie z. b. der Arbeitsspeicher Größe, dem Ziel Tabellentyp, dem Ziel Tabellen Schema, dem Auslastungstyp, der Dateigröße und der Ressourcen Klasse des Benutzers.  
   
-Z. B. wenn der Lademodus FASTAPPEND und die Tabelle einen gruppierten columnstore-Index besitzt, SQL Server PDW wird von versuchen standardmäßig, eine Batchgröße von 1.048.576 verwenden, sodass Zeilengruppen geschlossen werden, und Laden direkt in den columnstore-Index ohne Umweg über das deltastore. Wenn die Batchgröße von 1.048.576 von Arbeitsspeicher nicht möglich ist, wählt Dwloader eine kleinere Batchgröße.  
+Wenn der Lademodus beispielsweise fastappend ist und die Tabelle einen gruppierten columnstore--Index aufweist, wird SQL Server PDW standardmäßig versuchen, eine Batch Größe von 1.048.576 zu verwenden, damit Zeilen Gruppen geschlossen werden und direkt in den columnstore-geladen werden, ohne dass die Delta Speicher. Wenn der Arbeitsspeicher die Batch Größe von 1.048.576 nicht zulässt, wählt "dwloader eine kleinere Batch Größe aus.  
   
-Wenn die Art der Arbeitslast FASTAPPEND, ist der *Batchsize* gilt für das Laden von Daten in die Tabelle, andernfalls *Batchsize* gilt für das Laden von Daten in die Stagingtabelle.  
+Wenn der Auslastungstyp fastappend ist, gilt der *BatchSize* -Wert für das Laden von Daten in die Tabelle; andernfalls gilt *BatchSize* für das Laden von Daten in die Stagingtabelle.  
   
 <reject_options>  
-Gibt Optionen zum Bestimmen der Anzahl der Fehler beim Laden von, denen das Ladeprogramm ermöglichen. Wenn der Fehler beim Laden von den Schwellenwert überschreiten, wird das Ladeprogramm angehalten und keinen commit für alle Zeilen.  
+Gibt Optionen zum Bestimmen der Anzahl von Lade Fehlern an, die das Lade Modul zulässt. Wenn die Ladefehler den Schwellenwert überschreiten, wird das Lade Modul angehalten und führt keinen Commit für Zeilen aus.  
   
-**-rt** { **Wert** | Prozentsatz}  
-Gibt an, ob die -*Reject_value* in die **-rv** *Reject_value* Option ist eine literale Anzahl von Zeilen (Wert) oder einem Satz von Fehler (in Prozent). Der Standardwert ist.  
+**-RT** { **value** | Prozentsatz}  
+Gibt an, ob*reject_value* in der Option **-RV** *reject_value* eine Literale Anzahl von Zeilen (Wert) oder eine Fehlerrate (Prozentsatz) ist. Der Standardwert ist value.  
   
-Die Prozentsatz-Option ist eine Echtzeit-Berechnung, die in Abständen gemäß der Option - Rs tritt ein, an.  
+Die Prozent Option ist eine echt Zeitberechnung, die in Intervallen gemäß der Option-RS erfolgt.  
   
-Beispielsweise ist, wenn der Loader beim Laden von 100 Zeilen und 25 Beschaffung und 75 erfolgreich ist, klicken Sie dann die Fehlerrate 25 %.  
+Wenn das Lade Modul z. b. versucht, 100 Zeilen zu laden und 25 fehlschlägt und 75 erfolgreich ist, beträgt die Fehlerrate 25%.  
   
-**-rv** *Reject_value*  
-Gibt an, die Anzahl oder den Prozentsatz der ablehnungen der Zeile, um vor dem Anhalten der Last zu ermöglichen. Die **-rt** Option bestimmt, ob *Reject_value* bezieht sich auf die Anzahl der Zeilen oder den Prozentsatz der Zeilen.  
+**-RV** *reject_value*  
+Gibt die Anzahl oder den Prozentsatz der Zeilen Umschreibungen an, die zugelassen werden, bevor die Last angehalten wird. Die Option **-RT** bestimmt, ob *reject_value* sich auf die Anzahl der Zeilen oder den Prozentsatz der Zeilen bezieht.  
   
-Der Standardwert *Reject_value* ist 0.  
+Der Standardwert für *reject_value* ist 0.  
   
-Bei Verwendung mit -rt-Wert wird das Ladeprogramm die Last beendet, wenn die Anzahl der abgelehnten Zeilen Reject_value überschreitet.  
+Bei Verwendung mit dem-RT-Wert stoppt das Lade Modul die Last, wenn die abgelehnte Zeilen Anzahl reject_value überschreitet.  
   
-Wenn mit -rt-Prozentsatz, das Ladeprogramm berechnet den Prozentsatz in Intervallen (-Rs-Option). Aus diesem Grund kann der Prozentsatz fehlerhafter Zeilen überschreiten *Reject_value*.  
+Wenn Sie mit einem Prozentsatz von-RT verwenden, berechnet das Lade Modul den Prozentsatz bei Intervallen (-RS-Option). Daher kann der Prozentsatz fehlerhafter Zeilen *reject_value*überschreiten.  
   
-**Rs -** *Reject_sample_size*  
-Verwendung der `-rt percentage` Option aus, um die Überprüfungen inkrementelle Prozentsatz angeben. Z. B. wenn Reject_sample_size 1000 ist, wird das Ladeprogramm berechnet den Prozentsatz fehlerhafter Zeilen nach dem Laden von 1000 Zeilen. Es berechnet den Prozentsatz von fehlerhaften Zeilen neu, nachdem sie versucht, jede zusätzliche 1000 Zeilen zu laden.  
+**-RS** *reject_sample_size*  
+Wird mit der `-rt percentage` Option verwendet, um die inkrementellen Überprüfungen anzugeben. Wenn reject_sample_size beispielsweise 1000 ist, berechnet das Lade Modul den Prozentsatz fehlerhafter Zeilen, nachdem versucht wurde, 1000 Zeilen zu laden. Der Prozentsatz der fehlerhaften Zeilen wird neu berechnet, nachdem versucht wurde, jede weitere 1000 Zeilen zu laden.  
   
 **-c**  
-Entfernt Leerstellen vom linken und rechten Seite des Char, Nchar, Varchar und Nvarchar-Felder. Konvertiert jedes Feld, das nur Leerraumzeichen auf eine leere Zeichenfolge enthält.  
+Entfernt Leerzeichen von der linken und rechten Seite der Felder Char, nchar, varchar und nvarchar. Konvertiert jedes Feld, das nur Leerraum Zeichen enthält, in die leere Zeichenfolge.  
   
 Beispiele:  
   
-"" Ruft auf gekürzt. "  
+"" wird auf "" gekürzt  
   
-auf 'Abc' Ruft 'Abc' gekürzt.  
+' abc ' wird auf ' abc ' gekürzt.  
   
-Bei der -c mit -E, wird zuerst die -E-Operation. Felder, die nur Leerzeichen enthalten, werden auf eine leere Zeichenfolge und nicht auf NULL konvertiert.  
+Wenn-c mit-e verwendet wird, tritt der-e-Vorgang zuerst auf. Felder, die nur Leerraum Zeichen enthalten, werden in die leere Zeichenfolge und nicht in NULL konvertiert.  
   
 **-E**  
-Konvertieren Sie leere Zeichenfolgen, auf NULL. Der Standardwert ist keine dieser Konvertierungen durchzuführen.  
+Leere Zeichen folgen in NULL konvertieren. Standardmäßig werden diese Konvertierungen nicht durchgeführt.  
   
 **-m**  
-Verwenden von mehreren Transaktionsmodus für die zweite Phase des Ladevorgangs; Beim Laden von Daten aus der Stagingtabelle in eine verteilte Tabelle.  
+Multi-Transaction-Modus für die zweite Phase des Ladens verwenden; beim Laden von Daten aus der Stagingtabelle in eine verteilte Tabelle.  
   
-Mit **-m**, SQL Server PDW führt und führt einen Commit für Ladevorgänge parallel. Dies wird erheblich schneller als die standardmäßige laden Modus ausgeführt, aber es ist nicht Transaktion-sicher.  
+Mit **-m**führt SQL Server PDW Ladevorgänge parallel aus und führt Sie aus. Dies ist wesentlich schneller als der standardmäßige Lade Modus, aber nicht transaktionssicher.  
   
-Ohne **-m**, SQL Server PDW führt und führt einen Commit für Ladevorgänge seriell auf die Verteilungen in jedem Computeknoten aus, und gleichzeitig auf die Compute-Knoten. Diese Methode ist langsamer als die Multi-Transaktionsmodus, aber Transaktion threadsicher ist.  
+Ohne **-m**führt SQL Server PDW Lasten seriale über die Verteilungen innerhalb der einzelnen Computeknoten und gleichzeitig über die Computeknoten hinweg aus. Diese Methode ist langsamer als der multitransaktionsmodus, aber ist transaktionssicher.  
   
 **-m** ist optional für *Anfügen*, *laden*, und *Upsert*.  
   
@@ -471,25 +471,25 @@ Ohne **-m**, SQL Server PDW führt und führt einen Commit für Ladevorgänge se
   
 **-m** bei replizierten Tabellen nicht verwendet werden.  
   
-**-m** gilt nur für die zweite Phase der laden. Es gilt nicht für die erste Phase der laden; Laden von Daten in die Stagingtabelle ein.  
+**-m** gilt nur für die zweite Phase der laden. Dies gilt nicht für die erste Lade Phase. Laden von Daten in die Stagingtabelle.  
   
-Es ist kein Rollback mit Multi-Transaktionsmodus, was bedeutet, dass die Wiederherstellung nach einer fehlerhaften oder abgebrochenen Last durch Ihre eigenen Load-Prozess verarbeitet werden muss.  
+Es ist kein Rollback mit dem Multi-Transaction-Modus vorhanden. Dies bedeutet, dass die Wiederherstellung von einem fehlerhaften oder abgebrochenen Ladevorgang durch ihren eigenen Ladevorgang verarbeitet werden muss.  
   
-Es wird empfohlen, **-m** nur, wenn in eine leere Tabelle, geladen, sodass Sie ohne Datenverlust wiederherstellen können. Zur Wiederherstellung nach einem Fehler beim Laden des: die Zieltabelle löschen, das Load-Problem zu beheben, die Zieltabelle neu zu erstellen und führen Sie die Last dann erneut aus.  
+Es wird empfohlen, **-m** nur beim Laden in eine leere Tabelle zu verwenden, damit Sie ohne Datenverlust wieder hergestellt werden können. So stellen Sie nach einem Ladefehler eine Wiederherstellung durch: Löschen Sie die Ziel Tabelle, beheben Sie das Lade Problem, erstellen Sie die Ziel Tabelle neu, und führen Sie die Last erneut aus.  
   
 **-N**  
-Stellen Sie sicher, dass die zielappliance ein gültiges SQL Server-PDW-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle verfügt. Verwenden Sie diese, um sicherzustellen, Ihre Daten wird nicht von einem Angreifer übernommen und an einen nicht autorisierten Speicherort gesendet. Das Zertifikat muss bereits auf dem Gerät installiert werden. Die einzige unterstützte Methode zum Installieren des Zertifikats ist für die applianceadministrator ihn mithilfe des Konfigurations-Manager installieren. Bitten Sie Ihren applianceadministrator, wenn Sie nicht sicher sind, gibt an, ob das Gerät ein vertrauenswürdiges Zertifikat installiert wurde.  
+Vergewissern Sie sich, dass das Zielgerät ein gültiges SQL Server PDW Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle aufweist. Verwenden Sie diese Informationen, um sicherzustellen, dass Ihre Daten nicht von einem Angreifer getarnt und an einen nicht autorisierten Speicherort gesendet werden. Das Zertifikat muss bereits auf dem Gerät installiert sein. Die einzige Möglichkeit zum Installieren des Zertifikats besteht darin, dass der Geräte Administrator diese mithilfe des Configuration Manager Tools installiert. Wenden Sie sich an den Geräte Administrator, wenn Sie nicht sicher sind, ob auf dem Gerät ein vertrauenswürdiges Zertifikat installiert ist.  
   
-**Se-**  
-Überspringen Sie das leere Dateien werden geladen. Dies lässt auch leere Gzip Dekomprimieren von Dateien.
+**-SE**  
+Das Laden leerer Dateien wird übersprungen. Dadurch wird auch die Dekomprimierung leerer gzip-Dateien überdies ausgelassen.
 
 **-l**  
-Verfügbar mit CU7.4 Update gibt die maximale Länge (in Bytes), die geladen werden kann. Gültige Werte sind ganze Zahlen zwischen 32768 und 33554432. Verwenden Sie nur bei Bedarf, um große Zeilen (mehr als 32 KB) zu laden, wie sich dies auf dem Client und Server mehr Arbeitsspeicher zuweist.
+Verfügbar mit Cu 7.4 Update, gibt die maximale Zeilenlänge (in Byte) an, die geladen werden kann. Gültige Werte sind ganze Zahlen zwischen 32768 und 33554432. Verwenden Sie nur bei Bedarf, um große Zeilen (über 32 KB) zu laden, da dadurch auf dem Client und dem Server mehr Arbeitsspeicher belegt wird.
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
-0 (Erfolg) oder andere ganzzahlige Wert (Fehler)  
+0 (Erfolg) oder andere ganzzahlige Werte (Fehler)  
   
-Verwenden Sie in einer Befehlsdatei Fenster oder einen Batch `errorlevel` um den Rückgabecode anzuzeigen. Zum Beispiel:  
+Verwenden `errorlevel` Sie in einem Befehlsfenster oder in einer Batchdatei, um den Rückgabecode anzuzeigen. Zum Beispiel:  
   
 ```  
 dwloader  
@@ -498,78 +498,78 @@ if not %errorlevel%==0 echo Fail
 if %errorlevel%==0 echo Success  
 ```  
   
-Wenn Sie PowerShell verwenden möchten, verwenden Sie `$LastExitCode`.  
+Wenn Sie PowerShell verwenden, `$LastExitCode`verwenden Sie.  
   
 ## <a name="permissions"></a>Berechtigungen  
-Erfordert LOAD-Berechtigung und die entsprechenden Berechtigungen (INSERT, UPDATE, DELETE) für die Zieltabelle an. Erfordert die Berechtigung "erstellen" (zum Erstellen einer temporären Tabelle) für die staging-Datenbank. Wenn eine Stagingdatenbank nicht verwendet wird, ist der Berechtigung "erstellen" in der Zieldatenbank erforderlich. 
+Erfordert die Load-Berechtigung und die anwendbaren Berechtigungen (INSERT, Update, DELETE) in der Ziel Tabelle. Erfordert die CREATE-Berechtigung (zum Erstellen einer temporären Tabelle) für die Stagingdatenbank. Wenn keine Stagingdatenbank verwendet wird, ist die CREATE-Berechtigung für die Zieldatenbank erforderlich. 
 
 <!-- MISSING LINK
 For more information, see [Grant permissions to load data](grant-permissions-to-load-data.md).  
 -->
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
-Weitere Informationen zu datentypkonvertierungen beim Laden mit Dwloader, finden Sie unter [Datentyp Konvertierungsregeln für Dwloader](dwloader-data-type-conversion-rules.md).  
+Informationen zu Datentyp Konvertierungen beim Laden mit "dwloader finden Sie unter [Datentyp-Konvertierungsregeln für" dwloader](dwloader-data-type-conversion-rules.md).  
   
-Wenn ein Parameter ein oder mehrere Leerzeichen enthält, müssen Sie den Parameter in doppelte Anführungszeichen ein.  
+Wenn ein Parameter ein oder mehrere Leerzeichen enthält, schließen Sie den Parameter in doppelte Anführungszeichen ein.  
   
-Sie sollten das Ladeprogramm aus dem Installationsverzeichnis ausführen. Die ausführbare Datei Dwloader ist mit dem Gerät vorinstalliert und befindet sich im Verzeichnis C:\Program Files\Microsoft SQL Server Data Warehouse\DWLoader.  
+Sie sollten das Lade Modul von seinem installierten Speicherort aus ausführen. Die ausführbare Datei "" dwloader "ist bereits mit dem Gerät installiert und befindet sich im Verzeichnis" c:\Programme\Microsoft SQL Server Data Warehouse-\dwloader ".  
   
-Sie können einen Parameter, der in der Parameterdatei angegeben wird überschreiben (-f-Option) durch Angabe als Befehlszeilenparameter.  
+Sie können einen Parameter, der in der Parameterdatei (-f-Option) angegeben ist, überschreiben, indem Sie ihn als Befehlszeilenparameter angeben.  
   
-Sie können mehrere Instanzen des Ladeprogramms gleichzeitig ausführen. Die maximale Anzahl von Instanzen der Ladeprogramm ist vorkonfiguriert und kann nicht geändert werden. 
+Sie können mehrere Instanzen des Lade Moduls gleichzeitig ausführen. Die maximale Anzahl der Lade Lade Instanzen ist vorkonfiguriert und kann nicht geändert werden. 
 
 <!-- MISSING LINK
 For the maximum number of loads per appliance, see [Minimum and Maximum Values](minimum-maximum-values.md)  
 -->
   
-Geladene Daten möglicherweise mehr oder weniger Speicherplatz auf dem Gerät als am Quellstandort. Sie können Test-Importen mit Teilmengen von Daten zum Schätzen der Datenträger ausführen.  
+Für geladene Daten ist möglicherweise mehr oder weniger Speicherplatz auf dem Gerät als am Quell Speicherort erforderlich. Sie können Test Importe mit Teilmengen von Daten ausführen, um den Datenträger Verbrauch zu schätzen.  
   
-Obwohl **Dwloader** ist ein Prozess für die Transaktion und führt ein Rollback ordnungsgemäß bei einem Fehler, kann nicht zurückgesetzt werden, sobald das Massenladen erfolgreich abgeschlossen wurde. Zum Abbrechen von einer aktives **Dwloader** verarbeiten, STRG + C eingeben.  
+Obwohl es sich bei **"dwloader** um einen Transaktionsprozess handelt und ein Rollback bei einem Fehler ordnungsgemäß ausgeführt wird, kann kein Rollback ausgeführt werden, sobald der Massen Ladevorgang erfolgreich abgeschlossen wurde. Um einen aktiven **"dwloader** -Prozess abzubrechen, geben Sie STRG + C ein.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  
-Die Gesamtgröße aller lädt, die gleichzeitig ausgeführt werden, muss kleiner sein als LOG_SIZE für die Datenbank, und es wird empfohlen, die Gesamtgröße aller paralleler Ladevorgänge ist weniger als 50 % von dem LOG_SIZE. Um diese maximale Größe zu erzielen, können Sie große Datenmengen in mehrere Batches aufteilen. Weitere Informationen zu LOG_SIZE, finden Sie unter [Datenbank erstellen](../t-sql/statements/create-database-parallel-data-warehouse.md)  
+Die Gesamtgröße aller gleichzeitig auftretenden Ladungen muss für die Datenbank kleiner als LOG_SIZE sein, und es wird empfohlen, dass die Gesamtgröße aller gleichzeitigen Ladevorgänge kleiner als 50% der LOG_SIZE ist. Um diese Größenbeschränkung zu erreichen, können Sie große Lasten in mehrere Batches aufteilen. Weitere Informationen zu LOG_SIZE finden Sie unter [Create Database](../t-sql/statements/create-database-parallel-data-warehouse.md) .  
   
-Wenn Sie mehrere Dateien mit einem Befehl zu laden, werden alle abgelehnte Zeilen in der gleichen Reject-Datei geschrieben. Die Reject-Datei zeigt nicht an die Eingabedatei jede abgelehnte Zeile enthält.  
+Beim Laden mehrerer Dateien mit einem Load-Befehl werden alle abgelehnten Zeilen in dieselbe Ablehnungs Datei geschrieben. Die Ablehnungs Datei zeigt nicht an, welche Eingabedatei jede abgelehnte Zeile enthält.  
   
-Die leere Zeichenfolge sollte nicht als Trennzeichen verwendet werden. Wenn eine leere Zeichenfolge als ein Zeilentrennzeichen verwendet wird, schlägt der Ladevorgang fehl. Als Trennzeichen für Spalten verwendet, wird die Last ignoriert das Trennzeichen und weiterhin die Standardeinstellung verwenden "|" als Spaltentrennzeichen. Die leere Zeichenfolge wird ignoriert, wenn Sie als Zeichenfolgen-Trennzeichen verwendet wird, und das Standardverhalten angewendet.  
+Die leere Zeichenfolge sollte nicht als Trennzeichen verwendet werden. Wenn eine leere Zeichenfolge als Zeilen Trennzeichen verwendet wird, tritt ein Fehler auf. Wenn das Trennzeichen als Spalten Trennzeichen verwendet wird, ignoriert es das Trennzeichen und verwendet weiterhin den Standardwert "|" als Spalten Trennzeichen. Wenn die Zeichenfolge als Zeichen folgen Trennzeichen verwendet wird, wird die leere Zeichenfolge ignoriert und das Standardverhalten angewendet.  
   
 ## <a name="locking-behavior"></a>Sperrverhalten  
-**Dwloader** Sperrverhalten variiert je nach den *Load_mode_option*.  
+Das **"dwloader** -Sperr Verhalten variiert je nach *load_mode_option*.  
   
--   **Fügen Sie** -Anfügen ist die empfohlene und am häufigsten verwendete Option. Fügen Sie lädt Daten in eine Stagingtabelle ein. Das Sperren wird unten im Detail beschrieben.  
+-   **Anfügen** -Anfügen ist die empfohlene und häufigste Option. Append lädt Daten in eine Stagingtabelle. Die Sperrung wird im folgenden ausführlich beschrieben.  
   
--   **Fügen Sie schnell** -Fast-fügen Sie direkt in der endgültigen Tabelle eine ExclusiveUpdate-Tabellensperre dauert lädt und ist der einzige Modus, die eine Stagingtabelle nicht verwendet.  
+-   **schnelles anfügen** -schnelles Anfügen von Ladevorgängen direkt in die letzte Tabelle, wobei eine exclusiveupdate-Tabellensperre verwendet wird, und ist der einzige Modus, der keine Stagingtabelle verwendet.  
   
--   **erneut laden** – erneutes Laden von Daten in eine Stagingtabelle geladen und erfordert eine exklusive Sperre auf die Stagingtabelle und die endgültige Tabelle. Erneut laden, sollte nicht für gleichzeitige Vorgänge.  
+-   durch erneutes Laden **Laden** Daten in eine Stagingtabelle geladen und erfordert eine exklusive Sperre für die Stagingtabelle und die letzte Tabelle. Das erneute Laden wird für gleichzeitige Vorgänge nicht empfohlen.  
   
--   **"Upsert"** -Upsert-Vorgang Daten in eine Stagingtabelle geladen und führt dann einen Merge-Vorgang aus der Stagingtabelle in die endgültige Tabelle. "Upsert" ist keine exklusive Sperren für die endgültige Tabelle erforderlich. Leistung kann abweichen, wenn "Upsert" verwenden. Testen Sie das Verhalten in Ihrer Umgebung.  
+-   **Upsert** -Upsert lädt Daten in eine Stagingtabelle und führt dann einen Zusammenarbeits Vorgang von der Stagingtabelle zur abschließenden Tabelle aus. Upsert erfordert keine exklusiven Sperren für die endgültige Tabelle. Die Leistung kann bei Verwendung von Upsert variieren. Testen Sie das Verhalten in Ihrer Umgebung.  
   
 ### <a name="locking-behavior"></a>Sperrverhalten  
-**Fügen Sie im Modus sperren**  
+**Sperren des Modus anfügen**  
   
-Fügen Sie kann in mehreren im Transaktionsmodus ausgeführt wird (mit dem -m-Argument) ausgeführt werden aber nicht sicher Transaktion. Fügen Sie aus diesem Grund sollte als ein Transaktionsvorgang (ohne das -m-Argument) verwendet werden. Leider ist während des letzten INSERT-SELECT-Vorgangs im Transaktionsmodus derzeit ungefähr sechs Mal langsamer als die Multi-Transaktionsmodus.  
+Append kann im multitransaktionalen Modus (mit dem Argument-m) ausgeführt werden, ist jedoch nicht transaktionssicher. Daher sollte Anfügen als transaktionaler Vorgang verwendet werden (ohne das-m-Argument zu verwenden). Leider ist während des abschließenden INSERT-SELECT-Vorgangs der Transaktionsmodus momentan ungefähr sechs Mal langsamer als der multitransaktionsmodus.  
   
-Die Append-Modus lädt Daten in zwei Phasen. Phase 1 lädt Daten aus der Quelldatei, in eine Stagingtabelle gleichzeitig (Fragmentierung erfolgen kann). Phase zwei Daten aus der Stagingtabelle in die endgültige Tabelle geladen. Die zweite Phase führt eine **INSERT INTO... Wählen Sie WITH (TABLOCK)** Vorgang. Die folgende Tabelle zeigt das Sperrverhalten für die endgültige Tabelle und Protokollierungsverhalten Verwendung append-Modus:  
+Der Anfügen-Modus lädt Daten in zwei Phasen. In Phase 1 werden Daten gleichzeitig aus der Quelldatei in eine Stagingtabelle geladen (Fragmentierung kann auftreten). In Phase 2 werden Daten aus der Stagingtabelle in die letzte Tabelle geladen. In der zweiten Phase wird eine **INSERT INTO... Wählen Sie with (TABLOCK)** -Vorgang aus. In der folgenden Tabelle wird das Sperr Verhalten für die abschließende Tabelle und das Protokollierungs Verhalten bei Verwendung des anfügen-Modus angezeigt:  
   
-|Tabellentyp|Multi-Transaktion<br />Modus (-m)|Tabelle ist leer|Parallelität unterstützt|Protokollierung|  
+|Tabellentyp|Mehrere Transaktionen<br />Modus (-m)|Die Tabelle ist leer.|Unterstützte Parallelität|Protokollierung|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Heap|Ja|Ja|Ja|Minimale|  
-|Heap|Ja|Nein|Ja|Minimale|  
-|Heap|Nein|Ja|Nein|Minimale|  
-|Heap|Nein|Nein|Nein|Minimale|  
-|CL|Ja|Ja|Nein|Minimale|  
-|CL|Ja|Nein|Ja|Vollständig|  
-|CL|Nein|Ja|Nein|Minimale|  
-|CL|Nein|Nein|Ja|Vollständig|  
+|Heap|Ja|Ja|Ja|Minimalistischen|  
+|Heap|Ja|Nein|Ja|Minimalistischen|  
+|Heap|Nein|Ja|Nein|Minimalistischen|  
+|Heap|Nein|Nein|Nein|Minimalistischen|  
+|Schten|Ja|Ja|Nein|Minimalistischen|  
+|Schten|Ja|Nein|Ja|Vollständig|  
+|Schten|Nein|Ja|Nein|Minimalistischen|  
+|Schten|Nein|Nein|Ja|Vollständig|  
   
-Die obige Tabelle zeigt **Dwloader** im Append-Modus Laden in einen Heap oder gruppierten Index (CI) Table mit oder ohne das Flag mit mehreren Transaktionen und das Laden in eine leere Tabelle oder eine nicht leere Tabelle. Der Sperr- und Protokollierungsverhaltens Verhalten jeden solchen Kombination aus laden wird in der Tabelle angezeigt. Z. B., (2.) Phase mit der Append-Modus Laden in einen gruppierten Index ohne Multi-Transaktionsmodus ausgeführt wird und in eine leere Tabelle weist PDW eine exklusive Sperre für die Tabelle zu erstellen und Protokollierung ist minimal. Dies bedeutet, dass ein Kunde nicht (2.) Phase und die Abfrage in eine leere Tabelle gleichzeitig laden können. Jedoch wenn Sie mit der gleichen Konfiguration in eine nicht leere Tabelle zu laden, PDW keine exklusive Sperre für die Tabelle ausgeben und Parallelität möglich ist. Unpraktischerweise erfolgt vollständige Protokollierung, den Prozess verlangsamen.  
+In der obigen Tabelle wird **"dwloader** mit dem Anfüge Modus in einen Heap oder einer CI-Tabelle (gruppierten Index) mit oder ohne das multitransaktionsflag und das Laden in eine leere Tabelle oder eine nicht leere Tabelle angezeigt. Das Sperr-und Protokollierungs Verhalten jeder solchen Kombination von Load wird in der Tabelle angezeigt. Wenn Sie zum Beispiel die Phase (2.) mit dem Anfügen-Modus in einen gruppierten Index ohne den multitransaktionalen Modus und in eine leere Tabelle laden, wird PDW eine exklusive Sperre für die Tabelle erstellen, und die Protokollierung ist minimal. Dies bedeutet, dass ein Kunde nicht in der Lage ist, (2.) Phase und Abfrage gleichzeitig in eine leere Tabelle zu laden. Wenn Sie jedoch mit der gleichen Konfiguration in eine nicht leere Tabelle laden, gibt PDW keine exklusive Sperre für die Tabelle aus, und Parallelität ist möglich. Leider erfolgt die vollständige Protokollierung, die den Prozess verlangsamt.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-simple-dwloader-example"></a>A. Beispiel für einfache dwloader  
-Das folgende Beispiel zeigt die Initiierung der **Ladeprogramm** nur mit den erforderlichen Optionen ausgewählt haben. Andere Optionen für die globale XML-Konfigurationsdatei entnommen werden *loadparamfile.txt*.  
+### <a name="a-simple-dwloader-example"></a>A. Einfaches Beispiel für "dwloader  
+Im folgenden Beispiel wird die Initiierung des **Lade** Moduls mit nur den erforderlichen Optionen gezeigt. Andere Optionen werden von der globalen Konfigurationsdatei " *loadparamfile. txt*" übernommen.  
   
-Beispiel für die Verwendung von SQL Server-Authentifizierung.  
+Beispiel für die Verwendung SQL Server-Authentifizierung.  
   
 ```  
 --Load over Ethernet  
@@ -579,7 +579,7 @@ dwloader.exe -S 10.192.63.148 -U mylogin -P 123jkl -f /configfiles/loadparamfile
 dwloader.exe -S MyPDW-SQLCTL01 -U mylogin -P 123jkl -f /configfiles/loadparamfile.txt  
 ```  
   
-Das gleiche Beispiel, das mithilfe der Windows-Authentifizierung.  
+Das gleiche Beispiel mit der Windows-Authentifizierung.  
   
 ```  
 --Load over Ethernet  
@@ -589,21 +589,21 @@ dwloader.exe -S 10.192.63.148 -W -f /configfiles/loadparamfile.txt
 dwloader.exe -S MyPDW-SQLCTL01 -W -f /configfiles/loadparamfile.txt  
 ```  
   
-Beispiel für die Verwendung der Argumente für eine Quelldatei und die Fehlerdatei.  
+Beispiel für das Verwenden von Argumenten für eine Quelldatei und eine Fehler Datei.  
   
 ```  
 --Load over Ethernet  
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>B. Laden von Daten in einer AdventureWorks-Tabelle  
-Das folgende Beispiel ist Teil eines Batchskripts, die Daten in lädt **AdventureWorksPDW2012**.  Um das vollständige Skript anzuzeigen, öffnen Sie die "aw_create.bat"-Datei, die im Lieferumfang der **AdventureWorksPDW2012** Installationspaket. 
+### <a name="b-load-data-into-an-adventureworks-table"></a>B. Laden von Daten in eine AdventureWorks-Tabelle  
+Das folgende Beispiel ist Teil eines Batch Skripts, mit dem Daten in **AdventureWorksPDW2012**geladen werden.  Um das vollständige Skript anzuzeigen, öffnen Sie die Datei aw_create. bat, die im Lieferumfang des **AdventureWorksPDW2012** -Installationspakets enthalten ist. 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-Der folgende Codeausschnitt verwendet Dwloader zum Laden von Daten in die Tabellen DimAccount und DimCurrency. Dieses Skript wird eine Ethernet-Adresse verwendet. Wenn es InfiniBand verwendet hat, wäre Server *< Appliancename >* `-SQLCTL01`.  
+Im folgenden Skript Ausschnitt wird "dwloader verwendet, um Daten in die DimAccount-und DimCurrency-Tabellen zu laden. Dieses Skript verwendet eine Ethernet-Adresse. Wenn InfiniBand verwendet wurde, wäre der Server *< appliance_name >* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  
@@ -627,7 +627,7 @@ set t1=DimCurrency
 %load% -S %server% -E -M %mode% -e Utf16 -i .\%t1%.txt -T %schema%.%t1% -R %t1%.bad -t "|" -r \r\n -U %user% -P %password%  
 ```  
   
-Im folgenden wird die DDL-Anweisungen für die DimAccount-Tabelle.  
+Im folgenden finden Sie die DDL für die DimAccount-Tabelle.  
   
 ```  
 CREATE TABLE DimAccount(  
@@ -645,7 +645,7 @@ with (CLUSTERED INDEX(AccountKey),
 DISTRIBUTION = REPLICATE);  
 ```  
   
-Folgendes ist ein Beispiel für die Datendatei DimAccount.txt, die Daten, die in die Tabelle DimAccount geladen werden sollen.  
+Im folgenden finden Sie ein Beispiel für die Datendatei "DimAccount. txt", die Daten enthält, die in die Tabelle "DimAccount" geladen werden sollen.  
   
 ```  
 --Sample of data in the DimAccount.txt load file.  
@@ -674,27 +674,27 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 Beschreibung der Befehlszeilenparameter:  
   
--   *C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe* Installationsort der dwloader.exe ist.  
+-   *C:\Programme\Microsoft SQL Server parallel Data Warehouse-\100\dwloader.exe* ist der installierte Speicherort von "dwloader. exe".  
   
--   *-S* die IP-Adresse des steuerungsknotens folgt.  
+-   Auf *-S* folgt die IP-Adresse des Steuerelement Knotens.  
   
--   *-E:* gibt an, dass Sie leere Zeichenfolgen als NULL laden.  
+-   *-E* gibt an, dass leere Zeichen folgen als NULL geladen werden.  
   
--   *Laden Sie -M* gibt an, dass die Zieltabelle abgeschnitten werden, bevor die Daten eingefügt.  
+-   *-M neu laden* gibt an, dass die Ziel Tabelle abgeschnitten wird, bevor die Quelldaten eingefügt werden.  
   
--   *-e: UTF16* gibt an, die Quelldatei verwendet Zeichencodierungstyp mit little-endian.  
+-   *-e UTF16* gibt an, dass für die Quelldatei der kleine Endian-Zeichen Codierungstyp verwendet wird.  
   
--   *-i.\DimAccount.txt* gibt an, die Daten in einer Datei namens DimAccount.txt, die im aktuellen Verzeichnis vorhanden ist.  
+-   *-i .\dimaccount.txt* gibt an, dass sich die Daten in einer Datei mit dem Namen "DimAccount. txt" befinden, die im aktuellen Verzeichnis vorhanden ist.  
   
--   *-T AdventureWorksPDW2012.dbo.DimAccount* gibt den Namen der 3-Teil der Tabelle, die die Daten zu empfangen.  
+-   *-T AdventureWorksPDW2012. dbo. DimAccount* gibt den dreiteiligen Namen der Tabelle an, die die Daten empfangen soll.  
   
--   *-R DimAccount.bad* gibt an, die Zeilen, die nicht geladen werden in eine Datei namens DimAccount.bad geschrieben.  
+-   *-R DimAccount. Bad* gibt an, dass die Zeilen, die nicht geladen werden können, in eine Datei mit dem Namen "DimAccount. Bad" geschrieben werden.  
   
--   *-t "|"*  gibt an, die Felder in der Eingabedatei DimAccount.txt, durch den senkrechten Strich getrennt sind.  
+-   *-t "|"* Gibt an, dass die Felder in der Eingabedatei "DimAccount. txt" durch das Senk Zeichen Zeichen getrennt sind.  
   
--   *-R-\r\n* gibt jede Zeile in DimAccount.txt endet mit einem Wagenrücklauf und ein Zeilenvorschubzeichen.  
+-   *-r \r\n* gibt an, dass jede Zeile in DimAccount. txt mit einem Wagen Rücklauf und einem Zeilenvorschub Zeichen endet.  
   
--   *-U < Login_name > -P <password>*  gibt an, dem Anmeldenamen und Kennwort für die Anmeldung, die über Berechtigungen zum Ausführen der Last verfügt.  
+-   *-U < login_name >-P <password>*  gibt den Anmelde Namen und das Kennwort für den Anmelde Namen an, der über Berechtigungen zum Ausführen der Last verfügt.  
   
 
 <!-- MISSING LINK
