@@ -50,7 +50,7 @@ Der **hierarchyid**-Knoten, für den der IsDescendantOf-Test ausgeführt werden 
   
 **CLR-Rückgabetyp: SqlBoolean**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Gibt true für alle Knoten in der Teilstruktur zurück, die die übergeordnete Struktur als Stamm aufweisen, und false für alle anderen Knoten.
   
 Das übergeordnete Element wird als sein eigener Nachfolger behandelt.

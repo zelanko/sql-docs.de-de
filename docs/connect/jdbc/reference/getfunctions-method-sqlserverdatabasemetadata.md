@@ -50,7 +50,7 @@ public ResultSet getFunctions(java.lang.String catalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getFunctions-Methode wird von der getFunctions-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Von dieser Methode werden nur die System- und Benutzerfunktionen zurückgegeben, die dem angegebenen Schema- und Funktionsnamen entsprechen.  

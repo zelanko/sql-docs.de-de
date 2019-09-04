@@ -41,7 +41,7 @@ Gibt 1 (true) zurück, wenn ein räumliches Objekt mindestens einen M-Wert enth�
   
 CLR-Rückgabetyp: **Boolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
   

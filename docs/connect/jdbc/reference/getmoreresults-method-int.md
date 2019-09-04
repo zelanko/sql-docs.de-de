@@ -51,7 +51,7 @@ public final boolean getMoreResults(int mode)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getMoreResults-Methode wird von der getMoreResults-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
  Falls die getMoreResults-Methode aufgerufen wird, bevor die Ergebnisse abgerufen werden, entspricht das Verhalten dem *mode*-Argument, und das nächste Ergebnis wird aufgerufen.  

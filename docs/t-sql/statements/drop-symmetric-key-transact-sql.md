@@ -51,7 +51,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  REMOVE PROVIDER KEY  
  Entfernt einen Schlüssel für erweiterte Schlüsselverwaltung (Extensible Key Management, EKM) von einem EKM-Gerät. Weitere Informationen zur erweiterbaren Schlüsselverwaltung finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Anweisung erzeugt einen Fehler, wenn der Schlüssel in der aktuellen Sitzung geöffnet ist.  
   
  Wenn der asymmetrische Schlüssel einem Schlüssel für erweiterte Schlüsselverwaltung auf einem EKM-Gerät zugeordnet und die Option **REMOVE PROVIDER KEY** nicht angegeben ist, wird der Schlüssel aus der Datenbank, nicht aber vom Gerät gelöscht, und es wird eine Warnung ausgegeben.  

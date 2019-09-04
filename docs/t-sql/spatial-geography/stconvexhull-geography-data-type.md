@@ -38,7 +38,7 @@ ms.locfileid: "68042470"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gibt ein `FullGlobe` -Objekt für **geography** -Instanzen mit einem Umschlagwinkel größer als 90 Grad zurück.  
   
  Gibt eine leere **geography** -Auflistung für eine leere **geography** -Instanz zurück.  

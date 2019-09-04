@@ -53,7 +53,7 @@ UPDATE ( column )
 ## <a name="return-types"></a>Rückgabetypen  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  UPDATE() gibt TRUE zurück, und zwar unabhängig davon, ob ein INSERT- oder UPDATE-Versuch erfolgreich ist oder nicht.  
   
  Um mehrere Spalten auf eine INSERT- oder UPDATE-Aktion zu testen, geben Sie nach der ersten eine separate UPDATE(*column*)-Klausel an. Mithilfe von COLUMNS_UPDATED können auch mehrere Spalten auf INSERT- oder UPDATE-Aktionen getestet werden. Das hierbei zurückgegebene Bitmuster gibt an, welche Spalten eingefügt oder aktualisiert wurden.  

@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67992700"
 ---
-# <a name="sqlsrvgetconfig"></a>sqlsrv_get_config
+# <a name="sqlsrv_get_config"></a>sqlsrv_get_config
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Gibt den aktuellen Wert der angegebenen Konfigurationseinstellung zurück.  
@@ -41,7 +41,7 @@ sqlsrv_get_config( string $setting )
 ## <a name="return-value"></a>Rückgabewert  
 Der Wert der Einstellung, angegeben durch den *$setting* -Parameter. Wenn eine ungültige Einstellung angegeben wird, wird **false** zurückgegeben und ein Fehler wird zur Fehlersammlung hinzugefügt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn **false** von **sqlsrv_get_config**zurückgegeben wird, müssen Sie [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) aufrufen, um zu bestimmen, ob ein Fehler aufgetreten ist oder ob **false** der Wert der durch den *$setting* -Parameter.  
   
 ## <a name="see-also"></a>Weitere Informationen  

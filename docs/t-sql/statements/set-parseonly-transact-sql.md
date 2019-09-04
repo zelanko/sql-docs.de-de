@@ -46,7 +46,7 @@ ms.locfileid: "68008893"
 SET PARSEONLY { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn SET PARSEONLY auf ON festgelegt ist, wird die Anweisung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur analysiert. Wenn SET PARSEONLY auf OFF festgelegt ist, wird die Anweisung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompiliert und ausgeführt.  
   
  Die Einstellung von SET PARSEONLY erfolgt zur Analysezeit und nicht zur Laufzeit.  

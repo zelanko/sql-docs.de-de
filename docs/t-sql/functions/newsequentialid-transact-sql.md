@@ -50,7 +50,7 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>Rückgabetyp  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  NEWSEQUENTIALID() kann nur in Bezug auf DEFAULT-Einschränkungen für Tabellenspalten des Typs **uniqueidentifier** verwendet werden. Beispiel:  
   
 ```  

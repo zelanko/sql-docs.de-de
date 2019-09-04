@@ -41,7 +41,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>Rückgabewert  
  Gibt ein räumliches Objekt zurück. Dies ist je nach Ausdruckstyp vom Typ **SqlGeometry** oder **SqlGeography**. Weitere Informationen zu den räumlichen Datentypen **SqlGeometry** und **SqlGeography** finden Sie in der [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die im Ausdruck angegebene Gruppe von Daten muss über den gleichen Datentyp verfügen.  
   
  Der Wert des *scope* -Objekts muss eine Zeichenfolgenkonstante sein und darf kein Ausdruck sein. Für äußere Aggregate oder Aggregate, die keine anderen Aggregate angeben, muss das *scope* -Objekt auf den aktuellen Bereich oder einen enthaltenen Bereich verweisen. Datasetbereiche werden nicht unterstützt. Bei Aggregaten von Aggregaten können geschachtelte Aggregate einen untergeordneten Bereich angeben.  

@@ -41,7 +41,7 @@ Gibt 1 zurück, wenn die Ausgangs- und Endpunkte der angegebenen **geometry**-In
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt 0 zurück, wenn eine beliebige Abbildung einer **geometry**-Instanz ein Punkt ist oder wenn die Instanz leer ist.  
   
  Alle **Polygon** -Instanzen werden als geschlossen betrachtet.  

@@ -29,7 +29,7 @@ Die PDO-Klasse enthält Methoden, mit denen Sie Ihre PHP-Anwendung mit einer [!I
 PDO {}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die PDO-Klasse enthält die folgenden Methoden:  
   
 [PDO::__construct](../../connect/php/pdo-construct.md)  

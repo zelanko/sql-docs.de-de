@@ -41,7 +41,7 @@ public string DatabaseLogonAccount;
 ## <a name="example-code"></a>Beispielcode  
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gültige Werte für diese Eigenschaft hängen vom Wert der [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) -Eigenschaft ab.  
   
  Diese Eigenschaft wird ignoriert, wenn die [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) -Eigenschaft auf **2 (Service)** festgelegt ist.  

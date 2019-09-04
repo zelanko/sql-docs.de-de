@@ -31,7 +31,7 @@ DAY(date)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Datum*  
+ *date*  
  Ein Ausdruck, der ein gültiges Datum oder eine Zeichenfolge im Datumsformat zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  

@@ -41,7 +41,7 @@ ms.locfileid: "67930384"
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STBoundary()` gibt eine leere **GeometryCollection** zurück, wenn de Endpunkte für eine **LineString**-, **CircularString**- oder **CompoundCurve**-Instanz gleich sein.  
   
 ## <a name="examples"></a>Beispiele  

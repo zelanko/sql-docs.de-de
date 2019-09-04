@@ -68,7 +68,7 @@ ms.locfileid: "67902014"
   
  REMOTE kann nur für INNER JOIN-Vorgänge verwendet werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Joinhinweise werden in der FROM-Klausel einer Abfrage angegeben. Sie erzwingen eine Joinstrategie zwischen zwei Tabellen. Falls ein Joinhinweis für zwei beliebige Tabellen angegeben ist, erzwingt der Abfrageoptimierer automatisch die Joinreihenfolge für alle verknüpften Tabellen der Abfrage abhängig von der Position der ON-Schlüsselwörter. Wird CROSS JOIN ohne die ON-Klausel verwendet, kann die Joinreihenfolge mithilfe von Klammern angegeben werden.  
   
 ## <a name="examples"></a>Beispiele  

@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67913944"
 ---
-# <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
+# <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Steuert eine Gruppe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Einstellungen, die zusammen einen bestimmten Teil des Standardverhaltens von ISO angeben.  
@@ -49,7 +49,7 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 ANSI_DEFAULTS ist eine serverseitige Einstellung, die vom Client nicht verändert wird. Der Client verwaltet eigene Einstellungen. Diese Einstellungen sind standardmäßig das Gegenstück zur Servereinstellung. Benutzer sollten die Servereinstellung nicht ändern. Zum Ändern des Clientverhaltens sollten Benutzer SQL_COPT_SS_PRESERVE_CURSORS verwenden. Weitere Informationen finden Sie unter [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md).  
   
 Wird die Option aktiviert (ON), werden die folgenden ISO-Einstellungen aktiviert:  

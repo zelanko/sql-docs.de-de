@@ -45,7 +45,7 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese commit-Methode wird von der commit-Methode in der javax.transaction.xa.XAResource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

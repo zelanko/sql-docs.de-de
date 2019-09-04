@@ -22,7 +22,7 @@ ms.locfileid: "67935957"
 
 Localdb ist eine vereinfachte Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die seit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]verfügbar ist. In diesem Thema wird erläutert, wie in einer LocalDB-Instanz eine Verbindung mit einer Datenbank hergestellt wird.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Weitere Informationen zu localdb, einschließlich der Installation von localdb und der Konfiguration der localdb-Instanz, finden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie im Thema der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Online Dokumentation zu Express localdb.
 

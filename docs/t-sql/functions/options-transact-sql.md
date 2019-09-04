@@ -42,7 +42,7 @@ ms.locfileid: "67914638"
 ## <a name="return-types"></a>Rückgabetypen  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Optionen werden zurückgegeben, wenn Sie den **SET**-Befehl oder die **sp_configure-Benutzeroptionen** verwenden. Mithilfe des **SET**-Befehls konfigurierte Sitzungswerte überschreiben die **sp_configure**-Optionen. Viele Tools (beispielsweise [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) konfigurieren SET-Optionen automatisch. Jeder Benutzer verfügt über eine @@OPTIONS-Funktion, die die Konfiguration darstellt.  
   
  Sie können die Sprache und die Abfrageverarbeitungsoptionen für eine bestimmte Benutzersitzung mithilfe der SET-Anweisung ändern. **@@OPTIONS** kann nur die Optionen erkennen, die auf ON oder OFF festgelegt sind.  

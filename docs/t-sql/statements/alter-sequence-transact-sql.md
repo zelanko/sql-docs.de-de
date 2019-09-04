@@ -77,7 +77,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
  Weitere Informationen zum Verhalten des Caches finden Sie unter [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zum Erstellen von Sequenzen sowie zum Verwalten des Sequenzcaches finden Sie unter [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md).  
   
  Der MINVALUE für aufsteigende Sequenzen und der MAXVALUE für absteigende Sequenzen können nicht auf einen Wert festgelegt werden, der den START WITH-Wert der Sequenz nicht zulässt. Um den MINVALUE einer aufsteigenden Sequenz auf einen höheren Wert als START WITH festzulegen, oder um den MAXVALUE einer absteigenden Sequenz auf einen niedrigeren Wert als START WITH festzulegen, schließen Sie das RESTART WITH-Argument ein, damit die Sequenz an einem gewünschten Punkt neu gestartet wird, der innerhalb des minimalen und maximalen Bereichswerts liegt.  

@@ -48,9 +48,9 @@ Ein optionaler ganzzahliger Ausdruck, der die Anzahl der Monate angibt, die zu *
 Wenn das Argument *month_to_add* über einen Wert verfügt, fügt `EOMONTH` die angegebene Anzahl von Monaten zu *start_date* hinzu und gibt dann den letzten Tag des Monats für das sich ergebende Datum zurück. Wenn das Hinzufügen der gültigen Datumsbereiche einen Überlauf verursacht, löst `EOMONTH` einen Fehler aus.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **Datum**  
+ **date**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die Funktion `EOMONTH` kann auf [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Servern und höher remote ausgeführt werden. Sie kann nicht auf Servern mit einer niedrigeren Version als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] remote ausgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH mit und ohne den month_to_add-Parameter  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. EOMONTH mit und ohne den month_to_add-Parameter  
   
 Hinweis: Die in diesen Resultsets gezeigten Werte stellen ein Ausführungsdatum zwischen und einschließlich der folgenden dar:
         

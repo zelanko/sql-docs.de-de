@@ -72,7 +72,7 @@ ALTER DATABASE ENCRYPTION KEY
  ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
  Gibt den Namen des asymmetrischen Schlüssels an, der zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird, muss sich in der master-Systemdatenbank befinden.  
   
  Der Verschlüsselungsschlüssel für die Datenbank muss nicht erneut generiert werden, wenn der Datenbankbesitzer geändert wird.

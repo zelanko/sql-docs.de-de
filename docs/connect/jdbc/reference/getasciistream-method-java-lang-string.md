@@ -45,7 +45,7 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getAsciiStream-Methode wird von der getAsciiStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

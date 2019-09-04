@@ -53,7 +53,7 @@ Bei „characters“ handelt es sich um ein Literal, eine Variable oder ein Funk
 
 Gibt einen Zeichenausdruck mit einem Zeichenargumenttyp zurück, aus dem das Leerzeichen `char(32)` oder andere angegebene Zeichenfolgen auf beiden Seiten entfernt werden sollen. Gibt `NULL` zurück, wenn die Eingabezeichenfolge `NULL` ist.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Standardmäßig entfernt die `TRIM`-Funktion das Leerzeichen sowohl am Anfang als auch am Ende der Zeichenfolge. Dieses Verhalten entspricht `LTRIM(RTRIM(@string))`.
 

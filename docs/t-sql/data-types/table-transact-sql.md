@@ -65,7 +65,7 @@ Weitere Informationen zur Syntax finden Sie unter [CREATE TABLE &#40;Transact-SQ
 *collation_definition*  
 Die Sortierung einer Spalte, die aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema und einer Vergleichsart, einem Windows-Gebietsschema und der Binärschreibweise oder einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierung besteht. Wenn *collation_definition* nicht angegeben ist, erbt die Spalte die Sortierung der aktuellen Datenbank. Wenn die Spalte als CLR-benutzerdefinierter Typ (Common Language Runtime) definiert ist, erbt die Spalte die Sortierung des benutzerdefinierten Typs.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 **table** verweist anhand des Namens in der FROM-Klausel eines Batches auf Variablen, wie im folgenden Beispiel gezeigt:
   
 ```sql

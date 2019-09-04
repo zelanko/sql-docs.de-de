@@ -62,7 +62,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt mit dem Typ der Sequenz eine Nummer zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **NEXT VALUE FOR**-Funktion kann in gespeicherten Prozeduren und Triggern verwendet werden.  
   
  Wird bei Verwendung der **NEXT VALUE FOR**-Funktion in einer Abfrage oder Standardeinschränkung das gleiche Sequenzobjekt mehr als einmal verwendet oder das gleiche Sequenzobjekt sowohl in der Anweisung, die die Werte angibt, als auch in einer ausgeführten Standardeinschränkung verwendet, wird der gleiche Wert für alle Spalten zurückgegeben, die in einer Zeile im Resultset auf die gleiche Sequenz verweisen.  

@@ -85,7 +85,7 @@ Der lesbare Name des Informationstyps. Informationstypen werden verwendet, um de
 Ein Bezeichner, dem der Informationstyp zugeordnet ist. Dieser wird häufig von zentralen Plattformen zum Schutz von Informationen verwendet, um Informationstypen im System eindeutig zu identifizieren.
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 - Einem einzelnen Objekt kann nur eine Klassifizierung hinzugefügt werden. Wird einem bereits klassifizierten Objekt eine Klassifizierung hinzugefügt, überschreibt diese die vorhandene Klassifizierung.
 - Mehrere Objekte können mit einer einzigen `ADD SENSITIVITY CLASSIFICATION`-Anweisung klassifiziert werden.

@@ -68,7 +68,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **-querytimeout** _timeout_value_  
  Gibt die für das Starten des angegebenen Vorgangs vorgesehene Zeit an, bevor für den Versuch ein Timeout auftritt. Der Standard ist kein Timeout. *timeout_value* hat den Typ **int** _._  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie zum Sichern, Kopieren und Wiederherstellen nach Möglichkeit die Sicherungs-, Kopier- und Wiederherstellungsaufträge. Rufen Sie die gespeicherte Prozedur [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) auf, um diese Aufträge aus einem Batchvorgang oder einer anderen Anwendung zu starten.  
   
  Der von **sqllogship** erstellte Protokollversandverlauf wird in den vom Protokollversand-Sicherungsauftrag, -Kopierauftrag und -Wiederherstellungsauftrag erstellten Verlauf eingefügt. Wenn Sie **sqllogship** wiederholt zum Ausführen von Sicherungs-, Kopier- und Wiederherstellungsvorgängen für eine Protokollversandkonfiguration verwenden möchten, sollten Sie den entsprechenden Protokollversandauftrag bzw. die entsprechenden Protokollversandaufträge deaktivieren. Weitere Informationen finden sie unter [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  

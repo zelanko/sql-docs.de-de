@@ -35,7 +35,7 @@ public boolean isPoolable() throws SQLException
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md) wird für ein Objekt das Verhalten beim Hinzufügen zu Pools geändert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

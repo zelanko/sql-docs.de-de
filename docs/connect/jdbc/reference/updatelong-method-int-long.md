@@ -47,7 +47,7 @@ public void updateLong(int index,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updateLong-Methode wird von der updateLong-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

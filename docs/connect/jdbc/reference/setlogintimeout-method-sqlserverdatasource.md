@@ -39,7 +39,7 @@ public void setLoginTimeout(int loginTimeout)
   
  Ein Wert vom Typ **int** zum Darstellen der Wartedauer in Sekunden. Mit dem Wert "0" wird angegeben, dass es sich bei dem Timeout um das Standardsystemtimeout (standardmäßig 15 Sekunden) handelt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setLoginTimeout-Methode wird von der setLoginTimeout-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

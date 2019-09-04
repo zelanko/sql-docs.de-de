@@ -51,7 +51,7 @@ public final void setFetchDirection(int nDir)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setFetchDirection-Methode wird von der setFetchDirection-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

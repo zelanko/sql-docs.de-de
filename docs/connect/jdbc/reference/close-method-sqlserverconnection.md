@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese close-Methode wird von der close-Methode in der java.sql.Connection-Schnittstelle angegeben.  
   
  Durch Aufrufen der close-Methode in der Mitte einer Transaktion wird ein Rollback für die Transaktion ausgeführt.  

@@ -43,7 +43,7 @@ $*driver_options*: die optionalen (gemischten) treiberspezifischen Optionen. Bei
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Beim Binden von NULL-Daten an Serverspalten vom Typ „varbinary“, „binary“ oder „varbinary(max)“ sollten Sie die binäre Codierung (PDO::SQLSRV_ENCODING_BINARY) unter Verwendung von $*driver_options* angeben. Weitere Informationen zu Codierungskonstanten finden Sie unter [Konstanten](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  

@@ -233,7 +233,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]
 >  Parallele Indexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Berechnete Spalten, die von **xml**-Datentypen abgeleitet wurden, können als Schlüsselspalten oder als eingeschlossene Nichtschlüsselspalten indiziert werden, vorausgesetzt, der Datentyp der berechneten Spalte ist als Indexschlüsselspalte oder -nichtschlüsselspalte zulässig. Sie können keinen primären XML-Index für eine berechnete **xml**-Spalte erstellen.  
   
  Zum Anzeigen von Informationen zu XML-Indizes verwenden Sie die Katalogsicht [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md).  

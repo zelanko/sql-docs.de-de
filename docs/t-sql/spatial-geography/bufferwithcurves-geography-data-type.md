@@ -54,7 +54,7 @@ ms.locfileid: "68066551"
   
 -   **NULL** wird an die Methode übergeben, beispielsweise `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die folgende Tabelle zeigt die Ergebnisse an, die für verschiedene Entfernungswerte zurückgegeben wurden.  
   
 |distance-Wert|Type-Dimensionen|Räumlicher Rückgabetyp|  

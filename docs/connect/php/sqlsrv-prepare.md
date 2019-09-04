@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68014979"
 ---
-# <a name="sqlsrvprepare"></a>sqlsrv_prepare
+# <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Erstellt eine Anweisungsressource, die mit der angegebenen Verbindung verknüpft ist. Diese Funktion ist nützlich für die Ausführung mehrerer Abfragen.  
@@ -80,7 +80,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>Rückgabewert  
 Eine Anweisungsressource. Wenn die Anweisungsressource nicht erstellt werden kann, wird **false** zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn Sie eine Anweisung vorbereiten, die Variablen als Parameter verwendet, werden die Variablen an die Anweisung gebunden. Das bedeutet, dass die Anweisung beim nächsten Ausführen mit aktualisierten Parametern laufen wird, wenn Sie die Variablenwerte aktualisieren.  
   
 Die Kombination von **sqlsrv_prepare** und **sqlsrv_execute** trennt Anweisungsvorbereitung und Ausführen der Anweisung in zwei Funktionsaufrufe und kann verwendet werden, um parametrisierte Abfragen ausführen. Diese Funktion eignet sich zum mehrfachen Ausführen einer Anweisung mit verschiedenen Parameterwerten für jede Ausführung.  

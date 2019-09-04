@@ -52,7 +52,7 @@ SQL Server-Rückgabetyp: **geometry**
   
 -   **NULL** wird an die Methode übergeben, beispielsweise `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die folgende Abbildung zeigt ein Beispiel für eine geometry-Instanz an, die von dieser Methode zurückgegeben wurde.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)

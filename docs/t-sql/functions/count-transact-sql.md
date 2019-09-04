@@ -67,7 +67,7 @@ Das Argument *partition_by_clause* unterteilt das von der `FROM`-Klausel erzeugt
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 COUNT(\*) gibt die Anzahl der Elemente in einer Gruppe zurück. Dies schließt NULL-Werte und Duplikate ein.
   
 COUNT(ALL *expression*) wertet *expression* für jede Zeile in einer Gruppe aus und gibt die Anzahl der Werte zurück, die nicht NULL sind.

@@ -78,7 +78,7 @@ Gibt den Namen der Verschlüsselung an, die zum Verschlüsseln des Verschlüssel
 ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 Gibt den Namen des asymmetrischen Schlüssels an, der zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird. Um den Verschlüsselungsschlüssel für die Datenbank mit einem asymmetrischen Schlüssel zu verschlüsseln, muss sich der asymmetrische Schlüssel auf einem erweiterbaren Schlüsselverwaltungsanbieter befinden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Bevor eine Datenbank mit *Transparent Database Encryption* (TDE) verschlüsselt werden kann, wird ein Verschlüsselungsschlüssel für eine Datenbank wird benötigt. Wenn eine Datenbank transparent verschlüsselt ist, so ist die gesamte Datenbank auf Dateiebene ohne spezielle Codeänderungen verschlüsselt. Das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Verschlüsseln des Verschlüsselungsschlüssels für die Datenbank verwendet wird, muss sich in der master-Systemdatenbank befinden.  
   
 Datenbankverschlüsselungsanweisungen sind nur für Benutzerdatenbanken zulässig.  

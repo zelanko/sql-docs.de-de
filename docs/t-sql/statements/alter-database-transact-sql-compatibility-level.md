@@ -70,7 +70,7 @@ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version, mit der d
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |SQL Server 2000|8|80|80|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Bei allen Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist der Standardkompatibilitätsgrad auf die Version der [!INCLUDE[ssDE](../../includes/ssde-md.md)] festgelegt. Neue Datenbanken sind auf diesen Grad festgelegt, sofern der Kompatibilitätsgrad der **model**-Datenbank nicht niedriger ist. Wenn Datenbanken aus einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angefügt oder wiederhergestellt werden, behält die Datenbank ihren vorhandenen Kompatibilitätsgrad, wenn es sich dabei um den zulässigen Mindestwert für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder um einen höheren Wert handelt. Bei einem Upgrade einer Datenbank, deren Kompatibilitätsgrad unterhalb des von [!INCLUDE[ssde_md](../../includes/ssde_md.md)] festgelegten zulässigen Grads liegt, wird die Datenbank automatisch auf den niedrigsten zulässigen Kompatibilitätsgrad festgelegt. Dies gilt sowohl für die System- als auch für die Benutzerdatenbanken.
 
 Die folgenden Verhaltensweisen werden für [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] erwartet, wenn eine Datenbank angefügt oder wiederhergestellt wird, und werden nach einem direkten Upgrade erwartet:

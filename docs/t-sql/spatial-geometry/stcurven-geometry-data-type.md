@@ -45,7 +45,7 @@ Gibt die von einer Instanz von **geometry** angegebene Kurve zurück, bei der es
 ## <a name="exceptions"></a>Ausnahmen  
  Wenn *curve_index* < 1 ist, wird der Fehler `ArgumentOutOfRangeException` ausgelöst.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **NULL** wird in folgenden Fällen zurückgegeben:  
   
 -   Die **geometry** -Instanz ist deklariert, aber nicht instanziiert.  

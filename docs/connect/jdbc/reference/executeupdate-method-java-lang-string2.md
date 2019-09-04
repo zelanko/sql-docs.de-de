@@ -43,7 +43,7 @@ Ein **int**-Wert, der die Anzahl der betroffenen Zeilen angibt, oder „0“ bei
 ## <a name="exceptions"></a>Ausnahmen
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Diese executeUpdate-Methode wird von der executeUpdate-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.
 
 Durch den Aufruf dieser Methode wird eine Ausnahme ausgelöst, da die SQL-Anweisung für das SQLServerPreparedStatement-Objekt bei der Erstellung des Objekts angegeben wird.

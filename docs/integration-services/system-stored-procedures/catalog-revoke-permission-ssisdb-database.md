@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67897871"
 ---
-# <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (SSISDB-Datenbank)
+# <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -67,7 +67,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 ## <a name="result-sets"></a>Resultsets  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  None  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -79,7 +79,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn „permission_type“ angegeben wird, entfernt die gespeicherte Prozedur die Berechtigung, die dem Prinzipal für das Objekt explizit zugewiesen wurde. Auch wenn keine solchen Instanzen vorhanden sind, gibt die Prozedur einen Erfolgscodewert (`0`) zurück. Wenn „permission_type“ ausgelassen wird, entfernt die gespeicherte Prozedur alle Berechtigungen des Prinzipals für das Objekt.  
   
 > [!NOTE]  

@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Gibt eine Tabelle mit den Werten aus allen Zeilen aus der aktuellen Tabelle und aus der Verlaufstabelle zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die FROM-Klausel unterstützt die SQL-Syntax von SQL-92 für verknüpfte und abgeleitete Tabellen. Die SQL-92-Syntax stellt die Joinoperatoren INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER und CROSS zur Verfügung.  
   
  UNION und JOIN in einer FROM-Klausel werden in Sichten, abgeleiteten Tabellen und Unterabfragen unterstützt.  
@@ -630,7 +630,7 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. Verwenden von FOR SYSTEM_TIME  
+### <a name="m-using-for-system_time"></a>M. Verwenden von FOR SYSTEM_TIME  
   
 **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

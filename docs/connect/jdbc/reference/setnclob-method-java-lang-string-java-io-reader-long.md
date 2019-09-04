@@ -47,7 +47,7 @@ public final void setNClob(java.lang.String parameterName,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode sollte für **NCHAR**-, **nvarchar**-, **ntext**-und **XML** -Parameter Datentypen verwendet werden.  
   
  Diese setNClob-Methode wird von der setNClob-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  

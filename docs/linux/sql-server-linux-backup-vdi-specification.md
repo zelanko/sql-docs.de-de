@@ -65,7 +65,7 @@ In diesem Abschnitt werden die einzelnen Clientfunktionen beschrieben. Die Besch
 - Funktionssyntax
 - Parameterliste
 - Rückgabewerte
-- Remarks
+- Bemerkungen
 
 ## <a name="clientvirtualdevicesetcreate"></a>ClientVirtualDeviceSet::Create
 

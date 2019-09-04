@@ -47,7 +47,7 @@ public void setBytes(java.lang.String sCol,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In einer früheren Version des Treibers konnten Sie mithilfe von „SQLServerCallableStatement.setBytes“ Werte zwischen Bytearrays und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp **date**, **time**, **datetime2** oder **datetimeoffset** konvertieren. Nun wird durch Verwendung der Methode mit diesen Datentypen eine Ausnahme ausgelöst, die angibt, dass die Konvertierung nicht unterstützt wird.  
   
  Diese setBytes-Methode wird von der setBytes-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  

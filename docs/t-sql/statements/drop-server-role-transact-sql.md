@@ -45,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  Gibt die benutzerdefinierte Serverrolle an, die vom Server gelöscht werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Benutzerdefinierte Serverrollen, die sicherungsfähige Elemente besitze, können nicht vom Server gelöscht werden. Wenn eine benutzerdefinierte Serverrolle mit sicherungsfähigen Elementen gelöscht werden soll, müssen Sie zunächst den Besitz der sicherungsfähigen Elemente übertragen oder sie aus der Datenbank löschen.  
   
  Benutzerdefinierte Serverrollen, die über Elemente verfügen, können nicht gelöscht werden. Um eine benutzerdefinierte Serverrolle mit Mitgliedern zu löschen, müssen Sie zuerst Mitglieder der Rolle mit [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) entfernen.  

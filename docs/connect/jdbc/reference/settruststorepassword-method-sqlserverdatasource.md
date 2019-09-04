@@ -39,7 +39,7 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
   
  Eine **Zeichenfolge** mit dem Kennwort, das zum Überprüfen der Integrität der trustStore-Daten verwendet wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die trustStorePassword-Eigenschaft kann zusammen mit der trustStore-Eigenschaft angegeben werden, und deren Wert wird zum Prüfen der Integrität der trustStore-Datei verwendet.  
   
  Wenn die trustStore-Eigenschaft festgelegt ist, die trustStorePassword-Eigenschaft jedoch nicht festgelegt wurde, wird die Integrität von "trustStore" nicht überprüft.  

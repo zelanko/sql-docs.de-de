@@ -42,7 +42,7 @@ ms.locfileid: "68042466"
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gibt 1 zurück, wenn die aufrufende **geography**-Instanz die an die Methode übergebene **geography**-Instanz räumlich enthält, und gibt andernfalls 0 (null) zurück. Gibt **NULL** zurück, wenn die SRID der beiden **geography**-Instanzen nicht übereinstimmt.  
   
 ## <a name="examples"></a>Beispiele  

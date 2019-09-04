@@ -30,7 +30,7 @@ Wenn die Anwendung keine Verschlüsselung anfordert, erzwingt [!INCLUDE[jdbcNoVe
 >
 > Weitere Informationen zum Konfigurieren von SSL für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie im Thema zum Verschlüsseln von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Damit die SSL-Verschlüsselung von Anwendungen verwendet werden kann, hat [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ab Version 1.2 die folgenden Verbindungseigenschaften eingeführt: **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** und **hostNameInCertificate**. Weitere Informationen zum Festlegen der Verbindungseigenschaften finden Sie unter [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
   

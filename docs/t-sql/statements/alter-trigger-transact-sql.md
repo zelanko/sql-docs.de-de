@@ -216,7 +216,7 @@ AS { sql_statement
   
  Gibt die Methode an, mit der eine Assembly eine Bindung mit dem Trigger herstellt. Die Methode darf keine Argumente enthalten und muss "void" zurückgeben. *class_name* muss ein gültiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein und als Klasse mit Assemblysichtbarkeit in der Assembly vorhanden sein. Bei der Klasse darf es sich nicht um eine geschachtelte Klasse handeln.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zu ALTER TRIGGER finden Sie in den Hinweisen unter [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 > [!NOTE]  

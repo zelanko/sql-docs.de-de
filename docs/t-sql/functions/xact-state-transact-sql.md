@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67927423"
 ---
-# <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
+# <a name="xact_state-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Eine Skalarfunktion, die den Status einer Benutzertransaktion einer zurzeit ausgeführten Anforderung meldet. XACT_STATE gibt an, ob für die Anforderung eine aktive Benutzertransaktion vorliegt und ob für die Transaktion ein Commit ausgeführt werden kann.  
@@ -46,7 +46,7 @@ XACT_STATE()
 ## <a name="return-type"></a>Rückgabetyp  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  XACT_STATE gibt folgende Werte zurück.  
   
 |Rückgabewert|Bedeutung|  

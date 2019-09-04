@@ -113,7 +113,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zu Datenbankprinzipalen werden in der [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)-Katalogsicht angezeigt. Informationen zu Berechtigungen auf Datenbankebene werden in der [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)-Katalogsicht angezeigt.  
   
 ## <a name="database-user-permissions"></a>Berechtigungen für Datenbankbenutzer  

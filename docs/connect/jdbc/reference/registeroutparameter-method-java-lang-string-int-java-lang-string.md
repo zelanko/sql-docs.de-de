@@ -52,7 +52,7 @@ public void registerOutParameter(java.lang.String s,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese registerout Parameter-Methode wird von der registerout Parameter-Methode in der Java. SQL. CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

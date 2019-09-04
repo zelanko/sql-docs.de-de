@@ -39,7 +39,7 @@ public void setEncypt(boolean encrypt)
   
  **true** , wenn die Secure Sockets Layer (SSL)-Verschlüsselung zwischen dem Client und dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aktiviert ist. Andernfalls lautet der Wert **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ist die encrypt-Eigenschaft auf **TRUE** festgelegt, wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] sichergestellt, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für alle zwischen Client und Server versendeten Daten die SSL-Verschlüsselung (Secure Sockets Layer) verwendet, sofern auf dem Server ein Zertifikat installiert ist. Der Standardwert ist **false**.  
   
  Bei der Initiierung eines SSL-Handshakes wird vom JDBC-Treiber die Java Virtual Machine (JVM) erkannt, auf der er ausgeführt wird.  

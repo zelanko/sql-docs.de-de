@@ -105,7 +105,7 @@ DDL Triggers with Database Scope
   
  *login_name* kann kein(e) Gruppe, Rolle, Zertifikat, Schlüssel oder integriertes Konto sein, wie z.B. NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService oder NT AUTHORITY\LocalSystem.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wie [!INCLUDE[ssDE](../../includes/ssde-md.md)] Berechtigungen für Objekte auswertet, auf die im Modul verwiesen wird, hängt von der Besitzkette ab, die zwischen den aufrufenden Objekten und den Objekten vorhanden ist, auf die verwiesen wird. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] war die Besitzverkettung die einzig verfügbare Methode, um zu vermeiden, dass dem aufrufenden Benutzer der Zugriff für alle Objekte, auf die verwiesen wird, erteilt werden muss.  
   
  Für die Besitzverkettung gelten die folgenden Einschränkungen:  

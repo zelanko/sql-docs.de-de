@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="service-broker-contracts"></a>Service Broker-Verträge  
  Ein [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Vertrag ist ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und am meisten beschränkten Berechtigungen, die für einen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Vertrag widerrufen werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  

@@ -42,7 +42,7 @@ public void forget(javax.transaction.xa.Xid xid)
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese forget-Methode wird von der forget-Methode in der javax.transaction.xa.XAResource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

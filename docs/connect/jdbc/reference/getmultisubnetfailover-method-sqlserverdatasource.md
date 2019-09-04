@@ -31,7 +31,7 @@ public boolean getMultiSubnetFailover();
 ## <a name="return-value"></a>Rückgabewert  
  Gibt in Abhängigkeit von der aktuellen Einstellung der Verbindungseigenschaft true oder false zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zur **multisubnetfailover** -Verbindungs Eigenschaft finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

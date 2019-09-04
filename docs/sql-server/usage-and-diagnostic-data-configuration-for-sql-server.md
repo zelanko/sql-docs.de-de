@@ -55,7 +55,7 @@ Schauen Sie sich [Kundenfeedback zu SQL Server unter Linux](https://docs.microso
 > [!NOTE]
 > Sie können das Senden von Informationen an Microsoft nur in bezahlten Versionen von SQL Server deaktivieren.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
  - Das Entfernen oder Deaktivieren des CEIP-Diensts für SQL wird nicht unterstützt. 
  - Das Entfernen von CEIP-Ressourcen für SQL aus der Clustergruppe wird nicht unterstützt. 
 

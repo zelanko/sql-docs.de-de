@@ -42,7 +42,7 @@ public void addBatch(java.lang.String sql)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese addBatch-Methode wird von der addBatch-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

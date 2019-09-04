@@ -42,7 +42,7 @@ Die **certificate_id** des Zertifikats. Diesen Wert finden Sie in „sys.certifi
 ## <a name="return-types"></a>Rückgabetypen
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 **CERTENCODED** und **CERTPRIVATEKEY** werden zusammen verwendet, um andere Teile eines Zertifikats in binärer Form zurückzugeben.
   
 ## <a name="permissions"></a>Berechtigungen  

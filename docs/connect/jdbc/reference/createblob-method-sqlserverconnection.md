@@ -35,7 +35,7 @@ public java.sql.Blob createBlob()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode "kreateblob" wird von der Methode "-Methode" in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Diese Methode ersetzt den Bedarf an [SQLServerBlob-Konstruktor &#40;SQLServerConnection,&#41;Byte](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md).  

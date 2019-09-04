@@ -43,7 +43,7 @@ ms.locfileid: "68094588"
 ## <a name="return-types"></a>Rückgabetypen  
  integer  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gibt 0 zurück, wenn bei der vorherigen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung keine Fehler auftraten.  
   
  Gibt eine Fehlernummer zurück, wenn bei der vorherigen Anweisung ein Fehler auftrat. Wenn es sich bei dem Fehler um einen der Fehler in der sys.messages-Katalogsicht handelt, enthält @@ERROR den Wert der sys.messages.message_id-Spalte dieses Fehlers. Sie können den zu einer @@ERROR-Fehlernummer gehörenden Text in sys.messages anzeigen.  

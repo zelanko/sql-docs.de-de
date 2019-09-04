@@ -40,7 +40,7 @@ public java.lang.String getCatalogTerm()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getCatalogTerm-Methode wird von der getCatalogTerm-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, wird von dieser Methode der Begriff „database“ zurückgegeben.  

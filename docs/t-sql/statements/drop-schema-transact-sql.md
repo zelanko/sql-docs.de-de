@@ -59,7 +59,7 @@ DROP SCHEMA schema_name
  *schema_name*  
  Der Name des Schemas in der Datenbank.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das zu löschende Schema darf keine Objekte enthalten. Falls das Schema Objekte enthält, erzeugt die DROP-Anweisung einen Fehler.  
   
  Informationen zu Schemas werden in der [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)-Katalogsicht angezeigt.  

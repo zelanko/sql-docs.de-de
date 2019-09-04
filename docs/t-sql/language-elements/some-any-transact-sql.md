@@ -62,7 +62,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ## <a name="result-value"></a>Ergebniswert  
  SOME oder ANY geben **TRUE** zurück, wenn der angegebene Vergleich für ein Paar (_scalar_expression_ **,** _x_) TRUE ergibt, wenn *x* ein Wert im Einspaltensatz ist. Andernfalls wird **FALSE** zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SOME erfordert, dass *scalar_expression* mit mindestens einem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird. Anweisungen, die erfordern, dass *scalar_expression* mit jedem von der Unterabfrage zurückgegebenen Wert positiv verglichen wird, finden Sie unter [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = SOME (Unterabfrage) für *scalar_express* = 2 TRUE. Wenn die Unterabfrage beispielsweise die Werte 2 und 3 zurückgibt, ergibt *scalar_expression* = ALL (Unterabfrage) FALSE, da einige Werte der Unterabfrage (der Wert 3) die Kriterien des Ausdrucks nicht erfüllen.  
   
 ## <a name="examples"></a>Beispiele  

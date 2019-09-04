@@ -40,7 +40,7 @@ public final int getFetchSize()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getFetchSize-Methode wird von der getFetchSize-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -35,7 +35,7 @@ ms.locfileid: "67970891"
 public class SQLServerParameterMetaData  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zum Abrufen der Metadaten von Parametern werden vorbereitete Anweisungen mit SET FMT ONLY ausgeführt. Von aufrufbaren Anweisungen wird "sp_sproc_columns" aufgerufen, um Namen und Metadaten für die Prozedurparameter abzurufen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

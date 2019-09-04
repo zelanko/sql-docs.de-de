@@ -361,7 +361,7 @@ Auch wenn eine Abfrage keine Tabelle mit einem Columnstore-Index beinhaltet, ver
 
 Wenn der Batch-modus bei Rowstow verwendet wird, sehen Sie den tatsächlichen Ausführungsmodus als **Batchmodus** im Abfrageplan. Der Scan-Operator verwendet den Batchmodus für On-Disk-Heaps und B-Struktur-Indizes. Diese Überprüfung im Batchmodus kann Batchmodus-Bitmapfilter auswerten. Vielleicht finden Sie auch andere Batchmodusoperatoren im Plan. Beispielsweise Hashjoins, hashbasierte Aggregate, Sortierungen, Fensteraggregate, Filter, Verkettung und Skalarwertberechnungs-Operatoren.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Bemerkungen
 
 * Abfragepläne verwenden nicht immer den Batchmodus. Der Abfrageoptimierer entscheidet möglicherweise, dass der Batchmodus für die Abfrage nicht sinnvoll ist. 
 * Der Suchbereich des Abfrageoptimierers ändert sich. Wenn Sie also einen Zeilenmodusplan erhalten, ist er möglicherweise nicht derselbe wie der Plan, den Sie in einem niedrigeren Kompatibilitätsgrad erhalten. Und wenn Sie einen Batchmodusplan erhalten, ist er möglicherweise nicht derselbe wie der Plan, den Sie mit einem Columnstore-Index erhalten. 

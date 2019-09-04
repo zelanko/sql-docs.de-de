@@ -62,7 +62,7 @@ Gibt einen Ausdruck an, der zu einer Zeichenfolge oder Binärzeichenfolge ausgew
 ## <a name="return-value"></a>Rückgabewert  
  **varbinary** (maximal 8.000 Byte)  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Erwägen Sie die Verwendung von `CHECKSUM` oder `BINARY_CHECKSUM` als Alternativen zur Berechnung eines Hashwerts.
 
 Die Algorithmen MD2, MD4, MD5, SHA und SHA1 sind ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] veraltet. Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.

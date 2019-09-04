@@ -52,7 +52,7 @@ dividend / divisor
   
  Wenn ein *dividend*-Integer durch einen *divisor*-Integer geteilt wird, ist das Ergebnis ein Integer, dessen Dezimalstellen abgeschnitten werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Ist-Wert, der vom Operator / zurückgegeben wird, ist der Quotient aus dem ersten Ausdruck geteilt durch den zweiten.  
   
 ## <a name="examples"></a>Beispiele  

@@ -43,7 +43,7 @@ exist (XQuery)
  XQuery  
  Ein XQuery-Ausdruck, ein Zeichenfolgenliteral.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]  
 >  Die **exist()** -Methode gibt 1 für den XQuery-Ausdruck zurück, der ein nicht leeres Ergebnis zurückgibt. Wenn Sie die **true()** - oder **false()** -Funktionen in der **exist()** -Methode angeben, gibt die **exist()** -Methode 1 zurück, da die Funktionen **true()** und **false()** den booleschen Wert True bzw. False zurückgeben. D. h., sie geben ein nicht leeres Ergebnis zurück. Daher gibt **exist()** den Wert 1 (True) zurück, wie im folgenden Beispiel gezeigt:  

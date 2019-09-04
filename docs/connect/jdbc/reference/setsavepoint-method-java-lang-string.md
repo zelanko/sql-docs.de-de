@@ -45,7 +45,7 @@ public java.sql.Savepoint setSavepoint(java.lang.String sName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setSavepoint-Methode wird von der setSavepoint-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Das *sName*-Argument wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatisch mit Escapezeichen versehen.  

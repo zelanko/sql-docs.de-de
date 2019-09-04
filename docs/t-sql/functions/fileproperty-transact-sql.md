@@ -60,7 +60,7 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  *file_name* entspricht der **name**-Spalte in den Katalogsichten **sys.master_files** oder **sys.database_files**.  
   
 ## <a name="examples"></a>Beispiele  

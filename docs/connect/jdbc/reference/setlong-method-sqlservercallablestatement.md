@@ -47,7 +47,7 @@ public void setLong(java.lang.String sCol,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setLong-Methode wird von der setLong-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

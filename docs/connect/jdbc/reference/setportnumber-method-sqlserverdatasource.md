@@ -39,7 +39,7 @@ public void setPortNumber(int portNumber)
   
  Ein Wert vom Typ **int**, der die Portnummer enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Portnummer ist die TCP/IP-Portnummer, die beim Öffnen einer Socketverbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird. Wenn die portNumber-Eigenschaft nicht festgelegt ist, gibt die [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)-Methode den Standardwert „1433“ zurück.  
   
 > [!NOTE]  

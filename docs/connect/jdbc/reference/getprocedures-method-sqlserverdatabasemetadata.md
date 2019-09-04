@@ -55,7 +55,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getProcedures-Methode wird von der getProcedures-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getProcedures-Methode zurückgegebene Resultset enthält folgende Informationen:  

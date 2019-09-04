@@ -94,7 +94,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Bemerkungen  
  Indem Sie SINGLE_BLOB verwenden, können Sie vermeiden, dass die Codierung des XML-Dokuments (wie in der XML-Codierungsdeklaration angegeben) und die Codierung der vom Server implizierten Codepage nicht übereinstimmen.  
   
  Wenn beim Verwenden der Datentypen NCLOB oder CLOB Codepage- oder Codierungskonflikte auftreten, führen Sie einen der folgenden Schritte aus:  

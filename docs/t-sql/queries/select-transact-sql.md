@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Da die SELECT-Anweisung relativ komplex ist, werden ausführliche Syntaxelemente und Argumente nach Klauseln zusammengefasst aufgeführt:  
   
 |||  

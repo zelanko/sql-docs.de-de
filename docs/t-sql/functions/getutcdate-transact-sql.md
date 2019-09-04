@@ -63,7 +63,7 @@ GETUTCDATE()
 ## <a name="return-types"></a>Rückgabetypen  
  **datetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können auf eine beliebige Position von GETUTCDATE verweisen, die auf einen **datetime**-Ausdruck verweisen kann.  
   
  GETUTCDATE ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die in einer Spalte auf diese Funktion verweisen, können nicht indiziert werden.  

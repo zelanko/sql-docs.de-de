@@ -134,7 +134,7 @@ Das beliebige Längenmuster verwendet Quantifizierer für reguläre Ausdrücke, 
 * **+** : Das Muster 1 oder mehrmals wiederholen. Beenden, sobald ein kürzester Pfad gefunden wird.    
 * **{1,n}** : Das Muster 1 bis „n“ Male wiederholen. Beenden, sobald der kürzeste Pfad gefunden wird.     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die Knotennamen können in MATCH wiederholt werden.  D.h., ein Knoten kann beliebig oft in der gleichen Abfrage durchlaufen werden.  
 Der Name von einem Edge kann nicht in MATCH wiederholt werden.  
 Ein Edge kann in beide Richtungen zeigen, muss jedoch über eine explizite Richtung verfügen.  

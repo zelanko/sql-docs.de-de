@@ -40,7 +40,7 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getSQLXML-Methode wird von der getSQLXML-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

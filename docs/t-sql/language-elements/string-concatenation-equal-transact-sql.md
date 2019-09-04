@@ -45,7 +45,7 @@ expression += expression
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt den Datentyp zurück, der für die Variable definiert wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SET @v1 += 'Ausdruck' entspricht SET @v1 = @v1 + ('Ausdruck'). SET @v1 = @v2 + @v3 + @v4 entspricht auch SET @v1 = (@v2 + @v3) + @v4.  
   
  Der Operator += kann nicht ohne eine Variable verwendet werden. So verursacht z. B. der folgende Code einen Fehler:  

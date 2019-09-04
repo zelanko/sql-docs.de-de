@@ -60,7 +60,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  Gibt 1 zurück, wenn der Hash von *clear_text_password* mit dem Parameter *password_hash* übereinstimmt und gibt 0 (null) zurück, wenn dies nicht der Fall ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die PWDCOMPARE-Funktion stellt keine Bedrohung der Sicherheit von Kennworthashs dar, da der gleiche Test ausgeführt werden kann, indem sich ein Benutzer mit dem als erstem Parameter bereitgestellten Kennwort anmeldet.  
   
  **PWDCOMPARE** kann nicht mit den Kennwörtern der Benutzer eigenständiger Datenbanken verwendet werden. Es gibt keine Entsprechung für eigenständige Datenbanken.  

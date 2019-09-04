@@ -82,7 +82,7 @@ Mit SELECT…INTO wird eine neue Tabelle in der Standarddateigruppe erstellt, un
   
 Falls eine dieser Bedingungen erfüllt ist, wird die Spalte mit NOT NULL erstellt, anstatt die IDENTITY-Eigenschaft zu erben. Wenn eine Identitätsspalte in der neuen Tabelle erforderlich, aber nicht verfügbar ist oder wenn Sie einen Ausgangs- oder Inkrementwert benötigen, der sich von der Quellidentitätsspalte unterscheidet, definieren Sie die Spalte in der Auswahlliste mithilfe der IDENTITY-Funktion. Weitere Informationen finden Sie unter "Erstellen einer Identitätsspalte mithilfe der IDENTITY-Funktion" im Abschnitt mit den Beispielen unten.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die `SELECT...INTO`-Anweisung wird in zwei Schritten ausgeführt: Zunächst wird die neue Tabelle erstellt, dann werden die Zeilen eingefügt.  Das bedeutet, dass ein Rollback ausgeführt wird, wenn die Einfügevorgänge fehlschlagen; die neue (leere) Tabelle bleibt jedoch bestehen.  Wenn der gesamte Vorgang als Ganzes erfolgreich sein oder fehlschlagen muss, verwenden Sie eine [explizite Transaktion](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  

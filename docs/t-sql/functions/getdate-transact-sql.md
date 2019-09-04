@@ -58,7 +58,7 @@ GETDATE ( )
 ## <a name="return-type"></a>Rückgabetyp  
  **datetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können auf eine beliebige Position von GETDATE verweisen, die auf einen **datetime**-Ausdruck verweisen kann.  
   
  GETDATE ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die in einer Spalte auf diese Funktion verweisen, können nicht indiziert werden.  

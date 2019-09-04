@@ -63,7 +63,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *view_name*  
  Ist der Name der zu entfernenden Sicht.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie eine Sicht löschen, werden die Definition der Sicht sowie weitere Informationen zur Sicht aus dem Systemkatalog entfernt. Alle Berechtigungen für die Sicht werden ebenfalls gelöscht.  
   
  Eine mithilfe von DROP TABLE gelöschte Sicht in einer Tabelle muss explizit mit DROP VIEW gelöscht werden.  

@@ -57,7 +57,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn bereits ein Eintrag für den Berichtsserver in der Berichtsserver-Datenbank vorhanden ist, wird dieser gelöscht. Der neue Eintrag wird dann mit dem angegebenen Verschlüsselungsschlüssel und dem öffentlichen Schlüssel des Berichtsservers erstellt.  
   
  Diese Methode ist am effektivsten, wenn sie nach der [DeleteEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-deleteencryptionkey.md) -Methode aufgerufen wird, die die Liste der Verschlüsselungsschlüssel löscht.  

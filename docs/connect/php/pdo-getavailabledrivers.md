@@ -32,7 +32,7 @@ array PDO::getAvailableDrivers ();
 ## <a name="return-value"></a>Rückgabewert  
 Ein Array mit der Liste der PDO-Treiber.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Der Name des PDO-Treibers wird verwendet in PDO::__construct, um eine PDO-Instanz zu erstellen.  
   
 PDO::getAvailableDrivers muss nicht von PHP-Treibern implementiert werden. Weitere Informationen zu dieser Methode finden Sie in der PHP-Dokumentation.  

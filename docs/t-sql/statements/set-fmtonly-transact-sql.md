@@ -51,7 +51,7 @@ ms.locfileid: "67929026"
 SET FMTONLY { ON | OFF }   
 ```  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Wenn `FMTONLY` auf `ON` gesetzt ist, wird ein Rowset mit den Spaltennamen zurückgeben, jedoch ohne jegliche Datenzeilen.
 

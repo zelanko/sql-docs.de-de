@@ -37,7 +37,7 @@ public java.lang.String getURL()
 ## <a name="return-value"></a>Rückgabewert  
  Ein **String-Objekt**, das die URL enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Aus Sicherheitsgründen sollte das Kennwort nicht in der URL enthalten sein, die an die [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md)-Methode übergeben wird. Der Grund hierfür ist, dass Java-Anwendungsserver von Drittanbietern oft den für die URL-Eigenschaft festgelegten Wert auf der Benutzeroberfläche für die Datenquellenkonfiguration anzeigen. Verwenden Sie stattdessen die [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)-Methode, um den Wert für das Kennwort festzulegen. Java-Anwendungsserver zeigen kein in der Datenquelle festgelegtes Kennwort auf der Konfigurationsbenutzeroberfläche an.  
   
 > [!NOTE]  

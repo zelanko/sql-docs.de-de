@@ -111,7 +111,7 @@ END
   
 -   Wird kein *Boolean_expression*-Ausdruck zu TRUE ausgewertet, gibt [!INCLUDE[ssDE](../../includes/ssde-md.md)] den *else_result_expression*-Ausdruck zurück, falls eine ELSE-Klausel angegeben ist, oder einen NULL-Wert, falls keine ELSE-Klausel angegeben ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist für CASE-Ausdrücke nur eine Schachtelung von 10 Ebenen zulässig.  
   
  Der CASE-Ausdruck kann nicht verwendet werden, um den Ablauf bei der Ausführung von Transact-SQL-Anweisungen, Anweisungsblöcken, benutzerdefinierten Funktionen und gespeicherten Prozeduren zu steuern. Eine Liste der Methoden zur Ablaufsteuerung finden Sie unter [Control-of-Flow Language &#40;Transact-SQL&#41; (Sprachkonstrukte zur Ablaufsteuerung (Transact-SQL))](~/t-sql/language-elements/control-of-flow.md).  

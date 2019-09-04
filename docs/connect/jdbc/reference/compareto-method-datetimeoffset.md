@@ -41,7 +41,7 @@ public int compareTo(DateTimeOffset other)
 |Negative Zahl|Dieses **DateTimeOffset** -Objekt stellt einen Zeitpunkt dar, der vor dem *anderen*liegt.|  
 |Positive Zahl|Dieses **DateTimeOffset** -Objekt stellt einen Zeitpunkt dar, der nach dem *anderen*liegt.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn zwei **DateTimeOffset**-Objekte dieselbe Uhrzeit nach GMT haben, werden die Objekte nicht zusätzlich nach Offset geordnet.  
   
 ## <a name="see-also"></a>Weitere Informationen  

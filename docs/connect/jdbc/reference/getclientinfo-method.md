@@ -35,7 +35,7 @@ public java.util.Properties getClientInfo()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getClientInfo-Methode wird von der getClientInfo-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] werden keine Eigenschaften für Clientinformationen unterstützt. Folglich gibt diese Methode ein leeres Properties-Objekt zurück.  

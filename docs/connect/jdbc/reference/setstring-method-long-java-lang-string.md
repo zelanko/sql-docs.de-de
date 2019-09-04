@@ -50,7 +50,7 @@ public int setString(long pos,
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setString-Methode wird von der setString-Methode in der java.sql.Clob-Schnittstelle angegeben.  
   
  Zeichendaten werden beginnend mit der angegebenen Position überschrieben, und sie können die ursprüngliche Länge des CLOB übersteigen. Durch Angeben eines Werts vom Typ "Position+1" wird die Zeichenfolge angefügt. Durch Angeben eines Werts vom Typ „Position+2“ oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  

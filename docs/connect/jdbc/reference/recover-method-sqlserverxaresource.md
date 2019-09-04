@@ -45,7 +45,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese recover-Methode wird von der recover-Methode in der javax.transaction.xa.XAResource-Schnittstelle angegeben.  
   
  Wenn das parameter **flag** nicht "XAResource. tmstartrscan" oder "XAResource. tmstartrscan" ist | XAResource. tmendrscan: Es muss eine Wiederherstellungs Überprüfung ausgeführt werden.  

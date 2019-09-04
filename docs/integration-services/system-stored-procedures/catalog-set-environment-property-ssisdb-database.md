@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67949094"
 ---
-# <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (SSISDB-Datenbank)
+# <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -72,7 +72,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Der Umgebungsname ist ungültig.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Version kann nur die `Description` -Eigenschaft festgelegt werden. Der Wert für die `Description` -Eigenschaft darf 4000 Zeichen nicht überschreiten.  
   
   

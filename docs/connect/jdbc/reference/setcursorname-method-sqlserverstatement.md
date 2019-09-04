@@ -45,7 +45,7 @@ public final void setCursorName(java.lang.String name)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setcurrsorname-Methode wird von der SetCursor Name-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

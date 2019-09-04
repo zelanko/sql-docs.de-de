@@ -42,7 +42,7 @@ ms.locfileid: "67898137"
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Datenbank verschlüsselt ist, müssen Sie die Verschlüsselung der Datenbank zunächst mit der ALTER DATABASE-Anweisung aufheben. Warten Sie, bis die Entschlüsselung abgeschlossen ist, bevor Sie den Verschlüsselungsschlüssel der Datenbank entfernen. Weitere Informationen zur ALTER DATABASE-Anweisung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Der Status der Datenbank wird mit der dynamischen Verwaltungssicht [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

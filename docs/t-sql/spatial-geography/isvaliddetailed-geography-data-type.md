@@ -41,7 +41,7 @@ ms.locfileid: "67930217"
   
  CLR-Rückgabetyp: **string**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die folgende Tabelle enthält mögliche Rückgabewerte:  
   
 |Rückgabewert|und Beschreibung|  

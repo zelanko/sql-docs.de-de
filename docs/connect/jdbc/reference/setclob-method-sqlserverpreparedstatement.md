@@ -30,7 +30,7 @@ ms.locfileid: "67974799"
 |[setClob-Methode &#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Legt den angegebenen Parameter auf das angegebene java.sql.Clob-Objekt fest.|  
 |[setClob-Methode &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|Legt den angegebenen Parameter auf ein java.sql.Clob-Objekt fest, dessen Länge der angegebenen Zeichenanzahl entspricht.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Kein Servertreiberverhalten. Ausführliche Informationen finden Sie in den Spezifikationen der JSE 6-API.  
   
 ## <a name="see-also"></a>Weitere Informationen  

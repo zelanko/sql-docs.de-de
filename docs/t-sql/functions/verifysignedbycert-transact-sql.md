@@ -59,7 +59,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  Gibt 1 zurück, wenn die signierten Daten nicht geändert wurden, andernfalls 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **VerifySignedBycert** entschlüsselt die Signatur der Daten mit dem öffentlichen Schlüssel des angegebenen Zertifikats und vergleicht den entschlüsselten Wert mit einem neu berechneten MD5-Hash der Daten. Wenn die Werte zusammenpassen, wird die Signatur als gültig bestätigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

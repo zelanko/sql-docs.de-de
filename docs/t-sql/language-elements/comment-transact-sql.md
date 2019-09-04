@@ -47,7 +47,7 @@ ms.locfileid: "68495481"
  *text_of_comment*  
  Die Zeichenfolge mit dem Kommentartext.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie zwei Bindestriche ( **--** ) für einzeilige oder geschachtelte Kommentare. Kommentare, die mit **--** eingefügt werden, werden von einer neuen Zeile beendet, die durch ein Wagenrücklaufzeichen (U+000A), ein Zeilenvorschubzeichen (U+000D) oder eine Kombination der beiden Zeichen angegeben ist. Es gibt keine Maximallänge für Kommentare. In der folgenden Tabelle sind die Tastenkombinationen aufgeführt, die Sie verwenden können, um Text als Kommentar zu kennzeichnen oder auszukommentieren.
   
 |Aktion|Standard|  

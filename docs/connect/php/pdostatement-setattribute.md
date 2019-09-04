@@ -36,7 +36,7 @@ $*value:* Der (gemischte) Wert, der für den angegebenen $*attribute*-Parameter 
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die folgende Tabelle enthält die Liste mit den verfügbaren Attributen:  
   
 |attribute|Werte|und Beschreibung|  

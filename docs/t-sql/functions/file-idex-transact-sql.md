@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68071506"
 ---
-# <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
+# <a name="file_idex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Datei-ID für den angegebenen logischen Dateinamen der Daten-, Protokoll- oder Volltextdatei in der aktuellen Datenbank zurück. 
@@ -51,7 +51,7 @@ Ein Ausdruck vom Typ **sysname**, der den Datei-ID-Wert „FILE_IDEX“ für den
   
 **NULL** bei Fehler  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 *file_name* entspricht dem logischen Dateinamen, der in der Spalte **name** in den Katalogsichten [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) oder [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) angezeigt wird.  
   
 Verwenden Sie `FILE_IDEX` in einer SELECT-Liste, einer WHERE-Klausel oder an einer beliebigen Stelle, an der ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  

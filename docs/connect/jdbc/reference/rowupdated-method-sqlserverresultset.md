@@ -40,7 +40,7 @@ public boolean rowUpdated()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese rowaktualisierte-Methode wird von der rowaktualisierte-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Der zurückgegebene Wert ist davon abhängig, ob vom Resultset Updates ermittelt werden.  

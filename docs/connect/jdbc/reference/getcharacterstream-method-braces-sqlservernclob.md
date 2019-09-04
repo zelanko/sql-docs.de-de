@@ -35,7 +35,7 @@ public java.io.Reader getCharacterStream()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Readerobjekt, das die **NCLOB**-Daten enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getcharakteristream-Methode wird von der getcharakteristream-Methode in der Java. SQL. NCLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

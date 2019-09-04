@@ -32,7 +32,7 @@ string PDOStatement::errorCode();
 ## <a name="return-value"></a>Rückgabewert  
 Gibt ein SQLSTATE mit fünf Zeichen als Zeichenfolge oder NULL zurück, wenn kein Vorgang über das Anweisungshandle erfolgte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  

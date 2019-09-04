@@ -53,7 +53,7 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der *UseBuiltInAccount* -Parameter auf **TRUE** festgelegt ist und der Berichtsserver unter Microsoft [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)] oder Windows XP ausgeführt wird, werden die Werte der Parameter *Name*, *Domäne*und *Kennwort* ignoriert, und das lokale Systemkonto wird verwendet.  
   
  Wenn der *UseBuiltInAccount*-Parameter auf **TRUE** festgelegt ist und der Berichtsserver unter Windows Server 2003 ausgeführt wird, werden die Eigenschaft *Domäne* und die Eigenschaft *Kennwort* ignoriert, und das Namensfeld muss den Namen „Builtin\NetworkService“, „Builtin\System“ oder „Builtin\LocalService“ enthalten.  

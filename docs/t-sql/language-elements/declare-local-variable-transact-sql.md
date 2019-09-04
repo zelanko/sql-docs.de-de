@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67894883"
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
+# <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Variablen werden im Hauptteil eines Batchs oder einer Prozedur mit einer DECLARE-Anweisung deklariert. Die Werte werden mithilfe einer SET- oder SELECT-Anweisung zugewiesen. Cursorvariablen können mit dieser Anweisung deklariert und mit anderen cursorspezifischen Anweisungen verwendet werden. Nach der Deklaration werden alle Variablen mit NULL initialisiert, es sei denn, ein Wert wurde als Teil der Deklaration angegeben.  
@@ -158,7 +158,7 @@ Definiert den Datentyp **table**. Die Tabellendeklaration schließt Spaltendefin
  *logical_expression*  
  Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Variablen werden oft in einem Batch oder einer Prozedur als Zähler für WHILE, LOOP oder für IF...ELSE-Blöcke verwendet.  
   
  Variablen können nur in Ausdrücken verwendet werden und stellen keinen Ersatz für Objektnamen oder Schlüsselwörter dar. Um dynamische SQL-Anweisungen zu erstellen, verwenden Sie EXECUTE.  

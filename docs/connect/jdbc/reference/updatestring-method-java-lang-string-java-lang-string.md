@@ -47,7 +47,7 @@ public void updateString(java.lang.String columnName,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updateString-Methode wird von der updateString-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -40,7 +40,7 @@ public boolean supportsSchemasInTableDefinitions()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese supportsschemasintabledefinitions-Methode wird von der supportsschemasintabledefinitions-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

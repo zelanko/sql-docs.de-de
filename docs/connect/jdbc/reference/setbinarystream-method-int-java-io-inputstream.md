@@ -42,7 +42,7 @@ public final void setAsciiStream(int parameterIndex,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setBinaryStream-Methode wird von der setBinaryStream-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

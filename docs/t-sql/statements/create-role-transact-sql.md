@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  Der Datenbankbenutzer oder die Datenbankrolle, der bzw. die die neue Rolle besitzen soll. Wenn kein Benutzer angegeben wird, besitzt der Benutzer, der CREATE ROLE ausführt, diese Rolle. Der Besitzer der Rolle oder ein beliebiges Mitglied einer besitzenden Rolle kann der Rolle Mitglieder hinzufügen oder Mitglieder aus dieser entfernen.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Rollen sind auf Datenbankebene sicherungsfähige Elemente. Nachdem Sie eine Rolle erstellt haben, konfigurieren Sie die Berechtigungen der Rolle auf Datenbankebene mithilfe von GRANT, DENY und REVOKE. Um einer Datenbankrolle Elemente hinzuzufügen, verwenden Sie [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Weitere Informationen finden Sie unter [Rollen auf Datenbankebene](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  Datenbankrollen werden in den Katalogsichten sys.database_role_members und sys.database_principals angezeigt.  

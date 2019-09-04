@@ -42,7 +42,7 @@ public int[] executeBatch()
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese executeBatch-Methode wird von der executeBatch-Methode in der java.sql.Statement-Schnittstelle angegeben.  
     
  Diese Methode überschreibt [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md).  

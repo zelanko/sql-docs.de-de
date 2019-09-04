@@ -48,7 +48,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der OGC-Typ der von STGeomCollFromWKB() zurückgegebenen **geography**-Instanz wird, abhängig von der entsprechenden WKB-Eingabe, auf **GeometryCollection**, **MultiPolygon**, **MultiLineString** oder **MultiPoint** festgelegt.  
   
  Diese Methode löst eine **FormatException** -Ausnahme aus, wenn die Eingabe nicht korrekt formatiert ist.  

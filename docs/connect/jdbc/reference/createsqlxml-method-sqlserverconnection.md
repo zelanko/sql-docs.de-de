@@ -35,7 +35,7 @@ public java.sql.SQLXML createSQLXML()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode "kreatesqlxml" wird von der Methode "" in der Java. SQL. Connection-Schnittstelle von der Methode "" aufgerufen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

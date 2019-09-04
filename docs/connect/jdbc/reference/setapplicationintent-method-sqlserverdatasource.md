@@ -33,7 +33,7 @@ public void setApplicationIntent(java.lang.String applicationIntent);
   
  Der neue Wert der **applicationintent** -Verbindungs Eigenschaft.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zur **applicationintent** -Verbindungs Eigenschaft finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

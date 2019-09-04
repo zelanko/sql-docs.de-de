@@ -321,7 +321,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 > [!TIP]
 > Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 
@@ -849,7 +849,7 @@ READ_WRITE | READWRITE Gibt an, dass die Gruppe den Status READ_WRITE hat. Updat
 
 Der Status dieser Optionen kann mithilfe der Spalte **is_read_only** in der **sys.databases**-Katalogsicht oder der **Updateability**-Eigenschaft der `DATABASEPROPERTYEX`-Funktion ermittelt werden.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
 

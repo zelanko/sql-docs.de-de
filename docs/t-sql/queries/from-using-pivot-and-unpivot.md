@@ -62,7 +62,7 @@ FOR
 <optional ORDER BY clause>;  
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die Spaltenbezeichner in der `UNPIVOT`-Klausel folgen der Katalogsortierung. Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] wird immer die Sortierung `SQL_Latin1_General_CP1_CI_AS` verwendet. Bei teilweise eigenständigen [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Datenbanken wird immer die Sortierung `Latin1_General_100_CI_AS_KS_WS_SC` verwendet. Wenn die Spalte mit anderen Spalten kombiniert wird, ist eine COLLATE-Klausel (`COLLATE DATABASE_DEFAULT`) erforderlich, um Konflikte zu vermeiden.  
 
   

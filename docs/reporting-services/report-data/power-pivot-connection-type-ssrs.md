@@ -45,7 +45,7 @@ ms.locfileid: "66499602"
 ## <a name="parameters"></a>Parameter  
  Aktivieren Sie im Bereich "Filter" die Option **Parameter** für einen Filter, um automatisch einen Berichtsparameter mit verfügbaren Werten zu erstellen, die der Filterauswahl entsprechen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie den Berichts-Generator aus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe in einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog öffnen, werden PivotTables, PivotCharts, Slicer und andere Layout- und analytische Funktionen aus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe im Bericht nicht neu erstellt. Stattdessen enthält der leere Bericht eine vorkonfigurierte Datenquelle, die auf die Daten in der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe verweist. Berichte auf Grundlage einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe zu entwerfen, kann arbeitsintensiv und zeitaufwändig sein, abhängig von der Anzahl von Slicern, Filtern und Tabellen oder Diagrammen, die Sie im Bericht erneut erstellen möchten. Ein besserer Ansatz ist, die Präsentation der Daten zu planen, die Sie unabhängig vom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Entwurf in einem Bericht haben möchten.  
   
  Die Daten in einer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe sind stark komprimiert; aus der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe für einen Bericht abgerufene Daten sind nicht komprimiert. Geben Sie im Abfrage-Designer Filter und Parameter an, um die Daten auf die für den Bericht erforderliche Menge zu begrenzen.  

@@ -38,7 +38,7 @@ Binäre Datentypen mit fester Länge bzw. mit variabler Länge.
   
 **varbinary** [ ( _n_ | **max**) ] Binärdaten variabler Länge. _n_ kann einen Wert von 1 bis 8000 aufweisen. **max** gibt an, dass die maximale Speichergröße 2^31-1 Byte beträgt. Die Speicherplatzgröße ist die tatsächliche Länge der eingegebenen Daten + 2 Byte. Die eingegebenen Daten können 0 Byte lang sein. Das ANSI SQL-Synonym für **varbinary** ist **binary varying**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die Standardlänge beträgt 1, wenn _n_ in einer Datendefinitions- oder Variablendeklarationsanweisung nicht angegeben ist. Wenn _n_ in der CAST-Funktion nicht angegeben ist, beträgt die Standardlänge 30.
 
 | Datentyp | Verwenden Sie |

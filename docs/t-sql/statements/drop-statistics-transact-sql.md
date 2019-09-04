@@ -60,7 +60,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
  *statistics_name*  
  Der Name der zu löschenden Statistikgruppe. Namen von Statistiken müssen den Regeln für Bezeichner entsprechen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gehen Sie vorsichtig vor, wenn Sie Statistiken löschen. Dieser Vorgang kann sich auf den vom Abfrageoptimierer ausgewählten Ausführungsplan auswirken.  
   
  Statistiken für Indizes können mit DROP STATISTICS nicht gelöscht werden. Die Statistiken bleiben so lange vorhanden wie der Index.  

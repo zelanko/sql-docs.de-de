@@ -64,7 +64,7 @@ Zum Löschen einer Bibliothek ist die Berechtigung ALTER ANY EXTERNAL LIBRARY er
 
 Eine Informationsmeldung wird zurückgegeben, wenn die Anweisung erfolgreich war.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Im Gegensatz zu anderen `DROP`-Anweisungen in SQL Server unterstützt diese Anweisung das Angeben einer optionalen Autorisierungsklausel. Dies ermöglicht einem **dbo** oder Benutzer mit der Rolle **db_owner**, eine Paketbibliothek zu löschen, die von einem normalen Benutzer in die Datenbank hochgeladen wurde.
 

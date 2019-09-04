@@ -45,7 +45,7 @@ public long position(java.lang.String searchstr,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Positions Methode wird von der Positions Methode in der Java. SQL. NCLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

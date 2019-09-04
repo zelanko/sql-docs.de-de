@@ -40,7 +40,7 @@ public final java.sql.ParameterMetaData getParameterMetaData()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getParameterMetaData-Methode wird von der getParameterMetaData-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -45,7 +45,7 @@ public final void setEscapeProcessing(boolean enable)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setescapeprocessing-Methode wird von der setescapeprocessing-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

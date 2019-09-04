@@ -109,7 +109,7 @@ HRESULT GetStatus(
  E_FAIL  
  Es ist ein anbieterspezifischer Fehler aufgetreten.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **ISSAsynchStatus**-Methode verhält sich genauso wie die **ISSAsynchStatus::GetStatus**-Methode, gibt jedoch anstelle von DB_E_CANCELED E_UNEXPECTED zurück, wenn die Initialisierung eines Datenquellenobjekts abgebrochen wird (obwohl [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED zurückgibt). Dies ist darauf zurückzuführen, dass das Datenquellenobjekt nach einem Abbruchvorgang nicht mehr den gewöhnlichen Zombiestatus aufweist, sodass weitere Initialisierungsvorgänge durchgeführt werden können.  
   
  Wenn das Rowset initialisiert oder asynchron aufgefüllt wird, muss es diese Methode unterstützen.  

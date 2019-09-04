@@ -35,13 +35,13 @@ DAY(date)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Datum*  
+ *date*  
  Ein Ausdruck, der ein gültiges Datum oder eine Zeichenfolge im Datumsformat zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  DAY gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  

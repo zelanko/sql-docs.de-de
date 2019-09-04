@@ -38,7 +38,7 @@ Previous(expression, scope)
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt einen **Variant** - oder **Binary**-Wert zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **Previous** -Funktion gibt den vorherigen Wert für den Ausdruck zurück, der in dem angegebenen Bereich ausgewertet wird, nachdem die Sortierfunktionen und Filter angewendet wurden.  
   
  Wenn *expression* kein Aggregat enthält, wird die **Previous** -Funktion standardmäßig auf den aktuellen Bereich für das Berichtselement festgelegt.  

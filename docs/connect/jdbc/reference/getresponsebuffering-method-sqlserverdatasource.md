@@ -37,7 +37,7 @@ public java.lang.String getResponseBuffering()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichen** Folge, die einen Kleinbuchstaben **oder** einen **adaptiven**Wert enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert **full** gibt an, dass zur Laufzeit das gesamte Ergebnis vom Server gelesen wird.  
   
  Der Wert **adaptive** gibt an, dass im Bedarfsfall die geringstmögliche Menge an Daten gepuffert wird. Der **adaptive**-Wert ist der Standardpuffermodus.  

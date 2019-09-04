@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67948017"
 ---
-# <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
+# <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt das ISO-Standardverhalten für verschiedene Fehlerbedingungen an.  
@@ -51,7 +51,7 @@ SET ANSI_WARNINGS { ON | OFF }
 SET ANSI_WARNINGS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SET ANSI_WARNINGS betrifft die folgenden Bedingungen:  
   
 -   Bei ON wird eine Warnmeldung generiert, wenn NULL-Werte in Aggregatfunktionen, wie z. B. SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP oder COUNT, auftreten. Bei OFF wird keine Warnung ausgegeben.  

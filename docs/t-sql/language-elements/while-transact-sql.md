@@ -68,7 +68,7 @@ WHILE Boolean_expression
  CONTINUE  
  Bewirkt, dass die WHILE-Schleife neu gestartet wird und alle Anweisungen nach dem CONTINUE-Schlüsselwort ignoriert werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn zwei oder mehr WHILE-Schleifen geschachtelt sind, wird mit der inneren BREAK-Anweisung zur nächsten äußersten Schleife gesprungen. Alle Anweisungen nach dem Ende der inneren Schleife werden zuerst ausgeführt, und dann wird die nächste äußerste Schleife neu gestartet.  
   
 ## <a name="examples"></a>Beispiele  

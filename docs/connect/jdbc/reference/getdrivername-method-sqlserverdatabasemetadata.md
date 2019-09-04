@@ -40,7 +40,7 @@ public java.lang.String getDriverName()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getDriverName-Methode wird von der getDriverName-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

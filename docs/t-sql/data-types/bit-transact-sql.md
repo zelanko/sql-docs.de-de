@@ -30,7 +30,7 @@ ms.locfileid: "68126000"
 
   Ein ganzzahliger Datentyp, der den Wert 1, 0 oder NULL annehmen kann.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] optimiert das Speichern von **bit**-Spalten. Wenn in einer Tabelle 8 oder weniger **bit**-Spalten vorhanden sind, werden die Spalten als 1 Byte gespeichert. Sind zwischen 9 und 16 **bit** -Spalten vorhanden, werden diese als 2 Byte gespeichert usw.
   
 Die Zeichenfolgenwerte TRUE und FALSE können in **bit**-Werte konvertiert werden: TRUE wird in 1 konvertiert, und FALSE wird in 0 konvertiert.

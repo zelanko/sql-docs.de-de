@@ -47,7 +47,7 @@ Die folgende Tabelle zeigt die Zuordnung zwischen Quelle und Ziel-Datentypen.
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**Währung**|**money**|  
-|**Datum**|**datetime**|  
+|**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  

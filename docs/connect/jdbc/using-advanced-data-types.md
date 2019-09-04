@@ -23,7 +23,7 @@ ms.locfileid: "69027010"
 
 Der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] verwendet die erweiterten JDBC-Datentypen für die Konvertierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in ein Format, das von der Programmiersprache Java verarbeitet werden kann.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den erweiterten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen sowie den JDBC- und Java-Datentypen.  
   

@@ -48,7 +48,7 @@ ms.locfileid: "68045224"
 |server_name|**nvarchar(128)**|Die Informationen zu Windows Server und zu Instanzen für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jeden Vorgang im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog angezeigt. Sie ermöglicht es dem Administrator, alle logischen Operationen aufzuzählen, die auf dem Server ausgeführt wurden, z. B. das Bereitstellen eines Projekts oder das Ausführen eines Pakets.  
   
  In dieser Sicht werden die folgenden Vorgangstypen angezeigt, wie in der Spalte **operation_type** aufgelistet:  

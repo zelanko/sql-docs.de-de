@@ -35,7 +35,7 @@ ms.locfileid: "67970311"
 public class SQLServerXAConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein SQLServerXAConnection-Objekt kann in einer verteilten Transaktion mittels eines [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)-Objekts aufgelistet werden. Ein Transaktions-Manager, der normalerweise Teil eines Servers auf mittlerer Ebene ist, verwaltet ein sqlserverxaconnetction-Objekt über das sqlserverxaresource-Objekt.  
   
 > [!NOTE]  

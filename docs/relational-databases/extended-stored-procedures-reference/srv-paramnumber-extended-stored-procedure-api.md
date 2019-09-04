@@ -63,7 +63,7 @@ namelen
 ## <a name="returns"></a>Rückgabewert  
  Die Parameternummer des benannten Parameters. Der erste Parameter ist 1. Wenn es keinen Parameter namens *name* oder keine remote gespeicherte Prozedur gibt, wird der Wert 0 (null) zurückgegeben und eine Meldung generiert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine remote gespeicherte Prozedur mit Parametern aufgerufen wird, werden die Parameter entweder mit ihrem Namen oder mit ihrer Position übergeben (unbenannt). Werden beim Aufruf einer remote gespeicherten Prozedur einige Parameter über ihren Namen und andere über ihre Position übergeben, so tritt ein Fehler auf. Der SRV_RPC-Handler wird trotzdem aufgerufen, scheinbar jedoch ohne Parameter, und **srv_rpcparams** gibt 0 (null) zurück.  
   
 > [!IMPORTANT]  

@@ -45,7 +45,7 @@ public boolean acceptsURL(java.lang.String url)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Accept-sUrl-Methode wird von der akzeptsurl-Methode in der Java. SQL. Driver-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

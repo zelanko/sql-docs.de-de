@@ -45,7 +45,7 @@ Die folgende Tabelle zeigt die Änderungen der Datentypen und Werte an, wenn Dat
 |**bit**|`logical`|**bit**||
 |**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
 |**datetime**|`POSIXct`|**datetime**|Dargestellt als GMT|
-|**Datum**|`POSIXct`|**datetime**|Dargestellt als GMT|
+|**date**|`POSIXct`|**datetime**|Dargestellt als GMT|
 |**decimal(p,s)**|`numeric`|**float**||
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||

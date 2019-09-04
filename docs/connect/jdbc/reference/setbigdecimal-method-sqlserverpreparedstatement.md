@@ -47,7 +47,7 @@ public final void setBigDecimal(int n,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setBigDecimal-Methode wird von der setBigDecimal-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

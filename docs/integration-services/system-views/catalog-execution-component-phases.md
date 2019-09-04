@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68065250"
 ---
-# <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases 
+# <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -38,7 +38,7 @@ ms.locfileid: "68065250"
 |end_time|**datetimeoffset(7)**|Der Zeitpunkt, zu dem die Phase beendet wurde.|  
 |execution_path|**nvarchar(max)**|Der Ausführungspfad der Datenflusstask.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird für jede Ausführungsphase einer Datenflusskomponente eine Zeile angezeigt, z. B. Überprüfen, Vor der Ausführung, Nach der Ausführung, PrimeOutput und ProcessInput. Jede Zeile zeigt die Start- und Endzeit einer bestimmten Ausführungsphase an.  
   
 ## <a name="example"></a>Beispiel  

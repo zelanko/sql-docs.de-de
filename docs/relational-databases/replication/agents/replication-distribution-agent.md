@@ -287,7 +287,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  Wenn dieser Parameter angegeben wird, wird die Bindung der BLOB-Daten (Binary Large Object) als Datenstrom aktiviert. Verwenden Sie **-OledbStreamThreshold** , um die Größe in Bytes anzugeben, ab der ein Datenstrom verwendet wird. **UseOledbStreaming** ist standardmäßig aktiviert. **UseOledbStreaming** schreibt in den Ordner **C:\Programme\Microsoft SQL Server\\<Version\>\COM**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent so installiert haben, dass er unter einem lokalen Systemkonto und nicht unter einem Domänenbenutzerkonto (Standard) ausgeführt wird, kann der Dienst nur auf den lokalen Computer zugreifen. Wenn der Verteilungs-Agent, der unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, so konfiguriert ist, dass beim Anmelden bei einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]der Windows-Authentifizierungsmodus verwendet wird, schlägt der Verteilungs-Agent fehl. Die Standardeinstellung ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung. Weitere Informationen zum Ändern von Sicherheitskonten finden Sie unter [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  

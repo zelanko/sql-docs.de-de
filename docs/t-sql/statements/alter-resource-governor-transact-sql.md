@@ -98,7 +98,7 @@ ALTER RESOURCE GOVERNOR
   
  Legt die maximale Anzahl an E/A-Vorgängen in der Warteschlange pro Datenträgervolume fest. Bei diesen E/A-Vorgängen kann es sich um Lese- oder Schreibvorgänge beliebiger Größe handeln.  Der Maximalwert für MAX_OUTSTANDING_IO_PER_VOLUME ist 100. Der Wert ist kein Prozentsatz. Diese Einstellung ist so konzipiert, dass sie die E/A-Ressourcenkontrolle auf die E/A-Eigenschaften eines Datenträgervolumes abstimmt. Es empfiehlt sich, verschiedene Werte auszuprobieren und ggf. ein Kalibrierungstool wie IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) oder SQLIO (veraltet) zu verwenden, um den Maximalwert für das Speichersubsystem festzulegen. Diese Einstellung bietet eine Sicherheitsprüfung auf Systemebene, die es SQL Server ermöglicht, den minimalen IOPS-Wert für Ressourcenpools einzuhalten, auch wenn die MAX_IOPS_PER_VOLUME-Einstellung anderer Pools auf einen unbegrenzten Wert festgelegt ist. Weitere Informationen zu MAX_IOPS_PER_VOLUME finden Sie unter [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE und ALTER RESOURCE GOVERNOR RESET STATISTICS können nicht in einer Benutzertransaktion verwendet werden.  
   
  Der RECONFIGURE-Parameter ist Teil der Syntax von Resource Governor und darf nicht mit [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) verwechselt werden, die eine eigene DDL-Anweisung ist.  
@@ -178,7 +178,7 @@ GO
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. Festlegen der MAX_OUTSTANDING_IO_PER_VOLUME-Option  
+### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. Festlegen der MAX_OUTSTANDING_IO_PER_VOLUME-Option  
  Im folgenden Beispiel wird die MAX_OUTSTANDING_IO_PER_VOLUME-Option auf 20 festgelegt.  
   
 ```  

@@ -40,7 +40,7 @@ public boolean isFirst()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese isFirst-Methode wird von der isFirst-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Wird diese Methode mit Vorwärtscursors und dynamischen Cursors verwendet, wird eine Ausnahme ausgelöst.  

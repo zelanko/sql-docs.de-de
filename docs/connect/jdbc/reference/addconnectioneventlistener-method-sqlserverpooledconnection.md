@@ -39,7 +39,7 @@ public void addConnectionEventListener(javax.sql.ConnectionEventListener listene
   
  Ein connectioneventlistener-Objekt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese addconnectioneventlistener-Methode wird von der addconnectioneventlistener-Methode in der javax. SQL. pooledconnection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

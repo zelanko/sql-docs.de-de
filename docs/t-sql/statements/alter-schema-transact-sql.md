@@ -69,7 +69,7 @@ ALTER SCHEMA schema_name
  *securable_name*  
  Bezeichnet den ein- oder zweiteiligen Namen eines sicherungsfähigen schemabezogenen Elements, das in das Schema verschoben werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Benutzer und Schemas vollkommen voneinander getrennt.  
   
  ALTER SCHEMA kann nur zum Verschieben von sicherungsfähigen Elementen zwischen Schemas in derselben Datenbank verwendet werden. Zum Ändern oder Löschen eines sicherungsfähigen Elements in einem Schema verwenden Sie die für das sicherungsfähige Element spezifische ALTER- oder DROP-Anweisung.  

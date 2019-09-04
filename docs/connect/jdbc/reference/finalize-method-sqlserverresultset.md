@@ -34,7 +34,7 @@ ms.locfileid: "67954562"
 public void finalize()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Schließt das Resultset, wenn dies nicht durch die Anwendung geschieht. Diese Methode entspricht der JDBC-Spezifikation. Da die Java Virtual Machine (JVM) keine Garantie dafür bietet, wann ein Finalizer ausgeführt werden kann, können Anwendungen, von denen ihre Resultsets nicht explizit geschlossen werden, einen Deadlock für eine andere Anweisung auslösen, von der die gleiche Verbindung verwendet wird und die für eine gemeinsame Serverressource (z. B. Zeilensperren) blockiert wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -45,7 +45,7 @@ public java.lang.String getString(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getString-Methode wird von der getString-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Alle Spalten in SQL Server können als Zeichenfolge zurückgegeben werden. D.h., es kann eine **String-Darstellung** aller zahlen- und zeichenfolgenbasierter Typen und eine hexadezimale String-Darstellung binärer Spalten wie binary, varbinary, varbinary(max), image, timestamp oder uniqueidentifier zurückgegeben werden.  

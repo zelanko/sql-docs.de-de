@@ -54,7 +54,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Falls angegeben, sollten die Werte für die Parameter *length* und *decimal* der STR-Funktion positiv sein. Die Zahl wird standardmäßig, oder wenn der Dezimalstellenparameter 0 beträgt, auf eine ganze Zahl gerundet. Die angegebene Länge sollte größer oder gleich dem Teil der Zahl vor dem Dezimalpunkt plus dem Vorzeichen (falls vorhanden) sein. Ein kurzer *float_expression*-Ausdruck wird in der angegebenen Länge rechtsbündig ausgerichtet, während ein langer *float_expression*-Ausdruck auf die angegebene Anzahl der Dezimalstellen gekürzt wird. Beispielsweise ergibt STR(12 **,** 10) den Wert 12. Dieser Wert wird im Resultset rechtsbündig ausgerichtet. STR(1223 **,** 2) schneidet das Resultset zu ** hingegen ab. Zeichenfolgenfunktionen können geschachtelt werden.  
   
 > [!NOTE]  

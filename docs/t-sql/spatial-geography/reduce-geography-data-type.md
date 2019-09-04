@@ -50,7 +50,7 @@ ms.locfileid: "68101772"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei Auflistungstypen arbeitet dieser Algorithmus unabhängig für jeden **geography** -Wert, der in der Instanz enthalten ist. Dieser Algorithmus ändert keine **Point** -Instanzen.  
   
  Diese Methode versucht, die Endpunkte von **LineString** -Instanzen beizubehalten. Dies kann aber fehlschlagen, um ein gültiges Ergebnis zu erhalten.  

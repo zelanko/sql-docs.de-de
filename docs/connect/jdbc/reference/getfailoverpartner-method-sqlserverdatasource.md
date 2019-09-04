@@ -37,7 +37,7 @@ public string getFailoverPartner()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichenfolge**, die den Namen des Failoverpartners oder NULL enthält, sofern kein Name festgelegt ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der von dieser Methode zurückgegebene Wert gibt den Failoverpartnernamen wieder, der mithilfe der [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)-Methode festgelegt wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  

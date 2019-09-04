@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68094613"
 ---
-# <a name="errorstate-transact-sql"></a>ERROR_STATE (Transact-SQL)
+# <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Gibt die Statusnummer des Fehlers zurück, der bewirkt hat, dass der CATCH-Block eines TRY…CATCH-Konstrukts ausgeführt wurde.  
@@ -51,7 +51,7 @@ ERROR_STATE ( )
   
  Gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blockes aufgerufen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Einige Fehlermeldungen können für mehrere Elemente im Code für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] ausgelöst werden. So kann z. B. der Fehler "1105" aufgrund verschiedener Bedingungen ausgelöst werden. Jeder Bedingung, die den Fehler auslöst, wird ein eindeutiger Statuscode zugewiesen.  
   
  Beim Anzeigen von Datenbanken mit bekannten Problemen, wie z. B. der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, können Sie mithilfe der Statusnummer ermitteln, ob das aufgezeichnete Problem mit dem aufgetretenen Fehler übereinstimmt. Wenn z. B. ein Knowledge Base-Artikel den Fehler 1105 mit dem Status 2 erläutert und die von Ihnen empfangene Fehlermeldung 1105 den Status 3 aufweist, ist der Fehler wahrscheinlich auf eine andere als die im Artikel gemeldete Ursache zurückzuführen.  
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-errorstate-in-a-catch-block"></a>A. Verwenden von ERROR_STATE in einem CATCH-Block  
+### <a name="a-using-error_state-in-a-catch-block"></a>A. Verwenden von ERROR_STATE in einem CATCH-Block  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der Status des Fehlers wird zurückgegeben.  
   
 ```sql  
@@ -80,7 +80,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_STATE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
+### <a name="b-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_STATE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Zusammen mit dem Fehlerzustand werden Informationen zu dem Fehler zurückgegeben.  
   
 ```sql  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Verwenden von ERROR_STATE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
+### <a name="c-using-error_state-in-a-catch-block-with-other-error-handling-tools"></a>C. Verwenden von ERROR_STATE in einem CATCH-Block mit anderen Fehlerbehandlungstools  
  Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Zusammen mit dem Fehlerzustand werden Informationen zu dem Fehler zurückgegeben.  
   
 ```sql  

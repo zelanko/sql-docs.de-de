@@ -56,7 +56,7 @@ DROP QUEUE <object>
  *queue_name*  
  Der Name der zu löschenden Warteschlange.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können eine Warteschlange nicht löschen, wenn Dienste auf sie verweisen.  
   
 ## <a name="permissions"></a>Berechtigungen  

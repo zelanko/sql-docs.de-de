@@ -45,7 +45,7 @@ public int setString(long pos,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setString-Methode wird von der setString-Methode in der java.sql.NClob-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

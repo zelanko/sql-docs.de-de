@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064717"
 ---
-# <a name="colname-transact-sql"></a>COL_NAME (Transact-SQL)
+# <a name="col_name-transact-sql"></a>COL_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den Namen der Tabellenspalte basierend auf den Werten der Tabellen-ID und der Spalten-ID der entsprechenden Tabellenspalte zurück.
@@ -56,7 +56,7 @@ Gibt NULL zurück bei einem Fehler oder wenn ein Aufrufer nicht über die korrek
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. `COL_NAME`, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekten Berechtigungen erteilt wurden. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Der *table_id*- und der *column_id*-Parameter erzeugen zusammen eine Spaltennamenzeichenfolge.
   
 Weitere Informationen zum Abrufen von Tabellen- und Spalten-IDs finden Sie unter [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).

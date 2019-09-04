@@ -41,7 +41,7 @@ ms.locfileid: "67930244"
   
  CLR-Rückgabetyp: **Boolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
   

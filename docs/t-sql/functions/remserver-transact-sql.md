@@ -46,7 +46,7 @@ ms.locfileid: "67944501"
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  @@REMSERVER ermöglicht einer gespeicherten Prozedur die Überprüfung des Namens des Datenbankservers, von dem aus die Prozedur ausgeführt wird.  
   
 ## <a name="examples"></a>Beispiele  

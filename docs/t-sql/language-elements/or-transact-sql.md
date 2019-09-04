@@ -50,7 +50,7 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>Ergebniswert  
  OR gibt TRUE zurück, falls der Wert für mindestens eine der Bedingungen TRUE ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die folgende Tabelle zeigt das Ergebnis des OR-Operators.  
   
 ||TRUE|FALSE|UNKNOWN|  

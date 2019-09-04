@@ -40,7 +40,7 @@ public java.sql.ResultSet getTypeInfo()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getTypeInfo-Methode wird von der getTypeInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getTypeInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  

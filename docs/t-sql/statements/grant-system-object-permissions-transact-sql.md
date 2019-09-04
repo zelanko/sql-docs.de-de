@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Gibt den Prinzipal an, für den die Berechtigung erteilt wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit dieser Anweisung können Berechtigungen für bestimmte gespeicherte Prozeduren, erweiterte gespeicherte Prozeduren, Tabellenwertfunktionen, Skalarfunktionen, Sichten, Katalogsichten, Kompatibilitätssichten, INFORMATION_SCHEMA-Sichten, dynamische Verwaltungssichten und Systemtabellen erteilt werden, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert wurden. Alle Systemobjekte sind als eindeutiger Datensatz in der Ressourcendatenbank des Servers (mssqlsystemresource) vorhanden. Die Ressourcendatenbank ist schreibgeschützt. Ein Link zum Objekt wird in einem Datensatz im sys-Schema jeder Datenbank verfügbar gemacht. Die Berechtigung zum Ausführen oder Auswählen eines Systemobjekts kann erteilt, verweigert und aufgehoben werden.  
   
  Durch das Erteilen der Berechtigung zum Ausführen oder Auswählen eines Objekts müssen nicht alle Berechtigungen bereitgestellt werden, die zum Verwenden des Objekts erforderlich sind. Von den meisten Objekten werden Vorgänge ausgeführt, für die zusätzliche Berechtigungen erforderlich sind. Ein Benutzer, dem die EXECUTE-Berechtigung für sp_addlinkedserver erteilt wurde, kann z. B. nur dann einen Verbindungsserver erstellen, wenn der Benutzer auch ein Mitglied der festen Serverrolle sysadmin ist.  

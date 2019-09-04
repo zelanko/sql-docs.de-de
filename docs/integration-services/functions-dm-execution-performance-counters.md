@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68102789"
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>Funktionen – dm_execution_performance_counters
+# <a name="functions---dm_execution_performance_counters"></a>Funktionen – dm_execution_performance_counters
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -39,7 +39,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Wenn eine Ausführungs-ID nicht angegeben wird, werden Leistungsstatistiken für mehrere Ausführungen zurückgegeben. Wenn Sie ein Mitglied der **ssis_admin** -Datenbankrolle sind, werden Leistungsstatistiken für alle aktiven Ausführungen zurückgegeben.  Wenn Sie kein Mitglied der **ssis_admin** -Datenbankrolle sind, werden Leistungsstatistiken zu den aktiven Ausführungen zurückgegeben, für die Sie Leseberechtigungen haben. *execution_id* ist **BigInt**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle werden die von der dm_execution_performance_counter-Funktion zurückgegebenen Leistungsindikatornamenswerte aufgeführt.  
   
 |Indikatorname|und Beschreibung|  
@@ -60,7 +60,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Rückgabewert  
  Die dm_execution_performance_counters-Funktion gibt für eine aktive Ausführung eine Tabelle mit den folgenden Spalten zurück. Die zurückgegebenen Informationen sind für alle in der Ausführung enthaltenen Pakete. Sind keine Ausführungen aktiv, wird eine leere Tabelle zurückgegeben.  
   
-|Spaltenname|Spaltentyp|und Beschreibung|Remarks|  
+|Spaltenname|Spaltentyp|und Beschreibung|Bemerkungen|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** ist kein gültiger Wert.|Eindeutiger Bezeichner für die das Paket enthaltende Ausführung.||  
 |counter_name|**nvarchar(128)**|Der Name des Leistungsindikators.|Siehe den Abschnitt von Werten **Hinweise** .|  

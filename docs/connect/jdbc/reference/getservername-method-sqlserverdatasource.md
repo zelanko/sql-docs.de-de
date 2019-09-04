@@ -37,7 +37,7 @@ public java.lang.String getServerName()
 ## <a name="return-value"></a>Rückgabewert  
  Ein **String-Objekt**, das den Servernamen oder NULL enthält, sofern kein Wert festgelegt ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Servername ist der Hostname des Zielcomputers, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. Ist die getServerName-Eigenschaft nicht festgelegt, wird von getServerName der Standardwert (NULL) zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

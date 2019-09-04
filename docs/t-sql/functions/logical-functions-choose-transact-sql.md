@@ -50,7 +50,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt den Datentyp mit der höchsten Rangfolge aus dem Satz von Typen zurück, der an die Funktion übergeben wurde. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  CHOOSE hat die gleiche Funktion wie ein Index in einem Array, wobei das Array aus den Argumenten besteht, die dem Indexargument folgen. Das Indexargument bestimmt, welcher der folgenden Werte zurückgegeben wird.  
   
 ## <a name="examples"></a>Beispiele  

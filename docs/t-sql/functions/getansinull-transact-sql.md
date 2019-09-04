@@ -48,7 +48,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 GETANSINULL gibt 1 zurück, wenn die NULL-Zulässigkeit der Datenbank Nullwerte zulässt. Dieser Rückgabewert erfordert auch, dass die NULL-Zulässigkeit der Spalte oder des Datentyps nicht explizit definiert ist. Der ANSI NULL-Standardwert ist 1. 
   
  Zur Aktivierung des ANSI NULL-Standardverhaltens muss eine der folgenden Bedingungen festgelegt werden:  

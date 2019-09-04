@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68089870"
 ---
-# <a name="schemaid-transact-sql"></a>SCHEMA_ID (Transact-SQL)
+# <a name="schema_id-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die Schema-ID zurück, die einem Schemanamen zugeordnet ist.  
@@ -53,7 +53,7 @@ SCHEMA_ID ( [ schema_name ] )
   
  Es wird NULL zurückgegeben, wenn *schema_name* kein gültiges Schema ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SCHEMA_ID gibt IDs von Systemschemas und benutzerdefinierten Schemas zurück. SCHEMA_ID kann in einer Auswahlliste, in einer WHERE-Klausel und überall dort aufgerufen werden, wo ein Ausdruck zulässig ist.  
   
 ## <a name="examples"></a>Beispiele  

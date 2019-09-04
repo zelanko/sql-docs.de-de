@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68007751"
 ---
-# <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (SSISDB-Datenbank)
+# <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -78,7 +78,7 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Dieses Verfahren kann nicht durch Anmeldevorgänge aufgerufen werden, die von SQL Server authentifiziert wurden. Es kann nicht durch die SA-Anmeldung aufgerufen werden.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit dieser gespeicherten Prozedur können Sie die in der folgenden Tabelle beschriebenen Typen von Berechtigungen gewähren:  
   
 |permission_type-Wert|Berechtigungsname|Berechtigungsbeschreibung|Anwendbare Objekttypen|  

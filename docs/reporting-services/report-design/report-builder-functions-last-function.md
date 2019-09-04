@@ -38,7 +38,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>Rückgabetyp  
  Wird durch den Typ des Ausdrucks bestimmt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **Last** -Funktion gibt den letzten Wert in einem Satz von Daten zurück, nachdem alle Sortierfunktionen und Filter im angegebenen Bereich angewendet wurden.  
   
  Die **Last** -Funktion kann nur in Gruppenfilterausdrücken mit dem aktuellen (Standard-) Bereich verwendet werden.  

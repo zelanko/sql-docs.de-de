@@ -52,7 +52,7 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. IDENT_INCR, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 IDENT_CURRENT ähnelt den [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Identitätsfunktionen SCOPE_IDENTITY und @@IDENTITY. Alle drei Funktionen geben die zuletzt generierten Identitätswerte zurück. Der Gültigkeitsbereich und die Sitzung, für die *last* definiert ist, unterscheiden sich jedoch bei jeder dieser drei Funktionen:  
 
 -   IDENT_CURRENT gibt den letzten für eine bestimmte Tabelle in einer Sitzung oder einem Gültigkeitsbereich generierten Identitätswert zurück.  

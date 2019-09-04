@@ -59,7 +59,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Wenn *string_expression* nicht vom Typ **varchar(max)** oder **nvarchar(max) ist, schneidet REPLACE** den Rückgabewert bei 8.000 Byte ab. Für die Rückgabe von Werten über 8.000 Byte muss *string_expression* explizit in einen Datentyp für umfangreichere Werten umgewandelt werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  REPLACE führt Vergleiche auf der Basis der Sortierung der Eingabe durch. Zum Ausführen eines Vergleichs in einer angegebenen Sortierung können Sie mithilfe von [COLLATE](~/t-sql/statements/collations.md) eine ausdrückliche Sortierung auf die Eingabe anwenden.  
   
  0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in REPLACE enthalten sein.  

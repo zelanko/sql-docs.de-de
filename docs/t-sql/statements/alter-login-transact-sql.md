@@ -129,7 +129,7 @@ ADD CREDENTIAL Fügt der Anmeldung Anmeldeinformationen eines EKM-Anbieters (Ext
 
 DROP CREDENTIAL Entfernt Anmeldeinformationen eines EKM-Anbieters (Extensible Key Management, erweiterbare Schlüsselverwaltung) aus der Anmeldung. Weitere Informationen finden Sie unter [Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)] (../.. /relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Wenn CHECK_POLICY auf ON festgelegt ist, kann das HASHED-Argument nicht verwendet werden.
 
@@ -314,7 +314,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../
 
 NAME = *login_name* Der neue Name der Anmeldung, die umbenannt wird. Falls es sich dabei um eine Windows-Anmeldung handelt, muss die SID des entsprechenden Windows-Prinzipals für den neuen Namen mit der SID übereinstimmen, die der Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist. Der neue Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung darf keinen umgekehrten Schrägstrich (\\) enthalten.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
@@ -532,7 +532,7 @@ ADD CREDENTIAL Fügt der Anmeldung Anmeldeinformationen eines EKM-Anbieters (Ext
 
 DROP CREDENTIAL Entfernt Anmeldeinformationen eines EKM-Anbieters (Extensible Key Management, erweiterbare Schlüsselverwaltung) aus der Anmeldung. Weitere Informationen finden Sie unter [Erweiterbare Schlüsselverwaltung (Extensible Key Management, EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Wenn CHECK_POLICY auf ON festgelegt ist, kann das HASHED-Argument nicht verwendet werden.
 
@@ -721,7 +721,7 @@ OLD_PASSWORD **='** _oldpassword_ **'** Gilt nur für [!INCLUDE[ssNoVersion](../
 
 NAME = *login_name* Der neue Name der Anmeldung, die umbenannt wird. Falls es sich dabei um eine Windows-Anmeldung handelt, muss die SID des entsprechenden Windows-Prinzipals für den neuen Namen mit der SID übereinstimmen, die der Anmeldung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet ist. Der neue Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung darf keinen umgekehrten Schrägstrich (\\) enthalten.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] werden Anmeldedaten, die für die Authentifizierung einer Verbindung und Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um das Aktualisieren der Authentifizierungsdatenbank zu erzwingen und sicherzustellen, dass die Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
@@ -886,7 +886,7 @@ CHECK_POLICY **=** { **ON** | OFF } Gilt nur für [!INCLUDE[ssNoVersion](../../i
 
 UNLOCK Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldungen. Gibt an, dass die Sperre einer Anmeldung aufgehoben wird.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Wenn CHECK_POLICY auf ON festgelegt ist, kann das HASHED-Argument nicht verwendet werden.
 

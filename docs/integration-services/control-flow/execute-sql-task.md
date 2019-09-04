@@ -333,7 +333,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
   
     |Parametertyp**Output**|Date-Datumstyp|  
     |-------------------------------|--------------------|  
-    |DBDATE|**Datum**|  
+    |DBDATE|**date**|  
     |DBTIME2|**time**|  
     |DBTIMESTAMP|**datetime**, **datetime2**|  
     |DBTIMESTAMPOFFSET|**datetimeoffset**|  
@@ -349,7 +349,7 @@ SQL-Anweisungen und gespeicherte Prozeduren verwenden häufig **input** -Paramet
   
     |Parametertyp**Output**|Date-Datumstyp|  
     |-------------------------------|--------------------|  
-    |SQL_DATE|**Datum**|  
+    |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  
     |SQL_TYPE_TIMESTAMP<br /><br /> -oder-<br /><br /> SQL_TIMESTAMP|**datetime**, **datetime2**|  
     |SQL_SS_TIMESTAMPOFFSET|**datetimeoffset**|  

@@ -44,7 +44,7 @@ ms.locfileid: "67929009"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SET FORCEPLAN überschreibt im Wesentlichen die Logik, die der Abfrageoptimierer beim Verarbeiten einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-SELECT-Anweisung verwendet hat. Die SELECT-Anweisung gibt unabhängig von dieser Einstellung dieselben Daten zurück. Der einzige Unterschied besteht darin, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Tabellen bei der Ausführung der Abfrage verarbeitet.  
   
  Auch Hinweise für den Abfrageoptimierer können in Abfragen verwendet werden, um das Verarbeiten der SELECT-Anweisung durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu beeinflussen.  

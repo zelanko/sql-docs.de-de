@@ -27,7 +27,7 @@ author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 7d64a92f5576d623402534d78b695c25bf9a9246
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67986096"
@@ -255,7 +255,7 @@ WHERE database_id = DB_ID();
  **-?**  
  Zeigt die Hilfe zur Befehlszeile an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie **ssbdiagnose** , um folgende Aufgaben auszuführen:  
   
 -   Bestätigen, dass in einer neu konfigurierten [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Anwendung keine Konfigurationsfehler vorhanden sind.  

@@ -26,7 +26,7 @@ ms.locfileid: "69026372"
 > [!NOTE]  
 > Obwohl der JDBC-Treiber Java EE-Verbindungspools unterstützt, stellt er keine eigene Poolimplementierung bereit. Der Treiber benötigt Java-Anwendungsserver eines Drittanbieters zum Verwalten der Verbindungen.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Für die Verbindungspoolimplementierung stehen die folgenden Klassen zur Verfügung.  
   

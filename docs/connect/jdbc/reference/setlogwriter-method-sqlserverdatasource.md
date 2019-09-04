@@ -39,7 +39,7 @@ public void setLogWriter(java.io.PrintWriter out)
   
  Ein PrintWriter-Objekt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setlogwriter-Methode wird von der setlogwriter-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

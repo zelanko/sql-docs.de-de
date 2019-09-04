@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  Die tatsächlichen Daten vom Typ **text**, **ntext** oder **image**, die gespeichert werden sollen. *data* kann ein Literal oder ein Parameter sein. Die maximale Textlänge, die interaktiv mit WRITETEXT eingefügt werden kann, entspricht für Daten vom Typ **text**, **ntext** und **image** ungefähr 120 KB.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie WRITETEXT zum Ändern von Daten vom Typ **text**, **ntext** und **image** und UPDATETEXT zum Ändern von Daten vom Typ **text**, **ntext** und **image**. UPDATETEXT ist flexibler, weil damit nicht die gesamte Spalte, sondern nur ein Teil einer **text**-, **ntext**- oder **image**-Spalte geändert wird.  
   
  Für eine optimale Leistung empfiehlt es sich, Daten vom Typ **text**, **ntext** und **image** in Segmenten mit der Größe eines Vielfachen von 8040 Bytes einzufügen oder zu aktualisieren.  

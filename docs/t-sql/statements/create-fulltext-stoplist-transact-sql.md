@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  Gibt den Namen eines Datenbankprinzipals als Besitzer der Stoppliste an. *owner_name* muss der Name eines Prinzipals sein, dessen Mitglied der aktuelle Benutzer ist, oder der aktuelle Benutzer benötigt die IMPERSONATE-Berechtigung für *owner_name*. Wird kein Wert angegeben, wird der aktuelle Benutzer zum Besitzer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Ersteller einer Stoppliste ist deren Besitzer.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/19/2019
 ms.locfileid: "68329292"
 ---
-# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
+# <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Anzahl (große ganze Zahl mit Vorzeichen) der angegebenen *datepart*-Begrenzungen zurück, die zwischen den angegebenen Werten für *startdate* und *enddate* überschritten wurden.
@@ -72,7 +72,7 @@ In der folgenden Tabelle sind alle gültigen Namen und Abkürzungen für *datepa
 *startdate*  
 Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann:
 
-+ **Datum**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -118,7 +118,7 @@ SELECT DATEDIFF_BIG(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie `DATEDIFF_BIG` in den Klauseln `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` und `ORDER BY`.
   
 `DATEDIFF_BIG` wandelt Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt `DATEDIFF_BIG` das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.

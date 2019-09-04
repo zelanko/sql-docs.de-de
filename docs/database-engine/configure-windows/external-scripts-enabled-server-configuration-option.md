@@ -26,7 +26,7 @@ ms.locfileid: "68011765"
 
 Aktivieren Sie mit der Option **external scripts enabled** die Ausführung von Skripts mit bestimmten Remotespracherweiterungen. Diese Eigenschaft ist standardmäßig deaktiviert. Beim Setup kann diese Eigenschaft optional auf TRUE festgelegt werden, wenn **Advanced Analytics Services** installiert wird.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Bevor Sie mit der gespeicherten Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ein externes Skript ausführen können, müssen Sie die Option „external script enabled“ aktivieren. Verwenden Sie **sp_execute_external_script** zum Ausführen von Skripts, die in einer unterstützten Sprache wie R oder Python geschrieben sind. 
 

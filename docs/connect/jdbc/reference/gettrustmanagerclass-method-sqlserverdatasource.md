@@ -37,7 +37,7 @@ public java.lang.String getTrustManagerClass()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichenfolge** , die den Wert der Trust ManagerClass-Verbindungs Eigenschaft enthält, oder NULL, wenn kein Wert festgelegt ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die trustmanagerclass-Eigenschaft nicht festgelegt ist, gibt die [gettrustmanagerclass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md) -Methode NULL zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

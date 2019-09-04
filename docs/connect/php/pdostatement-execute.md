@@ -35,7 +35,7 @@ bool PDOStatement::execute ([ $input ] );
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Anweisungen, die mit PDOStatement::execute ausgeführt werden, müssen erst mit [PDO::prepare](../../connect/php/pdo-prepare.md)vorbereitet werden. Informationen zum Angeben der direkten oder vorbereiteten Ausführung von Anweisungen finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) .  
   
 Alle Werte de Eingabeparameterarrays werden als PDO::PARAM_STR-Werte behandelt.  

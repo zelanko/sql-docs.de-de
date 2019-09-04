@@ -39,7 +39,7 @@ public void setUser(java.lang.String user)
   
  Ein **String-Objekt**, das den Benutzernamen enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die setUser-Methode legt den Benutzernamen fest, der zum Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird. Wenn kein Wert für den Benutzernamen festgelegt ist, gibt die [getUser](../../../connect/jdbc/reference/getuser-method-sqlserverdatasource.md)-Methode den Standardwert NULL zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -58,7 +58,7 @@ Gibt zurzeit verwendete Einträge asynchron aus den jeweiligen Caches nach ihrer
 NO_INFOMSGS  
 Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Durch das Ausführen von DBCC FREESYSTEMCACHE wird der Plancache für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gelöscht. Durch das Löschen des Plancaches wird eine Neukompilierung aller nachfolgenden Ausführungspläne verursacht, und möglicherweise entsteht plötzlich eine temporäre Verringerung der Abfrageleistung. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll enthält für jeden geleerten Cachespeicher im Plancache folgende Informationsmeldung: „[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat für den %2!s!-Cachespeicher (Bestandteil des Plancache) %1!s! Leerungen des Cachespeichers gefunden, die von DBCC FREEPROCCACHE- oder DBCC FREESYSTEMCACHE-Vorgängen ausgelöst wurden.“ Diese Meldung wird alle fünf Minuten protokolliert, solange der Cache innerhalb dieses Zeitintervalls geleert wird.
 
 ## <a name="result-sets"></a>Resultsets  

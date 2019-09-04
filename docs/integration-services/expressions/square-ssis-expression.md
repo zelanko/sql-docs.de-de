@@ -41,7 +41,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SQUARE gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Das Argument wird in einen DT_R8-Datentyp umgewandelt, bevor das Quadrat berechnet wird.  

@@ -46,7 +46,7 @@ DROP WORKLOAD CLASSIFIER classifier_name;
 *classifier_name*  
 Gibt den Namen an, mit dem der Arbeitsauslastungsklassifizierer identifiziert werden kann.  „classifier_name“ ist vom Datentyp „sysname“.  Dieses Argument kann bis zu 128 Zeichen lang sein und muss innerhalb der Instanz einen eindeutigen Namen haben.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die Anweisung DROP WORKLOAD CLASSIFIER ist nicht erlaubt auf Systemarbeitsauslastungsklassifizierern.
 

@@ -48,7 +48,7 @@ MONTH ( date )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Datum*  
+ *date*  
  Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: **time**, **date**, **smalldatetime**, **datetime**, **datetime2** oder **datetimeoffset**. Bei dem *date*-Argument kann es sich um einen Ausdruck, einen Spaltenausdruck, eine benutzerdefinierte Variable oder ein Zeichenfolgenliteral handeln.  
   
 ## <a name="return-type"></a>Rückgabetyp  

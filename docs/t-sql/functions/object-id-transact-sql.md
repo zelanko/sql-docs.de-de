@@ -33,7 +33,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67914867"
 ---
-# <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
+# <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die Datenbankobjekt-ID eines Objekts mit Schemabereich zurück.  
@@ -67,7 +67,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass integrierte Funktionen (z. B. OBJECT_ID), die Metadaten ausgeben, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der Parameter für eine Systemfunktion optional ist, wird von der aktuellen Datenbank, dem aktuellen Hostcomputer, dem aktuellen Serverbenutzer oder dem aktuellen Datenbankbenutzer ausgegangen. Auf integrierte Funktionen müssen immer runde Klammern folgen.  
   
  Wenn der Name einer temporären Tabelle angegeben wird, muss der Datenbankname vor diesem angegeben werden, es sei denn, die aktuelle Datenbank ist **tempdb**. Beispiel: `SELECT OBJECT_ID('tempdb..#mytemptable')`.  
@@ -97,7 +97,7 @@ DROP TABLE dbo.AWBuildVersion;
 GO  
 ```  
   
-### <a name="c-using-objectid-to-specify-the-value-of-a-system-function-parameter"></a>C. Angeben des Werts eines Systemfunktionsparameters mithilfe von OBJECT_ID  
+### <a name="c-using-object_id-to-specify-the-value-of-a-system-function-parameter"></a>C. Angeben des Werts eines Systemfunktionsparameters mithilfe von OBJECT_ID  
  Im folgenden Beispiel werden Informationen zu allen Indizes und Partitionen der `Person.Address`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. Dazu wird die [sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)-Funktion verwendet.  
   
 > [!IMPORTANT]  

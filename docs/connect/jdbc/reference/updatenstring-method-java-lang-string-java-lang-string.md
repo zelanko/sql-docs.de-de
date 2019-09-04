@@ -42,7 +42,7 @@ public void updateNString(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updatenstring-Methode wird von der updatenstring-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Diese Methode übergibt die Java- **Zeichenfolge** an ausgewählte Spalten vom Typ **NCHAR**, **nvarchar (max)** , **ntext**und **XML** . Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  

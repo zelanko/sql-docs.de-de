@@ -47,7 +47,7 @@ DROP MASTER KEY
 ## <a name="arguments"></a>Argumente  
  Diese Anweisung besitzt keine Argumente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Löschung kann nicht ausgeführt werden, wenn ein privater Schlüssel in der Datenbank mit dem Hauptschlüssel geschützt ist.  
   
 ## <a name="permissions"></a>Berechtigungen  

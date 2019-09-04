@@ -55,7 +55,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getFunctionColumns-Methode wird von der getFunctionColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Von dieser Methode werden nur die Funktionen und Parameter zurückgegeben, die dem angegebenen Schema, Funktions- und Parameternamen innerhalb des angegebenen Katalogs entsprechen.  

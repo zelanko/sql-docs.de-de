@@ -35,7 +35,7 @@ public java.sql.ResultSet getClientInfoProperties()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getClientInfoProperties-Methode wird durch die getClientInfoProperties-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  

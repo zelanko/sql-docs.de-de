@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67906943"
 ---
-# <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
+# <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt das Datum des letzten Updates für die Statistik einer Tabelle oder indizierten Sicht zurück.  
@@ -54,7 +54,7 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt **datetime** erfolgreich zurück. Gibt **NULL** zurück, wenn kein statistisches Blob erstellt wurde.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Systemfunktionen können in der Auswahlliste, in der WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck verwendet werden kann.  
  
  Das Aktualisierungsdatum für die Statistiken befindet sich gemeinsam mit dem [Histogramm](../../relational-databases/statistics/statistics.md#histogram) und [Dichtevektor](../../relational-databases/statistics/statistics.md#density) nicht in den Metadaten, sondern im [Statistik-Blobobjekt](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics). Wenn für das generieren von Statistikdaten keine Daten gelesen werden, wird das Statistikblob nicht erstellt und das Datum nicht verfügbar gemacht. Dies ist der Fall bei gefilterten Statistiken oder neuen und leeren Tabellen, für die das Prädikat keine Zeilen zurückgibt.

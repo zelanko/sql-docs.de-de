@@ -47,7 +47,7 @@ Gibt den angegebenen inneren Ring einer **Polygongeometry**-Instanz zurück.
   
  Open Geospatial Consortium (OGC)-Typ: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt **null** zurück, wenn die **geometry** -Instanz kein Polygon ist. Diese Methode löst außerdem eine **ArgumentOutOfRangeException** aus, wenn der Ausdruck größer als die Anzahl der Ringe ist. Die Anzahl der Ringe kann mithilfe von `STNumInteriorRing``()` zurückgegeben werden.  
   
 ## <a name="examples"></a>Beispiele  

@@ -43,7 +43,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion teilt die <character_expression>-Zeichenfolge in einen Satz von Token auf, die von den im <delimiter_string> festgelegten Trennzeichen getrennt wurden, und gibt dann das N-te Token zurück, wobei N für die vom \<occurrence>-Parameter festgelegte Anzahl der Vorkommen des Tokens steht. Beispiele für die Verwendung dieser Funktion finden Sie im Abschnitt "Beispiele".  
   
  Die folgenden Hinweise gelten für die TOKEN-Funktion:  

@@ -45,7 +45,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setBinaryStream-Methode wird von der setBinaryStream-Methode in der Java. SQL. BLOB-Schnittstelle angegeben.  
   
  Daten im BLOB werden beginnend mit der angegebenen Position vom Ausgabedatenstrom überschrieben, und sie können die ursprüngliche Länge des BLOB übersteigen. Durch Angeben eines Werts vom Typ Position+1 werden Bytes an die Zeichenfolge angefügt. Durch Weitergeben eines Werts vom Typ Position+2 oder größer (oder null oder weniger) wird ein Positionsfehler ausgelöst.  

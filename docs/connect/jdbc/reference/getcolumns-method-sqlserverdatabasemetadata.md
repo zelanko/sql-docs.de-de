@@ -60,7 +60,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getColumns-Methode wird von der getColumns-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getColumns-Methode zurückgegebene Resultset enthält die folgenden Informationen:  

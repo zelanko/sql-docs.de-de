@@ -38,7 +38,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt einen Wert vom Typ **Integer**zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **CountRows** zählt alle Zeilen im angegebenen Bereich, einschließlich der Zeilen mit NULL-Werten.  
   
  Der Wert *scope* darf kein Ausdruck sein und muss auf den aktuellen Bereich oder einen enthaltenen Bereich verweisen.  

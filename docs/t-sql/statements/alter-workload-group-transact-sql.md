@@ -142,7 +142,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > Bei der "default"-Option wird die Groß-/Kleinschreibung beachtet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ALTER WORKLOAD GROUP ist für die Standardgruppe zulässig.  
   
  Änderungen an der Konfiguration der Arbeitsauslastungsgruppe werden erst wirksam, nachdem ALTER RESOURCE GOVERNOR RECONFIGURE ausgeführt wurde. Wenn Sie eine Einstellung mit Auswirkung auf den Plan ändern, wird die neue Einstellung nur in zuvor zwischengespeicherten Plänen nach dem Ausführen von DBCC FREEPROCCACHE (*pool_name*) wirksam, wobei *pool_name* der Name eines Ressourcenpools von Resource Governor ist, dem die Arbeitsauslastungsgruppe zugeordnet ist.  

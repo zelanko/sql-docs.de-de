@@ -50,7 +50,7 @@ ms.locfileid: "67930286"
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode ist weder deterministisch noch präzise.  
   
 ## <a name="examples"></a>Beispiele  

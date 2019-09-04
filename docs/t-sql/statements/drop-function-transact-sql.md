@@ -65,7 +65,7 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  Der Name der benutzerdefinierten Funktion oder Funktionen, die entfernt werden sollen. Die Angabe des Schemanamens ist optional. Der Servername und der Datenbankname können nicht angegeben werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  DROP FUNCTION erzeugt einen Fehler, wenn [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen oder -Sichten in der Datenbank vorhanden sind, die auf diese Funktion verweisen und mithilfe von SCHEMABINDING erstellt wurden, oder wenn berechnete Spalten, CHECK-Einschränkungen oder DEFAULT-Einschränkungen vorhanden sind, die auf die Funktion verweisen.  
   
  DROP FUNCTION erzeugt außerdem einen Fehler, wenn berechnete Spalten vorhanden sind, die auf diese Funktion verweisen und indiziert wurden.  

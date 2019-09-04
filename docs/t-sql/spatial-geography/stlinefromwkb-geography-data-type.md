@@ -50,7 +50,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
  OGC-Typ: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  

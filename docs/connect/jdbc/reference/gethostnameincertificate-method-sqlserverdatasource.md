@@ -37,7 +37,7 @@ public java.lang.String getHostNameInCertificate()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichenfolge**, die den Hostnamen oder – sofern kein Wert festgelegt ist – NULL enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Hostname dient zum Überprüfen des SQL Server-SSL-Zertifikatwerts, wenn die Kommunikationsschicht mithilfe von SSL verschlüsselt wird.  
   
  Ist der Hostname nicht festgelegt, wird von der [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)-Methode der Standardwert (NULL) zurückgegeben.  

@@ -34,7 +34,7 @@ InScope(scope)
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt einen **Boolean**zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **InScope** -Funktion testet den Bereich der aktuellen Instanz eines Berichtselements in Bezug auf die Mitgliedschaft in dem durch den *scope*-Parameter angegebenen Bereich.  
   
  *Scope* darf kein Ausdruck sein.  

@@ -256,7 +256,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Für DATABASE_MIRRORING ist kein Standardport vorhanden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ENDPOINT DDL-Anweisungen können nicht innerhalb einer Benutzertransaktion ausgeführt werden. ENDPOINT DDL-Anweisungen sind nicht fehlerhaft, selbst wenn eine aktive Momentaufnahmeisolationsstufen-Transaktion den Endpunkt verwendet, der geändert wird.  
   
  Folgende Personen können Anforderungen für ein ENDPOINT-Objekt ausführen:  

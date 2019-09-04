@@ -45,7 +45,7 @@ Eine **nvarchar(4000)** -Zeichenfolge, die einen von 15 Typen angibt, die in der
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Eingabe für die Methode muss einem der folgenden Typen entsprechen: **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** oder **MultiPoint**. Diese Methode löst eine **ArgumentException** aus, wenn andere Zeichenfolgen für die Eingabe verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  

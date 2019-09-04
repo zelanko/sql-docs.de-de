@@ -83,7 +83,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  Der Wert *scr_text_ptr* darf nicht mit dem Wert *dest_text_ptr* übereinstimmen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei neu eingefügten Daten kann es sich um eine einzelne *inserted_data*-Konstante, einen Tabellennamen, einen Spaltennamen oder einen Textzeiger handeln.  
   
 |Updateaktion|UPDATETEXT-Parameter|  

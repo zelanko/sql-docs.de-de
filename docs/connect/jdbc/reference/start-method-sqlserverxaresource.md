@@ -47,7 +47,7 @@ public void start(javax.transaction.xa.Xid xid,
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese start-Methode wird von der start-Methode in der javax.transaction.xa.XAResource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

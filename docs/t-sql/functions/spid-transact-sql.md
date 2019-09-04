@@ -47,7 +47,7 @@ ms.locfileid: "67907047"
 ## <a name="return-types"></a>Rückgabetypen  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  @@SPID kann zur Identifikation des aktuellen Benutzerprozesses in der Ausgabe von **sp_who** verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  

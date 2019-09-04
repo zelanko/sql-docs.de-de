@@ -47,7 +47,7 @@ public final void setClob(java.lang.String parameterName,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setClob-Methode wird von der setClob-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

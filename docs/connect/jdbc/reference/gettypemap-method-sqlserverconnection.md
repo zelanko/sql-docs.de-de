@@ -43,7 +43,7 @@ public java.util.Map getTypeMap()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getTypeMap-Methode wird von der getTypeMap-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -63,7 +63,7 @@ public boolean insertsAreDetected(int type)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese inserzareerkannte-Methode wird von der inserzareerkannte-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  

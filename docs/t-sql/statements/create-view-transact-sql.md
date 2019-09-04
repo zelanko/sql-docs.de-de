@@ -158,7 +158,7 @@ OR ALTER
   
  Wenn eine Sicht mit WITH VIEW_METADATA erstellt wird, sind alle enthaltenen Spalten außer der Spalte **timestamp** aktualisierbar, wenn die Sicht den Trigger INSTEAD OF INSERT oder INSTEAD OF UPDATE aufweist. Weitere Informationen zu aktualisierbaren Sichten finden Sie unter Hinweise.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine Sicht kann nur in der aktuellen Datenbank erstellt werden. Bei CREATE VIEW muss es sich um die erste Anweisung in einem Abfragebatch handeln. Für eine Sicht sind maximal 1.024 Spalten zulässig.  
   
  Wenn eine Abfrage für eine Sicht durchgeführt wird, überprüft [!INCLUDE[ssDE](../../includes/ssde-md.md)], ob alle Datenbankobjekte, auf die in der Anweisung verwiesen wird, vorhanden sind, ob sie im Kontext der Anweisung gültig sind und ob Datenänderungsanweisungen gegen die Regeln der Datenintegrität verstoßen. Schlägt eine Überprüfung fehl, wird eine Fehlermeldung zurückgegeben. Andernfalls wird die Aktion in eine Aktion für die zugrunde liegende Tabelle bzw. Tabellen übersetzt.  

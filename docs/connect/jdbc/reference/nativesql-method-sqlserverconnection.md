@@ -48,7 +48,7 @@ public java.lang.String nativeSQL(java.lang.String sql)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese NativeSql-Methode wird von der NativeSql-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

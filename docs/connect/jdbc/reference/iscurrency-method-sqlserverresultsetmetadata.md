@@ -45,7 +45,7 @@ public boolean isCurrency(int column)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese isCurrency-Methode wird von der isCurrency-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
   
  Von dieser Methode wird nur bei den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen money und smallmoney **TRUE** zurückgegeben.  

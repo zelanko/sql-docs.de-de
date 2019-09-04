@@ -42,7 +42,7 @@ SIGN(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SIGN gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  

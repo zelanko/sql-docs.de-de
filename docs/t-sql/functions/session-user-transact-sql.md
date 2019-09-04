@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68022213"
 ---
-# <a name="sessionuser-transact-sql"></a>SESSION_USER (Transact-SQL)
+# <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   SESSION_USER gibt den Benutzernamen im Kontext der aktuellen Datenbank zurück.  
@@ -46,14 +46,14 @@ SESSION_USER
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie SESSION_USER mit DEFAULT-Einschränkungen in der CREATE TABLE- oder ALTER TABLE-Anweisung oder als beliebige Standardfunktion. SESSION_USER kann in eine Tabelle eingefügt werden, wenn kein Standardwert angegeben wird. Diese Funktion akzeptiert keine Argumente. SESSION_USER kann in Abfragen verwendet werden.  
   
  Wird SESSION_USER nach einem Kontextwechsel aufgerufen, gibt SESSION_USER den Benutzernamen des Kontexts zurück, dessen Identität angenommen wurde.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>A. Verwenden von SESSION_USER zur Rückgabe des Benutzernamens der aktuellen Sitzung  
+### <a name="a-using-session_user-to-return-the-user-name-of-the-current-session"></a>A. Verwenden von SESSION_USER zur Rückgabe des Benutzernamens der aktuellen Sitzung  
  Im folgenden Beispiel wird eine Variable als Datentyp `nchar` deklariert, ihr der aktuelle Wert von `SESSION_USER` zugewiesen und die Variable dann mit einer Textbeschreibung ausgegeben.  
   
 ```  
@@ -72,7 +72,7 @@ This session's current user is: Surya
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-sessionuser-with-default-constraints"></a>B. Verwenden von SESSION_USER mit DEFAULT-Einschränkungen  
+### <a name="b-using-session_user-with-default-constraints"></a>B. Verwenden von SESSION_USER mit DEFAULT-Einschränkungen  
  Im folgenden Beispiel wird eine Tabelle erstellt, die `SESSION_USER` als `DEFAULT`-Einschränkung für den Namen der Person verwendet, die den Empfang einer Lieferung aufzeichnet.  
   
 ```  
@@ -139,7 +139,7 @@ Order #   Customer #  When Delivered       Received By
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-using-sessionuser-to-return-the-user-name-of-the-current-session"></a>C: Verwenden von SESSION_USER zur Rückgabe des Benutzernamens der aktuellen Sitzung  
+### <a name="c-using-session_user-to-return-the-user-name-of-the-current-session"></a>C: Verwenden von SESSION_USER zur Rückgabe des Benutzernamens der aktuellen Sitzung  
  Im folgenden Beispiel wird der Sitzungsbenutzer für die aktuelle Sitzung zurückgegeben.  
   
 ```  

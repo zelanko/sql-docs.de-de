@@ -56,7 +56,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt das Ergebnis des Ausdrucks zurück, das in den angeforderten Datentyp übersetzt wurde. Schlägt die Umwandlung fehl, wird NULL zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie TRY_PARSE nur, um eine Zeichenfolge in ein Datum und eine Uhrzeit oder in eine Zahl zu konvertieren. Für die allgemeine Typkonvertierungen sollten Sie auch weiterhin CAST oder CONVERT verwenden. Bedenken Sie, dass die Analyse des Zeichenfolgenwerts mit gewissen Leistungseinbußen verbunden ist.  
   
  Für TRY_PARSE muss .NET Framework Common Language Runtime (CLR) vorhanden sein.  

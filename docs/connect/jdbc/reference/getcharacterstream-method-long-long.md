@@ -45,7 +45,7 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getcharakteristream-Methode wird von der getcharakteristream-Methode in der Java. SQL. CLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

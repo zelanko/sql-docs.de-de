@@ -45,7 +45,7 @@ ms.locfileid: "68098993"
 ## <a name="return-types"></a>Rückgabetypen  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Zeitspanne pro Takt ist computerabhängig. Jeder Takt im Betriebssystem beträgt 31,25 Millisekunden oder 1/32 einer Sekunde.  
   
 ## <a name="examples"></a>Beispiele  

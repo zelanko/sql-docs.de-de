@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="search-property-list-permissions"></a>SEARCH PROPERTY LIST-Berechtigungen  
  Eine Sucheigenschaftenliste ist ein sicherungsfähiges Element auf Datenbankebene in der Datenbank, die das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für eine Sucheigenschaftenliste aufgehoben werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  

@@ -45,7 +45,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  Der Name des CEK, der aus der Datenbank entfernt werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  CEKs können nicht entfernt werden, wenn sie verwendet werden, um eine Spalte in der Datenbank zu verschlüsseln. Alle Spalten, die den CEK verwenden, müssen zunächst entfernt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

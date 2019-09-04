@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2c4c413a3a84aa7db12ac4ecde7d41e3efd34525
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064101"
@@ -59,7 +59,7 @@ bindtoken
 ## <a name="returns"></a>Rückgabewert  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>So binden Sie eine Sitzung der erweiterten gespeicherten Prozedur an die Clientsitzung, die die Prozedur aufgerufen hat, sodass beide Sitzungen denselben Transaktionssperrbereich nutzen  
   

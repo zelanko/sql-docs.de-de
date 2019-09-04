@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67914574"
 ---
-# <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
+# <a name="original_db_name-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt den Datenbanknamen zurück, der vom Benutzer in der Datenbankverbindungszeichenfolge angegeben ist. Diese Datenbank wird durch Verwendung der Option **sqlcmd-d** angegeben (USE *Datenbank*). Sie kann auch mithilfe des ODBC-ODBC-Datenquellenausdrucks (Open Database Connectivity) (Anfangskatalog = *Datenbankname*) angegeben werden.  
@@ -40,7 +40,7 @@ ms.locfileid: "67914574"
 ORIGINAL_DB_NAME ()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die ursprüngliche Datenbank nicht angegeben wird, gibt die Funktion eine leere Zeichenfolge zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -53,7 +53,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *default_name*  
  Der Name eines vorhandenen Standardwerts. Führen Sie **sp_help** aus, um eine Liste von vorhandenen Standardwerten anzuzeigen. Standardwerte müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Standardschemanamens ist optional.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bevor ein Standardwert gelöscht wird, muss die Bindung des Standardwerts durch Ausführen von **sp_unbindefault** aufgehoben werden, wenn der Standardwert aktuell an eine Spalte oder an einen Aliasdatentyp gebunden ist.  
   
  Nachdem ein Standardwert aus einer Spalte gelöscht wurde, die NULL-Werte zulässt, wird NULL an dessen Stelle eingefügt, wenn Zeilen hinzugefügt und keine Werte explizit angegeben werden. Nachdem ein Standardwert einer Spalte gelöscht wurde, in der keine NULL-Werte zulässig sind, wird eine Fehlermeldung zurückgegeben, wenn Zeilen hinzugefügt und keine Werte explizit angegeben werden. Diese Zeilen werden später als Teil des typischen Verhaltens der INSERT-Anweisung hinzugefügt.  

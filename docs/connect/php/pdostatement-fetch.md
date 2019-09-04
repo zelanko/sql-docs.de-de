@@ -39,7 +39,7 @@ $*cursor_offset*: : Ein optionales ganzzahliges Symbol, das die Zeile angibt, di
 ## <a name="return-value"></a>Rückgabewert  
 Ein gemischter Wert, der eine Zeile oder „false“ zurückgibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Der Cursor wird automatisch vorgerückt, wenn FETCH aufgerufen wird. Die folgende Tabelle enthält die Liste der möglichen Werte für $*fetch_style*.  
   
 |$*fetch_style*|und Beschreibung|  

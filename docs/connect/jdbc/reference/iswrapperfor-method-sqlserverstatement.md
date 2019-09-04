@@ -40,7 +40,7 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)-Methode und die [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)-Methode werden von der java.sql.Wrapper-Schnittstelle definiert, die in JDBC 4.0 eingeführt wird.  
   
  Wird von dieser Methode „true“ zurückgegeben, kann [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) erfolgreich mit dem gleichen Argument aufgerufen werden.  

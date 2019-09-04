@@ -48,7 +48,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) belieb
 ## <a name="return-types"></a>Rückgabetypen  
 Gibt den Datentyp des _expression_-Ausdrucks zurück, der in der Datentyprangfolge am höchsten steht. Falls für alle Ausdrücke NULL nicht zulässig ist, wird das Ergebnis entsprechend eingegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `COALESCE` gibt `NULL` zurück, wenn alle Argumente `NULL` sind. Mindestens einer der NULL-Werte muss ein typisierter `NULL`-Wert sein.  
   
 ## <a name="comparing-coalesce-and-case"></a>Vergleich zwischen COALESCE und CASE  

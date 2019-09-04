@@ -47,7 +47,7 @@ Ein alphanumerischer [Ausdruck](../../t-sql/language-elements/expressions-transa
 ## <a name="return-types"></a>Rückgabetypen  
 **int**  
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DIFFERENCE` vergleicht zwei verschiedene `SOUNDEX`-Werte und gibt einen ganzzahligen Wert zurück. Dieser Wert misst das Grad der Übereinstimmung der `SOUNDEX`-Werte auf einer Skala von 0 (null) bis 4. Ein Wert von 0 (null) gibt eine schwache oder fehlende Ähnlichkeit der SOUNDEX-Werte an. Ein Wert von 4 gibt eine starke Ähnlichkeit, wenn nicht sogar eine vollständige Übereinstimmung der SOUNDEX-Werte an.  
   
 `DIFFERENCE` und `SOUNDEX` verfügen über Sortierungsempfindlichkeit.  

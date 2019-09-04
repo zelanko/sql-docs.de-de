@@ -41,7 +41,7 @@ public Integer SecureConnectionLevel;
 ## <a name="example-code"></a>Beispielcode  
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 In SQL Server 2008 R2 wird SecureConnectionLevel zu einer ON/OFF-Option. Weitere Informationen finden Sie unter [ConfigurationSetting-Methode: SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md).
 

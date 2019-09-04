@@ -71,7 +71,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getbestrowidentifier-Methode wird von der getbestrowidentifier-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getBestRowIdentifier-Methode zurückgegebene Resultset enthält die folgenden Informationen:  

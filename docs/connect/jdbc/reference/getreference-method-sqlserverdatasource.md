@@ -37,7 +37,7 @@ public javax.naming.Reference getReference()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Verweis Objekt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getreferenzierungsmethode wird von der getreferenzierungsmethode in der javax. naming. referenbar-Schnittstelle angegeben.  
   
  Vor dem JDBC-Treiber 3.0 für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] war beim Aufruf von „SQLServerDataSource.setTrustStorePassword“ für ein SQLServerDataSource-Objekt das Kennwort im von SQLServerDataSource.getReference zurückgegebenen Objekt enthalten, und mit dem Objekt konnten zusätzliche Verbindungen hergestellt werden. In JDBC Driver 3.0 muss das Kennwort für das von "SQLServerDataSource.getReference" zurückgegebene Objekt festgelegt werden, bevor Verbindungen mit dem Objekt hergestellt werden.  

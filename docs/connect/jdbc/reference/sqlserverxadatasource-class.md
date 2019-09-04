@@ -35,7 +35,7 @@ ms.locfileid: "67970223"
 public class SQLServerXADataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Objekt, von dem die SQLServerXADataSource-Schnittstelle implementiert wird, ist normalerweise bei einem Bezeichnungsdienst registriert, der JNDI (Java Naming and Directory Interface) verwendet.  
   
  Die SQLServerXADataSource-Klasse stellt Datenbankverbindungen zur Verwendung in verteilten (XA-)Transaktionen bereit. Die SQLServerXADataSource-Klasse unterstützt auch das Verbindungspooling physischer Verbindungen. Die SQLServerXADataSource-und sqlserverxaconnection-Schnittstellen, die im Paket "javax. SQL" definiert sind [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], werden von implementiert.  

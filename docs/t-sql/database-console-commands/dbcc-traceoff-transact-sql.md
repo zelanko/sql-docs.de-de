@@ -51,7 +51,7 @@ Deaktiviert die angegebenen Ablaufverfolgungsflags global.
 WITH NO_INFOMSGS  
 Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Ablaufverfolgungsflags werden dazu verwendet, bestimmte Merkmale anzupassen, die die Ausführung einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] steuern.
   
 ## <a name="result-sets"></a>Resultsets  

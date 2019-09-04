@@ -23,7 +23,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67935804"
 ---
-# <a name="sqlsrvconfigure"></a>sqlsrv_configure
+# <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Ändert die Einstellungen für die Fehlerbehandlung und Protokollierungsoptionen.  
@@ -50,7 +50,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>Rückgabewert  
 Wenn **sqlsrv_configure** mit nicht unterstützten Einstellungen oder Werten aufgerufen wird, gibt die Funktion **false**zurück. Andernfalls gibt die Funktion **true**zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 (1) Weitere Informationen zu clientseitigen Abfragen finden Sie unter [Cursortypen &#40;SQLSRV-Treiber&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 (2) Weitere Informationen zur Protokollierung von Aktivitäten finden Sie unter [Protokollieren von Aktivitäten](../../connect/php/logging-activity.md).  

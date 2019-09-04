@@ -45,7 +45,7 @@ public double getDouble(int index)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getDouble-Methode wird von der getDouble-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Von dieser Methode werden alle zahlenbasierten Datentypen mit der Java-Genauigkeit vom Typ **double** zurückgegeben.  

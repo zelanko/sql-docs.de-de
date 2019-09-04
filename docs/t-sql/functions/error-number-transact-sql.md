@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68094713"
 ---
-# <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
+# <a name="error_number-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt die Fehlernummer des Fehlers zurück, der die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts ausgelöst hat.  
@@ -50,7 +50,7 @@ Wenn `ERROR_NUMBER` in einem CATCH-Block aufgerufen wird, wird die Fehlernummer 
 
 `ERROR_NUMBER` gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `ERROR_NUMBER` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
 `ERROR_NUMBER` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks eine relevante Fehlernummer zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf der Anweisung folgt, die einen Fehler auslöst.  
@@ -59,7 +59,7 @@ Wenn `ERROR_NUMBER` in einem CATCH-Block aufgerufen wird, wird die Fehlernummer 
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-errornumber-in-a-catch-block"></a>A. Verwenden von ERROR_NUMBER in einem CATCH-Block  
+### <a name="a-using-error_number-in-a-catch-block"></a>A. Verwenden von ERROR_NUMBER in einem CATCH-Block  
 Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der `CATCH`-Block gibt die Fehlernummer zurück.  
   
 ```sql  
@@ -86,7 +86,7 @@ ErrorNumber
 
 ```  
   
-### <a name="b-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_NUMBER in einem CATCH-Block mit anderen Fehlerbehandlungstools  
+### <a name="b-using-error_number-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_NUMBER in einem CATCH-Block mit anderen Fehlerbehandlungstools  
 Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Der `CATCH`-Block gibt zusammen mir der Fehlernummer Informationen zum Fehler zurück.  
 
 ```sql  

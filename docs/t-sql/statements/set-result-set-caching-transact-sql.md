@@ -37,7 +37,7 @@ Gilt für Azure SQL Data Warehouse (Vorschauversion)
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 **ON**   
 Aktiviert das Zwischenspeichern von Resultsets für die aktuelle Sitzung.  Das Zwischenspeichern eines Resultsets kann für eine Sitzung nicht aktiviert werden (ON), wenn es auf Datenbankebene deaktiviert (OFF) ist.

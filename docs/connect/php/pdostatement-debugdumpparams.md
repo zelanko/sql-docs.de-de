@@ -29,7 +29,7 @@ Zeigt eine vorbereitete Anweisung an
 bool PDOStatement::debugDumpParams();  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  

@@ -78,7 +78,7 @@ In diesem Dokument werden nur Argumente für SQL-Graph aufgelistet. Eine vollst�
  EDGE  
  Erstellt eine Edgetabelle  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Das Erstellen einer temporären Tabelle als Knoten- oder Edgetabelle wird nicht unterstützt.  
 
 Das Erstellen einer Knoten- oder Edgetabelle als temporale Tabelle wird nicht unterstützt.

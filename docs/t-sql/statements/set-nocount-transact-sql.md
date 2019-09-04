@@ -45,7 +45,7 @@ ms.locfileid: "68034953"
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn SET NOCOUNT auf ON festgelegt ist, wird die Anzahl nicht zurückgegeben. Wenn SET NOCOUNT auf OFF festgelegt ist, wird die Anzahl zurückgegeben.  
   
  Die @@ROWCOUNT-Funktion wird aktualisiert, auch wenn SET NOCOUNT auf ON festgelegt ist.  

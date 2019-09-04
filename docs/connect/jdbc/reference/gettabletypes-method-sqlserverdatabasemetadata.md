@@ -40,7 +40,7 @@ public java.sql.ResultSet getTableTypes()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getTableTypes-Methode wird von der getTableTypes-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getTableTypes-Methode zurückgegebene Resultset enthält folgende Informationen:  

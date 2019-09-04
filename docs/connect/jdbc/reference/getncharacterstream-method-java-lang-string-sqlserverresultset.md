@@ -40,7 +40,7 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getncharakteristream-Methode wird von der getncharakteristream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Diese Methode kann verwendet werden, um den Wert einer Spalte vom Typ " **nvarchar**", " **NCHAR**", " **nvarchar (max)** ", **"ntext"** oder " **XML** " in der aktuellen Zeile dieses [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekts abzurufen. Beim Versuch, mit dieser Methode Werte anderer Datentypen abzurufen, wird eine Ausnahme ausgelöst.  

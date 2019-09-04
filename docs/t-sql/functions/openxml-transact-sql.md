@@ -80,7 +80,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  Der Tabellenname, der (anstelle von *SchemaDeclaration*) angegeben werden kann, wenn bereits eine Tabelle mit dem gewünschten Schema vorhanden ist und keine Spaltenmuster erforderlich sind.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die WITH-Klausel stellt ein Rowsetformat bereit (und bei Bedarf auch zusätzliche Zuordnungsinformationen) und verwendet dazu *SchemaDeclaration* oder die Angabe eines vorhandenen Tabellennamens (*TableName*). Wenn die optionale WITH-Klausel nicht angegeben ist, werden die Ergebnisse in einem Rahmentabellenformat (**edge**) zurückgegeben. Rahmentabellen geben die differenzierte XML-Dokumentstruktur (z. B. Element-/Attributnamen, die Dokumenthierarchie, Namespaces, Verarbeitungsanweisungen usw.) in einer einzelnen Tabelle wieder.  
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle (**edge**) beschrieben.  

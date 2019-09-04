@@ -45,7 +45,7 @@ public boolean getBoolean(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getBoolean-Methode wird von der getBoolean-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Diese Methode wird nur für Zahlen- und Zeichendatentypen unterstützt. Dabei werden die Werte "1", "1" und "**true**" in " **true**" und die Werte "0", "0" und "**false**" in " **false**" konvertiert. Für alle anderen Werte bleibt das Verhalten nicht definiert.  

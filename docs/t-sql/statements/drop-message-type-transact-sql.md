@@ -50,7 +50,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig verfügen Mitglieder der festen Datenbankrollen db_ddladmin oder db_owner sowie Mitglieder der festen Serverrolle sysadmin über die Berechtigung zum Löschen eines Nachrichtentyps.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können einen Nachrichtentyp nicht löschen, wenn sich Verträge auf diesen Nachrichtentyp beziehen.  
   
 ## <a name="examples"></a>Beispiele  

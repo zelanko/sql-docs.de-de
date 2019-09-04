@@ -51,7 +51,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>Rückgabewert  
  Der **datetimeoffset**-Wert in der Zielzeitzone.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **AT TIME ZONE** wendet bestimmte Regeln für die Umrechnung von Eingabewerten in die Datentypen **smalldatetime**, **datetime** und **datetime2** an, die in einem Intervall liegen, das durch den Wechsel zur Sommerzeit bestimmt wird:  
   
 -   Wenn die Uhr vorgestellt wird, entsteht eine Lücke in der Ortszeit, die dem Zeitraum für die Uhrzeitanpassung entspricht. Dieser Zeitraum entspricht in der Regel einer Stunde, kann je nach Zeitzone aber auch 30 oder 45 Minuten entsprechen. Zeitpunkte innerhalb dieser Lücke werden *nach* dem Wechsel zur Sommerzeit mithilfe des Offsets konvertiert.  

@@ -36,7 +36,7 @@ SELECT
 
 ## <a name="arguments"></a>Argumente  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 ## <a name="permissions"></a>Berechtigungen  
 

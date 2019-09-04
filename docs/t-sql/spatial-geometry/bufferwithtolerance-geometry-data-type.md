@@ -61,7 +61,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punktwerte dar
 > [!NOTE]  
 >  Da *tolerance* is a **float** ist, kann aufgrund der Rundungsprobleme mit Gleitkommatypen eine `System.Runtime.InteropServices.COMException` ausgelöst werden, wenn der angegebene Toleranzwert sehr klein ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *distance* > 0, wird eine **Polygon**- oder **MultiPolygon**-Instanz zurückgegeben.  
   
 > [!NOTE]  

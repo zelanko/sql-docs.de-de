@@ -45,7 +45,7 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getcharakteristream-Methode wird von der getcharakteristream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Mit dieser Methode werden nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Unicodezeichen-Datentypen wie „nchar“, „nvarchar“, „nvarchar(max)“ und „ntext“ gelesen. Alle anderen Datentypen, einschließlich der ASCII-Zeichentypen lösen eine Ausnahme aus. Verwenden Sie zum Lesen der ASCII-Datentypen die [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)-Methode.  

@@ -45,7 +45,7 @@ public byte getByte(java.lang.String sCol)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getByte-Methode wird von der getByte-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

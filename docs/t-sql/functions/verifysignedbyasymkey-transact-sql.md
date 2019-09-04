@@ -58,7 +58,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  Gibt 1 zurück, wenn die Signaturen übereinstimmen, andernfalls 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **VerifySignedByAsymKey** entschlüsselt die Signatur der Daten mit dem öffentlichen Schlüssel des angegebenen asymmetrischen Schlüssels und vergleicht den entschlüsselten Wert mit einem neu berechneten MD5-Hash der Daten. Wenn die Werte zusammenpassen, wird die Signatur als gültig bestätigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -54,7 +54,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt einen in den angegebenen Datentyp umgewandelten Wert zurück, wenn die Umwandlung erfolgreich ist. Andernfalls wird NULL zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **TRY_CAST** versucht, den übergebenen Wert in den angegebenen *data_type*zu konvertieren. Wenn die Umwandlung erfolgreich ist, gibt **TRY_CAST** den Wert als angegebenen *data_type*zurück. Bei einem Fehler wird NULL zurückgegeben. Wenn Sie jedoch eine Konvertierung anfordern, die explizit nicht zulässig ist, verursacht **TRY_CAST** einen Fehler.  
   
  **TRY_CAST** ist kein neues reserviertes Schlüsselwort und in allen Kompatibilitätsgraden verfügbar. **TRY_CAST** verfügt beim Herstellen einer Verbindung mit Remoteservern über die gleiche Semantik wie **TRY_CONVERT** .  

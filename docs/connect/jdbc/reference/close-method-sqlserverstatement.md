@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese close-Methode wird von der close-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -59,7 +59,7 @@ Gibt den Nachrichtentyp der gesendeten Nachricht an. Der Nachrichtentyp muss in 
 *message_body_expression*  
 Stellt einen Ausdruck bereit, der den Nachrichtentext darstellt. *message_body_expression* ist optional. Wenn *message_body_expression* jedoch angegeben wird, muss der Ausdruck von einem Typ sein, der in **varbinary(max)** konvertiert werden kann. Der Ausdruck darf nicht NULL sein. Wird diese Klausel ausgelassen, ist der Nachrichtentext leer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der SEND-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  

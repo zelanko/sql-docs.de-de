@@ -153,7 +153,7 @@ Gibt an, dass dem Volltextindex keine Eigenschaftenliste zugeordnet werden soll.
 *property_list_name*       
 Gibt den Namen der Sucheigenschaftenliste an, die dem Volltextindex zugeordnet werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Weitere Informationen zu Volltextindizes finden Sie unter [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
 Für **xml**-Spalten können Sie einen Volltextindex erstellen, mit dem der Inhalt der XML-Elemente indiziert, das XML-Markup jedoch ignoriert wird. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt. Weitere Informationen finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  

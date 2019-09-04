@@ -56,7 +56,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wie bei der RAISERROR-Anweisung ersetzt FORMATMESSAGE die Platzhaltervariablen in der Meldung mit den angegebenen Parameterwerten. Weitere Informationen zu zulässigen Platzhaltern in Fehlermeldungen und zum Bearbeitungsprozess finden Sie unter [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  FORMATMESSAGE sucht die Meldung in der aktuellen Sprache des Benutzers. Wenn es keine lokalisierte Version der Meldung gibt, wird die Version für Englisch (USA) verwendet.  

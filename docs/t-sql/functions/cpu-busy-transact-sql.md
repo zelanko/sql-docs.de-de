@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026479"
 ---
-# <a name="x40x40cpubusy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+# <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Zeit zurück, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seit dem letzten Start im aktiven Betrieb war. `@@CPU_BUSY` gibt ein in CPU-Zeitinkrementen ("Ticks") gemessenes Ergebnis zurück. Dieser Wert ist für alle CPUs kumulativ und kann daher höher sein als die tatsächlich verstrichene Zeit. Um den Wert in Mikrosekunden zu konvertieren, multiplizieren Sie ihn mit [@@TIMETICKS](./timeticks-transact-sql.md).
@@ -49,7 +49,7 @@ Diese Funktion gibt die Zeit zurück, die [!INCLUDE[ssNoVersion](../../includes/
 ## <a name="return-types"></a>Rückgabetypen
 **integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Um einen Bericht anzuzeigen, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält, einschließlich der CPU-Aktivität, führen Sie „[sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)“ aus.
   
 ## <a name="examples"></a>Beispiele  

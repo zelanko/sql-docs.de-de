@@ -55,7 +55,7 @@ LEFT ( character_expression , integer_expression )
   
  Gibt **nvarchar** zurück, wenn es sich bei *character_expression* um einen Zeichendatentyp handelt, der Unicode nicht unterstützt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei Verwendung von SC-Sortierungen zählt der *integer_expression*-Parameter ein UTF-16-Ersatzpaar als ein Zeichen. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Beispiele  

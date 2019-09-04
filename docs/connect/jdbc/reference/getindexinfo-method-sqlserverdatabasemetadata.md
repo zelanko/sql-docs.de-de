@@ -65,7 +65,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getIndexInfo-Methode wird von der getIndexInfo-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getIndexInfo-Methode zurückgegebene Resultset enthält folgende Informationen:  

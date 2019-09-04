@@ -35,7 +35,7 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese supportsStoredFunctionsUsingCallSyntax-Methode wird von der supportsStoredFunctionsUsingCallSyntax-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -42,7 +42,7 @@ public void truncate(long len)
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Truncate-Methode wird von der Truncate-Methode in der Java. SQL. CLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

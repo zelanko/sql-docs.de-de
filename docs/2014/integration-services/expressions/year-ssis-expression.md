@@ -31,7 +31,7 @@ YEAR(date)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Datum*  
+ *date*  
  Ein Datum in einem beliebigen Datumsformat.  
   
 ## <a name="result-types"></a>Ergebnistypen  

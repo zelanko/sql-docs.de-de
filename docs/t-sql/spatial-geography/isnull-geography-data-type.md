@@ -40,7 +40,7 @@ ms.locfileid: "67930226"
   
  CLR-Typ: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `IsNull` kann verwendet werden, um zu überprüfen, ob eine **geography**-Instanz NULL ist. Dies kann zu möglicherweise verwirrenden Ergebnissen führen, da 0 zurückgegeben wird, wenn die Instanz nicht NULL ist, aber NULL zurückgegeben wird, wenn die Instanz NULL ist.  
   
  Diese Methode wird in erster Linie von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Infrastruktur verwendet. Es wird empfohlen, mit dem T-SQL-Prädikat IS NULL zu prüfen, ob eine **geography**-Instanz NULL ist. Weitere Informationen zum T-SQL-Prädikat IS NULL finden Sie unter [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md).  

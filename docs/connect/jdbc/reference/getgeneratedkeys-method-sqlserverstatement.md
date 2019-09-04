@@ -40,7 +40,7 @@ public final java.sql.ResultSet getGeneratedKeys()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getGeneratedKeys-Methode wird von der getGeneratedKeys-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
  Weitere Informationen zur Verwendung dieser Methode finden Sie unter Verwenden von [automatisch generierten Schlüsseln](../../../connect/jdbc/using-auto-generated-keys.md).  

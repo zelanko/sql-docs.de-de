@@ -53,7 +53,7 @@ IF Boolean_expression
   
  Um einen Anweisungsblock zu definieren, verwenden Sie die Schlüsselwörter zur Ablaufsteuerung BEGIN und END.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein IF...ELSE-Konstrukt kann in Batches, gespeicherten Prozeduren und Ad-hoc-Abfragen verwendet werden. Wenn dieses Konstrukt in einer gespeicherten Prozedur verwendet wird, wird damit das Vorhandensein bestimmter Parameter getestet.  
   
  IF-Tests können nach einem anderen IF oder auf ein ELSE folgend geschachtelt werden. Das Limit für die Anzahl geschachtelter Ebenen hängt vom verfügbaren Arbeitsspeicher ab.  

@@ -55,7 +55,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getImportedKeys-Methode wird von der getImportedKeys-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getImportedKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  

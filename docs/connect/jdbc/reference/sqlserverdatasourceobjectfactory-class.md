@@ -35,7 +35,7 @@ ms.locfileid: "67971381"
 public class SQLServerDataSourceObjectFactory  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode wird von allen Datenquellenklassen geerbt. Diese Klasse, von der ein ObjectFactory-Objekt implementiert wird, wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] als Teil der Unterstützung der Referenceable-Schnittstelle verfügbar gemacht. Von Java-Anwendungsservern wird getReference für Datenquellenklassen aufgerufen, wodurch ein Reference-Objekt erstellt wird, von dem der Klassenname intern als Klassenfactory verwendet wird.  
   
  Wenn der Java-Anwendungs Server das Verweis Objekt dereferenzieren muss, wird eine Instanz des SQLServerDataSourceObjectFactory-Objekts erstellt und die [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md) -Methode aufgerufen, wobei das Verweis Objekt übergeben wird, um die Datenquelle abzurufen. lichen.  

@@ -32,7 +32,7 @@ int PDOStatement::columnCount ();
 ## <a name="return-value"></a>Rückgabewert  
 Gibt die Anzahl der Spalten in einem Resultset zurück. Gibt „0“ zurück, wenn das Resultset leer ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  

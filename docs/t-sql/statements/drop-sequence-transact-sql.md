@@ -54,7 +54,7 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *sequence_name*  
  Der Name der Sequenz, die gelöscht werden soll. Der Typ ist **sysname**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sequenzobjekte weisen keine andauernde Beziehung zur generierten Zahl auf. Daher können Sequenzobjekte gelöscht werden, auch wenn die generierte Zahl noch verwendet wird.  
   
  Ein Sequenzobjekt kann gelöscht werden, während eine gespeicherte Prozedur oder ein Trigger darauf verweisen, da es nicht schemagebunden ist. Ein Sequenzobjekt kann nicht gelöscht werden, wenn als Standardwert in einer Tabelle darauf verwiesen wird. Das Objekt, das auf die Sequenz verweist, ist in der Fehlermeldung aufgeführt.  

@@ -37,7 +37,7 @@ ms.locfileid: "69027489"
   
  Die JDBC-Spezifikation stellt Unterstützung für Vorwärtscursor und scrollfähige Cursor bereit, die Änderungen durch andere Aufträge berücksichtigen oder nicht berücksichtigen können und schreibgeschützt oder aktualisierbar sein können. Diese Funktionalität wird von der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] bereitgestellt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der JDBC-Treiber unterstützt die folgenden Cursortypen:  
   
 |Resultset<br /><br /> (Cursor) Typ|SQL Server-Cursortyp|Merkmale|select<br /><br /> Methode|Antwort<br /><br /> Pufferung|und Beschreibung|  

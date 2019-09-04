@@ -46,7 +46,7 @@ USER
 ## <a name="return-types"></a>Rückgabetypen  
  **char**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  USER bietet die gleiche Funktionalität wie die USER_NAME-Systemfunktion.  
   
  Verwenden Sie die USER-Funktion mit DEFAULT-Einschränkungen in der CREATE TABLE- oder ALTER TABLE-Anweisung oder als beliebige Standardfunktion.  

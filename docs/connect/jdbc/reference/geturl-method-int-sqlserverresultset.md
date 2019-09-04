@@ -45,7 +45,7 @@ public java.net.URL getURL(int columnIndex)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getURL-Methode wird von der getURL-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

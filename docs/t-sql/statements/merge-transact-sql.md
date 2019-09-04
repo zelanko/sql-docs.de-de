@@ -285,7 +285,7 @@ Gibt die Suchbedingungen an, die zum Angeben von \<merge_search_condition> oder 
 \<Graph-Suchmuster >  
 Gibt das Graph-Vergleichsmuster an. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Mindestens eine der drei MATCHED-Klauseln muss angegeben werden, dies kann jedoch in beliebiger Reihenfolge erfolgen. Eine Variable in derselben MATCHED-Klausel kann nicht mehr als einmal aktualisiert werden.  
   

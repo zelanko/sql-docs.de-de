@@ -60,7 +60,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getColumnPrivileges-Methode wird von der getColumnPrivileges-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getColumnPrivileges-Methode zurückgegebene Resultset enthält folgende Informationen:  

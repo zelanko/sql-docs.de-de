@@ -42,7 +42,7 @@ DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_nam
 *materialized_view_name*   
 Der Name der materialisierten Sicht.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Bei einer Änderung der zugrunde liegenden Tabellen in der Definition einer materialisierten Sicht bleiben alle inkrementellen Änderungen in den Basistabellen für die materialisierte Sicht erhalten.  Die Auswahl einer materialisierten Sicht schließt das Überprüfen der gruppierten Columnstore-Struktur für die materialisierte Struktur und das Anwenden dieser inkrementellen Änderungen ein.   Wenn eine große Anzahl von inkrementellen Änderungen beibehalten wurden, setzt dies die Leistung bei Auswahlvorgängen herab.  Benutzer können die materialisierte Sicht neu erstellen, um die gruppierte Columnstore-Struktur neu zu erstellen und alle inkrementellen Änderungen in den Basistabellen zu konsolidieren.
   

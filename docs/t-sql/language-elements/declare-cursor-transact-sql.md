@@ -137,7 +137,7 @@ Gibt an, dass positionierte Updates oder Löschungen durch den Cursor nicht erfo
 FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn `OF <column_name> [, <... n>]` angegeben wird, können Änderungen nur in den aufgelisteten Spalten vorgenommen werden. Wenn `UPDATE` ohne Spaltenliste angegeben wird, können alle Spalten aktualisiert werden, sofern nicht die Parallelitätsoption `READ_ONLY` angegeben wurde.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DECLARE CURSOR` definiert die Attribute eines [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursors, wie z. B. dessen Scrollverhalten, sowie die Abfrage, die zum Erstellen des Resultsets verwendet wird, auf das der Cursor ausgeführt wird. Die `OPEN`-Anweisung füllt das Resultset auf, `FETCH` gibt eine Zeile aus dem Resultset zurück. Die `CLOSE`-Anweisung gibt das aktuelle Resultset frei, das dem Cursor zugeordnet ist. Die `DEALLOCATE`-Anweisung gibt die vom Cursor verwendeten Ressourcen frei.  
   
 Die erste Form der `DECLARE CURSOR`-Anweisung verwendet zum Deklarieren des Cursorverhaltens die ISO-Syntax. Die zweite Form der `DECLARE CURSOR`-Anweisung verwendet [!INCLUDE[tsql](../../includes/tsql-md.md)]-Erweiterungen, die die Definition von Cursorn mithilfe der gleichen Cursortypen zulassen, die in den Datenbank-API-Cursor-Funktionen von ODBC oder ADO verwendet werden.  

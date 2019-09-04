@@ -39,7 +39,7 @@ public void setServerName(java.lang.String serverName)
   
  Ein **String-Objekt**, das den Servernamen enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Servername ist der Hostname des Zielcomputers, auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt wird. Ist die serverName-Eigenschaft nicht festgelegt, wird von [getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md) der Standardwert (NULL) zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

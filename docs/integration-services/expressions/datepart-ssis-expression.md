@@ -38,13 +38,13 @@ DATEPART(datepart, date)
  *datepart*  
  Der Parameter, der angibt, für welche Datumseinheit ein neuer Wert zurückgegeben werden soll.  
   
- *Datum*  
+ *date*  
  Ein Ausdruck, der ein gültiges Datum oder eine Zeichenfolge im Datumsformat zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  DATEPART gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  

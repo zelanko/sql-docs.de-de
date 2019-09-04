@@ -42,7 +42,7 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updatencharakteristream-Methode wird von der updatencharakteristream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Diese Methode übergibt Unicode-Zeichen aus einem Reader-Objekt an ausgewählte **NCHAR**-, **nvarchar (max)** -, **ntext** -und **XML** -Spalten. Bei Verwendung dieser Methode für andere Datentypspalten wird eine Ausnahme ausgelöst.  

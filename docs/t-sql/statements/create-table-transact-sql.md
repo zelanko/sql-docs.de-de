@@ -916,7 +916,7 @@ Gibt an, dass ein HASH-Index erstellt wird.
 
 Hashindizes werden nur für speicheroptimierte Tabellen unterstützt.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Informationen zur Anzahl zulässiger Tabellen, Spalten, Einschränkungen und Indizes finden Sie unter [Spezifikationen der maximalen Kapazität für SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md).
 

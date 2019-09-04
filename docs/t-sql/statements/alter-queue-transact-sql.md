@@ -157,7 +157,7 @@ Im Gegensatz zu REORGANIZE bei Benutzertabellen wird REORGANIZE bei einer Wartes
   
  Eine Warteschlange, für die die Behandlung nicht verarbeitbarer Nachrichten auf OFF festgelegt ist, wird erst nach fünf aufeinander folgenden Transaktionsrollbacks deaktiviert. Daher ist es möglich, dass von der Anwendung ein System für die Behandlung nicht verarbeitbarer Nachrichten definiert wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Warteschlange mit einer angegebenen gespeicherten Aktivierungsprozedur Nachrichten enthält, wird die gespeicherte Aktivierungsprozedur unmittelbar aktiviert, wenn der Aktivierungsstatus von OFF in ON geändert wird. Durch das Ändern des Aktivierungsstatus von ON zu OFF beendet der Broker das Aktivieren von Instanzen der gespeicherten Prozedur. Instanzen der gespeicherten Prozedur, die aktuell ausgeführt werden, werden jedoch nicht beendet.  
   
  Wird eine Warteschlange geändert, um eine gespeicherte Aktivierungsprozedur hinzuzufügen, wird dadurch der Aktivierungsstatus der Warteschlange nicht geändert. Wird die gespeicherte Aktivierungsprozedur für die Warteschlange geändert, hat dies keine Auswirkungen auf Instanzen der gespeicherten Aktivierungsprozedur, die aktuell ausgeführt werden.  

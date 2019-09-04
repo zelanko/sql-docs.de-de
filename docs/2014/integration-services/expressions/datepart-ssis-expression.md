@@ -34,7 +34,7 @@ DATEPART(datepart, date)
  *datepart*  
  Der Parameter, der angibt, für welche Datumseinheit ein neuer Wert zurückgegeben werden soll.  
   
- *Datum*  
+ *date*  
  Ein Ausdruck, der ein gültiges Datum oder eine Zeichenfolge im Datumsformat zurückgibt.  
   
 ## <a name="result-types"></a>Ergebnistypen  

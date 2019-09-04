@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67929050"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die relative Bedeutung an, um zu bestimmen, ob die aktuelle Sitzung die Verarbeitung fortsetzt, wenn ein Deadlock mit einer anderen Sitzung vorliegt.  
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  Eine ganzzahlige Variable, die die Deadlockpriorität angibt. Für die Variable muss ein ganzzahliger Wert innerhalb des Bereichs (-10 bis 10) angegeben werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Deadlocks entstehen, wenn zwei Sitzungen auf den Zugriff auf Ressourcen warten, die jeweils durch die andere gesperrt wurden. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermittelt, dass für zwei Sitzungen ein Deadlock vorliegt, wird dieser Deadlock aufgelöst, indem eine der Sitzungen als Deadlockopfer ausgewählt wird. Es erfolgt ein Rollback der aktuellen Transaktion des Deadlockopfers, und die Deadlockfehlermeldung 1205 wird an den Client zurückgegeben. Damit werden alle von dieser Sitzung verhängten Sperren freigegeben, sodass die andere Sitzung den Vorgang fortsetzen kann.  
   
  Von der für die Sitzungen festgelegten Deadlockpriorität hängt ab, welche Sitzung als Deadlockopfer ausgewählt wird:  

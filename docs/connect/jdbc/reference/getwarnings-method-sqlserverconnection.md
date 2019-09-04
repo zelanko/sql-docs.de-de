@@ -40,7 +40,7 @@ public java.sql.SQLWarning getWarnings()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getwarning-Methode wird von der getwarning-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Nachfolgende Warnungen werden mit der ersten SQLWARNING verkettet und mit der getnextwarning-Methode aufgerufen. Beim Aufruf für eine geschlossene Verbindung wird eine Ausnahme ausgelöst.  

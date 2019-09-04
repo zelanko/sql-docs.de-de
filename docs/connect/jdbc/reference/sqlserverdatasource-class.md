@@ -33,7 +33,7 @@ ms.locfileid: "67971521"
 public class SQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Klasse unterstützt das Entpacken in die SQLServerDataSource-Klasse, die isqlserverdatasource-Schnittstelle und die DataSource-Schnittstelle. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

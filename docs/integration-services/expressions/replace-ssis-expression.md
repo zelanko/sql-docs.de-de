@@ -50,7 +50,7 @@ REPLACE(character_expression,searchstring,replacementstring)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Länge von *searchstring* darf nicht Null sein.  
   
  Die Länge von *replacementstring* darf Null sein.  

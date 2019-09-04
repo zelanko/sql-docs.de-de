@@ -41,7 +41,7 @@ Gibt die gesamte Oberfläche einer **geography**-Instanz zurück. Die Ergebnisse
   
 CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 STArea() gibt 0 zurück, wenn eine **geography**-Instanz nur null- und eindimensionale Abbildungen enthält oder leer ist.  
   
 > [!NOTE]  

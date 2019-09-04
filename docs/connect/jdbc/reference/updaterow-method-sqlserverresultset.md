@@ -37,7 +37,7 @@ public void updateRow()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updateRow-Methode wird von der updateRow-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Diese Methode kann nicht aufgerufen werden, wenn sich der Cursor in der Einfügezeile befindet.  

@@ -60,7 +60,7 @@ Eine Variable vom Typ **nchar** oder **nvarchar**, die das Kennwort enthält, mi
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Diese Funktion entschlüsselt Daten mithilfe des privaten Schlüssels eines Zertifikats. Kryptografische Umwandlungen, die asymmetrische Schlüssel verwenden, nehmen umfangreiche Ressourcen in Anspruch. Deshalb wird empfohlen, dass Entwickler die Verwendung von [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) und DECRYPTBYCERT bei der routinemäßigen Verschlüsselung und Entschlüsselung von Benutzerdaten vermeiden.  
 
 ## <a name="permissions"></a>Berechtigungen  

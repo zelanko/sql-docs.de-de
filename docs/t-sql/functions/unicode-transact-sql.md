@@ -47,7 +47,7 @@ Ein **nchar**- oder **nvarchar**-Ausdruck.
 ## <a name="return-types"></a>Rückgabetypen  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt die UNICODE-Funktion einen UCS-2-Codepunkt im Bereich 000000 bis 00FFFF zurück, mit dem die 65.535 Zeichen in Unicode BMP (Basic Multilingual Plane) dargestellt werden können. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktivierten [zusätzlichen Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) verwendet wird, gibt UNICODE einen UTF-16-Codepunkt im Bereich 000000 bis 10FFFF zurück. Weitere Informationen zur Unicode-Unterstützung in [!INCLUDE[ssde_md](../../includes/ssde_md.md)] finden Sie unter [Sortierung und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn). 
   
 ## <a name="examples"></a>Beispiele  

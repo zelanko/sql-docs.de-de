@@ -40,7 +40,7 @@ Wenn der Aufruf erfolgreich ist, gibt PDO::query ein PDOStatement-Objekt zurück
 ## <a name="exceptions"></a>Ausnahmen  
 PDOException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Bei einer mithilfe von PDO::query ausgeführten Abfrage wird entweder eine vorbereitete Anweisung ausgeführt, oder die Abfrage wird direkt durchgeführt. Dies hängt von der Einstellung für PDO::SQLSRV_ATTR_DIRECT_QUERY ab. Weitere Informationen finden Sie unter [Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT wirkt sich auf das Verhalten von PDO::exec aus. Weitere Informationen finden Sie unter [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  

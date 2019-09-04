@@ -40,7 +40,7 @@ public java.io.InputStream getAsciiStream()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getAsciiStream-Methode wird von der getAsciiStream-Methode in der Java. SQL. CLOB-Schnittstelle angegeben.  
   
  Gibt immer einen Bytestrom zurück und geht davon aus, dass die Daten im CLOB das ASCII-Format aufweisen, da nicht bekannt ist, ob es sich um Unicode oder eine andere Multibyte-Codeseite handelt.  

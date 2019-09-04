@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68038670"
 ---
-# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB-Datenbank)
+# <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -42,7 +42,7 @@ Der Name der Eigenschaft. Das Argument *PropertyName* ist vom Typ **nvarchar(256
 [@PropertyValue =] *PropertyValue*  
 Der Wert der Eigenschaft. Das Argument *PropertyValue* ist vom Typ **nvarchar(max)** .
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Die gültigen Eigenschaftennamen sind **DisplayName**, **Description**, **Tags**.
 
 ## <a name="return-code-value"></a>Rückgabecodewert  

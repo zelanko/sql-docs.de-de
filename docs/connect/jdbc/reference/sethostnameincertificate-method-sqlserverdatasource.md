@@ -39,7 +39,7 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
   
  Ein **String-Objekt**, das den Hostnamen enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der hostNameInCertificate-Wert dient zum Überprüfen des SSL-Zertifikats von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], wenn die Kommunikationsschicht mithilfe von SSL verschlüsselt wird. Der Standardwert ist "null".  
   
  Ist die hostNameInCertificate-Eigenschaft auf NULL festgelegt oder nicht angegeben, wird das SSL-Zertifikat von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] durch [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anhand der serverName-Eigenschaft überprüft. Ist die hostNameInCertificate-Eigenschaft auf eine Zeichenfolge oder auf eine leere Zeichenfolge festgelegt, wird das SSL-Zertifikat des Servers anhand dieses Werts überprüft.  

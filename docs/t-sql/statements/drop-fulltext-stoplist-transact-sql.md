@@ -50,7 +50,7 @@ DROP FULLTEXT STOPLIST stoplist_name
  *stoplist_name*  
  Der Name der Volltextstoppliste, die aus der Datenbank gelöscht werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  DROP FULLTEXT STOPLIST schlägt fehl, wenn Volltextindizes auf die Volltextstoppliste verweisen, die gelöscht wird.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -67,7 +67,7 @@ Für einen DDL-Trigger wird hiermit angegeben, dass *trigger_name* zur Ausführu
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Durch das Aktivieren eines Triggers wird dieser nicht neu erstellt. Ein deaktivierter Trigger ist weiterhin als Objekt in der aktuellen Datenbank vorhanden, wird jedoch nicht ausgelöst. Durch das Aktivieren eines Triggers wird dieser ausgelöst, wenn eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung ausgeführt wird, für die er ursprünglich programmiert wurde. Trigger werden mit [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) deaktiviert. Für Tabellen definierte DML-Trigger können auch mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) deaktiviert oder aktiviert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

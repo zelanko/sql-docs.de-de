@@ -57,7 +57,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  QUEUE *queue_name*  
  Gibt den Bereich der Ereignisbenachrichtigungsanwendungen auf die durch *queue_name* angegebene Warteschlange an. QUEUE musst angegebenen werden, wenn das Element beim Erstellen der Ereignisbenachrichtigung angegeben wurde. *queue_name* ist der Name der Warteschlange und muss ebenfalls angegeben werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Ereignisbenachrichtigung innerhalb einer Transaktion ausgelöst und innerhalb derselben Transaktion gelöscht wird, wird die Ereignisbenachrichtigungsinstanz gesendet und die Ereignisbenachrichtigung dann gelöscht.  
   
 ## <a name="permissions"></a>Berechtigungen  

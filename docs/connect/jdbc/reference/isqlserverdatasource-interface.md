@@ -33,7 +33,7 @@ ms.locfileid: "67977423"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Schnittstelle wird von der [SQLServerDataSource-Klasse](../../../connect/jdbc/reference/sqlserverdatasource-class.md)implementiert.  
   
  Diese Schnittstelle macht die folgenden [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden verfügbar:  

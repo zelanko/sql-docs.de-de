@@ -40,7 +40,7 @@ public int getSavepointId()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getsavepointid-Methode wird von der getsavepointid-Methode in der Java. SQL. SAVEPOINT-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

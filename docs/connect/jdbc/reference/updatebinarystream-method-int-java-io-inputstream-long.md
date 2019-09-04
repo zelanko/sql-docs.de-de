@@ -47,7 +47,7 @@ public void updateBinaryStream(int columnIndex,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updateBinaryStream-Methode wird von der updateBinaryStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Von dieser Methode werden Bytes aus einem InputStream-Objekt an ausgewählte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Binärspalten wie „binary“, „varbinary“, „varbinary(max)“, „image“, „xml“ oder „udt“ übergeben. Das Aktualisieren von Zeichenspalten wird für diese Methode nicht unterstützt. Verwenden Sie die [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)-Methode, um Zeichenspalten mit InputStream zu aktualisieren.  

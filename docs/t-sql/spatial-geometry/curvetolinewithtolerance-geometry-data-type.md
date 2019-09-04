@@ -48,7 +48,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
 ## <a name="exceptions"></a>Ausnahmen  
  Wenn Sie die Toleranz auf <= 0 festlegen, wird eine `ArgumentOutOfRange`-Ausnahme ausgelöst.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit dieser Methode kann ein Umfang für die Fehlertoleranz in der resultierenden **LineString**angegeben werden.  
   
  In der folgenden Tabelle wird der von `CurveToLineWithTolerance()`zurückgegebene Instanzentyp für verschiedene Typen angezeigt.  

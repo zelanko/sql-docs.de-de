@@ -106,7 +106,7 @@ Wenn MIN/MAX-Aggregate in der SELECT-Liste der Definition der materialisierten S
 
 - Die materialisierte Sicht wird bei einem UPDATE oder DELETE in den referenzierten Basistabellen deaktiviert.  Diese Einschränkung gilt nicht für INSERT-Vorgänge.  Um die materialisierte Sicht erneut zu aktivieren, führen Sie ALTER MATERIALIZED INDEX mit REBUILD aus.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Eine materialisierte Sicht in Azure Data Warehouse ähnelt in vielerlei Punkten einer indizierten Sicht in SQL Server.  Es gelten fast die gleichen Einschränkungen wie für eine indizierte Sicht (Details siehe [Erstellen indizierter Sichten](/sql/relational-databases/views/create-indexed-views)) – abgesehen davon, dass eine materialisierte Sicht Aggregatfunktionen unterstützt.   Nachfolgend werden einige weitere Überlegungen zu materialisierten Sichten aufgeführt.  
  

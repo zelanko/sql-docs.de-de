@@ -35,7 +35,7 @@ ms.locfileid: "67971822"
 public class SQLServerClob  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird ein CLOB als TEXT- oder NTEXT-Datentyp gespeichert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

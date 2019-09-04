@@ -53,7 +53,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Fehlercode gibt an, dass der Aufruf nicht erfolgreich war.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  *IPVersion* -Zeichenfolgen sind V4 und V6.  
   
  Wenn *IsDhcpEnabled* gleich **True**ist, ist die *IPAddress* dynamisch. Eine Verwendung für SSL-Bindungen wird nicht empfohlen.  

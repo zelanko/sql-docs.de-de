@@ -43,7 +43,7 @@ Gibt das geometrische Zentrum einer **geometry**-Instanz zurück, die aus einem 
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STCentroid()` gibt NULL zurück, wenn es sich bei der **geometry**-Instanz nicht um einen **Polygon-, CurvePolygon**- oder **MultiPolygon**-Typ handelt.  
   
 ## <a name="examples"></a>Beispiele  

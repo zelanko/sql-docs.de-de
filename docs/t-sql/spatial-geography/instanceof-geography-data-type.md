@@ -45,7 +45,7 @@ Eine **nvarchar(4000)** -Zeichenfolge, die einen von 16 Typen angibt, die in der
   
 CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Gibt 1 zurück, wenn der Typ einer **geography**-Instanz mit dem angegebenen Typ übereinstimmt oder der angegebene Typ ein Vorgänger des Instanztyps ist. Andernfalls wird 0 zurückgegeben.  
   
 Diese **geography** -Datentypmethode unterstützt Instanzen von **FullGlobe** oder räumliche Instanzen, die größer als eine Hemisphäre sind.  

@@ -37,7 +37,7 @@ public void refreshRow()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese aktuaktuaktuzeilige Methode wird in der Java. SQL. Resultset-Schnittstelle durch die aktuaktuzeilige Methode angegeben.  
   
  Diese Methode kann nicht aufgerufen werden, wenn sich der Cursor in der Einfügezeile befindet.  

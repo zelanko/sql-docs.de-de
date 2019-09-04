@@ -42,7 +42,7 @@ Ein Beispiel hierzu finden Sie unter [PDO::beginTransaction](../../connect/php/p
   
 Im weiteren Verlauf dieses Themas wird erläutert und veranschaulicht, wie Sie Transaktionen mit dem SQLSRV-Treiber durchführen können.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die Schritte zum Ausführen einer Transaktion können wie folgt zusammengefasst werden:  
   
 1.  Starten Sie die Transaktion mit **sqlsrv_begin_transaction**.  

@@ -40,7 +40,7 @@ public boolean isClosed()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese IsClosed-Methode wird von der IsClosed-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Überprüft den Zustand des aufgerufenen SQLServerConnection-Objekts. Eine Verbindung wird geschlossen, wenn für sie die [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)-Methode aufgerufen wurde oder bestimmte schwerwiegende Fehler aufgetreten sind. Diese Methode gibt nur dann **true** zurück, wenn sie nach dem Aufrufen der close-Methode aufgerufen wurde.  

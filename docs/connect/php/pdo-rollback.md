@@ -32,7 +32,7 @@ bool PDO::rollBack ();
 ## <a name="return-value"></a>Rückgabewert  
 „true“, bei erfolgreichem Aufruf der Methode; andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 PDO::rollback ist nicht betroffen von (und hat keinen Einfluss auf) den Wert von PDO::ATTR_AUTOCOMMIT.  
   
 Unter [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) finden Sie ein Beispiel, das PDO::rollback verwendet.  

@@ -40,7 +40,7 @@ public javax.sql.PooledConnection getPooledConnection()
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getpooledconnection-Methode wird von der getpooledconnection-Methode in der javax. SQL. ConnectionPoolDataSource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

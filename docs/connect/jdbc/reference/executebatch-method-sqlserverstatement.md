@@ -42,7 +42,7 @@ public int[] executeBatch()
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese executeBatch-Methode wird von der executeBatch-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
  Nach dem Übertragen von Befehlen an die Datenbank werden von der Methode alle Befehle im Stapel gelöscht.  

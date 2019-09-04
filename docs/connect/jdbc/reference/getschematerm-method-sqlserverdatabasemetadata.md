@@ -40,7 +40,7 @@ public java.lang.String getSchemaTerm()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getSchemaTerm-Methode wird von der getSchemaTerm-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, wird „schema“ als bevorzugter Begriff zurückgegeben.  

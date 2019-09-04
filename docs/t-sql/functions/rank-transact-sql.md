@@ -53,7 +53,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ## <a name="return-types"></a>Rückgabetypen  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn zwei oder mehr Zeilen gleichwertig sind, erhält jede gleichwertige Zeile denselben Rang. Wenn beispielsweise zwei Vertriebsmitarbeiter denselben SalesYTD-Wert aufweisen, erhalten beide den Rang 1. Der Vertriebsmitarbeiter mit dem nächsthöheren SalesYTD-Wert erhält den Rang 3, da es bereits zwei Zeilen mit einem höheren Rang gibt. Aus diesem Grund gibt die RANK-Funktion nicht immer aufeinander folgende ganze Zahlen zurück.  
   
  Die Sortierreihenfolge, die für die ganze Abfrage verwendet wird, bestimmt die Reihenfolge, mit der die Zeilen in einem Resultset aufgeführt sind.  

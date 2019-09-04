@@ -28,7 +28,7 @@ Public Dim RSWindowsExtendedProtectionScenario As String
 public string RSWindowsExtendedProtectionScenario;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gibt einen Zeichenfolgenwert zurück, der das erweiterte Schutzszenario angibt, für das der Berichtsserver konfiguriert ist. Wenn der Berichtsserver, mit dem der WMI-Anbieter verbunden wird, keinen erweiterten Schutz unterstützt, wird "" (leere Zeichenfolge) zurückgegeben.  
   
  In der folgenden Liste werden gültige Werte aufgeführt:  

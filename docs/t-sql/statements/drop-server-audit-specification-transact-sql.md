@@ -45,7 +45,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Name eines vorhandenen Serverüberwachungsspezifikations-Objekts.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  DROP SERVER AUDIT SPECIFICATION entfernt die Metadaten für die Überwachungsspezifikation, jedoch nicht die Überwachungsdaten, die vor der Ausgabe des DROP-Befehls gesammelt wurden. Sie müssen den Status einer Serverüberwachungsspezifikation mithilfe von ALTER SERVER AUDIT SPECIFICATION auf OFF festlegen, bevor diese entfernt werden kann.  
   
 ## <a name="permissions"></a>Berechtigungen  

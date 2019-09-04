@@ -52,7 +52,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) mit be
 ## <a name="return-types"></a>Rückgabetypen
 **bigint**, wenn *expression* den Datentyp **nvarchar(max)** , **varbinary(max)** oder **varchar(max)** hat; andernfalls **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DATALENGTH` ist besonders beim Einsatz mit Datentypen nützlich, die Daten variabler Länge speichern können, z. B.:
 - **image**
 - **ntext**

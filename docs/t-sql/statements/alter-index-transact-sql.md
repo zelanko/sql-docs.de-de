@@ -633,7 +633,7 @@ ABORT
 
 Abbrechen eines ausgeführten oder angehaltenen Indexvorgangs, der als fortsetzbar deklariert wurde. Zum Beenden eines fortsetzbaren Indexneuerstellungsvorgangs müssen Sie einen **ABORT**-Befehl explizit ausführen. Durch das Auftreten eines Fehlers oder durch Anhalten eines fortsetzbaren Indexvorgangs wird dessen Ausführung nicht beendet. Der Vorgang befindet sich stattdessen in einem unbestimmten Pausezustand.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 ALTER INDEX kann nicht verwendet werden, um einen Index neu zu partitionieren oder ihn in eine andere Dateigruppe zu verschieben. Diese Anweisung kann nicht verwendet werden, um die Indexdefinition, wie z. B. das Hinzufügen oder Löschen von Spalten oder das Ändern der Spaltenreihenfolge, zu ändern. Verwenden Sie CREATE INDEX mit der DROP_EXISTING-Klausel zum Ausführen dieser Vorgänge.  
   
 Wenn eine Option nicht explizit angegeben ist, wird die aktuelle Einstellung angewendet. Wenn in der REBUILD-Klausel beispielsweise keine FILLFACTOR-Einstellung angegeben ist, wird der im Systemkatalog gespeicherte Füllfaktorwert während der Neuerstellung verwendet. Verwenden Sie zum Anzeigen der aktuellen Indexoptionseinstellungen [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  

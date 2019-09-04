@@ -36,7 +36,7 @@ Abgesehen von der **Domäne**sind die anderen Eigenschaften obligatorisch. der T
 
 Weitere Informationen zu Verbindungs Eigenschaften finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../connect/jdbc/setting-the-connection-properties.md). Weitere Informationen zum Microsoft NTLM-Authentifizierungsprotokoll finden Sie unter [Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Informationen zur Beschreibung der SQL Server-Einstellungen, die das Verhalten der NTLM-Authentifizierung steuern, finden Sie unter [Netzwerksicherheit: LAN Manager-Authentifizierungs Ebene](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level) . 
 

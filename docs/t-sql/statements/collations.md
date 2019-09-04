@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Bewirkt, dass die COLLATE-Klausel die Sortierung der aktuellen Datenbank erbt.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die COLLATE-Klausel kann auf mehreren Ebenen angegeben werden. Dabei handelt es sich z. B. um:
 

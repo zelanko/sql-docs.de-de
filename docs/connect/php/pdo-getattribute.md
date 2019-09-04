@@ -35,7 +35,7 @@ mixed PDO::getAttribute ( $attribute )
 ## <a name="return-value"></a>Rückgabewert  
 Im Erfolgsfall wird der Wert einer Verbindungsoption, eines vordefinierten PDO-Attributs, oder eines benutzerdefinierten Treiberattributs zurückgegeben. Gibt bei einem Fehler NULL zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die nachfolgende Tabelle enthält die Liste mit den unterstützten Attributen:  
   
 |attribute|Verarbeitet von|Unterstützte Werte|und Beschreibung|  

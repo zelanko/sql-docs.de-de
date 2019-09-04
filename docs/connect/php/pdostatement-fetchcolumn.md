@@ -35,7 +35,7 @@ $*column_number*: Eine optionale ganze Zahl, die die nullbasierte Spaltennummer 
 ## <a name="return-value"></a>Rückgabewert  
 Eine Spalte oder „false“, wenn keine weiteren Zeilen vorhanden sind.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  

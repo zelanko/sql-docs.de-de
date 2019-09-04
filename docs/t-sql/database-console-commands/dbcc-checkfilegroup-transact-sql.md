@@ -99,7 +99,7 @@ DBCC CHECKFILEGROUP
 > [!CAUTION]  
 >  Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC CHECKFILEGROUP und DBCC CHECKDB sind ähnliche DBCC-Befehle. Der Hauptunterschied besteht darin, dass DBCC CHECKFILEGROUP auf die einzelne angegebene Dateigruppe und die erforderlichen Tabellen beschränkt ist.
 Von DBCC CHECKFILEGROUP werden die folgenden Befehle ausgeführt:
 -   [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) für die Dateigruppe.  

@@ -33,7 +33,7 @@ ms.locfileid: "67977338"
 public interface ISQLServerStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Schnittstelle wird von der [SQLServerStatement-Klasse](../../../connect/jdbc/reference/sqlserverstatement-class.md)implementiert.  
   
  Diese Schnittstelle macht die folgenden [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden verfügbar:  

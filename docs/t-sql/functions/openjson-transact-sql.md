@@ -60,7 +60,7 @@ Die Tabellenwertfunktion **OPENJSON** analysiert *jsonExpression*, was als erste
 
 Die Tabellenwertfunktion **OPENJSON** gibt standardmäßig drei Spalten zurück, die den Schlüsselnamen, den Wert und den Typ jedes {Schlüssel-Wert}-Paars im *jsonExpression* enthalten. Als Alternative können Sie das Schema des Ergebnissets, das **OPENJSON** zurückgibt, explizit angeben, indem Sie die *with_clause* bereitstellen.
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
 ![Syntax für WITH-Klausel in der OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH-Syntax")
 
@@ -140,7 +140,7 @@ Wenn **OPENJSON** ein JSON-Array analysiert, gibt die Funktion die Indizes der E
 
 Beim Vergleich, der zur Zuordnung von Pfadschritten zu den Eigenschaften des JSON-Ausdrucks verwendet wird, wird die Groß-/Kleinschreibung beachtet und die Sortierung nicht (d.h. ein BIN2-Vergleich). 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 Definiert das Ausgabeschema explizit, das die **OPENJSON**-Funktion zurückgibt. Die optionale *with_clause* kann die folgenden Elemente enthalten:
 
@@ -243,7 +243,7 @@ Die Spalten, die die OPENJSON-Funktion zurückgibt, hängen von der WITH-Option 
 > [!NOTE]  
 > Die Spalten **Key** (Schlüssel), **Value** (Wert) und **Type** (Typ) werden nur zurückgegeben, wenn Sie OPENJSON mit dem Standardschema verwenden. Sie sind mit einem expliziten Schema nicht verfügbar.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 *json_path*, das im zweiten Argument von **OPENJSON** oder in der *with_clause* verwendet wird, kann mit einem **lax**- oder **strict**-Schlüsselwort beginnen.
 

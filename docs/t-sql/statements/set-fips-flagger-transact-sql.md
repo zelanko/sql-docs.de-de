@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67929048"
 ---
-# <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
+# <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt an, dass die Kompatibilität mit dem FIPS 127-2-Standard überprüft wird. Diese basiert auf dem ISO-Standard. Informationen zur FIPS-Konformität mit SQL Server finden Sie unter [How to use SQL Server 2016 in FIPS 140-2-compliant mode (Verwendung von SQL Server 2016 in einem mit FIPS 140-2 konformen Modus)](https://support.microsoft.com/help/4014354/how-to-use-sql-server-2016-in-fips-140-2-compliant-mode). 
@@ -54,7 +54,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |INTERMEDIATE|Überprüfen der Kompatibilität mit der INTERMEDIATE-Stufe des ISO-Standards.|  
 |OFF|Kein Überprüfen des Standards.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Einstellung von `SET FIPS_FLAGGER` wird zur Analysezeit und nicht zur Ausführungs- oder Laufzeit festgelegt. Das Festlegen zur Analysezeit bedeutet Folgendes: Wenn sich die SET-Anweisung im Batch oder in der gespeicherten Prozedur befindet, wird sie unabhängig davon wirksam, ob die Codeausführung tatsächlich diesen Punkt erreicht, und die `SET`-Anweisung wird wirksam, bevor Anweisungen ausgeführt werden. Auch wenn sich die `SET`-Anweisung z.B. in einem `IF...ELSE`-Anweisungsblock befindet, der während der Ausführung niemals erreicht wird, ist die `SET`-Anweisung dennoch wirksam, da der `IF...ELSE`-Anweisungsblock analysiert wird.  
   
  Wird `SET FIPS_FLAGGER` in einer gespeicherten Prozedur festgelegt, so wird der Wert von `SET FIPS_FLAGGER` wiederhergestellt, nachdem die gespeicherte Prozedur die Steuerung zurückgegeben hat. Daher hat eine `SET FIPS_FLAGGER`-Anweisung, die in einer dynamischem SQL-Anweisung angegeben wird, keine Auswirkung auf die Anweisungen, die der dynamischen SQL-Anweisung folgen.  

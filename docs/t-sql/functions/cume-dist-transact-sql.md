@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026460"
 ---
-# <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
+# <a name="cume_dist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berechnet diese Funktion die kumulierte Verteilung eines Werts innerhalb einer Gruppe von Werten. Das heißt, `CUME_DIST` berechnet die relative Position eines angegebenen Werts in einer Gruppe von Werten. Ausgehend von aufsteigender Sortierreihenfolge ist der `CUME_DIST`-Wert eines Werts in Zeile _r_ definiert als die Anzahl der Zeilen mit Werten kleiner oder gleich dem Wert in Zeile _r_, geteilt durch die Anzahl der ausgewerteten Zeilen in der Partition oder dem Resultset der Abfrage. `CUME_DIST` ähnelt der `PERCENT_RANK`-Funktion.
@@ -49,7 +49,7 @@ Das Argument _partition\_by\_clause_ unterteilt das Resultset der FROM-Klausel i
 ## <a name="return-types"></a>Rückgabetypen
 **float(53)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `CUME_DIST` gibt einen Bereich von Werten größer als 0 und kleiner als oder gleich 1 zurück. Gleichwertige Werte ergeben immer den gleichen kumulierten Verteilungswert. `CUME_DIST` schließt standardmäßig NULL-Werte ein und behandelt diese Werte als die niedrigsten möglichen Werte.
   
 `CUME_DIST` ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).

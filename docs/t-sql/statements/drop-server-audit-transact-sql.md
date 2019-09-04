@@ -39,7 +39,7 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen den Status einer Überwachung auf die Option OFF festlegen, um Änderungen an der Überwachung vornehmen zu können. Wenn DROP AUDIT ausgeführt wird, während eine Überwachung mit einer anderen Option als STATE=OFF aktiviert ist, erhalten Sie die Fehlermeldung MSG_NEED_AUDIT_DISABLED.  
   
  DROP SERVER AUDIT entfernt die Metadaten für die Überwachung, aber nicht die Überwachungsdaten, die vor Ausgabe des Befehls gesammelt wurden.  

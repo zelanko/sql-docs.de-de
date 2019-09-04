@@ -35,7 +35,7 @@ ms.locfileid: "67955167"
 public final class DateTimeOffset  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zu Datentypen finden Sie Untergrund Legendes zu [den JDBC-Treiber Datentypen](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

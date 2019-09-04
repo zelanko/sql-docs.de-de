@@ -25,7 +25,7 @@ ms.locfileid: "69027639"
 > [!NOTE]  
 >  Weitere Informationen zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Parallelität finden Sie unter „Verwalten des parallelen Datenzugriffs“ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der JDBC-Treiber unterstützt die folgenden Parallelitätstypen:  
   
 |Parallelitätstyp|Merkmale|Anzahl von Zeilensperren|und Beschreibung|  

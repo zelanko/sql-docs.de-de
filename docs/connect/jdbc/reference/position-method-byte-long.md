@@ -50,7 +50,7 @@ public long position(byte[] bPattern,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Positions Methode wird von der Positions Methode in der Java. SQL. BLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

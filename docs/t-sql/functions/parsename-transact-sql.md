@@ -63,7 +63,7 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>Rückgabetypen  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  PARSENAME gibt NULL zurück, wenn eine der folgenden Bedingungen wahr ist:  
   
 -   Entweder für *object_name* oder für *object_piece* wird NULL zurückgegeben.  

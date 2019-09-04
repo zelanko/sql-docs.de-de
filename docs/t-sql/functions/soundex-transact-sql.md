@@ -49,7 +49,7 @@ SOUNDEX ( character_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SOUNDEX konvertiert eine alphanumerische Zeichenfolge in einen vierstelligen Code, der davon abhängig ist, wie sich eine Zeichenfolge anhört, wenn diese ausgesprochen wird. Beim ersten Zeichen des Codes handelt es sich um das erste Zeichen von *character_expression*, umgewandelt in Großbuchstaben. Das zweite bis vierte Zeichen des Codes sind Zahlen, die die Buchstaben im Ausdruck darstellen. Die Buchstaben A, E, I, O, U, STD, W und Y werden ignoriert, es sei denn, sie entsprechen dem ersten Buchstaben der Zeichenfolge. Nullen werden ggf. am Ende hinzugefügt, um einen vier Zeichen langen Code zu erzeugen. Weitere Informationen zum SOUNDEX-Code finden Sie unter [The Soundex Indexing System (Das Soundex-Indizierungssystem)](https://www.archives.gov/research/census/soundex.html).  
   
  SOUNDEX-Codes aus verschiedenen Zeichenfolgen können verglichen werden, um Ähnlichkeiten zwischen gesprochenen Zeichenfolgen festzustellen. Die DIFFERENCE-Funktion führt eine SOUNDEX-Funktion für zwei Zeichenfolgen aus und gibt eine ganze Zahl zurück, die die Ähnlichkeit der SOUNDEX-Codes für diese Zeichenfolgen darstellt.  

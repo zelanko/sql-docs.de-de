@@ -92,7 +92,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  Gibt eine benutzerdefinierte Serverrolle an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Berechtigungen im Serverbereich können nur aufgehoben werden, wenn master als aktuelle Datenbank verwendet wird.  
   
  Mit REVOKE wird sowohl die GRANT- als auch die DENY-Berechtigung entfernt.  

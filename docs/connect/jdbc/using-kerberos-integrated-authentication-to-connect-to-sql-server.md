@@ -35,7 +35,7 @@ Bei Verwendung der integrierten Authentifizierung mit dem Java-**Krb5LoginModule
 - **useTicketCache = true**
 - **doNotPrompt = true**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Vor konnten Anwendungen die integrierte Authentifizierung (unter Verwendung von Kerberos oder NTLM, je nach Verfügbarkeit) mithilfe der **IntegratedSecurity** -Verbindungs Eigenschaft und durch Verweis auf **sqljdbc_auth. dll angeben.** [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] wird unter [aufbauen der Verbindungs-URL](../../connect/jdbc/building-the-connection-url.md)beschrieben.
 

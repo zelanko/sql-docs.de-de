@@ -37,7 +37,7 @@ public java.lang.String getWorkstationID()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichenfolge** mit dem Computernamen des Clients.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die workstationID ist der Name des Clientcomputers oder der Workstation. Wenn die workstationid-Eigenschaft nicht festgelegt ist, wird der Standardwert erstellt, indem die InetAddress. getLocalHost (). GetHostName ()-Methode aufgerufen wird. Wenn GetHostName einen leeren Wert zurückgibt, wird die gethostaddress (). destring ()-Methode aufgerufen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

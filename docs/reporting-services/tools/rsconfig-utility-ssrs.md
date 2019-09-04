@@ -63,7 +63,7 @@ rsconfig {-?}
 ## <a name="file-location"></a>Dateispeicherort  
  „Rsconfig.exe“ befindet sich unter **\Programme\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Es gibt zwei Gründe für die Verwendung von Rsconfig.exe:  
   
 -   Ändern der Verbindungsinformationen, die ein Berichtsserver für die Verbindung mit einer Berichtsserver-Datenbank verwendet.  

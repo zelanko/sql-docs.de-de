@@ -108,7 +108,7 @@ Dies bietet eine Möglichkeit, einen Satz von Umgebungsvariablen für die Runtim
 
 Dieser Parameter ist für Szenarien mit hybridem Betriebssystem erforderlich. In einer hybriden Architektur muss die Sprache einmal pro Plattform registriert werden. Plattform und Sprachname sind der eindeutige Schlüssel für jede externe Sprache. Wenn keine Plattform angegeben ist, wird vom aktuellen Betriebssystem davon ausgegangen.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 In CTP 3.0 werden **PARAMETERS** und **ENVIRONMENT_VARIABLES** nicht unterstützt.
 

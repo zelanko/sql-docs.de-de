@@ -42,7 +42,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  Der Name des EKM-Anbieters (Extensible Key Management).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Um einen Anbieter von erweiterbarer Schlüsselverwaltung (Extensible Key Management, EKM) löschen zu können, müssen alle Sitzungen, die den Anbieter verwenden, beendet werden.  
   
  Ein EKM-Anbieter kann nur gelöscht werden, wenn ihm keine Anmeldeinformationen zugeordnet sind.  

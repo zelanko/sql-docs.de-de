@@ -226,7 +226,7 @@ FIELDQUOTE **=** 'field_quote'
 Gibt ein Zeichen an, das als Anführungszeichen in der CSV-Datei verwendet wird. Wenn dies nicht angegeben ist, wird das Anführungszeichen (") so verwendet, wie es im Standard [RFC 4180](https://tools.ietf.org/html/rfc4180) definiert ist.
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit `OPENROWSET` kann nur auf Remotedaten von OLE DB-Datenquellen zugegriffen werden, wenn für den angegebenen Anbieter die Registrierungsoption **DisallowAdhocAccess** explizit auf 0 festgelegt wird und wenn die erweiterte Konfigurationsoption „Ad Hoc Distributed Queries“ aktiviert ist. Wenn diese Optionen nicht festgelegt sind, ermöglicht das Standardverhalten keinen Ad-hoc-Zugriff.  
   
  Beim Zugriff auf OLE DB-Remotedatenquellen wird die Anmelde-ID vertrauenswürdiger Verbindungen nicht automatisch von dem Server delegiert, auf dem der Client mit dem Server verbunden ist, der abgefragt wird. Die Authentifizierungsdelegierung muss konfiguriert sein.  

@@ -40,7 +40,7 @@ public java.sql.Statement getStatement()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getstatement-Methode wird von der getstatement-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Wird das Resultset auf andere Art erstellt, z. B. mit einer [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)-Methode, wird von der Methode NULL zurückgegeben.  

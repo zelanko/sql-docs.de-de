@@ -45,7 +45,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn diese Methode aufgerufen wird, werden die folgenden Daten gelöscht:  
   
 -   Datenquellinformationen, die verschlüsselt werden, einschließlich des Benutzernamens und des Kennworts  

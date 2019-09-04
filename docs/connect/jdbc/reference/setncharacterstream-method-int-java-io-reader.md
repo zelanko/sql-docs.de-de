@@ -42,7 +42,7 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setncharakteristream-Methode wird von der setncharakteristream-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
  Diese Methode sollte für die Datentypen **NCHAR**, **nvarchar**, **ntext**und **XML** verwendet werden.  

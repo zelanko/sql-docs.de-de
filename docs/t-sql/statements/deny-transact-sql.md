@@ -132,7 +132,7 @@ Verwenden Sie die AS-Prinzipalklausel, um anzugeben, dass der Prinzipal, der die
   
 In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die vollständige Syntax der DENY-Anweisungen ist komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax zum Verweigern von Berechtigungen für bestimmte sicherungsfähige Elemente ist in den weiter unten aufgeführten Themen beschrieben.  
   
  Für DENY wird ein Fehler gemeldet, falls CASCADE nicht angegeben wird, wenn einem Prinzipal eine Berechtigung verweigert wird, die zusammen mit GRANT OPTION erteilt wurde.  

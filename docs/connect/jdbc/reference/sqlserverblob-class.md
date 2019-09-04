@@ -40,7 +40,7 @@ ms.locfileid: "67972020"
 public class SQLServerBlob  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird ein BLOB als IMAGE-Datentyp gespeichert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

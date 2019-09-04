@@ -41,7 +41,7 @@ Gibt den durch eine **geometry**-Instanz dargestellten Open Geospatial Consortiu
   
  CLR-Rückgabetyp: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die OGC-Typnamen, die von `STGeometryType()` zurückgegeben werden können, sind **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon, CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString** und **MultiPolygon**.  
   
 ## <a name="examples"></a>Beispiele  

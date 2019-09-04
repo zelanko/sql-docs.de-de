@@ -67,7 +67,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  NOT BETWEEN gibt **TRUE** zurück, wenn der Wert von *test_expression* kleiner als der Wert von *begin_expression* und größer als der Wert von *end_expression* ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Operatoren Größer-als (>) und Kleiner-als (<), um einen Exklusivbereich anzugeben. Ist einer der Eingabewerte für das BETWEEN- oder NOT BETWEEN-Prädikat NULL, lautet das Ergebnis UNKNOWN.  
   
 ## <a name="examples"></a>Beispiele  

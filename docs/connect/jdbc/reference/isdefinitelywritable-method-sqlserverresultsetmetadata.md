@@ -45,7 +45,7 @@ public boolean isDefinitelyWritable(int column)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese isdefinitelyschreitable-Methode wird von der isdefinitelyschreitable-Methode in der Java. SQL. ResultSetMetaData-Schnittstelle angegeben.  
   
 > [!NOTE]  

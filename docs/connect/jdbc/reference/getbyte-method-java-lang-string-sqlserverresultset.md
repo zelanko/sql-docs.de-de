@@ -45,7 +45,7 @@ public byte getByte(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getByte-Methode wird von der getByte-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Die Methode wird nur unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen unterstützt, die einen Bytewert wie tinyint oder bit sicher zurückgeben. Bei allen anderen Datentypen wird eine Ausnahme ausgelöst.  

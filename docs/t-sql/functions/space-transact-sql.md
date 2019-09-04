@@ -49,7 +49,7 @@ SPACE ( integer_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie REPLICATE anstelle von SPACE, wenn Sie Leerzeichen in Unicode-Daten einfügen oder mehr als 8000 Zeichenstellen zurückgeben möchten.  
   
 ## <a name="examples"></a>Beispiele  

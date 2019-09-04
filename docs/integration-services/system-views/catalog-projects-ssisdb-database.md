@@ -41,7 +41,7 @@ ms.locfileid: "67997842"
 |validation_status|**char(1)**|Der Überprüfungsstatus.|  
 |last_validation_time|**datetimeoffset(7)**|Der Zeitpunkt der letzten Überprüfung.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jedes Projekt im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

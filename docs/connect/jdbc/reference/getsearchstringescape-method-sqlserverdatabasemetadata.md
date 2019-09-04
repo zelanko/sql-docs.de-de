@@ -40,7 +40,7 @@ public java.lang.String getSearchStringEscape()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getsearchstringescape-Methode wird von der getsearchstringescape-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Diese Methode wird nur für Suchen nach Metadatenmustern verwendet. Sie gibt „\\“ zurück. Mit einem **Zeichenfolgen**-Suchmuster können Platzhalter („%“ und „_“) mit Escapezeichen versehen und durch Voranstellen eines umgekehrten Schrägstrichs als Literale bereitgestellt werden. Hierdurch wird „\\%“ in „[%]“ und „\\\_“ in „[\_]“ konvertiert.  

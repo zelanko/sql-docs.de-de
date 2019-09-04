@@ -47,7 +47,7 @@ public void setString(java.lang.String sCol,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setString-Methode wird von der setString-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Konvertierungen von Zeichenfolgen zu Binärwerten werden nur ausgeführt, wenn [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] bekannt ist, dass der Zieltyp binär ist. Ist der zugrunde liegende Typ nicht bekannt, wird vom JDBC-Treiber das **Zeichenfolge**-Literal übergeben. Kann die Konvertierung vom Server nicht ausgeführt werden, wird ein Serverfehler zurückgegeben.  

@@ -33,7 +33,7 @@ ms.locfileid: "67971740"
 public class SQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SQLServerConnection unterstützt JDBC-Verbindungspooling und kann entweder eine physische JDBC-Verbindung oder eine logische JDBC-Verbindung sein. SQLServerConnection verwaltet die Transaktionssteuerung für alle Anweisungen, die aus ihr erstellt wurden, und kann an verteilten XA-Transaktionen teilnehmen, die über einen XAResource-Adapter verwaltet werden.  
   
  SQLServerConnection verwaltet einen Pool vorbereiteter Anweisungs Handles. Vorbereitete Anweisungen werden einmal vorbereitet und werden normalerweise mehrere Male mit unterschiedlichen Parameterdatenwerten ausgeführt. Vorbereitete Anweisungen werden ebenfalls über logische (als Poolverbindung verwendete) Verbindungsgrenzen hinweg beibehalten.  

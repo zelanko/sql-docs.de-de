@@ -60,7 +60,7 @@ _CaseSensitivity_AccentSensitivity | _BIN
 
 **BIN** Gibt die zu verwendende binäre Sortierreihenfolge an.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Führen Sie die folgende Abfrage aus, um die vom Server unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen aufzulisten.
 

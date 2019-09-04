@@ -52,7 +52,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Ergebniswert  
  Gibt TRUE zurück, wenn beide Ausdrücke TRUE sind.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das folgende Diagramm zeigt die Ergebnisse des Vergleichs von TRUE- und FALSE-Werten mit dem AND-Operator.  
   
 ||TRUE|FALSE|UNKNOWN|  

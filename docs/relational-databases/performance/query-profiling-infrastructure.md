@@ -184,7 +184,7 @@ In der folgenden Tabelle werden die Aktionen zum Aktivieren der Standard- oder L
 |Session|Verwendung von `SET STATISTICS PROFILE ON`, ab SQL Server 2000|-|
 |Session|Klick auf die Schaltfläche [Live-Abfragestatistik](../../relational-databases/performance/live-query-statistics.md) in SSMS, ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2|-|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 > [!IMPORTANT]
 > Aufgrund einer möglichen zufälligen AV bei der Ausführung einer gespeicherten Überwachungsprozedur, die auf [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) verweist, müssen Sie sicherstellen, dass [KB 4078596](http://support.microsoft.com/help/4078596) in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] installiert ist.

@@ -123,7 +123,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Wird MIRROR_ADDRESS angegeben, muss die Route die SERVICE_NAME-Klausel und die BROKER_INSTANCE-Klausel angeben. Eine Route, die **'LOCAL'** oder **'TRANSPORT'** für *next_hop_address* angibt, gibt möglicherweise keine Spiegeladresse an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei der Routingtabelle, in der die Routen gespeichert werden, handelt es sich um eine Metadatentabelle, die über die Katalogsicht **sys.routes** gelesen werden kann. Diese Katalogsicht kann nur durch CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisungen aktualisiert werden.  
   
  Standardmäßig enthält die Routingtabelle in jeder Benutzerdatenbank eine Route. Diese Route wird **AutoCreatedLocal** genannt. Die Route gibt **'LOCAL'** für *next_hop_address* an und ordnet Dienstname und Broker-Instanzbezeichner zu.  

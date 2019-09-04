@@ -43,7 +43,7 @@ ms.locfileid: "67906111"
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird als Dienst mit dem Namen MSSQLServer ausgeführt.  
   
 ## <a name="examples"></a>Beispiele  

@@ -40,7 +40,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die folgenden Hinweise gelten für die TOKEN-Funktion:  
   
 -   Die Trennzeichenfolge kann ein oder mehrere Trennzeichen enthalten.  

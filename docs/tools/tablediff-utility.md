@@ -172,7 +172,7 @@ tablediff
 |**1**|Schwerwiegender Fehler|  
 |**2**|Tabellenunterschiede|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Hilfsprogramm **tablediff** kann für Server, auf denen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht installiert ist, nicht verwendet werden.  
   
  Tabellen, die Spalten des Datentyps **sql_variant** enthalten, werden nicht unterstützt.  

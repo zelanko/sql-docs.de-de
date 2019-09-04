@@ -40,7 +40,7 @@ REPLACENULL(expression 1,expression 2)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Die Länge von *expression 2* darf Null sein.  
   

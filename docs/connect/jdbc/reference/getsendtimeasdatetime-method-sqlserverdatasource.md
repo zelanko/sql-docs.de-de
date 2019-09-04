@@ -34,7 +34,7 @@ public boolean getSendTimeAsDatetime();
 ## <a name="return-value"></a>Rückgabewert  
  **true** , wenn die Java. SQL. Time-Werte als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **DateTime** -Typ an den Server gesendet werden. **false** , wenn die Java. SQL. Time-Werte als [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Zeittyp** an den Server gesendet werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zur **sendtimeasdatetime** -Verbindungs Eigenschaft finden Sie [unter Festlegen der Verbindungs Eigenschaften](../../../connect/jdbc/setting-the-connection-properties.md) .  
   
  Mit [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) können Sie die Verbindungseigenschaft **sendTimeAsDatetime** programmgesteuert festlegen.  

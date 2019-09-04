@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68007892"
 ---
-# <a name="catalogdenypermission-ssisdb-database"></a>catalog.deny_permission (SSISDB-Datenbank)
+# <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -73,7 +73,7 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Mitgliedschaft in der Serverrolle **sysadmin**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit dieser gespeicherten Prozedur können Sie die in der folgenden Tabelle beschriebenen Typen von Berechtigungen verweigern:  
   
 |permission_type-Wert|Berechtigungsname|Berechtigungsbeschreibung|Anwendbare Objekttypen|  

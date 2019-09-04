@@ -40,7 +40,7 @@ public int getStatementPoolingCacheSize()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode ist über JDBC Driver, Version 6,4 und höher, verfügbar.
  
 ## <a name="see-also"></a>Weitere Informationen  

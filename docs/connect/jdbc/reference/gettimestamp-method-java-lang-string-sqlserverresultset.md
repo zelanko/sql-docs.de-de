@@ -45,7 +45,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getTimestamp-Methode wird von der getTimestamp-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode werden nur Werte aus datetime- und smalldatetime-Spalten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben.  

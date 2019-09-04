@@ -41,7 +41,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode sollte für die Datentypen **NCHAR**, **nvarchar**, **ntext**und **XML** verwendet werden.  
   
  Diese setNString-Methode wird von der setNString-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  

@@ -35,7 +35,7 @@ public long length()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Length-Methode wird von der Length-Methode in der Java. SQL. NCLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

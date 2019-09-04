@@ -53,7 +53,7 @@ GeomFromGml ( GML_input, SRID )
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
  Diese Methode löst **ArgumentException** aus, wenn die Eingabe einen gegenüberliegenden Edge enthält.  

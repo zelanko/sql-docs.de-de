@@ -200,7 +200,7 @@ ON: Die Ereignissitzung wird beim Start gestartet.
 
 **OFF**: Die Ereignissitzung wird nicht beim Start gestartet.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die Rangfolge der logischen Operatoren beginnt mit `NOT` (höchster Operator). Darauf folgt `AND` und anschließend `OR`.
 

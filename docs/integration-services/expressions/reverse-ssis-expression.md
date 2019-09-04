@@ -41,7 +41,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das *character_expression* -Argument muss den Datentyp „DT_WSTR“ aufweisen.  
   
  REVERSE gibt ein NULL-Ergebnis zurück, wenn *character_expression* NULL ist.  

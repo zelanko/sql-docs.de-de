@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67936262"
 ---
-# <a name="pdoconstruct"></a>PDO::__construct
+# <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Stellt eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank her.  
@@ -44,7 +44,7 @@ Gibt ein PDO-Objekt zurück. Wenn der Fehler auftritt, wird ein PDOException-Obj
 ## <a name="exceptions"></a>Ausnahmen  
 PDOException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Sie können ein Verbindungsobjekt schließen, indem Sie die Instanz auf NULL setzen.  
   
 Nach einer Verbindung zeigt PDO:: errorCode 01000 anstelle von 00000 an.  

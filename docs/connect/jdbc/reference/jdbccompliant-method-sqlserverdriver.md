@@ -37,7 +37,7 @@ public boolean jdbcCompliant()
 ## <a name="return-value"></a>Rückgabewert  
  **true** , wenn der JDBC-Treiber die Mindestanforderungen erfüllt. Andernfalls lautet der Wert **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese jdbckompatiblen-Methode wird von der jdbccompliance-Methode in der Java. SQL. Driver-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

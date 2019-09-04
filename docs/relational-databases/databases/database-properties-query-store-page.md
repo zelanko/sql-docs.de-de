@@ -64,7 +64,7 @@ ms.locfileid: "67947026"
   
  Das rechte Diagramm zeigt den derzeit verbrauchten Anteil des Abfragespeicherkontingents. Beachten Sie, dass das Kontingent im linken Diagramm nicht angezeigt wird. Das Kontingent kann die aktuelle Größe der Datenbank überschreiten.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Abfragespeicher bietet über DBAs Einblick in die Auswahl und die Leistung des Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Das Feature erfasst automatisch einen Verlauf der Abfrage-, Plan- und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern und ermöglicht es Ihnen so, Verwendungsmuster für Datenbanken zu erkennen und zu verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Der Abfragespeicher kann mithilfe dieser Eigenschaftenseite der Abfragespeicherdatenbank oder mithilfe der [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) -Option konfiguriert werden. Der Abfragespeicher stellt Informationen mithilfe eines [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Dialogfelds dar. Weitere Informationen zum Abfragespeicher finden Sie unter [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

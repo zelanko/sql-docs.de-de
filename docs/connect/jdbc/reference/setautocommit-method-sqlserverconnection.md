@@ -42,7 +42,7 @@ public void setAutoCommit(boolean value)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode "staudecommit" wird von der Methode "" in der Schnittstelle "java. SQL. Connection" durch die Methode "" festgelegt.  
   
  Ist für eine Verbindung der Modus für automatische Commits aktiviert, werden alle SQL-Anweisungen als einzelne Transaktionen ausgeführt, und die Commits der SQL-Anweisungen werden als einzelne Transaktionen ausgeführt. Andernfalls werden die SQL-Anweisungen in Transaktionen gruppiert, die mit einem Aufruf der [commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)- oder der [rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md)-Methode beendet werden. Der Modus für automatische Commits ist für neue Verbindungen standardmäßig aktiviert.  

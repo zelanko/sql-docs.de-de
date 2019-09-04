@@ -64,7 +64,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle sind Begriffe für Pfadelemente zusammengefasst. Die Beispiele in der Tabelle beziehen sich auf das XML-Beispieldokument Customers.xml, das im Abschnitt mit Beispielen in diesem Thema enthalten ist.  
   
 > [!NOTE]  

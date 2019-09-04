@@ -32,7 +32,7 @@ public String toString()
 ## <a name="return-value"></a>Rückgabewert  
  Eine Zeichen folgen Darstellung des **DateTimeOffset** -Objekts.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Zeichenfolge hat das Format *yyyy*-*mm*-*DD * * HH*:*mm*:*SS*[. *fffffff*] [+ |-]*HH*:*mm*.  
   
  Die Sekundenbruchteile der zurückgegebenen Zeichenfolge werden bis zur angegebenen Genauigkeit mit Nullen aufgefüllt. Beispielsweise wird ein **DateTimeOffset (6)** mit dem Wert "2010-03-10 12:34:56.78-08:00" von "DateTimeOffset. ToString" als "2010-03-10 12:34:56.780000-08:00" formatiert.  

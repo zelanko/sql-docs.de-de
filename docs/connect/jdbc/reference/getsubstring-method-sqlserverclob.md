@@ -50,7 +50,7 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getSubString-Methode wird von der getSubString-Methode in der Java. SQL. CLOB-Schnittstelle angegeben.  
   
  Beim Versuch, null Zeichen aus einem leeren CLOB oder aus einem CLOB mit der Länge Null abzurufen, wird eine leere Zeichenfolge zurückgegeben. Beim Versuch, aus einem CLOB mit der Länge Null eine beliebige Zeichenlänge an einer beliebigen Position (und nicht von Position 1) abzurufen, wird eine Positionsausnahme ausgelöst.  

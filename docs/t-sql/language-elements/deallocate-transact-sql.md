@@ -48,7 +48,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  @*cursor_variable_name*  
  Der Name einer **cursor**-Variablen. @*cursor_variable_name* muss vom Typ **cursor** sein.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Anweisungen, die auf Cursor angewendet werden, verwenden entweder einen Cursornamen oder eine Cursorvariable, um auf den Cursor zu verweisen. `DEALLOCATE` entfernt die Zuordnung zwischen einem Cursor und dem Cursornamen oder der Cursorvariablen. Ist dies der letzte Name bzw. die letzte Variable, die auf den Cursor verweist, wird die Zuordnung des Cursors aufgehoben, und alle vom Cursor verwendeten Ressourcen werden freigegeben. Durch `DEALLOCATE` werden alle Scrollsperren freigegeben, die zum Schützen der Isolierung der Abrufvorgänge verwendet werden. Transaktionssperren, mit denen vom Cursor vorgenommene Updates, einschließlich positionierter Updates, geschützt werden, bleiben bis zum Ende der Transaktion wirksam.  
   
 Die `DECLARE CURSOR`-Anweisung ordnet einem Cursor einen Cursornamen zu.  

@@ -41,7 +41,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SQRT gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  SQRT schlägt fehl, wenn das Argument einen negativen Wert aufweist.  

@@ -40,7 +40,7 @@ public java.lang.String getClientInfo (java.lang.String name)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getClientInfo-Methode wird von der getClientInfo-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] werden keine Eigenschaften für Clientinformationen unterstützt. Daher gibt diese Methode einen **null**-Wert zurück.  

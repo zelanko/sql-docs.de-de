@@ -41,7 +41,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz nach der Definition des Open Geo
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Um als einfach zu gelten, muss eine **geometry** -Instanz alle nachfolgenden Anforderungen erfüllen:  
   
 -   Keine Abbildung der Instanz darf sich selbst außer an den Endpunkten schneiden.  

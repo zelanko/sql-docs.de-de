@@ -50,7 +50,7 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getxaconnection-Methode wird von der getxaconnection-Methode in der javax. SQL. XADataSource-Schnittstelle angegeben.  
   
 > [!NOTE]  

@@ -975,7 +975,7 @@ IF EXISTS
 
 Löscht die Spalte oder Einschränkung nur, wenn diese bereits vorhanden ist.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie [INSERT](../../t-sql/statements/insert-transact-sql.md), um neue Datenzeilen hinzuzufügen. Verwenden Sie [DELETE](../../t-sql/statements/delete-transact-sql.md) oder [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md), um Datenzeilen zu entfernen. Verwenden Sie [UPDATE](../../t-sql/queries/update-transact-sql.md), um die Werte in vorhandenen Zeilen zu ändern.
 

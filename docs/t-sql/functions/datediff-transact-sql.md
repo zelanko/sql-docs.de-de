@@ -85,7 +85,7 @@ In der folgenden Tabelle werden alle gültigen _datepart_-Werte aufgeführt. **D
 *startdate*  
 Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann:
 
-+ **Datum**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -138,7 +138,7 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 
 Wenn *startdate* und *enddate* unterschiedliche Jahreswerte aufweisen, die Kalenderwochenwerte jedoch identisch sind, gibt `DATEDIFF` für den *datepart*-Wert **week** 0 zurück.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie `DATEDIFF` in den Klauseln `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` und `ORDER BY`.
   
 `DATEDIFF` wandelt Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt `DATEDIFF` das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.

@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109374"
 ---
-# <a name="jsonquery-transact-sql"></a>JSON_QUERY (Transact-SQL)
+# <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -69,7 +69,7 @@ Der Standardwert für *path* lautet „$“. Wenn Sie also keinen Wert für *pat
   
 - Im Strict-Modus gibt **JSON_QUERY** einen Fehler zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 ### <a name="lax-mode-and-strict-mode"></a>Lax- und Strict-Modus
 
@@ -102,7 +102,7 @@ Der Standardwert für *path* lautet „$“. Wenn Sie also keinen Wert für *pat
 |$.info.type[0]|NULL|Fehler|Kein Array.|  
 |$.info.none|NULL|Fehler|Die Eigenschaft ist nicht vorhanden.|  
 
-### <a name="using-jsonquery-with-for-json"></a>Verwenden von JSON_QUERY mit FOR JSON
+### <a name="using-json_query-with-for-json"></a>Verwenden von JSON_QUERY mit FOR JSON
 
 **JSON_QUERY** gibt ein gültiges JSON-Fragment zurück. Folglich versieht **FOR JSON** Sonderzeichen im Rückgabewert **JSON_QUERY** nicht mit Escapezeichen.
 

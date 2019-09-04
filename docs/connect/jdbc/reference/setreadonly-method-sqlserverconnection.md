@@ -45,7 +45,7 @@ public void setReadOnly(boolean readOnly)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode "ltreadonly" wird von der Methode "-Methode" in der Java. SQL. Connection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

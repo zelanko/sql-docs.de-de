@@ -34,7 +34,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zum Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse finden Sie unter [zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
  Das folgende Beispiel zeigt, wie die Verbindungs-ID abgerufen wird:  

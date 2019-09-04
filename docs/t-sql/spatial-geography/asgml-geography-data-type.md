@@ -45,7 +45,7 @@ ms.locfileid: "68066612"
   
  CLR-Rückgabetyp: **SqlXml**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine `LineString` -Instanz erstellt und mithilfe von `AsGML()` die GML-Beschreibung der Instanz zurückgegeben.  

@@ -57,7 +57,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mithilfe von PERMISSIONS kann festgestellt werden, ob der aktuelle Benutzer über die Berechtigungen verfügt, die zum Ausführen einer Anweisung oder zum Erteilen einer Berechtigung für einen anderen Benutzer mithilfe von GRANT erforderlich sind.  
   
  Die Berechtigungsinformationen werden in Form eines 32-Bit-Bitmusters zurückgegeben.  

@@ -49,7 +49,7 @@ DROP CERTIFICATE certificate_name
  *certificate_name*  
  Der eindeutige Name des Zertifikats in der Datenbank.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zertifikate können nur gelöscht werden, wenn ihnen keine Entitäten zugeordnet sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

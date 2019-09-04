@@ -40,7 +40,7 @@ Ein Array mit Fehlerinformationen über den zuletzt ausgeführten Vorgang des Da
   
 Wenn kein Fehler vorliegt oder wenn der SQLSTATE nicht festgelegt ist, sind die treiberspezifischen Felder NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 PDO::errorInfo ruft nur die Fehlerinformationen für Vorgänge ab, die direkt in der Datenbank ausgeführt werden. Verwenden Sie PDOStatement::errorInfo, wenn eine PDOStatement-Instanz mit PDO::prepare oder PDO::query erstellt wird.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  

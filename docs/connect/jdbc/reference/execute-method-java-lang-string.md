@@ -45,7 +45,7 @@ public final boolean execute(java.lang.String sql)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese execute-Methode wird von der execute-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
  Die Methode überschreibt die [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)-Methode, die sich in der [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Klasse befindet.  

@@ -69,7 +69,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC CHECKCONSTRAINTS erstellt für alle FOREIGN KEY- und CHECK-Einschränkungen einer Tabelle eine Abfrage und führt sie aus.
   
 Eine FOREIGN KEY-Abfrage sieht beispielsweise folgendermaßen aus:

@@ -134,7 +134,7 @@ Die Arbeitsauslastungsgruppe kann einen externen Ressourcenpool angeben. Sie kö
 - Ein Ressourcenpool für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsauslastungen und Abfragen
 - Ein externer Ressourcenpool für externe Prozesse. Weitere Informationen finden Sie unter [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Wenn `REQUEST_MEMORY_GRANT_PERCENT` verwendet wird, kann die Indexerstellung verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Diese besondere Behandlung wird von der Ressourcenkontrolle in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt. Die Zuweisung anfänglichen und zusätzlichen Arbeitsspeichers wird jedoch durch den Ressourcenpool und die Einstellungen der Arbeitsauslastungsgruppe begrenzt.
 
 ### <a name="index-creation-on-a-partitioned-table"></a>Indexerstellung für eine partitionierte Tabelle

@@ -361,7 +361,7 @@ In diesem Fall verwendet dta Abfragespeicher als Quelle der Arbeitsauslastung un
  **-x**  
  Startet eine Optimierungssitzung und beendet das Hilfsprogramm.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Drücken Sie einmal STRG+C, um die Optimierungssitzung zu beenden und Empfehlungen basierend auf der Analyse zu generieren, die **dta** bis zu diesem Zeitpunkt abgeschlossen hat. Daraufhin werden Sie aufgefordert zu entscheiden, ob Sie Empfehlungen generieren möchten. Drücken Sie erneut STRG+C, um die Optimierungssitzung zu beenden, ohne Empfehlungen zu generieren.  
   
 ## <a name="examples"></a>Beispiele  

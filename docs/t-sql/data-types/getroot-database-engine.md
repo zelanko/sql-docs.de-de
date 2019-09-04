@@ -46,7 +46,7 @@ static SqlHierarchyId GetRoot ( )
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wird verwendet, um den Stammknoten in einer Hierarchiestruktur zu bestimmen.
   
 ## <a name="examples"></a>Beispiele  

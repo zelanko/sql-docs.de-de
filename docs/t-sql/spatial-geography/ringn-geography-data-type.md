@@ -45,7 +45,7 @@ ms.locfileid: "68042661"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ist der Wert des Ringindex **n** kleiner 1, löst diese Methode eine **ArgumentOutOfRangeException.** aus. Der Wert des Ringindex muss größer oder gleich 1 sein und sollte kleiner oder gleich dem Wert sein, der von `NumRings()`.  
   
 ## <a name="examples"></a>Beispiele  

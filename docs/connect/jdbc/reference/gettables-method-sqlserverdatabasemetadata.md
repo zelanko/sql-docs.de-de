@@ -60,7 +60,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getTables-Methode wird von der getTables-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getTables-Methode zurückgegebene Resultset enthält folgende Informationen:  

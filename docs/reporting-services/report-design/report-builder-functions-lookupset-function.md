@@ -44,7 +44,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Rückgabewert  
  Gibt einen Wert vom Typ **VariantArray**zurück; gibt **Nothing** zurück, wenn keine Übereinstimmung vorhanden ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Rufen Sie für ein Name/Wert-Paar, für das eine 1:n-Beziehung vorhanden ist, mithilfe von **LookupSet** einen Satz von Werten aus dem angegebenen Dataset ab. Beispiel: Für einen Kundenbezeichner in einer Tabelle können Sie alle zugeordneten Telefonnummern dieses Kunden aus einem Dataset, das nicht an den Datenbereich gebunden ist, mithilfe von **LookupSet** abrufen.  
   
  Mit**LookupSet** wird Folgendes ausgeführt:  

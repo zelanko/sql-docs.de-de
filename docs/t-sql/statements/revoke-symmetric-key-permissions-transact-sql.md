@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zu symmetrischen Schlüsseln werden in der [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)-Katalogsicht angezeigt.  
   
  Die Anweisung erzeugt einen Fehler, wenn CASCADE beim Aufheben einer Berechtigung für einen Prinzipal, dem diese Berechtigung mit GRANT OPTION erteilt wurde, nicht angegeben ist.  

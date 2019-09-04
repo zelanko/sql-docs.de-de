@@ -44,7 +44,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Rückgabewert  
  Gibt einen Wert vom Typ **Variant**zurück; gibt **Nothing** zurück, wenn keine Übereinstimmung vorhanden ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Rufen Sie für ein Name-Wert-Paar, für das eine 1:1-Beziehung vorhanden ist, den Wert mithilfe von **Lookup** aus dem angegebenen Dataset ab. Beispiel: Für ein ID-Feld in einer Tabelle können Sie das entsprechende Namensfeld mithilfe von **Lookup** aus einem Dataset abrufen, das nicht an den Datenbereich gebunden wird.  
   
  Mit**Lookup** wird Folgendes ausgeführt:  

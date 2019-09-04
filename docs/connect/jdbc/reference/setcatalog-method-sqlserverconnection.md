@@ -42,7 +42,7 @@ public void setCatalog(java.lang.String catalog)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setCatalog-Methode wird von der setCatalog-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Das *catalog* -Argument wird von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] automatisch mit Escapezeichen versehen. Bei Verwendung dieser Methode wird die catalog-Eigenschaft für das Connection-Objekt festgelegt. Diese wird auf keine andere Weise implizit festgelegt.  

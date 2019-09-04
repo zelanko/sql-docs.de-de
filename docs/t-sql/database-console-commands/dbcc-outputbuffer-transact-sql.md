@@ -61,7 +61,7 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC OUTPUTBUFFER zeigt die Ergebnisse an, die an den angegebenen Client (*session_id*) gesendet wurden. Bei Prozessen, die keine Ausgabedatenströme umfassen, wird eine Fehlermeldung ausgegeben.
   
 Führen Sie DBCC INPUTBUFFER aus, um die ausgeführte Anweisung anzuzeigen, die die von DBCC OUTPUTBUFFER dargestellten Ergebnisse zurückgegeben hat.

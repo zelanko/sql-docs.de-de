@@ -45,7 +45,7 @@ ms.locfileid: "68042051"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Schnittmenge von zwei geography-Instanzen wird zurückgegeben.  
   
  STIntersection() gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography**-Instanzen nicht übereinstimmen.  

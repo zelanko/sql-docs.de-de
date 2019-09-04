@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Routingtabelle, in der die Routen gespeichert werden, ist eine Metadatentabelle, die über die **sys.routes**-Katalogsicht gelesen werden kann. Die Routingtabelle kann nur mit der CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisung aktualisiert werden.  
   
  Klauseln, die im ALTER ROUTE-Befehl nicht angegeben werden, bleiben unverändert. Deshalb ist es nicht möglich, über ALTER festzulegen, dass für die Route kein Timeout gilt, dass die Route mit jedem Dienstnamen übereinstimmt oder dass die Route mit jeder Broker-Instanz übereinstimmt. Wenn Sie diese Merkmale einer Route ändern möchten, müssen Sie die vorhandene Route löschen und eine neue Route mit den neuen Informationen erstellen.  

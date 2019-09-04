@@ -2969,7 +2969,7 @@ Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen 
 
 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn die folgenden Anforderungen erfüllt sind:
 

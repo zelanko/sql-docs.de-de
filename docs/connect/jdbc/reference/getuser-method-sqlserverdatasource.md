@@ -37,7 +37,7 @@ public java.lang.String getUser()
 ## <a name="return-value"></a>Rückgabewert  
  Ein **String-Objekt**, das den Benutzernamen enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)-Methode legt den Benutzernamen fest, der beim Herstellen einer Verbindung zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz verwendet wird. Ist der Wert für den Benutzernamen nicht festgelegt, wird von der getUser-Methode der Standardwert (NULL) zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

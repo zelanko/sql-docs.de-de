@@ -130,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt der Server den maximalen Grad an Parallelität aus.  
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Bemerkungen    
     
 > [!NOTE]    
 > Verwenden Sie [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), um DBCC CHECKTABLE für jede Tabelle der Datenbank auszuführen.    

@@ -32,7 +32,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67929176"
 ---
-# <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
+# <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Gibt an, dass sich die Vergleichsoperatoren Gleich (=) und Ungleich (<>) bei Verwendung mit NULL-Werten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ISO-konform verhalten müssen.  
@@ -56,7 +56,7 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn ANSI_NULLS auf ON festgelegt ist, gibt eine SELECT-Anweisung, in der WHERE *column_name* = **NULL** verwendet wird, auch dann 0 Zeilen zurück, wenn sich NULL-Werte in *column_name* befinden. Eine SELECT-Anweisung, die WHERE *column_name* <> **NULL** verwendet, gibt auch dann 0 Zeilen zurück, wenn sich Werte ungleich NULL in *column_name* befinden.  
   
 Wenn ANSI_NULLS auf OFF festgelegt ist, entsprechen die Vergleichsoperatoren Gleich (=) und Ungleich (<>) nicht dem ISO-Standard. Eine SELECT-Anweisung, in der WHERE *column_name* = **NULL** verwendet wird, gibt die Zeilen zurück, die NULL-Werte in *column_name* enthalten. Eine SELECT-Anweisung, die WHERE *column_name* <> **NULL** verwendet, gibt die Zeilen mit Werten ungleich NULL in der Spalte zurück. Außerdem gibt eine SELECT-Anweisung, in der *column_name* <> *XYZ_value* verwendet wird, alle Zeilen zurück, die nicht gleich *XYZ_value* und nicht NULL sind.  

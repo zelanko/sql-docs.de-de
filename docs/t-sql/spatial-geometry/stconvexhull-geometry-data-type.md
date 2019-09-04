@@ -41,7 +41,7 @@ Gibt ein Objekt zurück, das die konvexe Hülle einer **geometry**-Instanz darst
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STConvexHull()` gibt das kleinste konvexe Polygon zurück, das die angegebene **geometry**-Instanz enthält. **Points** oder kolineare **LineString**-Instanzen erzeugen eine Instanz vom gleichen Typ wie die Eingabe.  
   
 ## <a name="examples"></a>Beispiele  

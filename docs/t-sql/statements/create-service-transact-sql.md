@@ -64,7 +64,7 @@ CREATE SERVICE service_name
  **[** DEFAULT **]**  
  Gibt an, dass der Dienst das Ziel von Konversationen sein kann, die dem DEFAULT-Vertrag entsprechen. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Der DEFAULT-Vertrag ermöglicht es beiden Seiten der Konversation, Nachrichten vom Nachrichtentyp DEFAULT zu senden. Der Nachrichtentyp DEFAULT verwendet für die Überprüfung NONE.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Dienst macht die Funktionalität verfügbar, die von den Verträgen bereitgestellt wird, denen er zugeordnet ist, sodass sie von anderen Diensten verwendet werden können. Die `CREATE SERVICE`-Anweisung gibt die Verträge an, deren Ziel dieser Dienst ist. Ein Dienst kann nur ein Ziel für Konversationen sein, die die von dem Dienst angegebenen Verträge verwenden. Ein Dienst, der keine Verträge angibt, macht keine Funktionalität für andere Dienste verfügbar.  
   
  Konversationen, die von diesem Dienst initiiert werden, können einen beliebigen Vertrag verwenden. Sie erstellen einen Dienst ohne Angabe von Verträgen, wenn der Dienst nur Konversationen initiiert.  

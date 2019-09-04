@@ -40,7 +40,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode wird von der Methode "Methode" in der Schnittstelle "java. SQL. NCLOB" durch die Methode "ltasciistream" angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

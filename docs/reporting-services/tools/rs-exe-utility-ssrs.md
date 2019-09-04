@@ -111,7 +111,7 @@ rs -i c:\scriptfiles\script_copycontent.rss -s https://localhost/reportserver
   
  Weitere Beispiele finden Sie unter [Ausführen einer Reporting Services-Skriptdatei](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können Skripts so definieren, dass sie Systemeigenschaften festlegen, Berichte veröffentlichen usw. Die Skripts, die Sie erstellen, können jede Methode der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -API einschließen. Weitere Informationen zu den verfügbaren Methoden und Eigenschaften finden Sie unter [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Das Skript muss in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET-Code geschrieben und in einer Unicode- oder UTF-8-Textdatei mit der Dateinamenerweiterung „.rss“ gespeichert sein. Das Hilfsprogramm **rs** kann nicht zum Debuggen von Skripts verwendet werden. Führen Sie zum Debuggen eines Skripts den Code in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]aus.  

@@ -55,7 +55,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der *SendUsingSMTPServer* -Parameter auf **true**festgelegt ist, wird der **SendUsing** -Eintrag in der Berichtsserver-Konfigurationsdatei auf 1 festgelegt. Wenn *SendUsingSMTPServer* auf **false**festgelegt ist, wird der **SendUsing** -Eintrag nicht konfiguriert.  
   
  Diese Methode gibt Benutzern keine Möglichkeit, den **SendUsing** -Eintrag in der Berichtsserver-Konfigurationsdatei auf einen anderen Wert als 1 festzulegen. Sie müssen die Konfigurationsdateien manuell bearbeiten, um den Berichtsserver für eine andere Option als SMTP-Mail zu konfigurieren.  

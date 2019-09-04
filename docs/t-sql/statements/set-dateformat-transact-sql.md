@@ -53,7 +53,7 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  Reihenfolge der Datumsteile. Gültige Parameter sind **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Kann entweder in Unicode oder in Doppelbyte-Zeichensätzen (Double-Byte Character Set, DBCS), die in Unicode konvertiert wurden, dargestellt werden. Der Standard für Der Standard für Englisch ist **mdy**. Die standardmäßige DATEFORMAT-Einstellung aller Unterstützungssprachen finden Sie unter [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die DATEFORMAT-Option **ydm** wird für die Datentypen **date**, **datetime2** und **datetimeoffset** nicht unterstützt.  
   
  Die Einstellung DATEFORMAT kann Zeichenfolgen für Datumsdatentypen je nach Zeichenfolgenformat anders interpretieren. Beispielsweise entsprechen die Interpretationen von **datetime** und **smalldatetime** möglicherweise nicht **date**, **datetime2** oder **datetimeoffset**. DATEFORMAT wirkt sich bei der Konvertierung von Datumswerten für die Datenbank auf die Interpretation von Zeichenfolgen aus. Es wirkt sich nicht auf die Anzeige der Werte von Datumsdatentypen und deren Speicherformat in der Datenbank aus.  

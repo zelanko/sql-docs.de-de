@@ -57,7 +57,7 @@ expression. Weitere Informationen finden Sie unter [Ausdrücke &#40;Transact-SQL
 ## <a name="return-types"></a>Rückgabetypen
 **varbinary(max)** stellt den komprimierten Inhalt der Eingabe dar.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Komprimierte Daten können nicht indiziert werden.
   
 Die `COMPRESS`-Funktion komprimiert die Ausdrucksdaten der Eingabe. Sie müssen diese Funktion aufrufen, damit jeder Datenabschnitt komprimiert wird. Weitere Informationen zu automatischer Datenkomprimierung während der Speicherung auf Zeilen- oder Seitenebene finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).

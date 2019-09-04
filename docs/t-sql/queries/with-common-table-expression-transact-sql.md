@@ -34,7 +34,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67948084"
 ---
-# <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
+# <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt ein temporäres benanntes Resultset an, das als allgemeiner Tabellenausdruck (CTE, Common Table Expression) bezeichnet wird. Dieser wird von einer einfachen Abfrage abgeleitet und innerhalb des Ausführungsbereichs einer einzelnen SELECT-, INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert. Diese Klausel kann auch in einer CREATE VIEW-Anweisung als Teil der definierenden SELECT-Anweisung verwendet werden. Ein allgemeiner Tabellenausdruck kann auch Verweise auf sich selbst enthalten. In diesem Fall handelt es sich um einen rekursiven allgemeinen Tabellenausdruck.  
@@ -64,7 +64,7 @@ Ein gültiger Bezeichner für den allgemeinen Tabellenausdruck. *expression_name
   
  Wenn *CTE_query_definition* mehrfach definiert wurde, müssen die Abfragedefinitionen durch einen der folgenden Mengenoperatoren verbunden werden: UNION ALL, UNION, EXCEPT oder INTERSECT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>Richtlinien zum Erstellen und Verwenden allgemeiner Tabellenausdrücke  
 Die folgenden Richtlinien gelten für nicht rekursive allgemeine Tabellenausdrücke. Informationen zu Richtlinien für rekursive allgemeine Tabellenausdrücke finden Sie weiter unten im Abschnitt [Richtlinien zum Definieren und Verwenden rekursiver allgemeiner Tabellenausdrücke](#guidelines-for-defining-and-using-recursive-common-table-expressions).  

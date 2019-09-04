@@ -40,7 +40,7 @@ public java.lang.String getIdentifierQuoteString()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getIdentifierQuoteString-Methode wird von der getIdentifierQuoteString-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Bei Verwendung des JDBC-Treibers von [!INCLUDE[msCoName](../../../includes/msconame_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank werden von dieser Methode **doppelte** Anführungszeichen ("") zurückgegeben.  

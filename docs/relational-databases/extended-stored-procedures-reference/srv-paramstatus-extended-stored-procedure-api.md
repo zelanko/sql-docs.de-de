@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68005570"
@@ -57,7 +57,7 @@ n
 ## <a name="returns"></a>Rückgabewert  
  **int** mit Statusflags für den Parameter. Aktuell gibt es nur ein Flag: Wenn Bit 0 auf 1 festgelegt ist, handelt es sich bei dem Parameter um einen Rückgabeparameter. Wenn es keinen *n*-ten Parameter oder keine remote gespeicherte Prozedur gibt, wird -1 zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Routine gibt die Statusflags für einen Aufrufparameter einer remote gespeicherten Prozedur zurück.  
   
  Parameter enthalten die zwischen Clients und der Anwendung mit remote gespeicherten Prozeduren übergebenen Daten. Der Client kann bestimmte Parameter als Rückgabeparameter angeben. Diese Rückgabeparameter können Werte enthalten, die von der Anwendung wieder an den Client übergeben werden.  

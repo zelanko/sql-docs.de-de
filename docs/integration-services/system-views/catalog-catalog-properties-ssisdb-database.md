@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68038459"
 ---
-# <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB-Datenbank)
+# <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "68038459"
 |property_name|**nvarchar(256)**|Der Name der Katalogeigenschaft.|  
 |property_value|**nvarchar(256)**|Der Wert der Katalogeigenschaft.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Katalogeigenschaft angezeigt.
   
 |Eigenschaftsname|und Beschreibung|  

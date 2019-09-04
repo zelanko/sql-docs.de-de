@@ -32,7 +32,7 @@ RowNumber(scope)
  *Bereich*  
  (**Zeichenfolge**) Der Name eines Datasets, eines Datenbereichs, einer Gruppe oder NULL (**Nothing** in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), der den Kontext angibt, in dem die Zeilenanzahl ausgewertet wird. Durch**Nothing** wird der äußerste Kontext angegeben, normalerweise das Berichtsdataset.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Durch**RowNumber** wird ein wirksamer Wert der Zeilenanzahl innerhalb des festgelegten Bereichs zurückgegeben, ebenso wie von [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) der wirksame Wert einer Aggregatfunktion zurückgegeben wird. Wenn Sie einen Bereich angeben, geben Sie an, wann die Zeilenanzahl auf 1 zurückzusetzen ist.  
   
  *scope* darf kein Ausdruck sein. *scope* muss ein Gültigkeitsbereich sein. Typische Bereiche, von der äußersten bis zur innersten Einkapselung, sind Berichtsdataset, Datenbereich, Zeilengruppen oder Spaltengruppen.  

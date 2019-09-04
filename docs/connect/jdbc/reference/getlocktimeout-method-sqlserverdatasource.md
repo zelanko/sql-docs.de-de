@@ -37,7 +37,7 @@ public int getLockTimeout()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Typ **int** mit der Anzahl von Millisekunden, die die Datenbank warten wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Sperrtimeout ist die Anzahl von Millisekunden bis zur Meldung eines Sperrtimeouts durch die Datenbank. Der Standardwert -1 bedeutet, dass unbegrenzt gewartet wird. Wird dieser Wert angegeben, stellt er den Standardwert für alle Anweisungen der Verbindung dar.  
   
 > [!NOTE]  

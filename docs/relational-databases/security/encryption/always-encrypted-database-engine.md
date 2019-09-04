@@ -61,7 +61,7 @@ Der Server berechnet das Resultset, und für jede verschlüsselte Spalte im Resu
 
 Weitere Informationen zur Entwicklung von Anwendungen mit Always Encrypted mit bestimmten Clienttreibern finden Sie unter [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted (Cliententwicklung)).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die Entschlüsselung findet über den Client statt. Das bedeutet, dass einige Aktionen, die nur serverseitig auftreten, nicht funktionieren, wenn Always Encrypted verwendet wird. 
 

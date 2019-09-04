@@ -32,7 +32,7 @@ Es gibt verschiedene Möglichkeiten, um die Eigenschaften für die Verbindungsze
     datasource.setDatabaseName(value)  
     ```  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Bei den Namen von Eigenschaften wird Groß-/Kleinschreibung unterschieden. Doppelte Eigenschaftennamen werden in der folgenden Reihenfolge aufgelöst:  
   

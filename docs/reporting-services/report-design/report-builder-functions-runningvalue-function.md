@@ -41,7 +41,7 @@ RunningValue(expression, function, scope)
 ## <a name="return-type"></a>Rückgabetyp  
  Wird durch die im *function* -Parameter angegebene Aggregatfunktion bestimmt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert für **RunningValue** wird für jede neue Instanz des Bereichs auf 0 zurückgesetzt. Wenn eine Gruppe angegeben wird, wird der laufende Wert zurückgesetzt, wenn sich der Gruppenausdruck ändert. Wenn ein Datenbereich angegeben wird, wird der laufende Wert für jede neue Instanz des Datenbereichs zurückgesetzt. Wenn ein Dataset angegeben wird, wird der laufende Wert für das gesamte Dataset nicht zurückgesetzt.  
   
  **RunningValue** darf nicht in einem Filter- oder Sortierausdruck verwendet werden.  

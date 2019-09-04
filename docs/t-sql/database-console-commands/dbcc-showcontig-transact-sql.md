@@ -142,7 +142,7 @@ Wenn WITH TABLERESULTS und FAST angegeben sind, ist das Resultset dasselbe wie b
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die DBCC SHOWCONTIG-Anweisung durchläuft die Seitenkette des angegebenen Indexes auf Blattebene, wenn *index_id* angegeben wurde. Wenn nur *table_id* angegeben wurde oder wenn *index_id* den Wert 0 aufweist, werden die Datenseiten der angegebenen Tabelle gescannt. Dieser Vorgang erfordert nur eine beabsichtigte gemeinsame Tabellensperre (IS). Auf diese Weise können alle Updates und Einfügungen ausgeführt werden, außer jenen, die eine exklusive Tabellensperre (X) erfordern. Dies schafft einen Kompromiss zwischen der Ausführungsgeschwindigkeit ohne Verringerung der Parallelität und der Anzahl der zurückgegebenen Statistiken. Wenn der Befehl jedoch nur zum Messen der Fragmentierung verwendet wird, wird die Verwendung der WITH FAST-Option empfohlen, um eine optimale Leistung zu erreichen. Bei einem schnellen Scan werden die Seiten auf Blatt- oder Datenebene des Indexes nicht gelesen. Die Option WITH FAST gilt nicht für einen Heap.
   
 ## <a name="restrictions"></a>Restrictions  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Abrufen der Tabellen-ID mit OBJECT_ID und der Index-ID mit sys.indexes  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Abrufen der Tabellen-ID mit OBJECT_ID und der Index-ID mit sys.indexes  
 Im folgenden Beispiel werden `OBJECT_ID` und die `sys.indexes`-Katalogsicht verwendet, um die Tabellen-ID und die Index-ID für den `AK_Product_Name`-Index der `Production.Product`-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank abzurufen.
   
 ```sql  

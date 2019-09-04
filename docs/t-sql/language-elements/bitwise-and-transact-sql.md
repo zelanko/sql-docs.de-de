@@ -55,7 +55,7 @@ expression & expression
   
  **tinyint**, wenn die Eingabewerte vom Typ **tinyint** oder **bit** sind.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der bitweise **&** -Operator führt eine bitweise logische UND-Operation zwischen den beiden Ausdrücken durch und verwendet die entsprechenden Bits für beide Ausdrücke. Ein Ergebnisbit wird genau dann auf den Wert 1 festgelegt, wenn beide Bits (für das aktuell aufzulösende Bit) der Eingabeausdrücke den Wert 1 aufweisen. Andernfalls wird das entsprechende Bit im Ergebnis auf 0 festgelegt.  
   
  Wenn der linke und der rechte Ausdruck unterschiedliche ganzzahlige Datentypen aufweisen (beispielsweise ist der linke *expression*-Ausdruck vom Datentyp **smallint** und der rechte *expression*-Ausdruck von Datentyp **int**), wird das Argument mit dem kleineren Datentyp in den größeren Datentyp konvertiert. In diesem Fall wird **smallint**_expression_ in einen **int**-Typ konvertiert.  

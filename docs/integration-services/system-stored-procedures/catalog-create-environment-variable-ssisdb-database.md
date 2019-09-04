@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68023498"
 ---
-# <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB-Datenbank)
+# <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -84,7 +84,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit einer Umgebungsvariablen kann zur Ausführung eines Pakets einem Projektparameter oder Paketparameter effizient ein Wert zugewiesen werden. Umgebungsvariablen ermöglichen die Organisation von Parameterwerten. Variablennamen müssen innerhalb einer Umgebung eindeutig sein.  
   
  Die gespeicherte Prozedur überprüft den Datentyp der Variablen, um sicherzustellen, dass sie vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog unterstützt wird.  

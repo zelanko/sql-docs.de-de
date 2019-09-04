@@ -47,7 +47,7 @@ public void updateBoolean(int index,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updateboolean-Methode wird von der updateboolean-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

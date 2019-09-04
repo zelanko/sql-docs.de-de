@@ -49,7 +49,7 @@ Ein Array von Werten vom Typ **int** zum Angeben der Spaltenindizes der automati
 ## <a name="exceptions"></a>Ausnahmen
 [SQLServerException](./sqlserverexception-class.md)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Diese execute-Methode wird von der execute-Methode in der java.sql.Statement-Schnittstelle angegeben.
 
 ## <a name="see-also"></a>Weitere Informationen

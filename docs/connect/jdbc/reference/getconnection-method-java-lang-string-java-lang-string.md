@@ -50,7 +50,7 @@ public java.sql.Connection getConnection(java.lang.String username,
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getConnection-Methode wird von der getConnection-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  
   
  Wenn die getConnection-Methode mit einem Benutzernamen oder Kennwort ungleich NULL aufgerufen wird, werden die Benutzernamen-und Kenn Wort Eigenschaften ersetzt, die für die SQLServerDataSource-Klasse festgelegt werden, wenn das SQLServerConnection-Objekt initialisiert wird. Beispiel: Hat der Aufrufer [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) und [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) für die Datenquelle aufgerufen und ruft anschließend getConnection auf und gibt einen Benutzernamen und ein Kennwort ungleich NULL an, werden der Benutzername und das Kennwort, der bzw. das durch setUser und setPassword festgelegt sind, durch das an getConnection weitergegebene Kennwort ersetzt.  

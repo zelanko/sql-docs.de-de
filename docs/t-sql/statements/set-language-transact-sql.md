@@ -48,7 +48,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
  [**N**] **'** _language_ **'**  |  **@** _language\_var_  
  Der Name der in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) gespeicherten Sprache. Dieses Argument kann in Unicode oder in DBCS, das in Unicode konvertiert wurde, dargestellt sein. Um eine Sprache in Unicode anzugeben, verwenden Sie **N'** _language_ **'** . Wenn die Sprache als Variable angegeben wird, muss die Variable vom Typ **sysname** sein.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Einstellung von SET LANGUAGE wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
  SET LANGUAGE legt implizit die Einstellung von [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) fest.  

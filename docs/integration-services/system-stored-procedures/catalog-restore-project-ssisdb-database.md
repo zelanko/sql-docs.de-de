@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67897918"
 ---
-# <a name="catalogrestoreproject-ssisdb-database"></a>catalog.restore_project (SSISDB-Datenbank)
+# <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -71,7 +71,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn ein Projekt wiederhergestellt wird, werden allen Parametern Standardwerte zugewiesen, und alle Umgebungsverweise bleiben unverändert. Die maximale Anzahl von Projektversionen, die im Katalog beibehalten werden, wird durch die Katalogeigenschaft **MAX_VERSIONS_PER_PROJECT**bestimmt, wie in der [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) -Sicht gezeigt.  
   
 > [!WARNING]  

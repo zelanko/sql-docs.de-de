@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68067562"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
+# <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Gibt den Wert des angegebenen Schlüssels im aktuellen Sitzungskontext zurück. Der Wert wird mithilfe der [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)-Prozedur festgelegt.  
@@ -50,7 +50,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>Berechtigungen  
  Jeder Benutzer kann den Sitzungskontext für seine Sitzung lesen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das MARS-Verhalten von SESSION_CONTEXT ist dem von CONTEXT_INFO ähnlich. Wenn ein MARS-Batch ein Schlüssel-Wert-Paar festlegt, wird der neue Wert nicht in anderen MARS-Batches auf derselben Verbindung zurückgegeben, es sei denn, sie beginnen nach dem Batch, der den neuen Wert festgelegt hat. Wenn MARS-Batches auf einer Verbindung aktiv sind, können Werte nicht als „read_only“ festgelegt werden. Dadurch werden Racebedingungen und nicht deterministische Funktionen darüber vermieden, welcher Wert „gewinnt“.  
   
 ## <a name="examples"></a>Beispiele  

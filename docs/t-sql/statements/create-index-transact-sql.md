@@ -591,7 +591,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Die CREATE INDEX-Anweisung wird so optimiert wie jede andere Abfrage. Um weniger E/A-Vorgänge zu benötigen, entscheidet der Abfrageprozessor möglicherweise, einen anderen Index zu scannen, statt einen Tabellenscan auszuführen. Der Sortiervorgang wird in einigen Situationen möglicherweise umgangen. Auf einem Multiprozessorcomputer kann CREATE INDEX mehr Prozessoren verwenden, um die mit dem Erstellen des Index zusammenhängenden Scan- und Sortiervorgänge auszuführen. Dies geschieht in gleicher Weise wie für andere Abfragen. Weitere Informationen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 Der Indexerstellungsvorgang kann minimal protokolliert werden, wenn das Wiederherstellungsmodell der Datenbank auf die massenprotokollierte oder einfache Wiederherstellung festgelegt ist.

@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67934667"
 ---
-# <a name="catalogobjectversions-ssisdb-database"></a>catalog.object_versions (SSISDB-Datenbank)
+# <a name="catalogobject_versions-ssisdb-database"></a>catalog.object_versions (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -38,7 +38,7 @@ ms.locfileid: "67934667"
 |restored_by|**nvarchar(128)**|Der Name des Benutzers, der das Objekt wiederhergestellt hat.|  
 |last_restored_time|**datetimeoffset**|Datum und Uhrzeit, zu denen das Objekt zuletzt wiederhergestellt wurde.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Version eines Objekts im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -172,7 +172,7 @@ OBJECTPROPERTYEX ( id , property )
   
  Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. OBJECTPROPERTYEX, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] setzt voraus, dass sich *object_id* im aktuellen Datenbankkontext befindet. Eine Abfrage, die auf *object_id* in einer anderen Datenbank verweist, gibt NULL oder falsche Ergebnisse zurück. Beispielsweise ist der aktuelle Datenbankkontext in der folgenden Abfrage die Masterdatenbank. [!INCLUDE[ssDE](../../includes/ssde-md.md)] versucht, den Eigenschaftswert für den angegebenen Wert von *object_id* in dieser Datenbank statt in der Datenbank zurückzugeben, die in der Abfrage angegeben ist. Die Abfrage gibt falsche Ergebnisse zurück, da sich die `vEmployee`-Sicht nicht in der Masterdatenbank befindet.  
   
 ```  

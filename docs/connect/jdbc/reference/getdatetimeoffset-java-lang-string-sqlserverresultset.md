@@ -42,7 +42,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String columnName)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können einen [DateTimeOffset-Klassen](../../../connect/jdbc/reference/datetimeoffset-class.md) Wert mit [SQLServerResultSet. updatedatetimeoffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)aktualisieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -42,7 +42,7 @@ public void rollback(java.sql.Savepoint s)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Rollback-Methode wird von der Rollback-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Die Methode sollte nur bei deaktiviertem Modus für automatische Commits verwendet werden.  

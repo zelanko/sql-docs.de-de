@@ -74,7 +74,7 @@ Wenn `Pooling` Sie `No` in der Datei "Odbcinst. ini" auf festlegen, zwingt den T
 Pooling=No
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 - Unter Linux oder macOS werden alle Verbindungen in einem Pool zusammengefasst, wenn Pooling in der Datei "Odbcinst. ini" aktiviert ist. Dies bedeutet, dass die ConnectionPooling-Verbindungs Option keine Auswirkung hat. Um das Pooling zu deaktivieren, legen Sie in der Datei "Odbcinst. ini" Pooling = Nein fest, und laden Sie die Treiber erneut
   - unixodbc < = 2.3.4 (Linux und macOS) gibt möglicherweise keine ordnungsgemäßen Diagnoseinformationen zurück, wie z. b. Fehlermeldungen, Warnungen und informative Meldungen.
   - aus diesem Grund können sqlsrv-und PDO_SQLSRV-Treiber möglicherweise lange Daten (z. b. XML, Binary) nicht ordnungsgemäß als Zeichen folgen abrufen. Lange Daten können als Datenströme als Problem Umgehung abgerufen werden. Weitere Informationen finden Sie im folgenden Beispiel für sqlsrv.

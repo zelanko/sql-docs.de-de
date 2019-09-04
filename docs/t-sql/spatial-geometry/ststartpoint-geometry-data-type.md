@@ -43,7 +43,7 @@ Gibt den Ausgangspunkt einer **geometry** -Instanz zurück.
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STStartPoint()` entspricht [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (1).  
   
 ## <a name="examples"></a>Beispiele  

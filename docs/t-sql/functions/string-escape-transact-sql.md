@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67906858"
 ---
-# <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
+# <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
@@ -69,7 +69,7 @@ STRING_ESCAPE( text , type )
 |...|...|  
 |CHAR(31)|\u001f|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
   

@@ -41,7 +41,7 @@ public int DatabaseLogonType;
 ## <a name="example-code"></a>Beispielcode  
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Werte sind:  
   
 -   0 für Windows-Anmeldung  

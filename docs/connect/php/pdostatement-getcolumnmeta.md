@@ -35,7 +35,7 @@ array PDOStatement::getColumnMeta ( $column );
 ## <a name="return-value"></a>Rückgabewert  
 Ein assoziatives Array (Schlüssel und Wert), das die Metadaten für die Spalte enthält. Im Abschnitt „Anmerkungen“ finden Sie eine Beschreibung für die Felder im Array.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die folgende Tabelle beschreibt die Felder im durch „getColumnMeta“ zurückgegebenen Array.  
   
 |NAME|VALUES|  

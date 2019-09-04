@@ -47,7 +47,7 @@ public void setObject(java.lang.String sCol,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setObject-Methode wird von der setObject-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Von dieser Methode wird der spezifische Parameter vor dem Senden an die Datenbank in einen CHAR-Wert konvertiert, wenn ein NULL-Wert vorhanden ist. Ist der Parameter ein binary-, varbinary- oder image SQL-Typ, wird beim Ausführen der Anweisung eine Ausnahme ausgelöst.  

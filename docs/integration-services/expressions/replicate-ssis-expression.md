@@ -46,7 +46,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Falls *times* null ist, gibt die Funktion eine leere Zeichenfolge zurück.  
   
  Falls *times* eine negative Zahl ist, gibt die Funktion einen Fehler zurück.  

@@ -35,13 +35,13 @@ MONTH(date)
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Datum*  
+ *date*  
  Ein Datum in einem beliebigen Datumsformat.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  MONTH gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Ein Datumsliteral muss explizit in einen der date-Datentypen umgewandelt werden. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  

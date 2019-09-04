@@ -43,7 +43,7 @@ ON SERVER
  *event_session_name*  
  Ist der Name einer vorhandenen Ereignissitzung.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie eine Ereignissitzung löschen, werden alle Konfigurationsinformationen wie Ziele und Sitzungsparameter vollständig entfernt.  
   
 ## <a name="permissions"></a>Berechtigungen  

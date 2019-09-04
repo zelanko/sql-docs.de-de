@@ -178,7 +178,7 @@ column_name <data_type>
 |||||  
 |-|-|-|-|  
 |**bigint**|**binary(** *n* **)**|**bit**|**char(** *n* **)**|  
-|**Datum**|**datetime**|**datetime2**|**datetimeoffset**|  
+|**date**|**datetime**|**datetime2**|**datetimeoffset**|  
 |**decimal**|**float**|**image**|**int**|  
 |**money**|**nchar(** *n* **)**|**ntext**|**numeric**|  
 |**nvarchar(** *n* &#124; **max)**|**real**|**smalldatetime**|**smallint**|  
@@ -251,7 +251,7 @@ Gibt an, dass ein Index in der Tabelle erstellt werden soll. Dies kann ein grupp
   
  Gibt an, dass ein HASH-Index erstellt wird. Hashindizes werden nur für speicheroptimierte Tabellen unterstützt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Klasse der Assembly, auf die in *assembly_name* verwiesen wird, und ihre Methoden sollten alle Anforderungen zum Implementieren eines benutzerdefinierten Typs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfüllen. Weitere Informationen zu diesen Anforderungen finden Sie unter [CLR User-Defined Types (Benutzerdefinierte CLR-Typen)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
  Noch einige zusätzliche Überlegungen:  

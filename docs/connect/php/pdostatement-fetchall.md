@@ -39,7 +39,7 @@ $*ctor_args:* Ein Array der Parameter für einen Klassenkonstruktor, wenn für $
 ## <a name="return-value"></a>Rückgabewert  
 Ein Array der verbleibenden Zeilen im Resultset oder „false“ falls der Methodenaufruf fehlschlägt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  

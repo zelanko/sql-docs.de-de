@@ -32,7 +32,7 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 „closeCursor“ ist wirksam, wenn die Verbindungsoption MultipleActiveResultSets auf „false“ gesetzt ist.  Weitere Informationen über die Option „MultipleActiveResultSets“ finden Sie unter [Vorgehensweise: Deaktivieren von mehreren aktiven Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Statt „closeCursor“ aufzurufen, können Sie auch einfach das Anweisungshandle auf NULL setzen.  

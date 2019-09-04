@@ -40,7 +40,7 @@ public java.lang.String getCatalog()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getCatalog-Methode wird von der getCatalog-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Gibt die aktuelle Catalog-Eigenschaft des SQLServerConnection-Objekts zurück, oder NULL, wenn Sie nicht festgelegt ist. Die Katalogeigenschaft wird durch die [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md)-Methode eindeutig festgelegt oder durch Lesen der Umgebungsänderung für TDS für den aktuellen Katalog implizit aktualisiert.  

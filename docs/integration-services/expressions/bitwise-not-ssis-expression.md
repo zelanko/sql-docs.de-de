@@ -42,7 +42,7 @@ ms.locfileid: "68034001"
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt den Datentyp von *integer_expression*zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  None  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  

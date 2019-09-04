@@ -52,7 +52,7 @@ ALTER REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  Gibt an, ob die anonyme Authentifizierung bei der Kommunikation mit dem Remotedienst verwendet wird. Ist ANONYMOUS = ON, wird die anonyme Authentifizierung verwendet und die Anmeldeinformationen des lokalen Benutzers werden nicht an den Remotedienst übertragen. Ist ANONYMOUS = OFF, werden Benutzeranmeldeinformationen übertragen. Wird diese Klausel nicht angegeben, ist die Standardeinstellung OFF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der öffentliche Schlüssel des Zertifikats, das *user_name*zugeordnet ist, wird zur Authentifizierung von Nachrichten an den Remotedienst und zur Verschlüsselung eines Sitzungsschlüssels verwendet, der dann zur Verschlüsselung der Konversation verwendet wird. Das Zertifikat für *user_name* muss dem Zertifikat für eine Anmeldung in der Datenbank entsprechen, die als Host für den Remotedienst dient.  
   
 ## <a name="permissions"></a>Berechtigungen  

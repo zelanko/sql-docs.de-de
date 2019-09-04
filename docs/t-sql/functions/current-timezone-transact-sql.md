@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026391"
 ---
-# <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
+# <a name="current_timezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
@@ -54,7 +54,7 @@ Diese Funktion akzeptiert keine Argumente.
 
 **varchar**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 `CURRENT_TIMEZONE` ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die auf diese Spalte verweisen, können nicht indiziert werden.
   

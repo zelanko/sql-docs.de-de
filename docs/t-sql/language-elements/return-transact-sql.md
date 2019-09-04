@@ -55,7 +55,7 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  Sofern nicht anders angegeben, geben alle gespeicherten Systemprozeduren den Wert 0 zurück. Dieser Wert zeigt einen erfolgreichen Verlauf an. Ein Wert ungleich 0 zeigt einen Fehler an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie RETURN in einer gespeicherten Prozedur verwenden, kann RETURN keinen NULL-Wert zurückgeben. Falls eine Prozedur versucht, einen NULL-Wert zurückzugeben (z. B. wenn RETURN @status verwendet wird, und @status den Wert NULL hat), wird eine Warnmeldung generiert und der Wert 0 zurückgegeben.  
   
  Der Rückgabestatuswert kann in nachfolgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen des Batches oder der Prozedur verwendet werden, von der die aktuelle Prozedur ausgeführt wurde, der Aufruf muss jedoch in der folgenden Form eingegeben werden: `EXECUTE @return_status = <procedure_name>`.  

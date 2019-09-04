@@ -45,7 +45,7 @@ public java.sql.Array getArray(java.lang.String sCol)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getArray-Methode wird von der getArray-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

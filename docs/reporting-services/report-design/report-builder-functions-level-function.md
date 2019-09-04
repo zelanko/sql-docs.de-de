@@ -35,7 +35,7 @@ Level(scope)
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt einen Wert vom Typ **Integer**zurück. Wenn *scope* ein Dataset, einen Datenbereich oder eine nicht rekursive Gruppierung angibt (d.h. eine Gruppierung ohne **Parent** -Element), gibt **Level** den Wert 0 zurück. Wenn *scope* weggelassen wird, wird die Ebene des aktuellen Bereichs zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der von der **Level** -Funktion zurückgegebene Wert ist nullbasiert, d. h., die erste Ebene in einer Hierarchie hat den Wert 0.  
   
  Die **Level** -Funktion kann verwendet werden, um den Einzug in einer rekursiven Hierarchie, z. B. einer Mitarbeiterliste, bereitzustellen.  

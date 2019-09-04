@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67897840"
 ---
-# <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB-Datenbank)
+# <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -70,7 +70,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  Der Wert des Parameters. Der *parameter_value* ist **sql_variant**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Um die Parameterwerte zu ermitteln, die für eine bestimmte Ausführung verwendet wurden, fragen Sie die catalog.execution_parameter_values-Sicht ab.  
   
  Um den Umfang der Informationen anzugeben, die während einer Paketausführung protokolliert werden, legen Sie *parameter_name* auf LOGGING_LEVEL und *parameter_value* auf einen der folgenden Werte fest.  

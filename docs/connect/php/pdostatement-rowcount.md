@@ -32,7 +32,7 @@ int PDOStatement::rowCount ();
 ## <a name="return-value"></a>Rückgabewert  
 Die Anzahl der hinzugefügten, gelöschten oder geänderten Zeilen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Falls die letzte SQL-Anweisung, die durch die zugeordnete PDO-Anweisung ausgeführt wurde, eine SELECT-Anweisung war, gibt ein PDO::CURSOR_FWDONLY-Cursor den Wert -1 zurück. A PDO::CURSOR_SCROLLABLE -Cursor gibt die Anzahl der Zeilen in dem Resultset zurück.  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  

@@ -45,7 +45,7 @@ ms.locfileid: "67898000"
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn SET STATISTICS TIME auf ON festgelegt ist, wird die Zeitstatistik für eine Anweisung angezeigt. Bei OFF wird die Zeitstatistik nicht angezeigt.  
   
  Die Einstellung von SET STATISTICS TIME wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  

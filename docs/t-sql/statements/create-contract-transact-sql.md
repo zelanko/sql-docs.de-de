@@ -75,7 +75,7 @@ CREATE CONTRACT contract_name
  [DEFAULT]  
  Gibt an, dass dieser Vertrag Nachrichten vom Standardnachrichtentyp unterstützt. Standardmäßig enthalten alle Datenbanken einen Nachrichtentyp namens DEFAULT. Dieser Nachrichtentyp verwendet NONE für die Überprüfung. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Microsoft SQL Server stellt auch einen DEFAULT-Vertrag bereit, der den Nachrichtentyp DEFAULT angibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Reihenfolge von Nachrichtentypen im Vertrag ist nicht von Bedeutung. Nachdem das Ziel die erste Nachricht erhalten hat, ermöglicht [!INCLUDE[ssSB](../../includes/sssb-md.md)] beiden Seiten der Konversation, zu jeder Zeit Nachrichten zu senden, die für die jeweilige Konversationsseite zulässig sind. Kann der Initiator der Konversation beispielsweise den Nachrichtentyp **//Adventure-Works.com/Expenses/SubmitExpense** senden, ermöglicht [!INCLUDE[ssSB](../../includes/sssb-md.md)] dem Initiator das Senden beliebig vieler **SubmitExpense**-Nachrichten zu jeder Zeit im Verlauf der Konversation.  
   
  Die Nachrichtentypen und -richtungen in einem Vertrag können nicht geändert werden. Verwenden Sie die ALTER AUTHORIZATION-Anweisung, wenn Sie den Wert von AUTHORIZATION für einen Vertrag ändern möchten.  

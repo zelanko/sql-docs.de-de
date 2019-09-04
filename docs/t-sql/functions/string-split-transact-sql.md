@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67906830"
 ---
-# <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
+# <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -57,7 +57,7 @@ STRING_SPLIT ( string , separator )
 
 Gibt eine einspaltige Tabelle zurück, deren Zeilen die Teilzeichenfolgen sind. Der Name der Spalte ist **value**. Gibt **nvarchar** zurück, wenn eines der Eingabeargumente entweder **nvarchar** oder **nchar** ist, andernfalls wird **varchar** zurückgegeben. Die Länge des Rückgabetyps unterscheidet sich nicht von der Länge des Zeichenfolgenarguments.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 **STRING_SPLIT** gibt eine Zeichenfolge mit getrennten Teilzeichenfolgen und ein Zeichen ein, das als Trennzeichen oder Trennlinie verwendet werden kann. STRING_SPLIT gibt eine einspaltige Tabelle aus, deren Zeilen die Teilzeichenfolgen enthalten. Der Name der Ausgabespalte ist **value**.
 

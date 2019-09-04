@@ -69,7 +69,7 @@ Der Rückgabetyp hängt vom ersten Argument (Ausdruck) ab. Wenn das Eingabeargum
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2 |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Bei `STRING_AGG` handelt es sich um eine Aggregatfunktion, die alle Ausdrücke aus Zeilen zu einer einzelnen Zeichenfolge verkettet. Ausdruckswerte werden implizit in Zeichenfolgentypen konvertiert und dann verkettet. Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu Datentypkonvertierungen finden Sie unter [CAST und CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 

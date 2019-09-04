@@ -65,7 +65,7 @@ public boolean deletesAreDetected(int type)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode "Delta Type" wird von der Methode "Delta Reader" in der Schnittstelle "java. SQL. DatabaseMetaData" angegeben.  
   
 > [!NOTE]  

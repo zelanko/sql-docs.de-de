@@ -25,7 +25,7 @@ JDBC Driver bietet Unterstützung für die JDBC 4.0-API, in der die java.sql.SQ
   
 Die SQLXML-Schnittstelle stellt Methoden für den Zugriff auf den XML-Wert als **Zeichen**Folge, als **Reader** oder **Writer**oder als **Stream**bereit. Der Zugriff auf den XML-Wert ist auch über eine **Quelle** möglich, und er kann als **Ergebnis** festgelegt werden. Diese werden mit XML-Parser-APIs wie DOM (Document Object Model), SAX (Simple API for XML) und StAX (Streaming API for XML) sowie mit XSLT-Transformationen und XPath verwendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 In der folgenden Tabelle werden die in der SQLXML-Schnittstelle definierten Methoden beschrieben:  
   
