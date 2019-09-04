@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
+ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "68032294"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154572"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Ausführen einer Failoverclusterinstanz – SQL Server unter Linux
 
@@ -30,10 +30,10 @@ Gelegentlich kann es vorkommen, dass Sie für die FCI manuell ein Failover zu ei
 
 Die Art und Weise, wie ein Failover ausgeführt wird, hängt von der Linux-Distribution ab. Gehen Sie entsprechend den die Anweisungen für Ihre Linux-Distribution vor.
 
-- [RHEL oder Ubuntu](#-manual-failover-rhel-or-ubuntu)
-- [SLES](#-manual-failover-sles)
+- [RHEL oder Ubuntu](#manual-failover-rhel-or-ubuntu)
+- [SLES](#manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Manuelles Failover (RHEL oder Ubuntu)
+## <a name="manual-failover-rhel-or-ubuntu"></a>Manuelles Failover (RHEL oder Ubuntu)
 
 Um ein manuelles Failover auszuführen, führen Sie auf einem RHEL- (Red Hat Enterprise Linux) oder Ubuntu-Server die folgenden Schritte aus.
 1.  Führen Sie den folgenden Befehl aus: 
@@ -54,7 +54,7 @@ Um ein manuelles Failover auszuführen, führen Sie auf einem RHEL- (Red Hat Ent
 
 \<FCIResourceName> ist der Pacemaker-Ressourcenname für die FCI. 
 
-## <a name = "#-manual-failover-sles"></a> Manuelles Failover (SLES)
+## <a name="manual-failover-sles"></a>Manuelles Failover (SLES)
 
 
 Verwenden Sie in SuSE Linux Enterprise Server (SLES) den `migrate`-Befehl, um ein manuelles Failover zu einer SQL Server-FCI auszuführen. Beispiel:

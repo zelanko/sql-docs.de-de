@@ -10,12 +10,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136494"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155691"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ Insbesondere, wenn eine Abfrage Gleichheitsprädikate enthält, die eine Teilmen
   
 **Problemumgehung:** Sofern Sie Hashindizes verwenden, sollten Sie die Abfragen und Abfragepläne daraufhin überprüfen, ob die Abfragen von Index Seek-Vorgängen für eine Teilmenge des Indexschlüssels oder für Ungleichheitsprädikate profitieren könnten. Wenn Sie eine Suche für eine Teilmenge des Indexschlüssels ausführen müssen, verwenden Sie einen NONCLUSTERED-Index. Alternativ verwenden Sie einen HASH-Index für exakt die Spalten, in denen gesucht werden soll. Wenn eine Suche für ein Ungleichheitsprädikat ausgeführt werden muss, verwenden Sie einen NONCLUSTERED-Index anstelle eines HASH-Indexes.  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Bei Verwendung einer speicheroptimierten Tabelle und einer speicheroptimierten Tabellenvariablen in derselben Abfrage tritt ein Fehler auf, wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt ist.  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>Bei Verwendung einer speicheroptimierten Tabelle und einer speicheroptimierten Tabellenvariablen in derselben Abfrage tritt ein Fehler auf, wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt ist.  
 **Problem:** Wenn die Datenbankoption „READ_COMMITTED_SNAPSHOT“ auf „ON“ festgelegt ist und Sie sowohl auf eine speicheroptimierte Tabelle als auch auf eine speicheroptimierte Tabellenvariable in derselben Anweisung außerhalb des Kontexts einer Benutzertransaktion zugreifen, kann folgende Fehlermeldung ausgegeben werden:  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **Problemumgehung:** Keine. Bei Abfragen in systemintern kompilierten gespeicherten Prozeduren, die über eine kurze Ausführungsdauer verfügen, sollten Sie sich nicht auf den in den DMVs zu Ausführungsstatistiken angegebenen worker_time-Wert verlassen.  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>SHOWPLAN_XML-Fehler bei nativ kompilierten gespeicherten Prozeduren mit langen Ausdrücken  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>SHOWPLAN_XML-Fehler bei nativ kompilierten gespeicherten Prozeduren mit langen Ausdrücken  
 **Problem:** Wenn eine systemintern kompilierte gespeicherte Prozedur einen langen Ausdruck enthält und Sie „SHOWPLAN_XML“ für die Prozedur entweder mit der T-SQL-Option „SET SHOWPLAN_XML ON“ oder mit der Option „Geschätzten Ausführungsplan anzeigen“ in Management Studio abrufen, kann folgender Fehler auftreten:  
   
 ```  
@@ -334,10 +334,10 @@ Weitere Informationen finden Sie unter [Tipps &amp; Tricks und Problembehandlung
   
 Weitere Informationen finden Sie unter [Tipps, Tricks und Problembehandlung für SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM auf Microsoft Azure Virtual Machines  
+### <a name="AzureVM"></a>SQL Server 2014 RTM auf Azure Virtual Machines  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>Der Assistent zum Hinzufügen von Azure-Replikaten gibt beim Konfigurieren eines Verfügbarkeitsgruppenlisteners in Windows Azure einen Fehler zurück.  
-**Problem:** Wenn eine Verfügbarkeitsgruppe über einen Listener verfügt, gibt der Assistent zum Hinzufügen von Azure-Replikaten beim Versuch, den Listener in Microsoft Azure zu konfigurieren, einen Fehler zurück.  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Der Assistent zum Hinzufügen von Azure-Replikaten gibt beim Konfigurieren eines Verfügbarkeitsgruppenlisteners in Azure einen Fehler zurück.  
+**Problem:** Wenn eine Verfügbarkeitsgruppe über einen Listener verfügt, gibt der Assistent zum Hinzufügen von Azure-Replikaten beim Versuch, den Listener in Azure zu konfigurieren, einen Fehler zurück.  
   
 Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Subnetz, das Verfügbarkeitsgruppenreplikate hostet, eine IP-Adresse zugewiesen werden muss. Dies gilt auch für das Azure-Subnetz.  
   
@@ -345,9 +345,9 @@ Grund für dieses Problem ist, dass Verfügbarkeitsgruppenlistenern in jedem Sub
   
 1.  Weisen Sie dem Verfügbarkeitsgruppenlistener auf der Seite Listener eine freie statische IP-Adresse im Azure-Subnetz zu, das das Verfügbarkeitsgruppenreplikat hostet.  
   
-    Durch diese Problemumgehung kann der Assistent das Replikat in Windows Azure endgültig hinzufügen.  
+    Durch diese Problemumgehung kann der Assistent das Replikat in Azure endgültig hinzufügen.  
   
-2.  Nachdem der Assistent beendet ist, müssen Sie die Konfiguration des Listeners in Windows Azure, wie in [Listener-Konfiguration für AlwaysOn-Verfügbarkeitsgruppen in Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx)beschrieben, abschließen.  
+2.  Nachdem der Assistent beendet ist, müssen Sie die Konfiguration des Listeners in Azure, wie in [Listenerkonfiguration für AlwaysOn-Verfügbarkeitsgruppen in Azure](https://msdn.microsoft.com/library/dn376546.aspx) beschrieben, abschließen.  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   

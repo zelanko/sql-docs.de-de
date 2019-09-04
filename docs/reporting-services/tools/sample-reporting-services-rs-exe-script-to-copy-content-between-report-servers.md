@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 716768027c855b86a0cffdee4bf64c5d1c66badd
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686708"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176288"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Reporting Services-Beispielskript für "rs.exe" zum Migrieren von Inhalten zwischen Berichtsservern
 
@@ -253,26 +253,26 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> Einheitlicher Modus zu einheitlichem Modus – Virtueller Windows Azure-Computer  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> Einheitlicher Modus zu einheitlichem Modus – virtueller Azure-Computer  
  Im folgenden Beispiel werden Inhalte wie folgt migriert:  
   
 -   Von einem Berichtsserver im einheitlichen Modus ( **SourceServer**).  
   
--   Zu einem Berichtsserver im einheitlichen Modus ( **TargetServer** ), der auf einem virtuellen Windows Azure-Computer ausgeführt wird. **TargetServer** wird nicht der Domäne von **SourceServer** hinzugefügt, und **User2** ist ein Administrator auf dem virtuellen Microsoft Azure-Computer **TargetServer**.  
+-   Zu einem Berichtsserver im einheitlichen Modus (**TargetServer**), der auf einem virtuellen Azure-Computer ausgeführt wird. Der **TargetServer** wird nicht in die Domäne von **SourceServer** eingebunden, und **User2** ist Administrator auf dem virtuellen Azure-Computer **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
-> Weitere Informationen zum Erstellen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsservern auf virtuellen Windows Azure-Computern mit Windows PowerShell finden Sie unter [Verwenden von PowerShell zum Erstellen einer Windows Azure-VM mit einem Berichtsserver im einheitlichen Modus](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
+> Informationen zum Erstellen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsservern auf virtuellen Azure-Computern mit Windows PowerShell finden Sie unter [Verwenden von PowerShell zum Erstellen einer Azure-VM mit einem Berichtsserver im einheitlichen Modus](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report).  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint-Modus – „bi“-Websitesammlung zu Server im einheitlichen Modus auf virtuellem Windows Azure-Computer. 
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint-Modus – „bi“-Websitesammlung zu einem Server im einheitlichen Modus auf einem virtuellen Azure-Computer 
  Im folgenden Beispiel werden Inhalte wie folgt migriert:  
   
 -   Von einem Berichtsserver im SharePoint-Modus ( **SourceServer** ), der eine Websitesammlung „sites/bi“ und eine freigegebene Dokumentbibliothek enthält.  
   
--   Zu einem Berichtsserver im einheitlichen Modus ( **TargetServer** ), der auf einem virtuellen Windows Azure-Computer ausgeführt wird. **TargetServer** wird nicht der Domäne von **SourceServer** hinzugefügt, und **User2** ist ein Administrator auf dem virtuellen Microsoft Azure-Computer **TargetServer**.  
+-   Zu einem Berichtsserver im einheitlichen Modus (**TargetServer**), der auf einem virtuellen Azure-Computer ausgeführt wird. Der **TargetServer** wird nicht in die Domäne von **SourceServer** eingebunden, und **User2** ist Administrator auf dem virtuellen Azure-Computer **TargetServer**.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  

@@ -1,7 +1,7 @@
 ---
 title: Aktivieren von TDE in SQL Server mithilfe von EKM | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/15/2016
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: aliceku
 ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74aab68265e094946cde81bb11b2a09b655fe8fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 309496c17693ca42ea7ecd8a029547f6d821254a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049920"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148800"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Aktivieren von TDE in SQL Server mithilfe von EKM
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dieser Artikel beschreibt, wie Transparent Data Encryption (TDE) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aktiviert wird, um einen Datenbankverschlüsselungsschlüssel mit einem asymmetrischen Schlüssel zu schützen, der in einem erweiterbaren Schlüsselverwaltungsmodul mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] gespeichert wird.  
   
  TDE verschlüsselt den Speicher einer ganze Datenbank mithilfe dieses symmetrischen Schlüssels, der als Verschlüsselungsschlüssel für die Datenbank bezeichnet wird. Der Verschlüsselungsschlüssel für die Datenbank kann auch mithilfe eines Zertifikats geschützt werden, das mit dem Datenbankhauptschlüssel der Masterdatenbank geschützt wird. Weitere Informationen über das Schützen des Verschlüsselungsschlüssels für die Datenbank mit dem Datenbank-Hauptschlüssel finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Informationen zum Konfigurieren von TDE, wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf einem virtuellen Azure-Computer ausgeführt wird, finden Sie unter [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Informationen zum Konfigurieren von TDE mithilfe eines Schlüssels im Azure-Schlüsseltresor finden Sie unter [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
@@ -36,9 +35,9 @@ ms.locfileid: "68049920"
   
 -   Sie müssen ein Benutzer mit hohen Privilegien (z.&#160;B. ein Systemadministrator) sein, um einen Verschlüsselungsschlüssel für die Datenbank erstellen und eine Datenbank verschlüsseln zu können. Dieser Benutzer muss vom EKM-Modul authentifiziert werden können.  
   
--   Beim Starten muss [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Datenbank öffnen. Dafür sollten Sie Anmeldeinformationen erstellen, die vom EKM authentifiziert werden, und sie einer Anmeldung hinzufügen, die auf einem asymmetrischen Schlüssel basiert. Benutzer können sich mit dieser Anmeldung nicht anmelden. Allerdings kann sich [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auf dem Gerät zur erweiterten Schlüsselverwaltung selbst authentifizieren.  
+-   Beim Starten muss [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Datenbank öffnen. Dafür sollten Sie Anmeldeinformationen erstellen, die vom EKM authentifiziert werden, und sie einer Anmeldung hinzufügen, die auf einem asymmetrischen Schlüssel basiert. Benutzer können sich mit dieser Anmeldung nicht anmelden. Allerdings kann sich [!INCLUDE[ssDE](../../../includes/ssde-md.md)] beim EKM-Gerät selbst authentifizieren.  
   
--   Wenn der im EKM-Modul gespeicherte asymmetrische Schlüssel verloren geht, kann die Datenbank nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]geöffnet werden. Wenn der Anbieter für erweiterbare Schlüsselverwaltung eine Sicherung des asymmetrischen Schlüssels erlaubt, sollten Sie eine Sicherung erstellen und diese an einem sicheren Ort aufbewahren.  
+-   Wenn der im EKM-Modul gespeicherte asymmetrische Schlüssel verloren geht, kann die Datenbank nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]geöffnet werden. Wenn der EKM-Anbieter eine Sicherung des asymmetrischen Schlüssels erlaubt, sollten Sie eine Sicherung erstellen und diese an einem sicheren Ort aufbewahren.  
   
 -   Die für Ihren EKM-Anbieter erforderlichen Optionen und Parameter können sich von denen im unten angegebenen Codebeispiel unterscheiden. Weitere Informationen erhalten Sie vom Anbieter für erweiterbare Schlüsselverwaltung.  
   

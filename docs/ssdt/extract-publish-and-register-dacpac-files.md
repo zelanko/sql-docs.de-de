@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912805"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154800"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extrahieren, Veröffentlichen und Registrieren von DACPAC-Dateien
 In diesem Thema werden vier Vorgehensweisen beschrieben, die Sie durchführen können, indem Sie im SQL Server-Objekt-Explorer mit der rechten Maustaste auf eine verbundene Datenbank klicken:  
@@ -50,7 +50,7 @@ Wenn das Kontrollkästchen **Als Datenschichtanwendung registrieren** aktiviert 
 Zusätzliche Konfigurationseinstellungen für die Veröffentlichung sind im Dialogfeld **Erweiterte Veröffentlichungseinstellungen** enthalten, das Sie durch Klicken auf die Schaltfläche **Erweitert** aufrufen können.  
   
 ## <a name="extract-data-tier-application"></a>Datenebenenanwendung extrahieren  
-Sie können eine DACPAC-Datei aus einer Datenbank extrahieren. Durch das Extrahieren wird eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder Microsoft Azure SQL-Livedatenbank erstellt, die zusätzlich zum Datenbankschema Daten aus Benutzertabellen enthalten kann.  
+Sie können eine DACPAC-Datei aus einer Datenbank extrahieren. Durch das Extrahieren wird eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder Azure SQL-Livedatenbank erstellt, die zusätzlich zum Datenbankschema Daten aus Benutzertabellen enthalten kann.  
   
 Geben Sie die zu erstellende DACPAC-Datei an. Über die Schaltfläche **DAC-Eigenschaften** wird das Dialogfeld **DAC-Eigenschaften** angezeigt, in dem Sie Eigenschaften der DACPAC-Datei festlegen können.  
   

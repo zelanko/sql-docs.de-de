@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67c7ab63fcc152778add51725e5962028651345b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136517"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155699"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Anmerkungen zu dieser Version von SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -225,11 +225,11 @@ Früher wurde der Zustand von CHECK-Einschränkungen (WITH CHECK/NOCHECK), der f
   
 **Updates auf „SqlPackage.exe“ (DACFx-Befehlszeilentool)**  
   
--   Extrahieren einer DACPAC-Datei mit Daten: Erstellt eine Datenbank-Momentaufnahmedatei (DACPAC) von einer SQL Server- oder Microsoft Azure SQL-Livedatenbank, die zusätzlich zum Datenbankschema Daten aus Benutzertabellen enthält. Diese Pakete können mithilfe der Veröffentlichungsaktion von SqlPackage.exe auf einer neuen oder bestehenden SQL Server- oder Windows Azure SQL-Datenbank veröffentlicht werden. Die im Paket enthaltenen Daten ersetzen die bestehenden Daten in der Zieldatenbank.  
+-   Extrahieren einer DACPAC-Datei mit Daten: erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder Azure SQL-Livedatenbank, die zusätzlich zum Datenbankschema Daten aus Benutzertabellen enthält. Diese Pakete können mithilfe der Veröffentlichungsaktion „SqlPackage.exe“ auf einer neuen oder bestehenden SQL Server- oder Azure SQL-Datenbank veröffentlicht werden. Die im Paket enthaltenen Daten ersetzen die bestehenden Daten in der Zieldatenbank.  
   
--   Exportieren einer BACPAC-Datei: Erstellt eine logische Sicherungsdatei (.bacpac) einer SQL Server- oder Windows Azure SQL-Livedatenbank, die das Datenbankschema und die Benutzerdaten enthält. Diese können verwendet werden, um eine Datenbank von einer lokalen SQL Server-Datenbank zu einer Windows Azure SQL-Datenbank zu migrieren. Mit Azure kompatible Datenbanken können exportiert und später zwischen unterstützten Versionen von SQL Server importiert werden.  
+-   Exportieren einer BACPAC-Datei: erstellt eine logische Sicherungsdatei (BACPAC) einer SQL Server- oder Azure SQL-Livedatenbank, die das Datenbankschema und die Benutzerdaten enthält. Diese können verwendet werden, um eine Datenbank von einer lokalen SQL Server-Datenbank zu einer Azure SQL-Datenbank zu migrieren. Mit Azure kompatible Datenbanken können exportiert und später zwischen unterstützten Versionen von SQL Server importiert werden.  
   
--   Importieren einer BACPAC-Datei: Importiert eine BACPAC-Datei, um eine neue SQL Server- oder Microsoft Azure SQL-Datenbank zu erstellen bzw. eine leere Datenbank mit Daten aufzufüllen.  
+-   Importieren einer BACPAC-Datei: importiert eine BACPAC-Datei, um eine neue SQL Server- oder Azure SQL-Datenbank zu erstellen bzw. eine leere Datenbank mit Daten aufzufüllen.  
   
 Eine vollständige Dokumentation zu SqlPackage.exe auf MSDN finden Sie [hier](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

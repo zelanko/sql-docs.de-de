@@ -13,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136580"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148297"
 ---
 # <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,18 +59,19 @@ ms.locfileid: "68136580"
  Nachdem an den Tabellen oder Daten, auf die die Prozedur verweist, umfangreichere Änderungen vorgenommen wurden, wird die Prozedur aufgrund des vorkompilierten Plans möglicherweise langsamer ausgeführt. In diesem Fall kann die Leistung durch eine Neukompilierung der Prozedur und eine erzwungene Neuerstellung des Ausführungsplans verbessert werden.  
   
 ## <a name="types-of-stored-procedures"></a>Typen von gespeicherten Prozeduren  
- Benutzerdefinierte Dateigruppe  
+
+ **Benutzerdefiniert**  
  Eine benutzerdefinierte Prozedur kann in einer benutzerdefinierten Datenbank sowie in allen Systemdatenbanken außer der **Ressourcendatenbank** erstellt werden. Die Prozedur kann entweder in [!INCLUDE[tsql](../../includes/tsql-md.md)] oder als Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime) entwickelt werden.  
   
- Temporäre Prozeduren  
+ **Temporär**  
  Temporäre Prozeduren stellen eine Art benutzerdefinierter Prozedur dar. Temporäre Prozeduren verhalten sich wie dauerhafte Prozeduren, mit der Ausnahme, dass temporäre Prozeduren in **tempdb**gespeichert werden. Es gibt zwei Arten von temporären Prozeduren: lokale und globale temporäre Prozeduren. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Die Namen lokaler temporärer Prozeduren beginnen mit einem einzelnen Nummernzeichen (#). Sie sind nur im Rahmen der aktuellen Benutzerverbindung sichtbar und werden gelöscht, sobald die Verbindung getrennt wird. Die Namen globaler temporärer Prozeduren beginnen mit zwei Nummernzeichen (##). Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar und werden am Ende der letzten Sitzung, in der die Prozedur verwendet wird, gelöscht.  
   
- System  
+ **System**  
  Systemprozeduren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten. Sie werden physisch in der internen, ausgeblendeten **Ressourcendatenbank** gespeichert und logisch im **sys** -Schema jeder system- und benutzerdefinierten Datenbank angezeigt. Außerdem verfügt die **msdb-Datenbank** über gespeicherte Systemprozeduren im **dbo** -Schema, die zum Planen von Warnungen und Aufträgen verwendet werden. Da Systemprozeduren mit dem Präfix **sp_** beginnen, wird davon abgeraten, dieses Präfix beim Benennen benutzerdefinierter Prozeduren zu verwenden. Eine vollständige Liste der systemgespeicherten Prozeduren finden Sie unter [Systemgespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Systemprozeduren, die eine Schnittstelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu externen Programmen für verschiedene Wartungsaktivitäten bereitstellen. Diese erweiterten Prozeduren verwenden das Präfix xp_. Eine vollständige Liste der erweiterten Prozeduren finden Sie unter [Gespeicherte allgemeine erweiterte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
- Erweiterte benutzerdefinierte Prozeduren  
+ **Erweitert benutzerdefiniert**  
  Mit erweiterten gespeicherten Prozeduren können externe Routinen in einer Programmiersprache wie C erstellt werden. Diese Prozeduren sind DLLs, die von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamisch geladen und ausgeführt werden können.  
   
 > [!NOTE]  
@@ -94,6 +95,6 @@ ms.locfileid: "68136580"
 |Beschreibt, wie Parameter in einer gespeicherten Prozedur verwendet werden.|[Parameter](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [CLR-gespeicherte Prozeduren](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [CLR-gespeicherte Prozeduren](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [Verzögerte Namensauflösung](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   

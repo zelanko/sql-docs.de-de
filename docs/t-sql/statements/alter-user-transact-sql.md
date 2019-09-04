@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f15ddbb8a8a58fad194750ad88f36b397aba1d22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae71b89e4dff780e8d01aa137b020665a9c8602
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67911763"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155647"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +114,7 @@ ALTER USER userName
  LOGIN **=** _loginName_  
  Ordnet einen Benutzer einer anderen Anmeldung neu zu. Dazu wird die Sicherheits-ID (SID) des Benutzers in die SID der Anmeldung geändert.  
   
- Wenn ALTER USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Windows Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn ALTER USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.  
+ Wenn ALTER USER die einzige Anweisung in einem SQL-Batch ist, unterstützt Azure SQL-Datenbank die WITH LOGIN-Klausel. Wenn ALTER USER nicht die einzige Anweisung in einem SQL-Batch ist oder in dynamischem SQL-Code ausgeführt wird, wird die WITH LOGIN-Klausel nicht unterstützt.  
   
  NAME **=** _newUserName_  
  Gibt den neuen Namen für diesen Benutzer an. *newUserName* darf in der aktuellen Datenbank noch nicht vorhanden sein.  

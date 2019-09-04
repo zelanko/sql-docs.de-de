@@ -1,7 +1,7 @@
 ---
 title: SQL Server-Connector – Wartung &amp; Problembehandlung | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/05/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140701"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148787"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server-Connector – Wartung &amp; Problembehandlung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "68140701"
   
 ### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>Upgrade des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors  
 
-Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Die Versionen 1.0.1.0 und neuer werden in Produktionsumgebungen unterstützt. Richten Sie sich nach den folgenden Anweisungen, um ein Upgrade auf die neueste im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344)verfügbare Version auszuführen.
+Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Die Versionen 1.0.1.0 und neuer werden in Produktionsumgebungen unterstützt. Richten Sie sich nach den folgenden Anweisungen, um ein Upgrade auf die neueste im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) verfügbare Version auszuführen.
 
 Wenn Sie aktuell Version 1.0.1.0 oder höher verwenden, führen Sie diese Schritte aus, um auf die neueste Version des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors zu aktualisieren. Durch diese Anweisungen entfällt der ansonsten erforderliche Neustart der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz.
  
@@ -138,11 +138,12 @@ Wenn Sie aktuell Version 1.0.0.440 oder älter verwenden, führen Sie diese Schr
 8.  Nachdem Sie bestätigt haben, dass das Update funktioniert, können Sie den alten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectorordner löschen (wenn Sie sich in Schritt 3 dazu entschlossen haben, ihn umzubenennen statt zu deinstallieren).  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Ändern des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstprinzipals  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet in Azure Active Directory erstellte Dienstprinzipale als Anmeldeinformationen zum Zugriff auf den Schlüsseltresor.  Der Dienstprinzipal verfügt über eine Client-ID und einen Authentifizierungsschlüssel.  Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen werden der **VaultName**, die **Client-ID**und der **Authentifizierungsschlüssel**festgelegt.  Der **Authentifizierungsschlüssel** ist für einen bestimmten Zeitraum (1 oder 2 Jahre) gültig.   Vor Ablauf des Zeitraums muss für den Dienstprinzipal ein neuer Schlüssel in Azure AD generiert werden.  Anschließend müssen die Anmeldeinformationen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]geändert werden.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] verwaltet einen Cache für die Anmeldeinformationen in der aktuellen Sitzung. Wenn also Anmeldeinformationen geändert werden, sollte [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] neu gestartet werden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet in Azure Active Directory erstellte Dienstprinzipale als Anmeldeinformationen zum Zugriff auf den Schlüsseltresor.  Der Dienstprinzipal verfügt über eine Client-ID und einen Authentifizierungsschlüssel.  Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen werden der **VaultName**, die **Client-ID**und der **Authentifizierungsschlüssel**festgelegt.  Der **Authentifizierungsschlüssel** ist für einen bestimmten Zeitraum (ein oder zwei Jahre) gültig.   Vor Ablauf des Zeitraums muss für den Dienstprinzipal ein neuer Schlüssel in Azure AD generiert werden.  Anschließend müssen die Anmeldeinformationen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]geändert werden.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] verwaltet einen Cache für die Anmeldeinformationen in der aktuellen Sitzung. Wenn also Anmeldeinformationen geändert werden, sollte [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] neu gestartet werden.  
   
 ### <a name="key-backup-and-recovery"></a>Schlüsselsicherung und -wiederherstellung  
 Der Schlüsseltresor sollte regelmäßig gesichert werden. Wenn ein asymmetrischer Schlüssel im Tresor verloren geht, kann er aus der Sicherung wiederhergestellt werden. Der Schlüssel muss mit dem gleichen Namen wie zuvor wiederhergestellt werden, was vom PowerShell-Befehl „Restore“ auch ausgeführt wird (siehe Schritte unten).  
-Wenn der Tresor verloren geht, müssen Sie einen Tresor neu erstellen und den asymmetrischen Schlüssel unter Verwendung desselben Namens wie zuvor im Tresor wiederherstellen. Der Name für den Tresor kann vom zuvor verwendeten Namen abweichen (oder diesem entsprechen). Sie müssen für den neuen Tresor auch die Zugriffsberechtigungen festlegen, damit dem SQL Server-Dienstprinzipal der für die SQL Server-Verschlüsselungsszenarien benötigte Zugriff gewährt wird. Anschließend passen Sie die SQL Server-Anmeldeinformationen dahingehend an, dass diese den neuen Tresornamen widerspiegeln.  
+Wenn der Tresor verloren geht, müssen Sie einen Tresor neu erstellen und den asymmetrischen Schlüssel unter Verwendung desselben Namens wie zuvor im Tresor wiederherstellen. Der Name für den Tresor kann vom zuvor verwendeten Namen abweichen (oder diesem entsprechen). Sie müssen für den neuen Tresor auch die Zugriffsberechtigungen festlegen, damit dem SQL Server-Dienstprinzipal der für die SQL Server-Verschlüsselungsszenarien benötigte Zugriff gewährt wird. Anschließend passen Sie die SQL Server-Anmeldeinformationen dahingehend an, dass diese den neuen Tresornamen widerspiegeln.
+
 Zusammengefasst ergeben sich folgende Schritte:  
   
 * Sichern Sie den Tresorschlüssel (mithilfe des PowerShell-Cmdlets „Backup-AzureKeyVaultKey“).  
@@ -191,7 +192,7 @@ Schlüsselsicherungen können in Azure-Regionen wiederhergestellt werden, solang
 3. Wählen Sie das Azure-Abonnement aus, das Sie aktuell verwenden, und klicken Sie in den Befehlen am unteren Bildschirmrand auf **Verzeichnis bearbeiten** .
 4. Verwenden Sie im Popupfenster die Dropdownliste **Verzeichnis** , um das Active Directory auszuwählen, das Sie verwenden möchten. Dadurch wird es als Standardverzeichnis festgelegt.
 5. Vergewissern Sie sich, dass Sie der globale Administrator des neu ausgewählten Active Directorys sind. Wenn Sie nicht der globale Administrator sind, verlieren Sie möglicherweise aufgrund des Verzeichniswechsels Ihre Verwaltungsberechtigungen.
-6. Wenn Sie nach dem Schließen des Popupfensters keins Ihrer Abonnements sehen, müssen Sie möglicherweise den Filter **Nach Verzeichnis filtern** im Filter **Abonnements** im oberen rechten Menü des Bildschirms aktualisieren, um Abonnements anzuzeigen, die Ihr neu aktualisiertes Active Directory verwenden.
+6. Wenn Sie nach dem Schließen des Popupfensters keines Ihrer Abonnements sehen, müssen Sie möglicherweise den Filter **Nach Verzeichnis filtern** im Filter **Abonnements** im oberen rechten Menü des Bildschirms aktualisieren, um Abonnements anzuzeigen, die Ihr neu aktualisiertes Active Directory verwenden.
 
     > [!NOTE] 
     > Möglicherweise verfügen Sie nicht über die Berechtigung zum Ändern des Standardabonnements für Ihr Azure-Abonnement. Erstellen Sie in diesem Fall den AAD-Dienstprinzipal innerhalb Ihres Standardverzeichnisses, sodass er sich im gleichen Verzeichnis wie der später verwendete Azure Key Vault befindet.
@@ -218,9 +219,9 @@ Fehlercode  |Symbol  |und Beschreibung
 2053 | scp_err_ConvertThumbprintToKeyName|  Fehler beim Konvertieren des Fingerabdrucks in den Schlüsselnamen.    
 3000 | ErrorSuccess | Der AKV-Vorgang war erfolgreich.    
 3001 | ErrorUnknown | Unbekannter Fehler beim AKV-Vorgang.    
-3002 | ErrorHttpCreateHttpClientOutOfMemory | Es kann kein HttpClient für den AKV-Vorgang aufgrund von unzureichendem Arbeitsspeicher erstellt werden.    
-3003 | ErrorHttpOpenSession | Aufgrund eines Netzwerkfehlers kann keine Http-Sitzung geöffnet werden.    
-3004 | ErrorHttpConnectSession | Aufgrund eines Netzwerkfehlers kann keine Verbindung mit einer Http-Sitzung hergestellt werden.    
+3002 | ErrorHttpCreateHttpClientOutOfMemory | Aufgrund von unzureichendem Arbeitsspeicher kann kein HttpClient für den AKV-Vorgang erstellt werden.    
+3003 | ErrorHttpOpenSession | Aufgrund eines Netzwerkfehlers kann keine HTTP-Sitzung geöffnet werden.    
+3004 | ErrorHttpConnectSession | Aufgrund eines Netzwerkfehlers kann keine Verbindung zu einer HTTP-Sitzung hergestellt werden.    
 3005 | ErrorHttpAttemptConnect | Aufgrund eines Netzwerkfehlers kann kein Verbindungsversuch ausgeführt werden.    
 3006 | ErrorHttpOpenRequest | Aufgrund eines Netzwerkfehlers kann eine Anforderung nicht geöffnet werden.    
 3007 | ErrorHttpAddRequestHeader | Ein Anforderungsheader kann nicht hinzugefügt werden.    
@@ -243,7 +244,7 @@ Wenn Sie Ihren Fehlercode in dieser Tabelle nicht finden, beachten Sie, dass ein
   
 -   Möglicherweise verfügen Sie nicht über Internetzugriff und können nicht auf den Azure Key Vault zugreifen – überprüfen Sie die Internetverbindung.  
   
--   Der Azure Key Vault-Dienst ist möglicherweise außer Betrieb. Versuchen Sie es ein andermal erneut.  
+-   Der Azure Key Vault-Dienst ist möglicherweise außer Betrieb. Versuchen Sie es später erneut.  
   
 -   Möglicherweise haben Sie den asymmetrischen Schlüssel im Azure Key Vault oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gelöscht. Stellen Sie den Schlüssel wieder her.  
   
@@ -292,9 +293,9 @@ SQL Server-Version  |Link zum Installieren der weitervertreibbaren Komponente
   
 -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](/powershell/module/azurerm.keyvault/)  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Erweiterbare Schlüsselverwaltung mithilfe von Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
-  
-  
+## <a name="see-also"></a>Weitere Informationen
+
+ [Erweiterbare Schlüsselverwaltung mit Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  
+ [EKM provider enabled (Serverkonfigurationsoption)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault.](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 84c7181bfd7c0ee014b382052bb6493d68251331
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153614"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238691"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installieren von Big Data-Tools für SQL Server 2019
 
@@ -40,7 +40,7 @@ In der folgenden Tabelle sind die allgemeinen Big Data-Cluster-Tools und deren I
 | **sqlcmd** | Für einige Skripts | Legacybefehlszeilentool zum Abfragen von SQL Server ([Weitere Informationen](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | Für einige Skripts | Befehlszeilentool zum Übertragen von Daten mit URLs. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl-Paket installieren |
 
-<sup>1</sup> Sie müssen die kubectl-Version 1.10 oder höher verwenden. Außerdem sollte die Version von kubectl um eins höher oder niedriger als die Nebenversion Ihres Kubernetes-Clusters sein. Wenn Sie eine bestimmte Version auf dem kubectl-Client installieren möchten, finden Sie weitere Informationen unter [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (Installieren und Einrichten von kubectl). Verwenden Sie unter Windows 10 „cmd.exe“ und nicht Windows PowerShell zum Ausführen von curl.
+<sup>1</sup> Sie müssen die kubectl-Version 1,13 oder höher verwenden. Außerdem sollte die Version von kubectl um eins höher oder niedriger als die Nebenversion Ihres Kubernetes-Clusters sein. Wenn Sie eine bestimmte Version auf dem kubectl-Client installieren möchten, finden Sie weitere Informationen unter [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (Installieren und Einrichten von kubectl). Verwenden Sie unter Windows 10 „cmd.exe“ und nicht Windows PowerShell zum Ausführen von curl.
 
 > [!TIP]
 > Um kubectl mit einem bereits bereitgestellten Cluster in Azure Kubernetes Service (AKS) zu verwenden, müssen Sie den Clusterkontext mit dem folgenden Azure CLI-Befehl festlegen:

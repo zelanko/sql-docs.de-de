@@ -11,12 +11,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bf9d15a7816f7e51691146fc0ba927e45b7250f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134611"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155501"
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zur Datenbank-Engine
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ Anhand des Szenarios in diesem Lernprogramm werden [!INCLUDE[ssNoVersion](../inc
 [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien zur Durchsetzung von Standards zur Websiteverwaltung erstellen.  
   
-[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service (Lernprogramm: SQL Server-Sicherung und -Wiederherstellung im Microsoft Azure-BLOB-Speicherdienst)](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-In diesem Lernprogramm wird veranschaulicht, wie Sie eine SQL Server-Sicherung und -Wiederherstellung im Lernprogramm für den Windows Azure-BLOB-Speicherdienst ausführen.  
+[Tutorial: SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+In diesem Tutorial wird veranschaulicht, wie Sie eine SQL Server-Sicherung und -Wiederherstellung im Azure Blob Storage-Dienst ausführen.  
   
 [Tutorial: Verwenden des Microsoft Azure BLOB-Speicherdiensts mit SQL Server 2016](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-Dieses Lernprogramm hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direkt im Windows Azure-BLOB-Speicherdienst speichern.  
+Dieses Tutorial hilft Ihnen, zu verstehen, wie Sie SQL Server-Datendateien direkt im Azure Blob Storage-Dienst speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Tutorials für SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  

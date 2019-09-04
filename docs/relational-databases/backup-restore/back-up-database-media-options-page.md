@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940911"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155563"
 ---
 # <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67940911"
 ## <a name="options"></a>enthalten  
   
 ### <a name="overwrite-media"></a>Medium überschreiben  
- Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld Datenbank sichern auf der Seite Allgemein die Option URL (Windows Azure-Speicher) als Sicherungsziel auswählen, sind die Optionen im Abschnitt Medium überschreiben deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung **BACKUP TO URL. WITH FORMAT** überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+ Mit den Optionen des Bereichs **Medium überschreiben** kann gesteuert werden, wie die Sicherung auf das Medium geschrieben wird. Wenn Sie im Dialogfeld „Datenbank sichern“ auf der Seite „Allgemein“ die Option „URL“ (Azure Storage) als Sicherungsziel auswählen, sind die Optionen im Abschnitt „Medium überschreiben“ deaktiviert. Sie können eine Sicherung mithilfe der Transact-SQL-Anweisung **BACKUP TO URL. WITH FORMAT** überschreiben. Weitere Informationen finden Sie unter [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
 
  Die Option **Medien überschreiben** ist deaktiviert, wenn Sie **URL** auf der Seite **Allgemein** als Sicherungsziel ausgewählt haben.
   

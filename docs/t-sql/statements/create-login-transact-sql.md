@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818bb9690153d862211739bcd134ba9fbdf11ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912655"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155658"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -308,7 +308,7 @@ Mithilfe von SQL Server-Regeln können Sie einen Anmeldenamen für die SQL Serve
 
 In SQL-Datenbank werden Anmeldedaten, die für die Authentifizierung einer Verbindung und für Firewallregeln auf Serverebene erforderlich sind, über einen gewissen Zeitraum in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
-Weitere Informationen zu Anmeldenamen für SQL-Datenbank finden Sie unter [Verwalten von Datenbanken und Anmeldenamen in der Windows Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Weitere Informationen zu Anmeldenamen für SQL-Datenbank finden Sie unter [Verwalten von Datenbanken und Anmeldenamen in der Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -607,7 +607,7 @@ Mithilfe von SQL Server-Regeln können Sie einen Anmeldenamen für die SQL Serve
 
 In SQL Data Warehouse werden Anmeldedaten, die für die Authentifizierung einer Verbindung und für Firewallregeln auf Serverebene erforderlich sind, temporär in jeder Datenbank gespeichert. Dieser Cache wird regelmäßig aktualisiert. Führen Sie [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md) aus, um eine Aktualisierung des Authentifizierungscache zu erzwingen und sicherzustellen, dass eine Datenbank über die aktuelle Version der Tabelle mit Anmeldenamen verfügt.
 
-Weitere Informationen zu Anmeldenamen für SQL Data Warehouse finden Sie unter [Verwalten von Datenbanken und Anmeldenamen in Windows Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Weitere Informationen zu Anmeldenamen für SQL Data Warehouse finden Sie unter [Verwalten von Datenbanken und Anmeldenamen in der Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Berechtigungen
 

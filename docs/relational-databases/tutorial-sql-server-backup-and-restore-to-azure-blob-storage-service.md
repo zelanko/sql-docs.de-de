@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893637"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155709"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Schnellstart: SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ GO
 
 
 ## <a name="create-a-sql-server-credential"></a>Erstellen von SQL Server-Anmeldeinformationen
-SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. Hier werden Anmeldeinformationen von SQL Server-Sicherungs- und Wiederherstellungsvorgängen verwendet, um sich beim Windows Azure Blob Storage-Dienst zu authentifizieren. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen über Anmeldeinformationen finden Sie unter [Anmeldeinformationen](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
+SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. Hier werden Anmeldeinformationen von SQL Server-Sicherungs- und Wiederherstellungsvorgängen verwendet, um sich beim Azure Blob Storage-Dienst zu authentifizieren. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen über Anmeldeinformationen finden Sie unter [Anmeldeinformationen](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
   > [!IMPORTANT]
   > Die unten beschriebenen Anforderungen für das Erstellen von SQL Server-Anmeldeinformationen sind spezifisch für SQL Server Sicherungsprozesse ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md)und [SQL Server Managed Backup to Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server verwendet beim Zugriff auf Azure-Speicher zum Schreiben oder Lesen von Sicherungen den Namen des Speicherkontos und Informationen zu den Zugriffsschlüsseln.
@@ -119,8 +119,8 @@ Erstellen Sie mit dem von Ihnen gespeicherten Zugriffsschlüssel die SQL Server-
 
 1. Führen Sie die Anweisung aus, um die Anmeldeinformationen zu erstellen. 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>Sichern der Datenbank im Windows Azure Blob Storage-Dienst
-In diesem Abschnitt werden Sie anhand der T-SQL-Anweisung eine vollständige Datenbanksicherung im Windows Azure Blob Storage ausführen. 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Sichern der Datenbank im Azure Blob Storage-Dienst
+In diesem Abschnitt werden Sie anhand der T-SQL-Anweisung eine vollständige Datenbanksicherung im Azure Blob Storage-Dienst ausführen. 
 
 1. Stellen Sie über SQL Server Management Studio eine Verbindung zu Ihrem SQL Server her. 
 1. Wählen Sie die Datenbank **SQLTestDB** aus, und öffnen Sie ein Fenster **Neue Abfrage**. 
@@ -138,7 +138,7 @@ In diesem Abschnitt werden Sie anhand der T-SQL-Anweisung eine vollständige Dat
 1. Führen Sie die Anweisung aus, um Ihre SQLTestDB-Datenbank als URL zu sichern. 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>Wiederherstellen der Datenbank aus dem Windows Azure Blob Storage-Dienst
+## <a name="restore-database-from-azure-blob-storage-service"></a>Wiederherstellen der Datenbank aus dem Azure Blob Storage-Dienst
 In diesem Abschnitt verwenden Sie eine T-SQL-Anweisung, um die vollständige Datenbanksicherung wiederherzustellen. 
 
 1. Stellen Sie über SQL Server Management Studio eine Verbindung zu Ihrem SQL Server her. 

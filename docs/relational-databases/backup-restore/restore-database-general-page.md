@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ba9c414aa28455b15ef46fb9d334f40ee4a6b6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050fb8ed2364066dfe0a6a41e41ec295590d7895
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944796"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155521"
 ---
 # <a name="restore-database-general-page"></a>Datenbank wiederherstellen (Seite 'Allgemein')
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67944796"
 |Begriff|Definition|  
 |----------|----------------|  
 |**Datenbank**|Wählen Sie die wiederherzustellende Datenbank aus der Dropdownliste aus. Die Liste enthält nur Datenbanken, die entsprechend dem Sicherungsverlauf von **msdb** gesichert wurden.|  
-|**Sicherungsmedium**|Wählen Sie die logischen oder physischen Sicherungsmedien (Bänder, URL oder Dateien) aus, die die Sicherung oder Sicherungen enthalten, die Sie wiederherstellen möchten. Dies ist erforderlich, wenn die Datenbanksicherung auf einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgezeichnet wurde.<br /><br /> Klicken Sie auf die Schaltfläche „...“. Das Dialogfeld **Sicherungsmedien auswählen** wird geöffnet, in dem Sie mindestens ein logisches oder physisches Sicherungsmedien auswählen können. In diesem Dialogfeld können Sie bis zu 64 Medien auswählen, die zu einem einzigen Mediensatz gehören. Bandmedien müssen physisch mit dem Computer verbunden sein, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Eine Sicherungsdatei kann sich auf einem lokalen Datenträger oder auf einem Wechseldatenträger befinden. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde. Sie können auch **URL** als Gerätetyp für Sicherungsdateien auswählen, die in Microsoft Azure Storage gespeichert sind.<br /><br /> Wenn Sie das Dialogfeld **Sicherungsmedien auswählen** schließen, wird das ausgewählte Medium in Form von schreibgeschützten Werten in der Liste **Sicherungsmedium** angezeigt.|  
+|**Sicherungsmedium**|Wählen Sie die logischen oder physischen Sicherungsmedien (Bänder, URL oder Dateien) aus, die die Sicherung oder Sicherungen enthalten, die Sie wiederherstellen möchten. Dies ist erforderlich, wenn die Datenbanksicherung auf einer anderen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgezeichnet wurde.<br /><br /> Klicken Sie auf die Schaltfläche „...“. Das Dialogfeld **Sicherungsmedien auswählen** wird geöffnet, in dem Sie mindestens ein logisches oder physisches Sicherungsmedien auswählen können. In diesem Dialogfeld können Sie bis zu 64 Medien auswählen, die zu einem einzigen Mediensatz gehören. Bandmedien müssen physisch mit dem Computer verbunden sein, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird. Eine Sicherungsdatei kann sich auf einem lokalen Datenträger oder auf einem Wechseldatenträger befinden. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde. Sie können auch **URL** als Gerätetyp für Sicherungsdateien auswählen, die in Azure Storage gespeichert sind.<br /><br /> Wenn Sie das Dialogfeld **Sicherungsmedien auswählen** schließen, wird das ausgewählte Medium in Form von schreibgeschützten Werten in der Liste **Sicherungsmedium** angezeigt.|  
 |**Datenbank**|Wählen Sie in der Dropdownliste den Namen der Datenbank aus, von der die Sicherungen wiederhergestellt werden sollen.<br /><br /> Hinweis: Diese Liste steht nur zur Verfügung, wenn **Sicherungsmedium** ausgewählt ist. Nur Datenbanken mit Sicherungen auf den ausgewählten Sicherungsmedien stehen zur Verfügung.|  
   
 ### <a name="destination"></a>Ziel  

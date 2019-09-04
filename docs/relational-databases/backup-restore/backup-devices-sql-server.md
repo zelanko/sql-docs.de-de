@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103782"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152135"
 ---
 # <a name="backup-devices-sql-server"></a>Sicherungsmedien (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68103782"
  Physisches Sicherungsmedium  
  Entweder ein Bandlaufwerk oder eine vom Betriebssystem bereitgestellte Datei auf dem Datenträger. Eine Sicherung kann auf 1 bis 64 Sicherungsmedien geschrieben werden. Wenn für eine Sicherung mehrere Sicherungsmedien benötigt werden, müssen diese ohne Ausnahme demselben Medientyp angehören (Datenträger oder Band).  
   
- SQL Server-Sicherungen können nicht nur auf einen Datenträger oder ein Band geschrieben werden, sondern auch in den Windows Azure-BLOB-Speicherdienst.  
+ SQL Server-Sicherungen können nicht nur auf einen Datenträger oder ein Band geschrieben werden, sondern auch in den Azure Blob Storage-Dienst.  
  
   
 ##  <a name="DiskBackups"></a> Verwenden von Datenträgersicherungsmedien  
@@ -181,8 +181,8 @@ GO
  Wenn ein Band versehentlich offengeblieben ist, kann es am schnellsten mithilfe des folgenden Befehls freigegeben werden: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Weitere Informationen finden Sie unter [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>Verwenden des Windows Azure-BLOB-Speicherdiensts  
- SQL Server-Sicherungen können in den Windows Azure-BLOB-Speicherdienst geschrieben werden.  Weitere Informationen zum Verwenden von Microsoft Azure Blob Storage für Sicherungen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+## <a name="using-the-azure-blob-storage-service"></a>Verwenden des Azure Blob Storage-Dienst  
+ SQL Server-Sicherungen können in den Azure Blob Storage-Dienst geschrieben werden.  Weitere Informationen zum Verwenden des Azure Blob Storage-Diensts für Sicherungen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Verwenden eines logischen Sicherungsmediums  
  Ein *logisches Sicherungsmedium* ist ein optionaler, benutzerdefinierter Name, der auf ein bestimmtes, physisches Sicherungsmedium (Datenträgerdatei oder Bandlaufwerk) verweist. Ein logisches Sicherungsmedium gibt Ihnen beim Verweisen auf das entsprechende physische Sicherungsmedium die Möglichkeit zur Dereferenzierung.  
@@ -218,7 +218,7 @@ GO
   
   
 ##  <a name="Archiving"></a> Archivieren von SQL Server-Sicherungen  
- Datenträgersicherungen sollten mithilfe eines Hilfsprogramms für die Dateisystemsicherung archiviert und die Archive außerhalb des Standorts aufbewahrt werden. Das Verwenden eines Datenträgers hat den Vorteil, dass Sie die archivierten Sicherungen über das Netzwerk auf einen Datenträger außerhalb des Standorts schreiben können. Der Windows Azure-BLOB-Speicherdienst kann als externe Archivierungsfunktion genutzt werden.  Sie können entweder die Datenträgersicherungen hochladen, oder Sie können die Sicherungen direkt in den Windows Azure-BLOB-Speicherdienst schreiben.  
+ Datenträgersicherungen sollten mithilfe eines Hilfsprogramms für die Dateisystemsicherung archiviert und die Archive außerhalb des Standorts aufbewahrt werden. Das Verwenden eines Datenträgers hat den Vorteil, dass Sie die archivierten Sicherungen über das Netzwerk auf einen Datenträger außerhalb des Standorts schreiben können. Der Azure Blob Storage-Dienst kann als externe Archivierungsfunktion genutzt werden.  Sie können entweder die Datenträgersicherungen hochladen, oder Sie können die Sicherungen direkt in den Azure Blob Storage-Dienst schreiben.  
   
  Eine weitere verbreitete Archivierungsmethode besteht darin, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen auf einen lokalen Sicherungsdatenträger zu schreiben, auf Band zu archivieren und die Bänder außerhalb des Standorts aufzubewahren.  
 

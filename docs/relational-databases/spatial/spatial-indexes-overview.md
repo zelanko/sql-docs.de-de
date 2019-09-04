@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9094f5335fc3978ba2e5018873dc2cdd8b455347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048468"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190422"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,10 +123,10 @@ ms.locfileid: "68048468"
 >  Die **tessellation_scheme** -Einstellung eines räumlichen Index wird in der [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) -Katalogansicht angezeigt.  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>Geometrieraster-Mosaikschema  
- Das GEOMETRY_AUTO_GRID-Mosaik ist das Standardschema für den **geometry** -Datentyp für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und höher.  Das GEOMETRY_GRID-Mosaik ist das einzige Mosaikschema, das für geometry-Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar ist. In diesem Abschnitt werden die Aspekte des Geometrierastermosaikschemas behandelt, die für die Arbeit mit räumlichen Indizes relevant sind: unterstützte Methoden und umgebende Felder.  
+ Das GEOMETRY_AUTO_GRID-Mosaik ist das Standardschema für den **geometry** -Datentyp für [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] und höher.  Das GEOMETRY_GRID-Mosaik ist das einzige Mosaikschema, das für geometry-Datentypen in [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]verfügbar ist. In diesem Abschnitt werden die Aspekte des Geometrierastermosaikschemas behandelt, die für die Arbeit mit räumlichen Indizes relevant sind: unterstützte Methoden und umgebende Felder.  
   
 > [!NOTE]  
->  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung explizit angegeben werden.  
+>  Dieses Mosaikschema kann mit der USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID)-Klausel der [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung explizit angegeben werden.  
   
 ##### <a name="the-bounding-box"></a>Das umgebende Feld  
  Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier Koordinaten definiert, **(** _x-min_ **,** _y-min_ **)** und **(** _x-max_ **,** _y-max_ **)** , die als Eigenschaften des räumlichen Index gespeichert werden. Diese Koordinaten stellen Folgendes dar:  

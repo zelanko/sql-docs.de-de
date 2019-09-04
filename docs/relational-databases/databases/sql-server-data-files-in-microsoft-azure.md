@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127162"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153105"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>SQL Server-Datendateien in Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68127162"
 ## <a name="concepts-and-requirements"></a>Konzepte und Anforderungen  
   
 ### <a name="azure-storage-concepts"></a>Azure-Speicherkonzepte  
- Bei Verwendung von SQL Server-Datendateien in Windows Azure müssen Sie ein Speicherkonto und einen Container in Windows Azure erstellen. Anschließend müssen Sie SQL Server-Anmeldeinformationen erstellen, die Informationen zur Containerrichtlinie sowie eine SAS (Shared Access Signature, Signatur für gemeinsamen Zugriff) enthalten, die für den Zugriff auf den Container erforderlich ist.  
+ Bei Verwendung von SQL Server-Datendateien in Azure müssen Sie ein Speicherkonto und einen Container in Azure erstellen. Anschließend müssen Sie SQL Server-Anmeldeinformationen erstellen, die Informationen zur Containerrichtlinie sowie eine SAS (Shared Access Signature, Signatur für gemeinsamen Zugriff) enthalten, die für den Zugriff auf den Container erforderlich ist.  
   
  In [Microsoft Azure](https://azure.microsoft.com)stellt ein [Azure-Speicherkonto](https://azure.microsoft.com/services/storage/) die höchste Namespaceebene für den BLOB-Zugriff dar. Ein Speicherkonto kann eine unbegrenzte Anzahl von Containern enthalten. Allerdings darf deren Gesamtgröße das Speicherlimit nicht überschreiten. Aktuelle Informationen zu Speichergrößenbeschränkungen finden Sie unter [Azure-Abonnement und Dienstbeschränkungen, Kontingente und Einschränkungen](https://docs.microsoft.com/azure/azure-subscription-service-limits). Ein Container stellt eine Gruppierung eines [BLOB](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage)-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Ein Konto kann eine unbegrenzte Anzahl von Containern enthalten. Analog dazu kann in einem Container auch eine unbegrenzte Anzahl von BLOBs gespeichert werden. Es gibt zwei Arten von BLOBs, die im Azure-Speicher gespeichert werden können: Blockblobs und Seitenblobs. Diese neue Funktion verwendet Seitenblobs, die effizienter sind, wenn die Bytebereiche in einer Datei häufig geändert werden. Sie können mit folgendem URL-Format auf BLOBs zugreifen: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -124,7 +124,7 @@ ON
  Verwenden Sie PowerShell-Cmdlets für die Speicherung von SQL Server-Datendateien im Azure-BLOB-Speicherdienst. Dabei wird anstatt auf einen Dateipfad auf den URL-Pfad eines BLOB-Speichers verwiesen. Greifen Sie mit folgendem URL-Format auf BLOBs zu: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Unterstützung von SQL Server-Objekten und -Leistungsindikatoren  
- In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Azure-Speicher verwendet werden kann. Das neue SQL Server-Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom Systemmonitor verwendet werden, um Aktivitäten bei der Ausführung von SQL Server mit dem Microsoft Azure-Speicher zu überwachen.  
+ In SQL Server 2014 wurde ein neues SQL Server-Objekt eingeführt, das mit SQL Server-Datendateien im Azure-Speicher verwendet werden kann. Das neue SQL Server-Objekt wird als [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) aufgerufen und kann vom Systemmonitor verwendet werden, um Aktivitäten bei der Ausführung von SQL Server mit Azure Storage zu überwachen.  
   
 ### <a name="sql-server-management-studio-support"></a>Unterstützung von SQL Server Management Studio  
  SQL Server Management Studio unterstützt die Verwendung der Funktion in mehreren Dialogfeldern. Sie können den URL-Pfad des Speichercontainers eingeben, z.B. https://teststorageaccnt.blob.core.windows.net/testcontainer/.

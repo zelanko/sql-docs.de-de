@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7f3a8d7168e9e1b9e321a83e7e1d7143b5bcf1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265078"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155683"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Mit Microsoft Azure Storage verbinden
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Verwenden Sie das Dialogfeld **Windows Azure Storage-Verbindung** , um ein Speicherkonto anzugeben und die Verbindung mit Windows Azure zu überprüfen.  
+Verwenden Sie das Dialogfeld **Azure Storage-Verbindung**, um ein Speicherkonto anzugeben und die Verbindung mit Azure zu überprüfen.  
   
 ## <a name="options"></a>enthalten  
-Geben Sie die folgenden Informationen zum Windows Azure-Konto an, und klicken Sie dann auf **Weiter** , um fortzufahren.  
+Geben Sie die folgenden Informationen zu Ihrem Azure-Konto an, und klicken Sie dann auf **Weiter**, um fortzufahren.  
   
 1.  **Speicherkonto** – Geben Sie den Speicherkontonamen an.
 
