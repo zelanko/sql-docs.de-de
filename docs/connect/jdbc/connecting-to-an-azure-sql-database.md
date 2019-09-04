@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028162"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155112"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 
@@ -52,7 +52,7 @@ Um zu vermeiden, dass Verbindungen im Leerlauf durch eineNetzwerkkomponente getr
   
 Starten Sie den Computer neu, damit die Registrierungseinstellungen wirksam werden.  
 
-Um diese Aktion in Windows Azure auszuführen, erstellen Sie einen Starttask, durch den die Registrierungsschlüssel hinzugefügt werden.  Fügen Sie der Dienstdefinitionsdatei beispielsweise folgenden Starttask hinzu:  
+Um diesen Vorgang in Azure auszuführen, erstellen Sie einen Starttask, durch den die Registrierungsschlüssel hinzugefügt werden.  Fügen Sie der Dienstdefinitionsdatei beispielsweise folgenden Starttask hinzu:  
 
 ```xml
 <Startup>  
@@ -80,7 +80,7 @@ Vor Version 4.0 von [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Einstellung „hostNameInCertificate“ zur Verwendung der Verschlüsselung erforderlich
 
-Vor der [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2-Version von sollten Sie beim Herstellen einer Verbindung mit ein [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] **hostNameInCertificate** angeben, wenn Sie " **verschlüsseln = True** " angeben (wenn der Servername in der Verbindung Zeichenfolge *ist "* ShortName". *Domain Name*: Legen Sie die **hostNameInCertificate** -Eigenschaft \*auf *fest. Domain Name*.). Diese Eigenschaft ist ab Version 7,2 des Treibers optional.
+Vor der 7,2- [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]Version von sollten Sie beim Herstellen einer Verbindung mit einen [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] **hostNameInCertificate** angeben, wenn Sie " **verschlüsseln = True** " angeben (wenn der Servername in der Verbindungs Zeichenfolge " *Shortname*" lautet. *Domain Name*: Legen Sie die **hostNameInCertificate** -Eigenschaft \*auf fest. *Domain Name*.). Diese Eigenschaft ist ab Version 7,2 des Treibers optional.
 
 Beispiel:
 
