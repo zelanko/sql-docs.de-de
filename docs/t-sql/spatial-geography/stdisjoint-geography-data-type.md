@@ -45,7 +45,7 @@ ms.locfileid: "68042321"
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zwei **geography** -Instanzen sind disjunkt, wenn die Schnittmenge ihrer Punktmengen leer ist.  
   
  Diese Methode gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geography** -Instanzen nicht übereinstimmen.  

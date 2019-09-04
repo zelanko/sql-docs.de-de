@@ -38,7 +38,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit der **BCPControl**-Methode werden verschiedene Steuerelementparameter für Massenkopiervorgänge festgelegt, einschließlich der Anzahl von Fehlern, die vor dem Abbrechen eines Massenkopiervorgangs zulässig sind, der Nummern der ersten und letzten Zeilen, die aus einer Datendatei kopiert werden sollen, und der Batchgröße.  
   
  Außerdem wird diese Methode dazu verwendet, die SELECT-Anweisung beim Massenkopieren von Daten aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anzugeben. Sie können das **eOption-Argument** auf BCP_OPTION_HINTS und das **iValue**-Argument festlegen, um einen Zeiger auf eine Zeichenfolge mit Breitzeichen zur Verfügung zu haben, die die SELECT-Anweisung enthält.  

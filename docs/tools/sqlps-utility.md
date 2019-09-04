@@ -76,7 +76,7 @@ sqlps
  [ **-?** |  **-Help** ]  
  Zeigt eine Syntaxzusammenfassung der Optionen des Hilfsprogramms **sqlps** an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Hilfsprogramm **sqlps** startet die PowerShell-Umgebung (PowerShell.exe) und lädt das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -PowerShell-Modul. Das Modul, das auch **sqlps**heißt, lädt und registriert diese [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -PowerShell-Snap-Ins:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  

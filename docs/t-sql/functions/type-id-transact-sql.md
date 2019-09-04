@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68098744"
 ---
-# <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
+# <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die ID für einen angegebenen Datentypnamen zurück.  
@@ -53,7 +53,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. TYPE_ID, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  TYPE_ID gibt NULL zurück, wenn der Datentypname ungültig ist, oder wenn der Benutzer nicht die erforderliche Berechtigung besitzt, um den Datentyp zu verwenden.  
   
 ## <a name="examples"></a>Beispiele  

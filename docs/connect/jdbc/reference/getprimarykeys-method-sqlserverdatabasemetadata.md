@@ -55,7 +55,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getPrimaryKeys-Methode wird von der getPrimaryKeys-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getPrimaryKeys-Methode zurückgegebene Resultset enthält folgende Informationen:  

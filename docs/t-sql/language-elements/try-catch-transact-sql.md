@@ -63,7 +63,7 @@ END CATCH
  *statement_block*  
  Eine beliebige Gruppe von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem Batch oder in einem BEGIN…END-Block.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein TRY…CATCH-Konstrukt fängt alle Ausführungsfehler ab, deren Schweregrad größer als 10 ist und durch die die Datenbankverbindung nicht geschlossen wird.  
   
  Auf einen TRY-Block muss direkt ein dazugehöriger CATCH-Block folgen. Werden andere Anweisungen zwischen die END TRY- und BEGIN CATCH-Anweisungen eingeschlossen, wird dadurch ein Syntaxfehler generiert.  
@@ -200,7 +200,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>Nicht commitfähige Transaktionen und XACT_STATE  
+## <a name="uncommittable-transactions-and-xact_state"></a>Nicht commitfähige Transaktionen und XACT_STATE  
  Wenn ein Fehler, der in einem TRY-Block generiert wurde, dazu führt, dass der Status der aktuellen Transaktion ungültig wird, dann wird die Transaktion als nicht commitfähige Transaktion klassifiziert. Ein Fehler, der außerhalb eines TRY-Blocks normalerweise zur Beendigung einer Transaktion führt, hat bei Auftreten innerhalb eines TRY-Blocks zur Folge, dass eine Transaktion zu einer nicht commitfähigen Transaktion wird. Eine nicht commitfähige Transaktion kann nur Leseoperationen oder ROLLBACK TRANSACTION durchführen. Die Transaktion kann keine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen ausführen, die eine Schreiboperation oder COMMIT TRANSACTION generieren. Die XACT_STATE-Funktion gibt den Wert -1 zurück, wenn eine Transaktion als nicht commitfähige Transaktion klassifiziert wurde. Nach Abschluss einer Batchausführung wird für alle aktiven nicht commitfähigen Transaktionen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] ein Rollback ausgeführt. Falls keine Fehlermeldung gesendet wurde, als die Transaktion in den nicht commitfähigen Status überging, wird bei Abschluss des Batches eine Fehlermeldung an die Clientanwendung gesendet. Auf diese Weise wird angezeigt, dass eine nicht commitfähige Transaktion erkannt und ein Rollback für sie ausgeführt wurde.  
   
  Weitere Informationen zu nicht commitfähigen Transaktionen und zur XACT_STATE-Funktion finden Sie unter [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md).  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. Verwenden von TRY…CATCH mit XACT_STATE  
+### <a name="c-using-trycatch-with-xact_state"></a>C. Verwenden von TRY…CATCH mit XACT_STATE  
  Das folgende Beispiel zeigt, wie das `TRY...CATCH`-Konstrukt zur Behandlung von Fehlern verwendet wird, die innerhalb einer Transaktion auftreten. Über die `XACT_STATE`-Funktion wird bestimmt, ob für die Transaktion ein Commit oder ein Rollback ausgeführt werden soll. In diesem Beispiel hat `SET XACT_ABORT` den Wert `ON`. Dies bewirkt, dass die Transaktion nach dem Fehler aufgrund einer Einschränkungsverletzung nicht commitfähig ist.  
   
 ```sql  

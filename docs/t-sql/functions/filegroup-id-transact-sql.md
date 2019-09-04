@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68071483"
 ---
-# <a name="filegroupid-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
+# <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Dateigruppen-ID für einen angegebenen Dateigruppennamen zurück.  
@@ -47,7 +47,7 @@ FILEGROUP_ID ( 'filegroup_name' )
 ## <a name="return-types"></a>Rückgabetypen  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 *filegroup_name* entspricht der **name**-Spalte der **sys.filegroups**-Katalogsicht.  
   
 ## <a name="examples"></a>Beispiele  

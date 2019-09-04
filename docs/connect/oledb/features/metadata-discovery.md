@@ -28,7 +28,7 @@ ms.locfileid: "67989062"
   
  Wenn Sie eine Anwendung mit dem OLE DB-Treiber für SQL Server entwickeln, jedoch eine Verbindung mit einer früheren Serverversion als [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] herstellen, entspricht die Funktionalität der Metadatenermittlung der Version des Servers.  
   
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Bemerkungen   
  Die folgenden OLE DB-Elementfunktionen wurden in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] verbessert, um verbesserte Metadatenermittlung bereitzustellen:  
   
 -   IColumnsInfo::GetColumnInfo  

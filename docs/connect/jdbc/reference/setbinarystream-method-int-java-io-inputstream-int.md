@@ -52,7 +52,7 @@ public final void setBinaryStream(int n,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setBinaryStream-Methode wird von der setBinaryStream-Methode in der Java. SQL. PreparedStatement-Schnittstelle angegeben.  
   
  Entspricht die Länge des Streams nicht der Angabe im *length*-Parameter, wird vom JDBC-Treiber beim Aktualisieren oder Einfügen der Zeile eine Ausnahme ausgelöst.  

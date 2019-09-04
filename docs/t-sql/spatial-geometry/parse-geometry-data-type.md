@@ -42,7 +42,7 @@ Parse ( 'geometry_tagged_text' )
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der OGC-Typ der **geometry** -Instanz, die von `Parse()` zurückgegeben wird, wird auf die entsprechende WKT-Eingabe festgelegt.  
   
  Die Zeichenfolge 'Null' wird als eine NULL- **geometry** -Instanz interpretiert.  

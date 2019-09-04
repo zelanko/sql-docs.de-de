@@ -62,7 +62,7 @@ MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] 
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt einen Wert zurück, der mit *expression* identisch ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  MAX ignoriert alle NULL-Werte.  
  
  MAX gibt NULL zurück, wenn keine Zeile zur Auswahl steht.  

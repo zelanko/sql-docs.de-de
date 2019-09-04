@@ -43,7 +43,7 @@ Gibt den Endpunkt einer **geometry** -Instanz zurück.
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STEndPoint()` entspricht [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
   
  Diese Methode gibt NULL zurück, wenn Sie für eine leere **geometry** -Instanz aufgerufen wird.  

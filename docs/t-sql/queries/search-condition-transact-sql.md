@@ -200,7 +200,7 @@ ms.locfileid: "68027647"
  EXISTS  
  Wird mit einer Unterabfrage verwendet, um Tests im Hinblick auf das Vorhandensein von Zeilen durchzuführen, die von der Unterabfrage zurückgegeben wurden. Weitere Informationen finden Sie unter [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Rangfolge der logischen Operatoren beginnt mit NOT (höchster Operator). Darauf folgt AND und anschließend OR. Mithilfe von Klammern kann diese Rangfolge in einer Suchbedingung überschrieben werden. Die Reihenfolge der Auswertung logischer Operatoren kann variieren, abhängig von den vom Abfrageoptimierer gewählten Optionen. Weitere Informationen zur Verarbeitung von logischen Werten durch logische Operatoren finden Sie unter [AND &#40;Transact-SQL&#41;](../../t-sql/language-elements/and-transact-sql.md), [OR &#40;Transact-SQL&#41;](../../t-sql/language-elements/or-transact-sql.md) und [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  

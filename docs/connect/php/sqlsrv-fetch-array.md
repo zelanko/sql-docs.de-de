@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68015031"
 ---
-# <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
+# <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Gibt die nächste Datenzeile als numerisch indiziertes Array, assoziatives Array oder beides zurück.  
@@ -65,7 +65,7 @@ Wenn eine Datenzeile abgerufen wird, wird ein **Array** zurückgegeben. Wenn kei
   
 Basierend auf dem Wert des *$fetchType* -Parameters, kann das zurückgegebene **Array** ein numerisch indiziertes **Array**, ein assoziatives **Array**oder beides sein. In der Standardeinstellung wird ein **Array** mit numerischen und assoziativen Schlüsseln zurückgegeben. Der Datentyp eines Werts im zurückgegebenen Array wird der PHP-Standarddatentyp sein. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn eine Spalte ohne Namen zurückgegeben wird, ist der assoziative Schlüssel für das Arrayelement eine leere Zeichenfolge (""). Betrachten Sie beispielsweise diese Transact-SQL-Anweisung, die einen Wert in eine Datenbanktabelle einfügt und den vom Server generierten Primärschlüssel abruft:  
   
 ```

@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68094683"
 ---
-# <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
+# <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den Namen der gespeicherten Prozedur oder des Triggers zurück, an der bzw. an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts verursacht wurde.  
@@ -54,14 +54,14 @@ Bei Aufruf in einem CATCH-Block gibt `ERROR_PROCEDURE` den Namen der gespeichert
   
 `ERROR_PROCEDURE` gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `ERROR_PROCEDURE` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
 `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur oder des Triggers, bei der bzw. bei dem ein Fehler auftritt, unabhängig davon zurück, wie oft die Funktion ausgeführt wurde oder wo sie im Bereich des `CATCH`-Blocks ausgeführt wurde. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Verwenden von ERROR_PROCEDURE in einem CATCH-Block  
+### <a name="a-using-error_procedure-in-a-catch-block"></a>A. Verwenden von ERROR_PROCEDURE in einem CATCH-Block  
 Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. `ERROR_PROCEDURE` gibt den Namen der gespeicherten Prozedur zurück, in der der Fehler aufgetreten ist.  
   
 ```  
@@ -98,7 +98,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_PROCEDURE in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
+### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_PROCEDURE in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
 Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. Die gespeicherte Prozedur gibt Informationen zum Fehler zusammen mit dem Namen der gespeicherten Prozedur, in der der Fehler aufgetreten ist, zurück.  
   
 ```  

@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68094655"
 ---
-# <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
+# <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den Wert des Schweregrads für den Fehler zurück, an dem der Fehler auftritt, wenn durch diesen die Ausführung des CATCH-Blocks eines TRY...CATCH-Konstrukts verursacht wurde.  
@@ -50,7 +50,7 @@ Wenn diese Funktion in einem CATCH-Block aufgerufen wird, in dem ein Fehler auft
 
 `ERROR_SEVERITY` gibt NULL zurück, wenn die Funktion außerhalb des Bereichs eines CATCH-Blocks aufgerufen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `ERROR_SEVERITY` kann überall im Bereich eines CATCH-Blocks aufgerufen werden.  
   
 `ERROR_SEVERITY` gibt unabhängig von der Anzahl der Aufrufe und dem Bereich des `CATCH`-Blocks den Wert des Fehlerschweregrads zurück. Dies steht im Gegensatz zu Funktionen wie @@ERROR, die nur eine Fehlernummer in der Anweisung zurückgeben, die unmittelbar auf die Anweisung folgt, die einen Fehler auslöst.  
@@ -59,7 +59,7 @@ Wenn diese Funktion in einem CATCH-Block aufgerufen wird, in dem ein Fehler auft
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="a-using-errorseverity-in-a-catch-block"></a>A. Verwenden von ERROR_SEVERITY in einem CATCH-Block  
+### <a name="a-using-error_severity-in-a-catch-block"></a>A. Verwenden von ERROR_SEVERITY in einem CATCH-Block  
 Dieses Beispiel zeigt eine gespeicherte Prozedur, in der ein Fehler aufgrund einer Division durch 0 (null) generiert wird. `ERROR_SEVERITY` gibt den Wert für den Schweregrad des Fehlers zurück.  
 ```sql  
 BEGIN TRY  
@@ -85,7 +85,7 @@ ErrorSeverity
 
 ```  
   
-### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_SEVERITY in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
+### <a name="b-using-error_severity-in-a-catch-block-with-other-error-handling-tools"></a>B. Verwenden von ERROR_SEVERITY in einem CATCH-Block mit anderen Tools zur Fehlerbehandlung  
 Das folgende Beispiel zeigt eine `SELECT`-Anweisung, die einen Fehler aufgrund einer Division durch 0 (null) generiert. Die gespeicherte Prozedur gibt Informationen über den Fehler zurück.  
 
 ```sql  

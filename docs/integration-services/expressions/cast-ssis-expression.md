@@ -48,7 +48,7 @@ ms.locfileid: "68033987"
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *type_spec*. Weitere Informationen finden Sie unter [Integration Services Datentypen](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Im folgenden Diagramm werden zulässige Umwandlungsvorgänge dargestellt.  
   
  ![Zulässige und unzulässige Umwandlungen zwischen Datentypen](../../integration-services/expressions/media/data-conversion.gif "Zulässige und unzulässige Umwandlungen zwischen Datentypen")  

@@ -42,7 +42,7 @@ Ein **BinaryWriter**-Objekt, in das die binäre Darstellung dieses **hierarchyid
 ## <a name="return-types"></a>Rückgabetypen  
 **CLR-Rückgabetyp: void**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Write wird wenn nötig intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, z.B. beim Schreiben von Daten in die **hierarchyid**-Spalte. Write wird auch intern aufgerufen, wenn eine Konvertierung zwischen **hierarchyid** und **varbinary** ausgeführt wird.
   
 ## <a name="examples"></a>Beispiele  

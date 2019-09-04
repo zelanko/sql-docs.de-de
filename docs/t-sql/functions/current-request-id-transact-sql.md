@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026436"
 ---
-# <a name="currentrequestid-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
+# <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die ID der aktuellen Anforderung innerhalb der aktuellen Sitzung zurück.
@@ -40,7 +40,7 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>Rückgabetypen
 **smallint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie @@SPID, um genaue Informationen über die aktuelle Sitzung zu suchen. Genaue Informationen über die aktuelle Anforderung erhalten Sie über CURRENT_REQUEST_ID().
   
 ## <a name="see-also"></a>Siehe auch

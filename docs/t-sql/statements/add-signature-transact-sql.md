@@ -66,7 +66,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Der Name eines asymmetrischen Schlüssels, mit dem die gespeicherte Prozedur, die Funktion, die Assembly oder der Trigger signiert oder gegensigniert werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Modul, das signiert oder gegensigniert wird, und das Zertifikat oder der asymmetrische Schlüssel, das bzw. der zum Signieren verwendet wird, müssen bereits vorhanden sein. Jedes Zeichen im Modul ist in der Signaturberechnung enthalten. Hierzu gehören auch führende Wagenrückläufe und Zeilenvorschübe.  
   
  Ein Modul kann mit einer beliebigen Anzahl von Zertifikaten und asymmetrischen Schlüsseln signiert oder gegensigniert werden.  

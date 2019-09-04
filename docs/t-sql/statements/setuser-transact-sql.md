@@ -51,7 +51,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Gibt an, dass bei nachfolgenden SETUSER-Anweisungen (ohne Angabe von *username*) die ursprüngliche Identität des Systemadministrators bzw. Datenbankbesitzers nicht wiederhergestellt werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SETUSER kann von einem Mitglied der festen Serverrolle **sysadmin** oder dem Besitzer einer Datenbank verwendet werden, um die Identität eines anderen Benutzers zum Testen der Berechtigungen dieses Benutzers anzunehmen. Die Mitgliedschaft in der festen Datenbankrolle db_owner reicht nicht aus.  
   
  Verwenden Sie SETUSER nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzer. SETUSER wird nicht für Windows-Benutzer unterstützt. Wenn Sie mit SETUSER die Identität eines anderen Benutzers angenommen haben, gehören alle Objekte, die Sie unter seiner Identität erstellen, diesem Benutzer. Wenn der Datenbankbesitzer beispielsweise die Identität der Benutzerin **Margaret** annimmt und eine Tabelle namens **orders** erstellt, gehört diese **orders**-Tabelle der Benutzerin **Margaret** und nicht dem Systemadministrator.  

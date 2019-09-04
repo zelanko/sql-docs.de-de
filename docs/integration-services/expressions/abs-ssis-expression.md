@@ -41,7 +41,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp des numerischen Ausdrucks, der an die Funktion übergeben wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ABS gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  

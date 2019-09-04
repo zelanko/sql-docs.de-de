@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68038609"
 ---
-# <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (SSISDB-Datenbank)
+# <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -60,7 +60,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   Der Vorgang wurde bereits beendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Vorgang im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog darf immer nur von jeweils einem Benutzer beendet werden. Wenn mehrere Benutzer versuchen, den Vorgang zu beenden, gibt die gespeicherte Prozedur beim ersten Versuch Erfolg (der Wert `0`) zurück, bei anschließenden Versuchen wird jedoch ein Fehler ausgelöst.  
   
   

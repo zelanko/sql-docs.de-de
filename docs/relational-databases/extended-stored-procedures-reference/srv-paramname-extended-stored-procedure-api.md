@@ -55,7 +55,7 @@ SRV_PROC * srvproc,intn, int *len );
 ## <a name="returns"></a>Rückgabewert  
  Ein Zeiger auf eine auf NULL endende Zeichenfolge, die den Parameternamen enthält. Die Länge des Parameternamens wird in *len* gespeichert. Wenn es keinen *n*-ten Parameter oder keine remote gespeicherte Prozedur gibt, wird NULL zurückgegeben, *len* wird auf –1 festgelegt, und eine Informationsfehlermeldung wird gesendet. Wenn der Parametername gleich NULL ist, wird *len* auf 0 festgelegt, und es wird eine NULL-terminierte leere Zeichenfolge zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion ruft den Namen des Aufrufparameters einer remote gespeicherten Prozedur ab. Wenn eine remote gespeicherte Prozedur mit Parametern aufgerufen wird, werden die Parameter entweder mit ihrem Namen oder mit ihrer Position übergeben (unbenannt). Werden beim Aufruf einer remote gespeicherten Prozedur einige Parameter über ihren Namen und andere über ihre Position übergeben, so tritt ein Fehler auf. Der SRV_RPC-Handler wird trotzdem aufgerufen, scheinbar jedoch ohne Parameter, und **srv_rpcparams** gibt 0 (null) zurück.  
   
 > [!IMPORTANT]  

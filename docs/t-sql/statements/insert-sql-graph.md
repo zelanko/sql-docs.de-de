@@ -116,7 +116,7 @@ Suchmuster, das der `MATCH`-Klausel als Teil des Graph-Prädikats bereitgestellt
 Benutzer müssen Werte für `$from_id` und `$to_id` angeben, wenn sie etwas in eine Edgetabelle einfügen. Wenn kein Wert angegeben oder NULL in eine dieser Spalten eingefügt wird, wird ein Fehler zurückgegeben. 
   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Das Einfügen in eine Knotentabelle entspricht dem Einfügen in eine relationale Tabelle. Werte für die $node_id-Spalte werden automatisch generiert.
 
 Beim Einfügen in eine Edgetabelle müssen Benutzer Werte für die Spalten `$from_id` und `$to_id` angeben.   

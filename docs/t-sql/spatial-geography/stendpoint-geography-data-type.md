@@ -43,7 +43,7 @@ ms.locfileid: "68042280"
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  STEndPoint() entspricht [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
   
  Diese Methode gibt NULL zurück, wenn Sie für eine leere **geography** -Instanz aufgerufen wird.  

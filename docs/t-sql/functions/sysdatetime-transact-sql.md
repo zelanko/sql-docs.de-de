@@ -57,7 +57,7 @@ SYSDATETIME ( )
 ## <a name="return-type"></a>Rückgabetyp  
  **datetime2(7)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können auf eine beliebige Position von SYSDATETIME verweisen, die auf einen **datetime2(7)** -Ausdruck verweisen kann.  
   
  SYSDATETIME ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die in einer Spalte auf diese Funktion verweisen, können nicht indiziert werden.  

@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68038561"
 ---
-# <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB-Datenbank)
+# <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -95,7 +95,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   In den Paketparametern wird auf Variablen verwiesen, aber in der Überprüfung wurden keine Umgebungen eingeschlossen, auf die verwiesen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Überprüfung vereinfacht das Identifizieren von Problemen, die das erfolgreiche Ausführen des Pakets verhindern. Verwenden Sie die [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)- oder [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)-Sicht, um den Überprüfungszustand zu überwachen.  
   
   

@@ -105,7 +105,7 @@ ms.locfileid: "68141278"
  TIMEOUT *timeout*  
  Gibt in Millisekunden an, wie lange die Anweisung auf eine Nachricht warten soll. Diese Klausel kann nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn die Klausel nicht angegeben wird oder das Timeout den Wert –**1** hat, dann ist die Wartezeit unbegrenzt. Läuft das Timeout ab, gibt RECEIVE ein leeres Resultset zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der RECEIVE-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  

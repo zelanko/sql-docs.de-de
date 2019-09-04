@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68008971"
 ---
-# <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
+# <a name="set-numeric_roundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Gibt an, welche Fehlerberichtsstufe generiert wird, wenn beim Runden in einem Ausdruck Genauigkeitsverluste entstehen.  
@@ -45,7 +45,7 @@ Gibt an, welche Fehlerberichtsstufe generiert wird, wenn beim Runden in einem Au
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn SET NUMERIC_ROUNDABORT auf ON festgelegt ist, wird ein Fehler generiert, wenn ein Genauigkeitsverlust in einem Ausdruck aufgetreten ist. Wenn OFF festgelegt ist, werden keine Fehlermeldungen generiert, wenn ein Genauigkeitsverlust auftritt. Das Ergebnis wird auf die Genauigkeit der Spalte oder Variable gerundet, die das Ergebnis speichert.  
   
 Ein Genauigkeitsverlust entsteht, wenn Sie versuchen einen Wert mit fester Genauigkeit in einer Spalte oder Variablen mit geringerer Genauigkeit zu speichern.  

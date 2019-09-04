@@ -50,7 +50,7 @@ In der folgenden Tabelle werden die Datums- und Uhrzeitdatentypen von [!INCLUDE[
 |Datentyp|Format|Bereich|Genauigkeit|Speichergröße (Bytes)|Benutzerdefinierte Genauigkeit in Sekundenbruchteilen|Zeitzonenoffset|  
 |---|---|---|---|---|---|---|
 |[time](../../t-sql/data-types/time-transact-sql.md)|hh:mm:ss[.nnnnnnn]|00:00:00.0000000 bis 23:59:59.9999999|100 Nanosekunden|3 bis 5|Ja|Nein|  
-|[Datum](../../t-sql/data-types/date-transact-sql.md)|JJJJ-MM-TT|0001-01-01 bis 9999-12-31|1 Tag|3|Nein|Nein|  
+|[date](../../t-sql/data-types/date-transact-sql.md)|JJJJ-MM-TT|0001-01-01 bis 9999-12-31|1 Tag|3|Nein|Nein|  
 |[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss|1900-01-01 bis 2079-06-06|1 Minute|4|Nein|Nein|  
 |[datetime](../../t-sql/data-types/datetime-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnn]|1753-01-01 bis 9999-12-31|0,00333 Sekunden|8|Nein|Nein|  
 |[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|0001-01-01 00:00:00.0000000 bis 9999-12-31 23:59:59.9999999|100 Nanosekunden|6 bis 8|Ja|Nein|  
@@ -96,7 +96,7 @@ In den folgenden Tabellen werden die Datums- und Uhrzeitfunktionen von [!INCLUDE
   
 |Funktion|Syntax|Rückgabewert|Rückgabedatentyp|Determinismus|  
 |---|---|---|---|---|
-|[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Gibt einen **date**-Wert für das angegebene Jahr, den Monat und den Tag zurück.|**Datum**|Deterministisch|  
+|[DATEFROMPARTS](../../t-sql/functions/datefromparts-transact-sql.md)|DATEFROMPARTS  ( *year*, *month*, *day* )|Gibt einen **date**-Wert für das angegebene Jahr, den Monat und den Tag zurück.|**date**|Deterministisch|  
 |[DATETIME2FROMPARTS](../../t-sql/functions/datetime2fromparts-transact-sql.md)|DATETIME2FROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *precision*)|Gibt einen **datetime2**-Wert für das angegebene Datum und die angegebene Uhrzeit mit der angegebenen Genauigkeit zurück.|**datetime2(** _precision_ **)**|Deterministisch|  
 |[DATETIMEFROMPARTS](../../t-sql/functions/datetimefromparts-transact-sql.md)|DATETIMEFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *milliseconds*)|Gibt einen **datetime**-Wert für das angegebene Datum und die Uhrzeit zurück.|**datetime**|Deterministisch|  
 |[DATETIMEOFFSETFROMPARTS](../../t-sql/functions/datetimeoffsetfromparts-transact-sql.md)|DATETIMEOFFSETFROMPARTS  ( *year*, *month*, *day*, *hour*, *minute*, *seconds*, *fractions*, *hour_offset*, *minute_offset*, *precision*)|Gibt einen **datetimeoffset**-Wert für das angegebene Datum und die angegebene Uhrzeit mit dem angegebenen Offset und der angegebenen Genauigkeit zurück.|**datetimeoffset(** _Genauigkeit_ **)**|Deterministisch|  

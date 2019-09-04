@@ -45,7 +45,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instan
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zwei **geometry** -Instanzen überkreuzen sich, wenn die beiden folgenden Bedingungen zutreffen:  
   
 -   Die Schnittmenge zweier **geometry** -Instanzen ergeben eine geometry-Instanz, deren Dimensionen kleiner sind als die maximalen Dimensionen der **geometry** -Quellinstanzen.  

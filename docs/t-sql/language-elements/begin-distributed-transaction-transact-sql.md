@@ -57,7 +57,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  Der Name einer benutzerdefinierten Variablen, die einen Transaktionsnamen enthält. Mithilfe dieses Namens wird die verteilte Transaktion in den MS DTC-Hilfsprogrammen nachverfolgt. Die Variable muss mit einem der folgenden Datentypen deklariert werden: **char**, **varchar**, **nchar** oder **nvarchar**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], die die BEGIN DISTRIBUTED TRANSACTION-Anweisung ausführt, wird als Transaktionsurheber bezeichnet und steuert den Abschluss der Transaktion. Wenn im Anschluss eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung für die Sitzung ausgegeben wird, fordert die steuernde Instanz MS DTC auf, die Beendigung der verteilten Transaktion auf allen beteiligten Instanzen zu verwalten.  
   
  Die Momentaufnahmeisolation auf Transaktionsebene unterstützt keine verteilten Transaktionen.  

@@ -50,7 +50,7 @@ END
  { *sql_statement* | *statement_block* }  
  Eine beliebige gültige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder -Anweisungsgruppierung, die mithilfe eines Anweisungsblockes definiert ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  BEGIN...END-Blöcke können geschachtelt werden.  
   
  Obwohl sämtliche [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem BEGIN...END-Block gültig sind, sollten bestimmte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht in demselben Batch oder Anweisungsblock gruppiert werden.  

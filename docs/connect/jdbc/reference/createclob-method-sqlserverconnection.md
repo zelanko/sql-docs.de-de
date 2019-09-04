@@ -35,7 +35,7 @@ public java.sql.Clob createClob()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode "kreateclob" wird von der Methode "Methode" in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Diese Methode ersetzt den Bedarf an [SQLServerClob-Konstruktor &#40;SQLServerConnection, Java. lang.&#41;String](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md).  

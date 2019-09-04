@@ -126,7 +126,7 @@ CREATE QUEUE <object>
  ON *filegroup |* [**DEFAULT**]  
  Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dateigruppe an, in der diese Warteschlange erstellt werden soll. Sie können mit dem *filegroup*-Parameter eine Dateigruppe identifizieren oder mit dem DEFAULT-Bezeichner die Standarddateigruppe für die Service Broker-Datenbank verwenden. Im Kontext dieser Klausel ist DEFAULT kein Schlüsselwort und muss als Bezeichner begrenzt sein. Wird keine Dateigruppe angegeben, verwendet die Warteschlange die Standarddateigruppe für die Datenbank.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine Warteschlange kann das Ziel einer SELECT-Anweisung sein. Der Inhalt einer Warteschlange kann jedoch nur mithilfe von Anweisungen geändert werden, die für [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen verwendet werden, wie beispielsweise SEND, RECEIVE und END CONVERSATION. Eine Warteschlange kann nicht das Ziel einer INSERT-, UPDATE-, DELETE- oder TRUNCATE-Anweisung sein.  
   
  Eine Warteschlange ist möglicherweise kein temporäres Objekt. Daher sind Warteschlangennamen, die mit **#** beginnen, ungültig.  

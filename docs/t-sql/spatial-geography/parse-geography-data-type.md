@@ -45,7 +45,7 @@ Parse ( 'geography_tagged_text' )
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der OGC-Typ der **geography** -Instanz, die von `Parse()` zurückgegeben wird, wird auf die entsprechende WKT-Eingabe festgelegt.  
   
  Die Zeichenfolge 'Null' wird als eine NULL- **geography** -Instanz interpretiert.  

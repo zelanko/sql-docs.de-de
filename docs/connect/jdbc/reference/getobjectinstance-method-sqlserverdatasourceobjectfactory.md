@@ -60,7 +60,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getObjectInstance-Methode wird durch die getObjectInstance-Methode in der javax. naming. SPI. objectfactory-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

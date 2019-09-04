@@ -45,7 +45,7 @@ Gibt eine angegebene geometry-Instanz in einer **geometry-Collection** zurück.
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt **NULL** zurück, wenn der Parameter größer als das Ergebnis von `STNumGeometries()` ist und löst eine **ArgumentOutOfRangeException** aus, wenn der *expression*-Parameter kleiner als 1 ist.  
   
 ## <a name="examples"></a>Beispiele  

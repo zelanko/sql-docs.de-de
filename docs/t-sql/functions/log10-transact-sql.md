@@ -48,7 +48,7 @@ LOG10 ( float_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Funktionen LOG10 und POWER sind ihre gegenseitigen Umkehrfunktionen. Beispiel: 10 ^ LOG10(*n*) = *n*.  
   
 ## <a name="examples"></a>Beispiele  

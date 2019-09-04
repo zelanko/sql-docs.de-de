@@ -62,7 +62,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>Rückgabetyp  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ISDATE ist nur deterministisch bei Verwendung mit der [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)-Funktion, wenn der style-Parameter von CONVERT angegeben wird und „style“ nicht den Wert 0, 100, 9 oder 109 aufweist.  
   
  Der Rückgabewert von ISDATE hängt von den Einstellungen ab, die durch [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und die Option [Konfigurieren der Serverkonfigurationsoption Standardsprache](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) festgelegt werden.  

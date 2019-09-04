@@ -87,7 +87,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  WITH \<index_options> Informationen zu den Indexoptionen finden Sie unter [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In jeder XML-Spalte der Basistabelle kann es mehrere sekundäre selektive XML-Indizes geben.  
   
 ## <a name="limitations-and-restrictions"></a>Einschränkungen  

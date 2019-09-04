@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68132813"
 ---
-# <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+# <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt an, ob eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung Element der angegebenen Serverrolle ist.  
@@ -66,7 +66,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |1|*login* ist ein Mitglied von *role*.|  
 |NULL|*role* oder *login* ist nicht gültig, oder Sie verfügen über keine Berechtigung zum Anzeigen der Rollenmitgliedschaft.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit IS_SRVROLEMEMBER legen Sie fest, ob der aktuelle Benutzer eine Aktion ausführen kann, für die die Berechtigungen der Serverrolle erforderlich sind.  
   
  Wenn eine Windows-Anmeldung wie Contoso\Mary5 für *login* angegeben wird, gibt **IS_SRVROLEMEMBER** den Wert **NULL** zurück, falls der Anmeldung der direkte Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht erteilt oder verweigert wurde.  

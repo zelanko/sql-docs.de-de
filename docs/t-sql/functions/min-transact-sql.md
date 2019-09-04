@@ -63,7 +63,7 @@ MIN ( [ ALL ] expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> 
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt einen Wert zurück, der mit *expression* identisch ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  MIN ignoriert alle NULL-Werte.  
   
  Bei Zeichendatenspalten findet MIN den kleinsten Wert gemäß der Sortierreihenfolge.  

@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68105023"
 ---
-# <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
+# <a name="checksum_agg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die Prüfsumme der Werte in einer Gruppe zurück. `CHECKSUM_AGG` ignoriert NULL-Werte. Die [OVER-Klausel](../../t-sql/queries/select-over-clause-transact-sql.md) kann `CHECKSUM_AGG` folgen.
@@ -52,7 +52,7 @@ Ein [Integerausdruck](../../t-sql/language-elements/expressions-transact-sql.md)
 ## <a name="return-types"></a>Rückgabetypen
 Gibt die Prüfsumme aller *Ausdruckswerte* als **int** zurück.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `CHECKSUM_AGG` kann Änderungen in einer Tabelle erkennen.
   
 Das `CHECKSUM_AGG`-Ergebnis hängt nicht von der Reihenfolge der Zeilen in der Tabelle ab. Zudem lassen `CHECKSUM_AGG`-Funktionen das Verwenden des Schlüsselworts `DISTINCT` und der Klausel `GROUP BY` zu.

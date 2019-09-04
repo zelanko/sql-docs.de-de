@@ -40,7 +40,7 @@ public javax.transaction.xa.XAResource getXAResource()
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getXAResource-Methode wird von der getXAResource-Methode in der javax. SQL. xaconnetction-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

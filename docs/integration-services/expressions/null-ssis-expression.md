@@ -41,7 +41,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Ergebnistypen  
  Ein beliebiger gültiger Datentyp mit einem NULL-Wert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  NULL gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Parameter sind erforderlich, um einen NULL-Wert für bestimmte Datentypen anzufordern. In der folgenden Tabelle sind diese Datentypen und die zugehörigen Parameter aufgelistet.  

@@ -61,7 +61,7 @@ Ein **bit** , das angibt, ob der _tolerance_ -Wert relativ oder absolut ist. Wen
   
 CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Diese Methode löst eine **ArgumentException** aus, wenn _distance_ keine Zahl (NAN) oder wenn _distance_ positiv oder negativ unendlich ist.  Diese Methode löst auch dann eine **ArgumentException** aus, wenn _tolerance_ Null (0), keine Zahl (NAN), negativ oder positiv oder negativ unendlich ist.  
   
 `STBuffer()` gibt in bestimmten Fällen eine Instanz von **FullGlobe** zurück. Beispielsweise gibt `STBuffer()` eine **FullGlobe**-Instanz für zwei Pole zurück, wenn der Pufferabstand größer als der Abstand vom Äquator zu den Polen ist.  

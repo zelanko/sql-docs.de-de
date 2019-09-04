@@ -53,7 +53,7 @@ Ein **hierarchyid**-Wert, der den Knoten darstellt. Ersetzen Sie den _OldRoot_ A
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wird verwendet, um die Struktur durch Verschieben von Knoten von _oldRoot_ nach _newRoot_ zu ändern. „GetReparentedValue“ wird zum Verschieben eines Hierarchieknotens an eine neue Position in der Hierarchie verwendet. Der **hierarchyid**-Datentyp stellt die hierarchische Struktur dar, setzt sie jedoch nicht durch. Benutzer müssen sicherstellen, dass der hierarchyid-Wert für die neue Position angemessen strukturiert ist. Mit einem eindeutigen Index für den **hierarchyid**-Datentyp können Sie doppelte Einträge vermeiden. Ein Beispiel für die Verschiebung einer vollständigen Teilstruktur finden Sie unter [Hierarchische Daten &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Beispiele  

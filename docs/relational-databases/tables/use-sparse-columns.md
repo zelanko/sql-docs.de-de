@@ -86,7 +86,7 @@ ms.locfileid: "68140357"
 |**smalldatetime**|4|8|64%|  
 |**datetime**|8|12|52%|  
 |**uniqueidentifier**|16|20|43%|  
-|**Datum**|3|7|69%|  
+|**date**|3|7|69%|  
   
  **Datentypen mit von der Genauigkeit abhängiger Länge**  
   

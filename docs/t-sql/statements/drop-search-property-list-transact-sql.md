@@ -50,7 +50,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können keine Sucheigenschaftenliste aus einer Datenbank löschen, während diese einem Volltextindex zugeordnet ist. Um eine Sucheigenschaftenliste aus einem angegebenen Volltextindex zu löschen, geben Sie die [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)-Anweisung und die SET SEARCH PROPERTY LIST-Klausel mit OFF oder dem Namen einer anderen Sucheigenschaftenliste an.  
   
  **Anzeigen der Eigenschaftenlisten auf einer Serverinstanz**  

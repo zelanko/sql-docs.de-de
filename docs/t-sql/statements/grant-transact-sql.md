@@ -119,7 +119,7 @@ Das Verwenden der AS-Klausel wird üblicherweise nicht empfohlen, sofern Sie nic
 
 In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die Identität eines anderen Benutzers anzunehmen. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die vollständige Syntax der GRANT-Anweisung ist sehr komplex. Das Syntaxdiagramm oben wurde vereinfacht, um die Struktur hervorzuheben. Die vollständige Syntax für das Erteilen von Berechtigungen für spezifische sicherungsfähige Elemente wird in den unten aufgeführten Artikeln beschrieben.  
   
  Die REVOKE-Anweisung kann zum Entfernen von erteilten Berechtigungen verwendet werden, und mit der DENY-Anweisung kann verhindert werden, dass einem Prinzipal eine spezifische Berechtigung durch eine GRANT-Anweisung erteilt wird.  

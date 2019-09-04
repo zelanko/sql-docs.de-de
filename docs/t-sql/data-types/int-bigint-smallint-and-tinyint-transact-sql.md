@@ -47,7 +47,7 @@ Exakte Zahlendatentypen für ganzzahlige Daten. Wenn Sie Speicherplatz in der Da
 |**smallint**|-2^15 (-32,768) bis 2^15-1 (32,767)|2 Byte|  
 |**tinyint**|0 bis 255|1 Byte|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Der **int**-Datentyp ist der primäre Integerdatentyp in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der **bigint**-Datentyp ist für Fälle bestimmt, in denen ganzzahlige Werte den durch den **int**-Datentyp unterstützten Bereich überschreiten.
   
 **bigint** passt zwischen **smallmoney** und **int** in der Rangfolge der Datentypen.

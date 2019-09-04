@@ -58,7 +58,7 @@ Sie können auf den Plan für aktive Abfragen auch über den **[Aktivitätsmonit
   
  ![Schaltfläche „Live-Abfragestatistik“ im Aktivitätsmonitor](../../relational-databases/performance/media/livequerystatsactmon.png "Schaltfläche „Live-Abfragestatistik“ im Aktivitätsmonitor")  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Infrastruktur des Statistikprofils muss aktiviert sein, bevor die Live-Abfragestatistik Informationen zum Status von Abfragen erfassen kann. Abhängig von der Version kann der Mehraufwand erheblich sein. Weitere Informationen zu diesem Mehraufwand finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67914535"
 ---
-# <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
+# <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Anmeldenamen zurück, der eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hergestellt hat. Mit dieser Funktion können Sie die Identität des ursprünglichen Anmeldenamens in Sitzungen zurückgeben, in denen zahlreiche explizite oder implizite Kontextwechsel vorkommen.  
@@ -45,7 +45,7 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>Rückgabetypen  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion kann sich bei der Überwachung der Identität des ursprünglichen Verbindungskontexts als nützlich erweisen. Während Funktionen wie [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) und [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) den aktuellen Ausführungskontext zurückgeben, gibt ORIGINAL_LOGIN die Identität des Anmeldenamens zurück, mit dem die erste Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der Sitzung hergestellt wurde.  
  
   

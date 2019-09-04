@@ -58,7 +58,7 @@ _size_ ist die Anzahl von Bytes bei Verwendung des Datentyps **text** oder **ima
 HOLDLOCK  
 Bewirkt, dass der Textwert bis zum Ende der Transaktion gesperrt wird und nur gelesen werden kann. Andere Benutzer können den Wert lesen, aber nicht ändern.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie die Funktion [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md), um einen gültigen _text\_ptr_-Wert abzurufen. TEXTPTR gibt einen Zeiger auf die **text**-, **ntext**- oder **image**-Spalte in der angegebenen Zeile zurück. TEXTPRT kann auch einen Zeiger auf die **text**-, **ntext**- oder **image**-Spalte in der letzten Zeile zurückgeben, die von der Abfrage zurückgegeben wird, wenn mehrere Zeilen zurückgegeben werden. Da TEXTPTR eine 16 Bytes große binäre Zeichenfolge zurückgibt, ist es empfehlenswert, eine lokale Variable für den Textzeiger zu deklarieren und dann die Variable mit READTEXT einzusetzen. Weitere Informationen zum Deklarieren einer lokalen Variablen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es möglicherweise Textzeiger in Zeilen, die jedoch ungültig sind. Weitere Informationen zur Option **text in row** finden Sie unter [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Weitere Informationen dazu, wie Textzeiger ungültig gemacht werden können, finden Sie unter [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  

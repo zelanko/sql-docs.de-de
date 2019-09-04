@@ -39,7 +39,7 @@ Wenn durch einen Operator Ausdrücke verschiedener Datentypen kombiniert werden,
 1.  **datetime2**  
 1.  **datetime**  
 1.  **smalldatetime**  
-1.  **Datum**  
+1.  **date**  
 1. **time**  
 1. **float**  
 1. **real**  

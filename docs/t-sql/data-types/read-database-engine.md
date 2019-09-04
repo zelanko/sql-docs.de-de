@@ -42,7 +42,7 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>Rückgabetypen
  **CLR-Rückgabetyp: void**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Read überprüft seine Eingabe nicht. Wenn eine ungültige binäre Eingabe gegeben wird, löst Read möglicherweise eine Ausnahme aus. Oder der Vorgang ist erfolgreich und erzeugt ein ungültiges **SqlHierarchyId**-Objekt, dessen Methoden zu unvorhersagbaren Ergebnissen führen oder eine Ausnahme auslösen können.  
   
  Read kann nur für ein neu erstelltes **SqlHierarchyId**-Objekt aufgerufen werden.  

@@ -49,7 +49,7 @@ ms.locfileid: "68042527"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  STBuffer() berechnet einen Puffer auf die gleiche Weise wie [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), wobei *Toleranz* = abs(distance) \* 0,001 und *relativ* = **false** ist.  
   
  Ein negativer Puffer entfernt alle Punkte innerhalb des angegebenen Abstands von der Begrenzung der **geography**-Instanz.  

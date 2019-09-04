@@ -59,7 +59,7 @@ ms.locfileid: "67943037"
   
  **bit**, wenn die Eingabewerte vom Typ **bit** sind  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit dem bitweisen **~** -Operator wird ein bitweises logisches NOT für *expression* durchgeführt, indem jedes Bit abgearbeitet wird. Wenn *expression* den Wert 0 (null) besitzt, wird für die Bits im Resultset 1 festgelegt. Andernfalls wird das Bit im Ergebnis gelöscht auf 0 (null) festgelegt. Mit anderen Worten, Einsen werden zu Nullen und Nullen werden zu Einsen geändert.  
   
 > [!IMPORTANT]  

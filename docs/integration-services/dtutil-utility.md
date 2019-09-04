@@ -128,7 +128,7 @@ dtutil /option [value] [/option [value]]...
 |5|Das Hilfsprogramm konnte das angeforderte Paket nicht laden.|  
 |6|Das Hilfsprogramm konnte die Befehlszeile nicht auflösen, da sie syntaktische oder semantische Fehler enthielt.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Es ist nicht möglich, Befehlsdateien oder Umleitungen für **dtutil**zu verwenden.  
   
  Die Reihenfolge der Optionen in der Befehlszeile ist unerheblich.  

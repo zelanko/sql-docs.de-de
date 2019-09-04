@@ -88,7 +88,7 @@ Gibt an, dass die Sicherheitsrichtlinie nicht ausgeführt werden soll, wenn ein 
 table_schema_name.table_name  
 Die Zieltabelle für das angewendete Sicherheitsprädikat. Mehrere deaktivierte Sicherheitsrichtlinien können auf eine einzelne Tabelle abzielen, aber zu jedem Zeitpunkt kann nur eine aktiviert werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die ALTER SECURITY POLICY-Anweisung liegt im Bereich einer Transaktion. Wird ein Rollback für die Transaktion ausgeführt, so wird auch für die Anweisung ein Rollback durchgeführt.  
   
 Wenn Sie Prädikatfunktionen mit speicheroptimierten Tabellen verwenden, müssen die Sicherheitsrichtlinien **SCHEMABINDING** umfassen und den Kompilierungshinweis **WITH NATIVE_COMPILATION** verwenden. Das SCHEMABINDING-Argument kann nicht mit der ALTER-Anweisung geändert werden, da es auf alle Prädikate angewendet wird. Zum Ändern der Schemabindung müssen Sie die Sicherheitsrichtlinie löschen und neu erstellen.  

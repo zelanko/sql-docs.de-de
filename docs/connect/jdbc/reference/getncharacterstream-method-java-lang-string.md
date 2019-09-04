@@ -40,7 +40,7 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode sollte verwendet werden, wenn auf **NCHAR**-, **nvarchar** -und **LONGNVARCHAR** -Parameter zugegriffen wird.  
   
  Diese getncharakteristream-Methode wird von der getncharakteristream-Methode in der Java. SQL. CallableStatement-Schnittstelle angegeben.  

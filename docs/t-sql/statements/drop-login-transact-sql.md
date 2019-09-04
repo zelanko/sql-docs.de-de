@@ -46,7 +46,7 @@ DROP LOGIN login_name
  *login_name*  
  Gibt den Namen des zu löschenden Anmeldenamens an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine Anmeldung kann nicht gelöscht werden, während sie angemeldet ist. Eine Anmeldung, die der Besitzer eines sicherungsfähigen Elements, eines Objekts auf Serverebene oder eines SQL Server-Agentauftrags ist, kann nicht gelöscht werden.  
   
  Ein Anmeldename, dem Datenbankbenutzer zugeordnet sind, kann gelöscht werden. Dabei werden jedoch verwaiste Benutzer erstellt. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus.  

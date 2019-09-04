@@ -40,7 +40,7 @@ public final int getMaxRows()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getMaxRows-Methode wird von der getMaxRows-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
  Die getMaxRows-Methode gibt für dynamische, scrollfähige Cursor immer 0 zurück.  

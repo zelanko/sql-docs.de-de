@@ -54,7 +54,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ## <a name="return-types"></a>Rückgabetypen  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Falls die Anzahl der Zeilen in einer Partition nicht durch den *integer_expression*-Wert geteilt werden kann, führt dies zu Gruppen mit zwei unterschiedlichen Größen, die sich um ein Element unterscheiden. Größere Gruppen stehen vor kleineren Gruppen in der von der OVER-Klausel angegebenen Reihenfolge. Wenn die Gesamtanzahl der Zeilen z. B. 53 beträgt und fünf Gruppen verwendet werden, enthalten die ersten drei Gruppen 11 Zeilen und die beiden anderen Gruppen jeweils 10 Zeilen. Falls jedoch die Gesamtanzahl der Zeilen durch die Anzahl von Gruppen teilbar ist, werden die Zeilen gleichmäßig auf die Gruppen verteilt. Wenn z. B. insgesamt 50 Zeilen und fünf Gruppen vorhanden sind, enthält jeder Bucket 10 Zeilen.  
   
  NTILE ist nicht deterministisch. Weitere Informationen finden Sie unter [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

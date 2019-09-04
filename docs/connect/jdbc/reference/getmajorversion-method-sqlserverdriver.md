@@ -37,7 +37,7 @@ public int getMajorVersion()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Typ **int** mit der Hauptversionsnummer des JDBC-Treibers.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getMajorVersion-Methode wird von der getMajorVersion-Methode in der Java. SQL. Driver-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

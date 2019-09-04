@@ -36,7 +36,7 @@ public boolean isSparseColumnSet(int column)
 ## <a name="return-value"></a>Rückgabewert  
  **true** , wenn eine Spalte in einem Resultset ein sparsespaltensatz ist, andernfalls **false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode ruft keine Informationen aus der Datenbank ab.  
   
 ## <a name="see-also"></a>Weitere Informationen  

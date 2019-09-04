@@ -58,7 +58,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  Der OLE DB Treiber für SQL Server konnte nicht genügend Arbeitsspeicher zuordnen, um die Anforderung abzuschließen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der OLE DB Driver for SQL Server teilt Arbeitsspeicher für die SSERRORINFO- und die OLECHAR-Zeichenfolgen zu, die durch die Zeiger zurückgegeben werden, die vom Consumer übergeben werden. Der Consumer muss diesen Arbeitsspeicher mithilfe der **IMalloc::Free** -Methode freigeben, wenn er keinen Zugriff auf die Fehlerdaten mehr benötigt.  
   
  Die SSERRORINFO-Struktur ist folgendermaßen definiert:  

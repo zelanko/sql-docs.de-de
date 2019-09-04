@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68117601"
 ---
-# <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
+# <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die SID (Sicherheits-ID) für den angegebenen Anmeldenamen zurück.  
@@ -59,7 +59,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SUSER_SID kann als DEFAULT-Einschränkung in ALTER TABLE oder CREATE TABLE verwendet werden. SUSER_SID kann in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Auf SUSER_SID müssen immer Klammern folgen, selbst wenn kein Parameter angegeben wird.  
   
  Bei einem Aufruf ohne Argument gibt SUSER_SID die SID des aktuellen Sicherheitskontexts zurück. Bei einem Aufruf ohne Argument innerhalb eines Batches, bei dem der Kontext mithilfe von EXECUTE AS gewechselt wurde, gibt SUSER_SID die SID des Kontexts an, dessen Identität angenommen wurde. Wenn SUSER_SID(ORIGINAL_LOGIN()) aus einem Kontext aufgerufen wird, dessen Identität angenommen wurde, wird die SID des ursprünglichen Kontexts zurückgegeben.  
@@ -70,14 +70,14 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-susersid"></a>A. Verwenden von SUSER_SID  
+### <a name="a-using-suser_sid"></a>A. Verwenden von SUSER_SID  
  Im folgenden Beispiel wird die Sicherheits-ID (SID) für den aktuellen Sicherheitskontext zurückgegeben.  
   
 ```  
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>B. Verwenden von SUSER_SID mit bestimmten Anmeldedaten  
+### <a name="b-using-suser_sid-with-a-specific-login"></a>B. Verwenden von SUSER_SID mit bestimmten Anmeldedaten  
  Im folgenden Beispiel wird die Sicherheits-ID für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`-Anmeldenamen zurückgegeben.  
   
 **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -87,7 +87,7 @@ SELECT SUSER_SID('sa');
 GO  
 ```  
   
-### <a name="c-using-susersid-with-a-windows-user-name"></a>C. Verwenden von SUSER_SID mit einem Windows-Benutzernamen  
+### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. Verwenden von SUSER_SID mit einem Windows-Benutzernamen  
  Im folgenden Beispiel wird die Sicherheits-ID für den Windows-Benutzer `London\Workstation1` zurückgegeben.  
   
 **Gilt für** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -97,7 +97,7 @@ SELECT SUSER_SID('London\Workstation1');
 GO  
 ```  
   
-### <a name="d-using-susersid-as-a-default-constraint"></a>D. Verwenden von SUSER_SID als DEFAULT-Einschränkung  
+### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. Verwenden von SUSER_SID als DEFAULT-Einschränkung  
  Im folgenden Beispiel wird `SUSER_SID` als `DEFAULT`-Einschränkung in einer `CREATE TABLE`-Anweisung verwendet.  
   
 ```  

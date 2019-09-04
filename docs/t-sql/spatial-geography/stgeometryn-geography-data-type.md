@@ -44,7 +44,7 @@ ms.locfileid: "68042264"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt NULL zurück, wenn der Parameter größer als das Ergebnis von [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) ist und löst eine **ArgumentOutOfRangeException** aus, wenn der *expression*-Parameter kleiner als 1 ist.  
   
 ## <a name="examples"></a>Beispiele  

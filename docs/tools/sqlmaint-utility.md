@@ -228,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Wird nur *number* angegeben, wird **weeks**als standardmäßiges Datumsteil verwendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Hilfsprogramm **sqlmaint** führt Wartungsvorgänge für eine oder mehrere Datenbanken aus. Wenn **-D** angegeben wird, werden die Vorgänge, die mit den verbleibenden Schaltern angegeben werden, nur für die angegebene Datenbank ausgeführt. Wenn **-PlanName** oder **-PlanID** angegeben wird, ruft **sqlmaint** aus dem angegebenen Wartungsplan nur die Liste der Datenbanken im Plan ab. Alle in den verbleibenden **sqlmaint** -Parametern angegebenen Vorgänge werden für jede Datenbank in der Liste ausgeführt, die aus dem Plan abgerufen wurde. Das Hilfsprogramm **sqlmaint** wendet keine der im Plan selbst definierten Wartungsaktivitäten an.  
   
  Das Hilfsprogramm **sqlmaint** gibt bei erfolgreicher Ausführung 0 und bei Auftreten eines Fehlers 1 zurück. Ein Fehler wird in folgenden Fällen gemeldet:  

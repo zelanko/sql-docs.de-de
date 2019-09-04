@@ -23,7 +23,7 @@ ms.locfileid: "69028189"
 
   Weitere Informationen zu [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] und zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Entwicklung im Allgemeinen finden Sie in den folgenden Onlineressourcen:  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 |Ressource|und Beschreibung|  
 |--------------|-----------------|  

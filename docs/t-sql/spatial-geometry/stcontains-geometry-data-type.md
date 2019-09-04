@@ -45,7 +45,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instan
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STContains()` gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry**-Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  

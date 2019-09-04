@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026309"
 ---
-# <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
+# <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den Namen des aktuellen Benutzers zurück. Diese Funktion ist gleichbedeutend mit `USER_NAME()`.
@@ -45,14 +45,14 @@ CURRENT_USER
 ## <a name="return-types"></a>Rückgabetypen
 **sysname**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `CURRENT_USER` gibt den Namen des aktuellen Sicherheitskontexts zurück. Wird `CURRENT_USER` ausgeführt, nachdem der Kontext über einen Aufruf von `EXECUTE AS` gewechselt wurde, gibt `CURRENT_USER` den Namen des gewechselten Identitätskontexts zurück. Falls ein Windows-Prinzipal über eine Mitgliedschaft in einer Gruppe auf die Datenbank zugegriffen hat, gibt `CURRENT_USER` den Namen des Windows-Prinzipals anstelle des Gruppennamens zurück.
   
 Weitere Informationen dazu, wie der Anmeldename des aktuellen Benutzers zurückgegeben werden kann, finden Sie unter [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) und [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-currentuser-to-return-the-current-user-name"></a>A. Verwenden von CURRENT_USER zur Rückgabe des aktuellen Benutzernamens  
+### <a name="a-using-current_user-to-return-the-current-user-name"></a>A. Verwenden von CURRENT_USER zur Rückgabe des aktuellen Benutzernamens  
 In diesem Beispiel wird der Name des aktuellen Benutzers zurückgegeben.
   
 ```sql
@@ -60,7 +60,7 @@ SELECT CURRENT_USER;
 GO  
 ```  
   
-### <a name="b-using-currentuser-as-a-default-constraint"></a>B. Verwenden von CURRENT_USER als DEFAULT-Einschränkung  
+### <a name="b-using-current_user-as-a-default-constraint"></a>B. Verwenden von CURRENT_USER als DEFAULT-Einschränkung  
 In diesem Beispiel wird eine Tabelle erstellt, die `CURRENT_USER` als `DEFAULT`-Einschränkung für die `order_person`-Spalte in einer Zeile mit Verkaufszahlen verwendet.
   
 ```sql
@@ -109,7 +109,7 @@ order_id    cust_id     order_date           order_amt    order_person
 (1 row(s) affected)
 ```
   
-### <a name="c-using-currentuser-from-an-impersonated-context"></a>C. Verwenden von CURRENT_USER aus einem Kontext, dessen Identität angenommen wurde  
+### <a name="c-using-current_user-from-an-impersonated-context"></a>C. Verwenden von CURRENT_USER aus einem Kontext, dessen Identität angenommen wurde  
 In diesem Beispiel führt die Benutzerin `Wanida` den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code aus, um sich als Benutzer „Arnalfo“ auszugeben.
   
 ```sql

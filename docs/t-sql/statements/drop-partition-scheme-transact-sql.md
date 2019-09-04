@@ -46,7 +46,7 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  *partition_scheme_name*  
  Der Name des zu löschenden Partitionsschemas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Partitionsschema kann nur gelöscht werden, wenn das Partitionsschema zurzeit nicht von Tabellen oder Indizes verwendet wird. Falls Tabellen oder Indizes das Partitionsschema verwenden, gibt DROP PARTITION SCHEME einen Fehler zurück. Die Dateigruppen selbst werden mit DROP PARTITION SCHEME nicht entfernt.  
   
 ## <a name="permissions"></a>Berechtigungen  

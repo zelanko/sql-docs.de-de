@@ -74,7 +74,7 @@ ms.locfileid: "68084414"
  TIMEOUT *timeout*  
  Gibt die Zeitdauer (in Millisekunden) an, die Service Broker auf das Eintreffen einer Nachricht in der Warteschlange wartet. Diese Klausel darf nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn eine Anweisung, die WAITFOR verwendet, diese Klausel nicht einschließt, oder wenn *timeout* den Wert -1 aufweist, unterliegt die Wartezeit keiner Begrenzung. Nach Ablauf des Timeouts legt GET CONVERSATION GROUP den Wert der *@conversation_group_id* -Variablen auf NULL fest.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Falls die GET CONVERSATION GROUP-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorherige Anweisung mit einem Semikolon ( **;** ) enden, dem Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  

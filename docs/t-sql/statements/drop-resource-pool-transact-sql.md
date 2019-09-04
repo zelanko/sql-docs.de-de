@@ -43,7 +43,7 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  Der Name eines vorhandenen benutzerdefinierten Ressourcenpools.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ressourcenpools mit Arbeitsauslastungsgruppen können nicht gelöscht werden.  
   
  Standardpools oder interne Pools der Ressourcenkontrolle können nicht gelöscht werden.  

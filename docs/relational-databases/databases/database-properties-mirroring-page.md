@@ -139,7 +139,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Aktualisieren**  
  Klicken Sie auf diese Schaltfläche, um das Feld **Status** zu aktualisieren.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie sich mit Datenbankspiegelung nicht auskennen, finden Sie Informationen unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Hinzufügen eines Zeugen zu einer vorhandenen Sitzung  

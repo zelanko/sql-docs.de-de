@@ -55,7 +55,7 @@ dividend % divisor
 ## <a name="result-types"></a>Ergebnistypen  
  Die Ergebnistypen werden von den Datentypen der beiden Argumente bestimmt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können den arithmetischen Operator Modulo mit jeder Kombination aus Spaltennamen, numerischen Konstanten oder einem gültigen Ausdruck aus den Datentypkategorien für Ganzzahlen oder Währungen oder dem Datentyp **numeric** in der SELECT-Liste der SELECT-Anweisung verwenden.  
   
 ## <a name="examples"></a>Beispiele  

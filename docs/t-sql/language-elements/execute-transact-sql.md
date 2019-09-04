@@ -327,7 +327,7 @@ Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in A
   
  Das tatsächliche Resultset, das während der Ausführung zurückgegeben wird, kann sich vom Ergebnis unterscheiden, das mit der WITH RESULT SETS-Klausel auf eine der folgenden Arten definiert wurde: Anzahl der Resultsets, Anzahl der Spalten, Spaltenname, NULL-Zulässigkeit und Datentyp. Wenn die Anzahl der Resultsets abweicht, tritt ein Fehler auf, und der Batch wird abgebrochen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Parameter können entweder mit *value* oder mit @*parameter_name*=*value* angegeben werden. angegeben werden. Ein Parameter ist nicht Teil einer Transaktion. Deshalb wird der Wert eines Parameters, der in einer Transaktion geändert wird, nicht wieder auf seinen ursprünglichen Wert zurückgesetzt, wenn für diese Transaktion später ein Rollback ausgeführt wird. Der Wert, der an den Aufrufer zurückgegeben wird, ist immer der Wert zu dem Zeitpunkt, zu dem das Modul beendet wird.  
   
  Die Schachtelung erfolgt, wenn ein Modul ein anderes Modul aufruft oder verwalteten Code durch Verweis auf ein CLR-Modul (Common Language Runtime), einen benutzerdefinierten Typ oder ein Aggregat ausführt. Die Schachtelungsebene wird um eins erhöht, wenn das aufgerufene Modul oder der Verweis auf den verwalteten Code mit der Ausführung beginnt, und wird wieder um eins erniedrigt, wenn das aufgerufene Modul oder der Verweis auf den verwalteten Code beendet ist. Ein Überschreiten der maximal möglichen 32 Schachtelungsebenen führt zu einem Fehler der gesamten Aufrufskette. Die aktuelle Schachtelungsebene wird in der @@NESTLEVEL-Systemfunktion gespeichert.  
@@ -426,7 +426,7 @@ EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO  
 ```  
   
-### <a name="c-using-execute-tsqlstring-with-a-variable"></a>C. Verwenden von EXECUTE 'tsql_string' mit einer Variablen  
+### <a name="c-using-execute-tsql_string-with-a-variable"></a>C. Verwenden von EXECUTE 'tsql_string' mit einer Variablen  
  Das folgende Beispiel zeigt, wie `EXECUTE` dynamisch erstellte Zeichenfolgen behandelt, die Variablen enthalten. In diesem Beispiel wird der `tables_cursor`-Cursor erstellt, der eine Liste aller benutzerdefinierten Tabellen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank enthält. Anschließend werden mithilfe dieser Liste alle Indizes für die Tabellen neu erstellt.  
   
 ```  
@@ -511,7 +511,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 ```  
   
-### <a name="g-using-execute-with-at-linkedservername"></a>G. Verwenden von EXECUTE mit AT linked_server_name  
+### <a name="g-using-execute-with-at-linked_server_name"></a>G. Verwenden von EXECUTE mit AT linked_server_name  
  Das folgende Beispiel übergibt eine Befehlszeichenfolge an einen Remoteserver. Der Verbindungsserver `SeattleSales` wird erstellt, der auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweist und eine DDL-Anweisung (`CREATE TABLE`) auf diesem Verbindungsserver ausführt.  
   
 **Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -586,7 +586,7 @@ AS USER = 'User1';
 GO  
 ```  
   
-### <a name="l-using-a-parameter-with-execute-and-at-linkedservername"></a>L. Verwenden eines Parameters mit EXECUTE und AT linked_server_name  
+### <a name="l-using-a-parameter-with-execute-and-at-linked_server_name"></a>L. Verwenden eines Parameters mit EXECUTE und AT linked_server_name  
  Im folgenden Beispiel wird eine Befehlszeichenfolge an einen Remoteserver übergeben, indem ein Fragezeichen (`?`) als Platzhalter für einen Parameter verwendet wird. Im Beispiel wird zunächst ein Verbindungsserver `SeattleSales` erstellt, der auf eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verweist. Anschließend wird eine `SELECT`-Anweisung auf diesem Verbindungsserver ausgeführt. In der `SELECT`-Anweisung wird das Fragezeichen als Platzhalter für den `ProductID`-Parameter (`952`) verwendet, der hinter der Anweisung angegeben wird.  
   
 **Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]

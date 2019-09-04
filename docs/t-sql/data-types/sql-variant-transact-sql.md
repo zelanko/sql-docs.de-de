@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68000502"
 ---
-# <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
+# <a name="sql_variant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Ein Datentyp, der Werte verschiedener von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützter Datentypen speichert.
@@ -40,7 +40,7 @@ Ein Datentyp, der Werte verschiedener von [!INCLUDE[ssNoVersion](../../includes/
 sql_variant  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 **sql_variant** kann in Spalten, Parametern, Variablen und Rückgabewerten von benutzerdefinierten Funktionen verwendet werden. **sql_variant** ermöglicht, dass diese Datenbankobjekte auch Werte mit anderen Datentypen unterstützen.
   
 Eine Spalte vom Datentyp **sql_variant** enthält möglicherweise Zeilen verschiedener Datentypen. Beispielsweise können in einer als **sql_variant** definierten Spalte die Werte **int**, **binary** und **char** gespeichert sein.
@@ -59,7 +59,7 @@ Eine Tabelle kann über eine beliebige Anzahl von **sql_variant**-Spalten verfü
   
 ODBC unterstützt **sql_variant** nicht vollständig. Deshalb werden Abfragen von **sql_variant**-Spalten bei Verwendung von Microsoft OLE DB-Anbietern für ODBC (MSDASQL) als Binärdaten zurückgegeben. Eine **sql_variant**-Spalte mit den Zeichenfolgendaten „PS2091“ wird als 0x505332303931 zurückgegeben.
   
-## <a name="comparing-sqlvariant-values"></a>Vergleichen von sql_variant-Werten  
+## <a name="comparing-sql_variant-values"></a>Vergleichen von sql_variant-Werten  
 Der **sql_variant**-Datentyp steht im oberen Bereich in der Hierarchieliste der Datentypen für die Konvertierung. Für **sql_variant**-Vergleiche wird die Reihenfolge der Datentyphierarchie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Datentypfamilien unterteilt.
   
 |Datentyphierarchie|Datentypfamilie|  
@@ -69,7 +69,7 @@ Der **sql_variant**-Datentyp steht im oberen Bereich in der Hierarchieliste der 
 |**datetimeoffset**|Datum und Uhrzeit|  
 |**datetime**|Datum und Uhrzeit|  
 |**smalldatetime**|Datum und Uhrzeit|  
-|**Datum**|Datum und Uhrzeit|  
+|**date**|Datum und Uhrzeit|  
 |**time**|Datum und Uhrzeit|  
 |**float**|Ungefährer numerischer Wert|  
 |**real**|Ungefährer numerischer Wert|  
@@ -94,7 +94,7 @@ Für **sql_variant**-Vergleiche gelten die folgenden Regeln:
 -   Wenn **sql_variant**-Werte unterschiedlicher Basisdatentypen verglichen werden und die Basisdatentypen derselben Datentypfamilie angehören, wird der Wert, dessen Basisdatentyp sich weiter unten in der Hierarchieliste befindet, implizit in den anderen Datentyp konvertiert, und dann wird der Vergleich durchgeführt.  
 -   Wenn **sql_variant**-Werte der Datentypen **char**, **varchar**, **nchar** oder **nvarchar** verglichen werden, stützt sich der Vergleich zunächst auf folgende Kriterien: LCID, LCID-Version, Vergleichsflags und Sortier-ID. Diese Kriterien werden als ganzzahlige Werte und in der genannten Reihenfolge verglichen. Sind alle diese Kriterien gleich, werden die tatsächlichen Zeichenfolgenwerte entsprechend der Sortierreihenfolge verglichen.  
   
-## <a name="converting-sqlvariant-data"></a>Konvertieren von sql_variant-Daten  
+## <a name="converting-sql_variant-data"></a>Konvertieren von sql_variant-Daten  
 Bei der Verarbeitung von **sql_variant**-Datentypen unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die impliziten Konvertierungen von Objekten mit anderen Datentypen in den Typ **sql_variant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt jedoch keine impliziten Konvertierungen von **sql_variant**-Daten in ein Objekt mit einem anderen Datentyp.
   
 ## <a name="restrictions"></a>Restrictions  
@@ -114,7 +114,7 @@ In der folgenden Tabelle werden die Typen von Werten aufgelistet, die nicht mith
 
 ## <a name="examples"></a>Beispiele  
 
-### <a name="a-using-a-sqlvariant-in-a-table"></a>A. Verwenden von „sql_variant“ in einer Tabelle  
+### <a name="a-using-a-sql_variant-in-a-table"></a>A. Verwenden von „sql_variant“ in einer Tabelle  
  Im folgenden Beispiel wird eine Tabelle mit einem sql_variant-Datentyp erstellt. Dann wird im Beispiel `SQL_VARIANT_PROPERTY`-Informationen über den `colA`-Wert `46279.1` abgerufen, wobei `colB` =`1689` und `tableA` über `colA` vom Typ `sql_variant` und `colB` verfügt.  
   
 ```sql    
@@ -137,7 +137,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Verwenden von „sql_variant“ als Variable   
+### <a name="b-using-a-sql_variant-as-a-variable"></a>B. Verwenden von „sql_variant“ als Variable   
  Das folgende Beispiel erstellt eine Variable unter Verwendung des sql_variant-Datentyps und ruft dann `SQL_VARIANT_PROPERTY`-Informationen zu einer Variable mit dem Namen @v1 ab.  
   
 ```sql    

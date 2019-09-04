@@ -60,7 +60,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getprocedurecolrens-Methode wird von der getprocedurecolumschlag NS-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getProcedureColumns-Methode zurückgegebene Resultset enthält folgende Informationen:  

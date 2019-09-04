@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67928959"
 ---
-# <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
+# <a name="set-implicit_transactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Legt den BEGIN TRANSACTION-Modus für die Verbindung auf *implicit*.  
@@ -44,7 +44,7 @@ ms.locfileid: "67928959"
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei ON ist das System im *implicit*-Transaktionsmodus. Dies bedeutet, dass wenn @@TRANCOUNT = 0 ist, jede der folgenden Transact-SQL-Anweisungen eine neue Transaktion beginnt. Sie entspricht einer unsichtbaren BEGIN TRANSACTION-Anweisung, die zuerst ausgeführt wird:  
   
 ||||  

@@ -53,7 +53,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
  PASSWORD **='***password***'**  
  Das zum Verschlüsseln des Diensthauptschlüssels in der Sicherungsdatei verwendete Kennwort. Dieses Kennwort unterliegt Komplexitätsüberprüfungen. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Diensthauptschlüssel sollte gesichert und an einem sicheren Ort außerhalb der Geschäftsräume aufbewahrt werden. Das Erstellen dieser Sicherung sollte eine der ersten administrativen Aktionen sein, die auf dem Server ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

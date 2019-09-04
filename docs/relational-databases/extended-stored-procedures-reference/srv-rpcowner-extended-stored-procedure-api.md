@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3bb52186b88b678f9abe276fb5f18f1dd7505b96
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68119690"
@@ -57,7 +57,7 @@ len
 ## <a name="returns"></a>Rückgabewert  
  Ein DBCHAR-Zeiger auf die NULL-terminierte Besitzerkomponente für die aktuelle remote gespeicherte Prozedur. Wenn keine aktuelle remote gespeicherte Prozedur vorhanden ist, wird NULL zurückgegeben, und *len* wird auf –1 festgelegt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion gibt nur die Besitzerkomponente der remote gespeicherten Prozedur zurück. Nicht eingeschlossen sind die optionalen Spezifizierer für Name sowie Name und Nummer der remote gespeicherten Prozedur.  
   
 > [!IMPORTANT]  

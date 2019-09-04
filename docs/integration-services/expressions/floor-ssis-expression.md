@@ -41,7 +41,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  Der numerische Datentyp des expression-Arguments. Das Ergebnis ist der ganzzahlige Teil des berechneten Werts mit dem gleichen Datentyp wie *numeric_expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  FLOOR gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  

@@ -116,7 +116,7 @@ Geben Sie den Verschlüsselungsalgorithmus an.
 > [!WARNING]  
 > Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]gelten alle anderen Algorithmen als AES_128, AES_192 und AES_256 als veraltet. Sie müssen den Kompatibilitätsgrad zwischen Datenbanken auf maximal 120 festlegen, um ältere Algorithmen zu verwenden (nicht empfohlen).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Beim Erstellen eines symmetrischen Schlüssels muss der symmetrische Schlüssel mithilfe mindestens eines der folgenden Elemente verschlüsselt werden: Zertifikat, Kennwort, symmetrischer Schlüssel, asymmetrischer Schlüssel oder PROVIDER. Der Schlüssel kann mehrere Verschlüsselungen jedes Typs aufweisen. Ein einzelner symmetrischer Schlüssel kann demnach mit mehreren Zertifikaten, Kennwörtern, symmetrischen Schlüsseln und asymmetrischen Schlüsseln gleichzeitig verschlüsselt sein.  
   
 > [!CAUTION]  

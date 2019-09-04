@@ -49,7 +49,7 @@ OPENQUERY ( linked_server ,'query' )
  **'** *query* **'**  
  Ist die Zeichenfolge der Abfrage, die auf dem Verbindungsserver ausgeführt wird. Die maximale Länge der Zeichenfolge beträgt 8 KB.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Für die Argumente von OPENQUERY können keine Variablen verwendet werden.  
   
  Mit OPENQUERY können keine erweiterten gespeicherten Prozeduren für einen Verbindungsserver ausgeführt werden. Eine erweiterte gespeicherte Prozedur kann jedoch auf einem Verbindungsserver ausgeführt werden, wenn der vierteilige Name verwendet wird. Beispiel:  

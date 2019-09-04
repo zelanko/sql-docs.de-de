@@ -61,7 +61,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt denselben Wert zurück wie *data_type*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Da diese Funktion eine Spalte in einer Tabelle erstellt, muss für die Spalte ein Name in der Auswahlliste angegeben werden. Dies kann auf zwei Arten geschehen:  
   
 ```  

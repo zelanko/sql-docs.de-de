@@ -54,7 +54,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  Der Name des Synonyms, das gelöscht werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verweise auf Synonyme sind nicht an ein Schema gebunden. Deshalb können Sie ein Synonym jederzeit löschen. Verweise auf gelöschte Synonyme werden erst zur Laufzeit gefunden.  
   
  In dynamischem SQL können Synonyme erstellt und gelöscht werden. Außerdem kann auf sie verwiesen werden.  

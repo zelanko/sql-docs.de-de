@@ -51,7 +51,7 @@ CLR-Rückgabetyp: **SqlGeography**
 ## <a name="exceptions"></a>Ausnahmen  
 Festlegen der Toleranz < = 0 löst eine **ArgumentOutOfRange**-Ausnahme aus.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Mit dieser Methode kann ein Umfang für die Fehlertoleranz in der resultierenden **LineString**angegeben werden.  
   
 Die**CurveToLineWithTolerance** -Methode gibt eine **LineString** -Instanz für eine **CircularString** oder eine **CompoundCurve** -Instanz und eine **Polygon** -Instanz für eine **CurvePolygon** -Instanz zurück.  

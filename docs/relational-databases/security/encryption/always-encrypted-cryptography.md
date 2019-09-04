@@ -72,7 +72,7 @@ Daher erzeugt die deterministische Verschlüsselung immer den gleichen Chiffrete
   
  Die deterministische Verschlüsselung ist im Vergleich zu Alternativen, wie der Verwendung von vordefinierten IV-Werten, effektiver im Verdecken von Mustern.  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>Schritt 2: Berechnen des Chiffretexts „AES_256_CBC“  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>Schritt 2: Berechnen des Chiffretexts „AES_256_CBC“  
  Nach dem Berechnen des IV-Werts wird der Chiffretext **AES_256_CBC** generiert:  
   
 ```  
@@ -143,7 +143,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**binary**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
 |**bit**|65|  
 |**char**|Unterschiedlich. Verwenden Sie die oben stehende Formel.|  
-|**Datum**|65|  
+|**date**|65|  
 |**datetime**|65|  
 |**datetime2**|65|  
 |**datetimeoffset**|65|  

@@ -55,7 +55,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Legen Sie ARITHABORT in Ihren Anmeldesitzungen immer auf ON fest. Wenn ARITHABORT auf OFF festgelegt wird, kann dies negative Auswirkungen auf die Abfrageoptimierung haben und zu Leistungsproblemen führen.  
   
 > [!WARNING]  

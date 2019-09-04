@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Werte für *start* und *length* müssen als Anzahl der Zeichen für die Datentypen **ntext**, **char** oder **varchar** und Bytes für die Datentypen **text**, **image**, **binary** oder **varbinary** angegeben werden.  
   
  Der *Ausdruck* muss **varchar(max)** oder **varbinary(max)** sein, wenn *start* oder *length* einen Wert enthält, der größer als 2.147.483.647 ist.  

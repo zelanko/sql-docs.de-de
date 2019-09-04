@@ -104,7 +104,7 @@ ms.locfileid: "68075222"
   
  Komplexe Ausdrücke, die aus vielen Symbolen und Operatoren bestehen, werden zu einem Ergebnis mit genau einem Wert ausgewertet. Der Datentyp, die Sortierung, die Genauigkeit und der Wert des resultierenden Ausdrucks werden bestimmt, indem immer jeweils zwei Teilausdrücke kombiniert und ausgewertet werden, bis ein Endergebnis erreicht ist. Die Reihenfolge, in der die Ausdrücke kombiniert werden, ist durch die Rangfolge der Operatoren im Ausdruck definiert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zwei Ausdrücke können mit einem Operator kombiniert werden, wenn die Datentypen beider Ausdrücke vom Operator unterstützt werden und mindestens eine der folgenden Bedingungen erfüllt ist:  
   
 -   Die Ausdrücke besitzen den gleichen Datentyp.  

@@ -43,7 +43,7 @@ Usage:
   dreplay cancel [-m controller] [-q]   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können mit **DReplay.exe**die folgenden Befehlszeilenoptionen ausgeben:  
   
  **preprocess**  

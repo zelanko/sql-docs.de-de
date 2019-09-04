@@ -45,7 +45,7 @@ Zum Löschen einer Sprache ist die Berechtigung ALTER ANY EXTERNAL LANGUAGE erfo
 
 Eine Informationsmeldung wird zurückgegeben, wenn die Anweisung erfolgreich war.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Bevor eine externe Sprache gelöscht werden kann, müssen alle externen Bibliotheken für die angegebene Sprache gelöscht werden.
 

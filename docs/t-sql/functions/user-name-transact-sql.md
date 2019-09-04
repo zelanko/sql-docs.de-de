@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67927598"
 ---
-# <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
+# <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt einen Datenbank-Benutzernamen über eine angegebene ID zurück.  
@@ -51,12 +51,12 @@ USER_NAME ( [ id ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(256)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *id* nicht angegeben ist, wird der aktuelle Benutzer im aktuellen Kontext vermutet. Wenn der Parameter das Wort NULL enthalten ist, wird NULL zurückgegeben. Wenn USER_NAME aufgerufen wird, ohne nach einer EXECUTE AS-Anweisung eine *d* anzugeben, gibt USER_NAME den Namen des Benutzers zurück, dessen Identität angenommen wurde. Falls ein Windows-Prinzipal über eine Mitgliedschaft in einer Gruppe auf die Datenbank zugreift, gibt USER_NAME den Namen des Windows-Prinzipals anstelle der Gruppe zurück.  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-username"></a>A. Verwenden von USER_NAME  
+### <a name="a-using-user_name"></a>A. Verwenden von USER_NAME  
  Im folgenden Beispiel wird der Benutzername für die Benutzer-ID `13` zurückgegeben.  
   
 ```  
@@ -64,7 +64,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>B. Verwenden von USER_NAME ohne ID  
+### <a name="b-using-user_name-without-an-id"></a>B. Verwenden von USER_NAME ohne ID  
  Das folgende Beispiel sucht nach dem Namen des aktuellen Benutzers, ohne eine ID anzugeben.  
   
 ```  
@@ -81,7 +81,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="c-using-username-in-the-where-clause"></a>C. Verwenden von USER_NAME in der WHERE-Klausel  
+### <a name="c-using-user_name-in-the-where-clause"></a>C. Verwenden von USER_NAME in der WHERE-Klausel  
  Das folgende Beispiel findet in der `sysusers`-Tabelle diejenige Zeile, in der der Name mit dem Ergebnis der `USER_NAME`-Systemfunktion (angewendet auf Benutzer-ID `1`) übereinstimmt.  
   
 ```  
@@ -99,7 +99,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. Aufrufen von USER_NAME während des Identitätswechsels mit EXECUTE AS  
+### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. Aufrufen von USER_NAME während des Identitätswechsels mit EXECUTE AS  
  Das folgende Beispiel zeigt, wie sich `USER_NAME` während des Identitätswechsels verhält.  
   
 ```  
@@ -125,7 +125,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="e-using-username-without-an-id"></a>E. Verwenden von USER_NAME ohne ID  
+### <a name="e-using-user_name-without-an-id"></a>E. Verwenden von USER_NAME ohne ID  
  Das folgende Beispiel sucht nach dem Namen des aktuellen Benutzers, ohne eine ID anzugeben.  
   
 ```  
@@ -139,7 +139,7 @@ SELECT USER_NAME();
 User7                              
 ```  
   
-### <a name="f-using-username-in-the-where-clause"></a>F. Verwenden von USER_NAME in der WHERE-Klausel  
+### <a name="f-using-user_name-in-the-where-clause"></a>F. Verwenden von USER_NAME in der WHERE-Klausel  
  Das folgende Beispiel findet in der `sysusers`-Tabelle diejenige Zeile, in der der Name mit dem Ergebnis der `USER_NAME`-Systemfunktion (angewendet auf Benutzer-ID `1`) übereinstimmt.  
   
 ```  

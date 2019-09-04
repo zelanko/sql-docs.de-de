@@ -46,7 +46,7 @@ ISJSON ( expression )
   
  Gibt keine Fehler zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **ISJSON** überprüft nicht die Eindeutigkeit der Schlüssel auf derselben Ebene.  
   
 ## <a name="examples"></a>Beispiele  

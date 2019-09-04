@@ -110,12 +110,12 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. `OBJECT_ID`, möglicherweise NULL zurückgeben, wenn der Benutzer keine Berechtigungen für das Objekt hat. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DATABASEPROPERTYEX` gibt immer nur jeweils eine Eigenschaftseinstellung zurück. Verwenden Sie die [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)-Katalogsicht, um mehrere Eigenschaftseinstellungen anzuzeigen.
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-retrieving-the-status-of-the-autoshrink-database-option"></a>A. Abrufen des Status der Datenbankoption AUTO_SHRINK  
+### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>A. Abrufen des Status der Datenbankoption AUTO_SHRINK  
 In diesem Beispiel wird der Status der AUTO_SHRINK-Datenbankoption für die `AdventureWorks`-Datenbank zurückgegeben.
   
 ```sql

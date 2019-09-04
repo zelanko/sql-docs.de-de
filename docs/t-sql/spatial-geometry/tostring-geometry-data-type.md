@@ -40,7 +40,7 @@ Gibt die Open Geospatial Consortium (OGC) Well-Known Text (WKT)-Darstellung eine
   
  CLR-Rückgabetyp: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt die Zeichenfolge "NULL" zurück, wenn sie für NULL-Instanzen aufgerufen wird.  
   
  Bei Instanzen, die nicht NULL sind, entspricht diese Methode der Verwendung von `AsTextZM().`.  

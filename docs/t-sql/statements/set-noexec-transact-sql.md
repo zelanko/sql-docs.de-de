@@ -43,7 +43,7 @@ ms.locfileid: "68034940"
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn SET NOEXEC auf ON festgelegt ist, kompiliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatch, führt die Anweisungen jedoch nicht aus. Wenn SET NOEXEC auf OFF festgelegt ist, werden alle Batches nach der Kompilierung ausgeführt.  
   
  Die Ausführung von Anweisungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgt in zwei Phasen: Kompilierung und Ausführung. Diese Einstellung ist hilfreich, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Syntax und Objektnamen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code während der Ausführung überprüfen soll. Sie ist auch hilfreich, um Anweisungen zu debuggen, die normalerweise Teil eines größeren Anweisungsbatches wären.  

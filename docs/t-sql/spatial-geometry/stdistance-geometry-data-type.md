@@ -45,7 +45,7 @@ ms.locfileid: "68107803"
   
  CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STDistance()` gibt immer NULL zurück, wenn die SRIDs (Spatial Reference IDs) der **geometry**-Instanzen nicht übereinstimmen.  
   
 ## <a name="examples"></a>Beispiele  

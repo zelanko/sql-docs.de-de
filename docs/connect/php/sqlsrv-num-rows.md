@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68014988"
 ---
-# <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
+# <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Berichtet über die Anzahl der Zeilen in einem Resultset.  
@@ -38,7 +38,7 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>Rückgabewert  
 Falls es bei der Berechnung der Anzahl der Zeilen einen Fehler gab, wird**false** zurückgegeben. Ansonsten gibt der Befehl die Anzahl der Zeilen im Resultset zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 sqlsrv_num_rows erfordert einen clientseitigen, statischen oder Keysetcursor und gibt **FALSE** zurück, wenn Sie einen Vorwärtscursor oder einen dynamischen Cursor verwenden. (Standard ist der Vorwärtscursor.) Weitere Informationen zu Cursorn finden Sie unter [sqlsrv_query](../../connect/php/sqlsrv-query.md) und [Cursortypen &#40;SQLSRV-Treiber&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Beispiel  

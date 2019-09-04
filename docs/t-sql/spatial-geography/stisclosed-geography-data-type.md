@@ -43,7 +43,7 @@ ms.locfileid: "68042032"
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt 0 zurück, wenn eine beliebige Abbildung einer **geography** -Instanz ein Punkt ist oder wenn die Instanz leer ist.  
   
  Diese Methode gibt true zurück, wenn eine **FullGlobe** -Instanz ein **Polygon** oder anderer Typ der Instanz ist.  

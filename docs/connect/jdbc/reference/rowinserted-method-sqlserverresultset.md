@@ -40,7 +40,7 @@ public boolean rowInserted()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese rowaktualisierte-Methode wird von der rowaktualisierte-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Der zurückgegebene Wert ist davon abhängig, ob vom [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)-Objekt sichtbare Einfügungen ermittelt werden können.  

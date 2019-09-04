@@ -50,7 +50,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der OGC-Typ der **geography** -Instanz, die von `STGeomFromText()` zurückgegeben wird, wird auf die entsprechende WKB-Eingabe festgelegt.  
   
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  

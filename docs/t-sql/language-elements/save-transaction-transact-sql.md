@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  @*savepoint_variable*  
  Dies ist der Name einer benutzerdefinierten Variablen, die einen gültigen Sicherungspunktnamen enthält. Die Variable muss mit einem der folgenden Datentypen deklariert werden: **char**, **varchar**, **nchar** oder **nvarchar**. Es können mehr als 32 Zeichen an die Variable übergeben werden, jedoch werden nur die ersten 32 Zeichen verwendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Benutzer kann einen Sicherungspunkt oder Marker innerhalb einer Transaktion festlegen. Der Sicherungspunkt definiert die Position, zu der eine Transaktion zurückkehren kann, wenn ein Teil der Transaktion bedingt abgebrochen wird. Falls für eine Transaktion ein Rollback bis zu einem Sicherungspunkt ausgeführt wird, muss dieser abgeschlossen werden, bei Bedarf mit mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und einer COMMIT TRANSACTION-Anweisung, oder ganz abgebrochen werden,  indem ein Rollback der Transaktion zurück zum Anfang ausgeführt wird. Zum Abbrechen der gesamten Transaktion verwenden Sie die Syntax ROLLBACK TRANSACTION *transaction_name*. Alle Anweisungen oder Prozeduren der Transaktion werden rückgängig gemacht.  
   
  Doppelte Sicherungspunktnamen sind in einer Transaktion zulässig. Eine ROLLBACK TRANSACTION-Anweisung, die den Sicherungspunktnamen angibt, führt jedoch nur ein Rollback der Transaktion bis zur letzten SAVE TRANSACTION-Anweisung mit diesem Namen aus.  

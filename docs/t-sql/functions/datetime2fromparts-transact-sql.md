@@ -66,7 +66,7 @@ Ein ganzzahliger Ausdruck, der die Genauigkeit des **datetime2**-Werts angibt, d
 ## <a name="return-types"></a>Rückgabetypen
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DATETIME2FROMPARTS` gibt einen vollständig initialisierten **datetime2**-Wert zurück. `DATETIME2FROMPARTS` löst einen Fehler aus, wenn mindestens ein erforderliches Argument über einen ungültigen Wert verfügt. `DATETIME2FROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält. Wenn das *precision*-Argument jedoch einen NULL-Wert enthält, löst `DATETIME2FROMPARTS` einen Fehler aus.
 
 Das *fractions*-Argument ist vom *precision*-Argument abhängig. Wenn *precision* beispielsweise den Wert 7 aufweist, stellt jeder Bruchteil 100 Nanosekunden dar. Wenn *precision* jedoch den Wert 3 aufweist, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von *precision* 0 (null) ist, muss auch der Wert von *fractions* 0 (null) sein; andernfalls löst `DATETIME2FROMPARTS` einen Fehler aus.

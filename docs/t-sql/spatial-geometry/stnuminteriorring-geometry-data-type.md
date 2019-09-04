@@ -41,7 +41,7 @@ Gibt die Anzahl der inneren Ringe einer **Polygongeometry**-Instanz zurück.
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt NULL zurück, wenn die **geometry**-Instanz kein Polygon ist.  
   
 ## <a name="examples"></a>Beispiele  

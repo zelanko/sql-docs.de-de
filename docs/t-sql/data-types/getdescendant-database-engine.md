@@ -53,7 +53,7 @@ NULL oder die **hierarchyid** eines untergeordneten Elements des aktuellen Knote
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Gibt einen untergeordneten Knoten zurück, der ein Nachfolger des übergeordneten Elements ist.
 -   Ist parent NULL, wird NULL zurückgegeben.  
 -   Ist parent nicht NULL und sind sowohl child1 als auch child2 NULL, dann wird ein parent untergeordneter Knoten zurückgegeben.  

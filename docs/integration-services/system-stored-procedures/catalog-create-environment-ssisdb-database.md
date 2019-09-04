@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68110383"
 ---
-# <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (SSISDB-Datenbank)
+# <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -36,13 +36,13 @@ catalog.create_environment [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argumente  
  [@folder_name =] *folder_name*  
- Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)**.  
+ Der Name des Ordners, der die Umgebung enthält. Der *folder_name* ist **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)**.  
+ Der Name der Umgebung. Der *environment_name* ist **nvarchar(128)** .  
   
  [@environment_description=] *environment_description*  
- Eine optionale Beschreibung der Umgebung. Der *environment_description* ist **nvarchar(1024)**.  
+ Eine optionale Beschreibung der Umgebung. Der *environment_description* ist **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  0 (Erfolg)  
@@ -68,7 +68,7 @@ catalog.create_environment [@folder_name =] folder_name
   
 -   Im angegebenen Ordner ist bereits eine Umgebung mit dem gleichen Namen vorhanden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Umgebungsname muss innerhalb des Ordners eindeutig sein.  
   
   

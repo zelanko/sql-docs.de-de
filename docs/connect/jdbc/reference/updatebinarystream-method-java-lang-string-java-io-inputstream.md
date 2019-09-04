@@ -42,7 +42,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese updateBinaryStream-Methode wird von der updateBinaryStream-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Die Verwendung dieser Methode für die Datentypen **Image**, **Text**und **ntext** SQL Server kann sich auf die Leistung auswirken.  

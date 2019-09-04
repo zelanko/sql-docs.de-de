@@ -45,7 +45,7 @@ public boolean setTransactionTimeout(int seconds)
 ## <a name="exceptions"></a>Ausnahmen  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese settransaktiontimeout-Methode wird von der settransaktiontimeout-Methode in der javax. Transaction. XA. XAResource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

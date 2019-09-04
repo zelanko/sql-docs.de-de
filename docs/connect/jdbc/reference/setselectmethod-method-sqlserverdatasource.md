@@ -39,7 +39,7 @@ public void setSelectMethod(java.lang.String selectMethod)
   
  Ein Wert vom Typ **Zeichenfolge** mit dem Standardcursortyp.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  "selectMethod" ist der Standardcursortyp, der für ein Resultset verwendet wird. Diese Eigenschaft ist nützlich für die Verarbeitung großer Resultsets ohne dass das gesamte Resultset im clientseitigen Speicher abgelegt wird. Wenn Sie die Eigenschaft auf "cursor" festlegen, können Sie einen serverseitigen Cursor erstellen, der jeweils kleinere Datenauschnitte abrufen kann. Wenn die selectMethod-Eigenschaft nicht festgelegt ist, gibt [getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md) den Standardwert „direct“ zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

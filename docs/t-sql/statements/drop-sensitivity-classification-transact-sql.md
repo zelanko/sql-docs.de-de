@@ -58,7 +58,7 @@ Der Name der Datenbankspalte, aus der die Klassifizierung entfernt werden soll. 
     - *table_name* (optional): Der Name der Tabelle, zu der die klassifizierte Spalte gehört.
     - *column_name*: Der Name der Spalte, aus der die Klassifizierung gelöscht werden soll.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 - Mit einer einzelnen DROP SENSITIVITY CLASSIFICATION-Anweisung können mehrere Objektklassifizierungen gelöscht werden.
 

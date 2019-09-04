@@ -88,7 +88,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
  *server_role*  
  Gibt eine Serverrolle an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Berechtigungen im Serverbereich können nur verweigert werden, wenn master als aktuelle Datenbank verwendet wird.  
   
  Informationen zu Serverberechtigungen werden in der [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)-Katalogsicht und Informationen zu Serverprinzipalen in der [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)-Katalogsicht angezeigt. Informationen zur Mitgliedschaft von Serverrollen werden in der [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)-Katalogsicht angezeigt.  
@@ -132,7 +132,7 @@ In dieser Anweisung impliziert die Verwendung von AS nicht die Fähigkeit, die I
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die folgenden drei Serverberechtigungen wurden in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hinzugefügt.  
   
  **CONNECT ANY DATABASE**-Berechtigung  

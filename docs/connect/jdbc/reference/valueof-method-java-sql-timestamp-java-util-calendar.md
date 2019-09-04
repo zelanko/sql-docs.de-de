@@ -41,7 +41,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
 ## <a name="return-value"></a>Rückgabewert  
  Gibt ein DateTimeOffset-Objekt zurück, das den Zeitpunkt darstellt, der vom Java. SQL. Timestamp-Objekt bei der Zeitzone des angegebenen Java. util. Calendar-Objekts angegeben wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode legt auch das Objekt "java. util. Calendar" auf den Zeitpunkt fest, der vom Objekt "java. SQL. timestamp" angegeben wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  

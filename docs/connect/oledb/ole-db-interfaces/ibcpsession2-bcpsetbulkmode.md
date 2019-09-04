@@ -66,7 +66,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|Das Argument war ungültig.|  
 |**E_OUTOFMEMORY**|Fehler aufgrund von nicht genügend Arbeitsspeicher.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  IBCPSession2:: bcpsetbulkmode kann zum Massen kopieren aus einer Abfrage oder einer Tabelle verwendet werden. Wenn IBCPSession2::BCPSetBulkMode zum Massenkopieren aus einer Abfrageanweisung verwendet wird, muss es vor dem Aufruf von `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` aufgerufen werden, um die Abfrageanweisung anzugeben.  
   
  Kombinieren Sie nicht in einem einzelnen Befehlstext die RPC-Aufrufsyntax mit der Batchabfragesyntax (z. B.`{rpc func};SELECT * from Tbl`).  Dies bewirkt, dass ICommandPrepare::P repas einen Fehler zurückgibt und verhindert, dass Metadaten abgerufen werden. Verwenden Sie ODBC CALL-Syntax (z. B.`{call func}; SELECT * from Tbl`), wenn Sie die Ausführung gespeicherter Prozeduren und die Batchabfrage in einem einzelnen Befehlstext kombinieren müssen.  

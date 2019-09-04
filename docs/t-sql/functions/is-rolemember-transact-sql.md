@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68086711"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Gibt an, ob ein angegebener Datenbankprinzipal ein Element der angegebenen Datenbankrolle ist.  
@@ -57,7 +57,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |1|*database_principal* ist ein Element von *role*.|  
 |NULL|*database_principal* oder *role* sind nicht gültig, oder Sie verfügen über keine Berechtigung zum Anzeigen der Rollenmitgliedschaft.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit IS_ROLEMEMBER legen Sie fest, ob der aktuelle Benutzer eine Aktion ausführen kann, für die die Berechtigungen der Datenbankrolle erforderlich sind.  
   
  Wenn *database_principal* auf einer Windows-Anmeldung basiert, z.B. Contoso\Mary5, gibt IS_ROLEMEMBER den Wert NULL zurück, falls der direkte Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für *database_principal* nicht erteilt oder verweigert wurde.  

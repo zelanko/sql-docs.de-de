@@ -45,7 +45,7 @@ Gibt einen Näherungswert für die angegebene **geometry**-Instanz zurück. Dies
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei Auflistungstypen arbeitet dieser Algorithmus unabhängig für jeden **geometry** -Wert, der in der Instanz enthalten ist.  
   
  Dieser Algorithmus ändert keine **Point**-Instanzen.  

@@ -40,7 +40,7 @@ ms.locfileid: "67902220"
 |**queued_date**|**datetime**|Datum und Uhrzeit, zu der dieser Auftrag in der Warteschlange angeordnet wurde. Wird der Auftrag direkt ausgeführt, enthält diese Spalte den Wert NULL.|  
 |**start_execution_date**|**datetime**|Datum und Uhrzeit, für die die Ausführung des Auftrags geplant wurde.|  
 |**last_executed_step_id**|**int**|ID des letzten ausgeführten Auftragsschrittes.|  
-|**last_executed_step_**<br /><br /> **Datum**|**datetime**|Datum und Uhrzeit, zu der die Ausführung des letzten Auftragsschrittes begann.|  
+|**last_executed_step_**<br /><br /> **date**|**datetime**|Datum und Uhrzeit, zu der die Ausführung des letzten Auftragsschrittes begann.|  
 |**stop_execution_date**|**datetime**|Datum und Uhrzeit, zu der die Ausführung des Auftrags fertig gestellt wurde.|  
 |**job_history_id**|**int**|Wird verwendet, um eine Zeile in der **sysjobhistory** -Tabelle zu identifizieren.|  
 |**next_scheduled_run_date**|**datetime**|Nächstes Datum und nächste Uhrzeit, für die die Ausführung des Auftrags geplant ist.|  

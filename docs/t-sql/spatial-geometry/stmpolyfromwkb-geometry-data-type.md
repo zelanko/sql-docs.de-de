@@ -50,7 +50,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
  OGC-Typ: **MultiPolygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `STMPolyFromWKB()` verwendet, um eine `geometry`-Instanz zu erstellen:  

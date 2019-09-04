@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: 36020fb9df7b98338cd64a8e476b8da0b5196c0e
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68119646"
@@ -63,7 +63,7 @@ data
 ## <a name="returns"></a>Rückgabewert  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Jede Spalte der Zeile muss zuerst mit **srv_describe**definiert werden. Spaltendatenadressen werden anfänglich mit **srv_describe**festgelegt. Wenn sich die Adresse der Spaltendaten ändert, muss **srv_setcoldata** aufgerufen werden, um die neue Adresse der Daten anzugeben. Für jede geänderte Spalte muss **srv_setcoldata** separat aufgerufen werden.  
   
  NULL-Daten werden dargestellt, indem die Länge der Spalte mit **srv_setcollen**auf 0 festgelegt wird. Die Datenadresse wird dann ignoriert.  

@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese close-Methode wird von der close-Methode in der javax.sql.PooledConnection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -64,7 +64,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |Katalog|DBPROP_INIT_CATALOG|Name des Anfangs- oder Standardkatalogs beim Herstellen einer Verbindung mit der Datenquelle.|  
 |Integrierte Sicherheit|DBPROP_AUTH_INTEGRATED|SSPI, zur Angabe der Windows-Authentifizierung|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  OPENDATASOURCE kann nur dann für den Zugriff auf Remotedaten aus OLE DB-Datenquellen verwendet werden, wenn die DisallowAdhocAccess-Registrierungsoption explizit für den angegebenen Anbieter auf 0 festgelegt und die erweiterte Konfigurationsoption Ad Hoc Distributed Queries aktiviert wird. Wenn diese Optionen nicht festgelegt sind, ermöglicht das Standardverhalten keinen Ad-hoc-Zugriff.  
   
  Die OPENDATASOURCE-Funktion kann an denselben Stellen in der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax verwendet werden wie ein Verbindungsservername. Deshalb kann OPENDATASOURCE als erster Teil eines vierteiligen Namens verwendet werden, der in einer SELECT-, INSERT-, UPDATE-, oder DELETE-Anweisung auf einen Tabellen- oder Sichtnamen bzw. in einer EXECUTE-Anweisung auf eine remote gespeicherte Prozedur verweist. Beim Ausführen von remote gespeicherten Prozeduren muss OPENDATASOURCE auf eine andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz verweisen. Für die Argumente von OPENDATASOURCE können keine Variablen verwendet werden.  

@@ -42,7 +42,7 @@ ms.locfileid: "68130147"
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Jedes Mal, wenn eine gespeicherte Prozedur eine andere gespeicherte Prozedur aufruft oder durch Verweis auf eine Common Language Routine (CLR), einen Typ oder ein Aggregat verwalteten Code ausführt, wird die Schachtelungsebene erhöht. Wird der Höchstwert von 32 überschritten, so wird die Transaktion beendet.  
   
  Wenn @@NESTLEVEL innerhalb einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Zeichenfolge ausgeführt wird, entspricht der zurückgegebene Wert 1 + der aktuellen Schachtelungsebene. Wenn @@NESTLEVEL mithilfe von sp_executesql dynamisch ausgeführt wird, entspricht der zurückgegebene Wert 2 + der aktuellen Schachtelungsebene.  

@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68072283"
 ---
-# <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
+# <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Legt die angegebene lokale Variable, die zuvor mit der Anweisung DECLARE @*local_variable* erstellt wurde, auf den angegebenen Wert fest.  
@@ -168,7 +168,7 @@ Verhindert, dass Updates über diesen Cursor erfolgen. Auf den Cursor kann nicht
 `UPDATE [OF column_name[ ,... n ] ]`  
 Definiert aktualisierbare Spalten innerhalb des Cursors. Wenn OF *column_name* [ **,** ...*n*] angegeben wird, können nur in den aufgeführten Spalten Änderungen vorgenommen werden. Wenn keine Liste angegeben wird, können alle Spalten aktualisiert werden, es sei denn, der Cursor wurde mit der Option READ ONLY definiert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Nach dem Deklarieren einer Variablen wird diese auf NULL initialisiert. Verwenden Sie die SET-Anweisung, um einer deklarierten Variablen einen anderen Wert als NULL zuzuweisen. Die SET-Anweisung, die der Variablen einen Wert zuweist, gibt einen einzelnen Wert zurück. Wenn Sie mehrere Variablen initialisieren, verwenden Sie eine separate SET-Anweisung für jede lokale Variable.  
   
 Sie können Variablen nur in Ausdrücken verwenden, nicht anstelle von Objektnamen oder Schlüsselwörtern. Um dynamische [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zu erstellen, verwenden Sie EXECUTE.  

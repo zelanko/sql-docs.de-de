@@ -40,7 +40,7 @@ public java.sql.NClob getNClob(int parameterIndex)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getNClob-Methode wird von der getNClob-Methode in der java.sql.CallableStatement-Schnittstelle angegeben.  
   
  Diese Methode unterstützt nur das Abrufen von **NCHAR**-, **nvarchar**-, **ntext**-und **XML** -Parametern. Werden diese Methoden für andere Datentypparameter aufgerufen, wird eine Ausnahme ausgelöst.  

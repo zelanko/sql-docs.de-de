@@ -58,7 +58,7 @@ SESSIONPROPERTY (option)
 ## <a name="return-types"></a>Rückgabetypen  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SET-Optionen sind eine Kombination von Optionen auf Serverebene, Datenbankebene und benutzerdefinierten Optionen.  
   
 ## <a name="examples"></a>Beispiele  

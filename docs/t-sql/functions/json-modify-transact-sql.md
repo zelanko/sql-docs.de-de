@@ -18,7 +18,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109384"
 ---
-# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
+# <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -73,7 +73,7 @@ JSON_MODIFY versieht alle Sonderzeichen im neuen Wert mit Escapezeichen, wenn de
 
  Gibt den aktualisierten Wert von *expression* als ordnungsgemäß formatierten JSON-Text zurück.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
  Mit der JSON_MODIFY-Funktion können Sie den Wert einer vorhandenen Eigenschaft aktualisieren, ein neues Schlüssel-Wert-Paar einfügen oder einen Schlüssel löschen, der auf einer Kombination von Modi und bereitgestellten Werten basiert.  
   

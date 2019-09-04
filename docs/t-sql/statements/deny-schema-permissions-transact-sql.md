@@ -75,7 +75,7 @@ Gibt einen Prinzipal an, von dem der Prinzipal, der diese Abfrage ausführt, das
 -   Einem asymmetrischen Schlüssel zugeordneter Datenbankbenutzer  
 -   Keinem Serverprinzipal zugeordneter Datenbankbenutzer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Ein Schema ist ein sicherungsfähiges Element auf Datenbankebene. Es ist in der Datenbank enthalten, die in der Berechtigungshierarchie übergeordnet ist. Die spezifischsten und restriktivsten Berechtigungen, die für ein Schema verweigert werden können, sind in der folgenden Tabelle aufgeführt. Die Tabelle zeigt allgemeinere Berechtigungen, die andere Berechtigungen implizit enthalten.  
   
 |Schemaberechtigung|Impliziert durch die Schemaberechtigung|Impliziert durch Datenbankberechtigung|  

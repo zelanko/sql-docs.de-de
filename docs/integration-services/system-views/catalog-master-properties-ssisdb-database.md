@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68104854"
 ---
-# <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (SSISDB-Datenbank)
+# <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -31,7 +31,7 @@ Zeigt die Eigenschaften des ausgewählten [!INCLUDE[ssISnoversion](../../include
 |property_name|**nvarchar(256)**|Der Name der Scale Out Master-Eigenschaft.|  
 |property_value|**nvarchar(max)**|Der Wert der Scale Out Master-Eigenschaft.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 In dieser Sicht wird für jede Scale Out Master-Eigenschaft eine Zeile angezeigt. In dieser Sicht werden folgende Eigenschaften angezeigt:
 
 |Eigenschaftsname|und Beschreibung|  

@@ -35,7 +35,7 @@ ms.locfileid: "67970851"
 public final class SQLServerPoolingDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die SQLServerPooledConnection-Klasse stellt Methoden für den Verbindungspool-Manager bereit, um den Verbindungspool zu verwalten. Die Verbindungen werden in der Regel nicht direkt von Anwendungen instanziiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  

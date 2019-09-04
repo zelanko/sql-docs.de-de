@@ -53,7 +53,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
 *pool_name*  
 Der Name des externen Ressourcenpools, der gelöscht werden soll.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Externe Ressourcenpools mit Arbeitsauslastungsgruppen können nicht gelöscht werden.  
 

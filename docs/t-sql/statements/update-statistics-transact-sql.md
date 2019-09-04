@@ -180,7 +180,7 @@ MAXDOP = *max_degree_of_parallelism*
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ### <a name="when-to-use-update-statistics"></a>Wann UPDATE STATISTICS verwendet werden sollte  
  Weitere Informationen zur Verwendung von `UPDATE STATISTICS` finden Sie unter [Statistiken](../../relational-databases/statistics/statistics.md).  
@@ -190,7 +190,7 @@ MAXDOP = *max_degree_of_parallelism*
 * Die Option `MAXDOP` ist mit den Optionen `STATS_STREAM`, `ROWCOUNT` und `PAGECOUNT` nicht kompatibel.
 * Die Option `MAXDOP` ist, falls verwendet, durch die Einstellung „`MAX_DOP`“ der Resource Governor-Arbeitsauslastungsgruppe eingeschränkt.
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>Aktualisieren aller Statistiken mit "sp_updatestats"  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>Aktualisieren aller Statistiken mit "sp_updatestats"  
 Informationen zum Aktualisieren von Statistiken für alle benutzerdefinierten und internen Tabellen in der Datenbank finden Sie in der Beschreibung der gespeicherten Prozedur [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md). Durch den folgenden Befehl wird beispielsweise sp_updatestats zum Aktualisieren aller Statistiken für die Datenbank aufgerufen.  
   
 ```sql  

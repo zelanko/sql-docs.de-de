@@ -92,7 +92,7 @@ AS select_statement
  WITH CHECK OPTION  
  Erzwingt, dass alle für die Sicht ausgeführten Datenänderungsanweisungen den Kriterien entsprechen müssen, die innerhalb von *select_statement* festgelegt wurden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zu ALTER VIEW finden Sie im Abschnitt „Hinweise“ unter [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  

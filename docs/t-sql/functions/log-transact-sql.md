@@ -60,7 +60,7 @@ LOG ( float_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Standardmäßig gibt **LOG()** den natürlichen Logarithmus zurück. Beginnend mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] können Sie die Basis des Logarithmus mithilfe des optionalen *base*-Parameters in einen anderen Wert ändern.  
   
  Der natürliche Logarithmus ist der Logarithmus zur Basis **e**, wobei **e** eine irrationale Konstante mit einem Wert von ungefähr 2,718281828 ist.  

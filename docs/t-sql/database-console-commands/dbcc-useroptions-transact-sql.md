@@ -70,7 +70,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC USEROPTIONS meldet die Isolationsstufe 'read committed snapshot', wenn die Datenbankoption READ_COMMITTED_SNAPSHOT auf ON festgelegt ist und die Isolationsstufe der Transaktion auf 'read commited' festgelegt ist. Die eigentliche Isolationsstufe ist 'read commited'.
   
 ## <a name="permissions"></a>Berechtigungen  

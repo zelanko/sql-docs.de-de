@@ -448,7 +448,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE    
  Die Daten werden im Index seitenweise komprimiert.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Jede Option kann pro CREATE SPATIAL INDEX-Anweisung nur einmal angegeben werden. Beim Angeben einer Option, die es schon einmal gibt, wird ein Fehler ausgelöst.  
   
 Sie können bis zu 249 räumliche Indizes für jede räumliche Spalte in einer Tabelle erstellen. Es kann sich als nützlich erweisen, mehrere räumliche Indizes für bestimmte räumliche Spalten zu erstellen, z. B. zum Indizieren verschiedener Mosaikparameter in einer Spalte.  

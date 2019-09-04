@@ -55,7 +55,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt das Ergebnis des Ausdrucks zurück, das in den angeforderten Datentyp umgewandelt wurde.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  NULL-Werte, die als Argumente an PARSE übergeben wurden, werden auf die zwei Arten verarbeitet:  
   
 1.  Wenn eine NULL-Konstante übergeben wird, wird ein Fehler ausgelöst. Ein NULL-Wert kann nicht unter Berücksichtigung der Kultur in einen anderen Datentyp analysiert werden.  

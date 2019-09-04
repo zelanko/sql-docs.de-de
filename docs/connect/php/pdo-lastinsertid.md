@@ -37,7 +37,7 @@ Wenn kein Sequenz Name angegeben wird, eine Zeichenfolge des Bezeichners für di
 Wenn ein Sequenz Name angegeben wird, eine Zeichenfolge des Bezeichners für die Sequenz, die zuletzt hinzugefügt wurde.
 Wenn der Methodenaufrufe fehlschlägt, wird eine leere Zeichenfolge zurückgegeben.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
 Zwischen Version 2,0 und 4,3 ist der optionale Parameter ein Tabellenname, und der Rückgabewert ist die ID der Zeile, die der bereitgestellten Tabelle zuletzt hinzugefügt wurde.
 Ab 5,0 wird der optionale Parameter als Sequenz Name betrachtet, und der Rückgabewert ist die Sequenz, die zuletzt für den bereitgestellten Sequenznamen hinzugefügt wurde.

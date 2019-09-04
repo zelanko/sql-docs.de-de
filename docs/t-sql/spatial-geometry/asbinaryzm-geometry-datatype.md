@@ -38,7 +38,7 @@ Gibt die Open Geospatial Consortium (OGC) WKB-Darstellung (Well-Known Binary) ei
   
  CLR-Rückgabetyp: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
   

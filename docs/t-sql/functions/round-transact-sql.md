@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money**- und **smallmoney**-Kategorie|**money**|  
 |**float**- und **real**-Kategorie|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ROUND gibt immer einen Wert zurück. Ist *length* negativ und der Wert größer als die Anzahl der Stellen vor dem Dezimaltrennzeichen, gibt ROUND den Wert 0 zurück.  
   
 |Beispiel|Ergebnis|  

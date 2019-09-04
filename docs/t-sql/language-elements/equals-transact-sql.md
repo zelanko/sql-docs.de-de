@@ -48,7 +48,7 @@ expression = expression
 ## <a name="result-types"></a>Ergebnistypen  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Beim Vergleich mit NULL-Ausdrücken hängt das Ergebnis von der `ANSI_NULLS`-Einstellung ab:  
   
 -   Wenn `ANSI_NULLS` auf ON festgelegt ist, ist UNKNOWN das Ergebnis von Vergleichen mit NULL. Dies folgt der ANSI-Konvention, dass NULL ein unbekannter Wert ist und nicht mit anderen Werten verglichen werden kann, auch nicht mit anderen NULL-Werten.  

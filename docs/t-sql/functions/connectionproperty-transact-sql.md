@@ -52,7 +52,7 @@ Die Eigenschaft der Verbindung. *property* kann einen der folgenden Werte aufwei
 |physical_net_transport|**nvarchar(40)**|Gibt das physische Transportprotokoll zurück, das von dieser Verbindung verwendet wird. Genau, wenn für eine Verbindung Multiple Active Result Sets (MARS) aktiviert sind.|  
 |\<beliebige andere Zeichenfolge>||Gibt NULL für ungültige Eingaben zurück.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 **local_net_address** und **local_tcp_port** geben in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] NULL zurück.
   
 Die zurückgegebenen Werte stimmen mit den Optionen überein, die für die entsprechenden Spalten in der dynamischen Verwaltungssicht [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) angezeigt werden. Beispiel:

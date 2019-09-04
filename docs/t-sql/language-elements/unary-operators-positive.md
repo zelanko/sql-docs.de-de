@@ -56,7 +56,7 @@ Gibt den Wert eines numerischen Ausdrucks zurück (ein unärer Operator). Unäre
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt den Datentyp von *numeric_expression*zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Obwohl ein unäres Plus vor jedem numerischen Ausdruck angezeigt werden kann, führt es keinen Vorgang mit dem Wert aus, der von dem Ausdruck zurückgegeben wird. Insbesondere gibt es nicht den positiven Wert eines negativen Ausdrucks zurück. Verwenden Sie zum Zurückgeben des positiven Werts eines negativen Ausdrucks die [ABS](../../t-sql/functions/abs-transact-sql.md)-Funktion.  
   
 ## <a name="examples"></a>Beispiele  

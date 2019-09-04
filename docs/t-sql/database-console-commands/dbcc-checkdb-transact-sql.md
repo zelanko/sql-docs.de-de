@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > Wenn MAXDOP auf 0 (Null) festgelegt wird, wählt SQL Server den maximalen Grad an Parallelität aus, der verwendet werden soll.    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Bemerkungen    
 Deaktivierte Indizes werden von DBCC CHECKDB nicht untersucht. Weitere Informationen zu deaktivierten Indizes finden Sie unter [Deaktivieren von Indizes und Einschränkungen](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Wenn ein benutzerdefinierter Typ als Typ markiert ist, dessen Sortierreihenfolge eine Bytereihenfolge ist, darf es nur eine Serialisierung des benutzerdefinierten Typs geben. Wenn keine konsistente Serialisierung benutzerdefinierter Typen vorhanden ist, deren Sortierreihenfolge eine Bytereihenfolge ist, wird bei der Ausführung von DBCC CHECKDB der Fehler 2537 ausgegeben. Weitere Informationen finden Sie unter [Erstellen von benutzerdefinierten Typen – Anforderungen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    

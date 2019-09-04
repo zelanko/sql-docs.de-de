@@ -75,10 +75,10 @@ Der bestimmte Teil des *date*-Arguments, für das `DATEPART` eine **ganze Zahl**
 |**TZoffset**|**tz**|  
 |**ISO_WEEK**|**isowk**, **isoww**|  
   
-*Datum*  
+*date*  
 Ein Ausdruck, der in einen der folgenden Datentypen aufgelöst werden kann: 
 
-+ **Datum**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -91,7 +91,7 @@ Bei *date* akzeptiert `DATEPART` einen Spaltenausdruck, einen Ausdruck, ein Zeic
  **int**  
   
 ## <a name="return-value"></a>Rückgabewert  
-Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.
+Jedes *datepart*-Argument und die jeweils zugehörigen Abkürzungen geben den gleichen Wert zurück.
   
 Der Rückgabewert hängt von der Sprachumgebung ab, die durch [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfiguration der Serverkonfigurationsoption „Standardsprache“](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) für die Anmeldung festgelegt wurde. Der Rückgabewert hängt von [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ab, wenn *date* ein Zeichenfolgenliteral einiger Formate darstellt. SET DATEFORMAT ändert den Rückgabewert nicht, wenn das Datum ein Spaltenausdruck für Daten vom Typ Datum oder Uhrzeit darstellt.
   
@@ -150,7 +150,7 @@ als Standardeinstellung. Nachdem Sie DATEFIRST festgelegt haben, verwenden Sie d
 ## <a name="year-month-and-day-datepart-arguments"></a>datepart-Argumente des Typs year, month und day  
 Die für DATEPART (**year**, *date*), DATEPART (**month**, *date*) und DATEPART (**day**, *date*) zurückgegebenen Werte entsprechen den jeweiligen Rückgabewerten der Funktionen [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) und [DAY](../../t-sql/functions/day-transact-sql.md).
   
-## <a name="isoweek-datepart"></a>ISO_WEEK datepart  
+## <a name="iso_week-datepart"></a>ISO_WEEK datepart  
 ISO 8601 schließt das ISO-Wochensystem zur Nummerierung von Wochen ein. Die einzelnen Wochen werden mit dem Jahr verknüpft, in dem Donnerstag auftritt. Beispielsweise beginnt die Woche 1 im Jahr 2004 (2004W01) am 29. Dezember 2003 (Montag) und endet am 4. Januar 2004 (Sonntag). Europäische Länder und Regionen verwenden üblicherweise diese Art der Nummerierung. Nichteuropäische Länder und Regionen verwenden diese üblicherweise nicht.
 
 Hinweis: Die höchste Wochennummer in einem Jahr kann 52 oder 53 sein.
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, gibt `DATEPART` den Fehler 9810 zurück. In diesem Beispiel verfügt die Variable *@t* über den Datentyp **time**. Das Beispiel schlägt fehl, da das Datumsteil „year“ für den **time**-Datentyp ungültig ist:
+Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, gibt `DATEPART` den Fehler 9810 zurück. Im folgenden Beispiel hat die Variable *@t* den Datentyp **time**. Bei der Ausführung würde ein Fehler auftreten, weil der Datumsteil „year“ für den **time**-Datentyp ungültig ist:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
@@ -210,7 +210,7 @@ SELECT DATEPART(microsecond, '00:00:01.1234567'); -- Returns 123456
 SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DATEPART` kann in den Klauseln SELECT <Liste>, WHERE, HAVING, GROUP BY und ORDER BY verwendet werden.
   
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wandelt DATEPART Zeichenfolgenliterale implizit in den **datetime2**-Typ um. Daher unterstützt DATENAME das Format YDM nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.

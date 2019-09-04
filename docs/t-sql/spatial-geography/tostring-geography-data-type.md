@@ -42,7 +42,7 @@ ms.locfileid: "68120684"
   
  CLR-Rückgabetyp: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt die Zeichenfolge "NULL" zurück, wenn sie für NULL-Instanzen aufgerufen wird. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]wurden die Ergebnisse, die auf dem Server zurückgegeben werden können, um **FullGlobe** -Instanzen erweitert. Diese Methode gibt den gleichen Wert wie `AsTextZM()`zurück.  
   
  Diese Methode ist nicht exakt.  

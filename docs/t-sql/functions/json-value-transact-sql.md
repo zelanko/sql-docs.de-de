@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109353"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -67,7 +67,7 @@ In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] und [!INCLUDE[ssSDSful
   
  Wenn Sie Skalarwerte zurückgeben müssen, die 4000 Zeichen überschreiten, verwenden Sie **OPENJSON** statt **JSON_VALUE**. Weitere Informationen finden Sie unter [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 ### <a name="lax-mode-and-strict-mode"></a>Lax- und Strict-Modus
 

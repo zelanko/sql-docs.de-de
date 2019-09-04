@@ -51,7 +51,7 @@ THROW [ { error_number | @local_variable },
  *state*  
  Ist eine Konstante oder Variable zwischen 0 und 255, die den Status angibt, der der Nachricht zugeordnet werden soll. *state* entspricht **tinyint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Auf die Anweisung vor der THROW-Anweisung muss als Anweisungsabschlusszeichen das Semikolon (;) folgen.  
   
  Wenn kein TRY...CATCH-Konstrukt verfügbar ist, wird der Anweisungsbatch beendet. Die Zeilennummer und die Prozedur, in der die Ausnahme ausgelöst wird, werden festgelegt. Der Schweregrad wird auf 16 festgelegt.  

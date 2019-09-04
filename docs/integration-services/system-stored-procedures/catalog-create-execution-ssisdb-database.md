@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68023440"
 ---
-# <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
+# <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -73,7 +73,7 @@ Dieser Parameter ist optional. Wenn dieser Parameter nicht angegeben wird, wird 
  Gibt den eindeutigen Bezeichner für eine Ausführungsinstanz zurück. Der *execution_id* ist **bigint**.  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine Ausführung wird verwendet, um die Parameterwerte anzugeben, die von einem Paket während einer einzelnen Instanz der Paketausführung verwendet werden.  
   
  Wenn ein Umgebungsverweis mit dem *reference_id*-Parameter angegeben wird, füllt die gespeicherte Prozedur den Projekt- und Paketparameter mit Literalwerten oder Werten, auf die verwiesen wird, der entsprechenden Umgebungsvariablen auf. Wird ein Umgebungsverweis angegeben, werden bei der Paketausführung Standardparameterwerte verwendet. Um genau zu bestimmen, welche Werte für eine bestimmte Ausführungsinstanz verwendet werden, verwenden Sie den *execution_id*-Ausgabeparameterwert dieser gespeicherten Prozedur, und fragen Sie die Sicht [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md) ab.  

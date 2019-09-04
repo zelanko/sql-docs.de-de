@@ -37,7 +37,7 @@ public static final int SSTRANSTIGHTLYCPLD
 ## <a name="field-value"></a>Feldwert  
  Ein **int** -Wert von 32768.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Jede Transaktion wird anhand einer XA-Verzweigungstransaktions-ID (XID) und einer globalen Transaktions-ID (GTRID) identifiziert. Damit von den Anwendungen eng verkoppelte XA-Transaktionen mit unterschiedlichen XIDs aber den gleichen GTRIDs verwendet werden können, muss [SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) für den flags-Parameter der XAResource.start-Methode festgelegt werden. Weitere Informationen zur Verwendung dieses Flags finden Sie Untergrund Legendes zu [XA-Transaktionen](../../../connect/jdbc/understanding-xa-transactions.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

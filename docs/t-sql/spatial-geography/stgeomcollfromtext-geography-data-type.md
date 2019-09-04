@@ -48,7 +48,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der OGC-Typ der **geography**-Instanz, die von STGeomCollFromText() zurückgegeben wird, wird auf die entsprechende WKT-Eingabe festgelegt.  
   
  Diese Methode löst eine **ArgumentException** aus, wenn die Eingabe ungültig ist.  

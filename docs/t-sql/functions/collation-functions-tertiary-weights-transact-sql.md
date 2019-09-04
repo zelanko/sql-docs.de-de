@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064694"
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Sortierungsfunktionen: TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiary_weights-transact-sql"></a>Sortierungsfunktionen: TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt für jedes Zeichen in einem nicht Unicode-Zeichenfolgenausdruck, der für eine tertiäre SQL-Sortierung definiert ist, eine binäre Zeichenfolge von Schriftbreiten zurück.
@@ -47,7 +47,7 @@ Ein [Zeichenfolgenausdruck](../../t-sql/language-elements/expressions-transact-s
 ## <a name="return-types"></a>Rückgabetypen
 `TERTIARY_WEIGHTS` gibt **varbinary** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **char** oder **varchar** ist, und gibt **varbinary(max)** zurück, wenn *non_Unicode_character_string_expression* vom Datentyp **varchar(max)** ist.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `TERTIARY_WEIGHTS` gibt NULL zurück, wenn eine tertiäre SQL-Sortierung *non_Unicode_character_string_expression* nicht definiert. In der folgenden Tabelle werden die tertiären SQL-Sortierungen dargestellt:
   
 |Sortierreihenfolge-ID|SQL-Sortierung|  

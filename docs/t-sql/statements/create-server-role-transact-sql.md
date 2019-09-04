@@ -51,7 +51,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  Der Anmeldename, der die neue Serverrolle besitzt. Wenn kein Anmeldename angegeben wird, besitzt der Anmeldename, der CREATE SERVER ROLE ausführt, diese Serverrolle.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Serverrollen sind sicherungsfähige Elemente auf Serverebene. Nachdem Sie eine Serverrolle erstellt haben, konfigurieren Sie die Berechtigungen der Rolle auf Serverebene mithilfe von GRANT, DENY und REVOKE. Informationen zum Hinzufügen oder Entfernen von Anmeldenamen bei einer Serverrolle finden Sie unter [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Informationen zum Löschen einer Serverrolle finden Sie unter [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Weitere Informationen finden Sie unter [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Sie können die Serverrollen anzeigen, indem Sie die [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)-Katalogsicht und die [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)-Katalogsicht abfragen.  

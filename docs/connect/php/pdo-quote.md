@@ -37,7 +37,7 @@ $*parameter_type:* Ein optionales Symbol (ganze Zahl), das den Datentyp angibt. 
 ## <a name="return-value"></a>Rückgabewert  
 Eine Zeichenfolge in Anführungszeichen, die an eine SQL-Anweisung oder bei einem Fehler an false übergeben werden kann.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   
 ## <a name="example"></a>Beispiel  

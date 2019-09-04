@@ -45,7 +45,7 @@ public byte[] getBytes(int columnIndex)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getBytes-Methode wird von der getBytes-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode wird das Abrufen aller Spalten als unaufbereitete Bytes vom Server unterstützt. Sie gibt ein Bytearray direkt vom Server in einem Format wieder, das auf dem Server gespeichert ist.  

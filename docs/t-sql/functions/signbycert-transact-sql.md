@@ -57,7 +57,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Erfordert die CONTROL-Berechtigung für das Zertifikat.  
   
 ## <a name="examples"></a>Beispiele  

@@ -42,7 +42,7 @@ public void setFetchSize(int rows)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setFetchSize-Methode wird von der setFetchSize-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Ist die angegebene Abrufgröße NULL, wird der Wert vom JDBC-Treiber ignoriert und die korrekte Abrufgröße geschätzt. Der Standardwert wird von dem [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt festgelegt, von dem das Resultset erstellt wurde. Die Abrufgröße kann jedoch jederzeit geändert werden.  

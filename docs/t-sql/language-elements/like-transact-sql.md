@@ -82,7 +82,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Ergebniswert  
  LIKE gibt TRUE zurück, wenn *match_expression* dem angegebenen *pattern* entspricht.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei Zeichenfolgenvergleichen mithilfe von LIKE werden alle Zeichen in der Musterzeichenfolge berücksichtigt. Die zu berücksichtigenden Zeichen umfassen alle führenden oder nachfolgenden Leerzeichen. Wenn in einer Vergleichsabfrage LIKE 'abc ' (abc, gefolgt von einem Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden keine Zeilen zurückgegeben, die den Wert abc (abc ohne Leerzeichen) enthalten. Nachfolgende Leerzeichen in dem Ausdruck, der mit dem Muster verglichen wird, werden jedoch ignoriert. Wenn in einer Abfrage LIKE 'abc' (abc ohne Leerzeichen) verwendet wird, um Zeilen zurückzugeben, die dem Muster abc ähnlich sind, werden alle Zeilen zurückgegeben, die mit abc anfangen und null oder mehr nachfolgende Leerzeichen enthalten.  
   
  Ein Zeichenfolgenvergleich mithilfe eines Musters, das Daten der Typen **char** und **varchar** enthält, ist bei Verwendung des LIKE-Operators möglicherweise aufgrund der Art und Weise, in der die Daten für jeden Datentyp gespeichert werden, nicht erfolgreich. Im folgenden Beispiel wird eine lokale **char**-Variable an eine gespeicherte Prozedur übergeben. Mit einem Mustervergleich sollen dann alle Mitarbeiter gefunden werden, deren Nachnamen mit den angegebenen Zeichen beginnen.  

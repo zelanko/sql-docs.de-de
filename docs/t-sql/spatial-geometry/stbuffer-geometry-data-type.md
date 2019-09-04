@@ -45,7 +45,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STBuffer()` berechnet einen Puffer wie [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), wobei *tolerance* = distance \* 0,001 und *relative* = **false** ist.  
   
  Wenn *distance* > 0, wird eine **Polygon**- oder **MultiPolygon**-Instanz zurückgegeben.  
@@ -70,7 +70,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-calling-stbuffer-with-parametervalue--0-on-one-dimensional-geometry-instance"></a>A. Aufrufen von STBuffer() mit einem Parameterwert < 0 für eine eindimensionale geometry-Instanz  
+### <a name="a-calling-stbuffer-with-parameter_value--0-on-one-dimensional-geometry-instance"></a>A. Aufrufen von STBuffer() mit einem Parameterwert < 0 für eine eindimensionale geometry-Instanz  
  Im folgenden Beispiel wird eine leere Instanz von `GeometryCollection` zurückgegeben:  
   
 ```
@@ -78,7 +78,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Aufrufen von STBuffer() mit parameter_value < 0 für eine Polygon-Instanz  
+### <a name="b-calling-stbuffer-with-parameter_value--0-on-a-polygon-instance"></a>B. Aufrufen von STBuffer() mit parameter_value < 0 für eine Polygon-Instanz  
  Im folgenden Beispiel wird eine Instanz von `Polygon` mit einem negativen Puffer zurückgegeben:  
   
 ```
@@ -86,7 +86,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="c-calling-stbuffer-with-parametervalue--0-on-a-curvepolygon-instance"></a>C. Aufrufen von STBuffer() mit parameter_value < 0 für eine CurvePolygon-Instanz  
+### <a name="c-calling-stbuffer-with-parameter_value--0-on-a-curvepolygon-instance"></a>C. Aufrufen von STBuffer() mit parameter_value < 0 für eine CurvePolygon-Instanz  
  Im folgenden Beispiel wird eine Instanz von `Polygon` mit einem negativen Puffer von einer `CurvePolygon` -Instanz zurückgegeben:  
   
 ```
@@ -107,7 +107,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
   
  Diese **SELECT**-Anweisung gibt `GEOMETRYCOLLECTION EMPTY.` zurück.  
   
-### <a name="e-calling-stbuffer-with-parametervalue--0"></a>E. Aufrufen von STBuffer() mit parameter_value = 0  
+### <a name="e-calling-stbuffer-with-parameter_value--0"></a>E. Aufrufen von STBuffer() mit parameter_value = 0  
  Im folgenden Beispiel wird eine Kopie der aufrufenden Instanz von `geometry` zurückgegeben:  
   
 ```
@@ -124,7 +124,7 @@ Gibt ein geometrisches Objekt zurück, dass die Vereinigung aller Punkte darstel
  SELECT @g.STBuffer(@distance).ToString();
  ```  
   
-### <a name="g-calling-stbuffer-with-parametervalue--0"></a>G. Aufrufen von STBuffer() mit parameter_value > 0  
+### <a name="g-calling-stbuffer-with-parameter_value--0"></a>G. Aufrufen von STBuffer() mit parameter_value > 0  
  Im folgenden Beispiel wird eine Instanz von `Polygon` zurückgegeben:  
   
 ```

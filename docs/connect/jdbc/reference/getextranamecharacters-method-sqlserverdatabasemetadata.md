@@ -40,7 +40,7 @@ public java.lang.String getExtraNameCharacters()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getextranamecharacter-Methode wird von der getextranamecharacters-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, werden von dieser Methode die folgenden zusätzlichen Zeichen zurückgegeben: „$“, „#“ und „\@“.  

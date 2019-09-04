@@ -36,7 +36,7 @@ $*statement*: Eine Zeichenfolge, die die SQL-Anweisung enthält.
 ## <a name="return-value"></a>Rückgabewert
 Bei Erfolg wird ein PDOStatement-Objekt zurückgegeben. Bei einem Fehler wird entweder ein PDOException-Objekt oder „false“ zurückgegeben, abhängig vom Wert für `PDO::ATTR_ERRMODE`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] wertet keine vorbereiteten Anweisungen vor der Ausführung aus.
 
 In der folgenden Tabelle sind die möglichen Werte für *key_pair* aufgelistet.

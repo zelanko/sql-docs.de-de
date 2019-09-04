@@ -88,7 +88,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Die Zieltabelle, auf die das Sicherheitsprädikat angewendet wird. Mehrere deaktivierte Sicherheitsrichtlinien können auf eine einzelne Tabelle abzielen, aber zu jedem Zeitpunkt kann nur eine aktiviert werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie Prädikatfunktionen mit speicheroptimierten Tabellen verwenden, müssen Sie **SCHEMABINDING** einfügen und den Kompilierungshinweis **WITH NATIVE_COMPILATION** verwenden.  
   
  BLOCK-Prädikate werden ausgewertet, nachdem der entsprechende DML-Vorgang ausgeführt wurde. Aus diesem Grund kann eine READ UNCOMMITTED-Abfrage vorübergehende Werte lesen, für die später ein Rollback ausgeführt wird.  

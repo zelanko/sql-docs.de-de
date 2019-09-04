@@ -41,7 +41,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_UI2  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  *character_expression* muss den Datentyp „DT_WSTR“ aufweisen.  
   
  CODEPOINT gibt ein NULL-Ergebnis zurück, wenn *character_expression* NULL oder eine leere Zeichenfolge ist.  

@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68109340"
 ---
-# <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
+# <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt die ID eines symmetrischen Schlüssels in der aktuellen Datenbank zurück.  
@@ -48,7 +48,7 @@ Key_ID ( 'Key_Name' )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Name eines temporären Schlüssels muss mit einem Nummernzeichen (#) beginnen.  
   
 ## <a name="permissions"></a>Berechtigungen  

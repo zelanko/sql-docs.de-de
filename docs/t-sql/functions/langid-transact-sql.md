@@ -44,7 +44,7 @@ ms.locfileid: "68109252"
 ## <a name="return-types"></a>Rückgabetypen  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zum Anzeigen von Informationen zu Spracheinstellungen, einschließlich Sprach-ID-Nummern, führen Sie **sp_helplanguage** ohne Angabe von Parametern aus.  
   
 ## <a name="examples"></a>Beispiele  

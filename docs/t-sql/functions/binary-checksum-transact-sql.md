@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68040209"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
+# <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Gibt den binären Prüfsummenwert zurück, der für eine Zeile einer Tabelle oder eine Liste von Ausdrücken berechnet wurde.
@@ -56,7 +56,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) belieb
 ## <a name="return-types"></a>Rückgabetypen  
  **int**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wird `BINARY_CHECKSUM(*)` für eine beliebige Zeile einer Tabelle berechnet, gibt die Anweisung den gleichen Wert zurück, solange die Zeile nicht später geändert wird. `BINARY_CHECKSUM` erfüllt die Eigenschaften einer Hashfunktion: Wenn es auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Typ sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. Bei dieser Definition werden die NULL-Werte eines angegebenen Typs bei einem Vergleich als gleiche Werte angesehen. Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme des Ausdrucks. Diese Änderung ist jedoch nicht gewährleistet. Daher wird empfohlen, `BINARY_CHECKSUM` nur zur Ermittlung von Änderungen der Daten zu verwenden, wenn Ihre Anwendung auch bei gelegentlich nicht ausgeführten Änderungen weiter ausgeführt werden kann. Sie sollten andernfalls in Betracht ziehen, stattdessen `HASHBYTES` zu verwenden. Ist ein MD5-Hashalgorithmus angegeben, ist die Wahrscheinlichkeit, dass `HASHBYTES` für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei der Verwendung von `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` kann auf eine Liste von Ausdrücken angewendet werden und gibt den gleichen Wert für eine angegebene Liste zurück. Wenn `BINARY_CHECKSUM` auf zwei beliebige Listen von Ausdrücken angewendet wird, wird stets der gleiche Wert zurückgegeben, wenn die entsprechenden Elemente der beiden Listen denselben Typ und dieselbe Bytedarstellung haben. Für diese Definition wird bei NULL-Werten eines angegebenen Datentyps angenommen, dass sie dieselbe Bytedarstellung haben.

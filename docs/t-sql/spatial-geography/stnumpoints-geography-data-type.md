@@ -41,7 +41,7 @@ ms.locfileid: "68120903"
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode zählt die Punkte in der Beschreibung einer **geography** -Instanz. Doppelte Punkte werden gezählt, verbundene Punkte zwischen Segmenten allerdings nur einmal. Wenn diese Instanz eine Auflistung ist, gibt diese Methode die Gesamtzahl der Punkte in der Auflistung zurück.  
   
 ## <a name="examples"></a>Beispiele  

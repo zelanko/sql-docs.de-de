@@ -33,7 +33,7 @@ public void setMultiSubnetFailover(boolean multiSubnetFailover);
   
  Der neue Wert der **multisubnetfailover** -Verbindungs Eigenschaft.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zur **multisubnetfailover** -Verbindungs Eigenschaft finden Sie unter [Festlegen der Verbindungs Eigenschaften](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -35,7 +35,7 @@ ms.locfileid: "68047970"
 |created_by_name|**nvarchar(128)**|Der Name des Benutzers, der den Ordner erstellt hat.|  
 |created_time|**datetimeoffset(7)**|Datum und Uhrzeit der Ordnererstellung.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jeden Ordner im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

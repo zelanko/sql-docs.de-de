@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die DBCC DBREINDEX-Anweisung erstellt einen Index oder alle Indizes für eine Tabelle neu. Aufgrund der Möglichkeit, Indizes dynamisch neu zu erstellen, können Indizes mit PRIMARY KEY- oder UNIQUE-Einschränkungen neu erstellt werden, ohne diese Einschränkungen zu löschen und neu zu erstellen. Das heißt, ein Index kann neu erstellt werden, ohne die Struktur einer Tabelle oder deren Einschränkungen zu kennen. Dies kann nach dem Massenkopieren von Daten in die Tabelle der Fall sein.
 
 DBCC DBREINDEX kann alle Indizes für eine Tabelle in einer einzelnen Anweisung neu erstellen. Dies ist einfacher, als mehrere DROP INDEX- und CREATE INDEX-Anweisungen zu codieren. Da die Arbeit von einer Anweisung ausgeführt wird, ist DBCC DBREINDEX automatisch atomar. Einzelne DROP INDEX- und CREATE INDEX-Anweisungen müssen dagegen in eine Transaktion eingebunden werden, um atomar zu sein. Außerdem bietet DBCC DBREINDEX mehr Optimierungen, als bei einzelnen DROP INDEX- und CREATE INDEX-Anweisungen möglich wären.

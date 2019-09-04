@@ -110,7 +110,7 @@ FOR DATABASE_MIRRORING (
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Sie können den Nutzlasttyp mit **ALTER ENDPOINT** nicht ändern.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Geben Sie bei Verwendung von ALTER ENDPOINT nur die zu aktualisierenden Parameter an. Alle Eigenschaften eines vorhandenen Endpunktes bleiben unverändert, es sei denn, Sie ändern diese explizit.  
   
  ENDPOINT DDL-Anweisungen können nicht innerhalb einer Benutzertransaktion ausgeführt werden.  

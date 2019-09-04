@@ -545,7 +545,7 @@ Es wird empfohlen, ein sicheres Kennwort zu verwenden.
  **-?**  
  Zeigt die Version von **sqlcmd** und eine Syntaxzusammenfassung der **sqlcmd** -Optionen an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Optionen müssen nicht in der Reihenfolge verwendet werden, in der sie im Abschnitt zur Syntax gezeigt wurden.  
   
  Wenn mehrere Ergebnisse zurückgegeben werden, gibt **sqlcmd** eine Leerzeile zwischen den einzelnen Resultsets in einem Batch aus. Außerdem wird die Meldung `<x> rows affected` nicht angezeigt, wenn sie für die ausgeführte Anweisung nicht gilt.  

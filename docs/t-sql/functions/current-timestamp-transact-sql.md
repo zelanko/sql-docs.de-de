@@ -38,7 +38,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026410"
 ---
-# <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
+# <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den aktuellen Zeitstempel des Datenbanksystems ohne den Zeitzonenoffset der Datenbank als **datetime**-Wert zurück. `CURRENT_TIMESTAMP` leitet diesen Wert aus dem Betriebssystem des Computers ab, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.
@@ -64,7 +64,7 @@ Diese Funktion akzeptiert keine Argumente.
 ## <a name="return-type"></a>Rückgabetyp  
 **datetime**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können an jeder Stelle auf `CURRENT_TIMESTAMP` verweisen, an der sie auf einen **datetime**-Ausdruck verweisen können.
   
 `CURRENT_TIMESTAMP` ist eine nicht deterministische Funktion. Sichten und Ausdrücke, die auf diese Spalte verweisen, können nicht indiziert werden.

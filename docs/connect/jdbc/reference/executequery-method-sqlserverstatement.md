@@ -45,7 +45,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese executeQuery-Methode wird von der executeQuery-Methode in der java.sql.Statement-Schnittstelle angegeben.  
   
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) wird ausgelöst, wenn die angegebene SQL-Anweisung nichts anderes als ein einzelnes [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) -Objekt erzeugt.  

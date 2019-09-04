@@ -39,7 +39,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  Eine **Zeichenfolge** mit dem Pfad (einschließlich des Dateinamens) der trustStore-Zertifikatsdatei.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ist die trustStore-Eigenschaft nicht angegeben oder auf NULL festgelegt, wird der zu verwendende Zertifikatspeicher von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mithilfe der Suchregeln der Trust-Manager-Factory ermittelt. Die Vertrauenswürdigkeitsinformationen werden von der SunX509-Standardklasse „TrustManagerFactory“ an folgenden Speicherorten und in der folgenden Reihenfolge gesucht:  
   
 -   1. Eine von der Java Virtual Machine (JVM)-Systemeigenschaft "javax.net.ssl.trustStore" angegebene Datei  

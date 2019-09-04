@@ -63,7 +63,7 @@ Ein ganzzahliger Ausdruck, der Millisekunden angibt.
 ## <a name="return-types"></a>Rückgabetypen
 **datetime**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DATETIMEFROMPARTS` gibt einen vollständig initialisierten **datetime**-Wert zurück. `DATETIMEFROMPARTS` löst einen Fehler aus, wenn mindestens ein erforderliches Argument über einen ungültigen Wert verfügt. `DATETIMEFROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält.
   
 Diese Funktion unterstützt das Remoting zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern und höher. Sie unterstützt nicht das Remoting zu Servern mit einer Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

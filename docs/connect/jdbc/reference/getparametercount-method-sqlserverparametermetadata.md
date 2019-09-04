@@ -40,7 +40,7 @@ public int getParameterCount()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese GetParameterCount-Methode wird von der GetParameterCount-Methode in der Java. SQL. parametermetadata-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

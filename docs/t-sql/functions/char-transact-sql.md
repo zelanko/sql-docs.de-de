@@ -57,7 +57,7 @@ Eine ganze Zahl zwischen 0 und 255. `CHAR` gibt einen `NULL`-Wert für Ganzzahla
 ## <a name="return-types"></a>Rückgabetypen
 **char(1)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie `CHAR`, um Steuerzeichen in Zeichenfolgen einzufügen. In dieser Tabelle finden Sie einige häufig verwendete Steuerzeichen.
   
 |Steuerzeichen|value|  

@@ -35,7 +35,7 @@ ms.locfileid: "67971916"
 public final class SQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mithilfe von SQLServerCallableStatement kann der gespeicherte Prozedurname angegeben werden, der mit Eingabe- und Ausgabeparametern aufgerufen wird. SQLServerCallableStatement bietet auch die Möglichkeit zum Abrufen des Rückgabestatus Werts mit der `? = call( ?, ..)` -Syntax.  
   
  Diese Klasse unterstützt das Entpacken in die SQLServerCallableStatement-Klasse, die isqlservercallablestatement-Schnittstelle, die Java. SQL. CallableStatement-Schnittstelle sowie die Klassen und Schnittstellen, die von SQLServerPreparedStatement zum Entpacken unterstützt werden. Weitere Informationen finden Sie unter [Wrapper und Schnittstellen](../../../connect/jdbc/wrappers-and-interfaces.md).  

@@ -51,7 +51,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Aktiviert bzw. deaktiviert einen Anbieter.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der Anbieter die DLL-Datei ändert, mit der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die erweiterbare Schlüsselverwaltung implementiert wird, müssen Sie die ALTER CRYPTOGRAPHIC PROVIDER-Anweisung verwenden.  
   
  Wenn der Pfad der DLL-Datei mithilfe der ALTER CRYPTOGRAPHIC PROVIDER-Anweisung aktualisiert wird, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] folgende Aktionen aus:  

@@ -32,7 +32,7 @@ public int getMinutesOffset()
 ## <a name="return-value"></a>Rückgabewert  
  Das Offset in Minuten.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Für ein DateTimeOffset-Objekt, das den 8. März 2010, 11:35:48 -0800 darstellt, gibt getminutesoffset den Wert 480 zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

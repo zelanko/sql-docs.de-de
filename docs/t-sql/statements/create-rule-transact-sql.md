@@ -72,7 +72,7 @@ AS condition_expression
 > [!NOTE]  
 >  Vermeiden Sie die Erstellung von Regeln für Ausdrücke, die Aliasdatentypen verwenden. Obwohl die Erstellung von Regeln für Ausdrücke, die Aliasdatentypen verwenden, möglich ist, können die Ausdrücke nach dem Binden der Regeln an Spalten oder Aliasdatentypen nicht kompiliert werden, wenn auf diese verwiesen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  CREATE RULE-Anweisungen können nicht mit anderen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen in einem einzelnen Batch kombiniert werden. Wenn Sie Regeln erstellen, gelten diese nicht für die Daten, die zu diesem Zeitpunkt bereits in der Datenbank vorhanden sind; darüber hinaus können Regeln nicht an Systemdatentypen gebunden werden.  
   
  Eine Regel kann nur in der aktuellen Datenbank erstellt werden. Führen Sie nach dem Erstellen einer Regel **sp_bindrule** aus, um die Regel an eine Spalte oder an einen Aliasdatentyp zu binden. Eine Regel muss mit dem Datentyp der Spalte kompatibel sein. Es ist beispielsweise nicht möglich, "\@value LIKE A%" als Regel für eine numerische Spalte zu verwenden. Eine Regel kann nicht an die Datentypen **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, einen CLR-benutzerdefinierten Typ oder an **timestamp**-Spalten gebunden werden. An eine berechnete Spalte kann keine Regel gebunden werden.  

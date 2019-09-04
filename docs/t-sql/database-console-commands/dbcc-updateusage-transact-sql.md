@@ -76,7 +76,7 @@ Alle Informationsmeldungen werden unterdrückt.
 COUNT_ROWS  
 Gibt an, dass die row count-Spalte mit der aktuellen Anzahl von Tabellen- oder Sichtzeilen aktualisiert wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC UPDATEUSAGE korrigiert die Anzahl der Zeilen, verwendeten Seiten, reservierten Seiten, Blattseiten und Datenseiten jeder Partition in Tabellen und Indizes. Wurden keine Ungenauigkeiten in den Systemtabellen festgestellt, werden von DBCC UPDATEUSAGE keine Daten zurückgegeben. Wurden Ungenauigkeiten gefunden und korrigiert und wurde WITH NO_INFOMSGS nicht verwendet, gibt DBCC UPDATEUSAGE die Zeilen und Spalten zurück, die in den Systemtabellen aktualisiert wurden.
   
 DBCC CHECKDB wurde verbessert, sodass nun erkannt wird, wenn Seiten- oder Zeilenzähler negativ werden. Wenn dies festgestellt wird, enthält die Ausgabe von DBCC CHECKDB eine Warnung und die Empfehlung, DBCC UPDATEUSAGE auszuführen, um das Problem zu beseitigen.

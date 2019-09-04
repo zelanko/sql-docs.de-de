@@ -33,7 +33,7 @@ ms.locfileid: "67977412"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Schnittstelle wird von der [SQLServerResultSet-Klasse](../../../connect/jdbc/reference/sqlserverresultset-class.md)implementiert.  
   
  Diese Schnittstelle macht die [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifischen Methoden verfügbar:  

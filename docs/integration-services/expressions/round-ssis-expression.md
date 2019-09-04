@@ -44,7 +44,7 @@ ROUND(numeric_expression,length)
 ## <a name="result-types"></a>Ergebnistypen  
  Der Typ entspricht dem Typ von *numeric*_*expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das *length* -Argument muss zu einer positiven ganzen Zahl oder 0 (null) ausgewertet werden.  
   
  ROUND gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  

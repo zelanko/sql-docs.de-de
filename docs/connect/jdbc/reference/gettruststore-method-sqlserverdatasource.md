@@ -37,7 +37,7 @@ public java.lang.String getTrustStore()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichenfolge** mit dem Pfad (einschließlich Dateiname) zur trustStore-Zertifikatsdatei, oder NULL, wenn kein Wert festgelegt wurde.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ist die trustStore-Eigenschaft nicht festgelegt, wird von der [getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md)-Methode NULL zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

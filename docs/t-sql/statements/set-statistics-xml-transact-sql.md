@@ -42,7 +42,7 @@ ms.locfileid: "68004709"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Einstellung von SET STATISTICS XML wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  
   
  Wenn SET STATISTICS XML auf ON festgelegt ist, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ausführungsinformationen für jede Anweisung nach deren Ausführung zurück. Nachdem diese Option auf ON festgelegt wird, werden Informationen zu allen weiteren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen zurückgegeben, bis die Option auf OFF festgelegt wird. SET STATISTICS XML muss nicht die einzige Anweisung in einem Batch sein.  

@@ -39,7 +39,7 @@ public void setURL(java.lang.String url)
   
  Ein **String-Objekt**, das die URL enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Aus Sicherheitsgründen sollte das Kennwort nicht in der URL für die setURL-Methode enthalten sein. Der Grund hierfür ist, dass Java-Anwendungsserver von Drittanbietern oft den für die URL-Eigenschaft festgelegten Wert auf der Benutzeroberfläche für die Datenquellenkonfiguration anzeigen. Verwenden Sie stattdessen die [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)-Methode, um den Wert für das Kennwort festzulegen. Java-Anwendungsserver zeigen kein in der Datenquelle festgelegtes Kennwort auf der Konfigurationsbenutzeroberfläche an.  
   
 > [!NOTE]  

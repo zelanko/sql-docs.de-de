@@ -60,7 +60,7 @@ public void RemoveSSLCertificateBindings(string Application,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Fehlercode gibt an, dass der Aufruf nicht erfolgreich war.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode entfernt die spezifische Bindung aus der Datei rsreportserver.config und optional aus HTTP.SYS.  
   
 ## <a name="requirements"></a>Anforderungen  

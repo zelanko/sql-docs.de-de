@@ -295,7 +295,7 @@ OUTPUT-Klausel
 > [!NOTE]
 >  Ein Syntaxfehler wird ausgelöst, wenn keine Spaltenliste bereitgestellt wird.  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Spezifische Informationen zum Einfügen von Daten in SQL-Graph-Tabellen finden Sie unter [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## <a name="best-practices"></a>Bewährte Methoden  

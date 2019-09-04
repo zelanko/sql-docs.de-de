@@ -42,7 +42,7 @@ Ein Wert vom Typ **varbinary(** _n_ **)** , **varbinary(max)** oder **binary(** 
 ## <a name="return-types"></a>Rückgabetypen  
 Ein Wert vom Datentyp **varbinary(max)** . `DECOMPRESS` verwendet den ZIP-Algorithmus, um das Eingabeargument zu dekomprimieren. Der Benutzer sollte das Ergebnis wenn nötig explizit in einen Zieltyp umwandeln.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
   

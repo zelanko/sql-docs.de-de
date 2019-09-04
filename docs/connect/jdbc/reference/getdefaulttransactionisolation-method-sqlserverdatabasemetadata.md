@@ -40,7 +40,7 @@ public int getDefaultTransactionIsolation()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getdefaulttransaktionisolation-Methode wird von der getdefaulttransaktionisolation-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Bei Verwendung von [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank wird von dieser Methode entweder der Wert TRANSACTION_READ_COMMITTED oder der Wert 2 vom Typ **int** zurückgegeben.  

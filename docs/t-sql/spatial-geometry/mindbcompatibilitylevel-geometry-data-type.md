@@ -38,7 +38,7 @@ Gibt den minimalen Datenbankkompatibilitätsgrad zurück, der die **geometry** -
   
  CLR-Rückgabetyp: **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Testen Sie die Kompatibilität eines räumlichen Objekts mithilfe von `MinDbCompatibilityLevel()` , bevor Sie den Kompatibilitätsgrad einer Datenbank ändern.  
   
 ## <a name="examples"></a>Beispiele  

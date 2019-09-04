@@ -75,7 +75,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  Gibt an, zu welcher Seite, links oder rechts, die einzelnen Grenzwertintervalle *boundary_value* [ **,** _...n_ ] gehören, wenn Intervallwerte von [!INCLUDE[ssDE](../../includes/ssde-md.md)] in aufsteigender Reihenfolge von links nach rechts sortiert werden. Fehlt die Angabe, ist LEFT der Standardwert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Bereich einer Partitionsfunktion beschränkt sich auf die Datenbank, in der sie erstellt wird. Innerhalb der Datenbank befinden sich Partitionsfunktionen in einem von anderen Funktionen abgetrennten Namespace.  
   
  Jede Zeile, deren Partitionierungsspalte NULL-Werte enthält, wird in die Partition ganz links platziert, es sei denn, NULL wurde als Grenzwert angegeben, und RIGHT wird angezeigt. In diesem Fall ist die Partition ganz links eine leere Partition, und NULL-Werte werden in die sich anschließende Partition platziert.  

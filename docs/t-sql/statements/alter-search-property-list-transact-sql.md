@@ -106,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Löscht die angegebene Eigenschaft aus der Eigenschaftenliste, die durch *list_name* festgelegt wurde. Durch das Löschen einer Eigenschaft wird ihre Registrierung aufgehoben und Sie können nicht mehr danach suchen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Jeder Volltextindex kann nur eine Sucheigenschaftenliste aufweisen.  
   
  Um das Abfragen für eine bestimmte Sucheigenschaft zu aktivieren, müssen Sie sie der Sucheigenschaftenliste des Volltextindexes hinzufügen und diesen anschließend neu auffüllen.  

@@ -46,7 +46,7 @@ DROP APPLICATION ROLE rolename
  *rolename*  
  Gibt den Namen der zu löschenden Anwendungsrolle an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Anwendungsrolle sicherbare Elemente besitzt, kann sie nicht gelöscht werden. Vor dem Löschen einer Anwendungsrolle, die sicherungsfähige Elemente besitzt, müssen Sie zuerst den Besitz dieser sicherungsfähigen Elemente übertragen oder diese löschen.  
   
 > [!CAUTION]  

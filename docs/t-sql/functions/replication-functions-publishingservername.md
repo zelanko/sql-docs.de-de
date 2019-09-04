@@ -42,7 +42,7 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  PUBLISHINGSERVERNAME wird für alle Replikationstypen verwendet.  
   
  PUBLISHINGSERVERNAME wird verwendet, wenn eine Datenbank-Spiegelungssitzung für die Veröffentlichungsdatenbank zwischen dem Verleger und einer Spiegelungspartnerinstanz vorhanden ist.  

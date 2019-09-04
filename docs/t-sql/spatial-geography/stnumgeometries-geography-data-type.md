@@ -41,7 +41,7 @@ ms.locfileid: "68120907"
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt 1 zurück, wenn die **geography** -Instanz keine **MultiPoint**-, **MultiLineString**-, **MultiPolygon**- oder **GeometryCollection** -Instanz ist. Sie gibt 0 zurück, wenn die **geography** -Instanz leer ist.  
   
 ## <a name="examples"></a>Beispiele  

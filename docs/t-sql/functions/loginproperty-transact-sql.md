@@ -111,7 +111,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL, wenn es sich bei der Anmeldung nicht um eine gültige SQL Server-Anmeldung handelt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese integrierte Funktion gibt Informationen zu den Kennwortrichtlinien-Einstellungen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldung zurück. Bei den Namen der Eigenschaften wird die Groß-/Kleinschreibung nicht beachtet. Somit sind Eigenschaftsnamen wie **BadPasswordCount** und **badpasswordcount** gleichwertig. Die Werte der Eigenschaften **PasswordHash, PasswordHashAlgorithm** und **PasswordLastSetTime** sind in allen unterstützten Konfigurationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar, die anderen Eigenschaften jedoch nur, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] ausgeführt wird und CHECK_POLICY und CHECK_EXPIRATION aktiviert sind. Weitere Informationen finden Sie unter [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Berechtigungen  

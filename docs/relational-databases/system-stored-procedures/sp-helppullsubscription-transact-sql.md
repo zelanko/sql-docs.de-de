@@ -22,7 +22,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771436"
 ---
-# <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
+# <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Zeigt Informationen zu einem oder mehreren Abonnements auf dem Abonnenten an. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
@@ -59,7 +59,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**Abonnementtyp**|**int**|Abonnementtyp für die Veröffentlichung.|  
 |**Verteilungs-Agent**|**nvarchar (100)**|Verteilungs-Agent für die Verarbeitung des Abonnements.|  
 |**Veröffentlichungs Beschreibung**|**nvarchar(255)**|Die Beschreibung der Veröffentlichung.|  
-|**Zeitpunkt der letzten Aktualisierung**|**Datum**|Zeitpunkt, zu dem die Abonnementinformationen aktualisiert wurden. Dies ist eine UNICODE-Zeichenfolge aus ISO-Datum (114) + ODBC-Zeit (121). Das Format ist yyyymmdd hh:mi:sss.mmm, wobei yyyy das Jahr, mm den Monat, dd den Tag, hh die Stunde, mi die Minute, sss die Sekunden und mmm die Millisekunden angibt.|  
+|**Zeitpunkt der letzten Aktualisierung**|**date**|Zeitpunkt, zu dem die Abonnementinformationen aktualisiert wurden. Dies ist eine UNICODE-Zeichenfolge aus ISO-Datum (114) + ODBC-Zeit (121). Das Format ist yyyymmdd hh:mi:sss.mmm, wobei yyyy das Jahr, mm den Monat, dd den Tag, hh die Stunde, mi die Minute, sss die Sekunden und mmm die Millisekunden angibt.|  
 |**Abonnement Name**|**varchar (386)**|Name des Abonnements.|  
 |**Zeitstempel der letzten Transaktion**|**varbinary(16)**|Timestamp der letzten replizierten Transaktion.|  
 |**Aktualisierungs Modus**|**tinyint**|Zulässige Updatetypen.|  

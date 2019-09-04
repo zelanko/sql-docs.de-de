@@ -45,7 +45,7 @@ Diese Funktion gibt Informationen zu Server- oder Datenbankereignissen zurück. 
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `EVENTDATA` gibt nur Daten zurück, wenn ein direkter Verweis innerhalb eines DDL- oder LOGON-Triggers vorliegt. `EVENTDATA` gibt beim Aufruf durch andere Routinen NULL zurück, selbst wenn diese Routinen durch einen DDL- oder LOGON-Trigger aufgerufen werden.
   
 Von `EVENTDATA` zurückgegebene Daten sind ungültig, nachdem eine Transaktion

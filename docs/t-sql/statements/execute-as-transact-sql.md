@@ -97,7 +97,7 @@ Bei Verwendung außerhalb eines Moduls weist die Anweisung keine Aktion auf.
  > [!NOTE]  
 >  Diese Option ist in SQL Data Warehouse nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Änderung des Ausführungskontexts bleibt wirksam, bis eine der folgenden Bedingungen auftritt:  
   
 -   Eine andere EXECUTE AS-Anweisung wird ausgeführt.  

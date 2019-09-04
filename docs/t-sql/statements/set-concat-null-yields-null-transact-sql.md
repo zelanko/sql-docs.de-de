@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68041841"
 ---
-# <a name="set-concatnullyieldsnull-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
+# <a name="set-concat_null_yields_null-transact-sql"></a>SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Steuert die Behandlung von Verkettungsergebnissen als NULL-Werte oder als leere Zeichenfolgen.  
@@ -54,7 +54,7 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn SET CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, führt die Verkettung eines NULL-Wertes mit einer Zeichenfolge zum Ergebnis NULL. `SELECT 'abc' + NULL` ergibt beispielsweise `NULL`. Wenn SET CONCAT_NULL_YIELDS_NULL auf OFF festgelegt ist, erzeugt die Verkettung eines NULL-Wertes mit einer Zeichenfolge als Ergebnis die Zeichenfolge (der NULL-Wert wird als leere Zeichenfolge behandelt). `SELECT 'abc' + NULL` ergibt beispielsweise `abc`.  
   
  Wenn SET CONCAT_NULL_YIELDS_NULL nicht angegeben ist, gilt die Einstellung der **CONCAT_NULL_YIELDS_NULL**-Datenbankoption.  

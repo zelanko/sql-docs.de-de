@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67941651"
 ---
-# <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
+# <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
@@ -45,7 +45,7 @@ Bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUD
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die Einstellung von SET SHOWPLAN_XML wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.
 

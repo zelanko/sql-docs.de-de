@@ -54,7 +54,7 @@ expression operator expression
 ## <a name="result-types"></a>Ergebnistypen  
  Gibt einen Wert vom Datentyp des Arguments zurück, das in der Rangfolge höher steht. Weitere Informationen finden Sie unter [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen finden Sie in den Themen zu jedem Operator.  
   
 ## <a name="examples"></a>Beispiele  

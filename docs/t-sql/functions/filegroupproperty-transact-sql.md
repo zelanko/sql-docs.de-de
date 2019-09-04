@@ -56,7 +56,7 @@ Ein Ausdruck vom Typ **varchar(128)** , der den Namen der Dateigruppeneigenschaf
 ## <a name="return-types"></a>Rückgabetypen  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 *filegroup_name* entspricht der Spalte **name** der **sys.filegroups**-Katalogsicht.  
   
 ## <a name="examples"></a>Beispiele  

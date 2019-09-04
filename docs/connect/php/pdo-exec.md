@@ -35,7 +35,7 @@ int PDO::exec ($statement)
 ## <a name="return-value"></a>Rückgabewert  
 Eine ganze Zahl, die über die Anzahl der betroffenen Zeilen Auskunft gibt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn *$statement* mehrere SQL-Anweisungen enthält, wird nur die Anzahl der von der letzten Anweisung betroffenen Zeilen in der Zahl widergespiegelt.  
   
 PDO::exec Gibt keine Ergebnisse für eine SELECT Anweisung zurück.  

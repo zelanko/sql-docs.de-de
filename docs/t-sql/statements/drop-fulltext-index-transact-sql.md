@@ -46,7 +46,7 @@ DROP FULLTEXT INDEX ON table_name
  *table_name*  
  Der Name der Tabelle oder indizierten Sicht, die den zu entfernenden Volltextindex enthält.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Es ist nicht nötig, alle Spalten aus dem Volltextindex zu löschen, bevor Sie den DROP FULLTEXT INDEX-Befehl verwenden.  
   
 ## <a name="permissions"></a>Berechtigungen  

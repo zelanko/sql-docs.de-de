@@ -51,7 +51,7 @@ ms.locfileid: "68121993"
 ## <a name="result-value"></a>Ergebniswert  
  NOT kehrt den Wert eines beliebigen booleschen Ausdrucks um.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Durch NOT wird ein Ausdruck negiert.  
   
  Die folgende Tabelle zeigt die Ergebnisse des Vergleichs von TRUE- und FALSE-Werten mithilfe des NOT-Operators.  

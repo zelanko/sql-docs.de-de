@@ -41,7 +41,7 @@ ms.locfileid: "68100994"
   
  CLR-Rückgabetyp: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `STArea()` gibt 0 (null) zurück, wenn eine **geometry**-Instanz nur null- und eindimensionale Abbildungen enthält oder leer ist. `STArea()` gibt **NULL** zurück, wenn die **geometry**-Instanz nicht initialisiert wurde.  
   
 ## <a name="examples"></a>Beispiele  

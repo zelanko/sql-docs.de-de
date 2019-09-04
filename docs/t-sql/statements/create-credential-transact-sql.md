@@ -69,7 +69,7 @@ WITH IDENTITY = 'identity_name'
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
  Gibt den Namen eines *Anbieters für die Schlüsselverwaltung in Unternehmen* (Enterprise Key Management Provider (EKM)) an. Weitere Informationen zum Verwalten von Schlüsseln finden Sie unter [Erweiterbare Schlüsselverwaltung &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
  Falls für IDENTITY ein Windows-Benutzer angegeben ist, kann der geheime Bereich das Kennwort enthalten. Der geheime Bereich wird mithilfe des Diensthauptschlüssels verschlüsselt. Falls der Diensthauptschlüssel neu generiert wird, wird der geheime Bereich mithilfe des neuen Diensthauptschlüssels neu verschlüsselt.  
   

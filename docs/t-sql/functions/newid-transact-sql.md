@@ -43,7 +43,7 @@ NEWID ( )
 ## <a name="return-types"></a>Rückgabetypen  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `NEWID()` ist mit RFC4122 kompatibel.  
   
 ## <a name="examples"></a>Beispiele  

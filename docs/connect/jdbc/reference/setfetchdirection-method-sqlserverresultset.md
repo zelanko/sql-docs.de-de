@@ -51,7 +51,7 @@ public void setFetchDirection(int direction)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setFetchDirection-Methode wird von der setFetchDirection-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Der Anfangswert dieser Methode wird vom [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt bestimmt, von dem dieses SQLServerResultSet-Objekt erstellt wurde. Die Abrufrichtung kann jedoch jederzeit geändert werden.  

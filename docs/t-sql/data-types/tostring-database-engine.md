@@ -49,7 +49,7 @@ string ToString  ( )
   
 **CLR-Rückgabetyp: String**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Gibt die logische Position in der Hierarchie zurück. Beispielsweise stellt `/2/1/` die vierte Zeile ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) in der folgenden hierarchischen Struktur eines Dateisystems dar:
   
 ```sql

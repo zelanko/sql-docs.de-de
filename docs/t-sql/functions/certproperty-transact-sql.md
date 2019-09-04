@@ -76,7 +76,7 @@ Der Rückgabetyp hängt von der im Funktionsaufruf angegebenen Eigenschaft ab. D
 -   *Cert_Serial_Number*, *Issuer_Name*, *String_SID* und *Subject* geben **nvarchar** zurück.  
 -   *SID* gibt **varbinary**zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Weitere Informationen zu Zertifikaten finden Sie in der Katalogsicht [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
 ## <a name="permissions"></a>Berechtigungen  

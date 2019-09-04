@@ -60,7 +60,7 @@ Eine Variable eines der folgenden Typen, die Daten enthalten, die mit dem öffen
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Diese Funktion verschlüsselt Daten mit dem öffentlichen Schlüssel des Zertifikats. Der verschlüsselte Text kann nur mit dem entsprechenden privaten Schlüssel entschlüsselt werden. Diese asymmetrischen Transformationen sind im Vergleich zum Verschlüsseln und Entschlüsseln mit einem symmetrischen Schlüssel kostenintensiv. Von der asymmetrischen Verschlüsselung wird daher abgeraten, wenn Sie große Datasets verwenden.
   
 ## <a name="examples"></a>Beispiele  

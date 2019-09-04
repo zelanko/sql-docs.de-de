@@ -33,7 +33,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68117502"
 ---
-# <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
+# <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Ermöglicht das Einfügen eines vom System bereitgestellten Werts für den aktuellen Anmeldenamen in eine Tabelle, wenn kein Standardwert angegeben ist.  
@@ -49,7 +49,7 @@ SYSTEM_USER
 ## <a name="return-types"></a>Rückgabetypen  
  **nchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können die SYSTEM_USER-Funktion mit DEFAULT-Einschränkungen in den Anweisungen CREATE TABLE und ALTER TABLE verwenden. Sie können sie auch wie jede beliebige Standardfunktion verwenden.  
   
  Unterscheiden sich Benutzer- und Anmeldename, gibt SYSTEM_USER den Anmeldenamen zurück.  
@@ -60,7 +60,7 @@ SYSTEM_USER
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>A. Verwenden von SYSTEM_USER zur Rückgabe des aktuellen Systembenutzernamens  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. Verwenden von SYSTEM_USER zur Rückgabe des aktuellen Systembenutzernamens  
  Im folgenden Beispiel wird eine `char`-Variable deklariert, der aktuelle Wert von `SYSTEM_USER` in der Variablen gespeichert und dann der in der Variablen gespeicherte Wert ausgegeben.  
   
 ```  
@@ -79,7 +79,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-systemuser-with-default-constraints"></a>B. Verwenden von SYSTEM_USER mit DEFAULT-Einschränkungen  
+### <a name="b-using-system_user-with-default-constraints"></a>B. Verwenden von SYSTEM_USER mit DEFAULT-Einschränkungen  
  Im folgenden Beispiel wird eine Tabelle mit `SYSTEM_USER` als `DEFAULT`-Einschränkung für die `SRep_tracking_user`-Spalte erstellt.  
   
 ```  
@@ -129,7 +129,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: Verwenden von SYSTEM_USER zur Rückgabe des aktuellen Systembenutzernamens  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C: Verwenden von SYSTEM_USER zur Rückgabe des aktuellen Systembenutzernamens  
  Im folgenden Beispiel wird der aktuelle Wert von `SYSTEM_USER` zurückgegeben.  
   
 ```  

@@ -55,7 +55,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schema\_name_  
  Gibt das erste Schema an, das vom Server beim Auflösen der Objektnamen für diese Rolle durchsucht wird. Wenn DEFAULT_SCHEMA nicht definiert ist, verwendet die Anwendungsrolle DBO als Standardschema. *schema_name* kann ein Schema sein, das in der Datenbank nicht vorhanden ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Beim Festlegen von Kennwörtern für Anwendungsrollen wird die Kennwortkomplexität überprüft. Anwendungen, die Anwendungsrollen aufrufen, müssen ihre Kennwörter speichern. Kennwörter für Anwendungsrollen sollten immer verschlüsselt gespeichert werden.  

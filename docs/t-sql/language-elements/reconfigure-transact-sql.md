@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Fast alle Konfigurationsoptionen können mithilfe der Option WITH OVERRIDE neu konfiguriert werden. Einige schwerwiegende Fehler werden jedoch weiterhin verhindert. So kann beispielsweise der Wert der Konfigurationsoption **min server memory** nicht mit einem höheren Wert konfiguriert werden als der in der Konfigurationsoption **max server memory** angegebene Wert.
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Bemerkungen    
  **sp_configure** akzeptiert keine neuen Werte für eine Konfigurationsoption, die für diese Konfigurationsoption außerhalb der dokumentierten gültigen Bereiche liegen.    
     
  RECONFIGURE ist in einer expliziten oder impliziten Transaktion nicht zulässig. Wenn Sie mehrere Optionen gleichzeitig neu konfigurieren und bei einem der Neukonfigurierungsvorgänge ein Fehler auftritt, wird keine der Neukonfigurierungen wirksam.    

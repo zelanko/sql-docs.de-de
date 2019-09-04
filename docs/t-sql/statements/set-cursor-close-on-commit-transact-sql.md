@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67929116"
 ---
-# <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
+# <a name="set-cursor_close_on_commit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Steuert das Verhalten der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung COMMIT TRANSACTION. Der Standardwert für diese Einstellung ist OFF. Dies bedeutet, dass der Server Cursor nicht schließt, wenn Sie ein Commit für eine Transaktion ausführen.  
@@ -44,7 +44,7 @@ ms.locfileid: "67929116"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn SET CURSOR_CLOSE_ON_COMMIT auf ON festgelegt ist, schließt diese Einstellung alle offenen Cursor bei Ausführung des Commits oder Rollbacks in Übereinstimmung mit ISO. Wenn SET CURSOR_CLOSE_ON_COMMIT auf OFF festgelegt ist, wird der Cursor nicht geschlossen, wenn ein Commit für eine Transaktion ausgeführt wird.  
   
 > [!NOTE]  

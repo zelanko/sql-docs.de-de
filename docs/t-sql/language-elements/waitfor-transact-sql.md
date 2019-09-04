@@ -84,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  Zusammen mit TIMEOUT kann WAITFOR nur für [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Meldungen verwendet werden. Weitere Informationen finden Sie unter [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) und [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Während der Ausführung der WAITFOR-Anweisung ist die Transaktion im Gange, sodass keine weiteren Anforderungen für dieselbe Transaktion ausgeführt werden können.  
   
  Die tatsächliche Zeitverzögerung kann von der in *time_to_pass*, *time_to_execute* oder *timeout* angegebenen Zeit abweichen und hängt von der Aktivitätsstufe des Servers ab. Die Zeitzählung beginnt, wenn die WAITFOR-Anweisung geplant ist. Wenn der Server ausgelastet ist, wird der Thread möglicherweise nicht sofort geplant. Daher kann die Zeitverzögerung länger als die angegebene Zeit sein.  

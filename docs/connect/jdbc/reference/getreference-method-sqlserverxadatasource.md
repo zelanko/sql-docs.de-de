@@ -37,7 +37,7 @@ public javax.naming.Reference getReference()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Verweis Objekt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getreferenzierungsmethode wird von der getreferenzierungsmethode in der javax. naming. referenbar-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

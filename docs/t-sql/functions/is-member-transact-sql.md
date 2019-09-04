@@ -34,7 +34,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68086721"
 ---
-# <a name="ismember-transact-sql"></a>IS_MEMBER (Transact-SQL)
+# <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Zeigt an, ob der aktuelle Benutzer ein Mitglied der angegebenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gruppe oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle ist. Die IS_MEMBER-Funktion wird für Azure Active Directory-Gruppen nicht unterstützt.  
@@ -60,7 +60,7 @@ IS_MEMBER ( { 'group' | 'role' } )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  IS_MEMBER gibt folgende Werte zurück.  
   
 |Rückgabewert|und Beschreibung|  

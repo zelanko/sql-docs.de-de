@@ -58,7 +58,7 @@ Das Kennwort, das verwendet wird, um den zur체ckgegebenen Bin채rwert zu entschl�
 ## <a name="return-types"></a>R체ckgabetypen
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie **CERTENCODED** und **CERTPRIVATEKEY** zusammen, um andere Teile eines Zertifikats in bin채rer Form zur체ckzugeben.
   
 ## <a name="permissions"></a>Berechtigungen  

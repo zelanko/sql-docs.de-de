@@ -53,7 +53,7 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Eine Variable oder Konstante mit dem Bezeichner der Konversationsgruppe, in die die Konversation verschoben werden soll. *conversation_group_id* muss dem Typ **uniqueidentifier** entsprechen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit der MOVE CONVERSATION-Anweisung wird die durch *conversation_handle* angegebene Konversation in die durch *conversation_group_id* identifizierte Konversationsgruppe verschoben. Dialoge können nur zwischen Konversationsgruppen umgeleitet werden, die derselben Warteschlange zugeordnet sind.  
   
 > [!IMPORTANT]  

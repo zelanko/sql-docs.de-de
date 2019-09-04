@@ -46,7 +46,7 @@ Ist ein Zeichenfolgenliteral, ein XQuery-Ausdruck. Wenn der Abfrageausdruck Knot
 *Tabelle*(*Spalte*)  
 Ist der Tabellenname und der Spaltenname für das resultierende Rowset.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Nehmen Sie beispielsweise an, es ist die folgende Tabelle vorhanden:  
   
 ```sql

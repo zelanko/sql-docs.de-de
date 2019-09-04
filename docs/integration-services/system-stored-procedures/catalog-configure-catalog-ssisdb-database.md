@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68110394"
 ---
-# <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB-Datenbank)
+# <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -45,7 +45,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 ## <a name="result-sets"></a>Resultsets  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese gespeicherte Prozedur bestimmt, ob der *property_value* für jeden *property_name* gültig ist.  
   
  Diese gespeicherte Prozedur kann nur ausgeführt werden, wenn keine aktiven Ausführungen, z. B. ausstehende, in der Warteschlange stehende, in Ausführung befindliche oder angehaltene Ausführungen, vorhanden sind.  

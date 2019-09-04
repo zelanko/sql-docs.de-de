@@ -33,7 +33,7 @@ Zeigt den verwendeten Speicherplatz im Resultsetcache für eine Azure [!INCLUDE[
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Der `DBCC SHOWRESULTCACHESPACEUSED`-Befehl akzeptiert keine Parameter und gibt den verwendeten Speicherplatz der Datenbank zurück, für die der Befehl ausgeführt wird.
 

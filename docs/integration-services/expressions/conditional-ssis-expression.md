@@ -48,7 +48,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp von *expression1* oder *expression2*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Falls *boolean_expression* zu NULL ausgewertet wird, lautet das Ergebnis des Ausdrucks NULL. Wenn ein ausgewählter Ausdruck, *expression1* oder *expression2* , NULL ist, lautet das Ergebnis NULL. Wenn ein ausgewählter Ausdruck ungleich NULL ist, aber der nicht ausgewählte Ausdruck NULL ist, besitzt das Ergebnis den Wert des ausgewählten Ausdrucks.  
   
  Falls *expression1* und *expression2* vom gleichen Datentyp sind, gehört auch das Ergebnis zu diesem Datentyp. Die folgenden zusätzlichen Regeln sind auch auf Ergebnistypen anwendbar:  

@@ -57,7 +57,7 @@ Unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQ
 ## <a name="return-type"></a>Rückgabetyp  
 **tinyint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 SET DATEFIRST *n* gibt den ersten Tag der Woche an (Sonntag, Montag, Dienstag usw.). Der Wert *n* liegt zwischen 1 und 7.
 
 ```sql

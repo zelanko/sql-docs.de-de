@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68135923"
 ---
-# <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
+# <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Diese Funktion gibt den Rang jeder Zeile innerhalb einer Resultsetpartition ohne Lücken in den Rangwerten zurück. Der Rang einer bestimmten Zeile ist 1 plus die Anzahl der unterschiedlichen Rangwerte vor dieser Zeile.  
@@ -51,7 +51,7 @@ Bestimmt die Reihenfolge, in der die `DENSE_RANK`-Funktion auf die Zeilen in ein
 ## <a name="return-types"></a>Rückgabetypen  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn zwei oder mehr Zeilen den gleichen Rangwert in derselben Partition aufweisen, erhalten diese Zeilen den gleichen Rang. Wenn beispielsweise zwei Vertriebsmitarbeiter denselben SalesYTD-Wert aufweisen, erhalten beide den Rangwert 1. Der Vertriebsmitarbeiter mit dem nächsthöchsten SalesYTD-Wert erhält den Rangwert 2. Dies überschreitet die Anzahl der unterschiedlichen Zeilen, die vor der fraglichen Zeile stehen, um 1. Deshalb weisen die von der `DENSE_RANK`-Funktion zurückgegebenen Zahlen keine Lücken auf und bilden stets fortlaufende Rangwerte.  
   
 Die für die gesamte Abfrage verwendete Sortierreihenfolge bestimmt die Reihenfolge der Zeilen im Resultset. Daraus geht hervor, dass eine als Rang 1 festgelegte Zeile nicht notwendigerweise die erste Zeile in der Partition sein muss.  

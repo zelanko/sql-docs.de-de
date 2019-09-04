@@ -204,7 +204,7 @@ R wird in Azure SQL-Datenbank unterstützt.
 gibt die Sprache des Pakets an. Der Wert kann `R`, `Python` oder der Name einer externen Programmiersprache sein (siehe [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 Bei der R-Sprache müssen bei Verwendung einer Datei Pakete in Form von gezippten Archivdateien mit der Dateiendung .ZIP für Windows vorbereitet werden. 

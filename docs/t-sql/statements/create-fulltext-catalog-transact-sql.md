@@ -97,7 +97,7 @@ CREATE FULLTEXT CATALOG catalog_name
   
  *owner_name* muss zudem über die TAKE OWNERSHIP-Berechtigung im angegebenen Volltextkatalog verfügen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Volltextkatalog-IDs beginnen bei 00005 und werden mit jedem neu erstellten Katalog um eins erhöht.  
   
 ## <a name="permissions"></a>Berechtigungen  

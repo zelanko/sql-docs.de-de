@@ -87,7 +87,7 @@ Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
 **BIN2**  
 Gibt die binäre Sortierreihenfolge an, die die Semantik für den Codepunktvergleich verwendet.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Je nach Sortierungsversion sind für manche Codeelemente möglicherweise keine Gewichtungen und/oder Großschreibung/Kleinschreibung-Mappings angegeben. Vergleichen Sie z.B. die Ausgabe der `LOWER`-Funktion bei gleichem Zeichen, aber unterschiedlichen Versionen derselben Sortierung:
 
 ```sql

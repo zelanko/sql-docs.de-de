@@ -51,7 +51,7 @@ TEXTPTR ( column )
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  TEXTPTR gibt für Tabellen mit Text in Zeilen ein Handle für den zu verarbeitenden Text zurück. Sie können selbst dann einen gültigen Textzeiger erhalten, wenn der Textwert gleich NULL ist.  
   
  Sie können die Funktion TEXTPTR nicht für Spalten von Sichten verwenden. Sie können sie nur für Spalten von Tabellen verwenden. Wenn Sie die Funktion TEXTPTR für eine Spalte einer Sicht verwenden möchten, müssen Sie den Kompatibilitätsgrad mithilfe von [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) auf 80 setzen. Wenn eine Tabelle keinen Text in Zeilen hat und wenn eine **text**-, **ntext**- oder **image**-Spalte nicht mit einer UPDATETEXT-Anweisung initialisiert wurde, gibt TEXTPTR einen NULL-Zeiger zurück.  

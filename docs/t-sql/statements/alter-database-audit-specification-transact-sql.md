@@ -83,7 +83,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Aktiviert oder deaktiviert das Sammeln von Datensätzen durch die Überwachung für diese Überwachungsspezifikation. Statusänderungen der Überwachungsspezifikation müssen außerhalb einer Benutzertransaktion erfolgen und dürfen keine anderen Änderungen in derselben Anweisung enthalten, wenn der Übergang von ON nach OFF stattfindet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Datenbank-Überwachungsspezifikationen sind nicht sicherungsfähige Objekte, die sich in einer gegebenen Datenbank befinden. Sie müssen den Status einer Überwachungsspezifikation auf die Option OFF festlegen, um Änderungen an einer Datenbank-Überwachungsspezifikation vornehmen zu können. Wenn ALTER DATABASE AUDIT SPECIFICATION ausgeführt wird während eine Überwachung mit einer anderen Option als STATE=OFF aktiviert ist, erhalten Sie eine Fehlermeldung. Weitere Informationen finden Sie unter [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
 ## <a name="permissions"></a>Berechtigungen  

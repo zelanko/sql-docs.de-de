@@ -69,7 +69,7 @@ Der Rückgabetyp wird durch das ausgewertete Ergebnis von *expression* bestimmt.
 |**money**- und **smallmoney**-Kategorie|**money**|  
 |**float**- und **real**-Kategorie|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn der Datentyp von *expression* ein Aliasdatentyp ist, ist der Rückgabetyp ebenfalls ein Aliasdatentyp. Wird der Basisdatentyp des Aliasdatentyps jedoch heraufgestuft, beispielsweise von **tinyint** zu **int**, handelt es sich beim Rückgabetyp um den heraufgestuften Datentyp und nicht um den Aliasdatentyp.
   
 AVG () berechnet den Durchschnitt einer Menge von Werten, indem die Summe dieser Werte durch die Anzahl der Nicht-NULL-Werte dividiert wird. Wenn die Summe größer als der vom Datentyp des Rückgabewerts unterstützte Höchstwert ist, gibt AVG() einen Fehler zurück.

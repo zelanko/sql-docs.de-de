@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064733"
 ---
-# <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
+# <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt die definierte Länge einer Spalte in Bytes zurück.
@@ -55,7 +55,7 @@ Gibt NULL zurück bei einem Fehler oder wenn ein Aufrufer nicht über die korrek
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. COL_LENGTH, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekte Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Für **varchar**-Spalten, die mit dem Bezeichner **max** deklariert wurden (**varchar(max)** ), gibt COL_LENGTH den Wert –1 zurück.
   
 ## <a name="examples"></a>Beispiele  

@@ -75,7 +75,7 @@ Der verschlüsselte CEK-Wert-BLOB.
 > [!WARNING]  
 >  Verwenden Sie diese Anweisung nie mit CEK-Werten im Klartext. Hierdurch wird die Wirksamkeit des Features beeinträchtigt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die CREATE COLUMN ENCRYPTION KEY-Anweisung muss mindestens eine VALUES-Klausel enthalten und darf maximal über zwei Klauseln verfügen. Wenn nur eine angegeben wird, können Sie mit der ALTER COLUMN ENCRYPTION KEY-Anweisung später einen zweiten Wert hinzufügen. Mit derselben Anweisung können Sie auch eine VALUES-Klausel entfernen.  
   
 In der Regel wird ein CEK nur mit einem verschlüsselten Wert erstellt. Manchmal müssen Sie einen CMK drehen. Ersetzen Sie den aktuellen CMK mit dem neuen CMK. Wenn Sie den Schlüssel drehen müssen, fügen Sie einen neuen Wert des Spaltenverschlüsselungsschlüssels hinzu, verschlüsselt mit dem neuen CMK. Diese Rotation stellt sicher, dass Clientanwendungen auf Daten zugreifen können, die mit dem CEK verschlüsselt wurden, während der neue CMK den Clientanwendungen zur Verfügung gestellt wird. Ein Treiber, für den Always Encrypted aktiviert ist, in einer Clientanwendung, die keinen Zugriff auf den neuen Hauptschlüssel hat, greift mit dem CEK-Wert, der mit dem alten CMK verschlüsselt wurde, auf vertrauliche Daten zu.  

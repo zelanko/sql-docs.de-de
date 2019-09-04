@@ -56,7 +56,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ## <a name="return-type"></a>Rückgabetyp  
  **datetimeoffset** mit der Genauigkeit von Bruchteilen des *DATETIMEOFFSET*-Arguments.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie SWITCHOFFSET, um einen **datetimeoffset**-Wert in einem Zeitzonenoffset auszuwählen, der sich vom ursprünglich gespeicherten Zeitzonenoffset unterscheidet. Der gespeicherte *time_zone*-Wert wird nicht von SWITCHOFFSET aktualisiert.  
   
  SWITCHOFFSET kann verwendet werden, um eine **datetimeoffset**-Spalte zu aktualisieren.  

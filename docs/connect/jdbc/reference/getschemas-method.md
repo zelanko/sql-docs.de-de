@@ -40,7 +40,7 @@ public java.sql.ResultSet getSchemas()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getSchemas-Methode wird von der getSchemas-Methode in der java.sql.DatabaseMetaData-Schnittstelle angegeben.  
   
  Das Resultset, das von der GetSchemas-Methode zurückgegeben wird, enthält die folgenden Informationen:  

@@ -40,7 +40,7 @@ public int getResultSetHoldability()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getresultltholdability-Methode wird von der getresultltholdability-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Wird [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] mit einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank verwendet, wird von dieser Methode der Wert „1“ (entspricht der ResultSet.HOLD_CURSORS_OVER_COMMIT-Konstanten) zurückgegeben.  

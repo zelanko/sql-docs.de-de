@@ -50,7 +50,7 @@ Ungefähre Zahlendatentypen für numerische Gleitkommadaten. Gleitkommadaten sin
   
 Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ]-Datentyp entspricht dem ISO-Standard für alle Werte von *n* zwischen **1** und **53**. Das Synonym für **double precision** lautet **float(53)** .
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 |Datentyp|Bereich|Speicherung|  
 |---|---|---|

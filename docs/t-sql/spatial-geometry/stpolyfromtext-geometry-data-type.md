@@ -50,7 +50,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  OGC-Typ: **Polygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode löst eine **FormatException** aus, wenn die Eingabe nicht korrekt formatiert ist.  
   
 ## <a name="examples"></a>Beispiele  

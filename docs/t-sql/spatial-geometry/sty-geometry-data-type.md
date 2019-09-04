@@ -41,7 +41,7 @@ Die Eigenschaft, die die Y-Koordinate einer **Point** -Instanz angibt.
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert dieser Eigenschaft ist NULL, wenn die **geometry** -Instanz ein Punkt ist. Diese Eigenschaft ist schreibgeschützt.  
   
 ## <a name="examples"></a>Beispiele  

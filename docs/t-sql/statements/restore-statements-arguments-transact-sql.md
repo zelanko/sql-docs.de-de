@@ -218,7 +218,7 @@ LOADHISTORY
   
  Gibt an, dass der Wiederherstellungsvorgang die Informationen in die Verlaufstabellen von **msdb** lädt. Mit der Option LOADHISTORY werden für den einzelnen Sicherungssatz, der überprüft wird, Informationen zu auf dem Mediensatz gespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungen in die Sicherungs- und Wiederherstellungsverlaufstabellen in der **msdb**-Datenbank geladen. Weitere Informationen zu Verlaufstabellen finden Sie unter [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  Alle allgemeinen WITH-Optionen werden in der RESTORE DATABASE-Anweisung und der RESTORE LOG-Anweisung unterstützt. Einige dieser Optionen werden, wie unten angegeben, auch von einer oder mehreren Hilfsanweisungen unterstützt.  
   
 ##### <a name="restore-operation-options"></a>Optionen für den Wiederherstellungsvorgang  
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  Gibt an, dass das Band nach dem RESTORE-Vorgang im Bandlaufwerk geladen bleibt.  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  Diese Option ist nur relevant, wenn die Datenbank beim Erstellen der Sicherung repliziert wurde.  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
 -   Der betriebsbereite Standbyserver muss so umbenannt werden, dass er denselben Namen wie der primäre Server verwendet.  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  Diese Option ist nur relevant, wenn die Datenbank beim Erstellen der Sicherung für Change Data Capture aktiviert wurde.  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
  Informationen zur Verwendung von Change Data Capture bei der Datenbankspiegelung finden Sie unter [Change Data Capture und andere SQL Server-Features](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  Aktiviert oder deaktiviert die [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Nachrichtenübermittlung oder legt einen neuen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Bezeichner fest. Diese Option ist nur relevant, wenn für die Datenbank bei Erstellung der Sicherung [!INCLUDE[ssSB](../../includes/sssb-md.md)] aktiviert wurde.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
  NEW_BROKER  
  Gibt an, dass der Datenbank ein neuer Service Broker-Bezeichner zugewiesen wird. Da die Datenbank als neuer Service Broker betrachtet wird, werden alle bestehenden Konversationen in der Datenbank sofort entfernt, ohne Nachrichten über das Beenden des Dialogs zu erstellen. Jede Route, die auf den alten Service Broker-Bezeichner verweist, muss mit dem neuen Bezeichner neu erstellt werden.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **Unterstützt von:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) wird nur für das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwendet.  
   
  Sie können eine Datenbank für einen bestimmten Zeitpunkt oder eine bestimmte Transaktion wiederherstellen, indem Sie den Zielwiederherstellungspunkt in einer STOPAT-, STOPATMARK- oder STOPBEFOREMARK-Klausel angeben. Die Wiederherstellung zu einem bestimmten Zeitpunkt oder einer bestimmten Transaktion erfolgt immer aus einer Protokollsicherung. In jeder RESTORE LOG-Anweisung der Wiederherstellungssequenz müssen Sie den Zielzeitpunkt oder die Transaktion in einer identischen STOPAT-, STOPATMARK- oder STOPBEFOREMARK-Klausel angeben.  
@@ -541,7 +541,7 @@ Verwenden Sie KEEP_REPLICATION, wenn eine Replikation für die Verwendung von Pr
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zusätzliche Hinweise finden Sie in den folgenden Themen:  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

@@ -98,7 +98,7 @@ ALTER MASTER KEY <alter_option>
 
 PASSWORD ='*password*' Gibt ein Kennwort an, mit dem der Datenbank-Hauptschlüssel ver- oder entschlüsselt wird. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Mit der REGENERATE-Option werden der Datenbank-Hauptschlüssel und alle durch ihn geschützten Schlüssel neu erstellt. Die Schlüssel werden zunächst mit dem alten Hauptschlüssel entschlüsselt und anschließend mit dem neuen Hauptschlüssel verschlüsselt. Die Ausführung dieses ressourcenintensiven Vorgangs sollte außerhalb der Hauptzeiten geplant werden, es sei denn, der Hauptschlüssel ist nicht mehr sicher.
 

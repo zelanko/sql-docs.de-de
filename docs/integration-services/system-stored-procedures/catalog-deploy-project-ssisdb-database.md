@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68007810"
 ---
-# <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB-Datenbank)
+# <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -76,7 +76,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Der Benutzer verfügt nicht über ausreichende Berechtigungen  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Während einer Projektbereitstellung oder eines Projektupdates überprüft die gespeicherte Prozedur nicht die Schutzebene einzelner Pakete im Projekt.  
   
   

@@ -41,7 +41,7 @@ ms.locfileid: "68101793"
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt NULL zurück, wenn es sich nicht um ein **Polygon** handelt, und 0, wenn die Instanz leer ist. Diese Methode ist exakt.  
   
 ## <a name="examples"></a>Beispiele  

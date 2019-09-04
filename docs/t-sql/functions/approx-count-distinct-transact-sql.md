@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68019788"
 ---
-# <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
+# <a name="approx_count_distinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
 
 Diese Funktion gibt die ungefähre Anzahl von eindeutigen Ungleich-Null-Werten in einer Gruppe zurück. 
@@ -46,7 +46,7 @@ Eine [expression](../../t-sql/language-elements/expressions-transact-sql.md) bel
 ## <a name="return-types"></a>Rückgabetypen
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `APPROX_COUNT_DISTINCT( expression )` wertet einen Ausdruck für jede Zeile in einer Gruppe aus und gibt die geschätzte Anzahl der eindeutigen Werte in einer Gruppe zurück, die nicht NULL sind. Diese Funktion wurde entwickelt, um Aggregationen über große Datasets hinweg bereitzustellen, bei denen die Reaktionsfähigkeit wichtiger ist als die absolute Präzision.  
 
 `APPROX_COUNT_DISTINCT` ist für den Einsatz in großen Datenszenarien konzipiert und für die folgenden Bedingungen optimiert:
@@ -62,7 +62,7 @@ Die Funktionsimplementierung garantiert eine Fehlerquote von bis zu 2 % mit eine
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-approxcountdistinct"></a>A. Verwenden von APPROX_COUNT_DISTINCT 
+### <a name="a-using-approx_count_distinct"></a>A. Verwenden von APPROX_COUNT_DISTINCT 
 Dieses Beispiel gibt die ungefähre Anzahl verschiedener Sortierschlüssel aus der Sortiertabelle zurück.
   
 ```sql
@@ -78,7 +78,7 @@ Approx_Distinct_OrderKey
 15164704
 ```
   
-### <a name="b-using-approxcountdistinct-with-group-by"></a>B. Verwenden von APPROX_COUNT_DISTINCT mit GROUP BY 
+### <a name="b-using-approx_count_distinct-with-group-by"></a>B. Verwenden von APPROX_COUNT_DISTINCT mit GROUP BY 
 Dieses Beispiel gibt die ungefähre Anzahl verschiedener Sortierschlüssel geordnet nach Sortierstatus aus der Sortiertabelle zurück. 
   
 ```sql

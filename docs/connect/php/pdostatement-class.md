@@ -28,7 +28,7 @@ Die PDOStatement-Klasse stellt eine Anweisung und die Ergebnisse der Anweisung d
 PDOStatement {}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die PDOStatement-Klasse enthält die folgenden Methoden:  
   
 -   [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)  

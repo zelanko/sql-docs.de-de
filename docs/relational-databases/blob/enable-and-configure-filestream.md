@@ -79,7 +79,7 @@ ms.locfileid: "68085378"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Remarks|  
+|RAID-Stufe|Schreibleistung|Leseleistung|Fehlertoleranz|Bemerkungen|  
 |RAID 5|Normal|Normal|Hervorragend|Die Leistung ist besser als bei einem einzelnen Datenträger oder JBOD und geringer als bei RAID 0 oder RAID 5 mit Striping.|  
 |RAID 0|Hervorragend|Hervorragend|None||  
 |RAID 5 + Striping|Hervorragend|Hervorragend|Hervorragend|Die aufwendigste Option.|  

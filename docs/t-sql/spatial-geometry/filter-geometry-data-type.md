@@ -50,7 +50,7 @@ Wenn kein Index verfügbar ist oder verwendet wird, gibt die Methode dieselben W
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode ist weder deterministisch noch präzise.  
   
 ## <a name="examples"></a>Beispiele  

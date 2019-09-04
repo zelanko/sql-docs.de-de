@@ -85,7 +85,7 @@ Gibt NULL bei einem Fehler zurück oder wenn ein Aufrufer nicht über Berechtigu
   
 Ein Benutzer kann nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z.B. `COLUMNPROPERTY`, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt nicht die korrekte Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Konfigurieren der Sichtbarkeit von Metadaten](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Beim Überprüfen der deterministischen Eigenschaft einer Spalte prüfen Sie zuerst, ob die Spalte eine berechnete Spalte ist. Das Argument **IsDeterministic** gibt für nicht berechnete Spalten NULL zurück. Berechnete Spalten können als Indexspalten angegeben werden.
   
 ## <a name="examples"></a>Beispiele  

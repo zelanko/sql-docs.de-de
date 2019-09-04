@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68014971"
 ---
-# <a name="sqlsrvquery"></a>sqlsrv_query
+# <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Bereitet eine Anweisung vor und führt diese aus.  
@@ -67,7 +67,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 ## <a name="return-value"></a>Rückgabewert  
 Eine Anweisungsressource. Wenn die Anweisung nicht erstellt und/oder ausgeführt werden kann, wird **FALSE** zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die **sqlsrv_query**-Funktion eignet sich ideal für einmalige Abfragen und sollte auch die Standardauswahl sein, um Abfragen auszuführen, es sei denn, es gelten besondere Umstände. Diese Funktion bietet eine optimierte Methode zum Ausführen einer Abfrage mit einem Minimum von Codes. Die **sqlsrv_query** -Funktion führt jeweils eine Anweisungsvorbereitung und eine Anweisungsausführung durch und kann verwendet werden, um parametrisierte Abfragen auszuführen.  
   
 Weitere Informationen finden Sie unter [Gewusst wie: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  

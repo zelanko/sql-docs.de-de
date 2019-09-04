@@ -71,7 +71,7 @@ Gibt NULL zurück, wenn ein Fehler auftritt oder ein Aufrufer nicht über die Be
   
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann ein Benutzer nur die Metadaten von sicherungsfähigen Elementen anzeigen. Diese sicherungsfähigen Elemente sind solche Elemente, die der Benutzer besitzt oder für die ihm Berechtigungen erteilt wurden. Daher können integrierte Funktionen, die Metadaten ausgeben (z.B. FULLTEXTCATALOGPROPERTY) NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') prüft, wie in [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) dargestellt, nur Fragmente mit dem Status 4 oder 6. Diese Fragmente sind ein Teil des logischen Index. Daher gibt die **IndexSize**-Eigenschaft nur die logische Indexgröße zurück. 
 
 Während eines Indexmerge könnte die tatsächliche Indexgröße jedoch doppelt so groß sein wie die logische Größe. Um die tatsächliche Größe zu ermitteln, die von einem Volltextindex während eines Merge beansprucht wird, verwenden Sie die gespeicherte Systemprozedur [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Diese Prozedur prüft alle Fragmente, die einem Volltextindex zugeordnet sind. 

@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68038654"
 ---
-# <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (SSISDB-Datenbank)
+# <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -39,7 +39,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  Die Anzahl von Wiederholungsversuchen, wenn bei der Ausführung ein Fehler auftritt. Dieses Argument wird nur wirksam, wenn die Ausführung in Scale Out erfolgt. Dieser Parameter ist optional. Wenn es nicht angegeben wird, wird der Wert auf 0 festgelegt. Das Argument *retry_count* ist vom Typ **Int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine Ausführung wird verwendet, um die Parameterwerte anzugeben, die von einem Paket während einer einzelnen Instanz der Paketausführung verwendet werden. Nachdem eine Instanz der Ausführung erstellt wurde, wird möglicherweise das entsprechende Projekt erneut bereitgestellt, bevor die Instanz gestartet wurde. In diesem Fall verweist die Instanz der Ausführung auf ein veraltetes Projekt. Dieser ungültige Verweis führt dazu, dass bei der gespeicherten Prozedur ein Fehler auftritt.  
   
 > [!NOTE]  

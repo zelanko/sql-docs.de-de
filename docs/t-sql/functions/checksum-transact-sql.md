@@ -58,7 +58,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) eines 
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `CHECKSUM` berechnet aus der Liste der Argumente einen Hashwert, der Prüfsumme genannt wird. Verwenden Sie diesen Hashwert zum Erstellen von Hashindizes. Wenn die `CHECKSUM`-Funktion Spaltenargumente aufweist, ist das Ergebnis ein Hashindex, und ein Index für den berechneten `CHECKSUM`-Wert wird erstellt. Dieser kann für Gleichheitssuchen in den Spalten verwendet werden.
   
 Die Funktion `CHECKSUM` erfüllt die Eigenschaften einer Hashfunktion: Wenn `CHECKSUM` auf zwei beliebige Listen mit Ausdrücken angewendet wird, wird immer derselbe Wert zurückgegeben, falls die entsprechenden Elemente der beiden Listen vom gleichen Datentyp sind und bezüglich des Vergleichs mit dem Gleichheitsoperator (=) gleich sind. NULL-Werte eines angegebenen Typs werden definiert, um zu prüfen, ob sie gleich sind (zu Zwecken der `CHECKSUM`-Funktion). Wenn sich einer der Werte in der Liste mit Ausdrücken ändert, ändert sich gewöhnlich auch die Prüfsumme der Liste. Dies ist jedoch nicht immer der Fall. Daher wird empfohlen, `CHECKSUM` nur zur Ermittlung von Änderungen der Daten zu verwenden, wenn Ihre Anwendung auch bei gelegentlich nicht ausgeführten Änderungen weiter ausgeführt werden kann. Sie sollten andernfalls in Betracht ziehen, stattdessen `HASHBYTES` zu verwenden. Wenn ein MD5-Hashalgorithmus angegeben ist, ist die Wahrscheinlichkeit, dass `HASHBYTES` für zwei verschiedene Eingaben dasselbe Ergebnis zurückgibt, wesentlich geringer als bei der Verwendung von `CHECKSUM`.

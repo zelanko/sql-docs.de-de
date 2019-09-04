@@ -62,7 +62,7 @@ ms.locfileid: "68104860"
 |machine_name|**nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
 |dump_id|**uniqueidentifier**|Die ID eines Ausführungsdumps.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Instanz der Ausführung im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -43,7 +43,7 @@ Gibt den äußeren Ring einer **geometry** -Instanz zurück, die ein Polygon ist
   
  Open Geospatial Consortium (OGC)-Typ: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt **null** zurück, wenn die **geometry** -Instanz kein Polygon ist.  
   
 ## <a name="examples"></a>Beispiele  

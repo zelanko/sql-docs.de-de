@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68110364"
 ---
-# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level 
+# <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  Das Argument *level_id* ist vom Typ **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gehen Sie zum Kombinieren mehrerer Werte in Transact-SQL für das Argument *profile_value* oder *events_value* wie im folgenden Beispiel vor. Verwenden Sie zur Erfassung der Ereignisse OnError (8) und DiagnosticEx (15) als Berechnungsformel für *events_value* die Formel `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Rückgabecodes  

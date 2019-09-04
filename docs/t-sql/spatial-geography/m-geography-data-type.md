@@ -41,7 +41,7 @@ ms.locfileid: "68127724"
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert dieser Eigenschaft ist NULL, wenn die **geography** -Instanz kein **Point**ist. Sie ist außerdem NULL für jede **Point** -Instanz, für die sie nicht festgelegt ist.  
   
  Diese Eigenschaft ist schreibgeschützt.  

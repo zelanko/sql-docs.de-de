@@ -114,7 +114,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  Gibt das Kennwort an, mit dem der private Schlüssel verschlüsselt werden soll. Wenn diese Klausel nicht vorhanden ist, wird der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt. *password* kann maximal 128 Zeichen umfassen. *password* muss den Anforderungen der Windows-Kennwortrichtlinien des Computers entsprechen, auf dem die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein *asymmetrischer Schlüssel* ist eine sicherungsfähige Entität auf Datenbankebene. Standardmäßig enthält diese Entität sowohl einen öffentlichen als auch einen privaten Schlüssel. Bei einer Ausführung ohne die FROM-Klausel generiert CREATE ASYMMETRIC KEY ein neues Schlüsselpaar. Bei einer Ausführung mit FROM-Klausel importiert CREATE ASYMMETRIC KEY ein Schlüsselpaar aus einer Datei oder einen öffentlichen Schlüssel aus einer Assembly oder DLL-Datei.  
   
  Standardmäßig ist der private Schlüssel mit dem Datenbank-Hauptschlüssel geschützt. Falls kein Datenbank-Hauptschlüssel erstellt wurde, ist ein Kennwort zum Schützen des privaten Schlüssels erforderlich.  

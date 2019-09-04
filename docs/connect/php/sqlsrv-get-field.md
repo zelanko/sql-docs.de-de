@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68015010"
 ---
-# <a name="sqlsrvgetfield"></a>sqlsrv_get_field
+# <a name="sqlsrv_get_field"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Ruft Daten vom angegebenen Feld der aktuellen Zeile ab. Auf die Felddaten muss gemäß der Reihenfolge zugegriffen werden. So kann beispielsweise nicht auf Daten aus dem ersten Feld zugegriffen werden nachdem auf Daten vom zweiten Feld zugegriffen wurde.  
@@ -45,7 +45,7 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
 ## <a name="return-value"></a>Rückgabewert  
 Die Felddaten. Sie können den PHP-Datentyp der zurückgegebenen Daten festlegen, indem Sie den *$getAsType* -Parameter verwenden. Falls kein Rückgabedatentyp festgelegt ist, wird der PHP-Standarddatentyp zurückgegeben. Informationen zu PHP-Standardtypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md). Informationen zum Spezifizieren von PHP-Datentypen finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Die Kombination von **sqlsrv_fetch** und **sqlsrv_get_field** bewirkt, dass auf Daten nur vorangehend zugegriffen werden kann.  
   
 Die Kombination **sqlsrv_fetch**/**sqlsrv_get_field** lädt nur ein Feld einer Zeile eines Resultsets in den Skriptspeicher und erlaubt die Festlegung von PHP-Rückgabetypen. Informationen zur Angabe des PHP-Rückgabetyps finden Sie unter [Vorgehensweise: PHP-Datentypen festlegen](../../connect/php/how-to-specify-php-data-types.md). Diese Kombination von Funktionen macht es möglich Daten als Stream abzurufen. Informationen zum Abrufen von Daten als Stream finden Sie unter [Abrufen von Daten als Stream mit dem SQLSRV-Treiber](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md).  

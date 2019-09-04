@@ -88,7 +88,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Um eine partitionierte Tabelle abzuschneiden, müssen die Tabelle und Indizes ausgerichtet werden (partitioniert auf dieselbe Partitionsfunktion).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  TRUNCATE TABLE bietet im Vergleich zur DELETE-Anweisung die folgenden Vorteile:  
   
 -   Es wird weniger Speicherplatz für die Transaktionsprotokolle verwendet.  

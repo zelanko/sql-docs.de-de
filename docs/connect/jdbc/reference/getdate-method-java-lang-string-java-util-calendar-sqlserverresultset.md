@@ -50,7 +50,7 @@ public java.sql.Date getDate(java.lang.String colName,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getDate-Methode wird von der getDate-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Von dieser Methode wird ein gültiger Datumsteil eines datetime- oder smalldatetime-Datentyps von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zurückgegeben. Der Zeitteil ist dabei in der im Kalender angegebenen Zeitzone auf die Java-Baseline 00:00 (Mitternacht) festgelegt.  

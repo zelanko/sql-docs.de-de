@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68111342"
 ---
-# <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
+# <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den einer Schema-ID zugeordneten Schemanamen zurück.  
@@ -50,7 +50,7 @@ SCHEMA_NAME ( [ schema_id ] )
   
  Gibt NULL zurück, wenn *schema_id* keine gültige ID ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SCHEMA_NAME gibt Namen von Systemschemas und benutzerdefinierten Schemas zurück. SCHEMA_NAME kann in einer SELECT-Liste, in einer WHERE-Klausel und überall dort aufgerufen werden, wo ein Ausdruck zulässig ist.  
   
 ## <a name="examples"></a>Beispiele  

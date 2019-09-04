@@ -90,7 +90,7 @@ In der folgenden Tabelle werden die Spalten des Resultsets beschrieben:
 >[!NOTE]
 > Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zeigt keine Zeilen für Dateien an, die nicht verkleinert wurden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 >[!NOTE]
 > Aktuell wird DBCC SHRINKDATABASE von Azure SQL Data Warehouse nicht unterstützt. Das Ausführen dieses Befehls wird nicht empfohlen, da der Vorgang sehr E/A-intensiv ist und Ihr Datawarehouse offline schalten kann. Darüber hinaus ändern sich die Kosten Ihrer Datawarehouse-Momentaufnahmen nach dem Ausführen dieses Befehls. 

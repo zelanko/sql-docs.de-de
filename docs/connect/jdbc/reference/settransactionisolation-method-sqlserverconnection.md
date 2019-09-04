@@ -52,7 +52,7 @@ public void setTransactionIsolation(int level)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese settransaktionisolation-Methode wird von der settransaktionisolation-Methode in der Java. SQL. Connection-Schnittstelle angegeben.  
   
  Für Transaktionen wird kein Commit ausgeführt, wenn diese Methode während einer Transaktion aufgerufen wird.  

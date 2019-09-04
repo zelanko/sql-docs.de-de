@@ -82,7 +82,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH ( STATE = { ON | OFF } )  
  Aktiviert oder deaktiviert das Sammeln von Datensätzen durch die Überwachung für diese Überwachungsspezifikation.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Datenbank-Überwachungsspezifikationen sind nicht sicherungsfähige Objekte, die sich in einer gegebenen Datenbank befinden. Wenn eine Datenbank-Überwachungsspezifikation erstellt wird, befindet sich diese in einem deaktivierten Zustand.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -119,7 +119,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. Überwachen aller DML (EINFÜGEN, AKTUALISIEREN oder LÖSCHEN) für _alle_ Objekte im _sales_-Schema für eine bestimmte Datenbankrolle  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Überwachen aller DML (EINFÜGEN, AKTUALISIEREN oder LÖSCHEN) für _alle_ Objekte im _sales_-Schema für eine bestimmte Datenbankrolle  
  Im folgenden Beispiel wird zunächst eine Serverüberwachung mit dem Namen `DataModification_Security_Audit` und anschließend eine Datenbank-Überwachungsspezifikation mit dem Namen `Audit_Data_Modification_On_All_Sales_Tables` erstellt, die die `INSERT`-Anweisungen, `UPDATE`-Anweisungen und `DELETE`-Anweisungen der Benutzer in einer neuen Datenbankrolle `SalesUK` für alle Objekte im `Sales`-Schema der `AdventureWorks2012` Datenbank überwacht.  
   
 ```  

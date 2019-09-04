@@ -47,7 +47,7 @@ public final void setObject(int index,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese setObject-Methode wird von der setObject-Methode in der java.sql.PreparedStatement-Schnittstelle angegeben.  
   
  Vor dem Abrufen der setObject-Methode kann der angegebene Parameter von der Anwendung mit einer der folgenden Methoden festgelegt werden:  

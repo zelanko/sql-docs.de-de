@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68111336"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den letzten Identitätswert zurück, der in eine Identitätsspalte im selben Gültigkeitsbereich eingefügt wurde. Ein Gültigkeitsbereich ist ein Modul: eine gespeicherte Prozedur, ein Trigger, eine Funktion oder ein Batch. Wenn sich daher zwei Anweisungen in der selben gespeicherten Prozedur, in derselben Funktion oder im selben Batch befinden, bindenden sie sich im selben Gültigkeitsbereich.  
@@ -43,7 +43,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Rückgabetypen  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Bei SCOPE_IDENTITY, IDENT_CURRENT und @@IDENTITY handelt es sich um ähnliche Funktionen, denn sie geben Werte zurück, die in Identitätsspalten eingefügt wurden.  
   
  IDENT_CURRENT ist nicht durch einen Gültigkeitsbereich oder eine Sitzung begrenzt, sondern auf eine angegebene Tabelle. IDENT_CURRENT gibt den für eine bestimmte Tabelle in einer beliebigen Sitzung und einem beliebigen Gültigkeitsbereich generierten Wert zurück. Weitere Informationen finden Sie unter [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>A. Verwenden von @@IDENTITY und SCOPE_IDENTITY mit Triggern  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>A. Verwenden von @@IDENTITY und SCOPE_IDENTITY mit Triggern  
  Im folgenden Beispiel werden zwei Tabellen, `TZ` und `TY`, sowie ein INSERT-Trigger für `TZ` erstellt. Wenn eine Zeile in die Tabelle `TZ` eingefügt wird, wird der Trigger (`Ztrig`) ausgelöst und fügt eine Zeile in `TY` ein.  
   
 ```sql  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Verwenden von @@IDENTITY und SCOPE_IDENTITY() mit Replikation  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>B. Verwenden von @@IDENTITY und SCOPE_IDENTITY() mit Replikation  
  In den folgenden Beispielen wird veranschaulicht, wie `@@IDENTITY` und `SCOPE_IDENTITY()` für Einfügungen in einer Datenbank verwendet werden, die für die Mergereplikation veröffentlicht wird. Beide Tabellen in den Beispielen befinden sich in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank: `Person.ContactType` wird nicht veröffentlicht, und `Sales.Customer` wird veröffentlicht. Mit der Mergereplikation werden Tabellen, die veröffentlicht werden, Trigger hinzugefügt. Aus diesem Grund kann `@@IDENTITY` den Wert aus dem Einfügevorgang in eine Replikationssystemtabelle zurückgeben statt aus dem Einfügevorgang in eine Benutzertabelle.  
   
  Die `Person.ContactType`-Tabelle besitzt den maximalen Identitätswert 20. Wenn Sie eine Zeile in die Tabelle einfügen, wird von `@@IDENTITY` und `SCOPE_IDENTITY()` derselbe Wert zurückgegeben.  

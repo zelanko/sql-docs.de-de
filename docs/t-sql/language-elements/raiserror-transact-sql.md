@@ -163,7 +163,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
 |NOWAIT|Sendet Meldungen sofort an den Client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Legt die Werte @@ERROR und ERROR_NUMBER unabhängig vom Schweregrad auf *msg_id* oder 50000 fest.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die von RAISERROR generierten Fehler sind mit Fehlern vergleichbar, die durch den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Code generiert werden. Die von RAISERROR angegebenen Werte werden von den Systemfunktionen ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE und @@ERROR gemeldet. Wird RAISERROR mit einem Schweregrad von 11 oder höher in einem TRY-Block ausgeführt, wird die Steuerung an den zugeordneten CATCH-Block übertragen. Der Fehler wird an den Aufrufer zurückgegeben, wenn RAISERROR ausgeführt wird:  
   
 -   Außerhalb des Bereichs eines beliebigen TRY-Blocks.  

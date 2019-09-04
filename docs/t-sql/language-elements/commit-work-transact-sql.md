@@ -44,7 +44,7 @@ COMMIT [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Anweisung funktioniert genau wie COMMIT TRANSACTION, mit dem Unterschied, dass COMMIT TRANSACTION einen benutzerdefinierten Transaktionsnamen akzeptiert. Diese COMMIT-Syntax, mit oder ohne Angabe des optionalen Schlüsselworts WORK, ist mit SQL-92 kompatibel.  
   
 ## <a name="see-also"></a>Weitere Informationen  

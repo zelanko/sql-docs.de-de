@@ -43,7 +43,7 @@ EnvelopeAggregate ( geography_operand )
 ## <a name="return-types"></a>Rückgabetypen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rückgabetyp: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein **FullGlobe** -Objekt wird zurückgegeben, wenn das resultierende umgebende Objekt größer als eine Hemisphäre ist. Diese Methode ist nicht exakt.  
   
  Die Methode gibt **null** zurück, wenn die Eingabe abweichende SRIDs aufweist. Weitere Informationen finden Sie unter [SRIDs &#40;Spatial Reference Identifiers&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  

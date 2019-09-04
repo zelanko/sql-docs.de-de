@@ -47,7 +47,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz die folgenden Anforderungen erf�
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt NULL zurück, wenn die Instanz kein **LineString**ist.  
   
 ## <a name="examples"></a>Beispiele  

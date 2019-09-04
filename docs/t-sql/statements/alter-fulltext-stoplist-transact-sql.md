@@ -86,7 +86,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
  ALL  
  Löscht alle Stoppwörter aus der Stoppliste.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  CREATE FULLTEXT STOPLIST wird nur bei einem Kompatibilitätsgrad von mindestens 100 unterstützt. Bei Kompatibilitätsgraden von 80 und 90 wird die Systemstoppliste immer der Datenbank zugewiesen.  
   
 ## <a name="permissions"></a>Berechtigungen  

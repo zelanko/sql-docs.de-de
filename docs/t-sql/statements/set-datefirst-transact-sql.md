@@ -69,7 +69,7 @@ SET DATEFIRST 7 ;
 |**6**|Samstag|  
 |**7** (Standardwert, Englisch (USA))|Sonntag|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Funktion [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md), um die aktuelle Einstellung von SET DATEFIRST anzuzeigen.  
   
  Die Einstellung von SET DATEFIRST wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  

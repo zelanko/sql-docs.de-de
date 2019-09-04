@@ -71,7 +71,7 @@ So erteilen Sie einem Konto die Berechtigung `Perform volume maintenance tasks` 
 > [!NOTE]
 > Für die Versionen von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 über [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 bis hin zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann in der DMV [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) die Spalte *instant_file_initialization_enabled* verwendet werden, um festzustellen, ob die schnelle Dateiinitialisierung aktiviert ist.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Wenn *SE_MANAGE_VOLUME_NAME* für das Dienststartkonto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt wurde, wird eine Meldung ähnlich wie die folgende beim Start im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll protokolliert: 
 
 `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`

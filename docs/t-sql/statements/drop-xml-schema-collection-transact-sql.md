@@ -50,7 +50,7 @@ Identifiziert den Namen des relationalen Schemas. Wenn kein Name angegeben ist, 
 *sql_identifier*  
 Der Name der zu löschenden XML-Schemaauflistung.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Das Löschen einer XML-Schemaauflistung ist ein Transaktionsvorgang. Wenn Sie eine XML-Schemaauflistung innerhalb einer Transaktion löschen und später ein Rollback für die Transaktion ausführen, wird die XML-Schemaauflistung nicht gelöscht.  
   
 Eine XML-Schemaauflistung, die verwendet wird, kann nicht gelöscht werden. Also darf für die zu löschende Auflistung keine der folgenden Bedingungen zutreffen:  

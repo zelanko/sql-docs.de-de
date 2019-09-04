@@ -44,7 +44,7 @@ ms.locfileid: "68109202"
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zum Anzeigen von Informationen zu Spracheinstellungen (einschließlich gültiger offizieller Sprachnamen) führen Sie **sp_helplanguage** ohne Angabe von Parametern aus.  
   
 ## <a name="examples"></a>Beispiele  

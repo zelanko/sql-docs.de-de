@@ -55,7 +55,7 @@ ms.locfileid: "68062522"
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**Uhrzeit**|**te**|  
-    |**Datum**|**de**|  
+    |**date**|**de**|  
     |**datetime2**|**d2**|  
     |**datetimeoffset**|**do**|  
     |**decimal**|**n**|  

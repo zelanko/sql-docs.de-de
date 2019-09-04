@@ -422,7 +422,7 @@ Eine Liste der Bedingungen, die erfüllt sein müssen, damit eine Funktion an ei
  ALLOW_PAGE_LOCKS = { ON | OFF }  
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ALTER FUNCTION kann nicht verwendet werden, um eine Skalarwertfunktion in eine Tabellenwertfunktion oder umgekehrt zu ändern. Ebenso kann ALTER FUNCTION nicht verwendet werden, um eine Inlinefunktion in eine Funktion mit mehreren Anweisungen oder umgekehrt zu ändern. ALTER FUNCTION kann nicht zum Ändern einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion in eine CLR-Funktion und umgekehrt verwendet werden.  
   
  Die folgenden Service Broker-Anweisungen können nicht in die Definition einer benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion aufgenommen werden:  

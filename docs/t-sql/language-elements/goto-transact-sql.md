@@ -49,7 +49,7 @@ GOTO label
  *label*  
  Ist der Punkt, an dem die Ausführung beginnt, wenn GOTO auf diese Marke zielt. Bezeichnungen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Sie können Marken auch als Kommentarmethode verwenden, unabhängig davon, ob GOTO verwendet wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  GOTO kann innerhalb von bedingten Anweisungen zur Ablaufsteuerung, Anweisungsblöcken oder Prozeduren vorhanden sein, nicht aber an Marken außerhalb des Batches. Sie können mit GOTO zu einer Marke verzweigen, die vor oder nach GOTO definiert ist.  
   
 ## <a name="permissions"></a>Berechtigungen  

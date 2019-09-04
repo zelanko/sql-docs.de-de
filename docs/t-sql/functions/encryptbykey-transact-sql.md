@@ -72,7 +72,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  Gibt NULL zurück, wenn der Wert *cleartext* NULL entspricht.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  EncryptByKey verwendet einen symmetrischen Schlüssel. Dieser Schlüssel muss geöffnet sein. Wenn der symmetrische Schlüssel in der aktuellen Sitzung bereits geöffnet ist, ist es nicht notwendig, ihn im Kontext der Abfrage erneut zu öffnen.  
   
  Mit dem Authentifikator kann verhindert werden, dass ganze Werte in verschlüsselten Feldern ersetzt werden. Betrachten Sie dazu beispielsweise die folgende Tabelle mit Daten zu Gehältern.  

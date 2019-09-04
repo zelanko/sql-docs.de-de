@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68038387"
 ---
-# <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (SSISDB-Datenbank)
+# <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -36,7 +36,7 @@ ms.locfileid: "68038387"
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist die Variable vertraulich und wird beim Speichern verschlüsselt. Lautet der Wert `0`, ist die Variable nicht vertraulich, und der Wert wird als Nur-Text gespeichert.|  
 |Wert|**sql_variant**|Der Wert der Umgebungsvariablen. Wenn `0` vertraulich ist, wird der Nur-Text-Wert angezeigt. Wenn `1` vertraulich ist, wird der Wert **NULL** angezeigt.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Umgebungsvariable im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -137,7 +137,7 @@ identifier
  [WITH **(** \<index_options> **)** ]  
  Sie können \<index_options> nur angeben, wenn Sie ALTER INDEX ohne die FOR-Klausel verwenden. Wenn Sie ALTER INDEX verwenden, um Pfade im Index hinzuzufügen oder sie daraus zu entfernen, sind die Indexoptionen keine gültigen Argumente. Informationen zu Indexoptionen finden Sie unter [CREATE XML INDEX &#40;Selective XML Indexes&#41; (CREATE XML INDEX (selektive XML-Indizes))](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn Sie eine ALTER INDEX-Anweisung ausführen, wird der selektive XML-Index immer neu erstellt. Beachten Sie unbedingt die Auswirkungen dieses Prozesses auf Serverressourcen.  

@@ -57,7 +57,7 @@ ms.locfileid: "68495441"
  \<fortgesetzter Abschnitt der Zeichenfolge>  
  Ist die Fortsetzung einer Zeichenfolge.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Dieser Befehl gibt den ersten und den fortgesetzten Abschnitt der Zeichenfolge ohne den umgekehrten Schrägstrich als eine einzige Zeichenfolge zurück. Die neue Zeile nach dem umgekehrten Schrägstrich muss entweder ein Zeilenvorschubzeichen (U+000A) oder eine Kombination aus Wagenrücklaufzeichen (U+000D) und Zeilenvorschub (U+000A) in dieser Reihenfolge sein. 
 
 ## <a name="examples"></a>Beispiele  

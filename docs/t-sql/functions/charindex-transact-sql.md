@@ -52,9 +52,9 @@ Der zu suchende Zeichenausdruck.
 Ein **integer**- oder **bigint**-Ausdruck, bei dem die Suche beginnt. Wenn *start_location* nicht angegeben ist, einen negativen Wert oder den Wert 0 (null) besitzt, wird mit der Suche am Anfang von *expressionToSearch* begonnen.
   
 ## <a name="return-types"></a>Rückgabetypen
-**bigint**, wenn *expressionToSearch* vom Datentyp **nvarchar(max)**, **varbinary(max)** oder **varchar(max)** ist; andernfalls **int**.
+**bigint**, wenn *expressionToSearch* vom Datentyp **nvarchar(max)** , **varbinary(max)** oder **varchar(max)** ist; andernfalls **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn entweder der Ausdruck *expressionToFind* oder der Ausdruck *expressionToSearch* einen Unicode-Datentyp aufweist (**nchar** oder **nvarchar**), und der andere Ausdruck nicht, konvertiert die CHARINDEX-Funktion diesen anderen Ausdruck in einen Unicode-Datentyp. CHARINDEX kann nicht mit den Datentypen **image**, **ntext** oder **text** verwendet werden.
   
 Wenn entweder der Ausdruck *expressionToFind* oder der Ausdruck *expressionToSearch* einen NULL-Wert aufweist, gibt auch CHARINDEX NULL zurück.
@@ -65,7 +65,7 @@ CHARINDEX führt Vergleiche basierend auf der Sortierung der Eingabe aus. Verwen
   
 Die zurückgegebene Startposition ist 1-basiert, nicht 0-basiert.
   
-0x0000 (**char(0)**) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in CHARINDEX enthalten sein.
+0x0000 (**char(0)** ) ist ein nicht definiertes Zeichen in Windows-Sortierungen und kann nicht in CHARINDEX enthalten sein.
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Ergänzende Zeichen (Ersatzpaare)  
 Bei Verwendung von SC-Sortierungen werden Ersatzzeichenpaare sowohl von *start_location* als auch vom Rückgabewert als ein anstelle von zwei Zeichen gezählt. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).

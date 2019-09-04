@@ -50,7 +50,7 @@ ISNUMERIC ( expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ISNUMERIC gibt 1 zurück, wenn der Eingabeausdruck zu einem gültigen numerischen Datentyp ausgewertet wird; andernfalls wird 0 zurückgegeben. Beispiele für gültige [numerische Datentypen](../../t-sql/data-types/numeric-types.md):  
 
 |||

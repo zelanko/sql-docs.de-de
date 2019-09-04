@@ -30,7 +30,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68132821"
 ---
-# <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
+# <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt an, dass durch das Ausführen einer remote gespeicherten Prozedur, sofern eine lokale Transaktion aktiv ist, eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet wird, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Manager (MS DTC) verwaltet wird.  
@@ -51,7 +51,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
  ON | OFF  
  Bei ON wird eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet, wenn eine remote gespeicherte Prozedur von einer lokalen Transaktion aus ausgeführt wird. Bei OFF wird keine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet, wenn eine remote gespeicherte Prozedur von einer lokalen Transaktion aus aufgerufen wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn REMOTE_PROC_TRANSACTIONS auf ON festgelegt ist und eine remote gespeicherte Prozedur aufgerufen wird, wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die remote gespeicherte Prozedur aufruft, wird als Transaktionsurheber bezeichnet und steuert die Beendigung der Transaktion. Wenn im Anschluss eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung für die Verbindung ausgegeben wird, fordert die steuernde Instanz MS DTC auf, die Beendigung der verteilten Transaktion auf den beteiligten Computern zu verwalten.  
   
  Nachdem eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet wurde, können Aufrufe remote gespeicherter Prozeduren für weitere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen erfolgen, die als Remoteserver definiert wurden. Alle Remoteserver werden in der verteilten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion eingetragen, und MS DTC stellt sicher, dass die Transaktion für jeden Remoteserver abgeschlossen wird.  

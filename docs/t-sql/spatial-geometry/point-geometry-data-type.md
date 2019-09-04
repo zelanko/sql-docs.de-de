@@ -51,7 +51,7 @@ Point ( X, Y, SRID )
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `Point()` verwendet, um eine `geometry`-Instanz zu erstellen.  

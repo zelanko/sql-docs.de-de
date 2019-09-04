@@ -68,7 +68,7 @@ Die folgende Tabelle enthält die Standard-Typzuordnung zwischen ASE und [!INCLU
 |**unterschiedliche Zeichen [8001..\*]**|**varchar(max)**|  
 |**Zeichen [\*... 8000]**|**char[\*]**|  
 |**Zeichen [8001..\*]**|**varchar(max)**|  
-|**Datum**|**Datum**|  
+|**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**DEC**|**decimal**|  
 |**DEC [\*... \*]**|**Dezimal [\*]**|  

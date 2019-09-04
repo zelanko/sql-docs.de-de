@@ -30,7 +30,7 @@ Verbindungsresilienz wird mit zwei Verbindungs Schlüsselwörtern implementiert,
 
 Wenn das Produkt von **connectretrycount** multipliziert mit **connectretryinterval** größer als **LoginTimeout**ist, versucht der Client, eine Verbindung herzustellen, nachdem **LoginTimeout** erreicht wurde. Andernfalls wird weiterhin versucht, erneut eine Verbindung herzustellen, bis **connectretrycount** erreicht ist.
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Bemerkungen
 
 Verbindungsresilienz gilt, wenn sich die Verbindung im Leerlauf befindet. Fehler, die beim Ausführen einer Transaktion auftreten, führen z. b. keine erneuten Verbindungsversuche aus, da Sie andernfalls nicht erwartungsgemäß erwartet werden. In den folgenden Situationen, die als nicht wiederherstellbare Sitzungs Zustände bezeichnet werden, werden keine erneuten Verbindungsversuche auslöst:
 

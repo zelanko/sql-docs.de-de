@@ -88,7 +88,7 @@ Gibt an, ob Systemkataloge, die mit dem Service Broker in Verbindung stehen, zum
 BACKUP_CLONEDB  
 Erstellt und überprüft eine Sicherung der Klondatenbank.  Wird dieses Argument zusammen mit VERIFY_CLONEDB verwendet, wird die Klondatenbank überprüft, bevor die Sicherung erstellt wird.  Diese Option wurde mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 eingeführt.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Die folgenden Überprüfungen werden von DBCC CLONEDATABASE ausgeführt. Der Befehl schlägt fehl, wenn bei einer der Überprüfungen ein Fehler auftritt.
 - Die Quelldatenbank muss eine Benutzerdatenbank sein. Ein Klonen von Systemdatenbanken (master, model, msdb, tempdb, distribution database usw.) ist nicht zulässig.
 - Die Quelldatenbank muss online geschaltet oder lesbar sein.

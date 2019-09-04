@@ -55,7 +55,7 @@ CLR: Der Zeichenfolgenwert, der ausgewertet wird.
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn Parse einen Wert erhält, der keine gültige Zeichenfolgendarstellung einer **hierarchyid** ist, wird eine Ausnahme ausgelöst. Wenn beispielsweise **char**-Datentypen nachfolgende Leerzeichen enthalten, wird eine Ausnahme ausgelöst.
   
 ## <a name="examples"></a>Beispiele  

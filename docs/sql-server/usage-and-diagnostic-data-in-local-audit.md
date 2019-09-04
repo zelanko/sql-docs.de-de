@@ -30,7 +30,7 @@ Microsoft SQL Server enthält internetfähige Features, die Daten über Ihren Co
 
 Seit SQL Server 2016 CU2 kann die lokale Überwachung auf der Instanzebene für SQL Server-Datenbank-Engine und Analysis Services (SSAS) konfiguriert werden. In SQL Server 2016 CU4 und SQL Server 2016 SP1 ist die lokale Überwachung auch für SQL Server Integration Services (SSIS) aktiviert. Andere SQL Server-Komponenten, die beim Setup installiert werden, und SQL Server-Tools, die nach dem Setup heruntergeladen oder installiert werden, bieten keine Funktion zur lokalen Überwachung der Nutzungs- und Diagnosedatensammlung.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
  - Das Entfernen oder Deaktivieren des CEIP-Diensts für SQL wird nicht unterstützt. 
  - Das Entfernen von CEIP-Ressourcen für SQL aus der Clustergruppe wird nicht unterstützt. 

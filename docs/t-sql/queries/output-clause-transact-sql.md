@@ -138,7 +138,7 @@ DELETE Sales.ShoppingCartItem
  $action  
  Ist verfügbar nur für die MERGE-Anweisung. Gibt in der OUTPUT-Klausel in einer MERGE-Anweisung, die einen der drei folgenden Werte für jede Zeile zurückgibt, eine Spalte des Typs **nvarchar(10)** an: 'INSERT', 'UPDATE' oder 'DELETE', je nachdem, welche Aktion für diese Zeile ausgeführt wurde.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die OUTPUT \<dml_select_list>-Klausel und die OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ }-Klausel können in einer einzelnen INSERT-, UPDATE-, DELETE- oder MERGE-Anweisung definiert werden.  
   
 > [!NOTE]  
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. Verwenden von OUTPUT INTO mit from_table_name in einer UPDATE-Anweisung  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. Verwenden von OUTPUT INTO mit from_table_name in einer UPDATE-Anweisung  
  Im folgenden Beispiel werden alle Arbeitsaufträge in der `ScrapReasonID`-Spalte der `WorkOrder`-Tabelle aktualisiert, für die `ProductID` und `ScrapReasonID` angegeben wurde. Die `OUTPUT INTO`-Klausel gibt Werte aus der Tabelle, die aktualisiert wird (`WorkOrder`), sowie aus der `Product`-Tabelle zurück. Die `Product`-Tabelle wird in der `FROM`-Klausel zur Angabe der zu aktualisierenden Zeilen verwendet. Da für die `WorkOrder`-Tabelle ein `AFTER UPDATE`-Trigger definiert wurde, wird das `INTO`-Schlüsselwort benötigt.  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. Verwenden von OUTPUT INTO mit from_table_name in einer DELETE-Anweisung  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. Verwenden von OUTPUT INTO mit from_table_name in einer DELETE-Anweisung  
  Im folgenden Beispiel werden Zeilen in der `ProductProductPhoto`-Tabelle auf der Grundlage von in der `FROM`-Klausel der `DELETE`-Anweisung definierten Suchkriterien gelöscht. Die `OUTPUT`-Klausel gibt Spalten aus der Tabelle zurück, die gelöscht wird (`deleted.ProductID`, `deleted.ProductPhotoID`), sowie Spalten aus der `Product`-Tabelle. Diese Tabelle wird in der `FROM`-Klausel zur Angabe der zu löschenden Zeilen verwendet.  
   
 ```  

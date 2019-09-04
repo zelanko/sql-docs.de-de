@@ -84,7 +84,7 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
  *table_name*  
  Name der Tabelle, die entfernt werden soll  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die DROP TABLE-Anweisung kann nicht zum Löschen einer Tabelle verwendet werden, auf die mit einer FOREIGN KEY-Einschränkung verwiesen wird. Die verweisende FOREIGN KEY-Einschränkung oder die verweisende Tabelle muss zuerst gelöscht werden. Wenn sowohl die verweisende Tabelle als auch die Tabelle mit dem Primärschlüssel in derselben DROP TABLE-Anweisung gelöscht werden, muss die verweisende Tabelle zuerst aufgelistet werden.  
   
  Mehrere Tabellen können in jeder beliebigen Datenbank gelöscht werden. Verweist eine zu löschende Tabelle auf den Primärschlüssel einer anderen, ebenfalls zu löschenden Tabelle, muss die verweisende Tabelle mit dem Fremdschlüssel vor der Tabelle mit dem Primärschlüssel, auf den verwiesen wird, aufgelistet werden.  

@@ -45,7 +45,7 @@ Gibt 1 zurück, wenn eine **geometry** -Instanz eine andere **geometry** -Instan
   
  CLR-Rückgabetyp: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zwei **geometry** -Instanzen überlappen sich, wenn der Bereich ihrer Schnittmenge die gleiche Dimensionalität wie die Instanzen hat und die Region mit keiner der Instanzen identisch ist.  
   
  `STOverlaps()` gibt immer 0 (null) zurück, wenn die Punkte, an denen sich die **geometry**-Instanzen überschneiden, nicht die gleiche Dimensionalität aufweisen.  

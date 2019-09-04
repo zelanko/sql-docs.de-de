@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68038549"
 ---
-# <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (SSISDB-Datenbank)
+# <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -88,7 +88,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   Der Benutzer verfügt nicht über die entsprechenden Berechtigungen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Überprüfung erleichtert das Identifizieren von Problemen, die das erfolgreiche Ausführen der Pakete im Projekt verhindern. Verwenden Sie die [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md)- oder [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)-Sicht, um den Überprüfungszustand zu überwachen.  
   
  In der Überprüfung können nur Umgebungen verwendet werden, auf die vom Benutzer zugegriffen werden kann. Die Ausgabe der Überprüfung wird als Resultset an den Client gesendet.  

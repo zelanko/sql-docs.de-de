@@ -118,7 +118,7 @@ profiler
  **/Z**  *Dateigröße*  
  Gibt die Größe der Ablaufverfolgungsdatei in Megabytes (MB) an. Die Standardgröße ist 5 MB. Wenn das Rollover aktiviert ist, wird die Größe aller Rolloverdateien auf den in diesem Argument angegebenen Wert begrenzt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Option **/S** zusammen mit der Option **/T** , um eine Ablaufverfolgung mit einer bestimmten Vorlage zu starten. Wenn Sie beispielsweise eine Ablaufverfolgung mithilfe der Standardvorlage im Verzeichnis MyServer\MyInstance starten möchten, geben Sie an der Eingabeaufforderung Folgendes ein:  
   
 ```  

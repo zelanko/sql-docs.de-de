@@ -40,7 +40,7 @@ public boolean locatorsUpdateCopy()
 ## <a name="exceptions"></a>Ausnahmen  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese loaseorsupdatecopy-Methode wird von der loaseorsupdatecopy-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

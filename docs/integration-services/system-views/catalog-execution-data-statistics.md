@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68080753"
 ---
-# <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics 
+# <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "68080753"
 |created_time|**datatimeoffset(7)**|Die Zeit, zu der die Werte abgerufen wurden.|  
 |execution_path|**nvarchar(max)**|Der Ausführungspfad der Komponente.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Wenn eine Komponente mehrere Ausgaben hat, wird für jede Ausgabe eine Zeile hinzugefügt.  
   

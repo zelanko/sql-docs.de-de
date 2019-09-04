@@ -47,7 +47,7 @@ Gibt einen festgelegten Punkt in einer **geometry** -Instanz zurück.
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine **geometry** -Instanz von einem Benutzer erstellt wurde, gibt `STPointN()` den durch *expression* festgelegten Punkt zurück, indem die Punkte in der Reihenfolge sortiert werden, in der sie ursprünglich eingegeben wurden.  
   
  Wenn eine **geometry** -Instanz systemseitig konstruiert wurde, gibt `STPointN()` den durch *expression* festgelegten Punkt zurück, indem alle Punkte in der Reihenfolge sortiert werden, in der sie ausgegeben würden: erst nach Geometrie, dann nach Ring innerhalb der Geometrie (falls zutreffend) und schließlich nach Punkt innerhalb des Rings. Diese Reihenfolge ist deterministisch.  

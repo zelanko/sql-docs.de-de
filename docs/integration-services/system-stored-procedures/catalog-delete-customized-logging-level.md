@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68023434"
 ---
-# <a name="catalogdeletecustomizedlogginglevel"></a>catalog.delete_customized_logging_level 
+# <a name="catalogdelete_customized_logging_level"></a>catalog.delete_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -39,7 +39,7 @@ delete_customized_logging_level [ @level_name = ] level_name
   
  Das Argument *level_name* ist vom Typ **nvarchar(128)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  

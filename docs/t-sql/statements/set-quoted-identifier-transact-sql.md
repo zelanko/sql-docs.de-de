@@ -32,7 +32,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68008891"
 ---
-# <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
+# <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -54,7 +54,7 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Wenn SET QUOTED_IDENTIFIER auf ON festgelegt ist, können Bezeichner in Anführungszeichen eingeschlossen werden, und Literale müssen in einfache Anführungszeichen eingeschlossen werden. Wenn SET QUOTED_IDENTIFIER auf OFF festgelegt ist, können Bezeichner nicht in Anführungszeichen eingeschlossen werden und müssen allen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Regeln für Bezeichner entsprechen. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md). Literale können in einfache oder doppelte Anführungszeichen eingeschlossen werden.
 

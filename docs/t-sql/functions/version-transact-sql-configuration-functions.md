@@ -44,7 +44,7 @@ ms.locfileid: "67927532"
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die @@VERSION-Ergebnisse werden als eine nvarchar-Zeichenfolge dargestellt. Sie können die [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)-Funktion verwenden, um die einzelnen Eigenschaftenwerte abzurufen.  
   
  Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die folgenden Informationen zurückgegeben.  

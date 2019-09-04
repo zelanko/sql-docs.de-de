@@ -66,7 +66,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Gibt das alte Kennwort an, mit dem der private Schlüssel zurzeit verschlüsselt ist. Das Kennwort ist nicht erforderlich, wenn der private Schlüssel mit dem Datenbank-Hauptschlüssel verschlüsselt ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Falls kein Datenbank-Hauptschlüssel vorhanden ist, muss die ENCRYPTION BY PASSWORD-Option angegeben sein. Der Vorgang erzeugt einen Fehler, wenn kein Kennwort angegeben ist. Weitere Informationen zum Erstellen eines Datenbankmasterschlüssels finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  Mit ALTER ASYMMETRIC KEY kann der Schutz des privaten Schlüssels durch Angeben der PRIVATE KEY-Optionen geändert werden, wie in der folgenden Tabelle veranschaulicht ist.  

@@ -54,7 +54,7 @@ IDENTITY [ (seed , increment) ]
   
  Sie müssen entweder sowohl den Ausgangswert als auch den inkrementellen Wert oder keinen von beiden angeben. Wurden Ausgangswert und inkrementeller Wert nicht angegeben, ist der Standardwert (1,1).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Identitätsspalten können zum Generieren von Schlüsselwerten verwendet werden. Die Identitätseigenschaft für eine Spalte garantiert Folgendes:  
   
 -   Jeder neue Wert wird auf Grundlage des aktuellen Seeds und Inkrements generiert.  

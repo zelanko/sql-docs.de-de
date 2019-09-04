@@ -60,7 +60,7 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  Wenn *filegroup_name* nicht angegeben wurde und keine Dateigruppen als NEXT USED markiert sind, gibt ALTER PARTITION SCHEME eine Warnmeldung zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Jede Dateigruppe, die von ALTER PARTITION SCHEME betroffen ist, muss online sein.  
   
 ## <a name="permissions"></a>Berechtigungen  

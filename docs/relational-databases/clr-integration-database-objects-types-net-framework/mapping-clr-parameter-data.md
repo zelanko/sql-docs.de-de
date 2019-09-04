@@ -44,7 +44,7 @@ ms.locfileid: "68081313"
 |**bit**|**SqlBoolean**|**Boolesch, auf NULL festlegbare\<booleschen >**|  
 |**char**|None|None|  
 |**Cursor**|None|None|  
-|**Datum**|**SqlDateTime**|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
+|**date**|**SqlDateTime**|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
 |**datetime**|**SqlDateTime**|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
 |**datetime2**|None|**"DateTime", auf NULL festlegbare\<"DateTime" >**|  
 |**DATETIMEOFFSET**|**Keine**|**"DateTimeOffset", auf NULL festlegbare\<DateTimeOffset >**|  

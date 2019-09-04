@@ -42,7 +42,7 @@ ms.locfileid: "68127397"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode ändert möglicherweise den Typ der Instanz von **geography**. Darüber hinaus ist eine geringfügige Verschiebung der Punkte der Instanz von **geography** möglich. Die Ergebnisse einiger Methoden wie NumPoint() können sich ändern.  
   
  In Fällen, in denen die ungültige räumliche Instanz den Äquator schneidet und einen EnvelopeAngle() = 180 aufweist, wird eine Instanz von **FullGlobe** zurückgegeben. Die `MakeValid()`**geography**-Datentypmethode versucht, gültige Instanzen zurückzugeben. Die Richtigkeit oder Vollständigkeit der Ergebnisse kann jedoch nicht garantiert werden.  

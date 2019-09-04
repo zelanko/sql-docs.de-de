@@ -94,7 +94,7 @@ ms.locfileid: "68000458"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
-|**Datum**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**date**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
   
@@ -235,7 +235,7 @@ SELECT
 |Datentyp|Ausgabe|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
-|**Datum**|2007-05-08|  
+|**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
@@ -262,7 +262,7 @@ SELECT
 |Eingefügtes Zeichenfolgenliteral|Spaltendatentyp|Wert, der in der Spalte gespeichert wird|und Beschreibung|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  
-|'2007-05-07'|**Datum**|NULL|Uhrzeitangaben führen zu einem Fehlschlagen der INSERT-Anweisung.|  
+|'2007-05-07'|**date**|NULL|Uhrzeitangaben führen zu einem Fehlschlagen der INSERT-Anweisung.|  
 |'12:12:12'|**smalldatetime**|1900-01-01 12:12:00|Jeder Wert für die Genauigkeit der Sekundenbruchteile führt zu einer fehlerhaften INSERT-Anweisung.|  
 |'12:12:12.123'|**datetime**|1900-01-01 12:12:12.123|Jede Sekundengenauigkeit, die mehr als 3 Stellen umfasst, führt zu einer fehlerhaften INSERT-Anweisung.|  
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Wenn die Genauigkeit der Sekundenbruchteile den für die Spalte angegebenen Wert überschreitet, wird die Zeichenfolge abgeschnitten, ohne einen Fehler zu verursachen.|  

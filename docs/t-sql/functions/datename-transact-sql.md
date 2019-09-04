@@ -49,7 +49,7 @@ DATENAME ( datepart , date )
   
 ## <a name="arguments"></a>Argumente  
 *datepart*  
-Der bestimmte Teil des *date*-Arguments, das `DATENAME` zurückgibt. In der folgenden Tabelle werden alle gültigen *datepart*-Argumente aufgeführt.
+Derjenige Teil des *date*-Arguments, der von `DATENAME` zurückgegeben wird. In der folgenden Tabelle werden alle gültigen *datepart*-Argumente aufgeführt.
 
 > [!NOTE]
 > `DATENAME` akzeptiert keine benutzerdefinierten Variablenentsprechungen für die *datepart*-Argumente.
@@ -72,11 +72,11 @@ Der bestimmte Teil des *date*-Arguments, das `DATENAME` zurückgibt. In der folg
 |**TZoffset**|**tz**|  
 |**ISO_WEEK**|**ISOWK, ISOWW**|  
   
-*Datum*  
+*date*  
 
 Ein Ausdruck, der in einen der folgenden Datentypen aufgelöst werden kann: 
 
-+ **Datum**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -90,9 +90,9 @@ Bei *date* akzeptiert `DATENAME` einen Spaltenausdruck, einen Ausdruck, ein Zeic
   
 ## <a name="return-value"></a>Rückgabewert  
   
--   Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.  
+-   Jedes *datepart*-Argument und die jeweils zugehörigen Abkürzungen geben den gleichen Wert zurück.  
   
-Der Rückgabewert hängt von der Sprachumgebung ab, die durch [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfiguration der Serverkonfigurationsoption „Standardsprache“](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) für die Anmeldung festgelegt wurde. Der Rückgabewert hängt von [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ab, wenn *date* ein Zeichenfolgenliteral einiger Formate darstellt. SET DATEFORMAT ändert nicht den Rückgabewert, wenn das Datum ein Spaltenausdruck für Daten vom Typ Datum oder Uhrzeit darstellt.
+Der Rückgabewert hängt von der Sprachumgebung ab, die durch [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) und durch die [Konfiguration der Serverkonfigurationsoption „Standardsprache“](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) für die Anmeldung festgelegt wurde. Der Rückgabewert hängt von [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ab, wenn *date* ein Zeichenfolgenliteral einiger Formate darstellt. SET DATEFORMAT ändert den Rückgabewert nicht, wenn das Datum einen Spaltenausdruck eines Datums- oder Uhrzeittyps darstellt.
   
 Wenn der *date*-Parameter ein **date**-Datentypargument aufweist, hängt der Rückgabewert von der Einstellung ab, die durch [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) angegeben wurde.
   
@@ -105,7 +105,7 @@ Wenn *date* vom Typ [smalldatetime](../../t-sql/data-types/smalldatetime-transac
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>Zurückgeben des Standardwerts für ein datepart-Argument, das nicht im date-Argument enthalten ist  
 Wenn der Datentyp des *date*-Arguments nicht über den angegebenen *datepart* verfügt, gibt `DATENAME` den Standardwert für *datepart* nur zurück, wenn das *date*-Argument ein Literal enthält.
   
-Beispielsweise wird bei Jahr-Monat-Tag für jeden **date**-Datentyp standardmäßig der Wert 1900-01-01 angegeben. Diese Anweisung verfügt über datepart-Argumente für *datepart*, ein time-Argument für *date* und `DATENAME` gibt `1900, January, 1, 1, Monday` zurück.
+Beispielsweise wird bei Jahr-Monat-Tag für jeden **date**-Datentyp standardmäßig der Wert 1900-01-01 angegeben. Die folgende Anweisung verfügt über datepart-Argumente für *datepart*, ein time-Argument für *date*. Deswegen gibt `DATENAME` den Wert `1900, January, 1, 1, Monday` zurück.
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  
@@ -115,14 +115,14 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, gibt `DATENAME` den Fehler 9810 zurück. In diesem Beispiel verfügt die Variable *@t* über den Datentyp **time**. Das Beispiel schlägt fehl, da das Datumsteil „year“ für den **time**-Datentyp ungültig ist:
+Wenn *date* als Variable oder Tabellenspalte angegeben ist und der Datentyp für diese Variable oder Spalte nicht über das angegebene *datepart*-Argument verfügt, gibt `DATENAME` den Fehler 9810 zurück. Im folgenden Beispiel hat die Variable *@t* den Datentyp **time**. Bei der Ausführung würde ein Fehler auftreten, weil der Datumsteil „year“ für den **time**-Datentyp ungültig ist:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
 SELECT DATENAME(year, @t);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 Verwenden Sie `DATENAME` in den folgenden Klauseln:
 
@@ -135,7 +135,7 @@ Verwenden Sie `DATENAME` in den folgenden Klauseln:
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] wandelt DATENAME Zeichenfolgenliterale implizit in den **datetime2**-Typ um. `DATENAME` unterstützt das Format YDM also nicht, wenn das Datum als Zeichenfolge übergeben wird. Sie müssen die Zeichenfolge explizit in den Typ **datetime** oder **smalldatetime** umwandeln, um das YDM-Format zu verwenden.
   
 ## <a name="examples"></a>Beispiele  
-In diesem Beispiel werden die Datumsteile für das angegebene Datum zurückgegeben. Ersetzen Sie einen *datepart*-Wert in der Tabelle durch das `datepart`-Argument in der SELECT-Anweisung:
+Im folgenden Beispiel werden die Datumsteile für das angegebene Datum zurückgegeben. Ersetzen Sie einen *datepart*-Wert in der Tabelle durch das `datepart`-Argument in der SELECT-Anweisung:
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
   
@@ -145,7 +145,7 @@ In diesem Beispiel werden die Datumsteile für das angegebene Datum zurückgegeb
 |---|---|
 |**year, yyyy, yy**|2007|  
 |**quarter, qq, q**|4|  
-|**month, mm, m**|October|  
+|**month, mm, m**|Oktober|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
 |**week, wk, ww**|44|  
@@ -161,7 +161,7 @@ In diesem Beispiel werden die Datumsteile für das angegebene Datum zurückgegeb
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-In diesem Beispiel werden die Datumsteile für das angegebene Datum zurückgegeben. Ersetzen Sie einen *datepart*-Wert in der Tabelle durch das `datepart`-Argument in der SELECT-Anweisung:
+Im folgenden Beispiel werden die Datumsteile für das angegebene Datum zurückgegeben. Ersetzen Sie einen *datepart*-Wert in der Tabelle durch das `datepart`-Argument in der SELECT-Anweisung:
   
 ```sql
 SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');  
@@ -173,7 +173,7 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |---|---|
 |**year, yyyy, yy**|2007|  
 |**quarter, qq, q**|4|  
-|**month, mm, m**|October|  
+|**month, mm, m**|Oktober|  
 |**dayofyear, dy, y**|303|  
 |**day, dd, d**|30|  
 |**week, wk, ww**|44|  

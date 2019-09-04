@@ -45,7 +45,7 @@ ms.locfileid: "68027420"
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle wird das Ergebnis des Operation.  
   
 |Ursprünglicher boolescher Ausdruck|Nach dem Anwenden des !- Operator|  

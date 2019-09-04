@@ -42,7 +42,7 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle wird das Ergebnis des &&-Operators dargestellt.  
   
 |Ergebnis|expression|expression|  

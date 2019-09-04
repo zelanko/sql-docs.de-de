@@ -17,12 +17,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67993618"
 ---
-# <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber.
+# <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdo_sqlsrv-driver"></a>Direkte Anweisungsausführung und vorbereitete Anweisungsausführung im PDO_SQLSRV-Treiber.
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In diesem Artikel wird erläutert, wie das PDO::SQLSRV_ATTR_DIRECT_QUERY-Attribut verwendet wird, um die direkte Anweisungsausführung anstelle des Standardwerts, der die Ausführung der vorbereiteten Anweisung darstellt, anzugeben. Die Verwendung einer vorbereiteten Anweisung kann zu einer besseren Leistung führen, wenn die Anweisung mehrmals mithilfe der Parameter Bindung ausgeführt wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn Sie eine [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung ohne Anweisungs Vorbereitung durch den Treiber direkt an den Server senden möchten, können Sie das PDO:: SQLSRV_ATTR_DIRECT_QUERY-Attribut mit [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) festlegen (oder als Treiber Option an [PDO:: __construct ](../../connect/php/pdo-construct.md)) oder wenn Sie [PDO::p repare aufgerufen haben](../../connect/php/pdo-prepare.md). Standardmäßig ist der Wert von PDO:: SQLSRV_ATTR_DIRECT_QUERY false (verwenden Sie die vorbereitete Anweisungs Ausführung).  
   
 Wenn Sie [PDO:: Query](../../connect/php/pdo-query.md)verwenden, möchten Sie möglicherweise direkt ausführen. Bevor Sie [PDO:: Query](../../connect/php/pdo-query.md)aufrufen, rufen Sie [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) auf, und legen Sie PDO:: SQLSRV_ATTR_DIRECT_QUERY auf true fest.  Jeder Aufrufe von [PDO:: Query](../../connect/php/pdo-query.md) kann mit einer anderen Einstellung für PDO:: SQLSRV_ATTR_DIRECT_QUERY ausgeführt werden.  

@@ -43,7 +43,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Rückgabetypen
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `COLUMNS_UPDATED` testet, ob UPDATE- oder INSERT-Aktionen für mehrere Spalten ausgeführt wurden. Verwenden Sie [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md), um zu testen, ob UPDATE- oder INSERT-Aktionen für eine einzelne Spalte ausgeführt wurden.
   
 `COLUMNS_UPDATED` gibt mindestens ein Byte in der Reihenfolge von links nach rechts zurück. Das äußere rechte Bit stellt in jedem Byte das niederwertigste Bit dar. Das äußere rechte Bit im Byte ganz links stellt die erste Tabellenspalte in der Tabelle dar. Das nächste Bit links davon stellt die zweite Spalte dar usw. `COLUMNS_UPDATED` gibt mehrere Bytes zurück, falls die Tabelle, für die der Trigger erstellt wird, mehr als acht Spalten enthält, wobei das niederwertigste Byte ganz links steht. `COLUMNS_UPDATED` gibt für alle Spalten in INSERT-Aktionen TRUE zurück, weil in die Spalten entweder explizite oder implizite Werte (NULL) eingefügt wurden.

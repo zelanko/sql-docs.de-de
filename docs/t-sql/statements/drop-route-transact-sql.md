@@ -47,7 +47,7 @@ DROP ROUTE route_name
  *route_name*  
  Der Name der zu löschenden Route. Server-, Datenbank- und Schemaname können nicht angegeben werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Routingtabelle, in der die Routen gespeichert werden, ist eine Metadatentabelle, die über die Katalogsicht **sys.routes** gelesen werden kann. Die Routingtabelle kann nur mit der CREATE ROUTE-, ALTER ROUTE- und DROP ROUTE-Anweisung aktualisiert werden.  
   
  Eine Route kann unabhängig davon gelöscht werden, ob sie von einer Konversation verwendet wird. Falls jedoch keine andere Route zum Remotedienst verfügbar ist, verbleiben Nachrichten für diese Konversation in der Übertragungswarteschlange, bis eine Route zum Remotedienst erstellt wird oder sich ein Timeout für die Konversation ergibt.  

@@ -52,7 +52,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>Rückgabetypen  
 **bigint**, wenn *expression* vom Datentyp **varchar(max)** oder **nvarchar(max)** ist; andernfalls **int**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Wenn *pattern* oder *expression* NULL ist, gibt PATINDEX NULL zurück.  
  
 Die Startposition für PATINDEX ist 1.

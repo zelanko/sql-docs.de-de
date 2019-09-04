@@ -88,7 +88,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|Die Dauer des Ereignisses.|  
 |SPID|Die Prozess-ID des Diensts.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Pro Benutzer sind maximal 10 Diagnosesitzungen gleichzeitig erlaubt. Eine Liste Ihrer aktuellen Sitzungen finden Sie unter [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md). Dort können Sie nicht benötigte Sitzungen mithilfe von `DROP DIAGNOSTICS SESSION` löschen.  
   
  Diagnosesitzungen sammeln weiter Metadaten, bis sie gelöscht werden.  

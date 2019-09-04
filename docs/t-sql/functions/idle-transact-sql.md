@@ -47,7 +47,7 @@ ms.locfileid: "68097466"
 ## <a name="return-types"></a>Rückgabetypen  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zur Anzeige eines Berichts, der mehrere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Statistiken enthält, führen Sie **sp_monitor** aus.  
   
 ## <a name="examples"></a>Beispiele  

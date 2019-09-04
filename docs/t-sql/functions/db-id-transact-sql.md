@@ -50,7 +50,7 @@ Der Name der Datenbank, deren Datenbank-ID von `DB_ID` zurückgegeben wird. Wenn
 ## <a name="return-types"></a>Rückgabetypen
 **int**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 `DB_ID` wird möglicherweise nur verwendet, um die Datenbank-ID der aktuellen Datenbank in Azure SQL-Datenbank zurückzugeben. NULL wird zurückgegeben, wenn der angegebene Datenbankname von dem der aktuellen Datenbank abweicht.
 
 > [!NOTE]

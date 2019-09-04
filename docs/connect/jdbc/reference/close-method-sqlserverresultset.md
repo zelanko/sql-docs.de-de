@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese close-Methode wird von der close-Methode in der java.sql.ResultSet-Schnittstelle angegeben.  
   
  Ein SQLServerResultSet-Objekt wird vom [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt, durch das es generiert wurde, automatisch geschlossen, wenn das SQLServerStatement-Objekt geschlossen, erneut ausgeführt oder zum Abrufen des nächsten Ergebnisses aus einer Sequenz mit mehreren Ergebnissen verwendet wird. Ein SQLServerResultSet-Objekt wird auch dann automatisch geschlossen, wenn eine automatische Speicherbereinigung stattfindet.  

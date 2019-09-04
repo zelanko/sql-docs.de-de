@@ -48,7 +48,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Die **GetParameterProperties**-Methode gibt dieselben Fehlercodes zurück wie die **ICommandProperties::GetProperties** -Methode von OLE DB, allerdings können DB_S_ERRORSOCCURRED und DB_E_ERRORSOCCURED nicht ausgelöst werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **ISSCommandWithParameters::GetParameterProperties**-Methode verhält sich in Bezug auf **GetParameterInfo** konsistent. Wenn [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) und **SetParameterInfo** nicht aufgerufen wurden oder mit einem Wert von 0 (null) für **cParams** aufgerufen wurden, leitet „GetParameterInfo“ Parameterinformationen ab und gibt diese zurück. Wenn **ISSCommandWithParameters::SetParameterProperties** oder **SetParameterInfo** für mindestens einen Parameter aufgerufen wurde, gibt die **ISSCommandWithParameters::GetParameterProperties**-Methode Eigenschaften nur für die Parameter zurück, für die **ISSCommandWithParameters::SetParameterProperties** aufgerufen wurde. Wenn **ISSCommandWithParameters::SetParameterProperties** nach **ISSCommandWithParameters::GetParameterProperties** oder **GetParameterInfo** aufgerufen wird, geben nachfolgende Aufrufe von **ISSCommandWithParameters::GetParameterProperties** die überschriebenen Werte für jene Parameter zurück, für die die **ISSCommandWithParameters::SetParameterProperties**-Methode aufgerufen wurde.  
   
  Die SSPARAMPROPS-Struktur ist folgendermaßen definiert:  

@@ -76,7 +76,7 @@ aufweisen.
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verschlüsselungs- und Entschlüsselungsvorgänge, die asymmetrische Schlüssel verwenden, verwenden viele Ressourcen und werden deshalb kostspielig, verglichen mit der Verschlüsselung und Entschlüsselung mit einem symmetrischen Schlüssel. Es wird empfohlen, dass Entwickler asymmetrische Schlüssel für Verschlüsselungs- und Entschlüsselungsvorgänge auf großen Datasets vermeiden, z.B. bei Benutzerdaten in Datenbanktabellen. Stattdessen sollten Entwickler die Daten zunächst mit einem starken symmetrischen Schlüssel verschlüsseln und dann diesen symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln.  
   
 `ENCRYPTBYASYMKEY` gibt je nach Algorithmus **NULL** zurück, wenn die Eingabe eine bestimmte Anzahl von Bytes überschreitet. Die spezifischen Grenzwerte:

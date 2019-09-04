@@ -37,7 +37,7 @@ public int getPortNumber()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Typ **int** mit der aktuellen Portnummer.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Portnummer ist die TCP/IP-Portnummer, die beim Öffnen einer Socketverbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verwendet wird. Ist die portNumber-Eigenschaft nicht festgelegt, wird von der getPortNumber-Methode der Standardwert "1433" zurückgegeben.  
   
 > [!NOTE]  

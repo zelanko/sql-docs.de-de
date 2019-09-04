@@ -124,7 +124,7 @@ CERTIFICATE *certname* Gibt den Namen eines Zertifikats an, das diesem Anmeldena
 
 ASYMMETRIC KEY *asym_key_name* Gibt den Namen eines asymmetrischen Schlüssels an, der diesem Anmeldenamen zugeordnet werden soll. Dieser Schlüssel muss bereits in der Masterdatenbank vorhanden sein.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Das vorherige Erstellen von Hashwerten für Kennwörter wird nur unterstützt, wenn Sie SQL Server-Anmeldenamen erstellen.
@@ -286,7 +286,7 @@ Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter
 
 SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
@@ -413,7 +413,7 @@ Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter
 
 SID **=** *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für SQL Server-Authentifizierungsanmeldungen. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL-Datenbank ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Eine neue Syntax für die Erstellung von Serverebenenprinzipalen für Azure AD-Konten wurde eingeführt (**FROM EXTERNAL PROVIDER**).
@@ -587,7 +587,7 @@ Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden. Kennwörter
 
  SID = *sid* Wird verwendet, um eine Anmeldung neu zu erstellen. Gilt nur für Anmeldenamen für die SQL Server-Authentifizierung, nicht für Anmeldenamen für die Windows-Authentifizierung. Gibt die SID des neuen Anmeldenamens für die SQL Server-Authentifizierung an. Wenn diese Option nicht verwendet wird, weist SQL Server automatisch eine SID zu. Die SID-Struktur hängt von der SQL Server-Version ab. Bei SQL Data Warehouse ist dies normalerweise ein 32-Byte-Literalwert (**binary(32)** ) bestehend aus `0x01060000000000640000000000000000` plus 16 Byte, die eine GUID darstellen. Beispiel: `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Ein Skript zum Übertragen von Anmeldenamen finden unter [Übertragen von Benutzernamen und Kennwörtern zwischen Instanzen von SQL Server](https://support.microsoft.com/kb/918992).
@@ -717,7 +717,7 @@ Wenn die Windows-Richtlinie sichere Kennwörter erfordert, müssen Kennwörter m
 
 WINDOWS Gibt an, dass der Anmeldename einem Windows-Anmeldenamen zugeordnet wird.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 - Bei Kennwörtern wird nach Groß- und Kleinschreibung unterschieden.
 - Falls MUST_CHANGE angegeben wird, müssen CHECK_EXPIRATION und CHECK_POLICY auf ON festgelegt werden. Andernfalls erzeugt die Anweisung einen Fehler.

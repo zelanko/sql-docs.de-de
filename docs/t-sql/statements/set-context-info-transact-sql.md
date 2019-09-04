@@ -26,7 +26,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68041807"
 ---
-# <a name="set-contextinfo-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
+# <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ordnet bis zu 128 Byte an binären Informationen der aktuellen Sitzung oder Verbindung zu.  
@@ -47,7 +47,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
  **@** *binary_var*  
  Eine Variable vom Typ **varbinary** oder **binary** mit einem Kontextwert, der der aktuellen Sitzung oder Verbindung zugeordnet werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die bevorzugte Vorgehensweise zum Abrufen von Kontextinformationen für die aktuelle Sitzung stellt die Verwendung der CONTEXT_INFO-Funktion dar. Informationen zum Sitzungskontext werden zudem in den **context_info**-Spalten der folgenden Systemsichten gespeichert:  
   
 -   **sys.dm_exec_requests**  

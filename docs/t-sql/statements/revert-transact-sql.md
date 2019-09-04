@@ -48,7 +48,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  Gibt das Cookie an, das in einer entsprechenden eigenständigen [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md)-Anweisung erstellt wurde. *@varbinary_variable* ist vom Datentyp **varbinary(100)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  REVERT kann in einem Modul, wie einer gespeicherten Prozedur oder benutzerdefinierten Funktion, oder in einer eigenständigen Anweisung angegeben werden. Innerhalb eines Moduls kann REVERT nur auf EXECUTE AS-Anweisungen angewendet werden, die im Modul definiert sind. So gibt beispielsweise die folgende gespeicherte Prozedur eine `EXECUTE AS`-Anweisung aus, gefolgt von einer `REVERT`-Anweisung.  
   
 ```  

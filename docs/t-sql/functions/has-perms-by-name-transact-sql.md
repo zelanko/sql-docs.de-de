@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68019733"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Wertet die gültige Berechtigung des aktuellen Benutzers für ein sicherungsfähiges Element aus. Eine verwandte Funktion ist [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese integrierte Funktion testet, ob der aktuelle Prinzipal eine bestimmte gültige Berechtigung für ein bestimmtes sicherungsfähiges Element aufweist. HAS_PERMS_BY_NAME gibt 1 zurück, wenn der Benutzer über eine gültige Berechtigung für das sicherungsfähige Element verfügt, 0, wenn der Benutzer über keine gültige Berechtigung für das sicherungsfähige Element verfügt, und NULL, wenn die sicherungsfähige Klasse oder die Berechtigung nicht gültig ist. Bei einer gültigen Berechtigung kann es sich um Folgendes handeln:  
   
 -   Eine Berechtigung, die dem Prinzipal direkt gewährt und nicht verweigert wurde.  

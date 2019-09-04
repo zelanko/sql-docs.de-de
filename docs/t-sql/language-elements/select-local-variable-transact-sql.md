@@ -32,7 +32,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68121778"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Legt eine lokale Variable auf den Wert eines Ausdrucks fest.  
@@ -71,7 +71,7 @@ Verbundzuweisungsoperator:
  *expression*  
  Ein beliebiger gültiger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md). Er enthält eine skalare Unterabfrage.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SELECT @*local_variable* dient in der Regel dazu, einen einzelnen Wert in die Variable zurückzugeben. Wenn es sich bei *expression* jedoch um den Namen einer Spalte handelt, können auch mehrere Werte zurückgegeben werden. Falls die SELECT-Anweisung mehr als einen Wert zurückgibt, wird der Variablen der zuletzt zurückgegebene Wert zugewiesen.  
   
  Wenn die SELECT-Anweisung keine Zeilen zurückgibt, behält die Variable ihren derzeitigen Wert bei. Ist *expression* eine skalare Unterabfrage, die keinen Wert zurückgibt, wird die Variable auf NULL festgelegt.  
@@ -83,7 +83,7 @@ Verbundzuweisungsoperator:
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. Verwenden von SELECT @local_variable zum Zurückgeben eines einzelnen Wertes  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>A. Verwenden von SELECT @local_variable zum Zurückgeben eines einzelnen Wertes  
  Das folgende Beispiel weist der Variable `@var1` den Wert `Generic Name` zu. Die Abfrage der Tabelle `Store` gibt keine Zeilen zurück, da der für `CustomerID` angegebene Wert nicht in der Tabelle enthalten ist. Die Variable behält den Wert `Generic Name` bei.  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. Verwenden von SELECT @local_variable zum Zurückgeben von NULL  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. Verwenden von SELECT @local_variable zum Zurückgeben von NULL  
  Das folgende Beispiel weist der Variable `@var1` mithilfe einer Unterabfrage einen Wert zu. Da der für `CustomerID` angeforderte Wert nicht vorhanden ist, gibt die Unterabfrage keinen Wert zurück, und die Variable wird auf `NULL` gesetzt.  
   
 ```sql  

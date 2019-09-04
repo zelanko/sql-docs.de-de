@@ -33,7 +33,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68117608"
 ---
-# <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
+# <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den einer Sicherheits-ID (SID) zugeordneten Anmeldenamen zurück.  
@@ -55,7 +55,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  SUSER_SNAME kann als DEFAULT-Einschränkung in ALTER TABLE oder CREATE TABLE verwendet werden. SUSER_SNAME kann in einer Auswahlliste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. SUSER_SNAME muss immer von Klammern gefolgt sein, selbst wenn kein Parameter angegeben wird.  
   
  Wenn SUSER_SNAME ohne Argument aufgerufen wird, wird der Name des aktuellen Sicherheitskontexts zurückgegeben. Wenn SUSER_SNAME ohne Argument innerhalb eines Batches aufgerufen wird, der den Kontext mithilfe von EXECUTE AS gewechselt hat, wird der Name des Kontexts zurückgegeben, dessen Identität angenommen wurde. Wenn ORIGINAL_LOGIN aus einem Kontext aufgerufen wird, dessen Identität angenommen wurde, wird der Name des ursprünglichen Kontexts zurückgegeben.  
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-susersname"></a>A. Verwenden von SUSER_SNAME  
+### <a name="a-using-suser_sname"></a>A. Verwenden von SUSER_SNAME  
  Im folgenden Beispiel wird der Anmeldename für den aktuellen Sicherheitskontext zurückgegeben.  
   
 ```  
@@ -75,7 +75,7 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-susersname-with-a-windows-user-security-id"></a>B. Verwenden von SUSER_SNAME mit der Sicherheits-ID eines Windows-Benutzers  
+### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>B. Verwenden von SUSER_SNAME mit der Sicherheits-ID eines Windows-Benutzers  
  Im folgenden Beispiel wird der einer Windows-Sicherheits-ID zugeordnete Anmeldename zurückgegeben.  
   
 **Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -85,7 +85,7 @@ SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);
 GO  
 ```  
   
-### <a name="c-using-susersname-as-a-default-constraint"></a>C. Verwenden von SUSER_SNAME als DEFAULT-Einschränkung  
+### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. Verwenden von SUSER_SNAME als DEFAULT-Einschränkung  
  Im folgenden Beispiel wird `SUSER_SNAME` als `DEFAULT`-Einschränkung in einer `CREATE TABLE`-Anweisung verwendet.  
   
 ```  
@@ -102,7 +102,7 @@ INSERT sname_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. Aufrufen von SUSER_SNAME in Verbindung mit EXECUTE AS  
+### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D. Aufrufen von SUSER_SNAME in Verbindung mit EXECUTE AS  
  Dieses Beispiel zeigt das Verhalten von SUSER_SNAME beim Aufrufen aus einem Kontext, dessen Identität angenommen wurde.  
   
 **Gilt für** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -129,7 +129,7 @@ sa
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="e-using-susersname"></a>E. Verwenden von SUSER_SNAME  
+### <a name="e-using-suser_sname"></a>E. Verwenden von SUSER_SNAME  
  Im folgenden Beispiel wird der Anmeldename für die Sicherheits-ID mit einem Wert von `0x01` zurückgegeben.  
   
 ```  

@@ -37,7 +37,7 @@ public int getPacketSize()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Typ **int** mit der aktuellen Netzwerkpaketgröße.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ist die packetSize-Eigenschaft nicht festgelegt, wird von der getPacketSize-Methode der Standardwert (8000) zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

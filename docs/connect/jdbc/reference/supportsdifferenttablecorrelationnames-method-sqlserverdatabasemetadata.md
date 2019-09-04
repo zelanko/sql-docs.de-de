@@ -40,7 +40,7 @@ public boolean supportsDifferentTableCorrelationNames()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese supportsdifferenttablecorrelationnames-Methode wird von der supportsdifferenttablecorrelationnames-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

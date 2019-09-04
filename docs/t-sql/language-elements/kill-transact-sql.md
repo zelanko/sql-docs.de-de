@@ -87,7 +87,7 @@ Verwenden Sie KILL _UOW_ zum Beenden verwaister verteilter Transaktionen. Diese 
 WITH STATUSONLY  
 Generiert einen Fortschrittsbericht für eine angegebene _Sitzungs-ID_ oder _UOW_, für den aufgrund einer früheren KILL-Anweisung ein Rollback ausgeführt wird. „KILL WITH STATUSONLY“ beendet die _Sitzungs-ID_ oder _UOW_ nicht und führt kein Rollback aus. Der Befehl zeigt nur den aktuellen Fortschritt des Rollbacks an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 KILL wird häufig verwendet, um einen Prozess zu beenden, der andere wichtige Prozesse mit Sperren blockiert. KILL kann auch verwendet werden, um einen Prozess zu beenden, der eine Abfrage ausführt, die die notwendigen Systemressourcen benötigt. Systemprozesse und Prozesse, die eine erweiterte gespeicherte Prozedur ausführen, können nicht beendet werden.  
   
 Verwenden Sie KILL sorgfältig, besonders wenn kritische Prozesse ausgeführt werden. Ihren eigenen Prozess können Sie nicht beenden. Sie sollten auch nicht die folgenden Prozesse beenden:  

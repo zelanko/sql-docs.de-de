@@ -53,7 +53,7 @@ ms.locfileid: "68034567"
 |**Übergeordnetes Element**|[Table-Element für Schema &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
 |**Untergeordnete Elemente**|[Create Element &#40;DTA&#41;](../../tools/dta/create-element-dta.md)<br /><br /> **Drop** -Element. Weitere Informationen finden Sie im [XML-Schema des Datenbankoptimierungsratgebers](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Dieses Element hat den Namen **CreateTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Es wird zur Angabe von Indizes für eine hypothetische Konfiguration verwendet. Dieses **Recommendation** -Element ist nicht mit den anderen Typen identisch, die zum Angeben von Partitionierungen (**RecommendationPType**) oder Sichten (**RecommendationViewType**) verwendet werden können. Unter **XML-Schema des Datenbankoptimierungsratgebers** finden Sie Informationen zu diesen anderen [Recommendation](https://go.microsoft.com/fwlink/?linkid=43100)-Elementtypen.  
   
 ## <a name="example"></a>Beispiel  

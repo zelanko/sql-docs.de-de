@@ -58,7 +58,7 @@ FOR SERVER AUDIT audit_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Aktiviert oder deaktiviert das Sammeln von Datensätzen durch die Überwachung für diese Überwachungsspezifikation.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine Überwachung muss vorhanden sein, bevor Sie eine Serverüberwachungsspezifikation für sie erstellen. Wenn eine Serverüberwachungsspezifikation erstellt wird, befindet sie sich im deaktivierten Zustand.  
   
 ## <a name="permissions"></a>Berechtigungen  

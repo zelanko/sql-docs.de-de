@@ -60,7 +60,7 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA = *schema_name*  
  Gibt das erste Schema an, das vom Server beim Auflösen der Namen von Objekten durchsucht wird. *schema_name* kann ein Schema sein, das in der Datenbank nicht vorhanden ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Falls der neue Anwendungsrollenname bereits in der Datenbank vorhanden ist, wird für die Anweisung ein Fehler gemeldet. Wenn der Name, das Kennwort oder das Standardschema einer Anwendungsrolle geändert wird, wird die der Rolle zugeordnete ID nicht geändert.  
   
 > [!IMPORTANT]  

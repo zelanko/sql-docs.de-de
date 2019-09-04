@@ -45,7 +45,7 @@ public int getScale(int param)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getScale-Methode wird von der getScale-Methode in der Java. SQL. parametermetadata-Schnittstelle angegeben.  
   
  Von dieser Methode werden Spaltendezimalstellen abgerufen. Bei Typen ohne Dezimalzeichen wird "0" zurückgegeben.  

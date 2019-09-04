@@ -42,7 +42,7 @@ Null
   
  CLR-Typ: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine NULL- `geometry` -Instanz abgerufen.  

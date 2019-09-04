@@ -49,9 +49,9 @@ Ein ganzzahliger Ausdruck, der einen Monat angibt (von 1 bis 12).
 Ein ganzzahliger Ausdruck, der einen Tag angibt.
   
 ## <a name="return-types"></a>Rückgabetypen
-**Datum**
+**date**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `DATEFROMPARTS` gibt einen **date**-Wert zurück, bei dem die Datumskomponente auf das angegebene Jahr, den Monat und den Tag und die Uhrzeitkomponente auf den Standardwert festgelegt sind. Bei ungültigen Argumenten löst `DATEFROMPARTS` einen Fehler aus. `DATEFROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält.
   
 Diese Funktion kann das Remoting zu [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Servern und höher verarbeiten. Sie kann nicht das Remoting zu Servern einer niedrigeren Version als [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] verarbeiten.

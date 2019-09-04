@@ -46,7 +46,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  Optional. Schließt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ohne Prüfpunkte in allen Datenbanken durchzuführen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird beendet, nachdem versucht wurde, alle Benutzerprozesse zu beenden. Nach einem Neustart des Servers wird ein Rollbackvorgang für alle nicht abgeschlossenen Transaktionen ausgeführt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Option WITHNOWAIT nicht verwendet wird, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durch SHUTDOWN durch folgende Vorgehensweise heruntergefahren:  
   
 1.  Deaktivieren von Anmeldenamen (außer für Mitglieder der festen Serverrollen **sysadmin** und **serveradmin**).  

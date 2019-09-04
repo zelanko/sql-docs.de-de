@@ -45,7 +45,7 @@ public java.lang.String getParameterTypeName(int param)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getparametertypame-Methode wird von der getparametertypame-Methode in der Java. SQL. parametermetadata-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

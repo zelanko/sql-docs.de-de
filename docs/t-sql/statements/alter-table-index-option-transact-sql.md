@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68070226"
 ---
-# <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
+# <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Gruppe von Optionen an, die auf einen Index angewendet werden können, der Teil einer mit [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) erstellten Einschränkungsdefinition ist.  
@@ -270,7 +270,7 @@ BLOCKERS
  Bricht alle Benutzertransaktionen ab, die derzeit **SWITCH** oder den DDL-Vorgang zur Neuerstellung des Onlineindexes blockieren, sodass der Vorgang fortgesetzt werden kann.  
  BLOCKERS erfordert die **ALTER ANY CONNECTION**-Berechtigung.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine vollständige Beschreibung der Indexoptionen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

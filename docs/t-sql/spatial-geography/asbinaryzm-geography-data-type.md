@@ -42,7 +42,7 @@ ms.locfileid: "67948077"
   
  CLR-Rückgabetyp: **SqlBytes**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="examples"></a>Beispiele  
   

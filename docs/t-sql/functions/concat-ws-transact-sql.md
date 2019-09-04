@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68075328"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Diese Funktion gibt eine Zeichenfolge zurück, die das Ergebnis einer End-to-End-Verkettung oder -Verknüpfung von mindestens zwei Zeichenfolgenwerten darstellt. Sie trennt diese verketteten Zeichenfolgenwerte mit dem im ersten Funktionsargument angegebenen Trennzeichen. (`CONCAT_WS` gibt die Anweisung *concatenate with separator* (mit Trennzeichen verketten) an.)
@@ -45,7 +45,7 @@ Ein Ausdruck beliebigen Typs.
 ## <a name="return-types"></a>Rückgabetypen
 Ein Zeichenfolgenwert, dessen Länge und Typ von der Eingabe abhängig sind.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Bemerkungen   
 `CONCAT_WS` lässt eine variable Anzahl von Zeichenfolgenargumenten zu und verkettet (oder verknüpft) sie in einer einzelnen Zeichenfolge. Sie trennt diese verketteten Zeichenfolgenwerte mit dem im ersten Funktionsargument angegebenen Trennzeichen. `CONCAT_WS` erfordert ein Trennzeichen und mindestens zwei weitere Zeichenfolgenwerte als Argumente, andernfalls gibt `CONCAT_WS` einen Fehler aus. Alle Argumente werden von `CONCAT_WS` vor der Verkettung implizit in Zeichenfolgentypen konvertiert. 
 
 Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu Verhaltens- und Datentypkonvertierungen finden Sie unter [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).

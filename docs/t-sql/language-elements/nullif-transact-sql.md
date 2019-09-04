@@ -50,7 +50,7 @@ NULLIF ( expression , expression )
   
  NULLIF gibt den ersten *Ausdruck* zurück, wenn sich die zwei Ausdrücke voneinander unterscheiden. Wenn die Ausdrücke identisch sind, gibt NULLIF einen NULL-Wert mit dem Typ des ersten *Ausdrucks* zurück.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  NULLIF entspricht einem komplexen CASE-Ausdruck, in dem die beiden Ausdrücke gleich sind und der sich ergebende Ausdruck NULL ist.  
   
  Es empfiehlt sich nicht, zeitabhängige Funktionen wie RAND() innerhalb einer NULLIF-Funktion zu verwenden. Dies könnte dazu führen, dass die Funktion zweimal ausgewertet wird und aus den beiden Aufrufen unterschiedliche Ergebnisse zurückgibt.  

@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  Wenn PRIORITY_LEVEL nicht angegeben ist, wird die Eigenschaft für die Prioritätsebene der Konversationspriorität nicht geändert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Keine Eigenschaften, die von ALTER BROKER PRIORITY geändert werden, werden für vorhandene Konversationen übernommen. Die vorhandenen Konversationen werden mit der Priorität fortgesetzt, die beim Starten der Konversationen zugewiesen wurde.  
   
  Weitere Informationen finden Sie unter [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md).  

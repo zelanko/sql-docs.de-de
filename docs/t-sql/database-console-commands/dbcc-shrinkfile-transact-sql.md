@@ -105,7 +105,7 @@ In der folgenden Tabelle sind die Resultsetspalten beschrieben.
 |**UsedPages**|Die Anzahl von 8-KB-Seiten, die derzeit von der Datei verwendet werden.|  
 |**EstimatedPages**|Die Anzahl an 8-KB-Seiten, auf die die Datei wahrscheinlich vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] verkleinert werden kann.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC SHRINKFILE gilt für die Dateien der aktuellen Datenbank. Weitere Informationen zum Ändern der aktuellen Datenbank finden Sie unter [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 Sie können den DBCC SHRINKFILE-Vorgang jederzeit beenden, und alle abgeschlossenen Vorgänge bleiben erhalten. Wenn Sie den Parameter EMPTYFILE verwenden und den Vorgang abbrechen, wird die Datei nicht markiert, um zu verhindern, dass zusätzliche Daten hinzugefügt werden.

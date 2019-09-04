@@ -73,7 +73,7 @@ Ein ganzzahliger literaler Wert, der die Genauigkeit des **datetimeoffset**-Wert
 ## <a name="return-types"></a>Rückgabetypen
 **datetimeoffset(** *Genauigkeit* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 
 `DATETIMEOFFSETFROMPARTS` gibt einen vollständig initialisierten **datetimeoffset**-Datentyp zurück. Die Offsetargumente stellen den Zeitzonenoffset dar. Bei ausgelassenen Offsetargumenten geht `DATETIMEOFFSETFROMPARTS` von einem Zeitzonenoffset von `00:00` (also kein Zeitzonenoffset) aus. Bei angegebenen Offsetargumenten erwartet `DATETIMEOFFSETFROMPARTS` Werte für beide Argumente, und beide Werte müssen entweder positiv oder negativ sein. Wenn *minute_offset* einen Wert und *hour_offset* keinen Wert aufweist, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus. `DATETIMEOFFSETFROMPARTS` löst einen Fehler aus, wenn andere Argumente über ungültige Werte verfügen. Wenn mindestens ein erforderliches Argument über einen `NULL`-Wert verfügt, dann gibt `DATETIMEOFFSETFROMPARTS` `NULL` zurück. Wenn das *precision*-Argument jedoch einen `NULL`-Wert enthält, löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
   

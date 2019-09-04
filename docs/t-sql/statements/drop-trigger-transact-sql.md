@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können einen DML-Trigger entfernen, indem Sie ihn löschen oder die Triggertabelle löschen. Beim Löschen einer Tabelle werden auch alle zugeordneten Trigger gelöscht.  
   
  Wird ein Trigger gelöscht, werden die Informationen zum Trigger aus den Katalogsichten **sys.objects**, **sys.triggers** und **sys.sql_modules** entfernt.  

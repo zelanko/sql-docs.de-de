@@ -145,7 +145,7 @@ FROM Cities;
   
  *column_alias* kann in einer ORDER BY-Klausel verwendet werden. Sie kann jedoch nicht in einer WHERE-, GROUP BY- oder HAVING-Klausel verwendet werden. Falls der Abfrageausdruck Teil einer DECLARE CURSOR-Anweisung ist, kann *column_alias* nicht in der FOR UPDATE-Klausel verwendet werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Als Länge für die in der Auswahlliste enthaltenen Spalten vom Typ **text** oder **ntext** wird jeweils die kleinste der folgenden Größen zurückgegeben: die tatsächliche Größe der **text**-Spalte, die Standardeinstellung für TEXTSIZE für die Sitzung oder die im Code der Anwendung festgelegte Größenbeschränkung. Sie können die Länge des zurückgegebenen Texts für eine Sitzung mit der SET-Anweisung ändern. Standardmäßig ist die Länge von Textdaten, die mit einer SELECT-Anweisung zurückgegeben werden, auf 4.000 Byte begrenzt.  
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] löst die Ausnahme 511 aus und führt einen Rollback für die derzeit ausgeführte Anweisung aus, wenn eine der folgenden Situationen auftritt:  

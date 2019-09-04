@@ -32,7 +32,7 @@ bool PDO::commit();
 ## <a name="return-value"></a>Rückgabewert  
 „true“, bei erfolgreichem Aufruf der Methode; andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 PDO::commit ist nicht betroffen von dem Wert des PDO::ATTR_AUTOCOMMIT (und hat keinen Einfluss auf diesen).  
   
 Ein Beispiel, das PDO::commit verwendet, finden Sie unter [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) .  

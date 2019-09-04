@@ -27,7 +27,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68040130"
 ---
-# <a name="certid-transact-sql"></a>CERT_ID (Transact-SQL)
+# <a name="cert_id-transact-sql"></a>CERT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Diese Funktion gibt den ID-Wert eines Zertifikats zurück.
@@ -48,7 +48,7 @@ Der Name des Zertifikats in der Datenbank.
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Zertifikatsnamen werden in der Katalogsicht [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) angezeigt.
   
 ## <a name="permissions"></a>Berechtigungen  

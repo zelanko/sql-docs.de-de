@@ -70,7 +70,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getCrossReference-Methode wird von der getCrossReference-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
  Das von der getCrossReference-Methode zurückgegebene Resultset enthält die folgenden Informationen:  

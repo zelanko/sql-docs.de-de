@@ -39,7 +39,7 @@ Der Typ einer **geometry**-Instanz ist NULL. Gibt 0 zurück, wenn die Instanz ni
   
  CLR-Typ: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  `IsNull` kann verwendet werden, um zu überprüfen, ob eine **geometry**-Instanz NULL ist. `IsNull` gibt 0 zurück, wenn die Instanz nicht NULL ist, gibt aber Null zurück, wenn die Instanz NULL ist.  
   
  Diese Methode wird in erster Linie von der SQL Server-Infrastruktur verwendet. Es wird nicht empfohlen, mit `IsNull` zu prüfen, ob eine Instanz NULL ist.  

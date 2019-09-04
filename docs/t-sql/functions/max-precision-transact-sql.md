@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68130319"
 ---
-# <a name="x40x40maxprecision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
+# <a name="x40x40max_precision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den von den Datentypen **decimal** und **numeric** verwendeten Genauigkeitsgrad zurück, der zurzeit auf dem Server festgelegt ist.  
@@ -45,7 +45,7 @@ ms.locfileid: "68130319"
 ## <a name="return-types"></a>Rückgabetypen  
  **tinyint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Standardmäßig gibt die maximale Genauigkeit 38 zurück.  
   
 ## <a name="examples"></a>Beispiele  

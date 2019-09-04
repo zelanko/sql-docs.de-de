@@ -50,7 +50,7 @@ ms.locfileid: "68034543"
 |**Übergeordnetes Element**|[DTAInput-Element &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)|  
 |**Untergeordnete Elemente**|[Name-Element für Server &#40;DTA&#41;](../../tools/dta/name-element-for-server-dta.md)<br /><br /> [Database-Element für Server &#40;DTA&#41;](../../tools/dta/database-element-for-server-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können nur ein **Server** -Element für das **DTAInput** -Element angeben. Dieses Element hat im DTA-XML-Schema den Namen **ServerDetailsTypecomplexType** . Dieses **Server** -Element ist nicht mit dem untergeordneten Element für das **Configuration** -Element identisch. Weitere Informationen finden Sie unter [Server-Element für Konfiguration &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Beispiel  

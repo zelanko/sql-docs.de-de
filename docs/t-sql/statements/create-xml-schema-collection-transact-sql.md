@@ -56,7 +56,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *Ausdruck*  
  Eine Zeichenfolgenkonstante oder eine skalare Variable. Ist vom Typ **Varchar**, **Varbinary**, **Nvarchar** oder **xml**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mithilfe von [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) können Sie der Collection auch neue Namespaces bzw. vorhandenen Namespaces in der Auflistung auch neue Komponenten hinzufügen.  
   
  Informationen zum Entfernen von Collections finden Sie unter [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  

@@ -49,7 +49,7 @@ text_of_comment
  *text_of_comment*  
  Bezeichnet den Text des Kommentars. Dieser besteht aus einer oder mehreren Zeichenfolgen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Kommentare können sowohl in einer gesonderten Zeile als auch innerhalb einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung eingefügt werden. Kommentare, die sich über mehrere Zeilen erstrecken, müssen in /* und \*/ eingeschlossen sein. Oft werden diese mehrzeiligen Kommentare folgendermaßen gekennzeichnet: Die erste Zeile beginnt mit /\*, die nachfolgenden Zeilen mit \*\*, und die letzte Zeile endet mit \*/.  
   
  Es gibt keine Maximallänge für Kommentare.  

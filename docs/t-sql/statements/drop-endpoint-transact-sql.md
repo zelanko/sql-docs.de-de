@@ -46,7 +46,7 @@ DROP ENDPOINT endPointName
  *endPointName*  
  Der Name des Endpunkts, der entfernt werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  ENDPOINT DDL-Anweisungen können nicht innerhalb einer Benutzertransaktion ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

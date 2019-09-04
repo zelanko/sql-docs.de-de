@@ -97,7 +97,7 @@ SERVERPROPERTY ( 'propertyname' )
 ## <a name="return-types"></a>Rückgabetypen  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ### <a name="servername-property"></a>ServerName-Eigenschaft  
  Die `ServerName`-Eigenschaft der `SERVERPROPERTY`-Funktion und [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) geben ähnliche Informationen zurück. Die `ServerName`-Eigenschaft stellt den Namen des Windows-Servers und den Instanznamen bereit, die zusammen die eindeutige Serverinstanz bezeichnen. [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) stellt den aktuell konfigurierten lokalen Servernamen bereit.  

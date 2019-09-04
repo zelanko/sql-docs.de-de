@@ -43,7 +43,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Gibt den Namen der zu entfernenden Konversationspriorität an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie eine Konversationspriorität löschen, werden vorhandene Konversationen mit den Prioritätsebenen fortgesetzt, die von der Konversationspriorität zugewiesen wurden.  
   
 ## <a name="permissions"></a>Berechtigungen  

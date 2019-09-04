@@ -58,7 +58,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
  ASYMMETRIC KEY *Asym_key_name*  
  Der Name eines asymmetrischen Schlüssels, mit dem die gespeicherte Prozedur, die Funktion, die Assembly oder der Trigger signiert wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zu Signaturen werden in der sys.crypt_properties-Katalogsicht angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

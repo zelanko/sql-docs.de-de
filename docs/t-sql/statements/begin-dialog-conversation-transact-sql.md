@@ -106,7 +106,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Nachrichten, die mit Diensten in derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgetauscht werden, sind nie verschlüsselt. Jedoch sind ein Hauptschlüssel für die Datenbank und die Zertifikate für die Verschlüsselung für diejenigen Konversationen mit Verschlüsselung erforderlich, bei denen sich die Dienste für die Konversation auf verschiedenen Datenbanken befinden. Damit kann die Konversation auch dann fortgesetzt werden, wenn während der Ausführung der Konversation eine der Datenbanken auf eine andere Instanz verschoben wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Alle Nachrichten sind Teil einer Konversation. Deshalb muss ein initialisierender Dienst eine Konversation mit dem Zieldienst beginnen, bevor eine Nachricht an den Zieldienst gesandt wird. Die in der BEGIN DIALOG CONVERSATION-Anweisung angegebenen Informationen sind mit der Adresse auf einem Brief vergleichbar; [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet diese Informationen, um Nachrichten an den richtigen Dienst zu übermitteln. Der Dienst, der in der TO SERVICE-Klausel angegeben wird, ist die Adresse, an die die Nachrichten gesandt werden. Der Dienst, der in der FROM SERVICE-Klausel angegeben wird, ist die Rückadresse für Antwortnachrichten.  
   
  Das Ziel einer Konversation muss nicht BEGIN DIALOG CONVERSATION aufrufen. [!INCLUDE[ssSB](../../includes/sssb-md.md)] erstellt eine Konversation in der Zieldatenbank, wenn die erste Nachricht in der Konversation vom Initiator eintrifft.  

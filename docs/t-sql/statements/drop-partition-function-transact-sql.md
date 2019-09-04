@@ -46,7 +46,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
  *partition_function_name*  
  Der Name der Partitionsfunktion, die gelöscht werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Das Löschen einer Partitionsfunktion ist nur möglich, wenn sie zum Zeitpunkt des Löschens von keinem Partitionsschema verwendet wird. Wenn Partitionsschemas vorhanden sind, die die Partitionsfunktion verwenden, gibt DROP PARTITION FUNCTION einen Fehler zurück.  
   
 ## <a name="permissions"></a>Berechtigungen  

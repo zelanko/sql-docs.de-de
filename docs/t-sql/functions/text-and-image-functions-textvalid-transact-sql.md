@@ -59,7 +59,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gibt 1 zurück, wenn der Zeiger gültig ist, oder 0, wenn er ungültig ist. Beachten Sie, dass der Bezeichner für die **text**-Spalte auch den Tabellennamen enthalten muss. Sie können UPDATETEXT, WRITETEXT oder READTEXT nicht ohne einen gültigen Textzeiger verwenden.  
   
  Die folgenden Funktionen und Anweisungen sind auch bei Daten vom Typ **text**, **ntext** oder **image** hilfreich.  

@@ -29,7 +29,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68098704"
 ---
-# <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
+# <a name="type_name-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den nicht qualifizierten Typnamen einer angegebenen Typ-ID zurück.  
@@ -54,10 +54,10 @@ TYPE_NAME ( type_id )
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten sicherungsfähiger Elemente anzeigen, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Dies bedeutet, dass Metadaten ausgebende integrierte Funktionen, z. B. TYPE_NAME, möglicherweise NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  TYPE_NAME gibt NULL zurück, wenn *type_id* ungültig ist oder der Aufrufer nicht über die erforderlichen Berechtigungen zum Verweisen auf den Typ verfügt.  
   
- TYPE_NAME funktioniert sowohl für Systemdatentypen als auch für benutzerdefinierte Datentypen. Der Typ kann in einem beliebigen Schema enthalten sein, aber ein nicht qualifizierter Typname wird immer zurückgegeben. Dies bedeutet, dass der Name nicht über das _schema_**.**-Präfix verfügt .  
+ TYPE_NAME funktioniert sowohl für Systemdatentypen als auch für benutzerdefinierte Datentypen. Der Typ kann in einem beliebigen Schema enthalten sein, aber ein nicht qualifizierter Typname wird immer zurückgegeben. Dies bedeutet, dass der Name nicht über das _schema_ **.** -Präfix verfügt .  
   
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) und [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   

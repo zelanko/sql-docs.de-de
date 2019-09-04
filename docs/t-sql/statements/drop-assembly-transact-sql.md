@@ -56,7 +56,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  WITH NO DEPENDENTS  
  Wird dieser Wert angegeben, wird nur *assembly_name* gelöscht, jedoch keine der abhängigen Assemblys, auf die die Assembly verweist. Wenn kein Wert angegeben wird, löscht DROP ASSEMBLY *assembly_name* sowie alle abhängigen Assemblys.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Durch Löschen einer Assembly werden die Assembly sowie alle zugehörigen Dateien, wie Quellcode und Debugdateien, aus der Datenbank entfernt.  
   
  Wenn WITH NO DEPENDENTS nicht angegeben wird, löscht DROP ASSEMBLY *assembly_name* sowie alle abhängigen Assemblys. Schlägt der Versuch fehl, alle abhängigen Assemblys zu löschen, gibt DROP ASSEMBLY einen Fehler zurück.  

@@ -50,7 +50,7 @@ srvproc
 ## <a name="returns"></a>Rückgabewert  
  Die Nummernkomponente für die derzeit remote gespeicherte Prozedur. Wenn der Client beim Ausführen der remote gespeicherten Prozedur keine Nummernkomponente verwendet oder wenn derzeit keine remote gespeicherte Prozedur vorhanden ist, wird -1 zurückgegegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion gibt nur die Nummernkomponente der remote gespeicherten Prozedur zurück. Sie schließt die optionalen Spezifizierer für den Besitzer, den remote gespeicherten Prozedurnamen und den Datenbanknamen nicht ein.  
   
 > [!IMPORTANT]  

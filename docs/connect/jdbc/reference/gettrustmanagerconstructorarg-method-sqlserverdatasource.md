@@ -37,7 +37,7 @@ public java.lang.String getTrustManagerConstructorArg()
 ## <a name="return-value"></a>Rückgabewert  
  Eine **Zeichenfolge** , die den Wert der Trust managerconstructor arg-Verbindungs Eigenschaft enthält, oder NULL, wenn kein Wert festgelegt ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die trustmanagerclass-Eigenschaft nicht festgelegt ist, gibt die [gettrustmanagerconstructorarg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md) -Methode NULL zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  

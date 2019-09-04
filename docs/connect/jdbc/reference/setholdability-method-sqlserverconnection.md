@@ -46,7 +46,7 @@ public void setHoldability(int nNewHold)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode wird von der Methode "Methode" in der Schnittstelle "java. SQL. Connection" durch die Methode "" festgelegt.  
   
 ## <a name="see-also"></a>Weitere Informationen  

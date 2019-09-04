@@ -41,7 +41,7 @@ ms.locfileid: "68042387"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gibt eine **LineString** -Instanz für eine **CircularString** - oder **CompoundCurve** -Instanz zurück.  
   
  Gibt eine **Polygon** -Instanz für eine **CurvePolygon** -Instanz zurück.  

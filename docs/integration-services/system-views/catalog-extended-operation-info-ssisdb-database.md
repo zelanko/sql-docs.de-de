@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032484"
 ---
-# <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info (SSISDB-Datenbank)
+# <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -37,7 +37,7 @@ ms.locfileid: "68032484"
 |start_time|**datetimeoffset(7)**|Datum und Uhrzeit für das Starten des Vorgangs.|  
 |end_time|**datetimeoffset(7)**|Datum und Uhrzeit für das Beenden des Vorgangs.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein einzelner Vorgang kann über mehrere Zeilen mit erweiterten Informationen verfügen.  
   
 ## <a name="permissions"></a>Berechtigungen  

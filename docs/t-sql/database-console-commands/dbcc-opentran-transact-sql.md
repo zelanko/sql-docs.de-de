@@ -64,7 +64,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Alle Informationsmeldungen werden unterdrückt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie DBCC OPENTRAN, um zu ermitteln, ob eine offene Transaktion innerhalb des Transaktionsprotokolls vorhanden ist. Wenn Sie die BACKUP LOG-Anweisung verwenden, kann nur der inaktive Teil des Protokolls abgeschnitten werden. Eine offene Transaktion kann verhindern, dass das Protokoll vollständig abgeschnitten wird. Zum Identifizieren einer geöffneten Transaktion können Sie mit sp_who die Systemprozess-ID abrufen.
   
 ## <a name="result-sets"></a>Resultsets  

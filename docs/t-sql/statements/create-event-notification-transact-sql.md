@@ -100,7 +100,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] beinhaltet einen speziellen Nachrichtentyp und Vertrag für Ereignisbenachrichtigungen. Es muss also kein initiierender Dienst für Service Broker erstellt werden; dieser ist bereits vorhanden und gibt den folgenden Vertragsnamen an: `https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  Der Zieldienst, der Ereignisbenachrichtigungen empfängt, muss diesen bereits vorhandenen Vertrag berücksichtigen.  

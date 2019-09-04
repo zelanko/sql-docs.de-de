@@ -66,7 +66,7 @@ Das Leistungsdashboard wird als neue Registerkarte angezeigt. Im folgenden Beisp
   
 ![Hauptbildschirm des Leistungsdashboards](../../relational-databases/performance/media/perf_dashboard.png "Hauptbildschirm des Leistungsdashboards")  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Der Bericht **Fehlende Indizes** zeigt möglicherweise fehlende Indizes an, die der Abfrageoptimierer während der Abfragekompilierung identifiziert hat. Sie müssen jedoch nicht allen Empfehlungen die gleiche Beachtung schenken. Microsoft empfiehlt, die Indizes mit einem höheren Ergebnis als 100.000 für die Erstellung auszuwerten, da bei diesen die meisten Verbesserungen für Benutzerabfragen zu erwarten sind. 
 
 > [!TIP]

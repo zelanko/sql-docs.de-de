@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Trigger werden beim Erstellen standardmäßig aktiviert. Durch das Deaktivieren wird ein Trigger nicht gelöscht. Der Trigger ist weiterhin als Objekt in der aktuellen Datenbank vorhanden. Der Trigger wird jedoch bei der Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht ausgelöst, für die er programmiert wurde. Trigger können mithilfe von [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) erneut aktiviert werden. Für Tabellen definierte DML-Trigger können auch mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) deaktiviert oder aktiviert werden.  
   
  Das Ändern des Triggers durch Verwendung der **ALTER TRIGGER**-Anweisung aktiviert den Trigger.  

@@ -67,7 +67,7 @@ Entfernt den angegebenen Serverprinzipal aus der Serverrolle. *server_principal*
 WITH NAME **=** _new_server_role_name_  
 Gibt den neuen Namen der benutzerdefinierten Serverrolle an. Dieser Name darf nicht bereits auf dem Server vorhanden sein.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Durch das Ändern des Namens einer benutzerdefinierten Serverrolle werden die ID-Nummer, der Besitzer oder Berechtigungen der Rolle nicht geändert.  
   
 `ALTER SERVER ROLE` ändert die Rollenmitgliedschaft durch Ersetzen von sp_addsrvrolemember und sp_dropsrvrolemember. Diese gespeicherten Prozeduren sind veraltet.  

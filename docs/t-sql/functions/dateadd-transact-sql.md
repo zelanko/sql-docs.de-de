@@ -74,10 +74,10 @@ Der Teil des *date*-Werts, zu dem `DATEADD` einen **ganzzahligen** *number*-Wert
 *number*  
 Ein Ausdruck, der in einen [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)-Wert aufgelöst werden kann, den `DATEADD` zu einem *datepart*-Argument von *date* hinzufügt. `DATEADD` akzeptiert für *number* benutzerdefinierte Variablenwerte. `DATEADD` schneidet einen angegebenen *number*-Wert ab, wenn dieser einen Dezimalbruch aufweist. In diesem Fall wird der *number*-Wert nicht gerundet.
   
-*Datum*  
+*date*  
 Ein Ausdruck, der in einen der folgenden Werte aufgelöst werden kann: 
 
-+ **Datum**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 
@@ -95,7 +95,7 @@ Der Datentyp des Rückgabewerts für diese Methode ist dynamisch. Der Rückgabet
 ## <a name="datepart-argument"></a>datepart-Argument  
 **dayofyear**, **day** und **weekday** geben den gleichen Wert zurück.
   
-Jedes *datepart*-Argument und die zugehörigen Abkürzungen geben den gleichen Wert zurück.
+Jedes *datepart*-Argument und die jeweils zugehörigen Abkürzungen geben den gleichen Wert zurück.
   
 Wenn Folgendes zutrifft:
 
@@ -134,7 +134,7 @@ Die Sekundenangabe eines [smalldatetime](../../t-sql/data-types/smalldatetime-tr
 -   Bei dem *datepart*-Wert **millisecond** und einem *number*-Wert zwischen -30001 und +29998 nimmt `DATEADD` keine Änderungen vor.  
 -   Bei dem *datepart*-Wert **millisecond** und einem *number*-Wert, der niedriger als -30001 oder höher als +29998 ist, beginnt `DATEADD` bei einer Minute mit der Hinzufügung.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie `DATEADD` in den folgenden Klauseln:
 
 + GROUP BY

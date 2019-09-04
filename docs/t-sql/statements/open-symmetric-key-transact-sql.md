@@ -67,7 +67,7 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
  PASSWORD ='*password*'  
  Das Kennwort, mit dem der symmetrische Schlüssel geschützt wurde.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Geöffnete symmetrische Schlüssel werden an die Sitzung gebunden und nicht an den Sicherheitskontext. Ein geöffneter Schlüssel ist weiterhin verfügbar, bis er entweder explizit geschlossen oder die Sitzung beendet wird. Wenn Sie einen symmetrischen Schlüssel öffnen und dann den Kontext wechseln, bleibt der Schlüssel geöffnet und in dem durch Identitätswechsel übernommenen Kontext verfügbar. Informationen zu offenen symmetrischen Schlüsseln werden in der Katalogsicht [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md) angezeigt.  
   
  Falls der symmetrische Schlüssel mit einem anderen Schlüssel verschlüsselt wurde, muss zuerst dieser Schlüssel geöffnet werden.  

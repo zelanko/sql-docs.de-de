@@ -135,7 +135,7 @@ Erzwingt, dass die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion
  Entweder eine ANSI- oder Unicode-Zeichenfolge, die vom Prädikatvergleich verlangt wird. Für die Prädikatvergleichsfunktionen wird keine implizite Zeichenfolgentypkonvertierung ausgeführt. Die Übergabe des falschen Typs führt zu einem Fehler.  
  **Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen mindestens eine der Klauseln TO, WITH oder MODIFY NAME angeben, wann Sie ALTER AUDIT aufrufen.  
   
  Sie müssen den Status einer Überwachung auf OFF festlegen, um Änderungen an der Überwachung vornehmen zu können. Wenn ALTER AUDIT ausgeführt wird, während eine Überwachung mit einer anderen Option als STATE=OFF aktiviert ist, erhalten Sie die Fehlermeldung MSG_NEED_AUDIT_DISABLED.  

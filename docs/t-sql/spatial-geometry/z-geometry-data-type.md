@@ -41,7 +41,7 @@ Der Z-Wert (Höhe) der Instanz. Die Semantik des Höhenwerts ist benutzerdefinie
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert dieser Eigenschaft ist NULL, wenn die geometry-Instanz kein Punkt ist. Sie ist außerdem NULL für jede **Point** -Instanz, für die sie nicht festgelegt ist.  
   
  Diese Eigenschaft ist schreibgeschützt.  

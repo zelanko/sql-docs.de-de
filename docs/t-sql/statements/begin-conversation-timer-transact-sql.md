@@ -62,7 +62,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  Gibt die Zeitdauer in Sekunden an, die gewartet wird, bevor die Nachricht in der Warteschlange platziert wird.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mithilfe eines Konversationszeitgebers kann eine Anwendung nach einem bestimmten Zeitraum eine Nachricht zu einer Konversation empfangen. Wird BEGIN CONVERSATION TIMER für eine Konversation vor Ablauf des Zeitgebers aufgerufen, wird das Timeout auf den neuen Wert festgelegt. Anders als bei der Lebensdauer der Konversation verfügt jede Seite der Konversation über einen unabhängigen Konversationszeitgeber. Die **DialogTimer**-Nachricht kommt in der lokalen Warteschlange an, ohne dass dies Auswirkungen auf die Remoteseite der Konversation hat. Daher kann eine Zeitgebernachricht zu jedem beliebigen Zweck von einer Anwendung verwendet werden.  
   
  Sie können z. B. mithilfe des Konversationszeitgebers verhindern, dass eine Anwendung zu lang auf eine überfällige Antwort wartet. Wenn die Anwendung einen Dialog innerhalb von 30 Sekunden beenden soll, können Sie den Konversationszeitgeber für diesen Dialog auf 60 Sekunden festlegen (30 Sekunden plus einem Zeitraum von 30 Sekunden als Puffer). Falls der Dialog nach 60 Sekunden immer noch geöffnet ist, empfängt die Anwendung eine Timeoutnachricht in der Warteschlange für diesen Dialog.  

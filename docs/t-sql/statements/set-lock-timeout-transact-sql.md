@@ -32,7 +32,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67928908"
 ---
-# <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
+# <a name="set-lock_timeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt an, wie viele Millisekunden eine Anweisung auf die Aufhebung einer Sperre wartet.  
@@ -51,7 +51,7 @@ SET LOCK_TIMEOUT timeout_period
   
  Wenn die Wartezeit auf eine Sperre den Timeoutwert überschreitet, wird ein Fehler zurückgegeben. Der Wert 0 gibt an, dass nicht gewartet und eine Meldung zurückgegeben wird, sobald eine Sperre auftritt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Zu Beginn einer Verbindung besitzt diese Einstellung den Wert -1. Nach einer Änderung bleibt die neue Einstellung für die restliche Verbindungsdauer bestehen.  
   
  Die Einstellung von SET LOCK_TIMEOUT wird zur Ausführungszeit und nicht zur Analysezeit festgelegt.  

@@ -56,7 +56,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  Die zu entfernende Regel. Regelnamen müssen den Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen. Das Angeben des Regelschemanamens ist optional.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Um eine Regel zu löschen, müssen Sie zuerst eine möglicherweise vorhandene Bindung an eine Spalte oder einen Aliasdatentyp aufheben. Verwenden Sie **sp_unbindrule**, um die Bindung der Regel aufzuheben. Wenn beim Löschen einer Regel noch eine Bindung besteht, wird eine Fehlermeldung angezeigt, und die DROP RULE-Anweisung wird abgebrochen.  
   
  Nach dem Löschen einer Regel werden auf neue Daten, die Sie in die betreffenden Spalten eingeben, die früheren Einschränkungen der gelöschten Regel nicht mehr angewendet. Dies wirkt sich nicht auf bereits vorhandene Daten aus.  

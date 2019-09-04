@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67985301"
 ---
-# <a name="catalogsetcustomizedlogginglevelvalue"></a>catalog.set_customized_logging_level_value 
+# <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -52,7 +52,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  Das Argument *property_value* ist vom Typ **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  

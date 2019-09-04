@@ -44,7 +44,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getBinaryStream-Methode wird von der getBinaryStream-Methode in der Java. SQL. BLOB-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

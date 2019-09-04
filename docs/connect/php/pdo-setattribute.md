@@ -36,7 +36,7 @@ bool PDO::setAttribute ( $attribute, $value );
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 |attribute|Verarbeitet von|Unterstützte Werte|und Beschreibung|  
 |-------------|----------------|--------------------|---------------|  

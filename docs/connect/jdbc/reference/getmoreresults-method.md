@@ -40,7 +40,7 @@ public final boolean getMoreResults()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getMoreResults-Methode wird von der getMoreResults-Methode in der Java. SQL. Statement-Schnittstelle angegeben.  
   
  Durch den Aufruf der getMoreResults-Methode werden alle momentan geöffneten Resultsetobjekte geschlossen, die mit der [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md)-Methode abgerufen werden.  

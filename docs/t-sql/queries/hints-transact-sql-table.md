@@ -354,7 +354,7 @@ Bei Angabe von UPDLOCK werden die Isolationsstufenhinweise READCOMMITTED und REA
 XLOCK  
 Gibt an, dass exklusive Sperren zu verwenden und aufrechtzuerhalten sind, bis die Transaktion abgeschlossen ist. Wenn die exklusiven Sperren mit ROWLOCK, PAGLOCK oder TABLOCK angegeben werden, werden sie auf die entsprechende Ebene der Granularität angewendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Tabellenhinweise werden ignoriert, wenn der Abfrageplan nicht auf die Tabelle zugreift. Dies ist möglicherweise darauf zurückzuführen, dass der Optimierer überhaupt nicht auf die Tabelle oder stattdessen auf eine indizierte Sicht zugreift. In letzterem Fall kann der Zugriff auf eine indizierte Sicht verhindert werden, indem der Abfragehinweis OPTION (EXPAND VIEWS) verwendet wird.  
   
 Alle Sperrhinweise werden an alle Tabellen und Sichten weitergeleitet, auf die der Abfrageplan zugreift, auch an Tabellen und Sichten, auf die in einer Sicht verwiesen wird. Zusätzlich nimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die entsprechenden Sperrkonsistenzprüfungen vor.  

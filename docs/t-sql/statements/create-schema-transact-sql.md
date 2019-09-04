@@ -87,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Gibt eine DENY-Anweisung an, die Berechtigungen für jedes sicherungsfähige Element außer dem neuen Schema verweigert.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!NOTE]  
 >  Anweisungen, die CREATE SCHEMA AUTHORIZATION enthalten, aber keinen Namen angeben, sind nur aus Gründen der Abwärtskompatibilität zulässig. Die Anweisung verursacht zwar keinen Fehler, erstellt aber auch kein Schema.  

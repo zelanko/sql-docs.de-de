@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571951"
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance-Methoden: GetReportServerUrls
+# <a name="msreportserver_instance-methods---getreportserverurls"></a>MSReportServer_Instance-Methoden: GetReportServerUrls
   Gibt eine Liste von URLs zurück, über die Benutzer auf den Berichtsserver und den [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]zugreifen können.  
   
 ## <a name="syntax"></a>Syntax  
@@ -47,7 +47,7 @@ public void GetReportServerUrls(out string[] applicationName,
   
 ## <a name="return-values"></a>Rückgabewerte  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Von WMI-Verwaltungsobjekten verfügbar gemachte Methoden werden durch die InvokeMethod-Funktion aufgerufen. Weitere Informationen finden Sie in "Ausführen von Methoden für Verwaltungsobjekte" in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework WMI-Dokumentation.  
   
 ## <a name="requirements"></a>Anforderungen  

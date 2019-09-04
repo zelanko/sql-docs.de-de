@@ -26,7 +26,7 @@ ms.locfileid: "68125945"
 
 Ein Datentyp für Variablen oder für OUTPUT-Parameter von gespeicherten Prozeduren, die einen Verweis auf einen Cursor enthalten.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Folgende Vorgänge können auf Variablen und Parameter vom Datentyp **cursor** verweisen:
 -   Die Anweisungen DECLARE *@local_variable* und SET *@local_variable* .  
 -   Die Cursoranweisungen OPEN, FETCH, CLOSE und DEALLOCATE.  

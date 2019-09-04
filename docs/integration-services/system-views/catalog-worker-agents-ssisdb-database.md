@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67997786"
 ---
-# <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (SSISDB-Datenbank)
+# <a name="catalogworker_agents-ssisdb-database"></a>catalog.worker_agents (SSISDB-Datenbank)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -37,7 +37,7 @@ Zeigt die Informationen für den [!INCLUDE[ssISnoversion](../../includes/ssisnov
 |UserAccount|**nvarchar(256)**|Das Benutzerkonto, unter dem der Dienst für den Scale Out-Worker ausgeführt wird.|
 |LastOnlineTime|**datetimeoffset(7)**|Der letzte Zeitpunkt, zu dem der Scale Out-Worker online war.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 In dieser Ansicht wird eine Zeile für jeden Scale Out-Worker angezeigt, der eine Verbindung mit dem Scale Out-Master herstellt, der mit dem SSISDB-Katalog zusammenarbeitet.
 
 ## <a name="permissions"></a>Berechtigungen

@@ -41,7 +41,7 @@ LEFT(character_expression,number)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *number* größer ist als die Länge von *character_expression*, gibt die Funktion *character_expression*zurück.  
   
  Falls *number* gleich Null ist, gibt die Funktion eine leere Zeichenfolge zurück.  

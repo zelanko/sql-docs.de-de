@@ -41,7 +41,7 @@ Diese Funkion gibt den aktuellen Wert vom Datentyp **timestamp** für die aktuel
 ## <a name="return-types"></a>Rückgabetypen
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 @@DBTS gibt den zuletzt verwendeten Timestampwert der aktuellen Datenbank zurück. Ein neuer Timestampwert wird generiert, wenn eine Zeile mit einer **timestamp**-Spalte eingefügt oder aktualisiert wird.
   
 Die Funktion @@DBTS ist nicht von Änderungen der Transaktionsisolationsstufen betroffen.

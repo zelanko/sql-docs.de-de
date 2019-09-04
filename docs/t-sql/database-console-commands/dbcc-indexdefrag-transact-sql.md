@@ -70,7 +70,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Unterdrückt alle Informationsmeldungen mit einem Schweregrad von 0 bis 10.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 DBCC INDEXDEFRAG defragmentiert die Blattebene eines Indexes, sodass die physische Reihenfolge der Seiten mit der logischen Reihenfolge (von links nach rechts) der Blattknoten übereinstimmt. Dadurch wird die Leistung beim Durchsuchen des Indexes verbessert.
   
 > [!NOTE]  

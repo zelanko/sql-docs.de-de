@@ -35,7 +35,7 @@ ms.locfileid: "67971155"
 public final class SQLServerException  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die SQLServerException-Klasse behandelt sowohl SQL 92-als auch XOPEN-Statuscodes. Diese verwenden eine vom Benutzer angegebene Verbindungseigenschaft und sind daher wechselbar. Ausnahmen werden in die angegebenen offenen Protokolldateien geschrieben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

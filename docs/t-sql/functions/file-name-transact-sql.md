@@ -32,7 +32,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68071491"
 ---
-# <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
+# <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Diese Funktion gibt den logischen Dateinamen für die angegebene Datei-ID zurück.  
@@ -52,7 +52,7 @@ Die Datei-ID, deren Dateiname `FILE_NAME` zurückgegeben wird. *file_id* weist d
 ## <a name="return-types"></a>Rückgabetypen  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 *file_ID* entspricht der „file_id“-Spalte in der Katalogsicht „sys.master_files“ oder in der Katalogsicht „sys.database_files“.  
   
 ## <a name="examples"></a>Beispiele  

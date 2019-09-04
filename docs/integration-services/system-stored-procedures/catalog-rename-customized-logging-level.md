@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68007237"
 ---
-# <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level 
+# <a name="catalogrename_customized_logging_level"></a>catalog.rename_customized_logging_level 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -44,7 +44,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
   
  Der *new_name* ist **nvarchar(128)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="return-codes"></a>Rückgabecodes  
  0 (Erfolg)  

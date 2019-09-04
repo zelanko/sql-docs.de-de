@@ -51,7 +51,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die SET ARITHIGNORE-Einstellung steuert lediglich, ob eine Fehlermeldung zurückgegeben wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt unabhängig von dieser Einstellung in einer Berechnung NULL zurück, wenn ein Überlauf- oder Division-durch-0-Fehler auftritt. Mithilfe der SET ARITHABORT-Einstellung kann bestimmt werden, ob die Abfrage beendet wird. Diese Einstellung wirkt sich nicht auf Fehler aus, die im Verlauf von INSERT-, UPDATE- und DELETE-Anweisungen auftreten.  
   
  Auch wenn SET ARITHABORT oder SET ARITHIGNORE auf OFF und SET ANSI_WARNINGS auf ON festgelegt sind, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Fehlermeldung zurück, wenn ein Fehler aufgrund einer Division durch Null oder ein Überlauffehler auftritt.  

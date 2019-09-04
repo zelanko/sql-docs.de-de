@@ -51,7 +51,7 @@ public int isNullable(int param)
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese IsNullable-Methode wird von der IsNullable-Methode in der Java. SQL. parametermetadata-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -37,7 +37,7 @@ public java.io.PrintWriter getLogWriter()
 ## <a name="return-value"></a>Rückgabewert  
  Ein PrintWriter-Objekt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getlogwriter-Methode wird von der getlogwriter-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -111,7 +111,7 @@ Gibt die maximalen E/A-Vorgänge pro Sekunde (IOPS) pro Datenträgervolume an, d
   
 Wenn `MAX_IOPS_PER_VOLUME` für einen Pool auf den Wert 0 festgelegt ist, wird der Pool überhaupt nicht kontrolliert und kann alle IOPS im System annehmen, selbst wenn für andere Pools MIN_IOPS_PER_VOLUME festgelegt ist. Für diesen Fall wird empfohlen, dass Sie den `MAX_IOPS_PER_VOLUME`-Wert für diesen Pool auf eine höhere Zahl festlegen (z. B. auf den Maximalwert 2^31-1), wenn E/A-Vorgänge für diesen Pool kontrolliert werden sollen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `MIN_IOPS_PER_VOLUME` und `MAX_IOPS_PER_VOLUME` geben das Minimum und das Maximum für Lese- und Schreibvorgänge pro Sekunde an. Die Lese- und Schreibvorgänge können eine beliebige Größe haben und geben daher keinen Aufschluss über den minimalen bzw. maximalen Durchsatz.  
   
 Die Werte für `MAX_CPU_PERCENT` und `MAX_MEMORY_PERCENT` müssen größer als oder gleich den Werten für `MIN_CPU_PERCENT` bzw. `MIN_MEMORY_PERCENT` sein.  
@@ -135,7 +135,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### <a name="2-set-the-capcpupercent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. CAP_CPU_PERCENT auf eine feste Obergrenze festlegen und AFFINITY SCHEDULER festlegen
+### <a name="2-set-the-cap_cpu_percent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. CAP_CPU_PERCENT auf eine feste Obergrenze festlegen und AFFINITY SCHEDULER festlegen
 
 Legen Sie die CAP_CPU_PERCENT auf eine feste Obergrenze von 30 % fest, und legen Sie AFFINITY SCHEDULER auf einen Bereich von 0 bis 63, 128 bis 191 fest. 
   
@@ -153,7 +153,7 @@ WITH (
       );  
 ```  
   
-### <a name="3-set-miniopspervolume-and-maxiopspervolume"></a>3. MIN_IOPS_PER_VOLUME und MAX_IOPS_PER_VOLUME festlegen   
+### <a name="3-set-min_iops_per_volume-and-max_iops_per_volume"></a>3. MIN_IOPS_PER_VOLUME und MAX_IOPS_PER_VOLUME festlegen   
 
 Legen Sie MIN_IOPS_PER_VOLUME auf 20 und MAX_IOPS_PER_VOLUME auf 100 fest. Diese Werte bestimmen die physischen E/A-Lese- und Schreibvorgänge, die für den Ressourcenpool verfügbar sind.  
   

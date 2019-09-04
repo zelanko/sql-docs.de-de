@@ -90,7 +90,7 @@ Fehlermeldungen im Zusammenhang mit den Daten, dem Modell oder dem Spaltenformat
 
 Es ist nicht möglich, die interne Modellstruktur mithilfe von `PREDICT` anzuzeigen. Wenn Sie sich mit dem Inhalt des Modells vertraut machen möchten, müssen Sie das Modellobjekt laden, es deserialisieren und entsprechenden R-Code verwenden, um das Modell zu analysieren.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Die `PREDICT`-Funktion wird in allen Editionen von SQL Server 2017 oder höher unterstützt. Diese Unterstützung gilt auch für SQL Server 2017 unter Linux. `PREDICT` wird zudem in Azure SQL-Datenbank in der Cloud unterstützt. Diese Unterstützungen sind alle aktiv, unabhängig davon, ob andere Features für maschinelles Lernen aktiviert sind.
 

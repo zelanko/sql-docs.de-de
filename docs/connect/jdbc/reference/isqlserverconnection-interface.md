@@ -33,7 +33,7 @@ ms.locfileid: "67977450"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Schnittstelle wird von der [SQLServerConnection-Klasse](../../../connect/jdbc/reference/sqlserverconnection-class.md)implementiert.  
   
  Diese Schnittstelle macht das folgende [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-spezifische Feld verfügbar:  

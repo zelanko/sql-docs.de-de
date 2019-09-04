@@ -46,10 +46,10 @@ DAY ( date )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-*Datum*  
+*date*  
 Ein Ausdruck, der in einen der folgenden Datentypen aufgelöst werden kann:
 
-+ **Datum**
++ **date**
 + **datetime**
 + **datetimeoffset**
 + **datetime2** 

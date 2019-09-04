@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Gibt die Priorität an, die jedem Konversationsendpunkt zugeordnet werden soll, der die für die Konversationspriorität angegebenen Verträge und Dienste verwendet. *PriorityValue* muss ein ganzahliges Literal zwischen 1 (niedrigste Priorität) und 10 (höchste Priorität) sein. Der Standardwert ist 5.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In [!INCLUDE[ssSB](../../includes/sssb-md.md)] werden Prioritätsebenen Konversationsendpunkte zugeordnet. Mithilfe der Prioritätsebene wird die Priorität der dem Endpunkt zugeordneten Vorgänge gesteuert. Jede Konversation verfügt über zwei Konversationsendpunkte:  
   
 -   Der Konversationsendpunkt für den Initiator ordnet eine Seite der Konversation dem Initiatordienst und der Initiatorwarteschlange zu. Der Konversationsendpunkt für den Initiator wird beim Ausführen der BEGIN DIALOG-Anweisung erstellt. Zu den dem Konversationsendpunkt für den Initiator zugeordneten Vorgängen zählen folgende:  

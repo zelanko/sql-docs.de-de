@@ -37,7 +37,7 @@ public int getMinorVersion()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Typ **int** mit der Nebenversionsnummer des JDBC-Treibers.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getMinorVersion-Methode wird von der getMinorVersion-Methode in der Java. SQL. Driver-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

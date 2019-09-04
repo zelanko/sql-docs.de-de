@@ -50,7 +50,7 @@ Ein **int**-Wert, der die Anzahl der Hierarchieebenen nach oben darstellt.
   
 **CLR-Rückgabetyp: SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Hiermit wird getestet, ob jeder Knoten in der Ausgabe den aktuellen Knoten als Vorgänger auf der angegebenen Ebene aufweist.
   
 Wenn eine Zahl größer als [GetLevel ()](../../t-sql/data-types/getlevel-database-engine.md) übergeben wird, wird NULL zurückgegeben.

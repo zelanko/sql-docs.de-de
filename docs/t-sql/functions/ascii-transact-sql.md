@@ -48,7 +48,7 @@ Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) des Ty
 ## <a name="return-types"></a>Rückgabetypen
  **int**  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Die Abkürzung ASCII steht für **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange. Es dient als ein Zeichencodierungsstandard für moderne Computer. Eine Liste mit ASCII-Zeichen finden Sie im Abschnitt **Printable characters (Darstellbare Zeichen)** des Artikels [ASCII](https://www.wikipedia.org/wiki/ASCII).
 
 ## <a name="examples"></a>Beispiele  

@@ -41,7 +41,7 @@ ms.locfileid: "68120933"
   
  CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eindimensionale räumliche Datentypen schließen **LineString**, **CircularString**und **CompoundCurve**ein. Eine leere eindimensionale Instanz von **geography** gibt 0 zurück.  
   
  `STNumCurves`() funktioniert nur mit einfachen Typen; **geography**-Collection wie **MultiLineString** gehören nicht dazu. Wenn die Instanz von**NULL** kein eindimensionaler Datentyp ist, wird **geography** zurückgegeben.  

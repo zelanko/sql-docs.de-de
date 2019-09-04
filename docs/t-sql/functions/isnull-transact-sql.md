@@ -52,7 +52,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>Rückgabetypen  
  Gibt denselben Typ wie der Ausdruck *check_expression* zurück. Wenn ein literaler NULL-Wert als *check_expression* bereitgestellt wird, wird der Datentyp des Ersatzwerts *replacement_value* zurückgegeben. Wenn ein literaler NULL-Wert als *check_expression* bereitgestellt wird und kein *replacement_value* bereitgestellt wird, wird **int** zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der Wert von *check_expression* wird zurückgegeben, wenn er nicht NULL ist, andernfalls wird *replacement_value* zurückgegeben, nachdem er implizit in den Typ von *check_expression* konvertiert wurde, falls die Typen unterschiedlich sind. *replacement_value* kann gekürzt werden, wenn *replacement_value* länger als *check_expression* ist.  
   
 > [!NOTE]  

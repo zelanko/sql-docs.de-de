@@ -24,7 +24,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67992736"
 ---
-# <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
+# <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Ruft die nächste Datenzeile als PHP-Objekt ab.  
@@ -66,7 +66,7 @@ Ein PHP-Objekt mit Eigenschaften, die zu den Feldnamen des Resultsets passen. Ei
   
 Der Datentyp eines Werts im zurückgegebenen Objekt wird der PHP-Standarddatentyp sein. Informationen zu PHP-Standarddatentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Falls ein Klassenname mit dem optionalen *$className* -Parameter festgelegt ist, wird ein Objekt diesen Klassentyps instanziiert. Falls die Klasse Eigenschaften aufweist, deren Namen zu den Namen der Resultsetfelder passen, werden die entsprechenden Resultsetwerte auf die Eigenschaften angewendet. Falls ein Resultsetfeldname mit keiner Klasseneigenschaft übereinstimmt, wird dem Objekt eine Eigenschaft mit dem Resultsetfeldnamen hinzugefügt und der Wert aus dem Resultset wird auf die Eigenschaft angewendet.  
   
 Die folgenden Regeln gelten, wenn eine Klasse mit einem *$className* -Parameter spezifiziert wird:  

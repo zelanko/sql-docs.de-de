@@ -50,7 +50,7 @@ public byte[] getBytes(long pos,
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getBytes-Methode wird von der getBytes-Methode in der java.sql.Blob-Schnittstelle angegeben.  
   
  Bei einem BLOB, der NULL ist oder die Länge 0 besitzt, wird ein leeres **byte**-Array zurückgegeben (ein Bytearray der Länge „0“), wenn Sie versuchen, genau 0 Bytes an Position „1“ abzurufen.  

@@ -149,7 +149,7 @@ Weitere Informationen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql
 
 **\<file_and_filegroup_options>::=** Weitere Informationen finden Sie unter [ALTER DATABASE-Optionen FILE und FILEGROUP](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.
 
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
@@ -548,7 +548,7 @@ Während eines erzwungenen Failovers:
 > [!IMPORTANT]
 > Der Benutzer, der den Befehl `FORCE_FAILOVER_ALLOW_DATA_LOSS` ausführt, muss auf dem primären und sekundären Server die Rolle `dbmanager` inne haben.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.
@@ -721,7 +721,7 @@ ALTER DATABASE { database_name | CURRENT }
 
 CURRENT: Legt fest, dass die zurzeit verwendete Datenbank geändert werden soll.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Verwenden Sie [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md), um eine Datenbank zu entfernen.
 Verwenden Sie [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md), um die Größe einer Datenbank zu reduzieren.

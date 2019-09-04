@@ -67,7 +67,7 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  Der angegebene Accessor war kein Zeilenaccessor oder hat keinen consumer-eigenen Arbeitsspeicher angegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Ein Fehler bei der Konvertierung der Consumerdaten in den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentyp einer Spalte ruft eine E_FAIL-Rückgabe durch den OLE DB-Treiber für SQL Server hervor. Die Daten können entweder über eine beliebige [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]InsertRow **-Methode oder nur über die** Commit **-Methode an**  übertragen werden. lDie Consumer-Anwendung kann die **InsertRow** -Methode mehrere Male mit fehlerhaften Daten aufrufen, bevor eine Meldung eintrifft, dass die Daten nicht korrekt sind. Die **Commit** -Methode gewährleistet, dass alle Daten ordnungsgemäß vom Consumer angegeben werden. Der Consumer kann die **Commit** -Methode gegebenenfalls verwenden, um die Daten zu überprüfen.  
   
  Der OLE DB Treiber für SQL Server Rowsets zum Massen kopieren ist schreibgeschützt. Der OLE DB-Treiber für SQL Server macht keine Methoden verfügbar, die Consumer-Abfragen des Rowsets zulassen. Um die Verarbeitung zu beenden, kann der Consumer seine Verweise auf die [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)-Schnittstelle ohne die **Commit**-Methode senden. Es gibt keine Möglichkeit, auf von Consumern eingefügte Zeilen im Rowset zuzugreifen und deren Werte zu ändern oder diese einzeln aus dem Rowset zu entfernen.  

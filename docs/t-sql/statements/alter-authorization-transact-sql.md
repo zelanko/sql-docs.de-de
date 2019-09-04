@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  Name des Sicherheitsprinzipals, der die Entität besitzt. Datenbankobjekte müssen im Besitz eines Datenbankprinzipals sein, also ein Datenbankbenutzer oder eine Datenbankrolle. Serverobjekte (beispielsweise Datenbanken) müssen im Besitz eines Serverprinzipals (eines Anmeldenamens) sein. Geben Sie **SCHEMA OWNER** als *principal_name* an, um anzugeben, dass das Objekt im Besitz des Prinzipals sein sollte, der das Schema des Objekts besitzt.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Bemerkungen    
  Mit ALTER AUTHORIZATION kann der Besitz einer Entität, die einen Besitzer aufweist, geändert werden. Der Besitz von in der Datenbank enthaltenen Entitäten kann an jeden Prinzipal auf Datenbankebene übertragen werden. Der Besitz von Entitäten auf Serverebene kann nur an Prinzipale auf Serverebene übertragen werden.    
     
 > [!IMPORTANT]    

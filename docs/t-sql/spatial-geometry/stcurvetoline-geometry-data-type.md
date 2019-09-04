@@ -38,7 +38,7 @@ Gibt eine polygonale Näherung einer Instanz von **geometry** mit Kreisbogensegm
   
  CLR-Rückgabetyp: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Gibt eine leere **GeometryCollection**-Instanz für leere **geometry**-Instanzvariablen und **NULL** für nicht initialisierte **geometry**-Variablen zurück.  
   
  Die polygonale Näherung, die die Methode zurückgibt, hängt von der **geometry**-Instanz ab, mit der Sie die Methode aufrufen:  

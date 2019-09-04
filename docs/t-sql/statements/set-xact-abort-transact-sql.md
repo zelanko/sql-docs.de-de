@@ -33,7 +33,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68100065"
 ---
-# <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
+# <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
     
@@ -51,7 +51,7 @@ SET XACT_ABORT { ON | OFF }
 ```  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn SET XACT_ABORT auf ON festgelegt ist und eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung einen Laufzeitfehler auslöst, wird die gesamte Transaktion beendet, und es wird ein Rollback für sie ausgeführt.  
   
  Wenn SET XACT_ABORT auf OFF festgelegt ist, wird in einigen Fällen nur für die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, die den Fehler ausgelöst hat, ein Rollback ausgeführt, und die Transaktion wird fortgesetzt. Abhängig vom Schweregrad des Fehlers wird möglicherweise für die gesamte Transaktion ein Rollback ausgeführt, wenn SET XACT_ABORT auf OFF festgelegt ist. OFF ist die Standardeinstellung.  

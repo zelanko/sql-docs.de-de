@@ -25,7 +25,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67910657"
 ---
-# <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
+# <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Ist eine Funktion, die die Ebene der Gruppierung berechnet. GROUPING_ID kann in der SELECT-\<Auswahlliste>, der HAVING- oder der ORDER BY-Klausel nur verwendet werden, wenn GROUP BY angegeben wurde.  
@@ -46,10 +46,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ## <a name="return-type"></a>Rückgabetyp  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  GROUPING_ID \<column_expression> muss genau mit dem Ausdruck in der GROUP BY-Liste übereinstimmen. Wenn Sie beispielsweise nach DATEPART gruppieren (yyyy, \<*column name*>), verwenden Sie GROUPING_ID (DATEPART (yyyy, \<*column name*>)). Wenn Sie nach \<*column name*> gruppieren, verwenden Sie GROUPING_ID (\<*column name*>).  
   
-## <a name="comparing-groupingid--to-grouping-"></a>Vergleichen von GROUPING_ID () mit GROUPING ()  
+## <a name="comparing-grouping_id--to-grouping-"></a>Vergleichen von GROUPING_ID () mit GROUPING ()  
  GROUPING_ID (\<column_expression> [ **,** ...*n* ]) fügt das Ergebnis der Rückgabe von GROUPING (\<column_expression>) für jede Spalte in seiner Spaltenliste in jeder Ausgabezeile als Zeichenfolge aus Einsen und Nullen ein. GROUPING_ID interpretiert diese Zeichenfolge als Basis-2-Nummer und gibt die entsprechende ganze Zahl zurück. Betrachten Sie beispielsweise die folgende Anweisung: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Die folgende Tabelle zeigt die Ein- und Ausgabewerte für GROUPING_ID ().  
   
 |Aggregierte Spalten|GROUPING_ID (a, b, c) Eingabe = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () Ausgabe|  
@@ -62,10 +62,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`bc`|`011`|`3`|  
 |`abc`|`111`|`7`|  
   
-## <a name="technical-definition-of-groupingid-"></a>Technische Definition von GROUPING_ID ()  
+## <a name="technical-definition-of-grouping_id-"></a>Technische Definition von GROUPING_ID ()  
  Jedes GROUPING_ID-Argument muss ein Element der GROUP BY-Liste sein. GROUPING_ID () gibt eine **ganzzahlige** Bitmap zurück, deren niedrigste N-Bits hervorgehoben sein können. Ein hervorgehobenes **Bit** gibt an, dass das zugehörige Argument keine Gruppierungsspalte für die entsprechende Ausgabezeile ist. Das niedrigste **Bit** in der Reihenfolge entspricht Argument N, und das N-1<sup>te</sup> **Bit** der Reihenfolge entspricht Argument 1.  
   
-## <a name="groupingid--equivalents"></a>GROUPING_ID ()-Entsprechungen  
+## <a name="grouping_id--equivalents"></a>GROUPING_ID ()-Entsprechungen  
  Für eine einzelne Gruppierungsabfrage entspricht GROUPING (\<column_expression>) GROUPING_ID (\<column_expression>), und beide geben 0 zurück.  
   
  Beispielsweise sind die folgenden Anweisungen äquivalent:  
@@ -92,7 +92,7 @@ SELECT 0 FROM T GROUP BY A,B
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-groupingid-to-identify-grouping-levels"></a>A. Verwenden von GROUPING_ID zur Identifizierung von Gruppierungsebenen  
+### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. Verwenden von GROUPING_ID zur Identifizierung von Gruppierungsebenen  
  Im folgenden Beispiel wird die Anzahl der Mitarbeiter nach `Name` und `Title` sowie nach `Name,` und Unternehmen insgesamt aus der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank zurückgegeben. `GROUPING_ID()` wird verwendet, um einen Wert für jede Zeile in der `Title`-Spalte zu erstellen, die die Aggregationsebene angibt.  
   
 ```  
@@ -114,7 +114,7 @@ WHERE DH.EndDate IS NULL
 GROUP BY ROLLUP(D.Name, E.JobTitle);  
 ```  
   
-### <a name="b-using-groupingid-to-filter-a-result-set"></a>B. Verwenden von GROUPING_ID zum Filtern eines Resultsets  
+### <a name="b-using-grouping_id-to-filter-a-result-set"></a>B. Verwenden von GROUPING_ID zum Filtern eines Resultsets  
   
 #### <a name="simple-example"></a>Einfaches Beispiel  
  Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Titel enthalten, entfernen Sie im folgenden Code in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank die Kommentierungszeichen von `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0`. Um nur die Zeilen zurückzugeben, die die Anzahl der Mitarbeiter nach Abteilung enthalten, entfernen Sie die Kommentierungszeichen aus `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
@@ -235,7 +235,7 @@ ORDER BY
     ,(H.SalesPersonID))ASC;  
 ```  
   
-### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Verwenden von GROUPING_ID () mit ROLLUP und CUBE, um Gruppierungsebenen zu ermitteln  
+### <a name="c-using-grouping_id--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Verwenden von GROUPING_ID () mit ROLLUP und CUBE, um Gruppierungsebenen zu ermitteln  
  Der Code in den folgenden Beispielen zeigt, wie `GROUPING()` zum Berechnen der `Bit Vector(base-2)`-Spalte verwendet wird. `GROUPING_ID()` wird verwendet, um die entsprechende `Integer Equivalent`-Spalte zu berechnen. Die Spaltenreihenfolge in der `GROUPING_ID()`-Funktion ist die umgekehrte Reihenfolge der Spalten, die durch die `GROUPING()`-Funktion verkettet sind.  
   
  In diesen Beispielen wird `GROUPING_ID()` verwendet, um einen Wert für jede Zeile in der `Grouping Level`-Spalte zu erstellen, um die Gruppierungsebene zu ermitteln. Gruppierungsebenen sind nicht immer eine aufeinander folgende Liste von ganzen Zahlen, die mit 1 (0, 1, 2,...*n*) beginnen.  

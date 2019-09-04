@@ -47,7 +47,7 @@ Eine andere Instanz von **geography** , für die `ReorientObject()` aufgerufen w
   
 CLR-Rückgabetyp: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Mit dieser Methode wird die Ringausrichtung aller **Polygons** in eine **GeometryCollection** geändert, ohne **Points** oder **LineStrings** in der angegebenen Sammlung zu ändern.  
   
 Wenn Sie eine **GeometryCollection** an die Methode übergeben, werden alle Instanzen in der Sammlung neu ausgerichtet, die Sammlung als Ganzes wird jedoch nicht neu ausgerichtet.  

@@ -60,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  Die Länge des Rückgabewerts wird von *format*bestimmt.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
  FORMAT gibt bei Fehlern, bei denen es sich nicht um eine *culture* handelt, die nicht *valid*ist, NULL zurück. NULL wird z. B. zurückgegeben, wenn der in *format* angegebene Wert nicht gültig ist.  
 

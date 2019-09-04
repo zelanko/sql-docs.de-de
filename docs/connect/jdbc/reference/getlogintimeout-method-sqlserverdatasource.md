@@ -37,7 +37,7 @@ public int getLoginTimeout()
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Typ **int** zum Darstellen der Wartedauer in Sekunden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wird von der Anwendung kein expliziter Timeoutwert angegeben, werden von dieser Methode standardmäßig 15 Sekunden zurückgegeben.  
   
  Diese GetLoginTimeout-Methode wird von der GetLoginTimeout-Methode in der javax. SQL. DataSource-Schnittstelle angegeben.  

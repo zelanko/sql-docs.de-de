@@ -28,7 +28,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68232152"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt die Eigenschaften einer Spalte an, die mithilfe von [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) einer Tabelle hinzugefügt wird.  
@@ -234,7 +234,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  Weitere Informationen zu Funktionsparametern finden Sie im Artikel zur [dynamischen Datenmaskierung](../../relational-databases/security/dynamic-data-masking.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Spalte hinzugefügt wird, die über einen **uniqueidentifier**-Datentyp verfügt, kann sie mit einem Standardwert definiert werden, der die NEWID()-Funktion verwendet, um die eindeutigen Bezeichnerwerte in der neuen Spalte für jede vorhandene Zeile in der Tabelle anzugeben.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] erzwingt keine Reihenfolge für die Angabe von DEFAULT, IDENTITY, ROWGUIDCOL oder Spalteneinschränkungen in einer Spaltendefinition.  

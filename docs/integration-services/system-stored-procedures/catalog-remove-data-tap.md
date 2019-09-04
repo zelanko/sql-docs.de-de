@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68007789"
 ---
-# <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
+# <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -36,7 +36,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  Der eindeutige Bezeichner für die Datenabzweigung, die mit der gespeicherten Prozedur "catalog.add_data_tap" erstellt wird. Der *data_tap_id* ist **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn ein Paket mehrere Datenflusstasks mit dem gleichen Namen enthält, wird die Datenabzweigung dem ersten Datenflusstask mit dem angegebenen Namen hinzugefügt.  
   
 ## <a name="return-codes"></a>Rückgabecodes  
@@ -47,7 +47,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ## <a name="result-set"></a>Resultset  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Um Datenabzweigungen zu entfernen, muss die Ausführungsinstanz den Status „Erstellt“ (einen Wert von 1 in der Spalte **Zustand** der Sicht [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)) aufweisen.  
   
 ## <a name="permissions"></a>Berechtigungen  

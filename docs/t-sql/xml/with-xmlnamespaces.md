@@ -67,7 +67,7 @@ DEFAULT <xml_namespace_uri>
  *xml_namespace_prefix*  
  Gibt ein Präfix an, das dem in *xml_namespace_uri* angegebenen Wert vom Namespace-URI zugeordnet werden soll. *xml_namespace_prefix* muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichner sein.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie die WITH XMLNAMESPACES-Klausel in einer Anweisung verwenden, die außerdem einen allgemeinen Tabellenausdruck enthält, muss die WITH XMLNAMESPACES-Klausel vor dem allgemeinen Tabellenausdruck in der Anweisung stehen.  
   
  Es folgen allgemeine Syntaxregeln, die beim Verwenden der WITH XMLNAMESPACES-Klausel angewendet werden.  

@@ -67,7 +67,7 @@ Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATU
 
   
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
  Es kann immer jeweils nur eine Quelle geändert werden. Gleichzeitige Anforderungen zur Änderung derselben Quelle führen dazu, dass eine Anweisung warten muss. Unterschiedliche Quellen können jedoch gleichzeitig geändert werden. Diese Anweisung kann gleichzeitig mit anderen Anweisungen ausgeführt werden.
   
 ## <a name="permissions"></a>Berechtigungen  

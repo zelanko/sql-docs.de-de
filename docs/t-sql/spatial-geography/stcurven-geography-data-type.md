@@ -48,7 +48,7 @@ ms.locfileid: "68042452"
 ## <a name="exceptions"></a>Ausnahmen  
  **ArgumentOutOfRangeException** wird ausgelöst, wenn n < 1 ist.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **NULL** wird zurückgegeben, wenn die folgenden Kriterien erfüllt sind.  
   
 -   Die **geography** -Instanz wird deklariert, aber nicht instanziiert  

@@ -61,7 +61,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 > [!WARNING]  
 >  Verwenden Sie diese Anweisung nie mit CEK-Werten im Klartext. Hierdurch wird die Wirksamkeit des Features beeinträchtigt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der Regel wird ein CEK nur mit einem verschlüsselten Wert erstellt. Wenn der aktuelle CMK rotiert, also mit dem neuen CMK ersetzt werden muss, können Sie einen neuen CEK-Wert hinzufügen, der mit dem neuen CMK verschlüsselt wird. Dieser Workflow stellt sicher, dass Clientanwendungen auf Daten zugreifen können, die mit dem Spaltenverschlüsselungsschlüssel verschlüsselt wurden, während der neue Spaltenhauptschlüssel den Clientanwendungen zur Verfügung gestellt wird. Ein Treiber, für den Always Encrypted aktiviert ist, kann in einer Clientanwendung, die keinen Zugriff auf den neuen Hauptschlüssel hat, zum Zugriff auf vertrauliche Daten den CEK-Wert verwenden, der mit dem alten CMK verschlüsselt wurde. Von Always Encrypted unterstützte Verschlüsselungsalgorithmen erfordern einen Klartextwert von 256 Bit. Ein verschlüsselter Wert soll mit einem Schlüsselspeicheranbieter erstellt werden, der den Schlüsselspeicher mit dem CMK enthält.  
 
  Spaltenhauptschlüssel werden aus folgenden Gründen rotiert:

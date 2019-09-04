@@ -39,7 +39,7 @@ public int getHoldability()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getHoldability-Methode wird von der getHoldability-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Zum Festlegen der Holdability für Resultsets kann von Anwendungen die [setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)-Methode der [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)-Klasse verwendet werden. Nach dem Aufrufen der [setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)-Methode, dem Erstellen des Anweisungsobjekts und dessen Resultsetobjekts und dem Ausführen der Anweisung muss die Haltbarkeit von der Anwendung möglicherweise erneut geändert werden.  

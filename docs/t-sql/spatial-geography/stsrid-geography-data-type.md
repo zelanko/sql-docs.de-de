@@ -41,7 +41,7 @@ ms.locfileid: "68120779"
   
  CLR-Typ: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Eigenschaft kann geändert werden.  
   
 ## <a name="examples"></a>Beispiele  

@@ -56,7 +56,7 @@ AS constant_expression [ ; ]
 *constant_expression*  
 Ein [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md), der nur konstante Werte enthält (nicht zulässig sind Namen von Spalten oder anderen Datenbankobjekten). Sie können jede Konstante, jede integrierte Funktion oder jeden mathematischen Ausdruck verwenden, außer solchen, die Aliasdatentypen enthalten. Benutzerdefinierte Funktionen können nicht verwendet werden. Setzen Sie Zeichen- und Datumskonstanten in einfache Anführungszeichen ( **'** ). Bei Integer-, Währungs- und Gleitkommakonstanten sind keine Anführungszeichen erforderlich. Binären Daten muss 0x vorangestellt werden, und Währungsdaten muss das Dollarzeichen ($) vorangestellt werden. Der Standardwert muss mit dem Datentyp der Spalte kompatibel sein.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können den Namen eines Standardwerts nur in der aktuellen Datenbank erstellen. Innerhalb einer Datenbank müssen die Namen für Standardwerte für jedes Schema eindeutig sein. Wenn Sie einen Standardwert erstellen, binden Sie ihn mit **sp_bindefault** an eine Spalte oder einen Aliasdatentyp.  
   
  Falls der Standardwert mit der Spalte, an die er gebunden ist, nicht kompatibel ist, erzeugt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch, den Standardwert einzufügen, eine Fehlermeldung. N/V kann z.B. nicht als Standardwert für **numeric**-Spalten verwendet werden.  

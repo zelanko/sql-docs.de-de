@@ -47,7 +47,7 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  Der Name der Anmeldeinformationen, die für den Server entfernt werden sollen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können das Geheimnis löschen, das Anmeldeinformationen zugeordnet ist, ohne diese Anmeldeinformationen zu löschen, indem Sie [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md) verwenden.  
   
  Informationen zu Anmeldeinformationen werden in der **sys.credentials**-Katalogsicht angezeigt.  

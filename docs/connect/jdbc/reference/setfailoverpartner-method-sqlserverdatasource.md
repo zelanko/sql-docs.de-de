@@ -39,7 +39,7 @@ public void setFailoverPartner(java.lang.String serverName)
   
  Eine **Zeichenfolge** mit dem Namen des Failoverservers.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der von dieser Methode festgelegte Wert wird im Falle eines Fehlers beim erstmaligen Herstellen einer Verbindung mit dem Prinzipalserver verwendet. Sobald die Verbindung hergestellt wurde, wird dieser Wert ignoriert. In Verbindung mit dieser Methode muss auch die [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)-Methode verwendet werden, da andernfalls eine Ausnahme ausgelöst wird.  
   
  Bei festgelegtem Failoverservernamen wird das Angeben der Portnummer des Failoverservers vom Treiber nicht unterstützt. Das Aufrufen der [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)-Methode und der [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md)-Methode mit der [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)-Methode wird jedoch unterstützt.  

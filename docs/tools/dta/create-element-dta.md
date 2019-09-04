@@ -51,7 +51,7 @@ ms.locfileid: "68104994"
 |**Übergeordnetes Element**|[Recommendation-Element &#40;DTA&#41;](../../tools/dta/recommendation-element-dta.md)|  
 |**Untergeordnete Elemente**|[Index-Element &#40;DTA&#41;](../../tools/dta/index-element-dta.md)<br /><br /> **Statistics**-Element (weitere Informationen finden Sie im Thema zum [XML-Schema für den Datenbankoptimierungsratgeber](https://schemas.microsoft.com/sqlserver/))<br /><br /> **Heap** -Element (weitere Informationen finden Sie im Thema zum [XML-Schema für den Datenbankoptimierungsratgeber](https://schemas.microsoft.com/sqlserver/) )|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Dieses Element hat den Namen **CreateTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Es wird zum Erstellen von Indizes, Statistiken und Heapstrukturen für eine benutzerspezifische Konfiguration verwendet. Dieses **Create** -Element ist nicht mit den anderen Typen identisch, mit denen Sichten (**CreateViewType**) oder Partitionierungen (**CreatePType**) erstellt werden können. Unter [XML-Schema für den Datenbankoptimierungsratgeber](https://schemas.microsoft.com/sqlserver/) finden Sie Informationen zu diesen anderen **Create** -Elementtypen.  
   
 ## <a name="example"></a>Beispiel  

@@ -31,7 +31,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67914727"
 ---
-# <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
+# <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt den Namen des Datenbankobjekts für Objekte mit Schemabereich zurück. Eine Liste der schemabezogenen Objekte finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
@@ -62,7 +62,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ANY-Berechtigung für das Objekt. Zum Angeben einer Datenbank-ID ist eine CONNECT-Berechtigung erforderlich, oder das Gastkonto muss aktiviert werden.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Systemfunktionen können in der SELECT-Liste, in einer WHERE-Klausel und überall dort verwendet werden, wo ein Ausdruck zulässig ist. Weitere Informationen finden Sie unter [Ausdrücke](../../t-sql/language-elements/expressions-transact-sql.md) und [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Für den von dieser Systemfunktion zurückgegebenen Wert wird die Sortierung der aktuellen Datenbank verwendet.  
@@ -89,7 +89,7 @@ GO
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-objectname-in-a-where-clause"></a>A. Verwenden von OBJECT_NAME in einer WHERE-Klausel  
+### <a name="a-using-object_name-in-a-where-clause"></a>A. Verwenden von OBJECT_NAME in einer WHERE-Klausel  
  Das folgende Beispiel gibt Spalten aus der `sys.objects`-Katalogsicht für das durch `OBJECT_NAME` in der `WHERE`-Klausel der `SELECT`-Anweisung angegebene Objekt zurück.  
   
 ```  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-### <a name="d-using-objectname-in-a-where-clause"></a>D. Verwenden von OBJECT_NAME in einer WHERE-Klausel  
+### <a name="d-using-object_name-in-a-where-clause"></a>D. Verwenden von OBJECT_NAME in einer WHERE-Klausel  
  Das folgende Beispiel gibt Spalten aus der `sys.objects`-Katalogsicht für das durch `OBJECT_NAME` in der `WHERE`-Klausel der `SELECT`-Anweisung angegebene Objekt zurück. (Ihre Objektnummer wird sich von der im untenstehenden Beispiel unterscheiden (hier: 274100017).)  Wenn Sie dieses Beispiel testen möchten, suchen Sie nach einer gültigen Objektnummer, indem Sie `SELECT name, object_id FROM sys.objects;` in Ihrer Datenbank ausführen.)  
   
 ```  
