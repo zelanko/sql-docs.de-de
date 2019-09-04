@@ -46,7 +46,7 @@ EXP ( float_expression )
 ## <a name="return-types"></a>Rückgabetypen  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Konstante **e** (2,718281…) ist die Basis natürlicher Logarithmen.  
   
  Der Exponent einer Zahl ist die Konstante **e** potenziert mit der Zahl. Beispielsweise EXP(1,0) = e^1,0 = 2,71828182845905 und EXP(10) = e^10 = 22026,4657948067.  

@@ -39,7 +39,7 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
   
  Ein connectioneventlistener-Objekt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese removeconnectioneventlistener-Methode wird von der removeconnectioneventlistener-Methode in der javax. SQL. pooledconnection-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

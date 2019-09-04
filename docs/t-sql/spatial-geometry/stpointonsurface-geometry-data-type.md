@@ -43,7 +43,7 @@ Gibt einen beliebigen im Inneren einer **geometry** -Instanz enthaltenen Punkt z
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode gibt NULL zurück, wenn die Instanz leer ist.  
   
 ## <a name="examples"></a>Beispiele  

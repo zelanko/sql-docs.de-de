@@ -43,7 +43,7 @@ DROP WORKLOAD GROUP group_name
  *group_name*  
  Der Name einer vorhandenen benutzerdefinierten Arbeitsauslastungsgruppe.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die DROP WORKLOAD GROUP-Anweisung ist für die internen oder Standard-Gruppen der Ressourcenkontrolle nicht zulässig.  
   
  Sie sollten bei der Ausführung von DDL-Anweisungen mit dem Status der Ressourcenkontrolle vertraut sein. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  

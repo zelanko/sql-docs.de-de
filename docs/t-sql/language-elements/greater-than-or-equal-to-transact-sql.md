@@ -51,7 +51,7 @@ expression >= expression
 ## <a name="result-types"></a>Ergebnistypen  
  Boolean  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Beim Vergleich von Ausdrücken, die ungleich NULL sind, ist das Ergebnis TRUE, wenn der linke Operand einen größeren Wert besitzt als der rechte Operand oder einen Wert, der gleich groß ist; andernfalls ist das Ergebnis FALSE.  
   
  Im Gegensatz zum Vergleichsoperator = (gleich) ist das Ergebnis des Vergleichs zweier NULL-Werte mit dem Operator >= nicht von der ANSI_NULLS-Einstellung abhängig.  

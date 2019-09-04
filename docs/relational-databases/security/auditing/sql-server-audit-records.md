@@ -54,7 +54,7 @@ ms.locfileid: "68095123"
 |**statement**|TSQL-Anweisung (falls vorhanden)|**nvarchar(4000)**|Nein|  
 |**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|**nvarchar(4000)**|Nein|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Einige Aktionen geben nicht den Wert einer Spalte ein, da er auf die Aktion nicht anwendbar sein könnte.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit speichert 4000 Datenzeichen für Zeichenfelder in einem Überwachungsdatensatz. Wenn die Werte **additional_information** und **statement** , die von einer überwachbaren Aktion zurückgegeben wurden, mehr als 4000 Zeichen zurückgeben, wird die Spalte **sequence_no** dazu verwendet, mehrere Datensätze in einen Überwachungsbericht für eine einzelne Überwachungsaktion zu schreiben, um diese Daten aufzuzeichnen. Der Prozess sieht folgendermaßen aus:  

@@ -69,7 +69,7 @@ Sie können Dateien angeben, die Abfragen, Projekte oder Lösungen enthalten. F�
  
 [ **-?** ] zeigt die Befehlszeilenhilfe an.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Alle Optionen sind optional und werden durch Leerzeichen voneinander getrennt. Dateien stellen hier eine Ausnahme dar, da sie durch Kommas getrennt werden. Wenn Sie keine Schalter angeben, wird **Ssms** Ssms [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] so geöffnet, wie es in den Einstellungen unter **Optionen** im Menü **Extras** angegeben ist. Wenn die Option **Beim Start** der Seite **Umgebung/Allgemein** beispielsweise **Neues Abfragefenster öffnen** festlegt, öffnen **SSMS** ein leeres Abfrage-Editorfenster.
  

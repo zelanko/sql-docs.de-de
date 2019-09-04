@@ -21,12 +21,12 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064125"
 ---
-# <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API für erweiterte gespeicherte Prozeduren)
+# <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -101,7 +101,7 @@ srcdata
 ## <a name="returns"></a>Rückgabewert  
  Die Nummer der beschriebenen Spalte. Die erste Spalte ist die Spalte 1. Tritt ein Fehler auf, wird 0 zurückgegeben.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die **srv_describe**-Funktion muss einmal für jede Spalte in der Zeile aufgerufen werden, bevor der erste Aufruf von **srv_sendrow** erfolgt. Die Spalten einer Zeile können in jeder Reihenfolge beschrieben werden.  
   
  Verwenden Sie **srv_setcoldata** bzw. **srv_setcollen**, um den Speicherort und die Länge der Quelldaten in Spaltenzeilen zu ändern, bevor das gesamte Resultset gesendet wurde.  

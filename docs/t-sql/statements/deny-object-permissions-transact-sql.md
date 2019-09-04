@@ -111,7 +111,7 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Gibt einen Datenbankbenutzer ohne entsprechenden Prinzipal auf Serverebene an.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Informationen zu Objekten werden in unterschiedlichen Katalogsichten angezeigt. Weitere Informationen finden Sie unter [Object Catalog Views &#40;Transact-SQL&#41; (Katalogsichten für Objekte &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Ein Objekt ist ein sicherungsfähiges Element auf Schemaebene in dem Schema, das das übergeordnete Element in der Berechtigungshierarchie ist. Die spezifischsten und restriktivsten Berechtigungen, die für ein Objekt verweigert werden können, sind unten aufgeführt. Auch die allgemeineren Berechtigungen sind aufgeführt, die diese implizit enthalten.  

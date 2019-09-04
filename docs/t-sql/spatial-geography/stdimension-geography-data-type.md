@@ -41,7 +41,7 @@ ms.locfileid: "68042329"
   
  CLR-Rückgabetyp: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  STDimension() gibt -1 zurück, wenn die **geography**-Instanz leer ist.  
   
 ## <a name="examples"></a>Beispiele  

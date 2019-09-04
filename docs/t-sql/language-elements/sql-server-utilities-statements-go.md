@@ -45,7 +45,7 @@ GO [count]
  *count*  
  Eine positive ganze Zahl. Der Batch, der GO vorausgeht, wird so oft wie angegeben ausgeführt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  GO ist keine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, sondern ein Befehl, der von den Hilfsprogrammen **sqlcmd** und **osql** und dem [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Code-Editor erkannt wird.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramme interpretieren GO als ein Signal zum Senden des aktuellen Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der aktuelle Anweisungsbatch besteht aus allen Anweisungen, die seit dem letzten GO eingegeben wurden. Wenn dies das erste GO ist, besteht er aus allen Anweisungen, die seit dem Beginn der Ad-hoc-Sitzung oder des Skripts eingegeben wurden.  

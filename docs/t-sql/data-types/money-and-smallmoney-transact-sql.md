@@ -36,7 +36,7 @@ ms.locfileid: "68077809"
 
 Datentypen zur Darstellung von Währungswerten.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 |Datentyp|Bereich|Speicherung|  
 |---|---|---|

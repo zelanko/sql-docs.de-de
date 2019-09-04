@@ -38,7 +38,7 @@ Definiert ein Datum in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 |Eigenschaft|value|  
 |--------------|-----------|  
-|Syntax|**Datum**|  
+|Syntax|**date**|  
 |Verwendung|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Standardmäßiges Format der Zeichenfolgenliterale<br /><br /> (wird zum Zweck der Clientkompatibilität verwendet)|JJJJ-MM-TT<br /><br /> Weitere Informationen finden Sie im nachfolgenden Abschnitt „Abwärtskompatibilität für Downlevelclients“.|  
 |Bereich|0001-01-01 bis 9999-12-31 (1582-10-15 bis 9999-12-31 für Informatica)<br /><br /> 1\. Januar, 1 CE (Common Era) bis 31. Dezember, 9999 CE (15. Oktober, 1582 CE bis 31. Dezember, 9999 CE für Informatica)|  
@@ -95,7 +95,7 @@ Einige Downlevelclients unterstützen nicht die Datentypen **time**, **date**, *
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Standardmäßiges Format des an Downlevelclients übergebenen Zeichenfolgenliterals|ODBC früherer Versionen|OLEDB früherer Versionen|JDBC früherer Versionen|SQLCLIENT früherer Versionen|  
 | --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
-|**Datum**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
+|**date**|JJJJ-MM-TT|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR oder SQL_VARCHAR|DBTYPE_WSTR oder DBTYPE_STR|Java.sql.String|Zeichenfolge oder SqString|  
   
@@ -175,7 +175,7 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ### <a name="converting-string-literals-to-date"></a>Konvertieren von Zeichenfolgenliteralen in ein Datum
 Konvertierungen von Zeichenfolgenliteralen in Datums- und Zeitwerte sind erlaubt, wenn alle Teile der Zeichenfolge in gültigen Formaten vorliegen. Andernfalls wird ein Laufzeitfehler ausgelöst. Wird bei impliziten oder expliziten Konvertierungen von Datums- und Zeitwerten in Zeichenfolgenliterale kein Stil angegeben, wird das Standardformat der aktuellen Sitzung verwendet. In der folgenden Tabelle werden die Regeln zum Konvertieren eines Zeichenfolgenliterals in den **date**-Datentyp dargestellt.
   
-|Eingabezeichenfolgenliteral|**Datum**|  
+|Eingabezeichenfolgenliteral|**date**|  
 |---|---|
 |ODBC DATE|Dem **datetime**-Datentyp werden ODBC-Zeichenfolgenliterale zugeordnet. Jede Zuweisungsoperation von ODBC DATETIME-Literalen zu **date**-Typen bewirkt eine implizite Konvertierung zwischen **datetime** und diesen Typen, wie in den Konvertierungsregeln definiert.|  
 |ODBC TIME|Siehe vorherige ODBC DATE-Regel.|  
@@ -209,7 +209,7 @@ SELECT
 |Datentyp|Ausgabe|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
-|**Datum**|2007-05-08|  
+|**date**|2007-05-08|  
 |**smalldatetime**|2007-05-08 12:35:00|  
 |**datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  

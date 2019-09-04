@@ -41,7 +41,7 @@ ms.locfileid: "68223663"
   
  CLR-Rückgabetyp: **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Testen Sie die Kompatibilität eines räumlichen Objekts mithilfe von `MinDbCompatibilityLevel()` , bevor Sie den Kompatibilitätsgrad einer Datenbank ändern. Ein ungültiger **geography** -Typ gibt 110 zurück.  
   
 ## <a name="examples"></a>Beispiele  

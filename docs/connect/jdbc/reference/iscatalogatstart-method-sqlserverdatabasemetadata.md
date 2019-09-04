@@ -40,7 +40,7 @@ public boolean isCatalogAtStart()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese isCatalogAtStart-Methode wird von der isCatalogAtStart-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

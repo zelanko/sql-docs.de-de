@@ -45,7 +45,7 @@ CLOSE MASTER KEY
 ## <a name="arguments"></a>Argumente  
  Besitzt keine Argumente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese Anweisung kehrt den von OPEN MASTER KEY ausgeführten Vorgang um. CLOSE MASTER KEY wird nur erfolgreich ausgeführt, wenn der Datenbank-Hauptschlüssel mit der OPEN MASTER KEY-Anweisung in der aktuellen Sitzung geöffnet wurde.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -17,7 +17,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68017481"
 ---
-# <a name="catalogeventmessages"></a>catalog.event_messages 
+# <a name="catalogevent_messages"></a>catalog.event_messages 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "68017481"
 |threadID|INT|ID für den Thread, der ausgeführt wird, wenn die Meldung protokolliert wird.|  
 |Message_code|INT|Der der Meldung zugeordnete Code.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  
   
 |**message_source_type**|und Beschreibung|  

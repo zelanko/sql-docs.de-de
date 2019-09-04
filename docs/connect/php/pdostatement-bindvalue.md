@@ -39,7 +39,7 @@ $*data_type*: Der optionale Datentyp (Integer), der durch die Konstante PDO::PAR
 ## <a name="return-value"></a>Rückgabewert  
 „true“ bei Erfolg, andernfalls „false“.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
   
 Unterstützung für PDO wurde in Version 2.0 von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]hinzugefügt.  
   

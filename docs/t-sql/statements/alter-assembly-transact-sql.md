@@ -125,7 +125,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Diese Option ist in einer enthaltenen Datenbank oder in Azure SQL-Datenbank nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mit ALTER ASSEMBLY werden zurzeit ausgeführte Sitzungen, die Code in der zu ändernden Assembly ausführen, nicht unterbrochen. Die Ausführung wird von den aktuellen Sitzungen abgeschlossen, indem die nicht geänderten Bits der Assembly verwendet werden.  
   
  Ist die FROM-Klausel angegeben, aktualisiert ALTER ASSEMBLY die Assembly in Bezug auf die letzten Kopien der bereitgestellten Module. Da CLR-Funktionen, gespeicherte Prozeduren, Trigger, Datentypen und benutzerdefinierte Aggregatfunktionen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden sein können, die bereits für die Assembly definiert wurden, bindet ALTER ASSEMBLY diese Elemente erneut an die neueste Implementierung der Assembly. Für diese Neubindung müssen die Methoden, die den CLR-Funktionen, gespeicherten Prozeduren und Triggern zugeordnet sind, in der geänderten Assembly mit denselben Signaturen vorhanden sein. Die Klassen, die CLR-benutzerdefinierte Typen und benutzerdefinierte Aggregatfunktionen implementieren, müssen weiterhin die Anforderungen für den benutzerdefinierten Typ oder das benutzerdefinierte Aggregat erfüllen.  

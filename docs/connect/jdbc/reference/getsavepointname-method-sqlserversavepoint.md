@@ -40,7 +40,7 @@ public java.lang.String getSavepointName()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getsavepointname-Methode wird von der getsavepointname-Methode in der Java. SQL. SAVEPOINT-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

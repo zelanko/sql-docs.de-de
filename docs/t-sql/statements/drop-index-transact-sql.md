@@ -217,7 +217,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  In diesem Zusammenhang ist DEFAULT kein Schlüsselwort. Es ist ein Bezeichner für die Standarddateigruppe und muss begrenzt werden, wie in MOVE TO **"** default **"** oder MOVE TO **[** default **]** . Wenn "default" angegeben wird, muss die Option QUOTED_IDENTIFIER für die aktuelle Sitzung auf ON festgelegt sein. Dies ist die Standardeinstellung. Weitere Informationen finden Sie unter [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn ein nicht gruppierter Index gelöscht wird, wird die Indexdefinition aus den Metadaten entfernt, und die Indexdatenseiten (in der B-Struktur) werden aus den Datenbankdateien entfernt. Wenn ein gruppierter Index gelöscht wird, wird die Indexdefinition aus den Metadaten entfernt und die auf der Blattebene des gruppierten Indexes gespeicherten Datenzeilen werden in der daraus resultierenden, nicht sortierten Tabelle (Heap) gespeichert. Der gesamte Speicherplatz, der vorher für den Index benötigt wurde, wird wieder freigegeben. Dieser Speicherplatz kann dann für beliebige Datenbankobjekte verwendet werden.  
   
  Ein Index kann nicht gelöscht werden, wenn die Dateigruppe, in der sich der Index befindet, offline oder schreibgeschützt ist.  

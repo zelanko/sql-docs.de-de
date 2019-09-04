@@ -40,7 +40,7 @@ ms.locfileid: "68040091"
   
  CLR-Typ: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Im OpenGIS-Modell ist Lat nur für **geography**-Instanzen definiert, die aus einem einzelnen Punkt bestehen. Diese Eigenschaft gibt NULL zurück, wenn **geography** -Instanzen mehr als nur einen Punkt enthalten. Diese Eigenschaft exakt und ist schreibgeschützt.  
   
 ## <a name="examples"></a>Beispiele  

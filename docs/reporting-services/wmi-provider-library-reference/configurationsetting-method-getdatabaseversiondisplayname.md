@@ -40,7 +40,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] Wert, der angibt, ob der Aufruf erfolgreich war oder zu einem Fehler geführt hat.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle ist die Zuordnung der Datenbankversion zur Anzeigezeichenfolge dargestellt.  
   
 |**Release**|**Version**|**Anzeigename**|  

@@ -26,7 +26,7 @@ ms.locfileid: "69027218"
 > [!WARNING]  
 > Der Microsoft JDBC-Treiber 4.2 (und höher) für SQL enthält neue Timeoutoptionen für die vorhandene Funktion für den automatischen Rollback nicht vorbereiteter Transaktionen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Konfigurieren von serverseitigen Timeout Einstellungen für das automatische Rollback von nicht vorbereiteten Transaktionen](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) .  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Für die Implementierung verteilter Transaktionen stehen die folgenden Klassen zur Verfügung:  
   

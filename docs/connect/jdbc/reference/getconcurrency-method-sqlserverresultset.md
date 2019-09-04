@@ -44,7 +44,7 @@ public int getConcurrency()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getparallelcurrency-Methode wird von der getparallelcurrency-Methode in der Java. SQL. Resultset-Schnittstelle angegeben.  
   
  Die verwendete Parallelität wird vom [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)-Objekt bestimmt, von dem das Resultset erstellt wurde.  

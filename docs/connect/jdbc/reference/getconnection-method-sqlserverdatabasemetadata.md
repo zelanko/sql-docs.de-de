@@ -40,7 +40,7 @@ public java.sql.Connection getConnection()
 ## <a name="exceptions"></a>Ausnahmen  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Diese getConnection-Methode wird von der getConnection-Methode in der Java. SQL. DatabaseMetaData-Schnittstelle angegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
