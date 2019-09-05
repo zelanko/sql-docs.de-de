@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155141"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304737"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -71,7 +71,7 @@ Der Big Data-Clustername, der für kubernetes-Namespaces verwendet wird.
 #### `--config-profile -c`
 Cluster Konfigurations Profil für Big Data, das zum Bereitstellen des Clusters verwendet wird: [' AKS-dev-Test ', ' kubeadm-Prod ', ' minikube-dev-Test ', ' kubeadm-dev-Test ']
 #### `--accept-eula -a`
-Stimmen Sie den Lizenzbedingungen zu? [yes/no]. Wenn Sie dieses Argument nicht verwenden möchten, können Sie die Umgebungsvariable ACCEPT_EULA auf „yes“ festlegen. Die Lizenzbedingungen für dieses Produkt finden Sie unter https://aka.ms/azdata-eula und https://go.microsoft.com/fwlink/?LinkId=2002534.
+Stimmen Sie den Lizenzbedingungen zu? [yes/no]. Wenn Sie dieses Argument nicht verwenden möchten, können Sie die Umgebungsvariable ACCEPT_EULA auf „yes“ festlegen. Die Lizenzbedingungen für dieses Produkt finden Sie unter https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
 Die Bezeichnung des Big Data-Clusterknotens. Hiermit wird bestimmt, auf welchem Knoten bereitgestellt werden soll.
 #### `--force -f`

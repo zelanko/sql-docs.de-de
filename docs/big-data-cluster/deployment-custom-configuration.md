@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155318"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304827"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungs Einstellungen für Cluster Ressourcen und-Dienste
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Beginnend mit einem vordefinierten Satz von Konfigurations Profilen, die im azdata-Verwaltungs Tool integriert sind, können Sie die Standardeinstellungen problemlos so ändern, dass Sie Ihren BDC-workloadanforderungen besser entsprechen. Beginnend mit der Release Candidate-Version wurde die Struktur der Konfigurationsdateien aktualisiert, um Ihnen die granulare Aktualisierung von Einstellungen für jeden Dienst der Ressource zu ermöglichen. 
+Ausgehend von einem vordefinierten Satz von Konfigurations Profilen, die in das azdata-Verwaltungs Tool integriert sind, können Sie die Standardeinstellungen problemlos so ändern, dass Sie Ihren BDC-workloadanforderungen besser entsprechen. Beginnend mit der Release Candidate-Version wurde die Struktur der Konfigurationsdateien aktualisiert, um Ihnen die granulare Aktualisierung von Einstellungen für jeden Dienst der Ressource zu ermöglichen. 
 
 Sie können auch Konfigurationen auf Ressourcenebene festlegen oder die Konfigurationen für alle Dienste in einer Ressource aktualisieren. Im folgenden finden Sie eine Zusammenfassung der Struktur für **BDC. JSON**:
 
@@ -99,7 +99,7 @@ Zum Aktualisieren von Konfigurationen auf Ressourcenebene, wie z. b. Instanzen i
 }
 ``` 
 
-Gleiches gilt für das Ändern der Einstellungen eines Single-dienles innerhalb einer bestimmten Ressource. Wenn Sie z. b. die Spark-Speichereinstellungen nur für die Spark-Komponente im Speicherpool ändern möchten, müssen Sie die Ressource " **Storage-0** " mit dem Abschnitt " **Einstellungen** " für den **Spark** -Dienst in der Konfigurationsdatei " **BDC. JSON** " ändern. .
+Gleiches gilt für das Ändern der Einstellungen eines einzelnen Dienstanbieter innerhalb einer bestimmten Ressource. Wenn Sie z. b. die Spark-Speichereinstellungen nur für die Spark-Komponente im Speicherpool ändern möchten, aktualisieren Sie die Ressource " **Storage-0** " mit einem Abschnitt " **Einstellungen** " für den **Spark** -Dienst in der Konfigurationsdatei " **BDC. JSON".** .
 ```json
 "resources":{
     ...
@@ -243,7 +243,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> Konfigurieren des Speichers
 
-Sie können auch die Speicherklasse und die Merkmale ändern, die für die einzelnen Pools verwendet werden. Im folgenden Beispiel wird dem Speicherpool eine benutzerdefinierte Speicherklasse zugewiesen, und die Größe des Anspruchs für persistente Volumes zum Speichern von Daten wird auf 100 GB aktualisiert. Erstellen Sie zuerst eine „patch.json“-Datei (wie unten beschrieben), die zusätzlich zu *Typ* und *Replikaten* den neuen *Speicher*-Abschnitt enthält.
+Sie können auch die Speicherklasse und die Merkmale ändern, die für die einzelnen Pools verwendet werden. Im folgenden Beispiel wird eine benutzerdefinierte Speicher Klasse zu den Speicher-und Datenpools zugewiesen und die Größe des Anspruchs für persistente Volumes zum Speichern von Daten auf 500 GB für HDFS (Speicherpool) und 100 GB für den Daten Pool aktualisiert. Erstellen Sie zuerst eine „patch.json“-Datei (wie unten beschrieben), die zusätzlich zu *Typ* und *Replikaten* den neuen *Speicher*-Abschnitt enthält.
 
 ```json
 {
@@ -256,13 +256,33 @@ Sie können auch die Speicherklasse und die Merkmale ändern, die für die einze
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }
@@ -297,7 +317,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 Sie können Pod-Platzierungen auf Kubernetes-Knoten steuern, die über bestimmten Ressourcen verfügen, um verschiedene Arten von Arbeitsauslastungsanforderungen zu erfüllen. Beispielsweise können Sie sicherstellen, dass die Speicherpool-ressourcenpods auf Knoten mit mehr Speicherplatz oder SQL Server Master Instanzen in Knoten platziert werden, die über höhere CPU-und Arbeitsspeicher Ressourcen verfügen. In diesem Fall erstellen Sie zuerst einen heterogenen Kubernetes-Cluster mit unterschiedlichen Hardwaretypen. Anschließend nehmen Sie die entsprechende [Zuweisung von Knotenbezeichnungen](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) vor. Zum Zeitpunkt der Bereitstellung des Big-Data-Clusters können Sie in der Konfigurationsdatei für die Clusterbereitstellung dieselben Bezeichnungen auf Poolebene angeben. Kubernetes kümmert sich dann um die Affinität der Pods auf Knoten, die den angegebenen Bezeichnungen entsprechen. Der spezifische Bezeichnungs Schlüssel, der den Knoten im kubernetes-Cluster hinzugefügt werden muss, ist **MSSQL-Cluster-Wide**. Der Wert dieser Bezeichnung kann jede beliebige Zeichenfolge sein, die Sie auswählen.
 
-Im folgenden Beispiel wird gezeigt, wie Sie eine benutzerdefinierte Konfigurationsdatei bearbeiten, um eine Knoten Bezeichnungs Einstellung für die SQL Server Master Instanz, den computepool, den Daten Pool & Speicherpools einzuschließen. Beachten Sie, dass in den integrierten Konfigurationen kein *nodeLabel*-Schlüssel vorhanden ist, sodass Sie entweder manuell eine benutzerdefinierte Konfigurationsdatei bearbeiten oder eine Patchdatei erstellen und auf die benutzerdefinierte Konfigurationsdatei anwenden müssen. Der SQL Server Master Instanz-Pod wird auf einem Knoten bereitgestellt, der eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-Master**" enthält. Der computepool und die Daten Pool-Pods werden auf Knoten bereitgestellt, die eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-SQL**" enthalten. Die Speicher Pool-Pods werden auf Knoten bereitgestellt, die eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-Storage**" enthalten.
+Im folgenden Beispiel wird gezeigt, wie Sie eine benutzerdefinierte Konfigurationsdatei bearbeiten, um eine Knoten Bezeichnungs Einstellung für die SQL Server Master Instanz, den computepool, den Daten Pool & Speicherpools einzuschließen. Es gibt keinen *noschabel* -Schlüssel in den integrierten Konfigurationen, sodass Sie entweder manuell eine benutzerdefinierte Konfigurationsdatei bearbeiten oder eine Patchdatei erstellen und auf die benutzerdefinierte Konfigurationsdatei anwenden müssen. Der SQL Server Master Instanz-Pod wird auf einem Knoten bereitgestellt, der eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-Master**" enthält. Der computepool und die Daten Pool-Pods werden auf Knoten bereitgestellt, die eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-SQL**" enthalten. Die Speicher Pool-Pods werden auf Knoten bereitgestellt, die eine Bezeichnung " **MSSQL-Cluster-Wide** " mit dem Wert " **BDC-Storage**" enthalten.
 
 Erstellen Sie in Ihrem aktuellen Verzeichnis eine Datei mit dem Namen **patch.json** und dem folgenden Inhalt:
 

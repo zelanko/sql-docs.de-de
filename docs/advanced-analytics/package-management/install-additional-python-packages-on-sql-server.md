@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: dc5addca9c9bbf01408cea89f85676813b97506c
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109757"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276462"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installieren von Python-Paketen mit sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In diesem Artikel wird beschrieben, wie Sie Funktionen im [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) -Paket verwenden, um neue Python-Pakete in einer Instanz von SQL Server Machine Learning Services zu installieren. Die Pakete, die Sie installieren, können in python-Skripts verwendet werden, die in-Database mit der T-SQL [-Anweisung SP-Execute-extern-Script-Transact-SQL](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) ausgeführt werden.
+In diesem Artikel wird beschrieben, wie Sie Funktionen im [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) -Paket verwenden, um neue Python-Pakete in einer Instanz von SQL Server Machine Learning Services zu installieren. Die von Ihnen installierten Pakete können in python-Skripts verwendet werden, die in-Database mit der [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL-Anweisung ausgeführt werden.
 
 Weitere Informationen zu Paket Speicherort und Installations Pfaden finden [Sie unter Get python Package Information](../package-management/python-package-information.md).
 
@@ -72,7 +72,7 @@ Im folgenden Beispiel fügen Sie das [Text-Tools-](https://pypi.org/project/text
 
 ### <a name="add-the-package-online"></a>Paket online hinzufügen
 
-Wenn der Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen, über Internet Zugriff verfügt, können Sie **sqlmlutils** verwenden, um das texttoolspaket und alle Abhängigkeiten über das Internet zu finden, und das Paket dann Remote auf einer SQL Server Instanz installieren.
+Wenn der Client Computer, mit dem Sie eine Verbindung mit SQL Server herstellen, über Internet Zugriff verfügt, können Sie **sqlmlutils** verwenden, um das **texttoolspaket** und alle Abhängigkeiten über das Internet zu finden, und das Paket dann Remote auf einer SQL Server Instanz installieren.
 
 1. Öffnen Sie auf dem Client Computer **python** oder eine python-Umgebung.
 
@@ -100,7 +100,7 @@ Wenn der Client Computer, den Sie für die Verbindung mit SQL Server verwenden, 
 
 #### <a name="on-the-client-computer"></a>Auf dem Client Computer
 
-Verwenden Sie **sqlmlutils** , um jedes Paket (WHL-Datei) zu installieren, das Sie im lokalen Ordner finden, den Sie erstellt haben. Es spielt keine Rolle, in welcher Reihenfolge Sie die Pakete installieren.
+Verwenden Sie **sqlmlutils** , um jedes Paket (WHL-Datei) zu installieren **, das Sie** im lokalen Ordner finden, den Sie erstellt haben. Es spielt keine Rolle, in welcher Reihenfolge Sie die Pakete installieren.
 
 In diesem Beispiel gibt es keine Abhängigkeiten von **Text Tools** , daher gibt es nur eine Datei aus dem `text-tools` Ordner, die Sie installieren können. Im Gegensatz dazu enthält ein Paket, wie z. b. **scikit-Plot** , 11 Abhängigkeiten. Sie finden also 12 Dateien im Ordner (das **scikit-Plot-** Paket und die 11 abhängigen Pakete), und Sie installieren jede dieser Dateien.
 

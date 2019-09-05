@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a1a9a3b0f712458466051ce2c67c0a725ef0a76
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957441"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276668"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>Was ist SQL Server Machine Learning Services (python und R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ In Azure SQL-Datenbank befindet sich [Machine Learning Services](https://docs.mi
 
 Mit SQL Server Machine Learning Services können Sie python-und R-Skripts in der-Datenbank ausführen. Sie können Sie verwenden, um Daten vorzubereiten und zu bereinigen, Featureentwicklung durchzuführen und Machine Learning-Modelle in einer Datenbank zu trainieren, auszuwerten und bereitzustellen. Die Funktion führt Ihre Skripts aus, in denen sich die Daten befinden, und die Übertragung der Daten über das Netzwerk auf einen anderen Server entfällt.
 
-Basis Verteilungen von Python und R sind in Machine Learning Services enthalten. Sie können Open-Source-Pakete und-Frameworks, wie z. b. pytorch, tensorflow und scikit-Learn, zusätzlich zu den Microsoft-Paketen [revoscalepy](python/ref-py-revoscalepy.md) und [microsoftml](python/ref-py-microsoftml.md) für python und [revoscaler](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), [olapr verwenden. ](r/ref-r-olapr.md)und [sqlrutils](r/ref-r-sqlrutils.md) für R.
+Basis Verteilungen von Python und R sind in Machine Learning Services enthalten. Sie können Open-Source-Pakete und Frameworks wie pytorch, tensorflow und scikit-Learn zusätzlich zu den Microsoft-Paketen [revoscalepy](python/ref-py-revoscalepy.md) und [microsoftml](python/ref-py-microsoftml.md) für python und [revoscaler](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), installieren und verwenden. [olapr](r/ref-r-olapr.md)und [sqlrutils](r/ref-r-sqlrutils.md) für R.
 
 Machine Learning Services verwendet ein Erweiterbarkeits Framework, um Python-und R-Skripts in SQL Server auszuführen. Weitere Informationen finden Sie hier:
 
@@ -59,7 +59,7 @@ Es gibt zwei Möglichkeiten, um Python-und R-Skripts in Machine Learning Service
 
 + Die gängigste Methode ist die Verwendung der gespeicherten T-SQL-Prozedur [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ Sie können auch Ihren bevorzugten python-oder R-Client verwenden und Skripts schreiben, die die Ausführung (alsremotecomputekontext bezeichnet) auf eine Remote SQL Server überführen. Weitere Informationen finden Sie unter Einrichten eines Data Science Clients für die [Python-Entwicklung](python/setup-python-client-tools-sql.md) und [R-Entwicklung](r/set-up-a-data-science-client.md) .
++ Sie können auch Ihren bevorzugten python-oder R-Client verwenden und Skripts schreiben, die die Ausführung (als *remotecomputekontext*bezeichnet) auf eine Remote SQL Server überführen. Weitere Informationen finden Sie unter Einrichten eines Data Science Clients für die [Python-Entwicklung](python/setup-python-client-tools-sql.md) und [R-Entwicklung](r/set-up-a-data-science-client.md) .
 
 <a name="packages"></a>
 
@@ -76,6 +76,13 @@ Zusätzlich zu den Unternehmens Paketen von Microsoft können Sie auch Open-Sour
 | R | [olapR](r/ref-r-olapr.md) | R-Funktionen, die für MDX-Abfragen für einen SQL Server Analysis Services OLAP-Cube verwendet werden. |
 | R | [sqlrutils](r/ref-r-sqlrutils.md) | Ein Mechanismus zur Verwendung von R-Skripts in einer gespeicherten T-SQL-Prozedur, Registrieren dieser gespeicherten Prozedur bei einer Datenbank und Ausführen der gespeicherten Prozedur aus einer [R-Entwicklungsumgebung](r/set-up-a-data-science-client.md). |
 | R | [Microsoft R Open](https://mran.microsoft.com/rro) | Microsoft r Open (MRO) ist die verbesserte Verteilung von R von Microsoft. Es handelt sich um eine umfassende Open Source-Plattform für statistische Analysen und Data Science. Es basiert auf und 100%, die mit R kompatibel sind, und bietet zusätzliche Funktionen für eine verbesserte Leistung und Reproduzierbarkeit. |
+
+Weitere Informationen zu den Paketen, die mit Machine Learning Services installiert werden und wie Sie andere Pakete installieren, finden Sie unter:
+
++ [Informationen zum Python-Paket erhalten](package-management/python-package-information.md)
++ [Installieren von Python-Paketen mit sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md)
++ [R-Paketinformationen erhalten](package-management/r-package-information.md)
++ [Installieren Sie neue R-Pakete mit sqlmlutils](package-management/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="how-do-i-get-started-with-machine-learning-services"></a>Gewusst wie Sie mit Machine Learning Services beginnen?
 
