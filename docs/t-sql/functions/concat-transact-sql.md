@@ -46,7 +46,7 @@ Ein Zeichenfolgenwert, der mit den anderen Werten verkettet werden soll. Die `CO
 *string_value*  
 Ein Zeichenfolgenwert, dessen Länge und Typ von der Eingabe abhängig sind.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 `CONCAT` lässt eine variable Anzahl von Zeichenfolgenargumenten zu und verkettet (oder verknüpft) sie in einer einzelnen Zeichenfolge. Es sind mindestens zwei Eingabewerte erforderlich. Andernfalls wird durch `CONCAT` ein Fehler ausgelöst. Alle Argumente werden von `CONCAT` vor der Verkettung implizit in Zeichenfolgentypen konvertiert. NULL-Werte werden von `CONCAT` implizit in leere Zeichenfolgen konvertiert. Wenn `CONCAT` Argumente nur mit **NULL**-Werten empfängt, wird eine leere Zeichenfolge vom Typ **varchar**(1) zurückgegeben. Die implizite Konvertierung in Zeichenfolgen erfolgt basierend auf den vorhandenen Regeln für Datentypkonvertierungen. Weitere Informationen zu Datentypkonvertierungen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 Der Rückgabetyp hängt vom Typ der Argumente ab. In der folgenden Tabelle wird die Zuordnung veranschaulicht:
