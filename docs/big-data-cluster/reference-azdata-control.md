@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158215"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304724"
 ---
 # <a name="azdata-control"></a>azdata-Steuerelement
 
@@ -47,7 +47,7 @@ Der Name der Steuerungsebene, der für kubernetes-Namespaces verwendet wird.
 #### `--config-profile -c`
 Cluster Konfigurations Profil, das zum Bereitstellen des Clusters verwendet wird: [' AKS-dev-Test ', ' kubeadm-Prod ', ' minikube-dev-Test ', ' kubeadm-dev-Test ']
 #### `--accept-eula -a`
-Stimmen Sie den Lizenzbedingungen zu? [yes/no]. Wenn Sie dieses Argument nicht verwenden möchten, können Sie die Umgebungsvariable ACCEPT_EULA auf „yes“ festlegen. Die Lizenzbedingungen für dieses Produkt finden Sie unter https://aka.ms/azdata-eula.
+Stimmen Sie den Lizenzbedingungen zu? [yes/no]. Wenn Sie dieses Argument nicht verwenden möchten, können Sie die Umgebungsvariable ACCEPT_EULA auf „yes“ festlegen. 
 #### `--node-label -l`
 Knoten Bezeichnung, die verwendet wird, um anzugeben, für welche Knoten bereitgestellt werden soll.
 #### `--force -f`
