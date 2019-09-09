@@ -32,7 +32,7 @@ ms.locfileid: "68073483"
   
     -   Den Standardkonfliktlöser. Das Verhalten des Standardkonfliktlösers hängt davon ab, ob es sich um ein Clientabonnement oder ein Serverabonnement handelt. Informationen zum Angeben eines Abonnementtyps finden Sie unter [Angeben eines Mergerabonnementtyps und einer Konfliktlösungspriorität &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md).  
   
-    -   Von Ihnen geschriebene benutzerdefinierte Konfliktlöser. Dabei kann es sich um einen Geschäftslogikhandler (in verwaltetem Code geschrieben) oder einen benutzerdefinierten COM-basierten Konfliktlöser handeln. Weitere Informationen finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)angegeben wird. Wenn Sie benutzerdefinierte Logik implementieren müssen, die für jede replizierte Zeile und nicht nur für Konfliktzeilen ausgeführt werden muss, finden Sie unter [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)angegeben wird.  
+    -   Von Ihnen geschriebene benutzerdefinierte Konfliktlöser. Dabei kann es sich um einen Geschäftslogikhandler (in verwaltetem Code geschrieben) oder einen benutzerdefinierten COM-basierten Konfliktlöser handeln. Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)angegeben wird. Wenn Sie benutzerdefinierte Logik implementieren müssen, die für jede replizierte Zeile und nicht nur für Konfliktzeilen ausgeführt werden muss, finden Sie unter [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)angegeben wird.  
   
     -   Einen COM-basierten Standardkonfliktlöser, der Bestandteil von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ist.  
   
@@ -69,9 +69,10 @@ ms.locfileid: "68073483"
   
 1.  Wenn Sie einen eigenen benutzerdefinierten Konfliktlöser registrieren möchten, erstellen Sie einen der folgenden Typen:  
   
-    -   Einen auf verwaltetem Code basierenden Konfliktlöser als Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Einen auf verwaltetem Code basierenden Konfliktlöser als Geschäftslogikhandler. Weitere Informationen finden Sie unter [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Konfliktlöser, der auf einer gespeicherten Prozedur und COM basiert. Weitere Informationen finden Sie unter [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
+    -   Konfliktlöser, der auf einer gespeicherten Prozedur und COM basiert. Weitere Informationen finden Sie unter [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel
+](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
 2.  Um zu bestimmen, ob der gewünschte Konfliktlöser bereits registriert ist, führen Sie auf dem Verleger für eine beliebige Datenbank [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) aus. Daraufhin werden eine Beschreibung des benutzerdefinierten Konfliktlösers sowie der Klassenbezeichner (CLSID) für jeden auf dem Verteiler registrierten COM-basierten Konfliktlöser bzw. Informationen zur verwalteten Assembly für jeden auf dem Verteiler registrierten Geschäftslogikhandler angezeigt.  
   
