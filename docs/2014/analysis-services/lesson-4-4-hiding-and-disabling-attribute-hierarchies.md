@@ -77,7 +77,7 @@ ms.locfileid: "69530855"
   
      Die folgende Abbildung zeigt die **AttributeHierarchyEnabled** -Eigenschaft mit dem Wert False für die ausgewählten Attribute.  
   
-     ![Attributehierarchyaktivierte Eigenschaft ist auf false festgelegt] . (../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Attributehierarchyaktivierte Eigenschaft ist auf false festgelegt") .  
+     ![Attributehierarchyaktivierte Eigenschaft ist auf false festgelegt](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Attributehierarchyaktivierte Eigenschaft ist auf false festgelegt") .  
   
 5.  Klicken Sie im Menü **Erstellen** auf **Analysis Services Tutorial bereitstellen**.  
   
