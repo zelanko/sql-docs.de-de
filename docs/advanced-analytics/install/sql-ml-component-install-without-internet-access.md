@@ -138,7 +138,7 @@ Es wird empfohlen, dass Sie das neueste kumulative Update sowohl auf die Datenba
 
 6. Führen Sie das Setup aus. Akzeptieren Sie die Lizenzbedingungen, und überprüfen Sie auf der Seite Funktionsauswahl die Funktionen, für die kumulative Updates angewendet werden. Es sollte jede installierte Funktion für die aktuelle Instanz angezeigt werden, einschließlich Machine Learning-Features.
 
-    ![Wählen Sie Features aus der Funktionsstruktur aus] . (media/cumulative-update-feature-selection.png "Funktionsliste")
+    ![Wählen Sie Features aus der Funktionsstruktur aus](media/cumulative-update-feature-selection.png "Funktionsliste")
 
 5. Fahren Sie mit dem Assistenten fort, und akzeptieren Sie die Lizenzbedingungen für R-und python-Distributionen. Während der Installation werden Sie aufgefordert, den Speicherort des Ordners mit den aktualisierten CAB-Dateien auszuwählen.
 

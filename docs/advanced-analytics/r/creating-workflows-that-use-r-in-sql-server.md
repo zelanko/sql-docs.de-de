@@ -135,7 +135,7 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![Generiert ein lineares Modell] . (../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Generiert ein lineares Modell") .
+![Generiert ein lineares Modell](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "Generiert ein lineares Modell")
 
 Nachdem diese Aufgabe abgeschlossen ist, können Sie als Prüfpunkt die ssis_iris_models Abfragen, um zu sehen, dass Sie ein binäres Modell enthält.
 

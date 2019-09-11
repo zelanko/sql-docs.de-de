@@ -56,7 +56,7 @@ ms.locfileid: "70175836"
   
  Der erste Schritt dieses Prozesses ist das Erstellen eines Azure-Kontos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet den **Azure Storage-Kontonamen** und seine **Zugriffsschlüssel** Werte, um BLOB-BLOB-Speicherdienste zu authentifizieren und zu schreiben und zu lesen. Diese Authentifizierungsinformationen werden in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen gespeichert und bei Sicherungs- und Wiederherstellungsvorgängen verwendet. Eine umfassende Exemplarische Vorgehensweise zum Erstellen eines Speicher Kontos und zum Durchführen einer einfachen Wiederherstellung finden [Sie unter Tutorial using Azure Storage Service for SQL Server Backup and Restore](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
- ![Zuordnung von Speicherkonto zu SQL-Anmelde] Informationen (../../tutorials/media/backuptocloud-storage-credential-mapping.gif "Zuordnung von Speicherkonto zu SQL-Anmelde") Informationen  
+ ![Zuordnung von Speicherkonto zu SQL-Anmelde Informationen](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "Zuordnung von Speicherkonto zu SQL-Anmelde Informationen")  
   
 ###  <a name="Blob"></a>Azure BLOB Storage-Dienst  
  **Speicherkonto:** Das Speicherkonto ist der Ausgangspunkt für alle Speicherdienste. Um auf den Azure BLOB Storage-Dienst zuzugreifen, erstellen Sie zunächst ein Azure-Speicherkonto. Der **Speicherkonto Name** und seine **Zugriffsschlüssel** Eigenschaften sind erforderlich, um sich beim Azure BLOB Storage-Dienst und dessen Komponenten zu authentifizieren.  

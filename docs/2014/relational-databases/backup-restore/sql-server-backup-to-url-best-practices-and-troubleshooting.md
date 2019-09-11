@@ -94,7 +94,7 @@ ms.locfileid: "70175962"
 -   Bei der Wiederherstellung von einer komprimierten Sicherung kann eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt werden:  
   
     -   **SqlException 3284 aufgetreten. Zunehmen 16-Status: 5**  
-        **Die Nachrichten dateinmarkierung auf https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak dem Gerät "" ist nicht ausgerichtet. Wiederholen Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des backaufgeregt verwendet wurde: "65536" sieht wie ein möglicher Wert aus.**  
+        **Die Nachrichten dateinmarkierung auf'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak 'dem Gerät ist nicht ausgerichtet. Wiederholen Sie die RESTORE-Anweisung mit derselben Blockgröße, die zum Erstellen des backaufgeregt verwendet wurde: "65536" sieht wie ein möglicher Wert aus.**  
   
          Um diesen Fehler zu beheben, übergeben Sie die `BACKUP`-Anweisung erneut mit `BLOCKSIZE = 65536`.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70175962"
   
  Proxyserver können über Einstellungen verfügen, die die Anzahl der Verbindungen pro Minute begrenzen. Der URL-Sicherungsprozess ist ein Multithreadprozess und kann diese Begrenzung folglich überschreiten. In diesem Fall wird die Verbindung vom Proxyserver abgebrochen. Um das Problem zu beheben, ändern Sie die Proxyeinstellungen, damit der Proxy von SQL Server nicht verwendet wird.   Im Folgenden einige Beispiele für Fehlertypen oder -meldungen, die im Fehlerprotokoll angezeigt werden können:  
   
--   Fehler beim Schreiben http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak in "": Bei der URL-Sicherung wurde eine Ausnahme vom Remote Endpunkt empfangen. Ausnahme Meldung: Daten können nicht aus der Transport Verbindung gelesen werden: Die Verbindung wurde geschlossen.  
+-   Fehler beim Schreiben'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'in: Bei der URL-Sicherung wurde eine Ausnahme vom Remote Endpunkt empfangen. Ausnahme Meldung: Daten können nicht aus der Transport Verbindung gelesen werden: Die Verbindung wurde geschlossen.  
   
 -   Nicht behebbarer E/A-Fehler für die Datei "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: " Error could not be gathered from Remote Endpoint. (Fehler konnte am Endpunkt nicht erfasst werden.)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "70175962"
   
      BACKUP DATABASE wird fehlerbedingt beendet.  
   
--   Backupiorequest:: reportioerror: Schreibfehler auf dem Sicherungsmedium http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak "". Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahme Meldung: Daten können nicht aus der Transport Verbindung gelesen werden: Die Verbindung wurde geschlossen.  
+-   Backupiorequest:: reportioerror: Schreibfehler auf dem Sicherungsmedium'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. Betriebssystemfehler: Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahme Meldung: Daten können nicht aus der Transport Verbindung gelesen werden: Die Verbindung wurde geschlossen.  
   
  Wenn Sie die ausführliche Protokollierung mit Ablaufverfolgungsflag 3051 aktivieren, können auch folgende Meldungen in den Protokollen angezeigt werden:  
   

@@ -60,7 +60,7 @@ ms.locfileid: "68809854"
   
  Das Beispiel im Diagramm veranschaulicht die Verwendung der Daten, wenn drei Aufteilungen angegeben werden.  
   
- Segmentierung von Daten in der ![Kreuz Validierung] Segmentierung von Daten in der (../media/xvoverviewmain.gif "Kreuz Validierung")  
+ ![Segmentierung von Daten in der Kreuz Validierung](../media/xvoverviewmain.gif "Segmentierung von Daten in der Kreuz Validierung")  
   
  In dem Szenario in dem Diagramm enthält die Miningstruktur ein Zurückhaltungsdataset, das zu Testzwecken verwendet wird, das Testdataset wurde jedoch noch nicht für die Kreuzvalidierung hinzugefügt. Als Ergebnis werden alle Daten in dem Trainingsdataset, d. h. 70 Prozent der Daten in der Miningstruktur, für die Kreuzvalidierung verwendet. Der Bericht für die Kreuzvalidierung zeigt die Gesamtzahl der in jeder Partition verwendeten Fälle an.  
   

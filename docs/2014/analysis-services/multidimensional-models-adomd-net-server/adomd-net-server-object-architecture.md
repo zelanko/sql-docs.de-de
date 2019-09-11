@@ -26,7 +26,7 @@ ms.locfileid: "68887971"
 > [!NOTE]  
 >  Um den `Microsoft.AnalysisServices.AdomdServer`-Namespace (und diese Objekte) verwenden zu können, muss eine Referenz auf msmgdsrv.dll zum Projekt der benutzerdefinierten Funktion oder der gespeicherten Prozedur hinzugefügt werden.  
   
- ![Zeigt die Objektbeziehungen in ADOMD.NET Server an] . (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Zeigt die Objektbeziehungen in ADOMD.NET Server an") .  
+ ![Zeigt die Objektbeziehungen in ADOMD.NET Server an](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "Zeigt die Objektbeziehungen in ADOMD.NET Server an")  
 ADOMD.NET-Objektmodell  
   
  Die Interaktion mit der ADOMD.NET-Objekthierarchie beginnt normalerweise mit einem oder mehreren der Objekte auf der obersten Ebene, wie in der folgenden Tabelle erläutert.  
