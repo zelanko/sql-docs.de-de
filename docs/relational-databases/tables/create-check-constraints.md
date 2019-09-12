@@ -27,7 +27,7 @@ ms.locfileid: "68085733"
 # <a name="create-check-constraints"></a>Erstellen von CHECK-Einschränkungen
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in einer Tabelle eine CHECK-Einschränkung erstellen, um die Datenwerte anzugeben, die in einer oder mehreren Spalten in [!INCLUDE[tsql](../../includes/tsql-md.md)]akzeptiert werden.  
+  Sie können mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in einer Tabelle eine CHECK-Einschränkung erstellen, um die Datenwerte anzugeben, die in einer oder mehreren Spalten in [!INCLUDE[tsql](../../includes/tsql-md.md)] akzeptiert werden.  
   
  **In diesem Thema**  
   
@@ -52,9 +52,9 @@ ms.locfileid: "68085733"
   
 #### <a name="to-create-a-new-check-constraint"></a>So erstellen Sie eine neue CHECK-Einschränkung  
   
-1.  Erweitern Sie im **Objekt-Explorer**die Tabelle, der Sie eine CHECK-Einschränkung hinzufügen möchten, klicken Sie mit der rechten Maustaste auf **Einschränkungen** , und klicken Sie auf **Neue Einschränkung**.  
+1.  Erweitern Sie im **Objekt-Explorer**die Tabelle, der Sie eine CHECK-Einschränkung hinzufügen möchten, klicken Sie mit der rechten Maustaste auf **Einschränkungen**, und klicken Sie auf **Neue Einschränkung**.  
   
-2.  Klicken Sie im Dialogfeld **Einschränkungen überprüfen** auf das Feld **Ausdruck** und dann auf die Auslassungspunkte **(…)** .  
+2.  Klicken Sie im Dialogfeld **Einschränkungen überprüfen** auf das Feld **Ausdruck** und dann auf die Auslassungspunkte **(…)**.  
   
 3.  Geben Sie im Dialogfeld **CHECK-Einschränkungen** die SQL-Ausdrücke für die CHECK-Einschränkungen ein. Um die Einträge in der Spalte `SellEndDate` der Tabelle `Product` auf einen Wert zu beschränken, der entweder größer oder gleich dem Datum in der Spalte `SellStartDate` ist oder ein NULL-Wert ist, geben Sie z. B. Folgendes ein:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68085733"
   
 5.  In der Kategorie **Identität** können Sie den Namen der CHECK-Einschränkung ändern und eine Beschreibung (erweiterte Eigenschaft) für die Einschränkung hinzufügen.  
   
-6.  In der **Tabellen-Designer** -Kategorie können Sie festlegen, unter welchen Bedingungen die Einschränkung erzwungen werden soll.  
+6.  In der **Tabellen-Designer**-Kategorie können Sie festlegen, unter welchen Bedingungen die Einschränkung erzwungen werden soll.  
   
     |**Zweck:**|**Wählen Sie in den folgenden Feldern Ja aus:**|  
     |-------------|---------------------------------------------|  
