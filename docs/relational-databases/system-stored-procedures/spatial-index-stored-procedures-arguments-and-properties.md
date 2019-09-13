@@ -59,7 +59,7 @@ ms.locfileid: "69028899"
 `[ @xml_output = ] 'xml_output'`Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *xml_output* ist vom Typ **XML** und hat keinen Standardwert.  
   
 ## <a name="properties"></a>Eigenschaften  
- Legen Sie  **\@verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. Verbo* Output > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  **\@**  
+ Legen Sie  **\@verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. Verbo Output > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  **\@**  
   
  **Base_Table_Rows**  
  Anzahl der Zeilen in der Basistabelle. Der Wert ist " **bigint**".  
