@@ -268,7 +268,7 @@ ms.locfileid: "68890281"
   
      Öffnen Sie die gewünschte SharePoint-Website in Ihrem Browser. Zum Beispiel: http://\<servername>/sites/bi  
   
-2.  Klicken Sie auf **Einstellungen**![SharePoint]-Einstellungen(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen").  
+2.  Klicken Sie auf **Einstellungen**![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen").  
   
 3.  Klicken Sie auf **Siteeinstellungen**.  
   
