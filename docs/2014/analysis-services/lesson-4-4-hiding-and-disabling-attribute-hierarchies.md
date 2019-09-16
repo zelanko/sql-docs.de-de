@@ -107,7 +107,7 @@ ms.locfileid: "69530855"
   
      Im folgenden Bild wird die **AttributeHierarchyVisible** -Eigenschaft mit dem Wert False gezeigt.  
   
-     ![AttributeHierarchyVisible-Eigenschaft ist auf false festgelegt] . (../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible-Eigenschaft ist auf false festgelegt") .  
+     ![AttributeHierarchyVisible-Eigenschaft ist auf false festgelegt](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible-Eigenschaft ist auf false festgelegt") .  
   
 5.  Ziehen Sie das **Postal Code** -Attribut aus dem Bereich **Attribute** in die **Customer Geography** -Benutzerhierarchie im Bereich **Hierarchien und Ebenen** direkt unter der **City** -Ebene.  
   
