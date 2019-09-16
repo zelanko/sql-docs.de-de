@@ -52,7 +52,7 @@ Der Replikationsmonitor stellt die folgenden Registerkarten mit Informationen zu
 3.  Wenn Sie Informationen zu Abonnements aufrufen möchten, klicken Sie auf die Registerkarte **Alle Abonnements** und anschließend mit der rechten Maustaste auf das Abonnement. Klicken Sie dann auf **Eigenschaften**. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. 
 4.  Klicken Sie auf die Registerkarte **Agents**, um Informationen zu Agents anzuzeigen. Sie können auf dieser Registerkarte auch auf detailliertere Informationen zugreifen und Aufgaben ausführen. 
 5.  Klicken Sie auf die Registerkarte **Warnungen**, um Informationen zu Agent-Warnungen und Schwellenwerten anzuzeigen. Weitere Informationen finden Sie unter [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
-6.  Klicken Sie auf die Registerkarte **Überwachungstoken**, um Informationen zu Überwachungstoken anzuzeigen. Weitere Informationen zu Überwachungstoken finden Sie unter [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Klicken Sie auf die Registerkarte **Überwachungstoken**, um Informationen zu Überwachungstoken anzuzeigen. Weitere Informationen zu Überwachungstoken finden Sie unter [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="for-a-publisher"></a>Verleger 
 
