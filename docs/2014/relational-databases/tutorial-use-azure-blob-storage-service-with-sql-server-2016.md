@@ -39,7 +39,7 @@ ms.locfileid: "70176085"
  **[Lektion 4: Erstellen einer Datenbank in Azure Storage](../relational-databases/lesson-3-database-backup-to-url.md)**  
  In dieser Lektion erstellen Sie eine Datenbank in Azure Storage mithilfe der Option Create Database filename.  
   
- **Lektion 5. &#40;Optionales&#41; Verschlüsseln der Datenbank mit TDE**  
+ **[Lektion 5. &#40;Optionales&#41; Verschlüsseln der Datenbank mit TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  In dieser Lektion verschlüsseln Sie die Datenbank mithilfe einer transparenten Datenverschlüsselung (TDE) und eines Serverzertifikats.  
   
  **[Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
