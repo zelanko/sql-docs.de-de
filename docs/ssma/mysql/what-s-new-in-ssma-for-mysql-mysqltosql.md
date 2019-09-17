@@ -2,23 +2,30 @@
 title: Neues in SSMA für MySQL (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 900ea1a83e8f06916bf48a003d99584113a8304b
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811492"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745510"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Neuerungen in SSMA für MySQL (MySqlToSql)
 
 In diesem Artikel werden SQL Server Migration Assistant (SSMA) für MySQL-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+Die Version Version 8.4 von SSMA für MySQL wurde durch gezielte Korrekturen ergänzt, die zur Behebung von Problemen bei der Barrierefreiheit entwickelt wurden, und zum Beheben eines Fehlers im Zusammenhang mit den maximalen Index Spalten (um 32 anstelle von 16) für SQL Server 2016 und höhere Versionen zuzulassen.
+
+> [!IMPORTANT]
+> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -26,9 +33,6 @@ Das v 8.3-Release von SSMA für MySQL wurde durch gezielte Korrekturen verbesser
 
 * Behandeln von Problemen mit Barrierefreiheit
 * Grundlegende Unterstützung für den Typ "hierarchyid" in SQL Server hinzufügen
-
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -40,9 +44,6 @@ Die Version 8.2 von SSMA für MySQL wurde durch eine Reihe von Korrekturen ergä
 
 > [!NOTE]
 > Ein bekanntes Problem bei der automatischen Aktualisierung kann zu einem Fehler bei einem Update von SSMA v 8.1 auf v 8.2 führen. Wenn dieser Fehler auftritt, laden Sie die neue Version herunter, und installieren Sie Sie manuell.
-
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 

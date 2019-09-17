@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe629bc5d165489f733d0250b0f60bea8a3a677a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141278"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211439"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Ruft eine oder mehrere Nachrichten aus einer Warteschlange ab. Je nach den Einstellungen für die Warteschlange wird entweder die Nachricht aus der Warteschlange entfernt oder der Status der Nachricht in der Warteschlange aktualisiert.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68141278"
  TIMEOUT *timeout*  
  Gibt in Millisekunden an, wie lange die Anweisung auf eine Nachricht warten soll. Diese Klausel kann nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn die Klausel nicht angegeben wird oder das Timeout den Wert –**1** hat, dann ist die Wartezeit unbegrenzt. Läuft das Timeout ab, gibt RECEIVE ein leeres Resultset zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der RECEIVE-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  

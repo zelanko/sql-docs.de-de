@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6928832c352740774aeb1711c9d064c92731585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf05f923a5a7a6333bdca7278efae918aed71f32
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132063"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211422"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Gibt den Status der letzten Übermittlung für eine Seite einer Konversation zurück.  
   
@@ -53,7 +53,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>Rückgabetypen  
  **nchar**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Gibt eine Zeichenfolge zurück, die eine Beschreibung des Status des letzten Übermittlungsversuchs für eine angegebene Konversation enthält. Gibt eine leere Zeichenfolge zurück, wenn der letzte Übermittlungsversuch erfolgreich war, falls noch kein Übermittlungsversuch ausgeführt wurde oder falls *conversation_handle* nicht vorhanden ist.  
   
  Die von dieser Funktion zurückgegebenen Informationen sind mit den in der last_transmission_error-Spalte der Verwaltungssicht sys.transmission_queue angezeigten Informationen identisch. Diese Funktion kann jedoch zum Suchen nach dem Übermittlungsstatus von Konversationen verwendet werden, für die zurzeit keine Meldungen in der Übermittlungswarteschlange vorhanden sind.  

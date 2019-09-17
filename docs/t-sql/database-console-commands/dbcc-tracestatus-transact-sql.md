@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040558"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211239"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Zeigt den Status der Ablaufverfolgungsflags an.
   
@@ -70,7 +70,7 @@ In der folgenden Tabelle finden Sie eine Beschreibung der Informationen des Resu
   
 DBCC TRACESTATUS gibt eine Spalte für die Nummer des Ablaufverfolgungsflags und eine Spalte für den Status zurück. Zeigt an, ob das Ablaufverfolgungsflag auf ON (1) oder OFF (0) festgelegt ist. Die Spaltenüberschrift für die Nummer des Ablaufverfolgungsflags lautet entweder **Global Trace Flag** oder **Session Trace Flag**, je nachdem, ob Sie den Status eines Ablaufverfolgungsflags vom Typ „Global“ oder „Session“ überprüfen.
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt es zwei Typen von Ablaufverfolgungsflags: Sitzung und global. Ablaufverfolgungsflags des Typs Session werden für eine Verbindung aktiviert und sind nur für diese Verbindung sichtbar. Globale Ablaufverfolgungsflags werden auf Serverebene festgelegt und sind für jede Verbindung auf dem Server sichtbar.
   
 ## <a name="permissions"></a>Berechtigungen  

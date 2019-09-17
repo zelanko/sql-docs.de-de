@@ -1,5 +1,5 @@
 ---
-title: Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung) | Microsoft-Dokumentation
+title: Einschätzen der Dienst Unterbrechung während des Rollenwechsels (Daten Bank Spiegelung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806848"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874447"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
   Während eines Rollenwechsels ist der Zeitraum, für den die Datenbankspiegelung außer Dienst ist, abhängig von der Art des Rollenwechsels und vom Grund für den Rollenwechsel.  
@@ -37,7 +37,7 @@ ms.locfileid: "62806848"
 -   Bei einem manuellen Failover wird nur die für das Failover der Datenbank erforderliche Zeit nach dem Failoverbefehl ausgegeben.  
   
 ## <a name="error-detection"></a>Fehlererkennung  
- Die Zeit, die das System zum Erkennen eines Fehlers benötigt, hängt von der Art des Fehlers ab. Beispielsweise wird ein Netzwerkfehler nahezu sofort bemerkt, während es standardmäßig 10 Sekunden dauert, um festzustellen, dass ein Server hängt, was dem Standardtimeout entspricht.  
+ Die Zeit, die das System zum bemerken eines Fehlers benötigt, hängt vom Typ des Fehlers ab. Beispielsweise wird ein Netzwerkfehler nahezu sofort bemerkt, während ein nicht reagierendem Server 10 Sekunden (mit dem Standard Timeout) benötigt.  
   
  Informationen zu Fehlern, die während einer Datenbank-Spiegelungssitzung zu Problemen führen können, und zur Timeouterkennung im Modus für hohe Sicherheit mit automatischem Failover finden Sie unter [Mögliche Fehler während der Datenbankspiegelung](possible-failures-during-database-mirroring.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62806848"
  Die Failoverzeit setzt sich hauptsächlich aus der Zeit zusammen, die der frühere Spiegelserver benötigt, um ein Rollforward für Protokolle in der Wiederholungswarteschlange auszuführen, sowie einem kurzen zusätzlichen Zeitraum (weitere Informationen zur Verarbeitung von Protokolldatensätzen durch den Spiegelserver finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)). Informationen zum Schätzen der Failoverzeit finden Sie unter "Schätzen der Rollforwardrate für das Failover" weiter unten in diesem Thema.  
   
 > [!IMPORTANT]  
->  Wenn ein Failover während einer Transaktion auftritt, in der ein Index oder eine Tabelle erstellt und anschließend geändert wird, kann das Failover mehr Zeit als gewöhnlich in Anspruch nehmen.  Beispielsweise kann ein Failover während der folgenden Reihen von Vorgängen Failoverzeit verlängern:  BEGIN TRANSACTION, CREATE INDEX für eine Tabelle, und wählen Sie in der Tabelle. Die Möglichkeit einer erhöhten Failoverzeit während einer solchen Transaktion bleibt bis zu ihrem Abschluss durch eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung bestehen.  
+>  Wenn ein Failover während einer Transaktion auftritt, in der ein Index oder eine Tabelle erstellt und anschließend geändert wird, kann das Failover mehr Zeit als gewöhnlich in Anspruch nehmen.  So kann ein Failover während des folgenden Ablaufs von Vorgängen die Failoverzeit verlängern:  BEGIN TRANSACTION, CREATE INDEX in einer Tabelle und SELECT INTO für die Tabelle. Die Möglichkeit einer erhöhten Failoverzeit während einer solchen Transaktion bleibt bis zu ihrem Abschluss durch eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung bestehen.  
   
 ### <a name="the-redo-queue"></a>Wiederholungswarteschlange  
  Um ein Rollforward für die Datenbank auszuführen, müssen die Protokolldatensätze angewandt werden, die sich derzeit in der Wiederholungswarteschlange auf dem Spiegelserver befinden. Die *Wiederholungswarteschlange* besteht aus den Protokolldatensätzen, die auf den Datenträger des Spiegelservers geschrieben wurden, für die aber noch kein Rollforward in der Spiegeldatenbank ausgeführt wurde.  

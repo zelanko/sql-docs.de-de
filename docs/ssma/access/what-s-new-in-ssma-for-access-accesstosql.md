@@ -2,23 +2,30 @@
 title: Neues in SSMA für Access (Access Token SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 39f8d7da95fc8e2102d1208216a2eb43bb038fea
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632069"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745435"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Neues in SSMA für Access (Access Token SQL)
 
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Zugriffs Änderungen in jeder Version aufgeführt.  
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+Die Version 8.4 von SSMA für Access wurde durch gezielte Korrekturen ergänzt, die zur Behebung von Problemen bei der Barrierefreiheit entwickelt wurden, und zum Beheben eines Fehlers im Zusammenhang mit den maximalen Index Spalten (um 32 anstelle von 16) für SQL Server 2016 und höhere Versionen zuzulassen.
+
+> [!IMPORTANT]
+> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,18 +34,12 @@ Das v 8.3-Release von SSMA für Access wurde durch gezielte Korrekturen verbesse
 * Behandeln von Problemen mit Barrierefreiheit
 * Grundlegende Unterstützung für den Typ "hierarchyid" in SQL Server hinzufügen
 
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
-
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
 Die Version 8.2 von SSMA für Access wurde durch gezielte Korrekturen ergänzt, die zur Verbesserung der Qualität und der konvertierungsmetriken entwickelt wurden.
 
 > [!NOTE]
 > Ein bekanntes Problem bei der automatischen Aktualisierung kann zu einem Fehler bei einem Update von SSMA v 8.1 auf v 8.2 führen. Wenn dieser Fehler auftritt, laden Sie die neue Version herunter, und installieren Sie Sie manuell.
-
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 

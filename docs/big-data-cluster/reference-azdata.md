@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f4cecd27865b069764944021639ae1a2e553d76
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304719"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70391950"
 ---
 # <a name="azdata"></a>azdata
 
@@ -89,7 +89,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

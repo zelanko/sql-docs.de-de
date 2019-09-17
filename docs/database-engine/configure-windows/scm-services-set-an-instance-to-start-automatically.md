@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 28c13ad423cb8ba01e91c7d8810723538ec41eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025648"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212420"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM-Dienste: Festlegen einer SQL Server-Instanz auf den automatischen Start
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68025648"
   
 3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf den Namen der Instanz, die automatisch gestartet werden soll, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Legen Sie im Dialogfeld **SQL Server \<***Instanzname***> Eigenschaften** unter **Startmodus** die Option **Automatisch** fest.  
+4.  Legen Sie im Dialogfeld **SQL Server\<**_Instanzname_**> Eigenschaften** unter **Startmodus** die Option **Automatisch** fest.  
   
 5.  Klicken Sie auf **OK**, und schließen Sie dann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager.  
   

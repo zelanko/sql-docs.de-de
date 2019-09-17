@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76dd0507336a110337f01509440d4ad64afc085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e4deadd4f48457557019ac02337133466b3df33
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129436"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211347"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Verschiebt eine Konversation in eine andere Konversationsgruppe.  
   
@@ -53,11 +53,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Eine Variable oder Konstante mit dem Bezeichner der Konversationsgruppe, in die die Konversation verschoben werden soll. *conversation_group_id* muss dem Typ **uniqueidentifier** entsprechen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Mit der MOVE CONVERSATION-Anweisung wird die durch *conversation_handle* angegebene Konversation in die durch *conversation_group_id* identifizierte Konversationsgruppe verschoben. Dialoge können nur zwischen Konversationsgruppen umgeleitet werden, die derselben Warteschlange zugeordnet sind.  
   
 > [!IMPORTANT]  
->  Falls die MOVE CONVERSATION-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorherige Anweisung mit einem Semikolon ( **;** ) enden, dem Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  
+>  Falls die MOVE CONVERSATION-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorherige Anweisung mit einem Semikolon (**;**) enden, dem Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  
   
  Mit der MOVE CONVERSATION-Anweisung werden die *conversation_handle* zugeordnete Konversationsgruppe sowie die durch *conversation_group_id* angegebene Konversationsgruppe gesperrt, bis ein Commit oder ein Rollback für die Transaktion, die die Anweisung enthält, ausgeführt wird.  
   

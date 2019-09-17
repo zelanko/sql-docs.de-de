@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153438"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878716"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Bereitstellen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
@@ -120,7 +120,7 @@ Sie haben auch die Möglichkeit, ein eigenes Bereitstellungsprofil anzupassen. D
 1. Sie können die Einstellungen in Ihrem Bereitstellungsprofil anpassen, indem Sie die Konfigurationsdatei für Bereitstellungen in einem Tool bearbeiten. Dieses muss sich zur Bearbeitung von JSON-Dateien eignen. Für diese Aufgabe können Sie beispielweise VS Code verwenden. Zur skriptbasierten Automatisierung können Sie auch das benutzerdefinierte Bereitstellungsprofil mit dem Befehl **azdata bdc config** bearbeiten. Mit dem folgenden Befehl wird z. B. ein benutzerdefiniertes Bereitstellungsprofil angepasst. Dabei wird der Standardname des bereitgestellten Clusters (**mssql-cluster**) in **test-cluster** geändert:  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -147,7 +147,7 @@ Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet,
 | **CONTROLLER_USERNAME** | Erforderlich |Der Benutzername für den Clusteradministrator. |
 | **CONTROLLER_PASSWORD** | Erforderlich |Das Kennwort für den Clusteradministrator. |
 | **MSSQL_SA_PASSWORD** | Erforderlich |Das Kennwort des Systemadministrators für die SQL-Masterinstanz. |
-| **KNOX_PASSWORD** | Erforderlich |Das Kennwort für den Knox-Benutzer. |
+| **KNOX_PASSWORD** | Erforderlich |Das Kennwort für den Knox- **root** -Benutzer. Beachten Sie, dass bei einer Standard Authentifizierung nur der Benutzer, der für Knox unterstützt wird, **root**ist.|
 | **ACCEPT_EULA**| Erforderlich für die erste Verwendung von `azdata`| Erfordert keinen Wert. Wenn dieser Wert als Umgebungsvariable festgelegt ist, werden die Lizenzbedingungen für SQL Server und `azdata` akzeptiert. Wenn er nicht als Umgebungsvariable festgelegt ist, können Sie `--accept-eula` angeben, wenn Sie den Befehl `azdata` zum ersten Mal verwenden.|
 | **DOCKER_USERNAME** | Optional | Der Benutzername, mit dem auf Containerimages zugegriffen wird, wenn diese in einem privaten Repository gespeichert sind. Weitere Informationen darüber, wie Sie ein privates Docker-Repository zur Bereitstellung von Big-Data-Clustern nutzen, finden Sie im Artikel [Offlinebereitstellungen](deploy-offline.md).|
 | **DOCKER_PASSWORD** | Optional |Das Kennwort, mit dem auf das oben erwähnte private Repository zugegriffen wird. |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> Sie müssen den **root** -Benutzer für das Knox-Gateway mit dem obigen Kennwort verwenden. **root** ist der einzige Benutzer, der in dieser Standard Authentifizierung (Benutzername/Kennwort) unterstützt wird. Für SQL Server Master lautet der Benutzername, der für die Verwendung mit dem obigen Kennwort bereitgestellt wird, " **sa**".
+
 
 Nachdem Sie die Umgebungsvariablen festgelegt haben, müssen Sie `azdata bdc create` ausführen, um die Bereitstellung auszulösen. Im folgenden Beispiel wird das oben erstellte Clusterkonfigurationsprofil verwendet:
 

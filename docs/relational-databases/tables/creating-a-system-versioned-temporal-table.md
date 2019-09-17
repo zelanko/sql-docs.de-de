@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 679260f7c8a7f50eb9a3f638f3547c82ac488cef
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903588"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238742"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Erstellen einer temporalen Tabelle mit Systemversionsverwaltung
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,18 +34,17 @@ ms.locfileid: "69903588"
   
 ```  
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
 )    
-WITH (SYSTEM_VERSIONING = ON)   
-;  
-```  
+WITH (SYSTEM_VERSIONING = ON);
+```
   
 ### <a name="important-remarks"></a>Wichtige Hinweise  
   
@@ -57,7 +56,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Eine anonyme Verlaufstabelle wird automatisch im gleichen Schema wie die aktuelle oder temporale Tabelle erstellt.  
   
--   Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.  
+-   Der Name der anonymen Verlaufstabelle weist das folgende Format auf: *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]*. Das Suffix ist optional und wird nur hinzugefügt, wenn der erste Teil des Tabellennamens nicht eindeutig ist.  
   
 -   Die Verlaufstabelle wird als eine Rowstore-Tabelle erstellt. PAGE-Komprimierung wird angewendet, wenn möglich, andernfalls wird die Verlaufstabelle nicht komprimiert. Einige Tabellenkonfigurationen, z. B. SPARSE-Spalten, lassen beispielsweise keine Komprimierung zu.  
   
@@ -68,22 +67,18 @@ WITH (SYSTEM_VERSIONING = ON)
 ## <a name="creating-a-temporal-table-with-a-default-history-table"></a>Erstellen einer temporalen Tabelle mit einer Standardverlaufstabelle  
  Das Erstellen einer temporalen Tabelle mit einer Standardverlaufstabelle ist eine praktische Möglichkeit, wenn Sie die Benennung steuern möchten, die Verlaufstabelle aber trotzdem mit der Standardkonfiguration vom System erstellt werden soll. Im folgenden Beispiel wird eine neue Tabelle mit aktivierter Systemversionsverwaltung erstellt, wobei der Name der Verlaufstabelle explizit definiert wird.  
   
-```  
+```
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
-)   
-WITH    
-   (   
-      SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory)   
-   )   
-;  
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL
+  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 ```  
   
 ### <a name="important-remarks"></a>Wichtige Hinweise  
@@ -99,34 +94,35 @@ WITH
  Das Erstellen einer temporalen Tabelle mit einer benutzerdefinierten Verlaufstabelle ist eine praktische Möglichkeit, wenn der Benutzer eine Verlaufstabelle mit bestimmten Speicheroptionen und zusätzlichen Indizes festlegen möchte. Im folgenden Beispiel wird eine benutzerdefinierte Verlaufstabelle mit einem Schema erstellt, das auf die zu erstellende temporale Tabelle abgestimmt ist. Für diese benutzerdefinierte Verlaufstabelle werden ein gruppierter Columnstore-Index und ein weiterer nicht gruppierter Rowstore-Index (B-Struktur) für Punktsuchen erstellt. Nach Erstellung der benutzerdefinierten Verlaufstabelle wird die temporale Tabelle mit Systemversionsverwaltung unter Angabe der benutzerdefinierten Verlaufstabelle als Standardverlaufstabelle erstellt.  
   
 ```  
-CREATE TABLE DepartmentHistory   
-(    
-     DeptID int NOT NULL  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 NOT NULL  
-   , SysEndTime datetime2 NOT NULL   
-);   
-GO   
-CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory   
-   ON DepartmentHistory;   
-CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS   
-   ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);   
-GO   
+CREATE TABLE DepartmentHistory
+(
+    DeptID INT NOT NULL
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 NOT NULL
+  , SysEndTime DATETIME2 NOT NULL
+);
+GO
+
+CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory
+    ON DepartmentHistory;
+CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS
+    ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);
+GO
+
 CREATE TABLE Department   
-(    
+(
     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL     
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
-)    
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))   
-;  
-```  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL     
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
+```
   
 ### <a name="important-remarks"></a>Wichtige Hinweise  
   
@@ -155,18 +151,19 @@ Angenommen, Sie verfügen über eine Gruppe von Tabellen, bei denen die Versions
   
 ```  
 CREATE SCHEMA History;   
-GO   
+GO
+
+ALTER TABLE InsurancePolicy
+    ADD   
+        SysStartTime DATETIME2(0) GENERATED ALWAYS AS ROW START HIDDEN
+            CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
+      , SysEndTime DATETIME2(0) GENERATED ALWAYS AS ROW END HIDDEN
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2 (0), '9999-12-31 23:59:59'),
+        PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
+GO
+
 ALTER TABLE InsurancePolicy   
-   ADD   
-      SysStartTime datetime2(0) GENERATED ALWAYS AS ROW START HIDDEN    
-           CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()  
-      , SysEndTime datetime2(0) GENERATED ALWAYS AS ROW END HIDDEN    
-           CONSTRAINT DF_SysEnd DEFAULT CONVERT(datetime2 (0), '9999-12-31 23:59:59'),   
-      PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);   
-GO   
-ALTER TABLE InsurancePolicy   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy));
 ```  
   
 #### <a name="important-remarks"></a>Wichtige Hinweise  
@@ -195,10 +192,9 @@ ALTER TABLE ProjectTaskCurrent ALTER COLUMN [ValidTo] datetime2 NOT NULL;
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidFrom] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidTo] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskCurrent   
-   ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
+    ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
 ALTER TABLE ProjectTaskCurrent   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON));
 ```  
   
 #### <a name="important-remarks"></a>Wichtige Hinweise  
@@ -222,5 +218,3 @@ ALTER TABLE ProjectTaskCurrent
  [Abfragen von Daten in einer temporalen Tabelle mit Systemversionsverwaltung](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
  [Ändern vom Schema einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
  [Beenden der Versionsverwaltung auf einer versionsverwalteten temporalen Tabelle](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
-  
-  

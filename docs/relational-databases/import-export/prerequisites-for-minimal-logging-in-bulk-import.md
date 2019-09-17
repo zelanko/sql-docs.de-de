@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307637"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910832"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Voraussetzungen für die minimale Protokollierung beim Massenimport
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68307637"
   
 -   Die Tabelle wird nicht repliziert.  
   
--   Eine Tabellensperre ist angegeben (mit TABLOCK). Für die Tabelle mit gruppiertem Columnstore-Index ist TABLOCK für eine minimale Protokollierung nicht erforderlich.  Darüber hinaus werden nur die in komprimierte Zeilengruppen geladenen Daten minimal protokolliert, was eine Batchgröße von 102400 oder höher erfordert.  
+-   Eine Tabellensperre ist angegeben (mit TABLOCK). 
   
     > [!NOTE]  
     >  Obwohl Dateneinfügungen bei einem minimal protokollierten Massenimportvorgang nicht im Transaktionsprotokoll protokolliert werden, protokolliert das [!INCLUDE[ssDE](../../includes/ssde-md.md)] dennoch Blockzuordnungen, wenn der Tabelle ein neuer Block zugeordnet wird.  

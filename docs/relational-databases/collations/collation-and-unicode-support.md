@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471045"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908406"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,11 @@ Beim Anlegen oder Ändern einer Datenbank können Sie die Standardsortierung der
 Sie können die Sortierung von Systemdatenbanken nur ändern, indem Sie die Sortierung für den Server ändern.    
     
 Die Datenbanksortierung wird für alle Metadaten in der Datenbank verwendet und ist der Standard für alle Zeichenfolgenspalten, temporären Objekte, Variablennamen und anderen in der Datenbank verwendeten Zeichenfolgen. Wenn Sie die Sortierung einer Benutzerdatenbank ändern, treten möglicherweise Sortierungskonflikte auf, wenn Abfragen in der Datenbank auf temporäre Tabellen zugreifen. Temporäre Tabellen werden immer in der Systemdatenbank **tempdb** gespeichert, die die Sortierung für die Instanz verwendet. Abfragen, die Zeichendaten aus der Benutzerdatenbank und **tempdb** vergleichen, schlagen möglicherweise fehl, wenn die Sortierungen einen Konflikt beim Auswerten der Zeichendaten verursachen. Sie können dieses Problem umgehen, wenn Sie die COLLATE-Klausel in der Abfrage angeben. Weitere Informationen finden Sie unter [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).    
-    
+
+> [!NOTE]
+> Sobald die Datenbank einmal in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] erstellt wurde, kann sie nicht mehr geändert werden.
+
+
 #### <a name="column-level-collations"></a>Sortierungen auf Spaltenebene    
 Beim Erstellen oder Ändern einer Tabelle können Sie mithilfe der COLLATE-Klausel Sortierungen für alle Zeichenfolgenspalten angeben. Wenn keine Sortierung angegeben ist, wird der Spalte die Standardsortierung der Datenbank zugewiesen.    
     
@@ -265,8 +269,8 @@ Die folgende Tabelle zeigt die Codierungsspeicherplatz in Bytes für jeden Zeich
 |Codebereich (hexadezimal)|Codebereich (dezimal)|Speicherplatz in Bytes <sup>1</sup> mit UTF-8|Speicherplatz in Bytes <sup>1</sup> mit UTF-16|    
 |---------------------------------|---------------------------------|--------------------------|-----------------------------|   
 |000000 – 00007F|0 - 127|1|2|
-|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|128 – 159<br />160 – 1.023<br />1\.024 – 2.047|2|2|
-|000800 – 003FFF<br />004000 – 00FFFF|2\.048 - 16.383<br />16.384 – 65.535|3|2|
+|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|128 – 159<br />160 – 1.023<br />1.024 – 2.047|2|2|
+|000800 – 003FFF<br />004000 – 00FFFF|2.048 - 16.383<br />16.384 – 65.535|3|2|
 |010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|65.536 – 262.143 <sup>2</sup><br /><br />262.144 – 1.114.111 <sup>2</sup>|4|4|
 
 <sup>1</sup> Die Speicherbytes beziehen sich auf die codierte Bytelänge, nicht auf die jeweilige Datentypgröße beim Speichern auf dem Datenträger. Weitere Informationen zu den Speichergrößen auf dem Datenträger finden Sie unter [nchar und nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) und [char und varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).

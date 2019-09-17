@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc461f1653c0d135df49384c0ad8706082fdff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937623"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278770"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
     
     -   **Sicherungsmedium**    
     
-         Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. 
+         Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. 
          
-        -   Dialogfeld**Sicherungsmedien auswählen**  
+        -   Dialogfeld**Sicherungsmedien auswählen**   
         
             **Sicherungsmedientyp**  
          Wählen Sie einen Medientyp aus der Dropdownliste **Sicherungsmedientyp** aus.  Hinweis: Die Option **Band** ist nur verfügbar, wenn ein Bandlaufwerk auf dem Computer bereitgestellt ist. Die Option **Sicherungsmedium** wird nur angezeigt, wenn mindestens ein Sicherungsmedium vorhanden ist.
@@ -108,27 +108,27 @@ Informationen zur SQL Server-Wiederherstellung aus dem Microsoft Azure-BLOB-Spei
     
 8. Zum Anzeigen oder Auswählen der erweiterten Optionen können Sie auf der Seite **Optionen** im Bereich **Wiederherstellungsoptionen** die folgenden für Ihre Situation zutreffenden Optionen auswählen:    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  **WITH** -Optionen (nicht erforderlich):    
+   1. **WITH** -Optionen (nicht erforderlich):    
     
-        -   **Vorhandene Datenbank überschreiben (WITH REPLACE)**    
+     - **Vorhandene Datenbank überschreiben (WITH REPLACE)**    
     
-        -   **Replikationseinstellungen beibehalten (WITH KEEP_REPLICATION)**    
+     - **Replikationseinstellungen beibehalten (WITH KEEP_REPLICATION)**    
     
-        -   **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**    
+     - **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**    
     
-    2.  Aktivieren Sie eine Option für das Feld **Wiederherstellungsstatus** . In diesem Feld wird der Status der Datenbank nach dem Wiederherstellungsvorgang bestimmt.    
+   2. Aktivieren Sie eine Option für das Feld **Wiederherstellungsstatus** . In diesem Feld wird der Status der Datenbank nach dem Wiederherstellungsvorgang bestimmt.    
     
-        -   **RESTORE WITH RECOVERY** ist das Standardverhalten, das die Datenbank betriebsbereit belässt, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird. Zusätzliche Transaktionsprotokolle können nicht wiederhergestellt werden. Wählen Sie diese Option nur aus, wenn Sie alle benötigten Sicherungen jetzt wiederherstellen möchten.    
+     - **RESTORE WITH RECOVERY** ist das Standardverhalten, das die Datenbank betriebsbereit belässt, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird. Zusätzliche Transaktionsprotokolle können nicht wiederhergestellt werden. Wählen Sie diese Option nur aus, wenn Sie alle benötigten Sicherungen jetzt wiederherstellen möchten.    
     
-        -   **RESTORE WITH NORECOVERY** belässt die Datenbank nicht betriebsbereit und führt kein Rollback für Transaktionen ohne Commit aus. Zusätzliche Transaktionsprotokolle können wiederhergestellt werden. Die Datenbank kann erst verwendet werden, wenn sie wiederhergestellt wurde.    
+     - **RESTORE WITH NORECOVERY** belässt die Datenbank nicht betriebsbereit und führt kein Rollback für Transaktionen ohne Commit aus. Zusätzliche Transaktionsprotokolle können wiederhergestellt werden. Die Datenbank kann erst verwendet werden, wenn sie wiederhergestellt wurde.    
     
-        -   **RESTORE WITH STANDBY** belässt die Datenbank im schreibgeschützten Modus. Diese Option macht Transaktionen rückgängig, für die noch kein Commit ausgeführt wurde, speichert die Umkehraktionen aber in einer Standbydatei, damit die Auswirkungen der Wiederherstellung rückgängig gemacht werden können.    
+     - **RESTORE WITH STANDBY** belässt die Datenbank im schreibgeschützten Modus. Diese Option macht Transaktionen rückgängig, für die noch kein Commit ausgeführt wurde, speichert die Umkehraktionen aber in einer Standbydatei, damit die Auswirkungen der Wiederherstellung rückgängig gemacht werden können.    
     
-    3.  **Protokollfragment vor der Wiederherstellung sichern.** Nicht für alle Wiederherstellungsszenarien ist eine Sicherung des Protokollfragments erforderlich.  Weitere Informationen finden Sie unter **Szenarien, die eine Sicherung des Protokollfragments erfordern** aus [Protokollfragmentsicherungen (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
-    4.  Bei Wiederherstellungsvorgängen treten möglicherweise Fehler auf, wenn aktive Verbindungen zur Datenbank bestehen. Aktivieren Sie die Option **Bestehende Verbindungen schließen** , um sicherzustellen, dass alle aktiven Verbindungen zwischen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und der Datenbank geschlossen werden. Durch die Aktivierung dieses Kontrollkästchens wechselt die Datenbank in einen Einzelbenutzermodus, bevor Wiederherstellungsvorgänge ausgeführt werden. Außerdem wird dadurch die Datenbank auf einen Multibenutzermodus festgelegt, wenn der Vorgang abgeschlossen ist.    
-    5.  Wählen Sie **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung** aus, wenn Sie zwischen jedem Wiederherstellungsvorgang zur Bestätigung aufgefordert werden möchten. Dies ist in der Regel nur bei großen Datenbanken und bei der gewünschten Überwachung des Status des Wiederherstellungsvorgangs erforderlich.    
+   3. **Protokollfragment vor der Wiederherstellung sichern.** Nicht für alle Wiederherstellungsszenarien ist eine Sicherung des Protokollfragments erforderlich.  Weitere Informationen finden Sie unter **Szenarien, die eine Sicherung des Protokollfragments erfordern** aus [Protokollfragmentsicherungen (SQL Server).](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)
+  
+   4. Bei Wiederherstellungsvorgängen treten möglicherweise Fehler auf, wenn aktive Verbindungen zur Datenbank bestehen. Aktivieren Sie die Option **Bestehende Verbindungen schließen** , um sicherzustellen, dass alle aktiven Verbindungen zwischen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und der Datenbank geschlossen werden. Durch die Aktivierung dieses Kontrollkästchens wechselt die Datenbank in einen Einzelbenutzermodus, bevor Wiederherstellungsvorgänge ausgeführt werden. Außerdem wird dadurch die Datenbank auf einen Multibenutzermodus festgelegt, wenn der Vorgang abgeschlossen ist.    
+  
+   5. Wählen Sie **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung** aus, wenn Sie zwischen jedem Wiederherstellungsvorgang zur Bestätigung aufgefordert werden möchten. Dies ist in der Regel nur bei großen Datenbanken und bei der gewünschten Überwachung des Status des Wiederherstellungsvorgangs erforderlich.    
     
 Weitere Informationen zu diesen Wiederherstellungsoptionen finden Sie unter [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](../../relational-databases/backup-restore/restore-database-options-page.md).    
     
@@ -140,10 +140,10 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
-7.  Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)** .
+7.  Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
 
     > [!NOTE]
     > Wird diese Option nicht aktiviert, wird möglicherweise die folgende Fehlermeldung angezeigt: „System.Data.SqlClient.SqlError: Der Sicherungssatz enthält die Sicherung einer anderen Datenbank als der vorhandenen '`Sales`'-Datenbank. (Microsoft.SqlServer.SmoExtended)“
@@ -168,7 +168,7 @@ Im folgenden Beispiel wird eine frühere Datenträgersicherung von `Sales` wiede
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie Ihrer Sicherung. Nachdem Sie Ihre Datenträgersicherungsdatei(en) ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Im Abschnitt **Ziel** wird das Feld **Datenbank** automatisch mit dem Namen der Datenbank aufgefüllt, die wiederhergestellt werden soll. Geben Sie zum Ändern des Datenbanknamens den neuen Namen ins Feld **Datenbank** ein.
 7.  Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
@@ -190,7 +190,7 @@ Im folgenden Beispiel wird eine Datenbank in den am `1:23:17 PM` um `May 30, 201
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
 2.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Datenbank wiederherstellen**aus.  
 3.  Wählen Sie auf der Seite **Allgemein** im Abschnitt **Quelle** die Option **Gerät** aus.
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie zu der vollständigen Sicherung und allen relevanten Transaktionsprotokollsicherungen.  Nachdem Sie Ihre Datenträgersicherungsdateien ausgewählt haben, klicken Sie auf **OK** .
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Klicken Sie auf **Hinzufügen** , und navigieren Sie zu der vollständigen Sicherung und allen relevanten Transaktionsprotokollsicherungen.  Nachdem Sie Ihre Datenträgersicherungsdateien ausgewählt haben, klicken Sie auf **OK** .
 5.  Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
 6.  Klicken Sie im Abschnitt **Ziel** auf **Zeitachse** , um auf das Dialogfeld **Sicherungszeitachse** zuzugreifen und darin manuell einen Zeitpunkt zum Beenden des Wiederherstellungsvorgangs auszuwählen.
 7.  Wählen Sie **Bestimmtes Datum und bestimmte Uhrzeit**aus.  
@@ -212,29 +212,29 @@ In den beiden folgenden Beispielen wird eine Wiederherstellung von `Sales` aus e
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   Wiederherstellen einer Sicherung im Stripesetformat über eine vorhandene Datenbank; eine Shared Access Signature (SAS) ist vorhanden.
 Eine gespeicherte Zugriffsrichtlinie wurde mit Lese-, Schreib-, Lösch- und Auflistungsrechten erstellt.  Eine SAS, die der gespeicherten Zugriffsrichtlinie zugeordnet ist, wurde für den Container `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`erstellt.  Die Schritte sind weitestgehend identisch, wenn bereits SQL Server-Anmeldeinformationen vorhanden sind.  Die Datenbank `Sales` ist auf dem Server bereits vorhanden.  Die Sicherungsdateien sind `Sales_stripe1of2_20160601.bak` und `Sales_stripe2of2_20160601.bak`.  
-*  
-7.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem **Azure-Speichercontainer aus:** über die Dropdown-Liste, wenn die SQL Server-Anmeldeinformationen bereits vorhanden sind, andernfalls geben Sie den Namen des Containers ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) manuell ein. 
-8.  Geben Sie die SAS im **Shared Access Signature:** -Feld für Rich-Text ein.
-9.  Klicken Sie auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
-10. Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Halten Sie STRG gedrückt, und wählen Sie die Dateien `Sales_stripe1of2_20160601.bak` und `Sales_stripe2of2_20160601.bak`aus.
-12. Klicken Sie auf **OK**.
-13. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
-14. Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
-15. Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)** .
-16. Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern**.
-17. Aktivieren Sie im Abschnitt **Serververbindungen** das Kontrollkästchen **Bestehende Verbindungen mit der Zieldatenbank schließen**.
-18. Klicken Sie auf **OK**.
+
+1.  Wählen Sie `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` aus dem **Azure-Speichercontainer aus:** über die Dropdown-Liste, wenn die SQL Server-Anmeldeinformationen bereits vorhanden sind, andernfalls geben Sie den Namen des Containers ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) manuell ein. 
+1. Geben Sie die SAS im **Shared Access Signature:** -Feld für Rich-Text ein.
+1. Klicken Sie auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
+1. Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Halten Sie STRG gedrückt, und wählen Sie die Dateien `Sales_stripe1of2_20160601.bak` und `Sales_stripe2of2_20160601.bak`aus.
+1. Klicken Sie auf **OK**.
+1. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
+1. Klicken Sie im Abschnitt **Seite auswählen** auf **Optionen** .
+1. Aktivieren Sie im Abschnitt **Wiederherstellungsoptionen** die Option **Vorhandene Datenbank überschreiben (WITH REPLACE)**.
+1. Deaktivieren Sie im Abschnitt **Sicherung des Protokollfragments** die Option **Protokollfragment vor der Wiederherstellung sichern**.
+1. Aktivieren Sie im Abschnitt **Serververbindungen** das Kontrollkästchen **Bestehende Verbindungen mit der Zieldatenbank schließen**.
+1. Klicken Sie auf **OK**.
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   Es ist keine Shared Access Signature (SAS) vorhanden
 In diesem Beispiel ist die Datenbank `Sales` auf dem Server derzeit nicht vorhanden.
-7.  Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** wird geöffnet.  
-8.  Füllen Sie das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** aus, und klicken Sie dann auf **OK** um zum Dialogfeld **Speicherort der Sicherungsdatei auswählen** zurückzukehren.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einen Microsoft Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
-9.  Klicken Sie im Dialogfeld **Speicherort der Sicherungsdatei auswählen** auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
-10. Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
-11. Wählen Sie die Sicherungsdatei aus, und klicken Sie dann auf **OK**.
-12. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
-13. Klicken Sie auf **OK**.
+1. Klicken Sie auf **Hinzufügen** . Das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** wird geöffnet.  
+1. Füllen Sie das Dialogfeld **Verbindung mit einen Microsoft Abonnement herstellen** aus, und klicken Sie dann auf **OK** um zum Dialogfeld **Speicherort der Sicherungsdatei auswählen** zurückzukehren.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einen Microsoft Abonnement](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) .
+1. Klicken Sie im Dialogfeld **Speicherort der Sicherungsdatei auswählen** auf **OK** . Das Dialogfeld **Sicherungsdatei in Microsoft Azure suchen** wird geöffnet.
+1. Erweitern Sie **Container** , und navigieren Sie zu `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`.
+1. Wählen Sie die Sicherungsdatei aus, und klicken Sie dann auf **OK**.
+1. Klicken Sie auf **OK** , um zur Seite **Allgemein** zurückzukehren.
+1. Klicken Sie auf **OK**.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Wiederherstellen einer lokalen Sicherung in Microsoft Azure-Speicher (URL)
 Die Datenbank `Sales` wird aus einer Sicherung unter `E:\MSSQL\BAK` im Microsoft Azure-Speichercontainer `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` wiederhergestellt.  Die SQL Server-Anmeldeinformationen für den Azure-Container wurden bereits erstellt.  SQL Server-Anmeldeinformationen für den Zielcontainer müssen bereits vorhanden sein, da sie durch den **Wiederherstellungstask** nicht erstellt werden können.  Die Datenbank `Sales` ist auf dem Server derzeit nicht vorhanden.

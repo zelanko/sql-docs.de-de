@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecc222a9f2c57aa92535d6f2e0c85586a6714108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024702"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212320"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM-Dienste: Ändern des Dienststartkontos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68024702"
   
 3.  Klicken Sie im Detailbereich mit der rechten Maustaste auf den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, dessen Dienststartkonto Sie ändern möchten, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie im Dialogfeld **SQL Server \<***Instanzname***> Eigenschaften** auf die Registerkarte **Anmelden**, und wählen Sie einen **Anmelden als**-Kontotyp aus.  
+4.  Klicken Sie im Dialogfeld **SQL Server\<**_Instanzname_**> Eigenschaften** auf die Registerkarte **Anmelden**, und wählen Sie einen **Anmelden als-Kontotyp** aus.  
   
 5.  Klicken Sie nach Auswahl des neuen Dienststartkontos auf **OK**.  
   

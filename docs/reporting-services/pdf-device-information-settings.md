@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503677"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911326"
 ---
 # <a name="pdf-device-information-settings"></a>PDF-Geräteinformationseinstellungen
   In der folgenden Tabelle werden die Einstellungen der Geräteinformationen zum Rendern von Berichten in das PDF-Format aufgeführt.  
@@ -28,6 +28,7 @@ ms.locfileid: "65503677"
 |**ColumnSpacing**|Der für den Bericht gewünschte Spaltenabstand. Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  
 |**DpiX**|Die Auflösung des Ausgabegeräts in x-Richtung.|  
 |**DpiY**|Die Auflösung des Ausgabegeräts in y-Richtung.|  
+|**Einbettungen**|Gibt an, ob Schriftarten in die PDF-Datei eingebettet werden, die größer ist, aber die Berichts Schriftarten werden für alle Clients ordnungsgemäß renderert. Der Wert **None** deaktiviert die Schriftart Einbettung.|  
 |**EndPage**|Die letzte Seite des zu rendernden Berichts. Der Standardwert ist der Wert für **StartPage**.|  
 |**HumanReadablePDF**|Gibt an, ob eine nicht komprimierte PDF-Datei gerendert werden soll. Eine solche Datei ist zwar größer, aber in einem Nur-Text-Editor besser lesbar. Der Standardwert ist **false.**|  
 |**MarginBottom**|Der für den Bericht gewünschte Wert für den unteren Rand in Zoll. Sie müssen eine ganze Zahl oder einen Dezimalwert gefolgt von „in“ angeben (z. B. „1in“). Dieser Wert überschreibt die ursprünglichen Einstellungen des Berichts.|  

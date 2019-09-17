@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027304"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874630"
 ---
 # <a name="understanding-ssl-support"></a>Grundlegendes zur SSL-Unterstützung
 
@@ -28,9 +28,9 @@ Wenn die Anwendung keine Verschlüsselung anfordert, erzwingt [!INCLUDE[jdbcNoVe
 > [!NOTE]  
 > Stellen Sie sicher, dass der an **serverName** übergebene Name für eine erfolgreiche SSL-Verbindung exakt dem CN (Common Name, allgemeiner Name) oder dem DNS-Namen im SAN (Subject Alternate Name, Subjektalternativname) im Serverzertifikat entspricht.  
 >
-> Weitere Informationen zum Konfigurieren von SSL für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie im Thema zum Verschlüsseln von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindungen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+> Weitere Informationen zum Konfigurieren von SSL für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie unter Aktivieren von [verschlüsselten Verbindungen mit dem Datenbank-Engine](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Damit die SSL-Verschlüsselung von Anwendungen verwendet werden kann, hat [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ab Version 1.2 die folgenden Verbindungseigenschaften eingeführt: **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** und **hostNameInCertificate**. Weitere Informationen zum Festlegen der Verbindungseigenschaften finden Sie unter [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
   

@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af65ac5257da6bc04a5a33649007ae849366e10c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a6c6993252ccad0335b177c31c9d20b40f520a5
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913900"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211427"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Sendet eine Nachricht mit einer oder mehreren vorhandenen Konversation.  
   
@@ -59,7 +59,7 @@ Gibt den Nachrichtentyp der gesendeten Nachricht an. Der Nachrichtentyp muss in 
 *message_body_expression*  
 Stellt einen Ausdruck bereit, der den Nachrichtentext darstellt. *message_body_expression* ist optional. Wenn *message_body_expression* jedoch angegeben wird, muss der Ausdruck von einem Typ sein, der in **varbinary(max)** konvertiert werden kann. Der Ausdruck darf nicht NULL sein. Wird diese Klausel ausgelassen, ist der Nachrichtentext leer.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Wenn es sich bei der SEND-Anweisung nicht um die erste Anweisung in einem Batch oder in einer gespeicherten Prozedur handelt, muss die vorhergehende Anweisung mit einem Semikolon (;) abgeschlossen werden.  

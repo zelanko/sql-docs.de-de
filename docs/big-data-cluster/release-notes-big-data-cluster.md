@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160694"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988097"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>Anmerkungen zu dieser Version von SQL Server Big Data-Clustern
 
@@ -37,7 +37,9 @@ In den folgenden Abschnitten werden die neuen Features und bekannten Probleme f�
 
 ### <a name="known-issues"></a>Bekannte Probleme
 
-SQL Server 2019 Big Data-Cluster Release Candidate Buildnummer `15.0.1900.47`aktualisieren ist.
+* SQL Server 2019 Big Data-Cluster Release Candidate Buildnummer `15.0.1900.47`aktualisieren ist.
+
+* Das Bereitstellungs Profil "kubeadm-Prod" wird in SQL Server 2019-Big Data-Clustern, Release Candidate mit der obigen Buildnummer, nicht unterstützt. Verwenden Sie stattdessen das Profil "kubeadm-dev-Test" für kubeadm-bereit Stellungen.
 
 ## <a id="ctp32"></a> CTP 3.2 (Juli)
 
@@ -167,7 +169,7 @@ In den folgenden Abschnitten werden die bekannten Probleme und Einschränkungen 
 
 #### <a name="kibana-logs-dashboards"></a>Kibana-Protokolldashboards
 
-- Zwischen Aris CTP 3.0 und 3.1 wurde für die Kibana-Version ein Upgrade von 6.3.1 auf 7.0.1 ausgeführt.  Dadurch ist der Browser Edge nun mit Kibana nicht mehr kompatibel. Wenn Benutzer die aktuelle Version der Kibana-Dashboards in Edge lagen, wird eine leere Seite angezeigt. Klicken Sie [hier]( https://www.elastic.co/support/matrix#matrix_browse), um unterstützte Browser für Kibana.rs anzuzeigen. 
+- Zwischen Aris CTP 3.0 und 3.1 wurde für die Kibana-Version ein Upgrade von 6.3.1 auf 7.0.1 ausgeführt.  Dies hat den Microsoft Edge-Browser mit kibana nicht kompatibel gemacht. Benutzern wird beim Laden der aktuellen Version der kibana-Dashboards in Microsoft Edge eine leere Seite angezeigt. Klicken Sie [hier]( https://www.elastic.co/support/matrix#matrix_browse), um unterstützte Browser für Kibana.rs anzuzeigen. 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (Mai)

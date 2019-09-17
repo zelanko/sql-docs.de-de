@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e4eca65f3a5bde99adc49e8019080e6a59b496b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3119e81a462ff163f1ee3d0df0ee334a718ddba5
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041422"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280950"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>Angeben eines Datenträgers oder ein Bands als Sicherungsziel (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,7 @@ ms.locfileid: "68041422"
   
 4.  Klicken Sie auf der Seite **Allgemein** im Abschnitt **Ziel** auf **Datenträger** oder auf **Band**. Klicken Sie auf **Hinzufügen**, um die Pfade von bis zu 64 Datenträgern oder Bandlaufwerken, die einen einzelnen Mediensatz enthalten, auszuwählen.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
+   Um einen Sicherungsziel zu entfernen, wählen Sie ihn aus, und klicken Sie auf **Entfernen**. Zum Anzeigen des Inhalts eines Sicherungsziels wählen Sie es aus, und klicken Sie auf **Inhalt**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   

@@ -1,5 +1,5 @@
 ---
-title: Gewährung, widerrufen und Verweigern von Berechtigungen | Microsoft-Dokumentation
+title: Erteilen, widerrufen und Verweigern von Berechtigungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [SMO]
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8db1acd2f2ef408f1e9bed70949444bda5a1ef3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03b8a6f9750973cb86aaa1af3915ccfc0f172370
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111483"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911244"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Gewährung, Widerrufen und Verweigern von Berechtigungen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68111483"
  Datenbankberechtigungen und Datenbankobjektberechtigungen können auf ähnliche Weise über das <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet>- und das <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>-Objekt zugeordnet werden.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Gewähren von Serverberechtigungen in Visual Basic  
  In diesem Codebeispiel werden die CREATE ENDPOINT- und ALTER ANY ENDPOINT-Berechtigungen der angegebenen Anmeldung gewährt und dann die Berechtigungen aufgelistet und angezeigt. Eine der Berechtigungen wird widerrufen, woraufhin die Berechtigungen wieder aufgelistet werden. In diesem Beispiel wird davon ausgegangen, dass die angegebene Anmeldung die angegebenen Berechtigungen für den Start hat.  

@@ -5,16 +5,16 @@ description: Verwenden Sie ein Notebook aus Azure Data Studio, um einen Big Data
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7adc5c3d07b47b5310d8a45d00747d6dd6de9952
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: cb2fcaf7431b5d79698af009b533ee49254777fe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028586"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846646"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Verwalten von Big Data-Clustern für SQL Server mit Azure Data Studio-Notebooks
 
@@ -28,11 +28,11 @@ Sie können Notebooks verwenden, um Big Data-Cluster für [!INCLUDE[sql-server-2
 
 Zusätzlich zu Notebooks können Benutzer eine Sammlung von Notebooks anzeigen, die als jupyter-Bücher bezeichnet werden. Ein Jupyter Book stellt ein Inhaltsverzeichnis bereit, um in einer Sammlung von Notebooks zu navigieren, sodass ein Benutzer das benötigte Notebook leicht finden kann, egal, ob zur Problembehandlung von SQL Server oder zum Anzeigen des Clusterstatus.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Die folgenden Voraussetzungen müssen erfüllt sein, damit ein Notebook gestartet werden kann:
 
-* Die neueste Version von [Azure Data Studio Insiders-Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master).
+* Die neueste Version von [Azure Data Studio Insiders-Build](https://aka.ms/azuredatastudio-rc).
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Erweiterung ist in Azure Data Studio installiert.
 
 Zusätzlich hierzu sind folgende Komponenten erforderlich, um einen Big Data-Cluster für SQL Server 2019 bereitstellen zu können:
@@ -42,16 +42,32 @@ Zusätzlich hierzu sind folgende Komponenten erforderlich, um einen Big Data-Clu
 * [Azure CLI](/cli/azure/install-azure-cli)
 
 ## <a name="accessing-troubleshooting-notebooks"></a>Zugreifen auf Notebooks zur Problembehandlung
+Es gibt drei Möglichkeiten, um auf Problem Behandlungs Notebooks zuzugreifen.
 
+### <a name="command-palette"></a>Befehlspalette
+1. Klicken Sie auf **Befehls Palette** **anzeigen** .
+2. Geben Sie jupyter Books: Leitfaden zu SQL Server 2019 "
+3. Dadurch wird das jupyter Books-Viewlet mit dem jupyter-Buch geöffnet, das die im Zusammenhang mit SQL Server Big Data-Clustern gehörigen der TSG enthält.
+
+### <a name="sql-master-dashboard"></a>SQL-Master-Dashboard
 1. Nachdem Sie Azure Data Studio Insiders installiert haben, stellen Sie eine Verbindung mit einer Big Data-Clusterinstanz für SQL Server her.
 2. Sobald diese Verbindung erfolgreich hergestellt ist, klicken Sie im Viewlet „Verbindungen“ mit der rechten Maustaste auf den Servernamen, und klicken Sie dann auf **Verwalten**.
 3. Klicken Sie auf dem Dashboard auf **SQL Server-Big Data-Cluster**. Klicken Sie auf **SQL Server 2019 Guide**, um das Jupyter Book mit den Notebooks zu öffnen, die Sie benötigen.
-    ![Schaltfläche](media/manage-notebooks/jupyter-book-button.png)
+    ![button](media/manage-notebooks/jupyter-book-button.png)
 
-1. Wählen Sie im Fenster für Ordnerauswahl den Speicherort aus, in dem Ihr Jupyter Book gespeichert werden soll.
-2. Klicken Sie auf **Neu laden**, um Azure Data Studio erneut zu laden, damit Ihr Jupyter Book angezeigt wird. Klicken Sie auf **Neue Instanz öffnen**, um eine neue Instanz von Azure Data Studio mit dem Jupyter Book zu öffnen.
-3. In der Explorer-Ansicht sollte ein Abschnitt zu sehen sein, der den Namen **Books** hat. Ist dieser nicht erweitert, klicken Sie darauf, um die Notebooks anzuzeigen.
+1. Dadurch wird das jupyter Books-Viewlet geöffnet, in dem das jupyter-Buch der TSG bereits geöffnet ist.
 4. Klicken Sie auf das Notebook für die Aufgabe, die Sie ausführen müssen.
+
+### <a name="controller-dashboard"></a>Controller Dashboard
+1. Erweitern Sie in der Ansicht Verbindungen **SQL Server Big Data-Cluster.**
+2. Details zum Controller Endpunkt hinzufügen.
+3. Klicken Sie nach erfolgreicher Verbindung mit Controller mit der rechten Maustaste auf den Endpunkt, und klicken Sie dann auf **verwalten.**
+4. Nachdem das Dashboard geladen wurde, klicken Sie auf Problembehandlung, um das jupyter Book TSG zu starten.
+
+## <a name="how-to-use-troubleshooting-notebooks"></a>Verwenden von Problem Behandlungs Notebooks
+1. Durchsuchen Sie das vorhandene jupyter-Buch Inhaltsverzeichnis, bis Sie die benötigte TSG gefunden haben.
+1. Alle Notebooks sind optimiert, wenn der Benutzer nur auf " **Zellen ausführen** " klicken muss. Dadurch wird jede Zelle im Notebook einzeln ausgeführt, bis Sie beendet ist.
+1. Wenn ein Fehler auftritt, wird im jupyter-Buch ein Notebook vorgeschlagen, das Sie ausführen können, um den Fehler zu beheben. Führen Sie die Schritte aus, und führen Sie dann das Notebook erneut aus.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen zu Notebooks in Azure Data Studio finden Sie unter [Verwenden von Notebooks in SQL Server 2019 (Vorschauversion)](notebooks-guidance.md).

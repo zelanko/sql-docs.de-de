@@ -12,14 +12,15 @@ ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac718603c639fcbc8af7cb168b2aa131840c75ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 508a50443e039fa77f1190c5a00b6ffdbf93379a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909378"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910817"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Schutz von Sonderzeichen und Steuerzeichen durch FOR JSON (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Dieses Thema beschreibt, wie die **FOR JSON**-Klausel einer **SELECT**-Anweisung von SQL Server Sonderzeichen schützt und Steuerzeichen in der JSON-Ausgabe darstellt.  
@@ -33,7 +34,7 @@ Wenn die Quelldatei Sonderzeichen enthält, umgeht die **FOR JSON**-Klausel dies
 |**Sonderzeichen**|**Ausgabe mit Escapezeichen**|  
 |---------------------------|--------------------------|  
 |Anführungszeichen (")|\\"|  
-|Umgekehrter Schrägstrich (\\)|\\\|  
+|Umgekehrter Schrägstrich (\\)|\\\\|  
 |Schrägstrich (/)|\\/|  
 |Rücktaste|\b|  
 |Seitenvorschub|\f|  

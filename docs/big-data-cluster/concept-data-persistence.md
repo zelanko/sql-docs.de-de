@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155351"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878739"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Datenpersistenz mit SQL Server-Big-Data-Clustern in Kubernetes
 
@@ -28,7 +28,7 @@ Ein SQL Server-Big-Data-Cluster nutzt diese persistenten Volumes durch die Verwe
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>Konfigurieren der Speichereinstellungen für Big-Data-Cluster
 
-Ähnlich wie bei anderen Anpassungen können Sie zum Zeitpunkt der Bereitstellung in den Clusterkonfigruationsdateien für jeden Pool die Speichereinstellungen und die Steuerungsebene angeben. Wenn in den Poolspezifikationen keine Speicherkonfigruationseinstellungen vorhanden sind, werden die Speichereinstellungen der Steuerungsebene verwendet. Dies ist ein Beispiel für den Speicherkonfigurationsabschnitt, den Sie in die Spezifikation einschließen können:
+Ähnlich wie bei anderen Anpassungen können Sie Speichereinstellungen in den Cluster Konfigurationsdateien zum Zeitpunkt der Bereitstellung für jeden Pool in der Konfigurationsdatei " **BDC. JSON** " und für die Steuerungs Dienste in der Datei " **Control. JSON** " angeben. Wenn in den Pool Spezifikationen keine Speicher Konfigurationseinstellungen vorhanden sind, werden die Steuerungs Speichereinstellungen **für alle anderen Komponenten**, einschließlich SQL Server Master (**Master** -Ressource), HDFS (**Storage-0-** Ressource) oder Daten, verwendet. Spool. Dies ist ein Beispiel für den Speicherkonfigurationsabschnitt, den Sie in die Spezifikation einschließen können:
 
 ```json
     "storage": 

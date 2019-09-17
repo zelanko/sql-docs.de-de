@@ -1,5 +1,5 @@
 ---
-title: SQLServer Shared Management Objects (SMO) – Lizenzbedingungen | Microsoft-Dokumentation
+title: SQL Server Shared Management Objects (SMO)-Lizenzbedingungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/08/2018
 ms.prod: sql
@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4f7fe6f3662cc1d82cf72b2f5d8036d0284e48c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64834ed8f35186032a3abe8f82733e4a437fffdf
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097987"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911179"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQLServer Shared Management Objects (SMO)-Lizenzbedingungen
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Lizenzbedingungen für die SQL Server Shared Management Objects (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT-SOFTWARE-LIZENZBEDINGUNGEN
-**FREIGEGEBENE VERWALTUNGSOBJEKTE FÜR MICROSOFT SQL SERVER 2017**
+**FREIGEGEBENE VERWALTUNGS OBJEKTE FÜR MICROSOFT SQL SERVER 2017**
 
 ---
 Diese Lizenzbedingungen sind ein Vertrag zwischen Ihnen und der Microsoft Corporation (oder einer anderen Microsoft-Konzerngesellschaft, wenn diese an dem Ort, an dem Sie leben, die Software lizenziert). Lesen Sie die Bedingungen bitte durch. Diese gelten für die oben genannte Software, die ggf. auch die Medien umfasst, auf denen Sie sie empfangen haben. Die Bedingungen gelten auch für sämtliche
@@ -39,7 +39,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 **1. INSTALLATION UND NUTZUNGSRECHTE.**
 
-&nbsp;&nbsp;Sie können installieren und verwenden eine beliebige Anzahl von Kopien der Software auf Ihren Geräten entwerfen, entwickeln und Testen Ihrer Programme.
+&nbsp;&nbsp;Sie können eine beliebige Anzahl von Kopien der Software auf Ihren Geräten installieren und verwenden, um Ihre Programme zu entwerfen, zu entwickeln und zu testen.
 
 **2.    ZUSÄTZLICHE LIZENZANFORDERUNGEN UND/ODER NUTZUNGSRECHTE.**
 
@@ -51,7 +51,7 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii.   Verteilungsanforderungen. Für jeden verteilbaren Code, den Sie verteilen, müssen Sie**
 * ihm in Ihren Programmen wesentliche primäre Funktionalität hinzufügen;
-* für jeden verteilbaren Code, der dateinamenserweiterung von DLL-Datei können verteilen Sie nur die Ergebnisse der Ausführung eines derartigen verteilbaren Codes über eine Verknüpfung mit Ihrem Programm;
+* verteilen Sie für jeden verteilbaren Code, der die Dateinamenerweiterung ". dll" hat, nur die Ergebnisse der Ausführung eines derartigen verteilbaren Codes durch einen Linker mit Ihrem Programm.
 * von den Verteilern und externen Endbenutzern fordern, dass sie den Bedingungen zustimmen, die zumindest diesen Vertrag schützen; 
 * Ihren gültigen Urheberrechtshinweis in Ihren Programmen anzeigen und
 * Microsoft vor sämtlichen Forderungen, einschließlich Anwaltsgebühren, die im Zusammenhang mit der Verteilung oder Nutzung Ihrer Programme stehen, freistellen, verteidigen und schadlos halten.
@@ -65,12 +65,12 @@ von Microsoft für diese Software, sofern diese Elemente nicht von anderen Bedin
   * dass andere das Recht zur Änderung haben.
 
 
-**3. UMFANG DER LIZENZ.** Die Software wird lizenziert, nicht verkauft. Sofern Ihnen nicht durch geltendes Recht weitere Rechte zustehen, behält sich Microsoft alle weiteren Rechte vor, die nicht ausdrücklich in dieser Vereinbarung gewährt werden, sei es durch Implizierung, Duldung oder anderweitig. Sie dürfen die Software nur wie in diesem Vertrag ausdrücklich gestattet verwenden. Dabei müssen Sie sämtliche technischen Einschränkungen in der Software einhalten, die nur bestimmte Verwendungsweisen zulassen. Sie können keinen der folgenden Schritte ausführen:
+**3. UMFANG DER LIZENZ.** Die Software wird lizenziert, nicht verkauft. Sofern Ihnen nicht durch geltendes Recht weitere Rechte zustehen, behält sich Microsoft alle weiteren Rechte vor, die nicht ausdrücklich in dieser Vereinbarung gewährt werden, sei es durch Implizierung, Duldung oder anderweitig. Sie dürfen die Software nur wie in diesem Vertrag ausdrücklich gestattet verwenden. Dabei müssen Sie sämtliche technischen Einschränkungen in der Software einhalten, die nur bestimmte Verwendungsweisen zulassen. Möglicherweise führen Sie keine der folgenden Aktionen aus:
 
-- Umgehen Sie alle technischen Beschränkungen in der Software aus.
-- Zurückentwickeln, dekompilieren oder disassemblieren der Software, mit dem Unterschied, und nur soweit das anwendbare Recht ungeachtet dieser Einschränkung ausdrücklich gestattet.
-- Stellen Sie mehr Kopien der Software als in dieser Vereinbarung angegeben sind, oder durch das anwendbare Recht ungeachtet dieser Einschränkung zulässig.
-- Freigeben, veröffentlichen, zu mieten oder leasen der Softwareupdates oder Bereitstellen der Software als eigenständige gehostete Lösung zur Verwendung durch andere Benutzer.
+- Umgehen Sie alle technischen Einschränkungen in der Software.
+- Rückgängigmachen oder disassemblieren der Software, außer und nur in dem Umfang, in dem das geltende Recht trotz dieser Einschränkung ausdrücklich zulässt.
+- Erstellen Sie mehr Kopien der Software als in diesem Vertrag angegeben oder durch geltende Gesetze trotz dieser Einschränkung zugelassen werden.
+- Freigeben, veröffentlichen, vermieten oder leasen der Software oder Bereitstellen der Software als eigenständige gehostete Lösung, die von anderen Benutzern verwendet werden soll.
 
 **4.    DRITTANBIETERHINWEISE.** Die Software kann Komponenten von Drittanbietern enthalten, für die separate rechtliche Hinweise gelten oder die anderen Verträgen unterliegen, wie ggf. in der Datei „ThirdPartyNotices“ der Software beschrieben.  Selbst wenn solche Komponenten anderen Verträgen unterliegen, gelten ebenfalls die untengenannten Garantieausschlüsse und Einschränkungen und Ausschlüsse von Schäden.
 

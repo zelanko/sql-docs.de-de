@@ -5,16 +5,16 @@ description: In diesem Artikel wird beschrieben, wie Sie HDFS-Tiering zum Einbin
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652316"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774218"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Einbinden von ADLS Gen2 für HDFS-Tiering in einen Big Data-Cluster
 
@@ -33,33 +33,35 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Azure Data Lake Storage Gen2 zu
 
 1. [Erstellen eines Azure Data Lake Storage Gen2-Speicherkontos](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Schnellstart: Hochladen, Herunterladen und Auflisten von Blobs mit dem Azure-Portal](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal).
+1. Erstellen Sie in diesem Speicherkonto [einen BlobContainer bzw. ein BLOB-Dateisystem](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) für Ihre externen Daten.
 
 1. Laden Sie eine CSV- oder Parquet-Datei in den Container hoch. Dies sind die externen HDFS-Daten, die im Big Data-Cluster in HDFS eingebunden werden.
 
 ## <a name="credentials-for-mounting"></a>Anmeldeinformationen für die Einbindung
 
-## <a name="use-oauth-credentials-to-mount"></a>Verwenden von OAuth-Anmeldeinformationen zum Einbinden
+### <a name="use-oauth-credentials-to-mount"></a>Verwenden von OAuth-Anmeldeinformationen zum Einbinden
 
 Um OAuth-Anmeldeinformationen zum Einbinden zu verwenden, müssen Sie die folgenden Schritte ausführen:
 
 1. Wechseln Sie zum [Azure-Portal](https://portal.azure.com).
-1. Wechseln Sie im linken Navigationsbereich zu „Dienste“, und klicken Sie auf „Azure Active Directory“.
-1. Erstellen Sie mithilfe von „App-Registrierungen“ im Menü eine Webanwendung, und folgen Sie dem Assistenten. **Merken Sie sich den Namen, den Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierter Benutzer hinzufügen.
-1. Wechseln Sie nach dem Erstellen der Webanwendung unter „Einstellungen“ für die App zu „Schlüssel“.
-1. Wählen Sie eine Schlüsseldauer aus, und klicken Sie auf „Speichern“. **Speichern Sie den generierten Schlüssel.**
-1.  Wechseln Sie zurück zur Seite „App-Registrierungen“, und klicken Sie oben auf die Schaltfläche „Endpunkte“. **Notieren Sie sich den „Tokenendpunkt“ für die URL**.
+1. Navigieren Sie zu "Azure Active Directory". Dieser Dienst sollte auf der linken Navigationsleiste angezeigt werden.
+1. Wählen Sie in der rechten Navigationsleiste "App-Registrierungen" aus, und erstellen Sie eine neue Registrierung.
+1. Erstellen Sie eine "Webanwendung, und folgen Sie dem Assistenten. **Merken Sie sich den Namen der APP, die Sie hier erstellen**. Sie müssen diesen Namen Ihrem ADLS-Konto als autorisierter Benutzer hinzufügen. Beachten Sie auch die Anwendungs Client-ID in der Übersicht, wenn Sie die App auswählen.
+1. Nachdem die Webanwendung erstellt wurde, navigieren Sie zu "Zertifikate & Geheimnissen", und erstellen Sie einen **neuen geheimen Client** Schlüssel, und wählen Sie eine Schlüssel Dauer aus. **Fügen Sie** den geheimen Schlüssel hinzu.
+1.  Wechseln Sie zurück zur Seite App-Registrierungen, und klicken Sie oben auf die "Endpunkte". **Notieren Sie sich den OAuth-Token-Endpunkt (v2)** . Urne
 1. Für OAuth sollten Sie nun folgende Punkte notiert haben:
 
-    - Die „Anwendungs-ID“ der Web-App, die Sie oben in Schritt 3 erstellt haben.
-    - Den Schlüssel, den Sie soeben in Schritt 5 erstellt haben.
-    - Den Tokenendpunkt aus Schritt 6.
+    - Die Anwendungs Client-ID der Webanwendung
+    - Geheimer Client Schlüssel
+    - Der tokenendpunkt
 
 ### <a name="adding-the-service-principal-to-your-adls-account"></a>Hinzufügen des Dienstprinzipals zu Ihrem ADLS-Konto
 
-1. Wechseln Sie erneut zum Portal, öffnen Sie das ADLS-Konto, und wählen Sie im linken Menü die Option „Zugriffssteuerung (IAM)“ aus.
-1. Wählen Sie „Rollenzuweisung hinzufügen“ aus, und suchen Sie nach dem Namen, den Sie oben in Schritt 3 erstellt haben (beachten Sie, dass er nicht in der Liste angezeigt wird, aber Sie finden ihn, wenn Sie nach dem vollständigen Namen suchen).
-1. Fügen Sie jetzt die Rolle „Mitwirkender an Storage-Blobdaten (Vorschau)“ hinzu.
+1. Wechseln Sie erneut zum Portal, navigieren Sie zu Ihrem ADLS-Speicherkonto-Dateisystem, und wählen Sie im linken Menü die Option Zugriffs Steuerung (IAM) aus.
+1. Wählen Sie "Rollenzuweisung hinzufügen" aus. 
+1. Wählen Sie Rolle "Mitwirkender von Speicher-Blobs".
+1. Suchen Sie nach dem Namen, den Sie oben erstellt haben (Beachten Sie, dass er nicht in der Liste angezeigt wird, aber gefunden wird, wenn Sie nach dem vollständigen Namen suchen).
+1. Speichern Sie die Rolle.
 
 Warten Sie 5-10 Minuten, bevor Sie die Anmeldeinformationen für die Einbindung verwenden.
 
@@ -70,9 +72,9 @@ Warten Sie 5-10 Minuten, bevor Sie die Anmeldeinformationen für die Einbindung 
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
-    fs.azure.account.oauth2.client.secret=[<key> from step5 above]
+    fs.azure.account.oauth2.client.endpoint=[token endpoint],
+    fs.azure.account.oauth2.client.id=[Application client ID],
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
 
 ## <a name="use-access-keys-to-mount"></a>Verwenden von Zugriffsschlüsseln zum Einbinden
@@ -137,7 +139,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## <a name="refresh-a-mount"></a>Aktualisieren einer Einbindung
 
-Im folgenden Beispiel wird die Einbindung aktualisiert.
+Im folgenden Beispiel wird die Einbindung aktualisiert. Durch diese Aktualisierung wird auch der Einbindungs Cache gelöscht.
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775172"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70392021"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>UTF-8-Unterstützung im OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "64775172"
 Microsoft OLE DB-Treiber für SQL Server (Version 18.2.1) bietet Unterstützung für die UTF-8-Servercodierung. Informationen zur UTF-8-Unterstützung von SQL Server finden Sie unter:
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8-Unterstützung](#ctp23)
+
+> [!IMPORTANT]
+> Der Microsoft OLE DB-Treiber für SQL Server verwendet die [GetACP-](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) Funktion, um die Codierung des DBTYPE_STR-Eingabe Puffers zu bestimmen. Szenarios, in denen GetACP eine UTF-8-Codierung zurückgibt, werden nicht unterstützt. Wenn der Puffer Unicode-Daten speichern muss, sollte der Puffer Datentyp auf DBTYPE_WSTR (UTF-16-codiert) festgelegt werden.
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Einfügen von Daten in eine UTF-8-codierte CHAR- oder VARCHAR-Spalte
 Wenn Sie einen Eingabeparameterpuffer für das Einfügen erstellen, wird der Puffer mithilfe eines Arrays von [DBBINDING-Strukturen](https://go.microsoft.com/fwlink/?linkid=2071182) beschrieben. Jede DBBINDING-Struktur ordnet dem Puffer des Consumers einen einzelnen Parameter zu und enthält Informationen wie z. B. Länge und Typ des Datenwerts. Für einen Eingabeparameterpuffer des Typs CHAR sollte der *wType* der DBBINDING-Struktur auf DBTYPE_STR festgelegt werden. Für einen Eingabeparameterpuffer des Typs WCHAR sollte der *wType* der DBBINDING-Struktur auf DBTYPE_WSTR festgelegt werden.

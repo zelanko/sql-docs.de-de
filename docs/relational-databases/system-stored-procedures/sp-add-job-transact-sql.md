@@ -1,5 +1,5 @@
 ---
-title: Sp_add_job (Transact-SQL) | Microsoft-Dokumentation
+title: sp_add_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,20 +17,23 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee2c2b825bd706284805bf91fb4c89ba46f265a6
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941740"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810607"
 ---
-# <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Fügt einen neuen Auftrag hinzu, der vom SQLServerAgent-Dienst ausgeführt wird.  
+  Fügt einen neuen Auftrag hinzu, der vom SQL Agent-Dienst ausgeführt wird.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+ > [!IMPORTANT]  
+ > In einer [verwalteten Azure SQL-Datenbank-Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) werden die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Weitere Informationen finden Sie unter [T-SQL-Unterschiede zwischen einer verwalteten Azure SQL-Datenbank-Instanz und SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+ 
 ## <a name="syntax"></a>Syntax  
   
 ```  
@@ -54,47 +57,47 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht die Prozentzeichen enthalten ( **%** ) Zeichen. *Job_name*ist **vom Datentyp nvarchar(128)** , hat keinen Standardwert.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. Der Name muss eindeutig sein und darf nicht das Prozentzeichen **%** () enthalten. *job_name*ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert.  
   
-`[ @enabled = ] enabled` Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist **Tinyint**, hat den Standardwert 1 (aktiviert). Wenn **0**, der Auftrag nicht aktiviert ist und nicht gemäß dem Zeitplan ausgeführt, aber es kann manuell ausgeführt werden.  
+`[ @enabled = ] enabled`Gibt den Status des hinzugefügten Auftrags an. *aktiviert*ist vom Datentyp **tinyint**. der Standardwert ist 1 (aktiviert). Wenn der Wert **0**ist, ist der Auftrag nicht aktiviert und wird nicht gemäß dem Zeitplan ausgeführt. Sie kann jedoch manuell ausgeführt werden.  
   
-`[ @description = ] 'description'` Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)** , hat den Standardwert NULL. Wenn *Beschreibung* wird weggelassen, wird "Keine Beschreibung verfügbar" verwendet.  
+`[ @description = ] 'description'`Die Beschreibung des Auftrags. die *Beschreibung* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Wenn *Description* weggelassen wird, wird "keine Beschreibung verfügbar" verwendet.  
   
-`[ @start_step_id = ] step_id` Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id*ist **Int**, hat den Standardwert 1.  
+`[ @start_step_id = ] step_id`Die ID des ersten Schritts, der für den Auftrag ausgeführt werden soll. *step_id*ist vom Datentyp **int**und hat den Standardwert 1.  
   
-`[ @category_name = ] 'category'` Die Kategorie für den Auftrag. *Kategorie*ist **Sysname**, hat den Standardwert NULL.  
+`[ @category_name = ] 'category'`Die Kategorie für den Auftrag. *Category*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @category_id = ] category_id` Ein sprachunabhängiger Mechanismus zum Angeben einer Auftragskategorie. *Category_id*ist **Int**, hat den Standardwert NULL.  
+`[ @category_id = ] category_id`Ein sprachunabhängiger Mechanismus zum Angeben einer Auftrags Kategorie. *category_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @owner_login_name = ] 'login'` Der Name der Anmeldung, die den Auftrag besitzt. *Anmeldung*ist **Sysname**, hat den Standardwert NULL, der als der aktuelle Anmeldename interpretiert wird. Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name** . Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name** , Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+`[ @owner_login_name = ] 'login'`Der Name der Anmeldung, die den Auftrag besitzt. *Login*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, der als aktueller Anmelde Name interpretiert wird. Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für **@owner_login_name** festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert von **@owner_login_name** festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Ein Wert, der angibt, wann einen Eintrag im Microsoft Windows-Anwendungsprotokoll für diesen Auftrag. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @notify_level_eventlog = ] eventlog_level`Ein Wert, der angibt, wann für diesen Auftrag ein Eintrag in das Microsoft Windows-Anwendungsprotokoll platziert werden soll. *eventlog_level*ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|Bei Erfolg|  
-|**2** (Standardwert)|Bei einem Fehler|  
+|**2** (Standardwert)|Bei Fehler|  
 |**3**|Always|  
   
-`[ @notify_level_email = ] email_level` Ein Wert, der wann nach Abschluss dieses Auftrags eine E-mail gesendet werden soll. *Email_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_email = ] email_level`Ein Wert, der angibt, wann nach Abschluss dieses Auftrags eine e-Mail gesendet werden soll. *email_level*ist vom Datentyp **int**. der Standardwert ist **0**, was bedeutet, dass nie. *email_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Ein Wert, der beim Senden eine Netzwerknachricht nach dem Abschluss des Auftrags angibt. *Netsend_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Netsend_level* verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_netsend = ] netsend_level`Ein Wert, der angibt, wann nach Abschluss dieses Auftrags eine Netzwerk Nachricht gesendet werden soll. *netsend_level*ist vom Datentyp **int**. der Standardwert ist **0**, was bedeutet, dass nie. *netsend_level* verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Ein Wert, der wann nach Abschluss dieses Auftrags eine Seite gesendet werden soll. *Page_level*ist **Int**, hat den Standardwert **0**, die nie angibt. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_page = ] page_level`Ein Wert, der angibt, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *page_level*ist vom Datentyp **int**. der Standardwert ist **0**, was bedeutet, dass nie. *page_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'` Der e-Mail-Name der Person zum Senden von E-mail, wenn *Email_level* erreicht ist. *e-Mail-Name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @notify_email_operator_name = ] 'email_name'`Der e-Mail-Name der Person, an die eine e-Mail gesendet werden soll, wenn *email_level* erreicht wird. *aufweisen:* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'` Der Name des Operators, an den die Netzwerknachricht, nach Abschluss des Auftrags gesendet wird. *Netsend_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'`Der Name des Operators, an den die Netzwerk Nachricht gesendet wird, wenn dieser Auftrag abgeschlossen ist. *netsend_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @notify_page_operator_name = ] 'page_name'` Der Name des Operators, der nach Abschluss des Auftrags. *Seitenname*ist **Sysname**, hat den Standardwert NULL.  
+`[ @notify_page_operator_name = ] 'page_name'`Der Name der Person, die nach dem Abschluss dieses Auftrags angezeigt werden soll. *page_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @delete_level = ] delete_level` Ein Wert, der beim Löschen des Auftrags angibt. *delete_level*ist **Int**, hat den Standardwert 0, womit nie. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @delete_level = ] delete_level`Ein Wert, der angibt, wann der Auftrag gelöscht werden soll. *delete_value*ist vom Datentyp **int**. der Standardwert ist 0. Dies bedeutet nie. *delete_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
 > [!NOTE]  
->  Wenn *Auftrag nie gelöscht* ist **3**, dem der Auftrag nur einmal ausgeführt wird, unabhängig davon, alle Zeitpläne für den Auftrag definierten. Darüber hinaus wird, wenn sich ein Auftrag selbst löscht, auch der gesamte Verlauf für diesen Auftrag gelöscht.  
+>  Wenn *delete_level* gleich **3**ist, wird der Auftrag nur einmal ausgeführt, unabhängig von den für den Auftrag definierten Zeitplänen. Darüber hinaus wird, wenn sich ein Auftrag selbst löscht, auch der gesamte Verlauf für diesen Auftrag gelöscht.  
   
-`[ @job_id = ] _job_idOUTPUT` Die Auftrags-ID, der dem Auftrag zugewiesen wird, wenn erfolgreich erstellt. *Job_id*ist eine Ausgabevariable vom Typ **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] _job_idOUTPUT`Die Auftrags-ID, die dem Auftrag zugewiesen wird, wenn er erfolgreich erstellt wurde. *job_id*ist eine Ausgabevariable vom Typ **uniqueidentifier**. der Standardwert ist NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -103,16 +106,16 @@ sp_add_job [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Hinweise  
- **@originating_server** vorhanden **Sp_add_job** jedoch nicht unter den Argumenten aufgeführt. **@originating_server** ist für die interne Verwendung reserviert.  
+ **@originating_server** ist in **sp_add_job vorhanden,** wird aber nicht unter Argumente aufgeführt. **@originating_server** ist für die interne Verwendung reserviert.  
   
- Nach dem **Sp_add_job** wurde ausgeführt, um einen Auftrag hinzuzufügen **Sp_add_jobstep** kann verwendet werden, zum Hinzufügen von Schritten, die die Aktivitäten für den Auftrag ausführen. **Sp_add_jobschedule** können den Zeitplan zu erstellen, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst verwendet wird, um den Auftrag auszuführen. Verwendung **Sp_add_jobserver** Festlegen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, in dem der Auftrag ausgeführt wird, und **Sp_delete_jobserver** So entfernen Sie den Auftrag aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
+ Nachdem **sp_add_job** zum Hinzufügen eines Auftrags ausgeführt wurde, kann **sp_add_jobstep** verwendet werden, um Schritte hinzuzufügen, die die Aktivitäten für den Auftrag ausführen. **sp_add_jobschedule** kann verwendet werden, um den Zeitplan zu erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den der-Agent-Dienst zum Ausführen des Auftrags verwendet. Verwenden Sie **sp_add_jobserver** , um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Instanz festzulegen, in der der Auftrag ausgeführt wird, und **sp_delete_jobserver** , um den Auftrag aus der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz zu entfernen.  
   
- Wenn der Auftrag auf einem oder mehreren Zielservern in einer multiserverumgebung ausgeführt wird, verwenden Sie **Sp_apply_job_to_targets** die Zielserver oder Zielservergruppen für den Auftrag. Verwenden Sie zum Entfernen von Aufträgen von Zielservern oder Zielservergruppen **Sp_remove_job_from_targets**.  
+ Wenn der Auftrag auf einem oder mehreren Ziel Servern in einer Multiserverumgebung ausgeführt wird, verwenden Sie **sp_apply_job_to_targets** , um die Zielserver oder Zielserver Gruppen für den Auftrag festzulegen. Verwenden Sie **sp_remove_job_from_targets**, um Aufträge von Ziel Servern oder Zielserver Gruppen zu entfernen.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer Mitglied werden die **Sysadmin** festen Serverrolle oder über eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen, die sich im befinden die **Msdb** Datenbank:  
+ Zum Ausführen dieser gespeicherten Prozedur müssen Benutzer ein Mitglied der festen Server Rolle **sysadmin** oder eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festen Daten bankrollen des-Agents haben, die sich in der **msdb** -Datenbank befinden:  
   
 -   **SQLAgentUserRole**  
   
@@ -120,9 +123,9 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Informationen zu den einzelnen Berechtigungen, die mit jeder dieser festen verknüpft sind, Datenbankrollen, finden Sie unter [SQL Server Agent Fixed-Datenbankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Informationen zu den einzelnen Berechtigungen, die den einzelnen festgelegten Daten bankrollen zugeordnet sind, finden Sie unter [SQL Server-Agent fester Daten bankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** Serverrolle festlegen oder ändern Sie den Wert für **@owner_login_name** . Wenn Benutzer, die keine Mitglieder sind von der **Sysadmin** Rolle festlegen oder ändern Sie den Wert der **@owner_login_name** , Ausführung dieser gespeicherten Prozedur ein Fehler auftritt und ein Fehler zurückgegeben.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können den Wert für **@owner_login_name** festlegen oder ändern. Wenn Benutzer, die keine Mitglieder der **sysadmin** -Rolle sind, den Wert von **@owner_login_name** festlegen oder ändern, schlägt die Ausführung dieser gespeicherten Prozedur fehl, und es wird ein Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   

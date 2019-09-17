@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 643ffbb29267a9e26a66e1b35cc55f3a88ca8789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec01941d4e8b333f3c29a38fd701b051acf04721
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089653"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279488"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>Beispiel: Schrittweise Wiederherstellung nur bestimmter Dateigruppen (Vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,18 +72,16 @@ ms.locfileid: "68089653"
   
 4.  Onlinewiederherstellung der Dateigruppe `B`.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Files in filegroup `B` are restored any time thereafter.  
+   Die Dateien in der Dateigruppe `B` werden zu einem beliebigen späteren Zeitpunkt wiederhergestellt.  
   
-    > [!NOTE]  
-    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
+   > [!NOTE]  
+   >  Die Sicherung von Dateigruppe `B` wurde erstellt, nachdem die Dateigruppe als schreibgeschützt gekennzeichnet wurde. Deshalb muss für diese Dateien kein Rollforward ausgeführt werden.  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
-    ```  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
+   ```  
   
-     All filegroups are now online.  
+   Alle Dateigruppen sind nun online.  
   
 ## <a name="additional-examples"></a>Zusätzliche Beispiele  
   

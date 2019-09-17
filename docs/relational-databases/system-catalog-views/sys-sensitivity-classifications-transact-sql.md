@@ -1,14 +1,13 @@
 ---
-title: Sys.sensitivity_classifications (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sensitivity_classifications (Transact-SQL) | Microsoft-Dokumentation
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
-ms.manager: craigg
-ms.author: arib
-author: vainolo
+ms.author: mibar
+author: barmichal
 f1_keywords:
 - 'sys.sensitivity_classifications '
 dev_langs:
@@ -23,44 +22,44 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d14cd93b08c0094ad984a6469b433e0b266479
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014431"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929778"
 ---
-# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
+# <a name="syssensitivity_classifications-transact-sql"></a>sys. sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Gibt eine Zeile für jede klassifizierte Element in der Datenbank zurück.
+Gibt eine Zeile für jedes klassifizierte Element in der Datenbank zurück.
 
-|Spaltenname|Datentyp|Description|
+|Spaltenname|Datentyp|Beschreibung|
 |-----------------|---------------|-----------------|  
-|**class**|**int**|Gibt die Klasse des Elements, auf dem die Klassifizierung vorhanden ist.|  
-|**class_desc**|**varchar(16)**|Eine Beschreibung der Klasse des Elements, auf dem die Klassifizierung vorhanden ist.|  
-|**major_id**|**int**|ID des Elements, auf denen die Klassifizierung vorhanden ist. < Br \>< Br \>Klasse 0 Major_id ist, immer 0.<br>Klasse ist 1, 2 oder 7 Major_id Object_id.|  
-|**minor_id**|**int**|Sekundäre ID des Elements, auf dem die Klassifizierung vorhanden ist, interpretiert gemäß der entsprechenden Klasse.<br><br>Wenn Klasse = 1, Minor_id ist die Column_id (wenn Spalte), andernfalls 0 (wenn Objekt).<br>Wenn Klasse = 2, Minor_id ist die Parameter_id.<br>Wenn Klasse = 7, Minor_id ist die Index_id. |  
-|**label**|**sysname**|Die Bezeichnung (lesbare) für die vertraulichkeitsklassifizierung zugewiesen|  
-|**label_id**|**sysname**|Eine ID verknüpft ist, mit der Bezeichnung, die von einem Informationssystem Schutz wie Azure Information Protection (AIP) verwendet werden kann|  
-|**information_type**|**sysname**|Der Informationstyp (lesbare) für die vertraulichkeitsklassifizierung zugewiesen|  
-|**information_type_id**|**sysname**|Eine ID zugeordnet den Informationstyp an, die von einem Informationssystem Schutz wie Azure Information Protection (AIP) verwendet werden können|  
+|**class**|**int**|Identifiziert die Klasse des Elements, für das die Klassifizierung vorhanden ist.|  
+|**class_desc**|**varchar (16)**|Eine Beschreibung der Klasse des Elements, für das die Klassifizierung vorhanden ist.|  
+|**major_id**|**int**|ID des Elements, für das die Klassifizierung vorhanden ist. < \>BR < \>BR, wenn die Klasse 0 ist, ist major_id immer 0.<br>Wenn die Klasse den Wert 1, 2 oder 7 hat major_id ist object_id.|  
+|**minor_id**|**int**|Sekundäre ID des Elements, für das die Klassifizierung vorhanden ist, interpretiert nach der Klasse.<br><br>Wenn class = 1, ist minor_id die column_id (if-Spalte), Else 0 (if-Objekt).<br>Wenn class = 2, ist minor_id der parameter_id.<br>Wenn class = 7, ist minor_id der index_id. |  
+|**label**|**sysname**|Die Bezeichnung (Menschen lesbar), die für die Vertraulichkeits Klassifizierung zugewiesen ist.|  
+|**label_id**|**sysname**|Eine ID, die der Bezeichnung zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
+|**information_type**|**sysname**|Der Informationstyp (Menschen lesbar), der der Sensitivität-Klassifizierung zugewiesen ist.|  
+|**information_type_id**|**sysname**|Eine ID, die dem Informationstyp zugeordnet ist und von einem Informationsschutz System wie z. b. Azure Information Protection (AIP) verwendet werden kann.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Hinweise  
 
-- Diese Ansicht bietet einen Einblick in die der klassifizierungsstatus der Datenbank. Es kann für die Verwaltung der Datenbank-Klassifizierungen sowie zur Erstellung von Berichten verwendet werden.
-- Derzeit wird nur die Klassifizierung von Datenbankspalten wird unterstützt. Daher:
-    - **Klasse** -weisen immer den Wert 1 (für eine Spalte)
-    - **Class_desc** -besitzen immer den Wert *OBJECT_OR_COLUMN*
-    - **Major_id** – stellt die ID der Tabelle, die die klassifizierte Spalte enthält, die entsprechende sys.all_objects.object_id dar
-    - **Minor_id** – stellt die ID der Spalte auf dem die Klassifizierung vorhanden, entspricht sys.all_columns.column_id ist dar
+- Diese Ansicht bietet Einblick in den Klassifizierungs Status der Datenbank. Sie kann zum Verwalten der Daten Bank Klassifizierungen sowie zum Erstellen von Berichten verwendet werden.
+- Derzeit wird nur die Klassifizierung von Daten Bank Spalten unterstützt. Damit
+    - **Class** : hat immer den Wert 1 (die eine Spalte darstellt)
+    - **class_desc** : hat immer den Wert *OBJECT_OR_COLUMN*
+    - **major_id** -stellt die ID der Tabelle mit der klassifizierten Spalte dar, die sys. all _objects. object_id entspricht.
+    - **minor_id** -stellt die ID der Spalte dar, für die die Klassifizierung vorhanden ist, entspricht sys. all _columns. column_id
 
 ## <a name="examples"></a>Beispiele
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Auflisten aller klassifizierten Spalten und der entsprechenden Klassifizierung
 
-Das folgende Beispiel gibt eine Tabelle mit den Tabellennamen, Spaltennamen, Bezeichnung bezeichnungs-ID, Informationstyp Informations-Typ-ID für jede klassifizierte Spalte in der Datenbank.
+Im folgenden Beispiel wird eine Tabelle mit dem Tabellennamen, dem Spaltennamen, der Bezeichnung, der Bezeichnungs-ID, dem Informationstyp und der Informationstyp-ID für jede klassifizierte Spalte in der Datenbank zurückgegeben.
 
 > [!NOTE]
 > Bezeichnung ist ein Schlüsselwort für Azure SQL Data Warehouse.

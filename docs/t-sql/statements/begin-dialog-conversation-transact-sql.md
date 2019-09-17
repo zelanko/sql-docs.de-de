@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96b2611bdbc7c13072f43b36d5e132b9713b3878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141190"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211381"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Beginnt einen Dialog zwischen zwei Diensten. Ein Dialog ermöglicht eine Konversation zwischen zwei Diensten, bei der jede Nachricht genau einmal übertragen wird, und zwar an der Reihenfolgeposition, an der sie gesendet wird.  
   
@@ -68,13 +68,13 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  Gibt den Dienst an, der den Dialog initialisiert. Bei dem angegebenen Namen muss es sich um den Namen eines Diensts in der aktuellen Datenbank handeln. Die als Initiatordienst angegebene Warteschlange empfängt Nachrichten, die vom Zieldienst zurückgegeben werden, sowie Nachrichten, die von Service Broker für diese Konversation erstellt wurden.  
   
- TO SERVICE **'** _target_service_name_ **'**  
- Gibt den Zieldienst an, mit dem der Dialog initialisiert werden soll. Der *target_service_name* ist vom Typ **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *target_service_name*-Zeichenfolge aus. Das heißt, dass bei dem Vergleich die Groß- und Kleinschreibung beachtet und die aktuelle Sortierung nicht berücksichtigt wird.  
+ TO SERVICE **'**_target_service_name_**'**  
+ Gibt den Zieldienst an, mit dem der Dialog initialisiert werden soll. Der *target_service_name* ist vom Typ **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] führt einen bitweisen Vergleich mit der *target_service_name*-Zeichenfolge aus. Das heißt, dass bei dem Vergleich die Groß- und Kleinschreibung beachtet und die aktuelle Sortierung nicht berücksichtigt wird.  
   
  *service_broker_guid*  
  Gibt die Datenbank an, auf der sich der Zieldienst befindet. Wenn mehrere Datenbanken eine Instanz des Zieldiensts hosten, können Sie mit einer bestimmten Datenbank kommunizieren, indem Sie *service_broker_guid* angeben.  
   
- Die *service_broker_guid* ist vom Typ **nvarchar(128)** . Führen Sie die folgende Abfrage in der Datenbank aus, um die *service_broker_guid* für eine Datenbank zu ermitteln:  
+ Die *service_broker_guid* ist vom Typ **nvarchar(128)**. Führen Sie die folgende Abfrage in der Datenbank aus, um die *service_broker_guid* für eine Datenbank zu ermitteln:  
   
 ```  
 SELECT service_broker_guid  
@@ -91,13 +91,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  Gibt den Vertrag an, dem diese Konversation entspricht. Der Vertrag muss in der aktuellen Datenbank vorhanden sein. Wenn der Zieldienst für den angegebenen Vertrag keine neuen Konversationen akzeptiert, gibt [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Fehlermeldung zur Konversation zurück. Wird diese Klausel weggelassen, folgt die Konversation dem Vertrag mit dem Namen **DEFAULT**.  
   
- RELATED_CONVERSATION **=** _related_conversation_handle_  
+ RELATED_CONVERSATION **=**_related_conversation_handle_  
  Gibt die vorhandene Konversationsgruppe an, der der neue Dialog hinzugefügt wird. Wenn diese Klausel vorhanden ist, gehört der neue Dialog derselben Konversationsgruppe an, wie der mit *related_conversation_handle* angegebene Dialog. *related_conversation_handle* muss implizit in den Typ **uniqueidentifier** konvertierbar sein. Die Anweisung schlägt fehl, wenn *related_conversation_handle* nicht auf einen vorhandenen Dialog verweist.  
   
- RELATED_CONVERSATION_GROUP **=** _related_conversation_group_id_  
+ RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
  Gibt die vorhandene Konversationsgruppe an, der der neue Dialog hinzugefügt wird. Wenn diese Klausel vorhanden ist, wird der neue Dialog zu der mit *related_conversation_group_id* angegebenen Konversationsgruppe hinzugefügt. *related_conversation_group_id* muss implizit in den Typ **uniqueidentifier** konvertierbar sein. Wenn *related_conversation_group_id* nicht auf eine vorhandene Konversationsgruppe verweist, erstellt der Service Broker eine neue Konversationsgruppe mit der angegebenen *related_conversation_group_id* und verknüpft den neuen Dialog mit dieser Konversationsgruppe.  
   
- LIFETIME **=** _dialog_lifetime_  
+ LIFETIME **=**_dialog_lifetime_  
  Gibt den maximalen Zeitraum an, in dem der Dialog geöffnet bleibt. Damit der Dialog erfolgreich abgeschlossen wird, müssen beide Endpunkte den Dialog explizit beenden, bevor die Lebensdauer abläuft. Der Wert für *dialog_lifetime* muss in Sekunden angegeben werden. „Lifetime“ ist vom Typ **int**. Wird keine LIFETIME-Klausel angegeben, entspricht die Lebensdauer des Dialogs dem maximalen Wert des Datentyps **int**.  
   
  ENCRYPTION  
@@ -106,7 +106,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Nachrichten, die mit Diensten in derselben Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgetauscht werden, sind nie verschlüsselt. Jedoch sind ein Hauptschlüssel für die Datenbank und die Zertifikate für die Verschlüsselung für diejenigen Konversationen mit Verschlüsselung erforderlich, bei denen sich die Dienste für die Konversation auf verschiedenen Datenbanken befinden. Damit kann die Konversation auch dann fortgesetzt werden, wenn während der Ausführung der Konversation eine der Datenbanken auf eine andere Instanz verschoben wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Alle Nachrichten sind Teil einer Konversation. Deshalb muss ein initialisierender Dienst eine Konversation mit dem Zieldienst beginnen, bevor eine Nachricht an den Zieldienst gesandt wird. Die in der BEGIN DIALOG CONVERSATION-Anweisung angegebenen Informationen sind mit der Adresse auf einem Brief vergleichbar; [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet diese Informationen, um Nachrichten an den richtigen Dienst zu übermitteln. Der Dienst, der in der TO SERVICE-Klausel angegeben wird, ist die Adresse, an die die Nachrichten gesandt werden. Der Dienst, der in der FROM SERVICE-Klausel angegeben wird, ist die Rückadresse für Antwortnachrichten.  
   
  Das Ziel einer Konversation muss nicht BEGIN DIALOG CONVERSATION aufrufen. [!INCLUDE[ssSB](../../includes/sssb-md.md)] erstellt eine Konversation in der Zieldatenbank, wenn die erste Nachricht in der Konversation vom Initiator eintrifft.  

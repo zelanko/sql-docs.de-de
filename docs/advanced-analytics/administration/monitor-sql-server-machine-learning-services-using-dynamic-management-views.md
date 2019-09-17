@@ -1,35 +1,35 @@
 ---
-title: Überwachen der Ausführung von R-und python-Skripts mithilfe dynamischer Verwaltungs Sichten (DMVs)
-description: Mithilfe dynamischer Verwaltungs Sichten (DMVs) können Sie die externe Skriptausführung von R und python in SQL Server Machine Learning Services überwachen.
+title: Überwachen der Python-und R-Skriptausführung mithilfe von DMVs
+description: Verwenden Sie dynamische Verwaltungs Sichten (DMVs), um die Ausführung externer python-und R-Skripts in SQL Server Machine Learning Services zu überwachen.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715321"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978406"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mithilfe dynamischer Verwaltungs Sichten (DMVs)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Mithilfe dynamischer Verwaltungs Sichten (DMVs) können Sie die Ausführung externer Skripts (R und python), der verwendeten Ressourcen, der Diagnose von Problemen und der Optimierung der Leistung in SQL Server Machine Learning Services überwachen.
+Mithilfe dynamischer Verwaltungs Sichten (DMVs) können Sie die Ausführung externer Skripts (python und R), der verwendeten Ressourcen, der Diagnose von Problemen und der Optimierung der Leistung in SQL Server Machine Learning Services überwachen.
 
 In diesem Artikel finden Sie die DMVs, die für SQL Server Machine Learning Services spezifisch sind. Außerdem finden Sie Beispiele für Abfragen, die Folgendes anzeigen:
 
 + Einstellungen und Konfigurationsoptionen für Machine Learning
-+ Aktive Sitzungen mit externen R-oder python-Skripts
-+ Ausführungs Statistik für die externe Laufzeit für R und python
++ Aktive Sitzungen, die externe python oder Skripts ausführen
++ Ausführungs Statistik für die externe Laufzeit für python und R
 + Leistungsindikatoren für externe Skripts
 + Arbeitsspeicher Auslastung für das Betriebssystem, SQL Server und externe Ressourcenpools
 + Speicherkonfiguration für SQL Server und externe Ressourcenpools
 + Resource Governor von Ressourcenpools, einschließlich externer Ressourcenpools
-+ Installierte Pakete für R und python
++ Installierte Pakete für python und R
 
 Weitere allgemeine Informationen zu DMVs finden Sie unter [dynamische System Verwaltungs Sichten](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | Leistungsindikator | Beschreibung |
 |---------|-------------|
 | Total Executions | Anzahl externer Prozesse, die von lokalen oder Remote Aufrufen gestartet werden. |
-| Parallel Executions | Gibt an, wie oft ein Skript die _@parallel_ Spezifikation enthielt und [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ob ein paralleler Abfrageplan generiert und verwendet werden konnte. |
+| Parallel Executions | Gibt an, wie oft ein Skript die  _\@parallele_ Spezifikation enthielt und [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ob ein paralleler Abfrageplan generiert und verwendet werden konnte. |
 | Streaming Executions | Gibt an, wie oft das Streaming-Feature aufgerufen wurde. |
 | SQL CC Executions | Anzahl externer Skripts, die ausgeführt werden, wenn der-Befehl Remote instanziiert wurde und SQL Server als computekontext verwendet wurde. |
 | Implied Auth. Anmeldungen | Gibt an, wie oft ein ODBC-Loopback-Rückruf mit implizierter Authentifizierung durchgeführt wurde. Das heißt, der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] hat den-Befehl im Auftrag des Benutzers ausgeführt, der die Skript Anforderung sendet. |
@@ -280,7 +280,7 @@ Die zurückgegebenen Spalten lauten:
 | Package | Der Name des installierten Pakets. |
 | Version | Version des Pakets. |
 | Depends (Abhängig) | Listet die Pakete auf, von denen das installierte Paket abhängt. |
-| License (Lizenz) | Lizenz für das installierte Paket. |
+| Lizenz | Lizenz für das installierte Paket. |
 | LibPath | Das Verzeichnis, in dem Sie das Paket finden können. |
 
 ### <a name="installed-packages-for-python"></a>Installierte Pakete für python

@@ -8,21 +8,21 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f81b4f755441a5129892ed321d74bb8c6427ee4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: c8c8f69391db2e1028a0da33dbaf77fd60eafd8f
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714843"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70909202"
 ---
-# <a name="quickstart-using-r-functions"></a>Schnellstart: Verwenden von R-Funktionen
+# <a name="quickstart-use-r-functions"></a>Schnellstart: Verwenden von R-Funktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Wenn Sie die vorherigen Schnellstarts abgeschlossen haben, sind Sie mit grundlegenden Vorgängen vertraut und bereit für etwas komplexeres, z. b. statistische Funktionen. Erweiterte statistische Funktionen, die in T-SQL schwierig zu implementieren sind, können in R nur mit einer einzigen Codezeile durchgeführt werden.
 
 In dieser Schnellstartanleitung Betten Sie die mathematischen und Hilfsfunktionen von R in eine gespeicherte Prozedur SQL Server ein.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Eine vorherige Schnellstartanleitung, [überprüfen, ob R in SQL Server vorhanden](quickstart-r-verify.md)ist, enthält Informationen und Links zum Einrichten der r-Umgebung, die für diesen Schnellstart erforderlich ist.
 

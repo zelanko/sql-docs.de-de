@@ -1,5 +1,5 @@
 ---
-title: Sysmail_sentitems (Transact-SQL) | Microsoft-Dokumentation
+title: sysmail_sentitems (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,46 +17,46 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0a2cf94ed3575a6da1ec072e9cf19df0b467741
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c935a83c3c3fdd9fa577a3232e46caed7865c1c3
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086245"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745365"
 ---
-# <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Nachricht, die von der Datenbank-E-Mail gesendet wurde. Verwendung **Sysmail_sentitems** werden sollen anzuzeigen, welche Nachrichten erfolgreich gesendet wurden.  
+  Enthält eine Zeile für jede Nachricht, die von der Datenbank-E-Mail gesendet wurde. Verwenden Sie **sysmail_sentitems** , wenn Sie sehen möchten, welche Nachrichten erfolgreich gesendet wurden.  
   
- Um alle von der Datenbank-e-Mails verarbeiteten Nachrichten anzuzeigen, verwenden [Sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Um nur Nachrichten mit dem Status failed anzuzeigen, verwenden [Sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Um nicht nur gesendete oder verwenden Sie die Wiederholung von Nachrichten, [Sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Um e-Mail-Anlagen anzuzeigen, verwenden Sie [Sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md).  
+ Wenn Sie alle von Datenbank-E-Mail verarbeiteten Nachrichten anzeigen möchten, verwenden Sie [ &#40;sysmail_allitems&#41;Transact-SQL](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Verwenden Sie [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md), um nur Nachrichten mit dem Status Fehler anzuzeigen. Verwenden Sie [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md), um nur nicht gesendete oder wiederholt Nachrichten anzuzeigen. Verwenden Sie [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md), um e-Mail-Anhänge anzuzeigen.  
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Der Bezeichner des E-Mail-Elements in der E-Mail-Warteschlange.|  
 |**profile_id**|**int**|Der Bezeichner des Profils, das zum Senden der Nachricht verwendet wurde.|  
-|**Empfänger**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
+|**Empfängers**|**varchar(max)**|Die E-Mail-Adressen der Nachrichtenempfänger.|  
 |**copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten.|  
 |**blind_copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten, deren Namen jedoch nicht im Nachrichtenkopf angezeigt werden.|  
-|**subject**|**nvarchar(510)**|Die Betreffzeile der Nachricht.|  
+|**subject**|**nvarchar (510)**|Die Betreffzeile der Nachricht.|  
 |**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
-|**body_format**|**varchar(20)**|Das Textkörperformat der Nachricht. Die möglichen Werte sind **TEXT** und **HTML**.|  
-|**Wichtigkeit**|**varchar(6)**|Die **Wichtigkeit** -Parameter der Nachricht.|  
-|**Empfindlichkeit**|**varchar(12)**|Die **Vertraulichkeit** -Parameter der Nachricht.|  
+|**body_format**|**varchar (20)**|Das Textkörperformat der Nachricht. Mögliche Werte sind **Text** und **HTML**.|  
+|**Wichtigkeit**|**varchar(6)**|Der **Wichtigkeits** Parameter der Nachricht.|  
+|**/Kleinschreibung**|**varchar (12)**|Der **Sensitivitäts** Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
-|**attachment_encoding**|**varchar(20)**|Der Typ der E-Mail-Anlage.|  
+|**attachment_encoding**|**varchar (20)**|Der Typ der E-Mail-Anlage.|  
 |**query**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
 |**execute_query_database**|**sysname**|Der Datenbankkontext, in dem das E-Mail-Programm die Abfrage ausgeführt hat.|  
 |**attach_query_result_as_file**|**bit**|Bei einem Wert von 0 wurden die Abfrageergebnisse hinter dem Inhalt des Textkörpers in den Textkörper der E-Mail-Nachricht eingeschlossen. Bei einem Wert von 1 wurden die Ergebnisse als Anlage zurückgegeben.|  
 |**query_result_header**|**bit**|Bei einem Wert von 1 enthielten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthielten die Abfrageergebnisse keine Spaltenheader.|  
-|**query_result_width**|**int**|Die **Query_result_width** -Parameter der Nachricht.|  
+|**query_result_width**|**int**|Der **query_result_width** -Parameter der Nachricht.|  
 |**query_result_separator**|**char(1)**|Das Zeichen, das zum Trennen der Spalten in der Abfrageausgabe verwendet wird.|  
-|**exclude_query_output**|**bit**|Die **Exclude_query_output** -Parameter der Nachricht. Weitere Informationen finden Sie unter [Sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
-|**append_query_error**|**bit**|Die **Append_query_error** -Parameter der Nachricht. 0 zeigt an, dass die Datenbank-E-Mail die Nachricht nicht senden soll, wenn die Abfrage einen Fehler enthält.|  
+|**exclude_query_output**|**bit**|Der **exclude_query_output** -Parameter der Nachricht. Weitere Informationen finden Sie unter [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**append_query_error**|**bit**|Der **append_query_error** -Parameter der Nachricht. 0 zeigt an, dass die Datenbank-E-Mail die Nachricht nicht senden soll, wenn die Abfrage einen Fehler enthält.|  
 |**send_request_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht in der E-Mail-Warteschlange platziert wurde.|  
 |**send_request_user**|**sysname**|Der Benutzer, der die Nachricht gesendet hat. Hierbei handelt es sich um den Benutzerkontext der Datenbank-E-Mail-Prozedur, nicht um das Von-Feld der Nachricht.|  
 |**sent_account_id**|**int**|Der Bezeichner des Datenbank-E-Mail-Kontos, das zum Senden der Nachricht verwendet wird.|  
-|**sent_status**|**varchar(8)**|Der Status der E-Mail. Immer **gesendet** für diese Sicht.|  
+|**sent_status**|**varchar(8)**|Der Status der E-Mail. Wird immer für diese Ansicht **gesendet** .|  
 |**sent_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht gesendet wurde.|  
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68086245"
  Wenn Sie Probleme mit der Datenbank-E-Mail behandeln, kann diese Sicht Ihnen helfen, die Ursache des Problems zu identifizieren, da sie die Attribute der Nachrichten anzeigt, die erfolgreich gesendet wurden. Die Datenbank-E-Mail markiert Nachrichten als gesendet, wenn sie erfolgreich an einen SMTP-Mailserver übermittelt wurden. E-Mails werden normalerweise innerhalb weniger Minuten empfangen, können sich jedoch aufgrund von Problemen mit dem SMTP-Server verzögern. Die Datenbank-E-Mail markiert die Nachricht als gesendet, wenn sie vom SMTP-Mailserver akzeptiert wurde. E-Mail-Fehler, die auf dem SMTP-Mailserver auftreten, z. B. eine unzustellbare Empfänger-E-Mail-Adresse, werden nicht an die Datenbank-E-Mail zurückgegeben. Diese E-Mails werden als gesendet markiert, obwohl sie nicht übermittelt wurden. Diese Art von Problem müssen Sie auf dem SMTP-Server behandeln. Darüber hinaus sendet der SMTP-Mailserver möglicherweise eine Benachrichtigung, dass die Nachricht nicht zugestellt werden konnte, an die Antwort-E-Mail-Adresse für ein Datenbank-E-Mail-Konto.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Gewährt **Sysadmin** Serverrolle und **Databasemailuserrole** -Datenbankrolle. Beim Ausführen von einem Mitglied der **Sysadmin** festen Serverrolle, die in dieser Ansicht werden alle gesendeten Nachrichten an. Für alle anderen Benutzer werden nur die von ihnen gesendeten Nachrichten angezeigt.  
+ Wird der festen Server Rolle **sysadmin** und der Daten Bank Rolle **DatabaseMailUserRole** gewährt. Wenn Sie von einem Mitglied der festen Server Rolle **sysadmin** ausgeführt wird, werden in dieser Ansicht alle gesendeten Nachrichten angezeigt. Für alle anderen Benutzer werden nur die von ihnen gesendeten Nachrichten angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch  
  [Messagingobjekte für Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-messaging-objects.md)  

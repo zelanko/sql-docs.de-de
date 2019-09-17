@@ -20,19 +20,16 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f4fdc5f81ff01b77f0bb27e5782db6ecd41b004
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969452"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284595"
 ---
 # <a name="sql-server-documentation"></a>SQL Server-Dokumentation
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Senden Sie uns Ihr Feedback zur Hubseite der SQL-Dokumentation!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server ist ein zentraler Bestandteil der Microsoft-Datenplattform. SQL Server ist ein im Bereich Betriebsdatenbank-Management (Operational Database Management System, ODBMS) branchenführendes Produkt. In dieser Dokumentation finden Sie Hilfe zur Installation, Konfiguration und Verwendung von SQL Server unter Windows und Linux. Die Inhalte umfassen End-to-End-Beispiele, Codebeispiele und Videos. Informationen zu SQL Server-Sprachthemen finden Sie in der [Sprachreferenz](../t-sql/language-reference.md).

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770944"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745384"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
+# <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Listet Informationen zum Verteiler, zur Verteilungs Datenbank, zum Arbeitsverzeichnis und [!INCLUDE[msCoName](../../includes/msconame-md.md)] zum Benutzerkonto des- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agents. Diese gespeicherte Prozedur wird beim Verleger mit der Veröffentlichungsdatenbank oder einer anderen Datenbank ausgeführt.  
@@ -105,12 +105,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Resultsetspalte|Output-Parameter|  
 |-----------------------|----------------------|  
-|account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
-|history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
+|account|**\@Ziehen**|  
+|min distrib retention|**\@min_distretention**|  
+|max distrib retention|**\@max_distretention**|  
+|history retention|**\@history_retention**|  
+|history cleanup agent|**\@history_cleanupagent**|  
+|distribution cleanup agent|**\@distrib_cleanupagent**|  
 |rpc login name|none|  
   
  Die folgende Resultsetspalte wird an Benutzer in der Veröffentlichungszugriffsliste für eine Veröffentlichung beim Verteiler zurückgegeben:  
@@ -121,10 +121,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Resultsetspalte|Output-Parameter|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|distribution database|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
-|publisher type|**@publisher_type**|  
+|distributor|**\@Verleih**|  
+|distribution database|**\@Verteil DB**|  
+|rpc server name|**\@rpcsrvname**|  
+|publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>Siehe auch  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

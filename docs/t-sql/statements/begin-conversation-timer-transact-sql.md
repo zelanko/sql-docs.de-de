@@ -32,15 +32,15 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09b935ccc5f8ac1d357168f2032e822c9c0bcd8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65fbd94bac320994f9c1917e634210febd2ba878
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141202"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211217"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Startet einen Zeitgeber. Wenn das Timeout abläuft, stellt [!INCLUDE[ssSB](../../includes/sssb-md.md)] eine Nachricht des Typs `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` in die lokale Warteschlange für die Konversation.  
   
@@ -56,13 +56,13 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- BEGIN CONVERSATION TIMER **(** _conversation\_handle_ **)**  
+ BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Gibt die Konversation an, für die ein Zeitgeber festgelegt werden soll. *conversation_handle* muss dem Typ **uniqueidentifier** entsprechen.  
   
  TIMEOUT  
  Gibt die Zeitdauer in Sekunden an, die gewartet wird, bevor die Nachricht in der Warteschlange platziert wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Mithilfe eines Konversationszeitgebers kann eine Anwendung nach einem bestimmten Zeitraum eine Nachricht zu einer Konversation empfangen. Wird BEGIN CONVERSATION TIMER für eine Konversation vor Ablauf des Zeitgebers aufgerufen, wird das Timeout auf den neuen Wert festgelegt. Anders als bei der Lebensdauer der Konversation verfügt jede Seite der Konversation über einen unabhängigen Konversationszeitgeber. Die **DialogTimer**-Nachricht kommt in der lokalen Warteschlange an, ohne dass dies Auswirkungen auf die Remoteseite der Konversation hat. Daher kann eine Zeitgebernachricht zu jedem beliebigen Zweck von einer Anwendung verwendet werden.  
   
  Sie können z. B. mithilfe des Konversationszeitgebers verhindern, dass eine Anwendung zu lang auf eine überfällige Antwort wartet. Wenn die Anwendung einen Dialog innerhalb von 30 Sekunden beenden soll, können Sie den Konversationszeitgeber für diesen Dialog auf 60 Sekunden festlegen (30 Sekunden plus einem Zeitraum von 30 Sekunden als Puffer). Falls der Dialog nach 60 Sekunden immer noch geöffnet ist, empfängt die Anwendung eine Timeoutnachricht in der Warteschlange für diesen Dialog.  

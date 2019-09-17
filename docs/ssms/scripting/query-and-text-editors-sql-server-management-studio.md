@@ -1,10 +1,7 @@
 ---
 title: Abfrage- und Text-Editoren (SQL Server Management Studio) | Microsoft-Dokumentation
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +21,29 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266033"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988157"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Abfrage- und Text-Editoren (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Mit den Editoren in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lassen sich [!INCLUDE[tsql](../../includes/tsql-md.md)]-, MDX-, DMX- oder XML/A-Skripts interaktiv bearbeiten und testen sowie XML- oder einfache Textdateien bearbeiten. Die einzelnen Editoren werden durch einen sprachspezifischen Dienst unterstützt, der Schlüsselwörter farblich kennzeichnet und den Code auf Syntaxfehler überprüft. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor enthält einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger, mit dem Sie Probleme in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code beheben können.  
   
-## <a name="sql-server-management-studio-editors"></a>Editoren in SQL Server Management Studio  
+## <a name="sql-server-management-studio-editors"></a>Editoren in SQL Server Management Studio
+
  Die vier Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] weisen die gleiche Architektur auf. Der Text-Editor implementiert die Basisfunktionalitätsstufe und kann als grundlegender Editor für Textdateien verwendet werden. Die anderen drei Editoren oder Abfrage-Editoren bieten erweiterte Funktionalität, indem sie einen Sprachdienst einschließen, der die Syntax von einer der in SQL Server unterstützten Sprachen definiert. Die Abfrage-Editoren implementieren darüber hinaus verschiedene Ebenen der Unterstützung für Editor-Funktionen, z. B. IntelliSense und Debugging. Die Abfrage-Editoren beinhalten den Abfrage-Editor der Datenbank-Engine zur Verwendung bei der Erstellung von Skripts mit Transact-SQL- und XQuery-Anweisungen, den MDX-Editor für die MDX-Sprache, den DMX-Editor für die DMX-Sprache sowie den XML/A-Editor für die XML for Analysis-Sprache.  
   
-## <a name="common-components"></a>Allgemeine Komponenten  
+## <a name="common-components"></a>Allgemeine Komponenten
+
  Alle Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] enthalten diese Komponenten:  
   
  **Codebereich**  
@@ -60,7 +63,8 @@ ms.locfileid: "68266033"
  **Zeilenumbruch**  
  Zeigt lange Text- oder Codezeilen über mehrere Zeilen verteilt an. Dadurch wird der gesamte Text einer Zeile angezeigt. Der Zeilenumbruch hat keinen Einfluss auf die Darstellung des Texts, wenn er ausgeführt oder gedruckt wird. Der Zeilenumbruch wird unter **Extras**über das Dialogfeld **Optionen** auf der Seite „Text-Editor“ &gt; „Alle Sprachen“ &gt; „Allgemein“ oder auf einer bestimmten Seite des Editors aktiviert.  
   
-## <a name="code-editor-components"></a>Komponenten des Code-Editors  
+## <a name="code-editor-components"></a>Komponenten des Code-Editors
+
  Die Code-Editoren enthalten zusätzlich zu den Funktionen, die sie mit dem Text- und XML-Editor gemeinsam haben, folgende Funktionen:  
   
  **Ergebnisse**  
@@ -84,7 +88,8 @@ ms.locfileid: "68266033"
  **Statusleiste**  
  Zeigt Systeminformationen an, die dem Abfrage-Editorfenster zugeordnet sind, beispielsweise mit welcher Instanz der Abfrage-Editor verbunden ist.  
   
-## <a name="database-engine-query-editor-components"></a>Komponenten des Datenbank-Engine-Abfrage-Editors  
+## <a name="database-engine-query-editor-components"></a>Komponenten des Datenbank-Engine-Abfrage-Editors
+
  Diese Komponenten sind nur in dem Datenbank-Engine-Abfrage-Editor verfügbar:  
   
  **Debugger**  
@@ -130,7 +135,6 @@ ms.locfileid: "68266033"
 |Beschreibt, wie der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger verwendet wird, um Code in Einzelschritten auszuführen und Debuggininformationen anzuzeigen, z. B. die Werte in Variablen und Parametern.|[Transact-SQL-Debugger](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Beschreibt, wie benutzerdefinierte Farben für verschiedene Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]und diese Farben als Hintergrund der Statusleiste in [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenstern festgelegt werden.|[Statusleiste &#40;Abfrage-Editor der Datenbank-Engine&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>Nächste Schritte
+
+ [Tastenkombinationen für SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

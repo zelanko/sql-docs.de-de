@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476200"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913561"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installieren von SQL Server 2019 Machine Learning Services (R, Python) unter Linux
+# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Installieren von SQL Server Machine Learning Services (R, Python) unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,17 +31,17 @@ Machine Learning Services auch auf Linux-Containern unterstützt. Wir stellen ke
 
 ## <a name="uninstall-previous-ctp"></a>Deinstallieren von früheren CTP-Versionen
 
-Die Paketliste wurde in den letzten CTP-Releases geändert, was zu weniger Paketen führte. Es wird empfohlen, CTP 2.x zu deinstallieren, um alle vorherigen Pakete vor der Installation von CTP 3.2 zu entfernen. Die gleichzeitige Installation von mehreren Versionen wird nicht unterstützt.
+Die Paketliste wurde in den letzten CTP-Versionen geändert, sodass sie nun weniger Pakete enthält. Es wird empfohlen, CTP 2.x zu deinstallieren, um alle früheren Pakete vor der Installation von CTP 3.2 zu entfernen. Die Installation mehrerer Versionen gleichzeitig wird nicht unterstützt.
 
 ### <a name="1-confirm-package-installation"></a>1. Bestätigen der Paketinstallation
 
-Sie sollten in einem ersten Schritt überprüfen, ob eine frühere Version installiert ist. Die folgenden Dateien weisen auf eine vorhandene Installation hin: „checkinstallextensibility.sh“, „exthost“, „launchpad“.
+Sie sollten in einem ersten Schritt überprüfen, ob eine frühere Version installiert ist. Die folgenden Dateien sind Zeichen dafür, dass bereits eine Installation durchgeführt wurde: „checkinstallextensibility.sh“, „exthost“ und „launchpad“.
 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Deinstallieren von früheren CTP 2.x-Paketen
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Deinstallieren von CTP 2.x-Paketen
 
 Führen Sie die Deinstallation auf der niedrigsten Paketebene durch. Alle Upstreampakete, die von einem Paket auf niedrigerer Ebene abhängig sind, werden automatisch deinstalliert.
 

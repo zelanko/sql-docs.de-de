@@ -1,5 +1,5 @@
 ---
-title: Sp_tableoption (Transact-SQL) | Microsoft-Dokumentation
+title: sp_tableoption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/11/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15c3c9716adefbb95d24c9528dce8607678998c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c717fb3785ee67b010f790ec51bef343e5154299
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096057"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745476"
 ---
-# <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
+# <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Legt Optionswerte für benutzerdefinierte Tabellen fest. Sp_tableoption kann verwendet werden, zum Steuern des Verhaltens in Zeilen für Tabellen mit **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , **Xml**, **Text**, **Ntext**, **Image**, oder großen benutzerdefinierten Typspalten.  
+  Legt Optionswerte für benutzerdefinierte Tabellen fest. sp_tableoption kann verwendet werden, um das Verhalten von Tabellen in Zeilen mit Spalten vom Typ **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **XML**, **Text**, **ntext**, **Image**oder große benutzerdefinierte Spalten zu steuern.  
   
 > [!IMPORTANT]  
->  Die Funktion text in row wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Um Daten mit umfangreichen Werten zu speichern, es wird empfohlen, die Verwendung der **varchar(max)** , **nvarchar(max)** und **'varbinary(max)'** -Datentypen.  
+>  Die Funktion text in row wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Um Daten mit umfangreichen Werten zu speichern, empfiehlt es sich, die Datentypen **varchar (max)** , **nvarchar (max)** und **varbinary (max)** zu verwenden.  
   
 
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -46,61 +46,61 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @TableNamePattern =] '*Tabelle*"  
- Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Datenbanktabelle. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Tabellenoptionen für mehrere Tabellen können nicht gleichzeitig festgelegt werden. *Tabelle* ist **nvarchar(776)** , hat keinen Standardwert.  
+ [ @TableNamePattern =] '*Tabelle*'  
+ Der qualifizierte oder nicht qualifizierte Name einer benutzerdefinierten Datenbanktabelle. Bei Angabe eines voll gekennzeichneten Tabellennamens (einschließlich eines Datenbanknamens) muss der Datenbankname der Name der aktuellen Datenbank sein. Tabellenoptionen für mehrere Tabellen können nicht gleichzeitig festgelegt werden. *Table ist vom Datentyp* **nvarchar (776)** und hat keinen Standardwert.  
   
- [ @OptionName =] '*Optionsname*"  
- Der Name einer Tabellenoption. *Option_name* ist **varchar(35)** , hat keinen Standardwert NULL. *Option_name* kann einer der folgenden Werte sein.  
+ [ @OptionName =] '*option_name*'  
+ Der Name einer Tabellenoption. *option_name* ist vom Datentyp **varchar (35)** und hat den Standardwert NULL. *option_name* kann einen der folgenden Werte aufweisen.  
   
 |Wert|Description|  
 |-----------|-----------------|  
 |table lock on bulk load|Eine deaktivierte Option (Standard) führt dazu, dass der Massenladevorgang auf benutzerdefinierten Tabellen Zeilensperren erhält. Wenn diese Option aktiviert ist, erhalten die Massenladevorgänge auf benutzerdefinierten Tabellen eine Massenupdatesperre.|  
 |insert row lock|Nicht mehr unterstützt.<br /><br /> Diese Option wirkt sich nicht auf das Sperrverhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ist nur aus Gründen der Kompatibilität mit vorhandenen Skripts und Prozeduren enthalten.|  
-|text in row|Beim Wert OFF oder 0 (deaktivierte Option, Standard) wird das aktuelle Verhalten nicht geändert, und es gibt keine BLOBs in Zeilen.<br /><br /> Wenn angegeben und @OptionValue auf ON festgelegt ist (aktiviert) oder einen ganzzahligen Wert von 24 bis 7000 aufweist, werden neue **Text**, **Ntext**, oder **Image** -Zeichenfolgen direkt in der Datenzeile gespeichert. Alle vorhandenen BLOB (großes binäres Objekt: **Text**, **Ntext**, oder **Image** Daten) wird in Text im Format Row geändert werden, wenn der BLOB-Wert aktualisiert wird. Weitere Informationen finden Sie in den Hinweisen.|  
-|LARGE VALUE TYPES OUT OF ROW|1 = **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , **Xml** und große den benutzerdefinierten Typ (UDT) Spalten in der Tabelle gespeichert sind außerhalb von Zeilen mit einem 16-Byte-Zeiger auf den Stamm.<br /><br /> 0 = **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , **Xml** und große UDT-Werte werden direkt in der Datenzeile, bis zu einem Grenzwert gespeichert. von 8.000 Bytes und solange wie passt der Wert des Datensatzes. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).<br /><br /> Großer benutzerdefinierter Typ (UDT) gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Verwenden Sie die TEXTIMAGE_ON-Option von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) zum Angeben eines Speicherorts für die Speicherung von LOB-Datentypen. |  
-|vardecimal-Speicherformat|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Bei TRUE, ON oder 1 ist die festgelegte Tabelle für das vardecimal-Speicherformat aktiviert. Bei FALSE, OFF oder 0 ist die Tabelle für das vardecimal-Speicherformat nicht aktiviert. Das Vardecimal-Speicherformat kann aktiviert werden, nur, wenn die Datenbank das Vardecimal-Speicherformat aktiviert wurde, mithilfe von [Sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher **Vardecimal** -Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist 0 (null).|  
+|text in row|Beim Wert OFF oder 0 (deaktivierte Option, Standard) wird das aktuelle Verhalten nicht geändert, und es gibt keine BLOBs in Zeilen.<br /><br /> Wenn angegeben und @OptionValue auf on (aktiviert) oder einen ganzzahligen Wert von 24 bis 7000, werden neue **Text**-, **ntext**-oder **Image** -Zeichen folgen direkt in der Daten Zeile gespeichert. Alle vorhandenen BLOB-Daten (Binary Large Object: **Text**, **ntext**oder **Image** ) werden in das Format Text in row geändert, wenn der BLOB-Wert aktualisiert wird. Weitere Informationen finden Sie in den Hinweisen.|  
+|LARGE VALUE TYPES OUT OF ROW|1 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **XML** und große benutzerdefinierte Typen (User-Defined Type, UDT) in der Tabelle werden außerhalb der Zeile gespeichert, mit einem 16-Byte-Zeiger auf den Stamm.<br /><br /> 0 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **XML** und große UDT-Werte werden direkt in der Daten Zeile gespeichert, bis zu einem Limit von 8000 Bytes, und solange der Wert in den Datensatz passt. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).<br /><br /> Großer benutzerdefinierter Typ (UDT) gilt für: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Verwenden Sie die Option TEXTIMAGE_ON von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) , um einen Speicherort für die Speicherung großer Datentypen anzugeben. |  
+|vardecimal-Speicherformat|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Bei TRUE, ON oder 1 ist die festgelegte Tabelle für das vardecimal-Speicherformat aktiviert. Bei FALSE, OFF oder 0 ist die Tabelle für das vardecimal-Speicherformat nicht aktiviert. Das vardecimal--Speicherformat kann nur aktiviert werden, wenn die Datenbank mit [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)für das vardecimal--Speicherformat aktiviert wurde. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen ist das **vardecimal-** -Speicherformat veraltet. Verwenden Sie stattdessen die ROW-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist 0 (null).|  
   
- [ @OptionValue =] '*Wert*"  
- Ist, ob die *Optionsname* ist aktiviert (TRUE, ON oder 1) oder deaktiviert (FALSE, OFF oder 0). *Wert* ist **varchar(12)** , hat keinen Standardwert. *Wert* Groß-/Kleinschreibung.  
+ [ @OptionValue =] '*Wert*'  
+ Gibt an, ob *option_name* aktiviert ist (true, on oder 1) oder deaktiviert (false, Off oder 0). der Wert ist vom Datentyp **varchar (12)** und hat keinen Standard *Wert* . beim *Wert* wird Groß-/Kleinschreibung  
   
- Gültige Werte für die text in row-Option sind: 0, ON, OFF oder eine Ganzzahl zwischen 24 und 7000. Wenn *Wert* ON festgelegt ist, der Standardgrenzwert 256 Bytes.  
+ Gültige Werte für die text in row-Option sind: 0, ON, OFF oder eine Ganzzahl zwischen 24 und 7000. Wenn *value* auf on gesetzt ist, lautet der Standardwert 256 Bytes.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Fehlernummer (Fehler)  
   
 ## <a name="remarks"></a>Hinweise  
- sp_tableoption kann nur verwendet werden, um die Optionswerte für benutzerdefinierte Tabellen festzulegen. Verwenden Sie OBJECTPROPERTY, um Tabelleneigenschaften anzuzeigen.  
+ sp_tableoption kann nur verwendet werden, um die Optionswerte für benutzerdefinierte Tabellen festzulegen. Verwenden Sie OBJECTPROPERTY, oder führen Sie die Abfrage sys. Tables aus, um Tabellen Eigenschaften anzuzeigen.  
   
  Die text in row-Option von sp_tableoption kann nur für Tabellen aktiviert oder deaktiviert werden, die Textspalten enthalten. Wenn die Tabelle nicht über eine Textspalte verfügt, löst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler aus.  
   
- Wenn die Text in Row-Option aktiviert ist, die @OptionValue -Parameter können Benutzer an die maximale Größe für ein BLOB in einer Zeile gespeichert werden. Der Standardwert ist 256 Bytes. Gültige Werte sind 24 bis 7000 Bytes.  
+ Wenn die Text in row-Option aktiviert ist, @OptionValue können Benutzer mit dem-Parameter die maximale Größe angeben, die in einer Zeile für ein BLOB gespeichert werden soll. Der Standardwert ist 256 Bytes. Gültige Werte sind 24 bis 7000 Bytes.  
   
- **Text**, **Ntext**, oder **Image** Zeichenfolgen werden in der Datenzeile gespeichert, wenn die folgenden Bedingungen zutreffen:  
+ **Text**-, **ntext**-oder **Image** -Zeichen folgen werden in der Daten Zeile gespeichert, wenn die folgenden Bedingungen zutreffen:  
   
 -   text in row ist aktiviert.  
   
--   Die Länge der Zeichenfolge unterschreitet den Grenzwert im angegebenen @OptionValue  
+-   Die Länge der Zeichenfolge ist kürzer als die in angegebene Grenze.@OptionValue  
   
 -   Es steht genügend Speicherplatz in der Datenzeile zur Verfügung.  
   
- Wenn BLOB-Zeichenfolgen in der Datenzeile gespeichert werden, lesen und Schreiben der **Text**, **Ntext**, oder **Image** Zeichenfolgen können so schnell wie das Lesen oder Schreiben von Zeichenfolgen und Binärzeichenfolgen sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht auf separate Seiten zugreifen, um die BLOB-Zeichenfolge zu lesen oder zu schreiben.  
+ Wenn BLOB-Zeichen folgen in der Daten Zeile gespeichert werden, kann das Lesen und Schreiben von **Text**-, **ntext**-oder **Image** -Zeichen folgen so schnell wie das Lesen oder Schreiben von Zeichen-und Binär Zeichenfolgen sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht auf separate Seiten zugreifen, um die BLOB-Zeichenfolge zu lesen oder zu schreiben.  
   
- Wenn eine **Text**, **Ntext**, oder **Image** Zeichenfolge ist größer als den angegebenen Grenzwert oder den verfügbaren Speicherplatz in der Zeile, die Zeiger werden stattdessen in der Zeile gespeichert. Die Bedingungen zum Speichern der BLOB-Zeichenfolgen in der Zeile sind jedoch trotzdem gültig: In der Datenzeile für die Zeiger muss genügend Speicherplatz vorhanden sein.  
+ Wenn eine **Text**-, **ntext**-oder **Image** -Zeichenfolge größer ist als die angegebene Grenze oder der verfügbare Speicherplatz in der Zeile, werden Zeiger stattdessen in der Zeile gespeichert. Die Bedingungen zum Speichern der BLOB-Zeichen folgen in der Zeile gelten trotzdem: Es muss genügend Speicherplatz in der Daten Zeile vorhanden sein, um die Zeiger zu speichern.  
   
  BLOB-Zeichenfolgen und -Zeiger, die in der Zeile einer Tabelle gespeichert werden, werden ähnlich wie Zeichenfolgen mit variabler Länge behandelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet nur so viele Bytes, wie erforderlich sind, um die Zeichenfolge oder den Zeiger zu speichern.  
   
- Vorhandene BLOB-Zeichenfolgen werden nicht sofort konvertiert, wenn text in row aktiviert ist. Die Zeichenfolgen werden erst konvertiert, wenn sie aktualisiert werden. Ebenso, wenn der Text in Row-Option festlegen wird erhöht, die **Text**, **Ntext**, oder **Image** Zeichenfolgen, die bereits in der Datenzeile werden nicht konvertiert werden, um das neue Limit einhalten bis zum Zeitpunkt werden sie aktualisiert werden.  
+ Vorhandene BLOB-Zeichenfolgen werden nicht sofort konvertiert, wenn text in row aktiviert ist. Die Zeichenfolgen werden erst konvertiert, wenn sie aktualisiert werden. Wenn der Grenzwert für Text in row-Optionen zunimmt, werden die **Text**-, **ntext**-oder **Image** -Zeichen folgen, die sich bereits in der Daten Zeile befinden, nicht konvertiert, um den neuen Grenzwert bis zum Aktualisierungs Zeitpunkt einzuhalten.  
   
 > [!NOTE]  
 >  Wenn die text in row-Option deaktiviert oder der Grenzwert für diese Option verringert wird, müssen alle BLOBs konvertiert werden. Dieser Vorgang kann je nach der Anzahl der zu konvertierenden BLOB-Zeichenfolgen viel Zeit in Anspruch nehmen. Während des Konvertierungsvorgangs ist die Tabelle gesperrt.  
   
  Für eine Tabellenvariable sowie eine Funktion, die eine Tabellenvariable zurückgibt, ist die text in row-Option automatisch mit dem inline limit-Standardwert von 256 aktiviert. Diese Option kann nicht geändert werden.  
   
- Die Text in Row-Option unterstützt die Funktionen TEXTPTR, WRITETEXT, UPDATETEXT und READTEXT. Benutzer können Teile eines BLOBs mit der SUBSTRING()-Funktion lesen, sollten jedoch berücksichtigen, dass Textzeiger in Zeilen andere Grenzwerte für Dauer und Anzahl haben als andere Textzeiger.  
+ Die Text in row-Option unterstützt die Funktionen TEXTPTR, WRITETEXT, UPDATETEXT und Read Text. Benutzer können Teile eines BLOBs mit der SUBSTRING()-Funktion lesen, sollten jedoch berücksichtigen, dass Textzeiger in Zeilen andere Grenzwerte für Dauer und Anzahl haben als andere Textzeiger.  
   
  Wenn Sie eine Tabelle vom vardecimal-Speicherformat zurück in das normale decimal-Speicherformat konvertieren möchten, muss sich die Datenbank im SIMPLE-Wiederherstellungsmodus befinden. Durch das Ändern des Wiederherstellungsmodus wird die Protokollkette für Sicherungszwecke unterbrochen. Daher sollten Sie eine vollständige Datenbanksicherung erstellen, nachdem Sie das vardecimal-Speicherformat aus einer Tabelle entfernt haben.  
   
- Wenn Sie eine vorhandene LOB-Datentypspalte (Text, Ntext oder Image), um kleine bis mittlere große Werttypen (varchar(max), nvarchar(max) oder varbinary(max)) und führen Sie die meisten Anweisungen nicht die große werttypspalten in Ihrer Umgebung zu verweisen konvertieren, sollten Sie Ändern der **Large_value_types_out_of_row** zu **1** um eine optimale Leistung zu erhalten. Wenn die **Large_value_types_out_of_row** Optionswert geändert wird, werden vorhandene varchar(max), nvarchar(max), varbinary(max) und XML-Werte werden nicht sofort konvertiert. Der Speicherung der Zeichenfolgen ändert sich, wenn diese anschließend aktualisiert werden. Alle neuen Werte, die in eine Tabelle eingefügt werden, werden gemäß der aktivierten Tabellenoption gespeichert. Für unmittelbar angezeigt wird, entweder eine Kopie der Daten, und anschließend erneutes Auffüllen die Tabelle nach dem Ändern der **Large_value_types_out_of_row** festlegen oder aktualisieren Sie jede kleine bis mittlere umfangreichen Typen auf sich selbst so, dass die Speicherung von der Zeichenfolgen wird geändert, mit der Option "Table" wirksam. Erstellen Sie die Indizes für die Tabelle nach der Aktualisierung oder Neuauffüllung neu, um die Tabelle zu komprimieren. 
+ Wenn Sie eine vorhandene LOB-Datentyp Spalte (Text, ntext oder Image) in kleine bis mittlere große Werttypen (varchar (max), nvarchar (max) oder varbinary (max)) umstellen und die meisten Anweisungen nicht auf die Spalten mit großen Werttypen in Ihrer Umgebung verweisen, sollten Sie Folgendes beachten: Ändern von **large_value_types_out_of_row** zu 1, um **eine** optimale Leistung zu erzielen. Wenn der **large_value_types_out_of_row** -Optionswert geändert wird, werden vorhandene varchar (max)-, nvarchar (max)-, varbinary (max)-und XML-Werte nicht sofort konvertiert. Der Speicherung der Zeichenfolgen ändert sich, wenn diese anschließend aktualisiert werden. Alle neuen Werte, die in eine Tabelle eingefügt werden, werden gemäß der aktivierten Tabellenoption gespeichert. Erstellen Sie für unmittelbare Ergebnisse entweder eine Kopie der Daten, und füllen Sie dann die Tabelle erneut aus, nachdem Sie die **large_value_types_out_of_row** -Einstellung geändert oder alle Small-to-Medium-Spalten mit großen Werttypen auf sich selbst aktualisiert haben, sodass die Speicherung der Zeichen folgen geändert wird. , wenn die Table-Option aktiviert ist. Erstellen Sie die Indizes für die Tabelle nach der Aktualisierung oder Neuauffüllung neu, um die Tabelle zu komprimieren. 
     
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -109,7 +109,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-storing-xml-data-out-of-the-row"></a>A. Speichern von XML-Daten außerhalb der Zeile  
- Das folgende Beispiel gibt an, dass die **Xml** Daten in die `HumanResources.JobCandidate` Tabelle außerhalb von Zeilen gespeichert werden.  
+ Im folgenden Beispiel wird angegeben, dass die **XML** - `HumanResources.JobCandidate` Daten in der Tabelle außerhalb der Zeile gespeichert werden.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -118,7 +118,7 @@ EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row
 ```  
   
 ### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B. Aktivieren des vardecimal-Speicherformats für eine Tabelle  
- Das folgende Beispiel ändert die `Production.WorkOrderRouting` Tabelle zum Speichern der `decimal` -Datentyp in der `vardecimal` Speicherformat.  
+ Im folgenden Beispiel wird die `Production.WorkOrderRouting` -Tabelle so geändert, dass der `decimal` -Datentyp im `vardecimal` Speicherformat gespeichert wird.  
 
 ```sql  
 USE master;  
@@ -137,6 +137,6 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Datenbank-Engine gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134441"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228430"
 ---
 # <a name="common-errors-with-database-mail"></a>Häufige Fehler mit Datenbank-E-Mail 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 In diesem Artikel werden einige häufige Fehler, die bei Datenbank-E-Mail auftreten können, und deren Lösungen beschrieben.
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>Gespeicherte Prozedur „sp_send_dbmail“ wurde nicht gefunden
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>Gespeicherte Prozedur „sp_send_dbmail“ wurde nicht gefunden
 Die gespeicherte Prozedur [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) ist in der msdb-Datenbank installiert. Führen Sie entweder **sp_send_dbmail** aus der msdb-Datenbank aus, oder geben Sie einen dreiteiligen Namen für die gespeicherte Prozedur an.
 
 Beispiel:
@@ -48,7 +48,7 @@ Für diese Fehlermeldung gibt es zwei mögliche Ursachen. Entweder ist das angeg
 
 Um Berechtigungen für ein Profil zu überprüfen, führen Sie die gespeicherte Prozedur [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) mit dem Namen des Profils aus. Verwenden Sie die gespeicherte Prozedur [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) oder den [Assistenten zum Konfigurieren von Datenbank-E-Mail](configure-database-mail.md), um einem msdb-Benutzer oder einer msdb-Gruppe die Berechtigung zum Zugriff auf ein Profil zu gewähren.
 
-## <a name="permission-denied-on-spsenddbmail"></a>Berechtigung für „sp_send_dbmail“ verweigert
+## <a name="permission-denied-on-sp_send_dbmail"></a>Berechtigung für „sp_send_dbmail“ verweigert
 
 In diesem Thema wird beschrieben, wie eine Fehlermeldung behandelt wird, die besagt, dass der Benutzer, der versucht, Datenbank-E-Mails zu senden, keine Berechtigung zum Ausführen von „sp_send_dbmail“ besitzt.
 
@@ -68,7 +68,7 @@ GO
 ```
 Weitere Informationen finden Sie unter [sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md) und [sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md).
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>Datenbank-E-Mail in der Warteschlange, keine Einträge in „sysmail_event_log“ oder im Windows-Anwendungsereignisprotokoll 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>Datenbank-E-Mail in der Warteschlange, keine Einträge in „sysmail_event_log“ oder im Windows-Anwendungsereignisprotokoll 
 
 Datenbank-E-Mail erfordert Service Broker für das Anordnen von E-Mail-Nachrichten in Warteschlangen. Wenn Datenbank-E-Mail beendet wird oder die Service Broker-Nachrichtenübermittlung in der **msdb**-Datenbank nicht aktiviert ist, reiht Datenbank-E-Mail Nachrichten in die Datenbankwarteschlange ein, kann die Nachrichten jedoch nicht übermitteln. In diesem Fall verbleiben die Service Broker-Nachrichten in der Service Broker-E-Mail-Warteschlange. Service Broker aktiviert nicht das externe Programm. Daher gibt es keine Protokolleinträge in **sysmail_event_log** und keine Aktualisierungen des Elementstatus in **sysmail_mailitems** und den zugehörigen Sichten.
 

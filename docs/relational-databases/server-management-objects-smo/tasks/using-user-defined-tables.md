@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Tabellen mit | Microsoft-Dokumentation
+title: Verwenden von benutzerdefinierten Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26db752cffe88a06003f3255ea42c049d62af697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048920"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911215"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Benutzerdefinierte Tabellen stellen Tabelleninformationen dar. Sie werden als Parameter verwendet, wenn Sie Tabellendaten in gespeicherte Prozeduren oder benutzerdefinierte Funktionen übergeben. Benutzerdefinierte Tabellen können nicht verwendet werden, um Spalten in einer Datenbanktabelle darzustellen.  
   
- Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jede <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> -Objekt in dieser Auflistung verfügt über eine **Spalten** Eigenschaft, auf eine Auflistung von verweist <xref:Microsoft.SqlServer.Management.Smo.Column> Objekte, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
+ Das <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt verfügt über eine <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A>-Eigenschaft, die auf ein <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>-Objekt verweist. Jedes <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> -Objekt in dieser Auflistung verfügt über eine **Columns** -Eigenschaft, die auf <xref:Microsoft.SqlServer.Management.Smo.Column> eine Auflistung von-Objekten verweist, die die Spalten in der benutzerdefinierten Tabelle auflisten. Verwenden Sie die Add-Methode, um Spalten zu einer benutzerdefinierten Tabelle hinzuzufügen.  
   
  Wenn Sie eine neue benutzerdefinierte Tabelle mithilfe des <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>-Objekts definieren, müssen Sie Spalten und einen Primärschlüssel basierend auf einer der Spalten bereitstellen.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68048920"
  Die <xref:Microsoft.SqlServer.Management.Smo.DataType>-Klasse wird verwendet, um den Datentyp anzugeben, der Spalten und Parametern zugeordnet wird. Verwenden Sie diesen Typ, um den benutzerdefinierten Tabellentyp als Parameter für benutzerdefinierte Funktionen und gespeicherte Prozeduren festzulegen.  
   
 ## <a name="examples"></a>Beispiele  
-Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Erstellen einer benutzerdefinierten Tabelle in Visual Basic  

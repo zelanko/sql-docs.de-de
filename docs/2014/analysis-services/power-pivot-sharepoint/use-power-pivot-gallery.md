@@ -1,5 +1,5 @@
 ---
-title: Verwenden des PowerPivot-Katalogs | Microsoft-Dokumentation
+title: Verwenden des Power Pivot-Katalogs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e4dd52a33fbfb84f65658db6c645a5317b39c44
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070883"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874485"
 ---
 # <a name="use-powerpivot-gallery"></a>Verwenden des PowerPivot-Katalogs
   Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Katalog ist eine zweckgebundene SharePoint-Dokumentbibliothek, die umfangreiche Vorschau- und Dokumentverwaltungsmöglichkeiten für veröffentlichte Excel-Arbeitsmappen und Reporting Services-Berichte bereitstellt, die PowerPivot-Daten enthalten.  
@@ -25,17 +25,17 @@ ms.locfileid: "66070883"
   
 ##  <a name="bkmk_top"></a> In diesem Thema  
   
--   [Symbole im PowerPivot-Katalog](#icons)  
+-   [Symbole im Power Pivot-Katalog](#icons)  
   
--   [Speichern einer Excel-Arbeitsmappe in PowerPivot-Katalog](#add)  
+-   [Speichern einer Excel-Arbeitsmappe im Power Pivot-Katalog](#add)  
   
--   [Erstellen Sie neuer Berichte oder Arbeitsmappen auf Grundlage einer veröffentlichten PowerPivot-Arbeitsmappe](#newdocs)  
+-   [Erstellen neuer Berichte oder Arbeitsmappen auf Grundlage einer veröffentlichten Power Pivot-Arbeitsmappe](#newdocs)  
   
 -   [Öffnen einer Arbeitsmappe oder eines Berichts im Ganzseitenmodus](#view)  
   
--   [Planen der datenaktualisierung für PowerPivot-Arbeitsmappen im PowerPivot-Katalog](#newdr)  
+-   [Planen der Datenaktualisierung für Power Pivot-Arbeitsmappen im Power Pivot-Katalog](#newdr)  
   
--   [Löschen einer Arbeitsmappe oder eines Berichts im PowerPivot-Katalog](#delete)  
+-   [Löschen einer Arbeitsmappe oder eines Berichts im Power Pivot-Katalog](#delete)  
   
 -   [Aktualisieren eines Miniaturbilds](#image)  
   
@@ -47,16 +47,16 @@ ms.locfileid: "66070883"
   
 > [!NOTE]  
 >  Für den Power Pivot-Katalog ist Microsoft Silverlight erforderlich.  Silverlight wird vom Microsoft Edge-Browser nicht unterstützt.   
-> Um die Bibliotheksinhalte in Microsoft Edge anzuzeigen, klicken Sie auf die Registerkarte **Bibliothek** im Power Pivot-Katalog, und ändern Sie dann die Ansicht der Dokumentbibliothek in **Alle Dokumente**.    
+> Um den Inhalt der Bibliothek in Microsoft Edge anzuzeigen, klicken Sie in Power Pivot Katalog auf die Registerkarte **Bibliothek** , und ändern Sie dann die Dokument Bibliotheks Ansicht in **alle Dokumente**.    
 > Um die Standardansicht zu ändern, klicken Sie auf die Registerkarte **Bibliothek** und dann auf „Ansicht ändern“. Klicken Sie auf „Zur Standardansicht machen“, und klicken Sie dann auf „OK“, um die Standardansicht zu speichern.  
->  Weitere Informationen zu den von Edge unterstützten, finden Sie in der Windows-Blog, [eine Unterbrechung aus der Vergangenheit, Teil 2: Sagen Goodbye to ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Weitere Informationen dazu, was Microsoft Edge unterstützt, finden Sie im Windows [-Blog, A Break From the Past, Part 2: Ich stimme zu, dass ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- Eine vollständige Liste der erforderlichen Komponenten, finden Sie unter [erstellen und Anpassen von PowerPivot-Katalog](create-and-customize-power-pivot-gallery.md).  
+ Eine umfassende Liste der Voraussetzungen finden Sie unter [Erstellen und Anpassen des Power Pivot-](create-and-customize-power-pivot-gallery.md)Katalogs.  
   
-##  <a name="icons"></a> Symbole im PowerPivot-Katalog  
+##  <a name="icons"></a>Symbole im Power Pivot-Katalog  
  Symbole stellen einen visuellen Indikator zur Inhaltsverfügbarkeit und zum Status bereit.  
   
-|Symbol|Description|  
+|Symbol|Beschreibung|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|Das Sanduhrsymbol wird angezeigt, wenn ein Miniaturbild jeder Seite im Dokument generiert wird. Aktualisieren Sie die Seite, um das aktualisierte Bild anzuzeigen.|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|Das Seitensymbol wird angezeigt, wenn eine Arbeitsmappe oder ein Bericht mehr Seiten aufweist, als im PowerPivot-Katalog angezeigt werden können. Sie können alle Seiten mithilfe einer Clientanwendung anzeigen.|  
@@ -64,18 +64,18 @@ ms.locfileid: "66070883"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|Das Symbol für nicht verfügbaren Inhalt wird angezeigt, wenn das Dokument, das Sie hochgeladen haben, nicht im PowerPivot-Katalog gerendert werden kann. Zu den unterstützten Dokumenttypen gehören PowerPivot-Arbeitsmappen und im Berichts-Generator von SQL Server 2008 R2 Reporting Services-erstellte Berichte.<br /><br /> Dieses Symbol wird auch angezeigt, wenn Sie ein Dokument aus dem Papierkorb wiederverwenden.<br /><br /> Wenn dieses Symbol für ein Dokument angezeigt wird, das zuvor ein gültiges Vorschaubild gezeigt hat, können Sie das Bild aktualisieren, indem Sie eine Dokumenteigenschaft bearbeiten und die Änderungen dann speichern.|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|Das Symbol für gesperrte Inhalte wird angezeigt, wenn Miniaturbilder absichtlich für dieses Dokument deaktiviert werden. Der PowerPivot-Katalog generiert keine Miniaturbilder für Excel-Arbeitsmappen, die keine PowerPivot-Daten enthalten, oder für PowerPivot-Arbeitsmappen oder Reporting Services-Berichte, die die Anforderungen für die Momentaufnahmegenerierung nicht erfüllen. Weitere Informationen finden Sie im Abschnitt zu Voraussetzungen in diesem Thema.|  
   
-##  <a name="add"></a> Speichern einer Excel-Arbeitsmappe in PowerPivot-Katalog  
+##  <a name="add"></a>Speichern einer Excel-Arbeitsmappe im Power Pivot-Katalog  
  Sie können [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen in der Bibliothek veröffentlichen, indem Sie alle in Excel 2010 verfügbaren Freigabeverfahren verwenden. In Excel 2010 können Sie mit der Option Speichern unter den gesamten SharePoint-Pfad oder einen Teil davon in einer Bibliothek zu speichern.  
   
 1.  Speichern Sie die Datei.  
   
-2.  1.  **Excel 2010:** Klicken Sie im Menü Datei auf **speichern & senden**.  
+2.  1.  **Excel 2010:** Klicken Sie im Menü Datei auf **Speichern & senden**.  
   
     2.  Klicken Sie auf **Auf SharePoint speichern**.  
   
     3.  Klicken Sie auf **Veröffentlichungsoptionen** , wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die Sie veröffentlichen möchten. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
   
-    1.  **Excel 2013:**  Klicken Sie im Menü Datei auf **speichern**.  
+    1.  **Excel 2013:**  Klicken Sie im Menü Datei auf **Speichern**.  
   
     2.  Klicken Sie auf **Optionen für die Browseransicht**, wenn Sie Optionen für Excel Services verwenden möchten, um einzelne Blätter oder Parameter auszuwählen, die veröffentlicht werden sollen. Auf der Registerkarte Parameter in den Optionen für Excel Services können Sie z. B. auswählen, welche Slicer in der veröffentlichten Arbeitsmappe angezeigt werden.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66070883"
   
 3.  Aktivieren Sie unter **Dokument hochladen**eine Uploadoption, und geben Sie dann den Namen und Speicherort der Datei ein, die Sie hochladen möchten. Bibliothekseinstellungen bestimmen, wo das Dokument angezeigt wird. Möglicherweise müssen Sie das Browserfenster aktualisieren, um die letzte Hinzufügung anzuzeigen.  
   
-##  <a name="newdocs"></a> Erstellen Sie neuer Berichte oder Arbeitsmappen auf Grundlage einer veröffentlichten PowerPivot-Arbeitsmappe  
+##  <a name="newdocs"></a>Erstellen neuer Berichte oder Arbeitsmappen auf Grundlage einer veröffentlichten Power Pivot-Arbeitsmappe  
  Sie können für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen, die Sie im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog veröffentlichen, zusätzliche Arbeitsmappen oder Reporting Services-Berichte erstellen, die die veröffentlichte Arbeitsmappe als verbundene Datenquelle verwenden.  
   
 |||  
@@ -118,14 +118,14 @@ ms.locfileid: "66070883"
   
  Eine alternative Möglichkeit zum Anzeigen der Arbeitsmappe in einem Browser besteht darin, sie in Excel auf einer Clientarbeitsstation zu öffnen. Sie benötigen Excel 2013 oder Excel 2010 und das [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] -Add-In, um die Datei anzuzeigen. Sie können die Datei mit Excel 2007 öffnen, es ist jedoch nicht möglich, die Daten zu pivotieren. Aus diesem Grund wird sowohl zum Anzeigen als auch zum Erstellen von PowerPivot-Daten Excel 2013 oder Excel 2010 empfohlen. Falls Sie nicht über die erforderlichen Anwendungen verfügen, müssen Sie einen Browser verwenden, um die Arbeitsmappe aus SharePoint anzuzeigen.  
   
-##  <a name="newdr"></a> Planen der datenaktualisierung für PowerPivot-Arbeitsmappen im PowerPivot-Katalog  
+##  <a name="newdr"></a>Planen der Datenaktualisierung für Power Pivot-Arbeitsmappen im Power Pivot-Katalog  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Daten in einer veröffentlichten Excel-Arbeitsmappe können in geplanten Intervallen aktualisiert werden.  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Klicken Sie auf die Schaltfläche Datenaktualisierung verwalten, um einen Zeitplan zu erstellen oder anzuzeigen, nach dem aktualisierte Daten aus verbundenen Datenquellen abgerufen werden. Anweisungen dazu, wie Sie einen Zeitplan zu erstellen, finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Klicken Sie auf die Schaltfläche Datenaktualisierung verwalten, um einen Zeitplan zu erstellen oder anzuzeigen, nach dem aktualisierte Daten aus verbundenen Datenquellen abgerufen werden. Anweisungen zum Erstellen eines Zeitplans finden Sie unter [Planen einer Daten &#40;Aktualisierung PowerPivot für SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
-##  <a name="delete"></a> Löschen einer Arbeitsmappe oder eines Berichts im PowerPivot-Katalog  
+##  <a name="delete"></a>Löschen einer Arbeitsmappe oder eines Berichts im Power Pivot-Katalog  
  Um ein Dokument aus der Bibliothek zu löschen, wechseln Sie zunächst zur Ansicht Alle Dokumente.  
   
 1.  Öffnen Sie auf einer SharePoint-Website den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Katalog.  
@@ -154,16 +154,16 @@ ms.locfileid: "66070883"
 ### <a name="document-type-is-not-supported"></a>Dokumenttyp wird nicht unterstützt  
  Das Inhaltstyp **PowerPivot-Katalogdokument** wird nicht unterstützt. Wenn Sie den Inhaltstyp **PowerPivot-Katalogdokument** für eine Dokumentbibliothek aktivieren und versuchen, ein neues Dokument dieses Typs zu erstellen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
--   "Neues Dokument" erfordert eine Microsoft Sharepoint Foundation-kompatiblen Anwendung oder einen Webbrowser. Um diese Dokumentbibliothek ein Dokument hinzuzufügen, klicken Sie auf die Schaltfläche Dokument hochladen.  
+-   "Neues Dokument" erfordert eine mit Microsoft SharePoint Foundation kompatible Anwendung und einen Webbrowser. Um dieser Dokumentbibliothek ein Dokument hinzuzufügen, klicken Sie auf die Schaltfläche "Dokument hochladen".  
   
 -   "Die Internetadresse ' http://[Servername]/Testsite/PowerPivot / TestSite/Gallery/ReportGallery/Forms/Template.xlsx ' ist ungültig." " Microsoft Excel die Datei kann nicht zugegriffen werden kann ' http://[Servername]/Testsite/PowerPivot / TestSite/Gallery/ReportGallery/Forms/Template.xlsx ". Dies kann mehrere Gründe haben:  
   
  Der Inhaltstyp **PowerPivot-Katalogdokument** wird Dokumentbibliotheken nicht automatisch hinzugefügt. Dieses Problem tritt erst dann auf, wenn Sie den nicht unterstützten Inhaltstyp manuell aktivieren.  
   
 ## <a name="see-also"></a>Siehe auch  
- [Erstellen eines vertrauenswürdigen Speicherorts für PowerPivot-Websites in der Zentraladministration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot-Katalog löschen](delete-power-pivot-gallery.md)   
- [Erstellen und Anpassen von PowerPivot-Katalog](create-and-customize-power-pivot-gallery.md)   
+ [Erstellen eines vertrauenswürdigen Speicher Orts für Power Pivot-Websites in der zentral Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Löschen des Power Pivot-Katalogs](delete-power-pivot-gallery.md)   
+ [Erstellen und Anpassen des Power Pivot-Katalogs](create-and-customize-power-pivot-gallery.md)   
  [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

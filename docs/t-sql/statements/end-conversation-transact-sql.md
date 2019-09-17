@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bd9dd2e967c1ce6551dbc3b952a8bf8baa09585
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26051de067dd496d25cfcc3c2cb0f71715ed3145
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084496"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211360"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Beendet eine bestehende Konversation auf einer Seite.  
   
@@ -57,12 +57,12 @@ END CONVERSATION conversation_handle
  Bezeichnet den Fehlercode. *failure_code* ist vom Typ **int**. Bei dem Fehlercode handelt es sich um einen benutzerdefinierten Code, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird. Der Fehlercode muss größer als 0 sein.  
   
  DESCRIPTION =*failure_text*  
- Bezeichnet die Fehlermeldung. *failure_text* ist vom Typ **nvarchar(3000)** . Beim Fehlertext handelt es sich um benutzerdefinierten Text, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird.  
+ Bezeichnet die Fehlermeldung. *failure_text* ist vom Typ **nvarchar(3000)**. Beim Fehlertext handelt es sich um benutzerdefinierten Text, der in der Fehlermeldung eingeschlossen ist, die an die andere Seite der Konversation gesendet wird.  
   
  WITH CLEANUP  
  Entfernt alle Nachrichten und Katalogsichteinträge für eine Seite einer Konversation, die nicht regulär abgeschlossen werden kann. Die andere Seite der Konversation wird nicht über die Bereinigung informiert. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] löscht den Konversationsendpunkt, alle Nachrichten für die Konversation in der Übertragungswarteschlange sowie alle Nachrichten für die Konversation in der Dienstwarteschlange. Mithilfe dieser Option können Administratoren Konversationen entfernen, die nicht regulär abgeschlossen werden können. Wenn beispielsweise der Remotedienst dauerhaft entfernt wurde, kann ein Administrator mithilfe von WITH CLEANUP Konversationen mit diesem Dienst entfernen. Verwenden Sie WITH CLEANUP nicht im Code einer [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Anwendung. Wenn END CONVERSATION WITH CLEANUP ausgeführt wird, bevor der empfangende Endpunkt den Eingang der Nachricht bestätigt, wird die Nachricht vom sendenden Endpunkt erneut gesendet. Möglicherweise wird dadurch der Dialog erneut ausgeführt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Durch das Beenden einer Konversation wird die Konversationsgruppe gesperrt, zu der *conversation_handle* gehört. Wenn eine Konversation beendet wird, entfernt [!INCLUDE[ssSB](../../includes/sssb-md.md)] alle Nachrichten für die Konversation aus der Dienstwarteschlange.  
   
  Nach dem Ende einer Konversation kann eine Anwendung keine Nachrichten für diese Konversation mehr senden oder empfangen. Beide Teilnehmer an einer Konversation müssen END CONVERSATION aufrufen, damit die Konversation abgeschlossen wird. Wenn [!INCLUDE[ssSB](../../includes/sssb-md.md)] keine Nachricht über das Beenden des Dialogs oder eine Fehlermeldung des anderen Teilnehmers an der Konversation erhalten hat, benachrichtigt [!INCLUDE[ssSB](../../includes/sssb-md.md)] den anderen Teilnehmer, dass die Konversation beendet wurde. Obwohl das Konversationshandle für die Konversation nicht mehr gültig ist, bleibt in diesem Fall der Konversationsendpunkt so lange aktiv, bis die Instanz, die als Host für den Remotedienst dient, die Nachricht anerkennt.  

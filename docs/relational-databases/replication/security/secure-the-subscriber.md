@@ -15,12 +15,12 @@ ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f07a80d5667a91376c9e5936be2474c826d6569a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769613"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212296"
 ---
 # <a name="secure-the-subscriber"></a>Sichern des Abonnenten
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68769613"
  Weitere Informationen finden Sie unter [Erstellen von aktualisierbaren Abonnements für eine Transaktionsveröffentlichung](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) und [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
 > [!IMPORTANT]  
->  Dem für die Verbindung angegebenen Konto sollten nur die Berechtigung zum Einfügen, Aktualisieren und Löschen der Daten in den durch die Replikation in der Veröffentlichungsdatenbank erstellten Sichten erteilt werden; darüber hinaus sollte das Konto über keine weiteren Berechtigungen verfügen. Erteilen Sie dem von Ihnen auf den einzelnen Abonnenten konfigurierten Konto Berechtigungen für Sichten in der Veröffentlichungsdatenbank, deren Namen das Format **syncobj_***\<Hexadezimalzahl>* aufweisen.  
+>  Dem für die Verbindung angegebenen Konto sollten nur die Berechtigung zum Einfügen, Aktualisieren und Löschen der Daten in den durch die Replikation in der Veröffentlichungsdatenbank erstellten Sichten erteilt werden; darüber hinaus sollte das Konto über keine weiteren Berechtigungen verfügen. Erteilen Sie dem von Ihnen auf den einzelnen Abonnenten konfigurierten Konto Berechtigungen für Sichten in der Veröffentlichungsdatenbank, deren Namen das Format **syncobj_**_\<HexadecimalNumber>_ aufweisen.  
   
 ## <a name="queued-updating-subscriptions"></a>Abonnements mit verzögertem Update über eine Warteschlange  
  Beim Konfigurieren von Abonnements mit verzögertem Update über eine Warteschlange sind hinsichtlich der Sicherheit die folgenden beiden Punkte zu berücksichtigen:  

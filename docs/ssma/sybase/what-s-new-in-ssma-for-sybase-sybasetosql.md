@@ -1,7 +1,7 @@
 ---
 title: Neues in SSMA für SAP ASE (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -9,15 +9,23 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 44e59d80b21b71fbbc94b9c902edfb1019256d06
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811440"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745282"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Neues in SSMA für SAP ASE (sybasedesql)
+
 In diesem Artikel werden die Änderungen an SQL Server Migration Assistant (SSMA) für SAP ASE (ehemals SSMA für Sybase) in jeder Version aufgeführt.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+Die Version Version 8.4 von SSMA für SAP ASE wurde durch gezielte Korrekturen ergänzt, die zur Behebung von Problemen bei der Barrierefreiheit entwickelt wurden, und zum Beheben eines Fehlers im Zusammenhang mit den maximalen Index Spalten (um 32 anstelle von 16) für SQL Server 2016 und höhere Versionen zuzulassen.
+
+> [!IMPORTANT]
+> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -25,9 +33,6 @@ Das v 8.3-Release von SSMA für SAP ASE wurde durch gezielte Korrekturen ergänz
 
 * Behandeln von Problemen mit Barrierefreiheit
 * Grundlegende Unterstützung für den Typ "hierarchyid" in SQL Server hinzufügen
-
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -39,9 +44,6 @@ Die Version 8.2 von SSMA für SAP ASE wurde durch eine Reihe von Korrekturen erg
 
 > [!NOTE]
 > Ein bekanntes Problem bei der automatischen Aktualisierung kann zu einem Fehler bei einem Update von SSMA v 8.1 auf v 8.2 führen. Wenn dieser Fehler auftritt, laden Sie die neue Version herunter, und installieren Sie Sie manuell.
-
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 
@@ -272,7 +274,7 @@ Die SSMA-Version vom November 2006 für Sybase enthält die folgenden Änderunge
 * Es wurde eine neue Migrations Option hinzugefügt, mit der Sie angeben können, wie SSMA Datums [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Angaben außerhalb des Datums Bereichs behandeln soll.  
 * Auf der Registerkarte " **SQL** " wurde eine **formatierte SQL** -Einstellung hinzugefügt, die den Code für eine verbesserte Lesbarkeit formatiert.  
 * Fehlerbehebungen, einschließlich:
-  * SSMA konvertiert nun die Tabelle "LOCK TABLE" in {Shared | Exklusive}-Modus-Anweisungen durch Hinzufügen eines TABLOCK-oder TABLOCKX-Hinweises zur nachfolgenden SELECT-Abfrage für die Tabelle.  
+  * SSMA konvertiert nun die Tabelle "Lock Table *" in {* Shared | Exklusive}-Modus-Anweisungen durch Hinzufügen eines TABLOCK-oder TABLOCKX-Hinweises zur nachfolgenden SELECT-Abfrage für die Tabelle.  
   * Die notwendigen Umwandlungen werden nun hinzugefügt, wenn binäre Typen in Zeichen Ausdrücken verwendet werden.  
   * Arbeitsspeicher-und Leistungsverbesserungen.  
   

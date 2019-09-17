@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bec815372c77e8433fdfdaeedc2cc95a41901738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084414"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211298"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Gibt den Bezeichner der Konversationsgruppe für die nächste zu empfangende Nachricht zurück und sperrt die Konversationsgruppe für die Konversation, die die Nachricht enthält. Der Konversationsgruppenbezeichner kann zum Abrufen der Informationen zum Konversationsstatus vor dem Abrufen der eigentlichen Nachricht verwendet werden.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "68084414"
  Der Name der Warteschlange, aus der die Konversationsgruppe abgerufen werden soll.  
   
  TIMEOUT *timeout*  
- Gibt die Zeitdauer (in Millisekunden) an, die Service Broker auf das Eintreffen einer Nachricht in der Warteschlange wartet. Diese Klausel darf nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn eine Anweisung, die WAITFOR verwendet, diese Klausel nicht einschließt, oder wenn *timeout* den Wert -1 aufweist, unterliegt die Wartezeit keiner Begrenzung. Nach Ablauf des Timeouts legt GET CONVERSATION GROUP den Wert der *@conversation_group_id* -Variablen auf NULL fest.  
+ Gibt die Zeitdauer (in Millisekunden) an, die Service Broker auf das Eintreffen einer Nachricht in der Warteschlange wartet. Diese Klausel darf nur zusammen mit der WAITFOR-Klausel verwendet werden. Wenn eine Anweisung, die WAITFOR verwendet, diese Klausel nicht einschließt, oder wenn *timeout* den Wert -1 aufweist, unterliegt die Wartezeit keiner Begrenzung. Nach Ablauf des Timeouts legt GET CONVERSATION GROUP den Wert der *@conversation_group_id*-Variablen auf NULL fest.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Falls die GET CONVERSATION GROUP-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorherige Anweisung mit einem Semikolon ( **;** ) enden, dem Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  
+>  Falls die GET CONVERSATION GROUP-Anweisung nicht die erste Anweisung in einem Batch oder einer gespeicherten Prozedur ist, muss die vorherige Anweisung mit einem Semikolon (**;**) enden, dem Abschlusszeichen für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen.  
   
  Steht die in der Warteschlange angegebene GET CONVERSATION GROUP-Anweisung nicht zur Verfügung, wird für die Anweisung ein [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehler erzeugt.  
   

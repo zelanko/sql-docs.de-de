@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941173"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846638"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @sent_before = ] 'sent_before'`Löscht e-Mails bis zu dem Datum und der Uhrzeit, die als *sent_before* -Argument angegeben sind. Das Argument *sent_before* ist vom Datentyp **datetime**und hat den Standardwert NULL. NULL steht für alle Daten.  
+`[ \@sent_before = ] 'sent_before'`Löscht e-Mails bis zu dem Datum und der Uhrzeit, die als *sent_before* -Argument angegeben sind. Das Argument *sent_before* ist vom Datentyp **datetime**und hat den Standardwert NULL. NULL steht für alle Daten.  
   
-`[ @sent_status = ] 'sent_status'`Löscht e-Mails des Typs, der durch *sent_status*angegeben wird. Das Argument *sent_status* ist vom Datentyp **varchar(8)** ohne Standardwert. Gültige Einträge sind **sent**, **unsent**, **retrying**, und **failed**. NULL steht für alle Status.  
+`[ \@sent_status = ] 'sent_status'`Löscht e-Mails des Typs, der durch *sent_status*angegeben wird. Das Argument *sent_status* ist vom Datentyp **varchar(8)** ohne Standardwert. Gültige Einträge sind **sent**, **unsent**, **retrying**, und **failed**. NULL steht für alle Status.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

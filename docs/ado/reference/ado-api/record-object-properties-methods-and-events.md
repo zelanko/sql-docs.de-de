@@ -1,5 +1,5 @@
 ---
-title: Notieren Sie-Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Aufzeichnen von Objekteigenschaften, Methoden und Ereignissen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,27 +12,26 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712296"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737654"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [ActiveConnection-Eigenschaft](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection (Eigenschaft)](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [Fields-Sammlung](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields-Auflistung](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
  [Mode-Eigenschaft](../../../ado/reference/ado-api/mode-property-ado.md)  
   
- [ParentURL-Eigenschaft](../../../ado/reference/ado-api/parenturl-property-ado.md)  
+ [Eigenschaft "para URL"](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [RecordType-Eigenschaft](../../../ado/reference/ado-api/recordtype-property-ado.md)  
+ [RecordType (Eigenschaft)](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
  [Source-Eigenschaft (ADO Record)](../../../ado/reference/ado-api/source-property-ado-record.md)  
   
@@ -49,12 +48,12 @@ ms.locfileid: "66712296"
   
  [GetChildren-Methode](../../../ado/reference/ado-api/getchildren-method-ado.md)  
   
- [MoveRecord-Methode](../../../ado/reference/ado-api/moverecord-method-ado.md)  
+ ["Muecord"-Methode](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   
  [Open-Methode (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
 ## <a name="events"></a>Ereignisse  
- Keine.  
+ Keine  
   
 ## <a name="see-also"></a>Siehe auch  
  [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

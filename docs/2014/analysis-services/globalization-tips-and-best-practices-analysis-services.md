@@ -1,5 +1,5 @@
 ---
-title: Globalization-Tipps und bewährte Methoden (Analysis Services) | Microsoft-Dokumentation
+title: Tipps und bewährte Methoden für die Globalisierung (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080861"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874417"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Tipps und Best Practices für die Globalisierung (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Nur Multidimensional  
@@ -68,9 +68,9 @@ ms.locfileid: "66080861"
   
      In der Volksrepublik China und Singapur wird vom Microsoft Support vornehmlich vereinfachtes Chinesisch beobachtet, mit Pinyin als bevorzugter Sortierreihenfolge. Die empfohlenen Sortierungen sind Chinese_PRC (für SQL Server 2000), Chinese_PRC_90 (für SQL Server 2005) oder Chinese_Simplified_Pinyin_100 (für SQL Server 2008 und höher).  
   
-     In Taiwan ist es die, die mit die empfohlene Sortierreihenfolge Chinesisch (traditionell) finden weitere gemeinsam auf Strichzählung basiert: Chinese_Taiwan_Stroke (für SQL Server 2000), Chinese_Taiwan_Stroke_90 (für SQL Server 2005) oder Chinese_Traditional_Stroke_Count_100 (für SQL Server 2008 und höher).  
+     In Taiwan ist es eher üblich, Chinesisch (traditionell) zu sehen, und die empfohlene Sortierreihenfolge basiert auf der Anzahl der Striche: Chinese_Taiwan_Stroke (für SQL Server 2000), Chinese_Taiwan_Stroke_90 (für SQL Server 2005) oder Chinese_Traditional_Stroke_Count_100 (für SQL Server 2008 und höher).  
   
-     Auch andere Regionen (z. B. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (in SQL Server 2008 und höher) recht häufig verwendet.  
+     Auch andere Regionen (z. b. Hongkong und Macau) verwenden traditionelles Chinesisch. Für Sortierungen in Hongkong wird häufig Chinese_Hong_Kong_Stroke_90 (in SQL Server 2005) verwendet. In Macau wird Chinese_Traditional_Stroke_Count_100 (auf SQL Server 2008 und höher) Recht häufig verwendet.  
   
 -   Für Japanisch ist die am häufigsten verwendete Sortierung Japanese_CI_AS. Japanese_XJIS_100 wird bei Installationen verwendet, die [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)unterstützen. Japanese_BIN2 wird in der Regel in Datenmigrationsprojekten verwendet, deren Daten von anderen als Windows-Plattformen oder aus anderen Datenquellen als der relationalen Datenbank-Engine von SQL Server stammen.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66080861"
   
 |Sprachschrift|Unterscheidung nach Groß-/Kleinschreibung|  
 |---------------------|----------------------|  
-|**Standardlateinisches Alphabet**|Bei Objektbezeichnern in lateinischer Schrift (beliebige der 26 englischen Groß- oder Kleinbuchstaben) wird unabhängig von der Sortierung die Groß-und Kleinschreibung nicht unterschieden. Beispielsweise sind die folgenden Objekt-IDs als identisch angesehen: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Intern werden in Analysis Services die Zeichen in der Zeichenfolge behandelt, als wären alle Großbuchstaben, und dann wird ein einfacher Bytevergleich ausgeführt, der unabhängig von der Sprache ist.<br /><br /> Beachten Sie, dass nur die 26 Zeichen betroffen sind. Wenn die Sprache Westeuropäisch ist, jedoch skandinavische Zeichen verwendet, wird das zusätzliche Zeichen nicht groß geschrieben.|  
+|**Standardlateinisches Alphabet**|Bei Objektbezeichnern in lateinischer Schrift (beliebige der 26 englischen Groß- oder Kleinbuchstaben) wird unabhängig von der Sortierung die Groß-und Kleinschreibung nicht unterschieden. Beispielsweise werden die folgenden Objekt-IDs als identisch betrachtet: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Intern werden in Analysis Services die Zeichen in der Zeichenfolge behandelt, als wären alle Großbuchstaben, und dann wird ein einfacher Bytevergleich ausgeführt, der unabhängig von der Sprache ist.<br /><br /> Beachten Sie, dass nur die 26 Zeichen betroffen sind. Wenn die Sprache Westeuropäisch ist, jedoch skandinavische Zeichen verwendet, wird das zusätzliche Zeichen nicht groß geschrieben.|  
 |**Kyrillisch, Griechisch, Koptisch, Armenisch**|Bei Objektbezeichnern in nicht-lateinischer Schrift mit Groß-/Kleinschreibung, z. B. Kyrillisch, wird immer nach Groß-/Kleinschreibung unterschieden. Beispielsweise werden Измерение und измерение als zwei unterschiedliche Werte betrachtet, obwohl der einzige Unterschied die Großschreibung des ersten Buchstabens ist.|  
   
  **Auswirkungen der Unterscheidung nach Groß-/Kleinschreibung für Objektkennungen**  
@@ -106,7 +106,7 @@ ms.locfileid: "66080861"
   
      Die französischen Übersetzungen aus der Adventure Works-Beispieldatenbank sollten angezeigt werden.  
   
-     ![Excel-PivotTable mit französischen Übersetzungen](media/ssas-localetest-excel.png "Excel-PivotTable mit französischen Übersetzungen")  
+     ![Excel-PivotTables mit französischen Übersetzungen](media/ssas-localetest-excel.png "Excel-PivotTables mit französischen Übersetzungen")  
   
  Anschließend können Sie mit SQL Server Profiler das Gebietsschema bestätigen. Klicken Sie auf ein `Session Initialize` -Ereignis, und suchen Sie dann in der Eigenschaftenliste im Textbereich unten nach `<localeidentifier>1036</localeidentifier>`.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66080861"
   
 3.  **Verwenden der ISO-Datumsformate für universelle Datums- und Uhrzeitangaben**  
   
-     Eine [Analysis Services-Experte](http://geekswithblogs.net/darrengosbell/Default.aspx) hat diese Empfehlung: "Ich verwende immer das ISO Datum-Format Yyyy-mm-tt für Datumszeichenfolgen, die ich an SQL- oder MDX-Abfragen übergebe, da es eindeutig ist und unabhängig von den Clients oder die regionalen Einstellungen des Servers funktioniert. Ich stimme zu, dass der Server bei der Analyse eines mehrdeutigen Datumsformats auf seine regionalen Einstellungen zurückgreifen sollte. Aber ich denke auch, wenn Sie eine Möglichkeit haben, die nicht der Interpretationen unterworfen ist, sollten Sie besser diese wählen".  
+     Ein [Analysis Services Experte](http://geekswithblogs.net/darrengosbell/Default.aspx) hat diese Empfehlung: "Ich verwende immer das ISO-Datumsformat yyyy-mm-dd für beliebige Datums Zeichenfolgen, die ich an SQL-oder MDX-Abfragen übergebe, weil es eindeutig ist und unabhängig von den regionalen Einstellungen des Clients oder Servers funktioniert. Ich stimme zu, dass der Server bei der Analyse eines mehrdeutigen Datumsformats auf seine regionalen Einstellungen zurückgreifen sollte. Aber ich denke auch, wenn Sie eine Möglichkeit haben, die nicht der Interpretationen unterworfen ist, sollten Sie besser diese wählen".  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   
@@ -160,7 +160,7 @@ ms.locfileid: "66080861"
     ```  
   
 ## <a name="see-also"></a>Siehe auch  
- [Globalisierungsszenarien für Globalisierungsszenarien für Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Globalisierungs Szenarien für Analysis Services-multidimensionalen](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Schreiben internationaler Transact-SQL-Anweisungen](../relational-databases/collations/write-international-transact-sql-statements.md)  
   
   

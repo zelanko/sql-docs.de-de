@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c0e5f5a5f194045b5d1b48a383f9d4dfd282649
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158165"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874704"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Bereitstellen SQL Server Big Data-Clusters mit hoher Verfügbarkeit
 
@@ -31,6 +31,7 @@ Im folgenden finden Sie einige der Funktionen, die von Verfügbarkeits Gruppen a
 1. Zum Herstellen einer Verbindung mit den Verfügbarkeits Gruppen Datenbanken wird automatisch ein externer Endpunkt bereitgestellt. Dieser Endpunkt `master-svc-external` spielt die Rolle des Verfügbarkeits Gruppen-Listener.
 1. Für schreibgeschützte Verbindungen mit den sekundären Replikaten wird ein zweiter externer Endpunkt bereitgestellt. 
 
+
 # <a name="deploy"></a>Bereitstellen
 
 So stellen Sie SQL Server Master in einer Verfügbarkeits Gruppe bereit:
@@ -39,9 +40,9 @@ So stellen Sie SQL Server Master in einer Verfügbarkeits Gruppe bereit:
 1. Geben Sie die Anzahl der Replikate für die Verfügbarkeits Gruppe an (mindestens 3).
 1. Konfigurieren Sie die Details des zweiten externen Endpunkts, der für Verbindungen mit den schreibgeschützten sekundären Replikaten erstellt wurde.
 
-In den folgenden Schritten wird gezeigt, wie Sie eine Patchdatei erstellen, die diese Einstellungen enthält, und wie `aks-dev-test` Sie `kubeadm-dev-test` Sie auf Konfigurations Profile von oder anwenden. In den folgenden Schritten wird ein Beispiel für das Patchen `aks-dev-test` des Profils zum Hinzufügen der hochverfügbarkeitattribute erläutert.
+In den folgenden Schritten wird gezeigt, wie Sie eine Patchdatei erstellen, die diese Einstellungen enthält, und wie `aks-dev-test` Sie `kubeadm-dev-test` Sie auf Konfigurations Profile von oder anwenden. In den folgenden Schritten wird ein Beispiel für das Patchen `aks-dev-test` des Profils zum Hinzufügen der hochverfügbarkeitattribute erläutert. Für eine Bereitstellung in einem kubeadm-Cluster wäre ein ähnlicher Patch anwendbar, aber stellen Sie sicher, dass Sie *nodeport* für den **serviceType** im Abschnitt **Endpunkte** verwenden.
 
-1. `ha-patch.json` Datei erstellen
+1. `patch.json` Datei erstellen
 
     ```json
     {
@@ -78,7 +79,7 @@ In den folgenden Schritten wird gezeigt, wie Sie eine Patchdatei erstellen, die 
 1. Klonen des Ziel Profils
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Anwenden der Patchdatei auf Ihr benutzerdefiniertes Profil
@@ -102,6 +103,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> Failoverereignisse können während einer verteilten Abfrage Ausführung auftreten, die auf Daten von Remote Datenquellen wie HDFS oder Daten Pool zugreift. Als bewährte Verfahrensweise sollten Anwendungen so entworfen werden, dass Sie Verbindungs Wiederholungs Logik aufweisen, wenn die von einem Failover verursachten Verbindungen getrennt werden.  
+>
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>Verbinden mit Datenbanken auf den sekundären Replikaten
 

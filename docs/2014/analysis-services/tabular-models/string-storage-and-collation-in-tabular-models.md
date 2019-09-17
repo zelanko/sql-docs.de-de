@@ -1,5 +1,5 @@
 ---
-title: Zeichenfolgenspeicher und-Sortierung in tabellarischen Modellen | Microsoft-Dokumentation
+title: Zeichen folgen Speicher und-Sortierung in tabellarischen Modellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18601e43e8aea80350e297336174cce0b4ef7bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066425"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874489"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Zeichenfolgenspeicher und -sortierung in Tabellenmodellen
   Zeichenfolgen (Textwerte) werden in einem stark komprimierten Format in Tabellenmodellen gespeichert. Aufgrund dieser Komprimierung erhalten Sie unter Umständen unerwartete Ergebnisse, wenn Sie vollständige Zeichenfolgen oder Teilzeichenfolgen abrufen. Da das Zeichenfolgengebietsschema und die Sortierungen hierarchisch vom nächsten übergeordneten Objekt geerbt werden, wenn die Zeichenfolgensprache nicht explizit definiert wird, können das Gebietsschema und die Sortierung des übergeordneten Objekts beeinflussen, wie die einzelnen Zeichenfolgen gespeichert werden, und ob die Zeichenfolge entsprechend der übergeordneten Sortierung eindeutig ist oder mit ähnlichen Zeichenfolgen zusammengefügt wurde.  
@@ -47,14 +47,14 @@ ms.locfileid: "66066425"
   
  Möglicherweise stammten die Daten aus zahlreichen verschiedenen Quellen, sodass die Schreibweise und die Verwendung von Akzenten inkonsistent war und die Unterschiede unverändert in der relationalen Datenbank gespeichert wurden. Im Allgemeinen sind die Werte jedoch entweder **Plant** oder **Tree**, wobei sich nur die Schreibweise (groß/klein) unterscheidet.  
   
- Wenn diese Werte in ein Tabellenmodell geladen werden, das die Standardsortierung und die Sortierreihenfolge für amerikanisches Englisch verwendet, ist die Schreibweise nicht von Bedeutung. Dementsprechend würden für die gesamte Spalte nur zwei Werte gespeichert werden:  
+ Wenn diese Werte in ein tabellarisches Modell geladen werden, das die Standardsortierung und die Sortierreihenfolge für Englisch (USA) verwendet, ist die Groß-/Kleinschreibung nicht wichtig, sodass für die gesamte Spalte nur zwei Werte gespeichert werden:  
   
 |Klassifizierung - Englisch|  
 |-------------------------------|  
 |trEE|  
 |PlAnT|  
   
- Bei Verwendung die Spalte **Klassifizierung - Englisch**, in Ihrem Modell dem, Anzeigen der pflanzenklassifizierung sehen Sie nicht die ursprünglichen Werte, die verschiedene Einsatzbereiche der oberen und Kleinbuchstaben, sondern nur die erste Instanz. Der Grund hierfür ist, dass alle Groß- und Kleinschreibungsvarianten von **tree** in dieser Sortierung und diesem Gebietsschema als äquivalent betrachtet werden. Daher wurde nur eine Zeichenfolge beibehalten, und die erste Instanz der Zeichenfolge, die vom System gefunden wird, wird gespeichert.  
+ Wenn Sie in Ihrem Modell die Spalte " **Klassifizierung-Englisch**" verwenden, sehen Sie, wo Sie die Anlagen Klassifizierung anzeigen, nicht die ursprünglichen Werte mit den unterschiedlichen Verwendungsmöglichkeiten von Groß-und Kleinbuchstaben, sondern nur die erste Instanz. Der Grund hierfür ist, dass alle Groß- und Kleinschreibungsvarianten von **tree** in dieser Sortierung und diesem Gebietsschema als äquivalent betrachtet werden. Daher wurde nur eine Zeichenfolge beibehalten, und die erste Instanz der Zeichenfolge, die vom System gefunden wird, wird gespeichert.  
   
 > [!WARNING]  
 >  Möglicherweise möchten Sie festlegen, welche Zeichenfolge als erste gespeichert werden soll (unter Berücksichtigung der von Ihnen als korrekt eingestuften Schreibweise), doch dies kann sich als sehr schwierig erweisen. Es existiert keine einfache Möglichkeit, im Voraus zu bestimmen, welche Zeile zuerst von der Engine verarbeitet werden soll, vorausgesetzt, dass alle Werte als identisch eingestuft werden. Stattdessen sollten beim Festlegen des Standardwerts alle Zeichenfolgen bereinigt werden, bevor das Modell geladen wird.  

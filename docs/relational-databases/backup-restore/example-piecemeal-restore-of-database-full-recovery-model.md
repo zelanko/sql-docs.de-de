@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 959b42665fa46a6e1216c0f1cb11f90569714ed8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67cfffa63fd56f7d514ff749f37f4f0f33610388
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089690"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278745"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Beispiel: Schrittweise Wiederherstellung einer Datenbank (vollständiges Wiederherstellungsmodell)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,15 +75,13 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 3.  Onlinewiederherstellung der Dateigruppe `B`.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
+   In der dritten Wiederherstellungssequenz stellt der Administrator die Dateigruppe `B`wieder her: Die Sicherung von Dateigruppe `B` wurde erstellt, nachdem die Dateigruppe schreibgeschützt wurde. Deshalb muss für diese Dateien bei der Wiederherstellung kein Rollforward ausgeführt werden.  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
-    ```  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
+   ```  
   
-     All filegroups are now online.  
+   Alle Dateigruppen sind nun online.  
   
 ## <a name="additional-examples"></a>Zusätzliche Beispiele  
   

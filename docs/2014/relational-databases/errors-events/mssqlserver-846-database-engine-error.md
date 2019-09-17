@@ -12,14 +12,14 @@ ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 840898cb41274a1871e5d087e2be1d2ab9e39e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e25752cd1f12143f4d05b8b4b02f138784a72a1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62913186"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874573"
 ---
-# <a name="mssqlserver846"></a>MSSQLSERVER_846
+# <a name="mssqlserver_846"></a>MSSQLSERVER_846
     
 ## <a name="details"></a>Details  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62913186"
 |Meldungstext|Timeout beim Warten auf einen Pufferlatch -- Typ %d, Pufferpool %p, Seite %d:%d, STAT %#x, Datenbank-ID: %d, Zuordnungseinheits-ID: %I64d%ls, Task 0x%p : %d, Wartezeit %d, Flags 0x%I64x, besitzender Task 0x%p. Der Wartevorgang wird nicht fortgesetzt.|  
   
 ## <a name="explanation"></a>Erklärung  
- Möglicherweise reagiert ein Computer nicht mehr (der Computer hängt), oder ein Timeout bzw. eine andere Unterbrechung des regulären Betriebs tritt möglicherweise zur gleichen Zeit auf, wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pufferlatchfehler in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben werden.  
+ Möglicherweise reagiert ein Computer nicht mehr, oder es kann ein Timeout oder eine andere Unterbrechung des regulären Betriebs auftreten, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Puffer latchfehler in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll geschrieben wird.  
   
  Wenn im STAT-Feld in der Meldung der Wert 0x04 aktiviert ist, wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein E/A-Vorgang erwartet. Zudem wird möglicherweise die Meldung [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokoll ausgegeben.  
   

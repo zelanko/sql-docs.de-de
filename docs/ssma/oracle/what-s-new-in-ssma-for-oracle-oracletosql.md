@@ -2,22 +2,32 @@
 title: Neues in SSMA für Oracle (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: da0a047b0ae20fbc191a61e1c9eb96660eac035e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 95b2ebd450fe54a2e02e5eed77a5259a8437e7ef
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811448"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745484"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Neues in SSMA für Oracle (oracleto SQL)
+
 In diesem Artikel wird SQL Server Migration Assistant (SSMA) für Oracle-Änderungen in jeder Version aufgeführt.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+Die Version Version 8.4 von SSMA für Oracle wurde durch gezielte Korrekturen ergänzt, die zur Behebung von Problemen bei der Barrierefreiheit entwickelt wurden, und zum Beheben eines Fehlers im Zusammenhang mit den maximalen Index Spalten (um 32 anstelle von 16) für SQL Server 2016 und höhere Versionen zu beheben.
+
+Außerdem wird in dieser Version von SSMA für Oracle eine Konvertierung für **SYS_REFCURSOR** als Parameter für die gespeicherte Prozedur out hinzugefügt.
+
+> [!IMPORTANT]
+> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,9 +37,6 @@ Das v 8.3-Release von SSMA für Oracle wurde durch gezielte Korrekturen verbesse
 * Grundlegende Unterstützung für den Typ "hierarchyid" in SQL Server hinzufügen
 * Beheben eines Problems mit einem unbekannten Rückgabetyp für eine Funktion, die über das Synonym aufgerufen wird
 * ODP.net auf v 19.3 aktualisieren
-
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -49,9 +56,6 @@ Darüber hinaus enthält diese Version einen Satz von Korrekturen, die für die 
 
 > [!NOTE]
 > Ein bekanntes Problem bei der automatischen Aktualisierung kann zu einem Fehler bei einem Update von SSMA v 8.1 auf v 8.2 führen. Wenn dieser Fehler auftritt, laden Sie die neue Version herunter, und installieren Sie Sie manuell.
-
-> [!IMPORTANT]
-> Bei SSMA Version 7.4 und höheren Versionen ist .NET 4.5.2 eine erforderliche Installation.
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 

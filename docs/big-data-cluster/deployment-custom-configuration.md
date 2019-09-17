@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304827"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745446"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungs Einstellungen für Cluster Ressourcen und-Dienste
 
@@ -126,7 +126,7 @@ Gleiches gilt für das Ändern der Einstellungen eines einzelnen Dienstanbieter 
 }
 ```
 
-Wenn Sie dieselben Konfigurationen für einen Dienst, der mehreren Ressourcen zugeordnet ist, anwenden möchten, aktualisieren Sie die entsprechenden **Einstellungen** im Abschnitt " **Dienste** ". Wenn Sie z. b. dieselben Einstellungen für Spark sowohl für Speicherpool-als auch für Spark-Pools festlegen möchten, aktualisieren Sie den Abschnitt " **Einstellungen** " im Abschnitt " **Spark** -Dienst" in der Konfigurationsdatei " **BDC. JSON** ".
+Wenn Sie dieselben Konfigurationen für einen Dienst, der mehreren Ressourcen zugeordnet ist, anwenden möchten, aktualisieren Sie die entsprechenden **Einstellungen** im Abschnitt " **Dienste** ". Wenn Sie z. b. dieselben Einstellungen für Spark sowohl für den Speicherpool als auch für Spark-Pools festlegen möchten, aktualisieren Sie den Abschnitt " **Einstellungen** " im Abschnitt " **Spark** -Dienst" in der Konfigurationsdatei " **BDC. JSON** ".
 
 ```json
 "services": {
