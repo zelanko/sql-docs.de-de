@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952612"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809952"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Grundlagen zur SQL Server-Verfügbarkeit für Linux-Bereitstellungen
 
@@ -215,9 +215,6 @@ Weitere Informationen finden Sie in den folgenden Dokumenten:
 -   Hyper-V-Dokumentation: [Verwenden von Gastclustering für Hochverfügbarkeit](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   Whitepaper (für Windows-basierte Bereitstellungen geschrieben; die meisten Informationen sind aber auf Linux übertragbar): [Planning Highly Available, Mission Critical SQL Server Deployments with VMware vSphere (Planen hochverfügbarer, unternehmenskritischer SQL Server-Bereitstellungen mit VMware vSphere)](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
->[!NOTE]
->RHEL wird in Verbindung mit einem Pacemaker-Cluster, für den die STONITH-Methode verwendet wird, noch nicht von Hyper-V unterstützt. Bis zur Einführung dieser Unterstützung finden Sie unter [Support Policies for RHEL High Availability Clusters (Supportrichtlinien für RHEL-Hochverfügbarkeitscluster)](https://access.redhat.com/articles/29440#3physical_host_mixing) weitere Informationen und Updates.
-
 ### <a name="networking"></a>Netzwerk
 Ein Pacemaker-Cluster benötigt im Gegensatz zu einem WSFC keinen dedizierten Namen und auch keine dedizierte IP-Adresse für den Cluster selbst. Für Verfügbarkeitsgruppen und Failoverclusterinstanzen sind IP-Adressen (siehe jeweilige Dokumentation für weitere Informationen), aber keine Namen erforderlich, da keine Netzwerknamensressource vorhanden ist. Unter SLES kann eine IP-Adresse zwar zu Verwaltungszwecken konfiguriert werden, jedoch ist dies nicht erforderlich (siehe [Erstellen des Pacemaker-Clusters](sql-server-linux-deploy-pacemaker-cluster.md#create)).
 
@@ -229,9 +226,6 @@ Wenn Pacemaker mit mehreren Netzwerkadaptern verwendet wird, besteht ein Untersc
 Die Quorumkonfiguration und -anforderungen beziehen sich auf spezifische [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-Bereitstellungen für Verfügbarkeitsgruppen und Failoverclusterinstanzen.
 
 Für Pacemaker-Cluster ist STONITH erforderlich. Wie Sie STONITH konfigurieren, erfahren Sie in der Dokumentation Ihrer Distribution. Ein Beispiel für SLES finden Sie unter [Storage-based Fencing (Speicherbasiertes Fencing)](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html). Für VMware vCenter für ESXI-basierte Lösungen ist auch ein STONITH-Agent verfügbar. Weitere Informationen finden Sie unter [Stonith Plugin Agent for VMWare VM VCenter SOAP Fencing (Unofficial) (STONITH-Plug-In-Agent für SOAP-Fencing in VMware vCenter (inoffiziell))](https://github.com/olafrv/fence_vmware_soap).
-
-> [!NOTE]
-> Aktuell wird STONITH nicht von Hyper-V unterstützt. Dies betrifft lokale Bereitstellungen und Azure-basierte Pacemaker-Bereitstellungen, die bestimmte Distributionen wie RHEL verwenden.
 
 ### <a name="interoperability"></a>Interoperabilität
 In diesem Abschnitt wird beschrieben, wie ein Linux-basierter Cluster mit einem WSFC oder mit anderen Linux-Distributionen interagieren kann.

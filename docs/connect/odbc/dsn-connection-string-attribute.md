@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702795"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen
@@ -124,7 +124,7 @@ Hier sind einige Schlüsselwörter für Verbindungszeichenfolgen und Verbindungs
 
 Wird zum Beschreiben der Datenquelle verwendet.
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 Steuert die ANSI-in-OEM-Konvertierung. 
 
@@ -133,7 +133,7 @@ Steuert die ANSI-in-OEM-Konvertierung.
 | SQL_AO_OFF | (Standard) Keine Zeichenübersetzung wird durchgeführt. |
 | SQL_AO_ON | Zeichenübersetzung wird durchgeführt. |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 Steuert die Verwendung von SQL Server-Fallbackverbindungen. Wird nicht mehr unterstützt.
 
@@ -146,7 +146,7 @@ Steuert die Verwendung von SQL Server-Fallbackverbindungen. Wird nicht mehr unte
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>Neue Schlüsselwörter für Verbindungszeichenfolgen sowie Verbindungsattribute
 
-###  <a name="authentication---sqlcoptssauthentication"></a>Authentifizierung – SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>Authentifizierung – SQL_COPT_SS_AUTHENTICATION
 
 Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
 
@@ -163,7 +163,7 @@ Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weiter
 > [!NOTE]
 > Wenn das `Authentication`-Schlüsselwort oder -Attribut verwendet werden, legen Sie die `Encrypt`-Einstellung für die Verbindungszeichenfolge, DSN bzw. das Verbindungsattribut explizit auf den gewünschten Wert fest. Weitere Informationen finden Sie unter [Using Connection String Keywords with SQL Server Native Client (Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
 Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver for SQL Server (Verwenden von Always Encrypted mit dem ODBC-Treiber für SQL Server)](using-always-encrypted-with-the-odbc-driver.md).
 
@@ -173,7 +173,7 @@ Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informa
 |Disabled|SQL_CE_DISABLED|(Standard) Deaktiviert Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Aktiviert nur die Entschlüsselung (Ergebnisse und Rückgabewerte).|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 Steuert das Feature zur transparenten Netzwerk-IP-Adressauflösung, das mit MultiSubnetFailover interagiert, um erneute Verbindungsversuche zu beschleunigen. Weitere Informationen finden Sie unter [Using Transparent Network IP Resolution (Verwenden der transparenten Netzwerk-IP-Adressauflösung)](using-transparent-network-ip-resolution.md).
 
@@ -191,7 +191,7 @@ Steuert die Verwendung von „SET FMTONLY“ für Metadaten bei der Verbindung m
 |Nein|(Standard) Verwenden von „sp_describe_first_result_set“ für Metadaten, wenn verfügbar. |
 |Ja| Verwenden von „SET FMTONLY“ für Metadaten. |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur Authentifizierung. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
 
@@ -200,7 +200,7 @@ Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur 
 | NULL | (Standard) Kein Zugriffstoken steht zur Verfügung. |
 | ACCESSTOKEN* | Zeiger zu einem Zugriffstoken. |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparente Spaltenverschlüsselung (Always Encrypted). Dieses Attribut hat keinen Standardwert. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md).
 
@@ -208,7 +208,7 @@ Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparen
 |-|-|
 | CEKEYSTOREDATA * | Kommunikationsdatenstruktur für die Keystore-Anbieterbibliothek |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 Lädt eine Keystore-Anbieterbibliothek für Always Encrypted oder ruft die Namen der geladenen Keystore-Anbieterbibliotheken ab. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md). Dieses Attribut hat keinen Standardwert.
 
@@ -216,7 +216,7 @@ Lädt eine Keystore-Anbieterbibliothek für Always Encrypted oder ruft die Namen
 |-|-|
 | char * | Pfad zur Keystore-Anbieterbibliothek |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
 Wenn XA-Transaktionen mit einem XA-konformen Transaktionsprozessor (TP) aktiviert werden sollen, muss die Anwendung mit „SQL_COPT_SS_ENLIST_IN_XA“ die Funktion **SQLSetConnectAttr** sowie einen Zeiger zu einem `XACALLPARAM`-Objekt aufrufen. Diese Option wird unter Windows (ab 17.3), Linux und Mac unterstützt.
 ```
