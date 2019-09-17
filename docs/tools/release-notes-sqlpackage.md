@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809453"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774175"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Versionshinweise zu „SqlPackage.exe“
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>18.3 sqlpackage
+
+|Platform|Herunterladen|Veröffentlichungsdatum|Versionsoptionen|Erstellen
+|:---|:---|:---|:---|:---|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2102893)|6. September 2019|18,3|15.0.4532.1|
+|macOS .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102894)|6. September 2019| 18,3|15.0.4532.1|
+|Linux .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102978)|6. September 2019| 18,3|15.0.4532.1|
+|Windows .net Core (Vorschau)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2102979)|6. September 2019| 18,3|15.0.4532.1|
+
+### <a name="features"></a>Funktionen
+
+| Funktion | Details |
+| :------ | :------ |
+| Azure SQL Data Warehouse (Vorschau) | Fügen Sie Unterstützung für die Bereitstellung in Azure SQL Data Warehouse hinzu. | 
+| Bereitstellung | Fügen Sie Sqlpackage den Parameter/p: databaselocktimeout = (Int32 "60") hinzu. | 
+| Bereitstellung | Fügen Sie Sqlpackage den Parameter/p: longrunningcommandtimeout = (Int32) hinzu. |
+| Exportieren/extrahieren | Fügen Sie Sqlpackage den/p: tempdirectoryfortabledata = (String)-Parameter hinzu. |
+| Bereitstellung | Ermöglicht, dass Bereitstellungs Mitwirkende aus zusätzlichen Speicherorten geladen werden. Die Mitwirkenden der Bereitstellung werden aus demselben Verzeichnis geladen wie das Ziel. dacpac wird bereitgestellt, das Erweiterungs Verzeichnis relativ zur Binärdatei Sqlpackage. exe und der/p: additionaldeploymentcontributorpath = (String)-Parameter, der Sqlpackage hinzugefügt wird. Gibt an, wo zusätzliche Verzeichnis Speicherorte angegeben werden können. |
+| Bereitstellung | Unterstützung für OPTIMIZE_FOR_SEQUENTIAL_KEY hinzufügen. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Problembehebungen
+
+| Fix | Details |
+| :-- | :------ |
+| Bereitstellung | Korrektur, um automatische Indizes zu ignorieren, sodass Sie bei der Bereitstellung nicht gelöscht werden. | 
+| Always Encrypted | Korrektur für die Behandlung von Always Encrypted varchar-Spalten. | 
+| Build/Bereitstellung | Korrektur zum Auflösen der Nodes ()-Methode für XML-Spalten Sätze.| 
+| ScriptDom | Korrigieren Sie weitere Fälle, in denen die URL-Zeichenfolge als Token der obersten Ebene interpretiert wurde. | 
+| Diagramm | Korrektur von generiertem TSQL für Pseudo Spalten Verweise in Einschränkungen.  | 
+| Exportieren | Generieren Sie zufällige Kenn Wörter, die Komplexitäts Anforderungen entsprechen. | 
+| Bereitstellung | Korrektur zum berücksichtigen von Befehls Timeouts beim Abrufen von Einschränkungen. | 
+| .Net Core (Vorschau) | Korrektur der Diagnoseprotokollierung in einer Datei. | 
+| .Net Core (Vorschau) | Verwenden Sie Streaming zum Exportieren von Tabellendaten, um große Tabellen zu unterstützen. | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>18.2 sqlpackage
 
-Veröffentlichungsdatum: &nbsp; 15. April 2019  
-Build: &nbsp; 15.0.4384.2 
+|Platform|Herunterladen|Veröffentlichungsdatum|Versionsoptionen|Erstellen
+|:---|:---|:---|:---|:---|
+|Windows|[MSI-Installationsprogramm](https://go.microsoft.com/fwlink/?linkid=2087429)|April 15, 2019|18.2|15.0.4384.2|
+|macOS .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2087247)|April 15, 2019 | 18.2 |15.0.4384.2|
+|Linux .NET Core (Vorschauversion)|[zip-Datei](https://go.microsoft.com/fwlink/?linkid=2087431)|April 15, 2019 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>Funktionen
 

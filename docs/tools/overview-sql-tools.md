@@ -1,7 +1,8 @@
 ---
-title: SQL-Tools und-Hilfsprogramme für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse | Microsoft-Dokumentation
+title: SQL-Abfrage-und-Verwaltungs Tools für SQL Server, Azure SQL (Azure SQL-Datenbanken, verwaltete Azure SQL-Instanzen, virtuelle SQL-Computer) und Azure SQL-Data Warehouse | Microsoft-Dokumentation
+description: SQL-Abfrage-und-Verwaltungs Tools für SQL Server, Azure SQL (Azure SQL-Datenbank, verwaltete Azure SQL-Instanz, virtuelle SQL-Computer) und Azure SQL-Data Warehouse
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,27 +12,29 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe249e4df9c33fcbb292fc93f218e16ae111b0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105662"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913568"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL-Tools und-Hilfsprogramme für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse
+# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>SQL-Abfrage-und-Verwaltungs Tools für SQL Server, Azure SQL (Azure SQL-Datenbank, verwaltete Azure SQL-Instanz, virtuelle SQL-Computer) und Azure SQL-Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Zum Verwalten (Abfragen, überwachen usw.) Ihrer Datenbank benötigen Sie ein Tool. Während Ihre Datenbanken in der Cloud, unter Windows oder [Linux](../linux/sql-server-linux-overview.md)ausgeführt werden können, muss das Tool nicht auf derselben Plattform wie die Datenbank ausgeführt werden. 
 
 Es sind viele Datenbanktools verfügbar. dieser Artikel enthält Beschreibungen und Verweise auf einige der verfügbaren Tools für die Arbeit mit SQL-Datenbanken. Wenn Sie Hilfe bei der Entscheidung benötigen, welches Tool Sie benötigen, finden Sie weitere Informationen unter [welches Tool soll ich verwenden?](#which-tool-should-i-choose).
 
+Wenn Sie weitere Informationen und ein Tool herunterladen möchten, wählen Sie in den folgenden Tabellen die Links in der Spalte Tool aus. Informationen zum Herunterladen SQL Server finden Sie unter [Install SQL Server](../database-engine/install-windows/install-sql-server.md). 
+
 ## <a name="gui-tools-to-manage-databases"></a>GUI-Tools zum Verwalten von Datenbanken  
 
-Im folgenden sind die wichtigsten Tools für die grafische Benutzeroberfläche (GUI) aufgeführt:
+Die folgenden Tools stellen eine grafische Benutzeroberfläche (GUI) bereit:
 
 | Tool | und Beschreibung | Läuft auf |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]ist ein kostenloses, leichtes Tool zum Verwalten von Datenbanken, wo Sie ausgeführt werden. Diese Vorschauversion bietet Features für die Datenbankverwaltung, einschließlich eines erweiterten Transact-SQL-Editors und anpassbarer Einblicke in den Betriebszustand Ihrer Datenbanken. | **wird unter Windows, macOS und Linux ausgeführt. [!INCLUDE[name-sos](../includes/name-sos-short.md)]**|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]ist ein kostenloses, leichtes Tool zum Verwalten von Datenbanken, wo Sie ausgeführt werden. Diese Vorschauversion bietet Features für die Datenbankverwaltung, einschließlich eines erweiterten Transact-SQL-Editors und anpassbarer Einblicke in den Betriebszustand Ihrer Datenbanken. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] kann unter Windows, macOS und Linux ausgeführt werden**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Verwenden Sie SQL Server Management Studio (SSMS), um Ihre SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse abzufragen, zu entwerfen und zu verwalten. | **SSMS wird unter Windows ausgeführt**.|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Verwandeln Sie Visual Studio in eine leistungsstarke Entwicklungsumgebung für SQL Server, Azure SQL-Datenbank und Azure SQL Data Warehouse.| **SSDT wird unter Windows ausgeführt**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Installieren Sie nach der Installation von Visual Studio Code die [MSSQL-Erweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) zum Entwickeln von Microsoft SQL Server, Azure SQL-Datenbank und SQL Data Warehouse.| **Visual Studio Code kann unter Windows, macOS und Linux**ausgeführt werden.|
@@ -43,12 +46,12 @@ Im folgenden finden Sie die wichtigsten Befehlszeilen Tools:
 
 | Tool | und Beschreibung | Läuft auf |
 |:--|:--|:--|
-|[**mssql-cli (Vorschauversion)** ](mssql-cli.md)|**MSSQL-CLI** ist ein interaktives Befehlszeilen Tool zum Abfragen von SQL Server. | Windows, macOS und Linux|
+|[**mssql-cli (Vorschauversion)**](mssql-cli.md)|**MSSQL-CLI** ist ein interaktives Befehlszeilen Tool zum Abfragen von SQL Server. | Windows, macOS und Linux|
 | [**sqlpackage**](sqlpackage.md) |**Sqlpackage** ist ein Befehlszeilenprogramm, mit dem mehrere Daten Bank Entwicklungsaufgaben automatisiert werden. die macOS-und Linux-Versionen von Sqlpackage befinden sich derzeit in der Vorschau Phase. | Windows, macOS und Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** bietet Cmdlets für die Arbeit mit SQL.| Windows, macOS und Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |mit dem Hilfsprogramm **sqlcmd** können Sie an der Eingabeaufforderung Transact-SQL-Anweisungen, System Prozeduren und Skriptdateien eingeben. | Windows, macOS und Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|Mit dem Hilfsprogramm **bcp**(**B**ulk **C**opy **P**rogram) werden Daten per Massenvorgang zwischen einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und einer Datendatei in einem benutzerdefinierten Format kopiert.|Windows, macOS und Linux|
-|[**MSSQL-Scripter (Vorschau)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Scripter** ist eine Befehlszeilen Darstellung mit mehreren Plattformen für die Skripterstellung SQL Server-Datenbanken|Windows, macOS und Linux|
+|[**MSSQL-Scripter (Vorschau)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL-Scripter** ist eine Befehlszeilen Darstellung mit mehreren Plattformen für die Skripterstellung SQL Server-Datenbanken|Windows, macOS und Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** konfiguriert SQL Server, die unter Linux ausgeführt werden.|Linux|
 
 
