@@ -16,12 +16,12 @@ ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a51010b732e71d4f3bb953d9eedf85be2afa7c8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: dfb77db3676c8df124b65199fb0b806755e550a1
+ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892594"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71077515"
 ---
 # <a name="command-prompt-utility-reference-database-engine"></a>Referenz zum Eingabeaufforderungs-Hilfsprogramm (Datenbank-Engine)
   Eingabeaufforderungs-Hilfsprogramme versetzen Sie in die Lage, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Vorgänge einem Skript hinzuzufügen. Die folgende Tabelle enthält eine Liste der Eingabeaufforderung-Hilfsprogramme, die im Lieferumfang von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]enthalten sind.  
