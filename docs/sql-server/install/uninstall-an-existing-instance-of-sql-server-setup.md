@@ -73,7 +73,7 @@ ms.locfileid: "68126051"
   
     -   ReportServer[$InstanceName]TempDB Dies ist die temporäre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Standarddatenbank.  
   
-2.  **Löschen Sie die lokalen Sicherheitsgruppen.** Löschen Sie vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die lokalen Sicherheitsgruppen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten.  
+2.  **Löschen Sie die lokalen Sicherheitsgruppen.** Löschen Sie vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die lokalen Sicherheitsgruppen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten.  
   
 3.  **Beenden Sie alle**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Dienste.** Beenden Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten. Aktive Verbindungen können eine erfolgreiche Deinstallation verhindern.  
   
