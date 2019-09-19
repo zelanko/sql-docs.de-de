@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f147e2b4ec785c3723d09cac6eb3548511946780
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158235"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118154"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -61,6 +61,10 @@ JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unt
 Ausführlichkeit der Protokollierung erhöhen. Verwenden Sie „--debug“ für vollständige Debugprotokolle.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 Dieser Befehl erstellt ein temporäres Verzeichnis und führt das angegebene Notebook in diesem Verzeichnis aus, das als Arbeitsverzeichnis fungiert.
+
+>[!NOTE]
+>Überprüft mit azdata v 15.0.1900: der Run-Befehl wird nur für python 3-Notebooks unterstützt.
+
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -81,7 +85,7 @@ Der Dateipfad zu dem Notebook, das ausgeführt werden soll.
 #### `--output-path`
 Der Verzeichnispfad, der für die Notebook-Ausgabe verwendet werden soll.  Das Notebook mit Ausgabedaten und alle vom Notebook erstellten Dateien werden relativ zu diesem Verzeichnis generiert.
 #### `--output-html`
-Optionales Flag, das angibt, ob das ausgegebene Notebook zusätzlich in das HTML-Format konvertiert werden soll.  Erstellt eine zweite Ausgabedatei.
+Optionales Flag, das angibt, ob das Ausgabe Notebook zusätzlich in das HTML-Format konvertiert wird.  Erstellt eine zweite Ausgabedatei.
 #### `--arguments -a`
 Optionale Liste von Notebook-Argumenten, die in die Notebook-Ausführung eingefügt werden sollen.  Codiert als JSON-Wörterbuch.  Beispiel: "{" Name ":" Value "," name2 ":" Value2 "}"
 #### `--interactive -i`
@@ -96,7 +100,7 @@ Zeigen Sie diese Hilfemeldung an, und schließen Sie sie.
 #### `--output -o`
 Ausgabeformat.  Zulässige Werte: json, jsonc, table, tsv.  Standardwert: json.
 #### `--query -q`
-JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/]).
+JMESPath-Abfragezeichenfolge. Weitere Informationen und Beispiele finden Sie unter [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Ausführlichkeit der Protokollierung erhöhen. „--debug“ für vollständige Debugprotokolle verwenden.
 

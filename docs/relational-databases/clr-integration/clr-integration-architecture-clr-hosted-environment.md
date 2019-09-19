@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 016d8af878a75a0a4e72b17fc9fa09f8791b242b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212445"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096913"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR-Integrationsarchitektur: Von CLR gehostete Umgebung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Thread.EndThreadAffinity();
   
  Aus diesen Gründen raten wir von der Verwendung von statischen Variablen und Datenelementen von Klassen ab, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden. Bei Assemblys vom Typ SAFE und EXTERNAL_ACCESS untersucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Ausführung von CREATE ASSEMBLY die Metadaten der Assembly. Wenn die Verwendung statischer Datenelemente oder Variablen ermittelt wird, wird die Assembly nicht erstellt.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lässt auch Aufrufe von .NET Framework-APIs nicht zu, die mit den Host Schutz Attributen " **SharedState**", "* *" und " **ExternalProcessMgmt** " kommentiert werden. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [Einschränkungen für das CLR-Integrations Programmiermodell](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lässt auch Aufrufe von .NET Framework-APIs nicht zu, die mit den Host Schutz Attributen " **SharedState**", " **Synchronisierung**" und " **ExternalProcessMgmt** " kommentiert werden. Dies verhindert, dass Assemblys des Typs SAFE und EXTERNAL_ACCESS APIs aufrufen, die die Freigabe des Zustands aktivieren, Synchronisierungen durchführen und die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses beeinträchtigen. Weitere Informationen finden Sie unter [Einschränkungen für das CLR-Integrations Programmiermodell](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Siehe auch  
  [Sicherheit der CLR-Integration](../../relational-databases/clr-integration/security/clr-integration-security.md)   
