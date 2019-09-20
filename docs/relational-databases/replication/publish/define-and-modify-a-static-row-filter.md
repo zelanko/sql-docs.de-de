@@ -15,12 +15,12 @@ ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: cbb1985f30dc87520273da62e62a34bc838d5b6a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f26e62210052e297cc47eef97f44ac9bfb462bb1
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764112"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846581"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definieren oder Ändern eines statischen Zeilenfilters
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,15 +113,15 @@ ms.locfileid: "68764112"
   
 1.  Definieren Sie den zu filternden Artikel. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie den Namen des Artikels für **@article** , den Namen der Veröffentlichung für **@publication** , den Namen des Filters für **@filter_name** und die Filterklausel für **@filter_clause** an (ausgenommen `WHERE`).  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie für **\@article** den Namen des Artikels, für **\@publication** den Namen der Veröffentlichung, für **\@filter_name** den Namen des Filters und für **\@filter_clause** die Filterklausel an (ausgenommen `WHERE`).  
   
-3.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Führen Sie andernfalls [Sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus. Geben Sie den Veröffentlichungsnamen für **@publication** , den Namen des gefilterten Artikels für **@article** und die in Schritt 2 angegebene Filterklausel für **@filter_clause** statische Zeilenfilter definiert und geändert werden. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erstellt.  
+3.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Führen Sie andernfalls [Sp_articleview &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus. Geben Sie für **\@publication** den Namen der Veröffentlichung, für **\@article** den Namen des gefilterten Artikels und für **\@filter_clause** die in Schritt 2 angegebene Filterklausel an. Damit werden die Synchronisierungsobjekte für den gefilterten Artikel erstellt.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>So ändern Sie einen statischen Zeilenfilter für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie den Namen des Artikels für **@article** , den Namen der Veröffentlichung für **@publication** , den Namen des neuen Filters für **@filter_name** und die neue Filterklausel für **@filter_clause** an (ausgenommen `WHERE`). Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie den Wert **1** für **@force_reinit_subscription** statische Zeilenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie für **\@article** den Namen des Artikels, für **\@publication** den Namen der Veröffentlichung, für **\@filter_name** den Namen des neuen Filters und für **\@filter_clause** die neue Filterklausel an (ausgenommen `WHERE`). Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie für **\@force_reinit_subscription** den Wert **1** an.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus. Geben Sie den Veröffentlichungsnamen für **@publication** , den Namen des gefilterten Artikels für **@article** und die in Schritt 1 angegebene Filterklausel für **@filter_clause** statische Zeilenfilter definiert und geändert werden. Dadurch wird die Sicht neu erstellt, die den gefilterten Artikel definiert.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_articleview#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) aus. Geben Sie für **\@publication** den Namen der Veröffentlichung, für **\@article** den Namen des gefilterten Artikels und für **\@filter_clause** die in Schritt 1 angegebene Filterklausel an. Dadurch wird die Sicht neu erstellt, die den gefilterten Artikel definiert.  
   
 3.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68764112"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>So löschen Sie einen statischen Zeilenfilter für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie den Namen des Artikels für **@article** , den Namen der Veröffentlichung für **@publication** und den Wert NULL für **@filter_name** und **@filter_clause** statische Zeilenfilter definiert und geändert werden. Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie den Wert **1** für **@force_reinit_subscription** statische Zeilenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank, [Sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) aus. Geben Sie für **\@article** den Namen des Artikels, für **\@publication** den Namen der Veröffentlichung und für sowohl **\@filter_name** als auch **\@filter_clause** den Wert NULL an. Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie für **\@force_reinit_subscription** den Wert **1** an.  
   
 2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
@@ -137,13 +137,13 @@ ms.locfileid: "68764112"
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>So definieren Sie einen statischen Zeilenfilter für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie die Filterklausel für **@subset_filterclause** an (ausgenommen `WHERE`). Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie für **\@subset_filterclause** die Filterklausel an (ausgenommen `WHERE`). Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Wenn außerdem ein Spaltenfilter definiert werden muss, finden Sie Informationen unter [Definieren und Ändern eines Spaltenfilters](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>So ändern Sie einen statischen Zeilenfilter für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie den Veröffentlichungsnamen für **@publication** , den Namen des gefilterten Artikels für **@article** , den Wert **subset_filterclause** für **@property** und die neue Filterklausel für **@value** an (ausgenommen `WHERE`). Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie den Wert **@force_reinit_subscription** statische Zeilenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus. Geben Sie für **\@publication** den Namen der Veröffentlichung, für **\@article** den Namen des gefilterten Artikels, für **\@property** den Wert **subset_filterclause** und für **\@value** die neue Filterklausel an (ausgenommen `WHERE`). Da durch diese Änderung Daten in vorhandenen Abonnements ungültig werden, geben Sie für **\@force_reinit_subscription** den Wert 1 an.  
   
 2.  Führen Sie den Auftrag des Momentaufnahme-Agents für die Veröffentlichung erneut aus, um eine aktualisierte Momentaufnahme zu erstellen. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   

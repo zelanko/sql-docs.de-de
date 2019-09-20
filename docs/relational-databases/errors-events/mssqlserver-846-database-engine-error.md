@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc1254fc2264e68a3df9c1addcbb5a0ee8630ea0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3462dd0d57a65e7c1df1bfc298502555d99bd14
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101521"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874806"
 ---
-# <a name="mssqlserver846"></a>MSSQLSERVER_846
+# <a name="mssqlserver_846"></a>MSSQLSERVER_846
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Details  
@@ -33,7 +33,7 @@ ms.locfileid: "68101521"
 |Meldungstext|Timeout beim Warten auf einen Pufferlatch -- Typ %d, Pufferpool %p, Seite %d:%d, STAT %#x, Datenbank-ID: %d, Zuordnungseinheits-ID: %I64d%ls, Task 0x%p : %d, Wartezeit %d, Flags 0x%I64x, besitzender Task 0x%p. Der Wartevorgang wird nicht fortgesetzt.|  
   
 ## <a name="explanation"></a>Erklärung  
-Möglicherweise reagiert ein Computer nicht mehr (der Computer hängt), oder ein Timeout bzw. eine andere Unterbrechung des regulären Betriebs tritt möglicherweise zur gleichen Zeit auf, wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pufferlatchfehler in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll geschrieben werden.  
+Möglicherweise reagiert ein Computer nicht mehr, oder ein Timeout bzw. eine andere Unterbrechung des regulären Betriebs tritt auf, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gleichzeitig Pufferlatchfehler in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll schreibt.  
   
 Wenn im STAT-Feld in der Meldung der Wert 0x04 aktiviert ist, wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein E/A-Vorgang erwartet. Zudem wird möglicherweise die Meldung [MSSQLSERVER_833](~/relational-databases/errors-events/mssqlserver-833-database-engine-error.md) im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokoll ausgegeben.  
   

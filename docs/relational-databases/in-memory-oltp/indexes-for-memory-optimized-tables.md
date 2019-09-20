@@ -1,7 +1,7 @@
 ---
 title: Indizes für speicheroptimierte Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050214"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929698"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Indizes für speicheroptimierte Tabellen
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Alle speicheroptimierten Tabellen müssen mindestens einen Index enthalten, da die Zeilen durch die Indizes miteinander verbunden werden. Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Es gibt verschiedene Methoden, mit denen sich ein Index für einen speicheroptimierten Index von einem herkömmlichen Index für eine datenträgerbasierte Tabelle unterscheidet:  
+Alle speicheroptimierten Tabellen müssen mindestens einen Index enthalten, da die Zeilen durch die Indizes miteinander verbunden werden. Für eine speicheroptimierte Tabelle wird jeder Index auch speicheroptimiert. Ein Index für eine speicheroptimierte Tabelle unterscheidet sich auf vielfältige Weise von einem herkömmlichen Index für eine datenträgerbasierte Tabelle:  
 
 - Datenzeilen werden nicht in Seiten gespeichert, sodass es keine Sammlung von Seiten bzw. Erweiterungen, Partitionen oder Zuordnungseinheiten gibt, auf die zum Abrufen aller Seiten einer Tabelle verwiesen werden kann. Für einen der verfügbaren Indextypen gibt es Indexseiten. Diese Indextypen werden jedoch anders gespeichert als Indizes für datenträgerbasierte Tabellen. Sie lassen nicht den herkömmlichen Fragmentierungstyp innerhalb einer Seite anwachsen, sodass sie keinen Füllfaktor haben.
 - Änderungen, die bei der Datenbearbeitung an Indizes in speicheroptimierten Tabellen vorgenommen werden, werden niemals auf den Datenträger geschrieben. Nur die Datenzeilen und Änderungen an den Daten werden in das Transaktionsprotokoll geschrieben. 
@@ -59,6 +59,7 @@ Für eine Deklaration mit dem Standard DURABILITY = SCHEMA\_AND_DATA muss die sp
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > Für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] besteht ein Limit von 8 Indizes pro speicheroptimierte Tabelle oder Tabellentyp. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt es keine Begrenzung mehr für die spezifische Anzahl von Indizes für speicheroptimierte Tabellen und Tabellentypen.
   

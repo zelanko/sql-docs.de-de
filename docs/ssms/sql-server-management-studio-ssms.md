@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
-ms.date: 05/29/2019
-ms.openlocfilehash: 3def38b576103a7343816d0dc1c472d3bd64e1a1
-ms.sourcegitcommit: 7e63c612047f2bb1779c872b5180a3ea9afe7e80
+ms.date: 09/11/2019
+ms.openlocfilehash: 2d4dd0491d7328250f73047d64233dd6df84fb2b
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976126"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988117"
 ---
-# <a name="what-is-sql-server-management-studio-ssms"></a>Was ist SQL Server Management Studio (SSMS)? 
+# <a name="what-is-sql-server-management-studio-ssms"></a>Was ist SQL Server Management Studio (SSMS)?
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -33,6 +33,8 @@ ms.locfileid: "69976126"
 - [**Herunterladen von SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Herunterladen von Visual Studio**](https://www.visualstudio.com/downloads/)
 
+![SSMS-Einführungsbildschirm](media/download-sql-server-management-studio-ssms/what-is-ssms.png)
+
 ## <a name="sql-server-management-studio-components"></a>Komponenten von SQL Server Management Studio  
   
 |und Beschreibung|Komponente|  
@@ -41,19 +43,19 @@ ms.locfileid: "69976126"
 |So wird der **Vorlagen-Explorer** zum Erstellen und Verwalten von Dateien mit Textbausteinen verwendet, die Sie zum Beschleunigen der Entwicklung von Abfragen und Skripts verwenden.|[Template Explorer](../ssms/template/template-explorer.md)|  
 |So wird der veraltete **Projektmappen-Explorer** zum Erstellen von Projekten verwendet, die zum Verwalten von Verwaltungselementen wie Skripts und Abfragen verwendet werden.|[Projektmappen-Explorer](../ssms/solution/solution-explorer.md)|  
 |So werden die in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]enthaltenen visuellen Entwurfstools verwendet.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|So werden die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] -Spracheditoren zum interaktiven Erstellen und Debuggen von Abfragen und Skripts verwendet.|[Abfrage- und Text-Editoren (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|
+|So werden die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] -Spracheditoren zum interaktiven Erstellen und Debuggen von Abfragen und Skripts verwendet.|[Abfrage- und Text-Editoren](scripting/query-and-text-editors-sql-server-management-studio.md)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio für Business Intelligence
 
 Verwenden Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] für den Zugriff auf und die Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Obwohl alle drei Business Intelligence-Technologien auf [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]basieren, weichen die mit den jeweiligen Technologien verbundenen Verwaltungsaufgaben leicht voneinander ab.
-  
+
 > [!NOTE]
 > Verwenden Sie zum Erstellen und Ändern von Projektmappen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)]und nicht [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)] ist eine Entwicklungsumgebung, die auf [!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]basiert.
-  
+
 ### <a name="managing-analysis-services-solutions-using-sql-server-management-studio"></a>Verwalten von Analysis Services-Lösungen mit SQL Server Management Studio
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ermöglicht es Ihnen, [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] -Objekte zu verwalten, beispielsweise Ausführen von Sicherungen und Verarbeiten von Objekten.
-  
+
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] -Skriptprojekt, in dem Sie in Multidimensional Expressions (MDX), Data Mining Extensions (DMX) und XML for Analysis (XMLA) geschriebene Skripts entwickeln und speichern können. Sie verwenden [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] -Skriptprojekte, um Verwaltungsaufgaben auszuführen oder Objekte wie Datenbanken oder Cubes in [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] -Instanzen neu zu erstellen. Sie können beispielsweise ein XMLA-Skript in einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] -Skriptprojekt entwickeln, das neue Objekte direkt auf einer vorhandenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] -Instanz erstellt. Die [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] -Skriptprojekte können als Teil einer Lösung gespeichert werden und mit dem Quellcodeverwaltungssystem integriert werden.
   
 Weitere Informationen zur Verwendung von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], finden Sie unter [Entwickeln und Implementieren mithilfe von SQL Server Management Studio](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).
@@ -66,17 +68,17 @@ Weitere Informationen zur Verwendung von [!INCLUDE[ssManStudioFull](../includes/
 
 Verwenden Sie SQL Server Management Studio zum Aktivieren von Reporting Services-Funktionen und zum Verwalten von Server und Datenbanken sowie von Rollen und Aufträgen.
 
-Verwalten Sie freigegebene Zeitpläne mit dem Ordner Freigegebene Zeitpläne, und verwalten Sie Berichtsserver-Datenbanken (ReportServer, ReportServerTempdb). Sie können darüber hinaus eine RSExecRole-Rolle in der master-Systemdatenbank erstellen, wenn Sie eine Berichtsserver-Datenbank in eine neue oder andere SQL Server-Datenbank-Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde_md.md)]) verschieben. Weitere Informationen zu diesen Aufgaben finden Sie unter den folgenden Themen:  
+Verwalten Sie freigegebene Zeitpläne mit dem Ordner Freigegebene Zeitpläne, und verwalten Sie Berichtsserver-Datenbanken (ReportServer, ReportServerTempdb). Sie können darüber hinaus eine RSExecRole-Rolle in der master-Systemdatenbank erstellen, wenn Sie eine Berichtsserver-Datenbank in eine neue oder andere SQL Server-Datenbank-Engine ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde_md.md)]) verschieben. Weitere Informationen zu diesen Aufgaben finden Sie in den folgenden Artikeln:  
 
-- [Management Studio (Themen zur Vorgehensweisen)](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)
+- [Reporting Services in SSMS](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [Verwalten einer Berichtsserver-Datenbank](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
-- [Vorgehensweise: Erstellen der Rolle RSExecRole](../reporting-services/security/create-the-rsexecrole.md)
-  
-Zudem verwalten Sie den Server, indem Sie verschiedene Funktionen aktivieren und konfigurieren, Serverstandardwerte festlegen und Rollen und Aufträge verwalten. Weitere Informationen zu diesen Aufgaben finden Sie unter den folgenden Themen:
+- [Create the RSExecRole (Erstellen der Rolle RSExecRole)](../reporting-services/security/create-the-rsexecrole.md)
 
-- [Vorgehensweise: Festlegen von Berichtsservereigenschaften (Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)
-- [Vorgehensweise: Rollendefinitionen: Erstellen, Löschen oder Ändern (Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)
-- [Aktivieren und Deaktivieren von clientseitigem Druck für Reporting Services](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)
+Zudem verwalten Sie den Server, indem Sie verschiedene Funktionen aktivieren und konfigurieren, Serverstandardwerte festlegen und Rollen und Aufträge verwalten. Weitere Informationen zu diesen Aufgaben finden Sie in den folgenden Artikeln:
+
+- [Set Report Server Properties (Festlegen von Berichtsservereigenschaften)](../reporting-services/tools/set-report-server-properties-management-studio.md)
+- [Erstellen, Löschen oder Ändern von Rollen](../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [Aktivieren und Deaktivieren von clientseitigem Druck für Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)
 
 ## <a name="non-english-language-versions-of-sql-server-management-studio-ssms"></a>Nicht englischsprachige Versionen von SQL Server Management Studio (SSMS)
 
@@ -94,11 +96,9 @@ Weitere Informationen zu verschiedenen Gebietsschemas bei früheren Versionen fi
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- [Installieren von nicht englischsprachigen Versionen von SQL Server Management Studio (SSMS)](install-other-languages.md)
-- [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
-- [Tutorial: Schreiben von Transact-SQL-Anweisungen](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
-- [Entwickeln und Implementieren mithilfe von SQL Server Data Tools](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)
-- [Reporting Services in SQL Server-Datentools](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
-- [Tutorial: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [Installieren von nicht englischsprachigen Versionen von SSMS](install-other-languages.md)
+- [Herstellen einer Verbindung mit und Abfragen von einer SQL Server-Instanz](tutorials/connect-query-sql-server.md)
+- [Schreiben von Transact-SQL-Anweisungen](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

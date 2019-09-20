@@ -1,7 +1,7 @@
 ---
 title: Abfragehinweise (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902001"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228400"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -216,19 +216,19 @@ Weitere Informationen finden Sie unter [WITH common_table_expression &#40;Transa
 NO_PERFORMANCE_SPOOL    
  **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Verhindert, dass ein Spool-Operator zu Abfrageplänen hinzugefügt wird (mit Ausnahme der Pläne, bei denen der Spool-Operator eine gültige Update-Semantik garantieren muss). In einigen Szenarios kann der Spool-Operator die Leistung beeinträchtigen. Der Spool-Operator verwendet beispielsweise „tempdb“. Wenn in den Spool-Vorgängen viele Abfragen gleichzeitig ausgeführt werden, kann es zu einem „tempdb“-Konflikt kommen.  
+Verhindert, dass ein Spool-Operator zu Abfrageplänen hinzugefügt wird (mit Ausnahme der Pläne, bei denen der Spool-Operator eine gültige Update-Semantik garantieren muss). In einigen Szenarios kann der Spool-Operator die Leistung beeinträchtigen. Der Spool-Operator verwendet beispielsweise „tempdb“. Wenn in den Spool-Vorgängen viele Abfragen gleichzeitig ausgeführt werden, kann es zu einem tempdb-Konflikt kommen.  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 Weist den Abfrageoptimierer an, einen bestimmten Wert für eine lokale Variable zu verwenden, wenn die Abfrage kompiliert und optimiert wird. Dieser Wert wird nur während der Abfrageoptimierung verwendet, nicht während der Abfrageausführung.  
   
-_@variable\_name_  
+_\@variable\_name_  
 Der Name einer lokalen Variablen, die in einer Abfrage verwendet wird und der ein Wert für die Verwendung mit dem OPTIMIZE FOR-Abfragehinweis zugewiesen werden kann.  
   
 _UNKNOWN_  
 Gibt an, dass der Abfrageoptimierer statt des Anfangswerts statistische Daten verwenden soll, um während der Abfrageoptimierung den Wert einer lokalen Variablen zu bestimmen.  
   
 _literal\_constant_  
-Ein Literalkonstantenwert, dem _@variable\_name_ für die Verwendung mit dem OPTIMIZE FOR-Abfragehinweis zugewiesen wird. _literal\_constant_ wird nur während der Abfrageoptimierung verwendet, nicht als Wert von _@variable\_name_ während der Abfrageausführung. _literal\_constant_ kann einen beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp aufweisen, der als Literalkonstante dargestellt werden kann. Der Datentyp von _literal\_constant_ muss implizit in den Datentyp konvertierbar sein, auf den _@variable\_name_ in der Abfrage verweist.  
+Ein Literalkonstantenwert, dem _\@variable\_name_ für die Verwendung mit dem Abfragehinweis „OPTIMIZE FOR“ zugewiesen wird. _literal\_constant_ wird nur während der Abfrageoptimierung verwendet, nicht als Wert von _\@variable\_name_ während der Abfrageausführung. _literal\_constant_ kann einen beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp aufweisen, der als Literalkonstante dargestellt werden kann. Der Datentyp von _literal\_constant_ muss implizit in den Datentyp konvertierbar sein, auf den _\@variable\_name_ in der Abfrage verweist.  
   
 OPTIMIZE FOR kann dem Erkennungsverhalten der Standardparameter des Optimierers entgegenwirken. Verwenden Sie OPTIMIZE FOR auch, wenn Sie Planhinweislisten erstellen. Weitere Informationen finden Sie unter [Erneutes Kompilieren einer gespeicherten Prozedur](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
@@ -327,7 +327,7 @@ Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltu
 > [!IMPORTANT] 
 > Einige USE HINT-Hinweise stehen möglicherweise mit Ablaufverfolgungsflags, die auf globaler Ebene oder auf Sitzungsebene aktiviert sind, oder mit Einstellungen für die datenbankweit gültige Konfiguration in Konflikt. In diesem Fall hat der Hinweis auf Abfrageebene (USE HINT) immer Vorrang. Wenn ein USE HINT-Hinweis mit einem anderen Abfragehinweis oder einem auf Abfrageebene aktivierten Ablaufverfolgungsflag (z.B. QUERYTRACEON) in Konflikt steht, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch der Abfrageausführung einen Fehler. 
 
- USE PLAN N **'** _xml\_plan_ **'**      
+USE PLAN N'_xml\_plan_'  
  Zwingt den Abfrageoptimierer, einen vorhandenen Abfrageplan für eine Abfrage zu verwenden, die mit **'** _xml\_plan_ **'** angegeben wird. USE PLAN kann nicht für die Anweisungen INSERT, UPDATE, MERGE oder DELETE angegeben werden.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Wendet den angegebenen Tabellenhinweis auf die Tabelle oder die Ansicht an, die _exposed\_object\_name_ entspricht. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden.  
@@ -347,7 +347,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
 > [!CAUTION] 
 > Bei Angabe von FORCESEEK mit Parametern wird die Anzahl von Plänen, die vom Optimierer berücksichtigt werden können, stärker eingeschränkt als bei Angabe von FORCESEEK ohne Parameter. Dies kann in mehreren Fällen zu dem Fehler führen, dass der Plan nicht generiert werden kann. In zukünftigen Versionen können durch interne Änderungen des Optimierers möglicherweise mehr Pläne berücksichtigt werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Abfragehinweise können nur dann in einer INSERT-Anweisung angegeben werden, wenn eine SELECT-Klausel innerhalb der Anweisung verwendet wird.  
   
  Abfragehinweise können nur in der Abfrage der obersten Ebene angegeben werden, nicht in Unterabfragen. Wenn ein Tabellenhinweis als Abfragehinweis angegeben wird, kann der Hinweis in der Abfrage der obersten Ebene oder in einer Unterabfrage angegeben werden. Der Wert, der für _exposed\_object\_name_ in der TABLE HINT-Klausel angegeben wird, muss jedoch genau mit dem verfügbar gemachten Namen in der Abfrage oder Unterabfrage übereinstimmen.  
@@ -366,7 +366,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 Sie können INDEX-, FORCESCAN- und FORCESEEK-Tabellenhinweise als Abfragehinweise für eine Abfrage angeben, die keine vorhandenen Tabellenhinweise enthält. Sie können sie auch verwenden, um bereits vorhandene INDEX-, FORCESCAN- oder FORCESEEK-Hinweise in der Abfrage zu ersetzen. 
 
-Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. In diesem Fall muss auch ein übereinstimmender Hinweis als Abfragehinweis angegeben werden. Geben Sie den übereinstimmenden Hinweis als Abfragehinweis an, indem Sie TABLE HINT in der OPTION-Klausel verwenden. Diese Spezifikation behält die Semantik der Abfrage bei. Wenn die Abfrage beispielsweise den Tabellenhinweis NOLOCK enthält, muss die OPTION-Klausel im **@hints** -Parameter der Planhinweisliste ebenfalls den NOLOCK-Hinweis enthalten. Siehe Beispiel K. 
+Andere Tabellenhinweise als INDEX, FORCESCAN und FORCESEEK sind als Abfragehinweise nicht zulässig, es sei denn, die Abfrage enthält bereits eine WITH-Klausel, die einen Tabellenhinweis angibt. In diesem Fall muss auch ein übereinstimmender Hinweis als Abfragehinweis angegeben werden. Geben Sie den übereinstimmenden Hinweis als Abfragehinweis an, indem Sie TABLE HINT in der OPTION-Klausel verwenden. Diese Spezifikation behält die Semantik der Abfrage bei. Wenn die Abfrage beispielsweise den Tabellenhinweis „NOLOCK“ enthält, muss die Klausel „OPTION“ im Parameter **\@hints** der Planhinweisliste ebenfalls den Hinweis „NOLOCK“ enthalten. Siehe Beispiel K. 
 
 In einigen Szenarios tritt Fehler 8072 auf. Ein Szenario ist, wenn Sie einen anderen Tabellenhinweis als INDEX, FORCESCAN oder FORCESEEK angeben, indem Sie TABLE HINT in der OPTION-Klausel ohne übereinstimmenden Abfragehinweis verwenden. Das zweite Szenario ist der umgekehrte Fall. Dieser Fehler zeigt an, dass die OPTION-Klausel die Semantik der Abfrage ändern kann, und die Abfrage schlägt fehl.  
   

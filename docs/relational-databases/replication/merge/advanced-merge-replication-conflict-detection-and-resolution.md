@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058119"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874858"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "68058119"
 ## <a name="conflict-resolution"></a>Konfliktlösung  
  Wenn ein Konflikt erkannt wird, startet der Merge-Agent den ausgewählten Konfliktlöser und verwendet diesen zur Bestimmung des Konfliktgewinners. Die Gewinnerzeile wird auf dem Verleger und auf dem Abonnenten angewendet, und die Daten der verlierenden Zeile werden in eine Konflikttabelle geschrieben. Konflikte werden direkt nach dem Ausführen des Konfliktlösers gelöst, es sei denn, Sie haben angegeben, dass Konflikte interaktiv gelöst werden sollen.  
 
-Lösen von Konflikten bei einer Mergereplikation[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Lösen von Konflikten bei einer Mergereplikation  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   Wenn zwischen einem Verleger und einem Abonnenten eine Verbindung besteht und die Synchronisierung vorgenommen wird, werden jegliche Konflikte vom Merge-Agent erkannt. Wenn Konflikte erkannt werden, legt der Merge-Agent mithilfe eines Konfliktlösers fest, welche Daten akzeptiert und für andere Sites weitergegeben werden.  
   
 > [!NOTE]  

@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f0011d8ad44a34aee1c6e18f66aa99e2068902c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895223"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874199"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ Im Transaktionsprotokoll werden viele Operationsarten aufgezeichnet. Dazu zähle
   
  Rollback-Operationen werden ebenfalls protokolliert. Jede Transaktion reserviert Speicherplatz im Transaktionsprotokoll, um sicherzustellen, dass ausreichend Speicherplatz vorhanden ist, um einen Rollback infolge einer expliziten Rollback-Anweisung oder im Falle eines Fehlers zu unterstützen. Die Menge des reservierten Speicherplatzes hängt von den in der Transaktion durchgeführten Vorgängen ab, entspricht jedoch im Allgemeinen dem Speicherplatz, der zum Protokollieren der einzelnen Vorgänge verwendet wird. Dieser reservierte Speicherplatz wird freigegeben, sobald die Transaktion abgeschlossen ist.  
   
-<a name="minlsn"></a> Als aktiver Teil des Protokolls bzw. *aktives Protokoll* wird der Abschnitt der Protokolldatei aus dem ersten Protokolldatensatz bezeichnet, der für einen erfolgreichen Rollback der gesamten Datenbank auf den zuletzt geschriebenen Protokolldatensatz benötigt wird. Dies ist der Teil des Protokolls, der für eine vollständige Wiederherstellung der Datenbank erforderlich ist. Vom aktiven Teil des Protokolls kann niemals ein Teil abgeschnitten werden. Die [Protokollfolgenummer (Log Sequence Number, LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des ersten Protokolldatensatzes wird als **Mindestwiederherstellungs-LSN (*MinLSN*)** bezeichnet.  
+<a name="minlsn"></a> Als aktiver Teil des Protokolls bzw. *aktives Protokoll* wird der Abschnitt der Protokolldatei aus dem ersten Protokolldatensatz bezeichnet, der für einen erfolgreichen Rollback der gesamten Datenbank auf den zuletzt geschriebenen Protokolldatensatz benötigt wird. Dies ist der Teil des Protokolls, der für eine vollständige Wiederherstellung der Datenbank erforderlich ist. Vom aktiven Teil des Protokolls kann niemals ein Teil abgeschnitten werden. Die Protokollfolgenummer (Log Sequence Number, LSN) des ersten Protokolldatensatzes wird als **Mindestwiederherstellungs-LSN (*MinLSN*)** bezeichnet.  
   
 ##  <a name="physical_arch"></a> Physische Architektur des Transaktionsprotokolls  
 Das Transaktionsprotokoll in einer Datenbank erstreckt sich über eine oder mehrere physische Dateien. Konzeptionell ist die Protokolldatei eine Folge von Protokolldatensätzen. Physisch wird die Folge von Protokolldatensätzen effizient in dem Satz physischer Dateien gespeichert, die das Transaktionsprotokoll implementieren. Für jede Datenbank muss mindestens eine Protokolldatei vorhanden sein.  

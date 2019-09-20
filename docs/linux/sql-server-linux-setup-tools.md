@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085722"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910795"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installieren der SQL Server-Befehlszeilentools sqlcmd und bcp unter Linux
 
@@ -77,7 +77,7 @@ Führen Sie zum Installieren von **mssql-tools** unter Red Hat Enterprise Linux 
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Optional**: Fügen Sie `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen in einer Bash-Shell hinzu.
+1. **Optional**: Fügen Sie in einer Bash-Shell `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen hinzu.
 
    Ändern Sie **PATH** in der Datei **~/.bash_profile** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für Anmeldesitzungen zugänglich zu machen:
 
@@ -102,7 +102,7 @@ Führen Sie zum Installieren von **mssql-tools** unter Ubuntu die folgenden Schr
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Registrieren Sie das Ubuntu-Repository für Microsoft.
+1. Registrieren Sie das Microsoft Ubuntu-Repository.
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
@@ -116,13 +116,13 @@ Führen Sie zum Installieren von **mssql-tools** unter Ubuntu die folgenden Schr
    ```
 
    > [!Note] 
-   > Führen Sie die folgenden Befehle aus, um auf die neueste Version von **mssql-tools** zu aktualisieren:
+   > Führen Sie die folgenden Befehle aus, um **mssql-tools** auf die neueste Version zu aktualisieren:
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Optional**: Fügen Sie `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen in einer Bash-Shell hinzu.
+1. **Optional**: Fügen Sie in einer Bash-Shell `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen hinzu.
 
    Ändern Sie **PATH** in der Datei **~/.bash_profile** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für Anmeldesitzungen zugänglich zu machen:
 
@@ -161,7 +161,7 @@ Führen Sie zum Installieren von **mssql-tools** unter SUSE Linux Enterprise Ser
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Optional**: Fügen Sie `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen in einer Bash-Shell hinzu.
+1. **Optional**: Fügen Sie in einer Bash-Shell `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen hinzu.
 
    Ändern Sie **PATH** in der Datei **~/.bash_profile** mit dem folgenden Befehl, um **sqlcmd/bcp** von der Bash-Shell aus für Anmeldesitzungen zugänglich zu machen:
 
@@ -197,7 +197,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-Die SQL Server-Befehlszeilentools sind im Docker-Image enthalten. Wenn Sie diese mit einer interaktiven Befehlszeile an das Image anfügen, können Sie die Tools lokal ausführen.
+Wenn Sie [SQL Server in einem Docker-Container ausführen](quickstart-install-connect-docker.md), sind die SQL Server-Befehlszeilentools bereits im Linux-Containerimage von SQL Server enthalten. Wenn Sie mithilfe einer interaktiven Bash-Shell mit einem ausgeführten Container verbunden sind, können Sie die Tools lokal ausführen.
 
 ## <a name="offline-installation"></a>Offlineinstallation
 
@@ -229,7 +229,7 @@ Die SQL Server-Befehlszeilentools sind im Docker-Image enthalten. Wenn Sie diese
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **Auflösen fehlender Abhängigkeiten**: An dieser Stelle fehlen möglicherweise Abhängigkeiten. Falls nicht, können Sie diesen Schritt überspringen. In einigen Fällen müssen Sie diese Abhängigkeiten manuell suchen und installieren.
+1. **Auflösen fehlender Abhängigkeiten**: Zu diesem Zeitpunkt fehlen möglicherweise Abhängigkeiten. Falls nicht, können Sie diesen Schritt überspringen. In einigen Fällen müssen Sie diese Abhängigkeiten manuell suchen und installieren.
 
     Bei RPM-Paketen können Sie die erforderlichen Abhängigkeiten mithilfe der folgenden Befehle überprüfen:
 

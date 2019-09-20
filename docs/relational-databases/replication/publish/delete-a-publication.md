@@ -16,12 +16,12 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 90c09b0d6c2d4c8e2a3c4fa7288d7a2ef2451ce0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ede5586c8ea7fab69360c12394834fa681eb113c
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769863"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846560"
 ---
 # <a name="delete-a-publication"></a>Löschen einer Veröffentlichung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "68769863"
   
     -   Um eine einzelne Veröffentlichung zu löschen, führen Sie [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
-    -   Führen Sie [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie für **@type** @type **@type** . (Optional) Wenn nicht auf den Verteiler zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie für **@force** @type **@force** . (Optional) Geben Sie für **@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) an der Veröffentlichungsdatenbank nicht ausgeführt wird.  
+    -   Führen Sie [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie für **\@type** den Wert **tran** an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie für **\@force** den Wert **1** an. (Optional) Geben Sie für **\@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) in der Veröffentlichungsdatenbank nicht ausgeführt wird.  
   
         > [!NOTE]  
-        >  Bei Angabe des Werts **@force** @type **@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
+        >  Bei Angabe des Werts **1** für **\@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
   
 2.  (Optional) Wenn diese Datenbank keine anderen Veröffentlichungen besitzt, führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) aus, um die Veröffentlichung der aktuellen Datenbank mit der Momentaufnahme- oder der Transaktionsreplikation zu deaktivieren.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "68769863"
   
     -   Um eine einzelne Veröffentlichung zu löschen, führen Sie [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
-    -   Führen Sie [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie für **@type** @type **@type** . (Optional) Wenn nicht auf den Verteiler zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie für **@force** @type **@force** . (Optional) Geben Sie für **@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) an der Veröffentlichungsdatenbank nicht ausgeführt wird.  
+    -   Führen Sie [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) auf dem Verleger aus, um alle Veröffentlichungen in und alle Replikationsobjekte aus einer veröffentlichten Datenbank zu entfernen. Geben Sie für **\@type** den Wert **merge** an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann oder wenn der Status der Datenbank fehlerverdächtig oder offline ist, geben Sie für **\@force** den Wert **1** an. (Optional) Geben Sie für **\@dbname** den Namen der Datenbank an, wenn [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) in der Veröffentlichungsdatenbank nicht ausgeführt wird.  
   
         > [!NOTE]  
-        >  Bei Angabe des Werts **@force** @type **@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
+        >  Bei Angabe des Werts **1** für **\@force** bleiben möglicherweise replikationsbezogene Veröffentlichungsobjekte in der Datenbank zurück.  
   
 2.  (Optional) Wenn diese Datenbank keine anderen Veröffentlichungen besitzt, führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) aus, um die Veröffentlichung der aktuellen Datenbank mit der Mergereplikation zu deaktivieren.  
   

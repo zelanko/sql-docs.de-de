@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140815"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913549"
 ---
 # <a name="write-international-transact-sql-statements"></a>Schreiben internationaler Transact-SQL-Anweisungen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Datenbanken und Datenbankanwendungen, die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwenden, können leichter von einer Sprache in eine andere übertragen werden bzw. unterstützen mehrere Sprachen, wenn die folgenden Richtlinien eingehalten werden:  
 
--   Wenn Sie mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] beginnen, verwenden Sie eher Folgendes:
-    -   Die Datentypen **char**,**varchar** und **varchar(max)** mit [UTF-8-fähiger Sortierung](../../relational-databases/collations/collation-and-unicode-support.md#utf8).
-    -   Die Datentypen **nchar**,**nvarchar** und **nvarchar(max)** mit [Sortierung ergänzender Zeichen](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).      
+-   Verwenden Sie ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eine der folgenden Optionen:
+    -   Die Datentypen **char**, **varchar** und **varchar(max)** mit einer für [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) aktivierten Sortierung. Dabei werden die Daten mit UTF-8 codiert.
+    -   Die Datentypen **nchar**, **nvarchar** und **nvarchar(max)** mit einer für [ergänzende Zeichen (Supplementary Characters, SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) aktivierten Sortierung. Dabei werden die Daten mit UTF-16 codiert. Wird eine Sortierung ohne ergänzende Zeichen verwendet, werden die Daten mit UCS-2 codiert.      
 
     Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Überlegungen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Ersetzen Sie bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] die Datentypen **char**, **varchar** und **varchar(max)** durch **nchar**, **nvarchar** und **nvarchar(max)** . Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Ersetzen Sie bis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] die Datentypen **char**, **varchar** und **varchar(max)** durch **nchar**, **nvarchar** und **nvarchar(max)** . Wird eine für [ergänzende Zeichen (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) aktivierte Sortierung verwendet, werden die Daten mithilfe von UTF-16 codiert. Wird eine Sortierung ohne ergänzende Zeichen verwendet, werden die Daten mit UCS-2 codiert. Auf diese Weise werden Probleme mit der Codepagekonvertierung vermieden. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+
     > [!IMPORTANT]
     > Der Datentyp **text** ist veraltet und sollte beim Entwickeln nicht verwendet werden. Konvertieren Sie **text**-Daten in **varchar(max)** .
   

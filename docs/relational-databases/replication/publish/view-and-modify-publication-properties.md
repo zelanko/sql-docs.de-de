@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c636db57a13cc242fb152f8dd670eb247f962247
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 76f5014ec7a7c06496c3850354da528da89e67b2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764092"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846590"
 ---
 # <a name="view-and-modify-publication-properties"></a>Anzeigen und Ändern von Veröffentlichungseigenschaften
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,29 +106,29 @@ ms.locfileid: "68764092"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften einer Momentaufnahme oder einer Transaktionsveröffentlichung an  
   
-1.  Führen Sie [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
+1.  Führen Sie [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) aus, und geben Sie dabei den Namen der Veröffentlichung für den **\@publication**-Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>So ändern Sie die Eigenschaften einer Momentaufnahme oder einer Transaktionsveröffentlichung  
   
-1.  Führen Sie [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)aus, und geben Sie dabei die zu ändernde Veröffentlichungseigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
+1.  Führen Sie [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)aus, und geben Sie dabei die zu ändernde Veröffentlichungseigenschaft im **\@property**-Parameter und den neuen Wert dieser Eigenschaft im **\@value**-Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie den Wert **1** für **@force_reinit_subscription** . Weitere Informationen zu den Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **\@force_invalidate_snapshot** angeben, und wenn die Änderung das nochmalige Initialisieren der Abonnenten erfordert, müssen Sie den Wert **1** für **\@force_reinit_subscription** angeben. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>So zeigen Sie die Eigenschaften einer Mergeveröffentlichung an  
   
-1.  Führen Sie [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
+1.  Führen Sie [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) aus, und geben Sie dabei den Namen der Veröffentlichung für den **\@publication**-Parameter an. Wenn Sie diesen Parameter nicht angeben, werden Informationen über alle Veröffentlichungen beim Verleger zurückgegeben.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>So ändern Sie die Eigenschaften einer Mergeveröffentlichung  
   
-1.  Führen Sie [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus, und geben Sie dabei die zu ändernde Veröffentlichungseigenschaft im **@property** -Parameter und den neuen Wert dieser Eigenschaft im **@value** -Parameter an.  
+1.  Führen Sie [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) aus, und geben Sie dabei die zu ändernde Veröffentlichungseigenschaft im **\@property**-Parameter und den neuen Wert dieser Eigenschaft im **\@value**-Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie auch einen Wert **1** für **@force_invalidate_snapshot** angeben, und wenn die Änderung erfordert, dass Abonnenten erneut initialisiert werden, geben Sie den Wert **1** für **@force_reinit_subscription** an. Weitere Informationen zu den Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern der Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **\@force_invalidate_snapshot** angeben, und wenn die Änderung das nochmalige Initialisieren der Abonnenten erfordert, müssen Sie den Wert**1** für **\@force_reinit_subscription** angeben. Weitere Informationen über Eigenschaften, die bei Änderung einer neuen Momentaufnahme oder eine nochmalige Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>So zeigen Sie die Eigenschaften einer Momentaufnahme an  
   
-1.  Führen Sie [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **@publication** -Parameter an.  
+1.  Führen Sie [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)aus, und geben Sie dabei den Namen der Veröffentlichung für den **\@publication**-Parameter an.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>So ändern Sie die Eigenschaften einer Momentaufnahme  
   

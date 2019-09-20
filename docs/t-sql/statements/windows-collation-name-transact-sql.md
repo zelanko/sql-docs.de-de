@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051429"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874466"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Name der Windows-Sortierung (Transact-SQL)
 
@@ -79,7 +79,7 @@ Bei Weglassen dieser Option erfolgt keine Unterscheidung nach Breite. Bei **WS**
 **UTF8**  
 - **Gilt für**: Seit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-- Gibt UTF-8-Codierung an, die für geeignete Datentypen verwendet werden soll. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
+- Gibt an, dass für geeignete Datentypen UTF-8-Codierung verwendet werden soll. Weitere Informationen finden Sie unter [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
@@ -87,7 +87,7 @@ Gibt die zu verwendende abwärtskompatible binäre Sortierreihenfolge an.
 **BIN2**  
 Gibt die binäre Sortierreihenfolge an, die die Semantik für den Codepunktvergleich verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 Je nach Sortierungsversion sind für manche Codeelemente möglicherweise keine Gewichtungen und/oder Großschreibung/Kleinschreibung-Mappings angegeben. Vergleichen Sie z.B. die Ausgabe der `LOWER`-Funktion bei gleichem Zeichen, aber unterschiedlichen Versionen derselben Sortierung:
 
 ```sql
@@ -139,9 +139,9 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Amharisch (Äthiopien)|Latin1_General_100_|Nicht verfügbar|
 |Armenisch (Armenien)|Cyrillic_General_100_|Nicht verfügbar|
 |Assamisch (Indien)|Assamese_100_<sup>1</sup>|Nicht verfügbar|
+|Bangla (Bangladesch)|Bengali_100_<sup>1</sup>|Nicht verfügbar|
 |Baschkirisch (Russische Föderation)|Bashkir_100_|Nicht verfügbar|
 |Baskisch (Baskisch)|Latin1_General_100_|Nicht verfügbar|
-|Bangla (Bangladesch)|Bengali_100_<sup>1</sup>|Nicht verfügbar|
 |Bangla (Indien)|Bengali_100_<sup>1</sup>|Nicht verfügbar|
 |Bosnisch (Bosnien und Herzegowina, kyrillisch)|Bosnian_Cyrillic_100_|Nicht verfügbar|
 |Bosnisch (Bosnien und Herzegowina, lateinisch)|Bosnian_Latin_100_|Nicht verfügbar|
@@ -187,7 +187,7 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Norwegisch, Bokmål (Norwegen)|Norwegian_100_|Nicht verfügbar|
 |Norwegisch (Nynorsk, Norwegen)|Norwegian_100_|Nicht verfügbar|
 |Okzitanisch (Frankreich)|French_100_|Nicht verfügbar|
-|Oriya (Indien)|Indic_General_100_<sup>1</sup>|Nicht verfügbar|
+|Odia (Indien)|Indic_General_100_<sup>1</sup>|Nicht verfügbar|
 |Paschtu (Afghanistan)|Pashto_100_<sup>1</sup>|Nicht verfügbar|
 |Persisch (Iran)|Persian_100_|Nicht verfügbar|
 |Punjabi (Indien)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -226,7 +226,7 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Walisisch (Großbritannien)|Welsh_100_|Nicht verfügbar|
 |Wolof (Senegal)|French_100_|Nicht verfügbar|
 |Xhosa/isiXhosa (Südafrika)|Latin1_General_100_|Nicht verfügbar|
-|Jakutisch (Russische Föderation)|Yakut_100_|Nicht verfügbar|
+|Sacha (Russische Föderation)|Yakut_100_|Nicht verfügbar|
 |Yi (VRC)|Latin1_General_100_|Nicht verfügbar|
 |Yoruba (Nigeria)|Latin1_General_100_|Nicht verfügbar|
 |Zulu/isiZulu (Südafrika)|Latin1_General_100_|Nicht verfügbar|
@@ -235,9 +235,9 @@ In der folgenden Tabelle werden alle Windows-Sortierungen aufgelistet, die in [!
 |Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Lithuanian_Classic|Lithuanian_Classic|
 |Veraltet, nicht verfügbar auf Serverebene in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher|Macedonian|Macedonian|
 
-<sup>1</sup> Nur-Unicode-Windows-Sortierungen unterstützen nur Daten auf Spaltenebene und Ausdrucksebene. Sie können nicht für Sortierungen auf Server- oder Datenbankebene verwendet werden.
+<sup>1</sup> Nur-Unicode-Sortierungen unterstützen in Windows nur Daten auf Spalten- oder Ausdrucksebene. Sie können nicht für Sortierungen auf Server- oder Datenbankebene verwendet werden.
 
-<sup>2</sup> Wie bei der chinesischen Sortierung (Taiwan) werden bei Chinesisch (Macau, SAR) die Regeln für Chinesisch (vereinfacht) verwendet. Im Unterschied zu Chinesisch (Taiwan) wird jedoch Codepage 950 verwendet.
+<sup>2</sup> Wie bei der chinesischen Sortierung (Taiwan) werden bei Chinesisch (Macau) die Regeln für Chinesisch (vereinfacht) verwendet. Im Unterschied zu Chinesisch (Taiwan) wird jedoch Codepage 950 verwendet.
 
 ## <a name="see-also"></a>Weitere Informationen
 

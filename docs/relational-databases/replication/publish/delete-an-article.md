@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7d41bc68aadd9dc2c2ee471a9b14a5dea2ad53d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 6cd32a9e88d53296eb2d4a94b0eb71757afbdf63
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764221"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846516"
 ---
 # <a name="delete-an-article"></a>Löschen eines Artikels
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68764221"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>So löschen Sie einen Artikel aus einer Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) aus, um einen durch **@article** angegebenen Artikel von der durch **@publication** angegebenen Veröffentlichung zu löschen. Geben Sie den Wert **1** für **@force_invalidate_snapshot** .  
+1.  Führen Sie [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) aus, um einen durch **\@article** angegebenen Artikel aus der durch **\@publication** angegebenen Veröffentlichung zu löschen. Geben Sie für **\@force_invalidate_snapshot** den Wert **1** an.  
   
 2.  (Optional) Um das veröffentlichte Objekt vollständig aus der Veröffentlichungsdatenbank zu löschen, führen Sie den Befehl `DROP <objectname>` auf dem Verleger für die Veröffentlichungsdatenbank aus.  
 
@@ -52,12 +52,12 @@ ms.locfileid: "68764221"
 
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>So löschen Sie einen Artikel aus einer Mergeveröffentlichung  
   
-1.  Führen Sie [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) aus, um einen durch **@article** angegebenen Artikel von der durch **@publication** angegebenen Veröffentlichung zu löschen. Geben Sie dafür, falls notwendig, den Wert **1** für **@force_invalidate_snapshot** und den Wert **1** für **@force_reinit_subscription** .  
+1.  Führen Sie [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) aus, um einen durch **\@article** angegebenen Artikel aus der durch **\@publication** angegebenen Veröffentlichung zu löschen. Geben Sie dafür ggf. für **\@force_invalidate_snapshot** den Wert **1** und für **\@force_reinit_subscription** den Wert **1** an.  
   
 2.  (Optional) Um das veröffentlichte Objekt vollständig aus der Veröffentlichungsdatenbank zu löschen, führen Sie den Befehl `DROP <objectname>` auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
- Im folgenden Beispiel wird ein Artikel aus einer Transaktionsveröffentlichung gelöscht. Da durch diese Änderung die vorhandene Momentaufnahme ungültig wird, wird der Wert **1** für den Parameter **@force_invalidate_snapshot** angegeben.  
+ Im folgenden Beispiel wird ein Artikel aus einer Transaktionsveröffentlichung gelöscht. Da durch diese Änderung die vorhandene Momentaufnahme ungültig wird, wird für den Parameter **\@force_invalidate_snapshot** der Wert **1** angegeben.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -74,7 +74,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- Im folgenden Beispiel werden zwei Artikel aus einer Mergeveröffentlichung gelöscht. Da durch diese Änderungen die vorhandene Momentaufnahme ungültig wird, wird der Wert **1** für den Parameter **@force_invalidate_snapshot** angegeben.  
+ Im folgenden Beispiel werden zwei Artikel aus einer Mergeveröffentlichung gelöscht. Da durch diese Änderungen die vorhandene Momentaufnahme ungültig wird, wird für den Parameter **\@force_invalidate_snapshot** der Wert **1** angegeben.  
   
 ```  
 DECLARE @publication AS sysname;  

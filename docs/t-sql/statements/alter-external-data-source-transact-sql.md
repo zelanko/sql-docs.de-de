@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 07/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25df03e48d08e09033b52e4b51c11d3ecc4db4ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bd9eb928819d943f902d96c8d76bcc15fb24016
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065654"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70911284"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  Ändert eine externe Datenquelle, die zum Erstellen einer externen Tabelle verwendet wird. Bei der externen Datenquelle kann es sich um einen Hadoop oder Azure Blob Storage (WASB) handeln.
-  
+  Ändert eine externe Datenquelle, die zum Erstellen einer externen Tabelle verwendet wird. Bei der externen Datenquelle kann es sich um Hadoop oder Azure Blob Storage (WASBS) für SQL Server und Azure Blob Storage (WASBS) oder um Azure Data Lake Storage (ABFSS/ADL) für Azure SQL Data Warehouse handeln. 
+
 ## <a name="syntax"></a>Syntax  
-  
+
 ```  
 -- Modify an external data source
 -- Applies to: SQL Server (2016 or later)
@@ -49,48 +49,63 @@ ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         LOCATION = 'https://storage_account_name.blob.core.windows.net'
         [, CREDENTIAL = credential_name ] 
-```  
-  
+
+-- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
+-- Applies to: Azure SQL Data Warehouse
+ALTER EXTERNAL DATA SOURCE data_source_name
+    SET
+        [LOCATION = '<location prefix>://<location path>']
+        [, CREDENTIAL = credential_name ] 
+```
+
 ## <a name="arguments"></a>Argumente  
  Data_source_name gibt den benutzerdefinierten Namen für die Datenquelle an. Der Name muss eindeutig sein.
-  
- LOCATION = 'Servername_oder_IP-Adresse' gibt den Namen des Servers oder eine IP-Adresse an.
-  
- RESOURCE_MANAGER_LOCATION = \<'IP-Adresse;Port'> gibt den Speicherort des Hadoop-Ressourcen-Managers an. Wenn angegeben, kann der Abfrageoptimierer festlegen, dass Daten für eine PolyBase-Abfrage mithilfe der Berechnungsfunktionen von Hadoop vorverarbeitet werden. Dies ist eine kostenbasierte Entscheidung. Dies wird Prädikatweitergabe genannt und kann die Menge der zwischen Hadoop und SQL übertragenen Daten deutlich reduzieren und damit die Abfrageleistung verbessern.
-  
+
+ LOCATION = 'server_name_or_IP' Stellt das Konnektivitätsprotokoll und den Pfad zur externen Datenquelle bereit.
+
+ RESOURCE_MANAGER_LOCATION = \<'IP-Adresse;Port'> (Gilt nicht für Azure SQL Data Warehouse) Gibt den Speicherort des Hadoop-Ressourcen-Managers an. Wenn angegeben, kann der Abfrageoptimierer festlegen, dass Daten für eine PolyBase-Abfrage mithilfe der Berechnungsfunktionen von Hadoop vorverarbeitet werden. Dies ist eine kostenbasierte Entscheidung. Dies wird Prädikatweitergabe genannt und kann die Menge der zwischen Hadoop und SQL übertragenen Daten deutlich reduzieren und damit die Abfrageleistung verbessern.
+
  CREDENTIAL = Credential_Name gibt die benannten Anmeldeinformationen an. Informationen hierzu finden Sie unter [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-TYPE = BLOB_STORAGE   
+TYP = [HADOOP | BLOB_STORAGE]   
 **Gilt für:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 Nur bei Massenvorgängen muss `LOCATION` die gültige URL für den Azure Blob Storage sein. Fügen Sie weder **/** , Dateinamen noch Shared Access Signature-Parameter am Ende der `LOCATION`-URL ein.
 Die verwendeten Anmeldeinformationen müssen mithilfe von `SHARED ACCESS SIGNATURE` als Identität erstellt werden. Weitere Informationen zu SAS finden Sie unter [Verwenden von Shared Access Signatures (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
 
   
-  
-## <a name="remarks"></a>Bemerkungen
+
+## <a name="remarks"></a>Remarks
  Es kann immer jeweils nur eine Quelle geändert werden. Gleichzeitige Anforderungen zur Änderung derselben Quelle führen dazu, dass eine Anweisung warten muss. Unterschiedliche Quellen können jedoch gleichzeitig geändert werden. Diese Anweisung kann gleichzeitig mit anderen Anweisungen ausgeführt werden.
-  
+
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert eine ALTER ANY EXTERNAL DATA SOURCE-Berechtigung.
  > [!IMPORTANT]  
- >  Mit der Berechtigung ALTER ANY EXTERNAL DATA SOURCE besitzt jeder Prinzipal die Fähigkeit, beliebige externe Datenquellenobjekte zu erstellen und zu ändern. Damit ist auch der Zugriff auf alle datenbankweit gültigen Anmeldeinformationen der Datenbank möglich. Da es sich hierbei um eine weitreichende Berechtigung handelt, darf sie nur vertrauenswürdigen Prinzipalen innerhalb des Systems erteilt werden.
+ > Mit der Berechtigung ALTER ANY EXTERNAL DATA SOURCE besitzt jeder Prinzipal die Fähigkeit, beliebige externe Datenquellenobjekte zu erstellen und zu ändern. Damit ist auch der Zugriff auf alle datenbankweit gültigen Anmeldeinformationen der Datenbank möglich. Da es sich hierbei um eine weitreichende Berechtigung handelt, darf sie nur vertrauenswürdigen Prinzipalen innerhalb des Systems erteilt werden.
 
-  
+
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Speicherort und der Ressourcen-Manager-Speicherort einer vorhandenen Datenquelle geändert.
-  
+
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
      LOCATION = 'hdfs://10.10.10.10:8020',
      RESOURCE_MANAGER_LOCATION = '10.10.10.10:8032'
     ;
   
-```  
+```
 
  Im folgenden Beispiel werden die Anmeldeinformationen zur Verbindung mit einer vorhandenen Datenquelle geändert.
-  
+
 ```  
 ALTER EXTERNAL DATA SOURCE hadoop_eds SET
    CREDENTIAL = new_hadoop_user
     ;
+```
+
+ Im folgenden Beispiel werden die Anmeldeinformationen in einen neuen Speicherort geändert. Bei diesem Beispiel handelt es sich um eine externe Datenquelle, die für Azure SQL Data Warehouse erstellt wurde. 
+
+```  
+ALTER EXTERNAL DATA SOURCE AzureStorage_west SET
+   LOCATION = 'wasbs://loadingdemodataset@updatedproductioncontainer.blob.core.windows.net',
+   CREDENTIAL = AzureStorageCredential
 ```

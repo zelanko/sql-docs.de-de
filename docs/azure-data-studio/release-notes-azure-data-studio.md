@@ -9,17 +9,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/15/2019
-ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.date: 09/11/2019
+ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059267"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878625"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](download.md)**
+
+## <a name="september-2019"></a>September 2019
+
+10. September 2019 &nbsp; / &nbsp; Version: 1.11.0 
+
+&nbsp;
+
+| Ändern | Details |
+| :----- | :------ |
+| Aktivieren des SQLCMD-Modus | Der Abfrage-Editor unterstützt jetzt das Umschalten des SQLCMD-Modus zum Schreiben und Bearbeiten von Abfragen als SQLCMD-Skripts. |
+| Communityerweiterung: Query Editor Boost | Query Editor Boost ist eine Open-Source-Erweiterung für den Abfrage-Editor von Azure Data Studio und erleichtert Benutzer das häufige Schreiben von Abfragen. &bull; &nbsp; Speichern der aktuellen Abfrage als Ausschnitt <br/>&bull; &nbsp; Wechseln zwischen Datenbanken mithilfe von STRG+U <br/> &bull; &nbsp; Neue Abfrage aus Vorlage <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/dzsquared/query-editor-boost). |
+| Verbesserungen an Notebooks wurden vorgenommen. | &bull; &nbsp; Leistungsverbesserungen bei der Verwendung größerer Notebookdateien <br/> &bull; &nbsp; Weitere Informationen finden Sie in der [vollständigen Liste der Verbesserungen](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed). |
+| Das August-Release von Visual Studio Code (Merge 1.38) ist verfügbar. | Weitere Informationen finden Sie im [Artikel mit den aktuellen Verbesserungen](https://code.visualstudio.com/updates/v1_38). |
+| Fehler und Issues wurden behoben. | Eine vollständige [Liste der Fehlerbehebungen und Issues finden Sie auf GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Bekannte Probleme
+- Notebooks
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) In seltenen Fällen, in denen das Notebook falsch serialisiert wurde
+
 
 ## <a name="august-2019"></a>August 2019
 

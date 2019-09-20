@@ -1,7 +1,7 @@
 ---
 title: Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329267"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929746"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Verwenden von SQL Server-Connector mit SQL-Verschlüsselungsfunktionen
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "68329267"
 > [!NOTE]  
 >  Die Versionen 1.0.0.440 und älter wurden ersetzt und werden nicht länger in Produktionsumgebungen unterstützt. Führen Sie ein Upgrade auf Version 1.0.1.0 oder höher durch, indem Sie das [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) besuchen und die Anweisungen auf der Seite [SQL Server-Connector Wartung & Problembehandlung](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) unter „Upgrade des SQL Server-Connectors“ ausführen.  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparente Datenverschlüsselung mithilfe eines asymmetrischen Schlüssels aus Azure Key Vault  
- Verwenden Sie nach dem Abschluss der Teile I bis IV des Themas „Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault“ den Azure Key Vault-Schlüssel, um den Datenbankverschlüsselungsschlüssel mithilfe von TDE zu verschlüsseln.  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Transparente Datenverschlüsselung mithilfe eines asymmetrischen Schlüssels aus Azure Key Vault
+
+Verwenden Sie nach dem Abschluss der Teile I bis IV des Themas „Installationsschritte für die Erweiterbare Schlüsselverwaltung mit Azure Key Vault“ den Azure Key Vault-Schlüssel, um den Datenbankverschlüsselungsschlüssel mithilfe von TDE zu verschlüsseln. Weitere Informationen zum Rotieren von Schlüsseln mithilfe von PowerShell finden Sie unter [Rotieren einer Transparent Data Encryption-Schutzvorrichtung (TDE) mithilfe von PowerShell](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation).
+ 
 Sie müssen Anmeldeinformationen und eine Anmeldung sowie einen Datenbankverschlüsselungsschlüssel erstellen, der zum Verschlüsseln der Daten und Protokolle in der Datenbank dient. Zum Verschlüsseln einer Datenbank ist die **CONTROL** -Berechtigung für die Datenbank erforderlich. Die folgende Grafik zeigt die Hierarchie des Verschlüsselungsschlüssels bei Verwendung von Azure Key Vault.  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  

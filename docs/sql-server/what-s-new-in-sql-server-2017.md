@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494310"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874824"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Neues in SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2017 stellt einen wichtigen Schritt dar, um SQL Server zu einer Platt
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017-Datenbank-Engine
 
 SQL Server-2017 umfasst viele neue Datenbank-Engine-Funktionen, Verbesserungen und Leistungsverbesserungen. 
-- **CLR-Assemblys** können jetzt einer Positivliste hinzugefügt werden, als Problemumgehung für die in CTP 2.0 beschriebene Funktion `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) wurden hinzugefügt, um die Positivliste von vertrauenswürdigen Assemblys zu unterstützen (RC1).  
+- **CLR-Assemblys** können jetzt einer Liste von vertrauenswürdigen Assemblys hinzugefügt werden, als Problemumgehung für die in CTP 2.0 beschriebene Funktion `clr strict security`. [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) und [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) werden hinzugefügt, um die Liste von vertrauenswürdigen Assemblys zu unterstützen (RC1).  
 - **Fortsetzbare Online-Indexneuerstellung** setzt den Vorgang einer Online-Indexneuerstellung dort fort, wo es nach einem Fehler aufgehört hat (z.B. einem Failover in einem Replikat oder nicht genügend Speicherplatz), oder es pausiert und der Vorgang einer Online-Indexneuerstellung wird später fortgeführt. Finden Sie unter [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) und [Richtlinien für Onlineindexvorgänge](../relational-databases/indexes/guidelines-for-online-index-operations.md). (CTP 2.0)
 - Mit der Option **IDENTITY_CACHE** für ALTER DATABASE SCOPED CONFIGURATION können Sie Lücken in den Werten von Identitätsspalten vermeiden, wenn ein Server unerwartet neu startet oder ein Failover zu einem sekundären Server ausführt. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). (CTP 2.0)
 - Eine neue Generation von Verbesserungen bei der Abfrageverarbeitung, durch die Optimierungsstrategien auf die Laufzeitbedingungen Ihrer Anwendungsworkload angewendet werden. In dieser ersten Version der Featurefamilie für die **adaptive Abfrageverarbeitung** gibt es drei neue Verbesserungen: **Adaptive Joins im Batchmodus**, **Feedback zur Speicherzuweisung im Batchmodus** und **überlappende Ausführung** für Tabellenwertfunktionen mit mehreren Anweisungen.  Weitere Informationen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md).

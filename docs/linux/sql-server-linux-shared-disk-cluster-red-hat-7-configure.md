@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810980"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809779"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Konfigurieren eines freigegebenen Datenträgerclusters mit Red Hat Enterprise Linux für SQL Server
 
@@ -48,7 +48,7 @@ Der erste Schritt besteht darin, das Betriebssystem auf den Clusterknoten zu kon
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Installieren und Konfigurieren der SQL Server-Instanz auf den einzelnen Clusterknoten
 
-1. Installieren Sie SQL Server auf beiden Knoten, und richten Sie ihn ein.  Ausführliche Anweisungen finden Sie unter [Install SQL Server on Linux (Installieren von SQL Server für Linux)](sql-server-linux-setup.md).
+1. Installieren Sie SQL Server auf beiden Knoten, und richten Sie die Anwendung ein.  Ausführliche Anweisungen finden Sie unter [Installieren von SQL Server für Linux](sql-server-linux-setup.md).
 
 1. Legen Sie für die Konfiguration einen Knoten als primär und den anderen als sekundär fest. Verwenden Sie diese Begriffe für den weiteren Verlauf dieses Leitfadens.  
 
@@ -243,7 +243,7 @@ Weitere Informationen zur Verwendung von NFS finden Sie unter folgenden Quellen:
    $ exit
    ``` 
  
-1.  Überprüfen Sie, ob SQL Server mit dem neuen Dateipfad erfolgreich gestartet wurde. Führen Sie dies auf jedem Knoten durch. An diesem Punkt sollte SQL Server immer nur auf einem Knoten ausgeführt werden. Sie könne SQL Server nicht auf beiden Knoten gleichzeitig ausführen, da diese ansonsten versuchen würden, gleichzeitig auf die Datendateien zuzugreifen (verwenden Sie zur Vermeidung eines versehentlichen Starts von SQL Server auf beiden Knoten eine File System-Clusterressource, um sicherzustellen, dass die Freigabe nicht zweimal von verschiedenen Knoten eingebunden wird). Die folgenden Befehle starten SQL Server, überprüfen den Status und beenden SQL Server dann.
+1.  Überprüfen Sie, ob SQL Server mit dem neuen Dateipfad erfolgreich gestartet wurde. Führen Sie dies auf jedem Knoten durch. An diesem Punkt sollte SQL Server immer nur auf einem Knoten ausgeführt werden. Sie können SQL Server nicht auf beiden Knoten gleichzeitig ausführen, da diese ansonsten versuchen würden, gleichzeitig auf die Datendateien zuzugreifen (verwenden Sie zur Vermeidung eines versehentlichen Starts von SQL Server auf beiden Knoten eine File System-Clusterressource, um sicherzustellen, dass die Freigabe nicht zweimal von verschiedenen Knoten eingebunden wird). Die folgenden Befehle starten SQL Server, überprüfen den Status und beenden SQL Server dann.
  
    ```bash
    sudo systemctl start mssql-server
@@ -251,7 +251,7 @@ Weitere Informationen zur Verwendung von NFS finden Sie unter folgenden Quellen:
    sudo systemctl stop mssql-server
    ```
  
-An diesem Punkt sind beide Instanzen von SQL Server so konfiguriert, dass Sie mit den Datenbankdateien im freigegebenen Speicher ausgeführt werden. Der nächste Schritt besteht darin, SQL Server für Pacemaker zu konfigurieren. 
+An diesem Punkt sind beide Instanzen von SQL Server so konfiguriert, dass sie mit den Datenbankdateien im freigegebenen Speicher ausgeführt werden. Der nächste Schritt besteht darin, SQL Server für Pacemaker zu konfigurieren. 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Installieren und Konfigurieren von Pacemaker auf jedem Clusterknoten
 
@@ -308,7 +308,11 @@ An diesem Punkt sind beide Instanzen von SQL Server so konfiguriert, dass Sie mi
    sudo yum install mssql-server-ha
    ```
 
-## <a name="create-the-cluster"></a>Erstellen des Clusters 
+## <a name="configure-fencing-agent"></a>Konfigurieren des Fencing-Agents
+
+Ein STONITH-Gerät stellt einen Fencing-Agent bereit. Ein Beispiel für das Erstellen eines STONITH-Geräts für diesen Cluster in Azure finden Sie unter [Einrichten von Pacemaker unter Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices). Ändern Sie die Anweisungen für Ihre Umgebung.
+
+## <a name="create-the-cluster"></a>Erstellen Sie den Cluster. 
 
 1. Erstellen Sie auf einem der Knoten den Cluster.
 
@@ -316,15 +320,6 @@ An diesem Punkt sind beide Instanzen von SQL Server so konfiguriert, dass Sie mi
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > Das Hochverfügbarkeits-Add-On verfügt über Fencing-Agents für VMWare und KVM. Das Fencing muss auf allen anderen Hypervisoren deaktiviert werden. Das Deaktivieren von Fencing-Agents wird in Produktionsumgebungen nicht empfohlen. Ab dem Zeitraum gibt es keine Fencing-Agents für HyperV oder Cloudumgebungen. Wenn Sie eine dieser Konfigurationen ausführen, müssen Sie das Fencing deaktivieren. \**Dies wird in einem Produktionssystem nicht empfohlen!* *
-
-   Durch den folgenden Befehl deaktivieren Sie Fencing-Agents.
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. Konfigurieren Sie die Clusterressourcen für SQL Server-, File System- und virtuelle IP-Ressourcen, und pushen Sie die Konfiguration zum Cluster. Sie benötigen die folgenden Informationen:

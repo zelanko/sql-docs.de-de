@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085952"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846736"
 ---
 # <a name="replication-merge-agent"></a>Replikationsmerge-Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Um Uploads einzuschränken, verwenden Sie stattdessen **@subscriber_upload_options** von **sp_addmergearticle** .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Um Uploads einzuschränken, verwenden Sie stattdessen **\@subscriber_upload_options** von **sp_addmergearticle**.  
   
  Gibt den Typ des Datenaustauschs während der Synchronisierung an. Folgende Typen sind möglich:  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  Gibt die Anzahl von Quellthreads an, die der Merge-Agent verwendet, um Änderungen von der Quelle aufzuzählen. Die Quelle ist während des Hochladens der Abonnent und während des Herunterladens der Verleger. Der Standardwert ist **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Die maximale Anzahl von Sekunden, die der Merge-Agent wartet, wenn die Anzahl gleichzeitig ausgeführter Mergeprozesse den Grenzwert erreicht, der mit der **@max_concurrent_merge** -Eigenschaft von **sp_addmergepublication**. Wenn der Merge-Agent nach Verstreichen der maximalen Anzahl von Sekunden immer noch wartet, wird der Agent beendet. Der Wert 0 bedeutet, dass der Agent unbegrenzt wartet, der Vorgang jedoch abgebrochen werden kann.  
+ Die maximale Anzahl von Sekunden, die der Merge-Agent wartet, wenn die Anzahl gleichzeitig ausgeführter Mergeprozesse den Grenzwert erreicht, der mit der Eigenschaft **\@max_concurrent_merge** von **sp_addmergepublication** festgelegt wurde. Wenn der Merge-Agent nach Verstreichen der maximalen Anzahl von Sekunden immer noch wartet, wird der Agent beendet. Der Wert 0 bedeutet, dass der Agent unbegrenzt wartet, der Vorgang jedoch abgebrochen werden kann.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Der Pfad der Jet-Datenbank (MDB-Datei), wenn **SubscriberType** auf **2** festgelegt ist. (Dadurch wird eine Verbindung mit einer Jet-Datenbank ohne ODBC-DSN (Data Source Name) möglich.)  
@@ -387,7 +387,7 @@ replmerg [-?]
  **-ValidateInterval** _validate_interval_  
  Gibt an, wie häufig das Abonnement im kontinuierlichen Modus überprüft wird (in Minuten). Die Standardeinstellung beträgt **60** Minuten.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent so installiert haben, dass er unter einem lokalen Systemkonto und nicht unter einem Domänenbenutzerkonto (Standard) ausgeführt wird, kann der Dienst nur auf den lokalen Computer zugreifen. Wenn der Merge-Agent, der unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, so konfiguriert ist, dass beim Anmelden bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]der Windows-Authentifizierungsmodus verwendet wird, schlägt der Merge-Agent fehl. Die Standardeinstellung ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung.  

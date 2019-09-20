@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ade7deb2fd86f5dfd0f89aa1f13d5352e6e5fc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127290"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810123"
 ---
 # <a name="rename-a-database"></a>Umbenennen einer Datenbank
 
@@ -63,6 +63,7 @@ Erfordert die ALTER-Berechtigung für die Datenbank.
 ## <a name="rename-a-database-using-sql-server-management-studio"></a>Umbenennen einer Datenbank mit SQL Server Management Studio
 
 Verwenden Sie die folgenden Schritte zum Umbenennen einer Instanz von SQL Server oder Azure SQL-Datenbank mit SQL Server Management Studio.
+
   
 1. Stellen Sie im **Objekt-Explorer** eine Verbindung zu Ihrer SQL-Instanz her.  
   
@@ -71,6 +72,8 @@ Verwenden Sie die folgenden Schritte zum Umbenennen einer Instanz von SQL Server
 3. Erweitern Sie im Objekt-Explorer **Datenbanken**, klicken Sie mit der rechten Maustaste auf die Datenbank, die umbenannt werden soll, und klicken Sie anschließend auf **Umbenennen**.  
   
 4. Geben Sie den neuen Datenbanknamen ein, und klicken Sie dann auf **OK**.  
+  
+5. Handelt es sich bei der Datenbank um die Standarddatenbank, können Sie sie optional nach dem Umbenennen zurücksetzen. Informationen hierzu finden Sie im Abschnitt [Zurücksetzen der Standarddatenbank nach dem Umbenennen](#reset-your-default-database-after-rename).
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -95,6 +98,8 @@ Verwenden Sie die folgenden Schritte, um eine SQL Server-Datenbank in SQL Server
    GO
    ```  
 
+4. Handelt es sich bei der Datenbank um die Standarddatenbank, können Sie sie optional nach dem Umbenennen zurücksetzen. Informationen hierzu finden Sie im Abschnitt [Zurücksetzen der Standarddatenbank nach dem Umbenennen](#reset-your-default-database-after-rename).
+
 ### <a name="to-rename-an-azure-sql-database-database"></a>So benennen Sie eine Datenbank in Azure SQL-Datenbank um
 
 Verwenden Sie die folgenden Schritte zum Umbenennen einer Instanz von Azure SQL-Datenbank mit T-SQL in SQL Server Management Studio.
@@ -112,6 +117,19 @@ Verwenden Sie die folgenden Schritte zum Umbenennen einer Instanz von Azure SQL-
 
 Sichern Sie die `master`-Datenbank, nachdem Sie eine Datenbank in SQL Server umbenennen. Dies ist in Azure SQL-Datenbank nicht erforderlich, da Sicherungen automatisch erstellt werden.  
   
+## <a name="reset-your-default-database-after-rename"></a>Zurücksetzen der Standarddatenbank nach dem Umbenennen
+
+Wurde die Datenbank, die Sie umbenennen, als Standarddatenbank festgelegt, setzen Sie die Standardeinstellung mit dem folgenden Befehl auf die umbenannte Datenbank zurück:
+
+
+```sql
+USE [master]
+GO
+ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+GO
+```
+
+
 ## <a name="see-also"></a>Weitere Informationen
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

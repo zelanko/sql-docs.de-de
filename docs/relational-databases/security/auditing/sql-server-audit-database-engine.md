@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742886"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878684"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -144,13 +144,18 @@ ms.locfileid: "68742886"
 ### <a name="data-definition-language-statements"></a>DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
  Sie können die folgenden DDL-Anweisungen zum Erstellen, Ändern und Löschen von Überwachungsspezifikationen verwenden:  
   
-|||  
+|DDL-Anweisungen|und Beschreibung| 
 |-|-|  
-|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|  
+|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Ändert den Besitz eines sicherungsfähigen Elements.|  
+|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Ändert die Spezifikation eines Datenbanküberwachungsobjekts mithilfe der SQL Server Audit-Funktion.|  
+|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|Ändert ein Serverüberwachungsobjekt mithilfe der SQL Server Audit-Funktion.|  
+|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|Ändert die Spezifikation eines Serverüberwachungsobjekts mithilfe der SQL Server Audit-Funktion.|  
+|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|Erstellt die Spezifikation eines Datenbanküberwachungsobjekts mithilfe der SQL Server Audit-Funktion.|  
+|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|Erstellt ein Serverüberwachungsobjekt mithilfe von SQL Server Audit.|  
+|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|Erstellt die Spezifikation eines Serverüberwachungsobjekts mithilfe der SQL Server Audit-Funktion.|  
+|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|Löscht die Spezifikation eines Datenbanküberwachungsobjekts mithilfe der SQL Server Audit-Funktion.|  
+|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|Löscht ein Server Audit-Objekt mithilfe der SQL Server Audit-Funktion.|  
+|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|Löscht die Spezifikation eines Serverüberwachungsobjekts mithilfe der SQL Server Audit-Funktion.|  
   
 ### <a name="dynamic-views-and-functions"></a>Dynamische Sichten und Funktionen  
  In der folgenden Tabelle werden die dynamischen Sichten und Funktion aufgelistet, die Sie für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  

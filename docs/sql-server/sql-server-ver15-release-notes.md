@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653039"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911198"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Release Notes zu SQL Server 2019 (Vorschauversion)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -43,6 +43,10 @@ Ausführliche Informationen zu Support und Lizenzierung für RC-Software finden 
 - **Problem und Kundenbeeinträchtigung**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dokumentation kann nach Version gefiltert werden. Verwenden Sie das Steuerelement oben links auf jeder Dokumentationsseite, um nach Ihren Anforderungen zu filtern.
 
 - **Problem und Kundenbeeinträchtigung:** Für SQL Server 2019 (15.x) sind keine Offlineinhalte verfügbar.
+
+## <a name="build-number"></a>Buildnummer
+
+Die Buildnummer für SQL Server 2019 RC unter Windows, Linux und für Container lautet `15.0.1900.25`.  Die Buildnummer für das in Big Data-Clustern verwendete SQL Server 2019 RC lautet `15.0.1900.47`.
 
 ## <a name="hardware-and-software-requirements"></a>Hardware- und Softwareanforderungen
 
@@ -129,6 +133,16 @@ Ausführliche Informationen zu Support und Lizenzierung für RC-Software finden 
 - **Problemumgehung**: None
 
 - **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Release Candidate
+
+## <a name="master-data-service-notification-email-contains-broken-link"></a>Benachrichtigungs-E-Mail von Master Data Services enthält fehlerhaften Link
+
+- **Problem und Kundenbeeinträchtigung:** Die Benachrichtigungs-E-Mail von Master Data Services (MDS) enthält einen fehlerhaften Link. Über den Link gelangen Sie zu einer Seite, die etwa folgende Fehlermeldung zurückgibt:
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **Problemumgehung**: Öffnen Sie das MDS-Portal, und wechseln Sie manuell zu der Ressource.
+
+- **Gilt für**: SQL Server 2019 Release Candidate
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -13,12 +13,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a0bc3d50808c25999f1791a752e069bc02bed0d
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 51ee5e3eb1298c2f33aeecdb104be14245107e7c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811563"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874927"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +218,7 @@ Führen Sie außerdem die folgenden gespeicherten Prozeduren des Abfragespeicher
 
  **F1-Hilfe:** Beim Drücken von F1 in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird standardmäßig die Onlineversion des F1-Hilfeartikels im Browser angezeigt. Für die Probleme wird browserbasierte Hilfe angeboten, auch wenn Sie die lokale Hilfe konfiguriert und installiert haben.
 
-**Aktualisieren von Inhalten:** In SQL Server Management Studio und Visual Studio kann die Anwendung Help Viewer während des Hinzufügens der Dokumentation einfrieren (hängenbleiben). Führen Sie zur Lösung des Problems folgende Schritte aus. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/library/mt654096.aspx).
+**Aktualisieren von Inhalten:** In SQL Server Management Studio und Visual Studio kann es vorkommen, dass die Anwendung Help Viewer während des Hinzufügens der Dokumentation nicht mehr reagiert. Führen Sie zur Lösung des Problems folgende Schritte aus. Weitere Informationen zu diesem Problem finden Sie unter [Visual Studio Help Viewer friert beim Begrüßungsbildschirm ein](https://msdn.microsoft.com/library/mt654096.aspx).
 
 * Öffnen Sie die Datei „%LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings“ | „HlpViewer_VisualStudio14_en-US.settings“ im Editor, und ändern Sie das Datum im folgenden Code in einen Zeitpunkt in der Zukunft.
 

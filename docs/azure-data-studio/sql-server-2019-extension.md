@@ -3,19 +3,19 @@ title: Erweiterung für SQL Server 2019 (Vorschauversion)
 titleSuffix: Azure Data Studio
 description: Vorschauversion der SQL Server 2019-Erweiterung für Azure Data Studio
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494042"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878613"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Erweiterung für SQL Server 2019 (Vorschauversion)
 
@@ -29,9 +29,9 @@ Damit Sie die Erweiterung für SQL Server 2019 (Vorschauversion) installieren 
 
    |Platform|Herunterladen|Veröffentlichungsdatum|Versionsoptionen
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15. August 2019 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15. August 2019 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15. August 2019 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|11. September 2019 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11. September 2019 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11. September 2019 |0.16.0
 
 1. Klicken Sie in Azure Data Studio im Menü **Datei** auf die Option **Install Extension from VSIX Package** (Erweiterung aus VSIX-Paket installieren), und wählen Sie die heruntergeladene VSIX-Datei aus.
 
@@ -42,6 +42,10 @@ Damit Sie die Erweiterung für SQL Server 2019 (Vorschauversion) installieren 
 1. Nach dem erneuten Laden installiert die Erweiterung Abhängigkeiten. Dies kann einige Minuten dauern. Den Status können Sie über das Ausgabefenster verfolgen.
 
 1. Nachdem die Installation der Abhängigkeiten abgeschlossen ist, sollten Sie Azure Data Studio schließen und anschließend erneut öffnen. Der Verbindungstyp **SQL Server big data cluster** (Big-Data-Cluster für SQL Server) ist erst verfügbar, nachdem Sie Azure Data Studio neu gestartet haben.
+
+## <a name="changes-in-release-016"></a>Änderungen in Release 0.16
+* Assistent für die Erstellung externer Tabellen:
+  * Verbesserte Fehlerbehandlung beim Laden von Tabellen und Sichten auf der Seite „Objektzuordnung“.
 
 ## <a name="changes-in-release-015"></a>Änderungen in Release 0.15
 * Assistent für die Erstellung externer Tabellen:
@@ -96,7 +100,7 @@ Weitere Verbesserungen und Fehlerbehebungen:
 
 #### <a name="known-issues"></a>Bekannte Probleme
 * Wenn ein Notebook geöffnet wird, wird das Dialogfeld „Install Python“ (Python installieren) angezeigt. Wenn diese Installation abgebrochen wird, zeigen die Kernel und die Dropdownlisten unter „Anfügen an“ nicht die erwarteten Werte an. Sie können das Problem umgehen, indem Sie die Python-Installation abschließen.
-* Wenn ein Notebook mit einem Kernel geöffnet wird, der nicht unterstützt wird, kann die Verwendung der Dropdownlisten für die Kernel oder für die Option _Anfügen an_ dazu führen, das Azure Data Studio nicht mehr reagiert. Dann müssen Sie Azure Data Studio schließen und sicherstellen, dass Sie einen unterstützten Kernel verwenden (Python3, Spark | R, Spark | Scala, Pyspark, PySpark3)
+* Wenn ein Notebook mit einem nicht unterstützten Kernel geöffnet wird, kann die Verwendung der Dropdownlisten für die Kernel oder für die Option _Anfügen an_ dazu führen, dass Azure Data Studio nicht mehr reagiert. Dann müssen Sie Azure Data Studio schließen und sicherstellen, dass Sie einen unterstützten Kernel verwenden (Python3, Spark | R, Spark | Scala, Pyspark, PySpark3)
 * Der Link zur Spark-Benutzeroberfläche löst einen Fehler aus, wenn PySpark3 oder andere Spark-Kernel für den SQL Server-Endpunkt verwendet werden. Sie können dieses Problem umgehen, indem Sie auf dem Dashboard auf „Spark UI“ (Spark-Benutzeroberfläche) klicken oder eine Verbindung über den Verbindungstyp „SQL Server Big-Data Cluster“ (Big-Data-Cluster für SQL Server) herstellen. Dabei sollte automatisch der richtige Link zur Spark-Benutzeroberfläche verwendet werden.
 
 ### <a name="extensibility-improvements"></a>Verbesserungen der Erweiterbarkeit

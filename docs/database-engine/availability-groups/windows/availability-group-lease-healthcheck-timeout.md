@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 51a683d7566fb9a4e7d25da4c89e7ef3ceb1b007
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd476cbcf375b4c54f7831908e43ea5872da8dcb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991459"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874360"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mechanismen und Richtlinien der Timeouts für Leases, Cluster und Integritätsprüfung für Always On-Verfügbarkeitsgruppen 
 
@@ -45,7 +45,7 @@ Im Gegensatz zu anderen Failovermechanismen spielt die SQL Server-Instanz beim L
 
 Der Leasemechanismus erzwingt die Synchronisierung zwischen SQL Server und Windows Server-Failovercluster. Bei Ausgabe eines Failoverbefehls sendet der Clusterdienst einen Offlineaufruf an die Ressourcen-DLL des aktuellen primären Replikats. Die Ressourcen-DLL versucht zunächst, die Verfügbarkeitsgruppe anhand einer gespeicherten Prozedur offline zu schalten. Wenn bei dieser gespeicherten Prozedur ein Fehler oder ein Timeout auftritt, wird dies dem Clusterdienst zurückgemeldet, der dann einen Befehl zum Beenden ausgibt. Bei diesem Befehl wird erneut versucht, dieselbe gespeicherte Prozedur auszuführen, doch wartet der Cluster diesmal nicht, dass die Ressourcen-DLL einen Erfolg oder Fehler meldet, bevor die Verfügbarkeitsgruppe auf einem neuen Replikat online geschaltet wird. Wenn dieser zweite Prozeduraufruf fehlschlägt, muss sich der Ressourcenhost darauf verlassen, dass die Instanz vom Leasemechanismus offline geschaltet wird. Wenn die Ressourcen-DLL zum Offlineschalten der Verfügbarkeitsgruppe aufgerufen wird, signalisiert die Ressourcen-DLL das Leasebeendigungsereignis und aktiviert dadurch den SQL Server-Leaseworkerthread, um die Verfügbarkeitsgruppe offline zu schalten. Auch wenn dieses Beendigungsereignis nicht signalisiert wird, läuft die Lease ab und das Replikat geht in den Auflösungsstatus über. 
 
-Die Lease ist in erster Linie ein Synchronisierungsmechanismus zwischen der primären Instanz und dem Cluster, sie kann aber auch dort Fehlerbedingungen erzeugen, wo sonst kein Failover erforderlich wäre. Beispielsweise können hohe CPU-Werte, Bedingungen mit nicht genügend Arbeitsspeicher (wenig virtueller Arbeitsspeicher, Prozess-Paging), SQL-Prozesse, die beim Erzeugen eines Speicherabbilds nicht reagieren, systemweites Hängen oder ein Cluster (WSFC), der offline geschaltet wird (z. B. wegen Quorumverlust), die Verlängerung der Leasedauer aus der SQL-Instanz verhindern und einen Neustart oder ein Failover verursachen. 
+Die Lease ist in erster Linie ein Synchronisierungsmechanismus zwischen der primären Instanz und dem Cluster, sie kann aber auch dort Fehlerbedingungen erzeugen, wo sonst kein Failover erforderlich wäre. Beispielsweise können hohe CPU-Werte, Bedingungen mit nicht genügend Arbeitsspeicher (wenig virtueller Arbeitsspeicher, Prozesspaging), SQL-Prozesse, die beim Erzeugen eines Speicherabbilds nicht reagieren, ein nicht reagierendes System oder ein Cluster (WSFC), der offline geschaltet wird (z. B. wegen Quorumverlust), die Verlängerung der Leasedauer aus der SQL-Instanz verhindern und einen Neustart oder ein Failover verursachen. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Richtlinien für Timeoutwerte des Clusters 
 
@@ -155,9 +155,9 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | Timeouteinstellung | Zweck | Zwischen | Verwendungszweck | IsAlive & LooksAlive | Ursachen | Ergebnis 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | Timeout für Lease </br> **Standardwert: 20000** | Split Brain verhindern | Vom primären Replikat auf den Cluster </br> (HADR) | [Windows event objects (Windows-Ereignisobjekte)](/windows/desktop/Sync/event-objects)| Wird in beiden verwendet | Aufhängen des Betriebssystems, unzureichender virtueller Arbeitsspeicher, Arbeitssatzpaging, Generieren von Speicherabbildern, voll ausgelastete CPU, WSFC ist offline (Verlust des Quorums) | Verfügbarkeitsgruppenressource von offline zu online geschalten, dann wird ein Failover ausgeführt |  
- | Sitzungstimeout </br> **Standardwert: 10000** | Melden von Kommunikationsproblemen zwischen dem primären und sekundären Replikat | Sekundäres Replikat auf primäres Replikat </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint) (TCP-Sockets (über einen DBM-Endpunkt gesendete Meldungen))](/windows/desktop/WinSock/windows-sockets-start-page-2) | In keinem von beiden verwendet | Netzwerkkommunikation, </br> Probleme auf dem sekundären Replikat (Offline), Aufhängen des Betriebssystems, Ressourcenkonflikte | Verbindung des sekundären Replikats wird getrennt | 
- |HealthCheck-Timeout  </br> **Standardwert: 30000** | Angeben von Timeouts, während die Integrität des primären Replikats ermittelt wird | Cluster auf primäres Replikat </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Wird in beiden verwendet | Erfüllte Fehlerbedingungen, Aufhängen des Betriebssystems, unzureichender virtueller Speicher, Kürzung des Arbeitssatzes, WSFC ist offline (Verlust des Quorums), Probleme mit dem Planer (Deadlock)| Verfügbarkeitsgruppenressource wird offline geschalten oder ein Failover wird ausgeführt, Neustart oder Failover der FCI |  
+ | Timeout für Lease </br> **Standardwert: 20000** | Split Brain verhindern | Vom primären Replikat auf den Cluster </br> (HADR) | [Windows event objects (Windows-Ereignisobjekte)](/windows/desktop/Sync/event-objects)| Wird in beiden verwendet | Nicht reagierendes Betriebssystems, unzureichender virtueller Arbeitsspeicher, Arbeitssatzpaging, Generieren von Speicherabbildern, voll ausgelastete CPU, WSFC ist offline (Verlust des Quorums) | Verfügbarkeitsgruppenressource von offline zu online geschalten, dann wird ein Failover ausgeführt |  
+ | Sitzungstimeout </br> **Standardwert: 10000** | Melden von Kommunikationsproblemen zwischen dem primären und sekundären Replikat | Sekundäres Replikat auf primäres Replikat </br> (HADR) | [TCP Sockets (messages sent via DBM endpoint) (TCP-Sockets (über einen DBM-Endpunkt gesendete Meldungen))](/windows/desktop/WinSock/windows-sockets-start-page-2) | In keinem von beiden verwendet | Netzwerkkommunikation, </br> Probleme auf dem sekundären Replikat (offline), nicht reagierendes Betriebssystem, Ressourcenkonflikte | Verbindung des sekundären Replikats wird getrennt | 
+ |HealthCheck-Timeout  </br> **Standardwert: 30000** | Angeben von Timeouts, während die Integrität des primären Replikats ermittelt wird | Cluster auf primäres Replikat </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Wird in beiden verwendet | Erfüllte Fehlerbedingungen, nicht reagierendes Betriebssystem, unzureichender virtueller Speicher, Kürzung des Arbeitssatzes, WSFC ist offline (Verlust des Quorums), Probleme mit dem Scheduler (Deadlock)| Verfügbarkeitsgruppenressource wird offline geschalten oder ein Failover wird ausgeführt, Neustart oder Failover der FCI |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Weitere Informationen    

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134574"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211260"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134574"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
+  > [!NOTE]
+  > In einer verwalteten Instanz ist der SQL-Agent immer so konfiguriert, dass Datenbank-E-Mail verwendet wird. Daher gilt dieser Artikel nicht für verwaltete Instanzen. In einer verwalteten Instanz benötigen Sie ein Profil mit dem Namen **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** , um den SQL-Agent an Datenbank-E-Mail zu binden. 
+  
 ###  <a name="Prerequisites"></a> Erforderliche Komponenten  
   
 -   [Aktivieren von Datenbank-E-Mail](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [Erstellen Sie ein Konto für Datenbank-E-Mail](../../relational-databases/database-mail/create-a-database-mail-account.md) zur Nutzung durch das Dienstkonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents.  
   
--   [Erstellen Sie ein Datenbank-E-Mail-Profil](../../relational-databases/database-mail/create-a-database-mail-profile.md) für das zu verwendende Konto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstes, und fügen Sie den Benutzer zur **DatabaseMailUserRole** in der **msdb** -Datenbank hinzu.  
+-   [Erstellen Sie ein Datenbank-E-Mail-Profil](../../relational-databases/database-mail/create-a-database-mail-profile.md) für das zu verwendende Konto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstes, und fügen Sie den Benutzer zur **DatabaseMailUserRole** in der **msdb** -Datenbank hinzu.
   
 -   Legen Sie das Profil als Standardprofil für die **msdb** -Datenbank fest.  
   
@@ -64,9 +67,9 @@ ms.locfileid: "68134574"
   
 -   Wählen Sie in der Liste **Mailsystem** die Option **Datenbank-E-Mail**aus.  
   
--   Wählen Sie in der Liste **Mailprofil**ein Mailprofil für Datenbank-E-Mail aus.  
+-   Wählen Sie in der Liste **Mailprofil**ein Mailprofil für Datenbank-E-Mail aus. 
   
--   Starten Sie SQL Server-Agent neu.  
+-   Starten Sie den SQL Server-Agent neu.  
   
 ##  <a name="Follow_Up"></a> Anschlussaufgaben  
  Die folgenden Aufgaben sind zum Abschließen der Konfiguration des Agents zum Senden von Warnungen und Benachrichtigungen erforderlich:  

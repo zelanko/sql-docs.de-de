@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190422"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929822"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "70190422"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- In der folgenden Illustration wird dieser dreistufige Zerlegungsprozess schematisch dargestellt. In den Pyramiden stellen die gepunkteten Linien die Begrenzungen der vier Facetten jeder Pyramide dar. Die Schritte 1&nbsp;und&nbsp;2 veranschaulichen das geodätische Ellipsoid, wobei eine grüne waagrechte Linie den Längengrad am Äquator und eine Reihe von grünen senkrechten Linien verschiedene Breitengrade darstellt. Schritt&nbsp;1 zeigt die Pyramiden, die über die zwei Hemisphären projiziert werden. Schritt&nbsp;2 zeigt, wie die Pyramiden auf eine Ebene reduziert werden. Schritt&nbsp;3 veranschaulicht die reduzierten Pyramiden, nachdem diese zu einer Ebene kombiniert wurden, und zeigt einige projizierte Längengrade. Beachten Sie, dass diese projizierten Linien geglättet sind und eine unterschiedliche Länge haben, die davon abhängt, wo sie auf die Pyramiden auftreffen.  
+ In der folgenden Illustration wird dieser dreistufige Zerlegungsprozess schematisch dargestellt. In den Pyramiden stellen die gepunkteten Linien die Begrenzungen der vier Facetten jeder Pyramide dar. Die Schritte 1 und 2 veranschaulichen das geodätische Ellipsoid, wobei eine grüne waagrechte Linie den Breitengrad am Äquator und eine Reihe von grünen senkrechten Linien verschiedene Längengrade darstellt. Schritt&nbsp;1 zeigt die Pyramiden, die über die zwei Hemisphären projiziert werden. Schritt&nbsp;2 zeigt, wie die Pyramiden auf eine Ebene reduziert werden. Schritt&nbsp;3 veranschaulicht die reduzierten Pyramiden, nachdem diese zu einer Ebene kombiniert wurden, und zeigt einige projizierte Längengrade. Beachten Sie, dass diese projizierten Linien geglättet sind und eine unterschiedliche Länge haben, die davon abhängt, wo sie auf die Pyramiden auftreffen.  
   
  ![Projektion des Ellipsoids auf eine Ebene](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projection of the ellipsoid onto a plane")  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044568"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846659"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Datenbankspiegelung: Verwenden von Zertifikaten für ausgehende Verbindungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68044568"
   
 ## <a name="procedure"></a>Verfahren  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>So konfigurieren Sie Serverinstanzen für ausgehende Spiegelungsverbindungen (auf HOST_A)  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>So konfigurieren Sie Serverinstanzen für ausgehende Spiegelungsverbindungen (auf HOST_A)  
   
 1.  Erstellen Sie in der **master** -Datenbank den Datenbankhauptschlüssel, sofern noch keiner vorhanden ist. Zum Anzeigen der für eine Datenbank vorhandenen Schlüssel verwenden Sie die Katalogsicht [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68044568"
      Um z. B. ein Zertifikat für das HOST_A-System zu erstellen:  
   
     > [!IMPORTANT]  
-    >  Wenn Sie beabsichtigen, das Zertifikat länger als ein Jahr zu verwenden, geben Sie das Ablaufdatum in UTC-Zeit mit der EXPIRY_DATE-Option in der CREATE CERTIFICATE-Anweisung an. Es wird auch empfohlen, dass Sie SQL Server Management Studio verwenden, um eine richtlinienbasierte Verwaltungsregel zu erstellen, damit Sie benachrichtigt werden, wann die Zertifikate ablaufen. Erstellen Sie mithilfe des Dialogfelds **Neue Bedingung erstellen** der Richtlinienverwaltung diese Regel im Feld **@ExpirationDate** des Facets **Zertifikat** . Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) und [Sichern von SQL Server](../../relational-databases/security/securing-sql-server.md).  
+    >  Wenn Sie beabsichtigen, das Zertifikat länger als ein Jahr zu verwenden, geben Sie das Ablaufdatum in UTC-Zeit mit der EXPIRY_DATE-Option in der CREATE CERTIFICATE-Anweisung an. Es wird auch empfohlen, dass Sie SQL Server Management Studio verwenden, um eine richtlinienbasierte Verwaltungsregel zu erstellen, damit Sie benachrichtigt werden, wann die Zertifikate ablaufen. Erstellen Sie in der Richtlinienverwaltung mithilfe des Dialogfelds **Neue Bedingung erstellen** diese Regel im Feld **\@ExpirationDate** des Facets **Zertifikat**. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) und [Sichern von SQL Server](../../relational-databases/security/securing-sql-server.md).  
   
     ```  
     USE master;  

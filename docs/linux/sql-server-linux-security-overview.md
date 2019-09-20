@@ -3,17 +3,17 @@ title: Sicherheitseinschränkungen für SQL Server für Linux
 description: In diesem Artikel sind Einschränkungen für SQL Server für Linux beschrieben.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/30/2018
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 9f54197c8613293b36c1eb1ec362a8ed4db835e4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065124"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929812"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Sicherheitseinschränkungen für SQL Server für Linux
 
@@ -21,7 +21,7 @@ ms.locfileid: "68065124"
 
 Für SQL Server für Linux gibt es derzeit die folgenden Einschränkungen:
 
-* Es wird eine Standardkennwortrichtlinie bereitgestellt. MUST_CHANGE ist die einzige Option, die Sie konfigurieren können.  
+* Es wird eine Standardkennwortrichtlinie bereitgestellt. MUST_CHANGE ist die einzige Option, die Sie konfigurieren können. Die Option „CHECK_POLICY“ wird nicht unterstützt.
 * Die erweiterbare Schlüsselverwaltung wird nicht unterstützt. 
 * Das Verwenden von Schlüsseln, die im Azure Key Vault gespeichert sind, wird nicht unterstützt.
 * SQL Server generiert ein eigenes selbstsigniertes Zertifikat zum Verschlüsseln von Verbindungen. SQL Server kann so konfiguriert werden, dass ein vom Benutzer bereitgestelltes Zertifikat für TLS verwendet wird. 

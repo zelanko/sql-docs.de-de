@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122996"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874549"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -109,7 +109,11 @@ SSMS 18.2 ist das neueste Release von SSMS mit allgemeiner Verfügbarkeit (GA).
 
 - Es gibt eine Einschränkung hinsichtlich der Größe der Daten, die aus den SSMS-Ergebnissen im Raster, im Text oder in einer Datei angezeigt werden.
 
-Sie können für andere bekannte Probleme auf [UserVoice](https://feedback.azure.com/forums/908035-sql-server) verweisen, und um dem Produktteam Feedback zu geben. 
+- Beim Löschen einer Azure SQL-Datenbank im Objekt-Explorer wird ein Fehler ausgegeben, obwohl der Vorgang erfolgreich war. Der Task zeigt eine ungenaue Fehlermeldung an.
+
+- Im Dialogfeld „Anmeldungseigenschaften“ wird die Standardsprache für SQL-Anmeldungen möglicherweise als „Arabisch“ angezeigt – unabhängig von der tatsächlich für die Anmeldung festgelegten Standardsprache. Verwenden Sie zum Anzeigen der tatsächlichen Standardsprache für eine bestimmte Anmeldung T-SQL, um **default_language_name** aus **master.sys.server_principles** für die Anmeldung auszuwählen.
+
+Sie können für andere bekannte Probleme auf [UserVoice](https://feedback.azure.com/forums/908035-sql-server) verweisen, und um dem Produktteam Feedback zu geben.
 
 ## <a name="previous-ssms-releases"></a>Vorgängerversionen von SSMS
 

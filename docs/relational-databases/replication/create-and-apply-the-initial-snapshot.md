@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768644"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846707"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Erstellen und Anwenden der Anfangsmomentaufnahme
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ Sie können Anfangsmomentaufnahmen programmgesteuert erstellen, indem Sie entwed
 
 1.  Erstellen Sie eine Momentaufnahme-, Transaktions- oder Mergeveröffentlichung. Weitere Informationen finden Sie unter [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
-2.  Führen Sie [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie **@publication** und die folgenden Parameter an:  
+2.  Führen Sie [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) aus. Geben Sie **\@publication** und die folgenden Parameter an:  
   
-    -   **Der @job_login** : Gibt die Anmeldeinformationen für die Windows-Authentifizierung an, mit denen der Momentaufnahme-Agent auf dem Verteiler ausgeführt wird.  
+    -   **\@job_login** gibt die Anmeldeinformationen für die Windows-Authentifizierung an, mit denen der Momentaufnahme-Agent beim Verteiler ausgeführt wird.  
   
-    -   **Der @job_password** : Kennwort für die angegebenen Windows-Anmeldeinformationen.  
+    -   **\@job_password** entspricht dem Kennwort für die angegebenen Windows-Anmeldeinformationen.  
   
-    -   (Optional) Den Wert **0** für **@publisher_security_mode** , wenn der Agent die SQL Server-Authentifizierung zum Herstellen der Verbindung mit dem Verleger verwendet. In diesem Fall müssen Sie auch die Anmeldeinformationen für die SQL Server-Authentifizierung für **@publisher_login** und **@publisher_password** .  
+    -   (Optional) Wert **0** für **\@publisher_security_mode**, wenn der Agent die SQL Server-Authentifizierung zum Herstellen der Verbindung mit dem Verleger verwendet. In diesem Fall müssen Sie auch die Anmeldeinformationen für die SQL Server-Authentifizierung für **\@publisher_login** und **\@publisher_password** angeben.  
   
     -   (Optional) Einen Synchronisierungszeitplan für den Momentaufnahme-Agentauftrag. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -105,7 +105,7 @@ Sie können Anfangsmomentaufnahmen programmgesteuert erstellen, indem Sie entwed
   
 3.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md).  
   
-4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md) unter Angabe des Werts **@publication** aus Schritt 1 aus.  
+4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md) aus, und geben Sie dabei den Wert **\@publication** aus Schritt 1 an.  
   
 ## <a name="apply-a-snapshot"></a>Anwenden einer Momentaufnahme  
 

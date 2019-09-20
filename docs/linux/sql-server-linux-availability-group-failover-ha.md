@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027222"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304842"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover der Always On-Verfügbarkeitsgruppe unter Linux
 
@@ -43,7 +43,7 @@ Das manuelle Failover erfolgt in zwei Schritten.
 
    [Entfernen Sie im nächsten Schritt die Speicherorteinschränkung](#removeLocConstraint).
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Schritt 1: Manuelles Failover durch Verschieben der Verfügbarkeitsgruppenressource
+#### <a name="manualMove"></a> Schritt 1: Manuelles Failover durch Verschieben der Verfügbarkeitsgruppenressource
 
 Führen Sie den entsprechenden Befehl für Ihre Verteilung aus, um ein Failover von einer Verfügbarkeitsgruppenressource namens *ag_cluster* auf den Clusterknoten namens *nodeName2* durchzuführen:
 
@@ -62,7 +62,7 @@ Führen Sie den entsprechenden Befehl für Ihre Verteilung aus, um ein Failover 
 >[!IMPORTANT]
 >Nachdem Sie ein manuelles Failover einer Ressource ausgeführt haben, müssen Sie eine Speicherorteinschränkung entfernen, die automatisch hinzugefügt wird.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">Schritt 2: Entfernen der Speicherorteinschränkung
+#### <a name="removeLocConstraint"></a> Schritt 2: Entfernen der Speicherorteinschränkung
 
 Während eines manuellen Failovers fügt der `pcs`-Befehl `move` oder der `crm`-Befehl `migrate` eine Speicherorteinschränkung hinzu, damit die Ressource auf dem neuen Zielknoten platziert wird. Um die neue Einschränkung anzuzeigen, führen Sie den folgenden Befehl nach dem Verschieben der Ressource aus:
 
@@ -168,8 +168,8 @@ Für ein automatisches Failover wird mindestens ein synchrones Replikat benötig
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Configure Red Hat Enterprise Linux Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des Red Hat Enterprise Linux-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-rhel.md)
+[Konfigurieren des Red Hat Enterprise Linux-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Configure SUSE Linux Enterprise Server Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des SUSE Linux Enterprise Server-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-sles.md)
+[Konfigurieren des SUSE Linux Enterprise Server-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen](sql-server-linux-availability-group-cluster-sles.md)
 
-[Configure Ubuntu Cluster for SQL Server Availability Group Cluster Resources (Konfigurieren des Ubuntu-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen)](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Konfigurieren des Ubuntu-Clusters für Clusterressourcen von SQL Server-Verfügbarkeitsgruppen](sql-server-linux-availability-group-cluster-ubuntu.md)

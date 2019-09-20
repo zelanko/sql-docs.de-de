@@ -17,12 +17,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769849"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846668"
 ---
 # <a name="manage-identity-columns"></a>Verwalten von Identitätsspalten
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,27 +97,27 @@ ms.locfileid: "68769849"
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>So aktivieren Sie die automatische Identitätsbereichsverwaltung beim Definieren von Artikeln für eine Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Wenn die zu veröffentlichende Quelltabelle eine Identitätsspalten besitzt, geben Sie den Wert **auto** für **@identityrangemanagementoption** , den dem Verleger zugewiesenen Bereich von Identitätswerten für **@pub_identity_range** und den jedem Abonnenten zugewiesenen Bereich von Identitätswerten für **@identity_range** an. Geben Sie für **@threshold** verwaltet werden. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Wenn die zu veröffentlichende Quelltabelle eine Identitätsspalte besitzt, geben Sie für **\@identityrangemanagementoption** den Wert **auto**, für **\@pub_identity_range** den dem Verleger zugewiesenen Bereich von Identitätswerten und für **\@identity_range** den jedem Abonnenten zugewiesenen Bereich von Identitätswerten an. Geben Sie für **\@threshold** den Prozentsatz der gesamten Identitätswerte an, die verwendet werden, bevor ein neuer Identitätsbereich zugewiesen wird. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Vergewissern Sie sich, dass der Datentyp der Identitätsspalte groß genug ist, um den gesamten, allen Abonnenten zugewiesenen Identitätsbereich zu unterstützen.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>So deaktivieren Sie die automatische Identitätsbereichsverwaltung beim Definieren von Artikeln für eine Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie den Wert **manual** für **@identityrangemanagementoption** verwaltet werden. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)aus. Geben Sie für **\@identityrangemanagementoption** den Wert **manual** an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Weisen Sie auf dem Abonnenten Identitätsartikelspalten Bereiche zu, um zu verhindern, dass für Updateabonnenten Konflikte auftreten. Weitere Informationen finden Sie im Abschnitt zum Zuweisen von Bereichen bei der manuellen Verwaltung von Identitätsbereichen im Thema [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>So aktivieren Sie die automatische Identitätsbereichsverwaltung beim Definieren von Artikeln für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Wenn die zu veröffentlichende Quelltabelle eine Identitätsspalten besitzt, geben Sie den Wert **auto** für **@identityrangemanagementoption** , den einem Serverabonnement zugewiesenen Bereich von Identitätswerten für **@pub_identity_range** und den dem Verleger und jedem Clientabonnement zugewiesenen Bereich von Identitätswerten für **@identity_range** an. Geben Sie für **@threshold** verwaltet werden. Weitere Informationen dazu, wann neue Identitätsbereiche zugewiesen werden, finden Sie im Abschnitt zum Zuweisen von Identitätsbereichen im Thema [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md). Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Wenn die zu veröffentlichende Quelltabelle eine Identitätsspalte besitzt, geben Sie für **\@identityrangemanagementoption** den Wert **auto**, für **\@pub_identity_range** den einem Serverabonnement zugewiesenen Bereich von Identitätswerten und für **\@identity_range** den dem Verleger und jedem Clientabonnement zugewiesenen Bereich von Identitätswerten an. Geben Sie für **\@threshold** den Prozentsatz der gesamten Identitätswerte an, die verwendet werden, bevor ein neuer Identitätsbereich zugewiesen wird. Weitere Informationen dazu, wann neue Identitätsbereiche zugewiesen werden, finden Sie im Abschnitt zum Zuweisen von Identitätsbereichen im Thema [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md). Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Vergewissern Sie sich, dass der Datentyp der Identitätsspalte groß genug ist, um den gesamten, allen Abonnenten zugewiesenen Identitätsbereich zu unterstützen. Dies gilt besonders bei Abonnenten mit Serverabonnements.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>So deaktivieren Sie die automatische Identitätsbereichsverwaltung beim Definieren von Artikeln für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Geben Sie einen der folgenden Werte für **@identityrangemanagementoption** an:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Geben Sie für **\@identityrangemanagementoption** einen der folgenden Werte an:  
   
     -   **manual** &ndash; Identitätsbereiche müssen manuell für Updateabonnenten zugewiesen werden.  
   
@@ -133,9 +133,9 @@ ms.locfileid: "68769849"
   
 2.  Wenn der Wert von **identityrangemanagementoption** im Resultset **1**ist, ändern Sie die Einstellungen wie folgt:  
   
-    -   Um die zugewiesenen Identitätsbereiche zu ändern, führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **identity_range** oder **pub_identity_range** für **@property** und den neuen Bereichswert für **@value** verwaltet werden.  
+    -   Um die zugewiesenen Identitätsbereiche zu ändern, führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie für **\@property** den Wert **identity_range** oder **pub_identity_range** und für **\@value** den neuen Bereichswert an.  
   
-    -   Um den Schwellenwert zu ändern, bei dessen Überschreiten neue Identitätsbereiche zugewiesen werden, führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **threshold** für **@property** und den neuen Schwellenwert für **@value** verwaltet werden.  
+    -   Um den Schwellenwert zu ändern, bei dessen Überschreiten neue Identitätsbereiche zugewiesen werden, führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie für **\@property** den Wert **threshold** und für **\@value** den neuen Schwellenwert an.  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>So ändern Sie die Einstellungen für die automatische Identitätsbereichsverwaltung für einen vorhandenen Artikel in einer Mergeveröffentlichung  
   
@@ -143,11 +143,11 @@ ms.locfileid: "68769849"
   
 2.  Wenn der Wert von **identity_support** im Resultset **1**ist, ändern Sie die Einstellungen wie folgt:  
   
-    -   Um die zugewiesenen Identitätsbereiche zu ändern, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **identity_range** oder **pub_identity_range** für **@property** und den neuen Bereichswert für **@value** verwaltet werden.  
+    -   Um die zugewiesenen Identitätsbereiche zu ändern, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie für **\@property** den Wert **identity_range** oder **pub_identity_range** und für **\@value** den neuen Bereichswert an.  
   
-    -   Um den Schwellenwert zu ändern, bei dessen Überschreiten neue Identitätsbereiche zugewiesen werden, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **threshold** für **@property** und den neuen Schwellenwert für **@value** verwaltet werden. Weitere Informationen dazu, wann neue Identitätsbereiche zugewiesen werden, finden Sie im Abschnitt zum Zuweisen von Identitätsbereichen im Thema [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+    -   Um den Schwellenwert zu ändern, bei dessen Überschreiten neue Identitätsbereiche zugewiesen werden, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie für **\@property** den Wert **threshold** und für **\@value** den neuen Schwellenwert an. Weitere Informationen dazu, wann neue Identitätsbereiche zugewiesen werden, finden Sie im Abschnitt zum Zuweisen von Identitätsbereichen im Thema [Replizieren von Identitätsspalten](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    -   Um die automatische Verwaltung von Identitätsbereichen zu deaktivieren, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **identityrangemanagementoption** für **@property** und entweder **manual** oder **none** für **@value** verwaltet werden.  
+    -   Um die automatische Verwaltung von Identitätsbereichen zu deaktivieren, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie den Wert **identityrangemanagementoption** für **\@property** und entweder **manual** oder **none** für **\@value** an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942753"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276543"
 ---
 # <a name="manage-oracle-tablespaces"></a>Verwalten von Oracle-Tabellenbereichen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "67942753"
   
 -   Verwenden Sie [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Soll **sp_changearticle**verwendet werden, geben Sie Folgendes an:  
   
-    -   Den Namen des Oracle-Verlegers für den Parameter **@publisher** entspricht.  
+    -   Den Namen des Oracle-Verlegers für den Parameter **\@publisher**.  
   
-    -   Den Namen der Oracle-Veröffentlichung für den Parameter **@publication** entspricht.  
+    -   Den Namen der Oracle-Veröffentlichung für den Parameter **\@publication**.  
   
-    -   Den Namen des Artikels für den Parameter **@article** entspricht.  
+    -   Den Namen des Artikels für den Parameter **\@article**.  
   
-    -   Wert 'tablespace' für den Parameter **@property** entspricht.  
+    -   Den Wert „tablespace“ für den Parameter **\@property**.  
   
-    -   Name des Tabellenbereichs für den Parameter **@value** entspricht.  
+    -   Den Namen des Tabellenbereichs für den Parameter **\@value**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

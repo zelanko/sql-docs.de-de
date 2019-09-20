@@ -21,12 +21,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1a4e90dfaa5f513e3d197619afd26e8ec0898d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075222"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978595"
 ---
 # <a name="expressions-transact-sql"></a>Ausdrücke (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "68075222"
   
  Komplexe Ausdrücke, die aus vielen Symbolen und Operatoren bestehen, werden zu einem Ergebnis mit genau einem Wert ausgewertet. Der Datentyp, die Sortierung, die Genauigkeit und der Wert des resultierenden Ausdrucks werden bestimmt, indem immer jeweils zwei Teilausdrücke kombiniert und ausgewertet werden, bis ein Endergebnis erreicht ist. Die Reihenfolge, in der die Ausdrücke kombiniert werden, ist durch die Rangfolge der Operatoren im Ausdruck definiert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Zwei Ausdrücke können mit einem Operator kombiniert werden, wenn die Datentypen beider Ausdrücke vom Operator unterstützt werden und mindestens eine der folgenden Bedingungen erfüllt ist:  
   
 -   Die Ausdrücke besitzen den gleichen Datentyp.  
@@ -128,7 +128,27 @@ GO
 ```  
   
  Der Ausdruck `1+2` wird für jede Zeile des Resultsets zu `3` ausgewertet. Obwohl der Ausdruck `ProductID` für jede Zeile des Resultsets einen eindeutigen Wert erzeugt, besitzt jede Zeile nur genau einen Wert für `ProductID`.  
-  
+ 
+- Azure SQL Data Warehouse ordnet jedem Thread eine maximale Menge an Arbeitsspeicher zu, sodass kein Thread den gesamten Arbeitsspeicher nutzen kann.  Ein Teil dieses Speichers dient zum Speichern von Abfrageausdrücken.  Wenn eine Abfrage zu viele Ausdrücke umfasst und der erforderliche Arbeitsspeicher den internen Grenzwert überschreitet, wird Sie von der Engine nicht ausgeführt.  Um dieses Problem zu vermeiden, können Benutzer die Abfrage in mehrere Abfragen mit einer geringeren Anzahl von Ausdrücken ändern. Beispiel: Sie haben eine Abfrage mit einer langen Liste von Ausdrücken in der WHERE-Klausel: 
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
+...
+
+```
+Ändern Sie diese Abfrage in:
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
+...
+```
+
 ## <a name="see-also"></a>Weitere Informationen  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   

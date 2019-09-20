@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c55e8bbd7001fb28b7661d31ced79e9bcb919894
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768193"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846704"
 ---
 # <a name="delete-a-push-subscription"></a>Löschen eines Pushabonnements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ ms.locfileid: "68768193"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So löschen Sie ein Pushabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) aus. Geben Sie **@publication** und **@subscriber** eine Momentaufnahme über FTP bereitgestellt wird. Geben Sie für **@article** den Wert **@article** . (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) aus. Geben Sie **\@publication** und **\@subscriber** an. Geben Sie für **\@article** den Wert **all** an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie für **\@ignore_distributor** den Wert **1** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
   
 2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) aus, um Replikationsmetadaten aus der Abonnementdatenbank zu entfernen.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>So löschen Sie ein Pushabonnement für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) aus, und geben Sie **@publication** , **@subscriber** und **@subscriber_db** an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
+1.  Führen Sie auf dem Verleger [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) aus, und geben Sie dabei **\@publication**, **\@subscriber** und **\@subscriber_db** an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie für **\@ignore_distributor** den Wert **1** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) aus. Geben Sie **@publisher** , **@publisher_db** und **@publication** verfügbar ist. Damit werden Mergemetadaten aus der Abonnementdatenbank gelöscht.  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md) aus. Geben Sie **\@publisher**, **\@publisher_db** und **\@publication** an. Damit werden Mergemetadaten aus der Abonnementdatenbank gelöscht.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Im folgenden Beispiel wird ein neues Pushabonnement für eine Transaktionsveröffentlichung gelöscht.  

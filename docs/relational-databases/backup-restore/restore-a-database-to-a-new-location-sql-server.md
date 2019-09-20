@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bef38ae0b93eb43d508192c6f748a36320143689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937539"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278923"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Wiederherstellen einer Datenbank an einem neuen Speicherort (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,64 +107,64 @@ ms.locfileid: "67937539"
   
 2.  Stellen Sie die vollständige Datenbanksicherung mithilfe der [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) -Anweisung wieder her. Standardmäßig werden Daten und Protokolldateien an ihren ursprünglichen Speicherorten wiederhergestellt. Verwenden Sie zum Verschieben einer Datenbank die Option MOVE, um die einzelnen Datenbankdateien zu verschieben und Konflikte mit vorhandenen Dateien zu vermeiden.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
+  Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Basissyntax für das Wiederherstellen der Datenbank an einem neuen Speicherort und mit neuem Name lautet wie folgt:  
   
-     RESTORE DATABASE *new_database_name*  
+  RESTORE DATABASE *Name der neuen Datenbank*  
   
-     FROM *backup_device* [ ,...*n* ]  
+  FROM *Sicherungsmedium* [ ,...*n* ]  
   
-     [ WITH  
+  [ WITH  
   
-     {  
+  {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  [ **RECOVERY** | NORECOVERY ]  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
-     }  
+  }  
   
-     ;  
+  ;  
   
-    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
+  > [!NOTE] 
+  > Wenn Sie sich auf das Verschieben einer Datenbank auf einen anderen Datenträger vorbereiten, sollten Sie überprüfen, ob dieser über genügend Speicherplatz verfügt und ob möglicherweise Konflikte mit vorhandenen Dateien auftreten können. Dazu müssen Sie unter anderem eine [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) -Anweisung verwenden, in der die gleichen MOVE-Parameter angegeben sind, die Sie in der RESTORE DATABASE-Anweisung verwenden möchten.  
   
-     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+  In der folgenden Tabelle werden Argumente dieser RESTORE-Anweisung im Hinblick auf das Wiederherstellen einer Datenbank an einem neuen Speicherort beschrieben. Weitere Informationen zu diesen Argumenten finden Sie unter [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)-Datenbank an einem neuen Speicherort wiederherstellen und sie optional umbenennen können.  
   
-     *new_database_name*  
-     The new name for the database.  
+  *Name der neuen Datenbank*  
+  Der neue Name der Datenbank.  
   
-    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
+  > [!NOTE]
+  > Wenn Sie die Datenbank auf einer anderen Serverinstanz wiederherstellen, können Sie anstelle eines neuen Namens den ursprünglichen Namen weiterverwenden.  
   
-     *backup_device* [ **,**...*n* ]  
-     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
+  *backup_device* [ **,** ...*n* ]  
+  Gibt eine durch Trennzeichen getrennte Liste von 1 bis 64 Sicherungsmedien an, von denen die Datenbanksicherung wiederhergestellt werden soll. Sie können ein physisches Sicherungsmedium angeben oder, sofern definiert, ein entsprechendes logisches Sicherungsmedium. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  { DISK | TAPE } **=** _physical_backup_device_name_  
   
-     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+  Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
-     { **RECOVERY** | NORECOVERY }  
-     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
+  { **RECOVERY** | NORECOVERY }  
+  Wenn die Datenbank das vollständige Wiederherstellungsmodell verwendet, müssen Sie möglicherweise Transaktionsprotokollsicherungen anwenden, nachdem Sie die Datenbank wiederhergestellt haben. Geben Sie in diesem Fall die Option NORECOVERY an.  
   
-     Otherwise, use the RECOVERY option, which is the default.  
+  Verwenden Sie andernfalls die Standardoption RECOVERY.  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
+  FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
+  Identifiziert den wiederherzustellenden Sicherungssatz. Wenn *backup_set_file_number* beispielsweise den Wert **1** besitzt, weist dies auf den ersten Sicherungssatz auf dem Sicherungsmedium hin. Wenn *backup_set_file_number* den Wert **2** besitzt, entspricht dies dem zweiten Sicherungssatz. Sie können die *backup_set_file_number* eines Sicherungssatzes mit der [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) -Anweisung abrufen.  
   
-     When this option is not specified, the default is to use the first backup set on the backup device.  
+  Wenn diese Option nicht angegeben ist, wird in der Standardeinstellung der erste Sicherungssatz auf dem Sicherungsmedium verwendet.  
   
-     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  Weitere Informationen finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) im Abschnitt „Angeben eines Sicherungssatzes“.  
   
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
+  MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
+  Gibt an, dass die von *logical_file_name_in_backup* angegebenen Daten oder die Protokolldatei an dem von *operating_system_file_name*angegebenen Speicherort wiederhergestellt werden sollen. Geben Sie für jede logische Datei, die aus dem Sicherungssatz an einem neuen Speicherort wiederhergestellt werden soll, eine MOVE-Anweisung an.  
   
-    |Option|und Beschreibung|  
-    |------------|-----------------|  
-    |*logical_file_name_in_backup*|Gibt den logischen Namen einer Daten- oder Protokolldatei an, die in den Sicherungssatz eingeschlossen werden soll. Der logische Dateiname einer Daten- oder Protokolldatei in einem Sicherungssatz entspricht ihrem logischen Namen in der Datenbank zum Zeitpunkt der Erstellung des Sicherungssatzes.<br /><br /> <br /><br /> Hinweis: Mit [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) können Sie eine Liste abrufen, in der die logischen Dateien eines Sicherungssatzes aufgeführt sind.|  
-    |*operating_system_file_name*|Gibt einen neuen Speicherort für die von *logical_file_name_in_backup*angegebene Datei an. Die Datei wird an diesem Speicherort wiederhergestellt.<br /><br /> Optional gibt *operating_system_file_name* einen neuen Dateinamen für die wiederhergestellte Datei an. Dies ist erforderlich, wenn Sie eine Kopie einer vorhandenen Datenbank auf der gleiche Serverinstanz erstellen.|  
-    |*n*|Ist ein Platzhalter, der angibt, dass weitere MOVE-Anweisungen angegeben werden können.|  
+  |Option|und Beschreibung|  
+  |------------|-----------------|  
+  |*logical_file_name_in_backup*|Gibt den logischen Namen einer Daten- oder Protokolldatei an, die in den Sicherungssatz eingeschlossen werden soll. Der logische Dateiname einer Daten- oder Protokolldatei in einem Sicherungssatz entspricht ihrem logischen Namen in der Datenbank zum Zeitpunkt der Erstellung des Sicherungssatzes.<br /><br /> <br /><br /> Hinweis: Mit [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) können Sie eine Liste abrufen, in der die logischen Dateien eines Sicherungssatzes aufgeführt sind.|  
+  |*operating_system_file_name*|Gibt einen neuen Speicherort für die von *logical_file_name_in_backup*angegebene Datei an. Die Datei wird an diesem Speicherort wiederhergestellt.<br /><br /> Optional gibt *operating_system_file_name* einen neuen Dateinamen für die wiederhergestellte Datei an. Dies ist erforderlich, wenn Sie eine Kopie einer vorhandenen Datenbank auf der gleiche Serverinstanz erstellen.|  
+  |*n*|Ist ein Platzhalter, der angibt, dass weitere MOVE-Anweisungen angegeben werden können.|  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel wird eine neue Datenbank mit dem Namen `MyAdvWorks` erstellt, indem eine Sicherung der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank wiederhergestellt wird, die zwei Dateien einschließt: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data und [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Für diese Datenbank wird das einfache Wiederherstellungsmodell verwendet. Die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank ist bereits auf der Serverinstanz vorhanden, sodass die Dateien in der Sicherung an einem neuen Ort wiederhergestellt werden müssen. Die RESTORE FILELISTONLY-Anweisung wird verwendet, um die Anzahl und die Namen der Dateien der Datenbank zu bestimmen, die wiederhergestellt werden. Die Datenbanksicherung ist der erste Sicherungssatz auf dem Sicherungsmedium.  

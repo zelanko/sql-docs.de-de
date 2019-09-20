@@ -1,7 +1,7 @@
 ---
 title: Graph-Edgeeinschränkungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731052"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873885"
 ---
 # <a name="edge-constraints"></a>Edgeeinschränkungen
 
@@ -48,6 +48,14 @@ Ein Beispiel: Sie haben die Knoten `Product` und `Customer` in Ihrem Graph und v
 ### <a name="indexes-on-edge-constraints"></a>Indizes in Edgeeinschränkungen
 
 Durch Erstellen einer Edgeeinschränkung wird nicht automatisch ein entsprechender Index in den `$from_id`- und `$to_id`-Spalten der Edgetabelle erstellt. Es empfiehlt sich, manuell einen Index in einem `$from_id`,`$to_id`-Spaltenpaar zu erstellen, wenn Sie Punktsuchabfragen oder OLTP-Workloads verarbeiten.
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>ON DELETE: referenzielle Aktionen bei Edgeeinschränkungen
+Mit kaskadierende Aktionen für eine Edgeeinschränkung können Benutzer die von der Datenbank-Engine durchzuführenden Aktionen definieren, wenn ein Benutzer die Knoten löscht, die der angegebene Edge verbindet. Die folgenden referenziellen Aktionen können definiert werden:  
+*NO ACTION*   
+Die Datenbank-Engine löst einen Fehler aus, wenn Sie versuchen, einen Knoten zu löschen, der über verbundene Edges verfügt.  
+
+*CASCADE*   
+Wenn ein Knoten aus der Datenbank gelöscht wird, werden auch die verbundenen Edges gelöscht.  
 
 ## <a name="working-with-edge-constraints"></a>Arbeiten mit Edgeeinschränkungen
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>Definieren von referenziellen Aktionen für eine neue Edgetabelle 
+
+Im folgenden Beispiel wird eine Edgeeinschränkung für die **gekaufte** Edgetabelle erstellt und die referenzielle Aktion DELETE CASCADE definiert. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Um eine Edgeeinschränkung mit Transact-SQL ändern zu können, müssen Sie zuerst die vorhandene Edgeeinschränkung löschen und sie dann mit der neuen Definition neu erstellen.
 
+
 ### <a name="view-edge-constraints"></a>Anzeigen von Edgeeinschränkungen
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>Verwandte Aufgaben
 
+[CREATE TABLE (SQL-Graph)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 Weitere Informationen zur Graphtechnologie in SQL Server finden Sie unter [Graphverarbeitung mit SQL Server und Azure SQL-Datenbank](../graphs/sql-graph-overview.md?view=sql-server-2017).
+

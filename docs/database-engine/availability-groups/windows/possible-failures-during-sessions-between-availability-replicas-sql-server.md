@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eab23cafc4e73efd16dd2feb096db12495d8f354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014530"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874534"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>Bestimmen möglicher Gründe für Verbindungsfehler zwischen Verfügbarkeitsreplikaten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Physische, Betriebssystem- oder [!INCLUDE[ssNoVersion](../../../includes/ssnover
   
 -   Netzwerkfehler, wie z. B. Timeouts für TCP-Verbindungen, gelöschte oder beschädigte Pakete oder Pakete in falscher Reihenfolge.  
   
--   Ein nicht reagierendes Betriebssystem, ein nicht reagierender Server oder Datenbankstatus.  
+-   Ein Betriebssystem, ein Server oder eine Datenbank, die nicht reagieren.  
   
 -   Ein Windows-Servertimeout.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027324"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910803"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von RHEL-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
@@ -41,12 +41,12 @@ Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für Ho
 
 2. [Erstellen Sie die Verfügbarkeitsgruppe](sql-server-linux-availability-group-configure-ha.md). 
 
-3. Konfigurieren Sie einen Clusterressourcen-Manager wie Pacemaker. Diese Anweisungen finden Sie in diesem Dokument.
+3. Konfigurieren Sie einen Cluster Resource Manager wie Pacemaker. Diese Anweisungen finden Sie in diesem Dokument.
    
    Die Art und Weise des Konfigurierens eines Clusterressourcen-Managers hängt von der jeweiligen Linux-Distribution ab. 
 
    >[!IMPORTANT]
-   >In Produktionsumgebungen wird zur Gewährleistung vonHochverfügbarkeit ein Fencing-Agent wie STONITH benötigt. In den Demos dieser Dokumentation werden keine Fencing-Agents verwendet. Die Demos dienen lediglich zu Testzwecken und Überprüfungen. 
+   >In Produktionsumgebungen wird zur Gewährleistung vonHochverfügbarkeit ein Fencing-Agent wie STONITH benötigt. In den Demos dieser Dokumentation werden keine Fencing-Agents verwendet. Die Demos dienen lediglich zu Testzwecken und Überprüfungen.
    
    >Ein Linux-Cluster verwendet Fencing, um den Cluster in einen bekannten Zustand zurückzusetzen. Die Art und Weise des Konfigurierens von Fencing hängt von der Distribution und der Umgebung ab. Derzeit ist Fencing in einigen Cloudumgebungen nicht verfügbar. Weitere Informationen finden Sie unter [Supportrichtlinien für RHEL-Hochverfügbarkeitscluster – Virtualisierungsplattformen](https://access.redhat.com/articles/29440).
 
@@ -104,6 +104,8 @@ Verwenden Sie nach dem Konfigurieren von Pacemaker `pcs`, um mit dem Cluster zu 
 
 Bei Anbietern von Pacemaker-Clustern muss für eine unterstützte Clustereinrichtung STONITH aktiviert und ein Fencinggerät konfiguriert sein. STONITH steht für „shoot the other node in the head“ (Schieß dem anderen Knoten in den Kopf). Wenn der Clusterressourcen-Manager den Status eines Knotens oder einer Ressource auf einem Knoten nicht ermitteln kann, wird der Cluster mithilfe von Fencing wieder in einen bekannten Status versetzt.
 
+Ein STONITH-Gerät stellt einen Fencing-Agent bereit. Ein Beispiel für das Erstellen eines STONITH-Geräts für diesen Cluster in Azure finden Sie unter [Einrichten von Pacemaker unter Red Hat Enterprise Linux in Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices). Ändern Sie die Anweisungen für Ihre Umgebung.
+
 Durch Fencing auf Ressourcenebene wird sichergestellt, dass im Falle eines Ausfalls durch die Konfiguration einer Ressource keine Daten beschädigt werden. Sie können Fencing auf Ressourcenebene beispielsweise dazu verwenden, den Datenträger auf einem Knoten bei einem Ausfall der Kommunikationsverbindung als veraltet zu markieren. 
 
 Mit Fencing auf Knotenebene wird sichergestellt, dass ein Knoten keine Ressourcen ausführt. Dies erfolgt durch Zurücksetzen des Knotens. Pacemaker unterstützt eine Vielzahl von Fencinggeräten. Beispiele hierfür sind eine unterbrechungsfreie Stromversorgung oder Verwaltungsschnittstellenkarten für Server.
@@ -114,14 +116,14 @@ Weitere Informationen zu STONITH und Fencing finden Sie in den folgenden Artikel
 * [Fencing und STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Hochverfügbarkeits-Add-On von Red Hat mit Pacemaker: Fencing](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
-Da die Fencingkonfiguration auf Knotenebene stark von Ihrer Umgebung abhängt, wird sie für dieses Tutorial deaktiviert (sie kann später konfiguriert werden). Mit dem folgenden Skript wird Fencing auf Knotenebene deaktiviert:
-
-```bash
-sudo pcs property set stonith-enabled=false
-```
-  
->[!IMPORTANT]
->STONITH wird lediglich zu Testzwecken deaktiviert. Wenn Sie Pacemaker in einer Produktionsumgebung verwenden möchten, sollten Sie je nach Ihrer Umgebung eine STONITH-Implementierung planen und immer aktivieren. RHEL bietet keine Fencing-Agents für Cloudumgebungen (wie Azure) oder Hyper-V. Folglich bietet der Clusteranbieter keine Unterstützung für die Ausführung von Produktionsclustern in diesen Umgebungen. Wir arbeiten an einer in zukünftigen Versionen verfügbaren Lösung zum Schließen dieser Lücke.
+>[!NOTE]
+>Da die Fencingkonfiguration auf Knotenebene stark von Ihrer Umgebung abhängt, wird sie für dieses Tutorial deaktiviert (sie kann später konfiguriert werden). Mit dem folgenden Skript wird Fencing auf Knotenebene deaktiviert:
+>
+>```bash
+>sudo pcs property set stonith-enabled=false
+>``` 
+>
+>STONITH wird lediglich zu Testzwecken deaktiviert. Wenn Sie Pacemaker in einer Produktionsumgebung verwenden möchten, sollten Sie je nach Ihrer Umgebung eine STONITH-Implementierung planen und immer aktivieren.
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Festlegen der Clustereigenschaft „cluster-recheck-interval“
 

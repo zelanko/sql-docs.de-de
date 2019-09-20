@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003558"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809827"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Konfigurieren von SLES-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
@@ -37,9 +37,9 @@ Beim Erstellen einer Verfügbarkeitsgruppe zur Gewährleistung von Hochverfügba
 
 2. [Erstellen Sie die Verfügbarkeitsgruppe](sql-server-linux-availability-group-failover-ha.md). 
 
-3. Konfigurieren Sie einen Clusterressourcen-Manager wie Pacemaker. Diese Anweisungen finden Sie in diesem Dokument.
+3. Konfigurieren Sie einen Cluster Resource Manager wie Pacemaker. Diese Anweisungen finden Sie in diesem Dokument.
    
-   Wie ein Clusterressourcen-Manager konfiguriert wird, hängt von der jeweiligen Linux-Verteilung ab. 
+   Die Art und Weise des Konfigurierens eines Clusterressourcen-Managers hängt von der jeweiligen Linux-Distribution ab. 
 
    >[!IMPORTANT]
    >In Produktionsumgebungen wird zur Gewährleistung vonHochverfügbarkeit ein Fencing-Agent wie STONITH benötigt. In den Beispielen in diesem Artikel werden keine Fencing-Agents verwendet. Sie werden lediglich für Tests und Überprüfungen verwendet. 
@@ -196,7 +196,7 @@ crm configure property cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Wenn Sie bereits über eine Verfügbarkeitsgruppenressource verfügen, die von einem Pacemaker-Cluster verwaltet wird, wird mit allen Verteilungen, für die das aktuellste verfügbare Pacemaker-Pakte 1.1.18-11.el7 verwendet wird, ein Behavior Change für die Clustereinstellung „start-failure-is-fatal“ für den Fall eingeführt, dass deren Wert auf FALSE festgelegt ist. Diese Änderung wirkt sich auf den Failoverworkflow aus. Wenn ein primäres Replikat ausfällt, wird für den Cluster ein Failover auf eines der verfügbaren sekundären Replikate erwartet. Stattdessen werden die Benutzer bemerken, dass der Cluster versucht, das ausgefallene primäre Replikat zu starten. Wenn dieses primäre Replikat (aufgrund eines dauerhaften Ausfalls) nicht online geschaltet wird, führt der Cluster kein Failover zu einem anderen verfügbaren sekundären Replikat durch. Aufgrund dieser Änderung ist eine zuvor empfohlene Konfiguration zum Festlegen von „start-failure-is-fatal“ nicht mehr gültig, und für die Einstellung muss der Standardwert `true` wiederhergestellt werden. Darüber hinaus muss die Verfügbarkeitsgruppenressource aktualisiert werden, um die Eigenschaft `failover-timeout` einzubeziehen. 
+> Wenn Sie bereits über eine Verfügbarkeitsgruppenressource verfügen, die von einem Pacemaker-Cluster verwaltet wird, wird mit allen Verteilungen, für die das aktuellste verfügbare Pacemaker-Pakte 1.1.18-11.el7 verwendet wird, ein Behavior Change für die Clustereinstellung „start-failure-is-fatal“ für den Fall eingeführt, dass deren Wert auf FALSE festgelegt ist. Diese Änderung wirkt sich auf den Failoverworkflow aus. Wenn ein primäres Replikat ausfällt, wird für den Cluster ein Failover auf eines der verfügbaren sekundären Replikate erwartet. Stattdessen werden die Benutzer bemerken, dass der Cluster weiterhin versucht, das ausgefallene primäre Replikat zu starten. Wenn dieses primäre Replikat (aufgrund eines dauerhaften Ausfalls) nicht online geschaltet wird, führt der Cluster kein Failover zu einem anderen verfügbaren sekundären Replikat durch. Aufgrund dieser Änderung ist eine zuvor empfohlene Konfiguration zum Festlegen von „start-failure-is-fatal“ nicht mehr gültig, und für die Einstellung muss der Standardwert `true` wiederhergestellt werden. Darüber hinaus muss die Verfügbarkeitsgruppenressource aktualisiert werden, um die Eigenschaft `failover-timeout` einzubeziehen. 
 >
 >So aktualisieren Sie den Eigenschaftswert auf ein Ausführungsintervall von `true`:
 >
@@ -220,7 +220,11 @@ Durch das Fencing auf Ressourcenebene wird vor allem sichergestellt, dass währe
 
 Mit dem Fencing auf Knotenebene wird sichergestellt, dass ein Knoten keine Ressourcen ausführt. Dies erfolgt durch Zurücksetzen des Knotens. Die zugehörige Pacemaker-Implementierung wird als STONITH bezeichnet (was für „Shoot the Other Node in the Head“ [Schieß dem anderen Knoten in den Kopf] steht). Pacemaker unterstützt eine Vielzahl von Fencinggeräten, z. B. eine unterbrechungsfreie Stromversorgung oder Verwaltungsschnittstellenkarten für Server.
 
-Weitere Informationen finden Sie unter [Pacemaker Clusters from Scratch (Pacemaker-Cluster völlig neu erstellen)](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Fencing and Stonith (Fencing und STONITH)](https://clusterlabs.org/doc/crm_fencing.html) und [SUSE HA documentation: Fencing and STONITH (SUSE HA-Dokumentation: Fencing und STONITH)](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Weitere Informationen finden Sie in den folgenden Themen:
+
+- [Grundlegendes zu Pacemaker-Clustern](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [Fencing und STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [SUSE-Dokumentation zu Hochverfügbarkeit: Fencing und STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 Zum Zeitpunkt der Clusterinitialisierung ist STONITH deaktiviert, wenn keine Konfiguration erkannt wird. STONITH kann später durch Ausführen des folgenden Befehls aktiviert werden:
 
@@ -230,7 +234,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >STONITH wird lediglich zu Testzwecken deaktiviert. Wenn Sie Pacemaker in einer Produktionsumgebung verwenden möchten, sollten Sie je nach Ihrer Umgebung eine STONITH-Implementierung planen und immer aktivieren. SUSE bietet keine Fencing-Agents für Cloudumgebungen (wie Azure) oder Hyper-V. Folglich bietet der Clusteranbieter keine Unterstützung für die Ausführung von Produktionsclustern in diesen Umgebungen. Wir arbeiten an einer in zukünftigen Versionen verfügbaren Lösung zum Schließen dieser Lücke.
-
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Konfigurieren der Clusterressourcen für SQL Server
 
@@ -336,4 +339,4 @@ Weitere Informationen finden Sie in den folgenden Themen:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-[Operate HA availability group (Arbeiten mit einer HA-Verfügbarkeitsgruppe)](sql-server-linux-availability-group-failover-ha.md)
+[Arbeiten mit einer Verfügbarkeitsgruppe mit Hochverfügbarkeit](sql-server-linux-availability-group-failover-ha.md)

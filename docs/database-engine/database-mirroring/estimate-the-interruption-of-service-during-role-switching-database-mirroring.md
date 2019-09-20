@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997860"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874179"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Einschätzen der Unterbrechung des Diensts während des Rollenwechsels (Datenbankspiegelung)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997860"
 -   Bei einem manuellen Failover wird nur die für das Failover der Datenbank erforderliche Zeit nach dem Failoverbefehl ausgegeben.  
   
 ## <a name="error-detection"></a>Fehlererkennung  
- Die Zeit, die das System zum Erkennen eines Fehlers benötigt, hängt von der Art des Fehlers ab. Beispielsweise wird ein Netzwerkfehler nahezu sofort bemerkt, während es standardmäßig 10 Sekunden dauert, um festzustellen, dass ein Server hängt, was dem Standardtimeout entspricht.  
+ Die Zeit, die das System zum Erkennen eines Fehlers benötigt, hängt von der Art des Fehlers ab. Beispielsweise wird ein Netzwerkfehler nahezu sofort bemerkt, während es 10 Sekunden dauert, um festzustellen, dass ein Server nicht reagiert (bei Standardtimeout).  
   
  Informationen zu Fehlern, die während einer Datenbank-Spiegelungssitzung zu Problemen führen können, und zur Timeouterkennung im Modus für hohe Sicherheit mit automatischem Failover finden Sie unter [Mögliche Fehler während der Datenbankspiegelung](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   

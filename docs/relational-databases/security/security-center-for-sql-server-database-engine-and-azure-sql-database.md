@@ -18,12 +18,12 @@ ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed88293239d29533b4374541ab4af8e12fb55900
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 86d3f0bcc0d791a025165d8bda3188d443fce1e1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126874"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874836"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "68126874"
   
 |||  
 |-|-|  
-|**Automatisierte Überwachung**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung (Server- und Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Überwachung (Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Bedrohungserkennung| <br /><br /> [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Erste Schritte mit der SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Sicherheitsrisikobewertung mit der SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
+|**Automatisierte Überwachung**<br /><br /> ![sicherheitscenter-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Überwachung (Server- und Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Überwachung (Datenbankebene)<br /><br /> ![sicherheitscenter-sqldb](../../relational-databases/security/media/security-center-sqldb.png "sicherheitscenter-sqldb") Erkennen von Bedrohungen| <br /><br /> [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL-Datenbanküberwachung](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Erste Schritte mit Advanced Threat Protection für Azure SQL-Datenbank](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Sicherheitsrisikobewertung mit der SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
 |**Benutzerdefinierte Überwachung**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Trigger|Benutzerdefinierte Überwachungsimplementierung: Erstellen von [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) und [DML Triggers](../../relational-databases/triggers/dml-triggers.md)|  
 |**Kompatibilität**<br /><br /> ![sicherheitscenter-beide](../../relational-databases/performance/media/security-center-both.png "security-center-both") Kompatibilität|SQL Server:<br />                        [Common Criteria](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL-Datenbank:<br />                        [Microsoft Azure Trust Center: Compliance nach Funktion](https://azure.microsoft.com/support/trust-center/services/)|  
   

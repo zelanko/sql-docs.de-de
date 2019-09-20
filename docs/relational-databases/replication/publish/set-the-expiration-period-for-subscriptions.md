@@ -16,12 +16,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 558a2217f833c2c9016de2cde051baab3620bad7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9f7948fa600f68b23f5279de8a286044c8f6b245
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769774"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846555"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Festlegen des Ablaufdatums für Abonnements
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "68769774"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>So legen Sie den Ablaufzeitraum eines Abonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung fest  
   
-1.  Führen Sie auf dem Verleger [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)aus. Geben Sie den gewünschten Ablaufzeitraum für das Abonnement in Stunden für **@retention** festgelegt wird. Der Standardablaufzeitraum beträgt 336 Stunden. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Führen Sie auf dem Verleger [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)aus. Geben Sie für **\@retention** den gewünschten Ablaufzeitraum für das Abonnement in Stunden an. Der Standardablaufzeitraum beträgt 336 Stunden. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>So legen Sie den Ablaufzeitraum eines Abonnements für eine Mergeveröffentlichung fest  
   
-1.  Führen Sie auf dem Verleger [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)aus. Geben Sie den gewünschten Wert für den Ablaufzeitraum des Abonnements in Stunden für **@retention** festgelegt wird. Geben Sie die Einheiten, in denen der Ablaufzeitraum ausgedrückt wird, für **@retention_period_unit** an. Es stehen die folgenden Werte zur Auswahl:  
+1.  Führen Sie auf dem Verleger [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)aus. Geben Sie für **\@retention** den gewünschten Wert für den Ablaufzeitraum des Abonnements an. Geben Sie für **\@retention_period_unit** die Einheiten an, in denen der Ablaufzeitraum ausgedrückt wird. Es stehen die folgenden Werte zur Auswahl:  
   
     -   **1** = Woche  
   
@@ -81,11 +81,11 @@ ms.locfileid: "68769774"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>So ändern Sie den Ablaufzeitraum eines Abonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)aus. Geben Sie **retention** für **@property** und den neuen Abonnementablaufzeitraum in Stunden für **@value** festgelegt wird.  
+1.  Führen Sie auf dem Verleger [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)aus. Geben Sie **retention** für **\@property** und den neuen Abonnementablaufzeitraum in Stunden für **\@value** an.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>So ändern Sie den Ablaufzeitraum eines Abonnements für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)aus, und geben Sie dazu **@publication** und **@publisher** festgelegt wird. Der Wert von **retention_period_unit** im Resultset ist einer der folgenden:  
+1.  Führen Sie auf dem Verleger [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) aus, und geben Sie dazu **\@publication** und **\@publisher** an. Der Wert von **retention_period_unit** im Resultset ist einer der folgenden:  
   
     -   **0** = Tag  
   
@@ -95,9 +95,9 @@ ms.locfileid: "68769774"
   
     -   **3** = Jahr  
   
-2.  Führen Sie auf dem Verleger [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie **retention** für **@property** und den neuen Abonnementablaufzeitraum als Text, der auf der Einheit für die Beibehaltungsdauer aus Schritt 1 basiert, für **@value** festgelegt wird.  
+2.  Führen Sie auf dem Verleger [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie **retention** für **\@property** und den neuen Abonnementablaufzeitraum als Text, der auf der Einheit für die Beibehaltungsdauer aus Schritt 1 basiert, für **\@value** an.  
   
-3.  (Optional) Führen Sie auf dem Verleger [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie **retention_period_unit** für **@property** und eine neue Einheit für den Abonnementablaufzeitraum für **@value** festgelegt wird.  
+3.  (Optional) Führen Sie auf dem Verleger [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)aus. Geben Sie **retention_period_unit** für **\@property** und eine neue Einheit für den Abonnementablaufzeitraum für **\@value** an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

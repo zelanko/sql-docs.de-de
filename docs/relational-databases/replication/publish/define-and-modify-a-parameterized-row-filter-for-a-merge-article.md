@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907763"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846757"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67907763"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>So definieren Sie einen parametrisierten Zeilenfilter für einen Artikel in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie **@publication** , einen Namen für den Artikel für **@article** , die zu veröffentlichende Tabelle für **@source_object** , die WHERE-Klausel zur Definition des parametrisierten Filters für **@subset_filterclause** (ohne Angabe von `WHERE`) und einen der folgenden Werte für **@partition_options** an, der die Art der Partitionierung beschreibt, die aus dem parametrisierten Filter resultiert:  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) aus. Geben Sie **\@publication** an sowie für **\@article** einen Namen für den Artikel, für **\@source_object** die zu veröffentlichende Tabelle, für **\@subset_filterclause** die WHERE-Klausel zur Definition des parametrisierten Filters (ohne Angabe von `WHERE`) und für **\@partition_options** einen der folgenden Werte zur Beschreibung der Art der Partitionierung, die aus dem parametrisierten Filter resultiert:  
   
     -   **0** &ndash; Das Filtern für den Artikel ist entweder statisch oder ergibt keine eindeutige Teilmenge von Daten für jede Partition (eine "überlappende" Partition).  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67907763"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>So ändern Sie einen parametrisierten Zeilenfilter für einen Artikel in einer Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus. Geben Sie **@publication** , **@article** , den Wert **subset_filterclause** für **@property** , den Ausdruck zur Definition des parametrisierten Filters für **@value** (ohne Angabe von `WHERE`) und den Wert **1** sowohl für **@force_invalidate_snapshot** und **@force_reinit_subscription** parametrisierte Zeilenfilter definiert und geändert werden.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus. Geben Sie **\@publication**, **\@article**, den Wert **subset_filterclause** für **\@property**, den Ausdruck zur Definition des parametrisierten Filters für **\@value** (ohne Angabe von `WHERE`) und den Wert **1** sowohl für **\@force_invalidate_snapshot** als auch für **\@force_reinit_subscription** an.  
   
-2.  Wenn diese Änderung zu einem anderem Partitionierungsverhalten führt, dann führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) erneut aus. Geben Sie **@publication** , **@article** , den Wert **partition_options** für **@property** und die am besten geeignete Partitionierungsoption für **@value** an. Folgende Partitionierungsoptionen können angegeben werden:  
+2.  Wenn diese Änderung zu einem anderem Partitionierungsverhalten führt, dann führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) erneut aus. Geben Sie **\@publication**, **\@article**, den Wert **partition_options** für **\@property** und die am besten geeignete Partitionierungsoption für **\@value** an. Folgende Partitionierungsoptionen können angegeben werden:  
   
     -   **0** &ndash; Das Filtern für den Artikel ist entweder statisch oder ergibt keine eindeutige Teilmenge von Daten für jede Partition (eine "überlappende" Partition).  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d034b61a7e453790d03e1cefe1546bfce6fb6070
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bdb26625e1b461e9f82342824f07f73a02f863bf
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022218"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846768"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Verwalten einer replizierten Verlegerdatenbank als Teil einer Always On-Verfügbarkeitsgruppe
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,17 +32,17 @@ ms.locfileid: "68022218"
   
 -   Der Replikationsmonitor zeigt immer Veröffentlichungsinformationen unter dem ursprünglichen Verleger an. Diese Informationen können jedoch von einem beliebigen Replikat aus im Replikationsmonitor angezeigt werden, indem der ursprüngliche Verleger als Server hinzugefügt wird.  
   
--   Bei Verwendung von gespeicherten Prozeduren oder Replikationsverwaltungsobjekten (RMO, Replication Management Objects) zum Verwalten der Replikation im primären Replikat müssen Sie in Fällen, in denen Sie den Verlegernamen angeben, den Namen der Instanz angeben, auf der die Datenbank für die Replikation aktiviert wurde. Den entsprechenden Namen ermitteln Sie mithilfe der **PUBLISHINGSERVERNAME** -Funktion. Wenn eine Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe beitritt, sind die in den sekundären Datenbankreplikaten gespeicherten Replikationsmetadaten mit denen im primären Replikat identisch. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der primären Replikatdatenbank zur Replikation aktiviert wurden, der in den Systemtabellen des sekundären Replikats gespeicherte Verlegerinstanzname dem Namen der primären Replikatdatenbank und nicht dem Namen der sekundären Replikatdatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur sekundären Replikatdatenbank erfolgt. Wenn Sie z.B. die Replikation mit gespeicherten Prozeduren bei einem sekundären Replikat nach einem Failover konfigurieren, und Sie ein Pullabonnement für eine Veröffentlichungsdatenbank möchten, die bei einem anderen Replikat aktiviert wurde, müssen Sie den Namen des ursprünglichen Verlegers statt des aktuellen Verlegers als *@publisher* -Parameter von **sp_addpullsubscription** oder **sp_addmergepulllsubscription**angeben. Wenn Sie jedoch eine Veröffentlichungsdatenbank nach einem Failover aktivieren, entspricht der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen des aktuellen primären Hosts. In diesem Fall würden Sie den Hostnamen des aktuellen primären Replikats für den *@publisher* -Parameter verwenden.  
+-   Bei Verwendung von gespeicherten Prozeduren oder Replikationsverwaltungsobjekten (RMO, Replication Management Objects) zum Verwalten der Replikation im primären Replikat müssen Sie in Fällen, in denen Sie den Verlegernamen angeben, den Namen der Instanz angeben, auf der die Datenbank für die Replikation aktiviert wurde. Den entsprechenden Namen ermitteln Sie mithilfe der **PUBLISHINGSERVERNAME** -Funktion. Wenn eine Veröffentlichungsdatenbank einer Verfügbarkeitsgruppe beitritt, sind die in den sekundären Datenbankreplikaten gespeicherten Replikationsmetadaten mit denen im primären Replikat identisch. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der primären Replikatdatenbank zur Replikation aktiviert wurden, der in den Systemtabellen des sekundären Replikats gespeicherte Verlegerinstanzname dem Namen der primären Replikatdatenbank und nicht dem Namen der sekundären Replikatdatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur sekundären Replikatdatenbank erfolgt. Wenn Sie z. B. die Replikation mit gespeicherten Prozeduren bei einem sekundären Replikat nach einem Failover konfigurieren und ein Pullabonnement für eine Veröffentlichungsdatenbank möchten, die bei einem anderen Replikat aktiviert wurde, müssen Sie als *\@publisher*-Parameter von **sp_addpullsubscription** oder **sp_addmergepulllsubscription** den Namen des ursprünglichen anstelle des aktuellen Verlegers angeben. Wenn Sie jedoch eine Veröffentlichungsdatenbank nach einem Failover aktivieren, entspricht der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen des aktuellen primären Hosts. In diesem Fall würden Sie den Hostnamen des aktuellen primären Replikats für den *\@publisher*-Parameter verwenden.  
   
     > [!NOTE]  
-    >  Bei einigen Prozeduren, z.B. **sp_addpublication**, wird der *@publisher* -Parameter nur für Verleger unterstützt, die keine Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sind. In diesen Fällen ist er für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Always On nicht relevant.  
+    >  Bei einigen Prozeduren, z. B. **sp_addpublication**, wird der *\@publisher*-Parameter nur für Verleger unterstützt, die keine Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind. In diesen Fällen ist er für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Always On nicht relevant.  
   
 -   Synchronisieren Sie die Pullabonnements vom Abonnenten und die Pushabonnements vom aktiven Verleger aus, um ein Abonnement in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] nach einem Failover zu synchronisieren.  
   
 ##  <a name="RemovePublDb"></a> Entfernen einer veröffentlichten Datenbank aus einer Verfügbarkeitsgruppe  
  Berücksichtigen Sie die folgenden Probleme, wenn eine veröffentlichte Datenbank aus einer Verfügbarkeitsgruppe entfernt wird, oder wenn eine Verfügbarkeitsgruppe, die eine veröffentlichte Elementdatenbank aufweist, gelöscht wird.  
   
--   Wenn die Veröffentlichungsdatenbank beim ursprünglichen Verleger aus einem primären Replikat der Verfügbarkeitsgruppe entfernt wird, müssen Sie **sp_redirect_publisher** ausführen, ohne einen Wert für den *@redirected_publisher* -Parameter anzugeben, um die Umleitung für das Verleger-/Datenbankpaar zu entfernen.  
+-   Wenn die Veröffentlichungsdatenbank beim ursprünglichen Verleger aus einem primären Replikat der Verfügbarkeitsgruppe entfernt wird, müssen Sie **sp_redirect_publisher** ausführen, ohne einen Wert für den *\@redirected_publisher*-Parameter anzugeben, um die Umleitung für das Verleger-/Datenbankpaar zu entfernen.  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -68,7 +68,7 @@ ms.locfileid: "68022218"
     > [!NOTE]  
     >  Wenn eine Verfügbarkeitsgruppe entfernt wird, die über veröffentlichte Mitgliedsdatenbanken verfügt, oder wenn eine veröffentlichte Datenbank aus einer Verfügbarkeitsgruppe entfernt wird, werden alle Kopien der veröffentlichten Datenbanken im Wiederherstellungsstatus belassen. Nach der Wiederherstellung wird jede Datenbank als veröffentlichte Datenbank angezeigt. Nur eine Kopie sollte mit Veröffentlichungsmetadaten beibehalten werden. Um die Replikation für eine veröffentlichte Datenbankkopie zu deaktivieren, entfernen Sie zuerst alle Abonnements und Veröffentlichungen aus der Datenbank.  
   
-     Führen Sie **sp_dropsubscription** aus, um die Veröffentlichungsabonnements zu entfernen. Vergessen Sie nicht, den Parameter *@ignore_distributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
+     Führen Sie **sp_dropsubscription** aus, um die Veröffentlichungsabonnements zu entfernen. Vergewissern Sie sich, dass der Parameter *\@ignore_distributor* auf 1 festgelegt ist, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
   
     ```  
     USE MyDBName;  
@@ -81,7 +81,7 @@ ms.locfileid: "68022218"
         @ignore_distributor = 1;  
     ```  
   
-     Führen Sie **sp_droppublication** aus, um alle Veröffentlichungen zu entfernen. Auch hier dürfen Sie nicht vergessen, den Parameter *@ignore_distributor* auf 1 festzulegen, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
+     Führen Sie **sp_droppublication** aus, um alle Veröffentlichungen zu entfernen. Vergewissern Sie sich wieder, dass der Parameter *\@ignore_distributor* auf 1 festgelegt ist, um die Metadaten beim Verteiler für die aktive Veröffentlichungsdatenbank beizubehalten.  
   
     ```  
     EXEC sys.sp_droppublication   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 448870b31500b0a1f214b215d342ce27e3c36b61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b62c9aa125bf249ed3dc895055030feb8e178b1
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907902"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284017"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Erstellen einer Veröffentlichung aus einer Oracle-Datenbank
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,32 +117,32 @@ ms.locfileid: "67907902"
   
 2.  Wenn kein Remoteverteiler vorhanden ist, konfigurieren Sie den Remoteverteiler. Weitere Informationen finden Sie unter [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
-3.  Führen Sie auf dem Remoteverteiler, der vom Oracle-Verleger verwendet wird, [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) aus. Geben Sie den Transparent Network Substrate (TNS)-Namen der Oracle-Datenbankinstanz für **@publisher** und einen Wert von **ORACLE** oder **ORACLE GATEWAY** für **@publisher_type** eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird. `Specify` : Geben Sie den beim Herstellen der Verbindung vom Oracle-Verleger zum Remote- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler verwendeten Sicherheitsmodus auf eine der folgenden Arten an:  
+3.  Führen Sie auf dem Remoteverteiler, der vom Oracle-Verleger verwendet wird, [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) aus. Geben Sie den TNS-Namen (Transparent Network Substrate) der Oracle-Datenbankinstanz für **\@publisher** und den Wert **ORACLE** oder **ORACLE GATEWAY** für **\@publisher_type** an. `Specify` : Geben Sie den beim Herstellen der Verbindung vom Oracle-Verleger zum Remote- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler verwendeten Sicherheitsmodus auf eine der folgenden Arten an:  
   
-    -   Um die Standardeinstellung Oracle-Standardauthentifizierung zu verwenden, geben Sie den Wert **0** für **@security_mode** , den Anmeldenamen für das Schema des administrativen Replikationsbenutzers, das Sie während der Konfiguration auf dem Oracle-Verleger erstellt haben, für **@login** und das Kennwort für **@password** eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird.  
+    -   Geben Sie für die Standardeinstellung „Oracle-Standardauthentifizierung“ für **\@security_mode** den Wert **0**, für **\@login** den Anmeldenamen für das Schema des administrativen Replikationsbenutzers, das Sie während der Konfiguration auf dem Oracle-Verleger erstellt haben, und für **\@password** das Kennwort an.  
   
         > [!IMPORTANT]  
         >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen in einer Skriptdatei speichern, müssen Sie die Datei schützen, um unberechtigtem Zugriff vorzubeugen.  
   
-    -   Um die Windows-Authentifizierung zu verwenden, geben Sie den Wert **1** für **@security_mode** eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird.  
+    -   Geben Sie für **\@ security_mode** den Wert **1** an, um die Windows-Authentifizierung zu verwenden.  
   
         > [!NOTE]  
         >  Für die Verwendung der Windows-Authentifizierung muss der Oracle-Server so konfiguriert werden, dass Verbindungen mithilfe von Windows-Anmeldeinformationen möglich sind (weitere Informationen dazu finden Sie in der Oracle-Dokumentation). Darüber hinaus müssen Sie aktuell mit demselben Microsoft Windows-Konto angemeldet sein, das Sie für das Schema für den administrativen Replikationsbenutzer angegeben haben.  
   
 4.  Erstellen Sie einen Protokolllese-Agentauftrag für die Veröffentlichungsdatenbank.  
   
-    -   Wenn Sie sich nicht sicher sind, ob ein Protokolllese-Agentauftrag für die Veröffentlichungsdatenbank vorhanden ist, dann führen Sie [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) auf dem vom Oracle-Verleger verwendeten Verteiler für die Verteilerdatenbank aus. Geben Sie den Namen des Oracle-Verlegers für **@publisher** . Wenn das Resultset leer ist, muss ein Protokolllese-Agentauftrag erstellt werden.  
+    -   Wenn Sie sich nicht sicher sind, ob ein Protokolllese-Agentauftrag für die Veröffentlichungsdatenbank vorhanden ist, dann führen Sie [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) auf dem vom Oracle-Verleger verwendeten Verteiler für die Verteilerdatenbank aus. Geben Sie für **\@publisher** den Namen des Oracle-Verlegers an. Wenn das Resultset leer ist, muss ein Protokolllese-Agentauftrag erstellt werden.  
   
     -   Wenn ein Protokolllese-Agentauftrag für die Veröffentlichungsdatenbank bereits vorhanden ist, fahren Sie mit Schritt 5 fort.  
   
-    -   Führen Sie dem vom Oracle-Verleger verwendeten Verteiler für die Verteilungsdatenbank [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) aus. Geben Sie die Windows-Anmeldeinformationen , unter denen der Agent ausgeführt wird, für **@job_login** und **@job_password** eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird.  
+    -   Führen Sie dem vom Oracle-Verleger verwendeten Verteiler für die Verteilungsdatenbank [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) aus. Geben Sie für **\@job_login** und **\@job_password** die Windows-Anmeldeinformationen an, unter denen der Agent ausgeführt wird.  
   
         > [!NOTE]  
-        >  Mithilfe der Option **@job_login** -Parameter muss mit den in Schritt 3 angegebenen Anmeldeinformationen übereinstimmen. Geben Sie keine Sicherheitsinformationen zum Verleger an. Der Protokolllese-Agent stellt mit den in Schritt 3 bereitgestellten Sicherheitsinformationen eine Verbindung mit dem Verleger her.  
+        >  Der Parameter **\@job_login** muss mit den in Schritt 3 angegebenen Anmeldeinformationen übereinstimmen. Geben Sie keine Sicherheitsinformationen zum Verleger an. Der Protokolllese-Agent stellt mit den in Schritt 3 bereitgestellten Sicherheitsinformationen eine Verbindung mit dem Verleger her.  
   
 5.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) aus, um die Veröffentlichung zu erstellen. Weitere Informationen finden Sie unter [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-6.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)aus. Geben Sie den in Schritt 4 für **@publication** verwendeten Veröffentlichungsnamen und die Windows-Anmeldeinformationen, unter denen der Momentaufnahme-Agent ausgeführt wird, für **@job_name** und **@password** eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird. Wenn zum Herstellen der Verbindung mit dem Verleger die Oracle-Standardauthentifizierung verwendet werden soll, müssen Sie außerdem den Wert **0** für **@publisher_security_mode** und die Oracle-Anmeldeinformationen für **@publisher_login** und **@publisher_password** eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+6.  Führen Sie auf dem Verteiler für die Verteilerdatenbank [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)aus. Geben Sie für **\@publication** den in Schritt 4 verwendeten Veröffentlichungsnamen und für **\@job_name** und **\@password** die Windows-Anmeldeinformationen an, unter denen der Momentaufnahme-Agent ausgeführt wird. Wenn zum Herstellen der Verbindung mit dem Verleger die Oracle-Standardauthentifizierung verwendet werden soll, müssen Sie außerdem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die Oracle-Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

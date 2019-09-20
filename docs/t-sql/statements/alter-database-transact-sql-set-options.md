@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110286"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304808"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -732,9 +732,6 @@ Deaktiviert den Abfragespeicher. OFF ist der Standardwert.
 
 CLEAR         
 Entfernt den Inhalt des Abfragespeichers.
-
-> [!NOTE]
-> Für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] müssen Sie `ALTER DATABASE SET QUERY_STORE` aus der Benutzerdatenbank ausführen. Ein Ausführen dieser Anweisung aus einer anderen Data Warehouse-Instanz wird nicht unterstützt.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 Beschreibt den Betriebsmodus des Abfragespeichers. 
@@ -2911,20 +2908,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2935,8 +2955,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 Der Name der Datenbank, die geändert werden soll.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**Gilt für** Azure SQL Data Warehouse (Vorschauversion)
+**<auto_option> ::=**
+
+Steuert automatische Optionen.
+
+AUTO_CREATE_STATISTICS { ON | OFF } ON Der Abfrageoptimierer erstellt nach Bedarf Statistiken für einzelne Spalten in Abfrageprädikaten, um Abfragepläne und die Abfrageleistung zu verbessern. Diese Statistiken für einzelne Spalten werden erstellt, wenn der Abfrageoptimierer Abfragen kompiliert. Die Statistiken für einzelne Spalten werden nur für Spalten erstellt, die noch nicht der ersten Spalte eines vorhandenen Statistikobjekts entsprechen.
+
+Der Standardwert ist ON. Für die meisten Datenbanken empfiehlt sich die Verwendung der Standardeinstellung.
+
+OFF Der Abfrageoptimierer erstellt beim Kompilieren von Abfragen keine Statistiken für einzelne Spalten in Abfrageprädikaten. Das Festlegen dieser Option auf OFF kann zu suboptimalen Abfrageplänen und einer beeinträchtigten Abfrageleistung führen.
+Sie können den Status dieser Option ermitteln, indem Sie die Spalte „is_auto_create_stats_on“ in der „sys.databases“-Katalogsicht untersuchen. Sie können den Status auch durch Untersuchen der Eigenschaft „IsAutoCreateStatistics“ der DATABASEPROPERTYEX-Funktion bestimmen.
+Weitere Informationen finden Sie im Abschnitt „Verwenden der datenbankweiten Statistikoptionen“ unter „Statistiken“.
+
+**<db_encryption_option> ::=**
+
+Steuert den Status der Datenbankverschlüsselung.
+
+ENCRYPTION {ON | OFF} ON Legt fest, dass die Datenbank verschlüsselt wird.
+
+OFF Legt fest, dass die Datenbank nicht verschlüsselt wird.
+
+Weitere Informationen finden Sie unter „Transparent Data Encryption“ und „Transparent Data Encryption in Azure SQL-Datenbank“.
+
+Wenn die Verschlüsselung auf Datenbankebene aktiviert wird, werden alle Dateigruppen verschlüsselt. Alle neuen Dateigruppen erben die verschlüsselte Eigenschaft. Wenn Dateigruppen in der Datenbank als READ ONLY festgelegt sind, schlägt der Datenbankverschlüsselungsvorgang fehl.
+Sie können sowohl den Verschlüsselungsstatus der Datenbank als auch den Status des Verschlüsselungsscans mithilfe der dynamischen Verwaltungssicht „sys.dm_database_encryption_keys“ anzeigen.
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+Steuert, ob der Abfragespeicher in diesem Data Warehouse aktiviert ist.     
+
+ON         
+Aktiviert den Abfragespeicher.
+
+OFF         
+Deaktiviert den Abfragespeicher. OFF ist der Standardwert.
+
+> [!NOTE]
+> Für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] müssen Sie `ALTER DATABASE SET QUERY_STORE` aus der Benutzerdatenbank ausführen. Ein Ausführen dieser Anweisung aus einer anderen Data Warehouse-Instanz wird nicht unterstützt.
+
+**\<result_set_caching_option> ::=**    
+**Gilt für**: Azure SQL Data Warehouse (Vorschau)
 
 Sie müssen während der Ausführung dieses Befehls mit der `master`-Datenbank verbunden sein.  Änderungen an dieser Datenbankeinstellung werden sofort wirksam.  Speicherkosten fallen durch das Zwischenspeichern von Abfrageresultsets an. Nachdem das Zwischenspeichern von Ergebnissen für eine Datenbank deaktiviert wurde, werden zuvor dauerhaft zwischengespeicherte Ergebnisse sofort aus dem Azure SQL Data Warehouse-Speicher gelöscht. Eine neue Spalte namens „is_result_set_caching_on“ wurde in `sys.databases` eingeführt, um die Einstellung für die Zwischenspeicherung von Ergebnissen für eine Datenbank anzuzeigen.  
 
@@ -2954,22 +3013,7 @@ Gibt an, dass von dieser Datenbank zurückgegebene Abfrageresultsets nicht im Az
 Befehl|Wie|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-**Gilt für** Azure SQL Data Warehouse (Vorschauversion)
-
-ON aktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
-
-OFF deaktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
-
-Wenn Sie für eine Datenbank die Option READ_COMMITTED_SNAPSHOT auf ON oder OFF festlegen, werden alle aktiven Verbindungen getrennt.  Sie sollten diese Änderung innerhalb des Datenbankwartungsfensters vornehmen oder warten, bis die Verbindung mit der Datenbank (mit Ausnahme der Verbindung, die zur Ausführung des ALTER DATABASE-Befehls verwendet wird) getrennt wird.  Die Datenbank muss sich nicht im Einzelbenutzermodus befinden.  Die Einstellung READ_COMMITTED_SNAPSHOT kann nicht auf Sitzungsebene geändert werden.  Sie können mithilfe der Spalte „is_read_committed_snapshot_on“ in „sys.databases“ überprüfen, welche Einstellung für die Datenbank festgelegt ist.
-
-Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen möglicherweise langsamer ausgeführt, wenn mehrere Datenversionen vorliegen und nach einer Version gesucht wird. Lange Transaktionen können außerdem zu einer größeren Datenbank führen, wenn von diesen Transaktionen Änderungen vorgenommen werden, die die Bereinigung von Versionen verhindern.  
-
-
-
-
-## <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Remarks
 
 Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn die folgenden Anforderungen erfüllt sind:
 
@@ -2979,6 +3023,21 @@ Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn 
 
 Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (ON), werden Ergebnisse für alle Abfragen zwischengespeichert, bis der Cache voll ist. Ausgenommen sind Abfragen mit nicht deterministischen Funktionen wie „DateTime.Now()“.   Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
 
+**<snapshot_option> ::=**
+
+Berechnet die Isolationsstufe für die Transaktionen.
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**Gilt für**: Azure SQL Data Warehouse (Vorschau)
+
+ON aktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
+
+OFF deaktiviert die Option READ_COMMITTED_SNAPSHOT auf Datenbankebene.
+
+Wenn Sie für eine Datenbank die Option READ_COMMITTED_SNAPSHOT auf ON oder OFF festlegen, werden alle aktiven Verbindungen getrennt.  Sie sollten diese Änderung innerhalb des Datenbankwartungsfensters vornehmen oder warten, bis die Verbindung mit der Datenbank (mit Ausnahme der Verbindung, die zur Ausführung des ALTER DATABASE-Befehls verwendet wird) getrennt wird.  Die Datenbank muss sich nicht im Einzelbenutzermodus befinden.  Die Einstellung READ_COMMITTED_SNAPSHOT kann nicht auf Sitzungsebene geändert werden.  Sie können mithilfe der Spalte „is_read_committed_snapshot_on“ in „sys.databases“ überprüfen, welche Einstellung für die Datenbank festgelegt ist.
+
+Wenn für eine Datenbank READ_COMMITTED_SNAPSHOT aktiviert ist, werden Abfragen möglicherweise langsamer ausgeführt, wenn mehrere Datenversionen vorliegen und nach einer Version gesucht wird. Lange Transaktionen können außerdem zu einer größeren Datenbank führen, wenn von diesen Transaktionen Änderungen vorgenommen werden, die die Bereinigung von Versionen verhindern.  
+
 ## <a name="permissions"></a>Berechtigungen
 
 Ein Benutzer muss entweder über die Serverebenenprinzipal-Anmeldung verfügen, die durch den Bereitstellungsprozess erstellt wurde, oder ein Mitglied der `dbmanager`-Datenbankrolle sein, um die Option RESULT_SET_CACHING festlegen zu können.  
@@ -2987,28 +3046,90 @@ Ein Benutzer benötigt die ALTER-Berechtigung für eine Datenbank, um die Option
 
 ## <a name="examples"></a>Beispiele
 
-### <a name="enable-result-set-caching-for-a-database"></a>Aktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
+### <a name="a-enabling-the-query-store"></a>A. Aktivieren des Abfragespeichers
+
+Im folgenden Beispiel werden der Abfragespeicher aktiviert und Parameter des Abfragespeichers konfiguriert.
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>B. Aktivieren des Abfragespeichers mit Wartestatistiken
+
+Im folgenden Beispiel werden der Abfragespeicher aktiviert und Parameter des Abfragespeichers konfiguriert.
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>C. Aktivieren des Abfragespeichers mit benutzerdefinierten Erfassungsrichtlinienoptionen
+
+Im folgenden Beispiel werden der Abfragespeicher aktiviert und Parameter des Abfragespeichers konfiguriert.
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>D. Aktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>Deaktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
+### <a name="d-disable-result-set-caching-for-a-database"></a>D. Deaktivieren der Zwischenspeicherung von Resultsets für eine Datenbank
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>Überprüfen der Einstellung für die Zwischenspeicherung von Resultsets für eine Datenbank
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. Überprüfen der Einstellung für die Zwischenspeicherung von Resultsets für eine Datenbank
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Überprüfen der Anzahl von Abfragen mit Resultset-Cachetreffern oder -fehlern
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>D. Überprüfen der Anzahl von Abfragen mit Resultset-Cachetreffern oder -fehlern
 
 ```sql
 SELECT  
@@ -3028,7 +3149,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Überprüfen auf Resultsetcachetreffer oder -fehler für eine Abfrage
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>D. Überprüfen auf Resultsetcachetreffer oder -fehler für eine Abfrage
 
 ```sql
 If
@@ -3040,7 +3161,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Überprüfen auf alle Abfragen mit Resultset-Cachetreffern
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>D. Überprüfen auf alle Abfragen mit Resultset-Cachetreffern
 
 ```sql
 SELECT *  
@@ -3049,6 +3170,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Aktivieren der Option READ_COMMITTED_SNAPSHOT für eine Datenbank
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3064,3 +3186,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [Sprachelemente für SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

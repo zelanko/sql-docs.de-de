@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531027"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874893"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Versionshinweise für SQL Server Data Tools (SSDT)
 
@@ -497,7 +497,7 @@ _SSDT für Visual Studio 2015._
 - Ein Problem wurde behoben, bei dem ChangeSource auf der Strukturdatenquelle keine Änderungen bei Kontextausdrücken beibehalten hat
 - Ein Problem wurde behoben, bei dem M-Ausdrucksfehler Fehler beim Update des Modells ohne angezeigte Fehlermeldung verursacht haben.
 - Ein Problem wurde behoben, bei dem beim Schließen von SSDT folgender Fehler auftrat: „Das Build muss beendet werden, bevor die Projektmappe geschlossen werden kann.“
-- Ein Problem wurde behoben, bei dem VS anscheinend hängt, wenn der falsche Identitätswechselmodus im Kompatibilitätsgradmodus 1400 festgelegt wird. 
+- Ein Problem wurde behoben, bei dem VS anscheinend nicht reagiert, wenn der falsche Identitätswechselmodus im Kompatibilitätsgradmodus 1400 festgelegt wird. 
 - Die Detailzeileneigenschaft wird jetzt nur zu JSON serialisiert, wenn sie nicht leer ist (Standardeinstellung umgestellt).
 - Der OLEDB-Triver von Oracle ist nun in der List für den tabellarischen Direct Query-Modus verfügbar.
 - Das Hinzufügen von M-Ausdrücken in Kombatibilitätsgradmodellen von 1400 erscheinen nun im tabellarischen Modell-Explorer (TME) bzw. wird darin aktualisiert.
@@ -844,7 +844,7 @@ Der SSDT-Tabellen-Designer umfasst jetzt eine interne SSAS-Instanz, die der SSDT
 * Folgendes Problem im Dialogfeld „Projekteigenschaften“ des SSDT AS-Tabellen-Designers wurde behoben: Das Dialogfeld wird jetzt bei einer hochauflösenden Skalierung ordnungsgemäß verankert.
 * Folgendes Problem in SSDT-AS-Projekten wurde behoben: Die Aktualisierung bestimmter Modelle mit eingefügten Tabellen konnte einen Fehler verursachen.
 * Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Das Einfügen gefüllter Blattreihen von Excel erfolgte sehr langsam, und es wurden zahlreiche unerwünschte Spalten erstellt.
-* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Die Analyse umfangreicher statischer DataTable-Ausdrücke erfolgte sehr langsam oder schien ein Hängenbleiben zu verursachen.
+* Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Die Analyse umfangreicher statischer DataTable-Ausdrücke erfolgte sehr langsam oder schien nicht mehr zu reagieren.
 * Folgendes Problem im SSDT AS-Tabellen-Designer wurde behoben: Measures und KPI-Werte lassen sich jetzt zu der im Editor ausgewählten aktuellen Perspektive hinzufügen.
 * Folgendes Problem in SSDT wurde behoben: Der Datenimport von SQL Azure in AS-Projekte unterstützt keine anderen Schematypen als „dbo“.
 
