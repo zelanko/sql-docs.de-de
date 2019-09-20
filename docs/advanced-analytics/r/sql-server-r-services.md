@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 973c09be9cff6e66043b056e1a772ab8974cebb4
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957490"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149929"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Was ist SQL Server 2016 R Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Es gibt zwei Möglichkeiten zum Ausführen von r-Skripts in r Services:
 
 + Die gängigste Methode ist die Verwendung der gespeicherten T-SQL-Prozedur [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ Sie können auch Ihren bevorzugten R-Client verwenden und Skripts schreiben, die die Ausführung (als remotecomputekontext bezeichnet) per Push auf eine Remote SQL Server überführen. Weitere Informationen finden [Sie unter Einrichten einer Data Science-Client-R-Entwicklung](../r/set-up-a-data-science-client.md) .
++ Sie können auch Ihren bevorzugten R-Client verwenden und Skripts schreiben, die die Ausführung (als *remotecomputekontext*bezeichnet) per Push auf eine Remote SQL Server überführen. Weitere Informationen finden [Sie unter Einrichten einer Data Science-Client-R-Entwicklung](../r/set-up-a-data-science-client.md) .
 
 <a name="packages"></a>
 
@@ -81,8 +81,8 @@ Zusätzlich zu den Unternehmens Paketen von Microsoft können Sie auch Open-Sour
 
 1. Schreiben Ihres ersten R-Skripts
 
-    + Schnellstart: [Ausführen eines "Hello World"-Skripts in R](../tutorials/quickstart-r-run-using-tsql.md)
-    + Schnellstart: [Erstellen eines Vorhersagemodells in R](../tutorials/quickstart-r-create-predictive-model.md)
+    + Schnellstart: [Einfache R-Skripts in SQL Server erstellen und ausführen](../tutorials/quickstart-r-create-script.md)
+    + Schnellstart: [Erstellen und Trainieren eines Vorhersagemodells in R](../tutorials/quickstart-r-train-score-model.md)
     + Tutorial: [Verwenden von R in T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Durchsuchen von Daten, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (fünf teilige Reihe)
     + Tutorial: [Verwenden von r Services in r-Tools](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Durchsuchen von Daten, Erstellen von Diagrammen und Diagrammen, Ausführen von Featureentwicklung, trainieren und Bereitstellen von Modellen und Treffen von Vorhersagen (sechs teilige Reihe)
 
