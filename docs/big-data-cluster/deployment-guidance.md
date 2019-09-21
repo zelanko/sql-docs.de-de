@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878716"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174271"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Bereitstellen auf [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
@@ -148,7 +148,7 @@ Die folgenden Umgebungsvariablen werden für Sicherheitseinstellungen verwendet,
 | **CONTROLLER_PASSWORD** | Erforderlich |Das Kennwort für den Clusteradministrator. |
 | **MSSQL_SA_PASSWORD** | Erforderlich |Das Kennwort des Systemadministrators für die SQL-Masterinstanz. |
 | **KNOX_PASSWORD** | Erforderlich |Das Kennwort für den Knox- **root** -Benutzer. Beachten Sie, dass bei einer Standard Authentifizierung nur der Benutzer, der für Knox unterstützt wird, **root**ist.|
-| **ACCEPT_EULA**| Erforderlich für die erste Verwendung von `azdata`| Erfordert keinen Wert. Wenn dieser Wert als Umgebungsvariable festgelegt ist, werden die Lizenzbedingungen für SQL Server und `azdata` akzeptiert. Wenn er nicht als Umgebungsvariable festgelegt ist, können Sie `--accept-eula` angeben, wenn Sie den Befehl `azdata` zum ersten Mal verwenden.|
+| **ACCEPT_EULA**| Erforderlich für die erste Verwendung von `azdata`| Legen Sie diese Einstellung auf "yes" fest. Wenn dieser Wert als Umgebungsvariable festgelegt ist, werden die Lizenzbedingungen für SQL Server und `azdata` akzeptiert. Wenn er nicht als Umgebungsvariable festgelegt ist, können Sie `--accept-eula=yes` angeben, wenn Sie den Befehl `azdata` zum ersten Mal verwenden.|
 | **DOCKER_USERNAME** | Optional | Der Benutzername, mit dem auf Containerimages zugegriffen wird, wenn diese in einem privaten Repository gespeichert sind. Weitere Informationen darüber, wie Sie ein privates Docker-Repository zur Bereitstellung von Big-Data-Clustern nutzen, finden Sie im Artikel [Offlinebereitstellungen](deploy-offline.md).|
 | **DOCKER_PASSWORD** | Optional |Das Kennwort, mit dem auf das oben erwähnte private Repository zugegriffen wird. |
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
