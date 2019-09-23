@@ -83,7 +83,7 @@ ms.locfileid: "68126051"
   
 1.  Um den Deinstallationsvorgang zu starten, wechseln Sie in der **Systemsteuerung** zu **Programme und Funktionen**.  
 
-2.  Klicken Sie mit der rechten Maustaste auf **SQL Server 2016** und wählen Sie **Deinstallieren**. Klicken Sie auf **Entfernen**. Dadurch wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistent gestartet.  
+2. Klicken Sie mit der rechten Maustaste auf **SQL Server 2016**, und wählen Sie **Deinstallieren** aus. Klicken Sie auf **Entfernen**. Dadurch wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistent gestartet.  
   
      Unterstützungsregeln für Setup werden ausgeführt, um die Computerkonfiguration zu überprüfen. Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
