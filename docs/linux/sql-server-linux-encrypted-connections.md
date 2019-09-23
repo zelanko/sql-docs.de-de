@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077287"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016864"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Verschlüsseln von Verbindungen mit SQL Server für Linux
 
@@ -69,7 +69,7 @@ TLS wird zum Verschlüsseln von Verbindungen einer Clientanwendung mit [!INCLUDE
         - **Windows**:  Importieren Sie die PEM-Datei als Zertifikat unter „Aktueller Benutzer -> Vertrauenswürdige Stammzertifizierungsstellen -> Zertifikate“.
         - **macOS**: 
            - Kopieren Sie das Zertifikat in ```/usr/local/etc/openssl/certs```.
-           - Führen Sie den folgenden Befehl aus, um den Hashwert zu erhalten: ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```.
+           - Führen Sie den folgenden Befehl aus, um den Hashwert zu erhalten: ```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```.
            - Benennen Sie das Zertifikat in den Wert um. Beispiel: ```mv mssql.pem dc2dd900.0```. Stellen Sie sicher, dass dc2dd900.0 sich in ```/usr/local/etc/openssl/certs``` befindet.
     
 -   **Exemplarische Verbindungszeichenfolgen** 

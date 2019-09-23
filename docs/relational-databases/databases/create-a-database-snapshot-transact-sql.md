@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7376d783bd2aab594d0beeb18dc1cc03af4b9c50
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0acec2dd2e4e7e9d08d979febf85cf98f883e77
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025878"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066875"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Erstellen einer Datenbankmomentaufnahme (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,14 +131,14 @@ AdventureWorks_snapshot_evening
   
 -   A. [Erstellen einer Momentaufnahme für die AdventureWorks-Datenbank](#Creating_on_AW)  
   
--   B. [Erstellen einer Momentaufnahme für die Sales-Datenbank](#Creating_on_Sales)  
+-   B. [Erstellen einer Momentaufnahme für die Sales-Datenbank](#Creating_on_Sales)
   
 ####  <a name="Creating_on_AW"></a> A. Erstellen einer Momentaufnahme für die AdventureWorks-Datenbank  
  In diesem Beispiel wird eine Datenbankmomentaufnahme für die `AdventureWorks` -Datenbank erstellt. Der Momentaufnahmename, `AdventureWorks_dbss_1800`, und der Dateiname der entsprechenden Sparsedatei, `AdventureWorks_data_1800.ss`, geben als Erstellungszeit 18:00 Uhr an.  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
-( NAME = AdventureWorks_Data, FILENAME =   
+( NAME = AdventureWorks, FILENAME =   
 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\AdventureWorks_data_1800.ss' )  
 AS SNAPSHOT OF AdventureWorks;  
 GO  

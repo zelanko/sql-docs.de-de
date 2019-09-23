@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929803"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096936"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ Parameterwerte werden während der Kompilierung oder Neukompilierung für die fo
 -  Abfragen, die über „sp_executesql“ übermittelt werden 
 -  Vorbereitete Abfragen
 
-Weitere Informationen zur Problembehandlung bei fehlerhafter Parameterermittlung finden Sie unter [Problembehandlung bei Abfragen mit parameterempfindlichem Abfrageausführungsplan](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
+Weitere Informationen zur Problembehandlung bei fehlerhafter Parameterermittlung finden Sie unter [Problembehandlung bei Abfragen mit parameterempfindlichem Abfrageausführungsplan](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems).
 
 > [!NOTE]
 > Für Abfragen, die den `RECOMPILE`-Hinweis verwenden, werden jeweils die Parameterwerte und aktuellen Werte der lokalen Variablen ermittelt. Die ermittelten Werte (der Parameter und lokalen Variablen) sind die, die an dem Ort direkt vor der Anweisung mit dem `RECOMPILE`-Hinweis vorhanden sind. Im Gegensatz dazu werden bei Parametern die Werte, die innerhalb des Batchaufrufs übermittelt werden, nicht geprüft.
