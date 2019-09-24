@@ -21,26 +21,25 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07d2e8032bb596faaac577194273760c59006645
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418861"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207722"
 ---
-# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
+# <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Ermöglicht das Erzwingen eines bestimmten Plans für eine bestimmte Abfrage.  
   
- Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, wird jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mal, wenn die Abfrage gefunden wird, versucht, den Plan im Optimierer zu erzwingen. Wenn die Plan Erzwingung fehlschlägt, wird ein XEvent ausgelöst, und der Optimierer wird angewiesen, auf normale Weise zu optimieren.  
+ Wenn ein Plan für eine bestimmte Abfrage erzwungen wird, wird jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mal, wenn die Abfrage gefunden wird, versucht, den Plan im Abfrageoptimierer zu erzwingen. Wenn die Plan Erzwingung fehlschlägt, wird ein erweitertes Ereignis ausgelöst, und der Abfrageoptimierer wird angewiesen, auf die normale Weise zu optimieren.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
@@ -60,7 +59,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zu den Abfragen im Abfrage Speicher zurückgegeben.  
   
-```  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -71,7 +70,7 @@ JOIN sys.query_store_query_text AS Txt
   
  Nachdem Sie die query_id und plan_id identifiziert haben, die Sie erzwingen möchten, verwenden Sie das folgende Beispiel, um zu erzwingen, dass die Abfrage einen Plan verwendet.  
   
-```  
+```sql  
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
@@ -80,8 +79,9 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Überwachen der Leistung mithilfe des Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
+ [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
+ [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   
   

@@ -21,24 +21,23 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cdb3fc64a18965594c315b589922b14b66be49b
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 9cff3bb0491db53e195a692014b74a08c4fdcdee
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418916"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207706"
 ---
-# <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
+# <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Ermöglicht das Deaktivieren eines bestimmten Plans für eine bestimmte Abfrage.  
+  Ermöglicht das Deaktivieren eines zuvor erzwungenen Plans für eine bestimmte Abfrage.  
   
  ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
 ```  
-  
 sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
@@ -58,7 +57,7 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Informationen zu den Abfragen im Abfrage Speicher zurückgegeben.  
   
-```  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -69,7 +68,7 @@ JOIN sys.query_store_query_text AS Txt
   
  Nachdem Sie die query_id und plan_id identifiziert haben, die Sie erzwingen möchten, verwenden Sie das folgende Beispiel, um den Plan zu erzwingen.  
   
-```  
+```sql  
 EXEC sp_query_store_unforce_plan 3, 3;  
 ```  
   
@@ -80,6 +79,6 @@ EXEC sp_query_store_unforce_plan 3, 3;
  [sp_query_store_reset_exec_stats &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
  [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
-  
+ [Überwachen der Leistung mithilfe des Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Bewährte Methoden für den Abfragespeicher](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)     
   
