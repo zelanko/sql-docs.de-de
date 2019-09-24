@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd458727fad637414d7c71865b2633f3caf80175
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383556"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199408"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Python-Tutorials für SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,9 @@ Wenn Sie noch nicht mit SQL Server Machine Learning Services vertraut sind, kön
 
 | Schnellstart | Beschreibung |
 |-|-|
-| [Hallo Welt in Python und SQL Server](quickstart-python-run-using-t-sql.md) | Erfahren Sie mehr über die Grundlagen zum Abrufen von python in T-SQL. |
-| [Behandeln von Eingaben und Ausgaben mithilfe von python in SQL Server](quickstart-python-inputs-and-outputs.md) | Erfahren Sie, wie Sie Eingaben und Ausgaben für python in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)verarbeiten. |
-| [Python-Datenstrukturen in SQL Server](quickstart-python-data-structures.md) | Zeigt, wie SQL Server das python Pandas-Paket verwendet, um Datenstrukturen zu verarbeiten. |
-| [Trainieren und Verwenden des ersten Modells](quickstart-python-train-score-in-tsql.md) | Erläutert, wie ein python-Modell erstellt, trainiert und verwendet wird, um neue Daten vorherzusagen. |
+| [Hallo Welt in Python und SQL Server](quickstart-python-create-script.md) | Erfahren Sie mehr über die Grundlagen zum Abrufen von python in T-SQL mithilfe von [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). |
+| [Verarbeiten von Datentypen und Objekten mithilfe von python in SQL Server](quickstart-python-data-structures.md) | Zeigt, wie SQL Server das python Pandas-Paket verwendet, um Datenstrukturen zu verarbeiten. |
+| [Erstellen und bewerten eines Vorhersagemodells in python](quickstart-python-train-score-model.md) | Erläutert, wie ein python-Modell erstellt, trainiert und verwendet wird, um Vorhersagen aus neuen Daten zu treffen. |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

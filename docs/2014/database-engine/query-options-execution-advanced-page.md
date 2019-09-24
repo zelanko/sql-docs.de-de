@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118104"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199325"
 ---
 # <a name="query-options-execution-advanced-page"></a>Abfrageausführung (Seite Erweitert)
 
@@ -58,11 +58,11 @@ Verbindung **nach Ausführung der Abfrage trennen** Wenn dieses Kontrollkästche
 
 **Abschlusszeit anzeigen** Ermöglicht es Ihnen, die Zeit, zu der die Abfrage Ausführung abgeschlossen wurde, nach den Abfrage Ergebnissen oder auf der Registerkarte Nachrichten zu drucken.
 
-Nachweis **Protokoll für VB-Enklaven für Always Encrypted** Ermöglicht das Festlegen eines Nachweis Protokolls für VB-Enklaven (Virtualization Based Security), die von Always Encrypted mit sicheren Enklaven verwendet werden. 
+Nachweis **Protokoll für VB-Enklaven für Always Encrypted** Ermöglicht das Festlegen eines Nachweis Protokolls für die virtualisierungsbasierte Sicherheit (VB)-Enklaven, die von Always verschlüsselt mit sicheren Enklaven verwendet werden.
 
-  Die derzeit unterstützten Nachweis Protokolle lauten:
+Die derzeit unterstützten Nachweis Protokolle lauten:
 
-  * Host-Überwachungsdienst – ein Nachweis Protokoll, das den Windows-Host-Überwachungsdienst (HGS) verwendet.
+* Host-Überwachungsdienst: ein Nachweis Protokoll, das den Windows-Host-Überwachungsdienst (HGS) verwendet.
 
 Weitere Informationen finden Sie unter [Always Encrypted mit sicheren Enklaven](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) und [sicherem Enclave](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)-Nachweis.
 

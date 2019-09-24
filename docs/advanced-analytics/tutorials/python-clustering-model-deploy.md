@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00ce4893cfe96fcf115227cc5a7fd38085584dda
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294375"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199356"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Bereitstellen eines Modells in python zum Kategorisieren von Kunden mit SQL Server Machine Learning Services
 
@@ -186,7 +186,7 @@ Im vierten Teil dieser tutorialreihe haben Sie die folgenden Schritte ausgeführ
 
 Weitere Informationen zur Verwendung von python in SQL Server Machine Learning Services finden Sie unter:
 
-* [Schnellstart: Ausführen eines "Hello World"-python-Skripts auf SQL Server Machine Learning Services](quickstart-python-run-using-t-sql.md)
+* [Schnellstart: Erstellen und Ausführen einfacher python-Skripts mit SQL Server Machine Learning Services](quickstart-python-create-script.md)
 * [Weitere Python-Tutorials für SQL Server Machine Learning Services](sql-server-python-tutorials.md)
 * [Installieren von Python-Paketen mit sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
 
