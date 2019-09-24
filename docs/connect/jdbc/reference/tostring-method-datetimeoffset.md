@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ef3cd31068c324475e8edfe8bf8f7c16acc4a2de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3acffe6a922084fd63e38a8e212b5cf86d6b278
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MTE75
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968512"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096910"
 ---
 # <a name="tostring-method-datetimeoffset"></a>toString-Methode (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,8 +32,8 @@ public String toString()
 ## <a name="return-value"></a>Rückgabewert  
  Eine Zeichen folgen Darstellung des **DateTimeOffset** -Objekts.  
   
-## <a name="remarks"></a>Bemerkungen  
- Die Zeichenfolge hat das Format *yyyy*-*mm*-*DD * * HH*:*mm*:*SS*[. *fffffff*] [+ |-]*HH*:*mm*.  
+## <a name="remarks"></a>Remarks  
+ Die Zeichenfolge weist folgendes Format auf: `YYYY-MM-DD HH:mm:ss[.fffffff] [+|-]HH:mm`.  
   
  Die Sekundenbruchteile der zurückgegebenen Zeichenfolge werden bis zur angegebenen Genauigkeit mit Nullen aufgefüllt. Beispielsweise wird ein **DateTimeOffset (6)** mit dem Wert "2010-03-10 12:34:56.78-08:00" von "DateTimeOffset. ToString" als "2010-03-10 12:34:56.780000-08:00" formatiert.  
   
