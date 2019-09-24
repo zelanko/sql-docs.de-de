@@ -253,7 +253,7 @@ Eine Liste installierter Filter wird durch Aufrufen von **sp_help_fulltext_syste
 |.vssscc | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.wri | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.wtx | C7310720-AC80-11D1-8DF3-00C04FB6EF4F | 12.0.6828.0 |
-|*.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
+|.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>Semantische Suche
 Die [semantische Suche](../relational-databases/search/semantic-search-sql-server.md) basiert auf dem Volltextsuche-Feature, um statistisch relevante *Schlüsselausdrücke* zu extrahieren und zu indizieren. Dies ermöglicht Ihnen, die Bedeutung in Dokumenten in Ihrer Datenbank abzufragen. Außerdem unterstützt es die Identifizierung ähnlicher Dokumente.
