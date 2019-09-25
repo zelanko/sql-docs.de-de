@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68889609"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
@@ -68,7 +68,7 @@ ms.locfileid: "68889609"
 ### <a name="measures"></a>Measures  
  Die Werte innerhalb der Cubezellen stellen die beiden Measures Packages und Last dar. Das Packages-Measure gibt die Anzahl importierter Pakete an, und die `Sum`-Funktion wird zum Aggregieren der Measurefakten verwendet. Das Last-Measure gibt das Empfangsdatum an, und die `Max`-Funktion wird zum Aggregieren der Measurefakten verwendet.  
   
-### <a name="dimensions"></a>Abmessungen  
+### <a name="dimensions"></a>Dimensionen  
  Die Route-Dimension stellt dar, auf welchem Weg die Importwaren ihr Ziel erreichen. Zu den Elementen dieser Dimension gehören ground, nonground, air, sea, road und rail. Die Source-Dimension gibt die Orte an, an denen die Importe produziert werden, z. B. Africa oder Asia. Die Time-Dimension stellt die Quartale und Halbjahre eines einzelnen Jahres dar.  
   
 ### <a name="aggregates"></a>Aggregate  

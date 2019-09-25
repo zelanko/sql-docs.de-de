@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68715369"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren der Daten
@@ -48,13 +48,13 @@ Im ursprünglichen öffentlichen DataSet wurden die Taxi-IDs und die Fahrt Daten
   
 -   Jeder Fahrpreisdatensatz enthält die Zahlungsinformationen wie die Zahlungsart, der Gesamtbetrag und den Fahrtpreis.
   
--   Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die _Tip\_Amount_ -Spalte enthält fortlaufende numerische Werte und kann als Bezeichnungs Spalte für die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _Tip\_-Klassen_ Spalte verfügt über mehrere **Klassen Bezeichnungen** und kann daher als Bezeichnung für Klassifizierungs Aufgaben mit mehreren Klassen verwendet werden.
+-   Die letzten drei Spalten können für verschiedene Machine Learning-Tasks verwendet werden. Die _Tip\_Amount_ -Spalte enthält fortlaufende numerische Werte und kann als Bezeichnungs **Spalte für** die Regressionsanalyse verwendet werden. Die Spalte _tipped_ verfügt nur über Ja/Nein-Werte und wird für die binäre Klassifikation verwendet. Die _Tip\_-Klassen_ Spalte verfügt über mehrere **Klassen Bezeichnungen** und kann daher als Bezeichnung für Klassifizierungs Aufgaben mit mehreren Klassen verwendet werden.
   
     Diese exemplarische Vorgehensweise enthält nur die binäre Klassifizierungsaufgabe. Sie können gerne versuchen, Modelle für die anderen beiden Machine Learning-Tasks und für mehrklassige Klassifizierung zu erstellen.
   
 -   Die Werte, die für die Beschriftungs Spalten verwendet werden, basieren alle auf der _Tip\_Amount_ -Spalte, die diese Geschäftsregeln verwendet:
   
-    |Name der abgeleiteten Spalte|Regel|
+    |Name der abgeleiteten Spalte|Rule|
     |-|-|
      |tipped|If tip_amount > 0, tipped = 1, otherwise tipped = 0|
     |tip_class|Class 0: tip_amount = $0<br /><br />Class 1: tip_amount > $0 and tip_amount <= $5<br /><br />Class 2: tip_amount > $5 and tip_amount <= $10<br /><br />Class 3: tip_amount > $10 and tip_amount <= $20<br /><br />Class 4: tip_amount > $20|

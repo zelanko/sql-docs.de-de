@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70978406"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Überwachen von SQL Server Machine Learning Services mithilfe dynamischer Verwaltungs Sichten (DMVs)
@@ -280,7 +280,7 @@ Die zurückgegebenen Spalten lauten:
 | Package | Der Name des installierten Pakets. |
 | Version | Version des Pakets. |
 | Depends (Abhängig) | Listet die Pakete auf, von denen das installierte Paket abhängt. |
-| Lizenz | Lizenz für das installierte Paket. |
+| License (Lizenz) | Lizenz für das installierte Paket. |
 | LibPath | Das Verzeichnis, in dem Sie das Paket finden können. |
 
 ### <a name="installed-packages-for-python"></a>Installierte Pakete für python

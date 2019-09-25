@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493919"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten
@@ -59,7 +59,7 @@ ms.locfileid: "69493919"
   
      Diese Ebene enthält die Assemblykomponenten, die beim Erstellen anderer Komponenten verwendet werden, beginnend mit dem **Adjustable Race** -Produkt, so wie im folgenden Bild gezeigt.  
   
-     Assemblykomponenten ![, die zum Erstellen anderer Komponenten verwendet werden] Assemblykomponenten (../../2014/tutorials/media/l4-productdimensionerrorconfig-2.gif ", die zum Erstellen anderer Komponenten verwendet werden")  
+     ![Assemblykomponenten, die zum Erstellen anderer Komponenten verwendet werden](../../2014/tutorials/media/l4-productdimensionerrorconfig-2.gif "Assemblykomponenten, die zum Erstellen anderer Komponenten verwendet werden")  
   
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>Definieren von Attributen von Schneeflockentabellen und einer benutzerdefinierten Produktkategoriehierarchie  
   
@@ -143,7 +143,7 @@ ms.locfileid: "69493919"
   
 4.  Klicken Sie im Diagramm mit der rechten Maustaste `Subcategory` auf das Attribut, und wählen Sie dann **neue Attribut Beziehung**aus.  
   
-5.  Im Dialogfeld **Attribut Beziehung erstellen** ist `Subcategory`das **Quell Attribut** . Legen Sie das zugehörige `Category` **Attribut** auf fest. Lassen Sie den Beziehungstyp auf **Flexibel**eingestellt.  
+5.  Im Dialogfeld **Attribut Beziehung erstellen** ist `Subcategory`das **Quell Attribut** . Legen Sie das **zugehörige Attribut** auf `Category`fest. Lassen Sie den Beziehungstyp auf **Flexibel**eingestellt.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

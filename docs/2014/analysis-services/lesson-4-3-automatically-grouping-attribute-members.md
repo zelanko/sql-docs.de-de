@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69890837"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Automatisches Gruppieren von Attributelementen
@@ -48,7 +48,7 @@ ms.locfileid: "69890837"
   
      Die folgende Abbildung zeigt die geänderten Eigenschaften für **Yearly Income**.  
   
-     ![Geänderte Eigenschaften für Jahreseinkommen](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Geänderte Eigenschaften für Jahreseinkommen")  
+     ![Geänderte Eigenschaften für Jahreseinkommen] (../../2014/tutorials/media/l4-discretizationmethod-1.gif "Geänderte Eigenschaften für Jahreseinkommen")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Gruppieren von Attributhierarchieelementen in der Employee-Dimension  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69890837"
   
      Die folgende Abbildung zeigt Verkäufe dimensioniert nach krankheitsbedingten Ausfallstunden der Angestellten.  
   
-     ![Umsätze durch Mitarbeiter krank](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Umsätze durch Mitarbeiter krank")  
+     ![Umsätze durch Mitarbeiter krank] (../../2014/tutorials/media/l4-discretizationmethod-2.gif "Umsätze durch Mitarbeiter krank")  
   
 10. Entfernen Sie die **Sick Leave Hours** -Attributhierarchie aus dem Spaltenbereich des Bereichs **Daten** .  
   

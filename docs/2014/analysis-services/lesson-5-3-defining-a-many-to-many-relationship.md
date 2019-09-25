@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493874"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definieren einer m:n-Beziehung
@@ -143,7 +143,7 @@ ms.locfileid: "69493874"
   
      Die folgende Abbildung zeigt die Änderungen im Dialogfeld **Beziehung definieren** .  
   
-     ![Beziehung definieren (Dialogfeld] ) (../../2014/tutorials/media/l5-many-to-many-3.gif "Beziehung definieren (Dialogfeld") )  
+     ![Beziehung definieren Dialogfeld](../../2014/tutorials/media/l5-many-to-many-3.gif "Beziehung definieren Dialogfeld")  
   
 5.  Klicken Sie auf **OK**.  
   

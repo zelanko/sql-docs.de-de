@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493865"
 ---
 # <a name="defining-a-fact-relationship"></a>Definieren einer Faktenbeziehung
@@ -93,7 +93,7 @@ ms.locfileid: "69493865"
   
      Die folgende Abbildung zeigt die Faktenbeziehungseigenschaften im Dialogfeld **Beziehung definieren** .  
   
-     ![Beziehung definieren (Dialogfeld] ) (../../2014/tutorials/media/l5-factrelationship-2.gif "Beziehung definieren (Dialogfeld") )  
+     ![Beziehung definieren Dialogfeld](../../2014/tutorials/media/l5-factrelationship-2.gif "Beziehung definieren Dialogfeld")  
   
 3.  Klicken Sie auf **Abbrechen**.  
   
