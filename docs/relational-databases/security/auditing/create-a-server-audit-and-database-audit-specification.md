@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5199849b0f3dced34ced0ec7a102f03cb054d789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095200"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066883"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Erstellen einer Server- und Datenbank-Überwachungsspezifikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68095200"
   
 2.  Erweitern Sie den Ordner **Sicherheit** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbank-Überwachungsspezifikationen** und dann auf **Neue Datenbank-Überwachungsspezifikation...**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbank-Überwachungsspezifikationen** und dann auf **Neue Datenbank-Überwachungsspezifikation...** .  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbank-Überwachungsspezifikation erstellen** verfügbar.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68095200"
      Der Name der Datenbank-Überwachungsspezifikation. Er wird automatisch generiert, wenn Sie eine neue Serverüberwachungsspezifikation erstellen, er kann jedoch bearbeitet werden.  
   
      **Überwachung**  
-     Der Name einer vorhandenen Datenbanküberwachung. Geben Sie den Namen der Überwachung ein, oder wählen Sie ihn aus der Liste aus.  
+     Der Name eines vorhandenen Serverüberwachungsobjekts. Geben Sie den Namen der Überwachung ein, oder wählen Sie ihn aus der Liste aus.  
   
      **Überwachungsaktionstyp**  
      Gibt die aufzuzeichnenden Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen an. Eine Liste der Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen sowie eine Beschreibung der darin enthaltenen Ereignisse finden Sie unter [SQL Server Audit-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  

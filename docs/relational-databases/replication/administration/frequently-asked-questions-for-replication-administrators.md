@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770823"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174251"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "68770823"
   
 -   Geben Sie an, dass Objekte bei einer erneuten Initialisierung des Abonnements nicht gelöscht werden sollen. Führen Sie vor der erneuten Initialisierung einen der folgenden Vorgänge aus:  
   
-    -   Führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) oder [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus. Geben Sie dabei für den**sp_changearticle**-Parameter den Wert 'pre_creation_cmd' (**sp_changemergearticle**) oder 'pre_creation_command' ( **@property** ) und für den **@value** .  
+    -   Führen Sie [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) oder [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)aus. Geben Sie dabei für den **\@property**-Parameter den Wert 'pre_creation_cmd' (**sp_changearticle**) oder 'pre_creation_command' ( **sp_changemergearticle**) und für den **\@value**-Parameter den Wert 'none', 'delete' oder 'truncate' an.  
   
     -   Wählen Sie im Dialogfeld **Artikeleigenschaften – \<Artikel>** im Abschnitt **Zielobjekt** einen Wert von **Vorhandenes Objekt unverändert beibehalten**, **Daten löschen. Wenn ein Artikel einen Zeilenfilter aufweist, nur die dem Filter entsprechenden Daten löschen.** oder **Alle Daten im vorhandenen Objekt abschneiden** für die Option **Action if name is in use** (Aktion, wenn der Name verwendet wird). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   

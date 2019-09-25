@@ -18,12 +18,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6647af394964f0b8ef88fd6cb9909ac0ef9bfbdf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769233"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174235"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Anzeigen und Ändern der Eigenschaften von Pushabonnements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ ms.locfileid: "68769233"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Pushabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung an  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)aus. Geben Sie **@publication** , **@subscriber** und den Wert **all** für **@article** .  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)aus. Geben Sie **\@publication**, **\@subscriber** und den Wert **all** für **\@article** an.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)aus, und geben Sie **@subscriber** .  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) aus, und geben Sie **\@subscriber** an:  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So ändern Sie die Eigenschaften eines Pushabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)aus, und geben Sie **@subscriber** sowie Parameter für die zu ändernden Abonnenteneigenschaften an.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md) aus, und geben Sie hierzu **\@subscriber** sowie Parameter für die zu ändernden Abonnenteneigenschaften an.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)aus. Geben Sie **@publication** , **@subscriber** , **@destination_db** , den Wert **all** für **@article** , die zu ändernde Abonnementeigenschaft als **@property** und den neuen Wert als **@value** . Dadurch werden die Sicherheitseinstellungen für das Pushabonnement geändert.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)aus. Geben Sie **\@publication**, **\@subscriber**, **\@destination_db**, den Wert **all** für **\@article**, die zu ändernde Abonnementeigenschaft als **\@property** und den neuen Wert als **\@value** an. Dadurch werden die Sicherheitseinstellungen für das Pushabonnement geändert.  
   
-3.  (Optional) Um die Paketeigenschaften der Data Transformation Services (Datentransformationsdienste, DTS) zu ändern, führen Sie [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) auf dem Abonnenten für die Abonnementdatenbank aus. Geben Sie die ID des Auftrags des Verteilungs-Agents für **@jobid** und die folgenden DTS-Paketeigenschaften an:  
+3.  (Optional) Um die Paketeigenschaften der Data Transformation Services (Datentransformationsdienste, DTS) zu ändern, führen Sie [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) auf dem Abonnenten für die Abonnementdatenbank aus. Geben Sie die ID des Auftrags des Verteilungs-Agents für **\@jobid** und die folgenden DTS-Paketeigenschaften an:  
   
-    -   **@dts_package_name**  
+    -   **\@dts_package_name**  
   
-    -   **@dts_package_password**  
+    -   **\@dts_package_password**  
   
-    -   **@dts_package_location**  
+    -   **\@dts_package_location**  
   
      Dadurch werden die DTS-Paketeigenschaften eines Abonnements geändert.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "68769233"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>So zeigen Sie die Eigenschaften eines Pushabonnements für eine Mergeveröffentlichung an  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)aus. Geben Sie **@publication** und **@subscriber** .  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)aus. Geben Sie **\@publication** und **\@subscriber** an.  
   
-2.  Führen Sie auf dem Verleger [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)aus, und geben Sie **@subscriber** .  
+2.  Führen Sie auf dem Verleger [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)aus, und geben Sie **\@subscriber** an.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>So ändern Sie die Eigenschaften eines Pushabonnements für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)aus. Geben Sie **@publication** , **@subscriber** , **@subscriber_db** , die zu ändernde Abonnementeigenschaft als **@property** und den neuen Wert als **@value** .  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)aus. Geben Sie **\@publication**, **\@subscriber**, **\@subscriber_db**, die zu ändernde Abonnementeigenschaft als **\@property** und den neuen Wert als **\@value** an.  
   
 ###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
   

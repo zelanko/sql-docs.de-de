@@ -1,5 +1,5 @@
 ---
-title: STEndpoint (geography-Datentyp) | Microsoft-Dokumentation
+title: STEndPoint (geography-Datentyp) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- STEndpoint (geography Data Type)
-- STEndpoint_TSQL
+- STEndPoint (geography Data Type)
+- STEndPoint_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- STEndpoint method
+- STEndPoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: efdc5658997bf0cf19637900c96c8f06d4a2e3ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042280"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118140"
 ---
-# <a name="stendpoint-geography-data-type"></a>STEndpoint (geography-Datentyp)
+# <a name="stendpoint-geography-data-type"></a>STEndPoint (geography-Datentyp)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Endpunkt einer **geography** -Instanz zurück.  
@@ -43,13 +43,13 @@ ms.locfileid: "68042280"
   
  Open Geospatial Consortium (OGC)-Typ: **Point**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  STEndPoint() entspricht [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
   
  Diese Methode gibt NULL zurück, wenn Sie für eine leere **geography** -Instanz aufgerufen wird.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird mit `LineString` eine `STGeomFromText()` -Instanz erstellt und `STEndpoint()` verwendet, um den Endpunkt in der Beschreibung der `LineString`-Instanz abzurufen.  
+ Im folgenden Beispiel wird mit `LineString` eine `STGeomFromText()` -Instanz erstellt und `STEndPoint()` verwendet, um den Endpunkt in der Beschreibung der `LineString`-Instanz abzurufen.  
   
 ```  
 DECLARE @g geography;  

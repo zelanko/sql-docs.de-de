@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903614"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163890"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bewährte Methoden für den Abfragespeicher
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ Navigieren Sie zu dem Abfragespeicher-Unterordner unter dem Datenbankknoten im O
 
 > [!NOTE]
 > Die Abbildung oben kann verschiedene Formen für bestimmte Abfragepläne aufweisen, wobei die möglichen Status folgende Bedeutungen haben:<br />  
+> 
 > |Form|Bedeutung|  
 > |-------------------|-------------|
 > |Circle|Abfrage abgeschlossen (reguläre Ausführung erfolgreich abgeschlossen)|
 > |Square|Abgebrochen (vom Client initiierter Abbruch der Ausführung)|
 > |Triangle|Fehlgeschlagen (durch abgebrochene Ausführung ausgelöste Ausnahme)|
+> 
 > Darüber hinaus gibt die Größe der Form Aufschluss über die Anzahl von Abfrageausführungen innerhalb des angegebenen Zeitintervalls. Die Größe der Form nimmt mit zunehmender Anzahl von Ausführungen zu.  
 
 -   Sie können daraus schließen, dass der Abfrage ein Index für optimale Ausführung fehlt. Diese Informationen werden innerhalb des Abfrageausführungsplans eingeblendet. Erstellen Sie den fehlenden Index, und überprüfen Sie die Abfrageleistung mit dem Abfragespeicher.  
@@ -290,7 +292,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 -   Nicht zuletzt sollten Sie es in Betracht ziehen, den Abfrageerfassungsmodus auf Auto einzustellen, da dadurch Abfragen herausgefiltert werden, die in der Regel weniger relevant für Ihre Arbeitsauslastung sind.  
   
 ### <a name="error-state"></a>Fehlerzustand  
- Zum Wiederherstellen des Abfragespeichers versuchen Sie explizit den Lese-/Schreibmodus einzustellen, und prüfen Sie den tatsächlichen Status erneut.  
+ Zum Wiederherstellen des Abfragespeichers versuchen Sie explizit den Lese-/Schreibmodus einzustellen, und prüfen Sie den tatsächlichen Status noch mal.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  Wenn das Problem weiterhin besteht, bedeutet dies, dass die beschädigten Abfragespeicherdaten auf dem Datenträger beibehalten werden.
  
- Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] kann der Abfragespeicher wiederhergestellt werden, indem die gespeicherte Prozedur **sp_query_store_consistency_check** in der betroffenen Datenbank ausgeführt wird. Für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] müssen Sie die Daten aus dem Abfragespeicher, wie weiter unten erläutert, löschen.
+ Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] kann der Abfragespeicher wiederhergestellt werden, indem die gespeicherte Prozedur **sp_query_store_consistency_check** in der betroffenen Datenbank ausgeführt wird. Der Abfragespeicher muss vor dem Wiederherstellungsvorgang deaktiviert werden. Für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] müssen Sie die Daten aus dem Abfragespeicher, wie weiter unten erläutert, löschen.
  
- Falls dieser Schritt nicht erfolgreich war, versuchen Sie, den Abfragespeicher zu löschen, bevor Sie den Lese-/Schreibmodus anfordern.  
+ Wenn die Wiederherstellung nicht erfolgreich war, können Sie versuchen, den Abfragespeicher vor dem Aktivieren des Lese-/Schreibmodus zu löschen.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |Benutzerdefiniert|Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wurde der Erfassungsmodus CUSTOM für den `ALTER DATABASE SET QUERY_STORE`-Befehl eingeführt. Bei Aktivierung stehen zusätzliche Abfragespeicherkonfigurationen unter einer neuen Einstellung für die Erfassungsrichtlinie des Abfragespeichers zur Verfügung, um die Datensammlung auf einem bestimmten Server zu optimieren.<br /><br />Mit den neuen „custom“-Einstellungen wird festgelegt, was während des Zeitschwellenwerts für die interne Erfassungsrichtlinie geschieht: eine Zeitbegrenzung, in der die konfigurierbaren Bedingungen ausgewertet werden, und trifft eine davon zu, ist die Abfrage geeignet, von Abfragespeicher aufgezeichnet zu werden. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
-> Cursor, Abfragen in gespeicherten Prozeduren und nativ kompilierte Abfragen werden immer erfasst, wenn der Abfrageerfassungsmodus auf „All“, „Auto“ oder „Custom“ festgelegt ist.
+> Cursor, Abfragen in gespeicherten Prozeduren und nativ kompilierte Abfragen werden immer erfasst, wenn der Abfrageerfassungsmodus auf „All“, „Auto“ oder „Custom“ festgelegt ist. Zum Erfassen von nativ kompilierten Abfragen aktivieren Sie die Sammlung von Statistiken pro Abfrage mithilfe von [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Aufbewahren der relevantesten Daten im Abfragespeicher  
  Konfigurieren Sie den Abfragespeicher so, dass nur die relevanten Daten enthalten sind. Dann wird es kontinuierlich ausgeführt, was ein überragendes Problembehandlungserlebnis bietet bei minimalen Auswirkungen auf die normale Arbeitsauslastung.  

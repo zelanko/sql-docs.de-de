@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228464"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096888"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,7 +53,7 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|Indizieren verschlüsselter Spalten|Erstellen Sie Indizes für Spalten, die mit einer zufälligen Verschlüsselung und Enclave-fähigen Schlüsseln verschlüsselt wurden, um die Leistung umfangreicher Abfragen (mit `LIKE` und Vergleichsoperatoren) zu verbessern. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Always Encrypted mit Secure Enclaves|Erweitert auf Always Encrypted mit direkter Verschlüsselung und umfangreichen Berechnungen, indem es Berechnungen von Klartextdaten innerhalb einer serverseitigen sicheren Enclave-Instanz ermöglicht. Die direkte Verschlüsselung verbessert die Leistung und die Zuverlässigkeit kryptografischer Vorgänge (Verschlüsseln von Spalten, Rotieren von Verschlüsselungsschlüsseln für Spalten usw.), da dadurch das Verschieben von Daten aus der Datenbank vermieden wird. Durch die Unterstützung für umfangreiche Berechnungen (Musterabgleich und Vergleichsvorgänge) wird Always Encrypted für weitaus mehr Szenarios und Anwendungen entsperrt, die einen sensiblen Datenschutz erfordern, während gleichzeitig umfangreichere Funktionen in Transact-SQL-Abfragen erforderlich ist. Weitere Informationen finden Sie unter [Always Encrypted mit Secure Enclaves](../relational-databases/security/encryption/always-encrypted-enclaves.md).|
 |Anhalten und Fortsetzen der anfänglichen Überprüfung für Transparent Data Encryption (TDE)|Siehe [TDE-Überprüfung (Transparent Data Encryption): Anhalten und Fortsetzen](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume).|
 |Zertifikatverwaltung im SQL Server-Konfigurations-Manager|Siehe [Zertifikatverwaltung (SQL Server-Konfigurations-Manager)](../database-engine/configure-windows/manage-certificates.md).|
 | &nbsp; | &nbsp; |

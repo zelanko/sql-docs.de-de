@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009382"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149974"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installieren von SQL Server über den Installations-Assistenten (Setup)
 
@@ -132,7 +132,11 @@ Dies gilt nicht für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
     > [!NOTE]
     > Für Versionen ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: Aktivieren Sie das Kontrollkästchen **SQL Server Database Engine Services Berechtigung zum Ausführen von Volumewartungstasks zuweisen**, um dem Dienstkonto [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Verwendung der [schnellen Dateiinitialisierung für Datenbanken](../../relational-databases/databases/database-instant-file-initialization.md) zu ermöglichen.
   
-     Verwenden Sie die Seite **Serverkonfiguration – Sortierung**, um nicht standardmäßige Sortierungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] anzugeben. Weitere Informationen finden Sie unter [Sortierungen und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. Verwenden Sie die Seite **Serverkonfiguration – Sortierung**, um nicht standardmäßig verwendete Sortierungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] anzugeben.    
+
+   Die Standardinstallationseinstellung wird durch das Gebietsschema des Betriebssystems bestimmt. Die Sortierung auf Serverebene kann entweder während des Setups geändert werden, oder indem vor der Installation das Gebietsschema des Betriebssystems geändert wird. Die Standardsortierung wird auf die älteste verfügbare Version festgelegt, die den einzelnen Gebietsschemas jeweils zugeordnet ist. Der Grund hierfür ist die Abwärtskompatibilität. Deshalb ist dies nicht immer die empfohlene Sortierung. Um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen optimal zu können, ändern Sie die Standardinstallationseinstellungen für die Verwendung von Windows-Sortierungen. Beispielsweise ist für das Betriebssystem-Gebietsschema **Englisch (USA)** (Codepage 1252) die Standardsortierung während des Setups **SQL_Latin1_General_CP1_CI_AS**, welche in die nächste entsprechende Windows-Sortierung **Latin1_General_100_CI_AS_SC** geändert werden kann.
+
+   Weitere Informationen finden Sie unter [Sortierungen und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. Geben Sie auf der Seite für die **Konfiguration der Datenbank-Engine – Serverkonfiguration** folgende Optionen an:  
   

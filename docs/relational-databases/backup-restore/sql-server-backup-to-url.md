@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176352"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118185"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176352"
 - Sie können Sicherungen auf mehreren Blockblobs erstellen, um eine bessere Sicherungs- und Wiederherstellungsleistung sowie eine umfangreichere Datenbanksicherung zu erzielen.
 - [Blockblobs](https://azure.microsoft.com/pricing/details/storage/blobs/) sind kostengünstiger als [Seitenblobs](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-Beim Sichern mit Blockblobs, können Sie eine maximale Blockgröße von 4 MB angeben. Die maximale Größe ein einzelner Blockblobdatei beträgt 4 MB * 50.000 = 195 GB. Wenn Ihre Datenbank größer als 195 GB ist, empfehlen wir Ihnen:
-- Sicherungskomprimierung zu verwenden
+Die Sicherung einer großen Datenbank im Blobspeicher unterliegt den Einschränkungen, die in [Verwaltete Instanz, T-SQL-Unterschiede, Einschränkungen und bekannte Probleme](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup) aufgeführt sind.
+
+ Wenn die Datenbank zu groß ist, haben Sie die Möglichkeit:
+- Sicherungskomprimierung zu verwenden  oder
 - Sicherungen auf mehreren Blockblobs auszuführen
 
 ###  <a name="Blob"></a> Microsoft Azure BLOB-Speicherdienst  

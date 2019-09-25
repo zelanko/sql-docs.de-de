@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d8c31adb0dff16b84e4c606dc3b5479a43a1092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075212"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174294"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ FETCH
  LAST  
  Gibt die letzte Zeile im Cursor zurück und macht sie zur aktuellen Zeile.  
   
- ABSOLUTE { *n*| @*nvar*}  
- Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile – ausgehend vom Anfang des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile – ausgehend von der letzten Zeile des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 (null) ist, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und @*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
+ ABSOLUTE { *n*| \@*nvar*}  
+ Wenn *n* oder \@*nvar* eine positive Zahl ist, wird die *n*-te Zeile – ausgehend vom Anfang des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder \@*nvar* eine negative Zahl ist, wird die *n*-te Zeile – ausgehend von der letzten Zeile des Cursors – zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder \@*nvar* gleich 0 (null) ist, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und \@*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
   
- RELATIVE { *n*| @*nvar*}  
- Wenn *n* oder @*nvar* eine positive Zahl ist, wird die *n*-te Zeile nach der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* eine negative Zahl ist, wird die *n*-te Zeile vor der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder @*nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn beim ersten Datenabruf vom Cursor `FETCH RELATIVE` auf *n* oder *@nvar* auf 0 oder auf eine negative Zahl festgelegt wird, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und @*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
+ RELATIVE { *n*| \@*nvar*}  
+ Wenn *n* oder \@*nvar* eine positive Zahl ist, wird die *n*-te Zeile nach der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder \@*nvar* eine negative Zahl ist, wird die *n*-te Zeile vor der aktuellen Zeile zurückgegeben. Die zurückgegebene Zeile wird dann zur aktuellen Zeile. Wenn *n* oder \@*nvar* gleich 0 ist, wird die aktuelle Zeile zurückgegeben. Wenn beim ersten Datenabruf vom Cursor `FETCH RELATIVE` auf *n* oder \@*nvar* auf 0 oder auf eine negative Zahl festgelegt wird, werden keine Zeilen zurückgegeben. *n* muss eine Integerkonstante und \@*nvar* muss vom Typ **smallint**, **tinyint** oder **int** sein.  
   
  GLOBAL  
  Gibt an, dass *cursor_name* auf einen globalen Cursor verweist.  
@@ -82,7 +82,7 @@ FETCH
  INTO @*variable_name*[ ,...*n*]  
  Ermöglicht die Zuweisung von Daten aus den Spalten, die durch einen Abruf zurückgegeben werden, an lokale Variablen. Jeder Variablen in der Liste wird (von links nach rechts) die entsprechende Spalte im Cursorresultset zugeordnet. Die Datentypen aller Variablen müssen mit dem Datentyp der entsprechenden Resultsetspalte übereinstimmen oder implizit in diesen Datentyp konvertiert werden können. Die Anzahl von Variablen muss mit der Anzahl von Spalten in der SELECT-Liste des Cursors übereinstimmen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` nicht angegeben, wird lediglich die `FETCH`-Option `NEXT` unterstützt. Wird `SCROLL` in der ISO-Anweisung `DECLARE CURSOR` angegeben, werden alle `FETCH`-Optionen unterstützt.  
   
  Wenn die DECLARE CURSOR-Erweiterungen von [!INCLUDE[tsql](../../includes/tsql-md.md)] verwendet werden, gelten folgende Regeln:  

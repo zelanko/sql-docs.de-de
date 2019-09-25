@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3249d8ffddeec75ae576cc2bbdd9478982029758
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 1b9411f3b8740d1e70f668d903b0b18b7016653d
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69609081"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149996"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installieren von SQL Server von der Eingabeaufforderung
 
@@ -244,7 +244,7 @@ Entwickeln Sie anhand der folgenden Richtlinien Installationsbefehle mit der ric
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Erforderlich, wenn /SECURITYMODE=SQL**|Gibt das Kennwort für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-**SA**-Konto an.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Optional**|Gibt den Sicherheitsmodus für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.<br /><br /> Wenn dieser Parameter nicht angegeben wird, kann die Authentifizierung nur über Windows erfolgen.<br /><br /> Unterstützter Wert: **location**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Optional**|Gibt das Verzeichnis für Sicherungsdateien an.<br /><br /> Standardwert: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Optional**|Legt die Sortierungseinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest.<br /><br /> Der Standardwert basiert auf dem Gebietsschema des Windows-Betriebssystems. Weitere Informationen finden Sie unter [Sortierungseinstellungen im Setup-Programm](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Optional**|Legt die Sortierungseinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fest.<br /><br /> Die Standardinstallationseinstellung wird durch das Gebietsschema des Betriebssystems bestimmt. Die Sortierung auf Serverebene kann entweder während des Setups geändert werden, oder indem vor der Installation das Gebietsschema des Betriebssystems geändert wird. Die Standardsortierung wird auf die älteste verfügbare Version festgelegt, die den einzelnen Gebietsschemas jeweils zugeordnet ist. Der Grund hierfür ist die Abwärtskompatibilität. Deshalb ist dies nicht immer die empfohlene Sortierung. Um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen optimal zu können, ändern Sie die Standardinstallationseinstellungen für die Verwendung von Windows-Sortierungen. Beispielsweise ist für das Betriebssystem-Gebietsschema **Englisch (USA)** (Codepage 1252) die Standardsortierung während des Setups **SQL_Latin1_General_CP1_CI_AS**, welche in die nächste entsprechende Windows-Sortierung **Latin1_General_100_CI_AS_SC** geändert werden kann. <br /><br />Weitere Informationen finden Sie unter [Sortierungen und Unicode-Unterstützung](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Optional**|Fügt der festen Serverrolle sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** den aktuellen Benutzer hinzu. Der /ADDCURRENTUSERASSQLADMIN-Parameter kann beim Installieren von Express-Editionen oder bei Verwendung von /Role=ALLFeatures_WithDefaults eingesetzt werden. Weitere Informationen finden Sie unten unter „/ROLE“.<br /><br /> Die Verwendung von /ADDCURRENTUSERASSQLADMIN ist optional, aber /ADDCURRENTUSERASSQLADMIN oder /SQLSYSADMINACCOUNTS ist erforderlich. Standardwerte:<br /><br /> **True** für Editionen von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> **False** für alle anderen Editionen|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Erforderlich**|Gibt das Startkonto für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst an.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Erforderlich](#Accounts)|Gibt das Kennwort für SQLSVCACCOUNT an.|  

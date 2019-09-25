@@ -3,26 +3,26 @@ title: 'Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen vo
 titleSuffix: Azure Data Studio
 description: In dieser Schnellstartanleitung erfahren Sie, wie Sie mit Azure Data Studio eine Verbindung mit PostgreSQL herstellen und eine Abfrage ausführen.
 ms.custom: seodec18
-ms.date: 03/19/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959467"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127252"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Schnellstart: Herstellen einer Verbindung mit PostgreSQL und Abfragen von Daten mit PostgreSQL mit [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 In dieser Schnellstartanleitung erfahren Sie, wie Sie mithilfe von [!INCLUDE[name-sos](../includes/name-sos-short.md)] eine Verbindung mit Postgres herstellen und anschließend SQL-Anweisungen verwenden, um die Datenbank *tutorialdb* zu erstellen und abzufragen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], die PostgreSQL-Erweiterung für [!INCLUDE[name-sos](../includes/name-sos-short.md) und Zugriff auf eine PostgreSQL-Serverinstanz.
+Um diesen Schnellstart abzuschließen, benötigen Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)], die PostgreSQL-Erweiterung für [!INCLUDE[name-sos](../includes/name-sos-short.md)] und Zugriff auf eine PostgreSQL-Serverinstanz.
 
 - [Installieren Sie [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 - [Installieren Sie die PostgreSQL-Erweiterung für Azure Data Studio](postgres-extension.md).

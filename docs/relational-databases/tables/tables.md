@@ -1,7 +1,7 @@
 ---
 title: Tabellen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2cf1a6cbb774640099a7465180fc879dcc75c77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016251"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127376"
 ---
 # <a name="tables"></a>Tabellen
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ Temporäre Tabellen werden in **tempdb**gespeichert. Es gibt zwei Arten von tem
 
 #### <a name="ctp23"></a> Weniger Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md) verringert die Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche. Vor der Einführung dieses Features, konnte das Verweisen auf eine temporäre Tabelle mit einer DML-Anweisung (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) zu einer Neukompilierung der DML-Anweisung bei jeder Ausführung führen, wenn die temporäre Tabelle in einem Batch im äußeren Bereich erstellt wurde. Durch dieses Update führt SQL Server zusätzliche einfache Überprüfungen durch, um unnötige Neukompilierungen zu vermeiden:
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] verringert Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche. Vor der Einführung dieses Features, konnte das Verweisen auf eine temporäre Tabelle mit einer DML-Anweisung (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) zu einer Neukompilierung der DML-Anweisung bei jeder Ausführung führen, wenn die temporäre Tabelle in einem Batch im äußeren Bereich erstellt wurde. Durch dieses Update führt SQL Server zusätzliche einfache Überprüfungen durch, um unnötige Neukompilierungen zu vermeiden:
 
 - Überprüfung, ob es sich bei dem Modul im äußeren Bereich, das zur Kompilierzeit zur Erstellung der temporären Tabelle verwendet wurde, um das gleiche Modul handelt, das für nachfolgende Ausführungen verwendet wurde 
 - Nachverfolgung von Änderungen an der Datendefinitionssprache (Data Definition Language, DDL), die bei der ersten Kompilierung vorgenommen wurden, und Vergleich mit den DDL-Vorgängen für nachfolgende Ausführungen

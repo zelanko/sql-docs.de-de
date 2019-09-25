@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 09/04/2019
-ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 10f5290275a921e923ca49492eab78e4fb019475
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874549"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149881"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Versionshinweise zu SQL Server Management Studio (SSMS)
 
@@ -156,7 +156,7 @@ Im Vergleich zu Version 18.0 ist Version 18.1 ein kleines Update mit den folge
 | SSMS allgemein | Es wurde ein Problem behoben, bei dem SSMS die IntelliSense-Einstellung von *Tools/Extras* im SQL-Editor-Fenster nicht berücksichtigt hat. |
 | SSMS allgemein | Es wurde ein Problem behoben, bei dem SSMS die Hilfeeinstellungen nicht berücksichtigt hat (online im Vergleich zu offline). |
 | Hohe DPI-Werte | Das Layout von Steuerelementen in Fehlerdialogen für nicht unterstützte Abfrageoptionen wurde korrigiert. |
-| Hohe DPI-Werte | Das Layout von Steuerelementen auf der Seite *Neue Verfügbarkeitsgruppe* wurde korrigiert, |
+| Hohe DPI-Werte | Das Layout von Steuerelementen auf der Seite *Neue Verfügbarkeitsgruppe* wurde korrigiert, die in einigen lokalisierten Versionen von SSMS enthalten ist. |
 | Hohe DPI-Werte | Das Layout der Seite *Neuer Auftragszeitplan* wurde korrigiert. Weitere Informationen finden Sie unter [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37632094). |
 | Importieren von Flatfiles | Es wurde ein Problem behoben, bei dem Zeilen beim Import unbemerkt verloren gingen.|
 | IntelliSense/Editor | Der SMO-basierte Datenverkehr von Abfragen zu Azure SQL-Datenbanken für IntelliSense wurde reduziert. |
