@@ -1,5 +1,5 @@
 ---
-title: index_resumable_operations (Transact-SQL) | Microsoft-Dokumentation
+title: sys. index_resumable_operations (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/14/2019
 ms.prod: sql
@@ -19,34 +19,34 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122656"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227200"
 ---
-# <a name="indexresumableoperations-transact-sql"></a>Index_resumable_operations (Transact-SQL)
+# <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**index_resumable_operations** ist eine Systemansicht, die überwacht und überprüft den aktuellen Ausführungsstatus für die fortsetzbare indexneuerstellung.  
+**sys. index_resumable_operations** ist eine Systemsicht, die den aktuellen Ausführungs Status für die fort Setz Bare indexneu Erstellung überwacht und überprüft.  
 **Gilt für**: SQL Server 2017 und Azure SQL-Datenbank
   
 |Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Die ID des Objekts, zu dem dieser Index (nicht NULL-Werte zulässt) gehört.|  
-|**index_id**|**int**|Die ID des Indexes (keine NULL-Werte zulässt). **Index_id** ist nur innerhalb des Objekts eindeutig.|
-|**name**|**sysname**|Der Name des Indexes. **Namen** ist nur innerhalb des Objekts eindeutig.|  
-|**sql_text**|**nvarchar(max)**|Text der DDL-T-SQL-Anweisung|
-|**last_max_dop**|**smallint**|Letzte MAX_DOP verwendet (Standard = 0)|
-|**partition_number**|**int**|Partitionsnummer im besitzenden Index oder Heap. Für nicht partitionierte Tabellen und Indizes oder im Fall werden alle Partitionen neu erstellt den Wert dieser Spalte NULL ist.|
-|**state**|**tinyint**|Betriebszustand für den fortsetzbaren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
-|**state_desc**|**nvarchar(60)**|Beschreibung für den Betriebsstatus für den fortsetzbaren Index (ausgeführt oder angehalten)|  
-|**start_time**|**datetime**|Startzeit für Index (nicht NULL zulassen)|
-|**last_pause_time**|**datatime**| Der Indexvorgang zuletzt angehalten (NULL-Werte zulässt). NULL, wenn der Vorgang ausgeführt wird und nie angehalten wird.|
-|**total_execution_time**|**int**|Gesamte Ausführungszeit nach Startzeit in Minuten (nicht NULL zulassen)|
-|**percent_complete**|**real**|Index-Vorgang wird ausgeführt-Vervollständigung in % (keine NULL-Werte zulässt).|
-|**page_count**|**bigint**|Die Gesamtanzahl von Indexseiten, die von der indexerstellung für die neue und Zuordnung Indizes (nicht NULL-Werte zulässt) zugeordnet.
+|**object_id**|**int**|ID des Objekts, zu dem dieser Index gehört (lässt keine NULL-Werte zu).|  
+|**index_id**|**int**|ID des Indexes (lässt keine NULL-Werte zu). **index_id** ist nur innerhalb des-Objekts eindeutig.|
+|**name**|**sysname**|Der Name des Indexes. der **Name** ist nur innerhalb des Objekts eindeutig.|  
+|**sql_text**|**nvarchar(max)**|DDL-T-SQL-Anweisungs Text|
+|**last_max_dop**|**smallint**|Last MAX_DOP used (Standardwert = 0)|
+|**partition_number**|**int**|Die Partitionsnummer im besitzenden Index oder Heap. Für nicht partitionierte Tabellen und Indizes oder für den Fall, dass alle Partitionen neu erstellt werden, ist der Wert dieser Spalte NULL.|
+|**state**|**tinyint**|Betriebsstatus für fort Setz baren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
+|**state_desc**|**nvarchar(60)**|Beschreibung des Betriebsstatus für einen fort Setz baren Index (wird ausgeführt oder angehalten)|  
+|**start_time**|**datetime**|Startzeit des Index Vorgangs (lässt keine NULL-Werte zu)|
+|**last_pause_time**|**datatime**| Zeit für Index Vorgang: letzte Pause (Nullable). NULL, wenn der Vorgang ausgeführt wird und nie angehalten wird.|
+|**total_execution_time**|**int**|Gesamt Ausführungszeit der Startzeit in Minuten (lässt keine NULL-Werte zu)|
+|**percent_complete**|**real**|Der Fortschritt des Index Vorgangs in% (lässt keine NULL-Werte zu).|
+|**page_count**|**bigint**|Die Gesamtanzahl der Indexseiten, die vom indexbuildvorgang für die neuen Indizes und Zuordnungs Indizes zugeordnet werden (keine NULL-Werte zulassen).
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -54,7 +54,7 @@ ms.locfileid: "68122656"
 
 ## <a name="example"></a>Beispiel
 
- Dient zum Listen Sie aller eines fortsetzbaren Index Rebuild-Vorgänge auf, die sich im Zustand "angehalten" befinden.
+ Listet alle fort Setz baren indexneu Erstellungs Vorgänge auf, die sich im Zustand anhalten befinden.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
@@ -64,8 +64,8 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [Katalogsichten](catalog-views-transact-sql.md)
-- [Katalogsichten für Objekte](object-catalog-views-transact-sql.md)
+- [Katalog Sichten](catalog-views-transact-sql.md)
+- [Objektkatalog Sichten](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
 - [sys.index_columns](sys-index-columns-transact-sql.md)
 - [sys.xml_indexes](sys-xml-indexes-transact-sql.md)

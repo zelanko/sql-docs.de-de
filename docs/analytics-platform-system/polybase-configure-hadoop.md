@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop | Microsoft-Dokumentation
-description: Erläutert das Konfigurieren von PolyBase in Parallel Data Warehouse für die Verbindung mit externen Hadoop.
+description: Erläutert, wie polybase parallel Data Warehouse zum Herstellen einer Verbindung mit dem externen Hadoop konfiguriert wird.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2e675b87c3c4f01f63e21bafd5d071cebb4ae4c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960270"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227128"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Konfigurieren von PolyBase für den Zugriff auf externe Daten in Hadoop
 
-Der Artikel wird erläutert, wie Sie PolyBase auf einer APS-Appliance zum Abfragen von externen Daten in Hadoop verwenden.
+Der Artikel erläutert die Verwendung von polybase auf einem APS-Gerät zum Abfragen externer Daten in Hadoop.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 PolyBase unterstützt zwei Hadoop-Anbieter: Hortonworks Data Platform (HDP) und Cloudera Distributed Hadoop (CDH). Hadoop folgt dem Muster „Hauptversion.Nebenversion“ für neue Releases, und alle Versionen, die zu einer unterstützten Haupt- und Nebenversion gehören, werden unterstützt. Folgende Hadoop-Anbieter werden unterstützt:
  - Hortonworks HDP 1.3 auf Linux/Windows Server  
- - Hortonworks HDP 2.1 – 2.6 unter Linux
- - Hortonworks HDP 3.0-3.1 unter Linux
+ - Hortonworks HDP 2,1-2,6 unter Linux
+ - Hortonworks HDP 3,0-3,1 unter Linux
  - Hortonworks HDP 2.1 – 2.3 unter Windows Server  
  - Cloudera CDH 4.3 unter Linux  
- - Cloudera CDH 5.1 – 5.5, 5.9 bis 5.13 unter Linux
+ - Cloudera CDH 5,1-5,5, 5,9-5,13, 5,15 & 5,16 unter Linux
 
 ### <a name="configure-hadoop-connectivity"></a>Konfigurieren der Hadoop-Konnektivität
 
-Konfigurieren Sie zuerst installiert wird, um Ihre spezifischen Hadoop-Anbieter verwenden.
+Konfigurieren Sie zunächst APS für die Verwendung Ihres bestimmten Hadoop-Anbieters.
 
 1. Führen Sie [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) mit „hadoop connectivity“ aus, und legen Sie einen geeigneten Wert für Ihren Anbieter fest. Informationen zum Ermitteln des Werts für Ihren Anbieter finden Sie unter [Konfiguration der PolyBase-Konnektivität](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md). 
 
@@ -46,15 +46,15 @@ Konfigurieren Sie zuerst installiert wird, um Ihre spezifischen Hadoop-Anbieter 
    GO
    ```  
 
-2. APS-Region, die mithilfe von dienststatusseite auf Neustart [Appliance-Konfigurations-Manager](launch-the-configuration-manager.md).
+2. Neustart der APS-Region mithilfe der Dienst Status Seite auf [Appliance-Configuration Manager](launch-the-configuration-manager.md).
   
 ## <a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
 
 Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung für Ihren Hadoop-Cluster:  
   
-1. Öffnen Sie eine Remotedesktopverbindung mit PDW-Control-Knoten.
+1. Öffnen Sie eine Remote Desktop Verbindung mit dem PDW-Steuerungs Knoten.
 
-2. Suchen Sie die Datei **"Yarn-Site.xml"** auf dem steuerknoten. In der Regel lautet der Pfad:  
+2. Suchen Sie die Datei **Yarn-Site. XML** auf dem Steuerelement Knoten. In der Regel lautet der Pfad:  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -62,11 +62,11 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
 
 3. Suchen Sie auf dem Hadoop-Computer die analoge Datei im Hadoop-Konfigurationsverzeichnis. Suchen Sie in der Datei den Wert des Konfigurationsschlüssels „yarn.application.classpath.“, und kopieren Sie diesen.  
   
-4. Auf dem steuerknoten in der **Datei "yarn.site.xml"** finden Sie die **yarn.application.classpath** Eigenschaft. Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
+4. Suchen Sie auf dem Knoten "Steuerelement" in der **Datei "Yarn. Site. XML** " die Eigenschaft **Yarn. Application. classpath** . Fügen Sie den Wert vom Hadoop-Computer in das Element „Value“ ein.  
   
 5. Für alle CDH 5.X-Versionen müssen Sie die Konfigurationsparameter „mapreduce.application.classpath“ entweder ans Ende der Datei „yarn.site.xml“ oder in die Datei „mapred-site.xml“ einfügen. HortonWorks enthält diese Konfigurationen in den yarn.application.classpath-Konfigurationen. Weitere Beispiele finden Sie unter [PolyBase-Konfiguration](../relational-databases/polybase/polybase-configuration.md).
 
-## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>Beispiel-XML-Dateien für CDH 5.X-Cluster-Standardwerte
+## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>Beispiel-XML-Dateien für CDH 5. X-Cluster Standardwerte
 
 „Yarn-site.xml“ mit der Konfiguration „yarn.application.classpath“ und „mapreduce.application.classpath“
 
@@ -101,7 +101,7 @@ Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung f�
 </configuration>
 ```
 
-Wenn Sie die beiden Konfigurationseinstellungen in Mapred-site.xml und Yarn-site.xml aufteilen möchten, würden die Dateien folgendermaßen lauten:
+Wenn Sie die beiden Konfigurationseinstellungen in "" mapred-Site. xml "und" Yarn-Site. xml "unterbrechen, lauten die Dateien wie folgt:
 
 **yarn-site.xml**
 
@@ -138,7 +138,7 @@ Wenn Sie die beiden Konfigurationseinstellungen in Mapred-site.xml und Yarn-site
 
 **mapred-site.xml**
 
-Beachten Sie, dass die Eigenschaft mapreduce.application.classpath hinzugefügt wurde. In CDH 5.x finden Sie die Konfigurationswerte unter derselben Namenskonvention in Ambari.
+Beachten Sie, dass die Eigenschaft mapreduce.application.classpath hinzugefügt wurde. In CDH 5. x finden Sie die Konfigurationswerte in der gleichen Benennungs Konvention in ambari.
 
 ```xml
 <?xml version="1.0"?>
@@ -172,7 +172,7 @@ Beachten Sie, dass die Eigenschaft mapreduce.application.classpath hinzugefügt 
 </configuration>
 ```
 
-## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>Beispiel-XML-Dateien für HDP 3.X-Cluster-Standardwerte
+## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>Beispiel-XML-Dateien für die Standardwerte des HDP 3. X-Clusters
 
 **yarn-site.xml**
 
@@ -211,7 +211,7 @@ Beachten Sie, dass die Eigenschaft mapreduce.application.classpath hinzugefügt 
 
 Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Tabelle definieren, die in Transact-SQL-Abfragen verwendet werden soll. Die folgenden Schritte beschreiben, wie Sie die externe Tabelle konfigurieren.
 
-1. Erstellen Sie einen Hauptschlüssel in der Datenbank. Es ist erforderlich, um die Anmeldeinformationen zu verschlüsseln.
+1. Erstellen Sie einen Hauptschlüssel in der Datenbank. Es ist erforderlich, um den geheimen Schlüssel für die Anmelde Informationen zu verschlüsseln.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -285,7 +285,7 @@ Die folgenden Abfragen stellen fiktive Kfz-Sensordaten für das Beispiel bereit.
 
 ### <a name="ad-hoc-queries"></a>Ad-hoc-Abfragen  
 
-Die folgende ad-hoc-Abfrage verknüpft relationalen mit Hadoop-Daten. Kunden, die schneller als 35 mph, verknüpfte strukturierte Kundendaten, die im APS mit Auto-Sensor-Daten in Hadoop gespeichert Laufwerk ausgewählt.  
+Die folgende Ad-hoc-Abfrage wird relationalen mit Hadoop-Daten verbunden. Es wählt Kunden aus, die schneller als 35 mph sind, und verbindet strukturierte Kundendaten, die in APS gespeichert sind, mit Fahrzeug Sensordaten, die in Hadoop gespeichert sind  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -298,7 +298,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)
 
 ### <a name="importing-data"></a>Importieren von Daten  
 
-Die folgende Abfrage importiert externe Daten in APS. In diesem Beispiel importiert die Daten für schnelle Treiber in APS eine tiefergehende Analyse zu tun. Zur Verbesserung der Leistung nutzt es APS-columnstore-Technologie.  
+Mit der folgenden Abfrage werden externe Daten in APS importiert. In diesem Beispiel werden Daten für schnelle Treiber in APS importiert, um ausführlichere Analysen durchzuführen. Um die Leistung zu verbessern, nutzt sie columnstore-Technologie in APS.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -317,7 +317,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>Exportieren von Daten  
 
-Die folgende Abfrage exportiert Daten aus APS mit Hadoop in Azure. Dienen zum Archivieren von relationaler Daten mit Hadoop Zeit immer noch in der Lage, es abzufragen.
+Die folgende Abfrage exportiert Daten von APS nach Hadoop. Sie kann verwendet werden, um relationale Daten in Hadoop zu archivieren und Sie trotzdem abzufragen.
 
 ```sql
 -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
@@ -333,14 +333,14 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>Anzeigen von PolyBase-Objekten in SSDT  
+## <a name="view-polybase-objects-in-ssdt"></a>Anzeigen von polybase-Objekten in SSDT  
 
-In SQL Server Data Tools, externe Tabellen in einem separaten Ordner angezeigt werden **externe Tabellen**. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
+In SQL Server Data Tools werden externe Tabellen in einem separaten Ordner **externe Tabellen**angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
   
-![PolyBase-Objekten in SSDT](media/polybase/external-tables-datasource.png)  
+![Polybase-Objekte in SSDT](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Hadoop-Sicherheit-Einstellungen finden Sie unter [Hadoop-Sicherheit konfigurieren](polybase-configure-hadoop-security.md).<br>
+Informationen zu Hadoop-Sicherheitseinstellungen finden Sie unter [Konfigurieren der Hadoop-Sicherheit](polybase-configure-hadoop-security.md).<br>
 Weitere Informationen zu PolyBase finden Sie unter [Was ist PolyBase?](../relational-databases/polybase/polybase-guide.md). 
  
