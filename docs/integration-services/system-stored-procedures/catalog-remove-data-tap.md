@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb465d2a6f0d1cd69483789e39c47fda904e1800
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc76e5f5d710dfe088a27376af4f3938257a0ec7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007789"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296828"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
@@ -36,7 +36,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  Der eindeutige Bezeichner für die Datenabzweigung, die mit der gespeicherten Prozedur "catalog.add_data_tap" erstellt wird. Der *data_tap_id* ist **bigint**.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Wenn ein Paket mehrere Datenflusstasks mit dem gleichen Namen enthält, wird die Datenabzweigung dem ersten Datenflusstask mit dem angegebenen Namen hinzugefügt.  
   
 ## <a name="return-codes"></a>Rückgabecodes  
@@ -47,7 +47,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ## <a name="result-set"></a>Resultset  
  None  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Um Datenabzweigungen zu entfernen, muss die Ausführungsinstanz den Status „Erstellt“ (einen Wert von 1 in der Spalte **Zustand** der Sicht [catalog.operations &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)) aufweisen.  
   
 ## <a name="permissions"></a>Berechtigungen  

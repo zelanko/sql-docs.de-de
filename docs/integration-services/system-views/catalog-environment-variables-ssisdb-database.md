@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 366a673e0c2a29168c4bcaf66790b1f0fdab3d20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fdb7a7c325a6189feaea690fe2cc22d685ba86e6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038387"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296659"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (SSISDB-Datenbank)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68038387"
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist die Variable vertraulich und wird beim Speichern verschlüsselt. Lautet der Wert `0`, ist die Variable nicht vertraulich, und der Wert wird als Nur-Text gespeichert.|  
 |Wert|**sql_variant**|Der Wert der Umgebungsvariablen. Wenn `0` vertraulich ist, wird der Nur-Text-Wert angezeigt. Wenn `1` vertraulich ist, wird der Wert **NULL** angezeigt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jede Umgebungsvariable im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

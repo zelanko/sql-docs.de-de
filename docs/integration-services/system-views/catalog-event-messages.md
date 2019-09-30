@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 03245a13f270990ff8a1307a10bad797fc155289
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ebd5c1cc320426ea0ae3ff1b0b9832fb2ca76f1b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017481"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296648"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
@@ -45,7 +45,7 @@ ms.locfileid: "68017481"
 |threadID|INT|ID für den Thread, der ausgeführt wird, wenn die Meldung protokolliert wird.|  
 |Message_code|INT|Der der Meldung zugeordnete Code.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht werden die folgenden Meldungsquelltypen angezeigt:  
   
 |**message_source_type**|und Beschreibung|  

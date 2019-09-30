@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941462"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292419"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941462"
 ### <a name="converting-datetime-data-types"></a>Konvertieren von Datums- und Zeitdatentypen  
  Sie können den Datentyp einer Spalte mit Datums-/Zeitdaten ändern, um den Datums- oder Zeitteil der Daten zu extrahieren. Die folgende Tabelle führt die Ergebnisse der Umwandlung von einem Datums- und Zeitdatentyp in einen anderen Datums- und Zeitdatentyp auf.  
   
-#### <a name="converting-from-dtfiletime"></a>Konvertieren von DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Konvertieren von DT_FILETIME  
   
 |Konvertieren von DT_FILETIME in|Ergebnis|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941462"
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Konvertieren von DT_DATE  
+#### <a name="converting-from-dt_date"></a>Konvertieren von DT_DATE  
   
 |Konvertieren von DT_DATE in|Ergebnis|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941462"
 |DT_DBTIMESTAMP2|Konvertiert den Datentyp.|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.|  
   
-#### <a name="converting-from-dtdbdate"></a>Konvertieren von DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Konvertieren von DT_DBDATE  
   
 |Konvertieren von DT_DBDATE in|Ergebnis|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941462"
 |DT_DBTIMESTAMP2|Legt die Zeitfelder im DT_DBTIMESTAMP-Datentyp auf Null fest.|  
 |DT_DBTIMESTAMPOFFSET|Legt die Zeitfelder und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.|  
   
-#### <a name="converting-from-dtdbtime"></a>Konvertieren von DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Konvertieren von DT_DBTIME  
   
 |Konvertieren von DT_DBTIME in|Ergebnis|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941462"
 |DT_DBTIMESTAMP2|Legt das Datumsfeld im DT_DBTIMESTAMP2-Datentyp auf das aktuelle Datum fest.|  
 |DT_DBTIMESTAMPOFFSET|Legt das Datumsfeld und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf das aktuelle Datum beziehungsweise auf Null fest.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Konvertieren von DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Konvertieren von DT_DBTIME2  
   
 |Konvertieren von DT_DBTIME2 in|Ergebnis|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941462"
 |DT_DBTIMESTAMP2|Legt das Datumsfeld im DT_DBTIMESTAMP2-Datentyp auf das aktuelle Datum fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Datumsfeld und das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf das aktuelle Datum beziehungsweise auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Konvertieren von DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Konvertieren von DT_DBTIMESTAMP  
   
 |Konvertieren von DT_DBTIMESTAMP in|Ergebnis|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941462"
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Konvertieren von DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Konvertieren von DT_DBTIMESTAMP2  
   
 |Konvertieren von DT_DBTIMESTAMP2 in|Ergebnis|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941462"
 |DT_DBTIMESTAMP2|Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Zieldatentyp DT_DBTIMESTAMP2 enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Legt das Zeitzonenfeld im DT_DBTIMESTAMPOFFSET-Datentyp auf Null fest.<br /><br /> Entfernt den Wert für die Sekundenbruchteile, wenn die Anzahl der Dezimalstellen größer als die Anzahl ist, die der Datentyp DT_DBTIMESTAMPOFFSET enthalten kann. Nach dem Entfernen des Werts für die Sekundenbruchteile wird ein Bericht über dieses Abschneiden der Daten generiert. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Konvertieren von DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Konvertieren von DT_DBTIMESTAMPOFFSET  
   
 |Konvertieren von DT_DBTIMESTAMPOFFSET in|Ergebnis|  
 |--------------------------------------|------------|  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - logical OR (||)
 - '|| (logical OR)'
 ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e364d807205dd00d99a42aa0e3836c0c475856e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e9154b2ad6d574f251f3248903f2518e0f6b0b3d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027366"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289031"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (Logisches OR) (SSIS-Ausdruck)
 
@@ -42,7 +42,7 @@ boolean_expression1 || boolean_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In der folgenden Tabelle wird das Ergebnis des ||-Operators dargestellt.  
   
 |Ergebnis|expression|expression|  

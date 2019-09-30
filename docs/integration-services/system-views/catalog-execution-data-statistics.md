@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6811363e2465d7de24e31e136920feba345a2706
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080753"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296589"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
@@ -40,7 +40,7 @@ ms.locfileid: "68080753"
 |created_time|**datatimeoffset(7)**|Die Zeit, zu der die Werte abgerufen wurden.|  
 |execution_path|**nvarchar(max)**|Der Ausführungspfad der Komponente.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
   
 -   Wenn eine Komponente mehrere Ausgaben hat, wird für jede Ausgabe eine Zeile hinzugefügt.  
   
