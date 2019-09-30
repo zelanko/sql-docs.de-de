@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bc3d2f043eb6aebcb9a7a60a80f7665eb98cd18c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca82bdc8a04ffee4426ffb934a9e9a4ddaf4654f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032484"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296607"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (SSISDB-Datenbank)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68032484"
 |start_time|**datetimeoffset(7)**|Datum und Uhrzeit für das Starten des Vorgangs.|  
 |end_time|**datetimeoffset(7)**|Datum und Uhrzeit für das Beenden des Vorgangs.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Ein einzelner Vorgang kann über mehrere Zeilen mit erweiterten Informationen verfügen.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38694c8637423c1ecd151d439f48bc1c0e962c04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f624ada102ddc74f1062659a35dd758b5c33ce7a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054545"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295860"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS)
 
@@ -47,7 +47,7 @@ Die folgenden Abschnitte enthalten Informationen, die Sie benötigen, um Excel e
 
 Mit SSIS können Sie Daten von Excel importieren oder in Excel exportieren, indem Sie eines der folgenden Tools verwenden:
 
--   **SQL Server Integration Services (SSIS)**. Erstellen Sie mit dem Excel-Verbindungs-Manager ein SSIS-Paket, das die Excel-Quelle oder das Excel-Ziel verwendet. (Dieser Artikel beschreibt nicht das Erstellen der SSIS-Pakete.)
+-   **SQL Server Integration Services (SSIS)** . Erstellen Sie mit dem Excel-Verbindungs-Manager ein SSIS-Paket, das die Excel-Quelle oder das Excel-Ziel verwendet. (Dieser Artikel beschreibt nicht das Erstellen der SSIS-Pakete.)
 
 -   Der **SQL Server-Import/ Export-Assistent**, der auf SSIS aufbaut. Weitere Informationen finden Sie unter [Importieren und Exportieren von Daten mit dem SQL Server-Import/Export-Assistenten](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) und [Herstellen einer Verbindung mit einer Excel-Datenquelle (SQL Server-Import/Export-Assistent)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
@@ -124,11 +124,11 @@ Wenn Sie Daten aus Excel exportieren und diese Option aktivieren, enthält die e
 
 Es gibt drei Arten von Excel-Objekten, die Sie als Quelle oder Ziel für Ihre Daten verwenden können: ein Arbeitsblatt, einen benannten Bereich oder einen unbenannten Zellbereich, den Sie mit der Adresse angeben.
 
--   **Arbeitsblatt:** Fügen Sie das `$`-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]**, um ein Arbeitsblatt anzugeben. Oder suchen Sie in der Liste der vorhandenen Tabellen und Ansichten nach einem Namen, der mit dem `$`-Zeichen endet.
+-   **Arbeitsblatt:** Fügen Sie das `$`-Zeichen an das Ende des Blattnamens an, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B. **[Sheet1$]** , um ein Arbeitsblatt anzugeben. Oder suchen Sie in der Liste der vorhandenen Tabellen und Ansichten nach einem Namen, der mit dem `$`-Zeichen endet.
 
 -   **Benannter Bereich:** Stellen Sie den Namen des Bereichs bereit, z.B. **MyDataRange**, um einen benannten Bereich anzugeben. Oder suchen Sie in der Liste der vorhandenen Tabellen und Ansichten nach einem Namen, der nicht mit dem `$`-Zeichen endet.
     
--   **Unbenannter Bereich:** Um einen Bereich von Zellen anzugeben, den Sie nicht benannt haben, fügen Sie das $-Zeichen an das Ende des Blattnamens an, fügen Sie die Bereichsspezifikation hinzu, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B: **[Sheet1$A1:B4]**.
+-   **Unbenannter Bereich:** Um einen Bereich von Zellen anzugeben, den Sie nicht benannt haben, fügen Sie das $-Zeichen an das Ende des Blattnamens an, fügen Sie die Bereichsspezifikation hinzu, und schließen Sie die Zeichenfolge in Trennzeichen ein, z.B: **[Sheet1$A1:B4]** .
 
 Führen Sie einen der folgenden Schritte aus, um den Typ des Excel-Objekts auszuwählen oder anzugeben, das Sie als Quelle oder Ziel für Ihre Daten verwenden möchten:
 
