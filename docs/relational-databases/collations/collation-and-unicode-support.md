@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149922"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251092"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-
 |Binärcodepunkt (\_BIN2) <sup>1</sup> | Sortiert und vergleicht Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen basierend auf Unicode-Codepunkten für Unicode-Daten. Für Nicht-Unicode-Daten verwendet der Binär-Codepunkt Vergleiche, die mit binären Sortierungen identisch sind.<br/><br/> Der Vorteil beim Verwenden einer Binär-Codepunkt-Sortierreihenfolge liegt darin, dass in Anwendungen, die sortierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten vergleichen, eine Neusortierung der Daten nicht erforderlich ist. Folglich ermöglicht eine Binär-Codepunkt-Sortierreihenfolge eine einfachere Entwicklung von Anwendungen und eine Steigerung der Leistung. Weitere Informationen finden Sie im Abschnitt [Binäre Sortierungen](#Binary-collations) dieses Artikels.|
 |UTF-8 (\_UTF8)|Ermöglicht das Speichern von mit UTF-8 codierten Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn diese Option nicht ausgewählt ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Nicht-Unicode-Codierungsformat für die entsprechenden Datentypen. Weitere Informationen finden Sie im Abschnitt [Unterstützung für UTF-8](#utf8) dieses Artikels.| 
 
-<sup>1</sup> Wenn „Binär“ oder der Binär-Codepunkt ausgewählt ist, sind die Optionen Unterscheidung nach Groß-/Kleinschreibung (\_CS), Unterscheidung nach Akzent (\_AS), Unterscheidung nach Kana (\_KS) und Unterscheidung nach Breite (\WS) nicht verfügbar.      
+<sup>1</sup> Wenn „Binär“ oder der Binär-Codepunkt ausgewählt ist, sind die Optionen Unterscheidung nach Groß-/Kleinschreibung (\_CS), Unterscheidung nach Akzent (\_AS), Unterscheidung nach Kana (\_KS) und Unterscheidung nach Breite (\_WS) nicht verfügbar.      
 
 #### <a name="examples-of-collation-options"></a>Beispiele für Sortierungsoptionen
 Jede Sortierung setzt sich aus einer Kombination von Suffixen zur Festlegung der Unterscheidung nach Groß-/Kleinschreibung, Akzent, Breite oder Kana zusammen. Die folgenden Beispiele beschreiben das Verhalten der Sortierreihenfolge bei verschiedenen Suffixkombinationen.

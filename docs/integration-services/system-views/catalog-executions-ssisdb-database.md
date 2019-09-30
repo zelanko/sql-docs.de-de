@@ -11,14 +11,14 @@ helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f7c22a7c8120e67034e8a22a42948e607bec177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104860"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295210"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB-Datenbank)
 
@@ -62,7 +62,7 @@ ms.locfileid: "68104860"
 |machine_name|**nvarchar(128)**|Der Name des Computers, auf dem die Serverinstanz ausgeführt wird.|  
 |dump_id|**uniqueidentifier**|Die ID eines Ausführungsdumps.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  In dieser Sicht wird eine Zeile für jede Instanz der Ausführung im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

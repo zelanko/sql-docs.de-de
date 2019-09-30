@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 00f3937c13de5db106732ee919db6671485b691f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2d332c8cdffae320d602f0581c7641d69c31c4fa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057676"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297698"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS-Ausdruck)
 
@@ -41,7 +41,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp des numerischen Ausdrucks, der an die Funktion übergeben wird.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  ABS gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  

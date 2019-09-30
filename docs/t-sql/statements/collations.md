@@ -19,12 +19,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbf588e3c9922f9b76363db64e9d4afade040b7f
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190388"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271914"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -52,7 +52,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Bewirkt, dass die COLLATE-Klausel die Sortierung der aktuellen Datenbank erbt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Remarks
 
 Die COLLATE-Klausel kann auf mehreren Ebenen angegeben werden. Dabei handelt es sich z. B. um:
 
@@ -128,7 +128,7 @@ GO
 
 Dies sind die Ergebnisse der ersten Abfrage.
 
-```
+```output
 Place
 -------------
 California
@@ -139,7 +139,7 @@ Colima
 
 Dies sind die Ergebnisse der zweiten Abfrage.
 
-```
+```output
 Place
 -------------
 California
