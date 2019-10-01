@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745446"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682031"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungs Einstellungen für Cluster Ressourcen und-Dienste
 
@@ -576,7 +576,7 @@ Um den Container, der elasticsearch ausführt, für die Ausführung im privilegi
 }
 ```
 
-Sie können die Datei " **Control. JSON** " Bearbeiten und den obigen Abschnitt der **Spezifikation**hinzufügen. Sie können aber auch eine Patchdatei **elasticsearch-Patch. JSON** wie unten beschrieben erstellen und die Datei " **config. JSON** " mithilfe der **azdata** CLI Patchen:
+Sie können die Datei " **Control. JSON** " Bearbeiten und den obigen Abschnitt der **Spezifikation**hinzufügen, oder Sie können eine Patchdatei **elasticsearch-Patch. JSON** wie unten beschrieben erstellen und die Datei " **Control. JSON** " mithilfe der **azdata** -CLI Patchen:
 
 ```json
 {

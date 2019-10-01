@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294997"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688299"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server-Big Data-Cluster-Bereitstellungen
 
@@ -33,6 +33,9 @@ In [diesem ](deployment-script-single-node-kubeadm.md) Thema finden Sie auch ein
    - 8 CPUs
    - 64GB Arbeitsspeicher
    - 100GB Speicher
+ 
+> [!Important] 
+> Stellen Sie vor dem Starten der Big Data Cluster Bereitstellung sicher, dass die Uhren über alle Kubernetes Knoten hinweg synchronisiert werden, auf die die Bereitstellung abzielt. Der Big Data-Cluster verfügt über integrierte Integritäts Eigenschaften für verschiedene Dienste, bei denen es sich um Zeit empfindliche Dienste handelt, und Takt Abweichungen können zu einem falschen Status führen.
 
 ## <a name="prepare-the-machines"></a>Vorbereiten der Computer
 
