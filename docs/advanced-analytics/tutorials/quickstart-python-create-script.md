@@ -90,7 +90,7 @@ Zu den Eingaben `sp_execute_external_script` für die gespeicherte Prozedur geh�
 | @language | definiert die aufzurufende Spracherweiterung, in diesem Fall python. |
 | @script | definiert die Befehle, die an die python-Laufzeit geleitet werden<br>Das gesamte Python-Skript muss in dieses Argument als Unicode-Text eingeschlossen werden. Sie können den Text auch einer Variablen des Typs **nvarchar** hinzufügen und dann die Variable |
 | @input_data_1 | von der Abfrage zurückgegebene Daten, die an die python-Laufzeit zurückgegeben werden, die die Daten zurückgibt, die als Datenrahmen SQL Server werden. |
-|MIT RESULTSETS | Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL Server. in diesem Fall wird "Hallo Welt" als Spaltenname und " **int** " für den Datentyp hinzugefügt. |
+|WITH RESULT SETS | Klausel definiert das Schema der zurückgegebenen Datentabelle für SQL Server. in diesem Fall wird "Hallo Welt" als Spaltenname und " **int** " für den Datentyp hinzugefügt. |
 
 Der Befehl gibt den folgenden Text aus:
 
@@ -155,7 +155,7 @@ Verwenden Sie vorerst die standardmäßigen Eingabe-und Ausgabevariablen von `sp
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Beachten Sie, dass bei python zwischen Groß-und Kleinschreibung Die im Python-Skript (**SQL_out**, **SQL_in**) verwendeten Eingabe-und Ausgabevariablen müssen mit den Namen, die `@input_data_1_name` mit `@output_data_1_name`und definiert sind, einschließlich der Groß-/Kleinschreibung entsprechen.
+    Beachten Sie, dass bei Python die Groß-/Kleinschreibung unterschieden wird. Die im Python-Skript verwendeten Eingabe-und Ausgabevariablen (**SQL_out**, **SQL_in**) müssen mit den in `@input_data_1_name` bzw. `@output_data_1_name` definierten Namen einschließlich Groß-/Kleinschreibung übereinstimmen.
 
    > [!TIP]
    > Nur eine Eingabedataset kann als Parameter übergeben werden, und Sie können nur ein Dataset zurückgeben. Allerdings können Sie andere Datasets innerhalb Ihres python-Codes abrufen und können zusätzlich zum DataSet Ausgaben anderer Typen zurückgeben. Sie können auch das Schlüsselwort OUTPUT zu einem beliebigen Parameter hinzufügen, damit es mit den Ergebnissen zurückgegeben wird.
