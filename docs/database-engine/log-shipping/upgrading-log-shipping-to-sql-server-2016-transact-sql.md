@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1006e7cb677ec6d06af633191b10ab1f341ef1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020794"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227133"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Aktualisieren des Protokollversands auf SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Beim Aktualisieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversandkonfiguration auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Update wird Ihre Notfallwiederherstellungslösung für den Protokollversand beibehalten, wenn Sie Ihre Protokollversandserver in der richtigen Reihenfolge aktualisieren.  
+  Beim Aktualisieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokollversandkonfiguration auf eine neue [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version, ein neues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Service Pack oder ein kumulatives [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Update wird Ihre Notfallwiederherstellungslösung für den Protokollversand beibehalten, wenn Sie Ihre Protokollversandserver in der richtigen Reihenfolge aktualisieren.  
   
 > [!NOTE]  
 >  Die[Sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md) wurde in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]eingeführt. In einer aktualisierten Protokollversandkonfiguration wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** bestimmt, ob die Transaktionsprotokoll-Sicherungsdateien mithilfe der Sicherungskomprimierung komprimiert werden. Das Verhalten für die Sicherungskomprimierung der Protokollsicherung kann für jede Protokollversandkonfiguration festgelegt werden. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)eingeführt.  

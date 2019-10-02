@@ -1,7 +1,7 @@
 ---
 title: Deinstallieren einer vorhandenen SQL Server-Instanz (Setup) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 01/27/2017
+ms.date: 09/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,97 +15,105 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c4f9dc408f5b0cab4d568e8b63dfa3f61acdcd59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126051"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251065"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Deinstallieren einer vorhandenen SQL Server-Instanz (Setup)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   In diesem Artikel wird beschrieben, wie eine eigenständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstalliert wird. Mit den Schritten in diesem Artikel bereiten Sie das System außerdem für die erneute Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor.  
   
-  >[!IMPORTANT]
-  > Sie müssen ein lokaler Administrator sein und über die Berechtigung verfügen, sich als Dienst anzumelden, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstallieren zu können.  
-  
  > [!NOTE]
- > Zur Deinstallation eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failovercluster verwenden Sie die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup bereitgestellte Funktion Knoten entfernen, um jeden Knoten einzeln zu entfernen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ > Zur Deinstallation eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster verwenden Sie die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup bereitgestellte Funktion Knoten entfernen, um jeden Knoten einzeln zu entfernen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+
+## <a name="considerations"></a>Weitere Überlegungen
+
+- Um SQL Server zu deinstallieren, müssen Sie ein lokaler Administrator mit der Berechtigung zur Anmeldung als Dienst sein. 
+- Wenn Ihr Computer über die *mindestens* erforderliche Menge an physischem Arbeitsspeicher verfügt, setzen Sie die Größe der Auslagerungsdatei auf die doppelte Menge des physischen Arbeitsspeichers herauf. Unzureichender virtueller Arbeitsspeicher kann zu einer unvollständigen Entfernung von SQL Server führen. 
+- Auf einem System mit mehreren SQL Server-Instanzen wird der SQL Server-Browserdienst erst bei der Entfernung der letzten Instanz von SQL Server deinstalliert. Der SQL Server-Browserdienst kann manuell über **Programme und Features** in der **Systemsteuerung** entfernt werden. 
+- Beim Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden tempdb-Datendateien gelöscht, die während des Installationsvorgangs hinzugefügt wurden. Dateien mit dem Namensmuster „tempdb_mssql_*.ndf“ werden gelöscht, wenn sie im Verzeichnis der Systemdatenbank vorhanden sind. 
   
- Beachten Sie vor der Deinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgenden wichtigen Szenarien:  
+
   
--   Bevor Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten von einem Computer entfernen, der die Mindestanforderungen für den physischen Arbeitsspeicher erfüllt, müssen Sie sicherstellen, dass die Auslagerungsdatei ausreichend groß ist. Die Auslagerungsdatei muss zwei Mal so groß sein wie der physische Speicher. Unzureichender virtueller Arbeitsspeicher kann dazu führen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur unvollständig entfernt wird.  
+## <a name="prepare"></a>Vorbereiten  
   
--   Wenn Sie mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert haben, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser automatisch deinstalliert, sobald die letzte Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] deinstalliert ist.  
+1.  **Sichern Sie die Daten.** Erstellen Sie entweder [vollständige Sicherungen](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md) aller Datenbanken, einschließlich der Systemdatenbanken, oder kopieren Sie die MDF- und LDF-Dateien manuell an einen separaten Speicherort. Die **master**-Datenbank enthält alle Informationen für den Server auf Systemebene, wie etwa Anmeldeinformationen und Schemas. Die **MSDB**-Datenbank enthält Auftragsinformationen, wie etwa Aufträge für den SQL Server-Agent, den Sicherungsverlauf und Wartungspläne. Weitere Informationen zu Systemdatenbanken finden Sie unter [Systemdatenbanken](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md). 
   
-     Um alle Komponenten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu deinstallieren, müssen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browserkomponente in der **Systemsteuerung** unter **Programme und Funktionen** manuell deinstallieren.  
+    Die Dateien, die Sie speichern müssen, umfassen die im Folgenden aufgeführten Datenbankdateien:  
+
+    |             |            |           |            |
+    | :---------- | :--------- |:--------- | :--------- |
+    | master.mdf  | mastlog.ldf| model.mdf | modellog.ldf| 
+    | msdbdata.mdf| msdblog.ldf| Mssqlsystemresource.mdf | Mssqlsustemresource.ldf |
+    | Tempdb.mdf | Templog.ldf|  ReportServer[$InstanceName] | ReportServer[$InstanceName]TempDB| 
+
+    > [!NOTE]
+    > Die ReportServer-Datenbanken sind in SQL Server Reporting Services enthalten.   
+
+ 
+1.  **Beenden Sie alle**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Dienste.** Beenden Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten. Aktive Verbindungen können eine erfolgreiche Deinstallation verhindern.  
   
-1.  Beim Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden tempdb-Datendateien gelöscht, die während des Installationsvorgangs hinzugefügt wurden. Dateien mit dem Namensmuster „tempdb_mssql_*.ndf“ werden gelöscht, wenn sie im Verzeichnis der Systemdatenbank vorhanden sind.  
+1.  **Verwenden Sie ein Konto mit den entsprechenden Berechtigungen.** Melden Sie sich am Server an, indem Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto oder ein Konto mit entsprechenden Berechtigungen verwenden. Beispielsweise können Sie sich mit einem Konto beim Server anmelden, das Mitglied der lokalen Administratorgruppe ist.  
   
-### <a name="before-you-uninstall"></a>Vor der Deinstallation  
+## <a name="uninstall"></a>Deinstallieren 
+
+# <a name="windows-10--2016-tabwindows10"></a>[Windows 10/2016+](#tab/Windows10)
+
+Führen Sie die folgenden Schritte aus, um SQL Server unter Windows 10, Windows Server 2016, Windows Server 2019 und höher zu deinstallieren: 
+
+1. Um den Entfernungsprozess einzuleiten, navigieren Sie im Startmenü zu **Einstellungen** und wählen dann **Apps** aus. 
+1. Suchen Sie im Suchfeld nach `sql`. 
+1. Wählen Sie **Microsoft SQL Server (Version) (Bit)** aus. Beispiel: `Microsoft SQL Server 2017 (64-bit)`.
+1. Wählen Sie **Deinstallieren** aus.
+ 
+    ![Deinstallieren von SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
+
+1. Wählen Sie im SQL Server-Dialogfeld-Popup **Entfernen** aus, um den Microsoft SQL Server-Installations-Assistenten zu starten. 
+
+    ![Entfernen von SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2017.png)
   
-1.  **Sichern Sie die Daten.** Obwohl dieser Schritt nicht zwingend erforderlich ist, verfügen Sie möglicherweise über Datenbanken, die Sie in ihrem aktuellen Zustand speichern möchten. Möglicherweise möchten Sie auch an den Systemdatenbanken vorgenommene Änderungen speichern. Wenn einer dieser Fälle zutrifft, stellen Sie sicher, dass die Daten vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesichert werden. Speichern Sie alternativ eine Kopie aller Daten- und Protokolldateien in einem anderen Ordner als dem MSSQL-Ordner. Der MSSQL-Ordner wird während der Deinstallation gelöscht.  
+1.  Wählen Sie im Dropdownfeld auf der Seite **Instanz auswählen** die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die Sie entfernen möchten, oder legen Sie fest, dass nur die freigegebenen Funktionen sowie die Verwaltungstools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen. Wählen Sie zum Fortsetzen des Vorgangs **Weiter** aus.  
   
-     Die Dateien, die Sie speichern müssen, umfassen die im Folgenden aufgeführten Datenbankdateien:  
+1.  Geben Sie auf der Seite **Funktionen auswählen** die Funktionen an, die aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen.  
   
-    -   Master.mdf  
+1.  Überprüfen Sie auf der Seite **Deinstallation kann jetzt ausgeführt werden** die Liste der Komponenten und Funktionen, die deinstalliert werden sollen. Klicken Sie auf **Entfernen**, um mit der Deinstallation zu beginnen.  
+ 
+1. Aktualisieren Sie das Fenster **Apps und Features**, um zu überprüfen, ob die SQL Server-Instanz erfolgreich entfernt wurde, und bestimmen Sie, ob noch Komponenten von SQL Server vorhanden sind. Entfernen Sie auch diese Komponenten über dieses Fenster, wenn Sie dies wünschen. 
+
+# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008–2012 R2](#tab/windows2012)
+
+Führen Sie die folgenden Schritte aus, um SQL Server unter Windows Server 2008, Windows Server 2012 und Windows 2012 R2 zu deinstallieren: 
+
+1. Um den Entfernungsprozess einzuleiten, navigieren Sie zur **Systemsteuerung**, und wählen Sie dann **Programme und Features** aus.
+1. Klicken Sie mit der rechten Maustaste auf **Microsoft SQL Server (Version) (Bit)** , und wählen Sie **Deinstallieren** aus. Beispiel: `Microsoft SQL Server 2012 (64-bit)`.  
   
-    -   Mastlog.ldf  
+    ![Deinstallieren von SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
+
+1. Wählen Sie im SQL Server-Dialogfeld-Popup **Entfernen** aus, um den Microsoft SQL Server-Installations-Assistenten zu starten. 
+
+    ![Entfernen von SQL Server](media/uninstall-an-existing-instance-of-sql-server-setup/remove-sql-2012.png)
   
-    -   Model.mdf  
+1.  Wählen Sie im Dropdownfeld auf der Seite **Instanz auswählen** die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die Sie entfernen möchten, oder legen Sie fest, dass nur die freigegebenen Funktionen sowie die Verwaltungstools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen. Wählen Sie zum Fortsetzen des Vorgangs **Weiter** aus.  
   
-    -   Modellog.ldf  
+1.  Geben Sie auf der Seite **Funktionen auswählen** die Funktionen an, die aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen.  
   
-    -   Msdbdata.mdf  
+1.  Überprüfen Sie auf der Seite **Deinstallation kann jetzt ausgeführt werden** die Liste der Komponenten und Funktionen, die deinstalliert werden sollen. Klicken Sie auf **Entfernen**, um mit der Deinstallation zu beginnen.  
+ 
+1. Aktualisieren Sie das Fenster **Programme und Features**, um zu überprüfen, ob die SQL Server-Instanz erfolgreich entfernt wurde, und bestimmen Sie, ob noch Komponenten von SQL Server vorhanden sind. Entfernen Sie auch diese Komponenten über dieses Fenster, wenn Sie dies wünschen. 
+
+---
+
   
-    -   Msdblog.ldf  
-  
-    -   Mssqlsystemresource.mdf  
-  
-    -   Mssqlsustemresource.ldf  
-  
-    -   Tempdb.mdf  
-  
-    -   Templog.ldf  
-  
-    -   ReportServer[$InstanceName] Dies ist die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Standarddatenbank.  
-  
-    -   ReportServer[$InstanceName] TempDB Dies ist die temporäre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Standarddatenbank.  
-  
-2.  **Löschen Sie die lokalen Sicherheitsgruppen.** Löschen Sie vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die lokalen Sicherheitsgruppen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten.  
-  
-3.  **Beenden Sie alle**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Dienste.** Beenden Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste vor dem Deinstallieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten. Aktive Verbindungen können eine erfolgreiche Deinstallation verhindern.  
-  
-4.  **Verwenden Sie ein Konto mit den entsprechenden Berechtigungen.** Melden Sie sich am Server an, indem Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonto oder ein Konto mit entsprechenden Berechtigungen verwenden. Beispielsweise können Sie sich mit einem Konto beim Server anmelden, das Mitglied der lokalen Administratorgruppe ist.  
-  
-### <a name="to-uninstall-an-instance-of-includessnoversionincludesssnoversion-mdmd"></a>To Uninstall an Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-  
-1.  Um den Deinstallationsvorgang zu starten, wechseln Sie in der **Systemsteuerung** zu **Programme und Funktionen**.  
-  
-2.  Klicken Sie mit der rechten Maustaste auf **SQL Server 2016**, und wählen Sie **Deinstallieren** aus. Klicken Sie auf **Entfernen**. Dadurch wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistent gestartet.  
-  
-     Unterstützungsregeln für Setup werden ausgeführt, um die Computerkonfiguration zu überprüfen. Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
-  
-3.  Wählen Sie im Dropdownfeld auf der Seite Instanz auswählen die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus, die Sie entfernen möchten, oder legen Sie fest, dass nur die freigegebenen Funktionen sowie die Verwaltungstools von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen. Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
-  
-4.  Geben Sie auf der Seite Funktionen auswählen die Funktionen an, die aus der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt werden sollen.  
-  
-     Entfernungsregeln werden ausgeführt, um zu überprüfen, dass der Vorgang erfolgreich abgeschlossen werden kann.  
-  
-5.  Überprüfen Sie auf der Seite **Deinstallation kann jetzt ausgeführt werden** die Liste der Komponenten und Funktionen, die deinstalliert werden sollen. Klicken Sie auf **Entfernen**, um mit der Deinstallation zu beginnen.  
-  
-6.  Unmittelbar nach der Deinstallation der letzten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz sind die anderen Programme, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugeordnet sind, in der Programmliste in **Programme und Funktionen** weiterhin sichtbar. Wenn Sie **Programme und Funktionen** jedoch schließen, wird die Programmliste beim nächsten Öffnen von **Programme und Funktionen** aktualisiert, sodass nur die Programme angezeigt werden, die weiterhin installiert sind.  
-  
-### <a name="if-the-uninstallation-fails"></a>Falls die Deinstallation einen Fehler verursacht  
-  
-1.  Wenn der Deinstallationsvorgang nicht erfolgreich abgeschlossen wird, versuchen Sie, das Problem, das den Deinstallationsfehler verursacht hat, zu beheben. Die folgenden Artikel sollen helfen, den Ursachen für die fehlgeschlagene Deinstallation auf den Grund zu gehen:  
-  
-    -   [Identifizieren von SQL Server 2008-Setupproblemen in den Setupprotokolldateien](https://support.microsoft.com/kb/955396/en-us)  
-  
-    -   [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
-2.  Falls sich die Ursache für den Deinstallationsfehler nicht beheben lässt, können Sie sich an den [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Support wenden. In einigen Fällen, z. B. falls wichtige Dateien versehentlich gelöscht wurden, muss vor der Neuinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u. U. das Betriebssystem auf dem Computer neu installiert werden.  
+## <a name="in-the-event-of-failure"></a>Im Fall eines Fehlers  
+
+Wenn beim Entfernungsprozess ein Fehler auftritt, überprüfen Sie die [SQL Server-Setupprotokolldateien](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md), um die Grundursache zu bestimmen. 
+
+Der KB-Artikel [How to identify SQL Server setup issues in the setup log files](https://support.microsoft.com/kb/955396/en-us) (Identifizieren von SQL Server-Setupproblemen in den Setupprotokolldateien) kann Ihnen bei der Untersuchung weiterhelfen. Er bezieht sich zwar auf SQL Server 2008, die beschriebene Methodik lässt sich aber auf jede Version von SQL Server anwenden. 
+
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

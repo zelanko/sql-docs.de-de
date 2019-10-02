@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014474"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250984"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Voraussetzungen, Einschränkungen und Empfehlungen für Always On-Verfügbarkeitsgruppen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014474"
   
 -   **Maximale Anzahl von Verfügbarkeitsgruppen und Verfügbarkeitsdatenbanken pro Computer:** Die tatsächliche Anzahl der auf einem Computer (virtuell oder physisch) ausführbaren Datenbanken und Verfügbarkeitsgruppen richtet sich nach der Hardware und Workload, es gibt jedoch keine maximale Vorgabe. Microsoft hat bis zu 10 Verfügbarkeitsgruppen und 100 Datenbanken pro physischem Computer getestet, aber dies stellt keinen bindenden Grenzwert dar. Abhängig von der Hardwarespezifikation auf dem Server und dem Workload können Sie eine höhere Anzahl von Datenbanken und Verfügbarkeitsgruppen auf einer Instanz von SQL Server platzieren. Anzeichen für eine Systemüberlastung könnten u.a. zu wenige Arbeitsthreads, langsame Antwortzeiten für Verfügbarkeitsgruppen-Systemsichten und DMVs und/oder Systemspeicherabbilder bei angehaltenem Verteiler sein. Es wird empfohlen, die Umgebung unter produktionsähnlichen Bedingungen eingehend zu testen, um zu gewährleisten, dass das System maximale Arbeitsauslastungen im Rahmen Ihrer Anwendungs-SLAs bewältigen kann. Im Hinblick auf SLAs sollten sowohl die Auslastung unter Fehlerbedingungen als auch die erwarteten Antwortzeiten abgewogen werden.  
   
--   **Verwenden Sie den Failovercluster-Manager nicht, um Verfügbarkeitsgruppen zu bearbeiten:**  
+-   **Verwenden Sie den Failovercluster-Manager nicht, um Verfügbarkeitsgruppen zu bearbeiten**. Der Status einer SQL Server-Failoverclusterinstanz (FCI) wird von SQL Server und dem Windows-Failovercluster (WSFC) gemeinsam verwendet, wobei SQL Server ausführlichere Zustandsinformationen zu den Instanzen verwaltet als für den Cluster von Interesse sind. Das Verwaltungsmodell sieht so aus, dass SQL Server die Transaktionen steuern muss und dafür zuständig ist, die Sicht des Status des Clusters synchron mit der Sicht des Status von SQL Server zu halten. Wenn der Status des Clusters außerhalb von SQL Server geändert wird, kann die Synchronisierung des Status zwischen WSFC und SQL Server verloren gehen, was zu nicht vorhersehbarem Verhalten führen kann.
   
      Beispiel:  
   

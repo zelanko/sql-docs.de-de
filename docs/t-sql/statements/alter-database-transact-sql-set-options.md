@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163925"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227178"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET-Optionen (Transact-SQL)
 
@@ -3041,7 +3041,9 @@ Zwischengespeicherte Resultsets werden wieder für eine Abfrage verwendet, wenn 
 1. Die neue und die vorherige Abfrage, die die Zwischenspeicherung des Resultsets generierte, stimmen genau überein.
 1. In der Tabelle, aus der das zwischengespeicherte Resultset generiert wurde, wurden keine Daten oder Schemata verändert.  
 
-Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (ON), werden Ergebnisse für alle Abfragen zwischengespeichert, bis der Cache voll ist. Ausgenommen sind Abfragen mit nicht deterministischen Funktionen wie „DateTime.Now()“.   Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
+Sobald das Zwischenspeichern von Resultsets für eine Datenbank aktiviert ist (ON), werden Ergebnisse für alle Abfragen zwischengespeichert, bis der Cache voll ist. Ausgenommen sind Abfragen, die nicht deterministische Funktionen wie „DateTime.Now()“ verwenden und Abfragen, die Daten mit einer Zeilengröße von mehr als 64 KB zurückgeben.   
+
+Abfragen mit umfangreichen Resultsets (z. B. > 1 Million Zeilen) werden bei der ersten Ausführung möglicherweise langsamer ausgeführt, wenn der Ergebniscache erstellt wird.
 
 **<snapshot_option> ::=**        
 

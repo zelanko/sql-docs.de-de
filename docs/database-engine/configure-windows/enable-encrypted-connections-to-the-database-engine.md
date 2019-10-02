@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874321"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314501"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ Wenn Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] über [!INCLUDE[ssSQL
   
 2. Führen Sie den **Zertifikatexport-Assistenten**aus, und speichern Sie die Zertifikatsdatei in einem geeigneten Speicherort.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>So konfigurieren Sie den Server zum Erzwingen verschlüsselter Verbindungen  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>So konfigurieren Sie den Server zum Erzwingen verschlüsselter Verbindungen
+
+> [!IMPORTANT]
+> Das SQL Server-Dienstkonto muss über Leseberechtigungen für das Zertifikat verfügen, das zum Erzwingen der Verschlüsselung auf dem SQL Server verwendet wird. Für ein nicht privilegiertes Dienstkonto müssen dem Zertifikat Leseberechtigungen hinzugefügt werden. Ist dies nicht der Fall, kann beim Neustart des SQL Server-Diensts ein Fehler auftreten.
   
 1. Erweitern Sie im **SQL Server Configuration Manager** den Eintrag **SQL Server-Netzwerkkonfiguration**, klicken Sie mit der rechten Maustaste auf **Protokolle für** _\<Serverinstanz>_ , und wählen Sie dann **Eigenschaften**.  
   

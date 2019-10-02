@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: febf3a874ba0632c90117d52e74ce31926bfbbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118954"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314532"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ Eine Variable vom Typ **varbinary**, die Daten enthält, die mit dem Zertifikat 
 Das Kennwort, das zum Verschlüsseln des privaten Schlüssels des Zertifikats verwendet wurde. *cert_password* muss das Unicode-Datenformat aufweisen.  
   
  @cert_password  
-Eine Variable vom Typ **nchar** oder **nvarchar**, die das Kennwort enthält, mit dem der private Schlüssel des Zertifikats verschlüsselt wurde. *@cert_password* muss das Unicode-Datenformat aufweisen.  
+Eine Variable vom Typ **nchar** oder **nvarchar**, die das Kennwort enthält, mit dem der private Schlüssel des Zertifikats verschlüsselt wurde. *\@cert_password* muss das Unicode-Datenformat aufweisen.  
 
 ## <a name="return-types"></a>Rückgabetypen  
 **varbinary** mit einer maximalen Größe von 8.000 Byte.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
 Diese Funktion entschlüsselt Daten mithilfe des privaten Schlüssels eines Zertifikats. Kryptografische Umwandlungen, die asymmetrische Schlüssel verwenden, nehmen umfangreiche Ressourcen in Anspruch. Deshalb wird empfohlen, dass Entwickler die Verwendung von [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) und DECRYPTBYCERT bei der routinemäßigen Verschlüsselung und Entschlüsselung von Benutzerdaten vermeiden.  
 
 ## <a name="permissions"></a>Berechtigungen  

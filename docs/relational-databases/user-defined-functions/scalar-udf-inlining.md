@@ -2,7 +2,7 @@
 title: Inlining benutzerdefinierter Skalarfunktionen in Datenbanken von Microsoft SQL Server | Microsoft-Dokumentation
 description: In diesem Artikel wird das Inlining benutzerdefinierter Skalarfunktionen erläutert, um die Leistung von Abfragen zu verbessern, die benutzerdefinierte Skalarfunktionen in SQL Server (2018 und höher) und Azure SQL-Datenbank aufrufen.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030338"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299137"
 ---
 # <a name="scalar-udf-inlining"></a>Inlining benutzerdefinierter Skalarfunktionen
 
@@ -154,7 +154,8 @@ Für eine benutzerdefinierte T-SQL-Skalarfunktion kann ein Inlining durchgeführ
 - Die benutzerdefinierte Funktion verwendet die `EXECUTE AS CALLER`-Klausel (Standardverhalten, wenn die `EXECUTE AS`-Klausel nicht angegeben wurde).
 - Die benutzerdefinierte Funktion verweist nicht auf Tabellenvariablen oder Tabellenwertparameter.
 - Die Abfrage, die eine benutzerdefinierte Skalarfunktion aufruft, verweist in der `GROUP BY`-Klausel nicht auf einen Aufruf einer benutzerdefinierten Skalarfunktion.
-- Die Abfrage, die eine benutzerdefinierte Skalarfunktion in der Auswahlliste mit der `DISTINCT`-Klausel aufruft, verweist in der `ORDER BY`-Klausel nicht auf einen Aufruf einer benutzerdefinierten Skalarfunktion.
+- Die Abfrage, die eine benutzerdefinierte Skalarfunktion in der Auswahlliste mit der `DISTINCT`-Klausel aufruft, verfügt nicht über eine `ORDER BY`-Klausel.
+- Die benutzerdefinierte Funktion wird in der `ORDER BY`-Klausel nicht verwendet.
 - Die benutzerdefinierte Funktion wird nicht nativ kompiliert (Interop wird unterstützt).
 - Die benutzerdefinierte Funktion wird nicht in einer berechneten Spalte oder in der Definition einer CHECK-Einschränkung verwendet.
 - Die benutzerdefinierte Funktion verweist nicht auf benutzerdefinierte Typen.

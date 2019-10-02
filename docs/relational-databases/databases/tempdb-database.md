@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653770"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326118"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
 
@@ -47,7 +47,9 @@ Die **tempdb**-Systemdatenbank ist eine globale Ressource, die für alle Benutze
   - Zeilenversionen, die von Datenänderungstransaktionen für Funktionen, wie z. B. Onlineindexvorgänge, Multiple Active Result Sets (MARS) und AFTER-Trigger, generiert wurden.  
   
 Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Rollback für Transaktionen ausgeführt werden kann. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von **nichts in** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb**nicht zulässig.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Physische Eigenschaften von tempdb in SQL Server
 
 In der folgenden Tabelle werden die anfänglichen Konfigurationswerte der **tempdb**-Daten- und Protokolldateien in SQL Server aufgeführt, die auf den Standardeinstellungen der Modelldatenbank basieren. Die Größe dieser Dateien kann sich in den verschiedenen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geringfügig unterscheiden.  
@@ -137,7 +139,7 @@ Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-
 
 Weitere Informationen finden Sie unter [V-Kern-basierte Ressourceneinschränkungen](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>Beschränkungen
 
 Die folgenden Operationen können mit der **tempdb** -Datenbank nicht ausgeführt werden:  
   
@@ -242,9 +244,7 @@ Bei dieser Implementierung sind einige Einschränkungen zu beachten:
     COMMIT TRAN
     ```
 3. Abfragen für speicheroptimierte Tabellen unterstützen keine Sperr- und Isolationshinweise, sodass bei Abfragen für speicheroptimierte TempDB-Katalogsichten Sperr- und Isolationshinweise nicht berücksichtigt werden. Wie bei anderen Systemkatalogsichten in SQL Server erfolgen alle Transaktionen für Systemsichten in READ COMMITTED-Isolation (oder in diesem Fall in READ COMMITTED SNAPSHOT-Isolation).
-4. Wenn speicheroptimierte tempdb-Metadaten aktiviert sind, können möglicherweise Probleme mit Columnstore-Indizes für temporäre Tabellen auftreten. Bei dieser Vorschauversion empfiehlt es sich, Columnstore-Indizes für temporäre Tabellen bei Verwendung speicheroptimierter tempdb-Metadaten zu vermeiden.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. [Columnstore-Indizes](../indexes/columnstore-indexes-overview.md) können nicht für temporäre Tabellen erstellt werden, wenn speicheroptimierte tempdb-Metadaten aktiviert sind.
 
 > [!NOTE] 
 > Diese Einschränkungen gelten nur beim Verweisen auf TempDB-Systemsichten, und Sie können beim Zugriff auf eine speicheroptimierte Tabelle in einer Benutzerdatenbank bei Bedarf eine temporäre Tabelle in derselben Transaktion erstellen.
@@ -253,6 +253,8 @@ Mit dem folgenden T-SQL-Befehl können Sie überprüfen, ob TempDB speicheroptim
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+Wenn nach dem Aktivieren von speicheroptimierten TempDB-Metadaten aus irgendeinem Grund ein Fehler beim Starten des Servers auftritt, können Sie die Funktion umgehen, indem Sie SQL Server mithilfe der Startoption **-f** in der [Minimalkonfiguration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) starten. Dadurch können Sie die Funktion deaktivieren und SQL Server anschließend im normalen Modus neu starten.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Kapazitätsplanung für tempdb in SQL Server
 

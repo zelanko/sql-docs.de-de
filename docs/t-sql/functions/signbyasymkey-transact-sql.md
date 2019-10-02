@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0462829430f75f51764ffd318953f175ef857ab0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 804f8c1f2f7c59edec2c4e40c7d47f99ac71b5e7
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139158"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314552"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  Die ID eines asymmetrischen Schlüssels in der aktuellen Datenbank. *Asym_Key_ID* ist vom Datentyp **int**.  
   
- **@plaintext**  
+ **\@plaintext**  
  Eine Variable vom Typ **nvarchar**, **char**, **varchar** oder **nchar**, die Daten enthält, die mit dem asymmetrischen Schlüssel signiert werden sollen.  
   
  *password*  
@@ -57,7 +57,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **varbinary** mit einer maximalen Größe von 8.000 Bytes.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Remarks  
  Erfordert die CONTROL-Berechtigung für den asymmetrischen Schlüssel.  
   
 ## <a name="examples"></a>Beispiele  

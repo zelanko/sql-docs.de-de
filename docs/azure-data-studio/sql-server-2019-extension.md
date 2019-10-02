@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878613"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326021"
 ---
-# <a name="sql-server-2019-extension-preview"></a>Erweiterung für SQL Server 2019 (Vorschauversion)
+# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>SQL Server 2019-Erweiterung für Azure Data Studio (Vorschauversion)
 
-Die SQL Server 2019-Erweiterung (Vorschauversion) umfasst die Unterstützung von neuen Features und Tools, die im Lieferumfang von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] enthalten sind. Dies umfasst die Unterstützung für die Vorschau von [Big-Data-Clustern für SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [Notebookfunktion](../big-data-cluster/notebooks-guidance.md), und einen PolyBase-[Assistenten für die Erstellung externer Tabellen](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
+Die SQL Server 2019-Erweiterung für Azure Data Studio (Vorschauversion) umfasst die Unterstützung von neuen Features und Tools, die im Lieferumfang von [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] enthalten sind. Dies umfasst die Unterstützung für die Vorschau von [Big-Data-Clustern für SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), eine integrierte [Notebookfunktion](../big-data-cluster/notebooks-guidance.md), und einen PolyBase-[Assistenten für die Erstellung externer Tabellen](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Installieren der Erweiterung für SQL Server 2019 (Vorschauversion)
 
@@ -143,58 +143,3 @@ Zu dieser Version wurde eine Reihe von Verbesserungen zur Extenderunterstützung
 * Die Verwendung des Assistenten für die Erstellung externer Tabellen wird jetzt blockiert, wenn PolyBase nicht aktiviert ist oder nicht auf dem Zielserver ausgeführt wird.
 * Fehler in Bezug auf die Rechtschreibung und Benennung im Zusammenhang mit SQL Server 2019 und dem Assistenten für die Erstellung externer Tabellen wurden behoben.
 * Es wurde mehrere Fehler aus der Debugging-Konsole für Azure Data Studio entfernt.
-
-##  <a name="sql-server-2019-big-data-cluster-support"></a>Unterstützung von Big-Data-Clustern für SQL Server 2019
-
-* Klicken Sie im *Objekt-Explorer* auf **Verbindung hinzufügen**, und wählen Sie den Verbindungstyp **SQL Server big data cluster** (Big-Data-Cluster für SQL Server) aus.
-
-   > [!TIP]
-   > Wenn der Verbindungstyp **SQL Server big data cluster** (Big-Data-Cluster für SQL Server) nicht angezeigt wird, sollten Sie Azure Data Studio neu starten.
-
-* Geben Sie den Hostnamen oder die IP-Adresse des Clusterendpunkts sowie den Benutzernamen und das Kennwort ein, das Sie für die Verbindungsherstellung verwendet haben.
-* Fügen Sie optional einen Anzeigenamen in das Feld **Name** ein.
-* Klicken Sie auf **Verbinden**. Dann können Sie allgemeine Aufgaben über das Dashboard starten, **HDFS** im Objekt-Explorer durchsuchen und über diesen kontextbezogene Aufgaben ausführen.
-* Wenn Sie einen Spark-Auftrag für den Cluster übermitteln möchten, klicken Sie im *Objekt-Explorer* erst mit der rechten Maustaste auf den Serverknoten und anschließend mit der linken auf **Submit Spark Job** (Spark-Auftrag übermitteln), damit das Dialogfeld für die Übermittlung geöffnet wird.
-* Informationen zum Öffnen eines Notebooks finden Sie im nächsten Abschnitt.
-
-Weitere Informationen finden Sie unter [Big-Data-Cluster](../big-data-cluster/big-data-cluster-overview.md).
-
-
-## <a name="azure-data-studio-notebooks"></a>Azure Data Studio-Notebooks
-
-* Sie haben die folgenden Möglichkeiten, um ein Notebook zu öffnen:
-  * Öffnen Sie ein neues Notebook über die *Befehlspalette*.
-  * Öffnen Sie die Strukturansicht des HDFS-Objekt-Explorers für einen Big-Data-Cluster für SQL Server 2019, und wählen Sie eine der folgenden beiden Optionen aus:
-    * Klicken Sie erst mit der rechten Maustaste auf den Serverknoten und anschließend mit der linken auf **New Jupyter Notebook** (Neue Jupyter Notebook-Datei).
-    * Klicken Sie erst mit der rechten Maustaste auf eine CSV-Datei und anschließend mit der linken auf **Analyze in Notebook** (In Notebook analysieren).
-  * Öffnen Sie im Menü **Datei** oder im Datei-Explorer eine bereits vorhandene IPYNB-Datei *(IPYNB-Dateien müssen auf Version 4 oder höher aktualisiert werden, damit Sie ordnungsgemäß geladen werden können).*
-* Wählen Sie einen Kernel aus. Klicken Sie für die lokale Notebookausführung auf die Option „Python 3“. Klicken Sie für die Remoteausführung auf die Optionen „PySpark“ oder „Spark | Scala“.
-* Wählen Sie einen Big-Data-Clusterendpunkt für SQL Server aus, mit dem eine Verbindung hergestellt werden soll, wenn Sie sich für eine Remoteausführung entscheiden (dies ist für die lokale Entwicklung mit Python 3 nicht erforderlich).
-* Fügen Sie über die Schaltflächen im Notebookheader Code oder Markdownzellen hinzu. Über das Papierkorbsymbol links neben den einzelnen Zellen können Sie bei Bedarf Zellen löschen.
-* Über die Wiedergabeschaltfläche für Codezellen können Sie Zellen ausführen, und wenn Sie auf das Augensymbol klicken, können Sie zwischen Markdownbearbeitung und Vorschau wechseln.
-
-## <a name="polybase-create-external-table-wizard"></a>PolyBase-Assistent für die Erstellung externer Tabellen
-
-* Es gibt drei Möglichkeiten, den *Assistenten für die Erstellung externer Tabellen* über eine SQL Server 2019-Instanz zu öffnen:
-  * Klicken Sie erst mit der rechten Maustaste auf einen Server und dann mit der linken auf **Verwalten**. Klicken Sie dann erst auf die Registerkarte für SQL Server 2019 (Vorschauversion) und anschließend auf **Create External Table** (Externe Tabelle erstellen).
-  * Wenn Sie eine SQL Server 2019-Instanz im *Objekt-Explorer* ausgewählt haben, sollten Sie den *Assistenten für die Erstellung externer Tabellen* über die *Befehlspalette* öffnen.
-  * Klicken Sie im *Objekt-Explorer* erst mit der rechten Maustaste auf eine SQL Server 2019-Datenbank und dann mit der linken auf **Create External Table** (Externe Tabelle erstellen).
-* In dieser Version der Erweiterung können externe Tabellen erstellt werden, um auf Remoteinstanzen von SQL Server und Oracle-Tabellen zuzugreifen.
-
-  > [!NOTE]
-  > Obwohl die Funktionen zur Erstellung externer Tabellen im Lieferumfang von SQL Server 2019 enthalten ist, kann auf der Remoteinstanz von SQL Server eine frühere Version ausgeführt werden.
-
-* Wählen Sie auf der ersten Seite des Assistenten aus, ob Sie auf SQL Server oder Oracle zugreifen möchten, und fahren Sie fort.
-* Wenn noch kein Datenbankhauptschlüssel vorhanden ist, werden Sie aufgefordert, einen zu erstellen (Kennwörter, die nicht komplex genug sind, werden blockiert).
-* Erstellen Sie eine Datenquellenverbindung und benannte Anmeldeinformationen für den Remoteserver.
-* Wählen Sie aus, welche Objekte der neuen externen Tabelle zugeordnet werden sollen.
-* Klicken Sie auf **Skript generieren** oder **Erstellen**, um den Assistenten zu schließen.
-* Sobald die externe Tabelle erstellt wurde, wird sie in der Objektstrukturansicht der Datenbank angezeigt, in der sie erstellt wurde.
-
-
-## <a name="known-issues"></a>Bekannte Probleme
-
-* Wenn das Kennwort beim Erstellen einer Verbindung nicht gespeichert wird, können einige Aktionen wie das Übermitteln von Spark-Aufträgen möglicherweise nicht ausgeführt werden.
-* Vorhandene IPYNB-Notebooks müssen auf Version 4 oder höher aktualisiert werden, damit Inhalte in den Viewer geladen werden können.
-* Wenn Sie den Befehl **Reinstall Notebook Dependencies** (Notebookabhängigkeiten erneut installieren) ausführen, werden möglicherweise zwei Aufgaben in der Aufgabenansicht angezeigt, von denen eine fehlschlägt. Dies führt aber nicht dazu, dass die gesamte Installation fehlschlägt.
-* Wenn Sie in einem Notebook erst auf **Neue Verbindung hinzufügen** und dann auf „Abbrechen“ klicken, wird die Option **Verbindung auswählen** angezeigt. Dies ist auch der Fall, wenn bereits eine Verbindung hergestellt wurde.

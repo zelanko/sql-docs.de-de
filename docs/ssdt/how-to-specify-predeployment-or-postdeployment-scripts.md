@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035010"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199298"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Gewusst wie: Festlegen von Skripts vor und nach der Bereitstellung
-Skripts vor und nach der Bereitstellung führen Transact\-SQL-Anweisungen vor und nach dem Hauptbereitstellungsskript aus, das vom Datenbankprojekt generiert wird. Ein Projekt kann nur ein Skript vor und ein Skript nach der Bereitstellung aufweisen. Diese Skripts können für mehrere Zwecke verwendet werden. Beispiel:  
+Skripts vor und nach der Bereitstellung führen Transact\-SQL-Anweisungen vor und nach dem Hauptbereitstellungsskript aus, das vom Datenbankprojekt generiert wird. Das Skript vor der Bereitstellung wird beim Aktualisieren von Zielen aus den Ergebnissen des Schemavergleichs in Visual Studio nicht ausgeführt. Ein Projekt kann nur ein Skript vor und ein Skript nach der Bereitstellung aufweisen. Diese Skripts können für mehrere Zwecke verwendet werden. Beispiel:  
   
 -   Ein Skript vor der Bereitstellung kann Daten aus einer Tabelle kopieren, die in eine temporäre Tabelle geändert wird, bevor die Daten neu formatiert und auf die geänderte Tabelle in einem Skript nach der Bereitstellung angewendet werden.  
   
@@ -30,7 +30,7 @@ BEGIN
     DELETE FROM [dbo].[MyReferenceTable]  
 END  
 ```  
-  
+
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>So fügen Sie ein Skript vor oder nach der Bereitstellung hinzu bzw. ändern es  
   
 1.  Erweitern Sie Ihr Datenbankprojekt im **Projektmappen-Explorer**, um den Ordner „Skripts“ anzuzeigen.  

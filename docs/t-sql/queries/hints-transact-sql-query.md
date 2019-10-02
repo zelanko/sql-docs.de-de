@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228400"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207736"
 ---
 # <a name="hints-transact-sql---query"></a>Hinweise (Transact-SQL) – Abfrage
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,8 @@ Abfragehinweise geben an, dass die angezeigten Hinweise in der gesamten Abfrage 
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -327,7 +328,7 @@ Die Liste aller unterstützten USE HINT-Namen kann über die dynamische Verwaltu
 > [!IMPORTANT] 
 > Einige USE HINT-Hinweise stehen möglicherweise mit Ablaufverfolgungsflags, die auf globaler Ebene oder auf Sitzungsebene aktiviert sind, oder mit Einstellungen für die datenbankweit gültige Konfiguration in Konflikt. In diesem Fall hat der Hinweis auf Abfrageebene (USE HINT) immer Vorrang. Wenn ein USE HINT-Hinweis mit einem anderen Abfragehinweis oder einem auf Abfrageebene aktivierten Ablaufverfolgungsflag (z.B. QUERYTRACEON) in Konflikt steht, generiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Versuch der Abfrageausführung einen Fehler. 
 
-USE PLAN N'_xml\_plan_'  
+<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  Zwingt den Abfrageoptimierer, einen vorhandenen Abfrageplan für eine Abfrage zu verwenden, die mit **'** _xml\_plan_ **'** angegeben wird. USE PLAN kann nicht für die Anweisungen INSERT, UPDATE, MERGE oder DELETE angegeben werden.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Wendet den angegebenen Tabellenhinweis auf die Tabelle oder die Ansicht an, die _exposed\_object\_name_ entspricht. Es wird empfohlen, einen Tabellenhinweis nur im Kontext einer [Planhinweisliste](../../relational-databases/performance/plan-guides.md) als Abfragehinweis zu verwenden.  

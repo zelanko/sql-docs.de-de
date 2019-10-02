@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096888"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326189"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Neues in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -77,11 +77,12 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |Erstellen eines fortsetzbaren Rowstore-Onlineindexes | Siehe [Ausführen von Onlineindexvorgängen](../relational-databases/indexes/perform-index-operations-online.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>In-Memory-Datenbanken
+### <a name="in-memory-database"></a>In-Memory Database
 
 |Neue Funktion oder Update | Details |
 |:---|:---|
-|DDL-Steuerelement für den hybriden Pufferpool |Mit dem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) kann bei Bedarf direkt auf Datenbankseiten in Datenbankdateien zugegriffen werden, die sich auf einem Gerät mit beständigem Arbeitsspeicher (PMEM) befinden.|
+|Hybrider Pufferpool| Neues Feature von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], mit dem bei Bedarf direkt auf Datenbankseiten in Datenbankdateien zugegriffen werden, die sich auf einem Gerät mit beständigem Arbeitsspeicher (PMEM) befinden. Siehe [Hybrider Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Speicheroptimierte `tempdb`-Metadaten| Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../relational-databases/in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte `tempdb`-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für `tempdb`-intensive Arbeitsauslastungen ergibt. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Siehe [Speicheroptimierte `tempdb`-Metadaten](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Unicode-Unterstützung
@@ -99,13 +100,6 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |Unterstützung der UTF-8-Zeichencodierung|Unterstützung von UTF-8-Zeichen bei externen Tabellen. Siehe [Sortierung und Unicode-Unterstützung](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>Servereinstellungen
-
-|Neue Funktion oder Update | Details |
-|:---|:---|
-|Hybrider Pufferpool| Neues Feature von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], mit dem bei Bedarf direkt auf Datenbankseiten in Datenbankdateien zugegriffen werden, die sich auf einem Gerät mit beständigem Arbeitsspeicher (PMEM) befinden. Siehe [Hybrider Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>Leistungsüberwachung
 
 |Neue Funktion oder Update | Details |
@@ -117,6 +111,7 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |`sys.dm_exec_query_plan_stats` |Die neue dynamische Verwaltungsfunktion gibt das Äquivalent des letzten bekannten tatsächlichen Ausführungsplans für die meisten Abfragen zurück. Siehe [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | Neue datenbankweite Konfiguration zur Aktivierung von `sys.dm_exec_query_plan_stats`. Finden Sie unter [ALTER ausgelegte DATENBANKKONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | Im Gegensatz zum Ereignis `query_post_execution_showplan`, das die Standardprofilerstellung nutzt, erfasst das neue erweiterte Ereignis das Äquivalent eines tatsächlichen Ausführungsplans mithilfe einfacher Profilerstellung. Siehe [Profilerstellungsinfrastruktur für Abfragen](../relational-databases/performance/query-profiling-infrastructure.md).|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | New DMF gibt Informationen über eine Seite in einer Datenbank zurück. Weitere Informationen finden Sie unter [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Spracherweiterungen
@@ -147,7 +142,6 @@ Das [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Ankündigungsarchiv
 |Ressourcengovernance| Der Datentyp des konfigurierbaren Werts für die Option `REQUEST_MAX_MEMORY_GRANT_PERCENT` von `CREATE WORKLOAD GROUP` und `ALTER WORKLOAD GROUP` wurde geändert und entspricht nun nicht mehr einem Integer, sondern einer Gleitkommazahl. Dadurch können Speichergrößen präziser festgelegt werden. Weitere Informationen finden Sie unter [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) und [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Weniger Neukompilierungen für Workloads| Verbessert die Verwendung temporärer Tabellen über mehrere Bereiche hinweg. Siehe [Weniger Neukompilierungen für Workloads](../relational-databases/tables/tables.md#ctp23). |
 |Skalierbarkeit indirekter Prüfpunkte |Siehe [Verbesserte Skalierbarkeit indirekter Prüfpunkte](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Speicheroptimierte `tempdb`-Metadaten| Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funktion eingeführt, die Teil der [In-Memory Database](../relational-databases/in-memory-database.md)-Featurefamilie ist. Hierbei handelt es sich um speicheroptimierte `tempdb`-Metadaten, durch die dieser Engpass effektiv behoben wird und sich eine neue Ebene der Skalierbarkeit für `tempdb`-intensive Arbeitsauslastungen ergibt. In [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] können die Systemtabellen, die an der Verwaltung von Metadaten temporärer Tabellen beteiligt sind, in nicht dauerhafte speicheroptimierte Tabellen ohne Latches verschoben werden. Siehe [Speicheroptimierte `tempdb`-Metadaten](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Parallele PFS-Aktualisierungen|[PFS-Seiten](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) sind spezielle Seiten innerhalb einer Datenbankdatei, die SQL Server verwendet, um beim Zuweisen von Speicherplatz für ein Objekt freien Speicherplatz zu ermitteln. Latchkonflikte für PFS-Seiten stehen häufig in Zusammenhang mit [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), können aber auch für Benutzerdatenbanken auftreten, wenn viele parallele Threads zur Objektzuweisung vorliegen. Diese Verbesserung ändert die Verwaltung paralleler Vorgänge bei PFS-Aktualisierungen, sodass die Aktualisierung nicht mit einem exklusiven Latch, sondern über einen gemeinsamen Latch erfolgen kann. Dieses Verhalten ist ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] in allen Datenbanken (`tempdb` eingeschlossen) standardmäßig aktiviert.|
 |Feedback zur Speicherzuweisung im Zeilenmodus |Erweitert die Feedbackfunktion zur Speicherzuweisung im Batchmodus, indem die Größe der Speicherzuweisung sowohl für Batch- als auch für Zeilenmodusoperatoren angepasst wird. Hierdurch können übermäßige Speicherzuweisungen korrigiert werden, die zu einer Speichervergeudung führen und die Parallelität beeinträchtigen, und es werden unzureichende Speicherzuweisungen korrigiert, die zu teuren Überläufen auf den Datenträger führen. Siehe [Feedback zur Speicherzuweisung im Zeilenmodus](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
 |Verzögerte Kompilierung von Tabellenvariablen|Verbessert die Qualität des Abfrageplans und die Gesamtleistung für Abfragen mit Verweisen auf Tabellenvariablen. Während der Optimierung und der ersten Kompilierung propagiert diese Funktion Kardinalitätsschätzungen, die auf tatsächlichen Tabellenvariablen-Zeilenzahlen basieren. Diese genauen Zeilenzahlinformationen werden für die Optimierung der nachgelagerten Planvorgänge verwendet. Siehe [Verzögerte Kompilierung von Tabellenvariablen](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |
